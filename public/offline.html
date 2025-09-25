@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're Offline - Chef Approved Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1e293b 0%, #ea580c 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            opacity: 0.9;
+        }
+        
+        .features {
+            text-align: left;
+            margin: 24px 0;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+        
+        .feature-icon {
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+        
+        .retry-btn {
+            background: linear-gradient(to right, #ea580c, #dc2626);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 20px;
+        }
+        
+        .retry-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(234, 88, 12, 0.3);
+        }
+        
+        .status {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .status.online {
+            color: #10b981;
+        }
+        
+        .status.offline {
+            color: #ef4444;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .checking {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">👨‍🍳</div>
+        <h1>You're Offline</h1>
+        <p>It looks like you're not connected to the internet right now. Don't worry, we'll get you back to exploring professional kitchen tools soon!</p>
+        
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">🔍</span>
+                <span>Browse cached product reviews</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">📚</span>
+                <span>Read saved kitchen guides</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">⭐</span>
+                <span>Check your wishlist items</span>
+            </div>
+        </div>
+        
+        <button class="retry-btn" onclick="checkConnection()">
+            Check Connection
+        </button>
+        
+        <div class="status" id="status">
+            <span id="status-indicator">🔄</span>
+            <span id="status-text">Checking connection...</span>
+        </div>
+    </div>
+
+    <script>
+        let isOnline = navigator.onLine;
+        
+        function updateStatus(online) {
+            const indicator = document.getElementById('status-indicator');
+            const text = document.getElementById('status-text');
+            const status = document.getElementById('status');
+            
+            if (online) {
+                indicator.textContent = '✅';
+                text.textContent = 'Connection restored!';
+                status.className = 'status online';
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 1500);
+            } else {
+                indicator.textContent = '❌';
+                text.textContent = 'Still offline';
+                status.className = 'status offline';
+            }
+        }
+        
+        function checkConnection() {
+            const status = document.getElementById('status');
+            const indicator = document.getElementById('status-indicator');
+            const text = document.getElementById('status-text');
+            
+            status.className = 'status checking';
+            indicator.textContent = '🔄';
+            text.textContent = 'Checking...';
+            
+            // Try to fetch a small resource
+            fetch('/favicon.ico', { 
+                method: 'HEAD',
+                cache: 'no-cache'
+            })
+            .then(() => {
+                updateStatus(true);
+            })
+            .catch(() => {
+                updateStatus(false);
+            });
+        }
+        
+        // Listen for online/offline events
+        window.addEventListener('online', () => updateStatus(true));
+        window.addEventListener('offline', () => updateStatus(false));
+        
+        // Initial status check
+        setTimeout(() => {
+            updateStatus(navigator.onLine);
+        }, 1000);
+        
+        // Auto-retry every 30 seconds
+        setInterval(checkConnection, 30000);
+    </script>
+</body>
+</html>

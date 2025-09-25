@@ -1,0 +1,71 @@
+name: SEO Audit
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Weekly on Monday at 6 AM
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'app/**'
+      - 'components/**'
+      - 'public/**'
+
+jobs:
+  lighthouse-audit:
+    name: Lighthouse SEO Audit
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli@0.12.x
+        
+      - name: Run Lighthouse CI
+        run: lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          
+  seo-checks:
+    name: SEO Health Check
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Check for broken links
+        run: |
+          npm install -g broken-link-checker
+          blc https://www.chefapprovedtools.com --recursive --ordered --exclude-external
+          
+      - name: Validate sitemap
+        run: |
+          curl -f https://www.chefapprovedtools.com/sitemap.xml || exit 1
+          echo "✅ Sitemap is accessible"
+          
+      - name: Check robots.txt
+        run: |
+          curl -f https://www.chefapprovedtools.com/robots.txt || exit 1
+          echo "✅ Robots.txt is accessible"
+          
+      - name: Validate structured data
+        run: |
+          npm install -g structured-data-testing-tool
+          sdtt https://www.chefapprovedtools.com

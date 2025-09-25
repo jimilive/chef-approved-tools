@@ -1,0 +1,136 @@
+[build]
+  publish = ".next"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--prefix=/dev/null"
+
+# Production context
+[context.production]
+  command = "npm run build"
+
+# Deploy preview context
+[context.deploy-preview]
+  command = "npm run build"
+
+# Branch deploy context
+[context.branch-deploy]
+  command = "npm run build"
+
+# Redirects for Next.js App Router
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
+  conditions = {path = "!/api/*", path = "!/_next/*", path = "!/favicon.ico", path = "!/manifest.json", path = "!/robots.txt", path = "!/sitemap.xml"}
+
+# Handle legacy URLs
+[[redirects]]
+  from = "/products/*"
+  to = "/reviews/:splat"
+  status = 301
+
+# Force HTTPS
+[[redirects]]
+  from = "http://chefapprovedtools.netlify.app/*"
+  to = "https://chefapprovedtools.netlify.app/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.chefapprovedtools.com/*"
+  to = "https://www.chefapprovedtools.com/:splat"
+  status = 301
+  force = true
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' https: data:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline';"
+
+# Cache static assets
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache images
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "*.avif"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# Preload critical resources
+[[headers]]
+  for = "/"
+  [headers.values]
+    Link = '''</fonts/inter-latin-400-normal.woff2>; rel=preload; as=font; type=font/woff2; crossorigin,
+              </fonts/inter-latin-600-normal.woff2>; rel=preload; as=font; type=font/woff2; crossorigin,
+              <https://images.unsplash.com>; rel=preconnect; crossorigin,
+              <https://m.media-amazon.com>; rel=preconnect; crossorigin'''
+
+# Functions configuration (for future use)
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Form handling configuration
+[forms]
+  spam_detector_endpoint = "https://api.netlify.com/api/v1/accounts/YOUR_ACCOUNT_ID/submissions/YOUR_SITE_ID/spam"
+
+# Edge functions (for A/B testing or personalization)
+[[edge_functions]]
+  function = "geo-redirect"
+  path = "/geo/*"
+
+# Build plugins
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[plugins]]
+  package = "netlify-plugin-sitemap"
+  [plugins.inputs]
+    baseUrl = "https://www.chefapprovedtools.com"
+    prettyURLs = true
+    exclude = [
+      "/admin/*",
+      "/test/*"
+    ]
+
+[[plugins]]
+  package = "netlify-plugin-submit-sitemap"
+  [plugins.inputs]
+    baseUrl = "https://www.chefapprovedtools.com"
+    sitemapPath = "/sitemap.xml"
+    providers = [
+      "google",
+      "bing"
+    ]

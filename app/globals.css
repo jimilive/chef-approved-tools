@@ -1,26 +1,164 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Base styles */
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  color: #111827;
+  background-color: #f9fafb;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* CRITICAL: Force all SVG icons to proper sizes */
+svg {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+}
+
+/* Override Tailwind SVG size classes with explicit pixel values */
+svg.w-3, svg.h-3 { 
+  width: 12px !important; 
+  height: 12px !important;
+  max-width: 12px !important;
+  max-height: 12px !important;
+}
+
+svg.w-4, svg.h-4 { 
+  width: 16px !important; 
+  height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+}
+
+svg.w-5, svg.h-5 { 
+  width: 20px !important; 
+  height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+}
+
+svg.w-6, svg.h-6 { 
+  width: 24px !important; 
+  height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+}
+
+svg.w-8, svg.h-8 { 
+  width: 32px !important; 
+  height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+}
+
+svg.w-12, svg.h-12 { 
+  width: 48px !important; 
+  height: 48px !important;
+  max-width: 48px !important;
+  max-height: 48px !important;
+}
+
+/* Ensure SVGs don't inherit weird sizes from parent elements */
+div svg, span svg, button svg, a svg {
+  max-width: 48px !important;
+  max-height: 48px !important;
+}
+
+/* Links */
+a {
+  color: #0d9488;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Headings */
+h1 { font-size: 2.5rem; font-weight: bold; }
+h2 { font-size: 2rem; font-weight: bold; }
+h3 { font-size: 1.5rem; font-weight: 600; }
+h4 { font-size: 1.25rem; font-weight: 600; }
+h5 { font-size: 1rem; font-weight: 600; }
+
+/* Utility classes for common patterns */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Fix any giant text elements */
+.text-2xl { font-size: 1.5rem !important; }
+.text-3xl { font-size: 1.875rem !important; }
+.text-4xl { font-size: 2.25rem !important; }
+.text-5xl { font-size: 3rem !important; }
+.text-6xl { font-size: 3.75rem !important; }
+
+/* Button styles */
+button {
+  cursor: pointer;
+}
+
+/* Responsive utility classes */
+@media (max-width: 768px) {
+  .hero-title { 
+    font-size: 2.5rem !important; 
+    line-height: 1.2 !important;
+  }
+  .hero-subtitle { 
+    font-size: 1rem !important; 
+  }
+  .hero-description {
+    font-size: 1rem !important;
+  }
+  .hero-buttons {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .hero-button {
+    width: 100% !important;
+    max-width: 280px !important;
+    padding: 14px 24px !important;
+    font-size: 1rem !important;
+  }
+  .hero-stats {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .product-card {
+    margin: 0 auto !important;
+    max-width: 400px !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 480px) {
+  .hero-title { 
+    font-size: 2rem !important; 
+  }
+  .container {
+    padding: 0 0.75rem !important;
+  }
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
 }

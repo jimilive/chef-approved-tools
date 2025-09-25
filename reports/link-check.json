@@ -1,0 +1,1186 @@
+{
+  "links": [
+    {
+      "url": "http://localhost:3000/",
+      "status": 200,
+      "state": "OK",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720497209",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720497209",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720497209",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app-pages-internals.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/page.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/layout.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/not-found.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/error.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/manifest.json",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/polyfills.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-6GZ4LTCWCT",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/"
+    },
+    {
+      "url": "https://amazon.com/dp/B004T6MSIS?tag=chefapproved-20",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://amazon.com/dp/B008M5U1C2?tag=chefapproved-20",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://amazon.com/dp/B00XPRRHFW?tag=chefapproved-20",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://amazon.com/dp/B008H4SLV6?tag=chefapproved-20",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://amazon.com/dp/B00005MEII?tag=chefapproved-20",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://amazon.com/dp/B00006JSUA?tag=chefapproved-20",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.chefapprovedtools.com/",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.chefapprovedtools.com/about",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/"
+    },
+    {
+      "url": "https://www.chefapprovedtools.com/og-image.jpg",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/"
+    },
+    {
+      "url": "https://www.chefapprovedtools.com/twitter-image.jpg",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/"
+    },
+    {
+      "url": "http://localhost:3000/favicon.ico",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/products",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/"
+    },
+    {
+      "url": "http://localhost:3000/tips",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/"
+    },
+    {
+      "url": "http://localhost:3000/how-we-test",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/"
+    },
+    {
+      "url": "http://localhost:3000/contact",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/"
+    },
+    {
+      "url": "http://localhost:3000/knives",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/guides",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/appliances",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/newsletter",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/cookware",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/disclosure",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/about",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/reviews",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/terms",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/privacy-policy",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/cookie-policy",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720499276",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/products",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720499276",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/products",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720499276",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/products",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720499478",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/tips",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720499478",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/tips",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720499478",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/tips",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/knives/page.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/knives",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720499504",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/knives",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720499504",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/knives",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720499504",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/knives",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720499520",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/appliances",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/appliances/page.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/appliances",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720499520",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/appliances",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720499520",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/appliances",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720499536",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/cookware",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720499512",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/guides",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720499543",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/disclosure",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720499528",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/newsletter",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720499549",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/about",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720499592",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/privacy-policy",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720499598",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/cookie-policy",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720499549",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/about",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720499536",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/cookware",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720499536",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/cookware",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720499556",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720499556",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/cookware/page.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/cookware",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720499512",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/guides",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720499512",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/guides",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720499528",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/newsletter",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720499528",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/newsletter",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720499543",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/disclosure",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/disclosure/page.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/disclosure",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720499543",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/disclosure",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720499592",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/privacy-policy",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720499592",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/privacy-policy",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720499549",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/about",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720499563",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/terms",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720499563",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/terms",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720499563",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/terms",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720499598",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/cookie-policy",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720499598",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/cookie-policy",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/cookie-policy/page.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/cookie-policy",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720499556",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/reviews/page.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews",
+      "failureDetails": []
+    },
+    {
+      "url": "https://tools.google.com/dlpage/gaoptout",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/cookie-policy",
+      "failureDetails": []
+    },
+    {
+      "url": "https://policies.google.com/privacy",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/cookie-policy",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.aboutads.info/choices/",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/cookie-policy",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.networkadvertising.org/choices/",
+      "status": 403,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/cookie-policy"
+    },
+    {
+      "url": "https://youronlinechoices.eu/",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/cookie-policy",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/guides/best-chef-knives",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/knives"
+    },
+    {
+      "url": "http://localhost:3000/guides/kitchen-appliances",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/appliances"
+    },
+    {
+      "url": "http://localhost:3000/guides/best-cookware",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/cookware"
+    },
+    {
+      "url": "http://localhost:3000/guides/cookware-materials",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/guides"
+    },
+    {
+      "url": "http://localhost:3000/guides/knife-care",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/guides"
+    },
+    {
+      "url": "http://localhost:3000/reviews/lodge-seasoned-cast-iron-3-skillet-bundle",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/cookware",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/reviews/robot-coupe-r2-dice",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/appliances",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/reviews/kitchenaid-ksm8990wh",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/appliances",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/reviews/vitamix-5200",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/appliances",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/reviews/john-boos-platinum-commercial-cutting-board",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/reviews/wusthof-classic-ikon-15-piece",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/knives",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/reviews/le-creuset-signature-7-25-qt-dutch-oven",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/cookware",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720502760",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/guides/best-chef-knives",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720502760",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/guides/best-chef-knives",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720502761",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/guides/kitchen-appliances",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720502761",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/guides/kitchen-appliances",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720502761",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/guides/kitchen-appliances",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720502760",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/guides/best-chef-knives",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720502889",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/guides/best-cookware",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720502889",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/guides/best-cookware",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720502889",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/guides/best-cookware",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720502922",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/kitchenaid-ksm8990wh",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720502922",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/kitchenaid-ksm8990wh",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/reviews/kitchenaid-ksm8990wh/page.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/kitchenaid-ksm8990wh",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720502922",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/kitchenaid-ksm8990wh",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720502930",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/vitamix-5200",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720502930",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/vitamix-5200",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720502930",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/vitamix-5200",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/reviews/vitamix-5200/page.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/vitamix-5200",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720502903",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/robot-coupe-r2-dice",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720502903",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/robot-coupe-r2-dice",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720502903",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/robot-coupe-r2-dice",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/reviews/robot-coupe-r2-dice/page.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/robot-coupe-r2-dice",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720502951",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/wusthof-classic-ikon-15-piece",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720502951",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/wusthof-classic-ikon-15-piece",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720502951",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/wusthof-classic-ikon-15-piece",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/reviews/wusthof-classic-ikon-15-piece/page.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/wusthof-classic-ikon-15-piece",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720502941",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/john-boos-platinum-commercial-cutting-board",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720502941",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/john-boos-platinum-commercial-cutting-board",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/reviews/john-boos-platinum-commercial-cutting-board/page.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/john-boos-platinum-commercial-cutting-board",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720502941",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/john-boos-platinum-commercial-cutting-board",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/images/kitchenaid-ksm8990wh-review.jpg",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/kitchenaid-ksm8990wh"
+    },
+    {
+      "url": "http://localhost:3000/images/vitamix-5200-review.jpg",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/vitamix-5200"
+    },
+    {
+      "url": "http://localhost:3000/images/robot-coupe-r2-dice-review.jpg",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/robot-coupe-r2-dice"
+    },
+    {
+      "url": "http://localhost:3000/images/wusthof-classic-ikon-15-piece-review.jpg",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/wusthof-classic-ikon-15-piece"
+    },
+    {
+      "url": "http://localhost:3000/images/john-boos-platinum-cutting-board-review.jpg",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/john-boos-platinum-commercial-cutting-board"
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720502962",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/le-creuset-signature-7-25-qt-dutch-oven",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720502962",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/le-creuset-signature-7-25-qt-dutch-oven",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/reviews/le-creuset-signature-7-25-qt-dutch-oven/page.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/le-creuset-signature-7-25-qt-dutch-oven",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720502962",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/le-creuset-signature-7-25-qt-dutch-oven",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720502973",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/lodge-seasoned-cast-iron-3-skillet-bundle",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720502973",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/lodge-seasoned-cast-iron-3-skillet-bundle",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720502973",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/lodge-seasoned-cast-iron-3-skillet-bundle",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/app/reviews/lodge-seasoned-cast-iron-3-skillet-bundle/page.js",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/lodge-seasoned-cast-iron-3-skillet-bundle",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.chefapprovedtools.com/reviews/stand-mixers",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/kitchenaid-ksm8990wh"
+    },
+    {
+      "url": "http://localhost:3000/images/le-creuset-7-25-qt-review.jpg",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/le-creuset-signature-7-25-qt-dutch-oven"
+    },
+    {
+      "url": "http://localhost:3000/images/lodge-3-skillet-bundle-review.jpg",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
+    },
+    {
+      "url": "https://www.chefapprovedtools.com/reviews",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/kitchenaid-ksm8990wh"
+    },
+    {
+      "url": "https://www.kitchenaid.com/p.KSM8990WH.html?tag=chefapproved-20",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/kitchenaid-ksm8990wh",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.chefapprovedtools.com/reviews/food-processors",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/robot-coupe-r2-dice"
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720503573",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/kitchenaid-ksm8990wh-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720503573",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/kitchenaid-ksm8990wh-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720503575",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/vitamix-5200-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720503575",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/vitamix-5200-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720503575",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/vitamix-5200-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720503573",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/kitchenaid-ksm8990wh-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720503576",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/john-boos-platinum-cutting-board-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720503576",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/john-boos-platinum-cutting-board-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720503576",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/john-boos-platinum-cutting-board-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.chefapprovedtools.com/reviews/dutch-ovens",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/le-creuset-signature-7-25-qt-dutch-oven"
+    },
+    {
+      "url": "https://www.chefapprovedtools.com/reviews/blenders",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/vitamix-5200"
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720503823",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/le-creuset-7-25-qt-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720503823",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/le-creuset-7-25-qt-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720503823",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/le-creuset-7-25-qt-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.chefapprovedtools.com/reviews/knife-sets",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/wusthof-classic-ikon-15-piece"
+    },
+    {
+      "url": "https://www.chefapprovedtools.com/reviews/cutting-boards",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/john-boos-platinum-commercial-cutting-board"
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720503824",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/lodge-3-skillet-bundle-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720503824",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/lodge-3-skillet-bundle-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720503824",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/images/lodge-3-skillet-bundle-review.jpg",
+      "failureDetails": []
+    },
+    {
+      "url": "https://www.chefapprovedtools.com/reviews/cast-iron",
+      "status": 404,
+      "state": "BROKEN",
+      "parent": "http://localhost:3000/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
+    },
+    {
+      "url": "http://localhost:3000/reviews/le-creuset-signature-9-qt-dutch-oven",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/le-creuset-signature-7-25-qt-dutch-oven",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/reviews/le-creuset-signature-5-5-qt-dutch-oven",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/le-creuset-signature-7-25-qt-dutch-oven",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/css/app/layout.css?v=1758720505805",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/le-creuset-signature-9-qt-dutch-oven",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/webpack.js?v=1758720505805",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/le-creuset-signature-9-qt-dutch-oven",
+      "failureDetails": []
+    },
+    {
+      "url": "http://localhost:3000/_next/static/chunks/main-app.js?v=1758720505805",
+      "status": 200,
+      "state": "OK",
+      "parent": "http://localhost:3000/reviews/le-creuset-signature-9-qt-dutch-oven",
+      "failureDetails": []
+    }
+  ],
+  "passed": false
+}

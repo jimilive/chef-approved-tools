@@ -1,0 +1,34 @@
+# Redirect old product URLs to reviews
+/products/*  /reviews/:splat  301
+
+# Redirect common misspellings
+/cheif-approved-tools  /  301
+/chef-approved-tool  /  301
+
+# SEO redirects for common searches
+/best-chef-knives  /knives  301
+/professional-cookware  /cookware  301
+/kitchen-equipment-reviews  /  301
+
+# Newsletter signup variants
+/subscribe  /newsletter  301
+/email  /newsletter  301
+/signup  /newsletter  301
+
+# Social media redirects
+/instagram  https://instagram.com/chefapprovedtools  301
+/twitter  https://twitter.com/chefapprovedtools  301
+/facebook  https://facebook.com/chefapprovedtools  301
+
+# API routes (preserve for Next.js)
+/api/*  /api/:splat  200
+
+# Static assets
+/_next/*  /_next/:splat  200
+/favicon.ico  /favicon.ico  200
+/manifest.json  /manifest.json  200
+/robots.txt  /robots.txt  200
+/sitemap.xml  /sitemap.xml  200
+
+# Catch-all for Next.js App Router
+/*  /index.html  200
