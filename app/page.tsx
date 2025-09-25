@@ -3,6 +3,7 @@ import React from 'react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import TopPicksComparison from '@/components/TopPicksComparison'
 import BudgetVsPremiumMagnet from '@/components/BudgetVsPremiumMagnet'
+import FTCDisclosure from '@/components/FTCDisclosure'
 import { SimpleProductSchema } from '@/components/ProductSchema'
 import FAQSchema, { kitchenToolsFAQs } from '@/components/FAQSchema'
 import { ChefCredentialsSchema } from '@/components/ReviewSchema'
@@ -207,6 +208,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* FTC Disclosure */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <FTCDisclosure />
+      </div>
 
       {/* Credentials Section */}
       <section id="credentials" className="py-12 sm:py-16 bg-white">

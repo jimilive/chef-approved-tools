@@ -3,6 +3,7 @@ import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, Aler
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { BudgetVsPremiumTeaser } from '@/components/BudgetVsPremiumMagnet'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButtons from './AffiliateButtons'
 
 const productData = {
@@ -140,6 +141,9 @@ export default function Vitamix5200Review() {
             </div>
           </div>
         </header>
+
+        {/* FTC Disclosure */}
+        <FTCDisclosure />
 
         {/* Key Features Grid */}
         <section className="mb-8">

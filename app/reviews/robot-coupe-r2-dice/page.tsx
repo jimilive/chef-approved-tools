@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, AlertTriangle } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButtons from './AffiliateButtons'
 
 const productData = {
@@ -138,6 +139,9 @@ export default function RobotCoupeR2DiceReview() {
             </div>
           </div>
         </header>
+
+        {/* FTC Disclosure */}
+        <FTCDisclosure />
 
         {/* Key Features Grid */}
         <section className="mb-8">
