@@ -110,26 +110,26 @@
   function = "geo-redirect"
   path = "/geo/*"
 
-# Build plugins
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# Build plugins - commented out until needed
+# [[plugins]]
+#   package = "@netlify/plugin-nextjs"
 
-[[plugins]]
-  package = "netlify-plugin-sitemap"
-  [plugins.inputs]
-    baseUrl = "https://www.chefapprovedtools.com"
-    prettyURLs = true
-    exclude = [
-      "/admin/*",
-      "/test/*"
-    ]
+# [[plugins]]
+#   package = "netlify-plugin-sitemap"
+#   [plugins.inputs]
+#     baseUrl = "https://www.chefapprovedtools.com"
+#     prettyURLs = true
+#     exclude = [
+#       "/admin/*",
+#       "/test/*"
+#     ]
 
-[[plugins]]
-  package = "netlify-plugin-submit-sitemap"
-  [plugins.inputs]
-    baseUrl = "https://www.chefapprovedtools.com"
-    sitemapPath = "/sitemap.xml"
-    providers = [
-      "google",
-      "bing"
-    ]
+# [[plugins]]
+#   package = "netlify-plugin-submit-sitemap"
+#   [plugins.inputs]
+#     baseUrl = "https://www.chefapprovedtools.com"
+#     sitemapPath = "/sitemap.xml"
+#     providers = [
+#       "google",
+#       "bing"
+#     ]
