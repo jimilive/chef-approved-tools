@@ -33,7 +33,7 @@ export default function AboutPage() {
 
             <p className="text-slate-600 mb-6">
               Former Kitchen Manager at Mellow Mushroom with 15+ years of professional kitchen experience.
-              Seattle Central College culinary graduate who's tested thousands of pieces of equipment in
+              Seattle Central College culinary graduate who&apos;s tested thousands of pieces of equipment in
               high-volume restaurant operations.
             </p>
 
