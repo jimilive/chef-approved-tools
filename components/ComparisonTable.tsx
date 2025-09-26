@@ -21,6 +21,7 @@ export default function ComparisonTable({ products, title }: ComparisonTableProp
   
   // Find the best value (best rating/price ratio)
   const bestValue = products.reduce((best, product) => {
+    if (!product.price || !best.price) return best
     const currentRatio = product.reviews.rating / product.price.current
     const bestRatio = best.reviews.rating / best.price.current
     return currentRatio > bestRatio ? product : best
@@ -32,9 +33,10 @@ export default function ComparisonTable({ products, title }: ComparisonTableProp
   )
   
   // Find the budget pick
-  const budgetPick = products.reduce((cheapest, product) => 
-    product.price.current < cheapest.price.current ? product : cheapest
-  )
+  const budgetPick = products.reduce((cheapest, product) => {
+    if (!product.price || !cheapest.price) return cheapest
+    return product.price.current < cheapest.price.current ? product : cheapest
+  })
   
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
@@ -118,17 +120,23 @@ export default function ComparisonTable({ products, title }: ComparisonTableProp
                   </td>
                   
                   <td className="py-4 px-6">
-                    <div className="font-semibold text-gray-900">
-                      {formatPrice(product.price.current, product.price.currency)}
-                    </div>
-                    {product.price.original && product.price.original > product.price.current && (
-                      <div className="text-sm text-gray-500 line-through">
-                        {formatPrice(product.price.original, product.price.currency)}
-                      </div>
+                    {product.price ? (
+                      <>
+                        <div className="font-semibold text-gray-900">
+                          {formatPrice(product.price.current, product.price.currency)}
+                        </div>
+                        {product.price.original && product.price.original > product.price.current && (
+                          <div className="text-sm text-gray-500 line-through">
+                            {formatPrice(product.price.original, product.price.currency)}
+                          </div>
+                        )}
+                        <div className="text-xs text-gray-500 mt-1">
+                          as of {new Date(product.price.lastUpdated).toLocaleDateString()}
+                        </div>
+                      </>
+                    ) : (
+                      <div className="text-sm text-gray-500">Price not available</div>
                     )}
-                    <div className="text-xs text-gray-500 mt-1">
-                      as of {new Date(product.price.lastUpdated).toLocaleDateString()}
-                    </div>
                   </td>
                   
                   <td className="py-4 px-6">
