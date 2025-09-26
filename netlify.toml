@@ -23,7 +23,7 @@
   from = "/*"
   to = "/"
   status = 200
-  conditions = {path = "!/api/*", path = "!/_next/*", path = "!/favicon.ico", path = "!/manifest.json", path = "!/robots.txt", path = "!/sitemap.xml"}
+  conditions = {Path = "!/api/* !/_next/* !/favicon.ico !/manifest.json !/robots.txt !/sitemap.xml"}
 
 # Handle legacy URLs
 [[redirects]]
