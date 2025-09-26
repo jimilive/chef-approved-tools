@@ -59,8 +59,8 @@ export default function ConversionTestPage() {
           {/* Social Proof Test */}
           <section className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-2xl font-bold mb-4">Social Proof</h2>
-            <SocialProof count={1247} action="ordered kitchen tools" timeframe="this month" />
-            <SocialProof count={89} action="signed up for our newsletter" timeframe="today" variant="floating" />
+            <SocialProof count={0} action="ordered kitchen tools" timeframe="this month" />
+            <SocialProof count={0} action="signed up for our newsletter" timeframe="today" variant="floating" />
           </section>
 
           {/* Countdown Timer Test */}

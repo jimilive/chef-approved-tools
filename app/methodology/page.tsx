@@ -167,7 +167,7 @@ export default function MethodologyPage() {
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <TrendingUp className="w-8 h-8 text-orange-400 mx-auto mb-3" />
-              <div className="text-2xl font-bold mb-1">500+ Tools</div>
+              <div className="text-2xl font-bold mb-1">Many Tools</div>
               <div className="text-sm text-white/80">Tested since 2007</div>
             </div>
           </div>

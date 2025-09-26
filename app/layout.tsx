@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     default: 'Chef Approved Kitchen Tools | Tested by 15+ Year Restaurant Manager Scott Bradley',
     template: '%s | Chef Approved Tools - Professional Kitchen Equipment Reviews'
   },
-  description: 'Professional kitchen equipment reviews by Scott Bradley, former Mellow Mushroom Kitchen Manager with 15+ years restaurant experience. 500+ tools tested in real commercial kitchens. Honest reviews of chef knives, cookware, and appliances for serious home cooks.',
+  description: 'Professional kitchen equipment reviews by Scott Bradley, former Mellow Mushroom Kitchen Manager with 15+ years restaurant experience. Tools tested in real commercial kitchens. Honest reviews of chef knives, cookware, and appliances for serious home cooks.',
   keywords: [
     'professional kitchen tools',
     'restaurant equipment reviews',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Chef Approved Kitchen Tools | Tested by 15+ Year Restaurant Manager',
-    description: 'Professional kitchen equipment reviews by Scott Bradley, former Mellow Mushroom Kitchen Manager. 500+ tools tested in real restaurants. Honest reviews of chef knives, cookware, and appliances.',
+    description: 'Professional kitchen equipment reviews by Scott Bradley, former Mellow Mushroom Kitchen Manager. Tools tested in real restaurants. Honest reviews of chef knives, cookware, and appliances.',
     url: 'https://www.chefapprovedtools.com',
     siteName: 'Chef Approved Tools',
     images: [

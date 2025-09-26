@@ -204,7 +204,7 @@ export default function HomePage() {
               <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Operations Managed</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">500+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">Many</div>
               <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Tools Tested</div>
             </div>
           </div>
@@ -370,7 +370,7 @@ export default function HomePage() {
               <div className="flex-grow border-l-2 border-orange-200 pl-6">
                 <h3 className="font-bold text-lg mb-1">Equipment Testing & Reviews</h3>
                 <p className="text-gray-600">Combining decades of experience to help home chefs buy smart</p>
-                <p className="text-sm text-gray-500 mt-2">500+ products tested, 47 recommended</p>
+                <p className="text-sm text-gray-500 mt-2">Products tested in professional kitchens</p>
               </div>
             </div>
           </div>
@@ -396,7 +396,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-bold mb-2 text-slate-900">Professional Knives</h3>
               <p className="text-slate-600 text-sm mb-3">German vs Japanese, what actually lasts</p>
-              <p className="text-xs text-orange-700 font-semibold">23 knives reviewed</p>
+              <p className="text-xs text-orange-700 font-semibold">Knives reviewed</p>
             </a>
             
             <a href="/cookware" className="group bg-white rounded-xl p-6 sm:p-8 hover:shadow-lg transition-all">
@@ -405,7 +405,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-bold mb-2 text-slate-900">Commercial Cookware</h3>
               <p className="text-slate-600 text-sm mb-3">Restaurant-grade pans for home use</p>
-              <p className="text-xs text-orange-700 font-semibold">18 sets tested</p>
+              <p className="text-xs text-orange-700 font-semibold">Cookware sets tested</p>
             </a>
             
             <a href="/appliances" className="group bg-white rounded-xl p-6 sm:p-8 hover:shadow-lg transition-all">
@@ -414,7 +414,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-bold mb-2 text-slate-900">Power Equipment</h3>
               <p className="text-slate-600 text-sm mb-3">Mixers, blenders that survive abuse</p>
-              <p className="text-xs text-orange-700 font-semibold">31 appliances reviewed</p>
+              <p className="text-xs text-orange-700 font-semibold">Appliances reviewed</p>
             </a>
           </div>
         </div>

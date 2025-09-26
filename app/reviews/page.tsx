@@ -81,10 +81,10 @@ const featuredReviews = [
 ]
 
 const categories = [
-  { name: 'Knives', count: 1, icon: '🔪', href: '/knives' },
-  { name: 'Cookware', count: 2, href: '/cookware', icon: '🍳' },
-  { name: 'Appliances', count: 3, href: '/appliances', icon: '⚡' },
-  { name: 'Tools & Gadgets', count: 1, href: '/guides', icon: '🥄' },
+  { name: 'Knives', icon: '🔪', href: '/knives' },
+  { name: 'Cookware', href: '/cookware', icon: '🍳' },
+  { name: 'Appliances', href: '/appliances', icon: '⚡' },
+  { name: 'Tools & Gadgets', href: '/guides', icon: '🥄' },
 ]
 
 export default function ReviewsPage() {
@@ -133,7 +133,7 @@ export default function ReviewsPage() {
                 <h3 className="font-semibold text-slate-900 mb-1 group-hover:text-orange-700">
                   {category.name}
                 </h3>
-                <p className="text-sm text-slate-600">{category.count} reviews</p>
+                <p className="text-sm text-slate-600">Reviews available</p>
               </Link>
             ))}
           </div>
