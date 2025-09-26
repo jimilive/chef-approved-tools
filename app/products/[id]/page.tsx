@@ -31,7 +31,7 @@ const products = {
     amazon: "https://amazon.com/dp/B001234567?tag=your-tag-20",
     direct: "https://www.robotcoupe.com/en-us/r2"
   },
-  excerpt: "Professional kitchens run on efficiency. After 8 months of daily prep service processing 50+ lbs of vegetables, the R2 never overheated or stalled. This isn't just a tool—it's the backbone of commercial food prep.",
+  excerpt: "Professional kitchens run on efficiency. After 8 months of daily prep service processing 50+ lbs of vegetables, the R2 never overheated or stalled. This isn&apos;t just a tool—it&apos;s the backbone of commercial food prep.",
   category: "appliances",
   scores: {
     performance: 10,
@@ -89,7 +89,7 @@ const products = {
   faq: [
     {
       question: "Is the Robot Coupe R2 suitable for small restaurants?",
-      answer: "Yes, though it's designed for commercial use. It's compact for its class but the noise level and power requirements make it better suited for closed prep areas rather than open kitchens."
+      answer: "Yes, though it&apos;s designed for commercial use. It&apos;s compact for its class but the noise level and power requirements make it better suited for closed prep areas rather than open kitchens."
     },
     {
       question: "Can it handle tough vegetables like butternut squash?",

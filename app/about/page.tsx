@@ -11,7 +11,7 @@ const aboutFAQs = [
   },
   {
     question: "Why should I trust your equipment recommendations?",
-    answer: "Every tool gets minimum 6 months of testing in real kitchen environments before I recommend it. No shortcuts, no sponsored quick reviews - just honest evaluation from someone who's used professional equipment to feed hundreds of customers daily."
+    answer: "Every tool gets minimum 6 months of testing in real kitchen environments before I recommend it. No shortcuts, no sponsored quick reviews - just honest evaluation from someone who&apos;s used professional equipment to feed hundreds of customers daily."
   }
 ]
 

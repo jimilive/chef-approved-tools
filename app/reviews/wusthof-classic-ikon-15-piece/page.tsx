@@ -45,7 +45,7 @@ const productData = {
   ],
   inStock: true,
   expertRating: 4.8, // TODO: Confirm your rating
-  expertOpinion: "Professional knife set with exceptional handle ergonomics during long prep sessions. Chef, santoku, bread, and paring knives were most used regularly. The set saves hundreds of dollars compared to individual purchases. Regular maintenance with a steel required, use a stone when the steel won't bring it back to perfection. Would recommend this set for both home and professional users.",
+  expertOpinion: "Professional knife set with exceptional handle ergonomics during long prep sessions. Chef, santoku, bread, and paring knives were most used regularly. The set saves hundreds of dollars compared to individual purchases. Regular maintenance with a steel required, use a stone when the steel won&apos;t bring it back to perfection. Would recommend this set for both home and professional users.",
   dateAdded: "2024-09-23",
   lastUpdated: "2024-09-23"
 }
