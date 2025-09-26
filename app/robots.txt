@@ -14,7 +14,7 @@ Allow: /api/newsletter-signup
 Crawl-delay: 1
 
 # Host
-Host: https://www.chefapprovedtools.com
+Host: https://chefapprovedtools.com
 
 # Sitemaps
-Sitemap: https://www.chefapprovedtools.com/sitemap.xml
+Sitemap: https://chefapprovedtools.com/sitemap.xml
