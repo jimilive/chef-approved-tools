@@ -107,7 +107,7 @@ function EnhancedProductCard({ product, category }: { product: any, category: st
           <span className="text-sm text-gray-600">({product.reviews} chef reviews)</span>
         </div>
 
-        <p className="text-xs text-green-600 font-semibold mb-3">{product.tested}</p>
+        <p className="text-xs text-green-800 font-semibold mb-3">{product.tested}</p>
 
 
         {/* Enhanced CTA section */}

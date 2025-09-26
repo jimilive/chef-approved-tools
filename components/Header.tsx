@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 export default function Header() {
@@ -45,9 +46,11 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 no-underline hover:opacity-90 transition-opacity">
               <div className="relative">
-                <img
+                <Image
                   src="/logo.png"
                   alt="Chef Approved Tools"
+                  width={48}
+                  height={48}
                   className="h-12 w-auto drop-shadow-lg"
                 />
               </div>
