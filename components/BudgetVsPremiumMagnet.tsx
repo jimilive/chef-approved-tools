@@ -78,7 +78,7 @@ export default function BudgetVsPremiumMagnet({
             Check Your Email! 📧
           </h3>
           <p className="text-gray-300 mb-4">
-            Your "$500 vs $5,000 Equipment Guide" is on its way. Check your inbox (and spam folder) in the next few minutes.
+            Your &quot;$500 vs $5,000 Equipment Guide&quot; is on its way. Check your inbox (and spam folder) in the next few minutes.
           </p>
           <div className="bg-orange-100 text-orange-800 p-3 rounded-lg text-sm">
             💡 <strong>Pro Tip:</strong> Save my email (scott@chefapprovedtools.com) to your contacts so you never miss the good stuff!
@@ -102,7 +102,7 @@ export default function BudgetVsPremiumMagnet({
         </h2>
 
         <p className={`text-lg mb-4 ${variant === 'sidebar' ? 'text-gray-700' : 'text-gray-300'}`}>
-          Why spending more doesn't always mean better performance
+          Why spending more doesn&apos;t always mean better performance
         </p>
 
         {/* Trust indicators */}
@@ -123,7 +123,7 @@ export default function BudgetVsPremiumMagnet({
         <div className={`${variant === 'sidebar' ? 'bg-white' : 'bg-slate-800'} border border-orange-200 rounded-lg p-4 mb-4`}>
           <h3 className="font-semibold mb-3 flex items-center gap-2">
             <Download className="w-5 h-5 text-orange-600" />
-            What You'll Get (FREE Download):
+            What You&apos;ll Get (FREE Download):
           </h3>
 
           <ul className="space-y-2 text-sm">
@@ -152,7 +152,7 @@ export default function BudgetVsPremiumMagnet({
 
         {/* Social proof snippet */}
         <div className={`${variant === 'sidebar' ? 'bg-gray-50 text-gray-700' : 'bg-slate-700'} p-3 rounded-lg text-sm italic mb-4`}>
-          "This guide saved me $3,000 on my restaurant startup. The $45 knife recommendation cuts better than my old $200 knife!"
+          &quot;This guide saved me $3,000 on my restaurant startup. The $45 knife recommendation cuts better than my old $200 knife!&quot;
           <span className="font-semibold block mt-1">— Maria S., Restaurant Owner</span>
         </div>
       </div>

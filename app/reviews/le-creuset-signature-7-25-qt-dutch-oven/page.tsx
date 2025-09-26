@@ -537,8 +537,8 @@ export default function LeCreuset725QtReview() {
               <ul className="space-y-2 text-slate-700">
                 <li>• Budget is extremely limited</li>
                 <li>• You cook infrequently</li>
-                <li>• You don't mind seasoning cast iron</li>
-                <li>• Premium features aren't important to you</li>
+                <li>• You don&apos;t mind seasoning cast iron</li>
+                <li>• Premium features aren&apos;t important to you</li>
                 <li>• You prefer lighter cookware</li>
               </ul>
             </div>

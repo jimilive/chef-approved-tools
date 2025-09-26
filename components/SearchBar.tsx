@@ -118,7 +118,7 @@ export default function SearchBar() {
                   </p>
                   <p className="text-xs text-gray-500">{product.brand}</p>
                   <p className="text-sm font-bold text-brand-600 mt-1">
-                    {formatPrice(product.price.current, product.price.currency)}
+                    {product.price ? formatPrice(product.price.current, product.price.currency) : 'Price unavailable'}
                   </p>
                 </div>
                 <div className="flex-shrink-0">

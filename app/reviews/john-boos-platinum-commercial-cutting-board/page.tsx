@@ -565,7 +565,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               After 15 years of home use, this John Boos cutting board has proven to be a generational investment. The larger size provides efficient work space without constantly moving prepped portions. I rarely oil it but keep it clean and never soak in water, with no food safety concerns. The damage you save to your knives makes the premium price worthwhile.
             </p>
             <p className="text-orange-400 font-semibold">
-              I expect to pass this on to my children - that's the level of quality and durability you're investing in.
+              I expect to pass this on to my children - that&apos;s the level of quality and durability you&apos;re investing in.
             </p>
           </div>
         </section>

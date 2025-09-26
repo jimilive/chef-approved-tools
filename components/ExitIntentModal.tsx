@@ -36,7 +36,7 @@ export default function ExitIntentModal({ isOpen, onClose }: ExitIntentModalProp
             🛑 Wait! Before You Go...
           </h2>
           <p className="text-gray-300">
-            Don't make expensive equipment mistakes like I did when I started.
+            Don&apos;t make expensive equipment mistakes like I did when I started.
           </p>
         </div>
 

@@ -275,7 +275,7 @@ export default function WusthofClassicIkonReview() {
                 <ul className="text-sm text-slate-700 space-y-1">
                   <li>• Slicer knife rarely used in operations</li>
                   <li>• Regular maintenance with steel required</li>
-                  <li>• Use stone when steel won't restore edge</li>
+                  <li>• Use stone when steel won&apos;t restore edge</li>
                   <li>• Some pieces may be unnecessary for specific operations</li>
                 </ul>
               </div>
@@ -313,7 +313,7 @@ export default function WusthofClassicIkonReview() {
                 </p>
               </div>
               <ul className="space-y-2 text-slate-700">
-                <li>• <strong>Customization:</strong> Choose only knives you'll actually use</li>
+                <li>• <strong>Customization:</strong> Choose only knives you&apos;ll actually use</li>
                 <li>• <strong>No Waste:</strong> Some set pieces like slicer rarely used</li>
                 <li>• <strong>Gradual Investment:</strong> Spread cost over time as needed</li>
                 <li>• <strong>Specialization:</strong> Focus budget on most-used knife types</li>
@@ -512,7 +512,7 @@ export default function WusthofClassicIkonReview() {
               </p>
             </div>
             <p className="text-lg leading-relaxed mb-4">
-              This professional knife set offers exceptional handle ergonomics during long prep sessions, with the chef, santoku, bread, and paring knives being the most valuable performers. The set saves hundreds of dollars compared to individual purchases, though some pieces like the slicer may rarely be used. Regular maintenance with a steel is required, and stone sharpening when the steel isn't sufficient.
+              This professional knife set offers exceptional handle ergonomics during long prep sessions, with the chef, santoku, bread, and paring knives being the most valuable performers. The set saves hundreds of dollars compared to individual purchases, though some pieces like the slicer may rarely be used. Regular maintenance with a steel is required, and stone sharpening when the steel isn&apos;t sufficient.
             </p>
             <p className="text-orange-400 font-semibold">
               Would recommend this set for both home and professional users - the value and performance justify the investment.

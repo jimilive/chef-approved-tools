@@ -287,7 +287,7 @@ export default function Vitamix5200Review() {
                   staff feedback, comparison to commercial-grade blenders
                 </p>
               </div>
-              <p className="text-slate-700">Handled restaurant volume spectacularly during 3+ years at Purple Cafe. The blender consistently delivered professional-quality results for purees and smoothie-type preparations. Staff found it reliable and efficient for daily commercial operations, with performance that far exceeded other blenders we've tested.</p>
+              <p className="text-slate-700">Handled restaurant volume spectacularly during 3+ years at Purple Cafe. The blender consistently delivered professional-quality results for purees and smoothie-type preparations. Staff found it reliable and efficient for daily commercial operations, with performance that far exceeded other blenders we&apos;ve tested.</p>
             </div>
           </div>
         </section>
@@ -412,7 +412,7 @@ export default function Vitamix5200Review() {
                 <li>• Budget is limited for premium equipment</li>
                 <li>• Counter space is restricted</li>
                 <li>• Noise level is a primary concern</li>
-                <li>• You don't need commercial-grade performance</li>
+                <li>• You don&apos;t need commercial-grade performance</li>
               </ul>
             </div>
           </div>

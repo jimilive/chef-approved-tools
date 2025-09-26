@@ -344,7 +344,7 @@ export default function RobotCoupeR2DiceReview() {
                 <li>• You only need occasional home food processing</li>
                 <li>• Budget is limited for commercial equipment</li>
                 <li>• Kitchen space is restricted</li>
-                <li>• Volume doesn't justify commercial-grade equipment</li>
+                <li>• Volume doesn&apos;t justify commercial-grade equipment</li>
                 <li>• You prefer simpler cleaning requirements</li>
               </ul>
             </div>
