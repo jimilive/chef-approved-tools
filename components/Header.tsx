@@ -52,6 +52,7 @@ export default function Header() {
                   width={48}
                   height={48}
                   className="h-12 w-auto drop-shadow-lg"
+                  priority
                 />
               </div>
               <div className="flex flex-col">

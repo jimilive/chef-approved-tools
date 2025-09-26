@@ -1,13 +1,15 @@
 'use client'
-import React from 'react'
-import TestimonialsSection from '@/components/TestimonialsSection'
-import TopPicksComparison from '@/components/TopPicksComparison'
-import BudgetVsPremiumMagnet from '@/components/BudgetVsPremiumMagnet'
+import React, { lazy, Suspense } from 'react'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { SimpleProductSchema } from '@/components/ProductSchema'
 import FAQSchema, { kitchenToolsFAQs } from '@/components/FAQSchema'
 import { ChefCredentialsSchema } from '@/components/ReviewSchema'
 import { trackAffiliateClick } from '@/lib/analytics'
+
+// Lazy load components below the fold
+const TestimonialsSection = lazy(() => import('@/components/TestimonialsSection'))
+const TopPicksComparison = lazy(() => import('@/components/TopPicksComparison'))
+const BudgetVsPremiumMagnet = lazy(() => import('@/components/BudgetVsPremiumMagnet'))
 
 // Sample products with enhanced data
 const sampleProducts = [
@@ -258,7 +260,9 @@ export default function HomePage() {
       </section>
 
       {/* Top 3 Picks Comparison - Above the fold */}
-      <TopPicksComparison />
+      <Suspense fallback={<div className="h-96 bg-white animate-pulse"></div>}>
+        <TopPicksComparison />
+      </Suspense>
 
       {/* Featured Products Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
@@ -417,12 +421,16 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <TestimonialsSection />
+      <Suspense fallback={<div className="h-64 bg-white animate-pulse"></div>}>
+        <TestimonialsSection />
+      </Suspense>
 
       {/* Lead Magnet - Budget vs Premium Guide */}
       <section id="budget-vs-premium-signup" className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BudgetVsPremiumMagnet variant="inline" />
+          <Suspense fallback={<div className="h-48 bg-white animate-pulse"></div>}>
+            <BudgetVsPremiumMagnet variant="inline" />
+          </Suspense>
         </div>
       </section>
 

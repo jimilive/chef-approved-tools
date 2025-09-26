@@ -6,6 +6,7 @@ const nextConfig = {
   // Experimental features for performance
   experimental: {
     scrollRestoration: true,
+    optimizeCss: false, // Disabled due to build errors
   },
   
   // Image optimization configuration
@@ -40,6 +41,24 @@ const nextConfig = {
   // Performance optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+  },
+
+  // Bundle optimization
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Optimize bundle splitting
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
+    }
+    return config;
   },
   
   // Compression
