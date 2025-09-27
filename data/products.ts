@@ -18,9 +18,9 @@ export const sampleProducts: ProductCollection = {
       
       affiliateLinks: [
         {
-          url: 'https://www.amazon.com/dp/B00009ZK08?tag=chefapproved-20',
+          url: 'https://www.amazon.com/dp/B00009ZK08?tag=chefapprovedt-20',
           merchant: 'amazon',
-          tag: 'chefapproved-20',
+          tag: 'chefapprovedt-20',
           lastChecked: new Date().toISOString()
         }
       ],
@@ -110,9 +110,9 @@ export const sampleProducts: ProductCollection = {
       
       affiliateLinks: [
         {
-          url: 'https://www.amazon.com/dp/B008M5U1C2?tag=chefapproved-20',
+          url: 'https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20',
           merchant: 'amazon',
-          tag: 'chefapproved-20',
+          tag: 'chefapprovedt-20',
           lastChecked: new Date().toISOString()
         }
       ],
@@ -200,9 +200,9 @@ export const sampleProducts: ProductCollection = {
       
       affiliateLinks: [
         {
-          url: 'https://www.amazon.com/dp/B00005AL5F?tag=chefapproved-20',
+          url: 'https://www.amazon.com/dp/B00005AL5F?tag=chefapprovedt-20',
           merchant: 'amazon',
-          tag: 'chefapproved-20',
+          tag: 'chefapprovedt-20',
           lastChecked: new Date().toISOString()
         }
       ],
@@ -291,9 +291,9 @@ export const sampleProducts: ProductCollection = {
       
       affiliateLinks: [
         {
-          url: 'https://www.amazon.com/dp/B008H4SLV6?tag=chefapproved-20',
+          url: 'https://www.amazon.com/dp/B008H4SLV6?tag=chefapprovedt-20',
           merchant: 'amazon',
-          tag: 'chefapproved-20',
+          tag: 'chefapprovedt-20',
           lastChecked: new Date().toISOString()
         }
       ],

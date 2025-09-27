@@ -34,17 +34,17 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Lodge Direct",
-      url: "#", // TODO: Add actual affiliate link
+      url: "https://www.lodgecastiron.com/3-piece-cast-iron-skillet-set",
       price: 89
     },
     {
       retailer: "Amazon",
-      url: "#", // TODO: Add actual affiliate link
+      url: "https://www.amazon.com/Lodge-L3SKT-Seasoned-Cast-Iron/dp/B07RNBR6L5?tag=chefapprovedt-20",
       price: 95
     },
     {
       retailer: "Williams Sonoma",
-      url: "#", // TODO: Add actual affiliate link
+      url: "https://www.williams-sonoma.com/products/lodge-cast-iron-3-piece-skillet-set/",
       price: 129
     }
   ],

@@ -26,7 +26,7 @@ const topPicks: TopPick[] = [
     badge: 'Best Overall',
     badgeColor: 'bg-green-700',
     category: 'Blenders',
-    affiliateUrl: 'https://amazon.com/dp/B008H4SLV6?tag=chefapproved-20',
+    affiliateUrl: 'https://amazon.com/dp/B008H4SLV6?tag=chefapprovedt-20',
     keyFeature: '2.0 HP motor power',
     testPeriod: '5+ years proven',
     whyBest: 'Only blender that consistently handles commercial-volume smoothie operations'

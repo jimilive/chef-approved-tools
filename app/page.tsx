@@ -19,7 +19,7 @@ const sampleProducts = [
     brand: 'Vitamix',
     rating: 4.7,
     reviews: 234,
-    affiliateUrl: 'https://amazon.com/dp/B008H4SLV6?tag=chefapproved-20',
+    affiliateUrl: 'https://amazon.com/dp/B008H4SLV6?tag=chefapprovedt-20',
     badge: 'Restaurant Tested',
     tested: '5+ years proven'
   },
@@ -29,7 +29,7 @@ const sampleProducts = [
     brand: 'KitchenAid',
     rating: 4.9,
     reviews: 156,
-    affiliateUrl: 'https://amazon.com/dp/B00XPRRHFW?tag=chefapproved-20',
+    affiliateUrl: 'https://amazon.com/dp/B00XPRRHFW?tag=chefapprovedt-20',
     badge: 'NSF Certified',
     tested: 'Survived $80K/mo operations'
   }

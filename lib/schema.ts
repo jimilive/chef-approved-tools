@@ -93,8 +93,8 @@ export function generateProductSchema(product: any) {
     offers: {
       "@type": "Offer",
       url: product.affiliateLinks?.[0]?.url,
-      priceCurrency: product.price.currency,
-      price: product.price.current,
+      priceCurrency: product.priceRange?.currency || product.price?.currency || "USD",
+      price: product.priceRange?.min || product.price?.current,
       priceValidUntil: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
       itemCondition: "https://schema.org/NewCondition",
       availability: product.inStock
@@ -165,8 +165,8 @@ export function generateProductReviewSchema(product: any) {
       },
       offers: {
         "@type": "Offer",
-        price: product.price.current,
-        priceCurrency: product.price.currency,
+        price: product.priceRange?.min || product.price?.current,
+        priceCurrency: product.priceRange?.currency || product.price?.currency || "USD",
         availability: product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
         url: product.affiliateLinks?.[0]?.url
       }
@@ -285,10 +285,10 @@ export function generateItemListSchema(products: any[], listName: string) {
         url: `https://www.chefapprovedtools.com/reviews/${product.slug}`,
         offers: {
           "@type": "Offer",
-          price: product.price.current,
-          priceCurrency: product.price.currency,
-          availability: product.inStock 
-            ? "https://schema.org/InStock" 
+          price: product.priceRange?.min || product.price?.current,
+          priceCurrency: product.priceRange?.currency || product.price?.currency || "USD",
+          availability: product.inStock
+            ? "https://schema.org/InStock"
             : "https://schema.org/OutOfStock"
         },
         aggregateRating: product.reviews.rating > 0 ? {
