@@ -204,10 +204,12 @@ export default function RootLayout({
               (function() {
                 if (typeof window === 'undefined') return;
 
-                // Service worker registration
-                if ('serviceWorker' in navigator && '${process.env.NODE_ENV}' === 'production') {
-                  window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/sw.js').catch(console.error);
+                // Service worker cleanup - unregister existing service workers
+                if ('serviceWorker' in navigator) {
+                  navigator.serviceWorker.getRegistrations().then(registrations => {
+                    registrations.forEach(registration => {
+                      registration.unregister();
+                    });
                   });
                 }
 

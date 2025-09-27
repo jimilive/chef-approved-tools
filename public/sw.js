@@ -139,7 +139,11 @@ async function cacheFirst(request, cache, maxAge) {
     }
     return networkResponse;
   } catch {
-    return cachedResponse || new Response('Offline', { status: 503 });
+    // Return cached response if available, otherwise let the request fail naturally
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    throw new Error('Network unavailable and no cached response');
   }
 }
 
@@ -154,7 +158,11 @@ async function networkFirst(request, cache, maxAge) {
     return networkResponse;
   } catch {
     const cachedResponse = await cache.match(request);
-    return cachedResponse || new Response('Offline', { status: 503 });
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    // Let the request fail naturally instead of returning "Offline"
+    throw new Error('Network unavailable and no cached response');
   }
 }
 
