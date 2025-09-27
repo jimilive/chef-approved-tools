@@ -6,7 +6,7 @@ const nextConfig = {
   // Experimental features for performance
   experimental: {
     scrollRestoration: true,
-    optimizeCss: false, // Disabled due to build errors
+    optimizeCss: false, // Disabled - manually optimizing CSS loading
     webVitalsAttribution: ['CLS', 'LCP'],
     esmExternals: true, // Use ES modules for better tree shaking
   },
@@ -57,8 +57,21 @@ const nextConfig = {
 
   // Bundle optimization
   webpack: (config, { dev, isServer }) => {
-    // Optimize bundle splitting
+    // Add ignore plugin to completely exclude polyfills
+    const webpack = require('webpack');
+
     if (!dev && !isServer) {
+      // Completely ignore polyfill modules
+      config.plugins.push(
+        new webpack.IgnorePlugin({
+          resourceRegExp: /^core-js/,
+        }),
+        new webpack.IgnorePlugin({
+          resourceRegExp: /polyfill-module/,
+        })
+      );
+
+      // Optimize bundle splitting
       config.optimization.splitChunks = {
         chunks: 'all',
         cacheGroups: {
@@ -66,6 +79,12 @@ const nextConfig = {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all',
+          },
+          react: {
+            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+            name: 'react-vendor',
+            chunks: 'all',
+            priority: 20,
           },
         },
       };
@@ -78,10 +97,10 @@ const nextConfig = {
         tls: false,
       };
 
-      // Exclude specific polyfills and optimize bundles for modern browsers
+      // Replace specific polyfill modules with false
       config.resolve.alias = {
         ...config.resolve.alias,
-        // Exclude polyfills that modern browsers don't need
+        // Completely exclude polyfills
         'core-js/modules/es.array.at': false,
         'core-js/modules/es.array.flat': false,
         'core-js/modules/es.array.flat-map': false,
@@ -89,19 +108,7 @@ const nextConfig = {
         'core-js/modules/es.object.has-own': false,
         'core-js/modules/es.string.trim-start': false,
         'core-js/modules/es.string.trim-end': false,
-      };
-
-      // Optimize bundle chunks further
-      config.optimization.splitChunks.cacheGroups.react = {
-        test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
-        name: 'react-vendor',
-        chunks: 'all',
-        priority: 20,
-      };
-
-      // Replace Next.js polyfills with empty module for modern browsers
-      config.resolve.alias = {
-        ...config.resolve.alias,
+        // Replace Next.js polyfill module
         'next/dist/build/polyfills/polyfill-module': require.resolve('./lib/polyfills.js'),
       };
     }

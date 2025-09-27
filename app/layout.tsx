@@ -296,31 +296,57 @@ export default function RootLayout({
           </MobileOptimizationProvider>
         </MobileOptimizedLayout>
 
-        {/* Immediate CSS Deferring - Run before anything else */}
+        {/* Complete CSS render-blocking elimination */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // IMMEDIATE CSS interception - run before Next.js loads
+              // Completely prevent CSS from blocking render
               (function() {
-                // Override appendChild to intercept CSS links
-                const originalAppendChild = Document.prototype.appendChild || HTMLElement.prototype.appendChild;
-                HTMLHeadElement.prototype.appendChild = function(node) {
-                  if (node.tagName === 'LINK' && node.rel === 'stylesheet' && node.href.includes('/_next/static/css/')) {
-                    // Don't append CSS immediately - defer it
-                    const href = node.href;
-                    setTimeout(function() {
-                      const newLink = document.createElement('link');
-                      newLink.rel = 'stylesheet';
-                      newLink.href = href;
-                      newLink.media = 'all';
-                      document.head.appendChild = originalAppendChild;
-                      document.head.appendChild(newLink);
-                      HTMLHeadElement.prototype.appendChild = arguments.callee;
-                    }, 50);
-                    return node;
+                // Intercept and defer ALL CSS loading
+                const originalCreateElement = document.createElement;
+                const deferredCSS = [];
+
+                document.createElement = function(tagName) {
+                  const element = originalCreateElement.call(this, tagName);
+
+                  if (tagName.toLowerCase() === 'link') {
+                    const originalSetAttribute = element.setAttribute;
+                    element.setAttribute = function(name, value) {
+                      if (name === 'rel' && value === 'stylesheet') {
+                        // Store for later loading
+                        const href = this.href || this.getAttribute('href');
+                        if (href && href.includes('/_next/static/css/')) {
+                          deferredCSS.push(href);
+                          // Return empty element to prevent blocking
+                          return;
+                        }
+                      }
+                      return originalSetAttribute.call(this, name, value);
+                    };
                   }
-                  return originalAppendChild.call(this, node);
+
+                  return element;
                 };
+
+                // Load CSS after first paint
+                function loadDeferredCSS() {
+                  deferredCSS.forEach(function(href) {
+                    const link = document.createElement('link');
+                    link.rel = 'stylesheet';
+                    link.href = href;
+                    link.media = 'all';
+                    document.head.appendChild(link);
+                  });
+                }
+
+                // Load after requestAnimationFrame to ensure it's after first paint
+                if (typeof requestAnimationFrame !== 'undefined') {
+                  requestAnimationFrame(function() {
+                    setTimeout(loadDeferredCSS, 0);
+                  });
+                } else {
+                  setTimeout(loadDeferredCSS, 16);
+                }
               })();
             `
           }}
