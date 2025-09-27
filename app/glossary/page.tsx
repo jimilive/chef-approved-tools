@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { Book, Search } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Kitchen Equipment Glossary & Knife Cuts Guide | Chef Approved Tools',
-  description: 'Professional kitchen equipment terms and knife cuts explained by a restaurant manager. Learn NSF certification, full tang, julienne, brunoise, and more professional techniques.',
-  keywords: ['kitchen equipment glossary', 'knife cuts guide', 'NSF certification', 'full tang knife', 'julienne cut', 'brunoise', 'chiffonade', 'professional knife techniques', 'restaurant equipment terms']
+  title: 'Kitchen Glossary, Recipe Conversions & Knife Cuts Guide | Chef Approved Tools',
+  description: 'Professional kitchen equipment terms, baking conversions, and knife cuts explained by a restaurant manager. Learn weight vs volume measurements, NSF certification, julienne, brunoise, and more professional techniques.',
+  keywords: ['kitchen equipment glossary', 'recipe conversions', 'baking by weight', 'professional measurements', 'knife cuts guide', 'NSF certification', 'full tang knife', 'julienne cut', 'brunoise', 'chiffonade', 'professional knife techniques', 'restaurant equipment terms', 'volume to weight conversions', 'professional baking techniques']
 }
 
 const knifeCuts = [
@@ -166,11 +166,11 @@ export default function GlossaryPage() {
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Kitchen Equipment Glossary
+            Kitchen Glossary & Recipe Conversions
           </h1>
           <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Professional kitchen terms explained in plain English. No more wondering what NSF certification
-            or full tang construction actually means for your cooking.
+            Professional kitchen terms, recipe conversions, and knife techniques explained in plain English.
+            Learn why pastry chefs use weight measurements and master the cuts that ensure even cooking.
           </p>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 inline-block">
             <div className="flex items-center gap-2 text-orange-400">
@@ -226,6 +226,220 @@ export default function GlossaryPage() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Recipe Conversions Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Professional Recipe Conversions
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Master the measurements and conversions that professional bakers and chefs use for consistent,
+              reproducible results every time.
+            </p>
+          </div>
+
+          {/* Why Weight Matters */}
+          <div className="bg-orange-50 border border-orange-200 rounded-xl p-8 mb-12">
+            <h3 className="text-2xl font-bold text-orange-800 mb-4">
+              Why Professional Bakers Use Weight (Not Volume)
+            </h3>
+            <div className="space-y-4 text-slate-700">
+              <p className="leading-relaxed">
+                <strong>In 18+ years of restaurant work, I&apos;ve learned this fundamental truth:</strong> Weight is the only way to ensure
+                consistent results in baking. Here&apos;s why professional kitchens always use scales:
+              </p>
+              <ul className="space-y-2 list-disc list-inside ml-4">
+                <li><strong>Flour varies dramatically:</strong> 1 cup can weigh anywhere from 120g to 150g depending on how it&apos;s measured</li>
+                <li><strong>Humidity affects volume:</strong> Flour absorbs moisture, changing its density throughout the day</li>
+                <li><strong>Packing matters:</strong> &quot;Packed&quot; vs &quot;unpacked&quot; can double the actual amount of ingredient</li>
+                <li><strong>Consistency equals profit:</strong> Restaurants can&apos;t afford batch-to-batch variation</li>
+              </ul>
+              <div className="bg-white rounded-lg p-4 mt-6">
+                <p className="font-semibold text-orange-800 mb-2">Professional Kitchen Reality:</p>
+                <p className="text-sm">
+                  When making 50 batches of pizza dough nightly, a 10% flour variation means some pizzas are dense, others are thin.
+                  Weight eliminates this variable completely.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Common Conversions */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {/* Volume to Weight */}
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Volume to Weight Conversions</h3>
+              <div className="space-y-3">
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">All-Purpose Flour</span>
+                    <span className="text-sm text-slate-600">1 cup = 120g</span>
+                  </div>
+                </div>
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Bread Flour</span>
+                    <span className="text-sm text-slate-600">1 cup = 125g</span>
+                  </div>
+                </div>
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Granulated Sugar</span>
+                    <span className="text-sm text-slate-600">1 cup = 200g</span>
+                  </div>
+                </div>
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Brown Sugar (packed)</span>
+                    <span className="text-sm text-slate-600">1 cup = 220g</span>
+                  </div>
+                </div>
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Butter</span>
+                    <span className="text-sm text-slate-600">1 cup = 225g</span>
+                  </div>
+                </div>
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Cocoa Powder</span>
+                    <span className="text-sm text-slate-600">1 cup = 85g</span>
+                  </div>
+                </div>
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Powdered Sugar</span>
+                    <span className="text-sm text-slate-600">1 cup = 120g</span>
+                  </div>
+                </div>
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Rolled Oats</span>
+                    <span className="text-sm text-slate-600">1 cup = 90g</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Temperature Conversions */}
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Temperature Conversions</h3>
+              <div className="space-y-3">
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Room Temperature</span>
+                    <span className="text-sm text-slate-600">68-72°F (20-22°C)</span>
+                  </div>
+                </div>
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Warm Water (Yeast)</span>
+                    <span className="text-sm text-slate-600">105-110°F (40-43°C)</span>
+                  </div>
+                </div>
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Soft Ball (Candy)</span>
+                    <span className="text-sm text-slate-600">235-240°F (113-116°C)</span>
+                  </div>
+                </div>
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Hard Crack (Candy)</span>
+                    <span className="text-sm text-slate-600">300-310°F (149-154°C)</span>
+                  </div>
+                </div>
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Deep Frying</span>
+                    <span className="text-sm text-slate-600">350-375°F (175-190°C)</span>
+                  </div>
+                </div>
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Bread Baking</span>
+                    <span className="text-sm text-slate-600">375-450°F (190-230°C)</span>
+                  </div>
+                </div>
+                <div className="border-b border-gray-200 pb-2">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Pizza Oven</span>
+                    <span className="text-sm text-slate-600">500-550°F (260-290°C)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Measuring Techniques */}
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-8 mb-12">
+            <h3 className="text-2xl font-bold text-blue-800 mb-6">
+              Professional Measuring Techniques
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-bold text-blue-700 mb-3">Dry Ingredients (When You Must Use Volume)</h4>
+                <ul className="space-y-2 text-slate-700 text-sm">
+                  <li><strong>Flour:</strong> Spoon into cup, level with knife edge. Never scoop or pack.</li>
+                  <li><strong>Brown Sugar:</strong> Pack firmly into cup unless recipe specifies otherwise.</li>
+                  <li><strong>White Sugar:</strong> Pour and level - no packing needed.</li>
+                  <li><strong>Cocoa/Spices:</strong> Spoon lightly, level off. Don&apos;t pack.</li>
+                  <li><strong>Baking Powder/Soda:</strong> Level measurements are critical for leavening.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-bold text-blue-700 mb-3">Liquid Ingredients</h4>
+                <ul className="space-y-2 text-slate-700 text-sm">
+                  <li><strong>Water/Milk:</strong> Use clear measuring cup at eye level.</li>
+                  <li><strong>Oil:</strong> Pour slowly, check at eye level for accuracy.</li>
+                  <li><strong>Honey/Syrup:</strong> Spray cup with oil first for easy release.</li>
+                  <li><strong>Vanilla:</strong> Measure in teaspoons/tablespoons, not estimating drops.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Scaling Recipes */}
+          <div className="bg-green-50 border border-green-200 rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-green-800 mb-4">
+              Scaling Recipes Up or Down
+            </h3>
+            <div className="space-y-4 text-slate-700">
+              <p className="leading-relaxed">
+                <strong>Restaurant Reality:</strong> We constantly scale recipes from 6 portions to 60. Here&apos;s how to do it safely:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                <div className="bg-white rounded-lg p-4">
+                  <h4 className="font-bold text-green-700 mb-2">Easy to Scale</h4>
+                  <ul className="text-sm space-y-1">
+                    <li>• Main ingredients (flour, sugar, fats)</li>
+                    <li>• Liquids (milk, water, oils)</li>
+                    <li>• Most spices and seasonings</li>
+                  </ul>
+                </div>
+                <div className="bg-white rounded-lg p-4">
+                  <h4 className="font-bold text-yellow-700 mb-2">Scale Carefully</h4>
+                  <ul className="text-sm space-y-1">
+                    <li>• Leavening (baking powder/soda)</li>
+                    <li>• Salt (can quickly become overpowering)</li>
+                    <li>• Strong spices (cayenne, cloves)</li>
+                  </ul>
+                </div>
+                <div className="bg-white rounded-lg p-4">
+                  <h4 className="font-bold text-red-700 mb-2">Don&apos;t Scale Linearly</h4>
+                  <ul className="text-sm space-y-1">
+                    <li>• Cooking times (large batches cook slower)</li>
+                    <li>• Pan sizes (affects cooking rate)</li>
+                    <li>• Yeast (often needs less when scaling up)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
