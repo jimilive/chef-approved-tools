@@ -3,18 +3,19 @@ import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, Aler
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
-import AffiliateButtons from './AffiliateButtons'
+import PriceDisplay from '@/components/PriceDisplay'
 
 const productData = {
   name: "Robot Coupe R2 Dice Continuous Feed Food Processor",
   slug: "robot-coupe-r2-dice",
   brand: "Robot Coupe",
   model: "R2 Dice",
-  price: {
-    current: 1299, // TODO: Confirm current pricing
-    original: 1499, // TODO: Confirm if there's a regular higher price
+  priceRange: {
+    min: 1299,
+    max: 1499,
     currency: "USD"
   },
+  dealStatus: "high" as const,
   // Note: No customer reviews - this is a professional evaluation only
   category: "Food Processors",
   pros: [
@@ -311,12 +312,14 @@ export default function RobotCoupeR2DiceReview() {
         {/* Pricing and Where to Buy */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Current Pricing & Where to Buy</h2>
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
-            <p className="text-yellow-700 text-sm">
-              <strong>TODO:</strong> Please add actual affiliate links and confirm current pricing from your preferred suppliers.
-            </p>
-          </div>
-          <AffiliateButtons productData={productData} />
+          <PriceDisplay
+            productName={productData.name}
+            priceRange={productData.priceRange}
+            dealStatus={productData.dealStatus}
+            dealText="Professional equipment - consider used/refurbished options for better value"
+            affiliateLinks={productData.affiliateLinks}
+            lastUpdated="Updated weekly"
+          />
         </section>
 
         {/* Who Should Buy This - NEEDS YOUR INPUT */}

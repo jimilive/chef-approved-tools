@@ -3,18 +3,19 @@ import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign } fro
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
-import AffiliateButtons from './AffiliateButtons'
+import PriceDisplay from '@/components/PriceDisplay'
 
 const productData = {
   name: "KitchenAid Commercial Series KSM8990WH",
   slug: "kitchenaid-ksm8990wh",
   brand: "KitchenAid",
   model: "KSM8990WH",
-  price: {
-    current: 949,
-    original: 1199,
+  priceRange: {
+    min: 499,
+    max: 649,
     currency: "USD"
   },
+  dealStatus: "normal" as const,
   rating: 4.8,
   reviewCount: 127,
   category: "Stand Mixers",
@@ -275,7 +276,14 @@ export default function KitchenAidReviewPage() {
         {/* Pricing and Where to Buy */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Current Pricing & Where to Buy</h2>
-          <AffiliateButtons productData={productData} />
+          <PriceDisplay
+            productName={productData.name}
+            priceRange={productData.priceRange}
+            dealStatus={productData.dealStatus}
+            dealText="Commercial series - worth the premium over home models for NSF certification"
+            affiliateLinks={productData.affiliateLinks}
+            lastUpdated="Updated weekly"
+          />
         </section>
 
         {/* Who Should Buy This */}

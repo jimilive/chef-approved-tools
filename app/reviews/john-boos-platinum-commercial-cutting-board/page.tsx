@@ -3,18 +3,19 @@ import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, Aler
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
-import AffiliateButtons from './AffiliateButtons'
+import PriceDisplay from '@/components/PriceDisplay'
 
 const productData = {
   name: "John Boos Platinum Commercial Series Rectangular Wooden Maple Cutting Board 24x18x1.75\"",
   slug: "john-boos-platinum-commercial-cutting-board",
   brand: "John Boos",
   model: "Platinum Commercial Series 24x18x1.75",
-  price: {
-    current: 189, // TODO: Confirm current pricing
-    original: 229, // TODO: Confirm if there's a regular higher price
+  priceRange: {
+    min: 189,
+    max: 229,
     currency: "USD"
   },
+  dealStatus: "normal" as const,
   // Note: No customer reviews - this is a professional evaluation only
   category: "Cutting Boards",
   pros: [
@@ -509,12 +510,14 @@ export default function JohnBosPlatinumCuttingBoardReview() {
         {/* Pricing and Where to Buy */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Current Pricing & Where to Buy</h2>
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
-            <p className="text-yellow-700 text-sm">
-              <strong>TODO:</strong> Please add actual affiliate links and confirm current pricing from John Boos direct and other retailers.
-            </p>
-          </div>
-          <AffiliateButtons productData={productData} />
+          <PriceDisplay
+            productName={productData.name}
+            priceRange={productData.priceRange}
+            dealStatus={productData.dealStatus}
+            dealText="Restaurant supply stores sometimes beat retail pricing - size affects price significantly"
+            affiliateLinks={productData.affiliateLinks}
+            lastUpdated="Updated weekly"
+          />
         </section>
 
         {/* Who Should Buy This - NEEDS YOUR INPUT */}

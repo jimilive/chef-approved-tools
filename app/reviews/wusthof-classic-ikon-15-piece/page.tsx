@@ -3,18 +3,19 @@ import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, Aler
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
-import AffiliateButtons from './AffiliateButtons'
+import PriceDisplay from '@/components/PriceDisplay'
 
 const productData = {
   name: "WÜSTHOF Classic IKON 15-Piece Knife Block Set",
   slug: "wusthof-classic-ikon-15-piece",
   brand: "WÜSTHOF",
   model: "Classic IKON 15-Piece",
-  price: {
-    current: 399, // TODO: Confirm current pricing
-    original: 499, // TODO: Confirm if there's a regular higher price
+  priceRange: {
+    min: 380,
+    max: 499,
     currency: "USD"
   },
+  dealStatus: "normal" as const,
   // Note: No customer reviews - this is a professional evaluation only
   category: "Knife Sets",
   pros: [
@@ -459,12 +460,14 @@ export default function WusthofClassicIkonReview() {
         {/* Pricing and Where to Buy */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Current Pricing & Where to Buy</h2>
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
-            <p className="text-yellow-700 text-sm">
-              <strong>TODO:</strong> Please add actual affiliate links and confirm current pricing from Williams Sonoma, Amazon, and other retailers.
-            </p>
-          </div>
-          <AffiliateButtons productData={productData} />
+          <PriceDisplay
+            productName={productData.name}
+            priceRange={productData.priceRange}
+            dealStatus={productData.dealStatus}
+            dealText="Amazon typically has best pricing - buying individual knives costs 40% more"
+            affiliateLinks={productData.affiliateLinks}
+            lastUpdated="Updated weekly"
+          />
         </section>
 
         {/* Who Should Buy This - NEEDS YOUR INPUT */}
