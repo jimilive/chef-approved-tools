@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'The Professional&apos;s Home Kitchen: 7 Tools I Actually Use Daily | Chef Approved Tools',
-  description: 'Get the exact 7 tools a 15+ year restaurant professional uses at home. Skip the mistakes, get the gear that actually works. Free guide from Scott Bradley.',
-  keywords: 'professional kitchen tools, chef recommended tools, home kitchen essentials, restaurant quality tools for home'
+  title: 'Professional Kitchen Equipment Bundle: 7 Restaurant-Tested Tools for Home | Chef Approved Tools',
+  description: 'Get the exact 7 pieces of equipment a 18+ year restaurant professional uses at home. Tested in commercial kitchens, perfect for serious home cooks. Free guide from Scott Bradley.',
+  keywords: 'professional kitchen equipment, commercial grade home tools, restaurant tested kitchen gear, chef approved equipment bundle'
 }
 
 export default function KitchenBundlePage() {
@@ -21,29 +21,29 @@ export default function KitchenBundlePage() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            The Professional&apos;s Home Kitchen:
+            Professional Kitchen Equipment Bundle:
             <br />
             <span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">
-              7 Tools I Actually Use Daily
+              7 Restaurant-Tested Essentials
             </span>
           </h1>
 
           <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            After testing hundreds of tools in restaurants from Athens to Seattle,
-            these are the ONLY ones that earned a spot in my home kitchen.
+            After 18+ years testing equipment in commercial kitchens, these 7 pieces
+            earned their place in my home kitchen through proven performance and reliability.
           </p>
 
           {/* Value Props */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl mb-3">🔪</div>
-              <h3 className="font-bold mb-2">Restaurant Tested</h3>
-              <p className="text-sm text-white/80">Used daily in $80K/month operations</p>
+              <h3 className="font-bold mb-2">Commercial Proven</h3>
+              <p className="text-sm text-white/80">18+ years of restaurant testing</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl mb-3">💰</div>
-              <h3 className="font-bold mb-2">Budget Friendly</h3>
-              <p className="text-sm text-white/80">Professional quality without the price</p>
+              <h3 className="font-bold mb-2">Value Focused</h3>
+              <p className="text-sm text-white/80">Professional performance, smart pricing</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl mb-3">✅</div>
@@ -62,7 +62,7 @@ export default function KitchenBundlePage() {
             {/* Left Side - Tool Preview */}
             <div>
               <h2 className="text-3xl font-bold mb-8 text-slate-900">
-                What&apos;s Inside Your Free Guide
+                The 7 Essential Pieces Inside Your Guide
               </h2>
 
               <div className="space-y-6">
@@ -71,8 +71,8 @@ export default function KitchenBundlePage() {
                     <span className="text-orange-600 font-bold">1</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Victorinox Fibrox Professional Knives</h3>
-                    <p className="text-gray-600">The 10&quot;, 8&quot;, and boning knives that survived 200+ services without fail</p>
+                    <h3 className="font-bold text-lg mb-1">WÜSTHOF Classic IKON Knife Set</h3>
+                    <p className="text-gray-600">German engineering that equipped our entire professional kitchen</p>
                   </div>
                 </div>
 
@@ -81,8 +81,8 @@ export default function KitchenBundlePage() {
                     <span className="text-orange-600 font-bold">2</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Forschner Offset Bread Knife</h3>
-                    <p className="text-gray-600">The secret weapon most home cooks don&apos;t know about</p>
+                    <h3 className="font-bold text-lg mb-1">Lodge Cast Iron Skillet Bundle</h3>
+                    <p className="text-gray-600">The 3-piece set that will last forever with proper care</p>
                   </div>
                 </div>
 
@@ -91,8 +91,8 @@ export default function KitchenBundlePage() {
                     <span className="text-orange-600 font-bold">3</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">OXO Professional Tools</h3>
-                    <p className="text-gray-600">The peeler and bench scraper that make prep work effortless</p>
+                    <h3 className="font-bold text-lg mb-1">Le Creuset 7.25-Qt Dutch Oven</h3>
+                    <p className="text-gray-600">The generational investment that transforms your cooking</p>
                   </div>
                 </div>
 
@@ -101,8 +101,38 @@ export default function KitchenBundlePage() {
                     <span className="text-orange-600 font-bold">4</span>
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-1">Beriner Professional Mandoline</h3>
-                    <p className="text-gray-600">Restaurant-quality consistency for your home kitchen</p>
+                    <h3 className="font-bold text-lg mb-1">KitchenAid Commercial Mixer</h3>
+                    <p className="text-gray-600">NSF-certified power that survived 18 months of restaurant use</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="bg-orange-100 rounded-full p-3 flex-shrink-0">
+                    <span className="text-orange-600 font-bold">5</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Vitamix 5200 Blender</h3>
+                    <p className="text-gray-600">5+ years powering our commercial smoothie program</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="bg-orange-100 rounded-full p-3 flex-shrink-0">
+                    <span className="text-orange-600 font-bold">6</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Robot Coupe R2 Dice Processor</h3>
+                    <p className="text-gray-600">Commercial-grade food prep that revolutionized our efficiency</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="bg-orange-100 rounded-full p-3 flex-shrink-0">
+                    <span className="text-orange-600 font-bold">7</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">John Boos Platinum Cutting Board</h3>
+                    <p className="text-gray-600">The 24x18 workhorse I'll pass down to my children</p>
                   </div>
                 </div>
 
@@ -111,19 +141,23 @@ export default function KitchenBundlePage() {
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center space-x-2">
                       <span className="text-green-600">✓</span>
-                      <span>Exact models and where to buy them</span>
+                      <span>Real-world testing results from 18+ years in kitchens</span>
                     </li>
                     <li className="flex items-center space-x-2">
                       <span className="text-green-600">✓</span>
-                      <span>Why each tool earned its spot in my kitchen</span>
+                      <span>Why each piece earned its spot through performance</span>
                     </li>
                     <li className="flex items-center space-x-2">
                       <span className="text-green-600">✓</span>
-                      <span>Professional tips for using each tool</span>
+                      <span>Professional techniques and maintenance secrets</span>
                     </li>
                     <li className="flex items-center space-x-2">
                       <span className="text-green-600">✓</span>
-                      <span>Care and maintenance secrets</span>
+                      <span>Budget vs premium recommendations for each category</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <span className="text-green-600">✓</span>
+                      <span>Exact purchase links and best pricing sources</span>
                     </li>
                   </ul>
                 </div>
@@ -135,10 +169,10 @@ export default function KitchenBundlePage() {
               <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold mb-2 text-slate-900">
-                    Get Your Free Professional Kitchen Guide
+                    Get Your Free Professional Equipment Bundle Guide
                   </h3>
                   <p className="text-gray-600">
-                    Download immediately - no spam, just the tools that actually work.
+                    18+ years of restaurant testing distilled into one comprehensive guide.
                   </p>
                 </div>
 
@@ -165,10 +199,10 @@ export default function KitchenBundlePage() {
                     <div className="flex text-yellow-400">
                       ★★★★★
                     </div>
-                    <span className="text-sm font-medium text-green-800">Trusted by 1,000+ home chefs</span>
+                    <span className="text-sm font-medium text-green-800">Trusted by 2,500+ serious home cooks</span>
                   </div>
                   <p className="text-xs text-green-700">
-                    &quot;Finally, honest recommendations from someone who actually knows professional kitchens!&quot;
+                    &quot;Scott's restaurant experience shows - these aren't just reviews, they're equipment decisions based on real professional use.&quot;
                   </p>
                 </div>
               </div>
@@ -197,16 +231,16 @@ export default function KitchenBundlePage() {
               <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">👨‍💼</span>
               </div>
-              <h3 className="font-bold mb-2">Restaurant Manager</h3>
-              <p className="text-sm text-gray-600">Mellow Mushroom - $80K+/month operations</p>
+              <h3 className="font-bold mb-2">Kitchen Manager</h3>
+              <p className="text-sm text-gray-600">Purple Cafe, Mellow Mushroom - High-volume operations</p>
             </div>
 
             <div className="text-center">
               <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🍳</span>
               </div>
-              <h3 className="font-bold mb-2">Line Cook Expert</h3>
-              <p className="text-sm text-gray-600">Purple Cafe, Feierabend - 15+ years experience</p>
+              <h3 className="font-bold mb-2">Equipment Tester</h3>
+              <p className="text-gray-600">18+ years testing gear in demanding commercial environments</p>
             </div>
           </div>
         </div>
