@@ -107,15 +107,32 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <head>
         {/* Mobile viewport meta tag */}
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover, user-scalable=no" />
         
         {/* Preload critical resources */}
         <link rel="preload" href="/logo.png" as="image" type="image/png" />
 
-        {/* Preload critical font for LCP optimization */}
-        <link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        {/* Critical CSS inline for immediate rendering */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            @font-face{font-family:'Inter';src:url('/fonts/inter-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+            @font-face{font-family:'Inter';src:url('/fonts/inter-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+            @font-face{font-family:'Inter';src:url('/fonts/inter-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+            *{box-sizing:border-box}
+            body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;margin:0;padding:0;line-height:1.6}
+            .header-gradient{background:linear-gradient(135deg,#1e293b 0%,#ea580c 100%)}
+            .btn-primary{background:#ea580c;color:white;padding:0.75rem 1.5rem;border-radius:0.5rem;font-weight:600;transition:background-color 0.2s ease}
+            .btn-primary:hover{background:#dc2626}
+            .container{max-width:1200px;margin:0 auto;padding:0 1rem}
+          `
+        }} />
 
-        {/* Preconnect to critical domains */}
+        {/* Optimized font loading - self-hosted Inter for better performance */}
+        <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+
+        {/* Fallback for Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.unsplash.com" />
@@ -178,7 +195,65 @@ export default function RootLayout({
             <ScrollTracker />
           </MobileOptimizationProvider>
         </MobileOptimizedLayout>
-        
+
+        {/* Performance optimization scripts */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Performance monitoring and progressive enhancement
+              (function() {
+                if (typeof window === 'undefined') return;
+
+                // Service worker registration
+                if ('serviceWorker' in navigator && '${process.env.NODE_ENV}' === 'production') {
+                  window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js').catch(console.error);
+                  });
+                }
+
+                document.addEventListener('DOMContentLoaded', () => {
+                  // Performance optimizations
+                  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                  if (prefersReducedMotion) {
+                    document.documentElement.style.setProperty('--animation-duration', '0ms');
+                  }
+
+                  // Intersection Observer for lazy loading
+                  if ('IntersectionObserver' in window) {
+                    const lazyImages = document.querySelectorAll('img[data-src]');
+                    const imageObserver = new IntersectionObserver((entries) => {
+                      entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                          const img = entry.target;
+                          img.src = img.dataset.src;
+                          img.classList.add('loaded');
+                          imageObserver.unobserve(img);
+                        }
+                      });
+                    }, { rootMargin: '50px 0px' });
+
+                    lazyImages.forEach(img => imageObserver.observe(img));
+                  }
+
+                  // Performance metrics tracking
+                  if ('PerformanceObserver' in window) {
+                    try {
+                      const observer = new PerformanceObserver((list) => {
+                        list.getEntries().forEach((entry) => {
+                          if (entry.entryType === 'largest-contentful-paint') {
+                            console.log('LCP:', entry.startTime);
+                          }
+                        });
+                      });
+                      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+                    } catch (e) {}
+                  }
+                });
+              })();
+            `
+          }}
+        />
+
         {/* Google Analytics 4 - Deferred loading for performance */}
         {process.env.NEXT_PUBLIC_GA_TRACKING_ID && (
           <script

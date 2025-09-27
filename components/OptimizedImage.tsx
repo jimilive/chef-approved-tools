@@ -1,11 +1,14 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
 import Image, { ImageProps } from 'next/image'
+import { optimizeImageProps, generateBlurPlaceholder } from '@/lib/image-optimization'
 
 interface OptimizedImageProps extends Omit<ImageProps, 'onLoad' | 'onError'> {
   fallback?: string
   loading?: 'lazy' | 'eager'
   quality?: number
+  imageType?: 'hero' | 'product' | 'thumbnail' | 'logo'
+  customBlur?: string
 }
 
 export default function OptimizedImage({
@@ -14,6 +17,8 @@ export default function OptimizedImage({
   fallback = '/images/placeholder.jpg',
   loading = 'lazy',
   quality = 85,
+  imageType = 'product',
+  customBlur,
   className = '',
   ...props
 }: OptimizedImageProps) {
@@ -21,6 +26,9 @@ export default function OptimizedImage({
   const [imageLoading, setImageLoading] = useState(true)
   const [imageError, setImageError] = useState(false)
   const imageRef = useRef<HTMLDivElement>(null)
+
+  // Get optimized image properties
+  const optimizedProps = optimizeImageProps(src as string, alt, imageType, customBlur)
 
   // Intersection Observer for progressive loading
   useEffect(() => {
@@ -77,14 +85,12 @@ export default function OptimizedImage({
       {(loading === 'eager' || !imageLoading) && (
         <Image
           {...props}
+          {...optimizedProps}
           src={imageSrc}
-          alt={alt}
-          quality={quality}
+          quality={quality || optimizedProps.quality}
           onLoad={handleImageLoad}
           onError={handleImageError}
           className={`transition-opacity duration-300 ${imageLoading ? 'opacity-0' : 'opacity-100'} ${className}`}
-          // Optimize for different screen sizes
-          sizes={props.sizes || "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
         />
       )}
 

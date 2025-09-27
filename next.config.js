@@ -7,6 +7,7 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
     optimizeCss: false, // Disabled due to build errors
+    webVitalsAttribution: ['CLS', 'LCP'],
   },
   
   // Image optimization configuration
@@ -44,7 +45,7 @@ const nextConfig = {
   },
 
   // Bundle optimization
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+  webpack: (config, { dev, isServer }) => {
     // Optimize bundle splitting
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
@@ -58,6 +59,7 @@ const nextConfig = {
         },
       };
     }
+
     return config;
   },
   

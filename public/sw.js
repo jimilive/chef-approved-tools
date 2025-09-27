@@ -1,312 +1,190 @@
 // Service Worker for Chef Approved Tools
-const CACHE_NAME = 'chef-approved-tools-v1'
-const STATIC_CACHE = `${CACHE_NAME}-static`
-const DYNAMIC_CACHE = `${CACHE_NAME}-dynamic`
+// Optimized caching strategy for performance
+
+const CACHE_NAME = 'chef-approved-tools-v1';
+const STATIC_CACHE = 'static-v1';
+const DYNAMIC_CACHE = 'dynamic-v1';
 
 // Files to cache immediately
-const STATIC_FILES = [
+const STATIC_ASSETS = [
   '/',
   '/manifest.json',
-  '/favicon.ico',
-  '/offline.html'
-]
+  '/fonts/inter-latin-400-normal.woff2',
+  '/fonts/inter-latin-600-normal.woff2',
+  '/fonts/inter-latin-700-normal.woff2',
+  '/logo.png'
+];
 
-// Cache strategies
+// Cache strategies by route
 const CACHE_STRATEGIES = {
-  images: 'cache-first',
-  api: 'network-first', 
-  pages: 'stale-while-revalidate',
-  static: 'cache-first'
-}
+  static: {
+    pattern: /\.(woff2?|ttf|eot|css|js|png|jpg|jpeg|webp|avif|svg|ico)$/,
+    strategy: 'CacheFirst',
+    maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
+  },
+  pages: {
+    pattern: /\/(?:reviews|guides|about|methodology|glossary)/,
+    strategy: 'StaleWhileRevalidate',
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+  },
+  api: {
+    pattern: /\/api\//,
+    strategy: 'NetworkFirst',
+    maxAge: 5 * 60 * 1000, // 5 minutes
+  }
+};
 
-// Install event - cache static files
+// Install event - cache static assets
 self.addEventListener('install', (event) => {
-  console.log('Service Worker installing...')
-  
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static files...')
-        return cache.addAll(STATIC_FILES)
+        console.log('SW: Caching static assets');
+        return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
-        return self.skipWaiting()
+        return self.skipWaiting();
       })
-  )
-})
+  );
+});
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker activating...')
-  
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
-          cacheNames
-            .filter((cacheName) => {
-              return cacheName.startsWith('chef-approved-tools-') && 
-                     cacheName !== STATIC_CACHE && 
-                     cacheName !== DYNAMIC_CACHE
-            })
-            .map((cacheName) => {
-              console.log('Deleting old cache:', cacheName)
-              return caches.delete(cacheName)
-            })
-        )
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+              console.log('SW: Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
       })
       .then(() => {
-        return self.clients.claim()
+        return self.clients.claim();
       })
-  )
-})
+  );
+});
 
-// Fetch event - handle requests
+// Fetch event - implement caching strategies
 self.addEventListener('fetch', (event) => {
-  const { request } = event
-  const url = new URL(request.url)
-  
-  // Only handle HTTP/HTTPS requests
-  if (!request.url.startsWith('http')) {
-    return
-  }
+  const { request } = event;
+  const url = new URL(request.url);
 
-  // Handle different types of requests
-  if (isImageRequest(request)) {
-    event.respondWith(handleImageRequest(request))
-  } else if (isApiRequest(request)) {
-    event.respondWith(handleApiRequest(request))
-  } else if (isPageRequest(request)) {
-    event.respondWith(handlePageRequest(request))
-  } else {
-    event.respondWith(handleStaticRequest(request))
-  }
-})
+  // Skip non-GET requests
+  if (request.method !== 'GET') return;
 
-// Request type helpers
-function isImageRequest(request) {
-  return request.destination === 'image' || 
-         request.url.match(/\.(jpg|jpeg|png|gif|webp|avif|svg)$/i)
-}
+  // Skip external requests
+  if (url.origin !== self.location.origin) return;
 
-function isApiRequest(request) {
-  return request.url.includes('/api/') || 
-         request.url.includes('amazon-adsystem.com') ||
-         request.url.includes('googleapis.com')
-}
+  // Determine cache strategy
+  let strategy = 'NetworkFirst';
+  let cacheName = DYNAMIC_CACHE;
+  let maxAge = 60 * 60 * 1000; // 1 hour default
 
-function isPageRequest(request) {
-  return request.mode === 'navigate'
-}
-
-// Cache-first strategy for images
-async function handleImageRequest(request) {
-  try {
-    const cacheResponse = await caches.match(request)
-    if (cacheResponse) {
-      return cacheResponse
-    }
-
-    const networkResponse = await fetch(request)
-    if (networkResponse.ok) {
-      const cache = await caches.open(DYNAMIC_CACHE)
-      cache.put(request, networkResponse.clone())
-    }
-    
-    return networkResponse
-  } catch (error) {
-    console.log('Image request failed:', error)
-    // Return placeholder or cached version
-    return new Response('', { status: 404 })
-  }
-}
-
-// Network-first strategy for API requests  
-async function handleApiRequest(request) {
-  try {
-    const networkResponse = await fetch(request)
-    
-    if (networkResponse.ok) {
-      // Cache successful API responses briefly
-      const cache = await caches.open(DYNAMIC_CACHE)
-      const clonedResponse = networkResponse.clone()
-      
-      // Set a short expiration for API responses
-      const headers = new Headers(clonedResponse.headers)
-      headers.set('sw-cache-timestamp', Date.now().toString())
-      
-      const responseToCache = new Response(clonedResponse.body, {
-        status: clonedResponse.status,
-        statusText: clonedResponse.statusText,
-        headers: headers
-      })
-      
-      cache.put(request, responseToCache)
-    }
-    
-    return networkResponse
-  } catch (error) {
-    console.log('API request failed, trying cache:', error)
-    
-    const cacheResponse = await caches.match(request)
-    if (cacheResponse) {
-      // Check if cached response is still fresh (5 minutes)
-      const cacheTimestamp = cacheResponse.headers.get('sw-cache-timestamp')
-      if (cacheTimestamp) {
-        const age = Date.now() - parseInt(cacheTimestamp)
-        if (age < 5 * 60 * 1000) { // 5 minutes
-          return cacheResponse
-        }
+  // Check patterns
+  for (const [name, config] of Object.entries(CACHE_STRATEGIES)) {
+    if (config.pattern.test(url.pathname)) {
+      strategy = config.strategy;
+      maxAge = config.maxAge;
+      if (name === 'static') {
+        cacheName = STATIC_CACHE;
       }
+      break;
     }
-    
-    throw error
+  }
+
+  event.respondWith(
+    handleRequest(request, strategy, cacheName, maxAge)
+  );
+});
+
+// Cache strategy implementations
+async function handleRequest(request, strategy, cacheName, maxAge) {
+  const cache = await caches.open(cacheName);
+
+  switch (strategy) {
+    case 'CacheFirst':
+      return cacheFirst(request, cache, maxAge);
+    case 'NetworkFirst':
+      return networkFirst(request, cache, maxAge);
+    case 'StaleWhileRevalidate':
+      return staleWhileRevalidate(request, cache, maxAge);
+    default:
+      return fetch(request);
   }
 }
 
-// Stale-while-revalidate for pages
-async function handlePageRequest(request) {
-  const cache = await caches.open(DYNAMIC_CACHE)
-  const cacheResponse = await caches.match(request)
-  
-  const fetchPromise = fetch(request)
-    .then((networkResponse) => {
-      if (networkResponse.ok) {
-        cache.put(request, networkResponse.clone())
-      }
-      return networkResponse
-    })
-    .catch(() => {
-      // Return offline page if available
-      return caches.match('/offline.html')
-    })
-  
-  return cacheResponse || fetchPromise
-}
+async function cacheFirst(request, cache, maxAge) {
+  const cachedResponse = await cache.match(request);
 
-// Cache-first for static assets
-async function handleStaticRequest(request) {
-  const cacheResponse = await caches.match(request)
-  if (cacheResponse) {
-    return cacheResponse
+  if (cachedResponse) {
+    // Check if cached response is still fresh
+    const cacheTime = new Date(cachedResponse.headers.get('sw-cache-time') || 0);
+    const now = new Date();
+
+    if (now - cacheTime < maxAge) {
+      return cachedResponse;
+    }
   }
-  
+
   try {
-    const networkResponse = await fetch(request)
+    const networkResponse = await fetch(request);
     if (networkResponse.ok) {
-      const cache = await caches.open(STATIC_CACHE)
-      cache.put(request, networkResponse.clone())
+      const responseToCache = networkResponse.clone();
+      responseToCache.headers.set('sw-cache-time', new Date().toISOString());
+      cache.put(request, responseToCache);
     }
-    return networkResponse
-  } catch (error) {
-    console.log('Static request failed:', error)
-    throw error
+    return networkResponse;
+  } catch {
+    return cachedResponse || new Response('Offline', { status: 503 });
   }
 }
 
-// Background sync for form submissions
+async function networkFirst(request, cache, maxAge) {
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      const responseToCache = networkResponse.clone();
+      responseToCache.headers.set('sw-cache-time', new Date().toISOString());
+      cache.put(request, responseToCache);
+    }
+    return networkResponse;
+  } catch {
+    const cachedResponse = await cache.match(request);
+    return cachedResponse || new Response('Offline', { status: 503 });
+  }
+}
+
+async function staleWhileRevalidate(request, cache, maxAge) {
+  const cachedResponse = await cache.match(request);
+
+  const fetchPromise = fetch(request).then((networkResponse) => {
+    if (networkResponse.ok) {
+      const responseToCache = networkResponse.clone();
+      responseToCache.headers.set('sw-cache-time', new Date().toISOString());
+      cache.put(request, responseToCache);
+    }
+    return networkResponse;
+  }).catch(() => {
+    // Network failed, return cached response if available
+    return cachedResponse;
+  });
+
+  // Return cached response immediately if available, otherwise wait for network
+  return cachedResponse || fetchPromise;
+}
+
+// Background sync for offline actions
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'newsletter-signup') {
-    event.waitUntil(sendPendingNewsletterSignups())
+  if (event.tag === 'background-sync') {
+    event.waitUntil(handleBackgroundSync());
   }
-})
+});
 
-// Handle pending newsletter signups
-async function sendPendingNewsletterSignups() {
-  const requests = await getStoredRequests('newsletter-signups')
-  
-  for (const request of requests) {
-    try {
-      await fetch('/api/newsletter-signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(request.data)
-      })
-      
-      // Remove successful request
-      await removeStoredRequest('newsletter-signups', request.id)
-    } catch (error) {
-      console.log('Failed to sync newsletter signup:', error)
-    }
-  }
+async function handleBackgroundSync() {
+  // Handle any queued actions when network becomes available
+  console.log('SW: Background sync triggered');
 }
-
-// IndexedDB helpers for background sync
-async function getStoredRequests(storeName) {
-  return new Promise((resolve, reject) => {
-    const request = indexedDB.open('chef-approved-tools-sync', 1)
-    
-    request.onerror = () => reject(request.error)
-    request.onsuccess = () => {
-      const db = request.result
-      const transaction = db.transaction([storeName], 'readonly')
-      const store = transaction.objectStore(storeName)
-      const getAllRequest = store.getAll()
-      
-      getAllRequest.onsuccess = () => resolve(getAllRequest.result)
-      getAllRequest.onerror = () => reject(getAllRequest.error)
-    }
-    
-    request.onupgradeneeded = () => {
-      const db = request.result
-      if (!db.objectStoreNames.contains(storeName)) {
-        db.createObjectStore(storeName, { keyPath: 'id' })
-      }
-    }
-  })
-}
-
-async function removeStoredRequest(storeName, id) {
-  return new Promise((resolve, reject) => {
-    const request = indexedDB.open('chef-approved-tools-sync', 1)
-    
-    request.onsuccess = () => {
-      const db = request.result
-      const transaction = db.transaction([storeName], 'readwrite')
-      const store = transaction.objectStore(storeName)
-      const deleteRequest = store.delete(id)
-      
-      deleteRequest.onsuccess = () => resolve()
-      deleteRequest.onerror = () => reject(deleteRequest.error)
-    }
-  })
-}
-
-// Push notification handling
-self.addEventListener('push', (event) => {
-  const options = {
-    body: event.data ? event.data.text() : 'New kitchen tools available!',
-    icon: '/icon-192.png',
-    badge: '/badge-72.png',
-    data: {
-      url: '/'
-    },
-    actions: [
-      {
-        action: 'view',
-        title: 'View Products'
-      },
-      {
-        action: 'dismiss',
-        title: 'Dismiss'
-      }
-    ]
-  }
-  
-  event.waitUntil(
-    self.registration.showNotification('Chef Approved Tools', options)
-  )
-})
-
-// Handle notification clicks
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close()
-  
-  if (event.action === 'view' || !event.action) {
-    event.waitUntil(
-      self.clients.openWindow(event.notification.data.url || '/')
-    )
-  }
-})
