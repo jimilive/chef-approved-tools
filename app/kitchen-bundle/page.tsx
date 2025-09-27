@@ -132,7 +132,7 @@ export default function KitchenBundlePage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">John Boos Platinum Cutting Board</h3>
-                    <p className="text-gray-600">The 24x18 workhorse I'll pass down to my children</p>
+                    <p className="text-gray-600">The 24x18 workhorse I&apos;ll pass down to my children</p>
                   </div>
                 </div>
 
@@ -202,7 +202,7 @@ export default function KitchenBundlePage() {
                     <span className="text-sm font-medium text-green-800">Trusted by 2,500+ serious home cooks</span>
                   </div>
                   <p className="text-xs text-green-700">
-                    &quot;Scott's restaurant experience shows - these aren't just reviews, they're equipment decisions based on real professional use.&quot;
+                    &quot;Scott&apos;s restaurant experience shows - these aren&apos;t just reviews, they&apos;re equipment decisions based on real professional use.&quot;
                   </p>
                 </div>
               </div>

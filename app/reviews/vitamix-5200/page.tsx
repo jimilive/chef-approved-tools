@@ -136,7 +136,7 @@ export default function Vitamix5200Review() {
                 </p>
                 <p className="text-slate-700 text-sm">
                   Extremely durable under daily commercial usage, handling restaurant volume spectacularly with consistent, thorough results.
-                  The power and ability to create even, smooth products far exceeds other blenders we've tested.
+                  The power and ability to create even, smooth products far exceeds other blenders we&apos;ve tested.
                   No hesitation - would definitely buy it again for both commercial and serious home use.
                 </p>
               </div>
@@ -427,7 +427,7 @@ export default function Vitamix5200Review() {
               while maintaining perfect consistency has made it indispensable to our operations.
             </p>
             <p className="text-orange-400 font-semibold mb-4">
-              Without hesitation, I'd buy this blender again - it's the kind of equipment that pays for itself through reliability and performance.
+              Without hesitation, I&apos;d buy this blender again - it&apos;s the kind of equipment that pays for itself through reliability and performance.
             </p>
             <div className="bg-slate-700 rounded-lg p-4">
               <p className="text-sm text-gray-300">

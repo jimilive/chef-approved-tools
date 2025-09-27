@@ -531,15 +531,15 @@ export default function WusthofClassicIkonReview() {
           <div className="bg-slate-800 text-white rounded-xl p-6">
             <p className="text-lg leading-relaxed mb-4">
               After extensive professional testing, this WÜSTHOF set delivers exceptional value through German engineering excellence and ergonomic design.
-              The chef's knife, santoku, bread knife, and paring knives alone justify the purchase price - saving hundreds compared to individual purchases.
+              The chef&apos;s knife, santoku, bread knife, and paring knives alone justify the purchase price - saving hundreds compared to individual purchases.
               While some pieces like the slicer see limited use, the overall performance and handle comfort during long prep sessions make this an outstanding investment.
             </p>
             <p className="text-orange-400 font-semibold mb-4">
-              Would absolutely buy this set again - it's equipped our entire professional kitchen with reliable, durable knives that perform consistently under demanding conditions.
+              Would absolutely buy this set again - it&apos;s equipped our entire professional kitchen with reliable, durable knives that perform consistently under demanding conditions.
             </p>
             <div className="bg-slate-700 rounded-lg p-4">
               <p className="text-sm text-gray-300">
-                <strong>Key Takeaway:</strong> Focus on the chef's knife, santoku, bread knife, and paring knives for maximum value.
+                <strong>Key Takeaway:</strong> Focus on the chef&apos;s knife, santoku, bread knife, and paring knives for maximum value.
                 The ergonomic handles and German steel quality make extended prep work significantly more comfortable and efficient.
               </p>
             </div>

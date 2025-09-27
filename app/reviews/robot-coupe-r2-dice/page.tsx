@@ -180,9 +180,9 @@ export default function RobotCoupeR2DiceReview() {
               <div>
                 <h3 className="font-bold text-slate-900 mb-3">Commercial Kitchen Performance</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  In the demanding environment of Purple Cafe's prep kitchen, the Robot Coupe R2 Dice became our go-to workhorse for cheese shredding operations.
+                  In the demanding environment of Purple Cafe&apos;s prep kitchen, the Robot Coupe R2 Dice became our go-to workhorse for cheese shredding operations.
                   The continuous feed design allowed us to process large volumes of cheese efficiently during busy prep periods, maintaining consistent quality
-                  that manual shredding simply couldn't match. The precision cuts and uniform results were essential for presentation standards.
+                  that manual shredding simply couldn&apos;t match. The precision cuts and uniform results were essential for presentation standards.
                 </p>
               </div>
 
@@ -264,7 +264,7 @@ export default function RobotCoupeR2DiceReview() {
                 </tr>
                 <tr className="border-b border-gray-100 bg-gray-50">
                   <td className="p-4 font-medium">Dimensions</td>
-                  <td className="p-4">14" x 10" x 16"</td>
+                  <td className="p-4">14&quot; x 10&quot; x 16&quot;</td>
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="p-4 font-medium">Weight</td>

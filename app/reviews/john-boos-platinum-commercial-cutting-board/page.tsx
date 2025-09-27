@@ -166,7 +166,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                 <p className="text-slate-700 text-sm">
                   The 24x18 size provides exceptional work space efficiency, while the 21-pound weight ensures rock-solid stability.
                   The damage you save to your knife edges alone justifies the investment. Easy to sanitize with proper care,
-                  and I expect to pass this board on to my children - that's the level of durability we're talking about.
+                  and I expect to pass this board on to my children - that&apos;s the level of durability we&apos;re talking about.
                 </p>
               </div>
             </div>
@@ -449,7 +449,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <p className="text-slate-700 leading-relaxed mb-6">
               <strong>Professional Performance Assessment:</strong> While my testing has been primarily in home kitchen environments,
-              the board's performance characteristics - exceptional stability, knife-friendly surface, and easy sanitization -
+              the board&apos;s performance characteristics - exceptional stability, knife-friendly surface, and easy sanitization -
               make it ideal for commercial applications. The large work surface eliminates constant ingredient shuffling,
               improving prep efficiency significantly. Health compliance is straightforward with proper cleaning protocols.
             </p>
@@ -563,7 +563,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-4">The Bottom Line</h2>
           <div className="bg-slate-800 text-white rounded-xl p-6">
             <p className="text-lg leading-relaxed mb-4">
-              After 15 years of daily use, this John Boos cutting board has proven itself as more than kitchen equipment - it's a generational investment.
+              After 15 years of daily use, this John Boos cutting board has proven itself as more than kitchen equipment - it&apos;s a generational investment.
               The combination of work surface efficiency, knife preservation, and exceptional durability justifies every dollar of the premium price.
               While plastic alternatives offer convenience, they cannot match the knife care and longevity of this hard maple construction.
               The maintenance reality is far simpler than marketing suggests - basic cleanliness and care yield decades of performance.

@@ -247,7 +247,7 @@ export default function LeCreuset725QtReview() {
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
             <p className="text-blue-700 text-sm">
               <strong>Size Recommendation:</strong> The 7.25-qt is the perfect sweet spot for most home cooks. Large enough for family meals,
-              braising, and holiday cooking, yet not so large that it's unwieldy for everyday use. The 5.5-qt works well for smaller households,
+              braising, and holiday cooking, yet not so large that it&apos;s unwieldy for everyday use. The 5.5-qt works well for smaller households,
               but I recommend having multiple sizes for different cooking needs - from intimate dinners to large batch cooking.
             </p>
           </div>
@@ -425,7 +425,7 @@ export default function LeCreuset725QtReview() {
             <p className="text-slate-700 leading-relaxed mb-6">
               <strong>10-Year Maintenance Experience:</strong> The light enamel interior has remained remarkably pristine with proper care.
               No staining issues despite regular use with tomato-based sauces and red wines. Minor surface scratches from metal utensils
-              are barely noticeable and don't affect performance. The exterior enamel maintains its appearance with gentle cleaning.
+              are barely noticeable and don&apos;t affect performance. The exterior enamel maintains its appearance with gentle cleaning.
               Key maintenance: avoid thermal shock, use wooden/silicone utensils, and gentle cleaning with warm soapy water.
             </p>
 
@@ -569,14 +569,14 @@ export default function LeCreuset725QtReview() {
               After a decade of regular home use, the Le Creuset 7.25-Qt Dutch Oven has earned its place as the most valuable piece in my kitchen.
               The combination of exceptional heat retention, easy cleanup, and durability justifies every dollar of the premium price.
               The ability to execute complex cooking techniques - from sautéing and deglazing to braising and bread baking - all in one vessel
-              makes this more than cookware; it's a cooking system that elevates results consistently.
+              makes this more than cookware; it&apos;s a cooking system that elevates results consistently.
             </p>
             <p className="text-orange-400 font-semibold mb-4">
               This is the kind of investment that pays dividends for decades - absolutely worth the premium for serious home cooks.
             </p>
             <div className="bg-slate-700 rounded-lg p-4">
               <p className="text-sm text-gray-300">
-                <strong>Key Takeaway:</strong> While Lodge offers excellent value for budget-conscious cooks, the Le Creuset's combination of
+                <strong>Key Takeaway:</strong> While Lodge offers excellent value for budget-conscious cooks, the Le Creuset&apos;s combination of
                 easy maintenance, superior heat distribution, and longevity makes it the better long-term investment for regular use.
               </p>
             </div>
