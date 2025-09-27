@@ -144,6 +144,9 @@ export default function NewsletterModal({
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
+                    autoCapitalize="none"
+                    autoCorrect="off"
+                    autoComplete="email"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors text-base"
                   />
                 </div>

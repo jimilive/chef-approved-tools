@@ -67,6 +67,9 @@ export default function NewsletterForm() {
           onChange={(e) => setEmail(e.target.value)}
           required
           disabled={isLoading}
+          autoCapitalize="none"
+          autoCorrect="off"
+          autoComplete="email"
           style={{
             width: '100%',
             padding: '12px 16px',

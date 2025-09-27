@@ -40,6 +40,9 @@ export default function Newsletter() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
+                autoCapitalize="none"
+                autoCorrect="off"
+                autoComplete="email"
                 className="w-full px-4 py-3 rounded-md text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-orange-300 focus:outline-none border border-gray-200"
                 required
               />
