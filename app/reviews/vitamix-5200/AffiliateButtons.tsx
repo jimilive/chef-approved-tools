@@ -19,8 +19,21 @@ interface AffiliateButtonsProps {
 }
 
 export default function AffiliateButtons({ productData }: AffiliateButtonsProps) {
-  const handleAffiliateClick = (retailer: string) => {
-    trackAffiliateClick(productData.name, productData.category, 0, productData.brand)
+  const handleAffiliateClick = (retailer: string, position: number) => {
+    // Enhanced tracking with retailer and position data
+    trackAffiliateClick(productData.name, productData.category, 0, productData.brand, position)
+
+    // Additional GA4 event for retailer-specific tracking
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'affiliate_click_detailed', {
+        item_name: productData.name,
+        item_category: productData.category,
+        item_brand: productData.brand,
+        retailer: retailer,
+        position: position + 1,
+        page_location: window.location.href
+      })
+    }
   }
 
   return (
@@ -36,7 +49,7 @@ export default function AffiliateButtons({ productData }: AffiliateButtonsProps)
               href={link.url}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              onClick={() => handleAffiliateClick(link.retailer)}
+              onClick={() => handleAffiliateClick(link.retailer, index)}
               className="block w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition-colors"
             >
               View Current Price & Deals →

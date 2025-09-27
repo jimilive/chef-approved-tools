@@ -4,8 +4,11 @@ import { Inter } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FTCDisclosure from '@/components/FTCDisclosure'
-import CookieConsent from '@/components/CookieConsent'
-import ExitIntentWrapper from '@/components/ExitIntentWrapper'
+import { lazy, Suspense } from 'react'
+
+// Lazy load non-critical components
+const CookieConsent = lazy(() => import('@/components/CookieConsent'))
+const ExitIntentWrapper = lazy(() => import('@/components/ExitIntentWrapper'))
 import Analytics from '@/components/Analytics'
 import ScrollTracker from '@/components/ScrollTracker'
 import MobileOptimizedLayout from '@/components/MobileOptimizedLayout'
@@ -109,6 +112,9 @@ export default function RootLayout({
         {/* Preload critical resources */}
         <link rel="preload" href="/logo.png" as="image" type="image/png" />
 
+        {/* Preload critical font for LCP optimization */}
+        <link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+
         {/* Preconnect to critical domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -157,11 +163,15 @@ export default function RootLayout({
             {/* Footer */}
             <Footer />
 
-            {/* Cookie Consent (GDPR/CCPA Compliance) */}
-            <CookieConsent />
+            {/* Cookie Consent (GDPR/CCPA Compliance) - Lazy loaded */}
+            <Suspense fallback={null}>
+              <CookieConsent />
+            </Suspense>
 
-            {/* Exit Intent Modal */}
-            <ExitIntentWrapper />
+            {/* Exit Intent Modal - Lazy loaded */}
+            <Suspense fallback={null}>
+              <ExitIntentWrapper />
+            </Suspense>
 
             {/* Analytics - Page views and scroll tracking */}
             <Analytics />
@@ -169,27 +179,42 @@ export default function RootLayout({
           </MobileOptimizationProvider>
         </MobileOptimizedLayout>
         
-        {/* Google Analytics 4 - Only loads after consent */}
+        {/* Google Analytics 4 - Deferred loading for performance */}
         {process.env.NEXT_PUBLIC_GA_TRACKING_ID && (
-          <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`} />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('consent', 'default', {
-                    'analytics_storage': 'denied',
-                    'ad_storage': 'denied'
-                  });
-                  gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
-                    send_page_view: false
-                  });
-                `,
-              }}
-            />
-          </>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('consent', 'default', {
+                  'analytics_storage': 'denied',
+                  'ad_storage': 'denied'
+                });
+
+                // Defer GA loading until page is loaded to improve LCP
+                function loadGA() {
+                  const script = document.createElement('script');
+                  script.async = true;
+                  script.src = 'https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}';
+                  document.head.appendChild(script);
+
+                  script.onload = function() {
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
+                      send_page_view: false
+                    });
+                  };
+                }
+
+                // Load after page is fully loaded
+                if (document.readyState === 'complete') {
+                  setTimeout(loadGA, 1000);
+                } else {
+                  window.addEventListener('load', () => setTimeout(loadGA, 1000));
+                }
+              `,
+            }}
+          />
         )}
       </body>
     </html>
