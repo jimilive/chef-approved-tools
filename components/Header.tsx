@@ -175,7 +175,7 @@ export default function Header() {
               href="/disclosure"
               className="text-orange-700 hover:text-orange-700 font-medium ml-1"
             >
-              Learn more
+              Full affiliate disclosure
             </a>
           </p>
         </div>

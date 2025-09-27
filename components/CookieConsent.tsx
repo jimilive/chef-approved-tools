@@ -78,7 +78,7 @@ export default function CookieConsent() {
             <p className="text-sm text-gray-600 mb-3">
               We use cookies to enhance your experience, analyze site traffic, and show relevant ads. 
               By clicking &ldquo;Accept All&rdquo;, you consent to our use of cookies. 
-              <Link href="/privacy-policy" className="underline ml-1">Learn more</Link>
+              <Link href="/privacy-policy" className="underline ml-1">View privacy policy</Link>
             </p>
             
             <details className="text-sm">

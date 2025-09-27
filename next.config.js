@@ -8,7 +8,15 @@ const nextConfig = {
     scrollRestoration: true,
     optimizeCss: false, // Disabled due to build errors
     webVitalsAttribution: ['CLS', 'LCP'],
+    esmExternals: true, // Use ES modules for better tree shaking
   },
+
+  // Target modern browsers to reduce bundle size
+  swcMinify: true,
+  target: 'server',
+
+  // Enable source maps for better debugging and Lighthouse insights
+  productionBrowserSourceMaps: true,
   
   // Image optimization configuration
   images: {
@@ -57,6 +65,14 @@ const nextConfig = {
             chunks: 'all',
           },
         },
+      };
+
+      // Optimize for modern browsers
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
       };
     }
 
