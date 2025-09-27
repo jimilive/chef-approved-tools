@@ -1,0 +1,386 @@
+import { Metadata } from 'next'
+import Link from 'next/link'
+import { Calendar, Clock, User, ThermometerSun, Timer, Flame } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'How to Sear Steaks Like a Restaurant Chef | Professional Techniques',
+  description: 'Learn the professional steak searing techniques used in restaurant kitchens. 18+ years of experience from a former Mellow Mushroom Kitchen Manager reveals the secrets to perfect sears.',
+  keywords: ['how to sear steak', 'restaurant steak techniques', 'professional steak cooking', 'perfect steak sear', 'restaurant quality steak', 'cast iron steak', 'steak cooking temperature', 'chef steak methods']
+}
+
+export default function SteakSearingPost() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Article Header */}
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Breadcrumb */}
+        <nav className="text-sm text-slate-600 mb-8">
+          <Link href="/" className="hover:text-orange-600">Home</Link>
+          <span className="mx-2">/</span>
+          <Link href="/blog" className="hover:text-orange-600">Blog</Link>
+          <span className="mx-2">/</span>
+          <span>How to Sear Steaks Like a Restaurant Chef</span>
+        </nav>
+
+        {/* Article Meta */}
+        <div className="mb-8">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
+            <div className="flex items-center gap-1">
+              <Calendar className="w-4 h-4" />
+              <span>September 27, 2024</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Clock className="w-4 h-4" />
+              <span>8 min read</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <User className="w-4 h-4" />
+              <span>Scott Bradley</span>
+            </div>
+            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
+              Cooking Techniques
+            </span>
+          </div>
+
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+            How to Sear Steaks Like a Restaurant Chef
+          </h1>
+
+          <p className="text-xl text-slate-600 leading-relaxed">
+            After 18+ years in restaurant kitchens, including my time as Kitchen Manager at Mellow Mushroom,
+            I&apos;ve seared thousands of steaks. Here&apos;s exactly how we achieve that perfect crust every single time.
+          </p>
+        </div>
+
+        {/* Article Content */}
+        <div className="prose prose-lg prose-slate max-w-none">
+
+          {/* Introduction */}
+          <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 mb-8">
+            <h3 className="text-xl font-bold text-orange-800 mb-3 flex items-center gap-2">
+              <Flame className="w-5 h-5" />
+              The Restaurant Reality
+            </h3>
+            <p className="text-orange-700 mb-0">
+              In a busy restaurant, we don&apos;t have time for second chances. Every steak needs a perfect sear on the first try,
+              whether it&apos;s the 10th or 200th steak of the night. The techniques I&apos;m sharing aren&apos;t just theory—they&apos;re
+              battle-tested methods that work under pressure.
+            </p>
+          </div>
+
+          <h2>Why Most Home Cooks Fail at Searing</h2>
+
+          <p>
+            I see the same mistakes every time someone tells me they can&apos;t get a good sear at home:
+          </p>
+
+          <ul>
+            <li><strong>Pan isn&apos;t hot enough</strong> - They&apos;re afraid of high heat</li>
+            <li><strong>Steak is too wet</strong> - Moisture is the enemy of browning</li>
+            <li><strong>Moving the steak too much</strong> - Impatience ruins the Maillard reaction</li>
+            <li><strong>Wrong equipment</strong> - Thin pans can&apos;t handle restaurant-level heat</li>
+          </ul>
+
+          <p>
+            These aren&apos;t just home cook problems—I&apos;ve trained plenty of new line cooks who made the exact same mistakes.
+            The difference is learning the fundamentals that create consistent results.
+          </p>
+
+          <h2>The Professional Searing Method</h2>
+
+          <h3>Step 1: Equipment That Actually Works</h3>
+
+          <p>
+            Restaurant kitchens use heavy-duty equipment because it works. You don&apos;t need commercial gear,
+            but you do need tools that can handle high heat without warping or losing temperature.
+          </p>
+
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+            <h4 className="font-bold text-blue-800 mb-3">Essential Equipment for Perfect Sears</h4>
+            <ul className="text-blue-700 space-y-2 mb-4">
+              <li><strong>Cast iron skillet or heavy stainless steel pan</strong> - Holds heat like restaurant equipment</li>
+              <li><strong>Instant-read thermometer</strong> - Eliminates guesswork on doneness</li>
+              <li><strong>Paper towels</strong> - Critical for drying the steak</li>
+              <li><strong>Tongs (not a fork)</strong> - Prevents piercing and juice loss</li>
+            </ul>
+            <p className="text-sm text-blue-600">
+              <strong>Pro tip:</strong> I use the same <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-blue-700 underline">Lodge cast iron skillets</Link> at home
+              that we relied on in the restaurant. They distribute heat evenly and develop amazing fond.
+            </p>
+          </div>
+
+          <h3>Step 2: Steak Preparation (The Make-or-Break Step)</h3>
+
+          <p>
+            This is where most people lose the battle before they even start cooking. In restaurants, we prep steaks
+            hours in advance because proper preparation is non-negotiable.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+              <h4 className="font-bold text-green-800 mb-2">Temperature</h4>
+              <p className="text-green-700 text-sm">
+                Remove from fridge 30-45 minutes before cooking. Cold steak = uneven cooking.
+                Room temperature steak cooks evenly throughout.
+              </p>
+            </div>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <h4 className="font-bold text-yellow-800 mb-2">Drying</h4>
+              <p className="text-yellow-700 text-sm">
+                Pat completely dry with paper towels. Any surface moisture will steam instead of sear.
+                This is the #1 mistake I see.
+              </p>
+            </div>
+          </div>
+
+          <p>
+            <strong>Seasoning timing matters:</strong> Salt the steak at least 30 minutes before cooking, or immediately before.
+            The 5-30 minute window draws out moisture without enough time to reabsorb—exactly what you don&apos;t want.
+          </p>
+
+          <h3>Step 3: Heat Management (The Restaurant Secret)</h3>
+
+          <p>
+            Here&apos;s what separates restaurant sears from home attempts: we use aggressive heat and aren&apos;t afraid of it.
+            Our gas burners run much hotter than most home stoves, but you can compensate with technique.
+          </p>
+
+          <div className="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
+            <h4 className="font-bold text-red-800 mb-3 flex items-center gap-2">
+              <ThermometerSun className="w-5 h-5" />
+              Professional Heat Levels
+            </h4>
+            <ul className="text-red-700 space-y-2">
+              <li><strong>Preheat cast iron for 5-7 minutes</strong> on medium-high to high heat</li>
+              <li><strong>Test with water drop</strong> - should sizzle and evaporate immediately</li>
+              <li><strong>Add oil only when pan is hot</strong> - prevents sticking and smoking</li>
+              <li><strong>Oil should shimmer, not smoke</strong> - use high smoke point oils (avocado, grapeseed)</li>
+            </ul>
+          </div>
+
+          <h3>Step 4: The Sear (Don&apos;t Touch It!)</h3>
+
+          <p>
+            This is where patience pays off. In a busy restaurant kitchen, you learn to trust the process because
+            you don&apos;t have time to babysit every steak.
+          </p>
+
+          <ol>
+            <li><strong>Place steak in pan and don&apos;t move it</strong> - 3-4 minutes for 1-inch thick steaks</li>
+            <li><strong>Listen for the sizzle</strong> - should be immediate and continuous</li>
+            <li><strong>Look for browning around edges</strong> - this tells you when to flip</li>
+            <li><strong>Flip once</strong> - multiple flips prevent proper crust formation</li>
+            <li><strong>Sear second side</strong> - usually 2-3 minutes less than first side</li>
+          </ol>
+
+          <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 my-6">
+            <h4 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
+              <Timer className="w-5 h-5" />
+              Restaurant Timing Guide
+            </h4>
+            <p className="text-gray-700 mb-3">
+              For 1-inch thick steaks (adjust for thickness):
+            </p>
+            <div className="grid grid-cols-2 gap-4 text-sm">
+              <div>
+                <p><strong>Rare (120-125°F):</strong> 3 min + 2 min</p>
+                <p><strong>Medium-rare (130-135°F):</strong> 4 min + 3 min</p>
+              </div>
+              <div>
+                <p><strong>Medium (140-145°F):</strong> 5 min + 4 min</p>
+                <p><strong>Medium-well (150-155°F):</strong> 6 min + 5 min</p>
+              </div>
+            </div>
+            <p className="text-gray-600 text-xs mt-3">
+              Always use thermometer for accuracy - timing varies with stove power and pan thickness.
+            </p>
+          </div>
+
+          <h3>Step 5: The Rest (Just as Important as the Sear)</h3>
+
+          <p>
+            After thousands of steaks, I can tell you that resting isn&apos;t optional—it&apos;s what makes the difference
+            between good and great. Restaurants build resting time into service because it&apos;s that critical.
+          </p>
+
+          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
+            <h4 className="font-bold text-yellow-800 mb-3">Professional Butter Resting Technique</h4>
+            <p className="text-yellow-700 mb-3">
+              Here&apos;s a restaurant secret most home cooks never learn: rest your steak on a small pat of butter
+              in a warm (but not hot) place for 10-15 minutes. This technique:
+            </p>
+            <ul className="text-yellow-700 space-y-1 text-sm">
+              <li>• Allows even heat distribution throughout the meat</li>
+              <li>• Keeps the steak at optimal serving temperature</li>
+              <li>• Adds rich flavor without overpowering the beef</li>
+              <li>• Creates a more tender, evenly cooked result</li>
+            </ul>
+            <p className="text-yellow-600 text-xs mt-3">
+              <strong>Pro tip:</strong> Use the residual heat from your oven (turned off) or a warming drawer if you have one.
+              The key is warm, not hot—you don&apos;t want to continue cooking the steak.
+            </p>
+          </div>
+
+          <p><strong>Standard resting basics:</strong></p>
+          <ul>
+            <li><strong>Rest for 10-15 minutes</strong> after cooking (longer with the butter technique)</li>
+            <li><strong>Find a warm spot</strong> - turned-off oven, warming drawer, or warm spot near the stove</li>
+            <li><strong>Internal temperature will rise 5-10°F</strong> during resting</li>
+            <li><strong>Juices redistribute</strong> throughout the meat instead of running out when cut</li>
+          </ul>
+
+          <h3>Step 6: Professional Pan Sauce (Restaurant Secret)</h3>
+
+          <p>
+            Here&apos;s where you can really show off restaurant technique. That beautiful fond (browned bits) in your pan
+            is liquid gold for making sauce, and the resting liquid from your butter-rested steak is the perfect deglazing liquid.
+          </p>
+
+          <div className="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+            <h4 className="font-bold text-green-800 mb-3">Simple Pan Sauce Technique</h4>
+            <ol className="text-green-700 space-y-2 text-sm">
+              <li><strong>1. Save the resting liquid</strong> - Pour off any accumulated juices from the butter resting</li>
+              <li><strong>2. Return pan to medium heat</strong> - The same pan with the fond, don&apos;t clean it</li>
+              <li><strong>3. Add aromatics</strong> - Minced shallot or garlic, cook 30 seconds</li>
+              <li><strong>4. Deglaze with resting liquid</strong> - Scrape up all the fond, let it reduce by half</li>
+              <li><strong>5. Add wine or stock</strong> - 1/4 cup, reduce again</li>
+              <li><strong>6. Finish with butter</strong> - 1-2 tablespoons, swirl off heat for glossy sauce</li>
+            </ol>
+            <p className="text-green-600 text-xs mt-3">
+              <strong>Restaurant tip:</strong> The resting liquid has concentrated beef flavor and adds richness you can&apos;t get
+              from wine or stock alone. Don&apos;t waste it!
+            </p>
+          </div>
+
+          <p>
+            This technique turns a simple steak into a restaurant-quality dish. The sauce takes 3-4 minutes while your steak
+            finishes resting—perfect timing for restaurant service.
+          </p>
+
+          <h2>Common Problems and Professional Solutions</h2>
+
+          <div className="space-y-4 my-8">
+            <div className="border border-gray-200 rounded-lg p-4">
+              <h4 className="font-bold text-slate-900 mb-2">Problem: Steak sticks to pan</h4>
+              <p className="text-slate-700 text-sm">
+                <strong>Solution:</strong> Pan isn&apos;t hot enough, or you&apos;re moving it too soon. Properly seared meat
+                releases naturally when ready to flip.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-lg p-4">
+              <h4 className="font-bold text-slate-900 mb-2">Problem: Gray band around edges</h4>
+              <p className="text-slate-700 text-sm">
+                <strong>Solution:</strong> Start with room temperature steak and use higher heat for shorter time.
+                The reverse sear method works great for thick steaks.
+              </p>
+            </div>
+
+            <div className="border border-gray-200 rounded-lg p-4">
+              <h4 className="font-bold text-slate-900 mb-2">Problem: No crust formation</h4>
+              <p className="text-slate-700 text-sm">
+                <strong>Solution:</strong> Steak was too wet, pan wasn&apos;t hot enough, or you moved it too much.
+                All three prevent the Maillard reaction that creates the crust.
+              </p>
+            </div>
+          </div>
+
+          <h2>The Equipment That Makes a Difference</h2>
+
+          <p>
+            You don&apos;t need a $3,000 commercial range, but having the right tools makes consistent results much easier.
+            Here&apos;s what I actually use at home after testing countless options in restaurant kitchens:
+          </p>
+
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
+            <h4 className="font-bold text-slate-800 mb-4">Tested Equipment Recommendations</h4>
+            <ul className="space-y-3">
+              <li>
+                <strong>Cast Iron Skillet:</strong> <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-700 underline">Lodge Cast Iron Bundle</Link> -
+                Same heat retention as restaurant equipment, but affordable for home use.
+              </li>
+              <li>
+                <strong>Instant Thermometer:</strong> Takes the guesswork out of doneness levels. Essential for consistent results.
+              </li>
+              <li>
+                <strong>Quality Tongs:</strong> Heavy-duty restaurant-style tongs that won&apos;t bend under pressure.
+              </li>
+            </ul>
+            <p className="text-slate-600 text-sm mt-4">
+              These are the same tools I relied on when cooking 200+ covers per night. If they can handle restaurant volume,
+              they&apos;ll serve you well at home.
+            </p>
+          </div>
+
+          <h2>Final Thoughts: Consistency Over Perfection</h2>
+
+          <p>
+            The goal isn&apos;t to nail the perfect steak once—it&apos;s to cook great steaks consistently. That&apos;s what
+            separates restaurant cooking from home cooking. We use systems and techniques that work every time, not just
+            when everything goes perfectly.
+          </p>
+
+          <p>
+            Start with these fundamentals: proper equipment, room temperature steak, aggressive heat, patience during the sear,
+            and adequate resting. Master these basics, and you&apos;ll be cooking restaurant-quality steaks at home.
+          </p>
+
+          <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 mt-8">
+            <h4 className="font-bold text-orange-800 mb-3">What&apos;s Next?</h4>
+            <p className="text-orange-700 mb-4">
+              This is just one technique from 18+ years of professional kitchen experience. Want to learn more
+              restaurant secrets for home cooking?
+            </p>
+            <Link
+              href="/newsletter"
+              className="bg-orange-600 text-white hover:bg-orange-700 px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
+            >
+              Get Free Restaurant Techniques
+            </Link>
+          </div>
+        </div>
+
+        {/* Author Bio */}
+        <div className="border-t border-gray-200 pt-8 mt-12">
+          <div className="flex items-start gap-4">
+            <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center">
+              <User className="w-8 h-8 text-white" />
+            </div>
+            <div>
+              <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Former Kitchen Manager at Mellow Mushroom with 18+ years of restaurant experience.
+                Scott tests kitchen equipment through the rigors of commercial service to find tools
+                that deliver professional results for home cooks.
+              </p>
+              <div className="mt-4">
+                <Link href="/about" className="text-orange-600 hover:text-orange-700 text-sm font-semibold">
+                  Read more about Scott →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Related Content */}
+        <div className="border-t border-gray-200 pt-8 mt-8">
+          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Equipment Reviews</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <h4 className="font-bold text-slate-900 mb-2">Lodge Cast Iron Skillet Bundle</h4>
+              <p className="text-slate-600 text-sm">
+                The cast iron skillets that deliver restaurant-quality heat retention for perfect sears every time.
+              </p>
+            </Link>
+            <Link href="/glossary" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <h4 className="font-bold text-slate-900 mb-2">Recipe Conversions & Techniques</h4>
+              <p className="text-slate-600 text-sm">
+                Professional measurements, conversions, and knife techniques used in restaurant kitchens.
+              </p>
+            </Link>
+          </div>
+        </div>
+      </article>
+    </div>
+  )
+}
