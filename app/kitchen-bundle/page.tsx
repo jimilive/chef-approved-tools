@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'The Professional\'s Home Kitchen: 7 Tools I Actually Use Daily | Chef Approved Tools',
+  title: 'The Professional&apos;s Home Kitchen: 7 Tools I Actually Use Daily | Chef Approved Tools',
   description: 'Get the exact 7 tools a 15+ year restaurant professional uses at home. Skip the mistakes, get the gear that actually works. Free guide from Scott Bradley.',
   keywords: 'professional kitchen tools, chef recommended tools, home kitchen essentials, restaurant quality tools for home'
 }
@@ -21,7 +21,7 @@ export default function KitchenBundlePage() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            The Professional's Home Kitchen:
+            The Professional&apos;s Home Kitchen:
             <br />
             <span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">
               7 Tools I Actually Use Daily
@@ -62,7 +62,7 @@ export default function KitchenBundlePage() {
             {/* Left Side - Tool Preview */}
             <div>
               <h2 className="text-3xl font-bold mb-8 text-slate-900">
-                What's Inside Your Free Guide
+                What&apos;s Inside Your Free Guide
               </h2>
 
               <div className="space-y-6">
@@ -72,7 +72,7 @@ export default function KitchenBundlePage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Victorinox Fibrox Professional Knives</h3>
-                    <p className="text-gray-600">The 10", 8", and boning knives that survived 200+ services without fail</p>
+                    <p className="text-gray-600">The 10&quot;, 8&quot;, and boning knives that survived 200+ services without fail</p>
                   </div>
                 </div>
 
@@ -82,7 +82,7 @@ export default function KitchenBundlePage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Forschner Offset Bread Knife</h3>
-                    <p className="text-gray-600">The secret weapon most home cooks don't know about</p>
+                    <p className="text-gray-600">The secret weapon most home cooks don&apos;t know about</p>
                   </div>
                 </div>
 
@@ -168,7 +168,7 @@ export default function KitchenBundlePage() {
                     <span className="text-sm font-medium text-green-800">Trusted by 1,000+ home chefs</span>
                   </div>
                   <p className="text-xs text-green-700">
-                    "Finally, honest recommendations from someone who actually knows professional kitchens!"
+                    &quot;Finally, honest recommendations from someone who actually knows professional kitchens!&quot;
                   </p>
                 </div>
               </div>
