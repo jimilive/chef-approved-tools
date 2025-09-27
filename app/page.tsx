@@ -354,27 +354,24 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
                 <span className="text-3xl">🔪</span>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-slate-900">Professional Knives</h3>
-              <p className="text-slate-600 text-sm mb-3">German vs Japanese, what actually lasts</p>
-              <p className="text-xs text-orange-700 font-semibold">Knives reviewed</p>
+              <h3 className="text-xl font-bold mb-2 sm:mb-2 text-slate-900">Professional Knives</h3>
+              <p className="text-slate-600 text-sm mt-2 sm:mt-0">German vs Japanese, what actually lasts</p>
             </a>
             
             <a href="/cookware" className="group bg-white rounded-xl p-6 sm:p-8 hover:shadow-lg transition-all">
               <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
                 <span className="text-3xl">🍳</span>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-slate-900">Commercial Cookware</h3>
-              <p className="text-slate-600 text-sm mb-3">Restaurant-grade pans for home use</p>
-              <p className="text-xs text-orange-700 font-semibold">Cookware sets tested</p>
+              <h3 className="text-xl font-bold mb-2 sm:mb-2 text-slate-900">Commercial Cookware</h3>
+              <p className="text-slate-600 text-sm mt-2 sm:mt-0">Restaurant-grade pans for home use</p>
             </a>
             
             <a href="/appliances" className="group bg-white rounded-xl p-6 sm:p-8 hover:shadow-lg transition-all">
               <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
                 <span className="text-3xl">⚡</span>
               </div>
-              <h3 className="text-xl font-bold mb-2 text-slate-900">Power Equipment</h3>
-              <p className="text-slate-600 text-sm mb-3">Mixers, blenders that survive abuse</p>
-              <p className="text-xs text-orange-700 font-semibold">Appliances reviewed</p>
+              <h3 className="text-xl font-bold mb-2 sm:mb-2 text-slate-900">Power Equipment</h3>
+              <p className="text-slate-600 text-sm mt-2 sm:mt-0">Mixers, blenders that survive abuse</p>
             </a>
           </div>
         </div>

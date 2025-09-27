@@ -150,11 +150,6 @@ export default function BudgetVsPremiumMagnet({
           </ul>
         </div>
 
-        {/* Social proof snippet */}
-        <div className={`${variant === 'sidebar' ? 'bg-gray-50 text-gray-700' : 'bg-slate-700'} p-3 rounded-lg text-sm italic mb-4`}>
-          &quot;This guide saved me $3,000 on my restaurant startup. The $45 knife recommendation cuts better than my old $200 knife!&quot;
-          <span className="font-semibold block mt-1">— Maria S., Restaurant Owner</span>
-        </div>
       </div>
 
       {/* Email form */}
