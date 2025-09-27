@@ -101,12 +101,12 @@ export default function ReviewsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="bg-white/10 backdrop-blur rounded-lg p-4">
-              <div className="text-2xl font-bold text-orange-400">87</div>
-              <div className="text-sm text-slate-300">Products Tested</div>
+              <div className="text-2xl font-bold text-orange-400">5</div>
+              <div className="text-sm text-slate-300">Products Reviewed</div>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-lg p-4">
-              <div className="text-2xl font-bold text-orange-400">47</div>
-              <div className="text-sm text-slate-300">Recommended</div>
+              <div className="text-2xl font-bold text-orange-400">15+</div>
+              <div className="text-sm text-slate-300">Years Experience</div>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-lg p-4">
               <div className="text-2xl font-bold text-orange-400">$80K+</div>

@@ -14,26 +14,6 @@ const BudgetVsPremiumMagnet = lazy(() => import('@/components/BudgetVsPremiumMag
 // Sample products with enhanced data
 const sampleProducts = [
   {
-    id: 'wusthof-classic-8',
-    name: 'Wüsthof Classic 8-Inch Chef Knife',
-    brand: 'Wüsthof',
-    rating: 4.8,
-    reviews: 127,
-    affiliateUrl: 'https://amazon.com/dp/B00005MEII?tag=chefapproved-20',
-    badge: 'Manager\'s Pick',
-    tested: '2+ years daily use'
-  },
-  {
-    id: 'all-clad-tri-ply',
-    name: 'All-Clad D3 Tri-Ply Stainless Steel 10-Piece Set',
-    brand: 'All-Clad',
-    rating: 4.9,
-    reviews: 89,
-    affiliateUrl: 'https://amazon.com/dp/B004T6MSIS?tag=chefapproved-20',
-    badge: 'Best Value',
-    tested: '18 months tested'
-  },
-  {
     id: 'vitamix-5200',
     name: 'Vitamix 5200 Professional-Grade Blender',
     brand: 'Vitamix',
@@ -52,26 +32,6 @@ const sampleProducts = [
     affiliateUrl: 'https://amazon.com/dp/B00XPRRHFW?tag=chefapproved-20',
     badge: 'NSF Certified',
     tested: 'Survived $80K/mo operations'
-  },
-  {
-    id: 'lodge-cast-iron',
-    name: 'Lodge 12-Inch Cast Iron Skillet',
-    brand: 'Lodge',
-    rating: 4.6,
-    reviews: 412,
-    affiliateUrl: 'https://amazon.com/dp/B00006JSUA?tag=chefapproved-20',
-    badge: 'Budget Pick',
-    tested: '10+ years reliable'
-  },
-  {
-    id: 'victorinox-fibrox',
-    name: 'Victorinox Fibrox Pro 8-Inch Chef Knife',
-    brand: 'Victorinox',
-    rating: 4.7,
-    reviews: 203,
-    affiliateUrl: 'https://amazon.com/dp/B008M5U1C2?tag=chefapproved-20',
-    badge: 'Staff Favorite',
-    tested: 'Line cook tested'
   }
 ]
 

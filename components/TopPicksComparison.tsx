@@ -19,38 +19,12 @@ interface TopPick {
 
 const topPicks: TopPick[] = [
   {
-    id: 'wusthof-classic-8',
-    name: 'Wüsthof Classic 8-Inch Chef Knife',
-    shortName: 'Wüsthof Chef Knife',
-    rating: 4.8,
-    badge: 'Best Overall',
-    badgeColor: 'bg-green-700',
-    category: 'Chef Knives',
-    affiliateUrl: 'https://amazon.com/dp/B00005MEII?tag=chefapproved-20',
-    keyFeature: 'Superior edge retention',
-    testPeriod: '2+ years daily use',
-    whyBest: 'Perfect balance of sharpness, durability, and comfort for professional kitchens'
-  },
-  {
-    id: 'all-clad-d3',
-    name: 'All-Clad D3 Tri-Ply 10-Piece Set',
-    shortName: 'All-Clad D3 Set',
-    rating: 4.9,
-    badge: 'Best Value',
-    badgeColor: 'bg-blue-700',
-    category: 'Cookware Sets',
-    affiliateUrl: 'https://amazon.com/dp/B004T6MSIS?tag=chefapproved-20',
-    keyFeature: 'Even heat distribution',
-    testPeriod: '18 months tested',
-    whyBest: 'Professional performance at home cook prices - survived 200+ services'
-  },
-  {
     id: 'vitamix-5200',
     name: 'Vitamix 5200 Professional-Grade Blender',
     shortName: 'Vitamix 5200',
     rating: 4.7,
-    badge: 'Pro Pick',
-    badgeColor: 'bg-orange-700',
+    badge: 'Best Overall',
+    badgeColor: 'bg-green-700',
     category: 'Blenders',
     affiliateUrl: 'https://amazon.com/dp/B008H4SLV6?tag=chefapproved-20',
     keyFeature: '2.0 HP motor power',
@@ -68,7 +42,7 @@ export default function TopPicksComparison() {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Chef's Top 3 Kitchen Equipment Picks",
+    "name": "Chef's Top Kitchen Equipment Pick",
     "description": "Professional chef's top-rated kitchen tools tested in real restaurant kitchens",
     "numberOfItems": topPicks.length,
     "itemListElement": topPicks.map((pick, index) => ({
@@ -117,15 +91,15 @@ export default function TopPicksComparison() {
             <span className="text-sm font-semibold text-orange-700">Chef&apos;s Top Picks</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
-            My 3 Must-Have Professional Tools
+            My Top Professional Tool Pick
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            After testing 500+ tools in real restaurant kitchens, these are the only 3 I&apos;d buy again without hesitation.
+            After testing hundreds of tools in real restaurant kitchens, this is the one I&apos;d buy again without hesitation.
           </p>
         </div>
 
         {/* Comparison Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 gap-6 mb-8 max-w-md mx-auto">
           {topPicks.map((pick) => (
             <div
               key={pick.id}
@@ -206,7 +180,7 @@ export default function TopPicksComparison() {
             Want My Complete Equipment Rankings?
           </h3>
           <p className="text-gray-600 mb-4">
-            Get my detailed breakdown of 100+ tools tested in professional kitchens, including budget alternatives and what to avoid.
+            Get my detailed breakdown of kitchen tools tested in professional environments, including budget alternatives and what to avoid.
           </p>
           <a
             href="/reviews"

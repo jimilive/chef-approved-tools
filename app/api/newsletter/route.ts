@@ -1,8 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-// This would integrate with your email service (ConvertKit, Mailchimp, etc.)
-// For now, this is a mock implementation
-
 export async function POST(request: NextRequest) {
   try {
     const { email, source, leadMagnet } = await request.json()
@@ -23,42 +20,67 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // TODO: Replace with your actual email service integration
-    // Example ConvertKit integration:
-    /*
-    const convertKitResponse = await fetch(`https://api.convertkit.com/v3/forms/${process.env.CONVERTKIT_FORM_ID}/subscribe`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        api_key: process.env.CONVERTKIT_API_KEY,
-        email: email,
-        tags: [source, leadMagnet].filter(Boolean),
-        fields: {
-          source: source,
-          lead_magnet: leadMagnet
-        }
-      })
-    })
+    // Email Octopus API Integration
+    const EMAILOCTOPUS_API_KEY = process.env.EMAILOCTOPUS_API_KEY
+    const EMAILOCTOPUS_LIST_ID = process.env.EMAILOCTOPUS_LIST_ID
 
-    if (!convertKitResponse.ok) {
-      throw new Error('Failed to subscribe to newsletter')
+    if (!EMAILOCTOPUS_API_KEY || !EMAILOCTOPUS_LIST_ID) {
+      console.error('Missing Email Octopus credentials')
+      return NextResponse.json(
+        { error: 'Email service configuration error' },
+        { status: 500 }
+      )
     }
-    */
 
-    // For now, just log the signup (replace with actual service)
-    console.log('Newsletter signup:', {
+    // Subscribe to Email Octopus
+    const emailOctopusResponse = await fetch(
+      `https://emailoctopus.com/api/1.6/lists/${EMAILOCTOPUS_LIST_ID}/contacts`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          api_key: EMAILOCTOPUS_API_KEY,
+          email_address: email,
+          fields: {
+            FirstName: '', // Email Octopus will ask for this if you set it up
+            LastName: '',
+          },
+          tags: [source, leadMagnet].filter(Boolean),
+          status: 'SUBSCRIBED',
+        }),
+      }
+    )
+
+    const emailOctopusData = await emailOctopusResponse.json()
+
+    if (!emailOctopusResponse.ok) {
+      // Handle duplicate email (common and not really an error)
+      if (emailOctopusData.error?.code === 'MEMBER_EXISTS_WITH_EMAIL_ADDRESS') {
+        return NextResponse.json({
+          success: true,
+          message: 'You are already subscribed to our newsletter!',
+          data: { email }
+        })
+      }
+
+      console.error('Email Octopus error:', emailOctopusData)
+      throw new Error(`Email Octopus API error: ${emailOctopusData.error?.message || 'Unknown error'}`)
+    }
+
+    // Log successful signup for your records
+    console.log('Newsletter signup successful:', {
       email,
       source,
       leadMagnet,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
+      emailOctopusId: emailOctopusData.id
     })
 
-    // Simulate successful response
     return NextResponse.json({
       success: true,
-      message: 'Successfully subscribed to newsletter',
+      message: 'Successfully subscribed to newsletter! Check your email for confirmation.',
       data: {
         email,
         source,
@@ -69,7 +91,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Newsletter signup error:', error)
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Failed to subscribe. Please try again later.' },
       { status: 500 }
     )
   }
