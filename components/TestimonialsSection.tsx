@@ -84,6 +84,7 @@ export default function TestimonialsSection() {
           <a
             href="/newsletter"
             className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+            aria-label="Get free professional kitchen equipment guide - newsletter signup"
           >
             Get Free Equipment Guide
           </a>
