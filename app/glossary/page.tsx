@@ -85,7 +85,7 @@ const knifeCuts = [
     french: "Concassé",
     american: "Rough Chop",
     slang: "Chunky Cut",
-    description: "Informal, uneven cuts about 1/2\" to 1\" pieces. Used when appearance doesn't matter.",
+    description: "Informal, uneven cuts about 1/2\" to 1\" pieces. Used when appearance doesn&apos;t matter.",
     technique: "Quick, informal chopping without focus on uniformity.",
     uses: ["Stocks", "Braising vegetables", "Food processor prep", "Rustic dishes"]
   }
@@ -95,13 +95,13 @@ const glossaryTerms = [
   {
     term: "NSF Certified",
     definition: "Equipment approved by NSF International for commercial food service use. NSF certification means the item meets strict standards for durability, cleanability, and food safety required in professional kitchens.",
-    whyItMatters: "NSF-certified equipment is built to withstand the abuse of commercial kitchens - if it can survive a restaurant, it'll last decades in your home.",
+    whyItMatters: "NSF-certified equipment is built to withstand the abuse of commercial kitchens - if it can survive a restaurant, it&apos;ll last decades in your home.",
     examples: ["Cutting boards", "Mixers", "Food processors"]
   },
   {
     term: "Full Tang",
     definition: "A knife construction where the metal blade extends fully through the handle, providing maximum strength and balance. You can see the metal edges along the top and bottom of the handle.",
-    whyItMatters: "Full tang knives are virtually indestructible and perfectly balanced. They won't break at the handle junction like cheaper knives.",
+    whyItMatters: "Full tang knives are virtually indestructible and perfectly balanced. They won&apos;t break at the handle junction like cheaper knives.",
     examples: ["Wüsthof Classic series", "Professional chef knives"]
   },
   {
@@ -118,7 +118,7 @@ const glossaryTerms = [
   },
   {
     term: "Enameled Cast Iron",
-    definition: "Cast iron cookware coated with a glass-like enamel surface. Combines cast iron's heat retention with a non-reactive, easy-to-clean surface that doesn't require seasoning.",
+    definition: "Cast iron cookware coated with a glass-like enamel surface. Combines cast iron&apos;s heat retention with a non-reactive, easy-to-clean surface that doesn&apos;t require seasoning.",
     whyItMatters: "Gets the benefits of cast iron (even heating, heat retention) without the maintenance. Perfect for acidic foods like tomato sauces.",
     examples: ["Le Creuset", "Staub Dutch ovens"]
   },
@@ -293,7 +293,7 @@ export default function GlossaryPage() {
           <div className="mt-12 bg-orange-50 border border-orange-200 rounded-xl p-6">
             <h3 className="font-bold text-orange-800 mb-3">Pro Tip from 18+ Years in Kitchens</h3>
             <p className="text-orange-700 text-sm leading-relaxed">
-              Uniform cuts aren't just about looks - they ensure everything cooks at the same rate.
+              Uniform cuts aren&apos;t just about looks - they ensure everything cooks at the same rate.
               A mix of large and small pieces means some will be overcooked while others are still raw.
               Take the extra time to make cuts consistent, especially for sautéing and roasting.
             </p>
