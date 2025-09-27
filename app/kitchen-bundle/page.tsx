@@ -107,7 +107,7 @@ export default function KitchenBundlePage() {
                 </div>
 
                 <div className="bg-gray-100 rounded-lg p-6 mt-8">
-                  <h4 className="font-bold mb-3">Plus You'll Get:</h4>
+                  <h4 className="font-bold mb-3">Plus You&apos;ll Get:</h4>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center space-x-2">
                       <span className="text-green-600">✓</span>
