@@ -121,7 +121,7 @@ export default function NewsletterModal({
                 Welcome to the Kitchen!
               </h3>
               <p className="text-gray-600 text-sm sm:text-base">
-                Check your email for your free chef&rsquo;s guide and exclusive deals!
+                Check your email for your free kitchen bundle guide and authentic gear recommendations!
               </p>
             </div>
           ) : (
@@ -129,10 +129,10 @@ export default function NewsletterModal({
               <div className="text-center mb-6">
                 <div className="text-3xl sm:text-4xl mb-3">👨‍🍳</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
-                  Get My Free Chef&rsquo;s Guide
+                  Get My Professional Kitchen Bundle
                 </h3>
                 <p className="text-gray-600 text-sm sm:text-base">
-                  &ldquo;10 Essential Tools Every Home Kitchen Needs&rdquo; + exclusive deals from a certified chef
+                  &ldquo;7 Tools I Actually Use Daily&rdquo; + authentic gear recommendations from 15+ years experience
                 </p>
               </div>
 
@@ -156,7 +156,7 @@ export default function NewsletterModal({
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-orange-700 hover:to-red-700 transition-all transform hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed text-base"
                 >
-                  {isSubmitting ? 'Sending...' : 'Get My Free Guide →'}
+                  {isSubmitting ? 'Sending...' : 'Get My Free Kitchen Bundle →'}
                 </button>
               </form>
 

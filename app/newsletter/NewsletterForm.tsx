@@ -22,7 +22,7 @@ export default function NewsletterForm() {
         body: JSON.stringify({
           email,
           source: 'newsletter_page',
-          leadMagnet: 'weekly_tips'
+          leadMagnet: 'professional-kitchen-tools'
         }),
       })
 
@@ -95,7 +95,7 @@ export default function NewsletterForm() {
             cursor: isLoading ? 'not-allowed' : 'pointer'
           }}
         >
-          {isLoading ? 'Subscribing...' : 'Get Free Kitchen Tips'}
+          {isLoading ? 'Subscribing...' : 'Get Free Kitchen Bundle'}
         </button>
       </form>
     </div>

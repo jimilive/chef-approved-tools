@@ -28,8 +28,8 @@ export default function BudgetVsPremiumMagnet({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email,
-          source: 'budget-vs-premium-magnet',
-          leadMagnet: 'budget-vs-premium-guide',
+          source: 'professional-kitchen-bundle',
+          leadMagnet: 'professional-kitchen-tools',
           variant
         })
       })
@@ -48,7 +48,7 @@ export default function BudgetVsPremiumMagnet({
         }
 
         // Track as affiliate click for analytics
-        trackAffiliateClick('Budget vs Premium Guide', 'Lead Magnet', 0, 'ChefApproved')
+        trackAffiliateClick('Professional Kitchen Bundle', 'Lead Magnet', 0, 'ChefApproved')
       }
     } catch (error) {
       console.error('Lead magnet signup error:', error)
@@ -78,7 +78,7 @@ export default function BudgetVsPremiumMagnet({
             Check Your Email! 📧
           </h3>
           <p className="text-gray-300 mb-4">
-            Your &quot;$500 vs $5,000 Equipment Guide&quot; is on its way. Check your inbox (and spam folder) in the next few minutes.
+            Your &quot;Professional&apos;s Home Kitchen: 7 Tools&quot; guide is on its way. Check your inbox (and spam folder) in the next few minutes.
           </p>
           <div className="bg-orange-100 text-orange-800 p-3 rounded-lg text-sm">
             💡 <strong>Pro Tip:</strong> Save my email (scott@chefapprovedtools.com) to your contacts so you never miss the good stuff!
@@ -98,11 +98,11 @@ export default function BudgetVsPremiumMagnet({
         </div>
 
         <h2 className="text-2xl md:text-3xl font-bold mb-2">
-          The $500 vs $5,000 Kitchen Equipment Guide
+          The Professional&apos;s Home Kitchen: 7 Tools I Actually Use Daily
         </h2>
 
         <p className={`text-lg mb-4 ${variant === 'sidebar' ? 'text-gray-700' : 'text-gray-300'}`}>
-          Why spending more doesn&apos;t always mean better performance
+          My authentic daily toolkit from 15+ years in restaurant kitchens
         </p>
 
         {/* Trust indicators */}
@@ -123,29 +123,29 @@ export default function BudgetVsPremiumMagnet({
         <div className={`${variant === 'sidebar' ? 'bg-white' : 'bg-slate-800'} border border-orange-200 rounded-lg p-4 mb-4`}>
           <h3 className="font-semibold mb-3 flex items-center gap-2">
             <Download className="w-5 h-5 text-orange-600" />
-            What You&apos;ll Get (FREE Download):
+            What You&apos;ll Get (FREE Guide):
           </h3>
 
           <ul className="space-y-2 text-sm">
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-              <span><strong>Complete equipment breakdowns:</strong> $500 setup that outperforms $5,000 gear</span>
+              <span><strong>Victorinox knife set:</strong> The exact 4 knives I use daily at home</span>
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-              <span><strong>Performance test results:</strong> Real data from 200+ cover nights</span>
+              <span><strong>OXO prep tools:</strong> Simple tools that make cooking effortless</span>
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-              <span><strong>Industry secrets:</strong> Where pros actually buy equipment (not Amazon)</span>
+              <span><strong>Professional mandoline:</strong> Restaurant consistency in your home</span>
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-              <span><strong>Maintenance schedules:</strong> Make equipment last decades, not years</span>
+              <span><strong>Why each tool works:</strong> Stories from real restaurant use</span>
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-              <span><strong>Red flag warnings:</strong> Expensive equipment that always fails</span>
+              <span><strong>Care and maintenance:</strong> Make these tools last decades</span>
             </li>
           </ul>
         </div>
@@ -183,7 +183,7 @@ export default function BudgetVsPremiumMagnet({
           ) : (
             <>
               <DollarSign className="inline w-5 h-5 mr-2" />
-              Get My Free $500 vs $5,000 Guide →
+              Get My Free Professional Kitchen Guide →
             </>
           )}
         </button>
@@ -214,17 +214,17 @@ export function BudgetVsPremiumTeaser() {
         </div>
         <div className="flex-1">
           <h3 className="font-bold text-gray-900 mb-2">
-            Spending $5,000 on Kitchen Equipment? Read This First.
+            The Professional&apos;s Home Kitchen: My 7 Daily Tools
           </h3>
           <p className="text-gray-700 text-sm mb-3">
-            I tested $500 equipment against $5,000+ gear in real restaurant kitchens.
-            The results will shock you (and save you thousands).
+            From 15+ years in professional kitchens to my home - these are the tools that made the cut.
+            Real recommendations, no BS.
           </p>
           <a
             href="#budget-vs-premium-signup"
             className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
           >
-            Get Free Comparison Guide
+            Get Free Kitchen Bundle Guide
             <Download className="w-4 h-4" />
           </a>
         </div>

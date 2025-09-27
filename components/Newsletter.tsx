@@ -20,18 +20,18 @@ export default function Newsletter() {
       <div className="max-w-4xl mx-auto px-4 text-center">
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
           <h2 className="text-3xl font-bold mb-4 text-white">
-            Get My Professional Equipment Guide
+            Get My Professional Kitchen Bundle Guide
           </h2>
           <p className="text-white/90 mb-6">
-            Learn from my expensive mistakes so you don&apos;t repeat them.
-            Plus get weekly insider tips from years in professional kitchens.
+            The 7 tools I actually use daily from 15+ years in professional kitchens.
+            Plus weekly insider tips and authentic gear recommendations.
           </p>
 
           <div className="bg-white rounded-xl p-6 max-w-md mx-auto">
             <div className="text-left text-sm text-gray-600 mb-4">
-              ✓ Avoid the biggest equipment mistakes<br/>
-              ✓ My tested equipment hierarchy<br/>
-              ✓ Weekly deal alerts from top brands
+              ✓ The exact 7 tools from my daily toolkit<br/>
+              ✓ Why each tool earned its spot<br/>
+              ✓ Weekly authentic gear recommendations
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -50,7 +50,7 @@ export default function Newsletter() {
                 type="submit"
                 className="w-full px-8 py-3 bg-orange-600 text-white font-semibold rounded-md hover:bg-orange-700 focus:ring-2 focus:ring-orange-300 focus:outline-none transition-colors"
               >
-                {isSubmitted ? 'Subscribed!' : 'Get My Free Guide'}
+                {isSubmitted ? 'Subscribed!' : 'Get My Free Kitchen Bundle'}
               </button>
             </form>
           </div>
