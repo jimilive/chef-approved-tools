@@ -37,7 +37,7 @@ const testingPhases = [
     icon: Users,
     tasks: [
       "High-volume restaurant environment testing",
-      "Multiple staff member feedback collection",
+      "Professional kitchen manager evaluation",
       "Peak service performance evaluation",
       "Long-term durability monitoring"
     ]
@@ -128,7 +128,7 @@ const methodologyFAQs = [
   },
   {
     question: "How do you score equipment objectively?",
-    answer: "We use a weighted scoring system across 5 categories: Performance (30%), Durability (25%), Usability (20%), Value (15%), and Versatility (10%). Each category has specific metrics we track over months of use, with input from multiple kitchen staff members to eliminate personal bias."
+    answer: "We use a weighted scoring system across 5 categories: Performance (30%), Durability (25%), Usability (20%), Value (15%), and Versatility (10%). Each category has specific metrics we track over months of use in real professional kitchen environments."
   },
   {
     question: "Do you update reviews if equipment performance changes over time?",
@@ -162,8 +162,8 @@ export default function MethodologyPage() {
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <Users className="w-8 h-8 text-orange-400 mx-auto mb-3" />
-              <div className="text-2xl font-bold mb-1">12+ Staff</div>
-              <div className="text-sm text-white/80">Multiple user feedback</div>
+              <div className="text-2xl font-bold mb-1">Pro Kitchen</div>
+              <div className="text-sm text-white/80">Real restaurant testing</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <TrendingUp className="w-8 h-8 text-orange-400 mx-auto mb-3" />
@@ -288,10 +288,10 @@ export default function MethodologyPage() {
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <Users className="w-8 h-8 text-orange-400 mb-4" />
-              <h3 className="text-lg font-bold mb-3">Multiple User Perspectives</h3>
+              <h3 className="text-lg font-bold mb-3">Professional Kitchen Experience</h3>
               <p className="text-sm text-white/80">
-                Line cooks, prep cooks, and managers all provide feedback on usability,
-                durability, and real-world performance.
+                18+ years of restaurant experience provides comprehensive evaluation
+                of usability, durability, and real-world performance.
               </p>
             </div>
 

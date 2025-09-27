@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Cookware Materials Guide - Professional Kitchen Manager Insights',
-  description: 'Complete guide to cookware materials from 15+ years managing professional kitchens. Stainless steel, cast iron, carbon steel, and more.',
+  description: 'Complete guide to cookware materials from 18+ years of restaurant experience. Stainless steel, cast iron, carbon steel, and more.',
 }
 
 export default function CookwareMaterialsPage() {
@@ -16,7 +16,7 @@ export default function CookwareMaterialsPage() {
           </h1>
           <p className="text-xl text-slate-600 leading-relaxed">
             The truth about cookware materials from someone who&apos;s used them all
-            in high-volume commercial kitchens for 15+ years.
+            in high-volume commercial kitchens for 18+ years.
           </p>
         </header>
 

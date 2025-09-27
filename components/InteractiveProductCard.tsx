@@ -96,7 +96,7 @@ export default function InteractiveProductCard({
       
       {/* Disclaimer */}
       <p className="text-xs text-gray-500 mt-3 text-center">
-        <span className="text-orange-700 font-medium">Paid link</span>
+        <span className="text-orange-700 font-medium">Affiliate link</span>
       </p>
     </div>
   )

@@ -525,7 +525,7 @@ export default function ProductPage({ params }: Props) {
                 <span>•</span>
                 <span>✓ Customer protection</span>
                 <span>•</span>
-                <span style={{ color: '#ea580c' }}>Paid link</span>
+                <span style={{ color: '#ea580c' }}>Affiliate link</span>
               </div>
               
               <a 

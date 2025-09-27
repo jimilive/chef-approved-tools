@@ -20,10 +20,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.chefapprovedtools.com'),
   title: {
-    default: 'Chef Approved Kitchen Tools | Tested by 15+ Year Restaurant Manager Scott Bradley',
+    default: 'Chef Approved Kitchen Tools | Tested by Kitchen Manager Scott Bradley',
     template: '%s | Chef Approved Tools - Professional Kitchen Equipment Reviews'
   },
-  description: 'Professional kitchen equipment reviews by Scott Bradley, former Mellow Mushroom Kitchen Manager with 15+ years restaurant experience. Tools tested in real commercial kitchens. Honest reviews of chef knives, cookware, and appliances for serious home cooks.',
+  description: 'Professional kitchen equipment reviews by Scott Bradley, former Mellow Mushroom Kitchen Manager with 18+ years restaurant experience. Tools tested in real commercial kitchens. Honest reviews of chef knives, cookware, and appliances for serious home cooks.',
   keywords: [
     'professional kitchen tools',
     'restaurant equipment reviews',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Chef Approved Kitchen Tools | Tested by 15+ Year Restaurant Manager',
+    title: 'Chef Approved Kitchen Tools | Tested by Restaurant Manager',
     description: 'Professional kitchen equipment reviews by Scott Bradley, former Mellow Mushroom Kitchen Manager. Tools tested in real restaurants. Honest reviews of chef knives, cookware, and appliances.',
     url: 'https://www.chefapprovedtools.com',
     siteName: 'Chef Approved Tools',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         url: 'https://www.chefapprovedtools.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Scott Bradley - Professional Chef reviewing kitchen equipment with 15+ years restaurant experience'
+        alt: 'Scott Bradley - Professional Chef reviewing kitchen equipment with 18+ years restaurant experience'
       }
     ],
     locale: 'en_US',
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Chef Approved Kitchen Tools | Restaurant Manager Tested',
-    description: 'Professional kitchen equipment reviews by Scott Bradley. 15+ years restaurant experience, former Mellow Mushroom Kitchen Manager. Real reviews from real kitchens.',
+    description: 'Professional kitchen equipment reviews by Scott Bradley. 18+ years restaurant experience, former Mellow Mushroom Kitchen Manager. Real reviews from real kitchens.',
     images: ['https://www.chefapprovedtools.com/twitter-image.jpg'],
     creator: '@chefapprovedtools',
     site: '@chefapprovedtools',

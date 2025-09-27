@@ -122,7 +122,7 @@ export default function CookwarePage() {
             </div>
             
             <p style={{ fontSize: '0.75rem', color: '#9ca3af', marginTop: '8px', textAlign: 'center' }}>
-              <span style={{ color: '#ea580c' }}>Paid link</span> • Prices may change
+              <span style={{ color: '#ea580c' }}>Affiliate link</span> • Prices may change
             </p>
           </div>
         ))}

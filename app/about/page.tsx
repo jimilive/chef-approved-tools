@@ -3,7 +3,7 @@ import FAQSchema from '@/components/FAQSchema'
 const aboutFAQs = [
   {
     question: "What's your professional culinary background?",
-    answer: "I hold an A.A.S. in Culinary Arts from Seattle Central College and a B.S. in Business Administration from University of Montana. I've worked as a certified Pizzaiolo at Purple Café & Wine Bar and managed restaurant operations at Mellow Mushroom with $80K+ monthly revenue, giving me real-world experience with professional kitchen equipment."
+    answer: "I hold an A.A.S. in Culinary Arts from Seattle Culinary Academy and a B.S. in Business Administration from University of Montana. I've worked as a certified Pizzaiolo at Purple Café & Wine Bar and managed restaurant operations at Mellow Mushroom with $80K+ monthly revenue, giving me real-world experience with professional kitchen equipment."
   },
   {
     question: "How did you transition from restaurant work to equipment reviews?",
@@ -32,8 +32,8 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-slate-600 mb-6">
-              Former Kitchen Manager at Mellow Mushroom with 15+ years of professional kitchen experience.
-              Seattle Central College culinary graduate who&apos;s tested equipment in
+              Former Kitchen Manager at Mellow Mushroom with 18+ years of restaurant experience.
+              Seattle Culinary Academy graduate who&apos;s tested equipment in
               high-volume restaurant operations.
             </p>
 

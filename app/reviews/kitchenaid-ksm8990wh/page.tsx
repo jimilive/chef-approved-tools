@@ -43,7 +43,7 @@ const productData = {
   ],
   inStock: true,
   expertRating: 4.8,
-  expertOpinion: "After managing $80K+/month kitchen operations, this mixer delivers commercial-grade reliability. The 1.3 HP motor and NSF certification make it essential for serious operations.",
+  expertOpinion: "After testing this mixer through 18 months of professional kitchen use at Purple Cafe, it delivers true commercial-grade reliability. The 1.3 HP motor and NSF certification make it essential for serious operations.",
   dateAdded: "2024-01-15",
   lastUpdated: "2024-09-23"
 }
@@ -60,7 +60,7 @@ export const metadata = {
   description: "Professional review of KitchenAid Commercial Series KSM8990WH by restaurant manager. Real kitchen testing, pros/cons, and buying guide from 15+ years experience.",
   keywords: ["KitchenAid commercial mixer", "KSM8990WH review", "restaurant equipment", "professional mixer", "kitchen manager review"],
   openGraph: {
-    title: "KitchenAid KSM8990WH: The Mixer That Survived $80K/Month Operations",
+    title: "KitchenAid KSM8990WH: The Mixer That Survived 18 Months at Purple Cafe",
     description: "Professional kitchen manager's honest review after 18 months of commercial use",
     images: ['/images/kitchenaid-ksm8990wh-review.jpg']
   }
@@ -126,7 +126,7 @@ export default function KitchenAidReviewPage() {
           {/* Quick Summary */}
           <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-8">
             <p className="text-slate-800 font-medium leading-relaxed">
-              After managing kitchen operations generating $80,000+ monthly revenue, I&apos;ve learned that equipment either performs under pressure or becomes expensive paperweights. The KitchenAid KSM8990WH Commercial Series mixer falls decisively into the &quot;performer&quot; category.
+              After 18 months of testing this mixer at Purple Cafe, I&apos;ve learned that equipment either performs under pressure or becomes expensive paperweights. The KitchenAid KSM8990WH Commercial Series mixer falls decisively into the &quot;performer&quot; category.
             </p>
           </div>
         </header>

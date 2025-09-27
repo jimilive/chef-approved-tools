@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Best Cookware 2024 - Restaurant-Grade Pans for Home Kitchens',
-  description: 'Professional cookware recommendations from 15+ years of kitchen management. Find pans that survive commercial use.',
+  description: 'Professional cookware recommendations from 18+ years of restaurant experience. Find pans that survive commercial use.',
 }
 
 export default function BestCookwarePage() {
