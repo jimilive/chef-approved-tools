@@ -134,7 +134,7 @@ export default function HomePage() {
           {/* Credibility-focused Description */}
           <p className="text-lg sm:text-xl text-slate-300 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed">
             Former Kitchen Manager at Mellow Mushroom with Seattle Central culinary training. 
-            15+ years testing equipment in real restaurants from Athens to Seattle.
+            18+ years testing equipment in real restaurants from Athens to Seattle.
           </p>
           
           {/* CTA Buttons */}
@@ -205,7 +205,7 @@ export default function HomePage() {
                 <span className="text-2xl">🍳</span>
               </div>
               <h3 className="font-bold mb-2">Line Cook Expert</h3>
-              <p className="text-sm text-gray-600">Purple Cafe, Feierabend, 15+ years experience</p>
+              <p className="text-sm text-gray-600">Purple Cafe, Feierabend, 18+ years experience</p>
             </div>
             
             <div className="bg-gray-50 rounded-xl p-6 text-center">
