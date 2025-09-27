@@ -78,7 +78,7 @@ const nextConfig = {
         tls: false,
       };
 
-      // Exclude specific polyfills for modern browsers
+      // Exclude specific polyfills and optimize bundles for modern browsers
       config.resolve.alias = {
         ...config.resolve.alias,
         // Exclude polyfills that modern browsers don't need
@@ -91,10 +91,18 @@ const nextConfig = {
         'core-js/modules/es.string.trim-end': false,
       };
 
-      // Exclude Next.js polyfills for modern browsers
+      // Optimize bundle chunks further
+      config.optimization.splitChunks.cacheGroups.react = {
+        test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+        name: 'react-vendor',
+        chunks: 'all',
+        priority: 20,
+      };
+
+      // Replace Next.js polyfills with empty module for modern browsers
       config.resolve.alias = {
         ...config.resolve.alias,
-        'next/dist/build/polyfills/polyfill-module': false,
+        'next/dist/build/polyfills/polyfill-module': require.resolve('./lib/polyfills.js'),
       };
     }
 

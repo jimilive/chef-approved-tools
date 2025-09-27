@@ -223,6 +223,8 @@ export default function RootLayout({
             .uppercase{text-transform:uppercase}
             .tracking-wide{letter-spacing:0.025em}
             .font-medium{font-weight:500}
+            .mobile-scroll{overflow-x:hidden}
+            #main-content{min-height:100vh;contain:layout}
           `
         }} />
 
@@ -294,6 +296,36 @@ export default function RootLayout({
           </MobileOptimizationProvider>
         </MobileOptimizedLayout>
 
+        {/* Immediate CSS Deferring - Run before anything else */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // IMMEDIATE CSS interception - run before Next.js loads
+              (function() {
+                // Override appendChild to intercept CSS links
+                const originalAppendChild = Document.prototype.appendChild || HTMLElement.prototype.appendChild;
+                HTMLHeadElement.prototype.appendChild = function(node) {
+                  if (node.tagName === 'LINK' && node.rel === 'stylesheet' && node.href.includes('/_next/static/css/')) {
+                    // Don't append CSS immediately - defer it
+                    const href = node.href;
+                    setTimeout(function() {
+                      const newLink = document.createElement('link');
+                      newLink.rel = 'stylesheet';
+                      newLink.href = href;
+                      newLink.media = 'all';
+                      document.head.appendChild = originalAppendChild;
+                      document.head.appendChild(newLink);
+                      HTMLHeadElement.prototype.appendChild = arguments.callee;
+                    }, 50);
+                    return node;
+                  }
+                  return originalAppendChild.call(this, node);
+                };
+              })();
+            `
+          }}
+        />
+
         {/* Performance optimization scripts */}
         <script
           dangerouslySetInnerHTML={{
@@ -301,54 +333,6 @@ export default function RootLayout({
               // Performance monitoring and progressive enhancement
               (function() {
                 if (typeof window === 'undefined') return;
-
-                // Aggressive CSS deferring - completely prevent blocking
-                function deferCSS() {
-                  const cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
-                  cssLinks.forEach(function(link) {
-                    if (link.href.includes('/_next/static/css/')) {
-                      // Remove the link entirely to prevent blocking
-                      const href = link.href;
-                      link.remove();
-
-                      // Load asynchronously after first paint
-                      setTimeout(function() {
-                        const newLink = document.createElement('link');
-                        newLink.rel = 'stylesheet';
-                        newLink.href = href;
-                        newLink.media = 'all';
-                        document.head.appendChild(newLink);
-                      }, 100);
-                    }
-                  });
-                }
-
-                // Run immediately and on DOM ready
-                deferCSS();
-                if (document.readyState === 'loading') {
-                  document.addEventListener('DOMContentLoaded', deferCSS);
-                }
-
-                // Observe for new CSS additions
-                const observer = new MutationObserver(function(mutations) {
-                  mutations.forEach(function(mutation) {
-                    mutation.addedNodes.forEach(function(node) {
-                      if (node.nodeName === 'LINK' && node.rel === 'stylesheet' && node.href.includes('/_next/static/css/')) {
-                        const href = node.href;
-                        node.remove();
-                        setTimeout(function() {
-                          const newLink = document.createElement('link');
-                          newLink.rel = 'stylesheet';
-                          newLink.href = href;
-                          newLink.media = 'all';
-                          document.head.appendChild(newLink);
-                        }, 100);
-                      }
-                    });
-                  });
-                });
-
-                observer.observe(document.head, { childList: true });
 
                 // Service worker cleanup - unregister existing service workers
                 if ('serviceWorker' in navigator) {
