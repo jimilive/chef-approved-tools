@@ -17,6 +17,9 @@ const nextConfig = {
 
   // Enable source maps for better debugging and Lighthouse insights
   productionBrowserSourceMaps: true,
+
+  // Exclude polyfills for modern browsers
+  excludeDefaultMomentLocales: true,
   
   // Image optimization configuration
   images: {
@@ -67,12 +70,31 @@ const nextConfig = {
         },
       };
 
-      // Optimize for modern browsers
+      // Optimize for modern browsers - exclude polyfills
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
         net: false,
         tls: false,
+      };
+
+      // Exclude specific polyfills for modern browsers
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        // Exclude polyfills that modern browsers don't need
+        'core-js/modules/es.array.at': false,
+        'core-js/modules/es.array.flat': false,
+        'core-js/modules/es.array.flat-map': false,
+        'core-js/modules/es.object.from-entries': false,
+        'core-js/modules/es.object.has-own': false,
+        'core-js/modules/es.string.trim-start': false,
+        'core-js/modules/es.string.trim-end': false,
+      };
+
+      // Exclude Next.js polyfills for modern browsers
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        'next/dist/build/polyfills/polyfill-module': false,
       };
     }
 

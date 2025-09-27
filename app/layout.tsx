@@ -302,41 +302,53 @@ export default function RootLayout({
               (function() {
                 if (typeof window === 'undefined') return;
 
-                // Intercept and defer CSS loading to eliminate render-blocking
+                // Aggressive CSS deferring - completely prevent blocking
+                function deferCSS() {
+                  const cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
+                  cssLinks.forEach(function(link) {
+                    if (link.href.includes('/_next/static/css/')) {
+                      // Remove the link entirely to prevent blocking
+                      const href = link.href;
+                      link.remove();
+
+                      // Load asynchronously after first paint
+                      setTimeout(function() {
+                        const newLink = document.createElement('link');
+                        newLink.rel = 'stylesheet';
+                        newLink.href = href;
+                        newLink.media = 'all';
+                        document.head.appendChild(newLink);
+                      }, 100);
+                    }
+                  });
+                }
+
+                // Run immediately and on DOM ready
+                deferCSS();
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', deferCSS);
+                }
+
+                // Observe for new CSS additions
                 const observer = new MutationObserver(function(mutations) {
                   mutations.forEach(function(mutation) {
                     mutation.addedNodes.forEach(function(node) {
                       if (node.nodeName === 'LINK' && node.rel === 'stylesheet' && node.href.includes('/_next/static/css/')) {
-                        // Defer CSS loading by changing media to print, then switch to all after load
-                        node.media = 'print';
-                        node.onload = function() {
-                          this.media = 'all';
-                          this.onload = null;
-                        };
+                        const href = node.href;
+                        node.remove();
+                        setTimeout(function() {
+                          const newLink = document.createElement('link');
+                          newLink.rel = 'stylesheet';
+                          newLink.href = href;
+                          newLink.media = 'all';
+                          document.head.appendChild(newLink);
+                        }, 100);
                       }
                     });
                   });
                 });
 
-                // Start observing
                 observer.observe(document.head, { childList: true });
-
-                // Also handle any existing CSS links
-                document.addEventListener('DOMContentLoaded', function() {
-                  const cssLinks = document.querySelectorAll('link[rel="stylesheet"][href*="/_next/static/css/"]');
-                  cssLinks.forEach(function(link) {
-                    if (link.media !== 'print') {
-                      link.media = 'print';
-                      link.onload = function() {
-                        this.media = 'all';
-                        this.onload = null;
-                      };
-                    }
-                  });
-
-                  // Stop observing after initial load
-                  observer.disconnect();
-                });
 
                 // Service worker cleanup - unregister existing service workers
                 if ('serviceWorker' in navigator) {
