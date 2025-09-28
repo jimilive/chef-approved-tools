@@ -32,7 +32,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-slate-600 mb-6">
-              Former Kitchen Manager at Mellow Mushroom with 18+ years of restaurant experience.
+              Former Kitchen Manager at Mellow Mushroom with 21+ years of restaurant experience.
               Seattle Culinary Academy graduate who&apos;s tested equipment in
               high-volume restaurant operations.
             </p>

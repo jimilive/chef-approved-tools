@@ -57,7 +57,7 @@ const breadcrumbs = [
 
 export const metadata = {
   title: "KitchenAid KSM8990WH Review: Kitchen Manager's 18-Month Test | Chef Approved Tools",
-  description: "Professional review of KitchenAid Commercial Series KSM8990WH by restaurant manager. Real kitchen testing, pros/cons, and buying guide from 15+ years experience.",
+  description: "Professional review of KitchenAid Commercial Series KSM8990WH by restaurant manager. Real kitchen testing, pros/cons, and buying guide from 21+ years experience.",
   keywords: ["KitchenAid commercial mixer", "KSM8990WH review", "restaurant equipment", "professional mixer", "kitchen manager review"],
   openGraph: {
     title: "KitchenAid KSM8990WH: The Mixer That Survived 18 Months at Purple Cafe",
@@ -105,7 +105,7 @@ export default function KitchenAidReviewPage() {
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Scott Bradley</p>
-                <p className="text-sm text-slate-600">Kitchen Manager • 15+ Years Experience</p>
+                <p className="text-sm text-slate-600">Professional Chef • 40 Years Experience Since Age 15</p>
               </div>
             </div>
 

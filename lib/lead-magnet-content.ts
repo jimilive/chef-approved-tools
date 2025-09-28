@@ -12,7 +12,7 @@ export const leadMagnetContent = {
         "I've watched too many chefs waste their life savings on equipment that Instagram food bloggers recommended, only to see it fail during the first dinner rush.",
         "After managing $80K+/month restaurant operations and testing thousands of tools, I've discovered something the equipment industry doesn't want you to know:",
         "Price has almost ZERO correlation with performance under real kitchen pressure.",
-        "This guide reveals exactly when to save money and when to splurge - based on 15 years of brutal real-world testing."
+        "This guide reveals exactly when to save money and when to splurge - based on 21+ years of brutal real-world testing."
       ]
     },
     {
@@ -143,7 +143,7 @@ export const leadMagnetContent = {
   footer: {
     contact: "Questions? Email scott@chefapprovedtools.com",
     website: "www.chefapprovedtools.com",
-    credentials: "Scott Bradley - Kitchen Manager, Seattle Central Culinary Graduate, 15+ Years Professional Experience"
+    credentials: "Scott Bradley - Kitchen Manager, Seattle Central Culinary Graduate, 21+ Years Professional Experience"
   }
 }
 

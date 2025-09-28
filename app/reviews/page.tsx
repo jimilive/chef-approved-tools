@@ -3,7 +3,7 @@ import { Star, TrendingUp, Award } from 'lucide-react'
 
 export const metadata = {
   title: 'Professional Equipment Reviews by Restaurant Manager | Chef Approved Tools',
-  description: 'Honest reviews of kitchen equipment tested in real restaurant operations. Professional insights from 18+ years of restaurant experience.',
+  description: 'Honest reviews of kitchen equipment tested in real restaurant operations. Professional insights from 21+ years of restaurant experience.',
   keywords: ['kitchen equipment reviews', 'professional chef reviews', 'restaurant equipment', 'commercial kitchen tools']
 }
 
@@ -97,7 +97,7 @@ export default function ReviewsPage() {
             Equipment Reviews by a Real Kitchen Manager
           </h1>
           <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Honest reviews from 18+ years of restaurant experience. Every tool tested minimum 6 months in real restaurant operations.
+            Honest reviews from 21+ years of restaurant experience. Every tool tested minimum 6 months in real restaurant operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="bg-white/10 backdrop-blur rounded-lg p-4">
@@ -105,7 +105,7 @@ export default function ReviewsPage() {
               <div className="text-sm text-slate-300">Products Reviewed</div>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-lg p-4">
-              <div className="text-2xl font-bold text-orange-400">18+</div>
+              <div className="text-2xl font-bold text-orange-400">21+</div>
               <div className="text-sm text-slate-300">Years Experience</div>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-lg p-4">

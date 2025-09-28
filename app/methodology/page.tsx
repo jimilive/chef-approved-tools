@@ -290,7 +290,7 @@ export default function MethodologyPage() {
               <Users className="w-8 h-8 text-orange-400 mb-4" />
               <h3 className="text-lg font-bold mb-3">Professional Kitchen Experience</h3>
               <p className="text-sm text-white/80">
-                18+ years of restaurant experience provides comprehensive evaluation
+                21+ years of restaurant experience provides comprehensive evaluation
                 of usability, durability, and real-world performance.
               </p>
             </div>

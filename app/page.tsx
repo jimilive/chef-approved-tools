@@ -118,23 +118,23 @@ export default function HomePage() {
           {/* Trust Badge */}
           <div className="bg-orange-500/20 border border-orange-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 inline-block mb-6 sm:mb-8">
             <span className="text-orange-200 font-semibold text-sm sm:text-base">
-              👨‍🍳 KITCHEN MANAGER TESTED & APPROVED
+              👨‍🍳 40 YEARS PROFESSIONAL COOKING EXPERIENCE
             </span>
           </div>
-          
+
           {/* Main Headline with Real Experience */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
-            The Only Kitchen Tools I Trust After
+            Equipment Tested by a Chef Who Started at 15,
             <br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">
-              Managing $80K+/Month Operations
+              Still Cooking Professionally at 54
             </span>
           </h1>
-          
+
           {/* Credibility-focused Description */}
           <p className="text-lg sm:text-xl text-slate-300 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed">
-            Former Kitchen Manager at Mellow Mushroom with Seattle Central culinary training. 
-            18+ years testing equipment in real restaurants from Athens to Seattle.
+            From Wendy's at 15 to Kitchen Manager at Mellow Mushroom ($80K+/month operations),
+            40 years testing equipment across every kitchen type—fast food, fine dining, and casual dining.
           </p>
           
           {/* CTA Buttons */}
@@ -156,16 +156,16 @@ export default function HomePage() {
           {/* Real, Specific Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-8 sm:pt-12 border-t border-slate-600">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">15+ Years</div>
+              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">40 Years</div>
+              <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Cooking Experience</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">21+ Years</div>
               <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Professional Kitchens</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">$80K+/mo</div>
-              <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Operations Managed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">Many</div>
-              <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Tools Tested</div>
+              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">Age 54</div>
+              <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Still Cooking Pro</div>
             </div>
           </div>
         </div>
@@ -186,34 +186,34 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gray-50 rounded-xl p-6 text-center">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏃‍♂️</span>
+              </div>
+              <h3 className="font-bold mb-2">Started Young</h3>
+              <p className="text-sm text-gray-600">Professional cooking since age 15 (1986)</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎓</span>
               </div>
-              <h3 className="font-bold mb-2">Culinary Degree</h3>
+              <h3 className="font-bold mb-2">Formal Training</h3>
               <p className="text-sm text-gray-600">Seattle Central College A.A.S. Culinary Arts</p>
             </div>
             
             <div className="bg-gray-50 rounded-xl p-6 text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">👨‍💼</span>
               </div>
               <h3 className="font-bold mb-2">Kitchen Manager</h3>
               <p className="text-sm text-gray-600">Mellow Mushroom, 12 employees, $80K+/month</p>
             </div>
-            
-            <div className="bg-gray-50 rounded-xl p-6 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🍳</span>
-              </div>
-              <h3 className="font-bold mb-2">Line Cook Expert</h3>
-              <p className="text-sm text-gray-600">Purple Cafe, Feierabend, 18+ years experience</p>
-            </div>
-            
+
             <div className="bg-gray-50 rounded-xl p-6 text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">💼</span>
+                <span className="text-2xl">🔄</span>
               </div>
-              <h3 className="font-bold mb-2">E-commerce Pro</h3>
-              <p className="text-sm text-gray-600">$2M brand launch at YDesign Group</p>
+              <h3 className="font-bold mb-2">Back in Action</h3>
+              <p className="text-sm text-gray-600">Returned to professional cooking in 2025</p>
             </div>
           </div>
         </div>
@@ -229,11 +229,11 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-slate-900">
-              Equipment That Survived Scott&apos;s Busiest Services
+              Equipment That Survived Scott's Busiest Services
             </h2>
             <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Each tool tested minimum 6 months in my professional kitchens. 
-              These are the ones I&apos;d buy with my own money.
+              These are the ones I'd buy with my own money.
             </p>
           </div>
           
@@ -399,7 +399,7 @@ export default function HomePage() {
               <span className="text-green-400">✓</span> Kitchen Manager (Mellow Mushroom)
             </span>
             <span className="flex items-center gap-2">
-              <span className="text-green-400">✓</span> 15+ Years Pro Kitchens
+              <span className="text-green-400">✓</span> 21+ Years Pro Kitchens
             </span>
             <span className="flex items-center gap-2">
               <span className="text-green-400">✓</span> Seattle Central Culinary

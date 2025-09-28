@@ -19,17 +19,17 @@ interface TopPick {
 
 const topPicks: TopPick[] = [
   {
-    id: 'vitamix-5200',
-    name: 'Vitamix 5200 Professional-Grade Blender',
-    shortName: 'Vitamix 5200',
-    rating: 4.7,
+    id: 'kitchenaid-ksm8990wh',
+    name: 'KitchenAid Commercial Series KSM8990WH',
+    shortName: 'KitchenAid KSM8990WH',
+    rating: 4.8,
     badge: 'Best Overall',
     badgeColor: 'bg-green-700',
-    category: 'Blenders',
-    affiliateUrl: 'https://amazon.com/dp/B008H4SLV6?tag=chefapprovedt-20',
-    keyFeature: '2.0 HP motor power',
-    testPeriod: '5+ years proven',
-    whyBest: 'Only blender that consistently handles commercial-volume smoothie operations'
+    category: 'Stand Mixers',
+    affiliateUrl: 'https://www.amazon.com/gp/product/B00IRH09EK?smid=A1YJ4VH1RTKH0Y&th=1&linkCode=ll1&tag=chefapprovedt-20&linkId=d9e3b97323627d4be7be554a42a5d81f&language=en_US&ref_=as_li_ss_tl',
+    keyFeature: '1.3 HP commercial motor with NSF certification',
+    testPeriod: '18 months proven',
+    whyBest: 'Survived 18 months of high-volume restaurant operations at Purple Cafe without a single repair'
   }
 ]
 

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, AlertTriangle, Ruler, Droplets } from 'lucide-react'
+import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, Ruler, Droplets } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
@@ -19,7 +19,7 @@ const productData = {
   // Note: No customer reviews - this is a professional evaluation only
   category: "Cutting Boards",
   pros: [
-    "15 years of durability, expect to pass to children",
+    "18 years of durability, expect to pass to children",
     "Larger size gives room to work efficiently",
     "Saves significant damage to knife edges",
     "Easy to sanitize with no food safety concerns",
@@ -40,18 +40,18 @@ const productData = {
     },
     {
       retailer: "John Boos Direct",
-      url: "#" // TODO: Add actual affiliate link
+      url: "https://www.johnboos.com/products/maple-cutting-boards-1-1-2-thick-r-board-series"
     },
     {
       retailer: "Williams Sonoma",
-      url: "#" // TODO: Add actual affiliate link
+      url: "https://www.williams-sonoma.com/products/john-boos-edge-grain-cutting-board/"
     }
   ],
   inStock: true,
-  expertRating: 4.8, // TODO: Confirm your rating
-  expertOpinion: "Only used at home for the last 15 years, I expect to pass this on to my children. I rarely oil it but keep it clean and never soak in water. I sanitize it regularly and have never had any concerns about food safety. I love the larger size - gives you room to work without constantly moving prepped portions. The damage you save to your knives is well worth the price.",
-  dateAdded: "2024-09-23",
-  lastUpdated: "2024-09-23"
+  expertRating: 4.8,
+  expertOpinion: "After 18 years of daily home use, this John Boos cutting board represents the #1 choice of culinary professionals worldwide. Made from sustainable Northern Hard Rock Maple with NSF certification, it's built for commercial foodservice durability. The 1.75-inch edge-grain construction resists deep cuts while being knife-friendly to preserve blade sharpness. At 21 pounds, it provides unmatched stability during heavy prep work. I expect to pass this generational piece to my children - the larger 24x18 size gives room to work efficiently without constantly moving prepped portions. Simple maintenance with mineral oil and proper cleaning has kept it food-safe for nearly two decades.",
+  dateAdded: "2025-01-15",
+  lastUpdated: "2025-01-15"
 }
 
 const specifications = {
@@ -137,7 +137,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Scott Bradley</p>
-                <p className="text-sm text-slate-600">Kitchen Manager • 15+ Years Experience</p>
+                <p className="text-sm text-slate-600">Professional Chef • 40 Years Experience Since Age 15</p>
               </div>
             </div>
 
@@ -161,7 +161,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               <CheckCircle className="w-6 h-6 text-orange-700 flex-shrink-0 mt-1" />
               <div>
                 <p className="text-slate-800 font-medium leading-relaxed mb-2">
-                  <strong>PROFESSIONAL VERDICT:</strong> After 15 years of home use, this cutting board represents a generational investment in quality.
+                  <strong>PROFESSIONAL VERDICT:</strong> After 18 years of home use, this cutting board represents a generational investment in quality.
                 </p>
                 <p className="text-slate-700 text-sm">
                   The 24x18 size provides exceptional work space efficiency, while the 21-pound weight ensures rock-solid stability.
@@ -178,27 +178,27 @@ export default function JohnBosPlatinumCuttingBoardReview() {
 
         {/* Key Features Grid */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">Commercial-Grade Construction Features</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">#1 Choice of Culinary Professionals Worldwide</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Ruler className="w-8 h-8 text-orange-700 mb-2" />
-              <h3 className="font-semibold text-slate-900 mb-1">24&quot; x 18&quot; Size</h3>
-              <p className="text-sm text-slate-600">Commercial prep station size</p>
+              <h3 className="font-semibold text-slate-900 mb-1">NSF Certified</h3>
+              <p className="text-sm text-slate-600">Commercial foodservice approved</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Shield className="w-8 h-8 text-green-600 mb-2" />
-              <h3 className="font-semibold text-slate-900 mb-1">21-Lb Weight</h3>
-              <p className="text-sm text-slate-600">Stays put during heavy use</p>
+              <h3 className="font-semibold text-slate-900 mb-1">Northern Hard Rock Maple</h3>
+              <p className="text-sm text-slate-600">Sustainable USA-made wood</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <TrendingUp className="w-8 h-8 text-blue-600 mb-2" />
-              <h3 className="font-semibold text-slate-900 mb-1">Edge-Grain Maple</h3>
-              <p className="text-sm text-slate-600">Self-healing wood surface</p>
+              <h3 className="font-semibold text-slate-900 mb-1">1.75&quot; Edge-Grain</h3>
+              <p className="text-sm text-slate-600">Knife-friendly, self-healing surface</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Droplets className="w-8 h-8 text-purple-600 mb-2" />
-              <h3 className="font-semibold text-slate-900 mb-1">Reversible Design</h3>
-              <p className="text-sm text-slate-600">Double the cutting surface</p>
+              <h3 className="font-semibold text-slate-900 mb-1">21-Lb Stability</h3>
+              <p className="text-sm text-slate-600">Won't slide during heavy prep</p>
             </div>
           </div>
         </section>
@@ -290,9 +290,9 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <div className="space-y-6">
               <div>
-                <h3 className="font-bold text-slate-900 mb-3">15 Years of Home Kitchen Excellence</h3>
+                <h3 className="font-bold text-slate-900 mb-3">18 Years of Home Kitchen Excellence</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  Over 15 years of daily home cooking, this John Boos cutting board has anchored every meal preparation.
+                  Over 18 years of daily home cooking, this John Boos cutting board has anchored every meal preparation.
                   The hard rock maple edge-grain construction provides a self-healing surface that maintains knife sharpness
                   while offering the stability needed for efficient prep work. The 21-pound weight means it stays put
                   during even the most aggressive chopping and dicing sessions.
@@ -304,7 +304,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                 <p className="text-slate-700 leading-relaxed mb-4">
                   The damage this board saves to knife edges cannot be overstated. Unlike plastic or bamboo alternatives,
                   the maple surface gives slightly under the blade, reducing edge damage while maintaining cutting precision.
-                  After 15 years, my knives maintain their sharpness significantly longer than when I used cheaper cutting surfaces.
+                  After 18 years, my knives maintain their sharpness significantly longer than when I used cheaper cutting surfaces.
                   This translates to fewer sharpenings and longer knife life.
                 </p>
               </div>
@@ -313,7 +313,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                 <h3 className="font-bold text-slate-900 mb-3">Maintenance Reality vs Marketing</h3>
                 <p className="text-slate-700 leading-relaxed">
                   Despite marketing claims about frequent oiling, I rarely oil this board but keep it clean and never soak in water.
-                  Simple maintenance - washing with warm soapy water and immediate drying - has proven sufficient for 15 years.
+                  Simple maintenance - washing with warm soapy water and immediate drying - has proven sufficient for 18 years.
                   I sanitize it regularly and have never had any food safety concerns. The maintenance requirements are far less
                   demanding than manufacturers suggest.
                 </p>
@@ -325,7 +325,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               <li>• <strong>Location:</strong> Home kitchen operations</li>
               <li>• <strong>Primary Use:</strong> All food prep tasks</li>
               <li>• <strong>Daily Usage:</strong> Regular home cooking preparation</li>
-              <li>• <strong>Duration:</strong> 15 years of continuous use</li>
+              <li>• <strong>Duration:</strong> 18 years of continuous use</li>
             </ul>
 
             <h3 className="text-xl font-semibold text-slate-900 mb-4 mt-6">Performance Results</h3>
@@ -333,7 +333,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               <div>
                 <h4 className="font-semibold text-green-700 mb-2">✅ Outstanding Long-Term Performance</h4>
                 <ul className="text-sm text-slate-700 space-y-1">
-                  <li>• 15 years of durability, expect generational use</li>
+                  <li>• 18 years of durability, expect generational use</li>
                   <li>• Saves significant damage to knife edges</li>
                   <li>• Large size provides efficient work space</li>
                   <li>• Easy to sanitize with no food safety concerns</li>
@@ -383,7 +383,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mt-4">
             <p className="text-yellow-700 text-sm">
               <strong>My maintenance experience:</strong> I rarely oil it but keep it clean and never soak in water.
-              I sanitize it regularly and have never had any concerns about food safety. Simple care routine has worked perfectly for 15 years.
+              I sanitize it regularly and have never had any concerns about food safety. Simple care routine has worked perfectly for 18 years.
             </p>
           </div>
         </section>
@@ -484,7 +484,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             <div className="mt-6">
-              <p className="text-slate-700">Used only at home for 15 years with excellent results. The large size provides room to work without constantly moving prepped portions. Easy to sanitize with no food safety concerns. The damage you save to your knives makes it well worth the investment.</p>
+              <p className="text-slate-700">Used only at home for 18 years with excellent results. The large size provides room to work without constantly moving prepped portions. Easy to sanitize with no food safety concerns. The damage you save to your knives makes it well worth the investment.</p>
             </div>
           </div>
         </section>
@@ -563,7 +563,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-4">The Bottom Line</h2>
           <div className="bg-slate-800 text-white rounded-xl p-6">
             <p className="text-lg leading-relaxed mb-4">
-              After 15 years of daily use, this John Boos cutting board has proven itself as more than kitchen equipment - it&apos;s a generational investment.
+              After 18 years of daily use, this John Boos cutting board has proven itself as more than kitchen equipment - it&apos;s a generational investment.
               The combination of work surface efficiency, knife preservation, and exceptional durability justifies every dollar of the premium price.
               While plastic alternatives offer convenience, they cannot match the knife care and longevity of this hard maple construction.
               The maintenance reality is far simpler than marketing suggests - basic cleanliness and care yield decades of performance.

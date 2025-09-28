@@ -102,14 +102,14 @@ export default function BudgetVsPremiumMagnet({
         </h2>
 
         <p className={`text-lg mb-4 ${variant === 'sidebar' ? 'text-gray-700' : 'text-gray-300'}`}>
-          My authentic daily toolkit from 15+ years in restaurant kitchens
+          My authentic daily toolkit from 21+ years in restaurant kitchens
         </p>
 
         {/* Trust indicators */}
         <div className="flex items-center justify-center gap-4 text-sm mb-6">
           <div className="flex items-center gap-1">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-            <span className={variant === 'sidebar' ? 'text-gray-600' : 'text-gray-400'}>15+ Years Experience</span>
+            <span className={variant === 'sidebar' ? 'text-gray-600' : 'text-gray-400'}>21+ Years Experience</span>
           </div>
           <div className="flex items-center gap-1">
             <TrendingUp className="w-4 h-4 text-green-400" />
@@ -212,7 +212,7 @@ export function BudgetVsPremiumTeaser() {
             The Professional&apos;s Home Kitchen: My 7 Daily Tools
           </h3>
           <p className="text-gray-700 text-sm mb-3">
-            From 15+ years in professional kitchens to my home - these are the tools that made the cut.
+            From 21+ years in professional kitchens to my home - these are the tools that made the cut.
             Real recommendations, no BS.
           </p>
           <a

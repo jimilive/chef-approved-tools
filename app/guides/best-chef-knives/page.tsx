@@ -15,7 +15,7 @@ export default function BestChefKnivesPage() {
             Best Chef Knives 2024: Professional Kitchen Manager&apos;s Guide
           </h1>
           <p className="text-xl text-slate-600 leading-relaxed">
-            After 15+ years managing professional kitchens and testing knives,
+            After 21+ years managing professional kitchens and testing knives,
             here are the chef knives that actually last in high-volume operations.
           </p>
         </header>

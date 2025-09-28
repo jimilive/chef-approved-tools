@@ -4,7 +4,7 @@ import { Calendar, Clock, User, ThermometerSun, Timer, Flame } from 'lucide-reac
 
 export const metadata: Metadata = {
   title: 'How to Sear Steaks Like a Restaurant Chef | Professional Techniques',
-  description: 'Learn the professional steak searing techniques used in restaurant kitchens. 18+ years of experience from a former Mellow Mushroom Kitchen Manager reveals the secrets to perfect sears.',
+  description: 'Learn the professional steak searing techniques used in restaurant kitchens. 21+ years of experience from a former Mellow Mushroom Kitchen Manager reveals the secrets to perfect sears.',
   keywords: ['how to sear steak', 'restaurant steak techniques', 'professional steak cooking', 'perfect steak sear', 'restaurant quality steak', 'cast iron steak', 'steak cooking temperature', 'chef steak methods']
 }
 
@@ -47,7 +47,7 @@ export default function SteakSearingPost() {
           </h1>
 
           <p className="text-xl text-slate-600 leading-relaxed">
-            After 18+ years in restaurant kitchens, including my time as Kitchen Manager at Mellow Mushroom,
+            After 21+ years in restaurant kitchens, including my time as Kitchen Manager at Mellow Mushroom,
             I&apos;ve seared thousands of steaks. Here&apos;s exactly how we achieve that perfect crust every single time.
           </p>
         </div>
@@ -134,8 +134,8 @@ export default function SteakSearingPost() {
           </div>
 
           <p>
-            <strong>Seasoning timing matters:</strong> Salt the steak at least 30 minutes before cooking, or immediately before.
-            The 5-30 minute window draws out moisture without enough time to reabsorb—exactly what you don&apos;t want.
+            <strong>Seasoning timing matters:</strong> Salt the steak either at least 30 minutes before cooking or immediately before cooking.
+            Avoid the 5-30 minute window, which draws out moisture without sufficient time for reabsorption.
           </p>
 
           <h3>Step 3: Heat Management (The Restaurant Secret)</h3>
@@ -328,7 +328,7 @@ export default function SteakSearingPost() {
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 mt-8">
             <h4 className="font-bold text-orange-800 mb-3">What&apos;s Next?</h4>
             <p className="text-orange-700 mb-4">
-              This is just one technique from 18+ years of professional kitchen experience. Want to learn more
+              This is just one technique from 21+ years of professional kitchen experience. Want to learn more
               restaurant secrets for home cooking?
             </p>
             <Link
@@ -349,7 +349,7 @@ export default function SteakSearingPost() {
             <div>
               <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Mellow Mushroom with 18+ years of restaurant experience.
+                Former Kitchen Manager at Mellow Mushroom with 21+ years of restaurant experience.
                 Scott tests kitchen equipment through the rigors of commercial service to find tools
                 that deliver professional results for home cooks.
               </p>

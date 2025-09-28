@@ -4,7 +4,7 @@ import { Calendar, Clock, User } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Professional Cooking Techniques Blog | Chef Approved Tools',
-  description: 'Learn professional cooking techniques from 18+ years of restaurant kitchen experience. Master the methods that separate restaurant-quality cooking from home cooking.',
+  description: 'Learn professional cooking techniques from 21+ years of restaurant kitchen experience. Master the methods that separate restaurant-quality cooking from home cooking.',
   keywords: ['professional cooking techniques', 'restaurant cooking methods', 'chef techniques', 'kitchen manager tips', 'restaurant quality cooking', 'professional chef blog']
 }
 
@@ -31,7 +31,7 @@ export default function BlogPage() {
           </h1>
           <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
             Learn the restaurant techniques that create professional-quality results at home.
-            18+ years of commercial kitchen experience, explained for home cooks.
+            21+ years of commercial kitchen experience, explained for home cooks.
           </p>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 inline-block">
             <div className="flex items-center gap-2 text-orange-400">

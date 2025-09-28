@@ -3,7 +3,7 @@ import NewsletterForm from './NewsletterForm'
 
 export const metadata: Metadata = {
   title: 'Weekly Kitchen Tips Newsletter | Chef Approved Tools',
-  description: 'Get weekly professional cooking tips and honest equipment recommendations from 15+ years of restaurant experience. Join fellow home chefs getting expert insights.',
+  description: 'Get weekly professional cooking tips and honest equipment recommendations from 21+ years of restaurant experience. Join fellow home chefs getting expert insights.',
   keywords: 'kitchen tips newsletter, chef tips, cooking newsletter, professional chef advice, kitchen equipment deals'
 }
 
@@ -15,7 +15,7 @@ export default function NewsletterPage() {
         Get Weekly Kitchen Tips
       </h1>
       <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '32px' }}>
-        Get weekly professional cooking tips and honest equipment recommendations from 15+ years of restaurant experience.
+        Get weekly professional cooking tips and honest equipment recommendations from 21+ years of restaurant experience.
       </p>
 
       <NewsletterForm />

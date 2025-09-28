@@ -15,7 +15,7 @@ export default function KnifeCareGuidePage() {
             Professional Knife Care Guide
           </h1>
           <p className="text-xl text-slate-600 leading-relaxed">
-            15+ years of professional kitchen experience condensed into
+            21+ years of professional kitchen experience condensed into
             the essential knife care techniques that actually matter.
           </p>
         </header>

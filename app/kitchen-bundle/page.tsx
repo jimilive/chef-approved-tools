@@ -3,7 +3,7 @@ import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Professional Kitchen Equipment Bundle: 7 Restaurant-Tested Tools for Home | Chef Approved Tools',
-  description: 'Get the exact 7 pieces of equipment a 18+ year restaurant professional uses at home. Tested in commercial kitchens, perfect for serious home cooks. Free guide from Scott Bradley.',
+  description: 'Get the exact 7 pieces of equipment a 21+ year restaurant professional uses at home. Tested in commercial kitchens, perfect for serious home cooks. Free guide from Scott Bradley.',
   keywords: 'professional kitchen equipment, commercial grade home tools, restaurant tested kitchen gear, chef approved equipment bundle'
 }
 
@@ -16,7 +16,7 @@ export default function KitchenBundlePage() {
           {/* Trust Badge */}
           <div className="bg-orange-500/20 border border-orange-500/30 rounded-full px-6 py-3 inline-block mb-8">
             <span className="text-orange-200 font-semibold">
-              👨‍🍳 15+ YEARS RESTAURANT EXPERIENCE
+              👨‍🍳 21+ YEARS RESTAURANT EXPERIENCE
             </span>
           </div>
 
@@ -29,7 +29,7 @@ export default function KitchenBundlePage() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            After 18+ years testing equipment in commercial kitchens, these 7 pieces
+            After 21+ years testing equipment in commercial kitchens, these 7 pieces
             earned their place in my home kitchen through proven performance and reliability.
           </p>
 
@@ -38,7 +38,7 @@ export default function KitchenBundlePage() {
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl mb-3">🔪</div>
               <h3 className="font-bold mb-2">Commercial Proven</h3>
-              <p className="text-sm text-white/80">18+ years of restaurant testing</p>
+              <p className="text-sm text-white/80">21+ years of restaurant testing</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl mb-3">💰</div>
@@ -141,7 +141,7 @@ export default function KitchenBundlePage() {
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center space-x-2">
                       <span className="text-green-600">✓</span>
-                      <span>Real-world testing results from 18+ years in kitchens</span>
+                      <span>Real-world testing results from 21+ years in kitchens</span>
                     </li>
                     <li className="flex items-center space-x-2">
                       <span className="text-green-600">✓</span>
@@ -172,7 +172,7 @@ export default function KitchenBundlePage() {
                     Get Your Free Professional Equipment Bundle Guide
                   </h3>
                   <p className="text-gray-600">
-                    18+ years of restaurant testing distilled into one comprehensive guide.
+                    21+ years of restaurant testing distilled into one comprehensive guide.
                   </p>
                 </div>
 
@@ -240,7 +240,7 @@ export default function KitchenBundlePage() {
                 <span className="text-2xl">🍳</span>
               </div>
               <h3 className="font-bold mb-2">Equipment Tester</h3>
-              <p className="text-gray-600">18+ years testing gear in demanding commercial environments</p>
+              <p className="text-gray-600">21+ years testing gear in demanding commercial environments</p>
             </div>
           </div>
         </div>

@@ -23,7 +23,7 @@ export default function Newsletter() {
             Get My Professional Kitchen Bundle Guide
           </h2>
           <p className="text-white/90 mb-6">
-            The 7 tools I actually use daily from 15+ years in professional kitchens.
+            The 7 tools I actually use daily from 21+ years in professional kitchens.
             Plus weekly insider tips and authentic gear recommendations.
           </p>
 

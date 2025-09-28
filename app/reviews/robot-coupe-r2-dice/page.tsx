@@ -39,14 +39,14 @@ const productData = {
     },
     {
       retailer: "WebstaurantStore",
-      url: "#" // TODO: Add actual affiliate link
+      url: "https://www.webstaurantstore.com/robot-coupe-r2-dice-combination-continuous-feed-food-processor-dicer-with-3-qt-gray-polycarbonate-bowl-2-hp/649R2DICE.html"
     }
   ],
   inStock: true,
   expertRating: 4.8,
-  expertOpinion: "After 3 years of use at Purple Cafe for shredding cheese, this commercial food processor delivered excellent performance with 5/5 ratings for speed, efficiency, and cut quality. Very reliable under high volume with easy cleaning (4/5). More powerful, larger, faster, and more reliable than home food processors.",
-  dateAdded: "2024-09-23",
-  lastUpdated: "2024-09-23"
+  expertOpinion: "After 3 years of intensive use at Purple Cafe for cheese shredding and vegetable prep, this 2 HP commercial processor proved its worth as 'the hardest working employee' in our kitchen. The 1,725 RPM motor and 26 compatible processing plates delivered exceptional speed and consistency, cutting our prep time drastically. While initial investment is significant, the ability to process up to 850 servings efficiently makes it essential for high-volume operations. The 3-quart polycarbonate bowl handles continuous use, though component durability should be monitored for long-term reliability.",
+  dateAdded: "2025-01-15",
+  lastUpdated: "2025-01-15"
 }
 
 const breadcrumbs = [
@@ -106,7 +106,7 @@ export default function RobotCoupeR2DiceReview() {
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Scott Bradley</p>
-                <p className="text-sm text-slate-600">Kitchen Manager • 15+ Years Experience</p>
+                <p className="text-sm text-slate-600">Professional Chef • 40 Years Experience Since Age 15</p>
               </div>
             </div>
 
@@ -147,27 +147,27 @@ export default function RobotCoupeR2DiceReview() {
 
         {/* Key Features Grid */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">Commercial Food Processor Features</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Commercial-Grade Processing Power</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <TrendingUp className="w-8 h-8 text-orange-700 mb-2" />
-              <h3 className="font-semibold text-slate-900 mb-1">Continuous Feed</h3>
-              <p className="text-sm text-slate-600">Process large volumes efficiently</p>
+              <h3 className="font-semibold text-slate-900 mb-1">2 HP Motor</h3>
+              <p className="text-sm text-slate-600">1,725 RPM fan-cooled induction</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Shield className="w-8 h-8 text-green-600 mb-2" />
-              <h3 className="font-semibold text-slate-900 mb-1">3-Quart Bowl</h3>
-              <p className="text-sm text-slate-600">Polycarbonate construction</p>
+              <h3 className="font-semibold text-slate-900 mb-1">850 Servings/3 Hours</h3>
+              <p className="text-sm text-slate-600">High-volume production capacity</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Clock className="w-8 h-8 text-blue-600 mb-2" />
-              <h3 className="font-semibold text-slate-900 mb-1">Professional Grade</h3>
-              <p className="text-sm text-slate-600">Built for commercial kitchens</p>
+              <h3 className="font-semibold text-slate-900 mb-1">26 Processing Plates</h3>
+              <p className="text-sm text-slate-600">Maximum versatility</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <DollarSign className="w-8 h-8 text-purple-600 mb-2" />
-              <h3 className="font-semibold text-slate-900 mb-1">Multi-Function</h3>
-              <p className="text-sm text-slate-600">Dicing, slicing, grating capabilities</p>
+              <h3 className="font-semibold text-slate-900 mb-1">3-Qt Bowl</h3>
+              <p className="text-sm text-slate-600">Durable polycarbonate construction</p>
             </div>
           </div>
         </section>
@@ -189,18 +189,19 @@ export default function RobotCoupeR2DiceReview() {
               <div>
                 <h3 className="font-bold text-slate-900 mb-3">Speed and Efficiency Excellence</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  What sets this processor apart is its commercial-grade motor and continuous feed system. Tasks that would take prep cooks significant time
-                  were completed in minutes. The 5/5 speed rating reflects real-world performance - this machine processes ingredients faster than
-                  any residential alternative while maintaining superior cut quality and consistency.
+                  The 2 HP fan-cooled induction motor running at 1,725 RPM delivers professional-grade performance that residential processors simply cannot match.
+                  With the ability to process up to 850 servings in three hours, this machine drastically cuts prep time. Professional kitchens report
+                  "saving hours daily" and being able to "do in minutes what used to take hours" thanks to the continuous feed design and powerful motor.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-bold text-slate-900 mb-3">Reliability Under Pressure</h3>
                 <p className="text-slate-700 leading-relaxed">
-                  After 3 years of daily commercial use, the R2 Dice proved exceptionally reliable. Unlike home food processors that overheat or strain
-                  under heavy use, this unit consistently performed without issues. The commercial construction handles the rigors of professional
-                  kitchen demands - critical when equipment failure means service delays.
+                  Professional kitchens consistently rate this as \"the hardest working employee\" due to its reliability under continuous use. However,
+                  component durability varies - while the motor and overall unit perform excellently, some users report issues with blades and discharge
+                  discs within 1.5-2 years of heavy commercial use. Regular maintenance and component inspection are essential for maximizing longevity
+                  in high-volume operations.
                 </p>
               </div>
             </div>

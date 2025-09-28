@@ -33,7 +33,7 @@ export default function FAQSchema({ faqs }: FAQSchemaProps) {
 export const kitchenToolsFAQs: FAQItem[] = [
   {
     question: "How does Scott Bradley test kitchen equipment?",
-    answer: "Scott Bradley tests all kitchen equipment in real restaurant environments for a minimum of 6 months. As a former Kitchen Manager at Mellow Mushroom with 15+ years of professional experience, he evaluates tools based on durability, performance under high-volume conditions, and value for money."
+    answer: "Scott Bradley tests all kitchen equipment in real restaurant environments for a minimum of 6 months. As a former Kitchen Manager at Mellow Mushroom with 21+ years of professional experience, he evaluates tools based on durability, performance under high-volume conditions, and value for money."
   },
   {
     question: "Are Chef Approved Tools reviews sponsored or biased?",
@@ -41,7 +41,7 @@ export const kitchenToolsFAQs: FAQItem[] = [
   },
   {
     question: "What makes Scott Bradley qualified to review kitchen equipment?",
-    answer: "Scott Bradley has 15+ years of professional kitchen experience, including managing kitchen operations at Mellow Mushroom with $80K+/month revenue. He holds a culinary degree from Seattle Central College and has worked in various restaurant environments from fine dining to high-volume operations."
+    answer: "Scott Bradley has 21+ years of professional kitchen experience, including managing kitchen operations at Mellow Mushroom with $80K+/month revenue. He holds a culinary degree from Seattle Central College and has worked in various restaurant environments from fine dining to high-volume operations."
   },
   {
     question: "Why should I trust these kitchen tool recommendations?",

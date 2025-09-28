@@ -41,7 +41,7 @@ export default function ReviewSchema({
       "@type": "Person",
       "name": "Scott Bradley",
       "jobTitle": "Professional Chef & Kitchen Manager",
-      "description": "15+ years restaurant experience, former Kitchen Manager at Mellow Mushroom",
+      "description": "40 years cooking experience since age 15, 21+ years professional kitchens, former Kitchen Manager at Mellow Mushroom",
       "knowsAbout": [
         "Professional Kitchen Equipment",
         "Restaurant Operations",
@@ -102,7 +102,7 @@ export function ChefCredentialsSchema() {
     "@type": "Person",
     "name": "Scott Bradley",
     "jobTitle": "Professional Chef & Kitchen Manager",
-    "description": "Professional chef with 15+ years of restaurant experience, former Kitchen Manager at Mellow Mushroom, specializing in professional kitchen equipment reviews and testing.",
+    "description": "Professional chef with 40 years cooking experience since age 15, including 21+ years in professional restaurant kitchens. Former Kitchen Manager at Mellow Mushroom, specializing in professional kitchen equipment reviews and long-term durability testing.",
     "url": "https://www.chefapprovedtools.com/about",
     "sameAs": [
       "https://www.chefapprovedtools.com"
@@ -138,7 +138,7 @@ export function ChefCredentialsSchema() {
       {
         "@type": "Occupation",
         "name": "Professional Chef",
-        "description": "15+ years experience in professional kitchens including fine dining and high-volume operations",
+        "description": "40 years cooking experience since age 15, with 21+ years in professional kitchens spanning fast food to fine dining and high-volume operations",
         "occupationalCategory": "Culinary Arts"
       }
     ],
