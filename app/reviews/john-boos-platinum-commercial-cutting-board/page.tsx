@@ -198,7 +198,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Droplets className="w-8 h-8 text-purple-600 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">21-Lb Stability</h3>
-              <p className="text-sm text-slate-600">Won't slide during heavy prep</p>
+              <p className="text-sm text-slate-600">Won&apos;t slide during heavy prep</p>
             </div>
           </div>
         </section>

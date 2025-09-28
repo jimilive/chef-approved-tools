@@ -238,8 +238,8 @@ export default function VictorinoxFibroxProReview() {
                 <p className="text-slate-700 leading-relaxed mb-4">
                   The absence of a bolster is a massive advantage for most applications. Unlike German knives with bolsters that prevent
                   full blade sharpening and limit cutting techniques, these Victorinox knives offer complete versatility.
-                  For the rare occasions requiring serious heavy-duty chopping, I'll reach for my J.A. Henckels Twin Cuisine or
-                  borrow a Wusthof with a bolster - but that's maybe 5% of kitchen tasks.
+                  For the rare occasions requiring serious heavy-duty chopping, I&apos;ll reach for my J.A. Henckels Twin Cuisine or
+                  borrow a Wusthof with a bolster - but that&apos;s maybe 5% of kitchen tasks.
                 </p>
               </div>
 
@@ -380,11 +380,11 @@ export default function VictorinoxFibroxProReview() {
 
         {/* Final Verdict */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">The Professional's Choice for Practical Excellence</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">The Professional&apos;s Choice for Practical Excellence</h2>
           <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
             <p className="text-slate-700 leading-relaxed mb-4">
               After two decades of daily professional use, these Victorinox Fibrox knives represent the ultimate in practical knife design.
-              They prove that exceptional performance doesn't require premium pricing or high-maintenance German steel.
+              They prove that exceptional performance doesn&apos;t require premium pricing or high-maintenance German steel.
             </p>
             <p className="text-slate-700 leading-relaxed mb-4">
               The no-bolster design provides unmatched versatility, while the Swiss steel composition delivers the perfect balance of
@@ -393,7 +393,7 @@ export default function VictorinoxFibroxProReview() {
             </p>
             <p className="text-slate-700 leading-relaxed">
               <strong>Bottom Line:</strong> If you can only own three knives, make them these three Victorinox Fibrox models.
-              Twenty years of testing proves they'll serve you reliably for decades with nothing more than regular steeling.
+              Twenty years of testing proves they&apos;ll serve you reliably for decades with nothing more than regular steeling.
             </p>
           </div>
         </section>

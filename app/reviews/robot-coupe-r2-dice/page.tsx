@@ -191,14 +191,14 @@ export default function RobotCoupeR2DiceReview() {
                 <p className="text-slate-700 leading-relaxed mb-4">
                   The 2 HP fan-cooled induction motor running at 1,725 RPM delivers professional-grade performance that residential processors simply cannot match.
                   With the ability to process up to 850 servings in three hours, this machine drastically cuts prep time. Professional kitchens report
-                  "saving hours daily" and being able to "do in minutes what used to take hours" thanks to the continuous feed design and powerful motor.
+                  &quot;saving hours daily&quot; and being able to &quot;do in minutes what used to take hours&quot; thanks to the continuous feed design and powerful motor.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-bold text-slate-900 mb-3">Reliability Under Pressure</h3>
                 <p className="text-slate-700 leading-relaxed">
-                  Professional kitchens consistently rate this as \"the hardest working employee\" due to its reliability under continuous use. However,
+                  Professional kitchens consistently rate this as &quot;the hardest working employee&quot; due to its reliability under continuous use. However,
                   component durability varies - while the motor and overall unit perform excellently, some users report issues with blades and discharge
                   discs within 1.5-2 years of heavy commercial use. Regular maintenance and component inspection are essential for maximizing longevity
                   in high-volume operations.

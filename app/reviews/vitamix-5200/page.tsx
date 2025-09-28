@@ -294,12 +294,12 @@ export default function Vitamix5200Review() {
             <div className="bg-white rounded-lg p-6 border border-gray-200">
               <h3 className="text-xl font-semibold text-slate-900 mb-4">Why Chefs Choose Vitamix in Professional Kitchens</h3>
               <p className="text-slate-700 leading-relaxed mb-4">
-                <strong>Industry Standard:</strong> The Vitamix 5200 is "rarely if ever seen a different blender solution being used in a commercial kitchen" according to culinary professionals. Chefs use it "as a finishing tool when making sauces, purees, and soups, to give that light, velvety, creamy mouthfeel that you can't get with a food processor."
+                <strong>Industry Standard:</strong> The Vitamix 5200 is &quot;rarely if ever seen a different blender solution being used in a commercial kitchen&quot; according to culinary professionals. Chefs use it &quot;as a finishing tool when making sauces, purees, and soups, to give that light, velvety, creamy mouthfeel that you can&apos;t get with a food processor.&quot;
               </p>
               <p className="text-slate-700 mb-4">
-                <strong>Professional Preference:</strong> Many chefs actually prefer the 5200 over newer models "because they have more control over their creations" - it's "the only model with the slowest speed setting, which allows for peeling garlic without chopping it."
+                <strong>Professional Preference:</strong> Many chefs actually prefer the 5200 over newer models &quot;because they have more control over their creations&quot; - it&apos;s &quot;the only model with the slowest speed setting, which allows for peeling garlic without chopping it.&quot;
               </p>
-              <p className="text-slate-700">Found in "most small to mid-sized restaurants, cafes, coffee shops, and bars," the 5200 has "earned the trust of chefs for its consistent performance and reliability" in professional food preparation applications.</p>
+              <p className="text-slate-700">Found in &quot;most small to mid-sized restaurants, cafes, coffee shops, and bars,&quot; the 5200 has &quot;earned the trust of chefs for its consistent performance and reliability&quot; in professional food preparation applications.</p>
             </div>
           </div>
         </section>

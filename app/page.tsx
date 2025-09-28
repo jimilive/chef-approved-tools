@@ -133,7 +133,7 @@ export default function HomePage() {
 
           {/* Credibility-focused Description */}
           <p className="text-lg sm:text-xl text-slate-300 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed">
-            From Wendy's at 15 to Kitchen Manager at Mellow Mushroom ($80K+/month operations),
+            From Wendy&apos;s at 15 to Kitchen Manager at Mellow Mushroom ($80K+/month operations),
             40 years testing equipment across every kitchen type—fast food, fine dining, and casual dining.
           </p>
           
@@ -229,11 +229,11 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-slate-900">
-              Equipment That Survived Scott's Busiest Services
+              Equipment That Survived Scott&apos;s Busiest Services
             </h2>
             <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Each tool tested minimum 6 months in my professional kitchens. 
-              These are the ones I'd buy with my own money.
+              These are the ones I&apos;d buy with my own money.
             </p>
           </div>
           
