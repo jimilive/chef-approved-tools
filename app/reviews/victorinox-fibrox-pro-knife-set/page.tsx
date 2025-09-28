@@ -16,6 +16,8 @@ const productData = {
     currency: "USD"
   },
   dealStatus: "trending" as const,
+  rating: 4.9,
+  reviewCount: 89,
   category: "Professional Knife Sets",
   pros: [
     "20 years of daily use without stone sharpening required",
@@ -425,15 +427,7 @@ export default function VictorinoxFibroxProReview() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateProductReviewSchema({
-              productName: productData.name,
-              productBrand: productData.brand,
-              rating: productData.expertRating,
-              reviewBody: productData.expertOpinion,
-              pros: productData.pros,
-              cons: productData.cons,
-              category: productData.category
-            }))
+            __html: JSON.stringify(generateProductReviewSchema(productData))
           }}
         />
         <script
