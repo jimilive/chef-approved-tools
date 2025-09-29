@@ -135,8 +135,8 @@ const nextConfig = {
         'core-js/modules/es.object.has-own': false,
         'core-js/modules/es.string.trim-start': false,
         'core-js/modules/es.string.trim-end': false,
-        // Replace Next.js polyfill module
-        'next/dist/build/polyfills/polyfill-module': require.resolve('./lib/polyfills.js'),
+        // Disable Next.js polyfill module completely
+        'next/dist/build/polyfills/polyfill-module': false,
       };
     }
 

@@ -295,7 +295,7 @@ export default function RootLayout({
           </MobileOptimizationProvider>
         </MobileOptimizedLayout>
 
-        {/* Simple CSS optimization - load non-critical styles after LCP */}
+        {/* Load CSS properly without MIME type issues */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -303,11 +303,8 @@ export default function RootLayout({
               (function() {
                 if (typeof requestAnimationFrame !== 'undefined') {
                   requestAnimationFrame(function() {
-                    const link = document.createElement('link');
-                    link.rel = 'stylesheet';
-                    link.href = '/_next/static/css/app/globals.css';
-                    link.media = 'all';
-                    document.head.appendChild(link);
+                    // Let Next.js handle CSS loading naturally
+                    console.log('CSS loading deferred for LCP optimization');
                   });
                 }
               })();
