@@ -6,9 +6,17 @@ const nextConfig = {
   // Experimental features for performance
   experimental: {
     scrollRestoration: true,
-    optimizeCss: false, // Disabled - manually optimizing CSS loading
+    optimizeCss: false, // Disable due to missing critters dependency
     webVitalsAttribution: ['CLS', 'LCP'],
     esmExternals: true, // Use ES modules for better tree shaking
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   },
 
   // Target modern browsers to reduce bundle size
@@ -71,20 +79,35 @@ const nextConfig = {
         })
       );
 
-      // Optimize bundle splitting
+      // Optimize bundle splitting for better caching and loading
       config.optimization.splitChunks = {
         chunks: 'all',
+        minSize: 20000,
+        maxSize: 100000,
         cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
+          framework: {
             chunks: 'all',
+            name: 'framework',
+            test: /(?<!node_modules.*)[\\/]node_modules[\\/](react|react-dom|scheduler|prop-types|use-subscription)[\\/]/,
+            priority: 40,
+            enforce: true,
           },
-          react: {
-            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
-            name: 'react-vendor',
+          lib: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'lib',
             chunks: 'all',
+            priority: 30,
+          },
+          commons: {
+            name: 'commons',
+            chunks: 'all',
+            minChunks: 2,
             priority: 20,
+          },
+          default: {
+            minChunks: 2,
+            priority: 10,
+            reuseExistingChunk: true,
           },
         },
       };
@@ -96,6 +119,10 @@ const nextConfig = {
         net: false,
         tls: false,
       };
+
+      // Better tree shaking and unused code elimination
+      config.optimization.usedExports = true;
+      config.optimization.sideEffects = false;
 
       // Replace specific polyfill modules with false
       config.resolve.alias = {

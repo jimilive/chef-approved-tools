@@ -5,11 +5,11 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { lazy, Suspense } from 'react'
 
-// Lazy load non-critical components
+// Lazy load non-critical components for better performance
 const CookieConsent = lazy(() => import('@/components/CookieConsent'))
 const ExitIntentWrapper = lazy(() => import('@/components/ExitIntentWrapper'))
-import Analytics from '@/components/Analytics'
-import ScrollTracker from '@/components/ScrollTracker'
+const Analytics = lazy(() => import('@/components/Analytics'))
+const ScrollTracker = lazy(() => import('@/components/ScrollTracker'))
 import MobileOptimizedLayout from '@/components/MobileOptimizedLayout'
 import { organizationSchema, websiteSchema } from '@/lib/schema'
 import MobileOptimizationProvider from '@/components/MobileOptimizationProvider'
@@ -117,6 +117,8 @@ export default function RootLayout({
         {/* Resource hints for critical third-party domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
 
         {/* Critical CSS inline for immediate rendering - Above the fold only */}
         <style dangerouslySetInnerHTML={{
@@ -232,13 +234,9 @@ export default function RootLayout({
         <link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
 
-        {/* Critical third-party domains */}
-        <link rel="preconnect" href="https://images.unsplash.com" />
-        <link rel="preconnect" href="https://m.media-amazon.com" />
-
-        {/* DNS prefetch for non-critical domains */}
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        {/* DNS prefetch for non-critical domains - lightweight hints */}
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://m.media-amazon.com" />
 
         
         {/* Mobile-specific meta tags */}
@@ -287,121 +285,49 @@ export default function RootLayout({
               <ExitIntentWrapper />
             </Suspense>
 
-            {/* Analytics - Page views and scroll tracking */}
-            <Analytics />
-            <ScrollTracker />
+            {/* Analytics - Page views and scroll tracking (lazy loaded) */}
+            <Suspense fallback={null}>
+              <Analytics />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ScrollTracker />
+            </Suspense>
           </MobileOptimizationProvider>
         </MobileOptimizedLayout>
 
-        {/* Complete CSS render-blocking elimination */}
+        {/* Simple CSS optimization - load non-critical styles after LCP */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Completely prevent CSS from blocking render
+              // Load non-critical CSS after first paint to improve LCP
               (function() {
-                // Intercept and defer ALL CSS loading
-                const originalCreateElement = document.createElement;
-                const deferredCSS = [];
-
-                document.createElement = function(tagName) {
-                  const element = originalCreateElement.call(this, tagName);
-
-                  if (tagName.toLowerCase() === 'link') {
-                    const originalSetAttribute = element.setAttribute;
-                    element.setAttribute = function(name, value) {
-                      if (name === 'rel' && value === 'stylesheet') {
-                        // Store for later loading
-                        const href = this.href || this.getAttribute('href');
-                        if (href && href.includes('/_next/static/css/')) {
-                          deferredCSS.push(href);
-                          // Return empty element to prevent blocking
-                          return;
-                        }
-                      }
-                      return originalSetAttribute.call(this, name, value);
-                    };
-                  }
-
-                  return element;
-                };
-
-                // Load CSS after first paint
-                function loadDeferredCSS() {
-                  deferredCSS.forEach(function(href) {
+                if (typeof requestAnimationFrame !== 'undefined') {
+                  requestAnimationFrame(function() {
                     const link = document.createElement('link');
                     link.rel = 'stylesheet';
-                    link.href = href;
+                    link.href = '/_next/static/css/app/globals.css';
                     link.media = 'all';
                     document.head.appendChild(link);
                   });
-                }
-
-                // Load after requestAnimationFrame to ensure it's after first paint
-                if (typeof requestAnimationFrame !== 'undefined') {
-                  requestAnimationFrame(function() {
-                    setTimeout(loadDeferredCSS, 0);
-                  });
-                } else {
-                  setTimeout(loadDeferredCSS, 16);
                 }
               })();
             `
           }}
         />
 
-        {/* Performance optimization scripts */}
+        {/* Lightweight performance optimizations */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Performance monitoring and progressive enhancement
+              // Essential performance optimizations only
               (function() {
-                if (typeof window === 'undefined') return;
-
-                // Service worker cleanup - unregister existing service workers
-                if ('serviceWorker' in navigator) {
-                  navigator.serviceWorker.getRegistrations().then(registrations => {
-                    registrations.forEach(registration => {
-                      registration.unregister();
+                // Defer heavy operations until after page load
+                window.addEventListener('load', function() {
+                  // Clean up service workers
+                  if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.getRegistrations().then(registrations => {
+                      registrations.forEach(registration => registration.unregister());
                     });
-                  });
-                }
-
-                document.addEventListener('DOMContentLoaded', () => {
-                  // Performance optimizations
-                  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                  if (prefersReducedMotion) {
-                    document.documentElement.style.setProperty('--animation-duration', '0ms');
-                  }
-
-                  // Intersection Observer for lazy loading
-                  if ('IntersectionObserver' in window) {
-                    const lazyImages = document.querySelectorAll('img[data-src]');
-                    const imageObserver = new IntersectionObserver((entries) => {
-                      entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                          const img = entry.target;
-                          img.src = img.dataset.src;
-                          img.classList.add('loaded');
-                          imageObserver.unobserve(img);
-                        }
-                      });
-                    }, { rootMargin: '50px 0px' });
-
-                    lazyImages.forEach(img => imageObserver.observe(img));
-                  }
-
-                  // Performance metrics tracking
-                  if ('PerformanceObserver' in window) {
-                    try {
-                      const observer = new PerformanceObserver((list) => {
-                        list.getEntries().forEach((entry) => {
-                          if (entry.entryType === 'largest-contentful-paint') {
-                            console.log('LCP:', entry.startTime);
-                          }
-                        });
-                      });
-                      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-                    } catch (e) {}
                   }
                 });
               })();
@@ -436,12 +362,22 @@ export default function RootLayout({
                   };
                 }
 
-                // Load after page is fully loaded
-                if (document.readyState === 'complete') {
-                  setTimeout(loadGA, 1000);
-                } else {
-                  window.addEventListener('load', () => setTimeout(loadGA, 1000));
+                // Load after page is fully loaded and user interaction
+                let gaLoaded = false;
+                function loadGAOnInteraction() {
+                  if (!gaLoaded) {
+                    gaLoaded = true;
+                    setTimeout(loadGA, 100);
+                  }
                 }
+
+                // Load on first user interaction or after 3 seconds
+                ['mousedown', 'touchstart', 'keydown', 'scroll'].forEach(event => {
+                  document.addEventListener(event, loadGAOnInteraction, { once: true, passive: true });
+                });
+
+                // Fallback: load after 3 seconds if no interaction
+                setTimeout(loadGAOnInteraction, 3000);
               `,
             }}
           />

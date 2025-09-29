@@ -87,6 +87,7 @@ export default function OptimizedImage({
           {...props}
           {...optimizedProps}
           src={imageSrc}
+          alt={alt}
           quality={quality || optimizedProps.quality}
           onLoad={handleImageLoad}
           onError={handleImageError}
