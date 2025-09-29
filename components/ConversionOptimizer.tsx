@@ -186,8 +186,24 @@ export function StickyCTA({
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+    let documentHeight = 0
+    let windowHeight = 0
+
+    // Cache layout measurements to avoid forced reflows
+    const updateDimensions = () => {
+      documentHeight = document.documentElement.scrollHeight
+      windowHeight = window.innerHeight
+    }
+
+    // Update dimensions on resize, not scroll
+    updateDimensions()
+    window.addEventListener('resize', updateDimensions, { passive: true })
+
     const handleScroll = () => {
-      const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+      // Use cached values to avoid layout measurements during scroll
+      const scrollPercentage = documentHeight > windowHeight
+        ? (window.scrollY / (documentHeight - windowHeight)) * 100
+        : 0
       setIsVisible(scrollPercentage > 25) // Show after 25% scroll
     }
 

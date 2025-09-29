@@ -42,11 +42,27 @@ export default function NewsletterModal({
     }
 
     if (trigger === 'scroll') {
+      let documentHeight = 0
+      let windowHeight = 0
+
+      // Cache layout measurements to avoid forced reflows
+      const updateDimensions = () => {
+        documentHeight = document.body.scrollHeight
+        windowHeight = window.innerHeight
+      }
+
+      updateDimensions()
+      window.addEventListener('resize', updateDimensions, { passive: true })
+
       const handleScroll = () => {
-        const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight)
+        // Use cached values to avoid layout measurements during scroll
+        const scrolled = documentHeight > windowHeight
+          ? window.scrollY / (documentHeight - windowHeight)
+          : 0
         if (scrolled > 0.5) {
           showModal()
           window.removeEventListener('scroll', handleScroll)
+          window.removeEventListener('resize', updateDimensions)
         }
       }
       

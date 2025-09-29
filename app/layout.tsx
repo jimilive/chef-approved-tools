@@ -114,6 +114,26 @@ export default function RootLayout({
         {/* Preload critical above-the-fold images */}
         <link rel="preload" href="/og-image.jpg" as="image" type="image/jpeg" />
 
+        {/* Critical CSS loading strategy */}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            // Defer all CSS loading until after first paint
+            (function() {
+              const links = document.querySelectorAll('link[rel="stylesheet"]');
+              links.forEach(link => {
+                if (link.href.includes('/_next/static/css/')) {
+                  link.rel = 'preload';
+                  link.as = 'style';
+                  link.onload = function() {
+                    this.onload = null;
+                    this.rel = 'stylesheet';
+                  };
+                }
+              });
+            })();
+          `
+        }} />
+
         {/* Resource hints for critical third-party domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -226,6 +246,16 @@ export default function RootLayout({
             .font-medium{font-weight:500}
             .mobile-scroll{overflow-x:hidden}
             #main-content{min-height:100vh;contain:layout}
+            .header{position:relative;z-index:30}
+            .nav-menu{position:relative;z-index:40}
+            .main-navigation{display:flex;align-items:center;justify-content:space-between}
+            .btn-primary{background:linear-gradient(to right,#ea580c,#dc2626);color:#fff;font-weight:600;padding:0.75rem 1.5rem;border-radius:0.75rem;transition:all 0.2s;text-decoration:none;display:inline-block}
+            .btn-primary:hover{background:linear-gradient(to right,#c2410c,#b91c1c);transform:scale(1.02)}
+            .card{background:#fff;border-radius:0.75rem;box-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1);transition:box-shadow 0.2s}
+            .card:hover{box-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1)}
+            .container{max-width:72rem;margin:0 auto;padding:0 1rem}
+            @media(min-width:640px){.container{padding:0 1.5rem}}
+            @media(min-width:1024px){.container{padding:0 2rem}}
           `
         }} />
 
@@ -312,21 +342,28 @@ export default function RootLayout({
           }}
         />
 
-        {/* Lightweight performance optimizations */}
+        {/* Lightweight performance optimizations - avoid forced reflows */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Essential performance optimizations only
+              // Essential performance optimizations only - avoid DOM measurements
               (function() {
-                // Defer heavy operations until after page load
-                window.addEventListener('load', function() {
-                  // Clean up service workers
+                // Use passive event listeners and defer heavy operations
+                function deferredTasks() {
+                  // Clean up service workers without measuring DOM
                   if ('serviceWorker' in navigator) {
                     navigator.serviceWorker.getRegistrations().then(registrations => {
                       registrations.forEach(registration => registration.unregister());
                     });
                   }
-                });
+                }
+
+                // Wait for idle time to avoid blocking main thread
+                if ('requestIdleCallback' in window) {
+                  requestIdleCallback(deferredTasks);
+                } else {
+                  setTimeout(deferredTasks, 1000);
+                }
               })();
             `
           }}
