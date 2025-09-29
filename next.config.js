@@ -69,13 +69,10 @@ const nextConfig = {
     const webpack = require('webpack');
 
     if (!dev && !isServer) {
-      // Completely ignore polyfill modules
+      // Minimal polyfill exclusion to avoid module resolution errors
       config.plugins.push(
         new webpack.IgnorePlugin({
-          resourceRegExp: /^core-js/,
-        }),
-        new webpack.IgnorePlugin({
-          resourceRegExp: /polyfill-module/,
+          resourceRegExp: /^core-js\/modules\/es\.array\.(at|flat)/,
         })
       );
 
@@ -124,19 +121,13 @@ const nextConfig = {
       config.optimization.usedExports = true;
       config.optimization.sideEffects = false;
 
-      // Replace specific polyfill modules with false
+      // Keep essential polyfill configuration minimal
       config.resolve.alias = {
         ...config.resolve.alias,
-        // Completely exclude polyfills
+        // Only exclude the most problematic polyfills
         'core-js/modules/es.array.at': false,
         'core-js/modules/es.array.flat': false,
         'core-js/modules/es.array.flat-map': false,
-        'core-js/modules/es.object.from-entries': false,
-        'core-js/modules/es.object.has-own': false,
-        'core-js/modules/es.string.trim-start': false,
-        'core-js/modules/es.string.trim-end': false,
-        // Disable Next.js polyfill module completely
-        'next/dist/build/polyfills/polyfill-module': false,
       };
     }
 
