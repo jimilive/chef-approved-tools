@@ -19,9 +19,18 @@ const nextConfig = {
     },
   },
 
-  // Target modern browsers to reduce bundle size
+  // Target modern browsers to reduce bundle size and transpilation
   swcMinify: true,
   target: 'server',
+
+  // Modern browser support to reduce polyfills
+  transpilePackages: [],
+
+  // Reduce transpilation for modern browsers
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+    styledComponents: false,
+  },
 
   // Enable source maps for better debugging and Lighthouse insights
   productionBrowserSourceMaps: true,
@@ -58,10 +67,6 @@ const nextConfig = {
     ],
   },
   
-  // Performance optimizations
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
 
   // Bundle optimization
   webpack: (config, { dev, isServer }) => {
@@ -69,10 +74,13 @@ const nextConfig = {
     const webpack = require('webpack');
 
     if (!dev && !isServer) {
-      // Minimal polyfill exclusion to avoid module resolution errors
+      // Exclude legacy polyfills for modern browsers (mobile optimization)
       config.plugins.push(
         new webpack.IgnorePlugin({
           resourceRegExp: /^core-js\/modules\/es\.array\.(at|flat)/,
+        }),
+        new webpack.DefinePlugin({
+          'process.env.NEXT_POLYFILL_NOMODULE': JSON.stringify('false'),
         })
       );
 
@@ -121,13 +129,19 @@ const nextConfig = {
       config.optimization.usedExports = true;
       config.optimization.sideEffects = false;
 
-      // Keep essential polyfill configuration minimal
+      // Aggressive polyfill exclusion for mobile performance
       config.resolve.alias = {
         ...config.resolve.alias,
-        // Only exclude the most problematic polyfills
+        // Exclude all unnecessary polyfills for modern mobile browsers
         'core-js/modules/es.array.at': false,
         'core-js/modules/es.array.flat': false,
         'core-js/modules/es.array.flat-map': false,
+        'core-js/modules/es.object.from-entries': false,
+        'core-js/modules/es.object.has-own': false,
+        'core-js/modules/es.string.trim-start': false,
+        'core-js/modules/es.string.trim-end': false,
+        // Target the specific polyfill module causing issues
+        '@next/polyfill-module': false,
       };
     }
 

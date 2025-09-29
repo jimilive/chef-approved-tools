@@ -114,22 +114,46 @@ export default function RootLayout({
         {/* Preload critical above-the-fold images */}
         <link rel="preload" href="/og-image.jpg" as="image" type="image/jpeg" />
 
-        {/* Critical CSS loading strategy */}
+        {/* Mobile-optimized CSS loading strategy */}
         <script dangerouslySetInnerHTML={{
           __html: `
-            // Defer all CSS loading until after first paint
+            // Aggressive CSS deferring for mobile performance
             (function() {
-              const links = document.querySelectorAll('link[rel="stylesheet"]');
-              links.forEach(link => {
-                if (link.href.includes('/_next/static/css/')) {
-                  link.rel = 'preload';
-                  link.as = 'style';
-                  link.onload = function() {
-                    this.onload = null;
-                    this.rel = 'stylesheet';
-                  };
-                }
+              // Intercept CSS loading during document parse
+              const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                  mutation.addedNodes.forEach(function(node) {
+                    if (node.nodeType === 1 && node.tagName === 'LINK' &&
+                        node.rel === 'stylesheet' &&
+                        node.href && node.href.includes('/_next/static/css/')) {
+                      // Convert to preload immediately
+                      node.rel = 'preload';
+                      node.as = 'style';
+                      node.onload = function() {
+                        this.onload = null;
+                        this.rel = 'stylesheet';
+                      };
+                    }
+                  });
+                });
               });
+              observer.observe(document.head, { childList: true });
+
+              // Also handle existing stylesheets
+              setTimeout(function() {
+                const links = document.querySelectorAll('link[rel="stylesheet"]');
+                links.forEach(function(link) {
+                  if (link.href && link.href.includes('/_next/static/css/')) {
+                    link.rel = 'preload';
+                    link.as = 'style';
+                    link.onload = function() {
+                      this.onload = null;
+                      this.rel = 'stylesheet';
+                    };
+                  }
+                });
+                observer.disconnect();
+              }, 0);
             })();
           `
         }} />
@@ -405,13 +429,17 @@ export default function RootLayout({
                   }
                 }
 
-                // Load on first user interaction or after 3 seconds
+                // Mobile-optimized loading: more aggressive deferring
+                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                const delay = isMobile ? 5000 : 3000; // 5 seconds on mobile vs 3 on desktop
+
+                // Load on first user interaction or after delay
                 ['mousedown', 'touchstart', 'keydown', 'scroll'].forEach(event => {
                   document.addEventListener(event, loadGAOnInteraction, { once: true, passive: true });
                 });
 
-                // Fallback: load after 3 seconds if no interaction
-                setTimeout(loadGAOnInteraction, 3000);
+                // Fallback: load after delay (longer on mobile)
+                setTimeout(loadGAOnInteraction, delay);
               `,
             }}
           />
