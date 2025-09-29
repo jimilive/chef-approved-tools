@@ -13,7 +13,7 @@ const featuredReviews = [
     title: 'KitchenAid Commercial Series KSM8990WH',
     category: 'Appliances',
     price: 949,
-    image: '/images/kitchenaid-ksm8990wh.jpg',
+    image: '/logo.png',
     excerpt: 'The mixer that survived 18 months of professional kitchen testing at Purple Cafe. NSF certified commercial-grade performance.',
     badge: 'Restaurant Tested',
     testDuration: '18 months'
@@ -23,7 +23,7 @@ const featuredReviews = [
     title: 'Wüsthof Classic Ikon 15-Piece Set',
     category: 'Knives',
     price: 579,
-    image: '/images/wusthof-classic-ikon.jpg',
+    image: '/logo.png',
     excerpt: 'Professional German knife set that maintains its edge through daily restaurant service.',
     badge: 'Staff Favorite',
     testDuration: '2+ years'
@@ -33,7 +33,7 @@ const featuredReviews = [
     title: 'Lodge Cast Iron 3-Skillet Bundle',
     category: 'Cookware',
     price: 89,
-    image: '/images/lodge-cast-iron-set.jpg',
+    image: '/logo.png',
     excerpt: 'Indestructible cast iron set that equipped our entire line. American-made durability.',
     badge: 'Best Value',
     testDuration: '5+ years'
@@ -43,7 +43,7 @@ const featuredReviews = [
     title: 'Vitamix 5200 Professional-Grade Blender',
     category: 'Appliances',
     price: 449,
-    image: '/images/vitamix-5200.jpg',
+    image: '/logo.png',
     excerpt: 'Commercial-grade blender that survived 5+ years of restaurant service without failure.',
     badge: 'Workhorse',
     testDuration: '5+ years'
@@ -53,7 +53,7 @@ const featuredReviews = [
     title: 'Le Creuset Signature 7.25 Qt Dutch Oven',
     category: 'Cookware',
     price: 379,
-    image: '/images/le-creuset-dutch-oven.jpg',
+    image: '/logo.png',
     excerpt: 'Premium enameled cast iron that delivers consistent braising and roasting results.',
     badge: 'Premium Pick',
     testDuration: '3+ years'
@@ -63,7 +63,7 @@ const featuredReviews = [
     title: 'Robot Coupe R2 Dice Food Processor',
     category: 'Appliances',
     price: 1299,
-    image: '/images/robot-coupe-r2.jpg',
+    image: '/logo.png',
     excerpt: 'Professional food processor that handles high-volume prep work with precision.',
     badge: 'Pro Choice',
     testDuration: '2+ years'
@@ -73,7 +73,7 @@ const featuredReviews = [
     title: 'John Boos Platinum Commercial Cutting Board',
     category: 'Tools',
     price: 159,
-    image: '/images/john-boos-cutting-board.jpg',
+    image: '/logo.png',
     excerpt: 'NSF-certified cutting board that withstands daily commercial kitchen abuse.',
     badge: 'Commercial Grade',
     testDuration: '3+ years'

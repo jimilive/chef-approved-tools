@@ -11,7 +11,7 @@ const productData = {
   brand: "WÜSTHOF",
   model: "Classic IKON 15-Piece",
   images: {
-    primary: "/images/wusthof-classic-ikon-15-piece-review.jpg"
+    primary: "/logo.png"
   },
   priceRange: {
     min: 380,
@@ -83,7 +83,7 @@ export const metadata = {
   openGraph: {
     title: "WÜSTHOF Classic IKON 15-Piece: Professional Knife Set Review",
     description: "Restaurant manager's honest review of the WÜSTHOF Classic IKON knife set",
-    images: ['/images/wusthof-classic-ikon-15-piece-review.jpg']
+    images: ['/logo.png']
   }
 }
 

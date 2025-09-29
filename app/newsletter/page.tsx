@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import NewsletterForm from './NewsletterForm'
 
 export const metadata: Metadata = {
-  title: 'Weekly Kitchen Tips Newsletter | Chef Approved Tools',
-  description: 'Get weekly professional cooking tips and honest equipment recommendations from 21+ years of restaurant experience. Join fellow home chefs getting expert insights.',
+  title: 'Equipment Insights Newsletter | Chef Approved Tools',
+  description: 'Get equipment insights and honest product recommendations from 21+ years of restaurant experience. Join fellow home chefs getting expert insights.',
   keywords: 'kitchen tips newsletter, chef tips, cooking newsletter, professional chef advice, kitchen equipment deals'
 }
 
@@ -12,10 +12,10 @@ export default function NewsletterPage() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px', textAlign: 'center' }}>
       <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '8px' }}>
-        Get Weekly Kitchen Tips
+        Get Equipment Insights
       </h1>
       <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '32px' }}>
-        Get weekly professional cooking tips and honest equipment recommendations from 21+ years of restaurant experience.
+        Get equipment insights and honest product recommendations from 21+ years of restaurant experience.
       </p>
 
       <NewsletterForm />

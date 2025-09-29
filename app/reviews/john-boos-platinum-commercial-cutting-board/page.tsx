@@ -94,7 +94,7 @@ export const metadata = {
   openGraph: {
     title: "John Boos Platinum Commercial Cutting Board: Professional Review",
     description: "Restaurant manager's honest review of the John Boos Platinum commercial cutting board",
-    images: ['/images/john-boos-platinum-cutting-board-review.jpg']
+    images: ['/logo.png']
   }
 }
 

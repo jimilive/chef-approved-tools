@@ -14,7 +14,7 @@ interface OptimizedImageProps extends Omit<ImageProps, 'onLoad' | 'onError'> {
 export default function OptimizedImage({
   src,
   alt,
-  fallback = '/images/placeholder.jpg',
+  fallback = '/logo.png',
   loading = 'lazy',
   quality = 85,
   imageType = 'product',

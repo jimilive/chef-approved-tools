@@ -83,7 +83,7 @@ export const metadata = {
   openGraph: {
     title: "Le Creuset 7.25-Qt Dutch Oven: Professional Review",
     description: "Restaurant manager's honest review of the Le Creuset Signature Dutch oven",
-    images: ['/images/le-creuset-7-25-qt-review.jpg']
+    images: ['/logo.png']
   }
 }
 

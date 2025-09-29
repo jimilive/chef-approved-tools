@@ -114,7 +114,7 @@ export const metadata = {
   openGraph: {
     title: "Lodge Cast Iron 3-Skillet Bundle: Professional Review",
     description: "Restaurant manager's honest review of the Lodge seasoned cast iron skillet set",
-    images: ['/images/lodge-3-skillet-bundle-review.jpg']
+    images: ['/logo.png']
   }
 }
 

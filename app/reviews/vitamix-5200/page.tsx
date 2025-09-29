@@ -65,7 +65,7 @@ export const metadata = {
   openGraph: {
     title: "Vitamix 5200: Professional-Grade Blender Review",
     description: "Restaurant manager's honest review of the Vitamix 5200 professional blender",
-    images: ['/images/vitamix-5200-review.jpg']
+    images: ['/logo.png']
   }
 }
 

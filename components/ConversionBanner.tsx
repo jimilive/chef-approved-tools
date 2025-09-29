@@ -81,8 +81,8 @@ export default function ConversionBanner({
     'social-proof': {
       bg: 'bg-gradient-to-r from-blue-600 to-indigo-600',
       icon: <Gift className="w-5 h-5" />,
-      title: 'Join 15,000+ Home Chefs',
-      subtitle: 'Get weekly kitchen tips and exclusive product recommendations',
+      title: 'Join Our Newsletter',
+      subtitle: 'Get equipment insights and honest product recommendations',
       cta: 'Join Free',
       link: '/newsletter'
     }

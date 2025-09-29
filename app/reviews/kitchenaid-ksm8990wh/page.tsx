@@ -62,7 +62,7 @@ export const metadata = {
   openGraph: {
     title: "KitchenAid KSM8990WH: The Mixer That Survived 18 Months at Purple Cafe",
     description: "Professional kitchen manager's honest review after 18 months of commercial use",
-    images: ['/images/kitchenaid-ksm8990wh-review.jpg']
+    images: ['/logo.png']
   }
 }
 

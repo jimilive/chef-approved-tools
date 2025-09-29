@@ -111,7 +111,7 @@ export const metadata = {
   openGraph: {
     title: "Victorinox Fibrox Pro: 20 Years of Professional Kitchen Testing",
     description: "The Swiss knives that never needed stone sharpening - professional review after two decades of daily use",
-    images: ['/images/victorinox-fibrox-pro-review.jpg']
+    images: ['/logo.png']
   }
 }
 

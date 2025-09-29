@@ -162,7 +162,7 @@ export default function NewsletterModal({
 
               <div className="mt-4 text-center">
                 <p className="text-xs text-gray-500">
-                  Join 15,000+ home chefs. No spam, unsubscribe anytime.
+                  No spam, unsubscribe anytime.
                 </p>
               </div>
 

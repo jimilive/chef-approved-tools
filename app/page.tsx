@@ -1,6 +1,5 @@
 'use client'
 import React, { lazy, Suspense } from 'react'
-import FTCDisclosure from '@/components/FTCDisclosure'
 import { SimpleProductSchema } from '@/components/ProductSchema'
 import FAQSchema, { kitchenToolsFAQs } from '@/components/FAQSchema'
 import { ChefCredentialsSchema } from '@/components/ReviewSchema'
@@ -46,7 +45,7 @@ function EnhancedProductCard({ product, category }: { product: any, category: st
       )}
 
       {/* Add urgency/scarcity */}
-      <div className="absolute bottom-4 left-4 bg-red-100 text-red-800 px-2 py-1 rounded text-xs z-10">
+      <div className="absolute top-4 right-4 bg-red-100 text-red-800 px-2 py-1 rounded text-xs z-10">
         🔥 Popular Choice
       </div>
 
@@ -171,10 +170,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FTC Disclosure */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <FTCDisclosure />
-      </div>
 
       {/* Credentials Section */}
       <section id="credentials" className="py-12 sm:py-16 bg-white">
@@ -325,7 +320,7 @@ export default function HomePage() {
             
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-24 text-right">
-                <span className="text-sm font-bold text-orange-700">2020-Now</span>
+                <span className="text-sm font-bold text-orange-700">2025-Now</span>
               </div>
               <div className="flex-grow border-l-2 border-orange-200 pl-6">
                 <h3 className="font-bold text-lg mb-1">Equipment Testing & Reviews</h3>
@@ -399,7 +394,7 @@ export default function HomePage() {
               <span className="text-green-400">✓</span> Kitchen Manager (Mellow Mushroom)
             </span>
             <span className="flex items-center gap-2">
-              <span className="text-green-400">✓</span> 21+ Years Pro Kitchens
+              <span className="text-green-400">✓</span> NSF Certified Equipment Tested
             </span>
             <span className="flex items-center gap-2">
               <span className="text-green-400">✓</span> Seattle Central Culinary

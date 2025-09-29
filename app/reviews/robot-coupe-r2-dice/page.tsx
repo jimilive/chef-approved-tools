@@ -63,7 +63,7 @@ export const metadata = {
   openGraph: {
     title: "Robot Coupe R2 Dice: Professional Food Processor Review",
     description: "Restaurant manager's honest review of the Robot Coupe R2 Dice food processor",
-    images: ['/images/robot-coupe-r2-dice-review.jpg']
+    images: ['/logo.png']
   }
 }
 

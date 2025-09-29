@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import FTCDisclosure from '@/components/FTCDisclosure'
 import { lazy, Suspense } from 'react'
 
 // Lazy load non-critical components
@@ -269,8 +268,6 @@ export default function RootLayout({
             {/* Main Header */}
             <Header />
 
-            {/* FTC Disclosure */}
-            <FTCDisclosure />
 
             {/* Main Content */}
             <main id="main-content" className="min-h-screen mobile-scroll">

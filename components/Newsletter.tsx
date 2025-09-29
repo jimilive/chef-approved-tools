@@ -24,7 +24,7 @@ export default function Newsletter() {
           </h2>
           <p className="text-white/90 mb-6">
             The 7 tools I actually use daily from 21+ years in professional kitchens.
-            Plus weekly insider tips and authentic gear recommendations.
+            Plus equipment insights and authentic gear recommendations.
           </p>
 
           <div className="bg-white rounded-xl p-6 max-w-md mx-auto">

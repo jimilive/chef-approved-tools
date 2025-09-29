@@ -21,11 +21,11 @@ const products = {
   maxRating: 10,
   reviewCount: 18,
   lastUpdated: "2025-09-03",
-  img: "/images/robot-coupe-r2.jpg",
+  img: "/logo.png",
   gallery: [
-    { src: "/images/robot-coupe-r2-1.jpg", alt: "Robot Coupe R2 on commercial countertop" },
-    { src: "/images/robot-coupe-r2-2.jpg", alt: "Processing vegetables in Robot Coupe R2" },
-    { src: "/images/robot-coupe-r2-3.jpg", alt: "R2 with attachments and stainless steel bowl" }
+    { src: "/logo.png", alt: "Robot Coupe R2 on commercial countertop" },
+    { src: "/logo.png", alt: "Processing vegetables in Robot Coupe R2" },
+    { src: "/logo.png", alt: "R2 with attachments and stainless steel bowl" }
   ],
   affiliateUrls: {
     amazon: "https://amazon.com/dp/B001234567?tag=your-tag-20",
@@ -116,11 +116,11 @@ const products = {
     maxRating: 10,
     reviewCount: 30,
     lastUpdated: "2025-09-03",
-    img: "/images/vitamix-5200.jpg",
+    img: "/logo.png",
     gallery: [
-      { src: "/images/vitamix-5200-1.jpg", alt: "Vitamix 5200 on kitchen counter" },
-      { src: "/images/vitamix-5200-2.jpg", alt: "Vitamix 5200 blending smoothie" },
-      { src: "/images/vitamix-5200-3.jpg", alt: "Vitamix 5200 with accessories" }
+      { src: "/logo.png", alt: "Vitamix 5200 on kitchen counter" },
+      { src: "/logo.png", alt: "Vitamix 5200 blending smoothie" },
+      { src: "/logo.png", alt: "Vitamix 5200 with accessories" }
     ],
     affiliateUrls: {
       amazon: "https://amazon.com/dp/B008H4SLV6?tag=your-tag-20",

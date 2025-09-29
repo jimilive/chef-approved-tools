@@ -187,11 +187,11 @@ export default function BudgetVsPremiumMagnet({
       {/* Trust indicators */}
       <div className="mt-4 text-center">
         <p className={`text-xs ${variant === 'sidebar' ? 'text-gray-500' : 'text-gray-400'}`}>
-          Join 15,000+ professional cooks • No spam, unsubscribe anytime
+          No spam, unsubscribe anytime
         </p>
         <div className="flex justify-center items-center mt-2 space-x-4 text-xs text-gray-400">
           <span>🔒 Your email is safe</span>
-          <span>📧 Weekly pro tips only</span>
+          <span>📧 Equipment insights & reviews</span>
           <span>⚡ Instant download</span>
         </div>
       </div>

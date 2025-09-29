@@ -310,7 +310,7 @@ export function useConnectionSpeed() {
         setConnectionSpeed(duration > 1000 ? 'slow' : 'fast')
       }
 
-      image.src = '/images/speed-test.jpg?t=' + Date.now()
+      image.src = '/logo.png?t=' + Date.now()
     }
 
     measureSpeed()

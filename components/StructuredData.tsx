@@ -167,7 +167,7 @@ export default function StructuredData({ type, product, review, breadcrumbs, art
       "@type": "HowTo",
       "name": "How to Choose Professional Kitchen Tools",
       "description": "A comprehensive guide to selecting restaurant-quality kitchen equipment for home use",
-      "image": "https://www.chefapprovedtools.com/images/kitchen-guide.jpg",
+      "image": "https://www.chefapprovedtools.com/logo.png",
       "estimatedCost": {
         "@type": "MonetaryAmount",
         "currency": "USD",
@@ -188,13 +188,13 @@ export default function StructuredData({ type, product, review, breadcrumbs, art
           "@type": "HowToStep",
           "name": "Identify your cooking style",
           "text": "Determine what types of cooking you do most often",
-          "image": "https://www.chefapprovedtools.com/images/cooking-styles.jpg"
+          "image": "https://www.chefapprovedtools.com/logo.png"
         },
         {
           "@type": "HowToStep",
           "name": "Set your budget",
           "text": "Professional tools require investment, but they last longer",
-          "image": "https://www.chefapprovedtools.com/images/budget-planning.jpg"
+          "image": "https://www.chefapprovedtools.com/logo.png"
         }
       ]
     }
