@@ -10,12 +10,60 @@ export const metadata: Metadata = {
 
 const knifeCuts = [
   {
+    french: "Baton",
+    american: "Large Stick",
+    slang: "Thick Sticks",
+    description: "Large stick cuts, 3/4\" x 3/4\" x 2.5\" long. Thicker than bâtonnet, used for vegetables that need longer cooking times.",
+    technique: "Square off the vegetable, cut into 2-3\" planks, then cut planks into 3/4\" thick sticks.",
+    uses: ["Thick-cut fries", "Roasted root vegetables", "Rustic preparations", "Longer braising dishes"]
+  },
+  {
+    french: "Bâtonnet",
+    american: "Stick Cut",
+    slang: "Crudité",
+    description: "1/4\" x 1/4\" x 2.5\" sticks. Slightly thicker than julienne, perfect for French fries and crudités.",
+    technique: "Similar to julienne but with 1/4\" thickness instead of 1/8\".",
+    uses: ["French fries", "Vegetable sticks", "Even roasting", "Crudité platters"]
+  },
+  {
     french: "Julienne",
-    american: "Matchsticks",
-    slang: "Shoe Strings",
-    description: "Thin matchstick cuts, typically 1/8\" x 1/8\" x 2-3\" long. Used for vegetables like carrots, bell peppers, and potatoes.",
+    american: "Matchstick",
+    slang: "Allumette",
+    description: "Thin matchstick cuts, typically 1/8\" x 1/8\" x 2.5\" long. Used for vegetables like carrots, bell peppers, and potatoes.",
     technique: "Square off the vegetable, cut into 2-3\" planks, stack planks and cut into thin strips.",
     uses: ["Stir-fries", "Garnishes", "Salads", "Even cooking"]
+  },
+  {
+    french: "Fine Julienne",
+    american: "Fine Matchstick",
+    slang: "Ultra-fine",
+    description: "Ultra-thin matchstick cuts, 1/8\" x 1/8\" x 2.5\" long. More delicate than standard julienne.",
+    technique: "Same as julienne but with more precise, thinner cuts requiring sharp knife and steady hand.",
+    uses: ["Fine garnishes", "Delicate stir-fries", "Professional plating", "Quick-cooking applications"]
+  },
+  {
+    french: "Carre",
+    american: "Large Dice",
+    slang: "Sugar Cube Size",
+    description: "3/4\" x 3/4\" x 3/4\" cubes. Used when you want distinct vegetable pieces in the final dish.",
+    technique: "Same technique as other dices, just larger spacing between cuts.",
+    uses: ["Roasted vegetables", "Stews", "Rustic preparations"]
+  },
+  {
+    french: "Parmentier",
+    american: "Medium Dice",
+    slang: "Corn Kernel Size",
+    description: "1/2\" x 1/2\" x 1/2\" cubes. Good for heartier dishes with longer cooking times.",
+    technique: "Same as small dice but with 1/2\" spacing between cuts.",
+    uses: ["Roasting", "Braising", "Chunky soups", "Rustic dishes"]
+  },
+  {
+    french: "Macedoine",
+    american: "Small Dice",
+    slang: "Pea-sized",
+    description: "1/4\" x 1/4\" x 1/4\" cubes. Most common dice size for home cooking.",
+    technique: "Make parallel cuts 1/4\" apart, turn 90°, repeat, then slice perpendicular.",
+    uses: ["Soups", "Stews", "Sautéing", "Most recipe applications"]
   },
   {
     french: "Brunoise",
@@ -26,66 +74,106 @@ const knifeCuts = [
     uses: ["Mirepoix", "Garnishes", "Sauces", "Professional presentation"]
   },
   {
-    french: "Petite Dés",
-    american: "Small Dice",
-    slang: "Pea-sized",
-    description: "1/4\" x 1/4\" x 1/4\" cubes. Most common dice size for home cooking.",
-    technique: "Make parallel cuts 1/4\" apart, turn 90°, repeat, then slice perpendicular.",
-    uses: ["Soups", "Stews", "Sautéing", "Most recipe applications"]
-  },
-  {
-    french: "Moyen Dés",
-    american: "Medium Dice",
-    slang: "Corn Kernel Size",
-    description: "1/2\" x 1/2\" x 1/2\" cubes. Good for heartier dishes with longer cooking times.",
-    technique: "Same as small dice but with 1/2\" spacing between cuts.",
-    uses: ["Roasting", "Braising", "Chunky soups", "Rustic dishes"]
-  },
-  {
-    french: "Grand Dés",
-    american: "Large Dice",
-    slang: "Sugar Cube Size",
-    description: "3/4\" x 3/4\" x 3/4\" cubes. Used when you want distinct vegetable pieces in the final dish.",
-    technique: "Same technique as other dices, just larger spacing between cuts.",
-    uses: ["Roasted vegetables", "Stews", "Rustic preparations"]
+    french: "Fine brunoise",
+    american: "Ultra-fine Dice",
+    slang: "Microscopic",
+    description: "Extremely fine dice, 1/16\" x 1/16\" x 1/16\" cubes. The finest precision cut in professional kitchens.",
+    technique: "Start with fine julienne, then cut perpendicular with razor-sharp knife and extreme precision.",
+    uses: ["Fine herb garnishes", "Sauce components", "High-end plating", "Delicate flavoring"]
   },
   {
     french: "Chiffonade",
-    american: "Ribbon Cut",
+    american: "Ribbon",
     slang: "Herb Confetti",
     description: "Thin ribbon cuts for leafy herbs and vegetables. Creates delicate strips perfect for garnishing.",
     technique: "Stack leaves, roll tightly like a cigar, then slice perpendicular to create ribbons.",
-    uses: ["Basil garnish", "Lettuce for salads", "Herb finishing", "Asian preparations"]
+    uses: ["Basil garnish", "Lettuce for tacos or sandwiches", "Herb finishing", "Asian preparations"]
   },
   {
-    french: "Biais",
-    american: "Bias Cut",
-    slang: "Diagonal Slices",
-    description: "Diagonal cuts that create oval-shaped pieces with more surface area for faster, even cooking.",
-    technique: "Hold knife at 45° angle to the ingredient and slice through.",
-    uses: ["Carrots", "Celery", "Asparagus", "Asian stir-fries"]
+    french: "Lyonaisse",
+    american: "Half-Moon",
+    slang: "Onion Julienne",
+    description: "Used mostly for caramelized or pickled onions. Some people refer to this cut of onions as julienne.",
+    technique: "Cut onion in half from root to tip, then slice parallel to the cutting board to create half-moon shapes.",
+    uses: ["Caramelized onions", "Pickled onions", "French onion soup", "Sautéed onion preparations"]
   },
   {
-    french: "Bâtonnet",
-    american: "Stick Cut",
-    slang: "French Fry Cut",
-    description: "1/4\" x 1/4\" x 2-3\" sticks. Slightly thicker than julienne, perfect for French fries and crudités.",
-    technique: "Similar to julienne but with 1/4\" thickness instead of 1/8\".",
-    uses: ["French fries", "Vegetable sticks", "Even roasting", "Crudité platters"]
+    french: "Slice",
+    american: "Slice",
+    slang: "Rings",
+    description: "Somewhat vague but commonly used. For onions would be cutting into thin rings or half rings.",
+    technique: "Cut straight down through the ingredient, creating thin, even pieces of desired thickness.",
+    uses: ["Onion rings", "Tomato slices", "Sandwich preparations", "Layered dishes"]
+  },
+  {
+    french: "Wedge Cut",
+    american: "Wedge",
+    slang: "Triangles",
+    description: "Think wedged tomatoes for a salad, or wedged limes for tacos.",
+    technique: "Cut ingredient into triangular pieces, usually by cutting in half, then cutting each half into 3-4 triangular pieces.",
+    uses: ["Tomato wedges for salads", "Lime wedges for garnish", "Potato wedges", "Citrus garnishes"]
+  },
+  {
+    french: "Mince",
+    american: "Mince",
+    slang: "Chopped Fine",
+    description: "Generally used for garlic or onions. Technically a fine brunoise but hard to achieve perfect squares with certain ingredients.",
+    technique: "Chop repeatedly with rocking motion until very fine, almost paste-like consistency.",
+    uses: ["Garlic", "Ginger", "Herbs for maximum flavor release", "Aromatic base ingredients"]
+  },
+  {
+    french: "Emincer",
+    american: "Shave",
+    slang: "Paper-thin",
+    description: "Very thin cut for onions or shallots, think almost shaved.",
+    technique: "Using very sharp knife, slice as thinly as possible, creating paper-thin slices.",
+    uses: ["Shallots for vinaigrettes", "Raw onion preparations", "Delicate garnishes", "Quick-cooking applications"]
   },
   {
     french: "Rondelle",
-    american: "Rounds",
-    slang: "Coins",
+    american: "Round",
+    slang: "Coin",
     description: "Round slices of cylindrical vegetables. Thickness varies by cooking method and preference.",
     technique: "Slice straight down through round vegetables like carrots, cucumbers, or zucchini.",
     uses: ["Coins for sautéing", "Garnishes", "Layered dishes", "Quick cooking"]
   },
   {
-    french: "Concassé",
-    american: "Rough Chop",
+    french: "Biais",
+    american: "Bias",
+    slang: "Diagonal",
+    description: "Diagonal cuts that create oval-shaped pieces with more surface area for faster, even cooking.",
+    technique: "Hold knife at 45° angle to the ingredient and slice through.",
+    uses: ["Carrots", "Celery", "Asparagus", "Asian stir-fries"]
+  },
+  {
+    french: "Oblique",
+    american: "Roll",
+    slang: "Turn",
+    description: "Diagonal cut used to make evenly sized pieces out of uneven vegetables like carrots. Allows them to cook evenly.",
+    technique: "Cut at an angle, then roll the vegetable 1/4 turn and cut again, creating triangular pieces of uniform size.",
+    uses: ["Carrots for even cooking", "Root vegetables", "Asian preparations", "Braising vegetables"]
+  },
+  {
+    french: "Tournee",
+    american: "Turned",
+    slang: "Football",
+    description: "Seven-sided oblong shape. Traditional French cut creating football-shaped vegetables.",
+    technique: "Using a turning knife, carefully carve seven equal sides around the vegetable to create uniform barrel shape.",
+    uses: ["Potatoes (most common)", "Classical French preparations", "Fine dining presentation", "Garnishes"]
+  },
+  {
+    french: "Paysanne",
+    american: "Country-style",
+    slang: "Rustic",
+    description: "More rustic cut for round vegetables (basically a rondelle) and for other vegetables, think red pepper cut into thinner square pieces.",
+    technique: "For round vegetables, cut into thick coins. For other vegetables, cut into roughly uniform 1/2\" squares or triangles.",
+    uses: ["Rustic soups", "Country-style dishes", "Casual preparations", "Hearty stews"]
+  },
+  {
+    french: "Rough Chop",
+    american: "Concassé",
     slang: "Chunky Cut",
-    description: "Informal, uneven cuts about 1/2\" to 1\" pieces. Used when appearance doesn&apos;t matter.",
+    description: "Informal, uneven cuts about 1/4\" to 3/4\" pieces. Used when appearance doesn't matter.",
     technique: "Quick, informal chopping without focus on uniformity.",
     uses: ["Stocks", "Braising vegetables", "Food processor prep", "Rustic dishes"]
   }
