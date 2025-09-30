@@ -24,6 +24,13 @@
   status = 200
   conditions = {Path = "!/api/* !/_next/* !/favicon.ico !/manifest.json !/robots.txt !/sitemap.xml"}
 
+# Amazon affiliate redirects (302 for tracking)
+[[redirects]]
+  from = "/go/amazon/*"
+  to = "https://amazon.com/:splat"
+  status = 302
+  force = true
+
 # Handle legacy URLs
 [[redirects]]
   from = "/products/*"

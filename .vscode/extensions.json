@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ritwickdey.liveserver",
+    "antfu.iconify",
+    "htmlhint.vscode-htmlhint",
+    "zignd.html-css-class-completion",
+    "christian-kohler.path-intellisense",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-typescript-next",
+    "unifiedjs.vscode-mdx"
+  ],
+  "unwantedRecommendations": []
+}
