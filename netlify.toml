@@ -22,7 +22,7 @@
   from = "/*"
   to = "/"
   status = 200
-  conditions = {Path = "!/api/* !/_next/* !/favicon.ico !/manifest.json !/robots.txt !/sitemap.xml"}
+  conditions = {Path = "!/api/* !/_next/* !/favicon.ico !/manifest.json !/robots.txt !/sitemap.xml !/sitemap-0.xml !/reviews/* !/best-* !/glossary !/knives !/cookware !/appliances !/products !/guides !/methodology !/about"}
 
 # Amazon affiliate redirects (302 for tracking)
 [[redirects]]
