@@ -108,6 +108,9 @@ export default function RootLayout({
         {/* Mobile viewport meta tag */}
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
 
+        {/* Google Search Console verification */}
+        <meta name="google-site-verification" content="iiP_PrnJkCSzBq86Y_mZmohwChwU0I_FGzqVo3W9B6o" />
+
         {/* View Transitions API for smooth page navigation */}
         <meta name="view-transition" content="same-origin" />
         
