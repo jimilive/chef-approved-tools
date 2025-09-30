@@ -107,6 +107,9 @@ export default function RootLayout({
       <head>
         {/* Mobile viewport meta tag */}
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+
+        {/* View Transitions API for smooth page navigation */}
+        <meta name="view-transition" content="same-origin" />
         
         {/* Preload critical resources */}
         <link rel="preload" href="/logo.png" as="image" type="image/png" />

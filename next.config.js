@@ -9,6 +9,7 @@ const nextConfig = {
     optimizeCss: false, // Disable due to missing critters dependency
     webVitalsAttribution: ['CLS', 'LCP'],
     esmExternals: true, // Use ES modules for better tree shaking
+    // ppr: true, // Requires Next.js canary - enable when upgrading to Next.js 15
     turbo: {
       rules: {
         '*.svg': {

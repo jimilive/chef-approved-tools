@@ -4,6 +4,7 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import PriceDisplay from '@/components/PriceDisplay'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 const productData = {
   name: "KitchenAid Commercial Series KSM8990WH",
@@ -70,6 +71,12 @@ export default function KitchenAidReviewPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper
+        slug="kitchenaid-ksm8990wh"
+        name="KitchenAid Commercial Series KSM8990WH"
+        image="/logo.png"
+        price={1349}
+      />
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

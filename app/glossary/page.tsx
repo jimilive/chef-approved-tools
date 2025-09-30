@@ -52,7 +52,7 @@ const knifeCuts = [
   {
     french: "Parmentier",
     american: "Medium Dice",
-    slang: "Corn Kernel Size",
+    slang: "Small Marble Size",
     description: "1/2\" x 1/2\" x 1/2\" cubes. Good for heartier dishes with longer cooking times.",
     technique: "Same as small dice but with 1/2\" spacing between cuts.",
     uses: ["Roasting", "Braising", "Chunky soups", "Rustic dishes"]

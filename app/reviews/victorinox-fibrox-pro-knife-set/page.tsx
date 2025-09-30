@@ -4,6 +4,7 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import PriceDisplay from '@/components/PriceDisplay'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 const productData = {
   name: "Victorinox Fibrox Pro Knife Set: 8\" Chef, 10\" Chef & Offset Bread Knife",
@@ -119,6 +120,12 @@ export default function VictorinoxFibroxProReview() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper
+        slug="victorinox-fibrox-pro-knife-set"
+        name="Victorinox Fibrox Pro Knife Set"
+        image="/logo.png"
+        price={109}
+      />
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -9,6 +9,7 @@ import { trackAffiliateClick } from '@/lib/analytics'
 const TestimonialsSection = lazy(() => import('@/components/TestimonialsSection'))
 const TopPicksComparison = lazy(() => import('@/components/TopPicksComparison'))
 const BudgetVsPremiumMagnet = lazy(() => import('@/components/BudgetVsPremiumMagnet'))
+const RecentlyViewed = lazy(() => import('@/components/RecentlyViewed'))
 
 // Sample products with enhanced data
 const sampleProducts = [
@@ -385,6 +386,11 @@ export default function HomePage() {
           </Suspense>
         </div>
       </section>
+
+      {/* Recently Viewed Products - Remarketing */}
+      <Suspense fallback={null}>
+        <RecentlyViewed />
+      </Suspense>
 
       {/* Trust Bar Section */}
       <section className="bg-slate-900 text-white py-8">

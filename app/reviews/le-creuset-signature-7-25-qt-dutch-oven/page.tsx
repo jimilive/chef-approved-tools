@@ -4,6 +4,7 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import PriceDisplay from '@/components/PriceDisplay'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 const productData = {
   name: "Le Creuset Enameled Cast Iron Signature Round Dutch Oven 7.25-Qt",
@@ -91,6 +92,7 @@ export default function LeCreuset725QtReview() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper slug="le-creuset-signature-7-25-qt-dutch-oven" name="Le Creuset 7.25-Qt Dutch Oven" image="/logo.png" price={385} />
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
