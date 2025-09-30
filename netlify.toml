@@ -17,12 +17,12 @@
 [context.branch-deploy]
   command = "npm run build"
 
-# Redirects for Next.js App Router
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
-  conditions = {Path = "!/api/* !/_next/* !/favicon.ico !/manifest.json !/robots.txt !/sitemap.xml !/sitemap-0.xml !/reviews/* !/best-* !/glossary !/knives !/cookware !/appliances !/products !/guides !/methodology !/about"}
+# Redirects for Next.js App Router - Let Next.js handle all routing
+# [[redirects]]
+#   from = "/*"
+#   to = "/"
+#   status = 200
+#   conditions = {Path = "!/api/* !/_next/* !/favicon.ico !/manifest.json !/robots.txt !/sitemap.xml"}
 
 # Amazon affiliate redirects (302 for tracking)
 [[redirects]]
