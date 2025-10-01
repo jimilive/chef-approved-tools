@@ -87,8 +87,12 @@ Thank you for your consideration.
 Best regards,
 
 Scott Bradley
+Founder & Chief Equipment Tester
 Chef Approved Tools
-[contact information]
+Email: scottdbradley@gmail.com
+Website: https://chefapprovedtools.com
+Former Kitchen Manager, Mellow Mushroom
+18+ Years Restaurant Experience
 
 ---
 

@@ -6,9 +6,10 @@ const nextConfig = {
   // Experimental features for performance
   experimental: {
     scrollRestoration: true,
-    optimizeCss: false, // Disable due to missing critters dependency
+    optimizeCss: true, // Enable for inline critical CSS
     webVitalsAttribution: ['CLS', 'LCP'],
     esmExternals: true, // Use ES modules for better tree shaking
+    optimizePackageImports: ['lucide-react', '@headlessui/react'], // Tree-shake these packages
     // ppr: true, // Requires Next.js canary - enable when upgrading to Next.js 15
     turbo: {
       rules: {
@@ -75,13 +76,17 @@ const nextConfig = {
     const webpack = require('webpack');
 
     if (!dev && !isServer) {
-      // Exclude legacy polyfills for modern browsers (mobile optimization)
+      // Exclude ALL legacy polyfills for modern browsers (mobile optimization)
       config.plugins.push(
         new webpack.IgnorePlugin({
-          resourceRegExp: /^core-js\/modules\/es\.array\.(at|flat)/,
+          resourceRegExp: /polyfill-module\.js$/,
         }),
+        new webpack.NormalModuleReplacementPlugin(
+          /next[\\/]dist[\\/]build[\\/]polyfills[\\/]polyfill-module/,
+          require.resolve('./lib/empty-polyfill.js')
+        ),
         new webpack.DefinePlugin({
-          'process.env.NEXT_POLYFILL_NOMODULE': JSON.stringify('false'),
+          'process.env.__NEXT_DISABLE_POLYFILLS': JSON.stringify('true'),
         })
       );
 
