@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import FAQSchema from '@/components/FAQSchema'
 
 const aboutFAQs = [
@@ -22,9 +23,21 @@ export default function AboutPage() {
 
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-slate-900 mb-6">
-            About Scott Bradley
-          </h1>
+          <div className="text-center mb-12">
+            <div className="relative w-48 h-48 mx-auto mb-6">
+              <Image
+                src="/images/branding/scott-ai-portrait-circle.png"
+                alt="Scott Bradley - Professional Chef"
+                fill
+                className="object-cover rounded-full shadow-xl border-4 border-orange-500"
+                priority
+              />
+            </div>
+            <h1 className="text-4xl font-bold text-slate-900 mb-2">
+              About Scott Bradley
+            </h1>
+            <p className="text-xl text-slate-600">Professional Chef with 40 Years Experience</p>
+          </div>
 
           <div className="prose prose-lg max-w-none">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">

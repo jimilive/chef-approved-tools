@@ -175,10 +175,21 @@ export default function HomePage() {
       {/* Credentials Section */}
       <section id="credentials" className="py-12 sm:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 text-center text-slate-900">
-            Why Professional Chefs Trust My Reviews
-          </h2>
-          
+          {/* Chef Photo */}
+          <div className="text-center mb-12">
+            <div className="relative w-32 h-32 mx-auto mb-4">
+              <Image
+                src="/images/branding/scott-ai-portrait-circle.png"
+                alt="Scott Bradley - Professional Chef"
+                fill
+                className="object-cover rounded-full shadow-xl border-4 border-orange-500"
+              />
+            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-slate-900">
+              Why Professional Chefs Trust My Reviews
+            </h2>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gray-50 rounded-xl p-6 text-center">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
