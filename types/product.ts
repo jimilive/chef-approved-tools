@@ -38,6 +38,11 @@ export interface Product {
   
   // Pricing with compliance (optional)
   price?: PriceInfo;
+  priceRange?: {
+    min: number;
+    max: number;
+    currency: string;
+  };
   inStock: boolean;
   availability?: string;
   
