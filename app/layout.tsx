@@ -111,6 +111,9 @@ export default function RootLayout({
         {/* Google Search Console verification */}
         <meta name="google-site-verification" content="iiP_PrnJkCSzBq86Y_mZmohwChwU0I_FGzqVo3W9B6o" />
 
+        {/* Pinterest domain verification */}
+        <meta name="p:domain_verify" content="1c75361789f0b05c2c684f88ccfe1460" />
+
         {/* View Transitions API for smooth page navigation */}
         <meta name="view-transition" content="same-origin" />
         
