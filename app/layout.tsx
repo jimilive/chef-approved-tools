@@ -19,10 +19,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.chefapprovedtools.com'),
   title: {
-    default: 'Chef Approved Kitchen Tools | Tested by Kitchen Manager Scott Bradley',
+    default: 'Best Kitchen Tools for Home Cooks | Chef-Approved Reviews (2025)',
     template: '%s | Chef Approved Tools - Professional Kitchen Equipment Reviews'
   },
-  description: 'Professional kitchen equipment reviews by Scott Bradley, chef with 40 years experience since age 15. Former Kitchen Manager at Mellow Mushroom with 21+ years in professional kitchens. Tools tested in real commercial operations from fast food to fine dining.',
+  description: 'Discover the best chef-approved kitchen tools, tested and reviewed for home cooks. 40 years professional experience. Shop smarter with expert recommendations on knives, cookware, and appliances.',
   keywords: [
     'professional kitchen tools',
     'restaurant equipment reviews',

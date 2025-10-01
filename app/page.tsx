@@ -124,10 +124,10 @@ export default function HomePage() {
 
           {/* Main Headline with Real Experience */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
-            Equipment Tested by a Chef Who Started at 15,
+            Chef-Approved Kitchen Tools
             <br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">
-              Still Cooking Professionally at 54
+              Tested by 40 Years of Professional Experience
             </span>
           </h1>
 

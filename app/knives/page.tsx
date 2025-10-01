@@ -69,11 +69,53 @@ export default function KnivesPage() {
     }))
   };
 
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What's the best chef knife for home cooks?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The Victorinox Fibrox Pro 8\" Chef's Knife is the best all-around choice for home cooks. It offers professional-grade performance at an affordable price, with excellent edge retention and comfortable grip. I've used this exact knife for 40 years in professional kitchens."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Are expensive chef knives worth it?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Not always. Professional chefs often prefer mid-range knives like Victorinox ($40-60) over premium brands ($200+) because they perform just as well for daily tasks and are easier to maintain. Save expensive knives for specialized tasks or if you're a serious enthusiast."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "What size chef knife should I buy?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most home cooks do best with an 8-inch chef's knife. It's versatile enough for most tasks without being unwieldy. Choose 10-inch if you have larger hands or frequently cut large vegetables. Smaller than 8 inches limits functionality."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "How often should I sharpen my chef knife?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Hone your knife with a steel before each use to maintain the edge. Fully sharpen every 3-6 months for home use, or monthly for heavy professional use. Quality matters more than frequency - one proper sharpening beats multiple poor attempts."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       <BreadcrumbSchema items={categoryBreadcrumbs.knives} />
       <Script id="knives-itemlist" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(itemListLd)}
+      </Script>
+      <Script id="knives-faq" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(faqLd)}
       </Script>
 
       {/* Page Header */}
