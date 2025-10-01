@@ -33,6 +33,9 @@ export default function ProductSchema({ product, category, reviewUrl }: ProductS
       "@type": "Offer",
       "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
       "url": product.affiliateLinks[0]?.url,
+      "priceCurrency": product.price?.currency || "USD",
+      "price": product.price?.current || product.priceRange?.min,
+      "priceValidUntil": new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
       "seller": {
         "@type": "Organization",
         "name": "Amazon"
@@ -115,6 +118,7 @@ export function SimpleProductSchema({
     "@context": "https://schema.org",
     "@type": "Product",
     "name": name,
+    "description": `Professional chef review of ${name}. Tested in real restaurant kitchens.`,
     "brand": {
       "@type": "Brand",
       "name": brand
@@ -132,9 +136,25 @@ export function SimpleProductSchema({
       "@type": "Offer",
       "availability": "https://schema.org/InStock",
       ...(affiliateUrl && { "url": affiliateUrl }),
+      "priceCurrency": "USD",
+      "priceValidUntil": new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
       "seller": {
         "@type": "Organization",
         "name": "Amazon"
+      }
+    },
+    "review": {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Scott Bradley",
+        "jobTitle": "Professional Chef & Kitchen Manager"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": rating,
+        "bestRating": 5,
+        "worstRating": 1
       }
     }
   }
