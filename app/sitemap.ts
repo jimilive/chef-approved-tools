@@ -88,6 +88,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Actual product review pages
   const productReviews = [
+    // Daily toolkit - 11 tools (HIGH PRIORITY)
+    'victorinox-fibrox-10-inch-chefs-knife',
+    'victorinox-fibrox-8-inch-chefs-knife',
+    'victorinox-4-inch-paring-knife',
+    'victorinox-granton-edge-boning-knife',
+    'victorinox-offset-bread-knife',
+    'oxo-good-grips-swivel-peeler',
+    'oxo-good-grips-bench-scraper',
+    'winco-heavy-duty-tongs',
+    'benriner-large-mandoline',
+    'gold-textiles-bar-mops',
+    'epicurean-kitchen-cutting-board',
+    // Other reviews
     'kitchenaid-ksm8990wh',
     'robot-coupe-r2-dice',
     'vitamix-5200',

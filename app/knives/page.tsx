@@ -7,6 +7,46 @@ import BreadcrumbSchema, { categoryBreadcrumbs } from '@/components/BreadcrumbSc
 export default function KnivesPage() {
   const products = [
     {
+      id: "victorinox-fibrox-10-inch-chefs-knife",
+      name: "Victorinox Fibrox Pro 10\" Chef's Knife",
+      brand: "Victorinox",
+      affiliateUrl: "https://www.amazon.com/Victorinox-Inch-Fibrox-Chefs-Knife/dp/B0000CF8YO?tag=chefapprovedt-20",
+      slug: "victorinox-fibrox-10-inch-chefs-knife",
+      description: "Professional Swiss chef's knife for larger cuts and bigger hands - 40 years of restaurant testing"
+    },
+    {
+      id: "victorinox-fibrox-8-inch-chefs-knife",
+      name: "Victorinox Fibrox Pro 8\" Chef's Knife",
+      brand: "Victorinox",
+      affiliateUrl: "https://www.amazon.com/Victorinox-Swiss-Classic-Chefs-Knife/dp/B0061SWV8Y?tag=chefapprovedt-20",
+      slug: "victorinox-fibrox-8-inch-chefs-knife",
+      description: "Perfect all-purpose chef's knife tested through decades of professional cooking"
+    },
+    {
+      id: "victorinox-4-inch-paring-knife",
+      name: "Victorinox 4\" Paring Knife",
+      brand: "Victorinox",
+      affiliateUrl: "https://www.amazon.com/Victorinox-Inch-Paring-Knife-Spear/dp/B0019WXPQY?tag=chefapprovedt-20",
+      slug: "victorinox-4-inch-paring-knife",
+      description: "Precision paring knife for detailed work - the exact knife I've used for 40 years"
+    },
+    {
+      id: "victorinox-granton-edge-boning-knife",
+      name: "Victorinox 6\" Granton Edge Boning Knife",
+      brand: "Victorinox",
+      affiliateUrl: "https://www.amazon.com/Victorinox-Cutlery-6-Inch-Boning-Granton/dp/B0019WZEUE?tag=chefapprovedt-20",
+      slug: "victorinox-granton-edge-boning-knife",
+      description: "Professional boning knife for breaking down proteins - restaurant tested flexibility"
+    },
+    {
+      id: "victorinox-offset-bread-knife",
+      name: "Victorinox 9\" Offset Bread Knife",
+      brand: "Victorinox",
+      affiliateUrl: "https://www.amazon.com/Victorinox-Swiss-Army-Bread-Knife/dp/B0019WZI0U?tag=chefapprovedt-20",
+      slug: "victorinox-offset-bread-knife",
+      description: "Offset serrated knife for bread and tomatoes - superior knuckle clearance"
+    },
+    {
       id: "wusthof-classic-ikon-15-piece",
       name: "Wüsthof Classic Ikon 15-Piece Knife Set",
       brand: "Wüsthof",
