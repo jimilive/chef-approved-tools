@@ -1,6 +1,3 @@
-'use client'
-
-import { useEffect } from 'react'
 import Link from 'next/link'
 import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
@@ -59,14 +56,18 @@ const breadcrumbs = [
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
 ]
 
+export const metadata = {
+  title: "KitchenAid KSM8990WH Review: Kitchen Manager's 18-Month Test | Chef Approved Tools",
+  description: "Professional review of KitchenAid Commercial Series KSM8990WH by restaurant manager. Real kitchen testing, pros/cons, and buying guide from 40 years experience.",
+  keywords: ["KitchenAid commercial mixer", "KSM8990WH review", "restaurant equipment", "professional mixer", "kitchen manager review"],
+  openGraph: {
+    title: "KitchenAid KSM8990WH: The Mixer That Survived 18 Months at Purple Cafe",
+    description: "Professional kitchen manager's honest review after 18 months of commercial use",
+    images: ['/logo.png']
+  }
+}
+
 export default function KitchenAidReviewPage() {
-  useEffect(() => {
-    document.title = "KitchenAid KSM8990WH Review: Kitchen Manager's 18-Month Test | Chef Approved Tools"
-    const metaDescription = document.querySelector('meta[name="description"]')
-    if (metaDescription) {
-      metaDescription.setAttribute('content', "Professional review of KitchenAid Commercial Series KSM8990WH by restaurant manager. Real kitchen testing, pros/cons, and buying guide from 40 years experience.")
-    }
-  }, [])
 
   return (
     <div className="min-h-screen bg-gray-50">
