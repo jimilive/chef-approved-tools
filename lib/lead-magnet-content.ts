@@ -1,155 +1,195 @@
-// Lead magnet content for "Kitchen Manager's Equipment Survival Guide"
+// Lead magnet content for "The 11 Tools I Use Most in My Home Kitchen"
 
 export const leadMagnetContent = {
-  title: "The $500 vs $5,000 Kitchen Equipment Guide",
-  subtitle: "Why Spending More Doesn't Always Mean Better (Professional Chef's Honest Breakdown)",
-  author: "Scott Bradley, Kitchen Manager & Culinary Professional",
+  title: "The 11 Tools I Use Most in My Home Kitchen",
+  subtitle: "My daily workhorse tools after 40 years cooking professionally",
+  author: "Scott Bradley, Professional Chef & Kitchen Manager",
+
+  // The 11 actual tools with Amazon affiliate links
+  tools: [
+    {
+      name: "Victorinox Fibrox Pro 10\" Chef's Knife",
+      price: "$50",
+      amazonUrl: "https://www.amazon.com/Victorinox-Inch-Fibrox-Chefs-Knife/dp/B0000CF8YO?tag=chefapprovedt-20",
+      why: "The longer blade is perfect for larger cuts and if you have bigger hands. I keep both sizes.",
+      story: "This is the knife I grab for breaking down proteins and chopping larger vegetables. The extra 2 inches makes a real difference when you're working fast."
+    },
+    {
+      name: "Victorinox Fibrox Pro 8\" Chef's Knife",
+      price: "$45",
+      amazonUrl: "https://www.amazon.com/Victorinox-47520-8-Chefs-Knife/dp/B0011FEIL0?tag=chefapprovedt-20",
+      why: "More maneuverable for precise cuts. Perfect for most home cooking tasks.",
+      story: "This is the workhorse. 90% of my knife work happens with this 8-inch. It's balanced, sharp, and never lets me down."
+    },
+    {
+      name: "Victorinox 4\" Paring Knife",
+      price: "$12",
+      amazonUrl: "https://www.amazon.com/Victorinox-4-Inch-Classic-Paring-Straight/dp/B005LRYE36?tag=chefapprovedt-20",
+      why: "Essential for detailed work - peeling, trimming, deveining shrimp.",
+      story: "You can't do precision work with a chef's knife. This little guy handles everything from garlic to strawberries."
+    },
+    {
+      name: "Victorinox Granton Edge Boning Knife",
+      price: "$35",
+      amazonUrl: "https://www.amazon.com/Victorinox-Boning-Curved-Granton-Fibrox/dp/B000IXHGG0?tag=chefapprovedt-20",
+      why: "Flexible blade gets close to bones. Also great for filleting fish.",
+      story: "Breaking down a whole chicken takes 3 minutes with this knife. The granton edge prevents sticking."
+    },
+    {
+      name: "Victorinox Offset Bread Knife",
+      price: "$48",
+      amazonUrl: "https://www.amazon.com/Victorinox-Forschner-Offset-Bread-Knife/dp/B00K85WD98?tag=chefapprovedt-20",
+      why: "Offset handle keeps knuckles off the cutting board. Serrated edge never needs sharpening.",
+      story: "Bread, tomatoes, cakes - anything with a delicate exterior. The offset design is a game-changer for comfort."
+    },
+    {
+      name: "OXO Good Grips Swivel Peeler",
+      price: "$10",
+      amazonUrl: "https://www.amazon.com/OXO-Good-Grips-Swivel-Peeler/dp/B00004OCIP?tag=chefapprovedt-20",
+      why: "Comfortable grip, sharp blade, swivels to follow contours.",
+      story: "I've tried every peeler out there. This is the one. It just works, day after day, year after year."
+    },
+    {
+      name: "OXO Good Grips Bench Scraper",
+      price: "$13",
+      amazonUrl: "https://www.amazon.com/OXO-Multi-purpose-Stainless-Scraper-Chopper/dp/B00004OCNJ?tag=chefapprovedt-20",
+      why: "Moves chopped ingredients, scrapes dough, cleans cutting boards.",
+      story: "Most underrated tool in any kitchen. Once you start using one, you'll wonder how you lived without it."
+    },
+    {
+      name: "Winco Heavy Duty Tongs (12\")",
+      price: "$8",
+      amazonUrl: "https://www.amazon.com/Winco-UT-12HT-Heavyweight-Stainless-Utility/dp/B001CDVN0U?tag=chefapprovedt-20",
+      why: "Restaurant-grade tongs at a fraction of the price. Proper spring tension.",
+      story: "These are the exact tongs I used in every restaurant kitchen. Strong, reliable, dishwasher-safe."
+    },
+    {
+      name: "Benriner Large Mandoline",
+      price: "$40",
+      amazonUrl: "https://www.amazon.com/Benriner-120-Almond-Jumbo-Slicer/dp/B01CP2PBN6?tag=chefapprovedt-20",
+      why: "Professional consistency for slicing. Adjustable thickness.",
+      story: "Perfect potato gratin every time. Consistent slices mean even cooking. Just watch your fingers!"
+    },
+    {
+      name: "Gold Textiles Restaurant Bar Mops (12-pack)",
+      price: "$25",
+      amazonUrl: "https://www.amazon.com/gp/product/B01N5DOCMO?tag=chefapprovedt-20",
+      why: "Absorbent, durable, machine washable. These are what restaurants actually use.",
+      story: "Forget fancy kitchen towels. These are what every professional kitchen uses. They last forever and actually dry things."
+    },
+    {
+      name: "Epicurean Kitchen Cutting Board (17.5\" × 13\")",
+      price: "$35",
+      amazonUrl: "https://www.amazon.com/Epicurean-Kitchen-Cutting-Board-Natural/dp/B0008221B6?tag=chefapprovedt-20",
+      why: "Dishwasher-safe, knife-friendly, won't harbor bacteria like wood.",
+      story: "I've used wooden boards for decades. These are better. Period. Dishwasher-safe changes everything."
+    }
+  ],
 
   sections: [
     {
-      title: "The Shocking Truth: When $500 Equipment Outperforms $5,000 Gear",
+      title: "Why Only 11 Tools?",
       content: [
-        "I've watched too many chefs waste their life savings on equipment that Instagram food bloggers recommended, only to see it fail during the first dinner rush.",
-        "After managing $80K+/month restaurant operations and testing thousands of tools, I've discovered something the equipment industry doesn't want you to know:",
-        "Price has almost ZERO correlation with performance under real kitchen pressure.",
-        "This guide reveals exactly when to save money and when to splurge - based on 21+ years of brutal real-world testing."
+        "After 40 years of professional cooking—starting at Wendy's at 15, through fine dining, to managing kitchen operations at Mellow Mushroom—I've used thousands of tools.",
+        "When I set up my home kitchen, I kept only what I actually reach for. Everything else is marketing.",
+        "These 11 tools handle 99% of what I cook at home. No junk drawers. No single-use gadgets. Just workhorses that earn their space."
       ]
     },
     {
-      title: "The $500 vs $5,000 Kitchen Setup: Side-by-Side Comparison",
+      title: "Total Investment: About $320",
       content: [
-        "🔥 THE $500 SETUP (Restaurant-Quality Performance):",
-        "• Victorinox Fibrox Pro 8\" Chef Knife ($45) - SAME knife used in Michelin restaurants",
-        "• Lodge 12\" Cast Iron Skillet ($35) - Outperformed $300 French cookware in heat retention tests",
-        "• Vollrath 14\" Stainless Steel Sauté Pan ($89) - Survived 2+ years of 200-cover nights",
-        "• NSF Commercial Cutting Board ($29) - Hospital-grade sanitation, dishwasher safe",
-        "• Mercer Culinary Hone Steel ($24) - Identical to $150 versions from luxury brands",
-        "• Digital Thermometer ($19) - More accurate than $200 analog thermometers",
-        "• Bench Scraper ($12) - Most-used tool in professional kitchens",
-        "• Kitchen Scale ($18) - Precision baking, portion control",
-        "TOTAL: $471 + Professional Results ✅",
-        "",
-        "💸 THE $5,000+ SETUP (Luxury Brand Tax):",
-        "• Kramer Carbon Steel 8\" Chef Knife ($450) - Instagram famous, maintenance nightmare",
-        "• Mauviel Copper Cookware Set ($1,200) - Beautiful but requires constant polishing",
-        "• KitchenAid Artisan Stand Mixer ($400) - Dies under commercial loads",
-        "• Vitamix A3500 ($650) - Same motor as $350 model, just fancier buttons",
-        "• Boos Block End-Grain Board ($200) - Harbors bacteria unless perfectly maintained",
-        "• Japanese Water Stones Set ($300) - Requires expert technique to use properly",
-        "• Designer Tool Set ($200) - Pretty but impractical for daily use",
-        "TOTAL: $3,400+ Labor-Intensive Maintenance ❌",
-        "",
-        "🎯 THE TRUTH: Performance gap? Less than 5%. Price gap? 700%."
+        "For roughly $320, you get a complete professional-quality toolkit that will last decades with proper care.",
+        "Compare that to what celebrity chefs push on Instagram—$1,000+ knife sets that mostly sit unused.",
+        "Every tool on this list has survived years of restaurant abuse. They'll handle anything your home kitchen throws at them."
       ]
     },
     {
-      title: "Rookie Mistakes That Cost Restaurants Thousands",
+      title: "The Victorinox Advantage",
       content: [
-        "1. BUYING BEAUTIFUL, NOT FUNCTIONAL",
-        "That copper cookware looks amazing but requires constant maintenance and doesn't heat evenly.",
-        "",
-        "2. SKIPPING THE BORING ESSENTIALS",
-        "Spent $2K on a fancy espresso machine but used $10 plastic cutting boards that harbored bacteria.",
-        "",
-        "3. NOT UNDERSTANDING VOLUME REQUIREMENTS",
-        "Home-grade equipment dies quickly under commercial loads. Always buy one tier above your needs.",
-        "",
-        "4. IGNORING MAINTENANCE COSTS",
-        "That $3,000 combi-oven needs $500 annual service calls. Factor ongoing costs into decisions."
+        "Notice 5 of the 11 tools are Victorinox knives? There's a reason.",
+        "Victorinox makes the knives used in Michelin-starred restaurants worldwide. Not because they're pretty—because they work.",
+        "Sharp out of the box, easy to maintain, dishwasher-safe handles (though I hand-wash the blades), and they cost a fraction of 'luxury' brands.",
+        "I've tried Japanese carbon steel, German forged, ceramic—you name it. For daily professional use, Victorinox wins every time."
       ]
     },
     {
-      title: "Equipment by Category: What Actually Works",
+      title: "Care & Maintenance: Make These Last 20+ Years",
       subsections: [
         {
-          title: "KNIVES (Most Important Investment)",
+          title: "DAILY",
           items: [
-            "German vs Japanese: German knives (Wüsthof, Henckels) are more forgiving and easier to maintain. Japanese knives are sharper but require more skill.",
-            "Size matters: 8\" is the sweet spot for 90% of tasks. 10\" if you're over 6 feet tall.",
-            "The $20 rule: A sharp $20 knife outperforms a dull $200 knife every time."
+            "Hone knives before each use (it realigns the edge, doesn't sharpen)",
+            "Hand wash and dry knives immediately after use",
+            "Hang towels to dry between uses"
           ]
         },
         {
-          title: "COOKWARE (Foundation of Every Kitchen)",
+          title: "WEEKLY",
           items: [
-            "Tri-ply stainless steel: Even heating, easy cleanup, oven-safe to 500°F",
-            "Cast iron: Perfect for searing, baking, camping. Lodge is 90% as good as expensive brands.",
-            "Non-stick: Replace every 2 years max. Never spend more than $50 on a non-stick pan."
+            "Run cutting board through dishwasher",
+            "Check knife edges for any chips or rolls",
+            "Deep clean bench scraper and tongs in dishwasher"
           ]
         },
         {
-          title: "APPLIANCES (Buy Once, Use Forever)",
+          title: "MONTHLY",
           items: [
-            "Stand mixers: KitchenAid Commercial Series only. Home models die under heavy use.",
-            "Blenders: Vitamix or Blendtec. Everything else is a toy in comparison.",
-            "Food processors: Cuisinart DFP-14BCNY. Discontinued but available refurbished."
+            "Professional knife sharpening (or learn to use a whetstone)",
+            "Inspect all tools for wear and damage",
+            "Oil the mandoline's moving parts"
           ]
         }
       ]
     },
     {
-      title: "Supplier Secrets: Where Pros Actually Shop",
+      title: "What's NOT on This List (And Why)",
       content: [
-        "RESTAURANT DEPOT: Membership required, but wholesale prices on commercial equipment",
-        "WEBSTAURANTSTORE: Online restaurant supply, ships to homes, no membership needed",
-        "AMAZON COMMERCIAL: Business account gets better prices and bulk options",
-        "LOCAL RESTAURANT SUPPLY: Often negotiate, especially for large orders"
+        "🚫 Garlic press - Knife minces faster and easier to clean",
+        "🚫 Egg slicer - Knife works fine",
+        "🚫 Avocado tool - Use a spoon",
+        "🚫 Multiple cutting boards - One good one is enough",
+        "🚫 Knife block sets - You only need 4-5 knives max",
+        "🚫 Expensive honing steel - The $15 one works identically",
+        "",
+        "Every item I didn't include failed the 'do I actually use this?' test. Be honest with yourself—half your kitchen tools probably live in a drawer untouched."
       ]
     },
     {
-      title: "Maintenance Schedule: Make Equipment Last Decades",
+      title: "Where to Buy",
       content: [
-        "DAILY:",
-        "• Hone knives before each use",
-        "• Hand wash and dry knives immediately",
-        "• Season cast iron after cleaning",
+        "I've included Amazon links for convenience (and yes, I earn a small commission if you buy through them).",
+        "But you can find these same items at:",
+        "• Restaurant supply stores (often cheaper, no membership needed)",
+        "• WebstaurantStore.com (restaurant supply that ships to homes)",
+        "• Sur La Table / Williams-Sonoma (though you'll pay more)",
         "",
-        "WEEKLY:",
-        "• Deep clean cutting boards with bleach solution",
-        "• Check knife edges for chips or rolls",
-        "• Oil wooden utensils and boards",
-        "",
-        "MONTHLY:",
-        "• Professional knife sharpening (or learn to use whetstones)",
-        "• Deep clean appliances according to manual",
-        "• Inspect equipment for loose handles, worn parts"
-      ]
-    },
-    {
-      title: "Red Flags: Equipment to Avoid",
-      content: [
-        "• Anything with 'As Seen on TV' marketing",
-        "• Knife sets with more than 6 pieces (you only need 3-4 knives max)",
-        "• Cookware sets with non-stick interiors (buy pieces individually)",
-        "• Single-use appliances (garlic presses, avocado slicers, etc.)",
-        "• Equipment without clear warranty terms"
+        "The key is getting the RIGHT tools, not necessarily from the right store."
       ]
     }
   ],
 
   bonusContent: {
-    title: "BONUS: 15-Minute Equipment Inspection Checklist",
+    title: "BONUS: Professional Knife Skills in 5 Minutes",
     items: [
-      "□ Knife edges - any chips, rolls, or excessive dullness?",
-      "□ Cutting board surfaces - deep cuts harboring bacteria?",
-      "□ Pan surfaces - warping, hot spots, coating damage?",
-      "□ Appliance cords - fraying, loose connections?",
-      "□ Moving parts - unusual noises, resistance, wobbling?",
-      "□ Seals and gaskets - cracking, food buildup?",
-      "□ Temperature readings - calibrate thermometers quarterly"
+      "□ Pinch grip - Thumb and forefinger on blade, not handle",
+      "□ Claw hand - Curl fingertips away from blade when cutting",
+      "□ Rock the knife - Don't lift the tip off the board",
+      "□ Sharp = safe - Dull knives require more pressure and slip",
+      "□ Hone before every use - Takes 10 seconds, keeps edge aligned",
+      "□ Let the knife do the work - If you're forcing it, it's dull"
     ]
   },
 
   footer: {
     contact: "Questions? Email scott@chefapprovedtools.com",
     website: "www.chefapprovedtools.com",
-    credentials: "Scott Bradley - Kitchen Manager, Seattle Central Culinary Graduate, 21+ Years Professional Experience"
+    credentials: "Scott Bradley - 40 Years Professional Cooking Experience, Seattle Central Culinary Graduate, Former Kitchen Manager at Mellow Mushroom"
   }
 }
 
 // Helper function to generate PDF-ready content
 export function generateLeadMagnetHTML(): string {
-  const { title, subtitle, author, sections, bonusContent, footer } = leadMagnetContent
+  const { title, subtitle, author, tools, sections, bonusContent, footer } = leadMagnetContent
 
   return `
     <!DOCTYPE html>
@@ -158,17 +198,101 @@ export function generateLeadMagnetHTML(): string {
       <meta charset="UTF-8">
       <title>${title}</title>
       <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
-        h1 { color: #EA580C; font-size: 24px; border-bottom: 3px solid #EA580C; padding-bottom: 10px; }
-        h2 { color: #1F2937; font-size: 18px; margin-top: 30px; }
-        h3 { color: #374151; font-size: 16px; }
-        .subtitle { color: #6B7280; font-size: 14px; margin-bottom: 30px; }
-        .author { color: #374151; font-style: italic; margin-bottom: 40px; }
-        .section { margin-bottom: 30px; }
-        .bonus { background: #FEF3C7; padding: 20px; border-radius: 8px; margin: 30px 0; }
-        .checklist { list-style: none; padding: 0; }
-        .checklist li { margin: 5px 0; }
-        .footer { border-top: 1px solid #D1D5DB; padding-top: 20px; margin-top: 40px; text-align: center; color: #6B7280; font-size: 12px; }
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+          line-height: 1.6;
+          margin: 40px;
+          color: #1F2937;
+        }
+        h1 {
+          color: #EA580C;
+          font-size: 28px;
+          border-bottom: 3px solid #EA580C;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+        }
+        h2 {
+          color: #1F2937;
+          font-size: 20px;
+          margin-top: 40px;
+          margin-bottom: 15px;
+        }
+        h3 {
+          color: #374151;
+          font-size: 16px;
+          margin-top: 20px;
+        }
+        .subtitle {
+          color: #6B7280;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+        .author {
+          color: #6B7280;
+          font-style: italic;
+          margin-bottom: 40px;
+          font-size: 14px;
+        }
+        .tool {
+          background: #F9FAFB;
+          border-left: 4px solid #EA580C;
+          padding: 15px;
+          margin: 20px 0;
+        }
+        .tool-name {
+          font-weight: bold;
+          color: #1F2937;
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+        .tool-price {
+          color: #059669;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        .tool-why {
+          color: #374151;
+          margin: 10px 0;
+        }
+        .tool-story {
+          color: #6B7280;
+          font-style: italic;
+          margin: 10px 0;
+          padding-left: 15px;
+          border-left: 3px solid #D1D5DB;
+        }
+        .section {
+          margin-bottom: 30px;
+        }
+        .bonus {
+          background: #FEF3C7;
+          padding: 25px;
+          border-radius: 8px;
+          margin: 30px 0;
+          border-left: 4px solid #F59E0B;
+        }
+        .checklist {
+          list-style: none;
+          padding: 0;
+        }
+        .checklist li {
+          margin: 8px 0;
+          padding-left: 5px;
+        }
+        .footer {
+          border-top: 2px solid #D1D5DB;
+          padding-top: 20px;
+          margin-top: 40px;
+          text-align: center;
+          color: #6B7280;
+          font-size: 12px;
+        }
+        ul {
+          margin: 10px 0;
+        }
+        li {
+          margin: 5px 0;
+        }
       </style>
     </head>
     <body>
@@ -176,13 +300,25 @@ export function generateLeadMagnetHTML(): string {
       <div class="subtitle">${subtitle}</div>
       <div class="author">By ${author}</div>
 
+      <h2>The 11 Tools</h2>
+      ${tools.map(tool => `
+        <div class="tool">
+          <div class="tool-name">${tool.name}</div>
+          <div class="tool-price">${tool.price}</div>
+          <div class="tool-why"><strong>Why I use it:</strong> ${tool.why}</div>
+          <div class="tool-story">"${tool.story}"</div>
+        </div>
+      `).join('')}
+
       ${sections.map(section => `
         <div class="section">
           <h2>${section.title}</h2>
           ${section.content ? section.content.map(paragraph => `<p>${paragraph}</p>`).join('') : ''}
           ${section.subsections ? section.subsections.map(sub => `
             <h3>${sub.title}</h3>
-            ${sub.items.map(item => `<p>• ${item}</p>`).join('')}
+            <ul>
+              ${sub.items.map(item => `<li>${item}</li>`).join('')}
+            </ul>
           `).join('') : ''}
         </div>
       `).join('')}
@@ -195,7 +331,7 @@ export function generateLeadMagnetHTML(): string {
       </div>
 
       <div class="footer">
-        <p>${footer.contact}</p>
+        <p><strong>${footer.contact}</strong></p>
         <p>${footer.website}</p>
         <p>${footer.credentials}</p>
       </div>
