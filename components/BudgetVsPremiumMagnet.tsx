@@ -78,7 +78,7 @@ export default function BudgetVsPremiumMagnet({
             Check Your Email! 📧
           </h3>
           <p className="text-gray-300 mb-4">
-            Your &quot;Professional&apos;s Home Kitchen: 7 Tools&quot; guide is on its way. Check your inbox (and spam folder) in the next few minutes.
+            Your &quot;The 11 Tools I Use Most in My Home Kitchen&quot; guide is on its way. Check your inbox (and spam folder) in the next few minutes.
           </p>
           <div className="bg-orange-100 text-orange-800 p-3 rounded-lg text-sm">
             💡 <strong>Pro Tip:</strong> Save my email (scott@chefapprovedtools.com) to your contacts so you never miss the good stuff!
@@ -98,22 +98,22 @@ export default function BudgetVsPremiumMagnet({
         </div>
 
         <h2 className="text-2xl md:text-3xl font-bold mb-2">
-          The Professional&apos;s Home Kitchen: 7 Tools I Actually Use Daily
+          The 11 Tools I Use Most in My Home Kitchen
         </h2>
 
         <p className={`text-lg mb-4 ${variant === 'sidebar' ? 'text-gray-700' : 'text-gray-300'}`}>
-          My authentic daily toolkit from 21+ years in restaurant kitchens
+          My daily workhorse tools after 40 years cooking professionally
         </p>
 
         {/* Trust indicators */}
         <div className="flex items-center justify-center gap-4 text-sm mb-6">
           <div className="flex items-center gap-1">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-            <span className={variant === 'sidebar' ? 'text-gray-600' : 'text-gray-400'}>21+ Years Experience</span>
+            <span className={variant === 'sidebar' ? 'text-gray-600' : 'text-gray-400'}>40 Years Cooking Experience</span>
           </div>
           <div className="flex items-center gap-1">
             <TrendingUp className="w-4 h-4 text-green-400" />
-            <span className={variant === 'sidebar' ? 'text-gray-600' : 'text-gray-400'}>$80K+/Month Operations</span>
+            <span className={variant === 'sidebar' ? 'text-gray-600' : 'text-gray-400'}>11 Tools. That&apos;s It.</span>
           </div>
         </div>
       </div>
@@ -129,23 +129,23 @@ export default function BudgetVsPremiumMagnet({
           <ul className="space-y-2 text-sm">
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-              <span><strong>Victorinox knife set:</strong> The exact 4 knives I use daily at home</span>
+              <span><strong>5 Victorinox knives:</strong> Chef&apos;s (8&quot; &amp; 10&quot;), paring, boning, and bread knife</span>
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-              <span><strong>OXO prep tools:</strong> Simple tools that make cooking effortless</span>
+              <span><strong>Essential prep tools:</strong> Peeler, bench scraper, tongs, and mandoline</span>
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-              <span><strong>Professional mandoline:</strong> Restaurant consistency in your home</span>
+              <span><strong>Restaurant towels:</strong> The exact bar mops I&apos;ve used for decades</span>
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-              <span><strong>Why each tool works:</strong> Stories from real restaurant use</span>
+              <span><strong>Professional cutting board:</strong> Epicurean board built to last</span>
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-              <span><strong>Care and maintenance:</strong> Make these tools last decades</span>
+              <span><strong>Why I chose each one:</strong> Real stories from 40 years of cooking</span>
             </li>
           </ul>
         </div>
@@ -209,10 +209,10 @@ export function BudgetVsPremiumTeaser() {
         </div>
         <div className="flex-1">
           <h3 className="font-bold text-gray-900 mb-2">
-            The Professional&apos;s Home Kitchen: My 7 Daily Tools
+            The 11 Tools I Use Most in My Home Kitchen
           </h3>
           <p className="text-gray-700 text-sm mb-3">
-            From 21+ years in professional kitchens to my home - these are the tools that made the cut.
+            After 40 years cooking professionally - these are my daily workhorse tools at home.
             Real recommendations, no BS.
           </p>
           <a
