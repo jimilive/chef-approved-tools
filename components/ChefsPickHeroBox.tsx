@@ -23,7 +23,7 @@ export default function ChefsPickHeroBox({ product, category }: ChefsPickProps) 
       {/* Badge */}
       <div className="flex items-center justify-center mb-4">
         <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-2 rounded-full font-bold text-sm sm:text-base shadow-lg">
-          🏆 CHEF'S TOP PICK
+          🏆 CHEF&apos;S TOP PICK
         </div>
       </div>
 

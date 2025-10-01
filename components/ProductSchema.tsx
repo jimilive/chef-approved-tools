@@ -34,7 +34,7 @@ export default function ProductSchema({ product, category, reviewUrl }: ProductS
       "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
       "url": product.affiliateLinks[0]?.url,
       "priceCurrency": product.price?.currency || "USD",
-      "price": product.price?.current || product.priceRange?.min,
+      "price": product.price?.current,
       "priceValidUntil": new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
       "seller": {
         "@type": "Organization",
