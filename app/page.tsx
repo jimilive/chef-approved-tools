@@ -1,5 +1,6 @@
 'use client'
 import React, { lazy, Suspense } from 'react'
+import Image from 'next/image'
 import { SimpleProductSchema } from '@/components/ProductSchema'
 import FAQSchema, { kitchenToolsFAQs } from '@/components/FAQSchema'
 import { ChefCredentialsSchema } from '@/components/ReviewSchema'
