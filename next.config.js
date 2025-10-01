@@ -6,7 +6,7 @@ const nextConfig = {
   // Experimental features for performance
   experimental: {
     scrollRestoration: true,
-    optimizeCss: true, // Enable for inline critical CSS
+    optimizeCss: false, // Causes issues with Next.js 14 - keep disabled
     webVitalsAttribution: ['CLS', 'LCP'],
     esmExternals: true, // Use ES modules for better tree shaking
     optimizePackageImports: ['lucide-react', '@headlessui/react'], // Tree-shake these packages

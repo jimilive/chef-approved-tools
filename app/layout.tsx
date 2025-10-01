@@ -120,50 +120,6 @@ export default function RootLayout({
         {/* Preload critical above-the-fold images */}
         <link rel="preload" href="/og-image.jpg" as="image" type="image/jpeg" />
 
-        {/* Mobile-optimized CSS loading strategy */}
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            // Aggressive CSS deferring for mobile performance
-            (function() {
-              // Intercept CSS loading during document parse
-              const observer = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                  mutation.addedNodes.forEach(function(node) {
-                    if (node.nodeType === 1 && node.tagName === 'LINK' &&
-                        node.rel === 'stylesheet' &&
-                        node.href && node.href.includes('/_next/static/css/')) {
-                      // Convert to preload immediately
-                      node.rel = 'preload';
-                      node.as = 'style';
-                      node.onload = function() {
-                        this.onload = null;
-                        this.rel = 'stylesheet';
-                      };
-                    }
-                  });
-                });
-              });
-              observer.observe(document.head, { childList: true });
-
-              // Also handle existing stylesheets
-              setTimeout(function() {
-                const links = document.querySelectorAll('link[rel="stylesheet"]');
-                links.forEach(function(link) {
-                  if (link.href && link.href.includes('/_next/static/css/')) {
-                    link.rel = 'preload';
-                    link.as = 'style';
-                    link.onload = function() {
-                      this.onload = null;
-                      this.rel = 'stylesheet';
-                    };
-                  }
-                });
-                observer.disconnect();
-              }, 0);
-            })();
-          `
-        }} />
-
         {/* Resource hints for critical third-party domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -355,49 +311,6 @@ export default function RootLayout({
           </MobileOptimizationProvider>
         </MobileOptimizedLayout>
 
-        {/* Load CSS properly without MIME type issues */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Load non-critical CSS after first paint to improve LCP
-              (function() {
-                if (typeof requestAnimationFrame !== 'undefined') {
-                  requestAnimationFrame(function() {
-                    // Let Next.js handle CSS loading naturally
-                    console.log('CSS loading deferred for LCP optimization');
-                  });
-                }
-              })();
-            `
-          }}
-        />
-
-        {/* Lightweight performance optimizations - avoid forced reflows */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Essential performance optimizations only - avoid DOM measurements
-              (function() {
-                // Use passive event listeners and defer heavy operations
-                function deferredTasks() {
-                  // Clean up service workers without measuring DOM
-                  if ('serviceWorker' in navigator) {
-                    navigator.serviceWorker.getRegistrations().then(registrations => {
-                      registrations.forEach(registration => registration.unregister());
-                    });
-                  }
-                }
-
-                // Wait for idle time to avoid blocking main thread
-                if ('requestIdleCallback' in window) {
-                  requestIdleCallback(deferredTasks);
-                } else {
-                  setTimeout(deferredTasks, 1000);
-                }
-              })();
-            `
-          }}
-        />
 
         {/* Google Analytics 4 - Deferred loading for performance */}
         {process.env.NEXT_PUBLIC_GA_TRACKING_ID && (
