@@ -117,7 +117,7 @@ export default function WusthofClassicIkonReview() {
         {/* Header Section */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
-            WÜSTHOF Classic IKON 15-Piece: The German Knife Set That Equipped Our Entire Kitchen
+            WÜSTHOF Classic IKON 16-Piece: The German Knife Set That Equipped Our Entire Kitchen
           </h1>
 
           {/* Author & Rating */}
@@ -196,7 +196,7 @@ export default function WusthofClassicIkonReview() {
 
         {/* Complete Set Breakdown */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">Complete 15-Piece Set Breakdown</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Complete 16-Piece Set Breakdown</h2>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
