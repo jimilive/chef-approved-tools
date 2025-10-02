@@ -151,6 +151,9 @@ export function generateProductSchema(product: any) {
 
 // Enhanced product review schema for better rich snippets
 export function generateProductReviewSchema(product: any) {
+  const priceValue = product.priceRange?.min || product.price?.current || 0;
+  const priceValidUntil = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]; // 30 days from now
+
   return {
     "@context": "https://schema.org",
     "@type": "Review",
@@ -158,18 +161,63 @@ export function generateProductReviewSchema(product: any) {
     itemReviewed: {
       "@type": "Product",
       name: product.name,
-      image: product.images?.primary,
+      image: product.images?.primary || "https://www.chefapprovedtools.com/logo.png",
+      description: product.expertOpinion || `Professional review of ${product.name}`,
       brand: {
         "@type": "Brand",
         name: product.brand
       },
       offers: {
         "@type": "Offer",
-        price: product.priceRange?.min || product.price?.current,
+        price: priceValue.toString(),
         priceCurrency: product.priceRange?.currency || product.price?.currency || "USD",
+        priceValidUntil: priceValidUntil,
         availability: product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-        url: product.affiliateLinks?.[0]?.url
-      }
+        url: product.affiliateLinks?.[0]?.url,
+        hasMerchantReturnPolicy: {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        shippingDetails: {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "USD"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "US"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 2,
+              "maxValue": 5,
+              "unitCode": "DAY"
+            }
+          }
+        }
+      },
+      aggregateRating: product.expertRating ? {
+        "@type": "AggregateRating",
+        ratingValue: product.expertRating,
+        bestRating: 5,
+        worstRating: 1,
+        ratingCount: 1,
+        reviewCount: 1
+      } : undefined
     },
     reviewRating: {
       "@type": "Rating",
