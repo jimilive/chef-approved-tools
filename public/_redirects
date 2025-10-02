@@ -1,0 +1,3 @@
+# Redirect non-www to www
+https://chefapprovedtools.com/* https://www.chefapprovedtools.com/:splat 301!
+http://chefapprovedtools.com/* https://www.chefapprovedtools.com/:splat 301!
