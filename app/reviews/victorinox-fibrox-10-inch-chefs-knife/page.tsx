@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
@@ -38,6 +39,24 @@ export default function VictorinoxFibrox10InchReview() {
       {/* Main Content */}
       <article className="max-w-4xl mx-auto px-4 py-12">
 
+        {/* Product Images */}
+        <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Image
+            src="/images/products/victorinox-fibrox-10-inch/main.jpg"
+            alt="Victorinox Fibrox Pro 10-inch Chef's Knife"
+            width={1200}
+            height={800}
+            className="rounded-lg w-full"
+          />
+          <Image
+            src="/images/products/victorinox-fibrox-10-inch/handle.jpg"
+            alt="Victorinox Fibrox Pro Handle Detail"
+            width={1200}
+            height={800}
+            className="rounded-lg w-full"
+          />
+        </div>
+
         {/* Quick Verdict */}
         <div className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-8">
           <h2 className="text-2xl font-bold mb-3 text-gray-900">The Bottom Line</h2>
@@ -73,6 +92,16 @@ export default function VictorinoxFibrox10InchReview() {
         {/* What Makes It Work */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">What Makes This Knife Work</h2>
+
+          <div className="mb-8">
+            <Image
+              src="/images/products/victorinox-fibrox-10-inch/brand.jpg"
+              alt="Victorinox Brand and Quality"
+              width={1200}
+              height={800}
+              className="rounded-lg w-full"
+            />
+          </div>
 
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg border border-gray-200">

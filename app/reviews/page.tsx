@@ -122,6 +122,26 @@ const myDailyTools = [
 
 const featuredReviews = [
   {
+    slug: 'wusthof-classic-ikon-15-piece',
+    title: 'Wüsthof Classic Ikon 16-Piece Set',
+    category: 'Knives',
+    price: 1749,
+    image: '/logo.png',
+    excerpt: 'Professional German knife set that maintains its edge through daily restaurant service.',
+    badge: 'Staff Favorite',
+    testDuration: '2+ years'
+  },
+  {
+    slug: 'robot-coupe-r2-dice',
+    title: 'Robot Coupe R2 Dice Food Processor',
+    category: 'Appliances',
+    price: 1299,
+    image: '/logo.png',
+    excerpt: 'Professional food processor that handles high-volume prep work with precision.',
+    badge: 'Pro Choice',
+    testDuration: '2+ years'
+  },
+  {
     slug: 'kitchenaid-ksm8990wh',
     title: 'KitchenAid Commercial Series KSM8990WH',
     category: 'Appliances',
@@ -130,26 +150,6 @@ const featuredReviews = [
     excerpt: 'The mixer that survived 18 months of professional kitchen testing at Purple Cafe. NSF certified commercial-grade performance.',
     badge: 'Restaurant Tested',
     testDuration: '18 months'
-  },
-  {
-    slug: 'wusthof-classic-ikon-15-piece',
-    title: 'Wüsthof Classic Ikon 15-Piece Set',
-    category: 'Knives',
-    price: 579,
-    image: '/logo.png',
-    excerpt: 'Professional German knife set that maintains its edge through daily restaurant service.',
-    badge: 'Staff Favorite',
-    testDuration: '2+ years'
-  },
-  {
-    slug: 'lodge-seasoned-cast-iron-3-skillet-bundle',
-    title: 'Lodge Cast Iron 3-Skillet Bundle',
-    category: 'Cookware',
-    price: 89,
-    image: '/logo.png',
-    excerpt: 'Indestructible cast iron set that equipped our entire line. American-made durability.',
-    badge: 'Best Value',
-    testDuration: '5+ years'
   },
   {
     slug: 'vitamix-5200',
@@ -172,16 +172,6 @@ const featuredReviews = [
     testDuration: '3+ years'
   },
   {
-    slug: 'robot-coupe-r2-dice',
-    title: 'Robot Coupe R2 Dice Food Processor',
-    category: 'Appliances',
-    price: 1299,
-    image: '/logo.png',
-    excerpt: 'Professional food processor that handles high-volume prep work with precision.',
-    badge: 'Pro Choice',
-    testDuration: '2+ years'
-  },
-  {
     slug: 'john-boos-platinum-commercial-cutting-board',
     title: 'John Boos Platinum Commercial Cutting Board',
     category: 'Tools',
@@ -190,6 +180,16 @@ const featuredReviews = [
     excerpt: 'NSF-certified cutting board that withstands daily commercial kitchen abuse.',
     badge: 'Commercial Grade',
     testDuration: '3+ years'
+  },
+  {
+    slug: 'lodge-seasoned-cast-iron-3-skillet-bundle',
+    title: 'Lodge Cast Iron 3-Skillet Bundle',
+    category: 'Cookware',
+    price: 89,
+    image: '/logo.png',
+    excerpt: 'Indestructible cast iron set that equipped our entire line. American-made durability.',
+    badge: 'Best Value',
+    testDuration: '5+ years'
   }
 ]
 

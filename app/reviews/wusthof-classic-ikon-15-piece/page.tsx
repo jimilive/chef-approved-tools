@@ -7,16 +7,16 @@ import PriceDisplay from '@/components/PriceDisplay'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 const productData = {
-  name: "WÜSTHOF Classic IKON 15-Piece Knife Block Set",
+  name: "WÜSTHOF Classic IKON 16-Piece Knife Block Set",
   slug: "wusthof-classic-ikon-15-piece",
   brand: "WÜSTHOF",
-  model: "Classic IKON 15-Piece",
+  model: "Classic IKON 16-Piece",
   images: {
     primary: "/logo.png"
   },
   priceRange: {
-    min: 380,
-    max: 499,
+    min: 1749,
+    max: 1749,
     currency: "USD"
   },
   dealStatus: "normal" as const,
@@ -29,7 +29,7 @@ const productData = {
     "Steel and scissors included in set",
     "German-forged precision and durability",
     "Full tang construction for balance",
-    "Comprehensive 15-piece selection"
+    "Comprehensive 16-piece selection"
   ],
   cons: [
     "Slicer knife rarely used in operations",
@@ -41,7 +41,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://www.amazon.com/W%C3%BCsthof-Classic-15-Piece-Acacia-1090371501/dp/B09BBJ5YW9?crid=2CPNJGKFU443U&dib=eyJ2IjoiMSJ9.gzSiLnMNVCgKrIAe93tqFY6duNUtEtUBs7EKZU6x67_SXALBqFl53O9zsVm3CYnS4MucGGvxn1q9-9-S_b06A5tuMgJAi_uaDmhJK9CT5k8A25jfGF8_onmH-uJk3zkX42-y-g_qpMnEb-Vqh5i19VawT7ZuD6bAmMuUYZNKovrFlEDsan3_PIsVeGv9XO6N5OTc7Bzk2hMjRv46doVjp-XBsPNuj91D9J4ofomv86uP-T2TKx_-0dRAM-w-kSuf7er4ogBWUvXV-PGRRDBmQPfBtKObozxkDSBwPRq_kfA.V8aDwWbrr1jjs1wgmw3hMIYvJrrk_gG2Esi1sYfFwM8&dib_tag=se&keywords=wusthof%2Bikon%2B15%2Bpiece&qid=1758759289&s=home-garden&sprefix=wusthof%2Bikon%2B15%2Bpiece%2Cgarden%2C157&sr=1-4&th=1&linkCode=ll1&tag=chefapprovedt-20&linkId=bbdbde97c1ca9f2d52789290b7003c49&language=en_US&ref_=as_li_ss_tl"
+      url: "https://www.amazon.com/Wusthof-Classic-Piece-Knife-Acacia/dp/B08NFC31K7?tag=chefapprovedt-20"
     },
     {
       retailer: "Williams Sonoma",
@@ -78,11 +78,11 @@ const breadcrumbs = [
 ]
 
 export const metadata = {
-  title: "WÜSTHOF Classic IKON 15-Piece Knife Set Review | Chef Approved Tools",
-  description: "Professional review of WÜSTHOF Classic IKON 15-piece knife block set by restaurant manager. German-forged knives tested in commercial kitchen operations.",
+  title: "WÜSTHOF Classic IKON 16-Piece Knife Set Review | Chef Approved Tools",
+  description: "Professional review of WÜSTHOF Classic IKON 16-piece knife block set by restaurant manager. German-forged knives tested in commercial kitchen operations.",
   keywords: ["WÜSTHOF Classic IKON review", "German knife set", "professional knife set", "restaurant knives", "knife block set"],
   openGraph: {
-    title: "WÜSTHOF Classic IKON 15-Piece: Professional Knife Set Review",
+    title: "WÜSTHOF Classic IKON 16-Piece: Professional Knife Set Review",
     description: "Restaurant manager's honest review of the WÜSTHOF Classic IKON knife set",
     images: ['/logo.png']
   }
@@ -92,7 +92,7 @@ export default function WusthofClassicIkonReview() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <ProductViewTrackerWrapper slug="wusthof-classic-ikon-15-piece" name="WÜSTHOF Classic IKON 15-Piece" image="/logo.png" price={799} />
+      <ProductViewTrackerWrapper slug="wusthof-classic-ikon-15-piece" name="WÜSTHOF Classic IKON 16-Piece" image="/logo.png" price={1749} />
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
