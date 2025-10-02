@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
@@ -202,6 +203,22 @@ export default function OXOGoodGripsBenchScraperReview() {
               <li>• Never work with dough or baked goods</li>
             </ul>
           </div>
+        </section>
+
+        {/* Related Tools */}
+        <section className="mb-12 bg-blue-50 p-8 rounded-xl">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Essential Partner: The Right Cutting Board</h2>
+          <p className="text-gray-700 mb-4">
+            A bench scraper is only as good as the cutting board you use it with. I use mine most with my John Boos
+            maple board - the smooth wood surface makes scraping effortless, and the bench scraper keeps it clean
+            between tasks.
+          </p>
+          <Link
+            href="/reviews/john-boos-platinum-commercial-cutting-board"
+            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+          >
+            → See My John Boos Platinum Cutting Board Review
+          </Link>
         </section>
 
         {/* Care & Maintenance */}

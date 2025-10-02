@@ -320,6 +320,21 @@ export default function KitchenAidReviewPage() {
           </div>
         </section>
 
+        {/* Budget Alternative */}
+        <section className="mb-8 bg-blue-50 p-8 rounded-xl">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Need Something More Affordable?</h2>
+          <p className="text-gray-700 mb-4">
+            This commercial mixer is overkill for most home cooks. If you&apos;re baking occasionally or working with smaller batches,
+            check out my guide to the best budget chef&apos;s knives - quality tools that won&apos;t break the bank.
+          </p>
+          <Link
+            href="/best-budget-chefs-knife"
+            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+          >
+            → See My Best Budget Chef&apos;s Knife Guide
+          </Link>
+        </section>
+
         {/* Bottom Line */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">The Bottom Line</h2>

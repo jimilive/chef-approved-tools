@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
@@ -220,6 +221,21 @@ export default function EpicureanKitchenCuttingBoardReview() {
               </ul>
             </div>
           </div>
+        </section>
+
+        {/* Alternative Option: Wood Cutting Board */}
+        <section className="mb-12 bg-blue-50 p-8 rounded-xl">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Prefer Traditional Wood? Consider This</h2>
+          <p className="text-gray-700 mb-4">
+            If you love the look and feel of traditional wood or want something heavier and more substantial, my John Boos
+            maple board has served me for 18 years. It requires oiling but offers a classic cutting experience.
+          </p>
+          <Link
+            href="/reviews/john-boos-platinum-commercial-cutting-board"
+            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+          >
+            → See My John Boos Platinum Cutting Board Review
+          </Link>
         </section>
 
         {/* Buy Section */}

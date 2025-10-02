@@ -245,6 +245,21 @@ export default function VictorinoxFibrox10InchReview() {
           </div>
         </section>
 
+        {/* Related Guides */}
+        <section className="mb-12 bg-blue-50 p-8 rounded-xl">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Looking for the Best Knife for Meat?</h2>
+          <p className="text-gray-700 mb-4">
+            This 10-inch is excellent for cutting meat, but I&apos;ve also reviewed other specialized options. Check out my complete
+            guide to find the perfect knife for your meat-cutting needs.
+          </p>
+          <Link
+            href="/best-knife-for-cutting-meat"
+            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+          >
+            → See My Best Knife for Cutting Meat Guide
+          </Link>
+        </section>
+
         {/* Related Victorinox Knives */}
         <section className="mb-12 bg-blue-50 p-8 rounded-xl">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">Not Sure Which Victorinox Knife You Need?</h2>

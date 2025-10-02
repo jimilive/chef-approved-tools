@@ -390,6 +390,36 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           </div>
         </section>
 
+        {/* Essential Tool: Bench Scraper */}
+        <section className="mb-8 bg-blue-50 p-8 rounded-xl">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Keep It Clean: The Essential Bench Scraper</h2>
+          <p className="text-gray-700 mb-4">
+            A cutting board this nice deserves proper care. My OXO bench scraper is the tool I use most to keep this board clean -
+            it scrapes off chopped ingredients and stuck-on bits in seconds. They&apos;re made to work together.
+          </p>
+          <Link
+            href="/reviews/oxo-good-grips-bench-scraper"
+            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+          >
+            → See My OXO Bench Scraper Review
+          </Link>
+        </section>
+
+        {/* Alternative Option: Dishwasher-Safe Board */}
+        <section className="mb-8 bg-blue-50 p-8 rounded-xl">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Want Zero Maintenance? Try This Instead</h2>
+          <p className="text-gray-700 mb-4">
+            If you don&apos;t want to oil a board or worry about warping, my Epicurean board is completely dishwasher-safe
+            and needs zero maintenance. It&apos;s a different style but equally professional.
+          </p>
+          <Link
+            href="/reviews/epicurean-kitchen-cutting-board"
+            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+          >
+            → See My Epicurean Cutting Board Review
+          </Link>
+        </section>
+
         {/* Wood vs Plastic vs Bamboo Comparison */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Cutting Board Material Comparison</h2>
