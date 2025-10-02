@@ -657,7 +657,7 @@ export default function Lodge3SkilletBundleReview() {
             href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
             className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
           >
-            → See My Victorinox 8" Chef&apos;s Knife Review
+            → See My Victorinox 8&quot; Chef&apos;s Knife Review
           </Link>
         </section>
 
