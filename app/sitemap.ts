@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://chefapprovedtools.com'
+  const baseUrl = 'https://www.chefapprovedtools.com'
   const currentDate = new Date().toISOString()
 
   // Static pages
