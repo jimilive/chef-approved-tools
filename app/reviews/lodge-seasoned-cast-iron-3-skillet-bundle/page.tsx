@@ -646,6 +646,21 @@ export default function Lodge3SkilletBundleReview() {
           </div>
         </section>
 
+        {/* Related Essential Tools */}
+        <section className="mb-8 bg-blue-50 p-8 rounded-xl">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Perfect Pairing: Professional Knives for Prep</h2>
+          <p className="text-gray-700 mb-4">
+            Cast iron skillets need great knives to prep the ingredients that go in them. My Victorinox 8-inch chef&apos;s knife
+            is the perfect prep companion - professional quality, budget-friendly, and built to last.
+          </p>
+          <Link
+            href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
+            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+          >
+            → See My Victorinox 8" Chef&apos;s Knife Review
+          </Link>
+        </section>
+
         {/* Bottom Line */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">The Bottom Line</h2>
