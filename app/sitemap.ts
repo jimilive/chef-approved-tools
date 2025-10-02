@@ -94,6 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'victorinox-4-inch-paring-knife',
     'victorinox-granton-edge-boning-knife',
     'victorinox-offset-bread-knife',
+    'victorinox-fibrox-pro-knife-set', // Buying guide for 4 essential Victorinox knives
     'oxo-good-grips-swivel-peeler',
     'oxo-good-grips-bench-scraper',
     'winco-heavy-duty-tongs',
