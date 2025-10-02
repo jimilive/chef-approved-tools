@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
@@ -216,6 +217,20 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
               </ul>
             </div>
           </div>
+        </section>
+
+        {/* Related Victorinox Knives */}
+        <section className="mb-12 bg-blue-50 p-8 rounded-xl">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Not Sure Which Victorinox Knife You Need?</h2>
+          <p className="text-gray-700 mb-4">
+            I use 4 essential Victorinox knives every day in my kitchen. Each one serves a specific purpose. Check out my complete buying guide to see which knives belong in your collection.
+          </p>
+          <Link
+            href="/reviews/victorinox-fibrox-pro-knife-set"
+            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+          >
+            → Read My 4 Essential Victorinox Knives Buying Guide
+          </Link>
         </section>
 
         {/* Buy Section */}
