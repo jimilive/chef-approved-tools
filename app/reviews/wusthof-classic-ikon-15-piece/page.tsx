@@ -91,6 +91,52 @@ export default function WusthofClassicIkonReview() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Breadcrumbs */}
+      <nav className="bg-white border-b border-gray-200 py-3">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ol className="flex space-x-2 text-sm text-gray-500">
+            {breadcrumbs.map((crumb, index) => (
+              <li key={crumb.name} className="flex items-center">
+                {index > 0 && <span className="mr-2">/</span>}
+                {index === breadcrumbs.length - 1 ? (
+                  <span className="text-gray-900 font-medium">{crumb.name}</span>
+                ) : (
+                  <Link href={crumb.url} className="hover:text-orange-700 transition-colors">
+                    {crumb.name}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ol>
+        </div>
+      </nav>
+
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Header Section */}
+        <header className="mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
+            WÜSTHOF Classic IKON 16-Piece: The German Knife Set That Equipped Our Entire Kitchen
+          </h1>
+
+          {/* Author & Rating */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                <span className="text-xl">👨‍🍳</span>
+              </div>
+              <div>
+                <p className="font-semibold text-slate-900">Scott Bradley</p>
+                <p className="text-sm text-slate-600">Professional Chef • 40 Years Experience Since Age 15</p>
+              </div>
+            </div>
+
+            {/* Rating */}
+            <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-orange-700 mb-1">{productData.expertRating}/5</div>
+                <div className="flex justify-center text-yellow-400 mb-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className={`w-4 h-4 ${i < Math.floor(productData.expertRating) ? 'fill-current' : ''}`} />
                   ))}
                 </div>
                 <div className="text-xs text-slate-600">Chef Approved Rating</div>
