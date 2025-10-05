@@ -223,14 +223,8 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
         <section className="mb-12 bg-blue-50 p-8 rounded-xl">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">Not Sure Which Victorinox Knife You Need?</h2>
           <p className="text-gray-700 mb-4">
-            I use 4 essential Victorinox knives every day in my kitchen. Each one serves a specific purpose. Check out my complete buying guide to see which knives belong in your collection.
+            I use 4 essential Victorinox knives every day in my kitchen. Each one serves a specific purpose - the 8" and 10" chef's knives, the offset bread knife, and the Granton edge boning knife.
           </p>
-          <Link
-            href="/reviews/victorinox-fibrox-pro-knife-set"
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
-          >
-            → Read My 4 Essential Victorinox Knives Buying Guide
-          </Link>
         </section>
 
         {/* Buy Section */}
@@ -244,7 +238,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://www.amazon.com/Victorinox-Boning-Curved-Granton-Fibrox/dp/B000IXHGG0?tag=chefapprovedt-20"
+              href="https://amzn.to/4pUDed1"
               target="_blank"
               rel="noopener noreferrer sponsored nofollow"
               className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"

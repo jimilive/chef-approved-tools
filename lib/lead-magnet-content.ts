@@ -10,77 +10,77 @@ export const leadMagnetContent = {
     {
       name: "Victorinox Fibrox Pro 10\" Chef's Knife",
       price: "$50",
-      amazonUrl: "https://www.amazon.com/Victorinox-Inch-Fibrox-Chefs-Knife/dp/B0000CF8YO?tag=chefapprovedt-20",
+      amazonUrl: "https://amzn.to/4o6pPwW",
       why: "The longer blade is perfect for larger cuts and if you have bigger hands. I keep both sizes.",
       story: "This is the knife I grab for breaking down proteins and chopping larger vegetables. The extra 2 inches makes a real difference when you're working fast."
     },
     {
       name: "Victorinox Fibrox Pro 8\" Chef's Knife",
       price: "$45",
-      amazonUrl: "https://www.amazon.com/Victorinox-47520-8-Chefs-Knife/dp/B0011FEIL0?tag=chefapprovedt-20",
+      amazonUrl: "https://amzn.to/4bIa2lg",
       why: "More maneuverable for precise cuts. Perfect for most home cooking tasks.",
       story: "This is the workhorse. 90% of my knife work happens with this 8-inch. It's balanced, sharp, and never lets me down."
     },
     {
       name: "Victorinox 4\" Paring Knife",
       price: "$12",
-      amazonUrl: "https://www.amazon.com/Victorinox-4-Inch-Classic-Paring-Straight/dp/B005LRYE36?tag=chefapprovedt-20",
+      amazonUrl: "https://amzn.to/4gVm0Le",
       why: "Essential for detailed work - peeling, trimming, deveining shrimp.",
       story: "You can't do precision work with a chef's knife. This little guy handles everything from garlic to strawberries."
     },
     {
       name: "Victorinox Granton Edge Boning Knife",
       price: "$35",
-      amazonUrl: "https://www.amazon.com/Victorinox-Boning-Curved-Granton-Fibrox/dp/B000IXHGG0?tag=chefapprovedt-20",
+      amazonUrl: "https://amzn.to/4pUDed1",
       why: "Flexible blade gets close to bones. Also great for filleting fish.",
       story: "Breaking down a whole chicken takes 3 minutes with this knife. The granton edge prevents sticking."
     },
     {
       name: "Victorinox Offset Bread Knife",
       price: "$48",
-      amazonUrl: "https://www.amazon.com/Victorinox-Forschner-Offset-Bread-Knife/dp/B00K85WD98?tag=chefapprovedt-20",
+      amazonUrl: "https://amzn.to/4nAIR4F",
       why: "Offset handle keeps knuckles off the cutting board. Serrated edge never needs sharpening.",
       story: "Bread, tomatoes, cakes - anything with a delicate exterior. The offset design is a game-changer for comfort."
     },
     {
       name: "OXO Good Grips Swivel Peeler",
       price: "$10",
-      amazonUrl: "https://www.amazon.com/OXO-Good-Grips-Swivel-Peeler/dp/B00004OCIP?tag=chefapprovedt-20",
+      amazonUrl: "https://amzn.to/4nLKDkf",
       why: "Comfortable grip, sharp blade, swivels to follow contours.",
       story: "I've tried every peeler out there. This is the one. It just works, day after day, year after year."
     },
     {
       name: "OXO Good Grips Bench Scraper",
       price: "$13",
-      amazonUrl: "https://www.amazon.com/OXO-Multi-purpose-Stainless-Scraper-Chopper/dp/B00004OCNJ?tag=chefapprovedt-20",
+      amazonUrl: "https://amzn.to/4Y5MepL",
       why: "Moves chopped ingredients, scrapes dough, cleans cutting boards.",
       story: "Most underrated tool in any kitchen. Once you start using one, you'll wonder how you lived without it."
     },
     {
       name: "Winco Heavy Duty Tongs (12\")",
       price: "$8",
-      amazonUrl: "https://www.amazon.com/Winco-UT-12HT-Heavyweight-Stainless-Utility/dp/B001CDVN0U?tag=chefapprovedt-20",
+      amazonUrl: "https://amzn.to/4n0pWIy",
       why: "Restaurant-grade tongs at a fraction of the price. Proper spring tension.",
       story: "These are the exact tongs I used in every restaurant kitchen. Strong, reliable, dishwasher-safe."
     },
     {
       name: "Benriner Large Mandoline",
       price: "$40",
-      amazonUrl: "https://www.amazon.com/Benriner-120-Almond-Jumbo-Slicer/dp/B01CP2PBN6?tag=chefapprovedt-20",
+      amazonUrl: "https://amzn.to/3kBAukM",
       why: "Professional consistency for slicing. Adjustable thickness.",
       story: "Perfect potato gratin every time. Consistent slices mean even cooking. Just watch your fingers!"
     },
     {
       name: "Gold Textiles Restaurant Bar Mops (12-pack)",
       price: "$25",
-      amazonUrl: "https://www.amazon.com/gp/product/B01N5DOCMO?tag=chefapprovedt-20",
+      amazonUrl: "https://amzn.to/4hQm5J2",
       why: "Absorbent, durable, machine washable. These are what restaurants actually use.",
       story: "Forget fancy kitchen towels. These are what every professional kitchen uses. They last forever and actually dry things."
     },
     {
       name: "Epicurean Kitchen Cutting Board (17.5\" × 13\")",
       price: "$35",
-      amazonUrl: "https://www.amazon.com/Epicurean-Kitchen-Cutting-Board-Natural/dp/B0008221B6?tag=chefapprovedt-20",
+      amazonUrl: "https://amzn.to/4kLtMa7",
       why: "Dishwasher-safe, knife-friendly, won't harbor bacteria like wood.",
       story: "I've used wooden boards for decades. These are better. Period. Dishwasher-safe changes everything."
     }

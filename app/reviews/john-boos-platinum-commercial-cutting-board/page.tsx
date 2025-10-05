@@ -36,7 +36,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://www.amazon.com/John-Boos-RA03-Reversible-Cutting/dp/B00063QBDQ?crid=2VOLZ5W300FT8&dib=eyJ2IjoiMSJ9.oHlaqJmmUWoeHQKeclVlu8BpgsXEwYtBdrd33lizo88qhzsZjqmavyRlU-n159DdRT6MKk2MaanVdAfwffVpv6J3EbZwTlEFPT83TelOwz4NwbKXg55P6eDbRBVlEwqQd6qCEdJp63O2oQM5ra4XIG6ldrnP7jOczvOegenaNlQCRQ6zusBnPe2weesHHJtR2QpFLBnjLQMyQJKSFeUnEUdJ_mfTGUo_-7RdIMj9XlU7Mc41VDkQL5mxG5aaN0uYcLVU0BhH_cut-RID459g5yrdQN2QoMB7R-FLzw61-Kk.gVcg1YEzO2Xlp-O9rA_H1y-j1oMwjSf7tTY0y3IG3bI&dib_tag=se&keywords=john%2Bboos&qid=1758759470&s=home-garden&sprefix=john%2Bboos%2Cgarden%2C193&sr=1-16&th=1&linkCode=ll1&tag=chefapprovedt-20&linkId=0e014da56db954555ff249e2e2eef15e&language=en_US&ref_=as_li_ss_tl"
+      url: "https://amzn.to/4sB0Ymv"
     },
     {
       retailer: "John Boos Direct",

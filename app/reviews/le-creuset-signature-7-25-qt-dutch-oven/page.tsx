@@ -39,7 +39,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://www.amazon.com/Creuset-Signature-Enameled-Cast-Iron-Stainless/dp/B00VA5HEQC?crid=35ZIWMJSEDDJJ&dib=eyJ2IjoiMSJ9.ZT080DnW-b0kkuMAgotr2Ilg8TCG_eUcd21fcWl9MMyfmyPNuESdnA6PGrrxI3H5QB2uQDkoDX2wDfGs2iWk10aGFBpkI0cj7oc9qKjeNsTiVJr7o6FBhCFSUccXbRACpBds9FMJDOBbjxmM9A69nmqpi-aQVjxnZelUsEYiK_i2FWdTXEWkI-6xBGhNK2TDESrMj-RJOgQzUbxMkiwXKvLuZwsaUO_BFxMJTsi0zM6iy9Pu-DMk1YCUeF7eC9aumybquXC230Rin3isaRcEUP4Q7IWtWqhkFK1DYcetilo.iK_9Ww1mNCq_b-Me9p1KCSCJaZXJIqaixXzQD_vrA3k&dib_tag=se&keywords=le%2Bcreuset%2B7.25&qid=1758759390&s=home-garden&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=le%2Bcruset%2B7.2%2Cgarden%2C188&sr=1-1&th=1&linkCode=ll1&tag=chefapprovedt-20&linkId=586742eae5b56226ca8c9b42d167a33f&language=en_US&ref_=as_li_ss_tl"
+      url: "https://amzn.to/4Ba0OuJ"
     },
     {
       retailer: "Williams Sonoma",

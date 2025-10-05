@@ -80,7 +80,7 @@ export default function BestKnifeForCuttingMeat() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
             <a
-              href="https://www.amazon.com/Victorinox-Cutlery-Flexible-Granton-Fibrox/dp/B0019WXPQY?tag=chefapprovedt-20"
+              href="https://amzn.to/4pUDed1"
               target="_blank"
               rel="nofollow sponsored noopener"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
@@ -314,7 +314,7 @@ export default function BestKnifeForCuttingMeat() {
             in professional cutlery. I've used mine daily for 15+ years and it's still going strong.
           </p>
           <a
-            href="https://www.amazon.com/Victorinox-Cutlery-Flexible-Granton-Fibrox/dp/B0019WXPQY?tag=chefapprovedt-20"
+            href="https://amzn.to/4pUDed1"
             target="_blank"
             rel="nofollow sponsored noopener"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-orange-700 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
@@ -334,13 +334,6 @@ export default function BestKnifeForCuttingMeat() {
             >
               <h3 className="font-bold text-slate-900 mb-2">Best Budget Chef Knife</h3>
               <p className="text-sm text-slate-600">The $40 chef's knife I've used for 20+ years in professional kitchens.</p>
-            </Link>
-            <Link
-              href="/reviews/victorinox-fibrox-pro-knife-set"
-              className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
-            >
-              <h3 className="font-bold text-slate-900 mb-2">Victorinox Knife Set Review</h3>
-              <p className="text-sm text-slate-600">Complete review of the professional knife set including multiple sizes.</p>
             </Link>
             <Link
               href="/guides/knife-care"

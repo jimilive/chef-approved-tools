@@ -79,7 +79,7 @@ export default function BestBudgetChefKnife() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
             <a
-              href="https://www.amazon.com/Victorinox-Fibrox-Chefs-Knife-8-Inch/dp/B000638D32?tag=chefapprovedt-20"
+              href="https://amzn.to/4bIa2lg"
               target="_blank"
               rel="nofollow sponsored noopener"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
@@ -261,7 +261,7 @@ export default function BestBudgetChefKnife() {
             this is the knife to buy.
           </p>
           <a
-            href="https://www.amazon.com/Victorinox-Fibrox-Chefs-Knife-8-Inch/dp/B000638D32?tag=chefapprovedt-20"
+            href="https://amzn.to/4bIa2lg"
             target="_blank"
             rel="nofollow sponsored noopener"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-orange-700 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
@@ -275,13 +275,6 @@ export default function BestBudgetChefKnife() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Guides & Reviews</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link
-              href="/reviews/victorinox-fibrox-pro-knife-set"
-              className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
-            >
-              <h3 className="font-bold text-slate-900 mb-2">Victorinox Fibrox Pro Set Review</h3>
-              <p className="text-sm text-slate-600">Complete review of the full knife set including chef's knife, bread knife, and more.</p>
-            </Link>
             <Link
               href="/guides/knife-care"
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"

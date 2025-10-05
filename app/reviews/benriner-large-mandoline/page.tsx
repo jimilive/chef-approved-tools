@@ -232,7 +232,7 @@ export default function BenrinerLargeMandolineReview() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://www.amazon.com/Benriner-120-Almond-Jumbo-Slicer/dp/B01CP2PBN6?tag=chefapprovedt-20"
+              href="https://amzn.to/3kBAukM"
               target="_blank"
               rel="noopener noreferrer sponsored nofollow"
               className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"

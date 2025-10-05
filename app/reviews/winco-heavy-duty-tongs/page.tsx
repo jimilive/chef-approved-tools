@@ -229,7 +229,7 @@ export default function WincoHeavyDutyTongsReview() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://www.amazon.com/Winco-UT-12HT-Heavyweight-Stainless-Utility/dp/B001CDVN0U?tag=chefapprovedt-20"
+              href="https://amzn.to/4n0pWIy"
               target="_blank"
               rel="noopener noreferrer sponsored nofollow"
               className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"

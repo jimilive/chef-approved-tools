@@ -40,7 +40,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://www.amazon.com/Vitamix-Blender-Professional-Grade-Container-Black/dp/B008H4SLV6?crid=2Z2Y21D591EJY&dib=eyJ2IjoiMSJ9.rkki0TRzy1x7_5WOynWt1razLAdZooaRBQB6n0IK8rDYpctoNG6dffF0MqQopPfiiwFHqq5UknFpFG0Qk-1_5Fkm3HChkUpAS0fBN67dAbYPVsP-QmHnUI8vHaBGP5oV7MKGcfAZY5Ej8tEbb-KMyQMtdErcto_ze67JuxWGHtmXB0j0tFkRs69-9AxQRPdCbuKmDZvA1mO1fr92nczgqzr0LfaQC-N2HKuRGCQ-q3OCEHhmBmOr8CDv6AMabzwQ1yeasmB_oUhirk-TVxFk_d2gEdOn0F7GxQWKbmE76BQ.5lvX46y3wVdMmOuqXXRLJKlZ72zaxeWksoxSC3FSBvs&dib_tag=se&keywords=vitamix%2B5200&qid=1758759193&s=home-garden&sprefix=vitamix%2B5200%2Cgarden%2C192&sr=1-4&th=1&linkCode=ll1&tag=chefapprovedt-20&linkId=a6a414aea204d57d2363ad565dbdd7f8&language=en_US&ref_=as_li_ss_tl"
+      url: "https://amzn.to/4e6GceC"
     },
     {
       retailer: "Vitamix Direct",

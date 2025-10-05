@@ -18,7 +18,7 @@ export const sampleProducts: ProductCollection = {
       
       affiliateLinks: [
         {
-          url: 'https://www.amazon.com/dp/B00009ZK08?tag=chefapprovedt-20',
+          url: 'https://amzn.to/3KtlPYS',
           merchant: 'amazon',
           tag: 'chefapprovedt-20',
           lastChecked: new Date().toISOString()
@@ -110,7 +110,7 @@ export const sampleProducts: ProductCollection = {
       
       affiliateLinks: [
         {
-          url: 'https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20',
+          url: 'https://amzn.to/4bIa2lg',
           merchant: 'amazon',
           tag: 'chefapprovedt-20',
           lastChecked: new Date().toISOString()
@@ -291,7 +291,7 @@ export const sampleProducts: ProductCollection = {
       
       affiliateLinks: [
         {
-          url: 'https://www.amazon.com/dp/B008H4SLV6?tag=chefapprovedt-20',
+          url: 'https://amzn.to/4e6GceC',
           merchant: 'amazon',
           tag: 'chefapprovedt-20',
           lastChecked: new Date().toISOString()

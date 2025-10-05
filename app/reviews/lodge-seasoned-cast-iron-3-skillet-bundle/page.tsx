@@ -40,7 +40,7 @@ const productData = {
     },
     {
       retailer: "Amazon",
-      url: "https://www.amazon.com/Lodge-L3SKT-Seasoned-Cast-Iron/dp/B07RNBR6L5?tag=chefapprovedt-20",
+      url: "https://amzn.to/4BgVzuC",
       price: 95
     },
     {

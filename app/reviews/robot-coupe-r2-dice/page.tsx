@@ -40,7 +40,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://www.amazon.com/Robot-Coupe-Continuous-Combination-Polycarbonate/dp/B002ON517I?crid=2QOBM5JGTZYUO&dib=eyJ2IjoiMSJ9.JPzNqitTjFynm0t5NBnPx1ERozTKiU6puK9iK7K6edk9fbjF9I3gEw7N8LE6X_6lg9U-IcAH8Iw7gZ4yTgB0C00xMu0ciUpSLqJK8B9DhJc_HZiErLD740mSl6fCQcByC79utWf6OFa7c3tHKHmn8EktN5RDH2FgzYOLePMtjRKm-rIybFB6hyWVW823rtaMzWxU1e5BCQoXincrPJlcYukKTNrOnnNLhEPnYy4ONOAF0BckcQUjokR_iBEIYzzmj2YJUEHTeb2nhkynVzudXD3V8FZEvDOQXPuq9lOI_Yo.Z9Vl8UlwIDJtD1femSlnb1WfwLrWO6BHlpSdHAlZVvU&dib_tag=se&keywords=robot%2Bcoupe%2Br2&qid=1758759024&s=home-garden&sprefix=robot%2Bcoupe%2Br2%2Cgarden%2C176&sr=1-6&th=1&linkCode=ll1&tag=chefapprovedt-20&linkId=ecb18944f661c6dab2e8185fa38679e7&language=en_US&ref_=as_li_ss_tl"
+      url: "https://amzn.to/4gVgENj"
     },
     {
       retailer: "WebstaurantStore",

@@ -42,7 +42,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://www.amazon.com/Wusthof-Classic-Piece-Knife-Acacia/dp/B08NFC31K7?tag=chefapprovedt-20"
+      url: "https://amzn.to/3KtlPYS"
     },
     {
       retailer: "Williams Sonoma",
