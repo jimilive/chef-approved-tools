@@ -24,6 +24,37 @@ export const sampleProducts: ProductCollection = {
           lastChecked: new Date().toISOString()
         }
       ],
+      vendors: [
+        {
+          name: 'Amazon',
+          url: 'https://amzn.to/3KtlPYS',
+          price: 149.95,
+          originalPrice: 179.95,
+          merchant: 'amazon',
+          tag: 'chefapprovedt-20',
+          inStock: true,
+          lastChecked: new Date().toISOString(),
+          commissionRate: 4.5
+        },
+        {
+          name: 'Williams Sonoma',
+          url: '#', // Replace with actual ShareASale link
+          price: 169.95,
+          merchant: 'williams-sonoma',
+          inStock: true,
+          lastChecked: new Date().toISOString(),
+          commissionRate: 8.0
+        },
+        {
+          name: 'Sur La Table',
+          url: '#', // Replace with actual affiliate link
+          price: 159.95,
+          merchant: 'sur-la-table',
+          inStock: true,
+          lastChecked: new Date().toISOString(),
+          commissionRate: 6.0
+        }
+      ],
       primaryAffiliate: 'amazon',
       
       reviews: {
@@ -103,17 +134,47 @@ export const sampleProducts: ProductCollection = {
       model: '5.2063.20',
       category: 'knives',
       subcategory: 'chef-knives',
-      
-      
+
+
       inStock: true,
       availability: 'In stock',
-      
+
       affiliateLinks: [
         {
           url: 'https://amzn.to/4bIa2lg',
           merchant: 'amazon',
           tag: 'chefapprovedt-20',
           lastChecked: new Date().toISOString()
+        }
+      ],
+      vendors: [
+        {
+          name: 'Amazon',
+          url: 'https://amzn.to/4bIa2lg',
+          price: 45.99,
+          merchant: 'amazon',
+          tag: 'chefapprovedt-20',
+          inStock: true,
+          lastChecked: new Date().toISOString(),
+          commissionRate: 4.5
+        },
+        {
+          name: 'Williams Sonoma',
+          url: '#', // Replace with actual ShareASale link
+          price: 49.95,
+          merchant: 'williams-sonoma',
+          inStock: true,
+          lastChecked: new Date().toISOString(),
+          commissionRate: 8.0
+        },
+        {
+          name: 'Sur La Table',
+          url: '#', // Replace with actual affiliate link
+          price: 47.95,
+          merchant: 'sur-la-table',
+          inStock: true,
+          lastChecked: new Date().toISOString(),
+          commissionRate: 6.0
         }
       ],
       primaryAffiliate: 'amazon',

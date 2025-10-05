@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { TrendingDown, TrendingUp, DollarSign, ExternalLink, Bell } from 'lucide-react'
+import { Vendor } from '@/types/product'
 
 interface PriceRange {
   min: number
@@ -14,13 +15,15 @@ interface PriceDisplayProps {
   priceRange: PriceRange
   dealStatus?: 'sale' | 'normal' | 'high' | 'trending'
   dealText?: string
-  affiliateLinks: {
+  affiliateLinks?: {
     retailer: string
     url: string
     price?: number
     originalPrice?: number
   }[]
+  vendors?: Vendor[] // New multi-vendor support
   lastUpdated?: string
+  ctaText?: string // Customizable CTA text for A/B testing
 }
 
 export default function PriceDisplay({
@@ -29,9 +32,21 @@ export default function PriceDisplay({
   dealStatus = 'normal',
   dealText,
   affiliateLinks,
-  lastUpdated
+  vendors,
+  lastUpdated,
+  ctaText = 'Check Current Price' // Default CTA text
 }: PriceDisplayProps) {
   const [showPriceAlert, setShowPriceAlert] = useState(false)
+
+  // Use vendors if provided, otherwise fall back to affiliateLinks
+  const displayVendors: Vendor[] = vendors || (affiliateLinks?.map(link => ({
+    name: link.retailer,
+    url: link.url,
+    price: link.price,
+    originalPrice: link.originalPrice,
+    merchant: 'other' as const,
+    lastChecked: new Date().toISOString()
+  })) || [])
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -105,33 +120,55 @@ export default function PriceDisplay({
 
       {/* Retailer Links */}
       <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-gray-700">Check Current Prices:</h4>
+        <h4 className="text-sm font-semibold text-gray-700">Compare Prices Across Retailers:</h4>
         <div className="grid gap-2">
-          {affiliateLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
-              className="flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:border-orange-300 hover:bg-orange-50 transition-colors group"
-            >
-              <div className="flex items-center gap-3">
-                <span className="font-medium text-gray-900">{link.retailer}</span>
-                {link.originalPrice && link.price && link.price < link.originalPrice && (
-                  <div className="flex items-center gap-1">
-                    <span className="text-xs line-through text-gray-500">
-                      {formatPrice(link.originalPrice)}
-                    </span>
-                    <span className="text-sm font-semibold text-green-600">
-                      {formatPrice(link.price)}
-                    </span>
-                  </div>
-                )}
-              </div>
-              <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-orange-600" />
-            </a>
-          ))}
+          {displayVendors.map((vendor, index) => {
+            const hasSavings = vendor.originalPrice && vendor.price && vendor.price < vendor.originalPrice
+            const savingsPercent = hasSavings
+              ? Math.round(((vendor.originalPrice! - vendor.price!) / vendor.originalPrice!) * 100)
+              : 0
+
+            return (
+              <a
+                key={index}
+                href={vendor.url}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:border-orange-300 hover:bg-orange-50 transition-colors group"
+              >
+                <div className="flex items-center gap-3 flex-1">
+                  <span className="font-medium text-gray-900 min-w-[120px]">{vendor.name}</span>
+                  {vendor.price ? (
+                    <div className="flex items-center gap-2 flex-1">
+                      {hasSavings && (
+                        <span className="text-xs line-through text-gray-500">
+                          {formatPrice(vendor.originalPrice!)}
+                        </span>
+                      )}
+                      <span className={`text-sm font-semibold ${hasSavings ? 'text-green-600' : 'text-gray-900'}`}>
+                        {formatPrice(vendor.price)}
+                      </span>
+                      {hasSavings && (
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full font-medium">
+                          Save {savingsPercent}%
+                        </span>
+                      )}
+                    </div>
+                  ) : (
+                    <span className="text-sm text-gray-600">{ctaText}</span>
+                  )}
+                  {vendor.inStock === false && (
+                    <span className="text-xs text-red-600 font-medium">Out of Stock</span>
+                  )}
+                </div>
+                <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-orange-600 flex-shrink-0" />
+              </a>
+            )
+          })}
         </div>
+        <p className="text-xs text-gray-500 mt-2">
+          💡 Comparing prices helps you find the best deal and supports our site at no extra cost
+        </p>
       </div>
 
       {/* Price Alert Signup */}

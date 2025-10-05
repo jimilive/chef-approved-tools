@@ -12,6 +12,18 @@ export interface PriceInfo {
   disclaimer?: string;
 }
 
+export interface Vendor {
+  name: string;
+  url: string;
+  price?: number;
+  originalPrice?: number;
+  merchant: 'amazon' | 'walmart' | 'target' | 'williams-sonoma' | 'sur-la-table' | 'other';
+  tag?: string;
+  inStock?: boolean;
+  lastChecked: string;
+  commissionRate?: number; // For tracking which affiliates pay better
+}
+
 export interface AffiliateLink {
   url: string;
   merchant: 'amazon' | 'walmart' | 'target' | 'other';
@@ -48,6 +60,7 @@ export interface Product {
   
   // Affiliate data
   affiliateLinks: AffiliateLink[];
+  vendors?: Vendor[]; // Multi-vendor support for price comparison
   primaryAffiliate: 'amazon' | 'walmart' | 'target';
   
   // Reviews and ratings

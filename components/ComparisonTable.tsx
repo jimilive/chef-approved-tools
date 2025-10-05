@@ -10,9 +10,10 @@ import { formatPrice } from '@/utils/formatters'
 interface ComparisonTableProps {
   products: Product[]
   title?: string
+  ctaText?: string // Customizable CTA text for A/B testing
 }
 
-export default function ComparisonTable({ products, title }: ComparisonTableProps) {
+export default function ComparisonTable({ products, title, ctaText = 'Check Price on Amazon' }: ComparisonTableProps) {
   const [expandedSpecs, setExpandedSpecs] = useState(false)
   
   if (products.length === 0) {
@@ -45,8 +46,132 @@ export default function ComparisonTable({ products, title }: ComparisonTableProp
           <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
         </div>
       )}
-      
-      <div className="overflow-x-auto">
+
+      {/* Mobile Card Layout */}
+      <div className="md:hidden">
+        <div className="divide-y divide-gray-200">
+          {products.map((product) => {
+            const isBestValue = product.id === bestValue.id
+            const isTopRated = product.id === topRated.id
+            const isBudgetPick = product.id === budgetPick.id
+
+            return (
+              <div key={product.id} className={`p-4 ${isBestValue ? 'bg-green-50' : isTopRated ? 'bg-blue-50' : ''}`}>
+                {/* Product Header */}
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="relative w-20 h-20 flex-shrink-0">
+                    <Image
+                      src={product.images.primary}
+                      alt={product.images.alt}
+                      fill
+                      sizes="80px"
+                      className="object-contain rounded-lg"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <Link
+                      href={`/reviews/${product.slug}`}
+                      className="font-medium text-gray-900 hover:text-brand-600 transition-colors line-clamp-2"
+                    >
+                      {product.name}
+                    </Link>
+                    <div className="text-sm text-gray-500 mt-1">{product.brand}</div>
+                    <div className="flex flex-wrap gap-1 mt-2">
+                      {isBestValue && (
+                        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
+                          BEST VALUE
+                        </span>
+                      )}
+                      {isTopRated && (
+                        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                          TOP RATED
+                        </span>
+                      )}
+                      {isBudgetPick && (
+                        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-800">
+                          BUDGET PICK
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Rating */}
+                <div className="mb-3">
+                  <div className="text-xs font-semibold text-gray-600 mb-1">Rating</div>
+                  <StarRating rating={product.reviews.rating} size="sm" showNumeric />
+                  <div className="text-xs text-gray-500 mt-1">
+                    {product.reviews.count.toLocaleString()} reviews
+                  </div>
+                </div>
+
+                {/* Best For */}
+                <div className="mb-3">
+                  <div className="text-xs font-semibold text-gray-600 mb-1">Best For</div>
+                  <div className="text-sm text-gray-700">
+                    {product.bestFor?.[0] || 'General use'}
+                  </div>
+                </div>
+
+                {/* Price */}
+                <div className="mb-3">
+                  <div className="text-xs font-semibold text-gray-600 mb-1">Price</div>
+                  {product.price ? (
+                    <>
+                      <div className="font-semibold text-gray-900">
+                        {formatPrice(product.price.current, product.price.currency)}
+                      </div>
+                      {product.price.original && product.price.original > product.price.current && (
+                        <div className="text-sm text-gray-500 line-through">
+                          {formatPrice(product.price.original, product.price.currency)}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <div className="text-sm text-gray-500">Price not available</div>
+                  )}
+                </div>
+
+                {/* Key Features */}
+                <div className="mb-4">
+                  <div className="text-xs font-semibold text-gray-600 mb-1">Key Features</div>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    {product.pros.slice(0, 2).map((pro, idx) => (
+                      <li key={idx} className="flex items-start gap-1">
+                        <svg className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span>{pro}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* CTAs */}
+                <div className="flex flex-col gap-2">
+                  <a
+                    href={product.affiliateLinks[0].url}
+                    target="_blank"
+                    rel="sponsored nofollow noopener noreferrer"
+                    className="inline-flex items-center justify-center px-4 py-3 bg-amazon hover:bg-amazon-dark text-white text-sm font-medium rounded-lg transition-colors"
+                  >
+                    {ctaText}
+                  </a>
+                  <Link
+                    href={`/reviews/${product.slug}`}
+                    className="inline-flex items-center justify-center px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium rounded-lg transition-colors"
+                  >
+                    Read Full Review
+                  </Link>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+
+      {/* Desktop Table Layout */}
+      <div className="hidden md:block overflow-x-auto">
         <table className="w-full min-w-[800px]">
           <thead>
             <tr className="bg-gray-50 border-b border-gray-200">
@@ -164,9 +289,9 @@ export default function ComparisonTable({ products, title }: ComparisonTableProp
                         href={product.affiliateLinks[0].url}
                         target="_blank"
                         rel="sponsored nofollow noopener noreferrer"
-                        className="inline-flex items-center justify-center px-4 py-2 bg-amazon hover:bg-amazon-dark text-white text-sm font-medium rounded-lg transition-colors"
+                        className="inline-flex items-center justify-center px-4 py-2 bg-amazon hover:bg-amazon-dark text-white text-sm font-medium rounded-lg transition-colors whitespace-nowrap"
                       >
-                        View Price*
+                        {ctaText}
                       </a>
                       <Link
                         href={`/reviews/${product.slug}`}
