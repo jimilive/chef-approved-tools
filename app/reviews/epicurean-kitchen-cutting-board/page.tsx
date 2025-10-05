@@ -3,8 +3,8 @@ import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
-  title: 'Epicurean Kitchen Cutting Board Review | 40 Years Professional Use',
-  description: 'Professional chef review of the Epicurean kitchen cutting board after 40 years of restaurant use. Dishwasher-safe and better than wood.',
+  title: 'Epicurean Kitchen Cutting Board Review | 21+ Years Professional Use',
+  description: 'Professional chef review of the Epicurean kitchen cutting board after 21+ years of professional cooking. Dishwasher-safe and better than wood.',
 }
 
 export default function EpicureanKitchenCuttingBoardReview() {
@@ -22,7 +22,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            Dishwasher-safe boards that are better than wood - tested through 40 years of professional cooking
+            Dishwasher-safe boards that are better than wood - tested through 21+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -54,7 +54,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking professionally, I thought I knew cutting boards. Wood or bamboo, hand-wash only,
+              After 40 years of cooking, I thought I knew cutting boards. Wood or bamboo, hand-wash only,
               oil regularly to prevent cracking. That was the gospel. Then I discovered Epicurean boards and everything
               changed.
             </p>
@@ -114,7 +114,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p className="font-semibold">
-              After decades in professional kitchens and now at home, I&apos;ve used this board to:
+              After decades in professional kitchens, I used this board for:
             </p>
 
             <ul className="space-y-2 mt-4">
@@ -243,7 +243,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 40 years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 21+ years of professional cooking.
             If you want a truly sanitary, maintenance-free cutting board, this is it.
           </p>
 

@@ -7,119 +7,6 @@ export const metadata = {
   keywords: ['kitchen equipment reviews', 'professional chef reviews', 'restaurant equipment', 'commercial kitchen tools']
 }
 
-const myDailyTools = [
-  {
-    slug: 'victorinox-fibrox-10-inch-chefs-knife',
-    title: "Victorinox Fibrox Pro 10\" Chef's Knife",
-    category: 'Knives',
-    price: 50,
-    image: '/logo.png',
-    excerpt: "The longer blade for larger cuts and bigger hands - 40 years of professional use.",
-    badge: 'Daily Use',
-    testDuration: '40 years'
-  },
-  {
-    slug: 'victorinox-fibrox-8-inch-chefs-knife',
-    title: "Victorinox Fibrox Pro 8\" Chef's Knife",
-    category: 'Knives',
-    price: 45,
-    image: '/logo.png',
-    excerpt: "Perfect all-purpose chef's knife - the workhorse of every professional kitchen.",
-    badge: 'Daily Use',
-    testDuration: '40 years'
-  },
-  {
-    slug: 'victorinox-4-inch-paring-knife',
-    title: "Victorinox 4\" Paring Knife",
-    category: 'Knives',
-    price: 12,
-    image: '/logo.png',
-    excerpt: "Precision paring knife for detailed work - the exact knife I've used for decades.",
-    badge: 'Daily Use',
-    testDuration: '40 years'
-  },
-  {
-    slug: 'victorinox-granton-edge-boning-knife',
-    title: "Victorinox 6\" Granton Edge Boning Knife",
-    category: 'Knives',
-    price: 35,
-    image: '/logo.png',
-    excerpt: "Professional boning knife for breaking down proteins with precision.",
-    badge: 'Daily Use',
-    testDuration: '40 years'
-  },
-  {
-    slug: 'victorinox-offset-bread-knife',
-    title: "Victorinox 9\" Offset Bread Knife",
-    category: 'Knives',
-    price: 50,
-    image: '/logo.png',
-    excerpt: "Offset serrated knife for bread and tomatoes - superior knuckle clearance.",
-    badge: 'Daily Use',
-    testDuration: '40 years'
-  },
-  {
-    slug: 'oxo-good-grips-swivel-peeler',
-    title: 'OXO Good Grips Swivel Peeler',
-    category: 'Tools',
-    price: 10,
-    image: '/logo.png',
-    excerpt: "The peeler that actually lasts - sharp blade, comfortable grip, dishwasher-safe.",
-    badge: 'Daily Use',
-    testDuration: '40 years'
-  },
-  {
-    slug: 'oxo-good-grips-bench-scraper',
-    title: 'OXO Good Grips Bench Scraper',
-    category: 'Tools',
-    price: 13,
-    image: '/logo.png',
-    excerpt: "Most underrated kitchen tool - transfers ingredients, portions dough, cleans boards.",
-    badge: 'Daily Use',
-    testDuration: '40 years'
-  },
-  {
-    slug: 'winco-heavy-duty-tongs',
-    title: 'Winco Heavy Duty Tongs',
-    category: 'Tools',
-    price: 8,
-    image: '/logo.png',
-    excerpt: "Restaurant-grade tongs at budget price - the exact ones used in professional kitchens.",
-    badge: 'Daily Use',
-    testDuration: '40 years'
-  },
-  {
-    slug: 'benriner-large-mandoline',
-    title: 'Benriner Large Mandoline',
-    category: 'Tools',
-    price: 40,
-    image: '/logo.png',
-    excerpt: "Professional consistency for perfect slices - every gratin cooked evenly.",
-    badge: 'Daily Use',
-    testDuration: '40 years'
-  },
-  {
-    slug: 'gold-textiles-bar-mops',
-    title: 'Gold Textiles Restaurant Bar Mops',
-    category: 'Tools',
-    price: 25,
-    image: '/logo.png',
-    excerpt: "The towels restaurants actually use - absorbent, durable, dishwasher-safe.",
-    badge: 'Daily Use',
-    testDuration: '40 years'
-  },
-  {
-    slug: 'epicurean-kitchen-cutting-board',
-    title: 'Epicurean Kitchen Cutting Board',
-    category: 'Tools',
-    price: 35,
-    image: '/logo.png',
-    excerpt: "Dishwasher-safe board better than wood - truly sanitary and won't warp.",
-    badge: 'Daily Use',
-    testDuration: '40 years'
-  }
-]
-
 const featuredReviews = [
   {
     slug: 'wusthof-classic-ikon-15-piece',
@@ -190,6 +77,119 @@ const featuredReviews = [
     excerpt: 'Indestructible cast iron set that equipped our entire line. American-made durability.',
     badge: 'Best Value',
     testDuration: '5+ years'
+  }
+]
+
+const myDailyTools = [
+  {
+    slug: 'victorinox-fibrox-10-inch-chefs-knife',
+    title: "Victorinox Fibrox Pro 10\" Chef's Knife",
+    category: 'Knives',
+    price: 50,
+    image: '/logo.png',
+    excerpt: "The longer blade for larger cuts and bigger hands - 40 years of professional use.",
+    badge: 'Daily Use',
+    testDuration: '40 years'
+  },
+  {
+    slug: 'victorinox-offset-bread-knife',
+    title: "Victorinox 9\" Offset Bread Knife",
+    category: 'Knives',
+    price: 50,
+    image: '/logo.png',
+    excerpt: "Offset serrated knife for bread and tomatoes - superior knuckle clearance.",
+    badge: 'Daily Use',
+    testDuration: '40 years'
+  },
+  {
+    slug: 'victorinox-fibrox-8-inch-chefs-knife',
+    title: "Victorinox Fibrox Pro 8\" Chef's Knife",
+    category: 'Knives',
+    price: 45,
+    image: '/logo.png',
+    excerpt: "Perfect all-purpose chef's knife - the workhorse of every professional kitchen.",
+    badge: 'Daily Use',
+    testDuration: '40 years'
+  },
+  {
+    slug: 'benriner-large-mandoline',
+    title: 'Benriner Large Mandoline',
+    category: 'Tools',
+    price: 40,
+    image: '/logo.png',
+    excerpt: "Professional consistency for perfect slices - every gratin cooked evenly.",
+    badge: 'Daily Use',
+    testDuration: '40 years'
+  },
+  {
+    slug: 'victorinox-granton-edge-boning-knife',
+    title: "Victorinox 6\" Granton Edge Boning Knife",
+    category: 'Knives',
+    price: 35,
+    image: '/logo.png',
+    excerpt: "Professional boning knife for breaking down proteins with precision.",
+    badge: 'Daily Use',
+    testDuration: '40 years'
+  },
+  {
+    slug: 'epicurean-kitchen-cutting-board',
+    title: 'Epicurean Kitchen Cutting Board',
+    category: 'Tools',
+    price: 35,
+    image: '/logo.png',
+    excerpt: "Dishwasher-safe board better than wood - truly sanitary and won't warp.",
+    badge: 'Daily Use',
+    testDuration: '40 years'
+  },
+  {
+    slug: 'gold-textiles-bar-mops',
+    title: 'Gold Textiles Restaurant Bar Mops',
+    category: 'Tools',
+    price: 25,
+    image: '/logo.png',
+    excerpt: "The towels restaurants actually use - absorbent, durable, dishwasher-safe.",
+    badge: 'Daily Use',
+    testDuration: '40 years'
+  },
+  {
+    slug: 'oxo-good-grips-bench-scraper',
+    title: 'OXO Good Grips Bench Scraper',
+    category: 'Tools',
+    price: 13,
+    image: '/logo.png',
+    excerpt: "Most underrated kitchen tool - transfers ingredients, portions dough, cleans boards.",
+    badge: 'Daily Use',
+    testDuration: '40 years'
+  },
+  {
+    slug: 'victorinox-4-inch-paring-knife',
+    title: "Victorinox 4\" Paring Knife",
+    category: 'Knives',
+    price: 12,
+    image: '/logo.png',
+    excerpt: "Precision paring knife for detailed work - the exact knife I've used for decades.",
+    badge: 'Daily Use',
+    testDuration: '40 years'
+  },
+  {
+    slug: 'oxo-good-grips-swivel-peeler',
+    title: 'OXO Good Grips Swivel Peeler',
+    category: 'Tools',
+    price: 10,
+    image: '/logo.png',
+    excerpt: "The peeler that actually lasts - sharp blade, comfortable grip, dishwasher-safe.",
+    badge: 'Daily Use',
+    testDuration: '40 years'
+  },
+  {
+    slug: 'winco-heavy-duty-tongs',
+    title: 'Winco Heavy Duty Tongs',
+    category: 'Tools',
+    price: 8,
+    image: '/logo.png',
+    excerpt: "Restaurant-grade tongs at budget price - the exact ones used in professional kitchens.",
+    badge: 'Daily Use',
+    testDuration: '40 years'
   }
 ]
 

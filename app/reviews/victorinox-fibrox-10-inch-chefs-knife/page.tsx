@@ -4,8 +4,8 @@ import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
-  title: 'Victorinox Fibrox Pro 10" Chef\'s Knife Review | 40 Years Professional Use',
-  description: 'Professional chef review of the Victorinox Fibrox Pro 10-inch chef\'s knife after 40 years of restaurant use. The longer blade perfect for larger hands and bigger cuts.',
+  title: 'Victorinox Fibrox Pro 10" Chef\'s Knife Review | 21+ Years Professional Use',
+  description: 'Professional chef review of the Victorinox Fibrox Pro 10-inch chef\'s knife after 21+ years of professional cooking. The longer blade perfect for larger hands and bigger cuts.',
 }
 
 export default function VictorinoxFibrox10InchReview() {
@@ -23,7 +23,7 @@ export default function VictorinoxFibrox10InchReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The longer blade for bigger hands and larger cuts - tested through 40 years of professional cooking
+            The longer blade for bigger hands and larger cuts - tested through 21+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -74,7 +74,7 @@ export default function VictorinoxFibrox10InchReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking professionally, I keep both an 8&quot; and 10&quot; Victorinox chef&apos;s knife at home.
+              After 40 years of cooking, I keep both an 8&quot; and 10&quot; Victorinox chef&apos;s knife at home.
               The 10&quot; gets grabbed when I&apos;m breaking down whole chickens, portioning beef, or working through a pile
               of vegetables for meal prep.
             </p>
@@ -273,7 +273,7 @@ export default function VictorinoxFibrox10InchReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 40 years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 21+ years of professional cooking.
             At around $50, it&apos;s the same quality as knives costing $200+.
           </p>
 

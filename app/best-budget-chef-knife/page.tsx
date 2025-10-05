@@ -7,11 +7,11 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata = {
   title: "Best Budget Chef Knife 2025: Victorinox Fibrox 8\" | Chef Approved",
-  description: "Professional chef reveals the best budget chef knife after 20+ years in kitchens. Victorinox Fibrox 8\" offers pro-level performance at under $50. NSF certified and dishwasher safe.",
+  description: "Professional chef reveals the best budget chef knife after 40 years of cooking. Victorinox Fibrox 8\" offers pro-level performance at under $50. NSF certified and dishwasher safe.",
   keywords: "best budget chef knife, affordable chef knife, victorinox fibrox, cheap chef knife that's good, professional knife under $50, budget kitchen knife",
   openGraph: {
     title: "Best Budget Chef Knife: Victorinox Fibrox 8\" | Professional Pick",
-    description: "20+ years of professional use proves this $40 knife outperforms $200+ knives. NSF certified, dishwasher safe, and razor sharp.",
+    description: "40 years of cooking proves this $40 knife outperforms $200+ knives. NSF certified, dishwasher safe, and razor sharp.",
     url: "https://www.chefapprovedtools.com/best-budget-chef-knife",
     type: "article"
   }
@@ -101,7 +101,7 @@ export default function BestBudgetChefKnife() {
 
           <div className="prose prose-lg max-w-none text-slate-700 space-y-4 mb-8">
             <p>
-              I've used the same Victorinox Fibrox 8" chef's knife for over 20 years in professional kitchens—from fast-casual
+              I've used the same Victorinox Fibrox 8" chef's knife throughout my 40 years of cooking—from fast-casual
               prep work to fine dining mise en place. During my time as Kitchen Manager at Mellow Mushroom, this knife was my daily driver.
             </p>
             <p>
@@ -255,7 +255,7 @@ export default function BestBudgetChefKnife() {
             <span className="text-2xl font-bold text-slate-900 ml-2">5/5</span>
           </div>
           <p className="text-lg text-slate-700 mb-6 leading-relaxed">
-            The Victorinox Fibrox 8" chef's knife is the best budget chef knife money can buy. After 20+ years of professional use,
+            The Victorinox Fibrox 8" chef's knife is the best budget chef knife money can buy. After 40 years of cooking,
             I can confidently say it delivers 90% of the performance of knives costing $200+, at a fraction of the price.
             If you're looking for your first quality chef's knife or want a reliable workhorse without breaking the bank,
             this is the knife to buy.

@@ -2,7 +2,7 @@
 
 export const leadMagnetContent = {
   title: "The 11 Tools I Use Most in My Home Kitchen",
-  subtitle: "My daily workhorse tools after 40 years cooking professionally",
+  subtitle: "My daily workhorse tools after 40 years of cooking",
   author: "Scott Bradley, Professional Chef & Kitchen Manager",
 
   // The 11 actual tools with Amazon affiliate links
@@ -90,7 +90,7 @@ export const leadMagnetContent = {
     {
       title: "Why Only 11 Tools?",
       content: [
-        "After 40 years of professional cooking—starting at Wendy's at 15, through fine dining, to managing kitchen operations at Mellow Mushroom—I've used thousands of tools.",
+        "After 21+ years of professional cooking—starting at Wendy's at 15, through fine dining, to managing kitchen operations at Mellow Mushroom—I've used thousands of tools.",
         "When I set up my home kitchen, I kept only what I actually reach for. Everything else is marketing.",
         "These 11 tools handle 99% of what I cook at home. No junk drawers. No single-use gadgets. Just workhorses that earn their space."
       ]

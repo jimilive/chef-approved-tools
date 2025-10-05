@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: 'Best Kitchen Tools for Home Cooks | Chef-Approved Reviews (2025)',
     template: '%s | Chef Approved Tools - Professional Kitchen Equipment Reviews'
   },
-  description: 'Discover the best chef-approved kitchen tools, tested and reviewed for home cooks. 40 years professional experience. Shop smarter with expert recommendations on knives, cookware, and appliances.',
+  description: 'Discover the best chef-approved kitchen tools, tested and reviewed for home cooks. 21+ years of professional cooking. Shop smarter with expert recommendations on knives, cookware, and appliances.',
   keywords: [
     'professional kitchen tools',
     'restaurant equipment reviews',

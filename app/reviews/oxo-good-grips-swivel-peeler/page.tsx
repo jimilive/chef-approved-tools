@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
-  title: 'OXO Good Grips Swivel Peeler Review | 40 Years Professional Use',
-  description: 'Professional chef review of the OXO Good Grips swivel peeler after 40 years of restaurant use. The best peeler for comfort, performance, and durability.',
+  title: 'OXO Good Grips Swivel Peeler Review | 21+ Years Professional Use',
+  description: 'Professional chef review of the OXO Good Grips swivel peeler after 21+ years of professional cooking. The best peeler for comfort, performance, and durability.',
 }
 
 export default function OXOGoodGripsSwivelPeelerReview() {
@@ -21,7 +21,7 @@ export default function OXOGoodGripsSwivelPeelerReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The peeler that just works - tested through 40 years of professional cooking
+            The peeler that just works - tested through 21+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -53,7 +53,7 @@ export default function OXOGoodGripsSwivelPeelerReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking professionally, I&apos;ve used dozens of different peelers. Cheap ones that
+              After 40 years of cooking, I&apos;ve used dozens of different peelers. Cheap ones that
               broke, expensive ones that were awkward to hold, Y-peelers, straight peelers, ceramic blades, you name it.
             </p>
 
@@ -222,7 +222,7 @@ export default function OXOGoodGripsSwivelPeelerReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 40 years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 21+ years of professional cooking.
             At $10, this is the easiest recommendation I can make. Buy one, thank me later.
           </p>
 

@@ -615,7 +615,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-8 text-center text-white">
             <h3 className="text-2xl font-bold mb-4">Get My Complete Equipment Buying Guide</h3>
             <p className="mb-6 max-w-2xl mx-auto">
-              Want my full breakdown of commercial vs residential kitchen equipment? Get the same guide I use for restaurant purchasing decisions.
+              Want my full breakdown of commercial vs residential kitchen equipment? Get the same guide I used for restaurant purchasing decisions.
             </p>
             <Link
               href="/newsletter"

@@ -139,7 +139,7 @@ export default function HomePage() {
           {/* Credibility-focused Description */}
           <p className="text-lg sm:text-xl text-slate-300 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed">
             From Wendy&apos;s at 15 to Kitchen Manager at Mellow Mushroom ($80K+/month operations),
-            40 years testing equipment across every kitchen type—fast food, fine dining, and casual dining.
+            40 years of cooking across every kitchen type—fast food, fine dining, and casual dining.
           </p>
           
           {/* CTA Buttons */}

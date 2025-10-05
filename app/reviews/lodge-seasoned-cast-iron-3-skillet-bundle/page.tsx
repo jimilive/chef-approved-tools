@@ -685,7 +685,7 @@ export default function Lodge3SkilletBundleReview() {
           <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-8 text-center text-white">
             <h3 className="text-2xl font-bold mb-4">Get My Complete Equipment Buying Guide</h3>
             <p className="mb-6 max-w-2xl mx-auto">
-              Want my full breakdown of cast iron vs other cookware? Get the same guide I use for restaurant equipment purchasing decisions.
+              Want my full breakdown of cast iron vs other cookware? Get the same guide I used for restaurant equipment purchasing decisions.
             </p>
             <Link
               href="/newsletter"

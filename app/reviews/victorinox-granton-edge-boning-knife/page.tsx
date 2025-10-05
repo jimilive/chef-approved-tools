@@ -3,8 +3,8 @@ import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
-  title: 'Victorinox Granton Edge Boning Knife Review | 40 Years Professional Use',
-  description: 'Professional chef review of the Victorinox Granton Edge boning knife after 40 years of restaurant use. Essential for breaking down proteins and filleting fish.',
+  title: 'Victorinox Granton Edge Boning Knife Review | 21+ Years Professional Use',
+  description: 'Professional chef review of the Victorinox Granton Edge boning knife after 21+ years of professional cooking. Essential for breaking down proteins and filleting fish.',
 }
 
 export default function VictorinoxGrantonEdgeBoningKnifeReview() {
@@ -22,7 +22,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The essential tool for breaking down proteins - tested through 40 years of professional cooking
+            The essential tool for breaking down proteins - tested through 21+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -54,7 +54,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking professionally, I&apos;ve broken down thousands of chickens, deboned countless
+              After 40 years of cooking, I&apos;ve broken down thousands of chickens, deboned countless
               pork loins, and filleted more fish than I can count. This knife makes those tasks fast and efficient.
             </p>
 
@@ -232,7 +232,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 40 years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 21+ years of professional cooking.
             If you work with whole proteins, this knife pays for itself in saved money on the first few uses.
           </p>
 

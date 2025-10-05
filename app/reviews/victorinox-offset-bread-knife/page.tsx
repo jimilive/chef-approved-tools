@@ -3,8 +3,8 @@ import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
-  title: 'Victorinox Offset Bread Knife Review | 40 Years Professional Use',
-  description: 'Professional chef review of the Victorinox offset bread knife after 40 years of restaurant use. Perfect for bread, tomatoes, and delicate items.',
+  title: 'Victorinox Offset Bread Knife Review | 21+ Years Professional Use',
+  description: 'Professional chef review of the Victorinox offset bread knife after 21+ years of professional cooking. Perfect for bread, tomatoes, and delicate items.',
 }
 
 export default function VictorinoxOffsetBreadKnifeReview() {
@@ -22,7 +22,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The offset design that keeps knuckles safe - tested through 40 years of professional cooking
+            The offset design that keeps knuckles safe - tested through 21+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -54,7 +54,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking professionally, I&apos;ve learned that a bread knife is about more than just
+              After 40 years of cooking, I&apos;ve learned that a bread knife is about more than just
               slicing bread. Tomatoes, delicate cakes, crusty baguettes, soft sandwich loaves - the serrated edge
               handles them all without crushing.
             </p>
@@ -233,7 +233,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 40 years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 21+ years of professional cooking.
             The offset design makes this more comfortable than any standard bread knife I&apos;ve used.
           </p>
 

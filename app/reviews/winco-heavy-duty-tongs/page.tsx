@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
-  title: 'Winco Heavy Duty Tongs Review | 40 Years Professional Use',
-  description: 'Professional chef review of Winco heavy duty tongs after 40 years of restaurant use. Restaurant-grade tongs at a fraction of the price.',
+  title: 'Winco Heavy Duty Tongs Review | 21+ Years Professional Use',
+  description: 'Professional chef review of Winco heavy duty tongs after 21+ years of professional cooking. Restaurant-grade tongs at a fraction of the price.',
 }
 
 export default function WincoHeavyDutyTongsReview() {
@@ -21,7 +21,7 @@ export default function WincoHeavyDutyTongsReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            Restaurant-grade tongs that actually last - tested through 40 years of professional cooking
+            Restaurant-grade tongs that actually last - tested through 21+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -53,7 +53,7 @@ export default function WincoHeavyDutyTongsReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking professionally, I know tongs. I&apos;ve used the flimsy ones that lose tension
+              After 40 years of cooking, I know tongs. I&apos;ve used the flimsy ones that lose tension
               after a month, the silicone ones that melt on the grill, the expensive ones that aren&apos;t any better
               than the cheap ones.
             </p>
@@ -223,7 +223,7 @@ export default function WincoHeavyDutyTongsReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add These to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            These are one of the 11 tools I use most in my home kitchen after 40 years of professional cooking.
+            These are one of the 11 tools I use most in my home kitchen after 21+ years of professional cooking.
             At $8, buy a few pairs. You&apos;ll use them for everything.
           </p>
 

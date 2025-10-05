@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
-  title: 'Gold Textiles Restaurant Bar Mops Review | 40 Years Professional Use',
-  description: 'Professional chef review of Gold Textiles restaurant bar mops after 40 years of restaurant use. The towels that restaurants actually use.',
+  title: 'Gold Textiles Restaurant Bar Mops Review | 21+ Years Professional Use',
+  description: 'Professional chef review of Gold Textiles restaurant bar mops after 21+ years of professional cooking. The towels that restaurants actually use.',
 }
 
 export default function GoldTextilesBarMopsReview() {
@@ -21,7 +21,7 @@ export default function GoldTextilesBarMopsReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The towels restaurants actually use - tested through 40 years of professional cooking
+            The towels restaurants actually use - tested through 21+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -53,7 +53,7 @@ export default function GoldTextilesBarMopsReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking professionally, I&apos;ve learned to ignore fancy kitchen towels. You know the
+              After 40 years of cooking, I&apos;ve learned to ignore fancy kitchen towels. You know the
               ones - pretty colors, cute patterns, expensive price tags. They look nice hanging in a showroom kitchen,
               but they don&apos;t work in a real kitchen.
             </p>
@@ -227,7 +227,7 @@ export default function GoldTextilesBarMopsReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add These to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            These are one of the 11 tools I use most in my home kitchen after 40 years of professional cooking.
+            These are one of the 11 tools I use most in my home kitchen after 21+ years of professional cooking.
             Stop buying fancy towels that don&apos;t work. Get the ones restaurants actually use.
           </p>
 

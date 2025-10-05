@@ -247,7 +247,7 @@ export default function KitchenAidReviewPage() {
           <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 text-center">
             <h3 className="text-xl font-bold text-slate-900 mb-3">📊 Free Download: Commercial Kitchen Equipment Decision Matrix</h3>
             <p className="text-slate-700 mb-4 max-w-2xl mx-auto">
-              Get the exact spreadsheet I use to evaluate equipment ROI for restaurant purchases. Includes cost-per-use calculators and comparison templates.
+              Get the exact spreadsheet I used to evaluate equipment ROI for restaurant purchases. Includes cost-per-use calculators and comparison templates.
             </p>
             <Link
               href="/newsletter"
@@ -602,7 +602,7 @@ export default function KitchenAidReviewPage() {
           <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-8 text-center text-white">
             <h3 className="text-2xl font-bold mb-4">Get My Complete Equipment Buying Guide</h3>
             <p className="mb-6 max-w-2xl mx-auto">
-              Want my full breakdown of commercial vs residential equipment decisions? Download the same guide I use for restaurant purchasing:
+              Want my full breakdown of commercial vs residential equipment decisions? Download the same guide I used for restaurant purchasing:
             </p>
             <ul className="text-left max-w-xl mx-auto mb-6 space-y-2">
               <li>• ROI calculation templates for kitchen equipment</li>

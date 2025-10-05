@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
-  title: 'Benriner Large Mandoline Review | 40 Years Professional Use',
-  description: 'Professional chef review of the Benriner large mandoline after 40 years of restaurant use. Professional consistency for uniform slicing.',
+  title: 'Benriner Large Mandoline Review | 21+ Years Professional Use',
+  description: 'Professional chef review of the Benriner large mandoline after 21+ years of professional cooking. Professional consistency for uniform slicing.',
 }
 
 export default function BenrinerLargeMandolineReview() {
@@ -21,7 +21,7 @@ export default function BenrinerLargeMandolineReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            Professional consistency for perfect slices - tested through 40 years of professional cooking
+            Professional consistency for perfect slices - tested through 21+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -53,7 +53,7 @@ export default function BenrinerLargeMandolineReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking professionally, I know that consistent slicing is the difference between amateur
+              After 40 years of cooking, I know that consistent slicing is the difference between amateur
               and professional results. When every potato slice in your gratin is exactly the same thickness, they all
               cook at the same rate. No raw centers, no burnt edges.
             </p>
@@ -226,7 +226,7 @@ export default function BenrinerLargeMandolineReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 40 years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 21+ years of professional cooking.
             If you want professional-level consistency in your cooking, this is the tool.
           </p>
 

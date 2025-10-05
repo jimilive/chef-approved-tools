@@ -102,7 +102,7 @@ export default function BudgetVsPremiumMagnet({
         </h2>
 
         <p className={`text-lg mb-4 ${variant === 'sidebar' ? 'text-gray-700' : 'text-gray-300'}`}>
-          My daily workhorse tools after 40 years cooking professionally
+          My daily workhorse tools after 40 years of cooking
         </p>
 
         {/* Trust indicators */}

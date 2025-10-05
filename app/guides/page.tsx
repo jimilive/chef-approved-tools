@@ -18,7 +18,7 @@ const guidesFAQs = [
 export default function GuidesPage() {
   const guides = [
     { title: "Best Chef Knives 2025", description: "Complete buying guide for professional knives", href: "/guides/best-chef-knives" },
-    { title: "OXO Good Grips Swivel Peeler", description: "The peeler that actually lasts - 40 years of restaurant use", href: "/reviews/oxo-good-grips-swivel-peeler" },
+    { title: "OXO Good Grips Swivel Peeler", description: "The peeler that actually lasts - 21+ years of professional cooking", href: "/reviews/oxo-good-grips-swivel-peeler" },
     { title: "OXO Good Grips Bench Scraper", description: "Most underrated kitchen tool - transfers, portions, cleans", href: "/reviews/oxo-good-grips-bench-scraper" },
     { title: "Winco Heavy Duty Tongs", description: "Restaurant-grade tongs at budget price - the ones pros use", href: "/reviews/winco-heavy-duty-tongs" },
     { title: "Benriner Large Mandoline", description: "Professional consistency for perfect slices every time", href: "/reviews/benriner-large-mandoline" },

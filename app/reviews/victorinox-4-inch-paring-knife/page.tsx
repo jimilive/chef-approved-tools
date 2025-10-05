@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
-  title: 'Victorinox 4" Paring Knife Review | 40 Years Professional Use',
-  description: 'Professional chef review of the Victorinox 4-inch paring knife after 40 years of restaurant use. Essential for detailed work - peeling, trimming, and precision cuts.',
+  title: 'Victorinox 4" Paring Knife Review | 21+ Years Professional Use',
+  description: 'Professional chef review of the Victorinox 4-inch paring knife after 21+ years of professional cooking. Essential for detailed work - peeling, trimming, and precision cuts.',
 }
 
 export default function Victorinox4InchParingKnifeReview() {
@@ -21,7 +21,7 @@ export default function Victorinox4InchParingKnifeReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The precision tool for detailed work - tested through 40 years of professional cooking
+            The precision tool for detailed work - tested through 21+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -53,7 +53,7 @@ export default function Victorinox4InchParingKnifeReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking professionally, I keep three or four of these in rotation. They handle all the
+              After 40 years of cooking, I keep three or four of these in rotation. They handle all the
               detailed work that a chef&apos;s knife is too large for - peeling apples, deveining shrimp, trimming fat,
               removing strawberry tops, mincing garlic.
             </p>
@@ -221,7 +221,7 @@ export default function Victorinox4InchParingKnifeReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 40 years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 21+ years of professional cooking.
             At $12, it&apos;s probably the best value in cutlery. I recommend buying two or three.
           </p>
 

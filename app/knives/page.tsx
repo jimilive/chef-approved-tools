@@ -12,7 +12,7 @@ export default function KnivesPage() {
       brand: "Victorinox",
       affiliateUrl: "https://amzn.to/4o6pPwW",
       slug: "victorinox-fibrox-10-inch-chefs-knife",
-      description: "Professional Swiss chef's knife for larger cuts and bigger hands - 40 years of restaurant testing"
+      description: "Professional Swiss chef's knife for larger cuts and bigger hands - 21+ years of professional cooking"
     },
     {
       id: "victorinox-fibrox-8-inch-chefs-knife",
@@ -78,7 +78,7 @@ export default function KnivesPage() {
         name: "What's the best chef knife for home cooks?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The Victorinox Fibrox Pro 8\" Chef's Knife is the best all-around choice for home cooks. It offers professional-grade performance at an affordable price, with excellent edge retention and comfortable grip. I've used this exact knife for 40 years in professional kitchens."
+          text: "The Victorinox Fibrox Pro 8\" Chef's Knife is the best all-around choice for home cooks. It offers professional-grade performance at an affordable price, with excellent edge retention and comfortable grip. I've used this exact knife for 40 years of cooking."
         }
       },
       {

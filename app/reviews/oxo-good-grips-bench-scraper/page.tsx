@@ -4,8 +4,8 @@ import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
-  title: 'OXO Good Grips Bench Scraper Review | 40 Years Professional Use',
-  description: 'Professional chef review of the OXO Good Grips bench scraper after 40 years of restaurant use. The most underrated tool in any kitchen.',
+  title: 'OXO Good Grips Bench Scraper Review | 21+ Years Professional Use',
+  description: 'Professional chef review of the OXO Good Grips bench scraper after 21+ years of professional cooking. The most underrated tool in any kitchen.',
 }
 
 export default function OXOGoodGripsBenchScraperReview() {
@@ -23,7 +23,7 @@ export default function OXOGoodGripsBenchScraperReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The most underrated tool in any kitchen - tested through 40 years of professional cooking
+            The most underrated tool in any kitchen - tested through 21+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -66,7 +66,7 @@ export default function OXOGoodGripsBenchScraperReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking professionally, I can tell you the bench scraper is the tool most home cooks
+              After 40 years of cooking, I can tell you the bench scraper is the tool most home cooks
               don&apos;t know they need. In professional kitchens, it&apos;s used constantly - moving chopped vegetables
               from cutting board to pan, portioning dough, cleaning work surfaces.
             </p>
@@ -260,7 +260,7 @@ export default function OXOGoodGripsBenchScraperReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 40 years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 21+ years of professional cooking.
             At $13, it&apos;s the tool you didn&apos;t know you needed until you have it.
           </p>
 

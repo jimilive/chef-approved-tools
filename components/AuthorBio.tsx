@@ -46,7 +46,7 @@ export default function AuthorBio({ variant = 'full', showImage = true }: Author
             Written by <Link href="/about" className="text-orange-600 hover:text-orange-700">Scott Bradley</Link>
           </div>
           <p className="text-sm text-gray-600">
-            Former Kitchen Manager at Mellow Mushroom with 40 years of professional cooking experience.
+            Former Kitchen Manager at Mellow Mushroom with 21+ years of professional cooking experience.
             Every tool tested in real restaurant environments.
           </p>
         </div>
@@ -74,7 +74,7 @@ export default function AuthorBio({ variant = 'full', showImage = true }: Author
           <h4 className="text-xl font-semibold text-orange-700 mb-3">Scott Bradley</h4>
 
           <p className="text-slate-700 mb-4 leading-relaxed">
-            Professional chef with 40 years of experience, from starting at Wendy&apos;s at age 15
+            Professional chef with 21+ years of professional cooking, from starting at Wendy&apos;s at age 15
             to managing kitchen operations at Mellow Mushroom. Formally trained at Seattle Central College
             Culinary Arts program with over 21 years in professional kitchens.
           </p>

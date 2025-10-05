@@ -3,8 +3,8 @@ import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
-  title: 'Victorinox Fibrox Pro 8" Chef\'s Knife Review | 40 Years Professional Use',
-  description: 'Professional chef review of the Victorinox Fibrox Pro 8-inch chef\'s knife after 40 years of restaurant use. The perfect all-purpose knife for most home cooking tasks.',
+  title: 'Victorinox Fibrox Pro 8" Chef\'s Knife Review | 21+ Years Professional Use',
+  description: 'Professional chef review of the Victorinox Fibrox Pro 8-inch chef\'s knife after 21+ years of professional cooking. The perfect all-purpose knife for most home cooking tasks.',
 }
 
 export default function VictorinoxFibrox8InchReview() {
@@ -22,7 +22,7 @@ export default function VictorinoxFibrox8InchReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The workhorse knife that handles 90% of kitchen tasks - tested through 40 years of professional cooking
+            The workhorse knife that handles 90% of kitchen tasks - tested through 21+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -54,7 +54,7 @@ export default function VictorinoxFibrox8InchReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking professionally, this is the knife that stays on my cutting board all day.
+              After 40 years of cooking, this is the knife that stays on my cutting board all day.
               Chopping onions, mincing garlic, breaking down chickens, slicing vegetables - this knife does it all.
             </p>
 
@@ -227,7 +227,7 @@ export default function VictorinoxFibrox8InchReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is the first tool I recommend to anyone serious about cooking. After 40 years of professional experience,
+            This is the first tool I recommend to anyone serious about cooking. After 21+ years of professional cooking,
             this is the knife I trust most. At around $45, it&apos;s an absolute steal.
           </p>
 
