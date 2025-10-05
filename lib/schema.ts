@@ -167,6 +167,8 @@ export function generateProductReviewSchema(product: any) {
         "@type": "Brand",
         name: product.brand
       },
+      sku: product.sku,
+      gtin13: product.gtin13,
       offers: {
         "@type": "Offer",
         price: priceValue.toString(),
