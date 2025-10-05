@@ -309,7 +309,7 @@ export default function LeCreuset725QtReview() {
             After 10 years of regular home cooking with the Le Creuset 7.25-qt Dutch Oven, I can say this with confidence: <strong>this is the best Dutch oven for serious home cooks who want professional results without professional maintenance.</strong>
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
-            The enameled interior eliminates the seasoning nightmare of traditional cast iron while delivering identical heat retention. The light sand-colored interior lets you monitor browning and deglazing—a game-changer for precision cooking. At 14.9 lbs, it's 3 lbs lighter than competitors, which matters tremendously when transferring a 325°F pot from stovetop to oven.
+            The enameled interior eliminates the seasoning nightmare of traditional cast iron while delivering identical heat retention. The light sand-colored interior lets you monitor browning and deglazing—a game-changer for precision cooking. At 14.9 lbs, it&apos;s 3 lbs lighter than competitors, which matters tremendously when transferring a 325°F pot from stovetop to oven.
           </p>
           <p className="text-slate-700 leading-relaxed">
             <strong>Bottom line:</strong> If you cook 3+ times weekly and plan to keep your Dutch oven for 10+ years, the Le Creuset justifies its premium price through superior weight, enamel quality, and lifetime warranty. For occasional cooks, Lodge offers 90% of the performance at 20% of the cost.
@@ -568,7 +568,7 @@ export default function LeCreuset725QtReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Cleaning and Maintenance</h2>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <p className="text-slate-700 leading-relaxed mb-6">
-              One of the Le Creuset's biggest advantages over traditional cast iron: <strong>virtually zero maintenance.</strong> After 10 years, here's my honest assessment of what it takes to keep this Dutch oven in pristine condition.
+              One of the Le Creuset&apos;s biggest advantages over traditional cast iron: <strong>virtually zero maintenance.</strong> After 10 years, here&apos;s my honest assessment of what it takes to keep this Dutch oven in pristine condition.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -577,17 +577,17 @@ export default function LeCreuset725QtReview() {
                 <ul className="space-y-2 text-slate-700 text-sm">
                   <li>• <strong>Let cool to room temperature</strong> — Never shock hot pot with cold water</li>
                   <li>• <strong>Soak in warm soapy water</strong> — Even burnt-on food releases overnight</li>
-                  <li>• <strong>Gentle scrub with non-abrasive sponge</strong> — Smooth enamel doesn't hold onto residue</li>
+                  <li>• <strong>Gentle scrub with non-abrasive sponge</strong> — Smooth enamel doesn&apos;t hold onto residue</li>
                   <li>• <strong>Dry and store</strong> — No oiling, no seasoning, no special care</li>
                 </ul>
               </div>
 
               <div className="bg-blue-50 border-l-4 border-blue-600 p-5 rounded-r-lg">
-                <h3 className="font-bold text-blue-900 mb-3">✓ What I've Learned After 10 Years</h3>
+                <h3 className="font-bold text-blue-900 mb-3">✓ What I&apos;ve Learned After 10 Years</h3>
                 <ul className="space-y-2 text-slate-700 text-sm">
-                  <li>• <strong>Zero staining despite heavy use</strong> — Tomato sauces and red wine won't stain with proper technique</li>
-                  <li>• <strong>Bar Keeper's Friend for stubborn spots</strong> — Gentle scrub removes any discoloration</li>
-                  <li>• <strong>Minor scratches are cosmetic only</strong> — Don't affect performance at all</li>
+                  <li>• <strong>Zero staining despite heavy use</strong> — Tomato sauces and red wine won&apos;t stain with proper technique</li>
+                  <li>• <strong>Bar Keeper&apos;s Friend for stubborn spots</strong> — Gentle scrub removes any discoloration</li>
+                  <li>• <strong>Minor scratches are cosmetic only</strong> — Don&apos;t affect performance at all</li>
                   <li>• <strong>No re-seasoning ever needed</strong> — Unlike raw cast iron that requires constant maintenance</li>
                 </ul>
               </div>
@@ -596,7 +596,7 @@ export default function LeCreuset725QtReview() {
             <div className="bg-red-50 border border-red-200 rounded-lg p-5">
               <h3 className="font-bold text-red-900 mb-3">⚠️ Critical: Avoid Thermal Shock</h3>
               <p className="text-red-800 text-sm mb-3">
-                The #1 way to damage Le Creuset enamel is thermal shock. Here's what to avoid:
+                The #1 way to damage Le Creuset enamel is thermal shock. Here&apos;s what to avoid:
               </p>
               <ul className="space-y-1 text-red-800 text-sm">
                 <li>• ✗ <strong>Never</strong> add cold water to hot pot</li>
@@ -789,7 +789,7 @@ export default function LeCreuset725QtReview() {
                 </li>
                 <li className="flex items-start">
                   <XCircle className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
-                  <span><strong>Budget is primary concern</strong> (under $300) — Premium features don't justify 4-5× cost</span>
+                  <span><strong>Budget is primary concern</strong> (under $300) — Premium features don&apos;t justify 4-5× cost</span>
                 </li>
                 <li className="flex items-start">
                   <XCircle className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
@@ -797,11 +797,11 @@ export default function LeCreuset725QtReview() {
                 </li>
                 <li className="flex items-start">
                   <XCircle className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
-                  <span><strong>Prefer darker interior</strong> that hides stains — Staub's black enamel might suit you better</span>
+                  <span><strong>Prefer darker interior</strong> that hides stains — Staub&apos;s black enamel might suit you better</span>
                 </li>
                 <li className="flex items-start">
                   <XCircle className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
-                  <span><strong>Don't mind traditional cast iron maintenance</strong> — Raw cast iron offers similar performance with seasoning</span>
+                  <span><strong>Don&apos;t mind traditional cast iron maintenance</strong> — Raw cast iron offers similar performance with seasoning</span>
                 </li>
               </ul>
             </div>
