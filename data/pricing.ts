@@ -41,8 +41,8 @@ export const productPricing: Record<string, ProductPricing> = {
     lastUpdated: '2024-09-26'
   },
 
-  'wusthof-classic-ikon-15-piece': {
-    productSlug: 'wusthof-classic-ikon-15-piece',
+  'wusthof-classic-ikon-16-piece': {
+    productSlug: 'wusthof-classic-ikon-16-piece',
     priceRange: {
       min: 380,
       max: 499,

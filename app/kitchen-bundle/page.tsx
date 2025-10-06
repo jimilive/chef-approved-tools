@@ -1,247 +1,427 @@
 import { Metadata } from 'next'
-import Script from 'next/script'
+import Link from 'next/link'
+import Image from 'next/image'
+import { ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Professional Kitchen Equipment Bundle: 7 Restaurant-Tested Tools for Home | Chef Approved Tools',
-  description: 'Get the exact 7 pieces of equipment a 21+ year restaurant professional uses at home. Tested in commercial kitchens, perfect for serious home cooks. Free guide from Scott Bradley.',
-  keywords: 'professional kitchen equipment, commercial grade home tools, restaurant tested kitchen gear, chef approved equipment bundle'
+  title: 'The Chef-Approved Kitchen Starter Kit: 10 Essential Tools | Chef Approved',
+  description: 'Build a professional-grade kitchen with these 10 essential tools, personally tested and recommended by a 21+ year restaurant veteran. From knives to cookware, this is the ultimate starter kit.',
+  keywords: 'chef approved kitchen kit, essential kitchen tools, professional kitchen starter, restaurant tested equipment'
 }
 
-export default function KitchenBundlePage() {
+// Part 1: Core Essentials (~$150 Foundation)
+const coreEssentials = [
+  {
+    name: "Victorinox Fibrox Pro 8\" Chef's Knife",
+    justification: "The workhorse knife that will handle 90% of your daily prep. Professional-grade Swiss engineering at an unbeatable price.",
+    reviewSlug: "victorinox-fibrox-8-inch-chefs-knife",
+    affiliateUrl: "https://amzn.to/4bIa2lg",
+    image: "/logo.png",
+    price: "$45"
+  },
+  {
+    name: "Victorinox 4\" Paring Knife",
+    justification: "For detailed work and precision cuts. The perfect complement to your chef's knife.",
+    reviewSlug: "victorinox-4-inch-paring-knife",
+    affiliateUrl: "https://amzn.to/4gVm0Le",
+    image: "/logo.png",
+    price: "$12"
+  },
+  {
+    name: "Lodge Cast Iron 3-Skillet Bundle",
+    justification: "The indestructible pan set that will outlast you. Perfect searing, oven-safe, and they get better with age.",
+    reviewSlug: "lodge-seasoned-cast-iron-3-skillet-bundle",
+    affiliateUrl: "https://amzn.to/3ZMWqJ5",
+    image: "/logo.png",
+    price: "$65"
+  },
+  {
+    name: "OXO Good Grips Swivel Peeler",
+    justification: "The one tool you'll use every single day. Non-slip grip and razor-sharp blade that adapts to any vegetable.",
+    reviewSlug: "oxo-good-grips-swivel-peeler",
+    affiliateUrl: "https://amzn.to/4eMWBGJ",
+    image: "/logo.png",
+    price: "$10"
+  },
+  {
+    name: "Gold Textiles Bar Mops (12-Pack)",
+    justification: "The exact towels I used in professional kitchens. Absorbent, durable, and cheap enough that you won't baby them.",
+    reviewSlug: "gold-textiles-bar-mops",
+    affiliateUrl: "https://amzn.to/4bKl0tX",
+    image: "/logo.png",
+    price: "$25"
+  }
+]
+
+// Part 2: Lifetime Upgrades
+const lifetimeUpgrades = [
+  {
+    name: "Le Creuset Signature 7.25 Qt Dutch Oven",
+    justification: "The buy-it-for-life investment piece. Perfect for braising, bread baking, and soups. Will be passed down to your children.",
+    reviewSlug: "le-creuset-signature-7-25-qt-dutch-oven",
+    affiliateUrl: "https://amzn.to/4iPkKdI",
+    image: "/logo.png",
+    price: "$380"
+  },
+  {
+    name: "John Boos Platinum 24x18\" Cutting Board",
+    justification: "The professional workspace I used managing $80K/month operations. Large enough for serious prep, gentle on knives, built to last decades.",
+    reviewSlug: "john-boos-platinum-commercial-cutting-board",
+    affiliateUrl: "https://amzn.to/4bJQWqS",
+    image: "/logo.png",
+    price: "$130"
+  },
+  {
+    name: "KitchenAid KSM8990WH Commercial Series Mixer",
+    justification: "NSF-certified power that survived 18 months of restaurant use. This is the mixer professional kitchens choose.",
+    reviewSlug: "kitchenaid-ksm8990wh",
+    affiliateUrl: "https://amzn.to/4nqVHKP",
+    image: "/logo.png",
+    price: "$700"
+  },
+  {
+    name: "Vitamix 5200 Blender",
+    justification: "5+ years powering our commercial smoothie program. The industry standard for professional blending.",
+    reviewSlug: "vitamix-5200",
+    affiliateUrl: "https://amzn.to/4e6GceC",
+    image: "/logo.png",
+    price: "$450"
+  }
+]
+
+// Part 3: Specialist Tool
+const specialistTool = {
+  name: "Benriner Large Mandoline",
+  justification: "The industry-standard tool for paper-thin, restaurant-quality slices. What takes 15 minutes with a knife takes 2 minutes with this Japanese precision tool.",
+  reviewSlug: "benriner-large-mandoline",
+  affiliateUrl: "https://amzn.to/4bHpQxY",
+  image: "/logo.png",
+  price: "$40"
+}
+
+export default function ChefApprovedKitchenKit() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white py-12 sm:py-16 px-4">
+        <div className="max-w-5xl mx-auto">
           {/* Trust Badge */}
-          <div className="bg-orange-500/20 border border-orange-500/30 rounded-full px-6 py-3 inline-block mb-8">
-            <span className="text-orange-200 font-semibold">
-              👨‍🍳 21+ YEARS RESTAURANT EXPERIENCE
-            </span>
+          <div className="text-center mb-8">
+            <div className="bg-orange-500/20 border border-orange-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 inline-block">
+              <span className="text-orange-200 font-semibold text-sm sm:text-base">
+                👨‍🍳 21+ YEARS PROFESSIONAL COOKING EXPERIENCE
+              </span>
+            </div>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Professional Kitchen Equipment Bundle:
-            <br />
-            <span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">
-              7 Restaurant-Tested Essentials
-            </span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-center">
+            The Chef-Approved Kitchen Starter Kit
           </h1>
 
-          <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            After 21+ years testing equipment in commercial kitchens, these 7 pieces
-            earned their place in my home kitchen through proven performance and reliability.
-          </p>
+          {/* E-E-A-T Expert Hook */}
+          <div className="max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-slate-200 mb-6 leading-relaxed text-center">
+              Every professional kitchen is built on a foundation of a few indestructible, high-performance tools.
+              After 21+ years of setting up restaurant kitchens and seeing countless gadgets fail, I&apos;ve distilled
+              the list down to the non-negotiable essentials.
+            </p>
+            <p className="text-lg sm:text-xl text-slate-200 leading-relaxed text-center font-semibold">
+              This is the exact kit I&apos;d recommend to any serious home cook looking to build a kitchen that lasts.
+            </p>
+          </div>
 
-          {/* Value Props */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl mb-3">🔪</div>
-              <h3 className="font-bold mb-2">Commercial Proven</h3>
-              <p className="text-sm text-white/80">21+ years of restaurant testing</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl mb-3">💰</div>
-              <h3 className="font-bold mb-2">Value Focused</h3>
-              <p className="text-sm text-white/80">Professional performance, smart pricing</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl mb-3">✅</div>
-              <h3 className="font-bold mb-2">Actually Used</h3>
-              <p className="text-sm text-white/80">Not sponsored - my real daily tools</p>
+          {/* Author Credibility */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-3xl mx-auto mt-8 border border-white/20">
+            <div className="flex items-start gap-4">
+              <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-orange-400">
+                <Image
+                  src="/images/branding/scott-ai-portrait-circle.png"
+                  alt="Scott Bradley - Professional Chef"
+                  fill
+                  sizes="64px"
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <p className="text-sm sm:text-base italic leading-relaxed text-slate-200">
+                  &ldquo;I&apos;ve equipped kitchens at every level—from fast food to fine dining. Focus your budget on
+                  these essentials and skip the gimmicks. This is the foundation that actually matters.&rdquo;
+                </p>
+                <p className="text-sm text-orange-300 mt-2 font-semibold">
+                  — Scott Bradley, Kitchen Manager (Mellow Mushroom), Seattle Central Culinary Graduate
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-16 px-4">
+      {/* PART 1: The Core Essentials */}
+      <section className="py-12 sm:py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
+              Part 1: The Core Essentials
+            </h2>
+            <p className="text-lg sm:text-xl text-orange-600 font-semibold mb-4">
+              ~$150 Foundation
+            </p>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              This is the unbeatable professional foundation. These five items will handle 90% of your daily
+              cooking tasks with performance and reliability.
+            </p>
+          </div>
 
-            {/* Left Side - Tool Preview */}
-            <div>
-              <h2 className="text-3xl font-bold mb-8 text-slate-900">
-                The 7 Essential Pieces Inside Your Guide
-              </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {coreEssentials.map((product, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200"
+              >
+                <div className="p-6">
+                  {/* Image */}
+                  <div className="relative w-full h-48 bg-white rounded-lg flex items-center justify-center mb-4">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      width={160}
+                      height={160}
+                      sizes="(max-width: 768px) 160px, 200px"
+                      className="object-contain opacity-50"
+                    />
+                  </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-100 rounded-full p-3 flex-shrink-0">
-                    <span className="text-orange-600 font-bold">1</span>
+                  {/* Price */}
+                  <div className="text-center mb-3">
+                    <span className="text-lg font-bold text-orange-600">{product.price}</span>
                   </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">WÜSTHOF Classic IKON Knife Set</h3>
-                    <p className="text-gray-600">German engineering that equipped our entire professional kitchen</p>
-                  </div>
-                </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-100 rounded-full p-3 flex-shrink-0">
-                    <span className="text-orange-600 font-bold">2</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Lodge Cast Iron Skillet Bundle</h3>
-                    <p className="text-gray-600">The 3-piece set that will last forever with proper care</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-100 rounded-full p-3 flex-shrink-0">
-                    <span className="text-orange-600 font-bold">3</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Le Creuset 7.25-Qt Dutch Oven</h3>
-                    <p className="text-gray-600">The generational investment that transforms your cooking</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-100 rounded-full p-3 flex-shrink-0">
-                    <span className="text-orange-600 font-bold">4</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">KitchenAid Commercial Mixer</h3>
-                    <p className="text-gray-600">NSF-certified power that survived 18 months of restaurant use</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-100 rounded-full p-3 flex-shrink-0">
-                    <span className="text-orange-600 font-bold">5</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Vitamix 5200 Blender</h3>
-                    <p className="text-gray-600">5+ years powering our commercial smoothie program</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-100 rounded-full p-3 flex-shrink-0">
-                    <span className="text-orange-600 font-bold">6</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Robot Coupe R2 Dice Processor</h3>
-                    <p className="text-gray-600">Commercial-grade food prep that revolutionized our efficiency</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-100 rounded-full p-3 flex-shrink-0">
-                    <span className="text-orange-600 font-bold">7</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">John Boos Platinum Cutting Board</h3>
-                    <p className="text-gray-600">The 24x18 workhorse I&apos;ll pass down to my children</p>
-                  </div>
-                </div>
-
-                <div className="bg-gray-100 rounded-lg p-6 mt-8">
-                  <h4 className="font-bold mb-3">Plus You&apos;ll Get:</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center space-x-2">
-                      <span className="text-green-600">✓</span>
-                      <span>Real-world testing results from 21+ years in kitchens</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <span className="text-green-600">✓</span>
-                      <span>Why each piece earned its spot through performance</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <span className="text-green-600">✓</span>
-                      <span>Professional techniques and maintenance secrets</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <span className="text-green-600">✓</span>
-                      <span>Budget vs premium recommendations for each category</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <span className="text-green-600">✓</span>
-                      <span>Exact purchase links and best pricing sources</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Side - Sign Up Form */}
-            <div className="lg:sticky lg:top-8">
-              <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold mb-2 text-slate-900">
-                    Get Your Free Professional Equipment Bundle Guide
+                  {/* Product Name */}
+                  <h3 className="text-lg font-bold text-slate-900 mb-3 text-center min-h-[3.5rem]">
+                    {product.name}
                   </h3>
-                  <p className="text-gray-600">
-                    21+ years of restaurant testing distilled into one comprehensive guide.
-                  </p>
-                </div>
 
-                {/* Email Octopus Form */}
-                <div id="email-form">
-                  <Script
-                    src="https://eomail5.com/form/627419fc-9b5d-11f0-bb1e-4f3d8509b619.js"
-                    data-form="627419fc-9b5d-11f0-bb1e-4f3d8509b619"
-                    strategy="afterInteractive"
-                  />
-                </div>
-
-                <div className="mt-6 text-center">
-                  <p className="text-xs text-gray-500">
-                    🔒 Your email is safe. No spam, unsubscribe anytime.
+                  {/* Justification */}
+                  <p className="text-sm text-slate-600 mb-4 text-center leading-relaxed">
+                    {product.justification}
                   </p>
+
+                  {/* Dual CTAs */}
+                  <div className="space-y-2">
+                    <a
+                      href={product.affiliateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block flex items-center justify-center gap-2 text-sm"
+                    >
+                      🛒 Check Price on Amazon
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                    <Link
+                      href={`/reviews/${product.reviewSlug}`}
+                      className="w-full bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 px-4 rounded-lg transition-all duration-200 text-center block flex items-center justify-center gap-2 text-sm"
+                    >
+                      📊 Read Full Review
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-              {/* Social Proof */}
-              <div className="mt-8 text-center">
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <div className="flex items-center justify-center space-x-2 mb-2">
-                    <div className="flex text-yellow-400">
-                      ★★★★★
-                    </div>
-                    <span className="text-sm font-medium text-green-800">Trusted by 2,500+ serious home cooks</span>
+      {/* PART 2: The Lifetime Upgrades */}
+      <section className="py-12 sm:py-16 px-4 bg-gradient-to-br from-slate-50 to-orange-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
+              Part 2: Investing in Your Kitchen
+            </h2>
+            <p className="text-lg sm:text-xl text-orange-600 font-semibold mb-4">
+              The Professional&apos;s Upgrade Path
+            </p>
+            <div className="max-w-3xl mx-auto">
+              <p className="text-lg text-slate-700 leading-relaxed">
+                While the Core Essentials will handle most of your tasks, there comes a point where investing
+                in specific, high-performance tools can truly transform your cooking. These are the &ldquo;buy it once,
+                cry once&rdquo; pieces that form the heart of a professional kitchen and will last for generations.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {lifetimeUpgrades.map((product, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-2 border-orange-200"
+              >
+                <div className="p-6 sm:p-8">
+                  {/* Image */}
+                  <div className="relative w-full h-56 bg-gray-50 rounded-lg flex items-center justify-center mb-4">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      width={200}
+                      height={200}
+                      sizes="(max-width: 768px) 200px, 250px"
+                      className="object-contain opacity-50"
+                    />
                   </div>
-                  <p className="text-xs text-green-700">
-                    &quot;Scott&apos;s restaurant experience shows - these aren&apos;t just reviews, they&apos;re equipment decisions based on real professional use.&quot;
+
+                  {/* Price */}
+                  <div className="text-center mb-3">
+                    <span className="text-xl font-bold text-orange-600">{product.price}</span>
+                  </div>
+
+                  {/* Product Name */}
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 text-center">
+                    {product.name}
+                  </h3>
+
+                  {/* Justification */}
+                  <p className="text-base text-slate-600 mb-6 text-center leading-relaxed">
+                    {product.justification}
                   </p>
+
+                  {/* Dual CTAs */}
+                  <div className="space-y-3">
+                    <a
+                      href={product.affiliateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block flex items-center justify-center gap-2"
+                    >
+                      🛒 Check Price on Amazon
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                    <Link
+                      href={`/reviews/${product.reviewSlug}`}
+                      className="w-full bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 px-6 rounded-lg transition-all duration-200 text-center block flex items-center justify-center gap-2"
+                    >
+                      📊 Read Full Review
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PART 3: The Specialist Tool */}
+      <section className="py-12 sm:py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
+              Part 3: The Specialist Tool
+            </h2>
+            <p className="text-lg sm:text-xl text-orange-600 font-semibold mb-4">
+              For Next-Level Technique
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl shadow-2xl overflow-hidden border-4 border-orange-400">
+            <div className="p-8 sm:p-12">
+              {/* Image */}
+              <div className="relative w-full h-64 bg-white/10 rounded-lg flex items-center justify-center mb-6">
+                <Image
+                  src={specialistTool.image}
+                  alt={specialistTool.name}
+                  width={240}
+                  height={240}
+                  sizes="240px"
+                  className="object-contain opacity-50"
+                />
+              </div>
+
+              {/* Price */}
+              <div className="text-center mb-4">
+                <span className="text-2xl font-bold text-orange-400">{specialistTool.price}</span>
+              </div>
+
+              {/* Product Name */}
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
+                {specialistTool.name}
+              </h3>
+
+              {/* Justification */}
+              <p className="text-lg text-slate-200 mb-8 text-center leading-relaxed max-w-2xl mx-auto">
+                {specialistTool.justification}
+              </p>
+
+              {/* Dual CTAs */}
+              <div className="space-y-3 max-w-md mx-auto">
+                <a
+                  href={specialistTool.affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block flex items-center justify-center gap-2"
+                >
+                  🛒 Check Price on Amazon
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+                <Link
+                  href={`/reviews/${specialistTool.reviewSlug}`}
+                  className="w-full bg-white border-2 border-orange-400 text-slate-900 hover:bg-orange-50 font-semibold py-4 px-6 rounded-lg transition-all duration-200 text-center block flex items-center justify-center gap-2"
+                >
+                  📊 Read Full Review
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Credibility Section */}
-      <section className="bg-white py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8 text-slate-900">
-            Why Trust My Recommendations?
+      {/* Total Investment Summary */}
+      <section className="py-12 sm:py-16 px-4 bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600">
+        <div className="max-w-4xl mx-auto text-center text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+            Your Complete Professional Kitchen
           </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎓</span>
-              </div>
-              <h3 className="font-bold mb-2">Culinary Training</h3>
-              <p className="text-sm text-gray-600">Seattle Central College A.A.S. Culinary Arts</p>
+          <div className="mb-6">
+            <p className="text-4xl sm:text-5xl font-bold text-orange-300 mb-2">
+              Total: ~$1,950
+            </p>
+            <p className="text-lg text-slate-200">
+              Core Essentials ($157) + Lifetime Upgrades ($1,660) + Specialist Tool ($40)
+            </p>
+          </div>
+          <p className="text-lg sm:text-xl text-slate-200 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Less than 3 months of eating out, but this complete kit will last 20+ years and transform
+            how you cook at home.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-4xl mb-3">💰</div>
+              <p className="font-semibold mb-2">Smart Investment</p>
+              <p className="text-sm text-slate-300">Professional quality without the restaurant markup</p>
             </div>
-
-            <div className="text-center">
-              <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">👨‍💼</span>
-              </div>
-              <h3 className="font-bold mb-2">Kitchen Manager</h3>
-              <p className="text-sm text-gray-600">Purple Cafe, Mellow Mushroom - High-volume operations</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-4xl mb-3">⏱️</div>
+              <p className="font-semibold mb-2">Built to Last</p>
+              <p className="text-sm text-slate-300">Buy once, use for decades</p>
             </div>
-
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🍳</span>
-              </div>
-              <h3 className="font-bold mb-2">Equipment Tester</h3>
-              <p className="text-gray-600">21+ years testing gear in demanding commercial environments</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-4xl mb-3">✅</div>
+              <p className="font-semibold mb-2">Restaurant Proven</p>
+              <p className="text-sm text-slate-300">21+ years of real-world testing</p>
             </div>
+          </div>
+
+          <div className="mt-12">
+            <p className="text-xl font-semibold mb-4">Start with Part 1 - Just $157</p>
+            <a
+              href={coreEssentials[0].affiliateUrl}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block bg-white text-orange-600 hover:bg-orange-50 font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:scale-105 active:scale-95"
+            >
+              🔪 Get the Victorinox Chef&apos;s Knife First ($45)
+            </a>
           </div>
         </div>
       </section>

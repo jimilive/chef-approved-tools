@@ -12,9 +12,8 @@ export default function Footer() {
     ],
     resources: [
       { name: 'Buying Guides', href: '/guides' },
-      { name: 'How We Test', href: '/methodology' },
       { name: 'Reviews', href: '/reviews' },
-      { name: 'About Us', href: '/about' }
+      { name: 'About & Testing', href: '/about' }
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy-policy' },

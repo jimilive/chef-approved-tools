@@ -63,7 +63,7 @@
 - ✅ Vitamix 5200 Blender
 - ✅ Lodge Seasoned Cast Iron 3-Skillet Bundle
 
-**📝 Listed on Reviews Page but Not Yet Written (11):**
+**📝 Listed on Reviews Page but Not Yet Written (12):**
 - [ ] Victorinox Fibrox Pro 10" Chef's Knife
 - [ ] Victorinox Fibrox Pro 8" Chef's Knife
 - [ ] Victorinox 4" Paring Knife
@@ -75,6 +75,7 @@
 - [ ] Benriner Large Mandoline
 - [ ] Gold Textiles Bar Mops
 - [ ] Epicurean Kitchen Cutting Board
+- [ ] NoCry Cut Resistant Gloves (Amazon: https://amzn.to/4mUTNTs)
 
 **🎯 Additional reviews needed:** 2+ more to reach 20+ target
 
@@ -244,6 +245,11 @@
 ## 🎯 Priority Tasks (Next 30 Days)
 
 1. **High Priority**
+   - [ ] Write NoCry Cut Resistant Gloves review (affiliate: https://amzn.to/4mUTNTs)
+     - [ ] Cross-link with Benriner Mandoline review (safety pairing)
+     - [ ] Add safety callout box in mandoline review recommending gloves
+     - [ ] Add to kitchen-bundle page (Part 1: Core Essentials, ~$15)
+     - [ ] Add to sitemap and pricing data
    - [ ] Write Victorinox Fibrox 10" Chef's Knife review (from roadmap)
    - [ ] Write Victorinox Fibrox 8" Chef's Knife review (from roadmap)
    - [ ] Set up Google Search Console and submit sitemap
@@ -264,7 +270,36 @@
 
 ---
 
-**Last Updated:** 2025-10-04
+## 🔪 NoCry Cut Resistant Gloves - Product Addition Checklist
+
+**Product:** NoCry Cut Resistant Gloves
+**Amazon Affiliate Link:** https://amzn.to/4mUTNTs
+**Price Point:** ~$15-20
+**Strategic Positioning:** Safety essential, pairs with mandoline
+
+### Tasks:
+- [ ] Write comprehensive product review page (`/reviews/nocry-cut-resistant-gloves`)
+  - [ ] Professional testing narrative (restaurant kitchen use)
+  - [ ] Safety benefits and use cases
+  - [ ] Comparison with other cut-resistant gloves
+  - [ ] When to use (mandoline, oyster shucking, etc.)
+- [ ] Cross-link with Benriner Mandoline review
+  - [ ] Add safety callout box in mandoline review
+  - [ ] Link to cut gloves review from mandoline page
+  - [ ] Link to mandoline review from cut gloves page
+- [ ] Add to kitchen-bundle page
+  - [ ] Add to Part 1: Core Essentials (~$150 Foundation)
+  - [ ] Update total investment calculation
+  - [ ] Include dual CTAs (Amazon + Review link)
+- [ ] Update site infrastructure
+  - [ ] Add to `/app/sitemap.ts`
+  - [ ] Add to `/data/pricing.ts`
+  - [ ] Add to `/app/api/check-links/route.ts`
+  - [ ] Update reviews index page
+
+---
+
+**Last Updated:** 2025-10-06
 
 **Current Status:**
 - 7 comprehensive product reviews completed

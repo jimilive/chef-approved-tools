@@ -16,7 +16,7 @@ const topKnives = [
   {
     id: 1,
     name: 'Wüsthof Classic Ikon 8"',
-    slug: 'wusthof-classic-ikon-15-piece',
+    slug: 'wusthof-classic-ikon-16-piece',
     image: '🔪', // Placeholder
     rating: 4.9,
     price: 159,

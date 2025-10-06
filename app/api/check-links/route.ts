@@ -21,7 +21,7 @@ const PRODUCT_SLUGS = [
   'vitamix-5200',
   'kitchenaid-ksm8990wh',
   'robot-coupe-r2-dice',
-  'wusthof-classic-ikon-15-piece',
+  'wusthof-classic-ikon-16-piece',
   'le-creuset-signature-7-25-qt-dutch-oven',
   'john-boos-platinum-commercial-cutting-board',
   'victorinox-fibrox-pro-knife-set'

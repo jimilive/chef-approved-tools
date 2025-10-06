@@ -192,7 +192,7 @@ const glossaryTerms = [
     whyItMatters: "Full tang knives are virtually indestructible and perfectly balanced. They won&apos;t break at the handle junction like cheaper knives.",
     examples: ["Wüsthof Classic series", "Professional chef knives"],
     linkText: "See our Wüsthof Classic IKON review",
-    linkUrl: "/reviews/wusthof-classic-ikon-15-piece"
+    linkUrl: "/reviews/wusthof-classic-ikon-16-piece"
   },
   {
     term: "Forged vs Stamped",

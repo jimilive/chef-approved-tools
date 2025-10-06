@@ -9,7 +9,7 @@ export const metadata = {
 
 const featuredReviews = [
   {
-    slug: 'wusthof-classic-ikon-15-piece',
+    slug: 'wusthof-classic-ikon-16-piece',
     title: 'Wüsthof Classic Ikon 16-Piece Set',
     category: 'Knives',
     price: 1749,

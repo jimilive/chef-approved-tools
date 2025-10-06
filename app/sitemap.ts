@@ -105,7 +105,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'kitchenaid-ksm8990wh',
     'robot-coupe-r2-dice',
     'vitamix-5200',
-    'wusthof-classic-ikon-15-piece',
+    'wusthof-classic-ikon-16-piece',
     'le-creuset-signature-7-25-qt-dutch-oven',
     'john-boos-platinum-commercial-cutting-board',
     'lodge-seasoned-cast-iron-3-skillet-bundle'

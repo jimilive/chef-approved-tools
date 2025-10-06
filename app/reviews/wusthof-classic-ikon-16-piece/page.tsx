@@ -7,7 +7,7 @@ import PriceDisplay from '@/components/PriceDisplay'
 
 const productData = {
   name: "WÜSTHOF Classic IKON 16-Piece Knife Block Set",
-  slug: "wusthof-classic-ikon-15-piece",
+  slug: "wusthof-classic-ikon-16-piece",
   brand: "WÜSTHOF",
   model: "Classic IKON 16-Piece",
   sku: "WUSTHOF-IKON-16PC",
@@ -94,13 +94,13 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-15-piece',
+    canonical: 'https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-16-piece',
   },
   openGraph: {
     title: "WÜSTHOF Classic IKON 16-Piece: Professional Knife Set Review",
     description: "Restaurant manager's honest review of the WÜSTHOF Classic IKON knife set",
     images: ['/logo.png'],
-    url: 'https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-15-piece',
+    url: 'https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-16-piece',
     type: 'article',
     siteName: 'Chef Approved Tools',
   }

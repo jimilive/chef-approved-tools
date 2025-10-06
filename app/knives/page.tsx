@@ -47,11 +47,11 @@ export default function KnivesPage() {
       description: "Offset serrated knife for bread and tomatoes - superior knuckle clearance"
     },
     {
-      id: "wusthof-classic-ikon-15-piece",
-      name: "Wüsthof Classic Ikon 15-Piece Knife Set",
+      id: "wusthof-classic-ikon-16-piece",
+      name: "Wüsthof Classic Ikon 16-Piece Knife Set",
       brand: "Wüsthof",
       affiliateUrl: "#",
-      slug: "wusthof-classic-ikon-15-piece",
+      slug: "wusthof-classic-ikon-16-piece",
       description: "Professional German knife set tested in restaurant kitchens"
     }
   ];
