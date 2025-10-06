@@ -13,6 +13,12 @@
    - [ ] Configure welcome email sequence
    - [ ] Create lead magnet delivery automation
 
+2. **Contact Form Email Notifications**
+   - [ ] Integrate transactional email service (Resend, SendGrid, or AWS SES) for contact form
+   - [ ] Configure to send contact form submissions to your inbox
+   - [ ] Note: Email Octopus only handles newsletter campaigns, not transactional emails
+   - [ ] Update `/app/api/contact/route.ts` with chosen email service
+
 2. **Email Sequences to Create**
    - [ ] Welcome email series (5-7 emails)
    - [ ] Product recommendation emails based on category interest

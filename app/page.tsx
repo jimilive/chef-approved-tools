@@ -90,7 +90,7 @@ function EnhancedProductCard({ product, category }: { product: any, category: st
           </a>
 
           {/* Add comparison hook */}
-          <button className="w-full text-blue-600 hover:text-blue-700 font-medium text-sm py-2 border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors">
+          <button type="button" className="w-full text-blue-600 hover:text-blue-700 font-medium text-sm py-2 border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors">
             📊 See Why I Chose This Over 12 Others
           </button>
         </div>

@@ -1,12 +1,53 @@
-import { Metadata } from 'next'
+'use client'
+import { useState, FormEvent } from 'react'
 import Link from 'next/link'
-
-export const metadata: Metadata = {
-  title: 'Contact - Chef Approved Tools',
-  description: 'Get in touch with Scott, former kitchen manager and culinary professional behind Chef Approved Tools.',
-}
+import Image from 'next/image'
 
 export default function ContactPage() {
+  const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setFormState('submitting')
+    setErrorMessage('')
+
+    const formData = new FormData(e.currentTarget)
+
+    // Check honeypot field - if filled, it's a bot
+    const honeypot = formData.get('website')
+    if (honeypot) {
+      // Silent fail for bots
+      setFormState('idle')
+      return
+    }
+
+    try {
+      // Simulate form submission - replace with your actual endpoint
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          subject: formData.get('subject'),
+          message: formData.get('message'),
+        }),
+      })
+
+      if (response.ok) {
+        setFormState('success')
+      } else {
+        throw new Error('Failed to send message')
+      }
+    } catch (error) {
+      setFormState('error')
+      setErrorMessage('There was a problem sending your message. Please try again or email me directly at contact@chefapprovedtools.com')
+    }
+  }
+
   return (
     <main className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -24,6 +65,18 @@ export default function ContactPage() {
           {/* Contact Information */}
           <section className="space-y-6">
             <h2 className="text-2xl font-bold text-slate-900 mb-6">Contact Information</h2>
+
+            {/* Scott's Headshot */}
+            <div className="flex justify-center mb-6">
+              <div className="relative w-32 h-32">
+                <Image
+                  src="/images/branding/scott-ai-portrait-circle.png"
+                  alt="Scott Bradley - Professional Chef"
+                  fill
+                  className="object-cover rounded-full shadow-lg border-4 border-orange-500"
+                />
+              </div>
+            </div>
 
             <div className="bg-white rounded-xl p-6 shadow-lg space-y-4">
               <div>
@@ -60,81 +113,135 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold text-slate-900 mb-6">Send a Message</h2>
 
             <div className="bg-white rounded-xl p-6 shadow-lg">
-              <form className="space-y-6" action="#" method="POST">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                    Name
-                  </label>
+              {formState === 'success' ? (
+                <div className="text-center py-8">
+                  <div className="mb-4">
+                    <svg className="mx-auto h-16 w-16 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Thank You!</h3>
+                  <p className="text-slate-600 mb-6">
+                    Your message has been sent successfully. I&apos;ll get back to you within 2-3 business days.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setFormState('idle')}
+                    className="text-orange-600 hover:text-orange-700 font-semibold"
+                  >
+                    Send Another Message
+                  </button>
+                </div>
+              ) : (
+                <form className="space-y-6" onSubmit={handleSubmit}>
+                  {/* Honeypot field - hidden from humans, visible to bots */}
                   <input
                     type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                    placeholder="Your name"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    className="absolute -left-[9999px]"
+                    aria-hidden="true"
                   />
-                </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      disabled={formState === 'submitting'}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                      placeholder="Your name"
+                    />
+                  </div>
 
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
-                    Subject
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      disabled={formState === 'submitting'}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
+                      Subject
+                    </label>
+                    <select
+                      id="subject"
+                      name="subject"
+                      disabled={formState === 'submitting'}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                    >
+                      <option value="">Select a topic</option>
+                      <option value="equipment-question">Equipment Question</option>
+                      <option value="review-request">Review Request</option>
+                      <option value="professional-feedback">Professional Feedback</option>
+                      <option value="partnership">Partnership Inquiry</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={6}
+                      required
+                      disabled={formState === 'submitting'}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                      placeholder="What would you like to know about professional kitchen equipment?"
+                    />
+                  </div>
+
+                  {formState === 'error' && (
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                      <p className="text-sm text-red-800">{errorMessage}</p>
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={formState === 'submitting'}
+                    className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
-                    <option value="">Select a topic</option>
-                    <option value="equipment-question">Equipment Question</option>
-                    <option value="review-request">Review Request</option>
-                    <option value="professional-feedback">Professional Feedback</option>
-                    <option value="partnership">Partnership Inquiry</option>
-                    <option value="other">Other</option>
-                  </select>
+                    {formState === 'submitting' ? (
+                      <>
+                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      'Send Message'
+                    )}
+                  </button>
+                </form>
+              )}
+
+              {formState !== 'success' && (
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <p className="text-xs text-slate-500">
+                    By submitting this form, you agree that your message may be used to improve
+                    our content and help other professional chefs and home cooks.
+                  </p>
                 </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                    placeholder="What would you like to know about professional kitchen equipment?"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
-                  Send Message
-                </button>
-              </form>
-
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <p className="text-xs text-slate-500">
-                  By submitting this form, you agree that your message may be used to improve
-                  our content and help other professional chefs and home cooks.
-                </p>
-              </div>
+              )}
             </div>
           </section>
         </div>
@@ -172,7 +279,10 @@ export default function ContactPage() {
               </h3>
               <p className="text-slate-600 text-sm">
                 All recommendations are based on real-world use in professional kitchens,
-                typically 6+ months of daily service before I&apos;ll recommend anything.
+                typically 6+ months of daily service before I&apos;ll recommend anything.{' '}
+                <Link href="/about" className="text-orange-600 hover:text-orange-700 font-medium">
+                  Learn about our comprehensive testing process here →
+                </Link>
               </p>
             </div>
 

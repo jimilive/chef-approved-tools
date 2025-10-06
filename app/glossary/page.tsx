@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Book, Search } from 'lucide-react'
+import { Book, Search, ChevronRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Kitchen Glossary, Recipe Conversions & Knife Cuts Guide | Chef Approved Tools',
@@ -190,7 +190,9 @@ const glossaryTerms = [
     term: "Full Tang",
     definition: "A knife construction where the metal blade extends fully through the handle, providing maximum strength and balance. You can see the metal edges along the top and bottom of the handle.",
     whyItMatters: "Full tang knives are virtually indestructible and perfectly balanced. They won&apos;t break at the handle junction like cheaper knives.",
-    examples: ["Wüsthof Classic series", "Professional chef knives"]
+    examples: ["Wüsthof Classic series", "Professional chef knives"],
+    linkText: "See our Wüsthof Classic IKON review",
+    linkUrl: "/reviews/wusthof-classic-ikon-15-piece"
   },
   {
     term: "Forged vs Stamped",
@@ -208,7 +210,9 @@ const glossaryTerms = [
     term: "Enameled Cast Iron",
     definition: "Cast iron cookware coated with a glass-like enamel surface. Combines cast iron&apos;s heat retention with a non-reactive, easy-to-clean surface that doesn&apos;t require seasoning.",
     whyItMatters: "Gets the benefits of cast iron (even heating, heat retention) without the maintenance. Perfect for acidic foods like tomato sauces.",
-    examples: ["Le Creuset", "Staub Dutch ovens"]
+    examples: ["Le Creuset", "Staub Dutch ovens"],
+    linkText: "Read our Le Creuset Dutch Oven review",
+    linkUrl: "/reviews/le-creuset-signature-7-25-qt-dutch-oven"
   },
   {
     term: "HRC (Rockwell Hardness)",
@@ -220,7 +224,9 @@ const glossaryTerms = [
     term: "Commercial-Grade",
     definition: "Equipment built to NSF standards for continuous restaurant use. Typically features heavier construction, more powerful motors, and materials that withstand constant cleaning.",
     whyItMatters: "Commercial-grade equipment lasts 3-5x longer than consumer versions. Worth the investment for serious home cooks.",
-    examples: ["KitchenAid Commercial mixers", "Robot Coupe food processors"]
+    examples: ["KitchenAid Commercial mixers", "Robot Coupe food processors"],
+    linkText: "See our KitchenAid Commercial mixer review",
+    linkUrl: "/reviews/kitchenaid-ksm8990wh"
   },
   {
     term: "Covers Per Night",
@@ -232,7 +238,9 @@ const glossaryTerms = [
     term: "Seasoning (Cast Iron)",
     definition: "Creating a natural non-stick surface on cast iron by heating oil until it polymerizes into a hard coating. Requires multiple applications and ongoing maintenance.",
     whyItMatters: "Proper seasoning makes cast iron perform like non-stick while lasting generations. Enameled cast iron eliminates this requirement.",
-    examples: ["Lodge cast iron skillets", "Carbon steel pans"]
+    examples: ["Lodge cast iron skillets", "Carbon steel pans"],
+    linkText: "See our Lodge Cast Iron bundle review",
+    linkUrl: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
   },
   {
     term: "Fond",
@@ -269,8 +277,46 @@ export default function GlossaryPage() {
         </div>
       </section>
 
+      {/* Table of Contents */}
+      <section className="py-12 bg-gray-50 border-b border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">
+            Jump to Section
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a
+              href="#equipment-terms"
+              className="flex items-center justify-between bg-white hover:bg-orange-50 border border-gray-200 hover:border-orange-300 rounded-lg p-4 transition-all group"
+            >
+              <span className="font-semibold text-slate-900 group-hover:text-orange-700">
+                Essential Equipment Terms
+              </span>
+              <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-orange-700" />
+            </a>
+            <a
+              href="#recipe-conversions"
+              className="flex items-center justify-between bg-white hover:bg-orange-50 border border-gray-200 hover:border-orange-300 rounded-lg p-4 transition-all group"
+            >
+              <span className="font-semibold text-slate-900 group-hover:text-orange-700">
+                Professional Recipe Conversions
+              </span>
+              <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-orange-700" />
+            </a>
+            <a
+              href="#knife-cuts"
+              className="flex items-center justify-between bg-white hover:bg-orange-50 border border-gray-200 hover:border-orange-300 rounded-lg p-4 transition-all group"
+            >
+              <span className="font-semibold text-slate-900 group-hover:text-orange-700">
+                Professional Knife Cuts
+              </span>
+              <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-orange-700" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Glossary Terms */}
-      <section className="py-16">
+      <section id="equipment-terms" className="py-16 scroll-mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
@@ -284,7 +330,7 @@ export default function GlossaryPage() {
           <div className="space-y-8">
             {glossaryTerms.map((item, index) => (
               <article key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 text-orange-700">
+                <h3 className="text-2xl font-bold mb-4 text-orange-700">
                   {item.term}
                 </h3>
 
@@ -311,6 +357,17 @@ export default function GlossaryPage() {
                       ))}
                     </ul>
                   </div>
+
+                  {item.linkUrl && item.linkText && (
+                    <div className="mt-4 pt-4 border-t border-gray-200">
+                      <Link
+                        href={item.linkUrl}
+                        className="inline-flex items-center text-orange-600 hover:text-orange-700 font-medium"
+                      >
+                        {item.linkText} →
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </article>
             ))}
@@ -319,7 +376,7 @@ export default function GlossaryPage() {
       </section>
 
       {/* Recipe Conversions Section */}
-      <section className="py-16 bg-white">
+      <section id="recipe-conversions" className="py-16 bg-white scroll-mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
@@ -329,6 +386,32 @@ export default function GlossaryPage() {
               Master the measurements and conversions that professional bakers and chefs use for consistent,
               reproducible results every time.
             </p>
+          </div>
+
+          {/* Lead Magnet Callout */}
+          <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl p-8 mb-12 shadow-xl">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="flex-shrink-0">
+                <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
+                  <Book className="w-10 h-10 text-white" />
+                </div>
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-2xl font-bold mb-2">
+                  Want a Printable Version for Your Kitchen?
+                </h3>
+                <p className="text-blue-100 mb-4">
+                  Get our free, one-page PDF with all professional recipe conversions and temperature charts.
+                  Perfect for keeping next to your prep station!
+                </p>
+                <Link
+                  href="/newsletter"
+                  className="inline-block bg-white text-blue-700 hover:bg-blue-50 font-bold px-6 py-3 rounded-lg transition-colors"
+                >
+                  Download Free Conversion Chart →
+                </Link>
+              </div>
+            </div>
           </div>
 
           {/* Why Weight Matters */}
@@ -533,7 +616,7 @@ export default function GlossaryPage() {
       </section>
 
       {/* Knife Cuts Section */}
-      <section className="py-16 bg-gray-50">
+      <section id="knife-cuts" className="py-16 bg-gray-50 scroll-mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
@@ -543,6 +626,32 @@ export default function GlossaryPage() {
               Master these fundamental cuts to cook like a professional. Uniform cuts ensure even cooking
               and professional presentation.
             </p>
+          </div>
+
+          {/* Knife Guide CTA Callout */}
+          <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-xl p-8 mb-12 shadow-xl">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="flex-shrink-0">
+                <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
+                  <Book className="w-10 h-10 text-white" />
+                </div>
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-2xl font-bold mb-2">
+                  Mastering These Cuts Starts with the Right Tool
+                </h3>
+                <p className="text-orange-100 mb-4">
+                  A sharp, well-balanced knife is essential for safety and precision. These techniques become
+                  effortless with professional-quality equipment.
+                </p>
+                <Link
+                  href="/guides/best-chef-knives"
+                  className="inline-block bg-white text-orange-700 hover:bg-orange-50 font-bold px-6 py-3 rounded-lg transition-colors"
+                >
+                  See Our Guide to the Best Professional Chef Knives →
+                </Link>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

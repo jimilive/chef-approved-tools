@@ -11,7 +11,8 @@ export default function CookwarePage() {
       brand: "Lodge",
       affiliateUrl: "#",
       slug: "lodge-seasoned-cast-iron-3-skillet-bundle",
-      description: "Professional 3-piece cast iron set tested in commercial kitchens"
+      description: "Professional 3-piece cast iron set tested in commercial kitchens",
+      score: 9.6
     },
     {
       id: "le-creuset-signature-7-25-qt-dutch-oven",
@@ -19,7 +20,8 @@ export default function CookwarePage() {
       brand: "Le Creuset",
       affiliateUrl: "#",
       slug: "le-creuset-signature-7-25-qt-dutch-oven",
-      description: "Premium enameled cast iron for braising and roasting"
+      description: "Premium enameled cast iron for braising and roasting",
+      score: 9.6
     }
   ];
 
@@ -37,103 +39,161 @@ export default function CookwarePage() {
   };
 
   return (
-    <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '48px 16px' }}>
+    <div className="max-w-7xl mx-auto px-4 py-12">
       <BreadcrumbSchema items={categoryBreadcrumbs.cookware} />
       <Script id="cookware-itemlist" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(itemListLd)}
       </Script>
 
-      <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '8px' }}>
+      {/* Header Section */}
+      <h1 className="text-4xl font-bold mb-2">
         Professional Cookware
       </h1>
-      <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '32px' }}>
-        Pots, pans, and cookware that deliver restaurant-quality results in your home kitchen.
+      <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+        Pots, pans, and cookware that deliver restaurant-quality results in your home kitchen. Whether you&apos;re looking for a durable cast iron skillet, a versatile Dutch oven, or a high-performance stainless steel frying pan, our expert reviews will help you choose the right tool for the job. Our top recommendations are in our comprehensive Best Cookware Guide.
       </p>
 
-      <div style={{ display: 'grid', gap: '24px', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', marginBottom: '48px' }}>
+      {/* Featured Guide Hero Section */}
+      <section className="mb-12 bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl overflow-hidden shadow-lg border border-orange-100">
+        <div className="grid md:grid-cols-2 gap-8 items-center p-8 md:p-12">
+          <div>
+            <div className="inline-block bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
+              FEATURED GUIDE
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Our Guide to the Best Cookware of 2025
+            </h2>
+            <p className="text-slate-700 text-lg mb-6 leading-relaxed">
+              After hundreds of hours of testing in professional kitchens, we&apos;ve identified the top-performing pans for every budget. From cast iron to stainless steel, discover which cookware delivers the best value and performance.
+            </p>
+            <Link
+              href="/guides/best-cookware"
+              className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-lg"
+            >
+              See Our Top Picks →
+            </Link>
+          </div>
+          <div className="hidden md:block">
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-xl">
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">✓</span>
+                  <span className="text-slate-700 font-medium">Expert testing & analysis</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">✓</span>
+                  <span className="text-slate-700 font-medium">Every budget covered</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">✓</span>
+                  <span className="text-slate-700 font-medium">Restaurant-quality results</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">✓</span>
+                  <span className="text-slate-700 font-medium">Buying & care guides</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sub-Category Navigation */}
+      <section className="mb-10">
+        <h3 className="text-xl font-bold text-slate-900 mb-4">Browse by Category</h3>
+
+        <div className="mb-6">
+          <h4 className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-3">By Material</h4>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/cookware?filter=cast-iron" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
+              Cast Iron
+            </Link>
+            <Link href="/cookware?filter=stainless-steel" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
+              Stainless Steel
+            </Link>
+            <Link href="/cookware?filter=non-stick" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
+              Non-Stick
+            </Link>
+            <Link href="/cookware?filter=enameled" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
+              Enameled Cast Iron
+            </Link>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-3">By Type</h4>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/cookware?type=skillets" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
+              Skillets & Frying Pans
+            </Link>
+            <Link href="/cookware?type=dutch-ovens" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
+              Dutch Ovens
+            </Link>
+            <Link href="/cookware?type=saucepans" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
+              Saucepans
+            </Link>
+            <Link href="/cookware?type=cookware-sets" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
+              Cookware Sets
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Grid */}
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 mb-12">
         {products.map(p => (
-          <div key={p.id} style={{ backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', padding: '24px', border: '1px solid #e2e8f0', position: 'relative', transition: 'transform 0.2s, box-shadow 0.2s' }}
-               onMouseEnter={(e) => {
-                 e.currentTarget.style.transform = 'translateY(-2px)';
-                 e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.15)';
-               }}
-               onMouseLeave={(e) => {
-                 e.currentTarget.style.transform = 'translateY(0)';
-                 e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
-               }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#1e293b', lineHeight: '1.3', flex: '1' }}>{p.name}</h3>
-              <div style={{ backgroundColor: '#fef3c7', color: '#92400e', fontSize: '0.75rem', fontWeight: '600', padding: '4px 8px', borderRadius: '4px', marginLeft: '8px' }}>
+          <div key={p.id} className="bg-white rounded-xl shadow-md p-6 border border-slate-200 relative transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+            <div className="flex justify-between items-start mb-3">
+              <h3 className="text-xl font-bold text-slate-900 leading-tight flex-1">{p.name}</h3>
+              <div className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded ml-2 whitespace-nowrap">
                 CHEF TESTED
               </div>
             </div>
-            <p style={{ color: '#64748b', marginBottom: '12px', fontSize: '0.9rem' }}>by {p.brand}</p>
-            
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                <span style={{ color: '#fbbf24', fontSize: '1rem' }}>★★★★★</span>
-                <span style={{ color: '#64748b', fontSize: '0.875rem' }}>9.6/10</span>
+            <p className="text-slate-600 mb-3 text-sm">by {p.brand}</p>
+
+            <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-1">
+                <span className="text-yellow-400 text-base">★★★★★</span>
+                <span className="text-slate-600 text-sm font-medium">Our Score: {p.score}/10</span>
               </div>
             </div>
-            
-            <div style={{ marginBottom: '16px' }}>
-              <p style={{ color: '#374151', fontSize: '0.875rem', lineHeight: '1.5' }}>
+
+            <div className="mb-4">
+              <p className="text-slate-700 text-sm leading-relaxed">
                 {p.description}{' '}
-                <Link href={`/reviews/${p.slug}`} style={{ color: '#ea580c', textDecoration: 'none', fontWeight: '500' }}>
+                <Link href={`/reviews/${p.slug}`} className="text-orange-600 hover:text-orange-700 font-medium">
                   Read full review →
                 </Link>
               </p>
             </div>
-            
-            <div style={{ display: 'flex', gap: '8px' }}>
-              <a href={p.affiliateUrl} 
-                 target="_blank" 
+
+            <div className="flex gap-2">
+              <a href={p.affiliateUrl}
+                 target="_blank"
                  rel="sponsored nofollow noopener"
-                 style={{ 
-                   background: 'linear-gradient(45deg, #ff9900, #ffad33)', 
-                   color: 'white', 
-                   padding: '12px 18px', 
-                   borderRadius: '8px', 
-                   textDecoration: 'none', 
-                   display: 'inline-block',
-                   fontWeight: '600',
-                   fontSize: '0.875rem',
-                   flex: '1',
-                   textAlign: 'center',
-                   boxShadow: '0 2px 4px rgba(255, 153, 0, 0.2)'
-                 }}>
-                🛒 Check Price
+                 className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 px-4 rounded-lg font-semibold text-sm flex-1 text-center shadow-md hover:shadow-lg transition-all duration-200">
+                🛒 Check Price on Amazon
               </a>
               <Link href={`/reviews/${p.slug}`}
-                    style={{ 
-                      border: '2px solid #ea580c', 
-                      color: '#ea580c', 
-                      padding: '10px 18px', 
-                      borderRadius: '8px', 
-                      textDecoration: 'none', 
-                      display: 'inline-block',
-                      fontWeight: '600',
-                      fontSize: '0.875rem',
-                      backgroundColor: 'transparent',
-                      textAlign: 'center'
-                    }}>
+                    className="border-2 border-orange-600 text-orange-600 hover:bg-orange-50 py-3 px-4 rounded-lg font-semibold text-sm text-center transition-colors duration-200">
                 Review
               </Link>
             </div>
-            
-            <p style={{ fontSize: '0.75rem', color: '#9ca3af', marginTop: '8px', textAlign: 'center' }}>
-              <span style={{ color: '#ea580c' }}>Affiliate link</span> • Prices may change
+
+            <p className="text-xs text-slate-400 mt-2 text-center">
+              <span className="text-orange-600 font-medium">Affiliate link</span> • Prices may change
             </p>
           </div>
         ))}
       </div>
 
-      <section style={{ marginTop: '48px', padding: '32px', backgroundColor: '#f8fafc', borderRadius: '12px' }}>
-        <h2 style={{ fontSize: '1.875rem', fontWeight: 'bold', marginBottom: '8px' }}>Cookware Buying Guide</h2>
-        <p style={{ color: '#64748b', marginBottom: '16px' }}>Materials comparison, sizing recommendations, and care instructions.</p>
-        <a href="/guides/best-cookware" style={{ backgroundColor: '#ea580c', color: 'white', padding: '8px 16px', borderRadius: '8px', textDecoration: 'none' }}>
+      {/* Cookware Buying Guide Section */}
+      <section className="mt-12 p-8 bg-slate-50 rounded-xl border border-slate-200">
+        <h2 className="text-3xl font-bold mb-2 text-slate-900">Cookware Buying Guide</h2>
+        <p className="text-slate-600 mb-4 text-lg">Materials comparison, sizing recommendations, and care instructions.</p>
+        <Link href="/guides/best-cookware" className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
           Read the Full Guide
-        </a>
+        </Link>
       </section>
     </div>
   );
