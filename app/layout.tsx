@@ -14,7 +14,7 @@ import MobileOptimizedLayout from '@/components/MobileOptimizedLayout'
 import { organizationSchema, websiteSchema } from '@/lib/schema'
 import MobileOptimizationProvider from '@/components/MobileOptimizationProvider'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.chefapprovedtools.com'),
@@ -122,6 +122,10 @@ export default function RootLayout({
 
         {/* Preload critical above-the-fold images */}
         <link rel="preload" href="/og-image.jpg" as="image" type="image/jpeg" />
+
+        {/* Preload critical CSS - Note: CSS hash changes with each build */}
+        {/* Run: npm run build && find .next/static/css -name "*.css" to get the latest filename */}
+        <link rel="preload" href="/_next/static/css/34ae4f707512af1f.css" as="style" />
 
         {/* Resource hints for critical third-party domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

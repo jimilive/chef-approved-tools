@@ -99,7 +99,7 @@ export default function KitchenAidReviewPage() {
                 {index === breadcrumbs.length - 1 ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>
                 ) : (
-                  <Link href={crumb.url} className="hover:text-orange-700 transition-colors">
+                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-700 transition-colors">
                     {crumb.name}
                   </Link>
                 )}

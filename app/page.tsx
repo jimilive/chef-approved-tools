@@ -58,6 +58,7 @@ function EnhancedProductCard({ product, category }: { product: any, category: st
             alt={product.name}
             width={200}
             height={200}
+            sizes="(max-width: 768px) 150px, 200px"
             className="object-contain opacity-50"
           />
         </div>
@@ -187,6 +188,7 @@ export default function HomePage() {
                 src="/images/branding/scott-ai-portrait-circle.png"
                 alt="Scott Bradley - Professional Chef"
                 fill
+                sizes="128px"
                 className="object-cover rounded-full shadow-xl border-4 border-orange-500"
               />
             </div>
@@ -364,7 +366,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <a href="/knives" className="group bg-white rounded-xl p-6 sm:p-8 hover:shadow-lg transition-all">
               <div className="relative w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
-                <Image src="/logo.png" alt="Knives" width={40} height={40} className="object-contain" />
+                <Image src="/logo.png" alt="Knives" width={40} height={40} sizes="40px" className="object-contain" />
               </div>
               <h3 className="text-xl font-bold mb-2 sm:mb-2 text-slate-900">Professional Knives</h3>
               <p className="text-slate-600 text-sm mt-2 sm:mt-0">German vs Japanese, what actually lasts</p>
@@ -372,7 +374,7 @@ export default function HomePage() {
 
             <a href="/cookware" className="group bg-white rounded-xl p-6 sm:p-8 hover:shadow-lg transition-all">
               <div className="relative w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
-                <Image src="/logo.png" alt="Cookware" width={40} height={40} className="object-contain" />
+                <Image src="/logo.png" alt="Cookware" width={40} height={40} sizes="40px" className="object-contain" />
               </div>
               <h3 className="text-xl font-bold mb-2 sm:mb-2 text-slate-900">Commercial Cookware</h3>
               <p className="text-slate-600 text-sm mt-2 sm:mt-0">Restaurant-grade pans for home use</p>
@@ -380,7 +382,7 @@ export default function HomePage() {
 
             <a href="/appliances" className="group bg-white rounded-xl p-6 sm:p-8 hover:shadow-lg transition-all">
               <div className="relative w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
-                <Image src="/logo.png" alt="Appliances" width={40} height={40} className="object-contain" />
+                <Image src="/logo.png" alt="Appliances" width={40} height={40} sizes="40px" className="object-contain" />
               </div>
               <h3 className="text-xl font-bold mb-2 sm:mb-2 text-slate-900">Power Equipment</h3>
               <p className="text-slate-600 text-sm mt-2 sm:mt-0">Mixers, blenders that survive abuse</p>

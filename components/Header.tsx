@@ -53,6 +53,7 @@ export default function Header() {
                   alt="Chef Approved Tools"
                   width={48}
                   height={48}
+                  sizes="48px"
                   className="h-12 w-auto drop-shadow-lg"
                   priority
                 />
