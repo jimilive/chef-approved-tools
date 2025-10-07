@@ -20,6 +20,8 @@ const sampleProducts = [
     brand: 'Vitamix',
     rating: 4.7,
     reviews: 234,
+    price: 449,
+    image: 'https://www.chefapprovedtools.com/logo.png',
     affiliateUrl: 'https://amzn.to/4e6GceC',
     badge: 'Restaurant Tested',
     tested: '5+ years proven'
@@ -30,6 +32,8 @@ const sampleProducts = [
     brand: 'KitchenAid',
     rating: 4.9,
     reviews: 156,
+    price: 549,
+    image: 'https://www.chefapprovedtools.com/logo.png',
     affiliateUrl: 'https://amzn.to/4nqVHKP',
     badge: 'NSF Certified',
     tested: 'Survived $80K/mo operations'
@@ -263,6 +267,8 @@ export default function HomePage() {
                     rating={product.rating}
                     reviewCount={product.reviews}
                     category={category}
+                    price={product.price}
+                    image={product.image}
                     affiliateUrl={product.affiliateUrl}
                   />
                   <EnhancedProductCard

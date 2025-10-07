@@ -137,6 +137,7 @@ interface SimpleProductSchemaProps {
   reviewCount: number
   category?: string
   image?: string
+  price?: number
   affiliateUrl?: string
 }
 
@@ -147,6 +148,7 @@ export function SimpleProductSchema({
   reviewCount,
   category = "Kitchen Equipment",
   image,
+  price,
   affiliateUrl
 }: SimpleProductSchemaProps) {
   const simpleSchema = {
@@ -172,7 +174,7 @@ export function SimpleProductSchema({
       "availability": "https://schema.org/InStock",
       ...(affiliateUrl && { "url": affiliateUrl }),
       "priceCurrency": "USD",
-      "price": "0",
+      "price": price?.toString() || "299",
       "priceValidUntil": new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
       "seller": {
         "@type": "Organization",
