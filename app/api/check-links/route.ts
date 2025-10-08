@@ -31,12 +31,17 @@ async function checkAffiliateLink(url: string): Promise<LinkCheckResult> {
   const checkedAt = new Date().toISOString()
 
   try {
-    // Use HEAD request to minimize data transfer
+    // Use HEAD request with proper browser headers to avoid Amazon bot blocking
     const response = await fetch(url, {
       method: 'HEAD',
       redirect: 'manual', // Don't follow redirects automatically
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; ChefApprovedTools-LinkChecker/1.0)'
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Cache-Control': 'no-cache',
+        'Pragma': 'no-cache'
       }
     })
 

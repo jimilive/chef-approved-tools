@@ -1,0 +1,112 @@
+name: Check Amazon Affiliate Links
+
+# Run daily at 9 AM UTC (1 AM PST / 4 AM EST)
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Extract Amazon Links
+        id: extract
+        run: |
+          # Extract all amzn.to links from review pages
+          links=$(grep -r "amzn\.to" app/reviews --include="*.tsx" | grep -o "https://amzn\.to/[a-zA-Z0-9]*" | sort -u)
+          echo "$links" > /tmp/links.txt
+          echo "Found $(wc -l < /tmp/links.txt) unique affiliate links"
+
+      - name: Test Links with Browser Headers
+        id: test
+        run: |
+          broken_links=""
+          working_count=0
+          broken_count=0
+
+          while IFS= read -r link; do
+            # Test with proper browser headers to avoid bot detection
+            status=$(curl -s -o /dev/null -w "%{http_code}" -L "$link" \
+              -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+              -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
+              -H "Accept-Language: en-US,en;q=0.9" \
+              --max-time 15)
+
+            if [ "$status" -eq 200 ] || [ "$status" -ge 300 ] && [ "$status" -lt 400 ]; then
+              echo "✅ $link - HTTP $status"
+              ((working_count++))
+            else
+              echo "❌ $link - HTTP $status - BROKEN"
+              broken_links="$broken_links\n- $link (HTTP $status)"
+              ((broken_count++))
+            fi
+
+            # Rate limit: wait 1 second between checks
+            sleep 1
+          done < /tmp/links.txt
+
+          echo "working_count=$working_count" >> $GITHUB_OUTPUT
+          echo "broken_count=$broken_count" >> $GITHUB_OUTPUT
+          echo "broken_links<<EOF" >> $GITHUB_OUTPUT
+          echo -e "$broken_links" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create Issue if Links are Broken
+        if: steps.test.outputs.broken_count > 0
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const brokenCount = '${{ steps.test.outputs.broken_count }}';
+            const brokenLinks = `${{ steps.test.outputs.broken_links }}`;
+            const workingCount = '${{ steps.test.outputs.working_count }}';
+
+            const issueBody = `## 🚨 Broken Amazon Affiliate Links Detected
+
+**Status:** ${brokenCount} broken link(s) found out of ${parseInt(brokenCount) + parseInt(workingCount)} total
+
+### Broken Links:
+${brokenLinks}
+
+### Action Required:
+1. Log into Amazon Associates
+2. Verify these products still exist
+3. Generate fresh affiliate links if needed
+4. Update the affected review pages
+
+### Automated Check:
+This check runs daily at 9 AM UTC using proper browser headers to avoid Amazon's bot detection.
+
+---
+*This issue was created automatically by the affiliate link checker workflow.*`;
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🚨 ${brokenCount} Broken Affiliate Link(s) Detected`,
+              body: issueBody,
+              labels: ['bug', 'revenue-blocker', 'automated']
+            });
+
+      - name: Summary
+        run: |
+          echo "## Affiliate Link Check Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Working: ${{ steps.test.outputs.working_count }}" >> $GITHUB_STEP_SUMMARY
+          echo "- ❌ Broken: ${{ steps.test.outputs.broken_count }}" >> $GITHUB_STEP_SUMMARY
+
+          if [ "${{ steps.test.outputs.broken_count }}" -gt 0 ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### Broken Links:" >> $GITHUB_STEP_SUMMARY
+            echo "${{ steps.test.outputs.broken_links }}" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "⚠️ A GitHub issue has been created automatically." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "✅ All affiliate links are working correctly!" >> $GITHUB_STEP_SUMMARY
+          fi
