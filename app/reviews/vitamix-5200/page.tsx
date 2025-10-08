@@ -40,7 +40,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://amzn.to/4e6GceC"
+      url: "https://amzn.to/48RALd9"
     },
     {
       retailer: "Vitamix Direct",
