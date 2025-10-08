@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Star, TrendingUp, Award } from 'lucide-react'
 
 export const metadata = {
@@ -86,7 +87,7 @@ const myDailyTools = [
     title: "Victorinox Fibrox Pro 10\" Chef's Knife",
     category: 'Knives',
     price: 50,
-    image: '/logo.png',
+    image: '/images/products/victorinox-fibrox-10-inch-chefs-knife/victorinox-fibrox-10-inch-chefs-knife-1.jpg',
     excerpt: "The longer blade for larger cuts and bigger hands - 40 years of professional use.",
     badge: 'Daily Use',
     testDuration: '40 years'
@@ -116,7 +117,7 @@ const myDailyTools = [
     title: 'Benriner Large Mandoline',
     category: 'Tools',
     price: 40,
-    image: '/logo.png',
+    image: '/images/products/benriner-large-mandoline/benriner-large-mandoline-1.jpg',
     excerpt: "Professional consistency for perfect slices - every gratin cooked evenly.",
     badge: 'Daily Use',
     testDuration: '40 years'
@@ -126,7 +127,7 @@ const myDailyTools = [
     title: "Victorinox 6\" Granton Edge Boning Knife",
     category: 'Knives',
     price: 35,
-    image: '/logo.png',
+    image: '/images/products/victorinox-granton-edge-boning-knife/victorinox-granton-edge-boning-knife-1.jpg',
     excerpt: "Professional boning knife for breaking down proteins with precision.",
     badge: 'Daily Use',
     testDuration: '40 years'
@@ -146,7 +147,7 @@ const myDailyTools = [
     title: 'Gold Textiles Restaurant Bar Mops',
     category: 'Tools',
     price: 25,
-    image: '/logo.png',
+    image: '/images/products/gold-textiles-bar-mops/gold-textiles-bar-mops-1.jpg',
     excerpt: "The towels restaurants actually use - absorbent, durable, dishwasher-safe.",
     badge: 'Daily Use',
     testDuration: '40 years'
@@ -156,7 +157,7 @@ const myDailyTools = [
     title: 'OXO Good Grips Bench Scraper',
     category: 'Tools',
     price: 13,
-    image: '/logo.png',
+    image: '/images/products/oxo-good-grips-bench-scraper/oxo-good-grips-bench-scraper-1.jpg',
     excerpt: "Most underrated kitchen tool - transfers ingredients, portions dough, cleans boards.",
     badge: 'Daily Use',
     testDuration: '40 years'
@@ -166,7 +167,7 @@ const myDailyTools = [
     title: "Victorinox 4\" Paring Knife",
     category: 'Knives',
     price: 12,
-    image: '/logo.png',
+    image: '/images/products/victorinox-4-inch-paring-knife/victorinox-4-inch-paring-knife-1.jpg',
     excerpt: "Precision paring knife for detailed work - the exact knife I've used for decades.",
     badge: 'Daily Use',
     testDuration: '40 years'
@@ -176,7 +177,7 @@ const myDailyTools = [
     title: 'OXO Good Grips Swivel Peeler',
     category: 'Tools',
     price: 10,
-    image: '/logo.png',
+    image: '/images/products/oxo-good-grips-swivel-peeler/oxo-good-grips-swivel-peeler-1.jpg',
     excerpt: "The peeler that actually lasts - sharp blade, comfortable grip, dishwasher-safe.",
     badge: 'Daily Use',
     testDuration: '40 years'
@@ -260,12 +261,15 @@ export default function ReviewsPage() {
                     {review.testDuration}
                   </div>
 
-                  {/* Image placeholder */}
-                  <div className="aspect-w-16 aspect-h-12 bg-gray-100 p-8">
-                    <div className="flex items-center justify-center h-40">
-                      <div className="text-5xl opacity-50">
-                        {review.category === 'Knives' ? '🔪' : '🥄'}
-                      </div>
+                  {/* Product Image */}
+                  <div className="aspect-w-16 aspect-h-12 bg-gray-100">
+                    <div className="relative h-48">
+                      <Image
+                        src={review.image}
+                        alt={review.title}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                   </div>
                 </div>
@@ -366,13 +370,15 @@ export default function ReviewsPage() {
                     {review.testDuration}
                   </div>
 
-                  {/* Image placeholder */}
-                  <div className="aspect-w-16 aspect-h-12 bg-gray-100 p-8">
-                    <div className="flex items-center justify-center h-48">
-                      <div className="text-6xl opacity-50">
-                        {review.category === 'Knives' ? '🔪' :
-                         review.category === 'Cookware' ? '🍳' : '⚡'}
-                      </div>
+                  {/* Product Image */}
+                  <div className="aspect-w-16 aspect-h-12 bg-gray-100">
+                    <div className="relative h-48">
+                      <Image
+                        src={review.image}
+                        alt={review.title}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                   </div>
                 </div>

@@ -43,14 +43,14 @@ export default function VictorinoxFibrox10InchReview() {
         {/* Product Images */}
         <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
           <Image
-            src="/images/products/victorinox-fibrox-10-inch/main.jpg"
+            src="/images/products/victorinox-fibrox-10-inch-chefs-knife/victorinox-fibrox-10-inch-chefs-knife-1.jpg"
             alt="Victorinox Fibrox Pro 10-inch Chef's Knife"
             width={1200}
             height={800}
             className="rounded-lg w-full"
           />
           <Image
-            src="/images/products/victorinox-fibrox-10-inch/handle.jpg"
+            src="/images/products/victorinox-fibrox-10-inch-chefs-knife/victorinox-fibrox-10-inch-chefs-knife-2.jpg"
             alt="Victorinox Fibrox Pro Handle Detail"
             width={1200}
             height={800}
@@ -96,7 +96,7 @@ export default function VictorinoxFibrox10InchReview() {
 
           <div className="mb-8">
             <Image
-              src="/images/products/victorinox-fibrox-10-inch/brand.jpg"
+              src="/images/products/victorinox-fibrox-10-inch-chefs-knife/victorinox-fibrox-10-inch-chefs-knife-3.jpg"
               alt="Victorinox Brand and Quality"
               width={1200}
               height={800}

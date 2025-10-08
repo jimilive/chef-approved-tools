@@ -43,7 +43,7 @@ export default function OXOGoodGripsBenchScraperReview() {
         {/* Product Image */}
         <div className="mb-8">
           <Image
-            src="/images/products/oxo-bench-scraper/main.jpg"
+            src="/images/products/oxo-good-grips-bench-scraper/oxo-good-grips-bench-scraper-1.jpg"
             alt="OXO Good Grips Bench Scraper"
             width={1200}
             height={800}
@@ -91,7 +91,7 @@ export default function OXOGoodGripsBenchScraperReview() {
 
           <div className="mb-8">
             <Image
-              src="/images/products/oxo-bench-scraper/brand.jpg"
+              src="/images/products/oxo-good-grips-bench-scraper/oxo-good-grips-bench-scraper-2.jpg"
               alt="OXO Good Grips Brand Quality"
               width={1200}
               height={800}

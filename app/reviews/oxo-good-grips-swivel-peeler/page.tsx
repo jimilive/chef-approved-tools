@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
@@ -37,6 +38,24 @@ export default function OXOGoodGripsSwivelPeelerReview() {
 
       {/* Main Content */}
       <article className="max-w-4xl mx-auto px-4 py-12">
+
+        {/* Product Images */}
+        <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Image
+            src="/images/products/oxo-good-grips-swivel-peeler/oxo-good-grips-swivel-peeler-1.jpg"
+            alt="OXO Good Grips Swivel Peeler"
+            width={1200}
+            height={800}
+            className="rounded-lg w-full"
+          />
+          <Image
+            src="/images/products/oxo-good-grips-swivel-peeler/oxo-good-grips-swivel-peeler-2.jpg"
+            alt="OXO Good Grips Swivel Peeler Detail"
+            width={1200}
+            height={800}
+            className="rounded-lg w-full"
+          />
+        </div>
 
         {/* Quick Verdict */}
         <div className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-8">

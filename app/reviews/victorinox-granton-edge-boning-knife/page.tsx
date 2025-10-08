@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
@@ -38,6 +39,24 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
 
       {/* Main Content */}
       <article className="max-w-4xl mx-auto px-4 py-12">
+
+        {/* Product Images */}
+        <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Image
+            src="/images/products/victorinox-granton-edge-boning-knife/victorinox-granton-edge-boning-knife-1.jpg"
+            alt="Victorinox Granton Edge Boning Knife"
+            width={1200}
+            height={800}
+            className="rounded-lg w-full"
+          />
+          <Image
+            src="/images/products/victorinox-granton-edge-boning-knife/victorinox-granton-edge-boning-knife-2.jpg"
+            alt="Victorinox Granton Edge Boning Knife Detail"
+            width={1200}
+            height={800}
+            className="rounded-lg w-full"
+          />
+        </div>
 
         {/* Quick Verdict */}
         <div className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-8">
