@@ -40,20 +40,13 @@ export default function Victorinox4InchParingKnifeReview() {
       <article className="max-w-4xl mx-auto px-4 py-12">
 
         {/* Product Images */}
-        <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="mb-8">
           <Image
             src="/images/products/victorinox-4-inch-paring-knife/victorinox-4-inch-paring-knife-1.jpg"
             alt="Victorinox 4-inch Paring Knife"
-            width={1200}
-            height={800}
-            className="rounded-lg w-full"
-          />
-          <Image
-            src="/images/products/victorinox-4-inch-paring-knife/victorinox-4-inch-paring-knife-2.jpg"
-            alt="Victorinox 4-inch Paring Knife Detail"
-            width={1200}
-            height={800}
-            className="rounded-lg w-full"
+            width={1000}
+            height={1500}
+            className="rounded-lg w-full h-auto max-w-2xl mx-auto"
           />
         </div>
 
