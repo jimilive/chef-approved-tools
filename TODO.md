@@ -54,6 +54,8 @@
 
 ### Product Reviews (7 completed / 18 listed / 20+ target)
 
+**📋 See REVIEWS_TO_WRITE.md for additional 13 reviews to be written**
+
 **✅ Complete Reviews (7):**
 - ✅ Le Creuset 7.25-qt Dutch Oven (comprehensive 10-year review)
 - ✅ KitchenAid KSM8990WH Commercial Mixer
@@ -96,12 +98,23 @@
 - ✅ Knife Care Guide (`/guides/knife-care`)
 - [ ] Additional category guides needed
 
-### Blog Content (1 completed)
+### Blog Content (1 completed / 50 planned)
+
+**📋 See BLOG_ARTICLES_TO_WRITE.md for complete list of 50 blog articles**
+
 - ✅ How to Sear Steaks Like a Restaurant Chef (`/blog/how-to-sear-steaks-like-restaurant-chef`)
-- [ ] Kitchen tips blog posts for SEO (target: 10+ posts)
-- [ ] Technique guides based on professional experience
-- [ ] Seasonal cooking content
-- [ ] Equipment maintenance guides
+- [ ] 50 additional blog articles organized by category (see BLOG_ARTICLES_TO_WRITE.md)
+  - Kitchen Safety & Hygiene (7 articles)
+  - Knife Skills & Maintenance (3 articles)
+  - Kitchen Tools & Equipment (3 articles)
+  - Food Science & Techniques (8 articles)
+  - Meat & Protein (6 articles)
+  - Seasonings & Flavor (5 articles)
+  - Sauces & Basics (3 articles)
+  - Vegetables & Produce (7 articles)
+  - Cooking Techniques & Tips (6 articles)
+  - Plating & Presentation (1 article)
+  - Health & Nutrition (1 article)
 
 ### Category Pages (3 completed)
 - ✅ Knives category page (`/knives`)
@@ -245,6 +258,40 @@
 ## 🎯 Priority Tasks (Next 30 Days)
 
 1. **High Priority**
+   - [ ] Fix images not working on some product pages
+   - [ ] Fix review page images - they look horrible
+   - [ ] Create new review template based on Le Creuset review (use best practices from featured reviews for SEO and conversions)
+   - [ ] **Phase 1:** Upgrade the 7 featured reviews to new template
+     - [ ] Le Creuset 7.25-qt Dutch Oven (base template)
+     - [ ] KitchenAid KSM8990WH Commercial Mixer
+     - [ ] Wüsthof Classic IKON 16-Piece Knife Set
+     - [ ] John Boos Platinum Commercial Cutting Board
+     - [ ] Robot Coupe R2 Dice Food Processor
+     - [ ] Vitamix 5200 Blender
+     - [ ] Lodge Seasoned Cast Iron 3-Skillet Bundle
+   - [ ] **Phase 2:** Upgrade the remaining 11 reviews (including Fibrox 10" and 8" which are already written)
+     - [ ] Victorinox Fibrox Pro 10" Chef's Knife (already written, needs upgrade)
+     - [ ] Victorinox Fibrox Pro 8" Chef's Knife (already written, needs upgrade)
+     - [ ] Victorinox 4" Paring Knife
+     - [ ] Victorinox Granton Edge Boning Knife
+     - [ ] Victorinox Offset Bread Knife
+     - [ ] OXO Good Grips Swivel Peeler
+     - [ ] OXO Good Grips Bench Scraper
+     - [ ] Winco Heavy Duty Tongs
+     - [ ] Benriner Large Mandoline
+     - [ ] Gold Textiles Bar Mops
+     - [ ] Epicurean Kitchen Cutting Board
+   - [ ] Check and fix Amazon affiliate links that were recently replaced and still not working
+   - [ ] Fix pagespeed issues
+   - [ ] Audit every word of site
+   - [ ] Setup 50 pins (Pinterest)
+   - [ ] Write 50 blogs
+   - [ ] Start testing Ninja blender
+   - [ ] Start testing Ninja air fryer
+   - [ ] Start testing Instapot Duo
+   - [ ] Write Cuisinart review
+   - [ ] Write KitchenAid Professional Stand Mixer review
+   - [ ] Write Black and Decker toaster oven review
    - [ ] Write NoCry Cut Resistant Gloves review (affiliate: https://amzn.to/4mUTNTs)
      - [ ] Cross-link with Benriner Mandoline review (safety pairing)
      - [ ] Add safety callout box in mandoline review recommending gloves
