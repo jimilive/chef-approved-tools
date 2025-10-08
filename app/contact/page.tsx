@@ -70,7 +70,7 @@ export default function ContactPage() {
             <div className="flex justify-center mb-6">
               <div className="relative w-32 h-32">
                 <Image
-                  src="/images/branding/scott-ai-portrait-circle.png"
+                  src="/images/team/head-shot-1.jpg"
                   alt="Scott Bradley - Professional Chef"
                   fill
                   className="object-cover rounded-full shadow-lg border-4 border-orange-500"

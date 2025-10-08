@@ -13,7 +13,7 @@ export default function AuthorBio({ variant = 'full', showImage = true }: Author
         {showImage && (
           <div className="relative w-16 h-16 flex-shrink-0">
             <Image
-              src="/images/branding/scott-ai-portrait-circle.png"
+              src="/images/team/head-shot-1.jpg"
               alt="Scott Bradley"
               fill
               className="object-cover rounded-full"
@@ -34,7 +34,7 @@ export default function AuthorBio({ variant = 'full', showImage = true }: Author
         {showImage && (
           <div className="relative w-12 h-12 flex-shrink-0">
             <Image
-              src="/images/branding/scott-ai-portrait-circle.png"
+              src="/images/team/head-shot-1.jpg"
               alt="Scott Bradley"
               fill
               className="object-cover rounded-full"
@@ -61,7 +61,7 @@ export default function AuthorBio({ variant = 'full', showImage = true }: Author
         {showImage && (
           <div className="relative w-24 h-24 sm:w-32 sm:h-32 flex-shrink-0">
             <Image
-              src="/images/branding/scott-ai-portrait-circle.png"
+              src="/images/team/head-shot-1.jpg"
               alt="Scott Bradley - Professional Chef"
               fill
               className="object-cover rounded-full shadow-lg border-4 border-orange-400"

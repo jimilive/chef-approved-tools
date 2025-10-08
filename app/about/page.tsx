@@ -160,7 +160,7 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <div className="relative w-48 h-48 mx-auto mb-6">
               <Image
-                src="/images/branding/scott-ai-portrait-circle.png"
+                src="/images/team/head-shot-1.jpg"
                 alt="Scott Bradley - Professional Chef"
                 fill
                 className="object-cover rounded-full shadow-xl border-4 border-orange-500"
