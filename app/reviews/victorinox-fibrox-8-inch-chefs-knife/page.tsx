@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
+import ProductImageGallery from '@/components/ProductImageGallery'
 
 export const metadata: Metadata = {
   title: 'Victorinox Fibrox Pro 8" Chef\'s Knife Review | 21+ Years Professional Use',
@@ -38,6 +39,15 @@ export default function VictorinoxFibrox8InchReview() {
 
       {/* Main Content */}
       <article className="max-w-4xl mx-auto px-4 py-12">
+
+        {/* Product Images */}
+        <div className="mb-12">
+          <ProductImageGallery
+            productSlug="victorinox-fibrox-8-inch-chefs-knife"
+            productName="Victorinox Fibrox Pro 8&quot; Chef's Knife"
+            imageCount={3}
+          />
+        </div>
 
         {/* Quick Verdict */}
         <div className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-8">
