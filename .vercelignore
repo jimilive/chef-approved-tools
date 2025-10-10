@@ -1,0 +1,100 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+.nyc_output/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+__tests__/
+__mocks__/
+
+# Next.js
+.next/
+out/
+
+# Production
+/build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local env files
+.env
+.env*.local
+.env.development
+.env.test
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Documentation (not needed for deployment)
+docs/
+MIGRATION*.md
+AMAZON_AFFILIATE_AUDIT.md
+REDIRECT_AUDIT.md
+ENV_VARIABLES_TEMPLATE.md
+CURRENT_SETUP_SUMMARY.md
+VERCEL_DEPLOYMENT_STEPS.md
+GOOGLE_SEARCH_CONSOLE_SETUP.md
+DEVELOPMENT_WORKFLOW.md
+NETLIFY_DEPLOYMENT_CHECKLIST.md
+IMPLEMENTATION_GUIDE.md
+IMPLEMENTATION_COMPLETE.md
+FINAL_AUDIT_REPORT.md
+BRAND_GUIDE.md
+BLOG_ARTICLES_TO_WRITE.md
+BUILD_TEST_RESULTS.md
+CONVERSION_OPTIMIZATION.md
+INDEXING_GUIDE.md
+INDEXING_PROGRESS.md
+KITCHENAID_OPTIMIZATION_PROMPT.md
+MONETIZATION_IMPROVEMENTS.md
+NEW_PAGES_SUMMARY.md
+PA-API-SETUP.md
+APPROVED_AFFILIATES.md
+IMAGE_*.md
+TODO.md
+REVIEW_TEMPLATE.md
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Netlify (not needed for Vercel)
+netlify/
+netlify.toml
+_redirects
+public/_redirects
+
+# Scripts (not needed for deployment)
+scripts/
+
+# Reports
+reports/
+
+# Lighthouse
+lighthouse*.json

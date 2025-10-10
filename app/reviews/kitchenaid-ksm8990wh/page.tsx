@@ -5,6 +5,7 @@ import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/sch
 import FTCDisclosure from '@/components/FTCDisclosure'
 import PriceDisplay from '@/components/PriceDisplay'
 import AffiliateButton from '@/components/AffiliateButton'
+import { Tier1Badge } from '@/components/ReviewTierBadge'
 
 const productData = {
   name: "KitchenAid Commercial Series KSM8990WH",
@@ -37,7 +38,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://amzn.to/431ZFDl"
+      url: "https://www.amazon.com/dp/B00IRH09EK?tag=chefapprovedt-20"
     },
     {
       retailer: "KitchenAid Direct",
@@ -143,6 +144,11 @@ export default function KitchenAidReviewPage() {
             </div>
           </div>
         </header>
+
+        {/* Review Tier Badge */}
+        <div className="mb-6">
+          <Tier1Badge showDescription={true} />
+        </div>
 
         {/* Quick Rating Box */}
         <div className="quick-stats" style={{
