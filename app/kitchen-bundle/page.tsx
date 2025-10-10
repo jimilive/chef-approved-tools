@@ -15,7 +15,7 @@ const coreEssentials = [
     name: "Victorinox Fibrox Pro 8\" Chef's Knife",
     justification: "The workhorse knife that will handle 90% of your daily prep. Professional-grade Swiss engineering at an unbeatable price.",
     reviewSlug: "victorinox-fibrox-8-inch-chefs-knife",
-    affiliateUrl: "https://amzn.to/4bIa2lg",
+    affiliateUrl: "https://amzn.to/46WPJfp",
     image: "/logo.png",
     price: "$45"
   },

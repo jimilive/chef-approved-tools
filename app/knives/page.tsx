@@ -18,7 +18,7 @@ export default function KnivesPage() {
       id: "victorinox-fibrox-8-inch-chefs-knife",
       name: "Victorinox Fibrox Pro 8\" Chef's Knife",
       brand: "Victorinox",
-      affiliateUrl: "https://amzn.to/4bIa2lg",
+      affiliateUrl: "https://amzn.to/46WPJfp",
       slug: "victorinox-fibrox-8-inch-chefs-knife",
       description: "Perfect all-purpose chef's knife tested through decades of professional cooking"
     },
