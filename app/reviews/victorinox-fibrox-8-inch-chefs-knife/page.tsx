@@ -189,7 +189,7 @@ export default function VictorinoxFibrox8InchReview() {
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
               <div style={{ fontSize: '40px', marginBottom: '10px' }}>✓</div>
               <h3 style={{ margin: '10px 0', fontSize: '20px' }}>NSF Restaurant Certified</h3>
-              <p>Meets commercial kitchen standards. The same knife in professional kitchens worldwide—not a "home version."</p>
+              <p>Meets commercial kitchen standards. The same knife in professional kitchens worldwide—not a &quot;home version.&quot;</p>
             </div>
 
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
@@ -513,7 +513,7 @@ export default function VictorinoxFibrox8InchReview() {
               <h3 itemProp="name">Why is Victorinox so cheap compared to Wusthof or Shun?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                 <div itemProp="text">
-                  <p><strong>Answer:</strong> The Victorinox is "cheap" because you&apos;re not paying for
+                  <p><strong>Answer:</strong> The Victorinox is &quot;cheap&quot; because you&apos;re not paying for
                   premium aesthetics, exotic handle materials, or brand prestige—you&apos;re paying for what
                   matters: cutting performance.</p>
 
@@ -552,7 +552,7 @@ export default function VictorinoxFibrox8InchReview() {
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                 <div itemProp="text">
                   <p><strong>Answer:</strong> Absolutely yes. This is the exact knife used in professional
-                  kitchens worldwide, including Michelin-starred restaurants. It&apos;s not a "budget alternative"—
+                  kitchens worldwide, including Michelin-starred restaurants. It&apos;s not a &quot;budget alternative&quot;—
                   it&apos;s professional equipment that happens to be affordable.</p>
 
                   <p><strong>Professional reality:</strong> After 21+ years managing restaurant kitchens,
@@ -561,7 +561,7 @@ export default function VictorinoxFibrox8InchReview() {
                   more control than heavy, thick premium knives.</p>
 
                   <p><strong>NSF certification</strong> means this knife meets the same commercial standards
-                  as equipment costing 10x more. It&apos;s approved for professional use—not just "home cooking."</p>
+                  as equipment costing 10x more. It&apos;s approved for professional use—not just &quot;home cooking.&quot;</p>
 
                   <p>The knife doesn&apos;t know how much it costs. It only knows how sharp it is and how well
                   it cuts. The Victorinox excels at both.</p>
@@ -581,7 +581,7 @@ export default function VictorinoxFibrox8InchReview() {
                 <div itemProp="text">
                   <p><strong>Answer:</strong> For 95% of home cooks, the Victorinox is the smarter choice.</p>
 
-                  <p><strong>Victorinox advantages:</strong> $45 vs $180-220 (4x cheaper), lighter/better balance, thin blade offers more control, easier to sharpen, less intimidating for new cooks</p>
+                  <p><strong>Victorinox advantages:</strong> Budget-friendly vs premium pricing (4x cheaper), lighter/better balance, thin blade offers more control, easier to sharpen, less intimidating for new cooks</p>
 
                   <p><strong>Wusthof advantages:</strong> Beautiful aesthetics (wood handle, full bolster), heavier/more substantial feel, lifetime warranty, premium brand prestige</p>
 
