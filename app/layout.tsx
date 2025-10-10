@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'  // ← ADD THIS LINE HERE
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { lazy, Suspense } from 'react'
@@ -105,6 +106,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <head>
+        {/* Google Tag Manager */}
+        <Script id="gtm-head" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PX8GPHKF');
+          `}
+        </Script>
+        {/* End Google Tag Manager */}
+
         {/* Mobile viewport meta tag */}
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
 
@@ -116,7 +129,7 @@ export default function RootLayout({
 
         {/* View Transitions API for smooth page navigation */}
         <meta name="view-transition" content="same-origin" />
-        
+
         {/* Preload critical resources */}
         <link rel="preload" href="/logo.png" as="image" type="image/png" />
 
@@ -125,7 +138,7 @@ export default function RootLayout({
 
         {/* Preload critical CSS - Note: CSS hash changes with each build */}
         {/* Run: npm run build && find .next/static/css -name "*.css" to get the latest filename */}
-        <link rel="preload" href="/_next/static/css/34ae4f707512af1f.css" as="style" />
+        {/* <link rel="preload" href="/_next/static/css/34ae4f707512af1f.css" as="style" /> */}
 
         {/* Resource hints for critical third-party domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -261,13 +274,12 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://m.media-amazon.com" />
 
-        
         {/* Mobile-specific meta tags */}
         <meta name="mobile-web-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="format-detection" content="telephone=no" />
-        
+
         {/* Structured Data - Organization & Website */}
         <script
           type="application/ld+json"
@@ -279,6 +291,17 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-gray-50 antialiased">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PX8GPHKF"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+
         <MobileOptimizedLayout>
           <MobileOptimizationProvider>
             {/* Skip to main content for accessibility */}
@@ -288,7 +311,6 @@ export default function RootLayout({
 
             {/* Main Header */}
             <Header />
-
 
             {/* Main Content */}
             <main id="main-content" className="min-h-screen mobile-scroll">
@@ -317,7 +339,6 @@ export default function RootLayout({
             </Suspense>
           </MobileOptimizationProvider>
         </MobileOptimizedLayout>
-
 
         {/* Google Analytics 4 - Deferred loading for performance */}
         {process.env.NEXT_PUBLIC_GA_TRACKING_ID && (

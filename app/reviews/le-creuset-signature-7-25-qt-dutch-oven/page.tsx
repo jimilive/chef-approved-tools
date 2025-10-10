@@ -2,9 +2,9 @@ import Link from 'next/link'
 import { Star, CheckCircle, XCircle, Shield, Clock, DollarSign, Thermometer } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
-import FTCDisclosure from '@/components/FTCDisclosure'
 import PriceDisplay from '@/components/PriceDisplay'
 import AuthorBio from '@/components/AuthorBio'
+import AffiliateButton from '@/components/AffiliateButton'
 
 const productData = {
   name: "Le Creuset Signature Round Dutch Oven 7.25 Quart",
@@ -32,7 +32,7 @@ const productData = {
     "No staining after 10 years with proper care"
   ],
   cons: [
-    "Premium pricing ($287-480 depending on sales)",
+    "Premium investment (check current pricing)",
     "Heavy 14.9 lbs when loaded",
     "Requires careful handling (no thermal shock)",
     "Enamel can chip if dropped"
@@ -40,7 +40,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://amzn.to/4Ba0OuJ"
+      url: "https://amzn.to/48oSY1F"
     },
     {
       retailer: "Williams Sonoma",
@@ -239,14 +239,17 @@ export default function LeCreuset725QtReview() {
 
               {/* Primary CTA */}
               <div className="flex flex-col sm:flex-row gap-3">
-                <a
+                <AffiliateButton
                   href={productData.affiliateLinks[0].url}
-                  target="_blank"
-                  rel="noopener noreferrer sponsored nofollow"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl text-center"
+                  merchant="amazon"
+                  product="le-creuset-signature-7-25-qt-dutch-oven"
+                  position="above_fold"
+                  price={380}
+                  variant="primary"
+                  className="!text-base !py-4 !px-6"
                 >
                   Check Latest Price on Amazon.com →
-                </a>
+                </AffiliateButton>
                 <div className="flex items-center gap-2 text-sm text-slate-600">
                   <DollarSign className="w-4 h-4" />
                   <span>${productData.priceRange.min}-${productData.priceRange.max}</span>
@@ -631,7 +634,7 @@ export default function LeCreuset725QtReview() {
 
         {/* Comparison Table */}
         <section id="comparison" className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Le Creuset vs Staub vs Lodge: The $400 Question</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Le Creuset vs Staub vs Lodge: Is Premium Worth It?</h2>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -688,7 +691,7 @@ export default function LeCreuset725QtReview() {
             <div className="bg-white rounded-lg p-4 border border-gray-200">
               <h3 className="font-semibold text-slate-900 mb-2">Choose Lodge if:</h3>
               <ul className="text-sm text-slate-700 space-y-1">
-                <li>• Budget is primary concern ($60-90 vs $287-480)</li>
+                <li>• Budget is primary concern (Lodge offers excellent value)</li>
                 <li>• You cook infrequently (2-3 times monthly)</li>
                 <li>• Willing to accept heavier weight and Chinese manufacturing</li>
                 <li>• Don&apos;t need French brand cachet or resale value</li>
@@ -698,7 +701,7 @@ export default function LeCreuset725QtReview() {
 
           <div className="bg-slate-800 text-white rounded-lg p-6 mt-6">
             <p className="leading-relaxed">
-              <strong>The $400 verdict:</strong> Lodge performs admirably at fraction of cost—it delivers approximately 90% of premium performance. However, the Le Creuset&apos;s 3 lb weight advantage, superior enamel quality, and lifetime warranty backed by 100-year reputation justify the premium for cooks who use Dutch ovens 3+ times weekly. This is &quot;buy-it-for-life&quot; equipment that often becomes family heirloom passed down generations.
+              <strong>The premium verdict:</strong> Lodge performs admirably at fraction of cost—it delivers approximately 90% of premium performance. However, the Le Creuset&apos;s 3 lb weight advantage, superior enamel quality, and lifetime warranty backed by 100-year reputation justify the premium for cooks who use Dutch ovens 3+ times weekly. This is &quot;buy-it-for-life&quot; equipment that often becomes family heirloom passed down generations.
             </p>
           </div>
         </section>
@@ -789,7 +792,7 @@ export default function LeCreuset725QtReview() {
                 </li>
                 <li className="flex items-start">
                   <XCircle className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
-                  <span><strong>Budget is primary concern</strong> (under $300) — Premium features don&apos;t justify 4-5× cost</span>
+                  <span><strong>Budget is primary concern</strong> — Lodge offers 90% of performance at fraction of cost</span>
                 </li>
                 <li className="flex items-start">
                   <XCircle className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
@@ -875,7 +878,7 @@ export default function LeCreuset725QtReview() {
                   <DollarSign className="w-5 h-5 mr-2 mt-0.5 text-amber-600 flex-shrink-0" />
                   <div>
                     <strong className="text-amber-900">Premium Investment Required:</strong>
-                    <span className="text-amber-800 text-sm"> $287-$480 price point—significant upfront cost (but lifetime value)</span>
+                    <span className="text-amber-800 text-sm"> Premium price point—significant upfront cost (but lifetime value)</span>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -914,14 +917,17 @@ export default function LeCreuset725QtReview() {
             <p className="text-lg text-slate-800 mb-4 font-medium">
               Ready to invest in cookware that will last a lifetime?
             </p>
-            <a
+            <AffiliateButton
               href={productData.affiliateLinks[0].url}
-              target="_blank"
-              rel="noopener noreferrer sponsored nofollow"
-              className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
+              merchant="amazon"
+              product="le-creuset-signature-7-25-qt-dutch-oven"
+              position="mid_article"
+              price={380}
+              variant="primary"
+              className="!py-4 !px-8"
             >
               Check Latest Price on Amazon.com →
-            </a>
+            </AffiliateButton>
           </div>
         </section>
 
@@ -1037,14 +1043,17 @@ export default function LeCreuset725QtReview() {
               10+ years tested. 4.9/5 rating. Lifetime warranty. Generational quality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
+              <AffiliateButton
                 href={productData.affiliateLinks[0].url}
-                target="_blank"
-                rel="noopener noreferrer sponsored nofollow"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
+                merchant="amazon"
+                product="le-creuset-signature-7-25-qt-dutch-oven"
+                position="final_cta"
+                price={380}
+                variant="primary"
+                className="!py-4 !px-8"
               >
                 Check Latest Price on Amazon.com →
-              </a>
+              </AffiliateButton>
               <div className="text-sm text-slate-600">
                 <div className="flex items-center gap-1 justify-center">
                   <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -1092,14 +1101,17 @@ export default function LeCreuset725QtReview() {
             <p className="text-lg text-slate-200 mb-6 max-w-2xl mx-auto">
               After 10 years of testing, this is the Dutch oven that transformed my kitchen. Join the thousands of home cooks who made the investment.
             </p>
-            <a
+            <AffiliateButton
               href={productData.affiliateLinks[0].url}
-              target="_blank"
-              rel="noopener noreferrer sponsored nofollow"
-              className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-5 px-10 rounded-xl transition-all duration-200 shadow-lg hover:shadow-2xl text-lg"
+              merchant="amazon"
+              product="le-creuset-signature-7-25-qt-dutch-oven"
+              position="final_cta"
+              price={380}
+              variant="primary"
+              className="!py-5 !px-10 !text-lg"
             >
               Get Le Creuset on Amazon.com →
-            </a>
+            </AffiliateButton>
             <p className="text-sm text-slate-300 mt-4">
               ⭐ {productData.expertRating}/5 Amazon rating • {productData.reviewCount.toLocaleString()} reviews • Lifetime warranty • Free returns
             </p>
