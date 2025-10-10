@@ -37,7 +37,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://amzn.to/4312FDi"
+      url: "https://amzn.to/431ZFDl"
     },
     {
       retailer: "KitchenAid Direct",
@@ -190,7 +190,7 @@ export default function KitchenAidReviewPage() {
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
 
           <AffiliateButton
-            href="https://amzn.to/4312FDi"
+            href="https://amzn.to/431ZFDl"
             merchant="amazon"
             product="kitchenaid-ksm8990wh"
             position="above_fold"
@@ -861,7 +861,7 @@ export default function KitchenAidReviewPage() {
             </p>
 
             <AffiliateButton
-              href="https://amzn.to/4312FDi"
+              href="https://amzn.to/431ZFDl"
               merchant="amazon"
               product="kitchenaid-ksm8990wh"
               position="final_cta"

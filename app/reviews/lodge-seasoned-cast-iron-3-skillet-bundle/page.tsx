@@ -40,7 +40,7 @@ const productData = {
     },
     {
       retailer: "Amazon",
-      url: "https://amzn.to/4BgVzuC",
+      url: "https://amzn.to/46JMVUd",
       price: 95
     },
     {

@@ -40,7 +40,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://amzn.to/48oSY1F"
+      url: "https://amzn.to/4B6SY1F"
     },
     {
       retailer: "Williams Sonoma",

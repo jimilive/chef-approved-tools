@@ -257,11 +257,17 @@
 
 ## 🎯 Priority Tasks (Next 30 Days)
 
-1. **High Priority**
-   - [ ] Fix images not working on some product pages
-   - [ ] Fix review page images - they look horrible
-   - [ ] Create new review template based on Le Creuset review (use best practices from featured reviews for SEO and conversions)
-   - [ ] **Phase 1:** Upgrade the 7 featured reviews to new template
+1. **CRITICAL (Do First - Revenue & Conversion Blockers)**
+   - [x] **P1:** Check and fix Amazon affiliate links (COMPLETED - all links working)
+   - [x] **P1.5:** Set up automated daily task to check Amazon links (COMPLETED - GitHub Action created)
+   - [ ] **P1.6:** Add CJ Affiliate links for John Boos and Zwilling (2 products: John Boos cutting board, Wusthof 16-piece)
+   - [x] **P2:** Fix images not working on some product pages (COMPLETED - 4 pages fixed)
+   - [ ] **P3:** Fix review page images - they look horrible (conversion blocker)
+   - [ ] **P4:** Fix pagespeed issues (SEO/UX blocker)
+
+2. **HIGH PRIORITY (Foundation - Do Before Content Creation)**
+   - [ ] **P5:** Create new review template based on Le Creuset review (use best practices from featured reviews for SEO and conversions)
+   - [ ] **P6:** Phase 1 - Upgrade the 7 featured reviews to new template
      - [ ] Le Creuset 7.25-qt Dutch Oven (base template)
      - [ ] KitchenAid KSM8990WH Commercial Mixer
      - [ ] Wüsthof Classic IKON 16-Piece Knife Set
@@ -269,7 +275,7 @@
      - [ ] Robot Coupe R2 Dice Food Processor
      - [ ] Vitamix 5200 Blender
      - [ ] Lodge Seasoned Cast Iron 3-Skillet Bundle
-   - [ ] **Phase 2:** Upgrade the remaining 11 reviews (including Fibrox 10" and 8" which are already written)
+   - [ ] **P7:** Phase 2 - Upgrade the remaining 11 reviews (including Fibrox 10" and 8" which are already written)
      - [ ] Victorinox Fibrox Pro 10" Chef's Knife (already written, needs upgrade)
      - [ ] Victorinox Fibrox Pro 8" Chef's Knife (already written, needs upgrade)
      - [ ] Victorinox 4" Paring Knife
@@ -281,17 +287,21 @@
      - [ ] Benriner Large Mandoline
      - [ ] Gold Textiles Bar Mops
      - [ ] Epicurean Kitchen Cutting Board
-   - [ ] Check and fix Amazon affiliate links that were recently replaced and still not working
-   - [ ] Fix pagespeed issues
-   - [ ] Audit every word of site
-   - [ ] Setup 50 pins (Pinterest)
-   - [ ] Write 50 blogs
-   - [ ] Start testing Ninja blender
-   - [ ] Start testing Ninja air fryer
-   - [ ] Start testing Instapot Duo
-   - [ ] Write Cuisinart review
-   - [ ] Write KitchenAid Professional Stand Mixer review
-   - [ ] Write Black and Decker toaster oven review
+   - [ ] **P8:** Audit every word of site (quality control after template updates)
+
+3. **MEDIUM PRIORITY (Content Expansion)**
+   - [ ] **P9:** Write new product reviews (see REVIEWS_TO_WRITE.md for full list)
+     - [ ] Write Cuisinart review
+     - [ ] Write KitchenAid Professional Stand Mixer review
+     - [ ] Write Black and Decker toaster oven review
+   - [ ] **P10:** Write 50 blogs (see BLOG_ARTICLES_TO_WRITE.md for full list)
+
+4. **LOW PRIORITY (Marketing & Testing - After Content is Solid)**
+   - [ ] **P11:** Setup 50 pins (Pinterest)
+   - [ ] **P12:** Start testing products for future reviews
+     - [ ] Start testing Ninja blender
+     - [ ] Start testing Ninja air fryer
+     - [ ] Start testing Instapot Duo
    - [ ] Write NoCry Cut Resistant Gloves review (affiliate: https://amzn.to/4mUTNTs)
      - [ ] Cross-link with Benriner Mandoline review (safety pairing)
      - [ ] Add safety callout box in mandoline review recommending gloves

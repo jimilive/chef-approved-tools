@@ -193,6 +193,7 @@ export default function HomePage() {
                 alt="Scott Bradley - Professional Chef"
                 fill
                 sizes="128px"
+                priority
                 className="object-cover rounded-full shadow-xl border-4 border-orange-500"
               />
             </div>

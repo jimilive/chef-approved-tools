@@ -37,7 +37,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://amzn.to/3WJKsR7"
+      url: "https://amzn.to/3WIKSR7"
     },
     {
       retailer: "John Boos Direct",

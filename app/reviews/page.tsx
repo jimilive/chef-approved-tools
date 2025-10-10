@@ -64,7 +64,7 @@ const featuredReviews = [
     title: 'John Boos Platinum Commercial Cutting Board',
     category: 'Tools',
     price: 159,
-    image: '/logo.png',
+    image: '/images/products/john-boos-platinum-commercial-cutting-board/john-boos-platinum-commercial-cutting-board-1.jpg',
     excerpt: 'NSF-certified cutting board that withstands daily commercial kitchen abuse.',
     badge: 'Commercial Grade',
     testDuration: '3+ years'
@@ -97,7 +97,7 @@ const myDailyTools = [
     title: "Victorinox 9\" Offset Bread Knife",
     category: 'Knives',
     price: 50,
-    image: '/logo.png',
+    image: '/images/products/victorinox-offset-bread-knife/victorinox-offset-bread-knife-1.jpg',
     excerpt: "Offset serrated knife for bread and tomatoes - superior knuckle clearance.",
     badge: 'Daily Use',
     testDuration: '40 years'
@@ -107,7 +107,7 @@ const myDailyTools = [
     title: "Victorinox Fibrox Pro 8\" Chef's Knife",
     category: 'Knives',
     price: 45,
-    image: '/logo.png',
+    image: '/images/products/victorinox-fibrox-8-inch-chefs-knife/victorinox-fibrox-8-inch-chefs-knife-1.jpg',
     excerpt: "Perfect all-purpose chef's knife - the workhorse of every professional kitchen.",
     badge: 'Daily Use',
     testDuration: '40 years'
@@ -137,7 +137,7 @@ const myDailyTools = [
     title: 'Epicurean Kitchen Cutting Board',
     category: 'Tools',
     price: 35,
-    image: '/logo.png',
+    image: '/images/products/epicurean-kitchen-cutting-board/epicurean-kitchen-cutting-board-1.jpg',
     excerpt: "Dishwasher-safe board better than wood - truly sanitary and won't warp.",
     badge: 'Daily Use',
     testDuration: '40 years'
@@ -187,7 +187,7 @@ const myDailyTools = [
     title: 'Winco Heavy Duty Tongs',
     category: 'Tools',
     price: 8,
-    image: '/logo.png',
+    image: '/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-9-inch-1.jpg',
     excerpt: "Restaurant-grade tongs at budget price - the exact ones used in professional kitchens.",
     badge: 'Daily Use',
     testDuration: '40 years'
@@ -262,13 +262,13 @@ export default function ReviewsPage() {
                   </div>
 
                   {/* Product Image */}
-                  <div className="aspect-w-16 aspect-h-12 bg-gray-100">
-                    <div className="relative h-48">
+                  <div className="bg-white">
+                    <div className="relative w-full aspect-[2/3]">
                       <Image
                         src={review.image}
                         alt={review.title}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </div>
                   </div>
@@ -371,13 +371,13 @@ export default function ReviewsPage() {
                   </div>
 
                   {/* Product Image */}
-                  <div className="aspect-w-16 aspect-h-12 bg-gray-100">
-                    <div className="relative h-48">
+                  <div className="bg-white">
+                    <div className="relative w-full aspect-[2/3]">
                       <Image
                         src={review.image}
                         alt={review.title}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </div>
                   </div>

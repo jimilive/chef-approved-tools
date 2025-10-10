@@ -47,6 +47,7 @@ export default function OXOGoodGripsSwivelPeelerReview() {
             width={1000}
             height={1500}
             className="rounded-lg w-full h-auto max-w-2xl mx-auto"
+            priority
           />
         </div>
 
