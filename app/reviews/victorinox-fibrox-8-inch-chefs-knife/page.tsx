@@ -60,7 +60,7 @@ export default function VictorinoxFibrox8InchReview() {
         }}>
           <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
             <strong>⭐⭐⭐⭐⭐ 4.9/5</strong> | Based on 40 years of professional use<br/>
-            <strong>💰 Professional quality at budget-friendly price</strong> | Check current price below<br/>
+            <strong>💰 Professional quality at budget-friendly price</strong> | Check availability below<br/>
             <strong>✓ NSF Certified</strong> | <strong>✓ Swiss Made</strong> | <strong>✓ Best Value in Class</strong>
           </p>
         </div>
@@ -85,7 +85,7 @@ export default function VictorinoxFibrox8InchReview() {
             variant="secondary"
             className="!text-lg !px-10 !py-4 !my-2"
           >
-            Check Amazon Price →
+            Check Availability on Amazon →
           </AffiliateButton>
 
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
@@ -335,75 +335,6 @@ export default function VictorinoxFibrox8InchReview() {
           </p>
         </section>
 
-        {/* Budget-Focused Price Comparison */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">Where to Buy (Best Price Under $50)</h2>
-
-          <p><strong>Updated:</strong> October 9, 2025</p>
-
-          <div className="price-comparison" style={{
-            background: '#f8f9fa',
-            padding: '25px',
-            margin: '25px 0',
-            borderRadius: '8px'
-          }}>
-
-            <h3 style={{ marginTop: 0 }}>Current Best Price:</h3>
-
-            <div style={{
-              background: 'white',
-              padding: '20px',
-              margin: '15px 0',
-              borderRadius: '6px',
-              border: '2px solid #ff9900'
-            }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
-                <div>
-                  <h4 style={{ margin: '0 0 10px 0' }}>🏆 Amazon</h4>
-                  <p style={{ margin: 0, fontSize: '24px', fontWeight: 'bold', color: '#28a745' }}>$40-50</p>
-                  <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Prime shipping | ✓ Usually in stock</p>
-                </div>
-                <div>
-                  <AffiliateButton
-                    href="https://amzn.to/46WPJfp"
-                    merchant="amazon"
-                    product="victorinox-fibrox-8-inch-chefs-knife"
-                    position="mid_article"
-                    price={45}
-                    variant="secondary"
-                  >
-                    View on Amazon →
-                  </AffiliateButton>
-                </div>
-              </div>
-            </div>
-
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '20px', textAlign: 'center' }}>
-              💡 Williams Sonoma and Sur La Table also carry Victorinox. We&apos;ll add price comparison when
-              we join their affiliate programs.
-            </p>
-
-          </div>
-
-          <div style={{
-            background: '#fff3cd',
-            padding: '20px',
-            margin: '20px 0',
-            borderRadius: '6px',
-            borderLeft: '4px solid #ffc107'
-          }}>
-            <p style={{ margin: 0, fontWeight: 'bold', fontSize: '18px' }}>
-              💰 Value Reality Check
-            </p>
-            <p style={{ margin: '10px 0 0 0', fontSize: '16px', lineHeight: '1.6' }}>
-              At $45, this costs the same as 2-3 restaurant meals. It&apos;s the knife I&apos;ve used daily for
-              40 years in professional kitchens. The value-per-dollar is unmatched in the knife industry.
-            </p>
-            <p style={{ margin: '10px 0 0 0', fontSize: '14px', color: '#666' }}>
-              Compare to: $200+ Wusthof or Shun knives that don&apos;t cut noticeably better for most cooks.
-            </p>
-          </div>
-        </section>
 
         {/* Bottom Line with Value-Focused Strong CTA */}
         <section className="mb-12">
@@ -487,11 +418,11 @@ export default function VictorinoxFibrox8InchReview() {
               variant="secondary"
               className="!text-xl !px-12 !py-5"
             >
-              Check Amazon Price →
+              Check Availability on Amazon →
             </AffiliateButton>
 
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
-              💡 Usually $40-50. Best value in kitchen knives—no question.
+              💡 Best value in kitchen knives—no question.
             </p>
 
           </div>

@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { Star, CheckCircle, XCircle, Shield, Clock, DollarSign, Thermometer } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
-import PriceDisplay from '@/components/PriceDisplay'
 import AuthorBio from '@/components/AuthorBio'
 import AffiliateButton from '@/components/AffiliateButton'
 
@@ -121,7 +120,6 @@ const customerReviews = [
 const breadcrumbs = [
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: "Dutch Ovens", url: "https://www.chefapprovedtools.com/reviews/dutch-ovens" },
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
 ]
 
@@ -248,12 +246,8 @@ export default function LeCreuset725QtReview() {
                   variant="primary"
                   className="!text-base !py-4 !px-6"
                 >
-                  Check Latest Price on Amazon.com →
+                  Check Availability on Amazon →
                 </AffiliateButton>
-                <div className="flex items-center gap-2 text-sm text-slate-600">
-                  <DollarSign className="w-4 h-4" />
-                  <span>${productData.priceRange.min}-${productData.priceRange.max}</span>
-                </div>
               </div>
             </div>
           </div>
@@ -291,9 +285,9 @@ export default function LeCreuset725QtReview() {
               <CheckCircle className="w-4 h-4 mr-2 text-orange-600" />
               <span className="text-slate-700 hover:text-orange-800 font-medium">Pros & Cons Analysis</span>
             </a>
-            <a href="#pricing" className="flex items-center p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors border border-gray-200 hover:border-orange-300">
+            <a href="#verdict" className="flex items-center p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors border border-gray-200 hover:border-orange-300">
               <DollarSign className="w-4 h-4 mr-2 text-orange-600" />
-              <span className="text-slate-700 hover:text-orange-800 font-medium">Pricing & Where to Buy</span>
+              <span className="text-slate-700 hover:text-orange-800 font-medium">Final Verdict</span>
             </a>
             <a href="#verdict" className="flex items-center p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors border border-gray-200 hover:border-orange-300">
               <Star className="w-4 h-4 mr-2 text-orange-600" />
@@ -726,32 +720,6 @@ export default function LeCreuset725QtReview() {
           </div>
         </section>
 
-        {/* Pricing and Where to Buy */}
-        <section id="pricing" className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Current Pricing & Where to Buy</h2>
-          <PriceDisplay
-            productName={productData.name}
-            priceRange={productData.priceRange}
-            dealStatus={productData.dealStatus}
-            dealText="Williams Sonoma frequently runs 20% off sales ($384 vs $480). Color affects price—special/limited colors command $20-40 premium."
-            affiliateLinks={productData.affiliateLinks}
-            lastUpdated="Updated October 4, 2025"
-          />
-
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
-            <h3 className="font-semibold text-blue-900 mb-2">Historical Pricing Analysis & Buying Strategy</h3>
-            <p className="text-blue-800 text-sm mb-3">Based on price tracking data:</p>
-            <ul className="text-sm text-blue-800 space-y-1 mb-3">
-              <li>• <strong>Lowest Amazon price ever:</strong> $287.17 (Black Friday 2015)</li>
-              <li>• <strong>Highest Amazon price:</strong> $409.95 (May 2021)</li>
-              <li>• <strong>Average Amazon price:</strong> $356.26</li>
-              <li>• <strong>Best value timing:</strong> Black Friday (20-30% off), Spring sales (15-20% off), Wedding season (registry discounts)</li>
-            </ul>
-            <p className="text-blue-800 text-sm">
-              <strong>Pro buying tip:</strong> Le Creuset rarely discounts directly, but authorized retailers (Williams Sonoma, Crate & Barrel, Amazon) run frequent promotions. Patience saves $100-150. If purchasing full-price, buy directly from Le Creuset or authorized retailers to ensure lifetime warranty coverage.
-            </p>
-          </div>
-        </section>
 
         {/* Who Is This Product For? (H2) */}
         <section className="mb-8">
@@ -926,7 +894,7 @@ export default function LeCreuset725QtReview() {
               variant="primary"
               className="!py-4 !px-8"
             >
-              Check Latest Price on Amazon.com →
+              Check Availability on Amazon →
             </AffiliateButton>
           </div>
         </section>
@@ -1052,7 +1020,7 @@ export default function LeCreuset725QtReview() {
                 variant="primary"
                 className="!py-4 !px-8"
               >
-                Check Latest Price on Amazon.com →
+                Check Availability on Amazon →
               </AffiliateButton>
               <div className="text-sm text-slate-600">
                 <div className="flex items-center gap-1 justify-center">
@@ -1062,7 +1030,7 @@ export default function LeCreuset725QtReview() {
               </div>
             </div>
             <p className="text-xs text-slate-500 mt-4">
-              Price: ${productData.priceRange.min}-${productData.priceRange.max} | Free returns on Amazon Prime
+              Free returns on Amazon Prime | Lifetime warranty
             </p>
           </div>
         </section>
@@ -1110,7 +1078,7 @@ export default function LeCreuset725QtReview() {
               variant="primary"
               className="!py-5 !px-10 !text-lg"
             >
-              Get Le Creuset on Amazon.com →
+              Check Availability on Amazon →
             </AffiliateButton>
             <p className="text-sm text-slate-300 mt-4">
               ⭐ {productData.expertRating}/5 Amazon rating • {productData.reviewCount.toLocaleString()} reviews • Lifetime warranty • Free returns

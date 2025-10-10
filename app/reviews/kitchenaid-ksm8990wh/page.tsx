@@ -3,7 +3,6 @@ import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign } fro
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
-import PriceDisplay from '@/components/PriceDisplay'
 import AffiliateButton from '@/components/AffiliateButton'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 
@@ -55,7 +54,6 @@ const productData = {
 const breadcrumbs = [
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: "Stand Mixers", url: "https://www.chefapprovedtools.com/reviews/stand-mixers" },
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
 ]
 
@@ -160,7 +158,7 @@ export default function KitchenAidReviewPage() {
         }}>
           <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
             <strong>⭐⭐⭐⭐⭐ 4.8/5</strong> | Based on 18 months of commercial testing<br/>
-            <strong>💰 Professional-Grade Investment</strong> | Check current price below<br/>
+            <strong>💰 Professional-Grade Investment</strong> | Check availability below<br/>
             <strong>✓ NSF Certified</strong> | <strong>✓ 2-Year Commercial Warranty</strong> | <strong>✓ 8-Qt Capacity</strong>
           </p>
         </div>
@@ -174,7 +172,7 @@ export default function KitchenAidReviewPage() {
           <div className="flex flex-wrap gap-2 text-sm">
             <a href="#testing" aria-label="Jump to 18 months testing results section" className="text-orange-600 hover:text-orange-800">18-Month Testing</a>
             <span className="text-slate-400">|</span>
-            <a href="#pricing" aria-label="Jump to current pricing information section" className="text-orange-600 hover:text-orange-800">Current Pricing</a>
+            <a href="#who-should-buy" aria-label="Jump to buyer recommendation section" className="text-orange-600 hover:text-orange-800">Who Should Buy</a>
             <span className="text-slate-400">|</span>
             <a href="#comparison" aria-label="Jump to competitor comparison section" className="text-orange-600 hover:text-orange-800">vs. Competitors</a>
             <span className="text-slate-400">|</span>
@@ -208,8 +206,8 @@ export default function KitchenAidReviewPage() {
           </AffiliateButton>
 
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
-            💡 Price updated daily. We earn commission at no extra cost to you.<br/>
-            More retailers will be added soon for price comparison.
+            💡 We earn commission at no extra cost to you.<br/>
+            More retailers will be added soon.
           </p>
         </div>
 
@@ -495,7 +493,7 @@ export default function KitchenAidReviewPage() {
           </div>
           <p className="mt-4 text-slate-700">
             For a complete comparison of all commercial-grade mixers, see our{' '}
-            <a href="/guides/best-stand-mixers" className="text-orange-600 hover:text-orange-800 underline font-semibold">complete stand mixer buying guide</a>.
+            <a href="/reviews" className="text-orange-600 hover:text-orange-800 underline font-semibold">complete reviews section</a>.
           </p>
         </section>
 
@@ -524,57 +522,6 @@ export default function KitchenAidReviewPage() {
           </div>
         </section>
 
-        {/* Pricing and Where to Buy */}
-        <section className="mb-8" id="pricing">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Current Pricing & Where to Buy</h2>
-          <PriceDisplay
-            productName={productData.name}
-            priceRange={productData.priceRange}
-            dealStatus={productData.dealStatus}
-            dealText="Price range across retailers | Updated October 4, 2025"
-            affiliateLinks={productData.affiliateLinks}
-            lastUpdated="Pricing verified weekly"
-          />
-          <div className="mt-4 bg-slate-50 p-4 rounded-lg border border-slate-200">
-            <p className="text-slate-700 text-sm">
-              <strong>Price Reality Check:</strong> Manufacturer pricing starts at $759.99 on KitchenAid Direct. Amazon marketplace pricing fluctuates between $899-$1,100 depending on availability. Watch for seasonal promotions (typically Black Friday and spring sales) for 10-15% discounts.
-            </p>
-          </div>
-
-          {/* Price History Section */}
-          <div className="price-history" style={{
-            background: '#fff',
-            padding: '25px',
-            margin: '25px 0',
-            border: '1px solid #ddd',
-            borderRadius: '8px'
-          }}>
-            <h3 style={{ marginTop: 0 }}>📊 Price History & Buying Tips</h3>
-
-            <ul style={{ lineHeight: '1.8' }}>
-              <li><strong>Price range seen:</strong> $729 - $1,099</li>
-              <li><strong>Average price:</strong> $849</li>
-              <li><strong>Best time to buy:</strong> Black Friday/Cyber Monday (November) and spring sales (April-May) typically offer 15-20% discounts</li>
-            </ul>
-
-            <div style={{
-              background: '#e7f3ff',
-              padding: '20px',
-              marginTop: '20px',
-              borderRadius: '6px',
-              borderLeft: '4px solid #0066cc'
-            }}>
-              <p style={{ margin: '0 0 15px 0', fontWeight: 'bold' }}>
-                💡 Want to be notified of price drops?
-              </p>
-              <p style={{ margin: 0, fontSize: '14px' }}>
-                <a href="/newsletter" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-                  Subscribe to our weekly equipment deals newsletter →
-                </a>
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* Who Should Buy */}
         <section className="mb-8" id="who-should-buy">
@@ -863,7 +810,7 @@ export default function KitchenAidReviewPage() {
             </h3>
 
             <p style={{ fontSize: '18px', margin: '20px 0' }}>
-              Check current Amazon price and start professional-grade baking today:
+              Check current availability and start professional-grade baking today:
             </p>
 
             <AffiliateButton
@@ -879,7 +826,7 @@ export default function KitchenAidReviewPage() {
             </AffiliateButton>
 
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
-              💡 As more retailers are added, we&apos;ll show price comparisons here
+              💡 More retailers will be added soon
             </p>
 
           </div>
