@@ -48,6 +48,7 @@ export default function OXOGoodGripsBenchScraperReview() {
             width={1000}
             height={1500}
             className="rounded-lg w-full h-auto max-w-2xl mx-auto"
+            priority
           />
         </div>
 
@@ -266,7 +267,7 @@ export default function OXOGoodGripsBenchScraperReview() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://amzn.to/4Y5MepL"
+              href="https://amzn.to/4mXTS8X"
               target="_blank"
               rel="noopener noreferrer sponsored nofollow"
               className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"

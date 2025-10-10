@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 export const metadata: Metadata = {
@@ -37,6 +38,18 @@ export default function WincoHeavyDutyTongsReview() {
 
       {/* Main Content */}
       <article className="max-w-4xl mx-auto px-4 py-12">
+
+        {/* Product Image */}
+        <div className="mb-8">
+          <Image
+            src="/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-9-inch-1.jpg"
+            alt="Winco Heavy Duty Tongs"
+            width={1000}
+            height={1500}
+            className="rounded-lg w-full h-auto max-w-2xl mx-auto"
+            priority
+          />
+        </div>
 
         {/* Quick Verdict */}
         <div className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-8">
@@ -229,7 +242,7 @@ export default function WincoHeavyDutyTongsReview() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://amzn.to/4n0pWIy"
+              href="https://amzn.to/3KQ0l2V"
               target="_blank"
               rel="noopener noreferrer sponsored nofollow"
               className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"

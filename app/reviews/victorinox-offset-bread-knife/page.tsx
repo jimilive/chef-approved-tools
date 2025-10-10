@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
@@ -39,6 +40,18 @@ export default function VictorinoxOffsetBreadKnifeReview() {
       {/* Main Content */}
       <article className="max-w-4xl mx-auto px-4 py-12">
 
+        {/* Product Image */}
+        <div className="mb-8">
+          <Image
+            src="/images/products/victorinox-offset-bread-knife/victorinox-offset-bread-knife-1.jpg"
+            alt="Victorinox Offset Bread Knife"
+            width={1000}
+            height={1500}
+            className="rounded-lg w-full h-auto max-w-2xl mx-auto"
+            priority
+          />
+        </div>
+
         {/* Quick Verdict */}
         <div className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-8">
           <h2 className="text-2xl font-bold mb-3 text-gray-900">The Bottom Line</h2>
@@ -75,6 +88,16 @@ export default function VictorinoxOffsetBreadKnifeReview() {
         {/* What Makes It Work */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">What Makes This Knife Work</h2>
+
+          <div className="mb-8">
+            <Image
+              src="/images/products/victorinox-offset-bread-knife/victorinox-offset-bread-knife-2.jpg"
+              alt="Victorinox Offset Bread Knife handle detail"
+              width={1000}
+              height={1500}
+              className="rounded-lg w-full h-auto max-w-2xl mx-auto"
+            />
+          </div>
 
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg border border-gray-200">
@@ -239,7 +262,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://amzn.to/4nAIR4F"
+              href="https://amzn.to/3Wxzk1y"
               target="_blank"
               rel="noopener noreferrer sponsored nofollow"
               className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"

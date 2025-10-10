@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, Ruler, Droplets } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
@@ -36,11 +37,11 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://amzn.to/4sB0Ymv"
+      url: "https://amzn.to/3WJKsR7"
     },
     {
       retailer: "John Boos Direct",
-      url: "https://www.johnboos.com/products/maple-cutting-boards-1-1-2-thick-r-board-series"
+      url: "https://www.tkqlhce.com/click-101557027-15656965"
     },
     {
       retailer: "Williams Sonoma",
@@ -176,6 +177,18 @@ export default function JohnBosPlatinumCuttingBoardReview() {
         {/* FTC Disclosure */}
         <FTCDisclosure />
 
+        {/* Product Image */}
+        <div className="mb-8">
+          <Image
+            src="/images/products/john-boos-platinum-commercial-cutting-board/john-boos-platinum-commercial-cutting-board-1.jpg"
+            alt="John Boos Platinum Commercial Cutting Board 24x18"
+            width={1000}
+            height={1500}
+            className="rounded-lg w-full h-auto max-w-2xl mx-auto"
+            priority
+          />
+        </div>
+
         {/* Key Features Grid */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">#1 Choice of Culinary Professionals Worldwide</h2>
@@ -283,6 +296,17 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </p>
           </div>
         </section>
+
+        {/* Additional Product Image */}
+        <div className="mb-8">
+          <Image
+            src="/images/products/john-boos-platinum-commercial-cutting-board/john-boos-platinum-commercial-cutting-board-2.jpg"
+            alt="John Boos cutting board edge grain construction detail"
+            width={1000}
+            height={1500}
+            className="rounded-lg w-full h-auto max-w-2xl mx-auto"
+          />
+        </div>
 
         {/* Real-World Testing - NEEDS YOUR INPUT */}
         <section className="mb-8">

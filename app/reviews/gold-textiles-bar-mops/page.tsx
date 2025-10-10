@@ -47,6 +47,7 @@ export default function GoldTextilesBarMopsReview() {
             width={1000}
             height={1500}
             className="rounded-lg w-full h-auto max-w-2xl mx-auto"
+            priority
           />
         </div>
 
@@ -245,7 +246,7 @@ export default function GoldTextilesBarMopsReview() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://amzn.to/4hQm5J2"
+              href="https://amzn.to/3WYnxY9"
               target="_blank"
               rel="noopener noreferrer sponsored nofollow"
               className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"

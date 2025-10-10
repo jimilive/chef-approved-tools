@@ -47,6 +47,7 @@ export default function VictorinoxFibrox10InchReview() {
             alt="Victorinox Fibrox Pro 10-inch Chef's Knife"
             width={1200}
             height={800}
+            priority
             className="rounded-lg w-full"
           />
           <Image
