@@ -333,7 +333,7 @@ export default function ReviewsPage() {
                 className="group bg-gray-50 hover:bg-white border border-gray-200 hover:border-orange-300 rounded-xl p-6 text-center transition-all duration-200 hover:shadow-lg"
               >
                 <div className="text-4xl mb-3">{category.icon}</div>
-                <h3 className="font-semibold text-slate-900 mb-1 group-hover:text-orange-700">
+                <h3 className="font-semibold text-slate-900 mb-1 group-hover:text-orange-800">
                   {category.name}
                 </h3>
                 <p className="text-sm text-slate-600">Reviews available</p>
@@ -453,7 +453,7 @@ export default function ReviewsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-orange-700" />
+                <TrendingUp className="w-8 h-8 text-orange-800" />
               </div>
               <h3 className="font-semibold text-slate-900 mb-2">Real Kitchen Testing</h3>
               <p className="text-sm text-slate-600">

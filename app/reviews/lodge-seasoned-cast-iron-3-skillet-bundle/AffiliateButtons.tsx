@@ -31,7 +31,7 @@ export default function AffiliateButtons({ productData }: AffiliateButtonsProps)
           <div key={index} className="bg-white rounded-lg p-4 border border-gray-200">
             <div className="flex justify-between items-center mb-3">
               <h3 className="font-semibold text-slate-900">{link.retailer}</h3>
-              <span className="text-2xl font-bold text-orange-700">${link.price}</span>
+              <span className="text-2xl font-bold text-orange-800">${link.price}</span>
             </div>
             <a
               href={link.url}

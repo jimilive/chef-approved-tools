@@ -97,7 +97,7 @@ export default function JumpNavigation({ items }: JumpNavigationProps) {
                         onClick={() => handleClick(item.id)}
                         className={`w-full text-left px-3 py-2 rounded-md text-sm transition-all duration-150 ${paddingLeft} ${
                           isActive
-                            ? 'bg-orange-50 text-orange-700 font-medium border-l-2 border-orange-600'
+                            ? 'bg-orange-50 text-orange-800 font-medium border-l-2 border-orange-600'
                             : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
                         }`}
                       >

@@ -288,28 +288,28 @@ export default function GlossaryPage() {
               href="#equipment-terms"
               className="flex items-center justify-between bg-white hover:bg-orange-50 border border-gray-200 hover:border-orange-300 rounded-lg p-4 transition-all group"
             >
-              <span className="font-semibold text-slate-900 group-hover:text-orange-700">
+              <span className="font-semibold text-slate-900 group-hover:text-orange-800">
                 Essential Equipment Terms
               </span>
-              <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-orange-700" />
+              <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-orange-800" />
             </a>
             <a
               href="#recipe-conversions"
               className="flex items-center justify-between bg-white hover:bg-orange-50 border border-gray-200 hover:border-orange-300 rounded-lg p-4 transition-all group"
             >
-              <span className="font-semibold text-slate-900 group-hover:text-orange-700">
+              <span className="font-semibold text-slate-900 group-hover:text-orange-800">
                 Professional Recipe Conversions
               </span>
-              <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-orange-700" />
+              <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-orange-800" />
             </a>
             <a
               href="#knife-cuts"
               className="flex items-center justify-between bg-white hover:bg-orange-50 border border-gray-200 hover:border-orange-300 rounded-lg p-4 transition-all group"
             >
-              <span className="font-semibold text-slate-900 group-hover:text-orange-700">
+              <span className="font-semibold text-slate-900 group-hover:text-orange-800">
                 Professional Knife Cuts
               </span>
-              <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-orange-700" />
+              <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-orange-800" />
             </a>
           </div>
         </div>
@@ -330,7 +330,7 @@ export default function GlossaryPage() {
           <div className="space-y-8">
             {glossaryTerms.map((item, index) => (
               <article key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
-                <h3 className="text-2xl font-bold mb-4 text-orange-700">
+                <h3 className="text-2xl font-bold mb-4 text-orange-800">
                   {item.term}
                 </h3>
 
@@ -362,7 +362,7 @@ export default function GlossaryPage() {
                     <div className="mt-4 pt-4 border-t border-gray-200">
                       <Link
                         href={item.linkUrl}
-                        className="inline-flex items-center text-orange-600 hover:text-orange-700 font-medium"
+                        className="inline-flex items-center text-orange-600 hover:text-orange-800 font-medium"
                       >
                         {item.linkText} →
                       </Link>
@@ -646,7 +646,7 @@ export default function GlossaryPage() {
                 </p>
                 <Link
                   href="/guides/best-chef-knives"
-                  className="inline-block bg-white text-orange-700 hover:bg-orange-50 font-bold px-6 py-3 rounded-lg transition-colors"
+                  className="inline-block bg-white text-orange-800 hover:bg-orange-50 font-bold px-6 py-3 rounded-lg transition-colors"
                 >
                   See Our Guide to the Best Professional Chef Knives →
                 </Link>
@@ -658,7 +658,7 @@ export default function GlossaryPage() {
             {knifeCuts.map((cut, index) => (
               <article key={index} className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-orange-700 mb-2">
+                  <h3 className="text-xl font-bold text-orange-800 mb-2">
                     {cut.french}
                   </h3>
                   <div className="flex flex-wrap gap-2 text-sm">
@@ -690,7 +690,7 @@ export default function GlossaryPage() {
                     <h4 className="font-semibold text-slate-900 mb-1 text-sm">Best uses:</h4>
                     <div className="flex flex-wrap gap-1">
                       {cut.uses.map((use, useIndex) => (
-                        <span key={useIndex} className="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs">
+                        <span key={useIndex} className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">
                           {use}
                         </span>
                       ))}
@@ -703,7 +703,7 @@ export default function GlossaryPage() {
 
           <div className="mt-12 bg-orange-50 border border-orange-200 rounded-xl p-6">
             <h3 className="font-bold text-orange-800 mb-3">Pro Tip from 21+ Years in Kitchens</h3>
-            <p className="text-orange-700 text-sm leading-relaxed">
+            <p className="text-orange-800 text-sm leading-relaxed">
               Uniform cuts aren&apos;t just about looks - they ensure everything cooks at the same rate.
               A mix of large and small pieces means some will be overcooked while others are still raw.
               Take the extra time to make cuts consistent, especially for sautéing and roasting.
@@ -725,13 +725,13 @@ export default function GlossaryPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/reviews"
-              className="bg-white text-orange-700 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors"
+              className="bg-white text-orange-800 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors"
             >
               Browse Reviews
             </Link>
             <Link
               href="/guides"
-              className="border-2 border-white text-white hover:bg-white hover:text-orange-700 font-semibold px-8 py-3 rounded-lg transition-colors"
+              className="border-2 border-white text-white hover:bg-white hover:text-orange-800 font-semibold px-8 py-3 rounded-lg transition-colors"
             >
               Read Buying Guides
             </Link>

@@ -72,7 +72,7 @@ export default function BlogPage() {
                   </span>
                 </div>
 
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 hover:text-orange-700 transition-colors">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 hover:text-orange-800 transition-colors">
                   <Link href={`/blog/${post.slug}`}>
                     {post.title}
                   </Link>
@@ -84,7 +84,7 @@ export default function BlogPage() {
 
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold transition-colors"
+                  className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold transition-colors"
                 >
                   Read Full Article
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,7 +109,7 @@ export default function BlogPage() {
           </p>
           <Link
             href="/newsletter"
-            className="bg-white text-orange-700 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors inline-block"
+            className="bg-white text-orange-800 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors inline-block"
           >
             Subscribe for Free Tips
           </Link>

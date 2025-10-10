@@ -108,7 +108,7 @@ export default function DisclosurePage() {
               <li>We only see aggregate, anonymized purchase data</li>
             </ul>
             <p>
-              For more information, see our <Link href="/privacy-policy" className="text-orange-600 hover:text-orange-700 underline">Privacy Policy</Link>.
+              For more information, see our <Link href="/privacy-policy" className="text-orange-600 hover:text-orange-800 underline">Privacy Policy</Link>.
             </p>
           </section>
 
@@ -122,7 +122,7 @@ export default function DisclosurePage() {
             <ul className="list-none space-y-2">
               <li>
                 <strong>Email:</strong>{' '}
-                <a href="mailto:hello@chefapprovedtools.com" className="text-orange-600 hover:text-orange-700 underline">
+                <a href="mailto:hello@chefapprovedtools.com" className="text-orange-600 hover:text-orange-800 underline">
                   hello@chefapprovedtools.com
                 </a>
               </li>

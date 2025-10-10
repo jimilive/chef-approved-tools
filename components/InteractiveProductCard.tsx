@@ -67,7 +67,7 @@ export default function InteractiveProductCard({
           Professional blade tested over 6+ months in commercial kitchen settings.{' '}
           <Link
             href={`/reviews/${product.slug}`}
-            className="text-orange-700 hover:text-orange-700 font-medium"
+            className="text-orange-800 hover:text-orange-800 font-medium"
           >
             Read full review →
           </Link>
@@ -88,7 +88,7 @@ export default function InteractiveProductCard({
         <Link
           href={`/reviews/${product.slug}`}
           onClick={handleReviewClick}
-          className="flex-1 border-2 border-orange-600 text-orange-700 hover:bg-orange-600 hover:text-white font-semibold py-3 px-4 rounded-lg text-center text-sm transition-all duration-200 active:scale-95"
+          className="flex-1 border-2 border-orange-600 text-orange-800 hover:bg-orange-600 hover:text-white font-semibold py-3 px-4 rounded-lg text-center text-sm transition-all duration-200 active:scale-95"
         >
           Review
         </Link>
@@ -96,7 +96,7 @@ export default function InteractiveProductCard({
       
       {/* Disclaimer */}
       <p className="text-xs text-gray-500 mt-3 text-center">
-        <span className="text-orange-700 font-medium">Affiliate link</span>
+        <span className="text-orange-800 font-medium">Affiliate link</span>
       </p>
     </div>
   )

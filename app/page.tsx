@@ -302,7 +302,7 @@ export default function HomePage() {
           <div className="space-y-8">
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-24 text-right">
-                <span className="text-sm font-bold text-orange-700">1992-1994</span>
+                <span className="text-sm font-bold text-orange-800">1992-1994</span>
               </div>
               <div className="flex-grow border-l-2 border-orange-200 pl-6 pb-8">
                 <h3 className="font-bold text-lg mb-1">Kitchen Manager - Mellow Mushroom</h3>
@@ -313,7 +313,7 @@ export default function HomePage() {
             
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-24 text-right">
-                <span className="text-sm font-bold text-orange-700">2007-2012</span>
+                <span className="text-sm font-bold text-orange-800">2007-2012</span>
               </div>
               <div className="flex-grow border-l-2 border-orange-200 pl-6 pb-8">
                 <h3 className="font-bold text-lg mb-1">Pizzaiolo - Purple Cafe & Wine Bar</h3>
@@ -324,7 +324,7 @@ export default function HomePage() {
             
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-24 text-right">
-                <span className="text-sm font-bold text-orange-700">2006-2010</span>
+                <span className="text-sm font-bold text-orange-800">2006-2010</span>
               </div>
               <div className="flex-grow border-l-2 border-orange-200 pl-6 pb-8">
                 <h3 className="font-bold text-lg mb-1">Shift Lead - Feierabend</h3>
@@ -335,7 +335,7 @@ export default function HomePage() {
             
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-24 text-right">
-                <span className="text-sm font-bold text-orange-700">2015-2018</span>
+                <span className="text-sm font-bold text-orange-800">2015-2018</span>
               </div>
               <div className="flex-grow border-l-2 border-orange-200 pl-6 pb-8">
                 <h3 className="font-bold text-lg mb-1">Content Lead - YDesign Group</h3>
@@ -346,7 +346,7 @@ export default function HomePage() {
             
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-24 text-right">
-                <span className="text-sm font-bold text-orange-700">2025-Now</span>
+                <span className="text-sm font-bold text-orange-800">2025-Now</span>
               </div>
               <div className="flex-grow border-l-2 border-orange-200 pl-6">
                 <h3 className="font-bold text-lg mb-1">Equipment Testing & Reviews</h3>

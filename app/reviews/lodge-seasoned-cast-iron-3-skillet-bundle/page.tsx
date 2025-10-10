@@ -132,7 +132,7 @@ export default function Lodge3SkilletBundleReview() {
                 {index === breadcrumbs.length - 1 ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>
                 ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-700 transition-colors">
+                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-800 transition-colors">
                     {crumb.name}
                   </Link>
                 )}
@@ -164,7 +164,7 @@ export default function Lodge3SkilletBundleReview() {
             {/* Rating */}
             <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
               <div className="text-center">
-                <div className="text-2xl font-bold text-orange-700 mb-1">{productData.expertRating}/5</div>
+                <div className="text-2xl font-bold text-orange-800 mb-1">{productData.expertRating}/5</div>
                 <div className="flex justify-center text-yellow-400 mb-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className={`w-4 h-4 ${i < Math.floor(productData.expertRating) ? 'fill-current' : ''}`} />
@@ -178,7 +178,7 @@ export default function Lodge3SkilletBundleReview() {
           {/* Professional Summary */}
           <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-8">
             <div className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-orange-700 flex-shrink-0 mt-1" />
+              <CheckCircle className="w-6 h-6 text-orange-800 flex-shrink-0 mt-1" />
               <div>
                 <p className="text-slate-800 font-medium leading-relaxed mb-2">
                   <strong>PROFESSIONAL VERDICT:</strong> These Lodge skillets are restaurant-proven workhorses that will outlast any cook.
@@ -201,7 +201,7 @@ export default function Lodge3SkilletBundleReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">American Cast Iron Excellence Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <Thermometer className="w-8 h-8 text-orange-700 mb-2" />
+              <Thermometer className="w-8 h-8 text-orange-800 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">Heat Retention</h3>
               <p className="text-sm text-slate-600">Superior thermal mass</p>
             </div>
@@ -247,7 +247,7 @@ export default function Lodge3SkilletBundleReview() {
                       <td className="p-4 text-slate-700">{skillet.cookingSurface}</td>
                       <td className="p-4 text-slate-700">{skillet.capacity}</td>
                       <td className="p-4 text-slate-700">{skillet.bestFor}</td>
-                      <td className="p-4 text-orange-700 font-semibold">{skillet.individual}</td>
+                      <td className="p-4 text-orange-800 font-semibold">{skillet.individual}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -337,7 +337,7 @@ export default function Lodge3SkilletBundleReview() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-orange-700 mb-2">⚠️ [ADD YOUR CONCERNS/LIMITATIONS]</h4>
+                <h4 className="font-semibold text-orange-800 mb-2">⚠️ [ADD YOUR CONCERNS/LIMITATIONS]</h4>
                 <ul className="text-sm text-slate-700 space-y-1">
                   <li>• [ADD WEIGHT/HANDLING CONCERNS]</li>
                   <li>• [ADD SEASONING MAINTENANCE ISSUES]</li>
@@ -408,7 +408,7 @@ export default function Lodge3SkilletBundleReview() {
                   <div key={index} className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
                     <div className="flex-shrink-0">
                       <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
-                        <span className="text-sm font-bold text-orange-700">{index + 1}</span>
+                        <span className="text-sm font-bold text-orange-800">{index + 1}</span>
                       </div>
                     </div>
                     <div>
@@ -447,31 +447,31 @@ export default function Lodge3SkilletBundleReview() {
                   <td className="p-4 font-medium">Price Range</td>
                   <td className="p-4 text-green-700">$89 for 3-piece set</td>
                   <td className="p-4 text-blue-600">$120 for similar set</td>
-                  <td className="p-4 text-orange-700">$400+ for 3 pieces</td>
+                  <td className="p-4 text-orange-800">$400+ for 3 pieces</td>
                 </tr>
                 <tr className="border-b border-gray-100 bg-gray-50">
                   <td className="p-4 font-medium">Pre-Seasoning</td>
                   <td className="p-4 text-green-700">Vegetable oil seasoning</td>
                   <td className="p-4 text-blue-600">Flaxseed oil seasoning</td>
-                  <td className="p-4 text-orange-700">Enameled (no seasoning)</td>
+                  <td className="p-4 text-orange-800">Enameled (no seasoning)</td>
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="p-4 font-medium">Made In</td>
                   <td className="p-4 text-green-700">Tennessee, USA</td>
                   <td className="p-4 text-blue-600">Colombia</td>
-                  <td className="p-4 text-orange-700">France</td>
+                  <td className="p-4 text-orange-800">France</td>
                 </tr>
                 <tr className="border-b border-gray-100 bg-gray-50">
                   <td className="p-4 font-medium">Your Experience</td>
                   <td className="p-4 text-green-700">[ADD YOUR RATING]</td>
                   <td className="p-4 text-gray-600">[IF TESTED]</td>
-                  <td className="p-4 text-orange-700">[IF TESTED]</td>
+                  <td className="p-4 text-orange-800">[IF TESTED]</td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="p-4 font-medium">Value Rating</td>
                   <td className="p-4 text-green-700">[ADD YOUR ASSESSMENT]</td>
                   <td className="p-4 text-gray-600">[IF TESTED]</td>
-                  <td className="p-4 text-orange-700">[IF TESTED]</td>
+                  <td className="p-4 text-orange-800">[IF TESTED]</td>
                 </tr>
               </tbody>
             </table>
@@ -630,7 +630,7 @@ export default function Lodge3SkilletBundleReview() {
               </ul>
             </div>
             <div className="bg-white rounded-lg p-6 border border-gray-200">
-              <h3 className="font-semibold text-orange-700 mb-3">⚠️ Not Perfect For:</h3>
+              <h3 className="font-semibold text-orange-800 mb-3">⚠️ Not Perfect For:</h3>
               <ul className="space-y-2 text-slate-700">
                 <li>• <strong>Occasional cooks</strong> who won&apos;t maintain the seasoning properly</li>
                 <li>• <strong>Limited storage space</strong> - these are heavy and take up room</li>
@@ -653,7 +653,7 @@ export default function Lodge3SkilletBundleReview() {
           </p>
           <Link
             href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+            className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold"
           >
             → See My Victorinox 8&quot; Chef&apos;s Knife Review
           </Link>
@@ -689,7 +689,7 @@ export default function Lodge3SkilletBundleReview() {
             </p>
             <Link
               href="/newsletter"
-              className="inline-block bg-white text-orange-700 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors"
+              className="inline-block bg-white text-orange-800 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors"
             >
               Download Free Guide →
             </Link>
@@ -777,7 +777,7 @@ export default function Lodge3SkilletBundleReview() {
               <div className="mb-4">
                 <h4 className="font-medium text-blue-600 mb-1">Field Company Cast Iron</h4>
                 <p className="text-sm text-slate-700 mb-2">Smoother finish, lighter weight, made in USA</p>
-                <p className="text-sm text-orange-700 font-semibold">~$150 per skillet</p>
+                <p className="text-sm text-orange-800 font-semibold">~$150 per skillet</p>
               </div>
               <div className="bg-yellow-50 border border-yellow-200 rounded p-2">
                 <p className="text-yellow-700 text-xs">Your Field Company experience (if any):</p>
@@ -789,7 +789,7 @@ export default function Lodge3SkilletBundleReview() {
               <div className="mb-4">
                 <h4 className="font-medium text-blue-600 mb-1">Victoria Cast Iron</h4>
                 <p className="text-sm text-slate-700 mb-2">Long handle design, good pre-seasoning</p>
-                <p className="text-sm text-orange-700 font-semibold">~$40-60 per skillet</p>
+                <p className="text-sm text-orange-800 font-semibold">~$40-60 per skillet</p>
               </div>
               <div className="bg-yellow-50 border border-yellow-200 rounded p-2">
                 <p className="text-yellow-700 text-xs">Your Victoria experience (if any):</p>
@@ -801,7 +801,7 @@ export default function Lodge3SkilletBundleReview() {
               <div className="mb-4">
                 <h4 className="font-medium text-blue-600 mb-1">Le Creuset Signature Skillets</h4>
                 <p className="text-sm text-slate-700 mb-2">No seasoning required, dishwasher safe</p>
-                <p className="text-sm text-orange-700 font-semibold">~$200+ per skillet</p>
+                <p className="text-sm text-orange-800 font-semibold">~$200+ per skillet</p>
               </div>
               <div className="bg-yellow-50 border border-yellow-200 rounded p-2">
                 <p className="text-yellow-700 text-xs">Your enameled cast iron experience (if any):</p>
@@ -813,7 +813,7 @@ export default function Lodge3SkilletBundleReview() {
               <div className="mb-4">
                 <h4 className="font-medium text-blue-600 mb-1">Restored Griswold/Wagner</h4>
                 <p className="text-sm text-slate-700 mb-2">Smoother finish, lighter, collectors&apos; choice</p>
-                <p className="text-sm text-orange-700 font-semibold">$50-200+ (varies by condition)</p>
+                <p className="text-sm text-orange-800 font-semibold">$50-200+ (varies by condition)</p>
               </div>
               <div className="bg-yellow-50 border border-yellow-200 rounded p-2">
                 <p className="text-yellow-700 text-xs">Your vintage cast iron experience (if any):</p>

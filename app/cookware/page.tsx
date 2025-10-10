@@ -161,7 +161,7 @@ export default function CookwarePage() {
             <div className="mb-4">
               <p className="text-slate-700 text-sm leading-relaxed">
                 {p.description}{' '}
-                <Link href={`/reviews/${p.slug}`} className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href={`/reviews/${p.slug}`} className="text-orange-600 hover:text-orange-800 font-medium">
                   Read full review →
                 </Link>
               </p>

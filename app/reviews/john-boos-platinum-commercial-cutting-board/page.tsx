@@ -113,7 +113,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                 {index === breadcrumbs.length - 1 ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>
                 ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-700 transition-colors">
+                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-800 transition-colors">
                     {crumb.name}
                   </Link>
                 )}
@@ -145,7 +145,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             {/* Rating */}
             <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
               <div className="text-center">
-                <div className="text-2xl font-bold text-orange-700 mb-1">{productData.expertRating}/5</div>
+                <div className="text-2xl font-bold text-orange-800 mb-1">{productData.expertRating}/5</div>
                 <div className="flex justify-center text-yellow-400 mb-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className={`w-4 h-4 ${i < Math.floor(productData.expertRating) ? 'fill-current' : ''}`} />
@@ -159,7 +159,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           {/* Professional Summary */}
           <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-8">
             <div className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-orange-700 flex-shrink-0 mt-1" />
+              <CheckCircle className="w-6 h-6 text-orange-800 flex-shrink-0 mt-1" />
               <div>
                 <p className="text-slate-800 font-medium leading-relaxed mb-2">
                   <strong>PROFESSIONAL VERDICT:</strong> After 18 years of home use, this cutting board represents a generational investment in quality.
@@ -194,7 +194,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">#1 Choice of Culinary Professionals Worldwide</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <Ruler className="w-8 h-8 text-orange-700 mb-2" />
+              <Ruler className="w-8 h-8 text-orange-800 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">NSF Certified</h3>
               <p className="text-sm text-slate-600">Commercial foodservice approved</p>
             </div>
@@ -267,7 +267,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                       </td>
                       <td className="p-4 text-slate-700">{size.weight}</td>
                       <td className="p-4 text-slate-700">{size.use}</td>
-                      <td className="p-4 text-orange-700 font-semibold">${size.price}</td>
+                      <td className="p-4 text-orange-800 font-semibold">${size.price}</td>
                       <td className="p-4">
                         {size.featured ? (
                           <div className="flex items-center gap-1">
@@ -365,7 +365,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-orange-700 mb-2">⚠️ Minor Considerations</h4>
+                <h4 className="font-semibold text-orange-800 mb-2">⚠️ Minor Considerations</h4>
                 <ul className="text-sm text-slate-700 space-y-1">
                   <li>• Serrated knives cause deeper marks</li>
                   <li>• Staining can occur if not washed promptly</li>
@@ -391,7 +391,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                   <div key={index} className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
                     <div className="flex-shrink-0">
                       <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
-                        <Clock className="w-4 h-4 text-orange-700" />
+                        <Clock className="w-4 h-4 text-orange-800" />
                       </div>
                     </div>
                     <div>
@@ -421,7 +421,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           </p>
           <Link
             href="/reviews/oxo-good-grips-bench-scraper"
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+            className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold"
           >
             → See My OXO Bench Scraper Review
           </Link>
@@ -436,7 +436,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           </p>
           <Link
             href="/reviews/epicurean-kitchen-cutting-board"
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+            className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold"
           >
             → See My Epicurean Cutting Board Review
           </Link>
@@ -459,14 +459,14 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                 <tr className="border-b border-gray-100">
                   <td className="p-4 font-medium">Knife Kindness</td>
                   <td className="p-4 text-green-700">Excellent - self-healing</td>
-                  <td className="p-4 text-orange-700">Good - but shows cuts</td>
+                  <td className="p-4 text-orange-800">Good - but shows cuts</td>
                   <td className="p-4 text-blue-600">Good - harder than maple</td>
                 </tr>
                 <tr className="border-b border-gray-100 bg-gray-50">
                   <td className="p-4 font-medium">Sanitation</td>
-                  <td className="p-4 text-orange-700">Good with proper care</td>
+                  <td className="p-4 text-orange-800">Good with proper care</td>
                   <td className="p-4 text-green-700">Excellent - dishwasher safe</td>
-                  <td className="p-4 text-orange-700">Good - antimicrobial</td>
+                  <td className="p-4 text-orange-800">Good - antimicrobial</td>
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="p-4 font-medium">Durability</td>
@@ -476,13 +476,13 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                 </tr>
                 <tr className="border-b border-gray-100 bg-gray-50">
                   <td className="p-4 font-medium">Maintenance</td>
-                  <td className="p-4 text-orange-700">Regular oiling required</td>
+                  <td className="p-4 text-orange-800">Regular oiling required</td>
                   <td className="p-4 text-green-700">Minimal</td>
-                  <td className="p-4 text-orange-700">Light oiling needed</td>
+                  <td className="p-4 text-orange-800">Light oiling needed</td>
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="p-4 font-medium">Cost</td>
-                  <td className="p-4 text-orange-700">$189</td>
+                  <td className="p-4 text-orange-800">$189</td>
                   <td className="p-4 text-green-600">$30-60</td>
                   <td className="p-4 text-blue-600">$40-80</td>
                 </tr>
@@ -600,7 +600,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               </ul>
             </div>
             <div className="bg-white rounded-lg p-6 border border-gray-200">
-              <h3 className="font-semibold text-orange-700 mb-3">⚠️ Consider Alternatives If:</h3>
+              <h3 className="font-semibold text-orange-800 mb-3">⚠️ Consider Alternatives If:</h3>
               <ul className="space-y-2 text-slate-700">
                 <li>• Budget is extremely limited</li>
                 <li>• Counter space is restricted</li>
@@ -643,7 +643,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </p>
             <Link
               href="/newsletter"
-              className="inline-block bg-white text-orange-700 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors"
+              className="inline-block bg-white text-orange-800 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors"
             >
               Download Free Guide →
             </Link>

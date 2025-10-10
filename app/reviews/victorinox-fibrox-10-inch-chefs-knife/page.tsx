@@ -255,7 +255,7 @@ export default function VictorinoxFibrox10InchReview() {
           </p>
           <Link
             href="/best-knife-for-cutting-meat"
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+            className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold"
           >
             → See My Best Knife for Cutting Meat Guide
           </Link>

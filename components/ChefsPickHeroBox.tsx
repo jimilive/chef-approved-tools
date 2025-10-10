@@ -86,7 +86,7 @@ export default function ChefsPickHeroBox({ product, category }: ChefsPickProps) 
             </a>
             <Link
               href={`/reviews/${product.slug}`}
-              className="flex-1 border-2 border-orange-600 text-orange-700 hover:bg-orange-50 font-semibold py-4 px-6 rounded-xl transition-all duration-200 text-center"
+              className="flex-1 border-2 border-orange-600 text-orange-800 hover:bg-orange-50 font-semibold py-4 px-6 rounded-xl transition-all duration-200 text-center"
             >
               Read Full Review →
             </Link>

@@ -208,8 +208,8 @@ export default function VictorinoxFibrox8InchReview() {
           <div className="prose prose-lg max-w-none text-gray-700">
             <p className="font-semibold">
               After 40 years of professional cooking and countless knives tested, the Victorinox 8-inch chef&apos;s
-              knife remains my primary blade—alongside my <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-700 underline font-semibold">John Boos
-              cutting board</Link> and <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-700 underline font-semibold">KitchenAid commercial mixer</Link> as
+              knife remains my primary blade—alongside my <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline font-semibold">John Boos
+              cutting board</Link> and <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline font-semibold">KitchenAid commercial mixer</Link> as
               essential kitchen equipment.
             </p>
 
@@ -224,7 +224,7 @@ export default function VictorinoxFibrox8InchReview() {
 
             <p className="mt-6">
               The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day.
-              This knife pairs perfectly with other value-focused essentials in my <Link href="/kitchen-bundle" className="text-orange-600 hover:text-orange-700 underline font-semibold">budget professional kitchen starter kit</Link>, proving you don&apos;t need
+              This knife pairs perfectly with other value-focused essentials in my <Link href="/kitchen-bundle" className="text-orange-600 hover:text-orange-800 underline font-semibold">budget professional kitchen starter kit</Link>, proving you don&apos;t need
               to spend thousands to cook like a pro.
             </p>
           </div>
@@ -256,14 +256,14 @@ export default function VictorinoxFibrox8InchReview() {
                 <li>✗ Plastic handle lacks luxury aesthetic</li>
               </ul>
               <p className="mt-4 text-sm">
-                While <Link href="/reviews/wusthof-classic-ikon-16-piece" className="text-orange-600 hover:text-orange-700 underline">Wusthof</Link> and other premium brands
+                While <Link href="/reviews/wusthof-classic-ikon-16-piece" className="text-orange-600 hover:text-orange-800 underline">Wusthof</Link> and other premium brands
                 make beautiful knives, the Victorinox delivers 90% of the performance at 20% of the cost.
               </p>
             </div>
           </div>
 
           <p className="mt-6 text-gray-700">
-            For a complete comparison of budget and premium chef&apos;s knives, see our <Link href="/guides/best-chef-knives" className="text-orange-600 hover:text-orange-700 underline font-semibold">complete chef&apos;s knife buying guide</Link>.
+            For a complete comparison of budget and premium chef&apos;s knives, see our <Link href="/guides/best-chef-knives" className="text-orange-600 hover:text-orange-800 underline font-semibold">complete chef&apos;s knife buying guide</Link>.
           </p>
         </section>
 
@@ -587,8 +587,8 @@ export default function VictorinoxFibrox8InchReview() {
 
                   <p><strong>My verdict:</strong> The Victorinox cuts just as well as the Wusthof. After
                   40 years, I still use my Victorinox daily because it works better for actual cooking.
-                  Save $135+ and spend it on a <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-700 underline">quality
-                  cutting board</Link> or <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-700 underline">Dutch oven</Link> instead.</p>
+                  Save $135+ and spend it on a <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline">quality
+                  cutting board</Link> or <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-800 underline">Dutch oven</Link> instead.</p>
                 </div>
               </div>
             </div>
@@ -731,11 +731,11 @@ export default function VictorinoxFibrox8InchReview() {
 
             <div style={{ margin: '20px 0' }}>
               <h4>If You Want Premium Aesthetics:</h4>
-              <p><Link href="/reviews/wusthof-classic-ikon-16-piece" className="text-orange-600 hover:text-orange-700 underline"><strong>Wusthof Classic Ikon</strong></Link> ($200+) - Beautiful wood handle, luxury feel. Cuts no better but looks gorgeous.</p>
+              <p><Link href="/reviews/wusthof-classic-ikon-16-piece" className="text-orange-600 hover:text-orange-800 underline"><strong>Wusthof Classic Ikon</strong></Link> ($200+) - Beautiful wood handle, luxury feel. Cuts no better but looks gorgeous.</p>
             </div>
 
             <p style={{ marginTop: '20px', padding: '15px', background: '#fff3cd', borderRadius: '4px' }}>
-              <strong>Still deciding?</strong> <Link href="/contact" className="text-orange-600 hover:text-orange-700 underline">Contact me</Link> with your cooking style
+              <strong>Still deciding?</strong> <Link href="/contact" className="text-orange-600 hover:text-orange-800 underline">Contact me</Link> with your cooking style
               and budget—I&apos;ll recommend the perfect knife. No upselling, just honest advice from 40 years of experience.
             </p>
           </div>

@@ -36,9 +36,9 @@ export default function BestKnifeForCuttingMeat() {
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ol className="flex items-center space-x-2 text-sm">
-            <li><Link href="/" className="text-orange-600 hover:text-orange-700">Home</Link></li>
+            <li><Link href="/" className="text-orange-600 hover:text-orange-800">Home</Link></li>
             <li className="text-gray-400">/</li>
-            <li><Link href="/guides" className="text-orange-600 hover:text-orange-700">Guides</Link></li>
+            <li><Link href="/guides" className="text-orange-600 hover:text-orange-800">Guides</Link></li>
             <li className="text-gray-400">/</li>
             <li className="text-gray-600">Best Knife for Cutting Meat</li>
           </ol>

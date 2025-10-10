@@ -87,8 +87,8 @@ export default function TopPicksComparison() {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
           <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 rounded-full px-4 py-2 mb-4">
-            <Award className="w-4 h-4 text-orange-700" />
-            <span className="text-sm font-semibold text-orange-700">Chef&apos;s Top Picks</span>
+            <Award className="w-4 h-4 text-orange-800" />
+            <span className="text-sm font-semibold text-orange-800">Chef&apos;s Top Picks</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
             My Top Professional Tool Pick
@@ -139,7 +139,7 @@ export default function TopPicksComparison() {
               {/* Key Feature */}
               <div className="bg-gray-50 rounded-lg p-3 mb-4">
                 <div className="flex items-center gap-2 mb-1">
-                  <TrendingUp className="w-4 h-4 text-orange-700" />
+                  <TrendingUp className="w-4 h-4 text-orange-800" />
                   <span className="text-xs font-semibold text-gray-700">Key Strength</span>
                 </div>
                 <p className="text-sm text-gray-700 font-medium">{pick.keyFeature}</p>
@@ -154,7 +154,7 @@ export default function TopPicksComparison() {
               <div className="mb-4">
                 <a
                   href={`/reviews/${pick.id}`}
-                  className="inline-flex items-center text-sm text-slate-600 hover:text-orange-700 font-medium transition-colors"
+                  className="inline-flex items-center text-sm text-slate-600 hover:text-orange-800 font-medium transition-colors"
                 >
                   Read my complete {pick.testPeriod} testing review →
                 </a>

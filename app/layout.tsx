@@ -106,18 +106,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <head>
-        {/* Google Tag Manager */}
-        <Script id="gtm-head" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-PX8GPHKF');
-          `}
-        </Script>
-        {/* End Google Tag Manager */}
-
         {/* Mobile viewport meta tag */}
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
 
@@ -141,10 +129,10 @@ export default function RootLayout({
         {/* <link rel="preload" href="/_next/static/css/34ae4f707512af1f.css" as="style" /> */}
 
         {/* Resource hints for critical third-party domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 
         {/* Critical CSS inline for immediate rendering - Above the fold only */}
         <style dangerouslySetInnerHTML={{
@@ -231,6 +219,7 @@ export default function RootLayout({
             .text-slate-300{color:#cbd5e1}
             .hover\\:bg-slate-300:hover{background-color:#cbd5e1}
             .hover\\:text-slate-800:hover{color:#1e293b}
+            .hover\\:text-orange-800:hover{color:#9a3412}
             .grid{display:grid}
             .grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}
             .sm\\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -243,6 +232,7 @@ export default function RootLayout({
             .text-2xl{font-size:1.5rem;line-height:2rem}
             .sm\\:text-3xl{font-size:1.875rem;line-height:2.25rem}
             .text-orange-400{color:#fb923c}
+            .text-orange-800{color:#9a3412}
             .mb-1{margin-bottom:0.25rem}
             .text-xs{font-size:0.75rem;line-height:1rem}
             .sm\\:text-sm{font-size:0.875rem;line-height:1.25rem}
@@ -340,56 +330,65 @@ export default function RootLayout({
           </MobileOptimizationProvider>
         </MobileOptimizedLayout>
 
+        {/* Google Tag Manager & Analytics - Deferred loading for performance */}
+        <Script id="gtm-deferred" strategy="lazyOnload">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PX8GPHKF');
+          `}
+        </Script>
+
         {/* Google Analytics 4 - Deferred loading for performance */}
         {process.env.NEXT_PUBLIC_GA_TRACKING_ID && (
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('consent', 'default', {
-                  'analytics_storage': 'denied',
-                  'ad_storage': 'denied'
-                });
+          <Script id="ga-deferred" strategy="lazyOnload">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied'
+              });
 
-                // Defer GA loading until page is loaded to improve LCP
-                function loadGA() {
-                  const script = document.createElement('script');
-                  script.async = true;
-                  script.src = 'https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}';
-                  document.head.appendChild(script);
+              // Defer GA loading until page is loaded to improve LCP
+              function loadGA() {
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}';
+                document.head.appendChild(script);
 
-                  script.onload = function() {
-                    gtag('js', new Date());
-                    gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
-                      send_page_view: false
-                    });
-                  };
+                script.onload = function() {
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
+                    send_page_view: false
+                  });
+                };
+              }
+
+              // Load after page is fully loaded and user interaction
+              let gaLoaded = false;
+              function loadGAOnInteraction() {
+                if (!gaLoaded) {
+                  gaLoaded = true;
+                  setTimeout(loadGA, 100);
                 }
+              }
 
-                // Load after page is fully loaded and user interaction
-                let gaLoaded = false;
-                function loadGAOnInteraction() {
-                  if (!gaLoaded) {
-                    gaLoaded = true;
-                    setTimeout(loadGA, 100);
-                  }
-                }
+              // Mobile-optimized loading: more aggressive deferring
+              const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+              const delay = isMobile ? 5000 : 3000; // 5 seconds on mobile vs 3 on desktop
 
-                // Mobile-optimized loading: more aggressive deferring
-                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                const delay = isMobile ? 5000 : 3000; // 5 seconds on mobile vs 3 on desktop
+              // Load on first user interaction or after delay
+              ['mousedown', 'touchstart', 'keydown', 'scroll'].forEach(event => {
+                document.addEventListener(event, loadGAOnInteraction, { once: true, passive: true });
+              });
 
-                // Load on first user interaction or after delay
-                ['mousedown', 'touchstart', 'keydown', 'scroll'].forEach(event => {
-                  document.addEventListener(event, loadGAOnInteraction, { once: true, passive: true });
-                });
-
-                // Fallback: load after delay (longer on mobile)
-                setTimeout(loadGAOnInteraction, delay);
-              `,
-            }}
-          />
+              // Fallback: load after delay (longer on mobile)
+              setTimeout(loadGAOnInteraction, delay);
+            `}
+          </Script>
         )}
       </body>
     </html>

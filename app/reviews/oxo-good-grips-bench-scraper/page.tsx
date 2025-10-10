@@ -216,7 +216,7 @@ export default function OXOGoodGripsBenchScraperReview() {
           </p>
           <Link
             href="/reviews/john-boos-platinum-commercial-cutting-board"
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+            className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold"
           >
             → See My John Boos Platinum Cutting Board Review
           </Link>

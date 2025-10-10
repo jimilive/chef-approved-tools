@@ -174,7 +174,7 @@ export default function Header() {
             We earn from qualifying purchases as Amazon Associates.{' '}
             <a
               href="/disclosure"
-              className="text-orange-700 hover:text-orange-700 font-medium ml-1"
+              className="text-orange-600 hover:text-orange-800 font-medium ml-1"
             >
               Full affiliate disclosure
             </a>

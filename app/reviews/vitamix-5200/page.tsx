@@ -103,7 +103,7 @@ export default function Vitamix5200Review() {
                 {index === breadcrumbs.length - 1 ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>
                 ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-700 transition-colors">
+                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-800 transition-colors">
                     {crumb.name}
                   </Link>
                 )}
@@ -135,7 +135,7 @@ export default function Vitamix5200Review() {
             {/* Rating */}
             <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
               <div className="text-center">
-                <div className="text-2xl font-bold text-orange-700 mb-1">{productData.expertRating}/5</div>
+                <div className="text-2xl font-bold text-orange-800 mb-1">{productData.expertRating}/5</div>
                 <div className="flex justify-center text-yellow-400 mb-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className={`w-4 h-4 ${i < Math.floor(productData.expertRating) ? 'fill-current' : ''}`} />
@@ -200,7 +200,7 @@ export default function Vitamix5200Review() {
           {/* Professional Summary */}
           <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-8">
             <div className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-orange-700 flex-shrink-0 mt-1" />
+              <CheckCircle className="w-6 h-6 text-orange-800 flex-shrink-0 mt-1" />
               <div>
                 <p className="text-slate-800 font-medium leading-relaxed mb-2">
                   <strong>PROFESSIONAL VERDICT:</strong> After 5+ years as our primary blending workhorse at Purple Cafe, the Vitamix 5200 delivered flawless performance under demanding commercial conditions.
@@ -222,19 +222,19 @@ export default function Vitamix5200Review() {
         <nav className="bg-slate-50 p-4 rounded-lg mb-8 border border-slate-200" role="navigation" aria-label="Quick page navigation">
           <p className="font-semibold text-slate-900 mb-2">Quick Navigation:</p>
           <div className="flex flex-wrap gap-2 text-sm">
-            <a href="#testing" aria-label="Jump to testing results section" className="text-orange-600 hover:text-orange-700">Testing Results</a>
+            <a href="#testing" aria-label="Jump to testing results section" className="text-orange-600 hover:text-orange-800">Testing Results</a>
             <span className="text-slate-400">|</span>
-            <a href="#reviews" aria-label="Jump to user reviews section" className="text-orange-600 hover:text-orange-700">User Reviews</a>
+            <a href="#reviews" aria-label="Jump to user reviews section" className="text-orange-600 hover:text-orange-800">User Reviews</a>
             <span className="text-slate-400">|</span>
-            <a href="#comparison" aria-label="Jump to model comparison section" className="text-orange-600 hover:text-orange-700">Model Comparison</a>
+            <a href="#comparison" aria-label="Jump to model comparison section" className="text-orange-600 hover:text-orange-800">Model Comparison</a>
             <span className="text-slate-400">|</span>
-            <a href="#pricing" aria-label="Jump to pricing section" className="text-orange-600 hover:text-orange-700">Pricing</a>
+            <a href="#pricing" aria-label="Jump to pricing section" className="text-orange-600 hover:text-orange-800">Pricing</a>
             <span className="text-slate-400">|</span>
-            <a href="#who-buys" aria-label="Jump to buyer recommendations section" className="text-orange-600 hover:text-orange-700">Who Should Buy</a>
+            <a href="#who-buys" aria-label="Jump to buyer recommendations section" className="text-orange-600 hover:text-orange-800">Who Should Buy</a>
             <span className="text-slate-400">|</span>
-            <a href="#faq" aria-label="Jump to FAQ section" className="text-orange-600 hover:text-orange-700">FAQ</a>
+            <a href="#faq" aria-label="Jump to FAQ section" className="text-orange-600 hover:text-orange-800">FAQ</a>
             <span className="text-slate-400">|</span>
-            <a href="#verdict" aria-label="Jump to verdict section" className="text-orange-600 hover:text-orange-700">Verdict</a>
+            <a href="#verdict" aria-label="Jump to verdict section" className="text-orange-600 hover:text-orange-800">Verdict</a>
           </div>
         </nav>
 
@@ -328,7 +328,7 @@ export default function Vitamix5200Review() {
                 <p className="text-slate-700 leading-relaxed mb-4">
                   During our 5+ year smoothie program at Purple Cafe, the Vitamix 5200 operated as our primary blending workhorse.
                   The 2.0 HP motor consistently pulverized frozen fruits, ice, and tough ingredients into perfectly smooth textures
-                  that met our quality standards. The Vitamix 5200 became as essential to our operations as our <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-700 underline">KitchenAid commercial mixer</Link> and <Link href="/reviews/robot-coupe-r2-dice" className="text-orange-600 hover:text-orange-700 underline">Robot Coupe food processor</Link>, handling tasks
+                  that met our quality standards. The Vitamix 5200 became as essential to our operations as our <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline">KitchenAid commercial mixer</Link> and <Link href="/reviews/robot-coupe-r2-dice" className="text-orange-600 hover:text-orange-800 underline">Robot Coupe food processor</Link>, handling tasks
                   that previously required multiple appliances.
                 </p>
               </div>
@@ -339,7 +339,7 @@ export default function Vitamix5200Review() {
                   What sets this blender apart is its commercial-grade construction. After 5+ years of daily restaurant use,
                   including multiple smoothie rushes and puree preparations, the motor shows no signs of degradation.
                   The blades maintain their sharpness, the container integrity remains intact, and performance has stayed
-                  consistently superior throughout our testing period. The Vitamix&apos;s durability rivals that of my <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-700 underline">Le Creuset
+                  consistently superior throughout our testing period. The Vitamix&apos;s durability rivals that of my <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-800 underline">Le Creuset
                   Dutch oven</Link>—both are genuine buy-it-for-life investments that justify premium pricing.
                 </p>
               </div>
@@ -376,7 +376,7 @@ export default function Vitamix5200Review() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-orange-700 mb-2">⚠️ Minor Considerations</h4>
+                <h4 className="font-semibold text-orange-800 mb-2">⚠️ Minor Considerations</h4>
                 <ul className="text-sm text-slate-700 space-y-1">
                   <li>• Higher noise level during operation</li>
                   <li>• Significant counter space requirement</li>
@@ -468,9 +468,9 @@ export default function Vitamix5200Review() {
                 <strong>Real-World Blending Excellence:</strong> Ice crushing is effortless - the blades turn ice into snow in seconds.
                 Frozen fruits blend seamlessly without chunks, while leafy greens integrate perfectly into smoothies.
                 The motor handles tough ingredients like nuts and seeds without strain, creating consistently smooth results
-                at speeds that dramatically reduce prep time. This blender pairs perfectly with other essentials in my <Link href="/kitchen-bundle" className="text-orange-600 hover:text-orange-700 underline">professional kitchen starter kit</Link>, streamlining
-                prep work alongside my <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-700 underline">John Boos
-                cutting board</Link> and <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-700 underline">Victorinox knives</Link>.
+                at speeds that dramatically reduce prep time. This blender pairs perfectly with other essentials in my <Link href="/kitchen-bundle" className="text-orange-600 hover:text-orange-800 underline">professional kitchen starter kit</Link>, streamlining
+                prep work alongside my <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline">John Boos
+                cutting board</Link> and <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox knives</Link>.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="text-center">
@@ -523,7 +523,7 @@ export default function Vitamix5200Review() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Vitamix 5200 vs Professional Alternatives</h2>
           <p className="text-slate-700 mb-4">
-            For a complete comparison of professional blenders and when to choose each, see our <Link href="/guides/kitchen-appliances" className="text-orange-600 hover:text-orange-700 underline">complete kitchen appliances buying guide</Link>.
+            For a complete comparison of professional blenders and when to choose each, see our <Link href="/guides/kitchen-appliances" className="text-orange-600 hover:text-orange-800 underline">complete kitchen appliances buying guide</Link>.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-lg shadow-sm border border-gray-200">
@@ -550,7 +550,7 @@ export default function Vitamix5200Review() {
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="p-4 font-medium">Price Range</td>
-                  <td className="p-4 text-orange-700">$349-$449</td>
+                  <td className="p-4 text-orange-800">$349-$449</td>
                   <td className="p-4 text-gray-600">$400-$500</td>
                   <td className="p-4 text-red-600">$800-$2000+</td>
                 </tr>
@@ -721,7 +721,7 @@ export default function Vitamix5200Review() {
               </ul>
             </div>
             <div className="bg-white rounded-lg p-6 border border-gray-200">
-              <h3 className="font-semibold text-orange-700 mb-3">⚠️ Consider Alternatives If:</h3>
+              <h3 className="font-semibold text-orange-800 mb-3">⚠️ Consider Alternatives If:</h3>
               <ul className="space-y-2 text-slate-700">
                 <li>• You only blend occasionally at home</li>
                 <li>• Budget is limited for premium equipment</li>
@@ -973,7 +973,7 @@ export default function Vitamix5200Review() {
                     <li>Square container design (reaches corners better)</li>
                   </ul>
                   <p><strong>My verdict:</strong> For versatility and longevity, I prefer the Vitamix 5200. The variable speed control and tamper give more control over texture. However, both brands deliver exceptional performance—you can&apos;t go wrong with either.</p>
-                  <p>See our <Link href="/guides/kitchen-appliances" className="text-orange-600 hover:text-orange-700 underline">complete blender comparison guide</Link> for detailed side-by-side analysis.</p>
+                  <p>See our <Link href="/guides/kitchen-appliances" className="text-orange-600 hover:text-orange-800 underline">complete blender comparison guide</Link> for detailed side-by-side analysis.</p>
                 </div>
               </div>
             </div>
@@ -1204,13 +1204,13 @@ export default function Vitamix5200Review() {
             <div style={{ margin: '20px 0' }}>
               <h4>If You&apos;re Building a Complete Kitchen:</h4>
               <p style={{ marginBottom: '10px' }}>
-                → See our <Link href="/kitchen-bundle" className="text-orange-600 hover:text-orange-700 underline">Complete Kitchen Starter Kit</Link> for recommended
+                → See our <Link href="/kitchen-bundle" className="text-orange-600 hover:text-orange-800 underline">Complete Kitchen Starter Kit</Link> for recommended
                 equipment combinations at different budget levels.
               </p>
             </div>
 
             <p style={{ marginTop: '20px', padding: '15px', background: '#fff3cd', borderRadius: '4px' }}>
-              <strong>Still unsure?</strong> <Link href="/contact" className="text-orange-600 hover:text-orange-700 underline">Contact me</Link> with your specific needs
+              <strong>Still unsure?</strong> <Link href="/contact" className="text-orange-600 hover:text-orange-800 underline">Contact me</Link> with your specific needs
               and budget—I&apos;ll provide a personalized recommendation based on your blending habits.
             </p>
           </div>

@@ -127,7 +127,7 @@ export default function ContactPage() {
                   <button
                     type="button"
                     onClick={() => setFormState('idle')}
-                    className="text-orange-600 hover:text-orange-700 font-semibold"
+                    className="text-orange-600 hover:text-orange-800 font-semibold"
                   >
                     Send Another Message
                   </button>
@@ -280,7 +280,7 @@ export default function ContactPage() {
               <p className="text-slate-600 text-sm">
                 All recommendations are based on real-world use in professional kitchens,
                 typically 6+ months of daily service before I&apos;ll recommend anything.{' '}
-                <Link href="/about" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/about" className="text-orange-600 hover:text-orange-800 font-medium">
                   Learn about our comprehensive testing process here →
                 </Link>
               </p>
@@ -301,7 +301,7 @@ export default function ContactPage() {
         <nav className="mt-12 pt-8 border-t border-gray-200 text-center">
           <Link
             href="/"
-            className="text-orange-600 hover:text-orange-700 font-semibold"
+            className="text-orange-600 hover:text-orange-800 font-semibold"
           >
             ← Back to Home
           </Link>

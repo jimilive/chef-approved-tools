@@ -122,7 +122,7 @@ export default function WusthofClassicIkonReview() {
                 {index === breadcrumbs.length - 1 ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>
                 ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-700 transition-colors">
+                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-800 transition-colors">
                     {crumb.name}
                   </Link>
                 )}
@@ -154,7 +154,7 @@ export default function WusthofClassicIkonReview() {
             {/* Rating */}
             <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
               <div className="text-center">
-                <div className="text-2xl font-bold text-orange-700 mb-1">{productData.expertRating}/5</div>
+                <div className="text-2xl font-bold text-orange-800 mb-1">{productData.expertRating}/5</div>
                 <div className="flex justify-center text-yellow-400 mb-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className={`w-4 h-4 ${i < Math.floor(productData.expertRating) ? 'fill-current' : ''}`} />
@@ -168,7 +168,7 @@ export default function WusthofClassicIkonReview() {
           {/* Professional Summary */}
           <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-8">
             <div className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-orange-700 flex-shrink-0 mt-1" />
+              <CheckCircle className="w-6 h-6 text-orange-800 flex-shrink-0 mt-1" />
               <div>
                 <p className="text-slate-800 font-medium leading-relaxed mb-2">
                   <strong>PROFESSIONAL VERDICT:</strong> This knife set delivers German engineering excellence with exceptional handle ergonomics.
@@ -190,19 +190,19 @@ export default function WusthofClassicIkonReview() {
         <nav className="bg-slate-50 p-4 rounded-lg mb-8 border border-slate-200" role="navigation" aria-label="Quick page navigation">
           <p className="font-semibold text-slate-900 mb-2">Quick Navigation:</p>
           <div className="flex flex-wrap gap-2 text-sm">
-            <a href="#breakdown" aria-label="Jump to set breakdown section" className="text-orange-600 hover:text-orange-700">Set Breakdown</a>
+            <a href="#breakdown" aria-label="Jump to set breakdown section" className="text-orange-600 hover:text-orange-800">Set Breakdown</a>
             <span className="text-slate-400">|</span>
-            <a href="#testing" aria-label="Jump to professional testing section" className="text-orange-600 hover:text-orange-700">Testing</a>
+            <a href="#testing" aria-label="Jump to professional testing section" className="text-orange-600 hover:text-orange-800">Testing</a>
             <span className="text-slate-400">|</span>
-            <a href="#reviews" aria-label="Jump to customer reviews section" className="text-orange-600 hover:text-orange-700">Reviews</a>
+            <a href="#reviews" aria-label="Jump to customer reviews section" className="text-orange-600 hover:text-orange-800">Reviews</a>
             <span className="text-slate-400">|</span>
-            <a href="#comparison" aria-label="Jump to comparison section" className="text-orange-600 hover:text-orange-700">Comparison</a>
+            <a href="#comparison" aria-label="Jump to comparison section" className="text-orange-600 hover:text-orange-800">Comparison</a>
             <span className="text-slate-400">|</span>
-            <a href="#pricing" aria-label="Jump to pricing section" className="text-orange-600 hover:text-orange-700">Pricing</a>
+            <a href="#pricing" aria-label="Jump to pricing section" className="text-orange-600 hover:text-orange-800">Pricing</a>
             <span className="text-slate-400">|</span>
-            <a href="#who-buys" aria-label="Jump to buyer recommendations section" className="text-orange-600 hover:text-orange-700">Who Should Buy</a>
+            <a href="#who-buys" aria-label="Jump to buyer recommendations section" className="text-orange-600 hover:text-orange-800">Who Should Buy</a>
             <span className="text-slate-400">|</span>
-            <a href="#verdict" aria-label="Jump to verdict section" className="text-orange-600 hover:text-orange-700">Verdict</a>
+            <a href="#verdict" aria-label="Jump to verdict section" className="text-orange-600 hover:text-orange-800">Verdict</a>
           </div>
         </nav>
 
@@ -211,7 +211,7 @@ export default function WusthofClassicIkonReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">200+ Years of German Engineering Excellence</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <TrendingUp className="w-8 h-8 text-orange-700 mb-2" />
+              <TrendingUp className="w-8 h-8 text-orange-800 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">PEtec Enhanced Blades</h3>
               <p className="text-sm text-slate-600">20% sharper, 2x edge retention</p>
             </div>
@@ -335,7 +335,7 @@ export default function WusthofClassicIkonReview() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-orange-700 mb-2">⚠️ Underutilized Pieces</h4>
+                <h4 className="font-semibold text-orange-800 mb-2">⚠️ Underutilized Pieces</h4>
                 <ul className="text-sm text-slate-700 space-y-1">
                   <li>• Slicer knife rarely used in operations</li>
                   <li>• Regular maintenance with steel required</li>
@@ -534,7 +534,7 @@ export default function WusthofClassicIkonReview() {
                 </tr>
                 <tr className="border-b border-gray-100 bg-gray-50">
                   <td className="p-4 font-medium">Price Range</td>
-                  <td className="p-4 text-orange-700">$399-$499</td>
+                  <td className="p-4 text-orange-800">$399-$499</td>
                   <td className="p-4 text-gray-600">$300-$400</td>
                   <td className="p-4 text-blue-600">$500-$700</td>
                 </tr>
@@ -622,7 +622,7 @@ export default function WusthofClassicIkonReview() {
               </ul>
             </div>
             <div className="bg-white rounded-lg p-6 border border-gray-200">
-              <h3 className="font-semibold text-orange-700 mb-3">⚠️ Buy Individual Knives If:</h3>
+              <h3 className="font-semibold text-orange-800 mb-3">⚠️ Buy Individual Knives If:</h3>
               <ul className="space-y-2 text-slate-700">
                 <li>• You only need specific knife types</li>
                 <li>• Budget is extremely limited</li>
@@ -643,7 +643,7 @@ export default function WusthofClassicIkonReview() {
           </p>
           <Link
             href="/best-budget-chefs-knife"
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+            className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold"
           >
             → See My Best Budget Chef&apos;s Knife Guide
           </Link>
@@ -725,7 +725,7 @@ export default function WusthofClassicIkonReview() {
             </p>
             <Link
               href="/newsletter"
-              className="inline-block bg-white text-orange-700 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors"
+              className="inline-block bg-white text-orange-800 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors"
             >
               Download Free Guide →
             </Link>

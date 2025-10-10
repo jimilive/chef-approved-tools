@@ -290,7 +290,7 @@ export default function AboutPage() {
                   <div className="flex items-start gap-6">
                     <div className="flex-shrink-0">
                       <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                        <IconComponent className="w-6 h-6 text-orange-700" />
+                        <IconComponent className="w-6 h-6 text-orange-800" />
                       </div>
                     </div>
                     <div className="flex-grow">
@@ -298,7 +298,7 @@ export default function AboutPage() {
                         <h4 className="text-xl font-bold text-slate-900">
                           Phase {index + 1}: {phase.phase}
                         </h4>
-                        <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-medium">
+                        <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
                           {phase.duration}
                         </span>
                       </div>

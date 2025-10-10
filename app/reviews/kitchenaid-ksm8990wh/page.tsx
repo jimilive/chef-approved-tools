@@ -100,7 +100,7 @@ export default function KitchenAidReviewPage() {
                 {index === breadcrumbs.length - 1 ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>
                 ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-700 transition-colors">
+                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-800 transition-colors">
                     {crumb.name}
                   </Link>
                 )}
@@ -132,7 +132,7 @@ export default function KitchenAidReviewPage() {
             {/* Rating */}
             <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
               <div className="text-center">
-                <div className="text-2xl font-bold text-orange-700 mb-1">{productData.expertRating}/5</div>
+                <div className="text-2xl font-bold text-orange-800 mb-1">{productData.expertRating}/5</div>
                 <div className="flex justify-center text-yellow-400 mb-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className={`w-4 h-4 ${i < Math.floor(productData.expertRating) ? 'fill-current' : ''}`} />
@@ -166,15 +166,15 @@ export default function KitchenAidReviewPage() {
         <nav className="bg-slate-50 p-4 rounded-lg mb-8 border border-slate-200" role="navigation" aria-label="Quick page navigation">
           <p className="font-semibold text-slate-900 mb-2">Quick Navigation:</p>
           <div className="flex flex-wrap gap-2 text-sm">
-            <a href="#testing" aria-label="Jump to 18 months testing results section" className="text-orange-600 hover:text-orange-700">18-Month Testing</a>
+            <a href="#testing" aria-label="Jump to 18 months testing results section" className="text-orange-600 hover:text-orange-800">18-Month Testing</a>
             <span className="text-slate-400">|</span>
-            <a href="#pricing" aria-label="Jump to current pricing information section" className="text-orange-600 hover:text-orange-700">Current Pricing</a>
+            <a href="#pricing" aria-label="Jump to current pricing information section" className="text-orange-600 hover:text-orange-800">Current Pricing</a>
             <span className="text-slate-400">|</span>
-            <a href="#comparison" aria-label="Jump to competitor comparison section" className="text-orange-600 hover:text-orange-700">vs. Competitors</a>
+            <a href="#comparison" aria-label="Jump to competitor comparison section" className="text-orange-600 hover:text-orange-800">vs. Competitors</a>
             <span className="text-slate-400">|</span>
-            <a href="#who-should-buy" aria-label="Jump to buyer recommendation section" className="text-orange-600 hover:text-orange-700">Who Should Buy</a>
+            <a href="#who-should-buy" aria-label="Jump to buyer recommendation section" className="text-orange-600 hover:text-orange-800">Who Should Buy</a>
             <span className="text-slate-400">|</span>
-            <a href="#verdict" aria-label="Jump to final verdict section" className="text-orange-600 hover:text-orange-700">Final Verdict</a>
+            <a href="#verdict" aria-label="Jump to final verdict section" className="text-orange-600 hover:text-orange-800">Final Verdict</a>
           </div>
         </nav>
 
@@ -291,8 +291,8 @@ export default function KitchenAidReviewPage() {
             <p className="text-slate-700 mb-4">
               I tested the KSM8990WH under demanding commercial conditions at Purple Cafe, where equipment
               failure means lost revenue. This is the same environment where I tested our{' '}
-              <a href="/reviews/vitamix-5200" className="text-orange-600 hover:text-orange-700 underline">Vitamix 5200 blender</a> and{' '}
-              <a href="/reviews/robot-coupe-r2-dice" className="text-orange-600 hover:text-orange-700 underline">Robot Coupe food processor</a>.
+              <a href="/reviews/vitamix-5200" className="text-orange-600 hover:text-orange-800 underline">Vitamix 5200 blender</a> and{' '}
+              <a href="/reviews/robot-coupe-r2-dice" className="text-orange-600 hover:text-orange-800 underline">Robot Coupe food processor</a>.
             </p>
 
             <h3 className="text-xl font-semibold text-slate-900 mb-3">Testing Environment</h3>
@@ -433,7 +433,7 @@ export default function KitchenAidReviewPage() {
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="p-4 font-medium">Price Range</td>
-                  <td className="p-4 text-orange-700">$759-$1,100</td>
+                  <td className="p-4 text-orange-800">$759-$1,100</td>
                   <td className="p-4 text-gray-600">$300-$600</td>
                 </tr>
               </tbody>
@@ -489,7 +489,7 @@ export default function KitchenAidReviewPage() {
           </div>
           <p className="mt-4 text-slate-700">
             For a complete comparison of all commercial-grade mixers, see our{' '}
-            <a href="/guides/best-stand-mixers" className="text-orange-600 hover:text-orange-700 underline font-semibold">complete stand mixer buying guide</a>.
+            <a href="/guides/best-stand-mixers" className="text-orange-600 hover:text-orange-800 underline font-semibold">complete stand mixer buying guide</a>.
           </p>
         </section>
 
@@ -511,9 +511,9 @@ export default function KitchenAidReviewPage() {
             </p>
             <p className="text-slate-700 mt-4">
               This mixer became as essential to our operation as our{' '}
-              <a href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-700 underline">John Boos cutting boards</a>
+              <a href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline">John Boos cutting boards</a>
               {' '}and{' '}
-              <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-700 underline">professional chef knives</a>.
+              <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">professional chef knives</a>.
             </p>
           </div>
         </section>
@@ -602,7 +602,7 @@ export default function KitchenAidReviewPage() {
             </div>
           </div>
           <p className="mt-4 text-slate-700">
-            See our complete <a href="/kitchen-bundle" className="text-orange-600 hover:text-orange-700 underline font-semibold">professional kitchen starter kit</a>
+            See our complete <a href="/kitchen-bundle" className="text-orange-600 hover:text-orange-800 underline font-semibold">professional kitchen starter kit</a>
             {' '}for recommended equipment combinations.
           </p>
         </section>

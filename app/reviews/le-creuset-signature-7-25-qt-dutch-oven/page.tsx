@@ -173,7 +173,7 @@ export default function LeCreuset725QtReview() {
                 {index === breadcrumbs.length - 1 ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>
                 ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-700 transition-colors">
+                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-800 transition-colors">
                     {crumb.name}
                   </Link>
                 )}
@@ -273,35 +273,35 @@ export default function LeCreuset725QtReview() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <a href="#real-testing" className="flex items-center p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors border border-gray-200 hover:border-orange-300">
               <Thermometer className="w-4 h-4 mr-2 text-orange-600" />
-              <span className="text-slate-700 hover:text-orange-700 font-medium">Real-World Testing (What I Cooked)</span>
+              <span className="text-slate-700 hover:text-orange-800 font-medium">Real-World Testing (What I Cooked)</span>
             </a>
             <a href="#sizing" className="flex items-center p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors border border-gray-200 hover:border-orange-300">
               <Shield className="w-4 h-4 mr-2 text-orange-600" />
-              <span className="text-slate-700 hover:text-orange-700 font-medium">Size Selection Guide</span>
+              <span className="text-slate-700 hover:text-orange-800 font-medium">Size Selection Guide</span>
             </a>
             <a href="#testing" className="flex items-center p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors border border-gray-200 hover:border-orange-300">
               <Clock className="w-4 h-4 mr-2 text-orange-600" />
-              <span className="text-slate-700 hover:text-orange-700 font-medium">10-Year Durability Results</span>
+              <span className="text-slate-700 hover:text-orange-800 font-medium">10-Year Durability Results</span>
             </a>
             <a href="#comparison" className="flex items-center p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors border border-gray-200 hover:border-orange-300">
               <Star className="w-4 h-4 mr-2 text-orange-600" />
-              <span className="text-slate-700 hover:text-orange-700 font-medium">vs. Staub & Lodge Comparison</span>
+              <span className="text-slate-700 hover:text-orange-800 font-medium">vs. Staub & Lodge Comparison</span>
             </a>
             <a href="#pros-cons" className="flex items-center p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors border border-gray-200 hover:border-orange-300">
               <CheckCircle className="w-4 h-4 mr-2 text-orange-600" />
-              <span className="text-slate-700 hover:text-orange-700 font-medium">Pros & Cons Analysis</span>
+              <span className="text-slate-700 hover:text-orange-800 font-medium">Pros & Cons Analysis</span>
             </a>
             <a href="#pricing" className="flex items-center p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors border border-gray-200 hover:border-orange-300">
               <DollarSign className="w-4 h-4 mr-2 text-orange-600" />
-              <span className="text-slate-700 hover:text-orange-700 font-medium">Pricing & Where to Buy</span>
+              <span className="text-slate-700 hover:text-orange-800 font-medium">Pricing & Where to Buy</span>
             </a>
             <a href="#verdict" className="flex items-center p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors border border-gray-200 hover:border-orange-300">
               <Star className="w-4 h-4 mr-2 text-orange-600" />
-              <span className="text-slate-700 hover:text-orange-700 font-medium">Final Verdict (Is It Worth It?)</span>
+              <span className="text-slate-700 hover:text-orange-800 font-medium">Final Verdict (Is It Worth It?)</span>
             </a>
             <a href="#faq" className="flex items-center p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors border border-gray-200 hover:border-orange-300">
               <Shield className="w-4 h-4 mr-2 text-orange-600" />
-              <span className="text-slate-700 hover:text-orange-700 font-medium">FAQ & Common Questions</span>
+              <span className="text-slate-700 hover:text-orange-800 font-medium">FAQ & Common Questions</span>
             </a>
           </div>
         </nav>
@@ -324,7 +324,7 @@ export default function LeCreuset725QtReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Design and Build Quality</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <Thermometer className="w-8 h-8 text-orange-700 mb-2" />
+              <Thermometer className="w-8 h-8 text-orange-800 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">500°F Oven Safe</h3>
               <p className="text-sm text-slate-600">Stovetop to oven versatility</p>
             </div>
@@ -436,7 +436,7 @@ export default function LeCreuset725QtReview() {
                       </td>
                       <td className="p-4 text-slate-700">{size.serves}</td>
                       <td className="p-4 text-slate-700">{size.use}</td>
-                      <td className="p-4 text-orange-700 font-semibold">${size.price}-{size.price + 100}</td>
+                      <td className="p-4 text-orange-800 font-semibold">${size.price}-{size.price + 100}</td>
                       <td className="p-4">
                         {size.rating ? (
                           <div className="flex items-center gap-1">
@@ -618,7 +618,7 @@ export default function LeCreuset725QtReview() {
         <section id="reviews" className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">What Real Users Are Saying</h2>
           <p className="text-sm text-slate-600 mb-4">
-            <em>Customer reviews curated from Amazon verified purchasers with {productData.reviewCount.toLocaleString()} total reviews. These represent selected experiences—<a href={productData.affiliateLinks[0].url} target="_blank" rel="noopener" className="text-orange-600 hover:text-orange-700">see complete review history</a>.</em>
+            <em>Customer reviews curated from Amazon verified purchasers with {productData.reviewCount.toLocaleString()} total reviews. These represent selected experiences—<a href={productData.affiliateLinks[0].url} target="_blank" rel="noopener" className="text-orange-600 hover:text-orange-800">see complete review history</a>.</em>
           </p>
           <div className="space-y-4">
             {customerReviews.map((review, index) => (
@@ -990,7 +990,7 @@ export default function LeCreuset725QtReview() {
           </p>
           <Link
             href="/reviews/john-boos-platinum-commercial-cutting-board"
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+            className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold"
           >
             → See My John Boos Cutting Board Review
           </Link>
@@ -1082,7 +1082,7 @@ export default function LeCreuset725QtReview() {
             </ul>
             <Link
               href="/newsletter"
-              className="inline-block bg-white text-orange-700 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors"
+              className="inline-block bg-white text-orange-800 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors"
             >
               Download Free Equipment Guide →
             </Link>

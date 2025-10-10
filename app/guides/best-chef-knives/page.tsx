@@ -459,7 +459,7 @@ export default function BestChefKnivesPage() {
         <nav className="pt-8 border-t border-gray-200">
           <Link
             href="/guides"
-            className="text-orange-600 hover:text-orange-700 font-semibold"
+            className="text-orange-600 hover:text-orange-800 font-semibold"
           >
             ← Back to All Guides
           </Link>

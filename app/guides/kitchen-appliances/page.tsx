@@ -43,7 +43,7 @@ export default function KitchenAppliancesPage() {
               </p>
               <Link
                 href="/reviews/vitamix-5200"
-                className="text-orange-600 hover:text-orange-700 font-semibold"
+                className="text-orange-600 hover:text-orange-800 font-semibold"
               >
                 Read full review →
               </Link>
@@ -57,7 +57,7 @@ export default function KitchenAppliancesPage() {
               </p>
               <Link
                 href="/reviews/robot-coupe-r2-dice"
-                className="text-orange-600 hover:text-orange-700 font-semibold"
+                className="text-orange-600 hover:text-orange-800 font-semibold"
               >
                 Read full review →
               </Link>
@@ -81,7 +81,7 @@ export default function KitchenAppliancesPage() {
         <nav className="mt-12 pt-8 border-t border-gray-200">
           <Link
             href="/guides"
-            className="text-orange-600 hover:text-orange-700 font-semibold"
+            className="text-orange-600 hover:text-orange-800 font-semibold"
           >
             ← Back to All Guides
           </Link>

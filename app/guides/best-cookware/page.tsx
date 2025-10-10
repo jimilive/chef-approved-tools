@@ -43,7 +43,7 @@ export default function BestCookwarePage() {
               </p>
               <Link
                 href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
-                className="text-orange-600 hover:text-orange-700 font-semibold"
+                className="text-orange-600 hover:text-orange-800 font-semibold"
               >
                 Read full review →
               </Link>
@@ -57,7 +57,7 @@ export default function BestCookwarePage() {
               </p>
               <Link
                 href="/reviews/le-creuset-signature-7-25-qt-dutch-oven"
-                className="text-orange-600 hover:text-orange-700 font-semibold"
+                className="text-orange-600 hover:text-orange-800 font-semibold"
               >
                 Read full review →
               </Link>
@@ -88,7 +88,7 @@ export default function BestCookwarePage() {
         <nav className="mt-12 pt-8 border-t border-gray-200">
           <Link
             href="/guides"
-            className="text-orange-600 hover:text-orange-700 font-semibold"
+            className="text-orange-600 hover:text-orange-800 font-semibold"
           >
             ← Back to All Guides
           </Link>

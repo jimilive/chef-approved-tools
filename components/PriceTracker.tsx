@@ -89,7 +89,7 @@ export default function PriceTracker({
         </span>
 
         {hoursAgo < 6 && (
-          <span className="inline-flex items-center gap-1 bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full text-xs font-medium ml-2">
+          <span className="inline-flex items-center gap-1 bg-orange-100 text-orange-800 px-2 py-0.5 rounded-full text-xs font-medium ml-2">
             <div className="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse" />
             Fresh
           </span>

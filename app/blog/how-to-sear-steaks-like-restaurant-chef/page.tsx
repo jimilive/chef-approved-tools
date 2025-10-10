@@ -61,7 +61,7 @@ export default function SteakSearingPost() {
               <Flame className="w-5 h-5" />
               The Restaurant Reality
             </h3>
-            <p className="text-orange-700 mb-0">
+            <p className="text-orange-800 mb-0">
               In a busy restaurant, we don&apos;t have time for second chances. Every steak needs a perfect sear on the first try,
               whether it&apos;s the 10th or 200th steak of the night. The techniques I&apos;m sharing aren&apos;t just theory—they&apos;re
               battle-tested methods that work under pressure.
@@ -296,7 +296,7 @@ export default function SteakSearingPost() {
             <h4 className="font-bold text-slate-800 mb-4">Tested Equipment Recommendations</h4>
             <ul className="space-y-3">
               <li>
-                <strong>Cast Iron Skillet:</strong> <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-700 underline">Lodge Cast Iron Bundle</Link> -
+                <strong>Cast Iron Skillet:</strong> <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 underline">Lodge Cast Iron Bundle</Link> -
                 Same heat retention as restaurant equipment, but affordable for home use.
               </li>
               <li>
@@ -327,7 +327,7 @@ export default function SteakSearingPost() {
 
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 mt-8">
             <h4 className="font-bold text-orange-800 mb-3">What&apos;s Next?</h4>
-            <p className="text-orange-700 mb-4">
+            <p className="text-orange-800 mb-4">
               This is just one technique from 21+ years of professional kitchen experience. Want to learn more
               restaurant secrets for home cooking?
             </p>
@@ -354,7 +354,7 @@ export default function SteakSearingPost() {
                 that deliver professional results for home cooks.
               </p>
               <div className="mt-4">
-                <Link href="/about" className="text-orange-600 hover:text-orange-700 text-sm font-semibold">
+                <Link href="/about" className="text-orange-600 hover:text-orange-800 text-sm font-semibold">
                   Read more about Scott →
                 </Link>
               </div>

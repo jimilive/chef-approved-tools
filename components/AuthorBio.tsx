@@ -43,7 +43,7 @@ export default function AuthorBio({ variant = 'full', showImage = true }: Author
         )}
         <div className="flex-1">
           <div className="font-semibold text-slate-900">
-            Written by <Link href="/about" className="text-orange-600 hover:text-orange-700">Scott Bradley</Link>
+            Written by <Link href="/about" className="text-orange-600 hover:text-orange-800">Scott Bradley</Link>
           </div>
           <p className="text-sm text-gray-600">
             Former Kitchen Manager at Mellow Mushroom with 21+ years of professional cooking experience.
@@ -71,7 +71,7 @@ export default function AuthorBio({ variant = 'full', showImage = true }: Author
 
         <div className="flex-1 text-center sm:text-left">
           <h3 className="text-2xl font-bold text-slate-900 mb-2">About the Author</h3>
-          <h4 className="text-xl font-semibold text-orange-700 mb-3">Scott Bradley</h4>
+          <h4 className="text-xl font-semibold text-orange-800 mb-3">Scott Bradley</h4>
 
           <p className="text-slate-700 mb-4 leading-relaxed">
             Professional chef with 21+ years of professional cooking, from starting at Wendy&apos;s at age 15

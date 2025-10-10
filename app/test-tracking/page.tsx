@@ -117,7 +117,7 @@ export default function TestTrackingPage() {
               <InternalLink
                 href="/reviews/kitchenaid-ksm8990wh"
                 linkType="related_product"
-                className="text-orange-600 hover:text-orange-700 font-semibold underline"
+                className="text-orange-600 hover:text-orange-800 font-semibold underline"
               >
                 Related Product: KitchenAid Stand Mixer →
               </InternalLink>
