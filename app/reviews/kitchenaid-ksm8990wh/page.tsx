@@ -196,7 +196,7 @@ export default function KitchenAidReviewPage() {
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
 
           <AffiliateButton
-            href="https://amzn.to/431ZFDl"
+            href="https://www.amazon.com/dp/B00IRH09EK?tag=chefapprovedt-20"
             merchant="amazon"
             product="kitchenaid-ksm8990wh"
             position="above_fold"
@@ -867,7 +867,7 @@ export default function KitchenAidReviewPage() {
             </p>
 
             <AffiliateButton
-              href="https://amzn.to/431ZFDl"
+              href="https://www.amazon.com/dp/B00IRH09EK?tag=chefapprovedt-20"
               merchant="amazon"
               product="kitchenaid-ksm8990wh"
               position="final_cta"
