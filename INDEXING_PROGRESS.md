@@ -50,27 +50,27 @@ All pages now have "requested" status or higher (indexed). Waiting for Google to
 
 ### Product Reviews
 
-| URL | GSC Status | Broken Affiliate Link | Notes |
+| URL | GSC Status | Affiliate Link Status | Notes |
 |-----|------------|----------------------|-------|
-| https://www.chefapprovedtools.com/reviews/victorinox-fibrox-10-inch-chefs-knife | indexed | ❌ amzn.to/4o6pPwW (500) | |
-| https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife | indexed | ❌ amzn.to/4bIa2lg (503) | |
+| https://www.chefapprovedtools.com/reviews/victorinox-fibrox-10-inch-chefs-knife | indexed | ✅ Working | |
+| https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife | indexed | ✅ Working | |
 | https://www.chefapprovedtools.com/reviews/victorinox-4-inch-paring-knife | indexed | ✅ Working | |
-| https://www.chefapprovedtools.com/reviews/victorinox-granton-edge-boning-knife | indexed | ❌ amzn.to/4pUDed1 (500) | |
-| https://www.chefapprovedtools.com/reviews/victorinox-offset-bread-knife | indexed | ✅ Fixed | |
+| https://www.chefapprovedtools.com/reviews/victorinox-granton-edge-boning-knife | indexed | ✅ Working | |
+| https://www.chefapprovedtools.com/reviews/victorinox-offset-bread-knife | indexed | ✅ Working | |
 | https://www.chefapprovedtools.com/reviews/oxo-good-grips-swivel-peeler | requested | ✅ Working | |
-| https://www.chefapprovedtools.com/reviews/oxo-good-grips-bench-scraper | indexed | ✅ Fixed | |
-| https://www.chefapprovedtools.com/reviews/winco-heavy-duty-tongs | requested | ✅ Fixed | |
-| https://www.chefapprovedtools.com/reviews/benriner-large-mandoline | indexed | ✅ Fixed | |
-| https://www.chefapprovedtools.com/reviews/gold-textiles-bar-mops | requested | ✅ Fixed | |
-| https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board | indexed | ❌ amzn.to/4kLtMa7 (503) | |
-| https://www.chefapprovedtools.com/reviews/kitchenaid-ksm8990wh | indexed | ✅ Fixed | **FEATURED REVIEW** |
+| https://www.chefapprovedtools.com/reviews/oxo-good-grips-bench-scraper | indexed | ✅ Working | |
+| https://www.chefapprovedtools.com/reviews/winco-heavy-duty-tongs | requested | ✅ Working | |
+| https://www.chefapprovedtools.com/reviews/benriner-large-mandoline | indexed | ✅ Working | |
+| https://www.chefapprovedtools.com/reviews/gold-textiles-bar-mops | requested | ✅ Working | |
+| https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board | indexed | ✅ Working | |
+| https://www.chefapprovedtools.com/reviews/kitchenaid-ksm8990wh | indexed | ✅ Working | **FEATURED REVIEW** |
 | https://www.chefapprovedtools.com/reviews/robot-coupe-r2-dice | requested | ✅ Working | |
 | https://www.chefapprovedtools.com/reviews/vitamix-5200 | indexed | ✅ Working | |
 | https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-15-piece | NEED TO REMOVE | - | **❌ OLD URL - REQUEST REMOVAL** |
 | https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-16-piece | requested | ✅ Working | |
-| https://www.chefapprovedtools.com/reviews/le-creuset-signature-7-25-qt-dutch-oven | indexed | ✅ Fixed | **FEATURED REVIEW** |
-| https://www.chefapprovedtools.com/reviews/john-boos-platinum-commercial-cutting-board | indexed | ✅ Fixed | **FEATURED REVIEW** |
-| https://www.chefapprovedtools.com/reviews/lodge-seasoned-cast-iron-3-skillet-bundle | indexed | ✅ Fixed | **FEATURED REVIEW** |
+| https://www.chefapprovedtools.com/reviews/le-creuset-signature-7-25-qt-dutch-oven | indexed | ✅ Working | **FEATURED REVIEW** |
+| https://www.chefapprovedtools.com/reviews/john-boos-platinum-commercial-cutting-board | indexed | ✅ Working | **FEATURED REVIEW** |
+| https://www.chefapprovedtools.com/reviews/lodge-seasoned-cast-iron-3-skillet-bundle | indexed | ✅ Working | **FEATURED REVIEW** |
 | https://www.chefapprovedtools.com/reviews/victorinox-fibrox-pro-knife-set | removal requested | - | **❌ DELETED FROM SITE** |
 
 ---
