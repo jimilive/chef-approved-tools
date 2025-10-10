@@ -288,7 +288,7 @@ export default function Vitamix5200Review() {
             <h2>Professional Verdict</h2>
 
             <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-              <strong>After 5+ years of professional kitchen use where reliability isn't optional,
+              <strong>After 5+ years of professional kitchen use where reliability isn&apos;t optional,
               the Vitamix 5200 has proven itself as genuine commercial-grade equipment.</strong> The 2 HP
               motor handles everything from frozen fruit smoothies to heating soup through friction blending,
               while the all-metal drive system shows zero wear despite daily commercial abuse.
@@ -339,7 +339,7 @@ export default function Vitamix5200Review() {
                   What sets this blender apart is its commercial-grade construction. After 5+ years of daily restaurant use,
                   including multiple smoothie rushes and puree preparations, the motor shows no signs of degradation.
                   The blades maintain their sharpness, the container integrity remains intact, and performance has stayed
-                  consistently superior throughout our testing period. The Vitamix's durability rivals that of my <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-700 underline">Le Creuset
+                  consistently superior throughout our testing period. The Vitamix&apos;s durability rivals that of my <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-700 underline">Le Creuset
                   Dutch oven</Link>—both are genuine buy-it-for-life investments that justify premium pricing.
                 </p>
               </div>
@@ -646,7 +646,7 @@ export default function Vitamix5200Review() {
 
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px', textAlign: 'center' }}>
               💡 Vitamix.com often has refurbished units at 20-30% off. Williams Sonoma occasionally
-              offers free shipping. We'll add price comparison when we join their affiliate programs.
+              offers free shipping. We&apos;ll add price comparison when we join their affiliate programs.
             </p>
 
           </div>
@@ -681,7 +681,7 @@ export default function Vitamix5200Review() {
                 💰 Investment Reality Check
               </p>
               <p style={{ margin: '10px 0 0 0', fontSize: '14px' }}>
-                At $449 with 10-15 years of expected use (conservative estimate), that's $3.75/month
+                At $449 with 10-15 years of expected use (conservative estimate), that&apos;s $3.75/month
                 or $0.12 per day. This replaces a $150 blender, $200 food processor, and $80 ice crusher—
                 saving money while delivering superior performance.
               </p>
@@ -1030,7 +1030,7 @@ export default function Vitamix5200Review() {
 
             <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
               The Vitamix 5200 has proven itself as legitimate commercial-grade equipment that performs
-              when reliability isn't optional. The 2 HP motor handles everything from frozen fruit smoothies
+              when reliability isn&apos;t optional. The 2 HP motor handles everything from frozen fruit smoothies
               to heating soup through friction, while the all-metal drive system shows zero wear despite
               daily professional use.
             </p>
@@ -1061,7 +1061,7 @@ export default function Vitamix5200Review() {
             </div>
 
             <p style={{ fontSize: '16px', marginBottom: 0 }}>
-              <strong>Would I buy this again?</strong> Without hesitation. It's the single most-used
+              <strong>Would I buy this again?</strong> Without hesitation. It&apos;s the single most-used
               appliance in my kitchen and will outlast me.
             </p>
 

@@ -204,20 +204,20 @@ export default function TestDataLayer() {
           </p>
           <div className="space-y-2 text-sm font-mono">
             <div className="bg-white p-3 rounded">
-              <div className="text-slate-500 mb-1">// Check if dataLayer exists</div>
+              <div className="text-slate-500 mb-1">{'//'} Check if dataLayer exists</div>
               <div>window.dataLayer</div>
             </div>
             <div className="bg-white p-3 rounded">
-              <div className="text-slate-500 mb-1">// Check GTM container</div>
+              <div className="text-slate-500 mb-1">{'//'} Check GTM container</div>
               <div>window.google_tag_manager</div>
             </div>
             <div className="bg-white p-3 rounded">
-              <div className="text-slate-500 mb-1">// Check gtag function</div>
+              <div className="text-slate-500 mb-1">{'//'} Check gtag function</div>
               <div>window.gtag</div>
             </div>
             <div className="bg-white p-3 rounded">
-              <div className="text-slate-500 mb-1">// Push a custom event</div>
-              <div>window.dataLayer.push({'{'}event: 'my_test', value: 123{'}'})</div>
+              <div className="text-slate-500 mb-1">{'//'} Push a custom event</div>
+              <div>window.dataLayer.push({'{'}event: &apos;my_test&apos;, value: 123{'}'})</div>
             </div>
           </div>
         </div>
