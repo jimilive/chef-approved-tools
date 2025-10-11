@@ -1281,6 +1281,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             gap: '20px',
             alignItems: 'start'
           }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/team/head-shot-1.jpg"
               alt="Scott Bradley, Professional Chef"
