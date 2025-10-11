@@ -627,7 +627,7 @@ export default function VictorinoxFibrox8InchReview() {
                     href="https://amzn.to/46WPJfp"
                     merchant="amazon"
                     product="victorinox-fibrox-8-inch-chefs-knife"
-                    position="where_to_buy"
+                    position="related_products"
                     variant="secondary"
                   >
                     View on Amazon →
