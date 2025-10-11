@@ -330,14 +330,27 @@ export default function RootLayout({
           </MobileOptimizationProvider>
         </MobileOptimizedLayout>
 
-        {/* Google Tag Manager & Analytics - Deferred loading for performance */}
-        <Script id="gtm-deferred" strategy="lazyOnload">
+        {/* Google Tag Manager - Heavily deferred for performance */}
+        <Script id="gtm-deferred" strategy="worker">
           {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-PX8GPHKF');
+            // Defer GTM loading until after page load and user interaction
+            let gtmLoaded = false;
+            function loadGTM() {
+              if (!gtmLoaded) {
+                gtmLoaded = true;
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-PX8GPHKF');
+              }
+            }
+
+            // Load GTM only after user interaction or 5 seconds
+            ['mousedown', 'touchstart', 'keydown', 'scroll'].forEach(event => {
+              document.addEventListener(event, loadGTM, { once: true, passive: true });
+            });
+            setTimeout(loadGTM, 5000);
           `}
         </Script>
 
