@@ -1,13 +1,13 @@
 'use client';
 
+import React from 'react';
 import { Shield, Clock, Award } from 'lucide-react';
 
-type TierType = 1 | 2 | 3;
-
 interface ReviewTierBadgeProps {
-  tier: TierType;
-  className?: string;
+  tier: 1 | 2 | 3;
+  testingPeriod?: string; // For Tier 2: "3 Years", "6 Months", "30 Days", etc.
   showDescription?: boolean;
+  className?: string;
 }
 
 const tierConfig = {
@@ -23,15 +23,15 @@ const tierConfig = {
     badge: '🏆 GOLD STANDARD'
   },
   2: {
-    name: 'Currently Testing',
+    name: 'Home Tested',
     icon: Clock,
     color: 'from-blue-500 to-indigo-600',
     bgColor: 'bg-gradient-to-r from-blue-50 to-indigo-50',
     borderColor: 'border-blue-400',
     textColor: 'text-blue-900',
     iconColor: 'text-blue-600',
-    description: 'Active home testing for 30-90 days. Real-time updates as I discover strengths and weaknesses through daily use. Review evolves as experience grows.',
-    badge: '🔄 ACTIVE TESTING'
+    description: 'Real-world home testing with ongoing updates',
+    badge: '🏠 HOME TESTED'
   },
   3: {
     name: 'Professional Recommendation',
@@ -41,27 +41,37 @@ const tierConfig = {
     borderColor: 'border-slate-400',
     textColor: 'text-slate-900',
     iconColor: 'text-slate-600',
-    description: 'Based on 40 years of cooking experience and professional knowledge. Honest opinion informed by understanding what works in real kitchens, even if not personally tested.',
+    description: 'Based on 40 years cooking experience and 23 years restaurant management',
     badge: '✓ EXPERIENCE-BASED'
   }
 };
 
-export default function ReviewTierBadge({ tier, className = '', showDescription = false }: ReviewTierBadgeProps) {
+export default function ReviewTierBadge({ 
+  tier, 
+  testingPeriod,
+  showDescription = false, 
+  className = '' 
+}: ReviewTierBadgeProps) {
   const config = tierConfig[tier];
   const Icon = config.icon;
+  
+  // For Tier 2, append the testing period to the name
+  const displayName = tier === 2 && testingPeriod 
+    ? `${config.name}: ${testingPeriod}`
+    : config.name;
 
   return (
-    <div className={`${className}`}>
+    <div className={className}>
       {/* Compact Badge Version */}
       <div
         className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg border-2 ${config.borderColor} ${config.bgColor} shadow-sm group relative`}
         role="status"
-        aria-label={`Review tier: ${config.name}`}
+        aria-label={`Review tier: ${displayName}`}
       >
         <Icon className={`w-5 h-5 ${config.iconColor}`} aria-hidden="true" />
         <div className="flex flex-col">
           <span className={`font-semibold text-sm ${config.textColor}`}>
-            {config.name}
+            {displayName}
           </span>
           <span className="text-xs text-slate-600">
             {config.badge}
@@ -70,7 +80,7 @@ export default function ReviewTierBadge({ tier, className = '', showDescription 
 
         {/* Hover Tooltip */}
         <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-72 p-3 bg-slate-800 text-white text-xs rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none z-50">
-          <div className="font-semibold mb-1">{config.name}</div>
+          <div className="font-semibold mb-1">{displayName}</div>
           <div className="text-slate-200">{config.description}</div>
           {/* Tooltip Arrow */}
           <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1">
@@ -96,8 +106,12 @@ export function Tier1Badge({ className = '', showDescription = false }: Omit<Rev
   return <ReviewTierBadge tier={1} className={className} showDescription={showDescription} />;
 }
 
-export function Tier2Badge({ className = '', showDescription = false }: Omit<ReviewTierBadgeProps, 'tier'>) {
-  return <ReviewTierBadge tier={2} className={className} showDescription={showDescription} />;
+export function Tier2Badge({ 
+  testingPeriod, 
+  className = '', 
+  showDescription = false 
+}: Omit<ReviewTierBadgeProps, 'tier'>) {
+  return <ReviewTierBadge tier={2} testingPeriod={testingPeriod} className={className} showDescription={showDescription} />;
 }
 
 export function Tier3Badge({ className = '', showDescription = false }: Omit<ReviewTierBadgeProps, 'tier'>) {
@@ -105,7 +119,7 @@ export function Tier3Badge({ className = '', showDescription = false }: Omit<Rev
 }
 
 // Inline badge for use in lists or compact spaces
-export function InlineTierBadge({ tier }: { tier: TierType }) {
+export function InlineTierBadge({ tier }: { tier: 1 | 2 | 3 }) {
   const config = tierConfig[tier];
   const Icon = config.icon;
 

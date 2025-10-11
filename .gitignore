@@ -9,3 +9,8 @@ out/
 build/
 dist/
 tsconfig.tsbuildinfo
+
+# Netlify (migrated to Vercel)
+.netlify
+netlify.toml
+netlify/
