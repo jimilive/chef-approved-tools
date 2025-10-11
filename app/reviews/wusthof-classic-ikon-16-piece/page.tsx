@@ -5,6 +5,7 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AuthorBio from '@/components/AuthorBio'
+import { Tier1Badge } from '@/components/ReviewTierBadge'
 
 const productData = {
   name: "WÜSTHOF Classic IKON 16-Piece Knife Block Set",
@@ -136,6 +137,8 @@ export default function WusthofClassicIkonReview() {
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
             WÜSTHOF Classic IKON 16-Piece Review: 2+ Years of Professional Kitchen Testing (2025)
           </h1>
+
+          <Tier1Badge showDescription={true} />
 
           {/* Quick Rating Box */}
           <div className="quick-stats" style={{

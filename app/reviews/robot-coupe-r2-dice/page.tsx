@@ -4,6 +4,7 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import PriceDisplay from '@/components/PriceDisplay'
+import { Tier1Badge } from '@/components/ReviewTierBadge'
 
 const productData = {
   name: "Robot Coupe R2 Dice Combination Continuous Feed Food Processor",
@@ -144,6 +145,8 @@ export default function RobotCoupeR2DiceReview() {
               </div>
             </div>
           </div>
+
+          <Tier1Badge showDescription={true} />
 
           {/* Quick Rating Box */}
           <div className="quick-stats" style={{

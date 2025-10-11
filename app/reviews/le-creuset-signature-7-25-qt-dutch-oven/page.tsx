@@ -4,6 +4,7 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import AuthorBio from '@/components/AuthorBio'
 import AffiliateButton from '@/components/AffiliateButton'
+import { Tier2Badge } from '@/components/ReviewTierBadge'
 
 const productData = {
   name: "Le Creuset Signature Round Dutch Oven 7.25 Quart",
@@ -124,8 +125,8 @@ const breadcrumbs = [
 ]
 
 export const metadata = {
-  title: "Le Creuset 7.25-Qt Dutch Oven Review - 10 Years Professional Testing | Chef Approved",
-  description: "Le Creuset 7.25-qt Signature Dutch Oven review after 10 years of home use. Enameled cast iron, 500°F oven safe, made in France since 1925. Expert testing by Chef Scott Bradley.",
+  title: "Le Creuset 7.25-Qt Dutch Oven Review: 12 Years of Home Kitchen Testing",
+  description: "Le Creuset 7.25-qt Signature Dutch Oven review after 12 years of home use. Enameled cast iron, 500°F oven safe, made in France since 1925. Expert testing by Chef Scott Bradley.",
   keywords: ["Le Creuset 7.25 qt dutch oven", "Le Creuset review", "cast iron dutch oven", "professional cooking", "enameled cast iron", "Le Creuset signature", "french cookware"],
   robots: {
     index: true,
@@ -142,8 +143,8 @@ export const metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/le-creuset-signature-7-25-qt-dutch-oven',
   },
   openGraph: {
-    title: "Le Creuset 7.25-Qt Dutch Oven Review - 10 Years Professional Testing",
-    description: "Le Creuset 7.25-qt Signature Dutch Oven review after 10 years of home use. Enameled cast iron, 500°F oven safe, made in France since 1925.",
+    title: "Le Creuset 7.25-Qt Dutch Oven Review: 12 Years of Home Kitchen Testing",
+    description: "Le Creuset 7.25-qt Signature Dutch Oven review after 12 years of home use. Enameled cast iron, 500°F oven safe, made in France since 1925.",
     images: ['/logo.png'],
     url: 'https://www.chefapprovedtools.com/reviews/le-creuset-signature-7-25-qt-dutch-oven',
     type: 'article',
@@ -151,8 +152,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Le Creuset 7.25-Qt Dutch Oven Review - 10 Years Professional Testing",
-    description: "Le Creuset 7.25-qt Signature Dutch Oven review after 10 years of home use.",
+    title: "Le Creuset 7.25-Qt Dutch Oven Review: 12 Years of Home Kitchen Testing",
+    description: "Le Creuset 7.25-qt Signature Dutch Oven review after 12 years of home use.",
     images: ['/logo.png'],
   },
 }
@@ -196,8 +197,10 @@ export default function LeCreuset725QtReview() {
             {/* Product Info */}
             <div className="md:col-span-2">
               <h1 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
-                Le Creuset 7.25-Qt Dutch Oven
+                Le Creuset 7.25-Qt Dutch Oven Review: 12 Years of Home Kitchen Testing
               </h1>
+
+              <Tier2Badge showDescription={true} />
 
               {/* Star Rating */}
               <div className="flex items-center gap-2 mb-4">
@@ -227,7 +230,7 @@ export default function LeCreuset725QtReview() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-orange-600" />
-                  <span className="text-slate-700"><strong>Tested:</strong> 10 Years</span>
+                  <span className="text-slate-700"><strong>Tested:</strong> 12 Years</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-lg">🇫🇷</span>
@@ -275,7 +278,7 @@ export default function LeCreuset725QtReview() {
             </a>
             <a href="#testing" className="flex items-center p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors border border-gray-200 hover:border-orange-300">
               <Clock className="w-4 h-4 mr-2 text-orange-600" />
-              <span className="text-slate-700 hover:text-orange-800 font-medium">10-Year Durability Results</span>
+              <span className="text-slate-700 hover:text-orange-800 font-medium">12-Year Durability Results</span>
             </a>
             <a href="#comparison" className="flex items-center p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors border border-gray-200 hover:border-orange-300">
               <Star className="w-4 h-4 mr-2 text-orange-600" />
@@ -303,7 +306,7 @@ export default function LeCreuset725QtReview() {
         {/* Introduction: Short, engaging intro with overall recommendation */}
         <section className="mb-8">
           <p className="text-lg text-slate-800 leading-relaxed mb-4">
-            After 10 years of regular home cooking with the Le Creuset 7.25-qt Dutch Oven, I can say this with confidence: <strong>this is the best Dutch oven for serious home cooks who want professional results without professional maintenance.</strong>
+            After 12 years of regular home cooking with the Le Creuset 7.25-qt Dutch Oven, I can say this with confidence: <strong>this is the best Dutch oven for serious home cooks who want professional results without professional maintenance.</strong>
           </p>
           <p className="text-slate-700 leading-relaxed mb-4">
             The enameled interior eliminates the seasoning nightmare of traditional cast iron while delivering identical heat retention. The light sand-colored interior lets you monitor browning and deglazing—a game-changer for precision cooking. At 14.9 lbs, it&apos;s 3 lbs lighter than competitors, which matters tremendously when transferring a 325°F pot from stovetop to oven.
@@ -372,7 +375,7 @@ export default function LeCreuset725QtReview() {
                   <strong>What I did:</strong> Intentionally let tomato sauce reduce too far, creating burnt-on residue. Soaked overnight in warm soapy water, then scrubbed with non-abrasive sponge.
                 </p>
                 <p className="text-slate-700 mb-3">
-                  <strong>Results:</strong> Everything released completely with gentle scrubbing. The smooth enamel doesn&apos;t hold onto food like textured surfaces. After 10 years of tomato-based sauces and red wine reductions: <strong>zero staining</strong> on the light interior. This proves the enamel quality is superior to cheaper alternatives.
+                  <strong>Results:</strong> Everything released completely with gentle scrubbing. The smooth enamel doesn&apos;t hold onto food like textured surfaces. After 12 years of tomato-based sauces and red wine reductions: <strong>zero staining</strong> on the light interior. This proves the enamel quality is superior to cheaper alternatives.
                 </p>
                 <p className="text-green-700 font-semibold">
                   ✓ Performance: 5/5 — Easiest cleanup of any Dutch oven I&apos;ve used
@@ -398,9 +401,9 @@ export default function LeCreuset725QtReview() {
             </div>
 
             <div className="mt-6 bg-blue-100 border border-blue-300 rounded-lg p-4">
-              <p className="text-blue-900 font-semibold mb-2">Key Takeaway from 10 Years:</p>
+              <p className="text-blue-900 font-semibold mb-2">Key Takeaway from 12 Years of Home Use:</p>
               <p className="text-blue-800 text-sm">
-                The Le Creuset isn&apos;t just &quot;premium&quot; branding—it delivers measurable performance advantages in heat retention, weight management, and long-term durability. After cooking 500+ meals in this pot, I can confidently say it earned its reputation through engineering, not marketing.
+                The Le Creuset isn&apos;t just &quot;premium&quot; branding—it delivers measurable performance advantages in heat retention, weight management, and long-term durability. After cooking 500+ meals in my home kitchen, informed by my 23 years managing professional kitchens, I can confidently say this pot earned its reputation through engineering, not marketing.
               </p>
             </div>
           </div>
@@ -456,18 +459,18 @@ export default function LeCreuset725QtReview() {
           </div>
         </section>
 
-        {/* 10 Years of Testing */}
+        {/* 12 Years of Testing */}
         <section id="testing" className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">10 Years of Home Kitchen Testing</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">12 Years of Home Kitchen Testing</h2>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <div className="space-y-6">
               <div>
                 <h3 className="font-bold text-slate-900 mb-3">Testing Environment</h3>
                 <ul className="space-y-2 text-slate-700">
-                  <li>• <strong>Location:</strong> Home kitchen operations (simulating restaurant techniques at home)</li>
+                  <li>• <strong>Location:</strong> Home kitchen cooking for family and friends</li>
                   <li>• <strong>Primary Usage:</strong> Sautéing, deglazing, braising, slow cooking</li>
                   <li>• <strong>Frequency:</strong> Regular home cooking (3-5 times weekly)</li>
-                  <li>• <strong>Duration:</strong> 10 years of continuous use</li>
+                  <li>• <strong>Duration:</strong> 12 years of continuous use</li>
                   <li>• <strong>Typical Recipes:</strong> Braised short ribs, pot roasts, stews, soups, bolognese</li>
                 </ul>
               </div>
@@ -496,9 +499,9 @@ export default function LeCreuset725QtReview() {
                 </div>
 
                 <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded-r-lg mb-4">
-                  <h4 className="font-bold text-purple-900 mb-2">✓ 10-Year Durability Confirmed</h4>
+                  <h4 className="font-bold text-purple-900 mb-2">✓ 12-Year Durability Confirmed</h4>
                   <ul className="space-y-1 text-slate-700 text-sm">
-                    <li>• <strong>Zero staining after 10 years</strong> — Light interior remains pristine</li>
+                    <li>• <strong>Zero staining after 12 years</strong> — Light interior remains pristine</li>
                     <li>• <strong>Minimal enamel wear</strong> — Only minor surface scratches (cosmetic only)</li>
                     <li>• <strong>Exterior maintains appearance</strong> — No dulling or fading with gentle cleaning</li>
                     <li>• <strong>Perfect lid seal preserved</strong> — Cast iron handles remain solid</li>
@@ -510,7 +513,7 @@ export default function LeCreuset725QtReview() {
                   <ul className="space-y-1 text-slate-700 text-sm">
                     <li>• <strong>Simple cleanup</strong> — Stuck-on food releases with warm soapy water soak</li>
                     <li>• <strong>No re-seasoning ever</strong> — Enamel eliminates cast iron maintenance</li>
-                    <li>• <strong>Stain-resistant</strong> — 10 years of tomato sauces and red wine, zero staining</li>
+                    <li>• <strong>Stain-resistant</strong> — 12 years of tomato sauces and red wine, zero staining</li>
                     <li>• <strong>Proper technique preserves</strong> — Avoid thermal shock and metal utensils</li>
                   </ul>
                 </div>
@@ -565,7 +568,7 @@ export default function LeCreuset725QtReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Cleaning and Maintenance</h2>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <p className="text-slate-700 leading-relaxed mb-6">
-              One of the Le Creuset&apos;s biggest advantages over traditional cast iron: <strong>virtually zero maintenance.</strong> After 10 years, here&apos;s my honest assessment of what it takes to keep this Dutch oven in pristine condition.
+              One of the Le Creuset&apos;s biggest advantages over traditional cast iron: <strong>virtually zero maintenance.</strong> After 12 years of home use, here&apos;s my honest assessment of what it takes to keep this Dutch oven in pristine condition.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -580,7 +583,7 @@ export default function LeCreuset725QtReview() {
               </div>
 
               <div className="bg-blue-50 border-l-4 border-blue-600 p-5 rounded-r-lg">
-                <h3 className="font-bold text-blue-900 mb-3">✓ What I&apos;ve Learned After 10 Years</h3>
+                <h3 className="font-bold text-blue-900 mb-3">✓ What I&apos;ve Learned After 12 Years</h3>
                 <ul className="space-y-2 text-slate-700 text-sm">
                   <li>• <strong>Zero staining despite heavy use</strong> — Tomato sauces and red wine won&apos;t stain with proper technique</li>
                   <li>• <strong>Bar Keeper&apos;s Friend for stubborn spots</strong> — Gentle scrub removes any discoloration</li>
@@ -920,14 +923,14 @@ export default function LeCreuset725QtReview() {
             <div className="bg-white rounded-lg p-4 border border-gray-200">
               <h3 className="font-semibold text-slate-900 mb-2">Q: Does the light-colored interior stain over time?</h3>
               <p className="text-slate-700 text-sm">
-                A: Not with proper care. After 10 years: zero staining despite regular use with tomato sauces and red wines. <strong>Key:</strong> Avoid thermal shock, use appropriate utensils, gentle cleaning with warm soapy water. Minor surface scratches from occasional metal utensil contact are barely noticeable and don&apos;t affect performance.
+                A: Not with proper care. After 12 years: zero staining despite regular use with tomato sauces and red wines. <strong>Key:</strong> Avoid thermal shock, use appropriate utensils, gentle cleaning with warm soapy water. Minor surface scratches from occasional metal utensil contact are barely noticeable and don&apos;t affect performance.
               </p>
             </div>
 
             <div className="bg-white rounded-lg p-4 border border-gray-200">
               <h3 className="font-semibold text-slate-900 mb-2">Q: Can I use metal utensils in Le Creuset?</h3>
               <p className="text-slate-700 text-sm">
-                A: Technically yes—Le Creuset states &quot;metal utensil safe.&quot; However, silicone or wooden utensils recommended to preserve enamel appearance long-term. Metal can create minor surface scratches visible on light-colored interior (though they don&apos;t affect performance). After 10 years using primarily wood/silicone with occasional metal contact, interior remains excellent condition.
+                A: Technically yes—Le Creuset states &quot;metal utensil safe.&quot; However, silicone or wooden utensils recommended to preserve enamel appearance long-term. Metal can create minor surface scratches visible on light-colored interior (though they don&apos;t affect performance). After 12 years using primarily wood/silicone with occasional metal contact, interior remains excellent condition.
               </p>
             </div>
 
@@ -969,20 +972,20 @@ export default function LeCreuset725QtReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-4">The Bottom Line: My Professional Verdict</h2>
           <div className="bg-slate-800 text-white rounded-xl p-6">
             <p className="text-lg leading-relaxed mb-4">
-              After a decade of regular home use, the Le Creuset 7.25-qt Dutch Oven has earned its place as the most valuable piece in my kitchen arsenal. The combination of exceptional heat retention, easy cleanup, and durability justifies every dollar of the premium price for cooks who use Dutch ovens regularly (3+ times weekly).
+              After 12 years of regular home cooking, informed by my 23 years managing professional kitchens, the Le Creuset 7.25-qt Dutch Oven has earned its place as the most valuable piece in my kitchen arsenal. The combination of exceptional heat retention, easy cleanup, and durability justifies every dollar of the premium price for cooks who use Dutch ovens regularly (3+ times weekly).
             </p>
             <p className="leading-relaxed mb-4">
               <strong>This is more than cookware—it&apos;s a cooking system that elevates results consistently.</strong> The ability to execute complex cooking techniques—from sautéing and deglazing to braising—all in one vessel makes this a transformative kitchen investment. The enameled interior eliminates the maintenance burden of traditional cast iron while delivering identical performance benefits.
             </p>
             <p className="leading-relaxed mb-4">
-              The 3 lb weight advantage over Lodge and Staub matters tremendously over 10 years of regular use, especially for oven transfers and cleanup. The light sand-colored interior provides visual feedback for precision cooking that darker interiors cannot match. Zero staining issues after a decade validate the superior enamel quality.
+              The 3 lb weight advantage over Lodge and Staub matters tremendously over 12 years of regular home use, especially for oven transfers and cleanup. The light sand-colored interior provides visual feedback for precision cooking that darker interiors cannot match. Zero staining issues after more than a decade validate the superior enamel quality.
             </p>
 
             <div className="bg-slate-700 rounded-lg p-4 mb-4">
               <p className="font-semibold mb-2">Rating Breakdown:</p>
               <ul className="space-y-1 text-sm">
                 <li>• ⭐⭐⭐⭐⭐ Heat Retention & Distribution (5/5)</li>
-                <li>• ⭐⭐⭐⭐⭐ Durability & Longevity (5/5) - Zero issues in 10 years</li>
+                <li>• ⭐⭐⭐⭐⭐ Durability & Longevity (5/5) - Zero issues in 12 years</li>
                 <li>• ⭐⭐⭐⭐⭐ Ease of Cleaning (5/5) - No seasoning required</li>
                 <li>• ⭐⭐⭐⭐ Value for Money (4/5) - Premium but justified for frequent use</li>
                 <li>• ⭐⭐⭐⭐ Weight & Handling (4/5) - Lightest per quart but still heavy</li>
@@ -1008,7 +1011,7 @@ export default function LeCreuset725QtReview() {
               Join Thousands Who&apos;ve Made the Le Creuset Investment
             </h3>
             <p className="text-lg text-slate-700 mb-6">
-              10+ years tested. 4.9/5 rating. Lifetime warranty. Generational quality.
+              12+ years tested. 4.9/5 rating. Lifetime warranty. Generational quality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <AffiliateButton
@@ -1067,7 +1070,7 @@ export default function LeCreuset725QtReview() {
               Still Reading? You&apos;re Ready to Upgrade Your Cooking
             </h3>
             <p className="text-lg text-slate-200 mb-6 max-w-2xl mx-auto">
-              After 10 years of testing, this is the Dutch oven that transformed my kitchen. Join the thousands of home cooks who made the investment.
+              After 12 years of home testing, this is the Dutch oven that transformed my kitchen. Join the thousands of home cooks who made the investment.
             </p>
             <AffiliateButton
               href={productData.affiliateLinks[0].url}
@@ -1094,7 +1097,7 @@ export default function LeCreuset725QtReview() {
               <strong>Scott Bradley</strong> | Professional Chef • 40 Years Experience Since Age 15
             </p>
             <p className="text-slate-600 text-sm mb-2">
-              Equipment reviews based on real commercial kitchen testing and 21+ years of restaurant experience managing operations generating $80,000+ monthly revenue. All recommendations backed by hands-on professional experience—not marketing claims.
+              Equipment reviews based on extensive home testing, informed by 21+ years managing professional restaurant kitchens generating $80,000+ monthly revenue. All recommendations backed by hands-on testing experience—not marketing claims.
             </p>
             <p className="text-slate-500 text-xs">
               <em>Last Updated: October 4, 2025 | Pricing verified weekly</em>
@@ -1106,7 +1109,7 @@ export default function LeCreuset725QtReview() {
         <section className="mb-8">
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
             <p className="text-yellow-800 text-sm">
-              <strong>Affiliate Disclosure:</strong> This site contains affiliate links. When you purchase through these links, I may earn a small commission at no additional cost to you. I only recommend equipment I&apos;ve personally used and trust in professional kitchen operations. This review is based on 10 years of independent testing—Le Creuset did not provide review samples or compensation.
+              <strong>Affiliate Disclosure:</strong> This site contains affiliate links. When you purchase through these links, I may earn a small commission at no additional cost to you. I only recommend equipment I&apos;ve personally tested and trust based on my professional kitchen experience. This review is based on 12 years of independent home testing—Le Creuset did not provide review samples or compensation.
             </p>
           </div>
         </section>

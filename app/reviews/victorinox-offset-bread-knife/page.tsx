@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
+import { Tier1Badge } from '@/components/ReviewTierBadge'
 
 export const metadata: Metadata = {
   title: 'Victorinox Offset Bread Knife Review: 21+ Years Professional Use (2025)',
@@ -39,6 +40,8 @@ export default function VictorinoxOffsetBreadKnifeReview() {
 
       {/* Main Content */}
       <article className="max-w-4xl mx-auto px-4 py-12">
+
+        <Tier1Badge showDescription={true} />
 
         {/* Product Image */}
         <div className="mb-8">

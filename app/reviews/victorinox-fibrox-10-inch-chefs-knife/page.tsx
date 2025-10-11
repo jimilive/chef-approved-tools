@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AuthorBio from '@/components/AuthorBio'
+import { Tier1Badge } from '@/components/ReviewTierBadge'
 
 export const metadata: Metadata = {
   title: 'Victorinox Fibrox Pro 10" Chef\'s Knife Review: 21+ Years Professional Use (2025)',
@@ -40,6 +41,8 @@ export default function VictorinoxFibrox10InchReview() {
 
       {/* Main Content */}
       <article className="max-w-4xl mx-auto px-4 py-12">
+
+        <Tier1Badge showDescription={true} />
 
         {/* Quick Rating Box */}
         <div style={{

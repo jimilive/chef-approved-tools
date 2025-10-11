@@ -3,6 +3,7 @@ import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import ProductImageGallery from '@/components/ProductImageGallery'
 import AffiliateButton from '@/components/AffiliateButton'
+import { Tier1Badge } from '@/components/ReviewTierBadge'
 
 export const metadata: Metadata = {
   title: 'Victorinox 8" Chef\'s Knife Review: 40-Year Pro Test (2025)',
@@ -40,6 +41,8 @@ export default function VictorinoxFibrox8InchReview() {
 
       {/* Main Content */}
       <article className="max-w-4xl mx-auto px-4 py-12">
+
+        <Tier1Badge showDescription={true} />
 
         {/* Product Images */}
         <div className="mb-12">

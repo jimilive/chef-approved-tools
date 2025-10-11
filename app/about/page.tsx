@@ -319,8 +319,86 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Evaluation Criteria */}
+      {/* Three-Tier Review System */}
       <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-slate-900 mb-4">
+              Our Three-Tier Review System
+            </h3>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Every review displays one of three tier badges showing exactly what kind of testing
+              and experience backs each recommendation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+            {/* Tier 1 */}
+            <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl p-6 border-2 border-amber-400">
+              <div className="flex items-center gap-3 mb-4">
+                <Shield className="w-8 h-8 text-amber-600" />
+                <h4 className="text-xl font-bold text-amber-900">Tier 1</h4>
+              </div>
+              <h5 className="font-bold text-slate-900 mb-3">Professional Kitchen Tested</h5>
+              <p className="text-sm text-slate-700 mb-3">
+                18+ months of testing in demanding restaurant environments serving 200+ covers nightly.
+                These products have survived the ultimate stress test.
+              </p>
+              <p className="text-xs text-slate-600 italic">
+                The gold standard: proven where failure means lost revenue.
+              </p>
+            </div>
+
+            {/* Tier 2 */}
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-400">
+              <div className="flex items-center gap-3 mb-4">
+                <Clock className="w-8 h-8 text-blue-600" />
+                <h4 className="text-xl font-bold text-blue-900">Tier 2</h4>
+              </div>
+              <h5 className="font-bold text-slate-900 mb-3">Currently Testing</h5>
+              <p className="text-sm text-slate-700 mb-3">
+                Active home testing for 30-90+ days with real-time updates. Reviews evolve as I
+                discover strengths and weaknesses.
+              </p>
+              <p className="text-xs text-slate-600 italic">
+                Transparent insights during the testing period with professional perspective.
+              </p>
+            </div>
+
+            {/* Tier 3 */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-xl p-6 border-2 border-slate-400">
+              <div className="flex items-center gap-3 mb-4">
+                <Award className="w-8 h-8 text-slate-600" />
+                <h4 className="text-xl font-bold text-slate-900">Tier 3</h4>
+              </div>
+              <h5 className="font-bold text-slate-900 mb-3">Professional Recommendation</h5>
+              <p className="text-sm text-slate-700 mb-3">
+                Informed opinions based on 40 years of cooking experience and understanding what
+                makes equipment work in real kitchens.
+              </p>
+              <p className="text-xs text-slate-600 italic">
+                Experience-based guidance with clear disclosure about testing status.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center">
+            <p className="text-slate-700 mb-4">
+              This tier system exists for one reason: <strong>radical transparency</strong>. You deserve
+              to know exactly what experience backs each recommendation.
+            </p>
+            <a
+              href="/review-tiers"
+              className="inline-block text-orange-600 hover:text-orange-800 font-semibold underline"
+            >
+              Learn more about our tier system →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Evaluation Criteria */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-slate-900 mb-4">

@@ -4,6 +4,7 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import { BudgetVsPremiumTeaser } from '@/components/BudgetVsPremiumMagnet'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
+import { Tier1Badge } from '@/components/ReviewTierBadge'
 
 const productData = {
   name: "Vitamix 5200 Professional-Grade Blender",
@@ -142,6 +143,8 @@ export default function Vitamix5200Review() {
               </div>
             </div>
           </div>
+
+          <Tier1Badge showDescription={true} />
 
           {/* Quick Rating Box */}
           <div className="quick-stats" style={{

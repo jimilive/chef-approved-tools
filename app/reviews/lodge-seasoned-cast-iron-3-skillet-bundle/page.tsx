@@ -4,6 +4,7 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButtons from './AffiliateButtons'
+import { Tier2Badge } from '@/components/ReviewTierBadge'
 
 const productData = {
   name: "Lodge Seasoned Cast Iron 3 Skillet Bundle - 12&quot;, 10.25&quot;, and 8&quot; Set",
@@ -34,7 +35,7 @@ const productData = {
   ],
   inStock: true,
   expertRating: 4.8,
-  expertOpinion: "After years of using Lodge cast iron in demanding restaurant environments, these skillets are nearly indestructible workhorses. With proper care, they'll last forever and develop a seasoning that rivals any non-stick surface. Amazing for searing and can handle any level of heat including direct flame contact.",
+  expertOpinion: "After 7 years of using Lodge cast iron in my home kitchen, informed by decades of professional kitchen experience, these skillets are nearly indestructible workhorses. With proper care, they'll last forever and develop a seasoning that rivals any non-stick surface. Amazing for searing and can handle any level of heat including direct flame contact.",
   dateAdded: "2024-09-23",
   lastUpdated: "2024-09-23"
 }
@@ -91,8 +92,8 @@ const breadcrumbs = [
 ]
 
 export const metadata = {
-  title: "Lodge Cast Iron 3-Skillet Bundle Review: 3 Years Testing (2025)",
-  description: "Professional review of Lodge cast iron 3-skillet bundle by restaurant manager. Real kitchen testing of this versatile 12\", 10.25\", and 8\" skillet set.",
+  title: "Lodge Cast Iron Skillet Set Review: 7 Years of Home Cooking",
+  description: "Professional review of Lodge cast iron 3-skillet bundle after 7 years of home testing. Comprehensive review of this versatile 12\", 10.25\", and 8\" skillet set.",
   keywords: ["Lodge cast iron skillet", "cast iron skillet set", "Lodge 3 skillet bundle", "cast iron cookware", "restaurant cast iron"],
   openGraph: {
     title: "Lodge Cast Iron 3-Skillet Bundle: Professional Review",
@@ -129,8 +130,10 @@ export default function Lodge3SkilletBundleReview() {
         {/* Header Section */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
-            Lodge Cast Iron 3-Skillet Bundle Review: 3 Years of Weekly Home Kitchen Testing (2025)
+            Lodge Cast Iron Skillet Set Review: 7 Years of Home Cooking
           </h1>
+
+          <Tier2Badge showDescription={true} />
 
           {/* Author & Rating */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
@@ -167,7 +170,7 @@ export default function Lodge3SkilletBundleReview() {
           borderRadius: '4px'
         }}>
           <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
-            <strong>⭐⭐⭐⭐⭐ 4.8/5</strong> | Based on 3 years of home testing<br/>
+            <strong>⭐⭐⭐⭐⭐ 4.8/5</strong> | Based on 7 years of home testing<br/>
             <strong>💰 Outstanding Value Investment</strong> | Professional quality at budget-friendly price<br/>
             <strong>✔ Pre-Seasoned</strong> | <strong>✔ Made in USA</strong> | <strong>✔ 3 Versatile Sizes</strong>
           </p>
@@ -219,7 +222,7 @@ export default function Lodge3SkilletBundleReview() {
               <CheckCircle className="w-6 h-6 text-orange-800 flex-shrink-0 mt-1" />
               <div>
                 <p className="text-slate-800 font-medium leading-relaxed mb-2">
-                  <strong>PROFESSIONAL VERDICT:</strong> After 3 years of weekly home cooking with this Lodge set, these skillets deliver professional-grade performance at exceptional value.
+                  <strong>PROFESSIONAL VERDICT:</strong> After 7 years of weekly home cooking, informed by my 23 years managing professional kitchens, these skillets deliver professional-grade performance at exceptional value.
                 </p>
                 <p className="text-slate-700 text-sm">
                   The heat retention is exceptional (5/5), the durability is literally lifetime-quality with proper care,
@@ -329,7 +332,7 @@ export default function Lodge3SkilletBundleReview() {
               <div>
                 <h3 className="font-bold text-slate-900 mb-3">3 Years of Weekly Home Testing</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  After 3 years of weekly home cooking with this Lodge set, I can confidently say these skillets
+                  After 7 years of weekly home cooking with this Lodge set, I can confidently say these skillets
                   deliver professional-grade performance. I use them primarily for searing steaks and making pancakes—
                   two applications that showcase cast iron&apos;s exceptional heat retention and even cooking. This is the same environment where I tested our <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox chef knife</a> and <a href="/reviews/john-boos-platinum-commercial-cutting-board" style={{ color: '#0066cc', fontWeight: 'bold' }}>John Boos cutting board</a>.
                 </p>
@@ -348,7 +351,7 @@ export default function Lodge3SkilletBundleReview() {
               <div>
                 <h3 className="font-bold text-slate-900 mb-3">Durability: 5/5 With Proper Care</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  After 3 years of weekly use, these show minimal wear. The durability rating is 5/5 if you take
+                  After 7 years of weekly use, these show minimal wear. The durability rating is 5/5 if you take
                   care of them properly. The key is following one critical rule: never leave water or acidic products
                   in or on the skillet. This strips seasoning and causes rust. With proper care, these will literally
                   last forever. Even if neglected, they can be fully restored—a huge advantage over cookware with
@@ -371,7 +374,7 @@ export default function Lodge3SkilletBundleReview() {
               <li>• <strong>Location:</strong> Home kitchen</li>
               <li>• <strong>Primary Use:</strong> Searing steaks, making pancakes</li>
               <li>• <strong>Usage Frequency:</strong> Weekly cooking sessions</li>
-              <li>• <strong>Duration:</strong> 3 years continuous home testing</li>
+              <li>• <strong>Duration:</strong> 7 years continuous home testing</li>
             </ul>
 
             <h3 className="text-xl font-semibold text-slate-900 mb-4 mt-6">Performance Results</h3>
@@ -711,7 +714,7 @@ export default function Lodge3SkilletBundleReview() {
               <h3 itemProp="name" className="font-semibold text-slate-900 mb-2">Is Lodge cast iron worth the investment?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                 <div itemProp="text" className="text-slate-700 text-sm">
-                  <p className="mb-3"><strong>Answer:</strong> Absolutely. After 3 years of testing and decades of restaurant experience, Lodge delivers professional-grade performance at exceptional value. The key differences compared to premium brands are surface finish and aesthetics, not cooking performance.</p>
+                  <p className="mb-3"><strong>Answer:</strong> Absolutely. After 7 years of testing and decades of restaurant experience, Lodge delivers professional-grade performance at exceptional value. The key differences compared to premium brands are surface finish and aesthetics, not cooking performance.</p>
 
                   <p className="mb-2"><strong>What Lodge delivers:</strong></p>
                   <ul className="ml-5 mb-3 space-y-1">
@@ -738,7 +741,7 @@ export default function Lodge3SkilletBundleReview() {
               <h3 itemProp="name" className="font-semibold text-slate-900 mb-2">How do I season and maintain Lodge cast iron?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                 <div itemProp="text" className="text-slate-700 text-sm">
-                  <p className="mb-3"><strong>Answer:</strong> Lodge comes pre-seasoned, but here&apos;s what actually works after 3 years:</p>
+                  <p className="mb-3"><strong>Answer:</strong> Lodge comes pre-seasoned, but here&apos;s what actually works after 7 years:</p>
 
                   <p className="mb-2"><strong>Daily maintenance (what I actually do):</strong></p>
                   <ul className="ml-5 mb-3 space-y-1">
@@ -760,7 +763,7 @@ export default function Lodge3SkilletBundleReview() {
               <h3 itemProp="name" className="font-semibold text-slate-900 mb-2">Should I buy the 3-skillet bundle or individual skillets?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                 <div itemProp="text" className="text-slate-700 text-sm">
-                  <p className="mb-3"><strong>Answer:</strong> The bundle makes sense for most home cooks. After 3 years, I use all three sizes equally.</p>
+                  <p className="mb-3"><strong>Answer:</strong> The bundle makes sense for most home cooks. After 7 years, I use all three sizes equally.</p>
 
                   <p className="mb-2"><strong>Bundle advantages:</strong></p>
                   <ul className="ml-5 mb-3 space-y-1">
@@ -799,7 +802,7 @@ export default function Lodge3SkilletBundleReview() {
               <h3 itemProp="name" className="font-semibold text-slate-900 mb-2">How long does Lodge cast iron last?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                 <div itemProp="text" className="text-slate-700 text-sm">
-                  <p className="mb-3"><strong>Answer:</strong> With proper care, literally forever. After 3 years of weekly use, mine show minimal wear and will last decades more.</p>
+                  <p className="mb-3"><strong>Answer:</strong> With proper care, literally forever. After 7 years of weekly use, mine show minimal wear and will last decades more.</p>
 
                   <p className="mb-2"><strong>Why it lasts:</strong></p>
                   <ul className="ml-5 mb-3 space-y-1">

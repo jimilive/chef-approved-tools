@@ -5,6 +5,7 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import PriceDisplay from '@/components/PriceDisplay'
+import { Tier2Badge } from '@/components/ReviewTierBadge'
 
 const productData = {
   name: "John Boos Platinum Commercial Series Rectangular Wooden Maple Cutting Board 24x18x1.75\"",
@@ -20,7 +21,7 @@ const productData = {
   // Note: No customer reviews - this is a professional evaluation only
   category: "Cutting Boards",
   pros: [
-    "18 years of durability, expect to pass to children",
+    "14 years of durability, expect to pass to children",
     "Larger size gives room to work efficiently",
     "Saves significant damage to knife edges",
     "Easy to sanitize with no food safety concerns",
@@ -50,7 +51,7 @@ const productData = {
   ],
   inStock: true,
   expertRating: 4.8,
-  expertOpinion: "After 18 years of daily home use, this John Boos cutting board represents the #1 choice of culinary professionals worldwide. Made from sustainable Northern Hard Rock Maple with NSF certification, it's built for commercial foodservice durability. The 1.75-inch edge-grain construction resists deep cuts while being knife-friendly to preserve blade sharpness. At 21 pounds, it provides unmatched stability during heavy prep work. I expect to pass this generational piece to my children - the larger 24x18 size gives room to work efficiently without constantly moving prepped portions. Simple maintenance with mineral oil and proper cleaning has kept it food-safe for nearly two decades.",
+  expertOpinion: "After 14 years of daily home use, this John Boos cutting board represents the #1 choice for serious home cooks. Made from sustainable Northern Hard Rock Maple with NSF certification, it's built to professional standards. The 1.75-inch edge-grain construction resists deep cuts while being knife-friendly to preserve blade sharpness. At 21 pounds, it provides unmatched stability during heavy prep work. I expect to pass this generational piece to my children - the larger 24x18 size gives room to work efficiently without constantly moving prepped portions. Simple maintenance with mineral oil and proper cleaning has kept it food-safe for over a decade.",
   dateAdded: "2025-01-15",
   lastUpdated: "2025-01-15"
 }
@@ -89,8 +90,8 @@ const breadcrumbs = [
 ]
 
 export const metadata = {
-  title: "John Boos Platinum Cutting Board Review: 18-Year Test (2025)",
-  description: "Professional chef tests John Boos 24x18 cutting board for 18 years. Complete review: knife preservation, durability, maintenance reality, and generational quality.",
+  title: "John Boos Platinum Cutting Board Review: 14 Years of Home Use",
+  description: "Professional chef tests John Boos 24x18 cutting board for 14 years in home kitchen. Complete review: knife preservation, durability, maintenance reality, and generational quality.",
   keywords: ["John Boos cutting board", "commercial cutting board", "maple cutting board", "restaurant cutting board", "butcher block"],
   openGraph: {
     title: "John Boos Platinum Commercial Cutting Board: Professional Review",
@@ -127,8 +128,10 @@ export default function JohnBosPlatinumCuttingBoardReview() {
         {/* Header Section */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
-            John Boos Platinum Cutting Board Review: 18 Years of Daily Kitchen Use (2025)
+            John Boos Platinum Cutting Board Review: 14 Years of Home Use
           </h1>
+
+          <Tier2Badge showDescription={true} />
 
           {/* Author & Rating */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
@@ -165,7 +168,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             borderRadius: '4px'
           }}>
             <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
-              <strong>⭐⭐⭐⭐⭐ 4.8/5</strong> | Based on 18 years of daily home use<br/>
+              <strong>⭐⭐⭐⭐⭐ 4.8/5</strong> | Based on 14 years of daily home use<br/>
               <strong>🛠️ Generational-Quality Investment</strong> | Buy-it-for-life equipment<br/>
               <strong>✔ NSF Certified</strong> | <strong>✔ Made in USA</strong> | <strong>✔ 24x18x1.75&quot;</strong>
             </p>
@@ -218,14 +221,14 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             <h2>Professional Verdict</h2>
 
             <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-              <strong>After 18 years of daily home use, this cutting board represents more than kitchen
-              equipment—it&apos;s a generational investment.</strong> The 24x18 size provides exceptional
-              work space efficiency, while the 21-pound weight ensures rock-solid stability during even
-              the most aggressive prep work.
+              <strong>After 14 years of daily home use, informed by my 23 years managing professional
+              kitchens, this cutting board represents more than kitchen equipment—it&apos;s a generational
+              investment.</strong> The 24x18 size provides exceptional work space efficiency, while the
+              21-pound weight ensures rock-solid stability during even the most aggressive prep work.
             </p>
 
             <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-              The knife edge preservation alone justifies the investment. After 18 years, my knives
+              The knife edge preservation alone justifies the investment. After 14 years, my knives
               maintain sharpness significantly longer than when using cheaper surfaces. This board will
               outlive me and pass to my children—that&apos;s genuine quality.
             </p>
@@ -298,7 +301,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
               <div style={{ fontSize: '40px', marginBottom: '10px' }}>♾️</div>
               <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Generational Quality</h3>
-              <p>After 18 years, expect another 20+ easily. This is equipment you&apos;ll pass to your
+              <p>After 14 years, expect another 20+ easily. This is equipment you&apos;ll pass to your
               children—genuine buy-it-for-life quality.</p>
             </div>
 
@@ -403,7 +406,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               <div>
                 <h3 className="font-bold text-slate-900 mb-3">18 Years of Home Kitchen Excellence</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  Over 18 years of daily home cooking, this John Boos cutting board has anchored every meal preparation—working alongside my <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox chef knife</Link> and <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-800 underline">Le Creuset Dutch oven</Link> as the foundation of my kitchen setup.
+                  Over 14 years of daily home cooking, this John Boos cutting board has anchored every meal preparation—working alongside my <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox chef knife</Link> and <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-800 underline">Le Creuset Dutch oven</Link> as the foundation of my kitchen setup.
                   The hard rock maple edge-grain construction provides a self-healing surface that maintains knife sharpness
                   while offering the stability needed for efficient prep work. The 21-pound weight means it stays put
                   during even the most aggressive chopping and dicing sessions.
@@ -415,7 +418,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                 <p className="text-slate-700 leading-relaxed mb-4">
                   The damage this board saves to knife edges cannot be overstated. This is why I pair it with quality knives like my <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox 8-inch chef knife</Link>—the combination of a great knife and great board maximizes both performance and longevity. Unlike plastic or bamboo alternatives,
                   the maple surface gives slightly under the blade, reducing edge damage while maintaining cutting precision.
-                  After 18 years, my knives maintain their sharpness significantly longer than when I used cheaper cutting surfaces.
+                  After 14 years, my knives maintain their sharpness significantly longer than when I used cheaper cutting surfaces.
                   This translates to fewer sharpenings and longer knife life.
                 </p>
               </div>
@@ -424,7 +427,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                 <h3 className="font-bold text-slate-900 mb-3">Maintenance Reality vs Marketing</h3>
                 <p className="text-slate-700 leading-relaxed">
                   Despite marketing claims about frequent oiling, I rarely oil this board but keep it clean and never soak in water. The maintenance is far simpler than expected. Unlike maintaining my <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 underline">Lodge cast iron skillets</Link>, which require regular seasoning, this board just needs basic cleanliness.
-                  Simple maintenance - washing with warm soapy water and immediate drying - has proven sufficient for 18 years.
+                  Simple maintenance - washing with warm soapy water and immediate drying - has proven sufficient for 14 years.
                   I sanitize it regularly and have never had any food safety concerns. The maintenance requirements are far less
                   demanding than manufacturers suggest.
                 </p>
@@ -433,10 +436,10 @@ export default function JohnBosPlatinumCuttingBoardReview() {
 
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Testing Environment</h3>
             <ul className="space-y-2 text-slate-700">
-              <li>• <strong>Location:</strong> Home kitchen operations</li>
-              <li>• <strong>Primary Use:</strong> All food prep tasks</li>
-              <li>• <strong>Daily Usage:</strong> Regular home cooking preparation</li>
-              <li>• <strong>Duration:</strong> 18 years of continuous use</li>
+              <li>• <strong>Location:</strong> Home kitchen cooking for family and friends</li>
+              <li>• <strong>Primary Use:</strong> All food prep tasks for home cooking</li>
+              <li>• <strong>Daily Usage:</strong> Regular home meal preparation</li>
+              <li>• <strong>Duration:</strong> 14 years of continuous home use</li>
             </ul>
 
             <h3 className="text-xl font-semibold text-slate-900 mb-4 mt-6">Performance Results</h3>
@@ -444,7 +447,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               <div>
                 <h4 className="font-semibold text-green-700 mb-2">✅ Outstanding Long-Term Performance</h4>
                 <ul className="text-sm text-slate-700 space-y-1">
-                  <li>• 18 years of durability, expect generational use</li>
+                  <li>• 14 years of durability, expect generational use</li>
                   <li>• Saves significant damage to knife edges</li>
                   <li>• Large size provides efficient work space</li>
                   <li>• Easy to sanitize with no food safety concerns</li>
@@ -494,7 +497,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mt-4">
             <p className="text-yellow-700 text-sm">
               <strong>My maintenance experience:</strong> I rarely oil it but keep it clean and never soak in water.
-              I sanitize it regularly and have never had any concerns about food safety. Simple care routine has worked perfectly for 18 years.
+              I sanitize it regularly and have never had any concerns about food safety. Simple care routine has worked perfectly for 14 years.
             </p>
           </div>
         </section>
@@ -623,7 +626,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             <div className="mt-6">
-              <p className="text-slate-700">Used only at home for 18 years with excellent results. The large size provides room to work without constantly moving prepped portions. Easy to sanitize with no food safety concerns. The damage you save to your knives makes it well worth the investment.</p>
+              <p className="text-slate-700">After 14 years of home use, informed by decades of professional kitchen experience, this board delivers professional results in a home setting. The large size provides room to work without constantly moving prepped portions. Easy to sanitize with no food safety concerns. The damage you save to your knives makes it well worth the investment.</p>
             </div>
 
             <p className="text-slate-700 mt-4">
@@ -717,11 +720,11 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               <h3 itemProp="name">Is a John Boos cutting board worth the money?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                 <div itemProp="text">
-                  <p><strong>Answer:</strong> After 18 years of daily use, absolutely yes—if you cook
+                  <p><strong>Answer:</strong> After 14 years of daily use, absolutely yes—if you cook
                   regularly and value knife care. The combination of knife edge preservation, exceptional
                   work surface, and generational durability justifies the investment for serious home cooks.</p>
 
-                  <p><strong>The value proposition:</strong> This board will outlast you. After 18 years
+                  <p><strong>The value proposition:</strong> This board will outlast you. After 14 years
                   of daily use, mine shows minimal wear and I expect another 20+ years easily. The knife
                   sharpening savings alone—extending edge life 3x longer—adds significant value over time.</p>
 
@@ -729,7 +732,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                   counter space, or are on a very tight budget, plastic alternatives offer good value.
                   But for serious home cooks, this is a genuine generational investment.</p>
 
-                  <p><strong>My verdict:</strong> After 18 years, I have zero regrets. This board will
+                  <p><strong>My verdict:</strong> After 14 years, I have zero regrets. This board will
                   outlive me and pass to my children—that&apos;s genuine buy-it-for-life quality.</p>
                 </div>
               </div>
@@ -746,7 +749,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                 <div itemProp="text">
                   <p><strong>Answer:</strong> Despite marketing claims about frequent oiling, maintenance is
-                  far simpler than advertised. Here&apos;s what actually works after 18 years:</p>
+                  far simpler than advertised. Here&apos;s what actually works after 14 years:</p>
 
                   <p><strong>My actual routine:</strong></p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
@@ -757,7 +760,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                   </ul>
 
                   <p><strong>Manufacturer recommendation vs reality:</strong> They suggest oiling monthly.
-                  I rarely oil mine but keep it clean and have had zero issues in 18 years. The key is
+                  I rarely oil mine but keep it clean and have had zero issues in 14 years. The key is
                   preventing water absorption by washing and drying promptly.</p>
 
                   <p><strong>Sanitization:</strong> Wash with warm soapy water after each use, especially
@@ -801,7 +804,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               <h3 itemProp="name">John Boos vs other wood cutting board brands?</h3>
               <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                 <div itemProp="text">
-                  <p><strong>Answer:</strong> John Boos is the professional standard for a reason. After 18 years with this board, here&apos;s how it compares:</p>
+                  <p><strong>Answer:</strong> John Boos is the professional standard for a reason. After 14 years with this board, here&apos;s how it compares:</p>
 
                   <p><strong>John Boos advantages:</strong> NSF certification, proven commercial durability, Made in USA quality, edge-grain construction that balances knife-friendliness with longevity, established reputation in professional kitchens.</p>
 
@@ -845,7 +848,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                 <div itemProp="text">
                   <p><strong>Answer:</strong> With basic care, expect 40+ years easily. This is genuine generational equipment.</p>
 
-                  <p><strong>My experience:</strong> After 18 years of daily home use, my board shows minimal wear. I expect another 20+ years easily, then I&apos;ll pass it to my children. That&apos;s not marketing hyperbole—it&apos;s the reality of quality hardwood construction.</p>
+                  <p><strong>My experience:</strong> After 14 years of daily home use, my board shows minimal wear. I expect another 20+ years easily, then I&apos;ll pass it to my children. That&apos;s not marketing hyperbole—it&apos;s the reality of quality hardwood construction.</p>
 
                   <p><strong>Factors affecting lifespan:</strong></p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
@@ -874,7 +877,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
 
                   <p><strong>End-grain advantages:</strong> Slightly more knife-friendly (self-healing properties), beautiful appearance. But requires more maintenance and costs significantly more.</p>
 
-                  <p><strong>My recommendation:</strong> Unless you&apos;re obsessed with maximum knife preservation and don&apos;t mind extra maintenance, edge-grain is the better choice. After 18 years with this edge-grain board, my knives maintain sharpness exceptionally well.</p>
+                  <p><strong>My recommendation:</strong> Unless you&apos;re obsessed with maximum knife preservation and don&apos;t mind extra maintenance, edge-grain is the better choice. After 14 years with this edge-grain board, my knives maintain sharpness exceptionally well.</p>
                 </div>
               </div>
             </div>
@@ -900,7 +903,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                     <li>Re-oil the treated area</li>
                   </ul>
 
-                  <p><strong>For deep stains:</strong> Light sanding with fine-grit sandpaper (220-grit), then re-oil heavily. I&apos;ve never needed this in 18 years.</p>
+                  <p><strong>For deep stains:</strong> Light sanding with fine-grit sandpaper (220-grit), then re-oil heavily. I&apos;ve never needed this in 14 years.</p>
 
                   <p><strong>Prevention:</strong> Wash the board immediately after cutting beets, turmeric, or other staining foods. Don&apos;t let staining liquids sit on the surface.</p>
                 </div>
@@ -951,7 +954,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
 
                   <p><strong>Avoid on maple boards:</strong> Serrated bread knives and steak knives cause deeper grooves in the wood. Use a separate plastic board for bread or get a dedicated bread board.</p>
 
-                  <p><strong>The perfect pairing:</strong> A quality maple board + quality knife = maximum performance and longevity for both. The board protects the knife edge, the knife cuts cleanly without damaging the board. After 18 years using my Victorinox with this John Boos, both are still performing excellently.</p>
+                  <p><strong>The perfect pairing:</strong> A quality maple board + quality knife = maximum performance and longevity for both. The board protects the knife edge, the knife cuts cleanly without damaging the board. After 14 years using my Victorinox with this John Boos, both are still performing excellently.</p>
 
                   <p><strong>See my review:</strong> <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc' }}>Victorinox 8-inch Chef Knife Review</a> - the knife I use most with this board.</p>
                 </div>
@@ -986,7 +989,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </p>
 
             <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-              After 18 years, I expect to use this board for another 20+ easily and then pass it to my
+              After 14 years, I expect to use this board for another 20+ easily and then pass it to my
               children. That&apos;s genuine buy-it-for-life quality.
             </p>
 
@@ -1074,7 +1077,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
 
             <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
               Download my comprehensive guide to cutting board selection and maintenance, developed
-              over 18 years of daily use:
+              over 14 years of daily use:
             </p>
 
             <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
@@ -1116,8 +1119,8 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Complete Your Professional Kitchen Setup</h2>
 
           <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
-            A premium cutting board deserves quality knives and complementary tools. Based on 21+ years
-            of restaurant experience, here are the tools I use alongside this John Boos board:
+            A premium cutting board deserves quality knives and complementary tools. Based on decades
+            of professional kitchen experience, here are the tools I use alongside this John Boos board in my home kitchen:
           </p>
 
           <div style={{
@@ -1168,7 +1171,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               <p>The tool I use most to maintain this board—scrapes off chopped ingredients and
               stuck-on bits in seconds. Essential companion for cutting board care.</p>
               <p style={{ fontSize: '14px', color: '#666' }}>
-                <strong>After 18 years:</strong> Use it every single day.
+                <strong>After 14 years:</strong> Use it every single day.
               </p>
               <Link
                 href="/reviews/oxo-good-grips-bench-scraper"
@@ -1198,7 +1201,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               <p>After prepping ingredients on this board, cook them in the best pot I own. The John
               Boos + Le Creuset combination defines my home kitchen.</p>
               <p style={{ fontSize: '14px', color: '#666' }}>
-                <strong>After 10 years:</strong> Zero regrets on either.
+                <strong>After 12+ years:</strong> Zero regrets on either.
               </p>
               <Link
                 href="/reviews/le-creuset-signature-7-25-qt-dutch-oven"
@@ -1281,12 +1284,12 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             gap: '20px',
             alignItems: 'start'
           }}>
-            <img
+            <Image
               src="/images/team/head-shot-1.jpg"
               alt="Scott Bradley, Professional Chef"
+              width={100}
+              height={100}
               style={{
-                width: '100px',
-                height: '100px',
                 borderRadius: '50%',
                 objectFit: 'cover'
               }}
