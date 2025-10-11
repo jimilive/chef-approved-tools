@@ -51,8 +51,10 @@ jobs:
             sleep 1
           done < /tmp/links.txt
 
+          total_count=$((working_count + broken_count))
           echo "working_count=$working_count" >> $GITHUB_OUTPUT
           echo "broken_count=$broken_count" >> $GITHUB_OUTPUT
+          echo "total_count=$total_count" >> $GITHUB_OUTPUT
           echo "broken_links<<EOF" >> $GITHUB_OUTPUT
           echo -e "$broken_links" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
@@ -91,7 +93,7 @@ jobs:
               </div>
 
               <div class="stats">
-                <strong>Status:</strong> ${{ steps.test.outputs.broken_count }} broken link(s) found out of ${{ steps.test.outputs.working_count + steps.test.outputs.broken_count }} total<br>
+                <strong>Status:</strong> ${{ steps.test.outputs.broken_count }} broken link(s) found out of ${{ steps.test.outputs.total_count }} total<br>
                 <strong>Site:</strong> www.chefapprovedtools.com<br>
                 <strong>Affiliate Tag:</strong> chefapprovedt-20<br>
                 <strong>Check Date:</strong> $(date -u '+%Y-%m-%d %H:%M:%S UTC')
