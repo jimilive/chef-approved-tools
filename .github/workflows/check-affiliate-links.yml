@@ -1,9 +1,9 @@
 name: Check Amazon Affiliate Links
 
-# Run daily at 9 AM UTC (1 AM PST / 4 AM EST)
+# Run daily at 6 AM Pacific (2 PM UTC / 14:00 UTC)
 on:
   schedule:
-    - cron: '0 9 * * *'
+    - cron: '0 14 * * *'
   # Allow manual trigger
   workflow_dispatch:
 
@@ -57,41 +57,117 @@ jobs:
           echo -e "$broken_links" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
-      - name: Create Issue if Links are Broken
+      - name: Send Email if Links are Broken
         if: steps.test.outputs.broken_count > 0
-        uses: actions/github-script@v7
+        uses: dawidd6/action-send-mail@v3
         with:
-          script: |
-            const brokenCount = '${{ steps.test.outputs.broken_count }}';
-            const brokenLinks = `${{ steps.test.outputs.broken_links }}`;
-            const workingCount = '${{ steps.test.outputs.working_count }}';
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.GMAIL_USERNAME }}
+          password: ${{ secrets.GMAIL_PASSWORD }}
+          subject: '🚨 Chef Approved Tools - ${{ steps.test.outputs.broken_count }} Broken Affiliate Link(s) Detected'
+          to: scottdbradley@gmail.com
+          from: Chef Approved Tools <${{ secrets.GMAIL_USERNAME }}>
+          html_body: |
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <style>
+                body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; }
+                .header { background-color: #dc2626; color: white; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
+                .header h1 { margin: 0; font-size: 24px; }
+                .stats { background-color: #f3f4f6; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+                .broken-links { background-color: #fef2f2; border-left: 4px solid #dc2626; padding: 15px; margin-bottom: 20px; }
+                .action-items { background-color: #eff6ff; border-left: 4px solid #2563eb; padding: 15px; margin-bottom: 20px; }
+                .action-items ol { margin: 10px 0; padding-left: 20px; }
+                .footer { color: #6b7280; font-size: 14px; margin-top: 20px; padding-top: 20px; border-top: 1px solid #e5e7eb; }
+                code { background-color: #f3f4f6; padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+              </style>
+            </head>
+            <body>
+              <div class="header">
+                <h1>🚨 Broken Amazon Affiliate Links Detected</h1>
+              </div>
 
-            const issueBody = `## 🚨 Broken Amazon Affiliate Links Detected
+              <div class="stats">
+                <strong>Status:</strong> ${{ steps.test.outputs.broken_count }} broken link(s) found out of ${{ steps.test.outputs.working_count + steps.test.outputs.broken_count }} total<br>
+                <strong>Site:</strong> www.chefapprovedtools.com<br>
+                <strong>Affiliate Tag:</strong> chefapprovedt-20<br>
+                <strong>Check Date:</strong> $(date -u '+%Y-%m-%d %H:%M:%S UTC')
+              </div>
 
-**Status:** ${brokenCount} broken link(s) found out of ${parseInt(brokenCount) + parseInt(workingCount)} total
+              <div class="broken-links">
+                <h2 style="margin-top: 0; color: #dc2626;">Broken Links:</h2>
+                <pre style="white-space: pre-wrap; word-wrap: break-word;">${{ steps.test.outputs.broken_links }}</pre>
+              </div>
 
-### Broken Links:
-${brokenLinks}
+              <div class="action-items">
+                <h2 style="margin-top: 0; color: #2563eb;">Action Required:</h2>
+                <ol>
+                  <li>Log into Amazon Associates at <a href="https://affiliate-program.amazon.com">https://affiliate-program.amazon.com</a></li>
+                  <li>Verify these products still exist and are available</li>
+                  <li>Generate fresh affiliate links if needed using tag: <code>chefapprovedt-20</code></li>
+                  <li>Update the affected review pages in the repository</li>
+                  <li>Test the updated links manually before committing</li>
+                </ol>
+              </div>
 
-### Action Required:
-1. Log into Amazon Associates
-2. Verify these products still exist
-3. Generate fresh affiliate links if needed
-4. Update the affected review pages
+              <div class="footer">
+                <p><strong>Automated Check Details:</strong></p>
+                <ul style="margin: 5px 0; padding-left: 20px;">
+                  <li>This check runs daily at 6 AM Pacific (2 PM UTC)</li>
+                  <li>Uses proper browser headers to avoid Amazon's bot detection</li>
+                  <li>Tests both HTTP status codes and redirect behavior</li>
+                </ul>
+                <p style="margin-top: 15px;"><em>This email was sent automatically by the Chef Approved Tools affiliate link checker workflow.</em></p>
+              </div>
+            </body>
+            </html>
 
-### Automated Check:
-This check runs daily at 9 AM UTC using proper browser headers to avoid Amazon's bot detection.
+      - name: Send Success Email
+        if: steps.test.outputs.broken_count == 0
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.GMAIL_USERNAME }}
+          password: ${{ secrets.GMAIL_PASSWORD }}
+          subject: '✅ Chef Approved Tools - All Affiliate Links Working'
+          to: scottdbradley@gmail.com
+          from: Chef Approved Tools <${{ secrets.GMAIL_USERNAME }}>
+          html_body: |
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <style>
+                body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; }
+                .header { background-color: #059669; color: white; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
+                .header h1 { margin: 0; font-size: 24px; }
+                .stats { background-color: #f0fdf4; border-left: 4px solid #059669; padding: 15px; margin-bottom: 20px; }
+                .footer { color: #6b7280; font-size: 14px; margin-top: 20px; padding-top: 20px; border-top: 1px solid #e5e7eb; }
+              </style>
+            </head>
+            <body>
+              <div class="header">
+                <h1>✅ All Affiliate Links Working</h1>
+              </div>
 
----
-*This issue was created automatically by the affiliate link checker workflow.*`;
+              <div class="stats">
+                <strong>Status:</strong> All ${{ steps.test.outputs.working_count }} affiliate links are working correctly<br>
+                <strong>Site:</strong> www.chefapprovedtools.com<br>
+                <strong>Affiliate Tag:</strong> chefapprovedt-20<br>
+                <strong>Check Date:</strong> $(date -u '+%Y-%m-%d %H:%M:%S UTC')
+              </div>
 
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: `🚨 ${brokenCount} Broken Affiliate Link(s) Detected`,
-              body: issueBody,
-              labels: ['bug', 'revenue-blocker', 'automated']
-            });
+              <p>Great news! All Amazon affiliate links on your site are working properly and directing to the correct products with your affiliate tag.</p>
+
+              <div class="footer">
+                <p><em>This email was sent automatically by the Chef Approved Tools affiliate link checker workflow running daily at 6 AM Pacific.</em></p>
+              </div>
+            </body>
+            </html>
 
       - name: Summary
         run: |
@@ -105,8 +181,9 @@ This check runs daily at 9 AM UTC using proper browser headers to avoid Amazon's
             echo "### Broken Links:" >> $GITHUB_STEP_SUMMARY
             echo "${{ steps.test.outputs.broken_links }}" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "⚠️ A GitHub issue has been created automatically." >> $GITHUB_STEP_SUMMARY
+            echo "📧 An email notification has been sent to scottdbradley@gmail.com" >> $GITHUB_STEP_SUMMARY
           else
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "✅ All affiliate links are working correctly!" >> $GITHUB_STEP_SUMMARY
+            echo "📧 Success notification sent to scottdbradley@gmail.com" >> $GITHUB_STEP_SUMMARY
           fi
