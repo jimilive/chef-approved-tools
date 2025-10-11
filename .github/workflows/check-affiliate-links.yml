@@ -26,6 +26,7 @@ jobs:
       - name: Test Links with Browser Headers
         id: test
         run: |
+          set +e
           broken_links=""
           working_count=0
           broken_count=0
