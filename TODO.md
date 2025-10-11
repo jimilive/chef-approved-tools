@@ -263,6 +263,8 @@
    - [ ] **P1.6:** Add CJ Affiliate links for John Boos and Zwilling (2 products: John Boos cutting board, Wusthof 16-piece)
    - [x] **P2:** Fix images not working on some product pages (COMPLETED - 4 pages fixed)
    - [ ] **P3:** Fix review page images - they look horrible (conversion blocker)
+     - [x] Temporary fix: Reduced image height to 480px with object-cover (cropping top/bottom)
+     - [ ] TODO: Optimize actual product images to proper aspect ratio instead of CSS cropping
    - [ ] **P4:** Fix pagespeed issues (SEO/UX blocker)
 
 2. **HIGH PRIORITY (Foundation - Do Before Content Creation)**

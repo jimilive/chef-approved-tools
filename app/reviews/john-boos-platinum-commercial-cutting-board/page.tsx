@@ -37,7 +37,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://amzn.to/3WIKSR7"
+      url: "https://amzn.to/47jDzyG"
     },
     {
       retailer: "John Boos Direct",
@@ -183,7 +183,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Availability:</h3>
 
             <a
-              href="https://amzn.to/3WIKSR7"
+              href="https://amzn.to/47jDzyG"
               target="_blank"
               rel="nofollow noopener"
               style={{
@@ -1033,7 +1033,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </p>
 
             <a
-              href="https://amzn.to/3WIKSR7"
+              href="https://amzn.to/47jDzyG"
               target="_blank"
               rel="nofollow noopener"
               style={{

@@ -263,12 +263,12 @@ export default function ReviewsPage() {
 
                   {/* Product Image */}
                   <div className="bg-white">
-                    <div className="relative w-full aspect-[2/3]">
+                    <div className="relative w-full h-[480px]">
                       <Image
                         src={review.image}
                         alt={review.title}
                         fill
-                        className="object-contain"
+                        className="object-cover object-center"
                       />
                     </div>
                   </div>
@@ -372,12 +372,12 @@ export default function ReviewsPage() {
 
                   {/* Product Image */}
                   <div className="bg-white">
-                    <div className="relative w-full aspect-[2/3]">
+                    <div className="relative w-full h-[480px]">
                       <Image
                         src={review.image}
                         alt={review.title}
                         fill
-                        className="object-contain"
+                        className="object-cover object-center"
                       />
                     </div>
                   </div>
