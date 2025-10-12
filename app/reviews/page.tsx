@@ -226,11 +226,11 @@ const allReviews: Review[] = [
   {
     id: 16,
     tier: 1,
-    name: 'Gold Textiles Bar Mops',
-    slug: 'gold-textiles-bar-mops',
-    rating: 4.6,
+    name: 'ZUPERIA Bar Mops',
+    slug: 'zuperia-bar-mops',
+    rating: 4.8,
     testingPeriod: 'Years at Purple Café',
-    hook: 'Restaurant standard. Absorbent, durable, affordable.',
+    hook: 'Industry standard. 100% ring spun cotton. Restaurant grade.',
     revenueScore: 50,
     category: 'Kitchen Textiles'
   },

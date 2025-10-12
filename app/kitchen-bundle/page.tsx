@@ -44,10 +44,10 @@ const coreEssentials = [
     price: "$10"
   },
   {
-    name: "Gold Textiles Bar Mops (12-Pack)",
-    justification: "The exact towels I used in professional kitchens. Absorbent, durable, and cheap enough that you won't baby them.",
-    reviewSlug: "gold-textiles-bar-mops",
-    affiliateUrl: "https://amzn.to/4bKl0tX",
+    name: "ZUPERIA Bar Mops (12-Pack)",
+    justification: "The exact towels I used in professional kitchens. 100% ring spun cotton. Restaurant-grade absorbency and durability.",
+    reviewSlug: "zuperia-bar-mops",
+    affiliateUrl: "https://amzn.to/42z6ooe",
     image: "/logo.png",
     price: "$25"
   }

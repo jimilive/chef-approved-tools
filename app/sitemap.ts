@@ -98,7 +98,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'oxo-good-grips-bench-scraper',
     'winco-heavy-duty-tongs',
     'benriner-large-mandoline',
-    'gold-textiles-bar-mops',
+    'zuperia-bar-mops',
     'epicurean-kitchen-cutting-board',
     // Other reviews
     'kitchenaid-ksm8990wh',

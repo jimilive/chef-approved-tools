@@ -22,7 +22,7 @@ export default function GuidesPage() {
     { title: "OXO Good Grips Bench Scraper", description: "Most underrated kitchen tool - transfers, portions, cleans", href: "/reviews/oxo-good-grips-bench-scraper" },
     { title: "Winco Heavy Duty Tongs", description: "Restaurant-grade tongs at budget price - the ones pros use", href: "/reviews/winco-heavy-duty-tongs" },
     { title: "Benriner Large Mandoline", description: "Professional consistency for perfect slices every time", href: "/reviews/benriner-large-mandoline" },
-    { title: "Gold Textiles Bar Mops", description: "The towels restaurants actually use - absorbent and durable", href: "/reviews/gold-textiles-bar-mops" },
+    { title: "ZUPERIA Bar Mops", description: "Industry standard bar mops - 100% ring spun cotton, restaurant grade", href: "/reviews/zuperia-bar-mops" },
     { title: "Epicurean Kitchen Cutting Board", description: "Dishwasher-safe board better than wood - truly sanitary", href: "/reviews/epicurean-kitchen-cutting-board" },
     { title: "Cookware Materials Guide", description: "Stainless steel vs cast iron vs non-stick", href: "/guides/cookware-materials" },
     { title: "Kitchen Appliance Essentials", description: "Must-have appliances for serious cooking", href: "/guides/kitchen-appliances" },
