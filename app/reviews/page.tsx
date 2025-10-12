@@ -235,7 +235,7 @@ const allReviews: Review[] = [
     category: 'Kitchen Textiles'
   },
 
-  // TIER 2 - Home Tested (9 reviews)
+  // TIER 2 - Home Tested (11 reviews)
   {
     id: 17,
     tier: 2,
@@ -334,6 +334,28 @@ const allReviews: Review[] = [
     hook: 'Locking mechanism works. Durable stainless steel.',
     revenueScore: 48,
     category: 'Utensils'
+  },
+  {
+    id: 26,
+    tier: 2,
+    testingPeriod: '6 Months',
+    name: 'Cuisinart High Impact 8" Nonstick Pan',
+    slug: 'cuisinart-8-inch-nonstick-pan',
+    rating: 4.7,
+    hook: 'Perfect for eggs. Even heat distribution. Ideal for single servings.',
+    revenueScore: 74,
+    category: 'Cookware'
+  },
+  {
+    id: 27,
+    tier: 2,
+    testingPeriod: '5 Years',
+    name: 'Method All-Purpose Cleaner',
+    slug: 'method-all-purpose-cleaner',
+    rating: 4.8,
+    hook: 'The unicorn of cleaners. Powerful AND non-toxic. Cuts grease effortlessly.',
+    revenueScore: 66,
+    category: 'Cleaning'
   }
 ];
 
@@ -595,7 +617,7 @@ export default function ReviewsHub() {
             >
               Professional Tested (16)
             </button>
-            <button 
+            <button
               onClick={() => setActiveFilter('tier2')}
               style={{
                 padding: '8px 16px',
@@ -609,7 +631,7 @@ export default function ReviewsHub() {
                 transition: 'all 0.2s'
               }}
             >
-              Home Tested (9)
+              Home Tested (11)
             </button>
           </div>
         </div>

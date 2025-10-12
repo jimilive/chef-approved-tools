@@ -10,13 +10,76 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: 'best-scrambled-eggs',
+    title: 'Perfect Scrambled Eggs: No Bowl, No Whisk Method',
+    excerpt: 'Revolutionary scrambled egg technique from 40 years of cooking. No bowl, no whisk, no milk. Just eggs, butter, and a fork—directly in the pan. The creamiest eggs you\'ll ever make.',
+    publishDate: '2025-01-11',
+    readTime: '7 min read',
+    category: 'Cooking Techniques',
+    featured: true
+  },
+  {
+    slug: 'kitchen-gloves-guide',
+    title: 'Essential Guide to Kitchen Gloves: Professional Safety Protocols',
+    excerpt: 'Learn professional kitchen glove safety from 21+ years restaurant experience. Single-use, cut-resistant, and proper layering techniques that prevent contamination and injuries.',
+    publishDate: '2025-01-11',
+    readTime: '10 min read',
+    category: 'Kitchen Safety',
+    featured: false
+  },
+  {
+    slug: 'meat-cooking-temperatures-thermometers',
+    title: 'Meat Cooking Temperatures Guide: Why Chefs Use Thermometers',
+    excerpt: 'Professional chef explains meat thermometers and proper cooking temps. Food safety + perfect doneness every time. Comprehensive temperature charts and professional protocols.',
+    publishDate: '2025-01-11',
+    readTime: '12 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
     slug: 'how-to-sear-steaks-like-restaurant-chef',
     title: 'How to Sear Steaks Like a Restaurant Chef',
     excerpt: 'Learn the professional techniques I used nightly at Mellow Mushroom to achieve perfect restaurant-quality steak sears every time.',
     publishDate: '2024-09-27',
     readTime: '8 min read',
     category: 'Cooking Techniques',
-    featured: true
+    featured: false
+  },
+  {
+    slug: 'why-professional-chefs-use-kosher-salt',
+    title: 'Why Professional Chefs Use Kosher Salt',
+    excerpt: 'Discover why Diamond Crystal Kosher Salt is the professional chef standard. Learn about texture, flavor control, and why it matters in professional kitchens.',
+    publishDate: '2024-09-15',
+    readTime: '6 min read',
+    category: 'Ingredients',
+    featured: false
+  },
+  {
+    slug: 'how-to-steel-a-knife',
+    title: 'How to Steel a Knife (The Right Way to Hone Like a Chef)',
+    excerpt: 'Professional guide to honing knives with a steel. Learn the difference between honing and sharpening, proper technique, and why chefs do it before every service.',
+    publishDate: '2024-09-10',
+    readTime: '8 min read',
+    category: 'Knife Care',
+    featured: false
+  },
+  {
+    slug: 'how-to-make-perfect-french-press-coffee',
+    title: 'How to Make Perfect French Press Coffee',
+    excerpt: 'Master the French press method with professional techniques. Water temperature, timing, and grind size—everything you need for perfect coffee every time.',
+    publishDate: '2024-09-05',
+    readTime: '7 min read',
+    category: 'Coffee',
+    featured: false
+  },
+  {
+    slug: 'how-to-sharpen-with-tri-stone',
+    title: 'How to Sharpen Knives with a Tri-Stone Sharpener',
+    excerpt: 'Professional knife sharpening guide using the Norton tri-stone system. Learn proper angles, technique, and maintenance for restaurant-sharp knives.',
+    publishDate: '2024-09-01',
+    readTime: '10 min read',
+    category: 'Knife Care',
+    featured: false
   }
 ]
 
