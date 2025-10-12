@@ -1,6 +1,6 @@
 # Google Search Console Indexing Progress
 
-**Last Updated:** 2025-10-09 (11 New Pages Indexed + 10 Affiliate Links Fixed)
+**Last Updated:** 2025-10-11 (7 New Review Pages + 4 New Blog Articles Added)
 
 ---
 
@@ -64,6 +64,10 @@ All pages now have "requested" status or higher (indexed). Waiting for Google to
 | https://www.chefapprovedtools.com/reviews/gold-textiles-bar-mops | requested | ✅ Working | |
 | https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board | indexed | ✅ Working | |
 | https://www.chefapprovedtools.com/reviews/kitchenaid-ksm8990wh | indexed | ✅ Working | **FEATURED REVIEW** |
+| https://www.chefapprovedtools.com/reviews/kitchenaid-kp26m1xlc-professional-600 | NOT INDEXED | ✅ Working | **NEW - Tier 2 (18 Years)** |
+| https://www.chefapprovedtools.com/reviews/cuisinart-dlc-10c-classic-food-processor | NOT INDEXED | ✅ Working | **NEW - Tier 2 (30 Years)** |
+| https://www.chefapprovedtools.com/reviews/diamond-crystal-kosher-salt | NOT INDEXED | ✅ Working | **NEW - Tier 1 (18 Years)** |
+| https://www.chefapprovedtools.com/reviews/bodum-chambord-french-press | NOT INDEXED | ✅ Working | **NEW - Tier 1 (24 Years)** |
 | https://www.chefapprovedtools.com/reviews/robot-coupe-r2-dice | requested | ✅ Working | |
 | https://www.chefapprovedtools.com/reviews/vitamix-5200 | indexed | ✅ Working | |
 | https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-15-piece | NEED TO REMOVE | - | **❌ OLD URL - REQUEST REMOVAL** |
@@ -71,6 +75,9 @@ All pages now have "requested" status or higher (indexed). Waiting for Google to
 | https://www.chefapprovedtools.com/reviews/le-creuset-signature-7-25-qt-dutch-oven | indexed | ✅ Working | **FEATURED REVIEW** |
 | https://www.chefapprovedtools.com/reviews/john-boos-platinum-commercial-cutting-board | indexed | ✅ Working | **FEATURED REVIEW** |
 | https://www.chefapprovedtools.com/reviews/lodge-seasoned-cast-iron-3-skillet-bundle | indexed | ✅ Working | **FEATURED REVIEW** |
+| https://www.chefapprovedtools.com/reviews/black-decker-toaster-oven | NOT INDEXED | ✅ Working | **NEW - Tier 2 (48 Years - 4 Models)** |
+| https://www.chefapprovedtools.com/reviews/norton-im200-tri-stone-sharpener | NOT INDEXED | ✅ Working | **NEW - Tier 1 (6 Years Professional)** |
+| https://www.chefapprovedtools.com/reviews/nordic-ware-half-sheet-pan | NOT INDEXED | ✅ Working | **NEW - Tier 2 (10 Years)** |
 | https://www.chefapprovedtools.com/reviews/victorinox-fibrox-pro-knife-set | removal requested | - | **❌ DELETED FROM SITE** |
 
 ---
@@ -81,6 +88,10 @@ All pages now have "requested" status or higher (indexed). Waiting for Google to
 |-----|------------|-------------|-------|
 | https://www.chefapprovedtools.com/blog | requested | ✅ | |
 | https://www.chefapprovedtools.com/blog/how-to-sear-steaks-like-restaurant-chef | indexed | ✅ | |
+| https://www.chefapprovedtools.com/blog/why-professional-chefs-use-kosher-salt | NOT INDEXED | ✅ | **NEW - Oct 11, 2025** |
+| https://www.chefapprovedtools.com/blog/how-to-steel-a-knife | NOT INDEXED | ✅ | **NEW - Oct 11, 2025** |
+| https://www.chefapprovedtools.com/blog/how-to-make-perfect-french-press-coffee | NOT INDEXED | ✅ | **NEW - Oct 11, 2025** |
+| https://www.chefapprovedtools.com/blog/how-to-sharpen-with-tri-stone | NOT INDEXED | ✅ | **NEW - Oct 11, 2025** |
 
 ---
 
@@ -126,8 +137,9 @@ All pages now have "requested" status or higher (indexed). Waiting for Google to
 
 ## Summary
 
-- ✅ **42 URLs total**
+- ✅ **53 URLs total** (7 new reviews + 4 new blog articles added Oct 11, 2025)
 - ✅ **22 URLs indexed** (11 newly indexed on Oct 9, 2025)
+- 🆕 **11 URLs not yet indexed** (7 new reviews + 4 new blog articles - need to request indexing)
 - ✅ **20 URLs requested** (pending Google processing)
 - ⚠️ **1 URL with error** (methodology redirect - low priority)
 - ❌ **2 URLs need removal** (old product pages)
@@ -139,7 +151,24 @@ All pages now have "requested" status or higher (indexed). Waiting for Google to
 
 1. ✅ **COMPLETED:** Request indexing for all pages
 2. ✅ **COMPLETED:** Fix broken Amazon affiliate links (automated)
-3. **PENDING:** Wait for Google to process indexing requests (1-2 weeks typically)
-4. **LOW PRIORITY:** Fix methodology page redirect issue
-5. **LOW PRIORITY:** Complete removal requests for 2 old URLs
+3. 🆕 **TODO:** Request indexing for 11 new pages in Google Search Console:
+
+   **New Review Pages:**
+   - `/reviews/kitchenaid-kp26m1xlc-professional-600`
+   - `/reviews/cuisinart-dlc-10c-classic-food-processor`
+   - `/reviews/diamond-crystal-kosher-salt`
+   - `/reviews/bodum-chambord-french-press`
+   - `/reviews/black-decker-toaster-oven` (48-year multi-generational story - VIRAL POTENTIAL)
+   - `/reviews/norton-im200-tri-stone-sharpener` (6 years professional kitchen testing)
+   - `/reviews/nordic-ware-half-sheet-pan` (10 years home use testing)
+
+   **New Blog Articles:**
+   - `/blog/why-professional-chefs-use-kosher-salt`
+   - `/blog/how-to-steel-a-knife`
+   - `/blog/how-to-make-perfect-french-press-coffee`
+   - `/blog/how-to-sharpen-with-tri-stone` (drives traffic to Norton review)
+
+4. **PENDING:** Wait for Google to process indexing requests (1-2 weeks typically)
+5. **LOW PRIORITY:** Fix methodology page redirect issue
+6. **LOW PRIORITY:** Complete removal requests for 2 old URLs
 

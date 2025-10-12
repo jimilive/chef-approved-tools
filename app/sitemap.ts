@@ -102,12 +102,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'epicurean-kitchen-cutting-board',
     // Other reviews
     'kitchenaid-ksm8990wh',
+    'kitchenaid-kp26m1xlc-professional-600',
+    'cuisinart-dlc-10c-classic-food-processor',
+    'diamond-crystal-kosher-salt',
+    'bodum-chambord-french-press',
     'robot-coupe-r2-dice',
     'vitamix-5200',
     'wusthof-classic-ikon-16-piece',
     'le-creuset-signature-7-25-qt-dutch-oven',
     'john-boos-platinum-commercial-cutting-board',
-    'lodge-seasoned-cast-iron-3-skillet-bundle'
+    'lodge-seasoned-cast-iron-3-skillet-bundle',
+    'black-decker-toaster-oven',
+    'norton-im200-tri-stone-sharpener',
+    'nordic-ware-half-sheet-pan'
   ]
 
   const productPages = productReviews.map(review => ({
@@ -162,6 +169,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/why-professional-chefs-use-kosher-salt`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/blog/how-to-steel-a-knife`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/blog/how-to-make-perfect-french-press-coffee`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/blog/how-to-sharpen-with-tri-stone`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
     },
   ]
 
