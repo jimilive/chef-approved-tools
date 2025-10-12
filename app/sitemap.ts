@@ -104,6 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'kitchenaid-ksm8990wh',
     'kitchenaid-kp26m1xlc-professional-600',
     'cuisinart-dlc-10c-classic-food-processor',
+    'cuisinart-8-inch-nonstick-pan',
     'diamond-crystal-kosher-salt',
     'bodum-chambord-french-press',
     'robot-coupe-r2-dice',
@@ -114,7 +115,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'lodge-seasoned-cast-iron-3-skillet-bundle',
     'black-decker-toaster-oven',
     'norton-im200-tri-stone-sharpener',
-    'nordic-ware-half-sheet-pan'
+    'nordic-ware-half-sheet-pan',
+    'method-all-purpose-cleaner'
   ]
 
   const productPages = productReviews.map(review => ({
@@ -190,6 +192,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/blog/how-to-sharpen-with-tri-stone`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/blog/best-scrambled-eggs`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/kitchen-gloves-guide`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/blog/meat-cooking-temperatures-thermometers`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.75,
