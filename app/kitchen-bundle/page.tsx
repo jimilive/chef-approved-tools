@@ -47,7 +47,7 @@ const coreEssentials = [
     name: "ZUPERIA Bar Mops (12-Pack)",
     justification: "The exact towels I used in professional kitchens. 100% ring spun cotton. Restaurant-grade absorbency and durability.",
     reviewSlug: "zuperia-bar-mops",
-    affiliateUrl: "https://www.amazon.com/dp/B0DBXJTRLK?tag=chefapprovedt-20",
+    affiliateUrl: "https://www.amazon.com/dp/B0F79BC6J5?tag=chefapprovedt-20",
     image: "/logo.png",
     price: "$25"
   }
