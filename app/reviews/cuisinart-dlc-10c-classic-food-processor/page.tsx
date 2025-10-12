@@ -36,7 +36,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedtools-20"
+      url: "https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
     }
   ],
   inStock: true,
@@ -161,7 +161,7 @@ export default function CuisinartDLC10CReviewPage() {
             my original model last three decades.
           </p>
           <a
-            href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedtools-20"
+            href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
             target="_blank"
             rel="nofollow noopener"
             style={{
@@ -222,7 +222,7 @@ export default function CuisinartDLC10CReviewPage() {
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
 
           <a
-            href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedtools-20"
+            href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
             target="_blank"
             rel="nofollow noopener"
             style={{
@@ -449,7 +449,7 @@ export default function CuisinartDLC10CReviewPage() {
             After 30 years of testing, this is one of the best products I&apos;ve ever owned.
           </p>
           <a
-            href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedtools-20"
+            href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
             target="_blank"
             rel="nofollow noopener"
             style={{
@@ -846,7 +846,7 @@ export default function CuisinartDLC10CReviewPage() {
             </p>
 
             <a
-              href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedtools-20"
+              href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
               target="_blank"
               rel="nofollow noopener"
               style={{

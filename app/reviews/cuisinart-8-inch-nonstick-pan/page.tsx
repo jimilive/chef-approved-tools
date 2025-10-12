@@ -66,7 +66,7 @@ export default function Cuisinart8InchNonstickPanReview() {
             After 6 months of daily testing, this is my go-to pan for eggs and single servings.
           </p>
           <a
-            href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedtools-20"
+            href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
             target="_blank"
             rel="nofollow noopener"
             style={{
@@ -325,7 +325,7 @@ export default function Cuisinart8InchNonstickPanReview() {
             The pan I reach for every morning. Perfect size, perfect nonstick, perfect results.
           </p>
           <a
-            href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedtools-20"
+            href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
             target="_blank"
             rel="nofollow noopener"
             style={{
@@ -811,7 +811,7 @@ export default function Cuisinart8InchNonstickPanReview() {
               and small-batch cooking.
             </p>
             <a
-              href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedtools-20"
+              href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
               target="_blank"
               rel="nofollow noopener"
               style={{

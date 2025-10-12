@@ -172,11 +172,11 @@ export default function KitchenAidReviewPage() {
           <div className="flex flex-wrap gap-2 text-sm">
             <a href="#testing" aria-label="Jump to 18 months testing results section" className="text-orange-600 hover:text-orange-800">18-Month Testing</a>
             <span className="text-slate-400">|</span>
-            <a href="#who-should-buy" aria-label="Jump to buyer recommendation section" className="text-orange-600 hover:text-orange-800">Who Should Buy</a>
-            <span className="text-slate-400">|</span>
             <a href="#comparison" aria-label="Jump to competitor comparison section" className="text-orange-600 hover:text-orange-800">vs. Competitors</a>
             <span className="text-slate-400">|</span>
             <a href="#who-should-buy" aria-label="Jump to buyer recommendation section" className="text-orange-600 hover:text-orange-800">Who Should Buy</a>
+            <span className="text-slate-400">|</span>
+            <a href="#roi" aria-label="Jump to ROI analysis section" className="text-orange-600 hover:text-orange-800">ROI Analysis</a>
             <span className="text-slate-400">|</span>
             <a href="#verdict" aria-label="Jump to final verdict section" className="text-orange-600 hover:text-orange-800">Final Verdict</a>
           </div>
@@ -498,7 +498,7 @@ export default function KitchenAidReviewPage() {
         </section>
 
         {/* Cost Per Use Analysis */}
-        <section className="mb-8">
+        <section className="mb-8" id="roi">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Cost-Per-Use Analysis: Restaurant P&L Perspective</h2>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <p className="text-slate-700 mb-4">

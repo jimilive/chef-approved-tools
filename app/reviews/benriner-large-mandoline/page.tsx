@@ -66,7 +66,7 @@ export default function BenrinerLargeMandolineReview() {
         <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Best Price:</h3>
 
         <a
-          href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedtools-20"
+          href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
           target="_blank"
           rel="nofollow noopener"
           style={{
@@ -322,7 +322,7 @@ export default function BenrinerLargeMandolineReview() {
         <h3 style={{ marginTop: 0, fontSize: '22px' }}>Ready to Experience Professional Precision?</h3>
 
         <a
-          href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedtools-20"
+          href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
           target="_blank"
           rel="nofollow noopener"
           style={{
@@ -700,7 +700,7 @@ export default function BenrinerLargeMandolineReview() {
         </p>
 
         <a
-          href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedtools-20"
+          href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
           target="_blank"
           rel="nofollow noopener"
           style={{

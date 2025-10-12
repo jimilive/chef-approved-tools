@@ -65,7 +65,7 @@ export default function HowToSteelAKnife() {
             ✅ <strong>Consistent performance</strong> across proteins, veggies, and herbs.
           </li>
           <li style={{ marginBottom: '15px' }}>
-            ✅ <strong>Protects your investment</strong> in quality blades like the <a href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedtools-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox 8&quot; Chef&apos;s Knife</a> or the <a href="https://www.amazon.com/dp/B0000CF94L?tag=chefapprovedtools-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox 10&quot; Chef&apos;s Knife</a>.
+            ✅ <strong>Protects your investment</strong> in quality blades like the <a href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox 8&quot; Chef&apos;s Knife</a> or the <a href="https://www.amazon.com/dp/B0000CF94L?tag=chefapprovedt-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox 10&quot; Chef&apos;s Knife</a>.
           </li>
         </ul>
 
@@ -92,13 +92,13 @@ export default function HowToSteelAKnife() {
         <h3>1. A Quality Honing Steel</h3>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          The essential tool here is a dependable <strong>honing steel</strong>. The <a href="https://www.amazon.com/dp/B00004RFMT?tag=chefapprovedtools-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Henckels 10-Inch Sharpening Steel</a> is a classic: balanced, grippy, and durable, with just enough abrasion to realign an edge without stripping metal. It&apos;s the same kind I&apos;ve used for decades in professional kitchens.
+          The essential tool here is a dependable <strong>honing steel</strong>. The <a href="https://www.amazon.com/dp/B00004RFMT?tag=chefapprovedt-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Henckels 10-Inch Sharpening Steel</a> is a classic: balanced, grippy, and durable, with just enough abrasion to realign an edge without stripping metal. It&apos;s the same kind I&apos;ve used for decades in professional kitchens.
         </p>
 
         <h3>2. A Chef&apos;s Knife Worth Caring For</h3>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Your knife should already be sharp. The <a href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedtools-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox 8-Inch Chef&apos;s Knife</a> is perfect for home cooks, while the <a href="https://www.amazon.com/dp/B0000CF94L?tag=chefapprovedtools-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox 10-Inch Chef&apos;s Knife</a> offers extra reach and heft for larger jobs. Both respond beautifully to a steel.
+          Your knife should already be sharp. The <a href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox 8-Inch Chef&apos;s Knife</a> is perfect for home cooks, while the <a href="https://www.amazon.com/dp/B0000CF94L?tag=chefapprovedt-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox 10-Inch Chef&apos;s Knife</a> offers extra reach and heft for larger jobs. Both respond beautifully to a steel.
         </p>
       </section>
 
@@ -213,13 +213,13 @@ export default function HowToSteelAKnife() {
 
           <ul style={{ fontSize: '16px', lineHeight: '1.8', listStyle: 'none', padding: 0 }}>
             <li style={{ marginBottom: '15px' }}>
-              🪄 <a href="https://www.amazon.com/dp/B00004RFMT?tag=chefapprovedtools-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Henckels 10-Inch Sharpening Steel</a>
+              🪄 <a href="https://www.amazon.com/dp/B00004RFMT?tag=chefapprovedt-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Henckels 10-Inch Sharpening Steel</a>
             </li>
             <li style={{ marginBottom: '15px' }}>
-              🔪 <a href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedtools-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox 8&quot; Chef&apos;s Knife</a>
+              🔪 <a href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox 8&quot; Chef&apos;s Knife</a>
             </li>
             <li style={{ marginBottom: '15px' }}>
-              🍖 <a href="https://www.amazon.com/dp/B0000CF94L?tag=chefapprovedtools-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox 10&quot; Chef&apos;s Knife</a>
+              🍖 <a href="https://www.amazon.com/dp/B0000CF94L?tag=chefapprovedt-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox 10&quot; Chef&apos;s Knife</a>
             </li>
           </ul>
 
@@ -241,7 +241,7 @@ export default function HowToSteelAKnife() {
         </p>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Grab your <a href="https://www.amazon.com/dp/B00004RFMT?tag=chefapprovedtools-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Henckels Honing Steel</a>, pick up your favorite <a href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedtools-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox Knife</a>, and keep that edge chef-sharp—because the best cooks always respect their tools.
+          Grab your <a href="https://www.amazon.com/dp/B00004RFMT?tag=chefapprovedt-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Henckels Honing Steel</a>, pick up your favorite <a href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20" rel="nofollow noopener" target="_blank" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox Knife</a>, and keep that edge chef-sharp—because the best cooks always respect their tools.
         </p>
       </section>
 

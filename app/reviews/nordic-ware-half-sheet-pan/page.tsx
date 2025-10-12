@@ -77,7 +77,7 @@ export default function NordicWareHalfSheetPanReview() {
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
 
           <a
-            href="https://www.amazon.com/Nordic-Ware-Natural-Aluminum-Commercial/dp/B0049C2S32?&linkCode=ll1&tag=chefapprovedtools-20&linkId=n1o2r3d4i5c6w7a8r9e0s1h2e3e4t5p6"
+            href="https://www.amazon.com/Nordic-Ware-Natural-Aluminum-Commercial/dp/B0049C2S32?&linkCode=ll1&tag=chefapprovedt-20&linkId=n1o2r3d4i5c6w7a8r9e0s1h2e3e4t5p6"
             target="_blank"
             rel="nofollow noopener"
             style={{
@@ -887,7 +887,7 @@ export default function NordicWareHalfSheetPanReview() {
           </p>
 
           <a
-            href="https://www.amazon.com/Nordic-Ware-Natural-Aluminum-Commercial/dp/B0049C2S32?&linkCode=ll1&tag=chefapprovedtools-20&linkId=n1o2r3d4i5c6w7a8r9e0s1h2e3e4t5p6"
+            href="https://www.amazon.com/Nordic-Ware-Natural-Aluminum-Commercial/dp/B0049C2S32?&linkCode=ll1&tag=chefapprovedt-20&linkId=n1o2r3d4i5c6w7a8r9e0s1h2e3e4t5p6"
             target="_blank"
             rel="nofollow noopener"
             style={{

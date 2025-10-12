@@ -66,7 +66,7 @@ export default function MethodAllPurposeCleanerReview() {
             After 5 years of testing, this is my only kitchen cleaner. Powerful AND non-toxic.
           </p>
           <a
-            href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedtools-20"
+            href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
             target="_blank"
             rel="nofollow noopener"
             style={{
@@ -350,7 +350,7 @@ export default function MethodAllPurposeCleanerReview() {
             The only kitchen cleaner I&apos;ve used for 5 years. Powerful, safe, and effective.
           </p>
           <a
-            href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedtools-20"
+            href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
             target="_blank"
             rel="nofollow noopener"
             style={{
@@ -842,7 +842,7 @@ export default function MethodAllPurposeCleanerReview() {
               The unicorn is real.
             </p>
             <a
-              href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedtools-20"
+              href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
               target="_blank"
               rel="nofollow noopener"
               style={{

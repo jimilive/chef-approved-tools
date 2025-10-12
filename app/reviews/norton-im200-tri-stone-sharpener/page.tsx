@@ -77,7 +77,7 @@ export default function NortonTriStoneSharpenerReview() {
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
 
           <a
-            href="https://www.amazon.com/Norton-IM200-11-5-Inch-Sharpening-Stone/dp/B000XK0FMU?&linkCode=ll1&tag=chefapprovedtools-20&linkId=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
+            href="https://www.amazon.com/Norton-IM200-11-5-Inch-Sharpening-Stone/dp/B000XK0FMU?&linkCode=ll1&tag=chefapprovedt-20&linkId=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
             target="_blank"
             rel="nofollow noopener"
             style={{
@@ -935,7 +935,7 @@ export default function NortonTriStoneSharpenerReview() {
           </p>
 
           <a
-            href="https://www.amazon.com/Norton-IM200-11-5-Inch-Sharpening-Stone/dp/B000XK0FMU?&linkCode=ll1&tag=chefapprovedtools-20&linkId=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
+            href="https://www.amazon.com/Norton-IM200-11-5-Inch-Sharpening-Stone/dp/B000XK0FMU?&linkCode=ll1&tag=chefapprovedt-20&linkId=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
             target="_blank"
             rel="nofollow noopener"
             style={{

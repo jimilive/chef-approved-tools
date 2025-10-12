@@ -49,7 +49,7 @@ export default function DiamondCrystalKosherSaltReview() {
         <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Best Price:</h3>
 
         <a
-          href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedtools-20"
+          href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
           target="_blank"
           rel="nofollow noopener"
           style={{
@@ -205,7 +205,7 @@ export default function DiamondCrystalKosherSaltReview() {
           Ready to upgrade to professional-standard salt?
         </p>
         <a
-          href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedtools-20"
+          href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
           target="_blank"
           rel="nofollow noopener"
           style={{
@@ -498,7 +498,7 @@ export default function DiamondCrystalKosherSaltReview() {
             </div>
             <div>
               <a
-                href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedtools-20"
+                href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
                 target="_blank"
                 rel="nofollow noopener"
                 style={{
@@ -650,7 +650,7 @@ export default function DiamondCrystalKosherSaltReview() {
         </p>
 
         <a
-          href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedtools-20"
+          href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
           target="_blank"
           rel="nofollow noopener"
           style={{

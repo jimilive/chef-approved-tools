@@ -244,7 +244,7 @@ export default function WhyChefsUseKosherSalt() {
         }}>
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Ready to Cook with Professional-Grade Salt?</h3>
           <a
-            href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedtools-20"
+            href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
             target="_blank"
             rel="nofollow noopener"
             style={{

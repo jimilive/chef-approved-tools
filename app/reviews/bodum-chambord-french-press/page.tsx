@@ -50,7 +50,7 @@ export default function BodumChambordFrenchPressReview() {
         <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
 
         <a
-          href="https://www.amazon.com/Bodum-Chambord-French-Coffee-Stainless/dp/B00005LM0S?tag=chefapprovedtools-20"
+          href="https://www.amazon.com/Bodum-Chambord-French-Coffee-Stainless/dp/B00005LM0S?tag=chefapprovedt-20"
           target="_blank"
           rel="nofollow noopener"
           style={{
@@ -231,7 +231,7 @@ export default function BodumChambordFrenchPressReview() {
           Ready for 24+ years of perfect coffee?
         </p>
         <a
-          href="https://www.amazon.com/Bodum-Chambord-French-Coffee-Stainless/dp/B00005LM0S?tag=chefapprovedtools-20"
+          href="https://www.amazon.com/Bodum-Chambord-French-Coffee-Stainless/dp/B00005LM0S?tag=chefapprovedt-20"
           target="_blank"
           rel="nofollow noopener"
           style={{
@@ -610,7 +610,7 @@ export default function BodumChambordFrenchPressReview() {
         </p>
 
         <a
-          href="https://www.amazon.com/Bodum-Chambord-French-Coffee-Stainless/dp/B00005LM0S?tag=chefapprovedtools-20"
+          href="https://www.amazon.com/Bodum-Chambord-French-Coffee-Stainless/dp/B00005LM0S?tag=chefapprovedt-20"
           target="_blank"
           rel="nofollow noopener"
           style={{
