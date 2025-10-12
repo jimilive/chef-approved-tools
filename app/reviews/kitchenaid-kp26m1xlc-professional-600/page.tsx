@@ -778,7 +778,7 @@ export default function KitchenAidProfessional600ReviewPage() {
             <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-lg mt-6">
               <p className="text-slate-800 text-sm mb-0">
                 <strong>⚠️ Space Planning:</strong> Measure your counter height carefully. With bowl-lift raised,
-                you need approximately 18 inches of vertical clearance. The footprint requires about 12" x 15" of
+                you need approximately 18 inches of vertical clearance. The footprint requires about 12&quot; x 15&quot; of
                 dedicated counter space. This is not a mixer you&apos;ll want to store in a cabinet between uses.
               </p>
             </div>

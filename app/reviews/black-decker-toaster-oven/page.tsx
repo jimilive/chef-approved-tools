@@ -369,7 +369,7 @@ export default function BlackDeckerToasterOvenReview() {
 
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
-                &quot;Was skeptical about the low price, but it's outlasted two microwaves and a coffee maker. Sometimes simple design is the most reliable.&quot;
+                &quot;Was skeptical about the low price, but it&apos;s outlasted two microwaves and a coffee maker. Sometimes simple design is the most reliable.&quot;
               </p>
               <p className="text-sm text-slate-500">— Amazon verified purchaser (K.B., April 2024)</p>
             </div>
@@ -796,7 +796,7 @@ export default function BlackDeckerToasterOvenReview() {
 
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg mt-6">
               <p className="text-slate-800 text-sm mb-0">
-                <strong>💡 Space Requirements:</strong> Requires approximately 17" x 12" of counter space. Allow 4-6 inches of clearance above for heat ventilation. Perfect for most standard kitchen counters.
+                <strong>💡 Space Requirements:</strong> Requires approximately 17&quot; x 12&quot; of counter space. Allow 4-6 inches of clearance above for heat ventilation. Perfect for most standard kitchen counters.
               </p>
             </div>
           </div>
