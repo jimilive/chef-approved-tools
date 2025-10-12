@@ -310,6 +310,41 @@ export default function BenrinerLargeMandolineReview() {
         blades are available at reasonable prices.
       </p>
 
+      {/* Mid-Article CTA */}
+      <div style={{
+        background: '#fff3cd',
+        padding: '25px',
+        margin: '25px 0',
+        borderRadius: '8px',
+        textAlign: 'center',
+        border: '2px solid #ffc107'
+      }}>
+        <h3 style={{ marginTop: 0, fontSize: '22px' }}>Ready to Experience Professional Precision?</h3>
+
+        <a
+          href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedtools-20"
+          target="_blank"
+          rel="nofollow noopener"
+          style={{
+            display: 'inline-block',
+            background: '#ff9900',
+            color: 'white',
+            padding: '15px 40px',
+            margin: '10px',
+            textDecoration: 'none',
+            borderRadius: '6px',
+            fontWeight: 'bold',
+            fontSize: '18px'
+          }}
+        >
+          Check Price on Amazon →
+        </a>
+
+        <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
+          💡 Price updated daily. We earn commission at no extra cost to you.
+        </p>
+      </div>
+
       <h2>Maintenance and Cleaning</h2>
 
       <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
@@ -481,6 +516,24 @@ export default function BenrinerLargeMandolineReview() {
           background: '#f8f9fa',
           borderRadius: '6px'
         }}>
+          <h3 itemProp="name">What vegetables work best on a mandoline?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+            <div itemProp="text">
+              <p><strong>Answer:</strong> Excellent for: cucumbers, potatoes, radishes,
+              carrots, zucchini, apples, onions, cabbage. Basically any firm vegetable
+              or fruit that you want uniformly sliced.</p>
+              <p>Avoid: very soft items like tomatoes (unless extremely ripe), leafy greens,
+              or anything too irregular in shape. Soft items get crushed rather than cleanly sliced.</p>
+            </div>
+          </div>
+        </div>
+
+        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          margin: '20px 0',
+          padding: '20px',
+          background: '#f8f9fa',
+          borderRadius: '6px'
+        }}>
           <h3 itemProp="name">Can you julienne with a Benriner?</h3>
           <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
             <div itemProp="text">
@@ -506,24 +559,6 @@ export default function BenrinerLargeMandolineReview() {
               <p>Always clean with extreme caution. The blade is sharp enough to cut through
               sponges effortlessly. Many professionals keep a dedicated brush just for
               mandoline cleaning.</p>
-            </div>
-          </div>
-        </div>
-
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">What vegetables work best on a mandoline?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> Excellent for: cucumbers, potatoes, radishes,
-              carrots, zucchini, apples, onions, cabbage. Basically any firm vegetable
-              or fruit that you want uniformly sliced.</p>
-              <p>Avoid: very soft items like tomatoes (unless extremely ripe), leafy greens,
-              or anything too irregular in shape. Soft items get crushed rather than cleanly sliced.</p>
             </div>
           </div>
         </div>
@@ -810,7 +845,7 @@ export default function BenrinerLargeMandolineReview() {
           })}
         </p>
         <p style={{ margin: '10px 0' }}>
-          <strong>💬 Questions about mandolines?</strong> Leave a comment below—I read
+          <strong>💬 Questions about mandolines?</strong> <a href="/contact">Contact me</a>—I read
           and respond to every question.
         </p>
       </div>
