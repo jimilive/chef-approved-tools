@@ -18,9 +18,14 @@ jobs:
       - name: Extract Amazon Links
         id: extract
         run: |
-          # Extract all amzn.to links from review pages
-          links=$(grep -r "amzn\.to" app/reviews --include="*.tsx" | grep -o "https://amzn\.to/[a-zA-Z0-9]*" | sort -u)
-          echo "$links" > /tmp/links.txt
+          # Extract all Amazon affiliate links (both amzn.to short links and full amazon.com URLs)
+          # Search in app/ directory for all .tsx files
+          {
+            # Extract full amazon.com URLs with our affiliate tag
+            grep -rh "amazon\.com" app --include="*.tsx" | grep -o "https://www\.amazon\.com[^\"' ]*tag=chefapprovedt-20" || true
+            # Extract any remaining amzn.to short links
+            grep -rh "amzn\.to" app --include="*.tsx" | grep -o "https://amzn\.to/[a-zA-Z0-9]*" || true
+          } | sort -u > /tmp/links.txt
           echo "Found $(wc -l < /tmp/links.txt) unique affiliate links"
 
       - name: Test Links with Browser Headers
