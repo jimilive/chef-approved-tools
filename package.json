@@ -14,7 +14,13 @@
     "lighthouse": "lhci autorun",
     "optimize": "npm run build && npm run lighthouse",
     "deploy:netlify": "netlify deploy --prod --dir=.next",
-    "preview": "npm run build && npm start"
+    "preview": "npm run build && npm start",
+    "review-audit": "node scripts/review-tools/review-audit.js",
+    "review-fix": "node scripts/review-tools/review-fix.js",
+    "review-validate": "node scripts/review-tools/review-validate.js",
+    "batch-audit": "node scripts/review-tools/batch-audit.js",
+    "testimonial-gen": "node scripts/review-tools/testimonial-gen.js",
+    "specs-finder": "node scripts/review-tools/specs-finder.js"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.8",
