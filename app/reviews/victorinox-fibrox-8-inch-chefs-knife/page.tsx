@@ -80,7 +80,7 @@ export default function VictorinoxFibrox8InchReview() {
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Availability:</h3>
 
           <AffiliateButton
-            href="https://amzn.to/46WPJfp"
+            href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
             merchant="amazon"
             product="victorinox-fibrox-8-inch-chefs-knife"
             position="above_fold"
@@ -245,7 +245,7 @@ export default function VictorinoxFibrox8InchReview() {
             Ready to experience professional-quality cutting?
           </p>
           <AffiliateButton
-            href="https://amzn.to/46WPJfp"
+            href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
             merchant="amazon"
             product="victorinox-fibrox-8-inch-chefs-knife"
             position="mid_article"
@@ -627,7 +627,7 @@ export default function VictorinoxFibrox8InchReview() {
                 </div>
                 <div>
                   <AffiliateButton
-                    href="https://amzn.to/46WPJfp"
+                    href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
                     merchant="amazon"
                     product="victorinox-fibrox-8-inch-chefs-knife"
                     position="related_products"
@@ -771,7 +771,7 @@ export default function VictorinoxFibrox8InchReview() {
             </p>
 
             <AffiliateButton
-              href="https://amzn.to/46WPJfp"
+              href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
               merchant="amazon"
               product="victorinox-fibrox-8-inch-chefs-knife"
               position="final_cta"

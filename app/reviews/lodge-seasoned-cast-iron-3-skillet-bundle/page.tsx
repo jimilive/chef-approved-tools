@@ -30,7 +30,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://amzn.to/46JMVUd"
+      url: "https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
     }
   ],
   inStock: true,
@@ -192,7 +192,7 @@ export default function Lodge3SkilletBundleReview() {
           </p>
 
           <a
-            href="https://amzn.to/46JMVUd"
+            href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
             target="_blank"
             rel="nofollow noopener"
             style={{
@@ -416,7 +416,7 @@ export default function Lodge3SkilletBundleReview() {
             Ready for restaurant-quality cast iron?
           </p>
           <a 
-            href="https://amzn.to/46JMVUd"
+            href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
             target="_blank"
             rel="nofollow noopener"
             style={{
@@ -645,7 +645,7 @@ export default function Lodge3SkilletBundleReview() {
                 </div>
                 <div>
                   <a 
-                    href="https://amzn.to/46JMVUd"
+                    href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
                     target="_blank"
                     rel="nofollow noopener"
                     style={{
@@ -1168,7 +1168,7 @@ export default function Lodge3SkilletBundleReview() {
             </p>
 
             <a
-              href="https://amzn.to/46JMVUd"
+              href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
               target="_blank"
               rel="nofollow noopener"
               style={{

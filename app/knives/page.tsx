@@ -18,7 +18,7 @@ export default function KnivesPage() {
       id: "victorinox-fibrox-8-inch-chefs-knife",
       name: "Victorinox Fibrox Pro 8\" Chef's Knife",
       brand: "Victorinox",
-      affiliateUrl: "https://amzn.to/46WPJfp",
+      affiliateUrl: "https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20",
       slug: "victorinox-fibrox-8-inch-chefs-knife",
       description: "Perfect all-purpose chef's knife tested through decades of professional cooking"
     },
@@ -26,7 +26,7 @@ export default function KnivesPage() {
       id: "victorinox-4-inch-paring-knife",
       name: "Victorinox 4\" Paring Knife",
       brand: "Victorinox",
-      affiliateUrl: "https://amzn.to/4gVm0Le",
+      affiliateUrl: "https://www.amazon.com/dp/B0001VQIP6?tag=chefapprovedt-20",
       slug: "victorinox-4-inch-paring-knife",
       description: "Precision paring knife for detailed work - the exact knife I've used for 40 years"
     },
@@ -42,7 +42,7 @@ export default function KnivesPage() {
       id: "victorinox-offset-bread-knife",
       name: "Victorinox 9\" Offset Bread Knife",
       brand: "Victorinox",
-      affiliateUrl: "https://amzn.to/4nAIR4F",
+      affiliateUrl: "https://www.amazon.com/dp/B00K3SWD98?tag=chefapprovedt-20",
       slug: "victorinox-offset-bread-knife",
       description: "Offset serrated knife for bread and tomatoes - superior knuckle clearance"
     },

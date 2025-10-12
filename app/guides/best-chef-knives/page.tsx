@@ -37,7 +37,7 @@ const topKnives = [
     bestFor: 'Best Value for Money',
     tag: 'Best Value',
     tagColor: 'bg-green-500',
-    affiliateUrl: 'https://amzn.to/46WPJfp',
+    affiliateUrl: 'https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20',
     quickPros: ['Incredible value', 'Restaurant-proven', 'Easy to sharpen'],
     quickCons: ['Basic handle', 'Less prestige']
   },
@@ -51,7 +51,7 @@ const topKnives = [
     bestFor: 'Large Volume Prep',
     tag: 'Best for Pros',
     tagColor: 'bg-blue-500',
-    affiliateUrl: 'https://amzn.to/3YRuqKV',
+    affiliateUrl: 'https://www.amazon.com/dp/B0000CF94L?tag=chefapprovedt-20',
     quickPros: ['Longer blade for efficiency', 'Restaurant standard', 'Budget-friendly'],
     quickCons: ['Too big for some', 'Requires counter space']
   },
