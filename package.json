@@ -17,6 +17,8 @@
     "preview": "npm run build && npm start",
     "review-audit": "node scripts/review-tools/review-audit.js",
     "review-fix": "node scripts/review-tools/review-fix.js",
+    "review-quick-fix": "node scripts/review-tools/review-quick-fix.js",
+    "review-add-sections": "node scripts/review-tools/review-add-sections.js",
     "review-validate": "node scripts/review-tools/review-validate.js",
     "batch-audit": "node scripts/review-tools/batch-audit.js",
     "testimonial-gen": "node scripts/review-tools/testimonial-gen.js",

@@ -57,20 +57,43 @@ Shows:
 - Unescaped apostrophes
 - Missing sections
 
-### 3. Auto-fix mechanical issues
+### 3a. Quick-fix technical issues ONLY (recommended for complete reviews)
+```bash
+npm run review-quick-fix oxo-good-grips-swivel-peeler
+```
+
+Automatically fixes build-breaking issues:
+- Creates backup
+- Adds missing imports
+- Fixes all apostrophes (breaks build!)
+- Converts raw `<a>` tags → `<AffiliateButton>`
+
+**Does NOT add TODO sections** - perfect for reviews that just need technical cleanup.
+
+### 3b. Add content section templates (for reviews needing expansion)
+```bash
+npm run review-add-sections oxo-good-grips-swivel-peeler
+```
+
+Adds TODO templates for:
+- Customer Testimonials
+- Cost-Per-Use Analysis
+- Performance Metrics
+- Specifications Table
+- Competitor Comparison
+- FAQ Section
+- Quick Navigation
+
+**Use AFTER quick-fix if you want to expand the review.**
+
+### 3c. Do both at once (legacy command)
 ```bash
 npm run review-fix oxo-good-grips-swivel-peeler
 ```
 
-Automatically:
-- Creates backup
-- Adds missing imports
-- Creates productData skeleton
-- Fixes all apostrophes
-- Converts affiliate links
-- Adds section templates
-- Adds Quick Navigation
-- Adds schemas
+Runs both quick-fix AND adds sections - same as running:
+1. `npm run review-quick-fix <slug>`
+2. `npm run review-add-sections <slug>`
 
 ### 4. Fill in creative content
 ```bash
