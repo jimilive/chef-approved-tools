@@ -6,14 +6,6 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import PriceDisplay from '@/components/PriceDisplay'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 
-
-import { Tier2Badge } from '@/components/ReviewTierBadge';
-import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
-import Link from 'next/link';
-import type { Metadata } from 'next';
-
 const productData = {
   name: "Robot Coupe R2 Dice Combination Continuous Feed Food Processor",
   slug: "robot-coupe-r2-dice",
@@ -182,15 +174,24 @@ export default function RobotCoupeR2DiceReview() {
           }}>
             <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Availability:</h3>
 
-            <AffiliateButton
+            <a
               href="https://amzn.to/4gVgENj"
-              merchant="amazon"
-              product="{productData.slug}"
-              position="above_fold"
-              variant="primary"
+              target="_blank"
+              rel="nofollow noopener"
+              style={{
+                display: 'inline-block',
+                background: '#ff9900',
+                color: 'white',
+                padding: '15px 40px',
+                margin: '10px',
+                textDecoration: 'none',
+                borderRadius: '6px',
+                fontWeight: 'bold',
+                fontSize: '18px'
+              }}
             >
               View on Amazon →
-            </AffiliateButton>
+            </a>
 
             <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
               💡 We earn commission at no extra cost to you.<br/>
@@ -385,15 +386,23 @@ export default function RobotCoupeR2DiceReview() {
           <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
             Convinced this is right for your operation?
           </p>
-          <AffiliateButton
+          <a 
             href="https://amzn.to/4gVgENj"
-            merchant="amazon"
-            product="{productData.slug}"
-            position="mid_article"
-            variant="secondary"
+            target="_blank"
+            rel="nofollow noopener"
+            style={{
+              display: 'inline-block',
+              background: '#0066cc',
+              color: 'white',
+              padding: '12px 30px',
+              margin: '10px',
+              textDecoration: 'none',
+              borderRadius: '5px',
+              fontWeight: 'bold'
+            }}
           >
             Check Current Availability →
-          </AffiliateButton>
+          </a>
         </div>
 
         {/* Mid-Content Lead Magnet */}
@@ -879,15 +888,24 @@ export default function RobotCoupeR2DiceReview() {
               Check current availability and invest in equipment that pays for itself:
             </p>
 
-            <AffiliateButton
+            <a
               href="https://amzn.to/4gVgENj"
-              merchant="amazon"
-              product="{productData.slug}"
-              position="mid_article"
-              variant="secondary"
+              target="_blank"
+              rel="nofollow noopener"
+              style={{
+                display: 'inline-block',
+                background: '#ff9900',
+                color: 'white',
+                padding: '18px 50px',
+                margin: '10px',
+                textDecoration: 'none',
+                borderRadius: '6px',
+                fontWeight: 'bold',
+                fontSize: '20px'
+              }}
             >
               Check Current Price →
-            </AffiliateButton>
+            </a>
 
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
               💡 Commercial equipment suppliers will be added soon

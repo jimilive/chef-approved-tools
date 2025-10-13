@@ -191,15 +191,24 @@ export default function Lodge3SkilletBundleReview() {
             Best value in cast iron - restaurant quality at exceptional price
           </p>
 
-          <AffiliateButton
+          <a
             href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="{productData.slug}"
-            position="above_fold"
-            variant="primary"
+            target="_blank"
+            rel="nofollow noopener"
+            style={{
+              display: 'inline-block',
+              background: '#ff9900',
+              color: 'white',
+              padding: '15px 40px',
+              margin: '10px',
+              textDecoration: 'none',
+              borderRadius: '6px',
+              fontWeight: 'bold',
+              fontSize: '18px'
+            }}
           >
             View on Amazon →
-          </AffiliateButton>
+          </a>
 
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 We earn commission at no extra cost to you.<br/>
@@ -406,15 +415,23 @@ export default function Lodge3SkilletBundleReview() {
           <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
             Ready for restaurant-quality cast iron?
           </p>
-          <AffiliateButton
+          <a 
             href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="{productData.slug}"
-            position="mid_article"
-            variant="secondary"
+            target="_blank"
+            rel="nofollow noopener"
+            style={{
+              display: 'inline-block',
+              background: '#0066cc',
+              color: 'white',
+              padding: '12px 30px',
+              margin: '10px',
+              textDecoration: 'none',
+              borderRadius: '5px',
+              fontWeight: 'bold'
+            }}
           >
             Check Current Price →
-          </AffiliateButton>
+          </a>
         </div>
 
         {/* Cooking Performance Analysis */}
@@ -627,15 +644,23 @@ export default function Lodge3SkilletBundleReview() {
                   <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Prime shipping | ✓ Free returns</p>
                 </div>
                 <div>
-                  <AffiliateButton
+                  <a 
                     href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
-                    merchant="amazon"
-                    product="{productData.slug}"
-                    position="mid_article"
-                    variant="secondary"
+                    target="_blank"
+                    rel="nofollow noopener"
+                    style={{
+                      display: 'inline-block',
+                      background: '#ff9900',
+                      color: 'white',
+                      padding: '15px 30px',
+                      textDecoration: 'none',
+                      borderRadius: '5px',
+                      fontWeight: 'bold',
+                      whiteSpace: 'nowrap'
+                    }}
                   >
                     View on Amazon →
-                  </AffiliateButton>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1142,15 +1167,24 @@ export default function Lodge3SkilletBundleReview() {
               Outstanding value - restaurant quality at exceptional pricing
             </p>
 
-            <AffiliateButton
+            <a
               href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
-              merchant="amazon"
-              product="{productData.slug}"
-              position="final_cta"
-              variant="primary"
+              target="_blank"
+              rel="nofollow noopener"
+              style={{
+                display: 'inline-block',
+                background: '#ff9900',
+                color: 'white',
+                padding: '18px 50px',
+                margin: '10px',
+                textDecoration: 'none',
+                borderRadius: '6px',
+                fontWeight: 'bold',
+                fontSize: '20px'
+              }}
             >
               Check Current Price →
-            </AffiliateButton>
+            </a>
 
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
               💡 More retailers will be added soon for price comparison

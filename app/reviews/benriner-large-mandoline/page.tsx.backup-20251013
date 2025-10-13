@@ -3,14 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Tier1Badge } from '@/components/ReviewTierBadge';
 
-
-import { Tier2Badge } from '@/components/ReviewTierBadge';
-import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
-import Link from 'next/link';
-import type { Metadata } from 'next';
-
 export const metadata = {
   title: 'Benriner Large Mandoline Review: Professional Kitchen Test (2025)',
   description: 'Professional chef tests Benriner mandoline after years of restaurant use. Complete review: precision slicing, safety features, durability analysis.',
@@ -73,15 +65,24 @@ export default function BenrinerLargeMandolineReview() {
       }}>
         <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Best Price:</h3>
 
-        <AffiliateButton
+        <a
           href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
-          merchant="amazon"
-          product="{productData.slug}"
-          position="above_fold"
-          variant="primary"
+          target="_blank"
+          rel="nofollow noopener"
+          style={{
+            display: 'inline-block',
+            background: '#ff9900',
+            color: 'white',
+            padding: '15px 40px',
+            margin: '10px',
+            textDecoration: 'none',
+            borderRadius: '6px',
+            fontWeight: 'bold',
+            fontSize: '18px'
+          }}
         >
           View on Amazon →
-        </AffiliateButton>
+        </a>
 
         <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
           💡 Price updated daily. We earn commission at no extra cost to you.
@@ -320,15 +321,24 @@ export default function BenrinerLargeMandolineReview() {
       }}>
         <h3 style={{ marginTop: 0, fontSize: '22px' }}>Ready to Experience Professional Precision?</h3>
 
-        <AffiliateButton
+        <a
           href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
-          merchant="amazon"
-          product="{productData.slug}"
-          position="mid_article"
-          variant="secondary"
+          target="_blank"
+          rel="nofollow noopener"
+          style={{
+            display: 'inline-block',
+            background: '#ff9900',
+            color: 'white',
+            padding: '15px 40px',
+            margin: '10px',
+            textDecoration: 'none',
+            borderRadius: '6px',
+            fontWeight: 'bold',
+            fontSize: '18px'
+          }}
         >
           Check Price on Amazon →
-        </AffiliateButton>
+        </a>
 
         <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
           💡 Price updated daily. We earn commission at no extra cost to you.
@@ -689,15 +699,24 @@ export default function BenrinerLargeMandolineReview() {
           Check current price and transform your prep work:
         </p>
 
-        <AffiliateButton
+        <a
           href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
-          merchant="amazon"
-          product="{productData.slug}"
-          position="final_cta"
-          variant="primary"
+          target="_blank"
+          rel="nofollow noopener"
+          style={{
+            display: 'inline-block',
+            background: '#ff9900',
+            color: 'white',
+            padding: '18px 50px',
+            margin: '10px',
+            textDecoration: 'none',
+            borderRadius: '6px',
+            fontWeight: 'bold',
+            fontSize: '20px'
+          }}
         >
           View on Amazon →
-        </AffiliateButton>
+        </a>
 
       </div>
 

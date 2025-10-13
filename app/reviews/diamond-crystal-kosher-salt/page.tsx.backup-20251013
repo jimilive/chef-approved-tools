@@ -1,13 +1,5 @@
 import { Tier1Badge } from '@/components/ReviewTierBadge';
 
-
-import { Tier2Badge } from '@/components/ReviewTierBadge';
-import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
-import Link from 'next/link';
-import type { Metadata } from 'next';
-
 export const metadata = {
   title: 'Diamond Crystal Kosher Salt Review: 18-Year Test (2025)',
   description: 'Professional chef uses Diamond Crystal Kosher Salt for 18 years - 6 years in 200+ cover restaurant, 18 years at home. Complete review of texture, flavor, and why chefs prefer it.',
@@ -56,15 +48,24 @@ export default function DiamondCrystalKosherSaltReview() {
       }}>
         <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Best Price:</h3>
 
-        <AffiliateButton
+        <a
           href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
-          merchant="amazon"
-          product="{productData.slug}"
-          position="above_fold"
-          variant="primary"
+          target="_blank"
+          rel="nofollow noopener"
+          style={{
+            display: 'inline-block',
+            background: '#ff9900',
+            color: 'white',
+            padding: '15px 40px',
+            margin: '10px',
+            textDecoration: 'none',
+            borderRadius: '6px',
+            fontWeight: 'bold',
+            fontSize: '18px'
+          }}
         >
           View on Amazon →
-        </AffiliateButton>
+        </a>
 
         <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
           💡 Pricing updated daily. We earn commission at no extra cost to you.<br/>
@@ -203,15 +204,23 @@ export default function DiamondCrystalKosherSaltReview() {
         <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
           Ready to upgrade to professional-standard salt?
         </p>
-        <AffiliateButton
+        <a
           href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
-          merchant="amazon"
-          product="{productData.slug}"
-          position="mid_article"
-          variant="secondary"
+          target="_blank"
+          rel="nofollow noopener"
+          style={{
+            display: 'inline-block',
+            background: '#0066cc',
+            color: 'white',
+            padding: '12px 30px',
+            margin: '10px',
+            textDecoration: 'none',
+            borderRadius: '5px',
+            fontWeight: 'bold'
+          }}
         >
           Check Current Price →
-        </AffiliateButton>
+        </a>
       </div>
 
       {/* Technical Details */}
@@ -488,15 +497,23 @@ export default function DiamondCrystalKosherSaltReview() {
               <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Prime shipping | ✓ Subscribe &amp; Save available | ✓ 3-pack option</p>
             </div>
             <div>
-              <AffiliateButton
+              <a
                 href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
-                merchant="amazon"
-                product="{productData.slug}"
-                position="mid_article"
-                variant="secondary"
+                target="_blank"
+                rel="nofollow noopener"
+                style={{
+                  display: 'inline-block',
+                  background: '#ff9900',
+                  color: 'white',
+                  padding: '15px 30px',
+                  textDecoration: 'none',
+                  borderRadius: '5px',
+                  fontWeight: 'bold',
+                  whiteSpace: 'nowrap'
+                }}
               >
                 View on Amazon →
-              </AffiliateButton>
+              </a>
             </div>
           </div>
         </div>
@@ -632,15 +649,24 @@ export default function DiamondCrystalKosherSaltReview() {
           consistent seasoning makes.
         </p>
 
-        <AffiliateButton
+        <a
           href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
-          merchant="amazon"
-          product="{productData.slug}"
-          position="mid_article"
-          variant="secondary"
+          target="_blank"
+          rel="nofollow noopener"
+          style={{
+            display: 'inline-block',
+            background: '#ff9900',
+            color: 'white',
+            padding: '18px 50px',
+            margin: '10px',
+            textDecoration: 'none',
+            borderRadius: '6px',
+            fontWeight: 'bold',
+            fontSize: '20px'
+          }}
         >
           Check Current Price →
-        </AffiliateButton>
+        </a>
 
         <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
           💡 Often available in money-saving 3-packs. Subscribe &amp; Save for even better value.

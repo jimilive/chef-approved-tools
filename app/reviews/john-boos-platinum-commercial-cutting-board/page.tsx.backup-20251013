@@ -7,14 +7,6 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import PriceDisplay from '@/components/PriceDisplay'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 
-
-import { Tier2Badge } from '@/components/ReviewTierBadge';
-import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
-import Link from 'next/link';
-import type { Metadata } from 'next';
-
 const productData = {
   name: "John Boos Platinum Commercial Series Rectangular Wooden Maple Cutting Board 24x18x1.75\"",
   slug: "john-boos-platinum-commercial-cutting-board",
@@ -193,15 +185,24 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           }}>
             <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Availability:</h3>
 
-            <AffiliateButton
+            <a
               href="https://amzn.to/47jDzyG"
-              merchant="amazon"
-              product="{productData.slug}"
-              position="above_fold"
-              variant="primary"
+              target="_blank"
+              rel="nofollow noopener"
+              style={{
+                display: 'inline-block',
+                background: '#ff9900',
+                color: 'white',
+                padding: '15px 40px',
+                margin: '10px',
+                textDecoration: 'none',
+                borderRadius: '6px',
+                fontWeight: 'bold',
+                fontSize: '18px'
+              }}
             >
               View on Amazon →
-            </AffiliateButton>
+            </a>
 
             <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
               💡 We earn commission at no extra cost to you.<br/>
@@ -1034,15 +1035,24 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               This cutting board will outlive you and pass to your children:
             </p>
 
-            <AffiliateButton
+            <a
               href="https://amzn.to/47jDzyG"
-              merchant="amazon"
-              product="{productData.slug}"
-              position="mid_article"
-              variant="secondary"
+              target="_blank"
+              rel="nofollow noopener"
+              style={{
+                display: 'inline-block',
+                background: '#ff9900',
+                color: 'white',
+                padding: '18px 50px',
+                margin: '10px',
+                textDecoration: 'none',
+                borderRadius: '6px',
+                fontWeight: 'bold',
+                fontSize: '20px'
+              }}
             >
               View on Amazon →
-            </AffiliateButton>
+            </a>
 
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
               💡 More retailers will be added soon
