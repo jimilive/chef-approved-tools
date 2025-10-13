@@ -22,12 +22,14 @@ const {
   formatWarning
 } = require('./utils');
 
-const REQUIRED_IMPORTS = `import { Tier2Badge } from '@/components/ReviewTierBadge';
-import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
-import Link from 'next/link';
-import type { Metadata } from 'next';`;
+const REQUIRED_IMPORTS = [
+  { name: 'Tier2Badge', from: '@/components/ReviewTierBadge', statement: "import { Tier2Badge } from '@/components/ReviewTierBadge';" },
+  { name: 'FTCDisclosure', from: '@/components/FTCDisclosure', statement: "import FTCDisclosure from '@/components/FTCDisclosure';" },
+  { name: 'AffiliateButton', from: '@/components/AffiliateButton', statement: "import AffiliateButton from '@/components/AffiliateButton';" },
+  { name: 'generateProductReviewSchema', from: '@/lib/schema', statement: "import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';" },
+  { name: 'Link', from: 'next/link', statement: "import Link from 'next/link';" },
+  { name: 'Metadata', from: 'next', statement: "import type { Metadata } from 'next';" }
+];
 
 function quickFixReview(slug) {
   console.log(formatHeader(`⚡ Quick Fix Review: ${slug}`));
@@ -46,11 +48,12 @@ function quickFixReview(slug) {
   let changesMade = false;
 
   // 1. Add missing imports
-  if (!hasAllRequiredImports(content)) {
-    console.log(formatInfo('Adding missing imports...'));
-    content = addImports(content);
+  const missingImports = getMissingImports(content);
+  if (missingImports.length > 0) {
+    console.log(formatInfo(`Adding ${missingImports.length} missing imports...`));
+    content = addImports(content, missingImports);
     changesMade = true;
-    console.log(formatSuccess('✅ Added missing imports\n'));
+    console.log(formatSuccess(`✅ Added missing imports: ${missingImports.map(i => i.name).join(', ')}\n`));
   } else {
     console.log(formatSuccess('✅ All required imports present\n'));
   }
@@ -98,13 +101,13 @@ function quickFixReview(slug) {
   return { slug, changesMade };
 }
 
-function hasAllRequiredImports(content) {
-  return hasImport(content, 'AffiliateButton') &&
-         hasImport(content, 'generateProductReviewSchema') &&
-         hasImport(content, 'FTCDisclosure');
+function getMissingImports(content) {
+  return REQUIRED_IMPORTS.filter(imp => !hasImport(content, imp.name));
 }
 
-function addImports(content) {
+function addImports(content, missingImports) {
+  if (missingImports.length === 0) return content;
+
   const lines = content.split('\n');
   let insertIndex = 0;
 
@@ -122,7 +125,9 @@ function addImports(content) {
     insertIndex++;
   }
 
-  lines.splice(insertIndex, 0, '', REQUIRED_IMPORTS, '');
+  // Only add the imports that are actually missing
+  const importsToAdd = missingImports.map(imp => imp.statement).join('\n');
+  lines.splice(insertIndex, 0, importsToAdd);
   return lines.join('\n');
 }
 
