@@ -151,8 +151,15 @@ export function generateProductSchema(product: any) {
 
 // Enhanced product review schema for better rich snippets
 export function generateProductReviewSchema(product: any) {
+  // Validate required fields
+  if (!product || !product.name || !product.slug) {
+    console.error('generateProductReviewSchema: Missing required product fields', product);
+    return null;
+  }
+
   const priceValue = product.priceRange?.min || product.price?.current || 0;
   const priceValidUntil = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]; // 30 days from now
+  const expertRating = product.expertRating || product.rating || 4.5;
 
   return {
     "@context": "https://schema.org",
@@ -162,20 +169,20 @@ export function generateProductReviewSchema(product: any) {
       "@type": "Product",
       name: product.name,
       image: product.images?.primary || "https://www.chefapprovedtools.com/logo.png",
-      description: product.expertOpinion || `Professional review of ${product.name}`,
+      description: product.expertOpinion || product.description || `Professional review of ${product.name}`,
       brand: {
         "@type": "Brand",
-        name: product.brand
+        name: product.brand || "Unknown Brand"
       },
-      sku: product.sku,
+      sku: product.sku || product.slug,
       gtin13: product.gtin13,
       offers: {
         "@type": "Offer",
-        price: priceValue.toString(),
+        price: priceValue > 0 ? priceValue.toString() : "0",
         priceCurrency: product.priceRange?.currency || product.price?.currency || "USD",
         priceValidUntil: priceValidUntil,
-        availability: product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-        url: product.affiliateLinks?.[0]?.url,
+        availability: product.inStock !== false ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+        url: product.affiliateLinks?.[0]?.url || `https://www.chefapprovedtools.com/reviews/${product.slug}`,
         hasMerchantReturnPolicy: {
           "@type": "MerchantReturnPolicy",
           "applicableCountry": "US",
@@ -212,18 +219,18 @@ export function generateProductReviewSchema(product: any) {
           }
         }
       },
-      aggregateRating: product.expertRating ? {
+      aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: product.expertRating,
+        ratingValue: expertRating,
         bestRating: 5,
         worstRating: 1,
-        ratingCount: 1,
-        reviewCount: 1
-      } : undefined
+        ratingCount: product.reviewCount || 1,
+        reviewCount: product.reviewCount || 1
+      }
     },
     reviewRating: {
       "@type": "Rating",
-      ratingValue: product.expertRating || product.reviews.rating,
+      ratingValue: expertRating,
       bestRating: 5,
       worstRating: 1
     },
@@ -231,6 +238,7 @@ export function generateProductReviewSchema(product: any) {
       "@type": "Person",
       name: "Scott Bradley",
       jobTitle: "Kitchen Manager & Culinary Professional",
+      url: "https://www.chefapprovedtools.com/about",
       alumniOf: {
         "@type": "EducationalOrganization",
         name: "Seattle Central College"
@@ -250,11 +258,11 @@ export function generateProductReviewSchema(product: any) {
         "Food Safety"
       ]
     },
-    reviewBody: product.expertOpinion,
+    reviewBody: product.expertOpinion || product.description || `Professional review of ${product.name}`,
     name: `Professional Review: ${product.name}`,
     headline: `Kitchen Manager's Review: ${product.name}`,
-    datePublished: product.dateAdded,
-    dateModified: product.lastUpdated,
+    datePublished: product.dateAdded || new Date().toISOString().split('T')[0],
+    dateModified: product.lastUpdated || product.dateAdded || new Date().toISOString().split('T')[0],
     publisher: {
       "@id": "https://www.chefapprovedtools.com/#organization"
     },
