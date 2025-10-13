@@ -130,9 +130,9 @@ Checks:
 📈 SUMMARY
 Total reviews: 27
 Average word count: 3,847 words
-Tier 1: 21 (78%)
-Tier 2: 0 (0%)
-Tier 3: 6 (22%)
+Quality Level 1: 21 (78%)
+Quality Level 2: 0 (0%)
+Quality Level 3: 6 (22%)
 ```
 
 ---
@@ -294,7 +294,7 @@ npm run review-validate oxo-good-grips-swivel-peeler
 ✅ No raw affiliate links
 
 📝 CONTENT CHECKS:
-✅ Word count: 2,543 words (Tier 2 minimum met)
+✅ Word count: 2,543 words (Quality Level 2 minimum met)
 ✅ Has 6 customer testimonials
 ✅ Has cost-per-use analysis
 ✅ Has 8 FAQ items with schema
@@ -309,7 +309,7 @@ npm run review-validate oxo-good-grips-swivel-peeler
 ⚠️  Schema validation: Run manually
 
 🎯 RESULTS:
-Overall Grade: TIER 2 ✅
+Overall Grade: QUALITY LEVEL 2 ✅
 Ready to publish: YES ✅
 ```
 
@@ -457,7 +457,7 @@ npm run review-validate oxo-good-grips-swivel-peeler
 
 # 8. If validation passes, commit
 git add app/reviews/oxo-good-grips-swivel-peeler/page.tsx
-git commit -m "Upgrade OXO peeler review to Tier 2 quality"
+git commit -m "Upgrade OXO peeler review to Quality Level 2 quality"
 ```
 
 **Time:** 2.5-3 hours (vs. 4-5 hours without scripts)
@@ -485,7 +485,7 @@ npm run review-validate vitamix-5200
 
 # 6. Commit
 git add app/reviews/vitamix-5200/page.tsx
-git commit -m "Add Tier 2 components to Vitamix 5200 review"
+git commit -m "Add Quality Level 2 components to Vitamix 5200 review"
 ```
 
 **Time:** 2-2.5 hours (vs. 3-4 hours without scripts)

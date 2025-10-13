@@ -67,12 +67,12 @@ function validateReview(slug) {
   const wordCount = countWords(content);
   console.log(`Word count: ${wordCount} words`, end='');
   if (wordCount < 2500) {
-    console.log(formatWarning(` (Needs ${2500 - wordCount} more for Tier 2)`));
+    console.log(formatWarning(` (Quality indicator: Consider expanding)`));
     warningCount++;
   } else if (wordCount < 3500) {
-    console.log(formatSuccess(' (Tier 2 minimum met)'));
+    console.log(formatSuccess(' (Good depth for Quality Level 2)'));
   } else {
-    console.log(formatSuccess(' (Tier 1 quality)'));
+    console.log(formatSuccess(' (Excellent depth for Quality Level 1)'));
   }
 
   const sections = [
@@ -183,10 +183,41 @@ function validateReview(slug) {
   // Results
   console.log(formatHeader('🎯 RESULTS'));
 
-  const tier = wordCount >= 3500 ? 'TIER 1' : wordCount >= 2500 ? 'TIER 2' : 'TIER 3';
-  const tierColor = wordCount >= 2500 ? formatSuccess : formatWarning;
+  // Calculate Quality Level based on multiple factors, not just word count
+  let qualityScore = 0;
 
-  console.log(`Overall Grade: ${tierColor(tier)}`);
+  // Content depth (40 points max)
+  if (wordCount >= 3500) qualityScore += 15;
+  else if (wordCount >= 2500) qualityScore += 10;
+  else qualityScore += 5;
+
+  if (hasSection(content, 'testimonials')) qualityScore += 8;
+  if (hasSection(content, 'cost-analysis')) qualityScore += 5;
+  if (hasSection(content, 'performance')) qualityScore += 5;
+  if (hasSection(content, 'specs')) qualityScore += 4;
+  if (hasSection(content, 'comparison')) qualityScore += 3;
+
+  // SEO strength (20 points max)
+  if (hasSection(content, 'faq')) qualityScore += 8;
+  if (buttonCount >= 3) qualityScore += 6;
+  if (images === alts) qualityScore += 3;
+  if (content.includes('Quick Navigation')) qualityScore += 3;
+
+  // Structure (20 points max)
+  qualityScore += structureChecks.filter(c => c.test()).length * 2;
+
+  // Conversion (20 points max - deduct for issues)
+  qualityScore += 10; // Base conversion score
+  if (prices.length > 0) qualityScore -= 3;
+  if (buttonCount < 2) qualityScore -= 5;
+  if (rawLinks.length > 0) qualityScore -= 5;
+
+  const qualityLevel = qualityScore >= 90 ? 'QUALITY LEVEL 1' :
+                       qualityScore >= 75 ? 'QUALITY LEVEL 2' :
+                       'QUALITY LEVEL 3';
+  const levelColor = qualityScore >= 75 ? formatSuccess : formatWarning;
+
+  console.log(`Overall Grade: ${levelColor(qualityLevel)} (${qualityScore}/100 points)`);
 
   if (issueCount === 0 && warningCount === 0) {
     console.log(formatSuccess('Ready to publish: YES ✅\n'));
@@ -209,7 +240,8 @@ function validateReview(slug) {
 
   return {
     slug,
-    tier,
+    qualityLevel,
+    qualityScore,
     issueCount,
     warningCount,
     passed: issueCount === 0
