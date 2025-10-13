@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: 'Best Kitchen Tools for Home Cooks | Chef-Approved Reviews (2025)',
     template: '%s | Chef Approved Tools - Professional Kitchen Equipment Reviews'
   },
-  description: 'Discover the best chef-approved kitchen tools, tested and reviewed for home cooks. 21+ years of professional cooking. Shop smarter with expert recommendations on knives, cookware, and appliances.',
+  description: 'Discover the best chef-approved kitchen tools, tested and reviewed for home cooks. 23+ years of professional cooking. Shop smarter with expert recommendations on knives, cookware, and appliances.',
   keywords: [
     'professional kitchen tools',
     'restaurant equipment reviews',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         url: 'https://www.chefapprovedtools.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Scott Bradley - Professional Chef reviewing kitchen equipment with 21+ years restaurant experience'
+        alt: 'Scott Bradley - Professional Chef reviewing kitchen equipment with 23+ years restaurant experience'
       }
     ],
     locale: 'en_US',
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Chef Approved Kitchen Tools | Restaurant Manager Tested',
-    description: 'Professional kitchen equipment reviews by Scott Bradley. 21+ years restaurant experience, former Mellow Mushroom Kitchen Manager. Real reviews from real kitchens.',
+    description: 'Professional kitchen equipment reviews by Scott Bradley. 23+ years restaurant experience, former Mellow Mushroom Kitchen Manager. Real reviews from real kitchens.',
     images: ['https://www.chefapprovedtools.com/twitter-image.jpg'],
     creator: '@chefapprovedtools',
     site: '@chefapprovedtools',

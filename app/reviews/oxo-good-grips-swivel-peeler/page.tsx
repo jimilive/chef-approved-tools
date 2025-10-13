@@ -9,7 +9,7 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
   title: 'OXO Good Grips Swivel Peeler Review | 21+ Years Professional Use',
-  description: 'Professional chef review of the OXO Good Grips swivel peeler after 21+ years of professional cooking. The best peeler for comfort, performance, and durability.',
+  description: 'Professional chef review of the OXO Good Grips swivel peeler after 23+ years of professional cooking. The best peeler for comfort, performance, and durability.',
 }
 
 const productData = {
@@ -29,7 +29,7 @@ const productData = {
     "Comfortable non-slip grip prevents hand fatigue during extended use",
     "Sharp swivel blade glides through skins and follows contours effortlessly",
     "Dishwasher-safe construction with built-in potato eye remover",
-    "Exceptional durability - proven through 21+ years of professional use",
+    "Exceptional durability - proven through 23+ years of professional use",
     "Ergonomic design ideal for people with arthritis or hand issues",
     "Outstanding value at approximately $10"
   ],
@@ -43,7 +43,7 @@ const productData = {
     url: "https://amzn.to/4mZNiyT"
   }],
   expertRating: 5.0,
-  expertOpinion: "After 21+ years of professional cooking and testing dozens of peelers, this OXO swivel peeler is the one I reach for every single day - comfortable, reliable, and built to last.",
+  expertOpinion: "After 23+ years of professional cooking and testing dozens of peelers, this OXO swivel peeler is the one I reach for every single day - comfortable, reliable, and built to last.",
   dateAdded: "2025-01-15",
   lastUpdated: "2025-10-12"
 };
@@ -80,7 +80,7 @@ export default function OXOGoodGripsSwivelPeelerReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The peeler that just works - tested through 21+ years of professional cooking
+            The peeler that just works - tested through 23+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -293,7 +293,7 @@ export default function OXOGoodGripsSwivelPeelerReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 21+ years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 23+ years of professional cooking.
             At this price point, this is the easiest recommendation I can make. Buy one, thank me later.
           </p>
 
@@ -437,19 +437,19 @@ export default function OXOGoodGripsSwivelPeelerReview() {
               <h3 className="font-bold text-slate-900 mb-3">Real-World Value Calculation</h3>
               <ul className="space-y-2 text-slate-700">
                 <li>• <strong>Initial cost:</strong> ~$10</li>
-                <li>• <strong>Years of use:</strong> 21+ years (and still going)</li>
+                <li>• <strong>Years of use:</strong> 23+ years (and still going)</li>
                 <li>• <strong>Estimated uses:</strong> 3,000+ uses (peeling vegetables 2-3 times per week)</li>
                 <li>• <strong>Cost per use:</strong> Less than $0.01 per use</li>
               </ul>
             </div>
 
             <p className="text-slate-700 mb-4">
-              <strong>Value comparison:</strong> A cheap $2 peeler typically lasts 6-12 months before the blade dulls or handle breaks. Over 21 years, you&apos;d replace it 21-42 times, spending $42-84 total. This OXO peeler costs $10 once and outlasts them all.
+              <strong>Value comparison:</strong> A cheap $2 peeler typically lasts 6-12 months before the blade dulls or handle breaks. Over 23 years, you&apos;d replace it 21-42 times, spending $42-84 total. This OXO peeler costs $10 once and outlasts them all.
             </p>
 
             <div className="bg-green-50 p-4 rounded-lg border border-green-200">
               <p className="text-slate-800 font-semibold">
-                💰 Bottom Line: At less than a penny per use over 21+ years, this peeler delivers exceptional value. The initial $10 investment pays for itself in durability, comfort, and performance within the first year.
+                💰 Bottom Line: At less than a penny per use over 23+ years, this peeler delivers exceptional value. The initial $10 investment pays for itself in durability, comfort, and performance within the first year.
               </p>
             </div>
           </div>
@@ -483,9 +483,9 @@ export default function OXOGoodGripsSwivelPeelerReview() {
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="font-semibold text-slate-900 mb-2">Durability Testing</p>
                 <p className="text-slate-700 text-sm">
-                  <strong>Professional use lifespan:</strong> 21+ years and counting<br/>
+                  <strong>Professional use lifespan:</strong> 23+ years and counting<br/>
                   <strong>Dishwasher cycles:</strong> 500+ without degradation<br/>
-                  <strong>Blade replacement needed:</strong> Never (in 21 years)
+                  <strong>Blade replacement needed:</strong> Never (in 23 years)
                 </p>
               </div>
 
@@ -686,7 +686,7 @@ export default function OXOGoodGripsSwivelPeelerReview() {
             <div className="bg-white p-6 rounded-lg border border-gray-200">
               <h3 className="font-bold text-slate-900 mb-2">How long does the OXO Good Grips Swivel Peeler typically last?</h3>
               <p className="text-slate-700">
-                With proper care, this peeler can last 15-20+ years. Mine has been in daily use for over 21 years and still performs excellently. The blade stays sharp for 5+ years of regular use, and replacement blades are available if needed.
+                With proper care, this peeler can last 15-20+ years. Mine has been in daily use for over 23 years and still performs excellently. The blade stays sharp for 5+ years of regular use, and replacement blades are available if needed.
               </p>
             </div>
 

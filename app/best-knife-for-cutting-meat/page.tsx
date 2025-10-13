@@ -10,7 +10,7 @@ export const metadata = {
   keywords: "best knife for cutting meat, boning knife, butcher knife, meat trimming knife, victorinox boning knife, flexible boning knife, deboning knife",
   openGraph: {
     title: "Best Knife for Cutting Meat: Victorinox Boning Knife | Pro's Pick",
-    description: "21+ years of professional cooking: This $25 flexible boning knife is the professional's choice for trimming, deboning, and portioning all types of meat.",
+    description: "23+ years of professional cooking: This $25 flexible boning knife is the professional's choice for trimming, deboning, and portioning all types of meat.",
     url: "https://www.chefapprovedtools.com/best-knife-for-cutting-meat",
     type: "article"
   }

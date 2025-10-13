@@ -898,7 +898,7 @@ export default function KitchenAidReviewPage() {
 
           <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
             A commercial mixer is a cornerstone investment, but it works best as part of a complete
-            professional kitchen. Based on 21+ years of restaurant experience, here are the tools I
+            professional kitchen. Based on 23+ years of restaurant experience, here are the tools I
             use alongside this mixer:
           </p>
 
@@ -1020,7 +1020,7 @@ export default function KitchenAidReviewPage() {
         <section className="mb-8 bg-slate-50 p-6 rounded-xl border border-slate-200">
           <p className="font-semibold text-slate-900 mb-2">Scott Bradley | Professional Chef • 40 Years Experience Since Age 15</p>
           <p className="text-slate-700 text-sm">
-            Equipment reviews based on real commercial kitchen testing and 21+ years of restaurant experience managing operations generating $80,000+ monthly revenue. All recommendations backed by hands-on professional experience—not marketing claims.
+            Equipment reviews based on real commercial kitchen testing and 23+ years of restaurant experience managing operations generating $80,000+ monthly revenue. All recommendations backed by hands-on professional experience—not marketing claims.
           </p>
           <p className="text-slate-600 text-xs mt-2">
             <em>Last Updated: October 4, 2025 | Pricing verified weekly</em>
@@ -1087,7 +1087,7 @@ export default function KitchenAidReviewPage() {
               Professional Chef • 40 Years Experience Since Age 15
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Mellow Mushroom with 21+ years of restaurant experience.
+              Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience.
               A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
               University of Montana. Certified Pizzaiolo who&apos;s tested equipment in high-volume
               operations serving hundreds daily.

@@ -479,7 +479,7 @@ export default function ZuperiaBarMopsReview() {
         </p>
 
         <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
-          <li> Essential equipment checklist from 40 years cooking + 21 years managing restaurants</li>
+          <li> Essential equipment checklist from 40 years cooking + 23 years managing restaurants</li>
           <li> Restaurant-grade vs home-grade: What actually matters and what&apos;s just marketing</li>
           <li> Cost-per-use analysis framework for smart purchasing decisions</li>
           <li> Maintenance protocols that extend equipment life by years</li>
@@ -758,7 +758,7 @@ export default function ZuperiaBarMopsReview() {
             Professional Chef • 40 Years Experience Since Age 15
           </p>
           <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-            Former Kitchen Manager at Purple Café and Mellow Mushroom with 21+ years of restaurant management experience.
+            Former Kitchen Manager at Purple Café and Mellow Mushroom with 23+ years of restaurant management experience.
             A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
             University of Montana. I&apos;ve used ZUPERIA bar mops in professional kitchens for yearsthey&apos;re the industry standard for a reason, and they&apos;re what I stock in my home kitchen today.
           </p>

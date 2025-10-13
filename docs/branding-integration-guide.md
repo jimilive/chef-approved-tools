@@ -213,7 +213,7 @@ export default function AuthorBio({
           {/* Bio Text */}
           <p className="text-slate-700 text-sm leading-relaxed mb-4">
             Professional chef with 40+ years in restaurant kitchens, from fast food to fine dining.
-            Former Kitchen Manager at Mellow Mushroom with 21+ years managing commercial operations.
+            Former Kitchen Manager at Mellow Mushroom with 23+ years managing commercial operations.
             Every tool I review has been tested in real professional environments where performance
             and durability matter most.
           </p>
@@ -756,7 +756,7 @@ In ConvertKit visual editor:
           </p>
 
           <p>
-            As a former Kitchen Manager at Mellow Mushroom with 21+ years managing
+            As a former Kitchen Manager at Mellow Mushroom with 23+ years managing
             commercial operations, I know what equipment holds up under real-world
             pressure and what's just marketing hype.
           </p>

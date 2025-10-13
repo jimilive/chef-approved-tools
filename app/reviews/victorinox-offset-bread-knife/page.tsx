@@ -33,7 +33,7 @@ const productData = {
 
 export const metadata: Metadata = {
   title: 'Victorinox Offset Bread Knife Review: 21+ Years Professional Use (2025)',
-  description: 'Professional chef reviews the Victorinox offset bread knife after 21+ years in restaurant kitchens. Complete testing results for bread, tomatoes, and delicate items.',
+  description: 'Professional chef reviews the Victorinox offset bread knife after 23+ years in restaurant kitchens. Complete testing results for bread, tomatoes, and delicate items.',
 }
 
 export default function VictorinoxOffsetBreadKnifeReview() {
@@ -60,7 +60,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The offset design that keeps knuckles safe - tested through 21+ years of professional cooking
+            The offset design that keeps knuckles safe - tested through 23+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -100,7 +100,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
           borderRadius: '4px'
         }}>
           <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
-            <strong>⭐⭐⭐⭐⭐ 4.9/5</strong> | Based on 21+ years professional restaurant use<br/>
+            <strong>⭐⭐⭐⭐⭐ 4.9/5</strong> | Based on 23+ years professional restaurant use<br/>
             <strong>✓ Offset design keeps knuckles safe</strong> | <strong>✓ Never needs sharpening</strong> | <strong>✓ Professional bakery standard</strong>
           </p>
         </div>
@@ -143,7 +143,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
           <h2>Bottom Line Up Front</h2>
           
           <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-            <strong>After 21+ years using this knife in professional restaurant kitchens, the Victorinox offset bread knife has earned permanent status in my daily toolkit.</strong> The 1.5-inch offset handle design eliminates knuckle-scraping on cutting boards, making it genuinely more comfortable than standard bread knives during repetitive slicing tasks.
+            <strong>After 23+ years using this knife in professional restaurant kitchens, the Victorinox offset bread knife has earned permanent status in my daily toolkit.</strong> The 1.5-inch offset handle design eliminates knuckle-scraping on cutting boards, making it genuinely more comfortable than standard bread knives during repetitive slicing tasks.
           </p>
           
           <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
@@ -425,7 +425,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
             <h3 itemProp="name">Is the offset design really worth it compared to a regular bread knife?</h3>
             <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
               <div itemProp="text">
-                <p><strong>Answer:</strong> After 21+ years using both styles professionally, yes - the offset design makes a significant difference in comfort and safety. The 1.5-inch handle elevation keeps your knuckles completely off the cutting board during full slicing strokes, which reduces hand fatigue during repetitive tasks like prep work or batch baking.</p>
+                <p><strong>Answer:</strong> After 23+ years using both styles professionally, yes - the offset design makes a significant difference in comfort and safety. The 1.5-inch handle elevation keeps your knuckles completely off the cutting board during full slicing strokes, which reduces hand fatigue during repetitive tasks like prep work or batch baking.</p>
                 <p>This matters most when you&apos;re slicing through tall crusty loaves or working on lower cutting surfaces. Regular bread knives force you to either stop mid-slice or risk scraping your knuckles. The offset design eliminates this problem entirely.</p>
               </div>
             </div>
@@ -523,7 +523,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
             <h3 itemProp="name">How long does a Victorinox bread knife last?</h3>
             <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
               <div itemProp="text">
-                <p><strong>Answer:</strong> With proper care (hand washing, proper storage), a Victorinox serrated knife should last 20-30+ years of regular home use, or 10-15 years in professional high-volume environments. I&apos;ve used mine for 21+ years and it&apos;s still performing like new.</p>
+                <p><strong>Answer:</strong> With proper care (hand washing, proper storage), a Victorinox serrated knife should last 20-30+ years of regular home use, or 10-15 years in professional high-volume environments. I&apos;ve used mine for 23+ years and it&apos;s still performing like new.</p>
                 <p>The serrated edge doesn&apos;t dull like straight edges, so performance remains consistent for decades. The main wear points are the handle (which can loosen with dishwasher abuse) and the tip (which can break if used improperly). Avoid these issues and the knife is essentially buy-it-for-life quality.</p>
               </div>
             </div>
@@ -554,7 +554,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
             <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
               <div itemProp="text">
                 <p><strong>Answer:</strong> While Victorinox knives can technically survive dishwasher cycles, I strongly recommend against it. The harsh detergents, high heat, and contact with other items can damage the edge, loosen the handle rivets, and cause premature wear.</p>
-                <p>Hand washing takes 30 seconds and extends the knife&apos;s lifespan from years to decades. After 21+ years of professional use, my offset bread knife still looks and performs like new because I&apos;ve always hand washed it immediately after use. This small habit makes a huge difference in longevity.</p>
+                <p>Hand washing takes 30 seconds and extends the knife&apos;s lifespan from years to decades. After 23+ years of professional use, my offset bread knife still looks and performs like new because I&apos;ve always hand washed it immediately after use. This small habit makes a huge difference in longevity.</p>
               </div>
             </div>
           </div>
@@ -933,7 +933,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
               Professional Chef • 40 Years Experience Since Age 15
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Mellow Mushroom with 21+ years of restaurant experience. 
+              Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience. 
               A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from 
               University of Montana. I&apos;ve used Victorinox knives daily since culinary school in 1998, testing them through 
               hundreds of thousands of cuts in professional kitchens.

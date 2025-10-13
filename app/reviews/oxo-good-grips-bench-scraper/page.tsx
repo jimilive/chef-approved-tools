@@ -9,7 +9,7 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
   title: 'OXO Good Grips Bench Scraper Review | 21+ Years Professional Use',
-  description: 'Professional chef review of the OXO Good Grips bench scraper after 21+ years of professional cooking. The most underrated tool in any kitchen.',
+  description: 'Professional chef review of the OXO Good Grips bench scraper after 23+ years of professional cooking. The most underrated tool in any kitchen.',
 }
 
 const productData = {
@@ -41,7 +41,7 @@ const productData = {
     url: "https://amzn.to/4mXTS8X"
   }],
   expertRating: 5.0,
-  expertOpinion: "The most underrated tool in any kitchen - once you start using a bench scraper, you'll wonder how you ever cooked without one for 21+ years of daily use.",
+  expertOpinion: "The most underrated tool in any kitchen - once you start using a bench scraper, you'll wonder how you ever cooked without one for 23+ years of daily use.",
   dateAdded: "2025-01-15",
   lastUpdated: new Date().toISOString().split('T')[0]
 };
@@ -78,7 +78,7 @@ export default function OXOGoodGripsBenchScraperReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The most underrated tool in any kitchen - tested through 21+ years of professional cooking
+            The most underrated tool in any kitchen - tested through 23+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -316,7 +316,7 @@ export default function OXOGoodGripsBenchScraperReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 21+ years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 23+ years of professional cooking.
             At $13, it&apos;s the tool you didn&apos;t know you needed until you have it.
           </p>
 
@@ -497,7 +497,7 @@ export default function OXOGoodGripsBenchScraperReview() {
             </div>
 
             <p className="text-slate-700 mt-4 italic text-sm">
-              Performance data based on 21+ years of professional restaurant use and 5+ years of intensive home kitchen testing.
+              Performance data based on 23+ years of professional restaurant use and 5+ years of intensive home kitchen testing.
             </p>
           </div>
         </section>
@@ -663,7 +663,7 @@ export default function OXOGoodGripsBenchScraperReview() {
         <section className="mb-12 bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-xl border-2 border-orange-200">
           <h2 className="text-2xl font-bold mb-4 text-gray-900 text-center">Add This Game-Changing Tool to Your Kitchen</h2>
           <p className="text-lg text-gray-700 mb-6 text-center">
-            After 21+ years of professional cooking, this is the tool most home cooks don&apos;t know they need. At $13, it&apos;s one of the best investments you can make in your kitchen efficiency.
+            After 23+ years of professional cooking, this is the tool most home cooks don&apos;t know they need. At $13, it&apos;s one of the best investments you can make in your kitchen efficiency.
           </p>
           <div className="flex justify-center">
             <AffiliateButton
@@ -686,7 +686,7 @@ export default function OXOGoodGripsBenchScraperReview() {
             <div className="bg-white p-6 rounded-lg border border-gray-200">
               <h3 className="text-lg font-bold mb-2 text-gray-900">Do I really need a bench scraper?</h3>
               <p className="text-gray-700">
-                If you do any regular cooking or baking, yes. A bench scraper transforms your workflow by making ingredient transfer faster and cleaner. It&apos;s one of those tools where you don&apos;t realize how much you need it until you start using one. After 21+ years of professional cooking, I can tell you it&apos;s essential.
+                If you do any regular cooking or baking, yes. A bench scraper transforms your workflow by making ingredient transfer faster and cleaner. It&apos;s one of those tools where you don&apos;t realize how much you need it until you start using one. After 23+ years of professional cooking, I can tell you it&apos;s essential.
               </p>
             </div>
 

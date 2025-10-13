@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const metadata = {
   title: 'Meat Cooking Temperatures Guide: Why Chefs Use Thermometers (2025)',
-  description: 'Professional chef explains meat thermometers and proper cooking temps. 21+ years restaurant experience. Food safety + perfect doneness every time.',
+  description: 'Professional chef explains meat thermometers and proper cooking temps. 23+ years restaurant experience. Food safety + perfect doneness every time.',
 };
 
 export default function MeatCookingTemperaturesThermometers() {
@@ -22,7 +22,7 @@ export default function MeatCookingTemperaturesThermometers() {
       <section>
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
           A meat thermometer is the single most important tool for cooking perfect proteins—and
-          the most underused tool in home kitchens. After 21+ years in professional restaurants,
+          the most underused tool in home kitchens. After 23+ years in professional restaurants,
           I&apos;ve never seen a chef rely on guesswork for doneness. Thermometers ensure food
           safety, consistent results, and perfectly cooked meat every single time.
         </p>
@@ -44,7 +44,7 @@ export default function MeatCookingTemperaturesThermometers() {
         <h2>Why Professional Chefs Use Thermometers</h2>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          After 21+ years in professional kitchens, I&apos;ve learned that guessing doneness is
+          After 23+ years in professional kitchens, I&apos;ve learned that guessing doneness is
           unreliable and dangerous. A thermometer is the difference between perfectly cooked
           and potentially hazardous.
         </p>
@@ -402,7 +402,7 @@ export default function MeatCookingTemperaturesThermometers() {
         <h2>Professional Kitchen Thermometer Protocols</h2>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Based on 21+ years managing restaurant operations, here&apos;s how professionals
+          Based on 23+ years managing restaurant operations, here&apos;s how professionals
           actually use thermometers:
         </p>
 
@@ -650,7 +650,7 @@ export default function MeatCookingTemperaturesThermometers() {
         <h2>Final Thoughts: Thermometers Are Non-Negotiable</h2>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          After 21+ years in professional kitchens, I can tell you with absolute certainty:
+          After 23+ years in professional kitchens, I can tell you with absolute certainty:
           guessing meat doneness is unreliable, unprofessional, and dangerous. A thermometer
           is the single most important tool for cooking proteins safely and perfectly.
         </p>
@@ -665,7 +665,7 @@ export default function MeatCookingTemperaturesThermometers() {
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
           Invest in a quality instant-read thermometer. Learn to use it properly. Check
           temperatures every single time you cook meat. Your food will be safer, more
-          consistent, and better tasting. That&apos;s not opinion—that&apos;s 21+ years of
+          consistent, and better tasting. That&apos;s not opinion—that&apos;s 23+ years of
           professional kitchen experience talking.
         </p>
 
@@ -703,7 +703,7 @@ export default function MeatCookingTemperaturesThermometers() {
             Professional Chef • 40 Years Experience Since Age 15
           </p>
           <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-            Former Kitchen Manager at Purple Café with 21+ years of restaurant experience managing 200+ cover operations.
+            Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing 200+ cover operations.
             A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
             University of Montana. Implemented strict thermometer protocols that maintained perfect
             health inspection records and consistent food quality.

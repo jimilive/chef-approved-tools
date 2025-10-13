@@ -520,7 +520,7 @@ export default function ReviewsHub() {
           color: '#555',
           margin: 0
         }}>
-          40 years of cooking experience. 21+ years restaurant management. 
+          40 years of cooking experience. 23+ years restaurant management. 
           Real testing in professional kitchens where equipment failure means lost revenue.
         </p>
       </div>

@@ -148,7 +148,7 @@ export default function NewsletterModal({
                   Get My Professional Kitchen Bundle
                 </h3>
                 <p className="text-gray-600 text-sm sm:text-base">
-                  &ldquo;7 Tools I Actually Use Daily&rdquo; + authentic gear recommendations from 21+ years experience
+                  &ldquo;7 Tools I Actually Use Daily&rdquo; + authentic gear recommendations from 23+ years experience
                 </p>
               </div>
 

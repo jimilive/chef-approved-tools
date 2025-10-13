@@ -495,7 +495,7 @@ export default function Tier1ReviewPage() {
                 "@type": "Person",
                 "name": "Scott Bradley",
                 "jobTitle": "Professional Chef",
-                "description": "40 years of professional culinary experience"
+                "description": "23 years of professional culinary experience"
               },
               "reviewRating": {
                 "@type": "Rating",

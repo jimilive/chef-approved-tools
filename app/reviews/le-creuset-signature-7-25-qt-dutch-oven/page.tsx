@@ -1056,7 +1056,7 @@ export default function LeCreuset725QtReview() {
           <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-8 text-center text-white">
             <h3 className="text-2xl font-bold mb-4">Ready to Build Your Essential Kitchen?</h3>
             <p className="mb-6 max-w-2xl mx-auto">
-              Get my complete cookware and equipment buying framework used in professional kitchens for 21+ years:
+              Get my complete cookware and equipment buying framework used in professional kitchens for 23+ years:
             </p>
             <ul className="text-left max-w-2xl mx-auto mb-6 space-y-2">
               <li>• <strong>Essential Equipment Priority List</strong> - What to buy first for maximum impact</li>
@@ -1110,7 +1110,7 @@ export default function LeCreuset725QtReview() {
               <strong>Scott Bradley</strong> | Professional Chef • 40 Years Experience Since Age 15
             </p>
             <p className="text-slate-600 text-sm mb-2">
-              Equipment reviews based on extensive home testing, informed by 21+ years managing professional restaurant kitchens generating $80,000+ monthly revenue. All recommendations backed by hands-on testing experience—not marketing claims.
+              Equipment reviews based on extensive home testing, informed by 23+ years managing professional restaurant kitchens generating $80,000+ monthly revenue. All recommendations backed by hands-on testing experience—not marketing claims.
             </p>
             <p className="text-slate-500 text-xs">
               <em>Last Updated: October 4, 2025 | Pricing verified weekly</em>

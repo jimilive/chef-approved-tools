@@ -27,7 +27,7 @@ export default function BestScrambledEggs() {
         </p>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          After 40 years of cooking and 21+ years managing professional kitchens, I&apos;ve cooked thousands
+          After 40 years of cooking and 23+ years managing professional kitchens, I&apos;ve cooked thousands
           of eggs. This no-bowl, no-whisk method eliminates unnecessary steps while producing superior results.
           It&apos;s how I cook eggs at home every morning.
         </p>
@@ -512,7 +512,7 @@ export default function BestScrambledEggs() {
             Professional Chef • 40 Years Experience Since Age 15
           </p>
           <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-            Former Kitchen Manager at Purple Café with 21+ years of restaurant experience managing 200+ cover operations.
+            Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing 200+ cover operations.
             A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
             University of Montana. Cooked thousands of eggs across 40 years—this simple method
             produces consistently perfect results.

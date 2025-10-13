@@ -6,7 +6,7 @@ You are helping optimize a professional kitchen equipment review website. I need
 
 Website: Chef Approved Tools (chefapprovedtools.com)
 Current page: /reviews/kitchenaid-ksm8990wh
-Author: Scott Bradley, Professional Chef with 21+ years restaurant experience
+Author: Scott Bradley, Professional Chef with 23+ years restaurant experience
 Current affiliate program: Amazon Associates only (we'll add more retailers later)
 
 ## CURRENT ISSUES
@@ -483,7 +483,7 @@ Add this AFTER the email capture section:
 
 <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
   A commercial mixer is a cornerstone investment, but it works best as part of a complete
-  professional kitchen. Based on 21+ years of restaurant experience, here are the tools I
+  professional kitchen. Based on 23+ years of restaurant experience, here are the tools I
   use alongside this mixer:
 </p>
 
@@ -665,7 +665,7 @@ Add at the very end of the article, before closing:
       Professional Chef • 40 Years Experience Since Age 15
     </p>
     <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-      Former Kitchen Manager at Mellow Mushroom with 21+ years of restaurant experience.
+      Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience.
       A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
       University of Montana. Certified Pizzaiolo who's tested equipment in high-volume
       operations serving hundreds daily.

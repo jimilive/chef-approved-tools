@@ -241,7 +241,7 @@ export function generateProductReviewSchema(product: any) {
       url: "https://www.chefapprovedtools.com/about",
       image: "https://www.chefapprovedtools.com/images/team/head-shot-1.jpg",
       jobTitle: "Kitchen Manager & Culinary Professional",
-      description: "Professional chef with 40 years of cooking experience and 21+ years in restaurant management. A.A.S. Culinary Arts from Seattle Central College.",
+      description: "Professional chef with 40 years of cooking experience and 23+ years in restaurant management. A.A.S. Culinary Arts from Seattle Central College.",
       sameAs: [
         "https://www.chefapprovedtools.com/about"
       ],

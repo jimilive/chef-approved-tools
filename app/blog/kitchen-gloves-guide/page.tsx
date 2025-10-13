@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const metadata = {
   title: 'Kitchen Gloves Guide: Professional Safety & Best Practices (2025)',
-  description: 'Learn professional kitchen glove safety from chef with 21+ years restaurant experience. Single-use, cut-resistant, and proper layering techniques.',
+  description: 'Learn professional kitchen glove safety from chef with 23+ years restaurant experience. Single-use, cut-resistant, and proper layering techniques.',
 };
 
 export default function KitchenGlovesGuide() {
@@ -21,7 +21,7 @@ export default function KitchenGlovesGuide() {
 
       <section>
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Kitchen gloves are your first line of defense against both food contamination and serious injuries. After 21+ years in professional kitchens, I&apos;ve seen how proper glove protocols prevent disasters—from mandoline accidents to cross-contamination incidents that could shut down a restaurant.
+          Kitchen gloves are your first line of defense against both food contamination and serious injuries. After 23+ years in professional kitchens, I&apos;ve seen how proper glove protocols prevent disasters—from mandoline accidents to cross-contamination incidents that could shut down a restaurant.
         </p>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
@@ -245,7 +245,7 @@ export default function KitchenGlovesGuide() {
         <h2>Professional Kitchen Glove Protocols</h2>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Based on 21+ years restaurant experience, here are the protocols that actually work:
+          Based on 23+ years restaurant experience, here are the protocols that actually work:
         </p>
 
         <ul style={{ fontSize: '16px', lineHeight: '1.8', margin: '20px 0' }}>
@@ -395,7 +395,7 @@ export default function KitchenGlovesGuide() {
         <h2>Final Thoughts: Safety Is Non-Negotiable</h2>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          After 21+ years in professional kitchens, I&apos;ve seen what happens when safety protocols are followed—and when they&apos;re not. The difference is stark. Proper glove use prevents injuries, maintains food safety, and demonstrates professionalism.
+          After 23+ years in professional kitchens, I&apos;ve seen what happens when safety protocols are followed—and when they&apos;re not. The difference is stark. Proper glove use prevents injuries, maintains food safety, and demonstrates professionalism.
         </p>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
@@ -435,7 +435,7 @@ export default function KitchenGlovesGuide() {
             Professional Chef • 40 Years Experience Since Age 15
           </p>
           <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-            Former Kitchen Manager at Purple Café with 21+ years of restaurant experience managing 200+ cover operations.
+            Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing 200+ cover operations.
             A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
             University of Montana. Implemented mandatory glove safety protocols that prevented injuries and
             maintained perfect health inspection records.

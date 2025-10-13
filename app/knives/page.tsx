@@ -12,7 +12,7 @@ export default function KnivesPage() {
       brand: "Victorinox",
       affiliateUrl: "https://amzn.to/4o6pPwW",
       slug: "victorinox-fibrox-10-inch-chefs-knife",
-      description: "Professional Swiss chef's knife for larger cuts and bigger hands - 21+ years of professional cooking"
+      description: "Professional Swiss chef's knife for larger cuts and bigger hands - 23+ years of professional cooking"
     },
     {
       id: "victorinox-fibrox-8-inch-chefs-knife",

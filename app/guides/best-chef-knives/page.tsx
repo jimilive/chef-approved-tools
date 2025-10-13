@@ -5,7 +5,7 @@ import AuthorBio from '@/components/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Best Chef Knives of 2025: Tested & Reviewed by a Professional Chef',
-  description: 'Professional chef with 21+ years experience reviews the best chef knives. From German workhorses to Japanese precision—tested in real restaurant kitchens.',
+  description: 'Professional chef with 23+ years experience reviews the best chef knives. From German workhorses to Japanese precision—tested in real restaurant kitchens.',
   openGraph: {
     title: 'Best Chef Knives of 2025: Professional Kitchen Testing',
     description: 'Tested in professional kitchens doing $80K+ monthly revenue. Find your perfect chef knife.',
@@ -95,7 +95,7 @@ export default function BestChefKnivesPage() {
             Best Chef Knives of 2025: Professional Kitchen Testing
           </h1>
           <p className="text-xl text-slate-600 leading-relaxed mb-4">
-            After 21+ years managing professional kitchens doing $80K+ monthly revenue at Mellow Mushroom and testing knives in high-volume operations, here are the chef knives that actually survive real restaurant abuse.
+            After 23+ years managing professional kitchens doing $80K+ monthly revenue at Mellow Mushroom and testing knives in high-volume operations, here are the chef knives that actually survive real restaurant abuse.
           </p>
           <div className="flex items-center gap-4 text-sm text-slate-500">
             <span>By Scott Bradley, Professional Chef</span>

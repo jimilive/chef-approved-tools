@@ -61,7 +61,7 @@ export default function VictorinoxFibrox8InchReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The workhorse knife that handles 90% of kitchen tasks - tested through 21+ years of professional cooking
+            The workhorse knife that handles 90% of kitchen tasks - tested through 23+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -153,7 +153,7 @@ export default function VictorinoxFibrox8InchReview() {
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Professional Verdict: The Best Value in Kitchen Knives</h2>
 
             <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-              <strong>After 40 years of professional cooking and 21+ years managing restaurant kitchens,
+              <strong>After 40 years of professional cooking and 23+ years managing restaurant kitchens,
               this accessible knife remains my daily workhorse.</strong> The thin, flexible blade delivers
               professional control, the fibrox handle prevents fatigue during extended prep sessions,
               and the edge retention rivals knives costing several times more.
@@ -193,7 +193,7 @@ export default function VictorinoxFibrox8InchReview() {
                 💡 Professional Reality Check
               </p>
               <p style={{ margin: '10px 0 0 0', fontSize: '14px' }}>
-                In 21+ years managing restaurant kitchens, I&apos;ve seen expensive premium knives and
+                In 23+ years managing restaurant kitchens, I&apos;ve seen expensive premium knives and
                 Victorinox knives side-by-side. The expensive knives look prettier on the magnetic strip.
                 The Victorinox knives get used daily because they work better for actual cooking.
               </p>
@@ -454,7 +454,7 @@ export default function VictorinoxFibrox8InchReview() {
                   kitchens worldwide, including Michelin-starred restaurants. It&apos;s not a &quot;budget alternative&quot;—
                   it&apos;s professional equipment that happens to be accessible.</p>
 
-                  <p><strong>Professional reality:</strong> After 21+ years managing restaurant kitchens,
+                  <p><strong>Professional reality:</strong> After 23+ years managing restaurant kitchens,
                   I can tell you that line cooks and chefs prefer Victorinox because it works better for
                   actual cooking than expensive knives. The thin, flexible blade and perfect balance deliver
                   more control than heavy, thick premium knives.</p>
@@ -551,7 +551,7 @@ export default function VictorinoxFibrox8InchReview() {
 
                   <p><strong>Why pros choose Victorinox:</strong> Performance over prestige (chefs care about how it cuts, not how it looks), practical pricing (replacing lost knives is less painful), versatile (thin blade excels at detailed work), NSF certified (meets health department requirements), easy maintenance (kitchen staff can sharpen without expensive equipment)</p>
 
-                  <p><strong>Personal experience:</strong> In 21+ years managing restaurant kitchens, our
+                  <p><strong>Personal experience:</strong> In 23+ years managing restaurant kitchens, our
                   knife kit included Victorinox as standard issue. Some chefs brought expensive Japanese
                   knives for specific tasks, but the Victorinox handled 80% of daily cutting.</p>
                 </div>
@@ -1023,7 +1023,7 @@ export default function VictorinoxFibrox8InchReview() {
                 Professional Chef • 40 Years Experience Since Age 15
               </p>
               <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-                Former Kitchen Manager at Mellow Mushroom with 21+ years of restaurant experience.
+                Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience.
                 A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
                 University of Montana. Passionate about making professional cooking accessible through
                 budget-friendly equipment recommendations.

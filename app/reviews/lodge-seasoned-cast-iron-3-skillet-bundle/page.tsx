@@ -968,7 +968,7 @@ export default function Lodge3SkilletBundleReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Complete Your Cast Iron Kitchen Setup</h2>
 
           <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
-            Cast iron skillets work best as part of a complete kitchen. Based on 21+ years of restaurant
+            Cast iron skillets work best as part of a complete kitchen. Based on 23+ years of restaurant
             experience, here are the tools I use alongside Lodge cast iron:
           </p>
 
@@ -1230,7 +1230,7 @@ export default function Lodge3SkilletBundleReview() {
               Professional Chef • 40 Years Experience Since Age 15
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Mellow Mushroom with 21+ years of restaurant experience. 
+              Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience. 
               A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from 
               University of Montana. I&apos;ve used Lodge cast iron in demanding restaurant 
               environments and my home kitchen for years—these skillets deliver professional performance 

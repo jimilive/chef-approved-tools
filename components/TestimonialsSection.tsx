@@ -22,7 +22,7 @@ export default function TestimonialsSection() {
             Professional Kitchen Experience
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Equipment reviews based on real commercial kitchen testing and 21+ years of restaurant experience
+            Equipment reviews based on real commercial kitchen testing and 23+ years of restaurant experience
           </p>
         </div>
 
@@ -79,7 +79,7 @@ export default function TestimonialsSection() {
         {/* CTA */}
         <div className="text-center mt-8">
           <p className="text-slate-600 mb-4">
-            Get professional equipment insights from 21+ years of restaurant experience
+            Get professional equipment insights from 23+ years of restaurant experience
           </p>
           <a
             href="/newsletter"

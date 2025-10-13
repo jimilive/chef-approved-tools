@@ -154,7 +154,7 @@ export default function Tier3GuidePage() {
               <li>• Analyzed {guideData.researchSources.productsAnalyzed}+ products in this category</li>
               <li>• Reviewed {guideData.researchSources.customerReviewsAnalyzed.toLocaleString()}+ verified customer reviews</li>
               <li>• Consulted {guideData.researchSources.expertSourcesConsulted} expert sources including {guideData.researchSources.testingOrganizations.join(', ')}</li>
-              <li>• Applied 40 years of professional kitchen experience to evaluate features and value</li>
+              <li>• Applied 40 Years Cooking Experience (23 Years Professional) to evaluate features and value</li>
               <li>• Products marked with ✓ indicate items I've personally used extensively</li>
             </ul>
           </div>
@@ -415,7 +415,7 @@ export default function Tier3GuidePage() {
               <div>
                 <h3 className="font-semibold text-slate-900 mb-2">4. Professional Evaluation</h3>
                 <p className="text-slate-700 text-sm">
-                  Applied 40 years of professional kitchen experience to evaluate specifications, features, and value
+                  Applied 40 Years Cooking Experience (23 Years Professional) to evaluate specifications, features, and value
                   propositions. Products I've personally used long-term are clearly marked.
                 </p>
               </div>

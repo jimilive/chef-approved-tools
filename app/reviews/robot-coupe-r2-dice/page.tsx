@@ -917,7 +917,7 @@ export default function RobotCoupeR2DiceReview() {
 
             <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
               Download my comprehensive guide to commercial kitchen equipment selection, developed over
-              21+ years of restaurant experience:
+              23+ years of restaurant experience:
             </p>
 
             <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
@@ -960,7 +960,7 @@ export default function RobotCoupeR2DiceReview() {
 
           <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
             A commercial food processor is essential prep equipment, but it works best as part of a
-            complete professional kitchen. Based on 21+ years of restaurant experience, here are the
+            complete professional kitchen. Based on 23+ years of restaurant experience, here are the
             tools I used alongside this processor:
           </p>
 
@@ -1142,7 +1142,7 @@ export default function RobotCoupeR2DiceReview() {
                 Professional Chef • 40 Years Experience Since Age 15
               </p>
               <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-                Former Kitchen Manager at Mellow Mushroom with 21+ years of restaurant experience.
+                Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience.
                 A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
                 University of Montana. Equipment tested in high-volume commercial operations serving
                 hundreds daily.

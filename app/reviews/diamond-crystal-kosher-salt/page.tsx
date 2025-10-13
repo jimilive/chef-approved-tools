@@ -700,7 +700,7 @@ export default function DiamondCrystalKosherSaltReview() {
           <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef&apos;s Knife</h4>
           <p>The workhorse blade that complements precise seasoning. Sharp enough to prep ingredients that showcase your salt&apos;s clean flavor. Used in professional kitchens worldwide.</p>
           <p style={{ fontSize: '14px', color: '#666' }}>
-            <strong>Professional Standard:</strong> Same knife used at Purple Café for 21+ years
+            <strong>Professional Standard:</strong> Same knife used at Purple Café for 23+ years
           </p>
           <a
             href="/reviews/victorinox-fibrox-8-inch-chefs-knife"

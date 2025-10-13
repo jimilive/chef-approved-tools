@@ -100,7 +100,7 @@ Create content so valuable that:
 **Example Posts:**
 ```
 Image: Wusthof Classic 8" knife on cutting board
-Text Overlay: "After 40 years, this is still my daily driver.
+Text Overlay: "After 23 years cooking professionally, this is still my daily driver.
 Here's why: [link in bio]"
 Hashtags: #chefknife #professionalchef #kitchentools
 ```

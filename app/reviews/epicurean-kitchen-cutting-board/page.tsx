@@ -8,7 +8,7 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
   title: 'Epicurean Kitchen Cutting Board Review | 21+ Years Professional Use',
-  description: 'Professional chef review of the Epicurean kitchen cutting board after 21+ years of professional cooking. Dishwasher-safe and better than wood.',
+  description: 'Professional chef review of the Epicurean kitchen cutting board after 23+ years of professional cooking. Dishwasher-safe and better than wood.',
 }
 
 const productData = {
@@ -40,7 +40,7 @@ const productData = {
     url: "https://amzn.to/3Wyh8Q4"
   }],
   expertRating: 5.0,
-  expertOpinion: "After decades with wood boards, these dishwasher-safe composite boards are better in every practical way - truly sanitary, zero maintenance, and knife-friendly for 21+ years of use.",
+  expertOpinion: "After decades with wood boards, these dishwasher-safe composite boards are better in every practical way - truly sanitary, zero maintenance, and knife-friendly for 23+ years of use.",
   dateAdded: "2025-01-15",
   lastUpdated: new Date().toISOString().split('T')[0]
 };
@@ -77,7 +77,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            Dishwasher-safe boards that are better than wood - tested through 21+ years of professional cooking
+            Dishwasher-safe boards that are better than wood - tested through 23+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -298,7 +298,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 21+ years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 23+ years of professional cooking.
             If you want a truly sanitary, maintenance-free cutting board, this is it.
           </p>
 
@@ -502,7 +502,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
             </div>
 
             <p className="text-slate-700 mt-4 italic text-sm">
-              Performance data based on 21+ years of professional testing and 1,000+ dishwasher cycles.
+              Performance data based on 23+ years of professional testing and 1,000+ dishwasher cycles.
             </p>
           </div>
         </section>
@@ -679,7 +679,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
             <div className="bg-white p-6 rounded-lg border border-gray-200">
               <h3 className="text-lg font-bold mb-2 text-gray-900">Are dishwasher-safe boards really safe for knives?</h3>
               <p className="text-gray-700">
-                Yes. Epicurean boards use Richlite, a wood fiber composite that&apos;s as gentle on knife edges as hard maple. After 21+ years of testing with my Victorinox knives, I&apos;ve seen no difference in edge retention compared to traditional wood boards.
+                Yes. Epicurean boards use Richlite, a wood fiber composite that&apos;s as gentle on knife edges as hard maple. After 23+ years of testing with my Victorinox knives, I&apos;ve seen no difference in edge retention compared to traditional wood boards.
               </p>
             </div>
 

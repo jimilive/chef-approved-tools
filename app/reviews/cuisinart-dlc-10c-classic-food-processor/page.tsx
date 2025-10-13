@@ -1029,7 +1029,7 @@ export default function CuisinartDLC10CReviewPage() {
               Professional Chef • 40 Years Experience Since Age 15
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Mellow Mushroom with 21+ years of restaurant experience.
+              Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience.
               A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
               University of Montana. Equipment tested in both professional kitchens and 30 years
               of home cooking.

@@ -122,7 +122,7 @@ export default function ChefApprovedKitchenKit() {
           <div className="max-w-3xl mx-auto">
             <p className="text-lg sm:text-xl text-slate-200 mb-6 leading-relaxed text-center">
               Every professional kitchen is built on a foundation of a few indestructible, high-performance tools.
-              After 21+ years of setting up restaurant kitchens and seeing countless gadgets fail, I&apos;ve distilled
+              After 23+ years of setting up restaurant kitchens and seeing countless gadgets fail, I&apos;ve distilled
               the list down to the non-negotiable essentials.
             </p>
             <p className="text-lg sm:text-xl text-slate-200 leading-relaxed text-center font-semibold">
@@ -408,7 +408,7 @@ export default function ChefApprovedKitchenKit() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-3">✅</div>
               <p className="font-semibold mb-2">Restaurant Proven</p>
-              <p className="text-sm text-slate-300">21+ years of real-world testing</p>
+              <p className="text-sm text-slate-300">23+ years of real-world testing</p>
             </div>
           </div>
 

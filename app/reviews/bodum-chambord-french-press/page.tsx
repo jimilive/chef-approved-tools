@@ -731,7 +731,7 @@ export default function BodumChambordFrenchPressReview() {
           <p>Another 24-year veteran of my kitchen. The knife I reach for every morning. Professional
           quality without the premium price.</p>
           <p style={{ fontSize: '14px', color: '#666' }}>
-            <strong>Professional Standard:</strong> Used at Purple Café 21+ years
+            <strong>Professional Standard:</strong> Used at Purple Café 23+ years
           </p>
           <a
             href="/reviews/victorinox-fibrox-8-inch-chefs-knife"

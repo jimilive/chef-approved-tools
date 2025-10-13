@@ -1010,7 +1010,7 @@ export default function Cuisinart8InchNonstickPanReview() {
               Professional Chef • 40 Years Experience Since Age 15
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Purple Café with 21+ years of restaurant experience managing
+              Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing
               200+ cover operations. A.A.S. Culinary Arts from Seattle Central College, B.S. Business
               Administration from University of Montana. This Cuisinart pan has been my daily breakfast
               pan for 6 months—I test everything I recommend.

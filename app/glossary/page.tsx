@@ -271,7 +271,7 @@ export default function GlossaryPage() {
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 inline-block">
             <div className="flex items-center gap-2 text-orange-400">
               <Search className="w-5 h-5" />
-              <span className="text-sm">21+ years of restaurant experience, translated for home cooks</span>
+              <span className="text-sm">23+ years of restaurant experience, translated for home cooks</span>
             </div>
           </div>
         </div>
@@ -421,7 +421,7 @@ export default function GlossaryPage() {
             </h3>
             <div className="space-y-4 text-slate-700">
               <p className="leading-relaxed">
-                <strong>In 21+ years of restaurant work, I&apos;ve learned this fundamental truth:</strong> Weight is the only way to ensure
+                <strong>In 23+ years of restaurant work, I&apos;ve learned this fundamental truth:</strong> Weight is the only way to ensure
                 consistent results in baking. Here&apos;s why professional kitchens always use scales:
               </p>
               <ul className="space-y-2 list-disc list-inside ml-4">

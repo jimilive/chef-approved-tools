@@ -9,7 +9,7 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
   title: 'Victorinox Granton Edge Boning Knife Review | 21+ Years Professional Use',
-  description: 'Professional chef review of the Victorinox Granton Edge boning knife after 21+ years of professional cooking. Essential for breaking down proteins and filleting fish.',
+  description: 'Professional chef review of the Victorinox Granton Edge boning knife after 23+ years of professional cooking. Essential for breaking down proteins and filleting fish.',
 }
 
 const productData = {
@@ -41,7 +41,7 @@ const productData = {
     url: "https://amzn.to/4pUDed1"
   }],
   expertRating: 4.9,
-  expertOpinion: "Essential for anyone who works with whole proteins - this knife cuts butchery time in half and pays for itself in reduced meat waste after 21+ years of professional use.",
+  expertOpinion: "Essential for anyone who works with whole proteins - this knife cuts butchery time in half and pays for itself in reduced meat waste after 23+ years of professional use.",
   dateAdded: "2025-01-15",
   lastUpdated: new Date().toISOString().split('T')[0]
 };
@@ -78,7 +78,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The essential tool for breaking down proteins - tested through 21+ years of professional cooking
+            The essential tool for breaking down proteins - tested through 23+ years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -300,7 +300,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 21+ years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 23+ years of professional cooking.
             If you work with whole proteins, this knife pays for itself in saved money on the first few uses.
           </p>
 
@@ -506,7 +506,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
             </div>
 
             <p className="text-slate-700 mt-4 italic text-sm">
-              Performance data based on 21+ years of professional restaurant use and testing across multiple protein types.
+              Performance data based on 23+ years of professional restaurant use and testing across multiple protein types.
             </p>
           </div>
         </section>

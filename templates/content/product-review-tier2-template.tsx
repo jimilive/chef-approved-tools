@@ -23,7 +23,7 @@ const productData = {
   // TIER 2 SPECIFIC DATA
   reviewTier: "expert-analysis",
   hasDirectLongTermExperience: false,
-  relatedExperience: "40 years using [similar products/this category] professionally in restaurant kitchens",
+  relatedExperience: "23 years using [similar products/this category] professionally in restaurant kitchens",
 
   researchSources: {
     customerReviews: 5234, // Number of customer reviews analyzed
@@ -82,7 +82,7 @@ const breadcrumbs = [
 
 export const metadata = {
   title: `${productData.name} Review: Professional Chef's Expert Analysis | Chef Approved Tools`,
-  description: `Professional chef analyzes ${productData.name}. Expert perspective based on ${productData.researchSources.customerReviews}+ reviews and 40 years of professional experience.`,
+  description: `Professional chef analyzes ${productData.name}. Expert perspective based on ${productData.researchSources.customerReviews}+ reviews and 23 years of professional experience.`,
   keywords: [
     `${productData.brand} ${productData.category.toLowerCase()} review`,
     `${productData.name} professional review`,

@@ -58,7 +58,7 @@ const breadcrumbs = [
 
 export const metadata = {
   title: `${guideData.title} | Professional Chef's Guide (2025) | Chef Approved Tools`,
-  description: `Learn how to choose the perfect ${guideData.category.toLowerCase()} from a professional chef with 40 years experience. Everything you need to know before buying.`,
+  description: `Learn how to choose the perfect ${guideData.category.toLowerCase()} from a professional chef with 23 years experience. Everything you need to know before buying.`,
   keywords: [
     `how to choose ${guideData.category.toLowerCase()}`,
     `${guideData.category.toLowerCase()} buying guide`,

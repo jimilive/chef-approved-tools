@@ -84,7 +84,7 @@ export default function ContactPage() {
                 <p className="text-slate-600 text-sm">
                   Former Kitchen Manager at Mellow Mushroom (Athens, GA)<br />
                   Seattle Central College - A.A.S. Culinary Arts<br />
-                  21+ years in professional kitchens
+                  23+ years in professional kitchens
                 </p>
               </div>
 

@@ -18,7 +18,7 @@ const faqData = [
   },
   {
     question: "What makes your reviews different from other sites?",
-    answer: "Our reviews come from actual restaurant experience. With 21+ years in professional kitchens managing operations doing $80K+ monthly revenue, I know what equipment can handle professional abuse. Products were tested in real-world conditions, not just controlled environments. Plus, reviews are updated based on long-term performance, not just first impressions."
+    answer: "Our reviews come from actual restaurant experience. With 23+ years in professional kitchens managing operations doing $80K+ monthly revenue, I know what equipment can handle professional abuse. Products were tested in real-world conditions, not just controlled environments. Plus, reviews are updated based on long-term performance, not just first impressions."
   },
   {
     question: "Can I trust that these are honest reviews?",
