@@ -236,9 +236,15 @@ export function generateProductReviewSchema(product: any) {
     },
     author: {
       "@type": "Person",
+      "@id": "https://www.chefapprovedtools.com/about#scott-bradley",
       name: "Scott Bradley",
-      jobTitle: "Kitchen Manager & Culinary Professional",
       url: "https://www.chefapprovedtools.com/about",
+      image: "https://www.chefapprovedtools.com/images/team/head-shot-1.jpg",
+      jobTitle: "Kitchen Manager & Culinary Professional",
+      description: "Professional chef with 40 years of cooking experience and 21+ years in restaurant management. A.A.S. Culinary Arts from Seattle Central College.",
+      sameAs: [
+        "https://www.chefapprovedtools.com/about"
+      ],
       alumniOf: {
         "@type": "EducationalOrganization",
         name: "Seattle Central College"
