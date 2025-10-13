@@ -1,7 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+const RecentlyViewed = dynamic(() => import('@/components/RecentlyViewed'), {
+  ssr: false
+});
 
 // Tier Badge Components
 const Tier1Badge = () => (
@@ -647,7 +652,10 @@ export default function ReviewsHub() {
           ))}
         </div>
       </section>
-      
+
+      {/* Recently Viewed Products */}
+      <RecentlyViewed />
+
       {/* Call to Action Footer */}
       <div style={{
         marginTop: '80px',

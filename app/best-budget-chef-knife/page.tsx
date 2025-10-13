@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { Star, DollarSign, Award, TrendingUp, Shield } from 'lucide-react'
 import { generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata = {
   title: "Best Budget Chef Knife 2025: Victorinox Fibrox 8\" | Chef Approved",
@@ -26,12 +25,6 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 export default function BestBudgetChefKnife() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <ProductViewTrackerWrapper
-        slug="best-budget-chef-knife"
-        name="Best Budget Chef Knife Guide"
-        image="/logo.png"
-      />
-
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

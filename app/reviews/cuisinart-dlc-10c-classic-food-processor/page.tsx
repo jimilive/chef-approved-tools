@@ -6,6 +6,7 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
 import type { Metadata } from 'next';
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 const productData = {
   name: "Cuisinart DLC-10C Classic Food Processor (7-Cup)",
@@ -86,6 +87,16 @@ export default function CuisinartDLC10CReviewPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={2}
+        testingPeriod="7 Years"
+        rating={4.5}
+        hook="Home kitchen workhorse. Reliable performance."
+        category="Food Processors"
+      />
+
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -5,6 +5,7 @@ import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/sch
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButton from '@/components/AffiliateButton'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 const productData = {
   name: "KitchenAid Commercial Series KSM8990WH",
@@ -89,6 +90,16 @@ export default function KitchenAidReviewPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={1}
+        testingPeriod="18 months at Purple Café"
+        rating={4.8}
+        hook="Survived 200+ covers nightly. Genuine commercial-grade performance."
+        category="Commercial Equipment"
+      />
+
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

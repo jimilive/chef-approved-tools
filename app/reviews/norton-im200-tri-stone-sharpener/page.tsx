@@ -3,7 +3,33 @@ import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+
+
+
+const productData = {
+  name: "Norton im200 tri stone sharpener",
+  slug: "norton-im200-tri-stone-sharpener",
+  brand: "Brand Name",
+  category: "Kitchen Equipment",
+  priceRange: {
+    min: 20,
+    max: 50,
+    currency: "USD"
+  },
+  affiliateLinks: [],
+  expertRating: 4.5,
+  expertOpinion: "Professional-grade quality.",
+  pros: [],
+  cons: [],
+  dateAdded: "2025-10-13",
+  lastUpdated: "2025-10-13",
+  images: {
+    primary: "/logo.png"
+  }
+};
 
 export const metadata: Metadata = {
   title: 'Norton IM200 Tri-Stone Sharpener Review: 6-Year Restaurant Test (2025)',
@@ -19,7 +45,16 @@ export const metadata: Metadata = {
 export default function NortonTriStoneSharpenerReview() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
-      <article>
+     <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={1}
+        testingPeriod="Years of professional use"
+        rating={4.6}
+        hook="Professional sharpening system. Restaurant-grade edge."
+        category="Knife Care"
+      />
+       <article>
         {/* Breadcrumb */}
         <nav style={{ marginBottom: '20px', fontSize: '14px' }}>
           <a href="/" style={{ color: '#0066cc', textDecoration: 'none' }}>Home</a>
@@ -980,23 +1015,15 @@ export default function NortonTriStoneSharpenerReview() {
           gap: '20px',
           alignItems: 'start'
         }}>
-          <img
-            src="/images/team/head-shot-1.jpg"
-            alt="Scott Bradley, Professional Chef"
-            style={{
-              width: '100px',
-              height: '100px',
-              borderRadius: '50%',
-              objectFit: 'cover'
-            }}
-          />
+          
+          <Image src="/images/team/head-shot-1.jpg" alt="Scott Bradley, Professional Chef" width={100} height={100} />
           <div>
             <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
             <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
               Professional Chef • 40 Years Experience Since Age 15
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Purple Café with 23+ years of restaurant experience. Equipment
+              Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 23+ years of restaurant experience. Equipment
               tested in high-volume operations serving 200+ covers nightly. Sharp knives weren&apos;t
               optional—they were critical to service success.
             </p>

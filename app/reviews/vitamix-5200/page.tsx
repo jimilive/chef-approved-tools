@@ -7,6 +7,7 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
 import type { Metadata } from 'next'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 const productData = {
   name: "Vitamix 5200 Professional-Grade Blender",
@@ -93,6 +94,16 @@ export default function Vitamix5200Review() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={1}
+        testingPeriod="6 years in restaurant operations"
+        rating={4.9}
+        hook="Restaurant workhorse. 10-year warranty justified by performance."
+        category="Blenders"
+      />
+
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,9 +1,35 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image';
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButton from '@/components/AffiliateButton'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+
+
+
+const productData = {
+  name: "Zuperia bar mops",
+  slug: "zuperia-bar-mops",
+  brand: "Brand Name",
+  category: "Kitchen Equipment",
+  priceRange: {
+    min: 20,
+    max: 50,
+    currency: "USD"
+  },
+  affiliateLinks: [],
+  expertRating: 4.5,
+  expertOpinion: "Professional-grade quality.",
+  pros: [],
+  cons: [],
+  dateAdded: "2025-10-13",
+  lastUpdated: "2025-10-13",
+  images: {
+    primary: "/logo.png"
+  }
+};
 
 export const metadata = {
   title: 'ZUPERIA Bar Mops Review: The Industry Standard (2025)',
@@ -14,6 +40,15 @@ export default function ZuperiaBarMopsReview() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8">
 
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={1}
+        testingPeriod="Years at Purple Café"
+        rating={4.8}
+        hook="Industry standard. 100% ring spun cotton. Restaurant grade."
+        category="Kitchen Textiles"
+      />
       {/* H1 Title */}
       <h1 className="text-4xl font-bold mb-4">
         ZUPERIA Bar Mops Review: The Industry Standard Used in Professional Kitchens
@@ -715,16 +750,8 @@ export default function ZuperiaBarMopsReview() {
         gap: '20px',
         alignItems: 'start'
       }}>
-        <img
-          src="/images/team/head-shot-1.jpg"
-          alt="Scott Bradley, Professional Chef"
-          style={{
-            width: '100px',
-            height: '100px',
-            borderRadius: '50%',
-            objectFit: 'cover'
-          }}
-        />
+        
+          <Image src="/images/team/head-shot-1.jpg" alt="Scott Bradley, Professional Chef" width={100} height={100} />
         <div>
           <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
           <p style={{ margin: '5px 0', fontWeight: 'bold' }}>

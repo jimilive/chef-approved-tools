@@ -5,6 +5,8 @@ import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/sch
 import AuthorBio from '@/components/AuthorBio'
 import AffiliateButton from '@/components/AffiliateButton'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
+import FTCDisclosure from '@/components/FTCDisclosure';
+import type { Metadata } from 'next';
 
 const productData = {
   name: "Le Creuset Signature Round Dutch Oven 7.25 Quart",
@@ -105,7 +107,7 @@ const customerReviews = [
     context: "Serious Home Cook"
   },
   {
-    text: "Lightweight compared to my Lodge—about 3 lbs lighter. Makes a huge difference when moving a full pot from stove to oven. I'm 62 and the weight matters. Le Creuset is noticeably easier to handle.",
+    text: "Lightweight compared to my Lodge—about 3 lbs lighter. Makes a huge difference when moving a full pot from stove to oven. I&apos;m 62 and the weight matters. Le Creuset is noticeably easier to handle.",
     author: "D.L.",
     date: "June 2024",
     context: "Older Cook"

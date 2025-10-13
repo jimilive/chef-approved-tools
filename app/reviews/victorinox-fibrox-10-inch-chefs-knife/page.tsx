@@ -6,6 +6,31 @@ import AuthorBio from '@/components/AuthorBio'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+
+
+
+const productData = {
+  name: "Victorinox fibrox 10 inch chefs knife",
+  slug: "victorinox-fibrox-10-inch-chefs-knife",
+  brand: "Brand Name",
+  category: "Kitchen Equipment",
+  priceRange: {
+    min: 20,
+    max: 50,
+    currency: "USD"
+  },
+  affiliateLinks: [],
+  expertRating: 4.5,
+  expertOpinion: "Professional-grade quality.",
+  pros: [],
+  cons: [],
+  dateAdded: "2025-10-13",
+  lastUpdated: "2025-10-13",
+  images: {
+    primary: "/logo.png"
+  }
+};
 
 export const metadata: Metadata = {
   title: 'Victorinox Fibrox Pro 10" Chef\'s Knife Review: 21+ Years Professional Use (2025)',
@@ -15,6 +40,15 @@ export const metadata: Metadata = {
 export default function VictorinoxFibrox10InchReview() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={1}
+        testingPeriod="Professional kitchen tested"
+        rating={4.7}
+        hook="Longer blade for high-volume prep. Restaurant standard."
+        category="Knives"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4">

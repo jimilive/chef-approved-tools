@@ -5,6 +5,7 @@ import { Tier2Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import Link from 'next/link'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
   title: 'Winco Heavy Duty Tongs Review | 21+ Years Professional Use',
@@ -55,6 +56,16 @@ const breadcrumbs = [
 export default function WincoHeavyDutyTongsReview() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={2}
+        testingPeriod="8 Years"
+        rating={4.6}
+        hook="Locking mechanism works. Durable stainless steel."
+        category="Utensils"
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4">

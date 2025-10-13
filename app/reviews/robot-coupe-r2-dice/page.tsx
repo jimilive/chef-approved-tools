@@ -7,6 +7,7 @@ import PriceDisplay from '@/components/PriceDisplay'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
 import type { Metadata } from 'next';
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 const productData = {
   name: "Robot Coupe R2 Dice Combination Continuous Feed Food Processor",
@@ -95,6 +96,16 @@ export default function RobotCoupeR2DiceReview() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={1}
+        testingPeriod="5 years commercial use"
+        rating={4.7}
+        hook="Commercial power. Prep time reduced by 60% vs manual."
+        category="Food Processors"
+      />
+
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

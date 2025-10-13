@@ -3,7 +3,9 @@ import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 
 export const metadata: Metadata = {
   title: 'Black+Decker Toaster Oven Review: 48 Years Across 4 Models (2025)',
@@ -63,7 +65,16 @@ const breadcrumbs = [
 export default function BlackDeckerToasterOvenReview() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
-      <article>
+     <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={2}
+        testingPeriod="5 Years"
+        rating={4.4}
+        hook="Budget-friendly. Reliable everyday performance."
+        category="Small Appliances"
+      />
+       <article>
         {/* Breadcrumb */}
         <nav style={{ marginBottom: '20px', fontSize: '14px' }}>
           <a href="/" style={{ color: '#0066cc', textDecoration: 'none' }}>Home</a>
@@ -1493,23 +1504,15 @@ export default function BlackDeckerToasterOvenReview() {
           gap: '20px',
           alignItems: 'start'
         }}>
-          <img
-            src="/images/team/head-shot-1.jpg"
-            alt="Scott Bradley, Professional Chef"
-            style={{
-              width: '100px',
-              height: '100px',
-              borderRadius: '50%',
-              objectFit: 'cover'
-            }}
-          />
+          
+          <Image src="/images/team/head-shot-1.jpg" alt="Scott Bradley, Professional Chef" width={100} height={100} />
           <div>
             <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
             <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
               Professional Chef • 40 Years Experience Since Age 15
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Purple Café with 23+ years of restaurant experience.
+              Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 23+ years of restaurant experience.
               48 years of Black+Decker toaster oven use across 4 different models proves equipment
               reliability through actual long-term testing—not just manufacturer claims.
             </p>

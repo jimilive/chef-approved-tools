@@ -3,7 +3,33 @@ import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+
+
+
+const productData = {
+  name: "Bodum chambord french press",
+  slug: "bodum-chambord-french-press",
+  brand: "Brand Name",
+  category: "Kitchen Equipment",
+  priceRange: {
+    min: 20,
+    max: 50,
+    currency: "USD"
+  },
+  affiliateLinks: [],
+  expertRating: 4.5,
+  expertOpinion: "Professional-grade quality.",
+  pros: [],
+  cons: [],
+  dateAdded: "2025-10-13",
+  lastUpdated: "2025-10-13",
+  images: {
+    primary: "/logo.png"
+  }
+};
 
 export const metadata = {
   title: 'Bodum French Press Review: 24-Year Professional Test (2025)',
@@ -14,6 +40,15 @@ export default function BodumChambordFrenchPressReview() {
   return (
     <article>
 
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={1}
+        testingPeriod="Years at Purple Café"
+        rating={4.5}
+        hook="Restaurant coffee standard. Simple, reliable design."
+        category="Coffee"
+      />
       {/* H1 Title */}
       <h1>Bodum Chambord French Press Review: 24 Years of Professional &amp; Home Use</h1>
 
@@ -774,23 +809,15 @@ export default function BodumChambordFrenchPressReview() {
         gap: '20px',
         alignItems: 'start'
       }}>
-        <img
-          src="/images/team/head-shot-1.jpg"
-          alt="Scott Bradley, Professional Chef"
-          style={{
-            width: '100px',
-            height: '100px',
-            borderRadius: '50%',
-            objectFit: 'cover'
-          }}
-        />
+        
+          <Image src="/images/team/head-shot-1.jpg" alt="Scott Bradley, Professional Chef" width={100} height={100} />
         <div>
           <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
           <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
             Professional Chef • 40 Years Experience Since Age 15
           </p>
           <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-            Former Kitchen Manager at Purple Café with 23+ years of restaurant experience.
+            Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 23+ years of restaurant experience.
             A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
             University of Montana. Equipment tested in high-volume operations serving hundreds daily.
             This Bodum French Press has been my daily brewing method for 24 years.

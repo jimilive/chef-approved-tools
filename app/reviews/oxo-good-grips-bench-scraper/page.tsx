@@ -5,6 +5,7 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
   title: 'OXO Good Grips Bench Scraper Review | 21+ Years Professional Use',
@@ -55,6 +56,16 @@ const breadcrumbs = [
 export default function OXOGoodGripsBenchScraperReview() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={1}
+        testingPeriod="Daily professional use"
+        rating={4.7}
+        hook="Most-used tool. Dough handling essential."
+        category="Baking Tools"
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4">

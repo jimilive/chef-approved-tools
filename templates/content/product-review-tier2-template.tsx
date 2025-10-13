@@ -103,8 +103,11 @@ export default function Tier2ReviewPage() {
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
-        image="/logo.png"
-        price={productData.priceRange.min}
+        tier={2}
+        testingPeriod="[RESEARCH-TIMEFRAME]" // e.g., "3 weeks of research", "extensive analysis"
+        rating={productData.expertRating}
+        hook="[SHORT-HOOK-SENTENCE]" // e.g., "Professional-grade features backed by 5,000+ customer reviews"
+        category={productData.category}
       />
 
       {/* Breadcrumbs */}

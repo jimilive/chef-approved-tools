@@ -5,8 +5,11 @@ import { useTrackProductView } from './RecentlyViewed'
 interface ProductViewTrackerProps {
   slug: string
   name: string
-  image: string
-  price?: number
+  tier: 1 | 2
+  testingPeriod: string
+  rating: number
+  hook: string
+  category: string
 }
 
 /**
@@ -16,9 +19,12 @@ interface ProductViewTrackerProps {
 export default function ProductViewTrackerWrapper({
   slug,
   name,
-  image,
-  price
+  tier,
+  testingPeriod,
+  rating,
+  hook,
+  category
 }: ProductViewTrackerProps) {
-  useTrackProductView({ slug, name, image, price })
+  useTrackProductView({ slug, name, tier, testingPeriod, rating, hook, category })
   return null
 }

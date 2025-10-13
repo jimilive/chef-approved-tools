@@ -83,8 +83,11 @@ export default function ProductReviewPage() {
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
-        image="/logo.png"
-        price={productData.priceRange.min}
+        tier={1} // Update: 1 for professional testing, 2 for expert analysis
+        testingPeriod="[TESTING-PERIOD]" // e.g., "6 months", "2 years"
+        rating={productData.rating}
+        hook="[SHORT-HOOK-SENTENCE]" // e.g., "Professional-grade performance at home-cook price"
+        category={productData.category}
       />
 
       {/* Breadcrumbs */}

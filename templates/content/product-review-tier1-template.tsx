@@ -98,8 +98,11 @@ export default function Tier1ReviewPage() {
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
-        image="/logo.png"
-        price={productData.priceRange.min}
+        tier={1}
+        testingPeriod={productData.testingPeriod}
+        rating={productData.rating}
+        hook="[SHORT-HOOK-SENTENCE]" // e.g., "Still performing flawlessly after 18 months of daily professional use"
+        category={productData.category}
       />
 
       {/* Breadcrumbs */}

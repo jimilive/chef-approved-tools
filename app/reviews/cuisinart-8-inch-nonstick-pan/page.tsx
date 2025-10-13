@@ -3,7 +3,33 @@ import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+
+
+
+const productData = {
+  name: "Cuisinart 8 inch nonstick pan",
+  slug: "cuisinart-8-inch-nonstick-pan",
+  brand: "Brand Name",
+  category: "Kitchen Equipment",
+  priceRange: {
+    min: 20,
+    max: 50,
+    currency: "USD"
+  },
+  affiliateLinks: [],
+  expertRating: 4.5,
+  expertOpinion: "Professional-grade quality.",
+  pros: [],
+  cons: [],
+  dateAdded: "2025-10-13",
+  lastUpdated: "2025-10-13",
+  images: {
+    primary: "/logo.png"
+  }
+};
 
 export const metadata = {
   title: 'Cuisinart High Impact 8&quot; Pan Review: 6-Month Home Test',
@@ -13,7 +39,16 @@ export const metadata = {
 export default function Cuisinart8InchNonstickPanReview() {
   return (
     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '20px' }}>
-      <article itemScope itemType="https://schema.org/Review">
+     <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={2}
+        testingPeriod="6 Months"
+        rating={4.7}
+        hook="Perfect for eggs. Even heat distribution. Ideal for single servings."
+        category="Cookware"
+      />
+       <article itemScope itemType="https://schema.org/Review">
 
         <h1 itemProp="name">Cuisinart High Impact 8&quot; Pan Review: 6-Month Home Test</h1>
 
@@ -967,16 +1002,8 @@ export default function Cuisinart8InchNonstickPanReview() {
           gap: '20px',
           alignItems: 'start'
         }}>
-          <img
-            src="/images/team/head-shot-1.jpg"
-            alt="Scott Bradley, Professional Chef"
-            style={{
-              width: '100px',
-              height: '100px',
-              borderRadius: '50%',
-              objectFit: 'cover'
-            }}
-          />
+          
+          <Image src="/images/team/head-shot-1.jpg" alt="Scott Bradley, Professional Chef" width={100} height={100} />
           <div>
             <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
             <p style={{ margin: '5px 0', fontWeight: 'bold' }}>

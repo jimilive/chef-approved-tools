@@ -6,6 +6,31 @@ import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
 import type { Metadata } from 'next';
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+
+
+
+const productData = {
+  name: "Benriner large mandoline",
+  slug: "benriner-large-mandoline",
+  brand: "Brand Name",
+  category: "Kitchen Equipment",
+  priceRange: {
+    min: 20,
+    max: 50,
+    currency: "USD"
+  },
+  affiliateLinks: [],
+  expertRating: 4.5,
+  expertOpinion: "Professional-grade quality.",
+  pros: [],
+  cons: [],
+  dateAdded: "2025-10-13",
+  lastUpdated: "2025-10-13",
+  images: {
+    primary: "/logo.png"
+  }
+};
 
 export const metadata = {
   title: 'Benriner Large Mandoline Review: Professional Kitchen Test (2025)',
@@ -16,6 +41,15 @@ export default function BenrinerLargeMandolineReview() {
   return (
     <article style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
 
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={1}
+        testingPeriod="Professional kitchen tested"
+        rating={4.5}
+        hook="Japanese precision. Professional prep speed."
+        category="Prep Tools"
+      />
       {/* H1 and Author Byline */}
       <h1>Benriner Large Mandoline Review: Professional Kitchen Test</h1>
 
@@ -839,23 +873,15 @@ export default function BenrinerLargeMandolineReview() {
         gap: '20px',
         alignItems: 'start'
       }}>
-        <img
-          src="/images/team/head-shot-1.jpg"
-          alt="Scott Bradley, Professional Chef"
-          style={{
-            width: '100px',
-            height: '100px',
-            borderRadius: '50%',
-            objectFit: 'cover'
-          }}
-        />
+        
+          <Image src="/images/team/head-shot-1.jpg" alt="Scott Bradley, Professional Chef" width={100} height={100} />
         <div>
           <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
           <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
             Professional Chef • 40 Years Experience Since Age 15
           </p>
           <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-            Former Kitchen Manager at Purple Café with 21+ years of restaurant experience.
+            Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 23+ years of restaurant experience.
             A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration.
             Equipment tested in high-volume operations serving hundreds daily.
           </p>

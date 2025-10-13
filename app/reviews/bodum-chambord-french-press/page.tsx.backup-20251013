@@ -1,4 +1,9 @@
 import { Tier1Badge } from '@/components/ReviewTierBadge';
+import FTCDisclosure from '@/components/FTCDisclosure';
+import AffiliateButton from '@/components/AffiliateButton';
+import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import Link from 'next/link';
+import type { Metadata } from 'next';
 
 export const metadata = {
   title: 'Bodum French Press Review: 24-Year Professional Test (2025)',
@@ -49,24 +54,15 @@ export default function BodumChambordFrenchPressReview() {
       }}>
         <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
 
-        <a
+        <AffiliateButton
           href="https://www.amazon.com/Bodum-Chambord-French-Coffee-Stainless/dp/B00005LM0S?tag=chefapprovedt-20"
-          target="_blank"
-          rel="nofollow noopener"
-          style={{
-            display: 'inline-block',
-            background: '#ff9900',
-            color: 'white',
-            padding: '15px 40px',
-            margin: '10px',
-            textDecoration: 'none',
-            borderRadius: '6px',
-            fontWeight: 'bold',
-            fontSize: '18px'
-          }}
+          merchant="amazon"
+          product="{productData.slug}"
+          position="above_fold"
+          variant="primary"
         >
           Check Amazon Price →
-        </a>
+        </AffiliateButton>
 
         <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
           💡 Price updated daily. We earn commission at no extra cost to you.
@@ -230,23 +226,15 @@ export default function BodumChambordFrenchPressReview() {
         <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
           Ready for 24+ years of perfect coffee?
         </p>
-        <a
+        <AffiliateButton
           href="https://www.amazon.com/Bodum-Chambord-French-Coffee-Stainless/dp/B00005LM0S?tag=chefapprovedt-20"
-          target="_blank"
-          rel="nofollow noopener"
-          style={{
-            display: 'inline-block',
-            background: '#0066cc',
-            color: 'white',
-            padding: '12px 30px',
-            margin: '10px',
-            textDecoration: 'none',
-            borderRadius: '5px',
-            fontWeight: 'bold'
-          }}
+          merchant="amazon"
+          product="{productData.slug}"
+          position="mid_article"
+          variant="secondary"
         >
           Check Current Price →
-        </a>
+        </AffiliateButton>
       </div>
 
       <h2>Durability That Defies Expectations</h2>
@@ -609,24 +597,15 @@ export default function BodumChambordFrenchPressReview() {
           Get the French press that survived professional kitchen use:
         </p>
 
-        <a
+        <AffiliateButton
           href="https://www.amazon.com/Bodum-Chambord-French-Coffee-Stainless/dp/B00005LM0S?tag=chefapprovedt-20"
-          target="_blank"
-          rel="nofollow noopener"
-          style={{
-            display: 'inline-block',
-            background: '#ff9900',
-            color: 'white',
-            padding: '18px 50px',
-            margin: '10px',
-            textDecoration: 'none',
-            borderRadius: '6px',
-            fontWeight: 'bold',
-            fontSize: '20px'
-          }}
+          merchant="amazon"
+          product="{productData.slug}"
+          position="mid_article"
+          variant="secondary"
         >
           Check Amazon Price →
-        </a>
+        </AffiliateButton>
 
         <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
           💡 Buy-it-for-life quality. Zero consumables. Decades of perfect coffee.

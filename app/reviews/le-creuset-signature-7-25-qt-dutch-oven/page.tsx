@@ -7,6 +7,7 @@ import AffiliateButton from '@/components/AffiliateButton'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure';
 import type { Metadata } from 'next';
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 const productData = {
   name: "Le Creuset Signature Round Dutch Oven 7.25 Quart",
@@ -164,6 +165,16 @@ export default function LeCreuset725QtReview() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={2}
+        testingPeriod="10 Years"
+        rating={4.9}
+        hook="Buy-it-for-life cookware. Zero staining after a decade."
+        category="Cookware"
+      />
+
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

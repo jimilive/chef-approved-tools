@@ -8,6 +8,7 @@ import PriceDisplay from '@/components/PriceDisplay'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
 import type { Metadata } from 'next';
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 const productData = {
   name: "John Boos Platinum Commercial Series Rectangular Wooden Maple Cutting Board 24x18x1.75\"",
@@ -106,6 +107,16 @@ export default function JohnBosPlatinumCuttingBoardReview() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={2}
+        testingPeriod="18 Years"
+        rating={4.8}
+        hook="Commercial-grade maple. Used managing $80K+ operations."
+        category="Cutting Boards"
+      />
+
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

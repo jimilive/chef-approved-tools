@@ -5,6 +5,7 @@ import { Tier2Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButton from '@/components/AffiliateButton'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
   title: 'Victorinox 4" Paring Knife Review | 21+ Years Professional Use',
@@ -58,6 +59,16 @@ const breadcrumbs = [
 export default function Victorinox4InchParingKnifeReview() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={1}
+        testingPeriod="Professional kitchen tested"
+        rating={4.6}
+        hook="Precision work. Professional quality at budget price."
+        category="Knives"
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4">

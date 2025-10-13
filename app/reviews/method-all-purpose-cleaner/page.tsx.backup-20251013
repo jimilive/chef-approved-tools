@@ -1,4 +1,9 @@
 import { Tier2Badge } from '@/components/ReviewTierBadge';
+import FTCDisclosure from '@/components/FTCDisclosure';
+import AffiliateButton from '@/components/AffiliateButton';
+import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import Link from 'next/link';
+import type { Metadata } from 'next';
 
 export const metadata = {
   title: 'Method All-Purpose Cleaner Review: 5-Year Home Kitchen Test',
@@ -65,24 +70,15 @@ export default function MethodAllPurposeCleanerReview() {
           <p style={{ fontSize: '16px', margin: '15px 0' }}>
             After 5 years of testing, this is my only kitchen cleaner. Powerful AND non-toxic.
           </p>
-          <a
+          <AffiliateButton
             href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
-            target="_blank"
-            rel="nofollow noopener"
-            style={{
-              display: 'inline-block',
-              background: '#ff9900',
-              color: 'white',
-              padding: '15px 40px',
-              margin: '10px',
-              textDecoration: 'none',
-              borderRadius: '6px',
-              fontWeight: 'bold',
-              fontSize: '18px'
-            }}
+            merchant="amazon"
+            product="{productData.slug}"
+            position="above_fold"
+            variant="primary"
           >
             Check Price on Amazon →
-          </a>
+          </AffiliateButton>
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 Price updated daily. We earn commission at no extra cost to you.
           </p>
@@ -349,23 +345,15 @@ export default function MethodAllPurposeCleanerReview() {
           <p style={{ fontSize: '16px', margin: '15px 0' }}>
             The only kitchen cleaner I&apos;ve used for 5 years. Powerful, safe, and effective.
           </p>
-          <a
+          <AffiliateButton
             href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
-            target="_blank"
-            rel="nofollow noopener"
-            style={{
-              display: 'inline-block',
-              background: '#0066cc',
-              color: 'white',
-              padding: '12px 30px',
-              textDecoration: 'none',
-              borderRadius: '5px',
-              fontWeight: 'bold',
-              fontSize: '16px'
-            }}
+            merchant="amazon"
+            product="{productData.slug}"
+            position="mid_article"
+            variant="secondary"
           >
             Check Amazon Price →
-          </a>
+          </AffiliateButton>
         </div>
 
         {/* ECO-FRIENDLY SECTION */}
@@ -841,24 +829,15 @@ export default function MethodAllPurposeCleanerReview() {
               After 5 years of testing, this is the only cleaner I use in my kitchen.
               The unicorn is real.
             </p>
-            <a
+            <AffiliateButton
               href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
-              target="_blank"
-              rel="nofollow noopener"
-              style={{
-                display: 'inline-block',
-                background: '#ff9900',
-                color: 'white',
-                padding: '18px 50px',
-                margin: '10px',
-                textDecoration: 'none',
-                borderRadius: '6px',
-                fontWeight: 'bold',
-                fontSize: '20px'
-              }}
+              merchant="amazon"
+              product="{productData.slug}"
+              position="mid_article"
+              variant="secondary"
             >
               Check Current Price on Amazon →
-            </a>
+            </AffiliateButton>
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
               💡 Powerful AND safe—no compromise needed. Price updated daily.<br/>
               We earn commission at no extra cost to you.

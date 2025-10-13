@@ -4,15 +4,46 @@ import AffiliateButton from '@/components/AffiliateButton';
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import Image from 'next/image';
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 
-export const metadata = {
+const productData = {
+  name: "Diamond Crystal Kosher Salt",
+  slug: "diamond-crystal-kosher-salt",
+  brand: "Diamond Crystal",
+  category: "Seasonings",
+  priceRange: { min: 5, max: 15, currency: "USD" },
+  affiliateLinks: [{
+    retailer: "Amazon",
+    url: "https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
+  }],
+  expertRating: 5,
+  expertOpinion: "The industry standard for professional kitchens and serious home cooks.",
+  pros: ["Perfect pinchability", "Clean pure flavor", "No additives", "Consistent results"],
+  cons: ["Not iodized", "Can be hard to find in some regions"],
+  dateAdded: "2025-10-13",
+  lastUpdated: "2025-10-13",
+  images: { primary: "/logo.png" }
+};
+
+export const metadata: Metadata = {
   title: 'Diamond Crystal Kosher Salt Review: 18-Year Test (2025)',
   description: 'Professional chef uses Diamond Crystal Kosher Salt for 18 years - 6 years in 200+ cover restaurant, 18 years at home. Complete review of texture, flavor, and why chefs prefer it.',
 };
 
 export default function DiamondCrystalKosherSaltReview() {
   return (
-    <article>
+    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={1}
+        testingPeriod="24 years (6 Purple Café + 18 home)"
+        rating={4.9}
+        hook="Professional chef standard. Clean flavor, perfect texture."
+        category="Ingredients"
+      />
+      <article>
 
       {/* H1 Title */}
       <h1>Diamond Crystal Kosher Salt Review: 18 Years of Professional &amp; Home Use (2025)</h1>
@@ -803,12 +834,12 @@ export default function DiamondCrystalKosherSaltReview() {
         gap: '20px',
         alignItems: 'start'
       }}>
-        <img
+        <Image
           src="/images/team/head-shot-1.jpg"
           alt="Scott Bradley, Professional Chef"
+          width={100}
+          height={100}
           style={{
-            width: '100px',
-            height: '100px',
             borderRadius: '50%',
             objectFit: 'cover'
           }}
@@ -819,9 +850,9 @@ export default function DiamondCrystalKosherSaltReview() {
             Professional Chef • 40 Years Experience Since Age 15
           </p>
           <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-            Former Kitchen Manager at Purple Café with 21+ years of restaurant experience managing 200+ cover operations.
-            A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-            University of Montana. Diamond Crystal Kosher Salt has been the only salt in my kitchens—professional
+            Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend.
+            23+ years of restaurant experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business
+            Administration from University of Montana. Diamond Crystal Kosher Salt has been the only salt in my kitchens—professional
             and personal—for 18 years. If there was a better option, I&apos;d have found it by now.
           </p>
           <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>
@@ -831,5 +862,6 @@ export default function DiamondCrystalKosherSaltReview() {
       </div>
 
     </article>
+    </div>
   );
 }

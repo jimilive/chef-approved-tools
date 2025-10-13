@@ -4,45 +4,6 @@ import AffiliateButton from '@/components/AffiliateButton';
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import Image from 'next/image';
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-
-const productData = {
-  name: "Nordic Ware Half Sheet Pan",
-  slug: "nordic-ware-half-sheet-pan",
-  brand: "Nordic Ware",
-  category: "Bakeware",
-  priceRange: {
-    min: 15,
-    max: 25,
-    currency: "USD"
-  },
-  affiliateLinks: [
-    {
-      retailer: "Amazon",
-      url: "https://www.amazon.com/Nordic-Ware-Natural-Aluminum-Commercial/dp/B0049C2S32?&linkCode=ll1&tag=chefapprovedt-20&linkId=n1o2r3d4i5c6w7a8r9e0s1h2e3e4t5p6"
-    }
-  ],
-  expertRating: 5,
-  expertOpinion: "Commercial-grade durability with perfect heat distribution for professional results at home.",
-  pros: [
-    "Even heat distribution prevents hot spots",
-    "Won't warp even after years of high-heat use",
-    "Natural patina improves non-stick properties over time",
-    "Commercial 13-gauge thickness",
-    "Perfect half-sheet size for home ovens"
-  ],
-  cons: [
-    "Requires hand washing (not dishwasher safe)",
-    "Develops bronze patina (not for those wanting shiny pans)",
-    "Not pre-seasoned like non-stick alternatives"
-  ],
-  dateAdded: "2025-10-13",
-  lastUpdated: "2025-10-13",
-  images: {
-    primary: "/logo.png"
-  }
-};
 
 export const metadata: Metadata = {
   title: 'Nordic Ware Half Sheet Pan Review: 10 Years of Testing (2025)',
@@ -58,15 +19,6 @@ export const metadata: Metadata = {
 export default function NordicWareHalfSheetPanReview() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
-      <ProductViewTrackerWrapper
-        slug={productData.slug}
-        name={productData.name}
-        tier={2}
-        testingPeriod="9 Years"
-        rating={4.7}
-        hook="Never warped. Even browning for 9 years straight."
-        category="Bakeware"
-      />
       <article>
         {/* Breadcrumb */}
         <nav style={{ marginBottom: '20px', fontSize: '14px' }}>
@@ -984,12 +936,12 @@ export default function NordicWareHalfSheetPanReview() {
           gap: '20px',
           alignItems: 'start'
         }}>
-          <Image
+          <img
             src="/images/team/head-shot-1.jpg"
             alt="Scott Bradley, Professional Chef"
-            width={100}
-            height={100}
             style={{
+              width: '100px',
+              height: '100px',
               borderRadius: '50%',
               objectFit: 'cover'
             }}
@@ -1000,7 +952,7 @@ export default function NordicWareHalfSheetPanReview() {
               Professional Chef • 40 Years Experience Since Age 15
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 23+ years of restaurant experience. Equipment
+              Former Kitchen Manager at Purple Café with 23+ years of restaurant experience. Equipment
               tested through years of actual use in demanding conditions—not just manufacturer claims.
             </p>
             <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold', textDecoration: 'none' }}>

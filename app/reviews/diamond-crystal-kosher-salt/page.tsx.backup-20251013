@@ -1,4 +1,9 @@
 import { Tier1Badge } from '@/components/ReviewTierBadge';
+import FTCDisclosure from '@/components/FTCDisclosure';
+import AffiliateButton from '@/components/AffiliateButton';
+import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import Link from 'next/link';
+import type { Metadata } from 'next';
 
 export const metadata = {
   title: 'Diamond Crystal Kosher Salt Review: 18-Year Test (2025)',
@@ -48,24 +53,15 @@ export default function DiamondCrystalKosherSaltReview() {
       }}>
         <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Best Price:</h3>
 
-        <a
+        <AffiliateButton
           href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
-          target="_blank"
-          rel="nofollow noopener"
-          style={{
-            display: 'inline-block',
-            background: '#ff9900',
-            color: 'white',
-            padding: '15px 40px',
-            margin: '10px',
-            textDecoration: 'none',
-            borderRadius: '6px',
-            fontWeight: 'bold',
-            fontSize: '18px'
-          }}
+          merchant="amazon"
+          product="{productData.slug}"
+          position="above_fold"
+          variant="primary"
         >
           View on Amazon →
-        </a>
+        </AffiliateButton>
 
         <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
           💡 Pricing updated daily. We earn commission at no extra cost to you.<br/>
@@ -204,23 +200,15 @@ export default function DiamondCrystalKosherSaltReview() {
         <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
           Ready to upgrade to professional-standard salt?
         </p>
-        <a
+        <AffiliateButton
           href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
-          target="_blank"
-          rel="nofollow noopener"
-          style={{
-            display: 'inline-block',
-            background: '#0066cc',
-            color: 'white',
-            padding: '12px 30px',
-            margin: '10px',
-            textDecoration: 'none',
-            borderRadius: '5px',
-            fontWeight: 'bold'
-          }}
+          merchant="amazon"
+          product="{productData.slug}"
+          position="mid_article"
+          variant="secondary"
         >
           Check Current Price →
-        </a>
+        </AffiliateButton>
       </div>
 
       {/* Technical Details */}
@@ -497,23 +485,15 @@ export default function DiamondCrystalKosherSaltReview() {
               <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Prime shipping | ✓ Subscribe &amp; Save available | ✓ 3-pack option</p>
             </div>
             <div>
-              <a
+              <AffiliateButton
                 href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
-                target="_blank"
-                rel="nofollow noopener"
-                style={{
-                  display: 'inline-block',
-                  background: '#ff9900',
-                  color: 'white',
-                  padding: '15px 30px',
-                  textDecoration: 'none',
-                  borderRadius: '5px',
-                  fontWeight: 'bold',
-                  whiteSpace: 'nowrap'
-                }}
+                merchant="amazon"
+                product="{productData.slug}"
+                position="mid_article"
+                variant="secondary"
               >
                 View on Amazon →
-              </a>
+              </AffiliateButton>
             </div>
           </div>
         </div>
@@ -649,24 +629,15 @@ export default function DiamondCrystalKosherSaltReview() {
           consistent seasoning makes.
         </p>
 
-        <a
+        <AffiliateButton
           href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
-          target="_blank"
-          rel="nofollow noopener"
-          style={{
-            display: 'inline-block',
-            background: '#ff9900',
-            color: 'white',
-            padding: '18px 50px',
-            margin: '10px',
-            textDecoration: 'none',
-            borderRadius: '6px',
-            fontWeight: 'bold',
-            fontSize: '20px'
-          }}
+          merchant="amazon"
+          product="{productData.slug}"
+          position="mid_article"
+          variant="secondary"
         >
           Check Current Price →
-        </a>
+        </AffiliateButton>
 
         <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
           💡 Often available in money-saving 3-packs. Subscribe &amp; Save for even better value.

@@ -3,7 +3,33 @@ import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+
+
+
+const productData = {
+  name: "Method all purpose cleaner",
+  slug: "method-all-purpose-cleaner",
+  brand: "Brand Name",
+  category: "Kitchen Equipment",
+  priceRange: {
+    min: 20,
+    max: 50,
+    currency: "USD"
+  },
+  affiliateLinks: [],
+  expertRating: 4.5,
+  expertOpinion: "Professional-grade quality.",
+  pros: [],
+  cons: [],
+  dateAdded: "2025-10-13",
+  lastUpdated: "2025-10-13",
+  images: {
+    primary: "/logo.png"
+  }
+};
 
 export const metadata = {
   title: 'Method All-Purpose Cleaner Review: 5-Year Home Kitchen Test',
@@ -13,7 +39,16 @@ export const metadata = {
 export default function MethodAllPurposeCleanerReview() {
   return (
     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '20px' }}>
-      <article itemScope itemType="https://schema.org/Review">
+     <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={2}
+        testingPeriod="5 Years"
+        rating={4.8}
+        hook="The unicorn of cleaners. Powerful AND non-toxic. Cuts grease effortlessly."
+        category="Cleaning"
+      />
+       <article itemScope itemType="https://schema.org/Review">
 
         <h1 itemProp="name">Method All-Purpose Cleaner Review: 5-Year Home Kitchen Test</h1>
 
@@ -998,16 +1033,8 @@ export default function MethodAllPurposeCleanerReview() {
           gap: '20px',
           alignItems: 'start'
         }}>
-          <img
-            src="/images/team/head-shot-1.jpg"
-            alt="Scott Bradley, Professional Chef"
-            style={{
-              width: '100px',
-              height: '100px',
-              borderRadius: '50%',
-              objectFit: 'cover'
-            }}
-          />
+          
+          <Image src="/images/team/head-shot-1.jpg" alt="Scott Bradley, Professional Chef" width={100} height={100} />
           <div>
             <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
             <p style={{ margin: '5px 0', fontWeight: 'bold' }}>

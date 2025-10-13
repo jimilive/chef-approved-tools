@@ -1,10 +1,36 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image';
 import FTCDisclosure from '@/components/FTCDisclosure'
 import ProductImageGallery from '@/components/ProductImageGallery'
 import AffiliateButton from '@/components/AffiliateButton'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+
+
+
+const productData = {
+  name: "Victorinox fibrox 8 inch chefs knife",
+  slug: "victorinox-fibrox-8-inch-chefs-knife",
+  brand: "Brand Name",
+  category: "Kitchen Equipment",
+  priceRange: {
+    min: 20,
+    max: 50,
+    currency: "USD"
+  },
+  affiliateLinks: [],
+  expertRating: 4.5,
+  expertOpinion: "Professional-grade quality.",
+  pros: [],
+  cons: [],
+  dateAdded: "2025-10-13",
+  lastUpdated: "2025-10-13",
+  images: {
+    primary: "/logo.png"
+  }
+};
 
 export const metadata: Metadata = {
   title: 'Victorinox 8" Chef\'s Knife Review: 40-Year Pro Test (2025)',
@@ -14,6 +40,15 @@ export const metadata: Metadata = {
 export default function VictorinoxFibrox8InchReview() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={1}
+        testingPeriod="15 years professional use"
+        rating={4.8}
+        hook="Professional quality at accessible price. My daily knife."
+        category="Knives"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4">
@@ -980,16 +1015,8 @@ export default function VictorinoxFibrox8InchReview() {
             alignItems: 'start'
           }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/team/head-shot-1.jpg"
-              alt="Scott Bradley, Professional Chef"
-              style={{
-                width: '100px',
-                height: '100px',
-                borderRadius: '50%',
-                objectFit: 'cover'
-              }}
-            />
+            
+          <Image src="/images/team/head-shot-1.jpg" alt="Scott Bradley, Professional Chef" width={100} height={100} />
             <div>
               <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
               <p style={{ margin: '5px 0', fontWeight: 'bold' }}>

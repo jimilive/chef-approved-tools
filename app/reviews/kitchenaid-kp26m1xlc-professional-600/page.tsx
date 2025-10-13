@@ -5,6 +5,7 @@ import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/sch
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButton from '@/components/AffiliateButton'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 const productData = {
   name: "KitchenAid Professional 600 Series Stand Mixer",
@@ -85,6 +86,16 @@ export default function KitchenAidProfessional600ReviewPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={2}
+        testingPeriod="8 Years"
+        rating={4.6}
+        hook="Home baker favorite. Powerful 575-watt motor."
+        category="Mixers"
+      />
+
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

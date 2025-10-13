@@ -1,4 +1,9 @@
 import { Tier2Badge } from '@/components/ReviewTierBadge';
+import FTCDisclosure from '@/components/FTCDisclosure';
+import AffiliateButton from '@/components/AffiliateButton';
+import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import Link from 'next/link';
+import type { Metadata } from 'next';
 
 export const metadata = {
   title: 'Cuisinart High Impact 8&quot; Pan Review: 6-Month Home Test',
@@ -65,24 +70,15 @@ export default function Cuisinart8InchNonstickPanReview() {
           <p style={{ fontSize: '16px', margin: '15px 0' }}>
             After 6 months of daily testing, this is my go-to pan for eggs and single servings.
           </p>
-          <a
+          <AffiliateButton
             href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
-            target="_blank"
-            rel="nofollow noopener"
-            style={{
-              display: 'inline-block',
-              background: '#ff9900',
-              color: 'white',
-              padding: '15px 40px',
-              margin: '10px',
-              textDecoration: 'none',
-              borderRadius: '6px',
-              fontWeight: 'bold',
-              fontSize: '18px'
-            }}
+            merchant="amazon"
+            product="{productData.slug}"
+            position="above_fold"
+            variant="primary"
           >
             Check Price on Amazon →
-          </a>
+          </AffiliateButton>
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 Price updated daily. We earn commission at no extra cost to you.
           </p>
@@ -324,23 +320,15 @@ export default function Cuisinart8InchNonstickPanReview() {
           <p style={{ fontSize: '16px', margin: '15px 0' }}>
             The pan I reach for every morning. Perfect size, perfect nonstick, perfect results.
           </p>
-          <a
+          <AffiliateButton
             href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
-            target="_blank"
-            rel="nofollow noopener"
-            style={{
-              display: 'inline-block',
-              background: '#0066cc',
-              color: 'white',
-              padding: '12px 30px',
-              textDecoration: 'none',
-              borderRadius: '5px',
-              fontWeight: 'bold',
-              fontSize: '16px'
-            }}
+            merchant="amazon"
+            product="{productData.slug}"
+            position="mid_article"
+            variant="secondary"
           >
             Check Amazon Price →
-          </a>
+          </AffiliateButton>
         </div>
 
         {/* VERSATILITY SECTION */}
@@ -810,24 +798,15 @@ export default function Cuisinart8InchNonstickPanReview() {
               After 6 months of testing, this is my #1 recommendation for egg lovers
               and small-batch cooking.
             </p>
-            <a
+            <AffiliateButton
               href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
-              target="_blank"
-              rel="nofollow noopener"
-              style={{
-                display: 'inline-block',
-                background: '#ff9900',
-                color: 'white',
-                padding: '18px 50px',
-                margin: '10px',
-                textDecoration: 'none',
-                borderRadius: '6px',
-                fontWeight: 'bold',
-                fontSize: '20px'
-              }}
+              merchant="amazon"
+              product="{productData.slug}"
+              position="mid_article"
+              variant="secondary"
             >
               Check Current Price on Amazon →
-            </a>
+            </AffiliateButton>
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
               💡 Professional-quality nonstick at exceptional value. Price updated daily.<br/>
               We earn commission at no extra cost to you.
