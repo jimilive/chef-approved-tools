@@ -1,4 +1,26 @@
 import { MetadataRoute } from 'next'
+import fs from 'fs'
+import path from 'path'
+
+// Helper function to get all subdirectories (slugs) from a directory
+function getContentSlugs(contentDir: string): string[] {
+  const appDir = path.join(process.cwd(), 'app', contentDir)
+
+  try {
+    const entries = fs.readdirSync(appDir, { withFileTypes: true })
+    return entries
+      .filter(entry => entry.isDirectory())
+      .map(entry => entry.name)
+      .filter(name => {
+        // Check if directory has a page.tsx
+        const pagePath = path.join(appDir, name, 'page.tsx')
+        return fs.existsSync(pagePath)
+      })
+  } catch (error) {
+    console.warn(`Could not read directory ${contentDir}:`, error)
+    return []
+  }
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.chefapprovedtools.com'
@@ -86,56 +108,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Actual product review pages
-  const productReviews = [
-    // Daily toolkit - 11 tools (HIGH PRIORITY)
-    'victorinox-fibrox-10-inch-chefs-knife',
-    'victorinox-fibrox-8-inch-chefs-knife',
-    'victorinox-4-inch-paring-knife',
-    'victorinox-granton-edge-boning-knife',
-    'victorinox-offset-bread-knife',
-    'oxo-good-grips-swivel-peeler',
-    'oxo-good-grips-bench-scraper',
-    'winco-heavy-duty-tongs',
-    'benriner-large-mandoline',
-    'zuperia-bar-mops',
-    'epicurean-kitchen-cutting-board',
-    // Other reviews
-    'kitchenaid-ksm8990wh',
-    'kitchenaid-kp26m1xlc-professional-600',
-    'cuisinart-dlc-10c-classic-food-processor',
-    'cuisinart-8-inch-nonstick-pan',
-    'diamond-crystal-kosher-salt',
-    'bodum-chambord-french-press',
-    'robot-coupe-r2-dice',
-    'vitamix-5200',
-    'wusthof-classic-ikon-16-piece',
-    'le-creuset-signature-7-25-qt-dutch-oven',
-    'john-boos-platinum-commercial-cutting-board',
-    'lodge-seasoned-cast-iron-3-skillet-bundle',
-    'black-decker-toaster-oven',
-    'norton-im200-tri-stone-sharpener',
-    'nordic-ware-half-sheet-pan',
-    'method-all-purpose-cleaner'
-  ]
-
-  const productPages = productReviews.map(review => ({
-    url: `${baseUrl}/reviews/${review}`,
-    lastModified: currentDate,
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }))
-
-  // Main review category page
-  const reviewCategoryPages = [
-    {
-      url: `${baseUrl}/reviews`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    }
-  ]
-
   // SEO landing pages - HIGH PRIORITY
   const seoLandingPages = [
     {
@@ -158,103 +130,71 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Blog pages
-  const blogPages = [
+  // AUTO-DISCOVER: Product review pages
+  const reviewSlugs = getContentSlugs('reviews')
+  const productPages = reviewSlugs.map(slug => ({
+    url: `${baseUrl}/reviews/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
+  // Review hub page
+  const reviewCategoryPages = [
+    {
+      url: `${baseUrl}/reviews`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    }
+  ]
+
+  // AUTO-DISCOVER: Blog pages
+  const blogSlugs = getContentSlugs('blog')
+  const blogArticlePages = blogSlugs.map(slug => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+  }))
+
+  // Blog hub page
+  const blogCategoryPages = [
     {
       url: `${baseUrl}/blog`,
       lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/how-to-sear-steaks-like-restaurant-chef`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/why-professional-chefs-use-kosher-salt`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/how-to-steel-a-knife`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/how-to-make-perfect-french-press-coffee`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/how-to-sharpen-with-tri-stone`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/best-scrambled-eggs`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/kitchen-gloves-guide`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/meat-cooking-temperatures-thermometers`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    },
+    }
   ]
 
-  // Guide pages
-  const guidePages = [
+  // AUTO-DISCOVER: Guide pages
+  const guideSlugs = getContentSlugs('guides')
+  const guideArticlePages = guideSlugs.map(slug => ({
+    url: `${baseUrl}/guides/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+  }))
+
+  // Guides hub page
+  const guideCategoryPages = [
     {
       url: `${baseUrl}/guides`,
       lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/guides/best-chef-knives`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/guides/best-cookware`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/guides/kitchen-appliances`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/guides/cookware-materials`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/guides/knife-care`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    },
+    }
   ]
 
-  return [...staticPages, ...seoLandingPages, ...reviewCategoryPages, ...productPages, ...blogPages, ...guidePages]
+  return [
+    ...staticPages,
+    ...seoLandingPages,
+    ...reviewCategoryPages,
+    ...productPages,
+    ...blogCategoryPages,
+    ...blogArticlePages,
+    ...guideCategoryPages,
+    ...guideArticlePages
+  ]
 }
