@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const metadata = {
   title: 'Why Chefs Use Kosher Salt: Professional Kitchen Secrets (2025)',
   description: 'Discover why professional chefs prefer kosher salt. Learn about Diamond Crystal vs Morton, proper seasoning technique, and why it&apos;s essential in commercial kitchens.',
@@ -299,12 +301,12 @@ export default function WhyChefsUseKosherSalt() {
         gap: '20px',
         alignItems: 'start'
       }}>
-        <img
+        <Image
           src="/images/team/head-shot-1.jpg"
           alt="Scott Bradley, Professional Chef"
+          width={100}
+          height={100}
           style={{
-            width: '100px',
-            height: '100px',
             borderRadius: '50%',
             objectFit: 'cover'
           }}

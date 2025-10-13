@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const metadata = {
   title: 'Meat Cooking Temperatures Guide: Why Chefs Use Thermometers (2025)',
   description: 'Professional chef explains meat thermometers and proper cooking temps. 21+ years restaurant experience. Food safety + perfect doneness every time.',
@@ -685,12 +687,12 @@ export default function MeatCookingTemperaturesThermometers() {
         gap: '20px',
         alignItems: 'start'
       }}>
-        <img
+        <Image
           src="/images/team/head-shot-1.jpg"
           alt="Scott Bradley, Professional Chef"
+          width={100}
+          height={100}
           style={{
-            width: '100px',
-            height: '100px',
             borderRadius: '50%',
             objectFit: 'cover'
           }}

@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const metadata = {
   title: 'Perfect Scrambled Eggs: No Bowl, No Whisk Method (2025)',
   description: 'Professional chef shares revolutionary scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 40 years of cooking wisdom.',
@@ -494,12 +496,12 @@ export default function BestScrambledEggs() {
         gap: '20px',
         alignItems: 'start'
       }}>
-        <img
+        <Image
           src="/images/team/head-shot-1.jpg"
           alt="Scott Bradley, Professional Chef"
+          width={100}
+          height={100}
           style={{
-            width: '100px',
-            height: '100px',
             borderRadius: '50%',
             objectFit: 'cover'
           }}

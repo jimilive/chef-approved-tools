@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const metadata = {
   title: 'How to Steel a Knife (Hone Like a Chef) - Complete Guide (2025)',
   description: 'Learn how to steel a knife properly using a honing steel. Professional chef guide to honing vs sharpening, perfect technique, and top tool recommendations.',
@@ -257,12 +259,12 @@ export default function HowToSteelAKnife() {
         gap: '20px',
         alignItems: 'start'
       }}>
-        <img
+        <Image
           src="/images/team/head-shot-1.jpg"
           alt="Scott Bradley, Professional Chef"
+          width={100}
+          height={100}
           style={{
-            width: '100px',
-            height: '100px',
             borderRadius: '50%',
             objectFit: 'cover'
           }}

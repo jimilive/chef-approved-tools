@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const metadata = {
   title: 'Kitchen Gloves Guide: Professional Safety & Best Practices (2025)',
   description: 'Learn professional kitchen glove safety from chef with 21+ years restaurant experience. Single-use, cut-resistant, and proper layering techniques.',
@@ -417,12 +419,12 @@ export default function KitchenGlovesGuide() {
         gap: '20px',
         alignItems: 'start'
       }}>
-        <img
+        <Image
           src="/images/team/head-shot-1.jpg"
           alt="Scott Bradley, Professional Chef"
+          width={100}
+          height={100}
           style={{
-            width: '100px',
-            height: '100px',
             borderRadius: '50%',
             objectFit: 'cover'
           }}
