@@ -117,7 +117,7 @@ export default function RecentlyViewed() {
         marginBottom: '30px',
         lineHeight: '1.6'
       }}>
-        Pick up where you left off. These are the products you've been researching.
+        Pick up where you left off. These are the products you&apos;ve been researching.
       </p>
 
       <div style={{
