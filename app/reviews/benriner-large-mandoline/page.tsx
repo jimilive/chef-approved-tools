@@ -2,13 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Tier1Badge } from '@/components/ReviewTierBadge';
-
-
-import { Tier2Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
-import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata = {

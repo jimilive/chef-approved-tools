@@ -1,16 +1,10 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
-
-
-import { Tier2Badge } from '@/components/ReviewTierBadge';
-import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
-import Link from 'next/link';
-import type { Metadata } from 'next';
+import AffiliateButton from '@/components/AffiliateButton'
+import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Victorinox Offset Bread Knife Review: 21+ Years Professional Use (2025)',

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign } from 'lucide-react'
@@ -6,14 +7,7 @@ import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/sch
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AuthorBio from '@/components/AuthorBio'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
-
-
-import { Tier2Badge } from '@/components/ReviewTierBadge';
-import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
-import Link from 'next/link';
-import type { Metadata } from 'next';
+import AffiliateButton from '@/components/AffiliateButton'
 
 const productData = {
   name: "WÜSTHOF Classic IKON 16-Piece Knife Block Set",

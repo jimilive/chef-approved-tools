@@ -5,13 +5,7 @@ import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/sch
 import AuthorBio from '@/components/AuthorBio'
 import AffiliateButton from '@/components/AffiliateButton'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
-
-
-import { Tier2Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
-import Link from 'next/link';
 import type { Metadata } from 'next';
 
 const productData = {

@@ -1,8 +1,4 @@
 import { Tier2Badge } from '@/components/ReviewTierBadge';
-import type { Metadata } from 'next';
-
-
-import { Tier2Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';

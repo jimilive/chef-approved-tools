@@ -1,17 +1,10 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import ProductImageGallery from '@/components/ProductImageGallery'
 import AffiliateButton from '@/components/AffiliateButton'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
-
-
-import { Tier2Badge } from '@/components/ReviewTierBadge';
-import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
-import Link from 'next/link';
-import type { Metadata } from 'next';
+import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Victorinox 8" Chef\'s Knife Review: 40-Year Pro Test (2025)',

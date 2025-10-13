@@ -5,14 +5,8 @@ import { BudgetVsPremiumTeaser } from '@/components/BudgetVsPremiumMagnet'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
-
-
-import { Tier2Badge } from '@/components/ReviewTierBadge';
-import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
-import Link from 'next/link';
-import type { Metadata } from 'next';
+import AffiliateButton from '@/components/AffiliateButton'
+import type { Metadata } from 'next'
 
 const productData = {
   name: "Vitamix 5200 Professional-Grade Blender",

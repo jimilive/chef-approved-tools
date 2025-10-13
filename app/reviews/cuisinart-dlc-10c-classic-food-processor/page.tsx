@@ -4,13 +4,7 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
-
-
-import { Tier2Badge } from '@/components/ReviewTierBadge';
-import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
-import Link from 'next/link';
+import AffiliateButton from '@/components/AffiliateButton'
 import type { Metadata } from 'next';
 
 const productData = {
