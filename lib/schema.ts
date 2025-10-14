@@ -47,17 +47,6 @@ export const organizationSchema = {
     "@type": "ContactPoint",
     contactType: "customer service",
     email: "contact@chefapprovedtools.com"
-  },
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: {
-      "@type": "Country",
-      name: "US"
-    },
-    addressLocality: "Davis",
-    addressRegion: "CA",
-    postalCode: "95616",
-    streetAddress: "Professional Kitchen Equipment Reviews"
   }
 }
 
