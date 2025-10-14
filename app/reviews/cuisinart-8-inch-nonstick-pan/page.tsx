@@ -37,7 +37,7 @@ export const metadata = {
   },
 
   title: 'Cuisinart High Impact 8&quot; Pan Review: 6-Month Home Test',
-  description: 'Professional chef&apos;s 6-month review of Cuisinart 8-inch nonstick pan. Perfect for eggs, single servings, and everyday cooking. Induction ready, durable construction.',
+  description: 'Cuisinart 8-inch nonstick pan review. Professional chef tests for 6 months. Perfect for eggs, single servings. Induction ready.',
 };
 
 export default function Cuisinart8InchNonstickPanReview() {

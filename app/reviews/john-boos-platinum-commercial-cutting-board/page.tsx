@@ -98,7 +98,7 @@ export const metadata = {
   },
 
   title: "John Boos Platinum Cutting Board | 14-Year Review",
-  description: "Professional chef tests John Boos 24x18 cutting board for 14 years in home kitchen. Complete review: knife preservation, durability, maintenance reality, and generational quality.",
+  description: "John Boos 24x18 cutting board review: 14 years home use. Chef tests knife preservation, durability, maintenance. Generational quality.",
   keywords: ["John Boos cutting board", "commercial cutting board", "maple cutting board", "restaurant cutting board", "butcher block"],
   openGraph: {
     title: "John Boos Platinum Commercial Cutting Board: Professional Review",

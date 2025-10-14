@@ -60,7 +60,7 @@ const breadcrumbs = [
 
 export const metadata = {
   title: "KitchenAid Mixer KSM8990WH Review: 18-Month Commercial Test (2025)",
-  description: "Professional chef tests KitchenAid mixer (commercial series) for 18 months. Complete KitchenAid stand mixer review: performance, durability, ROI, and pricing.",
+  description: "KitchenAid Commercial mixer review: 18 months restaurant testing. Chef reviews 1.3HP motor, NSF cert, 8-qt capacity, durability, ROI.",
   keywords: ["KitchenAid mixer", "KitchenAid stand mixer", "KSM8990WH review", "KitchenAid commercial mixer", "professional mixer", "NSF certified mixer", "kitchen appliances"],
   robots: {
     index: true,

@@ -56,7 +56,7 @@ const breadcrumbs = [
 
 export const metadata = {
   title: 'KitchenAid Professional 600 Review: 18-Year Test (2025)',
-  description: 'Chef tests KitchenAid Professional 600 mixer for 18 years at home. Complete review: pizza dough performance, attachment versatility, durability, and value.',
+  description: 'KitchenAid Professional 600 review: 18 years home use. Chef tests pizza dough, attachments, durability, value. Buy-it-for-life mixer.',
   keywords: ["KitchenAid Professional 600", "KP26M1XLC review", "stand mixer", "pizza dough mixer", "home baking"],
   robots: {
     index: true,
@@ -74,7 +74,7 @@ export const metadata = {
   },
   openGraph: {
     title: "KitchenAid Professional 600 Review: 18 Years of Home Baking",
-    description: "Professional chef&apos;s honest review after 18 years of home kitchen testing",
+    description: "18 years testing KitchenAid mixer at home. Chef reviews pizza dough power, durability, attachment versatility.",
     images: ['/logo.png'],
     url: 'https://www.chefapprovedtools.com/reviews/kitchenaid-kp26m1xlc-professional-600',
     type: 'article',
