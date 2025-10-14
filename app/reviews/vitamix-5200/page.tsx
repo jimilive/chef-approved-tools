@@ -51,7 +51,7 @@ const productData = {
   ],
   inStock: true,
   expertRating: 4.8,
-  expertOpinion: "After 5+ years powering Purple Cafe's smoothie operations, the Vitamix 5200 exceeded every expectation. Zero maintenance issues, consistent professional-quality results, and exceptional durability under daily restaurant volume. The variable speed control provides precision that newer 'smart' models sacrifice. Blades remain sharp, motor shows no degradation—genuine buy-it-for-life equipment.",
+  expertOpinion: "After 5+ years powering Purple Cafe&apos;s smoothie operations, the Vitamix 5200 exceeded every expectation. Zero maintenance issues, consistent professional-quality results, and exceptional durability under daily restaurant volume. The variable speed control provides precision that newer &apos;smart&apos; models sacrifice. Blades remain sharp, motor shows no degradation—genuine buy-it-for-life equipment.",
   dateAdded: "2024-09-23",
   lastUpdated: "2024-09-23"
 }

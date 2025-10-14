@@ -8,7 +8,7 @@ import { Tier2Badge } from '@/components/ReviewTierBadge'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 const productData = {
-  name: 'Lodge Seasoned Cast Iron 3 Skillet Bundle - 12", 10.25", and 8" Set',
+  name: 'Lodge Seasoned Cast Iron 3 Skillet Bundle - 12&quot;, 10.25&quot;, and 8&quot; Set',
   slug: "lodge-seasoned-cast-iron-3-skillet-bundle",
   brand: "Lodge",
   model: "3-Skillet Bundle (L12SK3, L10SK3, L8SK3)",
@@ -260,7 +260,7 @@ export default function Lodge3SkilletBundleReview() {
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Flame className="w-8 h-8 text-blue-600 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">Three Versatile Sizes</h3>
-              <p className="text-sm text-slate-600">12", 10.25", and 8" for every cooking need</p>
+              <p className="text-sm text-slate-600">12&quot;, 10.25&quot;, and 8&quot; for every cooking need</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <DollarSign className="w-8 h-8 text-purple-600 mb-2" />
