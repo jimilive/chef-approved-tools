@@ -50,7 +50,14 @@ export const organizationSchema = {
   },
   address: {
     "@type": "PostalAddress",
-    addressCountry: "US"
+    addressCountry: {
+      "@type": "Country",
+      name: "US"
+    },
+    addressLocality: "Davis",
+    addressRegion: "CA",
+    postalCode: "95616",
+    streetAddress: "Professional Kitchen Equipment Reviews"
   }
 }
 
@@ -90,20 +97,6 @@ export function generateProductSchema(product: any) {
     sku: product.id,
     mpn: product.model || product.id,
     category: product.category,
-    ...(product.affiliateLinks?.[0]?.url && {
-      offers: {
-        "@type": "Offer",
-        url: product.affiliateLinks[0].url,
-        itemCondition: "https://schema.org/NewCondition",
-        availability: product.inStock
-          ? "https://schema.org/InStock"
-          : "https://schema.org/OutOfStock",
-        seller: {
-          "@type": "Organization",
-          name: "Amazon.com"
-        }
-      }
-    }),
     aggregateRating: product.reviews.rating > 0 ? {
       "@type": "AggregateRating",
       ratingValue: product.reviews.rating,
@@ -173,17 +166,6 @@ export function generateProductReviewSchema(product: any) {
       },
       sku: product.sku || product.slug,
       gtin13: product.gtin13,
-      ...(product.affiliateLinks?.[0]?.url && {
-        offers: {
-          "@type": "Offer",
-          availability: product.inStock !== false ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-          url: product.affiliateLinks[0].url,
-          seller: {
-            "@type": "Organization",
-            "name": "Amazon"
-          }
-        }
-      }),
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: expertRating,
@@ -314,19 +296,6 @@ export function generateItemListSchema(products: any[], listName: string) {
         name: product.name,
         image: product.images?.primary,
         url: `https://www.chefapprovedtools.com/reviews/${product.slug}`,
-        ...(product.affiliateLinks?.[0]?.url && {
-          offers: {
-            "@type": "Offer",
-            url: product.affiliateLinks[0].url,
-            availability: product.inStock
-              ? "https://schema.org/InStock"
-              : "https://schema.org/OutOfStock",
-            seller: {
-              "@type": "Organization",
-              "name": "Amazon"
-            }
-          }
-        }),
         aggregateRating: product.reviews.rating > 0 ? {
           "@type": "AggregateRating",
           ratingValue: product.reviews.rating,

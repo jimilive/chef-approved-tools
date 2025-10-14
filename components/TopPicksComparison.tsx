@@ -57,12 +57,6 @@ export default function TopPicksComparison() {
           "name": pick.name.split(' ')[0]
         },
         "category": pick.category,
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": pick.affiliateUrl
-        },
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": pick.rating,

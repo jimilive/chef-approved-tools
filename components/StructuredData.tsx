@@ -67,18 +67,6 @@ export default function StructuredData({ type, product, review, breadcrumbs, art
       "description": product.description,
       "image": product.images || [],
       "sku": product.sku,
-      "offers": {
-        "@type": "Offer",
-        "price": product.price,
-        "priceCurrency": product.currency || "USD",
-        "availability": `https://schema.org/${product.availability || 'InStock'}`,
-        "itemCondition": `https://schema.org/${product.condition || 'NewCondition'}`,
-        "url": product.affiliateUrl || product.url,
-        "seller": {
-          "@type": "Organization",
-          "name": "Chef Approved Tools"
-        }
-      },
       "aggregateRating": product.rating ? {
         "@type": "AggregateRating",
         "ratingValue": product.rating.ratingValue,

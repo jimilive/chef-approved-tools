@@ -29,17 +29,6 @@ export default function ProductSchema({ product, category, reviewUrl }: ProductS
       "bestRating": 5,
       "worstRating": 1
     },
-    ...(product.affiliateLinks[0]?.url && {
-      "offers": {
-        "@type": "Offer",
-        "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-        "url": product.affiliateLinks[0].url,
-        "seller": {
-          "@type": "Organization",
-          "name": "Amazon"
-        }
-      }
-    }),
     "review": product.reviews.count > 0 ? {
       "@type": "Review",
       "author": {
@@ -131,17 +120,6 @@ export function SimpleProductSchema({
       "bestRating": 5,
       "worstRating": 1
     },
-    ...(affiliateUrl && {
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "url": affiliateUrl,
-        "seller": {
-          "@type": "Organization",
-          "name": "Amazon"
-        }
-      }
-    }),
     "review": {
       "@type": "Review",
       "author": {
