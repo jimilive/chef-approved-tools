@@ -90,21 +90,20 @@ export function generateProductSchema(product: any) {
     sku: product.id,
     mpn: product.model || product.id,
     category: product.category,
-    offers: {
-      "@type": "Offer",
-      url: product.affiliateLinks?.[0]?.url,
-      priceCurrency: product.priceRange?.currency || product.price?.currency || "USD",
-      price: product.priceRange?.min || product.price?.current,
-      priceValidUntil: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-      itemCondition: "https://schema.org/NewCondition",
-      availability: product.inStock
-        ? "https://schema.org/InStock"
-        : "https://schema.org/OutOfStock",
-      seller: {
-        "@type": "Organization",
-        name: "Amazon.com"
+    ...(product.affiliateLinks?.[0]?.url && {
+      offers: {
+        "@type": "Offer",
+        url: product.affiliateLinks[0].url,
+        itemCondition: "https://schema.org/NewCondition",
+        availability: product.inStock
+          ? "https://schema.org/InStock"
+          : "https://schema.org/OutOfStock",
+        seller: {
+          "@type": "Organization",
+          name: "Amazon.com"
+        }
       }
-    },
+    }),
     aggregateRating: product.reviews.rating > 0 ? {
       "@type": "AggregateRating",
       ratingValue: product.reviews.rating,
@@ -157,8 +156,6 @@ export function generateProductReviewSchema(product: any) {
     return null;
   }
 
-  const priceValue = product.priceRange?.min || product.price?.current || 0;
-  const priceValidUntil = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]; // 30 days from now
   const expertRating = product.expertRating || product.rating || 4.5;
 
   return {
@@ -176,49 +173,17 @@ export function generateProductReviewSchema(product: any) {
       },
       sku: product.sku || product.slug,
       gtin13: product.gtin13,
-      offers: {
-        "@type": "Offer",
-        price: priceValue > 0 ? priceValue.toString() : "0",
-        priceCurrency: product.priceRange?.currency || product.price?.currency || "USD",
-        priceValidUntil: priceValidUntil,
-        availability: product.inStock !== false ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-        url: product.affiliateLinks?.[0]?.url || `https://www.chefapprovedtools.com/reviews/${product.slug}`,
-        hasMerchantReturnPolicy: {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "US",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-          "merchantReturnDays": 30,
-          "returnMethod": "https://schema.org/ReturnByMail",
-          "returnFees": "https://schema.org/FreeReturn"
-        },
-        shippingDetails: {
-          "@type": "OfferShippingDetails",
-          "shippingRate": {
-            "@type": "MonetaryAmount",
-            "value": "0",
-            "currency": "USD"
-          },
-          "shippingDestination": {
-            "@type": "DefinedRegion",
-            "addressCountry": "US"
-          },
-          "deliveryTime": {
-            "@type": "ShippingDeliveryTime",
-            "handlingTime": {
-              "@type": "QuantitativeValue",
-              "minValue": 1,
-              "maxValue": 2,
-              "unitCode": "DAY"
-            },
-            "transitTime": {
-              "@type": "QuantitativeValue",
-              "minValue": 2,
-              "maxValue": 5,
-              "unitCode": "DAY"
-            }
+      ...(product.affiliateLinks?.[0]?.url && {
+        offers: {
+          "@type": "Offer",
+          availability: product.inStock !== false ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+          url: product.affiliateLinks[0].url,
+          seller: {
+            "@type": "Organization",
+            "name": "Amazon"
           }
         }
-      },
+      }),
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: expertRating,
@@ -285,7 +250,9 @@ export function generateBreadcrumbSchema(items: Array<{name: string, url: string
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: item.url
+      item: {
+        "@id": item.url
+      }
     }))
   }
 }
@@ -347,14 +314,19 @@ export function generateItemListSchema(products: any[], listName: string) {
         name: product.name,
         image: product.images?.primary,
         url: `https://www.chefapprovedtools.com/reviews/${product.slug}`,
-        offers: {
-          "@type": "Offer",
-          price: product.priceRange?.min || product.price?.current,
-          priceCurrency: product.priceRange?.currency || product.price?.currency || "USD",
-          availability: product.inStock
-            ? "https://schema.org/InStock"
-            : "https://schema.org/OutOfStock"
-        },
+        ...(product.affiliateLinks?.[0]?.url && {
+          offers: {
+            "@type": "Offer",
+            url: product.affiliateLinks[0].url,
+            availability: product.inStock
+              ? "https://schema.org/InStock"
+              : "https://schema.org/OutOfStock",
+            seller: {
+              "@type": "Organization",
+              "name": "Amazon"
+            }
+          }
+        }),
         aggregateRating: product.reviews.rating > 0 ? {
           "@type": "AggregateRating",
           ratingValue: product.reviews.rating,

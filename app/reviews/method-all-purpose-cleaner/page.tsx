@@ -10,24 +10,35 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 
 
 const productData = {
-  name: "Method all purpose cleaner",
+  name: "Method All-Purpose Cleaner",
   slug: "method-all-purpose-cleaner",
-  brand: "Brand Name",
-  category: "Kitchen Equipment",
+  brand: "Method",
+  category: "Kitchen Cleaning",
   priceRange: {
-    min: 20,
-    max: 50,
+    min: 3,
+    max: 6,
     currency: "USD"
   },
-  affiliateLinks: [],
-  expertRating: 4.5,
-  expertOpinion: "Professional-grade quality.",
-  pros: [],
-  cons: [],
+  affiliateLinks: [{
+    url: "https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
+  }],
+  expertRating: 4.8,
+  expertOpinion: "After 5 years of daily use and 23+ years managing professional kitchens, I've never found a cleaner that combines serious grease-cutting power with genuinely safe, non-toxic ingredients. Method All-Purpose Cleaner is the rare product that refuses to compromise—it cuts through kitchen grease as effectively as harsh chemical cleaners, but it's plant-based, biodegradable, and safe around food prep surfaces.",
+  pros: [
+    "Effortlessly cuts through grease and grime—equal to chemical cleaners",
+    "Non-toxic, plant-based formula safe for food prep areas",
+    "Safe for wide variety of kitchen surfaces",
+    "Environmentally friendly and biodegradable"
+  ],
+  cons: [
+    "Not intended for heavy-duty outdoor or industrial cleaning",
+    "Not a disinfectant (doesn't kill bacteria/viruses)",
+    "Slightly more expensive than conventional chemical cleaners"
+  ],
   dateAdded: "2025-10-13",
   lastUpdated: "2025-10-13",
   images: {
-    primary: "/logo.png"
+    primary: "https://www.chefapprovedtools.com/logo.png"
   }
 };
 
@@ -53,6 +64,23 @@ export default function MethodAllPurposeCleanerReview() {
         category="Cleaning"
       />
        <article itemScope itemType="https://schema.org/Review">
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateProductReviewSchema(productData))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateBreadcrumbSchema([
+              { name: "Home", url: "https://www.chefapprovedtools.com" },
+              { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+              { name: "Method All-Purpose Cleaner", url: "https://www.chefapprovedtools.com/reviews/method-all-purpose-cleaner" }
+            ]))
+          }}
+        />
 
         <h1 itemProp="name">Method All-Purpose Cleaner Review: 5-Year Home Kitchen Test</h1>
 

@@ -29,53 +29,17 @@ export default function ProductSchema({ product, category, reviewUrl }: ProductS
       "bestRating": 5,
       "worstRating": 1
     },
-    "offers": {
-      "@type": "Offer",
-      "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-      "url": product.affiliateLinks[0]?.url,
-      "priceCurrency": product.price?.currency || "USD",
-      "price": product.price?.current?.toString() || "0",
-      "priceValidUntil": new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-      "seller": {
-        "@type": "Organization",
-        "name": "Amazon"
-      },
-      "hasMerchantReturnPolicy": {
-        "@type": "MerchantReturnPolicy",
-        "applicableCountry": "US",
-        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-        "merchantReturnDays": 30,
-        "returnMethod": "https://schema.org/ReturnByMail",
-        "returnFees": "https://schema.org/FreeReturn"
-      },
-      "shippingDetails": {
-        "@type": "OfferShippingDetails",
-        "shippingRate": {
-          "@type": "MonetaryAmount",
-          "value": "0",
-          "currency": "USD"
-        },
-        "shippingDestination": {
-          "@type": "DefinedRegion",
-          "addressCountry": "US"
-        },
-        "deliveryTime": {
-          "@type": "ShippingDeliveryTime",
-          "handlingTime": {
-            "@type": "QuantitativeValue",
-            "minValue": 0,
-            "maxValue": 2,
-            "unitCode": "DAY"
-          },
-          "transitTime": {
-            "@type": "QuantitativeValue",
-            "minValue": 1,
-            "maxValue": 5,
-            "unitCode": "DAY"
-          }
+    ...(product.affiliateLinks[0]?.url && {
+      "offers": {
+        "@type": "Offer",
+        "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+        "url": product.affiliateLinks[0].url,
+        "seller": {
+          "@type": "Organization",
+          "name": "Amazon"
         }
       }
-    },
+    }),
     "review": product.reviews.count > 0 ? {
       "@type": "Review",
       "author": {
@@ -137,7 +101,6 @@ interface SimpleProductSchemaProps {
   reviewCount: number
   category?: string
   image?: string
-  price?: number
   affiliateUrl?: string
 }
 
@@ -148,7 +111,6 @@ export function SimpleProductSchema({
   reviewCount,
   category = "Kitchen Equipment",
   image,
-  price,
   affiliateUrl
 }: SimpleProductSchemaProps) {
   const simpleSchema = {
@@ -169,53 +131,17 @@ export function SimpleProductSchema({
       "bestRating": 5,
       "worstRating": 1
     },
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
-      ...(affiliateUrl && { "url": affiliateUrl }),
-      "priceCurrency": "USD",
-      "price": price?.toString() || "299",
-      "priceValidUntil": new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-      "seller": {
-        "@type": "Organization",
-        "name": "Amazon"
-      },
-      "hasMerchantReturnPolicy": {
-        "@type": "MerchantReturnPolicy",
-        "applicableCountry": "US",
-        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-        "merchantReturnDays": 30,
-        "returnMethod": "https://schema.org/ReturnByMail",
-        "returnFees": "https://schema.org/FreeReturn"
-      },
-      "shippingDetails": {
-        "@type": "OfferShippingDetails",
-        "shippingRate": {
-          "@type": "MonetaryAmount",
-          "value": "0",
-          "currency": "USD"
-        },
-        "shippingDestination": {
-          "@type": "DefinedRegion",
-          "addressCountry": "US"
-        },
-        "deliveryTime": {
-          "@type": "ShippingDeliveryTime",
-          "handlingTime": {
-            "@type": "QuantitativeValue",
-            "minValue": 0,
-            "maxValue": 2,
-            "unitCode": "DAY"
-          },
-          "transitTime": {
-            "@type": "QuantitativeValue",
-            "minValue": 1,
-            "maxValue": 5,
-            "unitCode": "DAY"
-          }
+    ...(affiliateUrl && {
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "url": affiliateUrl,
+        "seller": {
+          "@type": "Organization",
+          "name": "Amazon"
         }
       }
-    },
+    }),
     "review": {
       "@type": "Review",
       "author": {

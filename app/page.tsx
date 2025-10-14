@@ -24,7 +24,6 @@ const sampleProducts = [
     brand: 'Vitamix',
     rating: 4.7,
     reviews: 234,
-    price: 449,
     image: '/logo.png',
     affiliateUrl: 'https://www.amazon.com/dp/B008H4SLV6?tag=chefapprovedt-20',
     badge: 'Restaurant Tested',
@@ -36,7 +35,6 @@ const sampleProducts = [
     brand: 'KitchenAid',
     rating: 4.9,
     reviews: 156,
-    price: 549,
     image: '/logo.png',
     affiliateUrl: 'https://www.amazon.com/dp/B00IRH09EK?tag=chefapprovedt-20',
     badge: 'NSF Certified',
@@ -45,7 +43,7 @@ const sampleProducts = [
 ]
 
 // Enhanced Product Card Component with Conversion Optimization
-function EnhancedProductCard({ product, category }: { product: any, category: string }) {
+function EnhancedProductCard({ product }: { product: any }) {
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden relative group">
       {product.badge && (
@@ -93,7 +91,6 @@ function EnhancedProductCard({ product, category }: { product: any, category: st
     merchant="amazon"
     product={product.name}
     position="above_fold"
-    price={product.price}
     className="w-full text-center"
   >
   View on Amazon →
@@ -275,13 +272,11 @@ export default function HomePage() {
                     rating={product.rating}
                     reviewCount={product.reviews}
                     category={category}
-                    price={product.price}
                     image={product.image}
                     affiliateUrl={product.affiliateUrl}
                   />
                   <EnhancedProductCard
                     product={product}
-                    category={category}
                   />
                 </div>
               )
