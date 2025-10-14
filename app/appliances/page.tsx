@@ -1,15 +1,8 @@
-import { Metadata } from 'next'
 'use client'
 import Script from "next/script";
 import Link from "next/link";
 import BreadcrumbSchema, { categoryBreadcrumbs } from '@/components/BreadcrumbSchema';
 
-
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/appliances',
-  },
-}
 
 export default function AppliancesPage() {
   const products = [

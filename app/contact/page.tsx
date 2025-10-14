@@ -1,15 +1,8 @@
-import { Metadata } from 'next'
 'use client'
 import { useState, FormEvent } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/contact',
-  },
-}
 
 export default function ContactPage() {
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')

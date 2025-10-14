@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/appliances',
+    canonical: 'https://www.chefapprovedtools.com/cookware',
   },
 }
 
-export default function AppliancesLayout({
+export default function CookwareLayout({
   children,
 }: {
   children: React.ReactNode
