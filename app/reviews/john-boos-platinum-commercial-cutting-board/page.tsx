@@ -265,7 +265,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
         {/* Product Image */}
         <div className="mb-8">
           <Image
-            src="/images/products/john-boos-platinum-commercial-cutting-board/john-boos-platinum-commercial-cutting-board-1.jpg"
+            src="/images/products/john-boos-platinum-commercial-cutting-board/john-boos-platinum-commercial-cutting-board-1.webp"
             alt="John Boos Platinum Commercial Cutting Board 24x18"
             width={1000}
             height={1500}
@@ -398,7 +398,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
         {/* Additional Product Image */}
         <div className="mb-8">
           <Image
-            src="/images/products/john-boos-platinum-commercial-cutting-board/john-boos-platinum-commercial-cutting-board-2.jpg"
+            src="/images/products/john-boos-platinum-commercial-cutting-board/john-boos-platinum-commercial-cutting-board-2.webp"
             alt="John Boos cutting board edge grain construction detail"
             width={1000}
             height={1500}
@@ -1284,7 +1284,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             alignItems: 'start'
           }}>
             <Image
-              src="/images/team/head-shot-1.jpg"
+              src="/images/team/head-shot-1.webp"
               alt="Scott Bradley, Professional Chef"
               width={100}
               height={100}

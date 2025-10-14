@@ -691,7 +691,7 @@ export default function MeatCookingTemperaturesThermometers() {
         alignItems: 'start'
       }}>
         <Image
-          src="/images/team/head-shot-1.jpg"
+          src="/images/team/head-shot-1.webp"
           alt="Scott Bradley, Professional Chef"
           width={100}
           height={100}

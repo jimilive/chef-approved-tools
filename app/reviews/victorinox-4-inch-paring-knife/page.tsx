@@ -105,7 +105,7 @@ export default function Victorinox4InchParingKnifeReview() {
         {/* Product Images */}
         <div className="mb-8">
           <Image
-            src="/images/products/victorinox-4-inch-paring-knife/victorinox-4-inch-paring-knife-1.jpg"
+            src="/images/products/victorinox-4-inch-paring-knife/victorinox-4-inch-paring-knife-1.webp"
             alt="Victorinox 4-inch Paring Knife"
             width={1000}
             height={1500}

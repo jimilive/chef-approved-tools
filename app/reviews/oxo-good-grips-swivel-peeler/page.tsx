@@ -104,7 +104,7 @@ export default function OXOGoodGripsSwivelPeelerReview() {
         {/* Product Images */}
         <div className="mb-8">
           <Image
-            src="/images/products/oxo-good-grips-swivel-peeler/oxo-good-grips-swivel-peeler-1.jpg"
+            src="/images/products/oxo-good-grips-swivel-peeler/oxo-good-grips-swivel-peeler-1.webp"
             alt="OXO Good Grips Swivel Peeler"
             width={1000}
             height={1500}

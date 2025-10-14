@@ -102,7 +102,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
         {/* Product Images */}
         <div className="mb-8">
           <Image
-            src="/images/products/victorinox-granton-edge-boning-knife/victorinox-granton-edge-boning-knife-1.jpg"
+            src="/images/products/victorinox-granton-edge-boning-knife/victorinox-granton-edge-boning-knife-1.webp"
             alt="Victorinox Granton Edge Boning Knife"
             width={1000}
             height={1500}

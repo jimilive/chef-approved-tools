@@ -138,7 +138,7 @@ export default function ChefApprovedKitchenKit() {
             <div className="flex items-start gap-4">
               <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-orange-400">
                 <Image
-                  src="/images/team/head-shot-1.jpg"
+                  src="/images/team/head-shot-1.webp"
                   alt="Scott Bradley - Professional Chef"
                   fill
                   sizes="64px"

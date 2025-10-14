@@ -86,7 +86,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
         {/* Product Image */}
         <div className="mb-8">
           <Image
-            src="/images/products/victorinox-offset-bread-knife/victorinox-offset-bread-knife-1.jpg"
+            src="/images/products/victorinox-offset-bread-knife/victorinox-offset-bread-knife-1.webp"
             alt="Victorinox Offset Bread Knife"
             width={1000}
             height={1500}
@@ -237,7 +237,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
 
           <div className="mb-8">
             <Image
-              src="/images/products/victorinox-offset-bread-knife/victorinox-offset-bread-knife-2.jpg"
+              src="/images/products/victorinox-offset-bread-knife/victorinox-offset-bread-knife-2.webp"
               alt="Victorinox Offset Bread Knife handle detail"
               width={1000}
               height={1500}
@@ -922,7 +922,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
           alignItems: 'start'
         }}>
           <Image 
-            src="/images/team/head-shot-1.jpg" 
+            src="/images/team/head-shot-1.webp" 
             alt="Scott Bradley, Professional Chef" 
             width={100}
             height={100}

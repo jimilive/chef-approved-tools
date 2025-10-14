@@ -1219,7 +1219,7 @@ export default function Lodge3SkilletBundleReview() {
         }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
-            src="/images/team/head-shot-1.jpg" 
+            src="/images/team/head-shot-1.webp" 
             alt="Scott Bradley, Professional Chef" 
             style={{
               width: '100px',

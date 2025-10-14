@@ -102,7 +102,7 @@ export default function WincoHeavyDutyTongsReview() {
         {/* Product Image */}
         <div className="mb-8">
           <Image
-            src="/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-9-inch-1.jpg"
+            src="/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-9-inch-1.webp"
             alt="Winco Heavy Duty Tongs"
             width={1000}
             height={1500}
