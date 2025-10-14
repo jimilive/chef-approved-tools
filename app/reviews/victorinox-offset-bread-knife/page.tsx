@@ -213,14 +213,14 @@ export default function VictorinoxOffsetBreadKnifeReview() {
             <p>
               After 40 years of cooking, I&apos;ve learned that a bread knife is about more than just
               slicing bread. Tomatoes, delicate cakes, crusty baguettes, soft sandwich loaves - the serrated edge
-              handles them all without crushing. This became as essential in my kitchen as my <Link href="/reviews/victorinox-8-inch-chefs-knife-review">Victorinox 8-inch chef&apos;s knife</Link>.
+              handles them all without crushing. This became as essential in my kitchen as my <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife">Victorinox 8-inch chef&apos;s knife</Link>.
             </p>
 
             <p>
               The offset handle is what sets this apart from standard bread knives. Your knuckles stay 1.5 inches above
               the cutting board, which means you can slice all the way through without worrying about scraping your hand.
               Sounds simple, but it makes a huge difference in comfort and safety - especially when you&apos;re working
-              through the kind of prep volume I tested with our <Link href="/reviews/kitchenaid-commercial-8-quart-mixer-review">KitchenAid commercial mixer</Link> batch baking.
+              through the kind of prep volume I tested with our <Link href="/reviews/kitchenaid-ksm8990wh">KitchenAid commercial mixer</Link> batch baking.
             </p>
 
             <p>
@@ -295,7 +295,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
             <p className="mt-6">
               In a professional kitchen, comfort matters during repetitive tasks. The offset design reduces hand fatigue
               when you&apos;re slicing bread all day. The blade stays sharp through heavy use without any maintenance.
-              This knife handles the same daily demands as my <Link href="/reviews/victorinox-10-inch-chefs-knife-review">10-inch chef&apos;s knife</Link> and <Link href="/reviews/victorinox-granton-edge-boning-knife-review">Granton edge boning knife</Link> - 
+              This knife handles the same daily demands as my <Link href="/reviews/victorinox-fibrox-10-inch-chefs-knife">10-inch chef&apos;s knife</Link> and <Link href="/reviews/victorinox-granton-edge-boning-knife">Granton edge boning knife</Link> - 
               together, these four Victorinox knives form my essential daily toolkit.
             </p>
           </div>
@@ -790,7 +790,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
               <strong>40 years of daily use:</strong> Same knife from culinary school, still performing flawlessly
             </p>
             <Link 
-              href="/reviews/victorinox-8-inch-chefs-knife-review"
+              href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
               style={{
                 display: 'inline-block',
                 background: '#28a745',
@@ -818,7 +818,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
               <strong>Restaurant kitchen essential:</strong> My go-to for prep work and large-format vegetables
             </p>
             <Link 
-              href="/reviews/victorinox-10-inch-chefs-knife-review"
+              href="/reviews/victorinox-fibrox-10-inch-chefs-knife"
               style={{
                 display: 'inline-block',
                 background: '#28a745',
@@ -846,7 +846,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
               <strong>Butcher shop quality:</strong> Same knife used by professional meat cutters worldwide
             </p>
             <Link 
-              href="/reviews/victorinox-granton-edge-boning-knife-review"
+              href="/reviews/victorinox-granton-edge-boning-knife"
               style={{
                 display: 'inline-block',
                 background: '#28a745',
