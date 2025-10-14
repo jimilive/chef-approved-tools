@@ -88,7 +88,7 @@ const sizeComparison = [
 const breadcrumbs = [
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: "Cutting Boards", url: "https://www.chefapprovedtools.com/reviews/cutting-boards" },
+  { name: "Cutting Boards", url: "https://www.chefapprovedtools.com/cookware" },
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
 ]
 

@@ -338,7 +338,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
                 <li>✓ Professional quality at accessible pricing</li>
                 <li>✓ Long blade handles large items</li>
                 <li>✓ Comfortable grip for extended use</li>
-                <li>✓ Same quality as other <Link href="/guides/best-kitchen-knives" className="text-green-700 underline">professional-grade knives</Link></li>
+                <li>✓ Same quality as other <Link href="/guides/best-chef-knives" className="text-green-700 underline">professional-grade knives</Link></li>
               </ul>
             </div>
 

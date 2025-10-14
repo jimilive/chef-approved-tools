@@ -234,7 +234,7 @@ export default function HowToSteelAKnife() {
         </div>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8', marginTop: '25px' }}>
-          See also: <a href="/guides/best-kitchen-knives" style={{ color: '#0066cc', fontWeight: 'bold' }}>Best Kitchen Knives for Everyday Cooking</a> and our complete <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold' }}>Kitchen Starter Kit</a> for chef-approved essentials.
+          See also: <a href="/guides/best-chef-knives" style={{ color: '#0066cc', fontWeight: 'bold' }}>Best Kitchen Knives for Everyday Cooking</a> and our complete <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold' }}>Kitchen Starter Kit</a> for chef-approved essentials.
         </p>
       </section>
 

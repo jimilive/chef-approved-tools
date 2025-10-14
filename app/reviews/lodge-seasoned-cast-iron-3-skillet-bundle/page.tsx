@@ -88,7 +88,7 @@ const seasoningGuide = [
 const breadcrumbs = [
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: "Cast Iron Cookware", url: "https://www.chefapprovedtools.com/reviews/cast-iron" },
+  { name: "Cast Iron Cookware", url: "https://www.chefapprovedtools.com/cookware" },
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
 ]
 

@@ -398,7 +398,7 @@ export default function KitchenAidProfessional600ReviewPage() {
           <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
             This transforms a stand mixer into a complete kitchen system—one investment that grows
             with your cooking ambitions. For more attachment recommendations, see our{' '}
-            <a href="/guides/stand-mixer-attachments" className="text-orange-600 hover:text-orange-800 underline">complete stand mixer attachment guide</a>.
+            <a href="/appliances" className="text-orange-600 hover:text-orange-800 underline">complete stand mixer attachment guide</a>.
           </p>
 
           <p style={{ fontSize: '16px', lineHeight: '1.6' }}>

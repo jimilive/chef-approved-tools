@@ -78,7 +78,7 @@ const knivesIncluded = [
 const breadcrumbs = [
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: "Knife Sets", url: "https://www.chefapprovedtools.com/reviews/knife-sets" },
+  { name: "Knife Sets", url: "https://www.chefapprovedtools.com/knives" },
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
 ]
 
@@ -309,7 +309,7 @@ export default function WusthofClassicIkonReview() {
                   The IKON handles are exceptional for extended prep work. After hours of continuous chopping, dicing, and slicing,
                   the ergonomic design reduces hand fatigue significantly compared to cheaper knife sets. The contoured grip
                   provides secure control even when hands are wet or greasy—critical for professional kitchen safety.
-                  For more on knife ergonomics and proper grip techniques, see our complete <Link href="/guides/knife-skills-fundamentals" className="text-orange-600 hover:text-orange-800 font-medium">knife skills guide</Link>.
+                  For more on knife ergonomics and proper grip techniques, see our complete <Link href="/guides" className="text-orange-600 hover:text-orange-800 font-medium">knife skills guide</Link>.
                 </p>
               </div>
 
@@ -331,7 +331,7 @@ export default function WusthofClassicIkonReview() {
                   restore the edge to perfection, a stone is required—typically every few months under heavy professional use.
                   The German steel takes and holds an edge well, making maintenance straightforward for anyone willing to learn
                   proper technique. Pair this set with a quality cutting board like the <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 font-medium">John Boos Platinum Commercial board</Link> to
-                  protect your edges and maximize longevity. For detailed sharpening instructions, check our <Link href="/guides/knife-sharpening-guide" className="text-orange-600 hover:text-orange-800 font-medium">complete sharpening guide</Link>.
+                  protect your edges and maximize longevity. For detailed sharpening instructions, check our <Link href="/blog/how-to-sharpen-with-tri-stone" className="text-orange-600 hover:text-orange-800 font-medium">complete sharpening guide</Link>.
                 </p>
               </div>
             </div>

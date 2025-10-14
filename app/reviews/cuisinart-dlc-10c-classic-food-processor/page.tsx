@@ -388,7 +388,7 @@ export default function CuisinartDLC10CReviewPage() {
             For tasks the food processor can&apos;t handle, I rely on my{' '}
             <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox chef knife</a>.
             See our complete{' '}
-            <a href="/guides/food-processor-guide" className="text-orange-600 hover:text-orange-800 underline">food processor buying guide</a>{' '}
+            <a href="/appliances" className="text-orange-600 hover:text-orange-800 underline">food processor buying guide</a>{' '}
             for more recommendations.
           </p>
 
