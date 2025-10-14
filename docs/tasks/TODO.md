@@ -295,6 +295,27 @@
 - [ ] Error tracking and logging
 - [ ] Regular performance reports
 
+### Performance Benchmarks (Lighthouse Scores)
+
+**Baseline Benchmark - October 14, 2025**
+- **Mobile:**
+  - Performance: 96/100
+  - Accessibility: 100/100
+  - Best Practices: 100/100
+  - SEO: 100/100
+- **Desktop:**
+  - Performance: 100/100
+  - Accessibility: 96/100
+  - Best Practices: 100/100
+  - SEO: 100/100
+
+**Notes:**
+- Excellent baseline scores across all categories
+- Mobile performance at 96 is exceptional (anything >90 is considered good)
+- Desktop performance at perfect 100
+- All SEO and Best Practices at 100
+- Target: Maintain these scores or improve as site scales
+
 ### Key Metrics to Track
 - [ ] Organic traffic growth
 - [ ] Affiliate click-through rates
