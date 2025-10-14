@@ -128,7 +128,7 @@ export default function HomePage() {
           {/* Trust Badge */}
           <div className="bg-orange-500/20 border border-orange-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 inline-block mb-6 sm:mb-8">
             <span className="text-orange-200 font-semibold text-sm sm:text-base">
-              👨‍🍳 40 YEARS PROFESSIONAL COOKING EXPERIENCE
+              👨‍🍳 40 YEARS COOKING EXPERIENCE
             </span>
           </div>
 
@@ -137,7 +137,7 @@ export default function HomePage() {
             Chef-Approved Kitchen Tools
             <br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">
-              Tested by 40 Years of Professional Experience
+              Tested by 40 Years Cooking Experience
             </span>
           </h1>
 
@@ -170,7 +170,7 @@ export default function HomePage() {
               <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Cooking Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">21+ Years</div>
+              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">23+ Years</div>
               <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Professional Kitchens</div>
             </div>
             <div className="text-center">

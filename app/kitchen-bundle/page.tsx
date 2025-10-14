@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'The Chef-Approved Kitchen Starter Kit: 10 Essential Tools | Chef Approved',
-  description: 'Build a professional-grade kitchen with these 10 essential tools, personally tested and recommended by a 21+ year restaurant veteran. From knives to cookware, this is the ultimate starter kit.',
+  description: 'Build a professional-grade kitchen with these 10 essential tools, personally tested and recommended by a 23+ year restaurant veteran. From knives to cookware, this is the ultimate starter kit.',
   keywords: 'chef approved kitchen kit, essential kitchen tools, professional kitchen starter, restaurant tested equipment'
 }
 
@@ -109,7 +109,7 @@ export default function ChefApprovedKitchenKit() {
           <div className="text-center mb-8">
             <div className="bg-orange-500/20 border border-orange-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 inline-block">
               <span className="text-orange-200 font-semibold text-sm sm:text-base">
-                👨‍🍳 21+ YEARS PROFESSIONAL COOKING EXPERIENCE
+                👨‍🍳 23+ YEARS PROFESSIONAL COOKING EXPERIENCE
               </span>
             </div>
           </div>

@@ -8,7 +8,7 @@ import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/sch
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
-  title: 'Victorinox 4" Paring Knife Review | 21+ Years Professional Use',
+  title: 'Victorinox 4" Paring Knife Review | 23+ Years Professional Use',
   description: 'Professional chef review of the Victorinox 4-inch paring knife after 23+ years of professional cooking. Essential for detailed work - peeling, trimming, and precision cuts.',
 }
 

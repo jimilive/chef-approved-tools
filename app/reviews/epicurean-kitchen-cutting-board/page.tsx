@@ -7,7 +7,7 @@ import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/sch
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
-  title: 'Epicurean Kitchen Cutting Board Review | 21+ Years Professional Use',
+  title: 'Epicurean Kitchen Cutting Board Review | 23+ Years Professional Use',
   description: 'Professional chef review of the Epicurean kitchen cutting board after 23+ years of professional cooking. Dishwasher-safe and better than wood.',
 }
 

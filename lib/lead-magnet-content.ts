@@ -183,7 +183,7 @@ export const leadMagnetContent = {
   footer: {
     contact: "Questions? Email scott@chefapprovedtools.com",
     website: "www.chefapprovedtools.com",
-    credentials: "Scott Bradley - 40 Years Professional Cooking Experience, Seattle Central Culinary Graduate, Former Kitchen Manager at Mellow Mushroom"
+    credentials: "Scott Bradley - 40 Years Cooking Cooking Experience, Seattle Central Culinary Graduate, Former Kitchen Manager at Mellow Mushroom"
   }
 }
 

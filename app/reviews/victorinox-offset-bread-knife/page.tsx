@@ -32,7 +32,7 @@ const productData = {
 };
 
 export const metadata: Metadata = {
-  title: 'Victorinox Offset Bread Knife Review: 21+ Years Professional Use (2025)',
+  title: 'Victorinox Offset Bread Knife Review: 23+ Years Professional Use (2025)',
   description: 'Professional chef reviews the Victorinox offset bread knife after 23+ years in restaurant kitchens. Complete testing results for bread, tomatoes, and delicate items.',
 }
 
@@ -56,7 +56,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Victorinox Offset Bread Knife Review: 21+ Years Restaurant Kitchen Testing (2025)
+            Victorinox Offset Bread Knife Review: 23+ Years Restaurant Kitchen Testing (2025)
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
@@ -687,7 +687,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
         }}>
           
           <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
-            After 21+ Years of Professional Use...
+            After 23+ Years of Professional Use...
           </h3>
           
           <p style={{ fontSize: '18px', lineHeight: '1.6' }}>

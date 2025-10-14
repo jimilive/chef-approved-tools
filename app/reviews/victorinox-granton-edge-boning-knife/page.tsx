@@ -8,7 +8,7 @@ import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/sch
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
-  title: 'Victorinox Granton Edge Boning Knife Review | 21+ Years Professional Use',
+  title: 'Victorinox Granton Edge Boning Knife Review | 23+ Years Professional Use',
   description: 'Professional chef review of the Victorinox Granton Edge boning knife after 23+ years of professional cooking. Essential for breaking down proteins and filleting fish.',
 }
 

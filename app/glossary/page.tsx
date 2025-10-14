@@ -702,7 +702,7 @@ export default function GlossaryPage() {
           </div>
 
           <div className="mt-12 bg-orange-50 border border-orange-200 rounded-xl p-6">
-            <h3 className="font-bold text-orange-800 mb-3">Pro Tip from 21+ Years in Kitchens</h3>
+            <h3 className="font-bold text-orange-800 mb-3">Pro Tip from 23+ Years in Kitchens</h3>
             <p className="text-orange-800 text-sm leading-relaxed">
               Uniform cuts aren&apos;t just about looks - they ensure everything cooks at the same rate.
               A mix of large and small pieces means some will be overcooked while others are still raw.

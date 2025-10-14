@@ -108,7 +108,7 @@ export default function ProductSchema({ product, category, reviewUrl }: ProductS
       {
         "@type": "PropertyValue",
         "name": "Chef Approved",
-        "value": "Certified by 21+ year restaurant professional"
+        "value": "Certified by 23+ year restaurant professional"
       }
     ],
     "audience": {

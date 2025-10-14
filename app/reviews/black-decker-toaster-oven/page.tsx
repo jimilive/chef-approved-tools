@@ -716,7 +716,7 @@ export default function BlackDeckerToasterOvenReview() {
             <li><strong>Premium materials:</strong> Functional steel and glass, not designer finishes</li>
           </ul>
           <p>
-            Here&apos;s the key insight from 40 years of professional cooking: <strong>most home cooks don&apos;t
+            Here&apos;s the key insight from 40 years of cooking: <strong>most home cooks don&apos;t
             need these premium features.</strong> If you&apos;re using your toaster oven for toast, reheating,
             and occasional small baking, you&apos;re paying for unused capability with premium models. Black+Decker
             focuses on essential functions and executes them reliably for years.

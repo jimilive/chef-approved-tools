@@ -96,7 +96,7 @@ Tier 1 Products (Proven) + Tier 2 Products (Testing) + Tier 3 Products (Recommen
 - KitchenAid KSM8990WH (18 months at Purple Cafe)
 - Vitamix 5200 (tested in restaurant environment)
 - Robot Coupe R2 Dice (commercial prep use)
-- Victorinox 8" Chef's Knife (40 years professional use)
+- Victorinox 8" Chef's Knife (40 years cooking use)
 - John Boos Cutting Board (18+ years professional use)
 
 **Review Characteristics:**
@@ -447,7 +447,7 @@ Every review should link to `/review-tiers` for readers who want to understand t
 ### Chef's Knives
 
 **Tier 1:**
-- Victorinox Fibrox 8" (40 years professional use)
+- Victorinox Fibrox 8" (40 years cooking use)
 - Wüsthof Classic (if used 18+ months commercially)
 
 **Tier 2:**

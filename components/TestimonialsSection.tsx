@@ -68,7 +68,7 @@ export default function TestimonialsSection() {
         {/* Professional Background */}
         <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl p-8 text-center">
           <div className="max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-orange-800 mb-4">21+ Years Restaurant Experience</h3>
+            <h3 className="text-2xl font-bold text-orange-800 mb-4">23+ Years Restaurant Experience</h3>
             <p className="text-slate-700">
               Reviews based on real-world testing in professional kitchen environments.
               All recommendations backed by hands-on experience, not marketing claims.

@@ -57,7 +57,7 @@ export default function VictorinoxFibrox8InchReview() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Victorinox 8&quot; Chef&apos;s Knife Review: 40 Years of Professional Use (2025)
+            Victorinox 8&quot; Chef&apos;s Knife Review: 40 Years of Use (2025)
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
@@ -98,7 +98,7 @@ export default function VictorinoxFibrox8InchReview() {
           borderRadius: '4px'
         }}>
           <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
-            <strong>⭐⭐⭐⭐⭐ 4.9/5</strong> | Based on 40 years of professional use<br/>
+            <strong>⭐⭐⭐⭐⭐ 4.9/5</strong> | Based on 40 years of use<br/>
             <strong>✓ Professional Quality</strong> | <strong>✓ Exceptional Value</strong> | <strong>✓ Best in Class</strong><br/>
             <strong>✓ NSF Certified</strong> | <strong>✓ Swiss Made</strong>
           </p>
@@ -153,7 +153,7 @@ export default function VictorinoxFibrox8InchReview() {
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Professional Verdict: The Best Value in Kitchen Knives</h2>
 
             <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-              <strong>After 40 years of professional cooking and 23+ years managing restaurant kitchens,
+              <strong>After 40 years of cooking and 23+ years managing restaurant kitchens,
               this accessible knife remains my daily workhorse.</strong> The thin, flexible blade delivers
               professional control, the fibrox handle prevents fatigue during extended prep sessions,
               and the edge retention rivals knives costing several times more.
@@ -245,7 +245,7 @@ export default function VictorinoxFibrox8InchReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p className="font-semibold">
-              After 40 years of professional cooking and countless knives tested, the Victorinox 8-inch chef&apos;s
+              After 40 years of cooking and countless knives tested, the Victorinox 8-inch chef&apos;s
               knife remains my primary blade—alongside my <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline font-semibold">John Boos
               cutting board</Link> and <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline font-semibold">KitchenAid commercial mixer</Link> as
               essential kitchen equipment.
@@ -746,7 +746,7 @@ export default function VictorinoxFibrox8InchReview() {
           }}>
 
             <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
-              After 40 Years of Professional Cooking...
+              After 40 Years of Cooking...
             </h3>
 
             <p style={{ fontSize: '18px', lineHeight: '1.6' }}>

@@ -64,7 +64,7 @@ export default function BenrinerLargeMandolineReview() {
           <strong>By Scott Bradley</strong> | Professional Chef, 40 Years Cooking Experience
         </p>
         <p style={{ margin: '5px 0' }}>
-          Former Kitchen Manager, Purple Café | 21+ Years Restaurant Management
+          Former Kitchen Manager, Purple Café | 23+ Years Restaurant Management
         </p>
         <p style={{ margin: '5px 0' }}>
           Last Updated: {new Date().toLocaleDateString('en-US', {
