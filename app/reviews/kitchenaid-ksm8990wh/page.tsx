@@ -234,13 +234,13 @@ export default function KitchenAidReviewPage() {
 
           <p style={{ fontSize: '18px', lineHeight: '1.6', marginBottom: '1rem' }}>
             <strong>After 18 months in a 200+ cover restaurant where equipment failure meant lost revenue,
-            this KitchenAid mixer proved itself as genuine commercial-grade equipment.</strong> This KitchenAid stand mixer's 1.3 HP motor handled
+            this KitchenAid mixer proved itself as genuine commercial-grade equipment.</strong> This KitchenAid stand mixer&apos;s 1.3 HP motor handled
             daily double-batch dough production without strain, 45-minute continuous sessions without overheating,
             and zero maintenance issues.
           </p>
 
           <p style={{ fontSize: '18px', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-            This KitchenAid mixer delivers 85-90% of a $2,100 Hobart's capability at 32% of the cost. For operations mixing
+            This KitchenAid mixer delivers 85-90% of a $2,100 Hobart&apos;s capability at 32% of the cost. For operations mixing
             3-4 hours daily, the ROI is undeniable.
           </p>
 

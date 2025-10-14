@@ -990,7 +990,7 @@ export default function Lodge3SkilletBundleReview() {
               borderRadius: '8px',
               border: '1px solid #dee2e6'
             }}>
-              <h4 style={{ marginTop: 0 }}>Victorinox 8" Chef Knife</h4>
+              <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef Knife</h4>
               <p>The perfect prep knife for ingredients going into cast iron. Professional quality, perfect balance.</p>
               <p style={{ fontSize: '14px', color: '#666' }}>
                 <strong>40 years cooking:</strong> My daily workhorse knife.

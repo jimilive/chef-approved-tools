@@ -54,7 +54,7 @@ export default function AffordableKitchenAppliancesPage() {
         {/* Header */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
-            Affordable Kitchen Appliances I've Actually Used: No-BS Budget Guide (2025)
+            Affordable Kitchen Appliances I&apos;ve Actually Used: No-BS Budget Guide (2025)
           </h1>
 
           <div className="flex items-center gap-4 mb-6">
@@ -68,11 +68,11 @@ export default function AffordableKitchenAppliancesPage() {
           </div>
 
           <p className="text-xl text-slate-700 leading-relaxed mb-4">
-            <strong>I'm tired of "budget appliance" lists written by people who've never used the equipment.</strong> This guide covers only affordable kitchen appliances I've personally owned, tested, or used extensively—both in professional kitchens and at home.
+            <strong>I&apos;m tired of &quot;budget appliance&quot; lists written by people who&apos;ve never used the equipment.</strong> This guide covers only affordable kitchen appliances I&apos;ve personally owned, tested, or used extensively—both in professional kitchens and at home.
           </p>
 
           <p className="text-lg text-slate-600 leading-relaxed">
-            After 23+ years in restaurant kitchens, I know what works and what fails. Here's what I'd buy (or have bought) when budget is limited but quality matters.
+            After 23+ years in restaurant kitchens, I know what works and what fails. Here&apos;s what I&apos;d buy (or have bought) when budget is limited but quality matters.
           </p>
         </header>
 
@@ -80,10 +80,10 @@ export default function AffordableKitchenAppliancesPage() {
         <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8">
           <h2 className="text-lg font-bold text-yellow-900 mb-2">🎯 Why This Guide Is Different</h2>
           <p className="text-yellow-800 mb-3">
-            <strong>Every product mentioned here is something I've personally used or tested.</strong> I'm not recommending appliances based on Amazon reviews or manufacturer specs. This is real-world experience from actual cooking—professional and home.
+            <strong>Every product mentioned here is something I&apos;ve personally used or tested.</strong> I&apos;m not recommending appliances based on Amazon reviews or manufacturer specs. This is real-world experience from actual cooking—professional and home.
           </p>
           <p className="text-yellow-800 text-sm">
-            If I haven't used it, I won't recommend it. Period.
+            If I haven&apos;t used it, I won&apos;t recommend it. Period.
           </p>
         </div>
 
@@ -124,7 +124,7 @@ export default function AffordableKitchenAppliancesPage() {
               <Link href="/reviews/vitamix-5200" className="text-orange-600 hover:text-orange-800 underline font-semibold">
                 Vitamix 5200
               </Link>{' '}
-              in professional kitchens, here's the honest truth: <strong>For basic home use, the Ninja does 80% of what a Vitamix does at 20% of the price.</strong>
+              in professional kitchens, here&apos;s the honest truth: <strong>For basic home use, the Ninja does 80% of what a Vitamix does at 20% of the price.</strong>
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -143,15 +143,15 @@ export default function AffordableKitchenAppliancesPage() {
                 <ul className="text-sm text-red-800 space-y-1">
                   <li>• Not suitable for hot soups (plastic pitcher)</li>
                   <li>• Louder than premium blenders</li>
-                  <li>• Won't last under daily commercial abuse</li>
-                  <li>• Blades aren't removable for deep cleaning</li>
+                  <li>• Won&apos;t last under daily commercial abuse</li>
+                  <li>• Blades aren&apos;t removable for deep cleaning</li>
                 </ul>
               </div>
             </div>
 
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
               <p className="text-slate-800">
-                <strong>💡 Real Talk:</strong> If you're making smoothies, frozen drinks, or basic blending 3-4x weekly, the Ninja BL660 is outstanding value. But if you're blending hot soups, making nut butters, or using it daily in a commercial setting, save up for the Vitamix. The Ninja is legitimately good budget equipment—not a compromise.
+                <strong>💡 Real Talk:</strong> If you&apos;re making smoothies, frozen drinks, or basic blending 3-4x weekly, the Ninja BL660 is outstanding value. But if you&apos;re blending hot soups, making nut butters, or using it daily in a commercial setting, save up for the Vitamix. The Ninja is legitimately good budget equipment—not a compromise.
               </p>
             </div>
           </div>
@@ -162,7 +162,7 @@ export default function AffordableKitchenAppliancesPage() {
               After 5+ years testing the{' '}
               <Link href="/reviews/vitamix-5200" className="underline font-semibold hover:text-orange-900">
                 Vitamix 5200 in restaurant conditions
-              </Link>, here's when the upgrade is worth it: daily use (7+ hours weekly), hot soup blending, nut butters, commercial/revenue-generating use, or 10+ year ownership plans. For occasional home use, stick with the Ninja.
+              </Link>, here&apos;s when the upgrade is worth it: daily use (7+ hours weekly), hot soup blending, nut butters, commercial/revenue-generating use, or 10+ year ownership plans. For occasional home use, stick with the Ninja.
             </p>
           </div>
         </section>
@@ -187,7 +187,7 @@ export default function AffordableKitchenAppliancesPage() {
               <strong>My experience:</strong> I used the KitchenAid Professional 600 (now discontinued, replaced by KSM60) extensively. This mid-tier KitchenAid sits between the budget Classic and the{' '}
               <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline font-semibold">
                 Commercial Series I tested at Purple Cafe
-              </Link>. It's the sweet spot for serious home bakers.
+              </Link>. It&apos;s the sweet spot for serious home bakers.
             </p>
 
             <div className="space-y-4 mb-4">
@@ -216,14 +216,14 @@ export default function AffordableKitchenAppliancesPage() {
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                 <h4 className="font-semibold text-yellow-900 mb-2">⚠️ Current Model (KSM60):</h4>
                 <p className="text-yellow-800 text-sm">
-                  KitchenAid replaced the Pro 600 with the KSM60. Specs are similar: 6-quart bowl, bowl-lift design, 10-speed. I haven't personally tested the KSM60, but based on my Pro 600 experience, look for these features in any mid-tier KitchenAid.
+                  KitchenAid replaced the Pro 600 with the KSM60. Specs are similar: 6-quart bowl, bowl-lift design, 10-speed. I haven&apos;t personally tested the KSM60, but based on my Pro 600 experience, look for these features in any mid-tier KitchenAid.
                 </p>
               </div>
             </div>
 
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
               <p className="text-slate-800">
-                <strong>💡 My Recommendation:</strong> The Pro 600 series (or current KSM60 equivalent) is the best value in the KitchenAid lineup for serious home bakers. You get most of the commercial series capability at half the price. If you're baking 3+ times weekly or doing heavy doughs, this is where to invest.
+                <strong>💡 My Recommendation:</strong> The Pro 600 series (or current KSM60 equivalent) is the best value in the KitchenAid lineup for serious home bakers. You get most of the commercial series capability at half the price. If you&apos;re baking 3+ times weekly or doing heavy doughs, this is where to invest.
               </p>
             </div>
           </div>
@@ -231,11 +231,11 @@ export default function AffordableKitchenAppliancesPage() {
           <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
             <h4 className="font-semibold text-orange-900 mb-2">When to Upgrade to Commercial:</h4>
             <p className="text-orange-800">
-              If you're baking more than 5 hours weekly, running a home bakery, or need NSF certification for commercial use, upgrade to the{' '}
+              If you&apos;re baking more than 5 hours weekly, running a home bakery, or need NSF certification for commercial use, upgrade to the{' '}
               <Link href="/reviews/kitchenaid-ksm8990wh" className="underline font-semibold hover:text-orange-900">
                 KitchenAid Commercial Series (KSM8990WH)
               </Link>{' '}
-              ($759-1,100). I tested this for 18 months at Purple Cafe—it's genuine commercial equipment that will outlast 3-4 consumer models.
+              ($759-1,100). I tested this for 18 months at Purple Cafe—it&apos;s genuine commercial equipment that will outlast 3-4 consumer models.
             </p>
           </div>
         </section>
@@ -260,7 +260,7 @@ export default function AffordableKitchenAppliancesPage() {
               <strong>My experience:</strong> I used the Cuisinart DLC-10C extensively (now discontinued, replaced by DLC-10S Pro Classic). After years with the{' '}
               <Link href="/reviews/robot-coupe-r2-dice" className="text-orange-600 hover:text-orange-800 underline font-semibold">
                 Robot Coupe R2 in professional kitchens
-              </Link>, here's what I learned: <strong>The Cuisinart delivers 70-75% of commercial processor performance at 1/3 the price.</strong>
+              </Link>, here&apos;s what I learned: <strong>The Cuisinart delivers 70-75% of commercial processor performance at 1/3 the price.</strong>
             </p>
 
             <div className="space-y-4 mb-4">
@@ -289,7 +289,7 @@ export default function AffordableKitchenAppliancesPage() {
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                 <h4 className="font-semibold text-yellow-900 mb-2">⚠️ Current Model (DLC-10S):</h4>
                 <p className="text-yellow-800 text-sm">
-                  Cuisinart replaced the DLC-10C with the DLC-10S "Pro Classic." I haven't personally tested the DLC-10S, but the specs are nearly identical to the model I used. Based on my DLC-10C experience, this should deliver the same reliable performance.
+                  Cuisinart replaced the DLC-10C with the DLC-10S &quot;Pro Classic.&quot; I haven&apos;t personally tested the DLC-10S, but the specs are nearly identical to the model I used. Based on my DLC-10C experience, this should deliver the same reliable performance.
                 </p>
               </div>
 
@@ -297,7 +297,7 @@ export default function AffordableKitchenAppliancesPage() {
                 <h4 className="font-semibold text-red-900 mb-2">Limitations vs Commercial:</h4>
                 <ul className="text-sm text-red-800 space-y-1">
                   <li>• Not NSF-certified for commercial kitchens</li>
-                  <li>• Won't survive daily 8-hour restaurant use</li>
+                  <li>• Won&apos;t survive daily 8-hour restaurant use</li>
                   <li>• Smaller capacity than Robot Coupe (7-cup vs 3-quart)</li>
                   <li>• Plastic bowl vs stainless commercial models</li>
                 </ul>
@@ -306,7 +306,7 @@ export default function AffordableKitchenAppliancesPage() {
 
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
               <p className="text-slate-800">
-                <strong>💡 Real Talk:</strong> For serious home cooks processing 3-4x weekly, the Cuisinart DLC-10S is excellent value. It handles all standard food processor tasks reliably. But if you're doing high-volume prep or commercial use, the{' '}
+                <strong>💡 Real Talk:</strong> For serious home cooks processing 3-4x weekly, the Cuisinart DLC-10S is excellent value. It handles all standard food processor tasks reliably. But if you&apos;re doing high-volume prep or commercial use, the{' '}
                 <Link href="/reviews/robot-coupe-r2-dice" className="underline hover:text-blue-700">
                   Robot Coupe R2
                 </Link>{' '}
@@ -333,7 +333,7 @@ export default function AffordableKitchenAppliancesPage() {
               <div className="text-2xl font-bold text-slate-900 mb-4">~$100-150</div>
 
               <p className="text-slate-700 mb-3">
-                <strong>My experience:</strong> I own the Instant Pot Duo Plus and use it regularly for beans, stocks, and pressure cooking. After years of traditional stovetop pressure cookers in restaurants, here's what impressed me: <strong>It's genuinely set-it-and-forget-it reliable.</strong>
+                <strong>My experience:</strong> I own the Instant Pot Duo Plus and use it regularly for beans, stocks, and pressure cooking. After years of traditional stovetop pressure cookers in restaurants, here&apos;s what impressed me: <strong>It&apos;s genuinely set-it-and-forget-it reliable.</strong>
               </p>
 
               <p className="text-slate-700 text-sm">
@@ -353,7 +353,7 @@ export default function AffordableKitchenAppliancesPage() {
               <div className="text-2xl font-bold text-slate-900 mb-4">~$40-80</div>
 
               <p className="text-slate-700 mb-3">
-                I've tested Black & Decker toaster ovens extensively. See my{' '}
+                I&apos;ve tested Black & Decker toaster ovens extensively. See my{' '}
                 <Link href="/reviews/black-decker-toaster-oven" className="text-orange-600 hover:text-orange-800 underline font-semibold">
                   complete Black & Decker toaster oven review
                 </Link>{' '}
@@ -373,11 +373,11 @@ export default function AffordableKitchenAppliancesPage() {
               <div className="text-2xl font-bold text-slate-900 mb-4">~$90-120</div>
 
               <p className="text-slate-700 mb-3">
-                <strong>My experience:</strong> I own the Ninja AF101 and use it 2-3x weekly. After years of deep fryers in professional kitchens, here's the honest truth: <strong>Air fryers aren't deep fryers, but they're legitimately useful for home cooking.</strong>
+                <strong>My experience:</strong> I own the Ninja AF101 and use it 2-3x weekly. After years of deep fryers in professional kitchens, here&apos;s the honest truth: <strong>Air fryers aren&apos;t deep fryers, but they&apos;re legitimately useful for home cooking.</strong>
               </p>
 
               <p className="text-slate-700 text-sm">
-                <strong>Best for:</strong> Reheating leftovers (way better than microwave), frozen foods, small batch roasting. Don't expect restaurant-quality fried chicken, but for convenient home cooking, it's genuinely useful.
+                <strong>Best for:</strong> Reheating leftovers (way better than microwave), frozen foods, small batch roasting. Don&apos;t expect restaurant-quality fried chicken, but for convenient home cooking, it&apos;s genuinely useful.
               </p>
             </div>
 
@@ -393,11 +393,11 @@ export default function AffordableKitchenAppliancesPage() {
               <div className="text-2xl font-bold text-slate-900 mb-4">~$200-300</div>
 
               <p className="text-slate-700 mb-3">
-                <strong>My experience:</strong> As a former Pizzaiolo who's worked in professional pizza kitchens, I was skeptical of countertop pizza ovens. The Gourmia surprised me—<strong>it actually gets hot enough (750°F+) to make legitimate pizza at home.</strong>
+                <strong>My experience:</strong> As a former Pizzaiolo who&apos;s worked in professional pizza kitchens, I was skeptical of countertop pizza ovens. The Gourmia surprised me—<strong>it actually gets hot enough (750°F+) to make legitimate pizza at home.</strong>
               </p>
 
               <p className="text-slate-700 text-sm">
-                <strong>Real talk:</strong> It won't replace a wood-fired or professional gas pizza oven, but for home use, it's the best countertop option I've tested. If you're serious about homemade pizza, this is worth considering.
+                <strong>Real talk:</strong> It won&apos;t replace a wood-fired or professional gas pizza oven, but for home use, it&apos;s the best countertop option I&apos;ve tested. If you&apos;re serious about homemade pizza, this is worth considering.
               </p>
             </div>
           </div>
@@ -409,7 +409,7 @@ export default function AffordableKitchenAppliancesPage() {
 
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <p className="text-slate-700 mb-4 text-lg">
-              After 23+ years in professional kitchens managing $80,000+ monthly operations, I've learned that <strong>smart affordable kitchen appliances choices beat premium equipment you can't afford or won't use.</strong>
+              After 23+ years in professional kitchens managing $80,000+ monthly operations, I&apos;ve learned that <strong>smart affordable kitchen appliances choices beat premium equipment you can&apos;t afford or won&apos;t use.</strong>
             </p>
 
             <div className="space-y-4">
@@ -460,7 +460,7 @@ export default function AffordableKitchenAppliancesPage() {
 
             <div className="mt-6 bg-blue-50 border-l-4 border-blue-500 p-4">
               <p className="text-slate-800">
-                <strong>💡 My Rule:</strong> If you'll use an appliance 5+ hours weekly for 5+ years, premium models cost less per use. For lighter use, affordable kitchen appliances deliver better value. Don't buy commercial equipment for occasional home cooking.
+                <strong>💡 My Rule:</strong> If you&apos;ll use an appliance 5+ hours weekly for 5+ years, premium models cost less per use. For lighter use, affordable kitchen appliances deliver better value. Don&apos;t buy commercial equipment for occasional home cooking.
               </p>
             </div>
           </div>
@@ -535,7 +535,7 @@ export default function AffordableKitchenAppliancesPage() {
 
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border-2 border-orange-200">
             <p className="text-lg text-slate-800 mb-6">
-              <strong>After 40 years of cooking experience (23+ years professional),</strong> here's what I'd actually buy if I was starting a home kitchen on a budget:
+              <strong>After 40 years of cooking experience (23+ years professional),</strong> here&apos;s what I&apos;d actually buy if I was starting a home kitchen on a budget:
             </p>
 
             <div className="space-y-4">
@@ -558,7 +558,7 @@ export default function AffordableKitchenAppliancesPage() {
 
               <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
                 <p className="text-slate-800 text-sm">
-                  <strong>🎯 The Key:</strong> Every appliance listed here is something I've personally used or tested. I'm not guessing—this is real experience. If you're ready for premium equipment, see my{' '}
+                  <strong>🎯 The Key:</strong> Every appliance listed here is something I&apos;ve personally used or tested. I&apos;m not guessing—this is real experience. If you&apos;re ready for premium equipment, see my{' '}
                   <Link href="/reviews" className="text-orange-600 hover:text-orange-800 underline font-semibold">
                     professional equipment reviews
                   </Link>.
@@ -572,7 +572,7 @@ export default function AffordableKitchenAppliancesPage() {
         <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 text-center mb-8">
           <h3 className="text-xl font-bold text-slate-900 mb-3">Ready to Upgrade to Commercial-Grade Equipment?</h3>
           <p className="text-slate-700 mb-4">
-            When you're ready to invest in professional equipment, see my complete reviews of the commercial-grade appliances I tested in restaurant conditions.
+            When you&apos;re ready to invest in professional equipment, see my complete reviews of the commercial-grade appliances I tested in restaurant conditions.
           </p>
           <Link
             href="/appliances"
@@ -586,7 +586,7 @@ export default function AffordableKitchenAppliancesPage() {
         <section className="bg-slate-50 p-6 rounded-xl border border-slate-200">
           <p className="font-semibold text-slate-900 mb-2">Scott Bradley | Professional Chef • 40 Years Experience Since Age 15</p>
           <p className="text-slate-700 text-sm mb-3">
-            Former Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom. 23+ years restaurant experience testing equipment under real commercial conditions. All recommendations based on hands-on testing—if I haven't used it, I won't recommend it.
+            Former Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom. 23+ years restaurant experience testing equipment under real commercial conditions. All recommendations based on hands-on testing—if I haven&apos;t used it, I won&apos;t recommend it.
           </p>
           <p className="text-slate-600 text-xs">
             <em>Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</em>

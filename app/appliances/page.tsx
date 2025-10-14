@@ -60,7 +60,7 @@ export default function AppliancesPage() {
         Best Kitchen Appliances: Chef-Tested Reviews (2025)
       </h1>
       <p style={{ fontSize: '1.125rem', color: '#475569', marginBottom: '16px', lineHeight: '1.6' }}>
-        <strong>Professional kitchen appliances tested in real restaurant conditions.</strong> After years testing kitchen appliances in commercial settings, I've identified which mixers, blenders, and food processors deliver genuine professional-grade performance.
+        <strong>Professional kitchen appliances tested in real restaurant conditions.</strong> After years testing kitchen appliances in commercial settings, I&apos;ve identified which mixers, blenders, and food processors deliver genuine professional-grade performance.
       </p>
       <p style={{ fontSize: '1rem', color: '#64748b', marginBottom: '32px' }}>
         Every kitchen appliance review on this page represents equipment that survived extended commercial use. These are the best kitchen appliances for serious home cooks who demand professional results.
@@ -147,7 +147,7 @@ export default function AppliancesPage() {
       <section style={{ marginTop: '48px', padding: '32px', backgroundColor: '#f8fafc', borderRadius: '12px' }}>
         <h2 style={{ fontSize: '1.875rem', fontWeight: 'bold', marginBottom: '8px' }}>Kitchen Appliances Buying Guide</h2>
         <p style={{ color: '#475569', marginBottom: '12px', lineHeight: '1.6' }}>
-          Choosing the right kitchen appliances requires understanding power requirements, counter space planning, and feature comparisons. Whether you're looking for affordable kitchen appliances or premium commercial-grade equipment, our buying guide explains what matters most for long-term reliability.
+          Choosing the right kitchen appliances requires understanding power requirements, counter space planning, and feature comparisons. Whether you&apos;re looking for affordable kitchen appliances or premium commercial-grade equipment, our buying guide explains what matters most for long-term reliability.
         </p>
         <p style={{ color: '#64748b', marginBottom: '16px' }}>
           Learn how to evaluate kitchen appliances based on motor power, build quality, warranty coverage, and actual performance under demanding conditions.
