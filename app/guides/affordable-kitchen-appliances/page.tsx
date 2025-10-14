@@ -418,7 +418,7 @@ export default function AffordableKitchenAppliancesPage() {
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span><strong>Occasional use:</strong> 1-3x weekly doesn't justify commercial pricing</span>
+                    <span><strong>Occasional use:</strong> 1-3x weekly doesn&apos;t justify commercial pricing</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
