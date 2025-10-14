@@ -683,7 +683,7 @@ export default function KitchenAidProfessional600ReviewPage() {
 
           <p style={{ margin: '20px 0' }}>
             Compare all models in our{' '}
-            <a href="/guides/best-stand-mixers" className="text-orange-600 hover:text-orange-800 underline">complete stand mixer buying guide</a>.
+            <a href="/guides/kitchen-appliances" className="text-orange-600 hover:text-orange-800 underline">kitchen appliances buying guide</a>.
           </p>
         </section>
 

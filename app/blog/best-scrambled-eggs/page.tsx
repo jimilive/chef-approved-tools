@@ -454,8 +454,8 @@ export default function BestScrambledEggs() {
             </a>
           </li>
           <li>
-            <a href="/reviews/lodge-cast-iron-skillet" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-              Lodge Cast Iron Skillet Review →
+            <a href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" style={{ color: '#0066cc', fontWeight: 'bold' }}>
+              Lodge Cast Iron Skillet Bundle Review →
             </a>
           </li>
           <li>

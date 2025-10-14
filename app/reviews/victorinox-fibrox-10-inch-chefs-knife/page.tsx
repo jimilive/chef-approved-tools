@@ -294,7 +294,7 @@ export default function VictorinoxFibrox10InchReview() {
             </ul>
 
             <p className="mt-6">
-              The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day. This is paired with my <Link href="/reviews/victorinox-fibrox-offset-bread-knife" className="text-blue-600 font-semibold hover:text-blue-800">Victorinox offset bread knife</Link> for a complete cutting setup.
+              The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day. This is paired with my <Link href="/reviews/victorinox-offset-bread-knife" className="text-blue-600 font-semibold hover:text-blue-800">Victorinox offset bread knife</Link> for a complete cutting setup.
             </p>
           </div>
         </section>

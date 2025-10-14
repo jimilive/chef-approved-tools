@@ -757,13 +757,13 @@ export default function DiamondCrystalKosherSaltReview() {
           borderRadius: '8px',
           border: '1px solid #dee2e6'
         }}>
-          <h4 style={{ marginTop: 0 }}>Lodge Cast Iron Skillet</h4>
-          <p>The perfect pan for using kosher salt properly. Seasoning proteins before searing creates the restaurant-quality crust you want. Diamond Crystal&apos;s texture works perfectly with cast iron cooking.</p>
+          <h4 style={{ marginTop: 0 }}>Lodge Cast Iron Skillet Bundle</h4>
+          <p>The perfect pans for using kosher salt properly. Seasoning proteins before searing creates the restaurant-quality crust you want. Diamond Crystal&apos;s texture works perfectly with cast iron cooking.</p>
           <p style={{ fontSize: '14px', color: '#666' }}>
             <strong>Kitchen Essential:</strong> Professional results at home
           </p>
           <a
-            href="/reviews/lodge-cast-iron-skillet"
+            href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
             style={{
               display: 'inline-block',
               background: '#28a745',

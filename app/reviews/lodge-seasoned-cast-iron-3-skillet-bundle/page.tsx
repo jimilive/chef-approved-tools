@@ -370,7 +370,7 @@ export default function Lodge3SkilletBundleReview() {
                 <p className="text-slate-700 leading-relaxed">
                   I use all three sizes equally depending on the task. The 12-inch handles large steaks and family-sized
                   pancake batches. The 10.25-inch is perfect for mid-sized tasks. The 8-inch excels at single servings
-                  and smaller portions. If you can only buy one, get the 12-inch—it&apos;s the most versatile size. For complete guidance on choosing the right cast iron for your needs, see our <a href="/guides/cast-iron-buying-guide" style={{ color: '#0066cc', fontWeight: 'bold' }}>cast iron buying guide</a>.
+                  and smaller portions. If you can only buy one, get the 12-inch—it&apos;s the most versatile size. For complete guidance on choosing the right cookware for your needs, see our <a href="/guides/best-cookware" style={{ color: '#0066cc', fontWeight: 'bold' }}>best cookware guide</a>.
                 </p>
               </div>
             </div>
