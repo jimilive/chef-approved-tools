@@ -1,6 +1,6 @@
 # Google Search Console Indexing Progress
 
-**Last Updated:** 2025-10-12 (Requested indexing for 7 new reviews + French Press blog)
+**Last Updated:** 2025-10-13 (Documented removal request for gold-textiles-bar-mops)
 
 ---
 
@@ -61,7 +61,7 @@ All pages now have "requested" status or higher (indexed). Waiting for Google to
 | https://www.chefapprovedtools.com/reviews/oxo-good-grips-bench-scraper | indexed | ✅ Working | |
 | https://www.chefapprovedtools.com/reviews/winco-heavy-duty-tongs | crawled - not indexed | ✅ Working | Crawled Oct 7, 2025 |
 | https://www.chefapprovedtools.com/reviews/benriner-large-mandoline | indexed | ✅ Working | |
-| https://www.chefapprovedtools.com/reviews/gold-textiles-bar-mops | requested | ✅ Working | |
+| https://www.chefapprovedtools.com/reviews/gold-textiles-bar-mops | removal requested | - | **❌ REMOVAL REQUESTED - Oct 13, 2025** |
 | https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board | indexed | ✅ Working | |
 | https://www.chefapprovedtools.com/reviews/kitchenaid-ksm8990wh | indexed | ✅ Working | **FEATURED REVIEW** |
 | https://www.chefapprovedtools.com/reviews/kitchenaid-kp26m1xlc-professional-600 | requested | ✅ Working | **NEW - Tier 2 (18 Years)** |
@@ -126,6 +126,7 @@ All pages now have "requested" status or higher (indexed). Waiting for Google to
 #### 2. Old URLs Need Removal
 - `/reviews/wusthof-classic-ikon-15-piece` - OLD URL, needs removal
 - `/reviews/victorinox-fibrox-pro-knife-set` - Deleted from site, removal requested
+- `/reviews/gold-textiles-bar-mops` - Removal requested Oct 13, 2025
 - **Status:** Removal requests in progress
 
 #### 3. Broken Amazon Affiliate Links - FIXED ✅
@@ -144,7 +145,7 @@ All pages now have "requested" status or higher (indexed). Waiting for Google to
 - 🆕 **8 URLs not yet discovered** (7 new reviews + 1 blog article)
 - 🔄 **1 URL requested** (french-press blog - Oct 12)
 - ⚠️ **1 URL indexed but deleted** (victorinox-fibrox-pro-knife-set - removal requested)
-- ❌ **2 URLs need removal** (old product pages)
+- ❌ **3 URLs removal requested** (gold-textiles-bar-mops, wusthof-classic-ikon-15-piece, victorinox-fibrox-pro-knife-set)
 - ✅ **Affiliate links fixed** (10 links updated on Oct 9, 2025)
 
 ---
