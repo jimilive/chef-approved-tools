@@ -8,13 +8,13 @@ import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 
 export const metadata: Metadata = {
-  title: 'Black+Decker Toaster Oven Review: 48 Years Across 4 Models (2025)',
+  title: 'Black+Decker Toaster Oven Review | 48-Year Test',
   description: 'Professional chef reviews Black+Decker toaster ovens after 48 years of continuous use across 4 different models (1977-present). Complete generational testing review.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/reviews/black-decker-toaster-oven',
   },
   openGraph: {
-    title: 'Black+Decker Toaster Oven Review: 48 Years Across 4 Models (2025)',
+    title: 'Black+Decker Toaster Oven Review | 48-Year Test',
     description: 'Professional chef reviews Black+Decker toaster ovens after 48 years of continuous use across 4 different models (1977-present). Complete generational testing review.',
     type: 'article',
     url: 'https://www.chefapprovedtools.com/reviews/black-decker-toaster-oven',

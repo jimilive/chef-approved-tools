@@ -33,7 +33,7 @@ const productData = {
 };
 
 export const metadata = {
-  title: 'Benriner Large Mandoline Review: Professional Kitchen Test (2025)',
+  title: 'Benriner Mandoline Review | Professional Test 2025',
   description: 'Professional chef tests Benriner mandoline after years of restaurant use. Complete review: precision slicing, safety features, durability analysis.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/reviews/benriner-large-mandoline',

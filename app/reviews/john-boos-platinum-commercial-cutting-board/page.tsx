@@ -97,7 +97,7 @@ export const metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/john-boos-platinum-commercial-cutting-board',
   },
 
-  title: "John Boos Platinum Cutting Board Review: 14 Years of Home Use",
+  title: "John Boos Platinum Cutting Board | 14-Year Review",
   description: "Professional chef tests John Boos 24x18 cutting board for 14 years in home kitchen. Complete review: knife preservation, durability, maintenance reality, and generational quality.",
   keywords: ["John Boos cutting board", "commercial cutting board", "maple cutting board", "restaurant cutting board", "butcher block"],
   openGraph: {
@@ -145,7 +145,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
         {/* Header Section */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
-            John Boos Platinum Cutting Board Review: 14 Years of Home Use
+            John Boos Platinum Cutting Board | 14-Year Review
           </h1>
 
           <Tier2Badge showDescription={true} />

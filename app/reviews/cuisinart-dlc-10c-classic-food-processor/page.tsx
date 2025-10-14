@@ -56,7 +56,7 @@ const breadcrumbs = [
 ]
 
 export const metadata = {
-  title: 'Cuisinart DLC-10C Food Processor Review: 30-Year Test (2025)',
+  title: 'Cuisinart DLC-10C Food Processor | 30-Year Review',
   description: 'Chef tests Cuisinart Classic food processor for 30 years at home. Complete review: shredding, slicing, durability, reliability, and why it&apos;s one of the best products ever owned.',
   keywords: ["Cuisinart DLC-10C", "Cuisinart food processor review", "7-cup food processor", "buy-it-for-life appliances"],
   robots: {
@@ -74,7 +74,7 @@ export const metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/cuisinart-dlc-10c-classic-food-processor',
   },
   openGraph: {
-    title: "Cuisinart DLC-10C Food Processor Review: 30 Years of Daily Use",
+    title: "Cuisinart DLC-10C Food Processor | 30 Years Daily Use",
     description: "Professional chef&apos;s honest review after 30 years of home kitchen testing",
     images: ['/logo.png'],
     url: 'https://www.chefapprovedtools.com/reviews/cuisinart-dlc-10c-classic-food-processor',

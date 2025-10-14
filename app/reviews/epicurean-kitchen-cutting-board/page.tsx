@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board',
   },
 
-  title: 'Epicurean Kitchen Cutting Board Review | 23+ Years Professional Use',
+  title: 'Epicurean Cutting Board Review | 23+ Years Pro Use',
   description: 'Professional chef review of the Epicurean kitchen cutting board after 23+ years of professional cooking. Dishwasher-safe and better than wood.',
 }
 
