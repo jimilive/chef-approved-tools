@@ -61,7 +61,7 @@ const breadcrumbs = [
 export const metadata = {
   title: "KitchenAid Mixer KSM8990WH Review: 18-Month Commercial Test (2025)",
   description: "Professional chef tests KitchenAid mixer (commercial series) for 18 months. Complete KitchenAid stand mixer review: performance, durability, ROI, and pricing.",
-  keywords: ["KitchenAid mixer", "KitchenAid stand mixer", "KSM8990WH review", "KitchenAid commercial mixer", "professional mixer", "NSF certified mixer"],
+  keywords: ["KitchenAid mixer", "KitchenAid stand mixer", "KSM8990WH review", "KitchenAid commercial mixer", "professional mixer", "NSF certified mixer", "kitchen appliances"],
   robots: {
     index: true,
     follow: true,
@@ -305,7 +305,7 @@ export default function KitchenAidReviewPage() {
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 mb-6">
             <p className="text-slate-700 mb-4">
               I tested this KitchenAid stand mixer (model KSM8990WH) under demanding commercial conditions at Purple Cafe, where equipment
-              failure means lost revenue. This KitchenAid mixer was tested in the same environment where I evaluated our{' '}
+              failure means lost revenue. Among all the kitchen appliances I've tested professionally, this KitchenAid mixer was evaluated in the same environment where I tested our{' '}
               <a href="/reviews/vitamix-5200" className="text-orange-600 hover:text-orange-800 underline">Vitamix 5200 blender</a> and{' '}
               <a href="/reviews/robot-coupe-r2-dice" className="text-orange-600 hover:text-orange-800 underline">Robot Coupe food processor</a>.
             </p>
@@ -897,8 +897,8 @@ export default function KitchenAidReviewPage() {
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Complete Your Professional Kitchen Setup</h2>
 
           <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
-            A commercial mixer is a cornerstone investment, but it works best as part of a complete
-            professional kitchen. Based on 23+ years of restaurant experience, here are the tools I
+            A commercial mixer is a cornerstone investment among professional kitchen appliances, but it works best as part of a complete
+            professional kitchen setup. Based on 23+ years of restaurant experience, here are the essential kitchen appliances and tools I
             use alongside this mixer:
           </p>
 
