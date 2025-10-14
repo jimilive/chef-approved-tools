@@ -59,9 +59,9 @@ const breadcrumbs = [
 ]
 
 export const metadata = {
-  title: "KitchenAid KSM8990WH Review: 18-Month Commercial Test (2025)",
-  description: "Professional chef tests KitchenAid Commercial mixer for 18 months in 200+ cover restaurant. Complete review: performance, durability, ROI analysis, pricing.",
-  keywords: ["KitchenAid commercial mixer", "KSM8990WH review", "restaurant equipment", "professional mixer", "NSF certified mixer"],
+  title: "KitchenAid Mixer KSM8990WH Review: 18-Month Commercial Test (2025)",
+  description: "Professional chef tests KitchenAid mixer (commercial series) for 18 months. Complete KitchenAid stand mixer review: performance, durability, ROI, and pricing.",
+  keywords: ["KitchenAid mixer", "KitchenAid stand mixer", "KSM8990WH review", "KitchenAid commercial mixer", "professional mixer", "NSF certified mixer"],
   robots: {
     index: true,
     follow: true,
@@ -77,8 +77,8 @@ export const metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/kitchenaid-ksm8990wh',
   },
   openGraph: {
-    title: "KitchenAid KSM8990WH: The Mixer That Survived My Busiest Kitchen Operations",
-    description: "Professional kitchen manager's honest review after 18 months of commercial use",
+    title: "KitchenAid Mixer KSM8990WH: Professional Review After 18 Months Commercial Use",
+    description: "Professional KitchenAid stand mixer review after 18 months commercial kitchen testing",
     images: ['/logo.png'],
     url: 'https://www.chefapprovedtools.com/reviews/kitchenaid-ksm8990wh',
     type: 'article',
@@ -124,7 +124,7 @@ export default function KitchenAidReviewPage() {
         {/* Header Section */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
-            KitchenAid KSM8990WH Commercial Mixer Review: 18-Month Restaurant Kitchen Test
+            KitchenAid Mixer Review (KSM8990WH): 18-Month Professional Kitchen Test
           </h1>
 
           {/* Author & Rating */}
@@ -234,13 +234,13 @@ export default function KitchenAidReviewPage() {
 
           <p style={{ fontSize: '18px', lineHeight: '1.6', marginBottom: '1rem' }}>
             <strong>After 18 months in a 200+ cover restaurant where equipment failure meant lost revenue,
-            this mixer proved itself as genuine commercial-grade equipment.</strong> The 1.3 HP motor handled
+            this KitchenAid mixer proved itself as genuine commercial-grade equipment.</strong> This KitchenAid stand mixer's 1.3 HP motor handled
             daily double-batch dough production without strain, 45-minute continuous sessions without overheating,
             and zero maintenance issues.
           </p>
 
           <p style={{ fontSize: '18px', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-            This delivers 85-90% of a $2,100 Hobart&apos;s capability at 32% of the cost. For operations mixing
+            This KitchenAid mixer delivers 85-90% of a $2,100 Hobart's capability at 32% of the cost. For operations mixing
             3-4 hours daily, the ROI is undeniable.
           </p>
 
@@ -263,7 +263,7 @@ export default function KitchenAidReviewPage() {
 
         {/* Key Features Grid */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">Why This Mixer Survived Professional Kitchens</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Why This KitchenAid Mixer Survived Professional Kitchens</h2>
 
           <div style={{
             display: 'grid',
@@ -304,8 +304,8 @@ export default function KitchenAidReviewPage() {
           <h2 className="text-2xl font-bold text-slate-900 mb-4">18 Months of Professional Kitchen Testing</h2>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 mb-6">
             <p className="text-slate-700 mb-4">
-              I tested the KSM8990WH under demanding commercial conditions at Purple Cafe, where equipment
-              failure means lost revenue. This is the same environment where I tested our{' '}
+              I tested this KitchenAid stand mixer (model KSM8990WH) under demanding commercial conditions at Purple Cafe, where equipment
+              failure means lost revenue. This KitchenAid mixer was tested in the same environment where I evaluated our{' '}
               <a href="/reviews/vitamix-5200" className="text-orange-600 hover:text-orange-800 underline">Vitamix 5200 blender</a> and{' '}
               <a href="/reviews/robot-coupe-r2-dice" className="text-orange-600 hover:text-orange-800 underline">Robot Coupe food processor</a>.
             </p>
