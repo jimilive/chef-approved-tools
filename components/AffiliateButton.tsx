@@ -90,10 +90,3 @@ export default function AffiliateButton({
     </a>
   );
 }
-
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: any[];
-  }
-}

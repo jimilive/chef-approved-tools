@@ -148,10 +148,3 @@ export default function CookieConsent() {
     </div>
   )
 }
-
-// Type declaration for gtag
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void
-  }
-}

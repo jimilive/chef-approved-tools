@@ -5,13 +5,6 @@
  * Pushes events to dataLayer for GTM to capture
  */
 
-// Extend Window interface for dataLayer
-declare global {
-  interface Window {
-    dataLayer: any[];
-  }
-}
-
 /**
  * Track affiliate link clicks
  * @param merchant - Affiliate merchant name (e.g., 'amazon', 'williams_sonoma')

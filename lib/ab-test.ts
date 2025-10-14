@@ -153,11 +153,3 @@ export function getCurrentVariant(): CTAVariant | null {
     return null;
   }
 }
-
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: any[];
-    gtag?: (...args: any[]) => void;
-  }
-}

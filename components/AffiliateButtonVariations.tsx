@@ -120,10 +120,3 @@ export function AffiliateButtonCompact({
     </a>
   );
 }
-
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: any[];
-  }
-}

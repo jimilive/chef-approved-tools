@@ -1,11 +1,5 @@
 // Performance monitoring and optimization utilities
 
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}
-
 // Core Web Vitals monitoring
 export function measureWebVitals() {
   if (typeof window === 'undefined') return
