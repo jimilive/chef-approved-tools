@@ -238,8 +238,8 @@ export default function RecentlyViewed() {
         ))}
       </div>
 
-        <div style={{ textAlign: 'center', marginTop: '30px' }}>
-          <button
+      <div style={{ textAlign: 'center', marginTop: '30px' }}>
+        <button
             onClick={() => {
               localStorage.removeItem(STORAGE_KEY)
               setRecentProducts([])

@@ -87,7 +87,7 @@ export default function DiamondCrystalKosherSaltReview() {
         <AffiliateButton
           href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
           merchant="amazon"
-          product="{productData.slug}"
+          product={productData.slug}
           position="above_fold"
           variant="primary"
         >
@@ -234,7 +234,7 @@ export default function DiamondCrystalKosherSaltReview() {
         <AffiliateButton
           href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
           merchant="amazon"
-          product="{productData.slug}"
+          product={productData.slug}
           position="mid_article"
           variant="secondary"
         >
@@ -519,7 +519,7 @@ export default function DiamondCrystalKosherSaltReview() {
               <AffiliateButton
                 href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
                 merchant="amazon"
-                product="{productData.slug}"
+                product={productData.slug}
                 position="mid_article"
                 variant="secondary"
               >
@@ -663,7 +663,7 @@ export default function DiamondCrystalKosherSaltReview() {
         <AffiliateButton
           href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
           merchant="amazon"
-          product="{productData.slug}"
+          product={productData.slug}
           position="mid_article"
           variant="secondary"
         >
