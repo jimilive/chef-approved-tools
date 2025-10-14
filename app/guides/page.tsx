@@ -1,4 +1,13 @@
+import { Metadata } from 'next'
 import FAQSchema from '@/components/FAQSchema'
+
+export const metadata: Metadata = {
+  title: 'Kitchen Equipment Buying Guides | Chef Approved Tools',
+  description: 'Expert guidance from a certified chef to help you make informed equipment decisions.',
+  alternates: {
+    canonical: '/guides',
+  },
+}
 
 const guidesFAQs = [
   {

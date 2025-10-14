@@ -5,7 +5,10 @@ import { Calendar, Clock, User } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Professional Cooking Techniques Blog | Chef Approved Tools',
   description: 'Learn professional cooking techniques from 23+ years of restaurant kitchen experience. Master the methods that separate restaurant-quality cooking from home cooking.',
-  keywords: ['professional cooking techniques', 'restaurant cooking methods', 'chef techniques', 'kitchen manager tips', 'restaurant quality cooking', 'professional chef blog']
+  keywords: ['professional cooking techniques', 'restaurant cooking methods', 'chef techniques', 'kitchen manager tips', 'restaurant quality cooking', 'professional chef blog'],
+  alternates: {
+    canonical: '/blog',
+  },
 }
 
 const blogPosts = [

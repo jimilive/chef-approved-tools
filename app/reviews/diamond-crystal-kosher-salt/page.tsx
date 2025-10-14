@@ -27,6 +27,10 @@ const productData = {
 };
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/diamond-crystal-kosher-salt',
+  },
+
   title: 'Diamond Crystal Kosher Salt Review: 18-Year Test (2025)',
   description: 'Professional chef uses Diamond Crystal Kosher Salt for 18 years - 6 years in 200+ cover restaurant, 18 years at home. Complete review of texture, flavor, and why chefs prefer it.',
 };

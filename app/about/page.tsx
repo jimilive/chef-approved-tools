@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'About Scott Bradley & Our Professional Testing Methodology | Chef Approved Tools',
   description: 'Meet Scott Bradley, a professional chef with 40 years experience, and learn about our rigorous 6-month testing process in real restaurant kitchens. No lab tests - just real-world professional kitchen conditions.',
   keywords: 'Scott Bradley chef, professional chef background, kitchen equipment testing, restaurant equipment review process, chef equipment methodology, culinary expertise',
+  alternates: {
+    canonical: '/about',
+  },
 }
 
 const combinedFAQs = [

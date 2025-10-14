@@ -6,7 +6,10 @@ import { ArrowRight } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'The Chef-Approved Kitchen Starter Kit: 10 Essential Tools | Chef Approved',
   description: 'Build a professional-grade kitchen with these 10 essential tools, personally tested and recommended by a 23+ year restaurant veteran. From knives to cookware, this is the ultimate starter kit.',
-  keywords: 'chef approved kitchen kit, essential kitchen tools, professional kitchen starter, restaurant tested equipment'
+  keywords: 'chef approved kitchen kit, essential kitchen tools, professional kitchen starter, restaurant tested equipment',
+  alternates: {
+    canonical: '/kitchen-bundle',
+  },
 }
 
 // Part 1: Core Essentials (~$150 Foundation)

@@ -32,6 +32,10 @@ const productData = {
 };
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/norton-im200-tri-stone-sharpener',
+  },
+
   title: 'Norton IM200 Tri-Stone Sharpener Review: 6-Year Restaurant Test (2025)',
   description: 'Professional chef tests Norton Tri-Stone sharpener for 6 years in 200+ cover restaurant. Complete review: sharpening performance, durability, technique guide.',
   openGraph: {

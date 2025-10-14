@@ -13,7 +13,10 @@ export const metadata = {
     description: "40 years of cooking proves this $40 knife outperforms $200+ knives. NSF certified, dishwasher safe, and razor sharp.",
     url: "https://www.chefapprovedtools.com/best-budget-chef-knife",
     type: "article"
-  }
+  },
+  alternates: {
+    canonical: '/best-budget-chef-knife',
+  },
 }
 
 const breadcrumbSchema = generateBreadcrumbSchema([

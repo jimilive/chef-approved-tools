@@ -32,6 +32,10 @@ const productData = {
 };
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/zuperia-bar-mops',
+  },
+
   title: 'ZUPERIA Bar Mops Review: The Industry Standard (2025)',
   description: 'Professional chef tests ZUPERIA bar mops after years of restaurant use. The same towels used in professional kitchens worldwide. Complete durability and performance review.',
 };

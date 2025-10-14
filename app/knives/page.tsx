@@ -1,8 +1,16 @@
+import { Metadata } from 'next'
 'use client'
 import Link from 'next/link';
 import Script from "next/script";
 import InteractiveProductCard from '@/components/InteractiveProductCard';
 import BreadcrumbSchema, { categoryBreadcrumbs } from '@/components/BreadcrumbSchema';
+
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/knives',
+  },
+}
 
 export default function KnivesPage() {
   const products = [

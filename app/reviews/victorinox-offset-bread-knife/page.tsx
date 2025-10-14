@@ -32,6 +32,10 @@ const productData = {
 };
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-offset-bread-knife',
+  },
+
   title: 'Victorinox Offset Bread Knife Review: 23+ Years Professional Use (2025)',
   description: 'Professional chef reviews the Victorinox offset bread knife after 23+ years in restaurant kitchens. Complete testing results for bread, tomatoes, and delicate items.',
 }

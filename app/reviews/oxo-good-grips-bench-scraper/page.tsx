@@ -8,6 +8,10 @@ import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/sch
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-bench-scraper',
+  },
+
   title: 'OXO Good Grips Bench Scraper Review | 23+ Years Professional Use',
   description: 'Professional chef review of the OXO Good Grips bench scraper after 23+ years of professional cooking. The most underrated tool in any kitchen.',
 }

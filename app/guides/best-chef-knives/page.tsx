@@ -9,7 +9,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best Chef Knives of 2025: Professional Kitchen Testing',
     description: 'Tested in professional kitchens doing $80K+ monthly revenue. Find your perfect chef knife.',
-  }
+  },
+  alternates: {
+    canonical: '/guides/best-chef-knives',
+  },
 }
 
 const topKnives = [

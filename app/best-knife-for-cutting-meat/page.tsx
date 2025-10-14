@@ -13,7 +13,10 @@ export const metadata = {
     description: "23+ years of professional cooking: This $25 flexible boning knife is the professional's choice for trimming, deboning, and portioning all types of meat.",
     url: "https://www.chefapprovedtools.com/best-knife-for-cutting-meat",
     type: "article"
-  }
+  },
+  alternates: {
+    canonical: '/best-knife-for-cutting-meat',
+  },
 }
 
 const breadcrumbSchema = generateBreadcrumbSchema([

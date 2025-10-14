@@ -3,6 +3,9 @@ import Image from 'next/image'
 export const metadata = {
   title: 'Kitchen Gloves Guide: Professional Safety & Best Practices (2025)',
   description: 'Learn professional kitchen glove safety from chef with 23+ years restaurant experience. Single-use, cut-resistant, and proper layering techniques.',
+  alternates: {
+    canonical: '/blog/kitchen-gloves-guide',
+  },
 };
 
 export default function KitchenGlovesGuide() {

@@ -8,7 +8,7 @@ import { Tier2Badge } from '@/components/ReviewTierBadge'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 const productData = {
-  name: "Lodge Seasoned Cast Iron 3 Skillet Bundle - 12&quot;, 10.25&quot;, and 8&quot; Set",
+  name: 'Lodge Seasoned Cast Iron 3 Skillet Bundle - 12", 10.25", and 8" Set',
   slug: "lodge-seasoned-cast-iron-3-skillet-bundle",
   brand: "Lodge",
   model: "3-Skillet Bundle (L12SK3, L10SK3, L8SK3)",
@@ -93,6 +93,10 @@ const breadcrumbs = [
 ]
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/lodge-seasoned-cast-iron-3-skillet-bundle',
+  },
+
   title: "Lodge Cast Iron Skillet Set Review: 7 Years of Home Cooking",
   description: "Professional review of Lodge cast iron 3-skillet bundle after 7 years of home testing. Comprehensive review of this versatile 12\", 10.25\", and 8\" skillet set.",
   keywords: ["Lodge cast iron skillet", "cast iron skillet set", "Lodge 3 skillet bundle", "cast iron cookware", "restaurant cast iron"],
@@ -256,7 +260,7 @@ export default function Lodge3SkilletBundleReview() {
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Flame className="w-8 h-8 text-blue-600 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">Three Versatile Sizes</h3>
-              <p className="text-sm text-slate-600">12&quot;, 10.25&quot;, and 8&quot; for every cooking need</p>
+              <p className="text-sm text-slate-600">12", 10.25", and 8" for every cooking need</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <DollarSign className="w-8 h-8 text-purple-600 mb-2" />
@@ -986,7 +990,7 @@ export default function Lodge3SkilletBundleReview() {
               borderRadius: '8px',
               border: '1px solid #dee2e6'
             }}>
-              <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef Knife</h4>
+              <h4 style={{ marginTop: 0 }}>Victorinox 8" Chef Knife</h4>
               <p>The perfect prep knife for ingredients going into cast iron. Professional quality, perfect balance.</p>
               <p style={{ fontSize: '14px', color: '#666' }}>
                 <strong>40 years cooking:</strong> My daily workhorse knife.

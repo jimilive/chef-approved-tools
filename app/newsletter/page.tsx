@@ -4,7 +4,10 @@ import NewsletterForm from './NewsletterForm'
 export const metadata: Metadata = {
   title: 'Equipment Insights Newsletter | Chef Approved Tools',
   description: 'Get equipment insights and honest product recommendations from 23+ years of restaurant experience. Join fellow home chefs getting expert insights.',
-  keywords: 'kitchen tips newsletter, chef tips, cooking newsletter, professional chef advice, kitchen equipment deals'
+  keywords: 'kitchen tips newsletter, chef tips, cooking newsletter, professional chef advice, kitchen equipment deals',
+  alternates: {
+    canonical: '/newsletter',
+  },
 }
 
 export default function NewsletterPage() {

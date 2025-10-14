@@ -8,6 +8,10 @@ import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/sch
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-swivel-peeler',
+  },
+
   title: 'OXO Good Grips Swivel Peeler Review | 23+ Years Professional Use',
   description: 'Professional chef review of the OXO Good Grips swivel peeler after 23+ years of professional cooking. The best peeler for comfort, performance, and durability.',
 }

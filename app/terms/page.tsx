@@ -3,6 +3,9 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Terms of Service | Chef Approved Tools',
   description: 'Terms of Service for Chef Approved Tools - Legal terms and conditions for using our website and services.',
+  alternates: {
+    canonical: '/terms',
+  },
 }
 
 export default function TermsOfServicePage() {

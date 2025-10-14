@@ -3,6 +3,9 @@ import Image from 'next/image'
 export const metadata = {
   title: 'Why Chefs Use Kosher Salt: Professional Kitchen Secrets (2025)',
   description: 'Discover why professional chefs prefer kosher salt. Learn about Diamond Crystal vs Morton, proper seasoning technique, and why it&apos;s essential in commercial kitchens.',
+  alternates: {
+    canonical: '/blog/why-professional-chefs-use-kosher-salt',
+  },
 };
 
 export default function WhyChefsUseKosherSalt() {

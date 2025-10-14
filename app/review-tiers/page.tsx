@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     title: 'Our Three-Tier Review System | Chef Approved Tools',
     description: 'Transparent, honest kitchen equipment reviews based on real testing and 40 years of cooking experience.',
   },
+  alternates: {
+    canonical: '/review-tiers',
+  },
 };
 
 export default function ReviewTiersPage() {

@@ -1,7 +1,15 @@
+import { Metadata } from 'next'
 'use client'
 import Script from "next/script";
 import Link from "next/link";
 import BreadcrumbSchema, { categoryBreadcrumbs } from '@/components/BreadcrumbSchema';
+
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/cookware',
+  },
+}
 
 export default function CookwarePage() {
   const products = [

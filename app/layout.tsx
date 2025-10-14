@@ -88,9 +88,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com',
-  },
   verification: {
     google: 'google-site-verification-code',
     yandex: 'yandex-verification-code',

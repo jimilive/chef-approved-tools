@@ -3,6 +3,9 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Privacy Policy | Chef Approved Tools',
   description: 'Privacy policy for Chef Approved Tools - How we collect, use, and protect your personal information in compliance with GDPR and CCPA.',
+  alternates: {
+    canonical: '/privacy-policy',
+  },
 }
 
 export default function PrivacyPolicyPage() {

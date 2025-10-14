@@ -32,6 +32,10 @@ const productData = {
 };
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/method-all-purpose-cleaner',
+  },
+
   title: 'Method All-Purpose Cleaner Review: 5-Year Home Kitchen Test',
   description: 'Professional chef&apos;s 5-year review of Method All-Purpose Cleaner. The unicorn of cleaning products—powerful AND non-toxic. Cuts grease effortlessly.',
 };

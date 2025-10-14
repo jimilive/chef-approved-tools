@@ -3,6 +3,9 @@ import Image from 'next/image'
 export const metadata = {
   title: 'Meat Cooking Temperatures Guide: Why Chefs Use Thermometers (2025)',
   description: 'Professional chef explains meat thermometers and proper cooking temps. 23+ years restaurant experience. Food safety + perfect doneness every time.',
+  alternates: {
+    canonical: '/blog/meat-cooking-temperatures-thermometers',
+  },
 };
 
 export default function MeatCookingTemperaturesThermometers() {

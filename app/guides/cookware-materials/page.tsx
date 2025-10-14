@@ -4,6 +4,9 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Cookware Materials Guide - Professional Kitchen Manager Insights',
   description: 'Complete guide to cookware materials from 23+ years of restaurant experience. Stainless steel, cast iron, carbon steel, and more.',
+  alternates: {
+    canonical: '/guides/cookware-materials',
+  },
 }
 
 export default function CookwareMaterialsPage() {

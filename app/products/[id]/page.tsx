@@ -197,6 +197,13 @@ const products = {
   }
 };
 
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/products/[id]',
+  },
+}
+
 export default function ProductPage({ params }: Props) {
   const { id } = params;
   const product = products[id as keyof typeof products];

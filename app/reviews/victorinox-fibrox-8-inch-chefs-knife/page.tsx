@@ -33,6 +33,10 @@ const productData = {
 };
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife',
+  },
+
   title: 'Victorinox 8" Chef\'s Knife Review: 40-Year Pro Test (2025)',
   description: 'Professional chef uses Victorinox chef\'s knife for 40 years. Complete review: Why this budget-priced knife outperforms premium knives for most cooks. Performance, durability, value analysis.',
 }

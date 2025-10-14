@@ -34,6 +34,9 @@ const productData = {
 export const metadata = {
   title: 'Bodum French Press Review: 24-Year Professional Test (2025)',
   description: 'Professional chef tests Bodum French Press for 24 years (6 years commercial kitchen + 18 years home). Complete review: durability, coffee quality, value.',
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/bodum-chambord-french-press',
+  },
 };
 
 export default function BodumChambordFrenchPressReview() {

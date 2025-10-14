@@ -3,6 +3,9 @@ import Image from 'next/image'
 export const metadata = {
   title: 'Perfect Scrambled Eggs: No Bowl, No Whisk Method (2025)',
   description: 'Professional chef shares revolutionary scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 40 years of cooking wisdom.',
+  alternates: {
+    canonical: '/blog/best-scrambled-eggs',
+  },
 };
 
 export default function BestScrambledEggs() {

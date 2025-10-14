@@ -32,6 +32,10 @@ const productData = {
 };
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/cuisinart-8-inch-nonstick-pan',
+  },
+
   title: 'Cuisinart High Impact 8&quot; Pan Review: 6-Month Home Test',
   description: 'Professional chef&apos;s 6-month review of Cuisinart 8-inch nonstick pan. Perfect for eggs, single servings, and everyday cooking. Induction ready, durable construction.',
 };

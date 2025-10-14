@@ -3,6 +3,9 @@ import Image from 'next/image'
 export const metadata = {
   title: 'How to Steel a Knife (Hone Like a Chef) - Complete Guide (2025)',
   description: 'Learn how to steel a knife properly using a honing steel. Professional chef guide to honing vs sharpening, perfect technique, and top tool recommendations.',
+  alternates: {
+    canonical: '/blog/how-to-steel-a-knife',
+  },
 };
 
 export default function HowToSteelAKnife() {

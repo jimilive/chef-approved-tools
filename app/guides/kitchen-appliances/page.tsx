@@ -4,6 +4,9 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Best Kitchen Appliances 2024 - Commercial-Grade Equipment Guide',
   description: 'Professional kitchen appliances that survive restaurant use. Mixers, blenders, and processors tested in high-volume operations.',
+  alternates: {
+    canonical: '/guides/kitchen-appliances',
+  },
 }
 
 export default function KitchenAppliancesPage() {

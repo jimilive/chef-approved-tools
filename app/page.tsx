@@ -1,11 +1,15 @@
-'use client'
+import { Metadata } from 'next'
 import React, { lazy, Suspense } from 'react'
 import Image from 'next/image'
 import { SimpleProductSchema } from '@/components/ProductSchema'
 import FAQSchema, { kitchenToolsFAQs } from '@/components/FAQSchema'
 import { ChefCredentialsSchema } from '@/components/ReviewSchema'
-import { trackAffiliateClick } from '@/lib/analytics'
-
+import AffiliateButton from '@/components/AffiliateButton'
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+}
 // Lazy load components below the fold
 const TestimonialsSection = lazy(() => import('@/components/TestimonialsSection'))
 const TopPicksComparison = lazy(() => import('@/components/TopPicksComparison'))
@@ -83,16 +87,17 @@ function EnhancedProductCard({ product, category }: { product: any, category: st
 
 
         {/* Enhanced CTA section */}
-        <div className="space-y-2 mt-4">
-          <a
-            href={product.affiliateUrl}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            onClick={() => trackAffiliateClick(product.name, category, 0, product.brand)}
-            className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block"
-          >
-            🛒 Check Latest Price on Amazon
-          </a>
+<div className="space-y-2 mt-4">
+  <AffiliateButton
+    href={product.affiliateUrl}
+    merchant="amazon"
+    product={product.name}
+    position="above_fold"
+    price={product.price}
+    className="w-full text-center"
+  >
+  View on Amazon →
+</AffiliateButton>
 
           {/* Add comparison hook */}
           <button type="button" className="w-full text-blue-600 hover:text-blue-700 font-medium text-sm py-2 border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors">
@@ -115,6 +120,8 @@ function EnhancedProductCard({ product, category }: { product: any, category: st
     </div>
   )
 }
+
+
 
 export default function HomePage() {
   return (
