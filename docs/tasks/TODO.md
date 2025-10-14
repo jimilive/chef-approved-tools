@@ -133,6 +133,71 @@
 
 ---
 
+## 🎯 CTA A/B Testing Implementation
+
+### Phase 1: Testing (Before Deploy)
+- [ ] Test locally with `npm run dev`
+- [ ] Test button variations on 2-3 review pages
+- [ ] Verify affiliate links contain `?tag=chefapprovedtools-20`
+- [ ] Test sticky mobile CTA on phone/mobile view
+- [ ] Check browser console for errors
+- [ ] Verify GA4 tracking fires (Network tab in dev tools)
+- [ ] Test variant assignment: `localStorage.getItem('cta_variant')` in console
+- [ ] Clear localStorage and verify new variant assigned on refresh
+
+### Phase 2: Legal Clarification
+- [ ] Contact Amazon Associates via https://affiliate-program.amazon.com/help/
+- [ ] Ask about "Prime Eligible" text usage (no logo)
+- [ ] Ask about available badges beyond "Available at Amazon"
+- [ ] Ask about generic trust signals ("Free Returns Available", etc.)
+- [ ] Get written confirmation on approved button text
+- [ ] Save Amazon's response
+- [ ] Update implementation based on their guidance
+
+### Phase 3: Site Integration
+- [ ] Choose 1 high-traffic review page to update first
+- [ ] Update that page to use new AffiliateButton component
+- [ ] Test updated page thoroughly
+- [ ] Update remaining 26 review pages with new buttons
+- [ ] Optionally add TrustSignals component to pages
+- [ ] Verify all affiliate links still work
+
+### Phase 4: Deploy to Production
+- [ ] Commit changes with legal compliance message
+- [ ] Push to main branch
+- [ ] Monitor Vercel deployment dashboard
+- [ ] Test on live site after deployment
+- [ ] Verify affiliate links work on production
+- [ ] Test on real mobile devices
+
+### Phase 5: Monitor & Optimize (2-4 weeks after deploy)
+- [ ] Check GA4 for `cta_variant_assigned` events
+- [ ] Compare click-through rates by variant (A, B, C)
+- [ ] Need 100+ clicks per variant for statistical significance
+- [ ] If clear winner (>10% difference), implement site-wide
+- [ ] If no clear winner, continue testing or use best performer
+- [ ] Monitor error tracking in Vercel dashboard
+- [ ] Check for user feedback/issues
+
+**CTA Button Variations (Legal Compliant):**
+- Variant A: "View on Amazon"
+- Variant B: "Check Current Price"
+- Variant C: "See Product Details"
+
+**Blocked (Awaiting Amazon Verification):**
+- Prime badge/logo usage
+- "Prime Eligible" text with Amazon branding
+- Any Amazon Prime brand colors for badges
+
+**Related Files:**
+- `docs/LEGAL-TODO.md` - Legal tracking document
+- `docs/AB_TESTING_GUIDE.md` - Implementation guide
+- `components/AffiliateButton.tsx` - Updated button
+- `components/TrustSignals.tsx` - Generic trust badges
+- `lib/ab-test.ts` - A/B test logic
+
+---
+
 ## 🔍 SEO & Marketing
 
 ### On-Site SEO
@@ -358,10 +423,13 @@
 
 ---
 
-**Last Updated:** 2025-10-06
+**Last Updated:** 2025-10-14
 
 **Current Status:**
 - 7 comprehensive product reviews completed
 - Core site infrastructure complete
 - SEO foundation in place
+- ✅ A/B testing framework implemented (legal compliant)
+- ✅ Legal compliance documentation created
+- Ready for testing and deployment
 - Ready for content scaling and traffic growth

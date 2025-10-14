@@ -105,3 +105,54 @@ export const trackScrollDepth = (
     });
   }
 };
+
+/**
+ * Track A/B test variant assignment
+ * @param variant - Assigned variant ('a', 'b', or 'c')
+ * @param variantText - The CTA text for this variant
+ */
+export const trackVariantAssignment = (
+  variant: string,
+  variantText: string
+): void => {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'cta_variant_assigned',
+      variant: variant,
+      variant_text: variantText,
+      timestamp: new Date().toISOString()
+    });
+
+    console.log('CTA variant assigned:', { variant, variantText });
+  }
+};
+
+/**
+ * Track A/B test variant click (when user clicks CTA)
+ * @param variant - The variant that was clicked
+ * @param variantText - The CTA text
+ * @param merchant - Affiliate merchant
+ * @param product - Product slug
+ * @param position - CTA position on page
+ */
+export const trackVariantClick = (
+  variant: string,
+  variantText: string,
+  merchant: string,
+  product: string,
+  position: string
+): void => {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'cta_variant_click',
+      variant: variant,
+      variant_text: variantText,
+      merchant: merchant,
+      product: product,
+      cta_position: position,
+      timestamp: new Date().toISOString()
+    });
+
+    console.log('CTA variant clicked:', { variant, variantText, merchant, product, position });
+  }
+};

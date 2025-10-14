@@ -63,7 +63,7 @@ export default function MethodAllPurposeCleanerReview() {
         hook="The unicorn of cleaners. Powerful AND non-toxic. Cuts grease effortlessly."
         category="Cleaning"
       />
-       <article itemScope itemType="https://schema.org/Review">
+       <article>
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
@@ -82,7 +82,7 @@ export default function MethodAllPurposeCleanerReview() {
           }}
         />
 
-        <h1 itemProp="name">Method All-Purpose Cleaner Review: 5-Year Home Kitchen Test</h1>
+        <h1>Method All-Purpose Cleaner Review: 5-Year Home Kitchen Test</h1>
 
         <p style={{ fontSize: '14px', color: '#666', marginBottom: '20px' }}>
           By Scott Bradley, Professional Chef | Last Updated: {new Date().toLocaleDateString('en-US', {
@@ -103,12 +103,9 @@ export default function MethodAllPurposeCleanerReview() {
           borderRadius: '8px',
           borderLeft: '4px solid #28a745'
         }}>
-          <div itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
-            <p style={{ fontSize: '24px', fontWeight: 'bold', margin: '0 0 15px 0' }}>
-              ⭐⭐⭐⭐⭐ <span itemProp="ratingValue">4.8</span>/
-              <span itemProp="bestRating">5</span>
-            </p>
-          </div>
+          <p style={{ fontSize: '24px', fontWeight: 'bold', margin: '0 0 15px 0' }}>
+            ⭐⭐⭐⭐⭐ 4.8/5
+          </p>
           <p style={{ fontSize: '18px', margin: '10px 0', fontWeight: 'bold' }}>
             Testing Period: 5 years of daily home kitchen use
           </p>
@@ -161,7 +158,7 @@ export default function MethodAllPurposeCleanerReview() {
         }}>
           <h2 style={{ marginTop: 0 }}>Professional Verdict: The Unicorn Is Real</h2>
 
-          <p itemProp="reviewBody" style={{ fontSize: '16px', lineHeight: '1.8' }}>
+          <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
             On the bottle, Method boldly claims: &quot;powerful, non-toxic cleaning is not a myth,
             we&apos;re still working on the unicorns.&quot; Let me tell you—<strong>this product
             IS the unicorn.</strong> After 5 years of daily use and 23+ years managing professional
@@ -577,35 +574,31 @@ export default function MethodAllPurposeCleanerReview() {
         <section style={{ margin: '40px 0' }}>
           <h2>Frequently Asked Questions</h2>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">Is Method All-Purpose Cleaner really non-toxic and safe?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Yes, genuinely non-toxic. The formula is plant-based,
-                  biodegradable, and free from harsh chemicals like ammonia, bleach, or phosphates.
-                  It&apos;s safe to use on food prep surfaces without rinsing. After 5 years of
-                  daily use in my kitchen, I&apos;ve had zero concerns about safety around food,
-                  children, or pets. This is as safe as cleaners get while still being effective.
-                </p>
-              </div>
-            </div>
+            <h3>Is Method All-Purpose Cleaner really non-toxic and safe?</h3>
+            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+              <strong>Answer:</strong> Yes, genuinely non-toxic. The formula is plant-based,
+              biodegradable, and free from harsh chemicals like ammonia, bleach, or phosphates.
+              It&apos;s safe to use on food prep surfaces without rinsing. After 5 years of
+              daily use in my kitchen, I&apos;ve had zero concerns about safety around food,
+              children, or pets. This is as safe as cleaners get while still being effective.
+            </p>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">How does Method compare to traditional cleaners like Formula 409?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
+            <h3>How does Method compare to traditional cleaners like Formula 409?</h3>
+            <div>
+              <div>
                 <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
                   <strong>Answer:</strong> Method matches the cleaning power of chemical cleaners
                   like 409 or Fantastik but without harsh fumes, chemical residue, or environmental
@@ -618,15 +611,15 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">Does Method work well on greasy stovetops?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
+            <h3>Does Method work well on greasy stovetops?</h3>
+            <div>
+              <div>
                 <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
                   <strong>Answer:</strong> Exceptionally well. This is where Method truly shines.
                   Spray it on cooking grease splatters, wait 5-10 seconds, and wipe clean—no
@@ -638,15 +631,15 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">Is Method streak-free on stainless steel?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
+            <h3>Is Method streak-free on stainless steel?</h3>
+            <div>
+              <div>
                 <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
                   <strong>Answer:</strong> Yes, but technique matters. Clean with Method, then
                   immediately follow with a dry cloth to buff the surface. This prevents water
@@ -658,15 +651,15 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">Is Method safe for all kitchen surfaces?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
+            <h3>Is Method safe for all kitchen surfaces?</h3>
+            <div>
+              <div>
                 <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
                   <strong>Answer:</strong> Safe for virtually all common kitchen surfaces: countertops
                   (granite, quartz, laminate), stovetops, appliances, glass, stainless steel, sealed
@@ -679,15 +672,15 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">What scent options are available?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
+            <h3>What scent options are available?</h3>
+            <div>
+              <div>
                 <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
                   <strong>Answer:</strong> Method offers multiple scent options including French
                   Lavender, Pink Grapefruit, Ylang Ylang, Cucumber, and more. All scents are
@@ -700,15 +693,15 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">Are refills available for Method All-Purpose Cleaner?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
+            <h3>Are refills available for Method All-Purpose Cleaner?</h3>
+            <div>
+              <div>
                 <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
                   <strong>Answer:</strong> Yes, Method offers refill bottles that are more economical
                   and environmentally friendly than buying new spray bottles repeatedly. The refills
@@ -721,15 +714,15 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">How does the cost compare to conventional cleaners?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
+            <h3>How does the cost compare to conventional cleaners?</h3>
+            <div>
+              <div>
                 <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
                   <strong>Answer:</strong> Method costs slightly more per bottle than conventional
                   chemical cleaners (typically a few dollars difference). However, the performance
@@ -742,15 +735,15 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">Is Method effective on baked-on, dried grime?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
+            <h3>Is Method effective on baked-on, dried grime?</h3>
+            <div>
+              <div>
                 <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
                   <strong>Answer:</strong> Yes, but let it sit longer. For normal kitchen messes,
                   5-10 seconds is enough. For baked-on grime (like microwave splatters or dried
@@ -763,15 +756,15 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">Would Method work in a professional kitchen?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
+            <h3>Would Method work in a professional kitchen?</h3>
+            <div>
+              <div>
                 <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
                   <strong>Answer:</strong> For general surface cleaning, absolutely. However,
                   professional kitchens require sanitizers and disinfectants for health department
