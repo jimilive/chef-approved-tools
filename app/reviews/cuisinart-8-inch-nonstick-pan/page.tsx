@@ -65,7 +65,7 @@ export default function Cuisinart8InchNonstickPanReview() {
         hook="Perfect for eggs. Even heat distribution. Ideal for single servings."
         category="Cookware"
       />
-       <article itemScope itemType="https://schema.org/Review">
+       <article>
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
@@ -84,7 +84,7 @@ export default function Cuisinart8InchNonstickPanReview() {
           }}
         />
 
-        <h1 itemProp="name">Cuisinart High Impact 8&quot; Pan Review: 6-Month Home Test</h1>
+        <h1>Cuisinart High Impact 8&quot; Pan Review: 6-Month Home Test</h1>
 
         <p style={{ fontSize: '14px', color: '#666', marginBottom: '20px' }}>
           By Scott Bradley, Professional Chef | Last Updated: {new Date().toLocaleDateString('en-US', {
@@ -105,12 +105,9 @@ export default function Cuisinart8InchNonstickPanReview() {
           borderRadius: '8px',
           borderLeft: '4px solid #28a745'
         }}>
-          <div itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
-            <p style={{ fontSize: '24px', fontWeight: 'bold', margin: '0 0 15px 0' }}>
-              ⭐⭐⭐⭐⭐ <span itemProp="ratingValue">4.7</span>/
-              <span itemProp="bestRating">5</span>
-            </p>
-          </div>
+          <p style={{ fontSize: '24px', fontWeight: 'bold', margin: '0 0 15px 0' }}>
+            ⭐⭐⭐⭐⭐ 4.7/5
+          </p>
           <p style={{ fontSize: '18px', margin: '10px 0', fontWeight: 'bold' }}>
             Testing Period: 6 months of daily home use
           </p>
@@ -163,7 +160,7 @@ export default function Cuisinart8InchNonstickPanReview() {
         }}>
           <h2 style={{ marginTop: 0 }}>Professional Verdict: 6-Month Test Results</h2>
 
-          <p itemProp="reviewBody" style={{ fontSize: '16px', lineHeight: '1.8' }}>
+          <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
             After 6 months of daily testing, the Cuisinart High Impact 8&quot; pan has become
             my default choice for morning eggs and small-batch cooking. The nonstick surface
             remains flawless—eggs slide off effortlessly without butter or oil. The high impact
@@ -556,203 +553,163 @@ export default function Cuisinart8InchNonstickPanReview() {
         <section style={{ margin: '40px 0' }}>
           <h2>Frequently Asked Questions</h2>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">Is 8 inches the best size for cooking eggs?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Yes, 8 inches is ideal for 2-3 eggs (standard breakfast
-                  serving). The compact size provides better heat control and makes egg flipping
-                  easier. For my <a href="/blog/best-scrambled-eggs" style={{ color: '#0066cc', fontWeight: 'bold' }}>no-bowl scrambled eggs technique</a>,
-                  this is the perfect size—large enough for proper stirring, small enough for
-                  precise temperature control.
-                </p>
-              </div>
-            </div>
+            <h3>Is 8 inches the best size for cooking eggs?</h3>
+            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+              <strong>Answer:</strong> Yes, 8 inches is ideal for 2-3 eggs (standard breakfast
+              serving). The compact size provides better heat control and makes egg flipping
+              easier. For my <a href="/blog/best-scrambled-eggs" style={{ color: '#0066cc', fontWeight: 'bold' }}>no-bowl scrambled eggs technique</a>,
+              this is the perfect size—large enough for proper stirring, small enough for
+              precise temperature control.
+            </p>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">How long does the nonstick coating last?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> With proper care (wooden/silicone utensils, gentle cleaning,
-                  medium heat), expect 3-5 years of excellent performance. After 6 months of daily
-                  testing, my pan shows zero wear. Avoid metal utensils, high heat, and dishwasher
-                  to maximize lifespan. Hand wash with <a href="/reviews/method-all-purpose-cleaner" style={{ color: '#0066cc', fontWeight: 'bold' }}>gentle cleaner</a> and
-                  soft sponge.
-                </p>
-              </div>
-            </div>
+            <h3>How long does the nonstick coating last?</h3>
+            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+              <strong>Answer:</strong> With proper care (wooden/silicone utensils, gentle cleaning,
+              medium heat), expect 3-5 years of excellent performance. After 6 months of daily
+              testing, my pan shows zero wear. Avoid metal utensils, high heat, and dishwasher
+              to maximize lifespan. Hand wash with <a href="/reviews/method-all-purpose-cleaner" style={{ color: '#0066cc', fontWeight: 'bold' }}>gentle cleaner</a> and
+              soft sponge.
+            </p>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">Does this pan work on induction cooktops?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Yes, absolutely. The high impact bonded base includes
-                  magnetic stainless steel, making it fully compatible with induction cooktops.
-                  It heats quickly and evenly on induction. Also works on gas, electric, glass,
-                  and ceramic cooktops—truly universal compatibility.
-                </p>
-              </div>
-            </div>
+            <h3>Does this pan work on induction cooktops?</h3>
+            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+              <strong>Answer:</strong> Yes, absolutely. The high impact bonded base includes
+              magnetic stainless steel, making it fully compatible with induction cooktops.
+              It heats quickly and evenly on induction. Also works on gas, electric, glass,
+              and ceramic cooktops—truly universal compatibility.
+            </p>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">Is this pan dishwasher safe?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> While technically dishwasher safe, I strongly recommend
-                  hand washing to preserve the nonstick coating. Dishwasher detergents are harsh
-                  and degrade nonstick surfaces over time. Hand washing takes 30 seconds with this
-                  pan—food releases so easily that a quick wipe is all you need.
-                </p>
-              </div>
-            </div>
+            <h3>Is this pan dishwasher safe?</h3>
+            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+              <strong>Answer:</strong> While technically dishwasher safe, I strongly recommend
+              hand washing to preserve the nonstick coating. Dishwasher detergents are harsh
+              and degrade nonstick surfaces over time. Hand washing takes 30 seconds with this
+              pan—food releases so easily that a quick wipe is all you need.
+            </p>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">Can I use metal utensils with this pan?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> No, avoid metal utensils. They will scratch and damage
-                  the nonstick coating. Use wooden spoons, silicone spatulas, or nylon utensils.
-                  I use wooden spoons for most tasks—they&apos;re gentle on nonstick and won&apos;t
-                  scratch. This is standard practice for all nonstick cookware, not unique to this pan.
-                </p>
-              </div>
-            </div>
+            <h3>Can I use metal utensils with this pan?</h3>
+            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+              <strong>Answer:</strong> No, avoid metal utensils. They will scratch and damage
+              the nonstick coating. Use wooden spoons, silicone spatulas, or nylon utensils.
+              I use wooden spoons for most tasks—they&apos;re gentle on nonstick and won&apos;t
+              scratch. This is standard practice for all nonstick cookware, not unique to this pan.
+            </p>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">How do I preserve the nonstick coating?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Follow these rules: (1) Use only wooden or silicone utensils,
-                  (2) Cook on medium or medium-low heat—high heat degrades nonstick, (3) Hand wash
-                  with soft sponge and gentle soap, (4) Avoid cooking sprays which leave residue,
-                  (5) Store carefully to prevent scratches. With these practices, expect years
-                  of flawless performance.
-                </p>
-              </div>
-            </div>
+            <h3>How do I preserve the nonstick coating?</h3>
+            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+              <strong>Answer:</strong> Follow these rules: (1) Use only wooden or silicone utensils,
+              (2) Cook on medium or medium-low heat—high heat degrades nonstick, (3) Hand wash
+              with soft sponge and gentle soap, (4) Avoid cooking sprays which leave residue,
+              (5) Store carefully to prevent scratches. With these practices, expect years
+              of flawless performance.
+            </p>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">What is the oven-safe temperature limit?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> 350°F maximum oven temperature. The nonstick coating
-                  and handle limit oven use. This is fine for finishing dishes or keeping food
-                  warm, but not for high-heat roasting. For oven braising or high-heat applications,
-                  use <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" style={{ color: '#0066cc', fontWeight: 'bold' }}>Le Creuset Dutch ovens</a> or
-                  cast iron instead.
-                </p>
-              </div>
-            </div>
+            <h3>What is the oven-safe temperature limit?</h3>
+            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+              <strong>Answer:</strong> 350°F maximum oven temperature. The nonstick coating
+              and handle limit oven use. This is fine for finishing dishes or keeping food
+              warm, but not for high-heat roasting. For oven braising or high-heat applications,
+              use <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" style={{ color: '#0066cc', fontWeight: 'bold' }}>Le Creuset Dutch ovens</a> or
+              cast iron instead.
+            </p>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">Is this pan good for single-person meals?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Perfect for single servings. The 8-inch size is ideal
-                  for one chicken breast, one pork chop, 2-3 eggs, or small vegetable sautés.
-                  If you live alone or frequently cook for one, this is your everyday pan. Couples
-                  can cook two servings sequentially—the pan heats so quickly that cooking back-to-back
-                  batches is efficient.
-                </p>
-              </div>
-            </div>
+            <h3>Is this pan good for single-person meals?</h3>
+            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+              <strong>Answer:</strong> Perfect for single servings. The 8-inch size is ideal
+              for one chicken breast, one pork chop, 2-3 eggs, or small vegetable sautés.
+              If you live alone or frequently cook for one, this is your everyday pan. Couples
+              can cook two servings sequentially—the pan heats so quickly that cooking back-to-back
+              batches is efficient.
+            </p>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">Is the Cuisinart 8&quot; pan worth it compared to cheap nonstick?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Absolutely. Cheap nonstick pans warp, lose their coating
-                  within months, and have uneven heating. The Cuisinart&apos;s high impact bonded
-                  base provides even heat distribution, the construction prevents warping, and the
-                  coating quality lasts years with proper care. After 6 months of daily testing,
-                  it performs like new. Budget nonstick is disposable; this is durable.
-                </p>
-              </div>
-            </div>
+            <h3>Is the Cuisinart 8&quot; pan worth it compared to cheap nonstick?</h3>
+            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+              <strong>Answer:</strong> Absolutely. Cheap nonstick pans warp, lose their coating
+              within months, and have uneven heating. The Cuisinart&apos;s high impact bonded
+              base provides even heat distribution, the construction prevents warping, and the
+              coating quality lasts years with proper care. After 6 months of daily testing,
+              it performs like new. Budget nonstick is disposable; this is durable.
+            </p>
           </div>
 
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div style={{
             margin: '20px 0',
             padding: '20px',
             background: '#f8f9fa',
             borderRadius: '6px'
           }}>
-            <h3 itemProp="name">Cuisinart 8&quot; pan vs. All-Clad nonstick—is the price difference worth it?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> For most home cooks, no. All-Clad nonstick costs 3-4x
-                  more but delivers similar performance for everyday cooking. Both have excellent
-                  nonstick coatings with similar lifespans, even heat distribution, and professional
-                  build quality. All-Clad has slightly better fit/finish and higher oven-safe temps,
-                  but the Cuisinart provides 90% of the performance at 25% of the cost. Unless
-                  you&apos;re outfitting a professional kitchen or want the premium brand prestige,
-                  the Cuisinart is exceptional value.
-                </p>
-              </div>
-            </div>
+            <h3>Cuisinart 8&quot; pan vs. All-Clad nonstick—is the price difference worth it?</h3>
+            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+              <strong>Answer:</strong> For most home cooks, no. All-Clad nonstick costs 3-4x
+              more but delivers similar performance for everyday cooking. Both have excellent
+              nonstick coatings with similar lifespans, even heat distribution, and professional
+              build quality. All-Clad has slightly better fit/finish and higher oven-safe temps,
+              but the Cuisinart provides 90% of the performance at 25% of the cost. Unless
+              you&apos;re outfitting a professional kitchen or want the premium brand prestige,
+              the Cuisinart is exceptional value.
+            </p>
           </div>
         </section>
 
