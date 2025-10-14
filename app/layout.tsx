@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     siteName: 'Chef Approved Tools',
     images: [
       {
-        url: 'https://www.chefapprovedtools.com/og-image.webp',
+        url: 'https://www.chefapprovedtools.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Scott Bradley - Professional Chef reviewing kitchen equipment with 23+ years restaurant experience'
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Chef Approved Kitchen Tools | Restaurant Manager Tested',
     description: 'Professional kitchen equipment reviews by Scott Bradley. 23+ years restaurant experience, former Mellow Mushroom Kitchen Manager. Real reviews from real kitchens.',
-    images: ['https://www.chefapprovedtools.com/twitter-image.webp'],
+    images: ['https://www.chefapprovedtools.com/twitter-image.jpg'],
     creator: '@chefapprovedtools',
     site: '@chefapprovedtools',
   },
@@ -119,7 +119,7 @@ export default function RootLayout({
         <link rel="preload" href="/logo.png" as="image" type="image/png" />
 
         {/* Preload critical above-the-fold images */}
-        <link rel="preload" href="/og-image.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/og-image.jpg" as="image" type="image/jpeg" />
 
         {/* Preload critical CSS - Note: CSS hash changes with each build */}
         {/* Run: npm run build && find .next/static/css -name "*.css" to get the latest filename */}

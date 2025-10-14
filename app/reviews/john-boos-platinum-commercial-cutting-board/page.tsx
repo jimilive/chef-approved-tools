@@ -1284,7 +1284,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             alignItems: 'start'
           }}>
             <Image
-              src="/images/team/head-shot-1.webp"
+              src="/images/team/head-shot-1.jpg"
               alt="Scott Bradley, Professional Chef"
               width={100}
               height={100}

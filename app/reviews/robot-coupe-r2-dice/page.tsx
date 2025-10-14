@@ -1127,7 +1127,7 @@ export default function RobotCoupeR2DiceReview() {
           }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/team/head-shot-1.webp"
+              src="/images/team/head-shot-1.jpg"
               alt="Scott Bradley, Professional Chef"
               style={{
                 width: '100px',

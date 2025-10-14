@@ -196,7 +196,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <div className="relative w-32 h-32 mx-auto mb-4">
               <Image
-                src="/images/team/head-shot-1.webp"
+                src="/images/team/head-shot-1.jpg"
                 alt="Scott Bradley - Professional Chef"
                 fill
                 sizes="128px"
