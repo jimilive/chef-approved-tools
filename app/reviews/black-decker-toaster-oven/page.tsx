@@ -1,7 +1,7 @@
 import { Tier2Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
@@ -63,6 +63,49 @@ const breadcrumbs = [
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+];
+
+const faqData = [
+  {
+    question: "Are Black+Decker toaster ovens reliable?",
+    answer: "Based on 48 years of continuous use across 4 different models, yes—remarkably reliable. Each model lasted 5-18 years of daily use without mechanical failure. This level of consistency across nearly five decades demonstrates genuine reliability."
+  },
+  {
+    question: "How long do Black+Decker toaster ovens last?",
+    answer: "With normal home use, expect 10-15+ years. My experience across four models: Model 1: 18 years (1977-1995), Model 2: 10 years (1995-2005), Model 3: 15 years (2005-2020), Model 4: 5 years and still going strong (2020-present). The budget price doesn't mean throwaway quality—these are legitimately long-lasting appliances."
+  },
+  {
+    question: "What size toaster oven should I buy?",
+    answer: "The 4-slice capacity is ideal for most households (1-4 people). Sizing guide: 2-slice for single person with minimal counter space, 4-slice for 1-4 people (most versatile - RECOMMENDED), 6-8 slice for large families or frequent entertaining. The 4-slice handles daily toasting, reheating, and small baking tasks without dominating counter space."
+  },
+  {
+    question: "Can you bake in a Black+Decker toaster oven?",
+    answer: "Yes, for small-batch baking. Perfect for cookies (4-6 at a time), small cakes, reheating pizza, roasting vegetables. Not ideal for large cakes or multiple loaves of bread—use a full-size oven for those. Best uses: Single servings, small batches, reheating, quick meals. Heats faster than full oven and uses less energy."
+  },
+  {
+    question: "How do you clean a Black+Decker toaster oven?",
+    answer: "Simple maintenance keeps it running for years: 1) Unplug and let cool completely, 2) Remove crumb tray, wash with soap and water, 3) Wipe interior with damp cloth (mild soap if needed), 4) Clean glass door with glass cleaner, 5) Dry thoroughly before use. Pro tip: Clean crumb tray weekly to prevent smoke and maintain efficiency. This simple habit extends lifespan significantly."
+  },
+  {
+    question: "Is Black+Decker better than other budget brands?",
+    answer: "After 48 years with Black+Decker, I can confirm they deliver exceptional reliability in the budget category. Key differentiators: Proven longevity (5-18 years per model in my experience), consistent performance across decades of different models, simple durable controls that don't fail, widely available replacement parts. Many budget brands last 2-5 years. Black+Decker consistently delivers 10+ years."
+  },
+  {
+    question: "What's the difference between cheap and expensive toaster ovens?",
+    answer: "Having used both budget and premium equipment professionally, here's what premium models offer: Convection fans for even cooking, precise digital temperature control, larger capacity (8+ slices), better insulation (stays cooler outside), more cooking modes and presets. However, for basic toasting, reheating, and simple baking, Black+Decker delivers 90% of the functionality at 25% of the cost. After 48 years, I've never felt the need to upgrade."
+  },
+  {
+    question: "Can toaster ovens replace regular ovens?",
+    answer: "For 1-2 people doing basic cooking, yes—mostly. A toaster oven can handle: Daily toast and reheating, small-batch baking (cookies, muffins), single-serving meals, roasting small portions of vegetables or protein. You'll still need a full oven for: Large roasts, multiple pizza, holiday baking, anything requiring multiple racks simultaneously. I use both—toaster oven for 80% of daily tasks, full oven for large or special cooking."
+  },
+  {
+    question: "Why do you keep buying Black+Decker instead of trying other brands?",
+    answer: "After 48 years of proven reliability, why would I experiment? Each of my four Black+Decker models lasted 5-18 years of daily use without failure. That's not luck—that's consistent quality control and design excellence. I've tested premium kitchen equipment professionally. I know when expensive products deliver proportional value. For home toaster ovens, Black+Decker's reliability-to-cost ratio is unmatched. When something works this well for this long at this price, repeat purchases aren't brand loyalty—they're smart shopping."
+  },
+  {
+    question: "Should college students or first apartment renters buy Black+Decker?",
+    answer: "Absolutely yes. Black+Decker toaster ovens are ideal for: Budget-friendly (low initial cost without sacrificing quality), compact size (fits small kitchen counters and dorm limitations), essential functions (toast, reheat, simple cooking—student staples), reliable performance (will likely outlast your college years), energy efficient (cheaper to operate than full ovens). My second Black+Decker was purchased for my first apartment in 1995. It served me through college, multiple moves, early career, and lasted a full decade. That's exactly the kind of reliable, affordable equipment students and young professionals need."
+  }
 ];
 
 export default function BlackDeckerToasterOvenReview() {
@@ -917,296 +960,6 @@ export default function BlackDeckerToasterOvenReview() {
           Frequently Asked Questions About Black+Decker Toaster Ovens
         </h2>
 
-        <div itemScope itemType="https://schema.org/FAQPage">
-
-          {/* Question 1 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Are Black+Decker toaster ovens reliable?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Based on 48 years of continuous use across 4 different models,
-                  yes—remarkably reliable. Each model lasted 5-18 years of daily use without mechanical
-                  failure. This level of consistency across nearly five decades demonstrates genuine reliability.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 2 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              How long do Black+Decker toaster ovens last?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> With normal home use, expect 10-15+ years. My experience across
-                  four models:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Model 1: 18 years (1977-1995)</li>
-                  <li>Model 2: 10 years (1995-2005)</li>
-                  <li>Model 3: 15 years (2005-2020)</li>
-                  <li>Model 4: 5 years and still going strong (2020-present)</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  The budget price doesn&apos;t mean throwaway quality—these are legitimately long-lasting
-                  appliances.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 3 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              What size toaster oven should I buy?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> The 4-slice capacity is ideal for most households (1-4 people).
-                  Sizing guide:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li><strong>2-slice:</strong> Single person, minimal counter space</li>
-                  <li><strong>4-slice:</strong> 1-4 people, most versatile (RECOMMENDED)</li>
-                  <li><strong>6-8 slice:</strong> Large families, frequent entertaining</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  The 4-slice handles daily toasting, reheating, and small baking tasks without
-                  dominating counter space.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 4 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Can you bake in a Black+Decker toaster oven?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Yes, for small-batch baking. Perfect for cookies (4-6 at a time),
-                  small cakes, reheating pizza, roasting vegetables. Not ideal for large cakes or multiple
-                  loaves of bread—use a full-size oven for those.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Best uses:</strong> Single servings, small batches, reheating, quick meals.
-                  Heats faster than full oven and uses less energy.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 5 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              How do you clean a Black+Decker toaster oven?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Simple maintenance keeps it running for years:
-                </p>
-                <ol style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Unplug and let cool completely</li>
-                  <li>Remove crumb tray, wash with soap and water</li>
-                  <li>Wipe interior with damp cloth (mild soap if needed)</li>
-                  <li>Clean glass door with glass cleaner</li>
-                  <li>Dry thoroughly before use</li>
-                </ol>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Pro tip:</strong> Clean crumb tray weekly to prevent smoke and maintain
-                  efficiency. This simple habit extends lifespan significantly.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 6 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Is Black+Decker better than other budget brands?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> After 48 years with Black+Decker, I can confirm they deliver
-                  exceptional reliability in the budget category. Key differentiators:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Proven longevity (5-18 years per model in my experience)</li>
-                  <li>Consistent performance across decades of different models</li>
-                  <li>Simple, durable controls that don&apos;t fail</li>
-                  <li>Widely available replacement parts</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  Many budget brands last 2-5 years. Black+Decker consistently delivers 10+ years.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 7 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              What&apos;s the difference between cheap and expensive toaster ovens?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Having used both budget and premium equipment professionally,
-                  here&apos;s what premium models offer:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Convection fans for even cooking</li>
-                  <li>Precise digital temperature control</li>
-                  <li>Larger capacity (8+ slices)</li>
-                  <li>Better insulation (stays cooler outside)</li>
-                  <li>More cooking modes and presets</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>However,</strong> for basic toasting, reheating, and simple baking, Black+Decker
-                  delivers 90% of the functionality at 25% of the cost. After 48 years, I&apos;ve never felt
-                  the need to upgrade.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 8 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Can toaster ovens replace regular ovens?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> For 1-2 people doing basic cooking, yes—mostly. A toaster
-                  oven can handle:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Daily toast and reheating</li>
-                  <li>Small-batch baking (cookies, muffins)</li>
-                  <li>Single-serving meals</li>
-                  <li>Roasting small portions of vegetables or protein</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>You&apos;ll still need a full oven for:</strong> Large roasts, multiple pizza,
-                  holiday baking, anything requiring multiple racks simultaneously.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  I use both—toaster oven for 80% of daily tasks, full oven for large or special cooking.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 9 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Why do you keep buying Black+Decker instead of trying other brands?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> After 48 years of proven reliability, why would I experiment?
-                  Each of my four Black+Decker models lasted 5-18 years of daily use without failure.
-                  That&apos;s not luck—that&apos;s consistent quality control and design excellence.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  I&apos;ve tested premium kitchen equipment professionally. I know when expensive products
-                  deliver proportional value. For home toaster ovens, Black+Decker&apos;s reliability-to-cost
-                  ratio is unmatched. When something works this well for this long at this price, repeat
-                  purchases aren&apos;t brand loyalty—they&apos;re smart shopping.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 10 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Should college students or first apartment renters buy Black+Decker?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Absolutely yes. Black+Decker toaster ovens are ideal for:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li><strong>Budget-friendly:</strong> Low initial cost without sacrificing quality</li>
-                  <li><strong>Compact size:</strong> Fits small kitchen counters and dorm limitations</li>
-                  <li><strong>Essential functions:</strong> Toast, reheat, simple cooking—student staples</li>
-                  <li><strong>Reliable performance:</strong> Will likely outlast your college years</li>
-                  <li><strong>Energy efficient:</strong> Cheaper to operate than full ovens</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  My second Black+Decker was purchased for my first apartment in 1995. It served me through
-                  college, multiple moves, early career, and lasted a full decade. That&apos;s exactly the
-                  kind of reliable, affordable equipment students and young professionals need.
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
 
         {/* Email Capture */}
         <div style={{
@@ -1536,6 +1289,12 @@ export default function BlackDeckerToasterOvenReview() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
           }}
         />
       </article>

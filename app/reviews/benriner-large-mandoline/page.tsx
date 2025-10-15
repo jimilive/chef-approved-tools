@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Tier1Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 
@@ -31,6 +31,47 @@ const productData = {
     primary: "/logo.png"
   }
 };
+
+const breadcrumbs = [
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+];
+
+const faqData = [
+  {
+    question: "Is the Benriner mandoline worth it?",
+    answer: "After years of professional use, absolutely yes. The Japanese precision engineering delivers consistent results that justify the investment. Cuts prep time significantly and produces restaurant-quality uniform slices. For serious home cooks or professionals, this is the standard."
+  },
+  {
+    question: "How dangerous is a mandoline slicer?",
+    answer: "Extremely sharp blade requires serious respect. Always use the hand guard, never slice without it. Professional kitchens require cut-resistant gloves when using mandolines. The blade is sharp enough to slice through fingernails effortlessly—this is not an exaggeration. With proper safety protocols, it's safe. Without them, it's one of the most dangerous tools in the kitchen."
+  },
+  {
+    question: "What's the difference between Benriner and cheap mandolines?",
+    answer: "The blade quality is night and day. Benriner uses high-carbon Japanese stainless steel that stays sharp significantly longer. Cheap mandolines dull quickly and produce inconsistent results. Additionally, the adjustment mechanism on Benriner is precise and repeatable. Budget mandolines often have loose, imprecise adjustments that defeat the purpose of uniform slicing."
+  },
+  {
+    question: "What vegetables work best on a mandoline?",
+    answer: "Excellent for: cucumbers, potatoes, radishes, carrots, zucchini, apples, onions, cabbage. Basically any firm vegetable or fruit that you want uniformly sliced. Avoid: very soft items like tomatoes (unless extremely ripe), leafy greens, or anything too irregular in shape. Soft items get crushed rather than cleanly sliced."
+  },
+  {
+    question: "Can you julienne with a Benriner?",
+    answer: "Yes, the Benriner includes julienne blades for fine and medium cuts. Perfect for garnishes, salads, or stir-fry prep. The julienne quality matches the slicing precision—consistent, professional results."
+  },
+  {
+    question: "How do you clean a Benriner mandoline safely?",
+    answer: "Rinse immediately after use to prevent food from drying on blade. Use a brush or sponge—never your bare hand directly on blade. Dishwasher safe, but hand washing preserves blade edge longer. Always clean with extreme caution. The blade is sharp enough to cut through sponges effortlessly. Many professionals keep a dedicated brush just for mandoline cleaning."
+  },
+  {
+    question: "How long does the blade stay sharp?",
+    answer: "With proper care, the blade stays professionally sharp for years. In our restaurant environment with daily use, we found minimal dulling over time. The Japanese stainless steel holds an edge far better than budget alternatives. When it does eventually dull, replacement blades are available and reasonably priced."
+  },
+  {
+    question: "Is the hand guard effective?",
+    answer: "The included hand guard is well-designed and effective when used properly. It has spikes that grip the food securely and keeps your fingers safely away from the blade. That said, many professional cooks prefer cut-resistant gloves as additional protection. The hand guard is good, but the blade is so sharp that extra precaution is never wasted."
+  }
+];
 
 export const metadata = {
   title: 'Benriner Mandoline Review | Professional Test 2025',
@@ -473,194 +514,6 @@ export default function BenrinerLargeMandolineReview() {
 
       </div>
 
-      {/* FAQ Section */}
-      <h2>Frequently Asked Questions</h2>
-
-      <div itemScope itemType="https://schema.org/FAQPage">
-
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">Is the Benriner mandoline worth it?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> After years of professional use, absolutely yes.
-              The Japanese precision engineering delivers consistent results that justify
-              the investment. Cuts prep time significantly and produces restaurant-quality
-              uniform slices. For serious home cooks or professionals, this is the standard.</p>
-            </div>
-          </div>
-        </div>
-
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">How dangerous is a mandoline slicer?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> Extremely sharp blade requires serious respect.
-              Always use the hand guard, never slice without it. Professional kitchens
-              require cut-resistant gloves when using mandolines. The blade is sharp enough
-              to slice through fingernails effortlessly—this is not an exaggeration.</p>
-              <p>With proper safety protocols, it&apos;s safe. Without them, it&apos;s one
-              of the most dangerous tools in the kitchen.</p>
-            </div>
-          </div>
-        </div>
-
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">What&apos;s the difference between Benriner and cheap mandolines?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> The blade quality is night and day. Benriner uses
-              high-carbon Japanese stainless steel that stays sharp significantly longer.
-              Cheap mandolines dull quickly and produce inconsistent results.</p>
-              <p>Additionally, the adjustment mechanism on Benriner is precise and repeatable.
-              Budget mandolines often have loose, imprecise adjustments that defeat the
-              purpose of uniform slicing.</p>
-            </div>
-          </div>
-        </div>
-
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">What vegetables work best on a mandoline?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> Excellent for: cucumbers, potatoes, radishes,
-              carrots, zucchini, apples, onions, cabbage. Basically any firm vegetable
-              or fruit that you want uniformly sliced.</p>
-              <p>Avoid: very soft items like tomatoes (unless extremely ripe), leafy greens,
-              or anything too irregular in shape. Soft items get crushed rather than cleanly sliced.</p>
-            </div>
-          </div>
-        </div>
-
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">Can you julienne with a Benriner?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> Yes, the Benriner includes julienne blades for
-              fine and medium cuts. Perfect for garnishes, salads, or stir-fry prep. The
-              julienne quality matches the slicing precision—consistent, professional results.</p>
-            </div>
-          </div>
-        </div>
-
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">How do you clean a Benriner mandoline safely?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> Rinse immediately after use to prevent food from
-              drying on blade. Use a brush or sponge—never your bare hand directly on blade.
-              Dishwasher safe, but hand washing preserves blade edge longer.</p>
-              <p>Always clean with extreme caution. The blade is sharp enough to cut through
-              sponges effortlessly. Many professionals keep a dedicated brush just for
-              mandoline cleaning.</p>
-            </div>
-          </div>
-        </div>
-
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">How long does the blade stay sharp?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> With proper care, the blade stays professionally
-              sharp for years. In our restaurant environment with daily use, we found
-              minimal dulling over time. The Japanese stainless steel holds an edge far
-              better than budget alternatives.</p>
-              <p>When it does eventually dull, replacement blades are available and
-              reasonably priced.</p>
-            </div>
-          </div>
-        </div>
-
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">Is the hand guard effective?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> The included hand guard is well-designed and
-              effective when used properly. It has spikes that grip the food securely and
-              keeps your fingers safely away from the blade.</p>
-              <p>That said, many professional cooks prefer cut-resistant gloves as additional
-              protection. The hand guard is good, but the blade is so sharp that extra
-              precaution is never wasted.</p>
-            </div>
-          </div>
-        </div>
-
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">Can you sharpen a Benriner blade?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> Technically yes, but replacement blades are
-              relatively affordable and ensure factory precision. Most professionals simply
-              replace the blade when it dulls rather than attempting to sharpen it.</p>
-              <p>The blade design is optimized for slicing, not for repeated sharpening
-              like a chef knife.</p>
-            </div>
-          </div>
-        </div>
-
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">What size Benriner should I buy?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> The large Benriner (reviewed here) is the most
-              versatile. It handles everything from small radishes to large potatoes. The
-              medium size works for home kitchens with limited counter space, but the large
-              is more capable for serious cooking.</p>
-              <p>For professional or serious home use, always choose the large size.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
 
       {/* Strong Final CTA */}
       <div style={{
@@ -893,6 +746,26 @@ export default function BenrinerLargeMandolineReview() {
           </a>
         </div>
       </div>
+
+      {/* Structured Data - JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateProductReviewSchema(productData))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema(faqData))
+        }}
+      />
 
     </article>
   );
