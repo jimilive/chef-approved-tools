@@ -716,18 +716,18 @@ export default function JohnBosPlatinumCuttingBoardReview() {
         <section className="mb-8" id="faq">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Frequently Asked Questions About John Boos Cutting Boards</h2>
 
-          <div itemScope itemType="https://schema.org/FAQPage">
+          <div>
 
             {/* Question 1 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Is a John Boos cutting board worth the money?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Is a John Boos cutting board worth the money?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> After 14 years of daily use, absolutely yes—if you cook
                   regularly and value knife care. The combination of knife edge preservation, exceptional
                   work surface, and generational durability justifies the investment for serious home cooks.</p>
@@ -747,15 +747,15 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 2 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">How do you maintain a John Boos cutting board?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>How do you maintain a John Boos cutting board?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Despite marketing claims about frequent oiling, maintenance is
                   far simpler than advertised. Here&apos;s what actually works after 14 years:</p>
 
@@ -778,15 +778,15 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 3 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">What size John Boos cutting board should I buy?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>What size John Boos cutting board should I buy?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> For serious home cooks, the 24x18 size is the sweet spot. It provides enough work surface to prep multiple ingredients without constant shuffling, while not being so massive it becomes unwieldy.</p>
 
                   <p><strong>Size guide based on use:</strong></p>
@@ -803,15 +803,15 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 4 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">John Boos vs other wood cutting board brands?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>John Boos vs other wood cutting board brands?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> John Boos is the professional standard for a reason. After 14 years with this board, here&apos;s how it compares:</p>
 
                   <p><strong>John Boos advantages:</strong> NSF certification, proven commercial durability, Made in USA quality, edge-grain construction that balances knife-friendliness with longevity, established reputation in professional kitchens.</p>
@@ -824,15 +824,15 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 5 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Can you put a John Boos cutting board in the dishwasher?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Can you put a John Boos cutting board in the dishwasher?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Absolutely not. Never put any wood cutting board in the dishwasher.</p>
 
                   <p><strong>Why dishwashers destroy wood boards:</strong> The combination of high heat, harsh detergents, and prolonged water exposure causes warping, cracking, and rapid deterioration. A board that should last 20+ years will be ruined in months.</p>
@@ -845,15 +845,15 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 6 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">How long does a John Boos cutting board last?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>How long does a John Boos cutting board last?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> With basic care, expect 40+ years easily. This is genuine generational equipment.</p>
 
                   <p><strong>My experience:</strong> After 14 years of daily home use, my board shows minimal wear. I expect another 20+ years easily, then I&apos;ll pass it to my children. That&apos;s not marketing hyperbole—it&apos;s the reality of quality hardwood construction.</p>
@@ -870,15 +870,15 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 7 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Is edge-grain or end-grain better for cutting boards?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Is edge-grain or end-grain better for cutting boards?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Edge-grain (like this John Boos) offers the best balance of performance, durability, and maintenance for most users.</p>
 
                   <p><strong>Edge-grain advantages:</strong> More stable construction (less warping), easier to maintain, lower cost, excellent knife-friendliness, proven durability. This is what John Boos uses and what I recommend.</p>
@@ -891,15 +891,15 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 8 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">How do you remove stains from a John Boos cutting board?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>How do you remove stains from a John Boos cutting board?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Most stains come out with coarse salt and lemon juice. For stubborn stains, light sanding works.</p>
 
                   <p><strong>Standard stain removal:</strong></p>
@@ -919,15 +919,15 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 9 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Do John Boos cutting boards come pre-oiled?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Do John Boos cutting boards come pre-oiled?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Yes, John Boos boards come with a food-safe mineral oil finish applied at the factory.</p>
 
                   <p><strong>Initial treatment needed:</strong> Despite being pre-oiled, apply additional food-grade mineral oil when you receive it. The factory oil provides basic protection during shipping, but you should season it properly before first use.</p>
@@ -947,15 +947,15 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 10 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">What&apos;s the best knife to use with a maple cutting board?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>What&apos;s the best knife to use with a maple cutting board?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Any quality chef knife works beautifully with maple. I use my Victorinox 8-inch chef knife daily with this board.</p>
 
                   <p><strong>Knife types that work great:</strong> Standard chef knives, santoku knives, paring knives, boning knives, carving knives—essentially any smooth-edge knife. The maple surface preserves edge sharpness while providing excellent cutting feel.</p>
