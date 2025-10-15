@@ -1,13 +1,13 @@
 # Google Search Console Indexing Progress
 
-**Last Updated:** 2025-10-13 (Documented removal request for gold-textiles-bar-mops)
+**Last Updated:** 2025-10-15 (Updated with current indexed pages from GSC)
 
 ---
 
-## ✅ ALL CURRENT SITE PAGES REQUESTED FOR INDEXING
+## ✅ CURRENT INDEXING STATUS: 31 PAGES INDEXED
 
-**Status:** User has requested indexing for ALL current site pages in Google Search Console.
-All pages now have "requested" status or higher (indexed). Waiting for Google to process requests.
+**Status:** 31 pages now indexed in Google Search Console (up from 20 on Oct 12).
+Significant indexing progress over the past 3 days.
 
 ---
 
@@ -20,14 +20,14 @@ All pages now have "requested" status or higher (indexed). Waiting for Google to
 | https://www.chefapprovedtools.com/contact | discovered | ✅ | Pending indexing |
 | https://www.chefapprovedtools.com/knives | discovered | ✅ | Pending indexing |
 | https://www.chefapprovedtools.com/cookware | discovered | ✅ | Pending indexing |
-| https://www.chefapprovedtools.com/appliances | discovered | ✅ | Pending indexing |
+| https://www.chefapprovedtools.com/appliances | indexed | ✅ | Indexed Oct 8, 2025 |
 | https://www.chefapprovedtools.com/methodology | discovered | ✅ | Pending indexing |
 | https://www.chefapprovedtools.com/glossary | indexed | ✅ | Indexed Oct 6, 2025 |
-| https://www.chefapprovedtools.com/newsletter | discovered | ✅ | Pending indexing |
+| https://www.chefapprovedtools.com/newsletter | indexed | ✅ | Indexed Oct 8, 2025 |
 | https://www.chefapprovedtools.com/disclosure | discovered | ✅ | Pending indexing |
 | https://www.chefapprovedtools.com/privacy-policy | discovered | ✅ | Pending indexing |
 | https://www.chefapprovedtools.com/terms | discovered | ✅ | Pending indexing |
-| https://www.chefapprovedtools.com/cookie-policy | discovered | ✅ | Pending indexing |
+| https://www.chefapprovedtools.com/cookie-policy | indexed | ✅ | Indexed Oct 9, 2025 |
 
 ---
 
@@ -57,11 +57,11 @@ All pages now have "requested" status or higher (indexed). Waiting for Google to
 | https://www.chefapprovedtools.com/reviews/victorinox-4-inch-paring-knife | indexed | ✅ Working | |
 | https://www.chefapprovedtools.com/reviews/victorinox-granton-edge-boning-knife | indexed | ✅ Working | |
 | https://www.chefapprovedtools.com/reviews/victorinox-offset-bread-knife | indexed | ✅ Working | |
-| https://www.chefapprovedtools.com/reviews/oxo-good-grips-swivel-peeler | crawled - not indexed | ✅ Working | Crawled Oct 7, 2025 |
+| https://www.chefapprovedtools.com/reviews/oxo-good-grips-swivel-peeler | indexed | ✅ Working | Indexed Oct 7, 2025 |
 | https://www.chefapprovedtools.com/reviews/oxo-good-grips-bench-scraper | indexed | ✅ Working | |
-| https://www.chefapprovedtools.com/reviews/winco-heavy-duty-tongs | crawled - not indexed | ✅ Working | Crawled Oct 7, 2025 |
+| https://www.chefapprovedtools.com/reviews/winco-heavy-duty-tongs | indexed | ✅ Working | Indexed Oct 7, 2025 |
 | https://www.chefapprovedtools.com/reviews/benriner-large-mandoline | indexed | ✅ Working | |
-| https://www.chefapprovedtools.com/reviews/gold-textiles-bar-mops | removal requested | - | **❌ REMOVAL REQUESTED - Oct 13, 2025** |
+| https://www.chefapprovedtools.com/reviews/gold-textiles-bar-mops | indexed | - | Indexed Oct 8, 2025 (removal requested Oct 13) |
 | https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board | indexed | ✅ Working | |
 | https://www.chefapprovedtools.com/reviews/kitchenaid-ksm8990wh | indexed | ✅ Working | **FEATURED REVIEW** |
 | https://www.chefapprovedtools.com/reviews/kitchenaid-kp26m1xlc-professional-600 | requested | ✅ Working | **NEW - Tier 2 (18 Years)** |
@@ -86,7 +86,7 @@ All pages now have "requested" status or higher (indexed). Waiting for Google to
 
 | URL | GSC Status | File Exists | Notes |
 |-----|------------|-------------|-------|
-| https://www.chefapprovedtools.com/blog | crawled - not indexed | ✅ | Crawled Oct 7, 2025 |
+| https://www.chefapprovedtools.com/blog | indexed | ✅ | Indexed Oct 7, 2025 |
 | https://www.chefapprovedtools.com/blog/how-to-sear-steaks-like-restaurant-chef | indexed | ✅ | |
 | https://www.chefapprovedtools.com/blog/why-professional-chefs-use-kosher-salt | NOT INDEXED | ✅ | **NEW - Oct 11, 2025** |
 | https://www.chefapprovedtools.com/blog/how-to-steel-a-knife | NOT INDEXED | ✅ | **NEW - Oct 11, 2025** |
@@ -101,10 +101,10 @@ All pages now have "requested" status or higher (indexed). Waiting for Google to
 |-----|------------|-------------|-------|
 | https://www.chefapprovedtools.com/guides | discovered | ✅ | Pending indexing |
 | https://www.chefapprovedtools.com/guides/best-chef-knives | indexed | ✅ | |
-| https://www.chefapprovedtools.com/guides/best-cookware | discovered | ✅ | Pending indexing |
-| https://www.chefapprovedtools.com/guides/kitchen-appliances | discovered | ✅ | Pending indexing |
-| https://www.chefapprovedtools.com/guides/cookware-materials | discovered | ✅ | Pending indexing |
-| https://www.chefapprovedtools.com/guides/knife-care | discovered | ✅ | Pending indexing |
+| https://www.chefapprovedtools.com/guides/best-cookware | indexed | ✅ | Indexed Oct 8, 2025 |
+| https://www.chefapprovedtools.com/guides/kitchen-appliances | indexed | ✅ | Indexed Oct 8, 2025 |
+| https://www.chefapprovedtools.com/guides/cookware-materials | indexed | ✅ | Indexed Oct 8, 2025 |
+| https://www.chefapprovedtools.com/guides/knife-care | indexed | ✅ | Indexed Oct 8, 2025 |
 
 ---
 
@@ -139,14 +139,15 @@ All pages now have "requested" status or higher (indexed). Waiting for Google to
 ## Summary
 
 - ✅ **53 URLs total** (7 new reviews + 4 new blog articles added Oct 11, 2025)
-- ✅ **20 URLs indexed** (per Google Search Console as of Oct 12, 2025)
-- 🔍 **19 URLs discovered** (found by Google, pending indexing)
-- 🕷️ **3 URLs crawled but not indexed** (winco-tongs, oxo-peeler, blog hub - Oct 7)
+- ✅ **31 URLs indexed** (per Google Search Console as of Oct 15, 2025 - up from 20 on Oct 12!)
+- 🔍 **8 URLs discovered** (found by Google, pending indexing)
 - 🆕 **8 URLs not yet discovered** (7 new reviews + 1 blog article)
 - 🔄 **1 URL requested** (french-press blog - Oct 12)
 - ⚠️ **1 URL indexed but deleted** (victorinox-fibrox-pro-knife-set - removal requested)
 - ❌ **3 URLs removal requested** (gold-textiles-bar-mops, wusthof-classic-ikon-15-piece, victorinox-fibrox-pro-knife-set)
 - ✅ **Affiliate links fixed** (10 links updated on Oct 9, 2025)
+
+**Major Progress:** 11 additional pages indexed in the last 3 days (Oct 12-15, 2025)!
 
 ---
 
