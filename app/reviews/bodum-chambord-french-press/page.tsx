@@ -1,7 +1,7 @@
 import { Tier1Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
@@ -30,6 +30,55 @@ const productData = {
     primary: "/logo.png"
   }
 };
+
+const breadcrumbs = [
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+];
+
+const faqData = [
+  {
+    question: "Is Bodum French press worth it?",
+    answer: "After 24 years of testing (6 years commercial + 18 years home), absolutely yes. The Bodum Chambord delivers exceptional coffee quality, requires zero maintenance, and has proven virtually indestructible through thousands of brewing cycles."
+  },
+  {
+    question: "How long does a Bodum French press last?",
+    answer: "With proper care, 20-30+ years easily. Mine has lasted 24 years through professional restaurant use and daily home brewing. The borosilicate glass is extremely durable and resists thermal shock and impacts."
+  },
+  {
+    question: "What size French press should I buy?",
+    answer: "The 8-cup (34 oz) Chambord is the most versatile size. Sizing guide: 3-cup (12 oz) for single person occasional use, 8-cup (34 oz) for 2-4 people most versatile, 12-cup (51 oz) for large households and entertaining."
+  },
+  {
+    question: "How do you clean a Bodum French press?",
+    answer: "Simple daily cleaning: 1) Discard grounds, 2) Rinse with hot water, 3) Wash with dish soap and soft sponge, 4) Rinse thoroughly and dry. Weekly deep clean: Disassemble plunger, soak in hot soapy water, scrub mesh filter with soft brush, rinse thoroughly, and reassemble."
+  },
+  {
+    question: "What grind size is best for French press?",
+    answer: "Coarse grind, similar to sea salt texture. This prevents grounds from passing through the mesh filter and reduces bitterness from over-extraction. Avoid fine grinds—they'll clog the filter and create muddy, bitter coffee."
+  },
+  {
+    question: "How much coffee for 8-cup Bodum French press?",
+    answer: "Use 56-68 grams of coarsely ground coffee (8-10 tablespoons). Coffee-to-water ratios: Standard 1:15 ratio (56g coffee : 840ml water), Strong 1:12 ratio (68g coffee : 816ml water), Mild 1:17 ratio (48g coffee : 816ml water)."
+  },
+  {
+    question: "Can you use Bodum French press for tea?",
+    answer: "Yes, absolutely. The mesh filter works excellently for loose leaf tea. Use 1 tsp per cup, adjust water temperature by tea type (green: 160-180°F, black: 200-212°F), steep 3-5 minutes depending on desired strength."
+  },
+  {
+    question: "Does Bodum French press break easily?",
+    answer: "No. The borosilicate glass is highly resistant to thermal shock and impacts. Mine survived 6 years of commercial restaurant use plus 18 years at home without breaking. The stainless steel frame provides additional protection. Handle with reasonable care and it will last decades."
+  },
+  {
+    question: "Why does my French press coffee taste bitter?",
+    answer: "Three common causes: Over-extraction (brewing longer than 4 minutes extracts bitter compounds), Water too hot (use 195-205°F not boiling 212°F), Wrong grind (fine grinds over-extract use coarse grind). Solution: Use coarse grind, water just off boil, brew exactly 4 minutes, then plunge and pour immediately."
+  },
+  {
+    question: "Can you microwave Bodum French press?",
+    answer: "Only the glass beaker without the plunger assembly. Remove all metal parts before microwaving. However, I don't recommend it—reheating coffee degrades flavor. Better to brew fresh or use an insulated carafe to keep coffee hot."
+  }
+];
 
 export const metadata = {
   title: 'Bodum French Press Review: 24-Year Professional Test (2025)',
@@ -321,200 +370,6 @@ export default function BodumChambordFrenchPressReview() {
         After 24 years of daily use, my cost per cup is essentially zero. The initial investment has
         paid for itself thousands of times over. See our <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold' }}>professional kitchen starter kit</a> for equipment combinations that deliver similar long-term value.
       </p>
-
-      {/* FAQ SECTION WITH SCHEMA */}
-      <h2>Frequently Asked Questions About Bodum French Press</h2>
-
-      <div itemScope itemType="https://schema.org/FAQPage">
-
-        {/* Question 1 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">Is Bodum French press worth it?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> After 24 years of testing (6 years commercial + 18 years home),
-              absolutely yes. The Bodum Chambord delivers exceptional coffee quality, requires zero maintenance,
-              and has proven virtually indestructible through thousands of brewing cycles.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Question 2 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">How long does a Bodum French press last?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> With proper care, 20-30+ years easily. Mine has lasted 24 years
-              through professional restaurant use and daily home brewing. The borosilicate glass is extremely
-              durable and resists thermal shock and impacts.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Question 3 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">What size French press should I buy?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> The 8-cup (34 oz) Chambord is the most versatile size. Sizing guide:</p>
-              <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                <li><strong>3-cup (12 oz):</strong> Single person, occasional use</li>
-                <li><strong>8-cup (34 oz):</strong> 2-4 people, most versatile</li>
-                <li><strong>12-cup (51 oz):</strong> Large households, entertaining</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Question 4 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">How do you clean a Bodum French press?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> Simple daily cleaning:</p>
-              <ol style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                <li>Discard grounds</li>
-                <li>Rinse with hot water</li>
-                <li>Wash with dish soap and soft sponge</li>
-                <li>Rinse thoroughly and dry</li>
-              </ol>
-              <p>Weekly deep clean: Disassemble plunger, soak in hot soapy water, scrub mesh filter with soft brush, rinse thoroughly, and reassemble.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Question 5 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">What grind size is best for French press?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> Coarse grind, similar to sea salt texture. This prevents grounds
-              from passing through the mesh filter and reduces bitterness from over-extraction. Avoid fine
-              grinds—they&apos;ll clog the filter and create muddy, bitter coffee.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Question 6 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">How much coffee for 8-cup Bodum French press?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> Use 56-68 grams of coarsely ground coffee (8-10 tablespoons).</p>
-              <p>Coffee-to-water ratios:</p>
-              <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                <li><strong>Standard:</strong> 1:15 ratio (56g coffee : 840ml water)</li>
-                <li><strong>Strong:</strong> 1:12 ratio (68g coffee : 816ml water)</li>
-                <li><strong>Mild:</strong> 1:17 ratio (48g coffee : 816ml water)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Question 7 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">Can you use Bodum French press for tea?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> Yes, absolutely. The mesh filter works excellently for loose leaf
-              tea. Use 1 tsp per cup, adjust water temperature by tea type (green: 160-180°F, black: 200-212°F),
-              steep 3-5 minutes depending on desired strength.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Question 8 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">Does Bodum French press break easily?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> No. The borosilicate glass is highly resistant to thermal shock
-              and impacts. Mine survived 6 years of commercial restaurant use plus 18 years at home without
-              breaking. The stainless steel frame provides additional protection. Handle with reasonable care
-              and it will last decades.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Question 9 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">Why does my French press coffee taste bitter?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> Three common causes:</p>
-              <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                <li><strong>Over-extraction:</strong> Brewing longer than 4 minutes extracts bitter compounds</li>
-                <li><strong>Water too hot:</strong> Use 195-205°F, not boiling (212°F)</li>
-                <li><strong>Wrong grind:</strong> Fine grinds over-extract; use coarse grind</li>
-              </ul>
-              <p>Solution: Use coarse grind, water just off boil, brew exactly 4 minutes, then plunge and pour immediately.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Question 10 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
-          <h3 itemProp="name">Can you microwave Bodum French press?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
-              <p><strong>Answer:</strong> Only the glass beaker without the plunger assembly. Remove all metal
-              parts before microwaving. However, I don&apos;t recommend it—reheating coffee degrades flavor.
-              Better to brew fresh or use an insulated carafe to keep coffee hot.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
 
       {/* EMAIL CAPTURE SECTION */}
       <div style={{
@@ -830,6 +685,26 @@ export default function BodumChambordFrenchPressReview() {
           </a>
         </div>
       </div>
+
+      {/* Structured Data - JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateProductReviewSchema(productData))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema(faqData))
+        }}
+      />
 
     </article>
   );
