@@ -4,7 +4,7 @@ import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 
 
@@ -30,6 +30,56 @@ const productData = {
     primary: "/logo.png"
   }
 };
+
+const breadcrumbs = [
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+  { name: "Knives", url: "https://www.chefapprovedtools.com/knives" },
+  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+];
+
+const faqData = [
+  {
+    question: "Is the offset design really worth it compared to a regular bread knife?",
+    answer: "After 23+ years using both styles professionally, yes - the offset design makes a significant difference in comfort and safety. The 1.5-inch handle elevation keeps your knuckles completely off the cutting board during full slicing strokes, which reduces hand fatigue during repetitive tasks like prep work or batch baking. This matters most when you're slicing through tall crusty loaves or working on lower cutting surfaces. Regular bread knives force you to either stop mid-slice or risk scraping your knuckles. The offset design eliminates this problem entirely."
+  },
+  {
+    question: "Victorinox offset bread knife vs regular serrated knife - what's the difference?",
+    answer: "The main differences are ergonomics and blade geometry. The offset handle sits 1.5 inches above the blade (vs. inline on regular knives), and the Victorinox uses a wavy serration pattern rather than pointed teeth. The wavy serrations grip without tearing, making them better for delicate items like tomatoes and cakes. The offset handle provides better clearance and reduces wrist strain during extended use. For professional or frequent home use, these differences add up to noticeably better performance."
+  },
+  {
+    question: "How do you clean and maintain an offset bread knife?",
+    answer: "Hand wash immediately after use with warm soapy water, dry completely, and store in a knife block or on a magnetic strip. Never put serrated knives in the dishwasher - the harsh detergents and high heat can damage the edge and loosen the handle. The serrated edge never needs sharpening. If you notice any buildup in the serrations, use a soft brush during washing. Occasionally check that the handle is secure, though this is rarely an issue with Victorinox knives. With proper care, these knives last decades."
+  },
+  {
+    question: "What size bread knife should I buy - 8-inch, 10-inch, or 12-inch?",
+    answer: "For most home kitchens, a 10-inch blade is the sweet spot. It handles standard bread loaves, large crusty artisan breads, and wide layer cakes without being unwieldy for storage or smaller items. Choose 8-inch only if you have very limited storage space and primarily cut smaller items. The 12-inch is mainly for commercial bakeries handling oversized specialty breads. The 10-inch Victorinox offset handles 95% of home and restaurant tasks perfectly."
+  },
+  {
+    question: "Can you sharpen a serrated bread knife?",
+    answer: "Technically yes, but it requires specialized tools and expertise - and with quality serrated knives like Victorinox, it's unnecessary. The serrations are designed to stay effective for decades without sharpening. If a serrated knife seems dull, it's usually because of a damaged tip or misuse (cutting frozen items, hard surfaces, etc.) rather than actual edge wear. The teeth continue gripping and cutting long after a straight edge would need sharpening. Don't attempt to sharpen serrations with regular sharpening tools."
+  },
+  {
+    question: "What else can you use a bread knife for besides bread?",
+    answer: "Serrated knives excel at anything with a tough exterior and delicate interior. In my professional kitchen, I use this knife daily for: Tomatoes - clean slices without crushing; Layer cakes and delicate pastries; Citrus fruits (grapefruits, oranges for segments); Pineapples and melons with tough skins; Focaccia, flatbreads, and pizza; Sandwiches (cutting through multiple layers cleanly). The wavy serrations grip without tearing, making them ideal for items where a straight edge would slip or crush."
+  },
+  {
+    question: "How long does a Victorinox bread knife last?",
+    answer: "With proper care (hand washing, proper storage), a Victorinox serrated knife should last 20-30+ years of regular home use, or 10-15 years in professional high-volume environments. I've used mine for 23+ years and it's still performing like new. The serrated edge doesn't dull like straight edges, so performance remains consistent for decades. The main wear points are the handle (which can loosen with dishwasher abuse) and the tip (which can break if used improperly). Avoid these issues and the knife is essentially buy-it-for-life quality."
+  },
+  {
+    question: "Is Victorinox good quality for professional use?",
+    answer: "Absolutely. Victorinox is Swiss-made and used worldwide in professional restaurants, bakeries, and culinary schools. The knives are certified by NSF International for commercial foodservice, meaning they meet strict sanitation and durability standards. Victorinox offers professional-grade performance at accessible prices compared to luxury knife brands. The Fibrox handle is preferred in many professional kitchens over wood or fancy materials because it provides a secure grip when wet and stands up to constant commercial use. This is why you'll find Victorinox in most culinary school knife kits."
+  },
+  {
+    question: "Is the Victorinox bread knife dishwasher safe?",
+    answer: "While Victorinox knives can technically survive dishwasher cycles, I strongly recommend against it. The harsh detergents, high heat, and contact with other items can damage the edge, loosen the handle rivets, and cause premature wear. Hand washing takes 30 seconds and extends the knife's lifespan from years to decades. After 23+ years of professional use, my offset bread knife still looks and performs like new because I've always hand washed it immediately after use. This small habit makes a huge difference in longevity."
+  },
+  {
+    question: "Is this knife better for crusty bread or soft bread?",
+    answer: "The serrated design works equally well for both. The wavy serrations grip crusty exteriors to start the cut cleanly, then glide through soft interiors without crushing. This versatility is why professional bakeries use this style. For crusty artisan loaves, use gentle sawing motions and let the serrations do the work - no need to press down hard. For soft sandwich bread, the same serrations prevent compression that would occur with a straight edge. The 10-inch blade length means you can slice through most loaves in one smooth stroke, which minimizes crumb damage on both crusty and soft varieties."
+  }
+];
 
 export const metadata: Metadata = {
   alternates: {
@@ -416,169 +466,6 @@ export default function VictorinoxOffsetBreadKnifeReview() {
         </section>
 
         {/* FAQ Section with Schema Markup */}
-        <h2>Frequently Asked Questions About the Victorinox Offset Bread Knife</h2>
-
-        <div itemScope itemType="https://schema.org/FAQPage">
-          
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">Is the offset design really worth it compared to a regular bread knife?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> After 23+ years using both styles professionally, yes - the offset design makes a significant difference in comfort and safety. The 1.5-inch handle elevation keeps your knuckles completely off the cutting board during full slicing strokes, which reduces hand fatigue during repetitive tasks like prep work or batch baking.</p>
-                <p>This matters most when you&apos;re slicing through tall crusty loaves or working on lower cutting surfaces. Regular bread knives force you to either stop mid-slice or risk scraping your knuckles. The offset design eliminates this problem entirely.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">Victorinox offset bread knife vs regular serrated knife - what&apos;s the difference?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> The main differences are ergonomics and blade geometry. The offset handle sits 1.5 inches above the blade (vs. inline on regular knives), and the Victorinox uses a wavy serration pattern rather than pointed teeth.</p>
-                <p>The wavy serrations grip without tearing, making them better for delicate items like tomatoes and cakes. The offset handle provides better clearance and reduces wrist strain during extended use. For professional or frequent home use, these differences add up to noticeably better performance.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">How do you clean and maintain an offset bread knife?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> Hand wash immediately after use with warm soapy water, dry completely, and store in a knife block or on a magnetic strip. Never put serrated knives in the dishwasher - the harsh detergents and high heat can damage the edge and loosen the handle.</p>
-                <p>The serrated edge never needs sharpening. If you notice any buildup in the serrations, use a soft brush during washing. Occasionally check that the handle is secure, though this is rarely an issue with Victorinox knives. With proper care, these knives last decades.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">What size bread knife should I buy - 8-inch, 10-inch, or 12-inch?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> For most home kitchens, a 10-inch blade is the sweet spot. It handles standard bread loaves, large crusty artisan breads, and wide layer cakes without being unwieldy for storage or smaller items.</p>
-                <p>Choose 8-inch only if you have very limited storage space and primarily cut smaller items. The 12-inch is mainly for commercial bakeries handling oversized specialty breads. The 10-inch Victorinox offset handles 95% of home and restaurant tasks perfectly.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">Can you sharpen a serrated bread knife?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> Technically yes, but it requires specialized tools and expertise - and with quality serrated knives like Victorinox, it&apos;s unnecessary. The serrations are designed to stay effective for decades without sharpening.</p>
-                <p>If a serrated knife seems dull, it&apos;s usually because of a damaged tip or misuse (cutting frozen items, hard surfaces, etc.) rather than actual edge wear. The teeth continue gripping and cutting long after a straight edge would need sharpening. Don&apos;t attempt to sharpen serrations with regular sharpening tools.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">What else can you use a bread knife for besides bread?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> Serrated knives excel at anything with a tough exterior and delicate interior. In my professional kitchen, I use this knife daily for:</p>
-                <ul>
-                  <li>Tomatoes - clean slices without crushing</li>
-                  <li>Layer cakes and delicate pastries</li>
-                  <li>Citrus fruits (grapefruits, oranges for segments)</li>
-                  <li>Pineapples and melons with tough skins</li>
-                  <li>Focaccia, flatbreads, and pizza</li>
-                  <li>Sandwiches (cutting through multiple layers cleanly)</li>
-                </ul>
-                <p>The wavy serrations grip without tearing, making them ideal for items where a straight edge would slip or crush.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">How long does a Victorinox bread knife last?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> With proper care (hand washing, proper storage), a Victorinox serrated knife should last 20-30+ years of regular home use, or 10-15 years in professional high-volume environments. I&apos;ve used mine for 23+ years and it&apos;s still performing like new.</p>
-                <p>The serrated edge doesn&apos;t dull like straight edges, so performance remains consistent for decades. The main wear points are the handle (which can loosen with dishwasher abuse) and the tip (which can break if used improperly). Avoid these issues and the knife is essentially buy-it-for-life quality.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">Is Victorinox good quality for professional use?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> Absolutely. Victorinox is Swiss-made and used worldwide in professional restaurants, bakeries, and culinary schools. The knives are certified by NSF International for commercial foodservice, meaning they meet strict sanitation and durability standards.</p>
-                <p>Victorinox offers professional-grade performance at accessible prices compared to luxury knife brands. The Fibrox handle is preferred in many professional kitchens over wood or fancy materials because it provides a secure grip when wet and stands up to constant commercial use. This is why you&apos;ll find Victorinox in most culinary school knife kits.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">Is the Victorinox bread knife dishwasher safe?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> While Victorinox knives can technically survive dishwasher cycles, I strongly recommend against it. The harsh detergents, high heat, and contact with other items can damage the edge, loosen the handle rivets, and cause premature wear.</p>
-                <p>Hand washing takes 30 seconds and extends the knife&apos;s lifespan from years to decades. After 23+ years of professional use, my offset bread knife still looks and performs like new because I&apos;ve always hand washed it immediately after use. This small habit makes a huge difference in longevity.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">Is this knife better for crusty bread or soft bread?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> The serrated design works equally well for both. The wavy serrations grip crusty exteriors to start the cut cleanly, then glide through soft interiors without crushing. This versatility is why professional bakeries use this style.</p>
-                <p>For crusty artisan loaves, use gentle sawing motions and let the serrations do the work - no need to press down hard. For soft sandwich bread, the same serrations prevent compression that would occur with a straight edge. The 10-inch blade length means you can slice through most loaves in one smooth stroke, which minimizes crumb damage on both crusty and soft varieties.</p>
-              </div>
-            </div>
-          </div>
-          
-        </div>
 
         {/* Where to Buy Section */}
         <h2>Where to Buy</h2>
@@ -950,6 +837,26 @@ export default function VictorinoxOffsetBreadKnifeReview() {
 
         {/* FTC Disclosure */}
         <FTCDisclosure />
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateProductReviewSchema(productData))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
+          }}
+        />
       </article>
     </div>
   )

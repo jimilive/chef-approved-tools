@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AuthorBio from '@/components/AuthorBio'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
@@ -80,6 +80,49 @@ const breadcrumbs = [
   { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
   { name: "Knife Sets", url: "https://www.chefapprovedtools.com/knives" },
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+]
+
+const faqData = [
+  {
+    question: "Is the WÜSTHOF Classic IKON worth the investment?",
+    answer: "After 2+ years of professional testing, absolutely yes for serious cooks and professionals. The ergonomic IKON handles significantly reduce hand fatigue during extended prep work, which alone justifies the premium over standard handles. The set saves hundreds compared to buying individual knives, and the German-forged construction means these knives will last decades with proper care. The 8\" chef's knife, santoku, bread knife, and paring knives alone justify the investment."
+  },
+  {
+    question: "WÜSTHOF Classic IKON vs Classic series: Which should I buy?",
+    answer: "The IKON features ergonomic curved handles that provide superior comfort during extended use, while the Classic has traditional straight triple-rivet handles. Both use identical X50CrMoV15 steel and PEtec edge technology. Choose IKON if you cook frequently or professionally—the ergonomic benefit becomes very noticeable after 30+ minutes of continuous knife work. Choose Classic if you prefer traditional aesthetics and don't mind standard handle comfort."
+  },
+  {
+    question: "How often do WÜSTHOF knives need sharpening?",
+    answer: "With regular honing using the included steel (weekly for home use, daily for professional), full sharpening is needed every 6-12 months for home cooks or every 2-3 months under heavy professional use. The German X50CrMoV15 steel holds an edge very well—noticeably better than budget knives. When the honing steel can no longer restore sharpness, use a whetstone for proper sharpening. Never use pull-through sharpeners as they damage the precision edge."
+  },
+  {
+    question: "Can WÜSTHOF knives go in the dishwasher?",
+    answer: "No, hand-washing is required for all WÜSTHOF knives. Dishwashers damage knife edges through contact with other utensils, can loosen rivets over time, and harsh detergents degrade handle materials. Hand wash with warm soapy water immediately after use, dry completely, and store in the block. This takes 30 seconds per knife and ensures decades of performance."
+  },
+  {
+    question: "What size is the knife block and how much counter space does it need?",
+    answer: "The hardwood block measures approximately 13\" × 9\" × 7\" (varies slightly by wood type—acacia or walnut). This is substantial and requires permanent counter space. If counter space is limited, consider wall-mounted magnetic strips or individual knife storage, though you'll lose the convenience and protection the block provides. The block keeps knives organized, protected, and immediately accessible during cooking."
+  },
+  {
+    question: "What does 58 HRC hardness mean for knife performance?",
+    answer: "58 HRC (Rockwell Hardness Scale) represents the sweet spot for Western-style knives. It's hard enough to hold an edge significantly longer than softer steels (typically 52-55 HRC) but soft enough to be relatively easy to sharpen and resistant to chipping. Japanese knives often use 60-62 HRC which holds edges even longer but chips more easily and requires more skill to sharpen. The 58 HRC of WÜSTHOF strikes an excellent balance for both professional and home use."
+  },
+  {
+    question: "Can I buy individual WÜSTHOF IKON knives if one gets damaged?",
+    answer: "Yes, all WÜSTHOF IKON knives are available for individual purchase. This provides flexibility if you damage a specific knife or want to add pieces not included in the set. Prices for individual knives are higher than the per-knife cost in the set, which is why the 16-piece set offers such good value if you need multiple knives. Individual purchases make sense when adding specialty knives like fillet or boning knives to complement your set."
+  },
+  {
+    question: "Should I buy the knife set or individual knives?",
+    answer: "The set provides better value if you need multiple quality knives and have counter space for the block. Based on professional testing, the essential knives that see daily use are the 8\" chef's knife, santoku, bread knife, and paring knives. The set saves hundreds compared to buying these individually. However, if you only need 2-3 specific knives, limited counter space is an issue, or you want to invest gradually over time, individual purchases may be more practical. Some pieces like the slicer knife rarely get used in most kitchens."
+  },
+  {
+    question: "What does full tang construction mean and why does it matter?",
+    answer: "Full tang means the steel blade extends through the entire length of the handle—you can see it as the metal visible between the handle scales held by rivets. This provides three major benefits: superior balance (the weight is distributed throughout the entire knife), exceptional durability (the blade cannot separate from the handle), and longevity (properly maintained full-tang knives last decades or even generations). Partial-tang or rat-tail construction, found in cheaper knives, creates weak points where the blade can eventually separate from the handle."
+  },
+  {
+    question: "How do I properly maintain WÜSTHOF knives for maximum longevity?",
+    answer: "Follow these professional maintenance practices: (1) Hand wash immediately after use with warm soapy water and dry completely—never leave knives wet or in the sink. (2) Hone before or after each use with the included steel to realign the edge. (3) Use proper cutting boards—wood or plastic only, never glass, stone, or ceramic which destroy edges. (4) Store in the block rather than loose in drawers where blades contact other utensils. (5) Professional sharpening or whetstone sharpening every 6-12 months for home use. Following these practices, WÜSTHOF knives easily last 20+ years of regular use."
+  }
 ]
 
 export const metadata = {
@@ -425,152 +468,6 @@ export default function WusthofClassicIkonReview() {
           </div>
         </section>
 
-        {/* FAQ SECTION WITH SCHEMA MARKUP */}
-        <h2>Frequently Asked Questions About WÜSTHOF Classic IKON</h2>
-
-        <div itemScope itemType="https://schema.org/FAQPage">
-          
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">Is the WÜSTHOF Classic IKON worth the investment?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> After 2+ years of professional testing, absolutely yes for serious cooks and professionals. The ergonomic IKON handles significantly reduce hand fatigue during extended prep work, which alone justifies the premium over standard handles. The set saves hundreds compared to buying individual knives, and the German-forged construction means these knives will last decades with proper care. The 8&quot; chef&apos;s knife, santoku, bread knife, and paring knives alone justify the investment.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">WÜSTHOF Classic IKON vs Classic series: Which should I buy?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> The IKON features ergonomic curved handles that provide superior comfort during extended use, while the Classic has traditional straight triple-rivet handles. Both use identical X50CrMoV15 steel and PEtec edge technology. Choose IKON if you cook frequently or professionally—the ergonomic benefit becomes very noticeable after 30+ minutes of continuous knife work. Choose Classic if you prefer traditional aesthetics and don&apos;t mind standard handle comfort.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">How often do WÜSTHOF knives need sharpening?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> With regular honing using the included steel (weekly for home use, daily for professional), full sharpening is needed every 6-12 months for home cooks or every 2-3 months under heavy professional use. The German X50CrMoV15 steel holds an edge very well—noticeably better than budget knives. When the honing steel can no longer restore sharpness, use a whetstone for proper sharpening. Never use pull-through sharpeners as they damage the precision edge.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">Can WÜSTHOF knives go in the dishwasher?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> No, hand-washing is required for all WÜSTHOF knives. Dishwashers damage knife edges through contact with other utensils, can loosen rivets over time, and harsh detergents degrade handle materials. Hand wash with warm soapy water immediately after use, dry completely, and store in the block. This takes 30 seconds per knife and ensures decades of performance.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">What size is the knife block and how much counter space does it need?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> The hardwood block measures approximately 13&quot; × 9&quot; × 7&quot; (varies slightly by wood type—acacia or walnut). This is substantial and requires permanent counter space. If counter space is limited, consider wall-mounted magnetic strips or individual knife storage, though you&apos;ll lose the convenience and protection the block provides. The block keeps knives organized, protected, and immediately accessible during cooking.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">What does 58 HRC hardness mean for knife performance?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> 58 HRC (Rockwell Hardness Scale) represents the sweet spot for Western-style knives. It&apos;s hard enough to hold an edge significantly longer than softer steels (typically 52-55 HRC) but soft enough to be relatively easy to sharpen and resistant to chipping. Japanese knives often use 60-62 HRC which holds edges even longer but chips more easily and requires more skill to sharpen. The 58 HRC of WÜSTHOF strikes an excellent balance for both professional and home use.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">Can I buy individual WÜSTHOF IKON knives if one gets damaged?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> Yes, all WÜSTHOF IKON knives are available for individual purchase. This provides flexibility if you damage a specific knife or want to add pieces not included in the set. Prices for individual knives are higher than the per-knife cost in the set, which is why the 16-piece set offers such good value if you need multiple knives. Individual purchases make sense when adding specialty knives like fillet or boning knives to complement your set.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">Should I buy the knife set or individual knives?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> The set provides better value if you need multiple quality knives and have counter space for the block. Based on professional testing, the essential knives that see daily use are the 8&quot; chef&apos;s knife, santoku, bread knife, and paring knives. The set saves hundreds compared to buying these individually. However, if you only need 2-3 specific knives, limited counter space is an issue, or you want to invest gradually over time, individual purchases may be more practical. Some pieces like the slicer knife rarely get used in most kitchens.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">What does full tang construction mean and why does it matter?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> Full tang means the steel blade extends through the entire length of the handle—you can see it as the metal visible between the handle scales held by rivets. This provides three major benefits: superior balance (the weight is distributed throughout the entire knife), exceptional durability (the blade cannot separate from the handle), and longevity (properly maintained full-tang knives last decades or even generations). Partial-tang or rat-tail construction, found in cheaper knives, creates weak points where the blade can eventually separate from the handle.</p>
-              </div>
-            </div>
-          </div>
-
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name">How do I properly maintain WÜSTHOF knives for maximum longevity?</h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p><strong>Answer:</strong> Follow these professional maintenance practices: (1) Hand wash immediately after use with warm soapy water and dry completely—never leave knives wet or in the sink. (2) Hone before or after each use with the included steel to realign the edge. (3) Use proper cutting boards—wood or plastic only, never glass, stone, or ceramic which destroy edges. (4) Store in the block rather than loose in drawers where blades contact other utensils. (5) Professional sharpening or whetstone sharpening every 6-12 months for home use. Following these practices, WÜSTHOF knives easily last 20+ years of regular use.</p>
-              </div>
-            </div>
-          </div>
-          
-        </div>
 
         {/* WHERE TO BUY SECTION */}
         <h2>Where to Buy WÜSTHOF Classic IKON 16-Piece Set</h2>
@@ -978,6 +875,12 @@ export default function WusthofClassicIkonReview() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
           }}
         />
       </article>
