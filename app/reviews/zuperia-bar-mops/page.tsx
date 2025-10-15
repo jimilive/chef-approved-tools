@@ -31,6 +31,12 @@ const productData = {
   }
 };
 
+const breadcrumbs = [
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+];
+
 const faqData = [
   {
     question: "Are ZUPERIA bar mops machine washable?",
@@ -808,6 +814,18 @@ export default function ZuperiaBarMopsReview() {
       </div>
 
       {/* Structured Data Schemas */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateProductReviewSchema(productData))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
