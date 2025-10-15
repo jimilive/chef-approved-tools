@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Star, CheckCircle, XCircle } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButton from '@/components/AffiliateButton'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
@@ -52,6 +52,49 @@ const breadcrumbs = [
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+]
+
+const faqData = [
+  {
+    question: "What's the difference between KitchenAid Professional 600 and Artisan?",
+    answer: "The Professional 600 offers significant advantages over the Artisan Series: More power: 575 watts vs 325 watts (76% more powerful); Larger capacity: 6-quart vs 5-quart bowl; Bowl-lift design: More stable for heavy doughs vs tilt-head; Better for dough: Handles thick, heavy batches without strain. The Artisan is great for lighter tasks and occasional baking. The Professional 600 is for serious bakers who make pizza dough, bread, or large batches regularly."
+  },
+  {
+    question: "Is the KitchenAid Professional 600 worth the price?",
+    answer: "After 18 years of daily use, absolutely yes—if you bake regularly. This isn't just a mixer; it's a kitchen system that expands with attachments. Value calculation: Over 18 years of use, the cost-per-year is minimal. Factor in zero repairs, consistent performance, and the attachment ecosystem, and this is one of the smartest kitchen investments you can make. Skip it if: You only bake occasionally or prefer lightweight, portable equipment. For serious bakers, this is buy-it-for-life quality."
+  },
+  {
+    question: "Can the Professional 600 handle pizza dough?",
+    answer: "This is where the Professional 600 truly shines. After 18 years of making pizza dough weekly, I can confirm it handles thick, high-hydration dough effortlessly. What makes it great for pizza: 575-watt motor provides ample power for tough dough; Spiral dough hook develops gluten perfectly; 6-quart capacity handles three 16-inch pizzas worth of dough; Bowl-lift stability prevents wobbling with heavy loads. If pizza dough is your primary use case, this is the mixer to get."
+  },
+  {
+    question: "What attachments work with the Professional 600?",
+    answer: "The Professional 600 is compatible with all KitchenAid hub-powered attachments—over 15 options that transform this into a complete kitchen system: Pasta making: Roller, fettuccine cutter, spaghetti cutter, ravioli maker; Meat processing: Grinder, sausage stuffer; Food prep: Food processor, spiralizer, vegetable sheet cutter; Specialty: Ice cream maker, grain mill, juicer. This attachment ecosystem is a major value proposition—one power hub, endless possibilities."
+  },
+  {
+    question: "How long does a KitchenAid Professional 600 last?",
+    answer: "Based on my 18 years of continuous use with zero motor issues, these mixers are built for decades of service. Proper care extends longevity significantly. Expected lifespan: 20-30+ years with regular home use. Some owners report 40+ years with their KitchenAid mixers. This is genuine buy-it-for-life equipment. Maintenance requirements: Minimal. Wipe down after use, occasionally grease the beater shaft, store properly. That's it."
+  },
+  {
+    question: "Is bowl-lift better than tilt-head?",
+    answer: "For heavy-duty use and large batches, yes—bowl-lift is superior. The Professional 600's bowl-lift design provides: Superior stability: No wobbling with heavy dough loads; Better leverage: Motor doesn't have to fight gravity; Larger capacity: Accommodates 6-quart bowl comfortably; Professional design: Same system used in commercial kitchens. Tilt-head advantages: Easier access to bowl, more compact, simpler attachment changes. Choose tilt-head for lighter use, bowl-lift for serious baking."
+  },
+  {
+    question: "Does the Professional 600 overheat?",
+    answer: "In 18 years of use, including extended kneading sessions for pizza and bread dough, I've never experienced overheating. The 575-watt motor handles heavy loads with plenty of headroom. Why it stays cool: The motor is properly sized for the machine's capacity. Unlike underpowered mixers that strain with heavy dough, the Professional 600 operates comfortably within its capabilities. Thermal protection: KitchenAid mixers have built-in thermal sensors that shut down the motor if it does overheat (extremely rare). Let it cool 30 minutes and it resets."
+  },
+  {
+    question: "What's the warranty on the Professional 600?",
+    answer: "KitchenAid covers the Professional 600 with a one-year limited warranty. However, given the build quality, most owners never need warranty service. My experience: 18 years with zero warranty claims. The mixer has operated flawlessly since day one. This suggests KitchenAid's confidence in their product quality. Extended protection: Some retailers offer extended warranties, but based on reliability track record, the standard warranty is sufficient."
+  },
+  {
+    question: "Can I make bread with the Professional 600?",
+    answer: "Absolutely—the Professional 600 excels at bread making. The spiral dough hook develops gluten structure perfectly, and the powerful motor handles even the stiffest doughs. Bread capacity: Comfortably handles up to 14 cups of flour (enough for 3-4 loaves). The 6-quart bowl provides ample room for dough development. Types of bread: Everything from soft sandwich bread to dense whole grain loaves. The motor power and kneading action work across all bread styles."
+  },
+  {
+    question: "Should I buy the Professional 600 or save up for the Commercial model?",
+    answer: "For home use, the Professional 600 is the better choice. The Commercial model (like the KSM8990WH I tested in restaurant operations) is designed for daily 8-hour professional use—overkill for home kitchens. Professional 600 advantages for home: More than enough power for home baking needs; Better value for home use frequency; Same attachment compatibility; Proven 20-30 year home lifespan. Save the premium for the Commercial model if you're running a bakery or catering business. For home use, the Professional 600 is the sweet spot."
+  }
 ]
 
 export const metadata = {
@@ -861,18 +904,18 @@ export default function KitchenAidProfessional600ReviewPage() {
         <section className="mb-8" id="faq">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
 
-          <div itemScope itemType="https://schema.org/FAQPage">
+          <div>
 
             {/* Question 1 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">What&apos;s the difference between KitchenAid Professional 600 and Artisan?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>What&apos;s the difference between KitchenAid Professional 600 and Artisan?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> The Professional 600 offers significant advantages over
                   the Artisan Series:</p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
@@ -888,15 +931,15 @@ export default function KitchenAidProfessional600ReviewPage() {
             </div>
 
             {/* Question 2 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Is the KitchenAid Professional 600 worth the price?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Is the KitchenAid Professional 600 worth the price?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> After 18 years of daily use, absolutely yes—if you bake
                   regularly. This isn&apos;t just a mixer; it&apos;s a kitchen system that expands
                   with attachments.</p>
@@ -910,15 +953,15 @@ export default function KitchenAidProfessional600ReviewPage() {
             </div>
 
             {/* Question 3 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Can the Professional 600 handle pizza dough?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Can the Professional 600 handle pizza dough?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> This is where the Professional 600 truly shines. After 18
                   years of making pizza dough weekly, I can confirm it handles thick, high-hydration
                   dough effortlessly.</p>
@@ -935,15 +978,15 @@ export default function KitchenAidProfessional600ReviewPage() {
             </div>
 
             {/* Question 4 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">What attachments work with the Professional 600?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>What attachments work with the Professional 600?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> The Professional 600 is compatible with all KitchenAid
                   hub-powered attachments—over 15 options that transform this into a complete
                   kitchen system:</p>
@@ -961,15 +1004,15 @@ export default function KitchenAidProfessional600ReviewPage() {
             </div>
 
             {/* Question 5 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">How long does a KitchenAid Professional 600 last?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>How long does a KitchenAid Professional 600 last?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Based on my 18 years of continuous use with zero motor
                   issues, these mixers are built for decades of service. Proper care extends longevity
                   significantly.</p>
@@ -982,15 +1025,15 @@ export default function KitchenAidProfessional600ReviewPage() {
             </div>
 
             {/* Question 6 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Is bowl-lift better than tilt-head?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Is bowl-lift better than tilt-head?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> For heavy-duty use and large batches, yes—bowl-lift is
                   superior. The Professional 600&apos;s bowl-lift design provides:</p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
@@ -1007,15 +1050,15 @@ export default function KitchenAidProfessional600ReviewPage() {
             </div>
 
             {/* Question 7 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Does the Professional 600 overheat?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Does the Professional 600 overheat?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> In 18 years of use, including extended kneading sessions
                   for pizza and bread dough, I&apos;ve never experienced overheating. The 575-watt motor
                   handles heavy loads with plenty of headroom.</p>
@@ -1030,15 +1073,15 @@ export default function KitchenAidProfessional600ReviewPage() {
             </div>
 
             {/* Question 8 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">What&apos;s the warranty on the Professional 600?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>What&apos;s the warranty on the Professional 600?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> KitchenAid covers the Professional 600 with a one-year
                   limited warranty. However, given the build quality, most owners never need warranty
                   service.</p>
@@ -1052,15 +1095,15 @@ export default function KitchenAidProfessional600ReviewPage() {
             </div>
 
             {/* Question 9 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Can I make bread with the Professional 600?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Can I make bread with the Professional 600?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Absolutely—the Professional 600 excels at bread making.
                   The spiral dough hook develops gluten structure perfectly, and the powerful motor
                   handles even the stiffest doughs.</p>
@@ -1073,15 +1116,15 @@ export default function KitchenAidProfessional600ReviewPage() {
             </div>
 
             {/* Question 10 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Should I buy the Professional 600 or save up for the Commercial model?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Should I buy the Professional 600 or save up for the Commercial model?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> For home use, the Professional 600 is the better choice.
                   The Commercial model (like the KSM8990WH I tested in restaurant operations) is designed
                   for daily 8-hour professional use—overkill for home kitchens.</p>
@@ -1390,6 +1433,12 @@ export default function KitchenAidProfessional600ReviewPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
           }}
         />
       </article>

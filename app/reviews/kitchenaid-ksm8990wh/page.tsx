@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButton from '@/components/AffiliateButton'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
@@ -56,6 +56,45 @@ const breadcrumbs = [
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+]
+
+const faqData = [
+  {
+    question: "Can this replace a Hobart in a commercial bakery?",
+    answer: "For bakeries producing under 100 loaves daily with mixing under 4 hours, yes. The KSM8990WH delivers 85-90% of the Hobart's performance at a fraction of the cost. However, if you're running 8+ hour days with continuous mixing, invest in the Hobart N50—it's built for that volume."
+  },
+  {
+    question: "Will this work on a standard kitchen outlet?",
+    answer: "Usually yes, but verify your circuit isn't shared with high-draw appliances. The mixer draws 500W, which is fine on a standard 15-amp circuit (1800W capacity). However, if you're also running a coffee maker (1000W), you'll exceed capacity and trip the breaker. Electrician installation of a dedicated 20-amp circuit typically runs $150-300 if needed."
+  },
+  {
+    question: "How does NSF certification matter?",
+    answer: "Required by many health departments for commercial food prep. Certifies materials meet sanitation standards."
+  },
+  {
+    question: "What's the difference from the KSM7 residential model?",
+    answer: "1.3 HP motor (vs 0.8 HP), 2-year warranty, NSF certification, stainless dishwasher-safe attachments, heavier construction."
+  },
+  {
+    question: "How long will this last in a commercial environment?",
+    answer: "Based on my testing and industry experience, expect 8-10 years of 2-4 hours daily use before major service needs."
+  },
+  {
+    question: "What's the noise level compared to residential models?",
+    answer: "Slightly louder due to the powerful motor, but quieter than commercial Hobart mixers. Expect 70-75 dB at medium speeds—comparable to a dishwasher."
+  },
+  {
+    question: "Can I use my existing KitchenAid attachments?",
+    answer: "Yes, all standard KitchenAid hub attachments fit. However, the commercial unit includes upgraded stainless steel mixing attachments that are dishwasher-safe."
+  },
+  {
+    question: "What's the exact weight and dimensions?",
+    answer: "35 lbs (16 kg). Dimensions: 14.6\" W × 11.3\" D × 16.5\" H. With bowl-lift raised, total height reaches ~18\". Measure your counter space carefully."
+  },
+  {
+    question: "Is professional installation required?",
+    answer: "No special installation needed. Simply place on a stable surface near a 120V outlet. Consider a dedicated 20-amp circuit if sharing with high-draw appliances."
+  }
 ]
 
 export const metadata = {
@@ -617,16 +656,16 @@ export default function KitchenAidReviewPage() {
         {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
-          <div itemScope itemType="https://schema.org/FAQPage">
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          <div>
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name" style={{ fontWeight: 600, marginTop: 0 }}>Can this replace a Hobart in a commercial bakery?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3 style={{ fontWeight: 600, marginTop: 0 }}>Can this replace a Hobart in a commercial bakery?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> For bakeries producing under 100 loaves daily with mixing
                   under 4 hours, yes. The KSM8990WH delivers 85-90% of the Hobart&apos;s performance at a
                   fraction of the cost. However, if you&apos;re running 8+ hour days with continuous mixing,
@@ -635,15 +674,15 @@ export default function KitchenAidReviewPage() {
               </div>
             </div>
 
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name" style={{ fontWeight: 600, marginTop: 0 }}>Will this work on a standard kitchen outlet?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3 style={{ fontWeight: 600, marginTop: 0 }}>Will this work on a standard kitchen outlet?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Usually yes, but verify your circuit isn&apos;t shared with
                   high-draw appliances. The mixer draws 500W, which is fine on a standard 15-amp circuit
                   (1800W capacity). However, if you&apos;re also running a coffee maker (1000W), you&apos;ll exceed
@@ -653,99 +692,99 @@ export default function KitchenAidReviewPage() {
               </div>
             </div>
 
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name" style={{ fontWeight: 600, marginTop: 0 }}>How does NSF certification matter?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3 style={{ fontWeight: 600, marginTop: 0 }}>How does NSF certification matter?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Required by many health departments for commercial food prep. Certifies materials meet sanitation standards.</p>
                 </div>
               </div>
             </div>
 
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name" style={{ fontWeight: 600, marginTop: 0 }}>What&apos;s the difference from the KSM7 residential model?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3 style={{ fontWeight: 600, marginTop: 0 }}>What&apos;s the difference from the KSM7 residential model?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> 1.3 HP motor (vs 0.8 HP), 2-year warranty, NSF certification, stainless dishwasher-safe attachments, heavier construction.</p>
                 </div>
               </div>
             </div>
 
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name" style={{ fontWeight: 600, marginTop: 0 }}>How long will this last in a commercial environment?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3 style={{ fontWeight: 600, marginTop: 0 }}>How long will this last in a commercial environment?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Based on my testing and industry experience, expect 8-10 years of 2-4 hours daily use before major service needs.</p>
                 </div>
               </div>
             </div>
 
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name" style={{ fontWeight: 600, marginTop: 0 }}>What&apos;s the noise level compared to residential models?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3 style={{ fontWeight: 600, marginTop: 0 }}>What&apos;s the noise level compared to residential models?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Slightly louder due to the powerful motor, but quieter than commercial Hobart mixers. Expect 70-75 dB at medium speeds—comparable to a dishwasher.</p>
                 </div>
               </div>
             </div>
 
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name" style={{ fontWeight: 600, marginTop: 0 }}>Can I use my existing KitchenAid attachments?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3 style={{ fontWeight: 600, marginTop: 0 }}>Can I use my existing KitchenAid attachments?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Yes, all standard KitchenAid hub attachments fit. However, the commercial unit includes upgraded stainless steel mixing attachments that are dishwasher-safe.</p>
                 </div>
               </div>
             </div>
 
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name" style={{ fontWeight: 600, marginTop: 0 }}>What&apos;s the exact weight and dimensions?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3 style={{ fontWeight: 600, marginTop: 0 }}>What&apos;s the exact weight and dimensions?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> 35 lbs (16 kg). Dimensions: 14.6&quot; W × 11.3&quot; D × 16.5&quot; H. With bowl-lift raised, total height reaches ~18&quot;. Measure your counter space carefully.</p>
                 </div>
               </div>
             </div>
 
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name" style={{ fontWeight: 600, marginTop: 0 }}>Is professional installation required?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3 style={{ fontWeight: 600, marginTop: 0 }}>Is professional installation required?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> No special installation needed. Simply place on a stable surface near a 120V outlet. Consider a dedicated 20-amp circuit if sharing with high-draw appliances.</p>
                 </div>
               </div>
@@ -1112,6 +1151,12 @@ export default function KitchenAidReviewPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
           }}
         />
       </article>
