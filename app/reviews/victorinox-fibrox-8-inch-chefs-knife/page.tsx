@@ -5,7 +5,7 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import ProductImageGallery from '@/components/ProductImageGallery'
 import AffiliateButton from '@/components/AffiliateButton'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 
 
@@ -58,7 +58,7 @@ export default function VictorinoxFibrox8InchReview() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateProductReviewSchema({
+          __html: JSON.stringify(generateProductSchema({
             name: "Victorinox Fibrox Pro 8-Inch Chef's Knife",
             slug: "victorinox-fibrox-8-inch-chefs-knife",
             brand: "Victorinox",
@@ -97,6 +97,53 @@ export default function VictorinoxFibrox8InchReview() {
             { name: "Home", url: "https://www.chefapprovedtools.com" },
             { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
             { name: "Victorinox Fibrox Pro 8-Inch Chef's Knife", url: "https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife" }
+          ]))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema([
+            {
+              question: "Why is Victorinox so affordable compared to Wusthof or Shun?",
+              answer: "The Victorinox is accessibly priced because you're not paying for premium aesthetics, exotic handle materials, or brand prestige—you're paying for what matters: cutting performance. You're not getting exotic wood or fancy handle materials (it's molded plastic fibrox), Damascus steel patterns, thick heavy blade, or luxury brand premium pricing. You ARE getting: professional-grade high-carbon stainless steel, excellent edge retention and easy re-sharpening, perfect balance and control, NSF commercial certification, and Swiss manufacturing quality. The truth from 40 years cooking: Once you're cutting, you don't see the handle. You feel the balance, control, and sharpness. The Victorinox delivers where it matters—actual cutting performance—at a fraction of typical premium costs."
+            },
+            {
+              question: "Is an affordable knife really good enough for serious cooking?",
+              answer: "Absolutely yes. This is the exact knife used in professional kitchens worldwide, including Michelin-starred restaurants. It's not a 'budget alternative'—it's professional equipment that happens to be accessible. After 23+ years managing restaurant kitchens and cooking on the line, I can tell you that line cooks and chefs prefer Victorinox because it works better for actual cooking than expensive knives. The thin blade and perfect balance deliver more control than heavy, thick premium knives. NSF certification means this knife meets the same commercial standards as equipment costing many times more. It's approved for professional use—not just 'home cooking.' The knife doesn't know its price point. It only knows how sharp it is and how well it cuts. The Victorinox excels at both."
+            },
+            {
+              question: "Victorinox vs Wusthof: Which should I buy?",
+              answer: "For 95% of home cooks, the Victorinox is the smarter choice. Victorinox advantages: Exceptional value vs premium pricing, lighter/better balance, thin blade offers more control, easier to sharpen, less intimidating for new cooks. Wusthof advantages: Beautiful aesthetics (wood handle, full bolster), heavier/more substantial feel, lifetime warranty, premium brand prestige. My verdict: The Victorinox cuts just as well as the Wusthof. After 40 years, I still use my Victorinox daily because it works better for actual cooking. Spend the difference on a quality cutting board or Dutch oven instead."
+            },
+            {
+              question: "How long does a Victorinox knife last?",
+              answer: "With proper care and regular sharpening, 10-20+ years easily. I've been using mine for 40 years across multiple professional kitchens. At accessible pricing, even decades of use represents exceptional value—pennies per day for professional-quality cutting performance. Compare to premium knives that may last just as long but cost several times more. Longevity tips: Hand wash immediately after use, sharpen regularly, use wooden/plastic cutting board, store properly (magnetic strip or knife block)."
+            },
+            {
+              question: "Does the plastic handle feel cheap?",
+              answer: "The fibrox handle feels utilitarian, not luxurious—but that's intentional and actually an advantage for professional use. Fibrox handle benefits: Superior grip (textured surface prevents slipping even with wet hands), dishwasher safe (unlike wood handles), NSF certified (meets commercial sanitation standards), lightweight (reduces hand fatigue), durable (doesn't absorb odors, bacteria, or stains). The professional perspective: In restaurant kitchens, we don't care about aesthetics—we care about grip, durability, and sanitation. The fibrox handle excels at all three."
+            },
+            {
+              question: "Do professional chefs really use Victorinox?",
+              answer: "Yes, extensively. Walk into any professional kitchen and you'll see Victorinox knives everywhere—from small cafes to Michelin-starred restaurants. Why pros choose Victorinox: Performance over prestige (chefs care about how it cuts, not how it looks), practical pricing (replacing lost knives is less painful), versatile (thin blade excels at detailed work), NSF certified (meets health department requirements), easy maintenance (kitchen staff can sharpen without expensive equipment). Personal experience: In 23+ years managing restaurant kitchens and working on the line, our knife kit included Victorinox as standard issue. Some chefs brought expensive Japanese knives for specific tasks, but the Victorinox handled 80% of daily cutting."
+            },
+            {
+              question: "How often does a Victorinox knife need sharpening?",
+              answer: "With daily use, professional sharpening every 3-4 months. Hone before each use with a honing steel to maintain the edge between sharpenings. The high-carbon stainless steel holds an edge exceptionally well compared to softer budget knives. I sharpen mine quarterly in a busy kitchen environment, but home cooks using it less frequently might only need sharpening twice yearly. Honing vs Sharpening: Honing (daily, 10 seconds) realigns the edge. Sharpening (quarterly) removes metal to create a new edge. Learn both skills—your knife will last decades."
+            },
+            {
+              question: "What size cutting board do I need for an 8-inch knife?",
+              answer: "Minimum 15x20 inches for comfortable prep work. I recommend 18x24 inches or larger for versatility. The John Boos 18x24 commercial board pairs perfectly with this knife and provides ample workspace for efficient meal prep. Larger boards prevent ingredients from falling off and give you room to organize your mise en place. Material matters: Use wood or plastic boards only. Glass and ceramic boards will destroy your edge in weeks."
+            },
+            {
+              question: "Can I put a Victorinox knife in the dishwasher?",
+              answer: "Technically the fibrox handle is dishwasher-safe, but I strongly recommend hand washing to preserve the blade edge. Why hand wash: Dishwasher detergents are abrasive and will dull the edge faster. High heat can affect blade temper over time. Contact with other utensils can chip or damage the blade. Hand washing takes 30 seconds and extends knife life by years. Proper hand washing: Wash immediately after use with warm water and dish soap. Dry completely before storing. Never leave soaking in sink."
+            },
+            {
+              question: "Should I buy the 8-inch or 10-inch Victorinox chef knife?",
+              answer: "For most home cooks, the 8-inch is the better choice. It handles 90% of tasks with better maneuverability and control. Choose 8-inch if: You have limited counter space, prefer nimble/precise cutting, are new to cooking, want one versatile knife, have smaller hands. Choose 10-inch if: You regularly break down whole chickens/large roasts, prep in bulk for meal prep, have large cutting boards, prefer longer blade for slicing. Professional advice: I own both and use the 8-inch for 90% of tasks. The 10-inch comes out for breaking down proteins and large vegetable prep. Start with the 8-inch, add the 10-inch later if needed."
+            }
           ]))
         }}
       />
@@ -448,22 +495,22 @@ export default function VictorinoxFibrox8InchReview() {
           </p>
         </section>
 
-        {/* FAQ Section with Schema Markup */}
+        {/* FAQ Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">Frequently Asked Questions About Victorinox Chef&apos;s Knife</h2>
 
-          <div itemScope itemType="https://schema.org/FAQPage">
+          <div>
 
-            {/* Question 1 - MOST IMPORTANT */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            {/* Question 1 */}
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Why is Victorinox so affordable compared to Wusthof or Shun?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Why is Victorinox so affordable compared to Wusthof or Shun?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> The Victorinox is accessibly priced because you&apos;re not paying for
                   premium aesthetics, exotic handle materials, or brand prestige—you&apos;re paying for what
                   matters: cutting performance.</p>
@@ -493,15 +540,15 @@ export default function VictorinoxFibrox8InchReview() {
             </div>
 
             {/* Question 2 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Is an affordable knife really good enough for serious cooking?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Is an affordable knife really good enough for serious cooking?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Absolutely yes. This is the exact knife used in professional
                   kitchens worldwide, including Michelin-starred restaurants. It&apos;s not a &quot;budget alternative&quot;—
                   it&apos;s professional equipment that happens to be accessible.</p>
@@ -521,15 +568,15 @@ export default function VictorinoxFibrox8InchReview() {
             </div>
 
             {/* Question 3 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Victorinox vs Wusthof: Which should I buy?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Victorinox vs Wusthof: Which should I buy?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> For 95% of home cooks, the Victorinox is the smarter choice.</p>
 
                   <p><strong>Victorinox advantages:</strong> Exceptional value vs premium pricing, lighter/better balance, thin blade offers more control, easier to sharpen, less intimidating for new cooks</p>
@@ -545,15 +592,15 @@ export default function VictorinoxFibrox8InchReview() {
             </div>
 
             {/* Question 4 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">How long does a Victorinox knife last?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>How long does a Victorinox knife last?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> With proper care and regular sharpening, 10-20+ years easily.
                   I&apos;ve been using mine for 40 years across multiple professional kitchens.</p>
 
@@ -567,15 +614,15 @@ export default function VictorinoxFibrox8InchReview() {
             </div>
 
             {/* Question 5 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Does the plastic handle feel cheap?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Does the plastic handle feel cheap?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> The fibrox handle feels utilitarian, not luxurious—but that&apos;s
                   intentional and actually an advantage for professional use.</p>
 
@@ -589,15 +636,15 @@ export default function VictorinoxFibrox8InchReview() {
             </div>
 
             {/* Question 6 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Do professional chefs really use Victorinox?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Do professional chefs really use Victorinox?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Yes, extensively. Walk into any professional kitchen and you&apos;ll
                   see Victorinox knives everywhere—from small cafes to Michelin-starred restaurants.</p>
 
@@ -611,15 +658,15 @@ export default function VictorinoxFibrox8InchReview() {
             </div>
 
             {/* Question 7 - NEW */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">How often does a Victorinox knife need sharpening?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>How often does a Victorinox knife need sharpening?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> With daily use, professional sharpening every 3-4 months. Hone before each use with a honing steel to maintain the edge between sharpenings.</p>
                   <p>The high-carbon stainless steel holds an edge exceptionally well compared to softer budget knives. I sharpen mine quarterly in a busy kitchen environment, but home cooks using it less frequently might only need sharpening twice yearly.</p>
                   <p><strong>Honing vs Sharpening:</strong> Honing (daily, 10 seconds) realigns the edge. Sharpening (quarterly) removes metal to create a new edge. Learn both skills—your knife will last decades.</p>
@@ -628,15 +675,15 @@ export default function VictorinoxFibrox8InchReview() {
             </div>
 
             {/* Question 8 - NEW */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">What size cutting board do I need for an 8-inch knife?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>What size cutting board do I need for an 8-inch knife?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Minimum 15x20 inches for comfortable prep work. I recommend 18x24 inches or larger for versatility.</p>
                   <p>The <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline">John Boos 18x24 commercial board</Link> pairs perfectly with this knife and provides ample workspace for efficient meal prep. Larger boards prevent ingredients from falling off and give you room to organize your mise en place.</p>
                   <p><strong>Material matters:</strong> Use wood or plastic boards only. Glass and ceramic boards will destroy your edge in weeks.</p>
@@ -645,15 +692,15 @@ export default function VictorinoxFibrox8InchReview() {
             </div>
 
             {/* Question 9 - NEW */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Can I put a Victorinox knife in the dishwasher?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Can I put a Victorinox knife in the dishwasher?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Technically the fibrox handle is dishwasher-safe, but I strongly recommend hand washing to preserve the blade edge.</p>
                   <p><strong>Why hand wash:</strong> Dishwasher detergents are abrasive and will dull the edge faster. High heat can affect blade temper over time. Contact with other utensils can chip or damage the blade. Hand washing takes 30 seconds and extends knife life by years.</p>
                   <p><strong>Proper hand washing:</strong> Wash immediately after use with warm water and dish soap. Dry completely before storing. Never leave soaking in sink.</p>
@@ -662,15 +709,15 @@ export default function VictorinoxFibrox8InchReview() {
             </div>
 
             {/* Question 10 - NEW */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Should I buy the 8-inch or 10-inch Victorinox chef knife?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Should I buy the 8-inch or 10-inch Victorinox chef knife?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> For most home cooks, the 8-inch is the better choice. It handles 90% of tasks with better maneuverability and control.</p>
                   <p><strong>Choose 8-inch if:</strong> You have limited counter space, prefer nimble/precise cutting, are new to cooking, want one versatile knife, have smaller hands</p>
                   <p><strong>Choose 10-inch if:</strong> You regularly break down whole chickens/large roasts, prep in bulk for meal prep, have large cutting boards, prefer longer blade for slicing</p>

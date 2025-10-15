@@ -1,4 +1,5 @@
 // Structured data schemas for SEO
+// Updated: 2025-10-14 - Schema refactor to fix Google Rich Results issues
 
 export const organizationSchema = {
   "@context": "https://schema.org",
@@ -71,70 +72,13 @@ export const websiteSchema = {
   inLanguage: "en-US"
 }
 
+// UPDATED: Primary Product schema with proper nesting for review pages
+// Product contains: review, aggregateRating (Google's recommended structure)
+// NO OFFERS - We're an affiliate site, not a merchant
 export function generateProductSchema(product: any) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": `https://www.chefapprovedtools.com/products/${product.slug}#product`,
-    name: product.name,
-    image: product.images.primary,
-    description: product.description,
-    brand: {
-      "@type": "Brand",
-      name: product.brand
-    },
-    sku: product.id,
-    mpn: product.model || product.id,
-    category: product.category,
-    aggregateRating: product.reviews.rating > 0 ? {
-      "@type": "AggregateRating",
-      ratingValue: product.reviews.rating,
-      bestRating: 5,
-      worstRating: 1,
-      ratingCount: product.reviews.count,
-      reviewCount: product.reviews.count
-    } : undefined,
-    review: {
-      "@type": "Review",
-      "@id": `https://www.chefapprovedtools.com/reviews/${product.slug}#review`,
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: product.expertRating || product.reviews.rating,
-        bestRating: 5,
-        worstRating: 1
-      },
-      author: {
-        "@type": "Person",
-        name: "Scott Bradley",
-        jobTitle: "Kitchen Manager",
-        alumniOf: [
-          {
-            "@type": "EducationalOrganization",
-            name: "Seattle Central College",
-            department: "Culinary Arts Program"
-          }
-        ],
-        worksFor: {
-          "@type": "Organization",
-          name: "Chef Approved Tools"
-        },
-        sameAs: "https://www.chefapprovedtools.com/about"
-      },
-      reviewBody: product.expertOpinion,
-      datePublished: product.dateAdded,
-      dateModified: product.lastUpdated,
-      publisher: {
-        "@id": "https://www.chefapprovedtools.com/#organization"
-      }
-    }
-  }
-}
-
-// Enhanced product review schema for better rich snippets
-export function generateProductReviewSchema(product: any) {
   // Validate required fields
   if (!product || !product.name || !product.slug) {
-    console.error('generateProductReviewSchema: Missing required product fields', product);
+    console.error('generateProductSchema: Missing required product fields', product);
     return null;
   }
 
@@ -142,75 +86,89 @@ export function generateProductReviewSchema(product: any) {
 
   return {
     "@context": "https://schema.org",
-    "@type": "Review",
-    "@id": `https://www.chefapprovedtools.com/reviews/${product.slug}#professional-review`,
-    itemReviewed: {
-      "@type": "Product",
-      name: product.name,
-      image: product.images?.primary || "https://www.chefapprovedtools.com/logo.png",
-      description: product.expertOpinion || product.description || `Professional review of ${product.name}`,
-      brand: {
-        "@type": "Brand",
-        name: product.brand || "Unknown Brand"
-      },
-      sku: product.sku || product.slug,
-      gtin13: product.gtin13,
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: expertRating,
-        bestRating: 5,
-        worstRating: 1,
-        ratingCount: product.reviewCount || 1,
-        reviewCount: product.reviewCount || 1
-      }
+    "@type": "Product",
+    "@id": `https://www.chefapprovedtools.com/reviews/${product.slug}#product`,
+    name: product.name,
+    image: Array.isArray(product.images?.primary)
+      ? product.images.primary
+      : [product.images?.primary || "https://www.chefapprovedtools.com/logo.png"],
+    description: product.expertOpinion || product.description || `Professional review of ${product.name}`,
+    brand: {
+      "@type": "Brand",
+      name: product.brand || "Unknown Brand"
     },
-    reviewRating: {
-      "@type": "Rating",
+    sku: product.sku || product.slug,
+    mpn: product.model || product.sku || product.slug,
+    category: product.category,
+    // Nested aggregateRating (part of Product)
+    aggregateRating: {
+      "@type": "AggregateRating",
       ratingValue: expertRating,
       bestRating: 5,
-      worstRating: 1
+      worstRating: 1,
+      ratingCount: product.reviewCount || 1,
+      reviewCount: product.reviewCount || 1
     },
-    author: {
-      "@type": "Person",
-      "@id": "https://www.chefapprovedtools.com/about#scott-bradley",
-      name: "Scott Bradley",
-      url: "https://www.chefapprovedtools.com/about",
-      image: "https://www.chefapprovedtools.com/images/team/head-shot-1.jpg",
-      jobTitle: "Kitchen Manager & Culinary Professional",
-      description: "Professional chef with 40 years of cooking experience and 23+ years in restaurant management. A.A.S. Culinary Arts from Seattle Central College.",
-      sameAs: [
-        "https://www.chefapprovedtools.com/about"
-      ],
-      alumniOf: {
-        "@type": "EducationalOrganization",
-        name: "Seattle Central College"
+    // Nested review (part of Product)
+    review: {
+      "@type": "Review",
+      "@id": `https://www.chefapprovedtools.com/reviews/${product.slug}#review`,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: expertRating,
+        bestRating: 5,
+        worstRating: 1
       },
-      hasCredential: [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "degree",
-          "educationalLevel": "Associate",
-          "about": "Culinary Arts"
-        }
-      ],
-      "knowsAbout": [
-        "Professional Cooking",
-        "Restaurant Operations",
-        "Kitchen Equipment",
-        "Food Safety"
-      ]
-    },
-    reviewBody: product.expertOpinion || product.description || `Professional review of ${product.name}`,
-    name: `Professional Review: ${product.name}`,
-    headline: `Kitchen Manager's Review: ${product.name}`,
-    datePublished: product.dateAdded || new Date().toISOString().split('T')[0],
-    dateModified: product.lastUpdated || product.dateAdded || new Date().toISOString().split('T')[0],
-    publisher: {
-      "@id": "https://www.chefapprovedtools.com/#organization"
-    },
-    positiveNotes: product.pros || [],
-    negativeNotes: product.cons || []
+      author: {
+        "@type": "Person",
+        "@id": "https://www.chefapprovedtools.com/about#scott-bradley",
+        name: "Scott Bradley",
+        url: "https://www.chefapprovedtools.com/about",
+        image: "https://www.chefapprovedtools.com/images/team/head-shot-1.jpg",
+        jobTitle: "Kitchen Manager & Culinary Professional",
+        description: "Professional chef with 40 years of cooking experience and 23+ years in restaurant management. A.A.S. Culinary Arts from Seattle Central College.",
+        sameAs: [
+          "https://www.chefapprovedtools.com/about"
+        ],
+        alumniOf: {
+          "@type": "EducationalOrganization",
+          name: "Seattle Central College"
+        },
+        hasCredential: [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "degree",
+            "educationalLevel": "Associate",
+            "about": "Culinary Arts"
+          }
+        ],
+        "knowsAbout": [
+          "Professional Cooking",
+          "Restaurant Operations",
+          "Kitchen Equipment",
+          "Food Safety"
+        ]
+      },
+      reviewBody: product.expertOpinion || product.description || `Professional review of ${product.name}`,
+      name: `Professional Review: ${product.name}`,
+      headline: `Kitchen Manager's Review: ${product.name}`,
+      datePublished: product.dateAdded || new Date().toISOString().split('T')[0],
+      dateModified: product.lastUpdated || product.dateAdded || new Date().toISOString().split('T')[0],
+      publisher: {
+        "@id": "https://www.chefapprovedtools.com/#organization"
+      },
+      positiveNotes: product.pros || [],
+      negativeNotes: product.cons || []
+    }
   }
+}
+
+// DEPRECATED: Old function with wrong nesting (Review > Product)
+// Kept for backward compatibility but will be removed after migration
+// Use generateProductSchema() instead for new implementations
+export function generateProductReviewSchema(product: any) {
+  console.warn('generateProductReviewSchema is deprecated. Use generateProductSchema instead.');
+  return generateProductSchema(product);
 }
 
 export function generateBreadcrumbSchema(items: Array<{name: string, url: string}>) {
@@ -228,7 +186,12 @@ export function generateBreadcrumbSchema(items: Array<{name: string, url: string
   }
 }
 
+// FAQ Schema - Converts FAQ data to JSON-LD (replaces microdata)
 export function generateFAQSchema(faqs: Array<{question: string, answer: string}>) {
+  if (!faqs || faqs.length === 0) {
+    return null;
+  }
+
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -243,19 +206,27 @@ export function generateFAQSchema(faqs: Array<{question: string, answer: string}
   }
 }
 
+// Article Schema - For guides and editorial content
+// Can optionally include nested ItemList for comparison/buying guides
 export function generateArticleSchema(article: any) {
-  return {
+  if (!article || !article.title || !article.slug) {
+    console.error('generateArticleSchema: Missing required article fields', article);
+    return null;
+  }
+
+  const schema: any = {
     "@context": "https://schema.org",
     "@type": "Article",
     "@id": `https://www.chefapprovedtools.com/guides/${article.slug}#article`,
     headline: article.title,
     description: article.description,
-    image: article.image,
+    image: article.image || "https://www.chefapprovedtools.com/logo.png",
     datePublished: article.datePublished,
-    dateModified: article.lastUpdated,
+    dateModified: article.lastUpdated || article.datePublished,
     author: {
       "@type": "Person",
-      name: article.author || "Chef Professional",
+      "@id": "https://www.chefapprovedtools.com/about#scott-bradley",
+      name: article.author || "Scott Bradley",
       sameAs: "https://www.chefapprovedtools.com/about"
     },
     publisher: {
@@ -264,14 +235,76 @@ export function generateArticleSchema(article: any) {
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `https://www.chefapprovedtools.com/guides/${article.slug}`
+    }
+  };
+
+  // Optional fields
+  if (article.wordCount) {
+    schema.wordCount = article.wordCount;
+  }
+  if (article.tags && article.tags.length > 0) {
+    schema.keywords = article.tags.join(", ");
+  }
+  if (article.category) {
+    schema.articleSection = article.category;
+  }
+
+  return schema;
+}
+
+// NEW: HowTo Schema - For step-by-step instructional content
+export function generateHowToSchema(howto: any) {
+  if (!howto || !howto.name || !howto.steps || howto.steps.length === 0) {
+    console.error('generateHowToSchema: Missing required fields (name, steps)', howto);
+    return null;
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: howto.name,
+    description: howto.description,
+    image: howto.image ? [howto.image] : undefined,
+    totalTime: howto.totalTime, // ISO 8601 duration (e.g., "PT30M" for 30 minutes)
+    estimatedCost: howto.estimatedCost,
+    yield: howto.yield,
+    author: {
+      "@type": "Person",
+      "@id": "https://www.chefapprovedtools.com/about#scott-bradley",
+      name: "Scott Bradley",
+      sameAs: "https://www.chefapprovedtools.com/about"
     },
-    wordCount: article.wordCount,
-    keywords: article.tags.join(", "),
-    articleSection: article.category
+    datePublished: howto.datePublished,
+    dateModified: howto.lastUpdated || howto.datePublished,
+    publisher: {
+      "@id": "https://www.chefapprovedtools.com/#organization"
+    },
+    step: howto.steps.map((step: any, index: number) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name || `Step ${index + 1}`,
+      text: step.text,
+      image: step.image,
+      url: step.url
+    })),
+    // Optional: Tools and supplies
+    tool: howto.tools ? howto.tools.map((tool: string) => ({
+      "@type": "HowToTool",
+      name: tool
+    })) : undefined,
+    supply: howto.supplies ? howto.supplies.map((supply: string) => ({
+      "@type": "HowToSupply",
+      name: supply
+    })) : undefined
   }
 }
 
+// ItemList Schema - For product comparisons and lists
 export function generateItemListSchema(products: any[], listName: string) {
+  if (!products || products.length === 0) {
+    return null;
+  }
+
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -285,7 +318,7 @@ export function generateItemListSchema(products: any[], listName: string) {
         name: product.name,
         image: product.images?.primary,
         url: `https://www.chefapprovedtools.com/reviews/${product.slug}`,
-        aggregateRating: product.reviews.rating > 0 ? {
+        aggregateRating: product.reviews?.rating > 0 ? {
           "@type": "AggregateRating",
           ratingValue: product.reviews.rating,
           reviewCount: product.reviews.count
