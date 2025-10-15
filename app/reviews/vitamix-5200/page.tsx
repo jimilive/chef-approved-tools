@@ -649,18 +649,18 @@ export default function Vitamix5200Review() {
         <section className="mb-8" id="faq">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Frequently Asked Questions About Vitamix 5200</h2>
 
-          <div itemScope itemType="https://schema.org/FAQPage">
+          <div>
 
             {/* Question 1 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Is the Vitamix 5200 worth the money?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Is the Vitamix 5200 worth the money?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> After 5+ years of professional use, absolutely yes—if you use your blender regularly. The combination of 2 HP motor power, all-metal drive system, 7-year warranty, and decades of expected use justifies the premium investment.</p>
                   <p>For families making daily smoothies, health enthusiasts, or anyone wanting to eliminate multiple kitchen appliances, this pays for itself through longevity and versatility. However, if you blend only occasionally (once a week or less), a budget-friendly blender may serve you fine.</p>
                   <p><strong>The value proposition:</strong> With proper care and 15+ years of expected use, this works out to pennies per day. Budget blenders often need replacement every 2-3 years at their respective price points.</p>
@@ -669,15 +669,15 @@ export default function Vitamix5200Review() {
             </div>
 
             {/* Question 2 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">What&apos;s the difference between Vitamix 5200 and other models?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>What&apos;s the difference between Vitamix 5200 and other models?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> The 5200 is Vitamix&apos;s classic workhorse model. Key differences from other Vitamix models:</p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
                     <li><strong>vs. A3500/A2500 (Ascent series):</strong> 5200 has manual controls and no preset programs, but costs significantly less while delivering identical blending power</li>
@@ -691,15 +691,15 @@ export default function Vitamix5200Review() {
             </div>
 
             {/* Question 3 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">How loud is the Vitamix 5200?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>How loud is the Vitamix 5200?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> The 5200 is loud—no sugarcoating it. At full speed, it measures around 90-95 decibels, roughly equivalent to a lawn mower or food processor.</p>
                   <p><strong>Reality check from professional use:</strong></p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
@@ -715,15 +715,15 @@ export default function Vitamix5200Review() {
             </div>
 
             {/* Question 4 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Can Vitamix 5200 crush ice?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Can Vitamix 5200 crush ice?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Yes, effortlessly. The 5200 pulverizes ice cubes into snow-like consistency in seconds. This is one of its signature capabilities.</p>
                   <p><strong>Ice crushing performance:</strong></p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
@@ -738,15 +738,15 @@ export default function Vitamix5200Review() {
             </div>
 
             {/* Question 5 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Can you make hot soup in a Vitamix?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Can you make hot soup in a Vitamix?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Yes, one of the Vitamix&apos;s most impressive features. The friction from the blades spinning at high speed heats ingredients to steaming hot (160-170°F) in 5-7 minutes.</p>
                   <p><strong>How it works:</strong></p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
@@ -763,15 +763,15 @@ export default function Vitamix5200Review() {
             </div>
 
             {/* Question 6 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">How do you clean a Vitamix 5200?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>How do you clean a Vitamix 5200?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Incredibly easy—one of the best features. The Vitamix essentially cleans itself.</p>
                   <p><strong>The 30-second cleaning method:</strong></p>
                   <ol style={{ marginLeft: '20px', lineHeight: '1.8' }}>
@@ -794,15 +794,15 @@ export default function Vitamix5200Review() {
             </div>
 
             {/* Question 7 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">What can you make in a Vitamix 5200?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>What can you make in a Vitamix 5200?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> The versatility is astounding. The 5200 handles tasks that typically require multiple appliances:</p>
                   <p><strong>Daily basics:</strong></p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
@@ -833,15 +833,15 @@ export default function Vitamix5200Review() {
             </div>
 
             {/* Question 8 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">How long do Vitamix blenders last?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>How long do Vitamix blenders last?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> With proper care, 10-20+ years is common, with some lasting 30+ years. The 5200 is genuinely buy-it-for-life equipment.</p>
                   <p><strong>Why they last so long:</strong></p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
@@ -859,15 +859,15 @@ export default function Vitamix5200Review() {
             </div>
 
             {/* Question 9 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Vitamix vs Blendtec: Which is better?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Vitamix vs Blendtec: Which is better?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Both are excellent high-performance blenders. The choice depends on priorities:</p>
                   <p><strong>Choose Vitamix 5200 if you want:</strong></p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
@@ -891,15 +891,15 @@ export default function Vitamix5200Review() {
             </div>
 
             {/* Question 10 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Should I buy new or refurbished Vitamix?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Should I buy new or refurbished Vitamix?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Refurbished units from Vitamix.com are excellent value—I recommend them for budget-conscious buyers.</p>
                   <p><strong>Refurbished pros:</strong></p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>

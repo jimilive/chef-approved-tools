@@ -710,12 +710,12 @@ export default function Lodge3SkilletBundleReview() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions About Lodge Cast Iron</h2>
 
-          <div itemScope itemType="https://schema.org/FAQPage">
+          <div>
 
             {/* Question 1 */}
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white rounded-lg p-6 border border-gray-200 mb-4">
               <h3 itemProp="name" className="font-semibold text-slate-900 mb-2">Is Lodge cast iron worth the investment?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+              <div>
                 <div itemProp="text" className="text-slate-700 text-sm">
                   <p className="mb-3"><strong>Answer:</strong> Absolutely. After 7 years of testing and decades of restaurant experience, Lodge delivers professional-grade performance at exceptional value. The key differences compared to premium brands are surface finish and aesthetics, not cooking performance.</p>
 
@@ -742,7 +742,7 @@ export default function Lodge3SkilletBundleReview() {
             {/* Question 2 */}
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white rounded-lg p-6 border border-gray-200 mb-4">
               <h3 itemProp="name" className="font-semibold text-slate-900 mb-2">How do I season and maintain Lodge cast iron?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+              <div>
                 <div itemProp="text" className="text-slate-700 text-sm">
                   <p className="mb-3"><strong>Answer:</strong> Lodge comes pre-seasoned, but here&apos;s what actually works after 7 years:</p>
 
@@ -764,7 +764,7 @@ export default function Lodge3SkilletBundleReview() {
             {/* Question 3 */}
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white rounded-lg p-6 border border-gray-200 mb-4">
               <h3 itemProp="name" className="font-semibold text-slate-900 mb-2">Should I buy the 3-skillet bundle or individual skillets?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+              <div>
                 <div itemProp="text" className="text-slate-700 text-sm">
                   <p className="mb-3"><strong>Answer:</strong> The bundle makes sense for most home cooks. After 7 years, I use all three sizes equally.</p>
 
@@ -783,7 +783,7 @@ export default function Lodge3SkilletBundleReview() {
             {/* Question 4 */}
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white rounded-lg p-6 border border-gray-200 mb-4">
               <h3 itemProp="name" className="font-semibold text-slate-900 mb-2">Can Lodge cast iron go in the oven?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+              <div>
                 <div itemProp="text" className="text-slate-700 text-sm">
                   <p className="mb-3"><strong>Answer:</strong> Yes, Lodge cast iron is oven-safe to 500°F+ (no plastic handles). This is one of its biggest advantages.</p>
 
@@ -803,7 +803,7 @@ export default function Lodge3SkilletBundleReview() {
             {/* Question 5 */}
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white rounded-lg p-6 border border-gray-200 mb-4">
               <h3 itemProp="name" className="font-semibold text-slate-900 mb-2">How long does Lodge cast iron last?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+              <div>
                 <div itemProp="text" className="text-slate-700 text-sm">
                   <p className="mb-3"><strong>Answer:</strong> With proper care, literally forever. After 7 years of weekly use, mine show minimal wear and will last decades more.</p>
 
@@ -823,7 +823,7 @@ export default function Lodge3SkilletBundleReview() {
             {/* Question 6 */}
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white rounded-lg p-6 border border-gray-200 mb-4">
               <h3 itemProp="name" className="font-semibold text-slate-900 mb-2">What size Lodge skillet should I buy first?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+              <div>
                 <div itemProp="text" className="text-slate-700 text-sm">
                   <p className="mb-3"><strong>Answer:</strong> The 12-inch skillet is the most versatile if you can only choose one size.</p>
                   
@@ -843,7 +843,7 @@ export default function Lodge3SkilletBundleReview() {
             {/* Question 7 */}
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white rounded-lg p-6 border border-gray-200 mb-4">
               <h3 itemProp="name" className="font-semibold text-slate-900 mb-2">Can I use metal utensils on Lodge cast iron?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+              <div>
                 <div itemProp="text" className="text-slate-700 text-sm">
                   <p className="mb-3"><strong>Answer:</strong> Yes, metal utensils are perfectly safe on cast iron—this is one of its major advantages over non-stick cookware.</p>
                   
@@ -863,7 +863,7 @@ export default function Lodge3SkilletBundleReview() {
             {/* Question 8 */}
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white rounded-lg p-6 border border-gray-200 mb-4">
               <h3 itemProp="name" className="font-semibold text-slate-900 mb-2">Is Lodge cast iron safe for cooking acidic foods?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+              <div>
                 <div itemProp="text" className="text-slate-700 text-sm">
                   <p className="mb-3"><strong>Answer:</strong> Yes, but with time limits. Well-seasoned cast iron can handle acidic foods for short cooking times.</p>
                   
@@ -885,7 +885,7 @@ export default function Lodge3SkilletBundleReview() {
             {/* Question 9 */}
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white rounded-lg p-6 border border-gray-200 mb-4">
               <h3 itemProp="name" className="font-semibold text-slate-900 mb-2">How heavy is the Lodge cast iron skillet set?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+              <div>
                 <div itemProp="text" className="text-slate-700 text-sm">
                   <p className="mb-3"><strong>Answer:</strong> The three skillets range from 3.2 lbs to 8.5 lbs, which is standard for cast iron but requires consideration.</p>
                   
@@ -906,7 +906,7 @@ export default function Lodge3SkilletBundleReview() {
             {/* Question 10 */}
             <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" className="bg-white rounded-lg p-6 border border-gray-200 mb-4">
               <h3 itemProp="name" className="font-semibold text-slate-900 mb-2">Can I use Lodge cast iron on a glass cooktop?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+              <div>
                 <div itemProp="text" className="text-slate-700 text-sm">
                   <p className="mb-3"><strong>Answer:</strong> Yes, but with extra care. Cast iron works on glass cooktops but requires careful handling to avoid damage.</p>
                   

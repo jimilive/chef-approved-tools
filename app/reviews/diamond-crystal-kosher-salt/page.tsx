@@ -292,21 +292,21 @@ export default function DiamondCrystalKosherSaltReview() {
         as much. Diamond Crystal is less dense, so 1 tablespoon of Diamond Crystal ≈ 1½ teaspoons of Morton&apos;s.
       </p>
 
-      {/* FAQ SECTION WITH SCHEMA */}
+      {/* FAQ SECTION */}
       <h2>Frequently Asked Questions About Diamond Crystal Kosher Salt</h2>
 
-      <div itemScope itemType="https://schema.org/FAQPage">
+      <div>
 
         {/* Question 1 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+        <div style={{
           margin: '20px 0',
           padding: '20px',
           background: '#f8f9fa',
           borderRadius: '6px'
         }}>
-          <h3 itemProp="name">Is Diamond Crystal worth it vs Morton&apos;s?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
+          <h3>Is Diamond Crystal worth it vs Morton&apos;s?</h3>
+          <div>
+            <div>
               <p><strong>Answer:</strong> Yes, for serious cooking. Diamond Crystal has a cleaner flavor profile with no anti-caking agents, and its lighter crystal structure makes it easier to control when seasoning by hand. After using both in professional kitchens, I exclusively buy Diamond Crystal for home use.</p>
               <p>Morton&apos;s kosher salt is denser and contains anti-caking agents, which can leave a slight chemical aftertaste. The crystal shape also makes it harder to pinch precisely. If a recipe specifies Diamond Crystal, substituting Morton&apos;s without adjusting quantities will over-salt your food.</p>
               <p>The cost difference is minimal—usually just a few cents per pound—but the cooking experience is noticeably better with Diamond Crystal.</p>
@@ -315,15 +315,15 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 2 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+        <div style={{
           margin: '20px 0',
           padding: '20px',
           background: '#f8f9fa',
           borderRadius: '6px'
         }}>
-          <h3 itemProp="name">Why do professional chefs use kosher salt?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
+          <h3>Why do professional chefs use kosher salt?</h3>
+          <div>
+            <div>
               <p><strong>Answer:</strong> Professional chefs prefer kosher salt because the large crystals are easy to pinch and control when seasoning by hand—the way most cooking happens in restaurants. You can feel exactly how much salt you&apos;re adding, which is crucial when you&apos;re cooking without measuring spoons.</p>
               <p>The coarse texture also makes it less likely to over-salt. Fine table salt pours too quickly and clumps in humid kitchens. Kosher salt dissolves evenly, has no additives to affect flavor, and provides consistent results across different cooks in the same kitchen.</p>
               <p>In my 6 years at Purple Café, we never used anything but Diamond Crystal for actual cooking. It&apos;s the industry standard for good reason. Read our complete guide on <a href="/blog/why-professional-chefs-use-kosher-salt" style={{ color: '#0066cc' }}>why chefs use kosher salt</a> for more details.</p>
@@ -332,15 +332,15 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 3 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+        <div style={{
           margin: '20px 0',
           padding: '20px',
           background: '#f8f9fa',
           borderRadius: '6px'
         }}>
-          <h3 itemProp="name">Can I use Diamond Crystal for baking?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
+          <h3>Can I use Diamond Crystal for baking?</h3>
+          <div>
+            <div>
               <p><strong>Answer:</strong> Yes, but you need to adjust measurements. Because Diamond Crystal is less dense than table salt, you&apos;ll need to use more by volume. Generally, use 2× the amount called for if a recipe specifies table salt.</p>
               <p>For precision baking (bread, pastries, cakes), I recommend weighing your salt rather than measuring by volume. 1 teaspoon of table salt = approximately 6 grams, while 1 teaspoon of Diamond Crystal = approximately 3 grams.</p>
               <p>Many modern baking recipes now specify Diamond Crystal kosher salt because it&apos;s become the test kitchen standard. If the recipe explicitly calls for it, use it as directed.</p>
@@ -349,15 +349,15 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 4 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+        <div style={{
           margin: '20px 0',
           padding: '20px',
           background: '#f8f9fa',
           borderRadius: '6px'
         }}>
-          <h3 itemProp="name">What is the difference between kosher salt and table salt?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
+          <h3>What is the difference between kosher salt and table salt?</h3>
+          <div>
+            <div>
               <p><strong>Answer:</strong> The main differences are crystal size, additives, and how you use them:</p>
               <ul>
                 <li><strong>Crystal size:</strong> Kosher salt has large, irregular crystals that are easy to pinch. Table salt is fine and pours from a shaker.</li>
@@ -371,15 +371,15 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 5 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+        <div style={{
           margin: '20px 0',
           padding: '20px',
           background: '#f8f9fa',
           borderRadius: '6px'
         }}>
-          <h3 itemProp="name">How much Diamond Crystal equals table salt?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
+          <h3>How much Diamond Crystal equals table salt?</h3>
+          <div>
+            <div>
               <p><strong>Answer:</strong> Diamond Crystal is about half as dense as table salt by volume. Here are the conversions:</p>
               <ul>
                 <li>1 teaspoon table salt = 2 teaspoons Diamond Crystal</li>
@@ -393,15 +393,15 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 6 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+        <div style={{
           margin: '20px 0',
           padding: '20px',
           background: '#f8f9fa',
           borderRadius: '6px'
         }}>
-          <h3 itemProp="name">Is Diamond Crystal the same as Morton kosher salt?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
+          <h3>Is Diamond Crystal the same as Morton kosher salt?</h3>
+          <div>
+            <div>
               <p><strong>Answer:</strong> No, they&apos;re significantly different despite both being kosher salt:</p>
               <ul>
                 <li><strong>Crystal shape:</strong> Diamond Crystal has flat, hollow pyramids. Morton&apos;s has dense, irregular flakes.</li>
@@ -416,15 +416,15 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 7 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+        <div style={{
           margin: '20px 0',
           padding: '20px',
           background: '#f8f9fa',
           borderRadius: '6px'
         }}>
-          <h3 itemProp="name">Does Diamond Crystal have iodine?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
+          <h3>Does Diamond Crystal have iodine?</h3>
+          <div>
+            <div>
               <p><strong>Answer:</strong> No, Diamond Crystal Kosher Salt does not contain iodine. It&apos;s pure salt with no additives—no iodine, no anti-caking agents, nothing but sodium chloride.</p>
               <p>If you need iodine in your diet (important for thyroid function), you have a few options:</p>
               <ul>
@@ -439,15 +439,15 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 8 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+        <div style={{
           margin: '20px 0',
           padding: '20px',
           background: '#f8f9fa',
           borderRadius: '6px'
         }}>
-          <h3 itemProp="name">Why is it called kosher salt?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
+          <h3>Why is it called kosher salt?</h3>
+          <div>
+            <div>
               <p><strong>Answer:</strong> The name comes from its traditional use in koshering meat—the Jewish process of removing blood from meat to make it kosher. The large crystals are perfect for drawing out blood and moisture from meat surfaces.</p>
               <p>Despite the name, kosher salt itself isn&apos;t necessarily kosher-certified (though Diamond Crystal is). The term refers to its function in the koshering process, not its religious certification.</p>
               <p>The name stuck because these coarse salts became popular in professional kitchens for their ease of use, then spread to home cooking. Now when chefs say &quot;kosher salt,&quot; we&apos;re referring to the crystal size and texture, not the religious dietary laws.</p>
@@ -456,15 +456,15 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 9 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+        <div style={{
           margin: '20px 0',
           padding: '20px',
           background: '#f8f9fa',
           borderRadius: '6px'
         }}>
-          <h3 itemProp="name">Where can I buy Diamond Crystal Kosher Salt?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
+          <h3>Where can I buy Diamond Crystal Kosher Salt?</h3>
+          <div>
+            <div>
               <p><strong>Answer:</strong> Diamond Crystal is available at most major grocery stores, though availability varies by region. I&apos;ve found it most reliably at:</p>
               <ul>
                 <li><strong>Amazon:</strong> Most consistent availability, often sold in 3-packs</li>
@@ -478,15 +478,15 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 10 */}
-        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+        <div style={{
           margin: '20px 0',
           padding: '20px',
           background: '#f8f9fa',
           borderRadius: '6px'
         }}>
-          <h3 itemProp="name">How should I store kosher salt?</h3>
-          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-            <div itemProp="text">
+          <h3>How should I store kosher salt?</h3>
+          <div>
+            <div>
               <p><strong>Answer:</strong> Salt doesn&apos;t spoil, but proper storage keeps it free-flowing and easy to use:</p>
               <ul>
                 <li><strong>Keep it dry:</strong> Store in an airtight container or keep the box closed when not in use</li>
