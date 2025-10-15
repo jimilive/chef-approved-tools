@@ -52,6 +52,7 @@ export default function TopPicksComparison() {
         "@type": "Product",
         "name": pick.name,
         "description": pick.whyBest,
+        "image": "https://www.chefapprovedtools.com/logo.png",
         "brand": {
           "@type": "Brand",
           "name": pick.name.split(' ')[0]
@@ -63,6 +64,15 @@ export default function TopPicksComparison() {
           "bestRating": 5,
           "worstRating": 1,
           "reviewCount": 1
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "url": pick.affiliateUrl,
+          "seller": {
+            "@type": "Organization",
+            "name": "Amazon"
+          }
         },
         "url": `https://www.chefapprovedtools.com/reviews/${pick.id}`
       }
