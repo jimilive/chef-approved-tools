@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Star, CheckCircle, XCircle, Shield, Clock, DollarSign, Thermometer } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import AuthorBio from '@/components/AuthorBio'
 import AffiliateButton from '@/components/AffiliateButton'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
@@ -125,6 +125,33 @@ const breadcrumbs = [
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+]
+
+const faqData = [
+  {
+    question: "Is Le Creuset worth 4-5 times the cost of Lodge?",
+    answer: "For frequent cooks (3+ times weekly) planning 10+ year ownership, yes. The 3 lb weight advantage matters tremendously over time, especially for older cooks or frequent oven transfers. The enamel quality shows no staining after 10 years vs Lodge's tendency to stain. However, if you cook infrequently or budget is primary concern, Lodge performs 90% as well at 20% cost—absolutely acceptable for occasional use."
+  },
+  {
+    question: "What is thermal shock and how do I avoid it?",
+    answer: "Thermal shock occurs when enameled cast iron experiences rapid temperature changes, causing enamel to crack. Avoid: Cold water in hot pot, hot pot on cold surface, frozen food directly into hot pot, refrigerator to hot oven. Proper technique: Let pot cool gradually, room temperature ingredients preferred, gradual heat increase."
+  },
+  {
+    question: "Does the light-colored interior stain over time?",
+    answer: "Not with proper care. After 12 years: zero staining despite regular use with tomato sauces and red wines. Key: Avoid thermal shock, use appropriate utensils, gentle cleaning with warm soapy water. Minor surface scratches from occasional metal utensil contact are barely noticeable and don't affect performance."
+  },
+  {
+    question: "Can I use metal utensils in Le Creuset?",
+    answer: "Technically yes—Le Creuset states \"metal utensil safe.\" However, silicone or wooden utensils recommended to preserve enamel appearance long-term. Metal can create minor surface scratches visible on light-colored interior (though they don't affect performance). After 12 years using primarily wood/silicone with occasional metal contact, interior remains excellent condition."
+  },
+  {
+    question: "How does the 7.25-qt size compare to 5.5-qt for a family of 4?",
+    answer: "The 7.25-qt is the better choice for family of 4. While 5.5-qt works for smaller meals, the 7.25-qt provides versatility for larger roasts (5-6 lbs), batch cooking, and entertaining without being too large for everyday use. Most users eventually wish they'd bought larger—very few regret buying 7.25-qt over 5.5-qt."
+  },
+  {
+    question: "What's covered under the lifetime warranty?",
+    answer: "Lifetime Limited Warranty covers defects in material and workmanship under normal household use. Covered: Manufacturing defects, enamel defects not caused by misuse. Not covered: Damage from thermal shock, drops, metal utensil scratches, commercial use. Users report Le Creuset honors warranty claims readily—one user's thermal shock crack was replaced despite being user error."
+  }
 ]
 
 export const metadata = {
@@ -1138,6 +1165,12 @@ export default function LeCreuset725QtReview() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
           }}
         />
       </article>

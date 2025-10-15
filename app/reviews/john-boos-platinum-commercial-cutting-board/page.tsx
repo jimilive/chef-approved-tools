@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, Ruler, Droplets } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import PriceDisplay from '@/components/PriceDisplay'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
@@ -90,6 +90,49 @@ const breadcrumbs = [
   { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
   { name: "Cutting Boards", url: "https://www.chefapprovedtools.com/cookware" },
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+]
+
+const faqData = [
+  {
+    question: "Is a John Boos cutting board worth the money?",
+    answer: "After 14 years of daily use, absolutely yes—if you cook regularly and value knife care. The combination of knife edge preservation, exceptional work surface, and generational durability justifies the investment for serious home cooks. The value proposition: This board will outlast you. After 14 years of daily use, mine shows minimal wear and I expect another 20+ years easily. The knife sharpening savings alone—extending edge life 3x longer—adds significant value over time. Who should skip it: If you cook infrequently, have extremely limited counter space, or are on a very tight budget, plastic alternatives offer good value. But for serious home cooks, this is a genuine generational investment. My verdict: After 14 years, I have zero regrets. This board will outlive me and pass to my children—that's genuine buy-it-for-life quality."
+  },
+  {
+    question: "How do you maintain a John Boos cutting board?",
+    answer: "Despite marketing claims about frequent oiling, maintenance is far simpler than advertised. Here's what actually works after 14 years: My actual routine: Daily: Wash with warm soapy water, dry immediately. Never: Soak in water or put in dishwasher. Rarely: Apply food-grade mineral oil (I oil it maybe 2-3 times per year). As needed: Light sanding if deep scratches develop (hasn't been needed yet). Manufacturer recommendation vs reality: They suggest oiling monthly. I rarely oil mine but keep it clean and have had zero issues in 14 years. The key is preventing water absorption by washing and drying promptly. Sanitization: Wash with warm soapy water after each use, especially after raw meat. No special sanitizers needed for home use."
+  },
+  {
+    question: "What size John Boos cutting board should I buy?",
+    answer: "For serious home cooks, the 24x18 size is the sweet spot. It provides enough work surface to prep multiple ingredients without constant shuffling, while not being so massive it becomes unwieldy. Size guide based on use: 18x12: Light home cooking, limited counter space. 20x15: Regular home cooking, most kitchens. 24x18: Serious cooking, meal prep, entertaining (my choice). 30x20: Commercial operations, very large kitchens. My recommendation: Get the largest size your counter and budget allow. You'll never regret having more work surface, but you'll constantly be frustrated by too little."
+  },
+  {
+    question: "John Boos vs other wood cutting board brands?",
+    answer: "John Boos is the professional standard for a reason. After 14 years with this board, here's how it compares: John Boos advantages: NSF certification, proven commercial durability, Made in USA quality, edge-grain construction that balances knife-friendliness with longevity, established reputation in professional kitchens. When to consider alternatives: If budget is extremely limited, brands like Catskill Craft offer similar construction at lower prices. For zero-maintenance needs, my Epicurean board is dishwasher-safe. For end-grain construction (more knife-friendly but higher maintenance), Teakhaus offers good options. Bottom line: John Boos represents the standard that others are measured against. You're paying for proven performance and generational quality."
+  },
+  {
+    question: "Can you put a John Boos cutting board in the dishwasher?",
+    answer: "Absolutely not. Never put any wood cutting board in the dishwasher. Why dishwashers destroy wood boards: The combination of high heat, harsh detergents, and prolonged water exposure causes warping, cracking, and rapid deterioration. A board that should last 20+ years will be ruined in months. Proper cleaning: Wash with warm soapy water immediately after use, dry thoroughly with a towel, stand on edge to air dry completely. Takes 2 minutes and preserves the board for decades. Want dishwasher-safe? Consider my Epicurean cutting board instead - it's completely dishwasher-safe and requires zero maintenance, though it won't last as long as the John Boos."
+  },
+  {
+    question: "How long does a John Boos cutting board last?",
+    answer: "With basic care, expect 40+ years easily. This is genuine generational equipment. My experience: After 14 years of daily home use, my board shows minimal wear. I expect another 20+ years easily, then I'll pass it to my children. That's not marketing hyperbole—it's the reality of quality hardwood construction. Factors affecting lifespan: Positive: Regular cleaning, immediate drying, occasional oiling, avoiding soaking. Negative: Dishwasher use (ruins it fast), prolonged water exposure, never oiling, heavy serrated knife use. Commercial kitchens: Even in high-volume restaurant use, these boards commonly last 10+ years. For home use, 40+ years is realistic."
+  },
+  {
+    question: "Is edge-grain or end-grain better for cutting boards?",
+    answer: "Edge-grain (like this John Boos) offers the best balance of performance, durability, and maintenance for most users. Edge-grain advantages: More stable construction (less warping), easier to maintain, lower cost, excellent knife-friendliness, proven durability. This is what John Boos uses and what I recommend. End-grain advantages: Slightly more knife-friendly (self-healing properties), beautiful appearance. But requires more maintenance and costs significantly more. My recommendation: Unless you're obsessed with maximum knife preservation and don't mind extra maintenance, edge-grain is the better choice. After 14 years with this edge-grain board, my knives maintain sharpness exceptionally well."
+  },
+  {
+    question: "How do you remove stains from a John Boos cutting board?",
+    answer: "Most stains come out with coarse salt and lemon juice. For stubborn stains, light sanding works. Standard stain removal: Sprinkle coarse salt generously over stained area. Cut a lemon in half, use it to scrub the salt into the stain. Let sit for 5-10 minutes. Rinse with warm water, dry immediately. Re-oil the treated area. For deep stains: Light sanding with fine-grit sandpaper (220-grit), then re-oil heavily. I've never needed this in 14 years. Prevention: Wash the board immediately after cutting beets, turmeric, or other staining foods. Don't let staining liquids sit on the surface."
+  },
+  {
+    question: "Do John Boos cutting boards come pre-oiled?",
+    answer: "Yes, John Boos boards come with a food-safe mineral oil finish applied at the factory. Initial treatment needed: Despite being pre-oiled, apply additional food-grade mineral oil when you receive it. The factory oil provides basic protection during shipping, but you should season it properly before first use. First-use preparation: Wash with warm soapy water, dry thoroughly. Apply generous coat of food-grade mineral oil. Let absorb for several hours or overnight. Wipe off excess oil. Repeat oiling process 2-3 times in first month. After initial seasoning: Maintenance oiling becomes far less frequent. I oil mine maybe 2-3 times per year despite manufacturers suggesting monthly oiling."
+  },
+  {
+    question: "What's the best knife to use with a maple cutting board?",
+    answer: "Any quality chef knife works beautifully with maple. I use my Victorinox 8-inch chef knife daily with this board. Knife types that work great: Standard chef knives, santoku knives, paring knives, boning knives, carving knives—essentially any smooth-edge knife. The maple surface preserves edge sharpness while providing excellent cutting feel. Avoid on maple boards: Serrated bread knives and steak knives cause deeper grooves in the wood. Use a separate plastic board for bread or get a dedicated bread board. The perfect pairing: A quality maple board + quality knife = maximum performance and longevity for both. The board protects the knife edge, the knife cuts cleanly without damaging the board. After 14 years using my Victorinox with this John Boos, both are still performing excellently."
+  }
 ]
 
 export const metadata = {
@@ -1321,6 +1364,12 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
           }}
         />
       </article>
