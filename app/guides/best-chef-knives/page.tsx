@@ -104,7 +104,8 @@ export default function BestChefKnivesPage() {
               reviews: {
                 rating: knife.rating,
                 count: 1
-              }
+              },
+              affiliateUrl: knife.affiliateUrl
             })),
             "Best Chef Knives of 2025 - Professional Kitchen Testing"
           ))

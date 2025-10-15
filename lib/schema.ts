@@ -289,6 +289,15 @@ export function generateItemListSchema(products: any[], listName: string) {
           "@type": "AggregateRating",
           ratingValue: product.reviews.rating,
           reviewCount: product.reviews.count
+        } : undefined,
+        offers: product.affiliateUrl ? {
+          "@type": "Offer",
+          availability: "https://schema.org/InStock",
+          url: product.affiliateUrl,
+          seller: {
+            "@type": "Organization",
+            name: "Amazon"
+          }
         } : undefined
       }
     }))
