@@ -31,6 +31,13 @@ const productData = {
   }
 };
 
+const breadcrumbs = [
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+  { name: "Knife Care", url: "https://www.chefapprovedtools.com/knife-care" },
+  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+]
+
 const faqData = [
   {
     question: "Is the Norton Tri-Stone sharpener worth it?",
@@ -1073,6 +1080,18 @@ export default function NortonTriStoneSharpenerReview() {
         </div>
 
         {/* Schema.org JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateProductReviewSchema(productData))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
