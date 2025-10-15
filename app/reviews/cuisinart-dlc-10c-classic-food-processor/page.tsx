@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Star, CheckCircle, XCircle } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
@@ -53,6 +53,49 @@ const breadcrumbs = [
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+]
+
+const faqData = [
+  {
+    question: "Is the Cuisinart DLC-10C still worth buying?",
+    answer: "The original DLC-10C I've used for 30 years has been discontinued, but the current replacement (DLC-10SY) offers the same 7-cup capacity, reliable motor, and proven design. If the replacement is even 75% as good as my original model, it's exceptional value. My 30-year experience proves Cuisinart makes food processors that last—this isn't a brand that cuts corners. Bottom line: For anyone who cooks regularly and wants reliable equipment, this is one of the best investments you can make."
+  },
+  {
+    question: "How long do Cuisinart food processors last?",
+    answer: "Based on my 30 years of continuous use with minimal issues, Cuisinart food processors can last multiple decades with proper care. My experience: Only one cracked bowl (still functional) and one broken stem (my fault for forcing it) in 30 years. The motor runs exactly as smoothly as day one. This is genuine buy-it-for-life equipment. Expected lifespan: 20-30+ years with regular home use. Parents had one, I got one, and both are still working. This kind of durability is exceptional."
+  },
+  {
+    question: "What's the difference between 7-cup and 14-cup Cuisinart?",
+    answer: "The main difference is capacity and footprint: 7-cup (DLC-10SY) is perfect for everyday home cooking, smaller footprint, easier storage. 14-cup models are better for large batches, entertaining, or big families. My recommendation: For most home cooks, the 7-cup is the sweet spot. It handles everything I've thrown at it in 30 years—including large batches of hashbrowns and substantial volumes of shredded cheese. Unless you regularly cook for crowds, the 7-cup provides all the capacity you need."
+  },
+  {
+    question: "Can Cuisinart food processors shred cheese well?",
+    answer: "Absolutely—this is where the Cuisinart truly excels. After 30 years of shredding countless pounds of cheese, I can confirm it's one of the best tools for this task. Why it works so well: Sharp shredding disc produces consistent, even results; powerful motor handles hard cheeses without strain; large feed tube accommodates cheese blocks easily; quick cleanup compared to hand shredding or box graters. What takes 15 minutes by hand takes 2 minutes with this food processor."
+  },
+  {
+    question: "Is Cuisinart better than KitchenAid food processor?",
+    answer: "For dedicated food processing, Cuisinart is the better choice. KitchenAid food processor attachments are convenient, but a standalone Cuisinart offers superior performance and capacity. Key advantages: More powerful dedicated motor optimized for food processing; larger capacity (7 cups vs typical 4-5 cup attachments); better performance designed specifically for slicing, shredding, chopping; proven durability (my 30-year track record speaks volumes). If you already own a KitchenAid stand mixer, the attachment is convenient. But for regular food processing, a dedicated Cuisinart is worth the counter space."
+  },
+  {
+    question: "What can you make with a Cuisinart food processor?",
+    answer: "After 30 years of daily use, I've used mine for countless applications. Most common uses: Shredding cheese (mountains of it over 30 years); making perfect hashbrowns (weekend staple); chopping nuts for desserts (30 seconds vs 10 minutes by hand); slicing vegetables (mushrooms, cucumbers, potatoes); making salsa and pesto; processing potatoes for latkes or gratins. The versatility is remarkable—one tool handles tasks that would otherwise require multiple manual methods and significantly more time."
+  },
+  {
+    question: "How do you clean a Cuisinart food processor?",
+    answer: "Cleaning is straightforward and becomes second nature. My routine after 30 years: Disassemble all parts immediately after use; rinse bowl and blade under running water to remove food; wash with warm soapy water (bowl, blade, and lid are dishwasher safe); dry thoroughly before storing; wipe down the base with damp cloth (never immerse motor base). Pro tip: Clean immediately while food is fresh—dried-on food is much harder to remove. The whole process takes 3-4 minutes."
+  },
+  {
+    question: "What should I avoid doing with a food processor?",
+    answer: "My grandmother's advice proved prophetic: 'never force it.' After 30 years and one broken stem (my fault), here's what to avoid: Never force the lid (if it doesn't fit easily, something is misaligned); don't overfill (respect the max fill line for best results); avoid hot liquids (risk of pressure buildup and splashing); don't process extremely hard items (not designed for ice or frozen ingredients); never force assembly (parts should fit together smoothly). Treat it with basic respect, and it will last decades."
+  },
+  {
+    question: "Can you replace parts on old Cuisinart food processors?",
+    answer: "Yes, replacement parts are available, though availability varies by model age. For newer models like the DLC-10SY replacement, parts are readily available. Common replacement parts: Work bowls (mine cracked after decades but still works); lids and feed tubes; blades and discs (shredding, slicing, chopping); stems and adapters. My experience: Even with a cracked bowl and broken stem, my 30-year-old processor still functions. The motor is the core component, and if that's working, the processor is worth keeping."
+  },
+  {
+    question: "Is a food processor worth the counter space?",
+    answer: "If you cook regularly, absolutely yes. After 30 years of daily use, this is one of the most-used tools in my kitchen. Time savings are substantial: Shredding cheese (15 minutes by hand → 2 minutes with processor); chopping nuts (10 minutes by hand → 30 seconds with processor); slicing vegetables (20 minutes with knife → 3 minutes with processor). Skip it if: You rarely cook from scratch, have extremely limited counter space, or prefer manual preparation methods. But for regular home cooks, this earns its place through daily usefulness."
+  }
 ]
 
 export const metadata = {
@@ -459,18 +502,18 @@ export default function CuisinartDLC10CReviewPage() {
         <section className="mb-8" id="faq">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
 
-          <div itemScope itemType="https://schema.org/FAQPage">
+          <div>
 
             {/* Question 1 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Is the Cuisinart DLC-10C still worth buying?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Is the Cuisinart DLC-10C still worth buying?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> The original DLC-10C I&apos;ve used for 30 years has been
                   discontinued, but the current replacement (DLC-10SY) offers the same 7-cup capacity,
                   reliable motor, and proven design.</p>
@@ -484,15 +527,15 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 2 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">How long do Cuisinart food processors last?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>How long do Cuisinart food processors last?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Based on my 30 years of continuous use with minimal issues,
                   Cuisinart food processors can last multiple decades with proper care.</p>
                   <p><strong>My experience:</strong> Only one cracked bowl (still functional) and one
@@ -505,15 +548,15 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 3 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">What&apos;s the difference between 7-cup and 14-cup Cuisinart?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>What&apos;s the difference between 7-cup and 14-cup Cuisinart?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> The main difference is capacity and footprint:</p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
                     <li><strong>7-cup (DLC-10SY):</strong> Perfect for everyday home cooking, smaller
@@ -530,15 +573,15 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 4 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Can Cuisinart food processors shred cheese well?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Can Cuisinart food processors shred cheese well?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Absolutely—this is where the Cuisinart truly excels. After
                   30 years of shredding countless pounds of cheese, I can confirm it&apos;s one of the
                   best tools for this task.</p>
@@ -555,15 +598,15 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 5 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Is Cuisinart better than KitchenAid food processor?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Is Cuisinart better than KitchenAid food processor?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> For dedicated food processing, Cuisinart is the better
                   choice. KitchenAid food processor attachments are convenient, but a standalone Cuisinart
                   offers superior performance and capacity.</p>
@@ -582,15 +625,15 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 6 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">What can you make with a Cuisinart food processor?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>What can you make with a Cuisinart food processor?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> After 30 years of daily use, I&apos;ve used mine for
                   countless applications:</p>
                   <p><strong>Most common uses:</strong></p>
@@ -609,15 +652,15 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 7 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">How do you clean a Cuisinart food processor?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>How do you clean a Cuisinart food processor?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Cleaning is straightforward and becomes second nature:</p>
                   <p><strong>My routine after 30 years:</strong></p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
@@ -634,15 +677,15 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 8 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">What should I avoid doing with a food processor?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>What should I avoid doing with a food processor?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> My grandmother&apos;s advice proved prophetic:
                   &quot;never force it.&quot; After 30 years and one broken stem (my fault), here&apos;s
                   what to avoid:</p>
@@ -662,15 +705,15 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 9 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Can you replace parts on old Cuisinart food processors?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Can you replace parts on old Cuisinart food processors?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> Yes, replacement parts are available, though availability
                   varies by model age. For newer models like the DLC-10SY replacement, parts are readily
                   available.</p>
@@ -689,15 +732,15 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 10 */}
-            <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+            <div style={{
               margin: '20px 0',
               padding: '20px',
               background: '#f8f9fa',
               borderRadius: '6px'
             }}>
-              <h3 itemProp="name">Is a food processor worth the counter space?</h3>
-              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">
+              <h3>Is a food processor worth the counter space?</h3>
+              <div>
+                <div>
                   <p><strong>Answer:</strong> If you cook regularly, absolutely yes. After 30 years of
                   daily use, this is one of the most-used tools in my kitchen.</p>
                   <p><strong>Time savings are substantial:</strong></p>
@@ -1054,6 +1097,12 @@ export default function CuisinartDLC10CReviewPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
           }}
         />
       </article>
