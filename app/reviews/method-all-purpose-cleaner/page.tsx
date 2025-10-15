@@ -1,7 +1,7 @@
 import { Tier2Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
@@ -41,6 +41,49 @@ const productData = {
     primary: "https://www.chefapprovedtools.com/logo.png"
   }
 };
+
+const faqData = [
+  {
+    question: "Is Method All-Purpose Cleaner really non-toxic and safe?",
+    answer: "Yes, genuinely non-toxic. The formula is plant-based, biodegradable, and free from harsh chemicals like ammonia, bleach, or phosphates. It's safe to use on food prep surfaces without rinsing. After 5 years of daily use in my kitchen, I've had zero concerns about safety around food, children, or pets. This is as safe as cleaners get while still being effective."
+  },
+  {
+    question: "How does Method compare to traditional cleaners like Formula 409?",
+    answer: "Method matches the cleaning power of chemical cleaners like 409 or Fantastik but without harsh fumes, chemical residue, or environmental concerns. After 5 years of testing, I can confidently say Method cuts grease just as effectively. The difference is you can breathe normally while using it, and you don't need to worry about toxic residue on food surfaces. It's the rare product that doesn't compromise power for safety."
+  },
+  {
+    question: "Does Method work well on greasy stovetops?",
+    answer: "Exceptionally well. This is where Method truly shines. Spray it on cooking grease splatters, wait 5-10 seconds, and wipe clean—no scrubbing needed. I've watched it dissolve grease that would normally require aggressive scrubbing. For very heavy, baked-on grease, let it sit for 30-60 seconds. This is the primary reason I switched to Method after years of using harsh degreasers."
+  },
+  {
+    question: "Is Method streak-free on stainless steel?",
+    answer: "Yes, but technique matters. Clean with Method, then immediately follow with a dry cloth to buff the surface. This prevents water spots and streaking. I use it on all my stainless steel appliances with excellent results. The two-step process (clean, then dry) takes seconds and produces streak-free shine every time."
+  },
+  {
+    question: "Is Method safe for all kitchen surfaces?",
+    answer: "Safe for virtually all common kitchen surfaces: countertops (granite, quartz, laminate), stovetops, appliances, glass, stainless steel, sealed wood, tile, and more. I use it on everything from my John Boos cutting board to Le Creuset enamel. Avoid using on unsealed natural stone or unfinished wood. When in doubt, test on a small inconspicuous area first."
+  },
+  {
+    question: "What scent options are available?",
+    answer: "Method offers multiple scent options including French Lavender, Pink Grapefruit, Ylang Ylang, Cucumber, and more. All scents are derived from natural fragrances—pleasant but not overwhelming. I personally use Pink Grapefruit, which has a fresh, clean scent that dissipates quickly. Unlike chemical cleaners with artificial perfumes, these natural scents are subtle and enjoyable."
+  },
+  {
+    question: "Are refills available for Method All-Purpose Cleaner?",
+    answer: "Yes, Method offers refill bottles that are more economical and environmentally friendly than buying new spray bottles repeatedly. The refills come in larger containers that pour into your existing spray bottle. This reduces plastic waste significantly and saves money long-term. After 5 years, I've been using the same spray bottles with refills—the spray mechanisms hold up remarkably well."
+  },
+  {
+    question: "How does the cost compare to conventional cleaners?",
+    answer: "Method costs slightly more per bottle than conventional chemical cleaners (typically a few dollars difference). However, the performance is exceptional, you use less product per cleaning (it's very concentrated), and refills reduce long-term cost. The health and environmental benefits justify the small premium. After 5 years, the cost difference is negligible compared to the value of safe, effective cleaning."
+  },
+  {
+    question: "Is Method effective on baked-on, dried grime?",
+    answer: "Yes, but let it sit longer. For normal kitchen messes, 5-10 seconds is enough. For baked-on grime (like microwave splatters or dried stovetop spills), spray generously and let sit 30-60 seconds before wiping. The formula needs time to break down dried residue. Very occasionally, extremely heavy grime may require a second application. Still easier than scrubbing with harsh chemicals."
+  },
+  {
+    question: "Would Method work in a professional kitchen?",
+    answer: "For general surface cleaning, absolutely. However, professional kitchens require sanitizers and disinfectants for health department compliance, which Method is not. It's a cleaner, not a sanitizer. In my 23+ years managing restaurant kitchens, I would have used Method for general cleaning and degreasing, then followed with approved sanitizers for food contact surfaces. For home kitchens, Method handles everything you need."
+  }
+];
 
 export const metadata = {
   alternates: {
@@ -1104,6 +1147,14 @@ export default function MethodAllPurposeCleanerReview() {
             I&apos;ll help you find the safest, most effective products for your needs.
           </p>
         </div>
+
+        {/* FAQ Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
+          }}
+        />
 
       </article>
     </div>

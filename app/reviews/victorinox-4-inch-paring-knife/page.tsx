@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButton from '@/components/AffiliateButton'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
@@ -59,6 +59,40 @@ const breadcrumbs = [
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
 ];
 
+const faqData = [
+  {
+    question: "How long does the blade stay sharp with regular use?",
+    answer: "With regular home use (4-5 times per week), the blade stays razor-sharp for 6-12 months before needing a quick touch-up with a honing steel. In professional kitchens with daily heavy use, I touch mine up every 2-3 months. The high-carbon stainless steel holds an edge significantly better than cheap paring knives that dull within weeks."
+  },
+  {
+    question: "What are the best uses for a 4-inch paring knife?",
+    answer: "The 4-inch paring knife excels at precision tasks: peeling fruits and vegetables, deveining shrimp, hulling strawberries, mincing garlic, removing tomato cores, trimming fat from meat, and any detailed work where a chef's knife is too large. It's designed for in-hand work rather than cutting board tasks. I use mine dozens of times per week for detailed prep work."
+  },
+  {
+    question: "How do I properly sharpen this paring knife?",
+    answer: "For maintenance, use a honing steel every few weeks to realign the edge. For actual sharpening when the blade dulls, use a whetstone (1000/6000 grit works well) at a 15-20 degree angle. Hold the knife steady and draw it across the stone in smooth strokes, alternating sides. Takes about 5 minutes to restore the razor edge. Avoid pull-through sharpeners as they remove too much metal. Many professional chefs sharpen these 2-3 times per year."
+  },
+  {
+    question: "Is this knife dishwasher safe?",
+    answer: "The Fibrox handle is dishwasher-safe, but I strongly recommend hand-washing this knife. Dishwashers are harsh on knife edges - the high heat and detergents can dull the blade faster, and knives can bang against other items causing damage. Hand-wash with warm soapy water, dry immediately, and your knife will last much longer. Takes 30 seconds and protects your investment."
+  },
+  {
+    question: "What's the difference between Swiss-made and Chinese Victorinox knives?",
+    answer: "This model (40600) is Swiss-made with tighter quality control and the same steel used in their premium chef's knives. Some Victorinox paring knives are made in China and cost slightly less but may have minor fit and finish differences. The Swiss-made version has consistently excellent edge geometry and quality control. For the small price difference, I always choose Swiss-made Victorinox."
+  },
+  {
+    question: "Should I get a 3-inch or 4-inch paring knife?",
+    answer: "The 4-inch is more versatile for most cooks. It handles everything from delicate work to slightly larger tasks like peeling apples. The 3-inch excels at very small, intricate work (think garnishes, citrus supremes) but feels cramped for general peeling. If you only buy one paring knife, get the 4-inch. Professional kitchens typically stock both sizes, but home cooks get the most value from the 4-inch."
+  },
+  {
+    question: "How durable is the Fibrox handle over time?",
+    answer: "The Fibrox handle is incredibly durable. I have knives that are 8+ years old with handles that show minimal wear. The textured surface may smooth slightly over years of use, but the grip remains secure and the handle won't crack, warp, or deteriorate like wood. It's one of the reasons Victorinox is the standard in professional kitchens - the handles hold up to daily abuse and frequent washing."
+  },
+  {
+    question: "Should I get a straight edge or serrated paring knife?",
+    answer: "For most tasks, the straight edge (this model) is more versatile. It gives you clean, precise cuts and can be sharpened to maintain performance. Serrated paring knives excel at cutting tomatoes and soft breads but can't be properly sharpened and make rougher cuts. I recommend starting with a straight edge 4-inch paring knife, then adding a serrated one later if you find specific tasks where it would help."
+  }
+];
 
 export default function Victorinox4InchParingKnifeReview() {
   return (
@@ -826,6 +860,12 @@ export default function Victorinox4InchParingKnifeReview() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
           }}
         />
 

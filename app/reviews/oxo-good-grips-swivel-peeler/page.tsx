@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButton from '@/components/AffiliateButton'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
@@ -58,6 +58,40 @@ const breadcrumbs = [
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
 ];
 
+const faqData = [
+  {
+    question: "How long does the OXO Good Grips Swivel Peeler typically last?",
+    answer: "With proper care, this peeler can last 15-20+ years. Mine has been in daily use for over 23 years and still performs excellently. The blade stays sharp for 5+ years of regular use, and replacement blades are available if needed."
+  },
+  {
+    question: "Is this peeler dishwasher safe?",
+    answer: "Yes, the OXO Good Grips Swivel Peeler is completely dishwasher safe. I've run mine through hundreds of dishwasher cycles without any degradation to the blade sharpness or handle integrity."
+  },
+  {
+    question: "Will this work well for people with arthritis or hand pain?",
+    answer: "Absolutely. The oversized, soft, non-slip handle was specifically designed for people with arthritis. The ergonomic design reduces hand strain significantly compared to thin-handled peelers, and the sharp blade requires minimal downward pressure."
+  },
+  {
+    question: "What's the difference between the swivel peeler and the Y-peeler?",
+    answer: "The swivel peeler has an in-line blade that pivots, making it ideal for round vegetables like potatoes and apples. The Y-peeler has a horizontal blade orientation that's better for speed-peeling long vegetables like carrots and cucumbers. Both have the same comfortable Good Grips handle."
+  },
+  {
+    question: "Can this peeler handle tough-skinned vegetables?",
+    answer: "It excels at most vegetables and fruits, but very thick-skinned produce like butternut squash is better handled with a sharp knife. For potatoes, carrots, apples, pears, cucumbers, zucchini, and similar items, this peeler is perfect."
+  },
+  {
+    question: "Does the blade need sharpening?",
+    answer: "No, the stainless steel blade cannot be sharpened at home. However, it stays sharp for many years of regular use. When it eventually dulls, OXO sells replacement blades, though many users (including me) find the blade lasts 20+ years without replacement."
+  },
+  {
+    question: "Can I use this to peel hard cheeses?",
+    answer: "Yes! The sharp blade works excellently for shaving hard cheeses like Parmesan and Romano into thin shavings. In professional kitchens, we regularly use it for cheese garnishes on pasta dishes and salads."
+  },
+  {
+    question: "What's the handle made of?",
+    answer: "The handle features OXO's proprietary Good Grips material - a soft, non-slip santoprene rubber that provides excellent grip even when wet or greasy. The ergonomic shape and cushioned material make it comfortable for extended use."
+  }
+];
 
 export default function OXOGoodGripsSwivelPeelerReview() {
   return (
@@ -787,6 +821,12 @@ export default function OXOGoodGripsSwivelPeelerReview() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
           }}
         />
 

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButton from '@/components/AffiliateButton'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 
 
@@ -30,6 +30,41 @@ const productData = {
     primary: "/logo.png"
   }
 };
+
+const faqData = [
+  {
+    question: "Are ZUPERIA bar mops machine washable?",
+    answer: "Yes, machine wash cold or warm. Avoid fabric softener and bleach to maintain absorbency. Tumble dry low or line dry."
+  },
+  {
+    question: "How absorbent are these towels?",
+    answer: "Very absorbent! The 100% cotton construction holds significantly more water than microfiber or thin dish towels."
+  },
+  {
+    question: "What size are ZUPERIA bar mops?",
+    answer: "Standard size is 16\"x19\" - the professional kitchen standard that's large enough for serious tasks but folds compactly."
+  },
+  {
+    question: "Do they shrink after washing?",
+    answer: "Expect 5-10% shrinkage after the first wash, which is normal for 100% cotton. They'll stabilize after that."
+  },
+  {
+    question: "Are these lint-free?",
+    answer: "After the first few washes, lint shedding decreases significantly. They're not completely lint-free initially but improve quickly."
+  },
+  {
+    question: "Can I use bar mops as dish towels?",
+    answer: "Absolutely! Bar mops are more versatile and durable than typical dish towels. Use them for dishes, counters, spills, and general kitchen cleaning."
+  },
+  {
+    question: "How many should I buy?",
+    answer: "Professional kitchens stock 20-30 bar mops. For home use, 12-18 gives you enough to rotate daily while having clean ones available."
+  },
+  {
+    question: "Do they stain easily?",
+    answer: "Cotton bar mops can stain, but they're meant to be workhorses. Many professionals prefer white so they can bleach them (though bleach reduces lifespan)."
+  }
+];
 
 export const metadata = {
   alternates: {
@@ -771,6 +806,14 @@ export default function ZuperiaBarMopsReview() {
           </a>
         </div>
       </div>
+
+      {/* Structured Data Schemas */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema(faqData))
+        }}
+      />
 
     </article>
   );

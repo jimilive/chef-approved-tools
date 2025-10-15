@@ -4,7 +4,7 @@ import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
@@ -56,6 +56,40 @@ const breadcrumbs = [
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
 ];
 
+const faqData = [
+  {
+    question: "What is a Granton edge?",
+    answer: "The Granton edge features dimples (also called 'scallops' or 'kullens') along the blade that create air pockets, preventing meat from sticking to the knife during slicing."
+  },
+  {
+    question: "Is the blade flexible or stiff?",
+    answer: "Victorinox offers both! Semi-flexible blades are best for poultry and fish, while stiff blades excel at beef and pork. The semi-stiff is the most versatile choice."
+  },
+  {
+    question: "What meats is this knife best for?",
+    answer: "Excellent for deboning chicken, trimming silver skin from beef, removing fat, portioning fish, and any task requiring precision cuts around bones and joints."
+  },
+  {
+    question: "Is the Victorinox boning knife dishwasher safe?",
+    answer: "Yes with the Fibrox handle, but hand washing is recommended to protect the blade edge and prevent it from dulling from contact with other items."
+  },
+  {
+    question: "How do I maintain and sharpen this knife?",
+    answer: "Regular honing with a steel keeps the edge aligned. For sharpening, use a whetstone or professional service when you notice it's not cutting cleanly through connective tissue."
+  },
+  {
+    question: "How long should a boning knife last?",
+    answer: "With proper care, a Victorinox boning knife can last decades. The blade won't chip or break with normal use, and the warranty covers manufacturing defects."
+  },
+  {
+    question: "What's the difference between boning and fillet knives?",
+    answer: "Boning knives are typically stiffer and better for red meat and poultry. Fillet knives are more flexible and specialized for fish."
+  },
+  {
+    question: "Can I use this for general cutting tasks?",
+    answer: "While you could, boning knives are specialized tools. The narrow blade and curve are optimized for working around bones - use a chef's knife for general cutting."
+  }
+];
 
 export default function VictorinoxGrantonEdgeBoningKnifeReview() {
   return (
@@ -719,6 +753,26 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
             </div>
           </div>
         </section>
+
+        {/* Structured Data Schemas */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateProductReviewSchema(productData))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
+          }}
+        />
 
     </div>
   )

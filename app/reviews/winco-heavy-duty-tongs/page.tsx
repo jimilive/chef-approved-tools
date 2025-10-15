@@ -3,7 +3,7 @@ import Image from 'next/image'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import Link from 'next/link'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
@@ -56,6 +56,40 @@ const breadcrumbs = [
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
 ];
 
+const faqData = [
+  {
+    question: "Are Winco tongs dishwasher safe?",
+    answer: "Yes, all stainless steel Winco tongs are dishwasher safe. They hold up well in commercial dishwashers."
+  },
+  {
+    question: "Do Winco tongs have a locking mechanism?",
+    answer: "Most standard Winco utility tongs (like the UT-12) do NOT have a lock. Some newer models do, but the classic versions store unlocked. Store them in a drawer or hang them."
+  },
+  {
+    question: "What length tongs should I get?",
+    answer: "9-inch for general kitchen tasks and sautéing, 12-inch for grilling and working with hot pans, 16-inch for grilling over high heat or reaching into deep pots."
+  },
+  {
+    question: "How's the spring tension on Winco tongs?",
+    answer: "The coiled spring provides strong, consistent tension that doesn't weaken over time. This is a key feature that makes them professional-grade."
+  },
+  {
+    question: "How heat-resistant are stainless steel tongs?",
+    answer: "Stainless steel handles heat well but will get hot with prolonged contact with hot cookware. The scalloped tips can withstand direct grill contact."
+  },
+  {
+    question: "Are these tongs heavy or lightweight?",
+    answer: "Winco tongs are heavier than typical home-use tongs. The thick stainless steel (0.9mm-1.2mm) makes them sturdy enough for commercial kitchens."
+  },
+  {
+    question: "Can I use Winco tongs on nonstick cookware?",
+    answer: "Yes, but be gentle. The scalloped stainless steel edges can scratch nonstick surfaces if you're rough. For nonstick, consider silicone-tipped tongs."
+  },
+  {
+    question: "How do Winco tongs compare to OXO tongs?",
+    answer: "Winco tongs are more industrial - heavier, no frills, and dirt cheap ($2-5). OXO tongs have cushioned handles, locks, and cost more ($10-15). Both are excellent but serve different needs."
+  }
+];
 
 export default function WincoHeavyDutyTongsReview() {
   return (
@@ -768,6 +802,26 @@ export default function WincoHeavyDutyTongsReview() {
             </div>
           </div>
         </section>
+
+        {/* Structured Data Schemas */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateProductReviewSchema(productData))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
+          }}
+        />
 
     </div>
   )
