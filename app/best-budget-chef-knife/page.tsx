@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Star, DollarSign, Award, TrendingUp, Shield } from 'lucide-react'
 import { generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata = {
   title: "Best Budget Chef Knife 2025: Victorinox Fibrox 8\" | Chef Approved",
@@ -74,6 +75,12 @@ export default function BestBudgetChefKnife() {
             At around $40, it delivers professional-grade performance that rivals knives costing $200+.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <CTAVisibilityTracker
+              ctaId="best-budget-chef-knife-quick-answer-amazon"
+              position="above_fold"
+              productSlug="victorinox-fibrox-8-inch-chefs-knife"
+              merchant="amazon"
+            >
             <a
               href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
               target="_blank"
@@ -83,6 +90,7 @@ export default function BestBudgetChefKnife() {
               <DollarSign className="w-5 h-5" />
               Check Current Price on Amazon
             </a>
+            </CTAVisibilityTracker>
             <div className="flex items-center gap-2 text-slate-600">
               <Star className="w-5 h-5 text-yellow-500 fill-current" />
               <span className="font-semibold">4.8/5</span>
@@ -256,6 +264,12 @@ export default function BestBudgetChefKnife() {
             If you're looking for your first quality chef's knife or want a reliable workhorse without breaking the bank,
             this is the knife to buy.
           </p>
+          <CTAVisibilityTracker
+            ctaId="best-budget-chef-knife-final-verdict-amazon"
+            position="final_cta"
+            productSlug="victorinox-fibrox-8-inch-chefs-knife"
+            merchant="amazon"
+          >
           <a
             href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
             target="_blank"
@@ -265,12 +279,19 @@ export default function BestBudgetChefKnife() {
             <DollarSign className="w-6 h-6" />
             Check Price on Amazon
           </a>
+          </CTAVisibilityTracker>
         </section>
 
         {/* Related Content */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Guides & Reviews</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <CTAVisibilityTracker
+              ctaId="best-budget-chef-knife-related-knife-care"
+              position="final_cta"
+              productSlug="knife-care"
+              merchant="internal"
+            >
             <Link
               href="/guides/knife-care"
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
@@ -278,6 +299,13 @@ export default function BestBudgetChefKnife() {
               <h3 className="font-bold text-slate-900 mb-2">How to Care for Your Chef's Knife</h3>
               <p className="text-sm text-slate-600">Essential maintenance tips to keep your knife razor-sharp for decades.</p>
             </Link>
+            </CTAVisibilityTracker>
+            <CTAVisibilityTracker
+              ctaId="best-budget-chef-knife-related-meat-knife"
+              position="final_cta"
+              productSlug="best-knife-for-cutting-meat"
+              merchant="internal"
+            >
             <Link
               href="/best-knife-for-cutting-meat"
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
@@ -285,6 +313,7 @@ export default function BestBudgetChefKnife() {
               <h3 className="font-bold text-slate-900 mb-2">Best Knife for Cutting Meat</h3>
               <p className="text-sm text-slate-600">Discover the professional's choice for butchering, trimming, and deboning.</p>
             </Link>
+            </CTAVisibilityTracker>
           </div>
         </section>
 

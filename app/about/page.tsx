@@ -2,6 +2,8 @@ import Image from 'next/image'
 import { Clock, Shield, TrendingUp, Award, Users, DollarSign } from 'lucide-react'
 import { Metadata } from 'next'
 import FAQSchema from '@/components/FAQSchema'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About Scott Bradley & Our Professional Testing Methodology | Chef Approved Tools',
@@ -390,12 +392,20 @@ export default function AboutPage() {
               This tier system exists for one reason: <strong>radical transparency</strong>. You deserve
               to know exactly what experience backs each recommendation.
             </p>
-            <a
-              href="/review-tiers"
-              className="inline-block text-orange-600 hover:text-orange-800 font-semibold underline"
+            <CTAVisibilityTracker
+              ctaId="about-tier-system-link"
+              ctaType="internal_link"
+              merchant="internal"
+              productId="review-tiers"
+              location="tier_system_info"
             >
-              Learn more about our tier system →
-            </a>
+              <Link
+                href="/review-tiers"
+                className="inline-block text-orange-600 hover:text-orange-800 font-semibold underline"
+              >
+                Learn more about our tier system →
+              </Link>
+            </CTAVisibilityTracker>
           </div>
         </div>
       </section>

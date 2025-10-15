@@ -4,7 +4,9 @@ import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AuthorBio from '@/components/AuthorBio'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
-import AffiliateButton from '@/components/AffiliateButton'
+
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 
@@ -159,15 +161,22 @@ export default function VictorinoxFibrox10InchReview() {
         }}>
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Best Price:</h3>
           
-          <AffiliateButton
-            href="https://amzn.to/4o6pPwW"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-above_fold`}
             position="above_fold"
-            variant="primary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            View on Amazon →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://amzn.to/4o6pPwW"
+              merchant="amazon"
+              product={productData.slug}
+              position="above_fold"
+              variant="primary"
+            >
+              View on Amazon →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
           
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 Pricing updated daily. We earn commission at no extra cost to you.<br/>
@@ -361,15 +370,22 @@ export default function VictorinoxFibrox10InchReview() {
           <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
             Convinced this is right for you?
           </p>
-          <AffiliateButton
-            href="https://amzn.to/4o6pPwW"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-mid_article-1`}
             position="mid_article"
-            variant="secondary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Current Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://amzn.to/4o6pPwW"
+              merchant="amazon"
+              product={productData.slug}
+              position="mid_article"
+              variant="secondary"
+            >
+              Check Current Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
         </div>
 
         {/* Pros & Cons */}
@@ -641,15 +657,22 @@ export default function VictorinoxFibrox10InchReview() {
                 <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Prime shipping | ✓ Easy returns | ✓ Price tracking</p>
               </div>
               <div>
-                <AffiliateButton
-                  href="https://amzn.to/4o6pPwW"
-                  merchant="amazon"
-                  product="{productData.slug}"
+                <CTAVisibilityTracker
+                  ctaId={`review-${productData.slug}-mid_article-2`}
                   position="mid_article"
-                  variant="secondary"
+                  productSlug={productData.slug}
+                  merchant="amazon"
                 >
-                  View on Amazon →
-                </AffiliateButton>
+                  <AffiliateButton
+                    href="https://amzn.to/4o6pPwW"
+                    merchant="amazon"
+                    product={productData.slug}
+                    position="mid_article"
+                    variant="secondary"
+                  >
+                    View on Amazon →
+                  </AffiliateButton>
+                </CTAVisibilityTracker>
               </div>
             </div>
           </div>
@@ -773,15 +796,22 @@ export default function VictorinoxFibrox10InchReview() {
             Join thousands of professional chefs and serious home cooks who trust Victorinox for reliable, high-performance knives.
           </p>
           
-          <AffiliateButton
-            href="https://amzn.to/4o6pPwW"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-final_cta`}
             position="final_cta"
-            variant="primary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Current Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://amzn.to/4o6pPwW"
+              merchant="amazon"
+              product={productData.slug}
+              position="final_cta"
+              variant="primary"
+            >
+              Check Current Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
           
           <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
             💡 In stock and ready to ship. Prime delivery available.

@@ -7,8 +7,6 @@ import AffiliateButton from '@/components/AffiliateButton';
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker';
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 
 
 
@@ -149,22 +147,15 @@ export default function BenrinerLargeMandolineReview() {
       }}>
         <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Best Price:</h3>
 
-        <CTAVisibilityTracker
-          ctaId={`review-${productData.slug}-above_fold`}
-          position="above_fold"
-          productSlug={productData.slug}
+        <AffiliateButton
+          href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
           merchant="amazon"
+          product="{productData.slug}"
+          position="above_fold"
+          variant="primary"
         >
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
-            merchant="amazon"
-            product={productData.slug}
-            position="above_fold"
-            variant="primary"
-          >
-            View on Amazon →
-          </AffiliateButton>
-        </CTAVisibilityTracker>
+          View on Amazon →
+        </AffiliateButton>
 
         <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
           💡 Price updated daily. We earn commission at no extra cost to you.
@@ -403,22 +394,15 @@ export default function BenrinerLargeMandolineReview() {
       }}>
         <h3 style={{ marginTop: 0, fontSize: '22px' }}>Ready to Experience Professional Precision?</h3>
 
-        <CTAVisibilityTracker
-          ctaId={`review-${productData.slug}-mid_article`}
-          position="mid_article"
-          productSlug={productData.slug}
+        <AffiliateButton
+          href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
           merchant="amazon"
+          product="{productData.slug}"
+          position="mid_article"
+          variant="secondary"
         >
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
-            merchant="amazon"
-            product={productData.slug}
-            position="mid_article"
-            variant="secondary"
-          >
-            Check Price on Amazon →
-          </AffiliateButton>
-        </CTAVisibilityTracker>
+          Check Price on Amazon →
+        </AffiliateButton>
 
         <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
           💡 Price updated daily. We earn commission at no extra cost to you.
@@ -530,6 +514,194 @@ export default function BenrinerLargeMandolineReview() {
 
       </div>
 
+      {/* FAQ Section */}
+      <h2>Frequently Asked Questions</h2>
+
+      <div itemScope itemType="https://schema.org/FAQPage">
+
+        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          margin: '20px 0',
+          padding: '20px',
+          background: '#f8f9fa',
+          borderRadius: '6px'
+        }}>
+          <h3 itemProp="name">Is the Benriner mandoline worth it?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+            <div itemProp="text">
+              <p><strong>Answer:</strong> After years of professional use, absolutely yes.
+              The Japanese precision engineering delivers consistent results that justify
+              the investment. Cuts prep time significantly and produces restaurant-quality
+              uniform slices. For serious home cooks or professionals, this is the standard.</p>
+            </div>
+          </div>
+        </div>
+
+        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          margin: '20px 0',
+          padding: '20px',
+          background: '#f8f9fa',
+          borderRadius: '6px'
+        }}>
+          <h3 itemProp="name">How dangerous is a mandoline slicer?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+            <div itemProp="text">
+              <p><strong>Answer:</strong> Extremely sharp blade requires serious respect.
+              Always use the hand guard, never slice without it. Professional kitchens
+              require cut-resistant gloves when using mandolines. The blade is sharp enough
+              to slice through fingernails effortlessly—this is not an exaggeration.</p>
+              <p>With proper safety protocols, it&apos;s safe. Without them, it&apos;s one
+              of the most dangerous tools in the kitchen.</p>
+            </div>
+          </div>
+        </div>
+
+        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          margin: '20px 0',
+          padding: '20px',
+          background: '#f8f9fa',
+          borderRadius: '6px'
+        }}>
+          <h3 itemProp="name">What&apos;s the difference between Benriner and cheap mandolines?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+            <div itemProp="text">
+              <p><strong>Answer:</strong> The blade quality is night and day. Benriner uses
+              high-carbon Japanese stainless steel that stays sharp significantly longer.
+              Cheap mandolines dull quickly and produce inconsistent results.</p>
+              <p>Additionally, the adjustment mechanism on Benriner is precise and repeatable.
+              Budget mandolines often have loose, imprecise adjustments that defeat the
+              purpose of uniform slicing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          margin: '20px 0',
+          padding: '20px',
+          background: '#f8f9fa',
+          borderRadius: '6px'
+        }}>
+          <h3 itemProp="name">What vegetables work best on a mandoline?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+            <div itemProp="text">
+              <p><strong>Answer:</strong> Excellent for: cucumbers, potatoes, radishes,
+              carrots, zucchini, apples, onions, cabbage. Basically any firm vegetable
+              or fruit that you want uniformly sliced.</p>
+              <p>Avoid: very soft items like tomatoes (unless extremely ripe), leafy greens,
+              or anything too irregular in shape. Soft items get crushed rather than cleanly sliced.</p>
+            </div>
+          </div>
+        </div>
+
+        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          margin: '20px 0',
+          padding: '20px',
+          background: '#f8f9fa',
+          borderRadius: '6px'
+        }}>
+          <h3 itemProp="name">Can you julienne with a Benriner?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+            <div itemProp="text">
+              <p><strong>Answer:</strong> Yes, the Benriner includes julienne blades for
+              fine and medium cuts. Perfect for garnishes, salads, or stir-fry prep. The
+              julienne quality matches the slicing precision—consistent, professional results.</p>
+            </div>
+          </div>
+        </div>
+
+        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          margin: '20px 0',
+          padding: '20px',
+          background: '#f8f9fa',
+          borderRadius: '6px'
+        }}>
+          <h3 itemProp="name">How do you clean a Benriner mandoline safely?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+            <div itemProp="text">
+              <p><strong>Answer:</strong> Rinse immediately after use to prevent food from
+              drying on blade. Use a brush or sponge—never your bare hand directly on blade.
+              Dishwasher safe, but hand washing preserves blade edge longer.</p>
+              <p>Always clean with extreme caution. The blade is sharp enough to cut through
+              sponges effortlessly. Many professionals keep a dedicated brush just for
+              mandoline cleaning.</p>
+            </div>
+          </div>
+        </div>
+
+        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          margin: '20px 0',
+          padding: '20px',
+          background: '#f8f9fa',
+          borderRadius: '6px'
+        }}>
+          <h3 itemProp="name">How long does the blade stay sharp?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+            <div itemProp="text">
+              <p><strong>Answer:</strong> With proper care, the blade stays professionally
+              sharp for years. In our restaurant environment with daily use, we found
+              minimal dulling over time. The Japanese stainless steel holds an edge far
+              better than budget alternatives.</p>
+              <p>When it does eventually dull, replacement blades are available and
+              reasonably priced.</p>
+            </div>
+          </div>
+        </div>
+
+        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          margin: '20px 0',
+          padding: '20px',
+          background: '#f8f9fa',
+          borderRadius: '6px'
+        }}>
+          <h3 itemProp="name">Is the hand guard effective?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+            <div itemProp="text">
+              <p><strong>Answer:</strong> The included hand guard is well-designed and
+              effective when used properly. It has spikes that grip the food securely and
+              keeps your fingers safely away from the blade.</p>
+              <p>That said, many professional cooks prefer cut-resistant gloves as additional
+              protection. The hand guard is good, but the blade is so sharp that extra
+              precaution is never wasted.</p>
+            </div>
+          </div>
+        </div>
+
+        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          margin: '20px 0',
+          padding: '20px',
+          background: '#f8f9fa',
+          borderRadius: '6px'
+        }}>
+          <h3 itemProp="name">Can you sharpen a Benriner blade?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+            <div itemProp="text">
+              <p><strong>Answer:</strong> Technically yes, but replacement blades are
+              relatively affordable and ensure factory precision. Most professionals simply
+              replace the blade when it dulls rather than attempting to sharpen it.</p>
+              <p>The blade design is optimized for slicing, not for repeated sharpening
+              like a chef knife.</p>
+            </div>
+          </div>
+        </div>
+
+        <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
+          margin: '20px 0',
+          padding: '20px',
+          background: '#f8f9fa',
+          borderRadius: '6px'
+        }}>
+          <h3 itemProp="name">What size Benriner should I buy?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+            <div itemProp="text">
+              <p><strong>Answer:</strong> The large Benriner (reviewed here) is the most
+              versatile. It handles everything from small radishes to large potatoes. The
+              medium size works for home kitchens with limited counter space, but the large
+              is more capable for serious cooking.</p>
+              <p>For professional or serious home use, always choose the large size.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
       {/* Strong Final CTA */}
       <div style={{
@@ -591,22 +763,15 @@ export default function BenrinerLargeMandolineReview() {
           Check current price and transform your prep work:
         </p>
 
-        <CTAVisibilityTracker
-          ctaId={`review-${productData.slug}-final_cta`}
-          position="final_cta"
-          productSlug={productData.slug}
+        <AffiliateButton
+          href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
           merchant="amazon"
+          product="{productData.slug}"
+          position="final_cta"
+          variant="primary"
         >
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
-            merchant="amazon"
-            product={productData.slug}
-            position="final_cta"
-            variant="primary"
-          >
-            View on Amazon →
-          </AffiliateButton>
-        </CTAVisibilityTracker>
+          View on Amazon →
+        </AffiliateButton>
 
       </div>
 
@@ -769,26 +934,6 @@ export default function BenrinerLargeMandolineReview() {
           </a>
         </div>
       </div>
-
-      {/* Structured Data - JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateProductReviewSchema(productData))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema(faqData))
-        }}
-      />
 
     </article>
   );

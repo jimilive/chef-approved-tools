@@ -3,7 +3,9 @@ import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, Aler
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
-import AffiliateButton from '@/components/AffiliateButton'
+
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
@@ -219,15 +221,22 @@ export default function Lodge3SkilletBundleReview() {
             Best value in cast iron - restaurant quality at exceptional price
           </p>
 
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-above-fold`}
             position="above_fold"
-            variant="primary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            View on Amazon →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
+              merchant="amazon"
+              product={productData.slug}
+              position="above_fold"
+              variant="primary"
+            >
+              View on Amazon →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
 
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 We earn commission at no extra cost to you.<br/>
@@ -434,15 +443,22 @@ export default function Lodge3SkilletBundleReview() {
           <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
             Ready for restaurant-quality cast iron?
           </p>
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-mid-article`}
             position="mid_article"
-            variant="secondary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Current Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
+              merchant="amazon"
+              product={productData.slug}
+              position="mid_article"
+              variant="secondary"
+            >
+              Check Current Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
         </div>
 
         {/* Cooking Performance Analysis */}
@@ -655,15 +671,22 @@ export default function Lodge3SkilletBundleReview() {
                   <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Prime shipping | ✓ Free returns</p>
                 </div>
                 <div>
-                  <AffiliateButton
-                    href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
-                    merchant="amazon"
-                    product="{productData.slug}"
+                  <CTAVisibilityTracker
+                    ctaId={`review-${productData.slug}-mid_article`}
                     position="mid_article"
-                    variant="secondary"
+                    productSlug={productData.slug}
+                    merchant="amazon"
                   >
-                    View on Amazon →
-                  </AffiliateButton>
+                    <AffiliateButton
+                      href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
+                      merchant="amazon"
+                      product={productData.slug}
+                      position="mid_article"
+                      variant="secondary"
+                    >
+                      View on Amazon →
+                    </AffiliateButton>
+                  </CTAVisibilityTracker>
                 </div>
               </div>
             </div>
@@ -1170,15 +1193,22 @@ export default function Lodge3SkilletBundleReview() {
               Outstanding value - restaurant quality at exceptional pricing
             </p>
 
-            <AffiliateButton
-              href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
-              merchant="amazon"
-              product="{productData.slug}"
+            <CTAVisibilityTracker
+              ctaId={`review-${productData.slug}-final_cta`}
               position="final_cta"
-              variant="primary"
+              productSlug={productData.slug}
+              merchant="amazon"
             >
-              Check Current Price →
-            </AffiliateButton>
+              <AffiliateButton
+                href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
+                merchant="amazon"
+                product={productData.slug}
+                position="final_cta"
+                variant="primary"
+              >
+                Check Current Price →
+              </AffiliateButton>
+            </CTAVisibilityTracker>
 
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
               💡 More retailers will be added soon for price comparison

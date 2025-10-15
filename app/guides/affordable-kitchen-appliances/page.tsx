@@ -1,28 +1,7 @@
-import { Metadata } from 'next';
 import Link from 'next/link';
 import { DollarSign, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: "Affordable Kitchen Appliances: Professional Chef's Real-World Testing (2025)",
-  description: "Professional chef shares affordable kitchen appliances he's actually used and tested. Ninja blender, KitchenAid mixers, Cuisinart food processors, Instant Pot, and more. Budget equipment that works.",
-  keywords: [
-    "affordable kitchen appliances",
-    "budget kitchen appliances",
-    "cheap kitchen appliances",
-    "kitchen appliances deals",
-    "best affordable kitchen appliances",
-    "inexpensive kitchen appliances",
-    "value kitchen appliances"
-  ],
-  openGraph: {
-    title: "Affordable Kitchen Appliances: Chef's Real Testing & Experience",
-    description: "Professional chef shares affordable kitchen appliances he's actually tested. No speculation—just real experience with budget equipment.",
-    type: "article",
-  },
-  alternates: {
-    canonical: '/guides/affordable-kitchen-appliances',
-  },
-};
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
+import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 
 export default function AffordableKitchenAppliancesPage() {
   return (
@@ -121,9 +100,15 @@ export default function AffordableKitchenAppliancesPage() {
 
             <p className="text-slate-700 mb-4 text-lg">
               <strong>My experience:</strong> I own the Ninja BL660 and use it regularly at home. After years with the{' '}
-              <Link href="/reviews/vitamix-5200" className="text-orange-600 hover:text-orange-800 underline font-semibold">
-                Vitamix 5200
-              </Link>{' '}
+              <CTAVisibilityTracker
+                ctaId="guide-affordable-appliances-vitamix-link-1"
+                position="mid_article"
+                productSlug="vitamix-5200"
+              >
+                <Link href="/reviews/vitamix-5200" className="text-orange-600 hover:text-orange-800 underline font-semibold">
+                  Vitamix 5200
+                </Link>
+              </CTAVisibilityTracker>{' '}
               in professional kitchens, here&apos;s the honest truth: <strong>For basic home use, the Ninja does 80% of what a Vitamix does at 20% of the price.</strong>
             </p>
 
@@ -160,9 +145,15 @@ export default function AffordableKitchenAppliancesPage() {
             <h4 className="font-semibold text-orange-900 mb-2">When to Upgrade to Vitamix:</h4>
             <p className="text-orange-800">
               After 5+ years testing the{' '}
-              <Link href="/reviews/vitamix-5200" className="underline font-semibold hover:text-orange-900">
-                Vitamix 5200 in restaurant conditions
-              </Link>, here&apos;s when the upgrade is worth it: daily use (7+ hours weekly), hot soup blending, nut butters, commercial/revenue-generating use, or 10+ year ownership plans. For occasional home use, stick with the Ninja.
+              <CTAVisibilityTracker
+                ctaId="guide-affordable-appliances-vitamix-link-2"
+                position="mid_article"
+                productSlug="vitamix-5200"
+              >
+                <Link href="/reviews/vitamix-5200" className="underline font-semibold hover:text-orange-900">
+                  Vitamix 5200 in restaurant conditions
+                </Link>
+              </CTAVisibilityTracker>, here&apos;s when the upgrade is worth it: daily use (7+ hours weekly), hot soup blending, nut butters, commercial/revenue-generating use, or 10+ year ownership plans. For occasional home use, stick with the Ninja.
             </p>
           </div>
         </section>
@@ -185,9 +176,15 @@ export default function AffordableKitchenAppliancesPage() {
 
             <p className="text-slate-700 mb-4 text-lg">
               <strong>My experience:</strong> I used the KitchenAid Professional 600 (now discontinued, replaced by KSM60) extensively. This mid-tier KitchenAid sits between the budget Classic and the{' '}
-              <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline font-semibold">
-                Commercial Series I tested at Purple Cafe
-              </Link>. It&apos;s the sweet spot for serious home bakers.
+              <CTAVisibilityTracker
+                ctaId="guide-affordable-appliances-kitchenaid-link-1"
+                position="mid_article"
+                productSlug="kitchenaid-ksm8990wh"
+              >
+                <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline font-semibold">
+                  Commercial Series I tested at Purple Cafe
+                </Link>
+              </CTAVisibilityTracker>. It&apos;s the sweet spot for serious home bakers.
             </p>
 
             <div className="space-y-4 mb-4">
@@ -232,9 +229,15 @@ export default function AffordableKitchenAppliancesPage() {
             <h4 className="font-semibold text-orange-900 mb-2">When to Upgrade to Commercial:</h4>
             <p className="text-orange-800">
               If you&apos;re baking more than 5 hours weekly, running a home bakery, or need NSF certification for commercial use, upgrade to the{' '}
-              <Link href="/reviews/kitchenaid-ksm8990wh" className="underline font-semibold hover:text-orange-900">
-                KitchenAid Commercial Series (KSM8990WH)
-              </Link>{' '}
+              <CTAVisibilityTracker
+                ctaId="guide-affordable-appliances-kitchenaid-link-2"
+                position="mid_article"
+                productSlug="kitchenaid-ksm8990wh"
+              >
+                <Link href="/reviews/kitchenaid-ksm8990wh" className="underline font-semibold hover:text-orange-900">
+                  KitchenAid Commercial Series (KSM8990WH)
+                </Link>
+              </CTAVisibilityTracker>{' '}
               ($759-1,100). I tested this for 18 months at Purple Cafe—it&apos;s genuine commercial equipment that will outlast 3-4 consumer models.
             </p>
           </div>
@@ -258,9 +261,15 @@ export default function AffordableKitchenAppliancesPage() {
 
             <p className="text-slate-700 mb-4 text-lg">
               <strong>My experience:</strong> I used the Cuisinart DLC-10C extensively (now discontinued, replaced by DLC-10S Pro Classic). After years with the{' '}
-              <Link href="/reviews/robot-coupe-r2-dice" className="text-orange-600 hover:text-orange-800 underline font-semibold">
-                Robot Coupe R2 in professional kitchens
-              </Link>, here&apos;s what I learned: <strong>The Cuisinart delivers 70-75% of commercial processor performance at 1/3 the price.</strong>
+              <CTAVisibilityTracker
+                ctaId="guide-affordable-appliances-robotcoupe-link-1"
+                position="mid_article"
+                productSlug="robot-coupe-r2-dice"
+              >
+                <Link href="/reviews/robot-coupe-r2-dice" className="text-orange-600 hover:text-orange-800 underline font-semibold">
+                  Robot Coupe R2 in professional kitchens
+                </Link>
+              </CTAVisibilityTracker>, here&apos;s what I learned: <strong>The Cuisinart delivers 70-75% of commercial processor performance at 1/3 the price.</strong>
             </p>
 
             <div className="space-y-4 mb-4">
@@ -307,9 +316,15 @@ export default function AffordableKitchenAppliancesPage() {
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
               <p className="text-slate-800">
                 <strong>💡 Real Talk:</strong> For serious home cooks processing 3-4x weekly, the Cuisinart DLC-10S is excellent value. It handles all standard food processor tasks reliably. But if you&apos;re doing high-volume prep or commercial use, the{' '}
-                <Link href="/reviews/robot-coupe-r2-dice" className="underline hover:text-blue-700">
-                  Robot Coupe R2
-                </Link>{' '}
+                <CTAVisibilityTracker
+                  ctaId="guide-affordable-appliances-robotcoupe-link-2"
+                  position="mid_article"
+                  productSlug="robot-coupe-r2-dice"
+                >
+                  <Link href="/reviews/robot-coupe-r2-dice" className="underline hover:text-blue-700">
+                    Robot Coupe R2
+                  </Link>
+                </CTAVisibilityTracker>{' '}
                 is worth the investment.
               </p>
             </div>
@@ -354,9 +369,15 @@ export default function AffordableKitchenAppliancesPage() {
 
               <p className="text-slate-700 mb-3">
                 I&apos;ve tested Black & Decker toaster ovens extensively. See my{' '}
-                <Link href="/reviews/black-decker-toaster-oven" className="text-orange-600 hover:text-orange-800 underline font-semibold">
-                  complete Black & Decker toaster oven review
-                </Link>{' '}
+                <CTAVisibilityTracker
+                  ctaId="guide-affordable-appliances-blackdecker-link-1"
+                  position="mid_article"
+                  productSlug="black-decker-toaster-oven"
+                >
+                  <Link href="/reviews/black-decker-toaster-oven" className="text-orange-600 hover:text-orange-800 underline font-semibold">
+                    complete Black & Decker toaster oven review
+                  </Link>
+                </CTAVisibilityTracker>{' '}
                 for detailed testing results and real-world performance data.
               </p>
             </div>
@@ -559,9 +580,14 @@ export default function AffordableKitchenAppliancesPage() {
               <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
                 <p className="text-slate-800 text-sm">
                   <strong>🎯 The Key:</strong> Every appliance listed here is something I&apos;ve personally used or tested. I&apos;m not guessing—this is real experience. If you&apos;re ready for premium equipment, see my{' '}
-                  <Link href="/reviews" className="text-orange-600 hover:text-orange-800 underline font-semibold">
-                    professional equipment reviews
-                  </Link>.
+                  <CTAVisibilityTracker
+                    ctaId="guide-affordable-appliances-reviews-link"
+                    position="mid_article"
+                  >
+                    <Link href="/reviews" className="text-orange-600 hover:text-orange-800 underline font-semibold">
+                      professional equipment reviews
+                    </Link>
+                  </CTAVisibilityTracker>.
                 </p>
               </div>
             </div>
@@ -574,12 +600,17 @@ export default function AffordableKitchenAppliancesPage() {
           <p className="text-slate-700 mb-4">
             When you&apos;re ready to invest in professional equipment, see my complete reviews of the commercial-grade appliances I tested in restaurant conditions.
           </p>
-          <Link
-            href="/appliances"
-            className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+          <CTAVisibilityTracker
+            ctaId="guide-affordable-appliances-final-cta"
+            position="final_cta"
           >
-            View Professional Kitchen Appliances →
-          </Link>
+            <Link
+              href="/appliances"
+              className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+            >
+              View Professional Kitchen Appliances →
+            </Link>
+          </CTAVisibilityTracker>
         </div>
 
         {/* Author Bio */}

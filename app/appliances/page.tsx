@@ -2,6 +2,8 @@
 import Script from "next/script";
 import Link from "next/link";
 import BreadcrumbSchema, { categoryBreadcrumbs } from '@/components/BreadcrumbSchema';
+import ProductImpressionTracker from '@/components/ProductImpressionTracker';
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 
 
 export default function AppliancesPage() {
@@ -67,80 +69,90 @@ export default function AppliancesPage() {
       </p>
 
       <div style={{ display: 'grid', gap: '24px', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', marginBottom: '48px' }}>
-        {products.map(p => (
-          <div key={p.id} style={{ backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', padding: '24px', border: '1px solid #e2e8f0', position: 'relative', transition: 'transform 0.2s, box-shadow 0.2s' }}
-               onMouseEnter={(e) => {
-                 e.currentTarget.style.transform = 'translateY(-2px)';
-                 e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.15)';
-               }}
-               onMouseLeave={(e) => {
-                 e.currentTarget.style.transform = 'translateY(0)';
-                 e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
-               }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#1e293b', lineHeight: '1.3', flex: '1' }}>{p.name}</h3>
-              <div style={{ backgroundColor: '#fef3c7', color: '#92400e', fontSize: '0.75rem', fontWeight: '600', padding: '4px 8px', borderRadius: '4px', marginLeft: '8px' }}>
-                CHEF TESTED
+        {products.map((p, index) => (
+          <ProductImpressionTracker
+            key={p.id}
+            productName={p.name}
+            productSlug={p.slug}
+            category="Appliances"
+            brand={p.brand}
+            position={index + 1}
+            listName="category_appliances"
+          >
+            <div style={{ backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', padding: '24px', border: '1px solid #e2e8f0', position: 'relative', transition: 'transform 0.2s, box-shadow 0.2s' }}
+                 onMouseEnter={(e) => {
+                   e.currentTarget.style.transform = 'translateY(-2px)';
+                   e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.15)';
+                 }}
+                 onMouseLeave={(e) => {
+                   e.currentTarget.style.transform = 'translateY(0)';
+                   e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+                 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#1e293b', lineHeight: '1.3', flex: '1' }}>{p.name}</h3>
+                <div style={{ backgroundColor: '#fef3c7', color: '#92400e', fontSize: '0.75rem', fontWeight: '600', padding: '4px 8px', borderRadius: '4px', marginLeft: '8px' }}>
+                  CHEF TESTED
+                </div>
               </div>
-            </div>
-            <p style={{ color: '#64748b', marginBottom: '12px', fontSize: '0.9rem' }}>by {p.brand}</p>
-            
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                <span style={{ color: '#fbbf24', fontSize: '1rem' }}>★★★★★</span>
-                <span style={{ color: '#64748b', fontSize: '0.875rem' }}>9.5/10</span>
+              <p style={{ color: '#64748b', marginBottom: '12px', fontSize: '0.9rem' }}>by {p.brand}</p>
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                  <span style={{ color: '#fbbf24', fontSize: '1rem' }}>★★★★★</span>
+                  <span style={{ color: '#64748b', fontSize: '0.875rem' }}>9.5/10</span>
+                </div>
               </div>
-            </div>
-            
-            <div style={{ marginBottom: '16px' }}>
-              <p style={{ color: '#374151', fontSize: '0.875rem', lineHeight: '1.5' }}>
-                {p.description}{' '}
-                <Link href={`/reviews/${p.slug}`} style={{ color: '#ea580c', textDecoration: 'none', fontWeight: '500' }}>
-                  Read full review →
+
+              <div style={{ marginBottom: '16px' }}>
+                <p style={{ color: '#374151', fontSize: '0.875rem', lineHeight: '1.5' }}>
+                  {p.description}{' '}
+                  <Link href={`/reviews/${p.slug}`} style={{ color: '#ea580c', textDecoration: 'none', fontWeight: '500' }}>
+                    Read full review →
+                  </Link>
+                </p>
+              </div>
+
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <a href={p.affiliateUrl}
+                   target="_blank"
+                   rel="sponsored nofollow noopener"
+                   style={{
+                     background: 'linear-gradient(45deg, #ff9900, #ffad33)',
+                     color: 'white',
+                     padding: '12px 18px',
+                     borderRadius: '8px',
+                     textDecoration: 'none',
+                     display: 'inline-block',
+                     fontWeight: '600',
+                     fontSize: '0.875rem',
+                     flex: '1',
+                     textAlign: 'center',
+                     boxShadow: '0 2px 4px rgba(255, 153, 0, 0.2)'
+                   }}>
+                  🛒 Check Price
+                </a>
+                <Link href={`/reviews/${p.slug}`}
+                      style={{
+                        border: '2px solid #ea580c',
+                        color: '#ea580c',
+                        padding: '10px 18px',
+                        borderRadius: '8px',
+                        textDecoration: 'none',
+                        display: 'inline-block',
+                        fontWeight: '600',
+                        fontSize: '0.875rem',
+                        backgroundColor: 'transparent',
+                        textAlign: 'center'
+                      }}>
+                  Review
                 </Link>
+              </div>
+
+              <p style={{ fontSize: '0.75rem', color: '#9ca3af', marginTop: '8px', textAlign: 'center' }}>
+                <span style={{ color: '#ea580c' }}>Affiliate link</span> • Prices may change
               </p>
             </div>
-            
-            <div style={{ display: 'flex', gap: '8px' }}>
-              <a href={p.affiliateUrl} 
-                 target="_blank" 
-                 rel="sponsored nofollow noopener"
-                 style={{ 
-                   background: 'linear-gradient(45deg, #ff9900, #ffad33)', 
-                   color: 'white', 
-                   padding: '12px 18px', 
-                   borderRadius: '8px', 
-                   textDecoration: 'none', 
-                   display: 'inline-block',
-                   fontWeight: '600',
-                   fontSize: '0.875rem',
-                   flex: '1',
-                   textAlign: 'center',
-                   boxShadow: '0 2px 4px rgba(255, 153, 0, 0.2)'
-                 }}>
-                🛒 Check Price
-              </a>
-              <Link href={`/reviews/${p.slug}`}
-                    style={{ 
-                      border: '2px solid #ea580c', 
-                      color: '#ea580c', 
-                      padding: '10px 18px', 
-                      borderRadius: '8px', 
-                      textDecoration: 'none', 
-                      display: 'inline-block',
-                      fontWeight: '600',
-                      fontSize: '0.875rem',
-                      backgroundColor: 'transparent',
-                      textAlign: 'center'
-                    }}>
-                Review
-              </Link>
-            </div>
-            
-            <p style={{ fontSize: '0.75rem', color: '#9ca3af', marginTop: '8px', textAlign: 'center' }}>
-              <span style={{ color: '#ea580c' }}>Affiliate link</span> • Prices may change
-            </p>
-          </div>
+          </ProductImpressionTracker>
         ))}
       </div>
 
@@ -152,9 +164,16 @@ export default function AppliancesPage() {
         <p style={{ color: '#64748b', marginBottom: '16px' }}>
           Learn how to evaluate kitchen appliances based on motor power, build quality, warranty coverage, and actual performance under demanding conditions.
         </p>
-        <a href="/guides/kitchen-appliances" style={{ backgroundColor: '#ea580c', color: 'white', padding: '8px 16px', borderRadius: '8px', textDecoration: 'none' }}>
-          Read the Full Kitchen Appliances Guide
-        </a>
+        <CTAVisibilityTracker
+          ctaId="category-appliances-buying-guide"
+          position="final_cta"
+          productSlug="appliances-category"
+          merchant="internal"
+        >
+          <a href="/guides/kitchen-appliances" style={{ backgroundColor: '#ea580c', color: 'white', padding: '8px 16px', borderRadius: '8px', textDecoration: 'none' }}>
+            Read the Full Kitchen Appliances Guide
+          </a>
+        </CTAVisibilityTracker>
       </section>
     </div>
   );

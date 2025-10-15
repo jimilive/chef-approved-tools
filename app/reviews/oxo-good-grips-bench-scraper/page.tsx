@@ -3,7 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
-import AffiliateButton from '@/components/AffiliateButton'
+
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
@@ -351,15 +353,22 @@ export default function OXOGoodGripsBenchScraperReview() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <AffiliateButton
-              href="https://amzn.to/4mXTS8X"
-              merchant="amazon"
-              product="{productData.slug}"
+            <CTAVisibilityTracker
+              ctaId={`review-${productData.slug}-above_fold`}
               position="above_fold"
-              variant="primary"
+              productSlug={productData.slug}
+              merchant="amazon"
             >
-              Check Current Price on Amazon →
-            </AffiliateButton>
+              <AffiliateButton
+                href="https://amzn.to/4mXTS8X"
+                merchant="amazon"
+                product={productData.slug}
+                position="above_fold"
+                variant="primary"
+              >
+                Check Current Price on Amazon →
+              </AffiliateButton>
+            </CTAVisibilityTracker>
 
             <a
               href="/reviews"
@@ -535,15 +544,22 @@ export default function OXOGoodGripsBenchScraperReview() {
         {/* Mid-article CTA */}
         <section className="mb-12 bg-orange-50 border border-orange-200 rounded-lg p-6 text-center">
           <p className="text-gray-700 mb-4">Ready to upgrade your kitchen workflow?</p>
-          <AffiliateButton
-            href="https://amzn.to/4mXTS8X"
-            merchant="amazon"
-            product="oxo-good-grips-bench-scraper"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-mid_article`}
             position="mid_article"
-            variant="secondary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Current Price on Amazon
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://amzn.to/4mXTS8X"
+              merchant="amazon"
+              product="oxo-good-grips-bench-scraper"
+              position="mid_article"
+              variant="secondary"
+            >
+              Check Current Price on Amazon
+            </AffiliateButton>
+          </CTAVisibilityTracker>
         </section>
 
         <section className="mb-12" id="specs">
@@ -696,15 +712,22 @@ export default function OXOGoodGripsBenchScraperReview() {
             After 23+ years of professional cooking, this is the tool most home cooks don&apos;t know they need. At $13, it&apos;s one of the best investments you can make in your kitchen efficiency.
           </p>
           <div className="flex justify-center">
-            <AffiliateButton
-              href="https://amzn.to/4mXTS8X"
-              merchant="amazon"
-              product="oxo-good-grips-bench-scraper"
+            <CTAVisibilityTracker
+              ctaId={`review-${productData.slug}-final_cta`}
               position="final_cta"
-              variant="primary"
+              productSlug={productData.slug}
+              merchant="amazon"
             >
-              Check Current Price on Amazon →
-            </AffiliateButton>
+              <AffiliateButton
+                href="https://amzn.to/4mXTS8X"
+                merchant="amazon"
+                product="oxo-good-grips-bench-scraper"
+                position="final_cta"
+                variant="primary"
+              >
+                Check Current Price on Amazon →
+              </AffiliateButton>
+            </CTAVisibilityTracker>
           </div>
         </section>
 

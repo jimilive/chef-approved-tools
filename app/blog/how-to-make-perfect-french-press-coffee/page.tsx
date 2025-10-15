@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'How to Make Perfect French Press Coffee: Professional Guide (2025)',
@@ -45,7 +47,14 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
           paddingBottom: '20px',
           borderBottom: '1px solid #e0e0e0'
         }}>
-          <strong>By Scott Bradley</strong> | Professional Chef | 24 Years Testing the <a href="/reviews/bodum-chambord-french-press" style={{ color: '#0066cc', textDecoration: 'none' }}>Bodum Chambord French Press</a>
+          <strong>By Scott Bradley</strong> | Professional Chef | 24 Years Testing the <CTAVisibilityTracker
+            ctaId="blog-how-to-make-perfect-french-press-coffee-review-link-1"
+            position="above_fold"
+            productSlug="how-to-make-perfect-french-press-coffee"
+            merchant="internal"
+          >
+            <a href="/reviews/bodum-chambord-french-press" style={{ color: '#0066cc', textDecoration: 'none' }}>Bodum Chambord French Press</a>
+          </CTAVisibilityTracker>
         </div>
 
         {/* Purple Café Context Box */}
@@ -73,7 +82,14 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             This guide covers everything I&apos;ve learned about making consistently excellent French press coffee. I&apos;ll show you the exact process I use every morning, the common mistakes that ruin French press (and how to avoid them), and the troubleshooting techniques that solve the most frequent problems.
           </p>
           <p>
-            If you don&apos;t already own a French press, I strongly recommend the <a href="/reviews/bodum-chambord-french-press" style={{ color: '#0066cc', textDecoration: 'none' }}>Bodum Chambord</a>—it&apos;s the same one I&apos;ve used for 24 years, and it&apos;s never failed me.
+            If you don&apos;t already own a French press, I strongly recommend the <CTAVisibilityTracker
+              ctaId="blog-how-to-make-perfect-french-press-coffee-review-link-2"
+              position="mid_article"
+              productSlug="how-to-make-perfect-french-press-coffee"
+              merchant="internal"
+            >
+              <a href="/reviews/bodum-chambord-french-press" style={{ color: '#0066cc', textDecoration: 'none' }}>Bodum Chambord</a>
+            </CTAVisibilityTracker>—it&apos;s the same one I&apos;ve used for 24 years, and it&apos;s never failed me.
           </p>
         </div>
 
@@ -84,7 +100,14 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
 
         <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
           <ul style={{ paddingLeft: '20px' }}>
-            <li style={{ marginBottom: '10px' }}><strong>French Press:</strong> I use the <a href="/reviews/bodum-chambord-french-press" style={{ color: '#0066cc', textDecoration: 'none' }}>Bodum Chambord 34-ounce</a> (8-cup model)</li>
+            <li style={{ marginBottom: '10px' }}><strong>French Press:</strong> I use the <CTAVisibilityTracker
+              ctaId="blog-how-to-make-perfect-french-press-coffee-review-link-3"
+              position="mid_article"
+              productSlug="how-to-make-perfect-french-press-coffee"
+              merchant="internal"
+            >
+              <a href="/reviews/bodum-chambord-french-press" style={{ color: '#0066cc', textDecoration: 'none' }}>Bodum Chambord 34-ounce</a>
+            </CTAVisibilityTracker> (8-cup model)</li>
             <li style={{ marginBottom: '10px' }}><strong>Coffee Grinder:</strong> Burr grinder strongly recommended (blade grinders produce inconsistent particle sizes)</li>
             <li style={{ marginBottom: '10px' }}><strong>Scale:</strong> Digital kitchen scale accurate to 1 gram</li>
             <li style={{ marginBottom: '10px' }}><strong>Kettle:</strong> Electric kettle with temperature control, or regular kettle with thermometer</li>
@@ -292,20 +315,34 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             The French Press I&apos;ve Used for 24 Years
           </h3>
           <p style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '15px' }}>
-            I&apos;ve been using the <a href="/reviews/bodum-chambord-french-press" style={{ color: '#0066cc', textDecoration: 'none', fontWeight: 'bold' }}>Bodum Chambord French Press</a> since 2001—first at Purple Café in Seattle, then for 18 years at home. It&apos;s survived thousands of brewing cycles and still works perfectly. The borosilicate glass is heat-resistant and doesn&apos;t retain flavors, the stainless steel frame is nearly indestructible, and replacement parts are readily available if needed.
+            I&apos;ve been using the <CTAVisibilityTracker
+              ctaId="blog-how-to-make-perfect-french-press-coffee-review-link-4"
+              position="mid_article"
+              productSlug="how-to-make-perfect-french-press-coffee"
+              merchant="internal"
+            >
+              <a href="/reviews/bodum-chambord-french-press" style={{ color: '#0066cc', textDecoration: 'none', fontWeight: 'bold' }}>Bodum Chambord French Press</a>
+            </CTAVisibilityTracker> since 2001—first at Purple Café in Seattle, then for 18 years at home. It&apos;s survived thousands of brewing cycles and still works perfectly. The borosilicate glass is heat-resistant and doesn&apos;t retain flavors, the stainless steel frame is nearly indestructible, and replacement parts are readily available if needed.
           </p>
           <p style={{ fontSize: '18px', lineHeight: '1.8', margin: 0 }}>
-            <a href="/reviews/bodum-chambord-french-press" style={{
-              display: 'inline-block',
-              background: '#0066cc',
-              color: 'white',
-              padding: '12px 24px',
-              textDecoration: 'none',
-              borderRadius: '4px',
-              fontWeight: 'bold'
-            }}>
-              Read My Complete 24-Year Review →
-            </a>
+            <CTAVisibilityTracker
+              ctaId="blog-how-to-make-perfect-french-press-coffee-review-cta-1"
+              position="mid_article"
+              productSlug="how-to-make-perfect-french-press-coffee"
+              merchant="internal"
+            >
+              <a href="/reviews/bodum-chambord-french-press" style={{
+                display: 'inline-block',
+                background: '#0066cc',
+                color: 'white',
+                padding: '12px 24px',
+                textDecoration: 'none',
+                borderRadius: '4px',
+                fontWeight: 'bold'
+              }}>
+                Read My Complete 24-Year Review →
+              </a>
+            </CTAVisibilityTracker>
           </p>
         </div>
 
@@ -488,7 +525,14 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             The technique I&apos;ve outlined here is what I&apos;ve refined over 24 years of daily use. It&apos;s simple, repeatable, and produces consistently excellent coffee. Start with these fundamentals—200°F water, coarse grind, 1:16 ratio, 4-minute steep—and adjust from there based on your preferences and your beans.
           </p>
           <p>
-            If you don&apos;t already own a French press, I strongly recommend the <a href="/reviews/bodum-chambord-french-press" style={{ color: '#0066cc', textDecoration: 'none' }}>Bodum Chambord</a>. I&apos;ve used the same one for 24 years—6 years at Purple Café, 18 years at home—and it still works like new. It&apos;s the only French press I trust, and it&apos;s the one I recommend to everyone who asks.
+            If you don&apos;t already own a French press, I strongly recommend the <CTAVisibilityTracker
+              ctaId="blog-how-to-make-perfect-french-press-coffee-review-link-5"
+              position="final_cta"
+              productSlug="how-to-make-perfect-french-press-coffee"
+              merchant="internal"
+            >
+              <a href="/reviews/bodum-chambord-french-press" style={{ color: '#0066cc', textDecoration: 'none' }}>Bodum Chambord</a>
+            </CTAVisibilityTracker>. I&apos;ve used the same one for 24 years—6 years at Purple Café, 18 years at home—and it still works like new. It&apos;s the only French press I trust, and it&apos;s the one I recommend to everyone who asks.
           </p>
         </div>
 
@@ -504,24 +548,52 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
           </h3>
           <ul style={{ fontSize: '18px', lineHeight: '1.8', paddingLeft: '20px', margin: 0 }}>
             <li style={{ marginBottom: '10px' }}>
-              <a href="/reviews/bodum-chambord-french-press" style={{ color: '#0066cc', textDecoration: 'none' }}>
-                Bodum Chambord French Press Review: 24-Year Professional Test
-              </a>
+              <CTAVisibilityTracker
+                ctaId="blog-how-to-make-perfect-french-press-coffee-related-1"
+                position="final_cta"
+                productSlug="how-to-make-perfect-french-press-coffee"
+                merchant="internal"
+              >
+                <a href="/reviews/bodum-chambord-french-press" style={{ color: '#0066cc', textDecoration: 'none' }}>
+                  Bodum Chambord French Press Review: 24-Year Professional Test
+                </a>
+              </CTAVisibilityTracker>
             </li>
             <li style={{ marginBottom: '10px' }}>
-              <a href="/guides/best-chef-knives" style={{ color: '#0066cc', textDecoration: 'none' }}>
-                Best Chef Knives: Complete Professional Buying Guide
-              </a>
+              <CTAVisibilityTracker
+                ctaId="blog-how-to-make-perfect-french-press-coffee-related-2"
+                position="final_cta"
+                productSlug="how-to-make-perfect-french-press-coffee"
+                merchant="internal"
+              >
+                <a href="/guides/best-chef-knives" style={{ color: '#0066cc', textDecoration: 'none' }}>
+                  Best Chef Knives: Complete Professional Buying Guide
+                </a>
+              </CTAVisibilityTracker>
             </li>
             <li style={{ marginBottom: '10px' }}>
-              <a href="/reviews/diamond-crystal-kosher-salt" style={{ color: '#0066cc', textDecoration: 'none' }}>
-                Diamond Crystal Kosher Salt Review: 18-Year Professional Test
-              </a>
+              <CTAVisibilityTracker
+                ctaId="blog-how-to-make-perfect-french-press-coffee-related-3"
+                position="final_cta"
+                productSlug="how-to-make-perfect-french-press-coffee"
+                merchant="internal"
+              >
+                <a href="/reviews/diamond-crystal-kosher-salt" style={{ color: '#0066cc', textDecoration: 'none' }}>
+                  Diamond Crystal Kosher Salt Review: 18-Year Professional Test
+                </a>
+              </CTAVisibilityTracker>
             </li>
             <li style={{ marginBottom: '10px' }}>
-              <a href="/blog/why-professional-chefs-use-kosher-salt" style={{ color: '#0066cc', textDecoration: 'none' }}>
-                Why Professional Chefs Use Kosher Salt
-              </a>
+              <CTAVisibilityTracker
+                ctaId="blog-how-to-make-perfect-french-press-coffee-related-4"
+                position="final_cta"
+                productSlug="how-to-make-perfect-french-press-coffee"
+                merchant="internal"
+              >
+                <a href="/blog/why-professional-chefs-use-kosher-salt" style={{ color: '#0066cc', textDecoration: 'none' }}>
+                  Why Professional Chefs Use Kosher Salt
+                </a>
+              </CTAVisibilityTracker>
             </li>
           </ul>
         </div>

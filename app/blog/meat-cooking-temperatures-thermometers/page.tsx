@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata = {
   title: 'Meat Cooking Temperatures Guide: Why Chefs Use Thermometers (2025)',

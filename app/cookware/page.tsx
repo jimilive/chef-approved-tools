@@ -2,6 +2,8 @@
 import Script from "next/script";
 import Link from "next/link";
 import BreadcrumbSchema, { categoryBreadcrumbs } from '@/components/BreadcrumbSchema';
+import ProductImpressionTracker from '@/components/ProductImpressionTracker';
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 
 
 export default function CookwarePage() {
@@ -142,49 +144,59 @@ export default function CookwarePage() {
 
       {/* Product Grid */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 mb-12">
-        {products.map(p => (
-          <div key={p.id} className="bg-white rounded-xl shadow-md p-6 border border-slate-200 relative transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
-            <div className="flex justify-between items-start mb-3">
-              <h3 className="text-xl font-bold text-slate-900 leading-tight flex-1">{p.name}</h3>
-              <div className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded ml-2 whitespace-nowrap">
-                CHEF TESTED
+        {products.map((p, index) => (
+          <ProductImpressionTracker
+            key={p.id}
+            productName={p.name}
+            productSlug={p.slug}
+            category="Cookware"
+            brand={p.brand}
+            position={index + 1}
+            listName="category_cookware"
+          >
+            <div className="bg-white rounded-xl shadow-md p-6 border border-slate-200 relative transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+              <div className="flex justify-between items-start mb-3">
+                <h3 className="text-xl font-bold text-slate-900 leading-tight flex-1">{p.name}</h3>
+                <div className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded ml-2 whitespace-nowrap">
+                  CHEF TESTED
+                </div>
               </div>
-            </div>
-            <p className="text-slate-600 mb-3 text-sm">by {p.brand}</p>
+              <p className="text-slate-600 mb-3 text-sm">by {p.brand}</p>
 
-            <div className="flex items-center gap-3 mb-4">
-              <div className="flex items-center gap-1">
-                <span className="text-yellow-400 text-base">★★★★★</span>
-                <span className="text-slate-600 text-sm font-medium">Our Score: {p.score}/10</span>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center gap-1">
+                  <span className="text-yellow-400 text-base">★★★★★</span>
+                  <span className="text-slate-600 text-sm font-medium">Our Score: {p.score}/10</span>
+                </div>
               </div>
-            </div>
 
-            <div className="mb-4">
-              <p className="text-slate-700 text-sm leading-relaxed">
-                {p.description}{' '}
-                <Link href={`/reviews/${p.slug}`} className="text-orange-600 hover:text-orange-800 font-medium">
-                  Read full review →
+              <div className="mb-4">
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  {p.description}{' '}
+                  <Link href={`/reviews/${p.slug}`} className="text-orange-600 hover:text-orange-800 font-medium">
+                    Read full review →
+                  </Link>
+                </p>
+              </div>
+
+              <div className="flex gap-2">
+                <a href={p.affiliateUrl}
+                   target="_blank"
+                   rel="sponsored nofollow noopener"
+                   className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 px-4 rounded-lg font-semibold text-sm flex-1 text-center shadow-md hover:shadow-lg transition-all duration-200">
+                  🛒 Check Price on Amazon
+                </a>
+                <Link href={`/reviews/${p.slug}`}
+                      className="border-2 border-orange-600 text-orange-600 hover:bg-orange-50 py-3 px-4 rounded-lg font-semibold text-sm text-center transition-colors duration-200">
+                  Review
                 </Link>
+              </div>
+
+              <p className="text-xs text-slate-400 mt-2 text-center">
+                <span className="text-orange-600 font-medium">Affiliate link</span> • Prices may change
               </p>
             </div>
-
-            <div className="flex gap-2">
-              <a href={p.affiliateUrl}
-                 target="_blank"
-                 rel="sponsored nofollow noopener"
-                 className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 px-4 rounded-lg font-semibold text-sm flex-1 text-center shadow-md hover:shadow-lg transition-all duration-200">
-                🛒 Check Price on Amazon
-              </a>
-              <Link href={`/reviews/${p.slug}`}
-                    className="border-2 border-orange-600 text-orange-600 hover:bg-orange-50 py-3 px-4 rounded-lg font-semibold text-sm text-center transition-colors duration-200">
-                Review
-              </Link>
-            </div>
-
-            <p className="text-xs text-slate-400 mt-2 text-center">
-              <span className="text-orange-600 font-medium">Affiliate link</span> • Prices may change
-            </p>
-          </div>
+          </ProductImpressionTracker>
         ))}
       </div>
 
@@ -192,9 +204,16 @@ export default function CookwarePage() {
       <section className="mt-12 p-8 bg-slate-50 rounded-xl border border-slate-200">
         <h2 className="text-3xl font-bold mb-2 text-slate-900">Cookware Buying Guide</h2>
         <p className="text-slate-600 mb-4 text-lg">Materials comparison, sizing recommendations, and care instructions.</p>
-        <Link href="/guides/best-cookware" className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-          Read the Full Guide
-        </Link>
+        <CTAVisibilityTracker
+          ctaId="category-cookware-buying-guide"
+          position="final_cta"
+          productSlug="cookware-category"
+          merchant="internal"
+        >
+          <Link href="/guides/best-cookware" className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+            Read the Full Guide
+          </Link>
+        </CTAVisibilityTracker>
       </section>
     </div>
   );

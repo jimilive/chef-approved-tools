@@ -3,7 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure'
-import AffiliateButton from '@/components/AffiliateButton'
+
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
@@ -336,15 +338,22 @@ export default function OXOGoodGripsSwivelPeelerReview() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <AffiliateButton
-              href="https://amzn.to/4mZNiyT"
-              merchant="amazon"
-              product="{productData.slug}"
+            <CTAVisibilityTracker
+              ctaId={`review-${productData.slug}-above_fold`}
               position="above_fold"
-              variant="primary"
+              productSlug={productData.slug}
+              merchant="amazon"
             >
-              Check Amazon Price →
-            </AffiliateButton>
+              <AffiliateButton
+                href="https://amzn.to/4mZNiyT"
+                merchant="amazon"
+                product={productData.slug}
+                position="above_fold"
+                variant="primary"
+              >
+                Check Amazon Price →
+              </AffiliateButton>
+            </CTAVisibilityTracker>
 
             <a
               href="/reviews"
@@ -452,15 +461,22 @@ export default function OXOGoodGripsSwivelPeelerReview() {
               Ready to experience the OXO difference? See current pricing and availability:
             </p>
             <div className="flex justify-center">
-              <AffiliateButton
-                href="https://amzn.to/4mZNiyT"
-                merchant="amazon"
-                product="{productData.slug}"
+              <CTAVisibilityTracker
+                ctaId={`review-${productData.slug}-mid_article`}
                 position="mid_article"
-                variant="secondary"
+                productSlug={productData.slug}
+                merchant="amazon"
               >
-                Check Amazon Price →
-              </AffiliateButton>
+                <AffiliateButton
+                  href="https://amzn.to/4mZNiyT"
+                  merchant="amazon"
+                  product={productData.slug}
+                  position="mid_article"
+                  variant="secondary"
+                >
+                  Check Amazon Price →
+                </AffiliateButton>
+              </CTAVisibilityTracker>
             </div>
           </div>
         </section>
@@ -797,15 +813,22 @@ export default function OXOGoodGripsSwivelPeelerReview() {
               Ready to upgrade your kitchen prep? Get the OXO Good Grips Swivel Peeler today:
             </p>
             <div className="flex justify-center">
-              <AffiliateButton
-                href="https://amzn.to/4mZNiyT"
-                merchant="amazon"
-                product="{productData.slug}"
+              <CTAVisibilityTracker
+                ctaId={`review-${productData.slug}-final_cta`}
                 position="final_cta"
-                variant="primary"
+                productSlug={productData.slug}
+                merchant="amazon"
               >
-                Check Amazon Price →
-              </AffiliateButton>
+                <AffiliateButton
+                  href="https://amzn.to/4mZNiyT"
+                  merchant="amazon"
+                  product={productData.slug}
+                  position="final_cta"
+                  variant="primary"
+                >
+                  Check Amazon Price →
+                </AffiliateButton>
+              </CTAVisibilityTracker>
             </div>
           </div>
         </section>

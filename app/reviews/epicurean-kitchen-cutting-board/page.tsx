@@ -5,6 +5,8 @@ import { Tier2Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   alternates: {
@@ -333,15 +335,22 @@ export default function EpicureanKitchenCuttingBoardReview() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <AffiliateButton
-              href="https://amzn.to/3Wyh8Q4"
-              merchant="amazon"
-              product="{productData.slug}"
+            <CTAVisibilityTracker
+              ctaId={`review-${productData.slug}-above_fold`}
               position="above_fold"
-              variant="primary"
+              productSlug={productData.slug}
+              merchant="amazon"
             >
-              Check Current Price on Amazon →
-            </AffiliateButton>
+              <AffiliateButton
+                href="https://amzn.to/3Wyh8Q4"
+                merchant="amazon"
+                product={productData.slug}
+                position="above_fold"
+                variant="primary"
+              >
+                Check Current Price on Amazon →
+              </AffiliateButton>
+            </CTAVisibilityTracker>
 
             <a
               href="/reviews"
@@ -478,15 +487,22 @@ export default function EpicureanKitchenCuttingBoardReview() {
         {/* Mid-article CTA */}
         <section className="mb-12 bg-orange-50 border border-orange-200 rounded-lg p-6 text-center">
           <p className="text-gray-700 mb-4">Ready to upgrade to dishwasher-safe boards?</p>
-          <AffiliateButton
-            href="https://amzn.to/3Wyh8Q4"
-            merchant="amazon"
-            product="epicurean-kitchen-cutting-board"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-mid_article`}
             position="mid_article"
-            variant="secondary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Current Price on Amazon
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://amzn.to/3Wyh8Q4"
+              merchant="amazon"
+              product={productData.slug}
+              position="mid_article"
+              variant="secondary"
+            >
+              Check Current Price on Amazon
+            </AffiliateButton>
+          </CTAVisibilityTracker>
         </section>
 
         <section className="mb-12" id="performance">
@@ -689,15 +705,22 @@ export default function EpicureanKitchenCuttingBoardReview() {
             After decades with wood boards, I&apos;ll never go back. True sanitation, zero maintenance, and knife-friendly performance. This is the future of cutting boards.
           </p>
           <div className="flex justify-center">
-            <AffiliateButton
-              href="https://amzn.to/3Wyh8Q4"
-              merchant="amazon"
-              product="epicurean-kitchen-cutting-board"
+            <CTAVisibilityTracker
+              ctaId={`review-${productData.slug}-final_cta`}
               position="final_cta"
-              variant="primary"
+              productSlug={productData.slug}
+              merchant="amazon"
             >
-              Check Current Price on Amazon →
-            </AffiliateButton>
+              <AffiliateButton
+                href="https://amzn.to/3Wyh8Q4"
+                merchant="amazon"
+                product={productData.slug}
+                position="final_cta"
+                variant="primary"
+              >
+                Check Current Price on Amazon →
+              </AffiliateButton>
+            </CTAVisibilityTracker>
           </div>
         </section>
 

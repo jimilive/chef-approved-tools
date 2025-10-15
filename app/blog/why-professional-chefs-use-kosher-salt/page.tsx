@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata = {
   title: 'Why Chefs Use Kosher Salt: Professional Kitchen Secrets (2025)',
@@ -28,7 +30,21 @@ export default function WhyChefsUseKosherSalt() {
         </p>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          At <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>Purple Café</a>, a 200+ cover restaurant where I worked for 6 years, <a href="/reviews/diamond-crystal-kosher-salt" style={{ color: '#0066cc', fontWeight: 'bold' }}>Diamond Crystal Kosher Salt</a> was the only salt we used. Cases of it delivered monthly. Every station had a container within reach. Why? Because when you&apos;re seasoning hundreds of plates per service, you need salt that&apos;s predictable, fast to pinch, and clean-tasting every single time.
+          At <CTAVisibilityTracker
+            ctaId="blog-why-professional-chefs-use-kosher-salt-about-link-1"
+            position="above_fold"
+            productSlug="why-professional-chefs-use-kosher-salt"
+            merchant="internal"
+          >
+            <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>Purple Café</a>
+          </CTAVisibilityTracker>, a 200+ cover restaurant where I worked for 6 years, <CTAVisibilityTracker
+            ctaId="blog-why-professional-chefs-use-kosher-salt-review-link-1"
+            position="above_fold"
+            productSlug="why-professional-chefs-use-kosher-salt"
+            merchant="internal"
+          >
+            <a href="/reviews/diamond-crystal-kosher-salt" style={{ color: '#0066cc', fontWeight: 'bold' }}>Diamond Crystal Kosher Salt</a>
+          </CTAVisibilityTracker> was the only salt we used. Cases of it delivered monthly. Every station had a container within reach. Why? Because when you&apos;re seasoning hundreds of plates per service, you need salt that&apos;s predictable, fast to pinch, and clean-tasting every single time.
         </p>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>

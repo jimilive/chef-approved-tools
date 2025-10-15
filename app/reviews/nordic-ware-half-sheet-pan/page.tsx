@@ -1,6 +1,8 @@
 import { Tier2Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
+
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -173,15 +175,22 @@ export default function NordicWareHalfSheetPanReview() {
         }}>
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
 
-          <AffiliateButton
-            href="https://www.amazon.com/Nordic-Ware-Natural-Aluminum-Commercial/dp/B0049C2S32?&linkCode=ll1&tag=chefapprovedt-20&linkId=n1o2r3d4i5c6w7a8r9e0s1h2e3e4t5p6"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-above_fold`}
             position="above_fold"
-            variant="primary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Amazon Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/Nordic-Ware-Natural-Aluminum-Commercial/dp/B0049C2S32?&linkCode=ll1&tag=chefapprovedt-20&linkId=n1o2r3d4i5c6w7a8r9e0s1h2e3e4t5p6"
+              merchant="amazon"
+              product={productData.slug}
+              position="above_fold"
+              variant="primary"
+            >
+              Check Amazon Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
 
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 Price updated daily. We earn commission at no extra cost to you.
@@ -974,15 +983,22 @@ export default function NordicWareHalfSheetPanReview() {
             Get the sheet pan professional bakers choose:
           </p>
 
-          <AffiliateButton
-            href="https://www.amazon.com/Nordic-Ware-Natural-Aluminum-Commercial/dp/B0049C2S32?&linkCode=ll1&tag=chefapprovedt-20&linkId=n1o2r3d4i5c6w7a8r9e0s1h2e3e4t5p6"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-final_cta`}
             position="final_cta"
-            variant="primary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Amazon Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/Nordic-Ware-Natural-Aluminum-Commercial/dp/B0049C2S32?&linkCode=ll1&tag=chefapprovedt-20&linkId=n1o2r3d4i5c6w7a8r9e0s1h2e3e4t5p6"
+              merchant="amazon"
+              product={productData.slug}
+              position="final_cta"
+              variant="primary"
+            >
+              Check Amazon Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
 
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 Buy 2-3 for maximum versatility in your kitchen

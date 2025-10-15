@@ -5,6 +5,8 @@ import { SimpleProductSchema } from '@/components/ProductSchema'
 import FAQSchema, { kitchenToolsFAQs } from '@/components/FAQSchema'
 import { ChefCredentialsSchema } from '@/components/ReviewSchema'
 import AffiliateButton from '@/components/AffiliateButton'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 export const metadata: Metadata = {
   alternates: {
     canonical: '/',
@@ -86,15 +88,22 @@ function EnhancedProductCard({ product }: { product: any }) {
 
         {/* Enhanced CTA section */}
 <div className="space-y-2 mt-4">
-  <AffiliateButton
-    href={product.affiliateUrl}
+  <CTAVisibilityTracker
+    ctaId={`homepage-product-${product.id}`}
+    position="homepage_featured"
+    productSlug={product.id}
     merchant="amazon"
-    product={product.name}
-    position="above_fold"
-    className="w-full text-center"
   >
-  View on Amazon →
-</AffiliateButton>
+    <AffiliateButton
+      href={product.affiliateUrl}
+      merchant="amazon"
+      product={product.id}
+      position="homepage_featured"
+      className="w-full text-center"
+    >
+      View on Amazon →
+    </AffiliateButton>
+  </CTAVisibilityTracker>
 
           {/* Add comparison hook */}
           <button type="button" className="w-full text-blue-600 hover:text-blue-700 font-medium text-sm py-2 border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors">
@@ -132,7 +141,7 @@ export default function HomePage() {
           {/* Trust Badge */}
           <div className="bg-orange-500/20 border border-orange-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 inline-block mb-6 sm:mb-8">
             <span className="text-orange-200 font-semibold text-sm sm:text-base">
-              👨‍🍳 40 YEARS COOKING EXPERIENCE
+              👨‍🍳 23 YEARS PROFESSIONAL COOKING EXPERIENCE
             </span>
           </div>
 
@@ -148,23 +157,37 @@ export default function HomePage() {
           {/* Credibility-focused Description */}
           <p className="text-lg sm:text-xl text-slate-300 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed">
             From Wendy&apos;s at 15 to Kitchen Manager at Mellow Mushroom ($80K+/month operations),
-            40 years of cooking across every kitchen type—fast food, fine dining, and casual dining.
+            23 years of cooking across every kitchen type—fast food, fine dining, and casual dining.
           </p>
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 sm:mb-16 max-w-md sm:max-w-none mx-auto">
-            <a 
-              href="/reviews" 
-              className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-base sm:text-lg"
+            <CTAVisibilityTracker
+              ctaId="homepage-hero-top-picks"
+              position="hero_primary"
+              productSlug="homepage"
+              merchant="internal"
             >
-              See My Top Picks →
-            </a>
-            <a 
-              href="#credentials" 
-              className="border-2 border-slate-300 text-slate-300 hover:bg-slate-300 hover:text-slate-800 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-all duration-200 text-base sm:text-lg"
+              <a
+                href="/reviews"
+                className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-base sm:text-lg"
+              >
+                See My Top Picks →
+              </a>
+            </CTAVisibilityTracker>
+            <CTAVisibilityTracker
+              ctaId="homepage-hero-verify"
+              position="hero_secondary"
+              productSlug="homepage"
+              merchant="internal"
             >
-              Verify My Experience
-            </a>
+              <a
+                href="#credentials"
+                className="border-2 border-slate-300 text-slate-300 hover:bg-slate-300 hover:text-slate-800 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-all duration-200 text-base sm:text-lg"
+              >
+                Verify My Experience
+              </a>
+            </CTAVisibilityTracker>
           </div>
           
           {/* Real, Specific Stats */}
@@ -275,21 +298,37 @@ export default function HomePage() {
                     image={product.image}
                     affiliateUrl={product.affiliateUrl}
                   />
-                  <EnhancedProductCard
-                    product={product}
-                  />
+                  <ProductImpressionTracker
+                    productName={product.name}
+                    productSlug={product.id}
+                    category={category}
+                    brand={product.brand}
+                    position={index + 1}
+                    listName="homepage_featured_products"
+                  >
+                    <EnhancedProductCard
+                      product={product}
+                    />
+                  </ProductImpressionTracker>
                 </div>
               )
             })}
           </div>
           
           <div className="text-center mt-12">
-            <a
-              href="/reviews"
-              className="inline-block bg-slate-800 hover:bg-slate-900 text-white font-semibold px-8 py-4 rounded-xl transition-colors"
+            <CTAVisibilityTracker
+              ctaId="homepage-view-all-reviews"
+              position="mid_article"
+              productSlug="homepage"
+              merchant="internal"
             >
-              View All Professional Reviews →
-            </a>
+              <a
+                href="/reviews"
+                className="inline-block bg-slate-800 hover:bg-slate-900 text-white font-semibold px-8 py-4 rounded-xl transition-colors"
+              >
+                View All Professional Reviews →
+              </a>
+            </CTAVisibilityTracker>
           </div>
         </div>
       </section>

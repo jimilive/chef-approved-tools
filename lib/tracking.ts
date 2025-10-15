@@ -5,6 +5,38 @@
  * Pushes events to dataLayer for GTM to capture
  */
 
+import { getDeviceType, getViewportSize } from './device-detection'
+
+/**
+ * Content type taxonomy for consistent categorization
+ */
+export type ContentType =
+  | 'review'
+  | 'guide'
+  | 'blog'
+  | 'category'
+  | 'homepage'
+  | 'about'
+  | 'newsletter'
+  | 'contact'
+
+export type ReviewTier = 1 | 2 | 3 | null
+
+/**
+ * Get current page context for tracking
+ * @param contentType - Type of content being viewed
+ * @param tier - Review tier (1-3) if applicable
+ */
+export function getPageContext(contentType: ContentType, tier?: ReviewTier) {
+  return {
+    content_type: contentType,
+    review_tier: tier || null,
+    device_type: getDeviceType(),
+    viewport_width: getViewportSize().width,
+    viewport_height: getViewportSize().height
+  }
+}
+
 /**
  * Track affiliate link clicks
  * @param merchant - Affiliate merchant name (e.g., 'amazon', 'williams_sonoma')
@@ -26,11 +58,13 @@ export const trackAffiliateClick = (
       cta_position: position,
       product_price: price || 0,
       click_value: 1,
+      device_type: getDeviceType(),
+      viewport_width: getViewportSize().width,
       timestamp: new Date().toISOString()
     });
 
     // Console log for debugging (remove in production)
-    console.log('Affiliate click tracked:', { merchant, product, position, price });
+    console.log('Affiliate click tracked:', { merchant, product, position, price, device: getDeviceType() });
   }
 };
 
@@ -49,10 +83,11 @@ export const trackEmailSignup = (
       signup_location: location,
       upgrade_type: upgradeType || 'general',
       signup_value: 5,
+      device_type: getDeviceType(),
       timestamp: new Date().toISOString()
     });
 
-    console.log('Email signup tracked:', { location, upgradeType });
+    console.log('Email signup tracked:', { location, upgradeType, device: getDeviceType() });
   }
 };
 
@@ -73,6 +108,7 @@ export const trackInternalClick = (
       source_page: sourcePage,
       destination_page: destinationPage,
       link_type: linkType,
+      device_type: getDeviceType(),
       timestamp: new Date().toISOString()
     });
 
@@ -94,6 +130,7 @@ export const trackScrollDepth = (
       event: 'scroll_depth',
       scroll_depth: depth,
       page_slug: pageSlug,
+      device_type: getDeviceType(),
       timestamp: new Date().toISOString()
     });
   }

@@ -1,6 +1,8 @@
 import { Tier2Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
+
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -177,15 +179,22 @@ export default function MethodAllPurposeCleanerReview() {
           <p style={{ fontSize: '16px', margin: '15px 0' }}>
             After 5 years of testing, this is my only kitchen cleaner. Powerful AND non-toxic.
           </p>
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-above_fold`}
             position="above_fold"
-            variant="primary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Price on Amazon →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
+              merchant="amazon"
+              product={productData.slug}
+              position="above_fold"
+              variant="primary"
+            >
+              Check Price on Amazon →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 Price updated daily. We earn commission at no extra cost to you.
           </p>
@@ -452,15 +461,22 @@ export default function MethodAllPurposeCleanerReview() {
           <p style={{ fontSize: '16px', margin: '15px 0' }}>
             The only kitchen cleaner I&apos;ve used for 5 years. Powerful, safe, and effective.
           </p>
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-mid_article`}
             position="mid_article"
-            variant="secondary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Amazon Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
+              merchant="amazon"
+              product={productData.slug}
+              position="mid_article"
+              variant="secondary"
+            >
+              Check Amazon Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
         </div>
 
         {/* ECO-FRIENDLY SECTION */}
@@ -932,15 +948,22 @@ export default function MethodAllPurposeCleanerReview() {
               After 5 years of testing, this is the only cleaner I use in my kitchen.
               The unicorn is real.
             </p>
-            <AffiliateButton
-              href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
+            <CTAVisibilityTracker
+              ctaId={`review-${productData.slug}-final_cta`}
+              position="final_cta"
+              productSlug={productData.slug}
               merchant="amazon"
-              product="{productData.slug}"
-              position="mid_article"
-              variant="secondary"
             >
-              Check Current Price on Amazon →
-            </AffiliateButton>
+              <AffiliateButton
+                href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
+                merchant="amazon"
+                product={productData.slug}
+                position="final_cta"
+                variant="secondary"
+              >
+                Check Current Price on Amazon →
+              </AffiliateButton>
+            </CTAVisibilityTracker>
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
               💡 Powerful AND safe—no compromise needed. Price updated daily.<br/>
               We earn commission at no extra cost to you.

@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Script from "next/script";
 import InteractiveProductCard from '@/components/InteractiveProductCard';
 import BreadcrumbSchema, { categoryBreadcrumbs } from '@/components/BreadcrumbSchema';
+import ProductImpressionTracker from '@/components/ProductImpressionTracker';
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 
 
 export default function KnivesPage() {
@@ -131,8 +133,18 @@ export default function KnivesPage() {
 
       {/* Product Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
-        {products.map(p => (
-          <InteractiveProductCard key={p.id} product={p} category="knife" />
+        {products.map((p, index) => (
+          <ProductImpressionTracker
+            key={p.id}
+            productName={p.name}
+            productSlug={p.slug}
+            category="Knives"
+            brand={p.brand}
+            position={index + 1}
+            listName="category_knives"
+          >
+            <InteractiveProductCard product={p} category="knife" />
+          </ProductImpressionTracker>
         ))}
       </div>
 
@@ -144,12 +156,19 @@ export default function KnivesPage() {
         <p className="text-slate-600 mb-6 text-lg max-w-2xl mx-auto">
           How to choose a chef&rsquo;s knife, why steel matters, and maintenance tips from a certified chef.
         </p>
-        <a 
-          href="/guides/best-chef-knives" 
-          className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors duration-200 shadow-md hover:shadow-lg active:scale-95"
+        <CTAVisibilityTracker
+          ctaId="category-knives-buying-guide"
+          position="final_cta"
+          productSlug="knives-category"
+          merchant="internal"
         >
-          Read the Full Guide
-        </a>
+          <a
+            href="/guides/best-chef-knives"
+            className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors duration-200 shadow-md hover:shadow-lg active:scale-95"
+          >
+            Read the Full Guide
+          </a>
+        </CTAVisibilityTracker>
       </section>
     </div>
   );

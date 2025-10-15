@@ -3,6 +3,8 @@ import { Metadata } from 'next'
 import { Star, CheckCircle, XCircle, DollarSign, Award, Zap } from 'lucide-react'
 import AuthorBio from '@/components/AuthorBio'
 import { generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 
 export const metadata: Metadata = {
   title: 'Best Chef Knives of 2025: Tested & Reviewed by a Professional Chef',
@@ -156,43 +158,64 @@ export default function BestChefKnivesPage() {
               </thead>
               <tbody>
                 {topKnives.map((knife, index) => (
-                  <tr key={knife.id} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                    <td className="p-4">
-                      <div className="flex items-center gap-3">
-                        <div className="text-4xl">{knife.image}</div>
-                        <div>
-                          <div className="font-bold text-slate-900">{knife.name}</div>
-                          <span className={`inline-block text-xs px-2 py-1 rounded-full text-white ${knife.tagColor} mt-1`}>
-                            {knife.tag}
-                          </span>
+                  <ProductImpressionTracker
+                    key={knife.id}
+                    product={{
+                      id: knife.slug,
+                      name: knife.name,
+                      price: knife.price,
+                      category: 'Knives',
+                      brand: knife.name.split(' ')[0],
+                      position: index + 1
+                    }}
+                    listName="guide_best_chef_knives_table"
+                  >
+                    <tr className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                      <td className="p-4">
+                        <div className="flex items-center gap-3">
+                          <div className="text-4xl">{knife.image}</div>
+                          <div>
+                            <div className="font-bold text-slate-900">{knife.name}</div>
+                            <span className={`inline-block text-xs px-2 py-1 rounded-full text-white ${knife.tagColor} mt-1`}>
+                              {knife.tag}
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </td>
-                    <td className="p-4">
-                      <div className="flex items-center gap-2">
-                        <div className="flex text-yellow-400">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className={`w-4 h-4 ${i < Math.floor(knife.rating) ? 'fill-current' : ''}`} />
-                          ))}
+                      </td>
+                      <td className="p-4">
+                        <div className="flex items-center gap-2">
+                          <div className="flex text-yellow-400">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className={`w-4 h-4 ${i < Math.floor(knife.rating) ? 'fill-current' : ''}`} />
+                            ))}
+                          </div>
+                          <span className="text-sm font-semibold text-slate-700">{knife.rating}/5</span>
                         </div>
-                        <span className="text-sm font-semibold text-slate-700">{knife.rating}/5</span>
-                      </div>
-                    </td>
-                    <td className="p-4 text-slate-700">{knife.bestFor}</td>
-                    <td className="p-4">
-                      <span className="text-lg font-bold text-orange-600">${knife.price}</span>
-                    </td>
-                    <td className="p-4">
-                      <a
-                        href={knife.affiliateUrl}
-                        target="_blank"
-                        rel="noopener noreferrer sponsored nofollow"
-                        className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg text-sm whitespace-nowrap"
-                      >
-                        Check Price →
-                      </a>
-                    </td>
-                  </tr>
+                      </td>
+                      <td className="p-4 text-slate-700">{knife.bestFor}</td>
+                      <td className="p-4">
+                        <span className="text-lg font-bold text-orange-600">${knife.price}</span>
+                      </td>
+                      <td className="p-4">
+                        <CTAVisibilityTracker
+                          ctaId={`guide-best-chef-knives-table-price-${index + 1}`}
+                          ctaType="affiliate_link"
+                          merchant="amazon"
+                          productId={knife.slug}
+                          location="comparison_table"
+                        >
+                          <a
+                            href={knife.affiliateUrl}
+                            target="_blank"
+                            rel="noopener noreferrer sponsored nofollow"
+                            className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg text-sm whitespace-nowrap"
+                          >
+                            Check Price →
+                          </a>
+                        </CTAVisibilityTracker>
+                      </td>
+                    </tr>
+                  </ProductImpressionTracker>
                 ))}
               </tbody>
             </table>
@@ -200,38 +223,59 @@ export default function BestChefKnivesPage() {
 
           {/* Mobile Cards */}
           <div className="md:hidden space-y-4">
-            {topKnives.map((knife) => (
-              <div key={knife.id} className="bg-white rounded-xl p-4 shadow-md border border-gray-200">
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="text-4xl">{knife.image}</div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-slate-900">{knife.name}</h3>
-                    <span className={`inline-block text-xs px-2 py-1 rounded-full text-white ${knife.tagColor} mt-1`}>
-                      {knife.tag}
-                    </span>
+            {topKnives.map((knife, index) => (
+              <ProductImpressionTracker
+                key={knife.id}
+                product={{
+                  id: knife.slug,
+                  name: knife.name,
+                  price: knife.price,
+                  category: 'Knives',
+                  brand: knife.name.split(' ')[0],
+                  position: index + 1
+                }}
+                listName="guide_best_chef_knives_mobile"
+              >
+                <div className="bg-white rounded-xl p-4 shadow-md border border-gray-200">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="text-4xl">{knife.image}</div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-slate-900">{knife.name}</h3>
+                      <span className={`inline-block text-xs px-2 py-1 rounded-full text-white ${knife.tagColor} mt-1`}>
+                        {knife.tag}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className={`w-4 h-4 ${i < Math.floor(knife.rating) ? 'fill-current' : ''}`} />
+                      ))}
+                    </div>
+                    <span className="text-sm font-semibold text-slate-700">{knife.rating}/5</span>
+                  </div>
+                  <p className="text-sm text-slate-600 mb-2">{knife.bestFor}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xl font-bold text-orange-600">${knife.price}</span>
+                    <CTAVisibilityTracker
+                      ctaId={`guide-best-chef-knives-mobile-price-${index + 1}`}
+                      ctaType="affiliate_link"
+                      merchant="amazon"
+                      productId={knife.slug}
+                      location="mobile_card"
+                    >
+                      <a
+                        href={knife.affiliateUrl}
+                        target="_blank"
+                        rel="noopener noreferrer sponsored nofollow"
+                        className="inline-flex items-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md text-sm"
+                      >
+                        Check Price →
+                      </a>
+                    </CTAVisibilityTracker>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className={`w-4 h-4 ${i < Math.floor(knife.rating) ? 'fill-current' : ''}`} />
-                    ))}
-                  </div>
-                  <span className="text-sm font-semibold text-slate-700">{knife.rating}/5</span>
-                </div>
-                <p className="text-sm text-slate-600 mb-2">{knife.bestFor}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xl font-bold text-orange-600">${knife.price}</span>
-                  <a
-                    href={knife.affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored nofollow"
-                    className="inline-flex items-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md text-sm"
-                  >
-                    Check Price →
-                  </a>
-                </div>
-              </div>
+              </ProductImpressionTracker>
             ))}
           </div>
         </section>
@@ -326,20 +370,36 @@ export default function BestChefKnivesPage() {
 
                     {/* CTAs */}
                     <div className="flex flex-col sm:flex-row gap-3">
-                      <a
-                        href={knife.affiliateUrl}
-                        target="_blank"
-                        rel="noopener noreferrer sponsored nofollow"
-                        className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                      <CTAVisibilityTracker
+                        ctaId={`guide-best-chef-knives-detail-price-${knife.id}`}
+                        ctaType="affiliate_link"
+                        merchant="amazon"
+                        productId={knife.slug}
+                        location="product_detail"
                       >
-                        Check Latest Price on Amazon →
-                      </a>
-                      <Link
-                        href={`/reviews/${knife.slug}`}
-                        className="inline-flex items-center justify-center border-2 border-orange-600 text-orange-600 hover:bg-orange-50 font-bold py-3 px-6 rounded-lg transition-all duration-200"
+                        <a
+                          href={knife.affiliateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer sponsored nofollow"
+                          className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                        >
+                          Check Latest Price on Amazon →
+                        </a>
+                      </CTAVisibilityTracker>
+                      <CTAVisibilityTracker
+                        ctaId={`guide-best-chef-knives-detail-review-${knife.id}`}
+                        ctaType="internal_link"
+                        merchant="internal"
+                        productId={knife.slug}
+                        location="product_detail"
                       >
-                        Read Full Review
-                      </Link>
+                        <Link
+                          href={`/reviews/${knife.slug}`}
+                          className="inline-flex items-center justify-center border-2 border-orange-600 text-orange-600 hover:bg-orange-50 font-bold py-3 px-6 rounded-lg transition-all duration-200"
+                        >
+                          Read Full Review
+                        </Link>
+                      </CTAVisibilityTracker>
                     </div>
 
                     <div className="mt-3 flex items-center gap-2 text-sm text-slate-500">
@@ -469,22 +529,38 @@ export default function BestChefKnivesPage() {
               Start with the Wüsthof Classic Ikon for premium performance or the Victorinox Fibrox for unbeatable value. Both are restaurant-proven and will transform your cooking.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={topKnives[0].affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored nofollow"
-                className="inline-flex items-center justify-center bg-white text-orange-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg"
+              <CTAVisibilityTracker
+                ctaId="guide-best-chef-knives-final-cta-wusthof"
+                ctaType="affiliate_link"
+                merchant="amazon"
+                productId={topKnives[0].slug}
+                location="final_cta"
               >
-                Get the Wüsthof (Top Pick) →
-              </a>
-              <a
-                href={topKnives[1].affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored nofollow"
-                className="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg"
+                <a
+                  href={topKnives[0].affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored nofollow"
+                  className="inline-flex items-center justify-center bg-white text-orange-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg"
+                >
+                  Get the Wüsthof (Top Pick) →
+                </a>
+              </CTAVisibilityTracker>
+              <CTAVisibilityTracker
+                ctaId="guide-best-chef-knives-final-cta-victorinox"
+                ctaType="affiliate_link"
+                merchant="amazon"
+                productId={topKnives[1].slug}
+                location="final_cta"
               >
-                Get the Victorinox (Best Value) →
-              </a>
+                <a
+                  href={topKnives[1].affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored nofollow"
+                  className="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg"
+                >
+                  Get the Victorinox (Best Value) →
+                </a>
+              </CTAVisibilityTracker>
             </div>
           </div>
         </section>

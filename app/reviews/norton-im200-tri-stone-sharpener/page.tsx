@@ -1,6 +1,8 @@
 import { Tier1Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
+
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -161,15 +163,22 @@ export default function NortonTriStoneSharpenerReview() {
         }}>
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
 
-          <AffiliateButton
-            href="https://www.amazon.com/Norton-IM200-11-5-Inch-Sharpening-Stone/dp/B000XK0FMU?&linkCode=ll1&tag=chefapprovedt-20&linkId=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-above_fold`}
             position="above_fold"
-            variant="primary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Amazon Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/Norton-IM200-11-5-Inch-Sharpening-Stone/dp/B000XK0FMU?&linkCode=ll1&tag=chefapprovedt-20&linkId=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
+              merchant="amazon"
+              product={productData.slug}
+              position="above_fold"
+              variant="primary"
+            >
+              Check Amazon Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
 
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 Price updated daily. We earn commission at no extra cost to you.
@@ -1010,15 +1019,22 @@ export default function NortonTriStoneSharpenerReview() {
             Get the sharpening system that kept our restaurant knives razor-sharp for 6 years:
           </p>
 
-          <AffiliateButton
-            href="https://www.amazon.com/Norton-IM200-11-5-Inch-Sharpening-Stone/dp/B000XK0FMU?&linkCode=ll1&tag=chefapprovedt-20&linkId=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-final_cta`}
             position="final_cta"
-            variant="primary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Amazon Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/Norton-IM200-11-5-Inch-Sharpening-Stone/dp/B000XK0FMU?&linkCode=ll1&tag=chefapprovedt-20&linkId=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
+              merchant="amazon"
+              product={productData.slug}
+              position="final_cta"
+              variant="primary"
+            >
+              Check Amazon Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
 
         </div>
 

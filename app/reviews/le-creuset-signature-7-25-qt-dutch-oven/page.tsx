@@ -4,6 +4,8 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import AuthorBio from '@/components/AuthorBio'
 import AffiliateButton from '@/components/AffiliateButton'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure';
 import type { Metadata } from 'next';
@@ -280,17 +282,24 @@ export default function LeCreuset725QtReview() {
 
               {/* Primary CTA */}
               <div className="flex flex-col sm:flex-row gap-3">
-                <AffiliateButton
-                  href={productData.affiliateLinks[0].url}
-                  merchant="amazon"
-                  product="le-creuset-signature-7-25-qt-dutch-oven"
+                <CTAVisibilityTracker
+                  ctaId="review-le-creuset-signature-7-25-qt-dutch-oven-above-fold"
                   position="above_fold"
-                  price={380}
-                  variant="primary"
-                  className="!text-base !py-4 !px-6"
+                  productSlug="le-creuset-signature-7-25-qt-dutch-oven"
+                  merchant="amazon"
                 >
-                  Check Availability on Amazon →
-                </AffiliateButton>
+                  <AffiliateButton
+                    href={productData.affiliateLinks[0].url}
+                    merchant="amazon"
+                    product="le-creuset-signature-7-25-qt-dutch-oven"
+                    position="above_fold"
+                    price={380}
+                    variant="primary"
+                    className="!text-base !py-4 !px-6"
+                  >
+                    Check Availability on Amazon →
+                  </AffiliateButton>
+                </CTAVisibilityTracker>
               </div>
             </div>
           </div>
@@ -928,17 +937,24 @@ export default function LeCreuset725QtReview() {
             <p className="text-lg text-slate-800 mb-4 font-medium">
               Ready to invest in cookware that will last a lifetime?
             </p>
-            <AffiliateButton
-              href={productData.affiliateLinks[0].url}
-              merchant="amazon"
-              product="le-creuset-signature-7-25-qt-dutch-oven"
+            <CTAVisibilityTracker
+              ctaId="review-le-creuset-signature-7-25-qt-dutch-oven-mid-article"
               position="mid_article"
-              price={380}
-              variant="primary"
-              className="!py-4 !px-8"
+              productSlug="le-creuset-signature-7-25-qt-dutch-oven"
+              merchant="amazon"
             >
-              Check Availability on Amazon →
-            </AffiliateButton>
+              <AffiliateButton
+                href={productData.affiliateLinks[0].url}
+                merchant="amazon"
+                product="le-creuset-signature-7-25-qt-dutch-oven"
+                position="mid_article"
+                price={380}
+                variant="primary"
+                className="!py-4 !px-8"
+              >
+                Check Availability on Amazon →
+              </AffiliateButton>
+            </CTAVisibilityTracker>
           </div>
         </section>
 
@@ -1054,17 +1070,24 @@ export default function LeCreuset725QtReview() {
               12+ years tested. 4.9/5 rating. Lifetime warranty. Generational quality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <AffiliateButton
-                href={productData.affiliateLinks[0].url}
-                merchant="amazon"
-                product="le-creuset-signature-7-25-qt-dutch-oven"
+              <CTAVisibilityTracker
+                ctaId="review-le-creuset-signature-7-25-qt-dutch-oven-final-cta"
                 position="final_cta"
-                price={380}
-                variant="primary"
-                className="!py-4 !px-8"
+                productSlug="le-creuset-signature-7-25-qt-dutch-oven"
+                merchant="amazon"
               >
-                Check Availability on Amazon →
-              </AffiliateButton>
+                <AffiliateButton
+                  href={productData.affiliateLinks[0].url}
+                  merchant="amazon"
+                  product="le-creuset-signature-7-25-qt-dutch-oven"
+                  position="final_cta"
+                  price={380}
+                  variant="primary"
+                  className="!py-4 !px-8"
+                >
+                  Check Availability on Amazon →
+                </AffiliateButton>
+              </CTAVisibilityTracker>
               <div className="text-sm text-slate-600">
                 <div className="flex items-center gap-1 justify-center">
                   <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -1112,17 +1135,24 @@ export default function LeCreuset725QtReview() {
             <p className="text-lg text-slate-200 mb-6 max-w-2xl mx-auto">
               After 12 years of home testing, this is the Dutch oven that transformed my kitchen. Join the thousands of home cooks who made the investment.
             </p>
-            <AffiliateButton
-              href={productData.affiliateLinks[0].url}
-              merchant="amazon"
-              product="le-creuset-signature-7-25-qt-dutch-oven"
+            <CTAVisibilityTracker
+              ctaId="review-le-creuset-signature-7-25-qt-dutch-oven-bottom-cta"
               position="final_cta"
-              price={380}
-              variant="primary"
-              className="!py-5 !px-10 !text-lg"
+              productSlug="le-creuset-signature-7-25-qt-dutch-oven"
+              merchant="amazon"
             >
-              Check Availability on Amazon →
-            </AffiliateButton>
+              <AffiliateButton
+                href={productData.affiliateLinks[0].url}
+                merchant="amazon"
+                product="le-creuset-signature-7-25-qt-dutch-oven"
+                position="final_cta"
+                price={380}
+                variant="primary"
+                className="!py-5 !px-10 !text-lg"
+              >
+                Check Availability on Amazon →
+              </AffiliateButton>
+            </CTAVisibilityTracker>
             <p className="text-sm text-slate-300 mt-4">
               ⭐ {productData.expertRating}/5 Amazon rating • {productData.reviewCount.toLocaleString()} reviews • Lifetime warranty • Free returns
             </p>

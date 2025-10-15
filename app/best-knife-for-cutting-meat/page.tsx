@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Star, DollarSign, Award, TrendingUp, Shield, Scissors } from 'lucide-react'
 import { generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata = {
   title: "Best Knife for Cutting Meat 2025: Victorinox Boning Knife | Chef Approved",
@@ -75,6 +76,12 @@ export default function BestKnifeForCuttingMeat() {
             At under $30, it's an essential tool for any serious home cook or professional.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <CTAVisibilityTracker
+              ctaId="best-knife-cutting-meat-quick-answer-amazon"
+              position="above_fold"
+              productSlug="victorinox-granton-edge-boning-knife"
+              merchant="amazon"
+            >
             <a
               href="https://amzn.to/4pUDed1"
               target="_blank"
@@ -84,6 +91,7 @@ export default function BestKnifeForCuttingMeat() {
               <DollarSign className="w-5 h-5" />
               Check Current Price on Amazon
             </a>
+            </CTAVisibilityTracker>
             <div className="flex items-center gap-2 text-slate-600">
               <Star className="w-5 h-5 text-yellow-500 fill-current" />
               <span className="font-semibold">4.8/5</span>
@@ -309,6 +317,12 @@ export default function BestKnifeForCuttingMeat() {
             the Victorinox 6" Flexible Boning Knife is an essential tool. At under $30, it's one of the best values
             in professional cutlery. I've used mine daily for 15+ years and it's still going strong.
           </p>
+          <CTAVisibilityTracker
+            ctaId="best-knife-cutting-meat-final-verdict-amazon"
+            position="final_cta"
+            productSlug="victorinox-granton-edge-boning-knife"
+            merchant="amazon"
+          >
           <a
             href="https://amzn.to/4pUDed1"
             target="_blank"
@@ -318,12 +332,19 @@ export default function BestKnifeForCuttingMeat() {
             <DollarSign className="w-6 h-6" />
             Check Price on Amazon
           </a>
+          </CTAVisibilityTracker>
         </section>
 
         {/* Related Content */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Guides & Reviews</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <CTAVisibilityTracker
+              ctaId="best-knife-cutting-meat-related-budget-knife"
+              position="final_cta"
+              productSlug="best-budget-chef-knife"
+              merchant="internal"
+            >
             <Link
               href="/best-budget-chef-knife"
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
@@ -331,6 +352,13 @@ export default function BestKnifeForCuttingMeat() {
               <h3 className="font-bold text-slate-900 mb-2">Best Budget Chef Knife</h3>
               <p className="text-sm text-slate-600">The $40 chef's knife I've used for 20+ years in professional kitchens.</p>
             </Link>
+            </CTAVisibilityTracker>
+            <CTAVisibilityTracker
+              ctaId="best-knife-cutting-meat-related-knife-care"
+              position="final_cta"
+              productSlug="knife-care"
+              merchant="internal"
+            >
             <Link
               href="/guides/knife-care"
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
@@ -338,6 +366,7 @@ export default function BestKnifeForCuttingMeat() {
               <h3 className="font-bold text-slate-900 mb-2">Knife Care Guide</h3>
               <p className="text-sm text-slate-600">Learn how to maintain and sharpen your knives like a professional.</p>
             </Link>
+            </CTAVisibilityTracker>
           </div>
         </section>
 

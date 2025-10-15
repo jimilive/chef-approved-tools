@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'How to Sharpen with a Stone: Professional Chef&apos;s Technique (2025)',

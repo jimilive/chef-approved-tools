@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'Knife Care Guide - How to Maintain Professional Kitchen Knives',
@@ -93,12 +94,19 @@ export default function KnifeCareGuidePage() {
         </section>
 
         <nav className="mt-12 pt-8 border-t border-gray-200">
-          <Link
-            href="/guides"
-            className="text-orange-600 hover:text-orange-800 font-semibold"
+          <CTAVisibilityTracker
+            ctaId="guide-knife-care-back-to-guides"
+            position="final_cta"
+            productSlug="guides"
+            merchant="internal"
           >
-            ← Back to All Guides
-          </Link>
+            <Link
+              href="/guides"
+              className="text-orange-600 hover:text-orange-800 font-semibold"
+            >
+              ← Back to All Guides
+            </Link>
+          </CTAVisibilityTracker>
         </nav>
       </div>
     </main>

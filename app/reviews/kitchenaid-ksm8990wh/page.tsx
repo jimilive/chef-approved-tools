@@ -4,6 +4,8 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButton from '@/components/AffiliateButton'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
@@ -243,17 +245,24 @@ export default function KitchenAidReviewPage() {
         }}>
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
 
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B00IRH09EK?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="kitchenaid-ksm8990wh"
+          <CTAVisibilityTracker
+            ctaId="review-kitchenaid-ksm8990wh-above-fold"
             position="above_fold"
-            price={849}
-            variant="secondary"
-            className="!text-lg !px-10 !py-4 !my-2"
+            productSlug="kitchenaid-ksm8990wh"
+            merchant="amazon"
           >
-            Check Amazon Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B00IRH09EK?tag=chefapprovedt-20"
+              merchant="amazon"
+              product="kitchenaid-ksm8990wh"
+              position="above_fold"
+              price={849}
+              variant="secondary"
+              className="!text-lg !px-10 !py-4 !my-2"
+            >
+              Check Amazon Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
 
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 We earn commission at no extra cost to you.<br/>
@@ -863,17 +872,24 @@ export default function KitchenAidReviewPage() {
               Check current availability and start professional-grade baking today:
             </p>
 
-            <AffiliateButton
-              href="https://www.amazon.com/dp/B00IRH09EK?tag=chefapprovedt-20"
-              merchant="amazon"
-              product="kitchenaid-ksm8990wh"
+            <CTAVisibilityTracker
+              ctaId="review-kitchenaid-ksm8990wh-final-cta"
               position="final_cta"
-              price={849}
-              variant="secondary"
-              className="!text-xl !px-12 !py-5"
+              productSlug="kitchenaid-ksm8990wh"
+              merchant="amazon"
             >
-              View on Amazon →
-            </AffiliateButton>
+              <AffiliateButton
+                href="https://www.amazon.com/dp/B00IRH09EK?tag=chefapprovedt-20"
+                merchant="amazon"
+                product="kitchenaid-ksm8990wh"
+                position="final_cta"
+                price={849}
+                variant="secondary"
+                className="!text-xl !px-12 !py-5"
+              >
+                View on Amazon →
+              </AffiliateButton>
+            </CTAVisibilityTracker>
 
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
               💡 More retailers will be added soon

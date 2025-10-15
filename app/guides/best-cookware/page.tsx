@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 
 export const metadata: Metadata = {
   title: 'Best Cookware 2024 - Restaurant-Grade Pans for Home Kitchens',
@@ -27,44 +29,87 @@ export default function BestCookwarePage() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Top Cookware Recommendations</h2>
 
           <div className="space-y-8">
-            <article className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">1. All-Clad D3 Tri-Ply Stainless Steel</h3>
-              <p className="text-slate-600 mb-4">
-                The gold standard for professional kitchens. Even heat distribution,
-                durable construction, and works on all cooktops including induction.
-              </p>
-              <div className="text-slate-500">
-                Full review coming soon
-              </div>
-            </article>
+            <ProductImpressionTracker
+              productName="All-Clad D3 Tri-Ply Stainless Steel"
+              productSlug="all-clad-d3-tri-ply-stainless-steel"
+              category="Cookware"
+              brand="All-Clad"
+              position={1}
+              listName="guide_featured_products"
+            >
+              <article className="bg-white rounded-xl p-6 shadow-lg">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">1. All-Clad D3 Tri-Ply Stainless Steel</h3>
+                <p className="text-slate-600 mb-4">
+                  The gold standard for professional kitchens. Even heat distribution,
+                  durable construction, and works on all cooktops including induction.
+                </p>
+                <div className="text-slate-500">
+                  Full review coming soon
+                </div>
+              </article>
+            </ProductImpressionTracker>
 
-            <article className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">2. Lodge Cast Iron Skillet</h3>
-              <p className="text-slate-600 mb-4">
-                American-made cast iron that improves with age. Perfect for searing,
-                baking, and building flavor. Used these for 10+ years.
-              </p>
-              <Link
-                href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
-                className="text-orange-600 hover:text-orange-800 font-semibold"
-              >
-                Read full review →
-              </Link>
-            </article>
+            <ProductImpressionTracker
+              productName="Lodge Cast Iron Skillet"
+              productSlug="lodge-seasoned-cast-iron-3-skillet-bundle"
+              category="Cookware"
+              brand="Lodge"
+              position={2}
+              listName="guide_featured_products"
+            >
+              <article className="bg-white rounded-xl p-6 shadow-lg">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">2. Lodge Cast Iron Skillet</h3>
+                <p className="text-slate-600 mb-4">
+                  American-made cast iron that improves with age. Perfect for searing,
+                  baking, and building flavor. Used these for 10+ years.
+                </p>
+                <CTAVisibilityTracker
+                  ctaId="guide-best-cookware-review-link-1"
+                  ctaType="internal_link"
+                  merchant="internal"
+                  productId="lodge-seasoned-cast-iron-3-skillet-bundle"
+                  location="product_card"
+                >
+                  <Link
+                    href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
+                    className="text-orange-600 hover:text-orange-800 font-semibold"
+                  >
+                    Read full review →
+                  </Link>
+                </CTAVisibilityTracker>
+              </article>
+            </ProductImpressionTracker>
 
-            <article className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">3. Le Creuset Dutch Oven</h3>
-              <p className="text-slate-600 mb-4">
-                French craftsmanship that lasts generations. Perfect for braises,
-                stews, and bread baking. Investment piece worth every penny.
-              </p>
-              <Link
-                href="/reviews/le-creuset-signature-7-25-qt-dutch-oven"
-                className="text-orange-600 hover:text-orange-800 font-semibold"
-              >
-                Read full review →
-              </Link>
-            </article>
+            <ProductImpressionTracker
+              productName="Le Creuset Dutch Oven"
+              productSlug="le-creuset-signature-7-25-qt-dutch-oven"
+              category="Cookware"
+              brand="Le Creuset"
+              position={3}
+              listName="guide_featured_products"
+            >
+              <article className="bg-white rounded-xl p-6 shadow-lg">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">3. Le Creuset Dutch Oven</h3>
+                <p className="text-slate-600 mb-4">
+                  French craftsmanship that lasts generations. Perfect for braises,
+                  stews, and bread baking. Investment piece worth every penny.
+                </p>
+                <CTAVisibilityTracker
+                  ctaId="guide-best-cookware-review-link-2"
+                  ctaType="internal_link"
+                  merchant="internal"
+                  productId="le-creuset-signature-7-25-qt-dutch-oven"
+                  location="product_card"
+                >
+                  <Link
+                    href="/reviews/le-creuset-signature-7-25-qt-dutch-oven"
+                    className="text-orange-600 hover:text-orange-800 font-semibold"
+                  >
+                    Read full review →
+                  </Link>
+                </CTAVisibilityTracker>
+              </article>
+            </ProductImpressionTracker>
           </div>
         </section>
 
@@ -89,12 +134,19 @@ export default function BestCookwarePage() {
         </section>
 
         <nav className="mt-12 pt-8 border-t border-gray-200">
-          <Link
-            href="/guides"
-            className="text-orange-600 hover:text-orange-800 font-semibold"
+          <CTAVisibilityTracker
+            ctaId="guide-best-cookware-back-to-guides"
+            position="final_cta"
+            productSlug="guides"
+            merchant="internal"
           >
-            ← Back to All Guides
-          </Link>
+            <Link
+              href="/guides"
+              className="text-orange-600 hover:text-orange-800 font-semibold"
+            >
+              ← Back to All Guides
+            </Link>
+          </CTAVisibilityTracker>
         </nav>
       </div>
     </main>

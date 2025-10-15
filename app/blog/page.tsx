@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User } from 'lucide-react'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'Professional Cooking Techniques Blog | Chef Approved Tools',
@@ -139,24 +140,40 @@ export default function BlogPage() {
                 </div>
 
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 hover:text-orange-800 transition-colors">
-                  <Link href={`/blog/${post.slug}`}>
-                    {post.title}
-                  </Link>
+                  <CTAVisibilityTracker
+                    ctaId={`blog-landing-post-title-${index + 1}`}
+                    ctaType="internal_link"
+                    merchant="internal"
+                    productId={post.slug}
+                    location="post_title"
+                  >
+                    <Link href={`/blog/${post.slug}`}>
+                      {post.title}
+                    </Link>
+                  </CTAVisibilityTracker>
                 </h2>
 
                 <p className="text-lg text-slate-700 leading-relaxed mb-6">
                   {post.excerpt}
                 </p>
 
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold transition-colors"
+                <CTAVisibilityTracker
+                  ctaId={`blog-landing-post-link-${index + 1}`}
+                  ctaType="internal_link"
+                  merchant="internal"
+                  productId={post.slug}
+                  location="post_card"
                 >
-                  Read Full Article
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold transition-colors"
+                  >
+                    Read Full Article
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </CTAVisibilityTracker>
               </article>
             ))}
           </div>
@@ -173,12 +190,20 @@ export default function BlogPage() {
             Get exclusive restaurant techniques and equipment insights delivered to your inbox.
             Learn the methods that create consistent, professional results.
           </p>
-          <Link
-            href="/newsletter"
-            className="bg-white text-orange-800 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors inline-block"
+          <CTAVisibilityTracker
+            ctaId="blog-landing-newsletter-cta"
+            ctaType="internal_link"
+            merchant="internal"
+            productId="newsletter"
+            location="newsletter_cta"
           >
-            Subscribe for Free Tips
-          </Link>
+            <Link
+              href="/newsletter"
+              className="bg-white text-orange-800 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors inline-block"
+            >
+              Subscribe for Free Tips
+            </Link>
+          </CTAVisibilityTracker>
         </div>
       </section>
     </div>

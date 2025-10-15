@@ -7,6 +7,8 @@ import { Tier2Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 const productData = {
   name: "Cuisinart DLC-10C Classic Food Processor (7-Cup)",
@@ -216,15 +218,22 @@ export default function CuisinartDLC10CReviewPage() {
             which offers the same powerful motor, 7-cup capacity, and reliable design that made
             my original model last three decades.
           </p>
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-above_fold`}
             position="above_fold"
-            variant="primary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            View Current Model on Amazon →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
+              merchant="amazon"
+              product={productData.slug}
+              position="above_fold"
+              variant="primary"
+            >
+              View Current Model on Amazon →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
         </div>
 
         {/* Quick Rating Box */}
@@ -269,15 +278,22 @@ export default function CuisinartDLC10CReviewPage() {
         }}>
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
 
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-mid_article_1`}
             position="mid_article"
-            variant="secondary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Amazon Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
+              merchant="amazon"
+              product={productData.slug}
+              position="mid_article"
+              variant="secondary"
+            >
+              Check Amazon Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
 
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 Price updated daily. We earn commission at no extra cost to you.
@@ -487,15 +503,22 @@ export default function CuisinartDLC10CReviewPage() {
           <p style={{ margin: '15px 0' }}>
             After 30 years of testing, this is one of the best products I&apos;ve ever owned.
           </p>
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-mid_article_2`}
             position="mid_article"
-            variant="secondary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Current Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
+              merchant="amazon"
+              product={productData.slug}
+              position="mid_article"
+              variant="secondary"
+            >
+              Check Current Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
         </div>
 
         {/* FAQ Section */}
@@ -877,15 +900,22 @@ export default function CuisinartDLC10CReviewPage() {
               Join the tradition of reliable Cuisinart food processors:
             </p>
 
-            <AffiliateButton
-              href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
+            <CTAVisibilityTracker
+              ctaId={`review-${productData.slug}-final_cta`}
+              position="final_cta"
+              productSlug={productData.slug}
               merchant="amazon"
-              product="{productData.slug}"
-              position="mid_article"
-              variant="secondary"
             >
-              Check Amazon Price →
-            </AffiliateButton>
+              <AffiliateButton
+                href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
+                merchant="amazon"
+                product={productData.slug}
+                position="final_cta"
+                variant="primary"
+              >
+                Check Amazon Price →
+              </AffiliateButton>
+            </CTAVisibilityTracker>
 
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
               💡 Current model offers same proven design and capacity

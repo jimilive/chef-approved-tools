@@ -4,6 +4,8 @@ import Image from 'next/image';
 import FTCDisclosure from '@/components/FTCDisclosure'
 import ProductImageGallery from '@/components/ProductImageGallery'
 import AffiliateButton from '@/components/AffiliateButton'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
@@ -214,16 +216,23 @@ export default function VictorinoxFibrox8InchReview() {
         }}>
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Availability:</h3>
 
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="victorinox-fibrox-8-inch-chefs-knife"
+          <CTAVisibilityTracker
+            ctaId="review-victorinox-fibrox-8-inch-chefs-knife-above-fold"
             position="above_fold"
-            variant="secondary"
-            className="!text-lg !px-10 !py-4 !my-2"
+            productSlug="victorinox-fibrox-8-inch-chefs-knife"
+            merchant="amazon"
           >
-            View on Amazon →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
+              merchant="amazon"
+              product="victorinox-fibrox-8-inch-chefs-knife"
+              position="above_fold"
+              variant="secondary"
+              className="!text-lg !px-10 !py-4 !my-2"
+            >
+              View on Amazon →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
 
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 The knife I&apos;ve used daily for 20 years. Professional quality at accessible pricing.<br/>
@@ -379,15 +388,22 @@ export default function VictorinoxFibrox8InchReview() {
           <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
             Ready to experience professional-quality cutting?
           </p>
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="victorinox-fibrox-8-inch-chefs-knife"
+          <CTAVisibilityTracker
+            ctaId="review-victorinox-fibrox-8-inch-chefs-knife-mid-article"
             position="mid_article"
-            variant="primary"
+            productSlug="victorinox-fibrox-8-inch-chefs-knife"
+            merchant="amazon"
           >
-            Check Current Availability →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
+              merchant="amazon"
+              product="victorinox-fibrox-8-inch-chefs-knife"
+              position="mid_article"
+              variant="primary"
+            >
+              Check Current Availability →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
         </div>
 
         {/* Pros & Cons */}
@@ -761,15 +777,22 @@ export default function VictorinoxFibrox8InchReview() {
                   <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Prime shipping | ✓ Best availability</p>
                 </div>
                 <div>
-                  <AffiliateButton
-                    href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
-                    merchant="amazon"
-                    product="victorinox-fibrox-8-inch-chefs-knife"
+                  <CTAVisibilityTracker
+                    ctaId="review-victorinox-fibrox-8-inch-chefs-knife-related-products"
                     position="related_products"
-                    variant="secondary"
+                    productSlug="victorinox-fibrox-8-inch-chefs-knife"
+                    merchant="amazon"
                   >
-                    View on Amazon →
-                  </AffiliateButton>
+                    <AffiliateButton
+                      href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
+                      merchant="amazon"
+                      product="victorinox-fibrox-8-inch-chefs-knife"
+                      position="related_products"
+                      variant="secondary"
+                    >
+                      View on Amazon →
+                    </AffiliateButton>
+                  </CTAVisibilityTracker>
                 </div>
               </div>
             </div>
@@ -905,16 +928,23 @@ export default function VictorinoxFibrox8InchReview() {
               The knife I&apos;ve used daily for 20 years—professional performance without premium pricing:
             </p>
 
-            <AffiliateButton
-              href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
-              merchant="amazon"
-              product="victorinox-fibrox-8-inch-chefs-knife"
+            <CTAVisibilityTracker
+              ctaId="review-victorinox-fibrox-8-inch-chefs-knife-final-cta"
               position="final_cta"
-              variant="secondary"
-              className="!text-xl !px-12 !py-5"
+              productSlug="victorinox-fibrox-8-inch-chefs-knife"
+              merchant="amazon"
             >
-              Check Current Availability →
-            </AffiliateButton>
+              <AffiliateButton
+                href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
+                merchant="amazon"
+                product="victorinox-fibrox-8-inch-chefs-knife"
+                position="final_cta"
+                variant="secondary"
+                className="!text-xl !px-12 !py-5"
+              >
+                Check Current Availability →
+              </AffiliateButton>
+            </CTAVisibilityTracker>
 
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
               💡 Best value in kitchen knives—no question.

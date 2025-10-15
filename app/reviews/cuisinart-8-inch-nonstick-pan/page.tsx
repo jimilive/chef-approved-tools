@@ -6,6 +6,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+import ProductImpressionTracker from '@/components/ProductImpressionTracker';
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 
 
 
@@ -179,15 +181,22 @@ export default function Cuisinart8InchNonstickPanReview() {
           <p style={{ fontSize: '16px', margin: '15px 0' }}>
             After 6 months of daily testing, this is my go-to pan for eggs and single servings.
           </p>
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-above_fold`}
             position="above_fold"
-            variant="primary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Price on Amazon →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
+              merchant="amazon"
+              product={productData.slug}
+              position="above_fold"
+              variant="primary"
+            >
+              Check Price on Amazon →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 Price updated daily. We earn commission at no extra cost to you.
           </p>
@@ -429,15 +438,22 @@ export default function Cuisinart8InchNonstickPanReview() {
           <p style={{ fontSize: '16px', margin: '15px 0' }}>
             The pan I reach for every morning. Perfect size, perfect nonstick, perfect results.
           </p>
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-mid_article`}
             position="mid_article"
-            variant="secondary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Amazon Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
+              merchant="amazon"
+              product={productData.slug}
+              position="mid_article"
+              variant="secondary"
+            >
+              Check Amazon Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
         </div>
 
         {/* VERSATILITY SECTION */}
@@ -867,15 +883,22 @@ export default function Cuisinart8InchNonstickPanReview() {
               After 6 months of testing, this is my #1 recommendation for egg lovers
               and small-batch cooking.
             </p>
-            <AffiliateButton
-              href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
+            <CTAVisibilityTracker
+              ctaId={`review-${productData.slug}-final_cta`}
+              position="final_cta"
+              productSlug={productData.slug}
               merchant="amazon"
-              product="{productData.slug}"
-              position="mid_article"
-              variant="secondary"
             >
-              Check Current Price on Amazon →
-            </AffiliateButton>
+              <AffiliateButton
+                href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
+                merchant="amazon"
+                product={productData.slug}
+                position="final_cta"
+                variant="primary"
+              >
+                Check Current Price on Amazon →
+              </AffiliateButton>
+            </CTAVisibilityTracker>
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
               💡 Professional-quality nonstick at exceptional value. Price updated daily.<br/>
               We earn commission at no extra cost to you.

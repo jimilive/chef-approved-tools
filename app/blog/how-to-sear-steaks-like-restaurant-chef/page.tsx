@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User, ThermometerSun, Timer, Flame } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'How to Sear Steaks Like a Restaurant Chef | Professional Techniques',
@@ -137,7 +139,14 @@ export default function SteakSearingPost() {
               <li><strong>Tongs (not a fork)</strong> - Prevents piercing and juice loss</li>
             </ul>
             <p className="text-sm text-blue-600">
-              <strong>Pro tip:</strong> I use the same <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-blue-700 underline">Lodge cast iron skillets</Link> at home
+              <strong>Pro tip:</strong> I use the same <CTAVisibilityTracker
+                ctaId="blog-how-to-sear-steaks-like-restaurant-chef-review-link-1"
+                position="mid_article"
+                productSlug="how-to-sear-steaks-like-restaurant-chef"
+                merchant="internal"
+              >
+                <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-blue-700 underline">Lodge cast iron skillets</Link>
+              </CTAVisibilityTracker> at home
               that we relied on in the restaurant. They distribute heat evenly and develop amazing fond.
             </p>
           </div>
@@ -364,12 +373,19 @@ export default function SteakSearingPost() {
               This is just one technique from 23+ years of professional kitchen experience. Want to learn more
               restaurant secrets for home cooking?
             </p>
-            <Link
-              href="/newsletter"
-              className="bg-orange-600 text-white hover:bg-orange-700 px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
+            <CTAVisibilityTracker
+              ctaId="blog-how-to-sear-steaks-like-restaurant-chef-newsletter-cta-1"
+              position="final_cta"
+              productSlug="how-to-sear-steaks-like-restaurant-chef"
+              merchant="internal"
             >
-              Get Free Restaurant Techniques
-            </Link>
+              <Link
+                href="/newsletter"
+                className="bg-orange-600 text-white hover:bg-orange-700 px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
+              >
+                Get Free Restaurant Techniques
+              </Link>
+            </CTAVisibilityTracker>
           </div>
         </div>
 

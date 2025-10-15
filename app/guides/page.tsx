@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import FAQSchema from '@/components/FAQSchema'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'Kitchen Equipment Buying Guides | Chef Approved Tools',
@@ -50,13 +51,21 @@ export default function GuidesPage() {
 
       <div style={{ display: 'grid', gap: '24px', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))' }}>
         {guides.map((guide, index) => (
-          <a key={index} href={guide.href} style={{ textDecoration: 'none' }}>
-            <div style={{ backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', padding: '32px', border: '1px solid #e2e8f0', transition: 'box-shadow 0.2s' }}>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '12px', color: '#1e293b' }}>{guide.title}</h3>
-              <p style={{ color: '#64748b', marginBottom: '16px' }}>{guide.description}</p>
-              <span style={{ color: '#ea580c', fontWeight: '600' }}>Read Guide →</span>
-            </div>
-          </a>
+          <CTAVisibilityTracker
+            key={index}
+            ctaId={`guides-landing-card-${index + 1}`}
+            position="mid_article"
+            productSlug={guide.href.replace('/guides/', '').replace('/reviews/', '')}
+            merchant="internal"
+          >
+            <a href={guide.href} style={{ textDecoration: 'none' }}>
+              <div style={{ backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', padding: '32px', border: '1px solid #e2e8f0', transition: 'box-shadow 0.2s' }}>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '12px', color: '#1e293b' }}>{guide.title}</h3>
+                <p style={{ color: '#64748b', marginBottom: '16px' }}>{guide.description}</p>
+                <span style={{ color: '#ea580c', fontWeight: '600' }}>Read Guide →</span>
+              </div>
+            </a>
+          </CTAVisibilityTracker>
         ))}
       </div>
     </div>

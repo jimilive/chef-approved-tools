@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'The Chef-Approved Kitchen Starter Kit: 10 Essential Tools | Chef Approved',
@@ -177,8 +179,16 @@ export default function ChefApprovedKitchenKit() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {coreEssentials.map((product, index) => (
-              <div
+              <ProductImpressionTracker
                 key={index}
+                productName={product.name}
+                productSlug={product.reviewSlug}
+                category="Kitchen Bundle"
+                brand={product.name.split(' ')[0]}
+                position={index + 1}
+                listName="bundle_core_essentials"
+              >
+              <div
                 className="bg-gray-50 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200"
               >
                 <div className="p-6">
@@ -211,6 +221,12 @@ export default function ChefApprovedKitchenKit() {
 
                   {/* Dual CTAs */}
                   <div className="space-y-2">
+                    <CTAVisibilityTracker
+                      ctaId={`bundle-core-${product.reviewSlug}-amazon-${index + 1}`}
+                      position="mid_article"
+                      productSlug={product.reviewSlug}
+                      merchant="amazon"
+                    >
                     <a
                       href={product.affiliateUrl}
                       target="_blank"
@@ -220,6 +236,13 @@ export default function ChefApprovedKitchenKit() {
                       🛒 Check Price on Amazon
                       <ArrowRight className="w-4 h-4" />
                     </a>
+                    </CTAVisibilityTracker>
+                    <CTAVisibilityTracker
+                      ctaId={`bundle-core-${product.reviewSlug}-review-${index + 1}`}
+                      position="mid_article"
+                      productSlug={product.reviewSlug}
+                      merchant="internal"
+                    >
                     <Link
                       href={`/reviews/${product.reviewSlug}`}
                       className="w-full bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 px-4 rounded-lg transition-all duration-200 text-center block flex items-center justify-center gap-2 text-sm"
@@ -227,9 +250,11 @@ export default function ChefApprovedKitchenKit() {
                       📊 Read Full Review
                       <ArrowRight className="w-4 h-4" />
                     </Link>
+                    </CTAVisibilityTracker>
                   </div>
                 </div>
               </div>
+              </ProductImpressionTracker>
             ))}
           </div>
         </div>
@@ -256,8 +281,16 @@ export default function ChefApprovedKitchenKit() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {lifetimeUpgrades.map((product, index) => (
-              <div
+              <ProductImpressionTracker
                 key={index}
+                productName={product.name}
+                productSlug={product.reviewSlug}
+                category="Kitchen Bundle"
+                brand={product.name.split(' ')[0]}
+                position={index + 1}
+                listName="bundle_lifetime_upgrades"
+              >
+              <div
                 className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-2 border-orange-200"
               >
                 <div className="p-6 sm:p-8">
@@ -290,6 +323,12 @@ export default function ChefApprovedKitchenKit() {
 
                   {/* Dual CTAs */}
                   <div className="space-y-3">
+                    <CTAVisibilityTracker
+                      ctaId={`bundle-lifetime-${product.reviewSlug}-amazon-${index + 1}`}
+                      position="mid_article"
+                      productSlug={product.reviewSlug}
+                      merchant="amazon"
+                    >
                     <a
                       href={product.affiliateUrl}
                       target="_blank"
@@ -299,6 +338,13 @@ export default function ChefApprovedKitchenKit() {
                       🛒 Check Price on Amazon
                       <ArrowRight className="w-4 h-4" />
                     </a>
+                    </CTAVisibilityTracker>
+                    <CTAVisibilityTracker
+                      ctaId={`bundle-lifetime-${product.reviewSlug}-review-${index + 1}`}
+                      position="mid_article"
+                      productSlug={product.reviewSlug}
+                      merchant="internal"
+                    >
                     <Link
                       href={`/reviews/${product.reviewSlug}`}
                       className="w-full bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 px-6 rounded-lg transition-all duration-200 text-center block flex items-center justify-center gap-2"
@@ -306,9 +352,11 @@ export default function ChefApprovedKitchenKit() {
                       📊 Read Full Review
                       <ArrowRight className="w-4 h-4" />
                     </Link>
+                    </CTAVisibilityTracker>
                   </div>
                 </div>
               </div>
+              </ProductImpressionTracker>
             ))}
           </div>
         </div>
@@ -326,6 +374,14 @@ export default function ChefApprovedKitchenKit() {
             </p>
           </div>
 
+          <ProductImpressionTracker
+            productName={specialistTool.name}
+            productSlug={specialistTool.reviewSlug}
+            category="Kitchen Bundle"
+            brand="Benriner"
+            position={1}
+            listName="bundle_specialist_tool"
+          >
           <div className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl shadow-2xl overflow-hidden border-4 border-orange-400">
             <div className="p-8 sm:p-12">
               {/* Image */}
@@ -357,6 +413,12 @@ export default function ChefApprovedKitchenKit() {
 
               {/* Dual CTAs */}
               <div className="space-y-3 max-w-md mx-auto">
+                <CTAVisibilityTracker
+                  ctaId="bundle-specialist-benriner-amazon-1"
+                  position="mid_article"
+                  productSlug={specialistTool.reviewSlug}
+                  merchant="amazon"
+                >
                 <a
                   href={specialistTool.affiliateUrl}
                   target="_blank"
@@ -366,6 +428,13 @@ export default function ChefApprovedKitchenKit() {
                   🛒 Check Price on Amazon
                   <ArrowRight className="w-5 h-5" />
                 </a>
+                </CTAVisibilityTracker>
+                <CTAVisibilityTracker
+                  ctaId="bundle-specialist-benriner-review-1"
+                  position="mid_article"
+                  productSlug={specialistTool.reviewSlug}
+                  merchant="internal"
+                >
                 <Link
                   href={`/reviews/${specialistTool.reviewSlug}`}
                   className="w-full bg-white border-2 border-orange-400 text-slate-900 hover:bg-orange-50 font-semibold py-4 px-6 rounded-lg transition-all duration-200 text-center block flex items-center justify-center gap-2"
@@ -373,9 +442,11 @@ export default function ChefApprovedKitchenKit() {
                   📊 Read Full Review
                   <ArrowRight className="w-5 h-5" />
                 </Link>
+                </CTAVisibilityTracker>
               </div>
             </div>
           </div>
+          </ProductImpressionTracker>
         </div>
       </section>
 
@@ -417,6 +488,12 @@ export default function ChefApprovedKitchenKit() {
 
           <div className="mt-12">
             <p className="text-xl font-semibold mb-4">Start with Part 1 - Just $157</p>
+            <CTAVisibilityTracker
+              ctaId="bundle-final-victorinox-knife-cta"
+              position="final_cta"
+              productSlug={coreEssentials[0].reviewSlug}
+              merchant="amazon"
+            >
             <a
               href={coreEssentials[0].affiliateUrl}
               target="_blank"
@@ -425,6 +502,7 @@ export default function ChefApprovedKitchenKit() {
             >
               🔪 Get the Victorinox Chef&apos;s Knife First ($45)
             </a>
+            </CTAVisibilityTracker>
           </div>
         </div>
       </section>

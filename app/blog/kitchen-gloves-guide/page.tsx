@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata = {
   title: 'Kitchen Gloves Guide: Professional Safety & Best Practices (2025)',
@@ -119,7 +121,14 @@ export default function KitchenGlovesGuide() {
         </p>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          When using equipment like the <a href="/reviews/benriner-large-mandoline" style={{ color: '#0066cc', fontWeight: 'bold' }}>Benriner mandoline</a>, cut-resistant gloves are non-negotiable. That blade is surgically sharp—I&apos;ve seen it slice through vegetables effortlessly, and it will do the same to your fingertips without hesitation.
+          When using equipment like the <CTAVisibilityTracker
+            ctaId="blog-kitchen-gloves-guide-review-link-1"
+            position="mid_article"
+            productSlug="kitchen-gloves-guide"
+            merchant="internal"
+          >
+            <a href="/reviews/benriner-large-mandoline" style={{ color: '#0066cc', fontWeight: 'bold' }}>Benriner mandoline</a>
+          </CTAVisibilityTracker>, cut-resistant gloves are non-negotiable. That blade is surgically sharp—I&apos;ve seen it slice through vegetables effortlessly, and it will do the same to your fingertips without hesitation.
         </p>
 
         <h3 style={{ fontSize: '20px', marginTop: '25px', marginBottom: '15px' }}>When to Use Cut-Resistant Gloves</h3>
@@ -130,7 +139,21 @@ export default function KitchenGlovesGuide() {
           <li style={{ marginBottom: '12px' }}><strong>Oyster shucking:</strong> That oyster knife can slip catastrophically</li>
           <li style={{ marginBottom: '12px' }}><strong>Working with new or unfamiliar sharp tools:</strong> Until you develop muscle memory</li>
           <li style={{ marginBottom: '12px' }}>
-            <strong>Training new staff:</strong> Anyone learning to use sharp equipment like <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>professional chef knives</a> or <a href="/reviews/victorinox-granton-edge-boning-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>boning knives</a>
+            <strong>Training new staff:</strong> Anyone learning to use sharp equipment like <CTAVisibilityTracker
+              ctaId="blog-kitchen-gloves-guide-review-link-2"
+              position="mid_article"
+              productSlug="kitchen-gloves-guide"
+              merchant="internal"
+            >
+              <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>professional chef knives</a>
+            </CTAVisibilityTracker> or <CTAVisibilityTracker
+              ctaId="blog-kitchen-gloves-guide-review-link-3"
+              position="mid_article"
+              productSlug="kitchen-gloves-guide"
+              merchant="internal"
+            >
+              <a href="/reviews/victorinox-granton-edge-boning-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>boning knives</a>
+            </CTAVisibilityTracker>
           </li>
         </ul>
 
@@ -159,7 +182,14 @@ export default function KitchenGlovesGuide() {
         </ul>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          For home cooks, A2-A4 rating provides excellent protection while maintaining the dexterity needed for precise work. Essential when working at your <a href="/reviews/john-boos-platinum-commercial-cutting-board" style={{ color: '#0066cc', fontWeight: 'bold' }}>cutting board station</a>.
+          For home cooks, A2-A4 rating provides excellent protection while maintaining the dexterity needed for precise work. Essential when working at your <CTAVisibilityTracker
+            ctaId="blog-kitchen-gloves-guide-review-link-4"
+            position="mid_article"
+            productSlug="kitchen-gloves-guide"
+            merchant="internal"
+          >
+            <a href="/reviews/john-boos-platinum-commercial-cutting-board" style={{ color: '#0066cc', fontWeight: 'bold' }}>cutting board station</a>
+          </CTAVisibilityTracker>.
         </p>
 
         <h3 style={{ fontSize: '20px', marginTop: '25px', marginBottom: '15px' }}>Important Limitations</h3>
@@ -308,7 +338,14 @@ export default function KitchenGlovesGuide() {
         </ul>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Combine with proper cleaning using <a href="/reviews/method-all-purpose-cleaner" style={{ color: '#0066cc', fontWeight: 'bold' }}>non-toxic cleaners</a> for complete food safety in your kitchen.
+          Combine with proper cleaning using <CTAVisibilityTracker
+            ctaId="blog-kitchen-gloves-guide-review-link-5"
+            position="mid_article"
+            productSlug="kitchen-gloves-guide"
+            merchant="internal"
+          >
+            <a href="/reviews/method-all-purpose-cleaner" style={{ color: '#0066cc', fontWeight: 'bold' }}>non-toxic cleaners</a>
+          </CTAVisibilityTracker> for complete food safety in your kitchen.
         </p>
       </section>
 
@@ -344,7 +381,14 @@ export default function KitchenGlovesGuide() {
         <h2>Building a Complete Kitchen Safety System</h2>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Gloves are just one component of kitchen safety. Part of our comprehensive <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold' }}>professional kitchen safety kit</a>, proper protection also includes:
+          Gloves are just one component of kitchen safety. Part of our comprehensive <CTAVisibilityTracker
+            ctaId="blog-kitchen-gloves-guide-bundle-link-1"
+            position="mid_article"
+            productSlug="kitchen-gloves-guide"
+            merchant="internal"
+          >
+            <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold' }}>professional kitchen safety kit</a>
+          </CTAVisibilityTracker>, proper protection also includes:
         </p>
 
         <ul style={{ fontSize: '16px', lineHeight: '1.8', margin: '20px 0' }}>
@@ -367,29 +411,64 @@ export default function KitchenGlovesGuide() {
         <h3 style={{ marginTop: 0, fontSize: '22px' }}>Related Articles:</h3>
         <ul style={{ lineHeight: '2', margin: '10px 0', fontSize: '16px' }}>
           <li>
-            <a href="/reviews/benriner-large-mandoline" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-              Benriner Mandoline: Professional Test & Safety →
-            </a>
+            <CTAVisibilityTracker
+              ctaId="blog-kitchen-gloves-guide-related-1"
+              position="final_cta"
+              productSlug="kitchen-gloves-guide"
+              merchant="internal"
+            >
+              <a href="/reviews/benriner-large-mandoline" style={{ color: '#0066cc', fontWeight: 'bold' }}>
+                Benriner Mandoline: Professional Test & Safety →
+              </a>
+            </CTAVisibilityTracker>
           </li>
           <li>
-            <a href="/reviews/victorinox-granton-edge-boning-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-              Boning Knife Safety & Technique →
-            </a>
+            <CTAVisibilityTracker
+              ctaId="blog-kitchen-gloves-guide-related-2"
+              position="final_cta"
+              productSlug="kitchen-gloves-guide"
+              merchant="internal"
+            >
+              <a href="/reviews/victorinox-granton-edge-boning-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>
+                Boning Knife Safety & Technique →
+              </a>
+            </CTAVisibilityTracker>
           </li>
           <li>
-            <a href="/blog/how-to-sharpen-with-tri-stone" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-              Knife Sharpening Safety Guide →
-            </a>
+            <CTAVisibilityTracker
+              ctaId="blog-kitchen-gloves-guide-related-3"
+              position="final_cta"
+              productSlug="kitchen-gloves-guide"
+              merchant="internal"
+            >
+              <a href="/blog/how-to-sharpen-with-tri-stone" style={{ color: '#0066cc', fontWeight: 'bold' }}>
+                Knife Sharpening Safety Guide →
+              </a>
+            </CTAVisibilityTracker>
           </li>
           <li>
-            <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-              Professional Chef&apos;s Knife Review →
-            </a>
+            <CTAVisibilityTracker
+              ctaId="blog-kitchen-gloves-guide-related-4"
+              position="final_cta"
+              productSlug="kitchen-gloves-guide"
+              merchant="internal"
+            >
+              <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>
+                Professional Chef&apos;s Knife Review →
+              </a>
+            </CTAVisibilityTracker>
           </li>
           <li>
-            <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-              Complete Professional Kitchen Safety Kit →
-            </a>
+            <CTAVisibilityTracker
+              ctaId="blog-kitchen-gloves-guide-related-5"
+              position="final_cta"
+              productSlug="kitchen-gloves-guide"
+              merchant="internal"
+            >
+              <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold' }}>
+                Complete Professional Kitchen Safety Kit →
+              </a>
+            </CTAVisibilityTracker>
           </li>
         </ul>
       </div>

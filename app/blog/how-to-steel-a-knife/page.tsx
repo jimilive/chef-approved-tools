@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata = {
   title: 'How to Steel a Knife (Hone Like a Chef) - Complete Guide (2025)',
@@ -36,7 +38,21 @@ export default function HowToSteelAKnife() {
         </p>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#0066cc' }}>
-          See also: <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox 8&quot; Chef&apos;s Knife Review</a> and our <a href="/guides/knife-care" style={{ color: '#0066cc', fontWeight: 'bold' }}>Knife Care Guide</a>.
+          See also: <CTAVisibilityTracker
+            ctaId="blog-how-to-steel-a-knife-review-link-1"
+            position="above_fold"
+            productSlug="how-to-steel-a-knife"
+            merchant="internal"
+          >
+            <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox Fibrox 8&quot; Chef&apos;s Knife Review</a>
+          </CTAVisibilityTracker> and our <CTAVisibilityTracker
+            ctaId="blog-how-to-steel-a-knife-guide-link-1"
+            position="above_fold"
+            productSlug="how-to-steel-a-knife"
+            merchant="internal"
+          >
+            <a href="/guides/knife-care" style={{ color: '#0066cc', fontWeight: 'bold' }}>Knife Care Guide</a>
+          </CTAVisibilityTracker>.
         </p>
       </section>
 
@@ -52,7 +68,14 @@ export default function HowToSteelAKnife() {
         </p>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          When you need actual sharpening, check out our guide on <a href="/reviews/norton-im200-tri-stone-sharpener" style={{ color: '#0066cc', fontWeight: 'bold' }}>sharpening with a tri-stone</a> for professional results.
+          When you need actual sharpening, check out our guide on <CTAVisibilityTracker
+            ctaId="blog-how-to-steel-a-knife-review-link-2"
+            position="mid_article"
+            productSlug="how-to-steel-a-knife"
+            merchant="internal"
+          >
+            <a href="/reviews/norton-im200-tri-stone-sharpener" style={{ color: '#0066cc', fontWeight: 'bold' }}>sharpening with a tri-stone</a>
+          </CTAVisibilityTracker> for professional results.
         </p>
       </section>
 
@@ -234,7 +257,21 @@ export default function HowToSteelAKnife() {
         </div>
 
         <p style={{ fontSize: '16px', lineHeight: '1.8', marginTop: '25px' }}>
-          See also: <a href="/guides/best-chef-knives" style={{ color: '#0066cc', fontWeight: 'bold' }}>Best Kitchen Knives for Everyday Cooking</a> and our complete <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold' }}>Kitchen Starter Kit</a> for chef-approved essentials.
+          See also: <CTAVisibilityTracker
+            ctaId="blog-how-to-steel-a-knife-guide-link-2"
+            position="mid_article"
+            productSlug="how-to-steel-a-knife"
+            merchant="internal"
+          >
+            <a href="/guides/best-chef-knives" style={{ color: '#0066cc', fontWeight: 'bold' }}>Best Kitchen Knives for Everyday Cooking</a>
+          </CTAVisibilityTracker> and our complete <CTAVisibilityTracker
+            ctaId="blog-how-to-steel-a-knife-bundle-link-1"
+            position="mid_article"
+            productSlug="how-to-steel-a-knife"
+            merchant="internal"
+          >
+            <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold' }}>Kitchen Starter Kit</a>
+          </CTAVisibilityTracker> for chef-approved essentials.
         </p>
       </section>
 

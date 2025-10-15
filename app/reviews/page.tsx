@@ -3,6 +3,8 @@
 import React, { Suspense } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import ProductImpressionTracker from '@/components/ProductImpressionTracker';
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 
 const RecentlyViewed = dynamic(() => import('@/components/RecentlyViewed'), {
   ssr: false
@@ -371,118 +373,138 @@ const sortedReviews = [...allReviews].sort((a, b) => b.revenueScore - a.revenueS
 const featuredReviews = sortedReviews.filter(r => r.tier === 1).slice(0, 6);
 
 // Review Card Component
-const ReviewCard: React.FC<{ review: Review; featured?: boolean }> = ({ review, featured = false }) => {
+const ReviewCard: React.FC<{ review: Review; featured?: boolean; position?: number }> = ({ review, featured = false, position = 0 }) => {
   return (
-    <div 
-      className="review-card"
-      style={{
-        background: 'white',
-        border: '1px solid #e0e0e0',
-        borderRadius: '8px',
-        padding: '24px',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-        transition: 'all 0.3s ease',
-        cursor: 'pointer',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column'
+    <ProductImpressionTracker
+      product={{
+        id: review.slug,
+        name: review.name,
+        price: 0,
+        category: review.category,
+        brand: review.name.split(' ')[0],
+        position: position
       }}
+      listName={featured ? "reviews_landing_featured" : "reviews_landing_all"}
     >
-      
-      {/* Tier Badge */}
-      {review.tier === 1 ? (
-        <Tier1Badge />
-      ) : (
-        <Tier2Badge testingPeriod={review.testingPeriod || ''} />
-      )}
-      
-      {/* Category Tag */}
-      <div style={{
-        fontSize: '12px',
-        color: '#666',
-        textTransform: 'uppercase',
-        letterSpacing: '0.5px',
-        marginBottom: '8px',
-        fontWeight: '600'
-      }}>
-        {review.category}
-      </div>
-      
-      {/* Product Name */}
-      <h3 style={{
-        fontSize: featured ? '22px' : '18px',
-        fontWeight: '700',
-        margin: '0 0 12px 0',
-        lineHeight: '1.4',
-        color: '#1a1a1a'
-      }}>
-        {review.name}
-      </h3>
-      
-      {/* Rating */}
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: '8px',
-        marginBottom: '12px'
-      }}>
-        <div style={{ color: '#FFD700', fontSize: '18px' }}>
-          {'★'.repeat(Math.floor(review.rating))}
-          {review.rating % 1 !== 0 && '½'}
-          {'☆'.repeat(5 - Math.ceil(review.rating))}
-        </div>
-        <span style={{ 
-          fontSize: '14px', 
-          fontWeight: 'bold',
-          color: '#333'
-        }}>
-          {review.rating}/5
-        </span>
-      </div>
-      
-      {/* Testing Period */}
-      <div style={{
-        background: '#f8f9fa',
-        padding: '8px 12px',
-        borderRadius: '4px',
-        fontSize: '13px',
-        color: '#555',
-        marginBottom: '12px',
-        fontStyle: 'italic'
-      }}>
-        📊 Tested: {review.testingPeriod}
-      </div>
-      
-      {/* Hook */}
-      <p style={{
-        fontSize: '15px',
-        lineHeight: '1.6',
-        color: '#555',
-        margin: '0 0 20px 0',
-        flex: 1
-      }}>
-        {review.hook}
-      </p>
-      
-      {/* CTA Button */}
-      <Link
-        href={`/reviews/${review.slug}`}
+      <div
+        className="review-card"
         style={{
-          display: 'block',
-          background: '#28a745',
-          color: 'white',
-          padding: '12px 24px',
-          textAlign: 'center',
-          borderRadius: '6px',
-          textDecoration: 'none',
-          fontWeight: 'bold',
-          fontSize: '15px',
-          transition: 'background 0.2s'
+          background: 'white',
+          border: '1px solid #e0e0e0',
+          borderRadius: '8px',
+          padding: '24px',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+          transition: 'all 0.3s ease',
+          cursor: 'pointer',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column'
         }}
       >
-        Read Full Review →
-      </Link>
-    </div>
+
+        {/* Tier Badge */}
+        {review.tier === 1 ? (
+          <Tier1Badge />
+        ) : (
+          <Tier2Badge testingPeriod={review.testingPeriod || ''} />
+        )}
+
+        {/* Category Tag */}
+        <div style={{
+          fontSize: '12px',
+          color: '#666',
+          textTransform: 'uppercase',
+          letterSpacing: '0.5px',
+          marginBottom: '8px',
+          fontWeight: '600'
+        }}>
+          {review.category}
+        </div>
+
+        {/* Product Name */}
+        <h3 style={{
+          fontSize: featured ? '22px' : '18px',
+          fontWeight: '700',
+          margin: '0 0 12px 0',
+          lineHeight: '1.4',
+          color: '#1a1a1a'
+        }}>
+          {review.name}
+        </h3>
+
+        {/* Rating */}
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '8px',
+          marginBottom: '12px'
+        }}>
+          <div style={{ color: '#FFD700', fontSize: '18px' }}>
+            {'★'.repeat(Math.floor(review.rating))}
+            {review.rating % 1 !== 0 && '½'}
+            {'☆'.repeat(5 - Math.ceil(review.rating))}
+          </div>
+          <span style={{
+            fontSize: '14px',
+            fontWeight: 'bold',
+            color: '#333'
+          }}>
+            {review.rating}/5
+          </span>
+        </div>
+
+        {/* Testing Period */}
+        <div style={{
+          background: '#f8f9fa',
+          padding: '8px 12px',
+          borderRadius: '4px',
+          fontSize: '13px',
+          color: '#555',
+          marginBottom: '12px',
+          fontStyle: 'italic'
+        }}>
+          📊 Tested: {review.testingPeriod}
+        </div>
+
+        {/* Hook */}
+        <p style={{
+          fontSize: '15px',
+          lineHeight: '1.6',
+          color: '#555',
+          margin: '0 0 20px 0',
+          flex: 1
+        }}>
+          {review.hook}
+        </p>
+
+        {/* CTA Button */}
+        <CTAVisibilityTracker
+          ctaId={`reviews-landing-${featured ? 'featured' : 'all'}-review-${review.id}`}
+          ctaType="internal_link"
+          merchant="internal"
+          productId={review.slug}
+          location={featured ? "featured_card" : "review_card"}
+        >
+          <Link
+            href={`/reviews/${review.slug}`}
+            style={{
+              display: 'block',
+              background: '#28a745',
+              color: 'white',
+              padding: '12px 24px',
+              textAlign: 'center',
+              borderRadius: '6px',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+              fontSize: '15px',
+              transition: 'background 0.2s'
+            }}
+          >
+            Read Full Review →
+          </Link>
+        </CTAVisibilityTracker>
+      </div>
+    </ProductImpressionTracker>
   );
 };
 
@@ -560,8 +582,8 @@ export default function ReviewsHub() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(450px, 1fr))',
           gap: '30px'
         }}>
-          {featuredReviews.map(review => (
-            <ReviewCard key={review.id} review={review} featured={true} />
+          {featuredReviews.map((review, index) => (
+            <ReviewCard key={review.id} review={review} featured={true} position={index + 1} />
           ))}
         </div>
       </section>
@@ -648,8 +670,8 @@ export default function ReviewsHub() {
           gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
           gap: '30px'
         }}>
-          {filteredReviews.map(review => (
-            <ReviewCard key={review.id} review={review} />
+          {filteredReviews.map((review, index) => (
+            <ReviewCard key={review.id} review={review} position={index + 1} />
           ))}
         </div>
       </section>
@@ -680,21 +702,29 @@ export default function ReviewsHub() {
         }}>
           Get personalized equipment recommendations based on your specific needs and budget.
         </p>
-        <Link
-          href="/contact"
-          style={{
-            display: 'inline-block',
-            background: 'white',
-            color: '#667eea',
-            padding: '14px 32px',
-            borderRadius: '6px',
-            textDecoration: 'none',
-            fontWeight: 'bold',
-            fontSize: '16px'
-          }}
+        <CTAVisibilityTracker
+          ctaId="reviews-landing-contact-cta"
+          ctaType="internal_link"
+          merchant="internal"
+          productId="contact"
+          location="footer_cta"
         >
-          Contact Scott →
-        </Link>
+          <Link
+            href="/contact"
+            style={{
+              display: 'inline-block',
+              background: 'white',
+              color: '#667eea',
+              padding: '14px 32px',
+              borderRadius: '6px',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+              fontSize: '16px'
+            }}
+          >
+            Contact Scott →
+          </Link>
+        </CTAVisibilityTracker>
       </div>
       
     </div>

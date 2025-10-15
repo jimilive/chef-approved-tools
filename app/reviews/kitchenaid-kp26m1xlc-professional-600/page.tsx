@@ -3,7 +3,9 @@ import { Star, CheckCircle, XCircle } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
-import AffiliateButton from '@/components/AffiliateButton'
+
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
@@ -215,15 +217,22 @@ export default function KitchenAidProfessional600ReviewPage() {
             which offers the same 575-watt motor, 6-quart capacity, and bowl-lift design that made
             my original model so reliable.
           </p>
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B0BRNWWGJ5?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-above-fold`}
             position="above_fold"
-            variant="primary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            View Current Model on Amazon →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B0BRNWWGJ5?tag=chefapprovedt-20"
+              merchant="amazon"
+              product={productData.slug}
+              position="above_fold"
+              variant="primary"
+            >
+              View Current Model on Amazon →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
         </div>
 
         {/* Quick Rating Box */}
@@ -272,15 +281,22 @@ export default function KitchenAidProfessional600ReviewPage() {
         }}>
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
 
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B0BRNWWGJ5?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-mid-article-1`}
             position="mid_article"
-            variant="secondary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Amazon Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B0BRNWWGJ5?tag=chefapprovedt-20"
+              merchant="amazon"
+              product={productData.slug}
+              position="mid_article"
+              variant="secondary"
+            >
+              Check Amazon Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
 
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 Price updated daily. We earn commission at no extra cost to you.
@@ -516,15 +532,22 @@ export default function KitchenAidProfessional600ReviewPage() {
           <p style={{ margin: '15px 0' }}>
             After 18 years of testing, this is the mixer I trust for serious home baking.
           </p>
-          <AffiliateButton
-            href="https://www.amazon.com/dp/B0BRNWWGJ5?tag=chefapprovedt-20"
-            merchant="amazon"
-            product="{productData.slug}"
+          <CTAVisibilityTracker
+            ctaId={`review-${productData.slug}-mid-article-2`}
             position="mid_article"
-            variant="secondary"
+            productSlug={productData.slug}
+            merchant="amazon"
           >
-            Check Current Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/dp/B0BRNWWGJ5?tag=chefapprovedt-20"
+              merchant="amazon"
+              product={productData.slug}
+              position="mid_article"
+              variant="secondary"
+            >
+              Check Current Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
         </div>
 
         {/* Cost Per Use Analysis */}
@@ -1213,15 +1236,22 @@ export default function KitchenAidProfessional600ReviewPage() {
               Join the thousands who trust the Professional 600 for serious home baking:
             </p>
 
-            <AffiliateButton
-              href="https://www.amazon.com/dp/B0BRNWWGJ5?tag=chefapprovedt-20"
+            <CTAVisibilityTracker
+              ctaId={`review-${productData.slug}-final_cta`}
+              position="final_cta"
+              productSlug={productData.slug}
               merchant="amazon"
-              product="{productData.slug}"
-              position="mid_article"
-              variant="secondary"
             >
-              Check Amazon Price →
-            </AffiliateButton>
+              <AffiliateButton
+                href="https://www.amazon.com/dp/B0BRNWWGJ5?tag=chefapprovedt-20"
+                merchant="amazon"
+                product={productData.slug}
+                position="final_cta"
+                variant="secondary"
+              >
+                Check Amazon Price →
+              </AffiliateButton>
+            </CTAVisibilityTracker>
 
             <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
               💡 Available in multiple colors. Check current availability and pricing.

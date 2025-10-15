@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 
 export const metadata: Metadata = {
   title: 'Best Kitchen Appliances 2024 - Commercial-Grade Equipment Guide',
@@ -27,44 +29,87 @@ export default function KitchenAppliancesPage() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Essential Kitchen Appliances</h2>
 
           <div className="space-y-8">
-            <article className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">1. KitchenAid Commercial Series Mixer</h3>
-              <p className="text-slate-600 mb-4">
-                NSF-certified commercial mixer that survived $80K/month operations.
-                Built to last with a 5-year warranty and incredible power.
-              </p>
-              <div className="text-slate-500">
-                Full review coming soon
-              </div>
-            </article>
+            <ProductImpressionTracker
+              productName="KitchenAid Commercial Series Mixer"
+              productSlug="kitchenaid-commercial-series-mixer"
+              category="Kitchen Appliances"
+              brand="KitchenAid"
+              position={1}
+              listName="guide_featured_products"
+            >
+              <article className="bg-white rounded-xl p-6 shadow-lg">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">1. KitchenAid Commercial Series Mixer</h3>
+                <p className="text-slate-600 mb-4">
+                  NSF-certified commercial mixer that survived $80K/month operations.
+                  Built to last with a 5-year warranty and incredible power.
+                </p>
+                <div className="text-slate-500">
+                  Full review coming soon
+                </div>
+              </article>
+            </ProductImpressionTracker>
 
-            <article className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">2. Vitamix 5200 Professional Blender</h3>
-              <p className="text-slate-600 mb-4">
-                The blender that changed everything. 5+ years of daily smoothies,
-                soups, and sauces. Still runs like new.
-              </p>
-              <Link
-                href="/reviews/vitamix-5200"
-                className="text-orange-600 hover:text-orange-800 font-semibold"
-              >
-                Read full review →
-              </Link>
-            </article>
+            <ProductImpressionTracker
+              productName="Vitamix 5200 Professional Blender"
+              productSlug="vitamix-5200"
+              category="Kitchen Appliances"
+              brand="Vitamix"
+              position={2}
+              listName="guide_featured_products"
+            >
+              <article className="bg-white rounded-xl p-6 shadow-lg">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">2. Vitamix 5200 Professional Blender</h3>
+                <p className="text-slate-600 mb-4">
+                  The blender that changed everything. 5+ years of daily smoothies,
+                  soups, and sauces. Still runs like new.
+                </p>
+                <CTAVisibilityTracker
+                  ctaId="guide-kitchen-appliances-review-link-1"
+                  ctaType="internal_link"
+                  merchant="internal"
+                  productId="vitamix-5200"
+                  location="product_card"
+                >
+                  <Link
+                    href="/reviews/vitamix-5200"
+                    className="text-orange-600 hover:text-orange-800 font-semibold"
+                  >
+                    Read full review →
+                  </Link>
+                </CTAVisibilityTracker>
+              </article>
+            </ProductImpressionTracker>
 
-            <article className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">3. Robot Coupe R2 Dice Food Processor</h3>
-              <p className="text-slate-600 mb-4">
-                French-made commercial food processor. Precision cuts and
-                reliable performance in the most demanding kitchens.
-              </p>
-              <Link
-                href="/reviews/robot-coupe-r2-dice"
-                className="text-orange-600 hover:text-orange-800 font-semibold"
-              >
-                Read full review →
-              </Link>
-            </article>
+            <ProductImpressionTracker
+              productName="Robot Coupe R2 Dice Food Processor"
+              productSlug="robot-coupe-r2-dice"
+              category="Kitchen Appliances"
+              brand="Robot Coupe"
+              position={3}
+              listName="guide_featured_products"
+            >
+              <article className="bg-white rounded-xl p-6 shadow-lg">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">3. Robot Coupe R2 Dice Food Processor</h3>
+                <p className="text-slate-600 mb-4">
+                  French-made commercial food processor. Precision cuts and
+                  reliable performance in the most demanding kitchens.
+                </p>
+                <CTAVisibilityTracker
+                  ctaId="guide-kitchen-appliances-review-link-2"
+                  ctaType="internal_link"
+                  merchant="internal"
+                  productId="robot-coupe-r2-dice"
+                  location="product_card"
+                >
+                  <Link
+                    href="/reviews/robot-coupe-r2-dice"
+                    className="text-orange-600 hover:text-orange-800 font-semibold"
+                  >
+                    Read full review →
+                  </Link>
+                </CTAVisibilityTracker>
+              </article>
+            </ProductImpressionTracker>
           </div>
         </section>
 
@@ -82,12 +127,19 @@ export default function KitchenAppliancesPage() {
         </section>
 
         <nav className="mt-12 pt-8 border-t border-gray-200">
-          <Link
-            href="/guides"
-            className="text-orange-600 hover:text-orange-800 font-semibold"
+          <CTAVisibilityTracker
+            ctaId="guide-kitchen-appliances-back-to-guides"
+            position="final_cta"
+            productSlug="guides"
+            merchant="internal"
           >
-            ← Back to All Guides
-          </Link>
+            <Link
+              href="/guides"
+              className="text-orange-600 hover:text-orange-800 font-semibold"
+            >
+              ← Back to All Guides
+            </Link>
+          </CTAVisibilityTracker>
         </nav>
       </div>
     </main>
