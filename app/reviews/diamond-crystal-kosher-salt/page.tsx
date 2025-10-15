@@ -39,6 +39,12 @@ const faqData = [
   { question: "How should I store kosher salt?", answer: "Salt doesn't spoil, but proper storage keeps it free-flowing and easy to use: Keep it dry in an airtight container or keep the box closed when not in use. Use a salt cellar by the stove for quick access. Avoid moisture—don't use wet hands to grab salt. Store at room temperature. Diamond Crystal doesn't clump as much as Morton's due to the lack of anti-caking agents, but it'll still absorb moisture in very humid environments." }
 ];
 
+const breadcrumbs = [
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+];
+
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/reviews/diamond-crystal-kosher-salt',
@@ -878,6 +884,20 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
       </div>
 
+      {/* Product Review Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateProductReviewSchema(productData))
+        }}
+      />
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+        }}
+      />
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
