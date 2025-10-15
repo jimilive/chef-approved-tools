@@ -53,6 +53,54 @@ export default function VictorinoxFibrox8InchReview() {
         hook="Professional quality at accessible price. My daily knife."
         category="Knives"
       />
+
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateProductReviewSchema({
+            name: "Victorinox Fibrox Pro 8-Inch Chef's Knife",
+            slug: "victorinox-fibrox-8-inch-chefs-knife",
+            brand: "Victorinox",
+            category: "Knives",
+            affiliateLinks: [{
+              url: "https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
+            }],
+            expertRating: 5,
+            expertOpinion: "After 20 years of daily professional use, the Victorinox 8-inch chef's knife remains my workhorse blade. The thin, flexible blade delivers professional control, the fibrox handle prevents hand fatigue, and the edge retention rivals knives costing several times more. This is genuine professional equipment that happens to be accessible. Beyond basic quality standards, expensive knives buy you aesthetics and prestige, not better cutting performance. The Victorinox delivers what matters—sharpness, balance, durability—at pricing that makes professional-quality cooking accessible to everyone.",
+            pros: [
+              "Perfect size for 80% of kitchen tasks",
+              "Professional quality at accessible pricing",
+              "Exceptionally well-balanced and maneuverable",
+              "Holds edge well with regular honing",
+              "Comfortable grip for extended use",
+              "Used in professional kitchens worldwide"
+            ],
+            cons: [
+              "Not ideal for very large cuts (use 10-inch for that)",
+              "Plain appearance (no fancy damascus patterns)",
+              "Lightweight feel may not appeal to everyone",
+              "Plastic handle lacks luxury aesthetic"
+            ],
+            dateAdded: "2025-10-13",
+            lastUpdated: "2025-10-14",
+            images: {
+              primary: "https://www.chefapprovedtools.com/images/products/victorinox-fibrox-8-inch-chefs-knife/primary.jpg"
+            }
+          }))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema([
+            { name: "Home", url: "https://www.chefapprovedtools.com" },
+            { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+            { name: "Victorinox Fibrox Pro 8-Inch Chef's Knife", url: "https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife" }
+          ]))
+        }}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4">
