@@ -156,9 +156,7 @@ export function generateProductSchema(product: any) {
       dateModified: product.lastUpdated || product.dateAdded || new Date().toISOString().split('T')[0],
       publisher: {
         "@id": "https://www.chefapprovedtools.com/#organization"
-      },
-      positiveNotes: product.pros || [],
-      negativeNotes: product.cons || []
+      }
     }
   }
 }
