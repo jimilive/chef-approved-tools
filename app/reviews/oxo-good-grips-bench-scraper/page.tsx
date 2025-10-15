@@ -4,7 +4,7 @@ import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
@@ -56,6 +56,32 @@ const breadcrumbs = [
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
 ];
 
+const faqData = [
+  {
+    question: "Do I really need a bench scraper?",
+    answer: "If you do any regular cooking or baking, yes. A bench scraper transforms your workflow by making ingredient transfer faster and cleaner. It's one of those tools where you don't realize how much you need it until you start using one. After 23+ years of professional cooking, I can tell you it's essential."
+  },
+  {
+    question: "Is the OXO better than a generic bench scraper?",
+    answer: "Yes, for extended use. The Good Grips handle makes a significant difference in comfort during long prep sessions. The measurement markings are also helpful for portioning dough. While a generic scraper will work, the OXO is worth the small price difference if you use it regularly."
+  },
+  {
+    question: "Can I use this to cut dough?",
+    answer: "Absolutely. The stainless steel blade is perfect for cutting and portioning all types of dough - bread, pizza, cookie, pastry. The straight edge gives you clean cuts, and the measurement markings help you portion evenly. It's one of the primary uses in professional bakeries."
+  },
+  {
+    question: "Will this scratch my cutting board?",
+    answer: "No, when used properly. The beveled edge is designed to scrape surfaces clean without digging in. Use it at a slight angle (not straight down) and it will glide across wood, plastic, or stone boards without causing damage. I've used mine on my John Boos maple board for years with no scratches."
+  },
+  {
+    question: "Is it dishwasher-safe?",
+    answer: "Yes, the OXO bench scraper is completely dishwasher-safe. I've run mine through hundreds of dishwasher cycles without any degradation to the blade or handle. That said, it's easy enough to hand wash if you prefer."
+  },
+  {
+    question: "What else can I use this for besides transferring ingredients?",
+    answer: "Many things: cutting and portioning dough, scraping cutting boards clean between tasks, removing stuck-on food from surfaces, spreading frosting or filling, dividing cookie dough, portioning pizza dough balls, cleaning countertops, and even as a temporary spatula. It's incredibly versatile."
+  }
+];
 
 export default function OXOGoodGripsBenchScraperReview() {
   return (
@@ -730,6 +756,26 @@ export default function OXOGoodGripsBenchScraperReview() {
             </div>
           </div>
         </section>
+
+        {/* Schema.org structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateProductReviewSchema(productData))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
+          }}
+        />
 
     </div>
   )

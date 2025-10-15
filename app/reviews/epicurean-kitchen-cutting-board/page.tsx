@@ -3,7 +3,7 @@ import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 export const metadata: Metadata = {
@@ -55,6 +55,32 @@ const breadcrumbs = [
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
 ];
 
+const faqData = [
+  {
+    question: "Are dishwasher-safe boards really safe for knives?",
+    answer: "Yes. Epicurean boards use Richlite, a wood fiber composite that's as gentle on knife edges as hard maple. After 23+ years of testing with my Victorinox knives, I've seen no difference in edge retention compared to traditional wood boards."
+  },
+  {
+    question: "Will these boards warp in the dishwasher?",
+    answer: "No. Unlike wood which absorbs water and warps, Epicurean boards are dimensionally stable. I've put mine through 1,000+ dishwasher cycles with zero warping. This is the biggest advantage over wood boards."
+  },
+  {
+    question: "Do they stain or absorb odors like wood?",
+    answer: "No. The non-porous surface won't absorb beet juice, turmeric, or wine stains like wood does. It also won't retain odors from onions, garlic, or fish. This is a huge practical advantage for daily cooking."
+  },
+  {
+    question: "What does NSF certified mean?",
+    answer: "NSF certification means the board meets commercial kitchen standards for sanitation and safety. It's the same certification required for restaurant equipment. This matters for food safety, especially when working with raw proteins."
+  },
+  {
+    question: "Can I set hot pots on this board?",
+    answer: "Yes, up to 350°F. I regularly set hot pots directly on mine while cooking. The heat resistance is excellent, though I don't recommend it as a permanent trivet - it's still primarily a cutting board."
+  },
+  {
+    question: "How do knife marks affect performance?",
+    answer: "Knife marks are purely cosmetic. Unlike grooves in wood boards which can harbor bacteria, the marks on Epicurean boards don't create porous areas. The surface remains smooth and non-porous throughout its life. Performance isn't affected."
+  }
+];
 
 export default function EpicureanKitchenCuttingBoardReview() {
   return (
@@ -723,6 +749,26 @@ export default function EpicureanKitchenCuttingBoardReview() {
             </div>
           </div>
         </section>
+
+        {/* Schema.org structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateProductReviewSchema(productData))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
+          }}
+        />
 
     </div>
   )
