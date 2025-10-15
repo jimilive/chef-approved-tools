@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User, ThermometerSun, Timer, Flame } from 'lucide-react'
+import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'How to Sear Steaks Like a Restaurant Chef | Professional Techniques',
@@ -14,6 +15,35 @@ export const metadata: Metadata = {
 export default function SteakSearingPost() {
   return (
     <div className="min-h-screen bg-white">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateArticleSchema({
+            title: "How to Sear Steaks Like a Restaurant Chef",
+            slug: "how-to-sear-steaks-like-restaurant-chef",
+            description: "Learn the professional steak searing techniques used in restaurant kitchens. 23+ years of experience from a former Mellow Mushroom Kitchen Manager reveals the secrets to perfect sears.",
+            author: "Scott Bradley",
+            datePublished: "2024-09-27",
+            lastUpdated: "2024-09-27",
+            image: "https://www.chefapprovedtools.com/logo.png",
+            category: "Cooking Techniques",
+            tags: ["how to sear steak", "restaurant steak techniques", "professional steak cooking", "perfect steak sear", "cast iron steak"],
+            wordCount: 2800
+          }))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema([
+            { name: "Home", url: "https://www.chefapprovedtools.com" },
+            { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
+            { name: "How to Sear Steaks Like a Restaurant Chef", url: "https://www.chefapprovedtools.com/blog/how-to-sear-steaks-like-restaurant-chef" }
+          ]))
+        }}
+      />
+
       {/* Article Header */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { Star, CheckCircle, XCircle, DollarSign, Award, Zap } from 'lucide-react'
 import AuthorBio from '@/components/AuthorBio'
+import { generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Best Chef Knives of 2025: Tested & Reviewed by a Professional Chef',
@@ -91,6 +92,35 @@ const topKnives = [
 export default function BestChefKnivesPage() {
   return (
     <main className="min-h-screen bg-gray-50">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateItemListSchema(
+            topKnives.map(knife => ({
+              name: knife.name,
+              slug: knife.slug,
+              images: { primary: "https://www.chefapprovedtools.com/logo.png" },
+              reviews: {
+                rating: knife.rating,
+                count: 1
+              }
+            })),
+            "Best Chef Knives of 2025 - Professional Kitchen Testing"
+          ))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema([
+            { name: "Home", url: "https://www.chefapprovedtools.com" },
+            { name: "Guides", url: "https://www.chefapprovedtools.com/guides" },
+            { name: "Best Chef Knives", url: "https://www.chefapprovedtools.com/guides/best-chef-knives" }
+          ]))
+        }}
+      />
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <header className="mb-8">
