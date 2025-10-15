@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, AlertTriangle, Thermometer, Flame } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButton from '@/components/AffiliateButton'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
@@ -91,6 +91,19 @@ const breadcrumbs = [
   { name: "Cast Iron Cookware", url: "https://www.chefapprovedtools.com/cookware" },
   { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
 ]
+
+const faqData = [
+  { question: "Is Lodge cast iron worth the investment?", answer: "Absolutely. After 7 years of testing and decades of restaurant experience, Lodge delivers professional-grade performance at exceptional value. The key differences compared to premium brands are surface finish and aesthetics, not cooking performance. Lodge delivers identical heat retention (5/5 rating) and distribution to premium brands, same durability and longevity (lifetime with proper care), is pre-seasoned and ready to use immediately, and is Made in USA with quality control. Premium brands differ mainly in smoother surface finish (cosmetic, not functional), slightly lighter weight due to different casting methods, and premium pricing for brand heritage. My verdict: For serious cooking performance, Lodge delivers professional results at budget-friendly pricing." },
+  { question: "How do I season and maintain Lodge cast iron?", answer: "Lodge comes pre-seasoned, but here's what actually works after 7 years: For daily maintenance, clean while still warm with hot water and stiff brush, avoid soap unless dealing with stuck-on food, dry completely immediately - this is critical, and apply thin coat of oil while still warm. The critical rule: Never leave water or acidic products on the surface. This is the #1 cause of seasoning damage and rust. The truth about seasoning: If you use cast iron regularly, cooking maintains seasoning naturally. You don't need constant oven-seasoning if you cook with fats regularly." },
+  { question: "Should I buy the 3-skillet bundle or individual skillets?", answer: "The bundle makes sense for most home cooks. After 7 years, I use all three sizes equally. Bundle advantages include significant savings vs buying individually, complete size versatility (I use all three equally), and all pre-seasoned and ready to go. My recommendation: Get the bundle. The 12-inch is most versatile if forced to choose one, but having all three gives complete flexibility at exceptional value." },
+  { question: "Can Lodge cast iron go in the oven?", answer: "Yes, Lodge cast iron is oven-safe to 500°F+ (no plastic handles). This is one of its biggest advantages. It's perfect for sear-then-roast techniques (sear steaks on stovetop, finish in oven), cornbread (bake directly in skillet for crispy edges), frittatas (start on stovetop, finish under broiler), and braising (brown meat on stovetop, braise in oven). Pro tip: Preheat cast iron in oven for 10-15 minutes before adding food for maximum heat retention." },
+  { question: "How long does Lodge cast iron last?", answer: "With proper care, literally forever. After 7 years of weekly use, mine show minimal wear and will last decades more. Why it lasts: solid iron construction with no moving parts, no coatings to wear off, seasoning improves with use, and can be fully restored even if badly neglected. Durability rating: 5/5 with proper care. This is genuinely buy-it-for-life cookware." },
+  { question: "What size Lodge skillet should I buy first?", answer: "The 12-inch skillet is the most versatile if you can only choose one size. Why 12-inch works best: handles large steaks and family-sized meals, still works adequately for smaller portions, maximum cooking surface for versatility, and best value for single-skillet purchase. My recommendation: Get the bundle if possible—all three sizes get equal use in my kitchen." },
+  { question: "Can I use metal utensils on Lodge cast iron?", answer: "Yes, metal utensils are perfectly safe on cast iron—this is one of its major advantages over non-stick cookware. You can safely use metal spatulas and turners, metal tongs, metal whisks, and any utensil without worry about scratching. The seasoning is bonded to the iron and gets stronger with use. Minor scratches from utensils actually help build seasoning layers." },
+  { question: "Is Lodge cast iron safe for cooking acidic foods?", answer: "Yes, but with time limits. Well-seasoned cast iron can handle acidic foods for short cooking times. Safe acidic cooking includes tomato sauces for 30-45 minutes maximum, wine reductions for short cooking times, brief citrus contact, and vinegar-based marinades if drained quickly. The key rule: Never leave acidic foods sitting in the skillet. This strips seasoning and can impart metallic taste. For long-simmered tomato sauces or acidic braises, use enameled cast iron like Le Creuset instead." },
+  { question: "How heavy is the Lodge cast iron skillet set?", answer: "The three skillets range from 3.2 lbs to 8.5 lbs, which is standard for cast iron but requires consideration. Weight breakdown: 12-inch: 8.5 lbs (heaviest), 10.25-inch: 5.5 lbs (medium), 8-inch: 3.2 lbs (lightest). The weight is actually beneficial for heat retention and even cooking. However, if you have arthritis, limited strength, or wrist issues, start with the 8-inch to test whether the weight works for you. Pro tip: Use both hands when handling the 12-inch skillet, especially when full of food." },
+  { question: "Can I use Lodge cast iron on a glass cooktop?", answer: "Yes, but with extra care. Cast iron works on glass cooktops but requires careful handling to avoid damage. Safe usage tips: lift the skillet rather than sliding it, check the bottom is smooth and free of rough spots, start with lower heat settings (cast iron heats slowly), and never drop or set down roughly. Important note: The weight of cast iron combined with the fragility of glass cooktops means extra caution is required. Many glass cooktop users prefer lighter cookware. Alternative: If you're concerned about your glass cooktop, consider using cast iron primarily on gas burners or in the oven." },
+];
 
 export const metadata = {
   alternates: {
@@ -1260,6 +1273,13 @@ export default function Lodge3SkilletBundleReview() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        {/* FAQ Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
           }}
         />
       </article>

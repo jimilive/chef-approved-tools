@@ -1,7 +1,7 @@
 import { Tier1Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Image from 'next/image';
@@ -25,6 +25,19 @@ const productData = {
   lastUpdated: "2025-10-13",
   images: { primary: "/logo.png" }
 };
+
+const faqData = [
+  { question: "Is Diamond Crystal worth it vs Morton's?", answer: "Yes, for serious cooking. Diamond Crystal has a cleaner flavor profile with no anti-caking agents, and its lighter crystal structure makes it easier to control when seasoning by hand. After using both in professional kitchens, I exclusively buy Diamond Crystal for home use. Morton's kosher salt is denser and contains anti-caking agents, which can leave a slight chemical aftertaste. The crystal shape also makes it harder to pinch precisely. If a recipe specifies Diamond Crystal, substituting Morton's without adjusting quantities will over-salt your food. The cost difference is minimal—usually just a few cents per pound—but the cooking experience is noticeably better with Diamond Crystal." },
+  { question: "Why do professional chefs use kosher salt?", answer: "Professional chefs prefer kosher salt because the large crystals are easy to pinch and control when seasoning by hand—the way most cooking happens in restaurants. You can feel exactly how much salt you're adding, which is crucial when you're cooking without measuring spoons. The coarse texture also makes it less likely to over-salt. Fine table salt pours too quickly and clumps in humid kitchens. Kosher salt dissolves evenly, has no additives to affect flavor, and provides consistent results across different cooks in the same kitchen." },
+  { question: "Can I use Diamond Crystal for baking?", answer: "Yes, but you need to adjust measurements. Because Diamond Crystal is less dense than table salt, you'll need to use more by volume. Generally, use 2× the amount called for if a recipe specifies table salt. For precision baking (bread, pastries, cakes), I recommend weighing your salt rather than measuring by volume. 1 teaspoon of table salt = approximately 6 grams, while 1 teaspoon of Diamond Crystal = approximately 3 grams." },
+  { question: "What is the difference between kosher salt and table salt?", answer: "The main differences are crystal size, additives, and how you use them: Crystal size: Kosher salt has large, irregular crystals that are easy to pinch. Table salt is fine and pours from a shaker. Additives: Table salt usually contains iodine (for thyroid health) and anti-caking agents. Kosher salt typically has neither. Density: Table salt is much denser. Flavor: Pure kosher salt tastes cleaner. Table salt can have slight metallic or chemical notes from additives." },
+  { question: "How much Diamond Crystal equals table salt?", answer: "Diamond Crystal is about half as dense as table salt by volume. Here are the conversions: 1 teaspoon table salt = 2 teaspoons Diamond Crystal, 1 tablespoon table salt = 2 tablespoons Diamond Crystal. This is why weighing salt is more accurate for baking. Volume measurements vary significantly between salt types, but weight stays consistent." },
+  { question: "Is Diamond Crystal the same as Morton kosher salt?", answer: "No, they're significantly different despite both being kosher salt: Crystal shape: Diamond Crystal has flat, hollow pyramids. Morton's has dense, irregular flakes. Density: Morton's is nearly twice as dense as Diamond Crystal by volume. Additives: Diamond Crystal has none. Morton's contains anti-caking agents. Flavor: Diamond Crystal tastes cleaner without the slight chemical note from Morton's additives." },
+  { question: "Does Diamond Crystal have iodine?", answer: "No, Diamond Crystal Kosher Salt does not contain iodine. It's pure salt with no additives—no iodine, no anti-caking agents, nothing but sodium chloride. If you need iodine in your diet (important for thyroid function), you have options: Get iodine from other sources like seafood, dairy, or eggs; take an iodine supplement; use iodized table salt for finishing; or keep both types." },
+  { question: "Why is it called kosher salt?", answer: "The name comes from its traditional use in koshering meat—the Jewish process of removing blood from meat to make it kosher. The large crystals are perfect for drawing out blood and moisture from meat surfaces. Despite the name, kosher salt itself isn't necessarily kosher-certified (though Diamond Crystal is). The term refers to its function in the koshering process, not its religious certification." },
+  { question: "Where can I buy Diamond Crystal Kosher Salt?", answer: "Diamond Crystal is available at most major grocery stores, though availability varies by region. Most reliable sources: Amazon (most consistent availability, often sold in 3-packs), restaurant supply stores (best value for bulk), major grocery chains (salt/spice aisle, usually bottom shelf), and natural food stores (stock it due to no-additive formula)." },
+  { question: "How should I store kosher salt?", answer: "Salt doesn't spoil, but proper storage keeps it free-flowing and easy to use: Keep it dry in an airtight container or keep the box closed when not in use. Use a salt cellar by the stove for quick access. Avoid moisture—don't use wet hands to grab salt. Store at room temperature. Diamond Crystal doesn't clump as much as Morton's due to the lack of anti-caking agents, but it'll still absorb moisture in very humid environments." }
+];
 
 export const metadata: Metadata = {
   alternates: {
@@ -865,6 +878,13 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
       </div>
 
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema(faqData))
+        }}
+      />
     </article>
     </div>
   );
