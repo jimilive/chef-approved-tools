@@ -376,14 +376,12 @@ const featuredReviews = sortedReviews.filter(r => r.tier === 1).slice(0, 6);
 const ReviewCard: React.FC<{ review: Review; featured?: boolean; position?: number }> = ({ review, featured = false, position = 0 }) => {
   return (
     <ProductImpressionTracker
-      product={{
-        id: review.slug,
-        name: review.name,
-        price: 0,
-        category: review.category,
-        brand: review.name.split(' ')[0],
-        position: position
-      }}
+      productName={review.name}
+      productSlug={review.slug}
+      category={review.category}
+      brand={review.name.split(' ')[0]}
+      price={0}
+      position={position}
       listName={featured ? "reviews_landing_featured" : "reviews_landing_all"}
     >
       <div
@@ -478,13 +476,9 @@ const ReviewCard: React.FC<{ review: Review; featured?: boolean; position?: numb
         </p>
 
         {/* CTA Button */}
-        <CTAVisibilityTracker
-          ctaId={`reviews-landing-${featured ? 'featured' : 'all'}-review-${review.id}`}
-          ctaType="internal_link"
+        <CTAVisibilityTracker ctaId={`reviews-landing-${featured ? 'featured' : 'all'}-review-${review.id}`}
           merchant="internal"
-          productId={review.slug}
-          location={featured ? "featured_card" : "review_card"}
-        >
+          position="mid_article">
           <Link
             href={`/reviews/${review.slug}`}
             style={{
@@ -702,13 +696,12 @@ export default function ReviewsHub() {
         }}>
           Get personalized equipment recommendations based on your specific needs and budget.
         </p>
-        <CTAVisibilityTracker
-          ctaId="reviews-landing-contact-cta"
-          ctaType="internal_link"
+        <CTAVisibilityTracker ctaId="reviews-landing-contact-cta"
+
           merchant="internal"
-          productId="contact"
-          location="footer_cta"
-        >
+
+
+         position="mid_article">
           <Link
             href="/contact"
             style={{

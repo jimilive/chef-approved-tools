@@ -394,10 +394,7 @@ export default function AboutPage() {
             </p>
             <CTAVisibilityTracker
               ctaId="about-tier-system-link"
-              ctaType="internal_link"
-              merchant="internal"
-              productId="review-tiers"
-              location="tier_system_info"
+              position="mid_article"
             >
               <Link
                 href="/review-tiers"

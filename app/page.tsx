@@ -90,7 +90,7 @@ function EnhancedProductCard({ product }: { product: any }) {
 <div className="space-y-2 mt-4">
   <CTAVisibilityTracker
     ctaId={`homepage-product-${product.id}`}
-    position="homepage_featured"
+    position="above_fold"
     productSlug={product.id}
     merchant="amazon"
   >
@@ -98,7 +98,7 @@ function EnhancedProductCard({ product }: { product: any }) {
       href={product.affiliateUrl}
       merchant="amazon"
       product={product.id}
-      position="homepage_featured"
+      position="above_fold"
       className="w-full text-center"
     >
       View on Amazon →
@@ -164,7 +164,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 sm:mb-16 max-w-md sm:max-w-none mx-auto">
             <CTAVisibilityTracker
               ctaId="homepage-hero-top-picks"
-              position="hero_primary"
+              position="above_fold"
               productSlug="homepage"
               merchant="internal"
             >
@@ -177,7 +177,7 @@ export default function HomePage() {
             </CTAVisibilityTracker>
             <CTAVisibilityTracker
               ctaId="homepage-hero-verify"
-              position="hero_secondary"
+              position="mid_article"
               productSlug="homepage"
               merchant="internal"
             >

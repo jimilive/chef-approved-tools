@@ -63,13 +63,12 @@ export default function KitchenAppliancesPage() {
                   The blender that changed everything. 5+ years of daily smoothies,
                   soups, and sauces. Still runs like new.
                 </p>
-                <CTAVisibilityTracker
-                  ctaId="guide-kitchen-appliances-review-link-1"
-                  ctaType="internal_link"
+                <CTAVisibilityTracker ctaId="guide-kitchen-appliances-review-link-1"
+
                   merchant="internal"
-                  productId="vitamix-5200"
-                  location="product_card"
-                >
+
+
+                 position="mid_article">
                   <Link
                     href="/reviews/vitamix-5200"
                     className="text-orange-600 hover:text-orange-800 font-semibold"
@@ -94,13 +93,12 @@ export default function KitchenAppliancesPage() {
                   French-made commercial food processor. Precision cuts and
                   reliable performance in the most demanding kitchens.
                 </p>
-                <CTAVisibilityTracker
-                  ctaId="guide-kitchen-appliances-review-link-2"
-                  ctaType="internal_link"
+                <CTAVisibilityTracker ctaId="guide-kitchen-appliances-review-link-2"
+
                   merchant="internal"
-                  productId="robot-coupe-r2-dice"
-                  location="product_card"
-                >
+
+
+                 position="mid_article">
                   <Link
                     href="/reviews/robot-coupe-r2-dice"
                     className="text-orange-600 hover:text-orange-800 font-semibold"
@@ -127,12 +125,8 @@ export default function KitchenAppliancesPage() {
         </section>
 
         <nav className="mt-12 pt-8 border-t border-gray-200">
-          <CTAVisibilityTracker
-            ctaId="guide-kitchen-appliances-back-to-guides"
-            position="final_cta"
-            productSlug="guides"
-            merchant="internal"
-          >
+          <CTAVisibilityTracker ctaId="guide-kitchen-appliances-back-to-guides"
+            position="final_cta" productSlug="guides" merchant="internal">
             <Link
               href="/guides"
               className="text-orange-600 hover:text-orange-800 font-semibold"

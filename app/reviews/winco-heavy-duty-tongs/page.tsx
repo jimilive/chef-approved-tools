@@ -2,7 +2,8 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
-
+
+import AffiliateButton from '@/components/AffiliateButton';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'

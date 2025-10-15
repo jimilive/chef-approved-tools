@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image';
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure'
-
+
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'

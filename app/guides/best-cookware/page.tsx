@@ -63,13 +63,12 @@ export default function BestCookwarePage() {
                   American-made cast iron that improves with age. Perfect for searing,
                   baking, and building flavor. Used these for 10+ years.
                 </p>
-                <CTAVisibilityTracker
-                  ctaId="guide-best-cookware-review-link-1"
-                  ctaType="internal_link"
+                <CTAVisibilityTracker ctaId="guide-best-cookware-review-link-1"
+
                   merchant="internal"
-                  productId="lodge-seasoned-cast-iron-3-skillet-bundle"
-                  location="product_card"
-                >
+
+
+                 position="mid_article">
                   <Link
                     href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
                     className="text-orange-600 hover:text-orange-800 font-semibold"
@@ -94,13 +93,12 @@ export default function BestCookwarePage() {
                   French craftsmanship that lasts generations. Perfect for braises,
                   stews, and bread baking. Investment piece worth every penny.
                 </p>
-                <CTAVisibilityTracker
-                  ctaId="guide-best-cookware-review-link-2"
-                  ctaType="internal_link"
+                <CTAVisibilityTracker ctaId="guide-best-cookware-review-link-2"
+
                   merchant="internal"
-                  productId="le-creuset-signature-7-25-qt-dutch-oven"
-                  location="product_card"
-                >
+
+
+                 position="mid_article">
                   <Link
                     href="/reviews/le-creuset-signature-7-25-qt-dutch-oven"
                     className="text-orange-600 hover:text-orange-800 font-semibold"
@@ -134,12 +132,8 @@ export default function BestCookwarePage() {
         </section>
 
         <nav className="mt-12 pt-8 border-t border-gray-200">
-          <CTAVisibilityTracker
-            ctaId="guide-best-cookware-back-to-guides"
-            position="final_cta"
-            productSlug="guides"
-            merchant="internal"
-          >
+          <CTAVisibilityTracker ctaId="guide-best-cookware-back-to-guides"
+            position="final_cta" productSlug="guides" merchant="internal">
             <Link
               href="/guides"
               className="text-orange-600 hover:text-orange-800 font-semibold"

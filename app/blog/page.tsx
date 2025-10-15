@@ -140,13 +140,12 @@ export default function BlogPage() {
                 </div>
 
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 hover:text-orange-800 transition-colors">
-                  <CTAVisibilityTracker
-                    ctaId={`blog-landing-post-title-${index + 1}`}
-                    ctaType="internal_link"
+                  <CTAVisibilityTracker ctaId={`blog-landing-post-title-${index + 1}`}
+
                     merchant="internal"
-                    productId={post.slug}
-                    location="post_title"
-                  >
+
+
+                   position="mid_article">
                     <Link href={`/blog/${post.slug}`}>
                       {post.title}
                     </Link>
@@ -157,13 +156,12 @@ export default function BlogPage() {
                   {post.excerpt}
                 </p>
 
-                <CTAVisibilityTracker
-                  ctaId={`blog-landing-post-link-${index + 1}`}
-                  ctaType="internal_link"
+                <CTAVisibilityTracker ctaId={`blog-landing-post-link-${index + 1}`}
+
                   merchant="internal"
-                  productId={post.slug}
-                  location="post_card"
-                >
+
+
+                 position="mid_article">
                   <Link
                     href={`/blog/${post.slug}`}
                     className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold transition-colors"
@@ -190,13 +188,12 @@ export default function BlogPage() {
             Get exclusive restaurant techniques and equipment insights delivered to your inbox.
             Learn the methods that create consistent, professional results.
           </p>
-          <CTAVisibilityTracker
-            ctaId="blog-landing-newsletter-cta"
-            ctaType="internal_link"
+          <CTAVisibilityTracker ctaId="blog-landing-newsletter-cta"
+
             merchant="internal"
-            productId="newsletter"
-            location="newsletter_cta"
-          >
+
+
+           position="mid_article">
             <Link
               href="/newsletter"
               className="bg-white text-orange-800 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors inline-block"

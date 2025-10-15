@@ -3,7 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
-
+
+import AffiliateButton from '@/components/AffiliateButton';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'

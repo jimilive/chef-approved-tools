@@ -160,14 +160,12 @@ export default function BestChefKnivesPage() {
                 {topKnives.map((knife, index) => (
                   <ProductImpressionTracker
                     key={knife.id}
-                    product={{
-                      id: knife.slug,
-                      name: knife.name,
-                      price: knife.price,
-                      category: 'Knives',
-                      brand: knife.name.split(' ')[0],
-                      position: index + 1
-                    }}
+                    productName={knife.name}
+                    productSlug={knife.slug}
+                    category="Knives"
+                    brand={knife.name.split(' ')[0]}
+                    price={knife.price}
+                    position={index + 1}
                     listName="guide_best_chef_knives_table"
                   >
                     <tr className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
@@ -197,13 +195,12 @@ export default function BestChefKnivesPage() {
                         <span className="text-lg font-bold text-orange-600">${knife.price}</span>
                       </td>
                       <td className="p-4">
-                        <CTAVisibilityTracker
-                          ctaId={`guide-best-chef-knives-table-price-${index + 1}`}
-                          ctaType="affiliate_link"
+                        <CTAVisibilityTracker ctaId={`guide-best-chef-knives-table-price-${index + 1}`}
+
                           merchant="amazon"
-                          productId={knife.slug}
-                          location="comparison_table"
-                        >
+
+
+                         position="mid_article">
                           <a
                             href={knife.affiliateUrl}
                             target="_blank"
@@ -226,14 +223,12 @@ export default function BestChefKnivesPage() {
             {topKnives.map((knife, index) => (
               <ProductImpressionTracker
                 key={knife.id}
-                product={{
-                  id: knife.slug,
-                  name: knife.name,
-                  price: knife.price,
-                  category: 'Knives',
-                  brand: knife.name.split(' ')[0],
-                  position: index + 1
-                }}
+                productName={knife.name}
+                productSlug={knife.slug}
+                category="Knives"
+                brand={knife.name.split(' ')[0]}
+                price={knife.price}
+                position={index + 1}
                 listName="guide_best_chef_knives_mobile"
               >
                 <div className="bg-white rounded-xl p-4 shadow-md border border-gray-200">
@@ -257,13 +252,12 @@ export default function BestChefKnivesPage() {
                   <p className="text-sm text-slate-600 mb-2">{knife.bestFor}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-xl font-bold text-orange-600">${knife.price}</span>
-                    <CTAVisibilityTracker
-                      ctaId={`guide-best-chef-knives-mobile-price-${index + 1}`}
-                      ctaType="affiliate_link"
+                    <CTAVisibilityTracker ctaId={`guide-best-chef-knives-mobile-price-${index + 1}`}
+
                       merchant="amazon"
-                      productId={knife.slug}
-                      location="mobile_card"
-                    >
+
+
+                     position="mid_article">
                       <a
                         href={knife.affiliateUrl}
                         target="_blank"
@@ -370,13 +364,12 @@ export default function BestChefKnivesPage() {
 
                     {/* CTAs */}
                     <div className="flex flex-col sm:flex-row gap-3">
-                      <CTAVisibilityTracker
-                        ctaId={`guide-best-chef-knives-detail-price-${knife.id}`}
-                        ctaType="affiliate_link"
+                      <CTAVisibilityTracker ctaId={`guide-best-chef-knives-detail-price-${knife.id}`}
+
                         merchant="amazon"
-                        productId={knife.slug}
-                        location="product_detail"
-                      >
+
+
+                       position="mid_article">
                         <a
                           href={knife.affiliateUrl}
                           target="_blank"
@@ -386,13 +379,12 @@ export default function BestChefKnivesPage() {
                           Check Latest Price on Amazon →
                         </a>
                       </CTAVisibilityTracker>
-                      <CTAVisibilityTracker
-                        ctaId={`guide-best-chef-knives-detail-review-${knife.id}`}
-                        ctaType="internal_link"
+                      <CTAVisibilityTracker ctaId={`guide-best-chef-knives-detail-review-${knife.id}`}
+
                         merchant="internal"
-                        productId={knife.slug}
-                        location="product_detail"
-                      >
+
+
+                       position="mid_article">
                         <Link
                           href={`/reviews/${knife.slug}`}
                           className="inline-flex items-center justify-center border-2 border-orange-600 text-orange-600 hover:bg-orange-50 font-bold py-3 px-6 rounded-lg transition-all duration-200"
@@ -529,13 +521,12 @@ export default function BestChefKnivesPage() {
               Start with the Wüsthof Classic Ikon for premium performance or the Victorinox Fibrox for unbeatable value. Both are restaurant-proven and will transform your cooking.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <CTAVisibilityTracker
-                ctaId="guide-best-chef-knives-final-cta-wusthof"
-                ctaType="affiliate_link"
+              <CTAVisibilityTracker ctaId="guide-best-chef-knives-final-cta-wusthof"
+
                 merchant="amazon"
-                productId={topKnives[0].slug}
-                location="final_cta"
-              >
+
+
+               position="mid_article">
                 <a
                   href={topKnives[0].affiliateUrl}
                   target="_blank"
@@ -545,13 +536,12 @@ export default function BestChefKnivesPage() {
                   Get the Wüsthof (Top Pick) →
                 </a>
               </CTAVisibilityTracker>
-              <CTAVisibilityTracker
-                ctaId="guide-best-chef-knives-final-cta-victorinox"
-                ctaType="affiliate_link"
+              <CTAVisibilityTracker ctaId="guide-best-chef-knives-final-cta-victorinox"
+
                 merchant="amazon"
-                productId={topKnives[1].slug}
-                location="final_cta"
-              >
+
+
+               position="mid_article">
                 <a
                   href={topKnives[1].affiliateUrl}
                   target="_blank"

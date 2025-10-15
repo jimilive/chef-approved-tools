@@ -5,7 +5,8 @@ import { BudgetVsPremiumTeaser } from '@/components/BudgetVsPremiumMagnet'
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
-
+
+import AffiliateButton from '@/components/AffiliateButton';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import type { Metadata } from 'next'

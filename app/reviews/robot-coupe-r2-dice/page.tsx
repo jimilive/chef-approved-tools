@@ -5,7 +5,8 @@ import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchem
 import FTCDisclosure from '@/components/FTCDisclosure'
 import PriceDisplay from '@/components/PriceDisplay'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
-
+
+import AffiliateButton from '@/components/AffiliateButton';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import type { Metadata } from 'next';

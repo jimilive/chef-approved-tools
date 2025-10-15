@@ -3,7 +3,8 @@ import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, Aler
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
-
+
+import AffiliateButton from '@/components/AffiliateButton';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
