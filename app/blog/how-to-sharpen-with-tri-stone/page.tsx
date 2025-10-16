@@ -1,15 +1,17 @@
-import type { Metadata } from 'next';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import { Metadata } from 'next'
+import Link from 'next/link'
+import { Calendar, Clock, User } from 'lucide-react'
+import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'How to Sharpen with a Stone: Professional Chef&apos;s Technique (2025)',
+  title: 'How to Sharpen with a Stone: Professional Chef\'s Technique (2025)',
   description: 'Professional chef shares technique perfected over 6 years in restaurant kitchen. Step-by-step guide: angles, pressure, three-stage progression, troubleshooting.',
   alternates: {
     canonical: '/blog/how-to-sharpen-with-tri-stone',
   },
   openGraph: {
-    title: 'How to Sharpen with a Stone: Professional Chef&apos;s Technique (2025)',
+    title: 'How to Sharpen with a Stone: Professional Chef\'s Technique (2025)',
     description: 'Professional chef shares technique perfected over 6 years in restaurant kitchen. Step-by-step guide: angles, pressure, three-stage progression, troubleshooting.',
     type: 'article',
     url: 'https://www.chefapprovedtools.com/blog/how-to-sharpen-with-tri-stone',
@@ -18,503 +20,515 @@ export const metadata: Metadata = {
 
 export default function HowToSharpenWithTriStonePage() {
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
-      <article>
+    <div className="min-h-screen bg-white">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateArticleSchema({
+            title: "How to Sharpen Knives with a Stone: Professional Chef's Technique",
+            slug: "how-to-sharpen-with-tri-stone",
+            description: "Professional chef shares technique perfected over 6 years in restaurant kitchen. Step-by-step guide: angles, pressure, three-stage progression, troubleshooting.",
+            author: "Scott Bradley",
+            datePublished: "2024-09-15T00:00:00Z",
+            lastUpdated: new Date().toISOString(),
+            image: "https://www.chefapprovedtools.com/logo.png",
+            category: "Knife Care",
+            tags: ["knife sharpening", "tri-stone sharpener", "professional chef techniques", "knife care", "Norton IM200"],
+            wordCount: 2800
+          }))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema([
+            { name: "Home", url: "https://www.chefapprovedtools.com" },
+            { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
+            { name: "How to Sharpen with a Stone", url: "https://www.chefapprovedtools.com/blog/how-to-sharpen-with-tri-stone" }
+          ]))
+        }}
+      />
+
+      {/* Article Header */}
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
-        <nav style={{ marginBottom: '20px', fontSize: '14px' }}>
-          <a href="/" style={{ color: '#0066cc', textDecoration: 'none' }}>Home</a>
-          {' > '}
-          <a href="/blog" style={{ color: '#0066cc', textDecoration: 'none' }}>Blog</a>
-          {' > '}
-          <span style={{ color: '#666' }}>How to Sharpen with a Stone</span>
+        <nav className="text-sm text-slate-600 mb-8">
+          <Link href="/" className="hover:text-orange-600">Home</Link>
+          <span className="mx-2">/</span>
+          <Link href="/blog" className="hover:text-orange-600">Blog</Link>
+          <span className="mx-2">/</span>
+          <span>How to Sharpen with a Stone</span>
         </nav>
 
-        {/* H1 Title */}
-        <h1 style={{
-          fontSize: '42px',
-          fontWeight: 'bold',
-          marginBottom: '20px',
-          lineHeight: '1.2',
-          color: '#1a1a1a'
-        }}>
-          How to Sharpen Knives with a Stone: Professional Chef&apos;s Technique
-        </h1>
+        {/* Article Meta */}
+        <div className="mb-8">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
+            <div className="flex items-center gap-1">
+              <Calendar className="w-4 h-4" />
+              <span>{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Clock className="w-4 h-4" />
+              <span>8 min read</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <User className="w-4 h-4" />
+              <span>Scott Bradley</span>
+            </div>
+            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
+              Knife Care
+            </span>
+          </div>
 
-        {/* Author Byline */}
-        <div style={{
-          fontSize: '16px',
-          color: '#666',
-          marginBottom: '30px',
-          paddingBottom: '20px',
-          borderBottom: '1px solid #e0e0e0'
-        }}>
-          <strong>By Scott Bradley</strong> | Professional Chef | 40 Years Experience | Updated {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
-        </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+            How to Sharpen Knives with a Stone: Professional Chef&apos;s Technique
+          </h1>
 
-        {/* Opening Paragraph */}
-        <p style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '20px' }}>
-          For 6 years at Purple Café, I sharpened 8-12 professional knives weekly using the Norton
-          IM200 Tri-Stone. In a 200+ cover restaurant where dull knives meant service delays, this
-          three-stage system kept every blade razor-sharp through demanding dinner services. This
-          isn&apos;t complicated—follow this exact technique and you&apos;ll achieve professional-quality
-          results at home.
-        </p>
-
-        {/* Early Link to Review */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '20px',
-          margin: '25px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #0066cc'
-        }}>
-          <p style={{ margin: 0, fontSize: '16px' }}>
-            <strong>💡 Using the right sharpening system matters.</strong> The{' '}
-            <a href="/reviews/norton-im200-tri-stone-sharpener" style={{ color: '#0066cc', fontWeight: 'bold', textDecoration: 'none' }}>
-              Norton IM200 Tri-Stone
-            </a> survived 6 years of professional restaurant use and delivers
-            exceptional results.{' '}
-            <a href="/reviews/norton-im200-tri-stone-sharpener" style={{ color: '#0066cc', textDecoration: 'none' }}>
-              Read my complete review →
-            </a>
+          <p className="text-xl text-slate-600 leading-relaxed">
+            For 6 years at Purple Café, I sharpened 8-12 professional knives weekly using the Norton
+            IM200 Tri-Stone. In a 200+ cover restaurant where dull knives meant service delays, this
+            three-stage system kept every blade razor-sharp through demanding dinner services. This
+            isn&apos;t complicated—follow this exact technique and you&apos;ll achieve professional-quality
+            results at home.
           </p>
         </div>
 
-        {/* What You'll Need */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
-          What You&apos;ll Need
-        </h2>
+        {/* Article Content */}
+        <div className="prose prose-lg prose-slate max-w-none">
 
-        <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
-          Equipment
-        </h3>
-        <ul style={{ lineHeight: '1.8', fontSize: '16px', paddingLeft: '20px' }}>
-          <li><strong>Norton IM200 Tri-Stone sharpening system</strong> -{' '}
-            <a href="/reviews/norton-im200-tri-stone-sharpener" style={{ color: '#0066cc', textDecoration: 'none' }}>
-              See my 6-year professional test →
-            </a>
-          </li>
-          <li><strong>Light mineral oil</strong> (food-grade) or water</li>
-          <li><strong>Paper towels</strong> for cleanup</li>
-          <li><strong>Dull knife</strong> to practice on</li>
-          <li><strong>Good lighting</strong> (essential for seeing edge development)</li>
-        </ul>
+          {/* Early Link to Review */}
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+            <p className="mb-0">
+              <strong>💡 Using the right sharpening system matters.</strong> The{' '}
+              <CTAVisibilityTracker
+                ctaId="blog-how-to-sharpen-with-tri-stone-review-link-1"
+                position="above_fold"
+                productSlug="how-to-sharpen-with-tri-stone"
+                merchant="internal"
+              >
+                <Link href="/reviews/norton-im200-tri-stone-sharpener" className="text-blue-700 font-bold underline">
+                  Norton IM200 Tri-Stone
+                </Link>
+              </CTAVisibilityTracker> survived 6 years of professional restaurant use and delivers
+              exceptional results.{' '}
+              <CTAVisibilityTracker
+                ctaId="blog-how-to-sharpen-with-tri-stone-review-link-2"
+                position="above_fold"
+                productSlug="how-to-sharpen-with-tri-stone"
+                merchant="internal"
+              >
+                <Link href="/reviews/norton-im200-tri-stone-sharpener" className="text-blue-700 underline">
+                  Read my complete review →
+                </Link>
+              </CTAVisibilityTracker>
+            </p>
+          </div>
 
-        <div style={{
-          background: '#fff3cd',
-          padding: '20px',
-          margin: '20px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #ffc107'
-        }}>
-          <p style={{ margin: 0, fontSize: '16px' }}>
-            <strong>⚠️ Safety Note:</strong> Sharp knives are safer than dull knives, but the sharpening
-            process itself requires care. Work on stable surface, keep fingers behind the blade edge,
-            and maintain focus throughout the process.
+          <h2>What You&apos;ll Need</h2>
+
+          <h3>Equipment</h3>
+          <ul>
+            <li>
+              <strong>Norton IM200 Tri-Stone sharpening system</strong> -{' '}
+              <CTAVisibilityTracker
+                ctaId="blog-how-to-sharpen-with-tri-stone-review-link-3"
+                position="mid_article"
+                productSlug="how-to-sharpen-with-tri-stone"
+                merchant="internal"
+              >
+                <Link href="/reviews/norton-im200-tri-stone-sharpener" className="text-blue-700 underline">
+                  See my 6-year professional test →
+                </Link>
+              </CTAVisibilityTracker>
+            </li>
+            <li><strong>Light mineral oil</strong> (food-grade) or water</li>
+            <li><strong>Paper towels</strong> for cleanup</li>
+            <li><strong>Dull knife</strong> to practice on</li>
+            <li><strong>Good lighting</strong> (essential for seeing edge development)</li>
+          </ul>
+
+          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
+            <p className="mb-0">
+              <strong>⚠️ Safety Note:</strong> Sharp knives are safer than dull knives, but the sharpening
+              process itself requires care. Work on stable surface, keep fingers behind the blade edge,
+              and maintain focus throughout the process.
+            </p>
+          </div>
+
+          <h2>Understanding the Norton Tri-Stone System</h2>
+
+          <p>
+            The Norton IM200 features three progressively finer stones mounted in one base:
           </p>
-        </div>
 
-        {/* Understanding the Three-Stone System */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
-          Understanding the Norton Tri-Stone System
-        </h2>
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
 
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          The Norton IM200 features three progressively finer stones mounted in one base:
-        </p>
+            <h3 className="mt-0">Stone 1: Coarse (120 Grit)</h3>
+            <p><strong>Purpose:</strong> Repair damaged edges, remove chips, establish bevel</p>
+            <p><strong>When to use:</strong> Very dull knives, damaged edges, establishing new angle</p>
+            <p><strong>Passes needed:</strong> 5-10 per side</p>
 
-        <div style={{
-          background: '#f8f9fa',
-          padding: '25px',
-          margin: '20px 0',
-          borderRadius: '8px'
-        }}>
+            <h3 className="mt-6">Stone 2: Medium (280 Grit)</h3>
+            <p><strong>Purpose:</strong> Refine edge, remove coarse scratches, develop working sharpness</p>
+            <p><strong>When to use:</strong> After coarse stone, or for moderately dull knives</p>
+            <p><strong>Passes needed:</strong> 8-12 per side</p>
 
-          <h3 style={{ marginTop: 0, fontSize: '20px', fontWeight: 'bold', color: '#1a1a1a' }}>Stone 1: Coarse (120 Grit)</h3>
-          <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>Purpose:</strong> Repair damaged edges, remove chips, establish bevel</p>
-          <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>When to use:</strong> Very dull knives, damaged edges, establishing new angle</p>
-          <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>Passes needed:</strong> 5-10 per side</p>
+            <h3 className="mt-6">Stone 3: Fine (320 Grit)</h3>
+            <p><strong>Purpose:</strong> Polish edge to razor-sharp finish, remove medium stone scratches</p>
+            <p><strong>When to use:</strong> Final step for all knives, or sole step for touch-ups</p>
+            <p className="mb-0"><strong>Passes needed:</strong> 10-15 per side</p>
 
-          <h3 style={{ marginTop: '20px', fontSize: '20px', fontWeight: 'bold', color: '#1a1a1a' }}>Stone 2: Medium (280 Grit)</h3>
-          <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>Purpose:</strong> Refine edge, remove coarse scratches, develop working sharpness</p>
-          <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>When to use:</strong> After coarse stone, or for moderately dull knives</p>
-          <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>Passes needed:</strong> 8-12 per side</p>
+          </div>
 
-          <h3 style={{ marginTop: '20px', fontSize: '20px', fontWeight: 'bold', color: '#1a1a1a' }}>Stone 3: Fine (320 Grit)</h3>
-          <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>Purpose:</strong> Polish edge to razor-sharp finish, remove medium stone scratches</p>
-          <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>When to use:</strong> Final step for all knives, or sole step for touch-ups</p>
-          <p style={{ fontSize: '16px', lineHeight: '1.8', marginBottom: 0 }}><strong>Passes needed:</strong> 10-15 per side</p>
+          <p>
+            <strong>Pro tip:</strong> Most kitchen knives need all three stones. Very dull knives start
+            at coarse. Knives needing touch-ups can skip straight to fine.
+          </p>
 
-        </div>
+          <h2>Step-by-Step: Professional Sharpening Technique</h2>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          <strong>Pro tip:</strong> Most kitchen knives need all three stones. Very dull knives start
-          at coarse. Knives needing touch-ups can skip straight to fine.
-        </p>
+          <h3>Step 1: Set Up Your Work Area</h3>
+          <p>
+            Place Norton Tri-Stone on stable, flat surface. The non-slip rubber base should grip
+            securely. Position yourself comfortably—you&apos;ll maintain this position for 10-15 minutes.
+          </p>
+          <p>
+            <strong>Lighting matters:</strong> Position light source above and slightly behind the
+            stone so you can see the knife edge clearly as you work.
+          </p>
 
-        {/* Step-by-Step Technique */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
-          Step-by-Step: Professional Sharpening Technique
-        </h2>
+          <h3>Step 2: Apply Light Mineral Oil</h3>
+          <p>
+            Apply thin film of mineral oil to coarse stone. You need just enough to create slick
+            surface—2-3 drops spread across the stone. Excessive oil doesn&apos;t improve results.
+          </p>
+          <p className="text-sm text-slate-600">
+            <strong>Alternative:</strong> Water works but mineral oil prevents rust on carbon steel
+            knives and suspends metal particles better.
+          </p>
 
-        <div style={{ marginTop: '30px' }}>
-
-          <div style={{ marginBottom: '30px' }}>
-            <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px', color: '#1a1a1a' }}>Step 1: Set Up Your Work Area</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              Place Norton Tri-Stone on stable, flat surface. The non-slip rubber base should grip
-              securely. Position yourself comfortably—you&apos;ll maintain this position for 10-15 minutes.
-            </p>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              <strong>Lighting matters:</strong> Position light source above and slightly behind the
-              stone so you can see the knife edge clearly as you work.
+          <h3>Step 3: Establish Your Angle (20 Degrees)</h3>
+          <p>
+            <strong>The single most important skill in sharpening is maintaining consistent angle.</strong>{' '}
+            For kitchen knives, 20 degrees is ideal.
+          </p>
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+            <p className="mb-0">
+              <strong>20-Degree Angle Trick:</strong> Place knife flat on stone. Raise spine
+              approximately height of two stacked quarters (about 3/8 inch for 8-inch blade). This
+              creates roughly 20-degree angle. Burn this feeling into muscle memory.
             </p>
           </div>
 
-          <div style={{ marginBottom: '30px' }}>
-            <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px', color: '#1a1a1a' }}>Step 2: Apply Light Mineral Oil</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              Apply thin film of mineral oil to coarse stone. You need just enough to create slick
-              surface—2-3 drops spread across the stone. Excessive oil doesn&apos;t improve results.
-            </p>
-            <p style={{ fontSize: '14px', color: '#666' }}>
-              <strong>Alternative:</strong> Water works but mineral oil prevents rust on carbon steel
-              knives and suspends metal particles better.
+          <h3>Step 4: Coarse Stone - First Side (5-10 Passes)</h3>
+          <p>
+            Hold knife at 20-degree angle. Start with heel of blade near your body. Draw blade
+            across stone away from you in smooth, sweeping motion, maintaining angle throughout.
+          </p>
+          <p><strong>Key points:</strong></p>
+          <ul>
+            <li>Light to moderate pressure (let stone do the work)</li>
+            <li>Full-length strokes from heel to tip</li>
+            <li>Maintain consistent angle throughout stroke</li>
+            <li>Count your passes (5-10 for very dull knife)</li>
+          </ul>
+
+          <h3>Step 5: Coarse Stone - Flip and Repeat</h3>
+          <p>
+            Flip knife over. Match the same number of passes on second side. Consistency between
+            sides creates symmetrical edge.
+          </p>
+          <p>
+            <strong>Check your progress:</strong> Run finger (carefully) along spine-side of edge.
+            You should feel a consistent &quot;burr&quot; or wire edge along the entire length.
+            This confirms you&apos;ve reached the edge on the coarse stone.
+          </p>
+
+          <h3>Step 6: Medium Stone - Refine (8-12 Passes Per Side)</h3>
+          <p>
+            Wipe knife clean. Apply fresh oil to medium stone. Repeat the same technique—same angle,
+            same motion—but with more passes (8-12 per side).
+          </p>
+          <p>
+            <strong>What&apos;s happening:</strong> The medium stone removes the coarse scratches and
+            begins refining the edge. You&apos;re building on the work of the coarse stone, not starting
+            over.
+          </p>
+
+          <h3>Step 7: Fine Stone - Polish to Razor-Sharp (10-15 Passes Per Side)</h3>
+          <p>
+            Final stage. Wipe knife clean. Fresh oil on fine stone. Same technique, but now with
+            lighter pressure and more passes (10-15 per side).
+          </p>
+          <p>
+            <strong>The finish line:</strong> The fine stone polishes the edge to final sharpness.
+            After this stage, your knife should slice paper effortlessly and glide through tomato
+            skin with zero pressure.
+          </p>
+
+          <h3>Step 8: Remove the Burr (Critical Final Step)</h3>
+          <p>
+            After fine stone, you&apos;ll have a micro-burr on the edge. Remove it with 3-5 very
+            light trailing passes per side on fine stone—barely any pressure, just the weight of
+            the knife.
+          </p>
+          <p>
+            <strong>Alternative:</strong> Gently strop edge on leather belt or newspaper (5-10 passes
+            per side). This removes burr and slightly polishes the edge.
+          </p>
+
+          <h3>Step 9: Test Your Edge</h3>
+          <p>
+            <strong>Paper test:</strong> Hold piece of paper vertically. Slice downward with knife.
+            Properly sharpened knife slices cleanly with minimal pressure. If knife tears or won&apos;t
+            bite, return to fine stone for more passes.
+          </p>
+          <p>
+            <strong>Tomato test:</strong> The ultimate kitchen test. Place knife edge on tomato skin
+            and draw across with zero downward pressure. Sharp knife glides through without crushing.
+          </p>
+
+          <h3>Step 10: Clean Up</h3>
+          <p>
+            Wipe stones clean with paper towels. Wash knife with soap and water. Dry thoroughly.
+            Store Norton Tri-Stone in dry location.
+          </p>
+
+          <h2>Common Sharpening Mistakes (And How to Fix Them)</h2>
+
+          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
+
+            <div className="mb-6">
+              <h3 className="mt-0">❌ Mistake 1: Inconsistent Angle</h3>
+              <p><strong>Result:</strong> Rounded edge that won&apos;t get sharp</p>
+              <p><strong>Fix:</strong> Practice maintaining exact same angle throughout each stroke.
+              Muscle memory develops with repetition. Focus on feeling the angle, not thinking about it.</p>
+            </div>
+
+            <div className="mb-6">
+              <h3>❌ Mistake 2: Too Much Pressure</h3>
+              <p><strong>Result:</strong> Doesn&apos;t actually sharpen faster, creates uneven edge</p>
+              <p><strong>Fix:</strong> Use light to moderate pressure. The abrasive does the work, not
+              your muscle. If you&apos;re exhausted after sharpening, you&apos;re pressing too hard.</p>
+            </div>
+
+            <div className="mb-6">
+              <h3>❌ Mistake 3: Unequal Passes Per Side</h3>
+              <p><strong>Result:</strong> Asymmetrical edge, knife pulls to one side when cutting</p>
+              <p><strong>Fix:</strong> Count your passes. Same number each side, every stone. Consistency
+              creates symmetry.</p>
+            </div>
+
+            <div className="mb-6">
+              <h3>❌ Mistake 4: Skipping Stones</h3>
+              <p><strong>Result:</strong> Can&apos;t achieve final sharpness if you skip medium grit</p>
+              <p><strong>Fix:</strong> Use all three stones in progression for very dull knives. Only
+              skip to fine stone for touch-ups on knives that are still fairly sharp.</p>
+            </div>
+
+            <div className="mb-0">
+              <h3>❌ Mistake 5: Not Removing the Burr</h3>
+              <p><strong>Result:</strong> Edge feels sharp but breaks off immediately during use</p>
+              <p className="mb-0"><strong>Fix:</strong> Always finish with light trailing passes or stropping to remove
+              the wire edge. This step transforms good edge into great edge.</p>
+            </div>
+
+          </div>
+
+          <h2>Professional Sharpening Schedule</h2>
+
+          <p>
+            At Purple Café, I maintained this schedule for 8-12 knives:
+          </p>
+
+          <div className="overflow-x-auto my-6">
+            <table>
+              <thead>
+                <tr>
+                  <th>Knife Usage</th>
+                  <th>Sharpening Frequency</th>
+                  <th>Stone(s) Needed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Daily professional use</td>
+                  <td>Weekly</td>
+                  <td>Fine stone (touch-ups)</td>
+                </tr>
+                <tr>
+                  <td>Daily home cooking</td>
+                  <td>Every 2-4 weeks</td>
+                  <td>Fine stone, occasionally medium</td>
+                </tr>
+                <tr>
+                  <td>Weekly home cooking</td>
+                  <td>Every 2-3 months</td>
+                  <td>All three stones</td>
+                </tr>
+                <tr>
+                  <td>Occasional use</td>
+                  <td>2-3 times per year</td>
+                  <td>All three stones</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+            <p className="mb-0">
+              <strong>💡 Pro tip:</strong> Regular light sharpening beats infrequent heavy sharpening.
+              Touch-ups on fine stone every few weeks remove less metal and extend knife lifespan compared
+              to letting knife get very dull then using coarse stone.
             </p>
           </div>
 
-          <div style={{ marginBottom: '30px' }}>
-            <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px', color: '#1a1a1a' }}>Step 3: Establish Your Angle (20 Degrees)</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              <strong>The single most important skill in sharpening is maintaining consistent angle.</strong>{' '}
-              For kitchen knives, 20 degrees is ideal.
+          {/* Mid-Article CTA */}
+          <div className="bg-yellow-50 border-2 border-yellow-200 rounded-xl p-8 my-8 text-center">
+            <h3 className="mt-0 text-2xl font-bold mb-4">
+              Ready for Professional-Quality Sharpening?
+            </h3>
+            <p className="mb-6">
+              The Norton Tri-Stone I used for 6 years in a professional restaurant kitchen delivers
+              exceptional results.
             </p>
-            <div style={{
-              background: '#e7f3ff',
-              padding: '20px',
-              margin: '15px 0',
-              borderRadius: '6px'
-            }}>
-              <p style={{ margin: 0, fontSize: '16px', lineHeight: '1.8' }}>
-                <strong>20-Degree Angle Trick:</strong> Place knife flat on stone. Raise spine
-                approximately height of two stacked quarters (about 3/8 inch for 8-inch blade). This
-                creates roughly 20-degree angle. Burn this feeling into muscle memory.
+            <CTAVisibilityTracker
+              ctaId="blog-how-to-sharpen-with-tri-stone-review-cta-1"
+              position="mid_article"
+              productSlug="how-to-sharpen-with-tri-stone"
+              merchant="internal"
+            >
+              <Link
+                href="/reviews/norton-im200-tri-stone-sharpener"
+                className="inline-block bg-orange-600 text-white hover:bg-orange-700 px-8 py-3 rounded-lg font-bold text-lg transition-colors"
+              >
+                Read My Complete Norton Tri-Stone Review →
+              </Link>
+            </CTAVisibilityTracker>
+          </div>
+
+          <h2>Professional Sharpening Tips</h2>
+
+          <ul>
+            <li><strong>Master one knife first:</strong> Practice technique on single knife before
+            attempting your entire collection. Muscle memory develops faster with focused repetition.</li>
+
+            <li><strong>Mark your angle:</strong> Use permanent marker on knife bevel. Correct angle
+            removes marker evenly. Uneven marker removal shows inconsistent angle.</li>
+
+            <li><strong>Listen to the sound:</strong> Consistent sharpening creates consistent sound.
+            Changes in sound indicate angle changes. Train your ear.</li>
+
+            <li><strong>Feel the burr:</strong> Running finger along spine-side of edge (carefully)
+            confirms you&apos;ve reached the edge. The burr is your progress indicator.</li>
+
+            <li><strong>Start with cheap knife:</strong> Practice on inexpensive knife before risking
+            expensive blades. Mistakes are part of learning.</li>
+
+            <li><strong>Clean stones regularly:</strong> Metal particles load the stone surface and
+            reduce cutting efficiency. Wipe clean after each knife.</li>
+
+            <li><strong>Flatten stones as needed:</strong> Stones wear unevenly over time. Flatten on
+            diamond plate or sandpaper on glass every few months.</li>
+
+            <li><strong>Light final passes matter:</strong> The difference between good sharp and
+            razor-sharp is those final ultra-light trailing passes on fine stone.</li>
+          </ul>
+
+          <h2>Master the Technique</h2>
+
+          <p>
+            After 6 years of sharpening 8-12 professional knives weekly at Purple Café using this exact
+            technique, I can confirm the Norton Tri-Stone system delivers restaurant-quality results. The
+            key is consistent angle, proper progression through the three stones, and patience to let the
+            abrasive do its work.
+          </p>
+
+        </div>
+
+        {/* Author Bio */}
+        <div className="border-t border-gray-200 pt-8 mt-12">
+          <div className="flex items-start gap-4">
+            <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <User className="w-8 h-8 text-white" />
+            </div>
+            <div>
+              <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing 200+ cover operations.
+                A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
+                University of Montana. Sharpened 8-12 professional knives weekly for 6 years using the Norton
+                Tri-Stone system—this technique produces consistently sharp edges that survived demanding
+                dinner services.
               </p>
+              <div className="mt-4">
+                <Link href="/about" className="text-orange-600 hover:text-orange-800 text-sm font-semibold">
+                  Read more about Scott →
+                </Link>
+              </div>
             </div>
           </div>
-
-          <div style={{ marginBottom: '30px' }}>
-            <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px', color: '#1a1a1a' }}>Step 4: Coarse Stone - First Side (5-10 Passes)</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              Hold knife at 20-degree angle. Start with heel of blade near your body. Draw blade
-              across stone away from you in smooth, sweeping motion, maintaining angle throughout.
-            </p>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              <strong>Key points:</strong>
-            </p>
-            <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-              <li>Light to moderate pressure (let stone do the work)</li>
-              <li>Full-length strokes from heel to tip</li>
-              <li>Maintain consistent angle throughout stroke</li>
-              <li>Count your passes (5-10 for very dull knife)</li>
-            </ul>
-          </div>
-
-          <div style={{ marginBottom: '30px' }}>
-            <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px', color: '#1a1a1a' }}>Step 5: Coarse Stone - Flip and Repeat</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              Flip knife over. Match the same number of passes on second side. Consistency between
-              sides creates symmetrical edge.
-            </p>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              <strong>Check your progress:</strong> Run finger (carefully) along spine-side of edge.
-              You should feel a consistent &quot;burr&quot; or wire edge along the entire length.
-              This confirms you&apos;ve reached the edge on the coarse stone.
-            </p>
-          </div>
-
-          <div style={{ marginBottom: '30px' }}>
-            <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px', color: '#1a1a1a' }}>Step 6: Medium Stone - Refine (8-12 Passes Per Side)</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              Wipe knife clean. Apply fresh oil to medium stone. Repeat the same technique—same angle,
-              same motion—but with more passes (8-12 per side).
-            </p>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              <strong>What&apos;s happening:</strong> The medium stone removes the coarse scratches and
-              begins refining the edge. You&apos;re building on the work of the coarse stone, not starting
-              over.
-            </p>
-          </div>
-
-          <div style={{ marginBottom: '30px' }}>
-            <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px', color: '#1a1a1a' }}>Step 7: Fine Stone - Polish to Razor-Sharp (10-15 Passes Per Side)</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              Final stage. Wipe knife clean. Fresh oil on fine stone. Same technique, but now with
-              lighter pressure and more passes (10-15 per side).
-            </p>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              <strong>The finish line:</strong> The fine stone polishes the edge to final sharpness.
-              After this stage, your knife should slice paper effortlessly and glide through tomato
-              skin with zero pressure.
-            </p>
-          </div>
-
-          <div style={{ marginBottom: '30px' }}>
-            <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px', color: '#1a1a1a' }}>Step 8: Remove the Burr (Critical Final Step)</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              After fine stone, you&apos;ll have a micro-burr on the edge. Remove it with 3-5 very
-              light trailing passes per side on fine stone—barely any pressure, just the weight of
-              the knife.
-            </p>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              <strong>Alternative:</strong> Gently strop edge on leather belt or newspaper (5-10 passes
-              per side). This removes burr and slightly polishes the edge.
-            </p>
-          </div>
-
-          <div style={{ marginBottom: '30px' }}>
-            <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px', color: '#1a1a1a' }}>Step 9: Test Your Edge</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              <strong>Paper test:</strong> Hold piece of paper vertically. Slice downward with knife.
-              Properly sharpened knife slices cleanly with minimal pressure. If knife tears or won&apos;t
-              bite, return to fine stone for more passes.
-            </p>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              <strong>Tomato test:</strong> The ultimate kitchen test. Place knife edge on tomato skin
-              and draw across with zero downward pressure. Sharp knife glides through without crushing.
-            </p>
-          </div>
-
-          <div style={{ marginBottom: '30px' }}>
-            <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px', color: '#1a1a1a' }}>Step 10: Clean Up</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              Wipe stones clean with paper towels. Wash knife with soap and water. Dry thoroughly.
-              Store Norton Tri-Stone in dry location.
-            </p>
-          </div>
-
         </div>
 
-        {/* Common Mistakes & Troubleshooting */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
-          Common Sharpening Mistakes (And How to Fix Them)
-        </h2>
-
-        <div style={{
-          background: '#fff3cd',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #ffc107'
-        }}>
-
-          <div style={{ marginBottom: '20px' }}>
-            <h3 style={{ marginTop: 0, fontSize: '20px', fontWeight: 'bold', color: '#1a1a1a' }}>❌ Mistake 1: Inconsistent Angle</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>Result:</strong> Rounded edge that won&apos;t get sharp</p>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>Fix:</strong> Practice maintaining exact same angle throughout each stroke.
-            Muscle memory develops with repetition. Focus on feeling the angle, not thinking about it.</p>
+        {/* Related Content */}
+        <div className="border-t border-gray-200 pt-8 mt-8">
+          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <CTAVisibilityTracker
+              ctaId="blog-how-to-sharpen-with-tri-stone-related-1"
+              position="final_cta"
+              productSlug="how-to-sharpen-with-tri-stone"
+              merchant="internal"
+            >
+              <Link href="/reviews/norton-im200-tri-stone-sharpener" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <h4 className="font-bold text-slate-900 mb-2">Norton IM200 Tri-Stone Review: 6-Year Professional Test</h4>
+                <p className="text-slate-600 text-sm">
+                  The sharpening system that survived 6 years of professional restaurant use—detailed review and techniques.
+                </p>
+              </Link>
+            </CTAVisibilityTracker>
+            <CTAVisibilityTracker
+              ctaId="blog-how-to-sharpen-with-tri-stone-related-2"
+              position="final_cta"
+              productSlug="how-to-sharpen-with-tri-stone"
+              merchant="internal"
+            >
+              <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <h4 className="font-bold text-slate-900 mb-2">Victorinox 8&quot; Chef Knife: Professional Quality</h4>
+                <p className="text-slate-600 text-sm">
+                  The professional chef&apos;s knife that responds beautifully to proper sharpening techniques.
+                </p>
+              </Link>
+            </CTAVisibilityTracker>
+            <CTAVisibilityTracker
+              ctaId="blog-how-to-sharpen-with-tri-stone-related-3"
+              position="final_cta"
+              productSlug="how-to-sharpen-with-tri-stone"
+              merchant="internal"
+            >
+              <Link href="/blog/how-to-steel-a-knife" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <h4 className="font-bold text-slate-900 mb-2">How to Steel a Knife: Proper Technique</h4>
+                <p className="text-slate-600 text-sm">
+                  Learn professional honing technique to maintain your sharp edge between sharpening sessions.
+                </p>
+              </Link>
+            </CTAVisibilityTracker>
+            <CTAVisibilityTracker
+              ctaId="blog-how-to-sharpen-with-tri-stone-related-4"
+              position="final_cta"
+              productSlug="how-to-sharpen-with-tri-stone"
+              merchant="internal"
+            >
+              <Link href="/kitchen-bundle" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <h4 className="font-bold text-slate-900 mb-2">Complete Professional Kitchen Starter Kit</h4>
+                <p className="text-slate-600 text-sm">
+                  Build your professional kitchen with chef-approved tools including knives and sharpening systems.
+                </p>
+              </Link>
+            </CTAVisibilityTracker>
           </div>
-
-          <div style={{ marginBottom: '20px' }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1a1a1a' }}>❌ Mistake 2: Too Much Pressure</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>Result:</strong> Doesn&apos;t actually sharpen faster, creates uneven edge</p>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>Fix:</strong> Use light to moderate pressure. The abrasive does the work, not
-            your muscle. If you&apos;re exhausted after sharpening, you&apos;re pressing too hard.</p>
-          </div>
-
-          <div style={{ marginBottom: '20px' }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1a1a1a' }}>❌ Mistake 3: Unequal Passes Per Side</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>Result:</strong> Asymmetrical edge, knife pulls to one side when cutting</p>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>Fix:</strong> Count your passes. Same number each side, every stone. Consistency
-            creates symmetry.</p>
-          </div>
-
-          <div style={{ marginBottom: '20px' }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1a1a1a' }}>❌ Mistake 4: Skipping Stones</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>Result:</strong> Can&apos;t achieve final sharpness if you skip medium grit</p>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>Fix:</strong> Use all three stones in progression for very dull knives. Only
-            skip to fine stone for touch-ups on knives that are still fairly sharp.</p>
-          </div>
-
-          <div style={{ marginBottom: 0 }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', color: '#1a1a1a' }}>❌ Mistake 5: Not Removing the Burr</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}><strong>Result:</strong> Edge feels sharp but breaks off immediately during use</p>
-            <p style={{ fontSize: '16px', lineHeight: '1.8', marginBottom: 0 }}><strong>Fix:</strong> Always finish with light trailing passes or stropping to remove
-            the wire edge. This step transforms good edge into great edge.</p>
-          </div>
-
         </div>
-
-        {/* Professional Sharpening Schedule */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
-          Professional Sharpening Schedule
-        </h2>
-
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          At Purple Café, I maintained this schedule for 8-12 knives:
-        </p>
-
-        <div style={{ overflowX: 'auto', margin: '20px 0' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', border: '1px solid #dee2e6' }}>
-            <thead>
-              <tr style={{ background: '#f8f9fa', borderBottom: '2px solid #dee2e6' }}>
-                <th style={{ padding: '12px', textAlign: 'left' }}>Knife Usage</th>
-                <th style={{ padding: '12px', textAlign: 'left' }}>Sharpening Frequency</th>
-                <th style={{ padding: '12px', textAlign: 'left' }}>Stone(s) Needed</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style={{ borderBottom: '1px solid #dee2e6' }}>
-                <td style={{ padding: '12px' }}>Daily professional use</td>
-                <td style={{ padding: '12px' }}>Weekly</td>
-                <td style={{ padding: '12px' }}>Fine stone (touch-ups)</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid #dee2e6' }}>
-                <td style={{ padding: '12px' }}>Daily home cooking</td>
-                <td style={{ padding: '12px' }}>Every 2-4 weeks</td>
-                <td style={{ padding: '12px' }}>Fine stone, occasionally medium</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid #dee2e6' }}>
-                <td style={{ padding: '12px' }}>Weekly home cooking</td>
-                <td style={{ padding: '12px' }}>Every 2-3 months</td>
-                <td style={{ padding: '12px' }}>All three stones</td>
-              </tr>
-              <tr>
-                <td style={{ padding: '12px' }}>Occasional use</td>
-                <td style={{ padding: '12px' }}>2-3 times per year</td>
-                <td style={{ padding: '12px' }}>All three stones</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div style={{
-          background: '#e7f3ff',
-          padding: '20px',
-          margin: '20px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #0066cc'
-        }}>
-          <p style={{ margin: 0, fontSize: '16px' }}>
-            <strong>💡 Pro tip:</strong> Regular light sharpening beats infrequent heavy sharpening.
-            Touch-ups on fine stone every few weeks remove less metal and extend knife lifespan compared
-            to letting knife get very dull then using coarse stone.
-          </p>
-        </div>
-
-        {/* Mid-Article CTA */}
-        <div style={{
-          background: '#fff3cd',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '2px solid #ffc107'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>
-            Ready for Professional-Quality Sharpening?
-          </h3>
-          <p style={{ fontSize: '16px', margin: '15px 0' }}>
-            The Norton Tri-Stone I used for 6 years in a professional restaurant kitchen delivers
-            exceptional results.
-          </p>
-          <a
-            href="/reviews/norton-im200-tri-stone-sharpener"
-            style={{
-              display: 'inline-block',
-              background: '#0066cc',
-              color: 'white',
-              padding: '15px 35px',
-              textDecoration: 'none',
-              borderRadius: '6px',
-              fontWeight: 'bold',
-              fontSize: '18px'
-            }}
-          >
-            Read My Complete Norton Tri-Stone Review →
-          </a>
-        </div>
-
-        {/* Pro Tips */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
-          Professional Sharpening Tips
-        </h2>
-
-        <ul style={{ lineHeight: '2', fontSize: '16px', paddingLeft: '20px' }}>
-          <li><strong>Master one knife first:</strong> Practice technique on single knife before
-          attempting your entire collection. Muscle memory develops faster with focused repetition.</li>
-
-          <li><strong>Mark your angle:</strong> Use permanent marker on knife bevel. Correct angle
-          removes marker evenly. Uneven marker removal shows inconsistent angle.</li>
-
-          <li><strong>Listen to the sound:</strong> Consistent sharpening creates consistent sound.
-          Changes in sound indicate angle changes. Train your ear.</li>
-
-          <li><strong>Feel the burr:</strong> Running finger along spine-side of edge (carefully)
-          confirms you&apos;ve reached the edge. The burr is your progress indicator.</li>
-
-          <li><strong>Start with cheap knife:</strong> Practice on inexpensive knife before risking
-          expensive blades. Mistakes are part of learning.</li>
-
-          <li><strong>Clean stones regularly:</strong> Metal particles load the stone surface and
-          reduce cutting efficiency. Wipe clean after each knife.</li>
-
-          <li><strong>Flatten stones as needed:</strong> Stones wear unevenly over time. Flatten on
-          diamond plate or sandpaper on glass every few months.</li>
-
-          <li><strong>Light final passes matter:</strong> The difference between good sharp and
-          razor-sharp is those final ultra-light trailing passes on fine stone.</li>
-        </ul>
-
-        {/* Master the Technique */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
-          Master the Technique
-        </h2>
-
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          After 6 years of sharpening 8-12 professional knives weekly at Purple Café using this exact
-          technique, I can confirm the Norton Tri-Stone system delivers restaurant-quality results. The
-          key is consistent angle, proper progression through the three stones, and patience to let the
-          abrasive do its work.
-        </p>
-
-        {/* Related Articles */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '20px', fontWeight: 'bold' }}>Related Articles:</h3>
-          <ul style={{ lineHeight: '2', margin: '10px 0', paddingLeft: '20px' }}>
-            <li><a href="/reviews/norton-im200-tri-stone-sharpener" style={{ color: '#0066cc', textDecoration: 'none' }}>Norton IM200 Tri-Stone Review: 6-Year Professional Test →</a></li>
-            <li><a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', textDecoration: 'none' }}>Victorinox 8&quot; Chef Knife: Professional Quality at Value Price →</a></li>
-            <li><a href="/blog/how-to-steel-a-knife" style={{ color: '#0066cc', textDecoration: 'none' }}>How to Steel a Knife: Proper Technique →</a></li>
-            <li><a href="/kitchen-bundle" style={{ color: '#0066cc', textDecoration: 'none' }}>Complete Professional Kitchen Starter Kit →</a></li>
-          </ul>
-        </div>
-
-        {/* Footer */}
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '30px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #6c757d'
-        }}>
-          <p style={{ margin: '10px 0' }}>
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            })}
-          </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>💬 Questions about sharpening technique?</strong> Leave a comment below—I read
-            and respond to every question.
-          </p>
-        </div>
-
       </article>
     </div>
   );

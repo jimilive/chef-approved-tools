@@ -45,7 +45,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B0076NOFSC?tag=chefapprovedt-20"
+      url: "https://amzn.to/4oo51B6"
     },
     {
       retailer: "Williams Sonoma",

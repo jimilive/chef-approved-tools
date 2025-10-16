@@ -41,7 +41,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B0BRNWWGJ5?tag=chefapprovedt-20"
+      url: "https://amzn.to/4n31Ycj"
     }
   ],
   inStock: true,
@@ -225,7 +225,7 @@ export default function KitchenAidProfessional600ReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/dp/B0BRNWWGJ5?tag=chefapprovedt-20"
+              href="https://amzn.to/4n31Ycj"
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -289,7 +289,7 @@ export default function KitchenAidProfessional600ReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/dp/B0BRNWWGJ5?tag=chefapprovedt-20"
+              href="https://amzn.to/4n31Ycj"
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -540,7 +540,7 @@ export default function KitchenAidProfessional600ReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/dp/B0BRNWWGJ5?tag=chefapprovedt-20"
+              href="https://amzn.to/4n31Ycj"
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -1244,7 +1244,7 @@ export default function KitchenAidProfessional600ReviewPage() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://www.amazon.com/dp/B0BRNWWGJ5?tag=chefapprovedt-20"
+                href="https://amzn.to/4n31Ycj"
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

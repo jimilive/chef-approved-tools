@@ -27,7 +27,7 @@ const sampleProducts = [
     rating: 4.7,
     reviews: 234,
     image: '/logo.png',
-    affiliateUrl: 'https://www.amazon.com/dp/B008H4SLV6?tag=chefapprovedt-20',
+    affiliateUrl: 'https://amzn.to/4o7nWrQ',
     badge: 'Restaurant Tested',
     tested: '5+ years proven'
   },
@@ -38,7 +38,7 @@ const sampleProducts = [
     rating: 4.9,
     reviews: 156,
     image: '/logo.png',
-    affiliateUrl: 'https://www.amazon.com/dp/B00IRH09EK?tag=chefapprovedt-20',
+    affiliateUrl: 'https://amzn.to/43pNqk2',
     badge: 'NSF Certified',
     tested: 'Survived $80K/mo operations'
   }

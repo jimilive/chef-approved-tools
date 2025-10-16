@@ -34,7 +34,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
+      url: "https://amzn.to/3IhHcdl"
     }
   ],
   inStock: true,
@@ -229,7 +229,7 @@ export default function Lodge3SkilletBundleReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
+              href="https://amzn.to/3IhHcdl"
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -451,7 +451,7 @@ export default function Lodge3SkilletBundleReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
+              href="https://amzn.to/3IhHcdl"
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -679,7 +679,7 @@ export default function Lodge3SkilletBundleReview() {
                     merchant="amazon"
                   >
                     <AffiliateButton
-                      href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
+                      href="https://amzn.to/3IhHcdl"
                       merchant="amazon"
                       product={productData.slug}
                       position="mid_article"
@@ -1201,7 +1201,7 @@ export default function Lodge3SkilletBundleReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20"
+                href="https://amzn.to/3IhHcdl"
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

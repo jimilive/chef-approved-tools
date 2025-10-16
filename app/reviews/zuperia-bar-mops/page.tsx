@@ -146,7 +146,7 @@ export default function ZuperiaBarMopsReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://www.amazon.com/dp/B0F79BC6J5?tag=chefapprovedt-20"
+            href="https://amzn.to/4nfExRj"
             merchant="amazon"
             product={productData.slug}
             position="above_fold"
@@ -289,7 +289,7 @@ export default function ZuperiaBarMopsReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://www.amazon.com/dp/B0F79BC6J5?tag=chefapprovedt-20"
+            href="https://amzn.to/4nfExRj"
             merchant="amazon"
             product={productData.slug}
             position="mid_article"
@@ -490,7 +490,7 @@ export default function ZuperiaBarMopsReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://www.amazon.com/dp/B0F79BC6J5?tag=chefapprovedt-20"
+            href="https://amzn.to/4nfExRj"
             merchant="amazon"
             product={productData.slug}
             position="final_cta"

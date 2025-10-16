@@ -82,7 +82,7 @@ export default function BestBudgetChefKnife() {
               merchant="amazon"
             >
             <a
-              href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
+              href="https://amzn.to/3U4PsT1"
               target="_blank"
               rel="nofollow sponsored noopener"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
@@ -271,7 +271,7 @@ export default function BestBudgetChefKnife() {
             merchant="amazon"
           >
           <a
-            href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
+            href="https://amzn.to/3U4PsT1"
             target="_blank"
             rel="nofollow sponsored noopener"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-orange-700 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"

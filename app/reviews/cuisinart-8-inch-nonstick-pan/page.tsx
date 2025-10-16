@@ -22,7 +22,7 @@ const productData = {
     currency: "USD"
   },
   affiliateLinks: [{
-    url: "https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
+    url: "https://amzn.to/4q4QHa8"
   }],
   expertRating: 4.7,
   expertOpinion: "After 6 months of daily testing, the Cuisinart High Impact 8-inch pan has become my default choice for morning eggs and small-batch cooking. The nonstick surface remains flawless—eggs slide off effortlessly without butter or oil. The high impact bonded base provides restaurant-quality heat distribution in a compact home kitchen size. Perfect for my no-bowl scrambled egg technique.",
@@ -188,7 +188,7 @@ export default function Cuisinart8InchNonstickPanReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
+              href="https://amzn.to/4q4QHa8"
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -445,7 +445,7 @@ export default function Cuisinart8InchNonstickPanReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
+              href="https://amzn.to/4q4QHa8"
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -890,7 +890,7 @@ export default function Cuisinart8InchNonstickPanReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://www.amazon.com/dp/B00QZIMMO8?tag=chefapprovedt-20"
+                href="https://amzn.to/4q4QHa8"
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

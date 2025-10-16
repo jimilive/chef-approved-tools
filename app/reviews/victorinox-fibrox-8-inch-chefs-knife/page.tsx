@@ -66,7 +66,7 @@ export default function VictorinoxFibrox8InchReview() {
             brand: "Victorinox",
             category: "Knives",
             affiliateLinks: [{
-              url: "https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
+              url: "https://amzn.to/3U4PsT1"
             }],
             expertRating: 5,
             expertOpinion: "After 20 years of daily professional use, the Victorinox 8-inch chef's knife remains my workhorse blade. The thin, flexible blade delivers professional control, the fibrox handle prevents hand fatigue, and the edge retention rivals knives costing several times more. This is genuine professional equipment that happens to be accessible. Beyond basic quality standards, expensive knives buy you aesthetics and prestige, not better cutting performance. The Victorinox delivers what matters—sharpness, balance, durability—at pricing that makes professional-quality cooking accessible to everyone.",
@@ -223,7 +223,7 @@ export default function VictorinoxFibrox8InchReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
+              href="https://amzn.to/3U4PsT1"
               merchant="amazon"
               product="victorinox-fibrox-8-inch-chefs-knife"
               position="above_fold"
@@ -395,7 +395,7 @@ export default function VictorinoxFibrox8InchReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
+              href="https://amzn.to/3U4PsT1"
               merchant="amazon"
               product="victorinox-fibrox-8-inch-chefs-knife"
               position="mid_article"
@@ -784,7 +784,7 @@ export default function VictorinoxFibrox8InchReview() {
                     merchant="amazon"
                   >
                     <AffiliateButton
-                      href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
+                      href="https://amzn.to/3U4PsT1"
                       merchant="amazon"
                       product="victorinox-fibrox-8-inch-chefs-knife"
                       position="related_products"
@@ -935,7 +935,7 @@ export default function VictorinoxFibrox8InchReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
+                href="https://amzn.to/3U4PsT1"
                 merchant="amazon"
                 product="victorinox-fibrox-8-inch-chefs-knife"
                 position="final_cta"

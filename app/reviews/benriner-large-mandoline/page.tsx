@@ -156,7 +156,7 @@ export default function BenrinerLargeMandolineReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
+            href="https://amzn.to/3ktZMxT"
             merchant="amazon"
             product={productData.slug}
             position="above_fold"
@@ -410,7 +410,7 @@ export default function BenrinerLargeMandolineReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
+            href="https://amzn.to/3ktZMxT"
             merchant="amazon"
             product={productData.slug}
             position="mid_article"
@@ -598,7 +598,7 @@ export default function BenrinerLargeMandolineReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20"
+            href="https://amzn.to/3ktZMxT"
             merchant="amazon"
             product={productData.slug}
             position="final_cta"

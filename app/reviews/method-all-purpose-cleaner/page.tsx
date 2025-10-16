@@ -23,7 +23,7 @@ const productData = {
     currency: "USD"
   },
   affiliateLinks: [{
-    url: "https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
+    url: "https://amzn.to/4hf54wJ"
   }],
   expertRating: 4.8,
   expertOpinion: "After 5 years of daily use and 23+ years managing professional kitchens, I've never found a cleaner that combines serious grease-cutting power with genuinely safe, non-toxic ingredients. Method All-Purpose Cleaner is the rare product that refuses to compromise—it cuts through kitchen grease as effectively as harsh chemical cleaners, but it's plant-based, biodegradable, and safe around food prep surfaces.",
@@ -187,7 +187,7 @@ export default function MethodAllPurposeCleanerReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
+              href="https://amzn.to/4hf54wJ"
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -469,7 +469,7 @@ export default function MethodAllPurposeCleanerReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
+              href="https://amzn.to/4hf54wJ"
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -956,7 +956,7 @@ export default function MethodAllPurposeCleanerReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://www.amazon.com/dp/B01N9J8HY4?tag=chefapprovedt-20"
+                href="https://amzn.to/4hf54wJ"
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

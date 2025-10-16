@@ -48,7 +48,7 @@ const productData = {
   ],
   affiliateLinks: [{
     retailer: "Amazon",
-    url: "https://www.amazon.com/dp/B0001VQIP6?tag=chefapprovedt-20"
+    url: "https://amzn.to/4mzvALq"
   }],
   expertRating: 5.0,
   expertOpinion: "After 23+ years of professional cooking, this Victorinox paring knife is my go-to for all precision work - the perfect balance of Swiss quality, razor-sharp performance, and affordability that makes it easy to keep multiple in rotation.",
@@ -346,7 +346,7 @@ export default function Victorinox4InchParingKnifeReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://www.amazon.com/dp/B0001VQIP6?tag=chefapprovedt-20"
+                href="https://amzn.to/4mzvALq"
                 merchant="amazon"
                 product={productData.slug}
                 position="above_fold"
@@ -469,7 +469,7 @@ export default function Victorinox4InchParingKnifeReview() {
                 merchant="amazon"
               >
                 <AffiliateButton
-                  href="https://www.amazon.com/dp/B0001VQIP6?tag=chefapprovedt-20"
+                  href="https://amzn.to/4mzvALq"
                   merchant="amazon"
                   product={productData.slug}
                   position="mid_article"
@@ -855,7 +855,7 @@ export default function Victorinox4InchParingKnifeReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://www.amazon.com/dp/B0001VQIP6?tag=chefapprovedt-20"
+                href="https://amzn.to/4mzvALq"
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

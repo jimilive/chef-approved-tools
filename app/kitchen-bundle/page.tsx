@@ -20,21 +20,21 @@ const coreEssentials = [
     name: "Victorinox Fibrox Pro 8\" Chef's Knife",
     justification: "The workhorse knife that will handle 90% of your daily prep. Professional-grade Swiss engineering at an unbeatable price.",
     reviewSlug: "victorinox-fibrox-8-inch-chefs-knife",
-    affiliateUrl: "https://www.amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20",
+    affiliateUrl: "https://amzn.to/3U4PsT1",
     image: "/logo.png"
   },
   {
     name: "Victorinox 4\" Paring Knife",
     justification: "For detailed work and precision cuts. The perfect complement to your chef's knife.",
     reviewSlug: "victorinox-4-inch-paring-knife",
-    affiliateUrl: "https://www.amazon.com/dp/B0001VQIP6?tag=chefapprovedt-20",
+    affiliateUrl: "https://amzn.to/4mzvALq",
     image: "/logo.png"
   },
   {
     name: "Lodge Cast Iron 3-Skillet Bundle",
     justification: "The indestructible pan set that will outlast you. Perfect searing, oven-safe, and they get better with age.",
     reviewSlug: "lodge-seasoned-cast-iron-3-skillet-bundle",
-    affiliateUrl: "https://www.amazon.com/dp/B071FMVSYJ?tag=chefapprovedt-20",
+    affiliateUrl: "https://amzn.to/3IhHcdl",
     image: "/logo.png"
   },
   {
@@ -48,7 +48,7 @@ const coreEssentials = [
     name: "ZUPERIA Bar Mops (12-Pack)",
     justification: "The exact towels I used in professional kitchens. 100% ring spun cotton. Restaurant-grade absorbency and durability.",
     reviewSlug: "zuperia-bar-mops",
-    affiliateUrl: "https://www.amazon.com/dp/B0F79BC6J5?tag=chefapprovedt-20",
+    affiliateUrl: "https://amzn.to/4nfExRj",
     image: "/logo.png"
   }
 ]
@@ -59,7 +59,7 @@ const lifetimeUpgrades = [
     name: "Le Creuset Signature 7.25 Qt Dutch Oven",
     justification: "The buy-it-for-life investment piece. Perfect for braising, bread baking, and soups. Will be passed down to your children.",
     reviewSlug: "le-creuset-signature-7-25-qt-dutch-oven",
-    affiliateUrl: "https://www.amazon.com/dp/B0076NOFSC?tag=chefapprovedt-20",
+    affiliateUrl: "https://amzn.to/4oo51B6",
     image: "/logo.png"
   },
   {
@@ -73,7 +73,7 @@ const lifetimeUpgrades = [
     name: "KitchenAid KSM8990WH Commercial Series Mixer",
     justification: "NSF-certified power that survived 18 months of restaurant use. This is the mixer professional kitchens choose.",
     reviewSlug: "kitchenaid-ksm8990wh",
-    affiliateUrl: "https://www.amazon.com/dp/B00IRH09EK?tag=chefapprovedt-20",
+    affiliateUrl: "https://amzn.to/43pNqk2",
     image: "/logo.png"
   },
   {
@@ -90,7 +90,7 @@ const specialistTool = {
   name: "Benriner Large Mandoline",
   justification: "The industry-standard tool for paper-thin, restaurant-quality slices. What takes 15 minutes with a knife takes 2 minutes with this Japanese precision tool.",
   reviewSlug: "benriner-large-mandoline",
-  affiliateUrl: "https://www.amazon.com/dp/B0000Y6JDG?tag=chefapprovedt-20",
+  affiliateUrl: "https://amzn.to/3ktZMxT",
   image: "/logo.png"
 }
 

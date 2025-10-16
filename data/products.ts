@@ -261,7 +261,7 @@ export const sampleProducts: ProductCollection = {
       
       affiliateLinks: [
         {
-          url: 'https://www.amazon.com/dp/B00005AL5F?tag=chefapprovedt-20',
+          url: 'https://amzn.to/4ejb3eZ',
           merchant: 'amazon',
           tag: 'chefapprovedt-20',
           lastChecked: new Date().toISOString()

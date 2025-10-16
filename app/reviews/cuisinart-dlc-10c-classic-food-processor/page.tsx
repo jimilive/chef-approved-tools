@@ -41,7 +41,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
+      url: "https://amzn.to/42NmxE"
     }
   ],
   inStock: true,
@@ -225,7 +225,7 @@ export default function CuisinartDLC10CReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
+              href="https://amzn.to/42NmxE"
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -285,7 +285,7 @@ export default function CuisinartDLC10CReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
+              href="https://amzn.to/42NmxE"
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -510,7 +510,7 @@ export default function CuisinartDLC10CReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
+              href="https://amzn.to/42NmxE"
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -907,7 +907,7 @@ export default function CuisinartDLC10CReviewPage() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://www.amazon.com/dp/B01AXM4SB6?tag=chefapprovedt-20"
+                href="https://amzn.to/42NmxE"
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

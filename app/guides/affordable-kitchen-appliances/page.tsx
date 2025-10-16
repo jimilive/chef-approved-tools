@@ -144,7 +144,7 @@ export default function AffordableKitchenAppliancesPage() {
               merchant="amazon"
             >
               <a
-                href="https://www.amazon.com/dp/B00939I7EK?tag=chefapprovedtools-20"
+                href="https://amzn.to/4o5zIuU"
                 target="_blank"
                 rel="noopener noreferrer sponsored"
                 className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
@@ -241,7 +241,7 @@ export default function AffordableKitchenAppliancesPage() {
               merchant="amazon"
             >
               <a
-                href="https://www.amazon.com/dp/B00005UP2K?tag=chefapprovedtools-20"
+                href="https://amzn.to/498WH3J"
                 target="_blank"
                 rel="noopener noreferrer sponsored"
                 className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
@@ -359,7 +359,7 @@ export default function AffordableKitchenAppliancesPage() {
               merchant="amazon"
             >
               <a
-                href="https://www.amazon.com/dp/B01AXM4SLY?tag=chefapprovedtools-20"
+                href="https://amzn.to/4n70rWQ"
                 target="_blank"
                 rel="noopener noreferrer sponsored"
                 className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
@@ -400,7 +400,7 @@ export default function AffordableKitchenAppliancesPage() {
                 merchant="amazon"
               >
                 <a
-                  href="https://www.amazon.com/dp/B06Y1MP2PY?tag=chefapprovedtools-20"
+                  href="https://amzn.to/4n7dbfW"
                   target="_blank"
                   rel="noopener noreferrer sponsored"
                   className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
@@ -459,7 +459,7 @@ export default function AffordableKitchenAppliancesPage() {
                 merchant="amazon"
               >
                 <a
-                  href="https://www.amazon.com/dp/B07FDJMC9Q?tag=chefapprovedtools-20"
+                  href="https://amzn.to/4q8G9Pn"
                   target="_blank"
                   rel="noopener noreferrer sponsored"
                   className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
@@ -494,7 +494,7 @@ export default function AffordableKitchenAppliancesPage() {
                 merchant="amazon"
               >
                 <a
-                  href="https://www.amazon.com/dp/B0CGNZX7QY?tag=chefapprovedtools-20"
+                  href="https://amzn.to/4qfaiMU"
                   target="_blank"
                   rel="noopener noreferrer sponsored"
                   className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
