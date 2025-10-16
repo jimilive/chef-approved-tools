@@ -1,10 +1,15 @@
+import { Metadata } from 'next'
+import Link from 'next/link'
 import Image from 'next/image'
+import { Calendar, Clock, User, Shield } from 'lucide-react'
+import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Kitchen Gloves Guide: Professional Safety & Best Practices (2025)',
   description: 'Learn professional kitchen glove safety from chef with 23+ years restaurant experience. Single-use, cut-resistant, and proper layering techniques.',
+  keywords: ['kitchen gloves', 'cut resistant gloves', 'food safety gloves', 'disposable gloves', 'kitchen safety', 'professional chef gloves', 'mandoline safety', 'kitchen glove layering'],
   alternates: {
     canonical: '/blog/kitchen-gloves-guide',
   },
@@ -12,543 +17,461 @@ export const metadata = {
 
 export default function KitchenGlovesGuide() {
   return (
-    <article className="blog-post">
+    <div className="min-h-screen bg-white">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateArticleSchema({
+            title: "Essential Guide to Kitchen Gloves: Professional Safety Protocols",
+            slug: "kitchen-gloves-guide",
+            description: "Learn professional kitchen glove safety from chef with 23+ years restaurant experience. Single-use, cut-resistant, and proper layering techniques.",
+            author: "Scott Bradley",
+            datePublished: "2024-09-10T00:00:00Z",
+            lastUpdated: new Date().toISOString(),
+            image: "https://www.chefapprovedtools.com/logo.png",
+            category: "Kitchen Safety",
+            tags: ["kitchen gloves", "cut resistant gloves", "food safety", "kitchen safety", "professional chef techniques"],
+            wordCount: 3200
+          }))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema([
+            { name: "Home", url: "https://www.chefapprovedtools.com" },
+            { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
+            { name: "Essential Guide to Kitchen Gloves", url: "https://www.chefapprovedtools.com/blog/kitchen-gloves-guide" }
+          ]))
+        }}
+      />
 
-      <h1>Essential Guide to Kitchen Gloves: Professional Safety Protocols</h1>
+      {/* Article Header */}
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Breadcrumb */}
+        <nav className="text-sm text-slate-600 mb-8">
+          <Link href="/" className="hover:text-orange-600">Home</Link>
+          <span className="mx-2">/</span>
+          <Link href="/blog" className="hover:text-orange-600">Blog</Link>
+          <span className="mx-2">/</span>
+          <span>Essential Guide to Kitchen Gloves</span>
+        </nav>
 
-      <p style={{ fontSize: '14px', color: '#666', marginBottom: '20px' }}>
-        By Scott Bradley, Professional Chef | Last Updated: {new Date().toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
-        })}
-      </p>
+        {/* Article Meta */}
+        <div className="mb-8">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
+            <div className="flex items-center gap-1">
+              <Calendar className="w-4 h-4" />
+              <span>{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Clock className="w-4 h-4" />
+              <span>9 min read</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <User className="w-4 h-4" />
+              <span>Scott Bradley</span>
+            </div>
+            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
+              Kitchen Safety
+            </span>
+          </div>
 
-      <section>
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Kitchen gloves are your first line of defense against both food contamination and serious injuries. After 23+ years in professional kitchens, I&apos;ve seen how proper glove protocols prevent disasters—from mandoline accidents to cross-contamination incidents that could shut down a restaurant.
-        </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+            Essential Guide to Kitchen Gloves: Professional Safety Protocols
+          </h1>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          At Purple Café, where I managed kitchen operations for 6+ years, glove safety wasn&apos;t optional—it was mandatory. With dozens of staff handling sharp tools and ready-to-eat foods daily, proper glove protocols prevented both contamination and injuries.
-        </p>
-
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          This guide covers the two essential types of kitchen gloves every cook needs: <strong>single-use disposable gloves</strong> for food safety and <strong>cut-resistant gloves</strong> for injury prevention. More importantly, I&apos;ll show you the professional layering technique that combines both for maximum protection.
-        </p>
-      </section>
-
-      <section style={{ margin: '40px 0' }}>
-        <h2>Why Kitchen Gloves Matter: The Professional Perspective</h2>
-
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          In professional kitchens, gloves serve two critical functions:
-        </p>
-
-        <ul style={{ fontSize: '16px', lineHeight: '1.8', margin: '20px 0' }}>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Food Safety:</strong> Preventing cross-contamination between raw proteins, allergens, and ready-to-eat foods
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Injury Prevention:</strong> Protecting hands from cuts, burns, and puncture wounds during high-risk tasks
-          </li>
-        </ul>
-
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Both types of protection are essential, and understanding when and how to use each type—or combine them—is what separates home cooks from professionals.
-        </p>
-      </section>
-
-      <section style={{ margin: '40px 0' }}>
-        <h2>Single-Use Disposable Gloves: Food Safety Essentials</h2>
-
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Single-use disposable gloves are non-negotiable for food safety. They create a barrier between your hands and food, preventing transfer of bacteria, allergens, and other contaminants.
-        </p>
-
-        <h3 style={{ fontSize: '20px', marginTop: '25px', marginBottom: '15px' }}>When to Use Disposable Gloves</h3>
-
-        <ul style={{ fontSize: '16px', lineHeight: '1.8', margin: '20px 0' }}>
-          <li style={{ marginBottom: '12px' }}>Handling raw meat, poultry, or seafood</li>
-          <li style={{ marginBottom: '12px' }}>Preparing ready-to-eat foods (sandwiches, salads, garnishes)</li>
-          <li style={{ marginBottom: '12px' }}>Working with common allergens (nuts, shellfish)</li>
-          <li style={{ marginBottom: '12px' }}>Food plating and final assembly</li>
-          <li style={{ marginBottom: '12px' }}>Any time you switch between raw and cooked foods</li>
-        </ul>
-
-        <h3 style={{ fontSize: '20px', marginTop: '25px', marginBottom: '15px' }}>Critical Rules for Disposable Gloves</h3>
-
-        <div style={{
-          background: '#fff3cd',
-          padding: '20px',
-          margin: '20px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #ffc107'
-        }}>
-          <p style={{ fontSize: '16px', lineHeight: '1.8', margin: '10px 0' }}>
-            <strong>⚠️ NEVER reuse disposable gloves.</strong> They&apos;re called &quot;single-use&quot; for a reason.
-          </p>
-          <p style={{ fontSize: '16px', lineHeight: '1.8', margin: '10px 0' }}>
-            <strong>⚠️ Change gloves between tasks.</strong> Handled raw chicken? New gloves before touching vegetables.
-          </p>
-          <p style={{ fontSize: '16px', lineHeight: '1.8', margin: '10px 0' }}>
-            <strong>⚠️ Gloves don&apos;t replace handwashing.</strong> Always wash hands before putting on gloves and after removing them.
-          </p>
-          <p style={{ fontSize: '16px', lineHeight: '1.8', margin: '10px 0' }}>
-            <strong>⚠️ Don&apos;t touch your face, phone, or other surfaces</strong> while wearing food-prep gloves.
+          <p className="text-xl text-slate-600 leading-relaxed">
+            Kitchen gloves are your first line of defense against both food contamination and serious injuries. After 23+ years in professional kitchens, I&apos;ve seen how proper glove protocols prevent disasters—from mandoline accidents to cross-contamination incidents that could shut down a restaurant.
           </p>
         </div>
 
-        <h3 style={{ fontSize: '20px', marginTop: '25px', marginBottom: '15px' }}>Choosing Disposable Gloves</h3>
+        {/* Article Content */}
+        <div className="prose prose-lg prose-slate max-w-none">
 
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Professional kitchens typically use nitrile gloves rather than latex (allergy concerns) or vinyl (less durable). Look for:
-        </p>
+          <p>
+            At Purple Café, where I managed kitchen operations for 6+ years, glove safety wasn&apos;t optional—it was mandatory. With dozens of staff handling sharp tools and ready-to-eat foods daily, proper glove protocols prevented both contamination and injuries.
+          </p>
 
-        <ul style={{ fontSize: '16px', lineHeight: '1.8', margin: '20px 0' }}>
-          <li style={{ marginBottom: '12px' }}>Food-safe certification</li>
-          <li style={{ marginBottom: '12px' }}>Powder-free (powder can contaminate food)</li>
-          <li style={{ marginBottom: '12px' }}>Proper sizing (too loose = poor dexterity, too tight = tears)</li>
-          <li style={{ marginBottom: '12px' }}>Sufficient thickness for durability without sacrificing feel</li>
-        </ul>
-      </section>
+          <p>
+            This guide covers the two essential types of kitchen gloves every cook needs: <strong>single-use disposable gloves</strong> for food safety and <strong>cut-resistant gloves</strong> for injury prevention. More importantly, I&apos;ll show you the professional layering technique that combines both for maximum protection.
+          </p>
 
-      <section style={{ margin: '40px 0' }}>
-        <h2>Cut-Resistant Gloves: Injury Prevention for High-Risk Tasks</h2>
+          <h2>Why Kitchen Gloves Matter: The Professional Perspective</h2>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Professional kitchens require cut-resistant gloves when using mandolines, during butchering, and for any high-risk cutting task. After seeing too many emergency room visits from mandoline accidents, I made cut-resistant gloves mandatory for certain tasks.
-        </p>
+          <p>
+            In professional kitchens, gloves serve two critical functions:
+          </p>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          When using equipment like the <CTAVisibilityTracker
-            ctaId="blog-kitchen-gloves-guide-review-link-1"
-            position="mid_article"
-            productSlug="kitchen-gloves-guide"
-            merchant="internal"
-          >
-            <a href="/reviews/benriner-large-mandoline" style={{ color: '#0066cc', fontWeight: 'bold' }}>Benriner mandoline</a>
-          </CTAVisibilityTracker>, cut-resistant gloves are non-negotiable. That blade is surgically sharp—I&apos;ve seen it slice through vegetables effortlessly, and it will do the same to your fingertips without hesitation.
-        </p>
+          <ul>
+            <li>
+              <strong>Food Safety:</strong> Preventing cross-contamination between raw proteins, allergens, and ready-to-eat foods
+            </li>
+            <li>
+              <strong>Injury Prevention:</strong> Protecting hands from cuts, burns, and puncture wounds during high-risk tasks
+            </li>
+          </ul>
 
-        <h3 style={{ fontSize: '20px', marginTop: '25px', marginBottom: '15px' }}>When to Use Cut-Resistant Gloves</h3>
+          <p>
+            Both types of protection are essential, and understanding when and how to use each type—or combine them—is what separates home cooks from professionals.
+          </p>
 
-        <ul style={{ fontSize: '16px', lineHeight: '1.8', margin: '20px 0' }}>
-          <li style={{ marginBottom: '12px' }}><strong>Mandoline work:</strong> Every single time, no exceptions</li>
-          <li style={{ marginBottom: '12px' }}><strong>Butchering and boning:</strong> Especially when working near bones with sharp knives</li>
-          <li style={{ marginBottom: '12px' }}><strong>Oyster shucking:</strong> That oyster knife can slip catastrophically</li>
-          <li style={{ marginBottom: '12px' }}><strong>Working with new or unfamiliar sharp tools:</strong> Until you develop muscle memory</li>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Training new staff:</strong> Anyone learning to use sharp equipment like <CTAVisibilityTracker
-              ctaId="blog-kitchen-gloves-guide-review-link-2"
+          <h2>Single-Use Disposable Gloves: Food Safety Essentials</h2>
+
+          <p>
+            Single-use disposable gloves are non-negotiable for food safety. They create a barrier between your hands and food, preventing transfer of bacteria, allergens, and other contaminants.
+          </p>
+
+          <h3>When to Use Disposable Gloves</h3>
+
+          <ul>
+            <li>Handling raw meat, poultry, or seafood</li>
+            <li>Preparing ready-to-eat foods (sandwiches, salads, garnishes)</li>
+            <li>Working with common allergens (nuts, shellfish)</li>
+            <li>Food plating and final assembly</li>
+            <li>Any time you switch between raw and cooked foods</li>
+          </ul>
+
+          <h3>Critical Rules for Disposable Gloves</h3>
+
+          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
+            <p>
+              <strong>⚠️ NEVER reuse disposable gloves.</strong> They&apos;re called &quot;single-use&quot; for a reason.
+            </p>
+            <p>
+              <strong>⚠️ Change gloves between tasks.</strong> Handled raw chicken? New gloves before touching vegetables.
+            </p>
+            <p>
+              <strong>⚠️ Gloves don&apos;t replace handwashing.</strong> Always wash hands before putting on gloves and after removing them.
+            </p>
+            <p className="mb-0">
+              <strong>⚠️ Don&apos;t touch your face, phone, or other surfaces</strong> while wearing food-prep gloves.
+            </p>
+          </div>
+
+          <h3>Choosing Disposable Gloves</h3>
+
+          <p>
+            Professional kitchens typically use nitrile gloves rather than latex (allergy concerns) or vinyl (less durable). Look for:
+          </p>
+
+          <ul>
+            <li>Food-safe certification</li>
+            <li>Powder-free (powder can contaminate food)</li>
+            <li>Proper sizing (too loose = poor dexterity, too tight = tears)</li>
+            <li>Sufficient thickness for durability without sacrificing feel</li>
+          </ul>
+
+          <h2>Cut-Resistant Gloves: Injury Prevention for High-Risk Tasks</h2>
+
+          <p>
+            Professional kitchens require cut-resistant gloves when using mandolines, during butchering, and for any high-risk cutting task. After seeing too many emergency room visits from mandoline accidents, I made cut-resistant gloves mandatory for certain tasks.
+          </p>
+
+          <p>
+            When using equipment like the <CTAVisibilityTracker
+              ctaId="blog-kitchen-gloves-guide-review-link-1"
               position="mid_article"
               productSlug="kitchen-gloves-guide"
               merchant="internal"
             >
-              <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>professional chef knives</a>
-            </CTAVisibilityTracker> or <CTAVisibilityTracker
-              ctaId="blog-kitchen-gloves-guide-review-link-3"
+              <Link href="/reviews/benriner-large-mandoline" className="text-blue-700 underline">Benriner mandoline</Link>
+            </CTAVisibilityTracker>, cut-resistant gloves are non-negotiable. That blade is surgically sharp—I&apos;ve seen it slice through vegetables effortlessly, and it will do the same to your fingertips without hesitation.
+          </p>
+
+          <h3>When to Use Cut-Resistant Gloves</h3>
+
+          <ul>
+            <li><strong>Mandoline work:</strong> Every single time, no exceptions</li>
+            <li><strong>Butchering and boning:</strong> Especially when working near bones with sharp knives</li>
+            <li><strong>Oyster shucking:</strong> That oyster knife can slip catastrophically</li>
+            <li><strong>Working with new or unfamiliar sharp tools:</strong> Until you develop muscle memory</li>
+            <li>
+              <strong>Training new staff:</strong> Anyone learning to use sharp equipment like <CTAVisibilityTracker
+                ctaId="blog-kitchen-gloves-guide-review-link-2"
+                position="mid_article"
+                productSlug="kitchen-gloves-guide"
+                merchant="internal"
+              >
+                <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-700 underline">professional chef knives</Link>
+              </CTAVisibilityTracker> or <CTAVisibilityTracker
+                ctaId="blog-kitchen-gloves-guide-review-link-3"
+                position="mid_article"
+                productSlug="kitchen-gloves-guide"
+                merchant="internal"
+              >
+                <Link href="/reviews/victorinox-granton-edge-boning-knife" className="text-blue-700 underline">boning knives</Link>
+              </CTAVisibilityTracker>
+            </li>
+          </ul>
+
+          <div className="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
+            <p className="mb-0">
+              <strong>From Purple Café:</strong> We had a strict rule: anyone using a mandoline must wear cut-resistant gloves. No gloves, no mandoline access. It sounds extreme until you&apos;ve driven someone to the ER at 7 PM on a Friday night because they thought they could &quot;just do one quick potato&quot; without protection. The speed and precision required during service makes safety protocols non-negotiable.
+            </p>
+          </div>
+
+          <h3>Understanding Cut-Resistant Ratings</h3>
+
+          <p>
+            Cut-resistant gloves are rated by ANSI standards from A1 (lowest) to A9 (highest protection):
+          </p>
+
+          <ul>
+            <li><strong>A2-A3:</strong> Minimum for kitchen use, adequate for mandolines</li>
+            <li><strong>A4-A5:</strong> Better protection for butchering and boning</li>
+            <li><strong>A6+:</strong> Heavy-duty commercial use, can sacrifice dexterity</li>
+          </ul>
+
+          <p>
+            For home cooks, A2-A4 rating provides excellent protection while maintaining the dexterity needed for precise work. Essential when working at your <CTAVisibilityTracker
+              ctaId="blog-kitchen-gloves-guide-review-link-4"
               position="mid_article"
               productSlug="kitchen-gloves-guide"
               merchant="internal"
             >
-              <a href="/reviews/victorinox-granton-edge-boning-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>boning knives</a>
-            </CTAVisibilityTracker>
-          </li>
-        </ul>
-
-        <div style={{
-          background: '#f8f9fa',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #dc3545'
-        }}>
-          <p style={{ fontSize: '16px', lineHeight: '1.8', margin: 0 }}>
-            <strong>From Purple Café:</strong> We had a strict rule: anyone using a mandoline must wear cut-resistant gloves. No gloves, no mandoline access. It sounds extreme until you&apos;ve driven someone to the ER at 7 PM on a Friday night because they thought they could &quot;just do one quick potato&quot; without protection. The speed and precision required during service makes safety protocols non-negotiable.
+              <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-blue-700 underline">cutting board station</Link>
+            </CTAVisibilityTracker>.
           </p>
-        </div>
 
-        <h3 style={{ fontSize: '20px', marginTop: '25px', marginBottom: '15px' }}>Understanding Cut-Resistant Ratings</h3>
+          <h3>Important Limitations</h3>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Cut-resistant gloves are rated by ANSI standards from A1 (lowest) to A9 (highest protection):
-        </p>
+          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
+            <p>
+              <strong>⚠️ Cut-resistant ≠ cut-proof.</strong> These gloves significantly reduce cut risk but won&apos;t stop a forceful slash or stab.
+            </p>
+            <p>
+              <strong>⚠️ They protect against slicing, not punctures.</strong> A knife tip can still penetrate.
+            </p>
+            <p className="mb-0">
+              <strong>⚠️ Proper technique still matters.</strong> Gloves are backup protection, not permission to be careless.
+            </p>
+          </div>
 
-        <ul style={{ fontSize: '16px', lineHeight: '1.8', margin: '20px 0' }}>
-          <li style={{ marginBottom: '12px' }}><strong>A2-A3:</strong> Minimum for kitchen use, adequate for mandolines</li>
-          <li style={{ marginBottom: '12px' }}><strong>A4-A5:</strong> Better protection for butchering and boning</li>
-          <li style={{ marginBottom: '12px' }}><strong>A6+:</strong> Heavy-duty commercial use, can sacrifice dexterity</li>
-        </ul>
+          <h2>The Professional Layering Technique</h2>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          For home cooks, A2-A4 rating provides excellent protection while maintaining the dexterity needed for precise work. Essential when working at your <CTAVisibilityTracker
-            ctaId="blog-kitchen-gloves-guide-review-link-4"
-            position="mid_article"
-            productSlug="kitchen-gloves-guide"
-            merchant="internal"
-          >
-            <a href="/reviews/john-boos-platinum-commercial-cutting-board" style={{ color: '#0066cc', fontWeight: 'bold' }}>cutting board station</a>
-          </CTAVisibilityTracker>.
-        </p>
-
-        <h3 style={{ fontSize: '20px', marginTop: '25px', marginBottom: '15px' }}>Important Limitations</h3>
-
-        <div style={{
-          background: '#fff3cd',
-          padding: '20px',
-          margin: '20px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #ffc107'
-        }}>
-          <p style={{ fontSize: '16px', lineHeight: '1.8', margin: '10px 0' }}>
-            <strong>⚠️ Cut-resistant ≠ cut-proof.</strong> These gloves significantly reduce cut risk but won&apos;t stop a forceful slash or stab.
+          <p>
+            Here&apos;s the technique that separates professional kitchens from home cooks: <strong>combining both types of gloves</strong> for maximum protection and food safety.
           </p>
-          <p style={{ fontSize: '16px', lineHeight: '1.8', margin: '10px 0' }}>
-            <strong>⚠️ They protect against slicing, not punctures.</strong> A knife tip can still penetrate.
+
+          <h3>The Triple-Layer System for High-Risk Tasks</h3>
+
+          <p>
+            When working with extremely dangerous equipment like mandolines while handling food that needs sanitary protection:
           </p>
-          <p style={{ fontSize: '16px', lineHeight: '1.8', margin: '10px 0' }}>
-            <strong>⚠️ Proper technique still matters.</strong> Gloves are backup protection, not permission to be careless.
+
+          <ol>
+            <li>
+              <strong>Layer 1 (Inner):</strong> Disposable nitrile glove—provides sanitary barrier, wicks away sweat
+            </li>
+            <li>
+              <strong>Layer 2 (Middle):</strong> Cut-resistant glove—provides primary cut protection
+            </li>
+            <li>
+              <strong>Layer 3 (Outer):</strong> Disposable nitrile glove—keeps cut-resistant glove clean, maintains food safety
+            </li>
+          </ol>
+
+          <p>
+            This seems excessive until you understand the reasoning: The cut-resistant glove protects your hand, but it touches raw food and becomes contaminated. The outer disposable layer lets you maintain food safety while keeping the cut-resistant glove clean enough to reuse during the same prep session.
           </p>
-        </div>
-      </section>
 
-      <section style={{ margin: '40px 0' }}>
-        <h2>The Professional Layering Technique</h2>
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+            <p className="mb-0">
+              <strong>Pro Tip:</strong> At Purple Café, we kept glove stations at every prep area. Each station had both types readily available, making it easy to layer properly without hunting for supplies. If you set up gloves to be convenient, people will actually use them.
+            </p>
+          </div>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Here&apos;s the technique that separates professional kitchens from home cooks: <strong>combining both types of gloves</strong> for maximum protection and food safety.
-        </p>
+          <h3>Alternative: Cut-Resistant Over Disposable</h3>
 
-        <h3 style={{ fontSize: '20px', marginTop: '25px', marginBottom: '15px' }}>The Triple-Layer System for High-Risk Tasks</h3>
-
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          When working with extremely dangerous equipment like mandolines while handling food that needs sanitary protection:
-        </p>
-
-        <ol style={{ fontSize: '16px', lineHeight: '1.8', margin: '20px 0', paddingLeft: '20px' }}>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Layer 1 (Inner):</strong> Disposable nitrile glove—provides sanitary barrier, wicks away sweat
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Layer 2 (Middle):</strong> Cut-resistant glove—provides primary cut protection
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Layer 3 (Outer):</strong> Disposable nitrile glove—keeps cut-resistant glove clean, maintains food safety
-          </li>
-        </ol>
-
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          This seems excessive until you understand the reasoning: The cut-resistant glove protects your hand, but it touches raw food and becomes contaminated. The outer disposable layer lets you maintain food safety while keeping the cut-resistant glove clean enough to reuse during the same prep session.
-        </p>
-
-        <div style={{
-          background: '#e7f3ff',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
-          <p style={{ fontSize: '16px', lineHeight: '1.8', margin: 0 }}>
-            <strong>Pro Tip:</strong> At Purple Café, we kept glove stations at every prep area. Each station had both types readily available, making it easy to layer properly without hunting for supplies. If you set up gloves to be convenient, people will actually use them.
+          <p>
+            For less risky tasks where you primarily need cut protection with some food safety:
           </p>
-        </div>
 
-        <h3 style={{ fontSize: '20px', marginTop: '25px', marginBottom: '15px' }}>Alternative: Cut-Resistant Over Disposable</h3>
+          <ol>
+            <li>
+              <strong>Layer 1:</strong> Disposable glove (food safety)
+            </li>
+            <li>
+              <strong>Layer 2:</strong> Cut-resistant glove over it (protection)
+            </li>
+          </ol>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          For less risky tasks where you primarily need cut protection with some food safety:
-        </p>
-
-        <ol style={{ fontSize: '16px', lineHeight: '1.8', margin: '20px 0', paddingLeft: '20px' }}>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Layer 1:</strong> Disposable glove (food safety)
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Layer 2:</strong> Cut-resistant glove over it (protection)
-          </li>
-        </ol>
-
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          This works well for butchering or boning work where you need both protection and sanitation, but won&apos;t be touching ready-to-eat foods afterward.
-        </p>
-      </section>
-
-      <section style={{ margin: '40px 0' }}>
-        <h2>Professional Kitchen Glove Protocols</h2>
-
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Based on 23+ years restaurant experience, here are the protocols that actually work:
-        </p>
-
-        <ul style={{ fontSize: '16px', lineHeight: '1.8', margin: '20px 0' }}>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Mandoline work:</strong> Always triple-layer: disposable under, cut-resistant middle, disposable over
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Raw meat handling:</strong> Single-use gloves, change between proteins
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Butchering:</strong> Cut-resistant gloves mandatory, disposable layer over for sanitation
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Ready-to-eat foods:</strong> Fresh disposable gloves, never reuse
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>High-volume operations:</strong> Glove stations at every prep area
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Training new staff:</strong> Cut-resistant gloves until they demonstrate consistent safe technique
-          </li>
-        </ul>
-
-        <div style={{
-          background: '#f8f9fa',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
-          <p style={{ fontSize: '16px', lineHeight: '1.8', margin: 0 }}>
-            <strong>Kitchen Manager Perspective:</strong> The cost of gloves is negligible compared to workers&apos; comp claims, health department violations, or lost productivity from injuries. We budgeted for generous glove supplies and never regretted it. An injured cook during Friday dinner rush costs exponentially more than a case of gloves.
+          <p>
+            This works well for butchering or boning work where you need both protection and sanitation, but won&apos;t be touching ready-to-eat foods afterward.
           </p>
-        </div>
-      </section>
 
-      <section style={{ margin: '40px 0' }}>
-        <h2>Maintenance and Care</h2>
+          <h2>Professional Kitchen Glove Protocols</h2>
 
-        <h3 style={{ fontSize: '20px', marginTop: '25px', marginBottom: '15px' }}>Disposable Gloves</h3>
+          <p>
+            Based on 23+ years restaurant experience, here are the protocols that actually work:
+          </p>
 
-        <ul style={{ fontSize: '16px', lineHeight: '1.8', margin: '20px 0' }}>
-          <li style={{ marginBottom: '12px' }}>Store in cool, dry place away from direct sunlight</li>
-          <li style={{ marginBottom: '12px' }}>Check expiration dates (yes, they expire)</li>
-          <li style={{ marginBottom: '12px' }}>Keep boxes at every work station for easy access</li>
-          <li style={{ marginBottom: '12px' }}>Buy in bulk—you&apos;ll use more than you think</li>
-        </ul>
+          <ul>
+            <li>
+              <strong>Mandoline work:</strong> Always triple-layer: disposable under, cut-resistant middle, disposable over
+            </li>
+            <li>
+              <strong>Raw meat handling:</strong> Single-use gloves, change between proteins
+            </li>
+            <li>
+              <strong>Butchering:</strong> Cut-resistant gloves mandatory, disposable layer over for sanitation
+            </li>
+            <li>
+              <strong>Ready-to-eat foods:</strong> Fresh disposable gloves, never reuse
+            </li>
+            <li>
+              <strong>High-volume operations:</strong> Glove stations at every prep area
+            </li>
+            <li>
+              <strong>Training new staff:</strong> Cut-resistant gloves until they demonstrate consistent safe technique
+            </li>
+          </ul>
 
-        <h3 style={{ fontSize: '20px', marginTop: '25px', marginBottom: '15px' }}>Cut-Resistant Gloves</h3>
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+            <p className="mb-0">
+              <strong>Kitchen Manager Perspective:</strong> The cost of gloves is negligible compared to workers&apos; comp claims, health department violations, or lost productivity from injuries. We budgeted for generous glove supplies and never regretted it. An injured cook during Friday dinner rush costs exponentially more than a case of gloves.
+            </p>
+          </div>
 
-        <ul style={{ fontSize: '16px', lineHeight: '1.8', margin: '20px 0' }}>
-          <li style={{ marginBottom: '12px' }}>Wash after each use (follow manufacturer instructions)</li>
-          <li style={{ marginBottom: '12px' }}>Air dry completely before storing</li>
-          <li style={{ marginBottom: '12px' }}>Inspect regularly for tears, holes, or excessive wear</li>
-          <li style={{ marginBottom: '12px' }}>Replace immediately if damaged—compromised protection is no protection</li>
-          <li style={{ marginBottom: '12px' }}>Keep multiple pairs so you always have clean ones ready</li>
-        </ul>
+          <h2>Maintenance and Care</h2>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Combine with proper cleaning using <CTAVisibilityTracker
-            ctaId="blog-kitchen-gloves-guide-review-link-5"
-            position="mid_article"
-            productSlug="kitchen-gloves-guide"
-            merchant="internal"
-          >
-            <a href="/reviews/method-all-purpose-cleaner" style={{ color: '#0066cc', fontWeight: 'bold' }}>non-toxic cleaners</a>
-          </CTAVisibilityTracker> for complete food safety in your kitchen.
-        </p>
-      </section>
+          <h3>Disposable Gloves</h3>
 
-      <section style={{ margin: '40px 0' }}>
-        <h2>Common Mistakes to Avoid</h2>
+          <ul>
+            <li>Store in cool, dry place away from direct sunlight</li>
+            <li>Check expiration dates (yes, they expire)</li>
+            <li>Keep boxes at every work station for easy access</li>
+            <li>Buy in bulk—you&apos;ll use more than you think</li>
+          </ul>
 
-        <ul style={{ fontSize: '16px', lineHeight: '1.8', margin: '20px 0' }}>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Reusing disposable gloves:</strong> The contamination risk negates their entire purpose
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Skipping gloves for &quot;quick tasks&quot;:</strong> Most accidents happen during rushed work
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Wrong size gloves:</strong> Too loose = accidents, too tight = tears and fatigue
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Not washing hands before gloving:</strong> Gloves protect food from your hands, not the other way around
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Touching non-food items while gloved:</strong> Your phone, door handles, etc. contaminate gloves
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Using cut-resistant gloves alone for food prep:</strong> They&apos;re not food-safe without disposable layers
-          </li>
-          <li style={{ marginBottom: '15px' }}>
-            <strong>Assuming cut-resistant means cut-proof:</strong> They reduce risk significantly but aren&apos;t invincible
-          </li>
-        </ul>
-      </section>
+          <h3>Cut-Resistant Gloves</h3>
 
-      <section style={{ margin: '40px 0' }}>
-        <h2>Building a Complete Kitchen Safety System</h2>
+          <ul>
+            <li>Wash after each use (follow manufacturer instructions)</li>
+            <li>Air dry completely before storing</li>
+            <li>Inspect regularly for tears, holes, or excessive wear</li>
+            <li>Replace immediately if damaged—compromised protection is no protection</li>
+            <li>Keep multiple pairs so you always have clean ones ready</li>
+          </ul>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Gloves are just one component of kitchen safety. Part of our comprehensive <CTAVisibilityTracker
-            ctaId="blog-kitchen-gloves-guide-bundle-link-1"
-            position="mid_article"
-            productSlug="kitchen-gloves-guide"
-            merchant="internal"
-          >
-            <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold' }}>professional kitchen safety kit</a>
-          </CTAVisibilityTracker>, proper protection also includes:
-        </p>
-
-        <ul style={{ fontSize: '16px', lineHeight: '1.8', margin: '20px 0' }}>
-          <li style={{ marginBottom: '12px' }}>Sharp, well-maintained knives (dull knives cause more accidents)</li>
-          <li style={{ marginBottom: '12px' }}>Stable cutting surfaces</li>
-          <li style={{ marginBottom: '12px' }}>Proper knife technique and hand positioning</li>
-          <li style={{ marginBottom: '12px' }}>Good lighting and organized workspace</li>
-          <li style={{ marginBottom: '12px' }}>Non-slip mats in wet areas</li>
-        </ul>
-      </section>
-
-      {/* RELATED ARTICLES */}
-      <div style={{
-        background: '#e7f3ff',
-        padding: '25px',
-        margin: '40px 0',
-        borderRadius: '8px',
-        borderLeft: '4px solid #0066cc'
-      }}>
-        <h3 style={{ marginTop: 0, fontSize: '22px' }}>Related Articles:</h3>
-        <ul style={{ lineHeight: '2', margin: '10px 0', fontSize: '16px' }}>
-          <li>
-            <CTAVisibilityTracker
-              ctaId="blog-kitchen-gloves-guide-related-1"
-              position="final_cta"
+          <p>
+            Combine with proper cleaning using <CTAVisibilityTracker
+              ctaId="blog-kitchen-gloves-guide-review-link-5"
+              position="mid_article"
               productSlug="kitchen-gloves-guide"
               merchant="internal"
             >
-              <a href="/reviews/benriner-large-mandoline" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-                Benriner Mandoline: Professional Test & Safety →
-              </a>
-            </CTAVisibilityTracker>
-          </li>
-          <li>
-            <CTAVisibilityTracker
-              ctaId="blog-kitchen-gloves-guide-related-2"
-              position="final_cta"
-              productSlug="kitchen-gloves-guide"
-              merchant="internal"
-            >
-              <a href="/reviews/victorinox-granton-edge-boning-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-                Boning Knife Safety & Technique →
-              </a>
-            </CTAVisibilityTracker>
-          </li>
-          <li>
-            <CTAVisibilityTracker
-              ctaId="blog-kitchen-gloves-guide-related-3"
-              position="final_cta"
-              productSlug="kitchen-gloves-guide"
-              merchant="internal"
-            >
-              <a href="/blog/how-to-sharpen-with-tri-stone" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-                Knife Sharpening Safety Guide →
-              </a>
-            </CTAVisibilityTracker>
-          </li>
-          <li>
-            <CTAVisibilityTracker
-              ctaId="blog-kitchen-gloves-guide-related-4"
-              position="final_cta"
-              productSlug="kitchen-gloves-guide"
-              merchant="internal"
-            >
-              <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-                Professional Chef&apos;s Knife Review →
-              </a>
-            </CTAVisibilityTracker>
-          </li>
-          <li>
-            <CTAVisibilityTracker
-              ctaId="blog-kitchen-gloves-guide-related-5"
-              position="final_cta"
-              productSlug="kitchen-gloves-guide"
-              merchant="internal"
-            >
-              <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-                Complete Professional Kitchen Safety Kit →
-              </a>
-            </CTAVisibilityTracker>
-          </li>
-        </ul>
-      </div>
-
-      <section style={{ margin: '40px 0' }}>
-        <h2>Final Thoughts: Safety Is Non-Negotiable</h2>
-
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          After 23+ years in professional kitchens, I&apos;ve seen what happens when safety protocols are followed—and when they&apos;re not. The difference is stark. Proper glove use prevents injuries, maintains food safety, and demonstrates professionalism.
-        </p>
-
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Whether you&apos;re a home cook learning to use a mandoline or a professional managing a busy kitchen, glove safety should be automatic. Single-use gloves for food safety, cut-resistant gloves for dangerous tasks, and the layering technique when you need both—these aren&apos;t optional protocols, they&apos;re fundamental kitchen practices.
-        </p>
-
-        <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-          Stock your kitchen with both types of gloves, keep them readily accessible, and make proper use non-negotiable. Your hands—and your diners—will thank you.
-        </p>
-      </section>
-
-      {/* AUTHOR BIO */}
-      <div style={{
-        background: 'white',
-        padding: '25px',
-        margin: '30px 0',
-        border: '1px solid #dee2e6',
-        borderRadius: '8px',
-        display: 'grid',
-        gridTemplateColumns: '100px 1fr',
-        gap: '20px',
-        alignItems: 'start'
-      }}>
-        <Image
-          src="/images/team/head-shot-1.jpg"
-          alt="Scott Bradley, Professional Chef"
-          width={100}
-          height={100}
-          style={{
-            borderRadius: '50%',
-            objectFit: 'cover'
-          }}
-        />
-        <div>
-          <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-          <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-            Professional Chef • 40 Years Experience Since Age 15
+              <Link href="/reviews/method-all-purpose-cleaner" className="text-blue-700 underline">non-toxic cleaners</Link>
+            </CTAVisibilityTracker> for complete food safety in your kitchen.
           </p>
-          <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-            Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing 200+ cover operations.
-            A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-            University of Montana. Implemented mandatory glove safety protocols that prevented injuries and
-            maintained perfect health inspection records.
+
+          <h2>Common Mistakes to Avoid</h2>
+
+          <ul>
+            <li>
+              <strong>Reusing disposable gloves:</strong> The contamination risk negates their entire purpose
+            </li>
+            <li>
+              <strong>Skipping gloves for &quot;quick tasks&quot;:</strong> Most accidents happen during rushed work
+            </li>
+            <li>
+              <strong>Wrong size gloves:</strong> Too loose = accidents, too tight = tears and fatigue
+            </li>
+            <li>
+              <strong>Not washing hands before gloving:</strong> Gloves protect food from your hands, not the other way around
+            </li>
+            <li>
+              <strong>Touching non-food items while gloved:</strong> Your phone, door handles, etc. contaminate gloves
+            </li>
+            <li>
+              <strong>Using cut-resistant gloves alone for food prep:</strong> They&apos;re not food-safe without disposable layers
+            </li>
+            <li>
+              <strong>Assuming cut-resistant means cut-proof:</strong> They reduce risk significantly but aren&apos;t invincible
+            </li>
+          </ul>
+
+          <h2>Building a Complete Kitchen Safety System</h2>
+
+          <p>
+            Gloves are just one component of kitchen safety. Part of our comprehensive <CTAVisibilityTracker
+              ctaId="blog-kitchen-gloves-guide-bundle-link-1"
+              position="mid_article"
+              productSlug="kitchen-gloves-guide"
+              merchant="internal"
+            >
+              <Link href="/kitchen-bundle" className="text-blue-700 underline">professional kitchen safety kit</Link>
+            </CTAVisibilityTracker>, proper protection also includes:
           </p>
-          <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-            Read more about my testing methodology →
-          </a>
+
+          <ul>
+            <li>Sharp, well-maintained knives (dull knives cause more accidents)</li>
+            <li>Stable cutting surfaces</li>
+            <li>Proper knife technique and hand positioning</li>
+            <li>Good lighting and organized workspace</li>
+            <li>Non-slip mats in wet areas</li>
+          </ul>
+
+          <h2>Final Thoughts: Safety Is Non-Negotiable</h2>
+
+          <p>
+            After 23+ years in professional kitchens, I&apos;ve seen what happens when safety protocols are followed—and when they&apos;re not. The difference is stark. Proper glove use prevents injuries, maintains food safety, and demonstrates professionalism.
+          </p>
+
+          <p>
+            Whether you&apos;re a home cook learning to use a mandoline or a professional managing a busy kitchen, glove safety should be automatic. Single-use gloves for food safety, cut-resistant gloves for dangerous tasks, and the layering technique when you need both—these aren&apos;t optional protocols, they&apos;re fundamental kitchen practices.
+          </p>
+
+          <p>
+            Stock your kitchen with both types of gloves, keep them readily accessible, and make proper use non-negotiable. Your hands—and your diners—will thank you.
+          </p>
+
         </div>
-      </div>
 
-      {/* FOOTER */}
-      <div style={{
-        background: '#f8f9fa',
-        padding: '20px',
-        margin: '30px 0',
-        borderRadius: '6px',
-        borderLeft: '4px solid #6c757d'
-      }}>
-        <p style={{ margin: '10px 0' }}>
-          <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
-        </p>
-        <p style={{ margin: '10px 0' }}>
-          <strong>💬 Questions about kitchen safety?</strong> <a href="/contact" style={{ color: '#0066cc' }}>
-          Contact me directly</a>—I read and respond to every question.
-        </p>
-      </div>
+        {/* Author Bio */}
+        <div className="border-t border-gray-200 pt-8 mt-12">
+          <div className="flex items-start gap-4">
+            <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <User className="w-8 h-8 text-white" />
+            </div>
+            <div>
+              <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing 200+ cover operations.
+                A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
+                University of Montana. Implemented mandatory glove safety protocols that prevented injuries and
+                maintained perfect health inspection records.
+              </p>
+              <div className="mt-4">
+                <Link href="/about" className="text-orange-600 hover:text-orange-800 text-sm font-semibold">
+                  Read more about Scott →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    </article>
+        {/* Related Content */}
+        <div className="border-t border-gray-200 pt-8 mt-8">
+          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/reviews/benriner-large-mandoline" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <h4 className="font-bold text-slate-900 mb-2">Benriner Mandoline: Professional Test &amp; Safety</h4>
+              <p className="text-slate-600 text-sm">
+                The professional mandoline that requires cut-resistant gloves—learn safe techniques for perfect slices.
+              </p>
+            </Link>
+            <Link href="/reviews/victorinox-granton-edge-boning-knife" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <h4 className="font-bold text-slate-900 mb-2">Boning Knife Safety &amp; Technique</h4>
+              <p className="text-slate-600 text-sm">
+                Professional boning knife techniques and safety protocols for butchering tasks.
+              </p>
+            </Link>
+          </div>
+        </div>
+      </article>
+    </div>
   );
 }

@@ -94,10 +94,6 @@ export default function AffordableKitchenAppliancesPage() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 mb-4">
-              <div className="text-2xl font-bold text-slate-900">~$100-150</div>
-            </div>
-
             <p className="text-slate-700 mb-4 text-lg">
               <strong>My experience:</strong> I own the Ninja BL660 and use it regularly at home. After years with the{' '}
               <CTAVisibilityTracker
@@ -134,11 +130,28 @@ export default function AffordableKitchenAppliancesPage() {
               </div>
             </div>
 
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
               <p className="text-slate-800">
                 <strong>💡 Real Talk:</strong> If you&apos;re making smoothies, frozen drinks, or basic blending 3-4x weekly, the Ninja BL660 is outstanding value. But if you&apos;re blending hot soups, making nut butters, or using it daily in a commercial setting, save up for the Vitamix. The Ninja is legitimately good budget equipment—not a compromise.
               </p>
             </div>
+
+            {/* Ninja BL660 Affiliate CTA */}
+            <CTAVisibilityTracker
+              ctaId="guide-affordable-appliances-ninja-cta"
+              position="mid_article"
+              productSlug="ninja-bl660"
+              merchant="amazon"
+            >
+              <a
+                href="https://www.amazon.com/dp/B00939I7EK?tag=chefapprovedtools-20"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
+              >
+                🛒 Check Current Price on Amazon →
+              </a>
+            </CTAVisibilityTracker>
           </div>
 
           <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
@@ -168,10 +181,6 @@ export default function AffordableKitchenAppliancesPage() {
               <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
                 TESTED PREVIOUS MODEL
               </div>
-            </div>
-
-            <div className="flex items-center gap-4 mb-4">
-              <div className="text-2xl font-bold text-slate-900">~$350-450</div>
             </div>
 
             <p className="text-slate-700 mb-4 text-lg">
@@ -218,11 +227,28 @@ export default function AffordableKitchenAppliancesPage() {
               </div>
             </div>
 
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
               <p className="text-slate-800">
                 <strong>💡 My Recommendation:</strong> The Pro 600 series (or current KSM60 equivalent) is the best value in the KitchenAid lineup for serious home bakers. You get most of the commercial series capability at half the price. If you&apos;re baking 3+ times weekly or doing heavy doughs, this is where to invest.
               </p>
             </div>
+
+            {/* KitchenAid Pro 600 Affiliate CTA */}
+            <CTAVisibilityTracker
+              ctaId="guide-affordable-appliances-kitchenaid-cta"
+              position="mid_article"
+              productSlug="kitchenaid-professional-600"
+              merchant="amazon"
+            >
+              <a
+                href="https://www.amazon.com/dp/B00005UP2K?tag=chefapprovedtools-20"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
+              >
+                🛒 Check Current Price on Amazon →
+              </a>
+            </CTAVisibilityTracker>
           </div>
 
           <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
@@ -238,7 +264,7 @@ export default function AffordableKitchenAppliancesPage() {
                   KitchenAid Commercial Series (KSM8990WH)
                 </Link>
               </CTAVisibilityTracker>{' '}
-              ($759-1,100). I tested this for 18 months at Purple Cafe—it&apos;s genuine commercial equipment that will outlast 3-4 consumer models.
+              I tested this for 18 months at Purple Cafe—it&apos;s genuine commercial equipment that will outlast 3-4 consumer models.
             </p>
           </div>
         </section>
@@ -253,10 +279,6 @@ export default function AffordableKitchenAppliancesPage() {
               <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
                 TESTED PREVIOUS MODEL
               </div>
-            </div>
-
-            <div className="flex items-center gap-4 mb-4">
-              <div className="text-2xl font-bold text-slate-900">~$150-200</div>
             </div>
 
             <p className="text-slate-700 mb-4 text-lg">
@@ -313,7 +335,7 @@ export default function AffordableKitchenAppliancesPage() {
               </div>
             </div>
 
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
               <p className="text-slate-800">
                 <strong>💡 Real Talk:</strong> For serious home cooks processing 3-4x weekly, the Cuisinart DLC-10S is excellent value. It handles all standard food processor tasks reliably. But if you&apos;re doing high-volume prep or commercial use, the{' '}
                 <CTAVisibilityTracker
@@ -328,6 +350,23 @@ export default function AffordableKitchenAppliancesPage() {
                 is worth the investment.
               </p>
             </div>
+
+            {/* Cuisinart DLC-10S Affiliate CTA */}
+            <CTAVisibilityTracker
+              ctaId="guide-affordable-appliances-cuisinart-cta"
+              position="mid_article"
+              productSlug="cuisinart-dlc-10s"
+              merchant="amazon"
+            >
+              <a
+                href="https://www.amazon.com/dp/B01AXM4SLY?tag=chefapprovedtools-20"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
+              >
+                🛒 Check Current Price on Amazon →
+              </a>
+            </CTAVisibilityTracker>
           </div>
         </section>
 
@@ -345,15 +384,30 @@ export default function AffordableKitchenAppliancesPage() {
                 </div>
               </div>
 
-              <div className="text-2xl font-bold text-slate-900 mb-4">~$100-150</div>
-
               <p className="text-slate-700 mb-3">
                 <strong>My experience:</strong> I own the Instant Pot Duo Plus and use it regularly for beans, stocks, and pressure cooking. After years of traditional stovetop pressure cookers in restaurants, here&apos;s what impressed me: <strong>It&apos;s genuinely set-it-and-forget-it reliable.</strong>
               </p>
 
-              <p className="text-slate-700 text-sm">
+              <p className="text-slate-700 text-sm mb-4">
                 <strong>Best for:</strong> Beans, stocks, tough cuts of meat, meal prep. Not a replacement for traditional cooking methods, but excellent for specific tasks. The safety features and timer functionality make it more practical than stovetop pressure cookers for home use.
               </p>
+
+              {/* Instant Pot Affiliate CTA */}
+              <CTAVisibilityTracker
+                ctaId="guide-affordable-appliances-instantpot-cta"
+                position="mid_article"
+                productSlug="instant-pot-duo-plus"
+                merchant="amazon"
+              >
+                <a
+                  href="https://www.amazon.com/dp/B06Y1MP2PY?tag=chefapprovedtools-20"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
+                >
+                  🛒 Check Current Price on Amazon →
+                </a>
+              </CTAVisibilityTracker>
             </div>
 
             {/* Black & Decker Toaster Oven */}
@@ -364,8 +418,6 @@ export default function AffordableKitchenAppliancesPage() {
                   SEE FULL REVIEW
                 </div>
               </div>
-
-              <div className="text-2xl font-bold text-slate-900 mb-4">~$40-80</div>
 
               <p className="text-slate-700 mb-3">
                 I&apos;ve tested Black & Decker toaster ovens extensively. See my{' '}
@@ -391,15 +443,30 @@ export default function AffordableKitchenAppliancesPage() {
                 </div>
               </div>
 
-              <div className="text-2xl font-bold text-slate-900 mb-4">~$90-120</div>
-
               <p className="text-slate-700 mb-3">
                 <strong>My experience:</strong> I own the Ninja AF101 and use it 2-3x weekly. After years of deep fryers in professional kitchens, here&apos;s the honest truth: <strong>Air fryers aren&apos;t deep fryers, but they&apos;re legitimately useful for home cooking.</strong>
               </p>
 
-              <p className="text-slate-700 text-sm">
+              <p className="text-slate-700 text-sm mb-4">
                 <strong>Best for:</strong> Reheating leftovers (way better than microwave), frozen foods, small batch roasting. Don&apos;t expect restaurant-quality fried chicken, but for convenient home cooking, it&apos;s genuinely useful.
               </p>
+
+              {/* Ninja Air Fryer Affiliate CTA */}
+              <CTAVisibilityTracker
+                ctaId="guide-affordable-appliances-airfryer-cta"
+                position="mid_article"
+                productSlug="ninja-af101"
+                merchant="amazon"
+              >
+                <a
+                  href="https://www.amazon.com/dp/B07FDJMC9Q?tag=chefapprovedtools-20"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
+                >
+                  🛒 Check Current Price on Amazon →
+                </a>
+              </CTAVisibilityTracker>
             </div>
 
             {/* Gourmia Pizza Oven */}
@@ -411,15 +478,30 @@ export default function AffordableKitchenAppliancesPage() {
                 </div>
               </div>
 
-              <div className="text-2xl font-bold text-slate-900 mb-4">~$200-300</div>
-
               <p className="text-slate-700 mb-3">
                 <strong>My experience:</strong> As a former Pizzaiolo who&apos;s worked in professional pizza kitchens, I was skeptical of countertop pizza ovens. The Gourmia surprised me—<strong>it actually gets hot enough (750°F+) to make legitimate pizza at home.</strong>
               </p>
 
-              <p className="text-slate-700 text-sm">
+              <p className="text-slate-700 text-sm mb-4">
                 <strong>Real talk:</strong> It won&apos;t replace a wood-fired or professional gas pizza oven, but for home use, it&apos;s the best countertop option I&apos;ve tested. If you&apos;re serious about homemade pizza, this is worth considering.
               </p>
+
+              {/* Gourmia Pizza Oven Affiliate CTA */}
+              <CTAVisibilityTracker
+                ctaId="guide-affordable-appliances-pizzaoven-cta"
+                position="mid_article"
+                productSlug="gourmia-pizza-oven"
+                merchant="amazon"
+              >
+                <a
+                  href="https://www.amazon.com/dp/B0CGNZX7QY?tag=chefapprovedtools-20"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
+                >
+                  🛒 Check Current Price on Amazon →
+                </a>
+              </CTAVisibilityTracker>
             </div>
           </div>
         </section>
@@ -498,12 +580,12 @@ export default function AffordableKitchenAppliancesPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                     <p className="font-semibold text-green-900 mb-1">Budget: Ninja BL660</p>
-                    <p className="text-sm text-green-800">$100-150 • I own this</p>
+                    <p className="text-sm text-green-800">I own this</p>
                     <p className="text-sm text-green-700 mt-2">Perfect for smoothies, frozen drinks, basic blending 3-4x weekly</p>
                   </div>
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <p className="font-semibold text-blue-900 mb-1">Premium: Vitamix 5200</p>
-                    <p className="text-sm text-blue-800">$449-549 •{' '}
+                    <p className="text-sm text-blue-800">
                       <Link href="/reviews/vitamix-5200" className="underline">See review</Link>
                     </p>
                     <p className="text-sm text-blue-700 mt-2">For daily use, hot soups, nut butters, commercial abuse</p>
@@ -516,12 +598,12 @@ export default function AffordableKitchenAppliancesPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                     <p className="font-semibold text-green-900 mb-1">Budget: KitchenAid Professional 600 / KSM60</p>
-                    <p className="text-sm text-green-800">$350-450 • Tested previous model</p>
+                    <p className="text-sm text-green-800">Tested previous model</p>
                     <p className="text-sm text-green-700 mt-2">Best value for serious home bakers, 3-5x weekly use</p>
                   </div>
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <p className="font-semibold text-blue-900 mb-1">Premium: KitchenAid Commercial</p>
-                    <p className="text-sm text-blue-800">$759-1,100 •{' '}
+                    <p className="text-sm text-blue-800">
                       <Link href="/reviews/kitchenaid-ksm8990wh" className="underline">See review</Link>
                     </p>
                     <p className="text-sm text-blue-700 mt-2">For daily use, home bakeries, heavy doughs, NSF certification</p>
@@ -534,12 +616,12 @@ export default function AffordableKitchenAppliancesPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                     <p className="font-semibold text-green-900 mb-1">Budget: Cuisinart DLC-10S</p>
-                    <p className="text-sm text-green-800">$150-200 • Tested previous model (DLC-10C)</p>
+                    <p className="text-sm text-green-800">Tested previous model (DLC-10C)</p>
                     <p className="text-sm text-green-700 mt-2">Excellent for home cooks, 3-4x weekly processing</p>
                   </div>
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <p className="font-semibold text-blue-900 mb-1">Premium: Robot Coupe R2</p>
-                    <p className="text-sm text-blue-800">$500-700 •{' '}
+                    <p className="text-sm text-blue-800">
                       <Link href="/reviews/robot-coupe-r2-dice" className="underline">See review</Link>
                     </p>
                     <p className="text-sm text-blue-700 mt-2">For commercial kitchens, high-volume prep, daily abuse</p>
@@ -561,19 +643,19 @@ export default function AffordableKitchenAppliancesPage() {
 
             <div className="space-y-4">
               <div className="bg-white rounded-lg p-4">
-                <h3 className="font-semibold text-slate-900 mb-2">Essential 3-Piece Budget Setup ($600-800):</h3>
+                <h3 className="font-semibold text-slate-900 mb-2">Essential 3-Piece Budget Setup:</h3>
                 <ol className="list-decimal list-inside space-y-2 text-slate-700">
-                  <li><strong>Ninja BL660 Blender</strong> ($100-150) — I own this, use it regularly, legitimately good</li>
-                  <li><strong>KitchenAid Professional 600/KSM60</strong> ($350-450) — Best value in KitchenAid lineup</li>
-                  <li><strong>Cuisinart DLC-10S Food Processor</strong> ($150-200) — Tested previous model, reliable</li>
+                  <li><strong>Ninja BL660 Blender</strong> — I own this, use it regularly, legitimately good</li>
+                  <li><strong>KitchenAid Professional 600/KSM60</strong> — Best value in KitchenAid lineup</li>
+                  <li><strong>Cuisinart DLC-10S Food Processor</strong> — Tested previous model, reliable</li>
                 </ol>
               </div>
 
               <div className="bg-white rounded-lg p-4">
                 <h3 className="font-semibold text-slate-900 mb-2">Add If Budget Allows:</h3>
                 <ul className="list-disc list-inside space-y-2 text-slate-700">
-                  <li><strong>Instant Pot Duo Plus</strong> ($100-150) — I own this, genuinely useful</li>
-                  <li><strong>Ninja AF101 Air Fryer</strong> ($90-120) — I own this, use 2-3x weekly</li>
+                  <li><strong>Instant Pot Duo Plus</strong> — I own this, genuinely useful</li>
+                  <li><strong>Ninja AF101 Air Fryer</strong> — I own this, use 2-3x weekly</li>
                 </ul>
               </div>
 
