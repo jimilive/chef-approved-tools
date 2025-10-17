@@ -169,7 +169,7 @@ export default function HowToSteelAKnife() {
           <h3>1. A Quality Honing Steel</h3>
 
           <p>
-            The essential tool here is a dependable <strong>honing steel</strong>. The <a href="https://amzn.to/4o1kbwu" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Henckels 10-Inch Sharpening Steel</a> is a classic: balanced, grippy, and durable, with just enough abrasion to realign an edge without stripping metal. It&apos;s the same kind I&apos;ve used for decades in professional kitchens.
+            The essential tool here is a dependable <strong>honing steel</strong>. The <a href="https://amzn.to/4qh96Zu" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Henckels 10-Inch Sharpening Steel</a> is a classic: balanced, grippy, and durable, with just enough abrasion to realign an edge without stripping metal. It&apos;s the same kind I&apos;ve used for decades in professional kitchens.
           </p>
 
           <h3>2. A Chef&apos;s Knife Worth Caring For</h3>
@@ -268,7 +268,7 @@ export default function HowToSteelAKnife() {
 
             <ul className="list-none p-0">
               <li className="mb-4">
-                🪄 <a href="https://amzn.to/4o1kbwu" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Henckels 10-Inch Sharpening Steel</a>
+                🪄 <a href="https://amzn.to/4qh96Zu" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Henckels 10-Inch Sharpening Steel</a>
               </li>
               <li className="mb-4">
                 🔪 <a href="https://amzn.to/3U4PsT1" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</a>
@@ -308,7 +308,7 @@ export default function HowToSteelAKnife() {
           </p>
 
           <p>
-            Grab your <a href="https://amzn.to/4o1kbwu" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Henckels Honing Steel</a>, pick up your favorite <a href="https://amzn.to/3U4PsT1" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox Knife</a>, and keep that edge chef-sharp—because the best cooks always respect their tools.
+            Grab your <a href="https://amzn.to/4qh96Zu" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Henckels Honing Steel</a>, pick up your favorite <a href="https://amzn.to/3U4PsT1" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox Knife</a>, and keep that edge chef-sharp—because the best cooks always respect their tools.
           </p>
 
         </div>
