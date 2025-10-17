@@ -216,7 +216,7 @@ export default function RubbermaidScraperReview() {
                     variant="secondary"
                     className="!text-lg !px-10 !py-3 !my-2"
                   >
-                    View 13.5" on Amazon →
+                    View 13.5&quot; on Amazon →
                   </AffiliateButton>
                 </CTAVisibilityTracker>
               </div>
@@ -236,7 +236,7 @@ export default function RubbermaidScraperReview() {
                     variant="primary"
                     className="!text-lg !px-10 !py-3 !my-2"
                   >
-                    View 9.5" on Amazon →
+                    View 9.5&quot; on Amazon →
                   </AffiliateButton>
                 </CTAVisibilityTracker>
               </div>
@@ -371,7 +371,7 @@ export default function RubbermaidScraperReview() {
           <p className="font-semibold text-lg mb-3">Ready for Buy-It-For-Life Quality?</p>
           <div className="space-y-3">
             <div>
-              <p className="text-sm mb-2">13.5" (Professional Use):</p>
+              <p className="text-sm mb-2">13.5&quot; (Professional Use):</p>
               <CTAVisibilityTracker
                 ctaId={`review-${productData.slug}-mid-13`}
                 position="mid_article"
@@ -385,12 +385,12 @@ export default function RubbermaidScraperReview() {
                   position="mid_article"
                   variant="secondary"
                 >
-                  Check 13.5" Price →
+                  Check 13.5&quot; Price →
                 </AffiliateButton>
               </CTAVisibilityTracker>
             </div>
             <div>
-              <p className="text-sm mb-2">9.5" (Home Kitchens):</p>
+              <p className="text-sm mb-2">9.5&quot; (Home Kitchens):</p>
               <CTAVisibilityTracker
                 ctaId={`review-${productData.slug}-mid-9`}
                 position="mid_article"
@@ -404,7 +404,7 @@ export default function RubbermaidScraperReview() {
                   position="mid_article"
                   variant="primary"
                 >
-                  Check 9.5" Price →
+                  Check 9.5&quot; Price →
                 </AffiliateButton>
               </CTAVisibilityTracker>
             </div>
@@ -421,7 +421,7 @@ export default function RubbermaidScraperReview() {
           <div className="space-y-4">
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
-                "We have used this exact Rubbermaid spatula for over 10 years and love them. We like that there is no seams, all one piece, for food or mold to collect. The edge is flexible and scraps the bowls clean."
+                &quot;We have used this exact Rubbermaid spatula for over 10 years and love them. We like that there is no seams, all one piece, for food or mold to collect. The edge is flexible and scraps the bowls clean.&quot;
               </p>
               <p className="text-sm text-slate-500">— Amazon verified purchaser | 10+ Years Use</p>
             </div>
