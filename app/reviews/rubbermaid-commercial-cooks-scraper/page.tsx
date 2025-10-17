@@ -210,7 +210,7 @@ export default function RubbermaidScraperReview() {
                 >
                   <AffiliateButton
                     href={productData.affiliateLinks[0].url}
-                    merchant="Amazon"
+                    merchant="amazon"
                     product={productData.slug}
                     position="above_fold"
                     variant="secondary"
@@ -230,7 +230,7 @@ export default function RubbermaidScraperReview() {
                 >
                   <AffiliateButton
                     href={productData.affiliateLinks[1].url}
-                    merchant="Amazon"
+                    merchant="amazon"
                     product={productData.slug}
                     position="above_fold"
                     variant="primary"
@@ -380,7 +380,7 @@ export default function RubbermaidScraperReview() {
               >
                 <AffiliateButton
                   href={productData.affiliateLinks[0].url}
-                  merchant="Amazon"
+                  merchant="amazon"
                   product={productData.slug}
                   position="mid_article"
                   variant="secondary"
@@ -399,7 +399,7 @@ export default function RubbermaidScraperReview() {
               >
                 <AffiliateButton
                   href={productData.affiliateLinks[1].url}
-                  merchant="Amazon"
+                  merchant="amazon"
                   product={productData.slug}
                   position="mid_article"
                   variant="primary"
@@ -824,7 +824,7 @@ export default function RubbermaidScraperReview() {
                 >
                   <AffiliateButton
                     href={productData.affiliateLinks[0].url}
-                    merchant="Amazon"
+                    merchant="amazon"
                     product={productData.slug}
                     position="final_cta"
                     variant="secondary"
@@ -843,7 +843,7 @@ export default function RubbermaidScraperReview() {
                 >
                   <AffiliateButton
                     href={productData.affiliateLinks[1].url}
-                    merchant="Amazon"
+                    merchant="amazon"
                     product={productData.slug}
                     position="final_cta"
                     variant="secondary"
