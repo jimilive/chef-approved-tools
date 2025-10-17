@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, AlertTriangle } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { BudgetVsPremiumTeaser } from '@/components/BudgetVsPremiumMagnet'
-import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 
@@ -1403,7 +1403,7 @@ export default function Vitamix5200Review() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateProductReviewSchema(productData))
+            __html: JSON.stringify(generateProductSchema(productData))
           }}
         />
         <script

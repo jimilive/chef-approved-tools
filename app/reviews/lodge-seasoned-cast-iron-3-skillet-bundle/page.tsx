@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, AlertTriangle, Thermometer, Flame } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 import AffiliateButton from '@/components/AffiliateButton';
@@ -1297,7 +1297,7 @@ export default function Lodge3SkilletBundleReview() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateProductReviewSchema(productData))
+            __html: JSON.stringify(generateProductSchema(productData))
           }}
         />
         <script

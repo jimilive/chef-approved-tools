@@ -4,7 +4,7 @@ import AffiliateButton from '@/components/AffiliateButton';
 
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
-import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Image from 'next/image';
@@ -1069,7 +1069,7 @@ export default function NordicWareHalfSheetPanReview() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateProductReviewSchema(productData))
+            __html: JSON.stringify(generateProductSchema(productData))
           }}
         />
         <script

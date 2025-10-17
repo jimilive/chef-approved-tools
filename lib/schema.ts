@@ -161,14 +161,6 @@ export function generateProductSchema(product: any) {
   }
 }
 
-// DEPRECATED: Old function with wrong nesting (Review > Product)
-// Kept for backward compatibility but will be removed after migration
-// Use generateProductSchema() instead for new implementations
-export function generateProductReviewSchema(product: any) {
-  console.warn('generateProductReviewSchema is deprecated. Use generateProductSchema instead.');
-  return generateProductSchema(product);
-}
-
 export function generateBreadcrumbSchema(items: Array<{name: string, url: string}>) {
   return {
     "@context": "https://schema.org",

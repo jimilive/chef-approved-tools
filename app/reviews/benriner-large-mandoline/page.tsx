@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Tier1Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
@@ -769,7 +769,7 @@ export default function BenrinerLargeMandolineReview() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateProductReviewSchema(productData))
+          __html: JSON.stringify(generateProductSchema(productData))
         }}
       />
       <script
