@@ -22,7 +22,10 @@
     "review-validate": "node scripts/review-tools/review-validate.js",
     "batch-audit": "node scripts/review-tools/batch-audit.js",
     "testimonial-gen": "node scripts/review-tools/testimonial-gen.js",
-    "specs-finder": "node scripts/review-tools/specs-finder.js"
+    "specs-finder": "node scripts/review-tools/specs-finder.js",
+    "compaction-log": "scripts/track-claude-compactions.sh log",
+    "compaction-check": "scripts/track-claude-compactions.sh check",
+    "compaction-report": "python3 scripts/claude-compaction-report.py"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.8",
