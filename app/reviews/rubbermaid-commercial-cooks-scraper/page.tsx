@@ -442,14 +442,14 @@ export default function RubbermaidScraperReview() {
 
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
-                "I bought several of these and I am not disappointed! They do not come apart, so there are no nooks and crannies for bacteria to hide which was my main concern. Great design."
+                &quot;I bought several of these and I am not disappointed! They do not come apart, so there are no nooks and crannies for bacteria to hide which was my main concern. Great design.&quot;
               </p>
               <p className="text-sm text-slate-500">— Amazon verified purchaser | Health-Conscious Cook</p>
             </div>
 
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
-                "My 25-year-old Rubbermaid spatula finally bit the dust. Wanted the same brand and found it here. This size is great for scraping out small jars, food processors."
+                &quot;My 25-year-old Rubbermaid spatula finally bit the dust. Wanted the same brand and found it here. This size is great for scraping out small jars, food processors.&quot;
               </p>
               <p className="text-sm text-slate-500">— Amazon verified purchaser | 25-Year Replacement Purchase</p>
             </div>
@@ -547,7 +547,7 @@ export default function RubbermaidScraperReview() {
                 </div>
               </div>
               <p className="mt-4 text-slate-700 text-sm">
-                <strong>Verdict:</strong> Wood has aesthetic appeal, but Rubbermaid wins decisively on sanitation and durability. Research confirms bacteria survives in wood cracks despite washing—the Rubbermaid's non-porous, one-piece design eliminates this risk entirely.
+                <strong>Verdict:</strong> Wood has aesthetic appeal, but Rubbermaid wins decisively on sanitation and durability. Research confirms bacteria survives in wood cracks despite washing—the Rubbermaid&apos;s non-porous, one-piece design eliminates this risk entirely.
               </p>
             </div>
           </div>
@@ -584,7 +584,7 @@ export default function RubbermaidScraperReview() {
 
         {/* Who Should Buy */}
         <section className="mb-8" id="who-buys">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Who Should (and Shouldn't) Buy This Scraper</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Who Should (and Shouldn&apos;t) Buy This Scraper</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-white rounded-lg p-6 border border-gray-200">
               <h3 className="font-semibold text-green-700 mb-3">✅ Perfect For:</h3>
@@ -667,7 +667,7 @@ export default function RubbermaidScraperReview() {
                       position="mid_article"
                       variant="secondary"
                     >
-                      View 13.5" on Amazon →
+                      View 13.5&quot; on Amazon →
                     </AffiliateButton>
                   </CTAVisibilityTracker>
                 </div>
@@ -700,7 +700,7 @@ export default function RubbermaidScraperReview() {
                       position="mid_article"
                       variant="primary"
                     >
-                      View 9.5" on Amazon →
+                      View 9.5&quot; on Amazon →
                     </AffiliateButton>
                   </CTAVisibilityTracker>
                 </div>
@@ -815,7 +815,7 @@ export default function RubbermaidScraperReview() {
             </p>
             <div className="space-y-3">
               <div>
-                <p style={{ fontSize: '14px', marginBottom: '10px' }}>13.5" (Professional/Large Batches):</p>
+                <p style={{ fontSize: '14px', marginBottom: '10px' }}>13.5&quot; (Professional/Large Batches):</p>
                 <CTAVisibilityTracker
                   ctaId={`review-${productData.slug}-final-13`}
                   position="final_cta"
@@ -829,12 +829,12 @@ export default function RubbermaidScraperReview() {
                     position="final_cta"
                     variant="secondary"
                   >
-                    Check 13.5" Price →
+                    Check 13.5&quot; Price →
                   </AffiliateButton>
                 </CTAVisibilityTracker>
               </div>
               <div>
-                <p style={{ fontSize: '14px', marginBottom: '10px' }}>9.5" (Home Kitchens - Most Popular):</p>
+                <p style={{ fontSize: '14px', marginBottom: '10px' }}>9.5&quot; (Home Kitchens - Most Popular):</p>
                 <CTAVisibilityTracker
                   ctaId={`review-${productData.slug}-final-9`}
                   position="final_cta"
@@ -848,7 +848,7 @@ export default function RubbermaidScraperReview() {
                     position="final_cta"
                     variant="secondary"
                   >
-                    Check 9.5" Price →
+                    Check 9.5&quot; Price →
                   </AffiliateButton>
                 </CTAVisibilityTracker>
               </div>
@@ -882,7 +882,7 @@ export default function RubbermaidScraperReview() {
             <div style={{ margin: '20px 0' }}>
               <h4>If Budget Is Your Main Concern:</h4>
               <p style={{ marginBottom: '10px' }}>
-                → <strong>OXO Good Grips Silicone Spatula</strong> ($10-15) - Decent consumer-grade option for occasional use. Won't last 18 years, but adequate for light home cooking.
+                → <strong>OXO Good Grips Silicone Spatula</strong> ($10-15) - Decent consumer-grade option for occasional use. Won&apos;t last 18 years, but adequate for light home cooking.
               </p>
             </div>
 
@@ -894,14 +894,14 @@ export default function RubbermaidScraperReview() {
             </div>
 
             <div style={{ margin: '20px 0' }}>
-              <h4>If You're Building a Complete Professional Kitchen:</h4>
+              <h4>If You&apos;re Building a Complete Professional Kitchen:</h4>
               <p style={{ marginBottom: '10px' }}>
                 → See our <Link href="/kitchen-bundle" className="text-orange-600 hover:text-orange-800 underline">Complete Kitchen Starter Kit</Link> for recommended equipment combinations at different budget levels.
               </p>
             </div>
 
             <p style={{ marginTop: '20px', padding: '15px', background: '#fff3cd', borderRadius: '4px' }}>
-              <strong>Still unsure?</strong> <Link href="/contact" className="text-orange-600 hover:text-orange-800 underline">Contact me</Link> with your specific needs—I'll provide a personalized recommendation based on your cooking style and budget.
+              <strong>Still unsure?</strong> <Link href="/contact" className="text-orange-600 hover:text-orange-800 underline">Contact me</Link> with your specific needs—I&apos;ll provide a personalized recommendation based on your cooking style and budget.
             </p>
           </div>
         </section>
@@ -916,7 +916,7 @@ export default function RubbermaidScraperReview() {
             <div className="bg-slate-50 p-5 rounded-lg border border-gray-200">
               <h3 className="font-semibold text-slate-900 mb-2">Vitamix 5200 Blender</h3>
               <p className="text-sm text-slate-700 mb-3">
-                The container you'll be scraping clean. Commercial power that demands a commercial-grade scraper.
+                The container you&apos;ll be scraping clean. Commercial power that demands a commercial-grade scraper.
               </p>
               <Link href="/reviews/vitamix-5200" className="text-orange-600 hover:text-orange-800 font-semibold text-sm">
                 Read Review →
@@ -934,7 +934,7 @@ export default function RubbermaidScraperReview() {
             <div className="bg-slate-50 p-5 rounded-lg border border-gray-200">
               <h3 className="font-semibold text-slate-900 mb-2">KitchenAid Commercial Mixer</h3>
               <p className="text-sm text-slate-700 mb-3">
-                The bowls you'll be scraping. Commercial durability for heavy batters and doughs.
+                The bowls you&apos;ll be scraping. Commercial durability for heavy batters and doughs.
               </p>
               <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 font-semibold text-sm">
                 Read Review →
@@ -977,7 +977,7 @@ export default function RubbermaidScraperReview() {
             </p>
             <p style={{ margin: '10px 0' }}>
               <strong>🔧 Questions about kitchen tools?</strong> <Link href="/contact" style={{ color: '#0066cc' }}>
-              Contact me directly</Link> and I'll help you choose the right equipment for your needs.
+              Contact me directly</Link> and I&apos;ll help you choose the right equipment for your needs.
             </p>
           </div>
 
