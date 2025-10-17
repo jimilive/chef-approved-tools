@@ -16,7 +16,7 @@ const productData = {
   category: "Seasonings",
   affiliateLinks: [{
     retailer: "Amazon",
-    url: "https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
+    url: "https://amzn.to/4o6pPwW"
   }],
   expertRating: 5,
   expertOpinion: "The industry standard for professional kitchens and serious home cooks.",
@@ -115,7 +115,7 @@ export default function DiamondCrystalKosherSaltReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
+            href="https://amzn.to/4o6pPwW"
             merchant="amazon"
             product={productData.slug}
             position="above_fold"
@@ -269,7 +269,7 @@ export default function DiamondCrystalKosherSaltReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
+            href="https://amzn.to/4o6pPwW"
             merchant="amazon"
             product={productData.slug}
             position="mid_article"
@@ -561,7 +561,7 @@ export default function DiamondCrystalKosherSaltReview() {
                 merchant="amazon"
               >
                 <AffiliateButton
-                  href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
+                  href="https://amzn.to/4o6pPwW"
                   merchant="amazon"
                   product={productData.slug}
                   position="mid_article"
@@ -712,7 +712,7 @@ export default function DiamondCrystalKosherSaltReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O?tag=chefapprovedt-20"
+            href="https://amzn.to/4o6pPwW"
             merchant="amazon"
             product={productData.slug}
             position="mid_article"

@@ -18,7 +18,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://www.amazon.com/Nordic-Ware-Natural-Aluminum-Commercial/dp/B0049C2S32?&linkCode=ll1&tag=chefapprovedt-20&linkId=n1o2r3d4i5c6w7a8r9e0s1h2e3e4t5p6"
+      url: "https://amzn.to/4o7nWrQ"
     }
   ],
   expertRating: 5,
@@ -177,7 +177,7 @@ export default function NordicWareHalfSheetPanReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/Nordic-Ware-Natural-Aluminum-Commercial/dp/B0049C2S32?&linkCode=ll1&tag=chefapprovedt-20&linkId=n1o2r3d4i5c6w7a8r9e0s1h2e3e4t5p6"
+              href="https://amzn.to/4o7nWrQ"
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -985,7 +985,7 @@ export default function NordicWareHalfSheetPanReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/Nordic-Ware-Natural-Aluminum-Commercial/dp/B0049C2S32?&linkCode=ll1&tag=chefapprovedt-20&linkId=n1o2r3d4i5c6w7a8r9e0s1h2e3e4t5p6"
+              href="https://amzn.to/4o7nWrQ"
               merchant="amazon"
               product={productData.slug}
               position="final_cta"

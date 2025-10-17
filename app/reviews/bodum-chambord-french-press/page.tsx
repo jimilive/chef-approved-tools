@@ -144,7 +144,7 @@ export default function BodumChambordFrenchPressReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://www.amazon.com/Bodum-Chambord-French-Coffee-Stainless/dp/B00005LM0S?tag=chefapprovedt-20"
+            href="https://amzn.to/4o5zIuU"
             merchant="amazon"
             product={productData.slug}
             position="above_fold"
@@ -323,7 +323,7 @@ export default function BodumChambordFrenchPressReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://www.amazon.com/Bodum-Chambord-French-Coffee-Stainless/dp/B00005LM0S?tag=chefapprovedt-20"
+            href="https://amzn.to/4o5zIuU"
             merchant="amazon"
             product={productData.slug}
             position="mid_article"
@@ -507,7 +507,7 @@ export default function BodumChambordFrenchPressReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://www.amazon.com/Bodum-Chambord-French-Coffee-Stainless/dp/B00005LM0S?tag=chefapprovedt-20"
+            href="https://amzn.to/4o5zIuU"
             merchant="amazon"
             product={productData.slug}
             position="final_cta"

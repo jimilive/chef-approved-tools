@@ -47,7 +47,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://www.amazon.com/BLACK-DECKER-TO3250XSB-8-Slice-Stainless/dp/B00TXFBWC0?&linkCode=ll1&tag=chefapprovedt-20&linkId=d9a1e8f2c3b4a5f6g7h8i9j0k1l2m3n4"
+      url: "https://amzn.to/4gVgENj"
     }
   ],
   expertRating: 5.0,
@@ -205,7 +205,7 @@ export default function BlackDeckerToasterOvenReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/BLACK-DECKER-TO3250XSB-8-Slice-Stainless/dp/B00TXFBWC0?&linkCode=ll1&tag=chefapprovedt-20&linkId=d9a1e8f2c3b4a5f6g7h8i9j0k1l2m3n4"
+              href="https://amzn.to/4gVgENj"
               merchant="amazon"
               product="black-decker-toaster-oven"
               position="above_fold"
@@ -635,7 +635,7 @@ export default function BlackDeckerToasterOvenReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/BLACK-DECKER-TO3250XSB-8-Slice-Stainless/dp/B00TXFBWC0?&linkCode=ll1&tag=chefapprovedt-20&linkId=d9a1e8f2c3b4a5f6g7h8i9j0k1l2m3n4"
+              href="https://amzn.to/4gVgENj"
               merchant="amazon"
               product="black-decker-toaster-oven"
               position="mid_article"
@@ -1221,7 +1221,7 @@ export default function BlackDeckerToasterOvenReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/BLACK-DECKER-TO3250XSB-8-Slice-Stainless/dp/B00TXFBWC0?&linkCode=ll1&tag=chefapprovedt-20&linkId=d9a1e8f2c3b4a5f6g7h8i9j0k1l2m3n4"
+              href="https://amzn.to/4gVgENj"
               merchant="amazon"
               product="black-decker-toaster-oven"
               position="final_cta"

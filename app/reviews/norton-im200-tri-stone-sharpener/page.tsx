@@ -165,7 +165,7 @@ export default function NortonTriStoneSharpenerReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/Norton-IM200-11-5-Inch-Sharpening-Stone/dp/B000XK0FMU?&linkCode=ll1&tag=chefapprovedt-20&linkId=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
+              href="https://amzn.to/4oo51B6"
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -1021,7 +1021,7 @@ export default function NortonTriStoneSharpenerReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://www.amazon.com/Norton-IM200-11-5-Inch-Sharpening-Stone/dp/B000XK0FMU?&linkCode=ll1&tag=chefapprovedt-20&linkId=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
+              href="https://amzn.to/4oo51B6"
               merchant="amazon"
               product={productData.slug}
               position="final_cta"
