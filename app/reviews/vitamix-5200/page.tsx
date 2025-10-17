@@ -1281,14 +1281,13 @@ export default function Vitamix5200Review() {
               borderRadius: '8px',
               border: '1px solid #dee2e6'
             }}>
-              <h4 style={{ marginTop: 0 }}>Victorinox Chef&apos;s Knife</h4>
-              <p>For prepping all your Vitamix ingredients. Professional quality at an accessible
-              price—the perfect prep knife.</p>
+              <h4 style={{ marginTop: 0 }}>Rubbermaid Commercial Scraper</h4>
+              <p>Essential for scraping down your Vitamix container between blends. This professional-grade rubber spatula handles the high-heat from friction blending and lasts decades.</p>
               <p style={{ fontSize: '14px', color: '#666' }}>
-                <strong>40 years cooking:</strong> Still my go-to blade.
+                <strong>After 18 years:</strong> Still my go-to scraper for Vitamix cleanup.
               </p>
               <Link
-                href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
+                href="/reviews/rubbermaid-commercial-cooks-scraper"
                 style={{
                   display: 'inline-block',
                   background: '#28a745',

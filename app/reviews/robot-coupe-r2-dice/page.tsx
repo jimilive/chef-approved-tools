@@ -1099,14 +1099,13 @@ export default function RobotCoupeR2DiceReview() {
               borderRadius: '8px',
               border: '1px solid #dee2e6'
             }}>
-              <h4 style={{ marginTop: 0 }}>Vitamix 5200 Commercial Blender</h4>
-              <p>For tasks the Robot Coupe doesn&apos;t handle—purées, smoothies, and sauces. Together,
-              they covered every processing need in our commercial kitchen.</p>
+              <h4 style={{ marginTop: 0 }}>Rubbermaid Commercial Scraper</h4>
+              <p>Essential for scraping down the Robot Coupe bowl between batches. This professional-grade rubber spatula handles the demands of commercial food processing and lasts decades.</p>
               <p style={{ fontSize: '14px', color: '#666' }}>
-                <strong>After 5+ years:</strong> Flawless commercial performance.
+                <strong>After 18 years:</strong> Still my go-to scraper for food processor cleanup.
               </p>
               <Link
-                href="/reviews/vitamix-5200"
+                href="/reviews/rubbermaid-commercial-cooks-scraper"
                 style={{
                   display: 'inline-block',
                   background: '#28a745',

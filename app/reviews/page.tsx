@@ -241,6 +241,17 @@ const allReviews: Review[] = [
     revenueScore: 50,
     category: 'Kitchen Textiles'
   },
+  {
+    id: 28,
+    tier: 1,
+    name: 'Rubbermaid Commercial Cook\'s Scraper',
+    slug: 'rubbermaid-commercial-cooks-scraper',
+    rating: 4.9,
+    testingPeriod: '18 years (9 Purple Café + Feireabend + 9 home)',
+    hook: '$15 buy-it-for-life spatula. 500°F heat resistance. NSF certified.',
+    revenueScore: 67,
+    category: 'Utensils'
+  },
 
   // TIER 2 - Home Tested (11 reviews)
   {
@@ -637,7 +648,7 @@ export default function ReviewsHub() {
                 transition: 'all 0.2s'
               }}
             >
-              Professional Tested (16)
+              Professional Tested (17)
             </button>
             <button
               onClick={() => setActiveFilter('tier2')}

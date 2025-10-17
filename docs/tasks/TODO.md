@@ -630,12 +630,59 @@ Upgraded 20+ reviews to Tier 1/2 standards:
 
 ---
 
-## 🧲 Lead Magnet Strategy Audit (NOT STARTED)
+## 🧲 Lead Magnet Strategy Audit (NOT STARTED - HIGH PRIORITY)
 
-- [ ] Audit all lead magnets across the site - identify all 15 different lead magnets and their locations
-- [ ] Research SEO best practices for lead magnets - determine optimal strategy (single vs multiple)
-- [ ] Consolidate lead magnet strategy - decide on single lead magnet or streamlined approach
-- [ ] Research opportunities to sell lead magnets elsewhere
+**⚠️ TRUST & COMPLIANCE CRITICAL**
+
+This is a strategic audit to ensure we're not over-promising or breaking user trust with too many different lead magnets across the site.
+
+### Goals:
+1. **Inventory all lead magnets** - Find every lead magnet offer on the site (likely ~15 different ones)
+2. **Assess consistency** - Determine if we're making conflicting promises to users
+3. **Strategic consolidation** - Decide on optimal approach (single flagship lead magnet vs. multiple targeted ones)
+4. **Trust evaluation** - Ensure we can actually deliver on every promise made
+
+### Tasks:
+- [ ] **Comprehensive site audit** - Identify all lead magnet offers and their locations
+  - [ ] Homepage newsletter signup
+  - [ ] Exit-intent popups
+  - [ ] In-content lead magnet offers
+  - [ ] Footer signups
+  - [ ] Individual product page offers
+  - [ ] Blog post lead magnets
+  - [ ] Category page offers
+  - [ ] Create spreadsheet: Location | Offer Text | Promised Deliverable | Status
+- [ ] **Content audit** - Verify which lead magnets we've actually created
+  - [ ] Count: How many different lead magnets have we promised?
+  - [ ] Reality check: How many do we actually have written?
+  - [ ] Gap analysis: What's promised but doesn't exist?
+- [ ] **Research best practices** - SEO and conversion optimization
+  - [ ] Single flagship lead magnet vs. multiple targeted lead magnets
+  - [ ] Impact on user trust and brand consistency
+  - [ ] Conversion rate optimization considerations
+  - [ ] How many lead magnets do successful affiliate sites use?
+- [ ] **Strategic decision** - Choose approach that maintains trust
+  - [ ] Option A: Single high-quality lead magnet (easiest to deliver)
+  - [ ] Option B: 3-5 targeted lead magnets by category
+  - [ ] Option C: Custom lead magnet per major category
+  - [ ] Decision criteria: Can we actually deliver on every promise?
+- [ ] **Implementation plan** - Execute chosen strategy
+  - [ ] Update all lead magnet offers to match chosen strategy
+  - [ ] Remove or consolidate duplicate/conflicting offers
+  - [ ] Ensure FTC compliance on all lead magnet pages
+  - [ ] Create missing lead magnet content
+  - [ ] Set up email delivery automation
+- [ ] **Future opportunities** - Research monetization
+  - [ ] Can we sell lead magnets on Etsy, Gumroad, or other platforms?
+  - [ ] What's the market for kitchen equipment guides?
+  - [ ] Potential for premium upgraded versions?
+
+### Why This Matters:
+- **Trust is everything** in affiliate marketing
+- Over-promising and under-delivering damages credibility
+- Multiple conflicting offers confuse users
+- Need streamlined approach we can actually execute on
+- Better to have 1-3 excellent lead magnets than 15 mediocre ones
 
 ---
 

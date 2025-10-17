@@ -1026,14 +1026,13 @@ export default function KitchenAidReviewPage() {
               borderRadius: '8px',
               border: '1px solid #dee2e6'
             }}>
-              <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef&apos;s Knife</h4>
-              <p>The knife I use daily for prep work before mixing. Professional quality, perfect
-              balance, unbeatable value at $45.</p>
+              <h4 style={{ marginTop: 0 }}>Rubbermaid Commercial Scraper</h4>
+              <p>Essential for scraping down your mixer bowl between batches. This professional-grade rubber spatula handles heavy batters and doughs that cling to the bowl.</p>
               <p style={{ fontSize: '14px', color: '#666' }}>
-                <strong>40 years cooking:</strong> My go-to knife.
+                <strong>After 18 years:</strong> Still my go-to scraper for mixer cleanup.
               </p>
               <a
-                href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
+                href="/reviews/rubbermaid-commercial-cooks-scraper"
                 style={{
                   display: 'inline-block',
                   background: '#28a745',
