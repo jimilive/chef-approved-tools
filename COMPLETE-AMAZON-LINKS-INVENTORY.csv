@@ -1,0 +1,62 @@
+Product Name,ASIN,Current Link Format,Amazon Product Page URL,File Locations,Link Type,Status,Priority
+Victorinox 8" Chef's Knife,B008M5U1C2,Direct ASIN-only,https://www.amazon.com/dp/B008M5U1C2,"app/knives/page.tsx, app/guides/best-chef-knives/page.tsx, app/kitchen-bundle/page.tsx, app/reviews/victorinox-fibrox-8-inch-chefs-knife/page.tsx, app/best-budget-chef-knife/page.tsx, app/blog/how-to-steel-a-knife/page.tsx (7 instances)",Direct,❌ Needs short link,HIGH - Most used (6+ files)
+Victorinox 4" Paring Knife,B0001VQIP6,Direct ASIN-only,https://www.amazon.com/dp/B0001VQIP6,"app/knives/page.tsx, app/kitchen-bundle/page.tsx, app/reviews/victorinox-4-inch-paring-knife/page.tsx",Direct,❌ Needs short link,HIGH
+Victorinox 10" Chef's Knife,B0000CF94L,Direct ASIN-only,https://www.amazon.com/dp/B0000CF94L,"app/guides/best-chef-knives/page.tsx, app/blog/how-to-steel-a-knife/page.tsx (4 instances)",Direct,❌ Needs short link,HIGH
+Victorinox 9" Offset Bread Knife,B0019WZ7EW,Direct ASIN-only,https://www.amazon.com/dp/B0019WZ7EW,app/knives/page.tsx,Direct,❌ Needs short link,MEDIUM
+Henckels 10" Sharpening Steel,B00004RFMT,Direct ASIN-only,https://www.amazon.com/dp/B00004RFMT,app/blog/how-to-steel-a-knife/page.tsx (4 instances),Direct,❌ Needs short link,HIGH
+Lodge Cast Iron 3-Skillet Bundle,B071FMVSYJ,Direct ASIN-only,https://www.amazon.com/dp/B071FMVSYJ,"app/kitchen-bundle/page.tsx, app/reviews/lodge-seasoned-cast-iron-3-skillet-bundle/page.tsx",Direct,❌ Needs short link,MEDIUM
+Diamond Crystal Kosher Salt,B0F79BC6J5,Direct ASIN-only,https://www.amazon.com/dp/B0F79BC6J5,app/kitchen-bundle/page.tsx,Direct,❌ Needs short link,MEDIUM
+Le Creuset 7.25 Qt Dutch Oven,B0076NOFSC,Direct ASIN-only,https://www.amazon.com/dp/B0076NOFSC,"app/kitchen-bundle/page.tsx, app/reviews/le-creuset-signature-7-25-qt-dutch-oven/page.tsx",Direct,❌ Needs short link,HIGH
+KitchenAid NSF Commercial 8-Qt,B00IRH09EK,Direct ASIN-only,https://www.amazon.com/dp/B00IRH09EK,"app/page.tsx, app/kitchen-bundle/page.tsx, app/reviews/kitchenaid-ksm8990wh/page.tsx",Direct,❌ Needs short link,HIGH - On homepage
+Benriner Mandoline,B0000Y6JDG,Direct ASIN-only,https://www.amazon.com/dp/B0000Y6JDG,"app/kitchen-bundle/page.tsx, app/reviews/benriner-large-mandoline/page.tsx",Direct,❌ Needs short link,MEDIUM
+Vitamix 5200 (Alternative ASIN),B008H4SLV6,Direct ASIN-only,https://www.amazon.com/dp/B008H4SLV6,app/page.tsx,Direct,❌ Needs short link,HIGH - On homepage
+KitchenAid KP26M1XLC Professional 600,B0BRNWWGJ5,Direct ASIN-only,https://www.amazon.com/dp/B0BRNWWGJ5,app/reviews/kitchenaid-kp26m1xlc-professional-600/page.tsx,Direct,❌ Needs short link,MEDIUM
+Method All-Purpose Cleaner,B01N9J8HY4,Direct ASIN-only,https://www.amazon.com/dp/B01N9J8HY4,app/reviews/method-all-purpose-cleaner/page.tsx,Direct,❌ Needs short link,LOW
+Cuisinart 8" Nonstick Pan,B00QZIMMO8,Direct ASIN-only,https://www.amazon.com/dp/B00QZIMMO8,app/reviews/cuisinart-8-inch-nonstick-pan/page.tsx,Direct,❌ Needs short link,MEDIUM
+Cuisinart DLC-10C Food Processor,B01AXM4SB6,Direct ASIN-only,https://www.amazon.com/dp/B01AXM4SB6,app/reviews/cuisinart-dlc-10c-classic-food-processor/page.tsx,Direct,❌ Needs short link,MEDIUM
+Robot Coupe R2 Dice,B00005AL5F,Direct ASIN-only,https://www.amazon.com/dp/B00005AL5F,data/products.ts,Direct,❌ Needs short link,LOW - Data file only
+Vitamix Alternative (Data),B00004RFMT,Direct ASIN-only,https://www.amazon.com/dp/B00004RFMT,data/products.ts,Direct,❌ Needs short link,LOW - Data file only
+Black+Decker Toaster,B00939I7EK,Direct ASIN with WRONG TAG,https://www.amazon.com/dp/B00939I7EK,app/guides/affordable-kitchen-appliances/page.tsx,Direct,❌ WRONG TAG + needs short link,HIGH - Wrong affiliate tag
+Panasonic Microwave,B00005UP2K,Direct ASIN with WRONG TAG,https://www.amazon.com/dp/B00005UP2K,app/guides/affordable-kitchen-appliances/page.tsx,Direct,❌ WRONG TAG + needs short link,HIGH - Wrong affiliate tag
+Cuisinart Food Processor Alt,B01AXM4SLY,Direct ASIN with WRONG TAG,https://www.amazon.com/dp/B01AXM4SLY,app/guides/affordable-kitchen-appliances/page.tsx,Direct,❌ WRONG TAG + needs short link,HIGH - Wrong affiliate tag
+Hamilton Beach Electric Kettle,B06Y1MP2PY,Direct ASIN with WRONG TAG,https://www.amazon.com/dp/B06Y1MP2PY,app/guides/affordable-kitchen-appliances/page.tsx,Direct,❌ WRONG TAG + needs short link,HIGH - Wrong affiliate tag
+Crock-Pot Slow Cooker,B07FDJMC9Q,Direct ASIN with WRONG TAG,https://www.amazon.com/dp/B07FDJMC9Q,app/guides/affordable-kitchen-appliances/page.tsx,Direct,❌ WRONG TAG + needs short link,HIGH - Wrong affiliate tag
+Ninja Air Fryer,B0CGNZX7QY,Direct ASIN with WRONG TAG,https://www.amazon.com/dp/B0CGNZX7QY,app/guides/affordable-kitchen-appliances/page.tsx,Direct,❌ WRONG TAG + needs short link,HIGH - Wrong affiliate tag
+Black & Decker Toaster Oven,B00TXFBWC0,Long URL with linkCode,https://www.amazon.com/BLACK-DECKER-TO3250XSB-8-Slice-Stainless/dp/B00TXFBWC0,app/reviews/black-decker-toaster-oven/page.tsx,Direct with linkCode,⚠️ Works but should convert to short link for consistency,LOW
+Norton IM200 Tri-Stone,B000XK0FMU,Long URL with linkCode,https://www.amazon.com/Norton-IM200-11-5-Inch-Sharpening-Stone/dp/B000XK0FMU,app/reviews/norton-im200-tri-stone-sharpener/page.tsx,Direct with linkCode,⚠️ Works but should convert to short link for consistency,LOW
+Nordic Ware Half Sheet Pan,B0049C2S32,Long URL with linkCode,https://www.amazon.com/Nordic-Ware-Natural-Aluminum-Commercial/dp/B0049C2S32,app/reviews/nordic-ware-half-sheet-pan/page.tsx,Direct with linkCode,⚠️ Works but should convert to short link for consistency,LOW
+Bodum Chambord French Press,B00005LM0S,Long URL with product name,https://www.amazon.com/Bodum-Chambord-French-Coffee-Stainless/dp/B00005LM0S,app/reviews/bodum-chambord-french-press/page.tsx,Direct with product name,⚠️ Works but should convert to short link for consistency,LOW
+Diamond Crystal Kosher Salt (Review),B00B7BNH5O,Long URL with product name,https://www.amazon.com/Diamond-Crystal-Kosher-Salt-Pound/dp/B00B7BNH5O,app/reviews/diamond-crystal-kosher-salt/page.tsx,Direct with product name,⚠️ Works but should convert to short link for consistency,LOW
+Wusthof Classic Ikon 16-Piece,???,amzn.to/3KtlPYS,https://www.amazon.com/dp/[NEED TO RESOLVE],"app/reviews/wusthof-classic-ikon-16-piece/page.tsx, data/products.ts (2 instances)",Short link,✅ Already proper format,VERIFY - Check ASIN
+Robot Coupe R2 Dice,???,amzn.to/4bIa2lg,https://www.amazon.com/dp/[NEED TO RESOLVE],"app/reviews/robot-coupe-r2-dice/page.tsx, data/products.ts, lib/lead-magnet-content.ts",Short link,✅ Already proper format,VERIFY - Check ASIN
+Le Creuset Alternative,???,amzn.to/4e6GceC,https://www.amazon.com/dp/[NEED TO RESOLVE],data/products.ts,Short link,✅ Already proper format,VERIFY - Check ASIN
+Victorinox 10" Chef (Lead Magnet),???,amzn.to/4o6pPwW,https://www.amazon.com/dp/[NEED TO RESOLVE],"app/reviews/victorinox-fibrox-10-inch-chefs-knife/page.tsx, lib/lead-magnet-content.ts",Short link,✅ Already proper format,VERIFY - Check ASIN
+Victorinox Paring Knife (Lead Magnet),???,amzn.to/4gVm0Le,https://www.amazon.com/dp/[NEED TO RESOLVE],lib/lead-magnet-content.ts,Short link,✅ Already proper format,VERIFY - Check ASIN
+Victorinox Boning Knife,???,amzn.to/4pUDed1,https://www.amazon.com/dp/[NEED TO RESOLVE],"app/best-knife-for-cutting-meat/page.tsx, lib/lead-magnet-content.ts",Short link,✅ Already proper format,VERIFY - Check ASIN
+Victorinox Serrated Utility,???,amzn.to/4nAIR4F,https://www.amazon.com/dp/[NEED TO RESOLVE],lib/lead-magnet-content.ts,Short link,✅ Already proper format,VERIFY - Check ASIN
+Victorinox Bread Knife,???,amzn.to/4nLKDkf,https://www.amazon.com/dp/[NEED TO RESOLVE],lib/lead-magnet-content.ts,Short link,✅ Already proper format,VERIFY - Check ASIN
+Lodge 12" Cast Iron,???,amzn.to/4Y5MepL,https://www.amazon.com/dp/[NEED TO RESOLVE],lib/lead-magnet-content.ts,Short link,✅ Already proper format,VERIFY - Check ASIN
+Le Creuset Dutch Oven (Lead Magnet),???,amzn.to/4n0pWIy,https://www.amazon.com/dp/[NEED TO RESOLVE],lib/lead-magnet-content.ts,Short link,✅ Already proper format,VERIFY - Check ASIN
+All-Clad Stainless Set,???,amzn.to/3kBAukM,https://www.amazon.com/dp/[NEED TO RESOLVE],lib/lead-magnet-content.ts,Short link,✅ Already proper format,VERIFY - Check ASIN
+KitchenAid Stand Mixer,???,amzn.to/4hQm5J2,https://www.amazon.com/dp/[NEED TO RESOLVE],lib/lead-magnet-content.ts,Short link,✅ Already proper format,VERIFY - Check ASIN
+Vitamix E310,???,amzn.to/4kLtMa7,https://www.amazon.com/dp/[NEED TO RESOLVE],lib/lead-magnet-content.ts,Short link,✅ Already proper format,VERIFY - Check ASIN
+Winco Heavy Duty Tongs,???,amzn.to/3KQ0I2V,https://www.amazon.com/dp/[NEED TO RESOLVE],app/reviews/winco-heavy-duty-tongs/page.tsx,Short link,✅ Already proper format,VERIFY - Check ASIN
+Epicurean Cutting Board,???,amzn.to/3Wyh8Q4,https://www.amazon.com/dp/[NEED TO RESOLVE],app/reviews/epicurean-kitchen-cutting-board/page.tsx,Short link,✅ Already proper format,VERIFY - Check ASIN
+John Boos Cutting Board,???,amzn.to/47jDzyG,https://www.amazon.com/dp/[NEED TO RESOLVE],"app/kitchen-bundle/page.tsx, app/reviews/john-boos-platinum-commercial-cutting-board/page.tsx",Short link,✅ Already proper format,VERIFY - Check ASIN
+Vitamix 5200,???,amzn.to/48RALd9,https://www.amazon.com/dp/[NEED TO RESOLVE],"app/kitchen-bundle/page.tsx, app/reviews/vitamix-5200/page.tsx",Short link,✅ Already proper format,VERIFY - Check ASIN
+Wusthof 8" Chef Knife,???,amzn.to/3Zsl34V,https://www.amazon.com/dp/[NEED TO RESOLVE],app/guides/best-chef-knives/page.tsx,Short link,✅ Already proper format,VERIFY - Check ASIN
+Shun Classic 8" Chef Knife,???,amzn.to/4n4bDvw,https://www.amazon.com/dp/[NEED TO RESOLVE],app/guides/best-chef-knives/page.tsx,Short link,✅ Already proper format,VERIFY - Check ASIN
+MAC Professional 8" Chef,???,amzn.to/4bWqrgs,https://www.amazon.com/dp/[NEED TO RESOLVE],app/guides/best-chef-knives/page.tsx,Short link,✅ Already proper format,VERIFY - Check ASIN
+Mercer Culinar 8" Chef,???,amzn.to/4mZNiyT,https://www.amazon.com/dp/[NEED TO RESOLVE],app/kitchen-bundle/page.tsx,Short link,✅ Already proper format,VERIFY - Check ASIN
+OXO Bench Scraper,???,amzn.to/4mXTS8X,https://www.amazon.com/dp/[NEED TO RESOLVE],app/reviews/oxo-good-grips-bench-scraper/page.tsx,Short link,✅ Already proper format,VERIFY - Check ASIN
+Victorinox Granton Boning Knife,???,amzn.to/4pUDed1,https://www.amazon.com/dp/[NEED TO RESOLVE],app/knives/page.tsx,Short link,✅ Already proper format,VERIFY - Check ASIN (duplicate?)
+OXO Swivel Peeler,???,amzn.to/4gVgENj,https://www.amazon.com/dp/[NEED TO RESOLVE],app/reviews/oxo-good-grips-swivel-peeler/page.tsx,Short link,✅ Already proper format,VERIFY - Check ASIN
+Victorinox Offset Bread Knife (short),???,amzn.to/4n1Qb2e,https://www.amazon.com/dp/[NEED TO RESOLVE],app/reviews/victorinox-offset-bread-knife/page.tsx,Short link,✅ Already proper format,VERIFY - Check ASIN
+Zuperia Bar Mops,???,amzn.to/4gVm0Le,https://www.amazon.com/dp/[NEED TO RESOLVE],app/reviews/zuperia-bar-mops/page.tsx,Short link,✅ Already proper format,VERIFY - Check ASIN (duplicate?)
+
+SUMMARY:
+- Direct ASIN-only links needing conversion: 18
+- Direct links with WRONG TAG needing conversion: 6
+- Long properly-formatted links (optional to convert): 4
+- Already using short links: 24
+- TOTAL NEEDING ACTION: 28 products
