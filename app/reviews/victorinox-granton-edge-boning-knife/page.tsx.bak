@@ -25,6 +25,11 @@ const productData = {
   brand: "Victorinox",
   model: "40536",
   category: "Boning Knives",
+  priceRange: {
+    min: 32,
+    max: 40,
+    currency: "USD"
+  },
   rating: 4.9,
   reviewCount: 1,
   pros: [

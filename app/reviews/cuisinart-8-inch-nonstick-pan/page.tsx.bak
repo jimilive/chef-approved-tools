@@ -16,6 +16,11 @@ const productData = {
   slug: "cuisinart-8-inch-nonstick-pan",
   brand: "Cuisinart",
   category: "Cookware",
+  priceRange: {
+    min: 15,
+    max: 25,
+    currency: "USD"
+  },
   affiliateLinks: [{
     url: "https://amzn.to/4q4QHa8"
   }],

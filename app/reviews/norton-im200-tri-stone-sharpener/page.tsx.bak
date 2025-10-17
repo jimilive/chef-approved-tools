@@ -17,6 +17,11 @@ const productData = {
   slug: "norton-im200-tri-stone-sharpener",
   brand: "Brand Name",
   category: "Kitchen Equipment",
+  priceRange: {
+    min: 20,
+    max: 50,
+    currency: "USD"
+  },
   affiliateLinks: [],
   expertRating: 4.5,
   expertOpinion: "Professional-grade quality.",
@@ -143,6 +148,7 @@ export default function NortonTriStoneSharpenerReview() {
         }}>
           <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
             <strong>⭐⭐⭐⭐⭐ 5/5</strong> | Based on 6 years in professional restaurant kitchen<br/>
+            <strong>💰 Current Price:</strong> Check price below<br/>
             <strong>✓ 3 Grits: Coarse/Medium/Fine</strong> | <strong>✓ Non-Slip Base</strong> | <strong>✓ 11.5&quot; Length</strong>
           </p>
         </div>

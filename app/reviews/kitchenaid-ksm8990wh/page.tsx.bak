@@ -16,6 +16,11 @@ const productData = {
   model: "KSM8990WH",
   sku: "KSM8990WH",
   gtin13: "883049386447",
+  priceRange: {
+    min: 759,
+    max: 1100,
+    currency: "USD"
+  },
   dealStatus: "normal" as const,
   rating: 4.8,
   reviewCount: 217,

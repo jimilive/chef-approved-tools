@@ -18,6 +18,11 @@ const productData = {
   slug: "john-boos-platinum-commercial-cutting-board",
   brand: "John Boos",
   model: "Platinum Commercial Series 24x18x1.75",
+  priceRange: {
+    min: 189,
+    max: 229,
+    currency: "USD"
+  },
   dealStatus: "normal" as const,
   // Note: No customer reviews - this is a professional evaluation only
   category: "Cutting Boards",

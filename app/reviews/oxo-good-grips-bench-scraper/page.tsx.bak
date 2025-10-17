@@ -25,6 +25,11 @@ const productData = {
   brand: "OXO",
   model: "1147700",
   category: "Bench Scrapers & Dough Tools",
+  priceRange: {
+    min: 12,
+    max: 15,
+    currency: "USD"
+  },
   rating: 5.0,
   reviewCount: 1,
   pros: [

@@ -17,6 +17,11 @@ const productData = {
   model: "DLC-10C",
   sku: "DLC-10C",
   gtin13: "086279001788",
+  priceRange: {
+    min: 129,
+    max: 199,
+    currency: "USD"
+  },
   dealStatus: "normal" as const,
   rating: 5.0,
   reviewCount: 1,

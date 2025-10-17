@@ -18,6 +18,11 @@ const productData = {
   model: "Signature Round 7.25-Qt",
   sku: "LS2501-2867",
   gtin13: "0024147017509",
+  priceRange: {
+    min: 287,
+    max: 480,
+    currency: "USD"
+  },
   dealStatus: "normal" as const,
   rating: 4.7, // Amazon customer rating (verified October 2025)
   reviewCount: 7563, // Amazon review count (verified October 2025)

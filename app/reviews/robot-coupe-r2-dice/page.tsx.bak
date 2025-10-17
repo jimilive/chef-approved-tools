@@ -19,6 +19,11 @@ const productData = {
   model: "R2 Dice",
   sku: "R2DICE",
   gtin13: "0753182086835",
+  priceRange: {
+    min: 0,
+    max: 0,
+    currency: "USD"
+  },
   dealStatus: "normal" as const,
   category: "Food Processors",
   pros: [

@@ -25,6 +25,11 @@ const productData = {
   brand: "Victorinox",
   model: "40600",
   category: "Kitchen Knives",
+  priceRange: {
+    min: 10,
+    max: 15,
+    currency: "USD"
+  },
   rating: 5.0,
   reviewCount: 1,
   pros: [

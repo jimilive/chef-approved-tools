@@ -25,6 +25,11 @@ const productData = {
   brand: "OXO",
   model: "1067551",
   category: "Kitchen Tools",
+  priceRange: {
+    min: 8,
+    max: 12,
+    currency: "USD"
+  },
   rating: 5.0,
   reviewCount: 1,
   pros: [

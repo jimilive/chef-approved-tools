@@ -17,6 +17,11 @@ const productData = {
   model: "KP26M1XLC",
   sku: "KP26M1XLC",
   gtin13: "883049386454",
+  priceRange: {
+    min: 349,
+    max: 549,
+    currency: "USD"
+  },
   dealStatus: "normal" as const,
   rating: 5.0,
   reviewCount: 1,

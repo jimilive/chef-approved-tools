@@ -17,6 +17,11 @@ const productData = {
   slug: "victorinox-fibrox-8-inch-chefs-knife",
   brand: "Brand Name",
   category: "Kitchen Equipment",
+  priceRange: {
+    min: 20,
+    max: 50,
+    currency: "USD"
+  },
   affiliateLinks: [],
   expertRating: 4.5,
   expertOpinion: "Professional-grade quality.",

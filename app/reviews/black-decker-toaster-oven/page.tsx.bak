@@ -1,6 +1,8 @@
 import { Tier2Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
+import ProductImpressionTracker from '@/components/ProductImpressionTracker';
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { generateProductReviewSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -27,11 +29,6 @@ const productData = {
   brand: "Black+Decker",
   model: "TO3250XSB",
   category: "Toaster Ovens",
-  priceRange: {
-    min: 50,
-    max: 80,
-    currency: "USD"
-  },
   rating: 5.0,
   reviewCount: 1,
   pros: [
@@ -165,7 +162,6 @@ export default function BlackDeckerToasterOvenReview() {
         }}>
           <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
             <strong>⭐⭐⭐⭐⭐ 5/5</strong> | Based on 48 years across 4 different models (1977-present)<br/>
-            <strong>💰 Current Price:</strong> Check price below<br/>
             <strong>✓ 4-Slice Capacity</strong> | <strong>✓ 1200W Power</strong> | <strong>✓ Multi-Function</strong>
           </p>
         </div>
@@ -202,15 +198,22 @@ export default function BlackDeckerToasterOvenReview() {
         }}>
           <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
 
-          <AffiliateButton
-            href="https://www.amazon.com/BLACK-DECKER-TO3250XSB-8-Slice-Stainless/dp/B00TXFBWC0?&linkCode=ll1&tag=chefapprovedt-20&linkId=d9a1e8f2c3b4a5f6g7h8i9j0k1l2m3n4"
-            merchant="amazon"
-            product="black-decker-toaster-oven"
+          <CTAVisibilityTracker
+            ctaId="review-black-decker-toaster-oven-above-fold"
             position="above_fold"
-            variant="primary"
+            productSlug="black-decker-toaster-oven"
+            merchant="amazon"
           >
-            Check Amazon Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/BLACK-DECKER-TO3250XSB-8-Slice-Stainless/dp/B00TXFBWC0?&linkCode=ll1&tag=chefapprovedt-20&linkId=d9a1e8f2c3b4a5f6g7h8i9j0k1l2m3n4"
+              merchant="amazon"
+              product="black-decker-toaster-oven"
+              position="above_fold"
+              variant="primary"
+            >
+              Check Amazon Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
 
           <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
             💡 Price updated daily. We earn commission at no extra cost to you.
@@ -620,20 +623,27 @@ export default function BlackDeckerToasterOvenReview() {
           <h3 style={{ marginTop: 0, fontSize: '20px' }}>
             Experience 48 Years of Proven Reliability
           </h3>
-          
+
           <p style={{ fontSize: '16px', margin: '15px 0' }}>
             Join thousands who trust Black+Decker for everyday kitchen performance:
           </p>
 
-          <AffiliateButton
-            href="https://www.amazon.com/BLACK-DECKER-TO3250XSB-8-Slice-Stainless/dp/B00TXFBWC0?&linkCode=ll1&tag=chefapprovedt-20&linkId=d9a1e8f2c3b4a5f6g7h8i9j0k1l2m3n4"
-            merchant="amazon"
-            product="black-decker-toaster-oven"
+          <CTAVisibilityTracker
+            ctaId="review-black-decker-toaster-oven-mid-article"
             position="mid_article"
-            variant="secondary"
+            productSlug="black-decker-toaster-oven"
+            merchant="amazon"
           >
-            Check Amazon Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/BLACK-DECKER-TO3250XSB-8-Slice-Stainless/dp/B00TXFBWC0?&linkCode=ll1&tag=chefapprovedt-20&linkId=d9a1e8f2c3b4a5f6g7h8i9j0k1l2m3n4"
+              merchant="amazon"
+              product="black-decker-toaster-oven"
+              position="mid_article"
+              variant="secondary"
+            >
+              Check Amazon Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
         </div>
 
         <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
@@ -960,296 +970,6 @@ export default function BlackDeckerToasterOvenReview() {
           Frequently Asked Questions About Black+Decker Toaster Ovens
         </h2>
 
-        <div itemScope itemType="https://schema.org/FAQPage">
-
-          {/* Question 1 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Are Black+Decker toaster ovens reliable?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Based on 48 years of continuous use across 4 different models,
-                  yes—remarkably reliable. Each model lasted 5-18 years of daily use without mechanical
-                  failure. This level of consistency across nearly five decades demonstrates genuine reliability.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 2 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              How long do Black+Decker toaster ovens last?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> With normal home use, expect 10-15+ years. My experience across
-                  four models:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Model 1: 18 years (1977-1995)</li>
-                  <li>Model 2: 10 years (1995-2005)</li>
-                  <li>Model 3: 15 years (2005-2020)</li>
-                  <li>Model 4: 5 years and still going strong (2020-present)</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  The budget price doesn&apos;t mean throwaway quality—these are legitimately long-lasting
-                  appliances.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 3 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              What size toaster oven should I buy?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> The 4-slice capacity is ideal for most households (1-4 people).
-                  Sizing guide:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li><strong>2-slice:</strong> Single person, minimal counter space</li>
-                  <li><strong>4-slice:</strong> 1-4 people, most versatile (RECOMMENDED)</li>
-                  <li><strong>6-8 slice:</strong> Large families, frequent entertaining</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  The 4-slice handles daily toasting, reheating, and small baking tasks without
-                  dominating counter space.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 4 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Can you bake in a Black+Decker toaster oven?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Yes, for small-batch baking. Perfect for cookies (4-6 at a time),
-                  small cakes, reheating pizza, roasting vegetables. Not ideal for large cakes or multiple
-                  loaves of bread—use a full-size oven for those.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Best uses:</strong> Single servings, small batches, reheating, quick meals.
-                  Heats faster than full oven and uses less energy.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 5 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              How do you clean a Black+Decker toaster oven?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Simple maintenance keeps it running for years:
-                </p>
-                <ol style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Unplug and let cool completely</li>
-                  <li>Remove crumb tray, wash with soap and water</li>
-                  <li>Wipe interior with damp cloth (mild soap if needed)</li>
-                  <li>Clean glass door with glass cleaner</li>
-                  <li>Dry thoroughly before use</li>
-                </ol>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Pro tip:</strong> Clean crumb tray weekly to prevent smoke and maintain
-                  efficiency. This simple habit extends lifespan significantly.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 6 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Is Black+Decker better than other budget brands?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> After 48 years with Black+Decker, I can confirm they deliver
-                  exceptional reliability in the budget category. Key differentiators:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Proven longevity (5-18 years per model in my experience)</li>
-                  <li>Consistent performance across decades of different models</li>
-                  <li>Simple, durable controls that don&apos;t fail</li>
-                  <li>Widely available replacement parts</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  Many budget brands last 2-5 years. Black+Decker consistently delivers 10+ years.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 7 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              What&apos;s the difference between cheap and expensive toaster ovens?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Having used both budget and premium equipment professionally,
-                  here&apos;s what premium models offer:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Convection fans for even cooking</li>
-                  <li>Precise digital temperature control</li>
-                  <li>Larger capacity (8+ slices)</li>
-                  <li>Better insulation (stays cooler outside)</li>
-                  <li>More cooking modes and presets</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>However,</strong> for basic toasting, reheating, and simple baking, Black+Decker
-                  delivers 90% of the functionality at 25% of the cost. After 48 years, I&apos;ve never felt
-                  the need to upgrade.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 8 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Can toaster ovens replace regular ovens?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> For 1-2 people doing basic cooking, yes—mostly. A toaster
-                  oven can handle:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Daily toast and reheating</li>
-                  <li>Small-batch baking (cookies, muffins)</li>
-                  <li>Single-serving meals</li>
-                  <li>Roasting small portions of vegetables or protein</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>You&apos;ll still need a full oven for:</strong> Large roasts, multiple pizza,
-                  holiday baking, anything requiring multiple racks simultaneously.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  I use both—toaster oven for 80% of daily tasks, full oven for large or special cooking.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 9 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Why do you keep buying Black+Decker instead of trying other brands?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> After 48 years of proven reliability, why would I experiment?
-                  Each of my four Black+Decker models lasted 5-18 years of daily use without failure.
-                  That&apos;s not luck—that&apos;s consistent quality control and design excellence.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  I&apos;ve tested premium kitchen equipment professionally. I know when expensive products
-                  deliver proportional value. For home toaster ovens, Black+Decker&apos;s reliability-to-cost
-                  ratio is unmatched. When something works this well for this long at this price, repeat
-                  purchases aren&apos;t brand loyalty—they&apos;re smart shopping.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 10 */}
-          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question" style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 itemProp="name" style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Should college students or first apartment renters buy Black+Decker?
-            </h3>
-            <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-              <div itemProp="text">
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Absolutely yes. Black+Decker toaster ovens are ideal for:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li><strong>Budget-friendly:</strong> Low initial cost without sacrificing quality</li>
-                  <li><strong>Compact size:</strong> Fits small kitchen counters and dorm limitations</li>
-                  <li><strong>Essential functions:</strong> Toast, reheat, simple cooking—student staples</li>
-                  <li><strong>Reliable performance:</strong> Will likely outlast your college years</li>
-                  <li><strong>Energy efficient:</strong> Cheaper to operate than full ovens</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  My second Black+Decker was purchased for my first apartment in 1995. It served me through
-                  college, multiple moves, early career, and lasted a full decade. That&apos;s exactly the
-                  kind of reliable, affordable equipment students and young professionals need.
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
 
         {/* Email Capture */}
         <div style={{
@@ -1494,15 +1214,22 @@ export default function BlackDeckerToasterOvenReview() {
             Get the toaster oven I&apos;ve trusted for 48 years:
           </p>
 
-          <AffiliateButton
-            href="https://www.amazon.com/BLACK-DECKER-TO3250XSB-8-Slice-Stainless/dp/B00TXFBWC0?&linkCode=ll1&tag=chefapprovedt-20&linkId=d9a1e8f2c3b4a5f6g7h8i9j0k1l2m3n4"
-            merchant="amazon"
-            product="black-decker-toaster-oven"
+          <CTAVisibilityTracker
+            ctaId="review-black-decker-toaster-oven-final-cta"
             position="final_cta"
-            variant="primary"
+            productSlug="black-decker-toaster-oven"
+            merchant="amazon"
           >
-            Check Amazon Price →
-          </AffiliateButton>
+            <AffiliateButton
+              href="https://www.amazon.com/BLACK-DECKER-TO3250XSB-8-Slice-Stainless/dp/B00TXFBWC0?&linkCode=ll1&tag=chefapprovedt-20&linkId=d9a1e8f2c3b4a5f6g7h8i9j0k1l2m3n4"
+              merchant="amazon"
+              product="black-decker-toaster-oven"
+              position="final_cta"
+              variant="primary"
+            >
+              Check Amazon Price →
+            </AffiliateButton>
+          </CTAVisibilityTracker>
 
         </div>
 
@@ -1579,6 +1306,12 @@ export default function BlackDeckerToasterOvenReview() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqData))
           }}
         />
       </article>

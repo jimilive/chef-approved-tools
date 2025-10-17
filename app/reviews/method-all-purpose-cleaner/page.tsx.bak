@@ -17,6 +17,11 @@ const productData = {
   slug: "method-all-purpose-cleaner",
   brand: "Method",
   category: "Kitchen Cleaning",
+  priceRange: {
+    min: 3,
+    max: 6,
+    currency: "USD"
+  },
   affiliateLinks: [{
     url: "https://amzn.to/4hf54wJ"
   }],
