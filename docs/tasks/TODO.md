@@ -444,7 +444,20 @@
 
 ---
 
-**Last Updated:** 2025-10-14
+## 🧲 Lead Magnet Strategy Audit
+
+- [ ] Audit all lead magnets across the site - identify all 15 different lead magnets and their locations
+- [ ] Research SEO best practices for lead magnets - determine optimal strategy (single vs multiple)
+- [ ] Consolidate lead magnet strategy - decide on single lead magnet or streamlined approach
+- [ ] Research opportunities to sell lead magnets elsewhere
+
+## ✅ Content Quality Audit
+
+- [ ] Seriously vet professional usage references for location, task, and years in all tier 1 reviews
+
+---
+
+**Last Updated:** 2025-10-16
 
 **Current Status:**
 - 7 comprehensive product reviews completed

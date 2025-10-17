@@ -703,6 +703,25 @@ export default function BodumChambordFrenchPressReview() {
         </div>
       </div>
 
+      {/* FAQ Section */}
+      <h2>Frequently Asked Questions</h2>
+
+      <div>
+        {faqData.map((faq, index) => (
+          <div key={index} style={{
+            margin: '20px 0',
+            padding: '20px',
+            background: '#f8f9fa',
+            borderRadius: '6px'
+          }}>
+            <h3>{faq.question}</h3>
+            <div>
+              <p><strong>Answer:</strong> {faq.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
       {/* Structured Data - JSON-LD Schema */}
       <script
         type="application/ld+json"

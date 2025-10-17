@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, Award } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateProductSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import PriceDisplay from '@/components/PriceDisplay'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'

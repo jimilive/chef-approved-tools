@@ -194,7 +194,7 @@ export default function VictorinoxFibrox8InchReview() {
           borderRadius: '4px'
         }}>
           <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
-            <strong>⭐⭐⭐⭐⭐ 4.9/5</strong> | Based on 20 years of use<br/>
+            <strong>⭐⭐⭐⭐⭐ 4.5/5</strong> | Based on 20 years of use<br/>
             <strong>✓ Professional Quality</strong> | <strong>✓ Exceptional Value</strong> | <strong>✓ Best in Class</strong><br/>
             <strong>✓ NSF Certified</strong> | <strong>✓ Swiss Made</strong>
           </p>
@@ -887,7 +887,7 @@ export default function VictorinoxFibrox8InchReview() {
               borderRadius: '6px'
             }}>
               <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
-                Final Rating: ⭐⭐⭐⭐⭐ 4.9/5
+                Final Rating: ⭐⭐⭐⭐⭐ 4.5/5
               </p>
               <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
                 <li>Cutting Performance: 5/5</li>

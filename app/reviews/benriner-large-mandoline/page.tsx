@@ -128,7 +128,7 @@ export default function BenrinerLargeMandolineReview() {
         borderRadius: '4px'
       }}>
         <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
-          <strong>⭐⭐⭐⭐⭐ 4.7/5</strong> | Professional kitchen tested<br/>
+          <strong>⭐⭐⭐⭐⭐ 4.5/5</strong> | Professional kitchen tested<br/>
           <strong>✓ Japanese Precision</strong> | <strong>✓ Ultra-Sharp Blade</strong> | <strong>✓ Adjustable Thickness</strong>
         </p>
       </div>
@@ -552,7 +552,7 @@ export default function BenrinerLargeMandolineReview() {
           borderRadius: '6px'
         }}>
           <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
-            Final Rating: ⭐⭐⭐⭐⭐ 4.7/5
+            Final Rating: ⭐⭐⭐⭐⭐ 4.5/5
           </p>
           <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
             <li>Blade Sharpness & Quality: 5/5</li>
@@ -763,6 +763,25 @@ export default function BenrinerLargeMandolineReview() {
             Read more about my testing methodology →
           </a>
         </div>
+      </div>
+
+      {/* FAQ Section */}
+      <h2>Frequently Asked Questions</h2>
+
+      <div>
+        {faqData.map((faq, index) => (
+          <div key={index} style={{
+            margin: '20px 0',
+            padding: '20px',
+            background: '#f8f9fa',
+            borderRadius: '6px'
+          }}>
+            <h3>{faq.question}</h3>
+            <div>
+              <p><strong>Answer:</strong> {faq.answer}</p>
+            </div>
+          </div>
+        ))}
       </div>
 
       {/* Structured Data - JSON-LD Schema */}

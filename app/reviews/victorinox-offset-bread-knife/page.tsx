@@ -118,7 +118,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
           <div className="flex items-center gap-6 text-sm">
             <div className="flex items-center gap-2">
               <span className="text-yellow-400">★★★★★</span>
-              <span>4.9/5</span>
+              <span>4.5/5</span>
             </div>
             <div>Professional Grade</div>
             <div>Buy-It-For-Life Quality</div>
@@ -152,7 +152,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
           borderRadius: '4px'
         }}>
           <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
-            <strong>⭐⭐⭐⭐⭐ 4.9/5</strong> | Based on 23+ years professional restaurant use<br/>
+            <strong>⭐⭐⭐⭐⭐ 4.5/5</strong> | Based on 23+ years professional restaurant use<br/>
             <strong>✓ Offset design keeps knuckles safe</strong> | <strong>✓ Never needs sharpening</strong> | <strong>✓ Professional bakery standard</strong>
           </p>
         </div>
@@ -619,7 +619,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
             borderRadius: '6px'
           }}>
             <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
-              Final Rating: ⭐⭐⭐⭐⭐ 4.9/5
+              Final Rating: ⭐⭐⭐⭐⭐ 4.5/5
             </p>
             <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
               <li>Cutting Performance: 5/5</li>

@@ -600,7 +600,6 @@ export default function RobotCoupeR2DiceReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Current Pricing & Where to Buy</h2>
           <PriceDisplay
             productName={productData.name}
-            priceRange={productData.priceRange}
             dealStatus={productData.dealStatus}
             dealText="Professional equipment - consider used/refurbished options for better value"
             affiliateLinks={productData.affiliateLinks}

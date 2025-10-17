@@ -725,7 +725,6 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Current Pricing & Where to Buy</h2>
           <PriceDisplay
             productName={productData.name}
-            priceRange={productData.priceRange}
             dealStatus={productData.dealStatus}
             dealText="Restaurant supply stores sometimes beat retail pricing - size affects price significantly"
             affiliateLinks={productData.affiliateLinks}

@@ -5,7 +5,7 @@
 import { Tier2Badge } from '@/components/ReviewTierBadge'; // or Tier1Badge for 15+ years
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductReviewSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import { generateProductSchema, generateBreadcrumbSchema } from '@/lib/schema';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -635,7 +635,7 @@ export default function ProductReview() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateProductReviewSchema(productData))
+            __html: JSON.stringify(generateProductSchema(productData))
           }}
         />
         <script

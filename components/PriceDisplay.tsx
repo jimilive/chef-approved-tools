@@ -12,7 +12,7 @@ interface PriceRange {
 
 interface PriceDisplayProps {
   productName: string
-  priceRange: PriceRange
+  priceRange?: PriceRange
   dealStatus?: 'sale' | 'normal' | 'high' | 'trending'
   dealText?: string
   affiliateLinks?: {
@@ -51,7 +51,7 @@ export default function PriceDisplay({
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: priceRange.currency
+      currency: priceRange?.currency || 'USD'
     }).format(price)
   }
 
@@ -85,23 +85,25 @@ export default function PriceDisplay({
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-4">
       {/* Price Range Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <div className="flex items-center gap-2 mb-1">
-            <DollarSign className="w-5 h-5 text-green-600" />
-            <span className="text-2xl font-bold text-gray-900">
-              {formatPrice(priceRange.min)} - {formatPrice(priceRange.max)}
-            </span>
-            {getDealBadge()}
+      {priceRange && (
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <DollarSign className="w-5 h-5 text-green-600" />
+              <span className="text-2xl font-bold text-gray-900">
+                {formatPrice(priceRange.min)} - {formatPrice(priceRange.max)}
+              </span>
+              {getDealBadge()}
+            </div>
+            {dealText && (
+              <p className="text-sm text-green-700 font-medium">{dealText}</p>
+            )}
+            <p className="text-xs text-gray-500">
+              Price range across retailers • {lastUpdated || 'Updated weekly'}
+            </p>
           </div>
-          {dealText && (
-            <p className="text-sm text-green-700 font-medium">{dealText}</p>
-          )}
-          <p className="text-xs text-gray-500">
-            Price range across retailers • {lastUpdated || 'Updated weekly'}
-          </p>
         </div>
-      </div>
+      )}
 
       {/* Deal Alert */}
       {dealStatus === 'sale' && (
@@ -172,37 +174,39 @@ export default function PriceDisplay({
       </div>
 
       {/* Price Alert Signup */}
-      <div className="border-t pt-4">
-        {!showPriceAlert ? (
-          <button
-            onClick={() => setShowPriceAlert(true)}
-            className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700 font-medium"
-          >
-            <Bell className="w-4 h-4" />
-            Get price drop alerts for this item
-          </button>
-        ) : (
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-            <div className="flex items-center gap-2 mb-2">
-              <Bell className="w-4 h-4 text-blue-600" />
-              <span className="text-sm font-semibold text-blue-800">Price Drop Alerts</span>
+      {priceRange && (
+        <div className="border-t pt-4">
+          {!showPriceAlert ? (
+            <button
+              onClick={() => setShowPriceAlert(true)}
+              className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700 font-medium"
+            >
+              <Bell className="w-4 h-4" />
+              Get price drop alerts for this item
+            </button>
+          ) : (
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+              <div className="flex items-center gap-2 mb-2">
+                <Bell className="w-4 h-4 text-blue-600" />
+                <span className="text-sm font-semibold text-blue-800">Price Drop Alerts</span>
+              </div>
+              <p className="text-xs text-blue-700 mb-3">
+                Get notified when {productName} drops below {formatPrice(priceRange.min)}
+              </p>
+              <div className="flex gap-2">
+                <input
+                  type="email"
+                  placeholder="your@email.com"
+                  className="flex-1 px-3 py-2 text-sm border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-700 transition-colors">
+                  Alert Me
+                </button>
+              </div>
             </div>
-            <p className="text-xs text-blue-700 mb-3">
-              Get notified when {productName} drops below {formatPrice(priceRange.min)}
-            </p>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="your@email.com"
-                className="flex-1 px-3 py-2 text-sm border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-700 transition-colors">
-                Alert Me
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      )}
     </div>
   )
 }
