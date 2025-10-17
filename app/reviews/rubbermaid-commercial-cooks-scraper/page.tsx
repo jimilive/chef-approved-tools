@@ -250,7 +250,7 @@ export default function RubbermaidScraperReview() {
               <CheckCircle className="w-6 h-6 text-orange-800 flex-shrink-0 mt-1" />
               <div>
                 <p className="text-slate-800 font-medium leading-relaxed mb-2">
-                  <strong>PROFESSIONAL VERDICT:</strong> After 18 years—9 years professional use at Purple Cafe and Feireabend, plus 9 more years at home—this $15-20 high-heat spatula has outlasted every expensive silicone spatula I've owned.
+                  <strong>PROFESSIONAL VERDICT:</strong> After 18 years—9 years professional use at Purple Cafe and Feireabend, plus 9 more years at home—this $15-20 high-heat spatula has outlasted every expensive silicone spatula I&apos;ve owned.
                 </p>
                 <p className="text-slate-700 text-sm">
                   This commercial spatula features one-piece molded construction that eliminates bacterial traps, 500°F heat resistance that prevents melting issues, and NSF certification that meets commercial sanitation standards. This is genuine buy-it-for-life equipment at the price of two lattes.
@@ -301,7 +301,7 @@ export default function RubbermaidScraperReview() {
               <div className="text-4xl mb-3">🔥</div>
               <h3 className="text-xl font-semibold mb-2">500°F Heat Resistance</h3>
               <p className="text-slate-700">
-                This high-heat spatula won't melt on hot pans like cheap alternatives. Withstands commercial kitchen heat without degradation. After 18 years of hot pan contact with this rubber spatula, it still functions perfectly.
+                This high-heat spatula won&apos;t melt on hot pans like cheap alternatives. Withstands commercial kitchen heat without degradation. After 18 years of hot pan contact with this rubber spatula, it still functions perfectly.
               </p>
             </div>
             <div className="bg-slate-50 p-5 rounded-lg">
@@ -348,7 +348,7 @@ export default function RubbermaidScraperReview() {
                 After leaving commercial kitchens, I brought this scraper home where it continues daily service. Despite 18 total years of use, it shows minimal wear—some cosmetic staining (typical for white rubber), but zero functional degradation. The blade maintains its flexibility, the handle shows no cracking, and performance remains identical to day one.
               </p>
               <p className="text-slate-700 leading-relaxed">
-                This longevity is remarkable for a $15-20 tool. I've watched expensive silicone spatulas ($30-40) fail within 2-3 years through handle separation or blade tearing. Meanwhile, this commercial-grade scraper just keeps going.
+                This longevity is remarkable for a $15-20 tool. I&apos;ve watched expensive silicone spatulas ($30-40) fail within 2-3 years through handle separation or blade tearing. Meanwhile, this commercial-grade scraper just keeps going.
               </p>
             </div>
 
@@ -428,14 +428,14 @@ export default function RubbermaidScraperReview() {
 
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
-                "I hate silicone spatulas -- the edge isn't sharp enough; they don't really deserve their second name of 'scraper.' This scraper's head is large and it's excellent. It's sold as a commercial product and costs a lot, but silicone is SO BAD, I'm willing to pay the price."
+                &quot;I hate silicone spatulas -- the edge isn&apos;t sharp enough; they don&apos;t really deserve their second name of &apos;scraper.&apos; This scraper&apos;s head is large and it&apos;s excellent. It&apos;s sold as a commercial product and costs a lot, but silicone is SO BAD, I&apos;m willing to pay the price.&quot;
               </p>
               <p className="text-sm text-slate-500">— Amazon verified purchaser | Professional Use</p>
             </div>
 
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
-                "This is the most well designed, quality spatula I've ever purchased. I have maybe close to 20 silicone spatulas, but this Rubbermaid is heavy-duty and will last forever. It's very well made, totally non-stick."
+                &quot;This is the most well designed, quality spatula I&apos;ve ever purchased. I have maybe close to 20 silicone spatulas, but this Rubbermaid is heavy-duty and will last forever. It&apos;s very well made, totally non-stick.&quot;
               </p>
               <p className="text-sm text-slate-500">— Amazon verified purchaser | High-Volume Home Cook</p>
             </div>
@@ -794,7 +794,7 @@ export default function RubbermaidScraperReview() {
               </ul>
             </div>
             <p style={{ fontSize: '16px', marginBottom: 0 }}>
-              <strong>Would I buy this again?</strong> Without hesitation. At this price point, there's nothing that competes with the durability and value.
+              <strong>Would I buy this again?</strong> Without hesitation. At this price point, there&apos;s nothing that competes with the durability and value.
             </p>
           </div>
 
