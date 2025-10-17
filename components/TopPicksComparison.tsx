@@ -26,7 +26,7 @@ const topPicks: TopPick[] = [
     badge: 'Best Overall',
     badgeColor: 'bg-green-700',
     category: 'Stand Mixers',
-    affiliateUrl: 'https://amzn.to/4nqVHKP',
+    affiliateUrl: 'https://amzn.to/4nVlUTM',
     keyFeature: '1.3 HP commercial motor with NSF certification',
     testPeriod: '18 months proven',
     whyBest: 'Survived 18 months of high-volume restaurant operations at Purple Cafe without a single repair'

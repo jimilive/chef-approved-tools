@@ -36,7 +36,7 @@ const productData = {
   affiliateLinks: [
     {
       retailer: "Amazon",
-      url: "https://amzn.to/4n31Ycj"
+      url: "https://amzn.to/4n6Fyej"
     }
   ],
   inStock: true,
@@ -220,7 +220,7 @@ export default function KitchenAidProfessional600ReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4n31Ycj"
+              href="https://amzn.to/4n6Fyej"
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -284,7 +284,7 @@ export default function KitchenAidProfessional600ReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4n31Ycj"
+              href="https://amzn.to/4n6Fyej"
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -535,7 +535,7 @@ export default function KitchenAidProfessional600ReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4n31Ycj"
+              href="https://amzn.to/4n6Fyej"
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -1239,7 +1239,7 @@ export default function KitchenAidProfessional600ReviewPage() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/4n31Ycj"
+                href="https://amzn.to/4n6Fyej"
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

@@ -26,8 +26,8 @@ def check_page(slug, content):
         page_issues.append("⚠️  Missing metadata export")
 
     # 4. Check for schema.org structured data
-    if 'generateProductReviewSchema' not in content:
-        page_issues.append("⚠️  Missing product review schema")
+    if 'generateProductSchema' not in content:
+        page_issues.append("⚠️  Missing product schema")
 
     if 'generateBreadcrumbSchema' not in content:
         page_issues.append("⚠️  Missing breadcrumb schema")

@@ -71,9 +71,9 @@ export const leadMagnetContent = {
       story: "Perfect potato gratin every time. Consistent slices mean even cooking. Just watch your fingers!"
     },
     {
-      name: "Gold Textiles Restaurant Bar Mops (12-pack)",
+      name: "ZUPERIA Bar Mops (12-pack)",
       price: "$25",
-      amazonUrl: "https://amzn.to/4hQm5J2",
+      amazonUrl: "https://amzn.to/4nfExRj",
       why: "Absorbent, durable, machine washable. These are what restaurants actually use.",
       story: "Forget fancy kitchen towels. These are what every professional kitchen uses. They last forever and actually dry things."
     },

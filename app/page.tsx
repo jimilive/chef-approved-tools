@@ -38,7 +38,7 @@ const sampleProducts = [
     rating: 4.9,
     reviews: 156,
     image: '/logo.png',
-    affiliateUrl: 'https://amzn.to/43pNqk2',
+    affiliateUrl: 'https://amzn.to/4nVlUTM',
     badge: 'NSF Certified',
     tested: 'Survived $80K/mo operations'
   }

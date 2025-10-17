@@ -31,11 +31,6 @@ const productData = {
     volume: "Processed 500+ batches during testing period"
   },
 
-  priceRange: {
-    min: 0,
-    max: 0,
-    currency: "USD"
-  },
   dealStatus: "normal" as const,
   rating: 4.8, // YOUR rating after long-term use
   reviewCount: 1,
@@ -402,7 +397,6 @@ export default function Tier1ReviewPage() {
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Current Pricing & Where to Buy</h2>
           <PriceDisplay
             productName={productData.name}
-            priceRange={productData.priceRange}
             dealStatus={productData.dealStatus}
             dealText={`After ${productData.testingPeriod} of use, I believe this is worth the investment for [specific use case]`}
             affiliateLinks={productData.affiliateLinks}
@@ -483,12 +477,6 @@ export default function Tier1ReviewPage() {
                 "brand": {
                   "@type": "Brand",
                   "name": productData.brand
-                },
-                "offers": {
-                  "@type": "AggregateOffer",
-                  "lowPrice": productData.priceRange.min,
-                  "highPrice": productData.priceRange.max,
-                  "priceCurrency": productData.priceRange.currency
                 }
               },
               "author": {

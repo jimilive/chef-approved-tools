@@ -283,7 +283,7 @@
 7. Line 55: `amazonUrl: "https://amzn.to/4Y5MepL"` - Lodge 12" ✅
 8. Line 62: `amazonUrl: "https://amzn.to/4n0pWIy"` - Le Creuset ✅
 9. Line 69: `amazonUrl: "https://amzn.to/3kBAukM"` - All-Clad ✅
-10. Line 76: `amazonUrl: "https://amzn.to/4hQm5J2"` - KitchenAid ✅
+10. Line 76: `amazonUrl: "https://amzn.to/4nfExRj"` - KitchenAid ✅
 11. Line 83: `amazonUrl: "https://amzn.to/4kLtMa7"` - Vitamix E310 ✅
 
 ---

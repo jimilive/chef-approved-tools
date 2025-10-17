@@ -73,7 +73,7 @@ const lifetimeUpgrades = [
     name: "KitchenAid KSM8990WH Commercial Series Mixer",
     justification: "NSF-certified power that survived 18 months of restaurant use. This is the mixer professional kitchens choose.",
     reviewSlug: "kitchenaid-ksm8990wh",
-    affiliateUrl: "https://amzn.to/43pNqk2",
+    affiliateUrl: "https://amzn.to/4nVlUTM",
     image: "/logo.png"
   },
   {

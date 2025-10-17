@@ -75,7 +75,7 @@
 - [ ] OXO Good Grips Bench Scraper
 - [ ] Winco Heavy Duty Tongs
 - [ ] Benriner Large Mandoline
-- [ ] Gold Textiles Bar Mops
+- [ ] ZUPERIA Bar Mops
 - [ ] Epicurean Kitchen Cutting Board
 - [ ] NoCry Cut Resistant Gloves (Amazon: https://amzn.to/4mUTNTs)
 
@@ -373,7 +373,7 @@
      - [ ] OXO Good Grips Bench Scraper
      - [ ] Winco Heavy Duty Tongs
      - [ ] Benriner Large Mandoline
-     - [ ] Gold Textiles Bar Mops
+     - [ ] ZUPERIA Bar Mops
      - [ ] Epicurean Kitchen Cutting Board
    - [ ] **P8:** Audit every word of site (quality control after template updates)
 

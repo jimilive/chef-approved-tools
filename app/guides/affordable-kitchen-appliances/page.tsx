@@ -241,7 +241,7 @@ export default function AffordableKitchenAppliancesPage() {
               merchant="amazon"
             >
               <a
-                href="https://amzn.to/498WH3J"
+                href="https://amzn.to/4n6Fyej"
                 target="_blank"
                 rel="noopener noreferrer sponsored"
                 className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"

@@ -5,7 +5,7 @@
 import { Tier2Badge } from '@/components/ReviewTierBadge'; // or Tier1Badge for 15+ years
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -26,11 +26,6 @@ const productData = {
   brand: "[Brand Name]",
   model: "[MODEL-NUMBER]",
   category: "[Category]", // e.g., "Chef Knives", "Stand Mixers", "Cookware"
-  priceRange: {
-    min: 100, // typical low price
-    max: 200, // typical high price
-    currency: "USD"
-  },
   rating: 5.0, // 1.0-5.0
   reviewCount: 1,
   pros: [
@@ -474,13 +469,7 @@ export default function ProductReview() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Price Range</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>${productData.priceRange.min}-{productData.priceRange.max}</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$[XX-XX]</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$[XX-XX]</td>
-                </tr>
-                {/* Add 6-8 comparison rows */}
+                {/* Add 6-8 comparison rows - focus on features, not pricing */}
               </tbody>
             </table>
           </div>

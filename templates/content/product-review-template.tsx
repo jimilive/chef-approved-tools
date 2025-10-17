@@ -19,11 +19,6 @@ const productData = {
   slug: "[URL-SLUG]", // e.g., "wusthof-classic-8-inch-chef-knife"
   brand: "[BRAND]",
   model: "[MODEL-NUMBER]",
-  priceRange: {
-    min: 0, // Update with actual price
-    max: 0,
-    currency: "USD"
-  },
   dealStatus: "normal" as const, // "normal" | "deal" | "limited"
   rating: 4.5, // Your expert rating out of 5
   reviewCount: 1, // Number of reviews you've done
@@ -267,7 +262,6 @@ export default function ProductReviewPage() {
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Current Pricing & Where to Buy</h2>
           <PriceDisplay
             productName={productData.name}
-            priceRange={productData.priceRange}
             dealStatus={productData.dealStatus}
             dealText="[ADD DEAL TEXT OR VALUE PROPOSITION]"
             affiliateLinks={productData.affiliateLinks}

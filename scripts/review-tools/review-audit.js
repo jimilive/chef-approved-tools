@@ -69,7 +69,7 @@ function auditReview(slug) {
   // Check imports
   const requiredImports = {
     'AffiliateButton': 'import AffiliateButton',
-    'generateProductReviewSchema': 'import { generateProductReviewSchema }',
+    'generateProductSchema': 'import { generateProductSchema }',
     'FTCDisclosure': 'import FTCDisclosure',
     'Tier2Badge|Tier1Badge': 'import { Tier2Badge } or { Tier1Badge }',
     'Link': 'import Link'
@@ -177,7 +177,7 @@ function auditReview(slug) {
   }
 
   // Check for structured data schemas
-  if (!content.includes('generateProductReviewSchema') ||
+  if (!content.includes('generateProductSchema') ||
       !content.includes('generateBreadcrumbSchema')) {
     console.log(formatWarning('  - Structured Data Schemas'));
     results.missing.push('Structured Data Schemas');
