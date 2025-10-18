@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-bench-scraper',
   },
 
-  title: 'OXO Good Grips Bench Scraper Review | 23+ Years Professional Use',
+  title: 'OXO Bench Scraper: 23-Year Pro Test (2025)',
   description: 'Professional chef review of the OXO Good Grips bench scraper after 23+ years of professional cooking. The most underrated tool in any kitchen.',
 }
 
