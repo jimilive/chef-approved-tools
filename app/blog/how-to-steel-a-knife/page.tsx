@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, Clock, User, Scissors } from 'lucide-react'
-import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
@@ -43,6 +43,53 @@ export default function HowToSteelAKnife() {
             { name: "Home", url: "https://www.chefapprovedtools.com" },
             { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
             { name: "How to Steel a Knife", url: "https://www.chefapprovedtools.com/blog/how-to-steel-a-knife" }
+          ]))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema([
+            {
+              question: "What's the difference between honing and sharpening a knife?",
+              answer: "Honing (using a steel) realigns the edge without removing metal, while sharpening (using a stone) removes metal to create a new edge. At Purple Café, we honed knives before every service but only sharpened every 2-4 weeks. Think of honing as straightening a bent edge and sharpening as rebuilding a dull edge. Honing maintains sharpness; sharpening restores it."
+            },
+            {
+              question: "How often should I steel my kitchen knives?",
+              answer: "Steel (hone) your knives every 2-3 uses for home cooking, or before every shift in professional kitchens. At Purple Café during 6 years as Kitchen Manager, we required every cook to hone their knives at the start of service. Regular honing extends the time between sharpenings from weeks to months. If honing no longer restores sharpness, it's time to sharpen."
+            },
+            {
+              question: "What angle should I hold the knife against the honing steel?",
+              answer: "Hold the knife at 15-20 degrees against the steel—roughly the angle of a matchbook. This matches the factory edge angle on most kitchen knives. Consistency matters more than precision. After 6 years honing knives daily at Purple Café, the angle becomes muscle memory. Start with the matchbook visual until it feels natural."
+            },
+            {
+              question: "Should I use a ceramic steel or traditional steel rod?",
+              answer: "Traditional steel rods realign edges (true honing), while ceramic steels lightly abrade and sharpen. For daily maintenance, traditional steel is better—it's gentler and extends knife life. Ceramic steels remove metal and should be used sparingly. At Purple Café, we used traditional Henckels steel rods exclusively. Save ceramic for knives that need more than realignment but less than full sharpening."
+            },
+            {
+              question: "How many strokes should I use when steeling a knife?",
+              answer: "Use 5-8 strokes per side for regular maintenance. At Purple Café, our standard was 6 strokes alternating sides (12 total). More strokes don't improve results—consistency and proper angle matter more than quantity. If 8 strokes don't restore the edge, honing won't help; the knife needs sharpening."
+            },
+            {
+              question: "Why isn't my knife getting sharper when I steel it?",
+              answer: "Honing steel realigns edges but doesn't sharpen dull knives. If steeling doesn't restore sharpness, your knife is dull and needs actual sharpening with a stone. Other causes: wrong angle (too steep or too shallow), damaged steel rod (inspect for grooves), or applying too much pressure (light pressure works better). Remember: steeling maintains sharp knives; it can't fix dull ones."
+            },
+            {
+              question: "Can I damage my knife by using a honing steel?",
+              answer: "You can damage knives by using excessive pressure, wrong angle, or cheap diamond-coated steels that remove too much metal. Traditional smooth steel rods used properly won't damage knives—we honed the same knives daily for 6 years at Purple Café without issues. Use light pressure (let the steel do the work), maintain consistent angle, and choose quality traditional steel over aggressive diamond or ceramic options."
+            },
+            {
+              question: "Do I need to steel Japanese knives differently than German knives?",
+              answer: "Yes—Japanese knives need a shallower angle (10-15 degrees) compared to German knives (15-20 degrees), and lighter pressure because Japanese steel is harder and more brittle. At Purple Café, we had both: Wüsthof German knives and Shun Japanese knives. Japanese knives also need honing less frequently because harder steel holds edges longer but chips more easily with rough treatment."
+            },
+            {
+              question: "Should I steel a knife before or after using it?",
+              answer: "Steel knives before use, not after. At Purple Café, we required all cooks to hone at the start of their shift, not the end. Honing before use ensures optimal sharpness when you need it. Honing after use when the knife is already dirty is less effective and can transfer food particles to the steel, reducing its effectiveness."
+            },
+            {
+              question: "How do I test if my knife is properly honed?",
+              answer: "The paper test: hold paper vertically and slice—a well-honed knife cuts cleanly without tearing. Or the tomato test: rest the blade on tomato skin and slice with no downward pressure—it should glide through. At Purple Café, we used the fingernail test: gently rest the edge on your thumbnail—if it grips instead of sliding, it's sharp. These tests confirm proper edge alignment after honing."
+            }
           ]))
         }}
       />
@@ -279,7 +326,7 @@ export default function HowToSteelAKnife() {
             </ul>
 
             <p className="text-sm text-slate-600 mt-4 text-center mb-0">
-              💡 All prices updated daily. We earn commission at no extra cost to you.
+              We earn commission at no extra cost to you.
             </p>
           </div>
 
@@ -311,6 +358,73 @@ export default function HowToSteelAKnife() {
             Grab your <a href="https://amzn.to/4qh96Zu" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Henckels Honing Steel</a>, pick up your favorite <a href="https://amzn.to/3U4PsT1" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox Knife</a>, and keep that edge chef-sharp—because the best cooks always respect their tools.
           </p>
 
+        </div>
+
+        {/* FAQ Section */}
+        <div className="border-t border-gray-200 pt-12 mt-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the difference between honing and sharpening a knife?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Honing (using a steel) realigns the edge without removing metal, while sharpening (using a stone) removes metal to create a new edge. At Purple Café, we honed knives before every service but only sharpened every 2-4 weeks. Think of honing as straightening a bent edge and sharpening as rebuilding a dull edge. Honing maintains sharpness; sharpening restores it.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">How often should I steel my kitchen knives?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Steel (hone) your knives every 2-3 uses for home cooking, or before every shift in professional kitchens. At Purple Café during 6 years as Kitchen Manager, we required every cook to hone their knives at the start of service. Regular honing extends the time between sharpenings from weeks to months. If honing no longer restores sharpness, it&apos;s time to sharpen.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What angle should I hold the knife against the honing steel?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Hold the knife at 15-20 degrees against the steel—roughly the angle of a matchbook. This matches the factory edge angle on most kitchen knives. Consistency matters more than precision. After 6 years honing knives daily at Purple Café, the angle becomes muscle memory. Start with the matchbook visual until it feels natural.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I use a ceramic steel or traditional steel rod?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Traditional steel rods realign edges (true honing), while ceramic steels lightly abrade and sharpen. For daily maintenance, traditional steel is better—it&apos;s gentler and extends knife life. Ceramic steels remove metal and should be used sparingly. At Purple Café, we used traditional Henckels steel rods exclusively. Save ceramic for knives that need more than realignment but less than full sharpening.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">How many strokes should I use when steeling a knife?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Use 5-8 strokes per side for regular maintenance. At Purple Café, our standard was 6 strokes alternating sides (12 total). More strokes don&apos;t improve results—consistency and proper angle matter more than quantity. If 8 strokes don&apos;t restore the edge, honing won&apos;t help; the knife needs sharpening.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why isn&apos;t my knife getting sharper when I steel it?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Honing steel realigns edges but doesn&apos;t sharpen dull knives. If steeling doesn&apos;t restore sharpness, your knife is dull and needs actual sharpening with a stone. Other causes: wrong angle (too steep or too shallow), damaged steel rod (inspect for grooves), or applying too much pressure (light pressure works better). Remember: steeling maintains sharp knives; it can&apos;t fix dull ones.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I damage my knife by using a honing steel?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                You can damage knives by using excessive pressure, wrong angle, or cheap diamond-coated steels that remove too much metal. Traditional smooth steel rods used properly won&apos;t damage knives—we honed the same knives daily for 6 years at Purple Café without issues. Use light pressure (let the steel do the work), maintain consistent angle, and choose quality traditional steel over aggressive diamond or ceramic options.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Do I need to steel Japanese knives differently than German knives?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Yes—Japanese knives need a shallower angle (10-15 degrees) compared to German knives (15-20 degrees), and lighter pressure because Japanese steel is harder and more brittle. At Purple Café, we had both: Wüsthof German knives and Shun Japanese knives. Japanese knives also need honing less frequently because harder steel holds edges longer but chips more easily with rough treatment.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I steel a knife before or after using it?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Steel knives before use, not after. At Purple Café, we required all cooks to hone at the start of their shift, not the end. Honing before use ensures optimal sharpness when you need it. Honing after use when the knife is already dirty is less effective and can transfer food particles to the steel, reducing its effectiveness.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I test if my knife is properly honed?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                The paper test: hold paper vertically and slice—a well-honed knife cuts cleanly without tearing. Or the tomato test: rest the blade on tomato skin and slice with no downward pressure—it should glide through. At Purple Café, we used the fingernail test: gently rest the edge on your thumbnail—if it grips instead of sliding, it&apos;s sharp. These tests confirm proper edge alignment after honing.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Author Bio */}

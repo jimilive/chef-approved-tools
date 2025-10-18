@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, Clock, User, Shield } from 'lucide-react'
-import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
@@ -43,6 +43,53 @@ export default function KitchenGlovesGuide() {
             { name: "Home", url: "https://www.chefapprovedtools.com" },
             { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
             { name: "Essential Guide to Kitchen Gloves", url: "https://www.chefapprovedtools.com/blog/kitchen-gloves-guide" }
+          ]))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema([
+            {
+              question: "What do ANSI cut-resistance levels mean?",
+              answer: "ANSI levels (A1-A9) measure how much weight is needed to cut through glove material. A1 withstands 200-499 grams, A5 withstands 2200-2999 grams, A9 withstands 6000+ grams. For mandoline slicing and vegetable prep, A4-A5 is perfect. For butchering and bone work, A6-A7. After my mandoline injury at Purple Café, I never use a mandoline without A5-rated gloves—they've saved my fingers countless times."
+            },
+            {
+              question: "What cut-resistance level do I need for using a mandoline?",
+              answer: "A4 or A5 cut-resistant gloves are ideal for mandoline use. This provides 1500-2999 grams of cutting resistance—enough to prevent slicing injuries from mandoline blades while maintaining dexterity. At Purple Café, our safety policy required A5 gloves for all mandoline work after a serious injury. Lower levels (A1-A3) won't protect you from mandoline blades."
+            },
+            {
+              question: "What's the difference between nitrile, latex, and vinyl gloves?",
+              answer: "Nitrile gloves are most durable and oil-resistant (best for raw meat and butchering), latex offers best sensitivity and flexibility (ideal for delicate work like cake decorating), and vinyl is economical for short tasks with frequent changes. Professional kitchens prefer nitrile because it's puncture-resistant and latex-allergy-safe. Latex is now banned in 8 U.S. states due to allergy concerns."
+            },
+            {
+              question: "Should I use disposable or reusable gloves for kitchen work?",
+              answer: "Use disposable nitrile gloves for handling raw meat, cross-contamination prevention, and tasks requiring frequent glove changes. Use reusable cut-resistant gloves for mandoline work, oyster shucking, and butchering. At Purple Café, we used both: disposable nitrile for food prep and safety, reusable A5 cut-resistant for mandoline and dangerous tasks. Never reuse disposable gloves."
+            },
+            {
+              question: "Can cut-resistant gloves protect against all knife cuts?",
+              answer: "No—cut-resistant gloves reduce injury severity but aren't cut-proof. They protect against slicing motions (mandolines, graters, oyster knives) but not stabbing motions or extreme pressure. ANSI A9 gloves can still be penetrated by a sharp knife with enough force. Think of them as seatbelts—they dramatically reduce injury risk but aren't absolute protection."
+            },
+            {
+              question: "Do I need food-grade gloves for kitchen use?",
+              answer: "Yes—all gloves that contact food must be food-grade certified, powder-free, and non-toxic. Food-grade certification ensures gloves don't leach chemicals into food. Regular work gloves or medical gloves may contain unsafe materials. Look for FDA-approved food contact on the packaging. At Purple Café, our purchasing policy required food-grade certification for all kitchen gloves."
+            },
+            {
+              question: "How often should I replace cut-resistant gloves?",
+              answer: "Replace cut-resistant gloves when you see: visible damage or cuts, worn-through areas, loss of grip texture, or stretching that reduces fit. Even without visible damage, replace every 6-12 months with regular use because protective fibers degrade. Wash reusable gloves after every use with dish soap—food debris and oils reduce effectiveness."
+            },
+            {
+              question: "Should I wear gloves when handling raw meat?",
+              answer: "Disposable nitrile gloves are recommended for raw meat handling to prevent cross-contamination and eliminate hand-washing between tasks. Professional kitchens use gloves for raw poultry especially. However, gloves don't replace handwashing—wash hands before putting gloves on and after removing them. The key principle: gloves prevent cross-contamination but must be changed between tasks."
+            },
+            {
+              question: "Can I use the same gloves for multiple kitchen tasks?",
+              answer: "No—change gloves between raw and cooked food handling, after touching surfaces or hair, and between different food types (raw meat to vegetables). Professional food safety requires glove changes for each new task. Reusing gloves between tasks defeats their purpose. At Purple Café during 200+ cover nights, prep cooks changed gloves dozens of times per shift."
+            },
+            {
+              question: "What's the triple-layer glove technique for mandoline safety?",
+              answer: "Layer cut-resistant glove (base protection), then disposable nitrile glove (keeps cut-resistant glove clean and provides grip), then optional second nitrile glove for extra security on your guiding hand. This technique prevents mandoline injuries while keeping cut-resistant gloves clean for reuse. I developed this at Purple Café after an injury—it provides maximum protection and easy cleanup."
+            }
           ]))
         }}
       />
@@ -428,6 +475,73 @@ export default function KitchenGlovesGuide() {
             Stock your kitchen with both types of gloves, keep them readily accessible, and make proper use non-negotiable. Your hands—and your diners—will thank you.
           </p>
 
+        </div>
+
+        {/* FAQ Section */}
+        <div className="border-t border-gray-200 pt-12 mt-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What do ANSI cut-resistance levels mean?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                ANSI levels (A1-A9) measure how much weight is needed to cut through glove material. A1 withstands 200-499 grams, A5 withstands 2200-2999 grams, A9 withstands 6000+ grams. For mandoline slicing and vegetable prep, A4-A5 is perfect. For butchering and bone work, A6-A7. After my mandoline injury at Purple Café, I never use a mandoline without A5-rated gloves—they&apos;ve saved my fingers countless times.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What cut-resistance level do I need for using a mandoline?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                A4 or A5 cut-resistant gloves are ideal for mandoline use. This provides 1500-2999 grams of cutting resistance—enough to prevent slicing injuries from mandoline blades while maintaining dexterity. At Purple Café, our safety policy required A5 gloves for all mandoline work after a serious injury. Lower levels (A1-A3) won&apos;t protect you from mandoline blades.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the difference between nitrile, latex, and vinyl gloves?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Nitrile gloves are most durable and oil-resistant (best for raw meat and butchering), latex offers best sensitivity and flexibility (ideal for delicate work like cake decorating), and vinyl is economical for short tasks with frequent changes. Professional kitchens prefer nitrile because it&apos;s puncture-resistant and latex-allergy-safe. Latex is now banned in 8 U.S. states due to allergy concerns.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I use disposable or reusable gloves for kitchen work?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Use disposable nitrile gloves for handling raw meat, cross-contamination prevention, and tasks requiring frequent glove changes. Use reusable cut-resistant gloves for mandoline work, oyster shucking, and butchering. At Purple Café, we used both: disposable nitrile for food prep and safety, reusable A5 cut-resistant for mandoline and dangerous tasks. Never reuse disposable gloves.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can cut-resistant gloves protect against all knife cuts?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                No—cut-resistant gloves reduce injury severity but aren&apos;t cut-proof. They protect against slicing motions (mandolines, graters, oyster knives) but not stabbing motions or extreme pressure. ANSI A9 gloves can still be penetrated by a sharp knife with enough force. Think of them as seatbelts—they dramatically reduce injury risk but aren&apos;t absolute protection.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Do I need food-grade gloves for kitchen use?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Yes—all gloves that contact food must be food-grade certified, powder-free, and non-toxic. Food-grade certification ensures gloves don&apos;t leach chemicals into food. Regular work gloves or medical gloves may contain unsafe materials. Look for FDA-approved food contact on the packaging. At Purple Café, our purchasing policy required food-grade certification for all kitchen gloves.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">How often should I replace cut-resistant gloves?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Replace cut-resistant gloves when you see: visible damage or cuts, worn-through areas, loss of grip texture, or stretching that reduces fit. Even without visible damage, replace every 6-12 months with regular use because protective fibers degrade. Wash reusable gloves after every use with dish soap—food debris and oils reduce effectiveness.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I wear gloves when handling raw meat?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Disposable nitrile gloves are recommended for raw meat handling to prevent cross-contamination and eliminate hand-washing between tasks. Professional kitchens use gloves for raw poultry especially. However, gloves don&apos;t replace handwashing—wash hands before putting gloves on and after removing them. The key principle: gloves prevent cross-contamination but must be changed between tasks.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I use the same gloves for multiple kitchen tasks?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                No—change gloves between raw and cooked food handling, after touching surfaces or hair, and between different food types (raw meat to vegetables). Professional food safety requires glove changes for each new task. Reusing gloves between tasks defeats their purpose. At Purple Café during 200+ cover nights, prep cooks changed gloves dozens of times per shift.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the triple-layer glove technique for mandoline safety?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Layer cut-resistant glove (base protection), then disposable nitrile glove (keeps cut-resistant glove clean and provides grip), then optional second nitrile glove for extra security on your guiding hand. This technique prevents mandoline injuries while keeping cut-resistant gloves clean for reuse. I developed this at Purple Café after an injury—it provides maximum protection and easy cleanup.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Author Bio */}

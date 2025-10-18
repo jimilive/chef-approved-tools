@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User } from 'lucide-react'
-import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
@@ -46,6 +46,53 @@ export default function HowToSharpenWithTriStonePage() {
             { name: "Home", url: "https://www.chefapprovedtools.com" },
             { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
             { name: "How to Sharpen with a Stone", url: "https://www.chefapprovedtools.com/blog/how-to-sharpen-with-tri-stone" }
+          ]))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema([
+            {
+              question: "What angle should I sharpen my kitchen knives?",
+              answer: "Western knives sharpen at 20-22 degrees per side, Japanese knives at 10-15 degrees. After 6 years sharpening knives daily at Purple Café, I found most German chef knives (Wüsthof, Henckels) work best at 20 degrees, while Victorinox and Japanese knives prefer 15 degrees. Consistency matters more than the exact angle—maintain the same angle throughout the entire sharpening process."
+            },
+            {
+              question: "How often should I sharpen my kitchen knives?",
+              answer: "Sharpen every 3-6 months for home use, or every 2-4 weeks in professional kitchens. Frequency depends on usage—if you cook daily and hone regularly with a steel, sharpen every 3-4 months. Signs you need sharpening: honing no longer restores sharpness, knife crushes tomato skin instead of slicing, or requires excessive pressure. Professional kitchens sharpen weekly because of heavy use."
+            },
+            {
+              question: "What's the difference between sharpening and honing?",
+              answer: "Sharpening removes metal to create a new edge using whetstones or sharpeners, while honing realigns the existing edge using a steel rod. Think of honing as tune-up maintenance (do it every 2-3 uses) and sharpening as rebuilding (every 3-6 months). You can't hone away a truly dull edge—eventually you need to sharpen."
+            },
+            {
+              question: "What is a burr and how do I know when I've formed one?",
+              answer: "A burr is a thin metal curl that forms along the edge when you've sharpened all the way to the apex. Run your finger gently perpendicular to the edge (spine to edge, never along the edge)—you'll feel a slight catch or roughness. Once you feel a consistent burr along the entire edge, you've finished that side and can flip the knife. No burr means you haven't reached the edge yet."
+            },
+            {
+              question: "Should I use water or oil on my Norton tri-stone sharpener?",
+              answer: "Use oil—Norton tri-stone sharpeners are oil stones, not water stones. Norton recommends food-grade mineral oil or their own honing oil. Never use water on oil stones (it won't work), and don't use cooking oil or motor oil (they gum up the stone). At Purple Café, we kept a bottle of mineral oil next to the sharpening station and applied it liberally before every use."
+            },
+            {
+              question: "What's the correct grit progression for sharpening?",
+              answer: "Start with coarse grit (120-400) to establish the edge and form a burr, progress to medium (800-1000) to refine, then finish with fine (4000-8000) for polishing. The Norton IM313 tri-stone system includes coarse Crystolon, medium Crystolon, and fine India—perfect for kitchen knives. Only use coarse if the knife is very dull or damaged; otherwise start with medium."
+            },
+            {
+              question: "Why isn't my knife getting sharp even after sharpening?",
+              answer: "Common causes: not forming a burr (you haven't reached the edge), inconsistent angle (changes mid-stroke ruin the edge), starting with too fine a grit (switch to coarse), or not removing the burr at the end. If you've done 50+ strokes without feeling a burr, your grit is too fine. Drop down to coarse grit and apply more pressure."
+            },
+            {
+              question: "How do I maintain a consistent angle while sharpening?",
+              answer: "Use the coin trick—stack two quarters under the spine of an 8-inch chef's knife, which creates roughly 15 degrees. Feel this angle, then remove the coins and replicate it. Lock your wrists and move from the shoulders, not the wrists. After 6 years of daily sharpening at Purple Café, muscle memory takes over, but beginners benefit from angle guides or the coin method."
+            },
+            {
+              question: "How do I remove the burr after sharpening?",
+              answer: "The burr is removed by progressing through finer grits with lighter pressure—each finer stone creates a smaller burr until it's microscopic. On your finest stone, use very light strokes (just the weight of the knife), alternating sides after each stroke. Finish with 5-10 passes on a leather strop or the back of a leather belt. The burr should break off cleanly."
+            },
+            {
+              question: "How do I test if my knife is sharp enough?",
+              answer: "The tomato test: without holding the tomato, gently rest the knife on the skin and slice with no downward pressure—a sharp knife glides through. Or try the paper test: hold paper vertically and slice downward—sharp knives cut cleanly without tearing. At Purple Café, we used the arm-hair test (knife should shave arm hair), but tomato-slicing is safer and equally reliable."
+            }
           ]))
         }}
       />
@@ -445,6 +492,73 @@ export default function HowToSharpenWithTriStonePage() {
             abrasive do its work.
           </p>
 
+        </div>
+
+        {/* FAQ Section */}
+        <div className="border-t border-gray-200 pt-12 mt-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What angle should I sharpen my kitchen knives?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Western knives sharpen at 20-22 degrees per side, Japanese knives at 10-15 degrees. After 6 years sharpening knives daily at Purple Café, I found most German chef knives (Wüsthof, Henckels) work best at 20 degrees, while Victorinox and Japanese knives prefer 15 degrees. Consistency matters more than the exact angle—maintain the same angle throughout the entire sharpening process.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">How often should I sharpen my kitchen knives?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Sharpen every 3-6 months for home use, or every 2-4 weeks in professional kitchens. Frequency depends on usage—if you cook daily and hone regularly with a steel, sharpen every 3-4 months. Signs you need sharpening: honing no longer restores sharpness, knife crushes tomato skin instead of slicing, or requires excessive pressure. Professional kitchens sharpen weekly because of heavy use.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the difference between sharpening and honing?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Sharpening removes metal to create a new edge using whetstones or sharpeners, while honing realigns the existing edge using a steel rod. Think of honing as tune-up maintenance (do it every 2-3 uses) and sharpening as rebuilding (every 3-6 months). You can&apos;t hone away a truly dull edge—eventually you need to sharpen.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What is a burr and how do I know when I&apos;ve formed one?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                A burr is a thin metal curl that forms along the edge when you&apos;ve sharpened all the way to the apex. Run your finger gently perpendicular to the edge (spine to edge, never along the edge)—you&apos;ll feel a slight catch or roughness. Once you feel a consistent burr along the entire edge, you&apos;ve finished that side and can flip the knife. No burr means you haven&apos;t reached the edge yet.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I use water or oil on my Norton tri-stone sharpener?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Use oil—Norton tri-stone sharpeners are oil stones, not water stones. Norton recommends food-grade mineral oil or their own honing oil. Never use water on oil stones (it won&apos;t work), and don&apos;t use cooking oil or motor oil (they gum up the stone). At Purple Café, we kept a bottle of mineral oil next to the sharpening station and applied it liberally before every use.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the correct grit progression for sharpening?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Start with coarse grit (120-400) to establish the edge and form a burr, progress to medium (800-1000) to refine, then finish with fine (4000-8000) for polishing. The Norton IM313 tri-stone system includes coarse Crystolon, medium Crystolon, and fine India—perfect for kitchen knives. Only use coarse if the knife is very dull or damaged; otherwise start with medium.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why isn&apos;t my knife getting sharp even after sharpening?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Common causes: not forming a burr (you haven&apos;t reached the edge), inconsistent angle (changes mid-stroke ruin the edge), starting with too fine a grit (switch to coarse), or not removing the burr at the end. If you&apos;ve done 50+ strokes without feeling a burr, your grit is too fine. Drop down to coarse grit and apply more pressure.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I maintain a consistent angle while sharpening?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Use the coin trick—stack two quarters under the spine of an 8-inch chef&apos;s knife, which creates roughly 15 degrees. Feel this angle, then remove the coins and replicate it. Lock your wrists and move from the shoulders, not the wrists. After 6 years of daily sharpening at Purple Café, muscle memory takes over, but beginners benefit from angle guides or the coin method.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I remove the burr after sharpening?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                The burr is removed by progressing through finer grits with lighter pressure—each finer stone creates a smaller burr until it&apos;s microscopic. On your finest stone, use very light strokes (just the weight of the knife), alternating sides after each stroke. Finish with 5-10 passes on a leather strop or the back of a leather belt. The burr should break off cleanly.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I test if my knife is sharp enough?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                The tomato test: without holding the tomato, gently rest the knife on the skin and slice with no downward pressure—a sharp knife glides through. Or try the paper test: hold paper vertically and slice downward—sharp knives cut cleanly without tearing. At Purple Café, we used the arm-hair test (knife should shave arm hair), but tomato-slicing is safer and equally reliable.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Author Bio */}

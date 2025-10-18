@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User } from 'lucide-react'
-import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
@@ -41,6 +41,53 @@ export default function WhyChefsUseKosherSalt() {
             { name: "Home", url: "https://www.chefapprovedtools.com" },
             { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
             { name: "Why All Professional Cooks Use Kosher Salt", url: "https://www.chefapprovedtools.com/blog/why-professional-chefs-use-kosher-salt" }
+          ]))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema([
+            {
+              question: "What's the difference between kosher salt and table salt?",
+              answer: "Kosher salt has larger, irregular flakes with no additives, while table salt has fine, uniform grains plus iodine and anti-caking agents. Kosher salt is easier to pinch and control, dissolves at an ideal rate for seasoning, and has clean flavor untainted by iodine. The flake size makes over-salting harder—you can see and feel how much you're using."
+            },
+            {
+              question: "Why is it called \"kosher\" salt?",
+              answer: "It's called kosher salt because the large flakes are ideal for koshering meat (drawing out blood per Jewish dietary law), not because the salt itself is kosher (most salt is). The coarse texture absorbs moisture from meat surfaces effectively. The name stuck even though home cooks use it for general cooking, not koshering."
+            },
+            {
+              question: "What's the difference between Diamond Crystal and Morton kosher salt?",
+              answer: "Diamond Crystal has hollow, light flakes (280mg sodium per ¼ tsp) formed by evaporation, while Morton has dense, rolled flakes (480mg per ¼ tsp) from mechanical processing. Diamond Crystal is less salty by volume, dissolves faster, and is more forgiving—it's harder to over-salt. After 24 years using Diamond Crystal (6 at Purple Café, 18 at home), I've never switched—it's what professionals prefer."
+            },
+            {
+              question: "Can I substitute table salt for kosher salt in recipes?",
+              answer: "Use half the amount of table salt as kosher salt, but by weight not volume. 1 teaspoon table salt equals 2 teaspoons Diamond Crystal or 1¼ teaspoons Morton kosher salt. Better solution: switch to kosher salt permanently and use recipes calling for it. Volume measurements for salt are inherently inconsistent—weigh salt in grams for precision, or use kosher salt consistently."
+            },
+            {
+              question: "Why do chefs prefer Diamond Crystal over Morton?",
+              answer: "Diamond Crystal dissolves faster (reducing over-salting risk), has lighter texture (easier to pinch evenly), contains zero additives (pure salt flavor), and is less dense (more forgiving in seasoning). At Purple Café, we used exclusively Diamond Crystal because the faster dissolving rate prevented the over-salted steaks that happen with Morton. Professional kitchens standardize on one brand to ensure consistency."
+            },
+            {
+              question: "Is kosher salt healthier than table salt?",
+              answer: "No—kosher salt and table salt are both 100% sodium chloride with the same health effects gram-for-gram. The difference is that kosher salt lacks iodine (a beneficial additive in table salt) but also lacks anti-caking agents. Kosher salt's advantage is control and flavor, not health. If you use only kosher salt, ensure you get iodine from other dietary sources (seafood, dairy, eggs)."
+            },
+            {
+              question: "Does kosher salt have iodine?",
+              answer: "No—kosher salt typically contains no iodine or other additives, just pure salt. Table salt has added iodine to prevent iodine deficiency diseases. If you use kosher salt exclusively, ensure your diet includes iodine from other sources: seafood, dairy, eggs, or iodized salt in baking. At Purple Café, we used kosher salt for cooking but kept iodized salt in storage for specific recipes."
+            },
+            {
+              question: "Why does kosher salt taste different from table salt?",
+              answer: "Pure kosher salt doesn't taste different from table salt chemically—both are sodium chloride. The perceived taste difference comes from table salt's iodine and anti-caking additives, which can taste slightly metallic or chemical. Diamond Crystal's clean taste comes from purity (no additives) and how it dissolves on your tongue (the flake structure affects perception)."
+            },
+            {
+              question: "Can I use kosher salt for baking?",
+              answer: "Yes, but weigh it or reduce volume by half compared to table salt. Baking recipes are sensitive to salt quantity, and using kosher salt by volume in recipes calling for table salt over-salts baked goods. Best practice: weigh salt in grams for baking (5g table salt = 5g kosher salt), or use recipes that specify kosher salt. I use Diamond Crystal for everything, including baking."
+            },
+            {
+              question: "How should I store kosher salt?",
+              answer: "Store kosher salt in an airtight container in a cool, dry place—a jar or container near the stove for easy pinching. Salt doesn't spoil, but moisture causes clumping (especially with humid kitchens). At Purple Café, we kept Diamond Crystal in large containers on the line for easy access during service. Avoid storing directly in the cardboard box—it absorbs moisture and the box deteriorates."
+            }
           ]))
         }}
       />
@@ -369,6 +416,73 @@ export default function WhyChefsUseKosherSalt() {
             </CTAVisibilityTracker> for chef-approved essentials.
           </p>
 
+        </div>
+
+        {/* FAQ Section */}
+        <div className="border-t border-gray-200 pt-12 mt-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the difference between kosher salt and table salt?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Kosher salt has larger, irregular flakes with no additives, while table salt has fine, uniform grains plus iodine and anti-caking agents. Kosher salt is easier to pinch and control, dissolves at an ideal rate for seasoning, and has clean flavor untainted by iodine. The flake size makes over-salting harder—you can see and feel how much you&apos;re using.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why is it called &quot;kosher&quot; salt?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                It&apos;s called kosher salt because the large flakes are ideal for koshering meat (drawing out blood per Jewish dietary law), not because the salt itself is kosher (most salt is). The coarse texture absorbs moisture from meat surfaces effectively. The name stuck even though home cooks use it for general cooking, not koshering.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the difference between Diamond Crystal and Morton kosher salt?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Diamond Crystal has hollow, light flakes (280mg sodium per ¼ tsp) formed by evaporation, while Morton has dense, rolled flakes (480mg per ¼ tsp) from mechanical processing. Diamond Crystal is less salty by volume, dissolves faster, and is more forgiving—it&apos;s harder to over-salt. After 24 years using Diamond Crystal (6 at Purple Café, 18 at home), I&apos;ve never switched—it&apos;s what professionals prefer.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I substitute table salt for kosher salt in recipes?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Use half the amount of table salt as kosher salt, but by weight not volume. 1 teaspoon table salt equals 2 teaspoons Diamond Crystal or 1¼ teaspoons Morton kosher salt. Better solution: switch to kosher salt permanently and use recipes calling for it. Volume measurements for salt are inherently inconsistent—weigh salt in grams for precision, or use kosher salt consistently.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why do chefs prefer Diamond Crystal over Morton?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Diamond Crystal dissolves faster (reducing over-salting risk), has lighter texture (easier to pinch evenly), contains zero additives (pure salt flavor), and is less dense (more forgiving in seasoning). At Purple Café, we used exclusively Diamond Crystal because the faster dissolving rate prevented the over-salted steaks that happen with Morton. Professional kitchens standardize on one brand to ensure consistency.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Is kosher salt healthier than table salt?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                No—kosher salt and table salt are both 100% sodium chloride with the same health effects gram-for-gram. The difference is that kosher salt lacks iodine (a beneficial additive in table salt) but also lacks anti-caking agents. Kosher salt&apos;s advantage is control and flavor, not health. If you use only kosher salt, ensure you get iodine from other dietary sources (seafood, dairy, eggs).
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Does kosher salt have iodine?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                No—kosher salt typically contains no iodine or other additives, just pure salt. Table salt has added iodine to prevent iodine deficiency diseases. If you use kosher salt exclusively, ensure your diet includes iodine from other sources: seafood, dairy, eggs, or iodized salt in baking. At Purple Café, we used kosher salt for cooking but kept iodized salt in storage for specific recipes.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why does kosher salt taste different from table salt?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Pure kosher salt doesn&apos;t taste different from table salt chemically—both are sodium chloride. The perceived taste difference comes from table salt&apos;s iodine and anti-caking additives, which can taste slightly metallic or chemical. Diamond Crystal&apos;s clean taste comes from purity (no additives) and how it dissolves on your tongue (the flake structure affects perception).
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I use kosher salt for baking?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Yes, but weigh it or reduce volume by half compared to table salt. Baking recipes are sensitive to salt quantity, and using kosher salt by volume in recipes calling for table salt over-salts baked goods. Best practice: weigh salt in grams for baking (5g table salt = 5g kosher salt), or use recipes that specify kosher salt. I use Diamond Crystal for everything, including baking.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">How should I store kosher salt?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Store kosher salt in an airtight container in a cool, dry place—a jar or container near the stove for easy pinching. Salt doesn&apos;t spoil, but moisture causes clumping (especially with humid kitchens). At Purple Café, we kept Diamond Crystal in large containers on the line for easy access during service. Avoid storing directly in the cardboard box—it absorbs moisture and the box deteriorates.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Author Bio */}

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User, ThermometerSun, Timer, Flame } from 'lucide-react'
-import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
@@ -42,6 +42,53 @@ export default function SteakSearingPost() {
             { name: "Home", url: "https://www.chefapprovedtools.com" },
             { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
             { name: "How to Sear Steaks Like a Restaurant Chef", url: "https://www.chefapprovedtools.com/blog/how-to-sear-steaks-like-restaurant-chef" }
+          ]))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema([
+            {
+              question: "How hot should my pan be for searing steak?",
+              answer: "Your pan should reach 400-450°F for optimal searing. The Maillard reaction—which creates that beautiful brown crust—starts at 300°F and ramps up quickly around 350°F. At Purple Café, we preheated cast iron pans for 5-7 minutes over medium-high heat until a drop of water instantly vaporized. If you can't hold your hand over the pan for more than 2-3 seconds, it's ready."
+            },
+            {
+              question: "What is the Maillard reaction and why does it matter?",
+              answer: "The Maillard reaction is a chemical reaction between amino acids and sugars that creates the flavorful brown crust on seared meat. It occurs between 300-400°F and produces hundreds of flavor compounds that make restaurant-quality steaks taste so good. This is different from caramelization—the Maillard reaction involves proteins, not just sugars."
+            },
+            {
+              question: "Why does my steak stick to the pan?",
+              answer: "Sticking is normal at first—steaks will naturally stick to the pan initially, then release when a proper crust forms. The main causes of excessive sticking are: pan not hot enough, wet steak surface, or moving the steak too early. Pat steaks completely dry, preheat the pan to 400-450°F, and don't touch the steak for 3-4 minutes. When the crust is ready, it releases naturally."
+            },
+            {
+              question: "Why is my steak turning grey instead of brown?",
+              answer: "Grey steak means you're steaming, not searing. Common causes: moisture on the steak surface (always pat bone-dry with paper towels), pan not hot enough (preheat 5-7 minutes), or overcrowding the pan (which drops temperature). Moisture creates steam, and steam prevents the Maillard reaction. One steak per 10-inch pan maximum."
+            },
+            {
+              question: "Should I use oil or butter for searing steak?",
+              answer: "Use high smoke-point oil for searing—refined avocado oil (520°F), ghee (480°F), or safflower oil work best. Butter's smoke point is only 350°F, so it burns at proper searing temperatures. The professional technique: sear in high smoke-point oil, then add butter in the last minute for basting. You get the high-heat sear without burning."
+            },
+            {
+              question: "What's the best oil for high-heat steak searing?",
+              answer: "Refined avocado oil (smoke point 520°F) or ghee/clarified butter (480°F) are ideal for searing. At Purple Café during 200+ cover nights, we used clarified butter because it combines high smoke point with rich flavor. Avoid extra virgin olive oil (320°F smoke point) and regular butter (350°F)—both burn and create acrid flavors at searing temperatures."
+            },
+            {
+              question: "How do I know when to flip my steak?",
+              answer: "Wait 3-4 minutes without moving the steak, then check the edge—when you see a brown crust climbing about ⅓ up the side, it's ready to flip. The steak will release easily from the pan when the crust is properly formed. Flipping too early tears the developing crust and creates grey, steamed meat instead of a proper sear."
+            },
+            {
+              question: "Should I season steak before or after searing?",
+              answer: "Season generously with kosher salt immediately before searing—within 3 minutes of hitting the pan. Salt draws out moisture, so salting too early (10-30 minutes before) creates surface wetness that prevents browning. Professional kitchens salt right before searing, or at least 45 minutes ahead (dry brining). The 10-40 minute window is the worst time."
+            },
+            {
+              question: "Why is there so much smoke when I sear steak?",
+              answer: "Smoke is normal and expected when searing at proper temperatures (400-450°F). At Purple Café, we ran exhaust fans on high during service because proper searing produces smoke. If there's no smoke, your pan isn't hot enough for the Maillard reaction. Minimize smoke by using minimal oil (or oil the steak directly instead of the pan) and ensuring good ventilation."
+            },
+            {
+              question: "Can I sear steak in a stainless steel pan instead of cast iron?",
+              answer: "Yes—stainless steel works excellently for searing if it's heavy-gauge. Cast iron retains heat better when you add cold meat, but stainless steel heats more evenly and is easier to deglaze for pan sauces. At Purple Café, we used both. The key is a heavy pan (thin pans lose heat instantly) preheated for 5-7 minutes until screaming hot."
+            }
           ]))
         }}
       />
@@ -386,6 +433,73 @@ export default function SteakSearingPost() {
                 Get Free Restaurant Techniques
               </Link>
             </CTAVisibilityTracker>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="border-t border-gray-200 pt-12 mt-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">How hot should my pan be for searing steak?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Your pan should reach 400-450°F for optimal searing. The Maillard reaction—which creates that beautiful brown crust—starts at 300°F and ramps up quickly around 350°F. At Purple Café, we preheated cast iron pans for 5-7 minutes over medium-high heat until a drop of water instantly vaporized. If you can&apos;t hold your hand over the pan for more than 2-3 seconds, it&apos;s ready.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What is the Maillard reaction and why does it matter?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                The Maillard reaction is a chemical reaction between amino acids and sugars that creates the flavorful brown crust on seared meat. It occurs between 300-400°F and produces hundreds of flavor compounds that make restaurant-quality steaks taste so good. This is different from caramelization—the Maillard reaction involves proteins, not just sugars.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why does my steak stick to the pan?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Sticking is normal at first—steaks will naturally stick to the pan initially, then release when a proper crust forms. The main causes of excessive sticking are: pan not hot enough, wet steak surface, or moving the steak too early. Pat steaks completely dry, preheat the pan to 400-450°F, and don&apos;t touch the steak for 3-4 minutes. When the crust is ready, it releases naturally.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why is my steak turning grey instead of brown?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Grey steak means you&apos;re steaming, not searing. Common causes: moisture on the steak surface (always pat bone-dry with paper towels), pan not hot enough (preheat 5-7 minutes), or overcrowding the pan (which drops temperature). Moisture creates steam, and steam prevents the Maillard reaction. One steak per 10-inch pan maximum.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I use oil or butter for searing steak?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Use high smoke-point oil for searing—refined avocado oil (520°F), ghee (480°F), or safflower oil work best. Butter&apos;s smoke point is only 350°F, so it burns at proper searing temperatures. The professional technique: sear in high smoke-point oil, then add butter in the last minute for basting. You get the high-heat sear without burning.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the best oil for high-heat steak searing?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Refined avocado oil (smoke point 520°F) or ghee/clarified butter (480°F) are ideal for searing. At Purple Café during 200+ cover nights, we used clarified butter because it combines high smoke point with rich flavor. Avoid extra virgin olive oil (320°F smoke point) and regular butter (350°F)—both burn and create acrid flavors at searing temperatures.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I know when to flip my steak?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Wait 3-4 minutes without moving the steak, then check the edge—when you see a brown crust climbing about ⅓ up the side, it&apos;s ready to flip. The steak will release easily from the pan when the crust is properly formed. Flipping too early tears the developing crust and creates grey, steamed meat instead of a proper sear.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I season steak before or after searing?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Season generously with kosher salt immediately before searing—within 3 minutes of hitting the pan. Salt draws out moisture, so salting too early (10-30 minutes before) creates surface wetness that prevents browning. Professional kitchens salt right before searing, or at least 45 minutes ahead (dry brining). The 10-40 minute window is the worst time.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why is there so much smoke when I sear steak?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Smoke is normal and expected when searing at proper temperatures (400-450°F). At Purple Café, we ran exhaust fans on high during service because proper searing produces smoke. If there&apos;s no smoke, your pan isn&apos;t hot enough for the Maillard reaction. Minimize smoke by using minimal oil (or oil the steak directly instead of the pan) and ensuring good ventilation.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I sear steak in a stainless steel pan instead of cast iron?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Yes—stainless steel works excellently for searing if it&apos;s heavy-gauge. Cast iron retains heat better when you add cold meat, but stainless steel heats more evenly and is easier to deglaze for pan sauces. At Purple Café, we used both. The key is a heavy pan (thin pans lose heat instantly) preheated for 5-7 minutes until screaming hot.
+              </p>
+            </div>
           </div>
         </div>
 

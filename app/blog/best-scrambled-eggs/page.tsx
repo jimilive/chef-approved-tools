@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, Clock, User, Egg } from 'lucide-react'
-import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
@@ -43,6 +43,53 @@ export default function BestScrambledEggs() {
             { name: "Home", url: "https://www.chefapprovedtools.com" },
             { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
             { name: "The Simplest Way to Perfect Scrambled Eggs", url: "https://www.chefapprovedtools.com/blog/best-scrambled-eggs" }
+          ]))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema([
+            {
+              question: "Should I add milk or water to scrambled eggs?",
+              answer: "Water creates fluffier eggs because it evaporates during cooking and \"lifts\" the eggs, while milk makes them denser and creamier. In professional kitchens, we prefer a small amount of water (1 teaspoon per egg) because it raises the coagulation temperature and prevents proteins from bonding too tightly. Add too much liquid and you'll get watery, rubbery curds."
+            },
+            {
+              question: "What temperature should I cook scrambled eggs at?",
+              answer: "Low to medium-low heat is essential for creamy scrambled eggs. Eggs coagulate between 144-158°F (62-70°C), and high heat causes proteins to tighten too quickly, creating dry, rubbery eggs. At Purple Café, we always cooked scrambled eggs gently—patience produces better texture than speed."
+            },
+            {
+              question: "Why are my scrambled eggs watery?",
+              answer: "Watery eggs result from overcooking, which causes \"weeping\"—when overheated proteins squeeze out trapped moisture like a wrung sponge. Other causes include adding too much liquid (stick to 1 teaspoon water per egg), salting too early, or adding water-rich vegetables like tomatoes without pre-cooking them."
+            },
+            {
+              question: "When should I add salt to scrambled eggs?",
+              answer: "Salt the beaten eggs 15-30 minutes before cooking, not during cooking. Early salting changes the protein structure so eggs retain moisture better and don't become watery. Adding salt while cooking breaks down the eggs and causes them to release liquid."
+            },
+            {
+              question: "How do I get small, creamy curds instead of large chunks?",
+              answer: "Continuous stirring in a figure-8 pattern with a silicone spatula creates small, creamy curds. Rapid stirring produces finer texture, while slower agitation creates larger curds. The key is constant, gentle motion over low heat—don't let the eggs sit and set in large clumps."
+            },
+            {
+              question: "Why are my scrambled eggs rubbery?",
+              answer: "Rubbery eggs are overcooked eggs. High heat or cooking too long causes water inside the eggs to evaporate, leaving tight, dry proteins. Remove eggs from heat when they're still slightly wet and glossy—residual heat will finish cooking them to perfect doneness."
+            },
+            {
+              question: "Do I need to whisk eggs thoroughly before cooking?",
+              answer: "Yes—thoroughly whisking combines yolks and whites completely, which is critical because they cook at different rates. Inadequate whisking creates dense, streaky scrambled eggs instead of uniform, fluffy ones. Whisk until no streaks of yolk or white remain."
+            },
+            {
+              question: "How much butter should I use for scrambled eggs?",
+              answer: "Professional kitchens use more butter than most home cooks expect—typically 1 tablespoon per 2-3 eggs. Butter provides fat that coats proteins, prevents sticking, and creates rich, creamy texture. The biggest mistake people make is cooking eggs too fast without enough butter."
+            },
+            {
+              question: "Should scrambled eggs be cooked covered or uncovered?",
+              answer: "Always cook scrambled eggs uncovered so moisture can escape as steam. Covering the pan traps moisture, which can make eggs watery. The evaporation of water (especially if you added a small amount) actually helps create fluffy texture."
+            },
+            {
+              question: "When should I remove scrambled eggs from the heat?",
+              answer: "Remove eggs when they're still slightly runny and wet-looking—they'll look about 80-85% done. Residual heat continues cooking them for another 30-60 seconds, bringing them to perfect doneness. Cooking until \"done\" in the pan guarantees overcooked, dry eggs on the plate."
+            }
           ]))
         }}
       />
@@ -491,6 +538,83 @@ export default function BestScrambledEggs() {
             This is one of those times.
           </p>
 
+        </div>
+
+        {/* FAQ Section */}
+        <div className="border-t border-gray-200 pt-12 mt-12">
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
+
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I add milk or water to scrambled eggs?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Water creates fluffier eggs because it evaporates during cooking and &quot;lifts&quot; the eggs, while milk makes them denser and creamier. In professional kitchens, we prefer a small amount of water (1 teaspoon per egg) because it raises the coagulation temperature and prevents proteins from bonding too tightly. Add too much liquid and you&apos;ll get watery, rubbery curds.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What temperature should I cook scrambled eggs at?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Low to medium-low heat is essential for creamy scrambled eggs. Eggs coagulate between 144-158°F (62-70°C), and high heat causes proteins to tighten too quickly, creating dry, rubbery eggs. At Purple Café, we always cooked scrambled eggs gently—patience produces better texture than speed.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why are my scrambled eggs watery?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Watery eggs result from overcooking, which causes &quot;weeping&quot;—when overheated proteins squeeze out trapped moisture like a wrung sponge. Other causes include adding too much liquid (stick to 1 teaspoon water per egg), salting too early, or adding water-rich vegetables like tomatoes without pre-cooking them.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">When should I add salt to scrambled eggs?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Salt the beaten eggs 15-30 minutes before cooking, not during cooking. Early salting changes the protein structure so eggs retain moisture better and don&apos;t become watery. Adding salt while cooking breaks down the eggs and causes them to release liquid.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I get small, creamy curds instead of large chunks?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Continuous stirring in a figure-8 pattern with a silicone spatula creates small, creamy curds. Rapid stirring produces finer texture, while slower agitation creates larger curds. The key is constant, gentle motion over low heat—don&apos;t let the eggs sit and set in large clumps.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why are my scrambled eggs rubbery?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Rubbery eggs are overcooked eggs. High heat or cooking too long causes water inside the eggs to evaporate, leaving tight, dry proteins. Remove eggs from heat when they&apos;re still slightly wet and glossy—residual heat will finish cooking them to perfect doneness.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Do I need to whisk eggs thoroughly before cooking?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Yes—thoroughly whisking combines yolks and whites completely, which is critical because they cook at different rates. Inadequate whisking creates dense, streaky scrambled eggs instead of uniform, fluffy ones. Whisk until no streaks of yolk or white remain.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">How much butter should I use for scrambled eggs?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Professional kitchens use more butter than most home cooks expect—typically 1 tablespoon per 2-3 eggs. Butter provides fat that coats proteins, prevents sticking, and creates rich, creamy texture. The biggest mistake people make is cooking eggs too fast without enough butter.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should scrambled eggs be cooked covered or uncovered?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Always cook scrambled eggs uncovered so moisture can escape as steam. Covering the pan traps moisture, which can make eggs watery. The evaporation of water (especially if you added a small amount) actually helps create fluffy texture.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">When should I remove scrambled eggs from the heat?</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Remove eggs when they&apos;re still slightly runny and wet-looking—they&apos;ll look about 80-85% done. Residual heat continues cooking them for another 30-60 seconds, bringing them to perfect doneness. Cooking until &quot;done&quot; in the pan guarantees overcooked, dry eggs on the plate.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Author Bio */}
