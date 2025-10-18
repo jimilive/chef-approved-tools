@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Best Cookware 2025 | Chef-Tested Pots & Pans',
-  description: 'Professional reviews of cookware including cast iron, stainless steel, and non-stick pans tested in commercial restaurant kitchens for years.',
+  description: 'Professional cookware reviews: Pans, pots, Dutch ovens tested in restaurant kitchens. What works, what lasts. Chef-approved for home and commercial use.',
   keywords: ['best cookware', 'cast iron', 'stainless steel pans', 'non-stick cookware', 'professional cookware'],
   openGraph: {
     title: 'Best Cookware 2025 | Chef-Tested Pots & Pans',

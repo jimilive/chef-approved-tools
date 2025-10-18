@@ -1,7 +1,16 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { DollarSign, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
+
+export const metadata: Metadata = {
+  title: 'Affordable Kitchen Appliances That Work - Budget Guide 2025',
+  description: 'Affordable kitchen appliances that work: Budget-friendly blenders, mixers tested by professional chef. Restaurant quality without premium price.',
+  alternates: {
+    canonical: '/guides/affordable-kitchen-appliances',
+  },
+}
 
 export default function AffordableKitchenAppliancesPage() {
   return (

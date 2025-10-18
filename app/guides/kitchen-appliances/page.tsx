@@ -5,7 +5,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 
 export const metadata: Metadata = {
   title: 'Best Kitchen Appliances 2024 - Commercial-Grade Equipment Guide',
-  description: 'Professional kitchen appliances that survive restaurant use. Mixers, blenders, and processors tested in high-volume operations.',
+  description: 'Professional kitchen appliance reviews. Blenders, mixers, food processors tested in restaurants. Commercial-grade performance. Chef recommendations.',
   alternates: {
     canonical: '/guides/kitchen-appliances',
   },
