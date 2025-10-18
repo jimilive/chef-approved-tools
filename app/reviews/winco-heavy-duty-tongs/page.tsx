@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/winco-heavy-duty-tongs',
   },
 
-  title: 'Winco Heavy Duty Tongs Review | 23+ Years Professional Use',
+  title: 'Winco Heavy Duty Tongs: 23-Year Test (2025)',
   description: 'Professional chef review of Winco heavy duty tongs after 23+ years of professional cooking. Restaurant-grade tongs at a fraction of the price.',
 }
 
