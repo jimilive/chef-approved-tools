@@ -113,47 +113,6 @@ export default function CookwarePage() {
         </div>
       </section>
 
-      {/* Sub-Category Navigation */}
-      <section className="mb-10">
-        <h3 className="text-xl font-bold text-slate-900 mb-4">Browse by Category</h3>
-
-        <div className="mb-6">
-          <h4 className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-3">By Material</h4>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/cookware?filter=cast-iron" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
-              Cast Iron
-            </Link>
-            <Link href="/cookware?filter=stainless-steel" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
-              Stainless Steel
-            </Link>
-            <Link href="/cookware?filter=non-stick" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
-              Non-Stick
-            </Link>
-            <Link href="/cookware?filter=enameled" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
-              Enameled Cast Iron
-            </Link>
-          </div>
-        </div>
-
-        <div>
-          <h4 className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-3">By Type</h4>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/cookware?type=skillets" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
-              Skillets & Frying Pans
-            </Link>
-            <Link href="/cookware?type=dutch-ovens" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
-              Dutch Ovens
-            </Link>
-            <Link href="/cookware?type=saucepans" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
-              Saucepans
-            </Link>
-            <Link href="/cookware?type=cookware-sets" className="px-4 py-2 bg-white border-2 border-slate-200 rounded-lg hover:border-orange-500 hover:text-orange-600 transition-colors font-medium text-slate-700">
-              Cookware Sets
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Product Grid */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 mb-12">
         {products.map((p, index) => (
