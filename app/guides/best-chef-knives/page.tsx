@@ -7,7 +7,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 
 export const metadata: Metadata = {
-  title: 'Best Chef Knives of 2025: Tested & Reviewed by a Professional Chef',
+  title: 'Best Chef Knives 2025: Pro Chef Reviews',
   description: 'Professional chef with 23+ years experience reviews the best chef knives. From German workhorses to Japanese precision—tested in real restaurant kitchens.',
   openGraph: {
     title: 'Best Chef Knives of 2025: Professional Kitchen Testing',
