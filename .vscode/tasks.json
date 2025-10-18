@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Optimize Critical Images (Test)",
+      "type": "npm",
+      "script": "optimize:critical",
+      "problemMatcher": [],
+      "detail": "Test optimization on 2 critical images (head-shot-1.jpg, scott-ai-portrait-circle.png)",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Optimize All Images",
+      "type": "npm",
+      "script": "optimize:all",
+      "problemMatcher": [],
+      "detail": "Optimize all images over 100KB in public/images directory",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Replace Originals with Optimized",
+      "type": "npm",
+      "script": "optimize:replace",
+      "problemMatcher": [],
+      "detail": "Replace original images with optimized versions (creates .backup files)",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Backup All Images",
+      "type": "npm",
+      "script": "backup:images",
+      "problemMatcher": [],
+      "detail": "Create timestamped backup of all images",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    }
+  ]
+}
