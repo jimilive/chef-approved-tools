@@ -3,7 +3,6 @@ import { useState, FormEvent } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-
 export default function ContactPage() {
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')

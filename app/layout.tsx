@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.chefapprovedtools.com'),
   title: {
     default: 'Best Kitchen Tools | Chef-Approved Reviews 2025',
-    template: '%s | Chef Approved Tools - Professional Kitchen Equipment Reviews'
+    template: '%s | Chef Approved Tools'
   },
   description: 'Discover the best chef-approved kitchen tools, tested and reviewed for home cooks. 23+ years of professional cooking. Shop smarter with expert recommendations on knives, cookware, and appliances.',
   keywords: [

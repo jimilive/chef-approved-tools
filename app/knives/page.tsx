@@ -1,11 +1,23 @@
-'use client'
 import Link from 'next/link';
 import Script from "next/script";
 import InteractiveProductCard from '@/components/InteractiveProductCard';
 import BreadcrumbSchema, { categoryBreadcrumbs } from '@/components/BreadcrumbSchema';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
+import type { Metadata } from 'next'
 
+export const dynamic = 'force-dynamic'
+
+export const metadata: Metadata = {
+  title: 'Best Chef Knives 2025 | Professional Reviews',
+  description: 'Professional chef reviews of kitchen knives tested over 20+ years in restaurant kitchens. Chef knives, paring knives, bread knives, and specialty blades.',
+  keywords: ['chef knives', 'best kitchen knives', 'professional knives', 'knife reviews', 'Victorinox', 'Wüsthof'],
+  openGraph: {
+    title: 'Best Chef Knives 2025 | Professional Reviews',
+    description: 'Chef knives tested in professional kitchens for 20+ years.',
+    type: 'website',
+  }
+}
 
 export default function KnivesPage() {
   const products = [

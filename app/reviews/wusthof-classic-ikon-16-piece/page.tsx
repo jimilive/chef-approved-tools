@@ -124,7 +124,7 @@ const faqData = [
 ]
 
 export const metadata = {
-  title: "WÜSTHOF Classic IKON 16-Piece Review: 2+ Years Professional Testing (2025)",
+  title: "WÜSTHOF Classic IKON 16-Piece: 2-Year Pro Test (2025)",
   description: "Professional chef review of WÜSTHOF Classic IKON 16-piece knife set after 2+ years in restaurant kitchens. German-forged quality, ergonomic handles, complete testing results.",
   keywords: ["WÜSTHOF Classic IKON review", "German knife set", "professional knife set", "restaurant knives", "knife block set"],
   robots: {
@@ -142,7 +142,7 @@ export const metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-16-piece',
   },
   openGraph: {
-    title: "WÜSTHOF Classic IKON 16-Piece Review: 2+ Years Professional Testing (2025)",
+    title: "WÜSTHOF Classic IKON 16-Piece: 2-Year Pro Test (2025)",
     description: "Restaurant manager's honest review after 2+ years testing this German knife set in professional kitchens",
     images: ['/logo.png'],
     url: 'https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-16-piece',

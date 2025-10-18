@@ -1,10 +1,22 @@
-'use client'
 import Script from "next/script";
 import Link from "next/link";
 import BreadcrumbSchema, { categoryBreadcrumbs } from '@/components/BreadcrumbSchema';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
+import type { Metadata } from 'next'
 
+export const dynamic = 'force-dynamic'
+
+export const metadata: Metadata = {
+  title: 'Best Cookware 2025 | Chef-Tested Pots & Pans',
+  description: 'Professional reviews of cookware including cast iron, stainless steel, and non-stick pans tested in commercial restaurant kitchens for years.',
+  keywords: ['best cookware', 'cast iron', 'stainless steel pans', 'non-stick cookware', 'professional cookware'],
+  openGraph: {
+    title: 'Best Cookware 2025 | Chef-Tested Pots & Pans',
+    description: 'Restaurant-tested cookware reviews from a professional chef.',
+    type: 'website',
+  }
+}
 
 export default function CookwarePage() {
   const products = [

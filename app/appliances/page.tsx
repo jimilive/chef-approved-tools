@@ -1,10 +1,22 @@
-'use client'
 import Script from "next/script";
 import Link from "next/link";
 import BreadcrumbSchema, { categoryBreadcrumbs } from '@/components/BreadcrumbSchema';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
+import type { Metadata } from 'next'
 
+export const dynamic = 'force-dynamic'
+
+export const metadata: Metadata = {
+  title: 'Best Kitchen Appliances 2025 | Chef-Tested Reviews',
+  description: 'Professional chef reviews of blenders, mixers, food processors, and essential kitchen appliances tested in commercial restaurant settings.',
+  keywords: ['kitchen appliances', 'blender reviews', 'mixer reviews', 'food processor reviews', 'professional kitchen equipment'],
+  openGraph: {
+    title: 'Best Kitchen Appliances 2025 | Chef-Tested Reviews',
+    description: 'Professional chef reviews of blenders, mixers, and essential kitchen appliances.',
+    type: 'website',
+  }
+}
 
 export default function AppliancesPage() {
   const products = [

@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-10-inch-chefs-knife',
   },
 
-  title: 'Victorinox Fibrox Pro 10" Chef\'s Knife Review: 23+ Years Professional Use (2025)',
+  title: 'Victorinox 10" Chef\'s Knife: 23-Year Pro Test (2025)',
   description: 'Professional chef review of the Victorinox Fibrox Pro 10-inch chef\'s knife after 23+ years of professional cooking. Complete testing, performance analysis, and honest assessment.',
 }
 

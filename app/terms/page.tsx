@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Chef Approved Tools',
+  title: 'Terms of Service',
   description: 'Terms of Service for Chef Approved Tools - Legal terms and conditions for using our website and services.',
   alternates: {
     canonical: '/terms',

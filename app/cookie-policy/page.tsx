@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy | Chef Approved Tools',
+  title: 'Cookie Policy',
   description: 'Cookie Policy for Chef Approved Tools - How we use cookies and similar technologies on our website.',
   alternates: {
     canonical: '/cookie-policy',

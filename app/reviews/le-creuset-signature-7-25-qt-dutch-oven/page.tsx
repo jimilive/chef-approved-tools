@@ -152,7 +152,7 @@ const faqData = [
 ]
 
 export const metadata = {
-  title: "Le Creuset 7.25-Qt Dutch Oven Review: 12 Years of Home Kitchen Testing",
+  title: "Le Creuset 7.25-Qt Dutch Oven: 12-Year Test (2025)",
   description: "Le Creuset 7.25-qt Signature Dutch Oven review after 12 years of home use. Enameled cast iron, 500°F oven safe, made in France since 1925. Expert testing by Chef Scott Bradley.",
   keywords: ["Le Creuset 7.25 qt dutch oven", "Le Creuset review", "cast iron dutch oven", "professional cooking", "enameled cast iron", "Le Creuset signature", "french cookware"],
   robots: {
@@ -170,7 +170,7 @@ export const metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/le-creuset-signature-7-25-qt-dutch-oven',
   },
   openGraph: {
-    title: "Le Creuset 7.25-Qt Dutch Oven Review: 12 Years of Home Kitchen Testing",
+    title: "Le Creuset 7.25-Qt Dutch Oven: 12-Year Test (2025)",
     description: "Le Creuset 7.25-qt Signature Dutch Oven review after 12 years of home use. Enameled cast iron, 500°F oven safe, made in France since 1925.",
     images: ['/logo.png'],
     url: 'https://www.chefapprovedtools.com/reviews/le-creuset-signature-7-25-qt-dutch-oven',
@@ -179,7 +179,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Le Creuset 7.25-Qt Dutch Oven Review: 12 Years of Home Kitchen Testing",
+    title: "Le Creuset 7.25-Qt Dutch Oven: 12-Year Test (2025)",
     description: "Le Creuset 7.25-qt Signature Dutch Oven review after 12 years of home use.",
     images: ['/logo.png'],
   },
