@@ -10,7 +10,14 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 
-
+export const metadata: Metadata = {
+  title: 'Method All-Purpose Cleaner: 23-Year Test',
+  description: 'Professional chef review of Method all-purpose cleaner after 23+ years in professional kitchens. Safe, effective, plant-based cleaning.',
+  keywords: ['method cleaner', 'all purpose cleaner', 'kitchen cleaner', 'non-toxic cleaner', 'plant-based cleaner'],
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/method-all-purpose-cleaner',
+  },
+}
 
 const productData = {
   name: "Method All-Purpose Cleaner",

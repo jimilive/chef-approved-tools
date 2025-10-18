@@ -10,6 +10,15 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import type { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: "Rubbermaid Cook's Scraper: Pro Kitchen Test",
+  description: "Professional chef review of the Rubbermaid Commercial cook's scraper after 18+ years of use. The ultimate kitchen spatula tested in restaurant kitchens.",
+  keywords: ["rubbermaid scraper", "cook's scraper", "kitchen spatula", "professional scraper", "rubbermaid commercial"],
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/rubbermaid-commercial-cooks-scraper',
+  },
+}
+
 const productData = {
   name: 'Rubbermaid Commercial Cook\'s Scraper / Spatula (13.5-inch)',
   slug: 'rubbermaid-commercial-cooks-scraper',

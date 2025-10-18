@@ -9,6 +9,16 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'KitchenAid Pro 600 Mixer: Restaurant Test 2025',
+  description: 'Professional chef review of the KitchenAid Professional 600 stand mixer. Powerful 6-quart mixer tested in commercial kitchen settings.',
+  keywords: ['kitchenaid professional 600', 'best stand mixer', 'kitchenaid mixer review', '6 quart mixer', 'professional mixer'],
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/kitchenaid-kp26m1xlc-professional-600',
+  },
+}
 
 const productData = {
   name: "KitchenAid Professional 600 Series Stand Mixer",
