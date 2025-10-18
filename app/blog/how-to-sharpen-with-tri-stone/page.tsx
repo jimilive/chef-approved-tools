@@ -5,7 +5,7 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'How to Sharpen with a Stone: Professional Chef\'s Technique (2025)',
+  title: 'How to Sharpen with Tri-Stone: Pro Guide 2025',
   description: 'Professional chef shares technique perfected over 6 years in restaurant kitchen. Step-by-step guide: angles, pressure, three-stage progression, troubleshooting.',
   alternates: {
     canonical: '/blog/how-to-sharpen-with-tri-stone',
