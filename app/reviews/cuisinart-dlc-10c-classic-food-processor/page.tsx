@@ -10,6 +10,15 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
+export const metadata: Metadata = {
+  title: 'Cuisinart DLC-10C Food Processor: 30-Year Test',
+  description: 'Professional chef review of the Cuisinart DLC-10C Classic food processor. The 7-cup workhorse tested through decades of use.',
+  keywords: ['cuisinart food processor', 'DLC-10C review', 'best food processor', '7 cup food processor', 'cuisinart classic'],
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/reviews/cuisinart-dlc-10c-classic-food-processor',
+  },
+}
+
 const productData = {
   name: "Cuisinart DLC-10C Classic Food Processor (7-Cup)",
   slug: "cuisinart-dlc-10c-classic-food-processor",
