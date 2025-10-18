@@ -4,7 +4,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 
 export const metadata: Metadata = {
-  title: 'Best Cookware 2024 - Restaurant-Grade Pans for Home Kitchens',
+  title: 'Best Cookware 2025: Restaurant-Grade Home Pans',
   description: 'Professional cookware recommendations from 23+ years of restaurant experience. Find pans that survive commercial use.',
   alternates: {
     canonical: '/guides/best-cookware',
