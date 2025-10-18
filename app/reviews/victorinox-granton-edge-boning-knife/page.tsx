@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Victorinox Granton Edge Boning Knife Review | 23+ Years Professional Use',
-  description: 'Professional chef review of the Victorinox Granton Edge boning knife after 23+ years of professional cooking. Essential for breaking down proteins and filleting fish.',
+  description: 'Victorinox Granton boning knife: 23-year pro test. Flexible blade for trimming, deboning. Granton edge prevents sticking. Professional butcher tool.',
 }
 
 const productData = {
