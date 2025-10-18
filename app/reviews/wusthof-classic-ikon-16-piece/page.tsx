@@ -124,7 +124,7 @@ const faqData = [
 ]
 
 export const metadata = {
-  title: "WÜSTHOF Classic IKON 16-Piece: 2-Year Pro Test (2025)",
+  title: "Wüsthof Classic Ikon 16-Pc: Pro Review 2025",
   description: "Professional chef review of WÜSTHOF Classic IKON 16-piece knife set after 2+ years in restaurant kitchens. German-forged quality, ergonomic handles, complete testing results.",
   keywords: ["WÜSTHOF Classic IKON review", "German knife set", "professional knife set", "restaurant knives", "knife block set"],
   robots: {
