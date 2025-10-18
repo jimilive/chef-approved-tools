@@ -86,7 +86,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Victorinox 10" Chef\'s Knife: 23-Year Pro Test (2025)',
-  description: 'Professional chef review of the Victorinox Fibrox Pro 10-inch chef\'s knife after 23+ years of professional cooking. Complete testing, performance analysis, and honest assessment.',
+  description: 'Victorinox 10" chef\'s knife: 23-year pro test. Perfect for larger hands and big cutting tasks. Swiss precision under $50. Honest chef review.',
 }
 
 export default function VictorinoxFibrox10InchReview() {

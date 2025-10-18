@@ -85,7 +85,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Victorinox Offset Bread Knife Review: 23+ Years Professional Use (2025)',
-  description: 'Professional chef reviews the Victorinox offset bread knife after 23+ years in restaurant kitchens. Complete testing results for bread, tomatoes, and delicate items.',
+  description: 'Victorinox offset bread knife: 23-year pro test. Perfect for crusty bread and tomatoes. Knuckle clearance that matters. Restaurant tested.',
 }
 
 export default function VictorinoxOffsetBreadKnifeReview() {

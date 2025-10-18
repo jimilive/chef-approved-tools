@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Victorinox 4" Paring Knife: 40-Year Test (2025)',
-  description: 'Professional chef review of the Victorinox 4-inch paring knife after 23+ years of professional cooking. Essential for detailed work - peeling, trimming, and precision cuts.',
+  description: 'Victorinox 4" paring knife tested 40 years. Essential for detail work, peeling, trimming. The exact knife I\'ve used since culinary school.',
 }
 
 const productData = {
