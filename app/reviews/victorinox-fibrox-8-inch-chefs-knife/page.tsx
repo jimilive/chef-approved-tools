@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Victorinox 8" Chef\'s Knife: 40-Year Test (2025)',
-  description: 'Professional chef uses Victorinox chef\'s knife for 20 years. Complete review: Why this budget-priced knife outperforms premium knives for most cooks. Performance, durability, value analysis.',
+  description: 'Victorinox 8" chef\'s knife tested 40 years. Budget price, pro performance. Why this $45 knife beats $200+ blades. Restaurant chef review.',
 }
 
 export default function VictorinoxFibrox8InchReview() {
