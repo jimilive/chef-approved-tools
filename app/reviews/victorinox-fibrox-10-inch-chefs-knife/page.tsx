@@ -870,7 +870,7 @@ export default function VictorinoxFibrox10InchReview() {
               <strong>Professional Use:</strong> Used daily in bakery sections and for delicate slicing tasks.
             </p>
             <Link
-              href="/reviews/victorinox-fibrox-offset-bread-knife"
+              href="/reviews/victorinox-offset-bread-knife"
               style={{
                 display: 'inline-block',
                 background: '#28a745',
