@@ -7,7 +7,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'How to Sear Steaks Like a Restaurant Chef',
-  description: 'Learn the professional steak searing techniques used in restaurant kitchens. 23+ years of experience from a former Mellow Mushroom Kitchen Manager reveals the secrets to perfect sears.',
+  description: 'Restaurant steak searing: 23-year chef reveals professional techniques. Perfect crust, temperature control. Former Kitchen Manager secrets.',
   keywords: ['how to sear steak', 'restaurant steak techniques', 'professional steak cooking', 'perfect steak sear', 'restaurant quality steak', 'cast iron steak', 'steak cooking temperature', 'chef steak methods'],
   alternates: {
     canonical: '/blog/how-to-sear-steaks-like-restaurant-chef',
