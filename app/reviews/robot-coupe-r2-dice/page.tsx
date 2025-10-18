@@ -107,7 +107,7 @@ const faqData = [
 
 export const metadata = {
   title: "Robot Coupe R2 Dice Review: 3-Year Commercial Test (2025)",
-  description: "Professional chef tests Robot Coupe R2 Dice for 3 years in commercial kitchen. Complete review: processing speed, reliability, ROI analysis, and commercial-grade performance.",
+  description: "Robot Coupe R2 Dice: 3-year commercial test. 2 HP motor, continuous feed. Saves hours daily in restaurant prep. Professional review.",
   keywords: ["Robot Coupe R2 Dice", "commercial food processor", "restaurant equipment", "professional kitchen", "food prep equipment", "continuous feed processor"],
   robots: {
     index: true,

@@ -76,7 +76,7 @@ export const metadata = {
   },
 
   title: 'ZUPERIA Bar Mops Review: The Industry Standard (2025)',
-  description: 'Professional chef tests ZUPERIA bar mops after years of restaurant use. The same towels used in professional kitchens worldwide. Complete durability and performance review.',
+  description: 'ZUPERIA bar mops tested years in restaurants. Professional kitchen standard. 100% cotton, absorbent, durable. Restaurant-grade towels.',
 };
 
 export default function ZuperiaBarMopsReview() {
