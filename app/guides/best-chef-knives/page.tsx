@@ -8,7 +8,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 
 export const metadata: Metadata = {
   title: 'Best Chef Knives 2025: Pro Chef Reviews',
-  description: 'Professional chef with 23+ years experience reviews the best chef knives. From German workhorses to Japanese precision—tested in real restaurant kitchens.',
+  description: 'Best chef knives 2025: Professional chef reviews 23+ years. German workhorses to Japanese precision. Real restaurant kitchen testing.',
   openGraph: {
     title: 'Best Chef Knives of 2025: Professional Kitchen Testing',
     description: 'Tested in professional kitchens doing $80K+ monthly revenue. Find your perfect chef knife.',

@@ -4,7 +4,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'Knife Care Guide: Maintain Pro Kitchen Knives',
-  description: 'Learn proper knife care techniques from a professional kitchen manager. Sharpening, storage, and maintenance tips.',
+  description: 'Professional knife care guide: Sharpening, storage, maintenance from restaurant kitchen manager. Keep your knives performing for decades.',
   alternates: {
     canonical: '/guides/knife-care',
   },
