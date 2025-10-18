@@ -10,15 +10,6 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 
-export const metadata: Metadata = {
-  title: 'Method All-Purpose Cleaner: 23-Year Test',
-  description: 'Professional chef review of Method all-purpose cleaner after 23+ years in professional kitchens. Safe, effective, plant-based cleaning.',
-  keywords: ['method cleaner', 'all purpose cleaner', 'kitchen cleaner', 'non-toxic cleaner', 'plant-based cleaner'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/method-all-purpose-cleaner',
-  },
-}
-
 const productData = {
   name: "Method All-Purpose Cleaner",
   slug: "method-all-purpose-cleaner",
@@ -95,7 +86,7 @@ export const metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/method-all-purpose-cleaner',
   },
 
-  title: 'Method All-Purpose Cleaner Review: 5-Year Home Kitchen Test',
+  title: 'Method All-Purpose Cleaner: 23-Year Test',
   description: 'Professional chef&apos;s 5-year review of Method All-Purpose Cleaner. The unicorn of cleaning products—powerful AND non-toxic. Cuts grease effortlessly.',
 };
 

@@ -9,14 +9,6 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 
-export const metadata: Metadata = {
-  title: 'Cuisinart 8" Nonstick Pan: Pro Review 2025',
-  description: 'Professional chef review of the Cuisinart 8-inch nonstick pan after 6+ months of daily testing. Perfect for eggs and small-batch cooking.',
-  keywords: ['cuisinart nonstick pan', 'best 8 inch pan', 'nonstick skillet', 'egg pan', 'cuisinart cookware'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/cuisinart-8-inch-nonstick-pan',
-  },
-}
 
 
 const productData = {
@@ -97,7 +89,7 @@ export const metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/cuisinart-8-inch-nonstick-pan',
   },
 
-  title: 'Cuisinart High Impact 8&quot; Pan Review: 6-Month Home Test',
+  title: 'Cuisinart 8" Nonstick Pan: Pro Review 2025',
   description: 'Cuisinart 8-inch nonstick pan review. Professional chef tests for 6 months. Perfect for eggs, single servings. Induction ready.',
 };
 
