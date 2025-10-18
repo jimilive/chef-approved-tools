@@ -478,6 +478,18 @@ export default function VictorinoxOffsetBreadKnifeReview() {
         </section>
 
         {/* FAQ Section with Schema Markup */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">Frequently Asked Questions</h2>
+
+          <div className="space-y-4">
+            {faqData.map((faq, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg border border-gray-200">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">{faq.question}</h3>
+                <p className="text-gray-700">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Where to Buy Section */}
         <h2>Where to Buy</h2>
