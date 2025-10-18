@@ -4,7 +4,7 @@ import { Book, Search, ChevronRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Kitchen Glossary: Equipment Terms & Knife Cuts',
-  description: 'Professional kitchen equipment terms, baking conversions, and knife cuts explained by a restaurant manager. Learn weight vs volume measurements, NSF certification, julienne, brunoise, and more professional techniques.',
+  description: 'Kitchen equipment terms, knife cuts, baking conversions explained. Professional techniques: julienne, brunoise, NSF certification, measurements. Restaurant chef guide.',
   keywords: ['kitchen equipment glossary', 'recipe conversions', 'baking by weight', 'professional measurements', 'knife cuts guide', 'NSF certification', 'full tang knife', 'julienne cut', 'brunoise', 'chiffonade', 'professional knife techniques', 'restaurant equipment terms', 'volume to weight conversions', 'professional baking techniques'],
   alternates: {
     canonical: '/glossary',
