@@ -5,7 +5,7 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Why Chefs Use Kosher Salt: Professional Kitchen Secrets (2025)',
+  title: 'Why Chefs Use Kosher Salt: Pro Kitchen Secrets',
   description: 'Discover why professional chefs prefer kosher salt. Learn about Diamond Crystal vs Morton, proper seasoning technique, and why it&apos;s essential in commercial kitchens.',
   keywords: ['kosher salt', 'diamond crystal kosher salt', 'why chefs use kosher salt', 'professional chef salt', 'seasoning technique', 'cooking with kosher salt', 'morton vs diamond crystal', 'best salt for cooking'],
   alternates: {
