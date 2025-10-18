@@ -7,7 +7,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata = {
   title: "Best Knife for Cutting Meat 2025: Victorinox Boning",
-  description: "Professional butcher's choice: Victorinox 6\" Flexible Boning Knife for trimming, deboning, and portioning meat. NSF certified, Granton edge prevents sticking. Under $30.",
+  description: "Victorinox 6\" boning knife: Professional butcher's choice. Flexible blade for trimming, deboning, portioning. Granton edge, NSF certified. Under $30.",
   keywords: "best knife for cutting meat, boning knife, butcher knife, meat trimming knife, victorinox boning knife, flexible boning knife, deboning knife",
   openGraph: {
     title: "Best Knife for Cutting Meat: Victorinox Boning Knife | Pro's Pick",
