@@ -91,15 +91,7 @@ export default function AppliancesPage() {
             position={index + 1}
             listName="category_appliances"
           >
-            <div style={{ backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', padding: '24px', border: '1px solid #e2e8f0', position: 'relative', transition: 'transform 0.2s, box-shadow 0.2s' }}
-                 onMouseEnter={(e) => {
-                   e.currentTarget.style.transform = 'translateY(-2px)';
-                   e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.15)';
-                 }}
-                 onMouseLeave={(e) => {
-                   e.currentTarget.style.transform = 'translateY(0)';
-                   e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
-                 }}>
+            <div className="bg-white rounded-xl shadow-md p-6 border border-slate-200 relative transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#1e293b', lineHeight: '1.3', flex: '1' }}>{p.name}</h3>
                 <div style={{ backgroundColor: '#fef3c7', color: '#92400e', fontSize: '0.75rem', fontWeight: '600', padding: '4px 8px', borderRadius: '4px', marginLeft: '8px' }}>
