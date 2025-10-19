@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-swivel-peeler',
   },
 
-  title: 'OXO Swivel Peeler: 23-Year Pro Test (2025)',
+  title: 'OXO Swivel Peeler: Ergonomic Design Winner',
   description: 'Professional chef review of the OXO Good Grips swivel peeler after 23+ years of professional cooking. The best peeler for comfort, performance, and durability.',
 }
 

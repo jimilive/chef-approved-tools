@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/diamond-crystal-kosher-salt',
   },
 
-  title: 'Diamond Crystal Kosher Salt Review: 18-Year Test (2025)',
+  title: 'Diamond Crystal Salt: Pro Kitchen Essential',
   description: 'Diamond Crystal Kosher Salt review: 18 years professional and home use. Chef tests texture, flavor, pinchability. Industry standard.',
 };
 

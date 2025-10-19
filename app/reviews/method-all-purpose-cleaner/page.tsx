@@ -86,7 +86,7 @@ export const metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/method-all-purpose-cleaner',
   },
 
-  title: 'Method All-Purpose Cleaner: 23-Year Test',
+  title: 'Method Cleaner: Non-Toxic Grease Cutting',
   description: 'Professional chef&apos;s 5-year review of Method All-Purpose Cleaner. The unicorn of cleaning products—powerful AND non-toxic. Cuts grease effortlessly.',
 };
 

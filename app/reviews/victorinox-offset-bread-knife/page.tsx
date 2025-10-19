@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-offset-bread-knife',
   },
 
-  title: 'Victorinox Offset Bread Knife Review: 23+ Years Professional Use (2025)',
+  title: 'Victorinox Bread Knife: Offset Ergo Design',
   description: 'Victorinox offset bread knife: 23-year pro test. Perfect for crusty bread and tomatoes. Knuckle clearance that matters. Restaurant tested.',
 }
 

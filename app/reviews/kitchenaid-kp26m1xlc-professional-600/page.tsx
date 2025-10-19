@@ -97,7 +97,7 @@ const faqData = [
 ]
 
 export const metadata = {
-  title: 'KitchenAid Pro 600 Mixer: Restaurant Test 2025',
+  title: 'KitchenAid Pro 600: Home Baker\'s Workhorse',
   description: 'KitchenAid Professional 600 review: 18 years home use. Chef tests pizza dough, attachments, durability, value. Buy-it-for-life mixer.',
   keywords: ["KitchenAid Professional 600", "KP26M1XLC review", "stand mixer", "pizza dough mixer", "home baking"],
   robots: {

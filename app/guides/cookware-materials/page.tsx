@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Cookware Materials Guide: Pro Kitchen Insights',
+  title: 'Cookware Materials: Chef\'s Metal Comparison',
   description: 'Complete guide to cookware materials from 23+ years of restaurant experience. Stainless steel, cast iron, carbon steel, and more.',
   alternates: {
     canonical: '/guides/cookware-materials',

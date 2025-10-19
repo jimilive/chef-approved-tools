@@ -4,7 +4,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 
 export const metadata: Metadata = {
-  title: 'Best Kitchen Appliances 2024 - Commercial-Grade Equipment Guide',
+  title: 'Commercial Kitchen Appliances 2025: Guide',
   description: 'Professional kitchen appliance reviews. Blenders, mixers, food processors tested in restaurants. Commercial-grade performance. Chef recommendations.',
   alternates: {
     canonical: '/guides/kitchen-appliances',

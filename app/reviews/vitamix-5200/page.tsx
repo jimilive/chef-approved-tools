@@ -74,7 +74,7 @@ const breadcrumbs = [
 ]
 
 export const metadata = {
-  title: "Vitamix 5200 Blender Review: 5-Year Professional Test (2025)",
+  title: "Vitamix 5200 Blender: 5-Year Power Test",
   description: "Professional chef tests Vitamix 5200 blender for 5+ years. Complete Vitamix blender review: power, durability, versatility, and whether this premium blender is worth it.",
   keywords: ["Vitamix 5200 review", "Vitamix blender", "professional blender", "restaurant equipment", "commercial blender", "smoothie blender"],
   robots: {

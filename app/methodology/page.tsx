@@ -3,6 +3,7 @@ import { permanentRedirect } from 'next/navigation'
 
 
 export const metadata: Metadata = {
+  title: 'Testing Methodology: Real Restaurant Trials',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/methodology',
   },

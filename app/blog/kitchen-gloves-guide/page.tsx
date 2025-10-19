@@ -7,7 +7,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Kitchen Gloves Guide: Pro Chef Recommendations',
+  title: 'Kitchen Gloves: Cut-Resistant Safety Guide',
   description: 'Learn professional kitchen glove safety from chef with 23+ years restaurant experience. Single-use, cut-resistant, and proper layering techniques.',
   keywords: ['kitchen gloves', 'cut resistant gloves', 'food safety gloves', 'disposable gloves', 'kitchen safety', 'professional chef gloves', 'mandoline safety', 'kitchen glove layering'],
   alternates: {

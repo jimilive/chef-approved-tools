@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import NewsletterForm from './NewsletterForm'
 
 export const metadata: Metadata = {
-  title: 'Equipment Insights Newsletter',
+  title: 'Equipment Newsletter: Pro Tips & Insights',
   description: 'Get equipment insights and honest product recommendations from 23+ years of restaurant experience. Join fellow home chefs getting expert insights.',
   keywords: 'kitchen tips newsletter, chef tips, cooking newsletter, professional chef advice, kitchen equipment deals',
   alternates: {

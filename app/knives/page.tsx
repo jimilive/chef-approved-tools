@@ -9,7 +9,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Chef Knives: All Reviews & Guides',
+  title: 'Chef Knives Hub: All Reviews, Guides, Tips',
   description: 'Professional chef reviews of kitchen knives tested over 20+ years in restaurant kitchens. Chef knives, paring knives, bread knives, and specialty blades.',
   keywords: ['chef knives', 'best kitchen knives', 'professional knives', 'knife reviews', 'Victorinox', 'Wüsthof'],
   openGraph: {

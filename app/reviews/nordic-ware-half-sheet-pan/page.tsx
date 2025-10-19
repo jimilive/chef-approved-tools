@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/nordic-ware-half-sheet-pan',
   },
 
-  title: 'Nordic Ware Half Sheet Pan Review: 10 Years of Testing (2025)',
+  title: 'Nordic Ware Sheet Pan: 10-Year Baker Test',
   description: 'Professional chef tests Nordic Ware half sheet pan for 10 years. Complete review: durability, performance, why it&apos;s the baker&apos;s choice, comparison to alternatives.',
   openGraph: {
     title: 'Nordic Ware Half Sheet Pan Review: 10 Years of Testing (2025)',

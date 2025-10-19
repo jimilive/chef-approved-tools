@@ -103,7 +103,7 @@ const breadcrumbs = [
 ]
 
 export const metadata: Metadata = {
-  title: "Rubbermaid Cook's Scraper: Pro Kitchen Test",
+  title: "Rubbermaid Scraper: $15 Buy-It-for-Life Tool",
   description: 'Professional chef tests Rubbermaid Commercial scraper for 18 years across 2 commercial kitchens. Complete review of this $15-20 buy-it-for-life tool.',
   keywords: ['Rubbermaid scraper review', 'commercial spatula', 'professional scraper', 'NSF certified spatula', 'best kitchen scraper', 'rubber spatula', 'high-heat spatula', 'professional kitchen spatula', 'commercial kitchen spatula'],
   robots: {

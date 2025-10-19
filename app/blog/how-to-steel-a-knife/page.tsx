@@ -7,7 +7,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'How to Steel a Knife: Pro Honing Guide (2025)',
+  title: 'How to Steel a Knife: Professional Honing',
   description: 'How to steel a knife: Professional honing technique. Honing vs sharpening explained. Perfect angle, pressure. Chef guide to knife maintenance.',
   keywords: ['how to steel a knife', 'knife honing', 'honing steel', 'knife sharpening', 'honing vs sharpening', 'chef knife care', 'knife maintenance', 'professional knife technique'],
   alternates: {

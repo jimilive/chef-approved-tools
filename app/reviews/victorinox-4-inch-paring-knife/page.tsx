@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-4-inch-paring-knife',
   },
 
-  title: 'Victorinox 4" Paring Knife: 40-Year Test (2025)',
+  title: 'Victorinox 4" Paring: 20-Year Detail Tool',
   description: 'Victorinox 4" paring knife tested 40 years. Essential for detail work, peeling, trimming. The exact knife I\'ve used since culinary school.',
 }
 

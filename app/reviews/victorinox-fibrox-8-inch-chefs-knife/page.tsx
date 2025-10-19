@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife',
   },
 
-  title: 'Victorinox 8" Chef\'s Knife: 40-Year Test (2025)',
+  title: 'Victorinox 8" Fibrox: $40 Pro Performance',
   description: 'Victorinox 8" chef\'s knife tested 40 years. Budget price, pro performance. Why this $45 knife beats $200+ blades. Restaurant chef review.',
 }
 

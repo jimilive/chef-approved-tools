@@ -3,7 +3,7 @@ import FAQSchema from '@/components/FAQSchema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Kitchen Equipment Buying Guides | Chef Approved Tools',
+  title: 'Kitchen Equipment Guides | Chef\'s Picks',
   description: 'Expert guidance from a certified chef to help you make informed equipment decisions.',
   alternates: {
     canonical: '/guides',

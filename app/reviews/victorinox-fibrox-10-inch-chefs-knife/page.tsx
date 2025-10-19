@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-10-inch-chefs-knife',
   },
 
-  title: 'Victorinox 10" Chef\'s Knife: 23-Year Pro Test (2025)',
+  title: 'Victorinox 10" Chef: Large Hand Pro Choice',
   description: 'Victorinox 10" chef\'s knife: 23-year pro test. Perfect for larger hands and big cutting tasks. Swiss precision under $50. Honest chef review.',
 }
 

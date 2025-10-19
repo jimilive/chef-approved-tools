@@ -8,6 +8,7 @@ import AffiliateButton from '@/components/AffiliateButton'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 export const metadata: Metadata = {
+  title: 'Chef Approved Tools: Restaurant-Tested Gear',
   alternates: {
     canonical: '/',
   },

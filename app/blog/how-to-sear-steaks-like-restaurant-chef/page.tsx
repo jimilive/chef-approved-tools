@@ -6,7 +6,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'How to Sear Steaks Like a Restaurant Chef',
+  title: 'How to Sear Steaks Like Restaurant Chefs',
   description: 'Restaurant steak searing: 23-year chef reveals professional techniques. Perfect crust, temperature control. Former Kitchen Manager secrets.',
   keywords: ['how to sear steak', 'restaurant steak techniques', 'professional steak cooking', 'perfect steak sear', 'restaurant quality steak', 'cast iron steak', 'steak cooking temperature', 'chef steak methods'],
   alternates: {

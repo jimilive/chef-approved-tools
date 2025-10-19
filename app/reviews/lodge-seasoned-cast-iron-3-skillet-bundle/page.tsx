@@ -113,7 +113,7 @@ export const metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/lodge-seasoned-cast-iron-3-skillet-bundle',
   },
 
-  title: "Lodge Cast Iron Skillet Set Review: 7 Years of Home Cooking",
+  title: "Lodge Cast Iron 3-Skillet: Home Use Review",
   description: "Professional review of Lodge cast iron 3-skillet bundle after 7 years of home testing. Comprehensive review of this versatile 12\", 10.25\", and 8\" skillet set.",
   keywords: ["Lodge cast iron skillet", "cast iron skillet set", "Lodge 3 skillet bundle", "cast iron cookware", "restaurant cast iron"],
   openGraph: {

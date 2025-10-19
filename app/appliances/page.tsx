@@ -8,7 +8,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Best Kitchen Appliances 2025 | Chef-Tested Reviews',
+  title: 'Kitchen Appliances 2025 | Pro Chef Reviews',
   description: 'Professional chef reviews of blenders, mixers, food processors, and essential kitchen appliances tested in commercial restaurant settings.',
   keywords: ['kitchen appliances', 'blender reviews', 'mixer reviews', 'food processor reviews', 'professional kitchen equipment'],
   openGraph: {

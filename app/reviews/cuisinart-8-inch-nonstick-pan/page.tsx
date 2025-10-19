@@ -89,7 +89,7 @@ export const metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/cuisinart-8-inch-nonstick-pan',
   },
 
-  title: 'Cuisinart 8" Nonstick Pan: Pro Review 2025',
+  title: 'Cuisinart 8" Nonstick: Perfect Eggs Every Time',
   description: 'Cuisinart 8-inch nonstick pan review. Professional chef tests for 6 months. Perfect for eggs, single servings. Induction ready.',
 };
 

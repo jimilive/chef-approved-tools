@@ -6,7 +6,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Chef-Approved Kitchen Starter Kit: 10 Essential Tools',
+  title: 'Essential Kitchen Starter: 10 Pro Tested',
   description: 'Professional kitchen starter kit: 10 essential tools tested 23+ years. From knives to cookware. Restaurant veteran-approved. Build your pro kitchen.',
   keywords: 'chef approved kitchen kit, essential kitchen tools, professional kitchen starter, restaurant tested equipment',
   alternates: {

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-granton-edge-boning-knife',
   },
 
-  title: 'Victorinox Granton Edge Boning Knife Review | 23+ Years Professional Use',
+  title: 'Victorinox Granton Boning: Firm Blade Pro',
   description: 'Victorinox Granton boning knife: 23-year pro test. Flexible blade for trimming, deboning. Granton edge prevents sticking. Professional butcher tool.',
 }
 

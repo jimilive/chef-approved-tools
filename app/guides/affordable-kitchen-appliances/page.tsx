@@ -5,7 +5,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 
 export const metadata: Metadata = {
-  title: 'Affordable Kitchen Appliances That Work - Budget Guide 2025',
+  title: 'Budget Kitchen Appliances 2025: What Works',
   description: 'Affordable kitchen appliances that work: Budget-friendly blenders, mixers tested by professional chef. Restaurant quality without premium price.',
   alternates: {
     canonical: '/guides/affordable-kitchen-appliances',

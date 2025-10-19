@@ -96,7 +96,7 @@ const faqData = [
 ]
 
 export const metadata = {
-  title: 'Cuisinart DLC-10C Food Processor: 30-Year Test',
+  title: 'Cuisinart DLC-10C: 30-Year Durability Test',
   description: 'Cuisinart DLC-10C review: 30 years home use. Professional chef tests shredding, slicing, durability. Buy-it-for-life appliance.',
   keywords: ["Cuisinart DLC-10C", "Cuisinart food processor review", "7-cup food processor", "buy-it-for-life appliances"],
   robots: {

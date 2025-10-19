@@ -152,7 +152,7 @@ const faqData = [
 ]
 
 export const metadata = {
-  title: "Le Creuset 7.25-Qt Dutch Oven: 12-Year Test",
+  title: "Le Creuset 7.25-Qt: 12-Year Dutch Oven Test",
   description: "Le Creuset 7.25-qt Dutch Oven tested 12 years. French enameled cast iron, 500°F oven safe. Buy-it-for-life quality. Honest chef review.",
   keywords: ["Le Creuset 7.25 qt dutch oven", "Le Creuset review", "cast iron dutch oven", "professional cooking", "enameled cast iron", "Le Creuset signature", "french cookware"],
   robots: {
