@@ -201,8 +201,8 @@ export default function HomePage() {
               <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Professional Kitchens</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">Age 54</div>
-              <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Still Cooking Pro</div>
+              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">Lifetime Learner</div>
+              <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Still Researching</div>
             </div>
           </div>
         </div>
