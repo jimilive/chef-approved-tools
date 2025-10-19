@@ -27,7 +27,7 @@ const sampleProducts = [
     rating: 4.7,
     reviews: 234,
     image: '/logo.png',
-    affiliateUrl: 'https://amzn.to/4o7nWrQ',
+    affiliateUrl: 'https://amzn.to/48RALd9',
     badge: 'Restaurant Tested',
     tested: '5+ years proven'
   },
@@ -106,9 +106,9 @@ function EnhancedProductCard({ product }: { product: any }) {
   </CTAVisibilityTracker>
 
           {/* Add comparison hook */}
-          <button type="button" className="w-full text-blue-600 hover:text-blue-700 font-medium text-sm py-2 border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors">
+          {/* <button type="button" className="w-full text-blue-600 hover:text-blue-700 font-medium text-sm py-2 border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors">
             📊 See Why I Chose This Over 12 Others
-          </button>
+          </button>*/}
         </div>
 
         {/* Trust signals */}
@@ -258,8 +258,8 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🔄</span>
               </div>
-              <h3 className="font-bold mb-2">Back in Action</h3>
-              <p className="text-sm text-gray-600">Returned to professional cooking in 2025</p>
+              <h3 className="font-bold mb-2">Always Researching</h3>
+              <p className="text-sm text-gray-600">Lifetime student of the science of cooking</p>
             </div>
           </div>
         </div>
