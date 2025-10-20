@@ -4,7 +4,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'Cookware Materials: Chef\'s Metal Comparison',
-  description: 'Professional guide to cookware materials: Stainless, cast iron, copper, carbon steel, and more. 23 years restaurant experience.',
+  description: 'Complete guide to cookware materials from 23+ years of restaurant experience. Stainless steel, cast iron, carbon steel, and more.',
   alternates: {
     canonical: '/guides/cookware-materials',
   },

@@ -7,7 +7,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'Essential Kitchen Starter: 10 Pro Tested',
-  description: '10 essential kitchen tools: Pro-tested starter kit. Knives, cookware tested 23 years restaurant use. Dishwasher safe. Still perfect after decades.',
+  description: 'Professional kitchen starter kit: 10 essential tools tested 23+ years. Knives, cookware. Restaurant veteran-approved. Build your pro kitchen.',
   keywords: 'chef approved kitchen kit, essential kitchen tools, professional kitchen starter, restaurant tested equipment',
   alternates: {
     canonical: '/kitchen-bundle',
