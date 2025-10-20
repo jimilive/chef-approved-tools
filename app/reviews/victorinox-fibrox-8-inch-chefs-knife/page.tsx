@@ -107,7 +107,7 @@ export default function VictorinoxFibrox8InchReview() {
             },
             {
               question: "Is an affordable knife really good enough for serious cooking?",
-              answer: "Absolutely yes. This is the exact knife used in professional kitchens worldwide, including Michelin-starred restaurants. It's not a 'budget alternative'—it's professional equipment that happens to be accessible. After 23 years in professional kitchens, I can tell you that line cooks and chefs prefer Victorinox because it works better for actual cooking than expensive knives. The thin blade and perfect balance deliver more control than heavy, thick premium knives. NSF certification means this knife meets the same commercial standards as equipment costing many times more. It's approved for professional use—not just 'home cooking.' The knife doesn't know its price point. It only knows how sharp it is and how well it cuts. The Victorinox excels at both."
+              answer: "Absolutely yes. This is the exact knife used in professional kitchens worldwide, from casual dining to fine dining operations. It's not a 'budget alternative'—it's professional equipment that happens to be accessible. After 24 years in professional kitchens—including 10 years using Victorinox at Purple Café, Feierabend, Paragary's, and Il Pizzaiolo—I can tell you that line cooks and chefs prefer Victorinox because it works better for actual cooking than expensive knives. The thin blade and perfect balance deliver more control than heavy, thick premium knives. NSF certification means this knife meets the same commercial standards as equipment costing many times more. It's approved for professional use—not just 'home cooking.' The knife doesn't know its price point. It only knows how sharp it is and how well it cuts. The Victorinox excels at both."
             },
             {
               question: "Victorinox vs Wusthof: Which should I buy?",
@@ -123,7 +123,7 @@ export default function VictorinoxFibrox8InchReview() {
             },
             {
               question: "Do professional chefs really use Victorinox?",
-              answer: "Yes, extensively. Walk into any professional kitchen and you'll see Victorinox knives everywhere—from small cafes to Michelin-starred restaurants. Why pros choose Victorinox: Performance over prestige (chefs care about how it cuts, not how it looks), practical pricing (replacing lost knives is less painful), versatile (thin blade excels at detailed work), NSF certified (meets health department requirements), easy maintenance (kitchen staff can sharpen without expensive equipment). Personal experience: In 23 years in professional kitchens, my knife kit included Victorinox as standard issue. Some chefs brought expensive Japanese knives for specific tasks, but the Victorinox handled 80% of daily cutting."
+              answer: "Yes, extensively. Walk into any professional kitchen and you'll see Victorinox knives everywhere—from small cafes to fine dining establishments. Why pros choose Victorinox: Performance over prestige (chefs care about how it cuts, not how it looks), practical pricing (replacing lost knives is less painful), versatile (thin blade excels at detailed work), NSF certified (meets health department requirements), easy maintenance (kitchen staff can sharpen without expensive equipment). Personal experience: I used Victorinox for 10 years across four professional kitchens (Purple Café, Feierabend, Paragary's, Il Pizzaiolo), and I've continued using them at home for 20 years. Some chefs brought expensive Japanese knives for specific tasks, but the Victorinox handled 80% of daily cutting."
             },
             {
               question: "How often does a Victorinox knife need sharpening?",
@@ -256,7 +256,7 @@ export default function VictorinoxFibrox8InchReview() {
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Professional Verdict: The Best Value in Kitchen Knives</h2>
 
             <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-              <strong>After 40 years of cooking and 23 years in professional kitchens,
+              <strong>After using Victorinox for 10 years in professional kitchens and 20 years at home,
               this accessible knife remains my daily workhorse.</strong> The thin blade delivers
               professional control, the fibrox handle prevents fatigue during extended prep sessions,
               and the edge retention rivals knives costing several times more.
@@ -296,7 +296,7 @@ export default function VictorinoxFibrox8InchReview() {
                 💡 Professional Reality Check
               </p>
               <p style={{ margin: '10px 0 0 0', fontSize: '14px' }}>
-                In 23 years in professional kitchens, I&apos;ve seen expensive premium knives and
+                In 24 years in professional kitchens, I&apos;ve seen expensive premium knives and
                 Victorinox knives side-by-side. The expensive knives look prettier on the magnetic strip.
                 The Victorinox knives get used daily because they work better for actual cooking.
               </p>
@@ -561,10 +561,10 @@ export default function VictorinoxFibrox8InchReview() {
               <div>
                 <div>
                   <p><strong>Answer:</strong> Absolutely yes. This is the exact knife used in professional
-                  kitchens worldwide, including Michelin-starred restaurants. It&apos;s not a &quot;budget alternative&quot;—
+                  kitchens worldwide, from casual dining to fine dining operations. It&apos;s not a &quot;budget alternative&quot;—
                   it&apos;s professional equipment that happens to be accessible.</p>
 
-                  <p><strong>Professional reality:</strong> After 23 years in professional kitchens,
+                  <p><strong>Professional reality:</strong> After using Victorinox for 10 years professionally (Purple Café, Feierabend, Paragary's, Il Pizzaiolo) and 20 years at home,
                   I can tell you that line cooks and chefs prefer Victorinox because it works better for
                   actual cooking than expensive knives. The thin blade and perfect balance deliver
                   more control than heavy, thick premium knives.</p>
@@ -657,11 +657,11 @@ export default function VictorinoxFibrox8InchReview() {
               <div>
                 <div>
                   <p><strong>Answer:</strong> Yes, extensively. Walk into any professional kitchen and you&apos;ll
-                  see Victorinox knives everywhere—from small cafes to Michelin-starred restaurants.</p>
+                  see Victorinox knives everywhere—from small cafes to fine dining establishments.</p>
 
                   <p><strong>Why pros choose Victorinox:</strong> Performance over prestige (chefs care about how it cuts, not how it looks), practical pricing (replacing lost knives is less painful), versatile (thin blade excels at detailed work), NSF certified (meets health department requirements), easy maintenance (kitchen staff can sharpen without expensive equipment)</p>
 
-                  <p><strong>Personal experience:</strong> In 23 years in professional kitchens, my
+                  <p><strong>Personal experience:</strong> I used Victorinox for 10 years across four professional kitchens, and my
                   knife kit included Victorinox as standard issue. Some chefs brought expensive Japanese
                   knives for specific tasks, but the Victorinox handled 80% of daily cutting.</p>
                 </div>

@@ -251,7 +251,7 @@ export default function Lodge3SkilletBundleReview() {
               <CheckCircle className="w-6 h-6 text-orange-800 flex-shrink-0 mt-1" />
               <div>
                 <p className="text-slate-800 font-medium leading-relaxed mb-2">
-                  <strong>PROFESSIONAL VERDICT:</strong> After 7 years of weekly home cooking, informed by my 23 years managing professional kitchens, these skillets deliver professional-grade performance at exceptional value.
+                  <strong>PROFESSIONAL VERDICT:</strong> After 7 years of weekly home cooking, informed by my 24 years in professional kitchens, these skillets deliver professional-grade performance at exceptional value.
                 </p>
                 <p className="text-slate-700 text-sm">
                   The heat retention is exceptional (5/5), the durability is literally lifetime-quality with proper care,

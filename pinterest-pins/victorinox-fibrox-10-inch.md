@@ -7,11 +7,11 @@
 
 ## Pin Title Options
 1. "Victorinox 10\" Chef's Knife Review - Professional Chef's Choice"
-2. "Best Budget Chef's Knife for Larger Hands - 40 Years Experience"
+2. "Best Budget Chef's Knife for Larger Hands - 24 Years Professional Experience"
 3. "Professional Quality Chef's Knife Under $50 - Tested & Approved"
 
 ## Pin Description (500 characters max)
-Professional chef review of the Victorinox Fibrox Pro 10" chef's knife after 40 years in restaurant kitchens. Perfect for larger hands and bigger cuts. Same quality as $200+ knives for just $50. Used in Michelin-starred restaurants worldwide. #chefknife #kitchentools #cookingtools #professionalchef
+Professional chef review of the Victorinox Fibrox Pro 10" chef's knife after 24 years in professional kitchens. Perfect for larger hands and bigger cuts. Same quality as $200+ knives for just $50. Used in professional kitchens worldwide. #chefknife #kitchentools #cookingtools #professionalchef
 
 ## Link
 https://www.chefapprovedtools.com/reviews/victorinox-fibrox-10-inch-chefs-knife

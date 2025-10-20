@@ -277,7 +277,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             <h2>Professional Verdict</h2>
 
             <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-              <strong>After 14 years of daily home use, informed by my 23 years managing professional
+              <strong>After 14 years of daily home use, informed by my 24 years in professional
               kitchens, this cutting board represents more than kitchen equipment—it&apos;s a generational
               investment.</strong> The 24x18 size provides exceptional work space efficiency, while the
               21-pound weight ensures rock-solid stability during even the most aggressive prep work.

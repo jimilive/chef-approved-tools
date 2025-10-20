@@ -137,7 +137,7 @@ export default function ComparisonPage() {
             </div>
             <div>
               <p className="font-semibold text-slate-900">Scott Bradley</p>
-              <p className="text-sm text-slate-600">Professional Chef • 40 Years Experience Since Age 15</p>
+              <p className="text-sm text-slate-600">24 Years Professional Kitchen Experience</p>
             </div>
           </div>
 

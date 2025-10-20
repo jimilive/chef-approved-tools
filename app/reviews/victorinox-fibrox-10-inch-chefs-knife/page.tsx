@@ -214,7 +214,7 @@ export default function VictorinoxFibrox10InchReview() {
           </p>
           
           <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-            Same professional quality used in Michelin-starred restaurants worldwide, just sized for bigger hands and bigger jobs.
+            Same professional quality used in professional kitchens worldwide, just sized for bigger hands and bigger jobs.
           </p>
           
           <div style={{ 
@@ -285,7 +285,7 @@ export default function VictorinoxFibrox10InchReview() {
             </p>
 
             <p>
-              This is the same knife used in Michelin-starred restaurants worldwide. Not because it&apos;s pretty - because it works.
+              This is the same knife used in professional kitchens worldwide. Not because it&apos;s pretty - because it works.
             </p>
           </div>
         </section>
@@ -748,7 +748,7 @@ export default function VictorinoxFibrox10InchReview() {
           </p>
 
           <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-            The high-carbon stainless steel holds an edge remarkably well, the Fibrox handle provides superior grip even when wet, and the 10&quot; blade length gives you the reach needed for efficient cutting through larger items. This is the same knife used in Michelin-starred restaurants - not because of marketing, but because it simply works.
+            The high-carbon stainless steel holds an edge remarkably well, the Fibrox handle provides superior grip even when wet, and the 10&quot; blade length gives you the reach needed for efficient cutting through larger items. This is the same knife used in professional kitchens worldwide - not because of marketing, but because it simply works.
           </p>
           
           <div style={{

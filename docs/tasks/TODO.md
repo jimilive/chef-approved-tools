@@ -15,6 +15,63 @@
 
 ---
 
+## 🚨 CRITICAL - CREDIBILITY & MESSAGING FIX (IN PROGRESS - OCT 20, 2025)
+
+**⚠️ AUTHENTICITY & TRUST CRITICAL**
+
+### Background:
+Site content contained inconsistent and inauthentic credibility claims:
+1. "40 years of cooking experience" (conflated home + professional)
+2. "Victorinox used in Michelin-starred restaurants worldwide" (NOT user's experience - AI-generated fiction)
+3. "23 years" vs "24 years" inconsistency
+
+### VERIFIED Correct Positioning (Oct 20, 2025):
+- **24 years of PROFESSIONAL kitchen experience** (1986-2015: Wendy's at 15 → Last role 2015)
+- **45 years total cooking experience** (age 10 to 55) - use for personal story/Tier 2 content only
+- **YOUR authentic restaurants:** Wendy's (1986-1988), Mellow Mushroom (1992-1994, Kitchen Manager), Purple Café (2007-2012, 6 years), others
+- **YOUR authentic achievements:** $80K+ monthly operations management, A.A.S. Culinary Arts (Seattle Central), B.S. Business
+- **Current status:** Cooking at home in apartment with electric range (NOT currently working professionally)
+- **Apartment kitchen honesty:** Use as STRENGTH in Tier 2 reviews - shows real-world application
+
+### Progress - Phase 1 (Critical User-Facing Content):
+- [x] **COMPLETED:** Lead magnet content (`/lib/lead-magnet-content.ts`) - 4 changes
+  - [x] Removed "Michelin-starred restaurants worldwide" claim
+  - [x] Changed "40 years of cooking" to accurate messaging
+  - [x] Updated footer credentials to be specific and authentic
+  - [x] Added authentic restaurant names
+- [ ] **NEXT:** Victorinox 8" review (`app/reviews/victorinox-fibrox-8-inch-chefs-knife/page.tsx`) - 8 changes
+  - [ ] Remove 4 Michelin references
+  - [ ] Update "23 years" to "24 years" (4 instances)
+- [ ] **NEXT:** Victorinox 10" review (`app/reviews/victorinox-fibrox-10-inch-chefs-knife/page.tsx`) - 3 changes
+- [ ] **NEXT:** ZUPERIA bar mops review - 1 change
+- [ ] **NEXT:** Pinterest pin - 1 change
+- [ ] **PENDING:** Remaining 45+ files with "23 years" → "24 years" updates
+  - [ ] Homepage
+  - [ ] About page
+  - [ ] All 27 product reviews
+  - [ ] All 8 blog posts
+  - [ ] Newsletter signup forms
+  - [ ] Email capture modals
+  - [ ] Author bios
+- [ ] **URGENT:** Remove all Michelin-starred references across site
+  - [ ] Search codebase for "Michelin"
+  - [ ] Remove or replace with YOUR authentic experience
+- [ ] **URGENT:** Create messaging consistency guide
+  - [ ] Document approved credential statements
+  - [ ] Document authentic restaurant experience to reference
+  - [ ] Document when to use "professional" vs "home" testing claims
+  - [ ] Document three-tier system messaging
+- [ ] Verify all professional usage claims are accurate (location, task, years)
+- [ ] Update templates and components with corrected messaging
+
+### Why This Is Critical:
+- **Authenticity is your competitive advantage** - No other affiliate site has 23+ years professional experience
+- **False claims damage trust** - Claiming Michelin experience you don't have is actively harmful
+- **Three-tier credibility system depends on truth** - Can't build trust on inauthentic foundation
+- **Legal/ethical risk** - Misrepresenting professional credentials could violate FTC guidelines
+
+---
+
 ## 🚨 IMMEDIATE NEXT ACTIONS
 
 ### This Weekend (Oct 19-20):

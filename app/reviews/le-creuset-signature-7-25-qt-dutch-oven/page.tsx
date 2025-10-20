@@ -447,7 +447,7 @@ export default function LeCreuset725QtReview() {
             <div className="mt-6 bg-blue-100 border border-blue-300 rounded-lg p-4">
               <p className="text-blue-900 font-semibold mb-2">Key Takeaway from 12 Years of Home Use:</p>
               <p className="text-blue-800 text-sm">
-                The Le Creuset isn&apos;t just &quot;premium&quot; branding—it delivers measurable performance advantages in heat retention, weight management, and long-term durability. After cooking 500+ meals in my home kitchen, informed by my 23 years managing professional kitchens, I can confidently say this pot earned its reputation through engineering, not marketing.
+                The Le Creuset isn&apos;t just &quot;premium&quot; branding—it delivers measurable performance advantages in heat retention, weight management, and long-term durability. After cooking 500+ meals in my home kitchen, informed by my 24 years in professional kitchens, I can confidently say this pot earned its reputation through engineering, not marketing.
               </p>
             </div>
           </div>
@@ -1023,7 +1023,7 @@ export default function LeCreuset725QtReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-4">The Bottom Line: My Professional Verdict</h2>
           <div className="bg-slate-800 text-white rounded-xl p-6">
             <p className="text-lg leading-relaxed mb-4">
-              After 12 years of regular home cooking, informed by my 23 years managing professional kitchens, the Le Creuset 7.25-qt Dutch Oven has earned its place as the most valuable piece in my kitchen arsenal. The combination of exceptional heat retention, easy cleanup, and durability justifies every dollar of the premium price for cooks who use Dutch ovens regularly (3+ times weekly).
+              After 12 years of regular home cooking, informed by my 24 years in professional kitchens, the Le Creuset 7.25-qt Dutch Oven has earned its place as the most valuable piece in my kitchen arsenal. The combination of exceptional heat retention, easy cleanup, and durability justifies every dollar of the premium price for cooks who use Dutch ovens regularly (3+ times weekly).
             </p>
             <p className="leading-relaxed mb-4">
               <strong>This is more than cookware—it&apos;s a cooking system that elevates results consistently.</strong> The ability to execute complex cooking techniques—from sautéing and deglazing to braising—all in one vessel makes this a transformative kitchen investment. The enameled interior eliminates the maintenance burden of traditional cast iron while delivering identical performance benefits.

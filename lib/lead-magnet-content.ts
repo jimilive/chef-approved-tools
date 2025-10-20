@@ -1,9 +1,9 @@
 // Lead magnet content for "The 11 Tools I Use Most in My Home Kitchen"
 
 export const leadMagnetContent = {
-  title: "The 11 Tools I Use Most in My Home Kitchen",
-  subtitle: "My daily workhorse tools after 40 years of cooking",
-  author: "Scott Bradley, Professional Chef & Kitchen Manager",
+  title: "The 11 Tools I Use Most: From Professional Kitchens to My Apartment Kitchen",
+  subtitle: "My daily workhorse tools, tested in professional kitchens and proven at home",
+  author: "Scott Bradley - 24 Years Professional Kitchen Experience",
 
   // The 11 actual tools with Amazon affiliate links
   tools: [
@@ -90,7 +90,7 @@ export const leadMagnetContent = {
     {
       title: "Why Only 11 Tools?",
       content: [
-        "After 23+ years of professional cooking—starting at Wendy's at 15, through fine dining, to managing kitchen operations at Mellow Mushroom—I've used thousands of tools.",
+        "I've been cooking since I was 10 years old—45 years of experience, including 24 years working professionally from Wendy's at 15 to managing operations at Mellow Mushroom and 6 years at Purple Café.",
         "When I set up my home kitchen, I kept only what I actually reach for. Everything else is marketing.",
         "These 11 tools handle 99% of what I cook at home. No junk drawers. No single-use gadgets. Just workhorses that earn their space."
       ]
@@ -107,7 +107,7 @@ export const leadMagnetContent = {
       title: "The Victorinox Advantage",
       content: [
         "Notice 5 of the 11 tools are Victorinox knives? There's a reason.",
-        "Victorinox makes the knives used in Michelin-starred restaurants worldwide. Not because they're pretty—because they work.",
+        "Victorinox makes the knives I used daily at Purple Café and at several other professional kitchens. Not because they're pretty—because they work.",
         "Sharp out of the box, easy to maintain, dishwasher-safe handles (though I hand-wash the blades), and they cost a fraction of 'luxury' brands.",
         "I've tried Japanese carbon steel, German forged, ceramic—you name it. For daily professional use, Victorinox wins every time."
       ]
@@ -183,7 +183,7 @@ export const leadMagnetContent = {
   footer: {
     contact: "Questions? Email scott@chefapprovedtools.com",
     website: "www.chefapprovedtools.com",
-    credentials: "Scott Bradley - 40 Years Cooking Cooking Experience, Seattle Central Culinary Graduate, Former Kitchen Manager at Mellow Mushroom"
+    credentials: "Scott Bradley - 24 Years Professional Kitchen Experience, A.A.S. Culinary Arts (Seattle Central College), Former Kitchen Manager at Mellow Mushroom"
   }
 }
 

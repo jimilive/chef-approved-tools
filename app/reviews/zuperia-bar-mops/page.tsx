@@ -167,7 +167,7 @@ export default function ZuperiaBarMopsReview() {
         <h2 className="text-2xl font-bold mb-4">Professional Verdict</h2>
 
         <p style={{ fontSize: '18px', lineHeight: '1.6', marginBottom: '20px' }}>
-          <strong>Walk into any professional kitchen in America—from neighborhood cafés to Michelin-starred restaurants—and you&apos;ll find bar mops exactly like these.</strong> ZUPERIA makes the same 100% ring spun cotton towels that have been the restaurant industry standard for decades. After years of testing them in commercial environments where towel failure means operational problems, these proved why every professional kitchen uses them.
+          <strong>Walk into any professional kitchen in America—from neighborhood cafés to fine dining establishments—and you&apos;ll find bar mops exactly like these.</strong> ZUPERIA makes the same 100% ring spun cotton towels that have been the restaurant industry standard for decades. After years of testing them in commercial environments where towel failure means operational problems, these proved why every professional kitchen uses them.
         </p>
 
         <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
@@ -379,7 +379,7 @@ export default function ZuperiaBarMopsReview() {
         </p>
 
         <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
-          <li> Essential equipment checklist from 40 years cooking + 23 years managing restaurants</li>
+          <li> Essential equipment checklist from 24 years in professional kitchens</li>
           <li> Restaurant-grade vs home-grade: What actually matters and what&apos;s just marketing</li>
           <li> Cost-per-use analysis framework for smart purchasing decisions</li>
           <li> Maintenance protocols that extend equipment life by years</li>

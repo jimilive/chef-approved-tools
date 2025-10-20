@@ -602,7 +602,7 @@ export default function DiamondCrystalKosherSaltReview() {
           <li>✓ Which expensive items are worth it (and which aren&apos;t)</li>
           <li>✓ Professional techniques for maintaining your equipment</li>
           <li>✓ Brand recommendations based on restaurant experience</li>
-          <li>✓ Money-saving tips from 23 years of kitchen management</li>
+          <li>✓ Money-saving tips from 24 years of professional kitchen experience</li>
         </ul>
 
         <div style={{ textAlign: 'center', marginTop: '25px' }}>
@@ -903,7 +903,7 @@ export default function DiamondCrystalKosherSaltReview() {
           </p>
           <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
             Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend.
-            23 years in professional kitchens. A.A.S. Culinary Arts from Seattle Central College, B.S. Business
+            24 years in professional kitchens. A.A.S. Culinary Arts from Seattle Central College, B.S. Business
             Administration from University of Montana. Diamond Crystal Kosher Salt has been the only salt in my kitchens—professional
             and personal—for 18 years. If there was a better option, I&apos;d have found it by now.
           </p>

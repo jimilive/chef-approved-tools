@@ -59,7 +59,7 @@ const breadcrumbs = [
 const faqData = [
   {
     question: "How long does the OXO Good Grips Swivel Peeler typically last?",
-    answer: "With proper care, this peeler can last 15-20+ years. Mine has been in daily use for over 23 years and still performs excellently. The blade stays sharp for 5+ years of regular use, and replacement blades are available if needed."
+    answer: "With proper care, this peeler can last 15-20+ years. Mine has been in daily use for over 24 years and still performs excellently. The blade stays sharp for 5+ years of regular use, and replacement blades are available if needed."
   },
   {
     question: "Is this peeler dishwasher safe?",
@@ -494,7 +494,7 @@ export default function OXOGoodGripsSwivelPeelerReview() {
             </div>
 
             <p className="text-slate-700 mb-4">
-              <strong>Value comparison:</strong> A cheap $2 peeler typically lasts 6-12 months before the blade dulls or handle breaks. Over 23 years, you&apos;d replace it 21-42 times, spending $42-84 total. This OXO peeler costs $10 once and outlasts them all.
+              <strong>Value comparison:</strong> A cheap $2 peeler typically lasts 6-12 months before the blade dulls or handle breaks. Over 24 years, you&apos;d replace it 22-44 times, spending $44-88 total. This OXO peeler costs $10 once and outlasts them all.
             </p>
 
             <div className="bg-green-50 p-4 rounded-lg border border-green-200">
@@ -535,7 +535,7 @@ export default function OXOGoodGripsSwivelPeelerReview() {
                 <p className="text-slate-700 text-sm">
                   <strong>Professional use lifespan:</strong> 23+ years and counting<br/>
                   <strong>Dishwasher cycles:</strong> 500+ without degradation<br/>
-                  <strong>Blade replacement needed:</strong> Never (in 23 years)
+                  <strong>Blade replacement needed:</strong> Never (in 24 years)
                 </p>
               </div>
 
@@ -736,7 +736,7 @@ export default function OXOGoodGripsSwivelPeelerReview() {
             <div className="bg-white p-6 rounded-lg border border-gray-200">
               <h3 className="font-bold text-slate-900 mb-2">How long does the OXO Good Grips Swivel Peeler typically last?</h3>
               <p className="text-slate-700">
-                With proper care, this peeler can last 15-20+ years. Mine has been in daily use for over 23 years and still performs excellently. The blade stays sharp for 5+ years of regular use, and replacement blades are available if needed.
+                With proper care, this peeler can last 15-20+ years. Mine has been in daily use for over 24 years and still performs excellently. The blade stays sharp for 5+ years of regular use, and replacement blades are available if needed.
               </p>
             </div>
 

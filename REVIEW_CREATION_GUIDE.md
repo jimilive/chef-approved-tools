@@ -543,11 +543,11 @@ Customize with relevant experience:
   <div>
     <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
     <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-      Professional Chef • 40 Years Experience Since Age 15
+      24 Years Professional Kitchen Experience
     </p>
     <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
       [Customize this paragraph to mention specific experience relevant to THIS product.
-      For example: "Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience.
+      For example: "Former Kitchen Manager at Mellow Mushroom with 24 years of professional kitchen experience.
       X years of [product] use in [context] proves [key finding]—not just manufacturer claims."]
     </p>
     <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold', textDecoration: 'none' }}>
@@ -1169,9 +1169,9 @@ that's [X time period] of [proof/evidence/testing] that demonstrates [key findin
 ```
 
 **Examples:**
-- "I've used Victorinox Fibrox chef's knives daily for 40 years in professional kitchens. That's not brand loyalty—that's four decades of testing that proves you don't need $200 knives for professional results."
+- "I've used Victorinox Fibrox chef's knives daily for 24 years in professional kitchens. That's not brand loyalty—that's over two decades of testing that proves you don't need $200 knives for professional results."
 
-- "I've owned the same KitchenAid Commercial mixer for 23 years of daily restaurant use. That's not luck—that's nearly a quarter-century of continuous service that validates the price premium."
+- "I've owned the same KitchenAid Commercial mixer for 24 years of daily restaurant use. That's not luck—that's nearly a quarter-century of continuous service that validates the price premium."
 
 **Paragraph structure:**
 1. State the fact/finding
@@ -1198,7 +1198,7 @@ that's [X time period] of [proof/evidence/testing] that demonstrates [key findin
 
 **Reference professional experience:**
 - "In restaurant kitchens, we used [commercial equivalent]..."
-- "After 23 years as a professional cook..."
+- "After 24 years as a professional cook..."
 - "Unlike home cooks, professionals need [feature]..."
 
 **Acknowledge limitations honestly:**
@@ -1220,7 +1220,7 @@ that's [X time period] of [proof/evidence/testing] that demonstrates [key findin
 
 **Examples:**
 - "Black+Decker Toaster Oven Review: 48 Years Across 4 Models (2025)"
-- "Victorinox Fibrox 8-Inch Chef's Knife Review: 40 Years Daily Use (2025)"
+- "Victorinox Fibrox 8-Inch Chef's Knife Review: 24 Years Professional Use (2025)"
 - "Le Creuset Dutch Oven Review: 15 Years in Professional Kitchens (2025)"
 
 **Description formula:**
