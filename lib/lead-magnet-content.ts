@@ -9,77 +9,66 @@ export const leadMagnetContent = {
   tools: [
     {
       name: "Victorinox Fibrox Pro 10\" Chef's Knife",
-      price: "$50",
       amazonUrl: "https://amzn.to/4o6pPwW",
       why: "The longer blade is perfect for larger cuts and if you have bigger hands. I keep both sizes.",
       story: "This is the knife I grab for breaking down proteins and chopping larger vegetables. The extra 2 inches makes a real difference when you're working fast."
     },
     {
       name: "Victorinox Fibrox Pro 8\" Chef's Knife",
-      price: "$45",
       amazonUrl: "https://amzn.to/4bIa2lg",
       why: "More maneuverable for precise cuts. Perfect for most home cooking tasks.",
-      story: "This is the workhorse. 90% of my knife work happens with this 8-inch. It's balanced, sharp, and never lets me down."
+      story: "This is the workhorse. 80% of my knife work happens with this 8-inch. It's balanced, sharp, and never lets me down."
     },
     {
       name: "Victorinox 4\" Paring Knife",
-      price: "$12",
       amazonUrl: "https://amzn.to/4gVm0Le",
       why: "Essential for detailed work - peeling, trimming, deveining shrimp.",
       story: "You can't do precision work with a chef's knife. This little guy handles everything from garlic to strawberries."
     },
     {
       name: "Victorinox Granton Edge Boning Knife",
-      price: "$35",
       amazonUrl: "https://amzn.to/4pUDed1",
-      why: "Flexible blade gets close to bones. Also great for filleting fish.",
+      why: "Firm blade gets close to bones. Also great for filleting fish.",
       story: "Breaking down a whole chicken takes 3 minutes with this knife. The granton edge prevents sticking."
     },
     {
       name: "Victorinox Offset Bread Knife",
-      price: "$48",
       amazonUrl: "https://amzn.to/4nAIR4F",
       why: "Offset handle keeps knuckles off the cutting board. Serrated edge never needs sharpening.",
       story: "Bread, tomatoes, cakes - anything with a delicate exterior. The offset design is a game-changer for comfort."
     },
     {
       name: "OXO Good Grips Swivel Peeler",
-      price: "$10",
       amazonUrl: "https://amzn.to/4nLKDkf",
       why: "Comfortable grip, sharp blade, swivels to follow contours.",
       story: "I've tried every peeler out there. This is the one. It just works, day after day, year after year."
     },
     {
       name: "OXO Good Grips Bench Scraper",
-      price: "$13",
       amazonUrl: "https://amzn.to/4Y5MepL",
       why: "Moves chopped ingredients, scrapes dough, cleans cutting boards.",
       story: "Most underrated tool in any kitchen. Once you start using one, you'll wonder how you lived without it."
     },
     {
       name: "Winco Heavy Duty Tongs (12\")",
-      price: "$8",
       amazonUrl: "https://amzn.to/4n0pWIy",
       why: "Restaurant-grade tongs at a fraction of the price. Proper spring tension.",
-      story: "These are the exact tongs I used in every restaurant kitchen. Strong, reliable, dishwasher-safe."
+      story: "These are a heavy duty version of the same style tongs used in every professional kitchen. Strong, reliable, dishwasher-safe."
     },
     {
       name: "Benriner Large Mandoline",
-      price: "$40",
       amazonUrl: "https://amzn.to/3kBAukM",
       why: "Professional consistency for slicing. Adjustable thickness.",
       story: "Perfect potato gratin every time. Consistent slices mean even cooking. Just watch your fingers!"
     },
     {
       name: "ZUPERIA Bar Mops (12-pack)",
-      price: "$25",
       amazonUrl: "https://amzn.to/4nfExRj",
       why: "Absorbent, durable, machine washable. These are what restaurants actually use.",
       story: "Forget fancy kitchen towels. These are what every professional kitchen uses. They last forever and actually dry things."
     },
     {
       name: "Epicurean Kitchen Cutting Board (17.5\" × 13\")",
-      price: "$35",
       amazonUrl: "https://amzn.to/4kLtMa7",
       why: "Dishwasher-safe, knife-friendly, won't harbor bacteria like wood.",
       story: "I've used wooden boards for decades. These are better. Period. Dishwasher-safe changes everything."
@@ -90,7 +79,7 @@ export const leadMagnetContent = {
     {
       title: "Why Only 11 Tools?",
       content: [
-        "I've been cooking since I was 10 years old—45 years of experience, including 24 years working professionally from Wendy's at 15 to managing operations at Mellow Mushroom and 6 years at Purple Café.",
+        "I've been cooking since I was 10 years old—45 years of experience, including 24 years working professionally from Wendy's at 15 to managing kitchen operations at Mellow Mushroom and 6 years at Purple Café.",
         "When I set up my home kitchen, I kept only what I actually reach for. Everything else is marketing.",
         "These 11 tools handle 99% of what I cook at home. No junk drawers. No single-use gadgets. Just workhorses that earn their space."
       ]
@@ -108,37 +97,32 @@ export const leadMagnetContent = {
       content: [
         "Notice 5 of the 11 tools are Victorinox knives? There's a reason.",
         "Victorinox makes the knives I used daily at Purple Café and at several other professional kitchens. Not because they're pretty—because they work.",
-        "Sharp out of the box, easy to maintain, dishwasher-safe handles (though I hand-wash the blades), and they cost a fraction of 'luxury' brands.",
+        "Sharp out of the box, easy to maintain, and they cost a fraction of 'luxury' brands. I've run mine through the dishwasher after every use for 20 years (though Victorinox doesn't recommend it). The key: dry them immediately after washing and never leave them sitting in water or with food on them.",
         "I've tried Japanese carbon steel, German forged, ceramic—you name it. For daily professional use, Victorinox wins every time."
       ]
     },
     {
-      title: "Care & Maintenance: Make These Last 20+ Years",
-      subsections: [
-        {
-          title: "DAILY",
-          items: [
-            "Hone knives before each use (it realigns the edge, doesn't sharpen)",
-            "Hand wash and dry knives immediately after use",
-            "Hang towels to dry between uses"
-          ]
-        },
-        {
-          title: "WEEKLY",
-          items: [
-            "Run cutting board through dishwasher",
-            "Check knife edges for any chips or rolls",
-            "Deep clean bench scraper and tongs in dishwasher"
-          ]
-        },
-        {
-          title: "MONTHLY",
-          items: [
-            "Professional knife sharpening (or learn to use a whetstone)",
-            "Inspect all tools for wear and damage",
-            "Oil the mandoline's moving parts"
-          ]
-        }
+      title: "Care & Maintenance: The Truth About How I Actually Do This",
+      content: [
+        "Here's what I've actually done for 20 years - not what the manufacturers recommend, but what works:",
+        "",
+        "**Knives:**",
+        "• Hone/steel before each use (except the serrated bread knife - skip that one)",
+        "• Run through the dishwasher after use (yes, even though Victorinox doesn't recommend it)",
+        "• Dry immediately when the cycle finishes - don't leave them sitting wet",
+        "• Never leave soaking in water or sitting with food on them (especially acidic stuff like tomatoes)",
+        "• Get them professionally sharpened when they're dull, or learn to use a whetstone",
+        "",
+        "**Everything Else:**",
+        "• Dishwasher safe - run them daily",
+        "• Don't leave soaking in water",
+        "• Don't leave with food sitting on them",
+        "",
+        "**Bar Mops:**",
+        "• Machine wash",
+        "• Hang to dry",
+        "",
+        "I've been running everything through the dishwasher daily for two decades. Same knives, same peeler, same bench scraper. They all still work perfectly. The key is drying them right away and never leaving them sitting in water or with food residue."
       ]
     },
     {
@@ -149,7 +133,7 @@ export const leadMagnetContent = {
         "🚫 Avocado tool - Use a spoon",
         "🚫 Multiple cutting boards - One good one is enough",
         "🚫 Knife block sets - You only need 4-5 knives max",
-        "🚫 Expensive honing steel - The $15 one works identically",
+        "🚫 Expensive honing steel - A good honing steel doesn't need to cost $200",
         "",
         "Every item I didn't include failed the 'do I actually use this?' test. Be honest with yourself—half your kitchen tools probably live in a drawer untouched."
       ]
@@ -173,7 +157,6 @@ export const leadMagnetContent = {
     items: [
       "□ Pinch grip - Thumb and forefinger on blade, not handle",
       "□ Claw hand - Curl fingertips away from blade when cutting",
-      "□ Rock the knife - Don't lift the tip off the board",
       "□ Sharp = safe - Dull knives require more pressure and slip",
       "□ Hone before every use - Takes 10 seconds, keeps edge aligned",
       "□ Let the knife do the work - If you're forcing it, it's dull"
@@ -304,7 +287,6 @@ export function generateLeadMagnetHTML(): string {
       ${tools.map(tool => `
         <div class="tool">
           <div class="tool-name">${tool.name}</div>
-          <div class="tool-price">${tool.price}</div>
           <div class="tool-why"><strong>Why I use it:</strong> ${tool.why}</div>
           <div class="tool-story">"${tool.story}"</div>
         </div>
