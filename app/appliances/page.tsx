@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Kitchen Appliances 2025 | Pro Chef Reviews',
-  description: 'Professional chef reviews of blenders, mixers, food processors, and essential kitchen appliances tested in commercial restaurant settings.',
+  description: 'Professional chef reviews: Blenders, mixers, appliances tested real restaurant kitchens. Chef-tested, real testing, zero lab conditions. Knives, cookware, appliances filter price, use case.',
   keywords: ['kitchen appliances', 'blender reviews', 'mixer reviews', 'food processor reviews', 'professional kitchen equipment'],
   openGraph: {
     title: 'Best Kitchen Appliances 2025 | Chef-Tested Reviews',

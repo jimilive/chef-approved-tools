@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Victorinox Granton Boning: Firm Blade Pro',
-  description: 'Victorinox Granton boning knife: 23-year pro test. Flexible blade for trimming, deboning. Granton edge prevents sticking. Professional butcher tool.',
+  description: 'Victorinox 6" boning knife: Best for trimming, deboning meat. Flexible blade, Granton edge prevents sticking. Professional butcher\'s choice under $40.',
 }
 
 const productData = {

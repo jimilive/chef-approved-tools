@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Chef Knives Hub: All Reviews, Guides, Tips',
-  description: 'Professional chef reviews of kitchen knives tested over 20+ years in restaurant kitchens. Chef knives, paring knives, bread knives, and specialty blades.',
+  description: 'Professional chef reviews all knives: Tested 20+ years restaurant kitchens. Chef paring, bread knives, specialty blades.',
   keywords: ['chef knives', 'best kitchen knives', 'professional knives', 'knife reviews', 'Victorinox', 'Wüsthof'],
   openGraph: {
     title: 'Chef Knives: All Reviews & Guides',

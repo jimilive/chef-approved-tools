@@ -139,7 +139,7 @@ export const metadata = {
   },
 
   title: "John Boos Board: 14-Year Butcher Block Test",
-  description: "John Boos 24x18 cutting board review: 14 years home use. Chef tests knife preservation, durability, maintenance. Generational quality.",
+  description: "John Boos 24x18 cutting board review. NSF-certified restaurant quality. Maintenance tips: how to season platinum board. Commercial quality.",
   keywords: ["John Boos cutting board", "commercial cutting board", "maple cutting board", "restaurant cutting board", "butcher block"],
   openGraph: {
     title: "John Boos Platinum Commercial Cutting Board: Professional Review",

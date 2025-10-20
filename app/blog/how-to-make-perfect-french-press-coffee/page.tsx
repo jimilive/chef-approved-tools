@@ -6,7 +6,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'French Press Coffee: Perfect Ratio & Method',
-  description: 'French press coffee perfected: 24 years pro experience. Perfect ratio, step-by-step technique, mistakes to avoid. Cafe-quality at home. Professional guide.',
+  description: 'French press coffee perfected: 24 years pro experience. Perfect ratio, step-by-step technique, mistakes to avoid. Café-quality at home. Professional guide.',
   alternates: {
     canonical: '/blog/how-to-make-perfect-french-press-coffee',
   },

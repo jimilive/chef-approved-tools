@@ -79,7 +79,7 @@ const faqData = [
 
 export const metadata = {
   title: 'Bodum Chambord: 18-Year French Press Test',
-  description: 'Professional chef tests Bodum French Press for 18 years. Complete review: durability, coffee quality, value.',
+  description: 'Bodum Chambord French Press: 18-year pro experience. Perfect ratio, easy technique. Commercial + home. Café-quality at home. Professional guide.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/reviews/bodum-chambord-french-press',
   },

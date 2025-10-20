@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Victorinox 4" Paring: 20-Year Detail Tool',
-  description: 'Victorinox 4" paring knife tested 20 years. Essential for detail work, peeling, trimming. The exact knife I\'ve used since culinary school.',
+  description: 'Victorinox 4" paring knife: 40-year test. Perfect for detail work, peeling, trimming. Same blade from culinary school. Swiss precision under $15.',
 }
 
 const productData = {

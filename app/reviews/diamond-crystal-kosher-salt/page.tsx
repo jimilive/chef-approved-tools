@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Diamond Crystal Salt: Pro Kitchen Essential',
-  description: 'Diamond Crystal Kosher Salt review: 18 years professional and home use. Chef tests texture, flavor, pinchability. Industry standard.',
+  description: 'Diamond Crystal kosher salt review. 18 years professional and home use. Chef tests texture, flavor, pros/cons. Industry standard.',
 };
 
 export default function DiamondCrystalKosherSaltReview() {

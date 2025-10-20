@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 
   title: 'OXO Swivel Peeler: Ergonomic Design Winner',
-  description: 'Professional chef review of the OXO Good Grips swivel peeler after 23+ years of professional cooking. The best peeler for comfort, performance, and durability.',
+  description: 'OXO swivel peeler: 23-year pro test. Left-friendly, NSF certified. Soft grip lasts. Best peeler tested. Dishwasher-safe, kitchen essential.',
 }
 
 const productData = {

@@ -11,7 +11,7 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 
 export const metadata: Metadata = {
   title: 'Black+Decker Toaster Oven: 48-Year Review',
-  description: 'Black+Decker toaster oven review: 48 years across 4 models (1977-present). Professional chef tests durability and performance.',
+  description: 'Black+Decker toaster oven: 48-year review across 4 models (1977-present). Professional chef durability and performance.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/reviews/black-decker-toaster-oven',
   },

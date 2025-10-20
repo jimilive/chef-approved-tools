@@ -85,7 +85,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Victorinox Bread Knife: Offset Ergo Design',
-  description: 'Victorinox offset bread knife: 23-year pro test. Perfect for crusty bread and tomatoes. Knuckle clearance that matters. Restaurant tested.',
+  description: 'Victorinox offset bread knife: 23-year pro test. Perfect for crusty artisan loaves. Offset design = knuckle clearance. Serrated edge lasts for decades.',
 }
 
 export default function VictorinoxOffsetBreadKnifeReview() {

@@ -5,7 +5,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 
 export const metadata: Metadata = {
   title: 'Restaurant-Grade Cookware: Pro Comparison',
-  description: 'Professional cookware recommendations from 23+ years of restaurant experience. Find pans that survive commercial use.',
+  description: 'Professional cookware reviews from 23+ years of restaurant experience. Stainless steel, cast iron, pans. What works, what lasts. Chef-approved for home and commercial use.',
   alternates: {
     canonical: '/guides/best-cookware',
   },

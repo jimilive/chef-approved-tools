@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 
   title: 'OXO Bench Scraper: Underrated Design MVP',
-  description: 'Professional chef review of the OXO Good Grips bench scraper after 23+ years of professional cooking. The most underrated tool in any kitchen.',
+  description: 'Professional chef review of the OXO Good Grips bench scraper after 25+ years of professional cooking. The most underrated tool in any kitchen.',
 }
 
 const productData = {

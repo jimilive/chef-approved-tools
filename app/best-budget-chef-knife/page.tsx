@@ -7,7 +7,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata = {
   title: 'Best Budget Chef Knife 2025: Victorinox 8"',
-  description: "Victorinox Fibrox 8\" chef's knife: Best budget option tested 40 years. Pro performance under $50. NSF certified, dishwasher safe. Restaurant quality.",
+  description: "Best budget chef knife 2025: Victorinox Fibrox 8\" tested 20 years. Best value chef knife. NSF certified, dishwasher safe, outperforms $200+ knives. Professional pick.",
   keywords: "best budget chef knife, affordable chef knife, victorinox fibrox, cheap chef knife that's good, professional knife under $50, budget kitchen knife",
   openGraph: {
     title: "Best Budget Chef Knife: Victorinox Fibrox 8\" | Professional Pick",

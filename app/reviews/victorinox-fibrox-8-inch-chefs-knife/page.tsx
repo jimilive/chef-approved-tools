@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Victorinox 8" Fibrox: $40 Pro Performance',
-  description: 'Victorinox 8" chef\'s knife tested 40 years. Budget price, pro performance. Why this $45 knife beats $200+ blades. Restaurant chef review.',
+  description: 'Victorinox 8" chef\'s knife: Tested 20 years professional kitchens. Budget price, pro performance. Outperforms $200+ knives. NSF certified. Restaurant chef review.',
 }
 
 export default function VictorinoxFibrox8InchReview() {

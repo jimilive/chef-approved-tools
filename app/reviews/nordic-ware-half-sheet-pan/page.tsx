@@ -89,7 +89,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Nordic Ware Sheet Pan: 10-Year Baker Test',
-  description: 'Professional chef tests Nordic Ware half sheet pan for 10 years. Complete review: durability, performance, why it&apos;s the baker&apos;s choice, comparison to alternatives.',
+  description: 'Nordic Ware half sheet pan: 10-year test. Why bakers choose this pan. Durability, even baking, warp resistance tested. Professional baker choice under $20.',
   openGraph: {
     title: 'Nordic Ware Half Sheet Pan Review: 10 Years of Testing (2025)',
     description: 'Professional chef tests Nordic Ware half sheet pan for 10 years. Complete review: durability, performance, why it&apos;s the baker&apos;s choice, comparison to alternatives.',

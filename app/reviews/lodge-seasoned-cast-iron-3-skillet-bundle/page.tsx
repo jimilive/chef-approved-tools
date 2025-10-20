@@ -114,7 +114,7 @@ export const metadata = {
   },
 
   title: "Lodge Cast Iron 3-Skillet: Home Use Review",
-  description: "Professional review of Lodge cast iron 3-skillet bundle after 7 years of home testing. Comprehensive review of this versatile 12\", 10.25\", and 8\" skillet set.",
+  description: "Lodge cast iron 3 skillets set: 10-8-6\". Pre-seasoned eggshell finish. Lifetime ironclad warranty. Professional chef experience.",
   keywords: ["Lodge cast iron skillet", "cast iron skillet set", "Lodge 3 skillet bundle", "cast iron cookware", "restaurant cast iron"],
   openGraph: {
     title: "Lodge Cast Iron 3-Skillet Bundle: Professional Review",

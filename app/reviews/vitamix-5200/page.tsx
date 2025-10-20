@@ -75,7 +75,7 @@ const breadcrumbs = [
 
 export const metadata = {
   title: "Vitamix 5200 Blender: 5-Year Power Test",
-  description: "Professional chef tests Vitamix 5200 blender for 5+ years. Complete Vitamix blender review: power, durability, versatility, and whether this premium blender is worth it.",
+  description: "Vitamix 5200: Professional-grade power tested 5 years. 2 HP motor, 7-year warranty. Perfect ratio, commercial durability. Restaurant-quality at home.",
   keywords: ["Vitamix 5200 review", "Vitamix blender", "professional blender", "restaurant equipment", "commercial blender", "smoothie blender"],
   robots: {
     index: true,

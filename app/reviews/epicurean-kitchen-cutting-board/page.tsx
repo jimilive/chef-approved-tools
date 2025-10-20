@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Epicurean Board: Dishwasher-Safe Choice',
-  description: 'Professional chef review of the Epicurean kitchen cutting board after 23+ years of professional cooking. Dishwasher-safe and better than wood.',
+  description: 'Professional chef reviews Epicurean synthetic cutting board. Better than wood: dishwasher-safe, knife-friendly, sanitary. Restaurant-grade kitchen essential. Made in USA.',
 }
 
 const productData = {

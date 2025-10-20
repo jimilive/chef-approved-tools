@@ -72,7 +72,7 @@ const faqData = [
 
 export const metadata = {
   title: 'Benriner Mandoline: Pro Safety & Precision',
-  description: 'Professional chef tests Benriner mandoline after years of restaurant use. Complete review: precision slicing, safety features, durability analysis.',
+  description: 'Professional chef tests Benriner Mandoline after years. Safety, precision, durability analysis. Real restaurant kitchen testing.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/reviews/benriner-large-mandoline',
   },

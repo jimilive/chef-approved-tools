@@ -9,6 +9,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 export const metadata: Metadata = {
   title: 'Chef Approved Tools: Restaurant-Tested Gear',
+  description: 'Restaurant-tested kitchen equipment from 40-year chef. Honest reviews, real testing, zero lab conditions. Knives, cookware, appliances: filter price, use case.',
   alternates: {
     canonical: '/',
   },

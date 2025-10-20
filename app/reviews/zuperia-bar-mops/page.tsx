@@ -76,7 +76,7 @@ export const metadata = {
   },
 
   title: 'ZUPERIA Bar Mops: Industry Standard Cotton',
-  description: 'ZUPERIA bar mops tested years in restaurants. Professional kitchen standard. 100% cotton, absorbent, durable. Restaurant-grade towels.',
+  description: 'ZUPERIA bar mops: Restaurant kitchen standard. Absorbent, durable, easy care. Cut-resistant towels. Professional kitchen essential.',
 };
 
 export default function ZuperiaBarMopsReview() {

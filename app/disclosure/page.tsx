@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Affiliate Disclosure | Chef Approved Tools',
-  description: 'Full disclosure of our affiliate relationships and how we earn commissions from product recommendations.',
+  description: 'Full disclosure of affiliate relationships and how we make recommendations. Transparent, honest product recommendations.',
   alternates: {
     canonical: '/disclosure',
   },
