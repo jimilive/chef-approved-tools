@@ -228,11 +228,6 @@ export function generateLeadMagnetHTML(): string {
           font-size: 16px;
           margin-bottom: 5px;
         }
-        .tool-price {
-          color: #059669;
-          font-weight: bold;
-          margin-bottom: 10px;
-        }
         .tool-why {
           color: #374151;
           margin: 10px 0;
