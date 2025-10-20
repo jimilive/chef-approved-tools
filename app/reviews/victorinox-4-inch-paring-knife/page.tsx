@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Victorinox 4" Paring: 20-Year Detail Tool',
-  description: 'Victorinox 4" paring knife tested 40 years. Essential for detail work, peeling, trimming. The exact knife I\'ve used since culinary school.',
+  description: 'Victorinox 4" paring knife tested 20 years. Essential for detail work, peeling, trimming. The exact knife I\'ve used since culinary school.',
 }
 
 const productData = {
@@ -46,7 +46,7 @@ const productData = {
     url: "https://amzn.to/4mzvALq"
   }],
   expertRating: 5.0,
-  expertOpinion: "After 23+ years of professional cooking, this Victorinox paring knife is my go-to for all precision work - the perfect balance of Swiss quality, razor-sharp performance, and affordability that makes it easy to keep multiple in rotation.",
+  expertOpinion: "After 23 years in professional kitchens, this Victorinox paring knife is my go-to for all precision work - the perfect balance of Swiss quality, razor-sharp performance, and affordability that makes it easy to keep multiple in rotation.",
   dateAdded: "2025-01-15",
   lastUpdated: "2025-10-12"
 };
@@ -117,7 +117,7 @@ export default function Victorinox4InchParingKnifeReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The precision tool for detailed work - tested through 23+ years of professional cooking
+            The precision tool for detailed work - tested through 20+ years
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -329,7 +329,7 @@ export default function Victorinox4InchParingKnifeReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 23+ years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 23 years in professional kitchens.
             It&apos;s probably the best value in cutlery. I recommend buying two or three.
           </p>
 
@@ -644,7 +644,7 @@ export default function Victorinox4InchParingKnifeReview() {
 
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <p className="text-slate-700 mb-6">
-              I&apos;ve tested dozens of paring knives over 23+ years in professional kitchens. Here&apos;s how the Victorinox 4-inch stacks up against top competitors:
+              I&apos;ve tested dozens of paring knives over 23 years in professional kitchens. Here&apos;s how the Victorinox 4-inch stacks up against top competitors:
             </p>
 
             <div style={{ overflowX: 'auto' }}>
@@ -839,7 +839,7 @@ export default function Victorinox4InchParingKnifeReview() {
           </h2>
 
           <p className="text-lg text-slate-700 mb-6 text-center max-w-2xl mx-auto">
-            After 23+ years in professional kitchens, this is the paring knife I trust for all detailed work. Swiss quality at a price that makes it easy to keep multiple in your kitchen.
+            After 23 years in professional kitchens, this is the paring knife I trust for all detailed work. Swiss quality at a price that makes it easy to keep multiple in your kitchen.
           </p>
 
           <div className="flex justify-center mb-4">

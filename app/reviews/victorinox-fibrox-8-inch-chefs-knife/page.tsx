@@ -107,15 +107,15 @@ export default function VictorinoxFibrox8InchReview() {
             },
             {
               question: "Is an affordable knife really good enough for serious cooking?",
-              answer: "Absolutely yes. This is the exact knife used in professional kitchens worldwide, including Michelin-starred restaurants. It's not a 'budget alternative'—it's professional equipment that happens to be accessible. After 23+ years managing restaurant kitchens and cooking on the line, I can tell you that line cooks and chefs prefer Victorinox because it works better for actual cooking than expensive knives. The thin blade and perfect balance deliver more control than heavy, thick premium knives. NSF certification means this knife meets the same commercial standards as equipment costing many times more. It's approved for professional use—not just 'home cooking.' The knife doesn't know its price point. It only knows how sharp it is and how well it cuts. The Victorinox excels at both."
+              answer: "Absolutely yes. This is the exact knife used in professional kitchens worldwide, including Michelin-starred restaurants. It's not a 'budget alternative'—it's professional equipment that happens to be accessible. After 23 years in professional kitchens, I can tell you that line cooks and chefs prefer Victorinox because it works better for actual cooking than expensive knives. The thin blade and perfect balance deliver more control than heavy, thick premium knives. NSF certification means this knife meets the same commercial standards as equipment costing many times more. It's approved for professional use—not just 'home cooking.' The knife doesn't know its price point. It only knows how sharp it is and how well it cuts. The Victorinox excels at both."
             },
             {
               question: "Victorinox vs Wusthof: Which should I buy?",
-              answer: "For 95% of home cooks, the Victorinox is the smarter choice. Victorinox advantages: Exceptional value vs premium pricing, lighter/better balance, thin blade offers more control, easier to sharpen, less intimidating for new cooks. Wusthof advantages: Beautiful aesthetics (wood handle, full bolster), heavier/more substantial feel, lifetime warranty, premium brand prestige. My verdict: The Victorinox cuts just as well as the Wusthof. After 40 years, I still use my Victorinox daily because it works better for actual cooking. Spend the difference on a quality cutting board or Dutch oven instead."
+              answer: "For 95% of home cooks, the Victorinox is the smarter choice. Victorinox advantages: Exceptional value vs premium pricing, lighter/better balance, thin blade offers more control, easier to sharpen, less intimidating for new cooks. Wusthof advantages: Beautiful aesthetics (wood handle, full bolster), heavier/more substantial feel, lifetime warranty, premium brand prestige. My verdict: The Victorinox cuts just as well as the Wusthof. After 20 years, I still use my Victorinox daily because it works better for actual cooking. Spend the difference on a quality cutting board or Dutch oven instead."
             },
             {
               question: "How long does a Victorinox knife last?",
-              answer: "With proper care and regular sharpening, 10-20+ years easily. I've been using mine for 40 years across multiple professional kitchens. At accessible pricing, even decades of use represents exceptional value—pennies per day for professional-quality cutting performance. Compare to premium knives that may last just as long but cost several times more. Longevity tips: Hand wash immediately after use, sharpen regularly, use wooden/plastic cutting board, store properly (magnetic strip or knife block)."
+              answer: "With proper care and regular sharpening, 10-20+ years easily. I've been using mine for 20 years across multiple professional kitchens. At accessible pricing, even decades of use represents exceptional value—pennies per day for professional-quality cutting performance. Compare to premium knives that may last just as long but cost several times more. Longevity tips: Hand wash immediately after use, sharpen regularly, use wooden/plastic cutting board, store properly (magnetic strip or knife block)."
             },
             {
               question: "Does the plastic handle feel cheap?",
@@ -123,7 +123,7 @@ export default function VictorinoxFibrox8InchReview() {
             },
             {
               question: "Do professional chefs really use Victorinox?",
-              answer: "Yes, extensively. Walk into any professional kitchen and you'll see Victorinox knives everywhere—from small cafes to Michelin-starred restaurants. Why pros choose Victorinox: Performance over prestige (chefs care about how it cuts, not how it looks), practical pricing (replacing lost knives is less painful), versatile (thin blade excels at detailed work), NSF certified (meets health department requirements), easy maintenance (kitchen staff can sharpen without expensive equipment). Personal experience: In 23+ years managing restaurant kitchens and working on the line, our knife kit included Victorinox as standard issue. Some chefs brought expensive Japanese knives for specific tasks, but the Victorinox handled 80% of daily cutting."
+              answer: "Yes, extensively. Walk into any professional kitchen and you'll see Victorinox knives everywhere—from small cafes to Michelin-starred restaurants. Why pros choose Victorinox: Performance over prestige (chefs care about how it cuts, not how it looks), practical pricing (replacing lost knives is less painful), versatile (thin blade excels at detailed work), NSF certified (meets health department requirements), easy maintenance (kitchen staff can sharpen without expensive equipment). Personal experience: In 23 years in professional kitchens, my knife kit included Victorinox as standard issue. Some chefs brought expensive Japanese knives for specific tasks, but the Victorinox handled 80% of daily cutting."
             },
             {
               question: "How often does a Victorinox knife need sharpening?",
@@ -256,7 +256,7 @@ export default function VictorinoxFibrox8InchReview() {
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Professional Verdict: The Best Value in Kitchen Knives</h2>
 
             <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-              <strong>After 40 years of cooking and 23+ years managing restaurant kitchens and cooking on the line,
+              <strong>After 40 years of cooking and 23 years in professional kitchens,
               this accessible knife remains my daily workhorse.</strong> The thin blade delivers
               professional control, the fibrox handle prevents fatigue during extended prep sessions,
               and the edge retention rivals knives costing several times more.
@@ -296,7 +296,7 @@ export default function VictorinoxFibrox8InchReview() {
                 💡 Professional Reality Check
               </p>
               <p style={{ margin: '10px 0 0 0', fontSize: '14px' }}>
-                In 23+ years managing restaurant kitchens, leading the line, and excelling as a Pizzaiolo,I&apos;ve seen expensive premium knives and
+                In 23 years in professional kitchens, I&apos;ve seen expensive premium knives and
                 Victorinox knives side-by-side. The expensive knives look prettier on the magnetic strip.
                 The Victorinox knives get used daily because they work better for actual cooking.
               </p>
@@ -564,7 +564,7 @@ export default function VictorinoxFibrox8InchReview() {
                   kitchens worldwide, including Michelin-starred restaurants. It&apos;s not a &quot;budget alternative&quot;—
                   it&apos;s professional equipment that happens to be accessible.</p>
 
-                  <p><strong>Professional reality:</strong> After 23+ years managing restaurant kitchens and cooking on the line,
+                  <p><strong>Professional reality:</strong> After 23 years in professional kitchens,
                   I can tell you that line cooks and chefs prefer Victorinox because it works better for
                   actual cooking than expensive knives. The thin blade and perfect balance deliver
                   more control than heavy, thick premium knives.</p>
@@ -595,7 +595,7 @@ export default function VictorinoxFibrox8InchReview() {
                   <p><strong>Wusthof advantages:</strong> Beautiful aesthetics (wood handle, full bolster), heavier/more substantial feel, lifetime warranty, premium brand prestige</p>
 
                   <p><strong>My verdict:</strong> The Victorinox cuts just as well as the Wusthof. After
-                  40 years, I still use my Victorinox daily because it works better for actual cooking.
+                  20 years, I still use my Victorinox daily because it works better for actual cooking.
                   Spend the difference on a <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline">quality
                   cutting board</Link> or <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-800 underline">Dutch oven</Link> instead.</p>
                 </div>
@@ -661,7 +661,7 @@ export default function VictorinoxFibrox8InchReview() {
 
                   <p><strong>Why pros choose Victorinox:</strong> Performance over prestige (chefs care about how it cuts, not how it looks), practical pricing (replacing lost knives is less painful), versatile (thin blade excels at detailed work), NSF certified (meets health department requirements), easy maintenance (kitchen staff can sharpen without expensive equipment)</p>
 
-                  <p><strong>Personal experience:</strong> In 23+ years managing restaurant kitchens and working on the line, our
+                  <p><strong>Personal experience:</strong> In 23 years in professional kitchens, my
                   knife kit included Victorinox as standard issue. Some chefs brought expensive Japanese
                   knives for specific tasks, but the Victorinox handled 80% of daily cutting.</p>
                 </div>

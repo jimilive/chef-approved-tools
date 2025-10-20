@@ -37,11 +37,11 @@ const breadcrumbs = [
 const faqData = [
   {
     question: "Is Bodum French press worth it?",
-    answer: "After 24 years of testing (6 years commercial + 18 years home), absolutely yes. The Bodum Chambord delivers exceptional coffee quality, requires zero maintenance, and has proven virtually indestructible through thousands of brewing cycles."
+    answer: "After 18 years of testing, absolutely yes. The Bodum Chambord delivers exceptional coffee quality, requires zero maintenance, and has proven virtually indestructible through thousands of brewing cycles."
   },
   {
     question: "How long does a Bodum French press last?",
-    answer: "With proper care, 20-30+ years easily. Mine has lasted 24 years through professional restaurant use and daily home brewing. The borosilicate glass is extremely durable and resists thermal shock and impacts."
+    answer: "With proper care, 20-30+ years easily. Mine has lasted 18 years through professional restaurant use and daily home brewing. The borosilicate glass is extremely durable and resists thermal shock and impacts."
   },
   {
     question: "What size French press should I buy?",
@@ -79,7 +79,7 @@ const faqData = [
 
 export const metadata = {
   title: 'Bodum Chambord: 18-Year French Press Test',
-  description: 'Professional chef tests Bodum French Press for 24 years (6 years commercial kitchen + 18 years home). Complete review: durability, coffee quality, value.',
+  description: 'Professional chef tests Bodum French Press for 18 years. Complete review: durability, coffee quality, value.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/reviews/bodum-chambord-french-press',
   },
@@ -121,7 +121,7 @@ export default function BodumChambordFrenchPressReview() {
         borderRadius: '4px'
       }}>
         <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
-          <strong>⭐⭐⭐⭐⭐ 5/5</strong> | Based on 24 years of testing (6 years commercial + 18 years home)<br/>
+          <strong>⭐⭐⭐⭐⭐ 5/5</strong> | Based on 18 years of testing<br/>
           <strong>✓ Borosilicate Glass</strong> | <strong>✓ Stainless Frame</strong> | <strong>✓ 8-Cup Capacity</strong>
         </p>
       </div>
@@ -170,8 +170,7 @@ export default function BodumChambordFrenchPressReview() {
         <h2>Professional Verdict</h2>
 
         <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-          <strong>After 24 years of continuous use—6 years brewing thousands of cups in a 200+ cover
-          restaurant kitchen, then 18 more years of daily home use—the Bodum Chambord French Press
+          <strong>After 18 years of continuous use—the Bodum Chambord French Press
           remains the most reliable coffee brewing method I&apos;ve encountered.</strong> The combination
           of borosilicate glass construction, stainless steel frame, and simple plunger mechanism has
           proven virtually indestructible through thousands of brewing cycles.
@@ -180,7 +179,7 @@ export default function BodumChambordFrenchPressReview() {
         <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
           At <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>Purple Café</a>, this French press brewed countless cups for staff and special coffee service
           without a single mechanical failure. The glass cylinder has survived daily commercial use,
-          dishwasher cycles, and the inevitable bumps of a busy professional kitchen. After 24 years
+          dishwasher cycles, and the inevitable bumps of a busy professional kitchen. After 18 years
           total, I&apos;m still using the same unit at home—that&apos;s genuine buy-it-for-life quality.
         </p>
 
@@ -229,23 +228,23 @@ export default function BodumChambordFrenchPressReview() {
           <div style={{ fontSize: '40px', marginBottom: '10px' }}>🔧</div>
           <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Zero Maintenance Required</h3>
           <p>No filters to replace, no complex mechanisms to fail. Quick rinse after each use.
-          Dishwasher safe. Still performing perfectly after 24 years.</p>
+          Dishwasher safe. Still performing perfectly after 18 years.</p>
         </div>
 
         <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
           <div style={{ fontSize: '40px', marginBottom: '10px' }}>💰</div>
           <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Pays for Itself Quickly</h3>
-          <p>No filters, no pods, no expensive cartridges. After 24 years of daily use, cost per
+          <p>No filters, no pods, no expensive cartridges. After 18 years of daily use, cost per
           cup is essentially zero. True buy-it-for-life investment.</p>
         </div>
 
       </div>
 
       {/* MAIN CONTENT */}
-      <h2>24 Years From Professional Kitchen to Home Counter</h2>
+      <h2>18 Years From Professional Kitchen to Home Counter</h2>
 
       <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-        The Bodum Chambord has been my daily coffee brewing method for 24 years, alongside other
+        The Bodum Chambord has been my daily coffee brewing method for 18 years, alongside other
         professional-grade equipment like my <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox chef knife</a> and <a href="/reviews/john-boos-platinum-commercial-cutting-board" style={{ color: '#0066cc', fontWeight: 'bold' }}>John Boos cutting board</a>. What started as a practical brewing solution for staff at Purple Café
         became a permanent fixture in my home kitchen after I left the restaurant.
       </p>
@@ -370,14 +369,14 @@ export default function BodumChambordFrenchPressReview() {
       <h2>Value Proposition: Pays for Itself Quickly</h2>
 
       <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-        No consumables. No replacement parts needed over 24 years. No maintenance costs. Compare that
+        No consumables. No replacement parts needed over 18 years. No maintenance costs. Compare that
         to drip machines that need filters, espresso machines that need descaling and maintenance, or
         pod machines that charge premium prices per cup. The French press wins on operating costs by
         a massive margin.
       </p>
 
       <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-        After 24 years of daily use, my cost per cup is essentially zero. The initial investment has
+        After 18 years of daily use, my cost per cup is essentially zero. The initial investment has
         paid for itself thousands of times over. See our <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold' }}>professional kitchen starter kit</a> for equipment combinations that deliver similar long-term value.
       </p>
 
@@ -395,7 +394,7 @@ export default function BodumChambordFrenchPressReview() {
         </h3>
 
         <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
-          Download my comprehensive guide developed over 24 years of brewing:
+          Download my comprehensive guide developed over 18 years of brewing:
         </p>
 
         <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
@@ -468,7 +467,7 @@ export default function BodumChambordFrenchPressReview() {
           </p>
           <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
             <li>Coffee Quality: 5/5 (rich, full-bodied, complex)</li>
-            <li>Durability: 5/5 (24 years and counting)</li>
+            <li>Durability: 5/5 (18 years and counting)</li>
             <li>Ease of Use: 5/5 (foolproof simplicity)</li>
             <li>Value for Money: 5/5 (pays for itself quickly)</li>
           </ul>
@@ -548,7 +547,7 @@ export default function BodumChambordFrenchPressReview() {
           <p>The perfect salt for your morning eggs alongside your French press coffee. Professional-grade
           seasoning that lasts forever.</p>
           <p style={{ fontSize: '14px', color: '#666' }}>
-            <strong>Professional Standard:</strong> 24 years of daily use
+            <strong>Professional Standard:</strong> 18 years of daily use
           </p>
           <a
             href="/reviews/diamond-crystal-kosher-salt"
@@ -695,7 +694,7 @@ export default function BodumChambordFrenchPressReview() {
             Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 23+ years of restaurant experience.
             A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
             University of Montana. Equipment tested in high-volume operations serving hundreds daily.
-            This Bodum French Press has been my daily brewing method for 24 years.
+            This Bodum French Press has been my daily brewing method for 18 years.
           </p>
           <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>
             Read more about my testing methodology →

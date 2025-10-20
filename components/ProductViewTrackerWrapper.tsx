@@ -5,7 +5,7 @@ import { useTrackProductView } from './RecentlyViewed'
 interface ProductViewTrackerProps {
   slug: string
   name: string
-  tier: 1 | 2
+  tier: 1 | 2 | 3
   testingPeriod: string
   rating: number
   hook: string

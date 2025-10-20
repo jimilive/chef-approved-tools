@@ -62,7 +62,7 @@ export default function DiamondCrystalKosherSaltReview() {
         slug={productData.slug}
         name={productData.name}
         tier={1}
-        testingPeriod="24 years (6 Purple Café + 18 home)"
+        testingPeriod="18 years"
         rating={4.9}
         hook="Professional chef standard. Clean flavor, perfect texture."
         category="Ingredients"
@@ -752,7 +752,7 @@ export default function DiamondCrystalKosherSaltReview() {
           <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef&apos;s Knife</h4>
           <p>The workhorse blade that complements precise seasoning. Sharp enough to prep ingredients that showcase your salt&apos;s clean flavor. Used in professional kitchens worldwide.</p>
           <p style={{ fontSize: '14px', color: '#666' }}>
-            <strong>Professional Standard:</strong> Same knife used at Purple Café for 23+ years
+            <strong>Professional Standard:</strong> My daily workhorse for 20 years
           </p>
           <a
             href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
@@ -903,7 +903,7 @@ export default function DiamondCrystalKosherSaltReview() {
           </p>
           <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
             Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend.
-            23+ years of restaurant experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business
+            23 years in professional kitchens. A.A.S. Culinary Arts from Seattle Central College, B.S. Business
             Administration from University of Montana. Diamond Crystal Kosher Salt has been the only salt in my kitchens—professional
             and personal—for 18 years. If there was a better option, I&apos;d have found it by now.
           </p>

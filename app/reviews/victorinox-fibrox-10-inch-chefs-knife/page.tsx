@@ -40,7 +40,7 @@ const breadcrumbs = [
 const faqData = [
   {
     question: "Is the Victorinox Fibrox Pro 10\" chef's knife worth the money?",
-    answer: "Absolutely. After 23+ years of professional cooking, this knife delivers the same performance as chef knives costing hundreds more. The high-carbon stainless steel holds an edge exceptionally well, the Fibrox handle provides superior grip, and it's proven reliable in professional kitchens worldwide. The exceptional value makes it one of the best investments for serious home cooks and professionals alike."
+    answer: "Absolutely. Based on 20 years using this knife professionally, it delivers the same performance as chef knives costing hundreds more. The high-carbon stainless steel holds an edge exceptionally well, the Fibrox handle provides superior grip, and it's proven reliable in professional kitchens worldwide. The exceptional value makes it one of the best investments for serious home cooks and professionals alike."
   },
   {
     question: "Should I get the 10\" or 8\" Victorinox chef's knife?",
@@ -60,7 +60,7 @@ const faqData = [
   },
   {
     question: "How long does the Victorinox Fibrox Pro knife last?",
-    answer: "With proper care, this knife will last decades. I've been using Victorinox knives for 23+ years in professional kitchens, and they show minimal wear. The key is regular honing, proper sharpening when needed, hand-washing, and storing properly. The Fibrox handle is incredibly durable and resistant to cracking or degrading. This is genuinely a buy-it-for-life tool if you maintain it correctly."
+    answer: "With proper care, this knife will last decades. I've been using Victorinox knives for 20 years, and they show minimal wear. The key is regular honing, proper sharpening when needed, hand-washing, and storing properly. The Fibrox handle is incredibly durable and resistant to cracking or degrading. This is genuinely a buy-it-for-life tool if you maintain it correctly."
   },
   {
     question: "Is the 10\" knife too big for home cooking?",
@@ -72,7 +72,7 @@ const faqData = [
   },
   {
     question: "What warranty does Victorinox offer?",
-    answer: "Victorinox offers a lifetime warranty against defects in material and workmanship. This covers manufacturing defects but not normal wear, misuse, or abuse. In my 23+ years of using Victorinox knives professionally, I've never needed to use the warranty - these knives are incredibly reliable. The warranty is reassuring, but the real value is in the proven durability and performance."
+    answer: "Victorinox offers a lifetime warranty against defects in material and workmanship. This covers manufacturing defects but not normal wear, misuse, or abuse. In my 20 years using Victorinox knives, I've never needed to use the warranty - these knives are incredibly reliable. The warranty is reassuring, but the real value is in the proven durability and performance."
   },
   {
     question: "How does this compare to expensive Japanese chef knives?",
@@ -109,7 +109,7 @@ export default function VictorinoxFibrox10InchReview() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Victorinox Fibrox Pro 10&quot; Chef&apos;s Knife Review: 23+ Years Professional Use (2025)
+            Victorinox Fibrox Pro 10&quot; Chef&apos;s Knife Review: 20+ Years Testing (2025)
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
@@ -141,7 +141,7 @@ export default function VictorinoxFibrox10InchReview() {
           borderRadius: '4px'
         }}>
           <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
-            <strong>⭐⭐⭐⭐⭐ 4.5/5</strong> | Based on 23+ years professional use<br/>
+            <strong>⭐⭐⭐⭐⭐ 4.5/5</strong> | Based on 20+ years of testing<br/>
             <strong>✓ Perfect for larger hands & bigger cuts</strong> | <strong>✓ Professional-grade performance</strong> | <strong>✓ Exceptional value</strong>
           </p>
         </div>
@@ -210,7 +210,7 @@ export default function VictorinoxFibrox10InchReview() {
           <h2>Bottom Line Up Front</h2>
           
           <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-            <strong>After 23+ years of professional cooking, the Victorinox Fibrox Pro 10&quot; chef&apos;s knife is my go-to for breaking down proteins and chopping larger vegetables.</strong> The extra 2 inches over the standard 8&quot; model makes a real difference when working fast with whole chickens, pork shoulders, or large butternut squash.
+            <strong>After using this Victorinox 10&quot; knife for 20 years in professional kitchens, it&apos;s my go-to for breaking down proteins and chopping larger vegetables.</strong> The extra 2 inches over the standard 8&quot; model makes a real difference when working fast with whole chickens, pork shoulders, or large butternut squash.
           </p>
           
           <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
@@ -489,7 +489,7 @@ export default function VictorinoxFibrox10InchReview() {
             <h3>Is the Victorinox Fibrox Pro 10&quot; chef&apos;s knife worth the money?</h3>
             <div>
               <div>
-                <p><strong>Answer:</strong> Absolutely. After 23+ years of professional cooking, this knife delivers the same performance as chef knives costing hundreds more. The high-carbon stainless steel holds an edge exceptionally well, the Fibrox handle provides superior grip, and it&apos;s proven reliable in professional kitchens worldwide. The exceptional value makes it one of the best investments for serious home cooks and professionals alike.</p>
+                <p><strong>Answer:</strong> Absolutely. Based on 20 years using this knife professionally, it delivers the same performance as chef knives costing hundreds more. The high-carbon stainless steel holds an edge exceptionally well, the Fibrox handle provides superior grip, and it&apos;s proven reliable in professional kitchens worldwide. The exceptional value makes it one of the best investments for serious home cooks and professionals alike.</p>
               </div>
             </div>
           </div>
@@ -559,7 +559,7 @@ export default function VictorinoxFibrox10InchReview() {
             <h3>How long does the Victorinox Fibrox Pro knife last?</h3>
             <div>
               <div>
-                <p><strong>Answer:</strong> With proper care, this knife will last decades. I&apos;ve been using Victorinox knives for 23+ years in professional kitchens, and they show minimal wear. The key is regular honing, proper sharpening when needed, hand-washing, and storing properly. The Fibrox handle is incredibly durable and resistant to cracking or degrading. This is genuinely a buy-it-for-life tool if you maintain it correctly.</p>
+                <p><strong>Answer:</strong> With proper care, this knife will last decades. I&apos;ve been using Victorinox knives for 20 years, and they show minimal wear. The key is regular honing, proper sharpening when needed, hand-washing, and storing properly. The Fibrox handle is incredibly durable and resistant to cracking or degrading. This is genuinely a buy-it-for-life tool if you maintain it correctly.</p>
               </div>
             </div>
           </div>
@@ -601,7 +601,7 @@ export default function VictorinoxFibrox10InchReview() {
             <h3>What warranty does Victorinox offer?</h3>
             <div>
               <div>
-                <p><strong>Answer:</strong> Victorinox offers a lifetime warranty against defects in material and workmanship. This covers manufacturing defects but not normal wear, misuse, or abuse. In my 23+ years of using Victorinox knives professionally, I&apos;ve never needed to use the warranty - these knives are incredibly reliable. The warranty is reassuring, but the real value is in the proven durability and performance.</p>
+                <p><strong>Answer:</strong> Victorinox offers a lifetime warranty against defects in material and workmanship. This covers manufacturing defects but not normal wear, misuse, or abuse. In my 20 years using Victorinox knives, I&apos;ve never needed to use the warranty - these knives are incredibly reliable. The warranty is reassuring, but the real value is in the proven durability and performance.</p>
               </div>
             </div>
           </div>
@@ -740,7 +740,7 @@ export default function VictorinoxFibrox10InchReview() {
         }}>
           
           <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
-            After 23+ Years of Professional Use...
+            After 20+ Years of Testing...
           </h3>
           
           <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
@@ -839,7 +839,7 @@ export default function VictorinoxFibrox10InchReview() {
             <h4 style={{ marginTop: 0 }}>Victorinox Fibrox Pro 8&quot; Chef&apos;s Knife</h4>
             <p>The standard length that handles 80% of daily cutting tasks. Perfect for precision work, smaller vegetables, and general prep. I keep both the 8&quot; and 10&quot; in my kitchen and grab whichever fits the task best.</p>
             <p style={{ fontSize: '14px', color: '#666' }}>
-              <strong>Professional Use:</strong> My daily workhorse for 23+ years in restaurant kitchens.
+              <strong>Professional Use:</strong> My daily workhorse for 20+ years in restaurant kitchens.
             </p>
             <Link
               href="/reviews/victorinox-fibrox-8-inch-chefs-knife"

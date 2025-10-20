@@ -7,7 +7,7 @@ import { Clock } from 'lucide-react'
 interface RecentProduct {
   slug: string
   name: string
-  tier: 1 | 2
+  tier: 1 | 2 | 3
   testingPeriod: string
   rating: number
   hook: string
@@ -269,7 +269,7 @@ export default function RecentlyViewed() {
 export function useTrackProductView(product: {
   slug: string
   name: string
-  tier: 1 | 2
+  tier: 1 | 2 | 3
   testingPeriod: string
   rating: number
   hook: string

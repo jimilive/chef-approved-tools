@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image';
-import { Tier1Badge } from '@/components/ReviewTierBadge'
+import { Tier3Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
@@ -86,7 +86,7 @@ export default function ZuperiaBarMopsReview() {
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
-        tier={1}
+        tier={3}
         testingPeriod="Years at Purple Café"
         rating={4.8}
         hook="Industry standard. 100% ring spun cotton. Restaurant grade."
@@ -106,8 +106,8 @@ export default function ZuperiaBarMopsReview() {
         })}
       </p>
 
-      {/* Tier 1 Badge */}
-      <Tier1Badge showDescription={true} />
+      {/* Tier 3 Badge */}
+      <Tier3Badge showDescription={true} />
 
       {/* Quick Rating Box */}
       <div style={{
