@@ -139,7 +139,7 @@ export default function Vitamix5200Review() {
         {/* Header Section */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
-            Vitamix 5200 Blender Review: 5+ Years of Professional Kitchen Testing (2025)
+            Vitamix 5200 Blender Review: 5+ Years Pro Testing (2025)
           </h1>
 
           {/* Author & Rating */}

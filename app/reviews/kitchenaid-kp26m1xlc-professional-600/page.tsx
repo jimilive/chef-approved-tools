@@ -162,7 +162,7 @@ export default function KitchenAidProfessional600ReviewPage() {
         {/* Header Section */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
-            KitchenAid Professional 600 Stand Mixer Review: 18 Years of Home Baking
+            KitchenAid Professional 600 Mixer: 18-Year Home Review
           </h1>
 
           {/* Author & Rating */}

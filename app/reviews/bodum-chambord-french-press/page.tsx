@@ -99,7 +99,7 @@ export default function BodumChambordFrenchPressReview() {
         category="Coffee"
       />
       {/* H1 Title */}
-      <h1>Bodum Chambord French Press Review: 24 Years of Professional &amp; Home Use</h1>
+      <h1>Bodum Chambord French Press: 24-Year Pro Review</h1>
 
       <p style={{ fontSize: '14px', color: '#666', marginBottom: '20px' }}>
         By Scott Bradley, Professional Chef | Last Updated: {new Date().toLocaleDateString('en-US', {

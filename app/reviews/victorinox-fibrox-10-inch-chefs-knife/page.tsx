@@ -109,7 +109,7 @@ export default function VictorinoxFibrox10InchReview() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Victorinox Fibrox Pro 10&quot; Chef&apos;s Knife Review: 20+ Years Testing (2025)
+            Victorinox 10&quot; Chef&apos;s Knife Review: 20+ Years (2025)
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">

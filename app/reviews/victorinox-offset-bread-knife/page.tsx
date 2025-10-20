@@ -108,7 +108,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Victorinox Offset Bread Knife Review: 23+ Years Restaurant Kitchen Testing (2025)
+            Victorinox Offset Bread Knife Review: 23+ Years Testing
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">

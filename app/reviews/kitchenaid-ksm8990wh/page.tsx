@@ -160,7 +160,7 @@ export default function KitchenAidReviewPage() {
         {/* Header Section */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
-            KitchenAid Mixer Review (KSM8990WH): 18-Month Professional Kitchen Test
+            KitchenAid Mixer (KSM8990WH): 18-Month Pro Review
           </h1>
 
           {/* Author & Rating */}

@@ -42,7 +42,7 @@ export default function AffordableKitchenAppliancesPage() {
         {/* Header */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
-            Affordable Kitchen Appliances I&apos;ve Actually Used: No-BS Budget Guide (2025)
+            Affordable Kitchen Appliances: Chef-Tested Budget Guide
           </h1>
 
           <div className="flex items-center gap-4 mb-6">

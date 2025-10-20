@@ -234,7 +234,7 @@ export default function LeCreuset725QtReview() {
             {/* Product Info */}
             <div className="md:col-span-2">
               <h1 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
-                Le Creuset 7.25-Qt Dutch Oven Review: 12 Years of Home Kitchen Testing
+                Le Creuset 7.25-Qt Dutch Oven: 12-Year Home Review
               </h1>
 
               <Tier2Badge showDescription={true} />

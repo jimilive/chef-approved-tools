@@ -135,7 +135,7 @@ export default function BlackDeckerToasterOvenReview() {
           lineHeight: '1.2',
           color: '#1a1a1a'
         }}>
-          Black+Decker Toaster Oven Review: 48 Years of Continuous Use Across 4 Models
+          Black+Decker Toaster Oven Review: 48 Years, 4 Models
         </h1>
 
         {/* Author Byline */}

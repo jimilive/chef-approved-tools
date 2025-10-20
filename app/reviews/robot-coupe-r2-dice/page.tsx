@@ -171,7 +171,7 @@ export default function RobotCoupeR2DiceReview() {
         {/* Header Section */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
-            Robot Coupe R2 Dice Review: 3 Years of Commercial Kitchen Testing (2025)
+            Robot Coupe R2 Dice: 3-Year Commercial Review (2025)
           </h1>
 
           {/* Author & Rating */}

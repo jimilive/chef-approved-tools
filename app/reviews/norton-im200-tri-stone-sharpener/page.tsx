@@ -116,7 +116,7 @@ export default function NortonTriStoneSharpenerReview() {
           lineHeight: '1.2',
           color: '#1a1a1a'
         }}>
-          Norton IM200 Tri-Stone Sharpener Review: 6 Years in a Professional Restaurant Kitchen
+          Norton IM200 Tri-Stone Sharpener: 6-Year Restaurant Review
         </h1>
 
         {/* Author Byline */}

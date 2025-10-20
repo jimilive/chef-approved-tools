@@ -70,7 +70,7 @@ export default function DiamondCrystalKosherSaltReview() {
       <article>
 
       {/* H1 Title */}
-      <h1>Diamond Crystal Kosher Salt Review: 18 Years of Professional &amp; Home Use (2025)</h1>
+      <h1>Diamond Crystal Kosher Salt: 18-Year Pro Review (2025)</h1>
 
       <p style={{ fontSize: '14px', color: '#666', marginBottom: '20px' }}>
         By Scott Bradley, Professional Chef | Last Updated: {new Date().toLocaleDateString('en-US', {

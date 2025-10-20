@@ -189,7 +189,7 @@ export default function WusthofClassicIkonReview() {
         {/* Header Section */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
-            WÜSTHOF Classic IKON 16-Piece Review: 2+ Years of Professional Kitchen Testing (2025)
+            WÜSTHOF Classic IKON 16-Piece: 2+ Year Pro Review (2025)
           </h1>
 
           <Tier1Badge showDescription={true} />
