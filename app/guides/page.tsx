@@ -42,12 +42,49 @@ export default function GuidesPage() {
   return (
     <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '48px 16px' }}>
       <FAQSchema faqs={guidesFAQs} />
-      <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '8px' }}>
-        Kitchen Equipment Buying Guides
-      </h1>
-      <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '32px' }}>
-        Expert guidance from a certified chef to help you make informed equipment decisions.
-      </p>
+
+      <div style={{ maxWidth: '800px', margin: '0 auto', marginBottom: '48px' }}>
+        <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '16px' }}>
+          Kitchen Equipment Buying Guides
+        </h1>
+        <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '24px', lineHeight: '1.7' }}>
+          Expert guidance from a certified chef with 23 years in professional kitchens. Every recommendation
+          here has survived real restaurant use—not laboratory testing, not sponsored reviews, just equipment
+          that works when you need it to.
+        </p>
+
+        <div style={{ backgroundColor: '#f8fafc', borderLeft: '4px solid #ea580c', padding: '20px', borderRadius: '8px', marginBottom: '32px' }}>
+          <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '12px', color: '#1e293b' }}>
+            How to Use These Guides
+          </h2>
+          <p style={{ color: '#475569', lineHeight: '1.6', marginBottom: '12px' }}>
+            These aren&rsquo;t affiliate-stuffed product roundups. Each guide focuses on equipment I&rsquo;ve actually used in
+            high-volume commercial kitchens or tested extensively at home. You&rsquo;ll find:
+          </p>
+          <ul style={{ color: '#475569', lineHeight: '1.6', marginLeft: '20px', marginBottom: '12px' }}>
+            <li><strong>Specific recommendations</strong> with links to detailed reviews</li>
+            <li><strong>Professional insights</strong> on what separates quality from marketing</li>
+            <li><strong>Common mistakes</strong> that waste money and frustration</li>
+            <li><strong>Maintenance tips</strong> that extend equipment lifespan</li>
+          </ul>
+          <p style={{ color: '#475569', lineHeight: '1.6' }}>
+            I update these guides quarterly based on new testing, price changes, and availability updates. If a product
+            stops meeting standards or a better option appears, the guide changes.
+          </p>
+        </div>
+
+        <div style={{ backgroundColor: '#fff7ed', border: '1px solid #fed7aa', padding: '20px', borderRadius: '8px' }}>
+          <h2 style={{ fontSize: '1.125rem', fontWeight: '600', marginBottom: '8px', color: '#9a3412' }}>
+            My Testing Process
+          </h2>
+          <p style={{ color: '#7c2d12', lineHeight: '1.6', fontSize: '0.95rem' }}>
+            Nothing gets recommended without a minimum 6-month testing period in working kitchens. That means
+            200+ cover nights, commercial dishwashers, and kitchen staff who don&rsquo;t baby equipment. If it survives
+            that—and still performs well—it earns a spot in these guides. No exceptions, no shortcuts, no sponsored
+            placements.
+          </p>
+        </div>
+      </div>
 
       <div style={{ display: 'grid', gap: '24px', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))' }}>
         {guides.map((guide, index) => (
