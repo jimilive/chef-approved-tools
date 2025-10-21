@@ -18,7 +18,7 @@ import MobileOptimizationProvider from '@/components/MobileOptimizationProvider'
 
 const inter = Inter({
   subsets: ['latin'],
-  display: 'swap',
+  display: 'fallback',
   preload: true,
   variable: '--font-inter',
   adjustFontFallback: true
