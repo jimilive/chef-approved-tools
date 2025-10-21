@@ -176,7 +176,7 @@ export default function KnivesPage() {
         >
           <a
             href="/guides/best-chef-knives"
-            className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors duration-200 shadow-md hover:shadow-lg active:scale-95"
+            className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-semibold px-6 py-3 rounded-xl transition-colors duration-200 shadow-md hover:shadow-lg active:scale-95"
           >
             Read the Full Guide
           </a>

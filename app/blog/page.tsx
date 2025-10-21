@@ -116,7 +116,7 @@ export default function BlogPage() {
             {blogPosts.map((post, index) => (
               <article key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
                 {post.featured && (
-                  <div className="inline-block bg-orange-600 text-white text-xs px-3 py-1 rounded-full mb-4">
+                  <div className="inline-block bg-orange-700 text-white text-xs px-3 py-1 rounded-full mb-4">
                     Featured Post
                   </div>
                 )}

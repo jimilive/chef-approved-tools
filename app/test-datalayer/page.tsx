@@ -132,7 +132,7 @@ export default function TestDataLayer() {
           <div className="flex flex-wrap gap-4">
             <button
               onClick={pushTestEvent}
-              className="bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition"
+              className="bg-orange-700 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition"
             >
               Push Test Event to DataLayer
             </button>

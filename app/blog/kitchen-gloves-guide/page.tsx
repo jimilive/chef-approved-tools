@@ -547,7 +547,7 @@ export default function KitchenGlovesGuide() {
         {/* Author Bio */}
         <div className="border-t border-gray-200 pt-8 mt-12">
           <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center flex-shrink-0">
               <User className="w-8 h-8 text-white" />
             </div>
             <div>

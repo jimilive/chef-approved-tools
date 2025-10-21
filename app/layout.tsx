@@ -187,7 +187,7 @@ export default function RootLayout({
             .focus\\:absolute:focus{position:absolute}
             .focus\\:top-4:focus{top:1rem}
             .focus\\:left-4:focus{left:1rem}
-            .bg-orange-600{background-color:#ea580c}
+            .bg-orange-700{background-color:#ea580c}
             .rounded-md{border-radius:0.375rem}
             .z-50{z-index:50}
             .from-orange-600{--tw-gradient-from:#ea580c;--tw-gradient-to:rgb(234 88 12 / 0);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}
@@ -293,7 +293,7 @@ export default function RootLayout({
         <MobileOptimizedLayout>
           <MobileOptimizationProvider>
             {/* Skip to main content for accessibility */}
-            <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-orange-600 text-white px-4 py-2 rounded-md z-50">
+            <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-orange-700 text-white px-4 py-2 rounded-md z-50">
               Skip to main content
             </a>
 

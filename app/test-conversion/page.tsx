@@ -77,7 +77,7 @@ export default function ConversionTestPage() {
             <h2 className="text-2xl font-bold mb-4">Conversion Tracking</h2>
 
             <ConversionTracker action="button_click" category="test">
-              <button className="bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors">
+              <button className="bg-orange-700 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors">
                 Track This Click (Check Browser Console)
               </button>
             </ConversionTracker>

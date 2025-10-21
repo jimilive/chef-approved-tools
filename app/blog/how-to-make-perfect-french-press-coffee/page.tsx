@@ -352,7 +352,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             >
               <Link
                 href="/reviews/bodum-chambord-french-press"
-                className="inline-block bg-orange-600 text-white hover:bg-orange-700 px-8 py-3 rounded-lg font-bold text-lg transition-colors"
+                className="inline-block bg-orange-700 text-white hover:bg-orange-800 px-8 py-3 rounded-lg font-bold text-lg transition-colors"
               >
                 Read My Complete 24-Year Review →
               </Link>
@@ -557,7 +557,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
         {/* Author Bio */}
         <div className="border-t border-gray-200 pt-8 mt-12">
           <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center flex-shrink-0">
               <User className="w-8 h-8 text-white" />
             </div>
             <div>

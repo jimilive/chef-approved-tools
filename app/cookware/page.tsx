@@ -72,7 +72,7 @@ export default function CookwarePage() {
       <section className="mb-12 bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl overflow-hidden shadow-lg border border-orange-100">
         <div className="grid md:grid-cols-2 gap-8 items-center p-8 md:p-12">
           <div>
-            <div className="inline-block bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
+            <div className="inline-block bg-orange-700 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
               FEATURED GUIDE
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
@@ -83,7 +83,7 @@ export default function CookwarePage() {
             </p>
             <Link
               href="/guides/best-cookware"
-              className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-lg"
+              className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-lg"
             >
               See Our Top Picks →
             </Link>
@@ -181,7 +181,7 @@ export default function CookwarePage() {
           productSlug="cookware-category"
           merchant="internal"
         >
-          <Link href="/guides/best-cookware" className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+          <Link href="/guides/best-cookware" className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
             Read the Full Guide
           </Link>
         </CTAVisibilityTracker>

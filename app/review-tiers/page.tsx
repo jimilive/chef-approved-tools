@@ -326,7 +326,7 @@ export default function ReviewTiersPage() {
         <div className="mt-12 text-center">
           <Link
             href="/"
-            className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors shadow-lg"
+            className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-semibold px-8 py-4 rounded-lg transition-colors shadow-lg"
           >
             Browse All Reviews →
           </Link>

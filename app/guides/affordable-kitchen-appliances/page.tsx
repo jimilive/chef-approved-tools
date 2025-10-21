@@ -697,7 +697,7 @@ export default function AffordableKitchenAppliancesPage() {
           >
             <Link
               href="/appliances"
-              className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+              className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
             >
               View Professional Kitchen Appliances →
             </Link>

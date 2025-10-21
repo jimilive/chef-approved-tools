@@ -310,7 +310,7 @@ export default function AboutPage() {
                       <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                         {phase.tasks.map((task, taskIndex) => (
                           <li key={taskIndex} className="flex items-center gap-2 text-slate-700">
-                            <div className="w-1.5 h-1.5 bg-orange-600 rounded-full flex-shrink-0" />
+                            <div className="w-1.5 h-1.5 bg-orange-700 rounded-full flex-shrink-0" />
                             {task}
                           </li>
                         ))}
@@ -425,7 +425,7 @@ export default function AboutPage() {
               <div key={index} className="bg-gray-50 rounded-xl p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h4 className="text-xl font-bold text-slate-900">{criteria.category}</h4>
-                  <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                  <span className="bg-orange-700 text-white px-3 py-1 rounded-full text-sm font-bold">
                     {criteria.weight}
                   </span>
                 </div>
