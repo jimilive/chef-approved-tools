@@ -83,7 +83,7 @@ export default function TestimonialsSection() {
           </p>
           <a
             href="/newsletter"
-            className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+            className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
           >
             Get Free Equipment Guide
           </a>
