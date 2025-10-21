@@ -16,7 +16,12 @@ import MobileOptimizedLayout from '@/components/MobileOptimizedLayout'
 import { organizationSchema, websiteSchema } from '@/lib/schema'
 import MobileOptimizationProvider from '@/components/MobileOptimizationProvider'
 
-const inter = Inter({ subsets: ['latin'], display: 'swap' })
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'optional', // Non-blocking font loading
+  preload: true,
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif']
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.chefapprovedtools.com'),
@@ -133,11 +138,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
         {/* Critical CSS inline for immediate rendering - Above the fold only */}
+        {/* Font loading is handled by Next.js font optimization with display:optional */}
         <style dangerouslySetInnerHTML={{
           __html: `
-            @font-face{font-family:'Inter';src:url('/fonts/inter-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-            @font-face{font-family:'Inter';src:url('/fonts/inter-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
-            @font-face{font-family:'Inter';src:url('/fonts/inter-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
             *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
             ::before,::after{--tw-content:''}
             html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal}
@@ -152,7 +155,7 @@ export default function RootLayout({
             .bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}
             .from-slate-800{--tw-gradient-from:#1e293b;--tw-gradient-to:rgb(30 41 59 / 0);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}
             .via-slate-700{--tw-gradient-to:rgb(51 65 85 / 0);--tw-gradient-stops:var(--tw-gradient-from),#334155,var(--tw-gradient-to)}
-            .to-orange-600{--tw-gradient-to:#ea580c}
+            .to-orange-700{--tw-gradient-to:#c2410c}
             .text-white{color:#fff}
             .px-4{padding-left:1rem;padding-right:1rem}
             .py-12{padding-top:3rem;padding-bottom:3rem}
