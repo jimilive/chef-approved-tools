@@ -83,7 +83,7 @@ export default function Header() {
               ))}
               <Link
                 href="/newsletter"
-                className="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
+                className="bg-orange-800 hover:bg-orange-900 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
               >
                 Free Guide
               </Link>
