@@ -20,53 +20,93 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Email Octopus API Integration
-    const EMAILOCTOPUS_API_KEY = process.env.EMAILOCTOPUS_API_KEY
-    const EMAILOCTOPUS_LIST_ID = process.env.EMAILOCTOPUS_LIST_ID
+    // ActiveCampaign API Integration
+    const ACTIVECAMPAIGN_API_URL = process.env.ACTIVECAMPAIGN_API_URL
+    const ACTIVECAMPAIGN_API_KEY = process.env.ACTIVECAMPAIGN_API_KEY
 
-    if (!EMAILOCTOPUS_API_KEY || !EMAILOCTOPUS_LIST_ID) {
-      console.error('Missing Email Octopus credentials')
+    if (!ACTIVECAMPAIGN_API_URL || !ACTIVECAMPAIGN_API_KEY) {
+      console.error('Missing ActiveCampaign credentials')
       return NextResponse.json(
         { error: 'Email service configuration error' },
         { status: 500 }
       )
     }
 
-    // Subscribe to Email Octopus
-    const emailOctopusResponse = await fetch(
-      `https://emailoctopus.com/api/1.6/lists/${EMAILOCTOPUS_LIST_ID}/contacts`,
+    // Step 1: Create or update contact in ActiveCampaign
+    const contactResponse = await fetch(
+      `${ACTIVECAMPAIGN_API_URL}/api/3/contact/sync`,
       {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Api-Token': ACTIVECAMPAIGN_API_KEY,
         },
         body: JSON.stringify({
-          api_key: EMAILOCTOPUS_API_KEY,
-          email_address: email,
-          fields: {
-            FirstName: '', // Email Octopus will ask for this if you set it up
-            LastName: '',
-          },
-          tags: [source, leadMagnet].filter(Boolean),
-          status: 'SUBSCRIBED',
+          contact: {
+            email: email,
+            fieldValues: [
+              {
+                field: '1', // Assuming field 1 is for source tracking - you'll configure this in ActiveCampaign
+                value: source || 'website'
+              }
+            ]
+          }
         }),
       }
     )
 
-    const emailOctopusData = await emailOctopusResponse.json()
+    const contactData = await contactResponse.json()
 
-    if (!emailOctopusResponse.ok) {
-      // Handle duplicate email (common and not really an error)
-      if (emailOctopusData.error?.code === 'MEMBER_EXISTS_WITH_EMAIL_ADDRESS') {
-        return NextResponse.json({
-          success: true,
-          message: 'You are already subscribed to our newsletter!',
-          data: { email }
-        })
+    if (!contactResponse.ok) {
+      console.error('ActiveCampaign contact sync error:', contactData)
+      throw new Error(`ActiveCampaign API error: ${contactData.message || 'Unknown error'}`)
+    }
+
+    const contactId = contactData.contact.id
+
+    // Step 2: Subscribe to Lead Magnet Subscribers list (list ID = 1, adjust if needed)
+    // This triggers the automation
+    await fetch(
+      `${ACTIVECAMPAIGN_API_URL}/api/3/contactLists`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Api-Token': ACTIVECAMPAIGN_API_KEY,
+        },
+        body: JSON.stringify({
+          contactList: {
+            list: 4, // Lead Magnet Subscribers list
+            contact: contactId,
+            status: 1 // 1 = subscribed
+          }
+        }),
       }
+    )
 
-      console.error('Email Octopus error:', emailOctopusData)
-      throw new Error(`Email Octopus API error: ${emailOctopusData.error?.message || 'Unknown error'}`)
+    // Step 3: Add tags if provided
+    if (source || leadMagnet) {
+      const tags = [source, leadMagnet].filter(Boolean)
+
+      for (const tag of tags) {
+        // Create tag if it doesn't exist and associate with contact
+        await fetch(
+          `${ACTIVECAMPAIGN_API_URL}/api/3/contactTags`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Api-Token': ACTIVECAMPAIGN_API_KEY,
+            },
+            body: JSON.stringify({
+              contactTag: {
+                contact: contactId,
+                tag: tag
+              }
+            }),
+          }
+        )
+      }
     }
 
     // Log successful signup for your records
@@ -75,12 +115,12 @@ export async function POST(request: NextRequest) {
       source,
       leadMagnet,
       timestamp: new Date().toISOString(),
-      emailOctopusId: emailOctopusData.id
+      activeCampaignId: contactId
     })
 
     return NextResponse.json({
       success: true,
-      message: 'Successfully subscribed to newsletter! Check your email for confirmation.',
+      message: 'Successfully subscribed! Check your email for your free guide.',
       data: {
         email,
         source,
