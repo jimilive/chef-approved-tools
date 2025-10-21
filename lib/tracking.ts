@@ -70,7 +70,7 @@ export const trackAffiliateClick = (
 
 /**
  * Track email signups
- * @param location - Where signup occurred (e.g., 'price_alert', 'content_upgrade', 'newsletter')
+ * @param location - Where signup occurred (e.g., 'content_upgrade', 'newsletter', 'footer', 'exit_intent')
  * @param upgradeType - Optional content upgrade type (e.g., 'mixer_guide', 'dutch_oven_guide')
  */
 export const trackEmailSignup = (

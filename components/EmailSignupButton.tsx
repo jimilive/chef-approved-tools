@@ -4,7 +4,7 @@
 import { trackEmailSignup } from '@/lib/tracking';
 
 interface EmailSignupButtonProps {
-  location: 'price_alert' | 'content_upgrade' | 'newsletter' | 'footer' | 'exit_intent';
+  location: 'content_upgrade' | 'newsletter' | 'footer' | 'exit_intent';
   upgradeType?: string;
   href: string;
   children: React.ReactNode;

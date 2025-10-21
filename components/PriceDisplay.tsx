@@ -1,7 +1,6 @@
 'use client'
 
-import { useState } from 'react'
-import { TrendingDown, TrendingUp, DollarSign, ExternalLink, Bell } from 'lucide-react'
+import { TrendingDown, TrendingUp, DollarSign, ExternalLink } from 'lucide-react'
 import { Vendor } from '@/types/product'
 
 interface PriceRange {
@@ -36,8 +35,6 @@ export default function PriceDisplay({
   lastUpdated,
   ctaText = 'Check Current Price' // Default CTA text
 }: PriceDisplayProps) {
-  const [showPriceAlert, setShowPriceAlert] = useState(false)
-
   // Use vendors if provided, otherwise fall back to affiliateLinks
   const displayVendors: Vendor[] = vendors || (affiliateLinks?.map(link => ({
     name: link.retailer,
@@ -172,41 +169,6 @@ export default function PriceDisplay({
           💡 Comparing prices helps you find the best deal and supports our site at no extra cost
         </p>
       </div>
-
-      {/* Price Alert Signup */}
-      {priceRange && (
-        <div className="border-t pt-4">
-          {!showPriceAlert ? (
-            <button
-              onClick={() => setShowPriceAlert(true)}
-              className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700 font-medium"
-            >
-              <Bell className="w-4 h-4" />
-              Get price drop alerts for this item
-            </button>
-          ) : (
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-              <div className="flex items-center gap-2 mb-2">
-                <Bell className="w-4 h-4 text-blue-600" />
-                <span className="text-sm font-semibold text-blue-800">Price Drop Alerts</span>
-              </div>
-              <p className="text-xs text-blue-700 mb-3">
-                Get notified when {productName} drops below {formatPrice(priceRange.min)}
-              </p>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="flex-1 px-3 py-2 text-sm border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <button className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded hover:bg-blue-700 transition-colors">
-                  Alert Me
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-      )}
     </div>
   )
 }

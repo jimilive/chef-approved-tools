@@ -15,7 +15,6 @@ export type CTAPositionType =
   | 'related_products';
 
 export type EmailSignupLocationType =
-  | 'price_alert'
   | 'content_upgrade'
   | 'newsletter'
   | 'footer'
