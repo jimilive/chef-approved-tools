@@ -95,7 +95,7 @@ export default function NewsletterForm() {
             cursor: isLoading ? 'not-allowed' : 'pointer'
           }}
         >
-          {isLoading ? 'Subscribing...' : 'Get Free Kitchen Bundle'}
+          {isLoading ? 'Sending Your Guide...' : 'Get My Free Kitchen Tools Guide →'}
         </button>
       </form>
     </div>

@@ -36,7 +36,7 @@ export default function ExitIntentModal({ isOpen, onClose }: ExitIntentModalProp
             🛑 Wait! Before You Go...
           </h2>
           <p className="text-gray-300">
-            Get my free guide to choosing the right equipment for your kitchen.
+            Get my free guide: The 11 Tools I Use Most in My Home Kitchen
           </p>
         </div>
 

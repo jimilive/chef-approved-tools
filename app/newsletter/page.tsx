@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import NewsletterForm from './NewsletterForm'
 
 export const metadata: Metadata = {
-  title: 'Equipment Newsletter: Pro Tips & Insights',
-  description: 'Get equipment insights and honest product recommendations from 23+ years of restaurant experience. Join fellow home chefs getting expert insights.',
-  keywords: 'kitchen tips newsletter, chef tips, cooking newsletter, professional chef advice, kitchen equipment deals',
+  title: 'Free Guide: The 11 Tools I Use Most in My Home Kitchen',
+  description: 'Get my free kitchen tools guide featuring the 11 essential items from 40 years of professional cooking. Real recommendations, no BS.',
+  keywords: 'kitchen tools guide, essential kitchen equipment, chef recommendations, professional kitchen tools, kitchen equipment list',
   alternates: {
     canonical: '/newsletter',
   },
@@ -15,10 +15,10 @@ export default function NewsletterPage() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px', textAlign: 'center' }}>
       <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '8px' }}>
-        Get Equipment Insights
+        The 11 Tools I Use Most in My Home Kitchen
       </h1>
       <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '32px' }}>
-        Get equipment insights and honest product recommendations from 23+ years of restaurant experience.
+        My daily workhorse tools after 40 years of professional cooking. Get the free guide plus equipment insights from 23+ years of restaurant experience.
       </p>
 
       <NewsletterForm />
