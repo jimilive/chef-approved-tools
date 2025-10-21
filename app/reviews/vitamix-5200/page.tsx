@@ -345,8 +345,8 @@ export default function Vitamix5200Review() {
               <div>
                 <h3 className="font-bold text-slate-900 mb-3">Commercial-Grade Performance in Action</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  During our 5 year smoothie program at Purple Cafe, the Vitamix 5200 operated as our primary blending workhorse.
-                  The 2.0 HP motor consistently pulverized frozen fruits, ice, and tough ingredients into perfectly smooth textures
+                  During 5 years of prep and pastry abuse at Purple Cafe, the Vitamix 5200 operated as our primary blending workhorse.
+                  The 2.0 HP motor consistently pulverized fruits, vegetables, and tough ingredients into perfectly smooth textures and sauces
                   that met our quality standards. The Vitamix 5200 became as essential to our operations as our <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline">KitchenAid commercial mixer</Link> and <Link href="/reviews/robot-coupe-r2-dice" className="text-orange-600 hover:text-orange-800 underline">Robot Coupe food processor</Link>, handling tasks
                   that previously required multiple appliances.
                 </p>
@@ -356,7 +356,7 @@ export default function Vitamix5200Review() {
                 <h3 className="font-bold text-slate-900 mb-3">Exceptional Durability Under Pressure</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   What sets this blender apart is its commercial-grade construction. After 5 years of daily restaurant use,
-                  including multiple smoothie rushes and puree preparations, the motor shows no signs of degradation.
+                  including multiple salsa and puree preparations, the motor shows no signs of degradation.
                   The blades maintain their sharpness, the container integrity remains intact, and performance has stayed
                   consistently superior throughout our testing period. The Vitamix&apos;s durability rivals that of my <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-800 underline">Le Creuset
                   Dutch oven</Link>—both are genuine buy-it-for-life investments that justify premium pricing.
@@ -367,7 +367,7 @@ export default function Vitamix5200Review() {
                 <h3 className="font-bold text-slate-900 mb-3">Superior Results vs Competition</h3>
                 <p className="text-slate-700 leading-relaxed">
                   The power and precision of the 5200 creates textures that other blenders simply cannot match.
-                  Smoothies achieve perfect consistency without chunks, while purees reach restaurant-quality smoothness.
+                  Sauces achieve perfect consistency without chunks, while purees reach restaurant-quality smoothness.
                   The variable speed control allows for precise texture control - essential for professional applications
                   where consistency matters for customer satisfaction.
                 </p>
@@ -377,7 +377,7 @@ export default function Vitamix5200Review() {
             <h3 className="text-xl font-semibold text-slate-900 mb-4 mt-6">Testing Environment</h3>
             <ul className="space-y-2 text-slate-700">
               <li>• <strong>Location:</strong> Purple Cafe</li>
-              <li>• <strong>Primary Use:</strong> Making purees and smoothie-type preparations</li>
+              <li>• <strong>Primary Use:</strong> Making purees and sauce preparations</li>
               <li>• <strong>Volume:</strong> Daily restaurant operations</li>
               <li>• <strong>Duration:</strong> 5 years of continuous testing</li>
             </ul>
@@ -500,9 +500,7 @@ export default function Vitamix5200Review() {
             <div className="bg-white rounded-lg p-6 border border-gray-200">
               <h3 className="text-xl font-semibold text-slate-900 mb-4">Blending Performance</h3>
               <p className="text-slate-700 leading-relaxed mb-4">
-                <strong>Real-World Blending Excellence:</strong> Ice crushing is effortless - the blades turn ice into snow in seconds.
-                Frozen fruits blend seamlessly without chunks, while leafy greens integrate perfectly into smoothies.
-                The motor handles tough ingredients like nuts and seeds without strain, creating consistently smooth results
+                <strong>Real-World Blending Excellence:</strong>                 The motor handles tough ingredients like nuts and seeds without strain, creating consistently smooth results
                 at speeds that dramatically reduce prep time. This blender pairs perfectly with other essentials in my <Link href="/kitchen-bundle" className="text-orange-600 hover:text-orange-800 underline">professional kitchen starter kit</Link>, streamlining
                 prep work alongside my <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline">John Boos
                 cutting board</Link> and <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox knives</Link>.
@@ -510,11 +508,11 @@ export default function Vitamix5200Review() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-600 mb-1">5/5</div>
-                  <div className="text-sm text-slate-600">Ice Crushing</div>
+                  <div className="text-sm text-slate-600">Delicate to Tough Ingredients</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-600 mb-1">5/5</div>
-                  <div className="text-sm text-slate-600">Smoothie Consistency</div>
+                  <div className="text-sm text-slate-600">Smooth Consistency</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-600 mb-1">4/5</div>
@@ -637,7 +635,7 @@ export default function Vitamix5200Review() {
               <h3 className="font-semibold text-green-700 mb-3">✅ Perfect For:</h3>
               <ul className="space-y-2 text-slate-700">
                 <li>• Commercial kitchens and restaurants</li>
-                <li>• Daily smoothie and puree preparation</li>
+                <li>• Daily sauce and puree preparation</li>
                 <li>• Operations requiring consistent, professional results</li>
                 <li>• Users who prioritize durability and performance</li>
                 <li>• High-volume blending operations</li>
@@ -1384,7 +1382,7 @@ export default function Vitamix5200Review() {
             <div>
               <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
               <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-                Professional Chef • 45 Years Cooking Experience
+                Professional Chef • 24 Years Cooking Experience
               </p>
               <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
                 Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.

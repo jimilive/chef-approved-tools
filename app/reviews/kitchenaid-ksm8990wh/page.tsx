@@ -10,7 +10,7 @@ import { Tier1Badge } from '@/components/ReviewTierBadge'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 const productData = {
-  name: "KitchenAid Commercial Series KSM8990WH",
+  name: "KitchenAid Commercial Mixer",
   slug: "kitchenaid-ksm8990wh",
   brand: "KitchenAid",
   model: "KSM8990WH",
@@ -97,7 +97,7 @@ const faqData = [
 export const metadata = {
   title: "KitchenAid Commercial: Test NSF",
   description: "KitchenAid Commercial mixer review: 18 months restaurant testing. Chef reviews 1.3HP motor, NSF cert, 8-qt capacity, durability, ROI.",
-  keywords: ["KitchenAid mixer", "KitchenAid stand mixer", "KSM8990WH review", "KitchenAid commercial mixer", "professional mixer", "NSF certified mixer", "kitchen appliances"],
+  keywords: ["KitchenAid mixer", "KitchenAid stand mixer", "KitchenAid commercial mixer", "professional mixer", "NSF certified mixer", "kitchen appliances"],
   robots: {
     index: true,
     follow: true,

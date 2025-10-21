@@ -20,8 +20,8 @@ interface TopPick {
 const topPicks: TopPick[] = [
   {
     id: 'kitchenaid-ksm8990wh',
-    name: 'KitchenAid Commercial Series KSM8990WH',
-    shortName: 'KitchenAid KSM8990WH',
+    name: 'KitchenAid Commercial Mixer',
+    shortName: 'KitchenAid Commercial Mixer',
     rating: 4.8,
     badge: 'Best Overall',
     badgeColor: 'bg-green-700',
