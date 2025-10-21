@@ -72,17 +72,6 @@ export default function TestTrackingPage() {
 
           <div className="space-y-4">
             <div>
-              <p className="text-sm font-semibold text-slate-700 mb-2">Price Alert Signup</p>
-              <EmailSignupButton
-                href="#price-alert"
-                location="price_alert"
-                upgradeType="mixer_price_drop"
-              >
-                Get Price Drop Alert
-              </EmailSignupButton>
-            </div>
-
-            <div>
               <p className="text-sm font-semibold text-slate-700 mb-2">Content Upgrade</p>
               <EmailSignupButton
                 href="#content-upgrade"
@@ -100,6 +89,17 @@ export default function TestTrackingPage() {
                 location="newsletter"
               >
                 Subscribe to Newsletter
+              </EmailSignupButton>
+            </div>
+
+            <div>
+              <p className="text-sm font-semibold text-slate-700 mb-2">Exit Intent Signup</p>
+              <EmailSignupButton
+                href="#exit-intent"
+                location="exit_intent"
+                upgradeType="kitchen_tools_guide"
+              >
+                Get Kitchen Tools Guide
               </EmailSignupButton>
             </div>
           </div>
