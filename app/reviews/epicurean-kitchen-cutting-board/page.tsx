@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board',
   },
 
-  title: 'Epicurean Board: Dishwasher-Safe Choice',
-  description: 'Professional chef reviews Epicurean synthetic cutting board. Better than wood: dishwasher-safe, knife-friendly, sanitary. Restaurant-grade kitchen essential. Made in USA.',
+  title: 'Epicurean Board: Dishwasher-Safe Pro Choice',
+  description: 'Professional chef review of the Epicurean kitchen cutting board after 10 years of continual use in my apartment. Dishwasher-safe and better than wood.',
 }
 
 const productData = {
@@ -41,7 +41,7 @@ const productData = {
     url: "https://amzn.to/3Wyh8Q4"
   }],
   expertRating: 5.0,
-  expertOpinion: "After decades with wood boards, these dishwasher-safe composite boards are better in every practical way - truly sanitary, zero maintenance, and knife-friendly for 23+ years of use.",
+  expertOpinion: "After decades with wood boards, these dishwasher-safe composite boards are better in every practical way - truly sanitary, zero maintenance, and knife-friendly for 24 years of use.",
   dateAdded: "2025-01-15",
   lastUpdated: new Date().toISOString().split('T')[0]
 };
@@ -55,7 +55,7 @@ const breadcrumbs = [
 const faqData = [
   {
     question: "Are dishwasher-safe boards really safe for knives?",
-    answer: "Yes. Epicurean boards use Richlite, a wood fiber composite that's as gentle on knife edges as hard maple. After 23+ years of testing with my Victorinox knives, I've seen no difference in edge retention compared to traditional wood boards."
+    answer: "Yes. Epicurean boards use Richlite, a wood fiber composite that's as gentle on knife edges as hard maple. After 24 years of testing with my Victorinox knives, I've seen no difference in edge retention compared to traditional wood boards."
   },
   {
     question: "Will these boards warp in the dishwasher?",
@@ -104,7 +104,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            Dishwasher-safe boards that are better than wood - tested through 23+ years of professional cooking
+            Dishwasher-safe boards that are better than wood - tested through 24 years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -135,7 +135,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking, I thought I knew cutting boards. Wood or bamboo, hand-wash only,
+              After 45 years of cooking, I thought I knew cutting boards. Wood or bamboo, hand-wash only,
               oil regularly to prevent cracking. That was the gospel. Then I discovered Epicurean boards and everything
               changed.
             </p>
@@ -324,7 +324,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 23+ years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 24 years of professional cooking.
             If you want a truly sanitary, maintenance-free cutting board, this is it.
           </p>
 
@@ -443,7 +443,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
               <h3 className="font-bold text-slate-900 mb-3">Real-World Value Calculation</h3>
               <ul className="space-y-2 text-slate-700">
                 <li>• <strong>Initial cost:</strong> ~$35</li>
-                <li>• <strong>Years of use:</strong> 10+ years (based on professional testing)</li>
+                <li>• <strong>Years of use:</strong> 10 years (based on professional testing)</li>
                 <li>• <strong>Estimated uses:</strong> 3,650+ uses (daily cooking for 10 years)</li>
                 <li>• <strong>Cost per use:</strong> $0.01 per use</li>
               </ul>
@@ -457,7 +457,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
               <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                 <p className="font-semibold text-green-900 mb-2">Epicurean Composite Board</p>
                 <p className="text-slate-700">$35 × 1 board = <strong>$35 total</strong></p>
-                <p className="text-sm text-slate-600 mt-1">Lasts 10+ years with zero maintenance</p>
+                <p className="text-sm text-slate-600 mt-1">Lasts 10 years with zero maintenance</p>
                 <p className="text-sm text-slate-600">No mineral oil needed</p>
               </div>
 
@@ -518,7 +518,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
                 <p className="text-slate-700 text-sm">
                   <strong>Warping after 3 years:</strong> Zero (tested in professional use)<br/>
                   <strong>Cracking incidents:</strong> None<br/>
-                  <strong>Estimated lifespan:</strong> 10+ years
+                  <strong>Estimated lifespan:</strong> 10 years
                 </p>
               </div>
 
@@ -542,7 +542,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
             </div>
 
             <p className="text-slate-700 mt-4 italic text-sm">
-              Performance data based on 23+ years of professional testing and 1,000+ dishwasher cycles.
+              Performance data based on 24 years of professional testing and 1,000+ dishwasher cycles.
             </p>
           </div>
         </section>
@@ -726,7 +726,7 @@ export default function EpicureanKitchenCuttingBoardReview() {
             <div className="bg-white p-6 rounded-lg border border-gray-200">
               <h3 className="text-lg font-bold mb-2 text-gray-900">Are dishwasher-safe boards really safe for knives?</h3>
               <p className="text-gray-700">
-                Yes. Epicurean boards use Richlite, a wood fiber composite that&apos;s as gentle on knife edges as hard maple. After 23+ years of testing with my Victorinox knives, I&apos;ve seen no difference in edge retention compared to traditional wood boards.
+                Yes. Epicurean boards use Richlite, a wood fiber composite that&apos;s as gentle on knife edges as hard maple. After 24 years of testing with my Victorinox knives, I&apos;ve seen no difference in edge retention compared to traditional wood boards.
               </p>
             </div>
 

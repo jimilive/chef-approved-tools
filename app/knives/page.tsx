@@ -10,11 +10,11 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Chef Knives Hub: All Reviews, Guides, Tips',
-  description: 'Professional chef reviews all knives: Tested 20+ years restaurant kitchens. Chef paring, bread knives, specialty blades.',
+  description: 'Professional chef reviews of kitchen knives tested over years in restaurant kitchens. Chef knives, paring knives, bread knives, and specialty blades.',
   keywords: ['chef knives', 'best kitchen knives', 'professional knives', 'knife reviews', 'Victorinox', 'Wüsthof'],
   openGraph: {
     title: 'Chef Knives: All Reviews & Guides',
-    description: 'Chef knives tested in professional kitchens for 20+ years.',
+    description: 'Chef knives tested in professional kitchens for 20 years.',
     type: 'website',
   }
 }
@@ -27,7 +27,7 @@ export default function KnivesPage() {
       brand: "Victorinox",
       affiliateUrl: "https://amzn.to/4o6pPwW",
       slug: "victorinox-fibrox-10-inch-chefs-knife",
-      description: "Professional Swiss chef's knife for larger cuts and bigger hands - 23+ years of professional cooking"
+      description: "Professional Swiss chef's knife for larger cuts and bigger hands - 24 years of professional cooking"
     },
     {
       id: "victorinox-fibrox-8-inch-chefs-knife",
@@ -43,7 +43,7 @@ export default function KnivesPage() {
       brand: "Victorinox",
       affiliateUrl: "https://amzn.to/4mzvALq",
       slug: "victorinox-4-inch-paring-knife",
-      description: "Precision paring knife for detailed work - the exact knife I've used for 40 years"
+      description: "Precision paring knife for detailed work - the exact knife I've used for 20 years"
     },
     {
       id: "victorinox-granton-edge-boning-knife",
@@ -93,7 +93,7 @@ export default function KnivesPage() {
         name: "What's the best chef knife for home cooks?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The Victorinox Fibrox Pro 8\" Chef's Knife is the best all-around choice for home cooks. It offers professional-grade performance at an affordable price, with excellent edge retention and comfortable grip. I've used this exact knife for 40 years of cooking."
+          text: "The Victorinox Fibrox Pro 8\" Chef's Knife is the best all-around choice for home cooks. It offers professional-grade performance at an affordable price, with excellent edge retention and comfortable grip. I've used this exact knife for 20 years of cooking."
         }
       },
       {

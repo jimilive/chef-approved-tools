@@ -7,11 +7,11 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata = {
   title: 'Best Budget Chef Knife 2025: Victorinox 8"',
-  description: "Best budget chef knife 2025: Victorinox Fibrox 8\" tested 20 years. Best value chef knife. NSF certified, dishwasher safe, outperforms $200+ knives. Professional pick.",
+  description: "Victorinox Fibrox 8\" tested 20 years: Best budget chef knife under $50. NSF certified, dishwasher safe, outperforms $200+ knives. Professional pick.",
   keywords: "best budget chef knife, affordable chef knife, victorinox fibrox, cheap chef knife that's good, professional knife under $50, budget kitchen knife",
   openGraph: {
     title: "Best Budget Chef Knife: Victorinox Fibrox 8\" | Professional Pick",
-    description: "40 years of cooking proves this $40 knife outperforms $200+ knives. NSF certified, dishwasher safe, and razor sharp.",
+    description: "45 years of cooking proves this $40 knife outperforms $200+ knives. NSF certified, dishwasher safe, and razor sharp.",
     url: "https://www.chefapprovedtools.com/best-budget-chef-knife",
     type: "article"
   },
@@ -52,7 +52,7 @@ export default function BestBudgetChefKnife() {
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            Best Budget Chef Knife: The $40 Knife I've Used for 20+ Years
+            Best Budget Chef Knife: The $40 Knife I've Used for 20 Years
           </h1>
           <p className="text-lg sm:text-xl text-slate-200 leading-relaxed max-w-3xl">
             After two decades in professional kitchens, I've learned you don't need to spend $200+ on a chef's knife.
@@ -105,7 +105,7 @@ export default function BestBudgetChefKnife() {
 
           <div className="prose prose-lg max-w-none text-slate-700 space-y-4 mb-8">
             <p>
-              I've used the same Victorinox Fibrox 8" chef's knife throughout my 40 years of cooking—from fast-casual
+              I've used the same Victorinox Fibrox 8" chef's knife for 20 years—from fast-casual
               prep work to fine dining mise en place. During my time as Kitchen Manager at Mellow Mushroom, this knife was my daily driver.
             </p>
             <p>
@@ -124,7 +124,7 @@ export default function BestBudgetChefKnife() {
               <ul className="space-y-2 text-slate-700">
                 <li className="flex items-start gap-2">
                   <span className="text-green-600 font-bold">✓</span>
-                  <span>20+ years of daily professional use without stone sharpening</span>
+                  <span>20 years of daily professional use without stone sharpening</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-600 font-bold">✓</span>
@@ -152,7 +152,7 @@ export default function BestBudgetChefKnife() {
                 <li><strong>Sharpening:</strong> 10-15 seconds with a steel restores edge</li>
                 <li><strong>Weight:</strong> 5.6 oz (ultra-lightweight)</li>
                 <li><strong>Balance:</strong> Blade-heavy (professional preference)</li>
-                <li><strong>Durability:</strong> 20+ years proven in commercial use</li>
+                <li><strong>Durability:</strong> 20 years proven in commercial use</li>
               </ul>
             </div>
           </div>
@@ -259,7 +259,7 @@ export default function BestBudgetChefKnife() {
             <span className="text-2xl font-bold text-slate-900 ml-2">5/5</span>
           </div>
           <p className="text-lg text-slate-700 mb-6 leading-relaxed">
-            The Victorinox Fibrox 8" chef's knife is the best budget chef knife money can buy. After 40 years of cooking,
+            The Victorinox Fibrox 8" chef's knife is the best budget chef knife money can buy. After 45 years of cooking,
             I can confidently say it delivers 90% of the performance of knives costing $200+, at a fraction of the price.
             If you're looking for your first quality chef's knife or want a reliable workhorse without breaking the bank,
             this is the knife to buy.

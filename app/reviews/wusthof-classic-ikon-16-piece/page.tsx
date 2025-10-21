@@ -83,7 +83,7 @@ const breadcrumbs = [
 const faqData = [
   {
     question: "Is the WÜSTHOF Classic IKON worth the investment?",
-    answer: "After 2+ years of professional testing, absolutely yes for serious cooks and professionals. The ergonomic IKON handles significantly reduce hand fatigue during extended prep work, which alone justifies the premium over standard handles. The set saves hundreds compared to buying individual knives, and the German-forged construction means these knives will last decades with proper care. The 8\" chef's knife, santoku, bread knife, and paring knives alone justify the investment."
+    answer: "After 2 years of professional testing, absolutely yes for serious cooks and professionals. The ergonomic IKON handles significantly reduce hand fatigue during extended prep work, which alone justifies the premium over standard handles. The set saves hundreds compared to buying individual knives, and the German-forged construction means these knives will last decades with proper care. The 8\" chef's knife, santoku, bread knife, and paring knives alone justify the investment."
   },
   {
     question: "WÜSTHOF Classic IKON vs Classic series: Which should I buy?",
@@ -119,13 +119,13 @@ const faqData = [
   },
   {
     question: "How do I properly maintain WÜSTHOF knives for maximum longevity?",
-    answer: "Follow these professional maintenance practices: (1) Hand wash immediately after use with warm soapy water and dry completely—never leave knives wet or in the sink. (2) Hone before or after each use with the included steel to realign the edge. (3) Use proper cutting boards—wood or plastic only, never glass, stone, or ceramic which destroy edges. (4) Store in the block rather than loose in drawers where blades contact other utensils. (5) Professional sharpening or whetstone sharpening every 6-12 months for home use. Following these practices, WÜSTHOF knives easily last 20+ years of regular use."
+    answer: "Follow these professional maintenance practices: (1) Hand wash immediately after use with warm soapy water and dry completely—never leave knives wet or in the sink. (2) Hone before or after each use with the included steel to realign the edge. (3) Use proper cutting boards—wood or plastic only, never glass, stone, or ceramic which destroy edges. (4) Store in the block rather than loose in drawers where blades contact other utensils. (5) Professional sharpening or whetstone sharpening every 6-12 months for home use. Following these practices, WÜSTHOF knives easily last 20 years of regular use."
   }
 ]
 
 export const metadata = {
-  title: "Wusthof Ikon 16-Pc: German Forge Quality",
-  description: "Wüsthof Classic Ikon 16-pc set tested 2+ years. German-forged precision, ergonomic handles. Professional kitchen performance. Honest review.",
+  title: "Wüsthof Ikon 16-Pc: German Forged Quality",
+  description: "Wusthof Classic Ikon 16-pc set tested 6 years. German-forged precision, ergonomic handles. Professional kitchen performance. Honest review.",
   keywords: ["WÜSTHOF Classic IKON review", "German knife set", "professional knife set", "restaurant knives", "knife block set"],
   robots: {
     index: true,
@@ -143,7 +143,7 @@ export const metadata = {
   },
   openGraph: {
     title: "WÜSTHOF Classic IKON 16-Piece: 2-Year Pro Test (2025)",
-    description: "Restaurant manager's honest review after 2+ years testing this German knife set in professional kitchens",
+    description: "Restaurant manager's honest review after 2 years testing this German knife set in professional kitchens",
     images: ['/logo.png'],
     url: 'https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-16-piece',
     type: 'article',
@@ -203,7 +203,7 @@ export default function WusthofClassicIkonReview() {
             borderRadius: '4px'
           }}>
             <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
-              <strong>⭐⭐⭐⭐⭐ 4.8/5</strong> | Based on 2+ years professional kitchen testing<br/>
+              <strong>⭐⭐⭐⭐⭐ 4.8/5</strong> | Based on 2 years professional kitchen testing<br/>
               <strong>✓ Ergonomic IKON Handles</strong> | <strong>✓ German-Forged Precision</strong> | <strong>✓ 16-Piece Complete Set</strong>
             </p>
           </div>
@@ -254,7 +254,7 @@ export default function WusthofClassicIkonReview() {
           <h2>Professional Verdict</h2>
           
           <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-            <strong>After 2+ years testing in professional kitchens, this WÜSTHOF set has proven exceptional value through German engineering and ergonomic design.</strong> The chef&apos;s knife, santoku, bread knife, and paring knives alone justify the purchase price—saving hundreds compared to individual purchases.
+            <strong>After 2 years testing in professional kitchens, this WÜSTHOF set has proven exceptional value through German engineering and ergonomic design.</strong> The chef&apos;s knife, santoku, bread knife, and paring knives alone justify the purchase price—saving hundreds compared to individual purchases.
           </p>
           
           <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
@@ -389,7 +389,7 @@ export default function WusthofClassicIkonReview() {
               <li>• <strong>Location:</strong> Professional restaurant kitchen operations</li>
               <li>• <strong>Primary Users:</strong> Kitchen staff and management</li>
               <li>• <strong>Usage Frequency:</strong> Daily professional use, 5-6 days per week</li>
-              <li>• <strong>Duration:</strong> 2+ years of continuous professional testing</li>
+              <li>• <strong>Duration:</strong> 2 years of continuous professional testing</li>
             </ul>
 
             <h3 className="text-xl font-semibold text-slate-900 mb-4 mt-6">Performance Results</h3>
@@ -586,7 +586,7 @@ export default function WusthofClassicIkonReview() {
           </h3>
           
           <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
-            Download my comprehensive guide to professional knife selection, developed over 40 years in professional kitchens:
+            Download my comprehensive guide to professional knife selection, developed over 45 years in professional kitchens:
           </p>
           
           <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
@@ -743,7 +743,7 @@ export default function WusthofClassicIkonReview() {
 
         <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
           The WÜSTHOF Classic IKON set works best as part of a complete professional kitchen setup. 
-          Based on 40+ years of restaurant experience, here are the tools I use alongside these knives:
+          Based on 45 years of restaurant experience, here are the tools I use alongside these knives:
         </p>
 
         <div style={{
@@ -760,9 +760,9 @@ export default function WusthofClassicIkonReview() {
             border: '1px solid #dee2e6'
           }}>
             <h4 style={{ marginTop: 0 }}>John Boos Platinum Commercial Cutting Board</h4>
-            <p>Protect your knife edges with this NSF-certified board that survived 3+ years of daily professional use. The reversible design and optimal thickness prevent warping while providing the perfect cutting surface for your WÜSTHOF knives.</p>
+            <p>Protect your knife edges with this NSF-certified board that survived 3 years of daily professional use. The reversible design and optimal thickness prevent warping while providing the perfect cutting surface for your WÜSTHOF knives.</p>
             <p style={{ fontSize: '14px', color: '#666' }}>
-              <strong>Professional tested:</strong> 3+ years in commercial kitchen operations
+              <strong>Professional tested:</strong> 3 years in commercial kitchen operations
             </p>
             <a 
               href="/reviews/john-boos-platinum-commercial-cutting-board"
@@ -788,9 +788,9 @@ export default function WusthofClassicIkonReview() {
             border: '1px solid #dee2e6'
           }}>
             <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef&apos;s Knife</h4>
-            <p>The budget-friendly alternative that matches this WÜSTHOF set in sharpness and edge retention. Perfect for adding a backup chef&apos;s knife to your rotation or for tasks where you want to save your premium blade. Used professionally for 40 years.</p>
+            <p>The budget-friendly alternative that matches this WÜSTHOF set in sharpness and edge retention. Perfect for adding a backup chef&apos;s knife to your rotation or for tasks where you want to save your premium blade. Used professionally for 20 years.</p>
             <p style={{ fontSize: '14px', color: '#666' }}>
-              <strong>Professional tested:</strong> 40 years of continuous use
+              <strong>Professional tested:</strong> 20 years of continuous use
             </p>
             <a 
               href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
@@ -815,7 +815,7 @@ export default function WusthofClassicIkonReview() {
             borderRadius: '8px',
             border: '1px solid #dee2e6'
           }}>
-            <h4 style={{ marginTop: 0 }}>KitchenAid Commercial Mixer KSM8990WH</h4>
+            <h4 style={{ marginTop: 0 }}>KitchenAid Commercial Mixer</h4>
             <p>The NSF-certified mixer that survived 18 months of professional kitchen testing at Purple Cafe. Pairs perfectly with your knife set for complete kitchen efficiency—from prep work with your knives to mixing and processing with commercial-grade power.</p>
             <p style={{ fontSize: '14px', color: '#666' }}>
               <strong>Professional tested:</strong> 18 months in restaurant operations

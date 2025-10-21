@@ -436,7 +436,7 @@ export default function HowToSteelAKnife() {
             <div>
               <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing 200+ cover operations.
+                Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing 200+ cover operations.
                 A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
                 University of Montana. Honed knives daily at Purple Café before every service for 6 years.
               </p>

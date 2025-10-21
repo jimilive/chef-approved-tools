@@ -68,7 +68,7 @@ const allReviews: Review[] = [
   {
     id: 1,
     tier: 1,
-    name: 'KitchenAid KSM8990WH Commercial Mixer',
+    name: 'KitchenAid Commercial Mixer',
     slug: 'kitchenaid-ksm8990wh',
     rating: 4.8,
     testingPeriod: '18 months at Purple Café',
@@ -548,7 +548,7 @@ export default function ReviewsHub() {
           color: '#555',
           margin: 0
         }}>
-          40 years of cooking experience. 23+ years restaurant management. 
+          45 years of cooking experience. 24 years restaurant management. 
           Real testing in professional kitchens where equipment failure means lost revenue.
         </p>
       </div>

@@ -5,7 +5,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'Pro Cooking Techniques | Restaurant Methods',
-  description: 'Professional cooking techniques from 23+ years restaurant experience. Master methods that separate restaurant-quality from home cooking. Chef secrets revealed.',
+  description: 'Professional cooking techniques from 24 years restaurant experience. Master methods that separate restaurant-quality from home cooking. Chef secrets revealed.',
   keywords: ['professional cooking techniques', 'restaurant cooking methods', 'chef techniques', 'kitchen manager tips', 'restaurant quality cooking', 'professional chef blog'],
   alternates: {
     canonical: '/blog',
@@ -16,7 +16,7 @@ const blogPosts = [
   {
     slug: 'best-scrambled-eggs',
     title: 'Perfect Scrambled Eggs: No Bowl, No Whisk Method',
-    excerpt: 'Revolutionary scrambled egg technique from 40 years of cooking. No bowl, no whisk, no milk. Just eggs, butter, and a fork—directly in the pan. The creamiest eggs you\'ll ever make.',
+    excerpt: 'Revolutionary scrambled egg technique from 45 years of cooking. No bowl, no whisk, no milk. Just eggs, butter, and a fork—directly in the pan. The creamiest eggs you\'ll ever make.',
     publishDate: '2025-01-11',
     readTime: '7 min read',
     category: 'Cooking Techniques',
@@ -25,7 +25,7 @@ const blogPosts = [
   {
     slug: 'kitchen-gloves-guide',
     title: 'Essential Guide to Kitchen Gloves: Professional Safety Protocols',
-    excerpt: 'Learn professional kitchen glove safety from 23+ years restaurant experience. Single-use, cut-resistant, and proper layering techniques that prevent contamination and injuries.',
+    excerpt: 'Learn professional kitchen glove safety from 24 years restaurant experience. Single-use, cut-resistant, and proper layering techniques that prevent contamination and injuries.',
     publishDate: '2025-01-11',
     readTime: '10 min read',
     category: 'Kitchen Safety',
@@ -98,7 +98,7 @@ export default function BlogPage() {
           </h1>
           <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
             Learn the restaurant techniques that create professional-quality results at home.
-            23+ years of commercial kitchen experience, explained for home cooks.
+            24 years of commercial kitchen experience, explained for home cooks.
           </p>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 inline-block">
             <div className="flex items-center gap-2 text-orange-400">

@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Kitchen Appliances 2025 | Pro Chef Reviews',
-  description: 'Professional chef reviews: Blenders, mixers, appliances tested real restaurant kitchens. Chef-tested, real testing, zero lab conditions. Knives, cookware, appliances filter price, use case.',
+  description: 'Professional chef reviews of blenders, mixers, food processors, and essential kitchen appliances tested in commercial restaurant settings.',
   keywords: ['kitchen appliances', 'blender reviews', 'mixer reviews', 'food processor reviews', 'professional kitchen equipment'],
   openGraph: {
     title: 'Best Kitchen Appliances 2025 | Chef-Tested Reviews',
@@ -26,11 +26,11 @@ export default function AppliancesPage() {
       brand: "Vitamix",
       affiliateUrl: "#",
       slug: "vitamix-5200",
-      description: "Commercial-grade blender that survived 5+ years of restaurant service"
+      description: "Commercial-grade blender that survived 5 years of restaurant service"
     },
     {
       id: "kitchenaid-ksm8990wh",
-      name: "KitchenAid Commercial Series KSM8990WH",
+      name: "KitchenAid Commercial Series",
       brand: "KitchenAid",
       affiliateUrl: "#",
       slug: "kitchenaid-ksm8990wh",

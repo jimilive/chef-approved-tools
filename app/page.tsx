@@ -9,7 +9,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 export const metadata: Metadata = {
   title: 'Chef Approved Tools: Restaurant-Tested Gear',
-  description: 'Restaurant-tested kitchen equipment from 40-year chef. Honest reviews, real testing, zero lab conditions. Knives, cookware, appliances: filter price, use case.',
+  description: 'Equipment tested in professional kitchens or in my apartment. Honest reviews, real testing, zero lab conditions. Knives, cookware, appliances that survive.',
   alternates: {
     canonical: '/',
   },
@@ -31,11 +31,11 @@ const sampleProducts = [
     image: '/logo.png',
     affiliateUrl: 'https://amzn.to/48RALd9',
     badge: 'Restaurant Tested',
-    tested: '5+ years proven'
+    tested: '5 years proven'
   },
   {
     id: 'kitchenaid-ksm8990',
-    name: 'KitchenAid KSM8990WH Commercial Series',
+    name: 'KitchenAid Commercial Series',
     brand: 'KitchenAid',
     rating: 4.9,
     reviews: 156,
@@ -143,7 +143,7 @@ export default function HomePage() {
           {/* Trust Badge */}
           <div className="bg-orange-500/20 border border-orange-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 inline-block mb-6 sm:mb-8">
             <span className="text-orange-200 font-semibold text-sm sm:text-base">
-              👨‍🍳 23 YEARS PROFESSIONAL COOKING EXPERIENCE
+              👨‍🍳 24 YEARS PROFESSIONAL COOKING EXPERIENCE
             </span>
           </div>
 
@@ -152,14 +152,14 @@ export default function HomePage() {
             Chef-Approved Kitchen Tools
             <br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">
-              Tested by 40 Years Cooking Experience
+              Tested by 45 Years Cooking Experience
             </span>
           </h1>
 
           {/* Credibility-focused Description */}
           <p className="text-lg sm:text-xl text-slate-300 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed">
             From Wendy&apos;s at 15 to Kitchen Manager at Mellow Mushroom ($80K+/month operations),
-            23 years of cooking across every kitchen type—fast food, fine dining, and casual dining.
+            24 years of cooking across every kitchen type—fast food, fine dining, and casual dining.
           </p>
           
           {/* CTA Buttons */}
@@ -195,11 +195,11 @@ export default function HomePage() {
           {/* Real, Specific Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-8 sm:pt-12 border-t border-slate-600">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">40 Years</div>
+              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">45 Years</div>
               <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Cooking Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">23+ Years</div>
+              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">24 Years</div>
               <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Professional Kitchens</div>
             </div>
             <div className="text-center">

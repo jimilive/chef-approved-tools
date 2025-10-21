@@ -59,7 +59,7 @@ const faqData = [
   },
   {
     question: "How long do Cuisinart food processors last?",
-    answer: "Based on my 30 years of continuous use with minimal issues, Cuisinart food processors can last multiple decades with proper care. My experience: Only one cracked bowl (still functional) and one broken stem (my fault for forcing it) in 30 years. The motor runs exactly as smoothly as day one. This is genuine buy-it-for-life equipment. Expected lifespan: 20-30+ years with regular home use. Parents had one, I got one, and both are still working. This kind of durability is exceptional."
+    answer: "Based on my 30 years of continuous use with minimal issues, Cuisinart food processors can last multiple decades with proper care. My experience: Only one cracked bowl (still functional) and one broken stem (my fault for forcing it) in 30 years. The motor runs exactly as smoothly as day one. This is genuine buy-it-for-life equipment. Expected lifespan: 20-30 years with regular home use. Parents had one, I got one, and both are still working. This kind of durability is exceptional."
   },
   {
     question: "What's the difference between 7-cup and 14-cup Cuisinart?",
@@ -172,7 +172,7 @@ export default function CuisinartDLC10CReviewPage() {
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Scott Bradley</p>
-                <p className="text-sm text-slate-600">Professional Chef • 40 Years Experience Since Age 15</p>
+                <p className="text-sm text-slate-600">Professional Chef • 45 Years Cooking Experience</p>
               </div>
             </div>
 
@@ -559,7 +559,7 @@ export default function CuisinartDLC10CReviewPage() {
                   <p><strong>My experience:</strong> Only one cracked bowl (still functional) and one
                   broken stem (my fault for forcing it) in 30 years. The motor runs exactly as smoothly
                   as day one. This is genuine buy-it-for-life equipment.</p>
-                  <p><strong>Expected lifespan:</strong> 20-30+ years with regular home use. Parents had
+                  <p><strong>Expected lifespan:</strong> 20-30 years with regular home use. Parents had
                   one, I got one, and both are still working. This kind of durability is exceptional.</p>
                 </div>
               </div>
@@ -973,7 +973,7 @@ export default function CuisinartDLC10CReviewPage() {
               <p>For tasks the food processor can&apos;t handle. Professional quality at an accessible
               price point.</p>
               <p style={{ fontSize: '14px', color: '#666' }}>
-                <strong>40 years cooking:</strong> My go-to knife.
+                <strong>45 years cooking:</strong> My go-to knife.
               </p>
               <a
                 href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
@@ -1094,10 +1094,10 @@ export default function CuisinartDLC10CReviewPage() {
           <div>
             <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
             <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-              Professional Chef • 40 Years Experience Since Age 15
+              Professional Chef • 45 Years Cooking Experience
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience.
+              Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
               A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
               University of Montana. Equipment tested in both professional kitchens and 30 years
               of home cooking.

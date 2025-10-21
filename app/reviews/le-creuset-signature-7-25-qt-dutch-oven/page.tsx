@@ -127,7 +127,7 @@ const breadcrumbs = [
 const faqData = [
   {
     question: "Is Le Creuset worth 4-5 times the cost of Lodge?",
-    answer: "For frequent cooks (3+ times weekly) planning 10+ year ownership, yes. The 3 lb weight advantage matters tremendously over time, especially for older cooks or frequent oven transfers. The enamel quality shows no staining after 10 years vs Lodge's tendency to stain. However, if you cook infrequently or budget is primary concern, Lodge performs 90% as well at 20% cost—absolutely acceptable for occasional use."
+    answer: "For frequent cooks (3+ times weekly) planning 10 year ownership, yes. The 3 lb weight advantage matters tremendously over time, especially for older cooks or frequent oven transfers. The enamel quality shows no staining after 10 years vs Lodge's tendency to stain. However, if you cook infrequently or budget is primary concern, Lodge performs 90% as well at 20% cost—absolutely acceptable for occasional use."
   },
   {
     question: "What is thermal shock and how do I avoid it?",
@@ -356,7 +356,7 @@ export default function LeCreuset725QtReview() {
             The enameled interior eliminates the seasoning nightmare of traditional cast iron while delivering identical heat retention. The light sand-colored interior lets you monitor browning and deglazing—a game-changer for precision cooking. At 14.9 lbs, it&apos;s 3 lbs lighter than competitors, which matters tremendously when transferring a 325°F pot from stovetop to oven.
           </p>
           <p className="text-slate-700 leading-relaxed">
-            <strong>Bottom line:</strong> If you cook 3+ times weekly and plan to keep your Dutch oven for 10+ years, the Le Creuset justifies its premium price through superior weight, enamel quality, and lifetime warranty. For occasional cooks, Lodge offers 90% of the performance at 20% of the cost.
+            <strong>Bottom line:</strong> If you cook 3+ times weekly and plan to keep your Dutch oven for 10 years, the Le Creuset justifies its premium price through superior weight, enamel quality, and lifetime warranty. For occasional cooks, Lodge offers 90% of the performance at 20% of the cost.
           </p>
         </section>
 
@@ -715,7 +715,7 @@ export default function LeCreuset725QtReview() {
                 <li>• You value easy cleaning and smooth enamel finish</li>
                 <li>• Light interior for monitoring browning is important to you</li>
                 <li>• Brand reputation and resale value matter</li>
-                <li>• You want widest color selection (20+ colors available)</li>
+                <li>• You want widest color selection (20 colors available)</li>
               </ul>
             </div>
 
@@ -789,7 +789,7 @@ export default function LeCreuset725QtReview() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
-                  <span><strong>Long-term kitchen investors</strong> planning 10+ year ownership with generational durability</span>
+                  <span><strong>Long-term kitchen investors</strong> planning 10 year ownership with generational durability</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
@@ -960,7 +960,7 @@ export default function LeCreuset725QtReview() {
             <div className="bg-white rounded-lg p-4 border border-gray-200">
               <h3 className="font-semibold text-slate-900 mb-2">Q: Is Le Creuset worth 4-5 times the cost of Lodge?</h3>
               <p className="text-slate-700 text-sm">
-                A: For frequent cooks (3+ times weekly) planning 10+ year ownership, yes. The 3 lb weight advantage matters tremendously over time, especially for older cooks or frequent oven transfers. The enamel quality shows no staining after 10 years vs Lodge&apos;s tendency to stain. However, if you cook infrequently or budget is primary concern, Lodge performs 90% as well at 20% cost—absolutely acceptable for occasional use.
+                A: For frequent cooks (3+ times weekly) planning 10 year ownership, yes. The 3 lb weight advantage matters tremendously over time, especially for older cooks or frequent oven transfers. The enamel quality shows no staining after 10 years vs Lodge&apos;s tendency to stain. However, if you cook infrequently or budget is primary concern, Lodge performs 90% as well at 20% cost—absolutely acceptable for occasional use.
               </p>
             </div>
 
@@ -1062,7 +1062,7 @@ export default function LeCreuset725QtReview() {
               Join Thousands Who&apos;ve Made the Le Creuset Investment
             </h3>
             <p className="text-lg text-slate-700 mb-6">
-              12+ years tested. 4.9/5 rating. Lifetime warranty. Generational quality.
+              12 years tested. 4.9/5 rating. Lifetime warranty. Generational quality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <CTAVisibilityTracker
@@ -1101,7 +1101,7 @@ export default function LeCreuset725QtReview() {
           <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-8 text-center text-white">
             <h3 className="text-2xl font-bold mb-4">Ready to Build Your Essential Kitchen?</h3>
             <p className="mb-6 max-w-2xl mx-auto">
-              Get my complete cookware and equipment buying framework used in professional kitchens for 23+ years:
+              Get my complete cookware and equipment buying framework used in professional kitchens for 24 years:
             </p>
             <ul className="text-left max-w-2xl mx-auto mb-6 space-y-2">
               <li>• <strong>Essential Equipment Priority List</strong> - What to buy first for maximum impact</li>
@@ -1159,10 +1159,10 @@ export default function LeCreuset725QtReview() {
           <div className="bg-slate-100 rounded-xl p-6">
             <h3 className="font-bold text-slate-900 mb-2">Professional Kitchen Experience</h3>
             <p className="text-slate-700 mb-2">
-              <strong>Scott Bradley</strong> | Professional Chef • 40 Years Experience Since Age 15
+              <strong>Scott Bradley</strong> | Professional Chef • 45 Years Cooking Experience
             </p>
             <p className="text-slate-600 text-sm mb-2">
-              Equipment reviews based on extensive home testing, informed by 23+ years managing professional restaurant kitchens generating $80,000+ monthly revenue. All recommendations backed by hands-on testing experience—not marketing claims.
+              Equipment reviews based on extensive home testing, informed by 24 years managing professional restaurant kitchens generating $80,000+ monthly revenue. All recommendations backed by hands-on testing experience—not marketing claims.
             </p>
             <p className="text-slate-500 text-xs">
               <em>Last Updated: October 4, 2025 | Pricing verified weekly</em>

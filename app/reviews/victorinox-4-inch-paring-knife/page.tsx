@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Victorinox 4" Paring: 20-Year Detail Tool',
-  description: 'Victorinox 4" paring knife: 40-year test. Perfect for detail work, peeling, trimming. Same blade from culinary school. Swiss precision under $15.',
+  description: 'Victorinox 4" paring knife: 20-year test. Perfect for detail work, peeling, trimming. Same blade from culinary school. Swiss precision under $15.',
 }
 
 const productData = {
@@ -84,7 +84,7 @@ const faqData = [
   },
   {
     question: "How durable is the Fibrox handle over time?",
-    answer: "The Fibrox handle is incredibly durable. I have knives that are 8+ years old with handles that show minimal wear. The textured surface may smooth slightly over years of use, but the grip remains secure and the handle won't crack, warp, or deteriorate like wood. It's one of the reasons Victorinox is the standard in professional kitchens - the handles hold up to daily abuse and frequent washing."
+    answer: "The Fibrox handle is incredibly durable. I have knives that are 8 years old with handles that show minimal wear. The textured surface may smooth slightly over years of use, but the grip remains secure and the handle won't crack, warp, or deteriorate like wood. It's one of the reasons Victorinox is the standard in professional kitchens - the handles hold up to daily abuse and frequent washing."
   },
   {
     question: "Should I get a straight edge or serrated paring knife?",
@@ -117,7 +117,7 @@ export default function Victorinox4InchParingKnifeReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The precision tool for detailed work - tested through 20+ years
+            The precision tool for detailed work - tested through 20 years
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -161,7 +161,7 @@ export default function Victorinox4InchParingKnifeReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking, I keep three or four of these in rotation. They handle all the
+              After 45 years of cooking, I keep three or four of these in rotation. They handle all the
               detailed work that a chef&apos;s knife is too large for - peeling apples, deveining shrimp, trimming fat,
               removing strawberry tops, mincing garlic.
             </p>
@@ -397,7 +397,7 @@ export default function Victorinox4InchParingKnifeReview() {
           <div className="space-y-4">
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
-                &quot;I&apos;ve had mine for 8+ years and it&apos;s still razor sharp. Use it daily for everything from peeling apples to deveining shrimp. The handle is so comfortable compared to my old paring knife.&quot;
+                &quot;I&apos;ve had mine for 8 years and it&apos;s still razor sharp. Use it daily for everything from peeling apples to deveining shrimp. The handle is so comfortable compared to my old paring knife.&quot;
               </p>
               <p className="text-sm text-slate-500">— Amazon verified purchaser (Linda T., November 2024)</p>
             </div>
@@ -796,7 +796,7 @@ export default function Victorinox4InchParingKnifeReview() {
                   How durable is the Fibrox handle over time?
                 </h3>
                 <p className="text-slate-700">
-                  The Fibrox handle is incredibly durable. I have knives that are 8+ years old with handles that show minimal wear. The textured surface may smooth slightly over years of use, but the grip remains secure and the handle won&apos;t crack, warp, or deteriorate like wood. It&apos;s one of the reasons Victorinox is the standard in professional kitchens - the handles hold up to daily abuse and frequent washing.
+                  The Fibrox handle is incredibly durable. I have knives that are 8 years old with handles that show minimal wear. The textured surface may smooth slightly over years of use, but the grip remains secure and the handle won&apos;t crack, warp, or deteriorate like wood. It&apos;s one of the reasons Victorinox is the standard in professional kitchens - the handles hold up to daily abuse and frequent washing.
                 </p>
               </div>
 

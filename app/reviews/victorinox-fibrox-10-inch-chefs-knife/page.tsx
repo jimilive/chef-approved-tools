@@ -86,7 +86,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Victorinox 10" Chef: Large Hand Pro Choice',
-  description: 'Victorinox 10" chef\'s knife: 23-year pro test. Perfect for larger hands and big cutting tasks. Swiss precision under $50. Honest chef review.',
+  description: 'Victorinox 10" chef\'s knife: 10-year pro test. Perfect for larger hands, big cutting tasks. Swiss precision, commercial durability. Best value in chef knives.',
 }
 
 export default function VictorinoxFibrox10InchReview() {
@@ -109,7 +109,7 @@ export default function VictorinoxFibrox10InchReview() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Victorinox 10&quot; Chef&apos;s Knife Review: 20+ Years (2025)
+            Victorinox 10&quot; Chef&apos;s Knife Review: 20 Years (2025)
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
@@ -141,7 +141,7 @@ export default function VictorinoxFibrox10InchReview() {
           borderRadius: '4px'
         }}>
           <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
-            <strong>⭐⭐⭐⭐⭐ 4.5/5</strong> | Based on 20+ years of testing<br/>
+            <strong>⭐⭐⭐⭐⭐ 4.5/5</strong> | Based on 20 years of testing<br/>
             <strong>✓ Perfect for larger hands & bigger cuts</strong> | <strong>✓ Professional-grade performance</strong> | <strong>✓ Exceptional value</strong>
           </p>
         </div>
@@ -274,7 +274,7 @@ export default function VictorinoxFibrox10InchReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking, I keep both an <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-600 font-semibold hover:text-blue-800">8&quot; Victorinox chef&apos;s knife</Link> and this 10&quot; model at home.
+              After 45 years of cooking, I keep both an <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-600 font-semibold hover:text-blue-800">8&quot; Victorinox chef&apos;s knife</Link> and this 10&quot; model at home.
               The 10&quot; gets grabbed when I&apos;m breaking down whole chickens, portioning beef, or working through a pile
               of vegetables for meal prep.
             </p>
@@ -693,7 +693,7 @@ export default function VictorinoxFibrox10InchReview() {
           </h3>
           
           <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
-            Download my comprehensive guide to selecting, using, and maintaining professional chef&apos;s knives, developed over 40 years:
+            Download my comprehensive guide to selecting, using, and maintaining professional chef&apos;s knives, developed over 45 years:
           </p>
           
           <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
@@ -740,7 +740,7 @@ export default function VictorinoxFibrox10InchReview() {
         }}>
           
           <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
-            After 20+ Years of Testing...
+            After 20 Years of Testing...
           </h3>
           
           <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
@@ -820,7 +820,7 @@ export default function VictorinoxFibrox10InchReview() {
 
         <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
           The Victorinox Fibrox Pro 10&quot; works best as part of a complete knife setup. 
-          Based on 40+ years of professional cooking experience, here are the knives I use alongside this:
+          Based on 45 years of cooking experience, here are the knives I use alongside this:
         </p>
 
         <div style={{
@@ -839,7 +839,7 @@ export default function VictorinoxFibrox10InchReview() {
             <h4 style={{ marginTop: 0 }}>Victorinox Fibrox Pro 8&quot; Chef&apos;s Knife</h4>
             <p>The standard length that handles 80% of daily cutting tasks. Perfect for precision work, smaller vegetables, and general prep. I keep both the 8&quot; and 10&quot; in my kitchen and grab whichever fits the task best.</p>
             <p style={{ fontSize: '14px', color: '#666' }}>
-              <strong>Professional Use:</strong> My daily workhorse for 20+ years in restaurant kitchens.
+              <strong>Professional Use:</strong> My daily workhorse for 20 years in restaurant kitchens.
             </p>
             <Link
               href="/reviews/victorinox-fibrox-8-inch-chefs-knife"

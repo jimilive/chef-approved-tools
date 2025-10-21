@@ -6,7 +6,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'Sharpen with Tri-Stone: Step-by-Step Pro',
-  description: 'Professional chef shares technique perfected over 6 years in restaurant kitchen. Step-by-step guide: angles, pressure, three-stage progression, troubleshooting.',
+  description: 'Sharpen knives with tri-stone: 6-year restaurant technique. Step-by-step angles, pressure, progression guide. Professional results at home. Norton IM200 test.',
   alternates: {
     canonical: '/blog/how-to-sharpen-with-tri-stone',
   },
@@ -570,7 +570,7 @@ export default function HowToSharpenWithTriStonePage() {
             <div>
               <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing 200+ cover operations.
+                Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing 200+ cover operations.
                 A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
                 University of Montana. Sharpened 8-12 professional knives weekly for 6 years using the Norton
                 Tri-Stone system—this technique produces consistently sharp edges that survived demanding

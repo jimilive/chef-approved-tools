@@ -11,7 +11,7 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 
 export const metadata: Metadata = {
   title: 'Black+Decker Toaster Oven: 48-Year Review',
-  description: 'Black+Decker toaster oven: 48-year review across 4 models (1977-present). Professional chef durability and performance.',
+  description: 'Black+Decker toaster oven review: 48 years across 4 models (1977-present). Professional chef tests durability and performance.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/reviews/black-decker-toaster-oven',
   },
@@ -69,7 +69,7 @@ const faqData = [
   },
   {
     question: "How long do Black+Decker toaster ovens last?",
-    answer: "With normal home use, expect 10-15+ years. My experience across four models: Model 1: 18 years (1977-1995), Model 2: 10 years (1995-2005), Model 3: 15 years (2005-2020), Model 4: 5 years and still going strong (2020-present). The budget price doesn't mean throwaway quality—these are legitimately long-lasting appliances."
+    answer: "With normal home use, expect 10-15 years. My experience across four models: Model 1: 18 years (1977-1995), Model 2: 10 years (1995-2005), Model 3: 15 years (2005-2020), Model 4: 5 years and still going strong (2020-present). The budget price doesn't mean throwaway quality—these are legitimately long-lasting appliances."
   },
   {
     question: "What size toaster oven should I buy?",
@@ -85,7 +85,7 @@ const faqData = [
   },
   {
     question: "Is Black+Decker better than other budget brands?",
-    answer: "After 48 years with Black+Decker, I can confirm they deliver exceptional reliability in the budget category. Key differentiators: Proven longevity (5-18 years per model in my experience), consistent performance across decades of different models, simple durable controls that don't fail, widely available replacement parts. Many budget brands last 2-5 years. Black+Decker consistently delivers 10+ years."
+    answer: "After 48 years with Black+Decker, I can confirm they deliver exceptional reliability in the budget category. Key differentiators: Proven longevity (5-18 years per model in my experience), consistent performance across decades of different models, simple durable controls that don't fail, widely available replacement parts. Many budget brands last 2-5 years. Black+Decker consistently delivers 10 years."
   },
   {
     question: "What's the difference between cheap and expensive toaster ovens?",
@@ -146,7 +146,7 @@ export default function BlackDeckerToasterOvenReview() {
           paddingBottom: '20px',
           borderBottom: '1px solid #e0e0e0'
         }}>
-          <strong>By Scott Bradley</strong> | Professional Chef | 40 Years Experience
+          <strong>By Scott Bradley</strong> | Professional Chef | 45 Years Cooking Experience
         </div>
 
         {/* Tier 2 Badge */}
@@ -366,7 +366,7 @@ export default function BlackDeckerToasterOvenReview() {
             toast, reheating leftovers, quick vegetable roasting, small-batch cookies. After five years of
             constant use, it still performs exactly as it did on day one. The heating elements are strong,
             the temperature control is accurate, and the timer mechanism works perfectly. Based on my previous
-            models&apos; track records, I expect this one to last another 10+ years easily.
+            models&apos; track records, I expect this one to last another 10 years easily.
           </p>
         </div>
 
@@ -415,7 +415,7 @@ export default function BlackDeckerToasterOvenReview() {
 
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
-                &quot;My mom had one for 20+ years. I bought the same brand based on her recommendation. 7 years in and I understand why she kept hers so long.&quot;
+                &quot;My mom had one for 20 years. I bought the same brand based on her recommendation. 7 years in and I understand why she kept hers so long.&quot;
               </p>
               <p className="text-sm text-slate-500">— Amazon verified purchaser (A.W., June 2024)</p>
             </div>
@@ -488,7 +488,7 @@ export default function BlackDeckerToasterOvenReview() {
 
         <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
           <p>
-            After 23+ years working in professional kitchens, I understand the difference between commercial
+            After 24 years working in professional kitchens, I understand the difference between commercial
             and consumer equipment. In restaurant kitchens, we used commercial toaster ovens that cost 10-15
             times what a Black+Decker costs. They were built for constant abuse—running 12-16 hours daily,
             handled by multiple cooks, used for high-volume production.
@@ -718,7 +718,7 @@ export default function BlackDeckerToasterOvenReview() {
           </p>
           <p>
             Here&apos;s the value calculation that matters: If you buy a Black+Decker toaster oven and get
-            10+ years of reliable daily use (my conservative estimate based on actual experience), the cost
+            10 years of reliable daily use (my conservative estimate based on actual experience), the cost
             per year is minimal. Compare that to premium brands that cost 3-5 times as much but don&apos;t
             necessarily last proportionally longer.
           </p>
@@ -772,7 +772,7 @@ export default function BlackDeckerToasterOvenReview() {
             <li><strong>Premium materials:</strong> Functional steel and glass, not designer finishes</li>
           </ul>
           <p>
-            Here&apos;s the key insight from 40 years of cooking: <strong>most home cooks don&apos;t
+            Here&apos;s the key insight from 45 years of cooking: <strong>most home cooks don&apos;t
             need these premium features.</strong> If you&apos;re using your toaster oven for toast, reheating,
             and occasional small baking, you&apos;re paying for unused capability with premium models. Black+Decker
             focuses on essential functions and executes them reliably for years.
@@ -991,7 +991,7 @@ export default function BlackDeckerToasterOvenReview() {
           <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
             <li>✓ How to identify quality vs throwaway appliances</li>
             <li>✓ Maintenance schedules for maximum lifespan</li>
-            <li>✓ Brand reliability rankings from 40 years experience</li>
+            <li>✓ Brand reliability rankings from 45 years experience</li>
             <li>✓ Budget vs premium: when to splurge, when to save</li>
             <li>✓ Red flags that predict early failure</li>
           </ul>
@@ -1045,10 +1045,10 @@ export default function BlackDeckerToasterOvenReview() {
             border: '1px solid #dee2e6'
           }}>
             <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef Knife</h4>
-            <p>Professional quality at budget pricing. The knife I&apos;ve trusted for 40 years
+            <p>Professional quality at budget pricing. The knife I&apos;ve trusted for 20 years
             of cooking—proves you don&apos;t need premium prices for reliable performance.</p>
             <p style={{ fontSize: '14px', color: '#666' }}>
-              <strong>40 years cooking:</strong> My daily workhorse.
+              <strong>45 years cooking:</strong> My daily workhorse.
             </p>
             <a
               href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
@@ -1282,10 +1282,10 @@ export default function BlackDeckerToasterOvenReview() {
           <div>
             <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
             <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-              Professional Chef • 40 Years Experience Since Age 15
+              Professional Chef • 45 Years Cooking Experience
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 23+ years of restaurant experience.
+              Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 24 years of restaurant experience.
               48 years of Black+Decker toaster oven use across 4 different models proves equipment
               reliability through actual long-term testing—not just manufacturer claims.
             </p>

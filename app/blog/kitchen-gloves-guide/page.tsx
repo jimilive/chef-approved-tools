@@ -8,7 +8,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'Kitchen Gloves: Cut-Resistant Safety Guide',
-  description: 'Learn professional kitchen glove safety from chef with 23+ years restaurant experience. Single-use, cut-resistant, and proper layering techniques.',
+  description: 'Learn professional kitchen glove safety from chef with 24 years restaurant experience. Single-use, cut-resistant, and proper layering techniques.',
   keywords: ['kitchen gloves', 'cut resistant gloves', 'food safety gloves', 'disposable gloves', 'kitchen safety', 'professional chef gloves', 'mandoline safety', 'kitchen glove layering'],
   alternates: {
     canonical: '/blog/kitchen-gloves-guide',
@@ -25,7 +25,7 @@ export default function KitchenGlovesGuide() {
           __html: JSON.stringify(generateArticleSchema({
             title: "Essential Guide to Kitchen Gloves: Professional Safety Protocols",
             slug: "kitchen-gloves-guide",
-            description: "Learn professional kitchen glove safety from chef with 23+ years restaurant experience. Single-use, cut-resistant, and proper layering techniques.",
+            description: "Learn professional kitchen glove safety from chef with 24 years restaurant experience. Single-use, cut-resistant, and proper layering techniques.",
             author: "Scott Bradley",
             datePublished: "2024-09-10T00:00:00Z",
             lastUpdated: new Date().toISOString(),
@@ -130,7 +130,7 @@ export default function KitchenGlovesGuide() {
           </h1>
 
           <p className="text-xl text-slate-600 leading-relaxed">
-            Kitchen gloves are your first line of defense against both food contamination and serious injuries. After 23+ years in professional kitchens, I&apos;ve seen how proper glove protocols prevent disasters—from mandoline accidents to cross-contamination incidents that could shut down a restaurant.
+            Kitchen gloves are your first line of defense against both food contamination and serious injuries. After 24 years in professional kitchens, I&apos;ve seen how proper glove protocols prevent disasters—from mandoline accidents to cross-contamination incidents that could shut down a restaurant.
           </p>
         </div>
 
@@ -138,7 +138,7 @@ export default function KitchenGlovesGuide() {
         <div className="prose prose-lg prose-slate max-w-none">
 
           <p>
-            At Purple Café, where I managed kitchen operations for 6+ years, glove safety wasn&apos;t optional—it was mandatory. With dozens of staff handling sharp tools and ready-to-eat foods daily, proper glove protocols prevented both contamination and injuries.
+            At Purple Café, where I managed kitchen operations for 6 years, glove safety wasn&apos;t optional—it was mandatory. With dozens of staff handling sharp tools and ready-to-eat foods daily, proper glove protocols prevented both contamination and injuries.
           </p>
 
           <p>
@@ -352,7 +352,7 @@ export default function KitchenGlovesGuide() {
           <h2>Professional Kitchen Glove Protocols</h2>
 
           <p>
-            Based on 23+ years restaurant experience, here are the protocols that actually work:
+            Based on 24 years restaurant experience, here are the protocols that actually work:
           </p>
 
           <ul>
@@ -464,7 +464,7 @@ export default function KitchenGlovesGuide() {
           <h2>Final Thoughts: Safety Is Non-Negotiable</h2>
 
           <p>
-            After 23+ years in professional kitchens, I&apos;ve seen what happens when safety protocols are followed—and when they&apos;re not. The difference is stark. Proper glove use prevents injuries, maintains food safety, and demonstrates professionalism.
+            After 24 years in professional kitchens, I&apos;ve seen what happens when safety protocols are followed—and when they&apos;re not. The difference is stark. Proper glove use prevents injuries, maintains food safety, and demonstrates professionalism.
           </p>
 
           <p>
@@ -553,7 +553,7 @@ export default function KitchenGlovesGuide() {
             <div>
               <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing 200+ cover operations.
+                Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing 200+ cover operations.
                 A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
                 University of Montana. Implemented mandatory glove safety protocols that prevented injuries and
                 maintained perfect health inspection records.

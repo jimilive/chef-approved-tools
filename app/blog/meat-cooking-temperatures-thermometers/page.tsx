@@ -6,7 +6,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: "Meat Temps & Thermometers: Safety Guide",
-  description: 'Professional chef explains meat thermometers and proper cooking temps. 23+ years restaurant experience. Food safety + perfect doneness every time.',
+  description: 'Professional chef explains meat thermometers and proper cooking temps. 24 years restaurant experience. Food safety + perfect doneness every time.',
   keywords: ['meat cooking temperatures', 'meat thermometer', 'food safety temperatures', 'instant read thermometer', 'cooking temperatures', 'professional chef techniques', 'USDA temperature guidelines', 'carryover cooking'],
   alternates: {
     canonical: '/blog/meat-cooking-temperatures-thermometers',
@@ -23,7 +23,7 @@ export default function MeatCookingTemperaturesThermometers() {
           __html: JSON.stringify(generateArticleSchema({
             title: "Meat Cooking Temperatures & Thermometers: Professional Chef Guide",
             slug: "meat-cooking-temperatures-thermometers",
-            description: "Professional chef explains meat thermometers and proper cooking temps. 23+ years restaurant experience. Food safety + perfect doneness every time.",
+            description: "Professional chef explains meat thermometers and proper cooking temps. 24 years restaurant experience. Food safety + perfect doneness every time.",
             author: "Scott Bradley",
             datePublished: "2024-09-05T00:00:00Z",
             lastUpdated: new Date().toISOString(),
@@ -62,7 +62,7 @@ export default function MeatCookingTemperaturesThermometers() {
             },
             {
               question: "What temperature is medium-rare steak?",
-              answer: "Medium-rare is 130-135°F internal temperature, measured at the thickest part. At this temp, steak has warm red center, pink throughout most of the meat, and browned exterior. After 23 years cooking steaks professionally, I pull them at 128-130°F because residual heat raises temperature 5-10 degrees during resting. Most guests ordering \"medium-rare\" want 130-135°F."
+              answer: "Medium-rare is 130-135°F internal temperature, measured at the thickest part. At this temp, steak has warm red center, pink throughout most of the meat, and browned exterior. After 24 years cooking steaks professionally, I pull them at 128-130°F because residual heat raises temperature 5-10 degrees during resting. Most guests ordering \"medium-rare\" want 130-135°F."
             },
             {
               question: "Why does meat temperature rise after removing from heat?",
@@ -78,7 +78,7 @@ export default function MeatCookingTemperaturesThermometers() {
             },
             {
               question: "Can I rely on meat color to check doneness?",
-              answer: "No—color is unreliable for food safety. Meat can turn brown before reaching safe temperatures, or stay pink even when fully cooked (especially with certain cooking methods or additives). The only reliable doneness test is internal temperature measured with a calibrated thermometer. After 23 years in professional kitchens, I trust thermometers over visual cues every time."
+              answer: "No—color is unreliable for food safety. Meat can turn brown before reaching safe temperatures, or stay pink even when fully cooked (especially with certain cooking methods or additives). The only reliable doneness test is internal temperature measured with a calibrated thermometer. After 24 years in professional kitchens, I trust thermometers over visual cues every time."
             },
             {
               question: "What's the ideal accuracy range for a meat thermometer?",
@@ -129,7 +129,7 @@ export default function MeatCookingTemperaturesThermometers() {
 
           <p className="text-xl text-slate-600 leading-relaxed">
             A meat thermometer is the single most important tool for cooking perfect proteins—and
-            the most underused tool in home kitchens. After 23+ years in professional restaurants,
+            the most underused tool in home kitchens. After 24 years in professional restaurants,
             I&apos;ve never seen a chef rely on guesswork for doneness. Thermometers ensure food
             safety, consistent results, and perfectly cooked meat every single time.
           </p>
@@ -160,7 +160,7 @@ export default function MeatCookingTemperaturesThermometers() {
           <h2>Why Professional Chefs Use Thermometers</h2>
 
           <p>
-            After 23+ years in professional kitchens, I&apos;ve learned that guessing doneness is
+            After 24 years in professional kitchens, I&apos;ve learned that guessing doneness is
             unreliable and dangerous. A thermometer is the difference between perfectly cooked
             and potentially hazardous.
           </p>
@@ -480,7 +480,7 @@ export default function MeatCookingTemperaturesThermometers() {
           <h2>Professional Kitchen Thermometer Protocols</h2>
 
           <p>
-            Based on 23+ years managing restaurant operations, here&apos;s how professionals
+            Based on 24 years managing restaurant operations, here&apos;s how professionals
             actually use thermometers:
           </p>
 
@@ -539,7 +539,7 @@ export default function MeatCookingTemperaturesThermometers() {
           <h2>Final Thoughts: Thermometers Are Non-Negotiable</h2>
 
           <p>
-            After 23+ years in professional kitchens, I can tell you with absolute certainty:
+            After 24 years in professional kitchens, I can tell you with absolute certainty:
             guessing meat doneness is unreliable, unprofessional, and dangerous. A thermometer
             is the single most important tool for cooking proteins safely and perfectly.
           </p>
@@ -554,7 +554,7 @@ export default function MeatCookingTemperaturesThermometers() {
           <p>
             Invest in a quality instant-read thermometer. Learn to use it properly. Check
             temperatures every single time you cook meat. Your food will be safer, more
-            consistent, and better tasting. That&apos;s not opinion—that&apos;s 23+ years of
+            consistent, and better tasting. That&apos;s not opinion—that&apos;s 24 years of
             professional kitchen experience talking.
           </p>
 
@@ -597,7 +597,7 @@ export default function MeatCookingTemperaturesThermometers() {
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">What temperature is medium-rare steak?</h3>
               <p className="text-slate-700 leading-relaxed">
-                Medium-rare is 130-135°F internal temperature, measured at the thickest part. At this temp, steak has warm red center, pink throughout most of the meat, and browned exterior. After 23 years cooking steaks professionally, I pull them at 128-130°F because residual heat raises temperature 5-10 degrees during resting. Most guests ordering &quot;medium-rare&quot; want 130-135°F.
+                Medium-rare is 130-135°F internal temperature, measured at the thickest part. At this temp, steak has warm red center, pink throughout most of the meat, and browned exterior. After 24 years cooking steaks professionally, I pull them at 128-130°F because residual heat raises temperature 5-10 degrees during resting. Most guests ordering &quot;medium-rare&quot; want 130-135°F.
               </p>
             </div>
             <div>
@@ -621,7 +621,7 @@ export default function MeatCookingTemperaturesThermometers() {
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I rely on meat color to check doneness?</h3>
               <p className="text-slate-700 leading-relaxed">
-                No—color is unreliable for food safety. Meat can turn brown before reaching safe temperatures, or stay pink even when fully cooked (especially with certain cooking methods or additives). The only reliable doneness test is internal temperature measured with a calibrated thermometer. After 23 years in professional kitchens, I trust thermometers over visual cues every time.
+                No—color is unreliable for food safety. Meat can turn brown before reaching safe temperatures, or stay pink even when fully cooked (especially with certain cooking methods or additives). The only reliable doneness test is internal temperature measured with a calibrated thermometer. After 24 years in professional kitchens, I trust thermometers over visual cues every time.
               </p>
             </div>
             <div>
@@ -648,7 +648,7 @@ export default function MeatCookingTemperaturesThermometers() {
             <div>
               <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing 200+ cover operations.
+                Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing 200+ cover operations.
                 A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
                 University of Montana. Implemented strict thermometer protocols that maintained perfect
                 health inspection records and consistent food quality.

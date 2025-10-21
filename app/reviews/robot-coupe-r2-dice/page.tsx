@@ -81,7 +81,7 @@ const faqData = [
   },
   {
     question: "How long do the blades and discs last under commercial use?",
-    answer: "Based on our Purple Cafe experience: shredding discs last 12-18 months with daily heavy use, slicing blades 18-24 months. The S-blade for chopping lasts 2+ years with proper care. Replacement components are reasonably priced for commercial equipment. Performance degradation is gradual—you'll notice slightly longer processing times before complete failure. Keep spare discs on hand for busy operations to avoid downtime."
+    answer: "Based on our Purple Cafe experience: shredding discs last 12-18 months with daily heavy use, slicing blades 18-24 months. The S-blade for chopping lasts 2 years with proper care. Replacement components are reasonably priced for commercial equipment. Performance degradation is gradual—you'll notice slightly longer processing times before complete failure. Keep spare discs on hand for busy operations to avoid downtime."
   },
   {
     question: "What electrical requirements are needed?",
@@ -182,7 +182,7 @@ export default function RobotCoupeR2DiceReview() {
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Scott Bradley</p>
-                <p className="text-sm text-slate-600">Professional Chef • 40 Years Experience Since Age 15</p>
+                <p className="text-sm text-slate-600">Professional Chef • 45 Years Cooking Experience</p>
               </div>
             </div>
 
@@ -482,7 +482,7 @@ export default function RobotCoupeR2DiceReview() {
           <div className="space-y-4">
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
-                &quot;After 2+ years in our busy cafe, this Robot Coupe has been worth every penny. We process 15-20 lbs of vegetables daily—the continuous feed design means we can keep working without stopping to empty the bowl constantly. Saves us at least 2 hours of prep time daily.&quot;
+                &quot;After 2 years in our busy cafe, this Robot Coupe has been worth every penny. We process 15-20 lbs of vegetables daily—the continuous feed design means we can keep working without stopping to empty the bowl constantly. Saves us at least 2 hours of prep time daily.&quot;
               </p>
               <p className="text-sm text-slate-500">— WebstaurantStore verified purchaser (J.K., August 2024) | Cafe Operations</p>
             </div>
@@ -978,7 +978,7 @@ export default function RobotCoupeR2DiceReview() {
 
             <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
               Download my comprehensive guide to commercial kitchen equipment selection, developed over
-              23+ years of restaurant experience:
+              24 years of restaurant experience:
             </p>
 
             <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
@@ -1021,7 +1021,7 @@ export default function RobotCoupeR2DiceReview() {
 
           <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
             A commercial food processor is essential prep equipment, but it works best as part of a
-            complete professional kitchen. Based on 23+ years of restaurant experience, here are the
+            complete professional kitchen. Based on 24 years of restaurant experience, here are the
             tools I used alongside this processor:
           </p>
 
@@ -1039,7 +1039,7 @@ export default function RobotCoupeR2DiceReview() {
               borderRadius: '8px',
               border: '1px solid #dee2e6'
             }}>
-              <h4 style={{ marginTop: 0 }}>KitchenAid KSM8990WH Commercial Mixer</h4>
+              <h4 style={{ marginTop: 0 }}>KitchenAid Commercial Mixer</h4>
               <p>The commercial mixer that worked alongside the Robot Coupe in our prep operations.
               Together, they transformed our prep efficiency and paid for themselves in months.</p>
               <p style={{ fontSize: '14px', color: '#666' }}>
@@ -1199,10 +1199,10 @@ export default function RobotCoupeR2DiceReview() {
             <div>
               <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
               <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-                Professional Chef • 40 Years Experience Since Age 15
+                Professional Chef • 45 Years Cooking Experience
               </p>
               <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-                Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience.
+                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
                 A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
                 University of Montana. Equipment tested in high-volume commercial operations serving
                 hundreds daily.

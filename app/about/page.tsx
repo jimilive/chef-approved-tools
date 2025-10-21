@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About Scott Bradley & Testing Methodology',
-  description: 'Chef Scott Bradley: 40 years cooking. 6-month testing minimum. Restaurant kitchens only - no lab tests. Real conditions, honest reviews. Expert methodology.',
+  description: 'Chef Scott Bradley: 45 years cooking, serious testing. Restaurant or my kitchen only - no lab tests. Real conditions, honest reviews. Expert methodology.',
   keywords: 'Scott Bradley chef, professional chef background, kitchen equipment testing, restaurant equipment review process, chef equipment methodology, culinary expertise',
   alternates: {
     canonical: '/about',
@@ -21,7 +21,7 @@ const combinedFAQs = [
   },
   {
     question: "How did you transition from restaurant work to equipment reviews?",
-    answer: "After 5+ years in restaurant operations, I moved into e-commerce, working as Internet Production Lead at The Sharper Image and later managing a $2M brand launch. This combination of culinary expertise and e-commerce experience helps me understand both what works in kitchens and what information helps people make purchasing decisions."
+    answer: "After 5 years in restaurant operations, I moved into e-commerce, working as Internet Production Lead at The Sharper Image and later managing a $2M brand launch. This combination of culinary expertise and e-commerce experience helps me understand both what works in kitchens and what information helps people make purchasing decisions."
   },
   {
     question: "How long do you test each piece of equipment?",
@@ -175,7 +175,7 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">
               About Scott Bradley
             </h1>
-            <p className="text-xl text-slate-600">Professional Chef with 40 Years Cooking Experience (23+ Years Professional)</p>
+            <p className="text-xl text-slate-600">Professional Chef with 45 Years Cooking Experience (24 Years Professional)</p>
           </div>
 
           <div className="prose prose-lg max-w-none">
@@ -184,7 +184,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-slate-700 mb-6 text-lg leading-relaxed">
-              Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience.
+              Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
               Seattle Culinary Academy graduate who&apos;s tested equipment in
               high-volume restaurant operations serving hundreds of customers daily.
             </p>
@@ -378,7 +378,7 @@ export default function AboutPage() {
               </div>
               <h5 className="font-bold text-slate-900 mb-3">Professional Recommendation</h5>
               <p className="text-sm text-slate-700 mb-3">
-                Informed opinions based on 40 years of cooking experience and understanding what
+                Informed opinions based on 45 years of cooking experience and understanding what
                 makes equipment work in real kitchens.
               </p>
               <p className="text-xs text-slate-600 italic">
@@ -473,7 +473,7 @@ export default function AboutPage() {
               <Users className="w-8 h-8 text-orange-400 mb-4" />
               <h4 className="text-lg font-bold mb-3">Professional Kitchen Experience</h4>
               <p className="text-sm text-white/80">
-                23+ years of restaurant experience provides comprehensive evaluation
+                24 years of restaurant experience provides comprehensive evaluation
                 of usability, durability, and real-world performance.
               </p>
             </div>

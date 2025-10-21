@@ -76,7 +76,7 @@ export const metadata = {
   },
 
   title: 'ZUPERIA Bar Mops: Industry Standard Cotton',
-  description: 'ZUPERIA bar mops: Restaurant kitchen standard. Absorbent, durable, easy care. Cut-resistant towels. Professional kitchen essential.',
+  description: 'ZUPERIA bar mops. Better quality than those used years in restaurants. Professional kitchen standard. 100% ring-spun cotton, absorbent, durable.',
 };
 
 export default function ZuperiaBarMopsReview() {
@@ -320,7 +320,7 @@ export default function ZuperiaBarMopsReview() {
       </p>
 
       <p className="mb-4" style={{ fontSize: '16px', lineHeight: '1.6' }}>
-        For home use, this means these towels will outlast anything else you could buy. If they survive daily industrial washing for years, weekly home washing is nothing. You&apos;re looking at 3-5+ years of reliable service minimumprobably longer.
+        For home use, this means these towels will outlast anything else you could buy. If they survive daily industrial washing for years, weekly home washing is nothing. You&apos;re looking at 3-5 years of reliable service minimumprobably longer.
       </p>
 
       <h3 className="text-2xl font-bold mb-3 mt-6">Setup Recommendations</h3>
@@ -505,7 +505,7 @@ export default function ZuperiaBarMopsReview() {
       <h2 className="text-3xl font-bold mb-4 mt-8">Complete Your Professional Kitchen Setup</h2>
 
       <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
-        ZUPERIA bar mops work best as part of a complete restaurant-grade kitchen. Based on 40 years of experience, here are the other professional tools I use daily:
+        ZUPERIA bar mops work best as part of a complete restaurant-grade kitchen. Based on 45 years of experience, here are the other professional tools I use daily:
       </p>
 
       <div style={{
@@ -578,9 +578,9 @@ export default function ZuperiaBarMopsReview() {
           border: '1px solid #dee2e6'
         }}>
           <h4 style={{ marginTop: 0 }}>Victorinox Fibrox Chef&apos;s Knife</h4>
-          <p>The knife I&apos;ve used for 40 years. Same professional reliability as these towels. When prep work is done, I clean it with ZUPERIA bar mopsthey won&apos;t leave lint on the blade or scratch the finish.</p>
+          <p>The knife I&apos;ve used for 45 years. Same professional reliability as these towels. When prep work is done, I clean it with ZUPERIA bar mopsthey won&apos;t leave lint on the blade or scratch the finish.</p>
           <p style={{ fontSize: '14px', color: '#666' }}>
-            <strong>40-year partnership:</strong> My knife and these towels, industry standards both
+            <strong>45-year partnership:</strong> My knife and these towels, industry standards both
           </p>
           <a
             href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
@@ -662,10 +662,10 @@ export default function ZuperiaBarMopsReview() {
         <div>
           <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
           <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-            Professional Chef • 40 Years Experience Since Age 15
+            Professional Chef • 45 Years Cooking Experience
           </p>
           <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-            Former Kitchen Manager at Purple Café and Mellow Mushroom with 23+ years of restaurant management experience.
+            Former Kitchen Manager at Purple Café and Mellow Mushroom with 24 years of restaurant management experience.
             A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
             University of Montana. I&apos;ve used ZUPERIA bar mops in professional kitchens for yearsthey&apos;re the industry standard for a reason, and they&apos;re what I stock in my home kitchen today.
           </p>

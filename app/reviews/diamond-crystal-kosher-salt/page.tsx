@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Diamond Crystal Salt: Pro Kitchen Essential',
-  description: 'Diamond Crystal kosher salt review. 18 years professional and home use. Chef tests texture, flavor, pros/cons. Industry standard.',
+  description: 'Diamond Crystal Kosher Salt review: 18 years professional and home use. Chef tests texture, flavor, pinchability. Industry standard.',
 };
 
 export default function DiamondCrystalKosherSaltReview() {
@@ -594,7 +594,7 @@ export default function DiamondCrystalKosherSaltReview() {
         </h3>
 
         <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
-          Download my comprehensive guide to stocking a kitchen like a pro, developed over 40 years of cooking:
+          Download my comprehensive guide to stocking a kitchen like a pro, developed over 45 years of cooking:
         </p>
 
         <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
@@ -733,7 +733,7 @@ export default function DiamondCrystalKosherSaltReview() {
 
       <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
         Diamond Crystal works best as part of a complete professional kitchen setup.
-        Based on 40 years of cooking experience, here are the tools I use alongside this salt:
+        Based on 45 years of cooking experience, here are the tools I use alongside this salt:
       </p>
 
       <div style={{
@@ -899,7 +899,7 @@ export default function DiamondCrystalKosherSaltReview() {
         <div>
           <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
           <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-            Professional Chef • 40 Years Experience Since Age 15
+            Professional Chef • 45 Years Cooking Experience
           </p>
           <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
             Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend.

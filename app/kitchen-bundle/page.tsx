@@ -6,8 +6,8 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Essential Kitchen Starter: 10 Pro Tested',
-  description: 'Professional kitchen starter kit: 10 essential tools tested 23+ years. Knives, cookware. Restaurant veteran-approved. Build your pro kitchen.',
+  title: 'Essential Kitchen Starter: 10 Year Pro-Tested',
+  description: 'Professional kitchen starter kit: 10 essential tools tested 24 years. From knives to cookware. Restaurant veteran-approved. Build your pro kitchen.',
   keywords: 'chef approved kitchen kit, essential kitchen tools, professional kitchen starter, restaurant tested equipment',
   alternates: {
     canonical: '/kitchen-bundle',
@@ -70,7 +70,7 @@ const lifetimeUpgrades = [
     image: "/logo.png"
   },
   {
-    name: "KitchenAid KSM8990WH Commercial Series Mixer",
+    name: "KitchenAid Commercial Series Mixer",
     justification: "NSF-certified power that survived 18 months of restaurant use. This is the mixer professional kitchens choose.",
     reviewSlug: "kitchenaid-ksm8990wh",
     affiliateUrl: "https://amzn.to/4nVlUTM",
@@ -78,7 +78,7 @@ const lifetimeUpgrades = [
   },
   {
     name: "Vitamix 5200 Blender",
-    justification: "5+ years powering our commercial smoothie program. The industry standard for professional blending.",
+    justification: "5 years powering our commercial smoothie program. The industry standard for professional blending.",
     reviewSlug: "vitamix-5200",
     affiliateUrl: "https://amzn.to/48RALd9",
     image: "/logo.png"
@@ -104,7 +104,7 @@ export default function ChefApprovedKitchenKit() {
           <div className="text-center mb-8">
             <div className="bg-orange-500/20 border border-orange-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 inline-block">
               <span className="text-orange-200 font-semibold text-sm sm:text-base">
-                👨‍🍳 23+ YEARS PROFESSIONAL COOKING EXPERIENCE
+                👨‍🍳 24 YEARS PROFESSIONAL COOKING EXPERIENCE
               </span>
             </div>
           </div>
@@ -117,7 +117,7 @@ export default function ChefApprovedKitchenKit() {
           <div className="max-w-3xl mx-auto">
             <p className="text-lg sm:text-xl text-slate-200 mb-6 leading-relaxed text-center">
               Every professional kitchen is built on a foundation of a few indestructible, high-performance tools.
-              After 23+ years of setting up restaurant kitchens and seeing countless gadgets fail, I&apos;ve distilled
+              After 24 years of setting up restaurant kitchens and seeing countless gadgets fail, I&apos;ve distilled
               the list down to the non-negotiable essentials.
             </p>
             <p className="text-lg sm:text-xl text-slate-200 leading-relaxed text-center font-semibold">
@@ -443,7 +443,7 @@ export default function ChefApprovedKitchenKit() {
             </p>
           </div>
           <p className="text-lg sm:text-xl text-slate-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Less than 3 months of eating out, but this complete kit will last 20+ years and transform
+            Less than 3 months of eating out, but this complete kit will last 20 years and transform
             how you cook at home.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
@@ -460,7 +460,7 @@ export default function ChefApprovedKitchenKit() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-3">✅</div>
               <p className="font-semibold mb-2">Restaurant Proven</p>
-              <p className="text-sm text-slate-300">23+ years of real-world testing</p>
+              <p className="text-sm text-slate-300">24 years of real-world testing</p>
             </div>
           </div>
 

@@ -8,7 +8,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 
 export const metadata: Metadata = {
   title: 'Best Chef Knives 2025: Expert Buying Guide',
-  description: 'Best chef knives 2025: Tested in professional kitchens, 23 years. German workhorses vs Japanese precision. Real restaurant kitchen testing.',
+  description: 'Best chef knives 2025: Professional chef reviews from 24 years experience. German workhorses to Japanese precision. Real restaurant kitchen testing.',
   openGraph: {
     title: 'Best Chef Knives 2025: Expert Buying Guide',
     description: 'Tested in professional kitchens doing $80K+ monthly revenue. Find your perfect chef knife.',
@@ -131,7 +131,7 @@ export default function BestChefKnivesPage() {
             Best Chef Knives of 2025: Professional Kitchen Testing
           </h1>
           <p className="text-xl text-slate-600 leading-relaxed mb-4">
-            After 23+ years managing professional kitchens doing $80K+ monthly revenue at Mellow Mushroom and testing knives in high-volume operations, here are the chef knives that actually survive real restaurant abuse.
+            After 24 years managing professional kitchens doing $80K+ monthly revenue at Mellow Mushroom and testing knives in high-volume operations, here are the chef knives that actually survive real restaurant abuse.
           </p>
           <div className="flex items-center gap-4 text-sm text-slate-500">
             <span>By Scott Bradley, Professional Chef</span>
@@ -313,7 +313,7 @@ export default function BestChefKnivesPage() {
                     <div className="mb-4">
                       {knife.id === 1 && (
                         <p className="text-slate-700 leading-relaxed">
-                          The gold standard of professional kitchens. I used this daily for 2+ years at Mellow Mushroom during our highest volume periods. The German steel holds an edge through hundreds of prep hours, and the full tang construction provides perfect balance for precision work. The handle ergonomics reduce wrist fatigue during marathon prep sessions. This is the knife I reach for when I need absolute reliability.
+                          The gold standard of professional kitchens. I used this daily for 2 years at Mellow Mushroom during our highest volume periods. The German steel holds an edge through hundreds of prep hours, and the full tang construction provides perfect balance for precision work. The handle ergonomics reduce wrist fatigue during marathon prep sessions. This is the knife I reach for when I need absolute reliability.
                         </p>
                       )}
                       {knife.id === 2 && (
@@ -441,7 +441,7 @@ export default function BestChefKnivesPage() {
             <div className="bg-white rounded-xl p-6 shadow-md">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Maintenance Reality Check</h3>
               <p className="text-slate-700 leading-relaxed">
-                Here&apos;s what nobody tells you: Even the best knife is useless if you don&apos;t maintain it. You need three things: a honing steel (use before each session), a sharpening stone or service (monthly to quarterly depending on use), and proper storage (knife block or magnetic strip, never loose in a drawer). I&apos;ve seen $500 Japanese knives ruined by dishwashers and $40 Victorinox knives lasting 10+ years with proper care. Maintenance discipline matters more than initial investment.
+                Here&apos;s what nobody tells you: Even the best knife is useless if you don&apos;t maintain it. You need three things: a honing steel (use before each session), a sharpening stone or service (monthly to quarterly depending on use), and proper storage (knife block or magnetic strip, never loose in a drawer). I&apos;ve seen $500 Japanese knives ruined by dishwashers and $40 Victorinox knives lasting 10 years with proper care. Maintenance discipline matters more than initial investment.
               </p>
             </div>
           </div>
@@ -501,7 +501,7 @@ export default function BestChefKnivesPage() {
             <ul className="text-blue-800 text-sm space-y-1 mb-3">
               <li>• <strong>Mellow Mushroom:</strong> High-volume pizza restaurant doing $80K+ monthly revenue</li>
               <li>• <strong>Purple Cafe:</strong> Fine dining establishment with precision knife work requirements</li>
-              <li>• <strong>Home Kitchen Testing:</strong> Regular cooking 3-5 times weekly for 10+ years</li>
+              <li>• <strong>Home Kitchen Testing:</strong> Regular cooking 3-5 times weekly for 10 years</li>
             </ul>
             <p className="text-blue-800 text-sm">
               Knives were evaluated on edge retention, handle comfort, balance, ease of sharpening, and long-term durability. No free samples or sponsored reviews—just honest assessment from someone who&apos;s used these tools professionally for over two decades.

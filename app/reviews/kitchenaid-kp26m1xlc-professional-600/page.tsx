@@ -72,7 +72,7 @@ const faqData = [
   },
   {
     question: "How long does a KitchenAid Professional 600 last?",
-    answer: "Based on my 18 years of continuous use with zero motor issues, these mixers are built for decades of service. Proper care extends longevity significantly. Expected lifespan: 20-30+ years with regular home use. Some owners report 40+ years with their KitchenAid mixers. This is genuine buy-it-for-life equipment. Maintenance requirements: Minimal. Wipe down after use, occasionally grease the beater shaft, store properly. That's it."
+    answer: "Based on my 18 years of continuous use with zero motor issues, these mixers are built for decades of service. Proper care extends longevity significantly. Expected lifespan: 20-30 years with regular home use. Some owners report 40 years with their KitchenAid mixers. This is genuine buy-it-for-life equipment. Maintenance requirements: Minimal. Wipe down after use, occasionally grease the beater shaft, store properly. That's it."
   },
   {
     question: "Is bowl-lift better than tilt-head?",
@@ -92,7 +92,7 @@ const faqData = [
   },
   {
     question: "Should I buy the Professional 600 or save up for the Commercial model?",
-    answer: "For home use, the Professional 600 is the better choice. The Commercial model (like the KSM8990WH I tested in restaurant operations) is designed for daily 8-hour professional use—overkill for home kitchens. Professional 600 advantages for home: More than enough power for home baking needs; Better value for home use frequency; Same attachment compatibility; Proven 20-30 year home lifespan. Save the premium for the Commercial model if you're running a bakery or catering business. For home use, the Professional 600 is the sweet spot."
+    answer: "For home use, the Professional 600 is the better choice. The Commercial model I tested in restaurant operations is designed for daily 8-hour professional use—overkill for home kitchens. Professional 600 advantages for home: More than enough power for home baking needs; Better value for home use frequency; Same attachment compatibility; Proven 20-30 year home lifespan. Save the premium for the Commercial model if you're running a bakery or catering business. For home use, the Professional 600 is the sweet spot."
   }
 ]
 
@@ -173,7 +173,7 @@ export default function KitchenAidProfessional600ReviewPage() {
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Scott Bradley</p>
-                <p className="text-sm text-slate-600">Professional Chef • 40 Years Experience Since Age 15</p>
+                <p className="text-sm text-slate-600">Professional Chef • 45 Years Cooking Experience</p>
               </div>
             </div>
 
@@ -650,7 +650,7 @@ export default function KitchenAidProfessional600ReviewPage() {
             <div className="bg-orange-50 p-5 rounded-lg border border-orange-200 mt-6">
               <p className="text-slate-800 mb-0">
                 <strong>Professional perspective:</strong> Having tested commercial KitchenAid mixers in restaurant settings (like the{' '}
-                <a href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline">KSM8990WH Commercial Series</a>),
+                <a href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline">Commercial Series</a>),
                 I can confirm the Professional 600 delivers 85-90% of commercial-grade performance for home use at a fraction of the cost.
               </p>
             </div>
@@ -679,7 +679,7 @@ export default function KitchenAidProfessional600ReviewPage() {
                     Artisan Series
                   </th>
                   <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>
-                    Commercial (KSM8990WH)
+                    Commercial Series
                   </th>
                 </tr>
               </thead>
@@ -1036,8 +1036,8 @@ export default function KitchenAidProfessional600ReviewPage() {
                   <p><strong>Answer:</strong> Based on my 18 years of continuous use with zero motor
                   issues, these mixers are built for decades of service. Proper care extends longevity
                   significantly.</p>
-                  <p><strong>Expected lifespan:</strong> 20-30+ years with regular home use. Some owners
-                  report 40+ years with their KitchenAid mixers. This is genuine buy-it-for-life equipment.</p>
+                  <p><strong>Expected lifespan:</strong> 20-30 years with regular home use. Some owners
+                  report 40 years with their KitchenAid mixers. This is genuine buy-it-for-life equipment.</p>
                   <p><strong>Maintenance requirements:</strong> Minimal. Wipe down after use, occasionally
                   grease the beater shaft, store properly. That&apos;s it.</p>
                 </div>
@@ -1146,7 +1146,7 @@ export default function KitchenAidProfessional600ReviewPage() {
               <div>
                 <div>
                   <p><strong>Answer:</strong> For home use, the Professional 600 is the better choice.
-                  The Commercial model (like the KSM8990WH I tested in restaurant operations) is designed
+                  The Commercial model I tested in restaurant operations is designed
                   for daily 8-hour professional use—overkill for home kitchens.</p>
                   <p><strong>Professional 600 advantages for home:</strong></p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
@@ -1340,7 +1340,7 @@ export default function KitchenAidProfessional600ReviewPage() {
               <p>For all the ingredient prep before mixing begins. Professional quality at an
               accessible price point.</p>
               <p style={{ fontSize: '14px', color: '#666' }}>
-                <strong>40 years cooking:</strong> My go-to knife.
+                <strong>45 years cooking:</strong> My go-to knife.
               </p>
               <a
                 href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
@@ -1432,10 +1432,10 @@ export default function KitchenAidProfessional600ReviewPage() {
           <div>
             <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
             <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-              Professional Chef • 40 Years Experience Since Age 15
+              Professional Chef • 45 Years Cooking Experience
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience.
+              Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
               A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
               University of Montana. Equipment tested in both professional kitchens and 18 years
               of serious home cooking.

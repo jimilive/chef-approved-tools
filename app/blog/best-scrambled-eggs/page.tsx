@@ -7,8 +7,8 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Perfect Scrambled Eggs: Chef Technique',
-  description: 'Perfect scrambled eggs: Chef method perfects creamy scramble every time. No bowl, no whisk required. 23 years restaurant experience reveals technique.',
+  title: 'Perfect Scrambled Eggs: Pro Chef Technique',
+  description: 'Professional chef shares revolutionary scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 45 years of cooking wisdom.',
   keywords: ['scrambled eggs', 'how to make scrambled eggs', 'perfect scrambled eggs', 'no bowl scrambled eggs', 'no whisk scrambled eggs', 'creamy scrambled eggs', 'chef scrambled eggs', 'professional egg technique'],
   alternates: {
     canonical: '/blog/best-scrambled-eggs',
@@ -25,7 +25,7 @@ export default function BestScrambledEggs() {
           __html: JSON.stringify(generateArticleSchema({
             title: "The Simplest Way to Perfect Scrambled Eggs: No Bowl, No Whisk",
             slug: "best-scrambled-eggs",
-            description: "Professional chef shares revolutionary scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 40 years of cooking wisdom.",
+            description: "Professional chef shares revolutionary scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 45 years of cooking wisdom.",
             author: "Scott Bradley",
             datePublished: "2024-09-15T00:00:00Z",
             lastUpdated: new Date().toISOString(),
@@ -140,7 +140,7 @@ export default function BestScrambledEggs() {
         <div className="prose prose-lg prose-slate max-w-none">
 
           <p>
-            After 40 years of cooking and 23+ years managing professional kitchens, I&apos;ve cooked thousands
+            After 45 years of cooking and 24 years managing professional kitchens, I&apos;ve cooked thousands
             of eggs. This no-bowl, no-whisk method eliminates unnecessary steps while producing superior results.
             It&apos;s how I cook eggs at home every morning.
           </p>
@@ -362,7 +362,7 @@ export default function BestScrambledEggs() {
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
             <p className="mb-0">
-              <strong>Professional Insight:</strong> After 40 years of cooking, I&apos;ve learned that
+              <strong>Professional Insight:</strong> After 45 years of cooking, I&apos;ve learned that
               great scrambled eggs are about restraint, not technique complexity. Lower heat, gentle
               stirring, early removal—these simple principles produce better results than any fancy method.
             </p>
@@ -507,7 +507,7 @@ export default function BestScrambledEggs() {
           </p>
 
           <p>
-            After 40 years of cooking professionally and at home, this is the method I
+            After 45 years of cooking professionally and at home, this is the method I
             use every single morning. It works. It&apos;s simple. And it produces consistently
             perfect scrambled eggs with minimal effort.
           </p>
@@ -626,9 +626,9 @@ export default function BestScrambledEggs() {
             <div>
               <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing 200+ cover operations.
+                Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing 200+ cover operations.
                 A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-                University of Montana. Cooked thousands of eggs across 40 years—this simple method
+                University of Montana. Cooked thousands of eggs across 45 years—this simple method
                 produces consistently perfect results.
               </p>
               <div className="mt-4">

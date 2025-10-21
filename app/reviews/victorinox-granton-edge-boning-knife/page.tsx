@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Victorinox Granton Boning: Firm Blade Pro',
-  description: 'Victorinox 6" boning knife: Best for trimming, deboning meat. Flexible blade, Granton edge prevents sticking. Professional butcher\'s choice under $40.',
+  description: 'Victorinox Granton boning knife: 20-year pro test. Firm blade for trimming, deboning. Granton edge prevents sticking. Professional butcher tool.',
 }
 
 const productData = {
@@ -43,7 +43,7 @@ const productData = {
     url: "https://amzn.to/4pUDed1"
   }],
   expertRating: 4.9,
-  expertOpinion: "Essential for anyone who works with whole proteins - this knife cuts butchery time in half and pays for itself in reduced meat waste after 23+ years of professional use.",
+  expertOpinion: "Essential for anyone who works with whole proteins - this knife cuts butchery time in half and pays for itself in reduced meat waste after 24 years of professional use.",
   dateAdded: "2025-01-15",
   lastUpdated: new Date().toISOString().split('T')[0]
 };
@@ -114,7 +114,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The essential tool for breaking down proteins - tested through 23+ years of professional cooking
+            The essential tool for breaking down proteins - tested through 24 years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -158,7 +158,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking, I&apos;ve broken down thousands of chickens, deboned countless
+              After 45 years of cooking, I&apos;ve broken down thousands of chickens, deboned countless
               pork loins, and filleted more fish than I can count. This knife makes those tasks fast and efficient.
             </p>
 
@@ -336,7 +336,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 23+ years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 24 years of professional cooking.
             If you work with whole proteins, this knife pays for itself in saved money on the first few uses.
           </p>
 
@@ -457,7 +457,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
               <h3 className="font-bold text-slate-900 mb-3">Real-World Value Calculation</h3>
               <ul className="space-y-2 text-slate-700">
                 <li>• <strong>Initial cost:</strong> ~$35</li>
-                <li>• <strong>Years of use:</strong> 10+ years (professional-grade durability)</li>
+                <li>• <strong>Years of use:</strong> 10 years (professional-grade durability)</li>
                 <li>• <strong>Estimated uses:</strong> 500+ butchery sessions</li>
                 <li>• <strong>Cost per use:</strong> $0.07 per use</li>
               </ul>
@@ -531,7 +531,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
                 <p className="text-slate-700 text-sm">
                   <strong>Steel type:</strong> High-carbon stainless steel<br/>
                   <strong>Edge retention:</strong> 50+ uses between sharpenings<br/>
-                  <strong>Blade lifespan:</strong> 10+ years with proper care
+                  <strong>Blade lifespan:</strong> 10 years with proper care
                 </p>
               </div>
 
@@ -556,7 +556,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
             </div>
 
             <p className="text-slate-700 mt-4 italic text-sm">
-              Performance data based on 23+ years of professional restaurant use and testing across multiple protein types.
+              Performance data based on 24 years of professional restaurant use and testing across multiple protein types.
             </p>
           </div>
         </section>

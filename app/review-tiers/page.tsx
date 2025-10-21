@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Understand how we test and review kitchen equipment. Three tiers of transparency: Restaurant-tested, actively testing, and experience-based recommendations.',
   openGraph: {
     title: 'Our Three-Tier Review System | Chef Approved Tools',
-    description: 'Transparent, honest kitchen equipment reviews based on real testing and 40 years of cooking experience.',
+    description: 'Transparent, honest kitchen equipment reviews based on real testing and 45 years of cooking experience.',
   },
   alternates: {
     canonical: '/review-tiers',
@@ -35,7 +35,7 @@ export default function ReviewTiersPage() {
         <section className="mb-12 bg-white rounded-xl p-8 shadow-sm border border-gray-200">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Why Three Tiers?</h2>
           <p className="text-slate-700 mb-4 leading-relaxed">
-            After 40 years of cooking and 23 years in professional kitchens, I&apos;ve learned one thing:
+            After 45 years of cooking and 24 years in professional kitchens, I&apos;ve learned one thing:
             <strong> honesty builds trust</strong>. Not every product on this site has survived 18 months
             in a 200-cover restaurant kitchen. Some are currently on my home counter being tested daily.
             Others I recommend based on professional knowledge and experience with similar equipment.
@@ -90,7 +90,7 @@ export default function ReviewTiersPage() {
                 <h3 className="font-bold text-amber-900 mb-3">Examples of Tier 1 Products:</h3>
                 <ul className="space-y-2">
                   <li>• <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline font-semibold">KitchenAid Commercial Mixer</Link> - 18 months at Purple Cafe</li>
-                  <li>• <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline font-semibold">Victorinox 8&quot; Chef&apos;s Knife</Link> - 40 years of daily use</li>
+                  <li>• <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline font-semibold">Victorinox 8&quot; Chef&apos;s Knife</Link> - 20 years of daily use</li>
                   <li>• <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-800 underline font-semibold">Le Creuset Dutch Oven</Link> - 10 years home use</li>
                 </ul>
               </div>
@@ -187,7 +187,7 @@ export default function ReviewTiersPage() {
 
             <div className="space-y-4 text-slate-800">
               <p className="text-lg font-semibold">
-                Informed opinions based on 40 years of cooking experience
+                Informed opinions based on 45 years of cooking experience
               </p>
 
               <div className="bg-white/60 rounded-lg p-5">
@@ -215,7 +215,7 @@ export default function ReviewTiersPage() {
               <div className="bg-slate-100/60 rounded-lg p-5">
                 <h3 className="font-bold text-slate-900 mb-3">When Tier 3 Is Valuable:</h3>
                 <p className="mb-3">
-                  After 40 years of cooking (starting at age 15) and 23 years in professional kitchens,
+                  After 45 years of cooking (starting at age 15) and 24 years in professional kitchens,
                   I&apos;ve used hundreds of tools and appliances. I understand what separates good equipment
                   from marketing hype. While I haven&apos;t personally tested every product for 18+ months,
                   my professional experience allows me to identify quality and performance indicators.
@@ -252,11 +252,11 @@ export default function ReviewTiersPage() {
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <div>
               <h3 className="font-bold text-slate-900 mb-2">Scott Bradley</h3>
-              <p className="text-slate-700 mb-3">Professional Chef • 40 Years Experience Since Age 15</p>
+              <p className="text-slate-700 mb-3">Professional Chef • 45 Years Cooking Experience</p>
 
               <ul className="space-y-2 text-slate-700">
-                <li>• <strong>40 years cooking experience</strong> (started at age 15)</li>
-                <li>• <strong>23 years in professional kitchens</strong></li>
+                <li>• <strong>45 years cooking experience</strong> (started at age 15)</li>
+                <li>• <strong>24 years in professional kitchens</strong></li>
                 <li>• <strong>7 years kitchen management</strong> (Mellow Mushroom, Purple Cafe)</li>
                 <li>• <strong>Managed $80K+ monthly revenue</strong> operations</li>
                 <li>• <strong>A.A.S. Culinary Arts</strong> - Seattle Central College</li>
@@ -299,7 +299,7 @@ export default function ReviewTiersPage() {
 
             <div>
               <h3 className="font-semibold text-lg mb-2">Need professional guidance on unfamiliar categories?</h3>
-              <p><strong>Tier 3 reviews</strong> leverage 40 years of cooking experience to provide
+              <p><strong>Tier 3 reviews</strong> leverage 45 years of cooking experience to provide
               informed recommendations, even for products I haven&apos;t personally tested long-term.</p>
             </div>
           </div>

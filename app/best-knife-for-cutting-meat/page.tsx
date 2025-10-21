@@ -7,11 +7,11 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata = {
   title: "Best Meat Cutting Knife 2025: Boning Guide",
-  description: "Victorinox 6\" boning knife: Best for trimming, deboning, meat. Flexible blade, Granton edge. NSF certified. Professional butcher choice under $30.",
+  description: "Victorinox 6\" boning knife: Best for trimming, deboning meat. Firm blade, Granton edge, NSF certified. Professional butcher's choice.",
   keywords: "best knife for cutting meat, boning knife, butcher knife, meat trimming knife, victorinox boning knife, flexible boning knife, deboning knife",
   openGraph: {
     title: "Best Knife for Cutting Meat: Victorinox Boning Knife | Pro's Pick",
-    description: "23+ years of professional cooking: This $25 flexible boning knife is the professional's choice for trimming, deboning, and portioning all types of meat.",
+    description: "24 years of professional cooking: This $25 flexible boning knife is the professional's choice for trimming, deboning, and portioning all types of meat.",
     url: "https://www.chefapprovedtools.com/best-knife-for-cutting-meat",
     type: "article"
   },
@@ -55,7 +55,7 @@ export default function BestKnifeForCuttingMeat() {
             Best Knife for Cutting Meat: The Flexible Boning Knife Pros Use
           </h1>
           <p className="text-lg sm:text-xl text-slate-200 leading-relaxed max-w-3xl">
-            After 20+ years of butchering, trimming, and portioning meat in professional kitchens,
+            After 20 years of butchering, trimming, and portioning meat in professional kitchens,
             the Victorinox 6" Flexible Boning Knife is my go-to for precision meat work.
           </p>
         </div>
@@ -315,7 +315,7 @@ export default function BestKnifeForCuttingMeat() {
           <p className="text-lg text-slate-700 mb-6 leading-relaxed">
             If you buy meat in bulk, cook whole chickens, or want to save money by breaking down your own cuts,
             the Victorinox 6" Flexible Boning Knife is an essential tool. At under $30, it's one of the best values
-            in professional cutlery. I've used mine daily for 15+ years and it's still going strong.
+            in professional cutlery. I've used mine daily for 15 years and it's still going strong.
           </p>
           <CTAVisibilityTracker
             ctaId="best-knife-cutting-meat-final-verdict-amazon"
@@ -350,7 +350,7 @@ export default function BestKnifeForCuttingMeat() {
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
             >
               <h3 className="font-bold text-slate-900 mb-2">Best Budget Chef Knife</h3>
-              <p className="text-sm text-slate-600">The $40 chef's knife I've used for 20+ years in professional kitchens.</p>
+              <p className="text-sm text-slate-600">The $40 chef's knife I've used for 20 years in professional kitchens.</p>
             </Link>
             </CTAVisibilityTracker>
             <CTAVisibilityTracker

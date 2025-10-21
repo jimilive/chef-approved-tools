@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact Chef Scott Bradley | Get Advice',
-  description: 'Get in touch with Chef Scott Bradley for equipment recommendations, testing questions, or professional kitchen advice.',
+  description: 'Questions about kitchen equipment? Chef Scott Bradley answers. 24 years restaurant experience. Get expert advice on knives, cookware, professional tools.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/contact',
   },

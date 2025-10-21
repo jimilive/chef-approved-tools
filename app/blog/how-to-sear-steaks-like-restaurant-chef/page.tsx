@@ -7,7 +7,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'How to Sear Steaks Like Restaurant Chefs',
-  description: 'Restaurant steak searing: 23 year chef reveals professional techniques. Perfect crust, temperature control. Former Kitchen Manager secrets.',
+  description: 'Restaurant steak searing: 24-year professional reveals the best techniques. Perfect crust, temperature control. Former Kitchen Manager secrets.',
   keywords: ['how to sear steak', 'restaurant steak techniques', 'professional steak cooking', 'perfect steak sear', 'restaurant quality steak', 'cast iron steak', 'steak cooking temperature', 'chef steak methods'],
   alternates: {
     canonical: '/blog/how-to-sear-steaks-like-restaurant-chef',
@@ -24,7 +24,7 @@ export default function SteakSearingPost() {
           __html: JSON.stringify(generateArticleSchema({
             title: "How to Sear Steaks Like a Restaurant Chef",
             slug: "how-to-sear-steaks-like-restaurant-chef",
-            description: "Learn the professional steak searing techniques used in restaurant kitchens. 23+ years of experience from a former Mellow Mushroom Kitchen Manager reveals the secrets to perfect sears.",
+            description: "Learn the professional steak searing techniques used in restaurant kitchens. 24 years of experience from a former Mellow Mushroom Kitchen Manager reveals the secrets to perfect sears.",
             author: "Scott Bradley",
             datePublished: "2024-09-27T00:00:00Z",
             lastUpdated: "2024-09-27T00:00:00Z",
@@ -129,7 +129,7 @@ export default function SteakSearingPost() {
           </h1>
 
           <p className="text-xl text-slate-600 leading-relaxed">
-            After 23+ years in restaurant kitchens, including my time as Kitchen Manager at Mellow Mushroom,
+            After 24 years in restaurant kitchens, including my time as Kitchen Manager at Mellow Mushroom,
             I&apos;ve seared thousands of steaks. Here&apos;s exactly how we achieve that perfect crust every single time.
           </p>
         </div>
@@ -417,7 +417,7 @@ export default function SteakSearingPost() {
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 mt-8">
             <h4 className="font-bold text-orange-800 mb-3">What&apos;s Next?</h4>
             <p className="text-orange-800 mb-4">
-              This is just one technique from 23+ years of professional kitchen experience. Want to learn more
+              This is just one technique from 24 years of professional kitchen experience. Want to learn more
               restaurant secrets for home cooking?
             </p>
             <CTAVisibilityTracker
@@ -512,7 +512,7 @@ export default function SteakSearingPost() {
             <div>
               <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience.
+                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
                 Scott tests kitchen equipment through the rigors of commercial service to find tools
                 that deliver professional results for home cooks.
               </p>

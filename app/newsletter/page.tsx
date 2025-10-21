@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import NewsletterForm from './NewsletterForm'
 
 export const metadata: Metadata = {
-  title: 'Free Guide: The 11 Tools I Use Most in My Home Kitchen',
-  description: 'Get my free kitchen tools guide featuring the 11 essential items from 40 years of professional cooking. Real recommendations, no BS.',
+  title: 'Equipment Newsletter: Pro Tips & Insights',
+  description: 'Get equipment insights and honest product recommendations from 24 years of restaurant experience. Join fellow home chefs getting expert insights.',
   keywords: 'kitchen tools guide, essential kitchen equipment, chef recommendations, professional kitchen tools, kitchen equipment list',
   alternates: {
     canonical: '/newsletter',
@@ -18,7 +18,7 @@ export default function NewsletterPage() {
         The 11 Tools I Use Most in My Home Kitchen
       </h1>
       <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '32px' }}>
-        My daily workhorse tools after 40 years of professional cooking. Get the free guide plus equipment insights from 23+ years of restaurant experience.
+        My daily workhorse tools after 45 years of cooking. Get the free guide plus equipment insights from 24 years of restaurant experience.
       </p>
 
       <NewsletterForm />
@@ -44,7 +44,7 @@ export default function NewsletterPage() {
               The $40 Knife vs. The $200 Knife: What You Actually Get
             </h3>
             <p style={{ fontSize: '0.95rem', marginBottom: '8px' }}>
-              I&rsquo;ve used both for 20+ years. Here&rsquo;s the honest breakdown of what that extra $160 buys
+              I&rsquo;ve used both for 20 years. Here&rsquo;s the honest breakdown of what that extra $160 buys
               (spoiler: sometimes nothing, sometimes everything).
             </p>
             <span style={{ fontSize: '0.875rem', color: '#94a3b8' }}>November 2024</span>
@@ -65,7 +65,7 @@ export default function NewsletterPage() {
 
       <div style={{ maxWidth: '600px', margin: '0 auto', padding: '32px 0' }}>
         <p style={{ fontSize: '0.875rem', color: '#94a3b8', textAlign: 'center', lineHeight: '1.6' }}>
-          Join 2,000+ home cooks getting weekly insights from 23 years of professional kitchen experience.
+          Join 2,000+ home cooks getting weekly insights from 24 years of professional kitchen experience.
           Unsubscribe anytime. No spam, no sponsored content, no BS.
         </p>
       </div>

@@ -79,7 +79,7 @@ const faqData = [
   },
   {
     question: "Nordic Ware vs other sheet pans: what's the difference?",
-    answer: "Having tested various pans over 40 years, here's what sets Nordic Ware apart: vs Cheap pans ($10-15): Warp immediately, uneven heating, thin gauge aluminum, short lifespan. vs Dark non-stick pans: Over-brown bottoms due to dark surface, coating degrades over time, not broiler-safe. vs Stainless steel: Poor heat distribution, hot spots, foods stick more, heavier weight. Nordic Ware advantage: Commercial 13-gauge thickness, warp-resistant, even heat distribution, decades of durability, professional baker's choice."
+    answer: "Having tested various pans over 45 years, here's what sets Nordic Ware apart: vs Cheap pans ($10-15): Warp immediately, uneven heating, thin gauge aluminum, short lifespan. vs Dark non-stick pans: Over-brown bottoms due to dark surface, coating degrades over time, not broiler-safe. vs Stainless steel: Poor heat distribution, hot spots, foods stick more, heavier weight. Nordic Ware advantage: Commercial 13-gauge thickness, warp-resistant, even heat distribution, decades of durability, professional baker's choice."
   }
 ];
 
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Nordic Ware Sheet Pan: 10-Year Baker Test',
-  description: 'Nordic Ware half sheet pan: 10-year test. Why bakers choose this pan. Durability, even baking, warp resistance tested. Professional baker choice under $20.',
+  description: 'Nordic Ware half sheet pan: 10-year test. Why bakers choose this pan. Durability, even heating, warp resistance tested. Professional baker\'s choice.',
   openGraph: {
     title: 'Nordic Ware Half Sheet Pan Review: 10 Years of Testing (2025)',
     description: 'Professional chef tests Nordic Ware half sheet pan for 10 years. Complete review: durability, performance, why it&apos;s the baker&apos;s choice, comparison to alternatives.',
@@ -139,7 +139,7 @@ export default function NordicWareHalfSheetPanReview() {
           paddingBottom: '20px',
           borderBottom: '1px solid #e0e0e0'
         }}>
-          <strong>By Scott Bradley</strong> | Professional Chef | 40 Years Experience
+          <strong>By Scott Bradley</strong> | Professional Chef | 45 Years Cooking Experience
         </div>
 
         {/* Tier 2 Badge */}
@@ -833,7 +833,7 @@ export default function NordicWareHalfSheetPanReview() {
             <div>
               <div>
                 <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Having tested various pans over 40 years, here&apos;s what sets
+                  <strong>Answer:</strong> Having tested various pans over 45 years, here&apos;s what sets
                   Nordic Ware apart:
                 </p>
                 <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
@@ -1053,10 +1053,10 @@ export default function NordicWareHalfSheetPanReview() {
           <div>
             <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
             <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-              Professional Chef • 40 Years Experience Since Age 15
+              Professional Chef • 45 Years Cooking Experience
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 23+ years of restaurant experience. Equipment
+              Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 24 years of restaurant experience. Equipment
               tested through years of actual use in demanding conditions—not just manufacturer claims.
             </p>
             <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold', textDecoration: 'none' }}>

@@ -19,7 +19,7 @@ const productData = {
     url: "https://amzn.to/4hf54wJ"
   }],
   expertRating: 4.8,
-  expertOpinion: "After 5 years of daily use and 23+ years managing professional kitchens, I've never found a cleaner that combines serious grease-cutting power with genuinely safe, non-toxic ingredients. Method All-Purpose Cleaner is the rare product that refuses to compromise—it cuts through kitchen grease as effectively as harsh chemical cleaners, but it's plant-based, biodegradable, and safe around food prep surfaces.",
+  expertOpinion: "After 5 years of daily use and 24 years managing professional kitchens, I've never found a cleaner that combines serious grease-cutting power with genuinely safe, non-toxic ingredients. Method All-Purpose Cleaner is the rare product that refuses to compromise—it cuts through kitchen grease as effectively as harsh chemical cleaners, but it's plant-based, biodegradable, and safe around food prep surfaces.",
   pros: [
     "Effortlessly cuts through grease and grime—equal to chemical cleaners",
     "Non-toxic, plant-based formula safe for food prep areas",
@@ -77,7 +77,7 @@ const faqData = [
   },
   {
     question: "Would Method work in a professional kitchen?",
-    answer: "For general surface cleaning, absolutely. However, professional kitchens require sanitizers and disinfectants for health department compliance, which Method is not. It's a cleaner, not a sanitizer. In my 23+ years managing restaurant kitchens, I would have used Method for general cleaning and degreasing, then followed with approved sanitizers for food contact surfaces. For home kitchens, Method handles everything you need."
+    answer: "For general surface cleaning, absolutely. However, professional kitchens require sanitizers and disinfectants for health department compliance, which Method is not. It's a cleaner, not a sanitizer. In my 24 years managing restaurant kitchens, I would have used Method for general cleaning and degreasing, then followed with approved sanitizers for food contact surfaces. For home kitchens, Method handles everything you need."
   }
 ];
 
@@ -86,8 +86,8 @@ export const metadata = {
     canonical: 'https://www.chefapprovedtools.com/reviews/method-all-purpose-cleaner',
   },
 
-  title: 'Method Cleaner: Non-Toxic Grease Cutting',
-  description: 'Professional chef&apos;s 5-year review of Method All-Purpose Cleaner. The unicorn of cleaning products—powerful AND non-toxic. Cuts grease effortlessly.',
+  title: 'Method Cleaner: Non-Toxic Grease-Cutting',
+  description: 'Professional chef\'s 5-year review of Method All-Purpose Cleaner. The unicorn of cleaning products - powerful AND non-toxic. Cuts grease effortlessly.',
 };
 
 export default function MethodAllPurposeCleanerReview() {
@@ -207,7 +207,7 @@ export default function MethodAllPurposeCleanerReview() {
           <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
             On the bottle, Method boldly claims: &quot;powerful, non-toxic cleaning is not a myth,
             we&apos;re still working on the unicorns.&quot; Let me tell you—<strong>this product
-            IS the unicorn.</strong> After 5 years of daily use and 23+ years managing professional
+            IS the unicorn.</strong> After 5 years of daily use and 24 years managing professional
             kitchens, I&apos;ve never found a cleaner that combines serious grease-cutting power
             with genuinely safe, non-toxic ingredients.
           </p>
@@ -479,7 +479,7 @@ export default function MethodAllPurposeCleanerReview() {
 
           <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
             One of the standout features of Method All-Purpose Cleaner is its non-toxic formulation.
-            After 23+ years in professional kitchens, I&apos;ve used every type of cleaner imaginable—from
+            After 24 years in professional kitchens, I&apos;ve used every type of cleaner imaginable—from
             harsh industrial degreasers to weak &quot;natural&quot; products that barely work. Method
             is the first cleaner I&apos;ve found that genuinely delivers on both fronts.
           </p>
@@ -822,7 +822,7 @@ export default function MethodAllPurposeCleanerReview() {
                   <strong>Answer:</strong> For general surface cleaning, absolutely. However,
                   professional kitchens require sanitizers and disinfectants for health department
                   compliance, which Method is not. It&apos;s a cleaner, not a sanitizer. In my
-                  23+ years managing restaurant kitchens, I would have used Method for general
+                  24 years managing restaurant kitchens, I would have used Method for general
                   cleaning and degreasing, then followed with approved sanitizers for food contact
                   surfaces. For home kitchens, Method handles everything you need.
                 </p>
@@ -1123,10 +1123,10 @@ export default function MethodAllPurposeCleanerReview() {
           <div>
             <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
             <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-              Professional Chef • 40 Years Experience Since Age 15
+              Professional Chef • 45 Years Cooking Experience
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing
+              Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing
               200+ cover operations. A.A.S. Culinary Arts from Seattle Central College, B.S. Business
               Administration from University of Montana. Method All-Purpose Cleaner has been my only
               kitchen cleaner for 5 years—I test everything I recommend.

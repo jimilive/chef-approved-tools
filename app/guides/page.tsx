@@ -4,7 +4,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'Kitchen Equipment Guides | Chef\'s Picks',
-  description: 'Expert guidance from a certified chef to help you make informed equipment decisions.',
+  description: 'Expert guidance from a culinary professional to help you make informed equipment decisions.',
   alternates: {
     canonical: '/guides',
   },
@@ -28,7 +28,7 @@ const guidesFAQs = [
 export default function GuidesPage() {
   const guides = [
     { title: "Best Chef Knives 2025", description: "Complete buying guide for professional knives", href: "/guides/best-chef-knives" },
-    { title: "OXO Good Grips Swivel Peeler", description: "The peeler that actually lasts - 23+ years of professional cooking", href: "/reviews/oxo-good-grips-swivel-peeler" },
+    { title: "OXO Good Grips Swivel Peeler", description: "The peeler that actually lasts - 24 years of professional cooking", href: "/reviews/oxo-good-grips-swivel-peeler" },
     { title: "OXO Good Grips Bench Scraper", description: "Most underrated kitchen tool - transfers, portions, cleans", href: "/reviews/oxo-good-grips-bench-scraper" },
     { title: "Winco Heavy Duty Tongs", description: "Restaurant-grade tongs at budget price - the ones pros use", href: "/reviews/winco-heavy-duty-tongs" },
     { title: "Benriner Large Mandoline", description: "Professional consistency for perfect slices every time", href: "/reviews/benriner-large-mandoline" },
@@ -48,7 +48,7 @@ export default function GuidesPage() {
           Kitchen Equipment Buying Guides
         </h1>
         <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '24px', lineHeight: '1.7' }}>
-          Expert guidance from a certified chef with 23 years in professional kitchens. Every recommendation
+          Expert guidance from a certified chef with 24 years in professional kitchens. Every recommendation
           here has survived real restaurant use—not laboratory testing, not sponsored reviews, just equipment
           that works when you need it to.
         </p>

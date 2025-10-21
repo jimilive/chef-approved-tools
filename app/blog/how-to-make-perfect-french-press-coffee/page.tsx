@@ -6,7 +6,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
   title: 'French Press Coffee: Perfect Ratio & Method',
-  description: 'French press coffee perfected: 24 years pro experience. Perfect ratio, step-by-step technique, mistakes to avoid. Café-quality at home. Professional guide.',
+  description: 'French press coffee perfected: 18 years usage experience. Perfect ratio, step-by-step technique, mistakes to avoid. Cafe-quality at home. Professional guide.',
   alternates: {
     canonical: '/blog/how-to-make-perfect-french-press-coffee',
   },
@@ -563,7 +563,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             <div>
               <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing 200+ cover operations.
+                Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing 200+ cover operations.
                 A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
                 University of Montana. Brewed hundreds of French press pots for guests at Purple Café over 6 years, then continued perfecting the technique for 18 years at home—24 years of daily French press experience.
               </p>
@@ -602,7 +602,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
               <Link href="/guides/best-chef-knives" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Best Chef Knives: Complete Professional Buying Guide</h4>
                 <p className="text-slate-600 text-sm">
-                  Professional chef knife recommendations based on 23+ years restaurant experience.
+                  Professional chef knife recommendations based on 24 years restaurant experience.
                 </p>
               </Link>
             </CTAVisibilityTracker>

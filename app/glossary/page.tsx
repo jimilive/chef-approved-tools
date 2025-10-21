@@ -4,7 +4,7 @@ import { Book, Search, ChevronRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Kitchen Terms Glossary: Pro Cuts & Tools',
-  description: 'Kitchen terms defined: sauté, blanch, deglaze. Recipe conversions: how to convert cups. NSF certification explained. Professional techniques guide.',
+  description: 'Kitchen terms defined: Equipment specs, knife cuts, baking conversions. Julienne, brunoise, NSF certification explained. Professional techniques guide.',
   keywords: ['kitchen equipment glossary', 'recipe conversions', 'baking by weight', 'professional measurements', 'knife cuts guide', 'NSF certification', 'full tang knife', 'julienne cut', 'brunoise', 'chiffonade', 'professional knife techniques', 'restaurant equipment terms', 'volume to weight conversions', 'professional baking techniques'],
   alternates: {
     canonical: '/glossary',
@@ -274,7 +274,7 @@ export default function GlossaryPage() {
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 inline-block">
             <div className="flex items-center gap-2 text-orange-400">
               <Search className="w-5 h-5" />
-              <span className="text-sm">23+ years of restaurant experience, translated for home cooks</span>
+              <span className="text-sm">24 years of restaurant experience, translated for home cooks</span>
             </div>
           </div>
         </div>
@@ -424,7 +424,7 @@ export default function GlossaryPage() {
             </h3>
             <div className="space-y-4 text-slate-700">
               <p className="leading-relaxed">
-                <strong>In 23+ years of restaurant work, I&apos;ve learned this fundamental truth:</strong> Weight is the only way to ensure
+                <strong>In 24 years of restaurant work, I&apos;ve learned this fundamental truth:</strong> Weight is the only way to ensure
                 consistent results in baking. Here&apos;s why professional kitchens always use scales:
               </p>
               <ul className="space-y-2 list-disc list-inside ml-4">
@@ -705,7 +705,7 @@ export default function GlossaryPage() {
           </div>
 
           <div className="mt-12 bg-orange-50 border border-orange-200 rounded-xl p-6">
-            <h3 className="font-bold text-orange-800 mb-3">Pro Tip from 23+ Years in Kitchens</h3>
+            <h3 className="font-bold text-orange-800 mb-3">Pro Tip from 24 Years in Kitchens</h3>
             <p className="text-orange-800 text-sm leading-relaxed">
               Uniform cuts aren&apos;t just about looks - they ensure everything cooks at the same rate.
               A mix of large and small pieces means some will be overcooked while others are still raw.

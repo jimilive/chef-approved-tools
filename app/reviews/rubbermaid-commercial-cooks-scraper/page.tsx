@@ -103,7 +103,7 @@ const breadcrumbs = [
 ]
 
 export const metadata: Metadata = {
-  title: "Rubbermaid Scraper: $15 Buy-It-for-Life Tool",
+  title: "Rubbermaid Scraper: Buy-It-For-Life Tool",
   description: 'Professional chef tests Rubbermaid Commercial scraper for 18 years across 2 commercial kitchens. Complete review of this $15-20 buy-it-for-life tool.',
   keywords: ['Rubbermaid scraper review', 'commercial spatula', 'professional scraper', 'NSF certified spatula', 'best kitchen scraper', 'rubber spatula', 'high-heat spatula', 'professional kitchen spatula', 'commercial kitchen spatula'],
   robots: {
@@ -169,7 +169,7 @@ export default function RubbermaidScraperReview() {
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Scott Bradley</p>
-                <p className="text-sm text-slate-600">Professional Chef • 40 Years Experience</p>
+                <p className="text-sm text-slate-600">Professional Chef • 45 Years Cooking Experience</p>
               </div>
             </div>
 
@@ -322,7 +322,7 @@ export default function RubbermaidScraperReview() {
               <div className="text-4xl mb-3">💰</div>
               <h3 className="text-xl font-semibold mb-2">Exceptional Value</h3>
               <p className="text-slate-700">
-                $15-20 for 18+ years of use = roughly $1/year. Outlasts spatulas costing triple the price. Genuine buy-it-for-life equipment.
+                $15-20 for 18 years of use = roughly $1/year. Outlasts spatulas costing triple the price. Genuine buy-it-for-life equipment.
               </p>
             </div>
           </div>
@@ -360,7 +360,7 @@ export default function RubbermaidScraperReview() {
                 <li>• <strong>Sanitation:</strong> Commercial dishwasher safe, NSF certified, no bacterial buildup</li>
                 <li>• <strong>Blade Condition:</strong> Maintains flexibility and effectiveness after 18 years</li>
                 <li>• <strong>Handle Integrity:</strong> One-piece construction shows no separation or cracking</li>
-                <li>• <strong>Value:</strong> $15-20 investment / 18+ years = exceptional cost per use</li>
+                <li>• <strong>Value:</strong> $15-20 investment / 18 years = exceptional cost per use</li>
               </ul>
             </div>
           </div>
@@ -469,7 +469,7 @@ export default function RubbermaidScraperReview() {
                   <h4 className="font-semibold text-green-700 mb-2">✅ Rubbermaid Commercial Advantages</h4>
                   <ul className="text-sm space-y-1 text-slate-700">
                     <li>• 500°F heat resistance vs typically unrated or 250°F</li>
-                    <li>• 18+ year lifespan vs 6-12 month replacement cycle</li>
+                    <li>• 18 year lifespan vs 6-12 month replacement cycle</li>
                     <li>• One-piece construction vs handle separation issues</li>
                     <li>• NSF certified for commercial sanitation standards</li>
                     <li>• Made in USA with quality control</li>
@@ -501,7 +501,7 @@ export default function RubbermaidScraperReview() {
                     <li>• 33-50% lower cost with comparable durability</li>
                     <li>• Stiffer construction provides better leverage</li>
                     <li>• One-piece design easier to sanitize</li>
-                    <li>• Proven 18+ year longevity in real-world use</li>
+                    <li>• Proven 18 year longevity in real-world use</li>
                   </ul>
                 </div>
                 <div>
@@ -1007,10 +1007,10 @@ export default function RubbermaidScraperReview() {
             <div>
               <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
               <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-                Professional Chef • 40 Years Experience Since Age 15
+                Professional Chef • 45 Years Cooking Experience
               </p>
               <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-                Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience across multiple kitchens including Purple Cafe and Feireabend.
+                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience across multiple kitchens including Purple Cafe and Feireabend.
                 A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
                 University of Montana. Equipment tested in high-volume operations serving hundreds daily.
               </p>

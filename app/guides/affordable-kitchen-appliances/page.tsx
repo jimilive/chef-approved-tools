@@ -6,7 +6,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 
 export const metadata: Metadata = {
   title: 'Budget Kitchen Appliances 2025: What Works',
-  description: 'Affordable kitchen appliances that work: Budget-friendly blenders, mixers tested by professional chef. Restaurant quality without premium price.',
+  description: 'Affordable kitchen appliances that work: Budget-friendly blenders, mixers tested by a professional chef. Restaurant quality without premium price.',
   alternates: {
     canonical: '/guides/affordable-kitchen-appliances',
   },
@@ -51,7 +51,7 @@ export default function AffordableKitchenAppliancesPage() {
             </div>
             <div>
               <p className="font-semibold text-slate-900">Scott Bradley</p>
-              <p className="text-sm text-slate-600">Professional Chef • 40 Years Experience Since Age 15</p>
+              <p className="text-sm text-slate-600">Professional Chef • 45 Years Cooking Experience</p>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ export default function AffordableKitchenAppliancesPage() {
           </p>
 
           <p className="text-lg text-slate-600 leading-relaxed">
-            After 23+ years in restaurant kitchens, I know what works and what fails. Here&apos;s what I&apos;d buy (or have bought) when budget is limited but quality matters.
+            After 24 years in restaurant kitchens, I know what works and what fails. Here&apos;s what I&apos;d buy (or have bought) when budget is limited but quality matters.
           </p>
         </header>
 
@@ -166,7 +166,7 @@ export default function AffordableKitchenAppliancesPage() {
           <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
             <h4 className="font-semibold text-orange-900 mb-2">When to Upgrade to Vitamix:</h4>
             <p className="text-orange-800">
-              After 5+ years testing the{' '}
+              After 5 years testing the{' '}
               <CTAVisibilityTracker
                 ctaId="guide-affordable-appliances-vitamix-link-2"
                 position="mid_article"
@@ -175,7 +175,7 @@ export default function AffordableKitchenAppliancesPage() {
                 <Link href="/reviews/vitamix-5200" className="underline font-semibold hover:text-orange-900">
                   Vitamix 5200 in restaurant conditions
                 </Link>
-              </CTAVisibilityTracker>, here&apos;s when the upgrade is worth it: daily use (7+ hours weekly), hot soup blending, nut butters, commercial/revenue-generating use, or 10+ year ownership plans. For occasional home use, stick with the Ninja.
+              </CTAVisibilityTracker>, here&apos;s when the upgrade is worth it: daily use (7+ hours weekly), hot soup blending, nut butters, commercial/revenue-generating use, or 10 year ownership plans. For occasional home use, stick with the Ninja.
             </p>
           </div>
         </section>
@@ -270,7 +270,7 @@ export default function AffordableKitchenAppliancesPage() {
                 productSlug="kitchenaid-ksm8990wh"
               >
                 <Link href="/reviews/kitchenaid-ksm8990wh" className="underline font-semibold hover:text-orange-900">
-                  KitchenAid Commercial Series (KSM8990WH)
+                  KitchenAid Commercial Series
                 </Link>
               </CTAVisibilityTracker>{' '}
               I tested this for 18 months at Purple Cafe—it&apos;s genuine commercial equipment that will outlast 3-4 consumer models.
@@ -521,7 +521,7 @@ export default function AffordableKitchenAppliancesPage() {
 
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <p className="text-slate-700 mb-4 text-lg">
-              After 23+ years in professional kitchens managing $80,000+ monthly operations, I&apos;ve learned that <strong>smart affordable kitchen appliances choices beat premium equipment you can&apos;t afford or won&apos;t use.</strong>
+              After 24 years in professional kitchens managing $80,000+ monthly operations, I&apos;ve learned that <strong>smart affordable kitchen appliances choices beat premium equipment you can&apos;t afford or won&apos;t use.</strong>
             </p>
 
             <div className="space-y-4">
@@ -564,7 +564,7 @@ export default function AffordableKitchenAppliancesPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <TrendingUp className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
-                    <span><strong>10+ year ownership:</strong> Premium often outlasts 3-4 budget replacements</span>
+                    <span><strong>10 year ownership:</strong> Premium often outlasts 3-4 budget replacements</span>
                   </li>
                 </ul>
               </div>
@@ -572,7 +572,7 @@ export default function AffordableKitchenAppliancesPage() {
 
             <div className="mt-6 bg-blue-50 border-l-4 border-blue-500 p-4">
               <p className="text-slate-800">
-                <strong>💡 My Rule:</strong> If you&apos;ll use an appliance 5+ hours weekly for 5+ years, premium models cost less per use. For lighter use, affordable kitchen appliances deliver better value. Don&apos;t buy commercial equipment for occasional home cooking.
+                <strong>💡 My Rule:</strong> If you&apos;ll use an appliance 5+ hours weekly for 5 years, premium models cost less per use. For lighter use, affordable kitchen appliances deliver better value. Don&apos;t buy commercial equipment for occasional home cooking.
               </p>
             </div>
           </div>
@@ -647,7 +647,7 @@ export default function AffordableKitchenAppliancesPage() {
 
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border-2 border-orange-200">
             <p className="text-lg text-slate-800 mb-6">
-              <strong>After 40 years of cooking experience (23+ years professional),</strong> here&apos;s what I&apos;d actually buy if I was starting a home kitchen on a budget:
+              <strong>After 45 years of cooking experience (24 years professional),</strong> here&apos;s what I&apos;d actually buy if I was starting a home kitchen on a budget:
             </p>
 
             <div className="space-y-4">
@@ -706,9 +706,9 @@ export default function AffordableKitchenAppliancesPage() {
 
         {/* Author Bio */}
         <section className="bg-slate-50 p-6 rounded-xl border border-slate-200">
-          <p className="font-semibold text-slate-900 mb-2">Scott Bradley | Professional Chef • 40 Years Experience Since Age 15</p>
+          <p className="font-semibold text-slate-900 mb-2">Scott Bradley | Professional Chef • 45 Years Cooking Experience</p>
           <p className="text-slate-700 text-sm mb-3">
-            Former Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom. 23+ years restaurant experience testing equipment under real commercial conditions. All recommendations based on hands-on testing—if I haven&apos;t used it, I won&apos;t recommend it.
+            Former Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom. 24 years restaurant experience testing equipment under real commercial conditions. All recommendations based on hands-on testing—if I haven&apos;t used it, I won&apos;t recommend it.
           </p>
           <p className="text-slate-600 text-xs">
             <em>Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</em>

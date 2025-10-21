@@ -114,7 +114,7 @@ export const metadata = {
   },
 
   title: "Lodge Cast Iron 3-Skillet: Home Use Review",
-  description: "Lodge cast iron 3 skillets set: 10-8-6\". Pre-seasoned eggshell finish. Lifetime ironclad warranty. Professional chef experience.",
+  description: "Lodge cast iron 3-skillet set: 7 years tested. Pre-seasoned 12\", 10.25\", 8\" pans. Buy-it-for-life quality under $100. Perfect heat retention.",
   keywords: ["Lodge cast iron skillet", "cast iron skillet set", "Lodge 3 skillet bundle", "cast iron cookware", "restaurant cast iron"],
   openGraph: {
     title: "Lodge Cast Iron 3-Skillet Bundle: Professional Review",
@@ -174,7 +174,7 @@ export default function Lodge3SkilletBundleReview() {
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Scott Bradley</p>
-                <p className="text-sm text-slate-600">Professional Chef • 40 Years Experience Since Age 15</p>
+                <p className="text-sm text-slate-600">Professional Chef • 45 Years Cooking Experience</p>
               </div>
             </div>
 
@@ -1009,7 +1009,7 @@ export default function Lodge3SkilletBundleReview() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Complete Your Cast Iron Kitchen Setup</h2>
 
           <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
-            Cast iron skillets work best as part of a complete kitchen. Based on 23+ years of restaurant
+            Cast iron skillets work best as part of a complete kitchen. Based on 24 years of restaurant
             experience, here are the tools I use alongside Lodge cast iron:
           </p>
 
@@ -1030,7 +1030,7 @@ export default function Lodge3SkilletBundleReview() {
               <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef Knife</h4>
               <p>The perfect prep knife for ingredients going into cast iron. Professional quality, perfect balance.</p>
               <p style={{ fontSize: '14px', color: '#666' }}>
-                <strong>40 years cooking:</strong> My daily workhorse knife.
+                <strong>45 years cooking:</strong> My daily workhorse knife.
               </p>
               <Link
                 href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
@@ -1275,10 +1275,10 @@ export default function Lodge3SkilletBundleReview() {
           <div>
             <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
             <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-              Professional Chef • 40 Years Experience Since Age 15
+              Professional Chef • 45 Years Cooking Experience
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience. 
+              Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. 
               A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from 
               University of Montana. I&apos;ve used Lodge cast iron in demanding restaurant 
               environments and my home kitchen for years—these skillets deliver professional performance 

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 
   title: 'Winco Heavy-Duty Tongs: Restaurant Grade',
-  description: 'Professional chef review of Winco heavy duty tongs after 23+ years of professional cooking. Restaurant-grade tongs at a fraction of the price.',
+  description: 'Professional chef review of Winco heavy duty tongs after 24 years of professional cooking. Restaurant-grade tongs at a fraction of the price.',
 }
 
 const productData = {
@@ -43,7 +43,7 @@ const productData = {
     url: "https://amzn.to/3KQ0I2V"
   }],
   expertRating: 5.0,
-  expertOpinion: "Restaurant-quality tongs at budget price that have proven themselves through 23+ years of professional kitchen use - buy three pairs and never worry about tongs again.",
+  expertOpinion: "Restaurant-quality tongs at budget price that have proven themselves through 24 years of professional kitchen use - buy three pairs and never worry about tongs again.",
   dateAdded: "2025-01-15",
   lastUpdated: new Date().toISOString().split('T')[0]
 };
@@ -114,7 +114,7 @@ export default function WincoHeavyDutyTongsReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            Restaurant-grade tongs that actually last - tested through 23+ years of professional cooking
+            Restaurant-grade tongs that actually last - tested through 24 years of professional cooking
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -158,7 +158,7 @@ export default function WincoHeavyDutyTongsReview() {
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>
-              After 40 years of cooking, I know tongs. I&apos;ve used the flimsy ones that lose tension
+              After 45 years of cooking, I know tongs. I&apos;ve used the flimsy ones that lose tension
               after a month, the silicone ones that melt on the grill, the expensive ones that aren&apos;t any better
               than the cheap ones.
             </p>
@@ -349,7 +349,7 @@ export default function WincoHeavyDutyTongsReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add These to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            These are one of the 11 tools I use most in my home kitchen after 23+ years of professional cooking.
+            These are one of the 11 tools I use most in my home kitchen after 24 years of professional cooking.
             At $8, buy a few pairs. You&apos;ll use them for everything.
           </p>
 
@@ -466,7 +466,7 @@ export default function WincoHeavyDutyTongsReview() {
               <h3 className="font-bold text-slate-900 mb-3">Real-World Value Calculation</h3>
               <ul className="space-y-2 text-slate-700">
                 <li>• <strong>Initial cost:</strong> ~$8</li>
-                <li>• <strong>Years of use:</strong> 5+ years (and still going strong)</li>
+                <li>• <strong>Years of use:</strong> 5 years (and still going strong)</li>
                 <li>• <strong>Estimated uses:</strong> 1,800+ uses (daily cooking for 5 years)</li>
                 <li>• <strong>Cost per use:</strong> $0.004 per use</li>
               </ul>
@@ -480,7 +480,7 @@ export default function WincoHeavyDutyTongsReview() {
               <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                 <p className="font-semibold text-green-900 mb-2">Winco Restaurant-Grade</p>
                 <p className="text-slate-700">$8 × 1 pair = <strong>$8 total</strong></p>
-                <p className="text-sm text-slate-600 mt-1">Still using the same pair after 5+ years</p>
+                <p className="text-sm text-slate-600 mt-1">Still using the same pair after 5 years</p>
               </div>
 
               <div className="bg-red-50 p-4 rounded-lg border border-red-200">
@@ -506,7 +506,7 @@ export default function WincoHeavyDutyTongsReview() {
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="font-semibold text-slate-900 mb-2">Grip Strength & Durability</p>
                 <p className="text-slate-700 text-sm">
-                  <strong>Spring tension:</strong> Maintains firm grip through 5+ years of daily use<br/>
+                  <strong>Spring tension:</strong> Maintains firm grip through 5 years of daily use<br/>
                   <strong>Material thickness:</strong> 1.5mm stainless steel (thicker than consumer tongs)<br/>
                   <strong>Grip security:</strong> Scalloped edges prevent slipping on all food types
                 </p>
@@ -535,13 +535,13 @@ export default function WincoHeavyDutyTongsReview() {
                 <p className="text-slate-700 text-sm">
                   <strong>Professional kitchen hours:</strong> 10,000+ hours in restaurant use<br/>
                   <strong>Home cooking sessions:</strong> 1,800+ meal preparations<br/>
-                  <strong>Failure rate:</strong> Zero failures in 23+ years of testing
+                  <strong>Failure rate:</strong> Zero failures in 24 years of testing
                 </p>
               </div>
             </div>
 
             <p className="text-slate-700 mt-4 italic text-sm">
-              Performance data based on 23+ years of professional restaurant use and 5+ years of intensive home kitchen testing.
+              Performance data based on 24 years of professional restaurant use and 5 years of intensive home kitchen testing.
             </p>
           </div>
         </section>
@@ -714,7 +714,7 @@ export default function WincoHeavyDutyTongsReview() {
         <section className="mb-12 bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-xl border-2 border-orange-200">
           <h2 className="text-2xl font-bold mb-4 text-gray-900 text-center">Get Restaurant-Quality Tongs for Your Kitchen</h2>
           <p className="text-lg text-gray-700 mb-6 text-center">
-            After 23+ years of professional use, these are the tongs I trust. At $8, they&apos;re one of the best values
+            After 24 years of professional use, these are the tongs I trust. At $8, they&apos;re one of the best values
             in kitchen equipment. Add them to your toolkit today.
           </p>
           <div className="flex justify-center">
@@ -746,7 +746,7 @@ export default function WincoHeavyDutyTongsReview() {
               <h3 className="text-lg font-bold mb-2 text-gray-900">Are these tongs really restaurant quality?</h3>
               <p className="text-gray-700">
                 Yes. Winco manufactures equipment specifically for commercial kitchens. These are the exact tongs used
-                in restaurants worldwide. I&apos;ve used them professionally for 23+ years across multiple restaurant
+                in restaurants worldwide. I&apos;ve used them professionally for 24 years across multiple restaurant
                 kitchens, from casual dining to fine dining establishments.
               </p>
             </div>
@@ -781,7 +781,7 @@ export default function WincoHeavyDutyTongsReview() {
             <div className="bg-white p-6 rounded-lg border border-gray-200">
               <h3 className="text-lg font-bold mb-2 text-gray-900">How long do these tongs last?</h3>
               <p className="text-gray-700">
-                With proper care, these tongs can last decades. I&apos;ve used the same pairs for 5+ years in my home
+                With proper care, these tongs can last decades. I&apos;ve used the same pairs for 5 years in my home
                 kitchen with daily use, and they show no signs of wear. In restaurant settings, they typically last 3-5
                 years under intensive commercial use. The one-piece stainless steel construction has no parts to break or
                 wear out.

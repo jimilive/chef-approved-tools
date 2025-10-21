@@ -5,7 +5,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 
 export const metadata: Metadata = {
   title: 'Commercial Kitchen Appliances 2025: Guide',
-  description: 'Professional kitchen appliance reviews. Blenders, mixers, food processors tested in restaurants. Commercial-grade performance. Chef recommendations.',
+  description: 'Professional kitchen appliance reviews. Blenders, mixers, food processors tested in restaurants or in my apartment kitchen. Commercial-grade performance.',
   alternates: {
     canonical: '/guides/kitchen-appliances',
   },
@@ -60,7 +60,7 @@ export default function KitchenAppliancesPage() {
               <article className="bg-white rounded-xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">2. Vitamix 5200 Professional Blender</h3>
                 <p className="text-slate-600 mb-4">
-                  The blender that changed everything. 5+ years of daily smoothies,
+                  The blender that changed everything. 5 years of daily smoothies,
                   soups, and sauces. Still runs like new.
                 </p>
                 <CTAVisibilityTracker ctaId="guide-kitchen-appliances-review-link-1"
@@ -152,7 +152,7 @@ export default function KitchenAppliancesPage() {
             <div className="prose prose-slate max-w-none">
               <p className="text-slate-600 mb-4">
                 Yes, a Vitamix costs $500 while a consumer blender costs $100. But I&rsquo;m still using the same Vitamix after
-                5+ years of daily smoothies. I replaced three $100 blenders in year one. The math works out.
+                5 years of daily smoothies. I replaced three $100 blenders in year one. The math works out.
               </p>
 
               <div className="bg-slate-50 rounded-lg p-4 my-6">

@@ -72,7 +72,7 @@ const faqData = [
 
 export const metadata = {
   title: 'Benriner Mandoline: Pro Safety & Precision',
-  description: 'Professional chef tests Benriner Mandoline after years. Safety, precision, durability analysis. Real restaurant kitchen testing.',
+  description: 'Professional chef tests Benriner mandoline after years of restaurant use. Complete review: precision slicing, safety features, durability analysis.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/reviews/benriner-large-mandoline',
   },
@@ -102,10 +102,10 @@ export default function BenrinerLargeMandolineReview() {
         borderBottom: '1px solid #eee'
       }}>
         <p style={{ margin: '5px 0' }}>
-          <strong>By Scott Bradley</strong> | Professional Chef, 40 Years Cooking Experience
+          <strong>By Scott Bradley</strong> | Professional Chef, 45 years cooking Experience
         </p>
         <p style={{ margin: '5px 0' }}>
-          Former Kitchen Manager, Purple Café | 23+ Years Restaurant Management
+          Former Kitchen Manager, Purple Café | 24 Years Restaurant Management
         </p>
         <p style={{ margin: '5px 0' }}>
           Last Updated: {new Date().toLocaleDateString('en-US', {
@@ -653,7 +653,7 @@ export default function BenrinerLargeMandolineReview() {
           <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef Knife</h4>
           <p>The knife I use alongside this mandoline. Professional quality for detailed work.</p>
           <p style={{ fontSize: '14px', color: '#666' }}>
-            <strong>40 years cooking:</strong> My go-to knife.
+            <strong>45 years cooking:</strong> My go-to knife.
           </p>
           <a
             href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
@@ -752,10 +752,10 @@ export default function BenrinerLargeMandolineReview() {
         <div>
           <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
           <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-            Professional Chef • 40 Years Experience Since Age 15
+            Professional Chef • 45 Years Cooking Experience
           </p>
           <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-            Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 23+ years of restaurant experience.
+            Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 24 years of restaurant experience.
             A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration.
             Equipment tested in high-volume operations serving hundreds daily.
           </p>

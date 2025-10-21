@@ -41,7 +41,7 @@ const faqData = [
   },
   {
     question: "How long does a Bodum French press last?",
-    answer: "With proper care, 20-30+ years easily. Mine has lasted 18 years through professional restaurant use and daily home brewing. The borosilicate glass is extremely durable and resists thermal shock and impacts."
+    answer: "With proper care, 20-30 years easily. Mine has lasted 18 years through professional restaurant use and daily home brewing. The borosilicate glass is extremely durable and resists thermal shock and impacts."
   },
   {
     question: "What size French press should I buy?",
@@ -79,7 +79,7 @@ const faqData = [
 
 export const metadata = {
   title: 'Bodum Chambord: 18-Year French Press Test',
-  description: 'Bodum Chambord French Press: 18-year pro experience. Perfect ratio, easy technique. Commercial + home. Café-quality at home. Professional guide.',
+  description: 'Professional chef tests Bodum French Press for 18 years (6 years commercial kitchen, 18 years at home). Complete review: durability, coffee quality, value.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/reviews/bodum-chambord-french-press',
   },
@@ -313,7 +313,7 @@ export default function BodumChambordFrenchPressReview() {
         textAlign: 'center'
       }}>
         <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
-          Ready for 24+ years of perfect coffee?
+          Ready for 24 years of perfect coffee?
         </p>
         <CTAVisibilityTracker
           ctaId={`review-${productData.slug}-mid_article`}
@@ -347,7 +347,7 @@ export default function BodumChambordFrenchPressReview() {
         Like our <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" style={{ color: '#0066cc', fontWeight: 'bold' }}>Le Creuset Dutch oven</a>, this represents buy-it-for-life quality. After the restaurant closed, I brought it home.
         Eighteen more years of daily use hasn&apos;t diminished its performance. The glass is still
         clear, the plunger still smooth, the filter still catches grounds effectively. I expect another
-        20+ years of service.
+        20 years of service.
       </p>
 
       <h3>Maintenance: Almost None Required</h3>
@@ -475,7 +475,7 @@ export default function BodumChambordFrenchPressReview() {
 
         <p style={{ fontSize: '16px', marginBottom: 0 }}>
           <strong>Would I buy this again?</strong> Without hesitation. It&apos;s the most reliable
-          coffee brewing method I&apos;ve used in 40 years of cooking. If mine ever breaks, I&apos;ll
+          coffee brewing method I&apos;ve used in 45 years of cooking. If mine ever breaks, I&apos;ll
           replace it the same day.
         </p>
 
@@ -492,7 +492,7 @@ export default function BodumChambordFrenchPressReview() {
       }}>
 
         <h3 style={{ marginTop: 0, fontSize: '28px' }}>
-          Ready for 24+ Years of Perfect Coffee?
+          Ready for 24 Years of Perfect Coffee?
         </h3>
 
         <p style={{ fontSize: '18px', margin: '20px 0' }}>
@@ -527,7 +527,7 @@ export default function BodumChambordFrenchPressReview() {
 
       <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
         The Bodum Chambord pairs perfectly with other buy-it-for-life kitchen equipment.
-        Based on 40 years of cooking experience:
+        Based on 45 years of cooking experience:
       </p>
 
       <div style={{
@@ -605,7 +605,7 @@ export default function BodumChambordFrenchPressReview() {
           <p>Another 24-year veteran of my kitchen. The knife I reach for every morning. Professional
           quality without the premium price.</p>
           <p style={{ fontSize: '14px', color: '#666' }}>
-            <strong>Professional Standard:</strong> Used at Purple Café 23+ years
+            <strong>Professional Standard:</strong> Used at Purple Café 24 years
           </p>
           <a
             href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
@@ -688,10 +688,10 @@ export default function BodumChambordFrenchPressReview() {
         <div>
           <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
           <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-            Professional Chef • 40 Years Experience Since Age 15
+            Professional Chef • 45 Years Cooking Experience
           </p>
           <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-            Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 23+ years of restaurant experience.
+            Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 24 years of restaurant experience.
             A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
             University of Montana. Equipment tested in high-volume operations serving hundreds daily.
             This Bodum French Press has been my daily brewing method for 18 years.

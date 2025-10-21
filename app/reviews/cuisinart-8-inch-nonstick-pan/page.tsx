@@ -215,7 +215,7 @@ export default function Cuisinart8InchNonstickPanReview() {
           </p>
 
           <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-            This pan excels at the no-bowl scrambled egg technique I developed over 40 years of
+            This pan excels at the no-bowl scrambled egg technique I developed over 45 years of
             cooking. The 8-inch size is perfect for 2-3 eggs, and the nonstick coating makes
             the direct-in-pan method work flawlessly. If you cook eggs regularly, this pan is
             non-negotiable.
@@ -1002,7 +1002,7 @@ export default function Cuisinart8InchNonstickPanReview() {
                 </a>
               </h4>
               <p style={{ fontSize: '14px', lineHeight: '1.6' }}>
-                The knife I&apos;ve trusted for 40 years. Perfect for prepping ingredients before
+                The knife I&apos;ve trusted for 20 years. Perfect for prepping ingredients before
                 cooking in your Cuisinart pan. Professional quality at budget pricing.
               </p>
               <p style={{ fontSize: '14px', color: '#666' }}>
@@ -1059,10 +1059,10 @@ export default function Cuisinart8InchNonstickPanReview() {
           <div>
             <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
             <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-              Professional Chef • 40 Years Experience Since Age 15
+              Professional Chef • 45 Years Cooking Experience
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Purple Café with 23+ years of restaurant experience managing
+              Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing
               200+ cover operations. A.A.S. Culinary Arts from Seattle Central College, B.S. Business
               Administration from University of Montana. This Cuisinart pan has been my daily breakfast
               pan for 6 months—I test everything I recommend.

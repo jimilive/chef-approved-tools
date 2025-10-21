@@ -51,7 +51,7 @@ const faqData = [
   },
   {
     question: "How long does the Norton Tri-Stone last?",
-    answer: "With proper care, 10-20+ years for home use. Mine lasted 6 years of weekly professional use (300+ sharpening sessions) with minimal wear. Norton's aluminum oxide abrasive maintains cutting ability far longer than cheap stones that glaze over quickly. The stones will wear down gradually but remain effective. When surface becomes uneven, flatten with diamond plate or coarse sandpaper on glass."
+    answer: "With proper care, 10-20 years for home use. Mine lasted 6 years of weekly professional use (300+ sharpening sessions) with minimal wear. Norton's aluminum oxide abrasive maintains cutting ability far longer than cheap stones that glaze over quickly. The stones will wear down gradually but remain effective. When surface becomes uneven, flatten with diamond plate or coarse sandpaper on glass."
   },
   {
     question: "What's the difference between Norton Tri-Stone and single stones?",
@@ -127,7 +127,7 @@ export default function NortonTriStoneSharpenerReview() {
           paddingBottom: '20px',
           borderBottom: '1px solid #e0e0e0'
         }}>
-          <strong>By Scott Bradley</strong> | Professional Chef | 40 Years Experience
+          <strong>By Scott Bradley</strong> | Professional Chef | 45 Years Cooking Experience
         </div>
 
         {/* Tier 1 Badge */}
@@ -488,7 +488,7 @@ export default function NortonTriStoneSharpenerReview() {
             <a href="/reviews/victorinox-fibrox-10-inch-chefs-knife" style={{ color: '#0066cc', textDecoration: 'none' }}>
               $50 Victorinox chef knife
             </a> sharpened weekly on an electric sharpener might last 3-5 years before wearing down to
-            nothing. The same knife sharpened manually on stones can last 10-15+ years.
+            nothing. The same knife sharpened manually on stones can last 10-15 years.
           </p>
           <p>
             Manual stones remove only what&apos;s necessary to restore sharpness. This preservation of
@@ -591,7 +591,7 @@ export default function NortonTriStoneSharpenerReview() {
           </ul>
           <p>
             After 6 years of weekly professional use, my Norton stones showed minimal dish wear. Home users
-            might go 5-10+ years before needing to flatten stones.
+            might go 5-10 years before needing to flatten stones.
           </p>
         </div>
 
@@ -609,7 +609,7 @@ export default function NortonTriStoneSharpenerReview() {
           <p>
             Most home cooks sharpen 2-4 knives monthly at most. That&apos;s maybe 50 sharpening sessions
             per year versus the 300+ sessions I put this system through over 6 years. At home usage rates,
-            this sharpener could easily last 20-30+ years.
+            this sharpener could easily last 20-30 years.
           </p>
 
           <p>
@@ -743,7 +743,7 @@ export default function NortonTriStoneSharpenerReview() {
             <div>
               <div>
                 <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> With proper care, 10-20+ years for home use. Mine lasted 6 years
+                  <strong>Answer:</strong> With proper care, 10-20 years for home use. Mine lasted 6 years
                   of weekly professional use (300+ sharpening sessions) with minimal wear. Norton&apos;s
                   aluminum oxide abrasive maintains cutting ability far longer than cheap stones that glaze
                   over quickly.
@@ -1077,10 +1077,10 @@ export default function NortonTriStoneSharpenerReview() {
           <div>
             <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
             <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-              Professional Chef • 40 Years Experience Since Age 15
+              Professional Chef • 45 Years Cooking Experience
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 23+ years of restaurant experience. Equipment
+              Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 24 years of restaurant experience. Equipment
               tested in high-volume operations serving 200+ covers nightly. Sharp knives weren&apos;t
               optional—they were critical to service success.
             </p>

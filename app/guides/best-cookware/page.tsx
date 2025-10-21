@@ -5,7 +5,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 
 export const metadata: Metadata = {
   title: 'Restaurant-Grade Cookware: Pro Comparison',
-  description: 'Professional cookware reviews from 23+ years of restaurant experience. Stainless steel, cast iron, pans. What works, what lasts. Chef-approved for home and commercial use.',
+  description: 'Professional cookware recommendations from 24 years of restaurant experience. Find pans that survive commercial use.',
   alternates: {
     canonical: '/guides/best-cookware',
   },
@@ -61,7 +61,7 @@ export default function BestCookwarePage() {
                 <h3 className="text-xl font-bold text-slate-900 mb-3">2. Lodge Cast Iron Skillet</h3>
                 <p className="text-slate-600 mb-4">
                   American-made cast iron that improves with age. Perfect for searing,
-                  baking, and building flavor. Used these for 10+ years.
+                  baking, and building flavor. Used these for 10 years.
                 </p>
                 <CTAVisibilityTracker ctaId="guide-best-cookware-review-link-1"
 
@@ -116,7 +116,7 @@ export default function BestCookwarePage() {
           <div className="bg-white rounded-xl p-6 shadow-lg">
             <div className="prose prose-slate max-w-none">
               <p className="text-slate-600 mb-4">
-                After 23 years in professional kitchens, from Purple Café&rsquo;s 200+ cover nights to teaching at culinary schools,
+                After 24 years in professional kitchens, from Purple Café&rsquo;s 200+ cover nights to teaching at culinary schools,
                 I&rsquo;ve learned that cookware selection makes or breaks your cooking efficiency. Here&rsquo;s what actually matters when
                 you&rsquo;re cooking under pressure.
               </p>

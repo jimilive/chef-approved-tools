@@ -93,7 +93,7 @@ const breadcrumbs = [
 const faqData = [
   {
     question: "Is a John Boos cutting board worth the money?",
-    answer: "After 14 years of daily use, absolutely yes—if you cook regularly and value knife care. The combination of knife edge preservation, exceptional work surface, and generational durability justifies the investment for serious home cooks. The value proposition: This board will outlast you. After 14 years of daily use, mine shows minimal wear and I expect another 20+ years easily. The knife sharpening savings alone—extending edge life 3x longer—adds significant value over time. Who should skip it: If you cook infrequently, have extremely limited counter space, or are on a very tight budget, plastic alternatives offer good value. But for serious home cooks, this is a genuine generational investment. My verdict: After 14 years, I have zero regrets. This board will outlive me and pass to my children—that's genuine buy-it-for-life quality."
+    answer: "After 14 years of daily use, absolutely yes—if you cook regularly and value knife care. The combination of knife edge preservation, exceptional work surface, and generational durability justifies the investment for serious home cooks. The value proposition: This board will outlast you. After 14 years of daily use, mine shows minimal wear and I expect another 20 years easily. The knife sharpening savings alone—extending edge life 3x longer—adds significant value over time. Who should skip it: If you cook infrequently, have extremely limited counter space, or are on a very tight budget, plastic alternatives offer good value. But for serious home cooks, this is a genuine generational investment. My verdict: After 14 years, I have zero regrets. This board will outlive me and pass to my children—that's genuine buy-it-for-life quality."
   },
   {
     question: "How do you maintain a John Boos cutting board?",
@@ -109,11 +109,11 @@ const faqData = [
   },
   {
     question: "Can you put a John Boos cutting board in the dishwasher?",
-    answer: "Absolutely not. Never put any wood cutting board in the dishwasher. Why dishwashers destroy wood boards: The combination of high heat, harsh detergents, and prolonged water exposure causes warping, cracking, and rapid deterioration. A board that should last 20+ years will be ruined in months. Proper cleaning: Wash with warm soapy water immediately after use, dry thoroughly with a towel, stand on edge to air dry completely. Takes 2 minutes and preserves the board for decades. Want dishwasher-safe? Consider my Epicurean cutting board instead - it's completely dishwasher-safe and requires zero maintenance, though it won't last as long as the John Boos."
+    answer: "Absolutely not. Never put any wood cutting board in the dishwasher. Why dishwashers destroy wood boards: The combination of high heat, harsh detergents, and prolonged water exposure causes warping, cracking, and rapid deterioration. A board that should last 20 years will be ruined in months. Proper cleaning: Wash with warm soapy water immediately after use, dry thoroughly with a towel, stand on edge to air dry completely. Takes 2 minutes and preserves the board for decades. Want dishwasher-safe? Consider my Epicurean cutting board instead - it's completely dishwasher-safe and requires zero maintenance, though it won't last as long as the John Boos."
   },
   {
     question: "How long does a John Boos cutting board last?",
-    answer: "With basic care, expect 40+ years easily. This is genuine generational equipment. My experience: After 14 years of daily home use, my board shows minimal wear. I expect another 20+ years easily, then I'll pass it to my children. That's not marketing hyperbole—it's the reality of quality hardwood construction. Factors affecting lifespan: Positive: Regular cleaning, immediate drying, occasional oiling, avoiding soaking. Negative: Dishwasher use (ruins it fast), prolonged water exposure, never oiling, heavy serrated knife use. Commercial kitchens: Even in high-volume restaurant use, these boards commonly last 10+ years. For home use, 40+ years is realistic."
+    answer: "With basic care, expect 40 years easily. This is genuine generational equipment. My experience: After 14 years of daily home use, my board shows minimal wear. I expect another 20 years easily, then I'll pass it to my children. That's not marketing hyperbole—it's the reality of quality hardwood construction. Factors affecting lifespan: Positive: Regular cleaning, immediate drying, occasional oiling, avoiding soaking. Negative: Dishwasher use (ruins it fast), prolonged water exposure, never oiling, heavy serrated knife use. Commercial kitchens: Even in high-volume restaurant use, these boards commonly last 10 years. For home use, 40 years is realistic."
   },
   {
     question: "Is edge-grain or end-grain better for cutting boards?",
@@ -139,7 +139,7 @@ export const metadata = {
   },
 
   title: "John Boos Board: 14-Year Butcher Block Test",
-  description: "John Boos 24x18 cutting board review. NSF-certified restaurant quality. Maintenance tips: how to season platinum board. Commercial quality.",
+  description: "John Boos 24x18 cutting board review: 14 years home use. Chef tests knife preservation, durability, maintenance. Generational quality.",
   keywords: ["John Boos cutting board", "commercial cutting board", "maple cutting board", "restaurant cutting board", "butcher block"],
   openGraph: {
     title: "John Boos Platinum Commercial Cutting Board: Professional Review",
@@ -199,7 +199,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Scott Bradley</p>
-                <p className="text-sm text-slate-600">Professional Chef • 40 Years Experience Since Age 15</p>
+                <p className="text-sm text-slate-600">Professional Chef • 45 Years Cooking Experience</p>
               </div>
             </div>
 
@@ -357,7 +357,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
               <div style={{ fontSize: '40px', marginBottom: '10px' }}>♾️</div>
               <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Generational Quality</h3>
-              <p>After 14 years, expect another 20+ easily. This is equipment you&apos;ll pass to your
+              <p>After 14 years, expect another 20 easily. This is equipment you&apos;ll pass to your
               children—genuine buy-it-for-life quality.</p>
             </div>
 
@@ -780,7 +780,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                   work surface, and generational durability justifies the investment for serious home cooks.</p>
 
                   <p><strong>The value proposition:</strong> This board will outlast you. After 14 years
-                  of daily use, mine shows minimal wear and I expect another 20+ years easily. The knife
+                  of daily use, mine shows minimal wear and I expect another 20 years easily. The knife
                   sharpening savings alone—extending edge life 3x longer—adds significant value over time.</p>
 
                   <p><strong>Who should skip it:</strong> If you cook infrequently, have extremely limited
@@ -882,7 +882,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                 <div>
                   <p><strong>Answer:</strong> Absolutely not. Never put any wood cutting board in the dishwasher.</p>
 
-                  <p><strong>Why dishwashers destroy wood boards:</strong> The combination of high heat, harsh detergents, and prolonged water exposure causes warping, cracking, and rapid deterioration. A board that should last 20+ years will be ruined in months.</p>
+                  <p><strong>Why dishwashers destroy wood boards:</strong> The combination of high heat, harsh detergents, and prolonged water exposure causes warping, cracking, and rapid deterioration. A board that should last 20 years will be ruined in months.</p>
 
                   <p><strong>Proper cleaning:</strong> Wash with warm soapy water immediately after use, dry thoroughly with a towel, stand on edge to air dry completely. Takes 2 minutes and preserves the board for decades.</p>
 
@@ -901,9 +901,9 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               <h3>How long does a John Boos cutting board last?</h3>
               <div>
                 <div>
-                  <p><strong>Answer:</strong> With basic care, expect 40+ years easily. This is genuine generational equipment.</p>
+                  <p><strong>Answer:</strong> With basic care, expect 40 years easily. This is genuine generational equipment.</p>
 
-                  <p><strong>My experience:</strong> After 14 years of daily home use, my board shows minimal wear. I expect another 20+ years easily, then I&apos;ll pass it to my children. That&apos;s not marketing hyperbole—it&apos;s the reality of quality hardwood construction.</p>
+                  <p><strong>My experience:</strong> After 14 years of daily home use, my board shows minimal wear. I expect another 20 years easily, then I&apos;ll pass it to my children. That&apos;s not marketing hyperbole—it&apos;s the reality of quality hardwood construction.</p>
 
                   <p><strong>Factors affecting lifespan:</strong></p>
                   <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
@@ -911,7 +911,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                     <li><strong>Negative:</strong> Dishwasher use (ruins it fast), prolonged water exposure, never oiling, heavy serrated knife use</li>
                   </ul>
 
-                  <p><strong>Commercial kitchens:</strong> Even in high-volume restaurant use, these boards commonly last 10+ years. For home use, 40+ years is realistic.</p>
+                  <p><strong>Commercial kitchens:</strong> Even in high-volume restaurant use, these boards commonly last 10 years. For home use, 40 years is realistic.</p>
                 </div>
               </div>
             </div>
@@ -1044,7 +1044,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </p>
 
             <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-              After 14 years, I expect to use this board for another 20+ easily and then pass it to my
+              After 14 years, I expect to use this board for another 20 easily and then pass it to my
               children. That&apos;s genuine buy-it-for-life quality.
             </p>
 
@@ -1194,7 +1194,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               <p>The perfect knife to pair with this board. Professional quality, perfect balance,
               exceptional value. The combination maximizes both knife and board longevity.</p>
               <p style={{ fontSize: '14px', color: '#666' }}>
-                <strong>40 years cooking:</strong> My daily workhorse knife.
+                <strong>45 years cooking:</strong> My daily workhorse knife.
               </p>
               <Link
                 href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
@@ -1254,7 +1254,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               <p>After prepping ingredients on this board, cook them in the best pot I own. The John
               Boos + Le Creuset combination defines my home kitchen.</p>
               <p style={{ fontSize: '14px', color: '#666' }}>
-                <strong>After 12+ years:</strong> Zero regrets on either.
+                <strong>After 12 years:</strong> Zero regrets on either.
               </p>
               <Link
                 href="/reviews/le-creuset-signature-7-25-qt-dutch-oven"
@@ -1350,10 +1350,10 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             <div>
               <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
               <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-                Professional Chef • 40 Years Experience Since Age 15
+                Professional Chef • 45 Years Cooking Experience
               </p>
               <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-                Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience.
+                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
                 A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
                 University of Montana. Equipment tested in high-volume operations serving hundreds daily.
               </p>
