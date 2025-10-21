@@ -2,7 +2,7 @@
 
 export const leadMagnetContent = {
   title: "The 11 Tools I Use Most: From Professional Kitchens to My Apartment Kitchen",
-  subtitle: "My daily workhorse tools, tested in professional kitchens and proven at home",
+  subtitle: "My daily workhorse tools, tested in professional kitchens and proven at home.",
   author: "Scott Bradley - 24 Years Professional Kitchen Experience",
 
   // The 11 actual tools with Amazon affiliate links
@@ -28,7 +28,7 @@ export const leadMagnetContent = {
     {
       name: "Victorinox Granton Edge Boning Knife",
       amazonUrl: "https://amzn.to/4pUDed1",
-      why: "Firm blade gets close to bones. Also great for filleting fish.",
+      why: "Firm blade gets close to bones. Also great for filleting smaller fish.",
       story: "Breaking down a whole chicken takes 3 minutes with this knife. The granton edge prevents sticking."
     },
     {
@@ -52,7 +52,7 @@ export const leadMagnetContent = {
     {
       name: "Winco Heavy Duty Tongs (12\")",
       amazonUrl: "https://amzn.to/4n0pWIy",
-      why: "Restaurant-grade tongs at a fraction of the price. Proper spring tension.",
+      why: "Restaurant-grade tongs with proper spring tension and durability.",
       story: "These are a heavy duty version of the same style tongs used in every professional kitchen. Strong, reliable, dishwasher-safe."
     },
     {
@@ -119,8 +119,8 @@ export const leadMagnetContent = {
         "• Don't leave with food sitting on them",
         "",
         "**Bar Mops:**",
-        "• Machine wash",
-        "• Hang to dry",
+        "• Machine wash with a little bleach to keep them sanitary",
+        "• Machine dry (skip the fabric softener so it doesn't get in your food)",
         "",
         "I've been running everything through the dishwasher daily for two decades. Same knives, same peeler, same bench scraper. They all still work perfectly. The key is drying them right away and never leaving them sitting in water or with food residue."
       ]
@@ -260,10 +260,11 @@ export function generateLeadMagnetHTML(): string {
         .footer {
           border-top: 2px solid #D1D5DB;
           padding-top: 20px;
+          padding-bottom: 20px;
           margin-top: 40px;
           text-align: center;
           color: #6B7280;
-          font-size: 12px;
+          font-size: 14px;
         }
         ul {
           margin: 10px 0;
