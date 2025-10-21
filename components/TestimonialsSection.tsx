@@ -22,7 +22,7 @@ export default function TestimonialsSection() {
             Professional Kitchen Experience
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Equipment reviews based on real commercial kitchen testing and 23+ years of restaurant experience
+            Equipment reviews based on real commercial kitchen testing and 24 years of restaurant experience
           </p>
         </div>
 
@@ -68,7 +68,7 @@ export default function TestimonialsSection() {
         {/* Professional Background */}
         <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl p-8 text-center">
           <div className="max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-orange-800 mb-4">23+ Years Restaurant Experience</h3>
+            <h3 className="text-2xl font-bold text-orange-800 mb-4">24 Years Restaurant Experience</h3>
             <p className="text-slate-700">
               Reviews based on real-world testing in professional kitchen environments.
               All recommendations backed by hands-on experience, not marketing claims.
@@ -79,12 +79,11 @@ export default function TestimonialsSection() {
         {/* CTA */}
         <div className="text-center mt-8">
           <p className="text-slate-600 mb-4">
-            Get professional equipment insights from 23+ years of restaurant experience
+            Get professional equipment insights from 24 years of restaurant experience
           </p>
           <a
             href="/newsletter"
             className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
-            aria-label="Get free professional kitchen equipment guide - newsletter signup"
           >
             Get Free Equipment Guide
           </a>

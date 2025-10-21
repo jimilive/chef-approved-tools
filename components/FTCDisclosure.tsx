@@ -4,7 +4,7 @@ export default function FTCDisclosure() {
       <p className="text-yellow-800">
         <strong>Disclosure:</strong> This page contains affiliate links. As an Amazon Associate,
         I earn from qualifying purchases at no additional cost to you. All recommendations are
-        based on my 23+ years of restaurant experience.
+        based on my 24 years of restaurant experience.
       </p>
     </div>
   )

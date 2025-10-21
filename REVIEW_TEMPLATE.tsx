@@ -611,7 +611,7 @@ export default function ProductReview() {
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
               [Customize this paragraph to mention specific experience relevant to THIS product.
-              For example: &quot;Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience.
+              For example: &quot;Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
               [X] years of [product] use in [context] proves [key finding]—not just manufacturer claims.&quot;]
             </p>
             <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold', textDecoration: 'none' }}>

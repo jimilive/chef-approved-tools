@@ -18,9 +18,10 @@ import MobileOptimizationProvider from '@/components/MobileOptimizationProvider'
 
 const inter = Inter({
   subsets: ['latin'],
-  display: 'optional', // Non-blocking font loading
+  display: 'swap',
   preload: true,
-  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif']
+  variable: '--font-inter',
+  adjustFontFallback: true
 })
 
 export const metadata: Metadata = {
