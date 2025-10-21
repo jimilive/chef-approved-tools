@@ -1,7 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Script from 'next/script'  // ← ADD THIS LINE HERE
+import Script from 'next/script'
+import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { lazy, Suspense } from 'react'
@@ -400,6 +401,9 @@ export default function RootLayout({
             `}
           </Script>
         )}
+
+        {/* Vercel Analytics */}
+        <VercelAnalytics />
       </body>
     </html>
   )
