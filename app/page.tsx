@@ -23,26 +23,26 @@ const RecentlyViewed = lazy(() => import('@/components/RecentlyViewed'))
 // Sample products with enhanced data
 const sampleProducts = [
   {
-    id: 'vitamix-5200',
-    name: 'Vitamix 5200 Professional-Grade Blender',
-    brand: 'Vitamix',
-    rating: 4.7,
-    reviews: 234,
-    image: '/logo.png',
-    affiliateUrl: 'https://amzn.to/48RALd9',
-    badge: 'Restaurant Tested',
-    tested: '5 years proven'
-  },
-  {
-    id: 'kitchenaid-ksm8990',
-    name: 'KitchenAid Commercial Series',
+    id: 'kitchenaid-ksm8990wh',
+    name: 'KitchenAid Commercial Mixer',
     brand: 'KitchenAid',
-    rating: 4.9,
-    reviews: 156,
+    rating: 4.8,
+    reviews: 217,
     image: '/logo.png',
     affiliateUrl: 'https://amzn.to/4nVlUTM',
     badge: 'NSF Certified',
-    tested: 'Survived $80K/mo operations'
+    tested: '18 months proven'
+  },
+  {
+    id: 'victorinox-fibrox-8-inch-chefs-knife',
+    name: 'Victorinox Fibrox 8" Chef\'s Knife',
+    brand: 'Victorinox',
+    rating: 4.8,
+    reviews: 156,
+    image: '/logo.png',
+    affiliateUrl: 'https://amzn.to/3U4PsT1',
+    badge: 'Pro Workhorse',
+    tested: '20 years proven'
   }
 ]
 

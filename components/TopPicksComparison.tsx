@@ -19,17 +19,17 @@ interface TopPick {
 
 const topPicks: TopPick[] = [
   {
-    id: 'kitchenaid-ksm8990wh',
-    name: 'KitchenAid Commercial Mixer',
-    shortName: 'KitchenAid Commercial Mixer',
-    rating: 4.8,
+    id: 'vitamix-5200',
+    name: 'Vitamix 5200 Professional-Grade Blender',
+    shortName: 'Vitamix 5200',
+    rating: 4.7,
     badge: 'Best Overall',
     badgeColor: 'bg-green-700',
-    category: 'Stand Mixers',
-    affiliateUrl: 'https://amzn.to/4nVlUTM',
-    keyFeature: '1.3 HP commercial motor with NSF certification',
-    testPeriod: '18 months proven',
-    whyBest: 'Survived 18 months of high-volume restaurant operations at Purple Cafe without a single repair'
+    category: 'Blenders',
+    affiliateUrl: 'https://amzn.to/48RALd9',
+    keyFeature: '2.0 HP motor with 7-year full warranty',
+    testPeriod: '5 years proven',
+    whyBest: 'Still running strong after 5 years of daily use with zero maintenance. Blades still sharp, motor still powerful.'
   }
 ]
 
