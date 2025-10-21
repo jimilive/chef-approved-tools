@@ -564,7 +564,7 @@ export default function VictorinoxFibrox8InchReview() {
                   kitchens worldwide, from casual dining to fine dining operations. It&apos;s not a &quot;budget alternative&quot;—
                   it&apos;s professional equipment that happens to be accessible.</p>
 
-                  <p><strong>Professional reality:</strong> After using Victorinox for 10 years professionally (Purple Café, Feierabend, Paragary's, Il Pizzaiolo) and 20 years at home,
+                  <p><strong>Professional reality:</strong> After using Victorinox for 10 years professionally (Purple Café, Feierabend, Paragary&apos;s, Il Pizzaiolo) and 20 years at home,
                   I can tell you that line cooks and chefs prefer Victorinox because it works better for
                   actual cooking than expensive knives. The thin blade and perfect balance deliver
                   more control than heavy, thick premium knives.</p>

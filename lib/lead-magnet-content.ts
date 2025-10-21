@@ -170,6 +170,11 @@ export const leadMagnetContent = {
   }
 }
 
+// Helper function to convert markdown bold to HTML
+function convertMarkdownBold(text: string): string {
+  return text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+}
+
 // Helper function to generate PDF-ready content
 export function generateLeadMagnetHTML(): string {
   const { title, subtitle, author, tools, sections, bonusContent, footer } = leadMagnetContent
@@ -288,14 +293,14 @@ export function generateLeadMagnetHTML(): string {
         </div>
       `).join('')}
 
-      ${sections.map(section => `
+      ${sections.map((section: any) => `
         <div class="section">
           <h2>${section.title}</h2>
-          ${section.content ? section.content.map(paragraph => `<p>${paragraph}</p>`).join('') : ''}
-          ${section.subsections ? section.subsections.map(sub => `
+          ${section.content ? section.content.map((paragraph: string) => `<p>${convertMarkdownBold(paragraph)}</p>`).join('') : ''}
+          ${section.subsections ? section.subsections.map((sub: any) => `
             <h3>${sub.title}</h3>
             <ul>
-              ${sub.items.map(item => `<li>${item}</li>`).join('')}
+              ${sub.items.map((item: string) => `<li>${convertMarkdownBold(item)}</li>`).join('')}
             </ul>
           `).join('') : ''}
         </div>

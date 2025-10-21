@@ -1,21 +1,12 @@
-import { generateLeadMagnetHTML } from '@/lib/lead-magnet-content'
+'use client'
+
+import { useEffect } from 'react'
 
 export default function LeadMagnetPreview() {
-  const htmlContent = generateLeadMagnetHTML()
+  useEffect(() => {
+    // Redirect to clean PDF page
+    window.location.href = '/lead-magnet-clean'
+  }, [])
 
-  return (
-    <div>
-      <div style={{
-        background: '#dc2626',
-        color: 'white',
-        padding: '20px',
-        textAlign: 'center',
-        fontWeight: 'bold',
-        fontSize: '18px'
-      }}>
-        ⚠️ DEV PREVIEW ONLY - NOT FOR PRODUCTION ⚠️
-      </div>
-      <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
-    </div>
-  )
+  return <div>Redirecting to clean PDF view...</div>
 }
