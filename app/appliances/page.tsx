@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: 'Kitchen Appliances 2025 | Pro Chef Reviews',
   description: 'Professional chef reviews of blenders, mixers, food processors, and essential kitchen appliances tested in commercial restaurant settings.',
   keywords: ['kitchen appliances', 'blender reviews', 'mixer reviews', 'food processor reviews', 'professional kitchen equipment'],
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/appliances',
+  },
   openGraph: {
     title: 'Best Kitchen Appliances 2025 | Chef-Tested Reviews',
     description: 'Professional chef reviews of blenders, mixers, and essential kitchen appliances.',
