@@ -169,7 +169,7 @@ export default function KitchenStarterKitPage() {
 
           {/* <CTAVisibilityTracker
             ctaId="victorinox-knife-link"
-            position="inline"
+            position="mid_article"
             productSlug="victorinox-fibrox-chef-knife"
             merchant="internal"
           >
@@ -220,7 +220,7 @@ export default function KitchenStarterKitPage() {
 
           {/* <CTAVisibilityTracker
             ctaId="cast-iron-review-link"
-            position="inline"
+            position="mid_article"
             productSlug="lodge-cast-iron-skillet"
             merchant="internal"
           >
@@ -261,7 +261,7 @@ export default function KitchenStarterKitPage() {
 
           {/* <CTAVisibilityTracker
             ctaId="thermometer-comparison-link"
-            position="inline"
+            position="mid_article"
             productSlug="kitchen-thermometer-comparison"
             merchant="internal"
           >
@@ -298,7 +298,7 @@ export default function KitchenStarterKitPage() {
 
           <CTAVisibilityTracker
             ctaId="bench-scraper-story-link"
-            position="inline"
+            position="mid_article"
             productSlug="bench-scraper"
             merchant="internal"
           >
@@ -469,7 +469,7 @@ export default function KitchenStarterKitPage() {
             <li>
               {/* <CTAVisibilityTracker
                 ctaId="victorinox-equipment-link"
-                position="inline"
+                position="mid_article"
                 productSlug="victorinox-fibrox-chef-knife"
                 merchant="internal"
               >
@@ -482,7 +482,7 @@ export default function KitchenStarterKitPage() {
             <li>
               {/* <CTAVisibilityTracker
                 ctaId="lodge-equipment-link"
-                position="inline"
+                position="mid_article"
                 productSlug="lodge-cast-iron-skillet"
                 merchant="internal"
               >
@@ -495,7 +495,7 @@ export default function KitchenStarterKitPage() {
             <li>
               {/* <CTAVisibilityTracker
                 ctaId="thermapen-equipment-link"
-                position="inline"
+                position="mid_article"
                 productSlug="thermapen-thermometer"
                 merchant="internal"
               >
@@ -508,7 +508,7 @@ export default function KitchenStarterKitPage() {
             <li>
               <CTAVisibilityTracker
                 ctaId="rubbermaid-scraper-equipment-link"
-                position="inline"
+                position="mid_article"
                 productSlug="bench-scraper"
                 merchant="internal"
               >
@@ -571,7 +571,7 @@ export default function KitchenStarterKitPage() {
             {/* <li>
               <CTAVisibilityTracker
                 ctaId="first-chef-knife-link"
-                position="inline"
+                position="mid_article"
                 productSlug="first-chef-knife-guide"
                 merchant="internal"
               >
@@ -583,7 +583,7 @@ export default function KitchenStarterKitPage() {
             {/* <li>
               <CTAVisibilityTracker
                 ctaId="season-cast-iron-link"
-                position="inline"
+                position="mid_article"
                 productSlug="season-cast-iron-guide"
                 merchant="internal"
               >
@@ -595,7 +595,7 @@ export default function KitchenStarterKitPage() {
             {/* <li>
               <CTAVisibilityTracker
                 ctaId="wasting-money-tools-link"
-                position="inline"
+                position="mid_article"
                 productSlug="wasting-money-tools"
                 merchant="internal"
               >
@@ -614,7 +614,7 @@ export default function KitchenStarterKitPage() {
             {/* <li>
               <CTAVisibilityTracker
                 ctaId="chef-knives-buying-guide-link"
-                position="inline"
+                position="mid_article"
                 productSlug="chef-knives-guide"
                 merchant="internal"
               >
@@ -627,7 +627,7 @@ export default function KitchenStarterKitPage() {
             <li>
               <CTAVisibilityTracker
                 ctaId="cookware-materials-link"
-                position="inline"
+                position="mid_article"
                 productSlug="cookware-materials-explained"
                 merchant="internal"
               >

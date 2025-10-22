@@ -320,7 +320,7 @@ export default function MakingStockPage() {
 
           {/* <CTAVisibilityTracker
             ctaId="maillard-reaction-link"
-            position="inline"
+            position="mid_article"
             productSlug="maillard-reaction-guide"
             merchant="internal"
           >
@@ -466,7 +466,7 @@ export default function MakingStockPage() {
             {/* <li>
               <CTAVisibilityTracker
                 ctaId="season-soups-link"
-                position="inline"
+                position="mid_article"
                 productSlug="season-soups-guide"
                 merchant="internal"
               >
@@ -479,7 +479,7 @@ export default function MakingStockPage() {
             <li>
               <CTAVisibilityTracker
                 ctaId="blanching-vegetables-link"
-                position="inline"
+                position="mid_article"
                 productSlug="blanching-vegetables"
                 merchant="internal"
               >
@@ -491,7 +491,7 @@ export default function MakingStockPage() {
             <li>
               <CTAVisibilityTracker
                 ctaId="reducing-sauces-link"
-                position="inline"
+                position="mid_article"
                 productSlug="reducing-sauces"
                 merchant="internal"
               >
@@ -503,7 +503,7 @@ export default function MakingStockPage() {
             <li>
               <CTAVisibilityTracker
                 ctaId="deglazing-link"
-                position="inline"
+                position="mid_article"
                 productSlug="deglazing"
                 merchant="internal"
               >
@@ -519,7 +519,7 @@ export default function MakingStockPage() {
             {/* <li>
               <CTAVisibilityTracker
                 ctaId="stockpots-review-link"
-                position="inline"
+                position="mid_article"
                 productSlug="stockpots-review"
                 merchant="internal"
               >
@@ -532,7 +532,7 @@ export default function MakingStockPage() {
             {/* <li>
               <CTAVisibilityTracker
                 ctaId="kosher-salt-review-link"
-                position="inline"
+                position="mid_article"
                 productSlug="kosher-salt-review"
                 merchant="internal"
               >
