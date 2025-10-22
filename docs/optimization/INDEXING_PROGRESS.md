@@ -1,13 +1,68 @@
 # Google Search Console Indexing Progress
 
-**Last Updated:** 2025-10-16 (Updated with latest indexed pages from GSC)
+**Last Updated:** 2025-10-22 (Requested indexing for 30 new blog posts + 4 canonical fixes)
 
 ---
 
-## ✅ CURRENT INDEXING STATUS: 50 PAGES INDEXED
+## ✅ CURRENT INDEXING STATUS: 50 PAGES INDEXED + 34 REQUESTED
 
-**Status:** 50 pages now indexed in Google Search Console (up from 31 on Oct 15).
-MAJOR indexing progress - 19 additional pages indexed in past 24 hours!
+**Status:** 50 pages indexed + 34 URLs newly requested for indexing on Oct 22, 2025
+- 30 new blog posts requested (Tier 1-3 SEO content)
+- 4 canonical URL fixes requested (appliances, glossary, 2 reviews)
+
+---
+
+## 🆕 INDEXING REQUESTED - October 22, 2025
+
+### Priority: Canonical Fixes (Requested Oct 22)
+| URL | Status | Notes |
+|-----|--------|-------|
+| https://www.chefapprovedtools.com/appliances | rerequested | Fixed: Added missing canonical URL |
+| https://www.chefapprovedtools.com/glossary | rerequested | Fixed: Changed relative to absolute canonical |
+| https://www.chefapprovedtools.com/reviews/lodge-seasoned-cast-iron-3-skillet-bundle | rerequested | Canonical URL verification |
+| https://www.chefapprovedtools.com/reviews/robot-coupe-r2-dice | rerequested | Canonical URL verification |
+
+### Tier 1 Blog Posts (Requested Oct 22) - High Volume, Lower Competition
+| URL | Status | Search Volume | Notes |
+|-----|--------|---------------|-------|
+| https://www.chefapprovedtools.com/blog/how-to-season-cast-iron-like-restaurant-chef | requested | 8,100/mo | Real restaurant experience advantage |
+| https://www.chefapprovedtools.com/blog/food-processor-vs-blender | requested | 5,400/mo | High buying intent |
+| https://www.chefapprovedtools.com/blog/knife-mistakes-home-cooks-make | requested | 4,400/mo | Engaging mistake-fix content |
+| https://www.chefapprovedtools.com/blog/how-to-choose-first-chef-knife | requested | 3,600/mo | HIGH buying intent |
+| https://www.chefapprovedtools.com/blog/stand-mixer-buying-guide | requested | 2,400/mo | Expensive product - high intent |
+| https://www.chefapprovedtools.com/blog/kitchen-thermometer-guide | requested | 1,800/mo | Buying intent |
+| https://www.chefapprovedtools.com/blog/dutch-oven-size-guide-which-quart-size | requested | 2,900/mo | Buying intent |
+| https://www.chefapprovedtools.com/blog/how-to-clean-burnt-stainless-steel-pans | requested | 2,200/mo | Problem-solution |
+| https://www.chefapprovedtools.com/blog/stainless-steel-why-food-sticks | requested | 1,500/mo | Common pain point |
+| https://www.chefapprovedtools.com/blog/cookware-materials-explained | requested | 1,600/mo | Buying intent |
+
+### Tier 2 Blog Posts (Requested Oct 22) - Medium Volume, Good Intent
+| URL | Status | Notes |
+|-----|--------|-------|
+| https://www.chefapprovedtools.com/blog/cast-iron-mistakes-ruin-pan | requested | Listicle format performs well |
+| https://www.chefapprovedtools.com/blog/kitchen-tools-wasting-money | requested | Listicle - money saving angle |
+| https://www.chefapprovedtools.com/blog/knife-safety-rules-professional-kitchens | requested | 24 years pro experience |
+| https://www.chefapprovedtools.com/blog/essential-knife-cuts-every-cook-should-master | requested | Educational - technique focused |
+| https://www.chefapprovedtools.com/blog/roasting-vegetables-restaurant-guide | requested | Restaurant temperature guide |
+| https://www.chefapprovedtools.com/blog/cutting-board-materials-guide | requested | Buying intent |
+| https://www.chefapprovedtools.com/blog/how-to-preheat-a-pan | requested | Technique - temperature focus |
+| https://www.chefapprovedtools.com/blog/professional-knife-grip-techniques | requested | Professional techniques |
+| https://www.chefapprovedtools.com/blog/kitchen-starter-kit-first-5-tools | requested | HIGH buying intent |
+| https://www.chefapprovedtools.com/blog/knife-storage-protecting-blades-for-decades | requested | Knife care - longevity focus |
+
+### Tier 3 Blog Posts (Requested Oct 22) - Lower Volume, Still Valuable
+| URL | Status | Notes |
+|-----|--------|-------|
+| https://www.chefapprovedtools.com/blog/caramelizing-onions-why-it-takes-45-minutes | requested | Myth-busting content |
+| https://www.chefapprovedtools.com/blog/sheet-pan-cooking-restaurant-techniques | requested | Restaurant techniques |
+| https://www.chefapprovedtools.com/blog/meal-prep-station-setup-restaurant-efficiency | requested | Restaurant efficiency |
+| https://www.chefapprovedtools.com/blog/braising-101-tough-cuts-made-tender | requested | Cooking technique |
+| https://www.chefapprovedtools.com/blog/deglazing-secret-to-restaurant-quality-flavor | requested | Restaurant technique |
+| https://www.chefapprovedtools.com/blog/reducing-sauces-restaurant-technique | requested | Restaurant technique |
+| https://www.chefapprovedtools.com/blog/blanching-vegetables-why-restaurants-do-it | requested | Restaurant technique |
+| https://www.chefapprovedtools.com/blog/making-stock-professional-chef-method | requested | Professional method |
+| https://www.chefapprovedtools.com/blog/knife-block-vs-magnetic-strip-vs-drawer-storage | requested | Storage comparison |
+| https://www.chefapprovedtools.com/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once | requested | Sustainability angle |
 
 ---
 
