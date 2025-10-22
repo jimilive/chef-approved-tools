@@ -27,9 +27,9 @@ const articleSchema = generateArticleSchema({
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: "Home", item: "https://www.chefapprovedtools.com" },
-  { name: "Blog", item: "https://www.chefapprovedtools.com/blog" },
-  { name: "Kitchen Starter Kit: First 5 Tools to Buy", item: "https://www.chefapprovedtools.com/blog/kitchen-starter-kit-first-5-tools" }
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
+  { name: "Kitchen Starter Kit: First 5 Tools to Buy", url: "https://www.chefapprovedtools.com/blog/kitchen-starter-kit-first-5-tools" }
 ]);
 
 const faqSchema = generateFAQSchema([

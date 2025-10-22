@@ -27,9 +27,9 @@ const articleSchema = generateArticleSchema({
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: "Home", item: "https://www.chefapprovedtools.com" },
-  { name: "Blog", item: "https://www.chefapprovedtools.com/blog" },
-  { name: "Making Stock: Professional Chef Method", item: "https://www.chefapprovedtools.com/blog/making-stock-professional-chef-method" }
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
+  { name: "Making Stock: Professional Chef Method", url: "https://www.chefapprovedtools.com/blog/making-stock-professional-chef-method" }
 ]);
 
 const faqSchema = generateFAQSchema([
