@@ -160,7 +160,7 @@ export default function KitchenStarterKitPage() {
           <h3>1. Chef&apos;s Knife (8-Inch)</h3>
 
           <p>
-            Your primary tool for 90% of tasks. Skip the "block sets." One great knife beats ten mediocre ones.
+            Your primary tool for 90% of tasks. Skip the &quot;block sets.&quot; One great knife beats ten mediocre ones.
           </p>
 
           <p>
@@ -201,7 +201,7 @@ export default function KitchenStarterKitPage() {
           </p>
 
           <p>
-            <strong>Pro tip:</strong> Size matters. Get at least 15" × 20" so food stays on the board, not your counter. A board that&apos;s too small forces you to work in batches and creates mess. A large board gives you room to separate raw from processed ingredients and sweep everything to one side while you work.
+            <strong>Pro tip:</strong> Size matters. Get at least 15&quot; × 20&quot; so food stays on the board, not your counter. A board that&apos;s too small forces you to work in batches and creates mess. A large board gives you room to separate raw from processed ingredients and sweep everything to one side while you work.
           </p>
 
           <p>
@@ -325,7 +325,7 @@ export default function KitchenStarterKitPage() {
               Want my complete kitchen setup under $200?
             </h3>
             <p className="mb-4">
-              Join 10,000+ home cooks who get my free guide: "11 Essential Kitchen Tools I Use Every Day". Tested through 24 years in professional kitchens.
+              Join 10,000+ home cooks who get my free guide: &quot;11 Essential Kitchen Tools I Use Every Day&quot;. Tested through 24 years in professional kitchens.
             </p>
             <CTAVisibilityTracker
               ctaId="starter-kit-newsletter-cta"
@@ -405,10 +405,10 @@ export default function KitchenStarterKitPage() {
             Buy tools that work, not tools that impress. Your cooking will impress people. Your equipment just needs to get the job done reliably.
           </p>
 
-          <h3>Mistake #5: Waiting for "Someday"</h3>
+          <h3>Mistake #5: Waiting for &quot;Someday&quot;</h3>
 
           <p>
-            "I&apos;ll buy good tools when I&apos;m a better cook" is backwards thinking. Good tools help you become a better cook. They provide feedback, build confidence, and last long enough to grow with you.
+            &quot;I&apos;ll buy good tools when I&apos;m a better cook&quot; is backwards thinking. Good tools help you become a better cook. They provide feedback, build confidence, and last long enough to grow with you.
           </p>
 
           <p>
@@ -418,7 +418,7 @@ export default function KitchenStarterKitPage() {
           <h2>What About Everything Else?</h2>
 
           <p>
-            "Only five tools?" Yes, to start. Once you&apos;ve cooked with these five for a few months, you&apos;ll know exactly what you need next based on what you actually cook.
+            &quot;Only five tools?&quot; Yes, to start. Once you&apos;ve cooked with these five for a few months, you&apos;ll know exactly what you need next based on what you actually cook.
           </p>
 
           <p>
@@ -477,7 +477,7 @@ export default function KitchenStarterKitPage() {
                   Victorinox 8" Chef&apos;s Knife
                 </Link>
               </CTAVisibilityTracker> */}
-              <strong>Victorinox 8" Chef&apos;s Knife</strong> – My everyday knife for over 20 years
+              <strong>Victorinox 8&quot; Chef&apos;s Knife</strong> – My everyday knife for over 20 years
             </li>
             <li>
               {/* <CTAVisibilityTracker
@@ -490,7 +490,7 @@ export default function KitchenStarterKitPage() {
                   Lodge Cast Iron Skillet
                 </Link>
               </CTAVisibilityTracker> */}
-              <strong>Lodge Cast Iron Skillet (10" or 12")</strong> – My favorite pan for searing and roasting
+              <strong>Lodge Cast Iron Skillet (10&quot; or 12&quot;)</strong> – My favorite pan for searing and roasting
             </li>
             <li>
               {/* <CTAVisibilityTracker

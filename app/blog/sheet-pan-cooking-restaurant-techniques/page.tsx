@@ -331,7 +331,7 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
           </h2>
 
           <p>
-            Sheet pans come in standard commercial sizes. Most home ovens fit a half-sheet pan (18" × 13"), which is the professional standard. Quarter-sheet pans (13" × 9") are useful for smaller portions or side dishes.
+            Sheet pans come in standard commercial sizes. Most home ovens fit a half-sheet pan (18&quot; × 13&quot;), which is the professional standard. Quarter-sheet pans (13&quot; × 9&quot;) are useful for smaller portions or side dishes.
           </p>
 
           <div className="overflow-x-auto my-8">
@@ -346,17 +346,17 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
               <tbody>
                 <tr>
                   <td className="border border-slate-300 px-4 py-2">Full Sheet</td>
-                  <td className="border border-slate-300 px-4 py-2">26" × 18"</td>
+                  <td className="border border-slate-300 px-4 py-2">26&quot; × 18&quot;</td>
                   <td className="border border-slate-300 px-4 py-2">Commercial kitchens only—too large for most home ovens</td>
                 </tr>
                 <tr className="bg-slate-50">
                   <td className="border border-slate-300 px-4 py-2">Half Sheet</td>
-                  <td className="border border-slate-300 px-4 py-2">18" × 13"</td>
-                  <td className="border border-slate-300 px-4 py-2">Home ovens—fits standard 30" ranges with room to spare</td>
+                  <td className="border border-slate-300 px-4 py-2">18&quot; × 13&quot;</td>
+                  <td className="border border-slate-300 px-4 py-2">Home ovens—fits standard 30&quot; ranges with room to spare</td>
                 </tr>
                 <tr>
                   <td className="border border-slate-300 px-4 py-2">Quarter Sheet</td>
-                  <td className="border border-slate-300 px-4 py-2">13" × 9"</td>
+                  <td className="border border-slate-300 px-4 py-2">13&quot; × 9&quot;</td>
                   <td className="border border-slate-300 px-4 py-2">Small portions, side dishes, toaster ovens</td>
                 </tr>
               </tbody>
