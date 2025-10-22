@@ -649,7 +649,7 @@ export default function KitchenStarterKitPage() {
           </p>
           <CTAVisibilityTracker
             ctaId="about-scott-footer-link"
-            position="article_footer"
+            position="final_cta"
             productSlug="kitchen-starter-kit-first-5-tools"
             merchant="internal"
           >

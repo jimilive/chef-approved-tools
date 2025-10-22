@@ -555,7 +555,7 @@ export default function MakingStockPage() {
           </p>
           <CTAVisibilityTracker
             ctaId="about-scott-footer-link"
-            position="article_footer"
+            position="final_cta"
             productSlug="making-stock-professional-chef-method"
             merchant="internal"
           >
