@@ -74,6 +74,26 @@ Site content contained inconsistent and inauthentic credibility claims:
 
 ## 🚨 IMMEDIATE NEXT ACTIONS
 
+### Quick Marketing Wins (< 2 hours total) - NEW Oct 22, 2025
+1. [ ] Apply to Williams Sonoma affiliate program (10 minutes)
+2. [ ] Apply to Sur La Table affiliate program (10 minutes)
+3. [ ] Create Pinterest Business Account (15 minutes)
+4. [ ] Create first 3 Pinterest boards (20 minutes)
+   - [ ] Board 1: Chef Knives & Knife Skills
+   - [ ] Board 2: Kitchen Equipment Reviews
+   - [ ] Board 3: Cooking Techniques & Tips
+5. [ ] Pin first 10 blog posts to Pinterest (30 minutes)
+   - [ ] How to Season Cast Iron
+   - [ ] Food Processor vs Blender
+   - [ ] 5 Knife Mistakes
+   - [ ] How to Choose First Chef Knife
+   - [ ] Stand Mixer Buying Guide
+   - [ ] Kitchen Thermometer Guide
+   - [ ] Dutch Oven Size Guide
+   - [ ] How to Clean Burnt Stainless Steel Pans
+   - [ ] Stainless Steel - Why Food Sticks
+   - [ ] Cookware Materials Explained
+
 ### This Weekend (Oct 19-20):
 1. [ ] Fix 1 redirect error (GSC reported)
 2. [ ] Fix 3 invalid merchant listings in schema
@@ -85,6 +105,8 @@ Site content contained inconsistent and inauthentic credibility claims:
 2. [ ] Optimize pages ranking positions 11-30 (closest to page 1)
 3. [ ] Write NoCry Cut Resistant Gloves review
 4. [ ] Write 3-5 high-value blog articles
+5. [ ] Setup first 4 weeks email automation sequence
+6. [ ] Setup 13 weeks email automation sequence
 
 ### Next 30 Days (by Nov 17):
 1. [ ] Write 5-10 more blog articles (SEO-focused)
@@ -134,12 +156,14 @@ Site content contained inconsistent and inauthentic credibility claims:
 1. ✅ Review/adjust the 11 tools list to align with tier system
 2. ✅ Generate PDF of lead magnet
 
-### 🔥 Active Tasks (TODAY):
+### 🔥 Active Tasks (THIS WEEK):
 3. [ ] Sign up for ActiveCampaign
 4. [ ] Connect ActiveCampaign to codebase
 5. [ ] Update email capture copy (exit modal, newsletter page, homepage)
 6. [ ] Remove price alert system from code
 7. [ ] Test email capture end-to-end
+8. [ ] **Setup first 4 weeks email automation sequence** ⬅️ NEW Oct 22
+9. [ ] **Setup 13 weeks email automation sequence** ⬅️ NEW Oct 22
 
 ### Tasks to complete once email signups begin:
 
@@ -554,10 +578,10 @@ Upgraded 20+ reviews to Tier 1/2 standards:
 - [ ] Track which products generate most clicks/conversions
 - [ ] Optimize affiliate link placement based on analytics data
 
-### Additional Affiliate Programs (NOT STARTED)
+### Additional Affiliate Programs (IN PROGRESS - Oct 22, 2025)
 - [ ] CJ Affiliate links for John Boos and Zwilling
-- [ ] Williams Sonoma affiliate program
-- [ ] Sur La Table affiliate program
+- [ ] **Williams Sonoma affiliate program** ⬅️ APPLY TODAY (10 min)
+- [ ] **Sur La Table affiliate program** ⬅️ APPLY TODAY (10 min)
 - [ ] Le Creuset direct affiliate program
 - [ ] Other kitchen equipment retailers
 
