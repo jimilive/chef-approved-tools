@@ -14,6 +14,24 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: 'making-stock-professional-chef-method',
+    title: 'Making Stock: Professional Chef Method – How to Build Flavor',
+    excerpt: 'Professional chef Scott Bradley explains the real restaurant method for making stock. Build deep flavor with bones, vegetables, and proper simmering technique.',
+    publishDate: '2025-10-22',
+    readTime: '10 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'kitchen-starter-kit-first-5-tools',
+    title: 'Kitchen Starter Kit: First 5 Tools to Buy',
+    excerpt: 'Chef Scott Bradley reveals the five essential kitchen tools every home cook needs first. No fluff, no gimmicks—just the gear professionals actually use daily.',
+    publishDate: '2025-10-22',
+    readTime: '9 min read',
+    category: 'Buying Guides',
+    featured: false
+  },
+  {
     slug: 'best-scrambled-eggs',
     title: 'Perfect Scrambled Eggs: No Bowl, No Whisk Method',
     excerpt: 'Revolutionary scrambled egg technique from 45 years of cooking. No bowl, no whisk, no milk. Just eggs, butter, and a fork—directly in the pan. The creamiest eggs you\'ll ever make.',
@@ -21,6 +39,249 @@ const blogPosts = [
     readTime: '7 min read',
     category: 'Cooking Techniques',
     featured: true
+  },
+  {
+    slug: 'knife-storage-protecting-blades-for-decades',
+    title: 'Knife Storage: Protecting Your Blades for Decades',
+    excerpt: 'Learn how to store knives like a professional chef. Prevent dull edges, rust, and damage with proven storage techniques and chef-approved tools.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Knife Care',
+    featured: false
+  },
+  {
+    slug: 'knife-block-vs-magnetic-strip-vs-drawer-storage',
+    title: 'Knife Block vs Magnetic Strip vs Drawer: What\'s Best for You?',
+    excerpt: 'Professional chef explains the pros and cons of knife blocks, magnetic strips, and drawer storage. Learn how to protect your knives, save counter space, and avoid dulling your edges.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Knife Care',
+    featured: false
+  },
+  {
+    slug: 'dutch-oven-size-guide-which-quart-size',
+    title: 'Dutch Oven Size Guide: Which Quart Size Do You Need?',
+    excerpt: 'A professional chef\'s guide to choosing the right Dutch oven size for soups, bread, braises, and everyday cooking. Learn what size fits your kitchen best.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'carbon-footprint-kitchen-equipment-buy-once-cry-once',
+    title: 'Carbon Footprint of Kitchen Equipment: Buy Once, Cry Once',
+    excerpt: 'Professional chef explains how quality kitchen equipment reduces waste and carbon footprint — why durability is the real sustainability in the kitchen.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'reducing-sauces-restaurant-technique',
+    title: 'Reducing Sauces: The Technique Restaurants Use Daily',
+    excerpt: 'Professional chef explains the art of reducing sauces — how to concentrate flavor, control consistency, and create restaurant-quality reductions at home.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'deglazing-secret-to-restaurant-quality-flavor',
+    title: 'Deglazing: The Secret to Restaurant-Quality Flavor',
+    excerpt: 'Learn how to deglaze like a professional chef — the science of fond, proper technique, and how to build flavor into every pan sauce.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'braising-101-tough-cuts-made-tender',
+    title: 'Braising 101: Tough Cuts Made Tender',
+    excerpt: 'Professional chef explains the art and science of braising — transforming tough cuts into tender, flavorful perfection through low, slow heat and control.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'caramelizing-onions-why-it-takes-45-minutes',
+    title: 'Caramelizing Onions: Why It Takes 45 Minutes (Not 10)',
+    excerpt: 'Professional chef explains the real process of caramelizing onions — why patience, temperature, and technique matter more than shortcuts.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'meal-prep-station-setup-restaurant-efficiency',
+    title: 'Meal Prep Station Setup: Restaurant Efficiency at Home',
+    excerpt: 'Professional chef explains how to create a restaurant-style meal prep station at home — mise en place, flow, and efficiency techniques that make cooking effortless.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'sheet-pan-cooking-restaurant-techniques',
+    title: 'Sheet Pan Cooking: 5 Restaurant Techniques for Home',
+    excerpt: 'Professional chef reveals 5 restaurant sheet pan techniques that transform home cooking. Learn high-heat roasting, batch prep, and finishing methods from 24 years in commercial kitchens.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'stainless-steel-why-food-sticks',
+    title: 'Stainless Steel Cooking: Why Food Sticks (And How to Stop It)',
+    excerpt: 'Professional chef explains why food sticks to stainless steel and how to prevent it. Learn proper preheating, oil temperature, and the science behind perfect nonstick performance.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'roasting-vegetables-restaurant-guide',
+    title: 'Roasting Vegetables: Restaurant Temperature & Timing Guide',
+    excerpt: 'Professional chef explains how to roast vegetables perfectly — the right temperature, spacing, oil, and timing for crisp, caramelized results.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'food-processor-vs-blender',
+    title: 'Food Processor vs Blender: Which Do You Actually Need?',
+    excerpt: 'Professional chef explains the difference between blenders and food processors, when to use each, and which models perform best in real kitchens.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'stand-mixer-buying-guide',
+    title: 'Stand Mixer Buying Guide: KitchenAid vs Alternatives',
+    excerpt: 'Professional chef compares KitchenAid mixers vs top alternatives. Learn what to look for in power, capacity, attachments, and reliability before you buy.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'kitchen-thermometer-guide',
+    title: 'Kitchen Thermometer Guide: Instant Read (and Why Every Chef Trusts One)',
+    excerpt: 'Professional chef explains how to use an instant-read thermometer correctly for perfect doneness, safety, and consistency in every dish.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'cookware-materials-explained',
+    title: 'Cookware Materials Explained: What Chefs Actually Use',
+    excerpt: 'Professional chef explains the pros and cons of stainless steel, cast iron, nonstick, carbon steel, and copper cookware — and which belong in your kitchen.',
+    publishDate: '2025-10-21',
+    readTime: '10 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'cutting-board-materials-guide',
+    title: 'Which Cutting Board To Use? Advantages of Various Materials',
+    excerpt: 'Chef Scott Bradley explains the pros and cons of wood, plastic, rubber, and bamboo cutting boards — and which are best for your knives and kitchen.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Knife Care',
+    featured: false
+  },
+  {
+    slug: 'professional-knife-grip-techniques',
+    title: 'Professional Chef Knife Grip Techniques',
+    excerpt: 'Learn how chefs actually hold knives. Chef Scott Bradley explains the pinch grip, claw method, and cutting stance for safety and control.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Knife Care',
+    featured: false
+  },
+  {
+    slug: 'how-to-clean-burnt-stainless-steel-pans',
+    title: 'How to Clean Burnt Stainless Steel Pans',
+    excerpt: 'Professional chef explains how to clean burnt stainless steel cookware using safe, effective methods — no harsh scrubbing or damage.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'how-to-preheat-a-pan',
+    title: 'How to Preheat a Pan: Temperature Matters More Than You Think',
+    excerpt: 'Professional chef explains the science of preheating stainless steel and cast iron pans — how to prevent sticking and achieve perfect sear every time.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'knife-mistakes-home-cooks-make',
+    title: '5 Knife Mistakes Home Cooks Make (And How to Fix Them)',
+    excerpt: 'Professional chef reveals the 5 knife mistakes that wreck edges and slow prep. Learn the correct cutting techniques and maintenance habits that keep your knives sharp, safe, and performing like professional equipment.',
+    publishDate: '2025-10-21',
+    readTime: '7 min read',
+    category: 'Knife Care',
+    featured: false
+  },
+  {
+    slug: 'cast-iron-mistakes-ruin-pan',
+    title: 'Cast Iron Mistakes That Ruin Your Pan (And How to Fix Them)',
+    excerpt: 'Professional chef explains the common cast iron mistakes that strip seasoning, cause rust, and ruin pans. Learn how to clean, season, and maintain cast iron the right way with professional techniques.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'how-to-season-cast-iron-like-restaurant-chef',
+    title: 'How to Season Cast Iron Like a Restaurant Chef',
+    excerpt: 'Learn the professional method for seasoning cast iron. Thin layers, proper oils, and heat discipline build a smooth, durable nonstick surface that lasts for years.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'how-to-choose-first-chef-knife',
+    title: 'How to Choose Your First Chef Knife (Like a Professional Chef)',
+    excerpt: 'Professional chef explains how to choose your first chef knife. Learn about balance, steel types, blade length, and why comfort matters more than price when selecting kitchen knives.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Knife Care',
+    featured: false
+  },
+  {
+    slug: 'kitchen-tools-wasting-money',
+    title: '10 Kitchen Tools You\'re Wasting Money On (And What to Buy Instead)',
+    excerpt: 'Professional chef reveals which kitchen tools are a waste of money and shares the essential tools that actually matter. Learn what pros use in real kitchens.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'essential-knife-cuts-every-cook-should-master',
+    title: 'The 5 Essential Knife Cuts Every Home Cook Should Master',
+    excerpt: 'Learn the five professional knife cuts—dice, julienne, chiffonade, mince, and bias—with technique tips from a chef with 24 years of restaurant experience. Precision and practice for home cooks.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Cooking Techniques',
+    featured: false
+  },
+  {
+    slug: 'knife-safety-rules-professional-kitchens',
+    title: 'Knife Safety: 10 Rules From 24 Years in Professional Kitchens',
+    excerpt: 'Professional chef shares 10 essential knife safety rules from 24 years in restaurants. Learn grip, stance, focus, and habits to prevent injuries and build confidence with sharp knives.',
+    publishDate: '2025-10-21',
+    readTime: '8 min read',
+    category: 'Knife Care',
+    featured: false
   },
   {
     slug: 'kitchen-gloves-guide',
