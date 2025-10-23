@@ -11,6 +11,9 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import type { Metadata } from 'next'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox'
+import EmailCaptureBox from '@/components/review/EmailCaptureBox'
+import AuthorBio from '@/components/review/AuthorBio'
 
 const productData = {
   name: "Vitamix 5200 Professional-Grade Blender",
@@ -171,29 +174,15 @@ export default function Vitamix5200Review() {
           <Tier1Badge showDescription={true} />
 
           {/* Quick Rating Box */}
-          <div className="quick-stats" style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            margin: '20px 0',
-            borderLeft: '4px solid #28a745',
-            borderRadius: '4px'
-          }}>
-            <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
+          <QuickStatsBox variant="success">
+            <p className="m-0 text-lg leading-relaxed">
               <strong>⭐⭐⭐⭐⭐ 4.8/5</strong> | Based on 5 years of professional testing<br/>
               <strong>✓ 2 HP Motor</strong> | <strong>✓ 7-Year Warranty</strong> | <strong>✓ Made in USA</strong>
             </p>
-          </div>
+          </QuickStatsBox>
 
           {/* Primary CTA Above Fold */}
-          <div className="primary-cta" style={{
-            background: '#fff3cd',
-            padding: '25px',
-            margin: '25px 0',
-            borderRadius: '8px',
-            textAlign: 'center',
-            border: '2px solid #ffc107'
-          }}>
-            <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Best Price:</h3>
+          <ReviewCTABox variant="warning" title="Check Current Best Price:" disclaimer={true}>
 
             <CTAVisibilityTracker
               ctaId={`review-${productData.slug}-above_fold`}
@@ -212,11 +201,10 @@ export default function Vitamix5200Review() {
               </AffiliateButton>
             </CTAVisibilityTracker>
 
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
-              💡 Pricing updated daily. We earn commission at no extra cost to you.<br/>
-              More retailers coming soon for price comparison.
+            <p className="text-sm text-gray-600 mt-4">
+              💡 Pricing updated daily. More retailers coming soon for price comparison.
             </p>
-          </div>
+          </ReviewCTABox>
 
           {/* Professional Summary */}
           <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-8">
@@ -259,82 +247,61 @@ export default function Vitamix5200Review() {
 
         {/* Professional Verdict Box */}
         <section className="mb-8">
-          <div className="verdict-box" style={{
-            background: '#f8f9fa',
-            padding: '25px',
-            margin: '25px 0',
-            borderRadius: '8px',
-            borderLeft: '4px solid #0066cc'
-          }}>
+          <ReviewCTABox variant="info">
             <h2>Bottom Line Up Front</h2>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               <strong>After 5 years of professional kitchen use where reliability isn&apos;t optional,
               the Vitamix 5200 has proven itself as genuine commercial-grade equipment.</strong> The 2 HP
               motor handles everything from frozen fruit smoothies to heating soup through friction blending,
               while the all-metal drive system shows zero wear despite daily commercial abuse.
             </p>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               This eliminates the need for multiple appliances—food processor, smoothie maker, soup maker,
               ice crusher—consolidating kitchen equipment while delivering superior results. For serious
               home cooks and commercial operations, this is a genuine buy-it-for-life investment.
             </p>
 
-            <div style={{
-              background: 'white',
-              padding: '15px',
-              marginTop: '20px',
-              borderRadius: '4px'
-            }}>
-              <p style={{ margin: '10px 0' }}>
+            <div className="bg-white p-4 mt-5 rounded">
+              <p className="my-2">
                 <strong>✓ Perfect For:</strong> Serious home cooks, smoothie enthusiasts, commercial kitchens,
                 health-focused families, anyone wanting buy-it-for-life quality
               </p>
-              <p style={{ margin: '10px 0' }}>
-                <strong>✗ Consider Alternatives If:</strong> You blend infrequently (weekly or less), 
+              <p className="my-2">
+                <strong>✗ Consider Alternatives If:</strong> You blend infrequently (weekly or less),
                 counter space is severely limited, noise is a dealbreaker, budget is tight
               </p>
             </div>
-          </div>
+          </ReviewCTABox>
         </section>
 
         {/* Hero Features Box */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Why This Vitamix Blender Dominated My Professional Kitchen</h2>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '20px',
-            margin: '30px 0'
-          }}>
-
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>⚡</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>2 HP Motor Power</h3>
-              <p>Pulverizes frozen fruit, crushes ice instantly, and heats soup through friction. Commercial-grade performance that never bogs down.</p>
-            </div>
-
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>🛡️</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Built to Last Decades</h3>
-              <p>All-metal drive system, hardened stainless blades, impact-resistant container. 7-year full warranty backs exceptional durability.</p>
-            </div>
-
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>🎯</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>One Machine, Everything</h3>
-              <p>Smoothies, nut butters, hot soups, frozen desserts, flours, doughs. Eliminates need for multiple appliances.</p>
-            </div>
-
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>🇺🇸</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Made in USA</h3>
-              <p>Manufactured in Cleveland, Ohio. Direct support, readily available parts, and quality control that shows in every blend.</p>
-            </div>
-
-          </div>
+          <FeatureGrid features={[
+            {
+              emoji: '⚡',
+              title: '2 HP Motor Power',
+              description: 'Pulverizes frozen fruit, crushes ice instantly, and heats soup through friction. Commercial-grade performance that never bogs down.'
+            },
+            {
+              emoji: '🛡️',
+              title: 'Built to Last Decades',
+              description: 'All-metal drive system, hardened stainless blades, impact-resistant container. 7-year full warranty backs exceptional durability.'
+            },
+            {
+              emoji: '🎯',
+              title: 'One Machine, Everything',
+              description: 'Smoothies, nut butters, hot soups, frozen desserts, flours, doughs. Eliminates need for multiple appliances.'
+            },
+            {
+              emoji: '🇺🇸',
+              title: 'Made in USA',
+              description: 'Manufactured in Cleveland, Ohio. Direct support, readily available parts, and quality control that shows in every blend.'
+            }
+          ]} />
         </section>
 
         {/* Real-World Testing */}
@@ -995,96 +962,51 @@ export default function Vitamix5200Review() {
 
         {/* Email Capture Section */}
         <section className="mb-8">
-          <div style={{
-            background: '#e7f3ff',
-            padding: '30px',
-            margin: '30px 0',
-            borderRadius: '8px',
-            borderLeft: '4px solid #0066cc'
-          }}>
-
-            <h3 style={{ marginTop: 0, fontSize: '24px' }}>
-              🔥 Get My Complete Vitamix Mastery Guide
-            </h3>
-
-            <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
-              Download my comprehensive guide to getting maximum value from your Vitamix investment:
-            </p>
-
-            <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
-              <li>✓ 20 essential recipes that showcase what Vitamix does best</li>
-              <li>✓ Technique guide for perfect texture every time</li>
-              <li>✓ Troubleshooting common issues</li>
-              <li>✓ Cleaning & maintenance schedule for decades of use</li>
-              <li>✓ Vitamix vs alternatives comparison matrix</li>
-              <li>✓ Container selection guide for different needs</li>
-            </ul>
-
-            <div style={{ textAlign: 'center', marginTop: '25px' }}>
-              <Link
-                href="/newsletter"
-                style={{
-                  display: 'inline-block',
-                  background: '#0066cc',
-                  color: 'white',
-                  padding: '15px 40px',
-                  textDecoration: 'none',
-                  borderRadius: '6px',
-                  fontWeight: 'bold',
-                  fontSize: '18px'
-                }}
-              >
-                Download Free Guide →
-              </Link>
-            </div>
-
-            <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
-              Instant delivery. No spam, ever. Unsubscribe anytime.
-            </p>
-
-          </div>
+          <EmailCaptureBox
+            title="🔥 Get My Complete Vitamix Mastery Guide"
+            description="Download my comprehensive guide to getting maximum value from your Vitamix investment:"
+            benefits={[
+              '20 essential recipes that showcase what Vitamix does best',
+              'Technique guide for perfect texture every time',
+              'Troubleshooting common issues',
+              'Cleaning & maintenance schedule for decades of use',
+              'Vitamix vs alternatives comparison matrix',
+              'Container selection guide for different needs'
+            ]}
+            ctaText="Download Free Guide →"
+            ctaHref="/newsletter"
+          />
         </section>
 
         {/* Bottom Line with Strong CTA */}
         <section className="mb-8" id="verdict">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">The Bottom Line: My Professional Verdict</h2>
 
-          <div style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            color: 'white',
-            padding: '30px',
-            borderRadius: '8px',
-            margin: '30px 0'
-          }}>
+          <div className="bg-gradient-to-br from-purple-600 to-indigo-600 text-white p-8 rounded-lg my-8">
 
-            <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
+            <h3 className="text-white mt-0 text-2xl font-bold">
               After 5+ Years of Professional Kitchen Use...
             </h3>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               The Vitamix 5200 has proven itself as legitimate commercial-grade equipment that performs
               when reliability isn&apos;t optional. The 2 HP motor handles everything from frozen fruit smoothies
               to heating soup through friction, while the all-metal drive system shows zero wear despite
               daily professional use.
             </p>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               This eliminates the need for multiple appliances—food processor, smoothie maker, soup maker,
               ice crusher—consolidating kitchen equipment while delivering superior results. For serious
               home cooks, health enthusiasts, and anyone wanting buy-it-for-life quality, the premium
               investment is justified by decades of expected use.
             </p>
 
-            <div style={{
-              background: 'rgba(255,255,255,0.2)',
-              padding: '20px',
-              margin: '20px 0',
-              borderRadius: '6px'
-            }}>
-              <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
+            <div className="bg-white/20 p-5 my-5 rounded-lg">
+              <p className="m-0 text-xl font-bold">
                 Final Rating: ⭐⭐⭐⭐⭐ 4.8/5
               </p>
-              <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
+              <ul className="mt-4 mb-0 ml-5 text-base leading-loose">
                 <li>Blending Performance: 5/5</li>
                 <li>Motor Power & Durability: 5/5</li>
                 <li>Versatility: 5/5</li>
@@ -1093,7 +1015,7 @@ export default function Vitamix5200Review() {
               </ul>
             </div>
 
-            <p style={{ fontSize: '16px', marginBottom: 0 }}>
+            <p className="text-base mb-0">
               <strong>Would I buy this again?</strong> Without hesitation. It&apos;s the single most-used
               appliance in my kitchen and will outlast me.
             </p>
@@ -1101,20 +1023,8 @@ export default function Vitamix5200Review() {
           </div>
 
           {/* STRONG FINAL CTA */}
-          <div style={{
-            background: '#fff3cd',
-            padding: '30px',
-            margin: '30px 0',
-            borderRadius: '8px',
-            textAlign: 'center',
-            border: '3px solid #ffc107'
-          }}>
-
-            <h3 style={{ marginTop: 0, fontSize: '28px' }}>
-              Ready for Professional-Grade Blending Power?
-            </h3>
-
-            <p style={{ fontSize: '18px', margin: '20px 0' }}>
+          <ReviewCTABox variant="warning" title="Ready for Professional-Grade Blending Power?" disclaimer={false}>
+            <p className="text-lg my-5">
               This is a buy-it-for-life investment that will transform your kitchen for decades.
             </p>
 
@@ -1135,60 +1045,54 @@ export default function Vitamix5200Review() {
               </AffiliateButton>
             </CTAVisibilityTracker>
 
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
+            <p className="text-sm text-gray-600 mt-5">
               💡 Pricing updated daily. More retailers coming soon.
             </p>
-
-          </div>
+          </ReviewCTABox>
         </section>
 
         {/* Alternative Recommendations Section */}
         <section className="mb-8">
-          <div className="alternative-recommendations" style={{
-            background: '#f8f9fa',
-            padding: '25px',
-            margin: '25px 0',
-            borderRadius: '8px'
-          }}>
+          <div className="bg-gray-50 p-6 my-6 rounded-lg">
             <h3>Not Sure Vitamix 5200 Is Right for You? Consider These Alternatives:</h3>
 
-            <div style={{ margin: '20px 0' }}>
+            <div className="my-5">
               <h4>If Budget Is Your Main Concern:</h4>
-              <p style={{ marginBottom: '10px' }}>
+              <p className="mb-2">
                 → <strong>Vitamix Certified Refurbished</strong> (available on Vitamix.com) - Same performance,
                 5-year warranty, significant savings. Excellent value for budget-conscious buyers.
               </p>
-              <p style={{ marginBottom: '10px' }}>
+              <p className="mb-2">
                 → <strong>Ninja Professional Plus</strong> - Good performance for occasional use,
                 but won&apos;t last 10 years like Vitamix. Best for infrequent blenders on a tight budget.
               </p>
             </div>
 
-            <div style={{ margin: '20px 0' }}>
+            <div className="my-5">
               <h4>If Noise Is a Dealbreaker:</h4>
-              <p style={{ marginBottom: '10px' }}>
+              <p className="mb-2">
                 → <strong>Vitamix A3500 with sound dampening</strong> - Slightly quieter, preset programs,
                 smart container detection. Worth considering if you blend before 6am daily.
               </p>
             </div>
 
-            <div style={{ margin: '20px 0' }}>
+            <div className="my-5">
               <h4>If You Want Different Features:</h4>
-              <p style={{ marginBottom: '10px' }}>
+              <p className="mb-2">
                 → <strong>Blendtec Designer 725</strong> - Pre-programmed cycles, wider container,
                 slightly quieter. Comparable performance with different design philosophy.
               </p>
             </div>
 
-            <div style={{ margin: '20px 0' }}>
+            <div className="my-5">
               <h4>If You&apos;re Building a Complete Kitchen:</h4>
-              <p style={{ marginBottom: '10px' }}>
+              <p className="mb-2">
                 → See our <Link href="/kitchen-bundle" className="text-orange-600 hover:text-orange-800 underline">Complete Kitchen Starter Kit</Link> for recommended
                 equipment combinations at different budget levels.
               </p>
             </div>
 
-            <p style={{ marginTop: '20px', padding: '15px', background: '#fff3cd', borderRadius: '4px' }}>
+            <p className="mt-5 p-4 bg-amber-50 rounded">
               <strong>Still unsure?</strong> <Link href="/contact" className="text-orange-600 hover:text-orange-800 underline">Contact me</Link> with your specific needs
               and budget—I&apos;ll provide a personalized recommendation based on your blending habits.
             </p>
@@ -1199,103 +1103,56 @@ export default function Vitamix5200Review() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Complete Your Professional Kitchen Setup</h2>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
+          <p className="text-base leading-relaxed mb-6">
             A Vitamix is a powerful foundation, but it works best as part of a complete professional
             kitchen. Based on 24 years of restaurant experience, here are the tools I use alongside
             this blender:
           </p>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '20px',
-            margin: '30px 0'
-          }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-8">
 
             {/* Product 1 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>KitchenAid Commercial Mixer</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">KitchenAid Commercial Mixer</h4>
               <p>The perfect complement to your Vitamix. Use Vitamix for wet blending, KitchenAid for
               doughs and batters. Together they handle 90% of food prep.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 18 months:</strong> Zero maintenance, daily workhorse.
               </p>
               <Link
                 href="/reviews/kitchenaid-ksm8990wh"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700"
               >
                 Read Full Review →
               </Link>
             </div>
 
             {/* Product 2 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>John Boos Cutting Board</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">John Boos Cutting Board</h4>
               <p>The prep surface for all your Vitamix ingredients. Commercial-grade maple that anchors
               your prep station perfectly.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 18 years:</strong> Still my primary prep surface.
               </p>
               <Link
                 href="/reviews/john-boos-platinum-commercial-cutting-board"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700"
               >
                 Read Full Review →
               </Link>
             </div>
 
             {/* Product 3 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>Rubbermaid Commercial Scraper</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">Rubbermaid Commercial Scraper</h4>
               <p>Essential for scraping down your Vitamix container between blends. This professional-grade rubber spatula handles the high-heat from friction blending and lasts decades.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 18 years:</strong> Still my go-to scraper for Vitamix cleanup.
               </p>
               <Link
                 href="/reviews/rubbermaid-commercial-cooks-scraper"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700"
               >
                 Read Full Review →
               </Link>
@@ -1303,16 +1160,9 @@ export default function Vitamix5200Review() {
 
           </div>
 
-          <p style={{
-            textAlign: 'center',
-            margin: '30px 0',
-            fontSize: '18px',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <p className="text-center my-8 text-lg p-5 bg-gray-50 rounded-lg">
             <strong>Want the complete professional kitchen setup?</strong><br/>
-            <Link href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold', fontSize: '20px' }}>
+            <Link href="/kitchen-bundle" className="text-blue-600 font-bold text-xl hover:text-blue-800">
               See My Complete Kitchen Starter Kit →
             </Link>
           </p>
@@ -1326,74 +1176,32 @@ export default function Vitamix5200Review() {
 
         {/* Footer Transparency Elements */}
         <section className="mb-8">
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            margin: '30px 0',
-            borderRadius: '6px',
-            borderLeft: '4px solid #6c757d'
-          }}>
-            <p style={{ margin: '10px 0' }}>
-              <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
+          <div className="bg-gray-50 p-5 my-8 rounded-lg border-l-4 border-gray-500">
+            <p className="my-2">
+              <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
               })}
             </p>
-            <p style={{ margin: '10px 0' }}>
-              <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long' 
+            <p className="my-2">
+              <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long'
               })}
             </p>
-            <p style={{ margin: '10px 0' }}>
-              <strong>💬 Own a Vitamix 5200?</strong> Share your experience in the comments 
+            <p className="my-2">
+              <strong>💬 Own a Vitamix 5200?</strong> Share your experience in the comments
               below—I read and respond to every comment.
             </p>
-            <p style={{ margin: '10px 0' }}>
-              <strong>🔧 Questions about blenders?</strong> <Link href="/contact" style={{ color: '#0066cc' }}>
+            <p className="my-2">
+              <strong>🔧 Questions about blenders?</strong> <Link href="/contact" className="text-blue-600 hover:text-blue-800">
               Contact me directly</Link> and I&apos;ll help you choose the right blender for your needs.
             </p>
           </div>
 
           {/* Author Bio Box */}
-          <div style={{
-            background: 'white',
-            padding: '25px',
-            margin: '30px 0',
-            border: '1px solid #dee2e6',
-            borderRadius: '8px',
-            display: 'grid',
-            gridTemplateColumns: '100px 1fr',
-            gap: '20px',
-            alignItems: 'start'
-          }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/team/head-shot-1.jpg"
-              alt="Scott Bradley, Professional Chef"
-              style={{
-                width: '100px',
-                height: '100px',
-                borderRadius: '50%',
-                objectFit: 'cover'
-              }}
-            />
-            <div>
-              <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-              <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-                Professional Chef • 24 Years Cooking Experience
-              </p>
-              <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
-                A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-                University of Montana. Equipment tested in high-volume operations serving hundreds daily.
-              </p>
-              <Link href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-                Read more about my testing methodology →
-              </Link>
-            </div>
-          </div>
+          <AuthorBio />
         </section>
 
         {/* Structured Data */}
