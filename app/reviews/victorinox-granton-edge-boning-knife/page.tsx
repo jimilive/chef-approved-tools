@@ -636,58 +636,58 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
             Comparison vs. Competitors
           </h2>
 
-          <div style={{ overflowX: 'auto', margin: '20px 0' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
+          <div className="overflow-x-auto my-5">
+            <table className="w-full border-collapse text-sm">
               <thead>
-                <tr style={{ background: '#f8f9fa' }}>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Feature</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Victorinox Granton</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Wüsthof Classic</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Mercer Culinary</th>
+                <tr className="bg-gray-50">
+                  <th className="p-3 text-left border-b-2 border-gray-300">Feature</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">Victorinox Granton</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">Wüsthof Classic</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">Mercer Culinary</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Price Range</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold', color: '#16a34a' }}>$32-40</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$80-100</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$20-25</td>
+                  <td className="p-3 border-b border-gray-300">Price Range</td>
+                  <td className="p-3 border-b border-gray-300 font-bold text-green-600">$32-40</td>
+                  <td className="p-3 border-b border-gray-300">$80-100</td>
+                  <td className="p-3 border-b border-gray-300">$20-25</td>
                 </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Blade Design</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>Granton edge (anti-stick)</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Smooth blade</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Smooth blade</td>
-                </tr>
-                <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Flexibility</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Semi-flexible</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Semi-flexible</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Flexible</td>
-                </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Steel Quality</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>High-carbon stainless</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>High-carbon stainless</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>High-carbon</td>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Blade Design</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">Granton edge (anti-stick)</td>
+                  <td className="p-3 border-b border-gray-300">Smooth blade</td>
+                  <td className="p-3 border-b border-gray-300">Smooth blade</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Handle Type</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Fibrox (textured)</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Triple-riveted synthetic</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Santoprene</td>
+                  <td className="p-3 border-b border-gray-300">Flexibility</td>
+                  <td className="p-3 border-b border-gray-300">Semi-flexible</td>
+                  <td className="p-3 border-b border-gray-300">Semi-flexible</td>
+                  <td className="p-3 border-b border-gray-300">Flexible</td>
                 </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Professional Use</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>✓ Restaurant standard</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✓ High-end restaurants</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✓ Culinary schools</td>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Steel Quality</td>
+                  <td className="p-3 border-b border-gray-300">High-carbon stainless</td>
+                  <td className="p-3 border-b border-gray-300">High-carbon stainless</td>
+                  <td className="p-3 border-b border-gray-300">High-carbon</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Best For</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>All-around butchery</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Premium home kitchens</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Budget-conscious pros</td>
+                  <td className="p-3 border-b border-gray-300">Handle Type</td>
+                  <td className="p-3 border-b border-gray-300">Fibrox (textured)</td>
+                  <td className="p-3 border-b border-gray-300">Triple-riveted synthetic</td>
+                  <td className="p-3 border-b border-gray-300">Santoprene</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Professional Use</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">✓ Restaurant standard</td>
+                  <td className="p-3 border-b border-gray-300">✓ High-end restaurants</td>
+                  <td className="p-3 border-b border-gray-300">✓ Culinary schools</td>
+                </tr>
+                <tr>
+                  <td className="p-3 border-b border-gray-300">Best For</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">All-around butchery</td>
+                  <td className="p-3 border-b border-gray-300">Premium home kitchens</td>
+                  <td className="p-3 border-b border-gray-300">Budget-conscious pros</td>
                 </tr>
               </tbody>
             </table>
