@@ -11,6 +11,7 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
+import FAQBox, { FAQGrid, type FAQItem } from '@/components/review/FAQBox'
 
 const productData = {
   name: "KitchenAid Commercial Mixer",
@@ -626,95 +627,7 @@ export default function KitchenAidReviewPage() {
         {/* FAQ */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
-          <div>
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3 className="font-semibold mt-0">Can this replace a Hobart in a commercial bakery?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> For bakeries producing under 100 loaves daily with mixing
-                  under 4 hours, yes. This KitchenAid Commercial mixer delivers 85-90% of the Hobart&apos;s performance at a
-                  fraction of the cost. However, if you&apos;re running 8+ hour days with continuous mixing,
-                  invest in the Hobart N50—it&apos;s built for that volume.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3 className="font-semibold mt-0">Will this work on a standard kitchen outlet?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Usually yes, but verify your circuit isn&apos;t shared with
-                  high-draw appliances. The mixer draws 500W, which is fine on a standard 15-amp circuit
-                  (1800W capacity). However, if you&apos;re also running a coffee maker (1000W), you&apos;ll exceed
-                  capacity and trip the breaker.</p>
-                  <p>Electrician installation of a dedicated 20-amp circuit typically runs $150-300 if needed.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3 className="font-semibold mt-0">How does NSF certification matter?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Required by many health departments for commercial food prep. Certifies materials meet sanitation standards.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3 className="font-semibold mt-0">What&apos;s the difference from the KSM7 residential model?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> 1.3 HP motor (vs 0.8 HP), 2-year warranty, NSF certification, stainless dishwasher-safe attachments, heavier construction.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3 className="font-semibold mt-0">How long will this last in a commercial environment?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Based on my testing and industry experience, expect 8-10 years of 2-4 hours daily use before major service needs.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3 className="font-semibold mt-0">What&apos;s the noise level compared to residential models?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Slightly louder due to the powerful motor, but quieter than commercial Hobart mixers. Expect 70-75 dB at medium speeds—comparable to a dishwasher.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3 className="font-semibold mt-0">Can I use my existing KitchenAid attachments?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Yes, all standard KitchenAid hub attachments fit. However, the commercial unit includes upgraded stainless steel mixing attachments that are dishwasher-safe.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3 className="font-semibold mt-0">What&apos;s the exact weight and dimensions?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> 35 lbs (16 kg). Dimensions: 14.6&quot; W × 11.3&quot; D × 16.5&quot; H. With bowl-lift raised, total height reaches ~18&quot;. Measure your counter space carefully.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3 className="font-semibold mt-0">Is professional installation required?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> No special installation needed. Simply place on a stable surface near a 120V outlet. Consider a dedicated 20-amp circuit if sharing with high-draw appliances.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <FAQGrid faqs={faqData} />
         </section>
 
         {/* Final Verdict */}
