@@ -2,8 +2,10 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
-import AuthorBio from '@/components/AuthorBio'
+import AuthorBio from '@/components/review/AuthorBio'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
+import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox'
+import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 
 import AffiliateButton from '@/components/AffiliateButton';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
@@ -133,30 +135,15 @@ export default function VictorinoxFibrox10InchReview() {
         <Tier1Badge showDescription={true} />
 
         {/* Quick Rating Box */}
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '20px 0',
-          borderLeft: '4px solid #28a745',
-          borderRadius: '4px'
-        }}>
-          <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
+        <QuickStatsBox variant="success">
+          <p className="m-0">
             <strong>⭐⭐⭐⭐⭐ 4.5/5</strong> | Based on 20 years of testing<br/>
             <strong>✓ Perfect for larger hands & bigger cuts</strong> | <strong>✓ Professional-grade performance</strong> | <strong>✓ Exceptional value</strong>
           </p>
-        </div>
+        </QuickStatsBox>
 
         {/* PRIMARY CTA - ABOVE THE FOLD */}
-        <div style={{
-          background: '#fff3cd',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '2px solid #ffc107'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Best Price:</h3>
-          
+        <ReviewCTABox variant="warning" title="Check Current Best Price:" disclaimer={true}>
           <CTAVisibilityTracker
             ctaId={`review-${productData.slug}-above_fold`}
             position="above_fold"
@@ -173,12 +160,7 @@ export default function VictorinoxFibrox10InchReview() {
               View on Amazon →
             </AffiliateButton>
           </CTAVisibilityTracker>
-          
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
-            💡 Pricing updated daily. We earn commission at no extra cost to you.<br/>
-            More retailers will be added soon for price comparison.
-          </p>
-        </div>
+        </ReviewCTABox>
 
         {/* Product Images */}
         <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -200,73 +182,52 @@ export default function VictorinoxFibrox10InchReview() {
         </div>
 
         {/* VERDICT SECTION - SHORTENED */}
-        <div style={{
-          background: '#f8f9fa',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
+        <ReviewCTABox variant="info">
           <h2>Bottom Line Up Front</h2>
-          
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+
+          <p className="text-lg leading-relaxed">
             <strong>After using this Victorinox 10&quot; knife for 20 years in professional kitchens, it&apos;s my go-to for breaking down proteins and chopping larger vegetables.</strong> The extra 2 inches over the standard 8&quot; model makes a real difference when working fast with whole chickens, pork shoulders, or large butternut squash.
           </p>
-          
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+
+          <p className="text-lg leading-relaxed">
             Same professional quality used in professional kitchens worldwide, just sized for bigger hands and bigger jobs.
           </p>
-          
-          <div style={{ 
-            background: 'white', 
-            padding: '15px', 
-            marginTop: '20px', 
-            borderRadius: '4px' 
-          }}>
-            <p style={{ margin: '10px 0' }}>
+
+          <div className="bg-white p-4 mt-5 rounded">
+            <p className="my-2">
               <strong>✓ Perfect For:</strong> Larger hands (6&apos;+ tall), breaking down whole proteins, meal prep with large vegetables, professional-grade performance without premium pricing
             </p>
-            <p style={{ margin: '10px 0' }}>
+            <p className="my-2">
               <strong>✗ Skip If:</strong> Smaller hands, compact kitchens, precision/delicate work, preference for lighter knives
             </p>
           </div>
-        </div>
+        </ReviewCTABox>
 
         {/* HERO FEATURES - 4 BOXES WITH ICONS */}
         <h2>Why This Knife Outperforms Knives Costing 5x More</h2>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '20px',
-          margin: '30px 0'
-        }}>
-          
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>📏</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Perfect Length for Larger Cuts</h3>
-            <p>The 10&quot; blade gives you the reach needed for whole chickens, large cabbages, and pork shoulders. Longer blade means better slicing motion and fewer strokes through large items.</p>
-          </div>
-
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>🛡️</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Professional-Grade Steel</h3>
-            <p>High-carbon stainless steel holds an edge exceptionally well, sharpens easily, and resists rust. The same steel composition as knives costing hundreds more.</p>
-          </div>
-
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>👍</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Slip-Resistant Fibrox Handle</h3>
-            <p>Textured handle stays secure even when wet or greasy. Ergonomic design prevents hand fatigue during extended prep work. Dishwasher-safe handle construction.</p>
-          </div>
-
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>✓</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Proven Restaurant Reliability</h3>
-            <p>Used in professional kitchens worldwide for decades. No chipping, no handle failures, no rust issues. Consistent performance through thousands of service shifts.</p>
-          </div>
-          
-        </div>
+        <FeatureGrid features={[
+          {
+            emoji: '📏',
+            title: 'Perfect Length for Larger Cuts',
+            description: 'The 10" blade gives you the reach needed for whole chickens, large cabbages, and pork shoulders. Longer blade means better slicing motion and fewer strokes through large items.'
+          },
+          {
+            emoji: '🛡️',
+            title: 'Professional-Grade Steel',
+            description: 'High-carbon stainless steel holds an edge exceptionally well, sharpens easily, and resists rust. The same steel composition as knives costing hundreds more.'
+          },
+          {
+            emoji: '👍',
+            title: 'Slip-Resistant Fibrox Handle',
+            description: 'Textured handle stays secure even when wet or greasy. Ergonomic design prevents hand fatigue during extended prep work. Dishwasher-safe handle construction.'
+          },
+          {
+            emoji: '✓',
+            title: 'Proven Restaurant Reliability',
+            description: 'Used in professional kitchens worldwide for decades. No chipping, no handle failures, no rust issues. Consistent performance through thousands of service shifts.'
+          }
+        ]} />
 
         {/* TESTING CONTENT - PRESERVED WITH INTERNAL LINKS ADDED */}
         <section className="mb-12">
@@ -355,17 +316,7 @@ export default function VictorinoxFibrox10InchReview() {
         </section>
 
         {/* MID-ARTICLE CTA */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '20px',
-          margin: '25px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #0066cc',
-          textAlign: 'center'
-        }}>
-          <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
-            Convinced this is right for you?
-          </p>
+        <ReviewCTABox variant="info" title="Convinced this is right for you?">
           <CTAVisibilityTracker
             ctaId={`review-${productData.slug}-mid_article-1`}
             position="mid_article"
@@ -382,7 +333,7 @@ export default function VictorinoxFibrox10InchReview() {
               Check Current Price →
             </AffiliateButton>
           </CTAVisibilityTracker>
-        </div>
+        </ReviewCTABox>
 
         {/* Pros & Cons */}
         <section className="mb-12">
@@ -480,12 +431,7 @@ export default function VictorinoxFibrox10InchReview() {
 
         <div>
           
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-50 rounded-lg">
             <h3>Is the Victorinox Fibrox Pro 10&quot; chef&apos;s knife worth the money?</h3>
             <div>
               <div>
@@ -494,12 +440,7 @@ export default function VictorinoxFibrox10InchReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-50 rounded-lg">
             <h3>Should I get the 10&quot; or 8&quot; Victorinox chef&apos;s knife?</h3>
             <div>
               <div>
@@ -508,12 +449,7 @@ export default function VictorinoxFibrox10InchReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-50 rounded-lg">
             <h3>How do I sharpen the Victorinox Fibrox Pro knife?</h3>
             <div>
               <div>
@@ -522,12 +458,7 @@ export default function VictorinoxFibrox10InchReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-50 rounded-lg">
             <h3>Can I put the Victorinox Fibrox knife in the dishwasher?</h3>
             <div>
               <div>
@@ -536,12 +467,7 @@ export default function VictorinoxFibrox10InchReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-50 rounded-lg">
             <h3>What cutting board should I use with this knife?</h3>
             <div>
               <div>
@@ -550,12 +476,7 @@ export default function VictorinoxFibrox10InchReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-50 rounded-lg">
             <h3>How long does the Victorinox Fibrox Pro knife last?</h3>
             <div>
               <div>
@@ -564,12 +485,7 @@ export default function VictorinoxFibrox10InchReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-50 rounded-lg">
             <h3>Is the 10&quot; knife too big for home cooking?</h3>
             <div>
               <div>
@@ -578,12 +494,7 @@ export default function VictorinoxFibrox10InchReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-50 rounded-lg">
             <h3>Does this knife come sharp from the factory?</h3>
             <div>
               <div>
@@ -592,12 +503,7 @@ export default function VictorinoxFibrox10InchReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-50 rounded-lg">
             <h3>What warranty does Victorinox offer?</h3>
             <div>
               <div>
@@ -606,12 +512,7 @@ export default function VictorinoxFibrox10InchReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-50 rounded-lg">
             <h3>How does this compare to expensive Japanese chef knives?</h3>
             <div>
               <div>
@@ -631,26 +532,15 @@ export default function VictorinoxFibrox10InchReview() {
           day: 'numeric' 
         })}</p>
 
-        <div style={{
-          background: '#f8f9fa',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px'
-        }}>
-          
-          <h3 style={{ marginTop: 0 }}>Compare Prices Across Retailers:</h3>
-          
-          <div style={{
-            background: 'white',
-            padding: '20px',
-            margin: '15px 0',
-            borderRadius: '6px',
-            border: '2px solid #ff9900'
-          }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
+        <div className="bg-gray-50 p-6 my-6 rounded-lg">
+
+          <h3 className="mt-0">Compare Prices Across Retailers:</h3>
+
+          <div className="bg-white p-5 my-4 rounded-lg border-2 border-orange-500">
+            <div className="flex justify-between items-center flex-wrap gap-4">
               <div>
-                <h4 style={{ margin: '0 0 10px 0' }}>🏆 Amazon</h4>
-                <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Prime shipping | ✓ Easy returns | ✓ Price tracking</p>
+                <h4 className="mb-2">🏆 Amazon</h4>
+                <p className="mt-1 mb-0 text-gray-600">✓ Prime shipping | ✓ Easy returns | ✓ Price tracking</p>
               </div>
               <div>
                 <CTAVisibilityTracker
@@ -672,126 +562,69 @@ export default function VictorinoxFibrox10InchReview() {
               </div>
             </div>
           </div>
-          
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '20px', textAlign: 'center' }}>
+
+          <p className="text-sm text-gray-600 mt-5 text-center">
             💡 Also available at restaurant supply stores and Sur La Table. More retailers will be added soon for price comparison.
           </p>
-          
+
         </div>
 
         {/* EMAIL CAPTURE SECTION */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
-          
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>
-            🔥 Get My Complete Chef&apos;s Knife Mastery Guide
-          </h3>
-          
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
-            Download my comprehensive guide to selecting, using, and maintaining professional chef&apos;s knives, developed over 45 years:
-          </p>
-          
-          <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
-            <li>✓ How to choose the right knife length for your hand size</li>
-            <li>✓ Professional sharpening and honing techniques</li>
-            <li>✓ Proper cutting techniques to maximize efficiency</li>
-            <li>✓ Maintenance schedules that make knives last decades</li>
-            <li>✓ What cutting boards work best with different blade types</li>
-          </ul>
-          
-          <div style={{ textAlign: 'center', marginTop: '25px' }}>
-            <Link
-              href="/newsletter"
-              style={{
-                display: 'inline-block',
-                background: '#0066cc',
-                color: 'white',
-                padding: '15px 40px',
-                textDecoration: 'none',
-                borderRadius: '6px',
-                fontWeight: 'bold',
-                fontSize: '18px'
-              }}
-            >
-              Download Free Guide →
-            </Link>
-          </div>
-          
-          <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
-            Instant delivery. No spam, ever. Unsubscribe anytime.
-          </p>
-          
-        </div>
+        <EmailCaptureBox
+          title="🔥 Get My Complete Chef's Knife Mastery Guide"
+          description="Download my comprehensive guide to selecting, using, and maintaining professional chef's knives, developed over 45 years:"
+          benefits={[
+            'How to choose the right knife length for your hand size',
+            'Professional sharpening and honing techniques',
+            'Proper cutting techniques to maximize efficiency',
+            'Maintenance schedules that make knives last decades',
+            'What cutting boards work best with different blade types'
+          ]}
+          ctaText="Download Free Guide →"
+          ctaHref="/newsletter"
+        />
 
         {/* FINAL VERDICT & STRONG CTA */}
         <h2>The Bottom Line: My Professional Verdict</h2>
 
-        <div style={{
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          color: 'white',
-          padding: '30px',
-          borderRadius: '8px',
-          margin: '30px 0'
-        }}>
-          
-          <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
+        <div className="bg-gradient-to-br from-purple-600 to-indigo-600 text-white p-8 rounded-lg my-8">
+
+          <h3 className="text-white mt-0 text-2xl font-bold">
             After 20 Years of Testing...
           </h3>
-          
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+
+          <p className="text-lg leading-relaxed">
             The Victorinox Fibrox Pro 10&quot; chef&apos;s knife has earned its place in professional kitchens worldwide through decades of proven performance. For cooks with larger hands or those who regularly work with whole proteins and large vegetables, this knife delivers exceptional value that rivals knives costing significantly more.
           </p>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+          <p className="text-lg leading-relaxed">
             The high-carbon stainless steel holds an edge remarkably well, the Fibrox handle provides superior grip even when wet, and the 10&quot; blade length gives you the reach needed for efficient cutting through larger items. This is the same knife used in professional kitchens worldwide - not because of marketing, but because it simply works.
           </p>
-          
-          <div style={{
-            background: 'rgba(255,255,255,0.2)',
-            padding: '20px',
-            margin: '20px 0',
-            borderRadius: '6px'
-          }}>
-            <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
+
+          <div className="bg-white/20 p-5 my-5 rounded-lg">
+            <p className="m-0 text-xl font-bold">
               Final Rating: ⭐⭐⭐⭐⭐ 4.5/5
             </p>
-            <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
+            <ul className="mt-4 mb-0 ml-5 text-base leading-relaxed">
               <li>Performance: 5/5</li>
               <li>Value: 5/5</li>
               <li>Durability: 5/5</li>
               <li>Ergonomics: 4.5/5</li>
             </ul>
           </div>
-          
-          <p style={{ fontSize: '16px', marginBottom: 0 }}>
+
+          <p className="text-base mb-0">
             <strong>Would I buy this again?</strong> Without hesitation. This knife has been part of my professional toolkit for over two decades and will continue to be for decades more. It&apos;s one of the 11 tools I use most in my home kitchen.
           </p>
-          
+
         </div>
 
         {/* STRONG FINAL CTA */}
-        <div style={{
-          background: '#fff3cd',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '3px solid #ffc107'
-        }}>
-          
-          <h3 style={{ marginTop: 0, fontSize: '28px' }}>
-            Ready to Experience Professional-Grade Performance?
-          </h3>
-          
-          <p style={{ fontSize: '18px', margin: '20px 0' }}>
+        <ReviewCTABox variant="warning" title="Ready to Experience Professional-Grade Performance?" disclaimer={true}>
+          <p className="text-lg my-5">
             Join thousands of professional chefs and serious home cooks who trust Victorinox for reliable, high-performance knives.
           </p>
-          
+
           <CTAVisibilityTracker
             ctaId={`review-${productData.slug}-final_cta`}
             position="final_cta"
@@ -808,155 +641,94 @@ export default function VictorinoxFibrox10InchReview() {
               Check Current Price →
             </AffiliateButton>
           </CTAVisibilityTracker>
-          
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
+
+          <p className="text-sm text-gray-600 mt-5">
             💡 In stock and ready to ship. Prime delivery available.
           </p>
-          
-        </div>
+        </ReviewCTABox>
 
         {/* RELATED PRODUCTS SECTION */}
         <h2>Complete Your Professional Knife Set</h2>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
+        <p className="text-base leading-relaxed mb-6">
           The Victorinox Fibrox Pro 10&quot; works best as part of a complete knife setup. 
           Based on 45 years of cooking experience, here are the knives I use alongside this:
         </p>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '20px',
-          margin: '30px 0'
-        }}>
-          
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            borderRadius: '8px',
-            border: '1px solid #dee2e6'
-          }}>
-            <h4 style={{ marginTop: 0 }}>Victorinox Fibrox Pro 8&quot; Chef&apos;s Knife</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-8">
+
+          <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+            <h4 className="mt-0">Victorinox Fibrox Pro 8&quot; Chef&apos;s Knife</h4>
             <p>The standard length that handles 80% of daily cutting tasks. Perfect for precision work, smaller vegetables, and general prep. I keep both the 8&quot; and 10&quot; in my kitchen and grab whichever fits the task best.</p>
-            <p style={{ fontSize: '14px', color: '#666' }}>
+            <p className="text-sm text-gray-600">
               <strong>Professional Use:</strong> My daily workhorse for 20 years in restaurant kitchens.
             </p>
             <Link
               href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
-              style={{
-                display: 'inline-block',
-                background: '#28a745',
-                color: 'white',
-                padding: '10px 20px',
-                textDecoration: 'none',
-                borderRadius: '4px',
-                marginTop: '10px',
-                fontWeight: 'bold'
-              }}
+              className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700"
             >
               Read Full Review →
             </Link>
           </div>
 
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            borderRadius: '8px',
-            border: '1px solid #dee2e6'
-          }}>
-            <h4 style={{ marginTop: 0 }}>Victorinox Fibrox Offset Bread Knife</h4>
+          <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+            <h4 className="mt-0">Victorinox Fibrox Offset Bread Knife</h4>
             <p>The offset handle design gives you clearance when slicing through crusty bread, layer cakes, or large tomatoes. Serrated edge handles delicate items without crushing. Essential for any complete kitchen setup.</p>
-            <p style={{ fontSize: '14px', color: '#666' }}>
+            <p className="text-sm text-gray-600">
               <strong>Professional Use:</strong> Used daily in bakery sections and for delicate slicing tasks.
             </p>
             <Link
               href="/reviews/victorinox-offset-bread-knife"
-              style={{
-                display: 'inline-block',
-                background: '#28a745',
-                color: 'white',
-                padding: '10px 20px',
-                textDecoration: 'none',
-                borderRadius: '4px',
-                marginTop: '10px',
-                fontWeight: 'bold'
-              }}
+              className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700"
             >
               Read Full Review →
             </Link>
           </div>
 
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            borderRadius: '8px',
-            border: '1px solid #dee2e6'
-          }}>
-            <h4 style={{ marginTop: 0 }}>Victorinox Granton Edge Boning Knife</h4>
+          <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+            <h4 className="mt-0">Victorinox Granton Edge Boning Knife</h4>
             <p>Flexible blade with Granton edge for breaking down proteins with precision. The scalloped edge prevents meat from sticking. Perfect companion to the 10&quot; chef&apos;s knife when working with whole chickens or large roasts.</p>
-            <p style={{ fontSize: '14px', color: '#666' }}>
+            <p className="text-sm text-gray-600">
               <strong>Professional Use:</strong> Essential for butchery and protein fabrication in professional kitchens.
             </p>
             <Link
               href="/reviews/victorinox-granton-edge-boning-knife"
-              style={{
-                display: 'inline-block',
-                background: '#28a745',
-                color: 'white',
-                padding: '10px 20px',
-                textDecoration: 'none',
-                borderRadius: '4px',
-                marginTop: '10px',
-                fontWeight: 'bold'
-              }}
+              className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700"
             >
               Read Full Review →
             </Link>
           </div>
-          
+
         </div>
 
-        <p style={{
-          textAlign: 'center',
-          margin: '30px 0',
-          fontSize: '18px',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
+        <p className="text-center my-8 text-lg p-5 bg-gray-50 rounded-lg">
           <strong>Building a complete professional kitchen?</strong><br/>
-          <Link href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold', fontSize: '20px' }}>
+          <Link href="/kitchen-bundle" className="text-blue-600 font-bold text-xl hover:text-blue-800">
             See My Complete Kitchen Starter Kit →
           </Link>
         </p>
 
         {/* FOOTER ELEMENTS */}
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '30px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #6c757d'
-        }}>
-          <p style={{ margin: '10px 0' }}>
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
+        <div className="bg-gray-50 p-5 my-8 rounded-lg border-l-4 border-gray-500">
+          <p className="my-2">
+            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long' 
+          <p className="my-2">
+            <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>💬 Which knife length do you prefer?</strong> Share your thoughts in the comments 
+          <p className="my-2">
+            <strong>💬 Which knife length do you prefer?</strong> Share your thoughts in the comments
             below—I read and respond to every comment.
           </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>🔧 Questions about sizing or technique?</strong> <Link href="/contact" style={{ color: '#0066cc' }}>
+          <p className="my-2">
+            <strong>🔧 Questions about sizing or technique?</strong> <Link href="/contact" className="text-blue-600 hover:text-blue-800">
             Contact me directly</Link> and I&apos;ll help you make the best decision for your needs.
           </p>
         </div>
