@@ -14,6 +14,7 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
+import FAQBox, { FAQGrid, type FAQItem } from '@/components/review/FAQBox'
 
 const productData = {
   name: "Vitamix 5200 Professional-Grade Blender",
@@ -57,18 +58,272 @@ const productData = {
   lastUpdated: "2024-09-23"
 }
 
-const faqData = [
-  { question: "Is the Vitamix 5200 worth the money?", answer: "After 5 years of professional use, absolutely yes—if you use your blender regularly. The combination of 2 HP motor power, all-metal drive system, 7-year warranty, and decades of expected use justifies the premium investment. For families making daily smoothies, health enthusiasts, or anyone wanting to eliminate multiple kitchen appliances, this pays for itself through longevity and versatility. However, if you blend only occasionally (once a week or less), a budget-friendly blender may serve you fine. The value proposition: With proper care and 15 years of expected use, this works out to pennies per day. Budget blenders often need replacement every 2-3 years at their respective price points." },
-  { question: "What's the difference between Vitamix 5200 and other models?", answer: "The 5200 is Vitamix's classic workhorse model. Key differences from other Vitamix models: <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}> vs. A3500/A2500 (Ascent series): 5200 has manual controls and no preset programs, but costs significantly less while delivering identical blending power vs. 7500 (Next Generation): 5200 has taller, narrower container (better for small batches) and is slightly louder vs. E310 (Explorian): 5200 has 2.0 HP vs 2.2 HP (negligible difference), larger 64oz vs 48oz container, and longer 7-year vs 5-year warranty vs. Professional 750: 5200 lacks preset programs and is louder, but costs less with identical blending power My take: The 5200 offers the best value—full commercial power without paying extra for preset programs most people don't need. It's been the industry standard for decades for good reason." },
-  { question: "How loud is the Vitamix 5200?", answer: "The 5200 is loud—no sugarcoating it. At full speed, it measures around 90-95 decibels, roughly equivalent to a lawn mower or food processor. Reality check from professional use: <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}> Most blending sessions last 30-60 seconds, not continuous operation Smoothies typically require only 30-45 seconds at high speed You can wear earplugs if making morning smoothies while others sleep The noise is the sound of a 2 HP motor doing serious work Newer Vitamix models (7500, A3500) are slightly quieter due to different container design, but still loud. If noise is your primary concern and you blend early morning daily, consider the A3500. My verdict: The performance is worth the brief noise. After 5 years, I barely notice it." },
-  { question: "Can Vitamix 5200 crush ice?", answer: "Yes, effortlessly. The 5200 pulverizes ice cubes into snow-like consistency in seconds. This is one of its signature capabilities. Ice crushing performance: <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}> 12-15 ice cubes crushed to snow in 15-20 seconds No need to add liquid (though liquid helps with consistency) Makes perfect frozen margaritas, smoothie bowls, and shaved ice Blades and motor show zero wear after thousands of ice-crushing sessions This is where the 2 HP motor and hardened stainless blades excel. Budget blenders struggle with ice and often burn out motors—the Vitamix crushes ice like it's nothing." },
-  { question: "Can you make hot soup in a Vitamix?", answer: "Yes, one of the Vitamix's most impressive features. The friction from the blades spinning at high speed heats ingredients to steaming hot (160-170°F) in 5-7 minutes. How it works: <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}> Add raw vegetables, broth, and seasonings Blend on high speed for 5-7 minutes Friction heats the soup while simultaneously pureeing it smooth Result: Restaurant-quality velvety soup in one step Best soups to make: Tomato bisque, butternut squash, broccoli cheddar, potato leek, any pureed vegetable soup. Caution: Always start on low speed and gradually increase to prevent hot liquid from erupting. Use the vented lid plug to release steam. This feature alone justifies the Vitamix for many users—no stovetop required for smooth, hot soup in under 10 minutes." },
-  { question: "How do you clean a Vitamix 5200?", answer: "Incredibly easy—one of the best features. The Vitamix essentially cleans itself. The 30-second cleaning method: <ol style={{ marginLeft: '20px', lineHeight: '1.8' }}> Fill container halfway with warm water Add 1-2 drops of dish soap Blend on high for 30-60 seconds Rinse thoroughly Done </ol> For stubborn residue: Let soapy water sit for 10 minutes before blending, or use baking soda paste on tough spots. What NOT to do: <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}> Don't put container in dishwasher (hand wash only) Don't use abrasive scrubbers on the container Don't submerge the motor base in water After 5 years, cleanup still takes under 1 minute. This is dramatically easier than cleaning a food processor with multiple parts." },
-  { question: "What can you make in a Vitamix 5200?", answer: "The versatility is astounding. The 5200 handles tasks that typically require multiple appliances: Daily basics: <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}> Smoothies (obviously—silky smooth every time) Protein shakes, meal replacement drinks Milkshakes, frozen coffee drinks Fresh juice (whole fruit, keeping fiber) Cooking applications: <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}> Hot soups (via friction heating) Sauces, salsas, pestos Nut butters (peanut, almond, cashew) Hummus and bean dips Batters and doughs Advanced uses: <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}> Nut milks (almond, oat, cashew) Flours from whole grains Frozen desserts (nice cream, sorbet) Baby food Grinding coffee beans This replaces a blender, food processor, grain mill, ice crusher, and more—making it exceptional value despite the premium price." },
-  { question: "How long do Vitamix blenders last?", answer: "With proper care, 10-20 years is common, with some lasting 30 years. The 5200 is genuinely buy-it-for-life equipment. Why they last so long: <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}> All-metal drive system: No plastic gears to strip Radial cooling fan: Prevents motor overheating Hardened stainless blades: Maintain sharpness for decades Simple mechanical design: Fewer parts to fail Made in USA: Quality control and readily available replacement parts The 7-year full warranty covers parts, labor, and shipping both ways—Vitamix stands behind their product completely. My experience: After 5 years of professional use, mine shows zero performance degradation. I expect to use this for another 10-15 years easily. Stories of 20-30 year old Vitamix machines still running strong are common in online communities—this is truly heritage equipment." },
-  { question: "Vitamix vs Blendtec: Which is better?", answer: "Both are excellent high-performance blenders. The choice depends on priorities: Choose Vitamix 5200 if you want: <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}> Variable speed control (more versatility) Tamper for thick blends Taller, narrower container (better for small batches) Longer warranty (7 years vs 3-8 years depending on Blendtec model) Proven longevity (more 20 year old machines in use) Choose Blendtec if you want: <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}> Pre-programmed cycles Wider, shorter container (easier storage, better for large batches) Slightly quieter operation Square container design (reaches corners better) My verdict: For versatility and longevity, I prefer the Vitamix 5200. The variable speed control and tamper give more control over texture. However, both brands deliver exceptional performance—you can't go wrong with either. See our <Link href=\"/reviews\" className=\"text-orange-600 hover:text-orange-800 underline\">complete reviews section</Link> for detailed side-by-side analysis." },
-  { question: "Should I buy new or refurbished Vitamix?", answer: "Refurbished units from Vitamix.com are excellent value—I recommend them for budget-conscious buyers. Refurbished pros: <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}> Significant savings compared to new units 5-year warranty (vs 7-year for new) Certified by Vitamix with rigorous testing Functionally identical to new units May have minor cosmetic blemishes (typically unnoticeable) New unit pros: <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}> 7-year warranty (2 extra years) Pristine cosmetic condition Latest production batch My recommendation: If saving money matters, buy refurbished. The 5-year warranty is still exceptional, and these machines last 15-20 years anyway. The extra 2 years of warranty rarely matters given how reliable they are. Where to buy refurbished: Only buy from Vitamix.com directly to ensure genuine certified refurbished units with full warranty coverage." },
+const faqData: FAQItem[] = [
+  {
+    question: "Is the Vitamix 5200 worth the money?",
+    answer: "After 5 years of professional use, absolutely yes—if you use your blender regularly. The combination of 2 HP motor power, all-metal drive system, 7-year warranty, and decades of expected use justifies the premium investment. For families making daily smoothies, health enthusiasts, or anyone wanting to eliminate multiple kitchen appliances, this pays for itself through longevity and versatility. However, if you blend only occasionally (once a week or less), a budget-friendly blender may serve you fine. The value proposition: With proper care and 15 years of expected use, this works out to pennies per day. Budget blenders often need replacement every 2-3 years at their respective price points."
+  },
+  {
+    question: "What's the difference between Vitamix 5200 and other models?",
+    answer: {
+      intro: "The 5200 is Vitamix's classic workhorse model. Key differences from other Vitamix models:",
+      sections: [
+        {
+          items: [
+            "vs. A3500/A2500 (Ascent series): 5200 has manual controls and no preset programs, but costs significantly less while delivering identical blending power",
+            "vs. 7500 (Next Generation): 5200 has taller, narrower container (better for small batches) and is slightly louder",
+            "vs. E310 (Explorian): 5200 has 2.0 HP vs 2.2 HP (negligible difference), larger 64oz vs 48oz container, and longer 7-year vs 5-year warranty",
+            "vs. Professional 750: 5200 lacks preset programs and is louder, but costs less with identical blending power"
+          ]
+        }
+      ],
+      conclusion: "My take: The 5200 offers the best value—full commercial power without paying extra for preset programs most people don't need. It's been the industry standard for decades for good reason."
+    }
+  },
+  {
+    question: "How loud is the Vitamix 5200?",
+    answer: {
+      intro: "The 5200 is loud—no sugarcoating it. At full speed, it measures around 90-95 decibels, roughly equivalent to a lawn mower or food processor. Reality check from professional use:",
+      sections: [
+        {
+          items: [
+            "Most blending sessions last 30-60 seconds, not continuous operation",
+            "Smoothies typically require only 30-45 seconds at high speed",
+            "You can wear earplugs if making morning smoothies while others sleep",
+            "The noise is the sound of a 2 HP motor doing serious work"
+          ]
+        }
+      ],
+      conclusion: "Newer Vitamix models (7500, A3500) are slightly quieter due to different container design, but still loud. If noise is your primary concern and you blend early morning daily, consider the A3500. My verdict: The performance is worth the brief noise. After 5 years, I barely notice it."
+    }
+  },
+  {
+    question: "Can Vitamix 5200 crush ice?",
+    answer: {
+      intro: "Yes, effortlessly. The 5200 pulverizes ice cubes into snow-like consistency in seconds. This is one of its signature capabilities. Ice crushing performance:",
+      sections: [
+        {
+          items: [
+            "12-15 ice cubes crushed to snow in 15-20 seconds",
+            "No need to add liquid (though liquid helps with consistency)",
+            "Makes perfect frozen margaritas, smoothie bowls, and shaved ice",
+            "Blades and motor show zero wear after thousands of ice-crushing sessions"
+          ]
+        }
+      ],
+      conclusion: "This is where the 2 HP motor and hardened stainless blades excel. Budget blenders struggle with ice and often burn out motors—the Vitamix crushes ice like it's nothing."
+    }
+  },
+  {
+    question: "Can you make hot soup in a Vitamix?",
+    answer: {
+      intro: "Yes, one of the Vitamix's most impressive features. The friction from the blades spinning at high speed heats ingredients to steaming hot (160-170°F) in 5-7 minutes. How it works:",
+      sections: [
+        {
+          items: [
+            "Add raw vegetables, broth, and seasonings",
+            "Blend on high speed for 5-7 minutes",
+            "Friction heats the soup while simultaneously pureeing it smooth",
+            "Result: Restaurant-quality velvety soup in one step"
+          ]
+        }
+      ],
+      conclusion: "Best soups to make: Tomato bisque, butternut squash, broccoli cheddar, potato leek, any pureed vegetable soup. Caution: Always start on low speed and gradually increase to prevent hot liquid from erupting. Use the vented lid plug to release steam. This feature alone justifies the Vitamix for many users—no stovetop required for smooth, hot soup in under 10 minutes."
+    }
+  },
+  {
+    question: "How do you clean a Vitamix 5200?",
+    answer: {
+      intro: "Incredibly easy—one of the best features. The Vitamix essentially cleans itself. The 30-second cleaning method:",
+      sections: [
+        {
+          heading: "",
+          items: [
+            "Fill container halfway with warm water",
+            "Add 1-2 drops of dish soap",
+            "Blend on high for 30-60 seconds",
+            "Rinse thoroughly",
+            "Done"
+          ],
+          listType: "ol"
+        },
+        {
+          heading: "What NOT to do:",
+          text: "For stubborn residue: Let soapy water sit for 10 minutes before blending, or use baking soda paste on tough spots.",
+          items: [
+            "Don't put container in dishwasher (hand wash only)",
+            "Don't use abrasive scrubbers on the container",
+            "Don't submerge the motor base in water"
+          ]
+        }
+      ],
+      conclusion: "After 5 years, cleanup still takes under 1 minute. This is dramatically easier than cleaning a food processor with multiple parts."
+    }
+  },
+  {
+    question: "What can you make in a Vitamix 5200?",
+    answer: {
+      intro: "The versatility is astounding. The 5200 handles tasks that typically require multiple appliances:",
+      sections: [
+        {
+          heading: "Daily basics:",
+          items: [
+            "Smoothies (obviously—silky smooth every time)",
+            "Protein shakes, meal replacement drinks",
+            "Milkshakes, frozen coffee drinks",
+            "Fresh juice (whole fruit, keeping fiber)"
+          ]
+        },
+        {
+          heading: "Cooking applications:",
+          items: [
+            "Hot soups (via friction heating)",
+            "Sauces, salsas, pestos",
+            "Nut butters (peanut, almond, cashew)",
+            "Hummus and bean dips",
+            "Batters and doughs"
+          ]
+        },
+        {
+          heading: "Advanced uses:",
+          items: [
+            "Nut milks (almond, oat, cashew)",
+            "Flours from whole grains",
+            "Frozen desserts (nice cream, sorbet)",
+            "Baby food",
+            "Grinding coffee beans"
+          ]
+        }
+      ],
+      conclusion: "This replaces a blender, food processor, grain mill, ice crusher, and more—making it exceptional value despite the premium price."
+    }
+  },
+  {
+    question: "How long do Vitamix blenders last?",
+    answer: {
+      intro: "With proper care, 10-20 years is common, with some lasting 30 years. The 5200 is genuinely buy-it-for-life equipment. Why they last so long:",
+      sections: [
+        {
+          items: [
+            "All-metal drive system: No plastic gears to strip",
+            "Radial cooling fan: Prevents motor overheating",
+            "Hardened stainless blades: Maintain sharpness for decades",
+            "Simple mechanical design: Fewer parts to fail",
+            "Made in USA: Quality control and readily available replacement parts"
+          ]
+        }
+      ],
+      conclusion: "The 7-year full warranty covers parts, labor, and shipping both ways—Vitamix stands behind their product completely. My experience: After 5 years of professional use, mine shows zero performance degradation. I expect to use this for another 10-15 years easily. Stories of 20-30 year old Vitamix machines still running strong are common in online communities—this is truly heritage equipment."
+    }
+  },
+  {
+    question: "Vitamix vs Blendtec: Which is better?",
+    answer: {
+      intro: "Both are excellent high-performance blenders. The choice depends on priorities:",
+      sections: [
+        {
+          heading: "Choose Vitamix 5200 if you want:",
+          items: [
+            "Variable speed control (more versatility)",
+            "Tamper for thick blends",
+            "Taller, narrower container (better for small batches)",
+            "Longer warranty (7 years vs 3-8 years depending on Blendtec model)",
+            "Proven longevity (more 20 year old machines in use)"
+          ]
+        },
+        {
+          heading: "Choose Blendtec if you want:",
+          items: [
+            "Pre-programmed cycles",
+            "Wider, shorter container (easier storage, better for large batches)",
+            "Slightly quieter operation",
+            "Square container design (reaches corners better)"
+          ]
+        }
+      ],
+      conclusion: `My verdict: For versatility and longevity, I prefer the Vitamix 5200. The variable speed control and tamper give more control over texture. However, both brands deliver exceptional performance—you can't go wrong with either. See our <Link href="/reviews" className="text-orange-600 hover:text-orange-800 underline">complete reviews section</Link> for detailed side-by-side analysis.`
+    }
+  },
+  {
+    question: "Should I buy new or refurbished Vitamix?",
+    answer: {
+      intro: "Refurbished units from Vitamix.com are excellent value—I recommend them for budget-conscious buyers.",
+      sections: [
+        {
+          heading: "Refurbished pros:",
+          items: [
+            "Significant savings compared to new units",
+            "5-year warranty (vs 7-year for new)",
+            "Certified by Vitamix with rigorous testing",
+            "Functionally identical to new units",
+            "May have minor cosmetic blemishes (typically unnoticeable)"
+          ]
+        },
+        {
+          heading: "New unit pros:",
+          items: [
+            "7-year warranty (2 extra years)",
+            "Pristine cosmetic condition",
+            "Latest production batch"
+          ]
+        }
+      ],
+      conclusion: "My recommendation: If saving money matters, buy refurbished. The 5-year warranty is still exceptional, and these machines last 15-20 years anyway. The extra 2 years of warranty rarely matters given how reliable they are. Where to buy refurbished: Only buy from Vitamix.com directly to ensure genuine certified refurbished units with full warranty coverage."
+    }
+  },
 ];
+
+// Helper function to convert structured FAQ data to simple format for schema.org
+function convertFAQsForSchema(faqs: FAQItem[]): Array<{question: string, answer: string}> {
+  return faqs.map(faq => {
+    if (typeof faq.answer === 'string') {
+      // Simple string answer - use as-is
+      return {
+        question: faq.question,
+        answer: faq.answer
+      };
+    } else {
+      // Structured answer - convert to plain text
+      let plainText = '';
+
+      if (faq.answer.intro) {
+        plainText += faq.answer.intro + ' ';
+      }
+
+      if (faq.answer.sections) {
+        faq.answer.sections.forEach(section => {
+          if (section.heading) {
+            plainText += section.heading + ' ';
+          }
+          if (section.text) {
+            plainText += section.text + ' ';
+          }
+          if (section.items) {
+            plainText += section.items.join('; ') + '. ';
+          }
+        });
+      }
+
+      if (faq.answer.lists) {
+        faq.answer.lists.forEach(list => {
+          if (list.heading) {
+            plainText += list.heading + ' ';
+          }
+          plainText += list.items.join('; ') + '. ';
+        });
+      }
+
+      if (faq.answer.conclusion) {
+        plainText += faq.answer.conclusion;
+      }
+
+      return {
+        question: faq.question,
+        answer: plainText.trim()
+      };
+    }
+  });
+}
 
 const breadcrumbs = [
   { name: "Home", url: "https://www.chefapprovedtools.com" },
@@ -376,17 +631,7 @@ export default function Vitamix5200Review() {
 
         {/* Mid-Article CTA */}
         <section className="mb-8">
-          <div style={{
-            background: '#e7f3ff',
-            padding: '20px',
-            margin: '25px 0',
-            borderRadius: '6px',
-            borderLeft: '4px solid #0066cc',
-            textAlign: 'center'
-          }}>
-            <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
-              Convinced this is right for you?
-            </p>
+          <ReviewCTABox variant="info" title="Convinced this is right for you?">
             <CTAVisibilityTracker
               ctaId={`review-${productData.slug}-mid_article`}
               position="mid_article"
@@ -403,7 +648,7 @@ export default function Vitamix5200Review() {
                 Check Current Price →
               </AffiliateButton>
             </CTAVisibilityTracker>
-          </div>
+          </ReviewCTABox>
         </section>
 
         {/* User Reviews */}
@@ -626,279 +871,7 @@ export default function Vitamix5200Review() {
         <section className="mb-8" id="faq">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Frequently Asked Questions About Vitamix 5200</h2>
 
-          <div>
-
-            {/* Question 1 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3>Is the Vitamix 5200 worth the money?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> After 5 years of professional use, absolutely yes—if you use your blender regularly. The combination of 2 HP motor power, all-metal drive system, 7-year warranty, and decades of expected use justifies the premium investment.</p>
-                  <p>For families making daily smoothies, health enthusiasts, or anyone wanting to eliminate multiple kitchen appliances, this pays for itself through longevity and versatility. However, if you blend only occasionally (once a week or less), a budget-friendly blender may serve you fine.</p>
-                  <p><strong>The value proposition:</strong> With proper care and 15 years of expected use, this works out to pennies per day. Budget blenders often need replacement every 2-3 years at their respective price points.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 2 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3>What&apos;s the difference between Vitamix 5200 and other models?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> The 5200 is Vitamix&apos;s classic workhorse model. Key differences from other Vitamix models:</p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                    <li><strong>vs. A3500/A2500 (Ascent series):</strong> 5200 has manual controls and no preset programs, but costs significantly less while delivering identical blending power</li>
-                    <li><strong>vs. 7500 (Next Generation):</strong> 5200 has taller, narrower container (better for small batches) and is slightly louder</li>
-                    <li><strong>vs. E310 (Explorian):</strong> 5200 has 2.0 HP vs 2.2 HP (negligible difference), larger 64oz vs 48oz container, and longer 7-year vs 5-year warranty</li>
-                    <li><strong>vs. Professional 750:</strong> 5200 lacks preset programs and is louder, but costs less with identical blending power</li>
-                  </ul>
-                  <p><strong>My take:</strong> The 5200 offers the best value—full commercial power without paying extra for preset programs most people don&apos;t need. It&apos;s been the industry standard for decades for good reason.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 3 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3>How loud is the Vitamix 5200?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> The 5200 is loud—no sugarcoating it. At full speed, it measures around 90-95 decibels, roughly equivalent to a lawn mower or food processor.</p>
-                  <p><strong>Reality check from professional use:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                    <li>Most blending sessions last 30-60 seconds, not continuous operation</li>
-                    <li>Smoothies typically require only 30-45 seconds at high speed</li>
-                    <li>You can wear earplugs if making morning smoothies while others sleep</li>
-                    <li>The noise is the sound of a 2 HP motor doing serious work</li>
-                  </ul>
-                  <p>Newer Vitamix models (7500, A3500) are slightly quieter due to different container design, but still loud. If noise is your primary concern and you blend early morning daily, consider the A3500.</p>
-                  <p><strong>My verdict:</strong> The performance is worth the brief noise. After 5 years, I barely notice it.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 4 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3>Can Vitamix 5200 crush ice?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Yes, effortlessly. The 5200 pulverizes ice cubes into snow-like consistency in seconds. This is one of its signature capabilities.</p>
-                  <p><strong>Ice crushing performance:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                    <li>12-15 ice cubes crushed to snow in 15-20 seconds</li>
-                    <li>No need to add liquid (though liquid helps with consistency)</li>
-                    <li>Makes perfect frozen margaritas, smoothie bowls, and shaved ice</li>
-                    <li>Blades and motor show zero wear after thousands of ice-crushing sessions</li>
-                  </ul>
-                  <p>This is where the 2 HP motor and hardened stainless blades excel. Budget blenders struggle with ice and often burn out motors—the Vitamix crushes ice like it&apos;s nothing.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 5 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3>Can you make hot soup in a Vitamix?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Yes, one of the Vitamix&apos;s most impressive features. The friction from the blades spinning at high speed heats ingredients to steaming hot (160-170°F) in 5-7 minutes.</p>
-                  <p><strong>How it works:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                    <li>Add raw vegetables, broth, and seasonings</li>
-                    <li>Blend on high speed for 5-7 minutes</li>
-                    <li>Friction heats the soup while simultaneously pureeing it smooth</li>
-                    <li>Result: Restaurant-quality velvety soup in one step</li>
-                  </ul>
-                  <p><strong>Best soups to make:</strong> Tomato bisque, butternut squash, broccoli cheddar, potato leek, any pureed vegetable soup.</p>
-                  <p><strong>Caution:</strong> Always start on low speed and gradually increase to prevent hot liquid from erupting. Use the vented lid plug to release steam.</p>
-                  <p>This feature alone justifies the Vitamix for many users—no stovetop required for smooth, hot soup in under 10 minutes.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 6 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3>How do you clean a Vitamix 5200?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Incredibly easy—one of the best features. The Vitamix essentially cleans itself.</p>
-                  <p><strong>The 30-second cleaning method:</strong></p>
-                  <ol style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                    <li>Fill container halfway with warm water</li>
-                    <li>Add 1-2 drops of dish soap</li>
-                    <li>Blend on high for 30-60 seconds</li>
-                    <li>Rinse thoroughly</li>
-                    <li>Done</li>
-                  </ol>
-                  <p><strong>For stubborn residue:</strong> Let soapy water sit for 10 minutes before blending, or use baking soda paste on tough spots.</p>
-                  <p><strong>What NOT to do:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                    <li>Don&apos;t put container in dishwasher (hand wash only)</li>
-                    <li>Don&apos;t use abrasive scrubbers on the container</li>
-                    <li>Don&apos;t submerge the motor base in water</li>
-                  </ul>
-                  <p>After 5 years, cleanup still takes under 1 minute. This is dramatically easier than cleaning a food processor with multiple parts.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 7 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3>What can you make in a Vitamix 5200?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> The versatility is astounding. The 5200 handles tasks that typically require multiple appliances:</p>
-                  <p><strong>Daily basics:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                    <li>Smoothies (obviously—silky smooth every time)</li>
-                    <li>Protein shakes, meal replacement drinks</li>
-                    <li>Milkshakes, frozen coffee drinks</li>
-                    <li>Fresh juice (whole fruit, keeping fiber)</li>
-                  </ul>
-                  <p><strong>Cooking applications:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                    <li>Hot soups (via friction heating)</li>
-                    <li>Sauces, salsas, pestos</li>
-                    <li>Nut butters (peanut, almond, cashew)</li>
-                    <li>Hummus and bean dips</li>
-                    <li>Batters and doughs</li>
-                  </ul>
-                  <p><strong>Advanced uses:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                    <li>Nut milks (almond, oat, cashew)</li>
-                    <li>Flours from whole grains</li>
-                    <li>Frozen desserts (nice cream, sorbet)</li>
-                    <li>Baby food</li>
-                    <li>Grinding coffee beans</li>
-                  </ul>
-                  <p>This replaces a blender, food processor, grain mill, ice crusher, and more—making it exceptional value despite the premium price.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 8 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3>How long do Vitamix blenders last?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> With proper care, 10-20 years is common, with some lasting 30 years. The 5200 is genuinely buy-it-for-life equipment.</p>
-                  <p><strong>Why they last so long:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                    <li><strong>All-metal drive system:</strong> No plastic gears to strip</li>
-                    <li><strong>Radial cooling fan:</strong> Prevents motor overheating</li>
-                    <li><strong>Hardened stainless blades:</strong> Maintain sharpness for decades</li>
-                    <li><strong>Simple mechanical design:</strong> Fewer parts to fail</li>
-                    <li><strong>Made in USA:</strong> Quality control and readily available replacement parts</li>
-                  </ul>
-                  <p><strong>The 7-year full warranty</strong> covers parts, labor, and shipping both ways—Vitamix stands behind their product completely.</p>
-                  <p><strong>My experience:</strong> After 5 years of professional use, mine shows zero performance degradation. I expect to use this for another 10-15 years easily.</p>
-                  <p>Stories of 20-30 year old Vitamix machines still running strong are common in online communities—this is truly heritage equipment.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 9 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3>Vitamix vs Blendtec: Which is better?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Both are excellent high-performance blenders. The choice depends on priorities:</p>
-                  <p><strong>Choose Vitamix 5200 if you want:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                    <li>Variable speed control (more versatility)</li>
-                    <li>Tamper for thick blends</li>
-                    <li>Taller, narrower container (better for small batches)</li>
-                    <li>Longer warranty (7 years vs 3-8 years depending on Blendtec model)</li>
-                    <li>Proven longevity (more 20 year old machines in use)</li>
-                  </ul>
-                  <p><strong>Choose Blendtec if you want:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                    <li>Pre-programmed cycles</li>
-                    <li>Wider, shorter container (easier storage, better for large batches)</li>
-                    <li>Slightly quieter operation</li>
-                    <li>Square container design (reaches corners better)</li>
-                  </ul>
-                  <p><strong>My verdict:</strong> For versatility and longevity, I prefer the Vitamix 5200. The variable speed control and tamper give more control over texture. However, both brands deliver exceptional performance—you can&apos;t go wrong with either.</p>
-                  <p>See our <Link href="/reviews" className="text-orange-600 hover:text-orange-800 underline">complete reviews section</Link> for detailed side-by-side analysis.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 10 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3>Should I buy new or refurbished Vitamix?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Refurbished units from Vitamix.com are excellent value—I recommend them for budget-conscious buyers.</p>
-                  <p><strong>Refurbished pros:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                    <li>Significant savings compared to new units</li>
-                    <li>5-year warranty (vs 7-year for new)</li>
-                    <li>Certified by Vitamix with rigorous testing</li>
-                    <li>Functionally identical to new units</li>
-                    <li>May have minor cosmetic blemishes (typically unnoticeable)</li>
-                  </ul>
-                  <p><strong>New unit pros:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
-                    <li>7-year warranty (2 extra years)</li>
-                    <li>Pristine cosmetic condition</li>
-                    <li>Latest production batch</li>
-                  </ul>
-                  <p><strong>My recommendation:</strong> If saving money matters, buy refurbished. The 5-year warranty is still exceptional, and these machines last 15-20 years anyway. The extra 2 years of warranty rarely matters given how reliable they are.</p>
-                  <p><strong>Where to buy refurbished:</strong> Only buy from Vitamix.com directly to ensure genuine certified refurbished units with full warranty coverage.</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
+          <FAQGrid faqs={faqData} />
         </section>
 
         {/* WHERE TO BUY SECTION - NEWLY ADDED */}
@@ -911,26 +884,15 @@ export default function Vitamix5200Review() {
             day: 'numeric' 
           })}</p>
 
-          <div className="merchant-ctas" style={{
-            background: '#f8f9fa',
-            padding: '25px',
-            margin: '25px 0',
-            borderRadius: '8px'
-          }}>
+          <div className="merchant-ctas bg-gray-50 p-6 my-6 rounded-lg">
             
-            <h3 style={{ marginTop: 0 }}>Compare Prices Across Retailers:</h3>
+            <h3 className="mt-0">Compare Prices Across Retailers:</h3>
 
-            <div style={{
-              background: 'white',
-              padding: '20px',
-              margin: '15px 0',
-              borderRadius: '6px',
-              border: '2px solid #ff9900'
-            }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
+            <div className="bg-white p-5 my-4 rounded-lg border-2 border-orange-500">
+              <div className="flex justify-between items-center flex-wrap gap-4">
                 <div>
-                  <h4 style={{ margin: '0 0 10px 0' }}>🏆 Amazon</h4>
-                  <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Prime shipping | ✓ Fast delivery | ✓ Easy returns</p>
+                  <h4 className="m-0 mb-2.5">🏆 Amazon</h4>
+                  <p className="mt-1 mb-0 text-gray-600">✓ Prime shipping | ✓ Fast delivery | ✓ Easy returns</p>
                 </div>
                 <div>
                   <CTAVisibilityTracker
@@ -953,7 +915,7 @@ export default function Vitamix5200Review() {
               </div>
             </div>
             
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '20px', textAlign: 'center' }}>
+            <p className="text-sm text-gray-600 mt-5 text-center">
               💡 More retailers will be added soon for price comparison.
             </p>
             
@@ -1221,7 +1183,7 @@ export default function Vitamix5200Review() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateFAQSchema(faqData))
+            __html: JSON.stringify(generateFAQSchema(convertFAQsForSchema(faqData)))
           }}
         />
       </article>
