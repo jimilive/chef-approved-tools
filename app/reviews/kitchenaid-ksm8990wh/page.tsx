@@ -8,6 +8,9 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox'
+import EmailCaptureBox from '@/components/review/EmailCaptureBox'
+import AuthorBio from '@/components/review/AuthorBio'
 
 const productData = {
   name: "KitchenAid Commercial Mixer",
@@ -196,19 +199,13 @@ export default function KitchenAidReviewPage() {
         </div>
 
         {/* Quick Rating Box */}
-        <div className="quick-stats" style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '20px 0',
-          borderLeft: '4px solid #28a745',
-          borderRadius: '4px'
-        }}>
-          <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
+        <QuickStatsBox variant="success">
+          <p className="m-0 text-lg leading-relaxed">
             <strong>⭐⭐⭐⭐⭐ 4.8/5</strong> | Based on 18 months of commercial testing<br/>
             <strong>💰 Professional-Grade Investment</strong> | Check availability below<br/>
             <strong>✓ NSF Certified</strong> | <strong>✓ 2-Year Commercial Warranty</strong> | <strong>✓ 8-Qt Capacity</strong>
           </p>
-        </div>
+        </QuickStatsBox>
 
         {/* FTC Disclosure */}
         <FTCDisclosure />
@@ -230,16 +227,7 @@ export default function KitchenAidReviewPage() {
         </nav>
 
         {/* Primary CTA Above the Fold */}
-        <div className="primary-cta" style={{
-          background: '#fff3cd',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '2px solid #ffc107'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
-
+        <ReviewCTABox variant="warning" title="Current Best Price:" disclaimer={true}>
           <CTAVisibilityTracker
             ctaId="review-kitchenaid-ksm8990wh-above-fold"
             position="above_fold"
@@ -259,87 +247,65 @@ export default function KitchenAidReviewPage() {
             </AffiliateButton>
           </CTAVisibilityTracker>
 
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
-            💡 We earn commission at no extra cost to you.<br/>
-            More retailers will be added soon.
+          <p className="text-sm text-gray-600 mt-4">
+            💡 More retailers will be added soon.
           </p>
-        </div>
+        </ReviewCTABox>
 
         {/* Bottom Line Up Front */}
-        <div className="verdict-box" style={{
-          background: '#f8f9fa',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
+        <ReviewCTABox variant="info">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Bottom Line Up Front</h2>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.6', marginBottom: '1rem' }}>
+          <p className="text-lg leading-relaxed mb-4">
             <strong>After 18 months in a 200+ cover restaurant where equipment failure meant lost revenue,
             this KitchenAid mixer proved itself as genuine commercial-grade equipment.</strong> This KitchenAid stand mixer&apos;s 1.3 HP motor handled
             daily double-batch dough production without strain, 45-minute continuous sessions without overheating,
             and zero maintenance issues.
           </p>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+          <p className="text-lg leading-relaxed mb-6">
             This KitchenAid mixer delivers 85-90% of a $2,100 Hobart&apos;s capability at 32% of the cost. For operations mixing
             3-4 hours daily, the ROI is undeniable.
           </p>
 
-          <div style={{
-            background: 'white',
-            padding: '15px',
-            marginTop: '20px',
-            borderRadius: '4px'
-          }}>
-            <p style={{ margin: '10px 0' }}>
+          <div className="bg-white p-4 mt-5 rounded">
+            <p className="my-2">
               <strong>✓ Perfect For:</strong> Serious home bakers, startup bakeries, catering operations,
               restaurants needing NSF certification
             </p>
-            <p style={{ margin: '10px 0' }}>
+            <p className="my-2">
               <strong>✗ Skip If:</strong> You bake occasionally (weekends only), budget is limited,
               counter space is extremely limited
             </p>
           </div>
-        </div>
+        </ReviewCTABox>
 
         {/* Key Features Grid */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Why This KitchenAid Mixer Survived Professional Kitchens</h2>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '20px',
-            margin: '30px 0'
-          }}>
-
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>⚡</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>1.3 HP Motor</h3>
-              <p>Handles heavy dough without strain. Advanced motor control board communicates 15,000 times/second for consistent speed.</p>
-            </div>
-
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>✓</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>NSF Certified</h3>
-              <p>Health department compliant. Required by many municipalities for commercial food prep.</p>
-            </div>
-
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>📏</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>8-Quart Capacity</h3>
-              <p>Handles 8 loaves worth of dough or 13 dozen cookies per batch. 60% larger than residential models.</p>
-            </div>
-
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>💰</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Pays for Itself</h3>
-              <p>6-month ROI through labor savings and reduced prep time. Eliminates multiple mixing cycles.</p>
-            </div>
-
-          </div>
+          <FeatureGrid features={[
+            {
+              emoji: '⚡',
+              title: '1.3 HP Motor',
+              description: 'Handles heavy dough without strain. Advanced motor control board communicates 15,000 times/second for consistent speed.'
+            },
+            {
+              emoji: '✓',
+              title: 'NSF Certified',
+              description: 'Health department compliant. Required by many municipalities for commercial food prep.'
+            },
+            {
+              emoji: '📏',
+              title: '8-Quart Capacity',
+              description: 'Handles 8 loaves worth of dough or 13 dozen cookies per batch. 60% larger than residential models.'
+            },
+            {
+              emoji: '💰',
+              title: 'Pays for Itself',
+              description: '6-month ROI through labor savings and reduced prep time. Eliminates multiple mixing cycles.'
+            }
+          ]} />
         </section>
 
         {/* 18 Months of Testing */}
@@ -661,13 +627,8 @@ export default function KitchenAidReviewPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
           <div>
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3 style={{ fontWeight: 600, marginTop: 0 }}>Can this replace a Hobart in a commercial bakery?</h3>
+            <div className="my-5 p-5 bg-gray-50 rounded-lg">
+              <h3 className="font-semibold mt-0">Can this replace a Hobart in a commercial bakery?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> For bakeries producing under 100 loaves daily with mixing
@@ -678,13 +639,8 @@ export default function KitchenAidReviewPage() {
               </div>
             </div>
 
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3 style={{ fontWeight: 600, marginTop: 0 }}>Will this work on a standard kitchen outlet?</h3>
+            <div className="my-5 p-5 bg-gray-50 rounded-lg">
+              <h3 className="font-semibold mt-0">Will this work on a standard kitchen outlet?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> Usually yes, but verify your circuit isn&apos;t shared with
@@ -696,13 +652,8 @@ export default function KitchenAidReviewPage() {
               </div>
             </div>
 
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3 style={{ fontWeight: 600, marginTop: 0 }}>How does NSF certification matter?</h3>
+            <div className="my-5 p-5 bg-gray-50 rounded-lg">
+              <h3 className="font-semibold mt-0">How does NSF certification matter?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> Required by many health departments for commercial food prep. Certifies materials meet sanitation standards.</p>
@@ -710,13 +661,8 @@ export default function KitchenAidReviewPage() {
               </div>
             </div>
 
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3 style={{ fontWeight: 600, marginTop: 0 }}>What&apos;s the difference from the KSM7 residential model?</h3>
+            <div className="my-5 p-5 bg-gray-50 rounded-lg">
+              <h3 className="font-semibold mt-0">What&apos;s the difference from the KSM7 residential model?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> 1.3 HP motor (vs 0.8 HP), 2-year warranty, NSF certification, stainless dishwasher-safe attachments, heavier construction.</p>
@@ -724,13 +670,8 @@ export default function KitchenAidReviewPage() {
               </div>
             </div>
 
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3 style={{ fontWeight: 600, marginTop: 0 }}>How long will this last in a commercial environment?</h3>
+            <div className="my-5 p-5 bg-gray-50 rounded-lg">
+              <h3 className="font-semibold mt-0">How long will this last in a commercial environment?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> Based on my testing and industry experience, expect 8-10 years of 2-4 hours daily use before major service needs.</p>
@@ -738,13 +679,8 @@ export default function KitchenAidReviewPage() {
               </div>
             </div>
 
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3 style={{ fontWeight: 600, marginTop: 0 }}>What&apos;s the noise level compared to residential models?</h3>
+            <div className="my-5 p-5 bg-gray-50 rounded-lg">
+              <h3 className="font-semibold mt-0">What&apos;s the noise level compared to residential models?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> Slightly louder due to the powerful motor, but quieter than commercial Hobart mixers. Expect 70-75 dB at medium speeds—comparable to a dishwasher.</p>
@@ -752,13 +688,8 @@ export default function KitchenAidReviewPage() {
               </div>
             </div>
 
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3 style={{ fontWeight: 600, marginTop: 0 }}>Can I use my existing KitchenAid attachments?</h3>
+            <div className="my-5 p-5 bg-gray-50 rounded-lg">
+              <h3 className="font-semibold mt-0">Can I use my existing KitchenAid attachments?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> Yes, all standard KitchenAid hub attachments fit. However, the commercial unit includes upgraded stainless steel mixing attachments that are dishwasher-safe.</p>
@@ -766,13 +697,8 @@ export default function KitchenAidReviewPage() {
               </div>
             </div>
 
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3 style={{ fontWeight: 600, marginTop: 0 }}>What&apos;s the exact weight and dimensions?</h3>
+            <div className="my-5 p-5 bg-gray-50 rounded-lg">
+              <h3 className="font-semibold mt-0">What&apos;s the exact weight and dimensions?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> 35 lbs (16 kg). Dimensions: 14.6&quot; W × 11.3&quot; D × 16.5&quot; H. With bowl-lift raised, total height reaches ~18&quot;. Measure your counter space carefully.</p>
@@ -780,13 +706,8 @@ export default function KitchenAidReviewPage() {
               </div>
             </div>
 
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
-              <h3 style={{ fontWeight: 600, marginTop: 0 }}>Is professional installation required?</h3>
+            <div className="my-5 p-5 bg-gray-50 rounded-lg">
+              <h3 className="font-semibold mt-0">Is professional installation required?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> No special installation needed. Simply place on a stable surface near a 120V outlet. Consider a dedicated 20-amp circuit if sharing with high-draw appliances.</p>
@@ -800,41 +721,30 @@ export default function KitchenAidReviewPage() {
         <section className="mb-8" id="verdict">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">The Bottom Line: My Professional Verdict</h2>
 
-          <div style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            color: 'white',
-            padding: '30px',
-            borderRadius: '8px',
-            margin: '30px 0'
-          }}>
+          <div className="bg-gradient-to-br from-purple-600 to-indigo-600 text-white p-8 rounded-lg my-8">
 
-            <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
+            <h3 className="text-white mt-0 text-2xl font-bold">
               After 18 Months in a Demanding Commercial Kitchen...
             </h3>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               This KitchenAid Commercial mixer has proven itself as purpose-built equipment that performs when failure
               isn&apos;t an option. This isn&apos;t just a larger residential mixer—it&apos;s genuine commercial-grade
               equipment with the motor power, NSF certification, and build quality that withstands daily
               professional abuse.
             </p>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               Based on my restaurant P&L experience managing $80K+ monthly operations, the 6-month
               payback period through labor savings makes this one of the smartest equipment investments
               for serious home bakers and small commercial operations.
             </p>
 
-            <div style={{
-              background: 'rgba(255,255,255,0.2)',
-              padding: '20px',
-              margin: '20px 0',
-              borderRadius: '6px'
-            }}>
-              <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
+            <div className="bg-white/20 p-5 my-5 rounded-lg">
+              <p className="m-0 text-xl font-bold">
                 Final Rating: ⭐⭐⭐⭐⭐ 4.8/5
               </p>
-              <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
+              <ul className="mt-4 mb-0 ml-5 text-base leading-loose">
                 <li>Performance & Durability: 5/5</li>
                 <li>Commercial Reliability: 5/5</li>
                 <li>Value for Money: 4/5</li>
@@ -842,7 +752,7 @@ export default function KitchenAidReviewPage() {
               </ul>
             </div>
 
-            <p style={{ fontSize: '16px', marginBottom: 0 }}>
+            <p className="text-base mb-0">
               <strong>Would I buy this again?</strong> Absolutely. Without hesitation.
               It&apos;s the kind of equipment that pays for itself through reliability and performance.
             </p>
@@ -850,20 +760,8 @@ export default function KitchenAidReviewPage() {
           </div>
 
           {/* STRONG FINAL CTA */}
-          <div style={{
-            background: '#fff3cd',
-            padding: '30px',
-            margin: '30px 0',
-            borderRadius: '8px',
-            textAlign: 'center',
-            border: '3px solid #ffc107'
-          }}>
-
-            <h3 style={{ marginTop: 0, fontSize: '28px' }}>
-              Ready to Transform Your Baking Operations?
-            </h3>
-
-            <p style={{ fontSize: '18px', margin: '20px 0' }}>
+          <ReviewCTABox variant="warning" title="Ready to Transform Your Baking Operations?" disclaimer={false}>
+            <p className="text-lg my-5">
               Check current availability and start professional-grade baking today:
             </p>
 
@@ -886,182 +784,93 @@ export default function KitchenAidReviewPage() {
               </AffiliateButton>
             </CTAVisibilityTracker>
 
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
+            <p className="text-sm text-gray-600 mt-5">
               💡 More retailers will be added soon
             </p>
-
-          </div>
+          </ReviewCTABox>
         </section>
 
         {/* Content Upgrade Email Capture */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
-
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>
-            📥 Get My Complete Commercial Mixer Buying Guide
-          </h3>
-
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
-            Download my comprehensive decision framework used when equipping professional kitchens:
-          </p>
-
-          <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
-            <li>✓ Commercial vs residential mixer comparison matrix</li>
-            <li>✓ ROI calculation worksheet for commercial equipment</li>
-            <li>✓ Electrical planning checklist</li>
-            <li>✓ Maintenance schedules for longevity</li>
-            <li>✓ Troubleshooting guide for common issues</li>
-          </ul>
-
-          <div style={{ textAlign: 'center', marginTop: '25px' }}>
-            <a
-              href="/newsletter"
-              style={{
-                display: 'inline-block',
-                background: '#0066cc',
-                color: 'white',
-                padding: '15px 40px',
-                textDecoration: 'none',
-                borderRadius: '6px',
-                fontWeight: 'bold',
-                fontSize: '18px'
-              }}
-            >
-              Download Free Guide →
-            </a>
-          </div>
-
-          <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
-            Instant delivery. No spam, ever. Unsubscribe anytime.
-          </p>
-
-        </div>
+        <EmailCaptureBox
+          title="📥 Get My Complete Commercial Mixer Buying Guide"
+          description="Download my comprehensive decision framework used when equipping professional kitchens:"
+          benefits={[
+            'Commercial vs residential mixer comparison matrix',
+            'ROI calculation worksheet for commercial equipment',
+            'Electrical planning checklist',
+            'Maintenance schedules for longevity',
+            'Troubleshooting guide for common issues'
+          ]}
+          ctaText="Download Free Guide →"
+          ctaHref="/newsletter"
+        />
 
         {/* Related Products Section */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Complete Your Professional Kitchen Setup</h2>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
+          <p className="text-base leading-relaxed mb-6">
             A commercial mixer is a cornerstone investment among professional kitchen appliances, but it works best as part of a complete
             professional kitchen setup. Based on 24 years of restaurant experience, here are the essential kitchen appliances and tools I
             use alongside this mixer:
           </p>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '20px',
-            margin: '30px 0'
-          }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-8">
 
             {/* Product 1 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>John Boos Platinum Cutting Board</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">John Boos Platinum Cutting Board</h4>
               <p>The 24x18&quot; commercial board I used managing $80K+ operations. Perfect prep surface
               for all your mixing ingredients.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 18 years:</strong> Still my daily workhorse.
               </p>
-              <a
+              <Link
                 href="/reviews/john-boos-platinum-commercial-cutting-board"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700"
               >
                 Read Full Review →
-              </a>
+              </Link>
             </div>
 
             {/* Product 2 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>Le Creuset Dutch Oven 7.25-Qt</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">Le Creuset Dutch Oven 7.25-Qt</h4>
               <p>For all the braising and baking your mixer makes possible. The workhorse that
               transformed our kitchen operations.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 10 years:</strong> Zero staining, zero regrets.
               </p>
-              <a
+              <Link
                 href="/reviews/le-creuset-signature-7-25-qt-dutch-oven"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700"
               >
                 Read Full Review →
-              </a>
+              </Link>
             </div>
 
             {/* Product 3 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>Rubbermaid Commercial Scraper</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">Rubbermaid Commercial Scraper</h4>
               <p>Essential for scraping down your mixer bowl between batches. This professional-grade rubber spatula handles heavy batters and doughs that cling to the bowl.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 18 years:</strong> Still my go-to scraper for mixer cleanup.
               </p>
-              <a
+              <Link
                 href="/reviews/rubbermaid-commercial-cooks-scraper"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700"
               >
                 Read Full Review →
-              </a>
+              </Link>
             </div>
 
           </div>
 
-          <p style={{
-            textAlign: 'center',
-            margin: '30px 0',
-            fontSize: '18px',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <p className="text-center my-8 text-lg p-5 bg-gray-50 rounded-lg">
             <strong>Want the complete professional kitchen setup?</strong><br/>
-            <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold', fontSize: '20px' }}>
+            <Link href="/kitchen-bundle" className="text-blue-600 font-bold text-xl hover:text-blue-800">
               See My Complete Kitchen Starter Kit ($157-1,950) →
-            </a>
+            </Link>
           </p>
         </section>
 
@@ -1077,75 +886,32 @@ export default function KitchenAidReviewPage() {
         </section>
 
         {/* Footer Transparency Elements */}
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '30px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #6c757d'
-        }}>
-          <p style={{ margin: '10px 0' }}>
+        <div className="bg-gray-50 p-5 my-8 rounded-lg border-l-4 border-gray-500">
+          <p className="my-2">
             <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
+          <p className="my-2">
             <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
+          <p className="my-2">
             <strong>💬 Have experience with this mixer?</strong> Share your thoughts in the comments
             below—I read and respond to every comment.
           </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>📧 Questions?</strong> <a href="/contact" style={{ color: '#0066cc' }}>
-            Contact me directly</a> and I&apos;ll help you make the best decision for your needs.
+          <p className="my-2">
+            <strong>📧 Questions?</strong> <Link href="/contact" className="text-blue-600 hover:text-blue-800">
+            Contact me directly</Link> and I&apos;ll help you make the best decision for your needs.
           </p>
         </div>
 
         {/* Author Bio Box */}
-        <div style={{
-          background: 'white',
-          padding: '25px',
-          margin: '30px 0',
-          border: '1px solid #dee2e6',
-          borderRadius: '8px',
-          display: 'grid',
-          gridTemplateColumns: '100px 1fr',
-          gap: '20px',
-          alignItems: 'start'
-        }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/team/head-shot-1.jpg"
-            alt="Scott Bradley, Professional Chef"
-            style={{
-              width: '100px',
-              height: '100px',
-              borderRadius: '50%',
-              objectFit: 'cover'
-            }}
-          />
-          <div>
-            <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-            <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-              Professional Chef • 45 Years Cooking Experience
-            </p>
-            <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
-              A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-              University of Montana. Certified Pizzaiolo who&apos;s tested equipment in high-volume
-              operations serving hundreds daily.
-            </p>
-            <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-              Read more about my testing methodology →
-            </a>
-          </div>
-        </div>
+        <AuthorBio />
 
         {/* Social Proof */}
         <TestimonialsSection />
