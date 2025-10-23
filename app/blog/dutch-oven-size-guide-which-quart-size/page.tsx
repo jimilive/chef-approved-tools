@@ -14,15 +14,14 @@ export const metadata: Metadata = {
 }
 
 const jsonLd = generateArticleSchema({
-  headline: 'Dutch Oven Size Guide: Which Quart Size Do You Need?',
+  title: 'Dutch Oven Size Guide: Which Quart Size Do You Need?',
+  slug: 'dutch-oven-size-guide-which-quart-size',
   description: 'A professional chef\'s guide to choosing the right Dutch oven size for soups, bread, braises, and everyday cooking. Learn what size fits your kitchen best.',
   datePublished: '2025-10-21',
-  dateModified: '2025-10-21',
-  authorName: 'Scott Bradley',
-  authorUrl: 'https://www.chefapprovedtools.com/about',
-  url: 'https://www.chefapprovedtools.com/blog/dutch-oven-size-guide-which-quart-size',
-  imageUrl: 'https://www.chefapprovedtools.com/images/blog/dutch-oven-size-guide.jpg',
-  keywords: ['dutch oven size guide', 'best dutch oven size', 'cooking capacity', 'dutch oven buying guide']
+  lastUpdated: '2025-10-21',
+  author: 'Scott Bradley',
+  image: 'https://www.chefapprovedtools.com/images/blog/dutch-oven-size-guide.jpg',
+  tags: ['dutch oven size guide', 'best dutch oven size', 'cooking capacity', 'dutch oven buying guide']
 })
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
