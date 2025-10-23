@@ -3,6 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
+import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox'
+import AuthorBio from '@/components/review/AuthorBio'
+import RelatedProductCard, { RelatedProductsGrid } from '@/components/review/RelatedProductCard'
+import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 
 import AffiliateButton from '@/components/AffiliateButton';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
@@ -144,30 +148,19 @@ export default function VictorinoxOffsetBreadKnifeReview() {
         </div>
 
         {/* Quick Rating Box */}
-        <div className="quick-stats" style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '20px 0',
-          borderLeft: '4px solid #28a745',
-          borderRadius: '4px'
-        }}>
-          <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
+        <QuickStatsBox variant="success">
+          <p className="m-0">
             <strong>⭐⭐⭐⭐⭐ 4.5/5</strong> | Based on 24 years professional restaurant use<br/>
             <strong>✓ Offset design keeps knuckles safe</strong> | <strong>✓ Never needs sharpening</strong> | <strong>✓ Professional bakery standard</strong>
           </p>
-        </div>
+        </QuickStatsBox>
 
         {/* PRIMARY CTA - ABOVE THE FOLD */}
-        <div className="primary-cta" style={{
-          background: '#fff3cd',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '2px solid #ffc107'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Best Price:</h3>
-
+        <ReviewCTABox
+          variant="warning"
+          title="Check Current Best Price:"
+          disclaimer={true}
+        >
           <CTAVisibilityTracker
             ctaId={`review-${productData.slug}-above_fold`}
             position="above_fold"
@@ -184,41 +177,25 @@ export default function VictorinoxOffsetBreadKnifeReview() {
               View on Amazon →
             </AffiliateButton>
           </CTAVisibilityTracker>
-          
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
-            💡 Pricing updated daily. We earn commission at no extra cost to you.<br/>
-            More retailers will be added soon for price comparison.
-          </p>
-        </div>
+        </ReviewCTABox>
 
         {/* Verdict Section */}
-        <div className="verdict-box" style={{
-          background: '#f8f9fa',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
+        <div className="bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
           <h2>Bottom Line Up Front</h2>
-          
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+
+          <p className="text-lg leading-relaxed">
             <strong>After 24 years using this knife in professional restaurant kitchens, the Victorinox offset bread knife has earned permanent status in my daily toolkit.</strong> The 1.5-inch offset handle design eliminates knuckle-scraping on cutting boards, making it genuinely more comfortable than standard bread knives during repetitive slicing tasks.
           </p>
-          
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+
+          <p className="text-lg leading-relaxed">
             This isn&apos;t just for bread - the serrated edge excels at tomatoes, delicate cakes, citrus fruits, and anything with a tough exterior and soft interior. The wavy serrations never need sharpening and stay effective for decades.
           </p>
-          
-          <div style={{ 
-            background: 'white', 
-            padding: '15px', 
-            marginTop: '20px', 
-            borderRadius: '4px' 
-          }}>
-            <p style={{ margin: '10px 0' }}>
+
+          <div className="bg-white p-4 mt-5 rounded">
+            <p className="my-2">
               <strong>✓ Perfect For:</strong> Home bakers, crusty artisan bread lovers, anyone who regularly slices tomatoes or cakes, professional kitchens
             </p>
-            <p style={{ margin: '10px 0' }}>
+            <p className="my-2">
               <strong>✗ Skip If:</strong> You only eat pre-sliced bread, have very limited storage space, need a multipurpose knife, already own a bread knife that works well
             </p>
           </div>
@@ -227,38 +204,28 @@ export default function VictorinoxOffsetBreadKnifeReview() {
         {/* Hero Features */}
         <h2>Why the Victorinox Offset Bread Knife Outperforms Standard Serrated Knives</h2>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '20px',
-          margin: '30px 0'
-        }}>
-          
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>👍</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Offset Comfort Design</h3>
-            <p>1.5-inch handle elevation keeps knuckles off the cutting board during full slicing strokes. Reduces hand fatigue during repetitive tasks - crucial when prepping bread service or slicing multiple tomatoes.</p>
-          </div>
-
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>✓</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Maintenance-Free Edge</h3>
-            <p>Wavy serrations grip and cut without crushing delicate interiors. Never needs sharpening - the teeth stay effective for decades of professional use. Same edge geometry used in commercial bakeries worldwide.</p>
-          </div>
-
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>📏</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>10-Inch Professional Length</h3>
-            <p>Handles large crusty loaves and wide layer cakes with single slicing strokes. Long blade enables smooth cutting motion with minimal crumb damage. Rounded tip prevents accidentally poking through soft items.</p>
-          </div>
-
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>💰</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Professional Value</h3>
-            <p>Swiss-made quality at accessible pricing. Same knife used in professional bakeries and restaurants. Fibrox handle provides secure grip even when wet. Built to last decades with minimal care.</p>
-          </div>
-          
-        </div>
+        <FeatureGrid features={[
+          {
+            emoji: '👍',
+            title: 'Offset Comfort Design',
+            description: '1.5-inch handle elevation keeps knuckles off the cutting board during full slicing strokes. Reduces hand fatigue during repetitive tasks - crucial when prepping bread service or slicing multiple tomatoes.'
+          },
+          {
+            emoji: '✓',
+            title: 'Maintenance-Free Edge',
+            description: 'Wavy serrations grip and cut without crushing delicate interiors. Never needs sharpening - the teeth stay effective for decades of professional use. Same edge geometry used in commercial bakeries worldwide.'
+          },
+          {
+            emoji: '📏',
+            title: '10-Inch Professional Length',
+            description: 'Handles large crusty loaves and wide layer cakes with single slicing strokes. Long blade enables smooth cutting motion with minimal crumb damage. Rounded tip prevents accidentally poking through soft items.'
+          },
+          {
+            emoji: '💰',
+            title: 'Professional Value',
+            description: 'Swiss-made quality at accessible pricing. Same knife used in professional bakeries and restaurants. Fibrox handle provides secure grip even when wet. Built to last decades with minimal care.'
+          }
+        ]} />
 
         {/* Why I Chose This */}
         <section className="mb-12">
@@ -357,15 +324,8 @@ export default function VictorinoxOffsetBreadKnifeReview() {
         </section>
 
         {/* Mid-Article CTA */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '20px',
-          margin: '25px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #0066cc',
-          textAlign: 'center'
-        }}>
-          <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
+        <ReviewCTABox variant="info">
+          <p className="my-2 text-lg font-bold">
             Convinced this is right for you?
           </p>
           <CTAVisibilityTracker
@@ -384,7 +344,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
               Check Current Price →
             </AffiliateButton>
           </CTAVisibilityTracker>
-        </div>
+        </ReviewCTABox>
 
         {/* Pros & Cons */}
         <section className="mb-12">
@@ -494,32 +454,20 @@ export default function VictorinoxOffsetBreadKnifeReview() {
         {/* Where to Buy Section */}
         <h2>Where to Buy</h2>
 
-        <p><strong>Updated:</strong> {new Date().toLocaleDateString('en-US', { 
-          year: 'numeric', 
-          month: 'long', 
-          day: 'numeric' 
+        <p><strong>Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
         })}</p>
 
-        <div className="merchant-ctas" style={{
-          background: '#f8f9fa',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px'
-        }}>
-          
-          <h3 style={{ marginTop: 0 }}>Compare Prices Across Retailers:</h3>
-          
-          <div style={{
-            background: 'white',
-            padding: '20px',
-            margin: '15px 0',
-            borderRadius: '6px',
-            border: '2px solid #ff9900'
-          }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
+        <div className="bg-gray-50 p-6 my-6 rounded-lg">
+          <h3 className="mt-0">Compare Prices Across Retailers:</h3>
+
+          <div className="bg-white p-5 my-4 rounded-md border-2 border-amber-500">
+            <div className="flex justify-between items-center flex-wrap gap-4">
               <div>
-                <h4 style={{ margin: '0 0 10px 0' }}>🏆 Amazon</h4>
-                <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Prime shipping | ✓ Excellent return policy | ✓ Often in stock</p>
+                <h4 className="m-0 mb-2">🏆 Amazon</h4>
+                <p className="my-1 text-gray-600">✓ Prime shipping | ✓ Excellent return policy | ✓ Often in stock</p>
               </div>
               <div>
                 <CTAVisibilityTracker
@@ -541,127 +489,72 @@ export default function VictorinoxOffsetBreadKnifeReview() {
               </div>
             </div>
           </div>
-          
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '20px', textAlign: 'center' }}>
+
+          <p className="text-sm text-gray-600 mt-5 text-center">
             💡 Also available at professional kitchenware retailers and restaurant supply stores. More retailers will be added soon for price comparison.
           </p>
-          
         </div>
 
         {/* Email Capture Section */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
-          
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>
-            🔥 Get My Complete Professional Knife Guide
-          </h3>
-          
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
-            Download my comprehensive guide to building a professional knife collection, developed over 45 years of cooking:
-          </p>
-          
-          <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
-            <li>✓ Which knives you actually need (and which are marketing gimmicks)</li>
-            <li>✓ Proper knife care and maintenance techniques</li>
-            <li>✓ How to choose quality over brand names</li>
-            <li>✓ Knife safety and proper cutting techniques</li>
-            <li>✓ Building a complete set on any budget</li>
-          </ul>
-          
-          <div style={{ textAlign: 'center', marginTop: '25px' }}>
-            <a 
-              href="/newsletter"
-              style={{
-                display: 'inline-block',
-                background: '#0066cc',
-                color: 'white',
-                padding: '15px 40px',
-                textDecoration: 'none',
-                borderRadius: '6px',
-                fontWeight: 'bold',
-                fontSize: '18px'
-              }}
-            >
-              Download Free Guide →
-            </a>
-          </div>
-          
-          <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
-            Instant delivery. No spam, ever. Unsubscribe anytime.
-          </p>
-          
-        </div>
+        <EmailCaptureBox
+          title="🔥 Get My Complete Professional Knife Guide"
+          description="Download my comprehensive guide to building a professional knife collection, developed over 45 years of cooking:"
+          benefits={[
+            '✓ Which knives you actually need (and which are marketing gimmicks)',
+            '✓ Proper knife care and maintenance techniques',
+            '✓ How to choose quality over brand names',
+            '✓ Knife safety and proper cutting techniques',
+            '✓ Building a complete set on any budget'
+          ]}
+        />
 
         {/* Final Verdict & Strong CTA */}
         <h2>The Bottom Line: My Professional Verdict</h2>
 
-        <div style={{
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          color: 'white',
-          padding: '30px',
-          borderRadius: '8px',
-          margin: '30px 0'
-        }}>
-          
-          <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
+        <ReviewCTABox variant="gradient">
+          <h3 className="text-white mt-0 text-2xl">
             After 24 Years of Professional Use...
           </h3>
-          
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+
+          <p className="text-lg leading-relaxed">
             The Victorinox offset bread knife has earned its place as one of my four essential daily knives. The offset handle design provides genuine ergonomic benefits during repetitive slicing tasks - your knuckles stay completely off the cutting board, reducing fatigue and preventing scrapes.
           </p>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+          <p className="text-lg leading-relaxed">
             This isn&apos;t just about bread. The wavy serrations handle tomatoes, cakes, citrus fruits, and anything with a delicate interior better than any straight edge. The fact that it never needs sharpening means it performs consistently for decades with minimal maintenance.
           </p>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+          <p className="text-lg leading-relaxed">
             At this price point, you&apos;re getting Swiss-made professional quality that&apos;s used in commercial bakeries worldwide. The same knife, the same edge, the same handle material - no compromises for the home market.
           </p>
-          
-          <div style={{
-            background: 'rgba(255,255,255,0.2)',
-            padding: '20px',
-            margin: '20px 0',
-            borderRadius: '6px'
-          }}>
-            <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
+
+          <div className="bg-white/20 p-5 my-5 rounded-md">
+            <p className="m-0 text-xl font-bold">
               Final Rating: ⭐⭐⭐⭐⭐ 4.5/5
             </p>
-            <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
+            <ul className="my-4 ml-5 text-base leading-relaxed">
               <li>Cutting Performance: 5/5</li>
               <li>Comfort & Ergonomics: 5/5</li>
               <li>Durability: 5/5</li>
               <li>Value: 4.5/5</li>
             </ul>
           </div>
-          
-          <p style={{ fontSize: '16px', marginBottom: 0 }}>
+
+          <p className="text-base mb-0">
             <strong>Would I buy this again?</strong> Without hesitation. This knife has paid for itself thousands of times over in comfort, consistency, and versatility. It&apos;s one of the tools I&apos;d grab first if I had to rebuild my kitchen from scratch.
           </p>
-          
-        </div>
+        </ReviewCTABox>
 
         {/* STRONG FINAL CTA */}
-        <div style={{
-          background: '#fff3cd',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '3px solid #ffc107'
-        }}>
-          
-          <h3 style={{ marginTop: 0, fontSize: '28px' }}>
+        <ReviewCTABox
+          variant="warning"
+          className="border-3"
+        >
+          <h3 className="mt-0 text-3xl">
             Ready to Experience Professional-Grade Bread Slicing?
           </h3>
-          
-          <p style={{ fontSize: '18px', margin: '20px 0' }}>
+
+          <p className="text-lg my-5">
             Join the thousands of professional chefs and serious home cooks who trust Victorinox for daily kitchen work.
           </p>
 
@@ -681,197 +574,77 @@ export default function VictorinoxOffsetBreadKnifeReview() {
               Check Current Price →
             </AffiliateButton>
           </CTAVisibilityTracker>
-          
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
+
+          <p className="text-sm text-gray-600 mt-5">
             💡 Professional bakery quality for your home kitchen. Hand wash recommended for decades of reliable performance.
           </p>
-          
-        </div>
+        </ReviewCTABox>
 
         {/* Related Products Section */}
         <h2>Complete Your Professional Knife Collection</h2>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
-          The Victorinox offset bread knife works best as part of a complete professional knife setup. 
+        <p className="text-base leading-relaxed mb-6">
+          The Victorinox offset bread knife works best as part of a complete professional knife setup.
           Based on 45 years of cooking experience, here are the knives I use alongside this serrated blade:
         </p>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '20px',
-          margin: '30px 0'
-        }}>
-          
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            borderRadius: '8px',
-            border: '1px solid #dee2e6'
-          }}>
-            <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef&apos;s Knife</h4>
-            <p>The workhorse of my kitchen. Handles 80% of all cutting tasks from chopping vegetables to breaking down proteins. The 8-inch length provides perfect balance and control for precision work.</p>
-            <p style={{ fontSize: '14px', color: '#666' }}>
-              <strong>20 years of daily use:</strong> Same knife from culinary school, still performing flawlessly
-            </p>
-            <Link 
-              href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
-              style={{
-                display: 'inline-block',
-                background: '#28a745',
-                color: 'white',
-                padding: '10px 20px',
-                textDecoration: 'none',
-                borderRadius: '4px',
-                marginTop: '10px',
-                fontWeight: 'bold'
-              }}
-            >
-              Read Full Review →
-            </Link>
-          </div>
+        <RelatedProductsGrid>
+          <RelatedProductCard
+            title='Victorinox 8" Chef&apos;s Knife'
+            description="The workhorse of my kitchen. Handles 80% of all cutting tasks from chopping vegetables to breaking down proteins. The 8-inch length provides perfect balance and control for precision work."
+            badge="20 years of daily use: Same knife from culinary school, still performing flawlessly"
+            href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
+          />
 
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            borderRadius: '8px',
-            border: '1px solid #dee2e6'
-          }}>
-            <h4 style={{ marginTop: 0 }}>Victorinox 10&quot; Chef&apos;s Knife</h4>
-            <p>When you need extra reach - perfect for large melons, whole heads of cabbage, and big cutting tasks. The longer blade enables efficient slicing strokes that save time during high-volume prep.</p>
-            <p style={{ fontSize: '14px', color: '#666' }}>
-              <strong>Restaurant kitchen essential:</strong> My go-to for prep work and large-format vegetables
-            </p>
-            <Link 
-              href="/reviews/victorinox-fibrox-10-inch-chefs-knife"
-              style={{
-                display: 'inline-block',
-                background: '#28a745',
-                color: 'white',
-                padding: '10px 20px',
-                textDecoration: 'none',
-                borderRadius: '4px',
-                marginTop: '10px',
-                fontWeight: 'bold'
-              }}
-            >
-              Read Full Review →
-            </Link>
-          </div>
+          <RelatedProductCard
+            title='Victorinox 10" Chef&apos;s Knife'
+            description="When you need extra reach - perfect for large melons, whole heads of cabbage, and big cutting tasks. The longer blade enables efficient slicing strokes that save time during high-volume prep."
+            badge="Restaurant kitchen essential: My go-to for prep work and large-format vegetables"
+            href="/reviews/victorinox-fibrox-10-inch-chefs-knife"
+          />
 
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            borderRadius: '8px',
-            border: '1px solid #dee2e6'
-          }}>
-            <h4 style={{ marginTop: 0 }}>Victorinox Granton Edge Boning Knife</h4>
-            <p>Flexible blade with Granton edge (air pockets) prevents meat from sticking during butchery work. Essential for trimming, deboning, and precise protein fabrication in professional kitchens.</p>
-            <p style={{ fontSize: '14px', color: '#666' }}>
-              <strong>Butcher shop quality:</strong> Same knife used by professional meat cutters worldwide
-            </p>
-            <Link 
-              href="/reviews/victorinox-granton-edge-boning-knife"
-              style={{
-                display: 'inline-block',
-                background: '#28a745',
-                color: 'white',
-                padding: '10px 20px',
-                textDecoration: 'none',
-                borderRadius: '4px',
-                marginTop: '10px',
-                fontWeight: 'bold'
-              }}
-            >
-              Read Full Review →
-            </Link>
-          </div>
-          
-        </div>
+          <RelatedProductCard
+            title="Victorinox Granton Edge Boning Knife"
+            description="Flexible blade with Granton edge (air pockets) prevents meat from sticking during butchery work. Essential for trimming, deboning, and precise protein fabrication in professional kitchens."
+            badge="Butcher shop quality: Same knife used by professional meat cutters worldwide"
+            href="/reviews/victorinox-granton-edge-boning-knife"
+          />
+        </RelatedProductsGrid>
 
-        <p style={{
-          textAlign: 'center',
-          margin: '30px 0',
-          fontSize: '18px',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
+        <p className="text-center my-8 text-lg p-5 bg-gray-50 rounded-md">
           <strong>Building a complete professional kitchen?</strong><br/>
-          <Link href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold', fontSize: '20px' }}>
+          <Link href="/kitchen-bundle" className="text-blue-600 font-bold text-xl hover:text-blue-800">
             See My Complete Kitchen Starter Kit →
           </Link>
         </p>
 
         {/* Footer Elements */}
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '30px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #6c757d'
-        }}>
-          <p style={{ margin: '10px 0' }}>
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
+        <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-600">
+          <p className="my-2">
+            <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long' 
+          <p className="my-2">
+            <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>💬 Have questions about serrated knives or bread slicing technique?</strong> Share your thoughts in the comments 
+          <p className="my-2">
+            <strong>💬 Have questions about serrated knives or bread slicing technique?</strong> Share your thoughts in the comments
             below—I read and respond to every comment.
           </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>🔧 Questions?</strong> <Link href="/contact" style={{ color: '#0066cc' }}>
+          <p className="my-2">
+            <strong>🔧 Questions?</strong> <Link href="/contact" className="text-blue-600 hover:text-blue-800">
             Contact me directly</Link> and I&apos;ll help you choose the right knife for your needs.
           </p>
         </div>
 
         {/* Author Bio Box */}
-        <div style={{
-          background: 'white',
-          padding: '25px',
-          margin: '30px 0',
-          border: '1px solid #dee2e6',
-          borderRadius: '8px',
-          display: 'grid',
-          gridTemplateColumns: '100px 1fr',
-          gap: '20px',
-          alignItems: 'start'
-        }}>
-          <Image 
-            src="/images/team/head-shot-1.jpg" 
-            alt="Scott Bradley, Professional Chef" 
-            width={100}
-            height={100}
-            style={{
-              borderRadius: '50%',
-              objectFit: 'cover'
-            }}
-          />
-          <div>
-            <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-            <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-              Professional Chef • 45 Years Cooking Experience
-            </p>
-            <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. 
-              A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from 
-              University of Montana. I&apos;ve used Victorinox knives daily since culinary school in 1998, testing them through 
-              hundreds of thousands of cuts in professional kitchens.
-            </p>
-            <Link href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-              Read more about my testing methodology →
-            </Link>
-          </div>
-        </div>
+        <AuthorBio />
 
         {/* FTC Disclosure */}
         <FTCDisclosure />

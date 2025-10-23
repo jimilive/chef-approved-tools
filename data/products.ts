@@ -128,119 +128,491 @@ export const sampleProducts: ProductCollection = {
     },
     {
       id: 'victorinox-fibrox-8',
-      slug: 'victorinox-fibrox-pro-8-chef-knife',
+      slug: 'victorinox-fibrox-8-inch-chefs-knife',
       name: 'Victorinox Fibrox Pro 8-Inch Chef\'s Knife',
       brand: 'Victorinox',
       model: '5.2063.20',
       category: 'knives',
       subcategory: 'chef-knives',
 
+      inStock: true,
+      availability: 'In stock',
+
+      affiliateLinks: [
+        {
+          url: 'https://amzn.to/4o7BUSV',
+          merchant: 'amazon',
+          tag: 'chefapprovedt-20',
+          lastChecked: '2025-10-14T00:00:00Z'
+        }
+      ],
+      vendors: [
+        {
+          name: 'Amazon',
+          url: 'https://amzn.to/4o7BUSV',
+          price: 45.99,
+          merchant: 'amazon',
+          tag: 'chefapprovedt-20',
+          inStock: true,
+          lastChecked: '2025-10-14T00:00:00Z',
+          commissionRate: 4.5
+        }
+      ],
+      primaryAffiliate: 'amazon',
+
+      reviews: {
+        rating: 4.8,
+        count: 8923,
+        verified: true,
+        source: 'Amazon',
+        lastUpdated: '2025-10-14T00:00:00Z'
+      },
+
+      expertRating: 5.0,
+
+      pros: [
+        'Perfect size for 80% of kitchen tasks',
+        'Professional quality at accessible pricing',
+        'Exceptionally well-balanced and maneuverable',
+        'Holds edge well with regular honing',
+        'Comfortable grip for extended use',
+        'Used in professional kitchens worldwide'
+      ],
+
+      cons: [
+        'Not ideal for very large cuts (use 10-inch for that)',
+        'Plain appearance (no fancy damascus patterns)',
+        'Lightweight feel may not appeal to everyone',
+        'Plastic handle lacks luxury aesthetic'
+      ],
+
+      description: 'The workhorse knife that handles 80% of kitchen tasks. More maneuverable than the 10-inch model, perfect for most home cooking tasks.',
+
+      expertOpinion: 'After 20 years of daily professional use, the Victorinox 8-inch chef\'s knife remains my workhorse blade. The thin, flexible blade delivers professional control, the fibrox handle prevents hand fatigue, and the edge retention rivals knives costing several times more.',
+
+      usageScenarios: [
+        'Daily meal prep',
+        'High-volume prep work',
+        'Professional kitchen use',
+        'Budget-conscious shopping'
+      ],
+
+      alternatives: [
+        'victorinox-fibrox-10-inch-chefs-knife',
+        'wusthof-classic-8'
+      ],
+
+      images: {
+        primary: 'https://www.chefapprovedtools.com/images/products/victorinox-fibrox-8-inch-chefs-knife/primary.jpg',
+        alt: 'Victorinox Fibrox Pro 8-inch chef knife'
+      },
+
+      tags: ['chef-knife', 'budget', 'swiss', 'nsf-certified', 'lightweight', 'professional'],
+
+      specifications: {
+        'blade-length': '8 inches',
+        'total-length': '12.75 inches',
+        'blade-material': 'High-carbon stainless steel',
+        'handle-material': 'Thermoplastic elastomer (Fibrox)',
+        'weight': '4.6 oz',
+        'nsf-certified': 'Yes',
+        'origin': 'Switzerland'
+      },
+
+      featured: true,
+      bestFor: ['Home cooks', 'Professional chefs', 'Budget shoppers', 'Culinary students'],
+
+      dateAdded: '2025-10-13T00:00:00Z',
+      lastUpdated: '2025-10-14T00:00:00Z',
+      updateFrequency: 'weekly'
+    },
+    {
+      id: 'victorinox-fibrox-10',
+      slug: 'victorinox-fibrox-10-inch-chefs-knife',
+      name: 'Victorinox Fibrox Pro 10-Inch Chef\'s Knife',
+      brand: 'Victorinox',
+      model: '5.2063.25',
+      category: 'knives',
+      subcategory: 'chef-knives',
 
       inStock: true,
       availability: 'In stock',
 
       affiliateLinks: [
         {
-          url: 'https://amzn.to/4bIa2lg',
+          url: 'https://amzn.to/4o6pPwW',
           merchant: 'amazon',
           tag: 'chefapprovedt-20',
-          lastChecked: new Date().toISOString()
+          lastChecked: '2025-10-14T00:00:00Z'
         }
       ],
       vendors: [
         {
           name: 'Amazon',
-          url: 'https://amzn.to/4bIa2lg',
-          price: 45.99,
+          url: 'https://amzn.to/4o6pPwW',
+          price: 48.99,
           merchant: 'amazon',
           tag: 'chefapprovedt-20',
           inStock: true,
-          lastChecked: new Date().toISOString(),
+          lastChecked: '2025-10-14T00:00:00Z',
           commissionRate: 4.5
-        },
-        {
-          name: 'Williams Sonoma',
-          url: '#', // Replace with actual ShareASale link
-          price: 49.95,
-          merchant: 'williams-sonoma',
-          inStock: true,
-          lastChecked: new Date().toISOString(),
-          commissionRate: 8.0
-        },
-        {
-          name: 'Sur La Table',
-          url: '#', // Replace with actual affiliate link
-          price: 47.95,
-          merchant: 'sur-la-table',
-          inStock: true,
-          lastChecked: new Date().toISOString(),
-          commissionRate: 6.0
         }
       ],
       primaryAffiliate: 'amazon',
-      
+
       reviews: {
-        rating: 4.6,
-        count: 8923,
+        rating: 4.8,
+        count: 6234,
         verified: true,
         source: 'Amazon',
-        lastUpdated: new Date().toISOString()
+        lastUpdated: '2025-10-14T00:00:00Z'
       },
-      
-      expertRating: 4.5,
-      
+
+      expertRating: 4.8,
+
       pros: [
-        'Incredible value for money',
-        'NSF certified for commercial use',
-        'Lightweight and agile',
-        'Non-slip Fibrox handle',
-        'Dishwasher safe (though not recommended)'
+        'Longer blade perfect for larger cuts',
+        'Ideal for breaking down proteins',
+        'Professional quality at accessible pricing',
+        'Same exceptional edge retention as 8-inch',
+        'NSF certified for commercial use'
       ],
-      
+
       cons: [
-        'Requires more frequent sharpening',
-        'Handle less premium feeling',
-        'Stamped blade, not forged'
+        'Less maneuverable than 8-inch for detailed work',
+        'Requires more counter space',
+        'May feel too large for some users'
       ],
-      
-      description: 'The workhorse of professional kitchens. This is what we use for prep work at the restaurant.',
-      
-      expertOpinion: 'Don\'t let the price fool you - this knife punches way above its weight. We have a dozen of these in our restaurant for prep work, and they take incredible abuse while maintaining performance. Perfect for home cooks who want professional quality without the premium price.',
-      
+
+      description: 'The longer blade is perfect for larger cuts and if you have bigger hands. I keep both sizes.',
+
+      expertOpinion: 'This is the knife I grab for breaking down proteins and chopping larger vegetables. The extra 2 inches makes a real difference when you\'re working fast.',
+
       usageScenarios: [
-        'High-volume prep work',
-        'Budget-conscious shopping',
-        'Culinary school',
-        'First professional knife'
+        'Breaking down whole chickens',
+        'Large vegetable prep',
+        'Bulk meal prep',
+        'Professional kitchen use'
       ],
-      
+
       alternatives: [
-        'wusthof-classic-8',
-        'mercer-culinary-genesis-8'
+        'victorinox-fibrox-8-inch-chefs-knife',
+        'wusthof-classic-10'
       ],
-      
+
       images: {
-        primary: 'https://images.unsplash.com/photo-1593618998160-e34014e67546?q=80&w=1200',
-        alt: 'Victorinox Fibrox Pro chef knife'
+        primary: 'https://www.chefapprovedtools.com/images/products/victorinox-fibrox-10-inch-chefs-knife/primary.jpg',
+        alt: 'Victorinox Fibrox Pro 10-inch chef knife'
       },
-      
-      tags: ['chef-knife', 'budget', 'swiss', 'nsf-certified', 'lightweight'],
-      
+
+      tags: ['chef-knife', 'budget', 'swiss', 'nsf-certified', 'professional', 'large-blade'],
+
       specifications: {
-        'blade-length': '8 inches',
-        'total-length': '12.75 inches',
+        'blade-length': '10 inches',
+        'total-length': '14.75 inches',
         'blade-material': 'High-carbon stainless steel',
-        'handle-material': 'Thermoplastic elastomer',
-        'weight': '4.6 oz',
+        'handle-material': 'Thermoplastic elastomer (Fibrox)',
+        'weight': '5.3 oz',
         'nsf-certified': 'Yes',
         'origin': 'Switzerland'
       },
-      
+
       featured: true,
-      bestFor: ['Budget shoppers', 'Culinary students', 'High-volume prep'],
-      
-      dateAdded: '2024-01-20T00:00:00Z',
-      lastUpdated: new Date().toISOString(),
+      bestFor: ['Professional chefs', 'Bulk prep', 'Large kitchens'],
+
+      dateAdded: '2025-10-13T00:00:00Z',
+      lastUpdated: '2025-10-14T00:00:00Z',
+      updateFrequency: 'weekly'
+    },
+    {
+      id: 'victorinox-offset-bread',
+      slug: 'victorinox-offset-bread-knife',
+      name: 'Victorinox Offset Bread Knife',
+      brand: 'Victorinox',
+      model: '5.2533.21',
+      category: 'knives',
+      subcategory: 'bread-knives',
+
+      inStock: true,
+      availability: 'In stock',
+
+      affiliateLinks: [
+        {
+          url: 'https://amzn.to/4nAIR4F',
+          merchant: 'amazon',
+          tag: 'chefapprovedt-20',
+          lastChecked: '2025-10-14T00:00:00Z'
+        }
+      ],
+      vendors: [
+        {
+          name: 'Amazon',
+          url: 'https://amzn.to/4nAIR4F',
+          price: 42.99,
+          merchant: 'amazon',
+          tag: 'chefapprovedt-20',
+          inStock: true,
+          lastChecked: '2025-10-14T00:00:00Z',
+          commissionRate: 4.5
+        }
+      ],
+      primaryAffiliate: 'amazon',
+
+      reviews: {
+        rating: 4.7,
+        count: 3421,
+        verified: true,
+        source: 'Amazon',
+        lastUpdated: '2025-10-14T00:00:00Z'
+      },
+
+      expertRating: 4.9,
+
+      pros: [
+        'Offset handle keeps knuckles off cutting board',
+        'Serrated edge never needs sharpening',
+        'Perfect for bread, tomatoes, and cakes',
+        'Comfortable ergonomic design',
+        'Professional quality at accessible pricing'
+      ],
+
+      cons: [
+        'Cannot be sharpened (serrated edge)',
+        'Larger than standard bread knives',
+        'May be too long for small kitchens'
+      ],
+
+      description: 'Offset handle keeps knuckles off the cutting board. Serrated edge never needs sharpening.',
+
+      expertOpinion: 'Bread, tomatoes, cakes - anything with a delicate exterior. The offset design is a game-changer for comfort.',
+
+      usageScenarios: [
+        'Slicing bread',
+        'Cutting tomatoes',
+        'Slicing cakes',
+        'Delicate pastries'
+      ],
+
+      alternatives: [
+        'wusthof-classic-bread-knife'
+      ],
+
+      images: {
+        primary: 'https://www.chefapprovedtools.com/images/products/victorinox-offset-bread-knife/primary.jpg',
+        alt: 'Victorinox offset serrated bread knife'
+      },
+
+      tags: ['bread-knife', 'serrated', 'offset-handle', 'swiss', 'professional'],
+
+      specifications: {
+        'blade-length': '8 inches',
+        'total-length': '13 inches',
+        'blade-material': 'High-carbon stainless steel',
+        'handle-material': 'Thermoplastic elastomer (Fibrox)',
+        'edge-type': 'Serrated',
+        'offset': 'Yes',
+        'origin': 'Switzerland'
+      },
+
+      featured: true,
+      bestFor: ['Bread bakers', 'Home cooks', 'Professional kitchens'],
+
+      dateAdded: '2025-10-13T00:00:00Z',
+      lastUpdated: '2025-10-14T00:00:00Z',
+      updateFrequency: 'weekly'
+    },
+    {
+      id: 'victorinox-granton-boning',
+      slug: 'victorinox-granton-edge-boning-knife',
+      name: 'Victorinox Granton Edge Boning Knife',
+      brand: 'Victorinox',
+      model: '5.6613.15',
+      category: 'knives',
+      subcategory: 'boning-knives',
+
+      inStock: true,
+      availability: 'In stock',
+
+      affiliateLinks: [
+        {
+          url: 'https://amzn.to/4pUDed1',
+          merchant: 'amazon',
+          tag: 'chefapprovedt-20',
+          lastChecked: '2025-10-14T00:00:00Z'
+        }
+      ],
+      vendors: [
+        {
+          name: 'Amazon',
+          url: 'https://amzn.to/4pUDed1',
+          price: 29.99,
+          merchant: 'amazon',
+          tag: 'chefapprovedt-20',
+          inStock: true,
+          lastChecked: '2025-10-14T00:00:00Z',
+          commissionRate: 4.5
+        }
+      ],
+      primaryAffiliate: 'amazon',
+
+      reviews: {
+        rating: 4.7,
+        count: 2134,
+        verified: true,
+        source: 'Amazon',
+        lastUpdated: '2025-10-14T00:00:00Z'
+      },
+
+      expertRating: 4.7,
+
+      pros: [
+        'Firm blade gets close to bones',
+        'Granton edge prevents sticking',
+        'Great for filleting smaller fish',
+        'Comfortable grip for detailed work',
+        'Professional quality at budget price'
+      ],
+
+      cons: [
+        'Too stiff for some filleting tasks',
+        'Requires practice to master',
+        'Not ideal for very large cuts of meat'
+      ],
+
+      description: 'Firm blade gets close to bones. Also great for filleting smaller fish.',
+
+      expertOpinion: 'Breaking down a whole chicken takes 3 minutes with this knife. The granton edge prevents sticking.',
+
+      usageScenarios: [
+        'Breaking down whole chickens',
+        'Filleting fish',
+        'Trimming fat from meat',
+        'Detailed butchery work'
+      ],
+
+      alternatives: [
+        'wusthof-classic-boning-knife'
+      ],
+
+      images: {
+        primary: 'https://www.chefapprovedtools.com/images/products/victorinox-granton-edge-boning-knife/primary.jpg',
+        alt: 'Victorinox Granton edge boning knife'
+      },
+
+      tags: ['boning-knife', 'granton-edge', 'swiss', 'professional', 'butchery'],
+
+      specifications: {
+        'blade-length': '6 inches',
+        'total-length': '11 inches',
+        'blade-material': 'High-carbon stainless steel',
+        'handle-material': 'Thermoplastic elastomer (Fibrox)',
+        'blade-flexibility': 'Firm',
+        'granton-edge': 'Yes',
+        'origin': 'Switzerland'
+      },
+
+      featured: true,
+      bestFor: ['Home butchers', 'Hunters', 'Professional kitchens'],
+
+      dateAdded: '2025-10-13T00:00:00Z',
+      lastUpdated: '2025-10-14T00:00:00Z',
+      updateFrequency: 'weekly'
+    },
+    {
+      id: 'victorinox-paring',
+      slug: 'victorinox-paring-knife',
+      name: 'Victorinox 4" Paring Knife',
+      brand: 'Victorinox',
+      model: '5.0703',
+      category: 'knives',
+      subcategory: 'paring-knives',
+
+      inStock: true,
+      availability: 'In stock',
+
+      affiliateLinks: [
+        {
+          url: 'https://amzn.to/4gVm0Le',
+          merchant: 'amazon',
+          tag: 'chefapprovedt-20',
+          lastChecked: '2025-10-14T00:00:00Z'
+        }
+      ],
+      vendors: [
+        {
+          name: 'Amazon',
+          url: 'https://amzn.to/4gVm0Le',
+          price: 9.99,
+          merchant: 'amazon',
+          tag: 'chefapprovedt-20',
+          inStock: true,
+          lastChecked: '2025-10-14T00:00:00Z',
+          commissionRate: 4.5
+        }
+      ],
+      primaryAffiliate: 'amazon',
+
+      reviews: {
+        rating: 4.7,
+        count: 12453,
+        verified: true,
+        source: 'Amazon',
+        lastUpdated: '2025-10-14T00:00:00Z'
+      },
+
+      expertRating: 4.6,
+
+      pros: [
+        'Essential for detailed work',
+        'Perfect for peeling, trimming, deveining shrimp',
+        'Extremely sharp out of box',
+        'Accessible pricing',
+        'NSF certified'
+      ],
+
+      cons: [
+        'Small size not suitable for large tasks',
+        'Plain handle design',
+        'Requires careful storage (blade exposed)'
+      ],
+
+      description: 'Essential for detailed work - peeling, trimming, deveining shrimp.',
+
+      expertOpinion: 'You can\'t do precision work with a chef\'s knife. This little guy handles everything from garlic to strawberries.',
+
+      usageScenarios: [
+        'Peeling fruit and vegetables',
+        'Deveining shrimp',
+        'Trimming garnishes',
+        'Detailed prep work'
+      ],
+
+      alternatives: [
+        'wusthof-classic-paring-knife'
+      ],
+
+      images: {
+        primary: 'https://www.chefapprovedtools.com/images/products/victorinox-paring-knife/primary.jpg',
+        alt: 'Victorinox 4-inch paring knife'
+      },
+
+      tags: ['paring-knife', 'swiss', 'nsf-certified', 'budget', 'essential'],
+
+      specifications: {
+        'blade-length': '4 inches',
+        'total-length': '7.75 inches',
+        'blade-material': 'High-carbon stainless steel',
+        'handle-material': 'Thermoplastic elastomer (Fibrox)',
+        'weight': '1.6 oz',
+        'nsf-certified': 'Yes',
+        'origin': 'Switzerland'
+      },
+
+      featured: false,
+      bestFor: ['Detail work', 'Home cooks', 'Professional kitchens'],
+
+      dateAdded: '2025-10-13T00:00:00Z',
+      lastUpdated: '2025-10-14T00:00:00Z',
       updateFrequency: 'weekly'
     }
   ],

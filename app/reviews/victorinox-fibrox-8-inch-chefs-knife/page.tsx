@@ -7,10 +7,22 @@ import AffiliateButton from '@/components/AffiliateButton'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
+import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox'
+import AuthorBio from '@/components/review/AuthorBio'
+import RelatedProductCard, { RelatedProductsGrid } from '@/components/review/RelatedProductCard'
+import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
+// Get product data from centralized database - SINGLE SOURCE OF TRUTH
+const product = getProductBySlug('victorinox-fibrox-8-inch-chefs-knife')
+if (!product) {
+  throw new Error('Product not found: victorinox-fibrox-8-inch-chefs-knife')
+}
 
+// Get the primary affiliate link - update once in products.ts, updates everywhere
+const affiliateLink = getPrimaryAffiliateLink(product)
 
 const productData = {
   name: "Victorinox fibrox 8 inch chefs knife",
@@ -23,7 +35,7 @@ const productData = {
   pros: [],
   cons: [],
   dateAdded: "2025-10-13",
-  lastUpdated: "2025-10-13",
+  lastUpdated: product.lastUpdated,
   images: {
     primary: "/logo.png"
   }
@@ -61,7 +73,7 @@ export default function VictorinoxFibrox8InchReview() {
             brand: "Victorinox",
             category: "Knives",
             affiliateLinks: [{
-              url: "https://amzn.to/3U4PsT1"
+              url: affiliateLink
             }],
             expertRating: 5,
             expertOpinion: "After 20 years of daily professional use, the Victorinox 8-inch chef's knife remains my workhorse blade. The thin, flexible blade delivers professional control, the fibrox handle prevents hand fatigue, and the edge retention rivals knives costing several times more. This is genuine professional equipment that happens to be accessible. Beyond basic quality standards, expensive knives buy you aesthetics and prestige, not better cutting performance. The Victorinox delivers what matters—sharpness, balance, durability—at pricing that makes professional-quality cooking accessible to everyone.",
@@ -186,31 +198,20 @@ export default function VictorinoxFibrox8InchReview() {
         </div>
 
         {/* Quick Rating Box */}
-        <div className="quick-stats" style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '20px 0',
-          borderLeft: '4px solid #28a745',
-          borderRadius: '4px'
-        }}>
-          <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
+        <QuickStatsBox variant="success">
+          <p className="m-0">
             <strong>⭐⭐⭐⭐⭐ 4.5/5</strong> | Based on 20 years of use<br/>
             <strong>✓ Professional Quality</strong> | <strong>✓ Exceptional Value</strong> | <strong>✓ Best in Class</strong><br/>
             <strong>✓ NSF Certified</strong> | <strong>✓ Swiss Made</strong>
           </p>
-        </div>
+        </QuickStatsBox>
 
         {/* Primary CTA Above the Fold */}
-        <div className="primary-cta" style={{
-          background: '#fff3cd',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '2px solid #ffc107'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Availability:</h3>
-
+        <ReviewCTABox
+          variant="warning"
+          title="Check Current Availability:"
+          disclaimer="💡 The knife I've used daily for 20 years. Professional quality at accessible pricing. We earn commission at no extra cost to you."
+        >
           <CTAVisibilityTracker
             ctaId="review-victorinox-fibrox-8-inch-chefs-knife-above-fold"
             position="above_fold"
@@ -218,7 +219,7 @@ export default function VictorinoxFibrox8InchReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/3U4PsT1"
+              href={affiliateLink}
               merchant="amazon"
               product="victorinox-fibrox-8-inch-chefs-knife"
               position="above_fold"
@@ -228,12 +229,7 @@ export default function VictorinoxFibrox8InchReview() {
               View on Amazon →
             </AffiliateButton>
           </CTAVisibilityTracker>
-
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
-            💡 The knife I&apos;ve used daily for 20 years. Professional quality at accessible pricing.<br/>
-            We earn commission at no extra cost to you.
-          </p>
-        </div>
+        </ReviewCTABox>
 
         {/* Quick Verdict */}
         <div className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-8">
@@ -246,56 +242,39 @@ export default function VictorinoxFibrox8InchReview() {
 
         {/* Value-Focused Professional Verdict */}
         <section className="mb-12">
-          <div className="verdict-box" style={{
-            background: '#f8f9fa',
-            padding: '25px',
-            margin: '25px 0',
-            borderRadius: '8px',
-            borderLeft: '4px solid #0066cc'
-          }}>
+          <div className="bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Professional Verdict: The Best Value in Kitchen Knives</h2>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               <strong>After using Victorinox for 20 years (including 10 years in professional kitchens),
               this accessible knife remains my daily workhorse.</strong> The thin blade delivers
               professional control, the fibrox handle prevents fatigue during extended prep sessions,
               and the edge retention rivals knives costing several times more.
             </p>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               Here&apos;s the truth about expensive knives: Beyond basic quality standards, you&apos;re paying for
               aesthetics, brand prestige, and premium materials that don&apos;t significantly improve cutting
               performance. The Victorinox delivers what matters—sharpness, balance, durability—at a
               fraction of typical premium knife pricing.
             </p>
 
-            <div style={{
-              background: 'white',
-              padding: '15px',
-              marginTop: '20px',
-              borderRadius: '4px'
-            }}>
-              <p style={{ margin: '10px 0' }}>
+            <div className="bg-white p-4 mt-5 rounded">
+              <p className="my-2">
                 <strong>✓ Perfect For:</strong> New cooks, college students, budget-conscious home cooks,
                 professional kitchens, anyone wanting quality without overpaying, gifts for aspiring cooks
               </p>
-              <p style={{ margin: '10px 0' }}>
+              <p className="my-2">
                 <strong>✗ Consider Upgrading If:</strong> You want premium materials (Damascus steel, exotic
                 woods), you&apos;re a knife collector who values aesthetics, you need a heavier, more substantial feel
               </p>
             </div>
 
-            <div style={{
-              background: '#e7f3ff',
-              padding: '15px',
-              marginTop: '15px',
-              borderRadius: '4px',
-              borderLeft: '4px solid #0066cc'
-            }}>
-              <p style={{ margin: 0, fontSize: '16px', fontWeight: 'bold' }}>
+            <div className="bg-blue-50 p-4 mt-4 rounded border-l-4 border-blue-600">
+              <p className="m-0 text-base font-bold">
                 💡 Professional Reality Check
               </p>
-              <p style={{ margin: '10px 0 0 0', fontSize: '14px' }}>
+              <p className="mt-2 mb-0 text-sm">
                 In 24 years in professional kitchens, I&apos;ve seen expensive premium knives and
                 Victorinox knives side-by-side. The expensive knives look prettier on the magnetic strip.
                 The Victorinox knives get used daily because they work better for actual cooking.
@@ -308,38 +287,28 @@ export default function VictorinoxFibrox8InchReview() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">Why This Accessible Knife Outperforms Premium Knives</h2>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '20px',
-            margin: '30px 0'
-          }}>
-
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>🎯</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Perfect Balance</h3>
-              <p>Lightweight fibrox handle and thin, flexible blade deliver professional control. No hand fatigue during extended prep work.</p>
-            </div>
-
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>⚔️</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Razor-Sharp Edge</h3>
-              <p>Swiss-made high-carbon stainless steel holds edge exceptionally well. Sharpens easily when needed. Professional performance at every price point.</p>
-            </div>
-
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>✓</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>NSF Restaurant Certified</h3>
-              <p>Meets commercial kitchen standards. The same knife in professional kitchens worldwide—not a &quot;home version.&quot;</p>
-            </div>
-
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>💰</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Unbeatable Value</h3>
-              <p>Professional quality at accessible pricing. Delivers 90% of premium knife performance at a fraction of the cost. No compromises where it matters.</p>
-            </div>
-
-          </div>
+          <FeatureGrid features={[
+            {
+              emoji: '🎯',
+              title: 'Perfect Balance',
+              description: 'Lightweight fibrox handle and thin, flexible blade deliver professional control. No hand fatigue during extended prep work.'
+            },
+            {
+              emoji: '⚔️',
+              title: 'Razor-Sharp Edge',
+              description: 'Swiss-made high-carbon stainless steel holds edge exceptionally well. Sharpens easily when needed. Professional performance at every price point.'
+            },
+            {
+              emoji: '✓',
+              title: 'NSF Restaurant Certified',
+              description: 'Meets commercial kitchen standards. The same knife in professional kitchens worldwide—not a "home version."'
+            },
+            {
+              emoji: '💰',
+              title: 'Unbeatable Value',
+              description: 'Professional quality at accessible pricing. Delivers 90% of premium knife performance at a fraction of the cost. No compromises where it matters.'
+            }
+          ]} />
         </section>
 
         {/* Real Restaurant Use */}
@@ -390,7 +359,7 @@ export default function VictorinoxFibrox8InchReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/3U4PsT1"
+              href={affiliateLink}
               merchant="amazon"
               product="victorinox-fibrox-8-inch-chefs-knife"
               position="mid_article"
@@ -779,7 +748,7 @@ export default function VictorinoxFibrox8InchReview() {
                     merchant="amazon"
                   >
                     <AffiliateButton
-                      href="https://amzn.to/3U4PsT1"
+                      href="https://amzn.to/4o7BUSV"
                       merchant="amazon"
                       product="victorinox-fibrox-8-inch-chefs-knife"
                       position="related_products"
@@ -800,55 +769,17 @@ export default function VictorinoxFibrox8InchReview() {
         </section>
 
         {/* Email Capture Section */}
-        <section className="mb-12">
-          <div style={{
-            background: '#e7f3ff',
-            padding: '30px',
-            margin: '30px 0',
-            borderRadius: '8px',
-            borderLeft: '4px solid #0066cc'
-          }}>
-
-            <h3 style={{ marginTop: 0, fontSize: '24px' }}>
-              🔥 Build a Professional Kitchen on a Budget
-            </h3>
-
-            <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
-              Download my complete guide to equipping a professional-quality kitchen without overspending:
-            </p>
-
-            <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
-              <li>✓ Complete budget kitchen equipment checklist</li>
-              <li>✓ Where to invest vs where to save</li>
-              <li>✓ 10 must-have tools that perform like professional equipment</li>
-              <li>✓ Knife care and sharpening guide</li>
-              <li>✓ How to spot quality at accessible prices</li>
-            </ul>
-
-            <div style={{ textAlign: 'center', marginTop: '25px' }}>
-              <Link
-                href="/newsletter"
-                style={{
-                  display: 'inline-block',
-                  background: '#0066cc',
-                  color: 'white',
-                  padding: '15px 40px',
-                  textDecoration: 'none',
-                  borderRadius: '6px',
-                  fontWeight: 'bold',
-                  fontSize: '18px'
-                }}
-              >
-                Download Free Guide →
-              </Link>
-            </div>
-
-            <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
-              Instant delivery. No spam, ever. Unsubscribe anytime.
-            </p>
-
-          </div>
-        </section>
+        <EmailCaptureBox
+          title="🔥 Build a Professional Kitchen on a Budget"
+          description="Download my complete guide to equipping a professional-quality kitchen without overspending:"
+          benefits={[
+            '✓ Complete budget kitchen equipment checklist',
+            '✓ Where to invest vs where to save',
+            '✓ 10 must-have tools that perform like professional equipment',
+            '✓ Knife care and sharpening guide',
+            '✓ How to spot quality at accessible prices'
+          ]}
+        />
 
         {/* Bottom Line with Value-Focused Strong CTA */}
         <section className="mb-12">
@@ -930,7 +861,7 @@ export default function VictorinoxFibrox8InchReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/3U4PsT1"
+                href="https://amzn.to/4o7BUSV"
                 merchant="amazon"
                 product="victorinox-fibrox-8-inch-chefs-knife"
                 position="final_cta"
@@ -1127,36 +1058,9 @@ export default function VictorinoxFibrox8InchReview() {
             </p>
           </div>
 
-          <div style={{
-            background: 'white',
-            padding: '25px',
-            margin: '30px 0',
-            border: '1px solid #dee2e6',
-            borderRadius: '8px',
-            display: 'grid',
-            gridTemplateColumns: '100px 1fr',
-            gap: '20px',
-            alignItems: 'start'
-          }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            
-          <Image src="/images/team/head-shot-1.jpg" alt="Scott Bradley, Professional Chef" width={100} height={100} />
-            <div>
-              <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-              <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-                Professional Chef • 45 Years Cooking Experience
-              </p>
-              <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
-                A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-                University of Montana. Passionate about making professional cooking accessible through
-                budget-friendly equipment recommendations.
-              </p>
-              <Link href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-                Read more about my testing methodology →
-              </Link>
-            </div>
-          </div>
+          <AuthorBio
+            bio="Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from University of Montana. Passionate about making professional cooking accessible through budget-friendly equipment recommendations."
+          />
         </section>
 
         {/* FTC Disclosure */}

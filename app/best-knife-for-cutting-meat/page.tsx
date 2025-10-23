@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link'
-import { Star, DollarSign, Award, TrendingUp, Shield, Scissors } from 'lucide-react'
+import { Star, DollarSign, Award, TrendingUp, Scissors } from 'lucide-react'
 import { generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
