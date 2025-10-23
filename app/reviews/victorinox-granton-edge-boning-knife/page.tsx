@@ -9,6 +9,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import FAQBox, { FAQGrid, type FAQItem } from '@/components/review/FAQBox'
 
 export const metadata: Metadata = {
   alternates: {
@@ -728,49 +729,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
         <section className="mb-12" id="faq">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">Frequently Asked Questions</h2>
 
-          <div className="space-y-4">
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Do I really need a boning knife?</h3>
-              <p className="text-gray-700">
-                If you buy whole chickens, fish, or other proteins with bones, yes. A boning knife cuts butchery time in half and reduces waste by 5-10% compared to using a chef&apos;s knife. It pays for itself quickly in saved money buying whole instead of pre-cut.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">What&apos;s the advantage of the granton edge?</h3>
-              <p className="text-gray-700">
-                The oval indentations create air pockets that prevent meat from sticking to the blade during long cuts. This makes a huge difference when breaking down chickens or filleting fish - the blade glides smoothly instead of dragging through the meat.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Is this knife flexible enough for filleting fish?</h3>
-              <p className="text-gray-700">
-                Yes. The blade has semi-flexible construction that works excellently for both butchery and filleting. It&apos;s not as flexible as a dedicated filleting knife, but it handles most fish filleting tasks very well while also being rigid enough for chicken and pork.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Can I use this for regular cutting tasks?</h3>
-              <p className="text-gray-700">
-                Not recommended. This is a specialized tool designed for working around bones and joints. For vegetables and general cutting, use a chef&apos;s knife. The narrow, flexible blade isn&apos;t suited for chopping or general prep work.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">How do I sharpen a flexible boning knife?</h3>
-              <p className="text-gray-700">
-                Use a whetstone or have it professionally sharpened. The flexible blade requires a light touch when sharpening. Maintain a 15-20 degree angle and use less pressure than you would on a chef&apos;s knife. Professional sharpening every few months works well for most home users.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Is the Victorinox as good as premium brands?</h3>
-              <p className="text-gray-700">
-                For practical performance, yes. Victorinox is the standard in professional kitchens because it delivers 95% of premium knife performance at less than half the cost. The steel quality and construction are excellent. Premium brands offer slightly better fit and finish, but not better cutting performance.
-              </p>
-            </div>
-          </div>
+          <FAQGrid faqs={faqData} />
         </section>
 
         {/* Structured Data Schemas */}
