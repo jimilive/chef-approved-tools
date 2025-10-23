@@ -1,5 +1,53 @@
 # TODO - Chef Approved Tools
 
+
+the following was manually added by user (ANYTHING BEFORE WHERE IT SAYS LAST UPDATED)
+please fix this issue: Invalid top level element "null"
+Items with this issue are invalid. Invalid items are not eligible for Google Search's rich results
+First detected: 10/22/25
+Done fixing?
+Affected pages
+1
+7/24/25
+8/4/25
+8/15/25
+8/26/25
+9/7/25
+9/19/25
+9/30/25
+10/11/25
+3
+2
+1
+0
+Examples
+
+URL	Last crawled
+https://www.chefapprovedtools.com/blog/dutch-oven-size-guide-which-quart-size
+
+
+
+Oct 22, 2025
+
+
+execute the 5 suggestions discussed and in progress the morning of thursday oct 23
+
+please analyze entire site/project against this todo.md file and update the file
+
+update status of blog writing
+
+change text for tiers in review pages (yellow box)
+
+discuss possibly adding alternative products in review pages in case product is out of stock or link is broken. really not sure if this is a good idea or not.
+
+update 'download guide' email capture as that is not how it works
+
+check cookie choices. it seems 'necessary only' is the only choice, but doesnt that choice reduce our tracking abilities. we need to examine best practice for this but still give them the choice because i always select necessary only myself (LOL)
+
+
+
+
+
 **Last Updated:** October 17, 2025
 
 ## 📊 PROJECT STATUS SUMMARY
