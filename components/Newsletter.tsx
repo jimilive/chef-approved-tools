@@ -4,15 +4,33 @@ import React, { useState } from 'react';
 import { trackNewsletterSignup } from '@/lib/analytics';
 
 export default function Newsletter() {
+  const [firstName, setFirstName] = useState('');
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle newsletter signup logic here
-    trackNewsletterSignup('footer-newsletter');
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+
+    try {
+      await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName,
+          email,
+          source: 'footer-newsletter',
+          leadMagnet: 'professional-kitchen-tools'
+        })
+      });
+
+      trackNewsletterSignup('footer-newsletter');
+      setIsSubmitted(true);
+      setFirstName('');
+      setEmail('');
+      setTimeout(() => setIsSubmitted(false), 3000);
+    } catch (error) {
+      console.error('Newsletter signup error:', error);
+    }
   };
 
   return (
@@ -36,10 +54,21 @@ export default function Newsletter() {
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
+                type="text"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                placeholder="First name"
+                autoCapitalize="words"
+                autoCorrect="off"
+                autoComplete="given-name"
+                className="w-full px-4 py-3 rounded-md text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-orange-300 focus:outline-none border border-gray-200"
+                required
+              />
+              <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
+                placeholder="Email address"
                 autoCapitalize="none"
                 autoCorrect="off"
                 autoComplete="email"

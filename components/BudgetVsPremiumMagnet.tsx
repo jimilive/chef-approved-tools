@@ -12,13 +12,14 @@ export default function BudgetVsPremiumMagnet({
   variant = 'inline',
   onSignup
 }: BudgetVsPremiumMagnetProps) {
+  const [firstName, setFirstName] = useState('')
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!email) return
+    if (!firstName || !email) return
 
     setIsSubmitting(true)
 
@@ -27,6 +28,7 @@ export default function BudgetVsPremiumMagnet({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          firstName,
           email,
           source: 'professional-kitchen-bundle',
           leadMagnet: 'professional-kitchen-tools',
@@ -156,8 +158,21 @@ export default function BudgetVsPremiumMagnet({
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <input
+            type="text"
+            placeholder="First name"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+            autoCapitalize="words"
+            autoCorrect="off"
+            autoComplete="given-name"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none text-gray-900"
+          />
+        </div>
+        <div>
+          <input
             type="email"
-            placeholder="Enter your email for instant download"
+            placeholder="Email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required

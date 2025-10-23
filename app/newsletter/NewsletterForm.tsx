@@ -3,6 +3,7 @@
 import { useState } from 'react'
 
 export default function NewsletterForm() {
+  const [firstName, setFirstName] = useState('')
   const [email, setEmail] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState('')
@@ -20,6 +21,7 @@ export default function NewsletterForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          firstName,
           email,
           source: 'newsletter_page',
           leadMagnet: 'professional-kitchen-tools'
@@ -31,6 +33,7 @@ export default function NewsletterForm() {
       if (data.success) {
         setIsSuccess(true)
         setMessage(data.message)
+        setFirstName('')
         setEmail('')
       } else {
         setIsSuccess(false)
@@ -61,8 +64,28 @@ export default function NewsletterForm() {
 
       <form onSubmit={handleSubmit} style={{ maxWidth: '400px', margin: '0 auto' }}>
         <input
+          type="text"
+          placeholder="First name"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          required
+          disabled={isLoading}
+          autoCapitalize="words"
+          autoCorrect="off"
+          autoComplete="given-name"
+          style={{
+            width: '100%',
+            padding: '12px 16px',
+            borderRadius: '8px',
+            border: '1px solid #d1d5db',
+            fontSize: '1rem',
+            marginBottom: '16px',
+            opacity: isLoading ? 0.6 : 1
+          }}
+        />
+        <input
           type="email"
-          placeholder="Your email address"
+          placeholder="Email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required

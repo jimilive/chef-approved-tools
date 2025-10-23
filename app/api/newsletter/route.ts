@@ -2,7 +2,14 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, source, leadMagnet } = await request.json()
+    const { firstName, email, source, leadMagnet } = await request.json()
+
+    if (!firstName) {
+      return NextResponse.json(
+        { error: 'First name is required' },
+        { status: 400 }
+      )
+    }
 
     if (!email) {
       return NextResponse.json(
@@ -44,6 +51,7 @@ export async function POST(request: NextRequest) {
         body: JSON.stringify({
           contact: {
             email: email,
+            firstName: firstName,
             fieldValues: [
               {
                 field: '1', // Assuming field 1 is for source tracking - you'll configure this in ActiveCampaign
@@ -111,6 +119,7 @@ export async function POST(request: NextRequest) {
 
     // Log successful signup for your records
     console.log('Newsletter signup successful:', {
+      firstName,
       email,
       source,
       leadMagnet,
@@ -122,6 +131,7 @@ export async function POST(request: NextRequest) {
       success: true,
       message: 'Successfully subscribed! Check your email for your free guide.',
       data: {
+        firstName,
         email,
         source,
         leadMagnet
