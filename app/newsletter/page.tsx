@@ -23,46 +23,6 @@ export default function NewsletterPage() {
 
       <NewsletterForm />
 
-      <div style={{ backgroundColor: '#f8fafc', borderRadius: '12px', padding: '32px', margin: '48px auto', maxWidth: '600px', textAlign: 'left' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '16px', textAlign: 'center' }}>
-          Recent Newsletter Topics
-        </h2>
-        <div style={{ color: '#64748b', lineHeight: '1.7' }}>
-          <div style={{ marginBottom: '20px', paddingBottom: '20px', borderBottom: '1px solid #e2e8f0' }}>
-            <h3 style={{ fontSize: '1.125rem', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>
-              Why Your Cast Iron Isn&rsquo;t Non-Stick (And How to Fix It)
-            </h3>
-            <p style={{ fontSize: '0.95rem', marginBottom: '8px' }}>
-              The paper towel seasoning technique that works better than the smoking oven method.
-              Plus: the one thing you&rsquo;re doing that strips seasoning faster than soap.
-            </p>
-            <span style={{ fontSize: '0.875rem', color: '#94a3b8' }}>December 2024</span>
-          </div>
-
-          <div style={{ marginBottom: '20px', paddingBottom: '20px', borderBottom: '1px solid #e2e8f0' }}>
-            <h3 style={{ fontSize: '1.125rem', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>
-              The $40 Knife vs. The $200 Knife: What You Actually Get
-            </h3>
-            <p style={{ fontSize: '0.95rem', marginBottom: '8px' }}>
-              I&rsquo;ve used both for 20 years. Here&rsquo;s the honest breakdown of what that extra $160 buys
-              (spoiler: sometimes nothing, sometimes everything).
-            </p>
-            <span style={{ fontSize: '0.875rem', color: '#94a3b8' }}>November 2024</span>
-          </div>
-
-          <div>
-            <h3 style={{ fontSize: '1.125rem', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>
-              Commercial Dishwasher Secrets for Home Kitchens
-            </h3>
-            <p style={{ fontSize: '0.95rem', marginBottom: '8px' }}>
-              The pre-rinse technique that makes hand-washing 3x faster, plus which &quot;dishwasher-safe&quot;
-              items actually aren&rsquo;t (learned this the hard way).
-            </p>
-            <span style={{ fontSize: '0.875rem', color: '#94a3b8' }}>November 2024</span>
-          </div>
-        </div>
-      </div>
-
       <div style={{ maxWidth: '600px', margin: '0 auto', padding: '32px 0' }}>
         <p style={{ fontSize: '0.875rem', color: '#94a3b8', textAlign: 'center', lineHeight: '1.6' }}>
           Join 2,000+ home cooks getting weekly insights from 24 years of professional kitchen experience.
