@@ -1,23 +1,61 @@
-import { Product, ProductCollection } from '@/types/product'
-import { sampleProducts } from '@/data/products'
+import { Product } from '@/types/product'
+import { supabase } from '@/lib/supabase'
 
 /**
- * Get a product by its slug from the products database
- * @param slug - The product slug (e.g., 'victorinox-fibrox-8-inch-chefs-knife')
- * @returns The product object or undefined if not found
+ * Map Supabase database row to Product type
  */
-export function getProductBySlug(slug: string): Product | undefined {
-  // Search through all categories in the product collection
-  const allProducts = [
-    ...sampleProducts.knives,
-    ...sampleProducts.cookware,
-    ...sampleProducts.appliances,
-    ...sampleProducts.tools,
-    ...sampleProducts.baking,
-    ...sampleProducts.storage
-  ]
+function mapDatabaseToProduct(dbProduct: any): Product {
+  return {
+    id: dbProduct.id,
+    slug: dbProduct.slug,
+    name: dbProduct.name,
+    brand: dbProduct.brand || '',
+    model: dbProduct.model,
+    category: dbProduct.category,
+    subcategory: dbProduct.subcategory,
+    inStock: dbProduct.in_stock ?? true,
+    availability: dbProduct.availability,
+    affiliateLinks: dbProduct.affiliate_links || [],
+    vendors: dbProduct.vendors || [],
+    primaryAffiliate: dbProduct.primary_affiliate || 'amazon',
+    reviews: dbProduct.reviews || { rating: 0, count: 0, verified: false, source: '', lastUpdated: '' },
+    expertRating: dbProduct.expert_rating,
+    pros: dbProduct.pros || [],
+    cons: dbProduct.cons || [],
+    description: dbProduct.description || '',
+    expertOpinion: dbProduct.expert_opinion || '',
+    usageScenarios: dbProduct.usage_scenarios || [],
+    alternatives: dbProduct.alternatives || [],
+    images: dbProduct.images || { primary: '', alt: '' },
+    videos: [],
+    tags: [],
+    specifications: {},
+    featured: false,
+    bestFor: [],
+    dateAdded: dbProduct.created_at,
+    lastUpdated: dbProduct.updated_at,
+    updateFrequency: 'monthly' as const
+  }
+}
 
-  return allProducts.find(product => product.slug === slug)
+/**
+ * Get a product by its slug from Supabase
+ * @param slug - The product slug (e.g., 'victorinox-fibrox-8-inch-chefs-knife')
+ * @returns The product object or null if not found
+ */
+export async function getProductBySlug(slug: string): Promise<Product | null> {
+  const { data, error } = await supabase
+    .from('products')
+    .select('*')
+    .eq('slug', slug)
+    .single()
+
+  if (error || !data) {
+    console.error('Error fetching product:', error)
+    return null
+  }
+
+  return mapDatabaseToProduct(data)
 }
 
 /**
@@ -25,10 +63,18 @@ export function getProductBySlug(slug: string): Product | undefined {
  * @param slugs - Array of product slugs
  * @returns Array of products (excludes any not found)
  */
-export function getProductsBySlugs(slugs: string[]): Product[] {
-  return slugs
-    .map(slug => getProductBySlug(slug))
-    .filter((product): product is Product => product !== undefined)
+export async function getProductsBySlugs(slugs: string[]): Promise<Product[]> {
+  const { data, error } = await supabase
+    .from('products')
+    .select('*')
+    .in('slug', slugs)
+
+  if (error || !data) {
+    console.error('Error fetching products:', error)
+    return []
+  }
+
+  return data.map(mapDatabaseToProduct)
 }
 
 /**
@@ -51,8 +97,18 @@ export function getPrimaryAffiliateLink(product: Product): string {
  * @param category - Category name (e.g., 'knives', 'cookware')
  * @returns Array of products in that category
  */
-export function getProductsByCategory(category: keyof ProductCollection): Product[] {
-  return sampleProducts[category] || []
+export async function getProductsByCategory(category: string): Promise<Product[]> {
+  const { data, error } = await supabase
+    .from('products')
+    .select('*')
+    .eq('category', category)
+
+  if (error || !data) {
+    console.error('Error fetching products by category:', error)
+    return []
+  }
+
+  return data.map(mapDatabaseToProduct)
 }
 
 /**
@@ -62,16 +118,24 @@ export function getProductsByCategory(category: keyof ProductCollection): Produc
  * @param limit - Maximum number of products to return (default: 3)
  * @returns Array of related products
  */
-export function getRelatedProducts(
+export async function getRelatedProducts(
   currentProductSlug: string,
-  category: keyof ProductCollection,
+  category: string,
   limit: number = 3
-): Product[] {
-  const categoryProducts = getProductsByCategory(category)
+): Promise<Product[]> {
+  const { data, error } = await supabase
+    .from('products')
+    .select('*')
+    .eq('category', category)
+    .neq('slug', currentProductSlug)
+    .limit(limit)
 
-  return categoryProducts
-    .filter(product => product.slug !== currentProductSlug)
-    .slice(0, limit)
+  if (error || !data) {
+    console.error('Error fetching related products:', error)
+    return []
+  }
+
+  return data.map(mapDatabaseToProduct)
 }
 
 /**

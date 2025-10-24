@@ -15,32 +15,6 @@ import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
-// Get product data from centralized database - SINGLE SOURCE OF TRUTH
-const product = getProductBySlug('victorinox-fibrox-8-inch-chefs-knife')
-if (!product) {
-  throw new Error('Product not found: victorinox-fibrox-8-inch-chefs-knife')
-}
-
-// Get the primary affiliate link - update once in products.ts, updates everywhere
-const affiliateLink = getPrimaryAffiliateLink(product)
-
-const productData = {
-  name: "Victorinox fibrox 8 inch chefs knife",
-  slug: "victorinox-fibrox-8-inch-chefs-knife",
-  brand: "Brand Name",
-  category: "Kitchen Equipment",
-  affiliateLinks: [],
-  expertRating: 4.5,
-  expertOpinion: "Professional-grade quality.",
-  pros: [],
-  cons: [],
-  dateAdded: "2025-10-13",
-  lastUpdated: product.lastUpdated,
-  images: {
-    primary: "/logo.png"
-  }
-};
-
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife',
@@ -50,7 +24,32 @@ export const metadata: Metadata = {
   description: 'Victorinox 8" Fibrox tested 20 years: approximately $50 knife that beats $200+ blades. NSF certified, dishwasher safe. The workhorse in professional kitchens.',
 }
 
-export default function VictorinoxFibrox8InchReview() {
+export default async function VictorinoxFibrox8InchReview() {
+  // Get product data from centralized Supabase database - SINGLE SOURCE OF TRUTH
+  const product = await getProductBySlug('victorinox-fibrox-8-inch-chefs-knife')
+  if (!product) {
+    throw new Error('Product not found: victorinox-fibrox-8-inch-chefs-knife')
+  }
+
+  // Get the primary affiliate link - update once in Supabase, updates everywhere
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  const productData = {
+    name: "Victorinox fibrox 8 inch chefs knife",
+    slug: "victorinox-fibrox-8-inch-chefs-knife",
+    brand: "Brand Name",
+    category: "Kitchen Equipment",
+    affiliateLinks: [],
+    expertRating: 4.5,
+    expertOpinion: "Professional-grade quality.",
+    pros: [],
+    cons: [],
+    dateAdded: "2025-10-13",
+    lastUpdated: product.lastUpdated,
+    images: {
+      primary: "/logo.png"
+    }
+  };
   return (
     <div className="min-h-screen bg-gray-50">
       <ProductViewTrackerWrapper
