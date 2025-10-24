@@ -44,6 +44,10 @@ update 'download guide' email capture as that is not how it works
 
 check cookie choices. it seems 'necessary only' is the only choice, but doesnt that choice reduce our tracking abilities. we need to examine best practice for this but still give them the choice because i always select necessary only myself (LOL)
 
+implement index now code per clause.ai
+
+review and add affiliate programs
+
 
 
 

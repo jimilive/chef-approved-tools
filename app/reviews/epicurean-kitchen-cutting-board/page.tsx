@@ -7,6 +7,10 @@ import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import FAQBox, { FAQGrid } from '@/components/review/FAQBox'
+import ReviewCTABox from '@/components/review/ReviewCTABox'
+import EmailCaptureBox from '@/components/review/EmailCaptureBox'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   alternates: {
@@ -624,64 +628,64 @@ export default function EpicureanKitchenCuttingBoardReview() {
             Comparison vs. Competitors
           </h2>
 
-          <div style={{ overflowX: 'auto', margin: '20px 0' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
+          <div className="overflow-x-auto my-5">
+            <table className="w-full border-collapse text-sm">
               <thead>
-                <tr style={{ background: '#f8f9fa' }}>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Feature</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Epicurean</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>John Boos Maple</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Bamboo Board</th>
+                <tr className="bg-gray-100">
+                  <th className="p-3 text-left border-b-2 border-gray-300">Feature</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">Epicurean</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">John Boos Maple</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">Bamboo Board</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Price Range</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold', color: '#16a34a' }}>$32-40</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$80-150</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$15-30</td>
+                  <td className="p-3 border-b border-gray-300">Price Range</td>
+                  <td className="p-3 border-b border-gray-300 font-bold text-green-600">$32-40</td>
+                  <td className="p-3 border-b border-gray-300">$80-150</td>
+                  <td className="p-3 border-b border-gray-300">$15-30</td>
                 </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Dishwasher Safe</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>✓ Yes</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✗ Hand wash only</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✗ Hand wash only</td>
-                </tr>
-                <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Material</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Wood fiber composite</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Solid maple</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Bamboo</td>
-                </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Warping Risk</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>None (dimensionally stable)</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Low (with proper care)</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>High (prone to warping)</td>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Dishwasher Safe</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">✓ Yes</td>
+                  <td className="p-3 border-b border-gray-300">✗ Hand wash only</td>
+                  <td className="p-3 border-b border-gray-300">✗ Hand wash only</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Maintenance</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>None</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Monthly oiling required</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Monthly oiling required</td>
+                  <td className="p-3 border-b border-gray-300">Material</td>
+                  <td className="p-3 border-b border-gray-300">Wood fiber composite</td>
+                  <td className="p-3 border-b border-gray-300">Solid maple</td>
+                  <td className="p-3 border-b border-gray-300">Bamboo</td>
                 </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Porosity</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>Non-porous</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Porous (can harbor bacteria)</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Porous</td>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Warping Risk</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">None (dimensionally stable)</td>
+                  <td className="p-3 border-b border-gray-300">Low (with proper care)</td>
+                  <td className="p-3 border-b border-gray-300">High (prone to warping)</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>NSF Certified</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>✓ Yes</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✓ Yes</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✗ No</td>
+                  <td className="p-3 border-b border-gray-300">Maintenance</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">None</td>
+                  <td className="p-3 border-b border-gray-300">Monthly oiling required</td>
+                  <td className="p-3 border-b border-gray-300">Monthly oiling required</td>
                 </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Best For</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>Easy sanitation, zero maintenance</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Traditional aesthetics, heavy use</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Budget-conscious buyers</td>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Porosity</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">Non-porous</td>
+                  <td className="p-3 border-b border-gray-300">Porous (can harbor bacteria)</td>
+                  <td className="p-3 border-b border-gray-300">Porous</td>
+                </tr>
+                <tr>
+                  <td className="p-3 border-b border-gray-300">NSF Certified</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">✓ Yes</td>
+                  <td className="p-3 border-b border-gray-300">✓ Yes</td>
+                  <td className="p-3 border-b border-gray-300">✗ No</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Best For</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">Easy sanitation, zero maintenance</td>
+                  <td className="p-3 border-b border-gray-300">Traditional aesthetics, heavy use</td>
+                  <td className="p-3 border-b border-gray-300">Budget-conscious buyers</td>
                 </tr>
               </tbody>
             </table>

@@ -1,6 +1,5 @@
 import { Tier1Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
-
 import AffiliateButton from '@/components/AffiliateButton';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
@@ -9,6 +8,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+import FAQBox, { FAQGrid } from '@/components/review/FAQBox';
+import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox';
+import EmailCaptureBox from '@/components/review/EmailCaptureBox';
+import AuthorBio from '@/components/review/AuthorBio';
 
 
 
@@ -88,7 +91,7 @@ export const metadata: Metadata = {
 
 export default function NortonTriStoneSharpenerReview() {
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
+    <div className="max-w-3xl mx-auto px-5 py-10">
      <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
@@ -100,33 +103,21 @@ export default function NortonTriStoneSharpenerReview() {
       />
        <article>
         {/* Breadcrumb */}
-        <nav style={{ marginBottom: '20px', fontSize: '14px' }}>
-          <a href="/" style={{ color: '#0066cc', textDecoration: 'none' }}>Home</a>
+        <nav className="mb-5 text-sm">
+          <a href="/" className="text-blue-600 no-underline">Home</a>
           {' > '}
-          <a href="/reviews" style={{ color: '#0066cc', textDecoration: 'none' }}>Reviews</a>
+          <a href="/reviews" className="text-blue-600 no-underline">Reviews</a>
           {' > '}
-          <span style={{ color: '#666' }}>Norton IM200 Tri-Stone Sharpener</span>
+          <span className="text-gray-600">Norton IM200 Tri-Stone Sharpener</span>
         </nav>
 
         {/* H1 Title */}
-        <h1 style={{
-          fontSize: '42px',
-          fontWeight: 'bold',
-          marginBottom: '20px',
-          lineHeight: '1.2',
-          color: '#1a1a1a'
-        }}>
+        <h1 className="text-5xl font-bold mb-5 leading-tight text-gray-900">
           Norton IM200 Tri-Stone Sharpener: 6-Year Restaurant Review
         </h1>
 
         {/* Author Byline */}
-        <div style={{
-          fontSize: '16px',
-          color: '#666',
-          marginBottom: '30px',
-          paddingBottom: '20px',
-          borderBottom: '1px solid #e0e0e0'
-        }}>
+        <div className="text-base text-gray-600 mb-8 pb-5 border-b border-gray-300">
           <strong>By Scott Bradley</strong> | Professional Chef | 45 Years Cooking Experience
         </div>
 
@@ -134,29 +125,16 @@ export default function NortonTriStoneSharpenerReview() {
         <Tier1Badge showDescription={true} />
 
         {/* Quick Rating Box */}
-        <div className="quick-stats" style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '20px 0',
-          borderLeft: '4px solid #28a745',
-          borderRadius: '4px'
-        }}>
-          <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
+        <QuickStatsBox variant="success">
+          <p className="m-0 text-lg leading-relaxed">
             <strong>⭐⭐⭐⭐⭐ 5/5</strong> | Based on 6 years in professional restaurant kitchen<br/>
             <strong>✓ 3 Grits: Coarse/Medium/Fine</strong> | <strong>✓ Non-Slip Base</strong> | <strong>✓ 11.5&quot; Length</strong>
           </p>
-        </div>
+        </QuickStatsBox>
 
         {/* Primary CTA Above the Fold */}
-        <div className="primary-cta" style={{
-          background: '#fff3cd',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '2px solid #ffc107'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
+        <ReviewCTABox variant="warning">
+          <h3 className="mt-0 text-2xl">Current Best Price:</h3>
 
           <CTAVisibilityTracker
             ctaId={`review-${productData.slug}-above_fold`}
@@ -175,31 +153,25 @@ export default function NortonTriStoneSharpenerReview() {
             </AffiliateButton>
           </CTAVisibilityTracker>
 
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
+          <p className="text-sm text-gray-600 mt-4">
             💡 Price updated daily. We earn commission at no extra cost to you.
           </p>
-        </div>
+        </ReviewCTABox>
 
         {/* Professional Verdict */}
-        <div className="verdict-box" style={{
-          background: '#f8f9fa',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
-          <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginBottom: '20px', color: '#1a1a1a' }}>
+        <div className="bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
+          <h2 className="text-3xl font-bold mb-5 text-gray-900">
             Professional Verdict
           </h2>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.8' }}>
+          <p className="text-lg leading-relaxed">
             <strong>For 6 years at Purple Café, the Norton IM200 Tri-Stone kept every knife in our
             kitchen razor-sharp through dinner service after dinner service.</strong> In a 200+ cover
             restaurant where dull knives meant service delays and lost revenue, this sharpening system
             proved itself as genuinely professional-grade equipment.
           </p>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.8' }}>
+          <p className="text-lg leading-relaxed">
             The three-stone progressive system—coarse, medium, fine—allowed me to maintain 8-12 knives
             weekly, bringing each from working dull to paper-slicing sharp in 10-15 minutes per knife.
             The non-slip rubber base stayed secure on stainless steel prep tables even during aggressive
@@ -207,17 +179,12 @@ export default function NortonTriStoneSharpenerReview() {
             still cut effectively with minimal wear.
           </p>
 
-          <div style={{
-            background: 'white',
-            padding: '15px',
-            marginTop: '20px',
-            borderRadius: '4px'
-          }}>
-            <p style={{ margin: '10px 0' }}>
+          <div className="bg-white p-4 mt-5 rounded">
+            <p className="my-2">
               <strong>✓ Perfect For:</strong> Serious home cooks, professional kitchens, anyone maintaining
               multiple knives, those wanting restaurant-quality sharpening at home
             </p>
-            <p style={{ margin: '10px 0' }}>
+            <p className="my-2">
               <strong>✗ Skip If:</strong> You only sharpen 1-2 knives occasionally, prefer pull-through
               sharpeners, unwilling to learn proper technique, want fastest possible sharpening
             </p>
@@ -225,64 +192,42 @@ export default function NortonTriStoneSharpenerReview() {
         </div>
 
         {/* Hero Features */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Why This Sharpener Survived 6 Years of Professional Kitchen Abuse
         </h2>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '20px',
-          margin: '30px 0'
-        }}>
-
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>🔪</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Three-Stage Progressive System</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              Coarse stone repairs damaged edges, medium stone refines, fine stone polishes to
-              razor-sharp. Complete sharpening in one system—no guessing which grit to use.
-            </p>
-          </div>
-
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>🛡️</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Commercial-Grade Durability</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              Survived 6 years of weekly professional use. Norton stones maintain cutting effectiveness
-              far longer than cheap alternatives that glaze over quickly.
-            </p>
-          </div>
-
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>⚓</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Non-Slip Rubber Base</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              Stays locked to prep surface even during aggressive sharpening. Critical for safety
-              and consistent angles in commercial environment where speed matters.
-            </p>
-          </div>
-
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>💰</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Exceptional Value</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              Three high-quality stones for less than premium single-grit stones cost separately.
-              After 6 years of professional use, cost per sharpening is essentially zero.
-            </p>
-          </div>
-
-        </div>
+        <FeatureGrid features={[
+          {
+            emoji: "🔪",
+            title: "Three-Stage Progressive System",
+            description: "Coarse stone repairs damaged edges, medium stone refines, fine stone polishes to razor-sharp. Complete sharpening in one system—no guessing which grit to use."
+          },
+          {
+            emoji: "🛡️",
+            title: "Commercial-Grade Durability",
+            description: "Survived 6 years of weekly professional use. Norton stones maintain cutting effectiveness far longer than cheap alternatives that glaze over quickly."
+          },
+          {
+            emoji: "⚓",
+            title: "Non-Slip Rubber Base",
+            description: "Stays locked to prep surface even during aggressive sharpening. Critical for safety and consistent angles in commercial environment where speed matters."
+          },
+          {
+            emoji: "💰",
+            title: "Exceptional Value",
+            description: "Three high-quality stones for less than premium single-grit stones cost separately. After 6 years of professional use, cost per sharpening is essentially zero."
+          }
+        ]} />
 
         {/* Main Content */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           The 6-Year Purple Café Testing Story
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             For 6 years at Purple Café, the Norton Tri-Stone kept our{' '}
-            <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-600 no-underline">
               Victorinox chef knives
             </a> and other professional cutlery performing at peak sharpness through 200+ cover nights.
             This wasn&apos;t equipment tucked away in a drawer for occasional use—this was a critical
@@ -298,10 +243,10 @@ export default function NortonTriStoneSharpenerReview() {
 
           <p>
             Sharp knives were as critical to our operation as our{' '}
-            <a href="/reviews/kitchenaid-ksm8990wh" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/kitchenaid-ksm8990wh" className="text-blue-600 no-underline">
               KitchenAid commercial mixer
             </a> and{' '}
-            <a href="/reviews/robot-coupe-r2-dice" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/robot-coupe-r2-dice" className="text-blue-600 no-underline">
               Robot Coupe food processor
             </a>—equipment that simply cannot fail. In a professional kitchen running 200+ covers on
             weekend nights, a dull knife isn&apos;t just inconvenient—it slows service, compromises
@@ -317,18 +262,18 @@ export default function NortonTriStoneSharpenerReview() {
           </p>
         </div>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Understanding the Three-Stone Progressive System
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             The genius of the Norton Tri-Stone is its three-stage progressive design. Instead of guessing
             which single stone to buy or switching between multiple separate stones, everything you need
             is mounted in one system.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Stage 1: Coarse Stone (120 Grit)
           </h3>
           <p>
@@ -347,7 +292,7 @@ export default function NortonTriStoneSharpenerReview() {
             <strong>When to skip:</strong> Knives that just need touch-ups can skip straight to medium or fine.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Stage 2: Medium Stone (280 Grit)
           </h3>
           <p>
@@ -363,7 +308,7 @@ export default function NortonTriStoneSharpenerReview() {
             After the medium stone, a knife is already sharp enough for most kitchen tasks.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Stage 3: Fine Stone (320 Grit)
           </h3>
           <p>
@@ -383,21 +328,21 @@ export default function NortonTriStoneSharpenerReview() {
           </p>
         </div>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Professional Sharpening Technique
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             The difference between a properly sharpened knife and a dull one is the difference between
             working with our{' '}
-            <a href="/reviews/john-boos-platinum-commercial-cutting-board" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-blue-600 no-underline">
               premium John Boos cutting board
             </a> versus a cheap plastic one—night and day. Here&apos;s the technique I developed
             over 6 years of professional sharpening:
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             The 20-Degree Angle Rule
           </h3>
           <p>
@@ -411,7 +356,7 @@ export default function NortonTriStoneSharpenerReview() {
             20 degrees.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Light Pressure, Multiple Passes
           </h3>
           <p>
@@ -425,7 +370,7 @@ export default function NortonTriStoneSharpenerReview() {
             extends stone life.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             The Burr Test
           </h3>
           <p>
@@ -439,14 +384,14 @@ export default function NortonTriStoneSharpenerReview() {
             reached the edge yet—keep going.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Oil vs Water
           </h3>
           <p>
             The Norton IM200 works with either light mineral oil or water. In 6 years of professional use,
             I exclusively used light mineral oil for these reasons:
           </p>
-          <ul style={{ paddingLeft: '20px', lineHeight: '1.8' }}>
+          <ul className="pl-5 leading-relaxed">
             <li>Prevents rust on carbon steel knives</li>
             <li>Suspends metal particles better, preventing stone loading</li>
             <li>No pre-soaking required—ready to sharpen immediately</li>
@@ -459,16 +404,16 @@ export default function NortonTriStoneSharpenerReview() {
           </p>
         </div>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Why Manual Stones Beat Electric Sharpeners in Professional Kitchens
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             Purple Café could have bought electric sharpeners. We chose manual stones for good reasons:
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Complete Control
           </h3>
           <p>
@@ -479,13 +424,13 @@ export default function NortonTriStoneSharpenerReview() {
             stones adapt to anything.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Minimal Metal Removal
           </h3>
           <p>
             Good knives represent significant investment. Electric sharpeners remove metal aggressively—
             they have to, because they&apos;re optimized for speed. A{' '}
-            <a href="/reviews/victorinox-fibrox-10-inch-chefs-knife" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/victorinox-fibrox-10-inch-chefs-knife" className="text-blue-600 no-underline">
               $50 Victorinox chef knife
             </a> sharpened weekly on an electric sharpener might last 3-5 years before wearing down to
             nothing. The same knife sharpened manually on stones can last 10-15 years.
@@ -495,7 +440,7 @@ export default function NortonTriStoneSharpenerReview() {
             blade life matters when you&apos;re maintaining a dozen professional knives.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Superior Edge Quality
           </h3>
           <p>
@@ -509,7 +454,7 @@ export default function NortonTriStoneSharpenerReview() {
             less downtime and better service consistency.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Zero Moving Parts to Break
           </h3>
           <p>
@@ -524,40 +469,40 @@ export default function NortonTriStoneSharpenerReview() {
           </p>
         </div>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Maintenance and Care
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             Like caring for{' '}
-            <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-blue-600 no-underline">
               Le Creuset Dutch oven
             </a>, proper maintenance extends lifespan dramatically. The Norton Tri-Stone requires
             minimal care but benefits from consistent habits:
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             After Every Use
           </h3>
-          <ul style={{ paddingLeft: '20px', lineHeight: '1.8' }}>
+          <ul className="pl-5 leading-relaxed">
             <li>Wipe stones with paper towels to remove metal particles and oil</li>
             <li>If using water, rinse stones thoroughly under running water</li>
             <li>Dry completely before storing (prevents rust and mildew)</li>
             <li>Store in dry location away from moisture</li>
           </ul>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Monthly Deep Cleaning
           </h3>
-          <ul style={{ paddingLeft: '20px', lineHeight: '1.8' }}>
+          <ul className="pl-5 leading-relaxed">
             <li>Scrub stones with dish soap and stiff brush</li>
             <li>Rinse thoroughly under running water</li>
             <li>Dry completely (air dry overnight)</li>
             <li>Inspect for uneven wear or surface loading</li>
           </ul>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Dealing with Loaded Stones
           </h3>
           <p>
@@ -565,7 +510,7 @@ export default function NortonTriStoneSharpenerReview() {
             You&apos;ll notice the stone feels slick or glazed rather than slightly abrasive. To restore
             cutting action:
           </p>
-          <ol style={{ paddingLeft: '20px', lineHeight: '1.8' }}>
+          <ol className="pl-5 leading-relaxed">
             <li>Soak loaded stones in mineral spirits overnight</li>
             <li>Scrub vigorously with stiff brush</li>
             <li>Rinse thoroughly with water and dish soap</li>
@@ -576,14 +521,14 @@ export default function NortonTriStoneSharpenerReview() {
             post-use cleaning prevents most loading issues.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Flattening Stones
           </h3>
           <p>
             With extended use, sharpening stones develop slight concave wear in the center (where most
             sharpening occurs). When the center is noticeably lower than the ends, flatten the stone:
           </p>
-          <ul style={{ paddingLeft: '20px', lineHeight: '1.8' }}>
+          <ul className="pl-5 leading-relaxed">
             <li>Use diamond flattening plate (ideal method)</li>
             <li>Or use 220-grit wet/dry sandpaper on flat glass surface</li>
             <li>Rub stone in circular motion until surface is uniformly flat</li>
@@ -595,11 +540,11 @@ export default function NortonTriStoneSharpenerReview() {
           </p>
         </div>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           What This Means for Home Cooks
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             Here&apos;s the reality: if the Norton Tri-Stone survived 6 years of weekly professional use
             sharpening 8-12 knives in a 200+ cover restaurant, it&apos;ll serve the average home cook for
@@ -620,7 +565,7 @@ export default function NortonTriStoneSharpenerReview() {
 
           <p>
             This sharpener belongs in every serious home cook&apos;s{' '}
-            <a href="/kitchen-bundle" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/kitchen-bundle" className="text-blue-600 no-underline">
               professional kitchen starter kit
             </a>. It&apos;s the difference between maintaining your knives at professional standards
             versus accepting progressively duller edges until you finally pay someone else to sharpen them.
@@ -628,360 +573,59 @@ export default function NortonTriStoneSharpenerReview() {
 
           <p>
             For detailed sharpening instructions and technique tips, see our companion guide on{' '}
-            <a href="/guides/knife-care" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/guides/knife-care" className="text-blue-600 no-underline">
               proper knife care and maintenance
             </a>.
           </p>
         </div>
 
         {/* FAQ Section with Schema.org Markup */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Frequently Asked Questions About Norton Tri-Stone Sharpener
         </h2>
 
-        <div>
+        <FAQGrid faqs={faqData} />
 
-          {/* Question 1 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Is the Norton Tri-Stone sharpener worth it?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> After 6 years of professional kitchen use maintaining 8-12
-                  knives weekly, absolutely yes. The three-stage progressive system (coarse/medium/fine)
-                  delivers restaurant-quality results that rival sharpening services costing substantially more.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  For serious home cooks maintaining multiple knives, this pays for itself quickly compared
-                  to professional sharpening services. The Norton lasted 6 years in demanding commercial
-                  conditions—it&apos;ll last decades in home use.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 2 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              How do you use the Norton IM200 Tri-Stone?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Progressive three-stage process:
-                </p>
-                <ol style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li><strong>Coarse (120 grit):</strong> Repair damaged edges, establish bevel (5-10 passes per side)</li>
-                  <li><strong>Medium (280 grit):</strong> Refine edge, remove coarse scratches (8-12 passes per side)</li>
-                  <li><strong>Fine (320 grit):</strong> Polish to razor-sharp finish (10-15 passes per side)</li>
-                </ol>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  Maintain consistent 20-degree angle. Use light pressure. The stones cut effectively
-                  without aggressive force. See our{' '}
-                  <a href="/guides/knife-care" style={{ color: '#0066cc', textDecoration: 'none' }}>
-                    complete knife care guide
-                  </a> for detailed technique.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 3 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Do you need oil or water with Norton Tri-Stone?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> The Norton IM200 can be used with light mineral oil OR water.
-                  In 6 years of professional use, I used light mineral oil exclusively.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Why oil works better:</strong>
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Prevents rust on carbon steel knives</li>
-                  <li>Suspends metal particles better than water</li>
-                  <li>Stones don&apos;t require pre-soaking</li>
-                  <li>Creates smoother sharpening action</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  Use just enough to create thin film on stone surface. Excessive oil isn&apos;t better.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 4 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              How long does the Norton Tri-Stone last?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> With proper care, 10-20 years for home use. Mine lasted 6 years
-                  of weekly professional use (300+ sharpening sessions) with minimal wear. Norton&apos;s
-                  aluminum oxide abrasive maintains cutting ability far longer than cheap stones that glaze
-                  over quickly.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  The stones will wear down gradually but remain effective. When surface becomes uneven,
-                  flatten with diamond plate or coarse sandpaper on glass.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 5 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              What&apos;s the difference between Norton Tri-Stone and single stones?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> The Tri-Stone provides complete sharpening progression in one
-                  system. Benefits over buying individual stones:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li><strong>Cost:</strong> Three quality stones for less than premium singles cost separately</li>
-                  <li><strong>Convenience:</strong> No switching stones or setups mid-sharpening</li>
-                  <li><strong>Consistency:</strong> All three stones mounted in one base maintains alignment</li>
-                  <li><strong>Space:</strong> Takes up 1/3 the storage space of three individual stones</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  For serious sharpening, individual Japanese water stones offer finer grits. But for
-                  maintaining kitchen knives to professional standards, the Tri-Stone is ideal.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 6 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Can beginners use the Norton Tri-Stone?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Yes, but expect a learning curve. Manual sharpening requires
-                  developing muscle memory for consistent angles. Benefits for beginners:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Three grits eliminate guesswork about which stone to use</li>
-                  <li>Non-slip base provides stability while learning</li>
-                  <li>Forgiving stones that cut effectively without excessive pressure</li>
-                  <li>Visual feedback—you can see the edge developing</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Realistic timeline:</strong> 3-5 practice sessions to develop decent technique.
-                  10-15 sessions to achieve consistently sharp results. Worth the investment—this skill lasts
-                  a lifetime.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 7 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              How do you clean Norton sharpening stones?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Simple maintenance after each use:
-                </p>
-                <ol style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Wipe stones with paper towel to remove metal particles and oil</li>
-                  <li>If using water, rinse stones thoroughly</li>
-                  <li>Dry completely before storing</li>
-                  <li>Store in dry location</li>
-                </ol>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Deep cleaning (monthly):</strong> Scrub with dish soap and stiff brush, rinse
-                  thoroughly, dry completely. If stones become loaded with metal particles, soak in mineral
-                  spirits overnight, scrub, rinse, dry.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  Proper cleaning maintains cutting effectiveness and extends stone life.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 8 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Norton Tri-Stone vs electric sharpener: which is better?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Different tools for different priorities:
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Norton Tri-Stone advantages:</strong>
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Complete control over angle and pressure</li>
-                  <li>Removes minimal metal (knives last longer)</li>
-                  <li>Can repair damaged edges effectively</li>
-                  <li>Works with any knife style or size</li>
-                  <li>No moving parts to break</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Electric sharpener advantages:</strong>
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Faster (2-3 minutes vs 10-15 minutes)</li>
-                  <li>Consistent angles automatically</li>
-                  <li>Easier for beginners</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  After 6 years in professional kitchen, I chose manual stones. Better edge quality, more
-                  control, longer knife lifespan.
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        {/* Email Capture */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
-
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>
-            🔥 Get My Complete Knife Sharpening Guide
-          </h3>
-
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
-            Download my professional sharpening guide developed over 6 years at Purple Café:
-          </p>
-
-          <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
-            <li>✓ Step-by-step Norton Tri-Stone technique with photos</li>
-            <li>✓ How to maintain consistent 20-degree angles</li>
-            <li>✓ Sharpening schedule for maximum edge retention</li>
-            <li>✓ Troubleshooting common sharpening mistakes</li>
-            <li>✓ Professional knife care and maintenance</li>
-          </ul>
-
-          <div style={{ textAlign: 'center', marginTop: '25px' }}>
-            <a
-              href="/newsletter"
-              style={{
-                display: 'inline-block',
-                background: '#0066cc',
-                color: 'white',
-                padding: '15px 40px',
-                textDecoration: 'none',
-                borderRadius: '6px',
-                fontWeight: 'bold',
-                fontSize: '18px'
-              }}
-            >
-              Download Free Guide →
-            </a>
-          </div>
-
-          <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
-            Instant delivery. No spam, ever. Unsubscribe anytime.
-          </p>
-
-        </div>
+        <EmailCaptureBox
+          title="🔥 Get My Complete Knife Sharpening Guide"
+          description="Download my professional sharpening guide developed over 6 years at Purple Café:"
+          benefits={[
+            "Step-by-step Norton Tri-Stone technique with photos",
+            "How to maintain consistent 20-degree angles",
+            "Sharpening schedule for maximum edge retention",
+            "Troubleshooting common sharpening mistakes",
+            "Professional knife care and maintenance"
+          ]}
+        />
 
         {/* Final Verdict & Strong CTA */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           The Bottom Line: My Professional Verdict
         </h2>
 
-        <div style={{
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          color: 'white',
-          padding: '30px',
-          borderRadius: '8px',
-          margin: '30px 0'
-        }}>
-
-          <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
+        <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-lg my-8">
+          <h3 className="text-white mt-0 text-2xl">
             After 6 Years of Professional Kitchen Testing...
           </h3>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+          <p className="text-lg leading-relaxed">
             The Norton IM200 Tri-Stone proved itself as professional-grade sharpening equipment in the
             most demanding environment possible—a 200+ cover restaurant where dull knives meant service
             delays and lost revenue. This three-stage progressive system delivered consistently sharp
             edges through 6 years of weekly use on 8-12 knives.
           </p>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+          <p className="text-lg leading-relaxed">
             For serious home cooks wanting restaurant-quality sharpening, this represents exceptional
             value. The same system that maintained our professional kitchen knives will serve home cooks
             for decades.
           </p>
 
-          <div style={{
-            background: 'rgba(255,255,255,0.2)',
-            padding: '20px',
-            margin: '20px 0',
-            borderRadius: '6px'
-          }}>
-            <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
+          <div className="bg-white/20 p-5 my-5 rounded-md">
+            <p className="m-0 text-xl font-bold">
               Final Rating: ⭐⭐⭐⭐⭐ 5/5
             </p>
-            <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
+            <ul className="mt-4 mb-0 ml-5 text-base leading-relaxed">
               <li>Sharpening Performance: 5/5</li>
               <li>Durability &amp; Build Quality: 5/5</li>
               <li>Ease of Use: 4/5 (learning curve)</li>
@@ -989,28 +633,19 @@ export default function NortonTriStoneSharpenerReview() {
             </ul>
           </div>
 
-          <p style={{ fontSize: '16px', marginBottom: 0 }}>
+          <p className="text-base mb-0">
             <strong>Would I buy this again?</strong> Without hesitation. It&apos;s the sharpening system
             I trust in professional kitchens.
           </p>
-
         </div>
 
         {/* STRONG FINAL CTA */}
-        <div style={{
-          background: '#fff3cd',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '3px solid #ffc107'
-        }}>
-
-          <h3 style={{ marginTop: 0, fontSize: '28px' }}>
+        <div className="bg-yellow-100 p-8 my-8 rounded-lg text-center border-3 border-yellow-400">
+          <h3 className="mt-0 text-3xl">
             Ready for Professional-Quality Sharpening at Home?
           </h3>
 
-          <p style={{ fontSize: '18px', margin: '20px 0' }}>
+          <p className="text-lg my-5">
             Get the sharpening system that kept our restaurant knives razor-sharp for 6 years:
           </p>
 
@@ -1030,65 +665,30 @@ export default function NortonTriStoneSharpenerReview() {
               Check Amazon Price →
             </AffiliateButton>
           </CTAVisibilityTracker>
-
         </div>
 
         {/* Footer & Last Updated */}
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '30px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #6c757d'
-        }}>
-          <p style={{ margin: '10px 0' }}>
+        <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
+          <p className="my-2.5">
             <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
+          <p className="my-2.5">
             <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
+          <p className="my-2.5">
             <strong>💬 Questions about knife sharpening?</strong> Leave a comment below—I read and respond
             to every question.
           </p>
         </div>
 
-        {/* Author Bio */}
-        <div style={{
-          background: 'white',
-          padding: '25px',
-          margin: '30px 0',
-          border: '1px solid #dee2e6',
-          borderRadius: '8px',
-          display: 'grid',
-          gridTemplateColumns: '100px 1fr',
-          gap: '20px',
-          alignItems: 'start'
-        }}>
-          
-          <Image src="/images/team/head-shot-1.jpg" alt="Scott Bradley, Professional Chef" width={100} height={100} />
-          <div>
-            <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-            <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-              Professional Chef • 45 Years Cooking Experience
-            </p>
-            <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 24 years of restaurant experience. Equipment
-              tested in high-volume operations serving 200+ covers nightly. Sharp knives weren&apos;t
-              optional—they were critical to service success.
-            </p>
-            <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold', textDecoration: 'none' }}>
-              Read more about my testing methodology →
-            </a>
-          </div>
-        </div>
+        <AuthorBio />
 
         {/* Schema.org JSON-LD */}
         <script

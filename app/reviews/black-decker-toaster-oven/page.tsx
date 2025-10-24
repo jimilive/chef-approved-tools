@@ -1,7 +1,6 @@
 import { Tier2Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
@@ -107,7 +106,7 @@ const faqData = [
 
 export default function BlackDeckerToasterOvenReview() {
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
+    <div className="max-w-3xl mx-auto px-5 py-10">
      <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
@@ -119,33 +118,21 @@ export default function BlackDeckerToasterOvenReview() {
       />
        <article>
         {/* Breadcrumb */}
-        <nav style={{ marginBottom: '20px', fontSize: '14px' }}>
-          <a href="/" style={{ color: '#0066cc', textDecoration: 'none' }}>Home</a>
+        <nav className="mb-5 text-sm">
+          <a href="/" className="text-blue-600 no-underline hover:underline">Home</a>
           {' > '}
-          <a href="/reviews" style={{ color: '#0066cc', textDecoration: 'none' }}>Reviews</a>
+          <a href="/reviews" className="text-blue-600 no-underline hover:underline">Reviews</a>
           {' > '}
-          <span style={{ color: '#666' }}>Black+Decker Toaster Oven</span>
+          <span className="text-gray-600">Black+Decker Toaster Oven</span>
         </nav>
 
         {/* H1 Title */}
-        <h1 style={{
-          fontSize: '42px',
-          fontWeight: 'bold',
-          marginBottom: '20px',
-          lineHeight: '1.2',
-          color: '#1a1a1a'
-        }}>
+        <h1 className="text-5xl font-bold mb-5 leading-tight text-gray-900">
           Black+Decker Toaster Oven Review: 48 Years, 4 Models
         </h1>
 
         {/* Author Byline */}
-        <div style={{
-          fontSize: '16px',
-          color: '#666',
-          marginBottom: '30px',
-          paddingBottom: '20px',
-          borderBottom: '1px solid #e0e0e0'
-        }}>
+        <div className="text-base text-gray-600 mb-8 pb-5 border-b border-gray-200">
           <strong>By Scott Bradley</strong> | Professional Chef | 45 Years Cooking Experience
         </div>
 
@@ -153,14 +140,8 @@ export default function BlackDeckerToasterOvenReview() {
         <Tier2Badge testingPeriod="48 Years - 4 Different Models" showDescription={true} />
 
         {/* Quick Rating Box */}
-        <div className="quick-stats" style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '20px 0',
-          borderLeft: '4px solid #28a745',
-          borderRadius: '4px'
-        }}>
-          <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
+        <div className="quick-stats bg-gray-50 p-5 my-5 border-l-4 border-green-600 rounded">
+          <p className="m-0 text-lg leading-relaxed">
             <strong>⭐⭐⭐⭐⭐ 5/5</strong> | Based on 48 years across 4 different models (1977-present)<br/>
             <strong>✓ 4-Slice Capacity</strong> | <strong>✓ 1200W Power</strong> | <strong>✓ Multi-Function</strong>
           </p>
@@ -188,15 +169,8 @@ export default function BlackDeckerToasterOvenReview() {
         </nav>
 
         {/* Primary CTA Above the Fold */}
-        <div className="primary-cta" style={{
-          background: '#fff3cd',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '2px solid #ffc107'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
+        <div className="primary-cta bg-yellow-100 p-6 my-6 rounded-lg text-center border-2 border-yellow-400">
+          <h3 className="mt-0 text-2xl">Current Best Price:</h3>
 
           <CTAVisibilityTracker
             ctaId="review-black-decker-toaster-oven-above-fold"
@@ -215,47 +189,36 @@ export default function BlackDeckerToasterOvenReview() {
             </AffiliateButton>
           </CTAVisibilityTracker>
 
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
+          <p className="text-sm text-gray-600 mt-4">
             💡 Price updated daily. We earn commission at no extra cost to you.
           </p>
         </div>
 
         {/* Professional Verdict - SHORTENED */}
-        <div className="verdict-box" style={{
-          background: '#f8f9fa',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
-          <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginBottom: '20px', color: '#1a1a1a' }}>
+        <div className="verdict-box bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
+          <h2 className="text-3xl font-bold mb-5 text-gray-900">
             Professional Verdict: A 48-Year Relationship
           </h2>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.8' }}>
+          <p className="text-lg leading-relaxed">
             <strong>I&apos;ve used Black+Decker toaster ovens continuously for 48 years—since childhood
             in 1977 through four successive models to present day.</strong> That&apos;s not nostalgia or
             brand loyalty without reason. That&apos;s nearly half a century of consistent performance,
             reliability, and value that has earned my trust through actual daily use.
           </p>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.8' }}>
+          <p className="text-lg leading-relaxed">
             Each model lasted 5-18 years of daily service without mechanical failure. This level of
             consistency across five decades proves genuine reliability, not luck. For budget-conscious
             cooks who need dependable everyday performance, Black+Decker delivers.
           </p>
 
-          <div style={{
-            background: 'white',
-            padding: '15px',
-            marginTop: '20px',
-            borderRadius: '4px'
-          }}>
-            <p style={{ margin: '10px 0' }}>
+          <div className="bg-white p-4 mt-5 rounded">
+            <p className="my-2.5">
               <strong>✓ Perfect For:</strong> Budget-conscious cooks, small kitchens, college students,
               anyone needing reliable everyday toasting and reheating, first apartment essentials
             </p>
-            <p style={{ margin: '10px 0' }}>
+            <p className="my-2.5">
               <strong>✗ Consider Alternatives If:</strong> You need commercial-grade durability, want
               precise temperature control for baking, need large capacity (8+ slices), require convection
               features
@@ -264,48 +227,43 @@ export default function BlackDeckerToasterOvenReview() {
         </div>
 
         {/* Hero Features - 4 Boxes */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Why I&apos;ve Trusted Black+Decker for 48 Years
         </h2>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '20px',
-          margin: '30px 0'
-        }}>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5 my-8">
 
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>🎯</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Consistent Reliability</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+          <div className="bg-gray-50 p-5 rounded-lg">
+            <div className="text-4xl mb-2.5">🎯</div>
+            <h3 className="my-2.5 text-xl">Consistent Reliability</h3>
+            <p className="text-base leading-relaxed">
               Four models over 48 years—each performed flawlessly for 5-18 years. Zero mechanical
               failures. When a toaster oven outlasts your apartment leases, that&apos;s quality.
             </p>
           </div>
 
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>💰</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Exceptional Value</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+          <div className="bg-gray-50 p-5 rounded-lg">
+            <div className="text-4xl mb-2.5">💰</div>
+            <h3 className="my-2.5 text-xl">Exceptional Value</h3>
+            <p className="text-base leading-relaxed">
               Budget-friendly pricing without compromising essential functions. Four decades of use
               proves you don&apos;t need premium prices for reliable daily performance.
             </p>
           </div>
 
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>🔧</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Simple &amp; Practical</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+          <div className="bg-gray-50 p-5 rounded-lg">
+            <div className="text-4xl mb-2.5">🔧</div>
+            <h3 className="my-2.5 text-xl">Simple &amp; Practical</h3>
+            <p className="text-base leading-relaxed">
               No overcomplicated features that break. Straightforward controls that actually work.
               Toast, bake, broil—the essentials done well for nearly 50 years.
             </p>
           </div>
 
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>📏</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Perfect Size for Most</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+          <div className="bg-gray-50 p-5 rounded-lg">
+            <div className="text-4xl mb-2.5">📏</div>
+            <h3 className="my-2.5 text-xl">Perfect Size for Most</h3>
+            <p className="text-base leading-relaxed">
               4-slice capacity fits most kitchen counters without dominating space. Handles daily
               toasting and small baking tasks efficiently.
             </p>
@@ -314,21 +272,21 @@ export default function BlackDeckerToasterOvenReview() {
         </div>
 
         {/* Main Content Section */}
-        <h2 id="timeline" style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 id="timeline" className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           The 48-Year Timeline: Four Models, One Brand
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             Over 48 years, Black+Decker toaster ovens have been as reliable in my home kitchen as{' '}
-            <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-600 no-underline hover:underline">
               my Victorinox chef knife
             </a> has been in professional kitchens. This isn&apos;t equipment I tested for a few months
             and wrote about—this is equipment I&apos;ve lived with across multiple decades, multiple homes,
             and multiple life stages.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Model 1: 1977-1995 (18 Years)
           </h3>
           <p>
@@ -338,7 +296,7 @@ export default function BlackDeckerToasterOvenReview() {
             at it. When it finally retired in 1995, it still worked; we simply wanted more capacity.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Model 2: 1995-2005 (10 Years)
           </h3>
           <p>
@@ -348,7 +306,7 @@ export default function BlackDeckerToasterOvenReview() {
             the transition with me from student meals to more serious cooking as I developed my skills.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Model 3: 2005-2020 (15 Years)
           </h3>
           <p>
@@ -358,7 +316,7 @@ export default function BlackDeckerToasterOvenReview() {
             and countless home cooking experiments. It lasted an impressive 15 years before I upgraded.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Model 4: 2020-Present (5 Years and Counting)
           </h3>
           <p>
@@ -436,17 +394,17 @@ export default function BlackDeckerToasterOvenReview() {
           </div>
         </section>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           What Makes Black+Decker Consistently Reliable
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             After using four different models over 48 years, I&apos;ve identified what makes these toaster
             ovens so dependable:
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Simple, Durable Design
           </h3>
           <p>
@@ -456,13 +414,13 @@ export default function BlackDeckerToasterOvenReview() {
           </p>
           <p>
             While professional equipment like the{' '}
-            <a href="/reviews/kitchenaid-ksm8990wh" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/kitchenaid-ksm8990wh" className="text-blue-600 no-underline hover:underline">
               KitchenAid commercial mixer
             </a> offers commercial-grade durability at premium prices, Black+Decker delivers remarkable
             longevity at consumer prices through intelligent design simplicity.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Quality Heating Elements
           </h3>
           <p>
@@ -472,7 +430,7 @@ export default function BlackDeckerToasterOvenReview() {
             original heating coils.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Replaceable Parts Availability
           </h3>
           <p>
@@ -482,11 +440,11 @@ export default function BlackDeckerToasterOvenReview() {
           </p>
         </div>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Professional Perspective: Home vs. Commercial Equipment
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             After 24 years working in professional kitchens, I understand the difference between commercial
             and consumer equipment. In restaurant kitchens, we used commercial toaster ovens that cost 10-15
@@ -612,19 +570,12 @@ export default function BlackDeckerToasterOvenReview() {
         </section>
 
         {/* MID-ARTICLE CTA - ADDED */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          borderLeft: '4px solid #0066cc'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '20px' }}>
+        <div className="bg-blue-50 p-6 my-6 rounded-lg text-center border-l-4 border-blue-600">
+          <h3 className="mt-0 text-xl">
             Experience 48 Years of Proven Reliability
           </h3>
 
-          <p style={{ fontSize: '16px', margin: '15px 0' }}>
+          <p className="text-base my-4">
             Join thousands who trust Black+Decker for everyday kitchen performance:
           </p>
 
@@ -646,19 +597,19 @@ export default function BlackDeckerToasterOvenReview() {
           </CTAVisibilityTracker>
         </div>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Practical Uses: What I Actually Use It For
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             For reheating leftovers and quick meals, this toaster oven has been as essential as my{' '}
-            <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-blue-600 no-underline hover:underline">
               Le Creuset Dutch oven
             </a> for slow cooking. Here&apos;s what mine gets used for most often:
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Daily Toast (Obviously)
           </h3>
           <p>
@@ -667,7 +618,7 @@ export default function BlackDeckerToasterOvenReview() {
             a Black+Decker produce unevenly toasted bread.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Reheating Pizza and Leftovers
           </h3>
           <p>
@@ -676,7 +627,7 @@ export default function BlackDeckerToasterOvenReview() {
             The dry heat of a toaster oven preserves food quality in ways microwaves can&apos;t match.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Small-Batch Baking
           </h3>
           <p>
@@ -685,7 +636,7 @@ export default function BlackDeckerToasterOvenReview() {
             oven and uses significantly less energy for small jobs.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Quick Vegetable Roasting
           </h3>
           <p>
@@ -694,7 +645,7 @@ export default function BlackDeckerToasterOvenReview() {
             results are identical to full-oven roasting.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Broiling Small Portions
           </h3>
           <p>
@@ -704,14 +655,14 @@ export default function BlackDeckerToasterOvenReview() {
           </p>
         </div>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           The Value Proposition: Why I Keep Buying This Brand
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             Like{' '}
-            <a href="/reviews/bodum-chambord-french-press" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/bodum-chambord-french-press" className="text-blue-600 no-underline hover:underline">
               my 24-year-old Bodum French press
             </a>, my Black+Decker toaster oven represents equipment that simply works year after year
             without demanding premium prices.
@@ -724,10 +675,10 @@ export default function BlackDeckerToasterOvenReview() {
           </p>
           <p>
             I&apos;ve used expensive kitchen equipment professionally and at home. I own{' '}
-            <a href="/reviews/john-boos-platinum-commercial-cutting-board" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-blue-600 no-underline hover:underline">
               commercial-grade cutting boards
             </a> and{' '}
-            <a href="/reviews/vitamix-5200" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/vitamix-5200" className="text-blue-600 no-underline hover:underline">
               high-end blenders
             </a>. I understand when premium pricing delivers proportional value. For toaster ovens used
             in home kitchens, Black+Decker&apos;s combination of reliability and value is unmatched.
@@ -740,15 +691,15 @@ export default function BlackDeckerToasterOvenReview() {
           </p>
         </div>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           What Black+Decker Gets Right (and What It Doesn&apos;t Try to Do)
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+        <div className="text-lg leading-relaxed mb-8">
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             What It Does Well
           </h3>
-          <ul style={{ paddingLeft: '20px', lineHeight: '1.8' }}>
+          <ul className="pl-5 leading-relaxed">
             <li><strong>Reliable heating:</strong> Consistent temperature, even browning, predictable results</li>
             <li><strong>Simple controls:</strong> Mechanical dials that last decades, not electronics that fail</li>
             <li><strong>Durable construction:</strong> 5-18 years of daily use proves build quality</li>
@@ -758,13 +709,13 @@ export default function BlackDeckerToasterOvenReview() {
             <li><strong>Exceptional value:</strong> Budget pricing without compromising essential performance</li>
           </ul>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             What It Doesn&apos;t Offer (and Why That&apos;s Okay)
           </h3>
           <p>
             Black+Decker toaster ovens are basic by design. You won&apos;t get:
           </p>
-          <ul style={{ paddingLeft: '20px', lineHeight: '1.8' }}>
+          <ul className="pl-5 leading-relaxed">
             <li><strong>Convection fans:</strong> No forced-air circulation for faster cooking</li>
             <li><strong>Digital controls:</strong> No programmable settings or memory functions</li>
             <li><strong>Precise temperature displays:</strong> Dial-based temperature selection, not digital precision</li>
@@ -779,7 +730,7 @@ export default function BlackDeckerToasterOvenReview() {
           </p>
           <p>
             See our complete{' '}
-            <a href="/kitchen-bundle" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/kitchen-bundle" className="text-blue-600 no-underline hover:underline">
               kitchen starter kit
             </a> for budget-friendly equipment combinations that deliver professional results without
             premium pricing.
@@ -873,86 +824,82 @@ export default function BlackDeckerToasterOvenReview() {
         <section className="mb-12" id="comparison">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">Black+Decker vs. Competing Budget Toaster Ovens</h2>
 
-          <div style={{ overflowX: 'auto', margin: '20px 0' }}>
-            <table style={{
-              width: '100%',
-              borderCollapse: 'collapse',
-              fontSize: '14px'
-            }}>
+          <div className="overflow-x-auto my-5">
+            <table className="w-full border-collapse text-sm">
               <thead>
-                <tr style={{ background: '#f8f9fa' }}>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>
+                <tr className="bg-gray-50">
+                  <th className="p-3 text-left border-b-2 border-gray-300">
                     Feature
                   </th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>
+                  <th className="p-3 text-left border-b-2 border-gray-300">
                     Black+Decker
                   </th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>
+                  <th className="p-3 text-left border-b-2 border-gray-300">
                     Hamilton Beach
                   </th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>
+                  <th className="p-3 text-left border-b-2 border-gray-300">
                     Cuisinart TOB-40N
                   </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Price Range</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$50-80</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$40-70</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$80-120</td>
+                  <td className="p-3 border-b border-gray-300">Price Range</td>
+                  <td className="p-3 border-b border-gray-300">$50-80</td>
+                  <td className="p-3 border-b border-gray-300">$40-70</td>
+                  <td className="p-3 border-b border-gray-300">$80-120</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Capacity</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>4 slices</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>4 slices</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>4 slices</td>
+                  <td className="p-3 border-b border-gray-300">Capacity</td>
+                  <td className="p-3 border-b border-gray-300">4 slices</td>
+                  <td className="p-3 border-b border-gray-300">4 slices</td>
+                  <td className="p-3 border-b border-gray-300">4 slices</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Power</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>1200W</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>1200W</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>1800W</td>
+                  <td className="p-3 border-b border-gray-300">Power</td>
+                  <td className="p-3 border-b border-gray-300">1200W</td>
+                  <td className="p-3 border-b border-gray-300">1200W</td>
+                  <td className="p-3 border-b border-gray-300">1800W</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Controls</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Mechanical dials</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Mechanical dials</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Digital controls</td>
+                  <td className="p-3 border-b border-gray-300">Controls</td>
+                  <td className="p-3 border-b border-gray-300">Mechanical dials</td>
+                  <td className="p-3 border-b border-gray-300">Mechanical dials</td>
+                  <td className="p-3 border-b border-gray-300">Digital controls</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Expected Lifespan</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>10-18 years (proven)</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>5-8 years</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>5-10 years</td>
+                  <td className="p-3 border-b border-gray-300">Expected Lifespan</td>
+                  <td className="p-3 border-b border-gray-300">10-18 years (proven)</td>
+                  <td className="p-3 border-b border-gray-300">5-8 years</td>
+                  <td className="p-3 border-b border-gray-300">5-10 years</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Warranty</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>2 years</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>1 year</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>3 years</td>
+                  <td className="p-3 border-b border-gray-300">Warranty</td>
+                  <td className="p-3 border-b border-gray-300">2 years</td>
+                  <td className="p-3 border-b border-gray-300">1 year</td>
+                  <td className="p-3 border-b border-gray-300">3 years</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Best For</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>
+                  <td className="p-3 border-b border-gray-300">Best For</td>
+                  <td className="p-3 border-b border-gray-300">
                     Longevity, simple reliability, budget buyers
                   </td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>
+                  <td className="p-3 border-b border-gray-300">
                     Lowest price, basic needs
                   </td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>
+                  <td className="p-3 border-b border-gray-300">
                     Digital features, faster heating
                   </td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Value Rating</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>
+                  <td className="p-3 border-b border-gray-300">Value Rating</td>
+                  <td className="p-3 border-b border-gray-300">
                     <strong>⭐⭐⭐⭐⭐ Best long-term value</strong>
                   </td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>
+                  <td className="p-3 border-b border-gray-300">
                     ⭐⭐⭐⭐ Good budget option
                   </td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>
+                  <td className="p-3 border-b border-gray-300">
                     ⭐⭐⭐ Good features, shorter life
                   </td>
                 </tr>
@@ -960,35 +907,29 @@ export default function BlackDeckerToasterOvenReview() {
             </table>
           </div>
 
-          <p style={{ margin: '20px 0' }}>
+          <p className="my-5">
             <strong>Bottom line:</strong> Black+Decker&apos;s proven 10-18 year lifespan across my 48 years of testing makes it the best value proposition in budget toaster ovens—not just initial cost, but total cost of ownership.
           </p>
         </section>
 
         {/* FAQ Section with Schema.org Markup */}
-        <h2 id="faq" style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 id="faq" className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Frequently Asked Questions About Black+Decker Toaster Ovens
         </h2>
 
 
         {/* Email Capture */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
+        <div className="bg-blue-50 p-8 my-8 rounded-lg border-l-4 border-blue-600">
 
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>
+          <h3 className="mt-0 text-2xl">
             🔥 Get My Complete Small Appliance Buying Guide
           </h3>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+          <p className="text-base leading-relaxed">
             Download my guide to choosing reliable kitchen appliances that last decades:
           </p>
 
-          <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
+          <ul className="my-4 text-base leading-relaxed">
             <li>✓ How to identify quality vs throwaway appliances</li>
             <li>✓ Maintenance schedules for maximum lifespan</li>
             <li>✓ Brand reliability rankings from 45 years experience</li>
@@ -996,132 +937,76 @@ export default function BlackDeckerToasterOvenReview() {
             <li>✓ Red flags that predict early failure</li>
           </ul>
 
-          <div style={{ textAlign: 'center', marginTop: '25px' }}>
+          <div className="text-center mt-6">
             <a
               href="/newsletter"
-              style={{
-                display: 'inline-block',
-                background: '#0066cc',
-                color: 'white',
-                padding: '15px 40px',
-                textDecoration: 'none',
-                borderRadius: '6px',
-                fontWeight: 'bold',
-                fontSize: '18px'
-              }}
+              className="inline-block bg-blue-600 text-white py-4 px-10 no-underline rounded-md font-bold text-lg"
             >
               Download Free Guide →
             </a>
           </div>
 
-          <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
+          <p className="text-xs text-gray-600 mt-4 text-center">
             Instant delivery. No spam, ever. Unsubscribe anytime.
           </p>
 
         </div>
 
         {/* RELATED PRODUCTS SECTION - ADDED */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Complete Your Budget-Friendly Kitchen Setup
         </h2>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.8', marginBottom: '25px' }}>
+        <p className="text-base leading-relaxed mb-6">
           Like this Black+Decker toaster oven, these tools deliver exceptional value through proven
           long-term reliability. Build a complete kitchen without premium pricing:
         </p>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '20px',
-          margin: '30px 0'
-        }}>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5 my-8">
 
           {/* Product 1 */}
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            borderRadius: '8px',
-            border: '1px solid #dee2e6'
-          }}>
-            <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef Knife</h4>
+          <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+            <h4 className="mt-0">Victorinox 8&quot; Chef Knife</h4>
             <p>Professional quality at budget pricing. The knife I&apos;ve trusted for 20 years
             of cooking—proves you don&apos;t need premium prices for reliable performance.</p>
-            <p style={{ fontSize: '14px', color: '#666' }}>
+            <p className="text-sm text-gray-600">
               <strong>45 years cooking:</strong> My daily workhorse.
             </p>
             <a
               href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
-              style={{
-                display: 'inline-block',
-                background: '#28a745',
-                color: 'white',
-                padding: '10px 20px',
-                textDecoration: 'none',
-                borderRadius: '4px',
-                marginTop: '10px',
-                fontWeight: 'bold'
-              }}
+              className="inline-block bg-green-600 text-white py-2.5 px-5 no-underline rounded mt-2.5 font-bold"
             >
               Read Full Review →
             </a>
           </div>
 
           {/* Product 2 */}
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            borderRadius: '8px',
-            border: '1px solid #dee2e6'
-          }}>
-            <h4 style={{ marginTop: 0 }}>Bodum French Press</h4>
+          <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+            <h4 className="mt-0">Bodum French Press</h4>
             <p>Like Black+Decker, Bodum proves budget equipment can last decades. My 24-year-old
             French press still delivers perfect coffee daily.</p>
-            <p style={{ fontSize: '14px', color: '#666' }}>
+            <p className="text-sm text-gray-600">
               <strong>24 years old:</strong> Still brewing perfectly.
             </p>
             <a
               href="/reviews/bodum-chambord-french-press"
-              style={{
-                display: 'inline-block',
-                background: '#28a745',
-                color: 'white',
-                padding: '10px 20px',
-                textDecoration: 'none',
-                borderRadius: '4px',
-                marginTop: '10px',
-                fontWeight: 'bold'
-              }}
+              className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700"
             >
               Read Full Review →
             </a>
           </div>
 
           {/* Product 3 */}
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            borderRadius: '8px',
-            border: '1px solid #dee2e6'
-          }}>
-            <h4 style={{ marginTop: 0 }}>Lodge Cast Iron Skillet Bundle</h4>
+          <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+            <h4 className="mt-0">Lodge Cast Iron Skillet Bundle</h4>
             <p>Budget-friendly cast iron that lasts generations. Perfect complement to your
             toaster oven for stovetop cooking.</p>
-            <p style={{ fontSize: '14px', color: '#666' }}>
+            <p className="text-sm text-gray-600">
               <strong>Best value:</strong> In cast iron cookware.
             </p>
             <Link
               href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
-              style={{
-                display: 'inline-block',
-                background: '#28a745',
-                color: 'white',
-                padding: '10px 20px',
-                textDecoration: 'none',
-                borderRadius: '4px',
-                marginTop: '10px',
-                fontWeight: 'bold'
-              }}
+              className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700"
             >
               Read Full Review →
             </Link>
@@ -1129,59 +1014,41 @@ export default function BlackDeckerToasterOvenReview() {
 
         </div>
 
-        <p style={{
-          textAlign: 'center',
-          margin: '30px 0',
-          fontSize: '18px',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
+        <p className="text-center my-8 text-lg p-5 bg-gray-50 rounded-md">
           <strong>Building your first kitchen on a budget?</strong><br/>
-          <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold', fontSize: '20px', textDecoration: 'none' }}>
+          <a href="/kitchen-bundle" className="text-blue-600 font-bold text-xl no-underline">
             See My Complete Budget Kitchen Starter Kit →
           </a>
         </p>
 
         {/* Final Verdict & Strong CTA */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           The Bottom Line: 48 Years of Proven Reliability
         </h2>
 
-        <div style={{
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          color: 'white',
-          padding: '30px',
-          borderRadius: '8px',
-          margin: '30px 0'
-        }}>
+        <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-lg my-8">
 
-          <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
+          <h3 className="text-white mt-0 text-2xl">
             Four Models. Nearly Five Decades. Zero Regrets.
           </h3>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+          <p className="text-lg leading-relaxed">
             When you use the same brand continuously for 48 years across four different models—from
             childhood through professional cooking career—that&apos;s not brand loyalty. That&apos;s
             earned trust based on consistent performance and reliability that stands the test of time.
           </p>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+          <p className="text-lg leading-relaxed">
             Black+Decker toaster ovens deliver exactly what most home cooks need: reliable daily
             performance at exceptional value. No overcomplicated features. No premium pricing. Just
             straightforward equipment that works year after year.
           </p>
 
-          <div style={{
-            background: 'rgba(255,255,255,0.2)',
-            padding: '20px',
-            margin: '20px 0',
-            borderRadius: '6px'
-          }}>
-            <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
+          <div className="bg-white/20 p-5 my-5 rounded-md">
+            <p className="m-0 text-xl font-bold">
               Final Rating: ⭐⭐⭐⭐⭐ 5/5
             </p>
-            <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
+            <ul className="mt-4 ml-5 mb-0 text-base leading-relaxed">
               <li>Reliability &amp; Longevity: 5/5</li>
               <li>Value for Money: 5/5</li>
               <li>Ease of Use: 5/5</li>
@@ -1189,7 +1056,7 @@ export default function BlackDeckerToasterOvenReview() {
             </ul>
           </div>
 
-          <p style={{ fontSize: '16px', marginBottom: 0 }}>
+          <p className="text-base mb-0">
             <strong>Would I buy this again?</strong> I&apos;ve bought it four times over 48 years.
             That answers the question.
           </p>
@@ -1197,20 +1064,13 @@ export default function BlackDeckerToasterOvenReview() {
         </div>
 
         {/* STRONG FINAL CTA */}
-        <div style={{
-          background: '#fff3cd',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '3px solid #ffc107'
-        }}>
+        <div className="bg-yellow-100 p-8 my-8 rounded-lg text-center border-[3px] border-yellow-400">
 
-          <h3 style={{ marginTop: 0, fontSize: '28px' }}>
+          <h3 className="mt-0 text-3xl">
             Ready for Your First (or Fifth) Black+Decker?
           </h3>
 
-          <p style={{ fontSize: '18px', margin: '20px 0' }}>
+          <p className="text-lg my-5">
             Get the toaster oven I&apos;ve trusted for 48 years:
           </p>
 
@@ -1234,62 +1094,46 @@ export default function BlackDeckerToasterOvenReview() {
         </div>
 
         {/* Footer & Last Updated - WITH CONTACT LINK ADDED */}
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '30px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #6c757d'
-        }}>
-          <p style={{ margin: '10px 0' }}>
+        <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-600">
+          <p className="my-2.5">
             <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
+          <p className="my-2.5">
             <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
+          <p className="my-2.5">
             <strong>💬 Used Black+Decker for years?</strong> Share your experience in comments—I&apos;d
             love to hear your story!
           </p>
-          <p style={{ margin: '10px 0' }}>
+          <p className="my-2.5">
             <strong>🔧 Questions about toaster ovens or small appliances?</strong>{' '}
-            <a href="/contact" style={{ color: '#0066cc' }}>Contact me directly</a> and 
+            <a href="/contact" className="text-blue-600">Contact me directly</a> and
             I&apos;ll help you choose the right equipment for your needs.
           </p>
         </div>
 
         {/* Author Bio */}
-        <div style={{
-          background: 'white',
-          padding: '25px',
-          margin: '30px 0',
-          border: '1px solid #dee2e6',
-          borderRadius: '8px',
-          display: 'grid',
-          gridTemplateColumns: '100px 1fr',
-          gap: '20px',
-          alignItems: 'start'
-        }}>
-          
+        <div className="bg-white p-6 my-8 border border-gray-300 rounded-lg grid grid-cols-[100px_1fr] gap-5 items-start">
+
           <Image src="/images/team/head-shot-1.jpg" alt="Scott Bradley, Professional Chef" width={100} height={100} />
           <div>
-            <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-            <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
+            <h3 className="mt-0 mb-2.5">About Scott Bradley</h3>
+            <p className="my-1.5 font-bold">
               Professional Chef • 45 Years Cooking Experience
             </p>
-            <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
+            <p className="my-2.5 text-sm leading-relaxed">
               Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 24 years of restaurant experience.
               48 years of Black+Decker toaster oven use across 4 different models proves equipment
               reliability through actual long-term testing—not just manufacturer claims.
             </p>
-            <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold', textDecoration: 'none' }}>
+            <a href="/about" className="text-blue-600 font-bold no-underline">
               Read more about my testing methodology →
             </a>
           </div>

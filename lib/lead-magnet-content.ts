@@ -1,53 +1,42 @@
 // Lead magnet content for "The 11 Tools I Use Most in My Home Kitchen"
-import { getProductBySlug, getPrimaryAffiliateLink } from './product-helpers'
-
-// Helper function to get tool data from products database
-function getToolData(slug: string, customWhy: string, customStory: string) {
-  const product = getProductBySlug(slug)
-  if (!product) {
-    throw new Error(`Product not found: ${slug}`)
-  }
-
-  return {
-    name: product.name,
-    amazonUrl: getPrimaryAffiliateLink(product),
-    why: customWhy,
-    story: customStory
-  }
-}
 
 export const leadMagnetContent = {
   title: "The 11 Tools I Use Most: From Professional Kitchens to My Apartment Kitchen",
   subtitle: "My daily workhorse tools, tested in professional kitchens and proven at home.",
   author: "Scott Bradley - 24 Years Professional Kitchen Experience",
 
-  // The 11 actual tools with Amazon affiliate links - dynamically pulled from products database
+  // The 11 actual tools with Amazon affiliate links
   tools: [
-    getToolData(
-      'victorinox-fibrox-10-inch-chefs-knife',
-      "The longer blade is perfect for larger cuts and if you have bigger hands. I keep both sizes.",
-      "This is the knife I grab for breaking down proteins and chopping larger vegetables. The extra 2 inches makes a real difference when you're working fast."
-    ),
-    getToolData(
-      'victorinox-fibrox-8-inch-chefs-knife',
-      "More maneuverable for precise cuts. Perfect for most home cooking tasks.",
-      "This is the workhorse. 80% of my knife work happens with this 8-inch. It's balanced, sharp, and never lets me down."
-    ),
-    getToolData(
-      'victorinox-paring-knife',
-      "Essential for detailed work - peeling, trimming, deveining shrimp.",
-      "You can't do precision work with a chef's knife. This little guy handles everything from garlic to strawberries."
-    ),
-    getToolData(
-      'victorinox-granton-edge-boning-knife',
-      "Firm blade gets close to bones. Also great for filleting smaller fish.",
-      "Breaking down a whole chicken takes 3 minutes with this knife. The granton edge prevents sticking."
-    ),
-    getToolData(
-      'victorinox-offset-bread-knife',
-      "Offset handle keeps knuckles off the cutting board. Serrated edge never needs sharpening.",
-      "Bread, tomatoes, cakes - anything with a delicate exterior. The offset design is a game-changer for comfort."
-    ),
+    {
+      name: "Victorinox Fibrox Pro 10-Inch Chef's Knife",
+      amazonUrl: "https://amzn.to/4o6pPwW",
+      why: "The longer blade is perfect for larger cuts and if you have bigger hands. I keep both sizes.",
+      story: "This is the knife I grab for breaking down proteins and chopping larger vegetables. The extra 2 inches makes a real difference when you're working fast."
+    },
+    {
+      name: "Victorinox Fibrox Pro 8-Inch Chef's Knife",
+      amazonUrl: "https://amzn.to/4o7BUSV",
+      why: "More maneuverable for precise cuts. Perfect for most home cooking tasks.",
+      story: "This is the workhorse. 80% of my knife work happens with this 8-inch. It's balanced, sharp, and never lets me down."
+    },
+    {
+      name: "Victorinox 4\" Paring Knife",
+      amazonUrl: "https://amzn.to/4gVm0Le",
+      why: "Essential for detailed work - peeling, trimming, deveining shrimp.",
+      story: "You can't do precision work with a chef's knife. This little guy handles everything from garlic to strawberries."
+    },
+    {
+      name: "Victorinox Granton Edge Boning Knife",
+      amazonUrl: "https://amzn.to/4pUDed1",
+      why: "Firm blade gets close to bones. Also great for filleting smaller fish.",
+      story: "Breaking down a whole chicken takes 3 minutes with this knife. The granton edge prevents sticking."
+    },
+    {
+      name: "Victorinox Offset Bread Knife",
+      amazonUrl: "https://amzn.to/4nAIR4F",
+      why: "Offset handle keeps knuckles off the cutting board. Serrated edge never needs sharpening.",
+      story: "Bread, tomatoes, cakes - anything with a delicate exterior. The offset design is a game-changer for comfort."
+    },
     {
       name: "OXO Good Grips Swivel Peeler",
       amazonUrl: "https://amzn.to/4nLKDkf",

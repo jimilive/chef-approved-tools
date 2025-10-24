@@ -203,14 +203,8 @@ export default function RobotCoupeR2DiceReview() {
           <Tier1Badge showDescription={true} />
 
           {/* Quick Rating Box */}
-          <div className="quick-stats" style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            margin: '20px 0',
-            borderLeft: '4px solid #28a745',
-            borderRadius: '4px'
-          }}>
-            <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
+          <div className="quick-stats bg-gray-50 p-5 my-5 border-l-4 border-green-600 rounded">
+            <p className="m-0 text-lg leading-relaxed">
               <strong>⭐⭐⭐⭐⭐ 4.7/5</strong> | Based on 3 years of commercial testing<br/>
               <strong>💼 Commercial-Grade Investment</strong> | Professional food processor<br/>
               <strong>✔ 2 HP Motor</strong> | <strong>✔ 850 Servings/3 Hours</strong> | <strong>✔ Continuous Feed</strong>
@@ -218,15 +212,8 @@ export default function RobotCoupeR2DiceReview() {
           </div>
 
           {/* Primary CTA Above Fold */}
-          <div className="primary-cta" style={{
-            background: '#fff3cd',
-            padding: '25px',
-            margin: '25px 0',
-            borderRadius: '8px',
-            textAlign: 'center',
-            border: '2px solid #ffc107'
-          }}>
-            <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Availability:</h3>
+          <div className="primary-cta bg-yellow-100 p-6 my-6 rounded-lg text-center border-2 border-yellow-400">
+            <h3 className="mt-0 text-2xl">Check Current Availability:</h3>
 
             <CTAVisibilityTracker
               ctaId={`review-${productData.slug}-above_fold`}
@@ -245,46 +232,35 @@ export default function RobotCoupeR2DiceReview() {
               </AffiliateButton>
             </CTAVisibilityTracker>
 
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
+            <p className="text-sm text-gray-600 mt-4">
               💡 We earn commission at no extra cost to you.<br/>
               Commercial equipment suppliers will be added soon.
             </p>
           </div>
 
           {/* Professional Verdict */}
-          <div className="verdict-box" style={{
-            background: '#f8f9fa',
-            padding: '25px',
-            margin: '25px 0',
-            borderRadius: '8px',
-            borderLeft: '4px solid #0066cc'
-          }}>
+          <div className="verdict-box bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
             <h2>Professional Verdict</h2>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               <strong>After 3 years as our primary food processor at Purple Cafe, the Robot Coupe R2 Dice
               proved itself as essential commercial equipment.</strong> The combination of 5/5 performance
               ratings for speed, efficiency, and cut quality—combined with exceptional reliability under
               high-volume demands—makes this processor significantly superior to home alternatives.
             </p>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               The continuous feed design and 2 HP motor process up to 850 servings in 3 hours, drastically
               cutting prep time. Professional kitchens report saving hours daily—this machine pays for
               itself through labor efficiency alone.
             </p>
 
-            <div style={{
-              background: 'white',
-              padding: '15px',
-              marginTop: '20px',
-              borderRadius: '4px'
-            }}>
-              <p style={{ margin: '10px 0' }}>
+            <div className="bg-white p-4 mt-5 rounded">
+              <p className="my-2.5">
                 <strong>✔ Perfect For:</strong> Commercial kitchens, high-volume operations, restaurants
                 needing consistent cuts, catering businesses, operations prioritizing efficiency
               </p>
-              <p style={{ margin: '10px 0' }}>
+              <p className="my-2.5">
                 <strong>✗ Skip If:</strong> You only need occasional home food processing, budget doesn&apos;t
                 justify commercial equipment, kitchen space is restricted, volume doesn&apos;t justify
                 commercial-grade power
@@ -320,38 +296,33 @@ export default function RobotCoupeR2DiceReview() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Why This Processor Earned 3 Years of Daily Commercial Use</h2>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '20px',
-            margin: '30px 0'
-          }}>
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5 my-8">
 
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>⚡</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>2 HP Commercial Motor</h3>
+            <div className="bg-gray-50 p-5 rounded-lg">
+              <div className="text-4xl mb-2.5">⚡</div>
+              <h3 className="my-2.5 text-xl">2 HP Commercial Motor</h3>
               <p>Fan-cooled induction motor running at 1,725 RPM delivers professional-grade performance
               that residential processors cannot match. Handles continuous high-volume processing without
               overheating.</p>
             </div>
 
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>⏱️</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>850 Servings/3 Hours</h3>
+            <div className="bg-gray-50 p-5 rounded-lg">
+              <div className="text-4xl mb-2.5">⏱️</div>
+              <h3 className="my-2.5 text-xl">850 Servings/3 Hours</h3>
               <p>Continuous feed design processes massive volume quickly. Professional kitchens report
               doing in minutes what used to take hours—saves significant labor costs daily.</p>
             </div>
 
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>✂️</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Consistent Cut Quality</h3>
+            <div className="bg-gray-50 p-5 rounded-lg">
+              <div className="text-4xl mb-2.5">✂️</div>
+              <h3 className="my-2.5 text-xl">Consistent Cut Quality</h3>
               <p>26 processing plates deliver precision cuts and uniform results essential for presentation
               standards. Rated 5/5 for cut quality after 3 years of commercial testing.</p>
             </div>
 
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>💪</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Commercial Reliability</h3>
+            <div className="bg-gray-50 p-5 rounded-lg">
+              <div className="text-4xl mb-2.5">💪</div>
+              <h3 className="my-2.5 text-xl">Commercial Reliability</h3>
               <p>Rated as &quot;the hardest working employee&quot; by professional kitchens. Proven
               reliability under continuous commercial use—rated 5/5 for durability.</p>
             </div>
@@ -427,15 +398,8 @@ export default function RobotCoupeR2DiceReview() {
         </section>
 
         {/* Mid-Article CTA - NEW */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '20px',
-          margin: '25px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #0066cc',
-          textAlign: 'center'
-        }}>
-          <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
+        <div className="bg-blue-50 p-5 my-6 rounded-md border-l-4 border-blue-600 text-center">
+          <p className="my-2.5 text-lg font-bold">
             Convinced this is right for your operation?
           </p>
           <CTAVisibilityTracker
@@ -645,12 +609,7 @@ export default function RobotCoupeR2DiceReview() {
           <div>
             
             {/* Question 1 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>Is the Robot Coupe R2 Dice worth it for a restaurant?</h3>
               <div>
                 <div>
@@ -674,12 +633,7 @@ export default function RobotCoupeR2DiceReview() {
             </div>
 
             {/* Question 2 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>How difficult is cleaning compared to home processors?</h3>
               <div>
                 <div>
@@ -695,12 +649,7 @@ export default function RobotCoupeR2DiceReview() {
             </div>
 
             {/* Question 3 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>Is this worth it for serious home cooks?</h3>
               <div>
                 <div>
@@ -716,12 +665,7 @@ export default function RobotCoupeR2DiceReview() {
             </div>
 
             {/* Question 4 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>What is the difference between R2 Dice and R2N?</h3>
               <div>
                 <div>
@@ -737,12 +681,7 @@ export default function RobotCoupeR2DiceReview() {
             </div>
 
             {/* Question 5 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>How long do the blades and discs last under commercial use?</h3>
               <div>
                 <div>
@@ -758,12 +697,7 @@ export default function RobotCoupeR2DiceReview() {
             </div>
 
             {/* Question 6 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>What electrical requirements are needed?</h3>
               <div>
                 <div>
@@ -778,12 +712,7 @@ export default function RobotCoupeR2DiceReview() {
             </div>
 
             {/* Question 7 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>How does this compare to the Cuisinart DLC-10 for commercial use?</h3>
               <div>
                 <div>
@@ -800,12 +729,7 @@ export default function RobotCoupeR2DiceReview() {
             </div>
 
             {/* Question 8 - NEW */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>What size operation needs the Robot Coupe R2 Dice?</h3>
               <div>
                 <div>
@@ -822,12 +746,7 @@ export default function RobotCoupeR2DiceReview() {
             </div>
 
             {/* Question 9 - NEW */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>Can I use the Robot Coupe R2 Dice for purées and wet ingredients?</h3>
               <div>
                 <div>
@@ -843,12 +762,7 @@ export default function RobotCoupeR2DiceReview() {
             </div>
 
             {/* Question 10 - NEW */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>What maintenance does the Robot Coupe R2 Dice require?</h3>
               <div>
                 <div>
@@ -871,41 +785,30 @@ export default function RobotCoupeR2DiceReview() {
         <section className="mb-8" id="verdict">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">The Bottom Line: My Professional Verdict</h2>
 
-          <div style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            color: 'white',
-            padding: '30px',
-            borderRadius: '8px',
-            margin: '30px 0'
-          }}>
+          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-lg my-8">
 
-            <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
+            <h3 className="text-white mt-0 text-2xl">
               After 3 Years of Daily Commercial Use...
             </h3>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               The Robot Coupe R2 Dice proved itself as essential commercial equipment that pays for itself
               through efficiency gains. The combination of 5/5 performance ratings for speed, efficiency,
               and cut quality—combined with exceptional reliability under high-volume demands—makes this
               processor significantly superior to home alternatives.
             </p>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               Professional kitchens report saving hours of labor daily. The continuous feed design and
               commercial-grade motor process massive volume quickly—this is equipment that transforms prep
               operations and pays for itself through labor savings.
             </p>
 
-            <div style={{
-              background: 'rgba(255,255,255,0.2)',
-              padding: '20px',
-              margin: '20px 0',
-              borderRadius: '6px'
-            }}>
-              <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
+            <div className="bg-white/20 p-5 my-5 rounded-md">
+              <p className="m-0 text-xl font-bold">
                 Final Rating: ⭐⭐⭐⭐⭐ 4.7/5
               </p>
-              <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
+              <ul className="mt-4 mb-0 ml-5 text-base leading-relaxed">
                 <li>Speed & Efficiency: 5/5</li>
                 <li>Cut Quality & Consistency: 5/5</li>
                 <li>Commercial Reliability: 5/5</li>
@@ -913,7 +816,7 @@ export default function RobotCoupeR2DiceReview() {
               </ul>
             </div>
 
-            <p style={{ fontSize: '16px', marginBottom: 0 }}>
+            <p className="text-base mb-0">
               <strong>Would I buy this again?</strong> Without hesitation. This is the kind of equipment
               that becomes indispensable—highly recommended for any serious commercial kitchen.
             </p>
@@ -921,20 +824,13 @@ export default function RobotCoupeR2DiceReview() {
           </div>
 
           {/* STRONG FINAL CTA */}
-          <div style={{
-            background: '#fff3cd',
-            padding: '30px',
-            margin: '30px 0',
-            borderRadius: '8px',
-            textAlign: 'center',
-            border: '3px solid #ffc107'
-          }}>
+          <div className="bg-yellow-100 p-8 my-8 rounded-lg text-center border-4 border-yellow-400">
 
-            <h3 style={{ marginTop: 0, fontSize: '28px' }}>
+            <h3 className="mt-0 text-3xl">
               Ready to Transform Your Prep Operations?
             </h3>
 
-            <p style={{ fontSize: '18px', margin: '20px 0' }}>
+            <p className="text-lg my-5">
               Check current availability and invest in equipment that pays for itself:
             </p>
 
@@ -955,7 +851,7 @@ export default function RobotCoupeR2DiceReview() {
               </AffiliateButton>
             </CTAVisibilityTracker>
 
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
+            <p className="text-sm text-gray-600 mt-5">
               💡 Commercial equipment suppliers will be added soon
             </p>
 
@@ -964,24 +860,18 @@ export default function RobotCoupeR2DiceReview() {
 
         {/* Content Upgrade Email Capture */}
         <section className="mb-8">
-          <div style={{
-            background: '#e7f3ff',
-            padding: '30px',
-            margin: '30px 0',
-            borderRadius: '8px',
-            borderLeft: '4px solid #0066cc'
-          }}>
+          <div className="bg-blue-50 p-8 my-8 rounded-lg border-l-4 border-blue-600">
 
-            <h3 style={{ marginTop: 0, fontSize: '24px' }}>
+            <h3 className="mt-0 text-2xl">
               🔥 Get My Complete Commercial Kitchen Equipment Guide
             </h3>
 
-            <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+            <p className="text-base leading-relaxed">
               Download my comprehensive guide to commercial kitchen equipment selection, developed over
               24 years of restaurant experience:
             </p>
 
-            <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
+            <ul className="my-4 text-base leading-relaxed">
               <li>✔ Commercial vs residential equipment comparison matrix</li>
               <li>✔ ROI calculation worksheet for equipment investments</li>
               <li>✔ NSF certification requirements explained</li>
@@ -990,25 +880,16 @@ export default function RobotCoupeR2DiceReview() {
               <li>✔ Equipment sizing guide for different operation volumes</li>
             </ul>
 
-            <div style={{ textAlign: 'center', marginTop: '25px' }}>
+            <div className="text-center mt-6">
               <Link
                 href="/newsletter"
-                style={{
-                  display: 'inline-block',
-                  background: '#0066cc',
-                  color: 'white',
-                  padding: '15px 40px',
-                  textDecoration: 'none',
-                  borderRadius: '6px',
-                  fontWeight: 'bold',
-                  fontSize: '18px'
-                }}
+                className="inline-block bg-blue-600 text-white px-10 py-4 no-underline rounded-md font-bold text-lg hover:bg-blue-700"
               >
                 Download Free Guide →
               </Link>
             </div>
 
-            <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
+            <p className="text-xs text-gray-600 mt-4 text-center">
               Instant delivery. No spam, ever. Unsubscribe anytime.
             </p>
 
@@ -1019,103 +900,56 @@ export default function RobotCoupeR2DiceReview() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Complete Your Commercial Kitchen Setup</h2>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
+          <p className="text-base leading-relaxed mb-6">
             A commercial food processor is essential prep equipment, but it works best as part of a
             complete professional kitchen. Based on 24 years of restaurant experience, here are the
             tools I used alongside this processor:
           </p>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '20px',
-            margin: '30px 0'
-          }}>
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5 my-8">
 
             {/* Product 1 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>KitchenAid Commercial Mixer</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">KitchenAid Commercial Mixer</h4>
               <p>The commercial mixer that worked alongside the Robot Coupe in our prep operations.
               Together, they transformed our prep efficiency and paid for themselves in months.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 18 months:</strong> Essential commercial equipment.
               </p>
               <Link
                 href="/reviews/kitchenaid-ksm8990wh"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2.5 no-underline rounded mt-2.5 font-bold hover:bg-green-700"
               >
                 Read Full Review →
               </Link>
             </div>
 
             {/* Product 2 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>John Boos Commercial Cutting Board</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">John Boos Commercial Cutting Board</h4>
               <p>The prep surface where we staged ingredients before processing. The 24x18 size provides
               perfect workspace for high-volume prep operations.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 18 years:</strong> Still my daily prep station.
               </p>
               <Link
                 href="/reviews/john-boos-platinum-commercial-cutting-board"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2.5 no-underline rounded mt-2.5 font-bold hover:bg-green-700"
               >
                 Read Full Review →
               </Link>
             </div>
 
             {/* Product 3 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>Rubbermaid Commercial Scraper</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">Rubbermaid Commercial Scraper</h4>
               <p>Essential for scraping down the Robot Coupe bowl between batches. This professional-grade rubber spatula handles the demands of commercial food processing and lasts decades.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 18 years:</strong> Still my go-to scraper for food processor cleanup.
               </p>
               <Link
                 href="/reviews/rubbermaid-commercial-cooks-scraper"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2.5 no-underline rounded mt-2.5 font-bold hover:bg-green-700"
               >
                 Read Full Review →
               </Link>
@@ -1123,16 +957,9 @@ export default function RobotCoupeR2DiceReview() {
 
           </div>
 
-          <p style={{
-            textAlign: 'center',
-            margin: '30px 0',
-            fontSize: '18px',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <p className="text-center my-8 text-lg p-5 bg-gray-50 rounded-md">
             <strong>Equipping a complete commercial kitchen?</strong><br/>
-            <Link href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold', fontSize: '20px' }}>
+            <Link href="/kitchen-bundle" className="text-blue-600 font-bold text-xl hover:underline">
               See My Complete Commercial Kitchen Setup Guide →
             </Link>
           </p>
@@ -1143,71 +970,50 @@ export default function RobotCoupeR2DiceReview() {
 
         {/* Footer Transparency Elements */}
         <section className="mb-8">
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            margin: '30px 0',
-            borderRadius: '6px',
-            borderLeft: '4px solid #6c757d'
-          }}>
-            <p style={{ margin: '10px 0' }}>
+          <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
+            <p className="my-2.5">
               <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
               })}
             </p>
-            <p style={{ margin: '10px 0' }}>
+            <p className="my-2.5">
               <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long'
               })}
             </p>
-            <p style={{ margin: '10px 0' }}>
+            <p className="my-2.5">
               <strong>💬 Own a Robot Coupe?</strong> Share your experience in the comments below—I
               read and respond to every comment.
             </p>
-            <p style={{ margin: '10px 0' }}>
-              <strong>📧 Questions about commercial equipment?</strong> <Link href="/contact" style={{ color: '#0066cc' }}>
+            <p className="my-2.5">
+              <strong>📧 Questions about commercial equipment?</strong> <Link href="/contact" className="text-blue-600 hover:underline">
               Contact me directly</Link> and I&apos;ll help you make the best decision for your operation.
             </p>
           </div>
 
           {/* Author Bio Box */}
-          <div style={{
-            background: 'white',
-            padding: '25px',
-            margin: '30px 0',
-            border: '1px solid #dee2e6',
-            borderRadius: '8px',
-            display: 'grid',
-            gridTemplateColumns: '100px 1fr',
-            gap: '20px',
-            alignItems: 'start'
-          }}>
+          <div className="bg-white p-6 my-8 border border-gray-300 rounded-lg grid grid-cols-[100px_1fr] gap-5 items-start">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/team/head-shot-1.jpg"
               alt="Scott Bradley, Professional Chef"
-              style={{
-                width: '100px',
-                height: '100px',
-                borderRadius: '50%',
-                objectFit: 'cover'
-              }}
+              className="w-[100px] h-[100px] rounded-full object-cover"
             />
             <div>
-              <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-              <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
+              <h3 className="m-0 mb-2.5">About Scott Bradley</h3>
+              <p className="my-1 font-bold">
                 Professional Chef • 45 Years Cooking Experience
               </p>
-              <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
+              <p className="my-2.5 text-sm leading-relaxed">
                 Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
                 A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
                 University of Montana. Equipment tested in high-volume commercial operations serving
                 hundreds daily.
               </p>
-              <Link href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>
+              <Link href="/about" className="text-blue-600 font-bold hover:underline">
                 Read more about my testing methodology →
               </Link>
             </div>

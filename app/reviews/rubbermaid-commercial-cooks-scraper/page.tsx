@@ -9,6 +9,9 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import type { Metadata } from 'next'
+import FAQBox, { FAQGrid } from '@/components/review/FAQBox'
+import EmailCaptureBox from '@/components/review/EmailCaptureBox'
+import AuthorBio from '@/components/review/AuthorBio'
 
 const productData = {
   name: 'Rubbermaid Commercial Cook\'s Scraper / Spatula (13.5-inch)',
@@ -633,25 +636,14 @@ export default function RubbermaidScraperReview() {
             day: 'numeric'
           })}</p>
 
-          <div style={{
-            background: '#f8f9fa',
-            padding: '25px',
-            margin: '25px 0',
-            borderRadius: '8px'
-          }}>
-            <h3 style={{ marginTop: 0 }}>Compare Sizes & Prices:</h3>
+          <div className="bg-gray-50 p-6 my-6 rounded-lg">
+            <h3 className="mt-0">Compare Sizes & Prices:</h3>
 
-            <div style={{
-              background: 'white',
-              padding: '20px',
-              margin: '15px 0',
-              borderRadius: '6px',
-              border: '2px solid #ff9900'
-            }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
+            <div className="bg-white p-5 my-4 rounded-md border-2 border-yellow-600">
+              <div className="flex justify-between items-center flex-wrap gap-4">
                 <div>
-                  <h4 style={{ margin: '0 0 10px 0' }}>🏆 13.5-inch (Professional/Large Batches)</h4>
-                  <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Prime shipping | ✓ Fast delivery | ✓ Easy returns</p>
+                  <h4 className="m-0 mb-2.5">🏆 13.5-inch (Professional/Large Batches)</h4>
+                  <p className="mt-1 mb-0 text-gray-600">✓ Prime shipping | ✓ Fast delivery | ✓ Easy returns</p>
                 </div>
                 <div>
                   <CTAVisibilityTracker
@@ -674,17 +666,11 @@ export default function RubbermaidScraperReview() {
               </div>
             </div>
 
-            <div style={{
-              background: 'white',
-              padding: '20px',
-              margin: '15px 0',
-              borderRadius: '6px',
-              border: '2px solid #28a745'
-            }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
+            <div className="bg-white p-5 my-4 rounded-md border-2 border-green-600">
+              <div className="flex justify-between items-center flex-wrap gap-4">
                 <div>
-                  <h4 style={{ margin: '0 0 10px 0' }}>⭐ 9.5-inch (Home Kitchens - Most Popular)</h4>
-                  <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Perfect size for daily use | ✓ Best value | ✓ Recommended</p>
+                  <h4 className="m-0 mb-2.5">⭐ 9.5-inch (Home Kitchens - Most Popular)</h4>
+                  <p className="mt-1 mb-0 text-gray-600">✓ Perfect size for daily use | ✓ Best value | ✓ Recommended</p>
                 </div>
                 <div>
                   <CTAVisibilityTracker
@@ -707,7 +693,7 @@ export default function RubbermaidScraperReview() {
               </div>
             </div>
 
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '20px', textAlign: 'center' }}>
+            <p className="text-sm text-gray-600 mt-5 text-center">
               💡 Both sizes feature identical construction and materials—only length differs.
             </p>
           </div>
@@ -715,77 +701,36 @@ export default function RubbermaidScraperReview() {
 
         {/* Email Capture Section */}
         <section className="mb-8">
-          <div style={{
-            background: '#e7f3ff',
-            padding: '30px',
-            margin: '30px 0',
-            borderRadius: '8px',
-            borderLeft: '4px solid #0066cc'
-          }}>
-            <h3 style={{ marginTop: 0, fontSize: '24px' }}>
-              🔥 Get My Complete Commercial Kitchen Equipment Guide
-            </h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
-              Download my comprehensive guide to building a professional-grade kitchen with commercial equipment at consumer prices:
-            </p>
-            <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
-              <li>✓ Essential commercial-grade tools that last decades</li>
-              <li>✓ NSF certification explained: what it means for home cooks</li>
-              <li>✓ Heat resistance ratings decoded (and why they matter)</li>
-              <li>✓ Sanitation best practices from professional kitchens</li>
-              <li>✓ When to buy commercial vs consumer-grade equipment</li>
-              <li>✓ Maintenance schedules for buy-it-for-life durability</li>
-            </ul>
-            <div style={{ textAlign: 'center', marginTop: '25px' }}>
-              <Link
-                href="/newsletter"
-                style={{
-                  display: 'inline-block',
-                  background: '#0066cc',
-                  color: 'white',
-                  padding: '15px 40px',
-                  textDecoration: 'none',
-                  borderRadius: '6px',
-                  fontWeight: 'bold',
-                  fontSize: '18px'
-                }}
-              >
-                Download Free Guide →
-              </Link>
-            </div>
-            <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
-              Instant delivery. No spam, ever. Unsubscribe anytime.
-            </p>
-          </div>
+          <EmailCaptureBox
+            title="🔥 Get My Complete Commercial Kitchen Equipment Guide"
+            description="Download my comprehensive guide to building a professional-grade kitchen with commercial equipment at consumer prices:"
+            benefits={[
+              "Essential commercial-grade tools that last decades",
+              "NSF certification explained: what it means for home cooks",
+              "Heat resistance ratings decoded (and why they matter)",
+              "Sanitation best practices from professional kitchens",
+              "When to buy commercial vs consumer-grade equipment",
+              "Maintenance schedules for buy-it-for-life durability"
+            ]}
+          />
         </section>
 
         {/* Final Verdict */}
         <section className="mb-8" id="verdict">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">The Bottom Line: My Professional Verdict</h2>
 
-          <div style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            color: 'white',
-            padding: '30px',
-            borderRadius: '8px',
-            margin: '30px 0'
-          }}>
-            <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
+          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-lg my-8">
+            <h3 className="text-white mt-0 text-2xl">
               After 18 Years of Professional and Home Use...
             </h3>
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               {productData.finalVerdict}
             </p>
-            <div style={{
-              background: 'rgba(255,255,255,0.2)',
-              padding: '20px',
-              margin: '20px 0',
-              borderRadius: '6px'
-            }}>
-              <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
+            <div className="bg-white/20 p-5 my-5 rounded-md">
+              <p className="m-0 text-xl font-bold">
                 Final Rating: ⭐⭐⭐⭐⭐ {productData.expertRating}/5
               </p>
-              <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
+              <ul className="mt-4 mb-0 ml-5 text-base leading-relaxed">
                 <li>Durability: 5/5 (18 years and counting)</li>
                 <li>Value: 5/5 (exceptional cost per use)</li>
                 <li>Heat Resistance: 5/5 (500°F proven)</li>
@@ -793,29 +738,22 @@ export default function RubbermaidScraperReview() {
                 <li>Flexibility: 4/5 (good leverage, adequate flex)</li>
               </ul>
             </div>
-            <p style={{ fontSize: '16px', marginBottom: 0 }}>
+            <p className="text-base mb-0">
               <strong>Would I buy this again?</strong> Without hesitation. At this price point, there&apos;s nothing that competes with the durability and value.
             </p>
           </div>
 
           {/* STRONG FINAL CTA */}
-          <div style={{
-            background: '#fff3cd',
-            padding: '30px',
-            margin: '30px 0',
-            borderRadius: '8px',
-            textAlign: 'center',
-            border: '3px solid #ffc107'
-          }}>
-            <h3 style={{ marginTop: 0, fontSize: '28px' }}>
+          <div className="bg-yellow-100 p-8 my-8 rounded-lg text-center border-3 border-yellow-400">
+            <h3 className="mt-0 text-3xl">
               Ready for Commercial-Grade Durability?
             </h3>
-            <p style={{ fontSize: '18px', margin: '20px 0' }}>
+            <p className="text-lg my-5">
               This is a buy-it-for-life investment that costs less than dinner out.
             </p>
             <div className="space-y-3">
               <div>
-                <p style={{ fontSize: '14px', marginBottom: '10px' }}>13.5&quot; (Professional/Large Batches):</p>
+                <p className="text-sm mb-2.5">13.5&quot; (Professional/Large Batches):</p>
                 <CTAVisibilityTracker
                   ctaId={`review-${productData.slug}-final-13`}
                   position="final_cta"
@@ -834,7 +772,7 @@ export default function RubbermaidScraperReview() {
                 </CTAVisibilityTracker>
               </div>
               <div>
-                <p style={{ fontSize: '14px', marginBottom: '10px' }}>9.5&quot; (Home Kitchens - Most Popular):</p>
+                <p className="text-sm mb-2.5">9.5&quot; (Home Kitchens - Most Popular):</p>
                 <CTAVisibilityTracker
                   ctaId={`review-${productData.slug}-final-9`}
                   position="final_cta"
@@ -853,7 +791,7 @@ export default function RubbermaidScraperReview() {
                 </CTAVisibilityTracker>
               </div>
             </div>
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
+            <p className="text-sm text-gray-600 mt-5">
               💡 Pricing updated daily.
             </p>
           </div>
@@ -861,46 +799,41 @@ export default function RubbermaidScraperReview() {
 
         {/* Alternative Recommendations Section */}
         <section className="mb-8">
-          <div style={{
-            background: '#f8f9fa',
-            padding: '25px',
-            margin: '25px 0',
-            borderRadius: '8px'
-          }}>
+          <div className="bg-gray-50 p-6 my-6 rounded-lg">
             <h3>Not Sure This Scraper Is Right for You? Consider These Alternatives:</h3>
 
-            <div style={{ margin: '20px 0' }}>
+            <div className="my-5">
               <h4>If You Need Maximum Flexibility:</h4>
-              <p style={{ marginBottom: '10px' }}>
+              <p className="mb-2.5">
                 → <strong>Le Creuset Silicone Spatulas</strong> ($25-35) - Superior flexibility for delicate folding and fine pastry work. Better for meringues and soufflés, but costs 2-3x more.
               </p>
-              <p style={{ marginBottom: '10px' }}>
+              <p className="mb-2.5">
                 → <strong>GIR Ultimate Spatula</strong> ($30-40) - Premium silicone with ergonomic design. Excellent for serious bakers who need finesse over leverage.
               </p>
             </div>
 
-            <div style={{ margin: '20px 0' }}>
+            <div className="my-5">
               <h4>If Budget Is Your Main Concern:</h4>
-              <p style={{ marginBottom: '10px' }}>
+              <p className="mb-2.5">
                 → <strong>OXO Good Grips Silicone Spatula</strong> ($10-15) - Decent consumer-grade option for occasional use. Won&apos;t last 18 years, but adequate for light home cooking.
               </p>
             </div>
 
-            <div style={{ margin: '20px 0' }}>
+            <div className="my-5">
               <h4>If You Want Higher Heat Rating:</h4>
-              <p style={{ marginBottom: '10px' }}>
+              <p className="mb-2.5">
                 → <strong>Rubbermaid High-Heat Version</strong> (same price) - Available with red handle, features higher visibility. Same 500°F rating and durability.
               </p>
             </div>
 
-            <div style={{ margin: '20px 0' }}>
+            <div className="my-5">
               <h4>If You&apos;re Building a Complete Professional Kitchen:</h4>
-              <p style={{ marginBottom: '10px' }}>
+              <p className="mb-2.5">
                 → See our <Link href="/kitchen-bundle" className="text-orange-600 hover:text-orange-800 underline">Complete Kitchen Starter Kit</Link> for recommended equipment combinations at different budget levels.
               </p>
             </div>
 
-            <p style={{ marginTop: '20px', padding: '15px', background: '#fff3cd', borderRadius: '4px' }}>
+            <p className="mt-5 p-4 bg-yellow-100 rounded">
               <strong>Still unsure?</strong> <Link href="/contact" className="text-orange-600 hover:text-orange-800 underline">Contact me</Link> with your specific needs—I&apos;ll provide a personalized recommendation based on your cooking style and budget.
             </p>
           </div>
@@ -951,74 +884,31 @@ export default function RubbermaidScraperReview() {
 
         {/* Footer Transparency Elements */}
         <section className="mb-8">
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            margin: '30px 0',
-            borderRadius: '6px',
-            borderLeft: '4px solid #6c757d'
-          }}>
-            <p style={{ margin: '10px 0' }}>
+          <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
+            <p className="my-2.5">
               <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
               })}
             </p>
-            <p style={{ margin: '10px 0' }}>
+            <p className="my-2.5">
               <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long'
               })}
             </p>
-            <p style={{ margin: '10px 0' }}>
+            <p className="my-2.5">
               <strong>💬 Own a Rubbermaid Commercial scraper?</strong> Share your experience in the comments
               below—I read and respond to every comment.
             </p>
-            <p style={{ margin: '10px 0' }}>
-              <strong>🔧 Questions about kitchen tools?</strong> <Link href="/contact" style={{ color: '#0066cc' }}>
+            <p className="my-2.5">
+              <strong>🔧 Questions about kitchen tools?</strong> <Link href="/contact" className="text-blue-600">
               Contact me directly</Link> and I&apos;ll help you choose the right equipment for your needs.
             </p>
           </div>
 
-          {/* Author Bio Box */}
-          <div style={{
-            background: 'white',
-            padding: '25px',
-            margin: '30px 0',
-            border: '1px solid #dee2e6',
-            borderRadius: '8px',
-            display: 'grid',
-            gridTemplateColumns: '100px 1fr',
-            gap: '20px',
-            alignItems: 'start'
-          }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/team/head-shot-1.jpg"
-              alt="Scott Bradley, Professional Chef"
-              style={{
-                width: '100px',
-                height: '100px',
-                borderRadius: '50%',
-                objectFit: 'cover'
-              }}
-            />
-            <div>
-              <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-              <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-                Professional Chef • 45 Years Cooking Experience
-              </p>
-              <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience across multiple kitchens including Purple Cafe and Feireabend.
-                A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-                University of Montana. Equipment tested in high-volume operations serving hundreds daily.
-              </p>
-              <Link href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>
-                Read more about my testing methodology →
-              </Link>
-            </div>
-          </div>
+          <AuthorBio />
         </section>
 
         {/* Schema Markup */}

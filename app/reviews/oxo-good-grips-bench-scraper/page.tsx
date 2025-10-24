@@ -633,64 +633,64 @@ export default function OXOGoodGripsBenchScraperReview() {
             Comparison vs. Competitors
           </h2>
 
-          <div style={{ overflowX: 'auto', margin: '20px 0' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
+          <div className="overflow-x-auto my-5">
+            <table className="w-full border-collapse text-sm">
               <thead>
-                <tr style={{ background: '#f8f9fa' }}>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Feature</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>OXO Good Grips</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Dexter-Russell</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Generic Steel</th>
+                <tr className="bg-gray-50">
+                  <th className="p-3 text-left border-b-2 border-gray-300">Feature</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">OXO Good Grips</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">Dexter-Russell</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">Generic Steel</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Price Range</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold', color: '#16a34a' }}>$12-15</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$9-12</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$6-8</td>
+                  <td className="p-3 border-b border-gray-300">Price Range</td>
+                  <td className="p-3 border-b border-gray-300 font-bold text-green-600">$12-15</td>
+                  <td className="p-3 border-b border-gray-300">$9-12</td>
+                  <td className="p-3 border-b border-gray-300">$6-8</td>
                 </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Handle Design</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>Non-slip Good Grips</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Textured plastic</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>None (all metal)</td>
-                </tr>
-                <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Measurements</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>Inch & cm markings</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>None</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>None</td>
-                </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Blade Material</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>18/8 Stainless</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Stainless steel</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Basic stainless</td>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Handle Design</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">Non-slip Good Grips</td>
+                  <td className="p-3 border-b border-gray-300">Textured plastic</td>
+                  <td className="p-3 border-b border-gray-300">None (all metal)</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Dishwasher Safe</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✓ Yes</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✓ Yes</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✓ Yes</td>
+                  <td className="p-3 border-b border-gray-300">Measurements</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">Inch & cm markings</td>
+                  <td className="p-3 border-b border-gray-300">None</td>
+                  <td className="p-3 border-b border-gray-300">None</td>
                 </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Comfort Rating</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>Excellent (soft grip)</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Good</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Poor (no grip)</td>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Blade Material</td>
+                  <td className="p-3 border-b border-gray-300">18/8 Stainless</td>
+                  <td className="p-3 border-b border-gray-300">Stainless steel</td>
+                  <td className="p-3 border-b border-gray-300">Basic stainless</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Blade Width</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>5.5 inches</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>6 inches</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>4-6 inches (varies)</td>
+                  <td className="p-3 border-b border-gray-300">Dishwasher Safe</td>
+                  <td className="p-3 border-b border-gray-300">✓ Yes</td>
+                  <td className="p-3 border-b border-gray-300">✓ Yes</td>
+                  <td className="p-3 border-b border-gray-300">✓ Yes</td>
                 </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Best For</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>All-purpose home use</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Commercial kitchens</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Occasional use</td>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Comfort Rating</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">Excellent (soft grip)</td>
+                  <td className="p-3 border-b border-gray-300">Good</td>
+                  <td className="p-3 border-b border-gray-300">Poor (no grip)</td>
+                </tr>
+                <tr>
+                  <td className="p-3 border-b border-gray-300">Blade Width</td>
+                  <td className="p-3 border-b border-gray-300">5.5 inches</td>
+                  <td className="p-3 border-b border-gray-300">6 inches</td>
+                  <td className="p-3 border-b border-gray-300">4-6 inches (varies)</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Best For</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">All-purpose home use</td>
+                  <td className="p-3 border-b border-gray-300">Commercial kitchens</td>
+                  <td className="p-3 border-b border-gray-300">Occasional use</td>
                 </tr>
               </tbody>
             </table>

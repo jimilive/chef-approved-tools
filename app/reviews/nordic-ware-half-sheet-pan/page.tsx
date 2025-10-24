@@ -1,7 +1,6 @@
 import { Tier2Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
-
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
@@ -9,6 +8,10 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+import FAQBox, { FAQGrid } from '@/components/review/FAQBox';
+import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox';
+import EmailCaptureBox from '@/components/review/EmailCaptureBox';
+import AuthorBio from '@/components/review/AuthorBio';
 
 const productData = {
   name: "Nordic Ware Half Sheet Pan",
@@ -100,7 +103,7 @@ export const metadata: Metadata = {
 
 export default function NordicWareHalfSheetPanReview() {
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
+    <div className="max-w-3xl mx-auto px-5 py-10">
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
@@ -112,33 +115,21 @@ export default function NordicWareHalfSheetPanReview() {
       />
       <article>
         {/* Breadcrumb */}
-        <nav style={{ marginBottom: '20px', fontSize: '14px' }}>
-          <a href="/" style={{ color: '#0066cc', textDecoration: 'none' }}>Home</a>
+        <nav className="mb-5 text-sm">
+          <a href="/" className="text-blue-600 no-underline">Home</a>
           {' > '}
-          <a href="/reviews" style={{ color: '#0066cc', textDecoration: 'none' }}>Reviews</a>
+          <a href="/reviews" className="text-blue-600 no-underline">Reviews</a>
           {' > '}
-          <span style={{ color: '#666' }}>Nordic Ware Half Sheet Pan</span>
+          <span className="text-gray-600">Nordic Ware Half Sheet Pan</span>
         </nav>
 
         {/* H1 Title */}
-        <h1 style={{
-          fontSize: '42px',
-          fontWeight: 'bold',
-          marginBottom: '20px',
-          lineHeight: '1.2',
-          color: '#1a1a1a'
-        }}>
+        <h1 className="text-5xl font-bold mb-5 leading-tight text-gray-900">
           Nordic Ware Half Sheet Pan Review: 10 Years of Real Kitchen Testing
         </h1>
 
         {/* Author Byline */}
-        <div style={{
-          fontSize: '16px',
-          color: '#666',
-          marginBottom: '30px',
-          paddingBottom: '20px',
-          borderBottom: '1px solid #e0e0e0'
-        }}>
+        <div className="text-base text-gray-600 mb-8 pb-5 border-b border-gray-300">
           <strong>By Scott Bradley</strong> | Professional Chef | 45 Years Cooking Experience
         </div>
 
@@ -146,29 +137,16 @@ export default function NordicWareHalfSheetPanReview() {
         <Tier2Badge testingPeriod="10 Years" showDescription={true} />
 
         {/* Quick Rating Box */}
-        <div className="quick-stats" style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '20px 0',
-          borderLeft: '4px solid #28a745',
-          borderRadius: '4px'
-        }}>
-          <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
+        <QuickStatsBox variant="success">
+          <p className="m-0 text-lg leading-relaxed">
             <strong>⭐⭐⭐⭐⭐ 5/5</strong> | Based on 10 years of home kitchen testing<br/>
             <strong>✓ Natural Aluminum</strong> | <strong>✓ 18x13&quot;</strong> | <strong>✓ Commercial Grade</strong>
           </p>
-        </div>
+        </QuickStatsBox>
 
         {/* Primary CTA Above the Fold */}
-        <div className="primary-cta" style={{
-          background: '#fff3cd',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '2px solid #ffc107'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
+        <ReviewCTABox variant="warning">
+          <h3 className="mt-0 text-2xl">Current Best Price:</h3>
 
           <CTAVisibilityTracker
             ctaId={`review-${productData.slug}-above_fold`}
@@ -187,24 +165,18 @@ export default function NordicWareHalfSheetPanReview() {
             </AffiliateButton>
           </CTAVisibilityTracker>
 
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
+          <p className="text-sm text-gray-600 mt-4">
             💡 Price updated daily. We earn commission at no extra cost to you.
           </p>
-        </div>
+        </ReviewCTABox>
 
         {/* Professional Verdict */}
-        <div className="verdict-box" style={{
-          background: '#f8f9fa',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
-          <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginBottom: '20px', color: '#1a1a1a' }}>
+        <div className="bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
+          <h2 className="text-3xl font-bold mb-5 text-gray-900">
             Professional Verdict
           </h2>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.8' }}>
+          <p className="text-lg leading-relaxed">
             <strong>After 10 years of regular home use, the Nordic Ware Natural Aluminum Commercial
             Baker&apos;s Half Sheet has proven itself as the single most versatile piece of baking
             equipment in my kitchen.</strong> This isn&apos;t just a baking sheet—it&apos;s a complete
@@ -212,7 +184,7 @@ export default function NordicWareHalfSheetPanReview() {
             perfectly crispy cookies.
           </p>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.8' }}>
+          <p className="text-lg leading-relaxed">
             The natural aluminum construction delivers exceptional heat distribution without hot spots.
             After a decade of use, these pans have developed beautiful bronze patina that actually
             improves their non-stick properties. The 13-gauge thickness prevents warping even under
@@ -220,22 +192,17 @@ export default function NordicWareHalfSheetPanReview() {
             heating cycles.
           </p>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.8' }}>
+          <p className="text-lg leading-relaxed">
             This is the pan professional bakers choose for commercial kitchens. For serious home cooks,
             it represents exceptional value—commercial-grade performance at consumer pricing.
           </p>
 
-          <div style={{
-            background: 'white',
-            padding: '15px',
-            marginTop: '20px',
-            borderRadius: '4px'
-          }}>
-            <p style={{ margin: '10px 0' }}>
+          <div className="bg-white p-4 mt-5 rounded">
+            <p className="my-2">
               <strong>✓ Perfect For:</strong> Serious home bakers, anyone roasting vegetables regularly,
               sheet pan dinner enthusiasts, those wanting commercial-grade equipment, cookie bakers
             </p>
-            <p style={{ margin: '10px 0' }}>
+            <p className="my-2">
               <strong>✗ Skip If:</strong> You want dishwasher-safe pans, prefer dark non-stick coating,
               need smaller size for toaster oven, want pans that stay shiny forever
             </p>
@@ -243,68 +210,45 @@ export default function NordicWareHalfSheetPanReview() {
         </div>
 
         {/* Hero Features */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Why This Pan Earned Its Place After 10 Years
         </h2>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '20px',
-          margin: '30px 0'
-        }}>
-
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>🔥</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Perfect Heat Distribution</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              Natural aluminum conducts heat evenly across entire surface. No hot spots. Cookies bake
-              uniformly. Vegetables roast consistently. Professional results every time.
-            </p>
-          </div>
-
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>💪</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Won&apos;t Warp</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              13-gauge thickness and reinforced steel rim maintain perfect flatness. After 10 years
-              including countless broiler sessions, mine remain perfectly flat. This matters for even
-              cooking.
-            </p>
-          </div>
-
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>✨</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Patina Improves Performance</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              After years of use, natural aluminum develops bronze patina that actually enhances
-              non-stick properties. Don&apos;t fight it—embrace it. This is how professional pans age.
-            </p>
-          </div>
-
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>📐</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Perfect Half Sheet Size</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-              18x13&quot; fits standard home ovens with clearance for airflow. Large enough for sheet
-              pan dinners, small enough to maneuver. The Goldilocks size for home kitchens.
-            </p>
-          </div>
-
-        </div>
+        <FeatureGrid features={[
+          {
+            emoji: "🔥",
+            title: "Perfect Heat Distribution",
+            description: "Natural aluminum conducts heat evenly across entire surface. No hot spots. Cookies bake uniformly. Vegetables roast consistently. Professional results every time."
+          },
+          {
+            emoji: "💪",
+            title: "Won't Warp",
+            description: "13-gauge thickness and reinforced steel rim maintain perfect flatness. After 10 years including countless broiler sessions, mine remain perfectly flat. This matters for even cooking."
+          },
+          {
+            emoji: "✨",
+            title: "Patina Improves Performance",
+            description: "After years of use, natural aluminum develops bronze patina that actually enhances non-stick properties. Don't fight it—embrace it. This is how professional pans age."
+          },
+          {
+            emoji: "📐",
+            title: "Perfect Half Sheet Size",
+            description: "18x13\" fits standard home ovens with clearance for airflow. Large enough for sheet pan dinners, small enough to maneuver. The Goldilocks size for home kitchens."
+          }
+        ]} />
 
         {/* Main Content */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           The 10-Year Testing Story
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             The Nordic Ware half sheet pan has become as essential to my home cooking as my{' '}
-            <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-600 no-underline">
               Victorinox chef knife
             </a> and{' '}
-            <a href="/reviews/john-boos-platinum-commercial-cutting-board" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-blue-600 no-underline">
               John Boos cutting board
             </a>—equipment I reach for daily.
           </p>
@@ -330,20 +274,20 @@ export default function NordicWareHalfSheetPanReview() {
           </p>
         </div>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           What Makes Nordic Ware Superior
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             Like the{' '}
-            <a href="/reviews/kitchenaid-ksm8990wh" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/kitchenaid-ksm8990wh" className="text-blue-600 no-underline">
               KitchenAid commercial mixer
             </a> I tested at Purple Café, this represents commercial-grade equipment at home-cook pricing.
             Here&apos;s what sets Nordic Ware apart from cheaper alternatives:
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             13-Gauge Commercial Thickness
           </h3>
           <p>
@@ -357,7 +301,7 @@ export default function NordicWareHalfSheetPanReview() {
             that produce consistent results.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Reinforced Steel Rim
           </h3>
           <p>
@@ -370,14 +314,14 @@ export default function NordicWareHalfSheetPanReview() {
             Nordic Ware&apos;s reinforced construction eliminates this problem.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Natural Aluminum (Not Coated)
           </h3>
           <p>
             Nordic Ware uses bare aluminum without non-stick coatings. This initially seems like a
             disadvantage until you understand the benefits:
           </p>
-          <ul style={{ paddingLeft: '20px', lineHeight: '1.8' }}>
+          <ul className="pl-5 leading-relaxed">
             <li>No coating to degrade or chip over time</li>
             <li>Safe for broiler temperatures that destroy non-stick coatings</li>
             <li>Superior heat conduction compared to coated pans</li>
@@ -389,7 +333,7 @@ export default function NordicWareHalfSheetPanReview() {
             tend to over-brown bottoms while leaving tops pale.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Made in USA
           </h3>
           <p>
@@ -400,18 +344,18 @@ export default function NordicWareHalfSheetPanReview() {
           </p>
         </div>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Understanding Patina (And Why It&apos;s Good)
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             The most common question about Nordic Ware pans: &quot;Why is my pan turning brown?&quot;
             This bronze discoloration concerns new users, but it&apos;s actually a sign of a well-used,
             properly functioning pan.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             What Patina Is
           </h3>
           <p>
@@ -420,17 +364,17 @@ export default function NordicWareHalfSheetPanReview() {
             and oxidation that creates a protective, slightly non-stick surface.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Why Patina Is Desirable
           </h3>
-          <ul style={{ paddingLeft: '20px', lineHeight: '1.8' }}>
+          <ul className="pl-5 leading-relaxed">
             <li><strong>Improves non-stick properties:</strong> The polymerized layer reduces sticking</li>
             <li><strong>Protects the aluminum:</strong> Creates barrier against further oxidation</li>
             <li><strong>Indicates proper use:</strong> Professional bakers prefer pans with patina</li>
             <li><strong>Enhances performance:</strong> Mature pans often perform better than new ones</li>
           </ul>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Don&apos;t Fight the Patina
           </h3>
           <p>
@@ -446,20 +390,20 @@ export default function NordicWareHalfSheetPanReview() {
           </p>
         </div>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Versatility: What I Actually Use These Pans For
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             For sheet pan dinners and roasted vegetables, this pairs perfectly with quality ingredients
             and proper technique—similar to how{' '}
-            <a href="/reviews/diamond-crystal-kosher-salt" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/diamond-crystal-kosher-salt" className="text-blue-600 no-underline">
               Diamond Crystal kosher salt
             </a> elevates every dish.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Roasted Vegetables (Weekly Use)
           </h3>
           <p>
@@ -469,7 +413,7 @@ export default function NordicWareHalfSheetPanReview() {
             No hot spots, no burnt corners.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Sheet Pan Dinners (2-3 Times Weekly)
           </h3>
           <p>
@@ -478,7 +422,7 @@ export default function NordicWareHalfSheetPanReview() {
             sides for 4 people comfortably. Cleanup is minimal—one pan, one meal, done.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Cookie Baking
           </h3>
           <p>
@@ -487,7 +431,7 @@ export default function NordicWareHalfSheetPanReview() {
             all cookies. Batch baking is efficient—one pan in oven, one cooling, one loading.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             High-Heat Broiling
           </h3>
           <p>
@@ -496,10 +440,10 @@ export default function NordicWareHalfSheetPanReview() {
             After 10 years of this abuse, the pans show no warping or degradation.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Misc Kitchen Tasks
           </h3>
-          <ul style={{ paddingLeft: '20px', lineHeight: '1.8' }}>
+          <ul className="pl-5 leading-relaxed">
             <li>Toasting nuts and seeds</li>
             <li>Reheating pizza (better than microwave)</li>
             <li>Drying herbs</li>
@@ -509,19 +453,19 @@ export default function NordicWareHalfSheetPanReview() {
           </ul>
         </div>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Care and Maintenance
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             Nordic Ware delivers the same buy-it-for-life quality as{' '}
-            <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-blue-600 no-underline">
               Le Creuset Dutch ovens
             </a>, just in a different category. Proper care ensures decades of service.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Hand Wash Only
           </h3>
           <p>
@@ -531,14 +475,14 @@ export default function NordicWareHalfSheetPanReview() {
           <p>
             <strong>My routine (takes 2 minutes):</strong>
           </p>
-          <ol style={{ paddingLeft: '20px', lineHeight: '1.8' }}>
+          <ol className="pl-5 leading-relaxed">
             <li>Let pan cool completely</li>
             <li>Wash with warm water, dish soap, and non-abrasive sponge</li>
             <li>For stuck-on food: Make paste of baking soda and water, let sit 15 minutes, scrub gently</li>
             <li>Dry thoroughly with towel before storing</li>
           </ol>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Embrace the Patina
           </h3>
           <p>
@@ -547,7 +491,7 @@ export default function NordicWareHalfSheetPanReview() {
             pans—they understand patina is a feature.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Use Parchment When Appropriate
           </h3>
           <p>
@@ -556,7 +500,7 @@ export default function NordicWareHalfSheetPanReview() {
             parchment.
           </p>
 
-          <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginTop: '30px', marginBottom: '15px', color: '#1a1a1a' }}>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">
             Storage
           </h3>
           <p>
@@ -565,15 +509,15 @@ export default function NordicWareHalfSheetPanReview() {
           </p>
         </div>
 
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Why Multiple Pans Matter
         </h2>
 
-        <div style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+        <div className="text-lg leading-relaxed mb-8">
           <p>
             I own four Nordic Ware half sheets. This isn&apos;t excessive—it&apos;s practical:
           </p>
-          <ul style={{ paddingLeft: '20px', lineHeight: '1.8' }}>
+          <ul className="pl-5 leading-relaxed">
             <li><strong>Batch cookie baking:</strong> One in oven, one cooling, one loading—continuous workflow</li>
             <li><strong>Sheet pan dinners:</strong> Protein on one pan, vegetables on another, different cooking times</li>
             <li><strong>Meal prep:</strong> Roast multiple vegetables simultaneously for week&apos;s meals</li>
@@ -585,368 +529,61 @@ export default function NordicWareHalfSheetPanReview() {
           </p>
           <p>
             This pan belongs in every serious home cook&apos;s{' '}
-            <a href="/kitchen-bundle" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <a href="/kitchen-bundle" className="text-blue-600 no-underline">
               professional kitchen starter kit
             </a>.
           </p>
         </div>
 
         {/* FAQ Section with Schema.org Markup */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           Frequently Asked Questions About Nordic Ware Half Sheet Pans
         </h2>
 
-        <div>
-
-          {/* Question 1 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Is Nordic Ware half sheet pan worth it?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> After 10 years of regular use, absolutely yes. The Nordic Ware
-                  Natural Aluminum Commercial Baker&apos;s Half Sheet delivers professional-level performance
-                  at exceptional value. The combination of perfect heat distribution, warp-resistant construction,
-                  and decade-long durability makes this one of the best kitchen equipment investments.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  This is the pan professional bakers use in commercial kitchens. For home cooks, it
-                  represents commercial quality at consumer pricing.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 2 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Why do Nordic Ware pans turn brown?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> The bronze patina that develops on natural aluminum is normal,
-                  expected, and actually improves performance. This isn&apos;t damage—it&apos;s the pan
-                  developing its character.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Why patina is good:</strong>
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Creates natural non-stick surface</li>
-                  <li>Indicates proper seasoning from use</li>
-                  <li>Protects the aluminum underneath</li>
-                  <li>Sign of a well-used, professional pan</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  Professional bakers prefer pans with patina. Don&apos;t fight it—embrace it. After
-                  10 years, my pans have beautiful bronze color and perform better than when new.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 3 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Can you put Nordic Ware in the dishwasher?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Nordic Ware recommends hand washing, and I agree. Dishwasher
-                  detergent is extremely harsh on natural aluminum and will cause discoloration and potentially
-                  damage the pan.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Proper cleaning (takes 2 minutes):</strong>
-                </p>
-                <ol style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Let pan cool completely</li>
-                  <li>Wash with warm water, dish soap, and non-abrasive sponge</li>
-                  <li>For stubborn stuck-on food: Make paste of baking soda and water, let sit 15 minutes,
-                  scrub gently</li>
-                  <li>Dry thoroughly before storing</li>
-                </ol>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  Hand washing protects your investment and maintains the patina that improves performance.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 4 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Do Nordic Ware pans warp?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> After 10 years including countless broiler sessions at 500°F+,
-                  my Nordic Ware pans remain perfectly flat. The 13-gauge aluminum thickness and reinforced
-                  steel rim prevent warping that plagues thinner pans.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Warp prevention features:</strong>
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Heavy 13-gauge construction (thicker than most consumer pans)</li>
-                  <li>Reinforced steel rim maintains rigidity</li>
-                  <li>Natural aluminum expands/contracts evenly without stress points</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  Cheap thin pans warp from thermal stress. Nordic Ware&apos;s commercial-grade thickness
-                  eliminates this problem.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 5 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              What&apos;s the difference between half sheet and quarter sheet pans?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Size matters for functionality:
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li><strong>Half Sheet (18x13&quot;):</strong> Fits standard home ovens, perfect for
-                  sheet pan dinners, roasting vegetables for 4-6 people, batch cookie baking</li>
-                  <li><strong>Quarter Sheet (13x9&quot;):</strong> Toaster oven size, small batch baking,
-                  reheating individual portions</li>
-                  <li><strong>Full Sheet (26x18&quot;):</strong> Commercial only, too large for most home
-                  ovens</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>My recommendation:</strong> Start with two half sheets. They&apos;re the most
-                  versatile size for home cooking. Add quarter sheets later if needed for toaster oven use.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 6 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              How many Nordic Ware sheet pans do I need?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Minimum 2, ideally 3-4 half sheet pans for serious home cooking.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Why multiple pans matter:</strong>
-                </p>
-                <ul style={{ marginLeft: '20px', lineHeight: '1.8', fontSize: '16px' }}>
-                  <li>Batch cookie baking (one baking, one loading/cooling)</li>
-                  <li>Sheet pan dinners with multiple components</li>
-                  <li>Meal prep for the week</li>
-                  <li>One clean pan always available</li>
-                </ul>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  I own 4 Nordic Ware half sheets after 10 years. They&apos;re in constant rotation—easily
-                  the most-used pans in my kitchen.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 7 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Do you need parchment paper with Nordic Ware?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Not always, but it helps with cleanup and prevents sticking
-                  for certain foods.
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Use parchment for:</strong> Cookies, sticky marinades, delicate fish, anything
-                  with high sugar content
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Skip parchment for:</strong> Roasted vegetables (you want browning contact),
-                  broiling (parchment can burn), anything you want to crisp
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  The patina that develops over time creates natural non-stick properties, but parchment
-                  still simplifies cleanup for many applications.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Question 8 */}
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
-            <h3 style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '10px' }}>
-              Nordic Ware vs other sheet pans: what&apos;s the difference?
-            </h3>
-            <div>
-              <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Answer:</strong> Having tested various pans over 45 years, here&apos;s what sets
-                  Nordic Ware apart:
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>vs Cheap pans ($10-15):</strong> Warp immediately, uneven heating, thin gauge
-                  aluminum, short lifespan
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>vs Dark non-stick pans:</strong> Over-brown bottoms due to dark surface, coating
-                  degrades over time, not broiler-safe
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>vs Stainless steel:</strong> Poor heat distribution, hot spots, foods stick more,
-                  heavier weight
-                </p>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                  <strong>Nordic Ware advantage:</strong> Commercial 13-gauge thickness, warp-resistant,
-                  even heat distribution, decades of durability, professional baker&apos;s choice
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        <FAQGrid faqs={faqData} />
 
         {/* Email Capture */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
-
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>
-            🔥 Get My Complete Sheet Pan Cooking Guide
-          </h3>
-
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
-            Download my comprehensive guide developed over 10 years of sheet pan mastery:
-          </p>
-
-          <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
-            <li>✓ 10 essential sheet pan dinner recipes</li>
-            <li>✓ Roasting temperature guide for every vegetable</li>
-            <li>✓ How to maximize oven space with multiple pans</li>
-            <li>✓ Sheet pan care and maintenance schedule</li>
-            <li>✓ Troubleshooting common baking problems</li>
-          </ul>
-
-          <div style={{ textAlign: 'center', marginTop: '25px' }}>
-            <a
-              href="/newsletter"
-              style={{
-                display: 'inline-block',
-                background: '#0066cc',
-                color: 'white',
-                padding: '15px 40px',
-                textDecoration: 'none',
-                borderRadius: '6px',
-                fontWeight: 'bold',
-                fontSize: '18px'
-              }}
-            >
-              Download Free Guide →
-            </a>
-          </div>
-
-          <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
-            Instant delivery. No spam, ever. Unsubscribe anytime.
-          </p>
-
-        </div>
+        <EmailCaptureBox
+          title="🔥 Get My Complete Sheet Pan Cooking Guide"
+          description="Download my comprehensive guide developed over 10 years of sheet pan mastery:"
+          benefits={[
+            "10 essential sheet pan dinner recipes",
+            "Roasting temperature guide for every vegetable",
+            "How to maximize oven space with multiple pans",
+            "Sheet pan care and maintenance schedule",
+            "Troubleshooting common baking problems"
+          ]}
+        />
 
         {/* Final Verdict & Strong CTA */}
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginTop: '40px', marginBottom: '20px', color: '#1a1a1a' }}>
+        <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
           The Bottom Line: My Professional Verdict
         </h2>
 
-        <div style={{
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          color: 'white',
-          padding: '30px',
-          borderRadius: '8px',
-          margin: '30px 0'
-        }}>
+        <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-lg my-8">
 
-          <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
+          <h3 className="text-white mt-0 text-2xl">
             After 10 Years of Daily Use...
           </h3>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+          <p className="text-lg leading-relaxed">
             The Nordic Ware Natural Aluminum Commercial Baker&apos;s Half Sheet has proven itself as
             the most versatile, reliable piece of baking equipment in my kitchen. From perfectly crispy
             roasted vegetables to evenly baked cookies to complete sheet pan dinners, this pan handles
             everything I throw at it.
           </p>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+          <p className="text-lg leading-relaxed">
             The commercial-grade construction delivers professional results. After a decade including
             countless high-heat roasting and broiling sessions, these pans remain perfectly flat with
             exceptional heat distribution. The patina that has developed actually improves performance.
           </p>
 
-          <div style={{
-            background: 'rgba(255,255,255,0.2)',
-            padding: '20px',
-            margin: '20px 0',
-            borderRadius: '6px'
-          }}>
-            <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
+          <div className="bg-white/20 p-5 my-5 rounded">
+            <p className="m-0 text-xl font-bold">
               Final Rating: ⭐⭐⭐⭐⭐ 5/5
             </p>
-            <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
+            <ul className="mt-4 mb-0 ml-5 text-base leading-relaxed">
               <li>Heat Distribution: 5/5</li>
               <li>Durability &amp; Build Quality: 5/5</li>
               <li>Versatility: 5/5</li>
@@ -954,27 +591,19 @@ export default function NordicWareHalfSheetPanReview() {
             </ul>
           </div>
 
-          <p style={{ fontSize: '16px', marginBottom: 0 }}>
+          <p className="text-base mb-0">
             <strong>Would I buy this again?</strong> I own four of them. That answers the question.
           </p>
 
         </div>
 
         {/* STRONG FINAL CTA */}
-        <div style={{
-          background: '#fff3cd',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '3px solid #ffc107'
-        }}>
-
-          <h3 style={{ marginTop: 0, fontSize: '28px' }}>
+        <ReviewCTABox variant="warning">
+          <h3 className="mt-0 text-3xl">
             Ready for Professional-Quality Baking at Home?
           </h3>
 
-          <p style={{ fontSize: '18px', margin: '20px 0' }}>
+          <p className="text-lg my-5">
             Get the sheet pan professional bakers choose:
           </p>
 
@@ -995,75 +624,35 @@ export default function NordicWareHalfSheetPanReview() {
             </AffiliateButton>
           </CTAVisibilityTracker>
 
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
+          <p className="text-sm text-gray-600 mt-4">
             💡 Buy 2-3 for maximum versatility in your kitchen
           </p>
 
-        </div>
+        </ReviewCTABox>
 
         {/* Footer & Last Updated */}
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '30px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #6c757d'
-        }}>
-          <p style={{ margin: '10px 0' }}>
+        <div className="bg-gray-50 p-5 my-8 rounded border-l-4 border-gray-500">
+          <p className="my-2">
             <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
+          <p className="my-2">
             <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
+          <p className="my-2">
             <strong>💬 Questions about sheet pans?</strong> Leave a comment below—I read and respond
             to every question.
           </p>
         </div>
 
         {/* Author Bio */}
-        <div style={{
-          background: 'white',
-          padding: '25px',
-          margin: '30px 0',
-          border: '1px solid #dee2e6',
-          borderRadius: '8px',
-          display: 'grid',
-          gridTemplateColumns: '100px 1fr',
-          gap: '20px',
-          alignItems: 'start'
-        }}>
-          <Image
-            src="/images/team/head-shot-1.jpg"
-            alt="Scott Bradley, Professional Chef"
-            width={100}
-            height={100}
-            style={{
-              borderRadius: '50%',
-              objectFit: 'cover'
-            }}
-          />
-          <div>
-            <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-            <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-              Professional Chef • 45 Years Cooking Experience
-            </p>
-            <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 24 years of restaurant experience. Equipment
-              tested through years of actual use in demanding conditions—not just manufacturer claims.
-            </p>
-            <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold', textDecoration: 'none' }}>
-              Read more about my testing methodology →
-            </a>
-          </div>
-        </div>
+        <AuthorBio />
 
         {/* Structured Data */}
         <script

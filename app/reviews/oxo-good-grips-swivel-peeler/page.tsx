@@ -650,64 +650,64 @@ export default function OXOGoodGripsSwivelPeelerReview() {
             Comparison vs. Competitors
           </h2>
 
-          <div style={{ overflowX: 'auto', margin: '20px 0' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
+          <div className="overflow-x-auto my-5">
+            <table className="w-full border-collapse text-sm">
               <thead>
-                <tr style={{ background: '#f8f9fa' }}>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Feature</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6', background: '#fff3e0' }}>OXO Good Grips Swivel</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Kuhn Rikon Original Swiss</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>OXO Y-Peeler</th>
+                <tr className="bg-gray-50">
+                  <th className="p-3 text-left border-b-2 border-gray-300">Feature</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300 bg-orange-50">OXO Good Grips Swivel</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">Kuhn Rikon Original Swiss</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">OXO Y-Peeler</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Price Range</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff3e0' }}>$8-12</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$4-6</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$10-13</td>
+                  <td className="p-3 border-b border-gray-300 font-semibold">Price Range</td>
+                  <td className="p-3 border-b border-gray-300 bg-orange-50">$8-12</td>
+                  <td className="p-3 border-b border-gray-300">$4-6</td>
+                  <td className="p-3 border-b border-gray-300">$10-13</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Blade Type</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff3e0' }}>Swivel, stainless steel</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Fixed, carbon steel</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Fixed Y-blade, stainless</td>
+                  <td className="p-3 border-b border-gray-300 font-semibold">Blade Type</td>
+                  <td className="p-3 border-b border-gray-300 bg-orange-50">Swivel, stainless steel</td>
+                  <td className="p-3 border-b border-gray-300">Fixed, carbon steel</td>
+                  <td className="p-3 border-b border-gray-300">Fixed Y-blade, stainless</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Handle Comfort</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff3e0' }}>⭐⭐⭐⭐⭐ Oversized, non-slip</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>⭐⭐⭐ Compact, plastic</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>⭐⭐⭐⭐⭐ Same Good Grips handle</td>
+                  <td className="p-3 border-b border-gray-300 font-semibold">Handle Comfort</td>
+                  <td className="p-3 border-b border-gray-300 bg-orange-50">⭐⭐⭐⭐⭐ Oversized, non-slip</td>
+                  <td className="p-3 border-b border-gray-300">⭐⭐⭐ Compact, plastic</td>
+                  <td className="p-3 border-b border-gray-300">⭐⭐⭐⭐⭐ Same Good Grips handle</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Dishwasher Safe</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff3e0' }}>✅ Yes</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>⚠️ Hand wash recommended</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✅ Yes</td>
+                  <td className="p-3 border-b border-gray-300 font-semibold">Dishwasher Safe</td>
+                  <td className="p-3 border-b border-gray-300 bg-orange-50">✅ Yes</td>
+                  <td className="p-3 border-b border-gray-300">⚠️ Hand wash recommended</td>
+                  <td className="p-3 border-b border-gray-300">✅ Yes</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Best For</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff3e0' }}>Round vegetables, comfort</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Ultra-thin peels, precision</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Long vegetables, speed</td>
+                  <td className="p-3 border-b border-gray-300 font-semibold">Best For</td>
+                  <td className="p-3 border-b border-gray-300 bg-orange-50">Round vegetables, comfort</td>
+                  <td className="p-3 border-b border-gray-300">Ultra-thin peels, precision</td>
+                  <td className="p-3 border-b border-gray-300">Long vegetables, speed</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Durability Rating</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff3e0' }}>⭐⭐⭐⭐⭐ 20 years</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>⭐⭐⭐⭐ 3-5 years</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>⭐⭐⭐⭐⭐ 15 years</td>
+                  <td className="p-3 border-b border-gray-300 font-semibold">Durability Rating</td>
+                  <td className="p-3 border-b border-gray-300 bg-orange-50">⭐⭐⭐⭐⭐ 20 years</td>
+                  <td className="p-3 border-b border-gray-300">⭐⭐⭐⭐ 3-5 years</td>
+                  <td className="p-3 border-b border-gray-300">⭐⭐⭐⭐⭐ 15 years</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Arthritis-Friendly</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff3e0' }}>✅ Excellent</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>❌ Thin handle</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✅ Excellent</td>
+                  <td className="p-3 border-b border-gray-300 font-semibold">Arthritis-Friendly</td>
+                  <td className="p-3 border-b border-gray-300 bg-orange-50">✅ Excellent</td>
+                  <td className="p-3 border-b border-gray-300">❌ Thin handle</td>
+                  <td className="p-3 border-b border-gray-300">✅ Excellent</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Weight</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff3e0' }}>2.4 oz</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>0.8 oz</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>2.2 oz</td>
+                  <td className="p-3 border-b border-gray-300 font-semibold">Weight</td>
+                  <td className="p-3 border-b border-gray-300 bg-orange-50">2.4 oz</td>
+                  <td className="p-3 border-b border-gray-300">0.8 oz</td>
+                  <td className="p-3 border-b border-gray-300">2.2 oz</td>
                 </tr>
               </tbody>
             </table>
