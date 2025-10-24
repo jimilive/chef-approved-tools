@@ -9,6 +9,10 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   alternates: {
@@ -19,7 +23,7 @@ export const metadata: Metadata = {
   description: 'Professional chef review of the OXO Good Grips bench scraper after 18 years of home and professional use. The most underrated tool in any kitchen.',
 }
 
-const productData = {
+const legacyProductData = {
   name: "OXO Good Grips Multi-Purpose Bench Scraper",
   slug: "oxo-good-grips-bench-scraper",
   brand: "OXO",
@@ -48,12 +52,6 @@ const productData = {
   lastUpdated: new Date().toISOString().split('T')[0]
 };
 
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-];
-
 const faqData = [
   {
     question: "Do I really need a bench scraper?",
@@ -81,7 +79,29 @@ const faqData = [
   }
 ];
 
-export default function OXOGoodGripsBenchScraperReview() {
+export default async function OXOGoodGripsBenchScraperReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('oxo-good-grips-bench-scraper')
+  if (!product) {
+    throw new Error('Product not found: oxo-good-grips-bench-scraper')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    affiliateLinks: product.affiliateLinks.length > 0 ? product.affiliateLinks : legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
+
   return (
     <div className="min-h-screen bg-gray-50">
       <ProductViewTrackerWrapper

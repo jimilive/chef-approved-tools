@@ -11,8 +11,12 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
-const productData = {
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
+const legacyProductData = {
   name: "Robot Coupe R2 Dice Combination Continuous Feed Food Processor",
   slug: "robot-coupe-r2-dice",
   brand: "Robot Coupe",
@@ -54,13 +58,6 @@ const productData = {
   dateAdded: "2025-01-15",
   lastUpdated: "2025-01-15"
 }
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: "Food Processors", url: "https://www.chefapprovedtools.com/appliances" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-]
 
 const faqData = [
   {
@@ -133,7 +130,30 @@ export const metadata = {
   }
 }
 
-export default function RobotCoupeR2DiceReview() {
+export default async function RobotCoupeR2DiceReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('robot-coupe-r2-dice')
+  if (!product) {
+    throw new Error('Product not found: robot-coupe-r2-dice')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    // Use legacy affiliateLinks to maintain compatibility with component expectations
+    affiliateLinks: legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: "Food Processors", url: "https://www.chefapprovedtools.com/appliances" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">

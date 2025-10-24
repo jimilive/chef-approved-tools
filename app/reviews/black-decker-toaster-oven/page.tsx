@@ -7,6 +7,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Black+Decker Toaster Oven: 48-Year Review',
@@ -22,7 +26,7 @@ export const metadata: Metadata = {
   },
 };
 
-const productData = {
+const legacyProductData = {
   name: "Black+Decker 4-Slice Toaster Oven",
   slug: "black-decker-toaster-oven",
   brand: "Black+Decker",
@@ -54,12 +58,6 @@ const productData = {
   dateAdded: "2025-01-15",
   lastUpdated: new Date().toISOString().split('T')[0]
 };
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-];
 
 const faqData = [
   {
@@ -104,7 +102,29 @@ const faqData = [
   }
 ];
 
-export default function BlackDeckerToasterOvenReview() {
+export default async function BlackDeckerToasterOvenReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('black-decker-toaster-oven')
+  if (!product) {
+    throw new Error('Product not found: black-decker-toaster-oven')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    affiliateLinks: product.affiliateLinks.length > 0 ? product.affiliateLinks : legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
+
   return (
     <div className="max-w-3xl mx-auto px-5 py-10">
      <ProductViewTrackerWrapper
