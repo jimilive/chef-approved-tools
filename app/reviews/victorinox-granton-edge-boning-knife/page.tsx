@@ -10,6 +10,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import FAQBox, { FAQGrid, type FAQItem } from '@/components/review/FAQBox'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata: Metadata = {
   alternates: {
@@ -19,41 +20,6 @@ export const metadata: Metadata = {
   title: 'Victorinox Granton Boning: Firm Blade Pro',
   description: 'Victorinox Granton boning knife: 20-year pro test. Firm blade for trimming, deboning. Granton edge prevents sticking. Professional butcher tool.',
 }
-
-const productData = {
-  name: "Victorinox 6-Inch Granton Edge Flexible Boning Knife",
-  slug: "victorinox-granton-edge-boning-knife",
-  brand: "Victorinox",
-  model: "40536",
-  category: "Boning Knives",
-  rating: 4.9,
-  reviewCount: 1,
-  pros: [
-    "Granton edge prevents meat from sticking during long cuts",
-    "Flexible blade follows bone contours for maximum yield and minimal waste",
-    "Professional Swiss-made quality at budget price ($35)",
-    "Excellent for both butchery work and fish filleting"
-  ],
-  cons: [
-    "Not suitable for general cutting tasks or vegetables",
-    "Requires basic butchery knowledge to use effectively",
-    "Flexible blade takes practice to master"
-  ],
-  affiliateLinks: [{
-    retailer: "Amazon",
-    url: "https://amzn.to/4pUDed1"
-  }],
-  expertRating: 4.9,
-  expertOpinion: "Essential for anyone who works with whole proteins - this knife cuts butchery time in half and pays for itself in reduced meat waste after 24 years of professional use.",
-  dateAdded: "2025-01-15",
-  lastUpdated: new Date().toISOString().split('T')[0]
-};
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-];
 
 const faqData = [
   {
@@ -90,7 +56,51 @@ const faqData = [
   }
 ];
 
-export default function VictorinoxGrantonEdgeBoningKnifeReview() {
+export default async function VictorinoxGrantonEdgeBoningKnifeReview() {
+  // Get product data from centralized Supabase database - SINGLE SOURCE OF TRUTH
+  const product = await getProductBySlug('victorinox-granton-edge-boning-knife')
+  if (!product) {
+    throw new Error('Product not found: victorinox-granton-edge-boning-knife')
+  }
+
+  // Get the primary affiliate link - update once in Supabase, updates everywhere
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  const productData = {
+    name: "Victorinox 6-Inch Granton Edge Flexible Boning Knife",
+    slug: "victorinox-granton-edge-boning-knife",
+    brand: "Victorinox",
+    model: "40536",
+    category: "Boning Knives",
+    rating: 4.9,
+    reviewCount: 1,
+    pros: [
+      "Granton edge prevents meat from sticking during long cuts",
+      "Flexible blade follows bone contours for maximum yield and minimal waste",
+      "Professional Swiss-made quality at budget price ($35)",
+      "Excellent for both butchery work and fish filleting"
+    ],
+    cons: [
+      "Not suitable for general cutting tasks or vegetables",
+      "Requires basic butchery knowledge to use effectively",
+      "Flexible blade takes practice to master"
+    ],
+    affiliateLinks: [{
+      retailer: "Amazon",
+      url: affiliateLink
+    }],
+    expertRating: 4.9,
+    expertOpinion: "Essential for anyone who works with whole proteins - this knife cuts butchery time in half and pays for itself in reduced meat waste after 24 years of professional use.",
+    dateAdded: "2025-01-15",
+    lastUpdated: product.lastUpdated
+  };
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <ProductViewTrackerWrapper
@@ -349,7 +359,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/4pUDed1"
+                href={affiliateLink}
                 merchant="amazon"
                 product={productData.slug}
                 position="above_fold"
@@ -502,7 +512,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4pUDed1"
+              href={affiliateLink}
               merchant="amazon"
               product="victorinox-granton-edge-boning-knife"
               position="mid_article"
@@ -713,7 +723,7 @@ export default function VictorinoxGrantonEdgeBoningKnifeReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/4pUDed1"
+                href={affiliateLink}
                 merchant="amazon"
                 product="victorinox-granton-edge-boning-knife"
                 position="final_cta"

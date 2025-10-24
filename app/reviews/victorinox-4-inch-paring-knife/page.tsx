@@ -9,6 +9,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata: Metadata = {
   alternates: {
@@ -18,44 +19,6 @@ export const metadata: Metadata = {
   title: 'Victorinox 4" Paring: 20-Year Detail Tool',
   description: 'Victorinox 4" paring knife: 20-year test. Perfect for detail work, peeling, trimming. Same blade from culinary school. Swiss precision under $15.',
 }
-
-const productData = {
-  name: "Victorinox 4-Inch Paring Knife",
-  slug: "victorinox-4-inch-paring-knife",
-  brand: "Victorinox",
-  model: "40600",
-  category: "Kitchen Knives",
-  rating: 5.0,
-  reviewCount: 1,
-  pros: [
-    "Perfect 4-inch blade size provides complete control for precision tasks",
-    "Incredibly sharp out of the box with excellent edge retention",
-    "Fibrox handle stays secure even when wet during extended use",
-    "Professional Swiss quality at budget-friendly price point",
-    "High-carbon stainless steel resists rust and staining",
-    "Dishwasher-safe handle (though hand-washing blade recommended)"
-  ],
-  cons: [
-    "Too small for general cutting board work - needs chef's knife",
-    "Plain utilitarian design lacks aesthetic appeal",
-    "Small size makes it easy to misplace in busy kitchens",
-    "Plastic handle feels less premium than wood or composite materials"
-  ],
-  affiliateLinks: [{
-    retailer: "Amazon",
-    url: "https://amzn.to/4mzvALq"
-  }],
-  expertRating: 5.0,
-  expertOpinion: "After 24 years in professional kitchens, this Victorinox paring knife is my go-to for all precision work - the perfect balance of Swiss quality, razor-sharp performance, and affordability that makes it easy to keep multiple in rotation.",
-  dateAdded: "2025-01-15",
-  lastUpdated: "2025-10-12"
-};
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-];
 
 const faqData = [
   {
@@ -92,7 +55,54 @@ const faqData = [
   }
 ];
 
-export default function Victorinox4InchParingKnifeReview() {
+export default async function Victorinox4InchParingKnifeReview() {
+  // Get product data from centralized Supabase database - SINGLE SOURCE OF TRUTH
+  const product = await getProductBySlug('victorinox-4-inch-paring-knife')
+  if (!product) {
+    throw new Error('Product not found: victorinox-4-inch-paring-knife')
+  }
+
+  // Get the primary affiliate link - update once in Supabase, updates everywhere
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  const productData = {
+    name: "Victorinox 4-Inch Paring Knife",
+    slug: "victorinox-4-inch-paring-knife",
+    brand: "Victorinox",
+    model: "40600",
+    category: "Kitchen Knives",
+    rating: 5.0,
+    reviewCount: 1,
+    pros: [
+      "Perfect 4-inch blade size provides complete control for precision tasks",
+      "Incredibly sharp out of the box with excellent edge retention",
+      "Fibrox handle stays secure even when wet during extended use",
+      "Professional Swiss quality at budget-friendly price point",
+      "High-carbon stainless steel resists rust and staining",
+      "Dishwasher-safe handle (though hand-washing blade recommended)"
+    ],
+    cons: [
+      "Too small for general cutting board work - needs chef's knife",
+      "Plain utilitarian design lacks aesthetic appeal",
+      "Small size makes it easy to misplace in busy kitchens",
+      "Plastic handle feels less premium than wood or composite materials"
+    ],
+    affiliateLinks: [{
+      retailer: "Amazon",
+      url: affiliateLink
+    }],
+    expertRating: 5.0,
+    expertOpinion: "After 24 years in professional kitchens, this Victorinox paring knife is my go-to for all precision work - the perfect balance of Swiss quality, razor-sharp performance, and affordability that makes it easy to keep multiple in rotation.",
+    dateAdded: "2025-01-15",
+    lastUpdated: product.lastUpdated
+  };
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <ProductViewTrackerWrapper
@@ -341,7 +351,7 @@ export default function Victorinox4InchParingKnifeReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/4mzvALq"
+                href={affiliateLink}
                 merchant="amazon"
                 product={productData.slug}
                 position="above_fold"
@@ -464,7 +474,7 @@ export default function Victorinox4InchParingKnifeReview() {
                 merchant="amazon"
               >
                 <AffiliateButton
-                  href="https://amzn.to/4mzvALq"
+                  href={affiliateLink}
                   merchant="amazon"
                   product={productData.slug}
                   position="mid_article"
@@ -850,7 +860,7 @@ export default function Victorinox4InchParingKnifeReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/4mzvALq"
+                href={affiliateLink}
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

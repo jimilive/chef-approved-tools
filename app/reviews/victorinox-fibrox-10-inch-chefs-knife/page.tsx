@@ -13,32 +13,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-
-
-
-const productData = {
-  name: "Victorinox fibrox 10 inch chefs knife",
-  slug: "victorinox-fibrox-10-inch-chefs-knife",
-  brand: "Brand Name",
-  category: "Kitchen Equipment",
-  affiliateLinks: [],
-  expertRating: 4.5,
-  expertOpinion: "Professional-grade quality.",
-  pros: [],
-  cons: [],
-  dateAdded: "2025-10-13",
-  lastUpdated: "2025-10-13",
-  images: {
-    primary: "/logo.png"
-  }
-};
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: "Knives", url: "https://www.chefapprovedtools.com/knives" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-]
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 const faqData = [
   {
@@ -92,7 +67,40 @@ export const metadata: Metadata = {
   description: 'Victorinox 10" chef\'s knife: 10-year pro test. Perfect for larger hands, big cutting tasks. Swiss precision, commercial durability. Best value in chef knives.',
 }
 
-export default function VictorinoxFibrox10InchReview() {
+export default async function VictorinoxFibrox10InchReview() {
+  // Get product data from centralized Supabase database - SINGLE SOURCE OF TRUTH
+  const product = await getProductBySlug('victorinox-fibrox-10-inch-chefs-knife')
+  if (!product) {
+    throw new Error('Product not found: victorinox-fibrox-10-inch-chefs-knife')
+  }
+
+  // Get the primary affiliate link - update once in Supabase, updates everywhere
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  const productData = {
+    name: "Victorinox fibrox 10 inch chefs knife",
+    slug: "victorinox-fibrox-10-inch-chefs-knife",
+    brand: "Brand Name",
+    category: "Kitchen Equipment",
+    affiliateLinks: [],
+    expertRating: 4.5,
+    expertOpinion: "Professional-grade quality.",
+    pros: [],
+    cons: [],
+    dateAdded: "2025-10-13",
+    lastUpdated: product.lastUpdated,
+    images: {
+      primary: "/logo.png"
+    }
+  };
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: "Knives", url: "https://www.chefapprovedtools.com/knives" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
+
   return (
     <div className="min-h-screen bg-gray-50">
       <ProductViewTrackerWrapper
@@ -152,7 +160,7 @@ export default function VictorinoxFibrox10InchReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4o6pPwW"
+              href={affiliateLink}
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -325,7 +333,7 @@ export default function VictorinoxFibrox10InchReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4o6pPwW"
+              href={affiliateLink}
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -459,7 +467,7 @@ export default function VictorinoxFibrox10InchReview() {
                   merchant="amazon"
                 >
                   <AffiliateButton
-                    href="https://amzn.to/4o6pPwW"
+                    href={affiliateLink}
                     merchant="amazon"
                     product={productData.slug}
                     position="mid_article"
@@ -541,7 +549,7 @@ export default function VictorinoxFibrox10InchReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4o6pPwW"
+              href={affiliateLink}
               merchant="amazon"
               product={productData.slug}
               position="final_cta"

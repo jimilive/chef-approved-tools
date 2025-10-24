@@ -13,32 +13,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-
-
-
-const productData = {
-  name: "Victorinox offset bread knife",
-  slug: "victorinox-offset-bread-knife",
-  brand: "Brand Name",
-  category: "Kitchen Equipment",
-  affiliateLinks: [],
-  expertRating: 4.5,
-  expertOpinion: "Professional-grade quality.",
-  pros: [],
-  cons: [],
-  dateAdded: "2025-10-13",
-  lastUpdated: "2025-10-13",
-  images: {
-    primary: "/logo.png"
-  }
-};
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: "Knives", url: "https://www.chefapprovedtools.com/knives" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-];
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers';
 
 const faqData = [
   {
@@ -92,7 +67,40 @@ export const metadata: Metadata = {
   description: 'Victorinox offset bread knife: 10-year pro test. Perfect for crusty bread and tomatoes. Knuckle clearance that matters. Restaurant tested.',
 }
 
-export default function VictorinoxOffsetBreadKnifeReview() {
+export default async function VictorinoxOffsetBreadKnifeReview() {
+  // Get product data from centralized Supabase database - SINGLE SOURCE OF TRUTH
+  const product = await getProductBySlug('victorinox-offset-bread-knife')
+  if (!product) {
+    throw new Error('Product not found: victorinox-offset-bread-knife')
+  }
+
+  // Get the primary affiliate link - update once in Supabase, updates everywhere
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  const productData = {
+    name: "Victorinox offset bread knife",
+    slug: "victorinox-offset-bread-knife",
+    brand: "Brand Name",
+    category: "Kitchen Equipment",
+    affiliateLinks: [],
+    expertRating: 4.5,
+    expertOpinion: "Professional-grade quality.",
+    pros: [],
+    cons: [],
+    dateAdded: "2025-10-13",
+    lastUpdated: product.lastUpdated,
+    images: {
+      primary: "/logo.png"
+    }
+  };
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: "Knives", url: "https://www.chefapprovedtools.com/knives" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
+
   return (
     <div className="min-h-screen bg-gray-50">
       <ProductViewTrackerWrapper
@@ -168,7 +176,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4n1Qb2e"
+              href={affiliateLink}
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -335,7 +343,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4n1Qb2e"
+              href={affiliateLink}
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -477,7 +485,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
                   merchant="amazon"
                 >
                   <AffiliateButton
-                    href="https://amzn.to/4n1Qb2e"
+                    href={affiliateLink}
                     merchant="amazon"
                     product={productData.slug}
                     position="mid_article"
@@ -565,7 +573,7 @@ export default function VictorinoxOffsetBreadKnifeReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4n1Qb2e"
+              href={affiliateLink}
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
