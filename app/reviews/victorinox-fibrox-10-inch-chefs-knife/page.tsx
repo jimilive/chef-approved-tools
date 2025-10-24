@@ -57,6 +57,8 @@ const faqData = [
     answer: "Japanese knives typically use harder steel that holds an edge longer but is more delicate and requires expert sharpening. The Victorinox uses softer German-style steel that's more forgiving, easier to sharpen, and more durable for heavy-duty work. For professional restaurant use and serious home cooking, the Victorinox is often the better choice due to its reliability and ease of maintenance. I use both types in my kitchen, but the Victorinox is my workhorse for daily tasks."
   }
 ]
+// Force dynamic rendering (not static) since we fetch from Supabase
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   alternates: {

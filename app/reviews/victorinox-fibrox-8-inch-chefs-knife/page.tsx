@@ -15,6 +15,9 @@ import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
+// Force dynamic rendering (not static) since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife',

@@ -57,6 +57,8 @@ const faqData = [
     answer: "The serrated design works equally well for both. The wavy serrations grip crusty exteriors to start the cut cleanly, then glide through soft interiors without crushing. This versatility is why professional bakeries use this style. For crusty artisan loaves, use gentle sawing motions and let the serrations do the work - no need to press down hard. For soft sandwich bread, the same serrations prevent compression that would occur with a straight edge. The 10-inch blade length means you can slice through most loaves in one smooth stroke, which minimizes crumb damage on both crusty and soft varieties."
   }
 ];
+// Force dynamic rendering (not static) since we fetch from Supabase
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   alternates: {

@@ -11,6 +11,8 @@ import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import FAQBox, { FAQGrid, type FAQItem } from '@/components/review/FAQBox'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+// Force dynamic rendering (not static) since we fetch from Supabase
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   alternates: {
