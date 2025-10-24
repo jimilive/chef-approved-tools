@@ -306,22 +306,14 @@ export function generateItemListSchema(products: any[], listName: string) {
       item: {
         "@type": "Product",
         name: product.name,
-        image: product.images?.primary,
+        image: product.images?.primary || "https://www.chefapprovedtools.com/logo.png",
         url: `https://www.chefapprovedtools.com/reviews/${product.slug}`,
         aggregateRating: product.reviews?.rating > 0 ? {
           "@type": "AggregateRating",
           ratingValue: product.reviews.rating,
           reviewCount: product.reviews.count
-        } : undefined,
-        offers: product.affiliateUrl ? {
-          "@type": "Offer",
-          availability: "https://schema.org/InStock",
-          url: product.affiliateUrl,
-          seller: {
-            "@type": "Organization",
-            name: "Amazon"
-          }
         } : undefined
+        // Removed "offers" - we're an affiliate site, not a merchant, and don't control pricing
       }
     }))
   }

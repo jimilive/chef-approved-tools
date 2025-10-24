@@ -62,6 +62,8 @@ export default function AppliancesPage() {
           "@type": "Brand",
           "name": product.brand
         },
+        "image": "https://www.chefapprovedtools.com/logo.png",
+        "url": `https://www.chefapprovedtools.com/reviews/${product.slug}`
       }
     }))
   };

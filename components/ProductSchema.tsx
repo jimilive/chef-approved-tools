@@ -102,6 +102,11 @@ export function SimpleProductSchema({
   image,
   affiliateUrl
 }: SimpleProductSchemaProps) {
+  // Ensure absolute URL for image (Google requires it)
+  const absoluteImage = image
+    ? (image.startsWith('http') ? image : `https://www.chefapprovedtools.com${image}`)
+    : "https://www.chefapprovedtools.com/logo.png";
+
   const simpleSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -112,7 +117,7 @@ export function SimpleProductSchema({
       "name": brand
     },
     "category": category,
-    ...(image && { "image": image }),
+    "image": absoluteImage,
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": rating,

@@ -65,16 +65,8 @@ export default function TopPicksComparison() {
           "worstRating": 1,
           "reviewCount": 1
         },
-        "offers": {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
-          "url": pick.affiliateUrl,
-          "seller": {
-            "@type": "Organization",
-            "name": "Amazon"
-          }
-        },
         "url": `https://www.chefapprovedtools.com/reviews/${pick.id}`
+        // Removed "offers" - we're an affiliate site, not a merchant, and don't control pricing
       }
     }))
   }

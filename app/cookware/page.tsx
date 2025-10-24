@@ -44,12 +44,18 @@ export default function CookwarePage() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     itemListElement: products.map((p, i) => ({
-      "@type": "Product",
+      "@type": "ListItem",
       position: i + 1,
-      name: p.name,
-      brand: p.brand,
-      url: `https://www.chefapprovedtools.com/reviews/${p.slug}`,
-      offers: { "@type": "Offer", priceCurrency: "USD", url: p.affiliateUrl }
+      item: {
+        "@type": "Product",
+        name: p.name,
+        brand: {
+          "@type": "Brand",
+          name: p.brand
+        },
+        image: "https://www.chefapprovedtools.com/logo.png",
+        url: `https://www.chefapprovedtools.com/reviews/${p.slug}`
+      }
     }))
   };
 
