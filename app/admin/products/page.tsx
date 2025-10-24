@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { supabase } from '@/lib/supabase'
+import { getSupabase } from '@/lib/supabase'
 
 interface Product {
   id: string
@@ -32,7 +32,7 @@ export default function AdminProductsPage() {
 
   async function loadProducts() {
     setLoading(true)
-    const { data, error } = await supabase
+    const { data, error } = await getSupabase()
       .from('products')
       .select('*')
       .order('name')

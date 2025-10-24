@@ -1,5 +1,5 @@
 import { Product } from '@/types/product'
-import { supabase } from '@/lib/supabase'
+import { getSupabase } from '@/lib/supabase'
 
 /**
  * Map Supabase database row to Product type
@@ -44,7 +44,7 @@ function mapDatabaseToProduct(dbProduct: any): Product {
  * @returns The product object or null if not found
  */
 export async function getProductBySlug(slug: string): Promise<Product | null> {
-  const { data, error } = await supabase
+  const { data, error } = await getSupabase()
     .from('products')
     .select('*')
     .eq('slug', slug)
@@ -64,7 +64,7 @@ export async function getProductBySlug(slug: string): Promise<Product | null> {
  * @returns Array of products (excludes any not found)
  */
 export async function getProductsBySlugs(slugs: string[]): Promise<Product[]> {
-  const { data, error } = await supabase
+  const { data, error } = await getSupabase()
     .from('products')
     .select('*')
     .in('slug', slugs)
@@ -98,7 +98,7 @@ export function getPrimaryAffiliateLink(product: Product): string {
  * @returns Array of products in that category
  */
 export async function getProductsByCategory(category: string): Promise<Product[]> {
-  const { data, error } = await supabase
+  const { data, error } = await getSupabase()
     .from('products')
     .select('*')
     .eq('category', category)
@@ -123,7 +123,7 @@ export async function getRelatedProducts(
   category: string,
   limit: number = 3
 ): Promise<Product[]> {
-  const { data, error } = await supabase
+  const { data, error } = await getSupabase()
     .from('products')
     .select('*')
     .eq('category', category)
