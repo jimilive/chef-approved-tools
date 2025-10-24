@@ -12,8 +12,11 @@ import AffiliateButton from '@/components/AffiliateButton';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
-const productData = {
+export const dynamic = 'force-dynamic'
+
+const legacyProductData = {
   name: "WÜSTHOF Classic IKON 16-Piece Knife Block Set",
   slug: "wusthof-classic-ikon-16-piece",
   brand: "WÜSTHOF",
@@ -71,13 +74,6 @@ const knivesIncluded = [
   { name: "Kitchen Shears", use: "Herbs, packaging", rating: 4 },
   { name: "9&quot; Honing Steel", use: "Edge maintenance", rating: 5 },
   { name: "Hardwood Block", use: "Storage and display", rating: 4 }
-]
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: "Knife Sets", url: "https://www.chefapprovedtools.com/knives" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
 ]
 
 const faqData = [
@@ -151,7 +147,26 @@ export const metadata = {
   }
 }
 
-export default function WusthofClassicIkonReview() {
+export default async function WusthofClassicIkonReview() {
+  const product = await getProductBySlug('wusthof-classic-ikon-16-piece')
+  if (!product) {
+    throw new Error('Product not found: wusthof-classic-ikon-16-piece')
+  }
+
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    affiliateLinks: legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: "Knife Sets", url: "https://www.chefapprovedtools.com/knives" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">

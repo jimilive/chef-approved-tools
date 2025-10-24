@@ -9,6 +9,9 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import Link from 'next/link'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   alternates: {
@@ -19,7 +22,7 @@ export const metadata: Metadata = {
   description: 'Professional chef review of Winco heavy duty tongs after 24 years of professional cooking. Restaurant-grade tongs at a fraction of the price.',
 }
 
-const productData = {
+const legacyProductData = {
   name: "Winco Heavy Duty Stainless Steel Tongs",
   slug: "winco-heavy-duty-tongs",
   brand: "Winco",
@@ -47,12 +50,6 @@ const productData = {
   dateAdded: "2025-01-15",
   lastUpdated: new Date().toISOString().split('T')[0]
 };
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-];
 
 const faqData = [
   {
@@ -89,7 +86,26 @@ const faqData = [
   }
 ];
 
-export default function WincoHeavyDutyTongsReview() {
+export default async function WincoHeavyDutyTongsReview() {
+  const product = await getProductBySlug('winco-heavy-duty-tongs')
+  if (!product) {
+    throw new Error('Product not found: winco-heavy-duty-tongs')
+  }
+
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    affiliateLinks: legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <ProductViewTrackerWrapper

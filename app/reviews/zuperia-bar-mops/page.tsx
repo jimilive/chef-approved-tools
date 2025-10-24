@@ -9,10 +9,11 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 import AffiliateButton from '@/components/AffiliateButton';
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
+export const dynamic = 'force-dynamic'
 
-
-const productData = {
+const legacyProductData = {
   name: "Zuperia bar mops",
   slug: "zuperia-bar-mops",
   brand: "Brand Name",
@@ -28,12 +29,6 @@ const productData = {
     primary: "/logo.png"
   }
 };
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-];
 
 const faqData = [
   {
@@ -79,7 +74,26 @@ export const metadata = {
   description: 'ZUPERIA bar mops. Better quality than those used years in restaurants. Professional kitchen standard. 100% ring-spun cotton, absorbent, durable.',
 };
 
-export default function ZuperiaBarMopsReview() {
+export default async function ZuperiaBarMopsReview() {
+  const product = await getProductBySlug('zuperia-bar-mops')
+  if (!product) {
+    throw new Error('Product not found: zuperia-bar-mops')
+  }
+
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    affiliateLinks: legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ];
+
   return (
     <article className="max-w-4xl mx-auto px-4 py-8">
 
