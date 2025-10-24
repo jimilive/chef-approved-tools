@@ -1,13 +1,23 @@
 import { createClient } from '@supabase/supabase-js'
 import { NextResponse } from 'next/server'
 
-// Create admin client with service role key (bypasses RLS)
-const supabaseAdmin = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-)
+// Force this route to be dynamic (not prerendered at build time)
+export const dynamic = 'force-dynamic'
+
+// Helper function to get admin client (created at runtime, not build time)
+function getSupabaseAdmin() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+
+  if (!supabaseUrl || !supabaseKey) {
+    throw new Error('Supabase environment variables are not configured')
+  }
+
+  return createClient(supabaseUrl, supabaseKey)
+}
 
 export async function PUT(request: Request) {
+  const supabaseAdmin = getSupabaseAdmin()
   try {
     const body = await request.json()
     const { productId, affiliate_links, primary_affiliate } = body
