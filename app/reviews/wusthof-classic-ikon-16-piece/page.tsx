@@ -646,97 +646,50 @@ export default function WusthofClassicIkonReview() {
         {/* RELATED PRODUCTS SECTION */}
         <h2>Complete Your Professional Kitchen Setup</h2>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
-          The WÜSTHOF Classic IKON set works best as part of a complete professional kitchen setup. 
+        <p className="text-base leading-relaxed mb-6">
+          The WÜSTHOF Classic IKON set works best as part of a complete professional kitchen setup.
           Based on 45 years of restaurant experience, here are the tools I use alongside these knives:
         </p>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '20px',
-          margin: '30px 0'
-        }}>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5 my-8">
           
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            borderRadius: '8px',
-            border: '1px solid #dee2e6'
-          }}>
-            <h4 style={{ marginTop: 0 }}>John Boos Platinum Commercial Cutting Board</h4>
+          <div className="bg-gray-100 p-5 rounded-lg border border-gray-300">
+            <h4 className="mt-0">John Boos Platinum Commercial Cutting Board</h4>
             <p>Protect your knife edges with this NSF-certified board that survived 3 years of daily professional use. The reversible design and optimal thickness prevent warping while providing the perfect cutting surface for your WÜSTHOF knives.</p>
-            <p style={{ fontSize: '14px', color: '#666' }}>
+            <p className="text-sm text-gray-600">
               <strong>Professional tested:</strong> 3 years in commercial kitchen operations
             </p>
-            <a 
+            <a
               href="/reviews/john-boos-platinum-commercial-cutting-board"
-              style={{
-                display: 'inline-block',
-                background: '#28a745',
-                color: 'white',
-                padding: '10px 20px',
-                textDecoration: 'none',
-                borderRadius: '4px',
-                marginTop: '10px',
-                fontWeight: 'bold'
-              }}
+              className="inline-block bg-green-600 text-white py-2.5 px-5 no-underline rounded mt-2.5 font-bold"
             >
               Read Full Review →
             </a>
           </div>
 
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            borderRadius: '8px',
-            border: '1px solid #dee2e6'
-          }}>
-            <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef&apos;s Knife</h4>
+          <div className="bg-gray-100 p-5 rounded-lg border border-gray-300">
+            <h4 className="mt-0">Victorinox 8&quot; Chef&apos;s Knife</h4>
             <p>The budget-friendly alternative that matches this WÜSTHOF set in sharpness and edge retention. Perfect for adding a backup chef&apos;s knife to your rotation or for tasks where you want to save your premium blade. Used professionally for 20 years.</p>
-            <p style={{ fontSize: '14px', color: '#666' }}>
+            <p className="text-sm text-gray-600">
               <strong>Professional tested:</strong> 20 years of continuous use
             </p>
-            <a 
+            <a
               href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
-              style={{
-                display: 'inline-block',
-                background: '#28a745',
-                color: 'white',
-                padding: '10px 20px',
-                textDecoration: 'none',
-                borderRadius: '4px',
-                marginTop: '10px',
-                fontWeight: 'bold'
-              }}
+              className="inline-block bg-green-600 text-white py-2.5 px-5 no-underline rounded mt-2.5 font-bold"
             >
               Read Full Review →
             </a>
           </div>
 
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            borderRadius: '8px',
-            border: '1px solid #dee2e6'
-          }}>
-            <h4 style={{ marginTop: 0 }}>KitchenAid Commercial Mixer</h4>
+          <div className="bg-gray-100 p-5 rounded-lg border border-gray-300">
+            <h4 className="mt-0">KitchenAid Commercial Mixer</h4>
             <p>The NSF-certified mixer that survived 18 months of professional kitchen testing at Purple Cafe. Pairs perfectly with your knife set for complete kitchen efficiency—from prep work with your knives to mixing and processing with commercial-grade power.</p>
-            <p style={{ fontSize: '14px', color: '#666' }}>
+            <p className="text-sm text-gray-600">
               <strong>Professional tested:</strong> 18 months in restaurant operations
             </p>
-            <a 
+            <a
               href="/reviews/kitchenaid-ksm8990wh"
-              style={{
-                display: 'inline-block',
-                background: '#28a745',
-                color: 'white',
-                padding: '10px 20px',
-                textDecoration: 'none',
-                borderRadius: '4px',
-                marginTop: '10px',
-                fontWeight: 'bold'
-              }}
+              className="inline-block bg-green-600 text-white py-2.5 px-5 no-underline rounded mt-2.5 font-bold"
             >
               Read Full Review →
             </a>
@@ -744,47 +697,34 @@ export default function WusthofClassicIkonReview() {
           
         </div>
 
-        <p style={{
-          textAlign: 'center',
-          margin: '30px 0',
-          fontSize: '18px',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
+        <p className="text-center my-8 text-lg p-5 bg-gray-100 rounded-md">
           <strong>Building a complete professional kitchen?</strong><br/>
-          <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold', fontSize: '20px' }}>
+          <a href="/kitchen-bundle" className="text-blue-600 font-bold text-xl">
             See My Complete Kitchen Starter Kit →
           </a>
         </p>
 
         {/* FOOTER ELEMENTS */}
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '30px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #6c757d'
-        }}>
-          <p style={{ margin: '10px 0' }}>
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
+        <div className="bg-gray-100 p-5 my-8 rounded-md border-l-4 border-gray-600">
+          <p className="my-2.5">
+            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long' 
+          <p className="my-2.5">
+            <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>💬 Which knives from this set do you use most?</strong> Share your thoughts in the comments 
+          <p className="my-2.5">
+            <strong>💬 Which knives from this set do you use most?</strong> Share your thoughts in the comments
             below—I read and respond to every comment.
           </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>🔧 Questions about knife sets vs individual purchases?</strong> <a href="/contact" style={{ color: '#0066cc' }}>
+          <p className="my-2.5">
+            <strong>🔧 Questions about knife sets vs individual purchases?</strong> <a href="/contact" className="text-blue-600">
             Contact me directly</a> and I&apos;ll help you make the best decision for your needs.
           </p>
         </div>

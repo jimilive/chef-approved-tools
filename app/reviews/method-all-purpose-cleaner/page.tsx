@@ -451,67 +451,62 @@ export default function MethodAllPurposeCleanerReview() {
         </section>
 
         {/* PROS AND CONS */}
-        <section style={{ margin: '40px 0' }}>
+        <section className="my-10">
           <h2>Pros and Cons: 5 Years of Testing</h2>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '25px',
-            margin: '25px 0'
-          }}>
+          <div className="grid grid-cols-2 gap-6 my-6">
             <div>
-              <h3 style={{ color: '#28a745', fontSize: '20px' }}>✅ Pros</h3>
-              <ul style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                <li style={{ marginBottom: '10px' }}>
+              <h3 className="text-green-600 text-xl">✅ Pros</h3>
+              <ul className="text-base leading-relaxed">
+                <li className="mb-2">
                   Effortlessly cuts through grease and grime—equal to chemical cleaners
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li className="mb-2">
                   Non-toxic, plant-based formula safe for food prep areas
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li className="mb-2">
                   Safe for wide variety of kitchen surfaces
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li className="mb-2">
                   Easy-to-use spray bottle with reliable, smooth mechanism
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li className="mb-2">
                   Environmentally friendly and biodegradable
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li className="mb-2">
                   Pleasant, natural scent options (not overwhelming)
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li className="mb-2">
                   No harsh chemical fumes or respiratory irritation
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li className="mb-2">
                   Available in refill bottles for sustainability
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li className="mb-2">
                   Works in seconds—no extended dwell time needed
                 </li>
               </ul>
             </div>
 
             <div>
-              <h3 style={{ color: '#dc3545', fontSize: '20px' }}>❌ Cons</h3>
-              <ul style={{ fontSize: '16px', lineHeight: '1.8' }}>
-                <li style={{ marginBottom: '10px' }}>
+              <h3 className="text-red-600 text-xl">❌ Cons</h3>
+              <ul className="text-base leading-relaxed">
+                <li className="mb-2">
                   Not intended for heavy-duty outdoor or industrial cleaning
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li className="mb-2">
                   Requires surface drying if used on stainless steel to avoid streaks
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li className="mb-2">
                   Not a disinfectant (doesn&apos;t kill bacteria/viruses)
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li className="mb-2">
                   Scented versions may not appeal to everyone
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li className="mb-2">
                   Slightly more expensive than conventional chemical cleaners
                 </li>
-                <li style={{ marginBottom: '10px' }}>
+                <li className="mb-2">
                   May require second application for extremely heavy, baked-on grime
                 </li>
               </ul>
@@ -520,30 +515,30 @@ export default function MethodAllPurposeCleanerReview() {
         </section>
 
         {/* COMPARISON */}
-        <section style={{ margin: '40px 0' }}>
+        <section className="my-10">
           <h2>How It Compares: Method vs. Traditional Cleaners</h2>
 
-          <h3 style={{ fontSize: '20px', marginTop: '25px', marginBottom: '15px' }}>
+          <h3 className="text-xl mt-6 mb-4">
             Method vs. Formula 409 or Fantastik
           </h3>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+          <p className="text-base leading-relaxed">
             Traditional chemical cleaners like 409 are powerful but come with serious drawbacks:
             harsh fumes, chemical residue on food surfaces, environmental concerns, and potential
             health risks. After 5 years with Method, I can confirm it matches their cleaning
             power without any of those compromises.
           </p>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+          <p className="text-base leading-relaxed">
             <strong>Use Method for:</strong> All kitchen cleaning, especially food prep surfaces<br/>
             <strong>Use chemical cleaners for:</strong> Honestly, I don&apos;t anymore. Method handles everything.
           </p>
 
-          <h3 style={{ fontSize: '20px', marginTop: '25px', marginBottom: '15px' }}>
+          <h3 className="text-xl mt-6 mb-4">
             Method vs. Other &quot;Natural&quot; Cleaners
           </h3>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+          <p className="text-base leading-relaxed">
             Most natural cleaners are disappointingly weak. They smell nice but require extensive
             scrubbing and multiple applications. Method is the rare natural cleaner that actually
             works as well as its chemical competitors. The plant-based formula genuinely cuts
@@ -552,17 +547,12 @@ export default function MethodAllPurposeCleanerReview() {
         </section>
 
         {/* FAQ SECTION WITH SCHEMA */}
-        <section style={{ margin: '40px 0' }}>
+        <section className="my-10">
           <h2>Frequently Asked Questions</h2>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-100 rounded-md">
             <h3>Is Method All-Purpose Cleaner really non-toxic and safe?</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+            <p className="text-base leading-relaxed">
               <strong>Answer:</strong> Yes, genuinely non-toxic. The formula is plant-based,
               biodegradable, and free from harsh chemicals like ammonia, bleach, or phosphates.
               It&apos;s safe to use on food prep surfaces without rinsing. After 5 years of
@@ -571,16 +561,11 @@ export default function MethodAllPurposeCleanerReview() {
             </p>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-100 rounded-md">
             <h3>How does Method compare to traditional cleaners like Formula 409?</h3>
             <div>
               <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+                <p className="text-base leading-relaxed">
                   <strong>Answer:</strong> Method matches the cleaning power of chemical cleaners
                   like 409 or Fantastik but without harsh fumes, chemical residue, or environmental
                   concerns. After 5 years of testing, I can confidently say Method cuts grease
@@ -592,16 +577,11 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-100 rounded-md">
             <h3>Does Method work well on greasy stovetops?</h3>
             <div>
               <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+                <p className="text-base leading-relaxed">
                   <strong>Answer:</strong> Exceptionally well. This is where Method truly shines.
                   Spray it on cooking grease splatters, wait 5-10 seconds, and wipe clean—no
                   scrubbing needed. I&apos;ve watched it dissolve grease that would normally require
@@ -612,16 +592,11 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-100 rounded-md">
             <h3>Is Method streak-free on stainless steel?</h3>
             <div>
               <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+                <p className="text-base leading-relaxed">
                   <strong>Answer:</strong> Yes, but technique matters. Clean with Method, then
                   immediately follow with a dry cloth to buff the surface. This prevents water
                   spots and streaking. I use it on all my stainless steel appliances with excellent
@@ -632,20 +607,15 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-100 rounded-md">
             <h3>Is Method safe for all kitchen surfaces?</h3>
             <div>
               <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+                <p className="text-base leading-relaxed">
                   <strong>Answer:</strong> Safe for virtually all common kitchen surfaces: countertops
                   (granite, quartz, laminate), stovetops, appliances, glass, stainless steel, sealed
-                  wood, tile, and more. I use it on everything from my <a href="/reviews/john-boos-platinum-commercial-cutting-board" style={{ color: '#0066cc', fontWeight: 'bold' }}>John
-                  Boos cutting board</a> to <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" style={{ color: '#0066cc', fontWeight: 'bold' }}>Le
+                  wood, tile, and more. I use it on everything from my <a href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-blue-600 font-bold">John
+                  Boos cutting board</a> to <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-blue-600 font-bold">Le
                   Creuset enamel</a>. Avoid using on unsealed natural stone or unfinished wood.
                   When in doubt, test on a small inconspicuous area first.
                 </p>
@@ -653,16 +623,11 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-100 rounded-md">
             <h3>What scent options are available?</h3>
             <div>
               <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+                <p className="text-base leading-relaxed">
                   <strong>Answer:</strong> Method offers multiple scent options including French
                   Lavender, Pink Grapefruit, Ylang Ylang, Cucumber, and more. All scents are
                   derived from natural fragrances—pleasant but not overwhelming. I personally use
@@ -674,16 +639,11 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-100 rounded-md">
             <h3>Are refills available for Method All-Purpose Cleaner?</h3>
             <div>
               <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+                <p className="text-base leading-relaxed">
                   <strong>Answer:</strong> Yes, Method offers refill bottles that are more economical
                   and environmentally friendly than buying new spray bottles repeatedly. The refills
                   come in larger containers that pour into your existing spray bottle. This reduces
@@ -695,16 +655,11 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-100 rounded-md">
             <h3>How does the cost compare to conventional cleaners?</h3>
             <div>
               <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+                <p className="text-base leading-relaxed">
                   <strong>Answer:</strong> Method costs slightly more per bottle than conventional
                   chemical cleaners (typically a few dollars difference). However, the performance
                   is exceptional, you use less product per cleaning (it&apos;s very concentrated),
@@ -716,16 +671,11 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-100 rounded-md">
             <h3>Is Method effective on baked-on, dried grime?</h3>
             <div>
               <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+                <p className="text-base leading-relaxed">
                   <strong>Answer:</strong> Yes, but let it sit longer. For normal kitchen messes,
                   5-10 seconds is enough. For baked-on grime (like microwave splatters or dried
                   stovetop spills), spray generously and let sit 30-60 seconds before wiping. The
@@ -737,16 +687,11 @@ export default function MethodAllPurposeCleanerReview() {
             </div>
           </div>
 
-          <div style={{
-            margin: '20px 0',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <div className="my-5 p-5 bg-gray-100 rounded-md">
             <h3>Would Method work in a professional kitchen?</h3>
             <div>
               <div>
-                <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+                <p className="text-base leading-relaxed">
                   <strong>Answer:</strong> For general surface cleaning, absolutely. However,
                   professional kitchens require sanitizers and disinfectants for health department
                   compliance, which Method is not. It&apos;s a cleaner, not a sanitizer. In my
@@ -760,27 +705,14 @@ export default function MethodAllPurposeCleanerReview() {
         </section>
 
         {/* EMAIL CAPTURE SECTION */}
-        <div style={{
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          color: 'white',
-          padding: '40px',
-          margin: '40px 0',
-          borderRadius: '8px',
-          textAlign: 'center'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '28px', color: 'white' }}>
+        <div className="bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white p-10 my-10 rounded-lg text-center">
+          <h3 className="mt-0 text-3xl text-white">
             Get My Free Kitchen Equipment Guide
           </h3>
-          <p style={{ fontSize: '18px', margin: '20px 0' }}>
+          <p className="text-lg my-5">
             Join 10,000+ home cooks getting my weekly equipment recommendations
           </p>
-          <ul style={{
-            textAlign: 'left',
-            maxWidth: '500px',
-            margin: '25px auto',
-            fontSize: '16px',
-            lineHeight: '2'
-          }}>
+          <ul className="text-left max-w-[500px] mx-auto my-6 text-base leading-loose">
             <li>✓ Best non-toxic kitchen products that actually work</li>
             <li>✓ Testing updates from my home kitchen</li>
             <li>✓ Professional cleaning techniques for home cooks</li>
@@ -789,84 +721,56 @@ export default function MethodAllPurposeCleanerReview() {
           </ul>
           <a
             href="/newsletter"
-            style={{
-              display: 'inline-block',
-              background: 'white',
-              color: '#667eea',
-              padding: '15px 40px',
-              textDecoration: 'none',
-              borderRadius: '6px',
-              fontWeight: 'bold',
-              fontSize: '18px',
-              marginTop: '10px'
-            }}
+            className="inline-block bg-white text-[#667eea] py-4 px-10 no-underline rounded-md font-bold text-lg mt-2"
           >
             Download Free Guide →
           </a>
         </div>
 
         {/* FINAL VERDICT WITH STRONG CTA */}
-        <section style={{ margin: '40px 0' }}>
-          <div style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            color: 'white',
-            padding: '40px',
-            borderRadius: '8px',
-            marginBottom: '25px'
-          }}>
-            <h2 style={{ marginTop: 0, color: 'white' }}>Final Verdict: The Unicorn Is Real</h2>
+        <section className="my-10">
+          <div className="bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white p-10 rounded-lg mb-6">
+            <h2 className="mt-0 text-white">Final Verdict: The Unicorn Is Real</h2>
 
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-              gap: '20px',
-              margin: '25px 0',
-              fontSize: '16px'
-            }}>
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-5 my-6 text-base">
               <div>
-                <p style={{ fontWeight: 'bold', marginBottom: '5px' }}>Grease-Cutting Power:</p>
+                <p className="font-bold mb-1">Grease-Cutting Power:</p>
                 <p>⭐⭐⭐⭐⭐ 5/5</p>
               </div>
               <div>
-                <p style={{ fontWeight: 'bold', marginBottom: '5px' }}>Safety (Non-Toxic):</p>
+                <p className="font-bold mb-1">Safety (Non-Toxic):</p>
                 <p>⭐⭐⭐⭐⭐ 5/5</p>
               </div>
               <div>
-                <p style={{ fontWeight: 'bold', marginBottom: '5px' }}>Ease of Use:</p>
+                <p className="font-bold mb-1">Ease of Use:</p>
                 <p>⭐⭐⭐⭐⭐ 5/5</p>
               </div>
               <div>
-                <p style={{ fontWeight: 'bold', marginBottom: '5px' }}>Value:</p>
+                <p className="font-bold mb-1">Value:</p>
                 <p>⭐⭐⭐⭐ 4.5/5</p>
               </div>
             </div>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.8' }}>
+            <p className="text-lg leading-relaxed">
               <strong>Would I buy this cleaner again?</strong> I&apos;ve been buying it continuously
               for 5 years. In all my years of cleaning kitchens professionally and at home, I&apos;ve
               never encountered a product this effective, safe, and enjoyable to use. Method
               All-Purpose Cleaner truly is the unicorn in the world of household cleaners.
             </p>
 
-            <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+            <p className="text-base leading-relaxed">
               Whether you&apos;re tackling a messy stovetop, spilled sauces, or just daily counter
               maintenance, it delivers every time. This is the only kitchen cleaner you need.
-              Part of my recommended <a href="/kitchen-bundle" style={{ color: 'white', textDecoration: 'underline' }}>essential kitchen bundle</a>.
+              Part of my recommended <a href="/kitchen-bundle" className="text-white underline">essential kitchen bundle</a>.
             </p>
           </div>
 
           {/* STRONG FINAL CTA */}
-          <div style={{
-            background: '#fff3cd',
-            padding: '30px',
-            borderRadius: '8px',
-            textAlign: 'center',
-            border: '2px solid #ffc107'
-          }}>
-            <h3 style={{ marginTop: 0, fontSize: '24px' }}>
+          <div className="bg-yellow-100 p-8 rounded-lg text-center border-2 border-yellow-400">
+            <h3 className="mt-0 text-2xl">
               Ready to Experience Powerful, Non-Toxic Kitchen Cleaning?
             </h3>
-            <p style={{ fontSize: '18px', margin: '20px 0' }}>
+            <p className="text-lg my-5">
               After 5 years of testing, this is the only cleaner I use in my kitchen.
               The unicorn is real.
             </p>
@@ -886,7 +790,7 @@ export default function MethodAllPurposeCleanerReview() {
                 Check Current Price on Amazon →
               </AffiliateButton>
             </CTAVisibilityTracker>
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
+            <p className="text-sm text-gray-600 mt-5">
               💡 Powerful AND safe—no compromise needed. Price updated daily.<br/>
               We earn commission at no extra cost to you.
             </p>
@@ -894,201 +798,131 @@ export default function MethodAllPurposeCleanerReview() {
         </section>
 
         {/* RELATED PRODUCTS */}
-        <section style={{ margin: '40px 0' }}>
+        <section className="my-10">
           <h2>Complete Your Kitchen Cleaning Arsenal</h2>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.8', marginBottom: '25px' }}>
+          <p className="text-base leading-relaxed mb-6">
             Method All-Purpose Cleaner pairs perfectly with these professional-grade cleaning tools:
           </p>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '20px',
-            margin: '30px 0'
-          }}>
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5 my-8">
             {/* Product 1 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>
-                <a href="/reviews/zuperia-bar-mops" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <div className="bg-gray-100 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">
+                <a href="/reviews/zuperia-bar-mops" className="text-blue-600 no-underline">
                   ZUPERIA Bar Mops (Set of 12)
                 </a>
               </h4>
-              <p style={{ fontSize: '14px', lineHeight: '1.6' }}>
+              <p className="text-sm leading-relaxed">
                 Professional-grade bar mops perfect for cleaning with Method. Absorbent, durable,
                 and machine washable. The combination I use daily for kitchen cleaning.
               </p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>Why they pair:</strong> Method&apos;s powerful formula + absorbent bar
                 mops = professional cleaning results at home.
               </p>
               <a
                 href="/reviews/zuperia-bar-mops"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white py-2 px-5 no-underline rounded mt-2 font-bold"
               >
                 Read Full Review →
               </a>
             </div>
 
             {/* Product 2 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>
-                <a href="/reviews/john-boos-platinum-commercial-cutting-board" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <div className="bg-gray-100 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">
+                <a href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-blue-600 no-underline">
                   John Boos Cutting Board
                 </a>
               </h4>
-              <p style={{ fontSize: '14px', lineHeight: '1.6' }}>
+              <p className="text-sm leading-relaxed">
                 The professional cutting board I clean exclusively with Method. Non-toxic formula
                 is perfect for food contact surfaces. Safe, effective maintenance for premium wood.
               </p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>Why they pair:</strong> Both are professional-grade tools that don&apos;t
                 compromise on safety or performance.
               </p>
               <a
                 href="/reviews/john-boos-platinum-commercial-cutting-board"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white py-2 px-5 no-underline rounded mt-2 font-bold"
               >
                 Read Full Review →
               </a>
             </div>
 
             {/* Product 3 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>
-                <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" style={{ color: '#0066cc', textDecoration: 'none' }}>
+            <div className="bg-gray-100 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">
+                <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-blue-600 no-underline">
                   Le Creuset Dutch Oven
                 </a>
               </h4>
-              <p style={{ fontSize: '14px', lineHeight: '1.6' }}>
+              <p className="text-sm leading-relaxed">
                 Premium enamel cookware that stays pristine with Method cleaning. Non-toxic formula
                 won&apos;t damage delicate enamel surfaces. Perfect for maintaining expensive cookware.
               </p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>Why they pair:</strong> Premium cookware deserves safe, effective cleaning.
                 Method protects your investment.
               </p>
               <a
                 href="/reviews/le-creuset-signature-7-25-qt-dutch-oven"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white py-2 px-5 no-underline rounded mt-2 font-bold"
               >
                 Read Full Review →
               </a>
             </div>
           </div>
 
-          <p style={{
-            textAlign: 'center',
-            margin: '30px 0',
-            fontSize: '18px',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <p className="text-center my-8 text-lg p-5 bg-gray-100 rounded-md">
             <strong>Building a non-toxic kitchen?</strong><br/>
-            <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold', fontSize: '20px', textDecoration: 'none' }}>
+            <a href="/kitchen-bundle" className="text-blue-600 font-bold text-xl no-underline">
               See My Complete Safe Kitchen Essentials Kit →
             </a>
           </p>
         </section>
 
         {/* AUTHOR BIO */}
-        <div style={{
-          background: 'white',
-          padding: '25px',
-          margin: '30px 0',
-          border: '1px solid #dee2e6',
-          borderRadius: '8px',
-          display: 'grid',
-          gridTemplateColumns: '100px 1fr',
-          gap: '20px',
-          alignItems: 'start'
-        }}>
-          
+        <div className="bg-white p-6 my-8 border border-gray-300 rounded-lg grid grid-cols-[100px_1fr] gap-5 items-start">
+
           <Image src="/images/team/head-shot-1.jpg" alt="Scott Bradley, Professional Chef" width={100} height={100} />
           <div>
-            <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-            <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
+            <h3 className="m-0 mb-2">About Scott Bradley</h3>
+            <p className="my-1 font-bold">
               Professional Chef • 45 Years Cooking Experience
             </p>
-            <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
+            <p className="my-2 text-sm leading-relaxed">
               Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing
               200+ cover operations. A.A.S. Culinary Arts from Seattle Central College, B.S. Business
               Administration from University of Montana. Method All-Purpose Cleaner has been my only
               kitchen cleaner for 5 years—I test everything I recommend.
             </p>
-            <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>
+            <a href="/about" className="text-blue-600 font-bold">
               Read more about my testing methodology →
             </a>
           </div>
         </div>
 
         {/* FOOTER */}
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '30px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #6c757d'
-        }}>
-          <p style={{ margin: '10px 0' }}>
+        <div className="bg-gray-100 p-5 my-8 rounded-md border-l-4 border-gray-600">
+          <p className="my-2">
             <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
+          <p className="my-2">
             <strong>🔄 Next Review Update:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long'
             })} (6 months from now)
           </p>
-          <p style={{ margin: '10px 0' }}>
+          <p className="my-2">
             <strong>💬 Questions about non-toxic kitchen cleaning?</strong>{' '}
-            <a href="/contact" style={{ color: '#0066cc' }}>Contact me directly</a> and
+            <a href="/contact" className="text-blue-600">Contact me directly</a> and
             I&apos;ll help you find the safest, most effective products for your needs.
           </p>
         </div>
