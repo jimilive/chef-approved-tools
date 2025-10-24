@@ -8,10 +8,12 @@ import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
 
-
-const productData = {
+const legacyProductData = {
   name: "Cuisinart High Impact 8-Inch Nonstick Pan",
   slug: "cuisinart-8-inch-nonstick-pan",
   brand: "Cuisinart",
@@ -93,7 +95,24 @@ export const metadata = {
   description: 'Cuisinart 8-inch nonstick pan review. Professional chef tests for 6 months. Perfect for eggs, single servings. Induction ready.',
 };
 
-export default function Cuisinart8InchNonstickPanReview() {
+export default async function Cuisinart8InchNonstickPanReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('cuisinart-8-inch-nonstick-pan')
+  if (!product) {
+    throw new Error('Product not found: cuisinart-8-inch-nonstick-pan')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    // Use legacy affiliateLinks to maintain compatibility with component expectations
+    affiliateLinks: legacyProductData.affiliateLinks
+  }
+
   return (
     <div className="max-w-4xl mx-auto px-5 py-8">
      <ProductViewTrackerWrapper

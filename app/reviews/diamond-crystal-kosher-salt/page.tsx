@@ -8,8 +8,12 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
-const productData = {
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
+const legacyProductData = {
   name: "Diamond Crystal Kosher Salt",
   slug: "diamond-crystal-kosher-salt",
   brand: "Diamond Crystal",
@@ -40,12 +44,6 @@ const faqData = [
   { question: "How should I store kosher salt?", answer: "Salt doesn't spoil, but proper storage keeps it free-flowing and easy to use: Keep it dry in an airtight container or keep the box closed when not in use. Use a salt cellar by the stove for quick access. Avoid moisture—don't use wet hands to grab salt. Store at room temperature. Diamond Crystal doesn't clump as much as Morton's due to the lack of anti-caking agents, but it'll still absorb moisture in very humid environments." }
 ];
 
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-];
-
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/reviews/diamond-crystal-kosher-salt',
@@ -55,7 +53,30 @@ export const metadata: Metadata = {
   description: 'Diamond Crystal Kosher Salt review: 18 years professional and home use. Chef tests texture, flavor, pinchability. Industry standard.',
 };
 
-export default function DiamondCrystalKosherSaltReview() {
+export default async function DiamondCrystalKosherSaltReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('diamond-crystal-kosher-salt')
+  if (!product) {
+    throw new Error('Product not found: diamond-crystal-kosher-salt')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    // Use legacy affiliateLinks to maintain compatibility with component expectations
+    affiliateLinks: legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
+
   return (
     <div className="max-w-3xl mx-auto px-5 py-10">
       <ProductViewTrackerWrapper

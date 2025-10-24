@@ -9,8 +9,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
-const productData = {
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
+const legacyProductData = {
   name: "Method All-Purpose Cleaner",
   slug: "method-all-purpose-cleaner",
   brand: "Method",
@@ -90,7 +94,24 @@ export const metadata = {
   description: 'Professional chef\'s 5-year review of Method All-Purpose Cleaner. The unicorn of cleaning products - powerful AND non-toxic. Cuts grease effortlessly.',
 };
 
-export default function MethodAllPurposeCleanerReview() {
+export default async function MethodAllPurposeCleanerReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('method-all-purpose-cleaner')
+  if (!product) {
+    throw new Error('Product not found: method-all-purpose-cleaner')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    // Use legacy affiliateLinks to maintain compatibility with component expectations
+    affiliateLinks: legacyProductData.affiliateLinks
+  }
+
   return (
     <div className="max-w-[900px] mx-auto px-5 py-5">
      <ProductViewTrackerWrapper

@@ -9,8 +9,12 @@ import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
-const productData = {
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
+const legacyProductData = {
   name: "Cuisinart DLC-10C Classic Food Processor (7-Cup)",
   slug: "cuisinart-dlc-10c-classic-food-processor",
   brand: "Cuisinart",
@@ -45,12 +49,6 @@ const productData = {
   dateAdded: "2025-10-11",
   lastUpdated: "2025-10-11"
 }
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-]
 
 const faqData = [
   {
@@ -123,7 +121,29 @@ export const metadata = {
   }
 }
 
-export default function CuisinartDLC10CReviewPage() {
+export default async function CuisinartDLC10CReviewPage() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('cuisinart-dlc-10c-classic-food-processor')
+  if (!product) {
+    throw new Error('Product not found: cuisinart-dlc-10c-classic-food-processor')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    // Use legacy affiliateLinks to maintain compatibility with component expectations
+    affiliateLinks: legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">
