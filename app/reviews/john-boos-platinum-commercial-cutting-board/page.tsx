@@ -12,8 +12,12 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
-const productData = {
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
+const legacyProductData = {
   name: "John Boos Platinum Commercial Series Rectangular Wooden Maple Cutting Board 24x18x1.75\"",
   slug: "john-boos-platinum-commercial-cutting-board",
   brand: "John Boos",
@@ -83,13 +87,6 @@ const sizeComparison = [
   { size: "30x20x1.75\"", weight: "32 lbs", use: "Large commercial operations" }
 ]
 
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: "Cutting Boards", url: "https://www.chefapprovedtools.com/cookware" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-]
-
 const faqData = [
   {
     question: "Is a John Boos cutting board worth the money?",
@@ -148,7 +145,30 @@ export const metadata = {
   }
 }
 
-export default function JohnBosPlatinumCuttingBoardReview() {
+export default async function JohnBosPlatinumCuttingBoardReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('john-boos-platinum-commercial-cutting-board')
+  if (!product) {
+    throw new Error('Product not found: john-boos-platinum-commercial-cutting-board')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    // Use legacy affiliateLinks to maintain compatibility with component expectations
+    affiliateLinks: legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: "Cutting Boards", url: "https://www.chefapprovedtools.com/cookware" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">

@@ -9,10 +9,12 @@ import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
 
-
-const productData = {
+const legacyProductData = {
   name: "Benriner large mandoline",
   slug: "benriner-large-mandoline",
   brand: "Brand Name",
@@ -28,12 +30,6 @@ const productData = {
     primary: "/logo.png"
   }
 };
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-];
 
 const faqData = [
   {
@@ -78,7 +74,30 @@ export const metadata = {
   },
 };
 
-export default function BenrinerLargeMandolineReview() {
+export default async function BenrinerLargeMandolineReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('benriner-large-mandoline')
+  if (!product) {
+    throw new Error('Product not found: benriner-large-mandoline')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    // Use legacy affiliateLinks to maintain compatibility with component expectations
+    affiliateLinks: legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
+
   return (
     <article className="max-w-3xl mx-auto px-5 py-5">
 

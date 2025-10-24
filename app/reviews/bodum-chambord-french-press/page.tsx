@@ -8,10 +8,12 @@ import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
 
-
-const productData = {
+const legacyProductData = {
   name: "Bodum chambord french press",
   slug: "bodum-chambord-french-press",
   brand: "Brand Name",
@@ -27,12 +29,6 @@ const productData = {
     primary: "/logo.png"
   }
 };
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-];
 
 const faqData = [
   {
@@ -85,7 +81,30 @@ export const metadata = {
   },
 };
 
-export default function BodumChambordFrenchPressReview() {
+export default async function BodumChambordFrenchPressReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('bodum-chambord-french-press')
+  if (!product) {
+    throw new Error('Product not found: bodum-chambord-french-press')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    // Use legacy affiliateLinks to maintain compatibility with component expectations
+    affiliateLinks: legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
+
   return (
     <article>
 

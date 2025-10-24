@@ -9,8 +9,12 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
-const productData = {
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
+const legacyProductData = {
   name: 'Lodge Seasoned Cast Iron 3 Skillet Bundle - 12&quot;, 10.25&quot;, and 8&quot; Set',
   slug: "lodge-seasoned-cast-iron-3-skillet-bundle",
   brand: "Lodge",
@@ -88,13 +92,6 @@ const seasoningGuide = [
   { step: "Re-seasoning", task: "Monthly oven seasoning for heavy-use skillets" }
 ]
 
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: "Cast Iron Cookware", url: "https://www.chefapprovedtools.com/cookware" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-]
-
 const faqData = [
   { question: "Is Lodge cast iron worth the investment?", answer: "Absolutely. After 7 years of testing and decades of restaurant experience, Lodge delivers professional-grade performance at exceptional value. The key differences compared to premium brands are surface finish and aesthetics, not cooking performance. Lodge delivers identical heat retention (5/5 rating) and distribution to premium brands, same durability and longevity (lifetime with proper care), is pre-seasoned and ready to use immediately, and is Made in USA with quality control. Premium brands differ mainly in smoother surface finish (cosmetic, not functional), slightly lighter weight due to different casting methods, and premium pricing for brand heritage. My verdict: For serious cooking performance, Lodge delivers professional results at budget-friendly pricing." },
   { question: "How do I season and maintain Lodge cast iron?", answer: "Lodge comes pre-seasoned, but here's what actually works after 7 years: For daily maintenance, clean while still warm with hot water and stiff brush, avoid soap unless dealing with stuck-on food, dry completely immediately - this is critical, and apply thin coat of oil while still warm. The critical rule: Never leave water or acidic products on the surface. This is the #1 cause of seasoning damage and rust. The truth about seasoning: If you use cast iron regularly, cooking maintains seasoning naturally. You don't need constant oven-seasoning if you cook with fats regularly." },
@@ -123,7 +120,30 @@ export const metadata = {
   }
 }
 
-export default function Lodge3SkilletBundleReview() {
+export default async function Lodge3SkilletBundleReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('lodge-seasoned-cast-iron-3-skillet-bundle')
+  if (!product) {
+    throw new Error('Product not found: lodge-seasoned-cast-iron-3-skillet-bundle')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    // Use legacy affiliateLinks to maintain compatibility with component expectations
+    affiliateLinks: legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: "Cast Iron Cookware", url: "https://www.chefapprovedtools.com/cookware" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">
