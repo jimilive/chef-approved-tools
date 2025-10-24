@@ -94,12 +94,9 @@ export default function StickyMobileCTA({
     <>
       {/* Mobile only - hidden on md breakpoint and above */}
       <div
-        className={`fixed bottom-0 left-0 right-0 z-40 md:hidden transform transition-all duration-500 ease-in-out ${
+        className={`fixed bottom-0 left-0 right-0 z-40 md:hidden transform transition-all duration-500 ease-in-out shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1),0_-2px_4px_-1px_rgba(0,0,0,0.06)] ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
         }`}
-        style={{
-          boxShadow: '0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06)'
-        }}
       >
         {/* Backdrop blur effect */}
         <div className="absolute inset-0 bg-white/95 backdrop-blur-sm" />
