@@ -627,76 +627,76 @@ export default function WincoHeavyDutyTongsReview() {
             Comparison vs. Competitors
           </h2>
 
-          <div style={{ overflowX: 'auto', margin: '20px 0' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
+          <div className="overflow-x-auto my-5">
+            <table className="w-full border-collapse text-sm">
               <thead>
-                <tr style={{ background: '#f8f9fa' }}>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Feature</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>Winco Heavy Duty</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>OXO Good Grips</th>
-                  <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6' }}>All-Clad Stainless</th>
+                <tr className="bg-gray-50">
+                  <th className="p-3 text-left border-b-2 border-gray-300">Feature</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">Winco Heavy Duty</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">OXO Good Grips</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">All-Clad Stainless</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Price Range</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold', color: '#16a34a' }}>$7-10</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$15-18</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$25-30</td>
+                  <td className="p-3 border-b border-gray-300">Price Range</td>
+                  <td className="p-3 border-b border-gray-300 font-bold text-green-600">$7-10</td>
+                  <td className="p-3 border-b border-gray-300">$15-18</td>
+                  <td className="p-3 border-b border-gray-300">$25-30</td>
                 </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Material</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Heavy-duty stainless (1.5mm)</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Stainless with silicone tips</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Stainless steel</td>
-                </tr>
-                <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Construction</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>One-piece (no weak points)</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Multi-piece assembly</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>One-piece</td>
-                </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Dishwasher Safe</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✓ Yes</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✓ Yes</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✓ Yes</td>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Material</td>
+                  <td className="p-3 border-b border-gray-300">Heavy-duty stainless (1.5mm)</td>
+                  <td className="p-3 border-b border-gray-300">Stainless with silicone tips</td>
+                  <td className="p-3 border-b border-gray-300">Stainless steel</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Heat Resistance</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Up to 500°F</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Up to 400°F (silicone tips)</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Up to 500°F</td>
+                  <td className="p-3 border-b border-gray-300">Construction</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">One-piece (no weak points)</td>
+                  <td className="p-3 border-b border-gray-300">Multi-piece assembly</td>
+                  <td className="p-3 border-b border-gray-300">One-piece</td>
                 </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Non-Stick Safe</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✗ No (metal)</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✓ Yes (silicone tips)</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✗ No (metal)</td>
-                </tr>
-                <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Locking Mechanism</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✗ No</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✓ Yes</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>✗ No</td>
-                </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Restaurant Use</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>✓ Commercial-grade</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Home kitchen design</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Home kitchen design</td>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Dishwasher Safe</td>
+                  <td className="p-3 border-b border-gray-300">✓ Yes</td>
+                  <td className="p-3 border-b border-gray-300">✓ Yes</td>
+                  <td className="p-3 border-b border-gray-300">✓ Yes</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Warranty</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Basic warranty</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Satisfaction guarantee</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Limited lifetime</td>
+                  <td className="p-3 border-b border-gray-300">Heat Resistance</td>
+                  <td className="p-3 border-b border-gray-300">Up to 500°F</td>
+                  <td className="p-3 border-b border-gray-300">Up to 400°F (silicone tips)</td>
+                  <td className="p-3 border-b border-gray-300">Up to 500°F</td>
                 </tr>
-                <tr style={{ background: '#fafafa' }}>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: 'bold' }}>Best For</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Heavy-duty all-purpose use</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Non-stick cookware</td>
-                  <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Premium home kitchens</td>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Non-Stick Safe</td>
+                  <td className="p-3 border-b border-gray-300">✗ No (metal)</td>
+                  <td className="p-3 border-b border-gray-300">✓ Yes (silicone tips)</td>
+                  <td className="p-3 border-b border-gray-300">✗ No (metal)</td>
+                </tr>
+                <tr>
+                  <td className="p-3 border-b border-gray-300">Locking Mechanism</td>
+                  <td className="p-3 border-b border-gray-300">✗ No</td>
+                  <td className="p-3 border-b border-gray-300">✓ Yes</td>
+                  <td className="p-3 border-b border-gray-300">✗ No</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300">Restaurant Use</td>
+                  <td className="p-3 border-b border-gray-300 font-bold">✓ Commercial-grade</td>
+                  <td className="p-3 border-b border-gray-300">Home kitchen design</td>
+                  <td className="p-3 border-b border-gray-300">Home kitchen design</td>
+                </tr>
+                <tr>
+                  <td className="p-3 border-b border-gray-300">Warranty</td>
+                  <td className="p-3 border-b border-gray-300">Basic warranty</td>
+                  <td className="p-3 border-b border-gray-300">Satisfaction guarantee</td>
+                  <td className="p-3 border-b border-gray-300">Limited lifetime</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="p-3 border-b border-gray-300 font-bold">Best For</td>
+                  <td className="p-3 border-b border-gray-300">Heavy-duty all-purpose use</td>
+                  <td className="p-3 border-b border-gray-300">Non-stick cookware</td>
+                  <td className="p-3 border-b border-gray-300">Premium home kitchens</td>
                 </tr>
               </tbody>
             </table>

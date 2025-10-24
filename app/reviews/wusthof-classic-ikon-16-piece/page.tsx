@@ -195,14 +195,8 @@ export default function WusthofClassicIkonReview() {
           <Tier1Badge showDescription={true} />
 
           {/* Quick Rating Box */}
-          <div className="quick-stats" style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            margin: '20px 0',
-            borderLeft: '4px solid #28a745',
-            borderRadius: '4px'
-          }}>
-            <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
+          <div className="quick-stats bg-gray-50 p-5 my-5 border-l-4 border-green-600 rounded">
+            <p className="m-0 text-lg leading-relaxed">
               <strong>⭐⭐⭐⭐⭐ 4.8/5</strong> | Based on 2 years professional kitchen testing<br/>
               <strong>✓ Ergonomic IKON Handles</strong> | <strong>✓ German-Forged Precision</strong> | <strong>✓ 16-Piece Complete Set</strong>
             </p>
@@ -210,15 +204,8 @@ export default function WusthofClassicIkonReview() {
         </header>
 
         {/* PRIMARY CTA - ABOVE THE FOLD */}
-        <div className="primary-cta" style={{
-          background: '#fff3cd',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '2px solid #ffc107'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Best Price:</h3>
+        <div className="primary-cta bg-yellow-50 p-6 my-6 rounded-lg text-center border-2 border-yellow-400">
+          <h3 className="mt-0 text-2xl">Check Current Best Price:</h3>
 
           <CTAVisibilityTracker
             ctaId={`review-${productData.slug}-above_fold`}
@@ -236,41 +223,30 @@ export default function WusthofClassicIkonReview() {
               View on Amazon →
             </AffiliateButton>
           </CTAVisibilityTracker>
-          
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
+
+          <p className="text-sm text-gray-600 mt-4">
             💡 Pricing updated daily. We earn commission at no extra cost to you.<br/>
             More retailers will be added soon for price comparison.
           </p>
         </div>
 
         {/* VERDICT SECTION - SHORTENED */}
-        <div className="verdict-box" style={{
-          background: '#f8f9fa',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
+        <div className="verdict-box bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
           <h2>Professional Verdict</h2>
-          
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+
+          <p className="text-lg leading-relaxed">
             <strong>After 2 years testing in professional kitchens, this WÜSTHOF set has proven exceptional value through German engineering and ergonomic design.</strong> The chef&apos;s knife, santoku, bread knife, and paring knives alone justify the purchase price—saving hundreds compared to individual purchases.
           </p>
-          
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+
+          <p className="text-lg leading-relaxed">
             The IKON handle ergonomics reduce hand fatigue during extended prep sessions, a game-changer for professional use. While some pieces like the slicer see limited use, the overall performance makes this an outstanding investment.
           </p>
-          
-          <div style={{ 
-            background: 'white', 
-            padding: '15px', 
-            marginTop: '20px', 
-            borderRadius: '4px' 
-          }}>
-            <p style={{ margin: '10px 0' }}>
+
+          <div className="bg-white p-4 mt-5 rounded">
+            <p className="my-2">
               <strong>✓ Perfect For:</strong> Professional kitchens, serious home cooks, anyone valuing ergonomic comfort, those wanting complete knife selection without buying individually
             </p>
-            <p style={{ margin: '10px 0' }}>
+            <p className="my-2">
               <strong>✗ Skip If:</strong> Limited counter space, prefer buying only essential knives individually, extremely tight budget, need dishwasher-safe knives
             </p>
           </div>
@@ -301,37 +277,32 @@ export default function WusthofClassicIkonReview() {
         {/* Hero Features */}
         <h2>Why WÜSTHOF Classic IKON Delivers Professional-Grade Performance</h2>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '20px',
-          margin: '30px 0'
-        }}>
-          
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>⚡</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>PEtec Enhanced Blades</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-8">
+
+          <div className="bg-gray-50 p-5 rounded-lg">
+            <div className="text-4xl mb-2">⚡</div>
+            <h3 className="my-2 text-xl">PEtec Enhanced Blades</h3>
             <p>20% sharper than traditional German knives with twice the edge retention. Precision forging creates blades that stay sharp through heavy professional use.</p>
           </div>
 
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>🛡️</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Full Tang Construction</h3>
+          <div className="bg-gray-50 p-5 rounded-lg">
+            <div className="text-4xl mb-2">🛡️</div>
+            <h3 className="my-2 text-xl">Full Tang Construction</h3>
             <p>Steel extends through entire handle for superior balance and durability. The 58 HRC hardness provides excellent edge retention without brittleness.</p>
           </div>
 
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>👍</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Ergonomic IKON Handles</h3>
+          <div className="bg-gray-50 p-5 rounded-lg">
+            <div className="text-4xl mb-2">👍</div>
+            <h3 className="my-2 text-xl">Ergonomic IKON Handles</h3>
             <p>Curved handle design reduces hand fatigue during extended prep sessions. The difference is noticeable after just 30 minutes of continuous use.</p>
           </div>
 
-          <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '40px', marginBottom: '10px' }}>💰</div>
-            <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Complete Set Value</h3>
+          <div className="bg-gray-50 p-5 rounded-lg">
+            <div className="text-4xl mb-2">💰</div>
+            <h3 className="my-2 text-xl">Complete Set Value</h3>
             <p>16 pieces including essential knives, steel, and scissors. Saves hundreds compared to buying individually while ensuring consistent quality across your entire knife collection.</p>
           </div>
-          
+
         </div>
 
         {/* Real-World Testing - WITH INTERNAL LINKS */}
@@ -418,15 +389,8 @@ export default function WusthofClassicIkonReview() {
         </section>
 
         {/* MID-ARTICLE CTA */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '20px',
-          margin: '25px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #0066cc',
-          textAlign: 'center'
-        }}>
-          <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
+        <div className="bg-blue-50 p-5 my-6 rounded-md border-l-4 border-blue-600 text-center">
+          <p className="my-2 text-lg font-bold">
             Convinced this is right for your kitchen?
           </p>
           <CTAVisibilityTracker
@@ -490,26 +454,15 @@ export default function WusthofClassicIkonReview() {
           day: 'numeric' 
         })}</p>
 
-        <div className="merchant-ctas" style={{
-          background: '#f8f9fa',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px'
-        }}>
-          
-          <h3 style={{ marginTop: 0 }}>Compare Prices Across Retailers:</h3>
-          
-          <div style={{
-            background: 'white',
-            padding: '20px',
-            margin: '15px 0',
-            borderRadius: '6px',
-            border: '2px solid #ff9900'
-          }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
+        <div className="merchant-ctas bg-gray-50 p-6 my-6 rounded-lg">
+
+          <h3 className="mt-0">Compare Prices Across Retailers:</h3>
+
+          <div className="bg-white p-5 my-4 rounded-md border-2 border-orange-400">
+            <div className="flex justify-between items-center flex-wrap gap-4">
               <div>
-                <h4 style={{ margin: '0 0 10px 0' }}>🏆 Amazon</h4>
-                <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Prime shipping | ✓ Competitive pricing | ✓ Easy returns</p>
+                <h4 className="m-0 mb-2">🏆 Amazon</h4>
+                <p className="my-1 text-gray-600">✓ Prime shipping | ✓ Competitive pricing | ✓ Easy returns</p>
               </div>
               <div>
                 <CTAVisibilityTracker
@@ -532,93 +485,63 @@ export default function WusthofClassicIkonReview() {
             </div>
           </div>
 
-          <div style={{
-            background: 'white',
-            padding: '20px',
-            margin: '15px 0',
-            borderRadius: '6px',
-            border: '1px solid #dee2e6'
-          }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
+          <div className="bg-white p-5 my-4 rounded-md border border-gray-300">
+            <div className="flex justify-between items-center flex-wrap gap-4">
               <div>
-                <h4 style={{ margin: '0 0 10px 0' }}>Williams Sonoma</h4>
-                <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Authorized dealer | ✓ Expert support | ✓ Registry available</p>
+                <h4 className="m-0 mb-2">Williams Sonoma</h4>
+                <p className="my-1 text-gray-600">✓ Authorized dealer | ✓ Expert support | ✓ Registry available</p>
               </div>
               <div>
-                <a 
+                <a
                   href="https://www.williams-sonoma.com/products/wusthof-classic-ikon-knife-block-set/?sku=8914839&cm_ven=PLA&cm_iu=8914839&cm_cat=Google&cm_pla=Local&gclid=Cj0KCQiA7qL6BhDOARIsAFNjvgFQqXwBhJuZz9UhTZC8eEhIz2MU4C1KtbZKx9QY6QZYl4rH9JjZl6kaArMuEALw_wcB"
                   target="_blank"
                   rel="nofollow noopener"
-                  style={{
-                    display: 'inline-block',
-                    background: '#0066cc',
-                    color: 'white',
-                    padding: '15px 30px',
-                    textDecoration: 'none',
-                    borderRadius: '5px',
-                    fontWeight: 'bold',
-                    whiteSpace: 'nowrap'
-                  }}
+                  className="inline-block bg-blue-600 text-white py-4 px-8 no-underline rounded font-bold whitespace-nowrap"
                 >
                   View at Williams Sonoma →
                 </a>
               </div>
             </div>
           </div>
-          
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '20px', textAlign: 'center' }}>
+
+          <p className="text-sm text-gray-600 mt-5 text-center">
             💡 More retailers will be added soon for price comparison.
           </p>
-          
+
         </div>
 
         {/* EMAIL CAPTURE SECTION */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
-          
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>
+        <div className="bg-blue-50 p-8 my-8 rounded-lg border-l-4 border-blue-600">
+
+          <h3 className="mt-0 text-2xl">
             🔥 Get My Complete Knife Buying Guide
           </h3>
-          
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+
+          <p className="text-base leading-relaxed">
             Download my comprehensive guide to professional knife selection, developed over 45 years in professional kitchens:
           </p>
-          
-          <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
+
+          <ul className="my-4 text-base leading-loose">
             <li>✓ Set vs individual knife purchasing decision framework</li>
             <li>✓ Essential knives every kitchen needs (and which you can skip)</li>
             <li>✓ Proper knife maintenance and sharpening techniques</li>
             <li>✓ Cost comparison calculator: sets vs individual purchases</li>
             <li>✓ Red flags to avoid when buying knives</li>
           </ul>
-          
-          <div style={{ textAlign: 'center', marginTop: '25px' }}>
-            <a 
+
+          <div className="text-center mt-6">
+            <a
               href="/newsletter"
-              style={{
-                display: 'inline-block',
-                background: '#0066cc',
-                color: 'white',
-                padding: '15px 40px',
-                textDecoration: 'none',
-                borderRadius: '6px',
-                fontWeight: 'bold',
-                fontSize: '18px'
-              }}
+              className="inline-block bg-blue-600 text-white py-4 px-10 no-underline rounded-md font-bold text-lg"
             >
               Download Free Guide →
             </a>
           </div>
-          
-          <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
+
+          <p className="text-xs text-gray-600 mt-4 text-center">
             Instant delivery. No spam, ever. Unsubscribe anytime.
           </p>
-          
+
         </div>
 
         {/* Pros and Cons */}
@@ -653,36 +576,25 @@ export default function WusthofClassicIkonReview() {
         {/* FINAL VERDICT & STRONG CTA */}
         <h2>The Bottom Line: My Professional Verdict</h2>
 
-        <div style={{
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-          color: 'white',
-          padding: '30px',
-          borderRadius: '8px',
-          margin: '30px 0'
-        }}>
-          
-          <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
+        <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-lg my-8">
+
+          <h3 className="text-white mt-0 text-2xl">
             After 2+ Years of Professional Kitchen Testing...
           </h3>
-          
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+
+          <p className="text-lg leading-relaxed">
             This WÜSTHOF Classic IKON set has proven its worth in the demanding environment of professional kitchens. The ergonomic IKON handles make a noticeable difference during extended prep sessions—something you truly appreciate after hours of continuous knife work. The German-forged construction delivers reliable performance day after day, and the PEtec-enhanced edges hold sharpness remarkably well between maintenance sessions.
           </p>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+          <p className="text-lg leading-relaxed">
             While not every knife in the set sees equal use (the slicer, for instance, rarely leaves the block), the essential pieces—chef&apos;s knife, santoku, bread knife, and paring knives—more than justify the investment. These four knives alone would cost significantly more purchased individually, making the set excellent value.
           </p>
-          
-          <div style={{
-            background: 'rgba(255,255,255,0.2)',
-            padding: '20px',
-            margin: '20px 0',
-            borderRadius: '6px'
-          }}>
-            <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
+
+          <div className="bg-white/20 p-5 my-5 rounded-md">
+            <p className="m-0 text-xl font-bold">
               Final Rating: ⭐⭐⭐⭐⭐ 4.8/5
             </p>
-            <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
+            <ul className="mt-4 mb-0 ml-5 text-base leading-loose">
               <li>Ergonomics & Comfort: 5/5</li>
               <li>Edge Retention: 4/5</li>
               <li>Build Quality: 5/5</li>
@@ -690,28 +602,21 @@ export default function WusthofClassicIkonReview() {
               <li>Overall Performance: 4.8/5</li>
             </ul>
           </div>
-          
-          <p style={{ fontSize: '16px', marginBottom: 0 }}>
+
+          <p className="text-base mb-0">
             <strong>Would I buy this again?</strong> Absolutely. This set has equipped our professional kitchen with reliable, comfortable knives that perform consistently under demanding conditions. The ergonomic handles and German engineering make this a buy-it-for-life investment.
           </p>
-          
+
         </div>
 
         {/* STRONG FINAL CTA */}
-        <div style={{
-          background: '#fff3cd',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '3px solid #ffc107'
-        }}>
-          
-          <h3 style={{ marginTop: 0, fontSize: '28px' }}>
+        <div className="bg-yellow-50 p-8 my-8 rounded-lg text-center border-4 border-yellow-400">
+
+          <h3 className="mt-0 text-3xl">
             Ready to Upgrade Your Kitchen with Professional-Grade Knives?
           </h3>
-          
-          <p style={{ fontSize: '18px', margin: '20px 0' }}>
+
+          <p className="text-lg my-5">
             Get the same German-forged quality that equipped our professional kitchen—ergonomic comfort meets exceptional performance.
           </p>
 
@@ -731,11 +636,11 @@ export default function WusthofClassicIkonReview() {
               Check Current Price →
             </AffiliateButton>
           </CTAVisibilityTracker>
-          
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
+
+          <p className="text-sm text-gray-600 mt-5">
             💡 Amazon typically offers the best pricing. Set saves hundreds vs buying individual knives.
           </p>
-          
+
         </div>
 
         {/* RELATED PRODUCTS SECTION */}

@@ -57,7 +57,7 @@ export const metadata: Metadata = {
 
 export default function DiamondCrystalKosherSaltReview() {
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
+    <div className="max-w-3xl mx-auto px-5 py-10">
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
@@ -72,7 +72,7 @@ export default function DiamondCrystalKosherSaltReview() {
       {/* H1 Title */}
       <h1>Diamond Crystal Kosher Salt: 18-Year Pro Review (2025)</h1>
 
-      <p style={{ fontSize: '14px', color: '#666', marginBottom: '20px' }}>
+      <p className="text-sm text-gray-600 mb-5">
         By Scott Bradley, Professional Chef | Last Updated: {new Date().toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'long',
@@ -84,29 +84,16 @@ export default function DiamondCrystalKosherSaltReview() {
       <Tier1Badge showDescription={true} />
 
       {/* Quick Rating Box */}
-      <div className="quick-stats" style={{
-        background: '#f8f9fa',
-        padding: '20px',
-        margin: '20px 0',
-        borderLeft: '4px solid #28a745',
-        borderRadius: '4px'
-      }}>
-        <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
+      <div className="quick-stats bg-gray-50 p-5 my-5 border-l-4 border-green-600 rounded">
+        <p className="m-0 text-lg leading-relaxed">
           <strong>⭐⭐⭐⭐⭐ 5/5</strong> | 18 years of testing (6 years in 200+ cover restaurant)<br/>
           <strong>✓ Used Daily at Purple Café</strong> | <strong>✓ Professional Standard Since 2007</strong> | <strong>✓ No Additives</strong>
         </p>
       </div>
 
       {/* PRIMARY CTA - ABOVE THE FOLD */}
-      <div className="primary-cta" style={{
-        background: '#fff3cd',
-        padding: '25px',
-        margin: '25px 0',
-        borderRadius: '8px',
-        textAlign: 'center',
-        border: '2px solid #ffc107'
-      }}>
-        <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Best Price:</h3>
+      <div className="primary-cta bg-yellow-50 p-6 my-6 rounded-lg text-center border-2 border-yellow-400">
+        <h3 className="mt-0 text-2xl">Check Current Best Price:</h3>
 
         <CTAVisibilityTracker
           ctaId={`review-${productData.slug}-above-fold`}
@@ -125,41 +112,35 @@ export default function DiamondCrystalKosherSaltReview() {
           </AffiliateButton>
         </CTAVisibilityTracker>
 
-        <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
+        <p className="text-sm text-gray-600 mt-4">
           💡 Pricing updated daily. We earn commission at no extra cost to you.<br/>
           More retailers will be added soon for price comparison.
         </p>
       </div>
 
       {/* SHORTENED VERDICT */}
-      <div className="verdict-box" style={{
-        background: '#f8f9fa',
-        padding: '25px',
-        margin: '25px 0',
-        borderRadius: '8px',
-        borderLeft: '4px solid #0066cc'
-      }}>
+      <div className="verdict-box bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
         <h2>Professional Verdict</h2>
 
-        <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+        <p className="text-lg leading-relaxed">
           <strong>For 6 years at Purple Café, a 200+ cover restaurant, Diamond Crystal Kosher Salt
           was the only salt we used in the kitchen.</strong> Cases of it. Monthly deliveries. Every station had a
           container within reach. Why? Because when you&apos;re seasoning hundreds of plates per
           service, you need salt that&apos;s predictable, fast to pinch, and clean-tasting every time.
         </p>
 
-        <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+        <p className="text-lg leading-relaxed">
           Thirteen years after leaving the restaurant, it&apos;s still the only salt in my home
           kitchen. That&apos;s 18 years of combined professional and personal use—from 2007 to today. I&apos;ve never
           found a reason to switch.
         </p>
 
-        <div style={{ background: 'white', padding: '15px', marginTop: '20px', borderRadius: '4px' }}>
-          <p style={{ margin: '10px 0' }}>
+        <div className="bg-white p-4 mt-5 rounded">
+          <p className="my-2">
             <strong>✓ Perfect For:</strong> Professional kitchens, serious home cooks, anyone who
             wants predictable seasoning and clean flavor, kosher cooking requirements
           </p>
-          <p style={{ margin: '10px 0' }}>
+          <p className="my-2">
             <strong>✗ Skip If:</strong> You rarely cook from scratch, prefer fine table salt for precision baking recipes,
             need iodized salt for dietary reasons
           </p>
@@ -169,34 +150,29 @@ export default function DiamondCrystalKosherSaltReview() {
       {/* HERO FEATURES */}
       <h2>Why Diamond Crystal Is the Professional Standard</h2>
 
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-        gap: '20px',
-        margin: '30px 0'
-      }}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-8">
 
-        <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-          <div style={{ fontSize: '40px', marginBottom: '10px' }}>🤏</div>
-          <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Perfect Pinchability</h3>
+        <div className="bg-gray-50 p-5 rounded-lg">
+          <div className="text-4xl mb-2">🤏</div>
+          <h3 className="my-2 text-xl">Perfect Pinchability</h3>
           <p>Large, flat crystals are easy to grab and sprinkle with precision. No clumping, no moisture absorption. Season by feel, not by measuring spoons—the way professional chefs work.</p>
         </div>
 
-        <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-          <div style={{ fontSize: '40px', marginBottom: '10px' }}>✨</div>
-          <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Clean, Pure Flavor</h3>
+        <div className="bg-gray-50 p-5 rounded-lg">
+          <div className="text-4xl mb-2">✨</div>
+          <h3 className="my-2 text-xl">Clean, Pure Flavor</h3>
           <p>No additives. No anti-caking agents. No metallic aftertaste. Just pure salt that enhances food without competing with it. Dissolves quickly and evenly for consistent seasoning.</p>
         </div>
 
-        <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-          <div style={{ fontSize: '40px', marginBottom: '10px' }}>🎯</div>
-          <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Predictable Results</h3>
+        <div className="bg-gray-50 p-5 rounded-lg">
+          <div className="text-4xl mb-2">🎯</div>
+          <h3 className="my-2 text-xl">Predictable Results</h3>
           <p>Consistent crystal size means reliable measurements every time. What works for one cook works for another. Essential in professional kitchens where multiple cooks need identical results.</p>
         </div>
 
-        <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-          <div style={{ fontSize: '40px', marginBottom: '10px' }}>🛡️</div>
-          <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Industry Standard</h3>
+        <div className="bg-gray-50 p-5 rounded-lg">
+          <div className="text-4xl mb-2">🛡️</div>
+          <h3 className="my-2 text-xl">Industry Standard</h3>
           <p>Used in restaurants worldwide. Test Kitchen approved. When recipes say &quot;kosher salt,&quot; they mean Diamond Crystal. The benchmark all other salts are measured against.</p>
         </div>
 
@@ -205,61 +181,54 @@ export default function DiamondCrystalKosherSaltReview() {
       {/* CRITICAL SECTION: 6 Years in Professional Kitchen */}
       <h2>Tested in a 200+ Cover Restaurant for 6 Years</h2>
 
-      <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-        At <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>Purple Café</a>, Diamond Crystal Kosher Salt wasn&apos;t just preferred—it was required.
+      <p className="text-base leading-relaxed">
+        At <a href="/about" className="text-blue-600 font-bold">Purple Café</a>, Diamond Crystal Kosher Salt wasn&apos;t just preferred—it was required.
         Every prep station and every line cook used it exclusively from 2007-2012.
       </p>
 
-      <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+      <p className="text-base leading-relaxed">
         We went through cases every month. Seasoning proteins before searing. Pasta water. Vegetable
         prep. Finishing plates at expo. Brines for poultry. Every dish that left the kitchen was
         seasoned with Diamond Crystal.
       </p>
 
-      <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+      <p className="text-base leading-relaxed">
         Why the mandate? In a professional kitchen serving 200+ guests nightly, seasoning must be:
       </p>
 
-      <ul style={{ fontSize: '16px', lineHeight: '1.8' }}>
+      <ul className="text-base leading-relaxed">
         <li><strong>Predictable:</strong> Same crystal size means consistent results across all cooks</li>
         <li><strong>Fast:</strong> Large flakes are easy to pinch while plating during rush</li>
         <li><strong>Clean:</strong> No bitter or metallic notes to compete with food flavors</li>
         <li><strong>Reliable:</strong> Works the same at 7am prep and 10pm cleanup</li>
       </ul>
 
-      <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+      <p className="text-base leading-relaxed">
         For 6 years, this salt seasoned thousands of dishes. Zero complaints. Zero inconsistencies.
-        Zero reasons to switch. See our complete guide on <a href="/blog/why-professional-chefs-use-kosher-salt" style={{ color: '#0066cc', fontWeight: 'bold' }}>why professional chefs use kosher salt</a> for more details on professional kitchen standards.
+        Zero reasons to switch. See our complete guide on <a href="/blog/why-professional-chefs-use-kosher-salt" className="text-blue-600 font-bold">why professional chefs use kosher salt</a> for more details on professional kitchen standards.
       </p>
 
       <h3>18 Years at Home (and Counting)</h3>
 
-      <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+      <p className="text-base leading-relaxed">
         When I left Purple Café in 2012, Diamond Crystal came home with me. Thirteen years later,
         it&apos;s still the only salt I buy. Same recognizable box on my counter. Same predictable crystals.
         Same clean flavor.
       </p>
 
-      <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+      <p className="text-base leading-relaxed">
         I&apos;ve tested expensive finishing salts like Maldon and fleur de sel. Tried Morton for comparison.
         Experimented with various sea salts. Always come back to Diamond Crystal. Eighteen years of daily use—professional and
         personal—and I&apos;ve never found anything better for everyday cooking.
       </p>
 
-      <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
-        It sits next to my <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox chef&apos;s knife</a> and <a href="/reviews/john-boos-platinum-commercial-cutting-board" style={{ color: '#0066cc', fontWeight: 'bold' }}>John Boos cutting board</a>—tools that have proven themselves over years of professional and home use.
+      <p className="text-base leading-relaxed">
+        It sits next to my <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-600 font-bold">Victorinox chef&apos;s knife</a> and <a href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-blue-600 font-bold">John Boos cutting board</a>—tools that have proven themselves over years of professional and home use.
       </p>
 
       {/* MID-ARTICLE CTA */}
-      <div style={{
-        background: '#e7f3ff',
-        padding: '20px',
-        margin: '25px 0',
-        borderRadius: '6px',
-        borderLeft: '4px solid #0066cc',
-        textAlign: 'center'
-      }}>
-        <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
+      <div className="bg-blue-50 p-5 my-6 rounded-md border-l-4 border-blue-600 text-center">
+        <p className="my-2 text-lg font-bold">
           Ready to upgrade to professional-standard salt?
         </p>
         <CTAVisibilityTracker
@@ -285,13 +254,13 @@ export default function DiamondCrystalKosherSaltReview() {
 
       <h3>The Crystal Structure</h3>
 
-      <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+      <p className="text-base leading-relaxed">
         Diamond Crystal is made using the Alberger process, which creates hollow, pyramid-shaped crystals.
         This unique structure makes the salt lighter and fluffier than other kosher salts—about half the
         density of Morton&apos;s. That means:
       </p>
 
-      <ul style={{ fontSize: '16px', lineHeight: '1.8' }}>
+      <ul className="text-base leading-relaxed">
         <li>Easier to control when pinching</li>
         <li>Dissolves faster on food</li>
         <li>More forgiving if you slightly over-season</li>
@@ -300,7 +269,7 @@ export default function DiamondCrystalKosherSaltReview() {
 
       <h3>No Additives</h3>
 
-      <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+      <p className="text-base leading-relaxed">
         Unlike many salts, Diamond Crystal contains no anti-caking agents. Just salt. This keeps the
         flavor clean and pure. The crystals don&apos;t clump in humid environments as much as you&apos;d
         expect—I&apos;ve used it in both dry Montana kitchens and humid Seattle restaurants without issues.
@@ -308,7 +277,7 @@ export default function DiamondCrystalKosherSaltReview() {
 
       <h3>Conversion Note</h3>
 
-      <p style={{ fontSize: '16px', lineHeight: '1.8' }}>
+      <p className="text-base leading-relaxed">
         If a recipe calls for Diamond Crystal and you substitute Morton&apos;s kosher salt, use about half
         as much. Diamond Crystal is less dense, so 1 tablespoon of Diamond Crystal ≈ 1½ teaspoons of Morton&apos;s.
       </p>
@@ -319,12 +288,7 @@ export default function DiamondCrystalKosherSaltReview() {
       <div>
 
         {/* Question 1 */}
-        <div style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
+        <div className="my-5 p-5 bg-gray-50 rounded-md">
           <h3>Is Diamond Crystal worth it vs Morton&apos;s?</h3>
           <div>
             <div>
@@ -336,29 +300,19 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 2 */}
-        <div style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
+        <div className="my-5 p-5 bg-gray-50 rounded-md">
           <h3>Why do professional chefs use kosher salt?</h3>
           <div>
             <div>
               <p><strong>Answer:</strong> Professional chefs prefer kosher salt because the large crystals are easy to pinch and control when seasoning by hand—the way most cooking happens in restaurants. You can feel exactly how much salt you&apos;re adding, which is crucial when you&apos;re cooking without measuring spoons.</p>
               <p>The coarse texture also makes it less likely to over-salt. Fine table salt pours too quickly and clumps in humid kitchens. Kosher salt dissolves evenly, has no additives to affect flavor, and provides consistent results across different cooks in the same kitchen.</p>
-              <p>In my 6 years at Purple Café, we never used anything but Diamond Crystal for actual cooking. It&apos;s the industry standard for good reason. Read our complete guide on <a href="/blog/why-professional-chefs-use-kosher-salt" style={{ color: '#0066cc' }}>why chefs use kosher salt</a> for more details.</p>
+              <p>In my 6 years at Purple Café, we never used anything but Diamond Crystal for actual cooking. It&apos;s the industry standard for good reason. Read our complete guide on <a href="/blog/why-professional-chefs-use-kosher-salt" className="text-blue-600">why chefs use kosher salt</a> for more details.</p>
             </div>
           </div>
         </div>
 
         {/* Question 3 */}
-        <div style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
+        <div className="my-5 p-5 bg-gray-50 rounded-md">
           <h3>Can I use Diamond Crystal for baking?</h3>
           <div>
             <div>
@@ -370,12 +324,7 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 4 */}
-        <div style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
+        <div className="my-5 p-5 bg-gray-50 rounded-md">
           <h3>What is the difference between kosher salt and table salt?</h3>
           <div>
             <div>
@@ -392,12 +341,7 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 5 */}
-        <div style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
+        <div className="my-5 p-5 bg-gray-50 rounded-md">
           <h3>How much Diamond Crystal equals table salt?</h3>
           <div>
             <div>
@@ -414,12 +358,7 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 6 */}
-        <div style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
+        <div className="my-5 p-5 bg-gray-50 rounded-md">
           <h3>Is Diamond Crystal the same as Morton kosher salt?</h3>
           <div>
             <div>
@@ -437,12 +376,7 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 7 */}
-        <div style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
+        <div className="my-5 p-5 bg-gray-50 rounded-md">
           <h3>Does Diamond Crystal have iodine?</h3>
           <div>
             <div>
@@ -460,12 +394,7 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 8 */}
-        <div style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
+        <div className="my-5 p-5 bg-gray-50 rounded-md">
           <h3>Why is it called kosher salt?</h3>
           <div>
             <div>
@@ -477,12 +406,7 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 9 */}
-        <div style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
+        <div className="my-5 p-5 bg-gray-50 rounded-md">
           <h3>Where can I buy Diamond Crystal Kosher Salt?</h3>
           <div>
             <div>
@@ -499,12 +423,7 @@ export default function DiamondCrystalKosherSaltReview() {
         </div>
 
         {/* Question 10 */}
-        <div style={{
-          margin: '20px 0',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '6px'
-        }}>
+        <div className="my-5 p-5 bg-gray-50 rounded-md">
           <h3>How should I store kosher salt?</h3>
           <div>
             <div>
@@ -532,26 +451,15 @@ export default function DiamondCrystalKosherSaltReview() {
         day: 'numeric'
       })}</p>
 
-      <div className="merchant-ctas" style={{
-        background: '#f8f9fa',
-        padding: '25px',
-        margin: '25px 0',
-        borderRadius: '8px'
-      }}>
+      <div className="merchant-ctas bg-gray-50 p-6 my-6 rounded-lg">
 
-        <h3 style={{ marginTop: 0 }}>Compare Prices Across Retailers:</h3>
+        <h3 className="mt-0">Compare Prices Across Retailers:</h3>
 
-        <div style={{
-          background: 'white',
-          padding: '20px',
-          margin: '15px 0',
-          borderRadius: '6px',
-          border: '2px solid #ff9900'
-        }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
+        <div className="bg-white p-5 my-4 rounded-md border-2 border-amazon">
+          <div className="flex justify-between items-center flex-wrap gap-4">
             <div>
-              <h4 style={{ margin: '0 0 10px 0' }}>🏆 Amazon</h4>
-              <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Prime shipping | ✓ Subscribe &amp; Save available | ✓ 3-pack option</p>
+              <h4 className="m-0 mb-2">🏆 Amazon</h4>
+              <p className="my-0 text-gray-600">✓ Prime shipping | ✓ Subscribe &amp; Save available | ✓ 3-pack option</p>
             </div>
             <div>
               <CTAVisibilityTracker
@@ -574,30 +482,24 @@ export default function DiamondCrystalKosherSaltReview() {
           </div>
         </div>
 
-        <p style={{ fontSize: '14px', color: '#666', marginTop: '20px', textAlign: 'center' }}>
+        <p className="text-sm text-gray-600 mt-5 text-center">
           💡 More retailers will be added soon for price comparison.
         </p>
 
       </div>
 
       {/* EMAIL CAPTURE SECTION */}
-      <div style={{
-        background: '#e7f3ff',
-        padding: '30px',
-        margin: '30px 0',
-        borderRadius: '8px',
-        borderLeft: '4px solid #0066cc'
-      }}>
+      <div className="bg-blue-50 p-8 my-8 rounded-lg border-l-4 border-blue-600">
 
-        <h3 style={{ marginTop: 0, fontSize: '24px' }}>
+        <h3 className="mt-0 text-2xl">
           🔥 Get My Complete Professional Kitchen Essentials Guide
         </h3>
 
-        <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+        <p className="text-base leading-relaxed">
           Download my comprehensive guide to stocking a kitchen like a pro, developed over 45 years of cooking:
         </p>
 
-        <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
+        <ul className="my-4 text-base leading-relaxed">
           <li>✓ Essential tools every serious home cook needs</li>
           <li>✓ Which expensive items are worth it (and which aren&apos;t)</li>
           <li>✓ Professional techniques for maintaining your equipment</li>
@@ -605,25 +507,16 @@ export default function DiamondCrystalKosherSaltReview() {
           <li>✓ Money-saving tips from 24 years of professional kitchen experience</li>
         </ul>
 
-        <div style={{ textAlign: 'center', marginTop: '25px' }}>
+        <div className="text-center mt-6">
           <a
             href="/newsletter"
-            style={{
-              display: 'inline-block',
-              background: '#0066cc',
-              color: 'white',
-              padding: '15px 40px',
-              textDecoration: 'none',
-              borderRadius: '6px',
-              fontWeight: 'bold',
-              fontSize: '18px'
-            }}
+            className="inline-block bg-blue-600 text-white px-10 py-4 no-underline rounded-md font-bold text-lg"
           >
             Download Free Guide →
           </a>
         </div>
 
-        <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
+        <p className="text-xs text-gray-600 mt-4 text-center">
           Instant delivery. No spam, ever. Unsubscribe anytime.
         </p>
 
@@ -632,46 +525,35 @@ export default function DiamondCrystalKosherSaltReview() {
       {/* FINAL VERDICT */}
       <h2>The Bottom Line: My Professional Verdict</h2>
 
-      <div style={{
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        color: 'white',
-        padding: '30px',
-        borderRadius: '8px',
-        margin: '30px 0'
-      }}>
+      <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-lg my-8">
 
-        <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
+        <h3 className="text-white mt-0 text-2xl">
           After 18 Years of Professional and Home Use...
         </h3>
 
-        <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+        <p className="text-lg leading-relaxed">
           Diamond Crystal Kosher Salt has earned its place as the only salt I buy. For 6 years at Purple Café,
           it seasoned thousands of plates without a single complaint. Thirteen years later, it&apos;s still
           the standard in my home kitchen.
         </p>
 
-        <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+        <p className="text-lg leading-relaxed">
           The hollow pyramid crystals make it easy to control. The lack of additives keeps the flavor clean.
           The consistent size means predictable results whether I&apos;m cooking or someone else is following
           my recipes. It&apos;s simply the best all-purpose salt for serious cooking.
         </p>
 
-        <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+        <p className="text-lg leading-relaxed">
           Is it perfect for everything? No. I keep finishing salts for special occasions and fine sea salt
           for the table. But for 99% of cooking—from seasoning proteins to pasta water to vegetable prep—Diamond
           Crystal is unmatched.
         </p>
 
-        <div style={{
-          background: 'rgba(255,255,255,0.2)',
-          padding: '20px',
-          margin: '20px 0',
-          borderRadius: '6px'
-        }}>
-          <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
+        <div className="bg-white/20 p-5 my-5 rounded-md">
+          <p className="m-0 text-xl font-bold">
             Final Rating: ⭐⭐⭐⭐⭐ 5/5
           </p>
-          <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
+          <ul className="mt-4 mb-0 ml-5 text-base leading-relaxed">
             <li>Ease of Use: 5/5 (perfect pinchability)</li>
             <li>Flavor: 5/5 (clean, no aftertaste)</li>
             <li>Consistency: 5/5 (predictable every time)</li>
@@ -679,7 +561,7 @@ export default function DiamondCrystalKosherSaltReview() {
           </ul>
         </div>
 
-        <p style={{ fontSize: '16px', marginBottom: 0 }}>
+        <p className="text-base mb-0">
           <strong>Would I buy this again?</strong> I&apos;ve been buying it for 18 years. I&apos;ll be buying
           it for the next 18. It&apos;s the foundation of good seasoning, and nothing else comes close.
         </p>
@@ -687,20 +569,13 @@ export default function DiamondCrystalKosherSaltReview() {
       </div>
 
       {/* STRONG FINAL CTA */}
-      <div style={{
-        background: '#fff3cd',
-        padding: '30px',
-        margin: '30px 0',
-        borderRadius: '8px',
-        textAlign: 'center',
-        border: '3px solid #ffc107'
-      }}>
+      <div className="bg-yellow-50 p-8 my-8 rounded-lg text-center border-3 border-yellow-400">
 
-        <h3 style={{ marginTop: 0, fontSize: '28px' }}>
+        <h3 className="mt-0 text-3xl">
           Ready to Season Like a Professional Chef?
         </h3>
 
-        <p style={{ fontSize: '18px', margin: '20px 0' }}>
+        <p className="text-lg my-5">
           Upgrade to the salt used in restaurants worldwide and taste the difference clean,
           consistent seasoning makes.
         </p>
@@ -722,7 +597,7 @@ export default function DiamondCrystalKosherSaltReview() {
           </AffiliateButton>
         </CTAVisibilityTracker>
 
-        <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
+        <p className="text-sm text-gray-600 mt-5">
           💡 Often available in money-saving 3-packs. Subscribe &amp; Save for even better value.
         </p>
 
@@ -731,97 +606,50 @@ export default function DiamondCrystalKosherSaltReview() {
       {/* RELATED PRODUCTS SECTION */}
       <h2>Complete Your Professional Kitchen Setup</h2>
 
-      <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
+      <p className="text-base leading-relaxed mb-6">
         Diamond Crystal works best as part of a complete professional kitchen setup.
         Based on 45 years of cooking experience, here are the tools I use alongside this salt:
       </p>
 
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-        gap: '20px',
-        margin: '30px 0'
-      }}>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-8">
 
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          borderRadius: '8px',
-          border: '1px solid #dee2e6'
-        }}>
-          <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef&apos;s Knife</h4>
+        <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+          <h4 className="mt-0">Victorinox 8&quot; Chef&apos;s Knife</h4>
           <p>The workhorse blade that complements precise seasoning. Sharp enough to prep ingredients that showcase your salt&apos;s clean flavor. Used in professional kitchens worldwide.</p>
-          <p style={{ fontSize: '14px', color: '#666' }}>
+          <p className="text-sm text-gray-600">
             <strong>Professional Standard:</strong> My daily workhorse for 20 years
           </p>
           <a
             href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
-            style={{
-              display: 'inline-block',
-              background: '#28a745',
-              color: 'white',
-              padding: '10px 20px',
-              textDecoration: 'none',
-              borderRadius: '4px',
-              marginTop: '10px',
-              fontWeight: 'bold'
-            }}
+            className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold"
           >
             Read Full Review →
           </a>
         </div>
 
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          borderRadius: '8px',
-          border: '1px solid #dee2e6'
-        }}>
-          <h4 style={{ marginTop: 0 }}>John Boos Platinum Cutting Board</h4>
+        <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+          <h4 className="mt-0">John Boos Platinum Cutting Board</h4>
           <p>Professional wood surface for prep work. The NSF-certified board I used in commercial kitchens. Perfect for prepping proteins and vegetables before seasoning with Diamond Crystal.</p>
-          <p style={{ fontSize: '14px', color: '#666' }}>
+          <p className="text-sm text-gray-600">
             <strong>Restaurant-Grade:</strong> Same board used at Purple Café daily
           </p>
           <a
             href="/reviews/john-boos-platinum-commercial-cutting-board"
-            style={{
-              display: 'inline-block',
-              background: '#28a745',
-              color: 'white',
-              padding: '10px 20px',
-              textDecoration: 'none',
-              borderRadius: '4px',
-              marginTop: '10px',
-              fontWeight: 'bold'
-            }}
+            className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold"
           >
             Read Full Review →
           </a>
         </div>
 
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          borderRadius: '8px',
-          border: '1px solid #dee2e6'
-        }}>
-          <h4 style={{ marginTop: 0 }}>Lodge Cast Iron Skillet Bundle</h4>
+        <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+          <h4 className="mt-0">Lodge Cast Iron Skillet Bundle</h4>
           <p>The perfect pans for using kosher salt properly. Seasoning proteins before searing creates the restaurant-quality crust you want. Diamond Crystal&apos;s texture works perfectly with cast iron cooking.</p>
-          <p style={{ fontSize: '14px', color: '#666' }}>
+          <p className="text-sm text-gray-600">
             <strong>Kitchen Essential:</strong> Professional results at home
           </p>
           <a
             href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
-            style={{
-              display: 'inline-block',
-              background: '#28a745',
-              color: 'white',
-              padding: '10px 20px',
-              textDecoration: 'none',
-              borderRadius: '4px',
-              marginTop: '10px',
-              fontWeight: 'bold'
-            }}
+            className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold"
           >
             Read Full Review →
           </a>
@@ -829,85 +657,59 @@ export default function DiamondCrystalKosherSaltReview() {
 
       </div>
 
-      <p style={{
-        textAlign: 'center',
-        margin: '30px 0',
-        fontSize: '18px',
-        padding: '20px',
-        background: '#f8f9fa',
-        borderRadius: '6px'
-      }}>
+      <p className="text-center my-8 text-lg p-5 bg-gray-50 rounded-md">
         <strong>Building a complete professional kitchen from scratch?</strong><br/>
-        <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold', fontSize: '20px' }}>
+        <a href="/kitchen-bundle" className="text-blue-600 font-bold text-xl">
           See My Complete Kitchen Starter Kit →
         </a>
       </p>
 
       {/* FOOTER ELEMENTS */}
-      <div style={{
-        background: '#f8f9fa',
-        padding: '20px',
-        margin: '30px 0',
-        borderRadius: '6px',
-        borderLeft: '4px solid #6c757d'
-      }}>
-        <p style={{ margin: '10px 0' }}>
+      <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
+        <p className="my-2">
           <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
           })}
         </p>
-        <p style={{ margin: '10px 0' }}>
+        <p className="my-2">
           <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long'
           })}
         </p>
-        <p style={{ margin: '10px 0' }}>
+        <p className="my-2">
           <strong>💬 What&apos;s your go-to salt for everyday cooking?</strong> Share your thoughts in the comments
           below—I read and respond to every comment.
         </p>
-        <p style={{ margin: '10px 0' }}>
-          <strong>🔧 Questions about kosher salt or cooking techniques?</strong> <a href="/contact" style={{ color: '#0066cc' }}>
+        <p className="my-2">
+          <strong>🔧 Questions about kosher salt or cooking techniques?</strong> <a href="/contact" className="text-blue-600">
           Contact me directly</a> and I&apos;ll help you make the best decision for your kitchen needs.
         </p>
       </div>
 
       {/* AUTHOR BIO BOX */}
-      <div style={{
-        background: 'white',
-        padding: '25px',
-        margin: '30px 0',
-        border: '1px solid #dee2e6',
-        borderRadius: '8px',
-        display: 'grid',
-        gridTemplateColumns: '100px 1fr',
-        gap: '20px',
-        alignItems: 'start'
-      }}>
+      <div className="bg-white p-6 my-8 border border-gray-300 rounded-lg grid grid-cols-[100px_1fr] gap-5 items-start">
         <Image
           src="/images/team/head-shot-1.jpg"
           alt="Scott Bradley, Professional Chef"
           width={100}
           height={100}
-          style={{
-            borderRadius: '50%',
-            objectFit: 'cover'
-          }}
+          className="rounded-full object-cover"
         />
         <div>
-          <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-          <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
+          <h3 className="m-0 mb-2">About Scott Bradley</h3>
+          <p className="my-1 font-bold">
             Professional Chef • 45 Years Cooking Experience
           </p>
-          <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
+          <p className="my-2 text-sm leading-relaxed">
             Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend.
             24 years in professional kitchens. A.A.S. Culinary Arts from Seattle Central College, B.S. Business
             Administration from University of Montana. Diamond Crystal Kosher Salt has been the only salt in my kitchens—professional
             and personal—for 18 years. If there was a better option, I&apos;d have found it by now.
           </p>
-          <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>
+          <a href="/about" className="text-blue-600 font-bold">
             Read more about my testing methodology →
           </a>
         </div>

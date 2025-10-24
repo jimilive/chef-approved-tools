@@ -193,14 +193,8 @@ export default function Lodge3SkilletBundleReview() {
           </div>
 
         {/* Quick Stats Box */}
-        <div className="quick-stats" style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '20px 0',
-          borderLeft: '4px solid #28a745',
-          borderRadius: '4px'
-        }}>
-          <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
+        <div className="bg-gray-50 p-5 my-5 border-l-4 border-green-600 rounded">
+          <p className="m-0 text-lg leading-relaxed">
             <strong>⭐⭐⭐⭐⭐ 4.8/5</strong> | Based on 7 years of home testing<br/>
             <strong>💰 Outstanding Value Investment</strong> | Professional quality at budget-friendly price<br/>
             <strong>✔ Pre-Seasoned</strong> | <strong>✔ Made in USA</strong> | <strong>✔ 3 Versatile Sizes</strong>
@@ -208,17 +202,10 @@ export default function Lodge3SkilletBundleReview() {
         </div>
 
         {/* Primary CTA Above Fold */}
-        <div className="primary-cta" style={{
-          background: '#fff3cd',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '2px solid #ffc107'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Availability:</h3>
+        <div className="bg-amber-100 p-6 my-6 rounded-lg text-center border-2 border-amber-400">
+          <h3 className="mt-0 text-2xl">Check Current Availability:</h3>
 
-          <p style={{ fontSize: '16px', margin: '15px 0' }}>
+          <p className="text-base my-4">
             Best value in cast iron - restaurant quality at exceptional price
           </p>
 
@@ -239,7 +226,7 @@ export default function Lodge3SkilletBundleReview() {
             </AffiliateButton>
           </CTAVisibilityTracker>
 
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
+          <p className="text-sm text-gray-600 mt-4">
             💡 We earn commission at no extra cost to you.<br/>
             More retailers will be added soon.
           </p>
@@ -363,7 +350,7 @@ export default function Lodge3SkilletBundleReview() {
                 <p className="text-slate-700 leading-relaxed mb-4">
                   After 7 years of weekly home cooking with this Lodge set, I can confidently say these skillets
                   deliver professional-grade performance. I use them primarily for searing steaks and making pancakes—
-                  two applications that showcase cast iron&apos;s exceptional heat retention and even cooking. This is the same environment where I tested our <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc', fontWeight: 'bold' }}>Victorinox chef knife</a> and <a href="/reviews/john-boos-platinum-commercial-cutting-board" style={{ color: '#0066cc', fontWeight: 'bold' }}>John Boos cutting board</a>.
+                  two applications that showcase cast iron&apos;s exceptional heat retention and even cooking. This is the same environment where I tested our <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-600 font-bold">Victorinox chef knife</a> and <a href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-blue-600 font-bold">John Boos cutting board</a>.
                 </p>
               </div>
 
@@ -373,7 +360,7 @@ export default function Lodge3SkilletBundleReview() {
                   The heat retention earns a 5/5 rating. Once these skillets get hot, they stay hot—critical for
                   proper searing on steaks where you need consistent high heat even when adding cold meat. The
                   thermal mass is exceptional. For pancakes, the even heat distribution prevents hot spots that
-                  would burn some while leaving others undercooked. This heat retention rivals what I experienced with the <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" style={{ color: '#0066cc', fontWeight: 'bold' }}>Le Creuset Dutch Oven</a>, though in a different form factor.
+                  would burn some while leaving others undercooked. This heat retention rivals what I experienced with the <a href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-blue-600 font-bold">Le Creuset Dutch Oven</a>, though in a different form factor.
                 </p>
               </div>
 
@@ -393,7 +380,7 @@ export default function Lodge3SkilletBundleReview() {
                 <p className="text-slate-700 leading-relaxed">
                   I use all three sizes equally depending on the task. The 12-inch handles large steaks and family-sized
                   pancake batches. The 10.25-inch is perfect for mid-sized tasks. The 8-inch excels at single servings
-                  and smaller portions. If you can only buy one, get the 12-inch—it&apos;s the most versatile size. For complete guidance on choosing the right cookware for your needs, see our <a href="/guides/best-cookware" style={{ color: '#0066cc', fontWeight: 'bold' }}>best cookware guide</a>.
+                  and smaller portions. If you can only buy one, get the 12-inch—it&apos;s the most versatile size. For complete guidance on choosing the right cookware for your needs, see our <a href="/guides/best-cookware" className="text-blue-600 font-bold">best cookware guide</a>.
                 </p>
               </div>
             </div>
@@ -433,15 +420,8 @@ export default function Lodge3SkilletBundleReview() {
         </section>
 
         {/* Mid-Article CTA */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '20px',
-          margin: '25px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #0066cc',
-          textAlign: 'center'
-        }}>
-          <p style={{ margin: '10px 0', fontSize: '18px', fontWeight: 'bold' }}>
+        <div className="bg-blue-50 p-5 my-6 rounded-md border-l-4 border-blue-600 text-center">
+          <p className="my-2 text-lg font-bold">
             Ready for restaurant-quality cast iron?
           </p>
           <CTAVisibilityTracker
@@ -511,7 +491,7 @@ export default function Lodge3SkilletBundleReview() {
                 <strong>Maintenance Reality After 3 Years:</strong> If you use cast iron regularly, the cooking
                 process maintains seasoning naturally. You don&apos;t need constant oven-seasoning. Regular cooking
                 with fats builds seasoning over time. The critical rule: <strong>Never leave water or acidic products
-                in or on the skillet.</strong> This is the #1 cause of seasoning damage and rust. Read more about <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>my testing methodology</a> for kitchen equipment.
+                in or on the skillet.</strong> This is the #1 cause of seasoning damage and rust. Read more about <a href="/about" className="text-blue-600 font-bold">my testing methodology</a> for kitchen equipment.
               </p>
 
               <div className="space-y-4">
@@ -644,32 +624,21 @@ export default function Lodge3SkilletBundleReview() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Where to Buy</h2>
 
-          <p style={{ marginBottom: '15px' }}><strong>Updated:</strong> {new Date().toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
+          <p className="mb-4"><strong>Updated:</strong> {new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
           })}</p>
 
-          <div className="merchant-ctas" style={{
-            background: '#f8f9fa',
-            padding: '25px',
-            margin: '25px 0',
-            borderRadius: '8px'
-          }}>
-            
-            <h3 style={{ marginTop: 0 }}>Compare Prices Across Retailers:</h3>
-            
-            <div style={{
-              background: 'white',
-              padding: '20px',
-              margin: '15px 0',
-              borderRadius: '6px',
-              border: '2px solid #ff9900'
-            }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
+          <div className="bg-gray-50 p-6 my-6 rounded-lg">
+
+            <h3 className="mt-0">Compare Prices Across Retailers:</h3>
+
+            <div className="bg-white p-5 my-4 rounded-md border-2 border-amber-500">
+              <div className="flex justify-between items-center flex-wrap gap-4">
                 <div>
-                  <h4 style={{ margin: '0 0 10px 0' }}>🏆 Amazon</h4>
-                  <p style={{ margin: '5px 0 0 0', color: '#666' }}>✓ Prime shipping | ✓ Free returns</p>
+                  <h4 className="m-0 mb-2">🏆 Amazon</h4>
+                  <p className="m-0 mt-1 text-gray-600">✓ Prime shipping | ✓ Free returns</p>
                 </div>
                 <div>
                   <CTAVisibilityTracker
@@ -691,11 +660,11 @@ export default function Lodge3SkilletBundleReview() {
                 </div>
               </div>
             </div>
-            
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '20px', textAlign: 'center' }}>
+
+            <p className="text-sm text-gray-600 mt-5 text-center">
               💡 More retailers will be added soon for price comparison.
             </p>
-            
+
           </div>
         </section>
 
@@ -954,23 +923,17 @@ export default function Lodge3SkilletBundleReview() {
 
         {/* Email Capture */}
         <section className="mb-8">
-          <div style={{
-            background: '#e7f3ff',
-            padding: '30px',
-            margin: '30px 0',
-            borderRadius: '8px',
-            borderLeft: '4px solid #0066cc'
-          }}>
+          <div className="bg-blue-50 p-8 my-8 rounded-lg border-l-4 border-blue-600">
 
-            <h3 style={{ marginTop: 0, fontSize: '24px' }}>
+            <h3 className="mt-0 text-2xl">
               🔥 Get My Complete Cast Iron Cooking Guide
             </h3>
 
-            <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+            <p className="text-base leading-relaxed">
               Download my comprehensive guide to cast iron mastery, developed over years of professional use:
             </p>
 
-            <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
+            <ul className="my-4 text-base leading-relaxed">
               <li>✔ Seasoning techniques for bulletproof non-stick finish</li>
               <li>✔ 10 essential recipes that showcase cast iron strengths</li>
               <li>✔ Maintenance schedule for lifetime performance</li>
@@ -979,25 +942,16 @@ export default function Lodge3SkilletBundleReview() {
               <li>✔ Professional cooking techniques for best results</li>
             </ul>
 
-            <div style={{ textAlign: 'center', marginTop: '25px' }}>
+            <div className="text-center mt-6">
               <Link
                 href="/newsletter"
-                style={{
-                  display: 'inline-block',
-                  background: '#0066cc',
-                  color: 'white',
-                  padding: '15px 40px',
-                  textDecoration: 'none',
-                  borderRadius: '6px',
-                  fontWeight: 'bold',
-                  fontSize: '18px'
-                }}
+                className="inline-block bg-blue-600 text-white px-10 py-4 no-underline rounded-md font-bold text-lg"
               >
                 Download Free Guide →
               </Link>
             </div>
 
-            <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
+            <p className="text-xs text-gray-600 mt-4 text-center">
               Instant delivery. No spam, ever. Unsubscribe anytime.
             </p>
 
@@ -1008,100 +962,53 @@ export default function Lodge3SkilletBundleReview() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Complete Your Cast Iron Kitchen Setup</h2>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
+          <p className="text-base leading-relaxed mb-6">
             Cast iron skillets work best as part of a complete kitchen. Based on 24 years of restaurant
             experience, here are the tools I use alongside Lodge cast iron:
           </p>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '20px',
-            margin: '30px 0'
-          }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-8">
 
             {/* Product 1 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef Knife</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">Victorinox 8&quot; Chef Knife</h4>
               <p>The perfect prep knife for ingredients going into cast iron. Professional quality, perfect balance.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>45 years cooking:</strong> My daily workhorse knife.
               </p>
               <Link
                 href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold"
               >
                 Read Full Review →
               </Link>
             </div>
 
             {/* Product 2 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>John Boos Cutting Board</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">John Boos Cutting Board</h4>
               <p>The prep surface that matches cast iron&apos;s quality. Perfect for staging ingredients before they hit the hot skillet.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 18 years:</strong> Still my prep station anchor.
               </p>
               <Link
                 href="/reviews/john-boos-platinum-commercial-cutting-board"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold"
               >
                 Read Full Review →
               </Link>
             </div>
 
             {/* Product 3 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>Le Creuset 7.25-Qt Dutch Oven</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">Le Creuset 7.25-Qt Dutch Oven</h4>
               <p>Perfect complement to Lodge - use Le Creuset for braising, Lodge for high-heat searing. Best of both worlds.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 10 years:</strong> Perfect pairing with Lodge.
               </p>
               <Link
                 href="/reviews/le-creuset-signature-7-25-qt-dutch-oven"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold"
               >
                 Read Full Review →
               </Link>
@@ -1109,16 +1016,9 @@ export default function Lodge3SkilletBundleReview() {
 
           </div>
 
-          <p style={{
-            textAlign: 'center',
-            margin: '30px 0',
-            fontSize: '18px',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <p className="text-center my-8 text-lg p-5 bg-gray-50 rounded-md">
             <strong>Building a complete professional kitchen?</strong><br/>
-            <Link href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold', fontSize: '20px' }}>
+            <Link href="/kitchen-bundle" className="text-blue-600 font-bold text-xl">
               See My Complete Kitchen Setup Guide →
             </Link>
           </p>
@@ -1128,40 +1028,29 @@ export default function Lodge3SkilletBundleReview() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">The Bottom Line: My Professional Verdict</h2>
 
-          <div style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            color: 'white',
-            padding: '30px',
-            borderRadius: '8px',
-            margin: '30px 0'
-          }}>
+          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-lg my-8">
 
-            <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
+            <h3 className="text-white mt-0 text-2xl">
               After 3 Years of Weekly Home Cooking...
             </h3>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               This Lodge set has proven itself as outstanding value equipment. The heat retention delivers
               restaurant-quality sears (5/5 rating), the durability is literally lifetime-quality with proper
               care (5/5 rating), and the versatility of three sizes covers every cooking need.
             </p>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               The maintenance reality is simpler than people think: keep them dry, don&apos;t leave water or
               acid on them, and regular cooking maintains seasoning naturally. With proper care, these will
               outlast you and pass to your children.
             </p>
 
-            <div style={{
-              background: 'rgba(255,255,255,0.2)',
-              padding: '20px',
-              margin: '20px 0',
-              borderRadius: '6px'
-            }}>
-              <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
+            <div className="bg-white/20 p-5 my-5 rounded-md">
+              <p className="m-0 text-xl font-bold">
                 Final Rating: ⭐⭐⭐⭐⭐ 4.8/5
               </p>
-              <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
+              <ul className="mt-4 mb-0 ml-5 text-base leading-relaxed">
                 <li>Heat Retention & Performance: 5/5</li>
                 <li>Durability & Build Quality: 5/5</li>
                 <li>Value for Money: 5/5</li>
@@ -1169,7 +1058,7 @@ export default function Lodge3SkilletBundleReview() {
               </ul>
             </div>
 
-            <p style={{ fontSize: '16px', marginBottom: 0 }}>
+            <p className="text-base mb-0">
               <strong>Would I buy this again?</strong> Absolutely. This is equipment that delivers professional
               performance at exceptional value and will last generations.
             </p>
@@ -1177,20 +1066,13 @@ export default function Lodge3SkilletBundleReview() {
           </div>
 
           {/* STRONG FINAL CTA */}
-          <div style={{
-            background: '#fff3cd',
-            padding: '30px',
-            margin: '30px 0',
-            borderRadius: '8px',
-            textAlign: 'center',
-            border: '3px solid #ffc107'
-          }}>
+          <div className="bg-amber-100 p-8 my-8 rounded-lg text-center border-4 border-amber-400">
 
-            <h3 style={{ marginTop: 0, fontSize: '28px' }}>
+            <h3 className="mt-0 text-3xl">
               Ready for Professional-Quality Cast Iron?
             </h3>
 
-            <p style={{ fontSize: '18px', margin: '20px 0' }}>
+            <p className="text-lg my-5">
               Outstanding value - restaurant quality at exceptional pricing
             </p>
 
@@ -1211,7 +1093,7 @@ export default function Lodge3SkilletBundleReview() {
               </AffiliateButton>
             </CTAVisibilityTracker>
 
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
+            <p className="text-sm text-gray-600 mt-5">
               💡 More retailers will be added soon for price comparison
             </p>
 
@@ -1219,72 +1101,51 @@ export default function Lodge3SkilletBundleReview() {
         </section>
 
         {/* Footer Transparency Elements */}
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '30px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #6c757d'
-        }}>
-          <p style={{ margin: '10px 0' }}>
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
+        <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
+          <p className="my-2">
+            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long' 
+          <p className="my-2">
+            <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>💬 Have questions about Lodge cast iron?</strong> Share your thoughts in the comments 
+          <p className="my-2">
+            <strong>💬 Have questions about Lodge cast iron?</strong> Share your thoughts in the comments
             below—I read and respond to every comment.
           </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>🔧 Questions?</strong> <a href="/contact" style={{ color: '#0066cc' }}>
+          <p className="my-2">
+            <strong>🔧 Questions?</strong> <a href="/contact" className="text-blue-600">
             Contact me directly</a> and I&apos;ll help you choose the right skillet size for your needs.
           </p>
         </div>
 
         {/* Author Bio Box */}
-        <div style={{
-          background: 'white',
-          padding: '25px',
-          margin: '30px 0',
-          border: '1px solid #dee2e6',
-          borderRadius: '8px',
-          display: 'grid',
-          gridTemplateColumns: '100px 1fr',
-          gap: '20px',
-          alignItems: 'start'
-        }}>
+        <div className="bg-white p-6 my-8 border border-gray-300 rounded-lg grid grid-cols-[100px_1fr] gap-5 items-start">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img 
-            src="/images/team/head-shot-1.jpg" 
-            alt="Scott Bradley, Professional Chef" 
-            style={{
-              width: '100px',
-              height: '100px',
-              borderRadius: '50%',
-              objectFit: 'cover'
-            }}
+          <img
+            src="/images/team/head-shot-1.jpg"
+            alt="Scott Bradley, Professional Chef"
+            className="w-[100px] h-[100px] rounded-full object-cover"
           />
           <div>
-            <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-            <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
+            <h3 className="m-0 mb-2">About Scott Bradley</h3>
+            <p className="my-1 font-bold">
               Professional Chef • 45 Years Cooking Experience
             </p>
-            <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
-              Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. 
-              A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from 
-              University of Montana. I&apos;ve used Lodge cast iron in demanding restaurant 
-              environments and my home kitchen for years—these skillets deliver professional performance 
+            <p className="my-2 text-sm leading-relaxed">
+              Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
+              A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
+              University of Montana. I&apos;ve used Lodge cast iron in demanding restaurant
+              environments and my home kitchen for years—these skillets deliver professional performance
               at exceptional value.
             </p>
-            <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>
+            <a href="/about" className="text-blue-600 font-bold">
               Read more about my testing methodology →
             </a>
           </div>

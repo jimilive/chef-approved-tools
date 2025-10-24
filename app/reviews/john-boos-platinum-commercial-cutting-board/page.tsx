@@ -218,14 +218,8 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           </div>
 
           {/* Quick Rating Box */}
-          <div className="quick-stats" style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            margin: '20px 0',
-            borderLeft: '4px solid #28a745',
-            borderRadius: '4px'
-          }}>
-            <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
+          <div className="bg-gray-50 p-5 my-5 border-l-4 border-green-600 rounded">
+            <p className="m-0 text-lg leading-relaxed">
               <strong>⭐⭐⭐⭐⭐ 4.8/5</strong> | Based on 14 years of daily home use<br/>
               <strong>🛠️ Generational-Quality Investment</strong> | Buy-it-for-life equipment<br/>
               <strong>✔ NSF Certified</strong> | <strong>✔ Made in USA</strong> | <strong>✔ 24x18x1.75&quot;</strong>
@@ -233,15 +227,8 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           </div>
 
           {/* Primary CTA Above Fold */}
-          <div className="primary-cta" style={{
-            background: '#fff3cd',
-            padding: '25px',
-            margin: '25px 0',
-            borderRadius: '8px',
-            textAlign: 'center',
-            border: '2px solid #ffc107'
-          }}>
-            <h3 style={{ marginTop: 0, fontSize: '24px' }}>Check Current Availability:</h3>
+          <div className="bg-yellow-50 p-6 my-6 rounded-lg text-center border-2 border-yellow-400">
+            <h3 className="mt-0 text-2xl font-semibold">Check Current Availability:</h3>
 
             <CTAVisibilityTracker
               ctaId={`review-${productData.slug}-above-fold`}
@@ -260,46 +247,35 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               </AffiliateButton>
             </CTAVisibilityTracker>
 
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
+            <p className="text-sm text-gray-600 mt-4">
               💡 We earn commission at no extra cost to you.<br/>
               More retailers will be added soon.
             </p>
           </div>
 
           {/* Professional Verdict */}
-          <div className="verdict-box" style={{
-            background: '#f8f9fa',
-            padding: '25px',
-            margin: '25px 0',
-            borderRadius: '8px',
-            borderLeft: '4px solid #0066cc'
-          }}>
+          <div className="bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
             <h2>Professional Verdict</h2>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               <strong>After 14 years of daily home use, informed by my 24 years in professional
               kitchens, this cutting board represents more than kitchen equipment—it&apos;s a generational
               investment.</strong> The 24x18 size provides exceptional work space efficiency, while the
               21-pound weight ensures rock-solid stability during even the most aggressive prep work.
             </p>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               The knife edge preservation alone justifies the investment. After 14 years, my knives
               maintain sharpness significantly longer than when using cheaper surfaces. This board will
               outlive me and pass to my children—that&apos;s genuine quality.
             </p>
 
-            <div style={{
-              background: 'white',
-              padding: '15px',
-              marginTop: '20px',
-              borderRadius: '4px'
-            }}>
-              <p style={{ margin: '10px 0' }}>
+            <div className="bg-white p-4 mt-5 rounded">
+              <p className="my-2">
                 <strong>✔ Perfect For:</strong> Serious home cooks, knife care enthusiasts, cooks wanting
                 generational quality, kitchens with ample prep space
               </p>
-              <p style={{ margin: '10px 0' }}>
+              <p className="my-2">
                 <strong>✗ Skip If:</strong> Budget is extremely limited, counter space is restricted,
                 you prefer low-maintenance plastic boards, you primarily use serrated knives
               </p>
@@ -326,37 +302,32 @@ export default function JohnBosPlatinumCuttingBoardReview() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Why This Cutting Board Earned 18 Years of Daily Use</h2>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '20px',
-            margin: '30px 0'
-          }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-8">
 
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>🔪</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Preserves Knife Edges</h3>
+            <div className="bg-gray-50 p-5 rounded-lg">
+              <div className="text-4xl mb-2">🔪</div>
+              <h3 className="my-2 text-xl font-semibold">Preserves Knife Edges</h3>
               <p>Hard maple self-healing surface reduces edge damage dramatically. Knives stay sharper
               3x longer compared to plastic or bamboo alternatives.</p>
             </div>
 
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>⚖️</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>21-Lb Stability</h3>
+            <div className="bg-gray-50 p-5 rounded-lg">
+              <div className="text-4xl mb-2">⚖️</div>
+              <h3 className="my-2 text-xl font-semibold">21-Lb Stability</h3>
               <p>Never slides during heavy chopping. The weight provides professional-grade stability
               for efficient, safe prep work.</p>
             </div>
 
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>📏</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>24x18 Work Surface</h3>
+            <div className="bg-gray-50 p-5 rounded-lg">
+              <div className="text-4xl mb-2">📏</div>
+              <h3 className="my-2 text-xl font-semibold">24x18 Work Surface</h3>
               <p>Generous size eliminates constant ingredient shuffling. Room for multiple prep tasks
               simultaneously—game-changing efficiency.</p>
             </div>
 
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>♾️</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Generational Quality</h3>
+            <div className="bg-gray-50 p-5 rounded-lg">
+              <div className="text-4xl mb-2">♾️</div>
+              <h3 className="my-2 text-xl font-semibold">Generational Quality</h3>
               <p>After 14 years, expect another 20 easily. This is equipment you&apos;ll pass to your
               children—genuine buy-it-for-life quality.</p>
             </div>
@@ -766,12 +737,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           <div>
 
             {/* Question 1 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>Is a John Boos cutting board worth the money?</h3>
               <div>
                 <div>
@@ -794,12 +760,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 2 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>How do you maintain a John Boos cutting board?</h3>
               <div>
                 <div>
@@ -807,7 +768,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                   far simpler than advertised. Here&apos;s what actually works after 14 years:</p>
 
                   <p><strong>My actual routine:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+                  <ul className="ml-5 leading-relaxed">
                     <li><strong>Daily:</strong> Wash with warm soapy water, dry immediately</li>
                     <li><strong>Never:</strong> Soak in water or put in dishwasher</li>
                     <li><strong>Rarely:</strong> Apply food-grade mineral oil (I oil it maybe 2-3 times per year)</li>
@@ -825,19 +786,14 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 3 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>What size John Boos cutting board should I buy?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> For serious home cooks, the 24x18 size is the sweet spot. It provides enough work surface to prep multiple ingredients without constant shuffling, while not being so massive it becomes unwieldy.</p>
 
                   <p><strong>Size guide based on use:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+                  <ul className="ml-5 leading-relaxed">
                     <li><strong>18x12:</strong> Light home cooking, limited counter space</li>
                     <li><strong>20x15:</strong> Regular home cooking, most kitchens</li>
                     <li><strong>24x18:</strong> Serious cooking, meal prep, entertaining (my choice)</li>
@@ -850,12 +806,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 4 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>John Boos vs other wood cutting board brands?</h3>
               <div>
                 <div>
@@ -871,12 +822,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 5 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>Can you put a John Boos cutting board in the dishwasher?</h3>
               <div>
                 <div>
@@ -892,12 +838,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 6 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>How long does a John Boos cutting board last?</h3>
               <div>
                 <div>
@@ -906,7 +847,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                   <p><strong>My experience:</strong> After 14 years of daily home use, my board shows minimal wear. I expect another 20 years easily, then I&apos;ll pass it to my children. That&apos;s not marketing hyperbole—it&apos;s the reality of quality hardwood construction.</p>
 
                   <p><strong>Factors affecting lifespan:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+                  <ul className="ml-5 leading-relaxed">
                     <li><strong>Positive:</strong> Regular cleaning, immediate drying, occasional oiling, avoiding soaking</li>
                     <li><strong>Negative:</strong> Dishwasher use (ruins it fast), prolonged water exposure, never oiling, heavy serrated knife use</li>
                   </ul>
@@ -917,12 +858,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 7 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>Is edge-grain or end-grain better for cutting boards?</h3>
               <div>
                 <div>
@@ -938,19 +874,14 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 8 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>How do you remove stains from a John Boos cutting board?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> Most stains come out with coarse salt and lemon juice. For stubborn stains, light sanding works.</p>
 
                   <p><strong>Standard stain removal:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+                  <ul className="ml-5 leading-relaxed">
                     <li>Sprinkle coarse salt generously over stained area</li>
                     <li>Cut a lemon in half, use it to scrub the salt into the stain</li>
                     <li>Let sit for 5-10 minutes</li>
@@ -966,12 +897,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 9 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>Do John Boos cutting boards come pre-oiled?</h3>
               <div>
                 <div>
@@ -980,7 +906,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
                   <p><strong>Initial treatment needed:</strong> Despite being pre-oiled, apply additional food-grade mineral oil when you receive it. The factory oil provides basic protection during shipping, but you should season it properly before first use.</p>
 
                   <p><strong>First-use preparation:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+                  <ul className="ml-5 leading-relaxed">
                     <li>Wash with warm soapy water, dry thoroughly</li>
                     <li>Apply generous coat of food-grade mineral oil</li>
                     <li>Let absorb for several hours or overnight</li>
@@ -994,12 +920,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
             </div>
 
             {/* Question 10 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>What&apos;s the best knife to use with a maple cutting board?</h3>
               <div>
                 <div>
@@ -1011,7 +932,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
 
                   <p><strong>The perfect pairing:</strong> A quality maple board + quality knife = maximum performance and longevity for both. The board protects the knife edge, the knife cuts cleanly without damaging the board. After 14 years using my Victorinox with this John Boos, both are still performing excellently.</p>
 
-                  <p><strong>See my review:</strong> <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" style={{ color: '#0066cc' }}>Victorinox 8-inch Chef Knife Review</a> - the knife I use most with this board.</p>
+                  <p><strong>See my review:</strong> <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-600 hover:underline">Victorinox 8-inch Chef Knife Review</a> - the knife I use most with this board.</p>
                 </div>
               </div>
             </div>
@@ -1023,19 +944,13 @@ export default function JohnBosPlatinumCuttingBoardReview() {
         <section className="mb-8" id="verdict">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">The Bottom Line: My Professional Verdict</h2>
 
-          <div style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            color: 'white',
-            padding: '30px',
-            borderRadius: '8px',
-            margin: '30px 0'
-          }}>
+          <div className="bg-gradient-to-br from-purple-600 to-purple-800 text-white p-8 rounded-lg my-8">
 
-            <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
+            <h3 className="text-white mt-0 text-2xl font-semibold">
               After 18 Years of Daily Use...
             </h3>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               The John Boos Platinum cutting board has proven itself as more than kitchen equipment—it&apos;s
               a generational investment. The combination of knife edge preservation, work surface efficiency,
               and exceptional durability justifies the investment for serious home cooks. The maintenance
@@ -1043,21 +958,16 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               performance.
             </p>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               After 14 years, I expect to use this board for another 20 easily and then pass it to my
               children. That&apos;s genuine buy-it-for-life quality.
             </p>
 
-            <div style={{
-              background: 'rgba(255,255,255,0.2)',
-              padding: '20px',
-              margin: '20px 0',
-              borderRadius: '6px'
-            }}>
-              <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
+            <div className="bg-white/20 p-5 my-5 rounded-md">
+              <p className="m-0 text-xl font-bold">
                 Final Rating: ⭐⭐⭐⭐⭐ 4.8/5
               </p>
-              <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
+              <ul className="mt-4 ml-5 text-base leading-relaxed">
                 <li>Knife Preservation: 5/5</li>
                 <li>Durability & Build Quality: 5/5</li>
                 <li>Work Surface Efficiency: 5/5</li>
@@ -1065,7 +975,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               </ul>
             </div>
 
-            <p style={{ fontSize: '16px', marginBottom: 0 }}>
+            <p className="text-base mb-0">
               <strong>Would I buy this again?</strong> Absolutely. Without hesitation. This is the kind
               of kitchen investment you make once and keep forever.
             </p>
@@ -1073,20 +983,13 @@ export default function JohnBosPlatinumCuttingBoardReview() {
           </div>
 
           {/* STRONG FINAL CTA */}
-          <div style={{
-            background: '#fff3cd',
-            padding: '30px',
-            margin: '30px 0',
-            borderRadius: '8px',
-            textAlign: 'center',
-            border: '3px solid #ffc107'
-          }}>
+          <div className="bg-yellow-50 p-8 my-8 rounded-lg text-center border-2 border-yellow-400">
 
-            <h3 style={{ marginTop: 0, fontSize: '28px' }}>
+            <h3 className="mt-0 text-3xl font-semibold">
               Ready for Generational-Quality Equipment?
             </h3>
 
-            <p style={{ fontSize: '18px', margin: '20px 0' }}>
+            <p className="text-lg my-5">
               This cutting board will outlive you and pass to your children:
             </p>
 
@@ -1107,7 +1010,7 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               </AffiliateButton>
             </CTAVisibilityTracker>
 
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
+            <p className="text-sm text-gray-600 mt-5">
               💡 More retailers will be added soon
             </p>
 
@@ -1116,24 +1019,18 @@ export default function JohnBosPlatinumCuttingBoardReview() {
 
         {/* Content Upgrade Email Capture */}
         <section className="mb-8">
-          <div style={{
-            background: '#e7f3ff',
-            padding: '30px',
-            margin: '30px 0',
-            borderRadius: '8px',
-            borderLeft: '4px solid #0066cc'
-          }}>
+          <div className="bg-blue-50 p-8 my-8 rounded-lg border-l-4 border-blue-600">
 
-            <h3 style={{ marginTop: 0, fontSize: '24px' }}>
+            <h3 className="mt-0 text-2xl font-semibold">
               🔥 Get My Complete Cutting Board Care Guide
             </h3>
 
-            <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+            <p className="text-base leading-relaxed">
               Download my comprehensive guide to cutting board selection and maintenance, developed
               over 14 years of daily use:
             </p>
 
-            <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
+            <ul className="my-4 text-base leading-relaxed">
               <li>✔ Wood vs plastic vs bamboo comparison matrix</li>
               <li>✔ Size selection decision framework</li>
               <li>✔ Knife preservation techniques</li>
@@ -1142,25 +1039,16 @@ export default function JohnBosPlatinumCuttingBoardReview() {
               <li>✔ Stain removal and restoration guide</li>
             </ul>
 
-            <div style={{ textAlign: 'center', marginTop: '25px' }}>
+            <div className="text-center mt-6">
               <Link
                 href="/newsletter"
-                style={{
-                  display: 'inline-block',
-                  background: '#0066cc',
-                  color: 'white',
-                  padding: '15px 40px',
-                  textDecoration: 'none',
-                  borderRadius: '6px',
-                  fontWeight: 'bold',
-                  fontSize: '18px'
-                }}
+                className="inline-block bg-blue-600 text-white px-10 py-4 no-underline rounded-md font-bold text-lg hover:bg-blue-700 transition-colors"
               >
                 Download Free Guide →
               </Link>
             </div>
 
-            <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
+            <p className="text-xs text-gray-600 mt-4 text-center">
               Instant delivery. No spam, ever. Unsubscribe anytime.
             </p>
 
@@ -1171,103 +1059,56 @@ export default function JohnBosPlatinumCuttingBoardReview() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Complete Your Professional Kitchen Setup</h2>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
+          <p className="text-base leading-relaxed mb-6">
             A premium cutting board deserves quality knives and complementary tools. Based on decades
             of professional kitchen experience, here are the tools I use alongside this John Boos board in my home kitchen:
           </p>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '20px',
-            margin: '30px 0'
-          }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-8">
 
             {/* Product 1 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>Victorinox 8&quot; Chef Knife</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">Victorinox 8&quot; Chef Knife</h4>
               <p>The perfect knife to pair with this board. Professional quality, perfect balance,
               exceptional value. The combination maximizes both knife and board longevity.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>45 years cooking:</strong> My daily workhorse knife.
               </p>
               <Link
                 href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700 transition-colors"
               >
                 Read Full Review →
               </Link>
             </div>
 
             {/* Product 2 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>OXO Good Grips Bench Scraper</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">OXO Good Grips Bench Scraper</h4>
               <p>The tool I use most to maintain this board—scrapes off chopped ingredients and
               stuck-on bits in seconds. Essential companion for cutting board care.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 14 years:</strong> Use it every single day.
               </p>
               <Link
                 href="/reviews/oxo-good-grips-bench-scraper"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700 transition-colors"
               >
                 Read Full Review →
               </Link>
             </div>
 
             {/* Product 3 */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>Le Creuset 7.25-Qt Dutch Oven</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4 className="mt-0">Le Creuset 7.25-Qt Dutch Oven</h4>
               <p>After prepping ingredients on this board, cook them in the best pot I own. The John
               Boos + Le Creuset combination defines my home kitchen.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 12 years:</strong> Zero regrets on either.
               </p>
               <Link
                 href="/reviews/le-creuset-signature-7-25-qt-dutch-oven"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700 transition-colors"
               >
                 Read Full Review →
               </Link>
@@ -1275,16 +1116,9 @@ export default function JohnBosPlatinumCuttingBoardReview() {
 
           </div>
 
-          <p style={{
-            textAlign: 'center',
-            margin: '30px 0',
-            fontSize: '18px',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <p className="text-center my-8 text-lg p-5 bg-gray-50 rounded-md">
             <strong>Building a complete professional kitchen?</strong><br/>
-            <Link href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold', fontSize: '20px' }}>
+            <Link href="/kitchen-bundle" className="text-blue-600 font-bold text-xl hover:underline">
               See My Complete Kitchen Setup Guide →
             </Link>
           </p>
@@ -1295,69 +1129,50 @@ export default function JohnBosPlatinumCuttingBoardReview() {
 
         {/* Footer Transparency Elements */}
         <section className="mb-8">
-          <div style={{
-            background: '#f8f9fa',
-            padding: '20px',
-            margin: '30px 0',
-            borderRadius: '6px',
-            borderLeft: '4px solid #6c757d'
-          }}>
-            <p style={{ margin: '10px 0' }}>
+          <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
+            <p className="my-2">
               <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
               })}
             </p>
-            <p style={{ margin: '10px 0' }}>
+            <p className="my-2">
               <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long'
               })}
             </p>
-            <p style={{ margin: '10px 0' }}>
+            <p className="my-2">
               <strong>💬 Own a John Boos board?</strong> Share your experience in the comments below—I
               read and respond to every comment.
             </p>
-            <p style={{ margin: '10px 0' }}>
-              <strong>📧 Questions about cutting boards?</strong> <Link href="/contact" style={{ color: '#0066cc' }}>
+            <p className="my-2">
+              <strong>📧 Questions about cutting boards?</strong> <Link href="/contact" className="text-blue-600 hover:underline">
               Contact me directly</Link> and I&apos;ll help you choose the right board for your needs.
             </p>
           </div>
 
           {/* Author Bio Box */}
-          <div style={{
-            background: 'white',
-            padding: '25px',
-            margin: '30px 0',
-            border: '1px solid #dee2e6',
-            borderRadius: '8px',
-            display: 'grid',
-            gridTemplateColumns: '100px 1fr',
-            gap: '20px',
-            alignItems: 'start'
-          }}>
+          <div className="bg-white p-6 my-8 border border-gray-300 rounded-lg grid grid-cols-[100px_1fr] gap-5 items-start">
             <Image
               src="/images/team/head-shot-1.jpg"
               alt="Scott Bradley, Professional Chef"
               width={100}
               height={100}
-              style={{
-                borderRadius: '50%',
-                objectFit: 'cover'
-              }}
+              className="rounded-full object-cover"
             />
             <div>
-              <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-              <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
+              <h3 className="mt-0 mb-2">About Scott Bradley</h3>
+              <p className="my-1 font-bold">
                 Professional Chef • 45 Years Cooking Experience
               </p>
-              <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
+              <p className="my-2 text-sm leading-relaxed">
                 Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
                 A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
                 University of Montana. Equipment tested in high-volume operations serving hundreds daily.
               </p>
-              <Link href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>
+              <Link href="/about" className="text-blue-600 font-bold hover:underline">
                 Read more about my testing methodology →
               </Link>
             </div>

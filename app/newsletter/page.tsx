@@ -13,40 +13,40 @@ export const metadata: Metadata = {
 export default function NewsletterPage() {
 
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 16px', textAlign: 'center' }}>
-      <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '8px' }}>
+    <div className="max-w-3xl mx-auto px-4 py-12 text-center">
+      <h1 className="text-4xl font-bold mb-2">
         The 11 Tools I Use Most in My Home Kitchen
       </h1>
-      <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '32px' }}>
+      <p className="text-lg text-slate-600 mb-8">
         My daily workhorse tools after 45 years of cooking. Get the free guide plus equipment insights from 24 years of restaurant experience.
       </p>
 
       <NewsletterForm />
 
-      <div style={{ maxWidth: '600px', margin: '0 auto', padding: '32px 0' }}>
-        <p style={{ fontSize: '0.875rem', color: '#94a3b8', textAlign: 'center', lineHeight: '1.6' }}>
+      <div className="max-w-2xl mx-auto py-8">
+        <p className="text-sm text-slate-400 text-center leading-relaxed">
           Join 2,000+ home cooks getting weekly insights from 24 years of professional kitchen experience.
           Unsubscribe anytime. No spam, no sponsored content, no BS.
         </p>
       </div>
 
-      <div style={{ textAlign: 'left', maxWidth: '600px', margin: '0 auto' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '16px' }}>What You&rsquo;ll Get:</h2>
-        <ul style={{ listStyle: 'none', padding: 0 }}>
-          <li style={{ marginBottom: '12px', display: 'flex', alignItems: 'center' }}>
-            <span style={{ color: '#ea580c', marginRight: '8px' }}>✓</span>
+      <div className="text-left max-w-2xl mx-auto">
+        <h2 className="text-2xl font-bold mb-4">What You&rsquo;ll Get:</h2>
+        <ul className="list-none p-0">
+          <li className="mb-3 flex items-center">
+            <span className="text-orange-600 mr-2">✓</span>
             Weekly equipment recommendations from a certified chef
           </li>
-          <li style={{ marginBottom: '12px', display: 'flex', alignItems: 'center' }}>
-            <span style={{ color: '#ea580c', marginRight: '8px' }}>✓</span>
+          <li className="mb-3 flex items-center">
+            <span className="text-orange-600 mr-2">✓</span>
             Exclusive deals on professional kitchen tools
           </li>
-          <li style={{ marginBottom: '12px', display: 'flex', alignItems: 'center' }}>
-            <span style={{ color: '#ea580c', marginRight: '8px' }}>✓</span>
+          <li className="mb-3 flex items-center">
+            <span className="text-orange-600 mr-2">✓</span>
             Pro cooking tips from restaurant experience
           </li>
-          <li style={{ marginBottom: '12px', display: 'flex', alignItems: 'center' }}>
-            <span style={{ color: '#ea580c', marginRight: '8px' }}>✓</span>
+          <li className="mb-3 flex items-center">
+            <span className="text-orange-600 mr-2">✓</span>
             Equipment maintenance guides
           </li>
         </ul>

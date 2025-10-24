@@ -40,44 +40,44 @@ export default function GuidesPage() {
   ];
 
   return (
-    <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '48px 16px' }}>
+    <div className="max-w-7xl mx-auto px-4 py-12">
       <FAQSchema faqs={guidesFAQs} />
 
-      <div style={{ maxWidth: '800px', margin: '0 auto', marginBottom: '48px' }}>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '16px' }}>
+      <div className="max-w-3xl mx-auto mb-12">
+        <h1 className="text-4xl font-bold mb-4">
           Kitchen Equipment Buying Guides
         </h1>
-        <p style={{ fontSize: '1.125rem', color: '#64748b', marginBottom: '24px', lineHeight: '1.7' }}>
+        <p className="text-lg text-slate-500 mb-6 leading-relaxed">
           Expert guidance from a certified chef with 24 years in professional kitchens. Every recommendation
           here has survived real restaurant use—not laboratory testing, not sponsored reviews, just equipment
           that works when you need it to.
         </p>
 
-        <div style={{ backgroundColor: '#f8fafc', borderLeft: '4px solid #ea580c', padding: '20px', borderRadius: '8px', marginBottom: '32px' }}>
-          <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '12px', color: '#1e293b' }}>
+        <div className="bg-slate-50 border-l-4 border-orange-600 p-5 rounded-lg mb-8">
+          <h2 className="text-xl font-bold mb-3 text-slate-900">
             How to Use These Guides
           </h2>
-          <p style={{ color: '#475569', lineHeight: '1.6', marginBottom: '12px' }}>
+          <p className="text-slate-600 leading-relaxed mb-3">
             These aren&rsquo;t affiliate-stuffed product roundups. Each guide focuses on equipment I&rsquo;ve actually used in
             high-volume commercial kitchens or tested extensively at home. You&rsquo;ll find:
           </p>
-          <ul style={{ color: '#475569', lineHeight: '1.6', marginLeft: '20px', marginBottom: '12px' }}>
+          <ul className="text-slate-600 leading-relaxed ml-5 mb-3">
             <li><strong>Specific recommendations</strong> with links to detailed reviews</li>
             <li><strong>Professional insights</strong> on what separates quality from marketing</li>
             <li><strong>Common mistakes</strong> that waste money and frustration</li>
             <li><strong>Maintenance tips</strong> that extend equipment lifespan</li>
           </ul>
-          <p style={{ color: '#475569', lineHeight: '1.6' }}>
+          <p className="text-slate-600 leading-relaxed">
             I update these guides quarterly based on new testing, price changes, and availability updates. If a product
             stops meeting standards or a better option appears, the guide changes.
           </p>
         </div>
 
-        <div style={{ backgroundColor: '#fff7ed', border: '1px solid #fed7aa', padding: '20px', borderRadius: '8px' }}>
-          <h2 style={{ fontSize: '1.125rem', fontWeight: '600', marginBottom: '8px', color: '#9a3412' }}>
+        <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg">
+          <h2 className="text-lg font-semibold mb-2 text-orange-900">
             My Testing Process
           </h2>
-          <p style={{ color: '#7c2d12', lineHeight: '1.6', fontSize: '0.95rem' }}>
+          <p className="text-orange-800 leading-relaxed text-sm">
             Nothing gets recommended without a minimum 6-month testing period in working kitchens. That means
             200+ cover nights, commercial dishwashers, and kitchen staff who don&rsquo;t baby equipment. If it survives
             that—and still performs well—it earns a spot in these guides. No exceptions, no shortcuts, no sponsored
@@ -86,7 +86,7 @@ export default function GuidesPage() {
         </div>
       </div>
 
-      <div style={{ display: 'grid', gap: '24px', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))' }}>
+      <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(350px,1fr))]">
         {guides.map((guide, index) => (
           <CTAVisibilityTracker
             key={index}
@@ -95,11 +95,11 @@ export default function GuidesPage() {
             productSlug={guide.href.replace('/guides/', '').replace('/reviews/', '')}
             merchant="internal"
           >
-            <a href={guide.href} style={{ textDecoration: 'none' }}>
-              <div style={{ backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)', padding: '32px', border: '1px solid #e2e8f0', transition: 'box-shadow 0.2s' }}>
-                <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '12px', color: '#1e293b' }}>{guide.title}</h3>
-                <p style={{ color: '#64748b', marginBottom: '16px' }}>{guide.description}</p>
-                <span style={{ color: '#ea580c', fontWeight: '600' }}>Read Guide →</span>
+            <a href={guide.href} className="no-underline">
+              <div className="bg-white rounded-xl shadow-sm p-8 border border-slate-200 transition-shadow duration-200 hover:shadow-lg">
+                <h3 className="text-2xl font-bold mb-3 text-slate-900">{guide.title}</h3>
+                <p className="text-slate-500 mb-4">{guide.description}</p>
+                <span className="text-orange-600 font-semibold">Read Guide →</span>
               </div>
             </a>
           </CTAVisibilityTracker>

@@ -197,17 +197,11 @@ export default function CuisinartDLC10CReviewPage() {
         </div>
 
         {/* Discontinued Model Notice */}
-        <div style={{
-          background: '#fff3cd',
-          padding: '20px',
-          margin: '20px 0 30px 0',
-          borderLeft: '4px solid #ff9900',
-          borderRadius: '6px'
-        }}>
-          <p style={{ margin: '0 0 15px 0', fontSize: '16px', lineHeight: '1.6', fontWeight: 'bold' }}>
+        <div className="bg-amber-50 p-5 my-5 mb-8 border-l-4 border-orange-500 rounded-md">
+          <p className="mb-4 text-base leading-relaxed font-bold">
             ⚠️ Model Update
           </p>
-          <p style={{ margin: '0 0 15px 0', fontSize: '16px', lineHeight: '1.6' }}>
+          <p className="mb-4 text-base leading-relaxed">
             The DLC-10C model I&apos;ve used for 30 years has been discontinued. All links below
             now point to the <strong>Cuisinart DLC-10SY Pro Classic 7-Cup Food Processor</strong>,
             which offers the same powerful motor, 7-cup capacity, and reliable design that made
@@ -232,14 +226,8 @@ export default function CuisinartDLC10CReviewPage() {
         </div>
 
         {/* Quick Rating Box */}
-        <div className="quick-stats" style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '20px 0',
-          borderLeft: '4px solid #28a745',
-          borderRadius: '4px'
-        }}>
-          <p style={{ margin: 0, fontSize: '18px', lineHeight: '1.6' }}>
+        <div className="quick-stats bg-gray-50 p-5 my-5 border-l-4 border-green-600 rounded">
+          <p className="text-lg leading-relaxed">
             <strong>⭐⭐⭐⭐⭐ 5/5</strong> | Based on 30 years of home kitchen testing<br/>
             <strong>🎁 Gift from Dad</strong> | <strong>✓ 7-Cup Capacity</strong> | <strong>✓ 600-Watt Motor</strong>
           </p>
@@ -263,15 +251,8 @@ export default function CuisinartDLC10CReviewPage() {
         </nav>
 
         {/* Primary CTA Above the Fold */}
-        <div className="primary-cta" style={{
-          background: '#fff3cd',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          border: '2px solid #ffc107'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>Current Best Price:</h3>
+        <div className="primary-cta bg-amber-50 p-6 my-6 rounded-lg text-center border-2 border-amber-400">
+          <h3 className="text-2xl">Current Best Price:</h3>
 
           <CTAVisibilityTracker
             ctaId={`review-${productData.slug}-mid_article_1`}
@@ -290,22 +271,16 @@ export default function CuisinartDLC10CReviewPage() {
             </AffiliateButton>
           </CTAVisibilityTracker>
 
-          <p style={{ fontSize: '14px', color: '#666', marginTop: '15px' }}>
+          <p className="text-sm text-gray-600 mt-4">
             💡 Price updated daily. We earn commission at no extra cost to you.
           </p>
         </div>
 
         {/* Bottom Line Up Front */}
-        <div className="verdict-box" style={{
-          background: '#f8f9fa',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
+        <div className="verdict-box bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Bottom Line Up Front</h2>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.6', marginBottom: '1rem' }}>
+          <p className="text-lg leading-relaxed mb-4">
             <strong>After 30 years of nearly daily use—from shredding mountains of cheese to
             making perfect hashbrowns every weekend—this Cuisinart food processor is one of
             the best products I&apos;ve ever owned.</strong> The motor that started running when
@@ -314,23 +289,18 @@ export default function CuisinartDLC10CReviewPage() {
             for forcing it.
           </p>
 
-          <p style={{ fontSize: '18px', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+          <p className="text-lg leading-relaxed mb-6">
             My grandmother&apos;s advice proved prophetic: &quot;never force it.&quot; Treat
             this machine with basic respect, and it will outlast everything else in your kitchen.
             This is genuine buy-it-for-life equipment.
           </p>
 
-          <div style={{
-            background: 'white',
-            padding: '15px',
-            marginTop: '20px',
-            borderRadius: '4px'
-          }}>
-            <p style={{ margin: '10px 0' }}>
+          <div className="bg-white p-4 mt-5 rounded">
+            <p className="my-2">
               <strong>✓ Perfect For:</strong> Anyone who cooks regularly, families who shred
               cheese or slice vegetables frequently, meal preppers, those wanting reliable equipment
             </p>
-            <p style={{ margin: '10px 0' }}>
+            <p className="my-2">
               <strong>✗ Skip If:</strong> You rarely cook from scratch, prefer manual prep methods,
               or need commercial-volume capacity
             </p>
@@ -341,37 +311,32 @@ export default function CuisinartDLC10CReviewPage() {
         <section className="mb-8" id="features">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Why This Food Processor Lasted 30 Years</h2>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '20px',
-            margin: '30px 0'
-          }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-8">
 
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>🧀</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Shredding Champion</h3>
+            <div className="bg-gray-50 p-5 rounded-lg">
+              <div className="text-4xl mb-2">🧀</div>
+              <h3 className="text-xl">Shredding Champion</h3>
               <p>Shreds more cheese than I can count over three decades. Perfect for hashbrowns,
               potatoes, and everything in between. Fast, consistent, reliable.</p>
             </div>
 
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>💪</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Built Like a Tank</h3>
+            <div className="bg-gray-50 p-5 rounded-lg">
+              <div className="text-4xl mb-2">💪</div>
+              <h3 className="text-xl">Built Like a Tank</h3>
               <p>600-watt motor still running strong after 30 years. Simple, solid construction
               means nothing breaks. The kind of durability modern appliances don&apos;t have.</p>
             </div>
 
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>⚡</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>Everyday Speed</h3>
+            <div className="bg-gray-50 p-5 rounded-lg">
+              <div className="text-4xl mb-2">⚡</div>
+              <h3 className="text-xl">Everyday Speed</h3>
               <p>Slices mushrooms, cucumbers, and potatoes in seconds. Chops nuts for sundaes
               in 30 seconds. Makes thicker salsas and pestos effortlessly. Real time-saver.</p>
             </div>
 
-            <div style={{ background: '#f8f9fa', padding: '20px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>♾️</div>
-              <h3 style={{ margin: '10px 0', fontSize: '20px' }}>True Longevity</h3>
+            <div className="bg-gray-50 p-5 rounded-lg">
+              <div className="text-4xl mb-2">♾️</div>
+              <h3 className="text-xl">True Longevity</h3>
               <p>30 years of continuous use with minimal issues. Parents had one, I got one,
               and it&apos;s still going. This is what buy-it-for-life actually means.</p>
             </div>
@@ -383,14 +348,14 @@ export default function CuisinartDLC10CReviewPage() {
         <section className="mb-8" id="testing">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">30 Years of Home Kitchen Testing</h2>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+          <p className="text-base leading-relaxed">
             I can&apos;t even put a precise timeline on when I got this Cuisinart—it&apos;s been
             that long. My parents had one when I was a kid, and I remember thinking it was amazing
             watching it work. When I was in my early 20s, my dad got me one for my birthday. That
             was over 30 years ago.
           </p>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+          <p className="text-base leading-relaxed">
             Having used commercial food processors like the{' '}
             <a href="/reviews/robot-coupe-r2-dice" className="text-orange-600 hover:text-orange-800 underline">Robot Coupe R2 Dice</a> in
             professional kitchens for over two decades, I can confidently say this home model delivers
@@ -400,13 +365,13 @@ export default function CuisinartDLC10CReviewPage() {
 
           <h3 className="text-xl font-semibold text-slate-900 mt-6 mb-3">The Shredding Workhorse</h3>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+          <p className="text-base leading-relaxed">
             This machine has been an absolute workhorse. I&apos;ve shredded more cheese and
             potatoes than I can possibly count. Hashbrowns? Perfect every time. The shredding
             disc makes quick work of what would take 15 minutes by hand.
           </p>
 
-          <ul style={{ fontSize: '16px', lineHeight: '1.8' }}>
+          <ul className="text-base leading-7">
             <li><strong>Cheese shredding:</strong> Countless pounds over 30 years, consistently
             even results</li>
             <li><strong>Hashbrown prep:</strong> Weekend staple, makes perfect shreds every time</li>
@@ -415,7 +380,7 @@ export default function CuisinartDLC10CReviewPage() {
             this</li>
           </ul>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+          <p className="text-base leading-relaxed">
             This processor pairs perfectly with my{' '}
             <a href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline">John Boos cutting board</a>{' '}
             for prep work.
@@ -423,11 +388,11 @@ export default function CuisinartDLC10CReviewPage() {
 
           <h3 className="text-xl font-semibold text-slate-900 mt-6 mb-3">Beyond Shredding: Daily Versatility</h3>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+          <p className="text-base leading-relaxed">
             While shredding is the primary use, this processor excels across applications:
           </p>
 
-          <ul style={{ fontSize: '16px', lineHeight: '1.8' }}>
+          <ul className="text-base leading-7">
             <li><strong>Chopping nuts:</strong> Peanuts for sundaes done in 30 seconds, perfect
             consistency</li>
             <li><strong>Salsa making:</strong> Handles thicker salsas beautifully, better texture
@@ -438,7 +403,7 @@ export default function CuisinartDLC10CReviewPage() {
             the mood to risk your fingers with a mandoline</li>
           </ul>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+          <p className="text-base leading-relaxed">
             For tasks the food processor can&apos;t handle, I rely on my{' '}
             <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox chef knife</a>.
             See our complete{' '}
@@ -448,11 +413,11 @@ export default function CuisinartDLC10CReviewPage() {
 
           <h3 className="text-xl font-semibold text-slate-900 mt-6 mb-3">The Durability Reality Check</h3>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+          <p className="text-base leading-relaxed">
             In three decades, I&apos;ve only had two issues—and both are still functional:
           </p>
 
-          <ul style={{ fontSize: '16px', lineHeight: '1.8' }}>
+          <ul className="text-base leading-7">
             <li><strong>Cracked bowl:</strong> After countless uses, the bowl developed a crack.
             It still works perfectly fine—I just keep using it.</li>
             <li><strong>Broken stem:</strong> I broke a stem once—entirely my fault. My grandmother
@@ -462,7 +427,7 @@ export default function CuisinartDLC10CReviewPage() {
             it did 30 years ago. Zero degradation in power or performance.</li>
           </ul>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+          <p className="text-base leading-relaxed">
             This kind of longevity is remarkable. Modern appliances simply aren&apos;t built like
             this anymore. When something lasts 30 years with minimal issues, you know it&apos;s
             exceptional quality. This processor has outlasted even my{' '}
@@ -472,30 +437,23 @@ export default function CuisinartDLC10CReviewPage() {
 
           <h3 className="text-xl font-semibold text-slate-900 mt-6 mb-3">The Grandmother Wisdom</h3>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+          <p className="text-base leading-relaxed">
             My grandmother&apos;s advice about never forcing it has proven invaluable. This machine
             is powerful and capable, but it still requires respect. Don&apos;t jam ingredients in,
             don&apos;t force the lid, don&apos;t overload the bowl. Treat it right, and it will
             outlast you.
           </p>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+          <p className="text-base leading-relaxed">
             That one broken stem taught me this lesson permanently. Since then, I&apos;ve been more
             careful, and the machine has rewarded that care with continued flawless performance.
           </p>
         </section>
 
         {/* Mid-Article CTA */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '25px',
-          margin: '25px 0',
-          borderRadius: '8px',
-          textAlign: 'center',
-          borderLeft: '4px solid #0066cc'
-        }}>
-          <h3 style={{ marginTop: 0 }}>Ready for Equipment That Lasts?</h3>
-          <p style={{ margin: '15px 0' }}>
+        <div className="bg-blue-50 p-6 my-6 rounded-lg text-center border-l-4 border-blue-600">
+          <h3>Ready for Equipment That Lasts?</h3>
+          <p className="my-4">
             After 30 years of testing, this is one of the best products I&apos;ve ever owned.
           </p>
           <CTAVisibilityTracker
@@ -523,12 +481,7 @@ export default function CuisinartDLC10CReviewPage() {
           <div>
 
             {/* Question 1 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>Is the Cuisinart DLC-10C still worth buying?</h3>
               <div>
                 <div>
@@ -545,12 +498,7 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 2 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>How long do Cuisinart food processors last?</h3>
               <div>
                 <div>
@@ -566,17 +514,12 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 3 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>What&apos;s the difference between 7-cup and 14-cup Cuisinart?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> The main difference is capacity and footprint:</p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+                  <ul className="ml-5 leading-7">
                     <li><strong>7-cup (DLC-10SY):</strong> Perfect for everyday home cooking, smaller
                     footprint, easier storage</li>
                     <li><strong>14-cup models:</strong> Better for large batches, entertaining, or
@@ -591,12 +534,7 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 4 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>Can Cuisinart food processors shred cheese well?</h3>
               <div>
                 <div>
@@ -604,7 +542,7 @@ export default function CuisinartDLC10CReviewPage() {
                   30 years of shredding countless pounds of cheese, I can confirm it&apos;s one of the
                   best tools for this task.</p>
                   <p><strong>Why it works so well:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+                  <ul className="ml-5 leading-7">
                     <li>Sharp shredding disc produces consistent, even results</li>
                     <li>Powerful motor handles hard cheeses without strain</li>
                     <li>Large feed tube accommodates cheese blocks easily</li>
@@ -616,12 +554,7 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 5 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>Is Cuisinart better than KitchenAid food processor?</h3>
               <div>
                 <div>
@@ -629,7 +562,7 @@ export default function CuisinartDLC10CReviewPage() {
                   choice. KitchenAid food processor attachments are convenient, but a standalone Cuisinart
                   offers superior performance and capacity.</p>
                   <p><strong>Key advantages:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+                  <ul className="ml-5 leading-7">
                     <li><strong>More powerful:</strong> Dedicated motor optimized for food processing</li>
                     <li><strong>Larger capacity:</strong> 7 cups vs typical 4-5 cup attachments</li>
                     <li><strong>Better performance:</strong> Designed specifically for slicing, shredding,
@@ -643,19 +576,14 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 6 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>What can you make with a Cuisinart food processor?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> After 30 years of daily use, I&apos;ve used mine for
                   countless applications:</p>
                   <p><strong>Most common uses:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+                  <ul className="ml-5 leading-7">
                     <li>Shredding cheese (mountains of it over 30 years)</li>
                     <li>Making perfect hashbrowns (weekend staple)</li>
                     <li>Chopping nuts for desserts (30 seconds vs 10 minutes by hand)</li>
@@ -670,18 +598,13 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 7 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>How do you clean a Cuisinart food processor?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> Cleaning is straightforward and becomes second nature:</p>
                   <p><strong>My routine after 30 years:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+                  <ul className="ml-5 leading-7">
                     <li>Disassemble all parts immediately after use</li>
                     <li>Rinse bowl and blade under running water to remove food</li>
                     <li>Wash with warm soapy water (bowl, blade, and lid are dishwasher safe)</li>
@@ -695,12 +618,7 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 8 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>What should I avoid doing with a food processor?</h3>
               <div>
                 <div>
@@ -708,7 +626,7 @@ export default function CuisinartDLC10CReviewPage() {
                   &quot;never force it.&quot; After 30 years and one broken stem (my fault), here&apos;s
                   what to avoid:</p>
                   <p><strong>Don&apos;t do this:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+                  <ul className="ml-5 leading-7">
                     <li><strong>Never force the lid:</strong> If it doesn&apos;t fit easily, something is
                     misaligned</li>
                     <li><strong>Don&apos;t overfill:</strong> Respect the max fill line for best results</li>
@@ -723,12 +641,7 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 9 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>Can you replace parts on old Cuisinart food processors?</h3>
               <div>
                 <div>
@@ -736,7 +649,7 @@ export default function CuisinartDLC10CReviewPage() {
                   varies by model age. For newer models like the DLC-10SY replacement, parts are readily
                   available.</p>
                   <p><strong>Common replacement parts:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+                  <ul className="ml-5 leading-7">
                     <li>Work bowls (mine cracked after decades but still works)</li>
                     <li>Lids and feed tubes</li>
                     <li>Blades and discs (shredding, slicing, chopping)</li>
@@ -750,19 +663,14 @@ export default function CuisinartDLC10CReviewPage() {
             </div>
 
             {/* Question 10 */}
-            <div style={{
-              margin: '20px 0',
-              padding: '20px',
-              background: '#f8f9fa',
-              borderRadius: '6px'
-            }}>
+            <div className="my-5 p-5 bg-gray-50 rounded-md">
               <h3>Is a food processor worth the counter space?</h3>
               <div>
                 <div>
                   <p><strong>Answer:</strong> If you cook regularly, absolutely yes. After 30 years of
                   daily use, this is one of the most-used tools in my kitchen.</p>
                   <p><strong>Time savings are substantial:</strong></p>
-                  <ul style={{ marginLeft: '20px', lineHeight: '1.8' }}>
+                  <ul className="ml-5 leading-7">
                     <li>Shredding cheese: 15 minutes by hand → 2 minutes with processor</li>
                     <li>Chopping nuts: 10 minutes by hand → 30 seconds with processor</li>
                     <li>Slicing vegetables: 20 minutes with knife → 3 minutes with processor</li>
@@ -778,23 +686,17 @@ export default function CuisinartDLC10CReviewPage() {
         </section>
 
         {/* Email Capture Section */}
-        <div style={{
-          background: '#e7f3ff',
-          padding: '30px',
-          margin: '30px 0',
-          borderRadius: '8px',
-          borderLeft: '4px solid #0066cc'
-        }}>
-          <h3 style={{ marginTop: 0, fontSize: '24px' }}>
+        <div className="bg-blue-50 p-8 my-8 rounded-lg border-l-4 border-blue-600">
+          <h3 className="text-2xl">
             🔥 Get My Food Processor Mastery Guide
           </h3>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6' }}>
+          <p className="text-base leading-relaxed">
             Download my comprehensive guide to getting the most from your food processor—refined
             over 30 years:
           </p>
 
-          <ul style={{ margin: '15px 0', fontSize: '16px', lineHeight: '1.8' }}>
+          <ul className="my-4 text-base leading-7">
             <li>✓ My favorite food processor recipes and techniques</li>
             <li>✓ Shredding and slicing tips for perfect results</li>
             <li>✓ Troubleshooting common issues</li>
@@ -802,25 +704,16 @@ export default function CuisinartDLC10CReviewPage() {
             <li>✓ What to avoid (lessons learned from 30 years)</li>
           </ul>
 
-          <div style={{ textAlign: 'center', marginTop: '25px' }}>
+          <div className="text-center mt-6">
             <a
               href="/newsletter"
-              style={{
-                display: 'inline-block',
-                background: '#0066cc',
-                color: 'white',
-                padding: '15px 40px',
-                textDecoration: 'none',
-                borderRadius: '6px',
-                fontWeight: 'bold',
-                fontSize: '18px'
-              }}
+              className="inline-block bg-blue-600 text-white px-10 py-4 no-underline rounded-md font-bold text-lg"
             >
               Download Free Guide →
             </a>
           </div>
 
-          <p style={{ fontSize: '12px', color: '#666', marginTop: '15px', textAlign: 'center' }}>
+          <p className="text-xs text-gray-600 mt-4 text-center">
             Instant delivery. No spam, ever. Unsubscribe anytime.
           </p>
         </div>
@@ -829,42 +722,31 @@ export default function CuisinartDLC10CReviewPage() {
         <section className="mb-8" id="verdict">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">The Bottom Line: My Professional Verdict</h2>
 
-          <div style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            color: 'white',
-            padding: '30px',
-            borderRadius: '8px',
-            margin: '30px 0'
-          }}>
+          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-lg my-8">
 
-            <h3 style={{ color: 'white', marginTop: 0, fontSize: '24px' }}>
+            <h3 className="text-white text-2xl">
               After 30 Years, Still Going Strong
             </h3>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               When my dad gifted me this Cuisinart food processor in my early 20s, neither of us could
               have imagined it would still be running strong three decades later. This is genuinely one
               of the best products I&apos;ve ever owned—a statement backed by 30 years of nearly daily
               use with minimal issues.
             </p>
 
-            <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
+            <p className="text-lg leading-relaxed">
               My grandmother&apos;s wisdom proved prophetic: &quot;never force it.&quot; Treat this
               machine with basic respect, and it will outlast everything else in your kitchen. The motor
               runs as smoothly today as it did 30 years ago. The build quality is exceptional. This is
               what buy-it-for-life equipment actually looks like.
             </p>
 
-            <div style={{
-              background: 'rgba(255,255,255,0.2)',
-              padding: '20px',
-              margin: '20px 0',
-              borderRadius: '6px'
-            }}>
-              <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold' }}>
+            <div className="bg-white/20 p-5 my-5 rounded-md">
+              <p className="text-xl font-bold">
                 Final Rating: ⭐⭐⭐⭐⭐ 5/5
               </p>
-              <ul style={{ margin: '15px 0 0 20px', fontSize: '16px', lineHeight: '1.8' }}>
+              <ul className="mt-4 ml-5 text-base leading-7">
                 <li>Durability & Longevity: 5/5</li>
                 <li>Performance & Versatility: 5/5</li>
                 <li>Ease of Use & Cleanup: 5/5</li>
@@ -872,26 +754,19 @@ export default function CuisinartDLC10CReviewPage() {
               </ul>
             </div>
 
-            <p style={{ fontSize: '16px', marginBottom: 0 }}>
+            <p className="text-base">
               <strong>Would I buy this again?</strong> Without hesitation. If you cook regularly and
               want equipment that lasts, this is one of the smartest investments you can make.
             </p>
           </div>
 
           {/* STRONG FINAL CTA */}
-          <div style={{
-            background: '#fff3cd',
-            padding: '30px',
-            margin: '30px 0',
-            borderRadius: '8px',
-            textAlign: 'center',
-            border: '3px solid #ffc107'
-          }}>
-            <h3 style={{ marginTop: 0, fontSize: '28px' }}>
+          <div className="bg-amber-50 p-8 my-8 rounded-lg text-center border-4 border-amber-400">
+            <h3 className="text-3xl">
               Ready for Equipment That Outlasts Everything?
             </h3>
 
-            <p style={{ fontSize: '18px', margin: '20px 0' }}>
+            <p className="text-lg my-5">
               Join the tradition of reliable Cuisinart food processors:
             </p>
 
@@ -912,7 +787,7 @@ export default function CuisinartDLC10CReviewPage() {
               </AffiliateButton>
             </CTAVisibilityTracker>
 
-            <p style={{ fontSize: '14px', color: '#666', marginTop: '20px' }}>
+            <p className="text-sm text-gray-600 mt-5">
               💡 Current model offers same proven design and capacity
             </p>
           </div>
@@ -922,187 +797,112 @@ export default function CuisinartDLC10CReviewPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Complete Your Kitchen Setup</h2>
 
-          <p style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: '25px' }}>
+          <p className="text-base leading-relaxed mb-6">
             A reliable food processor is essential, but it works best alongside quality kitchen equipment.
             Here are the tools I use with this processor:
           </p>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '20px',
-            margin: '30px 0'
-          }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-8">
 
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>John Boos Cutting Board</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4>John Boos Cutting Board</h4>
               <p>The perfect prep surface for all your food processor ingredients. Professional-quality
               wood that&apos;s lasted me 14 years.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 14 years:</strong> Still my daily workhorse.
               </p>
               <a
                 href="/reviews/john-boos-platinum-commercial-cutting-board"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold"
               >
                 Read Full Review →
               </a>
             </div>
 
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>Victorinox Chef&apos;s Knife</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4>Victorinox Chef&apos;s Knife</h4>
               <p>For tasks the food processor can&apos;t handle. Professional quality at an accessible
               price point.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>45 years cooking:</strong> My go-to knife.
               </p>
               <a
                 href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold"
               >
                 Read Full Review →
               </a>
             </div>
 
-            <div style={{
-              background: '#f8f9fa',
-              padding: '20px',
-              borderRadius: '8px',
-              border: '1px solid #dee2e6'
-            }}>
-              <h4 style={{ marginTop: 0 }}>KitchenAid Stand Mixer</h4>
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
+              <h4>KitchenAid Stand Mixer</h4>
               <p>Complements the food processor perfectly. While the Cuisinart shreds and slices,
               the KitchenAid handles mixing and kneading.</p>
-              <p style={{ fontSize: '14px', color: '#666' }}>
+              <p className="text-sm text-gray-600">
                 <strong>After 18 years:</strong> Still mixing strong.
               </p>
               <a
                 href="/reviews/kitchenaid-kp26m1xlc-professional-600"
-                style={{
-                  display: 'inline-block',
-                  background: '#28a745',
-                  color: 'white',
-                  padding: '10px 20px',
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                  marginTop: '10px',
-                  fontWeight: 'bold'
-                }}
+                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold"
               >
                 Read Full Review →
               </a>
             </div>
           </div>
 
-          <p style={{
-            textAlign: 'center',
-            margin: '30px 0',
-            fontSize: '18px',
-            padding: '20px',
-            background: '#f8f9fa',
-            borderRadius: '6px'
-          }}>
+          <p className="text-center my-8 text-lg p-5 bg-gray-50 rounded-md">
             <strong>Building a complete home kitchen?</strong><br/>
-            <a href="/kitchen-bundle" style={{ color: '#0066cc', fontWeight: 'bold', fontSize: '20px' }}>
+            <a href="/kitchen-bundle" className="text-blue-600 font-bold text-xl">
               See My Complete Kitchen Setup Guide →
             </a>
           </p>
         </section>
 
         {/* Footer Elements */}
-        <div style={{
-          background: '#f8f9fa',
-          padding: '20px',
-          margin: '30px 0',
-          borderRadius: '6px',
-          borderLeft: '4px solid #6c757d'
-        }}>
-          <p style={{ margin: '10px 0' }}>
+        <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
+          <p className="my-2">
             <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
+          <p className="my-2">
             <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long'
             })}
           </p>
-          <p style={{ margin: '10px 0' }}>
+          <p className="my-2">
             <strong>💬 Own a Cuisinart food processor?</strong> Share your experience in the comments
             below—I read and respond to every comment.
           </p>
-          <p style={{ margin: '10px 0' }}>
-            <strong>📧 Questions about food processors?</strong> <a href="/contact" style={{ color: '#0066cc' }}>
+          <p className="my-2">
+            <strong>📧 Questions about food processors?</strong> <a href="/contact" className="text-blue-600">
             Contact me directly</a> and I&apos;ll help you choose the right model for your needs.
           </p>
         </div>
 
         {/* Author Bio Box */}
-        <div style={{
-          background: 'white',
-          padding: '25px',
-          margin: '30px 0',
-          border: '1px solid #dee2e6',
-          borderRadius: '8px',
-          display: 'grid',
-          gridTemplateColumns: '100px 1fr',
-          gap: '20px',
-          alignItems: 'start'
-        }}>
+        <div className="bg-white p-6 my-8 border border-gray-300 rounded-lg grid grid-cols-[100px_1fr] gap-5 items-start">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/team/head-shot-1.jpg"
             alt="Scott Bradley, Professional Chef"
-            style={{
-              width: '100px',
-              height: '100px',
-              borderRadius: '50%',
-              objectFit: 'cover'
-            }}
+            className="w-[100px] h-[100px] rounded-full object-cover"
           />
           <div>
-            <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
-            <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
+            <h3 className="mb-2">About Scott Bradley</h3>
+            <p className="my-1 font-bold">
               Professional Chef • 45 Years Cooking Experience
             </p>
-            <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
+            <p className="my-2 text-sm leading-relaxed">
               Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
               A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
               University of Montana. Equipment tested in both professional kitchens and 30 years
               of home cooking.
             </p>
-            <a href="/about" style={{ color: '#0066cc', fontWeight: 'bold' }}>
+            <a href="/about" className="text-blue-600 font-bold">
               Read more about my testing methodology →
             </a>
           </div>

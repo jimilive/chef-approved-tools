@@ -659,76 +659,76 @@ export default async function Victorinox4InchParingKnifeReview() {
               I&apos;ve tested dozens of paring knives over 24 years in professional kitchens. Here&apos;s how the Victorinox 4-inch stacks up against top competitors:
             </p>
 
-            <div style={{ overflowX: 'auto' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse text-sm">
                 <thead>
-                  <tr style={{ background: '#f8f9fa' }}>
-                    <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6', fontWeight: 'bold' }}>Feature</th>
-                    <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6', fontWeight: 'bold', background: '#fff7ed' }}>Victorinox 4&quot; (This Product)</th>
-                    <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6', fontWeight: 'bold' }}>Wüsthof 4&quot; Paring</th>
-                    <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #dee2e6', fontWeight: 'bold' }}>Mercer 3.5&quot; Paring</th>
+                  <tr className="bg-gray-50">
+                    <th className="p-3 text-left border-b-2 border-gray-300 font-bold">Feature</th>
+                    <th className="p-3 text-left border-b-2 border-gray-300 font-bold bg-orange-50">Victorinox 4&quot; (This Product)</th>
+                    <th className="p-3 text-left border-b-2 border-gray-300 font-bold">Wüsthof 4&quot; Paring</th>
+                    <th className="p-3 text-left border-b-2 border-gray-300 font-bold">Mercer 3.5&quot; Paring</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Price Range</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff7ed' }}>$10-15</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$35-50</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>$8-12</td>
+                    <td className="p-3 border-b border-gray-300 font-semibold">Price Range</td>
+                    <td className="p-3 border-b border-gray-300 bg-orange-50">$10-15</td>
+                    <td className="p-3 border-b border-gray-300">$35-50</td>
+                    <td className="p-3 border-b border-gray-300">$8-12</td>
                   </tr>
                   <tr>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Blade Material</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff7ed' }}>High-carbon stainless</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>High-carbon stainless</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>High-carbon Japanese steel</td>
+                    <td className="p-3 border-b border-gray-300 font-semibold">Blade Material</td>
+                    <td className="p-3 border-b border-gray-300 bg-orange-50">High-carbon stainless</td>
+                    <td className="p-3 border-b border-gray-300">High-carbon stainless</td>
+                    <td className="p-3 border-b border-gray-300">High-carbon Japanese steel</td>
                   </tr>
                   <tr>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Handle Material</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff7ed' }}>Fibrox (slip-resistant)</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Polyoxymethylene (POM)</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Santoprene</td>
+                    <td className="p-3 border-b border-gray-300 font-semibold">Handle Material</td>
+                    <td className="p-3 border-b border-gray-300 bg-orange-50">Fibrox (slip-resistant)</td>
+                    <td className="p-3 border-b border-gray-300">Polyoxymethylene (POM)</td>
+                    <td className="p-3 border-b border-gray-300">Santoprene</td>
                   </tr>
                   <tr>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Country of Origin</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff7ed' }}>Switzerland</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Germany</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Taiwan</td>
+                    <td className="p-3 border-b border-gray-300 font-semibold">Country of Origin</td>
+                    <td className="p-3 border-b border-gray-300 bg-orange-50">Switzerland</td>
+                    <td className="p-3 border-b border-gray-300">Germany</td>
+                    <td className="p-3 border-b border-gray-300">Taiwan</td>
                   </tr>
                   <tr>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Out-of-Box Sharpness</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff7ed' }}>★★★★★ (razor-sharp)</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>★★★★★ (razor-sharp)</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>★★★★☆ (very sharp)</td>
+                    <td className="p-3 border-b border-gray-300 font-semibold">Out-of-Box Sharpness</td>
+                    <td className="p-3 border-b border-gray-300 bg-orange-50">★★★★★ (razor-sharp)</td>
+                    <td className="p-3 border-b border-gray-300">★★★★★ (razor-sharp)</td>
+                    <td className="p-3 border-b border-gray-300">★★★★☆ (very sharp)</td>
                   </tr>
                   <tr>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Edge Retention</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff7ed' }}>★★★★★ (6-12 months)</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>★★★★★ (6-12 months)</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>★★★★☆ (4-8 months)</td>
+                    <td className="p-3 border-b border-gray-300 font-semibold">Edge Retention</td>
+                    <td className="p-3 border-b border-gray-300 bg-orange-50">★★★★★ (6-12 months)</td>
+                    <td className="p-3 border-b border-gray-300">★★★★★ (6-12 months)</td>
+                    <td className="p-3 border-b border-gray-300">★★★★☆ (4-8 months)</td>
                   </tr>
                   <tr>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Ergonomics</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff7ed' }}>★★★★★ (excellent grip)</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>★★★★☆ (comfortable)</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>★★★★☆ (comfortable)</td>
+                    <td className="p-3 border-b border-gray-300 font-semibold">Ergonomics</td>
+                    <td className="p-3 border-b border-gray-300 bg-orange-50">★★★★★ (excellent grip)</td>
+                    <td className="p-3 border-b border-gray-300">★★★★☆ (comfortable)</td>
+                    <td className="p-3 border-b border-gray-300">★★★★☆ (comfortable)</td>
                   </tr>
                   <tr>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Professional Use Rating</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff7ed' }}>★★★★★ (industry standard)</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>★★★★★ (premium choice)</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>★★★★☆ (solid budget option)</td>
+                    <td className="p-3 border-b border-gray-300 font-semibold">Professional Use Rating</td>
+                    <td className="p-3 border-b border-gray-300 bg-orange-50">★★★★★ (industry standard)</td>
+                    <td className="p-3 border-b border-gray-300">★★★★★ (premium choice)</td>
+                    <td className="p-3 border-b border-gray-300">★★★★☆ (solid budget option)</td>
                   </tr>
                   <tr>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', fontWeight: '600' }}>Warranty</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6', background: '#fff7ed' }}>Lifetime</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Lifetime</td>
-                    <td style={{ padding: '12px', borderBottom: '1px solid #dee2e6' }}>Limited lifetime</td>
+                    <td className="p-3 border-b border-gray-300 font-semibold">Warranty</td>
+                    <td className="p-3 border-b border-gray-300 bg-orange-50">Lifetime</td>
+                    <td className="p-3 border-b border-gray-300">Lifetime</td>
+                    <td className="p-3 border-b border-gray-300">Limited lifetime</td>
                   </tr>
-                  <tr style={{ background: '#f0fdf4' }}>
-                    <td style={{ padding: '12px', fontWeight: '600' }}>Best For</td>
-                    <td style={{ padding: '12px', background: '#dcfce7', fontWeight: '600' }}>Best value - pro quality at budget price</td>
-                    <td style={{ padding: '12px' }}>Premium feel, slightly heavier</td>
-                    <td style={{ padding: '12px' }}>Budget option, good performance</td>
+                  <tr className="bg-green-50">
+                    <td className="p-3 font-semibold">Best For</td>
+                    <td className="p-3 bg-green-200 font-semibold">Best value - pro quality at budget price</td>
+                    <td className="p-3">Premium feel, slightly heavier</td>
+                    <td className="p-3">Budget option, good performance</td>
                   </tr>
                 </tbody>
               </table>
