@@ -4,6 +4,7 @@ import InteractiveProductCard from '@/components/InteractiveProductCard';
 import BreadcrumbSchema, { categoryBreadcrumbs } from '@/components/BreadcrumbSchema';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
+import { getProductsByCategory, getPrimaryAffiliateLink } from '@/lib/product-helpers';
 import type { Metadata } from 'next'
 
 export const dynamic = 'force-dynamic'
@@ -19,8 +20,21 @@ export const metadata: Metadata = {
   }
 }
 
-export default function KnivesPage() {
-  const products = [
+export default async function KnivesPage() {
+  // Fetch products from Supabase
+  const supabaseProducts = await getProductsByCategory('Knives')
+
+  // Map to format expected by the page
+  const products = supabaseProducts.map(p => ({
+    id: p.slug,
+    name: p.name,
+    brand: p.brand,
+    affiliateUrl: getPrimaryAffiliateLink(p),
+    slug: p.slug,
+    description: p.description || p.expertOpinion || 'Professional chef-tested knife'
+  }))
+
+  const LEGACY_products = [
     {
       id: "victorinox-fibrox-10-inch-chefs-knife",
       name: "Victorinox Fibrox Pro 10\" Chef's Knife",

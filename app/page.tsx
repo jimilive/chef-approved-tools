@@ -7,6 +7,8 @@ import { ChefCredentialsSchema } from '@/components/ReviewSchema'
 import AffiliateButton from '@/components/AffiliateButton'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import { getProductsBySlugs, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+
 export const metadata: Metadata = {
   title: 'Chef Approved Tools: Restaurant-Tested Gear',
   description: 'Equipment tested in professional kitchens or in my apartment. Honest reviews, real testing, zero lab conditions. Knives, cookware, appliances that survive.',
@@ -19,32 +21,6 @@ const TestimonialsSection = lazy(() => import('@/components/TestimonialsSection'
 const TopPicksComparison = lazy(() => import('@/components/TopPicksComparison'))
 const BudgetVsPremiumMagnet = lazy(() => import('@/components/BudgetVsPremiumMagnet'))
 const RecentlyViewed = lazy(() => import('@/components/RecentlyViewed'))
-
-// Sample products with enhanced data
-const sampleProducts = [
-  {
-    id: 'kitchenaid-ksm8990wh',
-    name: 'KitchenAid Commercial Mixer',
-    brand: 'KitchenAid',
-    rating: 4.8,
-    reviews: 217,
-    image: '/logo.png',
-    affiliateUrl: 'https://amzn.to/4nVlUTM',
-    badge: 'NSF Certified',
-    tested: '18 months proven'
-  },
-  {
-    id: 'victorinox-fibrox-8-inch-chefs-knife',
-    name: 'Victorinox Fibrox 8" Chef\'s Knife',
-    brand: 'Victorinox',
-    rating: 4.8,
-    reviews: 156,
-    image: '/logo.png',
-    affiliateUrl: 'https://amzn.to/3U4PsT1',
-    badge: 'Pro Workhorse',
-    tested: '20 years proven'
-  }
-]
 
 // Enhanced Product Card Component with Conversion Optimization
 function EnhancedProductCard({ product }: { product: any }) {
@@ -131,7 +107,26 @@ function EnhancedProductCard({ product }: { product: any }) {
 
 
 
-export default function HomePage() {
+export default async function HomePage() {
+  // Fetch hero products from Supabase
+  const products = await getProductsBySlugs([
+    'kitchenaid-ksm8990wh',
+    'victorinox-fibrox-8-inch-chefs-knife'
+  ])
+
+  // Map to format expected by the page
+  const sampleProducts = products.map(p => ({
+    id: p.slug,
+    name: p.name,
+    brand: p.brand,
+    rating: p.expertRating || p.reviews?.rating || 4.8,
+    reviews: p.reviews?.count || 150,
+    image: p.images?.primary || '/logo.png',
+    affiliateUrl: getPrimaryAffiliateLink(p),
+    badge: p.slug === 'kitchenaid-ksm8990wh' ? 'NSF Certified' : 'Pro Workhorse',
+    tested: p.slug === 'kitchenaid-ksm8990wh' ? '18 months proven' : '20 years proven'
+  }))
+
   return (
     <div className="min-h-screen bg-gray-50 text-slate-900">
       {/* SEO Structured Data */}

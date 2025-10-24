@@ -3,6 +3,7 @@ import Link from "next/link";
 import BreadcrumbSchema, { categoryBreadcrumbs } from '@/components/BreadcrumbSchema';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
+import { getProductsByCategory, getPrimaryAffiliateLink } from '@/lib/product-helpers';
 import type { Metadata } from 'next'
 
 export const dynamic = 'force-dynamic'
@@ -18,8 +19,22 @@ export const metadata: Metadata = {
   }
 }
 
-export default function CookwarePage() {
-  const products = [
+export default async function CookwarePage() {
+  // Fetch products from Supabase
+  const supabaseProducts = await getProductsByCategory('Cookware')
+
+  // Map to format expected by the page
+  const products = supabaseProducts.map(p => ({
+    id: p.slug,
+    name: p.name,
+    brand: p.brand,
+    affiliateUrl: getPrimaryAffiliateLink(p),
+    slug: p.slug,
+    description: p.description || p.expertOpinion || 'Professional chef-tested cookware',
+    score: p.expertRating || 9.0
+  }))
+
+  const LEGACY_products = [
     {
       id: "lodge-seasoned-cast-iron-3-skillet-bundle",
       name: "Lodge Seasoned Cast Iron 3 Skillet Bundle",

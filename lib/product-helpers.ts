@@ -93,6 +93,23 @@ export function getPrimaryAffiliateLink(product: Product): string {
 }
 
 /**
+ * Get all products from Supabase
+ * @returns Array of all products
+ */
+export async function getAllProducts(): Promise<Product[]> {
+  const { data, error } = await getSupabase()
+    .from('products')
+    .select('*')
+
+  if (error || !data) {
+    console.error('Error fetching all products:', error)
+    return []
+  }
+
+  return data.map(mapDatabaseToProduct)
+}
+
+/**
  * Get all products in a specific category
  * @param category - Category name (e.g., 'knives', 'cookware')
  * @returns Array of products in that category

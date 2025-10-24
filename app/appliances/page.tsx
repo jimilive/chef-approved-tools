@@ -3,6 +3,7 @@ import Link from "next/link";
 import BreadcrumbSchema, { categoryBreadcrumbs } from '@/components/BreadcrumbSchema';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
+import { getProductsByCategory, getPrimaryAffiliateLink } from '@/lib/product-helpers';
 import type { Metadata } from 'next'
 
 export const dynamic = 'force-dynamic'
@@ -21,33 +22,19 @@ export const metadata: Metadata = {
   }
 }
 
-export default function AppliancesPage() {
-  const products = [
-    {
-      id: "vitamix-5200",
-      name: "Vitamix 5200 Professional-Grade Blender",
-      brand: "Vitamix",
-      affiliateUrl: "#",
-      slug: "vitamix-5200",
-      description: "Commercial-grade blender that survived 5 years of restaurant service"
-    },
-    {
-      id: "kitchenaid-ksm8990wh",
-      name: "KitchenAid Commercial Series",
-      brand: "KitchenAid",
-      affiliateUrl: "#",
-      slug: "kitchenaid-ksm8990wh",
-      description: "NSF-certified commercial mixer tested through 18 months at Purple Cafe"
-    },
-    {
-      id: "robot-coupe-r2-dice",
-      name: "Robot Coupe R2 Dice Food Processor",
-      brand: "Robot Coupe",
-      affiliateUrl: "#",
-      slug: "robot-coupe-r2-dice",
-      description: "Professional food processor for high-volume prep work"
-    }
-  ];
+export default async function AppliancesPage() {
+  // Fetch products from Supabase
+  const supabaseProducts = await getProductsByCategory('Appliances')
+
+  // Map to format expected by the page
+  const products = supabaseProducts.map(p => ({
+    id: p.slug,
+    name: p.name,
+    brand: p.brand,
+    affiliateUrl: getPrimaryAffiliateLink(p),
+    slug: p.slug,
+    description: p.description || p.expertOpinion || 'Professional chef-tested appliance'
+  }))
 
   const itemListLd = {
     "@context": "https://schema.org",
