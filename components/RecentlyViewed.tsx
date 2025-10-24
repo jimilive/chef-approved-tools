@@ -20,39 +20,15 @@ const MAX_RECENT_ITEMS = 6
 
 // Tier Badge Components
 const Tier1Badge = () => (
-  <div style={{
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
-    color: '#000',
-    padding: '8px 16px',
-    borderRadius: '6px',
-    fontWeight: 'bold',
-    fontSize: '14px',
-    boxShadow: '0 2px 8px rgba(255,215,0,0.3)',
-    marginBottom: '12px'
-  }}>
-    <span style={{ fontSize: '18px' }}>🛡️</span>
+  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-md font-bold text-sm shadow-md shadow-yellow-400/30 mb-3">
+    <span className="text-lg">🛡️</span>
     <span>TIER 1: Professional Kitchen Tested</span>
   </div>
 );
 
 const Tier2Badge: React.FC<{ testingPeriod: string }> = ({ testingPeriod }) => (
-  <div style={{
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    background: 'linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)',
-    color: 'white',
-    padding: '8px 16px',
-    borderRadius: '6px',
-    fontWeight: 'bold',
-    fontSize: '14px',
-    boxShadow: '0 2px 8px rgba(74,144,226,0.3)',
-    marginBottom: '12px'
-  }}>
-    <span style={{ fontSize: '18px' }}>🏠</span>
+  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-blue-500 to-blue-600 text-white px-4 py-2 rounded-md font-bold text-sm shadow-md shadow-blue-500/30 mb-3">
+    <span className="text-lg">🏠</span>
     <span>TIER 2: Home Tested ({testingPeriod})</span>
   </div>
 );
@@ -88,58 +64,24 @@ export default function RecentlyViewed() {
   }
 
   return (
-    <section style={{ marginTop: '80px', marginBottom: '40px' }}>
-      <div style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '0 20px'
-      }}>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '12px',
-          marginBottom: '30px'
-        }}>
-        <Clock style={{ width: '24px', height: '24px', color: '#ff6b35' }} />
-        <h2 style={{
-          fontSize: '32px',
-          fontWeight: '700',
-          margin: 0,
-          color: '#1a1a1a'
-        }}>
+    <section className="mt-20 mb-10">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="flex items-center gap-3 mb-8">
+        <Clock className="w-6 h-6 text-orange-600" />
+        <h2 className="text-3xl font-bold m-0 text-gray-900">
           Recently Viewed Products
         </h2>
       </div>
 
-      <p style={{
-        fontSize: '16px',
-        color: '#666',
-        marginBottom: '30px',
-        lineHeight: '1.6'
-      }}>
+      <p className="text-base text-gray-600 mb-8 leading-relaxed">
         Pick up where you left off. These are the products you&apos;ve been researching.
       </p>
 
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-        gap: '30px'
-      }}>
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-8">
         {recentProducts.map((product) => (
           <div
             key={product.slug}
-            style={{
-              background: 'white',
-              border: '1px solid #e0e0e0',
-              borderRadius: '8px',
-              padding: '24px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-              transition: 'all 0.3s ease',
-              cursor: 'pointer',
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column'
-            }}
+            className="bg-white border border-gray-300 rounded-lg p-6 shadow-md transition-all duration-300 cursor-pointer h-full flex flex-col hover:shadow-xl"
           >
             {/* Tier Badge */}
             {product.tier === 1 ? (
@@ -149,88 +91,41 @@ export default function RecentlyViewed() {
             )}
 
             {/* Category Tag */}
-            <div style={{
-              fontSize: '12px',
-              color: '#666',
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px',
-              marginBottom: '8px',
-              fontWeight: '600'
-            }}>
+            <div className="text-xs text-gray-600 uppercase tracking-wider mb-2 font-semibold">
               {product.category}
             </div>
 
             {/* Product Name */}
-            <h3 style={{
-              fontSize: '18px',
-              fontWeight: '700',
-              margin: '0 0 12px 0',
-              lineHeight: '1.4',
-              color: '#1a1a1a'
-            }}>
+            <h3 className="text-lg font-bold m-0 mb-3 leading-snug text-gray-900">
               {product.name}
             </h3>
 
             {/* Rating */}
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              marginBottom: '12px'
-            }}>
-              <div style={{ color: '#FFD700', fontSize: '18px' }}>
+            <div className="flex items-center gap-2 mb-3">
+              <div className="text-yellow-400 text-lg">
                 {'★'.repeat(Math.floor(product.rating))}
                 {product.rating % 1 !== 0 && '½'}
                 {'☆'.repeat(5 - Math.ceil(product.rating))}
               </div>
-              <span style={{
-                fontSize: '14px',
-                fontWeight: 'bold',
-                color: '#333'
-              }}>
+              <span className="text-sm font-bold text-gray-800">
                 {product.rating}/5
               </span>
             </div>
 
             {/* Testing Period */}
-            <div style={{
-              background: '#f8f9fa',
-              padding: '8px 12px',
-              borderRadius: '4px',
-              fontSize: '13px',
-              color: '#555',
-              marginBottom: '12px',
-              fontStyle: 'italic'
-            }}>
+            <div className="bg-gray-100 px-3 py-2 rounded text-xs text-gray-700 mb-3 italic">
               📊 Tested: {product.testingPeriod}
             </div>
 
             {/* Hook */}
-            <p style={{
-              fontSize: '15px',
-              lineHeight: '1.6',
-              color: '#555',
-              margin: '0 0 20px 0',
-              flex: 1
-            }}>
+            <p className="text-[15px] leading-relaxed text-gray-700 m-0 mb-5 flex-1">
               {product.hook}
             </p>
 
             {/* CTA Button */}
             <Link
               href={`/reviews/${product.slug}`}
-              style={{
-                display: 'block',
-                background: '#28a745',
-                color: 'white',
-                padding: '12px 24px',
-                textAlign: 'center',
-                borderRadius: '6px',
-                textDecoration: 'none',
-                fontWeight: 'bold',
-                fontSize: '15px',
-                transition: 'background 0.2s'
-              }}
+              className="block bg-green-600 text-white px-6 py-3 text-center rounded-md no-underline font-bold text-[15px] transition-colors hover:bg-green-700"
             >
               Read Full Review →
             </Link>
@@ -238,21 +133,13 @@ export default function RecentlyViewed() {
         ))}
       </div>
 
-      <div style={{ textAlign: 'center', marginTop: '30px' }}>
+      <div className="text-center mt-8">
         <button
             onClick={() => {
               localStorage.removeItem(STORAGE_KEY)
               setRecentProducts([])
             }}
-            style={{
-              background: 'none',
-              border: 'none',
-              color: '#666',
-              textDecoration: 'underline',
-              fontSize: '14px',
-              cursor: 'pointer',
-              padding: '8px 16px'
-            }}
+            className="bg-transparent border-none text-gray-600 underline text-sm cursor-pointer px-4 py-2 hover:text-gray-900"
           >
             Clear viewing history
           </button>

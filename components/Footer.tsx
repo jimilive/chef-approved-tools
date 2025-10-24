@@ -24,36 +24,36 @@ export default function Footer() {
   }
   
   return (
-    <footer style={{ backgroundColor: '#1e293b', color: '#e2e8f0' }}>
+    <footer className="bg-slate-800 text-slate-200">
       {/* Main Footer Content */}
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '48px 20px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '32px' }}>
-          
+      <div className="max-w-7xl mx-auto px-5 py-12">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-8">
+
           {/* Brand Column */}
           <div>
-            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', marginBottom: '16px' }}>
-              <span style={{ fontSize: '1.5rem' }}>👨‍🍳</span>
-              <span style={{ fontSize: '1.25rem', fontWeight: 'bold', color: 'white' }}>
-                Chef<span style={{ color: '#ea580c' }}>Approved</span>Tools
+            <Link href="/" className="flex items-center gap-2 no-underline mb-4">
+              <span className="text-2xl">👨‍🍳</span>
+              <span className="text-xl font-bold text-white">
+                Chef<span className="text-orange-600">Approved</span>Tools
               </span>
             </Link>
-            <p style={{ fontSize: '0.875rem', color: '#94a3b8', marginBottom: '16px', lineHeight: '1.5' }}>
+            <p className="text-sm text-slate-400 mb-4 leading-relaxed">
               Professional kitchen equipment reviews by certified chefs with real restaurant experience.
             </p>
-            <p style={{ fontSize: '0.875rem', color: '#94a3b8' }}>
+            <p className="text-sm text-slate-400">
               Made with ❤️ by professional chefs
             </p>
           </div>
 
           {/* Shop Links */}
           <div>
-            <h3 style={{ fontWeight: 'bold', color: 'white', marginBottom: '16px' }}>Shop</h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <h3 className="font-bold text-white mb-4">Shop</h3>
+            <div className="flex flex-col gap-2">
               {footerLinks.shop.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  style={{ fontSize: '0.875rem', color: '#94a3b8', textDecoration: 'none' }}
+                  className="text-sm text-slate-400 no-underline hover:text-white transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -63,13 +63,13 @@ export default function Footer() {
 
           {/* Resources Links */}
           <div>
-            <h3 style={{ fontWeight: 'bold', color: 'white', marginBottom: '16px' }}>Resources</h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <h3 className="font-bold text-white mb-4">Resources</h3>
+            <div className="flex flex-col gap-2">
               {footerLinks.resources.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  style={{ fontSize: '0.875rem', color: '#94a3b8', textDecoration: 'none' }}
+                  className="text-sm text-slate-400 no-underline hover:text-white transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -79,13 +79,13 @@ export default function Footer() {
 
           {/* Legal Links */}
           <div>
-            <h3 style={{ fontWeight: 'bold', color: 'white', marginBottom: '16px' }}>Legal</h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <h3 className="font-bold text-white mb-4">Legal</h3>
+            <div className="flex flex-col gap-2">
               {footerLinks.legal.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  style={{ fontSize: '0.875rem', color: '#94a3b8', textDecoration: 'none' }}
+                  className="text-sm text-slate-400 no-underline hover:text-white transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -96,10 +96,10 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div style={{ borderTop: '1px solid #374151', padding: '24px 20px' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.875rem', color: '#94a3b8' }}>
-            © {currentYear} Chef Approved Tools. All rights reserved. | 
+      <div className="border-t border-gray-700 px-5 py-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-sm text-slate-400">
+            © {currentYear} Chef Approved Tools. All rights reserved. |
             As an Amazon Associate, I earn from qualifying purchases.
           </p>
         </div>
