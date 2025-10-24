@@ -13,8 +13,12 @@ import type { Metadata } from 'next'
 import FAQBox, { FAQGrid } from '@/components/review/FAQBox'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
-const productData = {
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
+const legacyProductData = {
   name: "KitchenAid Professional 600 Series Stand Mixer",
   slug: "kitchenaid-kp26m1xlc-professional-600",
   brand: "KitchenAid",
@@ -49,12 +53,6 @@ const productData = {
   dateAdded: "2025-10-11",
   lastUpdated: "2025-10-11"
 }
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-]
 
 const faqData = [
   {
@@ -127,7 +125,28 @@ export const metadata = {
   }
 }
 
-export default function KitchenAidProfessional600ReviewPage() {
+export default async function KitchenAidProfessional600ReviewPage() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('kitchenaid-kp26m1xlc-professional-600')
+  if (!product) {
+    throw new Error('Product not found: kitchenaid-kp26m1xlc-professional-600')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    affiliateLinks: product.affiliateLinks.length > 0 ? product.affiliateLinks : legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">

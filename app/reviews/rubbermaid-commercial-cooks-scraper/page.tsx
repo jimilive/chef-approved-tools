@@ -12,8 +12,12 @@ import type { Metadata } from 'next'
 import FAQBox, { FAQGrid } from '@/components/review/FAQBox'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
-const productData = {
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
+const legacyProductData = {
   name: 'Rubbermaid Commercial Cook\'s Scraper / Spatula (13.5-inch)',
   slug: 'rubbermaid-commercial-cooks-scraper',
   brand: 'Rubbermaid Commercial',
@@ -99,12 +103,6 @@ const faqData = [
   }
 ]
 
-const breadcrumbs = [
-  { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-  { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-]
-
 export const metadata: Metadata = {
   title: "Rubbermaid Scraper: Buy-It-For-Life Tool",
   description: 'Professional chef tests Rubbermaid Commercial scraper for 18 years across 2 commercial kitchens. Complete review of this $15-20 buy-it-for-life tool.',
@@ -114,18 +112,40 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
+    canonical: 'https://www.chefapprovedtools.com/reviews/rubbermaid-commercial-cooks-scraper',
   },
   openGraph: {
     title: 'Rubbermaid Commercial Scraper: 18-Year Professional Review',
     description: '18 years of testing proves this $15-20 scraper is buy-it-for-life equipment',
     images: ['/logo.png'],
-    url: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
+    url: 'https://www.chefapprovedtools.com/reviews/rubbermaid-commercial-cooks-scraper',
     type: 'article',
   }
 }
 
-export default function RubbermaidScraperReview() {
+export default async function RubbermaidScraperReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('rubbermaid-commercial-cooks-scraper')
+  if (!product) {
+    throw new Error('Product not found: rubbermaid-commercial-cooks-scraper')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    affiliateLinks: product.affiliateLinks.length > 0 ? product.affiliateLinks : legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+    { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
+
   return (
     <div className="min-h-screen bg-gray-50">
       <ProductViewTrackerWrapper

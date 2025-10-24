@@ -12,10 +12,12 @@ import FAQBox, { FAQGrid } from '@/components/review/FAQBox';
 import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox';
 import EmailCaptureBox from '@/components/review/EmailCaptureBox';
 import AuthorBio from '@/components/review/AuthorBio';
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
 
-
-const productData = {
+const legacyProductData = {
   name: "Norton im200 tri stone sharpener",
   slug: "norton-im200-tri-stone-sharpener",
   brand: "Brand Name",
@@ -31,13 +33,6 @@ const productData = {
     primary: "/logo.png"
   }
 };
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: "Knife Care", url: "https://www.chefapprovedtools.com/knife-care" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-]
 
 const faqData = [
   {
@@ -89,7 +84,30 @@ export const metadata: Metadata = {
   },
 };
 
-export default function NortonTriStoneSharpenerReview() {
+export default async function NortonTriStoneSharpenerReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('norton-im200-tri-stone-sharpener')
+  if (!product) {
+    throw new Error('Product not found: norton-im200-tri-stone-sharpener')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    affiliateLinks: product.affiliateLinks.length > 0 ? product.affiliateLinks : legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: "Knife Care", url: "https://www.chefapprovedtools.com/knife-care" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
+
   return (
     <div className="max-w-3xl mx-auto px-5 py-10">
      <ProductViewTrackerWrapper

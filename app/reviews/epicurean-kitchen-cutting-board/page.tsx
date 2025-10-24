@@ -11,6 +11,10 @@ import FAQBox, { FAQGrid } from '@/components/review/FAQBox'
 import ReviewCTABox from '@/components/review/ReviewCTABox'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   alternates: {
@@ -21,7 +25,7 @@ export const metadata: Metadata = {
   description: 'Professional chef review of the Epicurean kitchen cutting board after 10 years of continual use in my apartment. Dishwasher-safe and better than wood.',
 }
 
-const productData = {
+const legacyProductData = {
   name: "Epicurean Kitchen Series Cutting Board",
   slug: "epicurean-kitchen-cutting-board",
   brand: "Epicurean",
@@ -50,12 +54,6 @@ const productData = {
   lastUpdated: new Date().toISOString().split('T')[0]
 };
 
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-];
-
 const faqData = [
   {
     question: "Are dishwasher-safe boards really safe for knives?",
@@ -83,7 +81,29 @@ const faqData = [
   }
 ];
 
-export default function EpicureanKitchenCuttingBoardReview() {
+export default async function EpicureanKitchenCuttingBoardReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('epicurean-kitchen-cutting-board')
+  if (!product) {
+    throw new Error('Product not found: epicurean-kitchen-cutting-board')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    affiliateLinks: product.affiliateLinks.length > 0 ? product.affiliateLinks : legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
+
   return (
     <div className="min-h-screen bg-gray-50">
       <ProductViewTrackerWrapper
