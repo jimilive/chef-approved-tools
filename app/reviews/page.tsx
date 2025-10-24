@@ -12,39 +12,15 @@ const RecentlyViewed = dynamic(() => import('@/components/RecentlyViewed'), {
 
 // Tier Badge Components
 const Tier1Badge = () => (
-  <div style={{
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
-    color: '#000',
-    padding: '8px 16px',
-    borderRadius: '6px',
-    fontWeight: 'bold',
-    fontSize: '14px',
-    boxShadow: '0 2px 8px rgba(255,215,0,0.3)',
-    marginBottom: '12px'
-  }}>
-    <span style={{ fontSize: '18px' }}>🛡️</span>
+  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-md font-bold text-sm shadow-md shadow-yellow-400/30 mb-3">
+    <span className="text-lg">🛡️</span>
     <span>TIER 1: Professional Kitchen Tested</span>
   </div>
 );
 
 const Tier2Badge: React.FC<{ testingPeriod: string }> = ({ testingPeriod }) => (
-  <div style={{
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: '8px',
-    background: 'linear-gradient(135deg, #4A90E2 0%, #357ABD 100%)',
-    color: 'white',
-    padding: '8px 16px',
-    borderRadius: '6px',
-    fontWeight: 'bold',
-    fontSize: '14px',
-    boxShadow: '0 2px 8px rgba(74,144,226,0.3)',
-    marginBottom: '12px'
-  }}>
-    <span style={{ fontSize: '18px' }}>🏠</span>
+  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-blue-500 to-blue-600 text-white px-4 py-2 rounded-md font-bold text-sm shadow-md shadow-blue-500/30 mb-3">
+    <span className="text-lg">🏠</span>
     <span>TIER 2: Home Tested ({testingPeriod})</span>
   </div>
 );
@@ -395,21 +371,7 @@ const ReviewCard: React.FC<{ review: Review; featured?: boolean; position?: numb
       position={position}
       listName={featured ? "reviews_landing_featured" : "reviews_landing_all"}
     >
-      <div
-        className="review-card"
-        style={{
-          background: 'white',
-          border: '1px solid #e0e0e0',
-          borderRadius: '8px',
-          padding: '24px',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-          transition: 'all 0.3s ease',
-          cursor: 'pointer',
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column'
-        }}
-      >
+      <div className="review-card bg-white border border-gray-300 rounded-lg p-6 shadow-md transition-all duration-300 cursor-pointer h-full flex flex-col hover:shadow-xl">
 
         {/* Tier Badge */}
         {review.tier === 1 ? (
@@ -419,70 +381,34 @@ const ReviewCard: React.FC<{ review: Review; featured?: boolean; position?: numb
         )}
 
         {/* Category Tag */}
-        <div style={{
-          fontSize: '12px',
-          color: '#666',
-          textTransform: 'uppercase',
-          letterSpacing: '0.5px',
-          marginBottom: '8px',
-          fontWeight: '600'
-        }}>
+        <div className="text-xs text-gray-600 uppercase tracking-wider mb-2 font-semibold">
           {review.category}
         </div>
 
         {/* Product Name */}
-        <h3 style={{
-          fontSize: featured ? '22px' : '18px',
-          fontWeight: '700',
-          margin: '0 0 12px 0',
-          lineHeight: '1.4',
-          color: '#1a1a1a'
-        }}>
+        <h3 className={`${featured ? 'text-xl' : 'text-lg'} font-bold m-0 mb-3 leading-snug text-gray-900`}>
           {review.name}
         </h3>
 
         {/* Rating */}
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          marginBottom: '12px'
-        }}>
-          <div style={{ color: '#FFD700', fontSize: '18px' }}>
+        <div className="flex items-center gap-2 mb-3">
+          <div className="text-yellow-400 text-lg">
             {'★'.repeat(Math.floor(review.rating))}
             {review.rating % 1 !== 0 && '½'}
             {'☆'.repeat(5 - Math.ceil(review.rating))}
           </div>
-          <span style={{
-            fontSize: '14px',
-            fontWeight: 'bold',
-            color: '#333'
-          }}>
+          <span className="text-sm font-bold text-gray-800">
             {review.rating}/5
           </span>
         </div>
 
         {/* Testing Period */}
-        <div style={{
-          background: '#f8f9fa',
-          padding: '8px 12px',
-          borderRadius: '4px',
-          fontSize: '13px',
-          color: '#555',
-          marginBottom: '12px',
-          fontStyle: 'italic'
-        }}>
+        <div className="bg-gray-100 px-3 py-2 rounded text-xs text-gray-700 mb-3 italic">
           📊 Tested: {review.testingPeriod}
         </div>
 
         {/* Hook */}
-        <p style={{
-          fontSize: '15px',
-          lineHeight: '1.6',
-          color: '#555',
-          margin: '0 0 20px 0',
-          flex: 1
-        }}>
+        <p className="text-sm leading-relaxed text-gray-700 m-0 mb-5 flex-1">
           {review.hook}
         </p>
 
@@ -492,18 +418,7 @@ const ReviewCard: React.FC<{ review: Review; featured?: boolean; position?: numb
           position="mid_article">
           <Link
             href={`/reviews/${review.slug}`}
-            style={{
-              display: 'block',
-              background: '#28a745',
-              color: 'white',
-              padding: '12px 24px',
-              textAlign: 'center',
-              borderRadius: '6px',
-              textDecoration: 'none',
-              fontWeight: 'bold',
-              fontSize: '15px',
-              transition: 'background 0.2s'
-            }}
+            className="block bg-green-600 text-white px-6 py-3 text-center rounded-md no-underline font-bold text-sm transition-colors duration-200 hover:bg-green-700"
           >
             Read Full Review →
           </Link>
@@ -517,76 +432,43 @@ const ReviewCard: React.FC<{ review: Review; featured?: boolean; position?: numb
 
 export default function ReviewsHub() {
   const [activeFilter, setActiveFilter] = React.useState<'all' | 'tier1' | 'tier2'>('all');
-  
+
   // Filter reviews based on active filter
-  const filteredReviews = activeFilter === 'all' 
-    ? sortedReviews 
-    : sortedReviews.filter(r => 
+  const filteredReviews = activeFilter === 'all'
+    ? sortedReviews
+    : sortedReviews.filter(r =>
         activeFilter === 'tier1' ? r.tier === 1 : r.tier === 2
       );
-  
+
   return (
-    <div style={{
-      maxWidth: '1200px',
-      margin: '0 auto',
-      padding: '40px 20px'
-    }}>
-      
+    <div className="max-w-7xl mx-auto px-5 py-10">
+
       {/* Header */}
-      <div style={{ marginBottom: '60px' }}>
-        <h1 style={{
-          fontSize: '42px',
-          fontWeight: '800',
-          margin: '0 0 16px 0',
-          color: '#1a1a1a'
-        }}>
+      <div className="mb-16">
+        <h1 className="text-5xl font-extrabold m-0 mb-4 text-gray-900">
           Professional Kitchen Equipment Reviews
         </h1>
-        <p style={{
-          fontSize: '20px',
-          lineHeight: '1.6',
-          color: '#555',
-          margin: 0
-        }}>
-          45 years of cooking experience. 24 years restaurant management. 
+        <p className="text-xl leading-relaxed text-gray-700 m-0">
+          45 years of cooking experience. 24 years restaurant management.
           Real testing in professional kitchens where equipment failure means lost revenue.
         </p>
       </div>
       
       {/* Featured Section */}
-      <section style={{ marginBottom: '80px' }}>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '12px',
-          marginBottom: '30px'
-        }}>
-          <h2 style={{
-            fontSize: '32px',
-            fontWeight: '700',
-            margin: 0,
-            color: '#1a1a1a'
-          }}>
+      <section className="mb-20">
+        <div className="flex items-center gap-3 mb-8">
+          <h2 className="text-3xl font-bold m-0 text-gray-900">
             🔥 Featured: Professional Kitchen Tested
           </h2>
         </div>
-        
-        <p style={{
-          fontSize: '16px',
-          color: '#666',
-          marginBottom: '30px',
-          lineHeight: '1.6'
-        }}>
-          These 6 products survived the most demanding commercial environments. 
+
+        <p className="text-base text-gray-600 mb-8 leading-relaxed">
+          These 6 products survived the most demanding commercial environments.
           Equipment failure in a restaurant means lost revenue—these tools never failed.
         </p>
-        
+
         {/* Featured Grid - 2 columns */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(450px, 1fr))',
-          gap: '30px'
-        }}>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(450px,1fr))] gap-8">
           {featuredReviews.map((review, index) => (
             <ReviewCard key={review.id} review={review} featured={true} position={index + 1} />
           ))}
@@ -595,86 +477,36 @@ export default function ReviewsHub() {
       
       {/* All Reviews Section */}
       <section>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          marginBottom: '30px',
-          flexWrap: 'wrap',
-          gap: '20px'
-        }}>
-          <h2 style={{
-            fontSize: '32px',
-            fontWeight: '700',
-            margin: 0,
-            color: '#1a1a1a'
-          }}>
+        <div className="flex items-center justify-between mb-8 flex-wrap gap-5">
+          <h2 className="text-3xl font-bold m-0 text-gray-900">
             All Reviews ({filteredReviews.length})
           </h2>
-          
+
           {/* Filter Pills */}
-          <div style={{
-            display: 'flex',
-            gap: '12px',
-            flexWrap: 'wrap'
-          }}>
-            <button 
+          <div className="flex gap-3 flex-wrap">
+            <button
               onClick={() => setActiveFilter('all')}
-              style={{
-                padding: '8px 16px',
-                background: activeFilter === 'all' ? '#0066cc' : '#f0f0f0',
-                color: activeFilter === 'all' ? 'white' : '#333',
-                border: 'none',
-                borderRadius: '20px',
-                fontSize: '14px',
-                fontWeight: '600',
-                cursor: 'pointer',
-                transition: 'all 0.2s'
-              }}
+              className={`px-4 py-2 ${activeFilter === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800'} border-none rounded-full text-sm font-semibold cursor-pointer transition-all duration-200 hover:opacity-90`}
             >
               All Reviews
             </button>
-            <button 
+            <button
               onClick={() => setActiveFilter('tier1')}
-              style={{
-                padding: '8px 16px',
-                background: activeFilter === 'tier1' ? '#0066cc' : '#f0f0f0',
-                color: activeFilter === 'tier1' ? 'white' : '#333',
-                border: 'none',
-                borderRadius: '20px',
-                fontSize: '14px',
-                fontWeight: '600',
-                cursor: 'pointer',
-                transition: 'all 0.2s'
-              }}
+              className={`px-4 py-2 ${activeFilter === 'tier1' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800'} border-none rounded-full text-sm font-semibold cursor-pointer transition-all duration-200 hover:opacity-90`}
             >
               Professional Tested (17)
             </button>
             <button
               onClick={() => setActiveFilter('tier2')}
-              style={{
-                padding: '8px 16px',
-                background: activeFilter === 'tier2' ? '#0066cc' : '#f0f0f0',
-                color: activeFilter === 'tier2' ? 'white' : '#333',
-                border: 'none',
-                borderRadius: '20px',
-                fontSize: '14px',
-                fontWeight: '600',
-                cursor: 'pointer',
-                transition: 'all 0.2s'
-              }}
+              className={`px-4 py-2 ${activeFilter === 'tier2' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800'} border-none rounded-full text-sm font-semibold cursor-pointer transition-all duration-200 hover:opacity-90`}
             >
               Home Tested (11)
             </button>
           </div>
         </div>
-        
+
         {/* All Reviews Grid - 3 columns */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-          gap: '30px'
-        }}>
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-8">
           {filteredReviews.map((review, index) => (
             <ReviewCard key={review.id} review={review} position={index + 1} />
           ))}
@@ -685,52 +517,25 @@ export default function ReviewsHub() {
       <RecentlyViewed />
 
       {/* Call to Action Footer */}
-      <div style={{
-        marginTop: '80px',
-        padding: '40px',
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        borderRadius: '12px',
-        textAlign: 'center',
-        color: 'white'
-      }}>
-        <h3 style={{
-          fontSize: '28px',
-          fontWeight: '700',
-          margin: '0 0 16px 0'
-        }}>
+      <div className="mt-20 p-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl text-center text-white">
+        <h3 className="text-3xl font-bold m-0 mb-4">
           Can&apos;t Find What You&apos;re Looking For?
         </h3>
-        <p style={{
-          fontSize: '18px',
-          margin: '0 0 24px 0',
-          lineHeight: '1.6'
-        }}>
+        <p className="text-lg m-0 mb-6 leading-relaxed">
           Get personalized equipment recommendations based on your specific needs and budget.
         </p>
         <CTAVisibilityTracker ctaId="reviews-landing-contact-cta"
-
           merchant="internal"
-
-
          position="mid_article">
           <Link
             href="/contact"
-            style={{
-              display: 'inline-block',
-              background: 'white',
-              color: '#667eea',
-              padding: '14px 32px',
-              borderRadius: '6px',
-              textDecoration: 'none',
-              fontWeight: 'bold',
-              fontSize: '16px'
-            }}
+            className="inline-block bg-white text-indigo-500 px-8 py-3 rounded-md no-underline font-bold text-base hover:bg-gray-100 transition-colors"
           >
             Contact Scott →
           </Link>
         </CTAVisibilityTracker>
       </div>
-      
+
     </div>
   );
 }
