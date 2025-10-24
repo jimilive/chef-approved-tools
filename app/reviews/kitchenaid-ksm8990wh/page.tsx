@@ -12,8 +12,12 @@ import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/Re
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
 import FAQBox, { FAQGrid, type FAQItem } from '@/components/review/FAQBox'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
-const productData = {
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
+const legacyProductData = {
   name: "KitchenAid Commercial Mixer",
   slug: "kitchenaid-ksm8990wh",
   brand: "KitchenAid",
@@ -52,12 +56,6 @@ const productData = {
   dateAdded: "2024-01-15",
   lastUpdated: "2025-10-04"
 }
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-]
 
 const faqData = [
   {
@@ -126,7 +124,28 @@ export const metadata = {
   }
 }
 
-export default function KitchenAidReviewPage() {
+export default async function KitchenAidReviewPage() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('kitchenaid-ksm8990wh')
+  if (!product) {
+    throw new Error('Product not found: kitchenaid-ksm8990wh')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    affiliateLinks: product.affiliateLinks.length > 0 ? product.affiliateLinks : legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">

@@ -10,8 +10,12 @@ import { Tier2Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
-const productData = {
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
+const legacyProductData = {
   name: "Le Creuset Signature Round Dutch Oven 7.25 Quart",
   slug: "le-creuset-signature-7-25-qt-dutch-oven",
   brand: "Le Creuset",
@@ -118,12 +122,6 @@ const customerReviews = [
   }
 ]
 
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-]
-
 const faqData = [
   {
     question: "Is Le Creuset worth 4-5 times the cost of Lodge?",
@@ -185,7 +183,28 @@ export const metadata = {
   },
 }
 
-export default function LeCreuset725QtReview() {
+export default async function LeCreuset725QtReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('le-creuset-signature-7-25-qt-dutch-oven')
+  if (!product) {
+    throw new Error('Product not found: le-creuset-signature-7-25-qt-dutch-oven')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    affiliateLinks: product.affiliateLinks.length > 0 ? product.affiliateLinks : legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">

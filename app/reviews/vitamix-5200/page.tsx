@@ -15,8 +15,12 @@ import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/Re
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
 import FAQBox, { FAQGrid, type FAQItem } from '@/components/review/FAQBox'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
-const productData = {
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
+const legacyProductData = {
   name: "Vitamix 5200 Professional-Grade Blender",
   slug: "vitamix-5200",
   brand: "Vitamix",
@@ -325,12 +329,6 @@ function convertFAQsForSchema(faqs: FAQItem[]): Array<{question: string, answer:
   });
 }
 
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-]
-
 export const metadata = {
   title: "Vitamix 5200 Blender: 5-Year Power Test",
   description: "Vitamix 5200 tested 5+ years: Worth the premium price? Commercial power, durability tested. Complete blender review: versatility, ROI analysis, alternatives.",
@@ -359,7 +357,28 @@ export const metadata = {
   }
 }
 
-export default function Vitamix5200Review() {
+export default async function Vitamix5200Review() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('vitamix-5200')
+  if (!product) {
+    throw new Error('Product not found: vitamix-5200')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    affiliateLinks: product.affiliateLinks.length > 0 ? product.affiliateLinks : legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">

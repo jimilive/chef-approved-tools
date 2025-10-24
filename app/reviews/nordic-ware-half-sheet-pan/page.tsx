@@ -12,8 +12,12 @@ import FAQBox, { FAQGrid } from '@/components/review/FAQBox';
 import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox';
 import EmailCaptureBox from '@/components/review/EmailCaptureBox';
 import AuthorBio from '@/components/review/AuthorBio';
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
-const productData = {
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
+const legacyProductData = {
   name: "Nordic Ware Half Sheet Pan",
   slug: "nordic-ware-half-sheet-pan",
   brand: "Nordic Ware",
@@ -44,12 +48,6 @@ const productData = {
     primary: "/logo.png"
   }
 };
-
-const breadcrumbs = [
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-  { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-];
 
 const faqData = [
   {
@@ -101,7 +99,29 @@ export const metadata: Metadata = {
   },
 };
 
-export default function NordicWareHalfSheetPanReview() {
+export default async function NordicWareHalfSheetPanReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('nordic-ware-half-sheet-pan')
+  if (!product) {
+    throw new Error('Product not found: nordic-ware-half-sheet-pan')
+  }
+
+  // Get the primary affiliate link
+  const affiliateLink = getPrimaryAffiliateLink(product)
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = {
+    ...legacyProductData,
+    ...product,
+    affiliateLinks: product.affiliateLinks.length > 0 ? product.affiliateLinks : legacyProductData.affiliateLinks
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
+
   return (
     <div className="max-w-3xl mx-auto px-5 py-10">
       <ProductViewTrackerWrapper
