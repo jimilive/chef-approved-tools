@@ -854,6 +854,68 @@ export default function HotelPanSystemPage() {
           </div>
         </section>
 
+        {/* Related Reviews & Guides */}
+        <section className="mb-12 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl border-2 border-blue-200">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">Detailed Product Reviews</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Want in-depth reviews of specific hotel pan types? Check out my detailed product reviews:
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white p-6 rounded-lg border border-blue-200">
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Small Plastic Hotel Pans</h3>
+              <p className="text-gray-700 mb-4">
+                Home use hero product for meal prep and organization. After 20 years of daily home use, this is the single best kitchen upgrade.
+              </p>
+              <Link
+                href="/reviews/small-plastic-hotel-pans"
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+              >
+                Read Full Review →
+              </Link>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg border border-blue-200">
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Large Plastic Hotel Pans</h3>
+              <p className="text-gray-700 mb-4">
+                Commercial cold storage for catering businesses, large families (8+ people), and bulk meal prep operations.
+              </p>
+              <Link
+                href="/reviews/large-plastic-hotel-pans"
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+              >
+                Read Full Review →
+              </Link>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg border border-blue-200">
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Small Metal Hotel Pans</h3>
+              <p className="text-gray-700 mb-4">
+                Stainless steel for hot holding, BBQs, oven roasting, and family gatherings. Essential for anyone who hosts events.
+              </p>
+              <Link
+                href="/reviews/small-metal-hotel-pans"
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+              >
+                Read Full Review →
+              </Link>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg border border-blue-200">
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Large Metal Hotel Pans</h3>
+              <p className="text-gray-700 mb-4">
+                Commercial hot holding for catering businesses, weddings, and large-scale event hosting (50+ people).
+              </p>
+              <Link
+                href="/reviews/large-metal-hotel-pans"
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+              >
+                Read Full Review →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Author Bio */}
         <section className="bg-slate-100 p-6 rounded-lg border border-slate-200">
           <h3 className="text-lg font-bold text-slate-900 mb-2">About the Author</h3>
