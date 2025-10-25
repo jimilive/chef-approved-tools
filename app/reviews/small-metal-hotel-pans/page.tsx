@@ -388,7 +388,7 @@ export default async function SmallMetalHotelPansReview() {
                 href={notchedLidsLink}
                 merchant="amazon"
                 product="small-metal-hotel-pans-notched-lids"
-                position="mid_content"
+                position="mid_article"
                 variant="secondary"
               >
                 Get Notched Lids on Amazon →
