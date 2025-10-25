@@ -19,16 +19,16 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: 'https://www.chefapprovedtools.com/reviews/winco-heavy-duty-tongs',
     },
 
-    title: 'Winco Heavy-Duty Tongs: Restaurant Grade',
-    description: 'Professional chef review of Winco heavy duty tongs after 24 years of professional cooking. Restaurant-grade tongs at a fraction of the price.',
+    title: 'Winco Extra Heavyweight Tongs: Restaurant Grade',
+    description: 'Professional chef review of Winco extra heavyweight tongs after 24 years of professional cooking. Restaurant-grade tongs at a fraction of the price.',
     openGraph: {
-      title: 'Winco Heavy-Duty Tongs: 24-Year Professional Review',
+      title: 'Winco Extra Heavyweight Tongs: 24-Year Professional Review',
       description: 'Restaurant-grade tongs tested 24 years in professional kitchens.',
       type: 'article',
       url: 'https://www.chefapprovedtools.com/reviews/winco-heavy-duty-tongs',
       siteName: 'Chef Approved Tools',
       images: [generateOGImageURL({
-        title: "Winco Heavy-Duty Tongs Review",
+        title: "Winco Extra Heavyweight Tongs Review",
         rating: 5.0,
         testingPeriod: "24 Years Professional Use",
         tier: 3
@@ -36,10 +36,10 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Winco Heavy-Duty Tongs: 24-Year Professional Review',
+      title: 'Winco Extra Heavyweight Tongs: 24-Year Professional Review',
       description: 'Restaurant-grade tongs tested 24 years.',
       images: [generateOGImageURL({
-        title: "Winco Heavy-Duty Tongs Review",
+        title: "Winco Extra Heavyweight Tongs Review",
         rating: 5.0,
         testingPeriod: "24 Years Professional Use",
         tier: 3
@@ -49,10 +49,10 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const legacyProductData = {
-  name: "Winco Heavy Duty Stainless Steel Tongs",
+  name: "Winco Extra Heavyweight Stainless Steel Tongs",
   slug: "winco-heavy-duty-tongs",
   brand: "Winco",
-  model: "UT-9",
+  model: "UT-12",
   category: "Kitchen Tongs",
   rating: 5.0,
   reviewCount: 1,
@@ -69,7 +69,7 @@ const legacyProductData = {
   ],
   affiliateLinks: [{
     retailer: "Amazon",
-    url: "https://amzn.to/3KQ0I2V"
+    url: "https://amzn.to/47kQ9fS"
   }],
   expertRating: 5.0,
   expertOpinion: "Restaurant-quality tongs at budget price that have proven themselves through 24 years of professional kitchen use - buy three pairs and never worry about tongs again.",
@@ -87,8 +87,8 @@ const faqData = [
     answer: "Most standard Winco utility tongs (like the UT-12) do NOT have a lock. Some newer models do, but the classic versions store unlocked. Store them in a drawer or hang them."
   },
   {
-    question: "What length tongs should I get?",
-    answer: "9-inch for general kitchen tasks and sautéing, 12-inch for grilling and working with hot pans, 16-inch for grilling over high heat or reaching into deep pots."
+    question: "Should I get the 9-inch or 12-inch tongs?",
+    answer: "I use both daily. The 12-inch are perfect for grilling and keeping your hands away from heat - this is the standard professional length. The 9-inch are more maneuverable for sautéing and stovetop cooking. Both sizes available above with the same extra heavyweight construction and spring tension. If you only buy one pair, get the 12-inch for versatility."
   },
   {
     question: "How's the spring tension on Winco tongs?",
@@ -150,7 +150,7 @@ export default async function WincoHeavyDutyTongsReview() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Winco Heavy Duty Tongs Review
+            Winco Extra Heavyweight Tongs Review
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
@@ -175,7 +175,7 @@ export default async function WincoHeavyDutyTongsReview() {
         <div className="mb-8">
           <Image
             src="/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-9-inch-1.webp"
-            alt="Winco Heavy Duty Tongs"
+            alt="Winco Extra Heavyweight Tongs"
             width={1000}
             height={1500}
             className="rounded-lg w-full h-auto max-w-2xl mx-auto"
@@ -190,6 +190,63 @@ export default async function WincoHeavyDutyTongsReview() {
             These are the exact tongs I used in every restaurant kitchen. Strong, reliable, dishwasher-safe.
             Restaurant-grade tongs at a fraction of the price. At $8, buy three and never worry about tongs again.
           </p>
+        </div>
+
+        {/* Size Selection */}
+        <div className="bg-white border-2 border-orange-200 rounded-xl p-6 mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Choose Your Length</h2>
+          <p className="text-gray-700 mb-6">
+            Both sizes are the same extra heavyweight construction with perfect spring tension.
+            I keep both in my kitchen - 9&quot; for sautéing and general tasks, 12&quot; for grilling and working over heat.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 p-5 rounded-lg border-2 border-orange-300">
+              <h3 className="font-bold text-lg mb-2 text-gray-900">12&quot; Tongs (Grilling & High Heat)</h3>
+              <p className="text-sm text-gray-700 mb-4">
+                Perfect for grilling and keeping your hands away from heat. The standard professional length.
+              </p>
+              <CTAVisibilityTracker
+                ctaId={`review-${legacyProductData.slug}-size-12inch`}
+                position="above_fold"
+                productSlug={legacyProductData.slug}
+                merchant="amazon"
+              >
+                <AffiliateButton
+                  href="https://amzn.to/47kQ9fS"
+                  merchant="amazon"
+                  product={legacyProductData.slug}
+                  position="above_fold"
+                  variant="primary"
+                >
+                  Check 12&quot; Price →
+                </AffiliateButton>
+              </CTAVisibilityTracker>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 p-5 rounded-lg border-2 border-orange-300">
+              <h3 className="font-bold text-lg mb-2 text-gray-900">9&quot; Tongs (Sautéing & General Use)</h3>
+              <p className="text-sm text-gray-700 mb-4">
+                More maneuverable for sautéing and stovetop cooking. Perfect for everyday kitchen tasks.
+              </p>
+              <CTAVisibilityTracker
+                ctaId={`review-${legacyProductData.slug}-size-9inch`}
+                position="above_fold"
+                productSlug="winco-9-inch-tongs"
+                merchant="amazon"
+              >
+                <AffiliateButton
+                  href="https://amzn.to/4oilO91"
+                  merchant="amazon"
+                  product="winco-9-inch-tongs"
+                  position="above_fold"
+                  variant="secondary"
+                >
+                  Check 9&quot; Price →
+                </AffiliateButton>
+              </CTAVisibilityTracker>
+            </div>
+          </div>
         </div>
 
         {/* Why I Chose This */}
@@ -672,7 +729,7 @@ export default async function WincoHeavyDutyTongsReview() {
               <thead>
                 <tr className="bg-gray-50">
                   <th className="p-3 text-left border-b-2 border-gray-300">Feature</th>
-                  <th className="p-3 text-left border-b-2 border-gray-300">Winco Heavy Duty</th>
+                  <th className="p-3 text-left border-b-2 border-gray-300">Winco Extra Heavyweight</th>
                   <th className="p-3 text-left border-b-2 border-gray-300">OXO Good Grips</th>
                   <th className="p-3 text-left border-b-2 border-gray-300">All-Clad Stainless</th>
                 </tr>

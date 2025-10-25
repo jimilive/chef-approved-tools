@@ -70,8 +70,8 @@ const faqData = [
     answer: "This model (40600) is Swiss-made with tighter quality control and the same steel used in their premium chef's knives. Some Victorinox paring knives are made in China and cost slightly less but may have minor fit and finish differences. The Swiss-made version has consistently excellent edge geometry and quality control. For the small price difference, I always choose Swiss-made Victorinox."
   },
   {
-    question: "Should I get a 3-inch or 4-inch paring knife?",
-    answer: "The 4-inch is more versatile for most cooks. It handles everything from delicate work to slightly larger tasks like peeling apples. The 3-inch excels at very small, intricate work (think garnishes, citrus supremes) but feels cramped for general peeling. If you only buy one paring knife, get the 4-inch. Professional kitchens typically stock both sizes, but home cooks get the most value from the 4-inch."
+    question: "Should I get the 3.25-inch or 4-inch paring knife?",
+    answer: "I own and use both sizes daily. The 4-inch is more versatile for most cooks - it handles everything from delicate work to slightly larger tasks like peeling apples. The 3.25-inch excels at very small, intricate work (think garnishes, citrus supremes) and offers extra control for those with smaller hands. Both are available above with the same Swiss quality and Fibrox handle. If you only buy one, get the 4-inch. But at this price point, many home cooks buy both."
   },
   {
     question: "How durable is the Fibrox handle over time?",
@@ -190,6 +190,64 @@ export default async function Victorinox4InchParingKnifeReview() {
             You can&apos;t do precision work with a chef&apos;s knife. This little guy handles everything from garlic to strawberries.
             Essential for detailed work - peeling, trimming, deveining shrimp. There&apos;s no excuse not to have one.
           </p>
+        </div>
+
+        {/* Size Selection */}
+        <div className="bg-white border-2 border-orange-200 rounded-xl p-6 mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Choose Your Size</h2>
+          <p className="text-gray-700 mb-6">
+            I use both the 4&quot; and 3.25&quot; versions for the same tasks in professional kitchens. Got them at the same time,
+            tested them both extensively in restaurant settings. Same Swiss quality, same Fibrox handle, same performance.
+            Pick based on your hand size and preference for detail work.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 p-5 rounded-lg border-2 border-orange-300">
+              <h3 className="font-bold text-lg mb-2 text-gray-900">4&quot; Blade (Most Versatile)</h3>
+              <p className="text-sm text-gray-700 mb-4">
+                The go-to size for most precision tasks. Handles everything from peeling to deveining shrimp.
+              </p>
+              <CTAVisibilityTracker
+                ctaId={`review-${productData.slug}-size-4inch`}
+                position="above_fold"
+                productSlug={productData.slug}
+                merchant="amazon"
+              >
+                <AffiliateButton
+                  href={affiliateLink}
+                  merchant="amazon"
+                  product={productData.slug}
+                  position="above_fold"
+                  variant="primary"
+                >
+                  Check 4&quot; Price →
+                </AffiliateButton>
+              </CTAVisibilityTracker>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 p-5 rounded-lg border-2 border-orange-300">
+              <h3 className="font-bold text-lg mb-2 text-gray-900">3.25&quot; Blade (Extra Control)</h3>
+              <p className="text-sm text-gray-700 mb-4">
+                Perfect for intricate work and smaller hands. Same quality, slightly more maneuverable.
+              </p>
+              <CTAVisibilityTracker
+                ctaId={`review-${productData.slug}-size-325inch`}
+                position="above_fold"
+                productSlug="victorinox-3.25-inch-paring-knife"
+                merchant="amazon"
+              >
+                <AffiliateButton
+                  href="https://amzn.to/4oAvXh5"
+                  merchant="amazon"
+                  product="victorinox-3.25-inch-paring-knife"
+                  position="above_fold"
+                  variant="secondary"
+                >
+                  Check 3.25&quot; Price →
+                </AffiliateButton>
+              </CTAVisibilityTracker>
+            </div>
+          </div>
         </div>
 
         {/* Why I Chose This */}
@@ -821,10 +879,10 @@ export default async function Victorinox4InchParingKnifeReview() {
 
               <div className="border-b border-gray-200 pb-6">
                 <h3 className="text-lg font-bold text-slate-900 mb-2">
-                  Should I get a 3-inch or 4-inch paring knife?
+                  Should I get the 3.25-inch or 4-inch paring knife?
                 </h3>
                 <p className="text-slate-700">
-                  The 4-inch is more versatile for most cooks. It handles everything from delicate work to slightly larger tasks like peeling apples. The 3-inch excels at very small, intricate work (think garnishes, citrus supremes) but feels cramped for general peeling. If you only buy one paring knife, get the 4-inch. Professional kitchens typically stock both sizes, but home cooks get the most value from the 4-inch.
+                  I own and use both sizes daily. The 4-inch is more versatile for most cooks - it handles everything from delicate work to slightly larger tasks like peeling apples. The 3.25-inch excels at very small, intricate work (think garnishes, citrus supremes) and offers extra control for those with smaller hands. Both are available above with the same Swiss quality and Fibrox handle. If you only buy one, get the 4-inch. But at this price point, many home cooks buy both.
                 </p>
               </div>
 
