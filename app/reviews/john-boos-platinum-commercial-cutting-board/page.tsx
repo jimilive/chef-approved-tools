@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, Ruler, Droplets } from 'lucide-react'
+import { Star, CheckCircle, XCircle, Ruler, Droplets, Clock, Shield, TrendingUp, DollarSign } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
@@ -8,11 +8,11 @@ import PriceDisplay from '@/components/PriceDisplay'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -130,18 +130,27 @@ const faqData = [
   }
 ]
 
-export const metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/john-boos-platinum-commercial-cutting-board',
-  },
-
-  title: "John Boos Board: 14-Year Butcher Block Test",
-  description: "John Boos 24x18 cutting board review: 14 years home use. Chef tests knife preservation, durability, maintenance. Generational quality.",
-  keywords: ["John Boos cutting board", "commercial cutting board", "maple cutting board", "restaurant cutting board", "butcher block"],
-  openGraph: {
-    title: "John Boos Platinum Commercial Cutting Board: Professional Review",
-    description: "Restaurant manager's honest review of the John Boos Platinum commercial cutting board",
-    images: ['/logo.png']
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/john-boos-platinum-commercial-cutting-board',
+    },
+    title: "John Boos Board: 14-Year Butcher Block Test",
+    description: "John Boos 24x18 cutting board review: 14 years home use. Chef tests knife preservation, durability, maintenance. Generational quality.",
+    keywords: ["John Boos cutting board", "commercial cutting board", "maple cutting board", "restaurant cutting board", "butcher block"],
+    openGraph: {
+      title: "John Boos Platinum Commercial Cutting Board: Professional Review",
+      description: "Restaurant manager's honest review of the John Boos Platinum commercial cutting board",
+      images: [generateOGImageURL({
+        title: "John Boos Platinum Cutting Board Review",
+        rating: 5.0,
+        testingPeriod: "14 Years Testing",
+        tier: 2
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/john-boos-platinum-commercial-cutting-board',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    }
   }
 }
 
@@ -151,9 +160,6 @@ export default async function JohnBosPlatinumCuttingBoardReview() {
   if (!product) {
     throw new Error('Product not found: john-boos-platinum-commercial-cutting-board')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -1151,7 +1157,7 @@ export default async function JohnBosPlatinumCuttingBoardReview() {
         <section className="mb-8">
           <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
             <p className="my-2">
-              <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+              <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'

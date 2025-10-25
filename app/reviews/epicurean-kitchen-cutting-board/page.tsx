@@ -5,24 +5,38 @@ import { Tier2Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import FAQBox, { FAQGrid } from '@/components/review/FAQBox'
 import ReviewCTABox from '@/components/review/ReviewCTABox'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board',
-  },
-
-  title: 'Epicurean Board: Dishwasher-Safe Pro Choice',
-  description: 'Professional chef review of the Epicurean kitchen cutting board after 10 years of continual use in my apartment. Dishwasher-safe and better than wood.',
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board',
+    },
+    title: 'Epicurean Board: Dishwasher-Safe Pro Choice',
+    description: 'Professional chef review of the Epicurean kitchen cutting board after 10 years of continual use in my apartment. Dishwasher-safe and better than wood.',
+    openGraph: {
+      title: 'Epicurean Cutting Board: Professional Review',
+      description: 'Professional chef review after 10 years. Dishwasher-safe and better than wood',
+      images: [generateOGImageURL({
+        title: "Epicurean Kitchen Cutting Board Review",
+        rating: 5.0,
+        testingPeriod: "10+ Years Testing",
+        tier: 2
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    }
+  }
 }
 
 const legacyProductData = {
@@ -51,7 +65,7 @@ const legacyProductData = {
   expertRating: 5.0,
   expertOpinion: "After decades with wood boards, these dishwasher-safe composite boards are better in every practical way - truly sanitary, zero maintenance, and knife-friendly for 24 years of use.",
   dateAdded: "2025-01-15",
-  lastUpdated: new Date().toISOString().split('T')[0]
+  lastUpdated: "2025-10-13"
 };
 
 const faqData = [
@@ -87,9 +101,6 @@ export default async function EpicureanKitchenCuttingBoardReview() {
   if (!product) {
     throw new Error('Product not found: epicurean-kitchen-cutting-board')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {

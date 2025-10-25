@@ -5,22 +5,48 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-bench-scraper',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-bench-scraper',
+    },
 
-  title: 'OXO Bench Scraper: Underrated Kitchen MVP',
-  description: 'Professional chef review of the OXO Good Grips bench scraper after 18 years of home and professional use. The most underrated tool in any kitchen.',
+    title: 'OXO Bench Scraper: Underrated Kitchen MVP',
+    description: 'Professional chef review of the OXO Good Grips bench scraper after 18 years of home and professional use. The most underrated tool in any kitchen.',
+    openGraph: {
+      title: 'OXO Good Grips Bench Scraper: 18-Year Professional Review',
+      description: 'The most underrated kitchen tool tested 18 years professionally.',
+      type: 'article',
+      url: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-bench-scraper',
+      siteName: 'Chef Approved Tools',
+      images: [generateOGImageURL({
+        title: "OXO Good Grips Bench Scraper Review",
+        rating: 5.0,
+        testingPeriod: "18 Years Professional Use",
+        tier: 2
+      })],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'OXO Good Grips Bench Scraper: 18-Year Professional Review',
+      description: 'The most underrated kitchen tool.',
+      images: [generateOGImageURL({
+        title: "OXO Good Grips Bench Scraper Review",
+        rating: 5.0,
+        testingPeriod: "18 Years Professional Use",
+        tier: 2
+      })],
+    },
+  }
 }
 
 const legacyProductData = {
@@ -49,7 +75,7 @@ const legacyProductData = {
   expertRating: 5.0,
   expertOpinion: "The most underrated tool in any kitchen - once you start using a bench scraper, you'll wonder how you ever cooked without one for 24 years of daily use.",
   dateAdded: "2025-01-15",
-  lastUpdated: new Date().toISOString().split('T')[0]
+  lastUpdated: "2025-10-13"
 };
 
 const faqData = [
@@ -85,9 +111,6 @@ export default async function OXOGoodGripsBenchScraperReview() {
   if (!product) {
     throw new Error('Product not found: oxo-good-grips-bench-scraper')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {

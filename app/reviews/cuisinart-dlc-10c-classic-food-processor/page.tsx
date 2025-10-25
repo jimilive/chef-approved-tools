@@ -7,9 +7,9 @@ import { Tier2Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton'
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -93,31 +93,38 @@ const faqData = [
   }
 ]
 
-export const metadata = {
-  title: 'Cuisinart DLC-10C: 30-Year Durability Test',
-  description: 'Cuisinart DLC-10C review: 30 years home use. Professional chef tests shredding, slicing, durability. Buy-it-for-life appliance.',
-  keywords: ["Cuisinart DLC-10C", "Cuisinart food processor review", "7-cup food processor", "buy-it-for-life appliances"],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Cuisinart DLC-10C: 30-Year Durability Test',
+    description: 'Cuisinart DLC-10C review: 30 years home use. Professional chef tests shredding, slicing, durability. Buy-it-for-life appliance.',
+    keywords: ["Cuisinart DLC-10C", "Cuisinart food processor review", "7-cup food processor", "buy-it-for-life appliances"],
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
-  },
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/cuisinart-dlc-10c-classic-food-processor',
-  },
-  openGraph: {
-    title: "Cuisinart DLC-10C Food Processor | 30 Years Daily Use",
-    description: "30 years testing Cuisinart food processor at home. Chef reviews shredding, durability, longevity. Still running strong.",
-    images: ['/logo.png'],
-    url: 'https://www.chefapprovedtools.com/reviews/cuisinart-dlc-10c-classic-food-processor',
-    type: 'article',
-    siteName: 'Chef Approved Tools',
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/cuisinart-dlc-10c-classic-food-processor',
+    },
+    openGraph: {
+      title: "Cuisinart DLC-10C Food Processor | 30 Years Daily Use",
+      description: "30 years testing Cuisinart food processor at home. Chef reviews shredding, durability, longevity. Still running strong.",
+      images: [generateOGImageURL({
+        title: "Cuisinart DLC-10C Food Processor Review",
+        rating: 5.0,
+        testingPeriod: "30 Years Testing",
+        tier: 2
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/cuisinart-dlc-10c-classic-food-processor',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    }
   }
 }
 
@@ -127,9 +134,6 @@ export default async function CuisinartDLC10CReviewPage() {
   if (!product) {
     throw new Error('Product not found: cuisinart-dlc-10c-classic-food-processor')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -881,7 +885,7 @@ export default async function CuisinartDLC10CReviewPage() {
         {/* Footer Elements */}
         <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
           <p className="my-2">
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+            <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'

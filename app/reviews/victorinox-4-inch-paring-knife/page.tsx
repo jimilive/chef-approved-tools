@@ -5,21 +5,47 @@ import { Tier2Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 // Force dynamic rendering (not static) since we fetch from Supabase
 export const dynamic = 'force-dynamic'
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-4-inch-paring-knife',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-4-inch-paring-knife',
+    },
 
-  title: 'Victorinox 4" Paring: 20-Year Detail Tool',
-  description: 'Victorinox 4" paring knife: 20-year test. Perfect for detail work, peeling, trimming. Same blade from culinary school. Swiss precision under $15.',
+    title: 'Victorinox 4" Paring: 20-Year Detail Tool',
+    description: 'Victorinox 4" paring knife: 20-year test. Perfect for detail work, peeling, trimming. Same blade from culinary school. Swiss precision under $15.',
+    openGraph: {
+      title: 'Victorinox 4" Paring Knife: 20-Year Professional Review',
+      description: 'Victorinox 4" paring knife tested 20 years. Perfect for detail work.',
+      type: 'article',
+      url: 'https://www.chefapprovedtools.com/reviews/victorinox-4-inch-paring-knife',
+      siteName: 'Chef Approved Tools',
+      images: [generateOGImageURL({
+        title: "Victorinox 4\" Paring Knife Review",
+        rating: 5.0,
+        testingPeriod: "20 Years Professional Use",
+        tier: 2
+      })],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Victorinox 4" Paring Knife: 20-Year Professional Review',
+      description: 'Victorinox 4" paring knife tested 20 years.',
+      images: [generateOGImageURL({
+        title: "Victorinox 4\" Paring Knife Review",
+        rating: 5.0,
+        testingPeriod: "20 Years Professional Use",
+        tier: 2
+      })],
+    },
+  }
 }
 
 const faqData = [
@@ -64,8 +90,7 @@ export default async function Victorinox4InchParingKnifeReview() {
     throw new Error('Product not found: victorinox-4-inch-paring-knife')
   }
 
-  // Get the primary affiliate link - update once in Supabase, updates everywhere
-  const affiliateLink = getPrimaryAffiliateLink(product)
+  const affiliateLink = product.affiliateLinks?.[0]?.url || 'https://amzn.to/example'
 
   const productData = {
     name: "Victorinox 4-Inch Paring Knife",

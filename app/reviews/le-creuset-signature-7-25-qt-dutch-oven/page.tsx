@@ -1,16 +1,16 @@
 import Link from 'next/link'
-import { Star, CheckCircle, XCircle, Shield, Clock, DollarSign, Thermometer } from 'lucide-react'
+import { Star, CheckCircle, XCircle, Thermometer, Shield, Clock, DollarSign } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import AuthorBio from '@/components/AuthorBio'
 import AffiliateButton from '@/components/AffiliateButton'
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -149,38 +149,50 @@ const faqData = [
   }
 ]
 
-export const metadata = {
-  title: "Le Creuset 7.25-Qt: 12-Year Dutch Oven Test",
-  description: "Le Creuset 7.25-qt Dutch Oven tested 12 years. French enameled cast iron, 500°F oven safe. Buy-it-for-life quality. Honest chef review.",
-  keywords: ["Le Creuset 7.25 qt dutch oven", "Le Creuset review", "cast iron dutch oven", "professional cooking", "enameled cast iron", "Le Creuset signature", "french cookware"],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Le Creuset 7.25-Qt: 12-Year Dutch Oven Test",
+    description: "Le Creuset 7.25-qt Dutch Oven tested 12 years. French enameled cast iron, 500°F oven safe. Buy-it-for-life quality. Honest chef review.",
+    keywords: ["Le Creuset 7.25 qt dutch oven", "Le Creuset review", "cast iron dutch oven", "professional cooking", "enameled cast iron", "Le Creuset signature", "french cookware"],
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
-  },
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/le-creuset-signature-7-25-qt-dutch-oven',
-  },
-  openGraph: {
-    title: "Le Creuset 7.25-Qt Dutch Oven: 12-Year Test (2025)",
-    description: "Le Creuset 7.25-qt Signature Dutch Oven review after 12 years of home use. Enameled cast iron, 500°F oven safe, made in France since 1925.",
-    images: ['/logo.png'],
-    url: 'https://www.chefapprovedtools.com/reviews/le-creuset-signature-7-25-qt-dutch-oven',
-    type: 'article',
-    siteName: 'Chef Approved Tools',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Le Creuset 7.25-Qt Dutch Oven: 12-Year Test (2025)",
-    description: "Le Creuset 7.25-qt Signature Dutch Oven review after 12 years of home use.",
-    images: ['/logo.png'],
-  },
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/le-creuset-signature-7-25-qt-dutch-oven',
+    },
+    openGraph: {
+      title: "Le Creuset 7.25-Qt Dutch Oven: 12-Year Test (2025)",
+      description: "Le Creuset 7.25-qt Signature Dutch Oven review after 12 years of home use. Enameled cast iron, 500°F oven safe, made in France since 1925.",
+      images: [generateOGImageURL({
+        title: "Le Creuset 7.25-Qt Dutch Oven Review",
+        rating: 4.7,
+        testingPeriod: "12 Years Home Testing",
+        tier: 2
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/le-creuset-signature-7-25-qt-dutch-oven',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: "Le Creuset 7.25-Qt Dutch Oven: 12-Year Test (2025)",
+      description: "Le Creuset 7.25-qt Signature Dutch Oven review after 12 years of home use.",
+      images: [generateOGImageURL({
+        title: "Le Creuset 7.25-Qt Dutch Oven Review",
+        rating: 4.7,
+        testingPeriod: "12 Years Home Testing",
+        tier: 2
+      })],
+    },
+  }
 }
 
 export default async function LeCreuset725QtReview() {
@@ -189,9 +201,6 @@ export default async function LeCreuset725QtReview() {
   if (!product) {
     throw new Error('Product not found: le-creuset-signature-7-25-qt-dutch-oven')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {

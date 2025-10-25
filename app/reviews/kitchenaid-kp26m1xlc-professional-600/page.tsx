@@ -5,7 +5,6 @@ import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
@@ -13,7 +12,8 @@ import type { Metadata } from 'next'
 import FAQBox, { FAQGrid } from '@/components/review/FAQBox'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -97,31 +97,38 @@ const faqData = [
   }
 ]
 
-export const metadata = {
-  title: 'KitchenAid Pro 600: Home Baker\'s Workhorse',
-  description: 'KitchenAid Professional 600 review: 18 years home use. Chef tests pizza dough, attachments, durability, value. Buy-it-for-life mixer.',
-  keywords: ["KitchenAid Professional 600", "KP26M1XLC review", "stand mixer", "pizza dough mixer", "home baking"],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'KitchenAid Pro 600: Home Baker\'s Workhorse',
+    description: 'KitchenAid Professional 600 review: 18 years home use. Chef tests pizza dough, attachments, durability, value. Buy-it-for-life mixer.',
+    keywords: ["KitchenAid Professional 600", "KP26M1XLC review", "stand mixer", "pizza dough mixer", "home baking"],
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
-  },
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/kitchenaid-kp26m1xlc-professional-600',
-  },
-  openGraph: {
-    title: "KitchenAid Professional 600 Review: 18 Years of Home Baking",
-    description: "18 years testing KitchenAid mixer at home. Chef reviews pizza dough power, durability, attachment versatility.",
-    images: ['/logo.png'],
-    url: 'https://www.chefapprovedtools.com/reviews/kitchenaid-kp26m1xlc-professional-600',
-    type: 'article',
-    siteName: 'Chef Approved Tools',
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/kitchenaid-kp26m1xlc-professional-600',
+    },
+    openGraph: {
+      title: "KitchenAid Professional 600 Review: 18 Years of Home Baking",
+      description: "18 years testing KitchenAid mixer at home. Chef reviews pizza dough power, durability, attachment versatility.",
+      images: [generateOGImageURL({
+        title: "KitchenAid Professional 600 Review",
+        rating: 5.0,
+        testingPeriod: "18 Years Testing",
+        tier: 2
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/kitchenaid-kp26m1xlc-professional-600',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    }
   }
 }
 
@@ -131,9 +138,6 @@ export default async function KitchenAidProfessional600ReviewPage() {
   if (!product) {
     throw new Error('Product not found: kitchenaid-kp26m1xlc-professional-600')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {

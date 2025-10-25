@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign } from 'lucide-react'
+import { Star, CheckCircle, XCircle } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
@@ -9,10 +9,10 @@ import AuthorBio from '@/components/AuthorBio'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 export const dynamic = 'force-dynamic'
 
@@ -24,7 +24,7 @@ const legacyProductData = {
   sku: "WUSTHOF-IKON-16PC",
   gtin13: "0814717024250",
   images: {
-    primary: "/logo.png"
+    primary: "/og-image.jpg"
   },
   dealStatus: "normal" as const,
   category: "Knife Sets",
@@ -119,31 +119,49 @@ const faqData = [
   }
 ]
 
-export const metadata = {
-  title: "Wüsthof Ikon 16-Pc: German Forged Quality",
-  description: "Wusthof Classic Ikon 16-pc set tested 6 years. German-forged precision, ergonomic handles. Professional kitchen performance. Honest review.",
-  keywords: ["WÜSTHOF Classic IKON review", "German knife set", "professional knife set", "restaurant knives", "knife block set"],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Wüsthof Ikon 16-Pc: German Forged Quality",
+    description: "Wusthof Classic Ikon 16-pc set tested 6 years. German-forged precision, ergonomic handles. Professional kitchen performance. Honest review.",
+    keywords: ["WÜSTHOF Classic IKON review", "German knife set", "professional knife set", "restaurant knives", "knife block set"],
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
-  },
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-16-piece',
-  },
-  openGraph: {
-    title: "WÜSTHOF Classic IKON 16-Piece: 2-Year Pro Test (2025)",
-    description: "Restaurant manager's honest review after 2 years testing this German knife set in professional kitchens",
-    images: ['/logo.png'],
-    url: 'https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-16-piece',
-    type: 'article',
-    siteName: 'Chef Approved Tools',
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-16-piece',
+    },
+    openGraph: {
+      title: "WÜSTHOF Classic IKON 16-Piece: 2-Year Pro Test (2025)",
+      description: "Restaurant manager's honest review after 2 years testing this German knife set in professional kitchens",
+      images: [generateOGImageURL({
+        title: "Wüsthof Classic Ikon 16-Piece Review",
+        rating: 4.8,
+        testingPeriod: "2 Years Professional Testing",
+        tier: 1
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-16-piece',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: "WÜSTHOF Classic IKON 16-Piece: 2-Year Pro Test",
+      description: "Restaurant manager's honest review after 2 years testing this German knife set.",
+      images: [generateOGImageURL({
+        title: "Wüsthof Classic Ikon 16-Piece Review",
+        rating: 4.8,
+        testingPeriod: "2 Years Professional Testing",
+        tier: 1
+      })],
+    },
   }
 }
 
@@ -152,8 +170,6 @@ export default async function WusthofClassicIkonReview() {
   if (!product) {
     throw new Error('Product not found: wusthof-classic-ikon-16-piece')
   }
-
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   const productData = {
     ...legacyProductData,
@@ -463,7 +479,7 @@ export default async function WusthofClassicIkonReview() {
         {/* WHERE TO BUY SECTION */}
         <h2>Where to Buy WÜSTHOF Classic IKON 16-Piece Set</h2>
 
-        <p><strong>Updated:</strong> {new Date().toLocaleDateString('en-US', { 
+        <p><strong>Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', { 
           year: 'numeric', 
           month: 'long', 
           day: 'numeric' 
@@ -722,7 +738,7 @@ export default async function WusthofClassicIkonReview() {
         {/* FOOTER ELEMENTS */}
         <div className="bg-gray-100 p-5 my-8 rounded-md border-l-4 border-gray-600">
           <p className="my-2.5">
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+            <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'

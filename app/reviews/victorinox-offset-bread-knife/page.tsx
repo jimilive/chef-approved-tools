@@ -9,11 +9,11 @@ import RelatedProductCard, { RelatedProductsGrid } from '@/components/review/Rel
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers';
+import { getProductBySlug } from '@/lib/product-helpers';
+import { generateOGImageURL } from '@/lib/og-image';
 
 const faqData = [
   {
@@ -60,13 +60,39 @@ const faqData = [
 // Force dynamic rendering (not static) since we fetch from Supabase
 export const dynamic = 'force-dynamic'
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-offset-bread-knife',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-offset-bread-knife',
+    },
 
-  title: 'Victorinox Bread Knife: Offset Ergo Design',
-  description: 'Victorinox offset bread knife: 10-year pro test. Perfect for crusty bread and tomatoes. Knuckle clearance that matters. Restaurant tested.',
+    title: 'Victorinox Bread Knife: Offset Ergo Design',
+    description: 'Victorinox offset bread knife: 10-year pro test. Perfect for crusty bread and tomatoes. Knuckle clearance that matters. Restaurant tested.',
+    openGraph: {
+      title: 'Victorinox Offset Bread Knife: Professional Review',
+      description: 'Victorinox offset bread knife tested 24 years professionally.',
+      type: 'article',
+      url: 'https://www.chefapprovedtools.com/reviews/victorinox-offset-bread-knife',
+      siteName: 'Chef Approved Tools',
+      images: [generateOGImageURL({
+        title: "Victorinox Offset Bread Knife Review",
+        rating: 4.9,
+        testingPeriod: "24 Years Professional Use",
+        tier: 1
+      })],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Victorinox Offset Bread Knife: Professional Review',
+      description: 'Victorinox offset bread knife tested 24 years.',
+      images: [generateOGImageURL({
+        title: "Victorinox Offset Bread Knife Review",
+        rating: 4.9,
+        testingPeriod: "24 Years Professional Use",
+        tier: 1
+      })],
+    },
+  }
 }
 
 export default async function VictorinoxOffsetBreadKnifeReview() {
@@ -76,8 +102,7 @@ export default async function VictorinoxOffsetBreadKnifeReview() {
     throw new Error('Product not found: victorinox-offset-bread-knife')
   }
 
-  // Get the primary affiliate link - update once in Supabase, updates everywhere
-  const affiliateLink = getPrimaryAffiliateLink(product)
+  const affiliateLink = product.affiliateLinks?.[0]?.url || 'https://amzn.to/example'
 
   const productData = {
     name: "Victorinox offset bread knife",
@@ -92,7 +117,7 @@ export default async function VictorinoxOffsetBreadKnifeReview() {
     dateAdded: "2025-10-13",
     lastUpdated: product.lastUpdated,
     images: {
-      primary: "/logo.png"
+      primary: "/og-image.jpg"
     }
   };
 

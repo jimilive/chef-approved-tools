@@ -7,9 +7,9 @@ import AffiliateButton from '@/components/AffiliateButton';
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -27,7 +27,7 @@ const legacyProductData = {
   dateAdded: "2025-10-13",
   lastUpdated: "2025-10-13",
   images: {
-    primary: "/logo.png"
+    primary: "https://www.chefapprovedtools.com/og-image.jpg"
   }
 };
 
@@ -66,13 +66,28 @@ const faqData = [
   }
 ];
 
-export const metadata = {
-  title: 'Benriner Mandoline: Pro Safety & Precision',
-  description: 'Professional chef tests Benriner mandoline after years of restaurant use. Complete review: precision slicing, safety features, durability analysis.',
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/benriner-large-mandoline',
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Benriner Mandoline: Pro Safety & Precision',
+    description: 'Professional chef tests Benriner mandoline after years of restaurant use. Complete review: precision slicing, safety features, durability analysis.',
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/benriner-large-mandoline',
+    },
+    openGraph: {
+      title: 'Benriner Mandoline: Professional Review',
+      description: 'Professional chef tests Benriner mandoline after years of restaurant use',
+      images: [generateOGImageURL({
+        title: "Benriner Large Mandoline Review",
+        rating: 4.5,
+        testingPeriod: "Years of Professional Testing",
+        tier: 1
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/benriner-large-mandoline',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    }
+  }
+}
 
 export default async function BenrinerLargeMandolineReview() {
   // Get product data from Supabase
@@ -80,9 +95,6 @@ export default async function BenrinerLargeMandolineReview() {
   if (!product) {
     throw new Error('Product not found: benriner-large-mandoline')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -121,7 +133,7 @@ export default async function BenrinerLargeMandolineReview() {
           Former Kitchen Manager, Purple Café | 24 Years Restaurant Management
         </p>
         <p className="my-1.5">
-          Last Updated: {new Date().toLocaleDateString('en-US', {
+          Last Updated: {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -602,14 +614,14 @@ export default async function BenrinerLargeMandolineReview() {
       {/* Footer Elements */}
       <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-600">
         <p className="my-2.5">
-          <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+          <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
           })}
         </p>
         <p className="my-2.5">
-          <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
+          <strong>🔍 Next Review:</strong> {new Date(new Date(productData.lastUpdated).getTime() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long'
           })}

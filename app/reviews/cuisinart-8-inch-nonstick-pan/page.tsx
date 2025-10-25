@@ -6,9 +6,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -39,7 +39,7 @@ const legacyProductData = {
   dateAdded: "2025-10-13",
   lastUpdated: "2025-10-13",
   images: {
-    primary: "https://www.chefapprovedtools.com/logo.png"
+    primary: "https://www.chefapprovedtools.com/og-image.jpg"
   }
 };
 
@@ -86,14 +86,28 @@ const faqData = [
   }
 ];
 
-export const metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/cuisinart-8-inch-nonstick-pan',
-  },
-
-  title: 'Cuisinart 8" Nonstick: Perfect Eggs Every Time',
-  description: 'Cuisinart 8-inch nonstick pan review. Professional chef tests for 6 months. Perfect for eggs, single servings. Induction ready.',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/cuisinart-8-inch-nonstick-pan',
+    },
+    title: 'Cuisinart 8" Nonstick: Perfect Eggs Every Time',
+    description: 'Cuisinart 8-inch nonstick pan review. Professional chef tests for 6 months. Perfect for eggs, single servings. Induction ready.',
+    openGraph: {
+      title: 'Cuisinart 8" Nonstick Pan: 6-Month Professional Review',
+      description: 'Professional chef tests for 6 months. Perfect for eggs, single servings',
+      images: [generateOGImageURL({
+        title: "Cuisinart 8\" Nonstick Pan Review",
+        rating: 4.7,
+        testingPeriod: "6 Months Testing",
+        tier: 2
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/cuisinart-8-inch-nonstick-pan',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    }
+  }
+}
 
 export default async function Cuisinart8InchNonstickPanReview() {
   // Get product data from Supabase
@@ -101,9 +115,6 @@ export default async function Cuisinart8InchNonstickPanReview() {
   if (!product) {
     throw new Error('Product not found: cuisinart-8-inch-nonstick-pan')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -146,7 +157,7 @@ export default async function Cuisinart8InchNonstickPanReview() {
         <h1>Cuisinart High Impact 8&quot; Pan Review: 6-Month Home Test</h1>
 
         <p className="text-sm text-gray-600 mb-5">
-          By Scott Bradley, Professional Chef | Last Updated: {new Date().toLocaleDateString('en-US', {
+          By Scott Bradley, Professional Chef | Last Updated: {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -863,7 +874,7 @@ export default async function Cuisinart8InchNonstickPanReview() {
         {/* FOOTER */}
         <div className="bg-gray-100 p-5 my-8 rounded-md border-l-4 border-gray-600">
           <p className="my-2.5">
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+            <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'

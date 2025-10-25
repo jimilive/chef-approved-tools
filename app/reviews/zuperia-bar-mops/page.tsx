@@ -4,12 +4,12 @@ import Image from 'next/image';
 import { Tier3Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 import AffiliateButton from '@/components/AffiliateButton';
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 export const dynamic = 'force-dynamic'
 
@@ -26,7 +26,7 @@ const legacyProductData = {
   dateAdded: "2025-10-13",
   lastUpdated: "2025-10-13",
   images: {
-    primary: "/logo.png"
+    primary: "/og-image.jpg"
   }
 };
 
@@ -65,22 +65,46 @@ const faqData = [
   }
 ];
 
-export const metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/zuperia-bar-mops',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/zuperia-bar-mops',
+    },
 
-  title: 'ZUPERIA Bar Mops: Industry Standard Cotton',
-  description: 'ZUPERIA bar mops. Better quality than those used years in restaurants. Professional kitchen standard. 100% ring-spun cotton, absorbent, durable.',
-};
+    title: 'ZUPERIA Bar Mops: Industry Standard Cotton',
+    description: 'ZUPERIA bar mops. Better quality than those used years in restaurants. Professional kitchen standard. 100% ring-spun cotton, absorbent, durable.',
+    openGraph: {
+      title: 'ZUPERIA Bar Mops: Professional Kitchen Review',
+      description: 'Professional kitchen bar mops. Industry standard quality.',
+      type: 'article',
+      url: 'https://www.chefapprovedtools.com/reviews/zuperia-bar-mops',
+      siteName: 'Chef Approved Tools',
+      images: [generateOGImageURL({
+        title: "ZUPERIA Bar Mops Review",
+        rating: 4.8,
+        testingPeriod: "Years Restaurant Testing",
+        tier: 3
+      })],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'ZUPERIA Bar Mops: Professional Kitchen Review',
+      description: 'Professional kitchen bar mops.',
+      images: [generateOGImageURL({
+        title: "ZUPERIA Bar Mops Review",
+        rating: 4.8,
+        testingPeriod: "Years Restaurant Testing",
+        tier: 3
+      })],
+    },
+  }
+}
 
 export default async function ZuperiaBarMopsReview() {
   const product = await getProductBySlug('zuperia-bar-mops')
   if (!product) {
     throw new Error('Product not found: zuperia-bar-mops')
   }
-
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   const productData = {
     ...legacyProductData,
@@ -113,7 +137,7 @@ export default async function ZuperiaBarMopsReview() {
 
       {/* Author Byline */}
       <p className="text-gray-600 mb-6">
-        By Scott Bradley | Professional Chef | Last Updated: {new Date().toLocaleDateString('en-US', {
+        By Scott Bradley | Professional Chef | Last Updated: {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'long',
           day: 'numeric'
@@ -509,7 +533,7 @@ export default async function ZuperiaBarMopsReview() {
       {/* Footer Elements */}
       <div className="bg-gray-100 p-5 my-8 rounded-md border-l-4 border-gray-500">
         <p className="my-2.5">
-          <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+          <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'

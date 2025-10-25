@@ -12,7 +12,8 @@ import type { Metadata } from 'next'
 import FAQBox, { FAQGrid } from '@/components/review/FAQBox'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -103,23 +104,42 @@ const faqData = [
   }
 ]
 
-export const metadata: Metadata = {
-  title: "Rubbermaid Scraper: Buy-It-For-Life Tool",
-  description: 'Professional chef tests Rubbermaid Commercial scraper for 18 years across 2 commercial kitchens. Complete review of this $15-20 buy-it-for-life tool.',
-  keywords: ['Rubbermaid scraper review', 'commercial spatula', 'professional scraper', 'NSF certified spatula', 'best kitchen scraper', 'rubber spatula', 'high-heat spatula', 'professional kitchen spatula', 'commercial kitchen spatula'],
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/rubbermaid-commercial-cooks-scraper',
-  },
-  openGraph: {
-    title: 'Rubbermaid Commercial Scraper: 18-Year Professional Review',
-    description: '18 years of testing proves this $15-20 scraper is buy-it-for-life equipment',
-    images: ['/logo.png'],
-    url: 'https://www.chefapprovedtools.com/reviews/rubbermaid-commercial-cooks-scraper',
-    type: 'article',
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Rubbermaid Scraper: Buy-It-For-Life Tool",
+    description: 'Professional chef tests Rubbermaid Commercial scraper for 18 years across 2 commercial kitchens. Complete review of this $15-20 buy-it-for-life tool.',
+    keywords: ['Rubbermaid scraper review', 'commercial spatula', 'professional scraper', 'NSF certified spatula', 'best kitchen scraper', 'rubber spatula', 'high-heat spatula', 'professional kitchen spatula', 'commercial kitchen spatula'],
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/rubbermaid-commercial-cooks-scraper',
+    },
+    openGraph: {
+      title: 'Rubbermaid Commercial Scraper: 18-Year Professional Review',
+      description: '18 years of testing proves this $15-20 scraper is buy-it-for-life equipment',
+      images: [generateOGImageURL({
+        title: "Rubbermaid Commercial Scraper Review",
+        rating: 4.7,
+        testingPeriod: "18 Years Professional Testing",
+        tier: 1
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/rubbermaid-commercial-cooks-scraper',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Rubbermaid Commercial Scraper: 18-Year Professional Review',
+      description: '18 years of testing proves this scraper is buy-it-for-life equipment',
+      images: [generateOGImageURL({
+        title: "Rubbermaid Commercial Scraper Review",
+        rating: 4.7,
+        testingPeriod: "18 Years Professional Testing",
+        tier: 1
+      })],
+    },
   }
 }
 
@@ -129,9 +149,6 @@ export default async function RubbermaidScraperReview() {
   if (!product) {
     throw new Error('Product not found: rubbermaid-commercial-cooks-scraper')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -650,7 +667,7 @@ export default async function RubbermaidScraperReview() {
         {/* WHERE TO BUY SECTION */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Where to Buy</h2>
-          <p><strong>Updated:</strong> {new Date().toLocaleDateString('en-US', {
+          <p><strong>Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -906,7 +923,7 @@ export default async function RubbermaidScraperReview() {
         <section className="mb-8">
           <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
             <p className="my-2.5">
-              <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+              <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'

@@ -2,14 +2,14 @@ import { Tier2Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -38,7 +38,7 @@ const legacyProductData = {
   dateAdded: "2025-10-13",
   lastUpdated: "2025-10-13",
   images: {
-    primary: "https://www.chefapprovedtools.com/logo.png"
+    primary: "https://www.chefapprovedtools.com/og-image.jpg"
   }
 };
 
@@ -85,14 +85,40 @@ const faqData = [
   }
 ];
 
-export const metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/method-all-purpose-cleaner',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/method-all-purpose-cleaner',
+    },
 
-  title: 'Method Cleaner: Non-Toxic Grease-Cutting',
-  description: 'Professional chef\'s 5-year review of Method All-Purpose Cleaner. The unicorn of cleaning products - powerful AND non-toxic. Cuts grease effortlessly.',
-};
+    title: 'Method Cleaner: Non-Toxic Grease-Cutting',
+    description: 'Professional chef\'s 5-year review of Method All-Purpose Cleaner. The unicorn of cleaning products - powerful AND non-toxic. Cuts grease effortlessly.',
+    openGraph: {
+      title: 'Method All-Purpose Cleaner: 5-Year Review',
+      description: 'Professional chef\'s honest review - powerful AND non-toxic. Cuts grease effortlessly.',
+      images: [generateOGImageURL({
+        title: "Method All-Purpose Cleaner Review",
+        rating: 4.8,
+        testingPeriod: "5 Years Daily Home Use",
+        tier: 2
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/method-all-purpose-cleaner',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Method All-Purpose Cleaner: 5-Year Review',
+      description: 'Professional chef\'s honest review - powerful AND non-toxic. Cuts grease effortlessly.',
+      images: [generateOGImageURL({
+        title: "Method All-Purpose Cleaner Review",
+        rating: 4.8,
+        testingPeriod: "5 Years Daily Home Use",
+        tier: 2
+      })],
+    },
+  }
+}
 
 export default async function MethodAllPurposeCleanerReview() {
   // Get product data from Supabase
@@ -100,9 +126,6 @@ export default async function MethodAllPurposeCleanerReview() {
   if (!product) {
     throw new Error('Product not found: method-all-purpose-cleaner')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -145,7 +168,7 @@ export default async function MethodAllPurposeCleanerReview() {
         <h1>Method All-Purpose Cleaner Review: 5-Year Home Kitchen Test</h1>
 
         <p className="text-sm text-gray-600 mb-5">
-          By Scott Bradley, Professional Chef | Last Updated: {new Date().toLocaleDateString('en-US', {
+          By Scott Bradley, Professional Chef | Last Updated: {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -929,7 +952,7 @@ export default async function MethodAllPurposeCleanerReview() {
         {/* FOOTER */}
         <div className="bg-gray-100 p-5 my-8 rounded-md border-l-4 border-gray-600">
           <p className="my-2">
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+            <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'

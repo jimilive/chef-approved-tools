@@ -4,7 +4,6 @@ import Image from 'next/image';
 import FTCDisclosure from '@/components/FTCDisclosure'
 import ProductImageGallery from '@/components/ProductImageGallery'
 import AffiliateButton from '@/components/AffiliateButton'
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox'
@@ -13,18 +12,45 @@ import RelatedProductCard, { RelatedProductsGrid } from '@/components/review/Rel
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering (not static) since we fetch from Supabase
 export const dynamic = 'force-dynamic'
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife',
+    },
 
-  title: 'Victorinox 8" Fibrox: Budget Pro Performance',
-  description: 'Victorinox 8" Fibrox tested 20 years: approximately $50 knife that beats $200+ blades. NSF certified, dishwasher safe. The workhorse in professional kitchens.',
+    title: 'Victorinox 8" Fibrox: Budget Pro Performance',
+    description: 'Victorinox 8" Fibrox tested 20 years: approximately $50 knife that beats $200+ blades. NSF certified, dishwasher safe. The workhorse in professional kitchens.',
+    openGraph: {
+      title: 'Victorinox 8" Fibrox Chef\'s Knife: 20-Year Professional Review',
+      description: 'Victorinox 8" Fibrox tested 20 years in professional kitchens. The workhorse knife.',
+      type: 'article',
+      url: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife',
+      siteName: 'Chef Approved Tools',
+      images: [generateOGImageURL({
+        title: "Victorinox 8\" Fibrox Chef's Knife Review",
+        rating: 4.8,
+        testingPeriod: "20 Years Professional Use",
+        tier: 1
+      })],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Victorinox 8" Fibrox Chef\'s Knife: 20-Year Professional Review',
+      description: 'Victorinox 8" Fibrox tested 20 years in professional kitchens.',
+      images: [generateOGImageURL({
+        title: "Victorinox 8\" Fibrox Chef's Knife Review",
+        rating: 4.8,
+        testingPeriod: "20 Years Professional Use",
+        tier: 1
+      })],
+    },
+  }
 }
 
 export default async function VictorinoxFibrox8InchReview() {
@@ -34,8 +60,7 @@ export default async function VictorinoxFibrox8InchReview() {
     throw new Error('Product not found: victorinox-fibrox-8-inch-chefs-knife')
   }
 
-  // Get the primary affiliate link - update once in Supabase, updates everywhere
-  const affiliateLink = getPrimaryAffiliateLink(product)
+  const affiliateLink = product.affiliateLinks?.[0]?.url || 'https://amzn.to/example'
 
   const productData = {
     name: "Victorinox fibrox 8 inch chefs knife",
@@ -50,7 +75,7 @@ export default async function VictorinoxFibrox8InchReview() {
     dateAdded: "2025-10-13",
     lastUpdated: product.lastUpdated,
     images: {
-      primary: "/logo.png"
+      primary: "/og-image.jpg"
     }
   };
   return (
@@ -655,7 +680,7 @@ export default async function VictorinoxFibrox8InchReview() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Where to Buy</h2>
 
-          <p><strong>Updated:</strong> {new Date().toLocaleDateString('en-US', { 
+          <p><strong>Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', { 
             year: 'numeric', 
             month: 'long', 
             day: 'numeric' 
@@ -881,7 +906,7 @@ export default async function VictorinoxFibrox8InchReview() {
         <section className="mb-12">
           <div className="bg-gray-50 p-5 my-8 rounded-lg border-l-4 border-gray-500">
             <p className="my-2">
-              <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+              <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'

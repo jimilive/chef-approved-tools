@@ -1,14 +1,14 @@
 import { Tier1Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -28,7 +28,7 @@ const legacyProductData = {
   cons: ["Not iodized", "Can be hard to find in some regions"],
   dateAdded: "2025-10-13",
   lastUpdated: "2025-10-13",
-  images: { primary: "/logo.png" }
+  images: { primary: "/og-image.jpg" }
 };
 
 const faqData = [
@@ -44,14 +44,28 @@ const faqData = [
   { question: "How should I store kosher salt?", answer: "Salt doesn't spoil, but proper storage keeps it free-flowing and easy to use: Keep it dry in an airtight container or keep the box closed when not in use. Use a salt cellar by the stove for quick access. Avoid moisture—don't use wet hands to grab salt. Store at room temperature. Diamond Crystal doesn't clump as much as Morton's due to the lack of anti-caking agents, but it'll still absorb moisture in very humid environments." }
 ];
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/diamond-crystal-kosher-salt',
-  },
-
-  title: 'Diamond Crystal Salt: Pro Kitchen Essential',
-  description: 'Diamond Crystal Kosher Salt review: 18 years professional and home use. Chef tests texture, flavor, pinchability. Industry standard.',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/diamond-crystal-kosher-salt',
+    },
+    title: 'Diamond Crystal Salt: Pro Kitchen Essential',
+    description: 'Diamond Crystal Kosher Salt review: 18 years professional and home use. Chef tests texture, flavor, pinchability. Industry standard.',
+    openGraph: {
+      title: 'Diamond Crystal Kosher Salt: 18-Year Professional Review',
+      description: '18 years professional and home use. Industry standard for chefs',
+      images: [generateOGImageURL({
+        title: "Diamond Crystal Kosher Salt Review",
+        rating: 5.0,
+        testingPeriod: "18 Years Testing",
+        tier: 1
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/diamond-crystal-kosher-salt',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    }
+  }
+}
 
 export default async function DiamondCrystalKosherSaltReview() {
   // Get product data from Supabase
@@ -59,9 +73,6 @@ export default async function DiamondCrystalKosherSaltReview() {
   if (!product) {
     throw new Error('Product not found: diamond-crystal-kosher-salt')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -94,7 +105,7 @@ export default async function DiamondCrystalKosherSaltReview() {
       <h1>Diamond Crystal Kosher Salt: 18-Year Pro Review (2025)</h1>
 
       <p className="text-sm text-gray-600 mb-5">
-        By Scott Bradley, Professional Chef | Last Updated: {new Date().toLocaleDateString('en-US', {
+        By Scott Bradley, Professional Chef | Last Updated: {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'long',
           day: 'numeric'
@@ -466,7 +477,7 @@ export default async function DiamondCrystalKosherSaltReview() {
       {/* WHERE TO BUY SECTION */}
       <h2>Where to Buy Diamond Crystal Kosher Salt</h2>
 
-      <p><strong>Updated:</strong> {new Date().toLocaleDateString('en-US', {
+      <p><strong>Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
@@ -688,14 +699,14 @@ export default async function DiamondCrystalKosherSaltReview() {
       {/* FOOTER ELEMENTS */}
       <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
         <p className="my-2">
-          <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+          <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
           })}
         </p>
         <p className="my-2">
-          <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
+          <strong>🔍 Next Review:</strong> {new Date(new Date(productData.lastUpdated).getTime() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long'
           })}

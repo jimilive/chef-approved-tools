@@ -1,7 +1,6 @@
 import { Tier2Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
@@ -12,7 +11,8 @@ import FAQBox, { FAQGrid } from '@/components/review/FAQBox';
 import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox';
 import EmailCaptureBox from '@/components/review/EmailCaptureBox';
 import AuthorBio from '@/components/review/AuthorBio';
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -45,7 +45,7 @@ const legacyProductData = {
   dateAdded: "2025-10-13",
   lastUpdated: "2025-10-13",
   images: {
-    primary: "/logo.png"
+    primary: "/og-image.jpg"
   }
 };
 
@@ -84,20 +84,40 @@ const faqData = [
   }
 ];
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/nordic-ware-half-sheet-pan',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/nordic-ware-half-sheet-pan',
+    },
 
-  title: 'Nordic Ware Sheet Pan: 10-Year Baker Test',
-  description: 'Nordic Ware half sheet pan: 10-year test. Why bakers choose this pan. Durability, even heating, warp resistance tested. Professional baker\'s choice.',
-  openGraph: {
-    title: 'Nordic Ware Half Sheet Pan Review: 10 Years of Testing (2025)',
-    description: 'Professional chef tests Nordic Ware half sheet pan for 10 years. Complete review: durability, performance, why it&apos;s the baker&apos;s choice, comparison to alternatives.',
-    type: 'article',
-    url: 'https://www.chefapprovedtools.com/reviews/nordic-ware-half-sheet-pan',
-  },
-};
+    title: 'Nordic Ware Sheet Pan: 10-Year Baker Test',
+    description: 'Nordic Ware half sheet pan: 10-year test. Why bakers choose this pan. Durability, even heating, warp resistance tested. Professional baker\'s choice.',
+    openGraph: {
+      title: 'Nordic Ware Half Sheet Pan Review: 10 Years of Testing (2025)',
+      description: 'Professional chef tests Nordic Ware half sheet pan for 10 years. Complete review: durability, performance, why it&apos;s the baker&apos;s choice, comparison to alternatives.',
+      type: 'article',
+      url: 'https://www.chefapprovedtools.com/reviews/nordic-ware-half-sheet-pan',
+      siteName: 'Chef Approved Tools',
+      images: [generateOGImageURL({
+        title: "Nordic Ware Half Sheet Pan Review",
+        rating: 5.0,
+        testingPeriod: "10 Years of Testing",
+        tier: 2
+      })],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Nordic Ware Half Sheet Pan Review: 10 Years of Testing (2025)',
+      description: 'Professional chef tests Nordic Ware half sheet pan for 10 years.',
+      images: [generateOGImageURL({
+        title: "Nordic Ware Half Sheet Pan Review",
+        rating: 5.0,
+        testingPeriod: "10 Years of Testing",
+        tier: 2
+      })],
+    },
+  }
+}
 
 export default async function NordicWareHalfSheetPanReview() {
   // Get product data from Supabase
@@ -105,9 +125,6 @@ export default async function NordicWareHalfSheetPanReview() {
   if (!product) {
     throw new Error('Product not found: nordic-ware-half-sheet-pan')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -653,7 +670,7 @@ export default async function NordicWareHalfSheetPanReview() {
         {/* Footer & Last Updated */}
         <div className="bg-gray-50 p-5 my-8 rounded border-l-4 border-gray-500">
           <p className="my-2">
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+            <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'

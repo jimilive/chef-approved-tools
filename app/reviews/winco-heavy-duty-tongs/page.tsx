@@ -4,22 +4,48 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier3Badge } from '@/components/ReviewTierBadge'
 
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import Link from 'next/link'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 export const dynamic = 'force-dynamic'
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/winco-heavy-duty-tongs',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/winco-heavy-duty-tongs',
+    },
 
-  title: 'Winco Heavy-Duty Tongs: Restaurant Grade',
-  description: 'Professional chef review of Winco heavy duty tongs after 24 years of professional cooking. Restaurant-grade tongs at a fraction of the price.',
+    title: 'Winco Heavy-Duty Tongs: Restaurant Grade',
+    description: 'Professional chef review of Winco heavy duty tongs after 24 years of professional cooking. Restaurant-grade tongs at a fraction of the price.',
+    openGraph: {
+      title: 'Winco Heavy-Duty Tongs: 24-Year Professional Review',
+      description: 'Restaurant-grade tongs tested 24 years in professional kitchens.',
+      type: 'article',
+      url: 'https://www.chefapprovedtools.com/reviews/winco-heavy-duty-tongs',
+      siteName: 'Chef Approved Tools',
+      images: [generateOGImageURL({
+        title: "Winco Heavy-Duty Tongs Review",
+        rating: 5.0,
+        testingPeriod: "24 Years Professional Use",
+        tier: 3
+      })],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Winco Heavy-Duty Tongs: 24-Year Professional Review',
+      description: 'Restaurant-grade tongs tested 24 years.',
+      images: [generateOGImageURL({
+        title: "Winco Heavy-Duty Tongs Review",
+        rating: 5.0,
+        testingPeriod: "24 Years Professional Use",
+        tier: 3
+      })],
+    },
+  }
 }
 
 const legacyProductData = {
@@ -48,7 +74,7 @@ const legacyProductData = {
   expertRating: 5.0,
   expertOpinion: "Restaurant-quality tongs at budget price that have proven themselves through 24 years of professional kitchen use - buy three pairs and never worry about tongs again.",
   dateAdded: "2025-01-15",
-  lastUpdated: new Date().toISOString().split('T')[0]
+  lastUpdated: "2025-01-15"
 };
 
 const faqData = [
@@ -91,8 +117,6 @@ export default async function WincoHeavyDutyTongsReview() {
   if (!product) {
     throw new Error('Product not found: winco-heavy-duty-tongs')
   }
-
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   const productData = {
     ...legacyProductData,

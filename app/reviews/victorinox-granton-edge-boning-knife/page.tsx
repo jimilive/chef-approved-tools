@@ -5,22 +5,48 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import FAQBox, { FAQGrid, type FAQItem } from '@/components/review/FAQBox'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 // Force dynamic rendering (not static) since we fetch from Supabase
 export const dynamic = 'force-dynamic'
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-granton-edge-boning-knife',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-granton-edge-boning-knife',
+    },
 
-  title: 'Victorinox Granton Boning: Firm Blade Pro',
-  description: 'Victorinox Granton boning knife: 20-year pro test. Firm blade for trimming, deboning. Granton edge prevents sticking. Professional butcher tool.',
+    title: 'Victorinox Granton Boning: Firm Blade Pro',
+    description: 'Victorinox Granton boning knife: 20-year pro test. Firm blade for trimming, deboning. Granton edge prevents sticking. Professional butcher tool.',
+    openGraph: {
+      title: 'Victorinox Granton Edge Boning Knife: Professional Review',
+      description: 'Victorinox Granton boning knife tested 24 years professionally.',
+      type: 'article',
+      url: 'https://www.chefapprovedtools.com/reviews/victorinox-granton-edge-boning-knife',
+      siteName: 'Chef Approved Tools',
+      images: [generateOGImageURL({
+        title: "Victorinox Granton Boning Knife Review",
+        rating: 4.9,
+        testingPeriod: "24 Years Professional Use",
+        tier: 2
+      })],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Victorinox Granton Edge Boning Knife: Professional Review',
+      description: 'Victorinox Granton boning knife tested 24 years.',
+      images: [generateOGImageURL({
+        title: "Victorinox Granton Boning Knife Review",
+        rating: 4.9,
+        testingPeriod: "24 Years Professional Use",
+        tier: 2
+      })],
+    },
+  }
 }
 
 const faqData = [
@@ -65,8 +91,7 @@ export default async function VictorinoxGrantonEdgeBoningKnifeReview() {
     throw new Error('Product not found: victorinox-granton-edge-boning-knife')
   }
 
-  // Get the primary affiliate link - update once in Supabase, updates everywhere
-  const affiliateLink = getPrimaryAffiliateLink(product)
+  const affiliateLink = product.affiliateLinks?.[0]?.url || 'https://amzn.to/example'
 
   const productData = {
     name: "Victorinox 6-Inch Granton Edge Flexible Boning Knife",

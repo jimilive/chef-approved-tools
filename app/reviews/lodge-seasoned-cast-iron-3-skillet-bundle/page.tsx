@@ -1,15 +1,16 @@
 import Link from 'next/link'
-import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, AlertTriangle, Thermometer, Flame } from 'lucide-react'
+import { Star, CheckCircle, XCircle, Thermometer, Flame, Shield, DollarSign } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
+import type { Metadata } from 'next'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -105,18 +106,36 @@ const faqData = [
   { question: "Can I use Lodge cast iron on a glass cooktop?", answer: "Yes, but with extra care. Cast iron works on glass cooktops but requires careful handling to avoid damage. Safe usage tips: lift the skillet rather than sliding it, check the bottom is smooth and free of rough spots, start with lower heat settings (cast iron heats slowly), and never drop or set down roughly. Important note: The weight of cast iron combined with the fragility of glass cooktops means extra caution is required. Many glass cooktop users prefer lighter cookware. Alternative: If you're concerned about your glass cooktop, consider using cast iron primarily on gas burners or in the oven." },
 ];
 
-export const metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/lodge-seasoned-cast-iron-3-skillet-bundle',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/lodge-seasoned-cast-iron-3-skillet-bundle',
+    },
 
-  title: "Lodge Cast Iron 3-Skillet: Home Use Review",
-  description: "Lodge cast iron 3-skillet set: 7 years tested. Pre-seasoned 12\", 10.25\", 8\" pans. Buy-it-for-life quality under $100. Perfect heat retention.",
-  keywords: ["Lodge cast iron skillet", "cast iron skillet set", "Lodge 3 skillet bundle", "cast iron cookware", "restaurant cast iron"],
-  openGraph: {
-    title: "Lodge Cast Iron 3-Skillet Bundle: Professional Review",
-    description: "Restaurant manager's honest review of the Lodge seasoned cast iron skillet set",
-    images: ['/logo.png']
+    title: "Lodge Cast Iron 3-Skillet: Home Use Review",
+    description: "Lodge cast iron 3-skillet set: 7 years tested. Pre-seasoned 12\", 10.25\", 8\" pans. Buy-it-for-life quality under $100. Perfect heat retention.",
+    keywords: ["Lodge cast iron skillet", "cast iron skillet set", "Lodge 3 skillet bundle", "cast iron cookware", "restaurant cast iron"],
+    openGraph: {
+      title: "Lodge Cast Iron 3-Skillet Bundle: Professional Review",
+      description: "Restaurant manager's honest review of the Lodge seasoned cast iron skillet set",
+      images: [generateOGImageURL({
+        title: "Lodge Cast Iron 3-Skillet Bundle Review",
+        rating: 4.8,
+        testingPeriod: "7 Years Weekly Home Testing",
+        tier: 2
+      })]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: "Lodge Cast Iron 3-Skillet Bundle: Professional Review",
+      description: "Restaurant manager's honest review of the Lodge seasoned cast iron skillet set",
+      images: [generateOGImageURL({
+        title: "Lodge Cast Iron 3-Skillet Bundle Review",
+        rating: 4.8,
+        testingPeriod: "7 Years Weekly Home Testing",
+        tier: 2
+      })]
+    }
   }
 }
 
@@ -126,9 +145,6 @@ export default async function Lodge3SkilletBundleReview() {
   if (!product) {
     throw new Error('Product not found: lodge-seasoned-cast-iron-3-skillet-bundle')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -644,7 +660,7 @@ export default async function Lodge3SkilletBundleReview() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Where to Buy</h2>
 
-          <p className="mb-4"><strong>Updated:</strong> {new Date().toLocaleDateString('en-US', {
+          <p className="mb-4"><strong>Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -1123,7 +1139,7 @@ export default async function Lodge3SkilletBundleReview() {
         {/* Footer Transparency Elements */}
         <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
           <p className="my-2">
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+            <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'

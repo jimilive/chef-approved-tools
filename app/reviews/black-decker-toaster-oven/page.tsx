@@ -7,24 +7,34 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
 
-export const metadata: Metadata = {
-  title: 'Black+Decker Toaster Oven: 48-Year Review',
-  description: 'Black+Decker toaster oven review: 48 years across 4 models (1977-present). Professional chef tests durability and performance.',
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/black-decker-toaster-oven',
-  },
-  openGraph: {
-    title: 'Black+Decker Toaster Oven Review | 48-Year Test',
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Black+Decker Toaster Oven: 48-Year Review',
     description: 'Black+Decker toaster oven review: 48 years across 4 models (1977-present). Professional chef tests durability and performance.',
-    type: 'article',
-    url: 'https://www.chefapprovedtools.com/reviews/black-decker-toaster-oven',
-  },
-};
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/black-decker-toaster-oven',
+    },
+    openGraph: {
+      title: 'Black+Decker Toaster Oven Review | 48-Year Test',
+      description: 'Black+Decker toaster oven review: 48 years across 4 models (1977-present). Professional chef tests durability and performance.',
+      images: [generateOGImageURL({
+        title: "Black+Decker Toaster Oven Review",
+        rating: 5.0,
+        testingPeriod: "48 Years Testing",
+        tier: 2
+      })],
+      type: 'article',
+      url: 'https://www.chefapprovedtools.com/reviews/black-decker-toaster-oven',
+      siteName: 'Chef Approved Tools',
+    },
+  }
+}
 
 const legacyProductData = {
   name: "Black+Decker 4-Slice Toaster Oven",
@@ -56,7 +66,7 @@ const legacyProductData = {
   expertRating: 5.0,
   expertOpinion: "After 48 years of continuous use across 4 different models, Black+Decker has proven exceptional reliability. Each model lasted 5-18 years of daily service—that's not luck, that's consistent quality engineering.",
   dateAdded: "2025-01-15",
-  lastUpdated: new Date().toISOString().split('T')[0]
+  lastUpdated: "2025-01-15"
 };
 
 const faqData = [
@@ -108,9 +118,6 @@ export default async function BlackDeckerToasterOvenReview() {
   if (!product) {
     throw new Error('Product not found: black-decker-toaster-oven')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -1116,14 +1123,14 @@ export default async function BlackDeckerToasterOvenReview() {
         {/* Footer & Last Updated - WITH CONTACT LINK ADDED */}
         <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-600">
           <p className="my-2.5">
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+            <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'
             })}
           </p>
           <p className="my-2.5">
-            <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
+            <strong>🔍 Next Review:</strong> {new Date(new Date(productData.lastUpdated).getTime() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long'
             })}

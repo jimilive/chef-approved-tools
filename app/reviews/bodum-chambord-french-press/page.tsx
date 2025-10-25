@@ -6,9 +6,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -26,7 +26,7 @@ const legacyProductData = {
   dateAdded: "2025-10-13",
   lastUpdated: "2025-10-13",
   images: {
-    primary: "/logo.png"
+    primary: "https://www.chefapprovedtools.com/og-image.jpg"
   }
 };
 
@@ -73,13 +73,28 @@ const faqData = [
   }
 ];
 
-export const metadata = {
-  title: 'Bodum Chambord: 18-Year French Press Test',
-  description: 'Professional chef tests Bodum French Press for 18 years (6 years commercial kitchen, 18 years at home). Complete review: durability, coffee quality, value.',
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/bodum-chambord-french-press',
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Bodum Chambord: 18-Year French Press Test',
+    description: 'Professional chef tests Bodum French Press for 18 years (6 years commercial kitchen, 18 years at home). Complete review: durability, coffee quality, value.',
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/bodum-chambord-french-press',
+    },
+    openGraph: {
+      title: 'Bodum Chambord French Press: 18-Year Professional Review',
+      description: 'Professional chef tests Bodum French Press for 18 years',
+      images: [generateOGImageURL({
+        title: "Bodum Chambord French Press Review",
+        rating: 4.5,
+        testingPeriod: "18 Years Testing",
+        tier: 1
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/bodum-chambord-french-press',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    }
+  }
+}
 
 export default async function BodumChambordFrenchPressReview() {
   // Get product data from Supabase
@@ -87,9 +102,6 @@ export default async function BodumChambordFrenchPressReview() {
   if (!product) {
     throw new Error('Product not found: bodum-chambord-french-press')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -121,7 +133,7 @@ export default async function BodumChambordFrenchPressReview() {
       <h1>Bodum Chambord French Press: 24-Year Pro Review</h1>
 
       <p className="text-sm text-gray-600 mb-5">
-        By Scott Bradley, Professional Chef | Last Updated: {new Date().toLocaleDateString('en-US', {
+        By Scott Bradley, Professional Chef | Last Updated: {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'long',
           day: 'numeric'
@@ -539,14 +551,14 @@ export default async function BodumChambordFrenchPressReview() {
       {/* FOOTER ELEMENTS */}
       <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
         <p className="my-2.5">
-          <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+          <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
           })}
         </p>
         <p className="my-2.5">
-          <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
+          <strong>🔍 Next Review:</strong> {new Date(new Date(productData.lastUpdated).getTime() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long'
           })}

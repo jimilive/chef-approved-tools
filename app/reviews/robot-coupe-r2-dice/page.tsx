@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, AlertTriangle } from 'lucide-react'
+import { Star, CheckCircle, XCircle } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
@@ -7,11 +7,11 @@ import PriceDisplay from '@/components/PriceDisplay'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -102,31 +102,49 @@ const faqData = [
   }
 ]
 
-export const metadata = {
-  title: "Robot Coupe R2: Commercial Prep Powerhouse",
-  description: "Robot Coupe R2 Dice: 3-year commercial test. 2 HP motor, continuous feed. Saves hours daily in restaurant prep. Professional review.",
-  keywords: ["Robot Coupe R2 Dice", "commercial food processor", "restaurant equipment", "professional kitchen", "food prep equipment", "continuous feed processor"],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Robot Coupe R2: Commercial Prep Powerhouse",
+    description: "Robot Coupe R2 Dice: 3-year commercial test. 2 HP motor, continuous feed. Saves hours daily in restaurant prep. Professional review.",
+    keywords: ["Robot Coupe R2 Dice", "commercial food processor", "restaurant equipment", "professional kitchen", "food prep equipment", "continuous feed processor"],
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
-  },
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/robot-coupe-r2-dice',
-  },
-  openGraph: {
-    title: "Robot Coupe R2 Dice: The Commercial Food Processor That Transformed Our Prep Kitchen",
-    description: "Professional review after 3 years of intensive testing in high-volume restaurant prep kitchen",
-    images: ['/logo.png'],
-    url: 'https://www.chefapprovedtools.com/reviews/robot-coupe-r2-dice',
-    type: 'article',
-    siteName: 'Chef Approved Tools',
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/robot-coupe-r2-dice',
+    },
+    openGraph: {
+      title: "Robot Coupe R2 Dice: The Commercial Food Processor That Transformed Our Prep Kitchen",
+      description: "Professional review after 3 years of intensive testing in high-volume restaurant prep kitchen",
+      images: [generateOGImageURL({
+        title: "Robot Coupe R2 Dice Review",
+        rating: 4.9,
+        testingPeriod: "3 Years Commercial Testing",
+        tier: 1
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/robot-coupe-r2-dice',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: "Robot Coupe R2 Dice: Commercial Food Processor Review",
+      description: "3 years of intensive commercial testing",
+      images: [generateOGImageURL({
+        title: "Robot Coupe R2 Dice Review",
+        rating: 4.9,
+        testingPeriod: "3 Years Commercial Testing",
+        tier: 1
+      })],
+    },
   }
 }
 
@@ -136,9 +154,6 @@ export default async function RobotCoupeR2DiceReview() {
   if (!product) {
     throw new Error('Product not found: robot-coupe-r2-dice')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -992,7 +1007,7 @@ export default async function RobotCoupeR2DiceReview() {
         <section className="mb-8">
           <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
             <p className="my-2.5">
-              <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+              <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign, AlertTriangle } from 'lucide-react'
+import { Star, CheckCircle, XCircle } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { BudgetVsPremiumTeaser } from '@/components/BudgetVsPremiumMagnet'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
@@ -7,7 +7,6 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import type { Metadata } from 'next'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
@@ -15,7 +14,8 @@ import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/Re
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
 import FAQBox, { FAQGrid, type FAQItem } from '@/components/review/FAQBox'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -329,31 +329,38 @@ function convertFAQsForSchema(faqs: FAQItem[]): Array<{question: string, answer:
   });
 }
 
-export const metadata = {
-  title: "Vitamix 5200 Blender: 5-Year Power Test",
-  description: "Vitamix 5200 tested 5+ years: Worth the premium price? Commercial power, durability tested. Complete blender review: versatility, ROI analysis, alternatives.",
-  keywords: ["Vitamix 5200 review", "Vitamix blender", "professional blender", "restaurant equipment", "commercial blender", "smoothie blender"],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Vitamix 5200 Blender: 5-Year Power Test",
+    description: "Vitamix 5200 tested 5+ years: Worth the premium price? Commercial power, durability tested. Complete blender review: versatility, ROI analysis, alternatives.",
+    keywords: ["Vitamix 5200 review", "Vitamix blender", "professional blender", "restaurant equipment", "commercial blender", "smoothie blender"],
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
-  },
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/vitamix-5200',
-  },
-  openGraph: {
-    title: "Vitamix 5200 Blender: Professional Review After 5+ Years Restaurant Testing",
-    description: "Professional Vitamix blender review after 5 years powering Purple Cafe's smoothie program",
-    images: ['/logo.png'],
-    url: 'https://www.chefapprovedtools.com/reviews/vitamix-5200',
-    type: 'article',
-    siteName: 'Chef Approved Tools',
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/vitamix-5200',
+    },
+    openGraph: {
+      title: "Vitamix 5200 Blender: Professional Review After 5+ Years Restaurant Testing",
+      description: "Professional Vitamix blender review after 5 years powering Purple Cafe's smoothie program",
+      images: [generateOGImageURL({
+        title: "Vitamix 5200 Blender Review",
+        rating: 4.8,
+        testingPeriod: "5+ Years Professional Testing",
+        tier: 1
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/vitamix-5200',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    }
   }
 }
 
@@ -363,9 +370,6 @@ export default async function Vitamix5200Review() {
   if (!product) {
     throw new Error('Product not found: vitamix-5200')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -897,10 +901,10 @@ export default async function Vitamix5200Review() {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Where to Buy</h2>
 
-          <p><strong>Updated:</strong> {new Date().toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
+          <p><strong>Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
           })}</p>
 
           <div className="merchant-ctas bg-gray-50 p-6 my-6 rounded-lg">
@@ -1159,14 +1163,14 @@ export default async function Vitamix5200Review() {
         <section className="mb-8">
           <div className="bg-gray-50 p-5 my-8 rounded-lg border-l-4 border-gray-500">
             <p className="my-2">
-              <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+              <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
               })}
             </p>
             <p className="my-2">
-              <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
+              <strong>🔍 Next Review:</strong> {new Date(new Date(productData.lastUpdated).getTime() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long'
               })}

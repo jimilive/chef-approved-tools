@@ -5,22 +5,48 @@ import { Tier2Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-swivel-peeler',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-swivel-peeler',
+    },
 
-  title: 'OXO Swivel Peeler: Ergonomic Design Winner',
-  description: 'OXO swivel peeler: 10-year pro test. Ergonomic design, sharp blade, comfortable grip. Best peeler for extended use. Kitchen MVP under $10. Lefty-friendly.',
+    title: 'OXO Swivel Peeler: Ergonomic Design Winner',
+    description: 'OXO swivel peeler: 10-year pro test. Ergonomic design, sharp blade, comfortable grip. Best peeler for extended use. Kitchen MVP under $10. Lefty-friendly.',
+    openGraph: {
+      title: 'OXO Good Grips Swivel Peeler: 24-Year Professional Review',
+      description: 'OXO swivel peeler tested 24 years. Ergonomic and reliable.',
+      type: 'article',
+      url: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-swivel-peeler',
+      siteName: 'Chef Approved Tools',
+      images: [generateOGImageURL({
+        title: "OXO Good Grips Swivel Peeler Review",
+        rating: 5.0,
+        testingPeriod: "24 Years Professional Use",
+        tier: 2
+      })],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'OXO Good Grips Swivel Peeler: 24-Year Professional Review',
+      description: 'OXO swivel peeler tested 24 years professionally.',
+      images: [generateOGImageURL({
+        title: "OXO Good Grips Swivel Peeler Review",
+        rating: 5.0,
+        testingPeriod: "24 Years Professional Use",
+        tier: 2
+      })],
+    },
+  }
 }
 
 const legacyProductData = {
@@ -95,9 +121,6 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
   if (!product) {
     throw new Error('Product not found: oxo-good-grips-swivel-peeler')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {

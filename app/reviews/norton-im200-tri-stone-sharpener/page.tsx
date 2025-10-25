@@ -1,7 +1,6 @@
 import { Tier1Badge } from '@/components/ReviewTierBadge';
 import FTCDisclosure from '@/components/FTCDisclosure';
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
@@ -12,7 +11,8 @@ import FAQBox, { FAQGrid } from '@/components/review/FAQBox';
 import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox';
 import EmailCaptureBox from '@/components/review/EmailCaptureBox';
 import AuthorBio from '@/components/review/AuthorBio';
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -30,7 +30,7 @@ const legacyProductData = {
   dateAdded: "2025-10-13",
   lastUpdated: "2025-10-13",
   images: {
-    primary: "/logo.png"
+    primary: "/og-image.jpg"
   }
 };
 
@@ -69,20 +69,40 @@ const faqData = [
   }
 ];
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/norton-im200-tri-stone-sharpener',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/norton-im200-tri-stone-sharpener',
+    },
 
-  title: 'Norton Tri-Stone: Restaurant Sharpener Pro',
-  description: 'Professional chef tests Norton Tri-Stone sharpener for 6 years in 200+ cover restaurant. Complete review: sharpening performance, durability, technique guide.',
-  openGraph: {
-    title: 'Norton IM200 Tri-Stone Sharpener Review: 6-Year Restaurant Test (2025)',
+    title: 'Norton Tri-Stone: Restaurant Sharpener Pro',
     description: 'Professional chef tests Norton Tri-Stone sharpener for 6 years in 200+ cover restaurant. Complete review: sharpening performance, durability, technique guide.',
-    type: 'article',
-    url: 'https://www.chefapprovedtools.com/reviews/norton-im200-tri-stone-sharpener',
-  },
-};
+    openGraph: {
+      title: 'Norton IM200 Tri-Stone Sharpener Review: 6-Year Restaurant Test (2025)',
+      description: 'Professional chef tests Norton Tri-Stone sharpener for 6 years in 200+ cover restaurant. Complete review: sharpening performance, durability, technique guide.',
+      type: 'article',
+      url: 'https://www.chefapprovedtools.com/reviews/norton-im200-tri-stone-sharpener',
+      siteName: 'Chef Approved Tools',
+      images: [generateOGImageURL({
+        title: "Norton IM200 Tri-Stone Sharpener Review",
+        rating: 5.0,
+        testingPeriod: "6 Years Restaurant Testing",
+        tier: 1
+      })],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Norton IM200 Tri-Stone Sharpener Review: 6-Year Restaurant Test',
+      description: 'Professional chef tests Norton Tri-Stone sharpener for 6 years in restaurant.',
+      images: [generateOGImageURL({
+        title: "Norton IM200 Tri-Stone Sharpener Review",
+        rating: 5.0,
+        testingPeriod: "6 Years Restaurant Testing",
+        tier: 1
+      })],
+    },
+  }
+}
 
 export default async function NortonTriStoneSharpenerReview() {
   // Get product data from Supabase
@@ -90,9 +110,6 @@ export default async function NortonTriStoneSharpenerReview() {
   if (!product) {
     throw new Error('Product not found: norton-im200-tri-stone-sharpener')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -688,7 +705,7 @@ export default async function NortonTriStoneSharpenerReview() {
         {/* Footer & Last Updated */}
         <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
           <p className="my-2.5">
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+            <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'

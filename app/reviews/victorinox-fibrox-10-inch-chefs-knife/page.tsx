@@ -9,11 +9,11 @@ import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import FAQBox, { FAQGrid, type FAQItem } from '@/components/review/FAQBox'
 
 import AffiliateButton from '@/components/AffiliateButton';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 const faqData = [
   {
@@ -60,13 +60,39 @@ const faqData = [
 // Force dynamic rendering (not static) since we fetch from Supabase
 export const dynamic = 'force-dynamic'
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-10-inch-chefs-knife',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-10-inch-chefs-knife',
+    },
 
-  title: 'Victorinox 10" Chef: Large Hand Pro Choice',
-  description: 'Victorinox 10" chef\'s knife: 10-year pro test. Perfect for larger hands, big cutting tasks. Swiss precision, commercial durability. Best value in chef knives.',
+    title: 'Victorinox 10" Chef: Large Hand Pro Choice',
+    description: 'Victorinox 10" chef\'s knife: 10-year pro test. Perfect for larger hands, big cutting tasks. Swiss precision, commercial durability. Best value in chef knives.',
+    openGraph: {
+      title: 'Victorinox 10" Fibrox Chef\'s Knife: Professional Review',
+      description: 'Victorinox 10" chef\'s knife tested 20 years. Perfect for larger hands.',
+      type: 'article',
+      url: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-10-inch-chefs-knife',
+      siteName: 'Chef Approved Tools',
+      images: [generateOGImageURL({
+        title: "Victorinox 10\" Fibrox Chef's Knife Review",
+        rating: 4.8,
+        testingPeriod: "20 Years Professional Use",
+        tier: 1
+      })],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Victorinox 10" Fibrox Chef\'s Knife: Professional Review',
+      description: 'Victorinox 10" chef\'s knife tested 20 years.',
+      images: [generateOGImageURL({
+        title: "Victorinox 10\" Fibrox Chef's Knife Review",
+        rating: 4.8,
+        testingPeriod: "20 Years Professional Use",
+        tier: 1
+      })],
+    },
+  }
 }
 
 export default async function VictorinoxFibrox10InchReview() {
@@ -76,8 +102,7 @@ export default async function VictorinoxFibrox10InchReview() {
     throw new Error('Product not found: victorinox-fibrox-10-inch-chefs-knife')
   }
 
-  // Get the primary affiliate link - update once in Supabase, updates everywhere
-  const affiliateLink = getPrimaryAffiliateLink(product)
+  const affiliateLink = product.affiliateLinks?.[0]?.url || 'https://amzn.to/example'
 
   const productData = {
     name: "Victorinox fibrox 10 inch chefs knife",
@@ -92,7 +117,7 @@ export default async function VictorinoxFibrox10InchReview() {
     dateAdded: "2025-10-13",
     lastUpdated: product.lastUpdated,
     images: {
-      primary: "/logo.png"
+      primary: "/og-image.jpg"
     }
   };
 
@@ -445,7 +470,7 @@ export default async function VictorinoxFibrox10InchReview() {
         {/* WHERE TO BUY SECTION */}
         <h2>Where to Buy</h2>
 
-        <p><strong>Updated:</strong> {new Date().toLocaleDateString('en-US', { 
+        <p><strong>Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', { 
           year: 'numeric', 
           month: 'long', 
           day: 'numeric' 
@@ -630,7 +655,7 @@ export default async function VictorinoxFibrox10InchReview() {
         {/* FOOTER ELEMENTS */}
         <div className="bg-gray-50 p-5 my-8 rounded-lg border-l-4 border-gray-500">
           <p className="my-2">
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+            <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'

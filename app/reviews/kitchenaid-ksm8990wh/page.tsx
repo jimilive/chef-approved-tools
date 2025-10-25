@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, DollarSign } from 'lucide-react'
+import type { Metadata } from 'next'
+import { Star, CheckCircle, XCircle } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateButton from '@/components/AffiliateButton'
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
@@ -12,7 +12,8 @@ import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/Re
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
 import FAQBox, { FAQGrid, type FAQItem } from '@/components/review/FAQBox'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug } from '@/lib/product-helpers'
+import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -96,31 +97,38 @@ const faqData = [
   }
 ]
 
-export const metadata = {
-  title: "KitchenAid Commercial: Test NSF",
-  description: "KitchenAid Commercial mixer review: 18 months restaurant testing. Chef reviews 1.3HP motor, NSF cert, 8-qt capacity, durability, ROI.",
-  keywords: ["KitchenAid mixer", "KitchenAid stand mixer", "KitchenAid commercial mixer", "professional mixer", "NSF certified mixer", "kitchen appliances"],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "KitchenAid Commercial: Test NSF",
+    description: "KitchenAid Commercial mixer review: 18 months restaurant testing. Chef reviews 1.3HP motor, NSF cert, 8-qt capacity, durability, ROI.",
+    keywords: ["KitchenAid mixer", "KitchenAid stand mixer", "KitchenAid commercial mixer", "professional mixer", "NSF certified mixer", "kitchen appliances"],
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
-  },
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/reviews/kitchenaid-ksm8990wh',
-  },
-  openGraph: {
-    title: "KitchenAid Commercial Mixer: Professional Review After 18 Months Commercial Use",
-    description: "Professional KitchenAid stand mixer review after 18 months commercial kitchen testing",
-    images: ['/logo.png'],
-    url: 'https://www.chefapprovedtools.com/reviews/kitchenaid-ksm8990wh',
-    type: 'article',
-    siteName: 'Chef Approved Tools',
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/kitchenaid-ksm8990wh',
+    },
+    openGraph: {
+      title: "KitchenAid Commercial Mixer: Professional Review After 18 Months Commercial Use",
+      description: "Professional KitchenAid stand mixer review after 18 months commercial kitchen testing",
+      images: [generateOGImageURL({
+        title: "KitchenAid Commercial Mixer Review",
+        rating: 5.0,
+        testingPeriod: "18 Months Restaurant Testing",
+        tier: 1
+      })],
+      url: 'https://www.chefapprovedtools.com/reviews/kitchenaid-ksm8990wh',
+      type: 'article',
+      siteName: 'Chef Approved Tools',
+    }
   }
 }
 
@@ -130,9 +138,6 @@ export default async function KitchenAidReviewPage() {
   if (!product) {
     throw new Error('Product not found: kitchenaid-ksm8990wh')
   }
-
-  // Get the primary affiliate link
-  const affiliateLink = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -820,7 +825,7 @@ export default async function KitchenAidReviewPage() {
         {/* Footer Transparency Elements */}
         <div className="bg-gray-50 p-5 my-8 rounded-lg border-l-4 border-gray-500">
           <p className="my-2">
-            <strong>📅 Last Updated:</strong> {new Date().toLocaleDateString('en-US', {
+            <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'
