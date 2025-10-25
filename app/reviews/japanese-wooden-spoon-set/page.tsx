@@ -152,7 +152,7 @@ export default async function JapaneseWoodenSpoonSetReview() {
           <p className="text-gray-700 text-lg leading-relaxed">
             After 3 years and over 100 dishwasher cycles, these wooden spoons still look and perform like new.
             The combination of genuine dishwasher durability, non-stick safe performance, and exceptional value ($10-12 for six spoons)
-            makes them indispensable. I've purchased five sets—two for myself, three as gifts.
+            makes them indispensable. I&rsquo;ve purchased five sets—two for myself, three as gifts.
           </p>
         </div>
 
@@ -168,8 +168,8 @@ export default async function JapaneseWoodenSpoonSetReview() {
 
             <p>
               What started as a $10 Amazon purchase became so fundamental to my cooking that I now own two sets
-              (12 spoons total) and have given three more sets as gifts. The reason? They're genuinely dishwasher safe.
-              Not "technically dishwasher safe but hand-wash recommended"—actually dishwasher safe through 100+ cycles
+              (12 spoons total) and have given three more sets as gifts. The reason? They&rsquo;re genuinely dishwasher safe.
+              Not &ldquo;technically dishwasher safe but hand-wash recommended&rdquo;—actually dishwasher safe through 100+ cycles
               over 3 years with zero degradation.
             </p>
 
@@ -188,7 +188,7 @@ export default async function JapaneseWoodenSpoonSetReview() {
           <div className="prose prose-lg max-w-none text-gray-700">
             <h3>The Dishwasher Durability Test Nobody Expected</h3>
             <p>
-              I bought these with zero expectation they'd survive the dishwasher. Every wooden utensil I'd owned previously
+              I bought these with zero expectation they&rsquo;d survive the dishwasher. Every wooden utensil I&rsquo;d owned previously
               eventually cracked, warped, or developed rough surfaces. Traditional advice says hand-wash wooden spoons,
               oil them occasionally, treat them gently.
             </p>
@@ -206,7 +206,7 @@ export default async function JapaneseWoodenSpoonSetReview() {
               <li>Scrambling eggs in non-stick without damaging the coating</li>
               <li>Stirring sauces—no metallic taste transfer in acidic ingredients</li>
               <li>Everyday stirring in cast iron without compromising seasoning</li>
-              <li>Rice, pasta, grains, soups—routine tasks that don't scratch cookware</li>
+              <li>Rice, pasta, grains, soups—routine tasks that don&rsquo;t scratch cookware</li>
             </ul>
 
             <h3>Where the 9-Inch Size Becomes a Limitation</h3>
@@ -229,7 +229,7 @@ export default async function JapaneseWoodenSpoonSetReview() {
               <ul className="space-y-2 text-gray-700">
                 <li>✓ Genuinely dishwasher safe (100+ cycles tested)</li>
                 <li>✓ Perfect 9-inch size for everyday cooking</li>
-                <li>✓ Won't scratch non-stick or cast iron</li>
+                <li>✓ Won&rsquo;t scratch non-stick or cast iron</li>
                 <li>✓ No metallic taste transfer</li>
                 <li>✓ Six identical spoons for consistency</li>
                 <li>✓ Exceptional value at $10-12</li>
@@ -259,7 +259,7 @@ export default async function JapaneseWoodenSpoonSetReview() {
               <li>• Cook daily and want utensils that survive repeated dishwasher cycles</li>
               <li>• Use non-stick cookware and need scratch-safe utensils</li>
               <li>• Cook with cast iron and want to preserve seasoning</li>
-              <li>• Prepare acidic sauces and don't want metallic taste transfer</li>
+              <li>• Prepare acidic sauces and don&rsquo;t want metallic taste transfer</li>
               <li>• Want consistent performance over size variety</li>
               <li>• Need gift-worthy tools at accessible prices</li>
             </ul>
@@ -281,7 +281,7 @@ export default async function JapaneseWoodenSpoonSetReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Try These Spoons?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            At $10-12 for six spoons, these represent exceptional value. I've purchased five sets because they
+            At $10-12 for six spoons, these represent exceptional value. I&rsquo;ve purchased five sets because they
             consistently outperform wooden spoons costing three times as much. The dishwasher durability alone makes
             them worth trying.
           </p>
@@ -344,7 +344,7 @@ export default async function JapaneseWoodenSpoonSetReview() {
 
           <p className="text-lg text-slate-700 mb-6 text-center max-w-2xl mx-auto">
             After 3 years of daily cooking and over 100 dishwasher cycles, these wooden spoons have earned permanent
-            status in my kitchen. The fact that I've purchased five sets speaks to their reliability and my confidence
+            status in my kitchen. The fact that I&rsquo;ve purchased five sets speaks to their reliability and my confidence
             recommending them to other home cooks.
           </p>
 
