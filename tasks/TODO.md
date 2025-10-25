@@ -85,7 +85,11 @@
 - [ ] Guest post on 2-3 cooking blogs (provide value, link back)
 
 ### Analytics & Optimization
-- [ ] Configure **GA4 custom events** for affiliate click tracking
+- [ ] **GA4: Set up key events (conversions)** - DO IN 2-3 DAYS (Oct 27-28)
+  - Wait for events to populate in Admin → Events
+  - Mark `affiliate_click` as key event (CRITICAL - this tracks conversions!)
+  - Mark `newsletter_signup` as key event
+  - See: `/GA4_SETUP_ASSISTANT_GUIDE.md` for details
 - [ ] Implement **IndexNow** for instant search engine indexing
 - [ ] Add HowTo schema to 10-15 applicable blog posts
 - [ ] Review cookie consent implementation (necessary only vs full tracking)
