@@ -74,40 +74,30 @@ const faqData = [
 ];
 
 export default async function JapaneseWoodenSpoonSetReview() {
-  const productData = {
-    name: "6 Pieces Japanese Natural Plant Ellipse Wooden Ladle Spoon Set",
-    slug: "japanese-wooden-spoon-set",
-    brand: "Japanese Natural Plant",
-    model: "Ellipse Wooden Spoon Set",
-    category: "Hand Tools - Wooden Utensils",
-    rating: 4.6,
-    reviewCount: 1,
-    pros: [
-      "Dishwasher safe after 3 years of testing (100+ cycles with zero degradation)",
-      "9-inch length provides excellent control without overwhelming small pans",
-      "Ellipse shape moves food efficiently without scratching non-stick or cast iron",
-      "Natural wood eliminates metallic taste transfer in acidic sauces",
-      "Six identical pieces mean consistent performance across your entire set",
-      "Affordable price point ($10-12) makes gifting and replacement cost-effective"
-    ],
-    cons: [
-      "9-inch length causes spoons to fall into large stockpots or Dutch ovens",
-      "Smaller spoon surface moves less volume than traditional ladles",
-      "No hanging hole for pegboard or hook storage systems",
-      "Lighter color wood may show staining from turmeric or tomato-based sauces",
-      "Six identical pieces provide no size variety for different cooking tasks"
-    ],
-    affiliateLinks: [{
-      retailer: "Amazon",
-      url: "https://amzn.to/4htP0HE"
-    }],
-    expertRating: 4.6,
-    expertOpinion: "After 3 years of daily home cooking and over 100 dishwasher cycles, these Japanese wooden spoons replaced nearly every other stirring utensil in my kitchen.",
-    dateAdded: "2025-10-25",
-    lastUpdated: "2025-10-25"
-  };
+  // Get product data from centralized Supabase database - SINGLE SOURCE OF TRUTH
+  const product = await getProductBySlug('japanese-wooden-spoon-set')
+  if (!product) {
+    throw new Error('Product not found: japanese-wooden-spoon-set')
+  }
 
-  const affiliateLink = "https://amzn.to/4htP0HE";
+  const affiliateLink = product.affiliateLinks?.[0]?.url || 'https://amzn.to/4htP0HE'
+
+  const productData = {
+    name: product.name,
+    slug: product.slug,
+    brand: product.brand,
+    model: product.model,
+    category: product.category,
+    rating: product.expertRating || 4.6,
+    reviewCount: 1,
+    pros: product.pros,
+    cons: product.cons,
+    affiliateLinks: product.affiliateLinks,
+    expertRating: product.expertRating,
+    expertOpinion: product.expertOpinion,
+    dateAdded: product.dateAdded,
+    lastUpdated: product.lastUpdated
+  };
 
   const breadcrumbs = [
     { name: "Home", url: "https://www.chefapprovedtools.com" },
