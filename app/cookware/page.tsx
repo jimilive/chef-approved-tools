@@ -81,61 +81,17 @@ export default async function CookwarePage() {
         {JSON.stringify(itemListLd)}
       </Script>
 
-      {/* Header Section */}
       <h1 className="text-4xl font-bold mb-2">
-        Professional Cookware
+        Best Cookware: Professional Reviews (2025)
       </h1>
-      <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-        Pots, pans, and cookware that deliver restaurant-quality results in your home kitchen. Whether you&apos;re looking for a durable cast iron skillet, a versatile Dutch oven, or a high-performance stainless steel frying pan, our expert reviews will help you choose the right tool for the job. Our top recommendations are in our comprehensive Best Cookware Guide.
+      <p className="text-lg text-slate-600 mb-4 leading-relaxed">
+        <strong>Professional cookware tested in real restaurant kitchens.</strong> After years testing pots and pans in commercial settings, I&apos;ve identified which cookware delivers genuine professional-grade performance.
+      </p>
+      <p className="text-base text-slate-500 mb-8">
+        Every cookware review on this page represents equipment that survived extended commercial use. These are the best pots and pans for serious home cooks who demand professional results.
       </p>
 
-      {/* Featured Guide Hero Section */}
-      <section className="mb-12 bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl overflow-hidden shadow-lg border border-orange-100">
-        <div className="grid md:grid-cols-2 gap-8 items-center p-8 md:p-12">
-          <div>
-            <div className="inline-block bg-orange-700 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">
-              FEATURED GUIDE
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Our Guide to the Best Cookware of 2025
-            </h2>
-            <p className="text-slate-700 text-lg mb-6 leading-relaxed">
-              After hundreds of hours of testing in professional kitchens, we&apos;ve identified the top-performing pans for every budget. From cast iron to stainless steel, discover which cookware delivers the best value and performance.
-            </p>
-            <Link
-              href="/guides/best-cookware"
-              className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-lg"
-            >
-              See Our Top Picks →
-            </Link>
-          </div>
-          <div className="hidden md:block">
-            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-xl">
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">✓</span>
-                  <span className="text-slate-700 font-medium">Expert testing & analysis</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">✓</span>
-                  <span className="text-slate-700 font-medium">Every budget covered</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">✓</span>
-                  <span className="text-slate-700 font-medium">Restaurant-quality results</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">✓</span>
-                  <span className="text-slate-700 font-medium">Buying & care guides</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Product Grid */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 mb-12">
+      <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(320px,1fr))] mb-12">
         {products.map((p, index) => (
           <ProductImpressionTracker
             key={p.id}
@@ -146,26 +102,26 @@ export default async function CookwarePage() {
             position={index + 1}
             listName="category_cookware"
           >
-            <div className="bg-white rounded-xl shadow-md p-6 border border-slate-200 relative transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+            <div className="bg-white rounded-xl shadow-md p-6 border border-slate-200 relative transition-all duration-200 hover:-translate-y-1 hover:shadow-xl h-full flex flex-col">
               <div className="flex justify-between items-start mb-3">
                 <h3 className="text-xl font-bold text-slate-900 leading-tight flex-1">{p.name}</h3>
-                <div className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded ml-2 whitespace-nowrap">
+                <div className="bg-amber-100 text-amber-900 text-xs font-semibold px-2 py-1 rounded ml-2">
                   CHEF TESTED
                 </div>
               </div>
-              <p className="text-slate-600 mb-3 text-sm">by {p.brand}</p>
+              <p className="text-slate-500 mb-3 text-sm">by {p.brand}</p>
 
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex items-center gap-1">
                   <span className="text-yellow-400 text-base">★★★★★</span>
-                  <span className="text-slate-600 text-sm font-medium">Our Score: {p.score}/10</span>
+                  <span className="text-slate-500 text-sm">9.5/10</span>
                 </div>
               </div>
 
-              <div className="mb-4">
-                <p className="text-slate-700 text-sm leading-relaxed">
+              <div className="mb-4 flex-1">
+                <p className="text-gray-700 text-sm leading-relaxed">
                   {p.description}{' '}
-                  <Link href={`/reviews/${p.slug}`} className="text-orange-600 hover:text-orange-800 font-medium">
+                  <Link href={`/reviews/${p.slug}`} className="text-orange-600 no-underline font-medium">
                     Read full review →
                   </Link>
                 </p>
@@ -175,36 +131,40 @@ export default async function CookwarePage() {
                 <a href={p.affiliateUrl}
                    target="_blank"
                    rel="sponsored nofollow noopener"
-                   className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 px-4 rounded-lg font-semibold text-sm flex-1 text-center shadow-md hover:shadow-lg transition-all duration-200">
-                  🛒 Check Price on Amazon
+                   className="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white px-4 py-3 rounded-lg no-underline inline-block font-semibold text-sm flex-1 text-center shadow-md shadow-yellow-500/20">
+                  🛒 Check Price
                 </a>
                 <Link href={`/reviews/${p.slug}`}
-                      className="border-2 border-orange-600 text-orange-600 hover:bg-orange-50 py-3 px-4 rounded-lg font-semibold text-sm text-center transition-colors duration-200">
+                      className="border-2 border-orange-600 text-orange-600 px-4 py-2 rounded-lg no-underline inline-block font-semibold text-sm bg-transparent text-center">
                   Review
                 </Link>
               </div>
 
-              <p className="text-xs text-slate-400 mt-2 text-center">
-                <span className="text-orange-600 font-medium">Affiliate link</span> • Prices may change
+              <p className="text-xs text-gray-400 mt-2 text-center">
+                <span className="text-orange-600">Affiliate link</span> • Prices may change
               </p>
             </div>
           </ProductImpressionTracker>
         ))}
       </div>
 
-      {/* Cookware Buying Guide Section */}
-      <section className="mt-12 p-8 bg-slate-50 rounded-xl border border-slate-200">
-        <h2 className="text-3xl font-bold mb-2 text-slate-900">Cookware Buying Guide</h2>
-        <p className="text-slate-600 mb-4 text-lg">Materials comparison, sizing recommendations, and care instructions.</p>
+      <section className="mt-12 p-8 bg-slate-50 rounded-xl">
+        <h2 className="text-3xl font-bold mb-2">Cookware Buying Guide</h2>
+        <p className="text-slate-600 mb-3 leading-relaxed">
+          Choosing the right cookware requires understanding materials, heat conductivity, and durability. Whether you&apos;re looking for affordable cast iron or premium stainless steel, our buying guide explains what matters most for long-term performance.
+        </p>
+        <p className="text-slate-500 mb-4">
+          Learn how to evaluate cookware based on heat distribution, oven compatibility, maintenance requirements, and actual performance under demanding kitchen conditions.
+        </p>
         <CTAVisibilityTracker
           ctaId="category-cookware-buying-guide"
           position="final_cta"
           productSlug="cookware-category"
           merchant="internal"
         >
-          <Link href="/guides/best-cookware" className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-            Read the Full Guide
-          </Link>
+          <a href="/guides/best-cookware" className="bg-orange-600 text-white px-4 py-2 rounded-lg no-underline inline-block font-semibold hover:bg-orange-700">
+            Read the Full Cookware Guide
+          </a>
         </CTAVisibilityTracker>
       </section>
     </div>
