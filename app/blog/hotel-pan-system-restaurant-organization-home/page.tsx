@@ -13,15 +13,16 @@ export const metadata: Metadata = {
 }
 
 const jsonLd = generateArticleSchema({
-  headline: 'Hotel Pan System Review: The Professional Organization System Every Kitchen Needs',
+  title: 'Hotel Pan System Review: The Professional Organization System Every Kitchen Needs',
+  slug: 'hotel-pan-system-restaurant-organization-home',
+  urlPrefix: 'blog',
   description: 'After 24 years in professional kitchens and 20 years using hotel pans at home, discover why every restaurant uses this system and how it eliminates Tupperware chaos.',
   datePublished: '2025-10-25',
-  dateModified: '2025-10-25',
-  authorName: 'Scott Bradley',
-  authorUrl: 'https://www.chefapprovedtools.com/about',
-  url: 'https://www.chefapprovedtools.com/blog/hotel-pan-system-restaurant-organization-home',
-  imageUrl: 'https://www.chefapprovedtools.com/images/blog/hotel-pan-system.jpg',
-  keywords: ['hotel pan system', 'restaurant food storage', 'kitchen organization', 'meal prep containers']
+  lastUpdated: '2025-10-25',
+  author: 'Scott Bradley',
+  image: 'https://www.chefapprovedtools.com/images/blog/hotel-pan-system.jpg',
+  tags: ['hotel pan system', 'restaurant food storage', 'kitchen organization', 'meal prep containers'],
+  category: 'Kitchen Organization'
 })
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([

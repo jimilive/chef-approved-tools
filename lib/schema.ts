@@ -204,10 +204,13 @@ export function generateArticleSchema(article: any) {
     return null;
   }
 
+  // Determine URL prefix based on content type (default to guides for backwards compatibility)
+  const urlPrefix = article.urlPrefix || 'guides';
+
   const schema: any = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": `https://www.chefapprovedtools.com/guides/${article.slug}#article`,
+    "@id": `https://www.chefapprovedtools.com/${urlPrefix}/${article.slug}#article`,
     headline: article.title,
     description: article.description,
     image: article.image || "https://www.chefapprovedtools.com/logo.png",
@@ -224,7 +227,7 @@ export function generateArticleSchema(article: any) {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.chefapprovedtools.com/guides/${article.slug}`
+      "@id": `https://www.chefapprovedtools.com/${urlPrefix}/${article.slug}`
     }
   };
 
