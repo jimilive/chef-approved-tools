@@ -30,7 +30,8 @@
     "optimize:all": "node scripts/optimize-images.js all",
     "optimize:replace": "node scripts/replace-optimized.js",
     "backup:images": "tar -czf images-backup-$(date +%Y%m%d-%H%M%S).tar.gz public/images",
-    "cleanup:backups": "find public/images -name '*.backup' -delete"
+    "cleanup:backups": "find public/images -name '*.backup' -delete",
+    "indexnow": "tsx scripts/submit-indexnow.ts"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.8",

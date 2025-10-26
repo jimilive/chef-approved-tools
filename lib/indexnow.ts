@@ -37,51 +37,24 @@ export async function submitToIndexNow(urls: string | string[]) {
 
 // Submit all URLs from sitemap
 export async function submitAllUrls() {
-  const urls = [
-    `https://${HOST}`,
-    `https://${HOST}/about`,
-    `https://${HOST}/contact`,
-    `https://${HOST}/knives`,
-    `https://${HOST}/cookware`,
-    `https://${HOST}/appliances`,
-    `https://${HOST}/methodology`,
-    `https://${HOST}/glossary`,
-    `https://${HOST}/newsletter`,
-    `https://${HOST}/disclosure`,
-    `https://${HOST}/privacy-policy`,
-    `https://${HOST}/terms`,
-    `https://${HOST}/cookie-policy`,
-    `https://${HOST}/best-budget-chef-knife`,
-    `https://${HOST}/best-knife-for-cutting-meat`,
-    `https://${HOST}/kitchen-bundle`,
-    `https://${HOST}/reviews`,
-    `https://${HOST}/reviews/victorinox-fibrox-10-inch-chefs-knife`,
-    `https://${HOST}/reviews/victorinox-fibrox-8-inch-chefs-knife`,
-    `https://${HOST}/reviews/victorinox-4-inch-paring-knife`,
-    `https://${HOST}/reviews/victorinox-granton-edge-boning-knife`,
-    `https://${HOST}/reviews/victorinox-offset-bread-knife`,
-    `https://${HOST}/reviews/oxo-good-grips-swivel-peeler`,
-    `https://${HOST}/reviews/oxo-good-grips-bench-scraper`,
-    `https://${HOST}/reviews/winco-heavy-duty-tongs`,
-    `https://${HOST}/reviews/benriner-large-mandoline`,
-    `https://${HOST}/reviews/gold-textiles-bar-mops`,
-    `https://${HOST}/reviews/epicurean-kitchen-cutting-board`,
-    `https://${HOST}/reviews/kitchenaid-ksm8990wh`,
-    `https://${HOST}/reviews/robot-coupe-r2-dice`,
-    `https://${HOST}/reviews/vitamix-5200`,
-    `https://${HOST}/reviews/wusthof-classic-ikon-16-piece`,
-    `https://${HOST}/reviews/le-creuset-signature-7-25-qt-dutch-oven`,
-    `https://${HOST}/reviews/john-boos-platinum-commercial-cutting-board`,
-    `https://${HOST}/reviews/lodge-seasoned-cast-iron-3-skillet-bundle`,
-    `https://${HOST}/blog`,
-    `https://${HOST}/blog/how-to-sear-steaks-like-restaurant-chef`,
-    `https://${HOST}/guides`,
-    `https://${HOST}/guides/best-chef-knives`,
-    `https://${HOST}/guides/best-cookware`,
-    `https://${HOST}/guides/kitchen-appliances`,
-    `https://${HOST}/guides/cookware-materials`,
-    `https://${HOST}/guides/knife-care`
-  ]
+  try {
+    // Fetch the sitemap dynamically
+    const sitemapResponse = await fetch(`https://${HOST}/sitemap.xml`)
+    const sitemapXml = await sitemapResponse.text()
 
-  return submitToIndexNow(urls)
+    // Extract all URLs from <loc> tags
+    const urlMatches = sitemapXml.match(/<loc>([^<]+)<\/loc>/g)
+    if (!urlMatches) {
+      console.error('❌ No URLs found in sitemap')
+      return { success: false, error: 'No URLs in sitemap' }
+    }
+
+    const urls = urlMatches.map(match => match.replace(/<\/?loc>/g, ''))
+    console.log(`📋 Found ${urls.length} URLs in sitemap`)
+
+    return submitToIndexNow(urls)
+  } catch (error) {
+    console.error('❌ Failed to fetch sitemap:', error)
+    return { success: false, error }
+  }
 }
