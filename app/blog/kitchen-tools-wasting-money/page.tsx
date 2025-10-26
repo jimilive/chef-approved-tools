@@ -116,7 +116,7 @@ export default function KitchenToolsWastePost() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            10 Kitchen Tools You&apos;re Wasting Money On
+            10 Kitchen Tools You&apos;re Wasting Money On (And What to Buy Instead)
           </h1>
 
           <p className="text-xl text-slate-600 leading-relaxed">
