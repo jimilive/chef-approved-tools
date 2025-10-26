@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User } from 'lucide-react'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import { getAllBlogPosts } from '@/lib/blog-utils'
 
 export const metadata: Metadata = {
   title: 'Pro Cooking Techniques | Restaurant Methods',
@@ -12,7 +13,8 @@ export const metadata: Metadata = {
   },
 }
 
-const blogPosts = [
+// Dynamically generated from filesystem - no manual updates needed!
+const OLD_blogPosts_REPLACED_WITH_DYNAMIC = [
   {
     slug: 'making-stock-professional-chef-method',
     title: 'Making Stock: Professional Chef Method – How to Build Flavor',
@@ -348,7 +350,9 @@ const blogPosts = [
   }
 ]
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  // Automatically discover all blog posts from filesystem
+  const blogPosts = await getAllBlogPosts()
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
