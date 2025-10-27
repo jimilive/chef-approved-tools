@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "The Maillard Reaction: Why Browning = Flavor",
   description: "Learn the food science behind perfect browning from a chef with 24 years of professional kitchen experience. Master the Maillard reaction for restaurant-quality flavor at home.",
-  datePublished: "2025-10-23",
+  datePublished: "2025-09-05",
   dateModified: "2025-10-23",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/maillard-reaction.jpg"

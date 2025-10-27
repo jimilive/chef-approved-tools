@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const jsonLd = generateArticleSchema({
   headline: 'Caramelizing Onions: Why It Takes 45 Minutes (Not 10)',
   description: 'Professional chef explains the real process of caramelizing onions — why patience, temperature, and technique matter more than shortcuts.',
-  datePublished: '2025-10-21',
+  datePublished: "2025-09-19",
   dateModified: '2025-10-21',
   authorName: 'Scott Bradley',
   authorUrl: 'https://www.chefapprovedtools.com/about',

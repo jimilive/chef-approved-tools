@@ -25,7 +25,7 @@ export default function KnifeSafetyPost() {
             slug: "knife-safety-rules-professional-kitchens",
             description: "Professional chef Scott Bradley shares 10 essential knife safety rules from 24 years in restaurants. Learn grip, stance, focus, and habits to prevent injuries in your kitchen.",
             author: "Scott Bradley",
-            datePublished: "2025-10-21T00:00:00Z",
+            datePublished: "2025-09-08T00:00:00Z",
             lastUpdated: "2025-10-21T00:00:00Z",
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Knife Care",

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Understanding Knife Cuts: Julienne, Brunoise, Chiffonade, and More",
   description: "Master classical knife cuts from a professional chef with 24 years of restaurant experience. Learn proper julienne, brunoise, chiffonade, and more—with techniques that actually work in real kitchens.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-10-17",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/knife-cuts-guide-og.jpg"

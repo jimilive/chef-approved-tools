@@ -25,7 +25,7 @@ export default function KitchenToolsWastePost() {
             slug: "kitchen-tools-wasting-money",
             description: "Professional chef breaks down the 10 kitchen tools most home cooks waste money on and shares which essential tools professionals actually use instead.",
             author: "Scott Bradley",
-            datePublished: "2025-10-21T00:00:00Z",
+            datePublished: "2025-09-04T00:00:00Z",
             lastUpdated: "2025-10-21T00:00:00Z",
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Cooking Techniques",

@@ -25,7 +25,7 @@ export default function StainlessSteelStickingPost() {
             slug: "stainless-steel-why-food-sticks",
             description: "Professional chef explains why food sticks to stainless steel pans and how to prevent it using temperature, oil, and timing. Learn the science behind perfect sears.",
             author: "Scott Bradley",
-            datePublished: "2025-10-21T00:00:00Z",
+            datePublished: "2025-09-17T00:00:00Z",
             lastUpdated: "2025-10-21T00:00:00Z",
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Cooking Techniques",

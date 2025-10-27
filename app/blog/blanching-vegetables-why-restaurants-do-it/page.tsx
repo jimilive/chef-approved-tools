@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const jsonLd = generateArticleSchema({
   headline: 'Blanching Vegetables: Why Restaurants Do It',
   description: 'Learn why professional kitchens blanch vegetables before service. Preserve color, texture, and flavor with a chef-tested method for perfect results.',
-  datePublished: '2025-10-21',
+  datePublished: "2025-10-07",
   dateModified: '2025-10-21',
   authorName: 'Scott Bradley',
   authorUrl: 'https://www.chefapprovedtools.com/about',

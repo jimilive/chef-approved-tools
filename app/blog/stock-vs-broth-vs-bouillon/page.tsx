@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Stock vs Broth vs Bouillon: Differences & When to Use Each",
   description: "The real differences between stock, broth, and bouillon—gelatin content, flavor profiles, and when to use each. From a chef with 24 years of professional experience.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-10-13",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/stock-vs-broth-og.jpg"

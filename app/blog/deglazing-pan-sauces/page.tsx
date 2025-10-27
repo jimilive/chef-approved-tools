@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 const articleMeta = {
   author: "Scott Bradley",
-  publishDate: "2025-10-24",
+  publishDate: "2025-09-11",
   lastModified: "2025-10-24",
   category: "Cooking Techniques",
   readTime: "9 min read",

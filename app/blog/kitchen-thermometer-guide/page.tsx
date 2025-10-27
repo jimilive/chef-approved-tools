@@ -25,7 +25,7 @@ export default function KitchenThermometerGuidePost() {
             slug: "kitchen-thermometer-guide",
             description: "Professional chef explains how to use an instant-read thermometer correctly for perfect doneness, safety, and consistency in every dish.",
             author: "Scott Bradley",
-            datePublished: "2025-10-21T00:00:00Z",
+            datePublished: "2025-09-27T00:00:00Z",
             lastUpdated: "2025-10-21T00:00:00Z",
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Cooking Techniques",

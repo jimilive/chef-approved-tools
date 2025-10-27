@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const jsonLd = generateArticleSchema({
   headline: 'Carbon Footprint of Kitchen Equipment: Buy Once, Cry Once',
   description: 'Professional chef explains how quality kitchen equipment reduces waste and carbon footprint — why durability is the real sustainability in the kitchen.',
-  datePublished: '2025-10-21',
+  datePublished: "2025-09-26",
   dateModified: '2025-10-21',
   authorName: 'Scott Bradley',
   authorUrl: 'https://www.chefapprovedtools.com/about',

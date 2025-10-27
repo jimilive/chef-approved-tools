@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Knife Skills: How to Hold a Chef's Knife Properly",
   description: "The professional pinch grip, claw position, and rocking motion that make cooking safer, faster, and more enjoyable. From a chef with 24 years of professional experience.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-10-06",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/knife-skills-og.jpg"

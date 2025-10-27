@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Vegetable Roasting Guide: Times and Temperatures for Perfect Results",
   description: "Master vegetable roasting from a professional chef with 24 years of restaurant experience. Learn exact times, temperatures, and techniques for perfectly roasted vegetables every time.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-10-15",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/blog/vegetable-roasting-guide.jpg"

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "The Benefits of Cooking with Garlic",
   description: "Why garlic is essential in cooking—health benefits, flavor science, and professional techniques for using this powerful ingredient properly.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-10-22",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/garlic-benefits-og.jpg"

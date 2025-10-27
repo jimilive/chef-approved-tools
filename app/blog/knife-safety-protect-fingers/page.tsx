@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "How to Protect Your Fingers When Using Knives",
   description: "Learn the professional techniques that prevent knife accidents. Master the claw grip, proper knife handling, and the safety habits used in restaurant kitchens after 24 years on the line.",
-  datePublished: "2025-10-23",
+  datePublished: "2025-10-24",
   dateModified: "2025-10-23",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/knife-safety-og.jpg"

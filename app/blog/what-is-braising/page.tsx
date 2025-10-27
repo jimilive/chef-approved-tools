@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "What is Braising and Why It's So Profoundly Amazing",
   description: "Learn the professional braising technique that transforms tough, cheap cuts into restaurant-quality meals. Master the science of collagen, proper liquid levels, and why low and slow wins.",
-  datePublished: "2025-10-23",
+  datePublished: "2025-10-04",
   dateModified: "2025-10-23",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/braising-og.jpg"

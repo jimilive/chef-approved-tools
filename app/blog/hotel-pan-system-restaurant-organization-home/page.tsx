@@ -17,7 +17,7 @@ const jsonLd = generateArticleSchema({
   slug: 'hotel-pan-system-restaurant-organization-home',
   urlPrefix: 'blog',
   description: 'After 24 years in professional kitchens and 20 years using hotel pans at home, discover why every restaurant uses this system and how it eliminates Tupperware chaos.',
-  datePublished: '2025-10-25',
+  datePublished: "2025-10-19",
   lastUpdated: '2025-10-25',
   author: 'Scott Bradley',
   image: 'https://www.chefapprovedtools.com/images/blog/hotel-pan-system.jpg',

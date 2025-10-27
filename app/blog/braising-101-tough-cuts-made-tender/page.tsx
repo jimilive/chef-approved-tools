@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const jsonLd = generateArticleSchema({
   headline: 'Braising 101: Tough Cuts Made Tender',
   description: 'Professional chef explains the art and science of braising — transforming tough cuts into tender, flavorful perfection through low, slow heat and control.',
-  datePublished: '2025-10-21',
+  datePublished: "2025-09-25",
   dateModified: '2025-10-21',
   authorName: 'Scott Bradley',
   authorUrl: 'https://www.chefapprovedtools.com/about',

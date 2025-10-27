@@ -27,7 +27,7 @@ export default function KitchenGlovesGuide() {
             slug: "kitchen-gloves-guide",
             description: "Learn professional kitchen glove safety from chef with 24 years restaurant experience. Single-use, cut-resistant, and proper layering techniques.",
             author: "Scott Bradley",
-            datePublished: "2024-09-10T00:00:00Z",
+            datePublished: "2025-09-23T00:00:00Z",
             lastUpdated: new Date().toISOString(),
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Kitchen Safety",

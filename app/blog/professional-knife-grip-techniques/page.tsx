@@ -25,7 +25,7 @@ export default function KnifeGripTechniquesPost() {
             slug: "professional-knife-grip-techniques",
             description: "Learn how chefs actually hold knives. Chef Scott Bradley explains the pinch grip, claw method, and cutting stance for safety and control.",
             author: "Scott Bradley",
-            datePublished: "2025-10-21T00:00:00Z",
+            datePublished: "2025-10-16T00:00:00Z",
             lastUpdated: "2025-10-21T00:00:00Z",
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Knife Care",

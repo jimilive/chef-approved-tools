@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Why Fat is Flavor (And How to Use It Like a Pro)",
   description: "Understanding why fat is fundamental to flavor—and how professional chefs use it to create dishes that taste exponentially better than home cooking.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-09-22",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/fat-is-flavor-og.jpg"

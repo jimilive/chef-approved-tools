@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Cooking with Tomatoes: Fresh vs Canned",
   description: "Understanding when to use fresh tomatoes versus canned tomatoes, and how to get the best results from each in your cooking.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-10-08",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/tomatoes-guide-og.jpg"

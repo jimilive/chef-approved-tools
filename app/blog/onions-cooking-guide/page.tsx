@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "The Complete Guide to Cooking Onions",
   description: "Everything you need to know about onion varieties, cutting techniques, cooking methods, and professional tips for perfect flavor every time.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-09-03",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/onions-guide-og.jpg"

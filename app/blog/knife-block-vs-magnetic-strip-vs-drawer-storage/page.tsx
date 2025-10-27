@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const jsonLd = generateArticleSchema({
   headline: 'Knife Block vs Magnetic Strip vs Drawer: What\'s Best for You?',
   description: 'Professional chef explains the pros and cons of knife blocks, magnetic strips, and drawer storage. Learn how to protect your knives, save counter space, and avoid dulling your edges.',
-  datePublished: '2025-10-21',
+  datePublished: "2025-09-30",
   dateModified: '2025-10-21',
   authorName: 'Scott Bradley',
   authorUrl: 'https://www.chefapprovedtools.com/about',

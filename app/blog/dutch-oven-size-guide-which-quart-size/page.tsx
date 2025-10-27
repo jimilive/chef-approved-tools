@@ -17,7 +17,7 @@ const jsonLd = generateArticleSchema({
   title: 'Dutch Oven Size Guide: Which Quart Size Do You Need?',
   slug: 'dutch-oven-size-guide-which-quart-size',
   description: 'A professional chef\'s guide to choosing the right Dutch oven size for soups, bread, braises, and everyday cooking. Learn what size fits your kitchen best.',
-  datePublished: '2025-10-21',
+  datePublished: "2025-09-06",
   lastUpdated: '2025-10-21',
   author: 'Scott Bradley',
   image: 'https://www.chefapprovedtools.com/images/blog/dutch-oven-size-guide.jpg',

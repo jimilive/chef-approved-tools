@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const jsonLd = generateArticleSchema({
   headline: 'Deglazing: The Secret to Restaurant-Quality Flavor',
   description: 'Learn how to deglaze like a professional chef — the science of fond, proper technique, and how to build flavor into every pan sauce.',
-  datePublished: '2025-10-21',
+  datePublished: "2025-10-26",
   dateModified: '2025-10-21',
   authorName: 'Scott Bradley',
   authorUrl: 'https://www.chefapprovedtools.com/about',

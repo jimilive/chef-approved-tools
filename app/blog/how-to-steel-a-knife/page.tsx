@@ -27,7 +27,7 @@ export default function HowToSteelAKnife() {
             slug: "how-to-steel-a-knife",
             description: "Learn how to steel a knife properly using a honing steel. Professional chef guide to honing vs sharpening, perfect technique, and top tool recommendations.",
             author: "Scott Bradley",
-            datePublished: "2024-09-20T00:00:00Z",
+            datePublished: "2025-09-13T00:00:00Z",
             lastUpdated: new Date().toISOString(),
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Knife Care",

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "The Science of Caramelization: Why Sugar Turns Into Liquid Gold",
   description: "Learn the chemistry behind caramelization and how heat transforms sugar into hundreds of complex flavor compounds used by professional chefs.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-09-19",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/caramelization-og.jpg"

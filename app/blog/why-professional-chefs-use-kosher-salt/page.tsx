@@ -25,7 +25,7 @@ export default function WhyChefsUseKosherSalt() {
             slug: "why-professional-chefs-use-kosher-salt",
             description: "Discover why professional chefs prefer kosher salt. Learn about Diamond Crystal vs Morton, proper seasoning technique, and why it's essential in commercial kitchens.",
             author: "Scott Bradley",
-            datePublished: "2024-08-28T00:00:00Z",
+            datePublished: "2025-10-13T00:00:00Z",
             lastUpdated: new Date().toISOString(),
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Cooking Techniques",

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "The Complete Guide to Salts",
   description: "Understanding different types of salt, their uses in cooking, and why choosing the right salt actually matters for your food.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-10-05",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/salts-guide-og.jpg"

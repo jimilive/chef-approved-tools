@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Mis en Place: The Foundation of Professional Cooking",
   description: "Learn why mise en place is the foundation of every professional kitchen. Master the organization and prep techniques that make cooking faster, cleaner, and more enjoyable.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-09-21",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/mis-en-place-og.jpg"

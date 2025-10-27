@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "How to Cook Perfect Pasta: The Professional's Guide to Al Dente Every Time",
   description: "Master pasta cooking from a professional chef with 24 years of restaurant experience. Learn proper water ratios, timing, salt levels, and the secret to restaurant-quality pasta at home.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-10-21",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/blog/perfect-pasta-guide.jpg"

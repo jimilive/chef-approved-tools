@@ -26,7 +26,7 @@ export default function SteakSearingPost() {
             slug: "how-to-sear-steaks-like-restaurant-chef",
             description: "Learn the professional steak searing techniques used in restaurant kitchens. 24 years of experience from a former Mellow Mushroom Kitchen Manager reveals the secrets to perfect sears.",
             author: "Scott Bradley",
-            datePublished: "2024-09-27T00:00:00Z",
+            datePublished: "2025-09-10T00:00:00Z",
             lastUpdated: "2024-09-27T00:00:00Z",
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Cooking Techniques",

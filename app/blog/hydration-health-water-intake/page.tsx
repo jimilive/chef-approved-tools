@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Hydration, Health, and Water Intake for Home Cooks",
   description: "Learn how professional chefs stay hydrated during long shifts and why proper water intake matters for home cooks. Science-backed hydration strategies for the kitchen.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-09-03",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/blog/kitchen-hydration-guide.jpg"

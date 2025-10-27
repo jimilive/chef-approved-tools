@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "The Complete Guide to Cooking Potatoes",
   description: "Everything you need to know about potato varieties, cooking methods, and professional techniques for perfect results every time.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-09-08",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/potatoes-guide-og.jpg"

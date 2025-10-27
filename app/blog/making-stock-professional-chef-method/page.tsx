@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Making Stock: Professional Chef Method – How to Build Flavor",
   description: "Professional chef Scott Bradley explains the real restaurant method for making stock. Build deep flavor with bones, vegetables, and proper simmering technique.",
-  datePublished: "2025-10-22",
+  datePublished: "2025-09-07",
   dateModified: "2025-10-22",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/making-stock-og.jpg"

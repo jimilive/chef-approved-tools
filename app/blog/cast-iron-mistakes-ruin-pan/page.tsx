@@ -25,7 +25,7 @@ export default function CastIronMistakesPost() {
             slug: "cast-iron-mistakes-ruin-pan",
             description: "Professional chef explains the common cast iron mistakes that strip seasoning, cause rust, and ruin pans. Learn how to clean, season, and maintain cast iron the right way.",
             author: "Scott Bradley",
-            datePublished: "2025-10-21T00:00:00Z",
+            datePublished: "2025-10-10T00:00:00Z",
             lastUpdated: "2025-10-21T00:00:00Z",
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Cooking Techniques",

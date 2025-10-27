@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Bread Science: Understanding Gluten Development",
   description: "The chemistry of gluten formation, kneading techniques, and how to troubleshoot bread problems. From a chef with 24 years of professional baking experience.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-10-18",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/bread-science-og.jpg"

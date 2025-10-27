@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Why Resting Is the Key to Cooking Meat",
   description: "Learn why professional chefs never skip resting meat. Master carry-over cooking, juice redistribution, and the science behind perfectly cooked steaks, roasts, and poultry.",
-  datePublished: "2025-10-23",
+  datePublished: "2025-09-05",
   dateModified: "2025-10-23",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/resting-meat-og.jpg"

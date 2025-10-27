@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const jsonLd = generateArticleSchema({
   headline: 'Knife Storage: Protecting Your Blades for Decades',
   description: 'Learn how to store knives like a professional chef. Prevent dull edges, rust, and damage with proven storage techniques and chef-approved tools.',
-  datePublished: '2025-10-21',
+  datePublished: "2025-09-13",
   dateModified: '2025-10-21',
   authorName: 'Scott Bradley',
   authorUrl: 'https://www.chefapprovedtools.com/about',

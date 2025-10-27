@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Guide to Cooking Oils & Smoke Points",
   description: "Understanding different cooking oils, their smoke points, flavor profiles, and which oils work best for different cooking methods.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-10-02",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/cooking-oils-og.jpg"

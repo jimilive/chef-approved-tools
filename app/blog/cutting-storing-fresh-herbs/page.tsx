@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Cutting and Storing Fresh Herbs: Professional Techniques for Maximum Flavor",
   description: "Master professional techniques for cutting, storing, and preserving fresh herbs. Learn why technique matters and how to keep herbs fresh for days.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-09-14",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/cutting-storing-fresh-herbs.jpg"

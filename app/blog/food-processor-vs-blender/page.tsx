@@ -25,7 +25,7 @@ export default function FoodProcessorVsBlenderPost() {
             slug: "food-processor-vs-blender",
             description: "Professional chef explains the difference between blenders and food processors, when to use each, and which models perform best in real kitchens.",
             author: "Scott Bradley",
-            datePublished: "2025-10-21T00:00:00Z",
+            datePublished: "2025-09-28T00:00:00Z",
             lastUpdated: "2025-10-21T00:00:00Z",
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Cooking Techniques",

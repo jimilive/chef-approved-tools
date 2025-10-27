@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Cast Iron Seasoning & Care: The Complete Professional Guide",
   description: "The chemistry of cast iron seasoning, proper care techniques, and restoration methods that make your cast iron last forever. From a chef with 24 years of professional experience.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-09-27",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/cast-iron-care-og.jpg"

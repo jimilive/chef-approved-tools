@@ -25,7 +25,7 @@ export default function ChooseFirstChefKnifePost() {
             slug: "how-to-choose-first-chef-knife",
             description: "Learn how to choose your first chef knife from a professional chef. Understand balance, steel type, blade length, and why comfort matters more than price.",
             author: "Scott Bradley",
-            datePublished: "2025-10-21T00:00:00Z",
+            datePublished: "2025-10-10T00:00:00Z",
             lastUpdated: "2025-10-21T00:00:00Z",
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Knife Care",

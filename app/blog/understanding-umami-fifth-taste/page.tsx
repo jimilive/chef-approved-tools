@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Understanding Umami: The Fifth Taste That Makes Food Delicious",
   description: "What umami is, the science behind glutamate and nucleotides, and how to use umami to make food taste incredible. From a chef with 24 years of professional experience.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-09-16",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/umami-og.jpg"

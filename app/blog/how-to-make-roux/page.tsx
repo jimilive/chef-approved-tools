@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "How to Make a Perfect Roux: The Foundation of Great Sauces",
   description: "Learn how to make a roux the right way and master the foundation of countless professional sauces.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-09-24",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/roux-og.jpg"

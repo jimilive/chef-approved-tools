@@ -27,7 +27,7 @@ export default function BestScrambledEggs() {
             slug: "best-scrambled-eggs",
             description: "Professional chef shares revolutionary scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 45 years of cooking wisdom.",
             author: "Scott Bradley",
-            datePublished: "2024-09-15T00:00:00Z",
+            datePublished: "2025-10-09T00:00:00Z",
             lastUpdated: new Date().toISOString(),
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Cooking Techniques",

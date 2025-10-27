@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "How to Make a Cheese Sauce (Mac and Cheese Perfection)",
   description: "Learn the professional technique for silky, smooth cheese sauce every time. Master béchamel, avoid graininess, and make restaurant-quality mac and cheese that never breaks.",
-  datePublished: "2025-10-23",
+  datePublished: "2025-09-29",
   dateModified: "2025-10-23",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/cheese-sauce-og.jpg"

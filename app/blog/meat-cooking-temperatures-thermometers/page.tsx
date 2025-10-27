@@ -25,7 +25,7 @@ export default function MeatCookingTemperaturesThermometers() {
             slug: "meat-cooking-temperatures-thermometers",
             description: "Professional chef explains meat thermometers and proper cooking temps. 24 years restaurant experience. Food safety + perfect doneness every time.",
             author: "Scott Bradley",
-            datePublished: "2024-09-05T00:00:00Z",
+            datePublished: "2025-09-20T00:00:00Z",
             lastUpdated: new Date().toISOString(),
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Cooking Techniques",

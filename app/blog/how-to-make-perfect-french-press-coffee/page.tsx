@@ -30,7 +30,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             slug: "how-to-make-perfect-french-press-coffee",
             description: "Master French press coffee with 24 years of professional experience. Learn the perfect ratio, step-by-step technique, common mistakes to avoid, and pro tips for cafe-quality coffee at home.",
             author: "Scott Bradley",
-            datePublished: "2024-09-15T00:00:00Z",
+            datePublished: "2025-10-24T00:00:00Z",
             lastUpdated: new Date().toISOString(),
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Cooking Techniques",

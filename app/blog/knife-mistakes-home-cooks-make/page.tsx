@@ -25,7 +25,7 @@ export default function KnifeMistakesPost() {
             slug: "knife-mistakes-home-cooks-make",
             description: "Professional chef explains the 5 knife mistakes that ruin edges and slow prep. Learn correct cutting techniques and maintenance tips for sharp, safe blades.",
             author: "Scott Bradley",
-            datePublished: "2025-10-21T00:00:00Z",
+            datePublished: "2025-10-08T00:00:00Z",
             lastUpdated: "2025-10-21T00:00:00Z",
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Knife Care",

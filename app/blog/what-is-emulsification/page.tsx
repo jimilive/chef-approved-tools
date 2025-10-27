@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "What is Emulsification? The Science Behind Creamy Sauces",
   description: "Master the chemistry and technique behind stable emulsions. Learn why oil and water mix in mayonnaise, how to fix broken sauces, and professional emulsification methods.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-09-18",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/emulsification-og.jpg"

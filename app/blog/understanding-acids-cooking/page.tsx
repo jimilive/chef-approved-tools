@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Understanding Acids in Cooking: The Secret to Balanced Flavor",
   description: "Why acids are the most underused tool in home cooking—and how professional chefs use them to transform flat, one-dimensional food into bright, balanced dishes.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-10-25",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/acids-cooking-og.jpg"

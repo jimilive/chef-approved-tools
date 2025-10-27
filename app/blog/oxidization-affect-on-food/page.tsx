@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Oxidization's Effect on Food: Why Your Produce Turns Brown (And How to Stop It)",
   description: "Learn how oxidation affects food quality and professional techniques to prevent browning, preserve flavor, and extend ingredient freshness in your kitchen.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-09-21",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/food-oxidation-guide.jpg"

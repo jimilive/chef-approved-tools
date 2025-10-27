@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Oh Sweet, Sweet Bacon: How I Love Thee (But Not in This Dish)",
   description: "Learn when bacon overpowers dishes instead of enhancing them. Professional chef reveals 7 dishes where bacon doesn't belong and why restraint creates better food.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-10-23",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/blog/bacon-cooking-guide.jpg"

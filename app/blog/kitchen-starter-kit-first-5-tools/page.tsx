@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Kitchen Starter Kit: First 5 Tools to Buy",
   description: "Chef Scott Bradley reveals the five essential kitchen tools every home cook needs first. No fluff, no gimmicks—just the gear professionals actually use daily.",
-  datePublished: "2025-10-22",
+  datePublished: "2025-09-24",
   dateModified: "2025-10-22",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/kitchen-starter-kit-og.jpg"

@@ -30,7 +30,7 @@ export default function HowToSharpenWithTriStonePage() {
             slug: "how-to-sharpen-with-tri-stone",
             description: "Professional chef shares technique perfected over 6 years in restaurant kitchen. Step-by-step guide: angles, pressure, three-stage progression, troubleshooting.",
             author: "Scott Bradley",
-            datePublished: "2024-09-15T00:00:00Z",
+            datePublished: "2025-10-16T00:00:00Z",
             lastUpdated: new Date().toISOString(),
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Knife Care",

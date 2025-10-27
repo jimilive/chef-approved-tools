@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const jsonLd = generateArticleSchema({
   headline: 'Sheet Pan Cooking: 5 Restaurant Techniques for Home',
   description: 'Professional chef reveals 5 restaurant sheet pan techniques that transform home cooking. Learn high-heat roasting, batch prep, and finishing methods from 24 years in commercial kitchens.',
-  datePublished: '2025-10-21',
+  datePublished: "2025-09-12",
   dateModified: '2025-10-21',
   authorName: 'Scott Bradley',
   authorUrl: 'https://www.chefapprovedtools.com/about',

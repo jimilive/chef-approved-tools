@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Why Children Hate Broccoli (And How to Fix It)",
   description: "Learn the science behind why children hate broccoli and professional techniques to make vegetables appealing. From bitter sensitivity to proper cooking methods.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-10-11",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/blog/broccoli-kids-guide.jpg"

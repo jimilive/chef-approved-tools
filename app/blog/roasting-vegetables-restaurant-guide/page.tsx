@@ -25,7 +25,7 @@ export default function RoastingVegetablesPost() {
             slug: "roasting-vegetables-restaurant-guide",
             description: "Professional chef explains how to roast vegetables perfectly — the right temperature, spacing, oil, and timing for crisp, caramelized results.",
             author: "Scott Bradley",
-            datePublished: "2025-10-21T00:00:00Z",
+            datePublished: "2025-10-20T00:00:00Z",
             lastUpdated: "2025-10-21T00:00:00Z",
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Cooking Techniques",

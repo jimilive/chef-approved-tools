@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const articleSchema = generateArticleSchema({
   headline: "Why Cooking Science Matters",
   description: "Understanding the chemistry, physics, and biology behind cooking transforms you from a recipe-follower into a confident, adaptable cook who knows why techniques work.",
-  datePublished: "2025-10-24",
+  datePublished: "2025-10-03",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/cooking-science-og.jpg"

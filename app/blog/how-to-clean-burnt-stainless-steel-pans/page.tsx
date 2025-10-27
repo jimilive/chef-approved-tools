@@ -25,7 +25,7 @@ export default function CleanBurntStainlessSteelPost() {
             slug: "how-to-clean-burnt-stainless-steel-pans",
             description: "Professional chef explains how to clean burnt stainless steel cookware using safe, effective methods — no harsh scrubbing or damage.",
             author: "Scott Bradley",
-            datePublished: "2025-10-21T00:00:00Z",
+            datePublished: "2025-10-18T00:00:00Z",
             lastUpdated: "2025-10-21T00:00:00Z",
             image: "https://www.chefapprovedtools.com/logo.png",
             category: "Cooking Techniques",
