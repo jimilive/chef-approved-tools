@@ -19,7 +19,7 @@ import { generateOGImageURL } from '@/lib/og-image'
 export const dynamic = 'force-dynamic'
 
 const legacyProductData = {
-  name: 'Rubbermaid Commercial Cook\'s Scraper / Spatula (13.5-inch)',
+  name: "Rubbermaid Commercial Cook's Scraper / Spatula (13.5-inch)",
   slug: 'rubbermaid-commercial-cooks-scraper',
   brand: 'Rubbermaid Commercial',
   model: 'FG1905000000 / RCP1905WHI',

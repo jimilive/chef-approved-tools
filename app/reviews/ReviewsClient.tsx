@@ -220,7 +220,7 @@ const LEGACY_allReviews: Review[] = [
   {
     id: 28,
     tier: 1,
-    name: 'Rubbermaid Commercial Cook\'s Scraper',
+    name: "Rubbermaid Commercial Cook's Scraper",
     slug: 'rubbermaid-commercial-cooks-scraper',
     rating: 4.9,
     testingPeriod: '18 years (9 Purple Café + Feireabend + 9 home)',

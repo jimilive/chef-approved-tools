@@ -52,6 +52,15 @@
 - [ ] Ensure all email capture wording is consistent across all 5 locations
 - [ ] Verify lead magnet offer is clear and compelling in all instances
 
+## Priority 5: SEO & Link Building (Week of Oct 28-Nov 1)
+
+### Guest Posting & Outreach
+- [ ] Send 5 guest post pitches (Tuesday)
+- [ ] Respond to 3-5 HARO queries (Tuesday AM)
+- [ ] Resource page outreach - 20 emails (Wednesday)
+- [ ] Follow up on guest post pitches (Thursday)
+- [ ] Check if Tasting Table articles published (Friday)
+
 ---
 
 # Metadata Update Project - Third Iteration
