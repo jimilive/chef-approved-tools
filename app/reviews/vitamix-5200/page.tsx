@@ -942,15 +942,13 @@ export default async function Vitamix5200Review() {
         {/* Email Capture Section */}
         <section className="mb-8">
           <EmailCaptureBox
-            title="🔥 Get My Complete Vitamix Mastery Guide"
-            description="Download my comprehensive guide to getting maximum value from your Vitamix investment:"
+            title="🔥 Get My 11 Essential Tools for a Professional Kitchen"
+            description="Download my free guide: The 11 tools I use most in my home kitchen after 45 years of cooking."
             benefits={[
-              '20 essential recipes that showcase what Vitamix does best',
-              'Technique guide for perfect texture every time',
-              'Troubleshooting common issues',
-              'Cleaning & maintenance schedule for decades of use',
-              'Vitamix vs alternatives comparison matrix',
-              'Container selection guide for different needs'
+              '✓ My exact 11 daily workhorse tools',
+              '✓ Where to invest vs where to save',
+              '✓ Professional insights from 24 years of restaurant experience',
+              '✓ Equipment care and maintenance tips'
             ]}
             ctaText="Download Free Guide →"
             ctaHref="/newsletter"

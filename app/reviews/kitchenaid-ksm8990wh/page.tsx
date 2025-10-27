@@ -723,14 +723,13 @@ export default async function KitchenAidReviewPage() {
 
         {/* Content Upgrade Email Capture */}
         <EmailCaptureBox
-          title="📥 Get My Complete Commercial Mixer Buying Guide"
-          description="Download my comprehensive decision framework used when equipping professional kitchens:"
+          title="🔥 Get My 11 Essential Tools for a Professional Kitchen"
+          description="Download my free guide: The 11 tools I use most in my home kitchen after 45 years of cooking."
           benefits={[
-            'Commercial vs residential mixer comparison matrix',
-            'ROI calculation worksheet for commercial equipment',
-            'Electrical planning checklist',
-            'Maintenance schedules for longevity',
-            'Troubleshooting guide for common issues'
+            '✓ My exact 11 daily workhorse tools',
+            '✓ Where to invest vs where to save',
+            '✓ Professional insights from 24 years of restaurant experience',
+            '✓ Equipment care and maintenance tips'
           ]}
           ctaText="Download Free Guide →"
           ctaHref="/newsletter"

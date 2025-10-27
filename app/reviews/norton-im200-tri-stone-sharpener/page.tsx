@@ -625,15 +625,15 @@ export default async function NortonTriStoneSharpenerReview() {
         <FAQGrid faqs={faqData} />
 
         <EmailCaptureBox
-          title="🔥 Get My Complete Knife Sharpening Guide"
-          description="Download my professional sharpening guide developed over 6 years at Purple Café:"
+          title="🔥 Get My 11 Essential Tools for a Professional Kitchen"
+          description="Download my free guide: The 11 tools I use most in my home kitchen after 45 years of cooking."
           benefits={[
-            "Step-by-step Norton Tri-Stone technique with photos",
-            "How to maintain consistent 20-degree angles",
-            "Sharpening schedule for maximum edge retention",
-            "Troubleshooting common sharpening mistakes",
-            "Professional knife care and maintenance"
+            '✓ My exact 11 daily workhorse tools',
+            '✓ Where to invest vs where to save',
+            '✓ Professional insights from 24 years of restaurant experience',
+            '✓ Equipment care and maintenance tips'
           ]}
+          ctaHref="/newsletter"
         />
 
         {/* Final Verdict & Strong CTA */}

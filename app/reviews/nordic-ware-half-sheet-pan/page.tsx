@@ -579,15 +579,15 @@ export default async function NordicWareHalfSheetPanReview() {
 
         {/* Email Capture */}
         <EmailCaptureBox
-          title="🔥 Get My Complete Sheet Pan Cooking Guide"
-          description="Download my comprehensive guide developed over 10 years of sheet pan mastery:"
+          title="🔥 Get My 11 Essential Tools for a Professional Kitchen"
+          description="Download my free guide: The 11 tools I use most in my home kitchen after 45 years of cooking."
           benefits={[
-            "10 essential sheet pan dinner recipes",
-            "Roasting temperature guide for every vegetable",
-            "How to maximize oven space with multiple pans",
-            "Sheet pan care and maintenance schedule",
-            "Troubleshooting common baking problems"
+            '✓ My exact 11 daily workhorse tools',
+            '✓ Where to invest vs where to save',
+            '✓ Professional insights from 24 years of restaurant experience',
+            '✓ Equipment care and maintenance tips'
           ]}
+          ctaHref="/newsletter"
         />
 
         {/* Final Verdict & Strong CTA */}

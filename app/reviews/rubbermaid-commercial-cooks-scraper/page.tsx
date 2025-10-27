@@ -731,16 +731,15 @@ export default async function RubbermaidScraperReview() {
         {/* Email Capture Section */}
         <section className="mb-8">
           <EmailCaptureBox
-            title="🔥 Get My Complete Commercial Kitchen Equipment Guide"
-            description="Download my comprehensive guide to building a professional-grade kitchen with commercial equipment at consumer prices:"
+            title="🔥 Get My 11 Essential Tools for a Professional Kitchen"
+            description="Download my free guide: The 11 tools I use most in my home kitchen after 45 years of cooking."
             benefits={[
-              "Essential commercial-grade tools that last decades",
-              "NSF certification explained: what it means for home cooks",
-              "Heat resistance ratings decoded (and why they matter)",
-              "Sanitation best practices from professional kitchens",
-              "When to buy commercial vs consumer-grade equipment",
-              "Maintenance schedules for buy-it-for-life durability"
+              '✓ My exact 11 daily workhorse tools',
+              '✓ Where to invest vs where to save',
+              '✓ Professional insights from 24 years of restaurant experience',
+              '✓ Equipment care and maintenance tips'
             ]}
+            ctaHref="/newsletter"
           />
         </section>
 

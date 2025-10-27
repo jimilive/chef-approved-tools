@@ -532,15 +532,15 @@ export default async function VictorinoxOffsetBreadKnifeReview() {
 
         {/* Email Capture Section */}
         <EmailCaptureBox
-          title="🔥 Get My Complete Professional Knife Guide"
-          description="Download my comprehensive guide to building a professional knife collection, developed over 45 years of cooking:"
+          title="🔥 Get My 11 Essential Tools for a Professional Kitchen"
+          description="Download my free guide: The 11 tools I use most in my home kitchen after 45 years of cooking."
           benefits={[
-            '✓ Which knives you actually need (and which are marketing gimmicks)',
-            '✓ Proper knife care and maintenance techniques',
-            '✓ How to choose quality over brand names',
-            '✓ Knife safety and proper cutting techniques',
-            '✓ Building a complete set on any budget'
+            '✓ My exact 11 daily workhorse tools',
+            '✓ Where to invest vs where to save',
+            '✓ Professional insights from 24 years of restaurant experience',
+            '✓ Equipment care and maintenance tips'
           ]}
+          ctaHref="/newsletter"
         />
 
         {/* Final Verdict & Strong CTA */}

@@ -726,15 +726,15 @@ export default async function VictorinoxFibrox8InchReview() {
 
         {/* Email Capture Section */}
         <EmailCaptureBox
-          title="🔥 Build a Professional Kitchen on a Budget"
-          description="Download my complete guide to equipping a professional-quality kitchen without overspending:"
+          title="🔥 Get My 11 Essential Tools for a Professional Kitchen"
+          description="Download my free guide: The 11 tools I use most in my home kitchen after 45 years of cooking."
           benefits={[
-            '✓ Complete budget kitchen equipment checklist',
+            '✓ My exact 11 daily workhorse tools',
             '✓ Where to invest vs where to save',
-            '✓ 10 must-have tools that perform like professional equipment',
-            '✓ Knife care and sharpening guide',
-            '✓ How to spot quality at accessible prices'
+            '✓ Professional insights from 24 years of restaurant experience',
+            '✓ Equipment care and maintenance tips'
           ]}
+          ctaHref="/newsletter"
         />
 
         {/* Bottom Line with Value-Focused Strong CTA */}

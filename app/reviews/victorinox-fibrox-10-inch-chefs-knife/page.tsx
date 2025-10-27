@@ -515,14 +515,13 @@ export default async function VictorinoxFibrox10InchReview() {
 
         {/* EMAIL CAPTURE SECTION */}
         <EmailCaptureBox
-          title="🔥 Get My Complete Chef's Knife Mastery Guide"
-          description="Download my comprehensive guide to selecting, using, and maintaining professional chef's knives, developed over 45 years:"
+          title="🔥 Get My 11 Essential Tools for a Professional Kitchen"
+          description="Download my free guide: The 11 tools I use most in my home kitchen after 45 years of cooking."
           benefits={[
-            'How to choose the right knife length for your hand size',
-            'Professional sharpening and honing techniques',
-            'Proper cutting techniques to maximize efficiency',
-            'Maintenance schedules that make knives last decades',
-            'What cutting boards work best with different blade types'
+            '✓ My exact 11 daily workhorse tools',
+            '✓ Where to invest vs where to save',
+            '✓ Professional insights from 24 years of restaurant experience',
+            '✓ Equipment care and maintenance tips'
           ]}
           ctaText="Download Free Guide →"
           ctaHref="/newsletter"
