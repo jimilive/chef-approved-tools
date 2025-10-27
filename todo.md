@@ -1,3 +1,59 @@
+# Active Tasks - Product Reviews & Database
+
+## Priority 1: Missing Product Reviews (Full Creation Required)
+
+### Create Henckels 10-Inch Sharpening Steel Review
+- [ ] Create `/app/reviews/henckels-10-inch-sharpening-steel/page.tsx`
+- [ ] Write full review content (pros, cons, expert opinion, testing details)
+- [ ] Add product entry to Supabase with all metadata
+- [ ] Ensure slug: `henckels-10-inch-sharpening-steel`
+- [ ] Add affiliate link: `https://amzn.to/4qh96Zu`
+- [ ] Update internal links in blog/how-to-steel-a-knife to point to new review
+
+### Create Gourmia Pizza Oven Review
+- [ ] Create `/app/reviews/gourmia-pizza-oven/page.tsx`
+- [ ] Write full review content (pros, cons, expert opinion, testing details)
+- [ ] Add product entry to Supabase with all metadata
+- [ ] Ensure slug: `gourmia-pizza-oven`
+- [ ] Add affiliate link: `https://amzn.to/4qfaiMU`
+- [ ] Update internal links in guides/affordable-kitchen-appliances to point to new review
+
+## Priority 2: Hotel Pan Lids & Configuration
+
+### Add Missing Lid Products
+- [ ] Create Plastic Hotel Pan Lids product in Supabase
+- [ ] Create Metal Hotel Pan Regular Lids (non-notched) in Supabase
+- [ ] Verify Metal Hotel Pan Notched Lids exists (`https://amzn.to/47IgA0o`)
+- [ ] Verify all 4 hotel pan products (small-plastic, large-plastic, small-metal, large-metal) have correct affiliate links
+
+## Priority 3: Knife Product Cleanup
+
+### Victorinox Paring Knife Variants
+- [x] Updated all site code with correct working links
+  - 4-inch: `https://amzn.to/3Lc3oIo` (updated in review page, kitchen-bundle, best-chef-knives guide)
+  - 3.25-inch: `https://amzn.to/4qN4b31` (updated in review page)
+- [x] Review page now properly displays both size options
+- [ ] Add both variants to Supabase product with tags "4-inch" and "3.25-inch"
+
+### Verify Duplicate Affiliate Links
+- [x] Victorinox 10-inch chef knife - removed broken link `https://amzn.to/3JhIxaZA`, keeping working link `https://amzn.to/4o6pPwW`
+- [x] Victorinox Granton boning knife - removed broken link `https://amzn.to/4bWqrgs`, keeping working link `https://amzn.to/4pUDed1`
+- [x] Victorinox paring knife - removed broken links, updated with correct working links
+- [x] All duplicate/broken knife links cleaned up from site code ✅
+
+## Priority 4: Email Configuration
+
+### Email Testing & Verification
+- [ ] Check with Dave if email worked
+- [ ] Test scott@chefapprovedtools.com email address works
+
+### Email Capture Lead Magnet Standardization
+- [ ] Update all 5 email capture locations to use only the 11 products lead magnet
+- [ ] Ensure all email capture wording is consistent across all 5 locations
+- [ ] Verify lead magnet offer is clear and compelling in all instances
+
+---
+
 # Metadata Update Project - Third Iteration
 
 ## Instructions (CRITICAL - DO NOT DEVIATE)
@@ -103,3 +159,114 @@
 - Previous attempts used scripts which caused issues
 - This time: Manual, one page at a time, careful verification
 - Context may compact - use this file to resume work
+
+---
+
+# Supabase Products - Missing Items (Add to Database)
+
+## Missing Product Reviews (Need Full Creation)
+
+### Products Referenced But No Review Pages Exist:
+- [ ] **Henckels 10-Inch Sharpening Steel** - `henckels-10-inch-sharpening-steel` - https://amzn.to/4qh96Zu
+  - Currently referenced in: blog/how-to-steel-a-knife/page.tsx
+  - **Needs:** Full product review page creation + Supabase entry
+
+- [ ] **Gourmia 1800W Indoor Pizza Oven** - `gourmia-pizza-oven` - https://amzn.to/4qfaiMU
+  - Currently referenced in: guides/affordable-kitchen-appliances/page.tsx
+  - **Needs:** Full product review page creation + Supabase entry
+
+## Hotel Pans - Missing Lids & Configuration Verification
+
+### Current 4-Product Structure (CORRECT - Intentional Design):
+✅ small-plastic-hotel-pans
+✅ large-plastic-hotel-pans
+✅ small-metal-hotel-pans
+✅ large-metal-hotel-pans
+
+### Missing Lid Products:
+- [ ] **Plastic Hotel Pan Lids** - Create product with appropriate affiliate link(s)
+- [ ] **Metal Hotel Pan Regular Lids (non-notched)** - Create product with affiliate link
+- [ ] Verify **Metal Hotel Pan Notched Lids** exists - https://amzn.to/47IgA0o (currently in code)
+
+### Configuration Verification Needed:
+- [ ] Verify all 4 hotel pan products have correct affiliate links in Supabase
+- [ ] Verify small-plastic-hotel-pans has https://amzn.to/47oh8qZ (or correct link)
+- [ ] Verify large-plastic-hotel-pans has https://amzn.to/4qtKjSe (or correct link)
+- [ ] Verify small-metal-hotel-pans has https://amzn.to/3Wny7og (or correct link)
+- [ ] Verify large-metal-hotel-pans has https://amzn.to/4hoWZ8C (or correct link)
+
+## Knife Variants - Needs Cleanup
+
+### Victorinox 4-Inch Paring Knife
+**Current:** One product with duplicate links
+**Should be:** One product with TWO tagged variants:
+- [ ] Tag "4-inch": https://amzn.to/4mzvALq (primary)
+- [ ] Tag "3.25-inch": https://amzn.to/4n4bDvw (variant)
+
+### Victorinox 10-Inch Chef's Knife
+**Issue:** Two different affiliate links found
+- https://amzn.to/4o6pPwW
+- https://amzn.to/3JhIxaZA
+**Action needed:** Verify which is correct, remove duplicate/incorrect link
+
+### Victorinox Granton Edge Boning Knife
+**Issue:** Two different affiliate links found
+- https://amzn.to/4bWqrgs
+- https://amzn.to/4pUDed1
+**Action needed:** Verify which is correct, remove duplicate/incorrect link
+
+## Analysis Summary
+
+### Total Unique Products in Reviews: 36
+1. benriner-large-mandoline
+2. black-decker-toaster-oven
+3. bodum-chambord-french-press
+4. cuisinart-8-inch-nonstick-pan
+5. cuisinart-dlc-10c-classic-food-processor
+6. diamond-crystal-kosher-salt
+7. epicurean-kitchen-cutting-board
+8. instant-pot-duo-plus-6qt
+9. japanese-wooden-spoon-set
+10. john-boos-platinum-commercial-cutting-board
+11. kitchenaid-kp26m1xlc-professional-600
+12. kitchenaid-ksm8990wh
+13. large-metal-hotel-pans
+14. large-plastic-hotel-pans
+15. le-creuset-signature-7-25-qt-dutch-oven
+16. lodge-seasoned-cast-iron-3-skillet-bundle
+17. method-all-purpose-cleaner
+18. ninja-air-fryer-af101
+19. ninja-bl660-professional-blender
+20. nordic-ware-half-sheet-pan
+21. norton-im200-tri-stone-sharpener
+22. oxo-good-grips-bench-scraper
+23. oxo-good-grips-swivel-peeler
+24. robot-coupe-r2-dice
+25. rubbermaid-commercial-cooks-scraper
+26. small-metal-hotel-pans
+27. small-plastic-hotel-pans
+28. victorinox-4-inch-paring-knife
+29. victorinox-fibrox-10-inch-chefs-knife
+30. victorinox-fibrox-8-inch-chefs-knife
+31. victorinox-granton-edge-boning-knife
+32. victorinox-offset-bread-knife
+33. vitamix-5200
+34. winco-heavy-duty-tongs
+35. wusthof-classic-ikon-16-piece
+36. zuperia-bar-mops
+
+### Products Referenced in Guides/Bundles (Not in Reviews):
+- Henckels 10-Inch Sharpening Steel (NO REVIEW PAGE EXISTS - needs full creation)
+- Gourmia Pizza Oven (NO REVIEW PAGE EXISTS - needs full creation)
+
+### Why Nordic Ware Half Sheet Pan Has No Link Listed:
+- Product exists in reviews with `affiliateLinks: []`
+- Already configured to fetch from Supabase
+- Link IS in Supabase database, not in fallback code
+- This is CORRECT implementation ✅
+
+### Insight: Why We Were Missing Products
+Initial analysis only captured products with fallback URLs in code. Products already fully integrated with Supabase (like Nordic Ware) weren't listed. All 36 review products ARE migrated and working correctly. The "missing" items are:
+1. Henckels Sharpening Steel - **No review page exists, needs full creation**
+2. Gourmia Pizza Oven - **No review page exists, needs full creation**
+3. Hotel pan lids - Oversight during original creation, need product entries

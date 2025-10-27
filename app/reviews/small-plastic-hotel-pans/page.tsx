@@ -5,7 +5,7 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 export const dynamic = 'force-dynamic'
@@ -77,7 +77,11 @@ export default async function SmallPlasticHotelPansReview() {
     throw new Error('Product not found: small-plastic-hotel-pans')
   }
 
-  const affiliateLink = product.affiliateLinks?.[0]?.url || 'https://amzn.to/47oh8qZ'
+  // Also fetch related large plastic hotel pans for cross-sell
+  const relatedProduct = await getProductBySlug('large-plastic-hotel-pans')
+
+  const affiliateLink = getPrimaryAffiliateLink(product)
+  const relatedAffiliateLink = relatedProduct ? getPrimaryAffiliateLink(relatedProduct) : 'https://amzn.to/4qtKjSe'
 
   const productData = {
     name: product.name,
@@ -357,7 +361,7 @@ export default async function SmallPlasticHotelPansReview() {
             <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-6">
               <h3 className="text-xl font-bold mb-3">Add This: 4-Inch 1/6 Pans</h3>
               <p>
-                <a href="https://amzn.to/4qtKjSe" className="text-orange-600 hover:underline font-semibold">
+                <a href={relatedAffiliateLink} className="text-orange-600 hover:underline font-semibold">
                   Get the 4-Inch 1/6 Pan 6-Pack with Lids
                 </a>
               </p>

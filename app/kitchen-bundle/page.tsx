@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { ArrowRight, ShoppingCart } from 'lucide-react'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata: Metadata = {
   title: 'Essential Kitchen Starter: 10 Year Pro-Tested',
@@ -14,87 +15,106 @@ export const metadata: Metadata = {
   },
 }
 
-// Part 1: Core Essentials (~$150 Foundation)
-const coreEssentials = [
-  {
-    name: "Victorinox Fibrox Pro 8\" Chef's Knife",
-    justification: "The workhorse knife that will handle 90% of your daily prep. Professional-grade Swiss engineering at an unbeatable price.",
-    reviewSlug: "victorinox-fibrox-8-inch-chefs-knife",
-    affiliateUrl: "https://amzn.to/3U4PsT1",
-    image: "/logo.png"
-  },
-  {
-    name: "Victorinox 4\" Paring Knife",
-    justification: "For detailed work and precision cuts. The perfect complement to your chef's knife.",
-    reviewSlug: "victorinox-4-inch-paring-knife",
-    affiliateUrl: "https://amzn.to/4mzvALq",
-    image: "/logo.png"
-  },
-  {
-    name: "Lodge Cast Iron 3-Skillet Bundle",
-    justification: "The indestructible pan set that will outlast you. Perfect searing, oven-safe, and they get better with age.",
-    reviewSlug: "lodge-seasoned-cast-iron-3-skillet-bundle",
-    affiliateUrl: "https://amzn.to/3IhHcdl",
-    image: "/logo.png"
-  },
-  {
-    name: "OXO Good Grips Swivel Peeler",
-    justification: "The one tool you'll use every single day. Non-slip grip and razor-sharp blade that adapts to any vegetable.",
-    reviewSlug: "oxo-good-grips-swivel-peeler",
-    affiliateUrl: "https://amzn.to/4mZNiyT",
-    image: "/logo.png"
-  },
-  {
-    name: "ZUPERIA Bar Mops (12-Pack)",
-    justification: "The exact towels I used in professional kitchens. 100% ring spun cotton. Restaurant-grade absorbency and durability.",
-    reviewSlug: "zuperia-bar-mops",
-    affiliateUrl: "https://amzn.to/4nfExRj",
+export const dynamic = 'force-dynamic'
+
+export default async function ChefApprovedKitchenKit() {
+  // Fetch all products from Supabase
+  const products = await Promise.all([
+    getProductBySlug('victorinox-fibrox-8-inch-chefs-knife'),
+    getProductBySlug('victorinox-4-inch-paring-knife'),
+    getProductBySlug('lodge-seasoned-cast-iron-3-skillet-bundle'),
+    getProductBySlug('oxo-good-grips-swivel-peeler'),
+    getProductBySlug('zuperia-bar-mops'),
+    getProductBySlug('le-creuset-signature-7-25-qt-dutch-oven'),
+    getProductBySlug('john-boos-platinum-commercial-cutting-board'),
+    getProductBySlug('kitchenaid-ksm8990wh'),
+    getProductBySlug('vitamix-5200'),
+    getProductBySlug('benriner-large-mandoline'),
+  ])
+
+  // Part 1: Core Essentials (~$150 Foundation)
+  // Dynamic affiliate links with fallbacks
+  const coreEssentials = [
+    {
+      name: "Victorinox Fibrox Pro 8\" Chef's Knife",
+      justification: "The workhorse knife that will handle 90% of your daily prep. Professional-grade Swiss engineering at an unbeatable price.",
+      reviewSlug: "victorinox-fibrox-8-inch-chefs-knife",
+      affiliateUrl: products[0] ? getPrimaryAffiliateLink(products[0]) : "https://amzn.to/3U4PsT1",
+      image: "/logo.png"
+    },
+    {
+      name: "Victorinox 4\" Paring Knife",
+      justification: "For detailed work and precision cuts. The perfect complement to your chef's knife.",
+      reviewSlug: "victorinox-4-inch-paring-knife",
+      affiliateUrl: products[1] ? getPrimaryAffiliateLink(products[1]) : "https://amzn.to/3Lc3oIo",
+      image: "/logo.png"
+    },
+    {
+      name: "Lodge Cast Iron 3-Skillet Bundle",
+      justification: "The indestructible pan set that will outlast you. Perfect searing, oven-safe, and they get better with age.",
+      reviewSlug: "lodge-seasoned-cast-iron-3-skillet-bundle",
+      affiliateUrl: products[2] ? getPrimaryAffiliateLink(products[2]) : "https://amzn.to/3IhHcdl",
+      image: "/logo.png"
+    },
+    {
+      name: "OXO Good Grips Swivel Peeler",
+      justification: "The one tool you'll use every single day. Non-slip grip and razor-sharp blade that adapts to any vegetable.",
+      reviewSlug: "oxo-good-grips-swivel-peeler",
+      affiliateUrl: products[3] ? getPrimaryAffiliateLink(products[3]) : "https://amzn.to/4mZNiyT",
+      image: "/logo.png"
+    },
+    {
+      name: "ZUPERIA Bar Mops (12-Pack)",
+      justification: "The exact towels I used in professional kitchens. 100% ring spun cotton. Restaurant-grade absorbency and durability.",
+      reviewSlug: "zuperia-bar-mops",
+      affiliateUrl: products[4] ? getPrimaryAffiliateLink(products[4]) : "https://amzn.to/4nfExRj",
+      image: "/logo.png"
+    }
+  ]
+
+  // Part 2: Lifetime Upgrades
+  // Dynamic affiliate links with fallbacks
+  const lifetimeUpgrades = [
+    {
+      name: "Le Creuset Signature 7.25 Qt Dutch Oven",
+      justification: "The buy-it-for-life investment piece. Perfect for braising, bread baking, and soups. Will be passed down to your children.",
+      reviewSlug: "le-creuset-signature-7-25-qt-dutch-oven",
+      affiliateUrl: products[5] ? getPrimaryAffiliateLink(products[5]) : "https://amzn.to/4oo51B6",
+      image: "/logo.png"
+    },
+    {
+      name: "John Boos Platinum 24x18\" Cutting Board",
+      justification: "The professional workspace I used managing $80K/month operations. Large enough for serious prep, gentle on knives, built to last decades.",
+      reviewSlug: "john-boos-platinum-commercial-cutting-board",
+      affiliateUrl: products[6] ? getPrimaryAffiliateLink(products[6]) : "https://amzn.to/47jDzyG",
+      image: "/logo.png"
+    },
+    {
+      name: "KitchenAid Commercial Series Mixer",
+      justification: "NSF-certified power that survived 18 months of restaurant use. This is the mixer professional kitchens choose.",
+      reviewSlug: "kitchenaid-ksm8990wh",
+      affiliateUrl: products[7] ? getPrimaryAffiliateLink(products[7]) : "https://amzn.to/4nVlUTM",
+      image: "/logo.png"
+    },
+    {
+      name: "Vitamix 5200 Blender",
+      justification: "5 years powering our commercial smoothie program. The industry standard for professional blending.",
+      reviewSlug: "vitamix-5200",
+      affiliateUrl: products[8] ? getPrimaryAffiliateLink(products[8]) : "https://amzn.to/48RALd9",
+      image: "/logo.png"
+    }
+  ]
+
+  // Part 3: Specialist Tool
+  // Dynamic affiliate link with fallback
+  const specialistTool = {
+    name: "Benriner Large Mandoline",
+    justification: "The industry-standard tool for paper-thin, restaurant-quality slices. What takes 15 minutes with a knife takes 2 minutes with this Japanese precision tool.",
+    reviewSlug: "benriner-large-mandoline",
+    affiliateUrl: products[9] ? getPrimaryAffiliateLink(products[9]) : "https://amzn.to/3ktZMxT",
     image: "/logo.png"
   }
-]
 
-// Part 2: Lifetime Upgrades
-const lifetimeUpgrades = [
-  {
-    name: "Le Creuset Signature 7.25 Qt Dutch Oven",
-    justification: "The buy-it-for-life investment piece. Perfect for braising, bread baking, and soups. Will be passed down to your children.",
-    reviewSlug: "le-creuset-signature-7-25-qt-dutch-oven",
-    affiliateUrl: "https://amzn.to/4oo51B6",
-    image: "/logo.png"
-  },
-  {
-    name: "John Boos Platinum 24x18\" Cutting Board",
-    justification: "The professional workspace I used managing $80K/month operations. Large enough for serious prep, gentle on knives, built to last decades.",
-    reviewSlug: "john-boos-platinum-commercial-cutting-board",
-    affiliateUrl: "https://amzn.to/47jDzyG",
-    image: "/logo.png"
-  },
-  {
-    name: "KitchenAid Commercial Series Mixer",
-    justification: "NSF-certified power that survived 18 months of restaurant use. This is the mixer professional kitchens choose.",
-    reviewSlug: "kitchenaid-ksm8990wh",
-    affiliateUrl: "https://amzn.to/4nVlUTM",
-    image: "/logo.png"
-  },
-  {
-    name: "Vitamix 5200 Blender",
-    justification: "5 years powering our commercial smoothie program. The industry standard for professional blending.",
-    reviewSlug: "vitamix-5200",
-    affiliateUrl: "https://amzn.to/48RALd9",
-    image: "/logo.png"
-  }
-]
-
-// Part 3: Specialist Tool
-const specialistTool = {
-  name: "Benriner Large Mandoline",
-  justification: "The industry-standard tool for paper-thin, restaurant-quality slices. What takes 15 minutes with a knife takes 2 minutes with this Japanese precision tool.",
-  reviewSlug: "benriner-large-mandoline",
-  affiliateUrl: "https://amzn.to/3ktZMxT",
-  image: "/logo.png"
-}
-
-export default function ChefApprovedKitchenKit() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}

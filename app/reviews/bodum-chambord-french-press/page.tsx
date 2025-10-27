@@ -7,7 +7,7 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -103,6 +103,9 @@ export default async function BodumChambordFrenchPressReview() {
     throw new Error('Product not found: bodum-chambord-french-press')
   }
 
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
+
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
     ...legacyProductData,
@@ -162,7 +165,7 @@ export default async function BodumChambordFrenchPressReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://amzn.to/4o5zIuU"
+            href={affiliateUrl}
             merchant="amazon"
             product={productData.slug}
             position="above_fold"
@@ -317,7 +320,7 @@ export default async function BodumChambordFrenchPressReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://amzn.to/4o5zIuU"
+            href={affiliateUrl}
             merchant="amazon"
             product={productData.slug}
             position="mid_article"
@@ -468,7 +471,7 @@ export default async function BodumChambordFrenchPressReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://amzn.to/4o5zIuU"
+            href={affiliateUrl}
             merchant="amazon"
             product={productData.slug}
             position="final_cta"

@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import AffiliateButton from '@/components/AffiliateButton'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata: Metadata = {
   title: 'Hotel Pan System Review: Restaurant Organization for Home Kitchens',
@@ -60,7 +61,21 @@ const faqJsonLd = generateFAQSchema([
   }
 ])
 
-export default function HotelPanSystemPage() {
+export default async function HotelPanSystemPage() {
+  // Fetch hotel pan products from Supabase
+  const products = await Promise.all([
+    getProductBySlug('small-plastic-hotel-pans'),
+    getProductBySlug('large-plastic-hotel-pans'),
+    getProductBySlug('small-metal-hotel-pans'),
+    getProductBySlug('large-metal-hotel-pans'),
+  ])
+
+  // Get affiliate URLs with fallbacks
+  const smallPlasticUrl = products[0] ? getPrimaryAffiliateLink(products[0]) : 'https://amzn.to/47oh8qZ'
+  const largePlasticUrl = products[1] ? getPrimaryAffiliateLink(products[1]) : 'https://amzn.to/4qtKjSe'
+  const smallMetalUrl = products[2] ? getPrimaryAffiliateLink(products[2]) : 'https://amzn.to/3Wny7og'
+  const largeMetalUrl = products[3] ? getPrimaryAffiliateLink(products[3]) : 'https://amzn.to/4hoWZ8C'
+
   return (
     <>
       <script
@@ -108,7 +123,7 @@ export default function HotelPanSystemPage() {
             <strong>My Top Pick for Home Use:</strong> 6-Inch 1/6 Pan 6-Pack with Lids (Plastic) - the perfect size for most home cooking needs
           </p>
           <AffiliateButton
-            href="https://amzn.to/47oh8qZ"
+            href={smallPlasticUrl}
             merchant="amazon"
             product="curta-hotel-pan-1-6-6-inch"
             position="above_fold"
@@ -364,7 +379,7 @@ export default function HotelPanSystemPage() {
               <div className="space-y-3">
                 <p className="font-bold text-gray-900">My Top Recommendations:</p>
                 <AffiliateButton
-                  href="https://amzn.to/47oh8qZ"
+                  href={smallPlasticUrl}
                   merchant="amazon"
                   product="curta-1-6-pan-6-inch"
                   position="mid_article"
@@ -372,7 +387,7 @@ export default function HotelPanSystemPage() {
                   6-Inch 1/6 Pan 6-Pack (This is what I use most) →
                 </AffiliateButton>
                 <AffiliateButton
-                  href="https://amzn.to/4qtKjSe"
+                  href={largePlasticUrl}
                   merchant="amazon"
                   product="curta-1-6-pan-4-inch"
                   position="mid_article"
@@ -451,12 +466,12 @@ export default function HotelPanSystemPage() {
                   <h4 className="text-lg font-semibold mb-2 text-gray-900">Full Pans (Skip for Home - Too Large)</h4>
                   <ul className="space-y-2">
                     <li>
-                      <AffiliateButton href="https://amzn.to/48O97Ow" merchant="amazon" product="curta-full-pan-plastic" position="mid_article" variant="secondary">
+                      <AffiliateButton href={largePlasticUrl} merchant="amazon" product="curta-full-pan-plastic" position="mid_article" variant="secondary">
                         Full Hotel Pan 6-Pack (Plastic) →
                       </AffiliateButton>
                     </li>
                     <li>
-                      <AffiliateButton href="https://amzn.to/4hCHiLh" merchant="amazon" product="curta-full-pan-lids-plastic" position="mid_article" variant="secondary">
+                      <AffiliateButton href={largePlasticUrl} merchant="amazon" product="curta-full-pan-lids-plastic" position="mid_article" variant="secondary">
                         Full Hotel Pan Lids 6-Pack (Plastic) →
                       </AffiliateButton>
                     </li>
@@ -467,12 +482,12 @@ export default function HotelPanSystemPage() {
                   <h4 className="text-lg font-semibold mb-2 text-gray-900">1/3 Pans (Large Families Only)</h4>
                   <ul className="space-y-2">
                     <li>
-                      <AffiliateButton href="https://amzn.to/4hslylf" merchant="amazon" product="curta-1-3-pan-6-inch-plastic" position="mid_article" variant="secondary">
+                      <AffiliateButton href={largePlasticUrl} merchant="amazon" product="curta-1-3-pan-6-inch-plastic" position="mid_article" variant="secondary">
                         6-Inch 1/3 Pan 6-Pack with Lids (Plastic) →
                       </AffiliateButton>
                     </li>
                     <li>
-                      <AffiliateButton href="https://amzn.to/4oDFB2C" merchant="amazon" product="curta-1-3-pan-lids-plastic" position="mid_article" variant="secondary">
+                      <AffiliateButton href={largePlasticUrl} merchant="amazon" product="curta-1-3-pan-lids-plastic" position="mid_article" variant="secondary">
                         1/3 Pan Lids 6-Pack (Plastic) →
                       </AffiliateButton>
                     </li>
@@ -483,17 +498,17 @@ export default function HotelPanSystemPage() {
                   <h4 className="text-lg font-semibold mb-3 text-green-900">⭐ 1/6 Pans - MY TOP PICK FOR HOME</h4>
                   <ul className="space-y-2">
                     <li>
-                      <AffiliateButton href="https://amzn.to/47oh8qZ" merchant="amazon" product="curta-1-6-pan-6-inch-plastic" position="mid_article">
+                      <AffiliateButton href={smallPlasticUrl} merchant="amazon" product="curta-1-6-pan-6-inch-plastic" position="mid_article">
                         6-Inch 1/6 Pan 6-Pack with Lids (Most versatile home size) →
                       </AffiliateButton>
                     </li>
                     <li>
-                      <AffiliateButton href="https://amzn.to/4qtKjSe" merchant="amazon" product="curta-1-6-pan-4-inch-plastic" position="mid_article" variant="secondary">
+                      <AffiliateButton href={largePlasticUrl} merchant="amazon" product="curta-1-6-pan-4-inch-plastic" position="mid_article" variant="secondary">
                         4-Inch 1/6 Pan 6-Pack with Lids (Shallower option) →
                       </AffiliateButton>
                     </li>
                     <li>
-                      <AffiliateButton href="https://amzn.to/4oDFB2C" merchant="amazon" product="curta-1-6-pan-lids-plastic" position="mid_article" variant="secondary">
+                      <AffiliateButton href={largePlasticUrl} merchant="amazon" product="curta-1-6-pan-lids-plastic" position="mid_article" variant="secondary">
                         1/6 Pan Lids 6-Pack (Plastic) →
                       </AffiliateButton>
                     </li>
@@ -504,12 +519,12 @@ export default function HotelPanSystemPage() {
                   <h4 className="text-lg font-semibold mb-2 text-gray-900">1/9 Pans (Use Carefully - Can Tip)</h4>
                   <ul className="space-y-2">
                     <li>
-                      <AffiliateButton href="https://amzn.to/3L3HOG5" merchant="amazon" product="curta-1-9-pan-4-inch-plastic" position="mid_article" variant="secondary">
+                      <AffiliateButton href={smallPlasticUrl} merchant="amazon" product="curta-1-9-pan-4-inch-plastic" position="mid_article" variant="secondary">
                         4-Inch 1/9 Pan 6-Pack with Lids (Plastic) →
                       </AffiliateButton>
                     </li>
                     <li>
-                      <AffiliateButton href="https://amzn.to/4qqzhNl" merchant="amazon" product="curta-1-9-pan-lids-plastic" position="mid_article" variant="secondary">
+                      <AffiliateButton href={smallPlasticUrl} merchant="amazon" product="curta-1-9-pan-lids-plastic" position="mid_article" variant="secondary">
                         1/9 Pan Lids 6-Pack (Plastic) →
                       </AffiliateButton>
                     </li>
@@ -527,12 +542,12 @@ export default function HotelPanSystemPage() {
                   <h4 className="text-lg font-semibold mb-2 text-gray-900">Full Pans (Commercial Use)</h4>
                   <ul className="space-y-2">
                     <li>
-                      <AffiliateButton href="https://amzn.to/4qtLn8G" merchant="amazon" product="curta-full-pan-metal" position="mid_article" variant="secondary">
+                      <AffiliateButton href={largeMetalUrl} merchant="amazon" product="curta-full-pan-metal" position="mid_article" variant="secondary">
                         Full Hotel Pan 6-Pack (Metal) →
                       </AffiliateButton>
                     </li>
                     <li>
-                      <AffiliateButton href="https://amzn.to/4oipA2b" merchant="amazon" product="curta-full-pan-lids-metal" position="mid_article" variant="secondary">
+                      <AffiliateButton href={largeMetalUrl} merchant="amazon" product="curta-full-pan-lids-metal" position="mid_article" variant="secondary">
                         Full Hotel Pan Lids 6-Pack (Metal) →
                       </AffiliateButton>
                     </li>
@@ -543,17 +558,17 @@ export default function HotelPanSystemPage() {
                   <h4 className="text-lg font-semibold mb-2 text-gray-900">1/3 Pans</h4>
                   <ul className="space-y-2">
                     <li>
-                      <AffiliateButton href="https://amzn.to/4hoWZ8C" merchant="amazon" product="curta-1-3-pan-6-inch-metal" position="mid_article" variant="secondary">
+                      <AffiliateButton href={largeMetalUrl} merchant="amazon" product="curta-1-3-pan-6-inch-metal" position="mid_article" variant="secondary">
                         6-Inch 1/3 Pan 6-Pack (Metal) →
                       </AffiliateButton>
                     </li>
                     <li>
-                      <AffiliateButton href="https://amzn.to/47vbnrB" merchant="amazon" product="curta-1-3-pan-lids-metal" position="mid_article" variant="secondary">
+                      <AffiliateButton href={largeMetalUrl} merchant="amazon" product="curta-1-3-pan-lids-metal" position="mid_article" variant="secondary">
                         1/3 Pan Lids 6-Pack (Metal) →
                       </AffiliateButton>
                     </li>
                     <li>
-                      <AffiliateButton href="https://amzn.to/3WTjYzh" merchant="amazon" product="curta-1-3-pan-notched-lids-metal" position="mid_article" variant="secondary">
+                      <AffiliateButton href={largeMetalUrl} merchant="amazon" product="curta-1-3-pan-notched-lids-metal" position="mid_article" variant="secondary">
                         1/3 Pan Notched Lids 6-Pack (For ladles/utensils) →
                       </AffiliateButton>
                     </li>
@@ -564,22 +579,22 @@ export default function HotelPanSystemPage() {
                   <h4 className="text-lg font-semibold mb-2 text-gray-900">1/6 Pans</h4>
                   <ul className="space-y-2">
                     <li>
-                      <AffiliateButton href="https://amzn.to/3Wny7og" merchant="amazon" product="curta-1-6-pan-6-inch-metal" position="mid_article" variant="secondary">
+                      <AffiliateButton href={smallMetalUrl} merchant="amazon" product="curta-1-6-pan-6-inch-metal" position="mid_article" variant="secondary">
                         6-Inch 1/6 Pan 6-Pack (Metal) →
                       </AffiliateButton>
                     </li>
                     <li>
-                      <AffiliateButton href="https://amzn.to/47CV1yh" merchant="amazon" product="curta-1-6-pan-4-inch-metal" position="mid_article" variant="secondary">
+                      <AffiliateButton href={smallMetalUrl} merchant="amazon" product="curta-1-6-pan-4-inch-metal" position="mid_article" variant="secondary">
                         4-Inch 1/6 Pan 6-Pack (Metal) →
                       </AffiliateButton>
                     </li>
                     <li>
-                      <AffiliateButton href="https://amzn.to/3WTjYzh" merchant="amazon" product="curta-1-6-pan-lids-metal" position="mid_article" variant="secondary">
+                      <AffiliateButton href={largeMetalUrl} merchant="amazon" product="curta-1-6-pan-lids-metal" position="mid_article" variant="secondary">
                         1/6 Pan Lids 6-Pack (Metal) →
                       </AffiliateButton>
                     </li>
                     <li>
-                      <AffiliateButton href="https://amzn.to/47IgA0o" merchant="amazon" product="curta-1-6-pan-notched-lids-metal" position="mid_article" variant="secondary">
+                      <AffiliateButton href={smallMetalUrl} merchant="amazon" product="curta-1-6-pan-notched-lids-metal" position="mid_article" variant="secondary">
                         1/6 Pan Notched Lids 6-Pack (Metal) →
                       </AffiliateButton>
                     </li>
@@ -590,17 +605,17 @@ export default function HotelPanSystemPage() {
                   <h4 className="text-lg font-semibold mb-2 text-gray-900">1/9 Pans</h4>
                   <ul className="space-y-2">
                     <li>
-                      <AffiliateButton href="https://amzn.to/478xMMp" merchant="amazon" product="curta-1-9-pan-4-inch-metal" position="mid_article" variant="secondary">
+                      <AffiliateButton href={smallMetalUrl} merchant="amazon" product="curta-1-9-pan-4-inch-metal" position="mid_article" variant="secondary">
                         4-Inch 1/9 Pan 6-Pack (Metal) →
                       </AffiliateButton>
                     </li>
                     <li>
-                      <AffiliateButton href="https://amzn.to/3WjS0N3" merchant="amazon" product="curta-1-9-pan-lids-metal" position="mid_article" variant="secondary">
+                      <AffiliateButton href={smallMetalUrl} merchant="amazon" product="curta-1-9-pan-lids-metal" position="mid_article" variant="secondary">
                         1/9 Pan Lids 6-Pack (Metal) →
                       </AffiliateButton>
                     </li>
                     <li>
-                      <AffiliateButton href="https://amzn.to/478X78V" merchant="amazon" product="curta-1-9-pan-notched-lids-metal" position="mid_article" variant="secondary">
+                      <AffiliateButton href={smallMetalUrl} merchant="amazon" product="curta-1-9-pan-notched-lids-metal" position="mid_article" variant="secondary">
                         1/9 Pan Notched Lids 6-Pack (Metal) →
                       </AffiliateButton>
                     </li>
@@ -629,7 +644,7 @@ export default function HotelPanSystemPage() {
               <p className="text-gray-700 mb-4">
                 This gives you 12 containers in two depths—enough to organize meal prep, leftovers, and ingredient storage for most households.
               </p>
-              <AffiliateButton href="https://amzn.to/47oh8qZ" merchant="amazon" product="curta-starter-kit" position="mid_article">
+              <AffiliateButton href={smallPlasticUrl} merchant="amazon" product="curta-starter-kit" position="mid_article">
                 Get the 6-Inch Starter Kit →
               </AffiliateButton>
             </div>
@@ -817,7 +832,7 @@ export default function HotelPanSystemPage() {
               <p className="text-gray-700 mb-4">
                 <strong>Start with 6-Inch 1/6 Pan 6-Pack with Lids (Plastic)</strong> - This is the most versatile size for meal prep, storage, and everyday use. Add 4-Inch 1/6 Pans if you want shallower storage options.
               </p>
-              <AffiliateButton href="https://amzn.to/47oh8qZ" merchant="amazon" product="curta-1-6-starter" position="final_cta">
+              <AffiliateButton href={smallPlasticUrl} merchant="amazon" product="curta-1-6-starter" position="final_cta">
                 Get the 1/6 Pan System (My Top Pick) →
               </AffiliateButton>
             </div>
@@ -834,7 +849,7 @@ export default function HotelPanSystemPage() {
               <p className="text-gray-700 mb-4">
                 <strong>Add Metal 1/6 Pans with Notched Lids</strong> for hot holding at family gatherings, BBQs, and potlucks. These work perfectly with chafing dishes and steam tables.
               </p>
-              <AffiliateButton href="https://amzn.to/3Wny7og" merchant="amazon" product="curta-1-6-metal" position="final_cta" variant="secondary">
+              <AffiliateButton href={smallMetalUrl} merchant="amazon" product="curta-1-6-metal" position="final_cta" variant="secondary">
                 Get Metal Pans for Events →
               </AffiliateButton>
             </div>

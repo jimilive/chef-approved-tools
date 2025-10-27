@@ -9,7 +9,7 @@ import { Tier2Badge } from '@/components/ReviewTierBadge'
 import FTCDisclosure from '@/components/FTCDisclosure';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -41,20 +41,7 @@ const legacyProductData = {
     "Requires careful handling (no thermal shock)",
     "Enamel can chip if dropped"
   ],
-  affiliateLinks: [
-    {
-      retailer: "Amazon",
-      url: "https://amzn.to/4oo51B6"
-    },
-    {
-      retailer: "Williams Sonoma",
-      url: "https://www.williams-sonoma.com/products/le-creuset-signature-round-dutch-oven/"
-    },
-    {
-      retailer: "Le Creuset Direct",
-      url: "https://www.lecreuset.com/round-dutch-oven/21177US.html"
-    }
-  ],
+  affiliateLinks: [],
   inStock: true,
   expertRating: 4.9,
   expertOpinion: "After 10 years of extensive testing, this represents the categorical best in enameled cast iron cookware. Founded in 1925, Le Creuset has spent nearly a century perfecting their French casting techniques, establishing them as the undisputed leader in premium Dutch ovens. This is the lightest weight per quart in the industry with superior heat distribution that earned Good Housekeeping's Kitchen Gear Award. The smooth interior enamel prevents sticking while providing excellent visual feedback for browning. Works seamlessly to sauté, deglaze, then braise all in one piece. With Le Creuset's lifetime warranty and generational durability, this represents the gold standard that professional kitchens worldwide trust.",
@@ -202,6 +189,9 @@ export default async function LeCreuset725QtReview() {
     throw new Error('Product not found: le-creuset-signature-7-25-qt-dutch-oven')
   }
 
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
+
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
     ...legacyProductData,
@@ -312,7 +302,7 @@ export default async function LeCreuset725QtReview() {
                   merchant="amazon"
                 >
                   <AffiliateButton
-                    href={productData.affiliateLinks[0].url}
+                    href={affiliateUrl}
                     merchant="amazon"
                     product="le-creuset-signature-7-25-qt-dutch-oven"
                     position="above_fold"
@@ -687,7 +677,7 @@ export default async function LeCreuset725QtReview() {
         <section id="reviews" className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">What Real Users Are Saying</h2>
           <p className="text-sm text-slate-600 mb-4">
-            <em>Customer reviews curated from Amazon verified purchasers with {productData.reviewCount.toLocaleString()} total reviews. These represent selected experiences—<a href={productData.affiliateLinks[0].url} target="_blank" rel="noopener" className="text-orange-600 hover:text-orange-800">see complete review history</a>.</em>
+            <em>Customer reviews curated from Amazon verified purchasers with {productData.reviewCount.toLocaleString()} total reviews. These represent selected experiences—<a href={affiliateUrl} target="_blank" rel="noopener" className="text-orange-600 hover:text-orange-800">see complete review history</a>.</em>
           </p>
           <div className="space-y-4">
             {customerReviews.map((review, index) => (
@@ -967,7 +957,7 @@ export default async function LeCreuset725QtReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href={productData.affiliateLinks[0].url}
+                href={affiliateUrl}
                 merchant="amazon"
                 product="le-creuset-signature-7-25-qt-dutch-oven"
                 position="mid_article"
@@ -1100,7 +1090,7 @@ export default async function LeCreuset725QtReview() {
                 merchant="amazon"
               >
                 <AffiliateButton
-                  href={productData.affiliateLinks[0].url}
+                  href={affiliateUrl}
                   merchant="amazon"
                   product="le-creuset-signature-7-25-qt-dutch-oven"
                   position="final_cta"
@@ -1165,7 +1155,7 @@ export default async function LeCreuset725QtReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href={productData.affiliateLinks[0].url}
+                href={affiliateUrl}
                 merchant="amazon"
                 product="le-creuset-signature-7-25-qt-dutch-oven"
                 position="final_cta"

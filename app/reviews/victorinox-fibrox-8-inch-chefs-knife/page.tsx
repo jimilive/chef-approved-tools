@@ -12,7 +12,7 @@ import RelatedProductCard, { RelatedProductsGrid } from '@/components/review/Rel
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering (not static) since we fetch from Supabase
@@ -60,7 +60,7 @@ export default async function VictorinoxFibrox8InchReview() {
     throw new Error('Product not found: victorinox-fibrox-8-inch-chefs-knife')
   }
 
-  const affiliateLink = product.affiliateLinks?.[0]?.url || 'https://amzn.to/example'
+  const affiliateLink = getPrimaryAffiliateLink(product)
 
   const productData = {
     name: "Victorinox fibrox 8 inch chefs knife",
@@ -704,7 +704,7 @@ export default async function VictorinoxFibrox8InchReview() {
                     merchant="amazon"
                   >
                     <AffiliateButton
-                      href="https://amzn.to/4o7BUSV"
+                      href={affiliateLink}
                       merchant="amazon"
                       product="victorinox-fibrox-8-inch-chefs-knife"
                       position="related_products"

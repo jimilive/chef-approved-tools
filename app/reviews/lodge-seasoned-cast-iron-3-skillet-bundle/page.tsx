@@ -8,7 +8,7 @@ import AffiliateButton from '@/components/AffiliateButton';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Tier2Badge } from '@/components/ReviewTierBadge'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 import type { Metadata } from 'next'
 
@@ -36,12 +36,7 @@ const legacyProductData = {
     "Requires ongoing seasoning maintenance",
     "Initial learning curve for proper care"
   ],
-  affiliateLinks: [
-    {
-      retailer: "Amazon",
-      url: "https://amzn.to/3IhHcdl"
-    }
-  ],
+  affiliateLinks: [],
   inStock: true,
   expertRating: 4.8,
   expertOpinion: "After 7 years of using Lodge cast iron in my home kitchen, informed by decades of professional kitchen experience, these skillets are nearly indestructible workhorses. With proper care, they'll last forever and develop a seasoning that rivals any non-stick surface. Amazing for searing and can handle any level of heat including direct flame contact.",
@@ -145,6 +140,9 @@ export default async function Lodge3SkilletBundleReview() {
   if (!product) {
     throw new Error('Product not found: lodge-seasoned-cast-iron-3-skillet-bundle')
   }
+
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -252,7 +250,7 @@ export default async function Lodge3SkilletBundleReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/3IhHcdl"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -467,7 +465,7 @@ export default async function Lodge3SkilletBundleReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/3IhHcdl"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -684,7 +682,7 @@ export default async function Lodge3SkilletBundleReview() {
                     merchant="amazon"
                   >
                     <AffiliateButton
-                      href="https://amzn.to/3IhHcdl"
+                      href={affiliateUrl}
                       merchant="amazon"
                       product={productData.slug}
                       position="mid_article"
@@ -1119,7 +1117,7 @@ export default async function Lodge3SkilletBundleReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/3IhHcdl"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

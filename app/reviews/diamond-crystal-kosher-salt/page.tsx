@@ -7,7 +7,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -18,10 +18,7 @@ const legacyProductData = {
   slug: "diamond-crystal-kosher-salt",
   brand: "Diamond Crystal",
   category: "Seasonings",
-  affiliateLinks: [{
-    retailer: "Amazon",
-    url: "https://amzn.to/4o6pPwW"
-  }],
+  affiliateLinks: [],
   expertRating: 5,
   expertOpinion: "The industry standard for professional kitchens and serious home cooks.",
   pros: ["Perfect pinchability", "Clean pure flavor", "No additives", "Consistent results"],
@@ -73,6 +70,9 @@ export default async function DiamondCrystalKosherSaltReview() {
   if (!product) {
     throw new Error('Product not found: diamond-crystal-kosher-salt')
   }
+
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -134,7 +134,7 @@ export default async function DiamondCrystalKosherSaltReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://amzn.to/4o6pPwW"
+            href={affiliateUrl}
             merchant="amazon"
             product={productData.slug}
             position="above_fold"
@@ -270,7 +270,7 @@ export default async function DiamondCrystalKosherSaltReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://amzn.to/4o6pPwW"
+            href={affiliateUrl}
             merchant="amazon"
             product={productData.slug}
             position="mid_article"
@@ -501,7 +501,7 @@ export default async function DiamondCrystalKosherSaltReview() {
                 merchant="amazon"
               >
                 <AffiliateButton
-                  href="https://amzn.to/4o6pPwW"
+                  href={affiliateUrl}
                   merchant="amazon"
                   product={productData.slug}
                   position="mid_article"
@@ -619,7 +619,7 @@ export default async function DiamondCrystalKosherSaltReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://amzn.to/4o6pPwW"
+            href={affiliateUrl}
             merchant="amazon"
             product={productData.slug}
             position="mid_article"

@@ -12,7 +12,7 @@ import AffiliateButton from '@/components/AffiliateButton';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import { getProductBySlug } from '@/lib/product-helpers';
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers';
 import { generateOGImageURL } from '@/lib/og-image';
 
 const faqData = [
@@ -102,7 +102,7 @@ export default async function VictorinoxOffsetBreadKnifeReview() {
     throw new Error('Product not found: victorinox-offset-bread-knife')
   }
 
-  const affiliateLink = product.affiliateLinks?.[0]?.url || 'https://amzn.to/example'
+  const affiliateLink = getPrimaryAffiliateLink(product)
 
   const productData = {
     name: "Victorinox offset bread knife",

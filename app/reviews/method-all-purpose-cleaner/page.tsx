@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -19,9 +19,7 @@ const legacyProductData = {
   slug: "method-all-purpose-cleaner",
   brand: "Method",
   category: "Kitchen Cleaning",
-  affiliateLinks: [{
-    url: "https://amzn.to/4hf54wJ"
-  }],
+  affiliateLinks: [],
   expertRating: 4.8,
   expertOpinion: "After 5 years of daily use and 24 years managing professional kitchens, I've never found a cleaner that combines serious grease-cutting power with genuinely safe, non-toxic ingredients. Method All-Purpose Cleaner is the rare product that refuses to compromise—it cuts through kitchen grease as effectively as harsh chemical cleaners, but it's plant-based, biodegradable, and safe around food prep surfaces.",
   pros: [
@@ -127,6 +125,9 @@ export default async function MethodAllPurposeCleanerReview() {
     throw new Error('Product not found: method-all-purpose-cleaner')
   }
 
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
+
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
     ...legacyProductData,
@@ -211,7 +212,7 @@ export default async function MethodAllPurposeCleanerReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4hf54wJ"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -434,7 +435,7 @@ export default async function MethodAllPurposeCleanerReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4hf54wJ"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -825,7 +826,7 @@ export default async function MethodAllPurposeCleanerReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/4hf54wJ"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

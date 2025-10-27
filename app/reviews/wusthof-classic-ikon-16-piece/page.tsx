@@ -11,7 +11,7 @@ import { Tier1Badge } from '@/components/ReviewTierBadge'
 import AffiliateButton from '@/components/AffiliateButton';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 export const dynamic = 'force-dynamic'
@@ -44,16 +44,7 @@ const legacyProductData = {
     "Large block requires significant counter space",
     "Hand-wash only maintenance requirement"
   ],
-  affiliateLinks: [
-    {
-      retailer: "Amazon",
-      url: "https://amzn.to/3KtlPYS"
-    },
-    {
-      retailer: "Williams Sonoma",
-      url: "https://www.williams-sonoma.com/products/wusthof-classic-ikon-knife-block-set/?sku=8914839&cm_ven=PLA&cm_iu=8914839&cm_cat=Google&cm_pla=Local&gclid=Cj0KCQiA7qL6BhDOARIsAFNjvgFQqXwBhJuZz9UhTZC8eEhIz2MU4C1KtbZKx9QY6QZYl4rH9JjZl6kaArMuEALw_wcB"
-    }
-  ],
+  affiliateLinks: [],
   inStock: true,
   expertRating: 4.8,
   expertOpinion: "After extensive testing in professional kitchen environments, this German-forged knife set delivers exceptional performance with superior handle ergonomics. The PEtec-enhanced blades are 20% sharper than traditional knives with twice the edge retention. Chef, santoku, bread, and paring knives proved most valuable in daily operations. The full-tang construction and 58-degree HRC tempering provide outstanding balance and durability. While requiring regular steel maintenance, the set represents excellent value versus individual knife purchases.",
@@ -171,6 +162,9 @@ export default async function WusthofClassicIkonReview() {
     throw new Error('Product not found: wusthof-classic-ikon-16-piece')
   }
 
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
+
   const productData = {
     ...legacyProductData,
     ...product,
@@ -245,7 +239,7 @@ export default async function WusthofClassicIkonReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/3KtlPYS"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -431,7 +425,7 @@ export default async function WusthofClassicIkonReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/3KtlPYS"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -503,7 +497,7 @@ export default async function WusthofClassicIkonReview() {
                   merchant="amazon"
                 >
                   <AffiliateButton
-                    href="https://amzn.to/3KtlPYS"
+                    href={affiliateUrl}
                     merchant="amazon"
                     product={productData.slug}
                     position="mid_article"
@@ -658,7 +652,7 @@ export default async function WusthofClassicIkonReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/3KtlPYS"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="final_cta"

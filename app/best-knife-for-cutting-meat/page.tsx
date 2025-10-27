@@ -4,6 +4,7 @@ import { Star, DollarSign, Award, TrendingUp, Scissors } from 'lucide-react'
 import { generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata = {
   title: "Best Meat Cutting Knife 2025: Boning Guide",
@@ -26,7 +27,11 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Best Knife for Cutting Meat", url: "/best-knife-for-cutting-meat" }
 ])
 
-export default function BestKnifeForCuttingMeat() {
+export default async function BestKnifeForCuttingMeat() {
+  // Get product data from Supabase for Victorinox boning knife
+  const product = await getProductBySlug('victorinox-granton-edge-boning-knife')
+  const affiliateUrl = product ? getPrimaryAffiliateLink(product) : 'https://amzn.to/4pUDed1'
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Breadcrumbs */}
@@ -83,7 +88,7 @@ export default function BestKnifeForCuttingMeat() {
               merchant="amazon"
             >
             <a
-              href="https://amzn.to/4pUDed1"
+              href={affiliateUrl}
               target="_blank"
               rel="nofollow sponsored noopener"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
@@ -324,7 +329,7 @@ export default function BestKnifeForCuttingMeat() {
             merchant="amazon"
           >
           <a
-            href="https://amzn.to/4pUDed1"
+            href={affiliateUrl}
             target="_blank"
             rel="nofollow sponsored noopener"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-orange-700 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"

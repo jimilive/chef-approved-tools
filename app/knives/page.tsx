@@ -34,57 +34,6 @@ export default async function KnivesPage() {
     description: p.description || p.expertOpinion || 'Professional chef-tested knife'
   }))
 
-  const LEGACY_products = [
-    {
-      id: "victorinox-fibrox-10-inch-chefs-knife",
-      name: "Victorinox Fibrox Pro 10\" Chef's Knife",
-      brand: "Victorinox",
-      affiliateUrl: "https://amzn.to/4o6pPwW",
-      slug: "victorinox-fibrox-10-inch-chefs-knife",
-      description: "Professional Swiss chef's knife for larger cuts and bigger hands - 24 years of professional cooking"
-    },
-    {
-      id: "victorinox-fibrox-8-inch-chefs-knife",
-      name: "Victorinox Fibrox Pro 8\" Chef's Knife",
-      brand: "Victorinox",
-      affiliateUrl: "https://amzn.to/3U4PsT1",
-      slug: "victorinox-fibrox-8-inch-chefs-knife",
-      description: "Perfect all-purpose chef's knife tested through decades of professional cooking"
-    },
-    {
-      id: "victorinox-4-inch-paring-knife",
-      name: "Victorinox 4\" Paring Knife",
-      brand: "Victorinox",
-      affiliateUrl: "https://amzn.to/4mzvALq",
-      slug: "victorinox-4-inch-paring-knife",
-      description: "Precision paring knife for detailed work - the exact knife I've used for 20 years"
-    },
-    {
-      id: "victorinox-granton-edge-boning-knife",
-      name: "Victorinox 6\" Granton Edge Boning Knife",
-      brand: "Victorinox",
-      affiliateUrl: "https://amzn.to/4pUDed1",
-      slug: "victorinox-granton-edge-boning-knife",
-      description: "Professional boning knife for breaking down proteins - restaurant tested flexibility"
-    },
-    {
-      id: "victorinox-offset-bread-knife",
-      name: "Victorinox 9\" Offset Bread Knife",
-      brand: "Victorinox",
-      affiliateUrl: "https://amzn.to/34xYWJx",
-      slug: "victorinox-offset-bread-knife",
-      description: "Offset serrated knife for bread and tomatoes - superior knuckle clearance"
-    },
-    {
-      id: "wusthof-classic-ikon-16-piece",
-      name: "Wüsthof Classic Ikon 16-Piece Knife Set",
-      brand: "Wüsthof",
-      affiliateUrl: "#",
-      slug: "wusthof-classic-ikon-16-piece",
-      description: "Professional German knife set tested in restaurant kitchens"
-    }
-  ];
-
   const itemListLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",

@@ -8,7 +8,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import Link from 'next/link'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 export const dynamic = 'force-dynamic'
@@ -67,10 +67,7 @@ const legacyProductData = {
     "No locking mechanism for compact storage",
     "Can scratch non-stick cookware (use silicone tongs for non-stick)"
   ],
-  affiliateLinks: [{
-    retailer: "Amazon",
-    url: "https://amzn.to/47kQ9fS"
-  }],
+  affiliateLinks: [],
   expertRating: 5.0,
   expertOpinion: "Restaurant-quality tongs at budget price that have proven themselves through 24 years of professional kitchen use - buy three pairs and never worry about tongs again.",
   dateAdded: "2025-01-15",
@@ -117,6 +114,15 @@ export default async function WincoHeavyDutyTongsReview() {
   if (!product) {
     throw new Error('Product not found: winco-heavy-duty-tongs')
   }
+
+  // Get affiliate URLs for both size variants from the same product
+  // Look for links tagged with '12-inch' and '9-inch' in the affiliateLinks array
+  const link12inch = product.affiliateLinks.find(link => link.tag === '12-inch')
+  const link9inch = product.affiliateLinks.find(link => link.tag === '9-inch')
+
+  // Use tagged links if available, otherwise use primary for 12" and fallback for 9"
+  const affiliateUrl = link12inch?.url || getPrimaryAffiliateLink(product)
+  const variant9inchUrl = link9inch?.url || 'https://amzn.to/4oilO91'
 
   const productData = {
     ...legacyProductData,
@@ -213,7 +219,7 @@ export default async function WincoHeavyDutyTongsReview() {
                 merchant="amazon"
               >
                 <AffiliateButton
-                  href="https://amzn.to/47kQ9fS"
+                  href={affiliateUrl}
                   merchant="amazon"
                   product={legacyProductData.slug}
                   position="above_fold"
@@ -236,7 +242,7 @@ export default async function WincoHeavyDutyTongsReview() {
                 merchant="amazon"
               >
                 <AffiliateButton
-                  href="https://amzn.to/4oilO91"
+                  href={variant9inchUrl}
                   merchant="amazon"
                   product="winco-9-inch-tongs"
                   position="above_fold"
@@ -315,7 +321,7 @@ export default async function WincoHeavyDutyTongsReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/3KQ0I2V"
+                href={affiliateUrl}
                 merchant="amazon"
                 product="winco-heavy-duty-tongs"
                 position="mid_article"
@@ -458,7 +464,7 @@ export default async function WincoHeavyDutyTongsReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/3KQ0I2V"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="above_fold"
@@ -822,7 +828,7 @@ export default async function WincoHeavyDutyTongsReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/3KQ0I2V"
+                href={affiliateUrl}
                 merchant="amazon"
                 product="winco-heavy-duty-tongs"
                 position="final_cta"

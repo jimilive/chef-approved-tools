@@ -11,7 +11,7 @@ import AffiliateButton from '@/components/AffiliateButton';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -40,20 +40,7 @@ const legacyProductData = {
     "Significant weight requires dedicated storage",
     "Premium price vs plastic alternatives"
   ],
-  affiliateLinks: [
-    {
-      retailer: "Amazon",
-      url: "https://amzn.to/47jDzyG"
-    },
-    {
-      retailer: "John Boos Direct",
-      url: "https://www.tkqlhce.com/click-101557027-15656965"
-    },
-    {
-      retailer: "Williams Sonoma",
-      url: "https://www.williams-sonoma.com/products/john-boos-edge-grain-cutting-board/"
-    }
-  ],
+  affiliateLinks: [],
   inStock: true,
   expertRating: 4.8,
   expertOpinion: "After 14 years of daily home use, this John Boos cutting board represents the #1 choice for serious home cooks. Made from sustainable Northern Hard Rock Maple with NSF certification, it's built to professional standards. The 1.75-inch edge-grain construction resists deep cuts while being knife-friendly to preserve blade sharpness. At 21 pounds, it provides unmatched stability during heavy prep work. I expect to pass this generational piece to my children - the larger 24x18 size gives room to work efficiently without constantly moving prepped portions. Simple maintenance with mineral oil and proper cleaning has kept it food-safe for over a decade.",
@@ -161,6 +148,9 @@ export default async function JohnBosPlatinumCuttingBoardReview() {
     throw new Error('Product not found: john-boos-platinum-commercial-cutting-board')
   }
 
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
+
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
     ...legacyProductData,
@@ -263,7 +253,7 @@ export default async function JohnBosPlatinumCuttingBoardReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/47jDzyG"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="above_fold"
@@ -1026,7 +1016,7 @@ export default async function JohnBosPlatinumCuttingBoardReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/47jDzyG"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="mid_article"

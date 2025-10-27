@@ -11,7 +11,7 @@ import FAQBox, { FAQGrid } from '@/components/review/FAQBox';
 import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox';
 import EmailCaptureBox from '@/components/review/EmailCaptureBox';
 import AuthorBio from '@/components/review/AuthorBio';
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -111,6 +111,9 @@ export default async function NortonTriStoneSharpenerReview() {
     throw new Error('Product not found: norton-im200-tri-stone-sharpener')
   }
 
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
+
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
     ...legacyProductData,
@@ -178,7 +181,7 @@ export default async function NortonTriStoneSharpenerReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4oo51B6"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -691,7 +694,7 @@ export default async function NortonTriStoneSharpenerReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4oo51B6"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="final_cta"

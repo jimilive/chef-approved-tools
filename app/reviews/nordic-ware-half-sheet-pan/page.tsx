@@ -11,7 +11,7 @@ import FAQBox, { FAQGrid } from '@/components/review/FAQBox';
 import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox';
 import EmailCaptureBox from '@/components/review/EmailCaptureBox';
 import AuthorBio from '@/components/review/AuthorBio';
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -22,12 +22,7 @@ const legacyProductData = {
   slug: "nordic-ware-half-sheet-pan",
   brand: "Nordic Ware",
   category: "Bakeware",
-  affiliateLinks: [
-    {
-      retailer: "Amazon",
-      url: "https://amzn.to/4o7nWrQ"
-    }
-  ],
+  affiliateLinks: [],
   expertRating: 5,
   expertOpinion: "Commercial-grade durability with perfect heat distribution for professional results at home.",
   pros: [
@@ -126,6 +121,9 @@ export default async function NordicWareHalfSheetPanReview() {
     throw new Error('Product not found: nordic-ware-half-sheet-pan')
   }
 
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
+
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
     ...legacyProductData,
@@ -192,7 +190,7 @@ export default async function NordicWareHalfSheetPanReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4o7nWrQ"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -651,7 +649,7 @@ export default async function NordicWareHalfSheetPanReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4o7nWrQ"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="final_cta"

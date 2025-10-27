@@ -12,7 +12,7 @@ import type { Metadata } from 'next'
 import FAQBox, { FAQGrid } from '@/components/review/FAQBox'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -27,18 +27,7 @@ const legacyProductData = {
   testingPeriod: '18-Year Real-World Test (2007-2025)',
   expertRating: 4.7,
   dealStatus: 'normal' as const,
-  affiliateLinks: [
-    {
-      retailer: 'Amazon',
-      url: 'https://amzn.to/470lRQQ',
-      size: '13.5-inch'
-    },
-    {
-      retailer: 'Amazon',
-      url: 'https://amzn.to/4nbhBTm',
-      size: '9.5-inch'
-    }
-  ],
+  affiliateLinks: [],
   pros: [
     'One-piece molded design prevents trapped food and bacteria',
     'Clean-Rest™ blade stays elevated off counters',
@@ -150,6 +139,9 @@ export default async function RubbermaidScraperReview() {
     throw new Error('Product not found: rubbermaid-commercial-cooks-scraper')
   }
 
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
+
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
     ...legacyProductData,
@@ -249,7 +241,7 @@ export default async function RubbermaidScraperReview() {
                   merchant="amazon"
                 >
                   <AffiliateButton
-                    href={productData.affiliateLinks[0].url}
+                    href={affiliateUrl}
                     merchant="amazon"
                     product={productData.slug}
                     position="above_fold"
@@ -419,7 +411,7 @@ export default async function RubbermaidScraperReview() {
                 merchant="amazon"
               >
                 <AffiliateButton
-                  href={productData.affiliateLinks[0].url}
+                  href={affiliateUrl}
                   merchant="amazon"
                   product={productData.slug}
                   position="mid_article"
@@ -690,7 +682,7 @@ export default async function RubbermaidScraperReview() {
                     merchant="amazon"
                   >
                     <AffiliateButton
-                      href={productData.affiliateLinks[0].url}
+                      href={affiliateUrl}
                       merchant="amazon"
                       product={productData.slug}
                       position="mid_article"
@@ -798,7 +790,7 @@ export default async function RubbermaidScraperReview() {
                   merchant="amazon"
                 >
                   <AffiliateButton
-                    href={productData.affiliateLinks[0].url}
+                    href={affiliateUrl}
                     merchant="amazon"
                     product={productData.slug}
                     position="final_cta"

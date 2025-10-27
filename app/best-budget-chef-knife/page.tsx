@@ -4,6 +4,7 @@ import { Star, DollarSign, Award, TrendingUp, Shield } from 'lucide-react'
 import { generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata = {
   title: 'Best Budget Chef Knife 2025: Victorinox 8"',
@@ -26,7 +27,11 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Best Budget Chef Knife", url: "/best-budget-chef-knife" }
 ])
 
-export default function BestBudgetChefKnife() {
+export default async function BestBudgetChefKnife() {
+  // Get product data from Supabase for Victorinox 8" knife
+  const product = await getProductBySlug('victorinox-fibrox-8-inch-chefs-knife')
+  const affiliateUrl = product ? getPrimaryAffiliateLink(product) : 'https://amzn.to/3U4PsT1'
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Breadcrumbs */}
@@ -82,7 +87,7 @@ export default function BestBudgetChefKnife() {
               merchant="amazon"
             >
             <a
-              href="https://amzn.to/3U4PsT1"
+              href={affiliateUrl}
               target="_blank"
               rel="nofollow sponsored noopener"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
@@ -271,7 +276,7 @@ export default function BestBudgetChefKnife() {
             merchant="amazon"
           >
           <a
-            href="https://amzn.to/3U4PsT1"
+            href={affiliateUrl}
             target="_blank"
             rel="nofollow sponsored noopener"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-orange-700 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"

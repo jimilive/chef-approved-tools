@@ -14,7 +14,7 @@ import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/Re
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
 import FAQBox, { FAQGrid, type FAQItem } from '@/components/review/FAQBox'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -45,16 +45,7 @@ const legacyProductData = {
     "Premium pricing requires serious commitment",
     "Large footprint requires dedicated counter space"
   ],
-  affiliateLinks: [
-    {
-      retailer: "Amazon",
-      url: "https://amzn.to/48RALd9"
-    },
-    {
-      retailer: "Vitamix Direct",
-      url: "https://www.vitamix.com/us/en_us/shop/vitamix-5200?utm_source=chefapprovedt&utm_medium=affiliate"
-    }
-  ],
+  affiliateLinks: [],
   inStock: true,
   expertRating: 4.8,
   expertOpinion: "After 5 years powering Purple Cafe&apos;s smoothie operations, the Vitamix 5200 exceeded every expectation. Zero maintenance issues, consistent professional-quality results, and exceptional durability under daily restaurant volume. The variable speed control provides precision that newer &apos;smart&apos; models sacrifice. Blades remain sharp, motor shows no degradation—genuine buy-it-for-life equipment.",
@@ -371,6 +362,9 @@ export default async function Vitamix5200Review() {
     throw new Error('Product not found: vitamix-5200')
   }
 
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
+
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
     ...legacyProductData,
@@ -469,7 +463,7 @@ export default async function Vitamix5200Review() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/48RALd9"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="above_fold"
@@ -662,7 +656,7 @@ export default async function Vitamix5200Review() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/48RALd9"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="mid_article"
@@ -925,7 +919,7 @@ export default async function Vitamix5200Review() {
                     merchant="amazon"
                   >
                     <AffiliateButton
-                      href="https://amzn.to/48RALd9"
+                      href={affiliateUrl}
                       merchant="amazon"
                       product={productData.slug}
                       position="mid_article"
@@ -1020,7 +1014,7 @@ export default async function Vitamix5200Review() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/48RALd9"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="mid_article"

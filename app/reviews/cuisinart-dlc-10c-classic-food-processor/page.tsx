@@ -8,7 +8,7 @@ import AffiliateButton from '@/components/AffiliateButton'
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -37,12 +37,7 @@ const legacyProductData = {
     "Takes up counter space",
     "Requires immediate cleaning for best results"
   ],
-  affiliateLinks: [
-    {
-      retailer: "Amazon",
-      url: "https://amzn.to/42NmxE"
-    }
-  ],
+  affiliateLinks: [],
   inStock: true,
   expertRating: 5.0,
   expertOpinion: "After 30 years of nearly daily use—from shredding mountains of cheese to making perfect hashbrowns every weekend—this Cuisinart food processor is one of the best products I've ever owned.",
@@ -134,6 +129,9 @@ export default async function CuisinartDLC10CReviewPage() {
   if (!product) {
     throw new Error('Product not found: cuisinart-dlc-10c-classic-food-processor')
   }
+
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -238,7 +236,7 @@ export default async function CuisinartDLC10CReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/42NmxE"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -285,7 +283,7 @@ export default async function CuisinartDLC10CReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/42NmxE"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -487,7 +485,7 @@ export default async function CuisinartDLC10CReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/42NmxE"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -801,7 +799,7 @@ export default async function CuisinartDLC10CReviewPage() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/42NmxE"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

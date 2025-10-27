@@ -12,7 +12,7 @@ import type { Metadata } from 'next'
 import FAQBox, { FAQGrid } from '@/components/review/FAQBox'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -41,12 +41,7 @@ const legacyProductData = {
     "Bowl-lift less convenient than tilt-head for quick access",
     "Not suitable for occasional bakers"
   ],
-  affiliateLinks: [
-    {
-      retailer: "Amazon",
-      url: "https://amzn.to/4n6Fyej"
-    }
-  ],
+  affiliateLinks: [],
   inStock: true,
   expertRating: 5.0,
   expertOpinion: "After 18 years of home use—from weekly pizza dough to holiday cookies—this KitchenAid Professional 600 remains as reliable as the day my mother gifted it to me after culinary school.",
@@ -138,6 +133,9 @@ export default async function KitchenAidProfessional600ReviewPage() {
   if (!product) {
     throw new Error('Product not found: kitchenaid-kp26m1xlc-professional-600')
   }
+
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -241,7 +239,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4n6Fyej"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -292,7 +290,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4n6Fyej"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -520,7 +518,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4n6Fyej"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -930,7 +928,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/4n6Fyej"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

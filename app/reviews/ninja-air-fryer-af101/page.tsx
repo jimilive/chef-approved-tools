@@ -7,7 +7,7 @@ import AffiliateButton from '@/components/AffiliateButton'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 export const dynamic = 'force-dynamic'
@@ -80,7 +80,7 @@ export default async function NinjaAirFryerAF101Review() {
     throw new Error('Product not found: ninja-air-fryer-af101')
   }
 
-  const affiliateLink = product.affiliateLinks?.[0]?.url || 'https://amzn.to/4oADQTJ'
+  const affiliateLink = getPrimaryAffiliateLink(product)
 
   const productData = {
     name: product.name,

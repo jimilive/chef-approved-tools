@@ -10,7 +10,7 @@ import AffiliateButton from '@/components/AffiliateButton';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -42,16 +42,7 @@ const legacyProductData = {
     "Requires 120V 15-amp circuit",
     "Learning curve for optimal results"
   ],
-  affiliateLinks: [
-    {
-      retailer: "Amazon",
-      url: "https://amzn.to/4gVgENj"
-    },
-    {
-      retailer: "WebstaurantStore",
-      url: "https://www.webstaurantstore.com/robot-coupe-r2-dice-combination-continuous-feed-food-processor-dicer-with-3-qt-gray-polycarbonate-bowl-2-hp/649R2DICE.html"
-    }
-  ],
+  affiliateLinks: [],
   inStock: true,
   expertRating: 4.7,
   expertOpinion: "After 3 years of intensive testing in Purple Cafe's high-volume prep kitchen, the Robot Coupe R2 Dice proved essential for cheese shredding and vegetable prep operations. The 2 HP motor and continuous feed design drastically reduced prep time while maintaining consistent quality. Saves 60-90 minutes daily in commercial operations, paying for itself in approximately 2 months through labor savings.",
@@ -155,6 +146,9 @@ export default async function RobotCoupeR2DiceReview() {
     throw new Error('Product not found: robot-coupe-r2-dice')
   }
 
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
+
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
     ...legacyProductData,
@@ -257,7 +251,7 @@ export default async function RobotCoupeR2DiceReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/4gVgENj"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="above_fold"
@@ -444,7 +438,7 @@ export default async function RobotCoupeR2DiceReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4gVgENj"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -876,7 +870,7 @@ export default async function RobotCoupeR2DiceReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/4gVgENj"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

@@ -12,7 +12,7 @@ import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/Re
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
 import FAQBox, { FAQGrid, type FAQItem } from '@/components/review/FAQBox'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -41,16 +41,7 @@ const legacyProductData = {
     "May need dedicated electrical circuit (500W draw)",
     "Premium pricing over residential models"
   ],
-  affiliateLinks: [
-    {
-      retailer: "Amazon",
-      url: "https://amzn.to/4nVlUTM"
-    },
-    {
-      retailer: "KitchenAid Direct",
-      url: "https://www.kitchenaid.com/p.KSM8990WH.html?tag=chefapprovedt-20"
-    }
-  ],
+  affiliateLinks: [],
   inStock: true,
   expertRating: 4.8,
   expertOpinion: "After 18 months of daily testing in a high-volume restaurant (200+ covers nightly), this KitchenAid Commercial mixer has proven itself through double-batch dough production, 45-minute continuous operation, and zero maintenance issues.",
@@ -138,6 +129,9 @@ export default async function KitchenAidReviewPage() {
   if (!product) {
     throw new Error('Product not found: kitchenaid-ksm8990wh')
   }
+
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -260,7 +254,7 @@ export default async function KitchenAidReviewPage() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4nVlUTM"
+              href={affiliateUrl}
               merchant="amazon"
               product="kitchenaid-ksm8990wh"
               position="above_fold"
@@ -709,7 +703,7 @@ export default async function KitchenAidReviewPage() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/4nVlUTM"
+                href={affiliateUrl}
                 merchant="amazon"
                 product="kitchenaid-ksm8990wh"
                 position="final_cta"

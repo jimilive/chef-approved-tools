@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { DollarSign, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers';
 
 export const metadata: Metadata = {
   title: 'Budget Kitchen Appliances 2025: What Works',
@@ -12,7 +13,25 @@ export const metadata: Metadata = {
   },
 }
 
-export default function AffordableKitchenAppliancesPage() {
+export default async function AffordableKitchenAppliancesPage() {
+  // Fetch products from Supabase
+  const products = await Promise.all([
+    getProductBySlug('ninja-bl660-professional-blender'),
+    getProductBySlug('kitchenaid-kp26m1xlc-professional-600'),
+    getProductBySlug('cuisinart-dlc-10c-classic-food-processor'),
+    getProductBySlug('instant-pot-duo-plus-6qt'),
+    getProductBySlug('ninja-air-fryer-af101'),
+    getProductBySlug('gourmia-pizza-oven'),
+  ])
+
+  // Get affiliate URLs with fallbacks
+  const ninjaBlenderUrl = products[0] ? getPrimaryAffiliateLink(products[0]) : 'https://amzn.to/4o5zIuU'
+  const kitchenAidUrl = products[1] ? getPrimaryAffiliateLink(products[1]) : 'https://amzn.to/4n6Fyej'
+  const cuisinartUrl = products[2] ? getPrimaryAffiliateLink(products[2]) : 'https://amzn.to/4n70rWQ'
+  const instantPotUrl = products[3] ? getPrimaryAffiliateLink(products[3]) : 'https://amzn.to/4n7dbfW'
+  const airFryerUrl = products[4] ? getPrimaryAffiliateLink(products[4]) : 'https://amzn.to/4q8G9Pn'
+  const pizzaOvenUrl = products[5] ? getPrimaryAffiliateLink(products[5]) : 'https://amzn.to/4qfaiMU'
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Breadcrumbs */}
@@ -153,7 +172,7 @@ export default function AffordableKitchenAppliancesPage() {
               merchant="amazon"
             >
               <a
-                href="https://amzn.to/4o5zIuU"
+                href={ninjaBlenderUrl}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
                 className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
@@ -250,7 +269,7 @@ export default function AffordableKitchenAppliancesPage() {
               merchant="amazon"
             >
               <a
-                href="https://amzn.to/4n6Fyej"
+                href={kitchenAidUrl}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
                 className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
@@ -368,7 +387,7 @@ export default function AffordableKitchenAppliancesPage() {
               merchant="amazon"
             >
               <a
-                href="https://amzn.to/4n70rWQ"
+                href={cuisinartUrl}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
                 className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
@@ -409,7 +428,7 @@ export default function AffordableKitchenAppliancesPage() {
                 merchant="amazon"
               >
                 <a
-                  href="https://amzn.to/4n7dbfW"
+                  href={instantPotUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
                   className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
@@ -468,7 +487,7 @@ export default function AffordableKitchenAppliancesPage() {
                 merchant="amazon"
               >
                 <a
-                  href="https://amzn.to/4q8G9Pn"
+                  href={airFryerUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
                   className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
@@ -503,7 +522,7 @@ export default function AffordableKitchenAppliancesPage() {
                 merchant="amazon"
               >
                 <a
-                  href="https://amzn.to/4qfaiMU"
+                  href={pizzaOvenUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
                   className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"

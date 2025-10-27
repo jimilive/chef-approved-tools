@@ -9,7 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import FAQBox, { FAQGrid, type FAQItem } from '@/components/review/FAQBox'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 // Force dynamic rendering (not static) since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -91,7 +91,7 @@ export default async function VictorinoxGrantonEdgeBoningKnifeReview() {
     throw new Error('Product not found: victorinox-granton-edge-boning-knife')
   }
 
-  const affiliateLink = product.affiliateLinks?.[0]?.url || 'https://amzn.to/example'
+  const affiliateLink = getPrimaryAffiliateLink(product)
 
   const productData = {
     name: "Victorinox 6-Inch Granton Edge Flexible Boning Knife",

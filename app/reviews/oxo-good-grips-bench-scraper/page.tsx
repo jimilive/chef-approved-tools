@@ -8,7 +8,7 @@ import AffiliateButton from '@/components/AffiliateButton';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -68,10 +68,7 @@ const legacyProductData = {
     "Learning curve to master efficient techniques",
     "Not essential if you rarely do prep work or baking"
   ],
-  affiliateLinks: [{
-    retailer: "Amazon",
-    url: "https://amzn.to/4mXTS8X"
-  }],
+  affiliateLinks: [],
   expertRating: 5.0,
   expertOpinion: "The most underrated tool in any kitchen - once you start using a bench scraper, you'll wonder how you ever cooked without one for 24 years of daily use.",
   dateAdded: "2025-01-15",
@@ -111,6 +108,9 @@ export default async function OXOGoodGripsBenchScraperReview() {
   if (!product) {
     throw new Error('Product not found: oxo-good-grips-bench-scraper')
   }
+
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -399,7 +399,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/4mXTS8X"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="above_fold"
@@ -590,7 +590,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4mXTS8X"
+              href={affiliateUrl}
               merchant="amazon"
               product="oxo-good-grips-bench-scraper"
               position="mid_article"
@@ -758,7 +758,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/4mXTS8X"
+                href={affiliateUrl}
                 merchant="amazon"
                 product="oxo-good-grips-bench-scraper"
                 position="final_cta"

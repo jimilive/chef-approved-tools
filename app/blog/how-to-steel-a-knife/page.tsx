@@ -5,6 +5,7 @@ import { Calendar, Clock, User, Scissors } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata: Metadata = {
   title: 'How to Steel a Knife: Professional Honing',
@@ -26,7 +27,19 @@ const articleSchema = generateArticleSchema({
   urlSuffix: 'how-to-steel-a-knife'
 });
 
-export default function HowToSteelAKnife() {
+export default async function HowToSteelAKnife() {
+  // Fetch products from Supabase
+  const products = await Promise.all([
+    getProductBySlug('victorinox-fibrox-8-inch-chefs-knife'),
+    getProductBySlug('victorinox-fibrox-10-inch-chefs-knife'),
+    getProductBySlug('henckels-10-inch-sharpening-steel'),
+  ])
+
+  // Get affiliate URLs with fallbacks
+  const victorinox8Url = products[0] ? getPrimaryAffiliateLink(products[0]) : 'https://amzn.to/3U4PsT1'
+  const victorinox10Url = products[1] ? getPrimaryAffiliateLink(products[1]) : 'https://amzn.to/4o6pPwW'
+  const henckelsUrl = products[2] ? getPrimaryAffiliateLink(products[2]) : 'https://amzn.to/4qh96Zu'
+
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
@@ -195,7 +208,7 @@ export default function HowToSteelAKnife() {
               ✅ <strong>Consistent performance</strong> across proteins, veggies, and herbs.
             </li>
             <li>
-              ✅ <strong>Protects your investment</strong> in quality blades like the <a href="https://amzn.to/3U4PsT1" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</a> or the <a href="https://amzn.to/3JhIxaZA" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 10&quot; Chef&apos;s Knife</a>.
+              ✅ <strong>Protects your investment</strong> in quality blades like the <a href={victorinox8Url} rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</a> or the <a href={victorinox10Url} rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 10&quot; Chef&apos;s Knife</a>.
             </li>
           </ul>
 
@@ -214,13 +227,13 @@ export default function HowToSteelAKnife() {
           <h3>1. A Quality Honing Steel</h3>
 
           <p>
-            The essential tool here is a dependable <strong>honing steel</strong>. The <a href="https://amzn.to/4qh96Zu" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Henckels 10-Inch Sharpening Steel</a> is a classic: balanced, grippy, and durable, with just enough abrasion to realign an edge without stripping metal. It&apos;s the same kind I&apos;ve used for decades in professional kitchens.
+            The essential tool here is a dependable <strong>honing steel</strong>. The <a href={henckelsUrl} rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Henckels 10-Inch Sharpening Steel</a> is a classic: balanced, grippy, and durable, with just enough abrasion to realign an edge without stripping metal. It&apos;s the same kind I&apos;ve used for decades in professional kitchens.
           </p>
 
           <h3>2. A Chef&apos;s Knife Worth Caring For</h3>
 
           <p>
-            Your knife should already be sharp. The <a href="https://amzn.to/3U4PsT1" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 8-Inch Chef&apos;s Knife</a> is perfect for home cooks, while the <a href="https://amzn.to/3JhIxaZA" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 10-Inch Chef&apos;s Knife</a> offers extra reach and heft for larger jobs. Both respond beautifully to a steel.
+            Your knife should already be sharp. The <a href={victorinox8Url} rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 8-Inch Chef&apos;s Knife</a> is perfect for home cooks, while the <a href={victorinox10Url} rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 10-Inch Chef&apos;s Knife</a> offers extra reach and heft for larger jobs. Both respond beautifully to a steel.
           </p>
 
           <h2>How to Steel a Knife (Step-by-Step)</h2>
@@ -313,13 +326,13 @@ export default function HowToSteelAKnife() {
 
             <ul className="list-none p-0">
               <li className="mb-4">
-                🪄 <a href="https://amzn.to/4qh96Zu" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Henckels 10-Inch Sharpening Steel</a>
+                🪄 <a href={henckelsUrl} rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Henckels 10-Inch Sharpening Steel</a>
               </li>
               <li className="mb-4">
-                🔪 <a href="https://amzn.to/3U4PsT1" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</a>
+                🔪 <a href={victorinox8Url} rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</a>
               </li>
               <li className="mb-4">
-                🍖 <a href="https://amzn.to/3JhIxaZA" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 10&quot; Chef&apos;s Knife</a>
+                🍖 <a href={victorinox10Url} rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 10&quot; Chef&apos;s Knife</a>
               </li>
             </ul>
 
@@ -353,7 +366,7 @@ export default function HowToSteelAKnife() {
           </p>
 
           <p>
-            Grab your <a href="https://amzn.to/4qh96Zu" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Henckels Honing Steel</a>, pick up your favorite <a href="https://amzn.to/3U4PsT1" rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox Knife</a>, and keep that edge chef-sharp—because the best cooks always respect their tools.
+            Grab your <a href={henckelsUrl} rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Henckels Honing Steel</a>, pick up your favorite <a href={victorinox8Url} rel="nofollow noopener" target="_blank" className="text-blue-700 underline">Victorinox Fibrox Knife</a>, and keep that edge chef-sharp—because the best cooks always respect their tools.
           </p>
 
         </div>

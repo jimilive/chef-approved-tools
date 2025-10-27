@@ -8,7 +8,7 @@ import AffiliateButton from '@/components/AffiliateButton';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 // Force dynamic rendering (not static) since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -90,7 +90,14 @@ export default async function Victorinox4InchParingKnifeReview() {
     throw new Error('Product not found: victorinox-4-inch-paring-knife')
   }
 
-  const affiliateLink = product.affiliateLinks?.[0]?.url || 'https://amzn.to/example'
+  // Get affiliate URLs for both size variants from the same product
+  // Look for links tagged with '4-inch' and '3.25-inch' in the affiliateLinks array
+  const link4inch = product.affiliateLinks.find(link => link.tag === '4-inch')
+  const link325inch = product.affiliateLinks.find(link => link.tag === '3.25-inch')
+
+  // Use tagged links if available, otherwise use primary for 4" and fallback for 3.25"
+  const affiliateLink = link4inch?.url || getPrimaryAffiliateLink(product)
+  const variant325inchUrl = link325inch?.url || 'https://amzn.to/4qN4b31'
 
   const productData = {
     name: "Victorinox 4-Inch Paring Knife",
@@ -237,7 +244,7 @@ export default async function Victorinox4InchParingKnifeReview() {
                 merchant="amazon"
               >
                 <AffiliateButton
-                  href="https://amzn.to/4oAvXh5"
+                  href={variant325inchUrl}
                   merchant="amazon"
                   product="victorinox-3.25-inch-paring-knife"
                   position="above_fold"

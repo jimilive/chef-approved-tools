@@ -5,7 +5,7 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 export const dynamic = 'force-dynamic'
@@ -77,7 +77,7 @@ export default async function LargePlasticHotelPansReview() {
     throw new Error('Product not found: large-plastic-hotel-pans')
   }
 
-  const affiliateLink = product.affiliateLinks?.[0]?.url || 'https://amzn.to/48O97Ow'
+  const affiliateLink = getPrimaryAffiliateLink(product)
 
   const productData = {
     name: product.name,

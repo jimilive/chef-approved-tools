@@ -8,7 +8,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 import AffiliateButton from '@/components/AffiliateButton';
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 export const dynamic = 'force-dynamic'
@@ -106,6 +106,9 @@ export default async function ZuperiaBarMopsReview() {
     throw new Error('Product not found: zuperia-bar-mops')
   }
 
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
+
   const productData = {
     ...legacyProductData,
     ...product,
@@ -166,7 +169,7 @@ export default async function ZuperiaBarMopsReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://amzn.to/4nfExRj"
+            href={affiliateUrl}
             merchant="amazon"
             product={productData.slug}
             position="above_fold"
@@ -286,7 +289,7 @@ export default async function ZuperiaBarMopsReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://amzn.to/4nfExRj"
+            href={affiliateUrl}
             merchant="amazon"
             product={productData.slug}
             position="mid_article"
@@ -454,7 +457,7 @@ export default async function ZuperiaBarMopsReview() {
           merchant="amazon"
         >
           <AffiliateButton
-            href="https://amzn.to/4nfExRj"
+            href={affiliateUrl}
             merchant="amazon"
             product={productData.slug}
             position="final_cta"

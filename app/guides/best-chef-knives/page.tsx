@@ -5,6 +5,7 @@ import AuthorBio from '@/components/AuthorBio'
 import { generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata: Metadata = {
   title: 'Best Chef Knives 2025: Expert Buying Guide',
@@ -71,7 +72,7 @@ const topKnives = [
     bestFor: 'Precision Detail Work',
     tag: 'Essential Tool',
     tagColor: 'bg-purple-500',
-    affiliateUrl: 'https://amzn.to/4n4bDvw',
+    affiliateUrl: 'https://amzn.to/3Lc3oIo',
     quickPros: ['Perfect for small tasks', 'Incredibly affordable', 'Sharp out of box'],
     quickCons: ['Not for main prep', 'Basic construction']
   },
@@ -85,13 +86,29 @@ const topKnives = [
     bestFor: 'Meat Fabrication',
     tag: 'Specialty',
     tagColor: 'bg-red-500',
-    affiliateUrl: 'https://amzn.to/4bWqrgs',
+    affiliateUrl: 'https://amzn.to/4pUDed1',
     quickPros: ['Flexible blade', 'Granton edge prevents sticking', 'Professional grade'],
     quickCons: ['Specialized use only', 'Not for vegetables']
   }
 ]
 
-export default function BestChefKnivesPage() {
+export default async function BestChefKnivesPage() {
+  // Fetch products from Supabase
+  const products = await Promise.all([
+    getProductBySlug('wusthof-classic-ikon-16-piece'),
+    getProductBySlug('victorinox-fibrox-8-inch-chefs-knife'),
+    getProductBySlug('victorinox-fibrox-10-inch-chefs-knife'),
+    getProductBySlug('victorinox-4-inch-paring-knife'),
+    getProductBySlug('victorinox-granton-edge-boning-knife'),
+  ])
+
+  // Update affiliate URLs in topKnives array from Supabase
+  if (products[0]) topKnives[0].affiliateUrl = getPrimaryAffiliateLink(products[0])
+  if (products[1]) topKnives[1].affiliateUrl = getPrimaryAffiliateLink(products[1])
+  if (products[2]) topKnives[2].affiliateUrl = getPrimaryAffiliateLink(products[2])
+  if (products[3]) topKnives[3].affiliateUrl = getPrimaryAffiliateLink(products[3])
+  if (products[4]) topKnives[4].affiliateUrl = getPrimaryAffiliateLink(products[4])
+
   return (
     <main className="min-h-screen bg-gray-50">
       {/* JSON-LD Structured Data */}

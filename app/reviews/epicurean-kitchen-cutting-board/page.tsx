@@ -10,7 +10,7 @@ import FAQBox, { FAQGrid } from '@/components/review/FAQBox'
 import ReviewCTABox from '@/components/review/ReviewCTABox'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import AuthorBio from '@/components/review/AuthorBio'
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -58,10 +58,7 @@ const legacyProductData = {
     "Shows knife marks over time (cosmetic only, doesn&apos;t affect performance)",
     "Harder surface than soft wood (though still knife-safe)"
   ],
-  affiliateLinks: [{
-    retailer: "Amazon",
-    url: "https://amzn.to/3Wyh8Q4"
-  }],
+  affiliateLinks: [],
   expertRating: 5.0,
   expertOpinion: "After decades with wood boards, these dishwasher-safe composite boards are better in every practical way - truly sanitary, zero maintenance, and knife-friendly for 24 years of use.",
   dateAdded: "2025-01-15",
@@ -101,6 +98,9 @@ export default async function EpicureanKitchenCuttingBoardReview() {
   if (!product) {
     throw new Error('Product not found: epicurean-kitchen-cutting-board')
   }
+
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -371,7 +371,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/3Wyh8Q4"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="above_fold"
@@ -523,7 +523,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/3Wyh8Q4"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -741,7 +741,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/3Wyh8Q4"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

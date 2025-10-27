@@ -7,7 +7,7 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -18,9 +18,7 @@ const legacyProductData = {
   slug: "cuisinart-8-inch-nonstick-pan",
   brand: "Cuisinart",
   category: "Cookware",
-  affiliateLinks: [{
-    url: "https://amzn.to/4q4QHa8"
-  }],
+  affiliateLinks: [],
   expertRating: 4.7,
   expertOpinion: "After 6 months of daily testing, the Cuisinart High Impact 8-inch pan has become my default choice for morning eggs and small-batch cooking. The nonstick surface remains flawless—eggs slide off effortlessly without butter or oil. The high impact bonded base provides restaurant-quality heat distribution in a compact home kitchen size. Perfect for my no-bowl scrambled egg technique.",
   pros: [
@@ -116,6 +114,9 @@ export default async function Cuisinart8InchNonstickPanReview() {
     throw new Error('Product not found: cuisinart-8-inch-nonstick-pan')
   }
 
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
+
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
     ...legacyProductData,
@@ -200,7 +201,7 @@ export default async function Cuisinart8InchNonstickPanReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4q4QHa8"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="above_fold"
@@ -398,7 +399,7 @@ export default async function Cuisinart8InchNonstickPanReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4q4QHa8"
+              href={affiliateUrl}
               merchant="amazon"
               product={productData.slug}
               position="mid_article"
@@ -747,7 +748,7 @@ export default async function Cuisinart8InchNonstickPanReview() {
               merchant="amazon"
             >
               <AffiliateButton
-                href="https://amzn.to/4q4QHa8"
+                href={affiliateUrl}
                 merchant="amazon"
                 product={productData.slug}
                 position="final_cta"

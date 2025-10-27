@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import { getProductBySlug } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
 // Force dynamic rendering since we fetch from Supabase
@@ -57,12 +57,7 @@ const legacyProductData = {
     "Limited to 4-slice capacity (not for large families)",
     "Basic features compared to premium models"
   ],
-  affiliateLinks: [
-    {
-      retailer: "Amazon",
-      url: "https://amzn.to/4gVgENj"
-    }
-  ],
+  affiliateLinks: [],
   expertRating: 5.0,
   expertOpinion: "After 48 years of continuous use across 4 different models, Black+Decker has proven exceptional reliability. Each model lasted 5-18 years of daily service—that's not luck, that's consistent quality engineering.",
   dateAdded: "2025-01-15",
@@ -118,6 +113,9 @@ export default async function BlackDeckerToasterOvenReview() {
   if (!product) {
     throw new Error('Product not found: black-decker-toaster-oven')
   }
+
+  // Get primary affiliate link from Supabase product data
+  const affiliateUrl = getPrimaryAffiliateLink(product)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
@@ -206,7 +204,7 @@ export default async function BlackDeckerToasterOvenReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4gVgENj"
+              href={affiliateUrl}
               merchant="amazon"
               product="black-decker-toaster-oven"
               position="above_fold"
@@ -613,7 +611,7 @@ export default async function BlackDeckerToasterOvenReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4gVgENj"
+              href={affiliateUrl}
               merchant="amazon"
               product="black-decker-toaster-oven"
               position="mid_article"
@@ -1108,7 +1106,7 @@ export default async function BlackDeckerToasterOvenReview() {
             merchant="amazon"
           >
             <AffiliateButton
-              href="https://amzn.to/4gVgENj"
+              href={affiliateUrl}
               merchant="amazon"
               product="black-decker-toaster-oven"
               position="final_cta"
