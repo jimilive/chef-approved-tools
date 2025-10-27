@@ -1,7 +1,7 @@
 // IndexNow API integration for instant search engine notification
 // https://www.indexnow.org/
 
-const INDEXNOW_KEY = '89d02782a35f44c0ad4295a681b1e8ef'
+const INDEXNOW_KEY = '7ba0e1ebec6807dd11d21cb28382cff9'
 const HOST = 'www.chefapprovedtools.com'
 const KEY_LOCATION = `https://${HOST}/${INDEXNOW_KEY}.txt`
 
