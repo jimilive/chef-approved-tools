@@ -31,7 +31,9 @@ export default function StainlessSteelStickingPost() {
             category: "Cooking Techniques",
             tags: ["stainless steel cooking", "why food sticks", "how to prevent sticking", "stainless steel pan searing", "cooking temperature control"],
             wordCount: 2400
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'stainless-steel-why-food-sticks'}))
         }}
       />
       <script

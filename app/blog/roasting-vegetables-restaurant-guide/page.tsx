@@ -31,7 +31,9 @@ export default function RoastingVegetablesPost() {
             category: "Cooking Techniques",
             tags: ["roast vegetables", "roasting guide", "oven temperature", "vegetable timing chart", "caramelized vegetables", "how to roast vegetables evenly"],
             wordCount: 2400
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'roasting-vegetables-restaurant-guide'}))
         }}
       />
       <script

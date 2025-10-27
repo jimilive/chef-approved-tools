@@ -22,7 +22,9 @@ const jsonLd = generateArticleSchema({
   author: 'Scott Bradley',
   image: 'https://www.chefapprovedtools.com/images/blog/dutch-oven-size-guide.jpg',
   tags: ['dutch oven size guide', 'best dutch oven size', 'cooking capacity', 'dutch oven buying guide']
-})
+,
+  urlPrefix: 'blog',
+  urlSuffix: 'dutch-oven-size-guide-which-quart-size'})
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },

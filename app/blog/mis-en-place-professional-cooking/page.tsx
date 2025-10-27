@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-21",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/mis-en-place-og.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/mis-en-place-og.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'mis-en-place-professional-cooking'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

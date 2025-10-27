@@ -36,7 +36,9 @@ const articleSchema = generateArticleSchema({
   datePublished: articleMeta.publishDate,
   dateModified: articleMeta.lastModified,
   authorName: articleMeta.author,
-  imageUrl: "https://www.chefapprovedtools.com/images/blog/kitchen-thermometers-guide.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/blog/kitchen-thermometers-guide.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'kitchen-thermometers-guide'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

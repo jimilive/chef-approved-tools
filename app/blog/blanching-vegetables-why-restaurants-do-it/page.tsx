@@ -23,7 +23,9 @@ const jsonLd = generateArticleSchema({
   url: 'https://www.chefapprovedtools.com/blog/blanching-vegetables-why-restaurants-do-it',
   imageUrl: 'https://www.chefapprovedtools.com/images/blog/blanching-vegetables.jpg',
   keywords: ['how to blanch vegetables', 'blanching technique', 'vegetable preparation', 'professional cooking']
-})
+,
+  urlPrefix: 'blog',
+  urlSuffix: 'blanching-vegetables-why-restaurants-do-it'})
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },

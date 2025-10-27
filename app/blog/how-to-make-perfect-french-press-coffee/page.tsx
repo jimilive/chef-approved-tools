@@ -36,7 +36,9 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             category: "Cooking Techniques",
             tags: ["french press coffee", "coffee brewing", "perfect coffee", "coffee technique", "Bodum Chambord"],
             wordCount: 3200
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-make-perfect-french-press-coffee'}))
         }}
       />
       <script

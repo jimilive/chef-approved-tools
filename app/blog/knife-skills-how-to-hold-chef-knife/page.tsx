@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-06",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/knife-skills-og.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/knife-skills-og.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'knife-skills-how-to-hold-chef-knife'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

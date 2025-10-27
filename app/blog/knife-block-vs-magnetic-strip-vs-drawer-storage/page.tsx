@@ -23,7 +23,9 @@ const jsonLd = generateArticleSchema({
   url: 'https://www.chefapprovedtools.com/blog/knife-block-vs-magnetic-strip-vs-drawer-storage',
   imageUrl: 'https://www.chefapprovedtools.com/images/blog/knife-storage.jpg',
   keywords: ['knife storage', 'knife block', 'magnetic strip', 'drawer knife storage', 'best knife storage']
-})
+,
+  urlPrefix: 'blog',
+  urlSuffix: 'knife-block-vs-magnetic-strip-vs-drawer-storage'})
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },

@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-22",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/fat-is-flavor-og.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/fat-is-flavor-og.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'fat-is-flavor'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

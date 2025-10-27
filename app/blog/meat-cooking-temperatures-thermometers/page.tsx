@@ -31,7 +31,9 @@ export default function MeatCookingTemperaturesThermometers() {
             category: "Cooking Techniques",
             tags: ["meat cooking temperatures", "meat thermometer", "food safety", "cooking techniques", "professional chef"],
             wordCount: 3500
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'meat-cooking-temperatures-thermometers'}))
         }}
       />
       <script

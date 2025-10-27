@@ -31,7 +31,9 @@ export default function CastIronMistakesPost() {
             category: "Cooking Techniques",
             tags: ["cast iron mistakes", "how to clean cast iron", "cast iron rust", "cast iron seasoning", "cast iron maintenance"],
             wordCount: 2500
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'cast-iron-mistakes-ruin-pan'}))
         }}
       />
       <script

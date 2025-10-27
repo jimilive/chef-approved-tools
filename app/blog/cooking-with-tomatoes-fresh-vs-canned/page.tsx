@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-08",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/tomatoes-guide-og.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/tomatoes-guide-og.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'cooking-with-tomatoes-fresh-vs-canned'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

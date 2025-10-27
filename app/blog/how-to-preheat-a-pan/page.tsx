@@ -31,7 +31,9 @@ export default function HowToPreheatPanPost() {
             category: "Cooking Techniques",
             tags: ["how to preheat a pan", "stainless steel pan temperature", "why food sticks", "proper pan preheating", "cooking temperature control"],
             wordCount: 2400
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-preheat-a-pan'}))
         }}
       />
       <script

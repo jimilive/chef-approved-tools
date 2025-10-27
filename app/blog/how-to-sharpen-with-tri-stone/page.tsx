@@ -36,7 +36,9 @@ export default function HowToSharpenWithTriStonePage() {
             category: "Knife Care",
             tags: ["knife sharpening", "tri-stone sharpener", "professional chef techniques", "knife care", "Norton IM200"],
             wordCount: 2800
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-sharpen-with-tri-stone'}))
         }}
       />
       <script

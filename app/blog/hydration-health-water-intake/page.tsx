@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-03",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/blog/kitchen-hydration-guide.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/blog/kitchen-hydration-guide.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'hydration-health-water-intake'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

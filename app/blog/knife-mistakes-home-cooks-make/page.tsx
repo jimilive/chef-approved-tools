@@ -31,7 +31,9 @@ export default function KnifeMistakesPost() {
             category: "Knife Care",
             tags: ["knife mistakes", "how to use a chef knife", "knife skills tips", "why knives get dull", "knife safety for home cooks"],
             wordCount: 2400
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'knife-mistakes-home-cooks-make'}))
         }}
       />
       <script

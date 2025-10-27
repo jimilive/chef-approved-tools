@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-24",
   dateModified: "2025-10-23",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/knife-safety-og.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/knife-safety-og.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'knife-safety-protect-fingers'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

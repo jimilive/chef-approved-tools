@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-18",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/emulsification-og.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/emulsification-og.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'what-is-emulsification'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

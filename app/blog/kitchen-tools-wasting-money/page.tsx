@@ -31,7 +31,9 @@ export default function KitchenToolsWastePost() {
             category: "Cooking Techniques",
             tags: ["kitchen tools to avoid", "waste of money kitchen gadgets", "essential kitchen tools", "professional kitchen gear", "chef recommended tools"],
             wordCount: 2300
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'kitchen-tools-wasting-money'}))
         }}
       />
       <script

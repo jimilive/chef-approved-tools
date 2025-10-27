@@ -23,7 +23,9 @@ const jsonLd = generateArticleSchema({
   url: 'https://www.chefapprovedtools.com/blog/braising-101-tough-cuts-made-tender',
   imageUrl: 'https://www.chefapprovedtools.com/images/blog/braising.jpg',
   keywords: ['braising', 'how to braise', 'tough cuts', 'slow cooking', 'dutch oven braise']
-})
+,
+  urlPrefix: 'blog',
+  urlSuffix: 'braising-101-tough-cuts-made-tender'})
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },

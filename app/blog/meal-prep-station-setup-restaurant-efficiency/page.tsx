@@ -23,7 +23,9 @@ const jsonLd = generateArticleSchema({
   url: 'https://www.chefapprovedtools.com/blog/meal-prep-station-setup-restaurant-efficiency',
   imageUrl: 'https://www.chefapprovedtools.com/images/blog/meal-prep-station.jpg',
   keywords: ['meal prep station', 'mise en place', 'kitchen organization', 'chef efficiency tips', 'home cooking prep']
-})
+,
+  urlPrefix: 'blog',
+  urlSuffix: 'meal-prep-station-setup-restaurant-efficiency'})
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },

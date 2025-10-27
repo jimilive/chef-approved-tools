@@ -23,7 +23,9 @@ const jsonLd = generateArticleSchema({
   url: 'https://www.chefapprovedtools.com/blog/caramelizing-onions-why-it-takes-45-minutes',
   imageUrl: 'https://www.chefapprovedtools.com/images/blog/caramelized-onions.jpg',
   keywords: ['caramelized onions', 'how to caramelize onions', 'onion cooking tips', 'caramelization science']
-})
+,
+  urlPrefix: 'blog',
+  urlSuffix: 'caramelizing-onions-why-it-takes-45-minutes'})
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },

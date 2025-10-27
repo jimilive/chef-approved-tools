@@ -31,7 +31,9 @@ export default function CleanBurntStainlessSteelPost() {
             category: "Cooking Techniques",
             tags: ["clean burnt stainless steel pan", "restore stainless steel cookware", "remove burnt residue", "baking soda pan cleaning", "bar keepers friend stainless steel"],
             wordCount: 2400
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-clean-burnt-stainless-steel-pans'}))
         }}
       />
       <script

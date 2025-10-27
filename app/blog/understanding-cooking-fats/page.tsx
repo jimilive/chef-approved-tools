@@ -36,7 +36,9 @@ const articleSchema = generateArticleSchema({
   datePublished: articleMeta.publishDate,
   dateModified: articleMeta.lastModified,
   authorName: articleMeta.author,
-  imageUrl: "https://www.chefapprovedtools.com/images/blog/cooking-fats-guide.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/blog/cooking-fats-guide.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'understanding-cooking-fats'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

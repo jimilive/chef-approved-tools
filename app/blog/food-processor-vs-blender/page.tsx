@@ -31,7 +31,9 @@ export default function FoodProcessorVsBlenderPost() {
             category: "Cooking Techniques",
             tags: ["food processor vs blender", "blender or food processor", "kitchen appliance guide", "cooking tools explained", "what chefs use in the kitchen"],
             wordCount: 2400
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'food-processor-vs-blender'}))
         }}
       />
       <script

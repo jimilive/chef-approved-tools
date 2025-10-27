@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-23",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/blog/bacon-cooking-guide.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/blog/bacon-cooking-guide.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'bacon-but-not-in-this-dish'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

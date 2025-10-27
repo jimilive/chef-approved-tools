@@ -31,7 +31,9 @@ export default function ChooseFirstChefKnifePost() {
             category: "Knife Care",
             tags: ["how to choose a chef knife", "best chef knife for beginners", "chef knife buying guide", "kitchen knife selection", "chef knife balance"],
             wordCount: 2200
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-choose-first-chef-knife'}))
         }}
       />
       <script

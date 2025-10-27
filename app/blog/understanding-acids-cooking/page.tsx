@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-25",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/acids-cooking-og.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/acids-cooking-og.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'understanding-acids-cooking'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

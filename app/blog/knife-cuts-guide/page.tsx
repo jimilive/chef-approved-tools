@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-17",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/knife-cuts-guide-og.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/knife-cuts-guide-og.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'knife-cuts-guide'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-03",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/onions-guide-og.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/onions-guide-og.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'onions-cooking-guide'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

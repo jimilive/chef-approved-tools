@@ -31,7 +31,9 @@ export default function StandMixerBuyingGuidePost() {
             category: "Cooking Techniques",
             tags: ["stand mixer guide", "KitchenAid vs alternatives", "best stand mixer", "baking tools", "mixer buying guide"],
             wordCount: 2400
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'stand-mixer-buying-guide'}))
         }}
       />
       <script

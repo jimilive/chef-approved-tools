@@ -23,7 +23,9 @@ const jsonLd = generateArticleSchema({
   url: 'https://www.chefapprovedtools.com/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once',
   imageUrl: 'https://www.chefapprovedtools.com/images/blog/carbon-footprint-kitchen.jpg',
   keywords: ['sustainable kitchen equipment', 'buy once cry once', 'kitchen carbon footprint', 'durable cookware']
-})
+,
+  urlPrefix: 'blog',
+  urlSuffix: 'carbon-footprint-kitchen-equipment-buy-once-cry-once'})
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },

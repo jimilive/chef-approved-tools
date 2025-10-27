@@ -31,7 +31,9 @@ export default function SeasonCastIronPost() {
             category: "Cooking Techniques",
             tags: ["how to season cast iron", "cast iron seasoning method", "cast iron oil", "how to fix sticky cast iron", "cast iron restoration"],
             wordCount: 2400
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-season-cast-iron-like-restaurant-chef'}))
         }}
       />
       <script

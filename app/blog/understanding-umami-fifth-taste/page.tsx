@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-16",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/umami-og.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/umami-og.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'understanding-umami-fifth-taste'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

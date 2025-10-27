@@ -31,7 +31,9 @@ export default function KnifeGripTechniquesPost() {
             category: "Knife Care",
             tags: ["knife grip", "how to hold a chef knife", "pinch grip", "professional knife technique", "chef knife control"],
             wordCount: 2400
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'professional-knife-grip-techniques'}))
         }}
       />
       <script

@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-21",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/blog/perfect-pasta-guide.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/blog/perfect-pasta-guide.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-cook-perfect-pasta'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

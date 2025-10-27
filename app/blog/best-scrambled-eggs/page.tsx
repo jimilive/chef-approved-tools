@@ -33,7 +33,9 @@ export default function BestScrambledEggs() {
             category: "Cooking Techniques",
             tags: ["scrambled eggs", "how to make scrambled eggs", "perfect scrambled eggs", "creamy scrambled eggs", "chef cooking techniques"],
             wordCount: 2400
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'best-scrambled-eggs'}))
         }}
       />
       <script

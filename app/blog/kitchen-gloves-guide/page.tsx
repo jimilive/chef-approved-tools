@@ -33,7 +33,9 @@ export default function KitchenGlovesGuide() {
             category: "Kitchen Safety",
             tags: ["kitchen gloves", "cut resistant gloves", "food safety", "kitchen safety", "professional chef techniques"],
             wordCount: 3200
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'kitchen-gloves-guide'}))
         }}
       />
       <script

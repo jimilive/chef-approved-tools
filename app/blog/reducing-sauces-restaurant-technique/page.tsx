@@ -23,7 +23,9 @@ const jsonLd = generateArticleSchema({
   url: 'https://www.chefapprovedtools.com/blog/reducing-sauces-restaurant-technique',
   imageUrl: 'https://www.chefapprovedtools.com/images/blog/reducing-sauces.jpg',
   keywords: ['reducing sauces', 'sauce reduction', 'how to reduce sauce', 'professional cooking techniques']
-})
+,
+  urlPrefix: 'blog',
+  urlSuffix: 'reducing-sauces-restaurant-technique'})
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },

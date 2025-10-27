@@ -32,7 +32,9 @@ export default function SteakSearingPost() {
             category: "Cooking Techniques",
             tags: ["how to sear steak", "restaurant steak techniques", "professional steak cooking", "perfect steak sear", "cast iron steak"],
             wordCount: 2800
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-sear-steaks-like-restaurant-chef'}))
         }}
       />
       <script

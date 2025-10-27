@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-29",
   dateModified: "2025-10-23",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/cheese-sauce-og.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/cheese-sauce-og.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'cheese-sauce-mac-and-cheese'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

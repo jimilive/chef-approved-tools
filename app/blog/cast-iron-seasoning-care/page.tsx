@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-27",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/cast-iron-care-og.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/cast-iron-care-og.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'cast-iron-seasoning-care'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

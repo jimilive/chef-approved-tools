@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-22",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/garlic-benefits-og.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/garlic-benefits-og.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'benefits-cooking-with-garlic'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

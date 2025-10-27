@@ -31,7 +31,9 @@ export default function WhyChefsUseKosherSalt() {
             category: "Cooking Techniques",
             tags: ["kosher salt", "diamond crystal", "professional chef techniques", "cooking techniques", "seasoning"],
             wordCount: 2200
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'why-professional-chefs-use-kosher-salt'}))
         }}
       />
       <script

@@ -31,7 +31,9 @@ export default function KitchenThermometerGuidePost() {
             category: "Cooking Techniques",
             tags: ["instant read thermometer", "kitchen thermometer guide", "cooking temperature", "meat doneness chart", "food safety tools"],
             wordCount: 2400
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'kitchen-thermometer-guide'}))
         }}
       />
       <script

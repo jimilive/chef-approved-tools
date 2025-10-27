@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-11",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/blog/broccoli-kids-guide.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/blog/broccoli-kids-guide.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'why-children-hate-broccoli'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

@@ -31,7 +31,9 @@ export default function EssentialKnifeCutsPost() {
             category: "Cooking Techniques",
             tags: ["knife cuts", "basic knife skills", "how to dice vegetables", "julienne cut", "chiffonade technique", "professional knife training"],
             wordCount: 2200
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'essential-knife-cuts-every-cook-should-master'}))
         }}
       />
       <script

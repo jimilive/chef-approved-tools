@@ -23,7 +23,9 @@ const jsonLd = generateArticleSchema({
   url: 'https://www.chefapprovedtools.com/blog/sheet-pan-cooking-restaurant-techniques',
   imageUrl: 'https://www.chefapprovedtools.com/images/blog/sheet-pan-cooking.jpg',
   keywords: ['sheet pan cooking', 'sheet pan techniques', 'restaurant cooking methods', 'professional chef techniques', 'batch cooking', 'high heat roasting']
-})
+,
+  urlPrefix: 'blog',
+  urlSuffix: 'sheet-pan-cooking-restaurant-techniques'})
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },

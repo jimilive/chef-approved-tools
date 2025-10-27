@@ -31,7 +31,9 @@ export default function KnifeSafetyPost() {
             category: "Knife Care",
             tags: ["knife safety", "how to use a chef knife safely", "kitchen knife rules", "professional kitchen safety", "knife accidents prevention"],
             wordCount: 2300
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'knife-safety-rules-professional-kitchens'}))
         }}
       />
       <script

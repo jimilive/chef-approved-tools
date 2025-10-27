@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-13",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/stock-vs-broth-og.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/stock-vs-broth-og.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'stock-vs-broth-vs-bouillon'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

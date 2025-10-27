@@ -23,7 +23,9 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-14",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/cutting-storing-fresh-herbs.jpg"
+  imageUrl: "https://www.chefapprovedtools.com/images/cutting-storing-fresh-herbs.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'cutting-storing-fresh-herbs'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([

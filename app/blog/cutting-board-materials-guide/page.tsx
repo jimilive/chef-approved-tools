@@ -31,7 +31,9 @@ export default function CuttingBoardMaterialsPost() {
             category: "Knife Care",
             tags: ["cutting board guide", "best cutting board", "wood vs plastic board", "end-grain cutting board", "knife edge protection"],
             wordCount: 2400
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'cutting-board-materials-guide'}))
         }}
       />
       <script

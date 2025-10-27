@@ -199,27 +199,39 @@ export function generateFAQSchema(faqs: Array<{question: string, answer: string}
 // Article Schema - For guides and editorial content
 // Can optionally include nested ItemList for comparison/buying guides
 export function generateArticleSchema(article: any) {
-  if (!article || !article.title || !article.slug) {
-    console.error('generateArticleSchema: Missing required article fields', article);
+  // Accept either title or headline, slug is optional if urlSuffix is provided
+  const headline = article.headline || article.title;
+  const description = article.description;
+  const datePublished = article.datePublished;
+
+  if (!headline || !description || !datePublished) {
+    console.error('generateArticleSchema: Missing required fields (headline, description, datePublished)', article);
     return null;
   }
 
   // Determine URL prefix based on content type (default to guides for backwards compatibility)
   const urlPrefix = article.urlPrefix || 'guides';
 
+  // Use provided urlSuffix or construct from slug
+  const urlSuffix = article.urlSuffix || article.slug;
+  if (!urlSuffix) {
+    console.error('generateArticleSchema: Missing urlSuffix or slug', article);
+    return null;
+  }
+
   const schema: any = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": `https://www.chefapprovedtools.com/${urlPrefix}/${article.slug}#article`,
-    headline: article.title,
-    description: article.description,
-    image: article.image || "https://www.chefapprovedtools.com/logo.png",
-    datePublished: article.datePublished,
-    dateModified: article.lastUpdated || article.datePublished,
+    "@id": `https://www.chefapprovedtools.com/${urlPrefix}/${urlSuffix}#article`,
+    headline: headline,
+    description: description,
+    image: article.imageUrl || article.image || "https://www.chefapprovedtools.com/og-image.jpg",
+    datePublished: datePublished,
+    dateModified: article.dateModified || article.lastUpdated || datePublished,
     author: {
       "@type": "Person",
       "@id": "https://www.chefapprovedtools.com/about#scott-bradley",
-      name: article.author || "Scott Bradley",
+      name: article.authorName || article.author || "Scott Bradley",
       sameAs: "https://www.chefapprovedtools.com/about"
     },
     publisher: {
@@ -227,7 +239,7 @@ export function generateArticleSchema(article: any) {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.chefapprovedtools.com/${urlPrefix}/${article.slug}`
+      "@id": `https://www.chefapprovedtools.com/${urlPrefix}/${urlSuffix}`
     }
   };
 

@@ -23,7 +23,9 @@ const jsonLd = generateArticleSchema({
   url: 'https://www.chefapprovedtools.com/blog/knife-storage-protecting-blades-for-decades',
   imageUrl: 'https://www.chefapprovedtools.com/images/blog/knife-storage-protection.jpg',
   keywords: ['knife care', 'how to store knives', 'knife protection', 'blade storage', 'knife longevity']
-})
+,
+  urlPrefix: 'blog',
+  urlSuffix: 'knife-storage-protecting-blades-for-decades'})
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },

@@ -23,7 +23,9 @@ const jsonLd = generateArticleSchema({
   image: 'https://www.chefapprovedtools.com/images/blog/hotel-pan-system.jpg',
   tags: ['hotel pan system', 'restaurant food storage', 'kitchen organization', 'meal prep containers'],
   category: 'Kitchen Organization'
-})
+,
+  urlPrefix: 'blog',
+  urlSuffix: 'hotel-pan-system-restaurant-organization-home'})
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },

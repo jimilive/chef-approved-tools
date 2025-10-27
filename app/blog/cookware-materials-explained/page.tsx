@@ -31,7 +31,9 @@ export default function CookwareMaterialsPost() {
             category: "Cooking Techniques",
             tags: ["cookware materials", "best cookware", "cast iron vs stainless steel", "nonstick pros and cons", "what chefs use"],
             wordCount: 2400
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'cookware-materials-explained'}))
         }}
       />
       <script

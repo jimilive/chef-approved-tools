@@ -33,7 +33,9 @@ export default function HowToSteelAKnife() {
             category: "Knife Care",
             tags: ["how to steel a knife", "knife honing", "honing steel", "knife maintenance", "chef knife care"],
             wordCount: 2200
-          }))
+          ,
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-steel-a-knife'}))
         }}
       />
       <script

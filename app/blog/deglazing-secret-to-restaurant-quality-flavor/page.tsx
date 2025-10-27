@@ -23,7 +23,9 @@ const jsonLd = generateArticleSchema({
   url: 'https://www.chefapprovedtools.com/blog/deglazing-secret-to-restaurant-quality-flavor',
   imageUrl: 'https://www.chefapprovedtools.com/images/blog/deglazing.jpg',
   keywords: ['deglazing', 'fond', 'pan sauce', 'how to deglaze', 'cooking technique']
-})
+,
+  urlPrefix: 'blog',
+  urlSuffix: 'deglazing-secret-to-restaurant-quality-flavor'})
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },
