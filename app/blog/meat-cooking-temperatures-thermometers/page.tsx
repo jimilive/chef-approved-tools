@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = generateArticleSchema({
+  headline: "Meat Cooking Temperatures & Thermometers: Professional Chef Guide",
+  description: "Professional chef explains meat thermometers and proper cooking temps. 24 years restaurant experience. Food safety + perfect doneness every time.",
+  datePublished: "2025-09-20",
+  dateModified: "2025-10-27",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'meat-cooking-temperatures-thermometers'
+});
+
 export default function MeatCookingTemperaturesThermometers() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "Meat Cooking Temperatures & Thermometers: Professional Chef Guide",
-            slug: "meat-cooking-temperatures-thermometers",
-            description: "Professional chef explains meat thermometers and proper cooking temps. 24 years restaurant experience. Food safety + perfect doneness every time.",
-            author: "Scott Bradley",
-            datePublished: "2025-09-20T00:00:00Z",
-            lastUpdated: new Date().toISOString(),
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["meat cooking temperatures", "meat thermometer", "food safety", "cooking techniques", "professional chef"],
-            wordCount: 3500
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'meat-cooking-temperatures-thermometers'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

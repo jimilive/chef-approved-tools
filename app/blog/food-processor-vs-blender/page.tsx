@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "Food Processor vs Blender: Which Do You Actually Need?",
+  description: "Professional chef explains the difference between blenders and food processors, when to use each, and which models perform best in real kitchens.",
+  datePublished: "2025-09-28",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'food-processor-vs-blender'
+});
+
 export default function FoodProcessorVsBlenderPost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "Food Processor vs Blender: Which Do You Actually Need?",
-            slug: "food-processor-vs-blender",
-            description: "Professional chef explains the difference between blenders and food processors, when to use each, and which models perform best in real kitchens.",
-            author: "Scott Bradley",
-            datePublished: "2025-09-28T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["food processor vs blender", "blender or food processor", "kitchen appliance guide", "cooking tools explained", "what chefs use in the kitchen"],
-            wordCount: 2400
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'food-processor-vs-blender'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

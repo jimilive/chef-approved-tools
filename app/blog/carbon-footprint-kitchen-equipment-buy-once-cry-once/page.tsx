@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = generateArticleSchema({
+const articleSchema = generateArticleSchema({
   headline: 'Carbon Footprint of Kitchen Equipment: Buy Once, Cry Once',
   description: 'Professional chef explains how quality kitchen equipment reduces waste and carbon footprint — why durability is the real sustainability in the kitchen.',
   datePublished: "2025-09-26",
@@ -73,7 +73,7 @@ export default function CarbonFootprintKitchenEquipmentPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

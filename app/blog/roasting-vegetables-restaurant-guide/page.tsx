@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "Roasting Vegetables: Restaurant Temperature & Timing Guide",
+  description: "Professional chef explains how to roast vegetables perfectly — the right temperature, spacing, oil, and timing for crisp, caramelized results.",
+  datePublished: "2025-10-20",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'roasting-vegetables-restaurant-guide'
+});
+
 export default function RoastingVegetablesPost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "Roasting Vegetables: Restaurant Temperature & Timing Guide",
-            slug: "roasting-vegetables-restaurant-guide",
-            description: "Professional chef explains how to roast vegetables perfectly — the right temperature, spacing, oil, and timing for crisp, caramelized results.",
-            author: "Scott Bradley",
-            datePublished: "2025-10-20T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["roast vegetables", "roasting guide", "oven temperature", "vegetable timing chart", "caramelized vegetables", "how to roast vegetables evenly"],
-            wordCount: 2400
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'roasting-vegetables-restaurant-guide'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

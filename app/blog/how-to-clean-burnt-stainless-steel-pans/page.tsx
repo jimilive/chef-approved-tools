@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "How to Clean Burnt Stainless Steel Pans",
+  description: "Professional chef explains how to clean burnt stainless steel cookware using safe, effective methods — no harsh scrubbing or damage.",
+  datePublished: "2025-10-18",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-clean-burnt-stainless-steel-pans'
+});
+
 export default function CleanBurntStainlessSteelPost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "How to Clean Burnt Stainless Steel Pans",
-            slug: "how-to-clean-burnt-stainless-steel-pans",
-            description: "Professional chef explains how to clean burnt stainless steel cookware using safe, effective methods — no harsh scrubbing or damage.",
-            author: "Scott Bradley",
-            datePublished: "2025-10-18T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["clean burnt stainless steel pan", "restore stainless steel cookware", "remove burnt residue", "baking soda pan cleaning", "bar keepers friend stainless steel"],
-            wordCount: 2400
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'how-to-clean-burnt-stainless-steel-pans'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

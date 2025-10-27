@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = generateArticleSchema({
+const articleSchema = generateArticleSchema({
   headline: 'Blanching Vegetables: Why Restaurants Do It',
   description: 'Learn why professional kitchens blanch vegetables before service. Preserve color, texture, and flavor with a chef-tested method for perfect results.',
   datePublished: "2025-10-07",
@@ -73,7 +73,7 @@ export default function BlanchingVegetablesPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

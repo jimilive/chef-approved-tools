@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "Kitchen Thermometer Guide: Instant Read (and Why Every Chef Trusts One)",
+  description: "Professional chef explains how to use an instant-read thermometer correctly for perfect doneness, safety, and consistency in every dish.",
+  datePublished: "2025-09-27",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'kitchen-thermometer-guide'
+});
+
 export default function KitchenThermometerGuidePost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "Kitchen Thermometer Guide: Instant Read (and Why Every Chef Trusts One)",
-            slug: "kitchen-thermometer-guide",
-            description: "Professional chef explains how to use an instant-read thermometer correctly for perfect doneness, safety, and consistency in every dish.",
-            author: "Scott Bradley",
-            datePublished: "2025-09-27T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["instant read thermometer", "kitchen thermometer guide", "cooking temperature", "meat doneness chart", "food safety tools"],
-            wordCount: 2400
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'kitchen-thermometer-guide'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

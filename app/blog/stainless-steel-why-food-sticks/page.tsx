@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "Stainless Steel Cooking: Why Food Sticks (And How to Fix It)",
+  description: "Professional chef explains why food sticks to stainless steel pans and how to prevent it using temperature, oil, and timing. Learn the science behind perfect sears.",
+  datePublished: "2025-09-17",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'stainless-steel-why-food-sticks'
+});
+
 export default function StainlessSteelStickingPost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "Stainless Steel Cooking: Why Food Sticks (And How to Fix It)",
-            slug: "stainless-steel-why-food-sticks",
-            description: "Professional chef explains why food sticks to stainless steel pans and how to prevent it using temperature, oil, and timing. Learn the science behind perfect sears.",
-            author: "Scott Bradley",
-            datePublished: "2025-09-17T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["stainless steel cooking", "why food sticks", "how to prevent sticking", "stainless steel pan searing", "cooking temperature control"],
-            wordCount: 2400
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'stainless-steel-why-food-sticks'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

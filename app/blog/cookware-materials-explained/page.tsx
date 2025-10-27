@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "Cookware Materials Explained: What Chefs Actually Use",
+  description: "Professional chef explains the pros and cons of stainless steel, cast iron, nonstick, carbon steel, and copper cookware — and which belong in your kitchen.",
+  datePublished: "2025-10-14",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'cookware-materials-explained'
+});
+
 export default function CookwareMaterialsPost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "Cookware Materials Explained: What Chefs Actually Use",
-            slug: "cookware-materials-explained",
-            description: "Professional chef explains the pros and cons of stainless steel, cast iron, nonstick, carbon steel, and copper cookware — and which belong in your kitchen.",
-            author: "Scott Bradley",
-            datePublished: "2025-10-14T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["cookware materials", "best cookware", "cast iron vs stainless steel", "nonstick pros and cons", "what chefs use"],
-            wordCount: 2400
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'cookware-materials-explained'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

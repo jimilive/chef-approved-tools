@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "How to Choose Your First Chef Knife (Like a Professional Chef)",
+  description: "Learn how to choose your first chef knife from a professional chef. Understand balance, steel type, blade length, and why comfort matters more than price.",
+  datePublished: "2025-10-10",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-choose-first-chef-knife'
+});
+
 export default function ChooseFirstChefKnifePost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "How to Choose Your First Chef Knife (Like a Professional Chef)",
-            slug: "how-to-choose-first-chef-knife",
-            description: "Learn how to choose your first chef knife from a professional chef. Understand balance, steel type, blade length, and why comfort matters more than price.",
-            author: "Scott Bradley",
-            datePublished: "2025-10-10T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Knife Care",
-            tags: ["how to choose a chef knife", "best chef knife for beginners", "chef knife buying guide", "kitchen knife selection", "chef knife balance"],
-            wordCount: 2200
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'how-to-choose-first-chef-knife'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

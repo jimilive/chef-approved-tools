@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = generateArticleSchema({
+const articleSchema = generateArticleSchema({
   headline: 'Caramelizing Onions: Why It Takes 45 Minutes (Not 10)',
   description: 'Professional chef explains the real process of caramelizing onions — why patience, temperature, and technique matter more than shortcuts.',
   datePublished: "2025-09-19",
@@ -73,7 +73,7 @@ export default function CaramelizingOnionsPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

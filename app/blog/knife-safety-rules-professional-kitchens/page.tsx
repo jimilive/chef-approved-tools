@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "Knife Safety: 10 Rules From 24 Years in Professional Kitchens",
+  description: "Professional chef Scott Bradley shares 10 essential knife safety rules from 24 years in restaurants. Learn grip, stance, focus, and habits to prevent injuries in your kitchen.",
+  datePublished: "2025-09-08",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'knife-safety-rules-professional-kitchens'
+});
+
 export default function KnifeSafetyPost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "Knife Safety: 10 Rules From 24 Years in Professional Kitchens",
-            slug: "knife-safety-rules-professional-kitchens",
-            description: "Professional chef Scott Bradley shares 10 essential knife safety rules from 24 years in restaurants. Learn grip, stance, focus, and habits to prevent injuries in your kitchen.",
-            author: "Scott Bradley",
-            datePublished: "2025-09-08T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Knife Care",
-            tags: ["knife safety", "how to use a chef knife safely", "kitchen knife rules", "professional kitchen safety", "knife accidents prevention"],
-            wordCount: 2300
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'knife-safety-rules-professional-kitchens'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

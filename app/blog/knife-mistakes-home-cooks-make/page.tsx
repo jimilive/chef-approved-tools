@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "5 Knife Mistakes Home Cooks Make (And How to Fix Them)",
+  description: "Professional chef explains the 5 knife mistakes that ruin edges and slow prep. Learn correct cutting techniques and maintenance tips for sharp, safe blades.",
+  datePublished: "2025-10-08",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'knife-mistakes-home-cooks-make'
+});
+
 export default function KnifeMistakesPost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "5 Knife Mistakes Home Cooks Make (And How to Fix Them)",
-            slug: "knife-mistakes-home-cooks-make",
-            description: "Professional chef explains the 5 knife mistakes that ruin edges and slow prep. Learn correct cutting techniques and maintenance tips for sharp, safe blades.",
-            author: "Scott Bradley",
-            datePublished: "2025-10-08T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Knife Care",
-            tags: ["knife mistakes", "how to use a chef knife", "knife skills tips", "why knives get dull", "knife safety for home cooks"],
-            wordCount: 2400
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'knife-mistakes-home-cooks-make'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

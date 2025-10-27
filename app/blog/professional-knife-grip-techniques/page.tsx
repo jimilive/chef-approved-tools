@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "Professional Chef Knife Grip Techniques",
+  description: "Learn how chefs actually hold knives. Chef Scott Bradley explains the pinch grip, claw method, and cutting stance for safety and control.",
+  datePublished: "2025-10-16",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'professional-knife-grip-techniques'
+});
+
 export default function KnifeGripTechniquesPost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "Professional Chef Knife Grip Techniques",
-            slug: "professional-knife-grip-techniques",
-            description: "Learn how chefs actually hold knives. Chef Scott Bradley explains the pinch grip, claw method, and cutting stance for safety and control.",
-            author: "Scott Bradley",
-            datePublished: "2025-10-16T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Knife Care",
-            tags: ["knife grip", "how to hold a chef knife", "pinch grip", "professional knife technique", "chef knife control"],
-            wordCount: 2400
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'professional-knife-grip-techniques'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

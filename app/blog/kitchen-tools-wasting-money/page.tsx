@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "10 Kitchen Tools You're Wasting Money On (And What to Buy Instead)",
+  description: "Professional chef breaks down the 10 kitchen tools most home cooks waste money on and shares which essential tools professionals actually use instead.",
+  datePublished: "2025-09-04",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'kitchen-tools-wasting-money'
+});
+
 export default function KitchenToolsWastePost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "10 Kitchen Tools You're Wasting Money On (And What to Buy Instead)",
-            slug: "kitchen-tools-wasting-money",
-            description: "Professional chef breaks down the 10 kitchen tools most home cooks waste money on and shares which essential tools professionals actually use instead.",
-            author: "Scott Bradley",
-            datePublished: "2025-09-04T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["kitchen tools to avoid", "waste of money kitchen gadgets", "essential kitchen tools", "professional kitchen gear", "chef recommended tools"],
-            wordCount: 2300
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'kitchen-tools-wasting-money'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

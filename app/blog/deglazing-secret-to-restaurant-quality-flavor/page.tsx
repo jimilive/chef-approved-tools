@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = generateArticleSchema({
+const articleSchema = generateArticleSchema({
   headline: 'Deglazing: The Secret to Restaurant-Quality Flavor',
   description: 'Learn how to deglaze like a professional chef — the science of fond, proper technique, and how to build flavor into every pan sauce.',
   datePublished: "2025-10-26",
@@ -73,7 +73,7 @@ export default function DeglazingPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

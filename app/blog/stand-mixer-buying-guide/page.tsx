@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "Stand Mixer Buying Guide: KitchenAid vs Alternatives",
+  description: "Professional chef compares KitchenAid mixers vs top alternatives. Learn what to look for in power, capacity, attachments, and reliability before you buy.",
+  datePublished: "2025-10-01",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'stand-mixer-buying-guide'
+});
+
 export default function StandMixerBuyingGuidePost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "Stand Mixer Buying Guide: KitchenAid vs Alternatives",
-            slug: "stand-mixer-buying-guide",
-            description: "Professional chef compares KitchenAid mixers vs top alternatives. Learn what to look for in power, capacity, attachments, and reliability before you buy.",
-            author: "Scott Bradley",
-            datePublished: "2025-10-01T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["stand mixer guide", "KitchenAid vs alternatives", "best stand mixer", "baking tools", "mixer buying guide"],
-            wordCount: 2400
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'stand-mixer-buying-guide'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

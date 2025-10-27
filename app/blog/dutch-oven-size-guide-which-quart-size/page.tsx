@@ -13,18 +13,16 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = generateArticleSchema({
-  title: 'Dutch Oven Size Guide: Which Quart Size Do You Need?',
-  slug: 'dutch-oven-size-guide-which-quart-size',
+const articleSchema = generateArticleSchema({
+  headline: 'Dutch Oven Size Guide: Which Quart Size Do You Need?',
   description: 'A professional chef\'s guide to choosing the right Dutch oven size for soups, bread, braises, and everyday cooking. Learn what size fits your kitchen best.',
   datePublished: "2025-09-06",
-  lastUpdated: '2025-10-21',
-  author: 'Scott Bradley',
-  image: 'https://www.chefapprovedtools.com/images/blog/dutch-oven-size-guide.jpg',
-  tags: ['dutch oven size guide', 'best dutch oven size', 'cooking capacity', 'dutch oven buying guide']
-,
+  dateModified: '2025-10-21',
+  authorName: 'Scott Bradley',
+  imageUrl: 'https://www.chefapprovedtools.com/og-image.jpg',
   urlPrefix: 'blog',
-  urlSuffix: 'dutch-oven-size-guide-which-quart-size'})
+  urlSuffix: 'dutch-oven-size-guide-which-quart-size'
+})
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },
@@ -72,7 +70,7 @@ export default function DutchOvenSizeGuidePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

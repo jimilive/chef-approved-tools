@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = generateArticleSchema({
+const articleSchema = generateArticleSchema({
   headline: 'Sheet Pan Cooking: 5 Restaurant Techniques for Home',
   description: 'Professional chef reveals 5 restaurant sheet pan techniques that transform home cooking. Learn high-heat roasting, batch prep, and finishing methods from 24 years in commercial kitchens.',
   datePublished: "2025-09-12",
@@ -73,7 +73,7 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "How to Season Cast Iron Like a Restaurant Chef",
+  description: "Professional chef explains how to season cast iron for a smooth, long-lasting nonstick surface. Learn oil types, baking steps, and common mistakes to avoid.",
+  datePublished: "2025-10-21",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-season-cast-iron-like-restaurant-chef'
+});
+
 export default function SeasonCastIronPost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "How to Season Cast Iron Like a Restaurant Chef",
-            slug: "how-to-season-cast-iron-like-restaurant-chef",
-            description: "Professional chef explains how to season cast iron for a smooth, long-lasting nonstick surface. Learn oil types, baking steps, and common mistakes to avoid.",
-            author: "Scott Bradley",
-            datePublished: "2025-10-21T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["how to season cast iron", "cast iron seasoning method", "cast iron oil", "how to fix sticky cast iron", "cast iron restoration"],
-            wordCount: 2400
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'how-to-season-cast-iron-like-restaurant-chef'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

@@ -15,28 +15,24 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = generateArticleSchema({
+  headline: "How to Steel a Knife (The Right Way to Hone Like a Chef)",
+  description: "Learn how to steel a knife properly using a honing steel. Professional chef guide to honing vs sharpening, perfect technique, and top tool recommendations.",
+  datePublished: "2025-09-13",
+  dateModified: "2025-09-13",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-steel-a-knife'
+});
+
 export default function HowToSteelAKnife() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "How to Steel a Knife (The Right Way to Hone Like a Chef)",
-            slug: "how-to-steel-a-knife",
-            description: "Learn how to steel a knife properly using a honing steel. Professional chef guide to honing vs sharpening, perfect technique, and top tool recommendations.",
-            author: "Scott Bradley",
-            datePublished: "2025-09-13T00:00:00Z",
-            lastUpdated: new Date().toISOString(),
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Knife Care",
-            tags: ["how to steel a knife", "knife honing", "honing steel", "knife maintenance", "chef knife care"],
-            wordCount: 2200
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'how-to-steel-a-knife'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

@@ -18,28 +18,24 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = generateArticleSchema({
+  headline: "How to Make Perfect French Press Coffee Every Time",
+  description: "Master French press coffee with 24 years of professional experience. Learn the perfect ratio, step-by-step technique, common mistakes to avoid, and pro tips for cafe-quality coffee at home.",
+  datePublished: "2025-10-24",
+  dateModified: "2025-10-24",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-make-perfect-french-press-coffee'
+});
+
 export default function HowToMakePerfectFrenchPressCoffeePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "How to Make Perfect French Press Coffee Every Time",
-            slug: "how-to-make-perfect-french-press-coffee",
-            description: "Master French press coffee with 24 years of professional experience. Learn the perfect ratio, step-by-step technique, common mistakes to avoid, and pro tips for cafe-quality coffee at home.",
-            author: "Scott Bradley",
-            datePublished: "2025-10-24T00:00:00Z",
-            lastUpdated: new Date().toISOString(),
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["french press coffee", "coffee brewing", "perfect coffee", "coffee technique", "Bodum Chambord"],
-            wordCount: 3200
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'how-to-make-perfect-french-press-coffee'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

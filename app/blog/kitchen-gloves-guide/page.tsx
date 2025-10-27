@@ -15,28 +15,24 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = generateArticleSchema({
+  headline: "Essential Guide to Kitchen Gloves: Professional Safety Protocols",
+  description: "Learn professional kitchen glove safety from chef with 24 years restaurant experience. Single-use, cut-resistant, and proper layering techniques.",
+  datePublished: "2025-09-23",
+  dateModified: "2025-09-23",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'kitchen-gloves-guide'
+});
+
 export default function KitchenGlovesGuide() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "Essential Guide to Kitchen Gloves: Professional Safety Protocols",
-            slug: "kitchen-gloves-guide",
-            description: "Learn professional kitchen glove safety from chef with 24 years restaurant experience. Single-use, cut-resistant, and proper layering techniques.",
-            author: "Scott Bradley",
-            datePublished: "2025-09-23T00:00:00Z",
-            lastUpdated: new Date().toISOString(),
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Kitchen Safety",
-            tags: ["kitchen gloves", "cut resistant gloves", "food safety", "kitchen safety", "professional chef techniques"],
-            wordCount: 3200
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'kitchen-gloves-guide'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

@@ -14,28 +14,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "How to Sear Steaks Like a Restaurant Chef",
+  description: "Learn the professional steak searing techniques used in restaurant kitchens. 24 years of experience from a former Mellow Mushroom Kitchen Manager reveals the secrets to perfect sears.",
+  datePublished: "2025-09-10",
+  dateModified: "2024-09-27",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-sear-steaks-like-restaurant-chef'
+});
+
 export default function SteakSearingPost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "How to Sear Steaks Like a Restaurant Chef",
-            slug: "how-to-sear-steaks-like-restaurant-chef",
-            description: "Learn the professional steak searing techniques used in restaurant kitchens. 24 years of experience from a former Mellow Mushroom Kitchen Manager reveals the secrets to perfect sears.",
-            author: "Scott Bradley",
-            datePublished: "2025-09-10T00:00:00Z",
-            lastUpdated: "2024-09-27T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["how to sear steak", "restaurant steak techniques", "professional steak cooking", "perfect steak sear", "cast iron steak"],
-            wordCount: 2800
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'how-to-sear-steaks-like-restaurant-chef'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

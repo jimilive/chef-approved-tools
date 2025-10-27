@@ -18,28 +18,24 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = generateArticleSchema({
+  headline: "How to Sharpen Knives with a Stone: Professional Chef's Technique",
+  description: "Professional chef shares technique perfected over 6 years in restaurant kitchen. Step-by-step guide: angles, pressure, three-stage progression, troubleshooting.",
+  datePublished: "2025-10-16",
+  dateModified: "2025-10-16",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'how-to-sharpen-with-tri-stone'
+});
+
 export default function HowToSharpenWithTriStonePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "How to Sharpen Knives with a Stone: Professional Chef's Technique",
-            slug: "how-to-sharpen-with-tri-stone",
-            description: "Professional chef shares technique perfected over 6 years in restaurant kitchen. Step-by-step guide: angles, pressure, three-stage progression, troubleshooting.",
-            author: "Scott Bradley",
-            datePublished: "2025-10-16T00:00:00Z",
-            lastUpdated: new Date().toISOString(),
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Knife Care",
-            tags: ["knife sharpening", "tri-stone sharpener", "professional chef techniques", "knife care", "Norton IM200"],
-            wordCount: 2800
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'how-to-sharpen-with-tri-stone'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

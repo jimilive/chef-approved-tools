@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = generateArticleSchema({
+const articleSchema = generateArticleSchema({
   headline: 'Braising 101: Tough Cuts Made Tender',
   description: 'Professional chef explains the art and science of braising — transforming tough cuts into tender, flavorful perfection through low, slow heat and control.',
   datePublished: "2025-09-25",
@@ -73,7 +73,7 @@ export default function Braising101Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "The 5 Essential Knife Cuts Every Home Cook Should Master",
+  description: "Learn the five professional knife cuts—dice, julienne, chiffonade, mince, and bias—taught by chef Scott Bradley. Technique, precision, and practice tips for home cooks.",
+  datePublished: "2025-10-12",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'essential-knife-cuts-every-cook-should-master'
+});
+
 export default function EssentialKnifeCutsPost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "The 5 Essential Knife Cuts Every Home Cook Should Master",
-            slug: "essential-knife-cuts-every-cook-should-master",
-            description: "Learn the five professional knife cuts—dice, julienne, chiffonade, mince, and bias—taught by chef Scott Bradley. Technique, precision, and practice tips for home cooks.",
-            author: "Scott Bradley",
-            datePublished: "2025-10-12T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["knife cuts", "basic knife skills", "how to dice vegetables", "julienne cut", "chiffonade technique", "professional knife training"],
-            wordCount: 2200
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'essential-knife-cuts-every-cook-should-master'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

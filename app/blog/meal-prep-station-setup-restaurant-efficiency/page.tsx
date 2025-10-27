@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = generateArticleSchema({
+const articleSchema = generateArticleSchema({
   headline: 'Meal Prep Station Setup: Restaurant Efficiency at Home',
   description: 'Professional chef explains how to create a restaurant-style meal prep station at home — mise en place, flow, and efficiency techniques that make cooking effortless.',
   datePublished: "2025-09-15",
@@ -73,7 +73,7 @@ export default function MealPrepStationSetupPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

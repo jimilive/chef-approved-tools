@@ -12,20 +12,16 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = generateArticleSchema({
-  title: 'Hotel Pan System Review: The Professional Organization System Every Kitchen Needs',
-  slug: 'hotel-pan-system-restaurant-organization-home',
-  urlPrefix: 'blog',
+const articleSchema = generateArticleSchema({
+  headline: 'Hotel Pan System Review: The Professional Organization System Every Kitchen Needs',
   description: 'After 24 years in professional kitchens and 20 years using hotel pans at home, discover why every restaurant uses this system and how it eliminates Tupperware chaos.',
   datePublished: "2025-10-19",
-  lastUpdated: '2025-10-25',
-  author: 'Scott Bradley',
-  image: 'https://www.chefapprovedtools.com/images/blog/hotel-pan-system.jpg',
-  tags: ['hotel pan system', 'restaurant food storage', 'kitchen organization', 'meal prep containers'],
-  category: 'Kitchen Organization'
-,
+  dateModified: '2025-10-25',
+  authorName: 'Scott Bradley',
+  imageUrl: 'https://www.chefapprovedtools.com/og-image.jpg',
   urlPrefix: 'blog',
-  urlSuffix: 'hotel-pan-system-restaurant-organization-home'})
+  urlSuffix: 'hotel-pan-system-restaurant-organization-home'
+})
 
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },
@@ -69,7 +65,7 @@ export default function HotelPanSystemPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+const articleSchema = generateArticleSchema({
+  headline: "Cast Iron Mistakes That Ruin Your Pan (And How to Fix Them)",
+  description: "Professional chef explains the common cast iron mistakes that strip seasoning, cause rust, and ruin pans. Learn how to clean, season, and maintain cast iron the right way.",
+  datePublished: "2025-10-10",
+  dateModified: "2025-10-21",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'cast-iron-mistakes-ruin-pan'
+});
+
 export default function CastIronMistakesPost() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "Cast Iron Mistakes That Ruin Your Pan (And How to Fix Them)",
-            slug: "cast-iron-mistakes-ruin-pan",
-            description: "Professional chef explains the common cast iron mistakes that strip seasoning, cause rust, and ruin pans. Learn how to clean, season, and maintain cast iron the right way.",
-            author: "Scott Bradley",
-            datePublished: "2025-10-10T00:00:00Z",
-            lastUpdated: "2025-10-21T00:00:00Z",
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["cast iron mistakes", "how to clean cast iron", "cast iron rust", "cast iron seasoning", "cast iron maintenance"],
-            wordCount: 2500
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'cast-iron-mistakes-ruin-pan'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

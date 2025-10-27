@@ -15,28 +15,24 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = generateArticleSchema({
+  headline: "The Simplest Way to Perfect Scrambled Eggs: No Bowl, No Whisk",
+  description: "Professional chef shares revolutionary scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 45 years of cooking wisdom.",
+  datePublished: "2025-10-09",
+  dateModified: "2025-10-09",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'best-scrambled-eggs'
+});
+
 export default function BestScrambledEggs() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "The Simplest Way to Perfect Scrambled Eggs: No Bowl, No Whisk",
-            slug: "best-scrambled-eggs",
-            description: "Professional chef shares revolutionary scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 45 years of cooking wisdom.",
-            author: "Scott Bradley",
-            datePublished: "2025-10-09T00:00:00Z",
-            lastUpdated: new Date().toISOString(),
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["scrambled eggs", "how to make scrambled eggs", "perfect scrambled eggs", "creamy scrambled eggs", "chef cooking techniques"],
-            wordCount: 2400
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'best-scrambled-eggs'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"

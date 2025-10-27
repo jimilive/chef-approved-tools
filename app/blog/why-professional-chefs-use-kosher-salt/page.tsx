@@ -13,28 +13,24 @@ export const metadata: Metadata = {
   },
 };
 
+const articleSchema = generateArticleSchema({
+  headline: "Why All Professional Cooks Use Kosher Salt",
+  description: "Discover why professional chefs prefer kosher salt. Learn about Diamond Crystal vs Morton, proper seasoning technique, and why it's essential in commercial kitchens.",
+  datePublished: "2025-10-13",
+  dateModified: "2025-10-27",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'why-professional-chefs-use-kosher-salt'
+});
+
 export default function WhyChefsUseKosherSalt() {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateArticleSchema({
-            title: "Why All Professional Cooks Use Kosher Salt",
-            slug: "why-professional-chefs-use-kosher-salt",
-            description: "Discover why professional chefs prefer kosher salt. Learn about Diamond Crystal vs Morton, proper seasoning technique, and why it's essential in commercial kitchens.",
-            author: "Scott Bradley",
-            datePublished: "2025-10-13T00:00:00Z",
-            lastUpdated: new Date().toISOString(),
-            image: "https://www.chefapprovedtools.com/logo.png",
-            category: "Cooking Techniques",
-            tags: ["kosher salt", "diamond crystal", "professional chef techniques", "cooking techniques", "seasoning"],
-            wordCount: 2200
-          ,
-  urlPrefix: 'blog',
-  urlSuffix: 'why-professional-chefs-use-kosher-salt'}))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"
