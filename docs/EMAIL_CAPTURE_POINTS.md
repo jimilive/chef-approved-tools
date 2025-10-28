@@ -39,14 +39,14 @@ This document catalogs every location on chefapprovedtools.com where a customer 
 **Subheadline:** "Get my free guide: The 11 Tools I Use Most in My Home Kitchen"
 
 **Full Title:** "The 11 Tools I Use Most in My Home Kitchen"
-**Subtitle:** "My daily workhorse tools after 40 years of cooking"
+**Subtitle:** "My daily workhorse tools after 45 years of cooking"
 
 ### What's Promised
 - 5 Victorinox knives: Chef's (8" & 10"), paring, boning, and bread knife
 - Essential prep tools: Peeler, bench scraper, tongs, and mandoline
 - Restaurant towels: The exact bar mops used for decades
 - Professional cutting board: Epicurean board built to last
-- Why I chose each one: Real stories from 40 years of cooking
+- Why I chose each one: Real stories from 45 years of cooking
 
 ### Email Form
 - **Input:** Email address
@@ -225,7 +225,7 @@ Auto-closes after 2 seconds.
 ### 1. **Inconsistent Lead Magnet Offers**
 
 **Problem:** Same lead magnet described differently across site:
-- Exit Intent: "11 Tools I Use Most in My Home Kitchen" (40 years cooking)
+- Exit Intent: "11 Tools I Use Most in My Home Kitchen" (45 years cooking)
 - Newsletter Component: "7 tools I actually use daily" (24 years professional)
 - Newsletter Page: "11 Tools I Use Most" (45 years total cooking)
 

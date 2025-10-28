@@ -232,7 +232,7 @@ export default async function HomePage() {
                 <span className="text-2xl">🏃‍♂️</span>
               </div>
               <h3 className="font-bold mb-2">Started Young</h3>
-              <p className="text-sm text-gray-600">Professional cooking since age 15 (1986)</p>
+              <p className="text-sm text-gray-600">Professional cooking (1986)</p>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6 text-center">

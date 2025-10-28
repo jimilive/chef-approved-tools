@@ -96,7 +96,7 @@ Fixing all credibility claims across the site to reflect authentic experience.
 - Changes needed: 8
   - [ ] Line 110: FAQ - Remove Michelin, change 23→24
   - [ ] Line 126: FAQ - Remove Michelin, change 23→24
-  - [ ] Line 259: Remove "40 years of cooking and", keep "24 years professional"
+  - [ ] Line 259: Remove "45 years of cooking and", keep "24 years professional"
   - [ ] Line 299: Change 23→24
   - [ ] Line 564: Remove Michelin reference
   - [ ] Line 567: Change 23→24
@@ -147,16 +147,16 @@ REPLACE: from small cafes to fine dining establishments
 
 ### Years Updates
 ```
-FIND: 23 years in professional kitchens
+FIND: 24 years in professional kitchens
 REPLACE: 24 years in professional kitchens
 
-FIND: 23+ years of professional experience
+FIND: 24 years of professional experience
 REPLACE: 24 years of professional kitchen experience
 
-FIND: 40 years of cooking and 23 years in professional kitchens
+FIND: 45 years of cooking and 24 years in professional kitchens
 REPLACE: 24 years in professional kitchens
 
-FIND: After 40 years of cooking
+FIND: After 45 years of cooking
 REPLACE: After 24 years in professional kitchens
 ```
 

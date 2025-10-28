@@ -87,7 +87,7 @@ This creates a new file from the template with:
 **Pro Tips:**
 - Use the VS Code snippets extensively - they'll save hours
 - Keep your writing conversational and authentic
-- Share real experiences from your 40 years as a chef
+- Share real experiences from your 45 years as a chef
 - Be honest about pros AND cons
 
 ### Add Images (30 minutes)

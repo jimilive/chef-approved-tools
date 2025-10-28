@@ -104,7 +104,7 @@ export default function BudgetVsPremiumMagnet({
         </h2>
 
         <p className={`text-lg mb-4 ${variant === 'sidebar' ? 'text-gray-700' : 'text-gray-300'}`}>
-          My daily workhorse tools after 40 years of cooking
+          My daily workhorse tools after 45 years of cooking
         </p>
 
         {/* Trust indicators */}
@@ -147,7 +147,7 @@ export default function BudgetVsPremiumMagnet({
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-              <span><strong>Why I chose each one:</strong> Real stories from 40 years of cooking</span>
+              <span><strong>Why I chose each one:</strong> Real stories from 45 years of cooking</span>
             </li>
           </ul>
         </div>
@@ -227,7 +227,7 @@ export function BudgetVsPremiumTeaser() {
             The 11 Tools I Use Most in My Home Kitchen
           </h3>
           <p className="text-gray-700 text-sm mb-3">
-            After 40 years cooking professionally - these are my daily workhorse tools at home.
+            After 45 years cooking professionally - these are my daily workhorse tools at home.
             Real recommendations, no BS.
           </p>
           <a

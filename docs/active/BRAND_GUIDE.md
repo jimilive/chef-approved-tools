@@ -3,7 +3,7 @@
 ## Brand Overview
 **Website:** https://www.chefapprovedtools.com
 **Tagline:** "Tools for Your Kitchen"
-**Mission:** Professional chef-tested reviews of commercial kitchen equipment and tools. Honest, detailed evaluations based on 23+ years of restaurant experience.
+**Mission:** Professional chef-tested reviews of commercial kitchen equipment and tools. Honest, detailed evaluations based on 24 years of restaurant experience.
 
 ---
 
@@ -160,7 +160,7 @@ font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Ari
 ## Brand Voice & Messaging
 
 ### Tone
-- **Authoritative** - 23+ years restaurant experience
+- **Authoritative** - 24 years restaurant experience
 - **Honest** - Transparent pros and cons
 - **Professional** - Commercial-grade focus
 - **Practical** - Real-world testing and use cases
@@ -177,7 +177,7 @@ font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Ari
 ### Expertise Credentials
 - **Name:** Scott Bradley
 - **Title:** Professional Chef & Kitchen Manager
-- **Experience:** 23+ years restaurant experience
+- **Experience:** 24 years restaurant experience
 - **Previous Role:** Former Kitchen Manager at Mellow Mushroom
 - **Testing Environment:** Real commercial kitchen conditions
 

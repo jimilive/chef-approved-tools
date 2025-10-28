@@ -41,7 +41,7 @@ const tierConfig = {
     borderColor: 'border-slate-400',
     textColor: 'text-slate-900',
     iconColor: 'text-slate-600',
-    description: 'Based on 40 years cooking experience and 23 years restaurant management',
+    description: 'Based on 45 years cooking experience and 23 years restaurant management',
     badge: '✓ EXPERIENCE-BASED'
   }
 };

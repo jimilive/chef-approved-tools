@@ -73,7 +73,7 @@ review and add affiliate programs
 
 ### Background:
 Site content contained inconsistent and inauthentic credibility claims:
-1. "40 years of cooking experience" (conflated home + professional)
+1. "45 years of cooking experience" (conflated home + professional)
 2. "Victorinox used in Michelin-starred restaurants worldwide" (NOT user's experience - AI-generated fiction)
 3. "23 years" vs "24 years" inconsistency
 
@@ -88,7 +88,7 @@ Site content contained inconsistent and inauthentic credibility claims:
 ### Progress - Phase 1 (Critical User-Facing Content):
 - [x] **COMPLETED:** Lead magnet content (`/lib/lead-magnet-content.ts`) - 4 changes
   - [x] Removed "Michelin-starred restaurants worldwide" claim
-  - [x] Changed "40 years of cooking" to accurate messaging
+  - [x] Changed "45 years of cooking" to accurate messaging
   - [x] Updated footer credentials to be specific and authentic
   - [x] Added authentic restaurant names
 - [ ] **NEXT:** Victorinox 8" review (`app/reviews/victorinox-fibrox-8-inch-chefs-knife/page.tsx`) - 8 changes

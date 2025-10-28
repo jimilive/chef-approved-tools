@@ -96,7 +96,7 @@ Tier 1 Products (Proven) + Tier 2 Products (Testing) + Tier 3 Products (Recommen
 - KitchenAid KSM8990WH (18 months at Purple Cafe)
 - Vitamix 5200 (tested in restaurant environment)
 - Robot Coupe R2 Dice (commercial prep use)
-- Victorinox 8" Chef's Knife (40 years cooking use)
+- Victorinox 8" Chef's Knife (45 years cooking use)
 - John Boos Cutting Board (18+ years professional use)
 
 **Review Characteristics:**
@@ -182,7 +182,7 @@ Next Update: [Date]
 **Tagline:** "✓ EXPERIENCE-BASED"
 
 **Requirements:**
-- ✅ Based on 40 years cooking experience and professional knowledge
+- ✅ Based on 45 years cooking experience and professional knowledge
 - ✅ Understanding of what works in real kitchens
 - ✅ May include hands-on testing but not long-term
 - ✅ Professional judgment informed by commercial experience
@@ -201,7 +201,7 @@ Next Update: [Date]
 **Examples:**
 - Le Creuset Dutch Oven (understand cast iron from professional use, but specific model tested <18 months)
 - Budget chef's knives (based on professional knife experience)
-- Basic cutting boards (informed by 40 years using various boards)
+- Basic cutting boards (informed by 45 years using various boards)
 - Standard kitchen tools (thermometers, spatulas, etc.)
 
 **Review Characteristics:**
@@ -447,7 +447,7 @@ Every review should link to `/review-tiers` for readers who want to understand t
 ### Chef's Knives
 
 **Tier 1:**
-- Victorinox Fibrox 8" (40 years cooking use)
+- Victorinox Fibrox 8" (45 years cooking use)
 - Wüsthof Classic (if used 18+ months commercially)
 
 **Tier 2:**
@@ -684,8 +684,8 @@ feedback.
 > discover what works and what doesn't. Updated every 2-4 weeks. Next update: [Date]"
 
 **Tier 3:**
-> "Professional chef's recommendation for [Product] based on 40 years cooking experience
-> and 23 years in professional kitchens. Honest opinion without long-term personal testing."
+> "Professional chef's recommendation for [Product] based on 45 years cooking experience
+> and 24 years in professional kitchens. Honest opinion without long-term personal testing."
 
 ### Internal Linking Strategy
 
@@ -799,7 +799,7 @@ Opinion evolving—review updated every 2-4 weeks. Next update: [Date]
 
 **Tier 3:**
 ```
-Based on 40 years cooking experience, not 18+ months testing this specific product.
+Based on 45 years cooking experience, not 18+ months testing this specific product.
 Affiliate links included. Honest professional opinion—cannot speak to long-term
 durability from personal experience.
 ```

@@ -56,7 +56,7 @@
 
 | File Path | Description | Char Count |
 |-----------|-------------|------------|
-| `best-budget-chef-knife` | Professional chef reveals the best budget chef knife after 40 years of cooking. Victorinox Fibrox 8" offers pro-level performance at under $50. NSF certified and dishwasher safe. | **178** |
+| `best-budget-chef-knife` | Professional chef reveals the best budget chef knife after 45 years of cooking. Victorinox Fibrox 8" offers pro-level performance at under $50. NSF certified and dishwasher safe. | **178** |
 | `best-knife-for-cutting-meat` | Professional butcher's choice: Victorinox 6" Flexible Boning Knife for trimming, deboning, and portioning meat. NSF certified, Granton edge prevents sticking. Under $30. | **175** |
 | `kitchen-bundle` | Build a professional-grade kitchen with these 10 essential tools, personally tested and recommended by a 23+ year restaurant veteran. From knives to cookware, this is the ultimate starter kit. | **192** |
 | `about` | Meet Scott Bradley, a professional chef with 45 years experience, and learn about our rigorous 6-month testing process in real restaurant kitchens. No lab tests - just real-world professional kitchen conditions. | **207** |
@@ -86,10 +86,10 @@
 
 | File Path | Description | Char Count |
 |-----------|-------------|------------|
-| `blog/best-scrambled-eggs` | Professional chef shares revolutionary scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 40 years of cooking wisdom. | 153 |
+| `blog/best-scrambled-eggs` | Professional chef shares revolutionary scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 45 years of cooking wisdom. | 153 |
 | `blog/how-to-sharpen-with-tri-stone` | Professional chef shares technique perfected over 6 years in restaurant kitchen. Step-by-step guide: angles, pressure, three-stage progression, troubleshooting. | 166 ⚠️ |
-| `blog/kitchen-gloves-guide` | Learn professional kitchen glove safety from chef with 23+ years restaurant experience. Single-use, cut-resistant, and proper layering techniques. | 151 |
-| `blog/meat-cooking-temperatures-thermometers` | Professional chef explains meat thermometers and proper cooking temps. 23+ years restaurant experience. Food safety + perfect doneness every time. | 151 |
+| `blog/kitchen-gloves-guide` | Learn professional kitchen glove safety from chef with 24 years restaurant experience. Single-use, cut-resistant, and proper layering techniques. | 151 |
+| `blog/meat-cooking-temperatures-thermometers` | Professional chef explains meat thermometers and proper cooking temps. 24 years restaurant experience. Food safety + perfect doneness every time. | 151 |
 
 ### Other (3 pages)
 
@@ -117,8 +117,8 @@
 | File Path | Description | Char Count |
 |-----------|-------------|------------|
 | `guides/page` | (Need to check) | ? |
-| `guides/best-cookware` | Professional cookware recommendations from 23+ years of restaurant experience. Find pans that survive commercial use. | 117 |
-| `guides/cookware-materials` | Complete guide to cookware materials from 23+ years of restaurant experience. Stainless steel, cast iron, carbon steel, and more. | 136 ⚠️ **BORDERLINE** |
+| `guides/best-cookware` | Professional cookware recommendations from 24 years of restaurant experience. Find pans that survive commercial use. | 117 |
+| `guides/cookware-materials` | Complete guide to cookware materials from 24 years of restaurant experience. Stainless steel, cast iron, carbon steel, and more. | 136 ⚠️ **BORDERLINE** |
 
 ### Legal (4 pages)
 

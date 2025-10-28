@@ -202,7 +202,7 @@ export default function AuthorBio({
             </div>
             <div className="flex items-center justify-center md:justify-start gap-2">
               <ChefHat className="w-4 h-4 text-orange-600" />
-              <span className="text-sm text-slate-700">Since Age 15</span>
+              
             </div>
             <div className="flex items-center justify-center md:justify-start gap-2">
               <Award className="w-4 h-4 text-orange-600" />
@@ -213,7 +213,7 @@ export default function AuthorBio({
           {/* Bio Text */}
           <p className="text-slate-700 text-sm leading-relaxed mb-4">
             Professional chef with 40+ years in restaurant kitchens, from fast food to fine dining.
-            Former Kitchen Manager at Mellow Mushroom with 23+ years managing commercial operations.
+            Former Kitchen Manager at Mellow Mushroom with 24 years managing commercial operations.
             Every tool I review has been tested in real professional environments where performance
             and durability matter most.
           </p>
@@ -756,7 +756,7 @@ In ConvertKit visual editor:
           </p>
 
           <p>
-            As a former Kitchen Manager at Mellow Mushroom with 23+ years managing
+            As a former Kitchen Manager at Mellow Mushroom with 24 years managing
             commercial operations, I know what equipment holds up under real-world
             pressure and what's just marketing hype.
           </p>

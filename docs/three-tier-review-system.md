@@ -209,7 +209,7 @@ const productData = {
 const productData = {
   reviewTier: "expert-analysis",
   hasDirectExperience: false,
-  relatedExperience: "40 years using German chef knives professionally",
+  relatedExperience: "45 years using German chef knives professionally",
   researchSources: {
     customerReviews: 5234,
     expertReviews: 8,
@@ -618,7 +618,7 @@ Mix of all three tiers depending on products
 - Transparency builds trust
 
 **2. Leverage Your Authority**
-- "40 years as a professional chef"
+- "45 years as a professional chef"
 - "Managed restaurant kitchens"
 - "Tested hundreds of similar products"
 

@@ -127,7 +127,7 @@
 
 **Title:** Kitchen Gloves Guide: Pro Chef Recommendations
 
-**Description:** Learn professional kitchen glove safety from chef with 23+ years restaurant experience. Single-use, cut-resistant, and proper layering techniques.
+**Description:** Learn professional kitchen glove safety from chef with 24 years restaurant experience. Single-use, cut-resistant, and proper layering techniques.
 
 ---
 
@@ -137,7 +137,7 @@
 
 **Title:** Meat Temps & Thermometers: Chef
 
-**Description:** Professional chef explains meat thermometers and proper cooking temps. 23+ years restaurant experience. Food safety + perfect doneness every time.
+**Description:** Professional chef explains meat thermometers and proper cooking temps. 24 years restaurant experience. Food safety + perfect doneness every time.
 
 ---
 
@@ -237,7 +237,7 @@
 
 **Title:** Best Cookware 2025: Restaurant-Grade Home Pans
 
-**Description:** Professional cookware recommendations from 23+ years of restaurant experience. Find pans that survive commercial use.
+**Description:** Professional cookware recommendations from 24 years of restaurant experience. Find pans that survive commercial use.
 
 ---
 
@@ -247,7 +247,7 @@
 
 **Title:** Cookware Materials Guide: Pro Kitchen Insights
 
-**Description:** Complete guide to cookware materials from 23+ years of restaurant experience. Stainless steel, cast iron, carbon steel, and more.
+**Description:** Complete guide to cookware materials from 24 years of restaurant experience. Stainless steel, cast iron, carbon steel, and more.
 
 ---
 
@@ -307,7 +307,7 @@
 
 **Title:** Equipment Insights Newsletter
 
-**Description:** Get equipment insights and honest product recommendations from 23+ years of restaurant experience. Join fellow home chefs getting expert insights.
+**Description:** Get equipment insights and honest product recommendations from 24 years of restaurant experience. Join fellow home chefs getting expert insights.
 
 ---
 

@@ -76,7 +76,7 @@ export default function AuthorBio({ variant = 'full', showImage = true }: Author
           <p className="text-slate-700 mb-4 leading-relaxed">
             Professional chef with 24 years of professional cooking, from starting at Wendy&apos;s at age 15
             to managing kitchen operations at Mellow Mushroom. Formally trained at Seattle Central College
-            Culinary Arts program with over 23 years in professional kitchens.
+            Culinary Arts program with over 24 years in professional kitchens.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4 text-sm">
