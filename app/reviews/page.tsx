@@ -120,7 +120,7 @@ const EDITORIAL_METADATA: Record<string, {
   },
   'le-creuset-signature-7-25-qt-dutch-oven': {
     tier: 2,
-    testingPeriod: '10 Years',
+    testingPeriod: '12 Years',
     hook: 'Buy-it-for-life cookware. Zero staining after a decade.',
     revenueScore: 90
   },
