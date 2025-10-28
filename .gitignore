@@ -10,6 +10,10 @@ build/
 dist/
 tsconfig.tsbuildinfo
 
+# Lighthouse CI reports
+.lighthouseci/
+*.report.html
+
 # Netlify (migrated to Vercel)
 .netlify
 netlify.toml
