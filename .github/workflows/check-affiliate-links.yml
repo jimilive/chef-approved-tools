@@ -15,18 +15,61 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Extract Amazon Links
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Extract Amazon Links from Supabase
         id: extract
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
         run: |
-          # Extract all Amazon affiliate links (both amzn.to short links and full amazon.com URLs)
-          # Search in app/ directory for all .tsx files
-          {
-            # Extract full amazon.com URLs with our affiliate tag
-            grep -rh "amazon\.com" app --include="*.tsx" | grep -o "https://www\.amazon\.com[^\"' ]*tag=chefapprovedt-20" || true
-            # Extract any remaining amzn.to short links
-            grep -rh "amzn\.to" app --include="*.tsx" | grep -o "https://amzn\.to/[a-zA-Z0-9]*" || true
-          } | sort -u > /tmp/links.txt
-          echo "Found $(wc -l < /tmp/links.txt) unique affiliate links"
+          # Create a script to fetch affiliate links from Supabase
+          cat > /tmp/fetch-links.mjs << 'SCRIPT'
+          import { createClient } from '@supabase/supabase-js'
+          import { writeFileSync } from 'fs'
+
+          const supabase = createClient(
+            process.env.NEXT_PUBLIC_SUPABASE_URL,
+            process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+          )
+
+          const { data, error } = await supabase
+            .from('products')
+            .select('slug, name, affiliate_links')
+
+          if (error) {
+            console.error('Error fetching products:', error)
+            process.exit(1)
+          }
+
+          // Extract all Amazon affiliate links
+          const amazonLinks = new Set()
+          data.forEach(product => {
+            if (product.affiliate_links) {
+              product.affiliate_links.forEach(link => {
+                if (link.merchant === 'amazon' && link.url) {
+                  amazonLinks.add(link.url)
+                }
+              })
+            }
+          })
+
+          // Write links to file
+          writeFileSync('/tmp/links.txt', Array.from(amazonLinks).join('\n'))
+          console.log(`Found ${amazonLinks.size} unique Amazon affiliate links from ${data.length} products`)
+          SCRIPT
+
+          # Run the script
+          node /tmp/fetch-links.mjs
+
+          # Set the current date/time as an output
+          echo "check_date=$(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_OUTPUT
 
       - name: Test Links with Browser Headers
         id: test
@@ -102,7 +145,7 @@ jobs:
                 <strong>Status:</strong> ${{ steps.test.outputs.broken_count }} broken link(s) found out of ${{ steps.test.outputs.total_count }} total<br>
                 <strong>Site:</strong> www.chefapprovedtools.com<br>
                 <strong>Affiliate Tag:</strong> chefapprovedt-20<br>
-                <strong>Check Date:</strong> $(date -u '+%Y-%m-%d %H:%M:%S UTC')
+                <strong>Check Date:</strong> ${{ steps.extract.outputs.check_date }}
               </div>
 
               <div class="broken-links">
@@ -125,6 +168,7 @@ jobs:
                 <p><strong>Automated Check Details:</strong></p>
                 <ul style="margin: 5px 0; padding-left: 20px;">
                   <li>This check runs daily at 6 AM Pacific (2 PM UTC)</li>
+                  <li>Fetches all affiliate links from Supabase products database</li>
                   <li>Uses proper browser headers to avoid Amazon's bot detection</li>
                   <li>Tests both HTTP status codes and redirect behavior</li>
                 </ul>
@@ -166,7 +210,7 @@ jobs:
                 <strong>Status:</strong> All ${{ steps.test.outputs.working_count }} affiliate links are working correctly<br>
                 <strong>Site:</strong> www.chefapprovedtools.com<br>
                 <strong>Affiliate Tag:</strong> chefapprovedt-20<br>
-                <strong>Check Date:</strong> $(date -u '+%Y-%m-%d %H:%M:%S UTC')
+                <strong>Check Date:</strong> ${{ steps.extract.outputs.check_date }}
               </div>
 
               <p>Great news! All Amazon affiliate links on your site are working properly and directing to the correct products with your affiliate tag.</p>
