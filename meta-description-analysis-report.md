@@ -27,7 +27,7 @@
 | `reviews/glossary` | Professional kitchen equipment terms, baking conversions, and knife cuts explained by a restaurant manager. Learn weight vs volume measurements, NSF certification, julienne, brunoise, and more professional techniques. | **217** |
 | `reviews/blog/how-to-make-perfect-french-press-coffee` | Master French press coffee with 24 years of professional experience. Learn the perfect ratio, step-by-step technique, common mistakes to avoid, and pro tips for cafe-quality coffee at home. | **198** |
 | `reviews/blog/how-to-sear-steaks-like-restaurant-chef` | Learn the professional steak searing techniques used in restaurant kitchens. 23+ years of experience from a former Mellow Mushroom Kitchen Manager reveals the secrets to perfect sears. | **185** |
-| `reviews/about` | Meet Scott Bradley, a professional chef with 40 years experience, and learn about our rigorous 6-month testing process in real restaurant kitchens. No lab tests - just real-world professional kitchen conditions. | **207** |
+| `reviews/about` | Meet Scott Bradley, a professional chef with 45 years experience, and learn about our rigorous 6-month testing process in real restaurant kitchens. No lab tests - just real-world professional kitchen conditions. | **207** |
 | `reviews/le-creuset-signature-7-25-qt-dutch-oven` | Le Creuset 7.25-qt Signature Dutch Oven review after 12 years of home use. Enameled cast iron, 500°F oven safe, made in France since 1925. Expert testing by Chef Scott Bradley. | **181** |
 | `reviews/robot-coupe-r2-dice` | Professional chef tests Robot Coupe R2 Dice for 3 years in commercial kitchen. Complete review: processing speed, reliability, ROI analysis, and commercial-grade performance. | **168** |
 | `reviews/wusthof-classic-ikon-16-piece` | Professional chef review of WÜSTHOF Classic IKON 16-piece knife set after 2+ years in restaurant kitchens. German-forged quality, ergonomic handles, complete testing results. | **172** |
@@ -59,7 +59,7 @@
 | `best-budget-chef-knife` | Professional chef reveals the best budget chef knife after 40 years of cooking. Victorinox Fibrox 8" offers pro-level performance at under $50. NSF certified and dishwasher safe. | **178** |
 | `best-knife-for-cutting-meat` | Professional butcher's choice: Victorinox 6" Flexible Boning Knife for trimming, deboning, and portioning meat. NSF certified, Granton edge prevents sticking. Under $30. | **175** |
 | `kitchen-bundle` | Build a professional-grade kitchen with these 10 essential tools, personally tested and recommended by a 23+ year restaurant veteran. From knives to cookware, this is the ultimate starter kit. | **192** |
-| `about` | Meet Scott Bradley, a professional chef with 40 years experience, and learn about our rigorous 6-month testing process in real restaurant kitchens. No lab tests - just real-world professional kitchen conditions. | **207** |
+| `about` | Meet Scott Bradley, a professional chef with 45 years experience, and learn about our rigorous 6-month testing process in real restaurant kitchens. No lab tests - just real-world professional kitchen conditions. | **207** |
 
 ---
 

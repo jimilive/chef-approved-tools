@@ -565,7 +565,7 @@ Add this AFTER the email capture section:
     <p>The knife I use daily for prep work before mixing. Professional quality, perfect
     balance, unbeatable value at $45.</p>
     <p style={{ fontSize: '14px', color: '#666' }}>
-      <strong>40 years cooking:</strong> My go-to knife.
+      <strong>45 years cooking:</strong> My go-to knife.
     </p>
     <a
       href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
@@ -662,7 +662,7 @@ Add at the very end of the article, before closing:
   <div>
     <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
     <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-      Professional Chef • 40 Years Experience Since Age 15
+      Professional Chef • 45 Years Experience Since Age 15
     </p>
     <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
       Former Kitchen Manager at Mellow Mushroom with 23+ years of restaurant experience.

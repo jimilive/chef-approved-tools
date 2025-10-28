@@ -92,7 +92,7 @@ export default function ProductReview() {
           paddingBottom: '20px',
           borderBottom: '1px solid #e0e0e0'
         }}>
-          <strong>By Scott Bradley</strong> | Professional Chef | 40 Years Experience
+          <strong>By Scott Bradley</strong> | Professional Chef | 45 Years Experience
         </div>
 
         {/* Tier Badge */}
@@ -607,7 +607,7 @@ export default function ProductReview() {
           <div>
             <h3 style={{ margin: '0 0 10px 0' }}>About Scott Bradley</h3>
             <p style={{ margin: '5px 0', fontWeight: 'bold' }}>
-              Professional Chef • 40 Years Experience Since Age 15
+              Professional Chef • 45 Years Experience
             </p>
             <p style={{ margin: '10px 0', fontSize: '14px', lineHeight: '1.6' }}>
               [Customize this paragraph to mention specific experience relevant to THIS product.

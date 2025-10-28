@@ -135,7 +135,7 @@ export default function AuthorBio({
         )}
         <div>
           <p className="font-semibold text-slate-900">Scott Bradley</p>
-          <p className="text-sm text-slate-600">Professional Chef • 40 Years Experience</p>
+          <p className="text-sm text-slate-600">Professional Chef • 45 Years Experience</p>
         </div>
       </div>
     )
@@ -170,7 +170,7 @@ export default function AuthorBio({
             <div className="relative">
               <Image
                 src="/images/branding/scott-ai-portrait-circle.webp"
-                alt="Scott Bradley - Professional Chef with 40 Years Experience"
+                alt="Scott Bradley - Professional Chef with 45 Years Experience"
                 width={150}
                 height={150}
                 className="rounded-full border-4 border-orange-500 shadow-lg"
@@ -198,7 +198,7 @@ export default function AuthorBio({
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="flex items-center justify-center md:justify-start gap-2">
               <Calendar className="w-4 h-4 text-orange-600" />
-              <span className="text-sm text-slate-700">40 Years Experience</span>
+              <span className="text-sm text-slate-700">45 Years Experience</span>
             </div>
             <div className="flex items-center justify-center md:justify-start gap-2">
               <ChefHat className="w-4 h-4 text-orange-600" />
@@ -473,7 +473,7 @@ Dimensions: 1000x1500px
 │  Secondary Text                │
 │────────────────────────────────│
 │  [AI Portrait] Scott Bradley   │
-│  "40 Years Experience"         │
+│  "45 Years Experience"         │
 │────────────────────────────────│
 │  Read Review →                 │
 └────────────────────────────────┘
@@ -567,7 +567,7 @@ Create a 5-second animated intro:
 [0-1sec] Logo animates in
 [1-3sec] "Chef Approved Tools" text appears
 [3-4sec] AI portrait slides in
-[4-5sec] "Scott Bradley - 40 Years Experience" fades in
+[4-5sec] "Scott Bradley - 45 Years Experience" fades in
 [5sec] Fade to video content
 ```
 
@@ -677,7 +677,7 @@ Layout (1280x720px):
     </td>
     <td>
       <strong style="font-size: 16px; color: #1e293b;">Scott Bradley</strong><br>
-      <span style="color: #ea580c; font-weight: 600;">Professional Chef • 40 Years Experience</span><br>
+      <span style="color: #ea580c; font-weight: 600;">Professional Chef • 45 Years Experience</span><br>
       <span style="color: #64748b; font-size: 13px;">Former Kitchen Manager | Restaurant Operations Expert</span><br><br>
 
       <a href="https://www.chefapprovedtools.com" style="color: #ea580c; text-decoration: none;">
@@ -745,7 +745,7 @@ In ConvertKit visual editor:
       <div className="flex-grow text-white">
         <h2 className="text-3xl font-bold mb-2">About Scott Bradley</h2>
         <p className="text-orange-400 font-semibold text-lg mb-4">
-          Professional Chef & Kitchen Manager • 40 Years Experience
+          Professional Chef & Kitchen Manager • 45 Years Experience
         </p>
 
         <div className="space-y-4 text-slate-200">
@@ -834,7 +834,7 @@ In ConvertKit visual editor:
 - ✅ Feature AI portrait to build personal brand
 - ✅ Keep branding consistent across all platforms
 - ✅ Make yourself recognizable (people buy from people)
-- ✅ Use portrait to add authority ("40 years experience")
+- ✅ Use portrait to add authority ("45 Years Experience")
 - ✅ Combine logo + portrait for maximum brand recognition
 
 ### DON'T:

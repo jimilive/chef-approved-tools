@@ -189,7 +189,7 @@ Next Update: [Date]
 - ✅ Honest about not having personally tested long-term
 
 **Description:**
-> "Based on 40 years of cooking experience and professional knowledge. Honest opinion informed by understanding what works in real kitchens, even if not personally tested."
+> "Based on 45 years of cooking experience and professional knowledge. Honest opinion informed by understanding what works in real kitchens, even if not personally tested."
 
 **When to Use:**
 - Products you understand professionally but haven't tested 18+ months
@@ -214,7 +214,7 @@ Next Update: [Date]
 
 **Disclosure Language:**
 ```
-This review is based on my 40 years of cooking experience (23 years in professional
+This review is based on my 45 years of cooking experience (23 years in professional
 kitchens, 7 years kitchen management) and my understanding of what makes quality
 kitchen equipment. While I haven't personally tested this specific product for 18+
 months in a commercial environment, my professional experience with [similar equipment]
@@ -376,7 +376,7 @@ Every review should link to `/review-tiers` for readers who want to understand t
 **Evidence:** Professional principles, industry knowledge, comparative expertise
 
 **Language Patterns:**
-- "Based on 40 years of cooking experience..."
+- "Based on 45 years of cooking experience..."
 - "In professional kitchens, I've learned that..."
 - "While I haven't tested this specific model for 18+ months..."
 - "My experience with similar equipment suggests..."
@@ -398,7 +398,7 @@ Every review should link to `/review-tiers` for readers who want to understand t
 ```
 
 **Example Opening:**
-> "This review is based on my 40 years of cooking experience and 23 years in professional
+> "This review is based on my 45 years of cooking experience and 23 years in professional
 > kitchens—not 18+ months of testing this specific product in a commercial environment.
 > While I haven't personally used this exact Dutch oven for 18+ months at Purple Cafe,
 > my extensive experience with cast iron cookware (including commercial use of similar
@@ -669,7 +669,7 @@ feedback.
 - "Currently Testing [Product]: Honest 30-Day Assessment"
 
 **Tier 3 Titles:**
-- "[Product] Professional Assessment (40 Years Experience)"
+- "[Product] Professional Assessment (45 Years Experience)"
 - "[Product] Chef's Recommendation Based on Professional Knowledge"
 - "[Product] Review: Professional Opinion (Experience-Based)"
 

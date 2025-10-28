@@ -27,7 +27,7 @@
 
 **Title:** About Scott Bradley & Testing Methodology
 
-**Description:** Professional chef Scott Bradley, 40 years experience. Rigorous 6-month testing in restaurant kitchens. No lab tests—real-world conditions. Expert methodology.
+**Description:** Professional chef Scott Bradley, 45 Years Experience. Rigorous 6-month testing in restaurant kitchens. No lab tests—real-world conditions. Expert methodology.
 
 ---
 
@@ -77,7 +77,7 @@
 
 **Title:** Best Scrambled Eggs: Pro Chef Technique (2025)
 
-**Description:** Professional chef shares revolutionary scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 40 years of cooking wisdom.
+**Description:** Professional chef shares revolutionary scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 45 years of cooking wisdom.
 
 ---
 
