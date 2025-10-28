@@ -25,10 +25,17 @@ const Tier2Badge: React.FC<{ testingPeriod: string }> = ({ testingPeriod }) => (
   </div>
 );
 
+const Tier3Badge = () => (
+  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-purple-500 to-purple-600 text-white px-4 py-2 rounded-md font-bold text-sm shadow-md shadow-purple-500/30 mb-3">
+    <span className="text-lg">🎓</span>
+    <span>TIER 3: Expert Evaluation</span>
+  </div>
+);
+
 // Types
 export interface Review {
   id: number;
-  tier: 1 | 2;
+  tier: 1 | 2 | 3;
   testingPeriod?: string;
   name: string;
   slug: string;
@@ -370,8 +377,10 @@ const ReviewCard: React.FC<{ review: Review; featured?: boolean; position?: numb
         {/* Tier Badge */}
         {review.tier === 1 ? (
           <Tier1Badge />
-        ) : (
+        ) : review.tier === 2 ? (
           <Tier2Badge testingPeriod={review.testingPeriod || ''} />
+        ) : (
+          <Tier3Badge />
         )}
 
         {/* Category Tag */}
@@ -429,7 +438,7 @@ interface ReviewsClientProps {
 }
 
 export default function ReviewsClient({ reviews }: ReviewsClientProps) {
-  const [activeFilter, setActiveFilter] = React.useState<'all' | 'tier1' | 'tier2'>('all');
+  const [activeFilter, setActiveFilter] = React.useState<'all' | 'tier1' | 'tier2' | 'tier3'>('all');
 
   // Sort by revenue score
   const sortedReviews = [...reviews].sort((a, b) => b.revenueScore - a.revenueScore);
@@ -440,9 +449,7 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
   // Filter reviews based on active filter
   const filteredReviews = activeFilter === 'all'
     ? sortedReviews
-    : sortedReviews.filter(r =>
-        activeFilter === 'tier1' ? r.tier === 1 : r.tier === 2
-      );
+    : sortedReviews.filter(r => r.tier === (activeFilter === 'tier1' ? 1 : activeFilter === 'tier2' ? 2 : 3));
 
   return (
     <div className="max-w-7xl mx-auto px-5 py-10">
@@ -496,15 +503,21 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
             </button>
             <button
               onClick={() => setActiveFilter('tier1')}
-              className={`px-4 py-2 ${activeFilter === 'tier1' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800'} border-none rounded-full text-sm font-semibold cursor-pointer transition-all duration-200 hover:opacity-90`}
+              className={`px-4 py-2 ${activeFilter === 'tier1' ? 'bg-yellow-500 text-black' : 'bg-gray-200 text-gray-800'} border-none rounded-full text-sm font-semibold cursor-pointer transition-all duration-200 hover:opacity-90`}
             >
-              Professional Tested (17)
+              🛡️ Tier 1: Professional
             </button>
             <button
               onClick={() => setActiveFilter('tier2')}
               className={`px-4 py-2 ${activeFilter === 'tier2' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800'} border-none rounded-full text-sm font-semibold cursor-pointer transition-all duration-200 hover:opacity-90`}
             >
-              Home Tested (11)
+              🏠 Tier 2: Home Tested
+            </button>
+            <button
+              onClick={() => setActiveFilter('tier3')}
+              className={`px-4 py-2 ${activeFilter === 'tier3' ? 'bg-purple-600 text-white' : 'bg-gray-200 text-gray-800'} border-none rounded-full text-sm font-semibold cursor-pointer transition-all duration-200 hover:opacity-90`}
+            >
+              🎓 Tier 3: Expert
             </button>
           </div>
         </div>
