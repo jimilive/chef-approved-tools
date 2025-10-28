@@ -269,7 +269,7 @@
    - Format: "[Product Name] Review: [X Years] of [Testing Context]"
 
 3. **Author Byline**
-   - "By Scott Bradley | Professional Chef | 40 Years Experience"
+   - "By Scott Bradley | Professional Chef | 45 Years Experience"
 
 4. **Tier Badge**
    - Tier1Badge or Tier2Badge with testing period
