@@ -24,6 +24,18 @@
 - [ ] **Norton tri stone sharpener** (`norton-im200-tri-stone-sharpener`) - Add Amazon affiliate link
 - [ ] **Zuperia bar mops** (`zuperia-bar-mops`) - Add Amazon affiliate link
 
+### Add Site Search Functionality
+- [ ] Design search UI/UX (where should it appear?)
+- [ ] Decide search scope (products only, or products + blog + guides?)
+- [ ] Choose implementation approach:
+  - Option 1: Client-side search with indexed JSON
+  - Option 2: Supabase full-text search
+  - Option 3: Third-party solution (Algolia, etc.)
+- [ ] Implement search functionality
+- [ ] Add search to navigation/header
+- [ ] Test search performance and relevance
+- [ ] Add analytics tracking for search queries
+
 ### Next.js Version Update
 - [ ] Check current Next.js version (currently 14.2.32)
 - [ ] Review Next.js 15 changelog and breaking changes
