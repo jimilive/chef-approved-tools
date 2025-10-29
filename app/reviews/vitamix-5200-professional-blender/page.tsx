@@ -184,9 +184,9 @@ export default async function VitamixReviewPage() {
 
           {/* BREADCRUMBS */}
           <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
-            <Link href="/" className="hover:text-orange-600">Home</Link>
+            <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
-            <Link href="/reviews" className="hover:text-orange-600">Reviews</Link>
+            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
             {' / '}
             Vitamix 5200
           </div>
@@ -215,7 +215,7 @@ export default async function VitamixReviewPage() {
               </div>
             </div>
             <div className="flex items-center gap-2 bg-orange-50 px-4 py-2 rounded-lg border border-orange-200">
-              <div className="text-xl font-bold text-orange-600">4.8</div>
+              <div className="text-xl font-bold text-orange-700">4.8</div>
               <div className="text-amber-500 text-base">★★★★☆</div>
             </div>
           </div>
@@ -224,7 +224,7 @@ export default async function VitamixReviewPage() {
           <div className="inline-flex items-center gap-1.5 text-[13px] text-amber-900 bg-amber-100 px-3 py-1 rounded-md font-medium mb-5">
             <span>🏆</span>
             <span>Tier 1: Professional Kitchen Use</span>
-            <Link href="#" className="text-orange-600 font-semibold hover:underline">What&apos;s this?</Link>
+            <Link href="#" className="text-orange-700 font-semibold hover:underline">What&apos;s this?</Link>
           </div>
 
           {/* Verdict Section */}
@@ -242,7 +242,7 @@ export default async function VitamixReviewPage() {
                 href={affiliateUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-orange-600 font-semibold px-12 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-md hover:shadow-lg mb-2.5"
+                className="inline-block bg-white text-orange-700 font-semibold px-12 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-md hover:shadow-lg mb-2.5"
               >
                 View on Amazon →
               </a>
@@ -260,14 +260,14 @@ export default async function VitamixReviewPage() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
             <h3 className="text-lg font-semibold text-slate-900 mb-4 mt-0">Commercial-Grade Performance in Action</h3>
             <p className="text-slate-600 leading-[1.7] mb-4 last:mb-0">
-              During 5 years of prep and pastry abuse at Purple Cafe, the Vitamix 5200 operated as our primary blending workhorse. The 2.0 HP motor consistently pulverized fruits, vegetables, and tough ingredients into perfectly smooth textures and sauces that met our quality standards. The Vitamix 5200 became as essential to our operations as our <Link href="#" className="text-orange-600 no-underline font-medium hover:underline hover:text-orange-700">KitchenAid commercial mixer</Link> and <Link href="#" className="text-orange-600 no-underline font-medium hover:underline hover:text-orange-700">Robot Coupe food processor</Link>, handling tasks that previously required multiple appliances.
+              During 5 years of prep and pastry abuse at Purple Cafe, the Vitamix 5200 operated as our primary blending workhorse. The 2.0 HP motor consistently pulverized fruits, vegetables, and tough ingredients into perfectly smooth textures and sauces that met our quality standards. The Vitamix 5200 became as essential to our operations as our <Link href="#" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">KitchenAid commercial mixer</Link> and <Link href="#" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Robot Coupe food processor</Link>, handling tasks that previously required multiple appliances.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
             <h3 className="text-lg font-semibold text-slate-900 mb-4 mt-0">Exceptional Durability Under Pressure</h3>
             <p className="text-slate-600 leading-[1.7] mb-4 last:mb-0">
-              What sets this blender apart is its commercial-grade construction. After 5 years of daily restaurant use, including multiple salsa and puree preparations, the motor shows no signs of degradation. The blades maintain their sharpness, the container integrity remains intact, and performance has stayed consistently superior throughout our testing period. The Vitamix&apos;s durability rivals that of my <Link href="#" className="text-orange-600 no-underline font-medium hover:underline hover:text-orange-700">Le Creuset Dutch oven</Link>—both are genuine buy-it-for-life investments that justify premium pricing.
+              What sets this blender apart is its commercial-grade construction. After 5 years of daily restaurant use, including multiple salsa and puree preparations, the motor shows no signs of degradation. The blades maintain their sharpness, the container integrity remains intact, and performance has stayed consistently superior throughout our testing period. The Vitamix&apos;s durability rivals that of my <Link href="#" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Le Creuset Dutch oven</Link>—both are genuine buy-it-for-life investments that justify premium pricing.
             </p>
           </div>
 
@@ -323,7 +323,7 @@ export default async function VitamixReviewPage() {
                   </ul>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-5">
-                  <h4 className="text-base font-semibold mb-3 mt-0 flex items-center gap-2 text-orange-600">
+                  <h4 className="text-base font-semibold mb-3 mt-0 flex items-center gap-2 text-orange-700">
                     ⚠️ Minor Considerations
                   </h4>
                   <ul className="list-none p-0 m-0">
@@ -355,7 +355,7 @@ export default async function VitamixReviewPage() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
             <h3 className="text-lg font-semibold text-slate-900 mb-4 mt-0">Blending Performance</h3>
             <p className="text-slate-600 leading-[1.7] mb-4 last:mb-0">
-              <strong>Real-World Blending Excellence:</strong> The motor handles tough ingredients like nuts and seeds without strain, creating consistently smooth results at speeds that dramatically reduce prep time. This blender pairs perfectly with other essentials in my <Link href="#" className="text-orange-600 no-underline font-medium hover:underline hover:text-orange-700">professional kitchen starter kit</Link>, streamlining prep work alongside my <Link href="#" className="text-orange-600 no-underline font-medium hover:underline hover:text-orange-700">John Boos cutting board</Link> and <Link href="#" className="text-orange-600 no-underline font-medium hover:underline hover:text-orange-700">Victorinox knives</Link>.
+              <strong>Real-World Blending Excellence:</strong> The motor handles tough ingredients like nuts and seeds without strain, creating consistently smooth results at speeds that dramatically reduce prep time. This blender pairs perfectly with other essentials in my <Link href="#" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">professional kitchen starter kit</Link>, streamlining prep work alongside my <Link href="#" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">John Boos cutting board</Link> and <Link href="#" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Victorinox knives</Link>.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
               <div className="text-center p-4 bg-gray-50 rounded-lg">
@@ -379,16 +379,16 @@ export default async function VitamixReviewPage() {
               <strong>5+ Year Durability Report:</strong> Zero repairs needed during our entire testing period. Blade sharpness remains excellent with no noticeable dulling. Motor performance has stayed consistent without any power degradation. Container shows minimal wear despite daily commercial use. This level of reliability is exactly what professional kitchens demand.
             </p>
             <ul className="list-none p-0 m-0 mt-4">
-              <li className="text-slate-600 py-2 pl-6 relative leading-relaxed before:content-['•'] before:absolute before:left-0 before:text-orange-600 before:font-bold before:text-xl">
+              <li className="text-slate-600 py-2 pl-6 relative leading-relaxed before:content-['•'] before:absolute before:left-0 before:text-orange-700 before:font-bold before:text-xl">
                 <strong className="text-slate-900 font-semibold">Motor Performance:</strong> Extremely durable, no degradation after 5 years
               </li>
-              <li className="text-slate-600 py-2 pl-6 relative leading-relaxed before:content-['•'] before:absolute before:left-0 before:text-orange-600 before:font-bold before:text-xl">
+              <li className="text-slate-600 py-2 pl-6 relative leading-relaxed before:content-['•'] before:absolute before:left-0 before:text-orange-700 before:font-bold before:text-xl">
                 <strong className="text-slate-900 font-semibold">Blade Condition:</strong> Maintained sharpness throughout testing period
               </li>
-              <li className="text-slate-600 py-2 pl-6 relative leading-relaxed before:content-['•'] before:absolute before:left-0 before:text-orange-600 before:font-bold before:text-xl">
+              <li className="text-slate-600 py-2 pl-6 relative leading-relaxed before:content-['•'] before:absolute before:left-0 before:text-orange-700 before:font-bold before:text-xl">
                 <strong className="text-slate-900 font-semibold">Container Integrity:</strong> Minimal wear, held up exceptionally well
               </li>
-              <li className="text-slate-600 py-2 pl-6 relative leading-relaxed before:content-['•'] before:absolute before:left-0 before:text-orange-600 before:font-bold before:text-xl">
+              <li className="text-slate-600 py-2 pl-6 relative leading-relaxed before:content-['•'] before:absolute before:left-0 before:text-orange-700 before:font-bold before:text-xl">
                 <strong className="text-slate-900 font-semibold">Repairs Needed:</strong> No repairs required during entire testing period
               </li>
             </ul>
@@ -415,7 +415,7 @@ export default async function VitamixReviewPage() {
           </h2>
 
           <p className="text-slate-600 mb-6 leading-relaxed">
-            For more blender recommendations across different budgets, check our <Link href="#" className="text-orange-600 no-underline font-medium hover:underline hover:text-orange-700">complete reviews section</Link>.
+            For more blender recommendations across different budgets, check our <Link href="#" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">complete reviews section</Link>.
           </p>
 
           <div className="overflow-x-auto my-6 rounded-xl border border-gray-200">
@@ -443,9 +443,9 @@ export default async function VitamixReviewPage() {
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="px-4 py-4 font-semibold text-slate-900 text-[15px]">Price Range</td>
-                  <td className="px-4 py-4 text-orange-600 font-semibold text-[15px]">Premium investment</td>
+                  <td className="px-4 py-4 text-orange-700 font-semibold text-[15px]">Premium investment</td>
                   <td className="px-4 py-4 text-slate-600 text-[15px]">Professional pricing</td>
-                  <td className="px-4 py-4 text-orange-600 font-semibold text-[15px]">Commercial pricing</td>
+                  <td className="px-4 py-4 text-orange-700 font-semibold text-[15px]">Commercial pricing</td>
                 </tr>
                 <tr className="bg-gray-50 border-b border-gray-200">
                   <td className="px-4 py-4 font-semibold text-slate-900 text-[15px]">Professional Rating</td>
@@ -455,9 +455,9 @@ export default async function VitamixReviewPage() {
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="px-4 py-4 font-semibold text-slate-900 text-[15px]">Noise Level</td>
-                  <td className="px-4 py-4 text-orange-600 font-semibold text-[15px]">High</td>
+                  <td className="px-4 py-4 text-orange-700 font-semibold text-[15px]">High</td>
                   <td className="px-4 py-4 text-slate-600 text-[15px]">Moderate</td>
-                  <td className="px-4 py-4 text-orange-600 font-semibold text-[15px]">Very High</td>
+                  <td className="px-4 py-4 text-orange-700 font-semibold text-[15px]">Very High</td>
                 </tr>
                 <tr className="bg-gray-50 border-b border-gray-200">
                   <td className="px-4 py-4 font-semibold text-slate-900 text-[15px]">Container Size</td>
@@ -575,7 +575,7 @@ export default async function VitamixReviewPage() {
             </div>
 
             <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-lg font-semibold mb-4 mt-0 text-orange-600">⚠️ Consider Alternatives If:</h3>
+              <h3 className="text-lg font-semibold mb-4 mt-0 text-orange-700">⚠️ Consider Alternatives If:</h3>
               <ul className="list-none p-0 m-0">
                 <li className="py-2 pl-6 relative text-[15px] leading-relaxed text-slate-600 before:content-['•'] before:absolute before:left-0 before:text-orange-500 before:font-bold before:text-xl">
                   You only blend occasionally at home (weekly or less)
@@ -621,16 +621,16 @@ export default async function VitamixReviewPage() {
               <div className="text-[15px] text-slate-600 leading-relaxed space-y-4">
                 <p>The 5200 is Vitamix&apos;s classic workhorse model. Key differences from other Vitamix models:</p>
                 <ul className="list-none pl-0 space-y-2">
-                  <li className="pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-orange-600 before:font-bold before:text-xl">
+                  <li className="pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-orange-700 before:font-bold before:text-xl">
                     <strong>vs. A3500/A2500 (Ascent series):</strong> 5200 has manual controls and no preset programs, but costs significantly less while delivering identical blending power
                   </li>
-                  <li className="pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-orange-600 before:font-bold before:text-xl">
+                  <li className="pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-orange-700 before:font-bold before:text-xl">
                     <strong>vs. 7500 (Next Generation):</strong> 5200 has taller, narrower container (better for small batches) and is slightly louder
                   </li>
-                  <li className="pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-orange-600 before:font-bold before:text-xl">
+                  <li className="pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-orange-700 before:font-bold before:text-xl">
                     <strong>vs. E310 (Explorian):</strong> 5200 has 2.0 HP vs 2.2 HP (negligible difference), larger 64oz vs 48oz container, and longer 7-year vs 5-year warranty
                   </li>
-                  <li className="pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-orange-600 before:font-bold before:text-xl">
+                  <li className="pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-orange-700 before:font-bold before:text-xl">
                     <strong>vs. Professional 750:</strong> 5200 lacks preset programs and is louder, but costs less with identical blending power
                   </li>
                 </ul>
@@ -764,7 +764,7 @@ export default async function VitamixReviewPage() {
                     href="https://www.anrdoezrs.net/links/101557027/type/dlg/sid/7745121/https://www.vitamix.com/us/en_us/products/5200-standard-getting-started"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold px-8 py-3 rounded-lg text-base transition-all whitespace-nowrap"
+                    className="inline-block border-2 border-orange-600 text-orange-700 hover:bg-orange-600 hover:text-white font-semibold px-8 py-3 rounded-lg text-base transition-all whitespace-nowrap"
                   >
                     Visit Vitamix.com →
                   </a>
@@ -853,13 +853,13 @@ export default async function VitamixReviewPage() {
                   🔪
                 </div>
                 <div className="p-4 flex-1 flex flex-col">
-                  <h3 className="text-base font-semibold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+                  <h3 className="text-base font-semibold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">
                     Victorinox 8&quot; Chef Knife
                   </h3>
                   <p className="text-sm text-slate-600 mb-3 flex-1">
                     Professional-grade knife used daily in restaurant kitchens
                   </p>
-                  <div className="text-orange-600 font-semibold text-sm">
+                  <div className="text-orange-700 font-semibold text-sm">
                     Read Review →
                   </div>
                 </div>
@@ -872,13 +872,13 @@ export default async function VitamixReviewPage() {
                   🥘
                 </div>
                 <div className="p-4 flex-1 flex flex-col">
-                  <h3 className="text-base font-semibold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+                  <h3 className="text-base font-semibold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">
                     Lodge Cast Iron Skillet
                   </h3>
                   <p className="text-sm text-slate-600 mb-3 flex-1">
                     Essential cookware for professional and home kitchens
                   </p>
-                  <div className="text-orange-600 font-semibold text-sm">
+                  <div className="text-orange-700 font-semibold text-sm">
                     Read Review →
                   </div>
                 </div>
@@ -891,13 +891,13 @@ export default async function VitamixReviewPage() {
                   🌡️
                 </div>
                 <div className="p-4 flex-1 flex flex-col">
-                  <h3 className="text-base font-semibold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+                  <h3 className="text-base font-semibold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">
                     ThermoWorks Thermapen
                   </h3>
                   <p className="text-sm text-slate-600 mb-3 flex-1">
                     Industry-standard instant-read thermometer
                   </p>
-                  <div className="text-orange-600 font-semibold text-sm">
+                  <div className="text-orange-700 font-semibold text-sm">
                     Read Review →
                   </div>
                 </div>
@@ -910,13 +910,13 @@ export default async function VitamixReviewPage() {
                   🍳
                 </div>
                 <div className="p-4 flex-1 flex flex-col">
-                  <h3 className="text-base font-semibold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+                  <h3 className="text-base font-semibold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">
                     Robot Coupe Food Processor
                   </h3>
                   <p className="text-sm text-slate-600 mb-3 flex-1">
                     Commercial food processor for high-volume prep
                   </p>
-                  <div className="text-orange-600 font-semibold text-sm">
+                  <div className="text-orange-700 font-semibold text-sm">
                     Read Review →
                   </div>
                 </div>
