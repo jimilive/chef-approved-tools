@@ -16,6 +16,14 @@
 - [ ] Run `npm run validate:duplicates` after fixing to verify
 - [ ] **BLOCKER**: Site won't deploy until these are fixed
 
+### Add Missing Affiliate Links to Supabase
+- [ ] **Benriner large mandoline** (`benriner-large-mandoline`) - Add Amazon affiliate link
+- [ ] **Bodum chambord french press** (`bodum-chambord-french-press`) - Add Amazon affiliate link
+- [ ] **Cuisinart 8-Inch Nonstick Pan** (`cuisinart-8-inch-nonstick-pan`) - Add Amazon affiliate link
+- [ ] **Method All-Purpose Cleaner** (`method-all-purpose-cleaner`) - Add Amazon affiliate link
+- [ ] **Norton tri stone sharpener** (`norton-im200-tri-stone-sharpener`) - Add Amazon affiliate link
+- [ ] **Zuperia bar mops** (`zuperia-bar-mops`) - Add Amazon affiliate link
+
 ### Next.js Version Update
 - [ ] Check current Next.js version (currently 14.2.32)
 - [ ] Review Next.js 15 changelog and breaking changes
