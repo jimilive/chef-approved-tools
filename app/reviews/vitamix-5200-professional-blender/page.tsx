@@ -846,7 +846,7 @@ export default async function VitamixReviewPage() {
             Related Professional Kitchen Equipment
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             <Link href="#" className="group no-underline">
               <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
                 <div className="w-full h-40 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-[40px] mb-3 rounded-lg">
