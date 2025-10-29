@@ -30,7 +30,7 @@ jobs:
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
         run: |
           # Create a script to fetch affiliate links from Supabase
-          cat > /tmp/fetch-links.mjs << 'SCRIPT'
+          cat > fetch-links.mjs << 'SCRIPT'
           import { createClient } from '@supabase/supabase-js'
           import { writeFileSync } from 'fs'
 
@@ -65,8 +65,8 @@ jobs:
           console.log(`Found ${amazonLinks.size} unique Amazon affiliate links from ${data.length} products`)
           SCRIPT
 
-          # Run the script
-          node /tmp/fetch-links.mjs
+          # Run the script from project directory so node_modules is accessible
+          node fetch-links.mjs
 
           # Set the current date/time as an output
           echo "check_date=$(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_OUTPUT
