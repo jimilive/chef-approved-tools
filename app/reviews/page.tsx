@@ -22,7 +22,7 @@ const EDITORIAL_METADATA: Record<string, {
     hook: 'Survived 200+ covers nightly. Genuine commercial-grade performance.',
     revenueScore: 95
   },
-  'vitamix-5200': {
+  'vitamix-5200-professional-blender': {
     tier: 1,
     testingPeriod: '6 years in restaurant operations',
     hook: 'Restaurant workhorse. 10-year warranty justified by performance.',
