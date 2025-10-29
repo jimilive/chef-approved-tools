@@ -24,6 +24,13 @@
 - [ ] **Norton tri stone sharpener** (`norton-im200-tri-stone-sharpener`) - Add Amazon affiliate link
 - [ ] **Zuperia bar mops** (`zuperia-bar-mops`) - Add Amazon affiliate link
 
+### Fix Mobile Formatting for Reviews Hub Page
+- [ ] Audit current mobile layout issues on reviews hub page
+- [ ] Fix responsive breakpoints and spacing
+- [ ] Test on multiple mobile devices/screen sizes
+- [ ] Verify touch targets are appropriately sized
+- [ ] Ensure images scale properly on mobile
+
 ### Add Site Search Functionality
 - [ ] Design search UI/UX (where should it appear?)
 - [ ] Decide search scope (products only, or products + blog + guides?)
