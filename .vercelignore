@@ -64,8 +64,8 @@ netlify.toml
 _redirects
 public/_redirects
 
-# Scripts (not needed for deployment)
-scripts/
+# Scripts - KEEP THESE (needed for prebuild validation hooks)
+# scripts/
 
 # Reports
 reports/
