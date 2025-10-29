@@ -18,6 +18,7 @@ const validators = [
   { name: 'Database Integrity', script: 'scripts/validate-database-integrity.mjs' },
   { name: 'Image References', script: 'scripts/validate-images.mjs' },
   { name: 'Affiliate Links', script: 'scripts/validate-affiliate-links.mjs' },
+  { name: 'Duplicate Link Check', script: 'scripts/validate-duplicate-links.mjs' },
 ]
 
 console.log(`${BOLD}${BLUE}╔════════════════════════════════════════════╗${RESET}`)

@@ -14,6 +14,7 @@
     "validate:db": "node scripts/validate-database-integrity.mjs",
     "validate:images": "node scripts/validate-images.mjs",
     "validate:links": "node scripts/validate-affiliate-links.mjs",
+    "validate:duplicates": "node scripts/validate-duplicate-links.mjs",
     "validate:all": "node scripts/validate-all.mjs",
     "prebuild": "npm run validate",
     "analyze": "ANALYZE=true npm run build",
