@@ -33,8 +33,8 @@ jobs:
           import { writeFileSync } from 'fs'
 
           // Public Supabase credentials (these are safe to expose - they're in the client-side code)
-          const SUPABASE_URL = 'https://frzlyrhumuqxqzbbwjwh.supabase.co'
-          const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZyemx5cmh1bXVxeHF6YmJ3andoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjkyMjM0NDEsImV4cCI6MjA0NDc5OTQ0MX0.pJKHpk0qYGEAMa5MbeBKuC9Gi5xYAY_xXx3TCpJVISA'
+          const SUPABASE_URL = 'https://hxvlbhphozxjmkszxjwj.supabase.co'
+          const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4dmxiaHBob3p4am1rc3p4andqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyNTA5NjUsImV4cCI6MjA3NjgyNjk2NX0.1RC_AJNa9JhyaxuXhvKlw0eDwPwMuOfwfppXZ6Y2fVM'
 
           const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
