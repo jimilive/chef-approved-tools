@@ -1,5 +1,13 @@
 # Active Tasks - Product Reviews & Database
 
+## Priority 0: Technical Maintenance
+
+### Next.js Version Update
+- [ ] Check current Next.js version (currently 14.2.32)
+- [ ] Review Next.js 15 changelog and breaking changes
+- [ ] Test update in local environment
+- [ ] Update if stable and beneficial
+
 ## Priority 1: Missing Product Reviews (Full Creation Required)
 
 ### Create Henckels 10-Inch Sharpening Steel Review
