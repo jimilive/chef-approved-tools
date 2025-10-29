@@ -89,7 +89,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: generateOGImageURL({
             title: productData.name,
             category: productData.category,
-            rating: productData.expertRating,
+            rating: productData.expertRating ?? 4.8,
           }),
           width: 1200,
           height: 630,
@@ -105,7 +105,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [generateOGImageURL({
         title: productData.name,
         category: productData.category,
-        rating: productData.expertRating,
+        rating: productData.expertRating ?? 4.8,
       })],
     },
   }
