@@ -1,20 +1,193 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateOGImageURL } from '@/lib/og-image'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
-export const metadata: Metadata = {
-  title: 'Vitamix 5200 Blender Review: 5+ Years Professional Testing | Chef Approved Tools',
-  description: 'After 5+ years as our primary blending workhorse at Purple Cafe, the Vitamix 5200 delivered flawless performance under demanding commercial conditions. Professional chef review with honest pros and cons.',
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
+// Legacy product data as fallback
+const legacyProductData = {
+  name: "Vitamix 5200 Professional-Grade Blender",
+  slug: "vitamix-5200-professional-blender",
+  brand: "Vitamix",
+  model: "5200",
+  sku: "001372",
+  gtin13: "0703113013720",
+  dealStatus: "normal" as const,
+  category: "Blenders",
+  pros: [
+    "2.0 peak HP motor handles restaurant volume",
+    "Variable speed dial provides precision control",
+    "64-oz BPA-free container for medium/large batches",
+    "7-year full warranty covers all parts and labor",
+    "Zero maintenance required in 5 years",
+    "Made in USA (Cleveland, Ohio) since 1921",
+    "Blades still sharp after 5 years daily use"
+  ],
+  cons: [
+    "Tall 20.5\" height won't fit under standard cabinets",
+    "Higher noise level than newer models",
+    "No pre-programmed settings (manual control only)",
+    "Premium pricing requires serious commitment",
+    "Large footprint requires dedicated counter space"
+  ],
+  affiliateLinks: [],
+  inStock: true,
+  expertRating: 4.8,
+  expertOpinion: "After 5+ years as our primary blending workhorse at Purple Cafe, the Vitamix 5200 delivered flawless performance under demanding commercial conditions.",
+  dateAdded: "2024-09-23",
+  lastUpdated: "2024-09-23"
 }
 
-export default function VitamixReviewPage() {
-  return (
-    <div className="bg-gray-50 min-h-screen">
-      <div className="max-w-[900px] mx-auto px-5">
+// FAQ data for schema
+const faqData = [
+  {
+    question: "How loud is the Vitamix 5200 compared to other blenders?",
+    answer: "The Vitamix 5200 operates at a higher decibel level than many consumer blenders. During professional testing, the noise was noticeable but acceptable in a commercial kitchen environment. For home use, it's louder than newer Vitamix models with sound-dampening features, but the trade-off is superior motor power and performance."
+  },
+  {
+    question: "Will the 5200 fit under standard kitchen cabinets?",
+    answer: "At 20.5\" tall with the container, the Vitamix 5200 will not fit under most standard kitchen cabinets (typically 18\" clearance). This requires dedicated counter space or storage in a cabinet when not in use. Consider this height requirement when planning your kitchen setup."
+  },
+  {
+    question: "What makes the 5200 different from newer Vitamix models?",
+    answer: "The 5200 features manual variable speed control (1-10 settings) rather than pre-programmed settings. Many professional chefs prefer this hands-on control for precise texture management. It's also the only model with the slowest speed setting, useful for tasks like peeling garlic without chopping. The trade-off is higher noise and no automatic programs."
+  },
+  {
+    question: "How does the 7-year warranty compare to other blenders?",
+    answer: "The Vitamix 7-year full warranty is industry-leading for household blenders. It covers all parts, performance, and labor - unlike many competitors that offer shorter warranties or exclude certain components. During our 5+ years of commercial testing, we never needed warranty service, demonstrating the reliability behind this coverage."
+  },
+  {
+    question: "Can the Vitamix 5200 handle hot ingredients safely?",
+    answer: "Yes, the 5200 is designed to blend hot ingredients. The friction from the blades can actually heat cold ingredients to steaming in about 6 minutes of blending. We regularly blended hot sauces and soups at Purple Cafe without issues. Always use the lid plug and start at low speeds when blending hot liquids to prevent pressure buildup."
+  },
+  {
+    question: "Is the 5200 worth the investment for home use?",
+    answer: "For serious home cooks who blend regularly (3+ times weekly) and want buy-it-for-life quality, yes. Our 5+ years of commercial testing proves the durability justifies the premium price. However, for occasional home use (weekly or less), a more affordable blender may better suit your needs and budget."
+  }
+]
 
-        {/* BREADCRUMBS */}
-        <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
-          Home / Reviews / Vitamix 5200
-        </div>
+// Generate metadata dynamically
+export async function generateMetadata(): Promise<Metadata> {
+  const product = await getProductBySlug('vitamix-5200-professional-blender')
+  const productData = product || legacyProductData
+
+  return {
+    title: 'Vitamix 5200 Blender Review: 5+ Years Professional Testing | Chef Approved Tools',
+    description: 'After 5+ years as our primary blending workhorse at Purple Cafe, the Vitamix 5200 delivered flawless performance under demanding commercial conditions. Professional chef review with honest pros and cons.',
+    openGraph: {
+      title: 'Vitamix 5200 Blender Review: 5+ Years Professional Testing',
+      description: 'Professional chef review after 5+ years of commercial kitchen testing',
+      url: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
+      siteName: 'Chef Approved Tools',
+      images: [
+        {
+          url: generateOGImageURL({
+            title: productData.name,
+            category: productData.category,
+            rating: productData.expertRating,
+          }),
+          width: 1200,
+          height: 630,
+          alt: `${productData.name} - Professional Review`,
+        },
+      ],
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Vitamix 5200 Blender Review: 5+ Years Professional Testing',
+      description: 'Professional chef review after 5+ years of commercial kitchen testing',
+      images: [generateOGImageURL({
+        title: productData.name,
+        category: productData.category,
+        rating: productData.expertRating,
+      })],
+    },
+  }
+}
+
+export default async function VitamixReviewPage() {
+  // Get product data from Supabase
+  const product = await getProductBySlug('vitamix-5200-professional-blender')
+
+  // Merge Supabase data with legacy data (Supabase takes priority)
+  const productData = product ? {
+    ...legacyProductData,
+    ...product,
+    affiliateLinks: product.affiliateLinks && product.affiliateLinks.length > 0
+      ? product.affiliateLinks
+      : legacyProductData.affiliateLinks
+  } : legacyProductData
+
+  // Get primary affiliate link
+  const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
+
+  // Generate breadcrumbs
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
+
+  // Generate schemas
+  const productSchema = generateProductSchema({
+    name: productData.name,
+    description: productData.expertOpinion,
+    brand: productData.brand,
+    sku: productData.sku,
+    gtin13: productData.gtin13,
+    rating: productData.expertRating,
+    reviewCount: 1,
+    inStock: productData.inStock,
+    url: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
+  const faqSchema = generateFAQSchema(faqData)
+
+  return (
+    <>
+      {/* Schema.org markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
+      {/* Product view tracking */}
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={1}
+        testingPeriod="5+ years in commercial restaurant operations"
+        rating={productData.expertRating}
+        hook="Professional-grade blending power that survived 5+ years of daily restaurant abuse"
+        category={productData.category}
+      />
+
+      <div className="bg-gray-50 min-h-screen">
+        <div className="max-w-[900px] mx-auto px-5">
+
+          {/* BREADCRUMBS */}
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+            <Link href="/" className="hover:text-orange-600">Home</Link>
+            {' / '}
+            <Link href="/reviews" className="hover:text-orange-600">Reviews</Link>
+            {' / '}
+            Vitamix 5200
+          </div>
 
         {/* SECTION 1: TOP SECTION */}
         <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
@@ -62,12 +235,16 @@ export default function VitamixReviewPage() {
 
           {/* CTA Section */}
           <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-xl px-10 py-5 text-center max-w-[500px] mx-auto flex flex-col justify-center items-center">
-            <a
-              href="#"
-              className="inline-block bg-white text-orange-600 font-semibold px-12 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-md hover:shadow-lg mb-2.5"
-            >
-              View on Amazon →
-            </a>
+            <CTAVisibilityTracker ctaId="primary-hero-cta" ctaText="View on Amazon" ctaLocation="hero">
+              <a
+                href={affiliateUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white text-orange-600 font-semibold px-12 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-md hover:shadow-lg mb-2.5"
+              >
+                View on Amazon →
+              </a>
+            </CTAVisibilityTracker>
             <p className="text-white/90 text-[15px] m-0">Check current pricing and availability</p>
           </div>
         </div>
@@ -421,62 +598,125 @@ export default function VitamixReviewPage() {
         {/* SECTION 7: FAQ */}
         <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
           <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-            Frequently Asked Questions
+            Frequently Asked Questions About Vitamix 5200
           </h2>
 
           <div className="space-y-5">
-            <div className="bg-white border border-gray-200 rounded-lg p-5">
-              <h3 className="text-base font-semibold text-slate-900 mb-2 mt-0">
+            <div className="bg-gray-50 rounded-lg p-5">
+              <h3 className="text-lg font-semibold text-slate-900 mb-3 mt-0">
+                Is the Vitamix 5200 worth the money?
+              </h3>
+              <div className="text-[15px] text-slate-600 leading-relaxed space-y-4">
+                <p>After 5 years of professional use, absolutely yes—if you use your blender regularly. The combination of 2 HP motor power, all-metal drive system, 7-year warranty, and decades of expected use justifies the premium investment. For families making daily smoothies, health enthusiasts, or anyone wanting to eliminate multiple kitchen appliances, this pays for itself through longevity and versatility.</p>
+                <p>However, if you blend only occasionally (once a week or less), a budget-friendly blender may serve you fine. The value proposition: With proper care and 15 years of expected use, this works out to pennies per day. Budget blenders often need replacement every 2-3 years at their respective price points.</p>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-5">
+              <h3 className="text-lg font-semibold text-slate-900 mb-3 mt-0">
+                What&apos;s the difference between Vitamix 5200 and other models?
+              </h3>
+              <div className="text-[15px] text-slate-600 leading-relaxed space-y-4">
+                <p>The 5200 is Vitamix&apos;s classic workhorse model. Key differences from other Vitamix models:</p>
+                <ul className="list-none pl-0 space-y-2">
+                  <li className="pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-orange-600 before:font-bold before:text-xl">
+                    <strong>vs. A3500/A2500 (Ascent series):</strong> 5200 has manual controls and no preset programs, but costs significantly less while delivering identical blending power
+                  </li>
+                  <li className="pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-orange-600 before:font-bold before:text-xl">
+                    <strong>vs. 7500 (Next Generation):</strong> 5200 has taller, narrower container (better for small batches) and is slightly louder
+                  </li>
+                  <li className="pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-orange-600 before:font-bold before:text-xl">
+                    <strong>vs. E310 (Explorian):</strong> 5200 has 2.0 HP vs 2.2 HP (negligible difference), larger 64oz vs 48oz container, and longer 7-year vs 5-year warranty
+                  </li>
+                  <li className="pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-orange-600 before:font-bold before:text-xl">
+                    <strong>vs. Professional 750:</strong> 5200 lacks preset programs and is louder, but costs less with identical blending power
+                  </li>
+                </ul>
+                <p><strong>My take:</strong> The 5200 offers the best value—full commercial power without paying extra for preset programs most people don&apos;t need. It&apos;s been the industry standard for decades for good reason.</p>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-5">
+              <h3 className="text-lg font-semibold text-slate-900 mb-3 mt-0">
+                Can the Vitamix 5200 really heat soup through friction?
+              </h3>
+              <div className="text-[15px] text-slate-600 leading-relaxed space-y-4">
+                <p>Yes, absolutely. Running the blender on high speed for 5-6 minutes will heat ingredients from room temperature to steaming hot (around 140-160°F). The friction from the blades spinning at such high speeds generates enough heat to warm liquids.</p>
+                <p>This is genuinely useful for making hot soups directly in the blender, though keep in mind you&apos;ll need to start with cooked vegetables if using raw ingredients. It&apos;s not magic, just physics—and it does work as advertised.</p>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-5">
+              <h3 className="text-lg font-semibold text-slate-900 mb-3 mt-0">
                 How loud is the Vitamix 5200 compared to other blenders?
               </h3>
-              <p className="text-[15px] text-slate-600 leading-relaxed m-0">
-                The Vitamix 5200 operates at a higher decibel level than many consumer blenders. During professional testing, the noise was noticeable but acceptable in a commercial kitchen environment. For home use, it&apos;s louder than newer Vitamix models with sound-dampening features, but the trade-off is superior motor power and performance.
-              </p>
+              <div className="text-[15px] text-slate-600 leading-relaxed space-y-4">
+                <p>It&apos;s loud—no sugarcoating this. The 2 HP motor running at full speed is comparable to a vacuum cleaner or garbage disposal (around 88-93 decibels). Newer Vitamix models with sound dampening are quieter, but the 5200 makes no attempt to hide its power.</p>
+                <p>In professional kitchens, this isn&apos;t an issue. At home, you&apos;ll want to avoid running it early morning or late at night if you have close neighbors or sleeping family members. The trade-off is raw blending power—quieter blenders typically sacrifice performance.</p>
+              </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-5">
-              <h3 className="text-base font-semibold text-slate-900 mb-2 mt-0">
-                Will the 5200 fit under standard kitchen cabinets?
+            <div className="bg-gray-50 rounded-lg p-5">
+              <h3 className="text-lg font-semibold text-slate-900 mb-3 mt-0">
+                Will the Vitamix 5200 fit under my kitchen cabinets?
               </h3>
-              <p className="text-[15px] text-slate-600 leading-relaxed m-0">
-                At 20.5&quot; tall with the container, the Vitamix 5200 will not fit under most standard kitchen cabinets (typically 18&quot; clearance). This requires dedicated counter space or storage in a cabinet when not in use. Consider this height requirement when planning your kitchen setup.
-              </p>
+              <div className="text-[15px] text-slate-600 leading-relaxed space-y-4">
+                <p>Probably not. The 5200 stands 20.5 inches tall with the container in place. Standard kitchen cabinets are typically 18 inches above the counter, meaning you&apos;ll need to store this on the counter in a dedicated spot or move it out when using it.</p>
+                <p>Measure your counter-to-cabinet clearance before buying. If counter space is at a premium, consider the Vitamix 7500 with its low-profile container (17.25 inches tall) instead.</p>
+              </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-5">
-              <h3 className="text-base font-semibold text-slate-900 mb-2 mt-0">
-                What makes the 5200 different from newer Vitamix models?
+            <div className="bg-gray-50 rounded-lg p-5">
+              <h3 className="text-lg font-semibold text-slate-900 mb-3 mt-0">
+                Does the Vitamix 5200 warranty cover commercial use?
               </h3>
-              <p className="text-[15px] text-slate-600 leading-relaxed m-0">
-                The 5200 features manual variable speed control (1-10 settings) rather than pre-programmed settings. Many professional chefs prefer this hands-on control for precise texture management. It&apos;s also the only model with the slowest speed setting, useful for tasks like peeling garlic without chopping. The trade-off is higher noise and no automatic programs.
-              </p>
+              <div className="text-[15px] text-slate-600 leading-relaxed space-y-4">
+                <p>No, the standard 7-year warranty only covers household use. If you&apos;re using it in a commercial setting (restaurant, cafe, juice bar), you&apos;ll need to purchase a commercial model with the appropriate warranty.</p>
+                <p>That said, many small restaurants do use the household 5200 model knowing it voids the warranty—it&apos;s that reliable. But officially, commercial use requires a commercial warranty model.</p>
+              </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-5">
-              <h3 className="text-base font-semibold text-slate-900 mb-2 mt-0">
-                How does the 7-year warranty compare to other blenders?
+            <div className="bg-gray-50 rounded-lg p-5">
+              <h3 className="text-lg font-semibold text-slate-900 mb-3 mt-0">
+                Can I make nut butters in the Vitamix 5200?
               </h3>
-              <p className="text-[15px] text-slate-600 leading-relaxed m-0">
-                The Vitamix 7-year full warranty is industry-leading for household blenders. It covers all parts, performance, and labor - unlike many competitors that offer shorter warranties or exclude certain components. During our 5+ years of commercial testing, we never needed warranty service, demonstrating the reliability behind this coverage.
-              </p>
+              <div className="text-[15px] text-slate-600 leading-relaxed space-y-4">
+                <p>Yes, the 5200 excels at making nut butters. The variable speed control is actually essential here—you need to start slow to break down the nuts, then gradually increase speed. The tamper tool (included) is critical for pushing ingredients down into the blades.</p>
+                <p>Expect 1-2 minutes of blending for smooth nut butter, and the motor will generate significant heat (which actually helps create creamy texture). This is one area where the 5200&apos;s manual control gives you an advantage over preset-only models.</p>
+              </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-5">
-              <h3 className="text-base font-semibold text-slate-900 mb-2 mt-0">
-                Can the Vitamix 5200 handle hot ingredients safely?
+            <div className="bg-gray-50 rounded-lg p-5">
+              <h3 className="text-lg font-semibold text-slate-900 mb-3 mt-0">
+                What maintenance does the Vitamix 5200 require?
               </h3>
-              <p className="text-[15px] text-slate-600 leading-relaxed m-0">
-                Yes, the 5200 is designed to blend hot ingredients. The friction from the blades can actually heat cold ingredients to steaming in about 6 minutes of blending. We regularly blended hot sauces and soups at Purple Cafe without issues. Always use the lid plug and start at low speeds when blending hot liquids to prevent pressure buildup.
-              </p>
+              <div className="text-[15px] text-slate-600 leading-relaxed space-y-4">
+                <p>Virtually none. After 5 years of daily professional use, I&apos;ve done zero maintenance beyond regular cleaning. The blades are permanently attached to the container (not removable), and the all-metal drive system requires no lubrication or adjustment.</p>
+                <p><strong>Cleaning:</strong> Add warm water and a drop of dish soap to the container, blend on high for 30-60 seconds, rinse. That&apos;s it. No disassembly needed.</p>
+                <p>The only potential long-term issue is container cloudiness from hard water or certain ingredients (like turmeric), but this is cosmetic only and doesn&apos;t affect performance.</p>
+              </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-5">
-              <h3 className="text-base font-semibold text-slate-900 mb-2 mt-0">
-                Is the 5200 worth the investment for home use?
+            <div className="bg-gray-50 rounded-lg p-5">
+              <h3 className="text-lg font-semibold text-slate-900 mb-3 mt-0">
+                Should I buy new or refurbished Vitamix 5200?
               </h3>
-              <p className="text-[15px] text-slate-600 leading-relaxed m-0">
-                For serious home cooks who blend regularly (3+ times weekly) and want buy-it-for-life quality, yes. Our 5+ years of commercial testing proves the durability justifies the premium price. However, for occasional home use (weekly or less), a more affordable blender may better suit your needs and budget.
-              </p>
+              <div className="text-[15px] text-slate-600 leading-relaxed space-y-4">
+                <p>Vitamix Certified Refurbished models are excellent value if you want to save money. They come with a 5-year warranty (vs 7-year for new), have been thoroughly inspected and tested, and perform identically to new units. The main difference is cosmetic wear and shorter warranty.</p>
+                <p><strong>My recommendation:</strong> If budget is tight, refurbished is a smart choice. If you can afford new, the extra 2 years of warranty coverage and pristine condition are worth the premium for a machine you&apos;ll use for 15+ years.</p>
+                <p>Avoid third-party refurbished or used units from eBay/Craigslist unless you can verify warranty status directly with Vitamix—warranty transferability can be complicated.</p>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-5">
+              <h3 className="text-lg font-semibold text-slate-900 mb-3 mt-0">
+                What&apos;s the best way to use the Vitamix 5200 for smoothies?
+              </h3>
+              <div className="text-[15px] text-slate-600 leading-relaxed space-y-4">
+                <p>Start with liquids first (water, milk, juice) at the bottom, then add soft ingredients (yogurt, banana), then frozen ingredients and ice on top. This creates proper vortex action and prevents air pockets.</p>
+                <p><strong>Speed technique:</strong> Start on variable speed 1, quickly ramp up to 10, then flip to high for 30-45 seconds. The gradual acceleration prevents ingredients from getting stuck.</p>
+                <p>For very thick smoothies (like smoothie bowls), use the tamper to push ingredients down while blending on high. The 5200&apos;s tall container is actually ideal for this compared to low-profile models.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -498,12 +738,16 @@ export default function VitamixReviewPage() {
                   <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
                   <p className="text-sm text-slate-600 m-0">Prime shipping, verified reviews, easy returns</p>
                 </div>
-                <a
-                  href="#"
-                  className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap"
-                >
-                  View on Amazon →
-                </a>
+                <CTAVisibilityTracker ctaId="where-to-buy-amazon" ctaText="View on Amazon" ctaLocation="where-to-buy">
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap"
+                  >
+                    View on Amazon →
+                  </a>
+                </CTAVisibilityTracker>
               </div>
             </div>
 
@@ -513,12 +757,16 @@ export default function VitamixReviewPage() {
                   <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Vitamix Direct</h3>
                   <p className="text-sm text-slate-600 m-0">Factory direct, full warranty, occasional promotions</p>
                 </div>
-                <a
-                  href="#"
-                  className="inline-block border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold px-8 py-3 rounded-lg text-base transition-all whitespace-nowrap"
-                >
-                  Visit Vitamix.com →
-                </a>
+                <CTAVisibilityTracker ctaId="where-to-buy-vitamix-direct" ctaText="Visit Vitamix.com" ctaLocation="where-to-buy">
+                  <a
+                    href="https://www.anrdoezrs.net/links/101557027/type/dlg/sid/7745121/https://www.vitamix.com/us/en_us/products/5200-standard-getting-started"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold px-8 py-3 rounded-lg text-base transition-all whitespace-nowrap"
+                  >
+                    Visit Vitamix.com →
+                  </a>
+                </CTAVisibilityTracker>
               </div>
             </div>
           </div>
@@ -555,20 +803,38 @@ export default function VitamixReviewPage() {
         </div>
 
         {/* SECTION 10: BOTTOM LINE */}
-        <div className="bg-gradient-to-br from-purple-700 to-purple-900 rounded-2xl px-6 pt-8 pb-8 md:px-12 shadow-lg mb-6">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-6 border border-white/20">
-            <h2 className="text-2xl font-bold text-white mb-4 mt-0 leading-[1.3]">
-              The Bottom Line: Is the Vitamix 5200 Worth It?
+        <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+          <div className="bg-gradient-to-br from-purple-700 via-purple-800 to-purple-900 rounded-xl px-10 py-10 text-white">
+            <div className="text-sm font-bold text-purple-200 uppercase tracking-wide mb-4">The Bottom Line</div>
+
+            <h2 className="text-2xl font-bold text-white mb-5 mt-0 leading-[1.3]">
+              A Professional Kitchen Workhorse That Justifies Its Premium Price
             </h2>
-            <p className="text-white/95 text-base leading-relaxed mb-4">
-              <strong>After 5+ years as our primary blending workhorse at Purple Cafe, the Vitamix 5200 delivered flawless performance under demanding commercial conditions.</strong> The motor handles restaurant volume spectacularly, blades maintain sharpness through years of daily use, and the build quality justifies every dollar of the premium investment.
+
+            <p className="text-base leading-[1.8] text-white/95 mb-4">
+              <strong>After 5+ years of daily professional testing at Purple Cafe, the Vitamix 5200 has earned its reputation as the gold standard in high-performance blending.</strong> The combination of 2.0 HP motor power, commercial-grade durability, and 7-year warranty creates a value proposition that transcends its premium pricing for serious users.
             </p>
-            <p className="text-white/95 text-base leading-relaxed mb-4">
-              For commercial kitchens and serious home cooks who blend regularly (3+ times weekly), this is the buy-it-for-life solution that pays dividends in reliability and performance. The 7-year warranty, made-in-USA quality, and proven durability make it exceptional value despite the premium price point.
+
+            <p className="text-base leading-[1.8] text-white/95 mb-4">
+              This isn&apos;t a blender for occasional smoothie makers or budget-conscious shoppers—it&apos;s an investment for home cooks who demand professional results and restaurant-quality performance. If you blend regularly, prioritize durability over price, and want equipment that will last 15+ years, the 5200 delivers exceptional long-term value.
             </p>
-            <p className="text-white/95 text-base leading-relaxed m-0">
-              However, for occasional home use (weekly or less), the investment may exceed your needs. Consider more affordable options unless you specifically need commercial-grade performance and durability.
+
+            <p className="text-base leading-[1.8] text-white/95 mb-8">
+              <strong>The verdict:</strong> For daily users and serious cooks, this is a buy-it-for-life purchase that pays for itself through longevity and versatility. For occasional users, the premium investment may not align with usage frequency—consider budget alternatives instead.
             </p>
+
+            <div className="pt-8 border-t border-white/20 text-center">
+              <CTAVisibilityTracker ctaId="bottom-line-final-cta" ctaText="View Current Pricing on Amazon" ctaLocation="bottom-line">
+                <a
+                  href={affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white text-purple-800 font-semibold px-12 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl hover:bg-purple-50"
+                >
+                  View Current Pricing on Amazon →
+                </a>
+              </CTAVisibilityTracker>
+            </div>
           </div>
         </div>
 
@@ -658,27 +924,70 @@ export default function VitamixReviewPage() {
         </div>
 
         {/* SECTION 12: AUTHOR BIO */}
-        <div className="bg-white rounded-2xl px-6 pt-6 pb-8 md:px-12 shadow-sm mb-6">
-          <div className="flex flex-col md:flex-row gap-6 items-start">
-            <div className="w-24 h-24 bg-gradient-to-br from-orange-600 to-amber-500 rounded-full flex items-center justify-center text-5xl flex-shrink-0">
-              👨‍🍳
+        <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+          <div className="bg-gray-50 border border-gray-200 rounded-xl p-8">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6 pb-6 border-b border-gray-200">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-600 to-amber-500 rounded-full flex items-center justify-center text-[40px] flex-shrink-0">
+                👨‍🍳
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-xl font-bold text-slate-900 mb-2 mt-0">About Scott Bradley</h3>
+                <p className="text-base text-slate-600 m-0">Professional Chef • 24 Years in Professional Kitchens</p>
+              </div>
             </div>
-            <div className="flex-1">
-              <h3 className="text-xl font-bold text-slate-900 mb-2 mt-0">About Scott Bradley</h3>
-              <p className="text-slate-600 text-[15px] leading-relaxed mb-3">
-                Scott Bradley brings 24 years of professional kitchen experience to Chef Approved Tools, including positions at Purple Café, Feierabend, Il Pizzaiolo, and Mellow Mushroom (Kitchen Manager). His equipment recommendations are based on real-world restaurant testing and long-term personal use.
+
+            <div className="text-slate-600 leading-[1.8]">
+              <p className="mb-4">
+                <strong>Scott Bradley brings 24 years of professional kitchen experience to Chef Approved Tools.</strong> As former Kitchen Manager at Mellow Mushroom, he managed operations generating $80K+ monthly revenue while overseeing equipment procurement, staff training, and quality control for a high-volume operation.
               </p>
-              <p className="text-slate-600 text-[15px] leading-relaxed mb-3">
-                Unlike typical product review sites, Scott&apos;s three-tier testing system ensures every recommendation comes from genuine professional experience: Tier 1 (professional kitchen use), Tier 2 (long-term personal testing), or Tier 3 (expert evaluation based on industry knowledge).
+
+              <p className="mb-4">
+                His professional background spans multiple restaurant environments including Purple Café, Feierabend, Il Pizzaiolo, and Paragary&apos;s, giving him hands-on experience with equipment across different cuisines, cooking styles, and volume levels. This diverse experience informs every equipment recommendation on this site.
               </p>
-              <p className="text-slate-600 text-[15px] leading-relaxed m-0">
-                <strong>Credentials:</strong> 24 years professional kitchen experience • Kitchen Manager at Mellow Mushroom • Line Cook at Purple Café, Feierabend, Il Pizzaiolo, and Paragary&apos;s • Specialized in equipment testing and professional kitchen operations
+
+              <p className="mb-0">
+                <strong>All reviews are based on actual professional testing</strong>—equipment used daily in restaurant environments or tested extensively in home settings. No free samples, no sponsored content, just honest assessments from someone who&apos;s spent decades relying on kitchen tools to do their job.
               </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-6 border-t border-gray-200">
+              <div className="flex items-start gap-3 text-sm text-slate-600">
+                <div className="text-xl flex-shrink-0">🎓</div>
+                <div>
+                  <strong className="block text-slate-900 font-semibold mb-0.5">Culinary Degree</strong>
+                  Seattle Central College (2005-2007)
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 text-sm text-slate-600">
+                <div className="text-xl flex-shrink-0">👨‍🍳</div>
+                <div>
+                  <strong className="block text-slate-900 font-semibold mb-0.5">Professional Experience</strong>
+                  24 years in professional kitchens
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 text-sm text-slate-600">
+                <div className="text-xl flex-shrink-0">🏆</div>
+                <div>
+                  <strong className="block text-slate-900 font-semibold mb-0.5">Professional Roles</strong>
+                  Kitchen Manager, Lead Line, Expo, Pizzaiolo
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 text-sm text-slate-600">
+                <div className="text-xl flex-shrink-0">🔧</div>
+                <div>
+                  <strong className="block text-slate-900 font-semibold mb-0.5">Testing Approach</strong>
+                  Tier 1: Professional use | Tier 2: Long-term personal | Tier 3: Expert evaluation
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
+        </div>
       </div>
-    </div>
+    </>
   )
 }
