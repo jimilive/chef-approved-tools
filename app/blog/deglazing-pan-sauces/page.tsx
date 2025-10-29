@@ -439,7 +439,7 @@ export default function DeglazingPanSaucesPage() {
             <Link href="/blog/understanding-cooking-fats" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Understanding Cooking Fats
             </Link>
-            <Link href="/reviews/cuisinart-saute-pan" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/cuisinart-8-inch-nonstick-pan" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Cuisinart Stainless Steel Sauté Pan Review
             </Link>
           </div>

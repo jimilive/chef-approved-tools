@@ -184,9 +184,9 @@ export default function CaramelizingOnionsPage() {
                   productSlug="all-clad-d3-10-inch"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/all-clad-d3-10-inch-skillet-review" className="text-blue-700 underline">
+                  
                     All-Clad D3 10&quot; Skillet
-                  </Link>
+                  
                 </CTAVisibilityTracker> — my go-to.
               </li> */}
               <li>
@@ -200,7 +200,7 @@ export default function CaramelizingOnionsPage() {
                   productSlug="lodge-cast-iron-skillet"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/lodge-cast-iron-skillet-review" className="text-blue-700 underline">
+                  <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-blue-700 underline">
                     Lodge 12&quot; Cast Iron Skillet
                   </Link>
                 </CTAVisibilityTracker>
@@ -284,7 +284,7 @@ export default function CaramelizingOnionsPage() {
               productSlug="rubbermaid-cooks-scraper"
               merchant="amazon"
             >
-              <Link href="/reviews/rubbermaid-commercial-cooks-scraper-review" className="text-blue-700 underline">
+              <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">
                 Rubbermaid Commercial Cook&apos;s Scraper
               </Link>
             </CTAVisibilityTracker>.
@@ -401,7 +401,7 @@ export default function CaramelizingOnionsPage() {
                   productSlug="rubbermaid-cooks-scraper"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper-review" className="text-blue-700 underline">
+                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">
                     Rubbermaid Commercial Cook&apos;s Scraper
                   </Link>
                 </CTAVisibilityTracker> — gentle on stainless.
@@ -414,9 +414,9 @@ export default function CaramelizingOnionsPage() {
                   productSlug="all-clad-d3-10-inch"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/all-clad-d3-stainless-10-inch-review" className="text-blue-700 underline">
+                  
                     All-Clad D3 Stainless 10&quot;
-                  </Link>
+                  
                 </CTAVisibilityTracker> or{' '}
                 <CTAVisibilityTracker
                   ctaId="caramelizing-onions-lodge-2"
@@ -424,7 +424,7 @@ export default function CaramelizingOnionsPage() {
                   productSlug="lodge-cast-iron-skillet"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/lodge-cast-iron-skillet-review" className="text-blue-700 underline">
+                  <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-blue-700 underline">
                     Lodge Cast Iron Skillet
                   </Link>
                 </CTAVisibilityTracker>.
@@ -437,7 +437,7 @@ export default function CaramelizingOnionsPage() {
                   productSlug="lodge-cast-iron-skillet"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/lodge-cast-iron-skillet-review" className="text-blue-700 underline">
+                  <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-blue-700 underline">
                     Lodge Cast Iron Skillet
                   </Link>
                 </CTAVisibilityTracker>.
@@ -450,9 +450,9 @@ export default function CaramelizingOnionsPage() {
                   productSlug="thermoworks-thermapen-one"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/thermoworks-thermapen-one-review" className="text-blue-700 underline">
+                  
                     ThermoWorks Thermapen ONE
-                  </Link>
+                  
                 </CTAVisibilityTracker> — great for monitoring pan surface temps (~300°F ideal).
               </li> */}
               <li>
@@ -466,9 +466,9 @@ export default function CaramelizingOnionsPage() {
                   productSlug="cambro-1-qt-containers"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/cambro-1-qt-containers-review" className="text-blue-700 underline">
+                  
                     Cambro 1-Qt Containers
-                  </Link>
+                  
                 </CTAVisibilityTracker> — airtight for fridge or freezer.
               </li> */}
               <li>

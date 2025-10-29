@@ -21,7 +21,7 @@ export const dynamic = 'force-dynamic'
 
 const legacyProductData = {
   name: "Vitamix 5200 Professional-Grade Blender",
-  slug: "vitamix-5200",
+  slug: "vitamix-5200-professional-blender",
   brand: "Vitamix",
   model: "5200",
   sku: "001372",
@@ -146,7 +146,7 @@ export async function generateMetadata(): Promise<Metadata> {
       },
     },
     alternates: {
-      canonical: 'https://www.chefapprovedtools.com/reviews/vitamix-5200',
+      canonical: 'https://www.chefapprovedtools.com/reviews/vitamix-5200-professional-blender',
     },
     openGraph: {
       title: "Vitamix 5200 Blender: Professional Review After 5+ Years Restaurant Testing",
@@ -157,7 +157,7 @@ export async function generateMetadata(): Promise<Metadata> {
         testingPeriod: "5+ Years Professional Testing",
         tier: 1
       })],
-      url: 'https://www.chefapprovedtools.com/reviews/vitamix-5200',
+      url: 'https://www.chefapprovedtools.com/reviews/vitamix-5200-professional-blender',
       type: 'article',
       siteName: 'Chef Approved Tools',
     }

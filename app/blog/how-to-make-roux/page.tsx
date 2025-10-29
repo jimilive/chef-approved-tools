@@ -373,7 +373,7 @@ export default function RouxPage() {
             <Link href="/blog/caramelization-science" className="text-orange-600 hover:text-orange-800 font-semibold">
               → The Science of Caramelization
             </Link>
-            <Link href="/reviews/lodge-cast-iron-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Lodge Cast Iron Skillet Bundle Review
             </Link>
           </div>

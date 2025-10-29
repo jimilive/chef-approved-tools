@@ -432,7 +432,7 @@ export default function RestingMeatPage() {
             <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-600 hover:text-orange-800 font-semibold">
               → The Maillard Reaction: Why Browning = Flavor
             </Link>
-            <Link href="/reviews/lodge-cast-iron-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Lodge Cast Iron Skillet Bundle Review
             </Link>
             <Link href="/reviews/nordic-ware-half-sheet-pan" className="text-orange-600 hover:text-orange-800 font-semibold">

@@ -261,7 +261,7 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
               productSlug="rubbermaid-cooks-scraper"
               merchant="amazon"
             >
-              <Link href="/reviews/rubbermaid-commercial-cooks-scraper-review" className="text-blue-700 underline">
+              <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">
                 flexible scraper
               </Link>
             </CTAVisibilityTracker>, and reduce by half. Finish with butter or herbs.
@@ -376,7 +376,7 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
               productSlug="nordic-ware-sheet-pan"
               merchant="amazon"
             >
-              <Link href="/reviews/nordic-ware-sheet-pan-review" className="text-blue-700 underline">
+              <Link href="/reviews/nordic-ware-half-sheet-pan" className="text-blue-700 underline">
                 Nordic Ware Natural Aluminum Commercial Baker&apos;s Half Sheet
               </Link>
             </CTAVisibilityTracker> is the restaurant-standard pan I&apos;ve used for years. Heavy-gauge aluminum, flat (doesn&apos;t warp), and affordable.
@@ -390,9 +390,9 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
               productSlug="checkered-chef-sheet-pans"
               merchant="amazon"
             >
-              <Link href="/reviews/checkered-chef-sheet-pans-review" className="text-blue-700 underline">
+              
                 Checkered Chef Sheet Pans (Set of 2)
-              </Link>
+              
             </CTAVisibilityTracker> offer solid performance at a lower price point. They&apos;re slightly thinner than Nordic Ware but still handle high heat without warping.
           </p> */}
 

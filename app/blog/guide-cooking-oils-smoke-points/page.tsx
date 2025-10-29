@@ -473,7 +473,7 @@ export default function CookingOilsGuidePage() {
             <Link href="/blog/complete-guide-to-salts" className="text-orange-600 hover:text-orange-800 font-semibold">
               → The Complete Guide to Salts
             </Link>
-            <Link href="/reviews/lodge-cast-iron-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Lodge Cast Iron Skillet Bundle Review
             </Link>
           </div>

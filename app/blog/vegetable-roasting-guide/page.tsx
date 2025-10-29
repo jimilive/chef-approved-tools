@@ -329,7 +329,7 @@ export default function VegetableRoastingGuidePage() {
             <Link href="/blog/understanding-acids-cooking" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Understanding Acids in Cooking
             </Link>
-            <Link href="/reviews/victorinox-fibrox-8-inch-chef-knife" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Victorinox Fibrox 8&quot; Chef&apos;s Knife Review
             </Link>
           </div>

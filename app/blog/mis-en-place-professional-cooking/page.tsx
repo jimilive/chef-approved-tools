@@ -303,13 +303,13 @@ export default function MiseEnPlacePage() {
             <Link href="/blog/caramelization-science" className="text-orange-600 hover:text-orange-800 font-semibold">
               → The Science of Caramelization
             </Link>
-            <Link href="/reviews/victorinox-fibrox-8-inch-chef-knife" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Victorinox Fibrox 8&quot; Chef&apos;s Knife Review
             </Link>
             <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-600 hover:text-orange-800 font-semibold">
               → OXO Good Grips Bench Scraper Review
             </Link>
-            <Link href="/reviews/john-boos-platinum-cutting-board" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 font-semibold">
               → John Boos Platinum Cutting Board Review
             </Link>
           </div>

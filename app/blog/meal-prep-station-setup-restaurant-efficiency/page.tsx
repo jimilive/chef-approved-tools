@@ -300,9 +300,9 @@ export default function MealPrepStationSetupPage() {
               productSlug="cambro-containers"
               merchant="amazon"
             >
-              <Link href="/reviews/cambro-2-qt-containers-review" className="text-blue-700 underline">
+              
                 Cambro 2-Qt Square Storage Containers
-              </Link>
+              
             </CTAVisibilityTracker> are the restaurant standard for prep and storage. They&apos;re clear, stackable, and virtually indestructible.
           </p> */}
 
@@ -359,7 +359,7 @@ export default function MealPrepStationSetupPage() {
                   productSlug="victorinox-fibrox-8-inch"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/victorinox-fibrox-8-inch-chef-knife-review" className="text-blue-700 underline">
+                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-700 underline">
                     Victorinox Fibrox 8&quot; Chef&apos;s Knife
                   </Link>
                 </CTAVisibilityTracker> — reliable, ergonomic, and sharp.
@@ -375,7 +375,7 @@ export default function MealPrepStationSetupPage() {
                   productSlug="john-boos-maple-board"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/john-boos-reversible-maple-board-review" className="text-blue-700 underline">
+                  <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-blue-700 underline">
                     John Boos Reversible Maple Board
                   </Link>
                 </CTAVisibilityTracker> — stable and durable.
@@ -391,7 +391,7 @@ export default function MealPrepStationSetupPage() {
                   productSlug="rubbermaid-cooks-scraper"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper-review" className="text-blue-700 underline">
+                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">
                     Rubbermaid Commercial Cook&apos;s Scraper
                   </Link>
                 </CTAVisibilityTracker> — for clean transfers and easy scraping.
@@ -404,7 +404,7 @@ export default function MealPrepStationSetupPage() {
                   productSlug="nordic-ware-sheet-pan"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/nordic-ware-half-sheet-pan-review" className="text-blue-700 underline">
+                  <Link href="/reviews/nordic-ware-half-sheet-pan" className="text-blue-700 underline">
                     Nordic Ware Half Sheet Pan
                   </Link>
                 </CTAVisibilityTracker> — use them as trays for organized prep.

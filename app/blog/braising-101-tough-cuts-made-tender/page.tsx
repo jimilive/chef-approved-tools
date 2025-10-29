@@ -231,7 +231,7 @@ export default function Braising101Page() {
               productSlug="rubbermaid-cooks-scraper"
               merchant="amazon"
             >
-              <Link href="/reviews/rubbermaid-commercial-cooks-scraper-review" className="text-blue-700 underline">
+              <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">
                 Rubbermaid Commercial Cook&apos;s Scraper
               </Link>
             </CTAVisibilityTracker>.
@@ -348,9 +348,9 @@ export default function Braising101Page() {
                   productSlug="lodge-6-qt-dutch-oven"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/lodge-6-qt-enameled-dutch-oven-review" className="text-blue-700 underline">
+                  
                     Lodge 6-Qt Enameled Dutch Oven
-                  </Link>
+                  
                 </CTAVisibilityTracker> — retains steady heat and flavor.
               </li> */}
               <li>
@@ -364,9 +364,9 @@ export default function Braising101Page() {
                   productSlug="thermoworks-thermapen-one"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/thermoworks-thermapen-one-review" className="text-blue-700 underline">
+                  
                     ThermoWorks Thermapen ONE
-                  </Link>
+                  
                 </CTAVisibilityTracker> — ensures you stay below boiling.
               </li> */}
               <li>
@@ -380,7 +380,7 @@ export default function Braising101Page() {
                   productSlug="rubbermaid-cooks-scraper"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper-review" className="text-blue-700 underline">
+                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">
                     Rubbermaid Commercial Cook&apos;s Scraper
                   </Link>
                 </CTAVisibilityTracker> — lift fond safely.
@@ -393,9 +393,9 @@ export default function Braising101Page() {
                   productSlug="oxo-good-grips-tongs"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/oxo-good-grips-12-inch-tongs-review" className="text-blue-700 underline">
+                  
                     OXO Good Grips 12&quot; Tongs
-                  </Link>
+                  
                 </CTAVisibilityTracker> — for turning without piercing meat.
               </li> */}
               <li>
@@ -409,9 +409,9 @@ export default function Braising101Page() {
                   productSlug="cambro-4-qt-containers"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/cambro-4-qt-square-containers-review" className="text-blue-700 underline">
+                  
                     Cambro 4-Qt Square Containers
-                  </Link>
+                  
                 </CTAVisibilityTracker> — perfect for chilling and storing braises.
               </li> */}
               <li>

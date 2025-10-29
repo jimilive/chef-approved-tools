@@ -256,7 +256,7 @@ export default function ReducingSaucesPage() {
               productSlug="rubbermaid-cooks-scraper"
               merchant="amazon"
             >
-              <Link href="/reviews/rubbermaid-commercial-cooks-scraper-review" className="text-blue-700 underline">
+              <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">
                 Rubbermaid Commercial Cook&apos;s Scraper
               </Link>
             </CTAVisibilityTracker> and taste throughout. The balance changes every few minutes.
@@ -383,9 +383,9 @@ export default function ReducingSaucesPage() {
                   productSlug="made-in-saucier"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/made-in-stainless-saucier-review" className="text-blue-700 underline">
+                  
                     Made In Stainless Saucier
-                  </Link>
+                  
                 </CTAVisibilityTracker> — curved sides help prevent burning.
               </li> */}
               <li>
@@ -399,7 +399,7 @@ export default function ReducingSaucesPage() {
                   productSlug="rubbermaid-cooks-scraper"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper-review" className="text-blue-700 underline">
+                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">
                     Rubbermaid Commercial Cook&apos;s Scraper
                   </Link>
                 </CTAVisibilityTracker> — keeps fond from sticking.
@@ -412,9 +412,9 @@ export default function ReducingSaucesPage() {
                   productSlug="thermoworks-thermapen-one"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/thermoworks-thermapen-one-review" className="text-blue-700 underline">
+                  
                     ThermoWorks Thermapen ONE
-                  </Link>
+                  
                 </CTAVisibilityTracker> — track simmer heat (195°F ideal).
               </li> */}
               <li>
@@ -428,9 +428,9 @@ export default function ReducingSaucesPage() {
                   productSlug="oxo-fine-mesh-strainer"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/oxo-fine-mesh-strainer-review" className="text-blue-700 underline">
+                  
                     OXO Fine Mesh Strainer
-                  </Link>
+                  
                 </CTAVisibilityTracker> — for smooth finishes.
               </li> */}
               <li>
@@ -444,9 +444,9 @@ export default function ReducingSaucesPage() {
                   productSlug="cambro-2-qt-containers"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/cambro-2-qt-storage-container-review" className="text-blue-700 underline">
+                  
                     Cambro 2-Qt Storage Container
-                  </Link>
+                  
                 </CTAVisibilityTracker> — to chill and store reduced sauces safely.
               </li> */}
               <li>

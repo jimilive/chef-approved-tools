@@ -397,9 +397,9 @@ export default function BlanchingVegetablesPage() {
                   productSlug="large-stockpot"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/large-stockpot-review" className="text-blue-700 underline">
+                  
                     See my recommendation
-                  </Link>
+                  
                 </CTAVisibilityTracker>
               </li> */}
               <li>
@@ -413,9 +413,9 @@ export default function BlanchingVegetablesPage() {
                   productSlug="spider-strainer"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/spider-strainer-review" className="text-blue-700 underline">
+                  
                     Professional pick
-                  </Link>
+                  
                 </CTAVisibilityTracker>
               </li> */}
               <li>

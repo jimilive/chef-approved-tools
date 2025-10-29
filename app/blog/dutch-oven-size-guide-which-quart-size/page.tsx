@@ -188,9 +188,9 @@ export default function DutchOvenSizeGuidePage() {
               productSlug="lodge-5-quart-dutch-oven"
               merchant="amazon"
             >
-              <Link href="/reviews/lodge-5-quart-enameled-dutch-oven-review" className="text-blue-700 underline">
+              
                 Lodge 5-Quart Enameled Dutch Oven
-              </Link>
+              
             </CTAVisibilityTracker> — affordable, reliable, and pre-seasoned.
           </p> */}
 
@@ -272,9 +272,9 @@ export default function DutchOvenSizeGuidePage() {
                   productSlug="lodge-enameled-dutch-oven"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/lodge-enameled-dutch-oven-review" className="text-blue-700 underline">
+                  
                     Lodge Enameled Dutch Oven
-                  </Link>
+                  
                 </CTAVisibilityTracker>:</strong> High performance, lower price.
               </li> */}
               <li>

@@ -221,9 +221,9 @@ export default function KnifeStoragePage() {
               productSlug="magnetic-knife-strip"
               merchant="amazon"
             >
-              <Link href="/reviews/magnetic-knife-strip-review" className="text-blue-700 underline">
+              
                 See my magnetic strip review
-              </Link>
+              
             </CTAVisibilityTracker>
           </p> */}
 
@@ -428,9 +428,9 @@ export default function KnifeStoragePage() {
                   productSlug="magnetic-knife-strip"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/magnetic-knife-strip-review" className="text-blue-700 underline">
+                  
                     See my full review
-                  </Link>
+                  
                 </CTAVisibilityTracker>
               </li> */}
               <li>
@@ -444,9 +444,9 @@ export default function KnifeStoragePage() {
                   productSlug="bamboo-knife-drawer-insert"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/bamboo-knife-drawer-insert-review" className="text-blue-700 underline">
+                  
                     Check my drawer insert recommendation
-                  </Link>
+                  
                 </CTAVisibilityTracker>
               </li> */}
               <li>
@@ -460,9 +460,9 @@ export default function KnifeStoragePage() {
                   productSlug="professional-knife-roll"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/professional-knife-roll-review" className="text-blue-700 underline">
+                  
                     Check my roll recommendation
-                  </Link>
+                  
                 </CTAVisibilityTracker>
               </li> */}
               <li>

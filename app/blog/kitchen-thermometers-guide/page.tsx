@@ -415,9 +415,9 @@ export default function KitchenThermometersGuidePage() {
             <Link href="/blog/reverse-sear-technique" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Reverse Sear Method
             </Link>
-            <Link href="/reviews/thermopro-tp19" className="text-orange-600 hover:text-orange-800 font-semibold">
+            
               → ThermoPro TP19 Review
-            </Link>
+            
           </div>
         </div>
 

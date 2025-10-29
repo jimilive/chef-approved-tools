@@ -442,7 +442,7 @@ export default function UnderstandingCookingFatsPage() {
             <Link href="/blog/deglazing-pan-sauces" className="text-orange-600 hover:text-orange-800 font-semibold">
               → The Art of Deglazing
             </Link>
-            <Link href="/reviews/lodge-cast-iron-skillet" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Cast Iron Skillet Review
             </Link>
           </div>

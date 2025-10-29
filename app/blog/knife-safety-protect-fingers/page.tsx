@@ -155,7 +155,7 @@ export default function KnifeSafetyPage() {
           </p>
 
           <p>
-            When I recommend the <Link href="/reviews/victorinox-fibrox-8-inch-chef-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</Link>, it&apos;s partly because the handle shape naturally encourages proper grip. The bolster is designed for pinching.
+            When I recommend the <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</Link>, it&apos;s partly because the handle shape naturally encourages proper grip. The bolster is designed for pinching.
           </p>
 
           <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border-l-4 border-purple-600 p-6 my-8 rounded-r-lg">
@@ -351,7 +351,7 @@ export default function KnifeSafetyPage() {
           </ul>
 
           <p>
-            I use and recommend both the <Link href="/reviews/john-boos-platinum-cutting-board" className="text-orange-600 hover:text-orange-800 underline">John Boos Platinum Commercial Cutting Board</Link> for heavy butchering work and the <Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-600 hover:text-orange-800 underline">Epicurean Kitchen Cutting Board</Link> for everyday prep. Both provide the stability and surface quality you need for safe cutting.
+            I use and recommend both the <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline">John Boos Platinum Commercial Cutting Board</Link> for heavy butchering work and the <Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-600 hover:text-orange-800 underline">Epicurean Kitchen Cutting Board</Link> for everyday prep. Both provide the stability and surface quality you need for safe cutting.
           </p>
 
           <h2>Focus and Respect Every Time</h2>
@@ -457,7 +457,7 @@ export default function KnifeSafetyPage() {
 
           <h3>What&apos;s the safest knife for beginners?</h3>
           <p>
-            Counterintuitively, a properly sharpened 8-inch chef&apos;s knife. It&apos;s predictable, comfortable in hand, and safe when you use proper technique. Small paring knives slip more easily on certain tasks. Get a quality chef&apos;s knife like the <Link href="/reviews/victorinox-fibrox-8-inch-chef-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox Fibrox 8&quot;</Link>, learn the claw grip and pinch grip, and practice slowly. Size isn&apos;t the danger—improper technique is.
+            Counterintuitively, a properly sharpened 8-inch chef&apos;s knife. It&apos;s predictable, comfortable in hand, and safe when you use proper technique. Small paring knives slip more easily on certain tasks. Get a quality chef&apos;s knife like the <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox Fibrox 8&quot;</Link>, learn the claw grip and pinch grip, and practice slowly. Size isn&apos;t the danger—improper technique is.
           </p>
 
           <h3>Should I use cut-resistant gloves?</h3>
@@ -507,7 +507,7 @@ export default function KnifeSafetyPage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/reviews/victorinox-fibrox-8-inch-chef-knife" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Victorinox Fibrox 8&quot; Chef&apos;s Knife Review
             </Link>
             <Link href="/blog/how-to-sharpen-tri-stone" className="text-orange-600 hover:text-orange-800 font-semibold">
@@ -519,7 +519,7 @@ export default function KnifeSafetyPage() {
             <Link href="/reviews/norton-im200-tri-stone-sharpener" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Norton IM200 Tri-Stone Sharpener Review
             </Link>
-            <Link href="/reviews/john-boos-platinum-cutting-board" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 font-semibold">
               → John Boos Platinum Cutting Board Review
             </Link>
             <Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-600 hover:text-orange-800 font-semibold">

@@ -175,7 +175,7 @@ export default function KitchenStarterKitPage() {
             productSlug="victorinox-fibrox-chef-knife"
             merchant="internal"
           >
-            <Link href="/reviews/victorinox-fibrox-chef-knife" className="text-orange-600 hover:text-orange-700 font-medium">
+            <Link href="/reviews/victorinox-fibrox-10-inch-chefs-knife" className="text-orange-600 hover:text-orange-700 font-medium">
               Read my full Victorinox knife review →
             </Link>
           </CTAVisibilityTracker> */}
@@ -226,7 +226,7 @@ export default function KitchenStarterKitPage() {
             productSlug="lodge-cast-iron-skillet"
             merchant="internal"
           >
-            <Link href="/reviews/lodge-cast-iron-skillet" className="text-orange-600 hover:text-orange-700 font-medium">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-700 font-medium">
               See my cast iron skillet review →
             </Link>
           </CTAVisibilityTracker> */}
@@ -475,7 +475,7 @@ export default function KitchenStarterKitPage() {
                 productSlug="victorinox-fibrox-chef-knife"
                 merchant="internal"
               >
-                <Link href="/reviews/victorinox-fibrox-chef-knife" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/reviews/victorinox-fibrox-10-inch-chefs-knife" className="text-orange-600 hover:text-orange-700 font-medium">
                   Victorinox 8" Chef&apos;s Knife
                 </Link>
               </CTAVisibilityTracker> */}
@@ -488,7 +488,7 @@ export default function KitchenStarterKitPage() {
                 productSlug="lodge-cast-iron-skillet"
                 merchant="internal"
               >
-                <Link href="/reviews/lodge-cast-iron-skillet" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-700 font-medium">
                   Lodge Cast Iron Skillet
                 </Link>
               </CTAVisibilityTracker> */}
@@ -501,9 +501,9 @@ export default function KitchenStarterKitPage() {
                 productSlug="thermapen-thermometer"
                 merchant="internal"
               >
-                <Link href="/reviews/thermapen-thermometer" className="text-orange-600 hover:text-orange-700 font-medium">
+                
                   Thermapen Thermometer
-                </Link>
+                
               </CTAVisibilityTracker> */}
               <strong>Thermapen Thermometer</strong> – Precision and speed you can trust in professional settings
             </li>

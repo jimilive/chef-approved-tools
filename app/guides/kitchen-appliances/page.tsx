@@ -70,7 +70,7 @@ export default function KitchenAppliancesPage() {
 
                  position="mid_article">
                   <Link
-                    href="/reviews/vitamix-5200"
+                    href="/reviews/vitamix-5200-professional-blender"
                     className="text-orange-600 hover:text-orange-800 font-semibold"
                   >
                     Read full review →

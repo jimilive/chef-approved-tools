@@ -174,7 +174,7 @@ export default function MaillardReactionPost() {
 
           <h3>1. High Heat (At Least 300°F / 150°C)</h3>
           <p>
-            The Maillard reaction doesn&apos;t begin until food reaches around 285-300°F. That&apos;s why <Link href="/reviews/lodge-cast-iron-skillet-bundle" className="text-orange-600 hover:text-orange-800 underline">cast iron skillets</Link> are a chef&apos;s best friend—they hold heat beautifully and maintain temperature even when cold food hits the surface.
+            The Maillard reaction doesn&apos;t begin until food reaches around 285-300°F. That&apos;s why <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 underline">cast iron skillets</Link> are a chef&apos;s best friend—they hold heat beautifully and maintain temperature even when cold food hits the surface.
           </p>
 
           <h3>2. Dry Surface</h3>
@@ -219,7 +219,7 @@ export default function MaillardReactionPost() {
               Chef&apos;s Note: The Pan Must Be Hot
             </p>
             <p className="mb-0">
-              After 24 years on the line, I can tell you the biggest mistake home cooks make is starting too soon. If your pan isn&apos;t properly preheated—and I mean <em>hot</em> hot, not &quot;kind of&quot; hot—you&apos;ll steam your food instead of browning it. Give it an extra minute. That patience is where the magic starts. If you&apos;re using a <Link href="/reviews/lodge-cast-iron-skillet-bundle" className="text-orange-600 hover:text-orange-800 underline">Lodge Cast Iron Skillet</Link>, preheat for at least 5-7 minutes over medium-high. A drop of water should sizzle and evaporate instantly on contact.
+              After 24 years on the line, I can tell you the biggest mistake home cooks make is starting too soon. If your pan isn&apos;t properly preheated—and I mean <em>hot</em> hot, not &quot;kind of&quot; hot—you&apos;ll steam your food instead of browning it. Give it an extra minute. That patience is where the magic starts. If you&apos;re using a <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 underline">Lodge Cast Iron Skillet</Link>, preheat for at least 5-7 minutes over medium-high. A drop of water should sizzle and evaporate instantly on contact.
             </p>
           </div>
 
@@ -297,7 +297,7 @@ export default function MaillardReactionPost() {
             <Link href="/blog/why-resting-meat-key-cooking" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Why Resting Is the Key to Cooking Meat
             </Link>
-            <Link href="/reviews/lodge-cast-iron-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Lodge Cast Iron Skillet Bundle Review
             </Link>
             <Link href="/guides/cookware-materials" className="text-orange-600 hover:text-orange-800 font-semibold">

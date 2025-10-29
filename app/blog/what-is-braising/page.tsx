@@ -242,10 +242,10 @@ export default function BraisingPage() {
             <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-600 hover:text-orange-800 font-semibold">
               → The Maillard Reaction: Why Browning = Flavor
             </Link>
-            <Link href="/reviews/le-creuset-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Le Creuset 7.25 Qt Dutch Oven Review
             </Link>
-            <Link href="/reviews/lodge-cast-iron-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Lodge Cast Iron Skillet Bundle Review
             </Link>
             <Link href="/blog/why-resting-meat-key-cooking" className="text-orange-600 hover:text-orange-800 font-semibold">

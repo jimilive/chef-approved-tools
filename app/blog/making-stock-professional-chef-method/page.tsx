@@ -525,9 +525,9 @@ export default function MakingStockPage() {
                 productSlug="stockpots-review"
                 merchant="internal"
               >
-                <Link href="/reviews/best-stockpots" className="text-orange-600 hover:text-orange-700 font-medium">
+                
                   Best Stockpots for Home Cooks
-                </Link>
+                
               </CTAVisibilityTracker>
             </li> */}
             <li>Best Stockpots for Home Cooks</li>

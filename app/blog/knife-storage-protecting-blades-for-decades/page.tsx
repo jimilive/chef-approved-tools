@@ -372,9 +372,9 @@ export default function KnifeStorageProtectionPage() {
                   productSlug="magnetic-knife-strip"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/magnetic-knife-strip-review" className="text-blue-700 underline">
+                  
                     Full review
-                  </Link>
+                  
                 </CTAVisibilityTracker>
               </li> */}
               <li>
@@ -391,9 +391,9 @@ export default function KnifeStorageProtectionPage() {
                   productSlug="food-grade-mineral-oil"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/food-grade-mineral-oil-review" className="text-blue-700 underline">
+                  
                     See my pick
-                  </Link>
+                  
                 </CTAVisibilityTracker>
               </li> */}
               <li>

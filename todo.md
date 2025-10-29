@@ -61,6 +61,31 @@
 - [ ] Follow up on guest post pitches (Thursday)
 - [ ] Check if Tasting Table articles published (Friday)
 
+## Priority 6: Production Monitoring (Optional - Do When Ready)
+
+### Error Tracking Setup
+- [ ] Setup Sentry for production error tracking (30 min)
+  - Free tier: 5,000 errors/month
+  - Catches JavaScript errors in production
+  - Get alerts when things break
+  - See detailed stack traces
+  - Guide: `docs/PRODUCTION-MONITORING-SETUP.md`
+
+### 404 Monitoring
+- [ ] Enable Google Search Console email alerts for 404s (5 min)
+  - Already have Search Console setup
+  - Just enable notifications in settings
+
+### Uptime Monitoring
+- [ ] Setup UptimeRobot (10 min, free)
+  - Get alerts if site goes down
+  - 5-minute check intervals
+  - Email/SMS notifications
+
+**Total time:** ~45 minutes
+**Total cost:** $0/month (all free tiers)
+**See:** `docs/PRODUCTION-MONITORING-SETUP.md` for detailed setup instructions
+
 ---
 
 # Metadata Update Project - Third Iteration

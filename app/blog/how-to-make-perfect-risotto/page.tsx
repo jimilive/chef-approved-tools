@@ -397,7 +397,7 @@ export default function PerfectRisottoPage() {
             <Link href="/blog/fat-is-flavor" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Fat is Flavor: The Science Behind Richness
             </Link>
-            <Link href="/reviews/cuisinart-saute-pan" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/cuisinart-8-inch-nonstick-pan" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Cuisinart 12&quot; Stainless Steel Sauté Pan Review
             </Link>
           </div>

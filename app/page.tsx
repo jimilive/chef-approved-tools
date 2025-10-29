@@ -203,8 +203,26 @@ export default async function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section>  {/* End of Hero Section */}
 
+      {/* THREE-TIER SYSTEM CALLOUT */}
+      <section className="py-8 bg-orange-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-slate-900 text-base sm:text-lg">
+              Every review on this site is rated using my transparent{' '}
+              <a 
+                href="/chef-approved" 
+                className="text-orange-600 font-semibold underline hover:text-orange-800 transition-colors"
+              >
+                three-tier review system
+              </a>
+              {' '}— from professional kitchen use to expert evaluation. 
+              This ensures you always know my level of hands-on experience with each product.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Credentials Section */}
       <section id="credentials" className="py-12 sm:py-16 bg-white">

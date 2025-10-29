@@ -272,7 +272,7 @@ export default function CaramelizationPage() {
             <Link href="/blog/how-to-make-roux" className="text-orange-600 hover:text-orange-800 font-semibold">
               → How to Make a Perfect Roux
             </Link>
-            <Link href="/reviews/lodge-cast-iron-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Lodge Cast Iron Skillet Bundle Review
             </Link>
           </div>

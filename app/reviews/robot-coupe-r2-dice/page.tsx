@@ -367,7 +367,7 @@ export default async function RobotCoupeR2DiceReview() {
               <div>
                 <h3 className="font-bold text-slate-900 mb-3">Commercial Kitchen Performance</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  In the demanding environment of Purple Cafe&apos;s prep kitchen, the Robot Coupe R2 Dice became our go-to workhorse for cheese shredding operations—working alongside our <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline">KitchenAid commercial mixer</Link> and <Link href="/reviews/vitamix-5200" className="text-orange-600 hover:text-orange-800 underline">Vitamix 5200 blender</Link> as the foundation of our prep station.
+                  In the demanding environment of Purple Cafe&apos;s prep kitchen, the Robot Coupe R2 Dice became our go-to workhorse for cheese shredding operations—working alongside our <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline">KitchenAid commercial mixer</Link> and <Link href="/reviews/vitamix-5200-professional-blender" className="text-orange-600 hover:text-orange-800 underline">Vitamix 5200 blender</Link> as the foundation of our prep station.
                   The continuous feed design allowed us to process large volumes of cheese efficiently during busy prep periods, maintaining consistent quality
                   that manual shredding simply couldn&apos;t match. The precision cuts and uniform results were essential for presentation standards.
                 </p>

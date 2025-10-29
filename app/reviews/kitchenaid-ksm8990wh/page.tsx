@@ -334,7 +334,7 @@ export default async function KitchenAidReviewPage() {
             <p className="text-slate-700 mb-4">
               I tested this KitchenAid Commercial stand mixer under demanding commercial conditions at Purple Cafe, where equipment
               failure means lost revenue. Among all the kitchen appliances I&apos;ve tested professionally, this KitchenAid mixer was evaluated in the same environment where I tested our{' '}
-              <a href="/reviews/vitamix-5200" className="text-orange-600 hover:text-orange-800 underline">Vitamix 5200 blender</a> and{' '}
+              <a href="/reviews/vitamix-5200-professional-blender" className="text-orange-600 hover:text-orange-800 underline">Vitamix 5200 blender</a> and{' '}
               <a href="/reviews/robot-coupe-r2-dice" className="text-orange-600 hover:text-orange-800 underline">Robot Coupe food processor</a>.
             </p>
 

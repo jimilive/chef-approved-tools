@@ -169,7 +169,7 @@ export default function DeglazingPage() {
                   productSlug="rubbermaid-cooks-scraper"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper-review" className="text-blue-700 underline">
+                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">
                     Rubbermaid Commercial Cook&apos;s Scraper
                   </Link>
                 </CTAVisibilityTracker> — releases the gold.
@@ -407,9 +407,9 @@ export default function DeglazingPage() {
                   productSlug="all-clad-d3-10-inch"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/all-clad-d3-stainless-10-inch-skillet-review" className="text-blue-700 underline">
+                  
                     All-Clad D3 Stainless 10&quot; Skillet
-                  </Link>
+                  
                 </CTAVisibilityTracker> — perfect for fond formation.
               </li> */}
               <li>
@@ -423,7 +423,7 @@ export default function DeglazingPage() {
                   productSlug="rubbermaid-cooks-scraper"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper-review" className="text-blue-700 underline">
+                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">
                     Rubbermaid Commercial Cook&apos;s Scraper
                   </Link>
                 </CTAVisibilityTracker> — safe and effective for stainless.
@@ -436,9 +436,9 @@ export default function DeglazingPage() {
                   productSlug="oxo-good-grips-tongs"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/oxo-good-grips-12-inch-tongs-review" className="text-blue-700 underline">
+                  
                     OXO Good Grips 12&quot; Tongs
-                  </Link>
+                  
                 </CTAVisibilityTracker> — control without piercing meat.
               </li> */}
               <li>
@@ -452,9 +452,9 @@ export default function DeglazingPage() {
                   productSlug="thermoworks-thermapen-one"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/thermoworks-thermapen-one-review" className="text-blue-700 underline">
+                  
                     ThermoWorks Thermapen ONE
-                  </Link>
+                  
                 </CTAVisibilityTracker> — verify pan heat for ideal browning.
               </li> */}
               <li>
@@ -468,9 +468,9 @@ export default function DeglazingPage() {
                   productSlug="made-in-saucier"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/made-in-stainless-saucier-review" className="text-blue-700 underline">
+                  
                     Made In Stainless Saucier
-                  </Link>
+                  
                 </CTAVisibilityTracker> — for reductions and finishing sauces.
               </li> */}
               <li>

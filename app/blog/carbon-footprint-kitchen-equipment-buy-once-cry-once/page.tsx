@@ -304,7 +304,7 @@ export default function CarbonFootprintKitchenEquipmentPage() {
                   productSlug="lodge-cast-iron-skillet"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/lodge-cast-iron-skillet-review" className="text-blue-700 underline">
+                  <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-blue-700 underline">
                     Lodge Cast Iron Skillet
                   </Link>
                 </CTAVisibilityTracker>:</strong> Season it right and it&apos;ll outlive you.
@@ -316,9 +316,9 @@ export default function CarbonFootprintKitchenEquipmentPage() {
                   productSlug="all-clad-d3-10-inch"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/all-clad-d3-stainless-skillet-review" className="text-blue-700 underline">
+                  
                     All-Clad D3 Stainless Skillet
-                  </Link>
+                  
                 </CTAVisibilityTracker>:</strong> The industry standard for a reason.
               </li> */}
               <li>
@@ -340,7 +340,7 @@ export default function CarbonFootprintKitchenEquipmentPage() {
                   productSlug="rubbermaid-cooks-scraper"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper-review" className="text-blue-700 underline">
+                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">
                     Rubbermaid Commercial Cook&apos;s Scraper
                   </Link>
                 </CTAVisibilityTracker>:</strong> Nearly indestructible and dishwasher-safe.
@@ -352,9 +352,9 @@ export default function CarbonFootprintKitchenEquipmentPage() {
                   productSlug="oxo-good-grips-tongs"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/oxo-good-grips-tongs-review" className="text-blue-700 underline">
+                  
                     OXO Good Grips Tongs
-                  </Link>
+                  
                 </CTAVisibilityTracker>:</strong> Metal, replaceable spring, consistent performance.
               </li> */}
               <li>
@@ -376,7 +376,7 @@ export default function CarbonFootprintKitchenEquipmentPage() {
                   productSlug="john-boos-maple-board"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/john-boos-maple-reversible-board-review" className="text-blue-700 underline">
+                  <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-blue-700 underline">
                     John Boos Maple Reversible Board
                   </Link>
                 </CTAVisibilityTracker>:</strong> A classic — resurface it instead of replacing.
@@ -403,9 +403,9 @@ export default function CarbonFootprintKitchenEquipmentPage() {
                   productSlug="cambro-containers"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/cambro-containers-review" className="text-blue-700 underline">
+                  
                     Cambro Containers
-                  </Link>
+                  
                 </CTAVisibilityTracker>:</strong> Commercial-grade polycarbonate lasts 10x longer than consumer plastic tubs.
               </li> */}
               <li>
@@ -427,7 +427,7 @@ export default function CarbonFootprintKitchenEquipmentPage() {
                   productSlug="victorinox-fibrox-8-inch"
                   merchant="amazon"
                 >
-                  <Link href="/reviews/victorinox-fibrox-8-inch-chef-knife-review" className="text-blue-700 underline">
+                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-700 underline">
                     Victorinox Fibrox 8&quot; Chef&apos;s Knife
                   </Link>
                 </CTAVisibilityTracker>:</strong> Affordable, repairable, and sharpenable — the antithesis of disposable blades.

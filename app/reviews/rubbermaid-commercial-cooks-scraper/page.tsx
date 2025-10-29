@@ -879,7 +879,7 @@ export default async function RubbermaidScraperReview() {
               <p className="text-sm text-slate-700 mb-3">
                 The container you&apos;ll be scraping clean. Commercial power that demands a commercial-grade scraper.
               </p>
-              <Link href="/reviews/vitamix-5200" className="text-orange-600 hover:text-orange-800 font-semibold text-sm">
+              <Link href="/reviews/vitamix-5200-professional-blender" className="text-orange-600 hover:text-orange-800 font-semibold text-sm">
                 Read Review →
               </Link>
             </div>

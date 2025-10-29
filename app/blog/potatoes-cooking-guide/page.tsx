@@ -237,7 +237,7 @@ export default function PotatoesGuidePage() {
             <Link href="/blog/mis-en-place-professional-cooking" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Mis en Place: Professional Cooking Foundation
             </Link>
-            <Link href="/reviews/lodge-cast-iron-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Lodge Cast Iron Skillet Bundle Review
             </Link>
           </div>

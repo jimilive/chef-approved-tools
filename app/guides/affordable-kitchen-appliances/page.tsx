@@ -128,7 +128,7 @@ export default async function AffordableKitchenAppliancesPage() {
                 position="mid_article"
                 productSlug="vitamix-5200"
               >
-                <Link href="/reviews/vitamix-5200" className="text-orange-600 hover:text-orange-800 underline font-semibold">
+                <Link href="/reviews/vitamix-5200-professional-blender" className="text-orange-600 hover:text-orange-800 underline font-semibold">
                   Vitamix 5200
                 </Link>
               </CTAVisibilityTracker>{' '}
@@ -190,7 +190,7 @@ export default async function AffordableKitchenAppliancesPage() {
                 position="mid_article"
                 productSlug="vitamix-5200"
               >
-                <Link href="/reviews/vitamix-5200" className="underline font-semibold hover:text-orange-900">
+                <Link href="/reviews/vitamix-5200-professional-blender" className="underline font-semibold hover:text-orange-900">
                   Vitamix 5200 in restaurant conditions
                 </Link>
               </CTAVisibilityTracker>, here&apos;s when the upgrade is worth it: daily use (7+ hours weekly), hot soup blending, nut butters, commercial/revenue-generating use, or 10 year ownership plans. For occasional home use, stick with the Ninja.
@@ -613,7 +613,7 @@ export default async function AffordableKitchenAppliancesPage() {
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <p className="font-semibold text-blue-900 mb-1">Premium: Vitamix 5200</p>
                     <p className="text-sm text-blue-800">
-                      <Link href="/reviews/vitamix-5200" className="underline">See review</Link>
+                      <Link href="/reviews/vitamix-5200-professional-blender" className="underline">See review</Link>
                     </p>
                     <p className="text-sm text-blue-700 mt-2">For daily use, hot soups, nut butters, commercial abuse</p>
                   </div>
