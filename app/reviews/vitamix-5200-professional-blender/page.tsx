@@ -849,7 +849,7 @@ export default async function VitamixReviewPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             <Link href="#" className="group no-underline">
               <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
-                <div className="aspect-square bg-gray-100 flex items-center justify-center text-6xl">
+                <div className="w-full h-40 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-[40px] mb-3 rounded-lg">
                   🔪
                 </div>
                 <div className="p-4 flex-1 flex flex-col">
@@ -868,7 +868,7 @@ export default async function VitamixReviewPage() {
 
             <Link href="#" className="group no-underline">
               <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
-                <div className="aspect-square bg-gray-100 flex items-center justify-center text-6xl">
+                <div className="w-full h-40 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-[40px] mb-3 rounded-lg">
                   🥘
                 </div>
                 <div className="p-4 flex-1 flex flex-col">
@@ -887,7 +887,7 @@ export default async function VitamixReviewPage() {
 
             <Link href="#" className="group no-underline">
               <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
-                <div className="aspect-square bg-gray-100 flex items-center justify-center text-6xl">
+                <div className="w-full h-40 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-[40px] mb-3 rounded-lg">
                   🌡️
                 </div>
                 <div className="p-4 flex-1 flex flex-col">
@@ -906,7 +906,7 @@ export default async function VitamixReviewPage() {
 
             <Link href="#" className="group no-underline">
               <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
-                <div className="aspect-square bg-gray-100 flex items-center justify-center text-6xl">
+                <div className="w-full h-40 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-[40px] mb-3 rounded-lg">
                   🍳
                 </div>
                 <div className="p-4 flex-1 flex flex-col">
