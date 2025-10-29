@@ -199,7 +199,7 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://www.anrdoezrs.net https://www.yceml.net",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://www.anrdoezrs.net https://www.yceml.net https://ics.google.com",
               "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://region1.analytics.google.com https://analytics.google.com",
               "img-src 'self' data: https: http:",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
