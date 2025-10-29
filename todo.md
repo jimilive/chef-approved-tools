@@ -1,6 +1,20 @@
 # Active Tasks - Product Reviews & Database
 
-## Priority 0: Technical Maintenance
+## Priority 0: Technical Maintenance & Training
+
+### Supabase Admin Training Session
+- [ ] Schedule training session for Supabase database management
+- [ ] Cover: How to add/edit products correctly
+- [ ] Cover: Affiliate link best practices (unique links per product)
+- [ ] Cover: Required fields and data validation
+- [ ] Cover: How to use validation scripts before making changes
+- [ ] Document: Step-by-step guide for common tasks
+
+### Critical: Fix Duplicate Affiliate Links
+- [ ] **Robot Coupe R2 Dice** - Create unique Amazon affiliate link (currently shares `https://amzn.to/4gVgENj` with Black+Decker)
+- [ ] **Victorinox 10" Knife** - Create unique Amazon affiliate link (currently shares `https://amzn.to/4o6pPwW` with Diamond Crystal Salt)
+- [ ] Run `npm run validate:duplicates` after fixing to verify
+- [ ] **BLOCKER**: Site won't deploy until these are fixed
 
 ### Next.js Version Update
 - [ ] Check current Next.js version (currently 14.2.32)
