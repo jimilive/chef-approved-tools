@@ -65,7 +65,9 @@ jobs:
           console.log(`Found ${amazonLinks.size} unique Amazon affiliate links from ${data.length} products`)
           SCRIPT
 
-          # Run the script from project directory so node_modules is accessible
+          # Export env vars and run the script from project directory
+          export NEXT_PUBLIC_SUPABASE_URL="${NEXT_PUBLIC_SUPABASE_URL}"
+          export NEXT_PUBLIC_SUPABASE_ANON_KEY="${NEXT_PUBLIC_SUPABASE_ANON_KEY}"
           node fetch-links.mjs
 
           # Set the current date/time as an output
