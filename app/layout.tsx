@@ -410,7 +410,7 @@ export default function RootLayout({
         <VercelAnalytics />
 
         {/* CJ Affiliate Tracking */}
-        <script src="https://www.anrdoezrs.net/am/101557027/impressions/page/am.js"></script>
+        <script async src="https://www.anrdoezrs.net/am/101557027/impressions/page/am.js"></script>
       </body>
     </html>
   )

@@ -88,8 +88,9 @@ export async function generateMetadata(): Promise<Metadata> {
         {
           url: generateOGImageURL({
             title: productData.name,
-            category: productData.category,
             rating: productData.expertRating ?? 4.8,
+            testingPeriod: '5+ years',
+            tier: 1,
           }),
           width: 1200,
           height: 630,
@@ -104,8 +105,9 @@ export async function generateMetadata(): Promise<Metadata> {
       description: 'Professional chef review after 5+ years of commercial kitchen testing',
       images: [generateOGImageURL({
         title: productData.name,
-        category: productData.category,
         rating: productData.expertRating ?? 4.8,
+        testingPeriod: '5+ years',
+        tier: 1,
       })],
     },
   }
@@ -235,7 +237,7 @@ export default async function VitamixReviewPage() {
 
           {/* CTA Section */}
           <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-xl px-10 py-5 text-center max-w-[500px] mx-auto flex flex-col justify-center items-center">
-            <CTAVisibilityTracker ctaId="primary-hero-cta" ctaText="View on Amazon" ctaLocation="hero">
+            <CTAVisibilityTracker ctaId="primary-hero-cta" position="above_fold">
               <a
                 href={affiliateUrl}
                 target="_blank"
@@ -738,7 +740,7 @@ export default async function VitamixReviewPage() {
                   <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
                   <p className="text-sm text-slate-600 m-0">Prime shipping, verified reviews, easy returns</p>
                 </div>
-                <CTAVisibilityTracker ctaId="where-to-buy-amazon" ctaText="View on Amazon" ctaLocation="where-to-buy">
+                <CTAVisibilityTracker ctaId="where-to-buy-amazon" position="mid_article">
                   <a
                     href={affiliateUrl}
                     target="_blank"
@@ -757,7 +759,7 @@ export default async function VitamixReviewPage() {
                   <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Vitamix Direct</h3>
                   <p className="text-sm text-slate-600 m-0">Factory direct, full warranty, occasional promotions</p>
                 </div>
-                <CTAVisibilityTracker ctaId="where-to-buy-vitamix-direct" ctaText="Visit Vitamix.com" ctaLocation="where-to-buy">
+                <CTAVisibilityTracker ctaId="where-to-buy-vitamix-direct" position="mid_article">
                   <a
                     href="https://www.anrdoezrs.net/links/101557027/type/dlg/sid/7745121/https://www.vitamix.com/us/en_us/products/5200-standard-getting-started"
                     target="_blank"
@@ -824,7 +826,7 @@ export default async function VitamixReviewPage() {
             </p>
 
             <div className="pt-8 border-t border-white/20 text-center">
-              <CTAVisibilityTracker ctaId="bottom-line-final-cta" ctaText="View Current Pricing on Amazon" ctaLocation="bottom-line">
+              <CTAVisibilityTracker ctaId="bottom-line-final-cta" position="final_cta">
                 <a
                   href={affiliateUrl}
                   target="_blank"
