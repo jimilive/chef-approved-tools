@@ -263,7 +263,7 @@ export default async function Vitamix5200Review() {
               href="/chef-approved" 
               className="text-orange-600 underline hover:text-orange-800 transition-colors"
             >
-              What's this?
+              What&apos;s this?
             </a>
           </div>
 
@@ -276,7 +276,7 @@ export default async function Vitamix5200Review() {
                   <strong>PROFESSIONAL VERDICT:</strong> After 5+ years as our primary blending workhorse at Purple Cafe, the Vitamix 5200 delivered flawless performance under demanding commercial conditions.
                 </p>
                 <p className="text-slate-700 text-sm">
-                  Extremely durable under daily commercial usage, handling restaurant volume spectacularly with consistent, thorough results. The power and ability to create even, smooth products far exceeds other blenders we've tested. No hesitation - would definitely buy it again for both commercial and serious home use.
+                  Extremely durable under daily commercial usage, handling restaurant volume spectacularly with consistent, thorough results. The power and ability to create even, smooth products far exceeds other blenders we&apos;ve tested. No hesitation - would definitely buy it again for both commercial and serious home use.
                 </p>
               </div>
             </div>
