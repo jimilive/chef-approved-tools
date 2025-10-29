@@ -225,6 +225,11 @@ const nextConfig = {
         destination: '/reviews/wusthof-classic-ikon-16-piece',
         permanent: true,
       },
+      {
+        source: '/reviews/vitamix-5200',
+        destination: '/reviews/vitamix-5200-professional-blender',
+        permanent: true,
+      },
     ]
   },
   
