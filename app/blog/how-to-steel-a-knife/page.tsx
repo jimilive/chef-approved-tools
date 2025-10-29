@@ -32,13 +32,12 @@ export default async function HowToSteelAKnife() {
   const products = await Promise.all([
     getProductBySlug('victorinox-fibrox-8-inch-chefs-knife'),
     getProductBySlug('victorinox-fibrox-10-inch-chefs-knife'),
-    getProductBySlug('henckels-10-inch-sharpening-steel'),
   ])
 
   // Get affiliate URLs with fallbacks
   const victorinox8Url = products[0] ? getPrimaryAffiliateLink(products[0]) : 'https://amzn.to/3U4PsT1'
   const victorinox10Url = products[1] ? getPrimaryAffiliateLink(products[1]) : 'https://amzn.to/4o6pPwW'
-  const henckelsUrl = products[2] ? getPrimaryAffiliateLink(products[2]) : 'https://amzn.to/4qh96Zu'
+  const henckelsUrl = 'https://amzn.to/4qh96Zu' // Fallback - product not in database yet
 
   return (
     <div className="min-h-screen bg-white">

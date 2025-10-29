@@ -21,7 +21,6 @@ export default async function AffordableKitchenAppliancesPage() {
     getProductBySlug('cuisinart-dlc-10c-classic-food-processor'),
     getProductBySlug('instant-pot-duo-plus-6qt'),
     getProductBySlug('ninja-air-fryer-af101'),
-    getProductBySlug('gourmia-pizza-oven'),
   ])
 
   // Get affiliate URLs with fallbacks
@@ -30,7 +29,7 @@ export default async function AffordableKitchenAppliancesPage() {
   const cuisinartUrl = products[2] ? getPrimaryAffiliateLink(products[2]) : 'https://amzn.to/4n70rWQ'
   const instantPotUrl = products[3] ? getPrimaryAffiliateLink(products[3]) : 'https://amzn.to/4n7dbfW'
   const airFryerUrl = products[4] ? getPrimaryAffiliateLink(products[4]) : 'https://amzn.to/4q8G9Pn'
-  const pizzaOvenUrl = products[5] ? getPrimaryAffiliateLink(products[5]) : 'https://amzn.to/4qfaiMU'
+  const pizzaOvenUrl = 'https://amzn.to/4qfaiMU' // Fallback - product not in database yet
 
   return (
     <div className="min-h-screen bg-gray-50">

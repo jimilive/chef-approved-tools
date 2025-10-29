@@ -28,7 +28,7 @@ export default async function ChefApprovedKitchenKit() {
     getProductBySlug('le-creuset-signature-7-25-qt-dutch-oven'),
     getProductBySlug('john-boos-platinum-commercial-cutting-board'),
     getProductBySlug('kitchenaid-ksm8990wh'),
-    getProductBySlug('vitamix-5200'),
+    getProductBySlug('vitamix-5200-professional-blender'),
     getProductBySlug('benriner-large-mandoline'),
   ])
 
