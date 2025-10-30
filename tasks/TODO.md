@@ -59,6 +59,13 @@
 
 ## 🔥 THIS WEEK (High Priority)
 
+### Review Page Standardization (CRITICAL)
+- [ ] **Update 35 review pages to match Vitamix review standard**
+  - Gold standard: `/app/reviews/vitamix-5200-professional-blender/page.tsx`
+  - Match: style, layout, content sections, affiliate patterns, schema markup
+  - Target: Lighthouse 95+ scores on all pages
+  - Pattern: Affiliate Pattern 1 from `.clauderc`
+
 ### Quick Marketing Wins (< 2 hours)
 - [ ] Apply to **Williams Sonoma** affiliate program (10 min)
 - [ ] Apply to **Sur La Table** affiliate program (10 min)
