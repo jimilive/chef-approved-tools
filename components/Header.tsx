@@ -166,21 +166,6 @@ export default function Header() {
           )}
         </nav>
       </header>
-
-      {/* Affiliate Disclosure Banner */}
-      <aside className="bg-gray-100 border-b border-gray-300 px-4 py-2 relative z-30" aria-label="Affiliate disclosure">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-gray-800 text-xs leading-tight text-center">
-            We earn from qualifying purchases as Amazon Associates.{' '}
-            <a
-              href="/disclosure"
-              className="text-orange-700 hover:text-orange-900 font-medium underline ml-1"
-            >
-              Full affiliate disclosure
-            </a>
-          </p>
-        </div>
-      </aside>
     </>
   )
 }

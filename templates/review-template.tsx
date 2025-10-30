@@ -10,6 +10,7 @@ import {
   ReviewHero,
   TestingResultsGrid,
   PerformanceAnalysis,
+  ComparisonTable,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -18,12 +19,16 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 
-// Import custom sections
-import SafetySection from '@/components/review/custom/SafetySection'
-import CompatibilityGuide from '@/components/review/custom/CompatibilityGuide'
+// Import custom sections if needed (uncomment as needed):
+// import SafetySection from '@/components/review/custom/SafetySection'
+// import CompatibilityGuide from '@/components/review/custom/CompatibilityGuide'
+// import SizingGuide from '@/components/review/custom/SizingGuide'
 
-// Import review data
-import { reviewData } from './benriner-large-mandoline-data'
+// NOTE: If your product has multiple size options (e.g., Large vs Original, 3" vs 4"),
+// use the SizeSelector component at CTAs. See Benriner review for reference implementation.
+
+// Import your review data
+import { reviewData } from './[PRODUCT_SLUG]-data'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -70,16 +75,14 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default async function BenrinerLargeMandolineReview() {
+export default async function [PRODUCT_NAME]ReviewPage() {
   // Get product data from Supabase
   const product = await getProductBySlug(reviewData.productSlug)
 
-  // Merge Supabase data with legacy data (Supabase takes priority, but preserve legacy pros/cons if Supabase is empty)
+  // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = product ? {
     ...reviewData.legacyProductData,
     ...product,
-    pros: product.pros && product.pros.length > 0 ? product.pros : reviewData.legacyProductData.pros,
-    cons: product.cons && product.cons.length > 0 ? product.cons : reviewData.legacyProductData.cons,
     affiliateLinks: product.affiliateLinks && product.affiliateLinks.length > 0
       ? product.affiliateLinks
       : reviewData.legacyProductData.affiliateLinks
@@ -100,8 +103,11 @@ export default async function BenrinerLargeMandolineReview() {
     name: productData.name,
     description: productData.expertOpinion,
     brand: productData.brand,
+    sku: productData.sku,
+    gtin13: productData.gtin13,
     rating: productData.expertRating,
     reviewCount: 1,
+    inStock: productData.inStock,
     url: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
   })
 
@@ -156,33 +162,9 @@ export default async function BenrinerLargeMandolineReview() {
             tierBadge={reviewData.hero.tierBadge}
             verdict={reviewData.hero.verdict}
             verdictStrong={reviewData.hero.verdictStrong}
-            customCTA={
-              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
-                <SizeSelector
-                  title="Choose Your Size:"
-                  options={[
-                    {
-                      id: 'large',
-                      label: 'Large',
-                      description: 'Professional size, handles big vegetables. Includes hand guard.',
-                      affiliateUrl: affiliateUrl,
-                      ctaId: 'hero-cta-large'
-                    },
-                    {
-                      id: 'medium',
-                      label: 'Original',
-                      description: 'Compact size with 3 julienne blade inserts. Includes hand guard.',
-                      affiliateUrl: 'https://amzn.to/4hG8jO6',
-                      ctaId: 'hero-cta-medium'
-                    }
-                  ]}
-                  defaultSize="large"
-                  ctaText={reviewData.hero.ctaText || 'View on Amazon →'}
-                  ctaPosition="above_fold"
-                  showDisclosure={true}
-                />
-              </div>
-            }
+            ctaUrl={affiliateUrl}
+            ctaText={reviewData.hero.ctaText}
+            ctaSubtext={reviewData.hero.ctaSubtext}
           />
 
           {/* SECTION 2: TESTING RESULTS */}
@@ -200,17 +182,23 @@ export default async function BenrinerLargeMandolineReview() {
             sections={reviewData.performanceAnalysis.sections}
           />
 
-          {/* CUSTOM SECTION: SAFETY - Critical for mandoline */}
+          {/* OPTIONAL CUSTOM SECTIONS - Add between standard sections as needed */}
+          {/* Example:
           <SafetySection
             title="Safety: Respect the Blade"
             warnings={reviewData.safety.warnings}
             guidelines={reviewData.safety.guidelines}
           />
+          */}
 
-          {/* CUSTOM SECTION: COMPATIBILITY GUIDE - Vegetable guide */}
-          <CompatibilityGuide
-            title="What Works Best: Vegetable Compatibility Guide"
-            categories={reviewData.compatibility.categories}
+          {/* SECTION 4: COMPARISON TABLE */}
+          <ComparisonTable
+            title={reviewData.comparison.title}
+            introText={reviewData.comparison.introText}
+            mainProductName={reviewData.comparison.mainProductName}
+            competitor1Name={reviewData.comparison.competitor1Name}
+            competitor2Name={reviewData.comparison.competitor2Name}
+            rows={reviewData.comparison.rows}
           />
 
           {/* SECTION 5: PROS & CONS */}
@@ -231,27 +219,13 @@ export default async function BenrinerLargeMandolineReview() {
             considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
           />
 
-          {/* Size considerations box */}
-          {reviewData.whoShouldBuy.sizing && (
-            <div className="bg-white rounded-2xl px-6 pt-0 pb-12 md:px-12 shadow-sm mb-6 -mt-6">
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
-                <h4 className="text-base font-semibold text-amber-900 mb-3 mt-0">💡 {reviewData.whoShouldBuy.sizing.title}</h4>
-                {reviewData.whoShouldBuy.sizing.options.map((option, index) => (
-                  <p key={index} className={`text-sm text-amber-900 ${index < reviewData.whoShouldBuy.sizing.options.length - 1 ? 'mb-2' : 'mb-0'}`}>
-                    <strong>{option.name}:</strong> {option.note}
-                  </p>
-                ))}
-              </div>
-            </div>
-          )}
-
           {/* SECTION 7: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 8: WHERE TO BUY */}
+          {/* SECTION 8: WHERE TO BUY (Custom inline section) */}
           <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
             <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
               {reviewData.whereToBuy.title}
@@ -261,36 +235,33 @@ export default async function BenrinerLargeMandolineReview() {
               {reviewData.whereToBuy.introText}
             </p>
 
-            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
-              <div className="flex flex-col gap-4">
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-                  <p className="text-sm text-slate-600 mb-4">Prime shipping, verified reviews, easy returns</p>
+            <div className="space-y-4">
+              {reviewData.whereToBuy.retailers.map((retailer, index) => (
+                <div
+                  key={index}
+                  className={`border border-gray-200 rounded-xl p-6 ${retailer.highlighted ? 'bg-orange-50' : ''}`}
+                >
+                  <div className="flex flex-col gap-4">
+                    <div className="text-center">
+                      <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">{retailer.name}</h3>
+                      <p className="text-sm text-slate-600 m-0">{retailer.description}</p>
+                    </div>
+                    <CTAVisibilityTracker ctaId={retailer.ctaId} position="mid_article">
+                      <a
+                        href={retailer.url === '[AFFILIATE_URL]' ? affiliateUrl : retailer.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={retailer.highlighted
+                          ? "inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap w-full text-center"
+                          : "inline-block border-2 border-orange-600 text-orange-700 hover:bg-orange-600 hover:text-white font-semibold px-8 py-3 rounded-lg text-base transition-all whitespace-nowrap w-full text-center"
+                        }
+                      >
+                        {retailer.ctaText}
+                      </a>
+                    </CTAVisibilityTracker>
+                  </div>
                 </div>
-                <SizeSelector
-                  title="Choose Your Size:"
-                  options={[
-                    {
-                      id: 'large',
-                      label: 'Large',
-                      description: 'Professional size, handles big vegetables. Includes hand guard.',
-                      affiliateUrl: affiliateUrl,
-                      ctaId: 'where-to-buy-large'
-                    },
-                    {
-                      id: 'medium',
-                      label: 'Original',
-                      description: 'Compact size with 3 julienne blade inserts. Includes hand guard.',
-                      affiliateUrl: 'https://amzn.to/4hG8jO6',
-                      ctaId: 'where-to-buy-medium'
-                    }
-                  ]}
-                  defaultSize="large"
-                  ctaText="View on Amazon →"
-                  ctaPosition="mid_article"
-                  showDisclosure={true}
-                />
-              </div>
+              ))}
             </div>
 
             <p className="text-sm text-slate-500 mt-6 italic">
@@ -311,33 +282,8 @@ export default async function BenrinerLargeMandolineReview() {
           <BottomLineSection
             title={reviewData.bottomLine.title}
             paragraphs={reviewData.bottomLine.paragraphs}
-            customCTA={
-              <div className="bg-white rounded-xl p-6">
-                <SizeSelector
-                  title="Choose Your Size:"
-                  options={[
-                    {
-                      id: 'large',
-                      label: 'Large',
-                      description: 'Professional size, handles big vegetables. Includes hand guard.',
-                      affiliateUrl: affiliateUrl,
-                      ctaId: 'bottom-line-large'
-                    },
-                    {
-                      id: 'medium',
-                      label: 'Original',
-                      description: 'Compact size with 3 julienne blade inserts. Includes hand guard.',
-                      affiliateUrl: 'https://amzn.to/4hG8jO6',
-                      ctaId: 'bottom-line-medium'
-                    }
-                  ]}
-                  defaultSize="large"
-                  ctaText={reviewData.bottomLine.ctaText || 'View on Amazon →'}
-                  ctaPosition="final_cta"
-                  showDisclosure={true}
-                />
-              </div>
-            }
+            ctaUrl={affiliateUrl}
+            ctaText={reviewData.bottomLine.ctaText}
           />
 
           {/* SECTION 11: RELATED PRODUCTS */}

@@ -192,10 +192,10 @@ export default async function VitamixReviewPage() {
           </div>
 
         {/* SECTION 1: TOP SECTION */}
-        <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+        <div className="bg-white rounded-2xl px-6 pt-6 pb-12 shadow-sm mb-6">
           {/* FTC Disclosure */}
           <div className="bg-amber-100 border-l-[3px] border-amber-500 px-4 py-3 text-[13px] text-amber-900 mb-8 rounded">
-            <strong>Disclosure:</strong> This page contains affiliate links. As an Amazon Associate, I earn from qualifying purchases at no additional cost to you. All recommendations are based on my 24 years of professional kitchen experience.
+            <strong>Disclosure:</strong> This page contains affiliate links. As an Amazon Associate, I earn from qualifying purchases at no additional cost to you. All recommendations are based on my 24 years of professional kitchen experience. <Link href="/disclosure" className="text-orange-700 font-semibold hover:underline">Full disclosure policy</Link>
           </div>
 
           {/* Title */}
@@ -204,17 +204,17 @@ export default async function VitamixReviewPage() {
           </h1>
 
           {/* Meta Row */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center pb-5 border-b border-gray-200 mb-4 gap-4">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-amber-500 rounded-full flex items-center justify-center text-2xl">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-5 border-b border-gray-200 mb-4 gap-3">
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-amber-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
                 👨‍🍳
               </div>
-              <div>
-                <div className="font-semibold text-slate-900 text-base">Scott Bradley</div>
-                <div className="text-sm text-slate-600">Professional Chef • 24 Years in Professional Kitchens</div>
+              <div className="min-w-0">
+                <div className="font-semibold text-slate-900 text-sm sm:text-base">Scott Bradley</div>
+                <div className="text-xs sm:text-sm text-slate-600 truncate">Professional Chef • 24 Years in Professional Kitchens</div>
               </div>
             </div>
-            <div className="flex items-center gap-2 bg-orange-50 px-4 py-2 rounded-lg border border-orange-200">
+            <div className="flex items-center gap-2 bg-orange-50 px-4 py-2 rounded-lg border border-orange-200 flex-shrink-0">
               <div className="text-xl font-bold text-orange-700">4.8</div>
               <div className="text-amber-500 text-base">★★★★☆</div>
             </div>
@@ -247,7 +247,8 @@ export default async function VitamixReviewPage() {
                 View on Amazon →
               </a>
             </CTAVisibilityTracker>
-            <p className="text-white/90 text-[15px] m-0">Check current pricing and availability</p>
+            <p className="text-white/90 text-[15px] m-0 mb-2">Check current pricing and availability</p>
+            <p className="text-white/70 text-xs italic m-0">*As an Amazon Associate, I earn from qualifying purchases</p>
           </div>
         </div>
 
@@ -735,8 +736,8 @@ export default async function VitamixReviewPage() {
 
           <div className="space-y-4">
             <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div>
+              <div className="flex flex-col gap-4">
+                <div className="text-center">
                   <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
                   <p className="text-sm text-slate-600 m-0">Prime shipping, verified reviews, easy returns</p>
                 </div>
@@ -745,17 +746,18 @@ export default async function VitamixReviewPage() {
                     href={affiliateUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap"
+                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap w-full text-center"
                   >
                     View on Amazon →
                   </a>
                 </CTAVisibilityTracker>
+                <p className="text-xs text-slate-500 italic text-center m-0">*As an Amazon Associate, I earn from qualifying purchases</p>
               </div>
             </div>
 
             <div className="border border-gray-200 rounded-xl p-6">
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div>
+              <div className="flex flex-col gap-4">
+                <div className="text-center">
                   <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Vitamix Direct</h3>
                   <p className="text-sm text-slate-600 m-0">Factory direct, full warranty, occasional promotions</p>
                 </div>
@@ -764,11 +766,12 @@ export default async function VitamixReviewPage() {
                     href="https://www.anrdoezrs.net/links/101557027/type/dlg/sid/7745121/https://www.vitamix.com/us/en_us/products/5200-standard-getting-started"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block border-2 border-orange-600 text-orange-700 hover:bg-orange-600 hover:text-white font-semibold px-8 py-3 rounded-lg text-base transition-all whitespace-nowrap"
+                    className="inline-block border-2 border-orange-600 text-orange-700 hover:bg-orange-600 hover:text-white font-semibold px-8 py-3 rounded-lg text-base transition-all whitespace-nowrap w-full text-center"
                   >
                     Visit Vitamix.com →
                   </a>
                 </CTAVisibilityTracker>
+                <p className="text-xs text-slate-500 italic text-center m-0">*As an Amazon Associate, I earn from qualifying purchases</p>
               </div>
             </div>
           </div>
@@ -836,6 +839,7 @@ export default async function VitamixReviewPage() {
                   View Current Pricing on Amazon →
                 </a>
               </CTAVisibilityTracker>
+              <p className="text-white/70 text-xs italic mt-3 m-0">*As an Amazon Associate, I earn from qualifying purchases</p>
             </div>
           </div>
         </div>
