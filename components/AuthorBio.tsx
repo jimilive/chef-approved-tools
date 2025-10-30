@@ -22,7 +22,7 @@ export default function AuthorBio({ variant = 'full', showImage = true }: Author
         )}
         <div>
           <h4 className="font-bold text-slate-900">Scott Bradley</h4>
-          <p className="text-sm text-gray-600">Professional Chef, 45 Years Experience</p>
+          <p className="text-sm text-gray-600">Professional Chef, 24 Years Professional</p>
         </div>
       </div>
     )
@@ -79,11 +79,7 @@ export default function AuthorBio({ variant = 'full', showImage = true }: Author
             Culinary Arts program with over 24 years in professional kitchens.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4 text-sm">
-            <div className="bg-white rounded-lg p-3 text-center">
-              <div className="font-bold text-orange-600">40 Years</div>
-              <div className="text-gray-600">Cooking Experience</div>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4 text-sm">
             <div className="bg-white rounded-lg p-3 text-center">
               <div className="font-bold text-orange-600">24 Years</div>
               <div className="text-gray-600">Professional Kitchens</div>

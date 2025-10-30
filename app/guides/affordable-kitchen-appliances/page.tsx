@@ -5,6 +5,9 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers';
 
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Budget Kitchen Appliances 2025: What Works',
   description: 'Affordable kitchen appliances that work: Budget-friendly blenders, mixers tested by a professional chef. Restaurant quality without premium price.',

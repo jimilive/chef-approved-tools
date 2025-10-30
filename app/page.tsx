@@ -9,6 +9,9 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { getProductsBySlugs, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Chef Approved Tools: Restaurant-Tested Gear',
   description: 'Equipment tested in professional kitchens or in my apartment. Honest reviews, real testing, zero lab conditions. Knives, cookware, appliances that survive.',

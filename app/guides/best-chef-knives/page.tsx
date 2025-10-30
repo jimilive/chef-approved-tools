@@ -7,6 +7,9 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
+// Force dynamic rendering since we fetch from Supabase
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Best Chef Knives 2025: Expert Buying Guide',
   description: 'Best chef knives 2025: Professional chef reviews from 24 years experience. German workhorses to Japanese precision. Real restaurant kitchen testing.',

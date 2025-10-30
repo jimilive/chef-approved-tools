@@ -104,14 +104,14 @@ export default function BudgetVsPremiumMagnet({
         </h2>
 
         <p className={`text-lg mb-4 ${variant === 'sidebar' ? 'text-gray-700' : 'text-gray-300'}`}>
-          My daily workhorse tools after 45 years of cooking
+          My daily workhorse tools from 24 years in professional kitchens
         </p>
 
         {/* Trust indicators */}
         <div className="flex items-center justify-center gap-4 text-sm mb-6">
           <div className="flex items-center gap-1">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-            <span className={variant === 'sidebar' ? 'text-gray-600' : 'text-gray-400'}>40 Years Cooking Experience</span>
+            <span className={variant === 'sidebar' ? 'text-gray-600' : 'text-gray-400'}>24 Years Professional</span>
           </div>
           <div className="flex items-center gap-1">
             <TrendingUp className="w-4 h-4 text-green-400" />

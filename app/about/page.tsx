@@ -175,7 +175,7 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">
               About Scott Bradley
             </h1>
-            <p className="text-xl text-slate-600">Professional Chef with 45 Years Cooking Experience (24 Years Professional)</p>
+            <p className="text-xl text-slate-600">Professional Chef • 24 Years Professional Kitchen Experience</p>
           </div>
 
           <div className="prose prose-lg max-w-none">
