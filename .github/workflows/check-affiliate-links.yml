@@ -79,17 +79,34 @@ jobs:
 
           while IFS= read -r link; do
             # Test with proper browser headers to avoid bot detection
-            status=$(curl -s -o /dev/null -w "%{http_code}" -L "$link" \
+            # Capture both status code AND final redirect URL
+            response=$(curl -s -o /dev/null -w "%{http_code}|%{url_effective}" -L "$link" \
               -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
               -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
               -H "Accept-Language: en-US,en;q=0.9" \
               --max-time 15)
 
-            if [ "$status" -eq 200 ] || [ "$status" -ge 300 ] && [ "$status" -lt 400 ]; then
-              echo "✅ $link - HTTP $status"
-              ((working_count++))
+            status=$(echo "$response" | cut -d'|' -f1)
+            final_url=$(echo "$response" | cut -d'|' -f2)
+
+            # Check if status is good
+            if [ "$status" -eq 200 ] || ([ "$status" -ge 300 ] && [ "$status" -lt 400 ]); then
+              # Now check WHERE it redirected to
+              # Flag as broken if it goes to Amazon homepage or generic pages
+              if [[ "$final_url" =~ ^https?://www\.amazon\.com/?(\?|$) ]] || \
+                 [[ "$final_url" =~ ^https?://www\.amazon\.com/ref= ]] || \
+                 [[ "$final_url" == "https://www.amazon.com/" ]]; then
+                echo "❌ $link - HTTP $status - REDIRECTS TO HOMEPAGE"
+                echo "   Final URL: $final_url"
+                broken_links="$broken_links\n- $link → AMAZON HOMEPAGE (broken ASIN)"
+                ((broken_count++))
+              else
+                echo "✅ $link - HTTP $status"
+                echo "   → $final_url"
+                ((working_count++))
+              fi
             else
-              echo "❌ $link - HTTP $status - BROKEN"
+              echo "❌ $link - HTTP $status - BAD STATUS"
               broken_links="$broken_links\n- $link (HTTP $status)"
               ((broken_count++))
             fi
@@ -157,9 +174,15 @@ jobs:
                   <li>Log into Amazon Associates at <a href="https://affiliate-program.amazon.com">https://affiliate-program.amazon.com</a></li>
                   <li>Verify these products still exist and are available</li>
                   <li>Generate fresh affiliate links if needed using tag: <code>chefapprovedt-20</code></li>
-                  <li>Update the affected review pages in the repository</li>
-                  <li>Test the updated links manually before committing</li>
+                  <li>Update links in Supabase using the scripts in <code>/scripts</code> folder</li>
+                  <li>Test the updated links manually before deploying</li>
                 </ol>
+                <p><strong>Common Issues:</strong></p>
+                <ul style="margin: 5px 0; padding-left: 20px;">
+                  <li><strong>AMAZON HOMEPAGE</strong> - The ASIN in the link is invalid/discontinued. Create a new affiliate link.</li>
+                  <li><strong>HTTP 404/410</strong> - Product no longer available. Find replacement product.</li>
+                  <li><strong>HTTP 403/429</strong> - Amazon rate limiting. Links are likely fine, will recheck tomorrow.</li>
+                </ul>
               </div>
 
               <div class="footer">
@@ -168,7 +191,8 @@ jobs:
                   <li>This check runs daily at 6 AM Pacific (2 PM UTC)</li>
                   <li>Fetches all affiliate links from Supabase products database</li>
                   <li>Uses proper browser headers to avoid Amazon's bot detection</li>
-                  <li>Tests both HTTP status codes and redirect behavior</li>
+                  <li>Tests HTTP status codes AND verifies final redirect URL</li>
+                  <li>Flags links that redirect to Amazon homepage (broken ASIN)</li>
                 </ul>
                 <p style="margin-top: 15px;"><em>This email was sent automatically by the Chef Approved Tools affiliate link checker workflow.</em></p>
               </div>
