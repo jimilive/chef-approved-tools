@@ -25,34 +25,20 @@ export const metadata: Metadata = {
 const topKnives = [
   {
     id: 1,
-    name: 'Wüsthof Classic Ikon 8"',
-    slug: 'wusthof-classic-ikon-16-piece',
-    image: '🔪', // Placeholder
-    rating: 4.9,
-    price: 159,
-    bestFor: 'The Professional Workhorse',
-    tag: 'Top Pick',
-    tagColor: 'bg-orange-500',
-    affiliateUrl: 'https://amzn.to/3Zsl34V',
-    quickPros: ['Superior edge retention', 'Perfect balance', 'Lifetime quality'],
-    quickCons: ['Premium price', 'Requires honing']
-  },
-  {
-    id: 2,
     name: 'Victorinox Fibrox 8"',
     slug: 'victorinox-fibrox-8-inch-chefs-knife',
     image: '🔪',
     rating: 4.8,
     price: 45,
     bestFor: 'Best Value for Money',
-    tag: 'Best Value',
-    tagColor: 'bg-green-500',
+    tag: 'Top Pick',
+    tagColor: 'bg-orange-500',
     affiliateUrl: 'https://amzn.to/3U4PsT1',
     quickPros: ['Incredible value', 'Restaurant-proven', 'Easy to sharpen'],
     quickCons: ['Basic handle', 'Less prestige']
   },
   {
-    id: 3,
+    id: 2,
     name: 'Victorinox Fibrox 10"',
     slug: 'victorinox-fibrox-10-inch-chefs-knife',
     image: '🔪',
@@ -66,7 +52,7 @@ const topKnives = [
     quickCons: ['Too big for some', 'Requires counter space']
   },
   {
-    id: 4,
+    id: 3,
     name: 'Victorinox 4" Paring',
     slug: 'victorinox-4-inch-paring-knife',
     image: '🔪',
@@ -80,7 +66,7 @@ const topKnives = [
     quickCons: ['Not for main prep', 'Basic construction']
   },
   {
-    id: 5,
+    id: 4,
     name: 'Victorinox Granton Boning',
     slug: 'victorinox-granton-edge-boning-knife',
     image: '🔪',
@@ -98,7 +84,6 @@ const topKnives = [
 export default async function BestChefKnivesPage() {
   // Fetch products from Supabase
   const products = await Promise.all([
-    getProductBySlug('wusthof-classic-ikon-16-piece'),
     getProductBySlug('victorinox-fibrox-8-inch-chefs-knife'),
     getProductBySlug('victorinox-fibrox-10-inch-chefs-knife'),
     getProductBySlug('victorinox-4-inch-paring-knife'),
@@ -110,7 +95,6 @@ export default async function BestChefKnivesPage() {
   if (products[1]) topKnives[1].affiliateUrl = getPrimaryAffiliateLink(products[1])
   if (products[2]) topKnives[2].affiliateUrl = getPrimaryAffiliateLink(products[2])
   if (products[3]) topKnives[3].affiliateUrl = getPrimaryAffiliateLink(products[3])
-  if (products[4]) topKnives[4].affiliateUrl = getPrimaryAffiliateLink(products[4])
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -162,7 +146,7 @@ export default async function BestChefKnivesPage() {
 
         {/* Top Picks Comparison Table - THE CONVERSION ENGINE */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">Quick Comparison: Top 5 Chef Knives</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Quick Comparison: Top 4 Chef Knives</h2>
 
           {/* Desktop Table */}
           <div className="hidden md:block bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
@@ -296,7 +280,7 @@ export default async function BestChefKnivesPage() {
 
         {/* Detailed Mini-Reviews Section */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">The 5 Best Chef Knives in Detail</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-8">The 4 Best Chef Knives in Detail</h2>
 
           <div className="space-y-8">
             {topKnives.map((knife, index) => (
@@ -333,25 +317,20 @@ export default async function BestChefKnivesPage() {
                     <div className="mb-4">
                       {knife.id === 1 && (
                         <p className="text-slate-700 leading-relaxed">
-                          The gold standard of professional kitchens. I used this daily for 2 years at Mellow Mushroom during our highest volume periods. The German steel holds an edge through hundreds of prep hours, and the full tang construction provides perfect balance for precision work. The handle ergonomics reduce wrist fatigue during marathon prep sessions. This is the knife I reach for when I need absolute reliability.
+                          The best value in professional cutlery, hands down. Swiss precision at a fraction of premium knife costs. I&apos;ve watched line cooks abuse these knives at Purple Cafe for years—they just keep performing. The Fibrox handle provides excellent grip even when wet, which is critical in a fast-paced kitchen. After 15 years of professional use, this is my daily driver. If you&apos;re on a budget or just starting out, this is your knife.
                         </p>
                       )}
                       {knife.id === 2 && (
                         <p className="text-slate-700 leading-relaxed">
-                          The best value in professional cutlery, hands down. Swiss precision at a fraction of premium knife costs. I&apos;ve watched line cooks abuse these knives at Purple Cafe for years—they just keep performing. The Fibrox handle provides excellent grip even when wet, which is critical in a fast-paced kitchen. If you&apos;re on a budget or just starting out, this is your knife.
+                          The 10-inch version offers more blade for large-volume prep work. Perfect for breaking down proteins and slicing through mountains of vegetables. The longer blade length increases efficiency—you cover more cutting surface per stroke. This was my go-to for prep shifts where speed mattered. Not ideal for small home kitchens, but a professional&apos;s dream for high-volume operations.
                         </p>
                       )}
                       {knife.id === 3 && (
                         <p className="text-slate-700 leading-relaxed">
-                          The 10-inch version offers more blade for large-volume prep work. Perfect for breaking down proteins and slicing through mountains of vegetables. The longer blade length increases efficiency—you cover more cutting surface per stroke. This was my go-to for prep shifts where speed mattered. Not ideal for small home kitchens, but a professional&apos;s dream.
-                        </p>
-                      )}
-                      {knife.id === 4 && (
-                        <p className="text-slate-700 leading-relaxed">
                           Every chef needs a great paring knife, and this Victorinox delivers professional performance at an unbeatable price. Perfect for detail work, peeling, and small tasks where an 8-inch blade is overkill. I keep two of these in my kit—one for savory, one for fruit work to avoid flavor transfer. At $12, there&apos;s no excuse not to have a sharp paring knife.
                         </p>
                       )}
-                      {knife.id === 5 && (
+                      {knife.id === 4 && (
                         <p className="text-slate-700 leading-relaxed">
                           If you break down whole proteins, you need a dedicated boning knife. The flexible blade and Granton edge (those oval indentations) prevent meat from sticking during fabrication. I&apos;ve used this to break down hundreds of chickens, trim beef, and debone fish. It&apos;s a specialized tool, but if you do meat work regularly, it&apos;s essential.
                         </p>
@@ -440,7 +419,7 @@ export default async function BestChefKnivesPage() {
             <div className="bg-white rounded-xl p-6 shadow-md">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Edge Retention: Real-World Performance</h3>
               <p className="text-slate-700 leading-relaxed">
-                Edge retention determines how often you&apos;ll need to sharpen. In professional kitchens, I&apos;d hone my Wüsthof daily and sharpen monthly with heavy use. The Victorinox needed sharpening every 2-3 weeks under the same conditions. Premium knives hold edges longer, but the difference is measured in weeks, not months. More important than steel composition is proper honing technique—a $500 knife with poor maintenance performs worse than a $50 knife that&apos;s properly maintained.
+                Edge retention determines how often you&apos;ll need to sharpen. In professional kitchens, the Victorinox needed sharpening every 2-3 weeks with heavy daily use. Premium German knives might last a month between sharpenings, but the difference is measured in weeks, not months. More important than steel composition is proper honing technique—a $500 knife with poor maintenance performs worse than a $50 Victorinox that&apos;s properly honed daily and sharpened regularly.
               </p>
             </div>
 
@@ -454,7 +433,7 @@ export default async function BestChefKnivesPage() {
             <div className="bg-white rounded-xl p-6 shadow-md">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Balance: The Feel Test</h3>
               <p className="text-slate-700 leading-relaxed">
-                A well-balanced knife should feel like an extension of your hand. The balance point should be right at the bolster (where the blade meets the handle). Hold the knife by the handle in a pinch grip—if it tips forward or backward, the balance is off. Full-tang construction (blade extends through the entire handle) provides better balance than partial tang. This is why I recommend the Wüsthof and Victorinox—both have excellent balance that reduces hand fatigue during extended use.
+                A well-balanced knife should feel like an extension of your hand. The balance point should be right at the bolster (where the blade meets the handle). Hold the knife by the handle in a pinch grip—if it tips forward or backward, the balance is off. Full-tang construction (blade extends through the entire handle) provides better balance than partial tang. The Victorinox knives recommended here all have excellent full-tang construction and balance that reduces hand fatigue during extended use.
               </p>
             </div>
 
@@ -489,7 +468,7 @@ export default async function BestChefKnivesPage() {
             <div className="bg-white rounded-xl p-6 shadow-md">
               <h3 className="font-bold text-slate-900 mb-2">Is a $150 knife really better than a $40 knife?</h3>
               <p className="text-slate-700 text-sm">
-                Yes and no. A $150 Wüsthof will hold an edge longer, have better balance, and last decades with proper care. But a $40 Victorinox with proper maintenance outperforms a neglected $500 knife. The difference is incremental, not transformational. For professional cooks who use knives 8+ hours daily, premium knives justify the cost. For home cooks, Victorinox offers 90% of the performance at 25% of the cost.
+                Yes and no. A $150 premium knife will hold an edge slightly longer and may have fancier handle materials. But a $40 Victorinox with proper maintenance outperforms a neglected $500 knife. The difference is incremental, not transformational. After 15 years of professional use, the Victorinox Fibrox 8" is my daily driver—it simply works. For home cooks, Victorinox offers 90% of premium knife performance at 25% of the cost.
               </p>
             </div>
 
@@ -538,10 +517,10 @@ export default async function BestChefKnivesPage() {
             <Award className="w-16 h-16 mx-auto mb-4" />
             <h3 className="text-3xl font-bold mb-4">Ready to Upgrade Your Kitchen?</h3>
             <p className="text-lg mb-6 max-w-2xl mx-auto">
-              Start with the Wüsthof Classic Ikon for premium performance or the Victorinox Fibrox for unbeatable value. Both are restaurant-proven and will transform your cooking.
+              Start with the Victorinox Fibrox 8" for unbeatable value. Restaurant-proven performance at a fraction of premium knife costs. This is the knife professional chefs actually use.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <CTAVisibilityTracker ctaId="guide-best-chef-knives-final-cta-wusthof"
+              <CTAVisibilityTracker ctaId="guide-best-chef-knives-final-cta-victorinox-8"
 
                 merchant="amazon"
 
@@ -553,10 +532,10 @@ export default async function BestChefKnivesPage() {
                   rel="noopener noreferrer sponsored nofollow"
                   className="inline-flex items-center justify-center bg-white text-orange-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg"
                 >
-                  Get the Wüsthof (Top Pick) →
+                  Get the Victorinox 8" (Top Pick) →
                 </a>
               </CTAVisibilityTracker>
-              <CTAVisibilityTracker ctaId="guide-best-chef-knives-final-cta-victorinox"
+              <CTAVisibilityTracker ctaId="guide-best-chef-knives-final-cta-victorinox-10"
 
                 merchant="amazon"
 
@@ -568,7 +547,7 @@ export default async function BestChefKnivesPage() {
                   rel="noopener noreferrer sponsored nofollow"
                   className="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg"
                 >
-                  Get the Victorinox (Best Value) →
+                  Get the Victorinox 10" (High Volume) →
                 </a>
               </CTAVisibilityTracker>
             </div>
