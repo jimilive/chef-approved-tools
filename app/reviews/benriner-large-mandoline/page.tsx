@@ -1,15 +1,10 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Tier1Badge } from '@/components/ReviewTierBadge';
-import FTCDisclosure from '@/components/FTCDisclosure';
-import AffiliateButton from '@/components/AffiliateButton';
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
-import type { Metadata } from 'next';
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
+import Link from 'next/link'
+import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -67,25 +62,43 @@ const faqData = [
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
+  const product = await getProductBySlug('benriner-large-mandoline')
+  const productData = product || legacyProductData
+
   return {
-    title: 'Benriner Mandoline: Pro Safety & Precision',
+    title: 'Benriner Mandoline: Pro Safety & Precision | Chef Approved Tools',
     description: 'Professional chef tests Benriner mandoline after years of restaurant use. Complete review: precision slicing, safety features, durability analysis.',
-    alternates: {
-      canonical: 'https://www.chefapprovedtools.com/reviews/benriner-large-mandoline',
-    },
     openGraph: {
       title: 'Benriner Mandoline: Professional Review',
       description: 'Professional chef tests Benriner mandoline after years of restaurant use',
-      images: [generateOGImageURL({
-        title: "Benriner Large Mandoline Review",
-        rating: 4.5,
-        testingPeriod: "Years of Professional Testing",
-        tier: 1
-      })],
-      url: 'https://www.chefapprovedtools.com/reviews/benriner-large-mandoline',
-      type: 'article',
+      url: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
       siteName: 'Chef Approved Tools',
-    }
+      images: [
+        {
+          url: generateOGImageURL({
+            title: productData.name,
+            rating: productData.expertRating ?? 4.5,
+            testingPeriod: 'Years of Professional Testing',
+            tier: 1,
+          }),
+          width: 1200,
+          height: 630,
+          alt: `${productData.name} - Professional Review`,
+        },
+      ],
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Benriner Mandoline: Professional Review',
+      description: 'Professional chef tests Benriner mandoline after years of restaurant use',
+      images: [generateOGImageURL({
+        title: productData.name,
+        rating: productData.expertRating ?? 4.5,
+        testingPeriod: 'Years of Professional Testing',
+        tier: 1,
+      })],
+    },
   }
 }
 
