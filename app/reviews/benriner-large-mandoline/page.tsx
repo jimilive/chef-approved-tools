@@ -47,7 +47,7 @@ export async function generateMetadata(): Promise<Metadata> {
             title: productData.name,
             rating: productData.expertRating ?? reviewData.hero.rating,
             testingPeriod: reviewData.metadata.testingPeriod,
-            tier: reviewData.metadata.tier,
+            tier: reviewData.metadata.tier as 1 | 2 | 3,
           }),
           width: 1200,
           height: 630,
@@ -64,7 +64,7 @@ export async function generateMetadata(): Promise<Metadata> {
         title: productData.name,
         rating: productData.expertRating ?? reviewData.hero.rating,
         testingPeriod: reviewData.metadata.testingPeriod,
-        tier: reviewData.metadata.tier,
+        tier: reviewData.metadata.tier as 1 | 2 | 3,
       })],
     },
   }
@@ -128,7 +128,7 @@ export default async function BenrinerLargeMandolineReview() {
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
-        tier={reviewData.metadata.tier}
+        tier={reviewData.metadata.tier as 1 | 2 | 3}
         testingPeriod={reviewData.tracking.testingPeriod}
         rating={productData.expertRating}
         hook={reviewData.tracking.hook}
