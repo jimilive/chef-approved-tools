@@ -130,11 +130,8 @@ export default async function BenrinerLargeMandolineReview() {
     name: productData.name,
     description: productData.expertOpinion,
     brand: productData.brand,
-    sku: productData.sku,
-    gtin13: productData.gtin13,
     rating: productData.expertRating,
     reviewCount: 1,
-    inStock: productData.inStock,
     url: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
   })
 
@@ -652,233 +649,208 @@ export default async function BenrinerLargeMandolineReview() {
           </div>
         </div>
 
-      {/* Email Capture */}
-      <div className="bg-blue-50 p-8 my-8 rounded-lg border-l-4 border-blue-600">
+        {/* SECTION 8: FAQ */}
+        <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
+            Frequently Asked Questions
+          </h2>
 
-        <h3 className="mt-0 text-2xl">
-          🔥 Get My Complete Mandoline Safety & Technique Guide
-        </h3>
+          <div className="space-y-5">
+            {faqData.map((faq, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-5">
+                <h3 className="text-lg font-semibold text-slate-900 mb-3 mt-0">
+                  {faq.question}
+                </h3>
+                <div className="text-[15px] text-slate-600 leading-relaxed">
+                  <p>{faq.answer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
-        <p className="text-base leading-relaxed">
-          Download my comprehensive guide to professional mandoline use:
-        </p>
+        {/* SECTION 9: EMAIL CAPTURE - Purple Gradient */}
+        <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl px-6 pt-8 pb-8 md:px-12 shadow-lg mb-6 text-center">
+          <h2 className="text-2xl font-bold text-white mb-4">Get My Essential Kitchen Tools Guide</h2>
+          <p className="text-white/90 text-base mb-6 max-w-2xl mx-auto">
+            Join 2,500+ home cooks and professional chefs. Get my free guide: &quot;11 Tools I Use Most&quot; plus weekly equipment reviews and technique tips.
+          </p>
 
-        <ul className="my-4 text-base leading-relaxed">
-          <li>✓ Safety protocols from professional kitchens</li>
-          <li>✓ Advanced slicing techniques for perfect results</li>
-          <li>✓ Maintenance schedule for blade longevity</li>
-          <li>✓ Troubleshooting common issues</li>
-          <li>✓ Recommended cut-resistant gloves and accessories</li>
-        </ul>
-
-        <div className="text-center mt-6">
-          <a
-            href="/newsletter"
-            className="inline-block bg-blue-600 text-white px-10 py-4 no-underline rounded-md font-bold text-lg hover:bg-blue-700"
+          <form
+            action="https://chefapprovedtools.us17.list-manage.com/subscribe/post?u=YOUR_U&id=YOUR_ID"
+            method="post"
+            className="max-w-md mx-auto"
           >
-            Download Free Guide →
-          </a>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                name="EMAIL"
+                placeholder="Your email address"
+                required
+                className="flex-1 px-4 py-3 rounded-lg text-slate-900"
+              />
+              <button
+                type="submit"
+                className="bg-white text-purple-700 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Get Free Guide
+              </button>
+            </div>
+          </form>
+
+          <p className="text-white/70 text-sm mt-4">
+            Unsubscribe anytime. No spam, ever.
+          </p>
         </div>
 
-        <p className="text-xs text-gray-600 mt-4 text-center">
-          Instant delivery. No spam, ever. Unsubscribe anytime.
-        </p>
+        {/* SECTION 10: BOTTOM LINE - Purple Gradient Box */}
+        <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+          <div className="bg-gradient-to-br from-purple-700 via-purple-800 to-purple-900 rounded-xl px-10 py-10 text-white">
+            <h2 className="text-2xl font-bold text-white mb-5 leading-[1.3]">
+              The Bottom Line
+            </h2>
 
-      </div>
+            <p className="text-white/95 text-base leading-relaxed mb-5">
+              After years of professional use at Purple Café, the Benriner mandoline earned its permanent place in our prep station through consistent, reliable performance. Japanese precision engineering delivers the kind of results that justify the investment—paper-thin cucumber slices, perfectly uniform potato rounds, and clean julienne cuts that would take 70% longer by knife.
+            </p>
 
+            <p className="text-white/95 text-base leading-relaxed mb-5">
+              The blade quality is exceptional. Where budget mandolines dull within months, the Benriner maintains professional sharpness for years. The adjustment mechanism provides precise, repeatable thickness control from paper-thin to 5mm. Every aspect feels purpose-built for consistent results.
+            </p>
 
-      {/* Strong Final CTA */}
-      <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-lg my-8">
+            <p className="text-white/95 text-base leading-relaxed mb-6">
+              <strong className="text-white">The reality:</strong> This is an extremely sharp, potentially dangerous tool that demands respect and proper safety protocols. Always use the hand guard, consider cut-resistant gloves, and never rush. For those comfortable with these requirements and who cook regularly, the Benriner transforms prep efficiency.
+            </p>
 
-        <h3 className="text-white mt-0 text-2xl">
-          After Years of Professional Testing...
-        </h3>
+            <div className="border-t border-white/20 pt-6">
+              <p className="text-xl font-bold text-white mb-4">
+                Final Verdict: 4.5/5 ⭐⭐⭐⭐☆
+              </p>
+              <p className="text-white/95 text-base mb-6">
+                Professional-grade equipment at a reasonable price. Would I buy this again? Without hesitation.
+              </p>
 
-        <p className="text-lg leading-relaxed">
-          The Benriner mandoline has proven itself as professional-grade equipment that
-          delivers consistent results. Japanese precision engineering, ultra-sharp blade,
-          and years of reliable performance make this the mandoline professional kitchens trust.
-        </p>
-
-        <div className="bg-white/20 p-5 my-5 rounded-md">
-          <p className="m-0 text-xl font-bold">
-            Final Rating: ⭐⭐⭐⭐⭐ 4.5/5
-          </p>
-          <ul className="my-4 ml-5 text-base leading-relaxed">
-            <li>Blade Sharpness & Quality: 5/5</li>
-            <li>Precision & Consistency: 5/5</li>
-            <li>Durability: 5/5</li>
-            <li>Safety Features: 4/5</li>
-          </ul>
-        </div>
-
-        <p className="text-base mb-0">
-          <strong>Would I buy this again?</strong> Without hesitation. Professional
-          equipment that delivers professional results.
-        </p>
-
-      </div>
-
-      <div className="bg-yellow-100 p-8 my-8 rounded-lg text-center border-[3px] border-yellow-400">
-
-        <h3 className="mt-0 text-[28px]">
-          Ready for Professional-Grade Slicing?
-        </h3>
-
-        <p className="text-lg my-5">
-          Check current price and transform your prep work:
-        </p>
-
-        <CTAVisibilityTracker
-          ctaId={`review-${productData.slug}-final_cta`}
-          position="final_cta"
-          productSlug={productData.slug}
-          merchant="amazon"
-        >
-          <AffiliateButton
-            href={affiliateUrl}
-            merchant="amazon"
-            product={productData.slug}
-            position="final_cta"
-            variant="primary"
-          >
-            View on Amazon →
-          </AffiliateButton>
-        </CTAVisibilityTracker>
-
-      </div>
-
-      {/* Related Products */}
-      <h2>Complete Your Professional Prep Setup</h2>
-
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5 my-8">
-
-        <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
-          <h4 className="mt-0">John Boos Cutting Board</h4>
-          <p>The prep surface that matches this mandoline&apos;s precision. Perfect platform
-          for uniform slicing.</p>
-          <p className="text-sm text-gray-600">
-            <strong>After 18 years:</strong> Still my daily workhorse.
-          </p>
-          <a
-            href="/reviews/john-boos-platinum-commercial-cutting-board"
-            className="inline-block bg-green-600 text-white px-5 py-2.5 no-underline rounded mt-2.5 font-bold hover:bg-green-700"
-          >
-            Read Full Review →
-          </a>
-        </div>
-
-        <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
-          <h4 className="mt-0">Victorinox 8&quot; Chef Knife</h4>
-          <p>The knife I use alongside this mandoline. Professional quality for detailed work.</p>
-          <p className="text-sm text-gray-600">
-            <strong>45 years cooking:</strong> My go-to knife.
-          </p>
-          <a
-            href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
-            className="inline-block bg-green-600 text-white px-5 py-2.5 no-underline rounded mt-2.5 font-bold hover:bg-green-700"
-          >
-            Read Full Review →
-          </a>
-        </div>
-
-        <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
-          <h4 className="mt-0">OXO Bench Scraper</h4>
-          <p>Perfect for gathering sliced vegetables from mandoline. Essential prep tool.</p>
-          <p className="text-sm text-gray-600">
-            <strong>Most-used tool:</strong> In my kitchen.
-          </p>
-          <a
-            href="/reviews/oxo-good-grips-bench-scraper"
-            className="inline-block bg-green-600 text-white px-5 py-2.5 no-underline rounded mt-2.5 font-bold hover:bg-green-700"
-          >
-            Read Full Review →
-          </a>
-        </div>
-
-      </div>
-
-      {/* See complete professional kitchen starter kit */}
-      <p className="text-base leading-relaxed text-center my-8">
-        See our complete <a href="/kitchen-bundle">professional kitchen starter kit</a> for
-        recommended tool combinations.
-      </p>
-
-      {/* Footer Elements */}
-      <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-600">
-        <p className="my-2.5">
-          <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
-        </p>
-        <p className="my-2.5">
-          <strong>🔍 Next Review:</strong> {new Date(new Date(productData.lastUpdated).getTime() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long'
-          })}
-        </p>
-        <p className="my-2.5">
-          <strong>💬 Questions about mandolines?</strong> <a href="/contact">Contact me</a>—I read
-          and respond to every question.
-        </p>
-      </div>
-
-      {/* Author Bio */}
-      <div className="bg-white p-6 my-8 border border-gray-300 rounded-lg grid grid-cols-[100px_1fr] gap-5 items-start">
-
-          <Image src="/images/team/head-shot-1.jpg" alt="Scott Bradley, Professional Chef" width={100} height={100} />
-        <div>
-          <h3 className="m-0 mb-2.5">About Scott Bradley</h3>
-          <p className="my-1.5 font-bold">
-            Professional Chef • 45 Years Cooking Experience
-          </p>
-          <p className="my-2.5 text-sm leading-relaxed">
-            Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiaolo, Line Lead at Feierabend. 24 years of restaurant experience.
-            A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration.
-            Equipment tested in high-volume operations serving hundreds daily.
-          </p>
-          <a href="/about" className="text-blue-600 font-bold">
-            Read more about my testing methodology →
-          </a>
-        </div>
-      </div>
-
-      {/* FAQ Section */}
-      <h2>Frequently Asked Questions</h2>
-
-      <div>
-        {faqData.map((faq, index) => (
-          <div key={index} className="my-5 p-5 bg-gray-50 rounded-md">
-            <h3>{faq.question}</h3>
-            <div>
-              <p><strong>Answer:</strong> {faq.answer}</p>
+              <CTAVisibilityTracker ctaId="bottom-line-cta" position="final_cta">
+                <a
+                  href={affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white text-purple-700 font-semibold px-10 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-md hover:shadow-lg"
+                >
+                  View on Amazon →
+                </a>
+              </CTAVisibilityTracker>
             </div>
           </div>
-        ))}
+        </div>
+
+        {/* SECTION 11: RELATED PRODUCTS - 4-Grid */}
+        <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
+            Related Professional Kitchen Equipment
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+              <div className="text-4xl mb-3">🪵</div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">
+                John Boos Cutting Board
+              </h3>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                The prep surface that matches this mandoline&apos;s precision. Perfect platform for uniform slicing.
+              </p>
+              <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800 font-semibold text-sm transition-colors">
+                Read Review →
+              </Link>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+              <div className="text-4xl mb-3">🔪</div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">
+                Victorinox 8&quot; Chef Knife
+              </h3>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                The knife I use alongside this mandoline. Professional quality for detailed work.
+              </p>
+              <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 font-semibold text-sm transition-colors">
+                Read Review →
+              </Link>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+              <div className="text-4xl mb-3">🔧</div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">
+                OXO Bench Scraper
+              </h3>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                Perfect for gathering sliced vegetables from mandoline. Essential prep tool.
+              </p>
+              <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-700 hover:text-orange-800 font-semibold text-sm transition-colors">
+                Read Review →
+              </Link>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg transition-shadow">
+              <div className="text-4xl mb-3">🧂</div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">
+                Diamond Crystal Kosher Salt
+              </h3>
+              <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                The professional standard for seasoning. Perfect for salting sliced vegetables.
+              </p>
+              <Link href="/reviews/diamond-crystal-kosher-salt" className="text-orange-700 hover:text-orange-800 font-semibold text-sm transition-colors">
+                Read Review →
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* SECTION 12: AUTHOR BIO */}
+        <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+          <div className="bg-gray-50 border border-gray-200 rounded-xl p-8">
+            <div className="flex items-start gap-6 mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-600 to-amber-500 rounded-full flex items-center justify-center text-4xl flex-shrink-0">
+                👨‍🍳
+              </div>
+              <div>
+                <h2 className="text-xl font-bold text-slate-900 mb-2 mt-0">About Scott Bradley</h2>
+                <p className="text-base text-slate-600 mb-0">
+                  Professional Chef • 24 Years in Professional Kitchens
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+              <div className="text-center p-4 bg-white rounded-lg border border-gray-200">
+                <div className="text-2xl font-bold text-orange-700">24</div>
+                <div className="text-xs text-slate-600 mt-1">Years Professional Experience</div>
+              </div>
+              <div className="text-center p-4 bg-white rounded-lg border border-gray-200">
+                <div className="text-2xl font-bold text-orange-700">5+</div>
+                <div className="text-xs text-slate-600 mt-1">Restaurants</div>
+              </div>
+              <div className="text-center p-4 bg-white rounded-lg border border-gray-200">
+                <div className="text-2xl font-bold text-orange-700">100+</div>
+                <div className="text-xs text-slate-600 mt-1">Tools Tested</div>
+              </div>
+              <div className="text-center p-4 bg-white rounded-lg border border-gray-200">
+                <div className="text-2xl font-bold text-orange-700">Tier 1</div>
+                <div className="text-xs text-slate-600 mt-1">Testing Standard</div>
+              </div>
+            </div>
+
+            <p className="text-sm text-slate-600 leading-relaxed mb-4">
+              Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom and Il Pizzaiolo, Line Lead at Feierabend. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration. Equipment tested in high-volume operations serving hundreds daily.
+            </p>
+
+            <Link href="/about" className="text-orange-700 hover:text-orange-800 font-semibold text-sm transition-colors">
+              Read more about my testing methodology →
+            </Link>
+          </div>
+        </div>
+
+        </div>
       </div>
-
-      {/* Structured Data - JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateProductSchema(productData))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema(faqData))
-        }}
-      />
-
-    </article>
+    </>
   );
 }
