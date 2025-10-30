@@ -468,7 +468,7 @@ export default async function BestChefKnivesPage() {
             <div className="bg-white rounded-xl p-6 shadow-md">
               <h3 className="font-bold text-slate-900 mb-2">Is a $150 knife really better than a $40 knife?</h3>
               <p className="text-slate-700 text-sm">
-                Yes and no. A $150 premium knife will hold an edge slightly longer and may have fancier handle materials. But a $40 Victorinox with proper maintenance outperforms a neglected $500 knife. The difference is incremental, not transformational. After 15 years of professional use, the Victorinox Fibrox 8" is my daily driver—it simply works. For home cooks, Victorinox offers 90% of premium knife performance at 25% of the cost.
+                Yes and no. A $150 premium knife will hold an edge slightly longer and may have fancier handle materials. But a $40 Victorinox with proper maintenance outperforms a neglected $500 knife. The difference is incremental, not transformational. After 15 years of professional use, the Victorinox Fibrox 8&quot; is my daily driver—it simply works. For home cooks, Victorinox offers 90% of premium knife performance at 25% of the cost.
               </p>
             </div>
 
@@ -517,7 +517,7 @@ export default async function BestChefKnivesPage() {
             <Award className="w-16 h-16 mx-auto mb-4" />
             <h3 className="text-3xl font-bold mb-4">Ready to Upgrade Your Kitchen?</h3>
             <p className="text-lg mb-6 max-w-2xl mx-auto">
-              Start with the Victorinox Fibrox 8" for unbeatable value. Restaurant-proven performance at a fraction of premium knife costs. This is the knife professional chefs actually use.
+              Start with the Victorinox Fibrox 8&quot; for unbeatable value. Restaurant-proven performance at a fraction of premium knife costs. This is the knife professional chefs actually use.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <CTAVisibilityTracker ctaId="guide-best-chef-knives-final-cta-victorinox-8"
@@ -532,7 +532,7 @@ export default async function BestChefKnivesPage() {
                   rel="noopener noreferrer sponsored nofollow"
                   className="inline-flex items-center justify-center bg-white text-orange-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg"
                 >
-                  Get the Victorinox 8" (Top Pick) →
+                  Get the Victorinox 8&quot; (Top Pick) →
                 </a>
               </CTAVisibilityTracker>
               <CTAVisibilityTracker ctaId="guide-best-chef-knives-final-cta-victorinox-10"
@@ -547,7 +547,7 @@ export default async function BestChefKnivesPage() {
                   rel="noopener noreferrer sponsored nofollow"
                   className="inline-flex items-center justify-center bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg"
                 >
-                  Get the Victorinox 10" (High Volume) →
+                  Get the Victorinox 10&quot; (High Volume) →
                 </a>
               </CTAVisibilityTracker>
             </div>
