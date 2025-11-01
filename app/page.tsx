@@ -94,9 +94,9 @@ export default function HomePage() {
                   priority
                 />
               </div>
-              <div className="absolute bottom-4 -right-6 bg-orange-600 text-white px-6 py-3 rounded-xl shadow-xl">
+              <div className="absolute bottom-4 -right-6 bg-orange-700 text-white px-6 py-3 rounded-xl shadow-xl">
                 <p className="font-bold text-lg">24 Years</p>
-                <p className="text-sm">Professional Kitchens</p>
+                <p className="text-sm font-semibold">Professional Kitchens</p>
               </div>
             </div>
           </div>
@@ -835,18 +835,18 @@ export default function HomePage() {
       </section>
 
       {/* FINAL CTA - Don't Let Them Leave Empty-Handed */}
-      <section className="py-16 bg-orange-600 text-white">
+      <section className="py-16 bg-orange-700 text-white">
         <div className="container max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Stop Guessing. Start Cooking Like a Chef.
           </h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed font-semibold">
             Get my free guide to the 11 tools that handle 99% of home cooking—tested through
             24 years of professional kitchen abuse.
           </p>
           <a
             href="#get-guide"
-            className="inline-block bg-white text-orange-600 hover:bg-orange-50 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95"
+            className="inline-block bg-white text-orange-700 hover:bg-orange-50 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95"
           >
             Get The Free Guide
           </a>
