@@ -88,6 +88,7 @@ export default function HomePage() {
                   alt="Scott Bradley - Professional Chef with 24 Years Experience"
                   width={300}
                   height={400}
+                  sizes="(max-width: 768px) 100vw, 300px"
                   className="w-full h-auto rounded-2xl"
                   priority
                 />
