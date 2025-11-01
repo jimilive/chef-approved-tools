@@ -1,9 +1,10 @@
 import Script from "next/script";
 import Link from "next/link";
 import BreadcrumbSchema, { categoryBreadcrumbs } from '@/components/BreadcrumbSchema';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker';
+import ProductCard from '@/components/ProductCard';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
-import { getProductsByCategory, getPrimaryAffiliateLink } from '@/lib/product-helpers';
+import { getProductsByCategory } from '@/lib/product-helpers';
+import { getEditorialMetadataWithDefaults } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next'
 
 export const dynamic = 'force-dynamic'
@@ -26,28 +27,35 @@ export default async function AppliancesPage() {
   // Fetch products from Supabase
   const supabaseProducts = await getProductsByCategory('Appliances')
 
-  // Map to format expected by the page
-  const products = supabaseProducts.map(p => ({
-    id: p.slug,
-    name: p.name,
-    brand: p.brand,
-    affiliateUrl: getPrimaryAffiliateLink(p),
-    slug: p.slug,
-    description: p.description || p.expertOpinion || 'Professional chef-tested appliance'
-  }))
+  // Map to format expected by ProductCard with editorial metadata
+  const products = supabaseProducts.map((p, index) => {
+    const editorial = getEditorialMetadataWithDefaults(p.slug)
+    return {
+      id: p.slug,
+      name: p.name,
+      slug: p.slug,
+      category: 'Appliances',
+      tier: editorial.tier,
+      testingPeriod: editorial.testingPeriod,
+      rating: p.expertRating || 4.5,
+      hook: editorial.hook,
+      position: index + 1,
+      listName: 'category_appliances'
+    }
+  })
 
   const itemListLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "itemListElement": products.map((product, index) => ({
+    "itemListElement": products.map((product) => ({
       "@type": "ListItem",
-      "position": index + 1,
+      "position": product.position,
       "item": {
         "@type": "Product",
         "name": product.name,
         "brand": {
           "@type": "Brand",
-          "name": product.brand
+          "name": product.name.split(' ')[0] // Extract brand from product name
         },
         "image": "https://www.chefapprovedtools.com/logo.png",
         "url": `https://www.chefapprovedtools.com/reviews/${product.slug}`
@@ -73,63 +81,26 @@ export default async function AppliancesPage() {
       </p>
 
       <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(320px,1fr))] mb-12">
-        {products.map((p, index) => (
-          <ProductImpressionTracker
+        {products.map((p) => (
+          <ProductCard
             key={p.id}
-            productName={p.name}
-            productSlug={p.slug}
-            category="Appliances"
-            brand={p.brand}
-            position={index + 1}
-            listName="category_appliances"
-          >
-            <div className="bg-white rounded-xl shadow-md p-6 border border-slate-200 relative transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
-              <div className="flex justify-between items-start mb-3">
-                <h3 className="text-xl font-bold text-slate-900 leading-tight flex-1">{p.name}</h3>
-                <div className="bg-amber-100 text-amber-900 text-xs font-semibold px-2 py-1 rounded ml-2">
-                  CHEF TESTED
-                </div>
-              </div>
-              <p className="text-slate-500 mb-3 text-sm">by {p.brand}</p>
-
-              <div className="flex items-center gap-3 mb-4">
-                <div className="flex items-center gap-1">
-                  <span className="text-yellow-400 text-base">★★★★★</span>
-                  <span className="text-slate-500 text-sm">9.5/10</span>
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {p.description}{' '}
-                  <Link href={`/reviews/${p.slug}`} className="text-orange-600 no-underline font-medium">
-                    Read full review →
-                  </Link>
-                </p>
-              </div>
-
-              <div className="flex gap-2">
-                <a href={p.affiliateUrl}
-                   target="_blank"
-                   rel="sponsored nofollow noopener"
-                   className="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white px-4 py-3 rounded-lg no-underline inline-block font-semibold text-sm flex-1 text-center shadow-md shadow-yellow-500/20">
-                  🛒 Check Price
-                </a>
-                <Link href={`/reviews/${p.slug}`}
-                      className="border-2 border-orange-600 text-orange-600 px-4 py-2 rounded-lg no-underline inline-block font-semibold text-sm bg-transparent text-center">
-                  Review
-                </Link>
-              </div>
-
-              <p className="text-xs text-gray-400 mt-2 text-center">
-                <span className="text-orange-600">Affiliate link</span> • Prices may change
-              </p>
-            </div>
-          </ProductImpressionTracker>
+            id={p.id}
+            name={p.name}
+            slug={p.slug}
+            category={p.category}
+            tier={p.tier}
+            testingPeriod={p.testingPeriod}
+            rating={p.rating}
+            hook={p.hook}
+            position={p.position}
+            listName={p.listName}
+            ctaPrefix="appliances-category"
+          />
         ))}
       </div>
 
-      <section className="mt-12 p-8 bg-slate-50 rounded-xl">
+      {/* Buying Guide Section - Commented out until guide is ready */}
+      {/* <section className="mt-12 p-8 bg-slate-50 rounded-xl">
         <h2 className="text-3xl font-bold mb-2">Kitchen Appliances Buying Guide</h2>
         <p className="text-slate-600 mb-3 leading-relaxed">
           Choosing the right kitchen appliances requires understanding power requirements, counter space planning, and feature comparisons. Whether you&apos;re looking for affordable kitchen appliances or premium commercial-grade equipment, our buying guide explains what matters most for long-term reliability.
@@ -147,7 +118,7 @@ export default async function AppliancesPage() {
             Read the Full Kitchen Appliances Guide
           </a>
         </CTAVisibilityTracker>
-      </section>
+      </section> */}
     </div>
   );
 }

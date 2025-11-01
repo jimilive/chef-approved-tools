@@ -16,7 +16,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-dynamic'
 
 const legacyProductData = {
-  name: 'Lodge Seasoned Cast Iron 3 Skillet Bundle - 12&quot;, 10.25&quot;, and 8&quot; Set',
+  name: 'Lodge Seasoned Cast Iron 3 Skillet Bundle - 12", 10.25", and 8" Set',
   slug: "lodge-seasoned-cast-iron-3-skillet-bundle",
   brand: "Lodge",
   model: "3-Skillet Bundle (L12SK3, L10SK3, L8SK3)",
@@ -304,7 +304,7 @@ export default async function Lodge3SkilletBundleReview() {
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Flame className="w-8 h-8 text-blue-600 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">Three Versatile Sizes</h3>
-              <p className="text-sm text-slate-600">12&quot;, 10.25&quot;, and 8&quot; for every cooking need</p>
+              <p className="text-sm text-slate-600">12", 10.25", and 8" for every cooking need</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <DollarSign className="w-8 h-8 text-purple-600 mb-2" />
@@ -1005,7 +1005,7 @@ export default async function Lodge3SkilletBundleReview() {
 
             {/* Product 1 */}
             <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
-              <h4 className="mt-0">Victorinox 8&quot; Chef Knife</h4>
+              <h4 className="mt-0">Victorinox 8" Chef Knife</h4>
               <p>The perfect prep knife for ingredients going into cast iron. Professional quality, perfect balance.</p>
               <p className="text-sm text-gray-600">
                 <strong>45 years cooking:</strong> My daily workhorse knife.

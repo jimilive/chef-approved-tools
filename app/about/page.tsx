@@ -17,15 +17,15 @@ export const metadata: Metadata = {
 const combinedFAQs = [
   {
     question: "What's your professional culinary background?",
-    answer: "I hold an A.A.S. in Culinary Arts from Seattle Culinary Academy and a B.S. in Business Administration from University of Montana. I've worked as a certified Pizzaiolo at Purple Café & Wine Bar and managed restaurant operations at Mellow Mushroom with $80K+ monthly revenue, giving me real-world experience with professional kitchen equipment."
+    answer: "I hold an A.A.S. in Culinary Arts from Seattle Culinary Academy and a B.S. in Business Administration from University of Montana. I've managed kitchen operations at Mellow Mushroom with $80K+ monthly revenue and worked as a certified Pizzaiolo at Purple Café & Wine Bar, giving me real-world experience with professional kitchen equipment."
   },
   {
     question: "How did you transition from restaurant work to equipment reviews?",
-    answer: "After 5 years in restaurant operations, I moved into e-commerce, working as Internet Production Lead at The Sharper Image and later managing a $2M brand launch. This combination of culinary expertise and e-commerce experience helps me understand both what works in kitchens and what information helps people make purchasing decisions."
+    answer: "After 5 years in restaurant operations, I moved into e-commerce, working as Internet Production Lead at The Sharper Image. This combination of culinary expertise and e-commerce experience helps me understand both what works in kitchens and what information helps people make purchasing decisions."
   },
   {
     question: "How long do you test each piece of equipment?",
-    answer: "Every piece of equipment undergoes a minimum of 6 months of testing in real restaurant kitchens. This includes 4 distinct phases: initial assessment (1 week), break-in period (3 weeks), professional kitchen testing (4+ months), and comparative analysis (1 month). Some equipment has been tested for over 5 years in our partner restaurants."
+    answer: "Every Tier 1 piece of equipment undergoes a minimum of 6 months of testing in real restaurant kitchens. This includes 4 distinct phases: initial assessment (1 week), break-in period (3 weeks), professional kitchen testing (4+ months), and comparative analysis (1 month). Some Tier 1 equipment has been tested for over 5 years in our partner restaurants. Tier 2 and Tier 3 reviews have different testing periods based on my personal use and expert evaluation."
   },
   {
     question: "Do manufacturers pay you for reviews or send free products?",
@@ -191,9 +191,9 @@ export default function AboutPage() {
 
             <p className="text-slate-700 mb-6 text-lg leading-relaxed">
               I hold an A.A.S. in Culinary Arts from Seattle Culinary Academy and a B.S. in Business
-              Administration from University of Montana. My career has taken me from certified Pizzaiolo
-              at Purple Café & Wine Bar to managing restaurant operations with $80K+ monthly revenue at
-              Mellow Mushroom, where equipment reliability wasn&apos;t just important—it was critical to
+              Administration from University of Montana. My career has taken me from managing kitchen operations with $80K+ monthly revenue at
+              Mellow Mushroom to working as a certified Pizzaiolo
+              at Purple Café & Wine Bar, where equipment reliability wasn&apos;t just important—it was critical to
               our success during peak service hours.
             </p>
 
@@ -205,7 +205,7 @@ export default function AboutPage() {
               This unique combination of formal culinary training, hands-on restaurant experience, and e-commerce
               success means I understand both what works in real kitchens AND what information helps people make
               purchasing decisions. After transitioning from restaurant operations to e-commerce—working as Internet
-              Production Lead at The Sharper Image and managing a $2M brand launch—I bring a rare dual perspective
+              Production Lead at The Sharper Image—I bring a rare dual perspective
               to equipment testing.
             </p>
 
@@ -227,7 +227,7 @@ export default function AboutPage() {
               My Testing Promise
             </h2>
             <p className="text-xl leading-relaxed mb-6">
-              Every tool gets minimum 6 months of testing in real kitchen environments before I recommend it.
+              Every Tier 1 tool gets minimum 6 months of testing in real kitchen environments before I recommend it.
               No shortcuts, no sponsored quick reviews—just honest evaluation from someone who&apos;s used professional
               equipment to feed hundreds of customers daily.
             </p>
@@ -248,11 +248,11 @@ export default function AboutPage() {
       <section className="bg-gradient-to-r from-slate-900 to-orange-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our Uncompromising 6-Month Testing Process
+            Our Uncompromising 6-Month Testing Process (Tier 1)
           </h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
             No lab tests. No sponsored quick reviews. Just 6+ months of real restaurant kitchen testing
-            with actual kitchen staff under high-volume conditions.
+            with actual kitchen staff under high-volume conditions for all Tier 1 reviews.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -537,7 +537,7 @@ export default function AboutPage() {
               <h4 className="font-bold text-slate-900 mb-3">What We DO</h4>
               <ul className="text-left space-y-2 text-slate-700">
                 <li>✅ Purchase equipment with our own funds</li>
-                <li>✅ Test for minimum 6 months in real kitchens</li>
+                <li>✅ Test Tier 1 equipment for minimum 6 months in real kitchens</li>
                 <li>✅ Report both strengths and weaknesses</li>
                 <li>✅ Update reviews based on long-term performance</li>
               </ul>

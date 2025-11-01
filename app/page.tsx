@@ -1,503 +1,852 @@
-import { Metadata } from 'next'
-import React, { lazy, Suspense } from 'react'
-import Image from 'next/image'
-import { SimpleProductSchema } from '@/components/ProductSchema'
-import FAQSchema, { kitchenToolsFAQs } from '@/components/FAQSchema'
-import { ChefCredentialsSchema } from '@/components/ReviewSchema'
-import AffiliateButton from '@/components/AffiliateButton'
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import { getProductsBySlugs, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+'use client'
 
-// Force dynamic rendering since we fetch from Supabase
-export const dynamic = 'force-dynamic'
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'Chef Approved Tools: Restaurant-Tested Gear',
-  description: 'Equipment tested in professional kitchens or in my apartment. Honest reviews, real testing, zero lab conditions. Knives, cookware, appliances that survive.',
-  alternates: {
-    canonical: '/',
-  },
-}
-// Lazy load components below the fold
-const TestimonialsSection = lazy(() => import('@/components/TestimonialsSection'))
-const TopPicksComparison = lazy(() => import('@/components/TopPicksComparison'))
-const BudgetVsPremiumMagnet = lazy(() => import('@/components/BudgetVsPremiumMagnet'))
-const RecentlyViewed = lazy(() => import('@/components/RecentlyViewed'))
+export default function HomePage() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-// Enhanced Product Card Component with Conversion Optimization
-function EnhancedProductCard({ product }: { product: any }) {
-  return (
-    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden relative group">
-      {product.badge && (
-        <div className="absolute top-4 left-4 bg-red-700 text-white px-3 py-1 rounded-full text-xs font-bold z-10">
-          {product.badge}
-        </div>
-      )}
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-      {/* Add urgency/scarcity */}
-      <div className="absolute top-4 right-4 bg-red-100 text-red-800 px-2 py-1 rounded text-xs z-10">
-        🔥 Popular Choice
-      </div>
+    const formData = new FormData(e.currentTarget);
 
-      <div className="aspect-w-16 aspect-h-12 bg-gray-100 p-8">
-        <div className="flex items-center justify-center h-48 relative">
-          <Image
-            src="/logo.png"
-            alt={product.name}
-            width={200}
-            height={200}
-            sizes="(max-width: 768px) 150px, 200px"
-            className="object-contain opacity-50"
-          />
-        </div>
-      </div>
+    try {
+      await fetch('https://chefapprovedtools.activehosted.com/proc.php', {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors',
+      });
 
-      <div className="p-6">
-        <h3 className="font-bold text-lg mb-2 text-slate-900 line-clamp-2">{product.name}</h3>
-
-        <div className="flex items-center gap-2 mb-3">
-          <div className="flex text-yellow-400">
-            {'★'.repeat(Math.floor(product.rating))}
-            {product.rating % 1 !== 0 && '☆'}
-          </div>
-          <span className="text-sm text-gray-600">({product.reviews} chef reviews)</span>
-        </div>
-
-        <p className="text-xs text-green-800 font-semibold mb-3">{product.tested}</p>
-
-
-        {/* Enhanced CTA section */}
-<div className="space-y-2 mt-4">
-  <CTAVisibilityTracker
-    ctaId={`homepage-product-${product.id}`}
-    position="above_fold"
-    productSlug={product.id}
-    merchant="amazon"
-  >
-    <AffiliateButton
-      href={product.affiliateUrl}
-      merchant="amazon"
-      product={product.id}
-      position="above_fold"
-      className="w-full text-center"
-    >
-      View on Amazon →
-    </AffiliateButton>
-  </CTAVisibilityTracker>
-
-          {/* Add comparison hook */}
-          {/* <button type="button" className="w-full text-blue-600 hover:text-blue-700 font-medium text-sm py-2 border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors">
-            📊 See Why I Chose This Over 12 Others
-          </button>*/}
-        </div>
-
-        {/* Trust signals */}
-        <div className="mt-3 pt-3 border-t border-gray-100">
-          <div className="flex items-center gap-4 text-xs text-gray-600">
-            <span className="flex items-center gap-1">
-              ✓ <span>Free Prime Shipping</span>
-            </span>
-            <span className="flex items-center gap-1">
-              ✓ <span>30-Day Returns</span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-
-
-export default async function HomePage() {
-  // Fetch hero products from Supabase
-  const products = await getProductsBySlugs([
-    'kitchenaid-ksm8990wh',
-    'victorinox-fibrox-8-inch-chefs-knife'
-  ])
-
-  // Map to format expected by the page
-  const sampleProducts = products.map(p => ({
-    id: p.slug,
-    name: p.name,
-    brand: p.brand,
-    rating: p.expertRating || p.reviews?.rating || 4.8,
-    reviews: p.reviews?.count || 150,
-    image: p.images?.primary || '/logo.png',
-    affiliateUrl: getPrimaryAffiliateLink(p),
-    badge: p.slug === 'kitchenaid-ksm8990wh' ? 'NSF Certified' : 'Pro Workhorse',
-    tested: p.slug === 'kitchenaid-ksm8990wh' ? '18 months proven' : '20 years proven'
-  }))
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setIsSubmitting(false);
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-gray-50 text-slate-900">
-      {/* SEO Structured Data */}
-      <FAQSchema faqs={kitchenToolsFAQs} />
-      <ChefCredentialsSchema />
-      {/* Hero Section with Real Credentials */}
-      <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 text-center bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white">
-        <div className="max-w-6xl mx-auto">
-          {/* Trust Badge */}
-          <div className="bg-orange-500/20 border border-orange-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 inline-block mb-6 sm:mb-8">
-            <span className="text-orange-200 font-semibold text-sm sm:text-base">
-              👨‍🍳 24 YEARS PROFESSIONAL COOKING EXPERIENCE
-            </span>
-          </div>
+    <main className="min-h-screen bg-gray-50">
+      {/* HERO SECTION - Dual Impact */}
+      {/*
+        ⚠️ CRITICAL SPACING - DO NOT MODIFY WITHOUT CAREFUL TESTING ⚠️
+        This section's spacing was carefully balanced to align the red "24 Years" badge
+        with the three food images below while maintaining proper spacing throughout.
 
-          {/* Main Headline with Real Experience */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
-            Chef-Approved Kitchen Tools
-            <br className="hidden sm:block" />
-            <span className="bg-gradient-to-r from-orange-400 to-amber-500 bg-clip-text text-transparent">
-              Tested by 45 Years Cooking Experience
-            </span>
-          </h1>
+        Key classes and their purpose:
+        - Grid: px-32 = 128px side padding to center content
+        - Grid: NO gap-* class (removed to bring text and image closer)
+        - Text column: -mr-12 = pulls text 48px right toward image
+        - Image column: mr-5 = 20px right margin to position image/badge unit
+        - Image column: justify-end = keeps image right-aligned (DO NOT REMOVE)
+        - Badge: -right-6 = extends badge 24px outside image container
 
-          {/* Credibility-focused Description */}
-          <p className="text-lg sm:text-xl text-slate-300 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed">
-            From Wendy&apos;s at 15 to Kitchen Manager at Mellow Mushroom ($80K+/month operations),
-            24 years of cooking across every kitchen type—fast food, fine dining, and casual dining.
-          </p>
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 sm:mb-16 max-w-md sm:max-w-none mx-auto">
-            <CTAVisibilityTracker
-              ctaId="homepage-hero-top-picks"
-              position="above_fold"
-              productSlug="homepage"
-              merchant="internal"
-            >
-              <a
-                href="/reviews"
-                className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-base sm:text-lg"
-              >
-                See My Top Picks →
-              </a>
-            </CTAVisibilityTracker>
-            <CTAVisibilityTracker
-              ctaId="homepage-hero-verify"
-              position="mid_article"
-              productSlug="homepage"
-              merchant="internal"
-            >
-              <a
-                href="#credentials"
-                className="border-2 border-slate-300 text-slate-300 hover:bg-slate-300 hover:text-slate-800 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-xl transition-all duration-200 text-base sm:text-lg"
-              >
-                Verify My Experience
-              </a>
-            </CTAVisibilityTracker>
-          </div>
-          
-          {/* Real, Specific Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-8 sm:pt-12 border-t border-slate-600">
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">45 Years</div>
-              <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Cooking Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">24 Years</div>
-              <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Professional Kitchens</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-orange-400 mb-1">Lifetime Learner</div>
-              <div className="text-xs sm:text-sm text-slate-400 uppercase tracking-wide font-medium">Still Researching</div>
-            </div>
-          </div>
-        </div>
-      </section>  {/* End of Hero Section */}
+        If you modify spacing, verify the red badge aligns with right edge of food images below!
+      */}
+      <section className="relative bg-gradient-to-br from-slate-800 via-slate-700 to-orange-700 text-white">
+        <div className="container max-w-7xl mx-auto px-4 py-16 md:py-24">
+          <div className="grid md:grid-cols-2 items-center max-w-7xl mx-auto px-32">
+            {/* Left: Message */}
+            <div className="space-y-6 -mr-12">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                Rigorously Tested,
+                <br />
+                Professionally Vetted,
+                <br />
+                <span className="text-orange-400">Chef Approved</span>
+              </h1>
 
-      {/* THREE-TIER SYSTEM CALLOUT */}
-      <section className="py-8 bg-orange-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <p className="text-slate-900 text-base sm:text-lg">
-              Every review on this site is rated using my transparent{' '}
-              <a 
-                href="/chef-approved" 
-                className="text-orange-600 font-semibold underline hover:text-orange-800 transition-colors"
-              >
-                three-tier review system
-              </a>
-              {' '}— from professional kitchen use to expert evaluation. 
-              This ensures you always know my level of hands-on experience with each product.
-            </p>
+              <p className="text-xl text-slate-300 leading-relaxed">
+                24 years in professional kitchens—from Mellow Mushroom to Purple Café to your home kitchen.
+                Honest reviews. No affiliate pressure. Just the tools that actually work.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <a
+                  href="#get-guide"
+                  className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center"
+                >
+                  Get My Free Guide
+                </a>
+                <Link
+                  href="/reviews"
+                  className="border-2 border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-slate-900 font-semibold px-8 py-4 rounded-xl transition-all text-center"
+                >
+                  Browse Reviews
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: Scott in Chef's Coat */}
+            <div className="relative flex items-center py-12 justify-end mr-5">
+              <div className="relative rounded-2xl">
+                <Image
+                  src="/images/scott-chef-coat-cropped.jpg"
+                  alt="Scott Bradley - Professional Chef with 24 Years Experience"
+                  width={300}
+                  height={400}
+                  className="w-full h-auto rounded-2xl"
+                  priority
+                />
+              </div>
+              <div className="absolute bottom-4 -right-6 bg-orange-600 text-white px-6 py-3 rounded-xl shadow-xl">
+                <p className="font-bold text-lg">24 Years</p>
+                <p className="text-sm">Professional Kitchens</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Credentials Section */}
-      <section id="credentials" className="py-12 sm:py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Chef Photo */}
+      {/* TOOLS IN ACTION - The Money Section - 3 COLUMN LAYOUT */}
+      <section className="py-16 bg-white">
+        <div className="container max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <div className="relative w-32 h-32 mx-auto mb-4">
-              <Image
-                src="/images/team/head-shot-1.jpg"
-                alt="Scott Bradley - Professional Chef"
-                fill
-                sizes="128px"
-                priority
-                className="object-cover rounded-full shadow-xl border-4 border-orange-500"
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              These Tools Create This Food
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Real equipment, real cooking, real results. No stock photos, no staged shots—just what happens
+              when you use the right tools.
+            </p>
+          </div>
+
+          {/* Grid of Beautiful Food Shots - 3 COLUMN LAYOUT */}
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-8">
+            {/* Steak Sear */}
+            <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-all overflow-hidden">
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src="/images/cast-iron-steak-sear.jpg"
+                  alt="Perfect steak sear in cast iron"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                  Perfect Cast Iron Sear
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  Restaurant-quality crust at home. The right pan makes all the difference.
+                </p>
+                <Link
+                  href="/reviews/lodge-cast-iron-skillet"
+                  className="text-orange-700 hover:text-orange-800 font-semibold inline-flex items-center gap-2 transition-colors"
+                >
+                  See the pan →
+                </Link>
+              </div>
+            </div>
+
+            {/* Bacon Burger */}
+            <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-all overflow-hidden">
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src="/images/cast-iron-bacon-burger.jpg"
+                  alt="Bacon cheeseburger cooked in cast iron"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                  The Perfect Smash Burger
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  Cast iron heat retention creates that crispy, caramelized edge every time.
+                </p>
+                <Link
+                  href="/reviews/lodge-cast-iron-skillet"
+                  className="text-orange-700 hover:text-orange-800 font-semibold inline-flex items-center gap-2 transition-colors"
+                >
+                  See the pan →
+                </Link>
+              </div>
+            </div>
+
+            {/* Heirloom Tomatoes */}
+            <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-all overflow-hidden">
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src="/images/epicurean-heirloom-tomatoes.jpg"
+                  alt="Heirloom tomatoes sliced on Epicurean cutting board"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                  Knife-Friendly, Dishwasher-Safe
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  After 20 years with wood boards, I switched. This changed everything.
+                </p>
+                <Link
+                  href="/reviews/epicurean-kitchen-cutting-board"
+                  className="text-orange-700 hover:text-orange-800 font-semibold inline-flex items-center gap-2 transition-colors"
+                >
+                  See the board →
+                </Link>
+              </div>
+            </div>
+
+            {/* Pot Roast */}
+            <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-all overflow-hidden">
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src="/images/le-creuset-pot-roast-plated.jpg"
+                  alt="Pot roast dinner plated"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                  Sunday Pot Roast Perfection
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  Dutch oven cooking: low, slow, and foolproof. This is comfort food done right.
+                </p>
+                <Link
+                  href="/reviews/instant-pot-duo-plus-6qt"
+                  className="text-orange-700 hover:text-orange-800 font-semibold inline-flex items-center gap-2 transition-colors"
+                >
+                  See the Instant Pot →
+                </Link>
+              </div>
+            </div>
+
+            {/* Perfect Eggs - SUBSTITUTED cuisinart-eggs-cooking.jpg */}
+            <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-all overflow-hidden">
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src="/images/cuisinart-eggs-cooking.jpg"
+                  alt="Perfect eggs cooking"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                  Eggs That Don&apos;t Stick
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  The secret to restaurant breakfast? The right skillet, properly heated.
+                </p>
+                <Link
+                  href="/reviews/cuisinart-8-inch-nonstick-pan"
+                  className="text-orange-700 hover:text-orange-800 font-semibold inline-flex items-center gap-2 transition-colors"
+                >
+                  See the skillet →
+                </Link>
+              </div>
+            </div>
+
+            {/* BBQ Ribs - SUBSTITUTED nordic-ware-ribs.jpg */}
+            <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-all overflow-hidden">
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src="/images/nordic-ware-ribs.jpg"
+                  alt="BBQ ribs on sheet pan"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                  Fall-Off-The-Bone Ribs
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  Perfect ribs every time. The right equipment makes all the difference.
+                </p>
+                <Link
+                  href="/reviews/nordic-ware-half-sheet-pan"
+                  className="text-orange-700 hover:text-orange-800 font-semibold inline-flex items-center gap-2 transition-colors"
+                >
+                  See the pan →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* EMAIL CAPTURE SECTION - V1 Design (IMPROVED) */}
+      <section id="get-guide" className="py-16 bg-gray-100">
+        <div className="max-w-2xl mx-auto px-4">
+          <div className="bg-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-2xl">
+
+          {/* Curiosity Badge - IMPROVED COPY */}
+          <div className="flex justify-center mb-6">
+            <div className="bg-gradient-to-r from-orange-600 to-red-600 px-6 py-3 rounded-full inline-flex items-center gap-2">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+              </svg>
+              <span className="font-semibold">Professional Kitchen Essentials</span>
+            </div>
+          </div>
+
+          {/* Headline */}
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            The 11 Tools I Use Most in My Home Kitchen
+          </h2>
+
+          {/* Subheadline */}
+          <p className="text-xl text-slate-300 text-center mb-8">
+            My daily workhorse tools from 24 years in professional kitchens
+          </p>
+
+          {/* Trust Badges */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm">
+            <span className="flex items-center gap-2">
+              <span className="text-yellow-400">⭐</span>
+              <span className="text-slate-300">24 Years Professional</span>
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="text-green-400">✓</span>
+              <span className="text-slate-300">11 Tools. That&apos;s It.</span>
+            </span>
+          </div>
+
+          {/* Benefit Preview Box */}
+          <div className="bg-slate-800 border-2 border-orange-600 rounded-xl p-6 md:p-8 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <h3 className="text-xl font-semibold text-white">
+                What You&apos;ll Get (FREE Guide):
+              </h3>
+            </div>
+
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <svg className="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <div>
+                  <span className="font-semibold text-white">5 Victorinox knives:</span>
+                  <span className="text-slate-300"> Chef&apos;s (8&quot; & 10&quot;), paring, boning, and bread knife</span>
+                </div>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <svg className="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <div>
+                  <span className="font-semibold text-white">Essential prep tools:</span>
+                  <span className="text-slate-300"> Peeler, bench scraper, tongs, and mandoline</span>
+                </div>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <svg className="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <div>
+                  <span className="font-semibold text-white">Restaurant towels:</span>
+                  <span className="text-slate-300"> The exact bar mops I&apos;ve used for decades</span>
+                </div>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <svg className="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <div>
+                  <span className="font-semibold text-white">Professional cutting board:</span>
+                  <span className="text-slate-300"> Epicurean board built to last</span>
+                </div>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <svg className="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <div>
+                  <span className="font-semibold text-white">Why I chose each one:</span>
+                  <span className="text-slate-300"> Real stories from 24 years of professional cooking</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          {/* Email Form */}
+          {!isSubmitted ? (
+          <form
+            onSubmit={handleSubmit}
+            id="lead-magnet-form"
+            className="space-y-4"
+          >
+            {/* Hidden ActiveCampaign Fields */}
+            <input type="hidden" name="u" value="1" />
+            <input type="hidden" name="f" value="1" />
+            <input type="hidden" name="s" />
+            <input type="hidden" name="c" value="0" />
+            <input type="hidden" name="m" value="0" />
+            <input type="hidden" name="act" value="sub" />
+            <input type="hidden" name="v" value="2" />
+            <input type="hidden" name="or" value="c091b86ba39b7f8fdc1702809f7e19ff" />
+
+            {/* First Name Field */}
+            <div>
+              <input
+                type="text"
+                name="firstname"
+                placeholder="First name"
+                className="w-full px-6 py-4 rounded-xl text-slate-900 text-lg focus:ring-2 focus:ring-orange-600 focus:outline-none"
               />
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-slate-900">
-              Why Professional Chefs Trust My Reviews
-            </h2>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gray-50 rounded-xl p-6 text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏃‍♂️</span>
-              </div>
-              <h3 className="font-bold mb-2">Started Young</h3>
-              <p className="text-sm text-gray-600">Professional cooking (1986)</p>
+            {/* Email Field */}
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+                className="w-full px-6 py-4 rounded-xl text-slate-900 text-lg focus:ring-2 focus:ring-orange-600 focus:outline-none"
+              />
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-6 text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎓</span>
-              </div>
-              <h3 className="font-bold mb-2">Formal Training</h3>
-              <p className="text-sm text-gray-600">Seattle Central College A.A.S. Culinary Arts</p>
-            </div>
-            
-            <div className="bg-gray-50 rounded-xl p-6 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">👨‍💼</span>
-              </div>
-              <h3 className="font-bold mb-2">Kitchen Manager</h3>
-              <p className="text-sm text-gray-600">Mellow Mushroom, 12 employees, $80K+/month</p>
-            </div>
+            {/* Submit Button */}
+            <button
+              type="button"
+              onClick={async () => {
+                const formElement = document.getElementById('lead-magnet-form') as HTMLFormElement;
+                if (!formElement) return;
 
-            <div className="bg-gray-50 rounded-xl p-6 text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🔄</span>
-              </div>
-              <h3 className="font-bold mb-2">Always Researching</h3>
-              <p className="text-sm text-gray-600">Lifetime student of the science of cooking</p>
-            </div>
-          </div>
-        </div>
-      </section>
+                const formData = new FormData(formElement);
+                setIsSubmitting(true);
 
-      {/* Top 3 Picks Comparison - Above the fold */}
-      <Suspense fallback={<div className="h-96 bg-white animate-pulse"></div>}>
-        <TopPicksComparison />
-      </Suspense>
-
-      {/* Featured Products Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-slate-900">
-              Equipment That Survived Scott&apos;s Busiest Services
-            </h2>
-            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Each tool tested minimum 6 months in my professional kitchens. 
-              These are the ones I&apos;d buy with my own money.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {sampleProducts.map((product, index) => {
-              const category = index === 0 || index === 5 ? 'knives' : index === 1 || index === 4 ? 'cookware' : 'appliances'
-              return (
-                <div key={product.id}>
-                  {/* Add structured data for each product */}
-                  <SimpleProductSchema
-                    name={product.name}
-                    brand={product.brand}
-                    rating={product.rating}
-                    reviewCount={product.reviews}
-                    category={category}
-                    image={product.image}
-                    affiliateUrl={product.affiliateUrl}
-                  />
-                  <ProductImpressionTracker
-                    productName={product.name}
-                    productSlug={product.id}
-                    category={category}
-                    brand={product.brand}
-                    position={index + 1}
-                    listName="homepage_featured_products"
-                  >
-                    <EnhancedProductCard
-                      product={product}
-                    />
-                  </ProductImpressionTracker>
-                </div>
-              )
-            })}
-          </div>
-          
-          <div className="text-center mt-12">
-            <CTAVisibilityTracker
-              ctaId="homepage-view-all-reviews"
-              position="mid_article"
-              productSlug="homepage"
-              merchant="internal"
+                try {
+                  await fetch('https://chefapprovedtools.activehosted.com/proc.php', {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors',
+                  });
+                  setIsSubmitted(true);
+                } catch (error) {
+                  console.error('Form submission error:', error);
+                  setIsSubmitting(false);
+                }
+              }}
+              disabled={isSubmitting}
+              className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <a
-                href="/reviews"
-                className="inline-block bg-slate-800 hover:bg-slate-900 text-white font-semibold px-8 py-4 rounded-xl transition-colors"
-              >
-                View All Professional Reviews →
-              </a>
-            </CTAVisibilityTracker>
+              {isSubmitting ? (
+                <>Submitting...</>
+              ) : (
+                <>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Get My Free Professional Kitchen Guide →
+                </>
+              )}
+            </button>
+          </form>
+          ) : (
+            <div className="text-center py-8">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-600 rounded-full mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold mb-2">Check Your Email!</h3>
+              <p className="text-slate-300 text-lg mb-4">
+                Your free guide is on its way. Check your inbox (and spam folder) for the download link.
+              </p>
+              <p className="text-slate-400 text-sm">
+                Welcome to the Chef Approved Tools family!
+              </p>
+            </div>
+          )}
+
+          {/* Trust Indicators Below Form */}
+          <div className="mt-6 text-center">
+            <p className="text-slate-400 text-sm mb-4">
+              No spam, unsubscribe anytime
+            </p>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
+              <span className="flex items-center gap-2">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                </svg>
+                Your email is safe
+              </span>
+              <span className="flex items-center gap-2">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+                  <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+                </svg>
+                Equipment insights & reviews
+              </span>
+              <span className="flex items-center gap-2">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                </svg>
+                Instant download
+              </span>
+            </div>
+          </div>
+
           </div>
         </div>
       </section>
 
-      {/* Experience Timeline */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-12 text-center text-slate-900">
-            My Professional Kitchen Journey
-          </h2>
-          
-          <div className="space-y-8">
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-24 text-right">
-                <span className="text-sm font-bold text-orange-800">1992-1994</span>
-              </div>
-              <div className="flex-grow border-l-2 border-orange-200 pl-6 pb-8">
-                <h3 className="font-bold text-lg mb-1">Kitchen Manager - Mellow Mushroom</h3>
-                <p className="text-gray-600">Athens, GA • Managed $80K+/month operations, 12 employees, full P&L</p>
-                <p className="text-sm text-gray-500 mt-2">Created food waste tracking system, trained all kitchen staff</p>
-              </div>
-            </div>
-            
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-24 text-right">
-                <span className="text-sm font-bold text-orange-800">2007-2012</span>
-              </div>
-              <div className="flex-grow border-l-2 border-orange-200 pl-6 pb-8">
-                <h3 className="font-bold text-lg mb-1">Pizzaiolo - Purple Cafe & Wine Bar</h3>
-                <p className="text-gray-600">Seattle, WA • Developed recipes, trained staff, 200+ pizzas nightly</p>
-                <p className="text-sm text-gray-500 mt-2">Created dough recipe, developed daily specials</p>
-              </div>
-            </div>
-            
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-24 text-right">
-                <span className="text-sm font-bold text-orange-800">2006-2010</span>
-              </div>
-              <div className="flex-grow border-l-2 border-orange-200 pl-6 pb-8">
-                <h3 className="font-bold text-lg mb-1">Shift Lead - Feierabend</h3>
-                <p className="text-gray-600">Seattle, WA • Led line operations, 60-seat German pub</p>
-                <p className="text-sm text-gray-500 mt-2">Expedite, sauté, grill, pantry stations</p>
-              </div>
-            </div>
-            
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-24 text-right">
-                <span className="text-sm font-bold text-orange-800">2015-2018</span>
-              </div>
-              <div className="flex-grow border-l-2 border-orange-200 pl-6 pb-8">
-                <h3 className="font-bold text-lg mb-1">Content Lead - YDesign Group</h3>
-                <p className="text-gray-600">Sacramento, CA • Launched $2M e-commerce brand, managed 7-person team</p>
-                <p className="text-sm text-gray-500 mt-2">Product content strategy, vendor relationships, QA processes</p>
-              </div>
-            </div>
-            
-            <div className="flex gap-4">
-              <div className="flex-shrink-0 w-24 text-right">
-                <span className="text-sm font-bold text-orange-800">2025-Now</span>
-              </div>
-              <div className="flex-grow border-l-2 border-orange-200 pl-6">
-                <h3 className="font-bold text-lg mb-1">Equipment Testing & Reviews</h3>
-                <p className="text-gray-600">Combining decades of experience to help home chefs buy smart</p>
-                <p className="text-sm text-gray-500 mt-2">Products tested in professional kitchens</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Categories with Context */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-slate-900">
-              Equipment Categories I&apos;ve Mastered
+      {/* WHY LISTEN TO ME - Credibility + Action Shots */}
+      <section className="py-16 bg-white">
+        <div className="container max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Why Listen to Me?
             </h2>
-            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              From high-volume pizza stations to German pub kitchens, I&apos;ve tested it all
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Because I&apos;ve actually worked the line—not just tested products for affiliate commissions.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <a href="/knives" className="group bg-white rounded-xl p-6 sm:p-8 hover:shadow-lg transition-all">
-              <div className="relative w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
-                <Image src="/logo.png" alt="Knives" width={40} height={40} sizes="40px" className="object-contain" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 sm:mb-2 text-slate-900">Professional Knives</h3>
-              <p className="text-slate-600 text-sm mt-2 sm:mt-0">German vs Japanese, what actually lasts</p>
-            </a>
 
-            <a href="/cookware" className="group bg-white rounded-xl p-6 sm:p-8 hover:shadow-lg transition-all">
-              <div className="relative w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
-                <Image src="/logo.png" alt="Cookware" width={40} height={40} sizes="40px" className="object-contain" />
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left: Credentials */}
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                  24 Years in Professional Kitchens
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  From Mellow Mushroom (Kitchen Manager, 7 years) to Purple Café (6 years),
+                  Il Pizzaiolo, Feierabend, and Paragary&apos;s. I know what holds up under restaurant abuse.
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-2 sm:mb-2 text-slate-900">Commercial Cookware</h3>
-              <p className="text-slate-600 text-sm mt-2 sm:mt-0">Restaurant-grade pans for home use</p>
-            </a>
 
-            <a href="/appliances" className="group bg-white rounded-xl p-6 sm:p-8 hover:shadow-lg transition-all">
-              <div className="relative w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
-                <Image src="/logo.png" alt="Appliances" width={40} height={40} sizes="40px" className="object-contain" />
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                  🎓 Formal Culinary Training
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  A.A.S. in Culinary Arts from Seattle Central College (2005-2007). Learned the foundations,
+                  then spent two decades refining them.
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-2 sm:mb-2 text-slate-900">Power Equipment</h3>
-              <p className="text-slate-600 text-sm mt-2 sm:mt-0">Mixers, blenders that survive abuse</p>
-            </a>
+
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                  ⚖️ Honest Reviews, Transparent System
+                </h3>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  I only recommend what I&apos;ve actually used—often for years. Every product has pros AND cons.
+                  Perfect reviews are fake reviews.
+                </p>
+                <div className="bg-orange-50 border-l-4 border-orange-600 p-4 rounded">
+                  <p className="text-slate-700">
+                    <strong>My Three-Tier System:</strong> Every review uses my transparent three-tier system—from
+                    professional kitchen use (Tier 1) to long-term personal testing (Tier 2) to expert evaluation
+                    (Tier 3). You always know my level of hands-on experience.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <Link
+                  href="/about"
+                  className="text-orange-700 hover:text-orange-800 font-semibold inline-flex items-center gap-2 transition-colors"
+                >
+                  Read my full story →
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: Action Shots Collage */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/oxo-bench-scraper-garlic.jpg"
+                    alt="Mincing garlic with OXO bench scraper"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative h-64 rounded-lg overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/le-creuset-pot-roast-dutch-oven.jpg"
+                    alt="Pot roast in Le Creuset Dutch oven"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              <div className="space-y-4 pt-8">
+                <div className="relative h-64 rounded-lg overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/mandolin-onions.jpg"
+                    alt="Slicing onions with Benriner mandolin"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/ninja-air-fryer-fries.jpg"
+                    alt="Fries in Ninja air fryer"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <Suspense fallback={<div className="h-64 bg-white animate-pulse"></div>}>
-        <TestimonialsSection />
-      </Suspense>
+      {/* SHOP BY CATEGORY - Added from V2 per Summary */}
+      <section className="py-16 bg-gray-50">
+        <div className="container max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Shop by Category
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Professional equipment recommendations for home cooks
+            </p>
+          </div>
 
-      {/* Lead Magnet - Budget vs Premium Guide */}
-      <section id="budget-vs-premium-signup" className="py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Suspense fallback={<div className="h-48 bg-white animate-pulse"></div>}>
-            <BudgetVsPremiumMagnet variant="inline" />
-          </Suspense>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Knives Category */}
+            <Link
+              href="/knives"
+              className="group bg-white hover:bg-blue-50 rounded-xl p-8 transition-all hover:shadow-xl border-2 border-transparent hover:border-blue-200"
+            >
+              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-200 transition-colors">
+                <span className="text-4xl">🔪</span>
+              </div>
+              <h3 className="text-2xl font-bold text-center text-slate-900 mb-3">
+                Professional Knives
+              </h3>
+              <p className="text-slate-600 text-center leading-relaxed">
+                German steel, Japanese precision, commercial durability
+              </p>
+            </Link>
+
+            {/* Cookware Category */}
+            <Link
+              href="/cookware"
+              className="group bg-white hover:bg-green-50 rounded-xl p-8 transition-all hover:shadow-xl border-2 border-transparent hover:border-green-200"
+            >
+              <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200 transition-colors">
+                <span className="text-4xl">🍳</span>
+              </div>
+              <h3 className="text-2xl font-bold text-center text-slate-900 mb-3">
+                Restaurant Cookware
+              </h3>
+              <p className="text-slate-600 text-center leading-relaxed">
+                Cast iron, stainless steel, what actually lasts
+              </p>
+            </Link>
+
+            {/* Appliances Category */}
+            <Link
+              href="/appliances"
+              className="group bg-white hover:bg-purple-50 rounded-xl p-8 transition-all hover:shadow-xl border-2 border-transparent hover:border-purple-200"
+            >
+              <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-200 transition-colors">
+                <span className="text-4xl">⚡</span>
+              </div>
+              <h3 className="text-2xl font-bold text-center text-slate-900 mb-3">
+                Commercial Appliances
+              </h3>
+              <p className="text-slate-600 text-center leading-relaxed">
+                Mixers, blenders, processors built for abuse
+              </p>
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Recently Viewed Products - Remarketing */}
-      <Suspense fallback={null}>
-        <RecentlyViewed />
-      </Suspense>
+      {/* SECONDARY CTA - Tools That Started It All */}
+      <section className="py-16 bg-gradient-to-br from-slate-800 to-slate-700 text-white">
+        <div className="container max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            The Tools That Started It All
+          </h2>
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+            These are the essentials I packed for my first day at culinary school in 2005.
+            Twenty years later, I still reach for them first.
+          </p>
+          <Link
+            href="/the-tools-that-started-it-all"
+            className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95"
+          >
+            See the Essential Toolkit
+          </Link>
+        </div>
+      </section>
 
-      {/* Trust Bar Section */}
+      {/* TOP PROFESSIONAL PICKS - Renamed from "Latest Reviews" per Summary */}
+      <section className="py-16 bg-white">
+        <div className="container max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Top Professional Picks
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Equipment that survived restaurant abuse and earned a place in my home kitchen
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Vitamix 5200 */}
+            <Link
+              href="/reviews/vitamix-5200-professional-blender"
+              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all overflow-hidden"
+            >
+              <div className="relative h-64 bg-white overflow-hidden">
+                <Image
+                  src="/images/products/vitamix-5200-professional-blender/vitamix-5200-professional-blender-1.jpg"
+                  alt="Vitamix 5200 Professional Blender"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <span className="text-yellow-500 text-lg">★★★★★</span>
+                  <span className="inline-flex items-center gap-1 bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Tier 1
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">
+                  Vitamix 5200 Professional Blender
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  Commercial power. Exceptional control. 5+ years daily use.
+                </p>
+                <span className="text-orange-700 font-semibold inline-flex items-center gap-2">
+                  Read full review →
+                </span>
+              </div>
+            </Link>
+
+            {/* Lodge Cast Iron */}
+            <Link
+              href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
+              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all overflow-hidden"
+            >
+              <div className="relative h-64 bg-white overflow-hidden">
+                <Image
+                  src="/images/products/lodge-seasoned-cast-iron-3-skillet-bundle/lodge-seasoned-cast-iron-3-skillet-bundle-1.jpg"
+                  alt="Lodge Seasoned Cast Iron 3 Skillet Bundle"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <span className="text-yellow-500 text-lg">★★★★★</span>
+                  <span className="inline-flex items-center gap-1 bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Tier 1
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">
+                  Lodge Cast Iron Skillet
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  Sear like a chef. Eat like a king. Lasts forever.
+                </p>
+                <span className="text-orange-700 font-semibold inline-flex items-center gap-2">
+                  Read full review →
+                </span>
+              </div>
+            </Link>
+
+            {/* Victorinox Fibrox 8-inch */}
+            <Link
+              href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
+              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all overflow-hidden"
+            >
+              <div className="relative h-64 bg-white overflow-hidden">
+                <Image
+                  src="/images/products/victorinox-fibrox-8-inch-chefs-knife/victorinox-fibrox-8-inch-chefs-knife-1.jpg"
+                  alt="Victorinox Fibrox Pro 8-inch Chef's Knife"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <span className="text-yellow-500 text-lg">★★★★★</span>
+                  <span className="inline-flex items-center gap-1 bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+                    Tier 1
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">
+                  Victorinox Fibrox Pro Chef&apos;s Knife
+                </h3>
+                <p className="text-slate-600 mb-4">
+                  20 years. Daily use. Dishwasher friendly.
+                </p>
+                <span className="text-orange-700 font-semibold inline-flex items-center gap-2">
+                  Read full review →
+                </span>
+              </div>
+            </Link>
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/reviews"
+              className="inline-block border-2 border-orange-600 text-orange-700 hover:bg-orange-600 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all"
+            >
+              See All Reviews
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA - Don't Let Them Leave Empty-Handed */}
+      <section className="py-16 bg-orange-600 text-white">
+        <div className="container max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Stop Guessing. Start Cooking Like a Chef.
+          </h2>
+          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Get my free guide to the 11 tools that handle 99% of home cooking—tested through
+            24 years of professional kitchen abuse.
+          </p>
+          <a
+            href="#get-guide"
+            className="inline-block bg-white text-orange-600 hover:bg-orange-50 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95"
+          >
+            Get The Free Guide
+          </a>
+        </div>
+      </section>
+
+      {/* TRUST BAR - Added per Summary */}
       <section className="bg-slate-900 text-white py-8">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
+        <div className="container max-w-6xl mx-auto px-4">
+          <div className="flex flex-wrap justify-center items-center gap-6 text-sm">
             <span className="flex items-center gap-2">
-              <span className="text-green-400">✓</span> Kitchen Manager (Mellow Mushroom)
+              <span className="text-green-400">✓</span> Kitchen Manager, Mellow Mushroom (3 years)
             </span>
             <span className="flex items-center gap-2">
-              <span className="text-green-400">✓</span> NSF Certified Equipment Tested
+              <span className="text-green-400">✓</span> Line Cook, Purple Café (6 years)
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="text-green-400">✓</span> Line Cook, Feieabend
             </span>
             <span className="flex items-center gap-2">
               <span className="text-green-400">✓</span> Seattle Central Culinary
             </span>
-            <span className="flex items-center gap-2">
-              <span className="text-green-400">✓</span> U of Montana Business
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="text-green-400">✓</span> $2M E-commerce Launch
-            </span>
           </div>
         </div>
       </section>
-    </div>
-  )
+    </main>
+  );
 }
