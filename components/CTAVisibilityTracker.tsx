@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 
 interface CTAVisibilityTrackerProps {
   ctaId: string // Unique identifier for this CTA
-  position: 'above_fold' | 'mid_article' | 'final_cta' | 'comparison_table' | 'related_products' | 'sidebar'
+  position: 'above_fold' | 'mid_article' | 'final_cta' | 'comparison_table' | 'related_products' | 'sidebar' | 'category_grid' | string
   productSlug?: string
   merchant?: string
   children: React.ReactNode
