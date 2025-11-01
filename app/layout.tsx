@@ -19,6 +19,7 @@ import MobileOptimizationProvider from '@/components/MobileOptimizationProvider'
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
+  weight: ['400', '600', '700'], // Regular, Semibold, Bold
   preload: true,
   variable: '--font-inter',
   adjustFontFallback: true
@@ -124,6 +125,16 @@ export default function RootLayout({
 
         {/* Preload critical resources */}
         <link rel="preload" href="/logo.png" as="image" type="image/png" />
+
+        {/* Preload LCP hero image for homepage */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/cast-iron-steak-sear.jpg"
+          imageSrcSet="/_next/image?url=%2Fimages%2Fcast-iron-steak-sear.jpg&w=640&q=80 640w, /_next/image?url=%2Fimages%2Fcast-iron-steak-sear.jpg&w=750&q=80 750w, /_next/image?url=%2Fimages%2Fcast-iron-steak-sear.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Fcast-iron-steak-sear.jpg&w=1080&q=80 1080w"
+          imageSizes="(max-width: 768px) 100vw, 50vw"
+          fetchPriority="high"
+        />
 
         {/* Preload critical above-the-fold images */}
         <link rel="preload" href="/og-image.jpg" as="image" type="image/jpeg" />
