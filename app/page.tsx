@@ -89,6 +89,7 @@ export default function HomePage() {
                   width={300}
                   height={400}
                   sizes="(max-width: 768px) 100vw, 300px"
+                  quality={70}
                   className="w-full h-auto rounded-2xl"
                   priority
                 />
@@ -125,6 +126,7 @@ export default function HomePage() {
                   alt="Perfect steak sear in cast iron"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={70}
                   priority
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -153,6 +155,7 @@ export default function HomePage() {
                   alt="Bacon cheeseburger cooked in cast iron"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={70}
                   priority
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -181,6 +184,7 @@ export default function HomePage() {
                   alt="Heirloom tomatoes sliced on Epicurean cutting board"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={70}
                   priority
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
