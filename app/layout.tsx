@@ -1,7 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Script from 'next/script'
 import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -12,6 +11,7 @@ const CookieConsent = lazy(() => import('@/components/CookieConsent'))
 const ExitIntentWrapper = lazy(() => import('@/components/ExitIntentWrapper'))
 const Analytics = lazy(() => import('@/components/Analytics'))
 const ScrollTracker = lazy(() => import('@/components/ScrollTracker'))
+const ThirdPartyScripts = lazy(() => import('@/components/ThirdPartyScripts'))
 import MobileOptimizedLayout from '@/components/MobileOptimizedLayout'
 import { organizationSchema, websiteSchema } from '@/lib/schema'
 import MobileOptimizationProvider from '@/components/MobileOptimizationProvider'
@@ -294,16 +294,10 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-gray-50 antialiased">
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PX8GPHKF"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
+        {/* Third-party scripts (GTM, GA4) - Deferred for performance */}
+        <Suspense fallback={null}>
+          <ThirdPartyScripts />
+        </Suspense>
 
         <MobileOptimizedLayout>
           <MobileOptimizationProvider>
@@ -342,80 +336,6 @@ export default function RootLayout({
             </Suspense>
           </MobileOptimizationProvider>
         </MobileOptimizedLayout>
-
-        {/* Google Tag Manager - Heavily deferred for performance */}
-        <Script id="gtm-deferred" strategy="worker">
-          {`
-            // Defer GTM loading until after page load and user interaction
-            let gtmLoaded = false;
-            function loadGTM() {
-              if (!gtmLoaded) {
-                gtmLoaded = true;
-                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-PX8GPHKF');
-              }
-            }
-
-            // Load GTM only after user interaction or 5 seconds
-            ['mousedown', 'touchstart', 'keydown', 'scroll'].forEach(event => {
-              document.addEventListener(event, loadGTM, { once: true, passive: true });
-            });
-            setTimeout(loadGTM, 5000);
-          `}
-        </Script>
-
-        {/* Google Analytics 4 - Deferred loading for performance */}
-        {process.env.NEXT_PUBLIC_GA_TRACKING_ID && (
-          <Script id="ga-deferred" strategy="lazyOnload">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('consent', 'default', {
-                'analytics_storage': 'denied',
-                'ad_storage': 'denied'
-              });
-
-              // Defer GA loading until page is loaded to improve LCP
-              function loadGA() {
-                const script = document.createElement('script');
-                script.async = true;
-                script.src = 'https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}';
-                document.head.appendChild(script);
-
-                script.onload = function() {
-                  gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
-                    send_page_view: false
-                  });
-                };
-              }
-
-              // Load after page is fully loaded and user interaction
-              let gaLoaded = false;
-              function loadGAOnInteraction() {
-                if (!gaLoaded) {
-                  gaLoaded = true;
-                  setTimeout(loadGA, 100);
-                }
-              }
-
-              // Mobile-optimized loading: more aggressive deferring
-              const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-              const delay = isMobile ? 5000 : 3000; // 5 seconds on mobile vs 3 on desktop
-
-              // Load on first user interaction or after delay
-              ['mousedown', 'touchstart', 'keydown', 'scroll'].forEach(event => {
-                document.addEventListener(event, loadGAOnInteraction, { once: true, passive: true });
-              });
-
-              // Fallback: load after delay (longer on mobile)
-              setTimeout(loadGAOnInteraction, delay);
-            `}
-          </Script>
-        )}
 
         {/* Vercel Analytics */}
         <VercelAnalytics />
