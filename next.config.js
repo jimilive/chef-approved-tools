@@ -50,7 +50,6 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'inline',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    quality: 75, // Default quality for better compression vs visual quality balance
     remotePatterns: [
       {
         protocol: 'https',
