@@ -123,6 +123,8 @@ export default function HomePage() {
                   src="/images/cast-iron-steak-sear.jpg"
                   alt="Perfect steak sear in cast iron"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -137,7 +139,7 @@ export default function HomePage() {
                   href="/reviews/lodge-cast-iron-skillet"
                   className="text-orange-700 hover:text-orange-800 font-semibold inline-flex items-center gap-2 transition-colors"
                 >
-                  See the pan →
+                  See the Lodge cast iron skillet →
                 </Link>
               </div>
             </div>
@@ -149,6 +151,8 @@ export default function HomePage() {
                   src="/images/cast-iron-bacon-burger.jpg"
                   alt="Bacon cheeseburger cooked in cast iron"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -163,7 +167,7 @@ export default function HomePage() {
                   href="/reviews/lodge-cast-iron-skillet"
                   className="text-orange-700 hover:text-orange-800 font-semibold inline-flex items-center gap-2 transition-colors"
                 >
-                  See the pan →
+                  See the Lodge cast iron skillet →
                 </Link>
               </div>
             </div>
@@ -175,6 +179,8 @@ export default function HomePage() {
                   src="/images/epicurean-heirloom-tomatoes.jpg"
                   alt="Heirloom tomatoes sliced on Epicurean cutting board"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -201,6 +207,8 @@ export default function HomePage() {
                   src="/images/le-creuset-pot-roast-plated.jpg"
                   alt="Pot roast dinner plated"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  loading="lazy"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -227,6 +235,8 @@ export default function HomePage() {
                   src="/images/cuisinart-eggs-cooking.jpg"
                   alt="Perfect eggs cooking"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  loading="lazy"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -253,6 +263,8 @@ export default function HomePage() {
                   src="/images/nordic-ware-ribs.jpg"
                   alt="BBQ ribs on sheet pan"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  loading="lazy"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -570,6 +582,8 @@ export default function HomePage() {
                     src="/images/oxo-bench-scraper-garlic.jpg"
                     alt="Mincing garlic with OXO bench scraper"
                     fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    loading="lazy"
                     className="object-cover"
                   />
                 </div>
@@ -578,6 +592,8 @@ export default function HomePage() {
                     src="/images/le-creuset-pot-roast-dutch-oven.jpg"
                     alt="Pot roast in Le Creuset Dutch oven"
                     fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    loading="lazy"
                     className="object-cover"
                   />
                 </div>
@@ -588,6 +604,8 @@ export default function HomePage() {
                     src="/images/mandolin-onions.jpg"
                     alt="Slicing onions with Benriner mandolin"
                     fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    loading="lazy"
                     className="object-cover"
                   />
                 </div>
@@ -596,6 +614,8 @@ export default function HomePage() {
                     src="/images/ninja-air-fryer-fries.jpg"
                     alt="Fries in Ninja air fryer"
                     fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    loading="lazy"
                     className="object-cover"
                   />
                 </div>
@@ -815,7 +835,7 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Stop Guessing. Start Cooking Like a Chef.
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed">
             Get my free guide to the 11 tools that handle 99% of home cooking—tested through
             24 years of professional kitchen abuse.
           </p>
