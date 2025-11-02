@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "Learn how oxidation affects food quality and professional techniques to prevent browning, preserve flavor, and extend ingredient freshness in your kitchen.",
   keywords: ["food oxidation", "enzymatic browning", "prevent apple browning", "food preservation", "keeping produce fresh", "oxidation in cooking"],
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/oxidization-affect-on-food'
+    canonical: 'https://www.chefapprovedtools.com/blog/oxidization-effect-on-food'
   }
 };
 
@@ -25,13 +25,13 @@ const articleSchema = generateArticleSchema({
   authorName: "Scott Bradley",
   imageUrl: "https://www.chefapprovedtools.com/images/food-oxidation-guide.jpg",
   urlPrefix: 'blog',
-  urlSuffix: 'oxidization-affect-on-food'
+  urlSuffix: 'oxidization-effect-on-food'
 });
 
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "Food Oxidation Guide", url: "https://www.chefapprovedtools.com/blog/oxidization-affect-on-food" }
+  { name: "Food Oxidation Guide", url: "https://www.chefapprovedtools.com/blog/oxidization-effect-on-food" }
 ]);
 
 const faqSchema = generateFAQSchema([
@@ -775,9 +775,9 @@ export default function OxidizationPage() {
             Join 5,000+ home cooks getting my weekly email with professional techniques, cooking science explained, and equipment recommendations from 24 years in restaurant kitchens.
           </p>
           <CTAVisibilityTracker
-            ctaId="oxidization-affect-on-food-newsletter-cta"
+            ctaId="oxidization-effect-on-food-newsletter-cta"
             position="final_cta"
-            productSlug="oxidization-affect-on-food"
+            productSlug="oxidization-effect-on-food"
             merchant="internal"
           >
             <Link

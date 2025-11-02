@@ -808,7 +808,7 @@ export default function HerbsPage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/oxidization-affect-on-food" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/oxidization-effect-on-food" className="text-orange-600 hover:text-orange-800 font-semibold">
               → Oxidization&apos;s Effect on Food
             </Link>
             <Link href="/blog/how-acid-helps-cooking" className="text-orange-600 hover:text-orange-800 font-semibold">

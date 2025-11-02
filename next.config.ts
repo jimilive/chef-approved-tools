@@ -21,6 +21,17 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['lucide-react'],
   },
 
+  // 301 Redirects
+  async redirects() {
+    return [
+      {
+        source: '/blog/oxidization-affect-on-food',
+        destination: '/blog/oxidization-effect-on-food',
+        permanent: true, // 301 redirect
+      },
+    ];
+  },
+
   // Headers for performance
   async headers() {
     return [
