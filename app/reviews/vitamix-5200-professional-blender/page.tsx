@@ -79,10 +79,13 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Vitamix 5200 Blender Review: 5+ Years Professional Testing | Chef Approved Tools',
     description: 'After 5+ years as our primary blending workhorse at Purple Cafe, the Vitamix 5200 delivered flawless performance under demanding commercial conditions. Professional chef review with honest pros and cons.',
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/vitamix-5200-professional-blender',
+    },
     openGraph: {
       title: 'Vitamix 5200 Blender Review: 5+ Years Professional Testing',
       description: 'Professional chef review after 5+ years of commercial kitchen testing',
-      url: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
+      url: 'https://www.chefapprovedtools.com/reviews/vitamix-5200-professional-blender',
       siteName: 'Chef Approved Tools',
       images: [
         {
