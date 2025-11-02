@@ -32,12 +32,12 @@ export async function generateMetadata(): Promise<Metadata> {
     title: reviewData.metadata.title,
     description: reviewData.metadata.description,
     alternates: {
-      canonical: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
+      canonical: 'https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board',
     },
     openGraph: {
       title: reviewData.metadata.ogTitle,
       description: reviewData.metadata.ogDescription,
-      url: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
+      url: 'https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board',
       siteName: 'Chef Approved Tools',
       images: [
         {

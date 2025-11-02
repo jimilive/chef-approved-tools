@@ -33,12 +33,12 @@ export async function generateMetadata(): Promise<Metadata> {
     title: reviewData.metadata.title,
     description: reviewData.metadata.description,
     alternates: {
-      canonical: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
+      canonical: 'https://www.chefapprovedtools.com/reviews/cuisinart-8-inch-nonstick-pan',
     },
     openGraph: {
       title: reviewData.metadata.ogTitle,
       description: reviewData.metadata.ogDescription,
-      url: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
+      url: 'https://www.chefapprovedtools.com/reviews/cuisinart-8-inch-nonstick-pan',
       siteName: 'Chef Approved Tools',
       images: [
         {
