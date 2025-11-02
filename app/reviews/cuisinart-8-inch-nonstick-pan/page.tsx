@@ -288,7 +288,7 @@ export default async function Cuisinart8InchNonstickPanReview() {
                 </p>
 
                 <p className="mb-4">
-                  His professional background spans multiple restaurant environments including Il Pizzaiolo, Feierabend, and Paragary's, giving him hands-on experience with equipment across different cuisines and volume levels. This Cuisinart pan has been his daily breakfast pan for 6 months—tested extensively in real home kitchen conditions.
+                  His professional background spans multiple restaurant environments including Il Pizzaiolo, Feierabend, and Paragary&apos;s, giving him hands-on experience with equipment across different cuisines and volume levels. This Cuisinart pan has been his daily breakfast pan for 6 months—tested extensively in real home kitchen conditions.
                 </p>
 
                 <p className="mb-0">

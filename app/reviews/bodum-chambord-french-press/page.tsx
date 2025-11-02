@@ -292,7 +292,7 @@ export default async function BodumChambordFrenchPressReview() {
                 </p>
 
                 <p className="mb-0">
-                  <strong>All reviews are based on actual professional testing</strong>—equipment used daily in restaurant environments or tested extensively in home settings. No free samples, no sponsored content, just honest assessments from someone who's spent decades relying on kitchen tools to do their job.
+                  <strong>All reviews are based on actual professional testing</strong>—equipment used daily in restaurant environments or tested extensively in home settings. No free samples, no sponsored content, just honest assessments from someone who&apos;s spent decades relying on kitchen tools to do their job.
                 </p>
               </div>
 
