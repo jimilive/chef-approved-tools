@@ -108,7 +108,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
 
     title: "Lodge Cast Iron 3-Skillet: Home Use Review",
-    description: "Lodge cast iron 3-skillet set: 7 years tested. Pre-seasoned 12\", 10.25\", 8\" pans. Buy-it-for-life quality under $100. Perfect heat retention.",
+    description: "Lodge cast iron 3-skillet set tested 7 years. Pre-seasoned 12\", 10.25\", and 8\" pans with buy-it-for-life quality and perfect heat retention.",
     keywords: ["Lodge cast iron skillet", "cast iron skillet set", "Lodge 3 skillet bundle", "cast iron cookware", "restaurant cast iron"],
     openGraph: {
       title: "Lodge Cast Iron 3-Skillet Bundle: Professional Review",

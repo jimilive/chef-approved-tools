@@ -32,18 +32,18 @@ export async function generateMetadata(): Promise<Metadata> {
         title: "Victorinox Granton Boning Knife Review",
         rating: 4.9,
         testingPeriod: "20 Years (Including 10 Professional)",
-        tier: 2
+        tier: 1
       })],
     },
     twitter: {
       card: 'summary_large_image',
       title: 'Victorinox Granton Edge Boning Knife: Professional Review',
-      description: 'Victorinox Granton boning knife tested 24 years.',
+      description: 'Victorinox Granton boning knife tested 20 years (including 10 professional).',
       images: [generateOGImageURL({
         title: "Victorinox Granton Boning Knife Review",
         rating: 4.9,
         testingPeriod: "20 Years (Including 10 Professional)",
-        tier: 2
+        tier: 1
       })],
     },
   }

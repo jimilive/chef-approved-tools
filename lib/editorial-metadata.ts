@@ -54,7 +54,7 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'norton-im200-tri-stone-sharpener': {
     tier: 1,
-    testingPeriod: 'Years of professional use',
+    testingPeriod: '6 years professional use',
     hook: 'Professional sharpening system. Restaurant-grade edge.',
     revenueScore: 72
   },

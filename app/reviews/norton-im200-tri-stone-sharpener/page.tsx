@@ -76,10 +76,10 @@ export async function generateMetadata(): Promise<Metadata> {
     },
 
     title: 'Norton Tri-Stone: Restaurant Sharpener Pro',
-    description: 'Professional chef tests Norton Tri-Stone sharpener for 6 years in 200+ cover restaurant. Complete review: sharpening performance, durability, technique guide.',
+    description: 'Professional chef tests Norton Tri-Stone sharpener for 6 years in a 200-cover restaurant. Complete review: sharpening performance, durability, and technique guide.',
     openGraph: {
       title: 'Norton IM200 Tri-Stone Sharpener Review: 6-Year Restaurant Test (2025)',
-      description: 'Professional chef tests Norton Tri-Stone sharpener for 6 years in 200+ cover restaurant. Complete review: sharpening performance, durability, technique guide.',
+      description: 'Professional chef tests Norton Tri-Stone sharpener for 6 years in a 200-cover restaurant. Complete review of sharpening performance, durability, and technique guide.',
       type: 'article',
       url: 'https://www.chefapprovedtools.com/reviews/norton-im200-tri-stone-sharpener',
       siteName: 'Chef Approved Tools',

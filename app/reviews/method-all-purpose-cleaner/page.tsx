@@ -90,10 +90,10 @@ export async function generateMetadata(): Promise<Metadata> {
     },
 
     title: 'Method Cleaner: Non-Toxic Grease-Cutting',
-    description: 'Professional chef\'s 5-year review of Method All-Purpose Cleaner. The unicorn of cleaning products - powerful AND non-toxic. Cuts grease effortlessly.',
+    description: 'Method All-Purpose Cleaner tested 5 years: powerful grease-cutting performance with genuinely non-toxic, plant-based ingredients. Professional kitchen approved.',
     openGraph: {
       title: 'Method All-Purpose Cleaner: 5-Year Review',
-      description: 'Professional chef\'s honest review - powerful AND non-toxic. Cuts grease effortlessly.',
+      description: 'Professional chef\'s honest review: powerful grease-cutting with genuinely non-toxic ingredients.',
       images: [generateOGImageURL({
         title: "Method All-Purpose Cleaner Review",
         rating: 4.8,

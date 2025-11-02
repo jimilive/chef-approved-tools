@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
 
     title: 'Victorinox 4" Paring: 20-Year Detail Tool',
-    description: 'Victorinox 4" paring knife: 20-year test. Perfect for detail work, peeling, trimming. Same blade from culinary school. Swiss precision under $15.',
+    description: 'Victorinox 4" paring knife tested 20 years: perfect for detail work, peeling, and trimming. Same blade from culinary school. Swiss precision at exceptional value.',
     openGraph: {
       title: 'Victorinox 4" Paring Knife: 20-Year Professional Review',
       description: 'Victorinox 4" paring knife tested 20 years. Perfect for detail work.',
@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
         title: "Victorinox 4\" Paring Knife Review",
         rating: 5.0,
         testingPeriod: "20 Years (Including 10 Professional)",
-        tier: 2
+        tier: 1
       })],
     },
     twitter: {
@@ -42,7 +42,7 @@ export async function generateMetadata(): Promise<Metadata> {
         title: "Victorinox 4\" Paring Knife Review",
         rating: 5.0,
         testingPeriod: "20 Years (Including 10 Professional)",
-        tier: 2
+        tier: 1
       })],
     },
   }

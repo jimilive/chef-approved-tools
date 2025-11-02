@@ -96,7 +96,7 @@ const faqData = [
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Rubbermaid Scraper: Buy-It-For-Life Tool",
-    description: 'Professional chef tests Rubbermaid Commercial scraper for 18 years across 2 commercial kitchens. Complete review of this $15-20 buy-it-for-life tool.',
+    description: 'Professional chef tests Rubbermaid Commercial scraper for 18 years across two commercial kitchens. Complete review of this buy-it-for-life tool with 500°F heat resistance.',
     keywords: ['Rubbermaid scraper review', 'commercial spatula', 'professional scraper', 'NSF certified spatula', 'best kitchen scraper', 'rubber spatula', 'high-heat spatula', 'professional kitchen spatula', 'commercial kitchen spatula'],
     robots: {
       index: true,
@@ -107,7 +107,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     openGraph: {
       title: 'Rubbermaid Commercial Scraper: 18-Year Professional Review',
-      description: '18 years of testing proves this $15-20 scraper is buy-it-for-life equipment',
+      description: '18 years of testing proves this scraper is true buy-it-for-life equipment with NSF certification',
       images: [generateOGImageURL({
         title: "Rubbermaid Commercial Scraper Review",
         rating: 4.7,

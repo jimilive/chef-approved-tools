@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: 'https://www.chefapprovedtools.com/reviews/japanese-wooden-spoon-set',
     },
     title: 'Japanese Wooden Spoon Set: 3-Year Dishwasher Test',
-    description: 'After 3 years and 100+ dishwasher cycles, these Japanese wooden spoons became my go-to cooking tools. Honest review of durability, performance, and value at $10-12 for 6 spoons.',
+    description: 'After 3 years and 100+ dishwasher cycles, these Japanese wooden spoons became my go-to cooking tools. Honest review of durability, performance, and exceptional value.',
     openGraph: {
       title: 'Japanese Wooden Spoon Set: 3-Year Dishwasher Test',
       description: 'Professional chef tests wooden spoons through 3 years of daily use and dishwasher cycles.',

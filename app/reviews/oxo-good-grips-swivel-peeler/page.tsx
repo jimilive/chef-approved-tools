@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
 
     title: 'OXO Swivel Peeler: Ergonomic Design Winner',
-    description: 'OXO swivel peeler tested 20 years (including 10 professional). Ergonomic design, sharp blade, comfortable grip. Best peeler for extended use. Kitchen MVP under $10.',
+    description: 'OXO swivel peeler tested 20 years (including 10 professional). Ergonomic design, sharp blade, and comfortable grip make this the best peeler for extended use.',
     openGraph: {
       title: 'OXO Good Grips Swivel Peeler: 20-Year Professional Review',
       description: 'OXO swivel peeler tested 20 years (including 10 professional). Ergonomic and reliable.',
