@@ -84,13 +84,13 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'oxo-good-grips-bench-scraper': {
     tier: 1,
-    testingPeriod: 'Daily professional use',
+    testingPeriod: '20 Years (Including 10 Professional)',
     hook: 'Most-used tool. Dough handling essential.',
     revenueScore: 60
   },
   'oxo-good-grips-swivel-peeler': {
     tier: 1,
-    testingPeriod: 'Years of professional prep',
+    testingPeriod: '20 Years (Including 10 Professional)',
     hook: 'Sharp blade. Comfortable grip. Prep station standard.',
     revenueScore: 58
   },
@@ -126,7 +126,7 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'lodge-seasoned-cast-iron-3-skillet-bundle': {
     tier: 2,
-    testingPeriod: '12 Years',
+    testingPeriod: '7 Years',
     hook: 'Generational cookware at 1/5 Le Creuset price.',
     revenueScore: 78
   },

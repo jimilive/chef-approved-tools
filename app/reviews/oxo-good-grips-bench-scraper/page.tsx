@@ -21,9 +21,9 @@ export async function generateMetadata(): Promise<Metadata> {
     },
 
     title: 'OXO Bench Scraper: Underrated Kitchen MVP',
-    description: 'Professional chef review of the OXO Good Grips bench scraper after 18 years of home and professional use. The most underrated tool in any kitchen.',
+    description: 'Professional chef review of the OXO Good Grips bench scraper after 20 years of use (including 10 professional). The most underrated tool in any kitchen.',
     openGraph: {
-      title: 'OXO Good Grips Bench Scraper: 18-Year Professional Review',
+      title: 'OXO Good Grips Bench Scraper: 20-Year Professional Review',
       description: 'The most underrated kitchen tool tested 18 years professionally.',
       type: 'article',
       url: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-bench-scraper',
@@ -31,18 +31,18 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [generateOGImageURL({
         title: "OXO Good Grips Bench Scraper Review",
         rating: 5.0,
-        testingPeriod: "18 Years Professional Use",
+        testingPeriod: "20 Years (Including 10 Professional)",
         tier: 2
       })],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'OXO Good Grips Bench Scraper: 18-Year Professional Review',
+      title: 'OXO Good Grips Bench Scraper: 20-Year Professional Review',
       description: 'The most underrated kitchen tool.',
       images: [generateOGImageURL({
         title: "OXO Good Grips Bench Scraper Review",
         rating: 5.0,
-        testingPeriod: "18 Years Professional Use",
+        testingPeriod: "20 Years (Including 10 Professional)",
         tier: 2
       })],
     },
@@ -70,7 +70,7 @@ const legacyProductData = {
   ],
   affiliateLinks: [],
   expertRating: 5.0,
-  expertOpinion: "The most underrated tool in any kitchen - once you start using a bench scraper, you'll wonder how you ever cooked without one for 24 years of daily use.",
+  expertOpinion: "The most underrated tool in any kitchen - once you start using a bench scraper, you'll wonder how you ever cooked without one for 20 years of use.",
   dateAdded: "2025-01-15",
   lastUpdated: "2025-10-13"
 };
@@ -131,7 +131,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
         slug={productData.slug}
         name={productData.name}
         tier={1}
-        testingPeriod="Daily professional use"
+        testingPeriod="20 Years (Including 10 Professional)"
         rating={4.7}
         hook="Most-used tool. Dough handling essential."
         category="Baking Tools"
@@ -149,7 +149,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The most underrated tool in any kitchen - tested through 24 years of professional cooking
+            The most underrated tool in any kitchen - tested through 20 years of use (including 10 professional)
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -575,7 +575,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
             </div>
 
             <p className="text-slate-700 mt-4 italic text-sm">
-              Performance data based on 24 years of professional restaurant use and 5 years of intensive home kitchen testing.
+              Performance data based on 24 years of professional restaurant experience and 20 years of intensive testing (including 10 in professional kitchens).
             </p>
           </div>
         </section>

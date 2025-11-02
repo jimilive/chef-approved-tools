@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About Scott Bradley & Testing Methodology',
-  description: 'Chef Scott Bradley: 45 years cooking, serious testing. Restaurant or my kitchen only - no lab tests. Real conditions, honest reviews. Expert methodology.',
+  description: 'Chef Scott Bradley: 45 years of cooking experience and serious testing methodology. Restaurant or home kitchen only - no lab tests. Real conditions, honest reviews.',
   keywords: 'Scott Bradley chef, professional chef background, kitchen equipment testing, restaurant equipment review process, chef equipment methodology, culinary expertise',
   alternates: {
     canonical: '/about',
@@ -184,7 +184,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-slate-700 mb-6 text-lg leading-relaxed">
-              Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
+              Former Kitchen Manager at Mellow Mushroom with 24 years of professional restaurant experience.
               Seattle Culinary Academy graduate who&apos;s tested equipment in
               high-volume restaurant operations serving hundreds of customers daily.
             </p>
@@ -378,7 +378,7 @@ export default function AboutPage() {
               </div>
               <h5 className="font-bold text-slate-900 mb-3">Professional Recommendation</h5>
               <p className="text-sm text-slate-700 mb-3">
-                Informed opinions based on 45 years of cooking experience and understanding what
+                Informed opinions based on 45 years of cooking experience (including 24 years professionally) and understanding what
                 makes equipment work in real kitchens.
               </p>
               <p className="text-xs text-slate-600 italic">

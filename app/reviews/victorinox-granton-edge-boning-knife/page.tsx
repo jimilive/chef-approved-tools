@@ -24,14 +24,14 @@ export async function generateMetadata(): Promise<Metadata> {
     description: 'Victorinox Granton boning knife: 20-year pro test. Firm blade for trimming, deboning. Granton edge prevents sticking. Professional butcher tool.',
     openGraph: {
       title: 'Victorinox Granton Edge Boning Knife: Professional Review',
-      description: 'Victorinox Granton boning knife tested 24 years professionally.',
+      description: 'Victorinox Granton boning knife tested 20 years (including 10 professionally).',
       type: 'article',
       url: 'https://www.chefapprovedtools.com/reviews/victorinox-granton-edge-boning-knife',
       siteName: 'Chef Approved Tools',
       images: [generateOGImageURL({
         title: "Victorinox Granton Boning Knife Review",
         rating: 4.9,
-        testingPeriod: "24 Years Professional Use",
+        testingPeriod: "20 Years (Including 10 Professional)",
         tier: 2
       })],
     },
@@ -42,7 +42,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [generateOGImageURL({
         title: "Victorinox Granton Boning Knife Review",
         rating: 4.9,
-        testingPeriod: "24 Years Professional Use",
+        testingPeriod: "20 Years (Including 10 Professional)",
         tier: 2
       })],
     },
@@ -117,7 +117,7 @@ export default async function VictorinoxGrantonEdgeBoningKnifeReview() {
       url: affiliateLink
     }],
     expertRating: 4.9,
-    expertOpinion: "Essential for anyone who works with whole proteins - this knife cuts butchery time in half and pays for itself in reduced meat waste after 24 years of professional use.",
+    expertOpinion: "Essential for anyone who works with whole proteins - this knife cuts butchery time in half and pays for itself in reduced meat waste after 20 years of use (including 10 professional).",
     dateAdded: "2025-01-15",
     lastUpdated: product.lastUpdated
   };
@@ -152,7 +152,7 @@ export default async function VictorinoxGrantonEdgeBoningKnifeReview() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The essential tool for breaking down proteins - tested through 24 years of professional cooking
+            The essential tool for breaking down proteins - tested through 20 years of cooking (including 10 professional)
           </p>
 
           <div className="flex items-center gap-6 text-sm">
@@ -374,7 +374,7 @@ export default async function VictorinoxGrantonEdgeBoningKnifeReview() {
           <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 24 years of professional cooking.
+            This is one of the 11 tools I use most in my home kitchen after 20 years of cooking (including 10 professional).
             If you work with whole proteins, this knife pays for itself in saved money on the first few uses.
           </p>
 
@@ -594,7 +594,7 @@ export default async function VictorinoxGrantonEdgeBoningKnifeReview() {
             </div>
 
             <p className="text-slate-700 mt-4 italic text-sm">
-              Performance data based on 24 years of professional restaurant use and testing across multiple protein types.
+              Performance data based on 20 years of use (including 10 in professional restaurants) and testing across multiple protein types.
             </p>
           </div>
         </section>

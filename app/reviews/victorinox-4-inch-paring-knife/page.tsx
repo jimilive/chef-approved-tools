@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [generateOGImageURL({
         title: "Victorinox 4\" Paring Knife Review",
         rating: 5.0,
-        testingPeriod: "20 Years Professional Use",
+        testingPeriod: "20 Years (Including 10 Professional)",
         tier: 2
       })],
     },
@@ -41,7 +41,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [generateOGImageURL({
         title: "Victorinox 4\" Paring Knife Review",
         rating: 5.0,
-        testingPeriod: "20 Years Professional Use",
+        testingPeriod: "20 Years (Including 10 Professional)",
         tier: 2
       })],
     },

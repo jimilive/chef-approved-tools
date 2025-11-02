@@ -18,7 +18,7 @@ import { generateOGImageURL } from '@/lib/og-image'
 const faqData = [
   {
     question: "Is the Victorinox Fibrox Pro 10\" chef's knife worth the money?",
-    answer: "Absolutely. Based on 20 years using this knife professionally, it delivers the same performance as chef knives costing hundreds more. The high-carbon stainless steel holds an edge exceptionally well, the Fibrox handle provides superior grip, and it's proven reliable in professional kitchens worldwide. The exceptional value makes it one of the best investments for serious home cooks and professionals alike."
+    answer: "Absolutely. Based on 20 years using this knife (including 10 professionally), it delivers the same performance as chef knives costing hundreds more. The high-carbon stainless steel holds an edge exceptionally well, the Fibrox handle provides superior grip, and it's proven reliable in professional kitchens worldwide. The exceptional value makes it one of the best investments for serious home cooks and professionals alike."
   },
   {
     question: "Should I get the 10\" or 8\" Victorinox chef's knife?",
@@ -77,7 +77,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [generateOGImageURL({
         title: "Victorinox 10\" Fibrox Chef's Knife Review",
         rating: 4.8,
-        testingPeriod: "20 Years Professional Use",
+        testingPeriod: "20 Years (Including 10 Professional)",
         tier: 1
       })],
     },
@@ -88,7 +88,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [generateOGImageURL({
         title: "Victorinox 10\" Fibrox Chef's Knife Review",
         rating: 4.8,
-        testingPeriod: "20 Years Professional Use",
+        testingPeriod: "20 Years (Including 10 Professional)",
         tier: 1
       })],
     },
@@ -222,7 +222,7 @@ export default async function VictorinoxFibrox10InchReview() {
           <h2>Bottom Line Up Front</h2>
 
           <p className="text-lg leading-relaxed">
-            <strong>After using this Victorinox 10&quot; knife for 20 years in professional kitchens, it&apos;s my go-to for breaking down proteins and chopping larger vegetables.</strong> The extra 2 inches over the standard 8&quot; model makes a real difference when working fast with whole chickens, pork shoulders, or large butternut squash.
+            <strong>After using this Victorinox 10&quot; knife for 20 years (including 10 in professional kitchens), it&apos;s my go-to for breaking down proteins and chopping larger vegetables.</strong> The extra 2 inches over the standard 8&quot; model makes a real difference when working fast with whole chickens, pork shoulders, or large butternut squash.
           </p>
 
           <p className="text-lg leading-relaxed">
@@ -604,7 +604,7 @@ export default async function VictorinoxFibrox10InchReview() {
             <h4 className="mt-0">Victorinox Fibrox Pro 8&quot; Chef&apos;s Knife</h4>
             <p>The standard length that handles 80% of daily cutting tasks. Perfect for precision work, smaller vegetables, and general prep. I keep both the 8&quot; and 10&quot; in my kitchen and grab whichever fits the task best.</p>
             <p className="text-sm text-gray-600">
-              <strong>Professional Use:</strong> My daily workhorse for 20 years in restaurant kitchens.
+              <strong>Professional Use:</strong> My daily workhorse for 20 years (including 10 in restaurant kitchens).
             </p>
             <Link
               href="/reviews/victorinox-fibrox-8-inch-chefs-knife"

@@ -35,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [generateOGImageURL({
         title: "Victorinox 8\" Fibrox Chef's Knife Review",
         rating: 4.8,
-        testingPeriod: "20 Years Professional Use",
+        testingPeriod: "20 Years (Including 10 Professional)",
         tier: 1
       })],
     },
@@ -46,7 +46,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [generateOGImageURL({
         title: "Victorinox 8\" Fibrox Chef's Knife Review",
         rating: 4.8,
-        testingPeriod: "20 Years Professional Use",
+        testingPeriod: "20 Years (Including 10 Professional)",
         tier: 1
       })],
     },
@@ -84,7 +84,7 @@ export default async function VictorinoxFibrox8InchReview() {
         slug={productData.slug}
         name={productData.name}
         tier={1}
-        testingPeriod="20 years professional use"
+        testingPeriod="20 years (including 10 professional)"
         rating={4.8}
         hook="Professional quality at accessible price. My daily knife."
         category="Knives"
@@ -103,7 +103,7 @@ export default async function VictorinoxFibrox8InchReview() {
               url: affiliateLink
             }],
             expertRating: 5,
-            expertOpinion: "After 20 years of daily professional use, the Victorinox 8-inch chef's knife remains my workhorse blade. The thin, flexible blade delivers professional control, the fibrox handle prevents hand fatigue, and the edge retention rivals knives costing several times more. This is genuine professional equipment that happens to be accessible. Beyond basic quality standards, expensive knives buy you aesthetics and prestige, not better cutting performance. The Victorinox delivers what matters—sharpness, balance, durability—at pricing that makes professional-quality cooking accessible to everyone.",
+            expertOpinion: "After 20 years of use (including 10 professionally), the Victorinox 8-inch chef's knife remains my workhorse blade. The thin, flexible blade delivers professional control, the fibrox handle prevents hand fatigue, and the edge retention rivals knives costing several times more. This is genuine professional equipment that happens to be accessible. Beyond basic quality standards, expensive knives buy you aesthetics and prestige, not better cutting performance. The Victorinox delivers what matters—sharpness, balance, durability—at pricing that makes professional-quality cooking accessible to everyone.",
             pros: [
               "Perfect size for 80% of kitchen tasks",
               "Professional quality at accessible pricing",

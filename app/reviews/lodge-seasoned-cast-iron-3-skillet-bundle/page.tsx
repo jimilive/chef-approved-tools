@@ -165,7 +165,7 @@ export default async function Lodge3SkilletBundleReview() {
         slug={productData.slug}
         name={productData.name}
         tier={2}
-        testingPeriod="12 Years"
+        testingPeriod="7 Years"
         rating={4.7}
         hook="Generational cookware at 1/5 Le Creuset price."
         category="Cookware"
@@ -359,7 +359,7 @@ export default async function Lodge3SkilletBundleReview() {
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
             <div className="flex items-center gap-2 mb-2">
               <Star className="w-5 h-5 text-blue-600" />
-              <h3 className="font-semibold text-blue-800">Size Usage Analysis - 3 Years Testing</h3>
+              <h3 className="font-semibold text-blue-800">Size Usage Analysis - 7 Years Testing</h3>
             </div>
             <p className="text-blue-700 text-sm mb-2">
               <strong>All three sizes used equally</strong> depending on the task. The 12-inch handles large steaks
@@ -380,7 +380,7 @@ export default async function Lodge3SkilletBundleReview() {
             <div className="space-y-6">
 
               <div>
-                <h3 className="font-bold text-slate-900 mb-3">3 Years of Weekly Home Testing</h3>
+                <h3 className="font-bold text-slate-900 mb-3">7 Years of Weekly Home Testing</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
                   After 7 years of weekly home cooking with this Lodge set, I can confidently say these skillets
                   deliver professional-grade performance. I use them primarily for searing steaks and making pancakes—
@@ -522,7 +522,7 @@ export default async function Lodge3SkilletBundleReview() {
               </p>
 
               <p className="text-slate-700 mb-6">
-                <strong>Maintenance Reality After 3 Years:</strong> If you use cast iron regularly, the cooking
+                <strong>Maintenance Reality After 7 Years:</strong> If you use cast iron regularly, the cooking
                 process maintains seasoning naturally. You don&apos;t need constant oven-seasoning. Regular cooking
                 with fats builds seasoning over time. The critical rule: <strong>Never leave water or acidic products
                 in or on the skillet.</strong> This is the #1 cause of seasoning damage and rust. Read more about <a href="/about" className="text-blue-600 font-bold">my testing methodology</a> for kitchen equipment.
@@ -1065,7 +1065,7 @@ export default async function Lodge3SkilletBundleReview() {
           <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-lg my-8">
 
             <h3 className="text-white mt-0 text-2xl">
-              After 3 Years of Weekly Home Cooking...
+              After 7 Years of Weekly Home Cooking...
             </h3>
 
             <p className="text-lg leading-relaxed">

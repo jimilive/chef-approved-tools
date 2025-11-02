@@ -370,7 +370,7 @@ export function TrustBarSection() {
             <span className="text-green-400">✓</span> Line Cook, Purple Café (6 years)
           </span>
           <span className="flex items-center gap-2">
-            <span className="text-green-400">✓</span> Line Cook, Feieabend
+            <span className="text-green-400">✓</span> Line Cook, Feierabend
           </span>
           <span className="flex items-center gap-2">
             <span className="text-green-400">✓</span> Seattle Central Culinary
