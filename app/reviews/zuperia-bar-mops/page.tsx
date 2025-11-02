@@ -72,7 +72,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
 
     title: 'ZUPERIA Bar Mops: Industry Standard Cotton',
-    description: 'ZUPERIA bar mops deliver better quality than those used for years in professional restaurants. Industry-standard 100% ring-spun cotton that's absorbent and durable.',
+    description: 'ZUPERIA bar mops deliver better quality than those used for years in professional restaurants. Industry-standard 100% ring-spun cotton that\'s absorbent and durable.',
     openGraph: {
       title: 'ZUPERIA Bar Mops: Professional Kitchen Review',
       description: 'Professional kitchen bar mops. Industry standard quality.',

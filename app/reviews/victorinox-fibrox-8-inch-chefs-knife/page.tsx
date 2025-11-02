@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
 
     title: 'Victorinox 8" Fibrox: Budget Pro Performance',
-    description: 'Victorinox 8" Fibrox tested 20 years: professional-grade chef's knife with exceptional value and NSF certification. The workhorse choice in restaurant kitchens.',
+    description: 'Victorinox 8" Fibrox tested 20 years: professional-grade chef\'s knife with exceptional value and NSF certification. The workhorse choice in restaurant kitchens.',
     openGraph: {
       title: 'Victorinox 8" Fibrox Chef\'s Knife: 20-Year Professional Review',
       description: 'Victorinox 8" Fibrox tested 20 years in professional kitchens. The workhorse knife.',
