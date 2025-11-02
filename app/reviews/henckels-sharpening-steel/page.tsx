@@ -18,7 +18,7 @@ import {
 } from '@/components/review'
 
 // Import review data
-import { reviewData } from './diamond-crystal-kosher-salt-data'
+import { reviewData } from './henckels-sharpening-steel-data'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -31,9 +31,6 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: reviewData.metadata.title,
     description: reviewData.metadata.description,
-    alternates: {
-      canonical: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
-    },
     openGraph: {
       title: reviewData.metadata.ogTitle,
       description: reviewData.metadata.ogDescription,
@@ -68,7 +65,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default async function DiamondCrystalKosherSaltReview() {
+export default async function HenckelsSharpeningSteelReview() {
   // Get product data from Supabase
   const product = await getProductBySlug(reviewData.productSlug)
 
@@ -101,6 +98,7 @@ export default async function DiamondCrystalKosherSaltReview() {
     brand: productData.brand,
     rating: productData.expertRating,
     reviewCount: 1,
+    model: productData.model,
     category: productData.category,
     dateAdded: productData.dateAdded,
     lastUpdated: productData.lastUpdated,
@@ -214,7 +212,7 @@ export default async function DiamondCrystalKosherSaltReview() {
               <div className="flex flex-col gap-4">
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-                  <p className="text-sm text-slate-600 mb-4">Prime shipping, Subscribe & Save available, 3-pack option</p>
+                  <p className="text-sm text-slate-600 mb-4">Prime shipping, verified reviews, easy returns</p>
                 </div>
                 <CTAVisibilityTracker
                   ctaId="where-to-buy-cta"
