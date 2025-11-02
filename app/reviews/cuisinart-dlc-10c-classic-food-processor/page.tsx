@@ -31,10 +31,13 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: reviewData.metadata.title,
     description: reviewData.metadata.description,
+    alternates: {
+      canonical: 'https://www.chefapprovedtools.com/reviews/cuisinart-dlc-10c-classic-food-processor',
+    },
     openGraph: {
       title: reviewData.metadata.ogTitle,
       description: reviewData.metadata.ogDescription,
-      url: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
+      url: 'https://www.chefapprovedtools.com/reviews/cuisinart-dlc-10c-classic-food-processor',
       siteName: 'Chef Approved Tools',
       images: [
         {
