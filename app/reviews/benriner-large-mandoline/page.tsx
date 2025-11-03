@@ -163,7 +163,7 @@ export default async function BenrinerLargeMandolineReview() {
             verdict={reviewData.hero.verdict}
             verdictStrong={reviewData.hero.verdictStrong}
             customCTA={
-              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
+              <div className="bg-white border-2 border-orange-200 rounded-xl p-6 min-h-[280px]">
                 <SizeSelector
                   title="Choose Your Size:"
                   options={[
@@ -267,7 +267,7 @@ export default async function BenrinerLargeMandolineReview() {
               {reviewData.whereToBuy.introText}
             </p>
 
-            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
+            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50 min-h-[280px]">
               <div className="flex flex-col gap-4">
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
@@ -299,7 +299,7 @@ export default async function BenrinerLargeMandolineReview() {
               </div>
             </div>
 
-            <p className="text-sm text-slate-500 mt-6 italic">
+            <p className="text-sm text-slate-600 mt-6 italic">
               {reviewData.whereToBuy.disclaimer}
             </p>
           </div>
@@ -318,7 +318,7 @@ export default async function BenrinerLargeMandolineReview() {
             title={reviewData.bottomLine.title}
             paragraphs={reviewData.bottomLine.paragraphs}
             customCTA={
-              <div className="bg-white rounded-xl p-6">
+              <div className="bg-white rounded-xl p-6 min-h-[280px]">
                 <SizeSelector
                   title="Choose Your Size:"
                   options={[
