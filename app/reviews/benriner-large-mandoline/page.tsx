@@ -25,8 +25,8 @@ import CompatibilityGuide from '@/components/review/custom/CompatibilityGuide'
 // Import review data
 import { reviewData } from './benriner-large-mandoline-data'
 
-// TEMPORARY: Force immediate cache regeneration to test ProductViewTrackerWrapper fix
-export const revalidate = 1 // 1 second - CHANGE BACK TO 86400 after testing!
+// Use ISR for better performance - revalidate every 24 hours
+export const revalidate = 86400 // 24 hours in seconds
 
 // Enable fetch caching for Supabase requests
 export const fetchCache = 'force-cache'
