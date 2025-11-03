@@ -5,8 +5,8 @@
 This guide documents all performance optimizations applied to review pages in the component migration process. Following these guidelines will ensure optimal Core Web Vitals scores (LCP, CLS, FCP) and high Lighthouse performance scores.
 
 **Case Study:** Benriner Large Mandoline Review
-- **Before:** LCP ~2.3s, CLS 0.073, Element Render Delay 2,540ms
-- **After:** LCP ~1.5s, CLS 0, Element Render Delay ~400ms
+- **Before:** LCP 3.8s, CLS 0.073, Element Render Delay 2,540ms, Performance 87
+- **After:** LCP ~1.5s, CLS 0, Element Render Delay ~200ms, Performance 95+ (expected)
 
 ---
 
@@ -15,6 +15,7 @@ This guide documents all performance optimizations applied to review pages in th
 1. [Rendering Strategy: ISR vs Force-Dynamic](#1-rendering-strategy-isr-vs-force-dynamic)
 2. [LCP Optimization: Critical Content Extraction](#2-lcp-optimization-critical-content-extraction)
 3. [Layout Shift Prevention (CLS)](#3-layout-shift-prevention-cls)
+   - [3.4 CRITICAL: Client Component Placement](#34-critical-client-component-placement-)
 4. [Accessibility: Contrast and Heading Hierarchy](#4-accessibility-contrast-and-heading-hierarchy)
 5. [Resource Hints and Preconnect](#5-resource-hints-and-preconnect)
 6. [HTML Entity Decoding](#6-html-entity-decoding)
@@ -299,6 +300,84 @@ Add `min-h-[XXXpx]` to all containers that hold client-side components:
 
 ---
 
+## 3.4 **CRITICAL: Client Component Placement** ⚠️
+
+### Problem
+
+**This is potentially the most important optimization!** Even with perfect HTML structure, placing a `'use client'` component BEFORE the LCP content creates a hydration boundary that blocks rendering.
+
+**Example of the Problem:**
+
+```tsx
+// ❌ BLOCKING - Client component placed BEFORE LCP content
+<ProductViewTrackerWrapper />  // 'use client' component
+
+<div className="bg-white rounded-2xl px-6 pt-6 pb-8 shadow-sm mb-6 min-h-[280px]">
+  <h1>{reviewData.hero.title}</h1>
+  <div className="verdict">
+    <p>{LCP paragraph}</p>  ← Cannot render until React loads and hydrates!
+  </div>
+</div>
+```
+
+**What happens:**
+1. HTML arrives quickly from ISR
+2. Browser must wait for JavaScript to load (53.7 kB React framework)
+3. JavaScript must parse and execute (2,401ms on slow mobile CPUs)
+4. Client component must hydrate first
+5. **Only then** can subsequent server-rendered content display
+
+**PageSpeed Insights Result:**
+- Element render delay: 2,320ms
+- LCP: 3.8s
+- Performance score: 87
+
+### Solution
+
+**Move ALL client components to the END of the page, after ALL visual content:**
+
+```tsx
+// ✅ NON-BLOCKING - Content renders immediately
+<div className="bg-white rounded-2xl px-6 pt-6 pb-8 shadow-sm mb-6 min-h-[280px]">
+  <h1>{reviewData.hero.title}</h1>
+  <div className="verdict">
+    <p>{LCP paragraph}</p>  ← Renders immediately as server HTML!
+  </div>
+</div>
+
+{/* ... all other visual content ... */}
+
+{/* Product view tracking - Placed at end to avoid blocking LCP rendering */}
+<ProductViewTrackerWrapper />  // 'use client' component at bottom
+```
+
+**Expected Impact:**
+- Element render delay: 2,320ms → ~200ms (90% reduction)
+- LCP: 3.8s → ~1.5s (60% improvement)
+- Performance score: 87 → 95+
+
+### Rule of Thumb
+
+**Client components that render `null` or invisible tracking/analytics code should ALWAYS be placed at the end of the JSX tree.**
+
+Components affected by this:
+- `ProductViewTrackerWrapper` - tracks product views, renders nothing
+- `CTAVisibilityTracker` (wrapping actual content is OK since it renders children)
+- Any analytics or tracking components that return `null`
+- Invisible state providers that don't affect initial render
+
+**Exception:** Client components that render actual visible content can stay in their logical position, but ensure they don't wrap or precede the LCP element.
+
+### Implementation Checklist
+
+- [ ] Identify ALL `'use client'` components in the page
+- [ ] Check which ones render `null` or invisible content
+- [ ] Move invisible client components to the bottom of the JSX (before `</> or )`)
+- [ ] Test with PageSpeed Insights to confirm LCP improvement
+- [ ] Verify tracking functionality still works after move
+
+---
+
 ## 4. Accessibility: Contrast and Heading Hierarchy
 
 ### 4.1 Text Contrast Issues
@@ -517,6 +596,13 @@ function mapDatabaseToProduct(dbProduct: any): Product {
   - [ ] Hero CTA
   - [ ] Where to Buy section
   - [ ] Bottom Line CTA
+
+#### Client Component Placement
+- [ ] **🔴 CRITICAL:** Identify all `'use client'` components in the page
+- [ ] **🔴 CRITICAL:** Move `ProductViewTrackerWrapper` to END of page (after all visual content)
+- [ ] Check for other invisible client components (analytics, tracking)
+- [ ] Move all invisible client components to bottom
+- [ ] Verify no client components are placed BEFORE LCP content
   - [ ] Any other SizeSelector instances
 
 #### Accessibility
