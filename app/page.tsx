@@ -1,20 +1,49 @@
-'use client'
-
-import { lazy, Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import EmailCaptureSection from '@/components/home/EmailCaptureSection'
+import { 
+  WhyListenSection, 
+  ShopByCategorySection, 
+  SecondaryCTASection, 
+  TopProfessionalPicksSection, 
+  FinalCTASection, 
+  TrustBarSection 
+} from '@/components/home/BelowFoldSections'
 
-// Lazy load below-fold sections for better performance
-const EmailCaptureSection = lazy(() => import('@/components/home/EmailCaptureSection'))
-const WhyListenSection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.WhyListenSection })))
-const ShopByCategorySection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.ShopByCategorySection })))
-const SecondaryCTASection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.SecondaryCTASection })))
-const TopProfessionalPicksSection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.TopProfessionalPicksSection })))
-const FinalCTASection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.FinalCTASection })))
-const TrustBarSection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.TrustBarSection })))
-
-// Simple loading fallback
-const SectionFallback = () => <div className="py-16" />
+export const metadata = {
+  title: 'Chef Approved Tools - Professional Kitchen Equipment Reviews | 24 Years Experience',
+  description: 'Professional chef with 24 years of restaurant experience reviews kitchen equipment. Honest, tested recommendations from real professional kitchens including Mellow Mushroom and Purple Café.',
+  keywords: [
+    'professional kitchen equipment',
+    'chef approved tools',
+    'restaurant grade cookware',
+    'professional chef knife reviews',
+    'commercial kitchen equipment reviews',
+    'kitchen manager recommendations'
+  ],
+  openGraph: {
+    title: 'Chef Approved Tools - Professional Kitchen Equipment Reviews',
+    description: '24 years in professional kitchens. Real reviews from Mellow Mushroom, Purple Café, and more. Honest equipment testing, no BS.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/scott-chef-coat-cropped.jpg',
+        width: 300,
+        height: 400,
+        alt: 'Scott Bradley - Professional Chef with 24 Years Experience'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Chef Approved Tools - Professional Kitchen Equipment Reviews',
+    description: '24 years in professional kitchens. Honest equipment reviews that actually help.',
+    images: ['/images/scott-chef-coat-cropped.jpg']
+  },
+  alternates: {
+    canonical: 'https://chefapprovedtools.com'
+  }
+}
 
 export default function HomePage() {
   return (
@@ -22,9 +51,9 @@ export default function HomePage() {
       {/* HERO SECTION - Dual Impact */}
       <section className="relative bg-gradient-to-br from-slate-800 via-slate-700 to-orange-700 text-white">
         <div className="container max-w-7xl mx-auto px-4 py-16 md:py-24">
-          <div className="grid md:grid-cols-2 items-center max-w-7xl mx-auto px-32">
+          <div className="grid md:grid-cols-2 items-center max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-32">
             {/* Left: Message */}
-            <div className="space-y-6 -mr-12">
+            <div className="space-y-6 md:-mr-12">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Rigorously Tested,
                 <br />
@@ -63,12 +92,12 @@ export default function HomePage() {
                   width={300}
                   height={400}
                   sizes="(max-width: 768px) 100vw, 300px"
-                  quality={80}
+                  quality={85}
                   className="w-full h-auto rounded-2xl"
                   priority
                 />
               </div>
-              <div className="absolute bottom-4 -right-6 bg-orange-800 text-white px-6 py-3 rounded-xl shadow-xl">
+              <div className="absolute bottom-4 -right-6 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-xl shadow-xl">
                 <p className="font-bold text-lg">24 Years</p>
                 <p className="text-sm font-bold">Professional Kitchens</p>
               </div>
@@ -77,7 +106,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TOOLS IN ACTION - The Money Section - 3 COLUMN LAYOUT */}
+      {/* TOOLS IN ACTION - The Money Section */}
       <section className="py-16 bg-white">
         <div className="container max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -91,19 +120,18 @@ export default function HomePage() {
           </div>
 
           {/* Grid of Beautiful Food Shots - 3 COLUMN LAYOUT */}
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {/* Steak Sear */}
             <div className="group relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-all overflow-hidden">
               <div className="relative h-80 overflow-hidden">
                 <Image
                   src="/images/cast-iron-steak-sear.jpg"
-                  alt="Perfect steak sear in cast iron"
+                  alt="Perfect steak sear in cast iron skillet"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  quality={80}
+                  quality={85}
                   priority
-                  fetchPriority="high"
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
@@ -114,7 +142,7 @@ export default function HomePage() {
                   Restaurant-quality crust at home. The right pan makes all the difference.
                 </p>
                 <Link
-                  href="/reviews/lodge-cast-iron-skillet"
+                  href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
                   className="text-orange-700 hover:text-orange-800 font-semibold inline-flex items-center gap-2 transition-colors"
                 >
                   See the Lodge cast iron skillet →
@@ -127,12 +155,12 @@ export default function HomePage() {
               <div className="relative h-80 overflow-hidden">
                 <Image
                   src="/images/cast-iron-bacon-burger.jpg"
-                  alt="Bacon cheeseburger cooked in cast iron"
+                  alt="Bacon cheeseburger with perfect sear cooked in cast iron"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  quality={80}
-                  priority
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  quality={85}
+                  loading="lazy"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
@@ -143,7 +171,7 @@ export default function HomePage() {
                   Cast iron heat retention creates that crispy, caramelized edge every time.
                 </p>
                 <Link
-                  href="/reviews/lodge-cast-iron-skillet"
+                  href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
                   className="text-orange-700 hover:text-orange-800 font-semibold inline-flex items-center gap-2 transition-colors"
                 >
                   See the Lodge cast iron skillet →
@@ -156,12 +184,12 @@ export default function HomePage() {
               <div className="relative h-80 overflow-hidden">
                 <Image
                   src="/images/epicurean-heirloom-tomatoes.jpg"
-                  alt="Heirloom tomatoes sliced on Epicurean cutting board"
+                  alt="Fresh heirloom tomatoes sliced on Epicurean cutting board"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  quality={80}
-                  priority
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  quality={85}
+                  loading="lazy"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
@@ -185,11 +213,12 @@ export default function HomePage() {
               <div className="relative h-80 overflow-hidden">
                 <Image
                   src="/images/le-creuset-pot-roast-plated.jpg"
-                  alt="Pot roast dinner plated"
+                  alt="Sunday pot roast dinner plated and ready to serve"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={85}
                   loading="lazy"
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
@@ -213,11 +242,12 @@ export default function HomePage() {
               <div className="relative h-80 overflow-hidden">
                 <Image
                   src="/images/cuisinart-eggs-cooking.jpg"
-                  alt="Perfect eggs cooking"
+                  alt="Perfect eggs cooking in nonstick skillet"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={85}
                   loading="lazy"
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
@@ -241,11 +271,12 @@ export default function HomePage() {
               <div className="relative h-80 overflow-hidden">
                 <Image
                   src="/images/nordic-ware-ribs.jpg"
-                  alt="BBQ ribs on sheet pan"
+                  alt="Fall-off-the-bone BBQ ribs on sheet pan"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={85}
                   loading="lazy"
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
@@ -267,34 +298,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* LAZY LOADED BELOW-FOLD SECTIONS */}
-      <Suspense fallback={<SectionFallback />}>
-        <EmailCaptureSection />
-      </Suspense>
+      {/* EMAIL CAPTURE - Only Client Component */}
+      <EmailCaptureSection />
 
-      <Suspense fallback={<SectionFallback />}>
-        <WhyListenSection />
-      </Suspense>
-
-      <Suspense fallback={<SectionFallback />}>
-        <ShopByCategorySection />
-      </Suspense>
-
-      <Suspense fallback={<SectionFallback />}>
-        <SecondaryCTASection />
-      </Suspense>
-
-      <Suspense fallback={<SectionFallback />}>
-        <TopProfessionalPicksSection />
-      </Suspense>
-
-      <Suspense fallback={<SectionFallback />}>
-        <FinalCTASection />
-      </Suspense>
-
-      <Suspense fallback={<SectionFallback />}>
-        <TrustBarSection />
-      </Suspense>
+      {/* ALL BELOW-FOLD SECTIONS - Server Components */}
+      <WhyListenSection />
+      <ShopByCategorySection />
+      <SecondaryCTASection />
+      <TopProfessionalPicksSection />
+      <FinalCTASection />
+      <TrustBarSection />
     </main>
   )
 }

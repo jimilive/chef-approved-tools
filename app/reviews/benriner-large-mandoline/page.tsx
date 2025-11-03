@@ -25,8 +25,8 @@ import CompatibilityGuide from '@/components/review/custom/CompatibilityGuide'
 // Import review data
 import { reviewData } from './benriner-large-mandoline-data'
 
-// Use ISR for better performance - revalidate every 24 hours
-export const revalidate = 86400 // 24 hours in seconds
+// Use ISR for better performance - revalidate every hour for price changes
+export const revalidate = 3600 // 1 hour in seconds
 
 // Enable fetch caching for Supabase requests
 export const fetchCache = 'force-cache'
@@ -80,7 +80,7 @@ export default async function BenrinerLargeMandolineReview() {
   // Get product data from Supabase
   const product = await getProductBySlug(reviewData.productSlug)
 
-  // Merge Supabase data with legacy data (Supabase takes priority, but preserve legacy pros/cons if Supabase is empty)
+  // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = product ? {
     ...reviewData.legacyProductData,
     ...product,
@@ -91,7 +91,7 @@ export default async function BenrinerLargeMandolineReview() {
       : reviewData.legacyProductData.affiliateLinks
   } : reviewData.legacyProductData
 
-  // Get primary affiliate link
+  // Get primary affiliate link (for Large size)
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
 
   // Generate breadcrumbs
@@ -153,32 +153,15 @@ export default async function BenrinerLargeMandolineReview() {
             {reviewData.breadcrumb.productName}
           </div>
 
-          {/* CRITICAL LCP CONTENT - Rendered first for immediate paint */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-8 shadow-sm mb-6 min-h-[280px]">
-            <h1 className="text-2xl font-bold text-slate-900 leading-[1.3] mb-5">
-              {reviewData.hero.title}
-            </h1>
-
-            {/* Professional Verdict - This is the LCP element */}
-            <div className="bg-amber-50 border border-amber-200 rounded-xl px-6 py-6 mb-0">
-              <div className="text-xs font-bold text-amber-900 uppercase tracking-wider mb-3">
-                Professional Verdict
-              </div>
-              <p className="text-slate-900 text-base leading-[1.7] m-0">
-                <strong>{reviewData.hero.verdictStrong}</strong> {reviewData.hero.verdict}
-              </p>
-            </div>
-          </div>
-
-          {/* SECTION 1: HERO */}
+          {/* SECTION 1: HERO - Includes LCP-optimized verdict */}
           <ReviewHero
-            title={null}
+            title={reviewData.hero.title}
             authorName={reviewData.hero.authorName}
             authorCredentials={reviewData.hero.authorCredentials}
             rating={reviewData.hero.rating}
             tierBadge={reviewData.hero.tierBadge}
-            verdict={null}
-            verdictStrong={null}
+            verdict={reviewData.hero.verdict}
+            verdictStrong={reviewData.hero.verdictStrong}
             customCTA={
               <div className="bg-white border-2 border-orange-200 rounded-xl p-6 min-h-[280px]">
                 <SizeSelector

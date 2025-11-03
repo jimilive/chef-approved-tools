@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About Scott Bradley & Testing Methodology',
-  description: 'Chef Scott Bradley: 45 years of cooking experience and serious testing methodology. Restaurant or home kitchen only - no lab tests. Real conditions, honest reviews.',
+  description: 'Chef Scott Bradley: 24 years professional kitchen experience, including 7 years as Kitchen Manager. Restaurant-tested equipment reviews. Real conditions, honest reviews.',
   keywords: 'Scott Bradley chef, professional chef background, kitchen equipment testing, restaurant equipment review process, chef equipment methodology, culinary expertise',
   alternates: {
     canonical: '/about',
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 const combinedFAQs = [
   {
     question: "What's your professional culinary background?",
-    answer: "I hold an A.A.S. in Culinary Arts from Seattle Culinary Academy and a B.S. in Business Administration from University of Montana. I've managed kitchen operations at Mellow Mushroom with $80K+ monthly revenue and worked as a certified Pizzaiolo at Purple Café & Wine Bar, giving me real-world experience with professional kitchen equipment."
+    answer: "I hold an A.A.S. in Culinary Arts from Seattle Culinary Academy and a B.S. in Business Administration from University of Montana. With 24 years of professional kitchen experience, including 7 years as Kitchen Manager at Mellow Mushroom (managing $80K+ monthly revenue) and time as a certified Pizzaiolo at Purple Café & Wine Bar, I have extensive real-world experience with professional kitchen equipment."
   },
   {
     question: "How did you transition from restaurant work to equipment reviews?",
-    answer: "After 5 years in restaurant operations, I moved into e-commerce, working as Internet Production Lead at The Sharper Image. This combination of culinary expertise and e-commerce experience helps me understand both what works in kitchens and what information helps people make purchasing decisions."
+    answer: "After 24 years in professional kitchens, including 7 years as Kitchen Manager, I moved into e-commerce, working as Internet Production Lead at The Sharper Image. This combination of culinary expertise and e-commerce experience helps me understand both what works in kitchens and what information helps people make purchasing decisions."
   },
   {
     question: "How long do you test each piece of equipment?",

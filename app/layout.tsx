@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     default: 'Best Kitchen Tools | Chef-Approved Reviews 2025',
     template: '%s | Chef Approved Tools'
   },
-  description: 'Discover the best chef-approved kitchen tools, tested and reviewed for home cooks. 24 years of professional cooking. Shop smarter with expert recommendations on knives, cookware, and appliances.',
+  description: 'Discover the best chef-approved kitchen tools, tested and reviewed for home cooks. 24 years professional kitchen experience, including 7 years as Kitchen Manager. Shop smarter with expert recommendations on knives, cookware, and appliances.',
   keywords: [
     'professional kitchen tools',
     'restaurant equipment reviews',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Chef Approved Kitchen Tools | Tested by Restaurant Manager',
-    description: 'Professional kitchen equipment reviews by Scott Bradley, former Mellow Mushroom Kitchen Manager. Tools tested in real restaurants. Honest reviews of chef knives, cookware, and appliances.',
+    description: 'Professional kitchen equipment reviews by Scott Bradley. 24 years professional kitchen experience, including 7 years as Kitchen Manager at Mellow Mushroom. Tools tested in real restaurants.',
     url: 'https://www.chefapprovedtools.com',
     siteName: 'Chef Approved Tools',
     images: [
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Chef Approved Kitchen Tools | Restaurant Manager Tested',
-    description: 'Professional kitchen equipment reviews by Scott Bradley. 24 years restaurant experience, former Mellow Mushroom Kitchen Manager. Real reviews from real kitchens.',
+    description: 'Professional kitchen equipment reviews by Scott Bradley. 24 years professional kitchen experience, including 7 years as Kitchen Manager. Real reviews from real kitchens.',
     images: ['https://www.chefapprovedtools.com/twitter-image.jpg'],
     creator: '@chefapprovedtools',
     site: '@chefapprovedtools',
@@ -96,11 +96,10 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'google-site-verification-code',
-    yandex: 'yandex-verification-code',
-    yahoo: 'yahoo-verification-code',
-  },
+  // Add verification codes when you set up Search Console:
+  // verification: {
+  //   google: 'your-actual-code-here',
+  // },
 }
 
 export default function RootLayout({

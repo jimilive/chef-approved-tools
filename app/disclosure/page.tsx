@@ -57,7 +57,7 @@ export default function DisclosurePage() {
               Our recommendations are based on:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Professional kitchen experience (5 years in commercial kitchens)</li>
+              <li>24 years professional kitchen experience, including 7 years as Kitchen Manager</li>
               <li>Hands-on testing for a minimum of 6 months</li>
               <li>Comparison with similar products in the category</li>
               <li>Real-world performance in high-pressure environments</li>
