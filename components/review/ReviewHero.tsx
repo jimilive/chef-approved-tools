@@ -2,7 +2,7 @@ import Link from 'next/link'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 interface ReviewHeroProps {
-  title: string
+  title?: string | null
   authorName: string
   authorCredentials: string
   rating: number
@@ -12,8 +12,8 @@ interface ReviewHeroProps {
     linkText?: string
     linkHref?: string
   }
-  verdict: string
-  verdictStrong: string
+  verdict?: string | null
+  verdictStrong?: string | null
   ctaUrl?: string
   ctaText?: string
   ctaSubtext?: string
@@ -46,10 +46,12 @@ export default function ReviewHero({
         <strong>Disclosure:</strong> This page contains affiliate links. As an Amazon Associate, I earn from qualifying purchases at no additional cost to you. All recommendations are based on my 24 years of professional kitchen experience. <Link href="/disclosure" className="text-orange-700 font-semibold hover:underline">Full disclosure policy</Link>
       </div>
 
-      {/* Title */}
-      <h1 className="text-2xl font-bold text-slate-900 leading-[1.3] mb-5">
-        {title}
-      </h1>
+      {/* Title - only render if provided */}
+      {title && (
+        <h1 className="text-2xl font-bold text-slate-900 leading-[1.3] mb-5">
+          {title}
+        </h1>
+      )}
 
       {/* Meta Row */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-5 border-b border-gray-200 mb-4 gap-3">
@@ -79,13 +81,15 @@ export default function ReviewHero({
         )}
       </div>
 
-      {/* Verdict Section */}
-      <div className="bg-amber-50 border border-amber-200 rounded-xl px-6 py-6 mb-6 min-h-[120px]">
-        <div className="text-xs font-bold text-amber-900 uppercase tracking-wider mb-3">Professional Verdict</div>
-        <p className="text-slate-900 text-base leading-[1.7] m-0">
-          <strong>{verdictStrong}</strong> {verdict}
-        </p>
-      </div>
+      {/* Verdict Section - only render if provided */}
+      {verdict && verdictStrong && (
+        <div className="bg-amber-50 border border-amber-200 rounded-xl px-6 py-6 mb-6 min-h-[120px]">
+          <div className="text-xs font-bold text-amber-900 uppercase tracking-wider mb-3">Professional Verdict</div>
+          <p className="text-slate-900 text-base leading-[1.7] m-0">
+            <strong>{verdictStrong}</strong> {verdict}
+          </p>
+        </div>
+      )}
 
       {/* CTA Section */}
       {customCTA ? (

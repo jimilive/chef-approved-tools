@@ -153,15 +153,32 @@ export default async function BenrinerLargeMandolineReview() {
             {reviewData.breadcrumb.productName}
           </div>
 
+          {/* CRITICAL LCP CONTENT - Rendered first for immediate paint */}
+          <div className="bg-white rounded-2xl px-6 pt-6 pb-8 shadow-sm mb-6">
+            <h1 className="text-2xl font-bold text-slate-900 leading-[1.3] mb-5">
+              {reviewData.hero.title}
+            </h1>
+
+            {/* Professional Verdict - This is the LCP element */}
+            <div className="bg-amber-50 border border-amber-200 rounded-xl px-6 py-6 mb-0 min-h-[120px]">
+              <div className="text-xs font-bold text-amber-900 uppercase tracking-wider mb-3">
+                Professional Verdict
+              </div>
+              <p className="text-slate-900 text-base leading-[1.7] m-0">
+                <strong>{reviewData.hero.verdictStrong}</strong> {reviewData.hero.verdict}
+              </p>
+            </div>
+          </div>
+
           {/* SECTION 1: HERO */}
           <ReviewHero
-            title={reviewData.hero.title}
+            title={null}
             authorName={reviewData.hero.authorName}
             authorCredentials={reviewData.hero.authorCredentials}
             rating={reviewData.hero.rating}
             tierBadge={reviewData.hero.tierBadge}
-            verdict={reviewData.hero.verdict}
-            verdictStrong={reviewData.hero.verdictStrong}
+            verdict={null}
+            verdictStrong={null}
             customCTA={
               <div className="bg-white border-2 border-orange-200 rounded-xl p-6 min-h-[280px]">
                 <SizeSelector
