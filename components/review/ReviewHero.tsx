@@ -42,7 +42,7 @@ export default function ReviewHero({
   return (
     <div className="bg-white rounded-2xl px-6 pt-6 pb-12 shadow-sm mb-6">
       {/* FTC Disclosure */}
-      <div className="bg-amber-100 border-l-[3px] border-amber-500 px-4 py-3 text-[13px] text-amber-900 mb-8 rounded">
+      <div className="bg-amber-100 border-l-[3px] border-amber-500 px-4 py-3 text-[13px] text-amber-900 mb-8 rounded min-h-[80px]">
         <strong>Disclosure:</strong> This page contains affiliate links. As an Amazon Associate, I earn from qualifying purchases at no additional cost to you. All recommendations are based on my 24 years of professional kitchen experience. <Link href="/disclosure" className="text-orange-700 font-semibold hover:underline">Full disclosure policy</Link>
       </div>
 
@@ -80,7 +80,7 @@ export default function ReviewHero({
       </div>
 
       {/* Verdict Section */}
-      <div className="bg-amber-50 border border-amber-200 rounded-xl px-6 py-6 mb-6">
+      <div className="bg-amber-50 border border-amber-200 rounded-xl px-6 py-6 mb-6 min-h-[120px]">
         <div className="text-xs font-bold text-amber-900 uppercase tracking-wider mb-3">Professional Verdict</div>
         <p className="text-slate-900 text-base leading-[1.7] m-0">
           <strong>{verdictStrong}</strong> {verdict}
