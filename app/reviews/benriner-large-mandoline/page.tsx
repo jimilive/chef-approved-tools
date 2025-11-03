@@ -154,13 +154,13 @@ export default async function BenrinerLargeMandolineReview() {
           </div>
 
           {/* CRITICAL LCP CONTENT - Rendered first for immediate paint */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-8 shadow-sm mb-6">
+          <div className="bg-white rounded-2xl px-6 pt-6 pb-8 shadow-sm mb-6 min-h-[280px]">
             <h1 className="text-2xl font-bold text-slate-900 leading-[1.3] mb-5">
               {reviewData.hero.title}
             </h1>
 
             {/* Professional Verdict - This is the LCP element */}
-            <div className="bg-amber-50 border border-amber-200 rounded-xl px-6 py-6 mb-0 min-h-[120px]">
+            <div className="bg-amber-50 border border-amber-200 rounded-xl px-6 py-6 mb-0">
               <div className="text-xs font-bold text-amber-900 uppercase tracking-wider mb-3">
                 Professional Verdict
               </div>
