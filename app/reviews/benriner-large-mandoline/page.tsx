@@ -130,17 +130,6 @@ export default async function BenrinerLargeMandolineReview() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Product view tracking */}
-      <ProductViewTrackerWrapper
-        slug={productData.slug}
-        name={productData.name}
-        tier={reviewData.metadata.tier as 1 | 2 | 3}
-        testingPeriod={reviewData.tracking.testingPeriod}
-        rating={productData.expertRating}
-        hook={reviewData.tracking.hook}
-        category={productData.category}
-      />
-
       <div className="bg-gray-50 min-h-screen">
         <div className="max-w-[900px] mx-auto px-5">
 
@@ -434,6 +423,17 @@ export default async function BenrinerLargeMandolineReview() {
 
         </div>
       </div>
+
+      {/* Product view tracking - Placed at end to avoid blocking LCP rendering */}
+      <ProductViewTrackerWrapper
+        slug={productData.slug}
+        name={productData.name}
+        tier={reviewData.metadata.tier as 1 | 2 | 3}
+        testingPeriod={reviewData.tracking.testingPeriod}
+        rating={productData.expertRating}
+        hook={reviewData.tracking.hook}
+        category={productData.category}
+      />
     </>
   )
 }
