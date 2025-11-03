@@ -2,13 +2,29 @@ import { Product } from '@/types/product'
 import { getSupabase } from '@/lib/supabase'
 
 /**
+ * Decode HTML entities in a string
+ */
+function decodeHTMLEntities(text: string): string {
+  const entities: { [key: string]: string } = {
+    '&quot;': '"',
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+    '&apos;': "'",
+    '&#39;': "'"
+  }
+
+  return text.replace(/&[a-z]+;|&#\d+;/gi, (match) => entities[match] || match)
+}
+
+/**
  * Map Supabase database row to Product type
  */
 function mapDatabaseToProduct(dbProduct: any): Product {
   return {
     id: dbProduct.id,
     slug: dbProduct.slug,
-    name: dbProduct.name,
+    name: decodeHTMLEntities(dbProduct.name),
     brand: dbProduct.brand || '',
     model: dbProduct.model,
     category: dbProduct.category,

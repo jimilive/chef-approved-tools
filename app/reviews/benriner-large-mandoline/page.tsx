@@ -25,8 +25,11 @@ import CompatibilityGuide from '@/components/review/custom/CompatibilityGuide'
 // Import review data
 import { reviewData } from './benriner-large-mandoline-data'
 
-// Force dynamic rendering since we fetch from Supabase
-export const dynamic = 'force-dynamic'
+// Use ISR for better performance - revalidate every 24 hours
+export const revalidate = 86400 // 24 hours in seconds
+
+// Enable fetch caching for Supabase requests
+export const fetchCache = 'force-cache'
 
 // Generate metadata dynamically
 export async function generateMetadata(): Promise<Metadata> {
@@ -268,7 +271,7 @@ export default async function BenrinerLargeMandolineReview() {
               <div className="flex flex-col gap-4">
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-                  <p className="text-sm text-slate-600 mb-4">Prime shipping, verified reviews, easy returns</p>
+                  <p className="text-sm text-slate-900 mb-4">Prime shipping, verified reviews, easy returns</p>
                 </div>
                 <SizeSelector
                   title="Choose Your Size:"
