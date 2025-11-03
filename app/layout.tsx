@@ -149,6 +149,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
+        {/* Amazon affiliate domain preconnect */}
+        <link rel="preconnect" href="https://www.amazon.com" />
+        <link rel="dns-prefetch" href="https://www.amazon.com" />
+
         {/* Critical CSS inline for immediate rendering - Above the fold only */}
         {/* Font loading is handled by Next.js font optimization with display:optional */}
         <style dangerouslySetInnerHTML={{
