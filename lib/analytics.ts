@@ -1,3 +1,14 @@
+/**
+ * @deprecated This file is deprecated - use /lib/tracking.ts instead
+ *
+ * All tracking now goes through GTM dataLayer (lib/tracking.ts).
+ * This file used direct gtag calls which caused duplicate events
+ * when GTM was also running.
+ *
+ * DO NOT import from this file in new code.
+ * Existing imports should be migrated to lib/tracking.ts
+ */
+
 // Google Analytics 4 configuration
 
 export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID

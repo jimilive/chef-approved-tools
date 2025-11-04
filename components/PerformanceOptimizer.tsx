@@ -1,6 +1,5 @@
 'use client'
 import React, { useEffect, useCallback, useState } from 'react'
-import { trackScrollDepth } from '@/lib/analytics'
 
 // Lazy Loading Hook
 export function useLazyLoading(ref: React.RefObject<HTMLElement>, options?: IntersectionObserverInit) {
@@ -39,8 +38,8 @@ export function PerformanceMonitor() {
   useEffect(() => {
     if (typeof window === 'undefined') return
 
-    // Initialize scroll depth tracking
-    const cleanup = trackScrollDepth()
+    // Note: Scroll depth tracking is now handled by ScrollTracker component
+    // which uses lib/tracking.ts trackScrollDepth function
 
     // Monitor Core Web Vitals
     const measureWebVitals = () => {
@@ -107,7 +106,10 @@ export function PerformanceMonitor() {
       window.addEventListener('load', measureWebVitals)
     }
 
-    return cleanup
+    // Cleanup
+    return () => {
+      window.removeEventListener('load', measureWebVitals)
+    }
   }, [])
 
   return null

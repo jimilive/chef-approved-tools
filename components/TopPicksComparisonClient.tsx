@@ -1,7 +1,7 @@
 'use client'
 
 import { Star, TrendingUp, Award } from 'lucide-react'
-import { trackAffiliateClick } from '@/lib/analytics'
+import { trackAffiliateClick } from '@/lib/tracking'
 
 export interface TopPick {
   id: string
@@ -24,7 +24,7 @@ interface TopPicksComparisonClientProps {
 export default function TopPicksComparisonClient({ topPick }: TopPicksComparisonClientProps) {
   const topPicks = [topPick]
   const handleAffiliateClick = (pick: TopPick) => {
-    trackAffiliateClick(pick.name, pick.category, 0, pick.name.split(' ')[0])
+    trackAffiliateClick('Amazon', pick.name, 'top-picks-card', 0)
   }
 
   // ItemList Schema for Top Picks

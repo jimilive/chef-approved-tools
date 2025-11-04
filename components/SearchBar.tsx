@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { searchProducts } from '@/lib/products'
 import { Product } from '@/types/product'
 import { formatPrice } from '@/utils/formatters'
-import { trackSearch } from '@/lib/analytics'
+import { trackSearch } from '@/lib/tracking'
 
 export default function SearchBar() {
   const [query, setQuery] = useState('')

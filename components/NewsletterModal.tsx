@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { X } from 'lucide-react'
-import { trackNewsletterSignup } from '@/lib/analytics'
+import { trackNewsletterSignup } from '@/lib/tracking'
 
 interface NewsletterModalProps {
   trigger?: 'scroll' | 'time' | 'exit'

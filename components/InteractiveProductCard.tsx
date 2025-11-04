@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
-import { trackAffiliateClick, trackProductView } from '@/lib/analytics'
+import { trackAffiliateClick, trackProductView } from '@/lib/tracking'
 
 interface Product {
   id: string | number
@@ -23,11 +23,11 @@ export default function InteractiveProductCard({
   const [isHovered, setIsHovered] = useState(false)
 
   const handleAffiliateClick = () => {
-    trackAffiliateClick(product.name, category, 0, product.brand)
+    trackAffiliateClick('Amazon', product.name, 'card-cta', 0)
   }
 
   const handleReviewClick = () => {
-    trackProductView(product.name, category)
+    trackProductView(product.name, category, 0, product.brand)
   }
 
   return (

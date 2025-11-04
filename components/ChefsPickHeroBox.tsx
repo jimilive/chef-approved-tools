@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { trackAffiliateClick } from '@/lib/analytics'
+import { trackAffiliateClick } from '@/lib/tracking'
 
 interface ChefsPickProps {
   product: {
@@ -79,7 +79,7 @@ export default function ChefsPickHeroBox({ product, category }: ChefsPickProps) 
               href={product.amazonUrl}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              onClick={() => trackAffiliateClick(product.name, category, 0, product.brand)}
+              onClick={() => trackAffiliateClick('Amazon', product.name, 'hero-cta', 0)}
               className="flex-1 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl text-center active:scale-95"
             >
               🛒 Check Price on Amazon

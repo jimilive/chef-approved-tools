@@ -118,18 +118,20 @@ export const trackInternalClick = (
 
 /**
  * Track scroll depth milestones
- * @param depth - Scroll depth percentage (25, 50, 75, 100)
- * @param pageSlug - Current page slug
+ * @param depthOrPercentage - Scroll depth (25, 50, 75, 100) or percentage number
+ * @param pageSlugOrUrl - Page slug or URL
  */
 export const trackScrollDepth = (
-  depth: number,
-  pageSlug: string
+  depthOrPercentage: number,
+  pageSlugOrUrl?: string
 ): void => {
   if (typeof window !== 'undefined' && window.dataLayer) {
     window.dataLayer.push({
       event: 'scroll_depth',
-      scroll_depth: depth,
-      page_slug: pageSlug,
+      scroll_depth: depthOrPercentage,
+      scroll_percentage: depthOrPercentage,
+      page_slug: pageSlugOrUrl || window.location.pathname,
+      page_url: pageSlugOrUrl || window.location.href,
       device_type: getDeviceType(),
       timestamp: new Date().toISOString()
     });
@@ -184,5 +186,120 @@ export const trackVariantClick = (
     });
 
     console.log('CTA variant clicked:', { variant, variantText, merchant, product, position });
+  }
+};
+
+/**
+ * Track page views
+ * @param url - Page URL path
+ * @param title - Optional page title (defaults to document.title)
+ */
+export const pageview = (url: string, title?: string): void => {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'page_view',
+      page_path: url,
+      page_title: title || document.title,
+      page_location: window.location.href,
+      device_type: getDeviceType(),
+      timestamp: new Date().toISOString()
+    });
+  }
+};
+
+/**
+ * Track newsletter signups
+ * @param source - Source of signup (e.g., 'footer', 'popup', 'inline')
+ * @param email - Optional email address (hashed or boolean)
+ */
+export const trackNewsletterSignup = (
+  source: string,
+  email?: string
+): void => {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'newsletter_signup',
+      signup_source: source,
+      email_provided: !!email,
+      device_type: getDeviceType(),
+      timestamp: new Date().toISOString()
+    });
+
+    console.log('Newsletter signup tracked:', { source, emailProvided: !!email });
+  }
+};
+
+/**
+ * Track product views/impressions
+ * @param productName - Name of the product
+ * @param category - Product category
+ * @param price - Product price
+ * @param brand - Product brand
+ */
+export const trackProductView = (
+  productName: string,
+  category: string,
+  price: number,
+  brand: string
+): void => {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'product_view',
+      product_name: productName,
+      product_category: category,
+      product_price: price,
+      product_brand: brand,
+      device_type: getDeviceType(),
+      timestamp: new Date().toISOString()
+    });
+
+    console.log('Product view tracked:', { productName, category, price, brand });
+  }
+};
+
+/**
+ * Track search queries
+ * @param query - Search query string
+ * @param resultsCount - Optional number of results returned
+ */
+export const trackSearch = (
+  query: string,
+  resultsCount?: number
+): void => {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'search',
+      search_term: query,
+      search_results: resultsCount || 0,
+      device_type: getDeviceType(),
+      timestamp: new Date().toISOString()
+    });
+
+    console.log('Search tracked:', { query, resultsCount });
+  }
+};
+
+/**
+ * Generic event tracking
+ * @param params - Event parameters (action, category, label, value)
+ */
+export const event = (params: {
+  action: string
+  category?: string
+  label?: string
+  value?: number
+}): void => {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'custom_event',
+      event_action: params.action,
+      event_category: params.category || 'general',
+      event_label: params.label || '',
+      event_value: params.value || 0,
+      device_type: getDeviceType(),
+      timestamp: new Date().toISOString()
+    });
+
+    console.log('Custom event tracked:', params);
   }
 };

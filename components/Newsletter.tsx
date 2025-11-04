@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { trackNewsletterSignup } from '@/lib/analytics';
+import { trackNewsletterSignup } from '@/lib/tracking';
 
 export default function Newsletter() {
   const [firstName, setFirstName] = useState('');

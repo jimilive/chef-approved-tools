@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { DollarSign, Download, CheckCircle, AlertTriangle, TrendingUp, Star } from 'lucide-react'
-import { trackAffiliateClick } from '@/lib/analytics'
+import { trackAffiliateClick } from '@/lib/tracking'
 
 interface BudgetVsPremiumMagnetProps {
   variant?: 'inline' | 'modal' | 'sidebar'
@@ -50,7 +50,7 @@ export default function BudgetVsPremiumMagnet({
         }
 
         // Track as affiliate click for analytics
-        trackAffiliateClick('Professional Kitchen Bundle', 'Lead Magnet', 0, 'ChefApproved')
+        trackAffiliateClick('ChefApproved', 'Professional Kitchen Bundle', 'lead-magnet', 0)
       }
     } catch (error) {
       console.error('Lead magnet signup error:', error)

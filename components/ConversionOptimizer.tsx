@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { trackEmailSignup } from '@/lib/analytics'
+import { trackEmailSignup } from '@/lib/tracking'
 
 interface ConversionOptimizerProps {
   variant?: 'A' | 'B'
