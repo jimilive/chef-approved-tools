@@ -126,7 +126,7 @@ export const reviewData = {
     sections: [
       {
         title: 'Nonstick Coating Quality',
-        content: `The nonstick coating is PTFE-based (similar to Teflon) and performs exceptionally well. After 6 months of daily egg cooking, the surface releases food as easily as day one. I've been careful to use only wooden or silicone utensils and avoid high heat, which extends nonstick lifespan significantly.\n\nWith proper care (wooden/silicone utensils, gentle cleaning, medium heat), expect 3-5 years of excellent performance. After 6 months of daily testing, my pan shows zero wear—no scratches, no peeling, no degradation. Gentle cleaning with a soft sponge preserves the coating for years, not months.`
+        content: `The nonstick coating is PTFE-based (similar to Teflon) and performs exceptionally well. After 6 months of daily egg cooking, the surface releases food as easily as day one. I've been careful to use only wooden or silicone utensils and avoid high heat, which extends nonstick lifespan significantly.\n\nWith proper care (wooden/silicone utensils, gentle cleaning, medium heat), <LINK>this pan</LINK> delivers 3-5 years of excellent performance. After 6 months of daily testing, my pan shows zero wear—no scratches, no peeling, no degradation. Gentle cleaning with a soft sponge preserves the coating for years, not months.`
       },
       {
         title: 'Durability and Construction',
@@ -134,7 +134,7 @@ export const reviewData = {
       },
       {
         title: 'How It Compares: Cuisinart vs. Alternatives',
-        content: `**Cuisinart 8" vs. Lodge Cast Iron for Eggs:**\nI own and love Lodge cast iron skillets, but for eggs specifically, nonstick wins decisively. Cast iron requires perfect seasoning and more fat for eggs to release properly. This Cuisinart pan works flawlessly with minimal butter or even dry for egg whites.\n\nUse the Cuisinart for: Eggs, delicate fish, quick breakfast items. Use cast iron for: Searing steaks, high-heat cooking, oven finishing.\n\n**Cuisinart vs. All-Clad Nonstick:**\nAll-Clad nonstick pans cost 3-4x more than this Cuisinart. After testing both, the performance difference doesn't justify the price gap for most home cooks. Both have excellent nonstick coatings, even heat distribution, and similar longevity with proper care. The Cuisinart offers 90% of All-Clad's performance at 25% of the cost.\n\n**Cuisinart vs. Cheap Nonstick:**\nCheap nonstick pans warp, lose their coating within months, and have uneven heating. The Cuisinart's high impact bonded base provides even heat distribution, the construction prevents warping, and the coating quality lasts years with proper care. Budget nonstick is disposable; this is durable.`
+        content: `**Cuisinart 8" vs. Lodge Cast Iron for Eggs:**\nI own and love Lodge cast iron skillets, but for eggs specifically, nonstick wins decisively. Cast iron requires perfect seasoning and more fat for eggs to release properly. <LINK>This Cuisinart pan</LINK> works flawlessly with minimal butter or even dry for egg whites.\n\nUse <LINK>the Cuisinart</LINK> for: Eggs, delicate fish, quick breakfast items. Use cast iron for: Searing steaks, high-heat cooking, oven finishing.\n\n**Cuisinart vs. All-Clad Nonstick:**\nAll-Clad nonstick pans cost 3-4x more than this Cuisinart. After testing both, the performance difference doesn't justify the price gap for most home cooks. Both have excellent nonstick coatings, even heat distribution, and similar longevity with proper care. The Cuisinart offers 90% of All-Clad's performance at 25% of the cost.\n\n**Cuisinart vs. Cheap Nonstick:**\nCheap nonstick pans warp, lose their coating within months, and have uneven heating. The Cuisinart's high impact bonded base provides even heat distribution, the construction prevents warping, and the coating quality lasts years with proper care. Budget nonstick is disposable; this is durable.`
       },
       {
         title: 'Care and Maintenance',
@@ -239,9 +239,9 @@ export const reviewData = {
   bottomLine: {
     title: 'Final Verdict: Exceptional Value for Daily Cooking',
     paragraphs: [
-      `After 6 months of daily testing, it's become my most-reached-for pan. The egg cooking performance alone justifies the investment, but the versatility for small-batch cooking makes it indispensable.`,
+      `After 6 months of daily testing, <LINK>this Cuisinart nonstick pan</LINK> has become my most-reached-for pan. The egg cooking performance alone justifies the investment, but the versatility for small-batch cooking makes it indispensable.`,
       `This is the pan I recommend to anyone who cooks eggs regularly or needs a reliable small pan for everyday tasks. Professional-quality nonstick performance at a home kitchen price point.`,
-      `Would I buy this pan again? Without hesitation. The nonstick surface remains flawless, the heat distribution is exceptional, and the value proposition is unbeatable in this category.`
+      `Would I buy <LINK>this</LINK> again? Without hesitation. The nonstick surface remains flawless, the heat distribution is exceptional, and the value proposition is unbeatable in this category.`
     ],
     ctaUrl: '', // Will be filled by affiliateUrl in page.tsx
     ctaText: 'Check Amazon Price →'
