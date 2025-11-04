@@ -21,8 +21,9 @@ import {
 // Import review data
 import { reviewData } from './bodum-chambord-french-press-data'
 
-// Force dynamic rendering since we fetch from Supabase
-export const dynamic = 'force-dynamic'
+// Use ISR for better performance
+export const revalidate = 3600 // 1 hour cache
+export const fetchCache = 'force-cache'
 
 // Generate metadata dynamically
 export async function generateMetadata(): Promise<Metadata> {
@@ -72,6 +73,42 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function BodumChambordFrenchPressReview() {
   // Get product data from Supabase
   const product = await getProductBySlug(reviewData.productSlug)
+
+  // Helper function to process inline affiliate links
+  const processInlineLinks = (content: string) => {
+    const parts = content.split(/(<LINK>|<\/LINK>)/)
+    const elements: (string | JSX.Element)[] = []
+    let isInsideLink = false
+    let linkContent = ''
+    let linkIndex = 0
+
+    for (let i = 0; i < parts.length; i++) {
+      if (parts[i] === '<LINK>') {
+        isInsideLink = true
+        linkContent = ''
+      } else if (parts[i] === '</LINK>') {
+        isInsideLink = false
+        elements.push(
+          <a
+            key={`inline-link-${linkIndex++}`}
+            href={affiliateUrl}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="text-orange-700 hover:text-orange-800 underline font-medium"
+          >
+            {linkContent}
+          </a>
+        )
+        linkContent = ''
+      } else if (isInsideLink) {
+        linkContent += parts[i]
+      } else if (parts[i]) {
+        elements.push(parts[i])
+      }
+    }
+
+    return elements
+  }
 
   // Merge Supabase data with legacy data (Supabase takes priority, but preserve legacy pros/cons if Supabase is empty)
   const productData = product ? {
@@ -164,6 +201,30 @@ export default async function BodumChambordFrenchPressReview() {
             verdictStrong={reviewData.hero.verdictStrong}
             ctaUrl={affiliateUrl}
             ctaText={reviewData.hero.ctaText}
+            customCTA={(
+              <div>
+                <CTAVisibilityTracker ctaId="hero-cta" position="hero">
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
+                  >
+                    {reviewData.hero.ctaText}
+                  </a>
+                </CTAVisibilityTracker>
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
+                </p>
+              </div>
+            )}
           />
 
           {/* SECTION 2: TESTING RESULTS */}
@@ -178,7 +239,10 @@ export default async function BodumChambordFrenchPressReview() {
           {/* SECTION 3: PERFORMANCE ANALYSIS */}
           <PerformanceAnalysis
             title={reviewData.performanceAnalysis.title}
-            sections={reviewData.performanceAnalysis.sections}
+            sections={reviewData.performanceAnalysis.sections.map(section => ({
+              ...section,
+              content: processInlineLinks(section.content)
+            }))}
           />
 
           {/* SECTION 4: PROS & CONS */}
@@ -254,9 +318,33 @@ export default async function BodumChambordFrenchPressReview() {
           {/* SECTION 9: BOTTOM LINE */}
           <BottomLineSection
             title={reviewData.bottomLine.title}
-            paragraphs={reviewData.bottomLine.paragraphs}
+            paragraphs={reviewData.bottomLine.paragraphs.map(p => processInlineLinks(p))}
             ctaUrl={affiliateUrl}
             ctaText={reviewData.bottomLine.ctaText}
+            customCTA={(
+              <div className="text-center">
+                <CTAVisibilityTracker ctaId="bottom-line-cta" position="bottom_line">
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
+                  >
+                    {reviewData.bottomLine.ctaText}
+                  </a>
+                </CTAVisibilityTracker>
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
+                </p>
+              </div>
+            )}
           />
 
           {/* SECTION 10: RELATED PRODUCTS */}
