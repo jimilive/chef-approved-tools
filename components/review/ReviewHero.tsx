@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import { trackAffiliateClick } from '@/lib/tracking'
 
 interface ReviewHeroProps {
   title?: string | null
@@ -101,6 +102,7 @@ export default function ReviewHero({
               href={ctaUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackAffiliateClick('Amazon', title || 'Product', 'review-hero-cta', 0)}
               className="inline-block bg-white text-orange-700 font-semibold px-12 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-md hover:shadow-lg mb-2.5"
             >
               {ctaText}
@@ -111,6 +113,7 @@ export default function ReviewHero({
             href={ctaUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackAffiliateClick('Amazon', title || 'Product', 'review-hero-cta', 0)}
             className="text-base text-white underline hover:text-white/80 transition-colors"
           >
             View product details
