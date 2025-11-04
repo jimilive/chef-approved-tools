@@ -245,7 +245,7 @@ export default async function WusthofClassicIkonReview() {
               position="above_fold"
               variant="primary"
             >
-              View on Amazon →
+              Check Price on Amazon →
             </AffiliateButton>
           </CTAVisibilityTracker>
 
@@ -503,7 +503,7 @@ export default async function WusthofClassicIkonReview() {
                     position="mid_article"
                     variant="secondary"
                   >
-                    View on Amazon →
+                    Check Price on Amazon →
                   </AffiliateButton>
                 </CTAVisibilityTracker>
               </div>

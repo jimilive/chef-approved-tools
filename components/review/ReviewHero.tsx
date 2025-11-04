@@ -29,8 +29,8 @@ export default function ReviewHero({
   verdict,
   verdictStrong,
   ctaUrl,
-  ctaText = "View on Amazon →",
-  ctaSubtext = "Check current pricing and availability",
+  ctaText = "Check Price on Amazon →",
+  ctaSubtext = "View current pricing and availability",
   customCTA
 }: ReviewHeroProps) {
   // Generate star display (★★★★☆ format)
@@ -106,7 +106,15 @@ export default function ReviewHero({
               {ctaText}
             </a>
           </CTAVisibilityTracker>
-          <p className="text-white/90 text-[15px] m-0">{ctaSubtext}</p>
+          <p className="text-white/90 text-[15px] m-0 mb-2">{ctaSubtext}</p>
+          <a
+            href={ctaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-base text-white underline hover:text-white/80 transition-colors"
+          >
+            View product details
+          </a>
         </div>
       )}
     </div>

@@ -183,7 +183,7 @@ export default async function BenrinerLargeMandolineReview() {
                     }
                   ]}
                   defaultSize="large"
-                  ctaText={reviewData.hero.ctaText || 'View on Amazon →'}
+                  ctaText={reviewData.hero.ctaText || 'Check Price on Amazon →'}
                   ctaPosition="above_fold"
                   showDisclosure={true}
                 />
@@ -292,7 +292,7 @@ export default async function BenrinerLargeMandolineReview() {
                     }
                   ]}
                   defaultSize="large"
-                  ctaText="View on Amazon →"
+                  ctaText="Check Price on Amazon →"
                   ctaPosition="mid_article"
                   showDisclosure={true}
                 />
@@ -338,7 +338,7 @@ export default async function BenrinerLargeMandolineReview() {
                     }
                   ]}
                   defaultSize="large"
-                  ctaText={reviewData.bottomLine.ctaText || 'View on Amazon →'}
+                  ctaText={reviewData.bottomLine.ctaText || 'Check Price on Amazon →'}
                   ctaPosition="final_cta"
                   showDisclosure={true}
                 />

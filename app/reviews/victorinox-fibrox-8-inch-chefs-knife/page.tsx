@@ -253,7 +253,7 @@ export default async function VictorinoxFibrox8InchReview() {
               variant="secondary"
               className="!text-lg !px-10 !py-4 !my-2"
             >
-              View on Amazon →
+              Check Price on Amazon →
             </AffiliateButton>
           </CTAVisibilityTracker>
         </ReviewCTABox>
@@ -710,7 +710,7 @@ export default async function VictorinoxFibrox8InchReview() {
                       position="related_products"
                       variant="secondary"
                     >
-                      View on Amazon →
+                      Check Price on Amazon →
                     </AffiliateButton>
                   </CTAVisibilityTracker>
                 </div>

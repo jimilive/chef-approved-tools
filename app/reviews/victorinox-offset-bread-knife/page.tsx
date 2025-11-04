@@ -209,7 +209,7 @@ export default async function VictorinoxOffsetBreadKnifeReview() {
               position="above_fold"
               variant="primary"
             >
-              View on Amazon →
+              Check Price on Amazon →
             </AffiliateButton>
           </CTAVisibilityTracker>
         </ReviewCTABox>
@@ -518,7 +518,7 @@ export default async function VictorinoxOffsetBreadKnifeReview() {
                     position="mid_article"
                     variant="secondary"
                   >
-                    View on Amazon →
+                    Check Price on Amazon →
                   </AffiliateButton>
                 </CTAVisibilityTracker>
               </div>

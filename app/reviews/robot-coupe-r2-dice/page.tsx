@@ -257,7 +257,7 @@ export default async function RobotCoupeR2DiceReview() {
                 position="above_fold"
                 variant="primary"
               >
-                View on Amazon →
+                Check Price on Amazon →
               </AffiliateButton>
             </CTAVisibilityTracker>
 

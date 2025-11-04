@@ -105,7 +105,7 @@ export const reviewData = {
     },
     verdictStrong: 'After years of professional use at Purple Cafe, the Benriner mandoline proved itself as genuine professional equipment.',
     verdict: 'Japanese precision engineering delivers consistent slicing that transformed our prep efficiency. Ultra-sharp blade handles everything from paper-thin cucumber to thick potato rounds with remarkable accuracy.',
-    ctaText: 'View on Amazon →',
+    ctaText: 'Check Price on Amazon →',
     ctaSubtext: 'Check current pricing and availability',
   },
 
@@ -398,7 +398,7 @@ export const reviewData = {
         name: 'Amazon',
         description: 'Prime shipping, verified reviews, easy returns',
         url: '[AFFILIATE_URL]',
-        ctaText: 'View on Amazon →',
+        ctaText: 'Check Price on Amazon →',
         ctaId: 'where-to-buy-amazon',
         highlighted: true,
       },
@@ -434,7 +434,7 @@ export const reviewData = {
         Professional-grade equipment at a reasonable price. Would I buy this again? Without hesitation.
       </>,
     ],
-    ctaText: 'View on Amazon →',
+    ctaText: 'Check Price on Amazon →',
   },
 
   // SECTION 11: RELATED PRODUCTS

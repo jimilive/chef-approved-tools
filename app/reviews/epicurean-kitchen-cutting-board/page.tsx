@@ -375,7 +375,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
                     rel="noopener noreferrer nofollow sponsored"
                     className="block w-full text-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 py-3 rounded-xl transition-all hover:scale-105 active:scale-95"
                   >
-                    View on Amazon →
+                    Check Price on Amazon →
                   </a>
                 </CTAVisibilityTracker>
                 <p className="text-xs text-slate-500 text-center italic">

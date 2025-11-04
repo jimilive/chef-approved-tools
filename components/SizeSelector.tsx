@@ -24,7 +24,7 @@ export default function SizeSelector({
   title = 'Choose Your Size:',
   options,
   defaultSize,
-  ctaText = 'View on Amazon →',
+  ctaText = 'Check Price on Amazon →',
   ctaPosition = 'mid_article',
   showDisclosure = true
 }: SizeSelectorProps) {
@@ -75,6 +75,18 @@ export default function SizeSelector({
           {ctaText}
         </a>
       </CTAVisibilityTracker>
+
+      {/* Text Link Below Button */}
+      <div className="text-center">
+        <a
+          href={selectedOption.affiliateUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-base text-orange-700 underline hover:text-orange-800 transition-colors"
+        >
+          View product details
+        </a>
+      </div>
 
       {/* Disclosure */}
       {showDisclosure && (

@@ -256,7 +256,7 @@ export default async function Lodge3SkilletBundleReview() {
               position="above_fold"
               variant="primary"
             >
-              View on Amazon →
+              Check Price on Amazon →
             </AffiliateButton>
           </CTAVisibilityTracker>
 
@@ -688,7 +688,7 @@ export default async function Lodge3SkilletBundleReview() {
                       position="mid_article"
                       variant="secondary"
                     >
-                      View on Amazon →
+                      Check Price on Amazon →
                     </AffiliateButton>
                   </CTAVisibilityTracker>
                 </div>

@@ -247,7 +247,7 @@ export default async function VitamixReviewPage() {
                 rel="noopener noreferrer"
                 className="inline-block bg-white text-orange-700 font-semibold px-12 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-md hover:shadow-lg mb-2.5"
               >
-                View on Amazon →
+                Check Price on Amazon →
               </a>
             </CTAVisibilityTracker>
             <p className="text-white/90 text-[15px] m-0 mb-2">Check current pricing and availability</p>
@@ -751,7 +751,7 @@ export default async function VitamixReviewPage() {
                     rel="noopener noreferrer"
                     className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap w-full text-center"
                   >
-                    View on Amazon →
+                    Check Price on Amazon →
                   </a>
                 </CTAVisibilityTracker>
                 <p className="text-xs text-slate-500 italic text-center m-0">*As an Amazon Associate, I earn from qualifying purchases</p>

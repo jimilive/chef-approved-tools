@@ -175,7 +175,7 @@ export default async function ZuperiaBarMopsReview() {
             position="above_fold"
             variant="primary"
           >
-            View on Amazon →
+            Check Price on Amazon →
           </AffiliateButton>
         </CTAVisibilityTracker>
 

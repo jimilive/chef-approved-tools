@@ -14,11 +14,13 @@ import Script from 'next/script'
  * - Mobile: 5 second delay (slower networks)
  * - Desktop: 3 second delay
  * - Loads immediately on any user interaction
+ *
+ * Note: GTM loads GA4 automatically via GTM configuration
+ * We no longer load GA4 directly to avoid duplicate tracking
  */
 export default function ThirdPartyScripts() {
   useEffect(() => {
     let gtmLoaded = false
-    let gaLoaded = false
 
     // Detect mobile for longer delay
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -43,48 +45,10 @@ export default function ThirdPartyScripts() {
       }
     }
 
-    // Load Google Analytics 4
-    const loadGA = () => {
-      if (!gaLoaded && process.env.NEXT_PUBLIC_GA_TRACKING_ID) {
-        gaLoaded = true
-
-        // Initialize dataLayer
-        window.dataLayer = window.dataLayer || []
-        function gtag(...args: any[]) {
-          window.dataLayer.push(args)
-        }
-
-        // Set default consent
-        gtag('consent', 'default', {
-          analytics_storage: 'denied',
-          ad_storage: 'denied'
-        })
-
-        // Load GA script
-        const script = document.createElement('script')
-        script.async = true
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`
-        document.head.appendChild(script)
-
-        script.onload = () => {
-          gtag('js', new Date())
-          gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID, {
-            send_page_view: false
-          })
-        }
-      }
-    }
-
-    // Load both scripts after delay or interaction
-    const loadAllScripts = () => {
-      loadGTM()
-      loadGA()
-    }
-
     // Event listeners for immediate loading on interaction
     const interactionEvents = ['mousedown', 'touchstart', 'keydown', 'scroll']
     const handleInteraction = () => {
-      loadAllScripts()
+      loadGTM()
       // Remove listeners after first interaction
       interactionEvents.forEach(event => {
         document.removeEventListener(event, handleInteraction)
@@ -97,7 +61,7 @@ export default function ThirdPartyScripts() {
     })
 
     // Fallback: load after delay if no interaction
-    const timeoutId = setTimeout(loadAllScripts, delay)
+    const timeoutId = setTimeout(loadGTM, delay)
 
     // Cleanup
     return () => {

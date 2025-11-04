@@ -361,7 +361,7 @@ export default async function BlackDeckerToasterOvenReview() {
                       rel="noopener noreferrer"
                       className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap w-full text-center"
                     >
-                      View on Amazon →
+                      Check Price on Amazon →
                     </a>
                   </CTAVisibilityTracker>
                   <p className="text-xs text-slate-500 italic text-center m-0">*As an Amazon Associate, I earn from qualifying purchases</p>

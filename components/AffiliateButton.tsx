@@ -75,7 +75,7 @@ export default function AffiliateButton({
   const ctaText = enableABTest && mounted ? getVariantText(ctaVariant) : children;
 
   // If A/B testing not enabled and no children provided, use default
-  const displayText = ctaText || 'View on Amazon';
+  const displayText = ctaText || 'Check Price on Amazon';
 
   return (
     <a

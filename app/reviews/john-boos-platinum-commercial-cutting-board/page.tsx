@@ -259,7 +259,7 @@ export default async function JohnBosPlatinumCuttingBoardReview() {
                 position="above_fold"
                 variant="primary"
               >
-                View on Amazon →
+                Check Price on Amazon →
               </AffiliateButton>
             </CTAVisibilityTracker>
 
@@ -1022,7 +1022,7 @@ export default async function JohnBosPlatinumCuttingBoardReview() {
                 position="mid_article"
                 variant="secondary"
               >
-                View on Amazon →
+                Check Price on Amazon →
               </AffiliateButton>
             </CTAVisibilityTracker>
 

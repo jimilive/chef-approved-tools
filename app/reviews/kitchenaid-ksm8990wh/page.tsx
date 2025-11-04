@@ -711,7 +711,7 @@ export default async function KitchenAidReviewPage() {
                 variant="secondary"
                 className="!text-xl !px-12 !py-5"
               >
-                View on Amazon →
+                Check Price on Amazon →
               </AffiliateButton>
             </CTAVisibilityTracker>
 
