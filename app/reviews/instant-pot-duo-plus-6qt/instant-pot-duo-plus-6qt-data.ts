@@ -137,7 +137,7 @@ export const reviewData = {
       },
       {
         title: 'Commercial vs Consumer: Performance Comparison',
-        content: `After 90 days of testing, the Instant Pot delivers approximately 70% of commercial pressure cooking performance. Here's what that means in practice:\n\n**What matches commercial results:**\n• Natural release function (produces proper texture in braised meats)\n• Pressure regulation (maintains consistent 11.6 PSI)\n• Safety mechanisms (10 redundant systems)\n• Rice cooking (matches commercial rice cooker results)\n• Bean cooking (75% time reduction vs traditional methods)\n\n**What falls short of commercial equipment:**\n• Heat output (sauté function can't achieve Maillard reaction)\n• Pressure buildup time (10-15 minutes vs 5-7 minutes commercial)\n• Precision (±2°F temperature variance vs ±0.5°F commercial)\n• Durability under daily volume (TBD - needs 12+ months testing)`
+        content: `After 90 days of testing, <LINK>the Instant Pot</LINK> delivers approximately 70% of commercial pressure cooking performance. Here's what that means in practice:\n\n**What matches commercial results:**\n• Natural release function (produces proper texture in braised meats)\n• Pressure regulation (maintains consistent 11.6 PSI)\n• Safety mechanisms (10 redundant systems)\n• Rice cooking (matches commercial rice cooker results)\n• Bean cooking (75% time reduction vs traditional methods)\n\n**What falls short of commercial equipment:**\n• Heat output (sauté function can't achieve Maillard reaction)\n• Pressure buildup time (10-15 minutes vs 5-7 minutes commercial)\n• Precision (±2°F temperature variance vs ±0.5°F commercial)\n• Durability under daily volume (TBD - needs 12+ months testing)`
       },
       {
         title: 'The Time Reality: Not Quick, But Convenient',
@@ -145,7 +145,7 @@ export const reviewData = {
       },
       {
         title: 'The Sauté Function Limitation',
-        content: `The sauté function is the Instant Pot's biggest weakness. It lacks the heat output for proper Maillard reaction browning on large roasts.\n\n**What happens:** You can brown aromatics (onions, garlic) and ground meat adequately. But a 2.5-pound chuck roast? The heating element can't generate enough heat to create a proper crust. You end up steaming the meat instead of browning it.\n\n**Professional solution:** Brown large cuts in a cast iron skillet on the stovetop (takes 3-4 minutes with proper heat), then transfer to the Instant Pot for pressure cooking. Yes, this dirties two pans. But the flavor development from proper browning is worth it.\n\n**Why this matters:** Maillard reaction (browning) creates hundreds of flavor compounds. Without it, your pot roast tastes boiled instead of roasted.`
+        content: `The sauté function is <LINK>the Instant Pot's</LINK> biggest weakness. It lacks the heat output for proper Maillard reaction browning on large roasts.\n\n**What happens:** You can brown aromatics (onions, garlic) and ground meat adequately. But a 2.5-pound chuck roast? The heating element can't generate enough heat to create a proper crust. You end up steaming the meat instead of browning it.\n\n**Professional solution:** Brown large cuts in a cast iron skillet on the stovetop (takes 3-4 minutes with proper heat), then transfer to <LINK>the Instant Pot</LINK> for pressure cooking. Yes, this dirties two pans. But the flavor development from proper browning is worth it.\n\n**Why this matters:** Maillard reaction (browning) creates hundreds of flavor compounds. Without it, your pot roast tastes boiled instead of roasted.`
       },
       {
         title: 'Capacity Reality: 6 Quarts Isn\'t Actually 6 Quarts',
@@ -232,9 +232,9 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      `After 90 days of daily testing with 24 years of professional kitchen experience, the Instant Pot Duo Plus delivers approximately 70% of commercial pressure cooking performance. For families and meal preppers, this is a legitimate game-changer.`,
+      `After 90 days of daily testing with 24 years of professional kitchen experience, <LINK>the Instant Pot Duo Plus</LINK> delivers approximately 70% of commercial pressure cooking performance. For families and meal preppers, this is a legitimate game-changer.`,
       `The natural release function produces restaurant-quality braised meats. Rice comes out perfect every time. Dried beans go from bag to table in under an hour. The hands-off convenience is real—set it and walk away with complete confidence.`,
-      `However, temper your expectations: total cooking time is still 1.5-2 hours, the sauté function can't properly brown large roasts (use cast iron instead), and the 6-quart size is too large for 1-2 people. This isn't quick cooking—it's convenient cooking that delivers professional-quality results with minimal active time.`
+      `However, temper your expectations: total cooking time is still 1.5-2 hours, the sauté function can't properly brown large roasts (use cast iron instead), and the 6-quart size is too large for 1-2 people. <LINK>This</LINK> isn't quick cooking—it's convenient cooking that delivers professional-quality results with minimal active time.`
     ],
     ctaUrl: '', // Will be filled by affiliateUrl in page.tsx
     ctaText: 'Check Amazon Price →'
