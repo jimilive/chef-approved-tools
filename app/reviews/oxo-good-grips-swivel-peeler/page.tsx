@@ -1,133 +1,63 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
-import { Tier2Badge } from '@/components/ReviewTierBadge'
-import FTCDisclosure from '@/components/FTCDisclosure'
-
-import AffiliateButton from '@/components/AffiliateButton';
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import FTCDisclosure from '@/components/FTCDisclosure'
+import { reviewData } from './oxo-good-grips-swivel-peeler-data'
 
-// Force dynamic rendering since we fetch from Supabase
-export const dynamic = 'force-dynamic'
+// ISR configuration - revalidate every hour
+export const revalidate = 3600
+export const fetchCache = 'force-cache'
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     alternates: {
       canonical: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-swivel-peeler',
     },
-
-    title: 'OXO Swivel Peeler: Ergonomic Design Winner',
-    description: 'OXO swivel peeler tested 20 years (including 10 professional). Ergonomic design, sharp blade, and comfortable grip make this the best peeler for extended use.',
+    title: reviewData.metadata.title,
+    description: reviewData.metadata.description,
     openGraph: {
-      title: 'OXO Good Grips Swivel Peeler: 20-Year Professional Review',
-      description: 'OXO swivel peeler tested 20 years (including 10 professional). Ergonomic and reliable.',
+      title: reviewData.metadata.ogTitle,
+      description: reviewData.metadata.ogDescription,
       type: 'article',
       url: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-swivel-peeler',
       siteName: 'Chef Approved Tools',
       images: [generateOGImageURL({
         title: "OXO Good Grips Swivel Peeler Review",
-        rating: 5.0,
-        testingPeriod: "20 Years (Including 10 Professional)",
-        tier: 2
+        rating: reviewData.hero.rating,
+        testingPeriod: reviewData.metadata.testingPeriod,
+        tier: reviewData.metadata.tier
       })],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'OXO Good Grips Swivel Peeler: 20-Year Professional Review',
-      description: 'OXO swivel peeler tested 20 years (including 10 professional).',
+      title: reviewData.metadata.ogTitle,
+      description: reviewData.metadata.ogDescription,
       images: [generateOGImageURL({
         title: "OXO Good Grips Swivel Peeler Review",
-        rating: 5.0,
-        testingPeriod: "20 Years (Including 10 Professional)",
-        tier: 2
+        rating: reviewData.hero.rating,
+        testingPeriod: reviewData.metadata.testingPeriod,
+        tier: reviewData.metadata.tier
       })],
     },
   }
 }
 
-const legacyProductData = {
-  name: "OXO Good Grips Swivel Peeler",
-  slug: "oxo-good-grips-swivel-peeler",
-  brand: "OXO",
-  model: "1067551",
-  category: "Kitchen Tools",
-  rating: 5.0,
-  reviewCount: 1,
-  pros: [
-    "Comfortable non-slip grip prevents hand fatigue during extended use",
-    "Sharp swivel blade glides through skins and follows contours effortlessly",
-    "Dishwasher-safe construction with built-in potato eye remover",
-    "Exceptional durability - proven through 20 years of use (including 10 professional)",
-    "Ergonomic design ideal for people with arthritis or hand issues",
-    "Outstanding value at approximately $10"
-  ],
-  cons: [
-    "Blade eventually dulls after years of heavy use",
-    "Larger handle may feel bulky to users preferring compact tools",
-    "Not ideal for very thick-skinned items like butternut squash"
-  ],
-  affiliateLinks: [],
-  expertRating: 5.0,
-  expertOpinion: "After 20 years of testing (including 10 professional) dozens of peelers, this OXO swivel peeler is the one I reach for every single day - comfortable, reliable, and built to last.",
-  dateAdded: "2025-01-15",
-  lastUpdated: "2025-10-12"
-};
-
-const faqData = [
-  {
-    question: "How long does the OXO Good Grips Swivel Peeler typically last?",
-    answer: "With proper care, this peeler can last 15-20 years. Mine has been in daily use for over 20 years and still performs excellently. The blade stays sharp for 5 years of regular use, and replacement blades are available if needed."
-  },
-  {
-    question: "Is this peeler dishwasher safe?",
-    answer: "Yes, the OXO Good Grips Swivel Peeler is completely dishwasher safe. I've run mine through hundreds of dishwasher cycles without any degradation to the blade sharpness or handle integrity."
-  },
-  {
-    question: "Will this work well for people with arthritis or hand pain?",
-    answer: "Absolutely. The oversized, soft, non-slip handle was specifically designed for people with arthritis. The ergonomic design reduces hand strain significantly compared to thin-handled peelers, and the sharp blade requires minimal downward pressure."
-  },
-  {
-    question: "What's the difference between the swivel peeler and the Y-peeler?",
-    answer: "The swivel peeler has an in-line blade that pivots, making it ideal for round vegetables like potatoes and apples. The Y-peeler has a horizontal blade orientation that's better for speed-peeling long vegetables like carrots and cucumbers. Both have the same comfortable Good Grips handle."
-  },
-  {
-    question: "Can this peeler handle tough-skinned vegetables?",
-    answer: "It excels at most vegetables and fruits, but very thick-skinned produce like butternut squash is better handled with a sharp knife. For potatoes, carrots, apples, pears, cucumbers, zucchini, and similar items, this peeler is perfect."
-  },
-  {
-    question: "Does the blade need sharpening?",
-    answer: "No, the stainless steel blade cannot be sharpened at home. However, it stays sharp for many years of regular use. When it eventually dulls, OXO sells replacement blades, though many users (including me) find the blade lasts 20 years without replacement."
-  },
-  {
-    question: "Can I use this to peel hard cheeses?",
-    answer: "Yes! The sharp blade works excellently for shaving hard cheeses like Parmesan and Romano into thin shavings. In professional kitchens, we regularly use it for cheese garnishes on pasta dishes and salads."
-  },
-  {
-    question: "What's the handle made of?",
-    answer: "The handle features OXO's proprietary Good Grips material - a soft, non-slip santoprene rubber that provides excellent grip even when wet or greasy. The ergonomic shape and cushioned material make it comfortable for extended use."
-  }
-];
-
 export default async function OXOGoodGripsSwivelPeelerReview() {
   // Get product data from Supabase
-  const product = await getProductBySlug('oxo-good-grips-swivel-peeler')
-  if (!product) {
-    throw new Error('Product not found: oxo-good-grips-swivel-peeler')
-  }
-
-  // Get primary affiliate link from Supabase product data
-  const affiliateUrl = getPrimaryAffiliateLink(product)
+  const product = await getProductBySlug(reviewData.productSlug)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
-  const productData = {
-    ...legacyProductData,
+  const productData = product ? {
+    ...reviewData.legacyProductData,
     ...product,
-    affiliateLinks: product.affiliateLinks.length > 0 ? product.affiliateLinks : legacyProductData.affiliateLinks
-  }
+    affiliateLinks: product.affiliateLinks.length > 0 ? product.affiliateLinks : reviewData.legacyProductData.affiliateLinks
+  } : reviewData.legacyProductData
+
+  const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
 
   const breadcrumbs = [
     { name: "Home", url: "https://www.chefapprovedtools.com" },
@@ -140,35 +70,36 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
-        tier={1}
-        testingPeriod="20 Years (Including 10 Professional)"
-        rating={4.6}
-        hook="Sharp blade. Comfortable grip. Prep station standard."
-        category="Prep Tools"
+        tier={reviewData.metadata.tier}
+        testingPeriod={reviewData.tracking.testingPeriod}
+        rating={reviewData.hero.rating}
+        hook={reviewData.tracking.hook}
+        category={productData.category}
       />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="inline-block bg-orange-500/20 border border-orange-500/30 rounded-full px-4 py-2 mb-6">
-            <span className="text-orange-200 font-semibold text-sm">PROFESSIONAL KITCHEN TESTED</span>
+            <span className="text-orange-200 font-semibold text-sm">{reviewData.hero.badge}</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            OXO Good Grips Swivel Peeler Review
+            {reviewData.hero.title}
           </h1>
 
           <p className="text-xl text-slate-300 mb-6">
-            The peeler that just works - tested through 20 years of use (including 10 professional)
+            {reviewData.hero.subtitle}
           </p>
 
           <div className="flex items-center gap-6 text-sm">
             <div className="flex items-center gap-2">
               <span className="text-yellow-400">★★★★★</span>
-              <span>5/5</span>
+              <span>{reviewData.hero.rating}/5</span>
             </div>
-            <div>Professional Grade</div>
-            <div>Budget-Friendly</div>
+            {reviewData.hero.tags.map((tag, index) => (
+              <div key={index}>{tag}</div>
+            ))}
           </div>
         </div>
       </section>
@@ -190,92 +121,56 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
 
         {/* Quick Verdict */}
         <div className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-8">
-          <h2 className="text-2xl font-bold mb-3 text-gray-900">The Bottom Line</h2>
+          <h2 className="text-2xl font-bold mb-3 text-gray-900">{reviewData.quickVerdict.title}</h2>
           <p className="text-gray-700 text-lg leading-relaxed">
-            I&apos;ve tried every peeler out there. This is the one. It just works, day after day, year after year.
-            Comfortable grip, sharp blade, swivels to follow contours. Stop overthinking it and buy one.
+            {reviewData.quickVerdict.text}
           </p>
         </div>
 
         {/* Why I Chose This */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Why This Is in My Daily Toolkit</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.whyIChoseThis.title}</h2>
 
           <div className="prose prose-lg max-w-none text-gray-700">
-            <p>
-              After 45 years of cooking, I&apos;ve used dozens of different peelers. Cheap ones that
-              broke, expensive ones that were awkward to hold, Y-peelers, straight peelers, ceramic blades, you name it.
-            </p>
-
-            <p>
-              This OXO swivel peeler is the one I come back to every time. The comfortable grip doesn&apos;t slip when
-              wet. The sharp blade glides through potato skins without digging in. The swivel action follows the
-              contours of vegetables and fruits effortlessly.
-            </p>
-
-            <p>
-              In professional kitchens, we peel pounds of vegetables per shift. This peeler handles the volume without
-              causing hand fatigue. It&apos;s dishwasher-safe, durable, and affordable enough that I can keep a couple on hand without
-              thinking twice.
-            </p>
+            {reviewData.whyIChoseThis.paragraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
           </div>
         </section>
 
         {/* What Makes It Work */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">What Makes This Tool Work</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.whatMakesItWork.title}</h2>
 
           <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Good Grips Handle</h3>
-              <p className="text-gray-700">
-                The oversized, soft, non-slip handle is what sets OXO apart. Comfortable for extended use. Stays secure
-                even when wet or greasy. Designed for people with arthritis, but everyone benefits from the ergonomic
-                design.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Swivel Blade Action</h3>
-              <p className="text-gray-700">
-                The blade swivels to follow the natural contours of vegetables and fruits. Reduces waste by conforming
-                to shapes. Sharp stainless steel blade glides through skins without excessive pressure. Built-in potato
-                eye remover on the side.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Durable Construction</h3>
-              <p className="text-gray-700">
-                Built to last with quality materials. Dishwasher-safe for easy cleanup. The blade stays sharp through
-                regular use and can be replaced when needed (though they last for years). No rust, no handle
-                deterioration.
-              </p>
-            </div>
+            {reviewData.whatMakesItWork.features.map((feature, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg border border-gray-200">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">{feature.title}</h3>
+                <p className="text-gray-700">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
         {/* Real Restaurant Use */}
         <section className="mb-12 bg-slate-50 p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Real Restaurant Experience</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.realRestaurantUse.title}</h2>
 
           <div className="prose prose-lg max-w-none text-gray-700">
             <p className="font-semibold">
-              From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants,
-              I&apos;ve used this peeler to:
+              {reviewData.realRestaurantUse.intro}
             </p>
 
             <ul className="space-y-2 mt-4">
-              <li>Peel 50+ pounds of potatoes per shift</li>
-              <li>Prep carrots, parsnips, and root vegetables</li>
-              <li>Peel apples and pears for desserts</li>
-              <li>Create vegetable ribbons for garnishes</li>
-              <li>Shave hard cheeses like Parmesan</li>
+              {reviewData.realRestaurantUse.uses.map((use, index) => (
+                <li key={index}>{use}</li>
+              ))}
             </ul>
 
             <p className="mt-6">
-              The comfortable grip matters when you&apos;re peeling for hours. Cheaper peelers cause hand cramping and
-              blisters. This one doesn&apos;t. That&apos;s why every prep cook I know owns one.
+              {reviewData.realRestaurantUse.conclusion}
             </p>
           </div>
         </section>
@@ -288,21 +183,18 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
             <div className="bg-green-50 p-6 rounded-lg border border-green-200">
               <h3 className="text-xl font-bold mb-4 text-green-900">What Works</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>✓ Comfortable grip prevents hand fatigue</li>
-                <li>✓ Sharp blade peels effortlessly</li>
-                <li>✓ Swivel action follows contours</li>
-                <li>✓ Dishwasher-safe</li>
-                <li>✓ Incredibly affordable at $10</li>
-                <li>✓ Built-in potato eye remover</li>
+                {productData.pros.map((pro, index) => (
+                  <li key={index}>✓ {pro}</li>
+                ))}
               </ul>
             </div>
 
             <div className="bg-red-50 p-6 rounded-lg border border-red-200">
               <h3 className="text-xl font-bold mb-4 text-red-900">Limitations</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>✗ Blade eventually dulls (after years of use)</li>
-                <li>✗ Larger handle may feel bulky to some</li>
-                <li>✗ Not ideal for very thick-skinned items</li>
+                {productData.cons.map((con, index) => (
+                  <li key={index}>✗ {con}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -310,88 +202,68 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
 
         {/* Who Should Buy This */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Who This Tool Is For</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.whoShouldBuy.title}</h2>
 
           <div className="bg-white p-6 rounded-lg border-l-4 border-orange-600 mb-6">
             <h3 className="text-xl font-bold mb-3 text-gray-900">Perfect If You:</h3>
             <ul className="space-y-2 text-gray-700">
-              <li>• Regularly peel vegetables and fruits</li>
-              <li>• Want a comfortable, ergonomic tool</li>
-              <li>• Value reliability and durability</li>
-              <li>• Have arthritis or hand issues</li>
-              <li>• Need a professional-quality peeler at budget price</li>
+              {reviewData.whoShouldBuy.perfectFor.map((item, index) => (
+                <li key={index}>• {item}</li>
+              ))}
             </ul>
           </div>
 
           <div className="bg-white p-6 rounded-lg border-l-4 border-gray-400">
             <h3 className="text-xl font-bold mb-3 text-gray-900">Skip If You:</h3>
             <ul className="space-y-2 text-gray-700">
-              <li>• Never peel vegetables (but seriously, who doesn&apos;t?)</li>
-              <li>• Prefer Y-style peelers over swivel peelers</li>
-              <li>• Want a compact, minimalist tool</li>
+              {reviewData.whoShouldBuy.skipIf.map((item, index) => (
+                <li key={index}>• {item}</li>
+              ))}
             </ul>
           </div>
         </section>
 
         {/* Care & Maintenance */}
         <section className="mb-12 bg-blue-50 p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">How to Make It Last Years</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.careAndMaintenance.title}</h2>
 
           <div className="space-y-4 text-gray-700">
-            <div>
-              <h3 className="font-bold text-lg mb-2">Daily Care:</h3>
-              <ul className="space-y-1 ml-4">
-                <li>• Hand wash or put in dishwasher</li>
-                <li>• Dry thoroughly if hand washing</li>
-                <li>• Store in utensil drawer or crock</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-lg mb-2">Maintenance:</h3>
-              <ul className="space-y-1 ml-4">
-                <li>• Check blade sharpness periodically</li>
-                <li>• Replace when blade dulls (OXO sells replacement blades)</li>
-                <li>• Clean any buildup around swivel mechanism</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-lg mb-2">What to Avoid:</h3>
-              <ul className="space-y-1 ml-4">
-                <li>• Don&apos;t use on very hard items (use a knife instead)</li>
-                <li>• Avoid leaving in standing water</li>
-                <li>• Don&apos;t try to sharpen the blade yourself</li>
-              </ul>
-            </div>
+            {reviewData.careAndMaintenance.sections.map((section, index) => (
+              <div key={index}>
+                <h3 className="font-bold text-lg mb-2">{section.title}</h3>
+                <ul className="space-y-1 ml-4">
+                  {section.items.map((item, itemIndex) => (
+                    <li key={itemIndex}>• {item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </section>
 
         {/* Buy Section */}
         <section className="mb-12 bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-xl border-2 border-orange-200">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add This to Your Kitchen?</h2>
+          <h2 className="text-3xl font-bold mb-4 text-gray-900">{reviewData.buySection.title}</h2>
 
           <p className="text-lg text-gray-700 mb-6">
-            This is one of the 11 tools I use most in my home kitchen after 24 years of professional cooking.
-            At this price point, this is the easiest recommendation I can make. Buy one, thank me later.
+            {reviewData.buySection.description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <CTAVisibilityTracker
-              ctaId={`review-${productData.slug}-above_fold`}
+              ctaId={`${reviewData.productSlug}-above-fold-cta`}
               position="above_fold"
-              productSlug={productData.slug}
+              productSlug={reviewData.productSlug}
               merchant="amazon"
             >
-              <AffiliateButton
+              <a
                 href={affiliateUrl}
-                merchant="amazon"
-                product={productData.slug}
-                position="above_fold"
-                variant="primary"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95"
               >
-                Check Amazon Price →
-              </AffiliateButton>
+                {reviewData.buySection.ctaText}
+              </a>
             </CTAVisibilityTracker>
 
             <a
@@ -402,8 +274,16 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
             </a>
           </div>
 
+          {/* Text link fallback */}
+          <p className="text-center mt-3 text-sm">
+            <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
+              target="_blank" rel="noopener noreferrer sponsored">
+              → View {productData.name} on Amazon
+            </a>
+          </p>
+
           <p className="text-sm text-gray-600 mt-4">
-            💡 Also available at kitchen retailers and restaurant supply stores
+            {reviewData.buySection.note}
           </p>
         </section>
 
@@ -428,71 +308,22 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
           </div>
         </nav>
 
-      </article>
-
-
+        {/* Testimonials */}
         <section className="mb-12" id="testimonials">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">What Real Users Are Saying</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.testimonials.title}</h2>
           <p className="text-sm text-slate-600 mb-4 italic">
-            Customer reviews curated from Amazon verified purchasers.
+            {reviewData.testimonials.subtitle}
           </p>
 
           <div className="space-y-4">
-            <div className="bg-white p-5 rounded-lg border border-gray-200">
-              <p className="text-slate-700 mb-2">
-                &quot;We&apos;ve had ours for over 10 years now and it still works like new. The handle is comfortable even when wet, and the blade is still sharp. Best $10 I ever spent on a kitchen tool.&quot;
-              </p>
-              <p className="text-sm text-slate-500">— Amazon verified purchaser (Sarah M., November 2024)</p>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg border border-gray-200">
-              <p className="text-slate-700 mb-2">
-                &quot;I have arthritis in my hands and most peelers hurt after a few minutes. This OXO peeler is so comfortable I can prep vegetables for an entire meal without pain. The grip makes all the difference.&quot;
-              </p>
-              <p className="text-sm text-slate-500">— Amazon verified purchaser (Robert K., October 2024)</p>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg border border-gray-200">
-              <p className="text-slate-700 mb-2">
-                &quot;I was skeptical about spending $10 on a peeler when I could get one for $2, but after trying this I understand the hype. It glides through potato skins so easily and the swivel action really does follow the curves better.&quot;
-              </p>
-              <p className="text-sm text-slate-500">— Amazon verified purchaser (Jennifer L., September 2024)</p>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg border border-gray-200">
-              <p className="text-slate-700 mb-2">
-                &quot;Professional cook here. We go through a lot of prep tools but these OXO peelers last years in a commercial kitchen. I bought three for my home kitchen because they&apos;re that reliable.&quot;
-              </p>
-              <p className="text-sm text-slate-500">— Amazon verified purchaser (Mike T., August 2024)</p>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg border border-gray-200">
-              <p className="text-slate-700 mb-2">
-                &quot;The blade stays sharp much longer than cheap peelers. I&apos;ve replaced three other peelers in the time I&apos;ve had this one. Dishwasher hasn&apos;t affected it at all.&quot;
-              </p>
-              <p className="text-sm text-slate-500">— Amazon verified purchaser (Diana P., July 2024)</p>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg border border-gray-200">
-              <p className="text-slate-700 mb-2">
-                &quot;My mom has had hers for 15 years and recommended I get one. Now I understand why she wouldn&apos;t stop talking about it. Makes peeling carrots and potatoes so much faster and easier.&quot;
-              </p>
-              <p className="text-sm text-slate-500">— Amazon verified purchaser (Alex H., June 2024)</p>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg border border-gray-200">
-              <p className="text-slate-700 mb-2">
-                &quot;I meal prep every Sunday and peel a ton of vegetables. This peeler doesn&apos;t cause hand fatigue like my old one did. The comfortable grip is worth every penny. Should have upgraded years ago.&quot;
-              </p>
-              <p className="text-sm text-slate-500">— Amazon verified purchaser (Taylor B., May 2024)</p>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg border border-gray-200">
-              <p className="text-slate-700 mb-2">
-                &quot;Simple, effective, durable. It&apos;s just a peeler but it&apos;s the best peeler. The non-slip grip and sharp blade make prep work actually enjoyable instead of a chore.&quot;
-              </p>
-              <p className="text-sm text-slate-500">— Amazon verified purchaser (Chris W., April 2024)</p>
-            </div>
+            {reviewData.testimonials.reviews.map((review, index) => (
+              <div key={index} className="bg-white p-5 rounded-lg border border-gray-200">
+                <p className="text-slate-700 mb-2">
+                  &quot;{review.quote}&quot;
+                </p>
+                <p className="text-sm text-slate-500">— Amazon verified purchaser ({review.author})</p>
+              </div>
+            ))}
           </div>
 
           <div className="mt-8 p-6 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-orange-200">
@@ -501,350 +332,173 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
             </p>
             <div className="flex justify-center">
               <CTAVisibilityTracker
-                ctaId={`review-${productData.slug}-mid_article`}
+                ctaId={`${reviewData.productSlug}-mid-article-cta`}
                 position="mid_article"
-                productSlug={productData.slug}
+                productSlug={reviewData.productSlug}
                 merchant="amazon"
               >
-                <AffiliateButton
+                <a
                   href={affiliateUrl}
-                  merchant="amazon"
-                  product={productData.slug}
-                  position="mid_article"
-                  variant="secondary"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95"
                 >
-                  Check Amazon Price →
-                </AffiliateButton>
+                  {reviewData.buySection.ctaText}
+                </a>
               </CTAVisibilityTracker>
             </div>
+            {/* Text link fallback */}
+            <p className="text-center mt-3 text-sm">
+              <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
+                target="_blank" rel="noopener noreferrer sponsored">
+                → View {productData.name} on Amazon
+              </a>
+            </p>
           </div>
         </section>
 
-
-
+        {/* Cost Analysis */}
         <section className="mb-12" id="cost-analysis">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Cost-Per-Use Analysis</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.costAnalysis.title}</h2>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
 
             <div className="bg-blue-50 p-5 rounded-lg border border-blue-200 mb-4">
-              <h3 className="font-bold text-slate-900 mb-3">Real-World Value Calculation</h3>
+              <h3 className="font-bold text-slate-900 mb-3">{reviewData.costAnalysis.realWorldValue.title}</h3>
               <ul className="space-y-2 text-slate-700">
-                <li>• <strong>Initial cost:</strong> ~$10</li>
-                <li>• <strong>Years of use:</strong> 20 years (and still going)</li>
-                <li>• <strong>Estimated uses:</strong> 3,000+ uses (peeling vegetables 2-3 times per week)</li>
-                <li>• <strong>Cost per use:</strong> Less than $0.01 per use</li>
+                {reviewData.costAnalysis.realWorldValue.items.map((item, index) => (
+                  <li key={index}>• <strong>{item.split(':')[0]}:</strong> {item.split(':')[1]}</li>
+                ))}
               </ul>
             </div>
 
             <p className="text-slate-700 mb-4">
-              <strong>Value comparison:</strong> A cheap $2 peeler typically lasts 6-12 months before the blade dulls or handle breaks. Over 20 years, you&apos;d replace it 20-40 times, spending $40-80 total. This OXO peeler costs $10 once and outlasts them all.
+              <strong>Value comparison:</strong> {reviewData.costAnalysis.comparison}
             </p>
 
             <div className="bg-green-50 p-4 rounded-lg border border-green-200">
               <p className="text-slate-800 font-semibold">
-                💰 Bottom Line: At less than a penny per use over 20 years, this peeler delivers exceptional value. The initial $10 investment pays for itself in durability, comfort, and performance within the first year.
+                {reviewData.costAnalysis.bottomLine}
               </p>
             </div>
           </div>
         </section>
 
-
-
+        {/* Performance Data */}
         <section className="mb-12" id="performance">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Measured Performance Data</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.performanceData.title}</h2>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="font-semibold text-slate-900 mb-2">Peeling Efficiency</p>
-                <p className="text-slate-700 text-sm">
-                  <strong>Peeling speed:</strong> 3-4 medium potatoes per minute<br/>
-                  <strong>Blade sharpness retention:</strong> 5 years of daily use<br/>
-                  <strong>Waste reduction:</strong> Removes 30% thinner peels than standard peelers
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="font-semibold text-slate-900 mb-2">Ergonomics & Comfort</p>
-                <p className="text-slate-700 text-sm">
-                  <strong>Grip comfort rating:</strong> 5/5 (even when wet)<br/>
-                  <strong>Hand fatigue:</strong> Minimal after 30+ minutes continuous use<br/>
-                  <strong>Grip diameter:</strong> 1.25&quot; (ideal for most hand sizes)
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="font-semibold text-slate-900 mb-2">Durability Testing</p>
-                <p className="text-slate-700 text-sm">
-                  <strong>Professional use lifespan:</strong> 20 years and counting<br/>
-                  <strong>Dishwasher cycles:</strong> 500+ without degradation<br/>
-                  <strong>Blade replacement needed:</strong> Never (in 20 years)
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="font-semibold text-slate-900 mb-2">Versatility</p>
-                <p className="text-slate-700 text-sm">
-                  <strong>Optimal for:</strong> Potatoes, carrots, apples, pears, cucumbers<br/>
-                  <strong>Also handles:</strong> Ginger, asparagus, zucchini, hard cheeses<br/>
-                  <strong>Less effective on:</strong> Butternut squash, thick-skinned produce
-                </p>
-              </div>
+              {reviewData.performanceData.categories.map((category, index) => (
+                <div key={index} className="bg-gray-50 p-4 rounded-lg">
+                  <p className="font-semibold text-slate-900 mb-2">{category.title}</p>
+                  <p className="text-slate-700 text-sm">
+                    {category.metrics.map((metric, metricIndex) => (
+                      <span key={metricIndex}>
+                        <strong>{metric.label}:</strong> {metric.value}
+                        {metricIndex < category.metrics.length - 1 && <><br/></>}
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              ))}
             </div>
 
             <div className="bg-orange-50 p-4 rounded-lg border border-orange-200 mt-4">
               <p className="text-slate-800">
-                <strong>Key Performance Insight:</strong> The swivel mechanism reduces wrist strain by 40% compared to fixed-blade peelers, especially important during extended prep sessions. The sharp blade requires minimal downward pressure, allowing for faster, safer peeling.
+                <strong>{reviewData.performanceData.keyInsight}</strong>
               </p>
             </div>
           </div>
         </section>
 
-
-
+        {/* Specifications */}
         <section className="mb-12" id="specs">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Complete Specifications & Dimensions</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.specifications.title}</h2>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="font-semibold text-slate-900 mb-3">Technical Specifications</h3>
                 <dl className="space-y-2 text-sm">
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Model Number:</dt>
-                    <dd className="font-semibold">1067551</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Blade Material:</dt>
-                    <dd className="font-semibold">Stainless steel</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Handle Material:</dt>
-                    <dd className="font-semibold">Non-slip rubber</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Blade Type:</dt>
-                    <dd className="font-semibold">Swivel (pivoting)</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Blade Orientation:</dt>
-                    <dd className="font-semibold">Straight (in-line)</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Special Features:</dt>
-                    <dd className="font-semibold">Built-in potato eye remover</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Dishwasher Safe:</dt>
-                    <dd className="font-semibold">Yes</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Replacement Blade:</dt>
-                    <dd className="font-semibold">Available separately</dd>
-                  </div>
+                  {reviewData.specifications.technical.map((spec, index) => (
+                    <div key={index} className="flex justify-between border-b border-gray-100 pb-2">
+                      <dt className="text-slate-600">{spec.label}:</dt>
+                      <dd className="font-semibold">{spec.value}</dd>
+                    </div>
+                  ))}
                 </dl>
               </div>
 
               <div>
                 <h3 className="font-semibold text-slate-900 mb-3">Physical Dimensions</h3>
                 <dl className="space-y-2 text-sm">
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Length:</dt>
-                    <dd className="font-semibold">7 inches</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Width:</dt>
-                    <dd className="font-semibold">1.25 inches</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Weight:</dt>
-                    <dd className="font-semibold">2.4 ounces</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Handle Length:</dt>
-                    <dd className="font-semibold">4.5 inches</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Blade Width:</dt>
-                    <dd className="font-semibold">2 inches</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Color:</dt>
-                    <dd className="font-semibold">Black handle</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Country of Origin:</dt>
-                    <dd className="font-semibold">China</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Warranty:</dt>
-                    <dd className="font-semibold">OXO satisfaction guarantee</dd>
-                  </div>
+                  {reviewData.specifications.physical.map((spec, index) => (
+                    <div key={index} className="flex justify-between border-b border-gray-100 pb-2">
+                      <dt className="text-slate-600">{spec.label}:</dt>
+                      <dd className="font-semibold">{spec.value}</dd>
+                    </div>
+                  ))}
                 </dl>
               </div>
             </div>
           </div>
         </section>
 
-
-
+        {/* Comparison */}
         <section className="mb-12" id="comparison">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">
-            Comparison vs. Competitors
+            {reviewData.comparison.title}
           </h2>
 
           <div className="overflow-x-auto my-5">
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr className="bg-gray-50">
-                  <th className="p-3 text-left border-b-2 border-gray-300">Feature</th>
-                  <th className="p-3 text-left border-b-2 border-gray-300 bg-orange-50">OXO Good Grips Swivel</th>
-                  <th className="p-3 text-left border-b-2 border-gray-300">Kuhn Rikon Original Swiss</th>
-                  <th className="p-3 text-left border-b-2 border-gray-300">OXO Y-Peeler</th>
+                  {reviewData.comparison.headers.map((header, index) => (
+                    <th key={index} className={`p-3 text-left border-b-2 border-gray-300 ${index === 1 ? 'bg-orange-50' : ''}`}>
+                      {header}
+                    </th>
+                  ))}
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td className="p-3 border-b border-gray-300 font-semibold">Price Range</td>
-                  <td className="p-3 border-b border-gray-300 bg-orange-50">$8-12</td>
-                  <td className="p-3 border-b border-gray-300">$4-6</td>
-                  <td className="p-3 border-b border-gray-300">$10-13</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-gray-300 font-semibold">Blade Type</td>
-                  <td className="p-3 border-b border-gray-300 bg-orange-50">Swivel, stainless steel</td>
-                  <td className="p-3 border-b border-gray-300">Fixed, carbon steel</td>
-                  <td className="p-3 border-b border-gray-300">Fixed Y-blade, stainless</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-gray-300 font-semibold">Handle Comfort</td>
-                  <td className="p-3 border-b border-gray-300 bg-orange-50">⭐⭐⭐⭐⭐ Oversized, non-slip</td>
-                  <td className="p-3 border-b border-gray-300">⭐⭐⭐ Compact, plastic</td>
-                  <td className="p-3 border-b border-gray-300">⭐⭐⭐⭐⭐ Same Good Grips handle</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-gray-300 font-semibold">Dishwasher Safe</td>
-                  <td className="p-3 border-b border-gray-300 bg-orange-50">✅ Yes</td>
-                  <td className="p-3 border-b border-gray-300">⚠️ Hand wash recommended</td>
-                  <td className="p-3 border-b border-gray-300">✅ Yes</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-gray-300 font-semibold">Best For</td>
-                  <td className="p-3 border-b border-gray-300 bg-orange-50">Round vegetables, comfort</td>
-                  <td className="p-3 border-b border-gray-300">Ultra-thin peels, precision</td>
-                  <td className="p-3 border-b border-gray-300">Long vegetables, speed</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-gray-300 font-semibold">Durability Rating</td>
-                  <td className="p-3 border-b border-gray-300 bg-orange-50">⭐⭐⭐⭐⭐ 20 years</td>
-                  <td className="p-3 border-b border-gray-300">⭐⭐⭐⭐ 3-5 years</td>
-                  <td className="p-3 border-b border-gray-300">⭐⭐⭐⭐⭐ 15 years</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-gray-300 font-semibold">Arthritis-Friendly</td>
-                  <td className="p-3 border-b border-gray-300 bg-orange-50">✅ Excellent</td>
-                  <td className="p-3 border-b border-gray-300">❌ Thin handle</td>
-                  <td className="p-3 border-b border-gray-300">✅ Excellent</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-gray-300 font-semibold">Weight</td>
-                  <td className="p-3 border-b border-gray-300 bg-orange-50">2.4 oz</td>
-                  <td className="p-3 border-b border-gray-300">0.8 oz</td>
-                  <td className="p-3 border-b border-gray-300">2.2 oz</td>
-                </tr>
+                {reviewData.comparison.rows.map((row, index) => (
+                  <tr key={index}>
+                    <td className="p-3 border-b border-gray-300 font-semibold">{row.feature}</td>
+                    <td className="p-3 border-b border-gray-300 bg-orange-50">{row.oxo}</td>
+                    <td className="p-3 border-b border-gray-300">{row.kuhnRikon}</td>
+                    <td className="p-3 border-b border-gray-300">{row.oxoY}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
 
           <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 mt-6">
-            <h3 className="font-bold text-slate-900 mb-3">Which Should You Choose?</h3>
+            <h3 className="font-bold text-slate-900 mb-3">{reviewData.comparison.guidance.title}</h3>
             <ul className="space-y-3 text-slate-700">
-              <li>
-                <strong>Choose the OXO Good Grips Swivel</strong> if you want the most comfortable, durable all-purpose peeler for everyday use. Best for arthritis sufferers or anyone who peels vegetables regularly. The swivel blade excels at round vegetables like potatoes and apples.
-              </li>
-              <li>
-                <strong>Choose the Kuhn Rikon</strong> if you prioritize razor-thin peels and don&apos;t mind hand-washing. Great for delicate work and precision peeling. Less comfortable for extended use.
-              </li>
-              <li>
-                <strong>Choose the OXO Y-Peeler</strong> if you prefer the Y-style design for speed-peeling long vegetables like carrots and cucumbers. Same great handle comfort as the swivel model but different blade orientation.
-              </li>
+              {reviewData.comparison.guidance.options.map((option, index) => (
+                <li key={index}>
+                  <strong>{option.title}</strong> {option.description}
+                </li>
+              ))}
             </ul>
           </div>
         </section>
 
         {/* FAQ Section */}
         <section className="mb-12" id="faq">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.faq.title}</h2>
           <div className="space-y-4">
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="font-bold text-slate-900 mb-2">How long does the OXO Good Grips Swivel Peeler typically last?</h3>
-              <p className="text-slate-700">
-                With proper care, this peeler can last 15-20 years. Mine has been in daily use for over 20 years and still performs excellently. The blade stays sharp for 5 years of regular use, and replacement blades are available if needed.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="font-bold text-slate-900 mb-2">Is this peeler dishwasher safe?</h3>
-              <p className="text-slate-700">
-                Yes, the OXO Good Grips Swivel Peeler is completely dishwasher safe. I&apos;ve run mine through hundreds of dishwasher cycles without any degradation to the blade sharpness or handle integrity.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="font-bold text-slate-900 mb-2">Will this work well for people with arthritis or hand pain?</h3>
-              <p className="text-slate-700">
-                Absolutely. The oversized, soft, non-slip handle was specifically designed for people with arthritis. The ergonomic design reduces hand strain significantly compared to thin-handled peelers, and the sharp blade requires minimal downward pressure.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="font-bold text-slate-900 mb-2">What&apos;s the difference between the swivel peeler and the Y-peeler?</h3>
-              <p className="text-slate-700">
-                The swivel peeler has an in-line blade that pivots, making it ideal for round vegetables like potatoes and apples. The Y-peeler has a horizontal blade orientation that&apos;s better for speed-peeling long vegetables like carrots and cucumbers. Both have the same comfortable Good Grips handle.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="font-bold text-slate-900 mb-2">Can this peeler handle tough-skinned vegetables?</h3>
-              <p className="text-slate-700">
-                It excels at most vegetables and fruits, but very thick-skinned produce like butternut squash is better handled with a sharp knife. For potatoes, carrots, apples, pears, cucumbers, zucchini, and similar items, this peeler is perfect.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="font-bold text-slate-900 mb-2">Does the blade need sharpening?</h3>
-              <p className="text-slate-700">
-                No, the stainless steel blade cannot be sharpened at home. However, it stays sharp for many years of regular use. When it eventually dulls, OXO sells replacement blades, though many users (including me) find the blade lasts 20+ years without replacement.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="font-bold text-slate-900 mb-2">Is this peeler made in the USA?</h3>
-              <p className="text-slate-700">
-                The OXO Good Grips Swivel Peeler is manufactured in China to OXO&apos;s quality specifications. While not made in the USA, it maintains excellent quality control and durability standards backed by OXO&apos;s satisfaction guarantee.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="font-bold text-slate-900 mb-2">Can I use this to peel hard cheeses?</h3>
-              <p className="text-slate-700">
-                Yes! The sharp blade works excellently for shaving hard cheeses like Parmesan and Romano into thin shavings. In professional kitchens, we regularly use it for cheese garnishes on pasta dishes and salads.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="font-bold text-slate-900 mb-2">What&apos;s the handle made of?</h3>
-              <p className="text-slate-700">
-                The handle features OXO&apos;s proprietary Good Grips material - a soft, non-slip santoprene rubber that provides excellent grip even when wet or greasy. The ergonomic shape and cushioned material make it comfortable for extended use.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="font-bold text-slate-900 mb-2">Is there a warranty on this peeler?</h3>
-              <p className="text-slate-700">
-                OXO backs all their products with a satisfaction guarantee. If you&apos;re not satisfied with the peeler for any reason, OXO will replace or refund it. This warranty reflects their confidence in the product&apos;s quality and durability.
-              </p>
-            </div>
+            {reviewData.faq.items.map((item, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg border border-gray-200">
+                <h3 className="font-bold text-slate-900 mb-2">{item.question}</h3>
+                <p className="text-slate-700">
+                  {item.answer}
+                </p>
+              </div>
+            ))}
           </div>
 
           <div className="mt-8 p-6 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-orange-200">
@@ -853,22 +507,28 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
             </p>
             <div className="flex justify-center">
               <CTAVisibilityTracker
-                ctaId={`review-${productData.slug}-final_cta`}
+                ctaId={`${reviewData.productSlug}-final-cta`}
                 position="final_cta"
-                productSlug={productData.slug}
+                productSlug={reviewData.productSlug}
                 merchant="amazon"
               >
-                <AffiliateButton
+                <a
                   href={affiliateUrl}
-                  merchant="amazon"
-                  product={productData.slug}
-                  position="final_cta"
-                  variant="primary"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95"
                 >
-                  Check Amazon Price →
-                </AffiliateButton>
+                  {reviewData.buySection.ctaText}
+                </a>
               </CTAVisibilityTracker>
             </div>
+            {/* Text link fallback */}
+            <p className="text-center mt-3 text-sm">
+              <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
+                target="_blank" rel="noopener noreferrer sponsored">
+                → View {productData.name} on Amazon
+              </a>
+            </p>
           </div>
         </section>
 
@@ -888,10 +548,10 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateFAQSchema(faqData))
+            __html: JSON.stringify(generateFAQSchema(reviewData.faqData))
           }}
         />
-
+      </article>
     </div>
   )
 }
