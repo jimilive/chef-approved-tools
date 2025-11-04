@@ -117,7 +117,7 @@ export const reviewData = {
     sections: [
       {
         title: 'Technique Requirements',
-        content: `**You can damage knives with a steel if you don't know what you're doing.** Too steep an angle and you're dulling the edge instead of straightening it. Too much pressure and you're removing metal unnecessarily. Too many passes and you're just wasting time.\n\nThe J.A. Henckels steel has a comfortable weight and good length for controlled strokes. The handle provides decent grip even when your hands are wet or greasy (which happens constantly in professional kitchens).\n\n**Proper technique:** 15-20 degrees for Western-style knives, 10-15 degrees for Japanese knives. Use consistent angle on both sides. Light pressure, 3-4 passes per side. The steel does the work - you're just guiding the blade.`
+        content: `**You can damage knives with a steel if you don't know what you're doing.** Too steep an angle and you're dulling the edge instead of straightening it. Too much pressure and you're removing metal unnecessarily. Too many passes and you're just wasting time.\n\n<LINK>The J.A. Henckels steel</LINK> has a comfortable weight and good length for controlled strokes. The handle provides decent grip even when your hands are wet or greasy (which happens constantly in professional kitchens).\n\n**Proper technique:** 15-20 degrees for Western-style knives, 10-15 degrees for Japanese knives. Use consistent angle on both sides. Light pressure, 3-4 passes per side. The steel does the work - you're just guiding the blade.`
       },
       {
         title: 'Professional Kitchen Context',
@@ -125,7 +125,7 @@ export const reviewData = {
       },
       {
         title: '20 Years of Wear and Performance',
-        content: `My steel shows exactly what two decades of daily professional use looks like. The rod has visible dings from thousands of honing sessions. The handle is worn smooth where I grip it most frequently. The original shine is long gone.\n\nDoes any of this affect performance? No. The steel still realigns edges effectively. The dings don't prevent the rod from doing its job. The worn handle still provides adequate grip.\n\n**Longevity verdict:** This tool is designed to survive professional kitchen abuse. Twenty years in, it shows wear but remains fully functional. It will likely outlast most of the knives I use it on.`
+        content: `<LINK>My steel</LINK> shows exactly what two decades of daily professional use looks like. The rod has visible dings from thousands of honing sessions. The handle is worn smooth where I grip it most frequently. The original shine is long gone.\n\nDoes any of this affect performance? No. <LINK>The steel</LINK> still realigns edges effectively. The dings don't prevent the rod from doing its job. The worn handle still provides adequate grip.\n\n**Longevity verdict:** This tool is designed to survive professional kitchen abuse. Twenty years in, it shows wear but remains fully functional. It will likely outlast most of the knives I use it on.`
       },
       {
         title: 'Alternatives and Comparisons',
@@ -228,9 +228,9 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      `The J.A. Henckels sharpening steel does exactly what it's supposed to do: realign knife edges between professional sharpenings. It's survived twenty years of daily use across multiple professional kitchens and shows no signs of needing replacement.`,
+      `<LINK>The J.A. Henckels sharpening steel</LINK> does exactly what it's supposed to do: realign knife edges between professional sharpenings. It's survived twenty years of daily use across multiple professional kitchens and shows no signs of needing replacement.`,
       `This is muscle memory at this point. I hone before every shift without thinking about it. The steel has visible dings from two decades of use, the handle is worn smooth in places, but it still does the job perfectly. That's what professional-grade tools are supposed to do - survive decades of abuse and keep working.`,
-      `If you own good knives and want to maintain them properly, you need a honing steel. This one has proven it can handle professional workloads and outlast most of the equipment around it. Twenty years later, I'd buy it again without hesitation.`
+      `If you own good knives and want to maintain them properly, you need a honing steel. <LINK>This one</LINK> has proven it can handle professional workloads and outlast most of the equipment around it. Twenty years later, I'd buy it again without hesitation.`
     ],
     ctaUrl: '', // Will be filled by affiliateUrl in page.tsx
     ctaText: 'Check Amazon Price →'
