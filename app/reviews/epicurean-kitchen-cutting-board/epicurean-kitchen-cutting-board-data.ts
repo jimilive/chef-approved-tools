@@ -121,7 +121,7 @@ export const reviewData = {
     sections: [
       {
         title: 'Sanitation & Food Safety',
-        content: `**Non-porous surface:** Unlike wood which has microscopic pores that trap bacteria, Epicurean's Richlite surface is completely non-porous. Bacteria can't penetrate or hide in the material.\n\n**Dishwasher sanitation:** High-heat dishwasher cycles kill bacteria that hand-washing misses. After cutting raw chicken, I throw the board in the dishwasher with complete confidence.\n\n**NSF certification:** Meets commercial kitchen standards for food safety. This is the same certification required for restaurant equipment. Health inspectors approve these boards because they can be truly sanitized.\n\n**Real-world impact:** In 10 years of use with raw proteins, I've never had food safety concerns. Compare this to wood boards where bacteria can hide in knife grooves and porous grain.`
+        content: `**Non-porous surface:** Unlike wood which has microscopic pores that trap bacteria, <LINK>Epicurean's Richlite surface</LINK> is completely non-porous. Bacteria can't penetrate or hide in the material.\n\n**Dishwasher sanitation:** High-heat dishwasher cycles kill bacteria that hand-washing misses. After cutting raw chicken, I throw <LINK>the board</LINK> in the dishwasher with complete confidence.\n\n**NSF certification:** Meets commercial kitchen standards for food safety. This is the same certification required for restaurant equipment. Health inspectors approve these boards because they can be truly sanitized.\n\n**Real-world impact:** In 10 years of use with raw proteins, I've never had food safety concerns. Compare this to wood boards where bacteria can hide in knife grooves and porous grain.`
       },
       {
         title: 'Durability & Longevity',
@@ -133,7 +133,7 @@ export const reviewData = {
       },
       {
         title: 'Practical Daily Use',
-        content: `**Zero maintenance:** No oiling. No special drying. No careful handling. Just use it and throw it in the dishwasher. This saves hours over years compared to wood board maintenance.\n\n**Heat resistance:** Up to 350°F means you can set hot pots on it while cooking. I do this regularly without damage. Convenient when counter space is limited during meal prep.\n\n**Stain resistance:** Beets, turmeric, red wine - nothing stains it. Wood boards absorb these stains permanently. The non-porous surface wipes clean every time.\n\n**Odor resistance:** Garlic, onions, fish - no lingering smells. Wood boards retain odors in the grain. This stays fresh regardless of what you cut on it.`
+        content: `**Zero maintenance:** No oiling. No special drying. No careful handling. Just use <LINK>this cutting board</LINK> and throw it in the dishwasher. This saves hours over years compared to wood board maintenance.\n\n**Heat resistance:** Up to 350°F means you can set hot pots on it while cooking. I do this regularly without damage. Convenient when counter space is limited during meal prep.\n\n**Stain resistance:** Beets, turmeric, red wine - nothing stains it. Wood boards absorb these stains permanently. The non-porous surface wipes clean every time.\n\n**Odor resistance:** Garlic, onions, fish - no lingering smells. Wood boards retain odors in the grain. This stays fresh regardless of what you cut on it.`
       }
     ]
   },
@@ -231,9 +231,9 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      `After decades with wood boards, I'll never go back. Epicurean boards deliver true sanitation through dishwasher cleaning, zero maintenance (no oiling), and genuine knife-friendly performance. The combination is unbeatable.`,
+      `After decades with wood boards, I'll never go back. <LINK>Epicurean boards</LINK> deliver true sanitation through dishwasher cleaning, zero maintenance (no oiling), and genuine knife-friendly performance. The combination is unbeatable.`,
       `In 10 years of daily use, I've put my board through 1,000+ dishwasher cycles with zero warping. I've used it with raw proteins without sanitation concerns. I've never oiled it, never babied it, never worried about it. It just works, day after day, year after year.`,
-      `Is it perfect? No. Wood boards have their appeal - the traditional aesthetic, the ritual of maintenance, the softest possible surface. But for practical daily cooking where sanitation matters and time is limited, composite boards are superior. This is the future of cutting boards.`
+      `Is it perfect? No. Wood boards have their appeal - the traditional aesthetic, the ritual of maintenance, the softest possible surface. But for practical daily cooking where sanitation matters and time is limited, <LINK>this composite board</LINK> is superior. This is the future of cutting boards.`
     ],
     ctaUrl: '', // Will be filled by affiliateUrl in page.tsx
     ctaText: 'Check Current Price →'
