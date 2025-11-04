@@ -6,92 +6,20 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import PriceDisplay from '@/components/PriceDisplay'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 
-import AffiliateButton from '@/components/AffiliateButton';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
+import { reviewData } from './robot-coupe-r2-dice-data'
 
-// Force dynamic rendering since we fetch from Supabase
-export const dynamic = 'force-dynamic'
+// ISR configuration - revalidate every hour
+export const revalidate = 3600
+export const fetchCache = 'force-cache'
 
-const legacyProductData = {
-  name: "Robot Coupe R2 Dice Combination Continuous Feed Food Processor",
-  slug: "robot-coupe-r2-dice",
-  brand: "Robot Coupe",
-  model: "R2 Dice",
-  sku: "R2DICE",
-  gtin13: "0753182086835",
-  dealStatus: "normal" as const,
-  category: "Food Processors",
-  pros: [
-    "2 HP motor delivers genuine commercial power",
-    "Continuous feed processes large volumes efficiently",
-    "1,725 RPM speed for fast throughput",
-    "Saves hours of daily prep time",
-    "Consistent, uniform cuts for professional presentation",
-    "3-qt polycarbonate bowl durability",
-    "ROI in approximately 2 months for commercial operations"
-  ],
-  cons: [
-    "Blade/disc wear after 1.5-2 years heavy use",
-    "Cleaning takes 10-15 minutes after heavy use",
-    "Substantial commercial equipment investment",
-    "Large footprint requires counter space",
-    "Requires 120V 15-amp circuit",
-    "Learning curve for optimal results"
-  ],
-  affiliateLinks: [],
-  inStock: true,
-  expertRating: 4.7,
-  expertOpinion: "After 3 years of intensive testing in Purple Cafe's high-volume prep kitchen, the Robot Coupe R2 Dice proved essential for cheese shredding and vegetable prep operations. The 2 HP motor and continuous feed design drastically reduced prep time while maintaining consistent quality. Saves 60-90 minutes daily in commercial operations, paying for itself in approximately 2 months through labor savings.",
-  dateAdded: "2025-01-15",
-  lastUpdated: "2025-01-15"
-}
-
-const faqData = [
-  {
-    question: "Is the Robot Coupe R2 Dice worth it for a restaurant?",
-    answer: "After 3 years in our commercial kitchen, absolutely yes—if you process high volumes daily. The combination of speed (850 servings/3 hours), consistent cut quality (5/5 rating), and commercial reliability makes this processor pay for itself through labor savings alone. Professional kitchens report saving significant prep time daily. The continuous feed design and commercial-grade motor process massive volume quickly—this is equipment that transforms prep operations and pays for itself through efficiency gains. Who should skip it: If you only process small volumes occasionally, a quality home food processor will suffice. But for high-volume operations where speed and consistency matter, this is essential equipment. My verdict: After 3 years of daily commercial use, this is the kind of equipment that becomes indispensable. Worth every dollar for serious operations."
-  },
-  {
-    question: "How difficult is cleaning compared to home processors?",
-    answer: "More involved, taking 8-10 minutes vs 3-5 minutes for home units. The continuous feed chute, bowl, and blades all require thorough cleaning. However, the time saved in processing far outweighs cleaning time. For efficient cleaning: disassemble components immediately after use, soak in warm soapy water while still warm, use a brush for the feed chute, and dry thoroughly to prevent water spots on polycarbonate. Most commercial operations factor this into their closing procedures."
-  },
-  {
-    question: "Is this worth it for serious home cooks?",
-    answer: "Only if you regularly process large volumes (10+ pounds per session). For typical home use—even serious cooking—a Cuisinart DLC-10 or KitchenAid processor handles 95% of tasks at a fraction of the investment. The R2 Dice excels when you need to process ingredients for dozens of servings multiple times per week. If you're meal-prepping for one family or cooking for dinner parties occasionally, residential equipment is more appropriate and easier to maintain."
-  },
-  {
-    question: "What is the difference between R2 Dice and R2N?",
-    answer: "The R2 Dice has a 2 HP motor vs the R2N's standard motor. For dense vegetables, hard cheeses, and continuous high-volume use, the extra horsepower prevents stalling and maintains consistent speed under load. For lighter-duty commercial use (smaller cafes, prep volumes under 50 servings per service), the R2N is adequate at lower cost. But for serious commercial operations processing hundreds of servings daily, the R2 Dice's power advantage is worth the investment."
-  },
-  {
-    question: "How long do the blades and discs last under commercial use?",
-    answer: "Based on our Purple Cafe experience: shredding discs last 12-18 months with daily heavy use, slicing blades 18-24 months. The S-blade for chopping lasts 2 years with proper care. Replacement components are reasonably priced for commercial equipment. Performance degradation is gradual—you'll notice slightly longer processing times before complete failure. Keep spare discs on hand for busy operations to avoid downtime."
-  },
-  {
-    question: "What electrical requirements are needed?",
-    answer: "Requires a standard 120V 15-amp circuit. Verify your kitchen circuit can handle the load, especially if sharing with other equipment. Dedicated circuit recommended for heavy daily use to prevent breaker trips during peak operations. Most commercial kitchens have adequate power, but verify before installation. The 2 HP motor draws significant amperage during startup and under heavy load."
-  },
-  {
-    question: "How does this compare to the Cuisinart DLC-10 for commercial use?",
-    answer: "The R2 Dice is purpose-built for commercial operations with a 2 HP motor, continuous feed design, and commercial-grade construction. The Cuisinart is excellent for home use but cannot sustain the speed and durability needed for daily commercial operations. The Cuisinart will overheat and stall under continuous high-volume processing. It's designed for batch processing with rest periods between uses. The Robot Coupe handles continuous operation for hours without degradation."
-  },
-  {
-    question: "What size operation needs the Robot Coupe R2 Dice?",
-    answer: "This processor is designed for operations processing significant volumes daily. If you're preparing food for 50+ covers per service, catering events regularly, or running high-volume prep operations, the R2 Dice delivers the speed and reliability you need. For smaller operations or occasional high-volume needs, consider the standard R2N model or quality home processors. The continuous feed design and commercial motor really shine when you're processing pounds of ingredients multiple times per day."
-  },
-  {
-    question: "Can I use the Robot Coupe R2 Dice for purées and wet ingredients?",
-    answer: "While the R2 Dice can handle some wet ingredients, it excels at slicing, shredding, and dicing rather than puréeing. The continuous feed design and processing discs are optimized for solid foods. For purées, soups, and sauces, we used our Vitamix 5200 blender alongside the Robot Coupe. Together, they covered every processing need in our commercial kitchen. The Robot Coupe for prep work, the Vitamix for purées and liquid-based tasks."
-  },
-  {
-    question: "What maintenance does the Robot Coupe R2 Dice require?",
-    answer: "Daily maintenance is straightforward: thorough cleaning of all components after each use, checking blade sharpness weekly, and inspecting seals monthly. The polycarbonate bowl should be checked for cracks or wear every few months. Every 6-12 months under commercial use, have components professionally inspected. Blades should be professionally sharpened or replaced when performance decreases. Proper maintenance extends component life significantly and ensures consistent performance throughout the machine's lifespan."
-  }
-]
+// Use data from centralized data file
+const legacyProductData = reviewData.legacyProductData
+const faqData = reviewData.faq.items
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -250,16 +178,23 @@ export default async function RobotCoupeR2DiceReview() {
               productSlug={productData.slug}
               merchant="amazon"
             >
-              <AffiliateButton
+              <a
                 href={affiliateUrl}
-                merchant="amazon"
-                product={productData.slug}
-                position="above_fold"
-                variant="primary"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold px-10 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl text-lg"
               >
                 Check Price on Amazon →
-              </AffiliateButton>
+              </a>
             </CTAVisibilityTracker>
+
+            {/* Text link fallback */}
+            <p className="text-center mt-3 text-sm">
+              <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
+                target="_blank" rel="noopener noreferrer sponsored">
+                → View {productData.name} on Amazon
+              </a>
+            </p>
 
             <p className="text-sm text-gray-600 mt-4">
               💡 We earn commission at no extra cost to you.<br/>
@@ -437,16 +372,22 @@ export default async function RobotCoupeR2DiceReview() {
             productSlug={productData.slug}
             merchant="amazon"
           >
-            <AffiliateButton
+            <a
               href={affiliateUrl}
-              merchant="amazon"
-              product={productData.slug}
-              position="mid_article"
-              variant="secondary"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
             >
               Check Current Availability →
-            </AffiliateButton>
+            </a>
           </CTAVisibilityTracker>
+          {/* Text link fallback */}
+          <p className="text-center mt-3 text-sm">
+            <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
+              target="_blank" rel="noopener noreferrer sponsored">
+              → View on Amazon
+            </a>
+          </p>
         </div>
 
         {/* Mid-Content Lead Magnet */}
@@ -869,16 +810,23 @@ export default async function RobotCoupeR2DiceReview() {
               productSlug={productData.slug}
               merchant="amazon"
             >
-              <AffiliateButton
+              <a
                 href={affiliateUrl}
-                merchant="amazon"
-                product={productData.slug}
-                position="final_cta"
-                variant="secondary"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold px-10 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl text-lg"
               >
                 Check Current Price →
-              </AffiliateButton>
+              </a>
             </CTAVisibilityTracker>
+
+            {/* Text link fallback */}
+            <p className="text-center mt-3 text-sm">
+              <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
+                target="_blank" rel="noopener noreferrer sponsored">
+                → View {productData.name} on Amazon
+              </a>
+            </p>
 
             <p className="text-sm text-gray-600 mt-5">
               💡 Commercial equipment suppliers will be added soon
