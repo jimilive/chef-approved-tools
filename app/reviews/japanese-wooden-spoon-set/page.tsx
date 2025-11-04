@@ -10,7 +10,8 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600 // 1 hour cache
+export const fetchCache = 'force-cache'
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -287,22 +288,34 @@ export default async function JapaneseWoodenSpoonSetReview() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <CTAVisibilityTracker
-              ctaId={`review-${productData.slug}-above_fold`}
-              position="above_fold"
-              productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <AffiliateButton
-                href={affiliateLink}
-                merchant="amazon"
-                product={productData.slug}
+            <div className="flex-1">
+              <CTAVisibilityTracker
+                ctaId={`review-${productData.slug}-above_fold`}
                 position="above_fold"
-                variant="primary"
+                productSlug={productData.slug}
+                merchant="amazon"
               >
-                Check Amazon Price →
-              </AffiliateButton>
-            </CTAVisibilityTracker>
+                <AffiliateButton
+                  href={affiliateLink}
+                  merchant="amazon"
+                  product={productData.slug}
+                  position="above_fold"
+                  variant="primary"
+                >
+                  Check Amazon Price →
+                </AffiliateButton>
+              </CTAVisibilityTracker>
+              <p className="text-center mt-3 text-sm">
+                <a
+                  href={affiliateLink}
+                  className="text-orange-700 hover:text-orange-800 underline font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                >
+                  → View {productData.name} on Amazon
+                </a>
+              </p>
+            </div>
 
             <Link
               href="/reviews"
@@ -348,7 +361,7 @@ export default async function JapaneseWoodenSpoonSetReview() {
             recommending them to other home cooks.
           </p>
 
-          <div className="flex justify-center mb-4">
+          <div className="flex flex-col items-center mb-4">
             <CTAVisibilityTracker
               ctaId={`review-${productData.slug}-final_cta`}
               position="final_cta"
@@ -365,6 +378,16 @@ export default async function JapaneseWoodenSpoonSetReview() {
                 Check Amazon Price →
               </AffiliateButton>
             </CTAVisibilityTracker>
+            <p className="text-center mt-3 text-sm">
+              <a
+                href={affiliateLink}
+                className="text-orange-700 hover:text-orange-800 underline font-medium"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+              >
+                → View {productData.name} on Amazon
+              </a>
+            </p>
           </div>
 
           <p className="text-sm text-gray-600 text-center">
