@@ -20,8 +20,9 @@ import {
 // Import review data
 import { reviewData } from './cuisinart-dlc-10c-data'
 
-// Force dynamic rendering since we fetch from Supabase
-export const dynamic = 'force-dynamic'
+// Use ISR for better performance
+export const revalidate = 3600 // 1 hour cache
+export const fetchCache = 'force-cache'
 
 // Generate metadata dynamically
 export async function generateMetadata(): Promise<Metadata> {
@@ -85,6 +86,39 @@ export default async function CuisinartDLC10CReview() {
 
   // Get primary affiliate link
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
+
+  // Helper function to convert <LINK> tags to affiliate links
+  const processInlineLinks = (content: string) => {
+    const parts = content.split(/(<LINK>|<\/LINK>)/)
+    const elements: (string | JSX.Element)[] = []
+    let inLink = false
+    let linkCounter = 0
+
+    parts.forEach((part, index) => {
+      if (part === '<LINK>') {
+        inLink = true
+      } else if (part === '</LINK>') {
+        inLink = false
+      } else if (part && inLink) {
+        linkCounter++
+        elements.push(
+          <a
+            key={`inline-link-${linkCounter}`}
+            href={affiliateUrl}
+            className="text-orange-700 hover:text-orange-800 font-medium no-underline"
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+          >
+            {part}
+          </a>
+        )
+      } else if (part) {
+        elements.push(part)
+      }
+    })
+
+    return elements
+  }
 
   // Generate breadcrumbs
   const breadcrumbs = [
@@ -158,8 +192,36 @@ export default async function CuisinartDLC10CReview() {
             tierBadge={reviewData.hero.tierBadge}
             verdict={reviewData.hero.verdict}
             verdictStrong={reviewData.hero.verdictStrong}
-            ctaUrl={affiliateUrl}
-            ctaText={reviewData.hero.ctaText}
+            customCTA={
+              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
+                <CTAVisibilityTracker
+                  ctaId="hero-cta"
+                  position="above_fold"
+                >
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                  >
+                    {reviewData.hero.ctaText}
+                  </a>
+                </CTAVisibilityTracker>
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
+                </p>
+                <p className="text-xs text-slate-500 text-center mt-3">
+                  As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
+                </p>
+              </div>
+            }
           />
 
           {/* MODEL DISCONTINUED NOTICE - Inline Section */}
@@ -186,6 +248,16 @@ export default async function CuisinartDLC10CReview() {
                     View Current Model on Amazon →
                   </a>
                 </CTAVisibilityTracker>
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
+                </p>
               </div>
             </div>
           )}
@@ -193,7 +265,10 @@ export default async function CuisinartDLC10CReview() {
           {/* SECTION 2: TESTING RESULTS */}
           <TestingResultsGrid
             title={reviewData.testingResults.title}
-            sections={reviewData.testingResults.sections}
+            sections={reviewData.testingResults.sections.map(section => ({
+              ...section,
+              content: <>{processInlineLinks(typeof section.content === 'string' ? section.content : '')}</>
+            }))}
             testingEnvironment={reviewData.testingResults.testingEnvironment}
             outstandingPerformance={reviewData.testingResults.outstandingPerformance}
             minorConsiderations={reviewData.testingResults.minorConsiderations}
@@ -202,7 +277,10 @@ export default async function CuisinartDLC10CReview() {
           {/* SECTION 3: PERFORMANCE ANALYSIS */}
           <PerformanceAnalysis
             title={reviewData.performanceAnalysis.title}
-            sections={reviewData.performanceAnalysis.sections}
+            sections={reviewData.performanceAnalysis.sections.map(section => ({
+              ...section,
+              content: <>{processInlineLinks(typeof section.content === 'string' ? section.content : '')}</>
+            }))}
           />
 
           {/* SECTION 4: PROS & CONS */}
@@ -282,9 +360,39 @@ export default async function CuisinartDLC10CReview() {
           {/* SECTION 9: BOTTOM LINE */}
           <BottomLineSection
             title={reviewData.bottomLine.title}
-            paragraphs={reviewData.bottomLine.paragraphs}
-            ctaUrl={affiliateUrl}
-            ctaText={reviewData.bottomLine.ctaText}
+            paragraphs={reviewData.bottomLine.paragraphs.map((para, idx) => (
+              <span key={`bottom-para-${idx}`}>{processInlineLinks(para)}</span>
+            ))}
+            customCTA={
+              <div className="bg-white rounded-xl p-6">
+                <CTAVisibilityTracker
+                  ctaId="bottom-line-cta"
+                  position="final_cta"
+                >
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                  >
+                    {reviewData.bottomLine.ctaText}
+                  </a>
+                </CTAVisibilityTracker>
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
+                </p>
+                <p className="text-xs text-slate-500 text-center mt-3">
+                  As an Amazon Associate, I earn from qualifying purchases.
+                </p>
+              </div>
+            }
           />
 
           {/* SECTION 10: RELATED PRODUCTS */}

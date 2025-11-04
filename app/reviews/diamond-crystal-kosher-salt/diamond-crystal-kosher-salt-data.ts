@@ -120,15 +120,15 @@ export const reviewData = {
     sections: [
       {
         title: 'The Crystal Structure Advantage',
-        content: `The Alberger process creates Diamond Crystal's signature hollow, pyramid-shaped crystals. This isn't just a manufacturing curiosity—it's why this salt works so well in professional kitchens.\n\n**Half the density of Morton's:** The hollow crystals mean you get more volume per weight. 1 tablespoon Diamond Crystal ≈ 1½ teaspoons Morton's. This lighter structure makes it:\n• Easier to pinch precisely\n• Faster to dissolve on food\n• More forgiving if you slightly over-season\n• Better for seasoning by feel rather than measurement\n\n**No clumping:** The crystals stay free-flowing even in humid kitchens. After 6 years at Purple Café—a busy restaurant with steam from pasta stations and dishwashers—the salt never clumped. At home in humid Seattle, same story. It just works.`
+        content: `The Alberger process creates <LINK>Diamond Crystal's</LINK> signature hollow, pyramid-shaped crystals. This isn't just a manufacturing curiosity—it's why this salt works so well in professional kitchens.\n\n**Half the density of Morton's:** The hollow crystals mean you get more volume per weight. 1 tablespoon Diamond Crystal ≈ 1½ teaspoons Morton's. This lighter structure makes it:\n• Easier to pinch precisely\n• Faster to dissolve on food\n• More forgiving if you slightly over-season\n• Better for seasoning by feel rather than measurement\n\n**No clumping:** The crystals stay free-flowing even in humid kitchens. After 6 years at Purple Café—a busy restaurant with steam from pasta stations and dishwashers—the salt never clumped. At home in humid Seattle, same story. It just works.`
       },
       {
         title: 'Zero Additives = Clean Flavor',
-        content: `Unlike many salts, Diamond Crystal contains no anti-caking agents. Just salt. Pure sodium chloride. This keeps the flavor clean and pure.\n\n**Why this matters:** Anti-caking agents can leave a slight chemical or metallic aftertaste. Most people don't notice it until they taste salt without them. Then it's obvious. Diamond Crystal lets food flavors shine without competing with them.\n\n**In professional kitchens:** When you're building complex flavor profiles—balancing acid, fat, salt, heat—you need every ingredient to be neutral unless it's intentionally featured. Salt should enhance, not distract. Diamond Crystal does exactly that.`
+        content: `Unlike many salts, <LINK>Diamond Crystal</LINK> contains no anti-caking agents. Just salt. Pure sodium chloride. This keeps the flavor clean and pure.\n\n**Why this matters:** Anti-caking agents can leave a slight chemical or metallic aftertaste. Most people don't notice it until they taste salt without them. Then it's obvious. Diamond Crystal lets food flavors shine without competing with them.\n\n**In professional kitchens:** When you're building complex flavor profiles—balancing acid, fat, salt, heat—you need every ingredient to be neutral unless it's intentionally featured. Salt should enhance, not distract. Diamond Crystal does exactly that.`
       },
       {
         title: 'Consistency Across Cooks',
-        content: `In a restaurant kitchen, multiple cooks need to produce identical results. If one cook's "pinch of salt" is different from another's, dishes taste inconsistent. Customers notice.\n\n**Diamond Crystal solves this:** The uniform crystal size means a pinch is a pinch, regardless of who's cooking. This predictability is why it's mandated in professional kitchens. What works for the morning prep cook works for the evening line cook.\n\n**At home:** This consistency means your recipes work the same every time. No mystery variance between batches. If you nail a dish once, you can replicate it exactly using the same technique.`
+        content: `In a restaurant kitchen, multiple cooks need to produce identical results. If one cook's "pinch of salt" is different from another's, dishes taste inconsistent. Customers notice.\n\n**<LINK>Diamond Crystal</LINK> solves this:** The uniform crystal size means a pinch is a pinch, regardless of who's cooking. This predictability is why it's mandated in professional kitchens. What works for the morning prep cook works for the evening line cook.\n\n**At home:** This consistency means your recipes work the same every time. No mystery variance between batches. If you nail a dish once, you can replicate it exactly using the same technique.`
       },
       {
         title: 'The Volume-to-Weight Conversion Challenge',
@@ -231,9 +231,9 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      `Diamond Crystal Kosher Salt has earned its place as the only salt I buy. For 6 years at Purple Café, it seasoned thousands of plates without a single complaint. Eighteen years later (starting in 2007), it's still the standard in both my professional memory and my home kitchen.`,
+      `<LINK>Diamond Crystal Kosher Salt</LINK> has earned its place as the only salt I buy. For 6 years at Purple Café, it seasoned thousands of plates without a single complaint. Eighteen years later (starting in 2007), it's still the standard in both my professional memory and my home kitchen.`,
       `The hollow pyramid crystals make it easy to control. The lack of additives keeps the flavor clean. The consistent size means predictable results whether I'm cooking or someone else is following my recipes. It's simply the best all-purpose salt for serious cooking.`,
-      `Is it perfect for everything? No. I keep finishing salts for special occasions and fine sea salt for the table. But for 99% of cooking—from seasoning proteins to pasta water to vegetable prep—Diamond Crystal is unmatched.`
+      `Is it perfect for everything? No. I keep finishing salts for special occasions and fine sea salt for the table. But for 99% of cooking—from seasoning proteins to pasta water to vegetable prep—<LINK>Diamond Crystal</LINK> is unmatched.`
     ],
     ctaUrl: '', // Will be filled by affiliateUrl in page.tsx
     ctaText: 'Check Current Price →'
