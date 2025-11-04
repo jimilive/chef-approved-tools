@@ -145,7 +145,7 @@ export const reviewData = {
       },
       {
         title: 'Model 4: 2020-Present (5 Years and Counting)',
-        content: `My current Black+Decker toaster oven is now in its fifth year. It gets used almost daily—morning toast, reheating leftovers, quick vegetable roasting, small-batch cookies. After five years of constant use, it still performs exactly as it did on day one. The heating elements are strong, the temperature control is accurate, and the timer mechanism works perfectly. Based on my previous models' track records, I expect this one to last another 10 years easily.`
+        content: `My current <LINK>Black+Decker toaster oven</LINK> is now in its fifth year. It gets used almost daily—morning toast, reheating leftovers, quick vegetable roasting, small-batch cookies. After five years of constant use, it still performs exactly as it did on day one. The heating elements are strong, the temperature control is accurate, and the timer mechanism works perfectly. Based on my previous models' track records, I expect this one to last another 10 years easily.`
       }
     ],
     testingEnvironment: [], // Not applicable for home testing
@@ -170,11 +170,11 @@ export const reviewData = {
     sections: [
       {
         title: 'Simple, Durable Design',
-        content: `Black+Decker doesn't overcomplicate their toaster ovens with features that break. The controls are mechanical dials—no digital displays that fail, no complicated electronics. Temperature dial, timer dial, function selector. Three controls that have proven reliable across five decades.\n\nWhile professional equipment like the KitchenAid commercial mixer offers commercial-grade durability at premium prices, Black+Decker delivers remarkable longevity at consumer prices through intelligent design simplicity.`
+        content: `<LINK>Black+Decker toaster ovens</LINK> don't overcomplicate their design with features that break. The controls are mechanical dials—no digital displays that fail, no complicated electronics. Temperature dial, timer dial, function selector. Three controls that have proven reliable across five decades.\n\nWhile professional equipment like the KitchenAid commercial mixer offers commercial-grade durability at premium prices, Black+Decker delivers remarkable longevity at consumer prices through intelligent design simplicity.`
       },
       {
         title: 'Quality Heating Elements',
-        content: `The heating elements in Black+Decker toaster ovens are properly sized and well-constructed. They heat evenly, maintain consistent temperature, and last for years. I've never experienced a burned-out heating element in any of my four models—each unit lasted its full lifespan with the original heating coils.`
+        content: `The heating elements in <LINK>Black+Decker toaster ovens</LINK> are properly sized and well-constructed. They heat evenly, maintain consistent temperature, and last for years. I've never experienced a burned-out heating element in any of my four models—each unit lasted its full lifespan with the original heating coils.`
       },
       {
         title: 'Replaceable Parts Availability',
@@ -194,7 +194,7 @@ export const reviewData = {
       },
       {
         title: 'Professional Perspective: Home vs. Commercial Equipment',
-        content: `After 24 years working in professional kitchens, I understand the difference between commercial and consumer equipment. In restaurant kitchens, we used commercial toaster ovens that cost 10-15 times what a Black+Decker costs. They were built for constant abuse—running 12-16 hours daily, handled by multiple cooks, used for high-volume production.\n\nBut here's the truth: most home cooks don't need commercial-grade toaster ovens. You're not running a breakfast service for 200 covers. You're making toast, reheating leftovers, baking small batches of cookies, roasting vegetables for dinner. For these tasks, Black+Decker delivers 90% of the performance at 15% of the cost.\n\nThe fact that I've continued using Black+Decker at home throughout my entire professional cooking career—even while using commercial equipment daily at work—proves the point. When you understand the difference between professional and home cooking demands, you realize that premium consumer toaster ovens are often paying for features you don't need.`
+        content: `After 24 years working in professional kitchens, I understand the difference between commercial and consumer equipment. In restaurant kitchens, we used commercial toaster ovens that cost 10-15 times what a Black+Decker costs. They were built for constant abuse—running 12-16 hours daily, handled by multiple cooks, used for high-volume production.\n\nBut here's the truth: most home cooks don't need commercial-grade toaster ovens. You're not running a breakfast service for 200 covers. You're making toast, reheating leftovers, baking small batches of cookies, roasting vegetables for dinner. For these tasks, <LINK>Black+Decker</LINK> delivers 90% of the performance at 15% of the cost.\n\nThe fact that I've continued using Black+Decker at home throughout my entire professional cooking career—even while using commercial equipment daily at work—proves the point. When you understand the difference between professional and home cooking demands, you realize that premium consumer toaster ovens are often paying for features you don't need.`
       }
     ]
   },
@@ -295,10 +295,10 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: 48 Years of Proven Reliability',
     paragraphs: [
-      `Like my 24-year-old Bodum French press, my Black+Decker toaster oven represents equipment that simply works year after year without demanding premium prices. When you use the same brand continuously for 48 years across four different models—from childhood through professional cooking career—that's not brand loyalty. That's earned trust based on consistent performance and reliability that stands the test of time.`,
+      `Like my 24-year-old Bodum French press, my <LINK>Black+Decker toaster oven</LINK> represents equipment that simply works year after year without demanding premium prices. When you use the same brand continuously for 48 years across four different models—from childhood through professional cooking career—that's not brand loyalty. That's earned trust based on consistent performance and reliability that stands the test of time.`,
       `Here's the value calculation that matters: If you buy a Black+Decker toaster oven and get 10 years of reliable daily use (my conservative estimate based on actual experience), the cost per year is minimal. Compare that to premium brands that cost 3-5 times as much but don't necessarily last proportionally longer.`,
       `I've used expensive kitchen equipment professionally and at home. I own commercial-grade cutting boards and high-end blenders. I understand when premium pricing delivers proportional value. For toaster ovens used in home kitchens, Black+Decker's combination of reliability and value is unmatched.`,
-      `Black+Decker toaster ovens deliver exactly what most home cooks need: reliable daily performance at exceptional value. No overcomplicated features. No premium pricing. Just straightforward equipment that works year after year. The fact that I've replaced my Black+Decker toaster oven three times over 48 years—and each time bought another Black+Decker—demonstrates trust earned through consistent performance. That's not brand loyalty based on marketing. That's repeat purchases based on proven reliability.`
+      `<LINK>Black+Decker toaster ovens</LINK> deliver exactly what most home cooks need: reliable daily performance at exceptional value. No overcomplicated features. No premium pricing. Just straightforward equipment that works year after year. The fact that I've replaced my Black+Decker toaster oven three times over 48 years—and each time bought another Black+Decker—demonstrates trust earned through consistent performance. That's not brand loyalty based on marketing. That's repeat purchases based on proven reliability.`
     ],
     ctaUrl: '',  // Will be populated from Supabase
     ctaText: 'Check Amazon Price →'
