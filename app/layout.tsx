@@ -12,7 +12,9 @@ const ExitIntentWrapper = lazy(() => import('@/components/ExitIntentWrapper'))
 const Analytics = lazy(() => import('@/components/Analytics'))
 const ScrollTracker = lazy(() => import('@/components/ScrollTracker'))
 const ThirdPartyScripts = lazy(() => import('@/components/ThirdPartyScripts'))
+import MobileOptimizedLayout from '@/components/MobileOptimizedLayout'
 import { organizationSchema, websiteSchema } from '@/lib/schema'
+import MobileOptimizationProvider from '@/components/MobileOptimizationProvider'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
     default: 'Best Kitchen Tools | Chef-Approved Reviews 2025',
     template: '%s | Chef Approved Tools'
   },
-  description: 'Discover the best chef-approved kitchen tools, tested and reviewed for home cooks. 24 years professional kitchen experience, including 7 years as Kitchen Manager. Shop smarter with expert recommendations on knives, cookware, and appliances.',
+  description: 'Discover the best chef-approved kitchen tools, tested and reviewed for home cooks. 24 years of professional cooking. Shop smarter with expert recommendations on knives, cookware, and appliances.',
   keywords: [
     'professional kitchen tools',
     'restaurant equipment reviews',
@@ -59,7 +61,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Chef Approved Kitchen Tools | Tested by Restaurant Manager',
-    description: 'Professional kitchen equipment reviews by Scott Bradley. 24 years professional kitchen experience, including 7 years as Kitchen Manager at Mellow Mushroom. Tools tested in real restaurants.',
+    description: 'Professional kitchen equipment reviews by Scott Bradley, former Mellow Mushroom Kitchen Manager. Tools tested in real restaurants. Honest reviews of chef knives, cookware, and appliances.',
     url: 'https://www.chefapprovedtools.com',
     siteName: 'Chef Approved Tools',
     images: [
@@ -76,7 +78,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Chef Approved Kitchen Tools | Restaurant Manager Tested',
-    description: 'Professional kitchen equipment reviews by Scott Bradley. 24 years professional kitchen experience, including 7 years as Kitchen Manager. Real reviews from real kitchens.',
+    description: 'Professional kitchen equipment reviews by Scott Bradley. 24 years restaurant experience, former Mellow Mushroom Kitchen Manager. Real reviews from real kitchens.',
     images: ['https://www.chefapprovedtools.com/twitter-image.jpg'],
     creator: '@chefapprovedtools',
     site: '@chefapprovedtools',
@@ -94,10 +96,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  // Add verification codes when you set up Search Console:
-  // verification: {
-  //   google: 'your-actual-code-here',
-  // },
+  verification: {
+    google: 'google-site-verification-code',
+    yandex: 'yandex-verification-code',
+    yahoo: 'yahoo-verification-code',
+  },
 }
 
 export default function RootLayout({
@@ -145,10 +148,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
-        {/* Amazon affiliate domain preconnect */}
-        <link rel="preconnect" href="https://www.amazon.com" />
-        <link rel="dns-prefetch" href="https://www.amazon.com" />
 
         {/* Critical CSS inline for immediate rendering - Above the fold only */}
         {/* Font loading is handled by Next.js font optimization with display:optional */}
@@ -300,39 +299,43 @@ export default function RootLayout({
           <ThirdPartyScripts />
         </Suspense>
 
-        {/* Skip to main content for accessibility */}
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-orange-700 text-white px-4 py-2 rounded-md z-50">
-          Skip to main content
-        </a>
+        <MobileOptimizedLayout>
+          <MobileOptimizationProvider>
+            {/* Skip to main content for accessibility */}
+            <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-orange-700 text-white px-4 py-2 rounded-md z-50">
+              Skip to main content
+            </a>
 
-        {/* Main Header */}
-        <Header />
+            {/* Main Header */}
+            <Header />
 
-        {/* Main Content */}
-        <main id="main-content" className="min-h-screen mobile-scroll">
-          {children}
-        </main>
+            {/* Main Content */}
+            <main id="main-content" className="min-h-screen mobile-scroll">
+              {children}
+            </main>
 
-        {/* Footer */}
-        <Footer />
+            {/* Footer */}
+            <Footer />
 
-        {/* Cookie Consent (GDPR/CCPA Compliance) - Lazy loaded */}
-        <Suspense fallback={null}>
-          <CookieConsent />
-        </Suspense>
+            {/* Cookie Consent (GDPR/CCPA Compliance) - Lazy loaded */}
+            <Suspense fallback={null}>
+              <CookieConsent />
+            </Suspense>
 
-        {/* Exit Intent Modal - Lazy loaded */}
-        <Suspense fallback={null}>
-          <ExitIntentWrapper />
-        </Suspense>
+            {/* Exit Intent Modal - Lazy loaded */}
+            <Suspense fallback={null}>
+              <ExitIntentWrapper />
+            </Suspense>
 
-        {/* Analytics - Page views and scroll tracking (lazy loaded) */}
-        <Suspense fallback={null}>
-          <Analytics />
-        </Suspense>
-        <Suspense fallback={null}>
-          <ScrollTracker />
-        </Suspense>
+            {/* Analytics - Page views and scroll tracking (lazy loaded) */}
+            <Suspense fallback={null}>
+              <Analytics />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ScrollTracker />
+            </Suspense>
+          </MobileOptimizationProvider>
+        </MobileOptimizedLayout>
 
         {/* Vercel Analytics */}
         <VercelAnalytics />

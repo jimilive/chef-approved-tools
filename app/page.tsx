@@ -1,14 +1,20 @@
+'use client'
+
+import { lazy, Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import EmailCaptureSection from '@/components/home/EmailCaptureSection'
-import {
-  WhyListenSection,
-  ShopByCategorySection,
-  SecondaryCTASection,
-  TopProfessionalPicksSection,
-  FinalCTASection,
-  TrustBarSection
-} from '@/components/home/BelowFoldSections'
+
+// Lazy load below-fold sections for better performance
+const EmailCaptureSection = lazy(() => import('@/components/home/EmailCaptureSection'))
+const WhyListenSection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.WhyListenSection })))
+const ShopByCategorySection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.ShopByCategorySection })))
+const SecondaryCTASection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.SecondaryCTASection })))
+const TopProfessionalPicksSection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.TopProfessionalPicksSection })))
+const FinalCTASection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.FinalCTASection })))
+const TrustBarSection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.TrustBarSection })))
+
+// Simple loading fallback
+const SectionFallback = () => <div className="py-16" />
 
 export default function HomePage() {
   return (
@@ -261,14 +267,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* BELOW-FOLD SECTIONS - Server Components */}
-      <EmailCaptureSection />
-      <WhyListenSection />
-      <ShopByCategorySection />
-      <SecondaryCTASection />
-      <TopProfessionalPicksSection />
-      <FinalCTASection />
-      <TrustBarSection />
+      {/* LAZY LOADED BELOW-FOLD SECTIONS */}
+      <Suspense fallback={<SectionFallback />}>
+        <EmailCaptureSection />
+      </Suspense>
+
+      <Suspense fallback={<SectionFallback />}>
+        <WhyListenSection />
+      </Suspense>
+
+      <Suspense fallback={<SectionFallback />}>
+        <ShopByCategorySection />
+      </Suspense>
+
+      <Suspense fallback={<SectionFallback />}>
+        <SecondaryCTASection />
+      </Suspense>
+
+      <Suspense fallback={<SectionFallback />}>
+        <TopProfessionalPicksSection />
+      </Suspense>
+
+      <Suspense fallback={<SectionFallback />}>
+        <FinalCTASection />
+      </Suspense>
+
+      <Suspense fallback={<SectionFallback />}>
+        <TrustBarSection />
+      </Suspense>
     </main>
   )
 }
