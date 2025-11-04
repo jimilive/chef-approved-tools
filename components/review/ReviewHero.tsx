@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import { ReviewHeroCTA } from './ReviewHeroCTA'
 
 interface ReviewHeroProps {
   title?: string | null
@@ -97,24 +98,22 @@ export default function ReviewHero({
       ) : (
         <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-xl px-10 py-5 text-center max-w-[500px] mx-auto flex flex-col justify-center items-center">
           <CTAVisibilityTracker ctaId="primary-hero-cta" position="above_fold">
-            <a
-              href={ctaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <ReviewHeroCTA
+              ctaUrl={ctaUrl || '#'}
+              ctaText={ctaText}
+              productName={title || 'Product'}
+              position="review-hero-button"
               className="inline-block bg-white text-orange-700 font-semibold px-12 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-md hover:shadow-lg mb-2.5"
-            >
-              {ctaText}
-            </a>
+            />
           </CTAVisibilityTracker>
           <p className="text-white/90 text-[15px] m-0 mb-2">{ctaSubtext}</p>
-          <a
-            href={ctaUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <ReviewHeroCTA
+            ctaUrl={ctaUrl || '#'}
+            ctaText="View product details"
+            productName={title || 'Product'}
+            position="review-hero-text-link"
             className="text-base text-white underline hover:text-white/80 transition-colors"
-          >
-            View product details
-          </a>
+          />
         </div>
       )}
     </div>
