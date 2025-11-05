@@ -78,7 +78,7 @@ export const reviewData = {
       'Essential for BBQ and outdoor cooking',
       'Restaurant-grade 18-8 stainless steel',
       'Decades of durability without degradation',
-      'Slotted lids available for draining hot foods'
+      'Slotted lids let you keep serving utensils in pan'
     ],
     minorConsiderations: [
       'Not ideal for refrigerator storage (use plastic)',
@@ -156,7 +156,7 @@ export const reviewData = {
     },
     {
       question: 'What are slotted lids for?',
-      answer: 'Slotted or notched lids have openings that allow liquid and grease to drain while keeping food contained. Perfect for draining bacon grease, straining hot liquids, or allowing steam to escape during hot holding. Essential for BBQ use when you need to drain fat from cooked meats.'
+      answer: 'Slotted or notched lids have a cutout that lets you keep a ladle or serving spoon IN the pan during hot holding and buffet service. The notch fits standard serving utensils so the spoon handle sticks through while the lid stays mostly closed to maintain heat. This is exactly how restaurants do buffet service—keeps food hot while allowing easy access for serving.'
     },
     {
       question: 'Do I need 1/6 or 1/9 metal pans?',
@@ -287,7 +287,7 @@ export const reviewData = {
       {
         id: 'sixth-slotted',
         size: '1/6 Pan Lids (Slotted)',
-        description: 'Notched lids for draining grease and liquids',
+        description: 'Notched lids let you keep serving utensils in pan during service',
         affiliateUrl: 'https://amzn.to/47IgA0o',
         includes: '6-pack of slotted lids'
       },
@@ -301,7 +301,7 @@ export const reviewData = {
       {
         id: 'ninth-slotted',
         size: '1/9 Pan Lids (Slotted)',
-        description: 'Notched lids for draining grease and liquids',
+        description: 'Notched lids let you keep serving utensils in pan during service',
         affiliateUrl: 'https://amzn.to/478X78V',
         includes: '6-pack of slotted lids'
       }

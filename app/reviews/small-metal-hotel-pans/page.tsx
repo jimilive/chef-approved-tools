@@ -208,7 +208,7 @@ export default async function ProductReview() {
             <div className="mt-6 pt-6 border-t border-gray-200">
               <h4 className="font-bold text-base mb-3 text-gray-900">Lids (Sold Separately)</h4>
               <p className="text-sm text-gray-600 mb-4">
-                Choose solid lids for covering or slotted lids for draining grease and liquids
+                Choose solid lids for covering or slotted lids to keep serving utensils in pan during buffet service
               </p>
 
               <div className="grid gap-4 sm:grid-cols-2">
