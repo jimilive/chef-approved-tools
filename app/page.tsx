@@ -19,13 +19,27 @@ const SectionFallback = () => <div className="py-16" />
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-gray-50">
+      {/* Inline Critical CSS for LCP optimization */}
+      <style dangerouslySetInnerHTML={{__html: `
+        .hero-section {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+        }
+        .hero-heading {
+          font-size: clamp(2rem, 5vw, 3.75rem);
+          font-weight: 700;
+          line-height: 1.2;
+        }
+      `}} />
+
       {/* HERO SECTION - Dual Impact */}
-      <section className="relative bg-gradient-to-br from-slate-800 via-slate-700 to-orange-700 text-white">
+      <section className="hero-section relative bg-gradient-to-br from-slate-800 via-slate-700 to-orange-700 text-white">
         <div className="container max-w-7xl mx-auto px-4 py-16 md:py-24">
           <div className="grid md:grid-cols-2 items-center max-w-7xl mx-auto px-32">
             {/* Left: Message */}
             <div className="space-y-6 -mr-12">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="hero-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Rigorously Tested,
                 <br />
                 Professionally Vetted,
@@ -63,7 +77,7 @@ export default function HomePage() {
                   width={300}
                   height={400}
                   sizes="(max-width: 768px) 100vw, 300px"
-                  quality={80}
+                  quality={75}
                   className="w-full h-auto rounded-2xl"
                   priority
                 />
@@ -100,7 +114,7 @@ export default function HomePage() {
                   alt="Perfect steak sear in cast iron"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  quality={80}
+                  quality={75}
                   priority
                   fetchPriority="high"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -130,7 +144,7 @@ export default function HomePage() {
                   alt="Bacon cheeseburger cooked in cast iron"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  quality={80}
+                  quality={75}
                   priority
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -159,7 +173,7 @@ export default function HomePage() {
                   alt="Heirloom tomatoes sliced on Epicurean cutting board"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  quality={80}
+                  quality={75}
                   priority
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
