@@ -161,6 +161,28 @@ export default function WhyChildrenHateBroccoliPage() {
             Boiling or steaming broccoli too long releases glucosinolates—sulfur compounds that smell like rotten eggs or dirty socks. If your kitchen smells bad while cooking broccoli, your kid is experiencing that smell much more intensely.
           </p>
 
+          <h3>The Green Food Problem</h3>
+
+          <p>
+            <strong>Kids Reject Green Foods More Than Other Colors</strong><br />
+            Research shows that children exhibit food neophobia—fear of novel foods—particularly with green vegetables. This starts as early as 6 months when infants begin rejecting bitter-tasting green vegetables. The aversion intensifies between 18-24 months as mobility increases.
+          </p>
+
+          <p>
+            <strong>Evolutionary Survival Mechanism</strong><br />
+            Children are naturally cautious about green foods because many poisonous plants in nature are green. This evolved as a protective mechanism—kids who were suspicious of unfamiliar green foods were more likely to survive. Your child&apos;s rejection of green vegetables isn&apos;t pickiness; it&apos;s ancient biology doing its job.
+          </p>
+
+          <p>
+            <strong>Professional Kitchen Reality</strong><br />
+            In many restaurant kitchens, chefs know not to garnish kids&apos; plates because the garnish is usually green—parsley, chives, microgreens. Adding that green garnish can make a kid reject an entire dish they would otherwise eat. Experienced chefs learned this through years of watching kids push away perfectly good food simply because of a green sprig on the plate.
+          </p>
+
+          <p>
+            <strong>Color Matters More Than You Think</strong><br />
+            Children&apos;s food avoidance is based heavily on perceptual properties: color, texture, smell, and taste. Green signals &quot;unfamiliar plant&quot; to a child&apos;s brain, triggering instinctive rejection. This is why kids might eat orange vegetables (carrots, sweet potatoes) more readily than green ones—orange doesn&apos;t trigger the same evolutionary warning system.
+          </p>
+
           <h2>How Most People Ruin Broccoli</h2>
 
           <h3>Mistake #1: Boiling or Steaming Too Long</h3>
