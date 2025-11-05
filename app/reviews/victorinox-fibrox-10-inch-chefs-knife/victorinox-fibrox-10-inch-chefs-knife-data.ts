@@ -40,7 +40,7 @@ export const reviewData = {
       icon: "🏆",
       text: "Tier 1: 20+ Years Professional Use"
     },
-    verdict: "After using this Victorinox 10\" knife for 20 years (including 10 in professional kitchens), it's my go-to for breaking down proteins and chopping larger vegetables. The extra 2 inches over the standard 8\" model makes a real difference when working fast with whole chickens, pork shoulders, or large butternut squash.",
+    verdict: "After using PRODUCT_LINK for 20 years (including 10 in professional kitchens), it's my go-to for breaking down proteins and chopping larger vegetables. The extra 2 inches over the standard 8\" model makes a real difference when working fast with whole chickens, pork shoulders, or large butternut squash.",
     verdictStrong: "The longer blade for bigger hands and larger cuts - tested through 20 years",
     ctaText: "Check Price on Amazon →"
   },
