@@ -1,942 +1,573 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image';
-import FTCDisclosure from '@/components/FTCDisclosure'
-import ProductImageGallery from '@/components/ProductImageGallery'
-import AffiliateButton from '@/components/AffiliateButton'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import { Tier1Badge } from '@/components/ReviewTierBadge'
-import ReviewCTABox, { QuickStatsBox, FeatureGrid } from '@/components/review/ReviewCTABox'
-import AuthorBio from '@/components/review/AuthorBio'
-import RelatedProductCard, { RelatedProductsGrid } from '@/components/review/RelatedProductCard'
-import EmailCaptureBox from '@/components/review/EmailCaptureBox'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
+import Image from 'next/image'
+import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import {
+  ReviewHero,
+  TestingResultsGrid,
+  ProsConsGrid,
+  WhoShouldBuyGrid,
+  FAQSection,
+  EmailCaptureSection,
+  BottomLineSection,
+  RelatedProductsGrid
+} from '@/components/review'
 
-// Force dynamic rendering (not static) since we fetch from Supabase
-export const dynamic = 'force-dynamic'
+// Import review data
+import { reviewData } from './victorinox-fibrox-8-inch-chefs-knife-data'
 
+// ISR configuration for better performance
+export const revalidate = 3600 // 1 hour cache
+export const fetchCache = 'force-cache'
+
+// Generate metadata dynamically
 export async function generateMetadata(): Promise<Metadata> {
+  const product = await getProductBySlug(reviewData.productSlug)
+  const productData = product || reviewData.legacyProductData
+
   return {
+    title: reviewData.metadata.title,
+    description: reviewData.metadata.description,
     alternates: {
       canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife',
     },
-
-    title: 'Victorinox 8" Fibrox: Budget Pro Performance',
-    description: 'Victorinox 8" Fibrox tested 20 years: professional-grade chef\'s knife with exceptional value and NSF certification. The workhorse choice in restaurant kitchens.',
     openGraph: {
-      title: 'Victorinox 8" Fibrox Chef\'s Knife: 20-Year Professional Review',
-      description: 'Victorinox 8" Fibrox tested 20 years in professional kitchens. The workhorse knife.',
-      type: 'article',
+      title: reviewData.metadata.ogTitle,
+      description: reviewData.metadata.ogDescription,
       url: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife',
       siteName: 'Chef Approved Tools',
-      images: [generateOGImageURL({
-        title: "Victorinox 8\" Fibrox Chef's Knife Review",
-        rating: 4.8,
-        testingPeriod: "20 Years (Including 10 Professional)",
-        tier: 1
-      })],
+      images: [
+        {
+          url: generateOGImageURL({
+            title: productData.name,
+            rating: productData.expertRating ?? reviewData.hero.rating,
+            testingPeriod: reviewData.metadata.testingPeriod,
+            tier: reviewData.metadata.tier as 1 | 2 | 3,
+          }),
+          width: 1200,
+          height: 630,
+          alt: `${productData.name} - Professional Review`,
+        },
+      ],
+      type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Victorinox 8" Fibrox Chef\'s Knife: 20-Year Professional Review',
-      description: 'Victorinox 8" Fibrox tested 20 years in professional kitchens.',
+      title: reviewData.metadata.ogTitle,
+      description: reviewData.metadata.ogDescription,
       images: [generateOGImageURL({
-        title: "Victorinox 8\" Fibrox Chef's Knife Review",
-        rating: 4.8,
-        testingPeriod: "20 Years (Including 10 Professional)",
-        tier: 1
+        title: productData.name,
+        rating: productData.expertRating ?? reviewData.hero.rating,
+        testingPeriod: reviewData.metadata.testingPeriod,
+        tier: reviewData.metadata.tier as 1 | 2 | 3,
       })],
     },
   }
 }
 
-export default async function VictorinoxFibrox8InchReview() {
-  // Get product data from centralized Supabase database - SINGLE SOURCE OF TRUTH
-  const product = await getProductBySlug('victorinox-fibrox-8-inch-chefs-knife')
-  if (!product) {
-    throw new Error('Product not found: victorinox-fibrox-8-inch-chefs-knife')
-  }
+export default async function ProductReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug(reviewData.productSlug)
 
-  const affiliateLink = getPrimaryAffiliateLink(product)
+  // Merge Supabase data with legacy data
+  const productData = product ? {
+    ...reviewData.legacyProductData,
+    ...product,
+    pros: product.pros && product.pros.length > 0 ? product.pros : reviewData.legacyProductData.pros,
+    cons: product.cons && product.cons.length > 0 ? product.cons : reviewData.legacyProductData.cons,
+    affiliateLinks: product.affiliateLinks && product.affiliateLinks.length > 0
+      ? product.affiliateLinks
+      : reviewData.legacyProductData.affiliateLinks
+  } : reviewData.legacyProductData
 
-  const productData = {
-    name: "Victorinox fibrox 8 inch chefs knife",
-    slug: "victorinox-fibrox-8-inch-chefs-knife",
-    brand: "Brand Name",
-    category: "Kitchen Equipment",
-    affiliateLinks: [],
-    expertRating: 4.5,
-    expertOpinion: "Professional-grade quality.",
-    pros: [],
-    cons: [],
-    dateAdded: "2025-10-13",
-    lastUpdated: product.lastUpdated,
-    images: {
-      primary: "/og-image.jpg"
-    }
-  };
+  const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
+
+  // Generate breadcrumbs
+  const breadcrumbs = [
+    { name: "Home", url: "https://www.chefapprovedtools.com" },
+    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+  ]
+
+  // Generate schemas
+  const productSchema = generateProductSchema({
+    name: productData.name,
+    description: productData.expertOpinion,
+    brand: productData.brand,
+    rating: productData.expertRating,
+    reviewCount: 1,
+    url: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
+  const faqSchema = generateFAQSchema(reviewData.faqData)
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      {/* Schema.org markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
+      {/* Product view tracking */}
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
-        tier={1}
-        testingPeriod="20 years (including 10 professional)"
-        rating={4.8}
-        hook="Professional quality at accessible price. My daily knife."
-        category="Knives"
+        tier={reviewData.metadata.tier as 1 | 2 | 3}
+        testingPeriod={reviewData.tracking.testingPeriod}
+        rating={productData.expertRating}
+        hook={reviewData.tracking.hook}
+        category={productData.category}
       />
 
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateProductSchema({
-            name: "Victorinox Fibrox Pro 8-Inch Chef's Knife",
-            slug: "victorinox-fibrox-8-inch-chefs-knife",
-            brand: "Victorinox",
-            category: "Knives",
-            affiliateLinks: [{
-              url: affiliateLink
-            }],
-            expertRating: 5,
-            expertOpinion: "After 20 years of use (including 10 professionally), the Victorinox 8-inch chef's knife remains my workhorse blade. The thin, flexible blade delivers professional control, the fibrox handle prevents hand fatigue, and the edge retention rivals knives costing several times more. This is genuine professional equipment that happens to be accessible. Beyond basic quality standards, expensive knives buy you aesthetics and prestige, not better cutting performance. The Victorinox delivers what matters—sharpness, balance, durability—at pricing that makes professional-quality cooking accessible to everyone.",
-            pros: [
-              "Perfect size for 80% of kitchen tasks",
-              "Professional quality at accessible pricing",
-              "Exceptionally well-balanced and maneuverable",
-              "Holds edge well with regular honing",
-              "Comfortable grip for extended use",
-              "Used in professional kitchens worldwide"
-            ],
-            cons: [
-              "Not ideal for very large cuts (use 10-inch for that)",
-              "Plain appearance (no fancy damascus patterns)",
-              "Lightweight feel may not appeal to everyone",
-              "Plastic handle lacks luxury aesthetic"
-            ],
-            dateAdded: "2025-10-13",
-            lastUpdated: "2025-10-14",
-            images: {
-              primary: "https://www.chefapprovedtools.com/images/products/victorinox-fibrox-8-inch-chefs-knife/primary.jpg"
-            }
-          }))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBreadcrumbSchema([
-            { name: "Home", url: "https://www.chefapprovedtools.com" },
-            { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-            { name: "Victorinox Fibrox Pro 8-Inch Chef's Knife", url: "https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife" }
-          ]))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema([
-            {
-              question: "Why is Victorinox so affordable compared to Wusthof or Shun?",
-              answer: "The Victorinox is accessibly priced because you're not paying for premium aesthetics, exotic handle materials, or brand prestige—you're paying for what matters: cutting performance. You're not getting exotic wood or fancy handle materials (it's molded plastic fibrox), Damascus steel patterns, thick heavy blade, or luxury brand premium pricing. You ARE getting: professional-grade high-carbon stainless steel, excellent edge retention and easy re-sharpening, perfect balance and control, NSF commercial certification, and Swiss manufacturing quality. The truth from 45 years cooking: Once you're cutting, you don't see the handle. You feel the balance, control, and sharpness. The Victorinox delivers where it matters—actual cutting performance—at a fraction of typical premium costs."
-            },
-            {
-              question: "Is an affordable knife really good enough for serious cooking?",
-              answer: "Absolutely yes. This is the exact knife used in professional kitchens worldwide, from casual dining to fine dining operations. It's not a 'budget alternative'—it's professional equipment that happens to be accessible. After 24 years in professional kitchens—including 10 years using Victorinox at Purple Café, Feierabend, Paragary's, and Il Pizzaiolo—I can tell you that line cooks and chefs prefer Victorinox because it works better for actual cooking than expensive knives. The thin blade and perfect balance deliver more control than heavy, thick premium knives. NSF certification means this knife meets the same commercial standards as equipment costing many times more. It's approved for professional use—not just 'home cooking.' The knife doesn't know its price point. It only knows how sharp it is and how well it cuts. The Victorinox excels at both."
-            },
-            {
-              question: "Victorinox vs Wusthof: Which should I buy?",
-              answer: "For 95% of home cooks, the Victorinox is the smarter choice. Victorinox advantages: Exceptional value vs premium pricing, lighter/better balance, thin blade offers more control, easier to sharpen, less intimidating for new cooks. Wusthof advantages: Beautiful aesthetics (wood handle, full bolster), heavier/more substantial feel, lifetime warranty, premium brand prestige. My verdict: The Victorinox cuts just as well as the Wusthof. After 20 years, I still use my Victorinox daily because it works better for actual cooking. Spend the difference on a quality cutting board or Dutch oven instead."
-            },
-            {
-              question: "How long does a Victorinox knife last?",
-              answer: "With proper care and regular sharpening, 10-20 years easily. I've been using mine for 20 years across multiple professional kitchens. At accessible pricing, even decades of use represents exceptional value—pennies per day for professional-quality cutting performance. Compare to premium knives that may last just as long but cost several times more. Longevity tips: Hand wash immediately after use, sharpen regularly, use wooden/plastic cutting board, store properly (magnetic strip or knife block)."
-            },
-            {
-              question: "Does the plastic handle feel cheap?",
-              answer: "The fibrox handle feels utilitarian, not luxurious—but that's intentional and actually an advantage for professional use. Fibrox handle benefits: Superior grip (textured surface prevents slipping even with wet hands), dishwasher safe (unlike wood handles), NSF certified (meets commercial sanitation standards), lightweight (reduces hand fatigue), durable (doesn't absorb odors, bacteria, or stains). The professional perspective: In restaurant kitchens, we don't care about aesthetics—we care about grip, durability, and sanitation. The fibrox handle excels at all three."
-            },
-            {
-              question: "Do professional chefs really use Victorinox?",
-              answer: "Yes, extensively. Walk into any professional kitchen and you'll see Victorinox knives everywhere—from small cafes to fine dining establishments. Why pros choose Victorinox: Performance over prestige (chefs care about how it cuts, not how it looks), practical pricing (replacing lost knives is less painful), versatile (thin blade excels at detailed work), NSF certified (meets health department requirements), easy maintenance (kitchen staff can sharpen without expensive equipment). Personal experience: I've used Victorinox for 20 years (including 10 years across four professional kitchens: Purple Café, Feierabend, Paragary's, Il Pizzaiolo). Some chefs brought expensive Japanese knives for specific tasks, but the Victorinox handled 80% of daily cutting."
-            },
-            {
-              question: "How often does a Victorinox knife need sharpening?",
-              answer: "With daily use, professional sharpening every 3-4 months. Hone before each use with a honing steel to maintain the edge between sharpenings. The high-carbon stainless steel holds an edge exceptionally well compared to softer budget knives. I sharpen mine quarterly in a busy kitchen environment, but home cooks using it less frequently might only need sharpening twice yearly. Honing vs Sharpening: Honing (daily, 10 seconds) realigns the edge. Sharpening (quarterly) removes metal to create a new edge. Learn both skills—your knife will last decades."
-            },
-            {
-              question: "What size cutting board do I need for an 8-inch knife?",
-              answer: "Minimum 15x20 inches for comfortable prep work. I recommend 18x24 inches or larger for versatility. The John Boos 18x24 commercial board pairs perfectly with this knife and provides ample workspace for efficient meal prep. Larger boards prevent ingredients from falling off and give you room to organize your mise en place. Material matters: Use wood or plastic boards only. Glass and ceramic boards will destroy your edge in weeks."
-            },
-            {
-              question: "Can I put a Victorinox knife in the dishwasher?",
-              answer: "Technically the fibrox handle is dishwasher-safe, but I strongly recommend hand washing to preserve the blade edge. Why hand wash: Dishwasher detergents are abrasive and will dull the edge faster. High heat can affect blade temper over time. Contact with other utensils can chip or damage the blade. Hand washing takes 30 seconds and extends knife life by years. Proper hand washing: Wash immediately after use with warm water and dish soap. Dry completely before storing. Never leave soaking in sink."
-            },
-            {
-              question: "Should I buy the 8-inch or 10-inch Victorinox chef knife?",
-              answer: "For most home cooks, the 8-inch is the better choice. It handles 90% of tasks with better maneuverability and control. Choose 8-inch if: You have limited counter space, prefer nimble/precise cutting, are new to cooking, want one versatile knife, have smaller hands. Choose 10-inch if: You regularly break down whole chickens/large roasts, prep in bulk for meal prep, have large cutting boards, prefer longer blade for slicing. Professional advice: I own both and use the 8-inch for 90% of tasks. The 10-inch comes out for breaking down proteins and large vegetable prep. Start with the 8-inch, add the 10-inch later if needed."
-            }
-          ]))
-        }}
-      />
+      <div className="bg-gray-50 min-h-screen">
+        <div className="max-w-[900px] mx-auto px-5">
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="inline-block bg-orange-500/20 border border-orange-500/30 rounded-full px-4 py-2 mb-6">
-            <span className="text-orange-200 font-semibold text-sm">PROFESSIONAL KITCHEN TESTED</span>
+          {/* BREADCRUMBS */}
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+            <Link href="/" className="hover:text-orange-700">Home</Link>
+            {' / '}
+            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+            {' / '}
+            {reviewData.breadcrumb.productName}
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Victorinox 8&quot; Chef&apos;s Knife Review: 20 Years of Use (2025)
-          </h1>
-
-          <p className="text-xl text-slate-300 mb-6">
-            The workhorse knife that handles 80% of kitchen tasks - tested through 20 years of professional cooking
-          </p>
-
-          <div className="flex items-center gap-6 text-sm">
-            <div className="flex items-center gap-2">
-              <span className="text-yellow-400">★★★★★</span>
-              <span>5/5</span>
-            </div>
-            <div>Professional Grade</div>
-            <div>Exceptional Value</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <article className="max-w-4xl mx-auto px-4 py-12">
-
-        <Tier1Badge showDescription={true} />
-
-        {/* Product Images */}
-        <div className="mb-12">
-          <ProductImageGallery
-            productSlug="victorinox-fibrox-8-inch-chefs-knife"
-            productName="Victorinox Fibrox Pro 8&quot; Chef's Knife"
-            imageCount={3}
+          {/* SECTION 1: HERO */}
+          <ReviewHero
+            title={reviewData.hero.title}
+            authorName={reviewData.hero.authorName}
+            authorCredentials={reviewData.hero.authorCredentials}
+            rating={reviewData.hero.rating}
+            tierBadge={reviewData.hero.tierBadge}
+            verdict={reviewData.hero.verdict}
+            verdictStrong={reviewData.hero.verdictStrong}
+            ctaUrl={affiliateUrl}
+            ctaText={reviewData.hero.ctaText}
           />
-        </div>
 
-        {/* Quick Rating Box */}
-        <QuickStatsBox variant="success">
-          <p className="m-0">
-            <strong>⭐⭐⭐⭐⭐ 4.5/5</strong> | Based on 20 years of use<br/>
-            <strong>✓ Professional Quality</strong> | <strong>✓ Exceptional Value</strong> | <strong>✓ Best in Class</strong><br/>
-            <strong>✓ NSF Certified</strong> | <strong>✓ Swiss Made</strong>
-          </p>
-        </QuickStatsBox>
+          {/* SECTION 2: TESTING RESULTS */}
+          <TestingResultsGrid
+            title={reviewData.testingResults.title}
+            sections={reviewData.testingResults.sections}
+            testingEnvironment={reviewData.testingResults.testingEnvironment}
+            outstandingPerformance={reviewData.testingResults.outstandingPerformance}
+            minorConsiderations={reviewData.testingResults.minorConsiderations}
+          />
 
-        {/* Primary CTA Above the Fold */}
-        <ReviewCTABox
-          variant="warning"
-          title="Check Current Availability:"
-          disclaimer="💡 The knife I've used daily for 20 years. Professional quality at accessible pricing. We earn commission at no extra cost to you."
-        >
-          <CTAVisibilityTracker
-            ctaId="review-victorinox-fibrox-8-inch-chefs-knife-above-fold"
-            position="above_fold"
-            productSlug="victorinox-fibrox-8-inch-chefs-knife"
-            merchant="amazon"
-          >
-            <AffiliateButton
-              href={affiliateLink}
-              merchant="amazon"
-              product="victorinox-fibrox-8-inch-chefs-knife"
-              position="above_fold"
-              variant="secondary"
-              className="!text-lg !px-10 !py-4 !my-2"
-            >
-              Check Price on Amazon →
-            </AffiliateButton>
-          </CTAVisibilityTracker>
-        </ReviewCTABox>
+          {/* SECTION 3: PERFORMANCE ANALYSIS */}
+          {/* V2: Add inline product name links */}
+          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
+              {reviewData.performanceAnalysis.title}
+            </h2>
 
-        {/* Quick Verdict */}
-        <div className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-8">
-          <h2 className="text-2xl font-bold mb-3 text-gray-900">The Bottom Line</h2>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            This is the workhorse. 80% of my knife work happens with this 8-inch. It&apos;s balanced, sharp, and never lets me down.
-            More maneuverable than the 10-inch model, perfect for most home cooking tasks. If you only buy one knife, make it this one.
-          </p>
-        </div>
-
-        {/* Value-Focused Professional Verdict */}
-        <section className="mb-12">
-          <div className="bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">Professional Verdict: The Best Value in Kitchen Knives</h2>
-
-            <p className="text-lg leading-relaxed">
-              <strong>After using Victorinox for 20 years (including 10 years in professional kitchens),
-              this accessible knife remains my daily workhorse.</strong> The thin blade delivers
-              professional control, the fibrox handle prevents fatigue during extended prep sessions,
-              and the edge retention rivals knives costing several times more.
-            </p>
-
-            <p className="text-lg leading-relaxed">
-              Here&apos;s the truth about expensive knives: Beyond basic quality standards, you&apos;re paying for
-              aesthetics, brand prestige, and premium materials that don&apos;t significantly improve cutting
-              performance. The Victorinox delivers what matters—sharpness, balance, durability—at a
-              fraction of typical premium knife pricing.
-            </p>
-
-            <div className="bg-white p-4 mt-5 rounded">
-              <p className="my-2">
-                <strong>✓ Perfect For:</strong> New cooks, college students, budget-conscious home cooks,
-                professional kitchens, anyone wanting quality without overpaying, gifts for aspiring cooks
-              </p>
-              <p className="my-2">
-                <strong>✗ Consider Upgrading If:</strong> You want premium materials (Damascus steel, exotic
-                woods), you&apos;re a knife collector who values aesthetics, you need a heavier, more substantial feel
-              </p>
-            </div>
-
-            <div className="bg-blue-50 p-4 mt-4 rounded border-l-4 border-blue-600">
-              <p className="m-0 text-base font-bold">
-                💡 Professional Reality Check
-              </p>
-              <p className="mt-2 mb-0 text-sm">
-                In 24 years in professional kitchens, I&apos;ve seen expensive premium knives and
-                Victorinox knives side-by-side. The expensive knives look prettier on the magnetic strip.
-                The Victorinox knives get used daily because they work better for actual cooking.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Value-Focused Hero Features Box */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Why This Accessible Knife Outperforms Premium Knives</h2>
-
-          <FeatureGrid features={[
-            {
-              emoji: '🎯',
-              title: 'Perfect Balance',
-              description: 'Lightweight fibrox handle and thin, flexible blade deliver professional control. No hand fatigue during extended prep work.'
-            },
-            {
-              emoji: '⚔️',
-              title: 'Razor-Sharp Edge',
-              description: 'Swiss-made high-carbon stainless steel holds edge exceptionally well. Sharpens easily when needed. Professional performance at every price point.'
-            },
-            {
-              emoji: '✓',
-              title: 'NSF Restaurant Certified',
-              description: 'Meets commercial kitchen standards. The same knife in professional kitchens worldwide—not a "home version."'
-            },
-            {
-              emoji: '💰',
-              title: 'Unbeatable Value',
-              description: 'Professional quality at accessible pricing. Delivers 90% of premium knife performance at a fraction of the cost. No compromises where it matters.'
-            }
-          ]} />
-        </section>
-
-        {/* Real Restaurant Use */}
-        <section className="mb-12 bg-slate-50 p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Real Restaurant Experience</h2>
-
-          <div className="prose prose-lg max-w-none text-gray-700">
-            <p className="font-semibold">
-              After 45 years of cooking and countless knives tested, the Victorinox 8-inch chef&apos;s
-              knife remains my primary blade—alongside my <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline font-semibold">John Boos
-              cutting board</Link> and <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline font-semibold">KitchenAid commercial mixer</Link> as
-              essential kitchen equipment.
-            </p>
-
-            <p>From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I&apos;ve used this knife to:</p>
-
-            <ul className="space-y-2 mt-4">
-              <li>Prep 200+ covers worth of mise en place daily</li>
-              <li>Slice 5 lbs. of mushrooms in under 10 minutes</li>
-              <li>Dice pounds of onions, peppers, and vegetables per shift</li>
-              <li>Portion proteins and slice garnishes during service</li>
-            </ul>
-
-            <p className="mt-6">
-              The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day.
-              This knife pairs perfectly with other value-focused essentials in my <Link href="/kitchen-bundle" className="text-orange-600 hover:text-orange-800 underline font-semibold">budget professional kitchen starter kit</Link>, proving you don&apos;t need
-              to spend thousands to cook like a pro.
-            </p>
-          </div>
-        </section>
-
-        {/* Mid-Article CTA */}
-        <ReviewCTABox variant="info" title="Ready to experience professional-quality cutting?">
-          <CTAVisibilityTracker
-            ctaId="review-victorinox-fibrox-8-inch-chefs-knife-mid-article"
-            position="mid_article"
-            productSlug="victorinox-fibrox-8-inch-chefs-knife"
-            merchant="amazon"
-          >
-            <AffiliateButton
-              href={affiliateLink}
-              merchant="amazon"
-              product="victorinox-fibrox-8-inch-chefs-knife"
-              position="mid_article"
-              variant="primary"
-            >
-              Check Current Availability →
-            </AffiliateButton>
-          </CTAVisibilityTracker>
-        </ReviewCTABox>
-
-        {/* Pros & Cons */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Honest Assessment</h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-green-50 p-6 rounded-lg border border-green-200">
-              <h3 className="text-xl font-bold mb-4 text-green-900">What Works</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>✓ Perfect size for 80% of kitchen tasks</li>
-                <li>✓ Professional quality at accessible pricing</li>
-                <li>✓ Exceptionally well-balanced and maneuverable</li>
-                <li>✓ Holds edge well with regular honing</li>
-                <li>✓ Comfortable grip for extended use</li>
-                <li>✓ Used in professional kitchens worldwide</li>
-              </ul>
-            </div>
-
-            <div className="bg-red-50 p-6 rounded-lg border border-red-200">
-              <h3 className="text-xl font-bold mb-4 text-red-900">Limitations</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>✗ Not ideal for very large cuts (use 10-inch for that)</li>
-                <li>✗ Plain appearance (no fancy damascus patterns)</li>
-                <li>✗ Lightweight feel may not appeal to everyone</li>
-                <li>✗ Plastic handle lacks luxury aesthetic</li>
-              </ul>
-              <p className="mt-4 text-sm">
-                While <Link href="/reviews/wusthof-classic-ikon-16-piece" className="text-orange-600 hover:text-orange-800 underline">Wusthof</Link> and other premium brands
-                make beautiful knives, the Victorinox delivers 90% of the performance at a fraction of the cost.
-              </p>
-            </div>
+            {reviewData.performanceAnalysis.sections.map((section, index) => (
+              <div key={index} className="mb-8 last:mb-0">
+                <h3 className="text-xl font-semibold text-slate-900 mb-3 leading-[1.4]">
+                  {section.title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  {/* V2: Add inline product links in strategic sections */}
+                  {index === 0 ? (
+                    <>
+                      The lightweight fibrox handle and thin, flexible blade create exceptional balance. Unlike heavy German knives, the{' '}
+                      <a
+                        href={affiliateUrl}
+                        className="text-orange-700 hover:text-orange-800 font-medium"
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                      >
+                        Victorinox
+                      </a>
+                      {' '}delivers nimble control for detailed work. No hand fatigue during extended prep sessions—critical for professional use where you&apos;re prepping 200+ covers daily.
+                    </>
+                  ) : index === 3 ? (
+                    <>
+                      After 45 years of cooking and countless knives tested, the{' '}
+                      <a
+                        href={affiliateUrl}
+                        className="text-orange-700 hover:text-orange-800 font-medium"
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                      >
+                        Victorinox 8-inch chef&apos;s knife
+                      </a>
+                      {' '}remains my primary blade. From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I&apos;ve used this knife to prep 200+ covers worth of mise en place daily, slice 5 lbs of mushrooms in under 10 minutes, dice pounds of onions and vegetables per shift, and portion proteins during service. The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day.
+                    </>
+                  ) : index === 4 ? (
+                    <>
+                      Here&apos;s the truth about expensive knives: Beyond basic quality standards, you&apos;re paying for aesthetics, brand prestige, and premium materials that don&apos;t improve cutting performance. The{' '}
+                      <a
+                        href={affiliateUrl}
+                        className="text-orange-700 hover:text-orange-800 font-medium"
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                      >
+                        Victorinox
+                      </a>
+                      {' '}delivers what matters—sharpness, balance, durability—at a fraction of premium pricing. In 24 years in professional kitchens, I&apos;ve seen expensive premium knives and Victorinox knives side-by-side. The expensive knives look prettier on the magnetic strip. The Victorinox knives get used daily because they work better for actual cooking.
+                    </>
+                  ) : (
+                    section.content
+                  )}
+                </p>
+              </div>
+            ))}
           </div>
 
-          <p className="mt-6 text-gray-700">
-            For a complete comparison of budget and premium chef&apos;s knives, see our <Link href="/guides/best-chef-knives" className="text-orange-600 hover:text-orange-800 underline font-semibold">complete chef&apos;s knife buying guide</Link>.
-          </p>
-        </section>
+          {/* V2: COMPARISON TABLE */}
+          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
+              {reviewData.comparisonTable.title}
+            </h2>
 
-        {/* Who Should Buy This */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Who This Knife Is For</h2>
-
-          <div className="bg-white p-6 rounded-lg border-l-4 border-orange-600 mb-6">
-            <h3 className="text-xl font-bold mb-3 text-gray-900">Perfect If You:</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Need one go-to knife for all tasks</li>
-              <li>• Want professional quality without premium pricing</li>
-              <li>• Value performance over aesthetics</li>
-              <li>• Are building your first serious knife collection</li>
-              <li>• Cook regularly and need reliability</li>
-            </ul>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg border-l-4 border-gray-400">
-            <h3 className="text-xl font-bold mb-3 text-gray-900">Skip If You:</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Want a knife with luxury aesthetics</li>
-              <li>• Prefer heavier, more substantial knives</li>
-              <li>• Are looking for collectible or display pieces</li>
-            </ul>
-          </div>
-        </section>
-
-        {/* Care & Maintenance */}
-        <section className="mb-12 bg-blue-50 p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">How to Make It Last Decades</h2>
-
-          <div className="space-y-4 text-gray-700">
-            <div>
-              <h3 className="font-bold text-lg mb-2">Daily Care:</h3>
-              <ul className="space-y-1 ml-4">
-                <li>• Hone before each use (10 seconds with a honing steel)</li>
-                <li>• Hand wash immediately after use</li>
-                <li>• Dry completely before storing</li>
-              </ul>
+            <div className="overflow-x-auto -mx-6 md:mx-0">
+              <table className="w-full border-collapse bg-white">
+                <thead>
+                  <tr className="bg-slate-800">
+                    <th className="border border-slate-300 p-3 text-left text-white font-semibold">Feature</th>
+                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
+                      <th
+                        key={index}
+                        className={`border border-slate-300 p-3 text-left text-white font-semibold ${
+                          competitor.highlight ? 'bg-orange-600' : ''
+                        }`}
+                      >
+                        {competitor.name}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Price Range</td>
+                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
+                      <td
+                        key={index}
+                        className={`border border-slate-300 p-3 ${
+                          competitor.highlight ? 'bg-orange-50' : ''
+                        }`}
+                      >
+                        {competitor.priceRange}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Blade Material</td>
+                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
+                      <td
+                        key={index}
+                        className={`border border-slate-300 p-3 ${
+                          competitor.highlight ? 'bg-orange-50' : ''
+                        }`}
+                      >
+                        {competitor.bladeMaterial}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Handle Material</td>
+                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
+                      <td
+                        key={index}
+                        className={`border border-slate-300 p-3 ${
+                          competitor.highlight ? 'bg-orange-50' : ''
+                        }`}
+                      >
+                        {competitor.handleMaterial}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Weight</td>
+                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
+                      <td
+                        key={index}
+                        className={`border border-slate-300 p-3 ${
+                          competitor.highlight ? 'bg-orange-50' : ''
+                        }`}
+                      >
+                        {competitor.weight}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Country of Origin</td>
+                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
+                      <td
+                        key={index}
+                        className={`border border-slate-300 p-3 ${
+                          competitor.highlight ? 'bg-orange-50' : ''
+                        }`}
+                      >
+                        {competitor.origin}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Out-of-Box Sharpness</td>
+                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
+                      <td
+                        key={index}
+                        className={`border border-slate-300 p-3 ${
+                          competitor.highlight ? 'bg-orange-50' : ''
+                        }`}
+                      >
+                        {competitor.sharpness}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Edge Retention</td>
+                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
+                      <td
+                        key={index}
+                        className={`border border-slate-300 p-3 ${
+                          competitor.highlight ? 'bg-orange-50' : ''
+                        }`}
+                      >
+                        {competitor.edgeRetention}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Balance</td>
+                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
+                      <td
+                        key={index}
+                        className={`border border-slate-300 p-3 ${
+                          competitor.highlight ? 'bg-orange-50' : ''
+                        }`}
+                      >
+                        {competitor.balance}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Professional Use Rating</td>
+                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
+                      <td
+                        key={index}
+                        className={`border border-slate-300 p-3 ${
+                          competitor.highlight ? 'bg-orange-50' : ''
+                        }`}
+                      >
+                        {competitor.professionalRating}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Warranty</td>
+                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
+                      <td
+                        key={index}
+                        className={`border border-slate-300 p-3 ${
+                          competitor.highlight ? 'bg-orange-50' : ''
+                        }`}
+                      >
+                        {competitor.warranty}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr className="bg-green-50">
+                    <td className="border border-slate-300 p-3 font-semibold">Best For</td>
+                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
+                      <td
+                        key={index}
+                        className={`border border-slate-300 p-3 font-semibold ${
+                          competitor.highlight ? 'bg-green-200' : ''
+                        }`}
+                      >
+                        {competitor.bestFor}
+                      </td>
+                    ))}
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
-            <div>
-              <h3 className="font-bold text-lg mb-2">Monthly Maintenance:</h3>
-              <ul className="space-y-1 ml-4">
-                <li>• Professional sharpening (or learn to use a whetstone)</li>
-                <li>• Check for any chips or damage to the edge</li>
-                <li>• Inspect handle for any loosening (rare with Fibrox)</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-lg mb-2">What to Avoid:</h3>
-              <ul className="space-y-1 ml-4">
-                <li>• Never put the blade in the dishwasher</li>
-                <li>• Don&apos;t use glass or ceramic cutting boards (dulls the edge)</li>
-                <li>• Avoid twisting or prying motions</li>
-                <li>• Don&apos;t leave it in the sink or soaking in water</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Victorinox Knives */}
-        <section className="mb-12 bg-blue-50 p-8 rounded-xl">
-          <h2 className="text-2xl font-bold mb-4 text-gray-900">Not Sure Which Victorinox Knife You Need?</h2>
-          <p className="text-gray-700 mb-4">
-            I use 4 essential Victorinox knives every day in my kitchen. Each one serves a specific purpose - the 8&quot; and 10&quot; chef&apos;s knives, the offset bread knife, and the Granton edge boning knife.
-          </p>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Frequently Asked Questions About Victorinox Chef&apos;s Knife</h2>
-
-          <div>
-
-            {/* Question 1 */}
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3>Why is Victorinox so affordable compared to Wusthof or Shun?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> The Victorinox is accessibly priced because you&apos;re not paying for
-                  premium aesthetics, exotic handle materials, or brand prestige—you&apos;re paying for what
-                  matters: cutting performance.</p>
-
-                  <p><strong>What you&apos;re NOT getting with Victorinox:</strong></p>
-                  <ul className="ml-5 leading-relaxed">
-                    <li>Exotic wood or fancy handle materials (it&apos;s molded plastic fibrox)</li>
-                    <li>Damascus steel patterns or decorative elements</li>
-                    <li>Thick, heavy blade (it&apos;s thin and flexible—a feature, not a bug)</li>
-                    <li>Luxury brand premium pricing</li>
-                  </ul>
-
-                  <p><strong>What you ARE getting:</strong></p>
-                  <ul className="ml-5 leading-relaxed">
-                    <li>Professional-grade high-carbon stainless steel</li>
-                    <li>Excellent edge retention and easy re-sharpening</li>
-                    <li>Perfect balance and control</li>
-                    <li>NSF commercial certification</li>
-                    <li>Swiss manufacturing quality</li>
-                  </ul>
-
-                  <p><strong>The truth from 45 years cooking:</strong> Once you&apos;re cutting, you don&apos;t see
-                  the handle. You feel the balance, control, and sharpness. The Victorinox delivers where
-                  it matters—actual cutting performance—at a fraction of typical premium costs.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 2 */}
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3>Is an affordable knife really good enough for serious cooking?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Absolutely yes. This is the exact knife used in professional
-                  kitchens worldwide, from casual dining to fine dining operations. It&apos;s not a &quot;budget alternative&quot;—
-                  it&apos;s professional equipment that happens to be accessible.</p>
-
-                  <p><strong>Professional reality:</strong> After using Victorinox for 20 years (including 10 years professionally at Purple Café, Feierabend, Paragary&apos;s, Il Pizzaiolo),
-                  I can tell you that line cooks and chefs prefer Victorinox because it works better for
-                  actual cooking than expensive knives. The thin blade and perfect balance deliver
-                  more control than heavy, thick premium knives.</p>
-
-                  <p><strong>NSF certification</strong> means this knife meets the same commercial standards
-                  as equipment costing many times more. It&apos;s approved for professional use—not just &quot;home cooking.&quot;</p>
-
-                  <p>The knife doesn&apos;t know its price point. It only knows how sharp it is and how well
-                  it cuts. The Victorinox excels at both.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 3 */}
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3>Victorinox vs Wusthof: Which should I buy?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> For 95% of home cooks, the Victorinox is the smarter choice.</p>
-
-                  <p><strong>Victorinox advantages:</strong> Exceptional value vs premium pricing, lighter/better balance, thin blade offers more control, easier to sharpen, less intimidating for new cooks</p>
-
-                  <p><strong>Wusthof advantages:</strong> Beautiful aesthetics (wood handle, full bolster), heavier/more substantial feel, lifetime warranty, premium brand prestige</p>
-
-                  <p><strong>My verdict:</strong> The Victorinox cuts just as well as the Wusthof. After
-                  20 years, I still use my Victorinox daily because it works better for actual cooking.
-                  Spend the difference on a <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline">quality
-                  cutting board</Link> or <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-800 underline">Dutch oven</Link> instead.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 4 */}
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3>How long does a Victorinox knife last?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> With proper care and regular sharpening, 10-20 years easily.
-                  I&apos;ve been using mine for 20 years across multiple professional kitchens.</p>
-
-                  <p><strong>At accessible pricing, even decades of use represents exceptional value</strong>—
-                  pennies per day for professional-quality cutting performance. Compare to premium knives
-                  that may last just as long but cost several times more.</p>
-
-                  <p><strong>Longevity tips:</strong> Hand wash immediately after use, sharpen regularly, use wooden/plastic cutting board, store properly (magnetic strip or knife block).</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 5 */}
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3>Does the plastic handle feel cheap?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> The fibrox handle feels utilitarian, not luxurious—but that&apos;s
-                  intentional and actually an advantage for professional use.</p>
-
-                  <p><strong>Fibrox handle benefits:</strong> Superior grip (textured surface prevents slipping even with wet hands), dishwasher safe (unlike wood handles), NSF certified (meets commercial sanitation standards), lightweight (reduces hand fatigue), durable (doesn&apos;t absorb odors, bacteria, or stains)</p>
-
-                  <p><strong>The professional perspective:</strong> In restaurant kitchens, we don&apos;t care
-                  about aesthetics—we care about grip, durability, and sanitation. The fibrox handle excels
-                  at all three.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 6 */}
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3>Do professional chefs really use Victorinox?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Yes, extensively. Walk into any professional kitchen and you&apos;ll
-                  see Victorinox knives everywhere—from small cafes to fine dining establishments.</p>
-
-                  <p><strong>Why pros choose Victorinox:</strong> Performance over prestige (chefs care about how it cuts, not how it looks), practical pricing (replacing lost knives is less painful), versatile (thin blade excels at detailed work), NSF certified (meets health department requirements), easy maintenance (kitchen staff can sharpen without expensive equipment)</p>
-
-                  <p><strong>Personal experience:</strong> I used Victorinox for 10 years across four professional kitchens, and my
-                  knife kit included Victorinox as standard issue. Some chefs brought expensive Japanese
-                  knives for specific tasks, but the Victorinox handled 80% of daily cutting.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 7 - NEW */}
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3>How often does a Victorinox knife need sharpening?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> With daily use, professional sharpening every 3-4 months. Hone before each use with a honing steel to maintain the edge between sharpenings.</p>
-                  <p>The high-carbon stainless steel holds an edge exceptionally well compared to softer budget knives. I sharpen mine quarterly in a busy kitchen environment, but home cooks using it less frequently might only need sharpening twice yearly.</p>
-                  <p><strong>Honing vs Sharpening:</strong> Honing (daily, 10 seconds) realigns the edge. Sharpening (quarterly) removes metal to create a new edge. Learn both skills—your knife will last decades.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 8 - NEW */}
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3>What size cutting board do I need for an 8-inch knife?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Minimum 15x20 inches for comfortable prep work. I recommend 18x24 inches or larger for versatility.</p>
-                  <p>The <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline">John Boos 18x24 commercial board</Link> pairs perfectly with this knife and provides ample workspace for efficient meal prep. Larger boards prevent ingredients from falling off and give you room to organize your mise en place.</p>
-                  <p><strong>Material matters:</strong> Use wood or plastic boards only. Glass and ceramic boards will destroy your edge in weeks.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 9 - NEW */}
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3>Can I put a Victorinox knife in the dishwasher?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Technically the fibrox handle is dishwasher-safe, but I strongly recommend hand washing to preserve the blade edge.</p>
-                  <p><strong>Why hand wash:</strong> Dishwasher detergents are abrasive and will dull the edge faster. High heat can affect blade temper over time. Contact with other utensils can chip or damage the blade. Hand washing takes 30 seconds and extends knife life by years.</p>
-                  <p><strong>Proper hand washing:</strong> Wash immediately after use with warm water and dish soap. Dry completely before storing. Never leave soaking in sink.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 10 - NEW */}
-            <div className="my-5 p-5 bg-gray-50 rounded-lg">
-              <h3>Should I buy the 8-inch or 10-inch Victorinox chef knife?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> For most home cooks, the 8-inch is the better choice. It handles 90% of tasks with better maneuverability and control.</p>
-                  <p><strong>Choose 8-inch if:</strong> You have limited counter space, prefer nimble/precise cutting, are new to cooking, want one versatile knife, have smaller hands</p>
-                  <p><strong>Choose 10-inch if:</strong> You regularly break down whole chickens/large roasts, prep in bulk for meal prep, have large cutting boards, prefer longer blade for slicing</p>
-                  <p><strong>Professional advice:</strong> I own both and use the 8-inch for 90% of tasks. The 10-inch comes out for breaking down proteins and large vegetable prep. Start with the 8-inch, add the 10-inch later if needed.</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        {/* WHERE TO BUY SECTION */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">Where to Buy</h2>
-
-          <p><strong>Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-          })}</p>
-
-          <div className="merchant-ctas bg-gray-50 p-6 my-6 rounded-lg">
-
-            <h3 className="mt-0">Compare Prices Across Retailers:</h3>
-
-            <div className="bg-white p-5 my-4 rounded-lg border-2 border-orange-500">
-              <div className="flex justify-between items-center flex-wrap gap-4">
-                <div>
-                  <h4 className="m-0 mb-2">🏆 Amazon</h4>
-                  <p className="mt-1 mb-0 text-gray-600">✓ Prime shipping | ✓ Best availability</p>
-                </div>
-                <div>
-                  <CTAVisibilityTracker
-                    ctaId="review-victorinox-fibrox-8-inch-chefs-knife-related-products"
-                    position="related_products"
-                    productSlug="victorinox-fibrox-8-inch-chefs-knife"
-                    merchant="amazon"
-                  >
-                    <AffiliateButton
-                      href={affiliateLink}
-                      merchant="amazon"
-                      product="victorinox-fibrox-8-inch-chefs-knife"
-                      position="related_products"
-                      variant="secondary"
-                    >
-                      Check Price on Amazon →
-                    </AffiliateButton>
-                  </CTAVisibilityTracker>
-                </div>
-              </div>
-            </div>
-
-            <p className="text-sm text-gray-600 mt-5 text-center">
-              💡 More retailers will be added soon for price comparison.
+            <p className="text-sm text-slate-600 mt-4 italic">
+              <strong>My Verdict:</strong> {reviewData.comparisonTable.verdict}
             </p>
-            
           </div>
-        </section>
 
-        {/* Email Capture Section */}
-        <EmailCaptureBox
-          title="🔥 Get My 11 Essential Tools for a Professional Kitchen"
-          description="Download my free guide: The 11 tools I use most in my home kitchen after 45 years of cooking."
-          benefits={[
-            '✓ My exact 11 daily workhorse tools',
-            '✓ Where to invest vs where to save',
-            '✓ Professional insights from 24 years of restaurant experience',
-            '✓ Equipment care and maintenance tips'
-          ]}
-          ctaHref="/newsletter"
-        />
+          {/* SECTION 5: PROS & CONS */}
+          <ProsConsGrid
+            title={reviewData.prosConsTitle}
+            prosTitle={reviewData.prosTitle}
+            consTitle={reviewData.consTitle}
+            pros={productData.pros}
+            cons={productData.cons}
+          />
 
-        {/* Bottom Line with Value-Focused Strong CTA */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">The Bottom Line: Best Value in Kitchen Knives</h2>
+          {/* SECTION 6: WHO SHOULD BUY */}
+          <WhoShouldBuyGrid
+            title={reviewData.whoShouldBuy.title}
+            perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
+            considerAlternativesTitle={reviewData.whoShouldBuy.considerAlternativesTitle}
+            perfectFor={reviewData.whoShouldBuy.perfectFor}
+            considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
+          />
 
-          <div className="bg-gradient-to-br from-purple-600 to-indigo-600 text-white p-8 rounded-lg my-8">
+          {/* SECTION 7: FAQ */}
+          <FAQSection
+            title={reviewData.faq.title}
+            faqs={reviewData.faq.items}
+          />
 
-            <h3 className="text-white mt-0 text-2xl font-bold mb-4">
-              After 45 years of cooking...
-            </h3>
+          {/* SECTION 8: WHERE TO BUY */}
+          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
+              {reviewData.whereToBuy.title}
+            </h2>
 
-            <p className="text-lg leading-relaxed">
-              The Victorinox 8-inch chef&apos;s knife remains my daily workhorse knife for one simple reason:
-              it works. The thin, flexible blade delivers professional control, the fibrox handle prevents
-              hand fatigue, and the edge retention rivals knives costing several times more. This is genuine
-              professional equipment that happens to be accessible.
+            <p className="text-slate-600 leading-relaxed mb-6">
+              {reviewData.whereToBuy.introText}
             </p>
 
-            <p className="text-lg leading-relaxed">
-              Here&apos;s the truth from decades in professional kitchens: Beyond basic quality standards,
-              expensive knives buy you aesthetics and prestige, not better cutting performance. The
-              Victorinox delivers what matters—sharpness, balance, durability—at pricing that makes
-              professional-quality cooking accessible to everyone.
-            </p>
+            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50 mb-4">
+              <div className="text-center mb-4">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">
+                  Amazon - Prime Shipping Available
+                </h3>
+                <p className="text-sm text-slate-900 mb-4">Prime shipping, verified reviews, easy returns</p>
+              </div>
 
-            <div className="bg-white/20 p-5 my-5 rounded-lg">
-              <p className="m-0 text-xl font-bold">
-                Final Rating: ⭐⭐⭐⭐⭐ 4.5/5
-              </p>
-              <ul className="mt-4 mb-0 ml-5 text-base leading-relaxed">
-                <li>Cutting Performance: 5/5</li>
-                <li>Balance & Control: 5/5</li>
-                <li>Edge Retention: 5/5</li>
-                <li>Value for Money: 5/5</li>
-                <li>Aesthetics: 3/5</li>
-              </ul>
-            </div>
-
-            <p className="text-base mb-0">
-              <strong>Would I buy this again?</strong> I&apos;ve bought dozens over 45 years. It&apos;s the knife
-              I recommend to everyone from culinary students to experienced home cooks.
-            </p>
-
-          </div>
-
-          {/* STRONG FINAL CTA - VALUE FOCUSED */}
-          <ReviewCTABox
-            variant="warning"
-            title="Get Professional Quality at Accessible Pricing"
-            className="border-4 border-amber-400"
-          >
-            <p className="text-lg my-5">
-              The knife I&apos;ve used daily for 20 years—professional performance without premium pricing:
-            </p>
-
-            <CTAVisibilityTracker
-              ctaId="review-victorinox-fibrox-8-inch-chefs-knife-final-cta"
-              position="final_cta"
-              productSlug="victorinox-fibrox-8-inch-chefs-knife"
-              merchant="amazon"
-            >
-              <AffiliateButton
-                href={affiliateLink}
+              <CTAVisibilityTracker
+                ctaId={`${reviewData.productSlug}-where-to-buy`}
+                position="mid_article"
+                productSlug={reviewData.productSlug}
                 merchant="amazon"
-                product="victorinox-fibrox-8-inch-chefs-knife"
-                position="final_cta"
-                variant="secondary"
-                className="!text-xl !px-12 !py-5"
               >
-                Check Current Availability →
-              </AffiliateButton>
-            </CTAVisibilityTracker>
+                <a
+                  href={affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                >
+                  Check Price on Amazon →
+                </a>
+              </CTAVisibilityTracker>
 
-            <p className="text-sm text-gray-600 mt-5">
-              💡 Best value in kitchen knives—no question.
-            </p>
-          </ReviewCTABox>
-        </section>
-
-        {/* Value-Focused Alternatives */}
-        <section className="mb-12">
-          <div className="alternative-recommendations bg-gray-50 p-6 my-6 rounded-lg">
-            <h3>Want Different Options? Consider These Alternatives:</h3>
-
-            <div className="my-5">
-              <h4>If You Want Even More Budget-Friendly:</h4>
-              <p><strong>Dexter-Russell</strong> - Slightly less refined but still professional-grade. Used in commercial butcher shops nationwide.</p>
-              <p><strong>Mercer Culinary Genesis</strong> - Nearly identical performance. Excellent alternative if Victorinox is out of stock.</p>
-            </div>
-
-            <div className="my-5">
-              <h4>If You Want Premium Aesthetics:</h4>
-              <p><Link href="/reviews/wusthof-classic-ikon-16-piece" className="text-orange-600 hover:text-orange-800 underline"><strong>Wusthof Classic Ikon</strong></Link> - Beautiful wood handle, luxury feel. Cuts no better but looks gorgeous.</p>
-            </div>
-
-            <p className="mt-5 p-4 bg-amber-50 rounded">
-              <strong>Still deciding?</strong> <Link href="/contact" className="text-orange-600 hover:text-orange-800 underline">Contact me</Link> with your cooking style
-              and budget—I&apos;ll recommend the perfect knife. No upselling, just honest advice from 45 years of experience.
-            </p>
-          </div>
-        </section>
-
-        {/* Related Budget Products - 3 ITEMS */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">Build Your Budget Professional Kitchen</h2>
-
-          <p className="text-base leading-relaxed mb-6">
-            The Victorinox knife is the foundation of a value-focused professional kitchen. Based on
-            45 years of cooking experience, here are other budget-friendly tools that perform at
-            professional levels:
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-8">
-
-            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
-              <h4 className="mt-0">Victorinox 10&quot; Chef&apos;s Knife</h4>
-              <p>The bigger sibling for larger tasks. Same exceptional quality, more blade length for breaking down proteins and large vegetables.</p>
-              <p className="text-sm text-gray-600">
-                <strong>When to upgrade:</strong> If you regularly work with whole chickens, large roasts, or prep in bulk.
+              {/* V2: TEXT LINK UNDER BUTTON */}
+              <p className="text-center mt-3 text-sm">
+                <a
+                  href={affiliateUrl}
+                  className="text-orange-700 hover:text-orange-800 underline font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                >
+                  → View {productData.name} on Amazon
+                </a>
               </p>
-              <Link
-                href="/reviews/victorinox-fibrox-10-inch-chefs-knife"
-                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700"
-              >
-                Read Full Review →
-              </Link>
             </div>
 
-            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
-              <h4 className="mt-0">Lodge Cast Iron 3-Skillet Bundle</h4>
-              <p>Professional cooking performance at accessible pricing. Pre-seasoned, made in USA, lasts generations. Best value in cookware.</p>
-              <p className="text-sm text-gray-600">
-                <strong>Value rating:</strong> Outstanding professional performance
-              </p>
-              <Link
-                href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
-                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700"
-              >
-                Read Full Review →
-              </Link>
-            </div>
-
-            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
-              <h4 className="mt-0">John Boos Cutting Board</h4>
-              <p>The perfect prep surface for your Victorinox. Commercial-quality maple that anchors your prep station perfectly.</p>
-              <p className="text-sm text-gray-600">
-                <strong>After 18 years:</strong> Still my primary prep surface.
-              </p>
-              <Link
-                href="/reviews/john-boos-platinum-commercial-cutting-board"
-                className="inline-block bg-green-600 text-white px-5 py-2 no-underline rounded mt-2 font-bold hover:bg-green-700"
-              >
-                Read Full Review →
-              </Link>
-            </div>
-
-          </div>
-
-          <p className="text-center my-8 text-lg p-5 bg-gray-50 rounded-lg">
-            <strong>Want the complete budget professional kitchen?</strong><br/>
-            <Link href="/kitchen-bundle" className="text-blue-600 font-bold text-xl hover:text-blue-800">
-              See My Complete Budget Kitchen Setup →
-            </Link>
-          </p>
-        </section>
-
-        {/* Footer Elements */}
-        <section className="mb-12">
-          <div className="bg-gray-50 p-5 my-8 rounded-lg border-l-4 border-gray-500">
-            <p className="my-2">
-              <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-              })}
-            </p>
-            <p className="my-2">
-              <strong>🔄 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long'
-              })}
-            </p>
-            <p className="my-2">
-              <strong>💬 Use Victorinox knives?</strong> Share your experience in the comments below—
-              I read and respond to every comment.
-            </p>
-            <p className="my-2">
-              <strong>📧 Questions about budget kitchen equipment?</strong> <Link href="/contact"
-              className="text-blue-600 hover:text-blue-800">Contact me directly</Link> and I&apos;ll help you build a professional
-              kitchen without overspending.
+            <p className="text-sm text-slate-600 mt-6 italic">
+              {reviewData.whereToBuy.disclaimer}
             </p>
           </div>
 
-          <AuthorBio
-            bio="Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from University of Montana. Passionate about making professional cooking accessible through budget-friendly equipment recommendations."
+          {/* SECTION 9: EMAIL CAPTURE */}
+          <EmailCaptureSection
+            title={reviewData.emailCapture.title}
+            subtitle={reviewData.emailCapture.subtitle}
+            inputPlaceholder={reviewData.emailCapture.inputPlaceholder}
+            buttonText={reviewData.emailCapture.buttonText}
+            finePrint={reviewData.emailCapture.finePrint}
           />
-        </section>
 
-        {/* FTC Disclosure */}
-        <FTCDisclosure />
-      </article>
-    </div>
+          {/* SECTION 10: BOTTOM LINE */}
+          <BottomLineSection
+            title={reviewData.bottomLine.title}
+            paragraphs={reviewData.bottomLine.paragraphs}
+            ctaUrl={affiliateUrl}
+            ctaText={reviewData.bottomLine.ctaText}
+          />
+
+          {/* SECTION 11: RELATED PRODUCTS */}
+          <RelatedProductsGrid
+            title={reviewData.relatedProducts.title}
+            products={reviewData.relatedProducts.products}
+          />
+
+          {/* SECTION 12: AUTHOR BIO */}
+          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6 pb-6 border-b border-gray-200">
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-600 to-amber-500 rounded-full flex items-center justify-center text-[40px] flex-shrink-0">
+                  👨‍🍳
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-xl font-bold text-slate-900 mb-2 mt-0">About Scott Bradley</h3>
+                  <p className="text-base text-slate-600 m-0">Professional Chef • 24 Years in Professional Kitchens</p>
+                </div>
+              </div>
+
+              <div className="text-slate-600 leading-[1.8]">
+                <p className="mb-4">
+                  <strong>Scott Bradley brings 24 years of professional kitchen experience to Chef Approved Tools.</strong> As former Kitchen Manager at Mellow Mushroom, he managed operations generating $80K+ monthly revenue while overseeing equipment procurement, staff training, and quality control for a high-volume operation.
+                </p>
+
+                <p className="mb-4">
+                  His professional background spans multiple restaurant environments including Purple Café, Feierabend, Il Pizzaiolo, and Paragary&apos;s, giving him hands-on experience with equipment across different cuisines, cooking styles, and volume levels. This diverse experience informs every equipment recommendation on this site.
+                </p>
+
+                <p className="mb-0">
+                  <strong>All reviews are based on actual professional testing</strong>—equipment used daily in restaurant environments or tested extensively in home settings. No free samples, no sponsored content, just honest assessments from someone who&apos;s spent decades relying on kitchen tools to do their job.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-6 border-t border-gray-200">
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">🎓</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Culinary Degree</strong>
+                    Seattle Central College (2005-2007)
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">👨‍🍳</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Professional Experience</strong>
+                    24 years in professional kitchens
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">🏆</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Professional Roles</strong>
+                    Kitchen Manager, Lead Line, Expo, Pizzaiolo
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">🔧</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Testing Approach</strong>
+                    Tier 1: Professional use | Tier 2: Long-term personal | Tier 3: Expert evaluation
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </>
   )
 }
