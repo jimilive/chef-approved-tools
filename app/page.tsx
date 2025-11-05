@@ -82,7 +82,7 @@ export default function HomePage() {
                   priority
                 />
               </div>
-              <div className="absolute bottom-4 -right-6 bg-orange-800 text-white px-6 py-3 rounded-xl shadow-xl">
+              <div className="absolute bottom-4 -right-6 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-xl shadow-xl">
                 <p className="font-bold text-lg">24 Years</p>
                 <p className="text-sm font-bold">Professional Kitchens</p>
               </div>
