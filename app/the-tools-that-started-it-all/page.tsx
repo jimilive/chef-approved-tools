@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'The 11 essential kitchen tools I packed for culinary school in 2005 that I still use 20 years later. Professional-grade equipment that survived decades of restaurant abuse.',
   keywords: 'culinary school tools, professional kitchen equipment, Victorinox knives, essential kitchen tools, chef knife bag, restaurant kitchen tools',
   alternates: {
-    canonical: '/the-tools-that-started-it-all',
+    canonical: 'https://www.chefapprovedtools.com/the-tools-that-started-it-all',
   },
 }
 

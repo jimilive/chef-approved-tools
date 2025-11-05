@@ -17,7 +17,7 @@ export const metadata = {
     type: "article"
   },
   alternates: {
-    canonical: '/best-budget-chef-knife',
+    canonical: 'https://www.chefapprovedtools.com/best-budget-chef-knife',
   },
 }
 

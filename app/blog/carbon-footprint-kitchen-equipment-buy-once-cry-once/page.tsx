@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains how quality kitchen equipment reduces waste and carbon footprint — why durability is the real sustainability in the kitchen.',
   keywords: ['sustainable kitchen equipment', 'buy once cry once', 'kitchen carbon footprint', 'durable cookware', 'eco-friendly kitchen tools', 'sustainable cooking'],
   alternates: {
-    canonical: '/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once',
+    canonical: 'https://www.chefapprovedtools.com/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once',
   },
 }
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Commercial Kitchen Appliances 2025: Guide',
   description: 'Professional kitchen appliance reviews. Blenders, mixers, food processors tested in restaurants or in my apartment kitchen. Commercial-grade performance.',
   alternates: {
-    canonical: '/guides/kitchen-appliances',
+    canonical: 'https://www.chefapprovedtools.com/guides/kitchen-appliances',
   },
 }
 

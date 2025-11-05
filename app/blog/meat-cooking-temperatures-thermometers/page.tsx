@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains meat thermometers and proper cooking temps. 24 years restaurant experience. Food safety + perfect doneness every time.',
   keywords: ['meat cooking temperatures', 'meat thermometer', 'food safety temperatures', 'instant read thermometer', 'cooking temperatures', 'professional chef techniques', 'USDA temperature guidelines', 'carryover cooking'],
   alternates: {
-    canonical: '/blog/meat-cooking-temperatures-thermometers',
+    canonical: 'https://www.chefapprovedtools.com/blog/meat-cooking-temperatures-thermometers',
   },
 };
 

@@ -43,22 +43,69 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
       const estimatedMinutes = Math.ceil(wordCount / readingSpeed)
       const readTime = `${estimatedMinutes} min read`
 
-      // Determine category from keywords or content
-      let category = 'Cooking Techniques'
-      if (content.includes('knife') || content.includes('knife')) {
-        category = 'Knife Care'
-      } else if (content.includes('coffee')) {
+      // Determine category - check slug and title first for most accurate categorization
+      const title = titleMatch ? titleMatch[1].replace(/\\'/g, "'").replace(/\\"/g, '"') : slug.replace(/-/g, ' ')
+      const titleLower = title.toLowerCase()
+      const slugLower = slug.toLowerCase()
+
+      let category = 'Cooking Techniques' // default
+
+      // Coffee
+      if (slugLower.includes('coffee') || slugLower.includes('french-press')) {
         category = 'Coffee'
-      } else if (content.includes('ingredients') || content.includes('salt')) {
-        category = 'Ingredients'
-      } else if (content.includes('safety') || content.includes('gloves')) {
+      }
+      // Knife Care - ONLY maintenance, storage, sharpening, and buying guides
+      else if (
+        slugLower.includes('sharpen') ||
+        slugLower.includes('steel-a-knife') ||
+        slugLower.includes('tri-stone') ||
+        slugLower.includes('knife-storage') ||
+        slugLower.includes('knife-block') ||
+        slugLower.includes('choose-first-chef-knife') ||
+        titleLower.includes('sharpen') ||
+        titleLower.includes('knife storage') ||
+        titleLower.includes('knife block')
+      ) {
+        category = 'Knife Care'
+      }
+      // Kitchen Safety
+      else if (
+        slugLower.includes('safety') ||
+        slugLower.includes('gloves') ||
+        titleLower.includes('safety')
+      ) {
         category = 'Kitchen Safety'
-      } else if (content.includes('buying guide') || content.includes('tools')) {
+      }
+      // Ingredients - specific ingredient-focused posts
+      else if (
+        slugLower.includes('salt') ||
+        slugLower.includes('garlic') ||
+        slugLower.includes('onions') ||
+        slugLower.includes('broccoli') ||
+        slugLower.includes('tomatoes') ||
+        slugLower.includes('potatoes') ||
+        slugLower.includes('acids') ||
+        slugLower.includes('oils') ||
+        slugLower.includes('fats') ||
+        slugLower.includes('herbs') ||
+        titleLower.match(/^(understanding|guide to|complete guide).*(salt|garlic|onion|acid|oil|fat|herb)/i)
+      ) {
+        category = 'Ingredients'
+      }
+      // Buying Guides
+      else if (
+        slugLower.includes('buying-guide') ||
+        slugLower.includes('starter-kit') ||
+        slugLower.includes('tools-wasting') ||
+        titleLower.includes('buying guide') ||
+        titleLower.includes('which to buy') ||
+        titleLower.includes('tools wasting')
+      ) {
         category = 'Buying Guides'
       }
+      // Everything else defaults to Cooking Techniques
 
-      // Clean up escaped characters
-      const title = titleMatch ? titleMatch[1].replace(/\\'/g, "'").replace(/\\"/g, '"') : slug.replace(/-/g, ' ')
+      // Clean up escaped characters for other fields
       const publishDate = datePublishedMatch ? datePublishedMatch[1] : '2024-01-01'
       const excerpt = descriptionMatch ? descriptionMatch[1].replace(/\\'/g, "'").replace(/\\"/g, '"') : ''
 

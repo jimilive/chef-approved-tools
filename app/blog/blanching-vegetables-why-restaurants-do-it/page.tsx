@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Learn why professional kitchens blanch vegetables before service. Preserve color, texture, and flavor with a chef-tested method for perfect results.',
   keywords: ['how to blanch vegetables', 'why blanch vegetables', 'restaurant blanching method', 'blanching and shocking', 'blanching technique', 'vegetable preparation', 'professional cooking'],
   alternates: {
-    canonical: '/blog/blanching-vegetables-why-restaurants-do-it',
+    canonical: 'https://www.chefapprovedtools.com/blog/blanching-vegetables-why-restaurants-do-it',
   },
 }
 

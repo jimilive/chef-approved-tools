@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains how to season cast iron for a smooth, long-lasting nonstick surface. Learn oil types, baking steps, and common mistakes to avoid.',
   keywords: ['how to season cast iron', 'cast iron seasoning method', 'cast iron oil', 'how to fix sticky cast iron', 'cast iron restoration', 'professional cast iron care'],
   alternates: {
-    canonical: '/blog/how-to-season-cast-iron-like-restaurant-chef',
+    canonical: 'https://www.chefapprovedtools.com/blog/how-to-season-cast-iron-like-restaurant-chef',
   },
 }
 

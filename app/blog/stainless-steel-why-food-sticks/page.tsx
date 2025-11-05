@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains why food sticks to stainless steel pans and how to prevent it using temperature, oil, and timing. Learn the science behind perfect sears.',
   keywords: ['stainless steel cooking', 'why food sticks', 'how to prevent sticking', 'stainless steel pan searing', 'cooking temperature control'],
   alternates: {
-    canonical: '/blog/stainless-steel-why-food-sticks',
+    canonical: 'https://www.chefapprovedtools.com/blog/stainless-steel-why-food-sticks',
   },
 }
 

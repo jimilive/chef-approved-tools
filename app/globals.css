@@ -109,6 +109,30 @@ button {
   cursor: pointer;
 }
 
+/* Blog posts layout */
+.blog-posts-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 1.5rem !important;
+}
+
+.blog-posts-grid > article {
+  flex: 1 1 calc(33.333% - 1rem) !important;
+  min-width: 300px !important;
+}
+
+@media (max-width: 1024px) {
+  .blog-posts-grid > article {
+    flex: 1 1 calc(50% - 1rem) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-posts-grid > article {
+    flex: 1 1 100% !important;
+  }
+}
+
 /* Responsive utility classes */
 @media (max-width: 768px) {
   .hero-title { 

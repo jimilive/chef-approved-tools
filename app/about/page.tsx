@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Chef Scott Bradley: 24 years professional kitchen experience, including 7 years as Kitchen Manager. Restaurant-tested equipment reviews. Real conditions, honest reviews.',
   keywords: 'Scott Bradley chef, professional chef background, kitchen equipment testing, restaurant equipment review process, chef equipment methodology, culinary expertise',
   alternates: {
-    canonical: '/about',
+    canonical: 'https://www.chefapprovedtools.com/about',
   },
 }
 

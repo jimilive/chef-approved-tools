@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains how to roast vegetables perfectly — the right temperature, spacing, oil, and timing for crisp, caramelized results.',
   keywords: ['roast vegetables', 'roasting guide', 'oven temperature', 'vegetable timing chart', 'caramelized vegetables', 'how to roast vegetables evenly'],
   alternates: {
-    canonical: '/blog/roasting-vegetables-restaurant-guide',
+    canonical: 'https://www.chefapprovedtools.com/blog/roasting-vegetables-restaurant-guide',
   },
 }
 

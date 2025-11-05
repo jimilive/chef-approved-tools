@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Learn how to deglaze like a professional chef — the science of fond, proper technique, and how to build flavor into every pan sauce.',
   keywords: ['deglazing', 'fond', 'pan sauce', 'how to deglaze', 'cooking technique', 'professional chef techniques', 'maillard reaction'],
   alternates: {
-    canonical: '/blog/deglazing-secret-to-restaurant-quality-flavor',
+    canonical: 'https://www.chefapprovedtools.com/blog/deglazing-secret-to-restaurant-quality-flavor',
   },
 }
 

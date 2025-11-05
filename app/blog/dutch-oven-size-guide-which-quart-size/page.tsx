@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'A professional chef\'s guide to choosing the right Dutch oven size for soups, bread, braises, and everyday cooking. Learn what size fits your kitchen best.',
   keywords: ['dutch oven size guide', 'best dutch oven size', 'le creuset size chart', '5 quart dutch oven', '7 quart dutch oven', 'cooking capacity', 'dutch oven buying guide'],
   alternates: {
-    canonical: '/blog/dutch-oven-size-guide-which-quart-size',
+    canonical: 'https://www.chefapprovedtools.com/blog/dutch-oven-size-guide-which-quart-size',
   },
 }
 

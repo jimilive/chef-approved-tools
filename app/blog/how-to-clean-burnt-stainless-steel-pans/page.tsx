@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains how to clean burnt stainless steel cookware using safe, effective methods — no harsh scrubbing or damage.',
   keywords: ['clean burnt stainless steel pan', 'restore stainless steel cookware', 'remove burnt residue', 'baking soda pan cleaning', 'bar keepers friend stainless steel'],
   alternates: {
-    canonical: '/blog/how-to-clean-burnt-stainless-steel-pans',
+    canonical: 'https://www.chefapprovedtools.com/blog/how-to-clean-burnt-stainless-steel-pans',
   },
 }
 

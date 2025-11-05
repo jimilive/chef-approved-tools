@@ -17,7 +17,7 @@ export const metadata = {
     type: "article"
   },
   alternates: {
-    canonical: '/best-knife-for-cutting-meat',
+    canonical: 'https://www.chefapprovedtools.com/best-knife-for-cutting-meat',
   },
 }
 

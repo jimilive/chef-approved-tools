@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef reveals 5 restaurant sheet pan techniques that transform home cooking. Learn high-heat roasting, batch prep, and finishing methods from 24 years in commercial kitchens.',
   keywords: ['sheet pan cooking', 'sheet pan techniques', 'restaurant cooking methods', 'professional chef techniques', 'batch cooking', 'high heat roasting', 'sheet pan tips'],
   alternates: {
-    canonical: '/blog/sheet-pan-cooking-restaurant-techniques',
+    canonical: 'https://www.chefapprovedtools.com/blog/sheet-pan-cooking-restaurant-techniques',
   },
 }
 

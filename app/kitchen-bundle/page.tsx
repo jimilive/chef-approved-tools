@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Professional kitchen starter kit: 10 essential tools tested 24 years. From knives to cookware. Restaurant veteran-approved. Build your pro kitchen.',
   keywords: 'chef approved kitchen kit, essential kitchen tools, professional kitchen starter, restaurant tested equipment',
   alternates: {
-    canonical: '/kitchen-bundle',
+    canonical: 'https://www.chefapprovedtools.com/kitchen-bundle',
   },
 }
 

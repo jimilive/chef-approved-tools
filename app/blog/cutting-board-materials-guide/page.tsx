@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Chef Scott Bradley explains the pros and cons of wood, plastic, rubber, and bamboo cutting boards — and which are best for your knives and kitchen.',
   keywords: ['cutting board guide', 'best cutting board', 'wood vs plastic board', 'end-grain cutting board', 'knife edge protection'],
   alternates: {
-    canonical: '/blog/cutting-board-materials-guide',
+    canonical: 'https://www.chefapprovedtools.com/blog/cutting-board-materials-guide',
   },
 }
 

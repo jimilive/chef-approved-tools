@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | Chef Approved Tools Legal',
   description: 'Privacy policy for Chef Approved Tools - How we collect, use, and protect your personal information in compliance with GDPR and CCPA.',
   alternates: {
-    canonical: '/privacy-policy',
+    canonical: 'https://www.chefapprovedtools.com/privacy-policy',
   },
 }
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains the difference between blenders and food processors, when to use each, and which models perform best in real kitchens.',
   keywords: ['food processor vs blender', 'blender or food processor', 'kitchen appliance guide', 'cooking tools explained', 'what chefs use in the kitchen'],
   alternates: {
-    canonical: '/blog/food-processor-vs-blender',
+    canonical: 'https://www.chefapprovedtools.com/blog/food-processor-vs-blender',
   },
 }
 

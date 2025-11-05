@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Restaurant-Grade Cookware: Pro Comparison',
   description: 'Professional cookware recommendations from 24 years of restaurant experience. Find pans that survive commercial use.',
   alternates: {
-    canonical: '/guides/best-cookware',
+    canonical: 'https://www.chefapprovedtools.com/guides/best-cookware',
   },
 }
 

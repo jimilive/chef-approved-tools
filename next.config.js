@@ -221,6 +221,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/methodology',
+        destination: '/about',
+        permanent: true,
+      },
+      {
         source: '/reviews/wusthof-classic-ikon-15-piece',
         destination: '/reviews/wusthof-classic-ikon-16-piece',
         permanent: true,

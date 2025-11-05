@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef breaks down the 10 kitchen tools most home cooks waste money on and shares which essential tools professionals actually use instead.',
   keywords: ['kitchen tools to avoid', 'waste of money kitchen gadgets', 'essential kitchen tools', 'professional kitchen gear', 'chef recommended tools', 'kitchen equipment advice'],
   alternates: {
-    canonical: '/blog/kitchen-tools-wasting-money',
+    canonical: 'https://www.chefapprovedtools.com/blog/kitchen-tools-wasting-money',
   },
 }
 

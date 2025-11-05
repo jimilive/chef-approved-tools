@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: 'Tested in professional kitchens doing $80K+ monthly revenue. Find your perfect chef knife.',
   },
   alternates: {
-    canonical: '/guides/best-chef-knives',
+    canonical: 'https://www.chefapprovedtools.com/guides/best-chef-knives',
   },
 }
 

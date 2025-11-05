@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains the real process of caramelizing onions — why patience, temperature, and technique matter more than shortcuts.',
   keywords: ['caramelized onions', 'why onions take long', 'how to caramelize onions', 'onion cooking tips', 'caramelization science', 'professional cooking techniques', 'maillard reaction'],
   alternates: {
-    canonical: '/blog/caramelizing-onions-why-it-takes-45-minutes',
+    canonical: 'https://www.chefapprovedtools.com/blog/caramelizing-onions-why-it-takes-45-minutes',
   },
 }
 

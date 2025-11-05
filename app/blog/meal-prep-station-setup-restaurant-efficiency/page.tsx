@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains how to create a restaurant-style meal prep station at home — mise en place, flow, and efficiency techniques that make cooking effortless.',
   keywords: ['meal prep station', 'mise en place', 'kitchen organization', 'chef efficiency tips', 'home cooking prep', 'professional kitchen setup', 'cooking workflow'],
   alternates: {
-    canonical: '/blog/meal-prep-station-setup-restaurant-efficiency',
+    canonical: 'https://www.chefapprovedtools.com/blog/meal-prep-station-setup-restaurant-efficiency',
   },
 }
 

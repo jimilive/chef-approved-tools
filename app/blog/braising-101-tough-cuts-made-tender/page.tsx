@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains the art and science of braising — transforming tough cuts into tender, flavorful perfection through low, slow heat and control.',
   keywords: ['braising', 'how to braise', 'tough cuts', 'slow cooking', 'dutch oven braise', 'braised beef technique', 'professional cooking methods'],
   alternates: {
-    canonical: '/blog/braising-101-tough-cuts-made-tender',
+    canonical: 'https://www.chefapprovedtools.com/blog/braising-101-tough-cuts-made-tender',
   },
 }
 

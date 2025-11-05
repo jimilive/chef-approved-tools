@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Learn how to choose your first chef knife from a professional chef. Understand balance, steel type, blade length, and why comfort matters more than price.',
   keywords: ['how to choose a chef knife', 'best chef knife for beginners', 'chef knife buying guide', 'kitchen knife selection', 'chef knife balance', 'professional knife advice'],
   alternates: {
-    canonical: '/blog/how-to-choose-first-chef-knife',
+    canonical: 'https://www.chefapprovedtools.com/blog/how-to-choose-first-chef-knife',
   },
 }
 

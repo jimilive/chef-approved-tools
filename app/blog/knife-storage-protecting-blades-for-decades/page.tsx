@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Learn how to store knives like a professional chef. Prevent dull edges, rust, and damage with proven storage techniques and chef-approved tools.',
   keywords: ['knife care', 'how to store knives', 'knife protection', 'prevent dull knives', 'blade storage', 'professional knife maintenance', 'knife longevity', 'knife rust prevention'],
   alternates: {
-    canonical: '/blog/knife-storage-protecting-blades-for-decades',
+    canonical: 'https://www.chefapprovedtools.com/blog/knife-storage-protecting-blades-for-decades',
   },
 }
 

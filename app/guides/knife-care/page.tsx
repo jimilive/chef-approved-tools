@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Knife Care: Sharpening & Storage Techniques',
   description: 'Professional knife care guide: Sharpening, storage, maintenance from restaurant kitchen manager. Keep your knives performing for decades.',
   alternates: {
-    canonical: '/guides/knife-care',
+    canonical: 'https://www.chefapprovedtools.com/guides/knife-care',
   },
 }
 

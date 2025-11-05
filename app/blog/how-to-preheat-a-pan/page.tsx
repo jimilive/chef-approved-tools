@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains the science of preheating stainless steel and cast iron pans — how to prevent sticking and achieve perfect sear every time.',
   keywords: ['how to preheat a pan', 'stainless steel pan temperature', 'why food sticks', 'proper pan preheating', 'cooking temperature control'],
   alternates: {
-    canonical: '/blog/how-to-preheat-a-pan',
+    canonical: 'https://www.chefapprovedtools.com/blog/how-to-preheat-a-pan',
   },
 }
 

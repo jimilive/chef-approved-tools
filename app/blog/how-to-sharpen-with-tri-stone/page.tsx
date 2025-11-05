@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Sharpen with Tri-Stone: Step-by-Step Pro',
   description: 'Sharpen knives with tri-stone: 6-year restaurant technique. Step-by-step angles, pressure, progression guide. Professional results at home. Norton IM200 test.',
   alternates: {
-    canonical: '/blog/how-to-sharpen-with-tri-stone',
+    canonical: 'https://www.chefapprovedtools.com/blog/how-to-sharpen-with-tri-stone',
   },
   openGraph: {
     title: 'How to Sharpen with a Stone: Professional Chef\'s Technique (2025)',

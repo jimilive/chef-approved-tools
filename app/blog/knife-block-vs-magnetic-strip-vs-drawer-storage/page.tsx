@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains the pros and cons of knife blocks, magnetic strips, and drawer storage. Learn how to protect your knives, save counter space, and avoid dulling your edges.',
   keywords: ['knife storage', 'knife block', 'magnetic strip', 'drawer knife storage', 'how to store knives', 'best knife storage', 'protect chef knives', 'knife organization'],
   alternates: {
-    canonical: '/blog/knife-block-vs-magnetic-strip-vs-drawer-storage',
+    canonical: 'https://www.chefapprovedtools.com/blog/knife-block-vs-magnetic-strip-vs-drawer-storage',
   },
 }
 

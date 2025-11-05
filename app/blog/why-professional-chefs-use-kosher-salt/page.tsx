@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Why chefs use kosher salt: Professional kitchen secret explained. Diamond Crystal vs Morton, proper technique. Essential in commercial kitchens.',
   keywords: ['kosher salt', 'diamond crystal kosher salt', 'why chefs use kosher salt', 'professional chef salt', 'seasoning technique', 'cooking with kosher salt', 'morton vs diamond crystal', 'best salt for cooking'],
   alternates: {
-    canonical: '/blog/why-professional-chefs-use-kosher-salt',
+    canonical: 'https://www.chefapprovedtools.com/blog/why-professional-chefs-use-kosher-salt',
   },
 };
 

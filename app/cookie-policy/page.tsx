@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Cookie Policy | Chef Approved Tools Notice',
   description: 'Cookie Policy for Chef Approved Tools - How we use cookies and similar technologies on our website.',
   alternates: {
-    canonical: '/cookie-policy',
+    canonical: 'https://www.chefapprovedtools.com/cookie-policy',
   },
 }
 

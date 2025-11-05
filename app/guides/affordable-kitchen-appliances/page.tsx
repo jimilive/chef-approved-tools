@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Budget Kitchen Appliances 2025: What Works',
   description: 'Affordable kitchen appliances that work: Budget-friendly blenders, mixers tested by a professional chef. Restaurant quality without premium price.',
   alternates: {
-    canonical: '/guides/affordable-kitchen-appliances',
+    canonical: 'https://www.chefapprovedtools.com/guides/affordable-kitchen-appliances',
   },
 }
 

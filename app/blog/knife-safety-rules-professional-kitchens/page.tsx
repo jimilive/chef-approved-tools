@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef Scott Bradley shares 10 essential knife safety rules from 24 years in restaurants. Learn grip, stance, focus, and habits to prevent injuries in your kitchen.',
   keywords: ['knife safety', 'how to use a chef knife safely', 'kitchen knife rules', 'professional kitchen safety', 'knife accidents prevention'],
   alternates: {
-    canonical: '/blog/knife-safety-rules-professional-kitchens',
+    canonical: 'https://www.chefapprovedtools.com/blog/knife-safety-rules-professional-kitchens',
   },
 }
 

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Restaurant steak searing: 24-year professional reveals the best techniques. Perfect crust, temperature control. Former Kitchen Manager secrets.',
   keywords: ['how to sear steak', 'restaurant steak techniques', 'professional steak cooking', 'perfect steak sear', 'restaurant quality steak', 'cast iron steak', 'steak cooking temperature', 'chef steak methods'],
   alternates: {
-    canonical: '/blog/how-to-sear-steaks-like-restaurant-chef',
+    canonical: 'https://www.chefapprovedtools.com/blog/how-to-sear-steaks-like-restaurant-chef',
   },
 }
 

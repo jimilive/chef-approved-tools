@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: 'Best Cookware 2025 | Chef Pots & Pans Guide',
   description: 'Professional cookware reviews: Pans, pots, Dutch ovens tested in restaurant kitchens or in my apartment . What works, what lasts. Chef-approved.',
   keywords: ['best cookware', 'cast iron', 'stainless steel pans', 'non-stick cookware', 'professional cookware'],
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/cookware',
+  },
   openGraph: {
     title: 'Best Cookware 2025 | Chef-Tested Pots & Pans',
     description: 'Restaurant-tested cookware reviews from a professional chef.',

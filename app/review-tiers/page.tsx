@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: 'Transparent, honest kitchen equipment reviews based on real testing and 45 years of cooking experience.',
   },
   alternates: {
-    canonical: '/review-tiers',
+    canonical: 'https://www.chefapprovedtools.com/review-tiers',
   },
 };
 

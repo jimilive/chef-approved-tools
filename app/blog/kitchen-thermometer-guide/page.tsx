@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains how to use an instant-read thermometer correctly for perfect doneness, safety, and consistency in every dish.',
   keywords: ['instant read thermometer', 'kitchen thermometer guide', 'cooking temperature', 'meat doneness chart', 'food safety tools'],
   alternates: {
-    canonical: '/blog/kitchen-thermometer-guide',
+    canonical: 'https://www.chefapprovedtools.com/blog/kitchen-thermometer-guide',
   },
 }
 

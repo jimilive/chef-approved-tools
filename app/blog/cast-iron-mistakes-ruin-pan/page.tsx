@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains the common cast iron mistakes that strip seasoning, cause rust, and ruin pans. Learn how to clean, season, and maintain cast iron the right way.',
   keywords: ['cast iron mistakes', 'how to clean cast iron', 'cast iron rust', 'cast iron seasoning', 'cast iron maintenance', 'cast iron care tips'],
   alternates: {
-    canonical: '/blog/cast-iron-mistakes-ruin-pan',
+    canonical: 'https://www.chefapprovedtools.com/blog/cast-iron-mistakes-ruin-pan',
   },
 }
 

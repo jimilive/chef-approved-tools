@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Get equipment insights and honest product recommendations from 24 years of restaurant experience. Join fellow home chefs getting expert insights.',
   keywords: 'kitchen tools guide, essential kitchen equipment, chef recommendations, professional kitchen tools, kitchen equipment list',
   alternates: {
-    canonical: '/newsletter',
+    canonical: 'https://www.chefapprovedtools.com/newsletter',
   },
 }
 

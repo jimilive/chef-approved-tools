@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: 'How to steel a knife: Professional honing technique. Honing vs sharpening explained. Perfect angle, pressure. Chef guide to knife maintenance.',
   keywords: ['how to steel a knife', 'knife honing', 'honing steel', 'knife sharpening', 'honing vs sharpening', 'chef knife care', 'knife maintenance', 'professional knife technique'],
   alternates: {
-    canonical: '/blog/how-to-steel-a-knife',
+    canonical: 'https://www.chefapprovedtools.com/blog/how-to-steel-a-knife',
   },
 };
 

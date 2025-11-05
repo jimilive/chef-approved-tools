@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Affiliate Disclosure | Chef Approved Tools',
   description: 'Full disclosure of our affiliate relationships and how we earn commissions from product reviews and recommendations.',
   alternates: {
-    canonical: '/disclosure',
+    canonical: 'https://www.chefapprovedtools.com/disclosure',
   },
 }
 

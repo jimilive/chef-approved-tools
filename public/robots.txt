@@ -6,13 +6,17 @@ Disallow: /admin/
 Disallow: /_next/
 Disallow: /api/
 
+# Disallow non-page assets
+Disallow: /favicon.ico
+Disallow: /*.ico
+
 # Allow important assets
 Allow: /images/
 Allow: /*.css
 Allow: /*.js
 
 # Sitemap location
-Sitemap: https://chefapprovedtools.com/sitemap.xml
+Sitemap: https://www.chefapprovedtools.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

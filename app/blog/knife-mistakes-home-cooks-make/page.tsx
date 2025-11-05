@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains the 5 knife mistakes that ruin edges and slow prep. Learn correct cutting techniques and maintenance tips for sharp, safe blades.',
   keywords: ['knife mistakes', 'how to use a chef knife', 'knife skills tips', 'why knives get dull', 'knife safety for home cooks', 'professional knife technique'],
   alternates: {
-    canonical: '/blog/knife-mistakes-home-cooks-make',
+    canonical: 'https://www.chefapprovedtools.com/blog/knife-mistakes-home-cooks-make',
   },
 }
 

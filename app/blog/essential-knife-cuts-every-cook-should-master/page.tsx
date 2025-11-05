@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Learn the five professional knife cuts—dice, julienne, chiffonade, mince, and bias—taught by chef Scott Bradley. Technique, precision, and practice tips for home cooks.',
   keywords: ['knife cuts', 'basic knife skills', 'how to dice vegetables', 'julienne cut', 'chiffonade technique', 'professional knife training'],
   alternates: {
-    canonical: '/blog/essential-knife-cuts-every-cook-should-master',
+    canonical: 'https://www.chefapprovedtools.com/blog/essential-knife-cuts-every-cook-should-master',
   },
 }
 

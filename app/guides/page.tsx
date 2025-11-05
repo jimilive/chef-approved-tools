@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Kitchen Equipment Guides | Chef\'s Picks',
   description: 'Expert guidance from a culinary professional to help you make informed equipment decisions.',
   alternates: {
-    canonical: '/guides',
+    canonical: 'https://www.chefapprovedtools.com/guides',
   },
 }
 

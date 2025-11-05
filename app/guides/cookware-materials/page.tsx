@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Cookware Materials: Chef\'s Metal Comparison',
   description: 'Complete guide to cookware materials from 24 years of restaurant experience. Stainless steel, cast iron, carbon steel, and more.',
   alternates: {
-    canonical: '/guides/cookware-materials',
+    canonical: 'https://www.chefapprovedtools.com/guides/cookware-materials',
   },
 }
 

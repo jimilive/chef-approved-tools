@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Learn professional kitchen glove safety from chef with 24 years restaurant experience. Single-use, cut-resistant, and proper layering techniques.',
   keywords: ['kitchen gloves', 'cut resistant gloves', 'food safety gloves', 'disposable gloves', 'kitchen safety', 'professional chef gloves', 'mandoline safety', 'kitchen glove layering'],
   alternates: {
-    canonical: '/blog/kitchen-gloves-guide',
+    canonical: 'https://www.chefapprovedtools.com/blog/kitchen-gloves-guide',
   },
 };
 

@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: 'Chef Knives Hub: All Reviews, Guides, Tips',
   description: 'Professional chef reviews of kitchen knives tested over years in restaurant kitchens. Chef knives, paring knives, bread knives, and specialty blades.',
   keywords: ['chef knives', 'best kitchen knives', 'professional knives', 'knife reviews', 'Victorinox', 'Wüsthof'],
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com/knives',
+  },
   openGraph: {
     title: 'Chef Knives: All Reviews & Guides',
     description: 'Chef knives tested in professional kitchens for 20 years.',

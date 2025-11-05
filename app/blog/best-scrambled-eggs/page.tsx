@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Professional chef shares revolutionary scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 45 years of cooking wisdom.',
   keywords: ['scrambled eggs', 'how to make scrambled eggs', 'perfect scrambled eggs', 'no bowl scrambled eggs', 'no whisk scrambled eggs', 'creamy scrambled eggs', 'chef scrambled eggs', 'professional egg technique'],
   alternates: {
-    canonical: '/blog/best-scrambled-eggs',
+    canonical: 'https://www.chefapprovedtools.com/blog/best-scrambled-eggs',
   },
 };
 

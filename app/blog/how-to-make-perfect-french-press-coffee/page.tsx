@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'French Press Coffee: Perfect Ratio & Method',
   description: 'French press coffee perfected: 18 years usage experience. Perfect ratio, step-by-step technique, mistakes to avoid. Cafe-quality at home. Professional guide.',
   alternates: {
-    canonical: '/blog/how-to-make-perfect-french-press-coffee',
+    canonical: 'https://www.chefapprovedtools.com/blog/how-to-make-perfect-french-press-coffee',
   },
   openGraph: {
     title: 'How to Make Perfect French Press Coffee: Professional Guide (2025)',

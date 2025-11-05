@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'After 24 years in professional kitchens and 20 years using hotel pans at home, discover why this restaurant system eliminates Tupperware chaos forever.',
   keywords: ['hotel pan system', 'restaurant food storage', 'kitchen organization', 'meal prep containers', 'NSF approved containers', 'Curta hotel pans', 'Cambro alternative'],
   alternates: {
-    canonical: '/blog/hotel-pan-system-restaurant-organization-home',
+    canonical: 'https://www.chefapprovedtools.com/blog/hotel-pan-system-restaurant-organization-home',
   },
 }
 

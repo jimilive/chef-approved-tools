@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef explains the art of reducing sauces — how to concentrate flavor, control consistency, and create restaurant-quality reductions at home.',
   keywords: ['reducing sauces', 'sauce reduction', 'how to reduce sauce', 'professional cooking techniques', 'sauce making', 'nappe consistency', 'demi-glace'],
   alternates: {
-    canonical: '/blog/reducing-sauces-restaurant-technique',
+    canonical: 'https://www.chefapprovedtools.com/blog/reducing-sauces-restaurant-technique',
   },
 }
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Professional chef compares KitchenAid mixers vs top alternatives. Learn what to look for in power, capacity, attachments, and reliability before you buy.',
   keywords: ['stand mixer guide', 'KitchenAid vs alternatives', 'best stand mixer', 'baking tools', 'mixer buying guide'],
   alternates: {
-    canonical: '/blog/stand-mixer-buying-guide',
+    canonical: 'https://www.chefapprovedtools.com/blog/stand-mixer-buying-guide',
   },
 }
 
