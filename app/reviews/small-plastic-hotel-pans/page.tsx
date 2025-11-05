@@ -1,478 +1,465 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
-import AffiliateButton from '@/components/AffiliateButton'
-import FTCDisclosure from '@/components/FTCDisclosure'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import {
+  ReviewHero,
+  TestingResultsGrid,
+  PerformanceAnalysis,
+  ProsConsGrid,
+  WhoShouldBuyGrid,
+  FAQSection,
+  EmailCaptureSection,
+  BottomLineSection,
+  RelatedProductsGrid
+} from '@/components/review'
 
-export const dynamic = 'force-dynamic'
+// Import review data
+import { reviewData } from './small-plastic-hotel-pans-data'
 
+// ISR configuration for better performance
+export const revalidate = 3600 // 1 hour cache
+export const fetchCache = 'force-cache'
+
+// Generate metadata dynamically
 export async function generateMetadata(): Promise<Metadata> {
+  const product = await getProductBySlug(reviewData.productSlug)
+  const productData = product || reviewData.legacyProductData
+
   return {
+    title: reviewData.metadata.title,
+    description: reviewData.metadata.description,
     alternates: {
       canonical: 'https://www.chefapprovedtools.com/reviews/small-plastic-hotel-pans',
     },
-    title: 'Small Plastic Hotel Pans Review: End Tupperware Chaos Forever',
-    description: 'After 20 years using plastic hotel pans at home, professional chef review of the NSF-approved containers that eliminate kitchen organization chaos.',
     openGraph: {
-      title: 'Small Plastic Hotel Pans Review: End Tupperware Chaos Forever',
-      description: 'Professional chef\'s 20-year review of small plastic hotel pans for home organization.',
-      type: 'article',
-      url: 'https://www.chefapprovedtools.com/reviews/small-plastic-hotel-pans',
+      title: reviewData.metadata.ogTitle,
+      description: reviewData.metadata.ogDescription,
+      url: `https://www.chefapprovedtools.com/reviews/${reviewData.productSlug}`,
       siteName: 'Chef Approved Tools',
-      images: [generateOGImageURL({
-        title: "Small Plastic Hotel Pans Review",
-        rating: 5,
-        testingPeriod: "20 Years Using",
-        tier: 1
-      })],
+      images: [
+        {
+          url: generateOGImageURL({
+            title: productData.name,
+            rating: productData.expertRating ?? reviewData.hero.rating,
+            testingPeriod: reviewData.metadata.testingPeriod,
+            tier: reviewData.metadata.tier as 1 | 2 | 3,
+          }),
+          width: 1200,
+          height: 630,
+          alt: `${productData.name} - Professional Review`,
+        },
+      ],
+      type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Small Plastic Hotel Pans Review',
-      description: 'Professional chef\'s 20-year review of small plastic hotel pans for home meal prep.',
+      title: reviewData.metadata.ogTitle,
+      description: reviewData.metadata.ogDescription,
       images: [generateOGImageURL({
-        title: "Small Plastic Hotel Pans Review",
-        rating: 5,
-        testingPeriod: "20 Years Using",
-        tier: 1
+        title: productData.name,
+        rating: productData.expertRating ?? reviewData.hero.rating,
+        testingPeriod: reviewData.metadata.testingPeriod,
+        tier: reviewData.metadata.tier as 1 | 2 | 3,
       })],
     },
   }
 }
 
-const faqData = [
-  {
-    question: "How long do plastic hotel pans last?",
-    answer: "Decades. I've been using the same pans at home for 20 years. They're virtually indestructible for normal home use."
-  },
-  {
-    question: "Are they microwave safe?",
-    answer: "Technically yes, but I don't recommend it. While the plastic can handle microwave heat, it's not ideal for even heating. I transfer food to plates/bowls for reheating."
-  },
-  {
-    question: "Can I put them in the freezer?",
-    answer: "Yes—they're freezer safe. I use them for freezing stock, soups, and cooked grains."
-  },
-  {
-    question: "Will they stain from tomato sauce?",
-    answer: "Not the opaque white versions. Avoid translucent/clear plastic (which can stain). The solid white plastic resists staining even from tomato sauce, curry, turmeric, and other pigmented foods."
-  },
-  {
-    question: "Do I need 1/6 or 1/9 pans?",
-    answer: "Start with 1/6 pans. They're more versatile for home use. Only add 1/9 pans if you have specific small-portion needs (sauces, garnishes, etc.)."
-  },
-  {
-    question: "How do they compare to glass containers?",
-    answer: "Hotel pans win for lighter weight, won't shatter if dropped, cheaper, and better stacking. Glass wins for microwave reheating and oven use. For meal prep and storage, I prefer plastic hotel pans."
-  }
-];
+export default async function ProductReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug(reviewData.productSlug)
 
-export default async function SmallPlasticHotelPansReview() {
-  const product = await getProductBySlug('small-plastic-hotel-pans')
-  if (!product) {
-    throw new Error('Product not found: small-plastic-hotel-pans')
-  }
+  // Merge Supabase data with legacy data
+  const productData = product ? {
+    ...reviewData.legacyProductData,
+    ...product,
+    pros: product.pros && product.pros.length > 0 ? product.pros : reviewData.legacyProductData.pros,
+    cons: product.cons && product.cons.length > 0 ? product.cons : reviewData.legacyProductData.cons,
+    affiliateLinks: product.affiliateLinks && product.affiliateLinks.length > 0
+      ? product.affiliateLinks
+      : reviewData.legacyProductData.affiliateLinks
+  } : reviewData.legacyProductData
 
-  // Also fetch related large plastic hotel pans for cross-sell
-  const relatedProduct = await getProductBySlug('large-plastic-hotel-pans')
+  // Get primary affiliate link (defaults to 6-inch 1/6 pans)
+  const affiliateUrl = product ? getPrimaryAffiliateLink(product) : reviewData.sizeOptions.options[0].affiliateUrl
 
-  const affiliateLink = getPrimaryAffiliateLink(product)
-  const relatedAffiliateLink = relatedProduct ? getPrimaryAffiliateLink(relatedProduct) : 'https://amzn.to/4qtKjSe'
-
-  const productData = {
-    name: product.name,
-    slug: product.slug,
-    brand: product.brand,
-    model: product.model,
-    category: product.category,
-    rating: product.expertRating || 5,
-    reviewCount: 1,
-    pros: product.pros,
-    cons: product.cons,
-    affiliateLinks: product.affiliateLinks,
-    expertRating: product.expertRating,
-    expertOpinion: product.expertOpinion,
-    dateAdded: product.dateAdded,
-    lastUpdated: product.lastUpdated
-  };
-
+  // Generate breadcrumbs
   const breadcrumbs = [
     { name: "Home", url: "https://www.chefapprovedtools.com" },
     { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
     { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-  ];
+  ]
+
+  // Generate schemas
+  const productSchema = generateProductSchema({
+    name: productData.name,
+    slug: productData.slug,
+    description: productData.expertOpinion,
+    brand: productData.brand,
+    rating: productData.expertRating,
+    reviewCount: 1,
+    category: productData.category,
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
+  const faqSchema = generateFAQSchema(reviewData.faqData)
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      {/* Schema.org markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
+      {/* Product view tracking */}
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
-        tier={1}
-        testingPeriod="20 years"
-        rating={5}
-        hook="The single best upgrade for kitchen organization"
-        category="Storage"
+        tier={reviewData.metadata.tier as 1 | 2 | 3}
+        testingPeriod={reviewData.tracking.testingPeriod}
+        rating={productData.expertRating}
+        hook={reviewData.tracking.hook}
+        category={productData.category}
       />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="inline-block bg-orange-500/20 border border-orange-500/30 rounded-full px-4 py-2 mb-6">
-            <span className="text-orange-200 font-semibold text-sm">20 YEARS DAILY HOME USE</span>
+      <div className="bg-gray-50 min-h-screen">
+        <div className="max-w-[900px] mx-auto px-5">
+
+          {/* BREADCRUMBS */}
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+            <Link href="/" className="hover:text-orange-700">Home</Link>
+            {' / '}
+            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+            {' / '}
+            {reviewData.breadcrumb.productName}
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Small Plastic Hotel Pans Review: End Tupperware Chaos Forever
-          </h1>
+          {/* SECTION 1: HERO */}
+          <ReviewHero
+            title={reviewData.hero.title}
+            authorName={reviewData.hero.authorName}
+            authorCredentials={reviewData.hero.authorCredentials}
+            rating={reviewData.hero.rating}
+            tierBadge={reviewData.hero.tierBadge}
+            verdict={reviewData.hero.verdict}
+            verdictStrong={reviewData.hero.verdictStrong}
+            customCTA={
+              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
+                <h3 className="text-xl font-bold mb-4 text-gray-900 mt-0">Choose Your Size</h3>
+                <p className="text-gray-700 mb-6">{reviewData.sizeOptions.subtitle}</p>
 
-          <p className="text-xl text-slate-300 mb-6">
-            After 20 years using plastic hotel pans at home and 24 years in professional kitchens, here&rsquo;s why this is the best kitchen organization upgrade you can make
-          </p>
+                <div className="space-y-4">
+                  {reviewData.sizeOptions.options.map((option) => (
+                    <div
+                      key={option.id}
+                      className={`border-2 rounded-xl p-5 ${
+                        option.recommended
+                          ? 'border-orange-400 bg-gradient-to-br from-orange-50 to-red-50'
+                          : 'border-gray-300 bg-white'
+                      }`}
+                    >
+                      {option.recommended && (
+                        <div className="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
+                          ⭐ RECOMMENDED
+                        </div>
+                      )}
+                      <h4 className="font-bold text-lg mb-2 text-gray-900 mt-0">
+                        {option.size} - {option.depth}
+                      </h4>
+                      <div className="text-sm text-gray-600 space-y-1 mb-4">
+                        <p><strong>Dimensions:</strong> {option.dimensions}</p>
+                        <p><strong>Capacity:</strong> {option.capacity}</p>
+                        <p><strong>Best for:</strong> {option.bestFor}</p>
+                        <p className="text-xs text-gray-500">{option.includes}</p>
+                      </div>
 
-          <div className="flex items-center gap-6 text-sm">
-            <div className="flex items-center gap-2">
-              <span className="text-yellow-400">★★★★★</span>
-              <span>5/5</span>
-            </div>
-            <div>Tier 1: Long-Term Testing</div>
-            <div>~$75-180</div>
-          </div>
-        </div>
-      </section>
+                      <CTAVisibilityTracker
+                        ctaId={`${reviewData.productSlug}-hero-${option.id}`}
+                        position="above_fold"
+                        productSlug={reviewData.productSlug}
+                        merchant="amazon"
+                      >
+                        <a
+                          href={option.affiliateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer sponsored"
+                          className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 py-3 rounded-lg transition-all hover:scale-105 active:scale-95 text-center"
+                        >
+                          Check {option.size} Price →
+                        </a>
+                      </CTAVisibilityTracker>
 
-      {/* Main Content */}
-      <article className="max-w-4xl mx-auto px-4 py-12">
-
-        {/* Quick Verdict */}
-        <div className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-8">
-          <h2 className="text-2xl font-bold mb-3 text-gray-900">Scott&rsquo;s Professional Verdict</h2>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            {productData.expertOpinion}
-          </p>
-          <div className="mt-4">
-            <p className="text-gray-700">
-              <strong>Best For:</strong> Meal preppers, home cooks tired of container chaos, anyone who wants restaurant-level organization
-            </p>
-            <p className="text-gray-700 mt-2">
-              <strong>My Top Pick:</strong> <a href={affiliateLink} className="text-orange-600 hover:underline">6-Inch 1/6 Pan 6-Pack with Lids</a> - the most versatile size for home use
-            </p>
-          </div>
-        </div>
-
-        {/* Pros & Cons */}
-        <section className="mb-12">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-green-50 p-6 rounded-lg border border-green-200">
-              <h3 className="text-xl font-bold mb-4 text-green-900">What Works</h3>
-              <ul className="space-y-2 text-gray-700">
-                {productData.pros.map((pro, index) => (
-                  <li key={index}>✓ {pro}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-red-50 p-6 rounded-lg border border-red-200">
-              <h3 className="text-xl font-bold mb-4 text-red-900">Limitations</h3>
-              <ul className="space-y-2 text-gray-700">
-                {productData.cons.map((con, index) => (
-                  <li key={index}>✗ {con}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Buy Section */}
-        <section className="mb-12 bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-xl border-2 border-orange-200">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to End Container Chaos?</h2>
-
-          <p className="text-lg text-gray-700 mb-6">
-            After 20 years of daily home use, these small plastic hotel pans are the single best upgrade for kitchen organization.
-            No more mismatched lids, no more avalanche containers, no more wasted fridge space.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <CTAVisibilityTracker
-              ctaId={`review-${productData.slug}-above_fold`}
-              position="above_fold"
-              productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <AffiliateButton
-                href={affiliateLink}
-                merchant="amazon"
-                product={productData.slug}
-                position="above_fold"
-                variant="primary"
-              >
-                Check Amazon Price →
-              </AffiliateButton>
-            </CTAVisibilityTracker>
-
-            <Link
-              href="/reviews"
-              className="inline-flex items-center justify-center border-2 border-orange-600 text-orange-600 hover:bg-orange-50 font-bold py-4 px-8 rounded-lg transition-all duration-200"
-            >
-              See All Reviews
-            </Link>
-          </div>
-        </section>
-
-        {/* Why I'm Reviewing This */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Why I&rsquo;m Reviewing Small Plastic Hotel Pans</h2>
-
-          <div className="prose prose-lg max-w-none text-gray-700">
-            <p>
-              I spent 24 years in professional kitchens where organization isn&rsquo;t optional—it&rsquo;s survival. Every restaurant
-              I&rsquo;ve worked in (Mellow Mushroom, Purple Café, Feierabend, Il Pizzaiolo, Paragary&rsquo;s) uses the hotel pan system
-              because <strong>nothing else comes close for functional food storage</strong>.
-            </p>
-
-            <p>
-              Twenty years ago, I brought this system home. <strong>It changed everything.</strong>
-            </p>
-
-            <p className="font-semibold">No more:</p>
-            <ul>
-              <li>Avalanche of mismatched containers when you open the cabinet</li>
-              <li>Searching for lids that actually fit</li>
-              <li>Containers that crack after 6 months</li>
-              <li>Wasted refrigerator space from poor stacking</li>
-              <li>Mystery leftovers in random containers</li>
-            </ul>
-
-            <p>
-              <strong>Small plastic hotel pans solve all of this.</strong> They&rsquo;re the sweet spot for home use—big enough
-              for real meal prep portions but not so large they dominate your fridge like commercial full pans.
-            </p>
-          </div>
-        </section>
-
-        {/* What Are Small Plastic Hotel Pans */}
-        <section className="mb-12 bg-slate-50 p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">What Are Small Plastic Hotel Pans?</h2>
-
-          <div className="prose prose-lg max-w-none text-gray-700">
-            <p>
-              Small plastic hotel pans are NSF-approved food storage containers in standardized sizes that fit together in a modular system:
-            </p>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200 my-6">
-              <h3 className="text-xl font-bold mb-4">1/6 Pans (my primary recommendation):</h3>
-              <ul>
-                <li>Approximately 6.75&quot; x 6.25&quot; footprint</li>
-                <li>Available in 6-inch depth (my go-to) or 4-inch depth</li>
-                <li>Holds 2-4 servings depending on contents</li>
-                <li>Perfect for meal prep portions</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200 my-6">
-              <h3 className="text-xl font-bold mb-4">1/9 Pans (use carefully):</h3>
-              <ul>
-                <li>Approximately 4.25&quot; x 6.75&quot; footprint</li>
-                <li>Available in 4-inch depth</li>
-                <li>Narrower and deeper = can tip over when full</li>
-                <li>Good for small portions (sauces, cheese, garnishes)</li>
-              </ul>
-            </div>
-
-            <p><strong>All Curta plastic hotel pans are:</strong></p>
-            <ul>
-              <li>NSF certified (restaurant food safety standards)</li>
-              <li>BPA-free polypropylene</li>
-              <li>Dishwasher safe (even commercial dishwashers at 180°F+)</li>
-              <li>Freezer safe</li>
-              <li>Stackable with matching lids</li>
-            </ul>
-          </div>
-        </section>
-
-        {/* Real-World Home Use */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">My Real-World Home Use (20 Years of Daily Testing)</h2>
-
-          <div className="prose prose-lg max-w-none text-gray-700">
-            <h3>Sunday Meal Prep</h3>
-            <p>Every Sunday, I batch-cook for the week. Here&rsquo;s how I use plastic hotel pans:</p>
-
-            <div className="bg-blue-50 p-6 rounded-lg my-6">
-              <p className="font-semibold mb-2">Proteins (6-inch 1/6 pans):</p>
-              <ul className="mb-4">
-                <li>Grilled chicken thighs - 2 pans (8-10 thighs per pan)</li>
-                <li>Ground beef for tacos/pasta - 1 pan (2 lbs cooked)</li>
-                <li>Roasted salmon - 1 pan (4-6 portions)</li>
-              </ul>
-
-              <p className="font-semibold mb-2">Grains & Starches (4-inch 1/6 pans):</p>
-              <ul className="mb-4">
-                <li>Brown rice - 2 pans (each holds ~4 cups cooked)</li>
-                <li>Roasted sweet potatoes - 1 pan (cubed, ready to reheat)</li>
-                <li>Quinoa - 1 pan</li>
-              </ul>
-
-              <p className="font-semibold mb-2">Vegetables (4-inch 1/6 pans):</p>
-              <ul>
-                <li>Roasted broccoli - 1 pan</li>
-                <li>Sautéed peppers & onions - 1 pan</li>
-                <li>Mixed green salad base - 1 pan</li>
-              </ul>
-            </div>
-
-            <p>
-              Throughout the week, I grab containers and assemble meals in 5 minutes. Everything stacks perfectly
-              in my refrigerator—no wasted space, no toppling containers.
-            </p>
-          </div>
-        </section>
-
-        {/* Size Recommendations */}
-        <section className="mb-12 bg-slate-50 p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Size Recommendations: Which Should You Buy?</h2>
-
-          <div className="prose prose-lg max-w-none text-gray-700">
-            <p>After 20 years of home use, here&rsquo;s my honest guidance:</p>
-
-            <div className="bg-green-50 border-l-4 border-green-600 p-6 my-6">
-              <h3 className="text-xl font-bold mb-3">Start Here: 6-Inch 1/6 Pans ⭐</h3>
-              <p>
-                <a href={affiliateLink} className="text-orange-600 hover:underline font-semibold">
-                  Get the 6-Inch 1/6 Pan 6-Pack with Lids
-                </a>
-              </p>
-              <p className="mt-3">This is the most versatile size for home cooks:</p>
-              <ul>
-                <li>Big enough for real meal prep portions</li>
-                <li>Not so large it dominates your fridge</li>
-                <li>Perfect depth for proteins, grains, vegetables</li>
-                <li>Easy to handle when full</li>
-                <li>Fits on most refrigerator shelves</li>
-              </ul>
-              <p className="font-semibold mt-4">
-                Recommendation: Buy at least one 6-pack (6 pans + 6 lids). If you meal prep seriously, buy two 6-packs.
-              </p>
-            </div>
-
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-6">
-              <h3 className="text-xl font-bold mb-3">Add This: 4-Inch 1/6 Pans</h3>
-              <p>
-                <a href={relatedAffiliateLink} className="text-orange-600 hover:underline font-semibold">
-                  Get the 4-Inch 1/6 Pan 6-Pack with Lids
-                </a>
-              </p>
-              <p className="mt-3">The shallower version is great for:</p>
-              <ul>
-                <li>Shredded cheese storage</li>
-                <li>Marinating proteins (more surface area)</li>
-                <li>Smaller leftover portions</li>
-                <li>Prepped vegetables</li>
-                <li>Sauces and dips</li>
-              </ul>
-              <p className="font-semibold mt-4">
-                Recommendation: Buy one 6-pack to complement your 6-inch pans.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Link to Hotel Pan System Guide */}
-        <section className="mb-12 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl border-2 border-blue-200">
-          <h3 className="text-2xl font-bold mb-4 text-gray-900">Learn More About the Hotel Pan System</h3>
-          <p className="text-lg text-gray-700 mb-4">
-            Want to understand the complete hotel pan system used in every professional kitchen? Check out my comprehensive guide.
-          </p>
-          <Link
-            href="/blog/hotel-pan-system-restaurant-organization-home"
-            className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200"
-          >
-            Read the Complete Hotel Pan System Guide →
-          </Link>
-        </section>
-
-        {/* FTC Disclosure */}
-        <FTCDisclosure />
-
-        {/* FAQ Section */}
-        <section className="mb-12" id="faq">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Frequently Asked Questions</h2>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-            <div className="space-y-6">
-              {faqData.map((faq, index) => (
-                <div key={index} className={index !== faqData.length - 1 ? "border-b border-gray-200 pb-6" : ""}>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">
-                    {faq.question}
-                  </h3>
-                  <p className="text-slate-700">
-                    {faq.answer}
-                  </p>
+                      {/* V2: TEXT LINK UNDER BUTTON */}
+                      <p className="text-center mt-2 text-sm">
+                        <a
+                          href={option.affiliateUrl}
+                          className="text-orange-700 hover:text-orange-800 underline font-medium"
+                          target="_blank"
+                          rel="noopener noreferrer sponsored"
+                        >
+                          → View {option.size} on Amazon
+                        </a>
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <h4 className="font-bold text-base mb-3 text-gray-900">Replacement Lids</h4>
+                  <div className="space-y-3">
+                    {reviewData.sizeOptions.lidOptions.map((lid) => (
+                      <div key={lid.id} className="flex items-center justify-between bg-gray-50 p-3 rounded-lg">
+                        <div className="flex-1">
+                          <p className="font-semibold text-sm text-gray-900">{lid.size}</p>
+                          <p className="text-xs text-gray-600">{lid.includes}</p>
+                        </div>
+                        <a
+                          href={lid.affiliateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer sponsored"
+                          className="text-orange-700 hover:text-orange-800 font-medium text-sm underline"
+                        >
+                          View Lids →
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <p className="text-xs text-slate-500 text-center mt-4">
+                  As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
+                </p>
+              </div>
+            }
+          />
+
+          {/* SECTION 2: TESTING RESULTS */}
+          <TestingResultsGrid
+            title={reviewData.testingResults.title}
+            sections={reviewData.testingResults.sections}
+            testingEnvironment={reviewData.testingResults.testingEnvironment}
+            outstandingPerformance={reviewData.testingResults.outstandingPerformance}
+            minorConsiderations={reviewData.testingResults.minorConsiderations}
+          />
+
+          {/* SECTION 3: PERFORMANCE ANALYSIS */}
+          <PerformanceAnalysis
+            title={reviewData.performanceAnalysis.title}
+            sections={reviewData.performanceAnalysis.sections}
+          />
+
+          {/* SECTION 4: PROS & CONS */}
+          <ProsConsGrid
+            title={reviewData.prosConsTitle}
+            prosTitle={reviewData.prosTitle}
+            consTitle={reviewData.consTitle}
+            pros={productData.pros}
+            cons={productData.cons}
+          />
+
+          {/* SECTION 5: WHO SHOULD BUY */}
+          <WhoShouldBuyGrid
+            title={reviewData.whoShouldBuy.title}
+            perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
+            considerAlternativesTitle={reviewData.whoShouldBuy.considerAlternativesTitle}
+            perfectFor={reviewData.whoShouldBuy.perfectFor}
+            considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
+          />
+
+          {/* SECTION 6: FAQ */}
+          <FAQSection
+            title={reviewData.faq.title}
+            faqs={reviewData.faq.items}
+          />
+
+          {/* SECTION 7: WHERE TO BUY */}
+          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
+              {reviewData.whereToBuy.title}
+            </h2>
+
+            <p className="text-slate-600 leading-relaxed mb-6">
+              {reviewData.whereToBuy.introText}
+            </p>
+
+            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
+              <div className="text-center mb-4">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
+                <p className="text-sm text-slate-900 mb-4">Prime shipping, NSF-certified quality</p>
+              </div>
+
+              <CTAVisibilityTracker
+                ctaId={`${reviewData.productSlug}-where-to-buy-cta`}
+                position="mid_article"
+                productSlug={reviewData.productSlug}
+                merchant="amazon"
+              >
+                <a
+                  href={affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                >
+                  Check Price on Amazon →
+                </a>
+              </CTAVisibilityTracker>
+
+              {/* V2: TEXT LINK UNDER BUTTON */}
+              <p className="text-center mt-3 text-sm">
+                <a
+                  href={affiliateUrl}
+                  className="text-orange-700 hover:text-orange-800 underline font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                >
+                  → View {productData.name} on Amazon
+                </a>
+              </p>
+
+              <p className="text-xs text-slate-500 text-center mt-3">
+                As an Amazon Associate, I earn from qualifying purchases.
+              </p>
+            </div>
+
+            <p className="text-sm text-slate-600 mt-6 italic">
+              {reviewData.whereToBuy.disclaimer}
+            </p>
+          </div>
+
+          {/* SECTION 8: EMAIL CAPTURE */}
+          <EmailCaptureSection
+            title={reviewData.emailCapture.title}
+            subtitle={reviewData.emailCapture.subtitle}
+            inputPlaceholder={reviewData.emailCapture.inputPlaceholder}
+            buttonText={reviewData.emailCapture.buttonText}
+            finePrint={reviewData.emailCapture.finePrint}
+          />
+
+          {/* SECTION 9: BOTTOM LINE */}
+          <BottomLineSection
+            title={reviewData.bottomLine.title}
+            paragraphs={reviewData.bottomLine.paragraphs}
+            customCTA={
+              <div className="bg-white rounded-xl p-6">
+                <CTAVisibilityTracker
+                  ctaId={`${reviewData.productSlug}-bottom-line-cta`}
+                  position="final_cta"
+                  productSlug={reviewData.productSlug}
+                  merchant="amazon"
+                >
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                  >
+                    {reviewData.bottomLine.ctaText}
+                  </a>
+                </CTAVisibilityTracker>
+
+                {/* V2: TEXT LINK UNDER BUTTON */}
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
+                </p>
+
+                <p className="text-xs text-slate-500 text-center mt-3">
+                  As an Amazon Associate, I earn from qualifying purchases.
+                </p>
+              </div>
+            }
+          />
+
+          {/* SECTION 10: RELATED PRODUCTS */}
+          <RelatedProductsGrid
+            title={reviewData.relatedProducts.title}
+            products={reviewData.relatedProducts.products}
+          />
+
+          {/* SECTION 11: AUTHOR BIO */}
+          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6 pb-6 border-b border-gray-200">
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-600 to-amber-500 rounded-full flex items-center justify-center text-[40px] flex-shrink-0">
+                  👨‍🍳
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-xl font-bold text-slate-900 mb-2 mt-0">About Scott Bradley</h3>
+                  <p className="text-base text-slate-600 m-0">Professional Chef • 24 Years in Professional Kitchens</p>
+                </div>
+              </div>
+
+              <div className="text-slate-600 leading-[1.8]">
+                <p className="mb-4">
+                  <strong>Scott Bradley brings 24 years of professional kitchen experience to Chef Approved Tools.</strong> As former Kitchen Manager at Mellow Mushroom, he managed operations generating $80K+ monthly revenue while overseeing equipment procurement, staff training, and quality control for a high-volume operation.
+                </p>
+
+                <p className="mb-4">
+                  His professional background spans multiple restaurant environments including Purple Café, Feierabend, Il Pizzaiolo, and Paragary&apos;s, giving him hands-on experience with equipment across different cuisines, cooking styles, and volume levels. This diverse experience informs every equipment recommendation on this site.
+                </p>
+
+                <p className="mb-0">
+                  <strong>All reviews are based on actual professional testing</strong>—equipment used daily in restaurant environments or tested extensively in home settings. No free samples, no sponsored content, just honest assessments from someone who&apos;s spent decades relying on kitchen tools to do their job.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-6 border-t border-gray-200">
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">🎓</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Culinary Degree</strong>
+                    Seattle Central College (2005-2007)
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">👨‍🍳</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Professional Experience</strong>
+                    24 years in professional kitchens
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">🏆</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Professional Roles</strong>
+                    Kitchen Manager, Lead Line, Expo, Pizzaiolo
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">🔧</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Testing Approach</strong>
+                    Tier 1: Professional use | Tier 2: Long-term personal | Tier 3: Expert evaluation
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
 
-        {/* Final CTA */}
-        <section className="mb-12 bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-xl border-2 border-orange-200">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900 text-center">
-            Final Recommendation
-          </h2>
-
-          <p className="text-lg text-slate-700 mb-6 text-center max-w-2xl mx-auto">
-            After 20 years of daily home use, small plastic hotel pans are the best kitchen organization upgrade
-            you can make. Trust the system that every professional kitchen uses.
-          </p>
-
-          <div className="flex justify-center mb-4">
-            <CTAVisibilityTracker
-              ctaId={`review-${productData.slug}-final_cta`}
-              position="final_cta"
-              productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <AffiliateButton
-                href={affiliateLink}
-                merchant="amazon"
-                product={productData.slug}
-                position="final_cta"
-                variant="primary"
-              >
-                Check Amazon Price →
-              </AffiliateButton>
-            </CTAVisibilityTracker>
-          </div>
-
-          <p className="text-sm text-gray-600 text-center">
-            Free shipping with Amazon Prime | Easy returns
-          </p>
-        </section>
-
-      </article>
-
-      {/* Structured Data Schemas */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateProductSchema(productData))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema(faqData))
-        }}
-      />
-
-    </div>
+        </div>
+      </div>
+    </>
   )
 }
