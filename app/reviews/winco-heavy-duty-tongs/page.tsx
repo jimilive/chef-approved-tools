@@ -1,948 +1,383 @@
-import { Metadata } from 'next'
-import Image from 'next/image'
-import FTCDisclosure from '@/components/FTCDisclosure'
-import { Tier3Badge } from '@/components/ReviewTierBadge'
-
-import AffiliateButton from '@/components/AffiliateButton';
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import Link from 'next/link'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import {
+  ReviewHero,
+  TestingResultsGrid,
+  PerformanceAnalysis,
+  ProsConsGrid,
+  WhoShouldBuyGrid,
+  FAQSection,
+  EmailCaptureSection,
+  BottomLineSection,
+  RelatedProductsGrid
+} from '@/components/review'
 
-export const dynamic = 'force-dynamic'
+// Import review data
+import { reviewData } from './winco-heavy-duty-tongs-data'
 
+// ISR configuration for better performance
+export const revalidate = 3600 // 1 hour cache
+export const fetchCache = 'force-cache'
+
+// Generate metadata dynamically
 export async function generateMetadata(): Promise<Metadata> {
+  const product = await getProductBySlug(reviewData.productSlug)
+  const productData = product || reviewData.legacyProductData
+
   return {
+    title: reviewData.metadata.title,
+    description: reviewData.metadata.description,
     alternates: {
       canonical: 'https://www.chefapprovedtools.com/reviews/winco-heavy-duty-tongs',
     },
-
-    title: 'Winco Extra Heavyweight Tongs: Restaurant Grade',
-    description: 'Professional chef review of Winco extra heavyweight tongs after 24 years of professional cooking. Restaurant-grade tongs at a fraction of the price.',
     openGraph: {
-      title: 'Winco Extra Heavyweight Tongs: 24-Year Professional Review',
-      description: 'Restaurant-grade tongs tested 24 years in professional kitchens.',
-      type: 'article',
-      url: 'https://www.chefapprovedtools.com/reviews/winco-heavy-duty-tongs',
+      title: reviewData.metadata.ogTitle,
+      description: reviewData.metadata.ogDescription,
+      url: `https://www.chefapprovedtools.com/reviews/${reviewData.productSlug}`,
       siteName: 'Chef Approved Tools',
-      images: [generateOGImageURL({
-        title: "Winco Extra Heavyweight Tongs Review",
-        rating: 5.0,
-        testingPeriod: "24 Years Professional Use",
-        tier: 3
-      })],
+      images: [
+        {
+          url: generateOGImageURL({
+            title: productData.name,
+            rating: productData.expertRating ?? reviewData.hero.rating,
+            testingPeriod: reviewData.metadata.testingPeriod,
+            tier: reviewData.metadata.tier as 1 | 2 | 3,
+          }),
+          width: 1200,
+          height: 630,
+          alt: `${productData.name} - Professional Review`,
+        },
+      ],
+      type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Winco Extra Heavyweight Tongs: 24-Year Professional Review',
-      description: 'Restaurant-grade tongs tested 24 years.',
+      title: reviewData.metadata.ogTitle,
+      description: reviewData.metadata.ogDescription,
       images: [generateOGImageURL({
-        title: "Winco Extra Heavyweight Tongs Review",
-        rating: 5.0,
-        testingPeriod: "24 Years Professional Use",
-        tier: 3
+        title: productData.name,
+        rating: productData.expertRating ?? reviewData.hero.rating,
+        testingPeriod: reviewData.metadata.testingPeriod,
+        tier: reviewData.metadata.tier as 1 | 2 | 3,
       })],
     },
   }
 }
 
-const legacyProductData = {
-  name: "Winco Extra Heavyweight Stainless Steel Tongs",
-  slug: "winco-heavy-duty-tongs",
-  brand: "Winco",
-  model: "UT-12",
-  category: "Kitchen Tongs",
-  rating: 5.0,
-  reviewCount: 1,
-  pros: [
-    "Restaurant-grade stainless steel construction at budget price ($8)",
-    "Perfect spring tension that maintains grip strength over years of use",
-    "Scalloped edges provide secure grip on all food types without slipping",
-    "Dishwasher-safe and heat-resistant up to 500°F for grill use"
-  ],
-  cons: [
-    "All-metal design conducts heat during grill use (requires side towel)",
-    "No locking mechanism for compact storage",
-    "Can scratch non-stick cookware (use silicone tongs for non-stick)"
-  ],
-  affiliateLinks: [],
-  expertRating: 5.0,
-  expertOpinion: "Restaurant-quality tongs at budget price that have proven themselves through 24 years of professional kitchen use - buy three pairs and never worry about tongs again.",
-  dateAdded: "2025-01-15",
-  lastUpdated: "2025-01-15"
-};
+export default async function ProductReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug(reviewData.productSlug)
 
-const faqData = [
-  {
-    question: "Are Winco tongs dishwasher safe?",
-    answer: "Yes, all stainless steel Winco tongs are dishwasher safe. They hold up well in commercial dishwashers."
-  },
-  {
-    question: "Do Winco tongs have a locking mechanism?",
-    answer: "Most standard Winco utility tongs (like the UT-12) do NOT have a lock. Some newer models do, but the classic versions store unlocked. Store them in a drawer or hang them."
-  },
-  {
-    question: "Should I get the 9-inch or 12-inch tongs?",
-    answer: "I use both daily. The 12-inch are perfect for grilling and keeping your hands away from heat - this is the standard professional length. The 9-inch are more maneuverable for sautéing and stovetop cooking. Both sizes available above with the same extra heavyweight construction and spring tension. If you only buy one pair, get the 12-inch for versatility."
-  },
-  {
-    question: "How's the spring tension on Winco tongs?",
-    answer: "The coiled spring provides strong, consistent tension that doesn't weaken over time. This is a key feature that makes them professional-grade."
-  },
-  {
-    question: "How heat-resistant are stainless steel tongs?",
-    answer: "Stainless steel handles heat well but will get hot with prolonged contact with hot cookware. The scalloped tips can withstand direct grill contact."
-  },
-  {
-    question: "Are these tongs heavy or lightweight?",
-    answer: "Winco tongs are heavier than typical home-use tongs. The thick stainless steel (0.9mm-1.2mm) makes them sturdy enough for commercial kitchens."
-  },
-  {
-    question: "Can I use Winco tongs on nonstick cookware?",
-    answer: "Yes, but be gentle. The scalloped stainless steel edges can scratch nonstick surfaces if you're rough. For nonstick, consider silicone-tipped tongs."
-  },
-  {
-    question: "How do Winco tongs compare to OXO tongs?",
-    answer: "Winco tongs are more industrial - heavier, no frills, and dirt cheap ($2-5). OXO tongs have cushioned handles, locks, and cost more ($10-15). Both are excellent but serve different needs."
-  }
-];
+  // Merge Supabase data with legacy data
+  const productData = product ? {
+    ...reviewData.legacyProductData,
+    ...product,
+    pros: product.pros && product.pros.length > 0 ? product.pros : reviewData.legacyProductData.pros,
+    cons: product.cons && product.cons.length > 0 ? product.cons : reviewData.legacyProductData.cons,
+    affiliateLinks: product.affiliateLinks && product.affiliateLinks.length > 0
+      ? product.affiliateLinks
+      : reviewData.legacyProductData.affiliateLinks
+  } : reviewData.legacyProductData
 
-export default async function WincoHeavyDutyTongsReview() {
-  const product = await getProductBySlug('winco-heavy-duty-tongs')
-  if (!product) {
-    throw new Error('Product not found: winco-heavy-duty-tongs')
-  }
+  // Get affiliate URLs for both size variants
+  const link12inch = product?.affiliateLinks.find(link => link.tag === '12-inch')
+  const link9inch = product?.affiliateLinks.find(link => link.tag === '9-inch')
 
-  // Get affiliate URLs for both size variants from the same product
-  // Look for links tagged with '12-inch' and '9-inch' in the affiliateLinks array
-  const link12inch = product.affiliateLinks.find(link => link.tag === '12-inch')
-  const link9inch = product.affiliateLinks.find(link => link.tag === '9-inch')
-
-  // Use tagged links if available, otherwise use primary for 12" and fallback for 9"
-  const affiliateUrl = link12inch?.url || getPrimaryAffiliateLink(product)
+  const affiliateUrl = link12inch?.url || (product ? getPrimaryAffiliateLink(product) : '#')
   const variant9inchUrl = link9inch?.url || 'https://amzn.to/4oilO91'
 
-  const productData = {
-    ...legacyProductData,
-    ...product,
-    affiliateLinks: legacyProductData.affiliateLinks
-  }
-
+  // Generate breadcrumbs
   const breadcrumbs = [
     { name: "Home", url: "https://www.chefapprovedtools.com" },
     { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
     { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-  ];
+  ]
+
+  // Generate schemas
+  const productSchema = generateProductSchema({
+    name: productData.name,
+    slug: productData.slug,
+    description: productData.expertOpinion,
+    brand: productData.brand,
+    rating: productData.expertRating,
+    reviewCount: 1,
+    category: productData.category,
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
+  const faqSchema = generateFAQSchema(reviewData.faqData)
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      {/* Schema.org markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
+      {/* Product view tracking */}
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
-        tier={3}
-        testingPeriod="8 Years"
-        rating={4.6}
-        hook="Locking mechanism works. Durable stainless steel."
-        category="Utensils"
+        tier={reviewData.metadata.tier as 1 | 2 | 3}
+        testingPeriod={reviewData.tracking.testingPeriod}
+        rating={productData.expertRating}
+        hook={reviewData.tracking.hook}
+        category={productData.category}
       />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="inline-block bg-orange-500/20 border border-orange-500/30 rounded-full px-4 py-2 mb-6">
-            <span className="text-orange-200 font-semibold text-sm">PROFESSIONAL KITCHEN TESTED</span>
+      <div className="bg-gray-50 min-h-screen">
+        <div className="max-w-[900px] mx-auto px-5">
+
+          {/* BREADCRUMBS */}
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+            <Link href="/" className="hover:text-orange-700">Home</Link>
+            {' / '}
+            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+            {' / '}
+            {reviewData.breadcrumb.productName}
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Winco Extra Heavyweight Tongs Review
-          </h1>
+          {/* SECTION 1: HERO */}
+          <ReviewHero
+            title={reviewData.hero.title}
+            authorName={reviewData.hero.authorName}
+            authorCredentials={reviewData.hero.authorCredentials}
+            rating={reviewData.hero.rating}
+            tierBadge={reviewData.hero.tierBadge}
+            verdict={reviewData.hero.verdict}
+            verdictStrong={reviewData.hero.verdictStrong}
+            customCTA={
+              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
+                <h3 className="text-xl font-bold mb-4 text-gray-900 mt-0">{reviewData.whereToBuy.title}</h3>
+                <p className="text-gray-700 mb-6">{reviewData.whereToBuy.introText}</p>
 
-          <p className="text-xl text-slate-300 mb-6">
-            Restaurant-grade tongs that actually last - tested through 24 years of professional cooking
-          </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-gradient-to-br from-orange-50 to-red-50 p-5 rounded-lg border-2 border-orange-300">
+                    <h4 className="font-bold text-lg mb-2 text-gray-900 mt-0">12&quot; Tongs (Grilling)</h4>
+                    <p className="text-sm text-gray-700 mb-4">
+                      Perfect for grilling and keeping your hands away from heat. The standard professional length.
+                    </p>
+                    <CTAVisibilityTracker
+                      ctaId={`${reviewData.productSlug}-size-12inch`}
+                      position="above_fold"
+                      productSlug={reviewData.productSlug}
+                      merchant="amazon"
+                    >
+                      <a
+                        href={affiliateUrl}
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 py-3 rounded-lg transition-all hover:scale-105 active:scale-95 text-center"
+                      >
+                        Check 12&quot; Price →
+                      </a>
+                    </CTAVisibilityTracker>
+                  </div>
 
-          <div className="flex items-center gap-6 text-sm">
-            <div className="flex items-center gap-2">
-              <span className="text-yellow-400">★★★★★</span>
-              <span>5/5</span>
-            </div>
-            <div>Professional Grade</div>
-            <div>$8</div>
-          </div>
-        </div>
-      </section>
+                  <div className="bg-gradient-to-br from-orange-50 to-red-50 p-5 rounded-lg border-2 border-orange-300">
+                    <h4 className="font-bold text-lg mb-2 text-gray-900 mt-0">9&quot; Tongs (Sautéing)</h4>
+                    <p className="text-sm text-gray-700 mb-4">
+                      More maneuverable for sautéing and stovetop cooking. Perfect for everyday kitchen tasks.
+                    </p>
+                    <CTAVisibilityTracker
+                      ctaId={`${reviewData.productSlug}-size-9inch`}
+                      position="above_fold"
+                      productSlug="winco-9-inch-tongs"
+                      merchant="amazon"
+                    >
+                      <a
+                        href={variant9inchUrl}
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 py-3 rounded-lg transition-all hover:scale-105 active:scale-95 text-center"
+                      >
+                        Check 9&quot; Price →
+                      </a>
+                    </CTAVisibilityTracker>
+                  </div>
+                </div>
 
-      {/* Main Content */}
-      <article className="max-w-4xl mx-auto px-4 py-12">
-
-        {/* Product Image */}
-        <div className="mb-8">
-          <Image
-            src="/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-9-inch-1.webp"
-            alt="Winco Extra Heavyweight Tongs"
-            width={1000}
-            height={1500}
-            className="rounded-lg w-full h-auto max-w-2xl mx-auto"
-            priority
+                <p className="text-xs text-slate-500 text-center mt-4">
+                  {reviewData.whereToBuy.disclaimer}
+                </p>
+              </div>
+            }
           />
-        </div>
 
-        {/* Quick Verdict */}
-        <div className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-8">
-          <h2 className="text-2xl font-bold mb-3 text-gray-900">The Bottom Line</h2>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            These are the exact tongs I used in every restaurant kitchen. Strong, reliable, dishwasher-safe.
-            Restaurant-grade tongs at a fraction of the price. At $8, buy three and never worry about tongs again.
-          </p>
-        </div>
+          {/* SECTION 2: TESTING RESULTS */}
+          <TestingResultsGrid
+            title={reviewData.testingResults.title}
+            sections={reviewData.testingResults.sections}
+            testingEnvironment={reviewData.testingResults.testingEnvironment}
+            outstandingPerformance={reviewData.testingResults.outstandingPerformance}
+            minorConsiderations={reviewData.testingResults.minorConsiderations}
+          />
 
-        {/* Size Selection */}
-        <div className="bg-white border-2 border-orange-200 rounded-xl p-6 mb-8">
-          <h2 className="text-2xl font-bold mb-4 text-gray-900">Choose Your Length</h2>
-          <p className="text-gray-700 mb-6">
-            Both sizes are the same extra heavyweight construction with perfect spring tension.
-            I keep both in my kitchen - 9&quot; for sautéing and general tasks, 12&quot; for grilling and working over heat.
-          </p>
+          {/* SECTION 3: PERFORMANCE ANALYSIS */}
+          <PerformanceAnalysis
+            title={reviewData.performanceAnalysis.title}
+            sections={reviewData.performanceAnalysis.sections}
+          />
 
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-gradient-to-br from-orange-50 to-red-50 p-5 rounded-lg border-2 border-orange-300">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">12&quot; Tongs (Grilling & High Heat)</h3>
-              <p className="text-sm text-gray-700 mb-4">
-                Perfect for grilling and keeping your hands away from heat. The standard professional length.
-              </p>
-              <CTAVisibilityTracker
-                ctaId={`review-${legacyProductData.slug}-size-12inch`}
-                position="above_fold"
-                productSlug={legacyProductData.slug}
-                merchant="amazon"
-              >
-                <AffiliateButton
-                  href={affiliateUrl}
+          {/* SECTION 4: PROS & CONS */}
+          <ProsConsGrid
+            title={reviewData.prosConsTitle}
+            prosTitle={reviewData.prosTitle}
+            consTitle={reviewData.consTitle}
+            pros={productData.pros}
+            cons={productData.cons}
+          />
+
+          {/* SECTION 5: WHO SHOULD BUY */}
+          <WhoShouldBuyGrid
+            title={reviewData.whoShouldBuy.title}
+            perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
+            considerAlternativesTitle={reviewData.whoShouldBuy.considerAlternativesTitle}
+            perfectFor={reviewData.whoShouldBuy.perfectFor}
+            considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
+          />
+
+          {/* SECTION 6: FAQ */}
+          <FAQSection
+            title={reviewData.faq.title}
+            faqs={reviewData.faq.items}
+          />
+
+          {/* SECTION 7: EMAIL CAPTURE */}
+          <EmailCaptureSection
+            title={reviewData.emailCapture.title}
+            subtitle={reviewData.emailCapture.subtitle}
+            inputPlaceholder={reviewData.emailCapture.inputPlaceholder}
+            buttonText={reviewData.emailCapture.buttonText}
+            finePrint={reviewData.emailCapture.finePrint}
+          />
+
+          {/* SECTION 8: BOTTOM LINE */}
+          <BottomLineSection
+            title={reviewData.bottomLine.title}
+            paragraphs={reviewData.bottomLine.paragraphs}
+            customCTA={
+              <div className="bg-white rounded-xl p-6">
+                <CTAVisibilityTracker
+                  ctaId={`${reviewData.productSlug}-bottom-line-cta`}
+                  position="final_cta"
+                  productSlug={reviewData.productSlug}
                   merchant="amazon"
-                  product={legacyProductData.slug}
-                  position="above_fold"
-                  variant="primary"
                 >
-                  Check 12&quot; Price →
-                </AffiliateButton>
-              </CTAVisibilityTracker>
-            </div>
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                  >
+                    {reviewData.bottomLine.ctaText}
+                  </a>
+                </CTAVisibilityTracker>
 
-            <div className="bg-gradient-to-br from-orange-50 to-red-50 p-5 rounded-lg border-2 border-orange-300">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">9&quot; Tongs (Sautéing & General Use)</h3>
-              <p className="text-sm text-gray-700 mb-4">
-                More maneuverable for sautéing and stovetop cooking. Perfect for everyday kitchen tasks.
-              </p>
-              <CTAVisibilityTracker
-                ctaId={`review-${legacyProductData.slug}-size-9inch`}
-                position="above_fold"
-                productSlug="winco-9-inch-tongs"
-                merchant="amazon"
-              >
-                <AffiliateButton
-                  href={variant9inchUrl}
-                  merchant="amazon"
-                  product="winco-9-inch-tongs"
-                  position="above_fold"
-                  variant="secondary"
-                >
-                  Check 9&quot; Price →
-                </AffiliateButton>
-              </CTAVisibilityTracker>
+                {/* V2: TEXT LINK UNDER BUTTON */}
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
+                </p>
+
+                <p className="text-xs text-slate-500 text-center mt-3">
+                  As an Amazon Associate, I earn from qualifying purchases.
+                </p>
+              </div>
+            }
+          />
+
+          {/* SECTION 9: RELATED PRODUCTS */}
+          <RelatedProductsGrid
+            title={reviewData.relatedProducts.title}
+            products={reviewData.relatedProducts.products}
+          />
+
+          {/* SECTION 10: AUTHOR BIO */}
+          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6 pb-6 border-b border-gray-200">
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-600 to-amber-500 rounded-full flex items-center justify-center text-[40px] flex-shrink-0">
+                  👨‍🍳
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-xl font-bold text-slate-900 mb-2 mt-0">About Scott Bradley</h3>
+                  <p className="text-base text-slate-600 m-0">Professional Chef • 24 Years in Professional Kitchens</p>
+                </div>
+              </div>
+
+              <div className="text-slate-600 leading-[1.8]">
+                <p className="mb-4">
+                  <strong>Scott Bradley brings 24 years of professional kitchen experience to Chef Approved Tools.</strong> As former Kitchen Manager at Mellow Mushroom, he managed operations generating $80K+ monthly revenue while overseeing equipment procurement, staff training, and quality control for a high-volume operation.
+                </p>
+
+                <p className="mb-4">
+                  His professional background spans multiple restaurant environments including Purple Café, Feierabend, Il Pizzaiolo, and Paragary&apos;s, giving him hands-on experience with equipment across different cuisines, cooking styles, and volume levels. This diverse experience informs every equipment recommendation on this site.
+                </p>
+
+                <p className="mb-0">
+                  <strong>All reviews are based on actual professional testing</strong>—equipment used daily in restaurant environments or tested extensively in home settings. No free samples, no sponsored content, just honest assessments from someone who&apos;s spent decades relying on kitchen tools to do their job.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-6 border-t border-gray-200">
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">🎓</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Culinary Degree</strong>
+                    Seattle Central College (2005-2007)
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">👨‍🍳</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Professional Experience</strong>
+                    24 years in professional kitchens
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">🏆</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Professional Roles</strong>
+                    Kitchen Manager, Lead Line, Expo, Pizzaiolo
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">🔧</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Testing Approach</strong>
+                    Tier 1: Professional use | Tier 2: Long-term personal | Tier 3: Expert evaluation
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
         </div>
-
-        {/* Why I Chose This */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Why This Is in My Daily Toolkit</h2>
-
-          <div className="prose prose-lg max-w-none text-gray-700">
-            <p>
-              After 45 years of cooking, I know tongs. I&apos;ve used the flimsy ones that lose tension
-              after a month, the silicone ones that melt on the grill, the expensive ones that aren&apos;t any better
-              than the cheap ones.
-            </p>
-
-            <p>
-              Winco makes restaurant equipment. These are the same tongs used in commercial kitchens everywhere - not
-              because they&apos;re fancy, but because they work. Heavy-duty stainless steel construction. Proper spring
-              tension that doesn&apos;t wear out. Scalloped edges that grip without slipping.
-            </p>
-
-            <p>
-              I keep three pairs in my home kitchen: one for the grill, one for the stove, one for serving. At $8 each,
-              they&apos;re cheaper than most home kitchen tongs and will outlast them by years.
-            </p>
-          </div>
-        </section>
-
-        {/* What Makes It Work */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">What Makes These Tongs Work</h2>
-
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Heavy-Duty Construction</h3>
-              <p className="text-gray-700">
-                Made from thick stainless steel that won&apos;t bend or warp. One-piece design with no weak points or
-                parts that can break. Heat-resistant up to high temperatures. Built to withstand commercial kitchen
-                abuse.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Perfect Spring Tension</h3>
-              <p className="text-gray-700">
-                The spring tension is calibrated for professional use - strong enough to grip firmly, light enough to
-                not cause hand fatigue. The tension stays consistent over years of use. No flimsy springs that lose
-                grip over time.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Scalloped Gripping Edges</h3>
-              <p className="text-gray-700">
-                The scalloped edges grip food securely without damaging it. Works on everything from delicate fish to
-                heavy steaks. The edges won&apos;t slip on smooth or greasy foods. Dishwasher-safe stainless steel.
-              </p>
-            </div>
-          </div>
-
-          {/* Mid-article CTA */}
-          <div className="mt-8 bg-orange-50 border border-orange-200 rounded-lg p-6 text-center">
-            <p className="text-gray-700 mb-4">Ready to upgrade to restaurant-quality tongs?</p>
-            <CTAVisibilityTracker
-              ctaId={`review-${productData.slug}-mid_article`}
-              position="mid_article"
-              productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <AffiliateButton
-                href={affiliateUrl}
-                merchant="amazon"
-                product="winco-heavy-duty-tongs"
-                position="mid_article"
-                variant="secondary"
-              >
-                Check Current Price on Amazon
-              </AffiliateButton>
-            </CTAVisibilityTracker>
-          </div>
-        </section>
-
-        {/* Real Restaurant Use */}
-        <section className="mb-12 bg-slate-50 p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Real Restaurant Experience</h2>
-
-          <div className="prose prose-lg max-w-none text-gray-700">
-            <p className="font-semibold">
-              From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants,
-              I&apos;ve used these tongs to:
-            </p>
-
-            <ul className="space-y-2 mt-4">
-              <li>Flip hundreds of steaks and burgers on the grill</li>
-              <li>Toss pasta and sauté vegetables</li>
-              <li>Plate delicate items during service</li>
-              <li>Move hot pans and sheet trays</li>
-              <li>Handle everything from salads to grilled proteins</li>
-            </ul>
-
-            <p className="mt-6">
-              In a professional kitchen, tongs are an extension of your hand. These Winco tongs have the right weight,
-              the right grip, and the right tension. They&apos;re the ones every line cook reaches for first.
-            </p>
-          </div>
-        </section>
-
-        {/* Pros & Cons */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Honest Assessment</h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-green-50 p-6 rounded-lg border border-green-200">
-              <h3 className="text-xl font-bold mb-4 text-green-900">What Works</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>✓ Restaurant-grade quality at budget price ($8)</li>
-                <li>✓ Perfect spring tension that lasts</li>
-                <li>✓ Heavy-duty stainless steel construction</li>
-                <li>✓ Dishwasher-safe</li>
-                <li>✓ Scalloped edges grip securely</li>
-                <li>✓ Heat-resistant for grill and stove use</li>
-              </ul>
-            </div>
-
-            <div className="bg-red-50 p-6 rounded-lg border border-red-200">
-              <h3 className="text-xl font-bold mb-4 text-red-900">Limitations</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>✗ All-metal design gets hot (use side towel)</li>
-                <li>✗ No locking mechanism for storage</li>
-                <li>✗ Plain appearance (no fancy design)</li>
-                <li>✗ Can scratch non-stick pans (use silicone for those)</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Who Should Buy This */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Who These Tongs Are For</h2>
-
-          <div className="bg-white p-6 rounded-lg border-l-4 border-orange-600 mb-6">
-            <h3 className="text-xl font-bold mb-3 text-gray-900">Perfect If You:</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Grill regularly and need reliable tongs</li>
-              <li>• Want professional-quality at budget price</li>
-              <li>• Cook frequently and need durable tools</li>
-              <li>• Value function over fancy features</li>
-              <li>• Need multiple pairs for different tasks</li>
-            </ul>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg border-l-4 border-gray-400">
-            <h3 className="text-xl font-bold mb-3 text-gray-900">Skip If You:</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Only use non-stick cookware (get silicone tongs)</li>
-              <li>• Want a locking mechanism for storage</li>
-              <li>• Prefer heat-proof handles</li>
-              <li>• Rarely use tongs in cooking</li>
-            </ul>
-          </div>
-        </section>
-
-        {/* Care & Maintenance */}
-        <section className="mb-12 bg-blue-50 p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">How to Make Them Last Forever</h2>
-
-          <div className="space-y-4 text-gray-700">
-            <div>
-              <h3 className="font-bold text-lg mb-2">Daily Care:</h3>
-              <ul className="space-y-1 ml-4">
-                <li>• Throw in the dishwasher or hand wash</li>
-                <li>• Dry thoroughly to prevent water spots</li>
-                <li>• Store in utensil crock or hang on hook</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-lg mb-2">Maintenance:</h3>
-              <ul className="space-y-1 ml-4">
-                <li>• Check spring tension periodically (rarely an issue)</li>
-                <li>• Clean any buildup from scalloped edges</li>
-                <li>• Minimal maintenance required</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-lg mb-2">What to Avoid:</h3>
-              <ul className="space-y-1 ml-4">
-                <li>• Don&apos;t use on non-stick surfaces (use silicone tongs)</li>
-                <li>• Avoid leaving on hot grill (they get hot)</li>
-                <li>• Don&apos;t use for prying or twisting heavy items</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Buy Section */}
-        <section className="mb-12 bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-xl border-2 border-orange-200">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready to Add These to Your Kitchen?</h2>
-
-          <p className="text-lg text-gray-700 mb-6">
-            These are one of the 11 tools I use most in my home kitchen after 24 years of professional cooking.
-            At $8, buy a few pairs. You&apos;ll use them for everything.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <CTAVisibilityTracker
-              ctaId={`review-${productData.slug}-above_fold`}
-              position="above_fold"
-              productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <AffiliateButton
-                href={affiliateUrl}
-                merchant="amazon"
-                product={productData.slug}
-                position="above_fold"
-                variant="primary"
-              >
-                Check Current Price on Amazon →
-              </AffiliateButton>
-            </CTAVisibilityTracker>
-
-            <a
-              href="/reviews"
-              className="inline-flex items-center justify-center border-2 border-orange-600 text-orange-600 hover:bg-orange-50 font-bold py-4 px-8 rounded-lg transition-all duration-200"
-            >
-              See All Reviews
-            </a>
-          </div>
-
-          <p className="text-sm text-gray-600 mt-4">
-            💡 Also available at restaurant supply stores
-          </p>
-        </section>
-
-        {/* FTC Disclosure */}
-        <FTCDisclosure />
-
-        {/* Quick Navigation */}
-        <nav className="bg-slate-50 p-4 rounded-lg mb-8 border border-slate-200">
-          <p className="font-semibold text-slate-900 mb-2">Quick Navigation:</p>
-          <div className="flex flex-wrap gap-2 text-sm">
-            <a href="#testimonials" className="text-orange-600 hover:text-orange-800">User Reviews</a>
-            <span className="text-slate-400">|</span>
-            <a href="#cost-analysis" className="text-orange-600 hover:text-orange-800">Cost Analysis</a>
-            <span className="text-slate-400">|</span>
-            <a href="#performance" className="text-orange-600 hover:text-orange-800">Performance</a>
-            <span className="text-slate-400">|</span>
-            <a href="#comparison" className="text-orange-600 hover:text-orange-800">vs. Competitors</a>
-            <span className="text-slate-400">|</span>
-            <a href="#specs" className="text-orange-600 hover:text-orange-800">Specifications</a>
-            <span className="text-slate-400">|</span>
-            <a href="#faq" className="text-orange-600 hover:text-orange-800">FAQ</a>
-          </div>
-        </nav>
-
-        <section className="mb-12" id="testimonials">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">What Real Users Are Saying</h2>
-          <p className="text-sm text-slate-600 mb-4 italic">
-            Customer reviews curated from Amazon verified purchasers.
-          </p>
-
-          <div className="space-y-4">
-            <div className="bg-white p-5 rounded-lg border border-gray-200">
-              <p className="text-slate-700 mb-2">
-                &quot;These are the real deal. I&apos;ve been using the same pair for over 5 years in my home kitchen and they&apos;re still as solid as the day I bought them. The spring tension hasn&apos;t weakened at all.&quot;
-              </p>
-              <p className="text-sm text-slate-500">— Amazon verified purchaser (M.K., November 2024)</p>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg border border-gray-200">
-              <p className="text-slate-700 mb-2">
-                &quot;Bought these after reading they&apos;re restaurant quality. Best $8 I&apos;ve spent on kitchen tools. They grip steaks on the grill perfectly and clean up in the dishwasher without any issues.&quot;
-              </p>
-              <p className="text-sm text-slate-500">— Amazon verified purchaser (R.T., October 2024)</p>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg border border-gray-200">
-              <p className="text-slate-700 mb-2">
-                &quot;I work in a busy restaurant and we use these exact tongs. When I needed tongs for home, I bought the same ones. Why mess with perfection? They handle everything from delicate fish to heavy roasts.&quot;
-              </p>
-              <p className="text-sm text-slate-500">— Amazon verified purchaser (J.C., September 2024)</p>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg border border-gray-200">
-              <p className="text-slate-700 mb-2">
-                &quot;Finally found tongs that don&apos;t lose their grip after a few months. The stainless steel is thick and sturdy. I&apos;ve put these through the dishwasher hundreds of times and they still look new.&quot;
-              </p>
-              <p className="text-sm text-slate-500">— Amazon verified purchaser (D.P., August 2024)</p>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg border border-gray-200">
-              <p className="text-slate-700 mb-2">
-                &quot;Great for grilling. Yes, they get hot if you leave them on the grill, but that&apos;s what side towels are for. The metal construction means they&apos;ll never melt or warp like my old silicone ones did.&quot;
-              </p>
-              <p className="text-sm text-slate-500">— Amazon verified purchaser (B.S., July 2024)</p>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg border border-gray-200">
-              <p className="text-slate-700 mb-2">
-                &quot;I bought three pairs after the first one impressed me so much. One for the grill, one for cooking, one for serving. At this price point, there&apos;s no reason not to have multiple pairs.&quot;
-              </p>
-              <p className="text-sm text-slate-500">— Amazon verified purchaser (L.M., June 2024)</p>
-            </div>
-          </div>
-        </section>
-
-
-
-        <section className="mb-12" id="cost-analysis">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Cost-Per-Use Analysis</h2>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-
-            <div className="bg-blue-50 p-5 rounded-lg border border-blue-200 mb-4">
-              <h3 className="font-bold text-slate-900 mb-3">Real-World Value Calculation</h3>
-              <ul className="space-y-2 text-slate-700">
-                <li>• <strong>Initial cost:</strong> ~$8</li>
-                <li>• <strong>Years of use:</strong> 5 years (and still going strong)</li>
-                <li>• <strong>Estimated uses:</strong> 1,800+ uses (daily cooking for 5 years)</li>
-                <li>• <strong>Cost per use:</strong> $0.004 per use</li>
-              </ul>
-            </div>
-
-            <p className="text-slate-700 mb-4">
-              <strong>Value comparison:</strong> Compare this to spending $15-20 on consumer-grade tongs that need replacing every 1-2 years. Over 5 years:
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                <p className="font-semibold text-green-900 mb-2">Winco Restaurant-Grade</p>
-                <p className="text-slate-700">$8 × 1 pair = <strong>$8 total</strong></p>
-                <p className="text-sm text-slate-600 mt-1">Still using the same pair after 5 years</p>
-              </div>
-
-              <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-                <p className="font-semibold text-red-900 mb-2">Consumer-Grade Tongs</p>
-                <p className="text-slate-700">$18 × 3 replacements = <strong>$54 total</strong></p>
-                <p className="text-sm text-slate-600 mt-1">Need replacement every 18-24 months</p>
-              </div>
-            </div>
-
-            <p className="text-slate-700 mt-4">
-              <strong>Bottom line:</strong> These Winco tongs save you $46 over 5 years while providing superior performance. The restaurant-grade construction means you buy once and use for years, not months.
-            </p>
-          </div>
-        </section>
-
-
-
-        <section className="mb-12" id="performance">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Measured Performance Data</h2>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="font-semibold text-slate-900 mb-2">Grip Strength & Durability</p>
-                <p className="text-slate-700 text-sm">
-                  <strong>Spring tension:</strong> Maintains firm grip through 5 years of daily use<br/>
-                  <strong>Material thickness:</strong> 1.5mm stainless steel (thicker than consumer tongs)<br/>
-                  <strong>Grip security:</strong> Scalloped edges prevent slipping on all food types
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="font-semibold text-slate-900 mb-2">Heat Resistance & Cleaning</p>
-                <p className="text-slate-700 text-sm">
-                  <strong>Heat resistance:</strong> Up to 500°F for grill and stovetop use<br/>
-                  <strong>Dishwasher cycles:</strong> 1,500+ cycles without rust or degradation<br/>
-                  <strong>Cleaning time:</strong> 30 seconds hand wash or dishwasher cycle
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="font-semibold text-slate-900 mb-2">Versatility & Comfort</p>
-                <p className="text-slate-700 text-sm">
-                  <strong>Weight:</strong> 4.2 oz (balanced for extended use)<br/>
-                  <strong>Food capacity:</strong> Handles 2-3 lb items securely<br/>
-                  <strong>Fatigue factor:</strong> Comfortable for 30+ minutes continuous use
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="font-semibold text-slate-900 mb-2">Real-World Testing</p>
-                <p className="text-slate-700 text-sm">
-                  <strong>Professional kitchen hours:</strong> 10,000+ hours in restaurant use<br/>
-                  <strong>Home cooking sessions:</strong> 1,800+ meal preparations<br/>
-                  <strong>Failure rate:</strong> Zero failures in 24 years of testing
-                </p>
-              </div>
-            </div>
-
-            <p className="text-slate-700 mt-4 italic text-sm">
-              Performance data based on 24 years of professional restaurant use and 5 years of intensive home kitchen testing.
-            </p>
-          </div>
-        </section>
-
-
-
-        <section className="mb-12" id="specs">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Complete Specifications & Dimensions</h2>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-semibold text-slate-900 mb-3">Technical Specifications</h3>
-                <dl className="space-y-2 text-sm">
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Model Number:</dt>
-                    <dd className="font-semibold">UT-9</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Material:</dt>
-                    <dd className="font-semibold">Stainless Steel</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Construction:</dt>
-                    <dd className="font-semibold">One-piece design</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Edge Type:</dt>
-                    <dd className="font-semibold">Scalloped grip</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Heat Resistance:</dt>
-                    <dd className="font-semibold">Up to 500°F</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Dishwasher Safe:</dt>
-                    <dd className="font-semibold">Yes</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Locking Mechanism:</dt>
-                    <dd className="font-semibold">No</dd>
-                  </div>
-                </dl>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-slate-900 mb-3">Physical Dimensions</h3>
-                <dl className="space-y-2 text-sm">
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Overall Length:</dt>
-                    <dd className="font-semibold">9 inches</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Grip Width:</dt>
-                    <dd className="font-semibold">1.75 inches</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Weight:</dt>
-                    <dd className="font-semibold">4.2 oz</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Material Thickness:</dt>
-                    <dd className="font-semibold">1.5mm</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-gray-100 pb-2">
-                    <dt className="text-slate-600">Available Sizes:</dt>
-                    <dd className="font-semibold">9&quot;, 12&quot;, 16&quot;</dd>
-                  </div>
-                </dl>
-
-                <p className="text-xs text-slate-600 mt-4 italic">
-                  Note: This review covers the 9-inch model, which is ideal for most home cooking tasks.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-
-        <section className="mb-12" id="comparison">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">
-            Comparison vs. Competitors
-          </h2>
-
-          <div className="overflow-x-auto my-5">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="bg-gray-50">
-                  <th className="p-3 text-left border-b-2 border-gray-300">Feature</th>
-                  <th className="p-3 text-left border-b-2 border-gray-300">Winco Extra Heavyweight</th>
-                  <th className="p-3 text-left border-b-2 border-gray-300">OXO Good Grips</th>
-                  <th className="p-3 text-left border-b-2 border-gray-300">All-Clad Stainless</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="p-3 border-b border-gray-300">Price Range</td>
-                  <td className="p-3 border-b border-gray-300 font-bold text-green-600">$7-10</td>
-                  <td className="p-3 border-b border-gray-300">$15-18</td>
-                  <td className="p-3 border-b border-gray-300">$25-30</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="p-3 border-b border-gray-300">Material</td>
-                  <td className="p-3 border-b border-gray-300">Heavy-duty stainless (1.5mm)</td>
-                  <td className="p-3 border-b border-gray-300">Stainless with silicone tips</td>
-                  <td className="p-3 border-b border-gray-300">Stainless steel</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-gray-300">Construction</td>
-                  <td className="p-3 border-b border-gray-300 font-bold">One-piece (no weak points)</td>
-                  <td className="p-3 border-b border-gray-300">Multi-piece assembly</td>
-                  <td className="p-3 border-b border-gray-300">One-piece</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="p-3 border-b border-gray-300">Dishwasher Safe</td>
-                  <td className="p-3 border-b border-gray-300">✓ Yes</td>
-                  <td className="p-3 border-b border-gray-300">✓ Yes</td>
-                  <td className="p-3 border-b border-gray-300">✓ Yes</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-gray-300">Heat Resistance</td>
-                  <td className="p-3 border-b border-gray-300">Up to 500°F</td>
-                  <td className="p-3 border-b border-gray-300">Up to 400°F (silicone tips)</td>
-                  <td className="p-3 border-b border-gray-300">Up to 500°F</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="p-3 border-b border-gray-300">Non-Stick Safe</td>
-                  <td className="p-3 border-b border-gray-300">✗ No (metal)</td>
-                  <td className="p-3 border-b border-gray-300">✓ Yes (silicone tips)</td>
-                  <td className="p-3 border-b border-gray-300">✗ No (metal)</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-gray-300">Locking Mechanism</td>
-                  <td className="p-3 border-b border-gray-300">✗ No</td>
-                  <td className="p-3 border-b border-gray-300">✓ Yes</td>
-                  <td className="p-3 border-b border-gray-300">✗ No</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="p-3 border-b border-gray-300">Restaurant Use</td>
-                  <td className="p-3 border-b border-gray-300 font-bold">✓ Commercial-grade</td>
-                  <td className="p-3 border-b border-gray-300">Home kitchen design</td>
-                  <td className="p-3 border-b border-gray-300">Home kitchen design</td>
-                </tr>
-                <tr>
-                  <td className="p-3 border-b border-gray-300">Warranty</td>
-                  <td className="p-3 border-b border-gray-300">Basic warranty</td>
-                  <td className="p-3 border-b border-gray-300">Satisfaction guarantee</td>
-                  <td className="p-3 border-b border-gray-300">Limited lifetime</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="p-3 border-b border-gray-300 font-bold">Best For</td>
-                  <td className="p-3 border-b border-gray-300">Heavy-duty all-purpose use</td>
-                  <td className="p-3 border-b border-gray-300">Non-stick cookware</td>
-                  <td className="p-3 border-b border-gray-300">Premium home kitchens</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p className="text-slate-700 mt-6">
-            <strong>My take:</strong> The Winco tongs deliver restaurant-grade performance at a fraction of the price.
-            While OXO offers silicone tips for non-stick safety and All-Clad provides premium branding, the Winco tongs
-            match or exceed their durability and performance for grilling, stovetop, and general kitchen use. At $8 vs.
-            $15-30, buy multiple pairs and use the savings for other kitchen essentials.
-          </p>
-        </section>
-
-        {/* Final CTA */}
-        <section className="mb-12 bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-xl border-2 border-orange-200">
-          <h2 className="text-2xl font-bold mb-4 text-gray-900 text-center">Get Restaurant-Quality Tongs for Your Kitchen</h2>
-          <p className="text-lg text-gray-700 mb-6 text-center">
-            After 24 years of professional use, these are the tongs I trust. At $8, they&apos;re one of the best values
-            in kitchen equipment. Add them to your toolkit today.
-          </p>
-          <div className="flex justify-center">
-            <CTAVisibilityTracker
-              ctaId={`review-${productData.slug}-final_cta`}
-              position="final_cta"
-              productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <AffiliateButton
-                href={affiliateUrl}
-                merchant="amazon"
-                product="winco-heavy-duty-tongs"
-                position="final_cta"
-                variant="primary"
-              >
-                Check Current Price on Amazon →
-              </AffiliateButton>
-            </CTAVisibilityTracker>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="mb-12" id="faq">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Frequently Asked Questions</h2>
-
-          <div className="space-y-4">
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Are these tongs really restaurant quality?</h3>
-              <p className="text-gray-700">
-                Yes. Winco manufactures equipment specifically for commercial kitchens. These are the exact tongs used
-                in restaurants worldwide. I&apos;ve used them professionally for 24 years across multiple restaurant
-                kitchens, from casual dining to fine dining establishments.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Will these scratch my non-stick pans?</h3>
-              <p className="text-gray-700">
-                Yes, the all-metal construction can scratch non-stick surfaces. For non-stick cookware, use silicone-tipped
-                tongs instead. However, for stainless steel, cast iron, grills, and general purpose use, these metal tongs
-                are superior in durability and heat resistance.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Do they get hot when grilling?</h3>
-              <p className="text-gray-700">
-                Yes, the all-metal design conducts heat. In professional kitchens, we always have a side towel for handling
-                hot tools. This is standard practice and a small tradeoff for the durability and heat resistance you get
-                with solid stainless steel construction. They won&apos;t melt or warp like silicone tongs.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">What size should I buy?</h3>
-              <p className="text-gray-700">
-                The 9-inch model is ideal for most home cooking tasks - grilling, stovetop work, serving. If you do a lot
-                of grilling and want more distance from the heat, consider the 12-inch model. The 16-inch model is
-                primarily for commercial applications. I recommend starting with 9-inch tongs for home use.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">How long do these tongs last?</h3>
-              <p className="text-gray-700">
-                With proper care, these tongs can last decades. I&apos;ve used the same pairs for 5 years in my home
-                kitchen with daily use, and they show no signs of wear. In restaurant settings, they typically last 3-5
-                years under intensive commercial use. The one-piece stainless steel construction has no parts to break or
-                wear out.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Can they go in the dishwasher?</h3>
-              <p className="text-gray-700">
-                Yes, they&apos;re completely dishwasher-safe. I&apos;ve run mine through the dishwasher hundreds of times
-                without any rust, discoloration, or degradation. The solid stainless steel construction holds up perfectly
-                to dishwasher cycles.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Why don&apos;t they have a locking mechanism?</h3>
-              <p className="text-gray-700">
-                Restaurant-grade tongs typically don&apos;t have locking mechanisms because they&apos;re designed for speed
-                and efficiency during service. In professional kitchens, tongs are stored in utensil crocks or hung on hooks.
-                The lack of a lock is actually a feature for professional use - one less thing to fiddle with during busy
-                service. For home storage, a utensil crock or drawer works perfectly.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg border border-gray-200">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Are these better than OXO or All-Clad tongs?</h3>
-              <p className="text-gray-700">
-                For heavy-duty use and durability, yes. OXO tongs are good for non-stick cookware with their silicone tips,
-                and All-Clad offers premium branding. But for pure performance, durability, and value, these Winco tongs
-                deliver restaurant-grade quality at a fraction of the price. At $8 vs $15-30, you can buy multiple pairs and
-                still spend less than one pair of premium tongs.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Structured Data Schemas */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateProductSchema(productData))
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateFAQSchema(faqData))
-          }}
-        />
-      </article>
-
-    </div>
+      </div>
+    </>
   )
 }

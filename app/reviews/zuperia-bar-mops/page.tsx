@@ -1,616 +1,410 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image';
-import { Tier3Badge } from '@/components/ReviewTierBadge'
-import FTCDisclosure from '@/components/FTCDisclosure'
-
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper';
-import AffiliateButton from '@/components/AffiliateButton';
+import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
+import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import {
+  ReviewHero,
+  TestingResultsGrid,
+  PerformanceAnalysis,
+  ProsConsGrid,
+  WhoShouldBuyGrid,
+  FAQSection,
+  EmailCaptureSection,
+  BottomLineSection,
+  RelatedProductsGrid
+} from '@/components/review'
 
-export const dynamic = 'force-dynamic'
+// Import review data
+import { reviewData } from './zuperia-bar-mops-data'
 
-const legacyProductData = {
-  name: "Zuperia bar mops",
-  slug: "zuperia-bar-mops",
-  brand: "Brand Name",
-  category: "Kitchen Equipment",
-  affiliateLinks: [],
-  expertRating: 4.5,
-  expertOpinion: "Professional-grade quality.",
-  pros: [],
-  cons: [],
-  dateAdded: "2025-10-13",
-  lastUpdated: "2025-10-13",
-  images: {
-    primary: "/og-image.jpg"
-  }
-};
+// ISR configuration for better performance
+export const revalidate = 3600 // 1 hour cache
+export const fetchCache = 'force-cache'
 
-const faqData = [
-  {
-    question: "Are ZUPERIA bar mops machine washable?",
-    answer: "Yes, machine wash cold or warm. Avoid fabric softener and bleach to maintain absorbency. Tumble dry low or line dry."
-  },
-  {
-    question: "How absorbent are these towels?",
-    answer: "Very absorbent! The 100% cotton construction holds significantly more water than microfiber or thin dish towels."
-  },
-  {
-    question: "What size are ZUPERIA bar mops?",
-    answer: "Standard size is 16\"x19\" - the professional kitchen standard that's large enough for serious tasks but folds compactly."
-  },
-  {
-    question: "Do they shrink after washing?",
-    answer: "Expect 5-10% shrinkage after the first wash, which is normal for 100% cotton. They'll stabilize after that."
-  },
-  {
-    question: "Are these lint-free?",
-    answer: "After the first few washes, lint shedding decreases significantly. They're not completely lint-free initially but improve quickly."
-  },
-  {
-    question: "Can I use bar mops as dish towels?",
-    answer: "Absolutely! Bar mops are more versatile and durable than typical dish towels. Use them for dishes, counters, spills, and general kitchen cleaning."
-  },
-  {
-    question: "How many should I buy?",
-    answer: "Professional kitchens stock 20-30 bar mops. For home use, 12-18 gives you enough to rotate daily while having clean ones available."
-  },
-  {
-    question: "Do they stain easily?",
-    answer: "Cotton bar mops can stain, but they're meant to be workhorses. Many professionals prefer white so they can bleach them (though bleach reduces lifespan)."
-  }
-];
-
+// Generate metadata dynamically
 export async function generateMetadata(): Promise<Metadata> {
+  const product = await getProductBySlug(reviewData.productSlug)
+  const productData = product || reviewData.legacyProductData
+
   return {
+    title: reviewData.metadata.title,
+    description: reviewData.metadata.description,
     alternates: {
       canonical: 'https://www.chefapprovedtools.com/reviews/zuperia-bar-mops',
     },
-
-    title: 'ZUPERIA Bar Mops: Industry Standard Cotton',
-    description: 'ZUPERIA bar mops deliver better quality than those used for years in professional restaurants. Industry-standard 100% ring-spun cotton that\'s absorbent and durable.',
     openGraph: {
-      title: 'ZUPERIA Bar Mops: Professional Kitchen Review',
-      description: 'Professional kitchen bar mops. Industry standard quality.',
-      type: 'article',
-      url: 'https://www.chefapprovedtools.com/reviews/zuperia-bar-mops',
+      title: reviewData.metadata.ogTitle,
+      description: reviewData.metadata.ogDescription,
+      url: `https://www.chefapprovedtools.com/reviews/${reviewData.productSlug}`,
       siteName: 'Chef Approved Tools',
-      images: [generateOGImageURL({
-        title: "ZUPERIA Bar Mops Review",
-        rating: 4.8,
-        testingPeriod: "Years Restaurant Testing",
-        tier: 3
-      })],
+      images: [
+        {
+          url: generateOGImageURL({
+            title: productData.name,
+            rating: productData.expertRating ?? reviewData.hero.rating,
+            testingPeriod: reviewData.metadata.testingPeriod,
+            tier: reviewData.metadata.tier as 1 | 2 | 3,
+          }),
+          width: 1200,
+          height: 630,
+          alt: `${productData.name} - Professional Review`,
+        },
+      ],
+      type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'ZUPERIA Bar Mops: Professional Kitchen Review',
-      description: 'Professional kitchen bar mops.',
+      title: reviewData.metadata.ogTitle,
+      description: reviewData.metadata.ogDescription,
       images: [generateOGImageURL({
-        title: "ZUPERIA Bar Mops Review",
-        rating: 4.8,
-        testingPeriod: "Years Restaurant Testing",
-        tier: 3
+        title: productData.name,
+        rating: productData.expertRating ?? reviewData.hero.rating,
+        testingPeriod: reviewData.metadata.testingPeriod,
+        tier: reviewData.metadata.tier as 1 | 2 | 3,
       })],
     },
   }
 }
 
-export default async function ZuperiaBarMopsReview() {
-  const product = await getProductBySlug('zuperia-bar-mops')
-  if (!product) {
-    throw new Error('Product not found: zuperia-bar-mops')
-  }
+export default async function ProductReview() {
+  // Get product data from Supabase
+  const product = await getProductBySlug(reviewData.productSlug)
 
-  // Get primary affiliate link from Supabase product data
-  const affiliateUrl = getPrimaryAffiliateLink(product)
-
-  const productData = {
-    ...legacyProductData,
+  // Merge Supabase data with legacy data
+  const productData = product ? {
+    ...reviewData.legacyProductData,
     ...product,
-    affiliateLinks: legacyProductData.affiliateLinks
-  }
+    pros: product.pros && product.pros.length > 0 ? product.pros : reviewData.legacyProductData.pros,
+    cons: product.cons && product.cons.length > 0 ? product.cons : reviewData.legacyProductData.cons,
+    affiliateLinks: product.affiliateLinks && product.affiliateLinks.length > 0
+      ? product.affiliateLinks
+      : reviewData.legacyProductData.affiliateLinks
+  } : reviewData.legacyProductData
 
+  // Get primary affiliate link
+  const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
+
+  // Generate breadcrumbs
   const breadcrumbs = [
     { name: "Home", url: "https://www.chefapprovedtools.com" },
     { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
     { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-  ];
+  ]
+
+  // Generate schemas
+  const productSchema = generateProductSchema({
+    name: productData.name,
+    slug: productData.slug,
+    description: productData.expertOpinion,
+    brand: productData.brand,
+    rating: productData.expertRating,
+    reviewCount: 1,
+    category: productData.category,
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
+  const faqSchema = generateFAQSchema(reviewData.faqData)
 
   return (
-    <article className="max-w-4xl mx-auto px-4 py-8">
+    <>
+      {/* Schema.org markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
+      {/* Product view tracking */}
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
-        tier={3}
-        testingPeriod="Years at Purple Café"
-        rating={4.8}
-        hook="Industry standard. 100% ring spun cotton. Restaurant grade."
-        category="Kitchen Textiles"
+        tier={reviewData.metadata.tier as 1 | 2 | 3}
+        testingPeriod={reviewData.tracking.testingPeriod}
+        rating={productData.expertRating}
+        hook={reviewData.tracking.hook}
+        category={productData.category}
       />
-      {/* H1 Title */}
-      <h1 className="text-4xl font-bold mb-4">
-        ZUPERIA Bar Mops: Industry Standard for Pro Kitchens
-      </h1>
-
-      {/* Author Byline */}
-      <p className="text-gray-600 mb-6">
-        By Scott Bradley | Professional Chef | Last Updated: {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
-        })}
-      </p>
-
-      {/* Tier 3 Badge */}
-      <Tier3Badge showDescription={true} />
-
-      {/* Quick Rating Box */}
-      <div className="bg-gray-100 p-5 my-5 border-l-4 border-green-600 rounded">
-        <p className="m-0 text-lg leading-relaxed">
-          <strong>⭐⭐⭐⭐⭐ 4.5/5</strong> | Years of professional kitchen testing<br/>
-          <strong> 100% Ring Spun Cotton</strong> | <strong> Industry Standard</strong> | <strong> Restaurant Grade</strong>
-        </p>
-      </div>
-
-      {/* Primary CTA - ABOVE FOLD */}
-      <div className="bg-yellow-100 p-6 my-6 rounded-lg text-center border-2 border-yellow-400">
-        <h3 className="mt-0 text-2xl">Get the Same Towels Professional Kitchens Use:</h3>
-
-        <CTAVisibilityTracker
-          ctaId={`review-${productData.slug}-above_fold`}
-          position="above_fold"
-          productSlug={productData.slug}
-          merchant="amazon"
-        >
-          <AffiliateButton
-            href={affiliateUrl}
-            merchant="amazon"
-            product={productData.slug}
-            position="above_fold"
-            variant="primary"
-          >
-            Check Price on Amazon →
-          </AffiliateButton>
-        </CTAVisibilityTracker>
-
-        <p className="text-sm text-gray-600 mt-4">
-          💰 Price updated daily. We earn commission at no extra cost to you.
-        </p>
-      </div>
-
-      {/* Shortened Verdict */}
-      <div className="bg-gray-100 p-6 my-6 rounded-lg border-l-4 border-blue-600">
-        <h2 className="text-2xl font-bold mb-4">Professional Verdict</h2>
-
-        <p className="text-lg leading-relaxed mb-5">
-          <strong>Walk into any professional kitchen in America—from neighborhood cafés to fine dining establishments—and you&apos;ll find bar mops exactly like these.</strong> ZUPERIA makes the same 100% ring spun cotton towels that have been the restaurant industry standard for decades. After years of testing them in commercial environments where towel failure means operational problems, these proved why every professional kitchen uses them.
-        </p>
-
-        <p className="text-lg leading-relaxed">
-          This isn&apos;t about fancy features or clever marketing. These are the workhorse towels that professional kitchens buy by the hundred because they work, they last, and they&apos;re reliable every single day.
-        </p>
-
-        <div className="bg-white p-4 mt-5 rounded">
-          <p className="my-2.5">
-            <strong> Perfect For:</strong> Professional kitchens, serious home cooks, anyone who wants restaurant-grade performance, high-volume operations, bar setups
-          </p>
-          <p className="my-2.5">
-            <strong> Skip If:</strong> Light occasional use only, prefer colored towels for coding systems, want decorative kitchen linens
-          </p>
-        </div>
-      </div>
-
-      {/* Hero Features */}
-      <h2 className="text-3xl font-bold mb-6">Why Every Professional Kitchen Uses These</h2>
-
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5 my-8">
-
-        <div className="bg-gray-100 p-5 rounded-lg">
-          <div className="text-4xl mb-2.5">✓</div>
-          <h3 className="my-2.5 text-xl">Industry Standard Quality</h3>
-          <p>100% ring spun cottonthe exact specification restaurants demand. Not a cheaper cotton blend. Not polyester mix. Pure cotton construction that professionals trust.</p>
-        </div>
-
-        <div className="bg-gray-100 p-5 rounded-lg">
-          <div className="text-4xl mb-2.5">💧</div>
-          <h3 className="my-2.5 text-xl">Superior Absorbency</h3>
-          <p>Ring spun cotton creates longer fibers that hold more water. Soaks up spills instantly without spreading mess. Maintains absorbency through hundreds of commercial wash cycles.</p>
-        </div>
-
-        <div className="bg-gray-100 p-5 rounded-lg">
-          <div className="text-4xl mb-2.5">💧</div>
-          <h3 className="my-2.5 text-xl">Commercial Durability</h3>
-          <p>Built to survive industrial washing machines, harsh chemicals, high heat drying. Reinforced edges don&apos;t fray. These last years in restaurant abuseeven longer in home kitchens.</p>
-        </div>
-
-        <div className="bg-gray-100 p-5 rounded-lg">
-          <div className="text-4xl mb-2.5">✨</div>
-          <h3 className="my-2.5 text-xl">Lint-Free Performance</h3>
-          <p>After initial wash, virtually lint-free. Safe for glassware, dishes, polished surfaces. Won&apos;t leave fibers on clean equipment or freshly washed items.</p>
-        </div>
-
-      </div>
-
-      {/* Main Testing Content */}
-      <h2 className="text-3xl font-bold mb-4 mt-8">Why Professional Kitchens Choose These</h2>
-
-      <p className="mb-4 text-base leading-relaxed">
-        There&apos;s a reason every restaurant supply catalog carries bar mops like these. There&apos;s a reason line cooks, prep cooks, dishwashers, and chefs all reach for them dozens of times per shift. They&apos;re the universal tool of professional kitchens because they simply work.
-      </p>
-
-      <p className="mb-4 text-base leading-relaxed">
-        At Purple Café and Mellow Mushroom, these weren&apos;t special toolsthey were everyday essentials. We used them alongside our <a href="/reviews/method-all-purpose-cleaner" className="text-blue-600 font-bold">Method All-Purpose Cleaner</a> for continuous kitchen maintenance. They handled everything from wiping down <a href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-blue-600 font-bold">cutting boards</a> to cleaning commercial equipment to drying dishes.
-      </p>
-
-      <h3 className="text-2xl font-bold mb-3 mt-6">What Makes Ring Spun Cotton Different</h3>
-
-      <p className="mb-4 text-base leading-relaxed">
-        Not all cotton towels are created equal. Ring spun cotton is the premium specification that professional kitchens demand. Here&apos;s why it matters:
-      </p>
-
-      <ul className="mb-6 ml-6 text-base leading-loose">
-        <li><strong>Longer fibers:</strong> Ring spinning creates continuous fibers that are stronger and more absorbent than regular cotton. This means better performance and longer lifespan.</li>
-        <li><strong>Tighter weave:</strong> The manufacturing process creates a denser fabric that holds up to aggressive use without falling apart or thinning out.</li>
-        <li><strong>Better absorbency:</strong> Those longer fibers hold significantly more water than shorter cotton fibers. When you&apos;re mopping up a spill, that difference is immediately noticeable.</li>
-        <li><strong>Less lint:</strong> Higher quality cotton means fewer loose fibers. After initial washing, these are essentially lint-freecritical for professional applications.</li>
-        <li><strong>Durability:</strong> The stronger fiber structure means these towels survive industrial washing that would destroy cheaper alternatives within weeks.</li>
-      </ul>
-
-      <h3 className="text-2xl font-bold mb-3 mt-6">Real Restaurant Performance</h3>
-
-      <p className="mb-4 text-base leading-relaxed">
-        In professional kitchens, bar mops handle every task you can imagineand several you probably can&apos;t. Here&apos;s what we used these for daily:
-      </p>
-
-      <ul className="mb-6 ml-6 text-base leading-loose">
-        <li><strong>Spill response:</strong> When something spills mid-service, you grab a bar mop and handle it instantly. No time for specialty tools. These soak up liquid fast without spreading the mess.</li>
-        <li><strong>Surface sanitizing:</strong> After cleaning with chemicals, you need towels that can be wrung out repeatedly without deteriorating. These handle that stress shift after shift.</li>
-        <li><strong>Equipment maintenance:</strong> Wiping down <a href="/reviews/kitchenaid-ksm8990wh" className="text-blue-600 font-bold">mixers</a>, slicers, food processors after use. The lint-free performance means you&apos;re not leaving fibers on clean equipment.</li>
-        <li><strong>Dish drying:</strong> After washing dishes, glassware, cookwarethese dry without streaks or lint. Fast absorbency speeds up the drying process.</li>
-        <li><strong>Hot pan handling:</strong> Folded bar mop provides decent heat protection when you need to move something hot quickly. Not a replacement for proper mitts, but it works in a pinch.</li>
-        <li><strong>Prep station cleanup:</strong> Constant wiping between tasks. These stay effective even when damp, unlike cheaper towels that become useless once wet.</li>
-      </ul>
-
-      {/* Mid-Article CTA */}
-      <div className="bg-blue-50 p-5 my-6 rounded-md border-l-4 border-blue-600 text-center">
-        <p className="my-2.5 text-lg font-bold">
-          Ready to upgrade to restaurant-grade towels?
-        </p>
-        <CTAVisibilityTracker
-          ctaId={`review-${productData.slug}-mid_article`}
-          position="mid_article"
-          productSlug={productData.slug}
-          merchant="amazon"
-        >
-          <AffiliateButton
-            href={affiliateUrl}
-            merchant="amazon"
-            product={productData.slug}
-            position="mid_article"
-            variant="secondary"
-          >
-            Check Current Price →
-          </AffiliateButton>
-        </CTAVisibilityTracker>
-      </div>
-
-      <h3 className="text-2xl font-bold mb-3 mt-6">Why Restaurants Buy These by the Hundred</h3>
-
-      <p className="mb-4 text-base leading-relaxed">
-        Professional kitchens don&apos;t mess around with towel experiments. When you need dozens of clean towels every day, you buy what works. ZUPERIA bar mops are what works. They&apos;re in restaurant supply catalogs because they meet the commercial specifications that professionals demand.
-      </p>
-
-      <p className="mb-4 text-base leading-relaxed">
-        The economics are simple: these cost more upfront than cheap alternatives, but they last 5-10x longer. In a restaurant where you&apos;re washing towels daily in industrial machines with harsh chemicals and high heat, durability directly impacts your bottom line. These towels survive that environment. Budget towels don&apos;t.
-      </p>
-
-      <p className="mb-4 text-base leading-relaxed">
-        We tested cheaper alternatives multiple times trying to save money. They&apos;d start fraying within weeks. Edges would unravel. The cotton would thin out and lose absorbency. We&apos;d end up replacing them constantlyspending more money in the long run and dealing with towel failures during service. Eventually, you learn: buy the industry standard and stop wasting time and money on alternatives that don&apos;t measure up.
-      </p>
-
-      <h3 className="text-2xl font-bold mb-3 mt-6">Durability Through Industrial Washing</h3>
-
-      <p className="mb-4 text-base leading-relaxed">
-        Commercial laundry isn&apos;t gentle. Industrial washing machines, hot water, harsh detergents, bleach for sanitizing, high-temperature drying. It&apos;s designed to sanitize quickly and thoroughly. Most consumer-grade towels would disintegrate.
-      </p>
-
-      <p className="mb-4 text-base leading-relaxed">
-        ZUPERIA bar mops survive this daily. The ring spun cotton construction holds up to aggressive washing. The reinforced edges stay intact. The absorbency barely decreases even after hundreds of cycles. That&apos;s the performance difference between restaurant-grade and home-grade towels.
-      </p>
-
-      <p className="mb-4 text-base leading-relaxed">
-        For home use, this means these towels will outlast anything else you could buy. If they survive daily industrial washing for years, weekly home washing is nothing. You&apos;re looking at 3-5 years of reliable service minimumprobably longer.
-      </p>
-
-      <h3 className="text-2xl font-bold mb-3 mt-6">Setup Recommendations</h3>
-
-      <p className="mb-4 text-base leading-relaxed">
-        For home kitchens, start with a 12-pack. Use 2-3 towels per day, wash weekly. This gives you comfortable rotation without running out. For serious home cooks who prepare multiple meals daily, consider 24 towels (two 12-packs). This ensures you always have clean towels available without rushing laundry.
-      </p>
-
-      <p className="mb-4 text-base leading-relaxed">
-        Professional kitchens need moremuch more. We went through dozens daily across multiple stations. But the key insight remains: even with that volume and that abuse, ZUPERIA bar mops lasted. They were reliable equipment we could count on, just like our <a href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-600 font-bold">professional knives</a> and other core tools.
-      </p>
-
-      <h3 className="text-2xl font-bold mb-3 mt-6">Care and Maintenance</h3>
-
-      <p className="mb-4 text-base leading-relaxed">
-        These towels don&apos;t require special treatmentthat&apos;s part of their professional appeal. Wash in hot water with regular detergent. They handle bleach fine for sanitizing. Tumble dry on medium-high heat. Done. No special care instructions, no delicate handling required.
-      </p>
-
-      <p className="mb-4 text-base leading-relaxed">
-        First wash removes loose cotton fibersstandard for any new cotton product. After 2-3 washes, they become essentially lint-free. Slight initial shrinkage is normal for 100% cotton. Pre-wash if exact size matters, but for kitchen use, the shrinkage is negligible.
-      </p>
-
-      <p className="mb-4 text-base leading-relaxed">
-        They&apos;re white, so they show stains. In professional settings, this is actually beneficialyou can see when towels need sanitizing. Over time they develop the worn-in look of working towels, but performance stays consistent. Bleach removes most stains when you want them looking fresh.
-      </p>
-
-      <h3 className="text-2xl font-bold mb-3 mt-6">The Cost-Per-Use Reality</h3>
-
-      <p className="mb-4 text-base leading-relaxed">
-        Restaurant-grade towels cost more upfront. That&apos;s reality. But cost-per-use tells the complete story. When ZUPERIA bar mops last 5-10x longer than cheap alternatives, the economics flip entirely. You&apos;re spending less money over time by buying quality once.
-      </p>
-
-      <p className="mb-4 text-base leading-relaxed">
-        Factor in the hidden costs of cheap towels: constant reordering, managing inventory of deteriorating towels, towels failing mid-task, time spent dealing with poor-quality tools. Professional-grade equipment eliminates that friction. You buy once, they work reliably for years, end of story.
-      </p>
-
-      <p className="mb-4 text-base leading-relaxed">
-        This same cost-per-use thinking drives all restaurant equipment decisions. Quality tools pay for themselves through reliability and longevity. See our complete <a href="/kitchen-bundle" className="text-blue-600 font-bold">professional kitchen starter kit</a> for more on building efficient, reliable setups that last.
-      </p>
-
-      {/* Email Capture Section */}
-      <div className="bg-blue-50 p-8 my-8 rounded-lg border-l-4 border-blue-600">
-
-        <h3 className="mt-0 text-2xl">
-          📥 Get My Complete Professional Kitchen Equipment Guide
-        </h3>
-
-        <p className="text-base leading-relaxed">
-          Download my comprehensive guide to equipping a kitchen with restaurant-grade tools:
-        </p>
-
-        <ul className="my-4 text-base leading-loose">
-          <li> Essential equipment checklist from 24 years in professional kitchens</li>
-          <li> Restaurant-grade vs home-grade: What actually matters and what&apos;s just marketing</li>
-          <li> Cost-per-use analysis framework for smart purchasing decisions</li>
-          <li> Maintenance protocols that extend equipment life by years</li>
-          <li> Commercial supplier recommendations that pros actually use</li>
-        </ul>
-
-        <div className="text-center mt-6">
-          <a
-            href="/newsletter"
-            className="inline-block bg-blue-600 text-white py-4 px-10 no-underline rounded-md font-bold text-lg"
-          >
-            Download Free Guide →
-          </a>
-        </div>
-
-        <p className="text-xs text-gray-600 mt-4 text-center">
-          Instant delivery. No spam, ever. Unsubscribe anytime.
-        </p>
-
-      </div>
-
-      {/* Final Verdict */}
-      <h2 className="text-3xl font-bold mb-4 mt-8">The Bottom Line: My Professional Verdict</h2>
-
-      <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-lg my-8">
-
-        <h3 className="text-white mt-0 text-2xl">
-          After Years in Professional Kitchens...
-        </h3>
-
-        <p className="text-lg leading-relaxed mb-4">
-          ZUPERIA bar mops aren&apos;t fancy. They&apos;re not marketed with clever gimmicks. They&apos;re simply the same industry-standard towels that professional kitchens have relied on for decades. That reliability is worth more than any marketing claim.
-        </p>
-
-        <p className="text-lg leading-relaxed mb-4">
-          When every restaurant from corner cafés to fine dining establishments uses bar mops exactly like these, that&apos;s the ultimate proof of performance. Professional kitchens don&apos;t have patience for tools that don&apos;t work. These work. Every single day. For years.
-        </p>
-
-        <p className="text-lg leading-relaxed">
-          For home cooks, getting the same towels that restaurants use means getting proven, reliable tools that will outlast anything else you could buy. No experiments. No disappointments. Just solid performance.
-        </p>
-
-        <div className="bg-white/20 p-5 my-5 rounded-md">
-          <p className="m-0 text-xl font-bold mb-2.5">
-            Final Rating: ⭐⭐⭐⭐⭐ 4.5/5
-          </p>
-          <ul className="mt-4 ml-5 mb-0 text-base leading-loose">
-            <li>Quality: 5/5  100% ring spun cotton, professional specification</li>
-            <li>Absorbency: 5/5  Superior water retention, maintains performance</li>
-            <li>Durability: 5/5  Survives years of industrial washing</li>
-            <li>Value: 4.5/5  Higher upfront cost, exceptional long-term economics</li>
-          </ul>
-        </div>
-
-        <p className="text-base mb-0">
-          <strong>Would I buy these again?</strong> I already have. These are the bar mops in my home kitchen right now, years after leaving restaurant work. When you find the industry standard, you stick with it.
-        </p>
-
-      </div>
-
-      {/* Strong Final CTA */}
-      <div className="bg-yellow-100 p-8 my-8 rounded-lg text-center border-[3px] border-yellow-400">
-
-        <h3 className="mt-0 text-3xl">
-          Ready to Get the Same Towels Every Professional Kitchen Uses?
-        </h3>
-
-        <p className="text-lg my-5">
-          Stop experimenting with cheaper alternatives. Get the industry standard that&apos;s proven itself in professional kitchens worldwide for decades.
-        </p>
-
-        <CTAVisibilityTracker
-          ctaId={`review-${productData.slug}-final_cta`}
-          position="final_cta"
-          productSlug={productData.slug}
-          merchant="amazon"
-        >
-          <AffiliateButton
-            href={affiliateUrl}
-            merchant="amazon"
-            product={productData.slug}
-            position="final_cta"
-            variant="secondary"
-          >
-            Check Current Price →
-          </AffiliateButton>
-        </CTAVisibilityTracker>
-
-        <p className="text-sm text-gray-600 mt-5">
-          💰 12-pack provides solid rotation for home kitchens. Serious cooks should consider 24 (two packs) for continuous availability.
-        </p>
-
-      </div>
-
-      {/* Related Products */}
-      <h2 className="text-3xl font-bold mb-4 mt-8">Complete Your Professional Kitchen Setup</h2>
-
-      <p className="text-base leading-relaxed mb-6">
-        ZUPERIA bar mops work best as part of a complete restaurant-grade kitchen. Based on 45 years of experience, here are the other professional tools I use daily:
-      </p>
-
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5 my-8">
-
-        <div className="bg-gray-100 p-5 rounded-lg border border-gray-300">
-          <h4 className="mt-0">Method All-Purpose Cleaner</h4>
-          <p>The cleaning solution that worked alongside these bar mops for years at Purple Café. Effective on all surfaces without harsh chemical smell. Restaurant-tested durability meets safe, effective cleaning.</p>
-          <p className="text-sm text-gray-600">
-            <strong>Restaurant partnership:</strong> Used daily with ZUPERIA bar mops for years
-          </p>
-          <a
-            href="/reviews/method-all-purpose-cleaner"
-            className="inline-block bg-green-600 text-white py-2.5 px-5 no-underline rounded mt-2.5 font-bold"
-          >
-            Read Full Review →
-          </a>
-        </div>
-
-        <div className="bg-gray-100 p-5 rounded-lg border border-gray-300">
-          <h4 className="mt-0">John Boos Commercial Cutting Board</h4>
-          <p>Commercial-grade cutting board that pairs perfectly with commercial-grade towels. Same buy-it-for-life philosophy. Used these boards at Purple Café, maintained them daily with ZUPERIA bar mops.</p>
-          <p className="text-sm text-gray-600">
-            <strong>Restaurant veteran:</strong> Survives the same environment that proves these towels
-          </p>
-          <a
-            href="/reviews/john-boos-platinum-commercial-cutting-board"
-            className="inline-block bg-green-600 text-white py-2.5 px-5 no-underline rounded mt-2.5 font-bold"
-          >
-            Read Full Review →
-          </a>
-        </div>
-
-        <div className="bg-gray-100 p-5 rounded-lg border border-gray-300">
-          <h4 className="mt-0">Victorinox Fibrox Chef&apos;s Knife</h4>
-          <p>The knife I&apos;ve used for 45 years. Same professional reliability as these towels. When prep work is done, I clean it with ZUPERIA bar mopsthey won&apos;t leave lint on the blade or scratch the finish.</p>
-          <p className="text-sm text-gray-600">
-            <strong>45-year partnership:</strong> My knife and these towels, industry standards both
-          </p>
-          <a
-            href="/reviews/victorinox-fibrox-8-inch-chefs-knife"
-            className="inline-block bg-green-600 text-white py-2.5 px-5 no-underline rounded mt-2.5 font-bold"
-          >
-            Read Full Review →
-          </a>
-        </div>
-
-      </div>
-
-      <p className="text-center my-8 text-lg p-5 bg-gray-100 rounded-md">
-        <strong>Building a complete professional kitchen from scratch?</strong><br/>
-        <a href="/kitchen-bundle" className="text-blue-600 font-bold text-xl">
-          See My Complete Restaurant-Grade Kitchen Starter Kit →
-        </a>
-      </p>
-
-      {/* Footer Elements */}
-      <div className="bg-gray-100 p-5 my-8 rounded-md border-l-4 border-gray-500">
-        <p className="my-2.5">
-          <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
-        </p>
-        <p className="my-2.5">
-          <strong>🔄 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long'
-          })}
-        </p>
-        <p className="my-2.5">
-          <strong>💬 Using ZUPERIA bar mops in your kitchen?</strong> Share your experience in the comments belowI read and respond to every comment from both home cooks and industry professionals.
-        </p>
-        <p className="my-2.5">
-          <strong>❓ Questions about restaurant-grade equipment?</strong> <a href="/contact" className="text-blue-600">
-          Contact me directly</a> and I&apos;ll help you make the best decision for your kitchen setup.
-        </p>
-      </div>
-
-      {/* Author Bio Box */}
-      <div className="bg-white p-6 my-8 border border-gray-300 rounded-lg grid grid-cols-[100px_1fr] gap-5 items-start">
-        
-          <Image src="/images/team/head-shot-1.jpg" alt="Scott Bradley, Professional Chef" width={100} height={100} />
-        <div>
-          <h3 className="m-0 mb-2.5">About Scott Bradley</h3>
-          <p className="my-1.5 font-bold">
-            Professional Chef • 45 Years Cooking Experience
-          </p>
-          <p className="my-2.5 text-sm leading-relaxed">
-            Former Kitchen Manager at Purple Café and Mellow Mushroom with 24 years of restaurant management experience.
-            A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-            University of Montana. I&apos;ve used ZUPERIA bar mops in professional kitchens for yearsthey&apos;re the industry standard for a reason, and they&apos;re what I stock in my home kitchen today.
-          </p>
-          <a href="/about" className="text-blue-600 font-bold">
-            Read more about my testing methodology →
-          </a>
-        </div>
-      </div>
-
-      {/* FAQ Section */}
-      <h2>Frequently Asked Questions</h2>
-
-      <div>
-        {faqData.map((faq, index) => (
-          <div key={index} className="my-5 p-5 bg-gray-100 rounded-md">
-            <h3>{faq.question}</h3>
-            <div>
-              <p><strong>Answer:</strong> {faq.answer}</p>
+
+      <div className="bg-gray-50 min-h-screen">
+        <div className="max-w-[900px] mx-auto px-5">
+
+          {/* BREADCRUMBS */}
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+            <Link href="/" className="hover:text-orange-700">Home</Link>
+            {' / '}
+            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+            {' / '}
+            {reviewData.breadcrumb.productName}
+          </div>
+
+          {/* SECTION 1: HERO */}
+          <ReviewHero
+            title={reviewData.hero.title}
+            authorName={reviewData.hero.authorName}
+            authorCredentials={reviewData.hero.authorCredentials}
+            rating={reviewData.hero.rating}
+            tierBadge={reviewData.hero.tierBadge}
+            verdict={reviewData.hero.verdict}
+            verdictStrong={reviewData.hero.verdictStrong}
+            customCTA={
+              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
+                <CTAVisibilityTracker
+                  ctaId={`${reviewData.productSlug}-hero-cta`}
+                  position="above_fold"
+                  productSlug={reviewData.productSlug}
+                  merchant="amazon"
+                >
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                  >
+                    {reviewData.hero.ctaText}
+                  </a>
+                </CTAVisibilityTracker>
+                {/* V2: TEXT LINK UNDER BUTTON */}
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
+                </p>
+                <p className="text-xs text-slate-500 text-center mt-3">
+                  As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
+                </p>
+              </div>
+            }
+          />
+
+          {/* SECTION 2: TESTING RESULTS */}
+          <TestingResultsGrid
+            title={reviewData.testingResults.title}
+            sections={reviewData.testingResults.sections}
+            testingEnvironment={reviewData.testingResults.testingEnvironment}
+            outstandingPerformance={reviewData.testingResults.outstandingPerformance}
+            minorConsiderations={reviewData.testingResults.minorConsiderations}
+          />
+
+          {/* SECTION 3: PERFORMANCE ANALYSIS */}
+          <PerformanceAnalysis
+            title={reviewData.performanceAnalysis.title}
+            sections={reviewData.performanceAnalysis.sections}
+          />
+
+          {/* SECTION 4: PROS & CONS */}
+          <ProsConsGrid
+            title={reviewData.prosConsTitle}
+            prosTitle={reviewData.prosTitle}
+            consTitle={reviewData.consTitle}
+            pros={productData.pros}
+            cons={productData.cons}
+          />
+
+          {/* SECTION 5: WHO SHOULD BUY */}
+          <WhoShouldBuyGrid
+            title={reviewData.whoShouldBuy.title}
+            perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
+            considerAlternativesTitle={reviewData.whoShouldBuy.considerAlternativesTitle}
+            perfectFor={reviewData.whoShouldBuy.perfectFor}
+            considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
+          />
+
+          {/* SECTION 6: FAQ */}
+          <FAQSection
+            title={reviewData.faq.title}
+            faqs={reviewData.faq.items}
+          />
+
+          {/* SECTION 7: WHERE TO BUY */}
+          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
+              {reviewData.whereToBuy.title}
+            </h2>
+
+            <p className="text-slate-600 leading-relaxed mb-6">
+              {reviewData.whereToBuy.introText}
+            </p>
+
+            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
+              <div className="text-center mb-4">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
+                <p className="text-sm text-slate-900 mb-4">Prime shipping, same towels restaurants order by the hundred</p>
+              </div>
+
+              <CTAVisibilityTracker
+                ctaId={`${reviewData.productSlug}-where-to-buy-cta`}
+                position="mid_article"
+                productSlug={reviewData.productSlug}
+                merchant="amazon"
+              >
+                <a
+                  href={affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                >
+                  Check Price on Amazon →
+                </a>
+              </CTAVisibilityTracker>
+
+              {/* V2: TEXT LINK UNDER BUTTON */}
+              <p className="text-center mt-3 text-sm">
+                <a
+                  href={affiliateUrl}
+                  className="text-orange-700 hover:text-orange-800 underline font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                >
+                  → View {productData.name} on Amazon
+                </a>
+              </p>
+
+              <p className="text-xs text-slate-500 text-center mt-3">
+                As an Amazon Associate, I earn from qualifying purchases.
+              </p>
+            </div>
+
+            <p className="text-sm text-slate-600 mt-6 italic">
+              {reviewData.whereToBuy.disclaimer}
+            </p>
+          </div>
+
+          {/* SECTION 8: EMAIL CAPTURE */}
+          <EmailCaptureSection
+            title={reviewData.emailCapture.title}
+            subtitle={reviewData.emailCapture.subtitle}
+            inputPlaceholder={reviewData.emailCapture.inputPlaceholder}
+            buttonText={reviewData.emailCapture.buttonText}
+            finePrint={reviewData.emailCapture.finePrint}
+          />
+
+          {/* SECTION 9: BOTTOM LINE */}
+          <BottomLineSection
+            title={reviewData.bottomLine.title}
+            paragraphs={reviewData.bottomLine.paragraphs}
+            customCTA={
+              <div className="bg-white rounded-xl p-6">
+                <CTAVisibilityTracker
+                  ctaId={`${reviewData.productSlug}-bottom-line-cta`}
+                  position="final_cta"
+                  productSlug={reviewData.productSlug}
+                  merchant="amazon"
+                >
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                  >
+                    {reviewData.bottomLine.ctaText}
+                  </a>
+                </CTAVisibilityTracker>
+
+                {/* V2: TEXT LINK UNDER BUTTON */}
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
+                </p>
+
+                <p className="text-xs text-slate-500 text-center mt-3">
+                  As an Amazon Associate, I earn from qualifying purchases.
+                </p>
+              </div>
+            }
+          />
+
+          {/* SECTION 10: RELATED PRODUCTS */}
+          <RelatedProductsGrid
+            title={reviewData.relatedProducts.title}
+            products={reviewData.relatedProducts.products}
+          />
+
+          {/* SECTION 11: AUTHOR BIO */}
+          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6 pb-6 border-b border-gray-200">
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-600 to-amber-500 rounded-full flex items-center justify-center text-[40px] flex-shrink-0">
+                  👨‍🍳
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-xl font-bold text-slate-900 mb-2 mt-0">About Scott Bradley</h3>
+                  <p className="text-base text-slate-600 m-0">Professional Chef • 24 Years in Professional Kitchens</p>
+                </div>
+              </div>
+
+              <div className="text-slate-600 leading-[1.8]">
+                <p className="mb-4">
+                  <strong>Scott Bradley brings 24 years of professional kitchen experience to Chef Approved Tools.</strong> As former Kitchen Manager at Mellow Mushroom, he managed operations generating $80K+ monthly revenue while overseeing equipment procurement, staff training, and quality control for a high-volume operation.
+                </p>
+
+                <p className="mb-4">
+                  His professional background spans multiple restaurant environments including Purple Café, Feierabend, Il Pizzaiolo, and Paragary&apos;s, giving him hands-on experience with equipment across different cuisines, cooking styles, and volume levels. This diverse experience informs every equipment recommendation on this site.
+                </p>
+
+                <p className="mb-0">
+                  <strong>All reviews are based on actual professional testing</strong>—equipment used daily in restaurant environments or tested extensively in home settings. No free samples, no sponsored content, just honest assessments from someone who&apos;s spent decades relying on kitchen tools to do their job.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-6 border-t border-gray-200">
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">🎓</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Culinary Degree</strong>
+                    Seattle Central College (2005-2007)
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">👨‍🍳</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Professional Experience</strong>
+                    24 years in professional kitchens
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">🏆</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Professional Roles</strong>
+                    Kitchen Manager, Lead Line, Expo, Pizzaiolo
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 text-sm text-slate-600">
+                  <div className="text-xl flex-shrink-0">🔧</div>
+                  <div>
+                    <strong className="block text-slate-900 font-semibold mb-0.5">Testing Approach</strong>
+                    Tier 1: Professional use | Tier 2: Long-term personal | Tier 3: Expert evaluation
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        ))}
+
+        </div>
       </div>
-
-      {/* Structured Data Schemas */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateProductSchema(productData))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema(faqData))
-        }}
-      />
-
-    </article>
-  );
+    </>
+  )
 }

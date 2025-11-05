@@ -30,9 +30,9 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
     try {
       const content = fs.readFileSync(pagePath, 'utf-8')
 
-      // Extract metadata from the Metadata export - handle escaped quotes
-      const titleMatch = content.match(/title:\s*"((?:[^"\\]|\\.)*)\"/)
-      const descriptionMatch = content.match(/description:\s*"((?:[^"\\]|\\.)*)\"/)
+      // Extract metadata from the Metadata export - handle both single and double quotes
+      const titleMatch = content.match(/title:\s*["']((?:[^"'\\]|\\.)*?)["']/)
+      const descriptionMatch = content.match(/description:\s*["']((?:[^"'\\]|\\.)*?)["']/)
 
       // Extract from articleSchema (used in newer blog posts)
       const datePublishedMatch = content.match(/datePublished:\s*["'](\d{4}-\d{2}-\d{2})["']/)
