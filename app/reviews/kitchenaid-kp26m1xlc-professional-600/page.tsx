@@ -5,7 +5,6 @@ import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import { generateOGImageURL } from '@/lib/og-image'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import AffiliateButton from '@/components/AffiliateButton'
 import {
   ReviewHero,
   TestingResultsGrid,
@@ -155,47 +154,35 @@ export default async function KitchenAidProfessional600ReviewPage() {
             ctaUrl={affiliateUrl}
             ctaText={reviewData.hero.ctaText}
             customCTA={(
-              <div className="space-y-4">
-                {/* Discontinued Model Notice */}
-                {reviewData.discontinuedNotice.show && (
-                  <div className="bg-yellow-100 p-5 border-l-4 border-yellow-600 rounded-md">
-                    <p className="m-0 mb-4 text-base leading-relaxed font-bold">
-                      {reviewData.discontinuedNotice.title}
-                    </p>
-                    <p className="m-0 mb-4 text-base leading-relaxed">
-                      {reviewData.discontinuedNotice.message}
-                    </p>
-                    <CTAVisibilityTracker
-                      ctaId={`review-${reviewData.productSlug}-above-fold`}
-                      position="above_fold"
-                      productSlug={reviewData.productSlug}
-                      merchant="amazon"
-                    >
-                      <AffiliateButton
-                        href={affiliateUrl}
-                        merchant="amazon"
-                        product={reviewData.productSlug}
-                        position="above_fold"
-                        variant="primary"
-                      >
-                        {reviewData.hero.ctaText}
-                      </AffiliateButton>
-                    </CTAVisibilityTracker>
-                  </div>
-                )}
-
-                {/* Quick Stats */}
-                <div className="quick-stats bg-gray-50 p-5 border-l-4 border-green-600 rounded">
-                  <p className="m-0 text-lg leading-relaxed">
-                    <strong>{reviewData.quickStats.rating}</strong> | {reviewData.quickStats.context}<br/>
-                    {reviewData.quickStats.highlights.map((highlight, i) => (
-                      <span key={i}>
-                        {i > 0 && ' | '}
-                        <strong>{highlight}</strong>
-                      </span>
-                    ))}
-                  </p>
-                </div>
+              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
+                <CTAVisibilityTracker
+                  ctaId={`${reviewData.productSlug}-hero-cta`}
+                  position="above_fold"
+                  productSlug={reviewData.productSlug}
+                  merchant="amazon"
+                >
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                  >
+                    {reviewData.hero.ctaText}
+                  </a>
+                </CTAVisibilityTracker>
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
+                </p>
+                <p className="text-xs text-slate-500 text-center mt-3">
+                  As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
+                </p>
               </div>
             )}
           />
@@ -358,7 +345,60 @@ export default async function KitchenAidProfessional600ReviewPage() {
           faqs={reviewData.faq.items}
         />
 
-        {/* SECTION 8: BOTTOM LINE */}
+        {/* SECTION 8: WHERE TO BUY */}
+        <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
+            Where to Buy
+          </h2>
+
+          <p className="text-slate-600 leading-relaxed mb-6">
+            The KitchenAid Professional 600 is available on Amazon with Prime shipping. This model links to the current version, as the original KP26M1XLC has been updated with improved features while maintaining the professional-grade performance.
+          </p>
+
+          <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
+            <div className="text-center mb-4">
+              <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
+              <p className="text-sm text-slate-900 mb-4">Prime shipping, verified reviews, easy returns</p>
+            </div>
+
+            <CTAVisibilityTracker
+              ctaId={`${reviewData.productSlug}-where-to-buy-cta`}
+              position="mid_article"
+              productSlug={reviewData.productSlug}
+              merchant="amazon"
+            >
+              <a
+                href={affiliateUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+              >
+                Check Price on Amazon →
+              </a>
+            </CTAVisibilityTracker>
+
+            <p className="text-center mt-3 text-sm">
+              <a
+                href={affiliateUrl}
+                className="text-orange-700 hover:text-orange-800 underline font-medium"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+              >
+                → View {productData.name} on Amazon
+              </a>
+            </p>
+
+            <p className="text-xs text-slate-500 text-center mt-3">
+              As an Amazon Associate, I earn from qualifying purchases.
+            </p>
+          </div>
+
+          <p className="text-sm text-slate-600 mt-6 italic">
+            Price and availability subject to change. Always verify current model specifications before purchasing.
+          </p>
+        </div>
+
+        {/* SECTION 9: BOTTOM LINE */}
         <BottomLineSection
           title={reviewData.bottomLine.title}
           paragraphs={reviewData.bottomLine.paragraphs.map((paragraph, i) => (
@@ -367,63 +407,51 @@ export default async function KitchenAidProfessional600ReviewPage() {
             </p>
           ))}
           customCTA={(
-            <div>
-              <div className="bg-white/20 p-5 my-5 rounded-md">
-                <p className="m-0 text-xl font-bold mb-4">
-                  {reviewData.bottomLine.finalRating.overall}
-                </p>
-                <ul className="mt-4 mb-0 ml-5 text-base leading-relaxed">
-                  {reviewData.bottomLine.finalRating.breakdown.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-              </div>
+            <div className="bg-white rounded-xl p-6">
+              <CTAVisibilityTracker
+                ctaId={`${reviewData.productSlug}-bottom-line-cta`}
+                position="final_cta"
+                productSlug={reviewData.productSlug}
+                merchant="amazon"
+              >
+                <a
+                  href={affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                >
+                  {reviewData.bottomLine.ctaText || 'Check Price on Amazon →'}
+                </a>
+              </CTAVisibilityTracker>
 
-              <p className="text-base mb-6">
-                <strong>{reviewData.bottomLine.finalRating.wouldBuyAgain}</strong>
+              <p className="text-center mt-3 text-sm">
+                <a
+                  href={affiliateUrl}
+                  className="text-orange-700 hover:text-orange-800 underline font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                >
+                  → View {productData.name} on Amazon
+                </a>
               </p>
 
-              <div className="bg-yellow-100 p-8 rounded-lg text-center border-4 border-yellow-400">
-                <h3 className="mt-0 text-2xl mb-4">
-                  Ready to Transform Your Home Baking?
-                </h3>
-                <p className="text-lg mb-5">
-                  Join the thousands who trust the Professional 600 for serious home baking:
-                </p>
-                <CTAVisibilityTracker
-                  ctaId={`review-${reviewData.productSlug}-final_cta`}
-                  position="final_cta"
-                  productSlug={reviewData.productSlug}
-                  merchant="amazon"
-                >
-                  <AffiliateButton
-                    href={affiliateUrl}
-                    merchant="amazon"
-                    product={reviewData.productSlug}
-                    position="final_cta"
-                    variant="secondary"
-                  >
-                    {reviewData.bottomLine.ctaText}
-                  </AffiliateButton>
-                </CTAVisibilityTracker>
-                <p className="text-sm text-gray-600 mt-4 mb-0">
-                  View product details
-                </p>
-              </div>
+              <p className="text-xs text-slate-500 text-center mt-3">
+                As an Amazon Associate, I earn from qualifying purchases.
+              </p>
             </div>
           )}
         />
 
-        {/* SECTION 9: RELATED PRODUCTS */}
+        {/* SECTION 10: RELATED PRODUCTS */}
         <RelatedProductsGrid
           title={reviewData.relatedProducts.title}
           products={reviewData.relatedProducts.products}
         />
 
-        {/* SECTION 10: AUTHOR BIO */}
+        {/* SECTION 11: AUTHOR BIO */}
         <AuthorBio />
 
-        {/* SECTION 11: TESTIMONIALS */}
+        {/* SECTION 12: TESTIMONIALS */}
         <TestimonialsSection />
 
         {/* Structured Data */}

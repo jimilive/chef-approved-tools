@@ -420,6 +420,59 @@ export default async function NortonTriStoneSharpenerReview() {
           </div>
         </section>
 
+        {/* Where to Buy */}
+        <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm my-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
+            Where to Buy
+          </h2>
+
+          <p className="text-slate-600 leading-relaxed mb-6">
+            The Norton IM200 Tri-Stone Sharpener is available on Amazon with Prime shipping. This professional-grade sharpening system delivers consistent results for maintaining your kitchen knives.
+          </p>
+
+          <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
+            <div className="text-center mb-4">
+              <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
+              <p className="text-sm text-slate-900 mb-4">Prime shipping, verified reviews, easy returns</p>
+            </div>
+
+            <CTAVisibilityTracker
+              ctaId={`${reviewData.productSlug}-where-to-buy-cta`}
+              position="mid_article"
+              productSlug={reviewData.productSlug}
+              merchant="amazon"
+            >
+              <a
+                href={affiliateUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+              >
+                Check Price on Amazon →
+              </a>
+            </CTAVisibilityTracker>
+
+            <p className="text-center mt-3 text-sm">
+              <a
+                href={affiliateUrl}
+                className="text-orange-700 hover:text-orange-800 underline font-medium"
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+              >
+                → View {productData.name} on Amazon
+              </a>
+            </p>
+
+            <p className="text-xs text-slate-500 text-center mt-3">
+              As an Amazon Associate, I earn from qualifying purchases.
+            </p>
+          </div>
+
+          <p className="text-sm text-slate-600 mt-6 italic">
+            Price and availability subject to change. Always verify current specifications before purchasing.
+          </p>
+        </section>
+
         {/* Bottom Line */}
         <section className="my-12">
           <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">

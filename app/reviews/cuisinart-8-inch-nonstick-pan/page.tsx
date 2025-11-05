@@ -204,7 +204,7 @@ export default async function Cuisinart8InchNonstickPanReview() {
             ctaText={reviewData.hero.ctaText}
             customCTA={(
               <div>
-                <CTAVisibilityTracker ctaId="hero-cta" position="hero">
+                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
                   <a
                     href={affiliateUrl}
                     target="_blank"
@@ -297,6 +297,16 @@ export default async function Cuisinart8InchNonstickPanReview() {
                       Check Price on Amazon →
                     </a>
                   </CTAVisibilityTracker>
+                  <p className="text-center mt-3 text-sm">
+                    <a
+                      href={affiliateUrl}
+                      className="text-orange-700 hover:text-orange-800 underline font-medium"
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                    >
+                      → View {productData.name} on Amazon
+                    </a>
+                  </p>
                   <p className="text-xs text-slate-500 italic text-center m-0">*As an Amazon Associate, I earn from qualifying purchases</p>
                 </div>
               </div>
@@ -324,7 +334,7 @@ export default async function Cuisinart8InchNonstickPanReview() {
             ctaText={reviewData.bottomLine.ctaText}
             customCTA={(
               <div className="text-center">
-                <CTAVisibilityTracker ctaId="bottom-line-cta" position="bottom_line">
+                <CTAVisibilityTracker ctaId="bottom-line-cta" position="final_cta">
                   <a
                     href={affiliateUrl}
                     target="_blank"

@@ -187,6 +187,29 @@ export default async function BenrinerLargeMandolineReview() {
                   ctaPosition="above_fold"
                   showDisclosure={true}
                 />
+                {/* V2: TEXT LINKS UNDER SIZE SELECTOR */}
+                <div className="text-center mt-4 space-y-1">
+                  <p className="text-sm">
+                    <a
+                      href={affiliateUrl}
+                      className="text-orange-700 hover:text-orange-800 underline font-medium"
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                    >
+                      → View Large {productData.name} on Amazon
+                    </a>
+                  </p>
+                  <p className="text-sm">
+                    <a
+                      href="https://amzn.to/4hG8jO6"
+                      className="text-orange-700 hover:text-orange-800 underline font-medium"
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                    >
+                      → View Original Benriner on Amazon
+                    </a>
+                  </p>
+                </div>
               </div>
             }
           />
@@ -296,6 +319,29 @@ export default async function BenrinerLargeMandolineReview() {
                   ctaPosition="mid_article"
                   showDisclosure={true}
                 />
+                {/* V2: TEXT LINKS UNDER SIZE SELECTOR */}
+                <div className="text-center space-y-1">
+                  <p className="text-sm">
+                    <a
+                      href={affiliateUrl}
+                      className="text-orange-700 hover:text-orange-800 underline font-medium"
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                    >
+                      → View Large {productData.name} on Amazon
+                    </a>
+                  </p>
+                  <p className="text-sm">
+                    <a
+                      href="https://amzn.to/4hG8jO6"
+                      className="text-orange-700 hover:text-orange-800 underline font-medium"
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                    >
+                      → View Original Benriner on Amazon
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -342,6 +388,29 @@ export default async function BenrinerLargeMandolineReview() {
                   ctaPosition="final_cta"
                   showDisclosure={true}
                 />
+                {/* V2: TEXT LINKS UNDER SIZE SELECTOR */}
+                <div className="text-center mt-4 space-y-1">
+                  <p className="text-sm">
+                    <a
+                      href={affiliateUrl}
+                      className="text-orange-700 hover:text-orange-800 underline font-medium"
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                    >
+                      → View Large {productData.name} on Amazon
+                    </a>
+                  </p>
+                  <p className="text-sm">
+                    <a
+                      href="https://amzn.to/4hG8jO6"
+                      className="text-orange-700 hover:text-orange-800 underline font-medium"
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                    >
+                      → View Original Benriner on Amazon
+                    </a>
+                  </p>
+                </div>
               </div>
             }
           />

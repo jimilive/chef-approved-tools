@@ -156,13 +156,13 @@ export const reviewData = {
         content: (
           <>
             <p className="text-slate-600 leading-[1.7] mb-4">
-              The blade is the heart of any mandoline, and Benriner&apos;s high-carbon Japanese stainless steel is exceptional. This isn&apos;t marketing hyperbole—the difference is immediately obvious when you make your first slice.
+              The blade is the heart of any mandoline, and the <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner mandoline&apos;s</Link> high-carbon Japanese stainless steel is exceptional. This isn&apos;t marketing hyperbole—the difference is immediately obvious when you make your first slice.
             </p>
             <p className="text-slate-600 leading-[1.7] mb-4">
-              <strong>Sharpness Test:</strong> I can slice cucumbers so thin they&apos;re nearly transparent. The blade glides through root vegetables like potatoes and carrots without crushing or tearing. Even after years of professional use, the edge remains sharp enough for clean, precise cuts.
+              <strong>Sharpness Test:</strong> I can slice cucumbers so thin they&apos;re nearly transparent with the <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner</Link>. The blade glides through root vegetables like potatoes and carrots without crushing or tearing. Even after years of professional use, the edge remains sharp enough for clean, precise cuts.
             </p>
             <p className="text-slate-600 leading-[1.7] mb-4 last:mb-0">
-              Compared to budget mandolines I&apos;ve tested, the Benriner stays sharp significantly longer. Cheap mandolines dull quickly and start producing inconsistent results within months. The Benriner maintains professional performance for years.
+              Compared to budget mandolines I&apos;ve tested, the <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner</Link> stays sharp significantly longer. Cheap mandolines dull quickly and start producing inconsistent results within months. The <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner mandoline</Link> maintains professional performance for years.
             </p>
           </>
         ),
@@ -172,13 +172,13 @@ export const reviewData = {
         content: (
           <>
             <p className="text-slate-600 leading-[1.7] mb-4">
-              The adjustment mechanism is where Benriner separates itself from competitors. The thickness dial offers precise, repeatable settings from paper-thin to about 5mm. Each click provides consistent results—critical when you&apos;re slicing for even cooking or uniform presentation.
+              The adjustment mechanism is where the <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner mandoline</Link> separates itself from competitors. The thickness dial offers precise, repeatable settings from paper-thin to about 5mm. Each click provides consistent results—critical when you&apos;re slicing for even cooking or uniform presentation.
             </p>
             <p className="text-slate-600 leading-[1.7] mb-4">
-              In a professional kitchen serving hundreds of customers daily, consistency isn&apos;t optional. When we needed uniform potato slices for gratins or precisely thin radishes for garnish, the Benriner delivered identical results every single time.
+              In a professional kitchen serving hundreds of customers daily, consistency isn&apos;t optional. When we needed uniform potato slices for gratins or precisely thin radishes for garnish, the <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner</Link> delivered identical results every single time.
             </p>
             <p className="text-slate-600 leading-[1.7] mb-4 last:mb-0">
-              The large capacity is a significant advantage. Unlike smaller mandolines, the Large handles full-size onions, potatoes, and even cabbage halves without awkward positioning. This makes high-volume prep dramatically more efficient than working with a smaller model.
+              The large capacity is a significant advantage. Unlike smaller mandolines, the <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner Large</Link> handles full-size onions, potatoes, and even cabbage halves without awkward positioning. This makes high-volume prep dramatically more efficient than working with a smaller model.
             </p>
           </>
         ),
@@ -188,13 +188,13 @@ export const reviewData = {
         content: (
           <>
             <p className="text-slate-600 leading-[1.7] mb-4">
-              The construction is sturdy but not heavy. The body is made from BPA-free plastic that&apos;s proven durable through years of professional use. While it&apos;s not all-metal construction, the design prioritizes functionality over aesthetics.
+              The construction of the <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner mandoline</Link> is sturdy but not heavy. The body is made from BPA-free plastic that&apos;s proven durable through years of professional use. While it&apos;s not all-metal construction, the design prioritizes functionality over aesthetics.
             </p>
             <p className="text-slate-600 leading-[1.7] mb-4">
-              The feet provide stable grip on countertops, though I sometimes secure it with a damp towel underneath for maximum stability during high-speed slicing. Pairs perfectly with our <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">OXO bench scraper</Link> for gathering sliced vegetables.
+              The feet provide stable grip on countertops, though I sometimes secure it with a damp towel underneath for maximum stability during high-speed slicing. The <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner</Link> pairs perfectly with our <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">OXO bench scraper</Link> for gathering sliced vegetables.
             </p>
             <p className="text-slate-600 leading-[1.7] mb-4 last:mb-0">
-              After years of daily use in a commercial kitchen, our Benriner shows minimal wear. The adjustment mechanism remains tight and precise, and the blade still delivers professional results. When the blade eventually dulls, replacement blades are available at reasonable prices.
+              After years of daily use in a commercial kitchen, our <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner</Link> shows minimal wear. The adjustment mechanism remains tight and precise, and the blade still delivers professional results. When the blade eventually dulls, replacement blades are available at reasonable prices.
             </p>
           </>
         ),
@@ -204,14 +204,14 @@ export const reviewData = {
         content: (
           <>
             <p className="text-slate-600 leading-[1.7] mb-4">
-              Over years of professional use, I&apos;ve put this mandoline through scenarios that would destroy budget alternatives:
+              Over years of professional use, I&apos;ve put the <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner mandoline</Link> through scenarios that would destroy budget alternatives:
             </p>
           </>
         ),
         bulletPoints: [
           {
             label: 'High-Volume Prep',
-            value: 'Slicing 50+ pounds of vegetables daily during peak season. The Benriner maintained consistent performance without dulling or loosening.',
+            value: 'Slicing 50+ pounds of vegetables daily during peak season. The Benriner mandoline maintained consistent performance without dulling or loosening.',
           },
           {
             label: 'Tough Vegetables',

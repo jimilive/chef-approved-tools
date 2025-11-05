@@ -201,7 +201,7 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
             ctaText={reviewData.hero.ctaText}
             customCTA={(
               <div>
-                <CTAVisibilityTracker ctaId="hero-cta" position="hero">
+                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
                   <a
                     href={affiliateUrl}
                     target="_blank"
@@ -383,7 +383,7 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
             ctaText={reviewData.bottomLine.ctaText}
             customCTA={(
               <div className="text-center">
-                <CTAVisibilityTracker ctaId="bottom-line-cta" position="bottom_line">
+                <CTAVisibilityTracker ctaId="bottom-line-cta" position="final_cta">
                   <a
                     href={affiliateUrl}
                     target="_blank"

@@ -337,6 +337,16 @@ export default async function CuisinartDLC10CReview() {
                     Check Price on Amazon →
                   </a>
                 </CTAVisibilityTracker>
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
+                </p>
                 <p className="text-xs text-slate-500 text-center italic">
                   As an Amazon Associate, I earn from qualifying purchases. This comes at no extra cost to you.
                 </p>
