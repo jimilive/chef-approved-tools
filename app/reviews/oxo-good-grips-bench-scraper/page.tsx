@@ -248,7 +248,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
           </p>
           <Link
             href="/reviews/john-boos-platinum-commercial-cutting-board"
-            className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold"
+            className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold"
           >
             → See My John Boos Platinum Cutting Board Review
           </Link>
@@ -319,17 +319,17 @@ export default async function OXOGoodGripsBenchScraperReview() {
         <nav className="bg-slate-50 p-4 rounded-lg mb-8 border border-slate-200">
           <p className="font-semibold text-slate-900 mb-2">Quick Navigation:</p>
           <div className="flex flex-wrap gap-2 text-sm">
-            <a href="#testimonials" className="text-orange-600 hover:text-orange-800">User Reviews</a>
+            <a href="#testimonials" className="text-orange-700 hover:text-orange-800">User Reviews</a>
             <span className="text-slate-400">|</span>
-            <a href="#cost-analysis" className="text-orange-600 hover:text-orange-800">Cost Analysis</a>
+            <a href="#cost-analysis" className="text-orange-700 hover:text-orange-800">Cost Analysis</a>
             <span className="text-slate-400">|</span>
-            <a href="#performance" className="text-orange-600 hover:text-orange-800">Performance</a>
+            <a href="#performance" className="text-orange-700 hover:text-orange-800">Performance</a>
             <span className="text-slate-400">|</span>
-            <a href="#comparison" className="text-orange-600 hover:text-orange-800">vs. Competitors</a>
+            <a href="#comparison" className="text-orange-700 hover:text-orange-800">vs. Competitors</a>
             <span className="text-slate-400">|</span>
-            <a href="#specs" className="text-orange-600 hover:text-orange-800">Specifications</a>
+            <a href="#specs" className="text-orange-700 hover:text-orange-800">Specifications</a>
             <span className="text-slate-400">|</span>
-            <a href="#faq" className="text-orange-600 hover:text-orange-800">FAQ</a>
+            <a href="#faq" className="text-orange-700 hover:text-orange-800">FAQ</a>
           </div>
         </nav>
 

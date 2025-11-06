@@ -241,19 +241,19 @@ export default async function RobotCoupeR2DiceReview() {
         <nav className="bg-slate-50 p-4 rounded-lg mb-8 border border-slate-200" role="navigation" aria-label="Quick page navigation">
           <p className="font-semibold text-slate-900 mb-2">Quick Navigation:</p>
           <div className="flex flex-wrap gap-2 text-sm">
-            <a href="#testing" aria-label="Jump to testing results section" className="text-orange-600 hover:text-orange-800">Testing Results</a>
+            <a href="#testing" aria-label="Jump to testing results section" className="text-orange-700 hover:text-orange-800">Testing Results</a>
             <span className="text-slate-400">|</span>
-            <a href="#reviews" aria-label="Jump to user reviews section" className="text-orange-600 hover:text-orange-800">User Reviews</a>
+            <a href="#reviews" aria-label="Jump to user reviews section" className="text-orange-700 hover:text-orange-800">User Reviews</a>
             <span className="text-slate-400">|</span>
-            <a href="#comparison" aria-label="Jump to R2 Dice vs R2N comparison section" className="text-orange-600 hover:text-orange-800">R2 Dice vs R2N</a>
+            <a href="#comparison" aria-label="Jump to R2 Dice vs R2N comparison section" className="text-orange-700 hover:text-orange-800">R2 Dice vs R2N</a>
             <span className="text-slate-400">|</span>
-            <a href="#pricing" aria-label="Jump to pricing section" className="text-orange-600 hover:text-orange-800">Pricing</a>
+            <a href="#pricing" aria-label="Jump to pricing section" className="text-orange-700 hover:text-orange-800">Pricing</a>
             <span className="text-slate-400">|</span>
-            <a href="#who-buys" aria-label="Jump to buyer recommendations section" className="text-orange-600 hover:text-orange-800">Who Should Buy</a>
+            <a href="#who-buys" aria-label="Jump to buyer recommendations section" className="text-orange-700 hover:text-orange-800">Who Should Buy</a>
             <span className="text-slate-400">|</span>
-            <a href="#faq" aria-label="Jump to FAQ section" className="text-orange-600 hover:text-orange-800">FAQ</a>
+            <a href="#faq" aria-label="Jump to FAQ section" className="text-orange-700 hover:text-orange-800">FAQ</a>
             <span className="text-slate-400">|</span>
-            <a href="#verdict" aria-label="Jump to verdict section" className="text-orange-600 hover:text-orange-800">Verdict</a>
+            <a href="#verdict" aria-label="Jump to verdict section" className="text-orange-700 hover:text-orange-800">Verdict</a>
           </div>
         </nav>
 
@@ -303,7 +303,7 @@ export default async function RobotCoupeR2DiceReview() {
               <div>
                 <h3 className="font-bold text-slate-900 mb-3">Commercial Kitchen Performance</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  In the demanding environment of Purple Cafe&apos;s prep kitchen, the Robot Coupe R2 Dice became our go-to workhorse for cheese shredding operations—working alongside our <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline">KitchenAid commercial mixer</Link> and <Link href="/reviews/vitamix-5200-professional-blender" className="text-orange-600 hover:text-orange-800 underline">Vitamix 5200 blender</Link> as the foundation of our prep station.
+                  In the demanding environment of Purple Cafe&apos;s prep kitchen, the Robot Coupe R2 Dice became our go-to workhorse for cheese shredding operations—working alongside our <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-700 hover:text-orange-800 underline">KitchenAid commercial mixer</Link> and <Link href="/reviews/vitamix-5200-professional-blender" className="text-orange-700 hover:text-orange-800 underline">Vitamix 5200 blender</Link> as the foundation of our prep station.
                   The continuous feed design allowed us to process large volumes of cheese efficiently during busy prep periods, maintaining consistent quality
                   that manual shredding simply couldn&apos;t match. The precision cuts and uniform results were essential for presentation standards.
                 </p>
@@ -312,7 +312,7 @@ export default async function RobotCoupeR2DiceReview() {
               <div>
                 <h3 className="font-bold text-slate-900 mb-3">Speed and Efficiency Excellence</h3>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  The 2 HP fan-cooled induction motor running at 1,725 RPM delivers the same professional-grade performance we relied on in our <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline">KitchenAid commercial mixer</Link>—equipment built for daily commercial abuse, not occasional home use.
+                  The 2 HP fan-cooled induction motor running at 1,725 RPM delivers the same professional-grade performance we relied on in our <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-700 hover:text-orange-800 underline">KitchenAid commercial mixer</Link>—equipment built for daily commercial abuse, not occasional home use.
                   With the ability to process up to 850 servings in three hours, this machine drastically cuts prep time. Professional kitchens report
                   &quot;saving hours daily&quot; and being able to &quot;do in minutes what used to take hours&quot; thanks to the continuous feed design and powerful motor.
                 </p>
@@ -497,7 +497,7 @@ export default async function RobotCoupeR2DiceReview() {
           </div>
 
           <p className="text-slate-700 mt-4">
-            This processor pairs perfectly with other commercial-grade equipment like our <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline">John Boos cutting board</Link> for efficient prep workflow.
+            This processor pairs perfectly with other commercial-grade equipment like our <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800 underline">John Boos cutting board</Link> for efficient prep workflow.
           </p>
         </section>
 
@@ -557,7 +557,7 @@ export default async function RobotCoupeR2DiceReview() {
               </ul>
 
               <p className="text-slate-700 mt-4 text-sm">
-                Building a complete commercial kitchen? See our <Link href="/kitchen-bundle" className="text-orange-600 hover:text-orange-800 underline">professional kitchen starter kit</Link> for recommended equipment combinations.
+                Building a complete commercial kitchen? See our <Link href="/kitchen-bundle" className="text-orange-700 hover:text-orange-800 underline">professional kitchen starter kit</Link> for recommended equipment combinations.
               </p>
             </div>
             <div className="bg-white rounded-lg p-6 border border-gray-200">

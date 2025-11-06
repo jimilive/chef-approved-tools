@@ -414,7 +414,7 @@ export default async function NortonTriStoneSharpenerReview() {
 
             <a
               href="/newsletter"
-              className="inline-block bg-white text-orange-600 font-bold px-8 py-4 rounded-xl hover:bg-orange-50 transition-all hover:scale-105 active:scale-95 shadow-lg"
+              className="inline-block bg-white text-orange-700 font-bold px-8 py-4 rounded-xl hover:bg-orange-50 transition-all hover:scale-105 active:scale-95 shadow-lg"
             >
               Download Free Guide →
             </a>

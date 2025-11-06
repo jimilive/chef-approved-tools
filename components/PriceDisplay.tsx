@@ -119,7 +119,7 @@ export default function PriceDisplay({
 
       {/* Retailer Links */}
       <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-gray-700">Compare Prices Across Retailers:</h4>
+        <h3 className="text-sm font-semibold text-gray-700">Compare Prices Across Retailers:</h3>
         <div className="grid gap-2">
           {displayVendors.map((vendor, index) => {
             const hasSavings = vendor.originalPrice && vendor.price && vendor.price < vendor.originalPrice

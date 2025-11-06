@@ -196,7 +196,7 @@ export default async function NinjaBL660ReviewPage() {
                   → View {productData.name} on Amazon
                 </a>
               </p>
-              <Link href="/reviews" className="inline-flex items-center justify-center border-2 border-orange-600 text-orange-600 hover:bg-orange-50 font-bold py-4 px-8 rounded-lg transition-all duration-200">
+              <Link href="/reviews" className="inline-flex items-center justify-center border-2 border-orange-700 text-orange-700 hover:bg-orange-50 font-bold py-4 px-8 rounded-lg transition-all duration-200">
                 See All Reviews
               </Link>
             </div>

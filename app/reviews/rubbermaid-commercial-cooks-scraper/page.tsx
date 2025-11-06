@@ -238,13 +238,13 @@ export default async function RubbermaidScraperReview() {
         <nav className="bg-slate-50 p-4 rounded-lg mb-8 border border-slate-200">
           <p className="font-semibold text-slate-900 mb-2">Quick Navigation:</p>
           <div className="flex flex-wrap gap-2 text-sm">
-            <a href="#testing" className="text-orange-600 hover:text-orange-800">Testing Results</a>
+            <a href="#testing" className="text-orange-700 hover:text-orange-800">Testing Results</a>
             <span className="text-slate-400">|</span>
-            <a href="#comparison" className="text-orange-600 hover:text-orange-800">vs Alternatives</a>
+            <a href="#comparison" className="text-orange-700 hover:text-orange-800">vs Alternatives</a>
             <span className="text-slate-400">|</span>
-            <a href="#verdict" className="text-orange-600 hover:text-orange-800">Final Verdict</a>
+            <a href="#verdict" className="text-orange-700 hover:text-orange-800">Final Verdict</a>
             <span className="text-slate-400">|</span>
-            <a href="#faq" className="text-orange-600 hover:text-orange-800">FAQ</a>
+            <a href="#faq" className="text-orange-700 hover:text-orange-800">FAQ</a>
           </div>
         </nav>
 
@@ -705,12 +705,12 @@ export default async function RubbermaidScraperReview() {
             <div className="my-5">
               <h3>If You&apos;re Building a Complete Professional Kitchen:</h3>
               <p className="mb-2.5">
-                → See our <Link href="/kitchen-bundle" className="text-orange-600 hover:text-orange-800 underline">Complete Kitchen Starter Kit</Link> for recommended equipment combinations at different budget levels.
+                → See our <Link href="/kitchen-bundle" className="text-orange-700 hover:text-orange-800 underline">Complete Kitchen Starter Kit</Link> for recommended equipment combinations at different budget levels.
               </p>
             </div>
 
             <p className="mt-5 p-4 bg-yellow-100 rounded">
-              <strong>Still unsure?</strong> <Link href="/contact" className="text-orange-600 hover:text-orange-800 underline">Contact me</Link> with your specific needs—I&apos;ll provide a personalized recommendation based on your cooking style and budget.
+              <strong>Still unsure?</strong> <Link href="/contact" className="text-orange-700 hover:text-orange-800 underline">Contact me</Link> with your specific needs—I&apos;ll provide a personalized recommendation based on your cooking style and budget.
             </p>
           </div>
         </section>
@@ -728,7 +728,7 @@ export default async function RubbermaidScraperReview() {
                 <p className="text-sm text-slate-700 mb-3">
                   {product.description}
                 </p>
-                <Link href={product.href} className="text-orange-600 hover:text-orange-800 font-semibold text-sm">
+                <Link href={product.href} className="text-orange-700 hover:text-orange-800 font-semibold text-sm">
                   Read Review →
                 </Link>
               </div>
