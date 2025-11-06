@@ -71,7 +71,7 @@ export default function MiseEnPlacePage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <ListChecks className="w-5 h-5" />
             <span className="text-sm font-medium">Technique</span>
           </div>
@@ -133,7 +133,7 @@ export default function MiseEnPlacePage() {
           <h2>Why Mise en Place Transforms Your Cooking</h2>
 
           <h3 className="flex items-center gap-2">
-            <Clock className="w-5 h-5 text-orange-600" />
+            <Clock className="w-5 h-5 text-orange-700" />
             1. You Cook Faster
           </h3>
 
@@ -204,7 +204,7 @@ export default function MiseEnPlacePage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -294,22 +294,22 @@ export default function MiseEnPlacePage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/knife-safety-protect-fingers" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/knife-safety-protect-fingers" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Knife Safety: How to Protect Your Fingers
             </Link>
-            <Link href="/blog/how-to-make-roux" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/how-to-make-roux" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Make a Perfect Roux
             </Link>
-            <Link href="/blog/caramelization-science" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/caramelization-science" className="text-orange-700 hover:text-orange-800 font-semibold">
               → The Science of Caramelization
             </Link>
-            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Victorinox Fibrox 8&quot; Chef&apos;s Knife Review
             </Link>
-            <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-700 hover:text-orange-800 font-semibold">
               → OXO Good Grips Bench Scraper Review
             </Link>
-            <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800 font-semibold">
               → John Boos Platinum Cutting Board Review
             </Link>
           </div>

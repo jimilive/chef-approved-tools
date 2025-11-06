@@ -115,7 +115,7 @@ export default function Braising101Page() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Utensils className="w-8 h-8 text-orange-600" />
+            <Utensils className="w-8 h-8 text-orange-700" />
             What Braising Really Is
           </h2>
 
@@ -140,7 +140,7 @@ export default function Braising101Page() {
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <ThermometerSun className="w-8 h-8 text-orange-600" />
+            <ThermometerSun className="w-8 h-8 text-orange-700" />
             The Science of Tenderness
           </h2>
 
@@ -184,7 +184,7 @@ export default function Braising101Page() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Clock className="w-8 h-8 text-orange-600" />
+            <Clock className="w-8 h-8 text-orange-700" />
             Step-by-Step: Professional Braising Method
           </h2>
 
@@ -334,7 +334,7 @@ export default function Braising101Page() {
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Flame className="w-8 h-8 text-orange-600" />
+            <Flame className="w-8 h-8 text-orange-700" />
             Recommended Equipment
           </h2>
 

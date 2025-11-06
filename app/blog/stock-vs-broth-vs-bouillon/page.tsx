@@ -71,7 +71,7 @@ export default function StockVsBrothPage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Droplets className="w-5 h-5" />
             <span className="text-sm font-medium">Cooking Fundamentals</span>
           </div>
@@ -112,7 +112,7 @@ export default function StockVsBrothPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <Droplets className="w-6 h-6 text-orange-600" />
+            <Droplets className="w-6 h-6 text-orange-700" />
             Stock: The Foundation of Professional Cooking
           </h2>
 
@@ -168,7 +168,7 @@ export default function StockVsBrothPage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <Flame className="w-6 h-6 text-orange-600" />
+            <Flame className="w-6 h-6 text-orange-700" />
             Broth: Lighter, Faster, More Seasoned
           </h2>
 
@@ -241,7 +241,7 @@ export default function StockVsBrothPage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -266,7 +266,7 @@ export default function StockVsBrothPage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <FlaskConical className="w-6 h-6 text-orange-600" />
+            <FlaskConical className="w-6 h-6 text-orange-700" />
             Bouillon: The Shortcut (Use Sparingly)
           </h2>
 
@@ -418,16 +418,16 @@ export default function StockVsBrothPage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/making-stock-professional-chef-method" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/making-stock-professional-chef-method" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Make Stock: The Professional Chef Method
             </Link>
-            <Link href="/blog/what-is-braising" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/what-is-braising" className="text-orange-700 hover:text-orange-800 font-semibold">
               → What is Braising? (And Why It Makes Meat Tender)
             </Link>
-            <Link href="/blog/understanding-umami-fifth-taste" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/understanding-umami-fifth-taste" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Understanding Umami: The Fifth Taste
             </Link>
-            <Link href="/blog/why-cooking-science-matters" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/why-cooking-science-matters" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Why Cooking Science Matters
             </Link>
           </div>

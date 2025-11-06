@@ -115,7 +115,7 @@ export default function CarbonFootprintKitchenEquipmentPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Shield className="w-8 h-8 text-orange-600" />
+            <Shield className="w-8 h-8 text-orange-700" />
             The &quot;Buy Once, Cry Once&quot; Philosophy
           </h2>
 
@@ -146,7 +146,7 @@ export default function CarbonFootprintKitchenEquipmentPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <TrendingDown className="w-8 h-8 text-orange-600" />
+            <TrendingDown className="w-8 h-8 text-orange-700" />
             The Hidden Carbon Cost of Kitchen Gear
           </h2>
 
@@ -178,7 +178,7 @@ export default function CarbonFootprintKitchenEquipmentPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Recycle className="w-8 h-8 text-orange-600" />
+            <Recycle className="w-8 h-8 text-orange-700" />
             Material Breakdown: From Plastic to Cast Iron
           </h2>
 
@@ -259,7 +259,7 @@ export default function CarbonFootprintKitchenEquipmentPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Leaf className="w-8 h-8 text-orange-600" />
+            <Leaf className="w-8 h-8 text-orange-700" />
             Why Durability Is the Real Sustainability
           </h2>
 

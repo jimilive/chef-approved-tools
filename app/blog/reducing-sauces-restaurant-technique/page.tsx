@@ -115,7 +115,7 @@ export default function ReducingSaucesPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Droplets className="w-8 h-8 text-orange-600" />
+            <Droplets className="w-8 h-8 text-orange-700" />
             The Purpose of Reduction
           </h2>
 
@@ -146,7 +146,7 @@ export default function ReducingSaucesPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Thermometer className="w-8 h-8 text-orange-600" />
+            <Thermometer className="w-8 h-8 text-orange-700" />
             The Science of Concentration
           </h2>
 
@@ -171,7 +171,7 @@ export default function ReducingSaucesPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Clock className="w-8 h-8 text-orange-600" />
+            <Clock className="w-8 h-8 text-orange-700" />
             The Professional Reduction Method
           </h2>
 
@@ -288,7 +288,7 @@ export default function ReducingSaucesPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Eye className="w-8 h-8 text-orange-600" />
+            <Eye className="w-8 h-8 text-orange-700" />
             How to Judge When It&apos;s Done
           </h2>
 

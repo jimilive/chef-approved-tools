@@ -80,7 +80,7 @@ export default function PerfectRisottoPage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <ChefHat className="w-5 h-5" />
             <span className="text-sm font-medium">{articleMeta.category}</span>
           </div>
@@ -388,16 +388,16 @@ export default function PerfectRisottoPage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/stock-vs-broth-vs-bouillon" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/stock-vs-broth-vs-bouillon" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Stock vs Broth vs Bouillon: What&apos;s the Difference?
             </Link>
-            <Link href="/blog/understanding-acids-cooking" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/understanding-acids-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Understanding Acids in Cooking
             </Link>
-            <Link href="/blog/fat-is-flavor" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/fat-is-flavor" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Fat is Flavor: The Science Behind Richness
             </Link>
-            <Link href="/reviews/cuisinart-8-inch-nonstick-pan" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/cuisinart-8-inch-nonstick-pan" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Cuisinart 12&quot; Stainless Steel Sauté Pan Review
             </Link>
           </div>

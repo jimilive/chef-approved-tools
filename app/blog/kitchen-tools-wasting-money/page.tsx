@@ -86,9 +86,9 @@ export default function KitchenToolsWastePost() {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
         <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-600">Home</Link>
+          <Link href="/" className="hover:text-orange-700">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-600">Blog</Link>
+          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
           <span className="mx-2">/</span>
           <span>10 Kitchen Tools You&apos;re Wasting Money On</span>
         </nav>
@@ -326,7 +326,7 @@ export default function KitchenToolsWastePost() {
                   productSlug="kitchen-tools-wasting-money"
                   merchant="internal"
                 >
-                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</Link>
+                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</Link>
                 </CTAVisibilityTracker> — perfect balance of sharpness, comfort, and control.
               </li>
               <li>
@@ -339,7 +339,7 @@ export default function KitchenToolsWastePost() {
                   productSlug="kitchen-tools-wasting-money"
                   merchant="internal"
                 >
-                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-600 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link>
+                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link>
                 </CTAVisibilityTracker> — I&apos;ve used mine for 19 years. Don&apos;t use your knife as a spatula.
               </li>
               <li>
@@ -349,7 +349,7 @@ export default function KitchenToolsWastePost() {
                   productSlug="kitchen-tools-wasting-money"
                   merchant="internal"
                 >
-                  <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 underline">Lodge 12&quot; Cast Iron Skillet</Link>
+                  <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 underline">Lodge 12&quot; Cast Iron Skillet</Link>
                 </CTAVisibilityTracker> — one pan that sears, bakes, and lasts forever.
               </li>
               <li>
@@ -580,7 +580,7 @@ export default function KitchenToolsWastePost() {
                 Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from the University of Montana. Techniques tested on thousands of dishes in high-volume kitchens serving hundreds daily.
               </p>
               <div className="mt-4">
-                <Link href="/about" className="text-orange-600 hover:text-orange-800 text-sm font-semibold">
+                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
                   Learn more about Scott →
                 </Link>
               </div>

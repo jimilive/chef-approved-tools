@@ -79,7 +79,7 @@ export default function CheeseSaucePage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Flame className="w-5 h-5" />
             <span className="text-sm font-medium">Technique</span>
           </div>
@@ -113,7 +113,7 @@ export default function CheeseSaucePage() {
 
           <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Restaurant Reality
             </h3>
             <p className="mb-0">
@@ -220,7 +220,7 @@ export default function CheeseSaucePage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -268,16 +268,16 @@ export default function CheeseSaucePage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/how-to-make-roux" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/how-to-make-roux" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Make a Proper Roux (Foundation Technique)
             </Link>
-            <Link href="/blog/what-is-emulsification" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/what-is-emulsification" className="text-orange-700 hover:text-orange-800 font-semibold">
               → What Does Emulsify Mean and How Does It Work
             </Link>
-            <Link href="/blog/why-professional-chefs-use-kosher-salt" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/why-professional-chefs-use-kosher-salt" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Why Professional Chefs Use Kosher Salt
             </Link>
-            <Link href="/reviews/nordic-ware-half-sheet-pan" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/nordic-ware-half-sheet-pan" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Nordic Ware Half Sheet Pan Review
             </Link>
           </div>

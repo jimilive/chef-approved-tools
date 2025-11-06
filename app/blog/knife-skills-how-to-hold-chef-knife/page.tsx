@@ -67,7 +67,7 @@ export default function KnifeSkillsPage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Target className="w-5 h-5" />
             <span className="text-sm font-medium">Technique Guide</span>
           </div>
@@ -108,7 +108,7 @@ export default function KnifeSkillsPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <Hand className="w-6 h-6 text-orange-600" />
+            <Hand className="w-6 h-6 text-orange-700" />
             The Pinch Grip: How to Hold a Chef&apos;s Knife
           </h2>
 
@@ -149,7 +149,7 @@ export default function KnifeSkillsPage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <Hand className="w-6 h-6 text-orange-600" />
+            <Hand className="w-6 h-6 text-orange-700" />
             The Claw Position: How to Hold the Food
           </h2>
 
@@ -181,7 +181,7 @@ export default function KnifeSkillsPage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -206,7 +206,7 @@ export default function KnifeSkillsPage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <Target className="w-6 h-6 text-orange-600" />
+            <Target className="w-6 h-6 text-orange-700" />
             The Rocking Motion: How to Cut Efficiently
           </h2>
 
@@ -270,7 +270,7 @@ export default function KnifeSkillsPage() {
 
           <p>
             <strong>Problem:</strong> Dull knives require more pressure, which increases the chance of slipping<br />
-            <strong>Fix:</strong> Keep your knife sharp (see my <Link href="/blog/knife-safety-professional-kitchen" className="text-orange-600 hover:text-orange-800">knife safety guide</Link> for sharpening tips)
+            <strong>Fix:</strong> Keep your knife sharp (see my <Link href="/blog/knife-safety-professional-kitchen" className="text-orange-700 hover:text-orange-800">knife safety guide</Link> for sharpening tips)
           </p>
 
           <h2>How to Practice Knife Skills</h2>
@@ -303,7 +303,7 @@ export default function KnifeSkillsPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <CheckCircle2 className="w-6 h-6 text-orange-600" />
+            <CheckCircle2 className="w-6 h-6 text-orange-700" />
             The Bottom Line: Proper Technique Changes Everything
           </h2>
 
@@ -331,16 +331,16 @@ export default function KnifeSkillsPage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/knife-safety-professional-kitchen" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/knife-safety-professional-kitchen" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Knife Safety in a Professional Kitchen
             </Link>
-            <Link href="/blog/mis-en-place-professional-cooking" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/mis-en-place-professional-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Mise en Place: The Foundation of Professional Cooking
             </Link>
-            <Link href="/blog/onions-cooking-guide" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/onions-cooking-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Complete Guide to Cooking Onions
             </Link>
-            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Victorinox Fibrox 8&quot; Chef&apos;s Knife Review
             </Link>
           </div>

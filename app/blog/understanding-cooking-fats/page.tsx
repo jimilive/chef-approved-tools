@@ -80,7 +80,7 @@ export default function UnderstandingCookingFatsPage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Droplet className="w-5 h-5" />
             <span className="text-sm font-medium">{articleMeta.category}</span>
           </div>
@@ -433,16 +433,16 @@ export default function UnderstandingCookingFatsPage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/how-to-sear-steaks" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/how-to-sear-steaks" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Sear Steaks Like a Restaurant
             </Link>
-            <Link href="/blog/fat-is-flavor" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/fat-is-flavor" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Fat is Flavor: The Science Behind Richness
             </Link>
-            <Link href="/blog/deglazing-pan-sauces" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/deglazing-pan-sauces" className="text-orange-700 hover:text-orange-800 font-semibold">
               → The Art of Deglazing
             </Link>
-            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Cast Iron Skillet Review
             </Link>
           </div>

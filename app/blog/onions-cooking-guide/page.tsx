@@ -67,7 +67,7 @@ export default function OnionsGuidePage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Utensils className="w-5 h-5" />
             <span className="text-sm font-medium">Ingredient Guide</span>
           </div>
@@ -92,7 +92,7 @@ export default function OnionsGuidePage() {
           </p>
 
           <p>
-            But here&apos;s what most home cooks don&apos;t understand: <strong>not all onions are the same, and how you cook them completely changes what they contribute to a dish</strong>. Raw onions are sharp and pungent. Sautéed onions are soft and sweet. <Link href="/blog/caramelization-science" className="text-orange-600 hover:text-orange-800 underline">Caramelized onions</Link> are deeply savory and almost candy-like. The same ingredient, three completely different flavors.
+            But here&apos;s what most home cooks don&apos;t understand: <strong>not all onions are the same, and how you cook them completely changes what they contribute to a dish</strong>. Raw onions are sharp and pungent. Sautéed onions are soft and sweet. <Link href="/blog/caramelization-science" className="text-orange-700 hover:text-orange-800 underline">Caramelized onions</Link> are deeply savory and almost candy-like. The same ingredient, three completely different flavors.
           </p>
 
           <p>
@@ -100,7 +100,7 @@ export default function OnionsGuidePage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <Info className="w-6 h-6 text-orange-600" />
+            <Info className="w-6 h-6 text-orange-700" />
             Understanding Onion Varieties
           </h2>
 
@@ -162,13 +162,13 @@ export default function OnionsGuidePage() {
               Restaurant Reality: The 45-Minute Onion Rule
             </p>
             <p className="mb-0">
-              At Purple Café, we had one ironclad rule for caramelized onions: <strong>45 minutes minimum, no exceptions</strong>. New cooks would try to rush it—crank the heat, get some color in 15 minutes, and call it done. The Chef would taste it once and send them back to start over. &quot;That&apos;s browned onions, not caramelized onions,&quot; he&apos;d say. <strong>&quot;Taste the difference.&quot;</strong> Rushed onions were sharp, one-dimensional, and sometimes bitter. Properly caramelized onions were sweet, complex, jammy, with no harsh bite. That 30 extra minutes of patience was the difference between okay food and restaurant-quality food. <strong>The lesson:</strong> Real <Link href="/blog/caramelization-science" className="text-orange-600 hover:text-orange-800 underline">caramelization</Link> can&apos;t be rushed. Chemistry takes time.
+              At Purple Café, we had one ironclad rule for caramelized onions: <strong>45 minutes minimum, no exceptions</strong>. New cooks would try to rush it—crank the heat, get some color in 15 minutes, and call it done. The Chef would taste it once and send them back to start over. &quot;That&apos;s browned onions, not caramelized onions,&quot; he&apos;d say. <strong>&quot;Taste the difference.&quot;</strong> Rushed onions were sharp, one-dimensional, and sometimes bitter. Properly caramelized onions were sweet, complex, jammy, with no harsh bite. That 30 extra minutes of patience was the difference between okay food and restaurant-quality food. <strong>The lesson:</strong> Real <Link href="/blog/caramelization-science" className="text-orange-700 hover:text-orange-800 underline">caramelization</Link> can&apos;t be rushed. Chemistry takes time.
             </p>
           </div>
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -193,7 +193,7 @@ export default function OnionsGuidePage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <Clock className="w-6 h-6 text-orange-600" />
+            <Clock className="w-6 h-6 text-orange-700" />
             Cooking Methods for Onions
           </h2>
 
@@ -212,7 +212,7 @@ export default function OnionsGuidePage() {
           </p>
 
           <p>
-            For the complete technique, see <Link href="/blog/caramelization-science" className="text-orange-600 hover:text-orange-800 underline">The Science of Caramelization</Link>.
+            For the complete technique, see <Link href="/blog/caramelization-science" className="text-orange-700 hover:text-orange-800 underline">The Science of Caramelization</Link>.
           </p>
 
           <h3>3. Roasting</h3>
@@ -239,23 +239,23 @@ export default function OnionsGuidePage() {
           </ul>
 
           <p>
-            Cook them properly (patience for <Link href="/blog/caramelization-science" className="text-orange-600 hover:text-orange-800 underline">caramelization</Link>, gentle heat for sautéing), and onions will transform your cooking.
+            Cook them properly (patience for <Link href="/blog/caramelization-science" className="text-orange-700 hover:text-orange-800 underline">caramelization</Link>, gentle heat for sautéing), and onions will transform your cooking.
           </p>
         </div>
 
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/caramelization-science" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/caramelization-science" className="text-orange-700 hover:text-orange-800 font-semibold">
               → The Science of Caramelization
             </Link>
-            <Link href="/blog/potatoes-cooking-guide" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/potatoes-cooking-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Complete Guide to Cooking Potatoes
             </Link>
-            <Link href="/blog/knife-safety-protect-fingers" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/knife-safety-protect-fingers" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Knife Safety: How to Protect Your Fingers
             </Link>
-            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Victorinox Fibrox 8&quot; Chef&apos;s Knife Review
             </Link>
           </div>

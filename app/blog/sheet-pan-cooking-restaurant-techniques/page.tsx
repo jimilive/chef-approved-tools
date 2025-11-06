@@ -111,7 +111,7 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Flame className="w-8 h-8 text-orange-600" />
+            <Flame className="w-8 h-8 text-orange-700" />
             1. High-Heat Roasting (425°F–475°F)
           </h2>
 
@@ -151,7 +151,7 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Clock className="w-8 h-8 text-orange-600" />
+            <Clock className="w-8 h-8 text-orange-700" />
             2. Resting & Cooling Technique
           </h2>
 
@@ -178,7 +178,7 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <ChefHat className="w-8 h-8 text-orange-600" />
+            <ChefHat className="w-8 h-8 text-orange-700" />
             3. Drying & Crisping (Pat Ingredients Dry)
           </h2>
 

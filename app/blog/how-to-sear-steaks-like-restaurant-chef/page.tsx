@@ -95,9 +95,9 @@ export default function SteakSearingPost() {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
         <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-600">Home</Link>
+          <Link href="/" className="hover:text-orange-700">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-600">Blog</Link>
+          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
           <span className="mx-2">/</span>
           <span>How to Sear Steaks Like a Restaurant Chef</span>
         </nav>
@@ -383,7 +383,7 @@ export default function SteakSearingPost() {
             <h4 className="font-bold text-slate-800 mb-4">Tested Equipment Recommendations</h4>
             <ul className="space-y-3">
               <li>
-                <strong>Cast Iron Skillet:</strong> <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 underline">Lodge Cast Iron Bundle</Link> -
+                <strong>Cast Iron Skillet:</strong> <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 underline">Lodge Cast Iron Bundle</Link> -
                 Same heat retention as restaurant equipment, but affordable for home use.
               </li>
               <li>
@@ -515,7 +515,7 @@ export default function SteakSearingPost() {
                 that deliver professional results for home cooks.
               </p>
               <div className="mt-4">
-                <Link href="/about" className="text-orange-600 hover:text-orange-800 text-sm font-semibold">
+                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
                   Read more about Scott →
                 </Link>
               </div>

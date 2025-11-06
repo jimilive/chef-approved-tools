@@ -90,9 +90,9 @@ export default function KnifeMistakesPost() {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
         <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-600">Home</Link>
+          <Link href="/" className="hover:text-orange-700">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-600">Blog</Link>
+          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
           <span className="mx-2">/</span>
           <span>5 Knife Mistakes Home Cooks Make</span>
         </nav>
@@ -408,7 +408,7 @@ export default function KnifeMistakesPost() {
                   productSlug="knife-mistakes-home-cooks-make"
                   merchant="internal"
                 >
-                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox Fibrox 8-Inch Chef&apos;s Knife</Link>
+                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 underline">Victorinox Fibrox 8-Inch Chef&apos;s Knife</Link>
                 </CTAVisibilityTracker> is the best affordable pro-level knife I&apos;ve ever used. Grippy handle, easy maintenance, and balanced for long prep sessions.
               </li>
               <li>
@@ -618,7 +618,7 @@ export default function KnifeMistakesPost() {
                 Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from the University of Montana. Techniques tested on thousands of dishes in high-volume kitchens serving hundreds daily.
               </p>
               <div className="mt-4">
-                <Link href="/about" className="text-orange-600 hover:text-orange-800 text-sm font-semibold">
+                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
                   Learn more about Scott →
                 </Link>
               </div>

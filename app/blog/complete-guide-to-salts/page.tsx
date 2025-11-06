@@ -67,7 +67,7 @@ export default function SaltsGuidePage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Sparkles className="w-5 h-5" />
             <span className="text-sm font-medium">Ingredient Guide</span>
           </div>
@@ -141,7 +141,7 @@ export default function SaltsGuidePage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <Sparkles className="w-6 h-6 text-orange-600" />
+            <Sparkles className="w-6 h-6 text-orange-700" />
             The Four Essential Salts
           </h2>
 
@@ -247,7 +247,7 @@ export default function SaltsGuidePage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -272,7 +272,7 @@ export default function SaltsGuidePage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <Flame className="w-6 h-6 text-orange-600" />
+            <Flame className="w-6 h-6 text-orange-700" />
             How to Season Food at Different Stages
           </h2>
 
@@ -310,7 +310,7 @@ export default function SaltsGuidePage() {
           </p>
 
           <p>
-            <strong>Example:</strong> When making a soup, salt the <Link href="/blog/onions-cooking-guide" className="text-orange-600 hover:text-orange-800 underline">onions</Link> as you sauté them, salt the stock when you add it, salt the vegetables as they cook, taste and adjust at the end. This builds depth.
+            <strong>Example:</strong> When making a soup, salt the <Link href="/blog/onions-cooking-guide" className="text-orange-700 hover:text-orange-800 underline">onions</Link> as you sauté them, salt the stock when you add it, salt the vegetables as they cook, taste and adjust at the end. This builds depth.
           </p>
 
           <h3>Stage 3: Season At The Finish</h3>
@@ -400,16 +400,16 @@ export default function SaltsGuidePage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/understanding-acids-cooking" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/understanding-acids-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Understanding Acids in Cooking
             </Link>
-            <Link href="/blog/fat-is-flavor" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/fat-is-flavor" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Why Fat is Flavor (And How to Use It)
             </Link>
-            <Link href="/blog/onions-cooking-guide" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/onions-cooking-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Complete Guide to Cooking Onions
             </Link>
-            <Link href="/blog/potatoes-cooking-guide" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/potatoes-cooking-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Complete Guide to Cooking Potatoes
             </Link>
           </div>

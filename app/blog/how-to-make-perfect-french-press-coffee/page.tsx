@@ -99,9 +99,9 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
         <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-600">Home</Link>
+          <Link href="/" className="hover:text-orange-700">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-600">Blog</Link>
+          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
           <span className="mx-2">/</span>
           <span>How to Make Perfect French Press Coffee</span>
         </nav>
@@ -566,7 +566,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
                 University of Montana. Brewed hundreds of French press pots for guests at Purple Café over 6 years, then continued perfecting the technique for 18 years at home—24 years of daily French press experience.
               </p>
               <div className="mt-4">
-                <Link href="/about" className="text-orange-600 hover:text-orange-800 text-sm font-semibold">
+                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
                   Read more about Scott →
                 </Link>
               </div>

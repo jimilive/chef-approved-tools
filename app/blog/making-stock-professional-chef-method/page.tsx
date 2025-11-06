@@ -87,7 +87,7 @@ export default function MakingStockPage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <ChefHat className="w-5 h-5" />
             <span className="text-sm font-medium">Cooking Techniques</span>
           </div>
@@ -120,7 +120,7 @@ export default function MakingStockPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <AlertTriangle className="w-6 h-6 text-orange-600" />
+            <AlertTriangle className="w-6 h-6 text-orange-700" />
             The Problem: Why Home Stocks Fall Flat
           </h2>
 
@@ -155,7 +155,7 @@ export default function MakingStockPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <Flame className="w-6 h-6 text-orange-600" />
+            <Flame className="w-6 h-6 text-orange-700" />
             The Professional Method: Step-by-Step
           </h2>
 
@@ -254,7 +254,7 @@ export default function MakingStockPage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Free Kitchen Foundations Guide
             </h3>
             <p className="mb-4">
@@ -290,7 +290,7 @@ export default function MakingStockPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <AlertTriangle className="w-6 h-6 text-orange-600" />
+            <AlertTriangle className="w-6 h-6 text-orange-700" />
             Common Mistakes (And How to Avoid Them)
           </h2>
 
@@ -326,7 +326,7 @@ export default function MakingStockPage() {
             productSlug="maillard-reaction-guide"
             merchant="internal"
           >
-            <Link href="/blog/maillard-reaction-explained" className="text-orange-600 hover:text-orange-700 font-medium">
+            <Link href="/blog/maillard-reaction-explained" className="text-orange-700 hover:text-orange-700 font-medium">
               Learn more about the Maillard reaction →
             </Link>
           </CTAVisibilityTracker> */}
@@ -358,7 +358,7 @@ export default function MakingStockPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <Clock className="w-6 h-6 text-orange-600" />
+            <Clock className="w-6 h-6 text-orange-700" />
             Troubleshooting Guide
           </h2>
 
@@ -472,7 +472,7 @@ export default function MakingStockPage() {
                 productSlug="season-soups-guide"
                 merchant="internal"
               >
-                <Link href="/blog/how-to-season-soups-and-stews" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/blog/how-to-season-soups-and-stews" className="text-orange-700 hover:text-orange-700 font-medium">
                   How to Season Soups and Stews Like a Chef
                 </Link>
               </CTAVisibilityTracker>
@@ -485,7 +485,7 @@ export default function MakingStockPage() {
                 productSlug="blanching-vegetables"
                 merchant="internal"
               >
-                <Link href="/blog/blanching-vegetables-why-restaurants-do-it" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/blog/blanching-vegetables-why-restaurants-do-it" className="text-orange-700 hover:text-orange-700 font-medium">
                   Blanching Vegetables: Why Restaurants Do It
                 </Link>
               </CTAVisibilityTracker>
@@ -497,7 +497,7 @@ export default function MakingStockPage() {
                 productSlug="reducing-sauces"
                 merchant="internal"
               >
-                <Link href="/blog/reducing-sauces-restaurant-technique" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/blog/reducing-sauces-restaurant-technique" className="text-orange-700 hover:text-orange-700 font-medium">
                   Reducing Sauces: The Technique Restaurants Use Daily
                 </Link>
               </CTAVisibilityTracker>
@@ -509,7 +509,7 @@ export default function MakingStockPage() {
                 productSlug="deglazing"
                 merchant="internal"
               >
-                <Link href="/blog/deglazing-secret-to-restaurant-quality-flavor" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/blog/deglazing-secret-to-restaurant-quality-flavor" className="text-orange-700 hover:text-orange-700 font-medium">
                   Deglazing: The Secret to Restaurant-Quality Flavor
                 </Link>
               </CTAVisibilityTracker>
@@ -538,7 +538,7 @@ export default function MakingStockPage() {
                 productSlug="kosher-salt-review"
                 merchant="internal"
               >
-                <Link href="/reviews/diamond-crystal-kosher-salt" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/reviews/diamond-crystal-kosher-salt" className="text-orange-700 hover:text-orange-700 font-medium">
                   Diamond Crystal Kosher Salt Review
                 </Link>
               </CTAVisibilityTracker>
@@ -561,7 +561,7 @@ export default function MakingStockPage() {
             productSlug="making-stock-professional-chef-method"
             merchant="internal"
           >
-            <Link href="/about" className="text-orange-600 hover:text-orange-700 font-medium">
+            <Link href="/about" className="text-orange-700 hover:text-orange-700 font-medium">
               About Scott →
             </Link>
           </CTAVisibilityTracker>

@@ -119,7 +119,7 @@ export default function MealPrepStationSetupPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <ChefHat className="w-8 h-8 text-orange-600" />
+            <ChefHat className="w-8 h-8 text-orange-700" />
             The Power of Mise en Place
           </h2>
 
@@ -150,7 +150,7 @@ export default function MealPrepStationSetupPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Layers className="w-8 h-8 text-orange-600" />
+            <Layers className="w-8 h-8 text-orange-700" />
             Setting Up Your Prep Station
           </h2>
 
@@ -251,7 +251,7 @@ export default function MealPrepStationSetupPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Tag className="w-8 h-8 text-orange-600" />
+            <Tag className="w-8 h-8 text-orange-700" />
             Labeling and Storage
           </h2>
 
@@ -307,7 +307,7 @@ export default function MealPrepStationSetupPage() {
           </p> */}
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <RotateCcw className="w-8 h-8 text-orange-600" />
+            <RotateCcw className="w-8 h-8 text-orange-700" />
             Resetting Like a Pro
           </h2>
 

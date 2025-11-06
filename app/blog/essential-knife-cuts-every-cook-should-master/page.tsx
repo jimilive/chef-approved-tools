@@ -86,9 +86,9 @@ export default function EssentialKnifeCutsPost() {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
         <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-600">Home</Link>
+          <Link href="/" className="hover:text-orange-700">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-600">Blog</Link>
+          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
           <span className="mx-2">/</span>
           <span>The 5 Essential Knife Cuts Every Home Cook Should Master</span>
         </nav>
@@ -341,7 +341,7 @@ export default function EssentialKnifeCutsPost() {
                   productSlug="essential-knife-cuts-every-cook-should-master"
                   merchant="internal"
                 >
-                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox Fibrox 8″ Chef&apos;s Knife</Link>
+                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 underline">Victorinox Fibrox 8″ Chef&apos;s Knife</Link>
                 </CTAVisibilityTracker> — light, balanced, and forgiving for new hands.
               </li>
               <li>
@@ -351,7 +351,7 @@ export default function EssentialKnifeCutsPost() {
                   productSlug="essential-knife-cuts-every-cook-should-master"
                   merchant="internal"
                 >
-                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-600 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link>
+                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link>
                 </CTAVisibilityTracker> — move ingredients without ruining your edge.
               </li>
               <li>
@@ -555,7 +555,7 @@ export default function EssentialKnifeCutsPost() {
                 Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from University of Montana. Techniques tested on thousands of dishes in high-volume kitchens serving hundreds daily.
               </p>
               <div className="mt-4">
-                <Link href="/about" className="text-orange-600 hover:text-orange-800 text-sm font-semibold">
+                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
                   Learn more about Scott →
                 </Link>
               </div>

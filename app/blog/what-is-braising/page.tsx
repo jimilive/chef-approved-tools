@@ -79,7 +79,7 @@ export default function BraisingPage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Flame className="w-5 h-5" />
             <span className="text-sm font-medium">Technique</span>
           </div>
@@ -117,7 +117,7 @@ export default function BraisingPage() {
 
           <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Restaurant Reality
             </h3>
             <p className="mb-0">
@@ -135,7 +135,7 @@ export default function BraisingPage() {
             Here&apos;s the basic process:
           </p>
           <ol>
-            <li><strong>Sear</strong> the meat hard in a hot pan to develop flavor (<Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-600 hover:text-orange-800 underline">the Maillard reaction</Link>)</li>
+            <li><strong>Sear</strong> the meat hard in a hot pan to develop flavor (<Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-700 hover:text-orange-800 underline">the Maillard reaction</Link>)</li>
             <li><strong>Build aromatics</strong> in the same pan (onions, carrots, celery)</li>
             <li><strong>Deglaze</strong> to capture all those browned bits</li>
             <li><strong>Add liquid</strong> (stock, wine, beer) until meat is partially submerged</li>
@@ -148,7 +148,7 @@ export default function BraisingPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <ThermometerSun className="w-6 h-6 text-orange-600" />
+            <ThermometerSun className="w-6 h-6 text-orange-700" />
             The Science: Why Tough Becomes Tender
           </h2>
 
@@ -193,7 +193,7 @@ export default function BraisingPage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -239,16 +239,16 @@ export default function BraisingPage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-700 hover:text-orange-800 font-semibold">
               → The Maillard Reaction: Why Browning = Flavor
             </Link>
-            <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Le Creuset 7.25 Qt Dutch Oven Review
             </Link>
-            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Lodge Cast Iron Skillet Bundle Review
             </Link>
-            <Link href="/blog/why-resting-meat-key-cooking" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/why-resting-meat-key-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Why Resting Is the Key to Cooking Meat
             </Link>
           </div>

@@ -89,7 +89,7 @@ export default function MaillardReactionPost() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Flame className="w-5 h-5" />
             <span className="text-sm font-medium">Kitchen Science</span>
           </div>
@@ -119,7 +119,7 @@ export default function MaillardReactionPost() {
 
           <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Restaurant Reality
             </h3>
             <p className="mb-0">
@@ -151,7 +151,7 @@ export default function MaillardReactionPost() {
           </ul>
 
           <p>
-            For the complete technique on how restaurants nail that crust every time, see <Link href="/blog/how-to-sear-steaks-restaurant-chef" className="text-orange-600 hover:text-orange-800 underline">How to Sear Steaks Like a Restaurant Chef</Link>.
+            For the complete technique on how restaurants nail that crust every time, see <Link href="/blog/how-to-sear-steaks-restaurant-chef" className="text-orange-700 hover:text-orange-800 underline">How to Sear Steaks Like a Restaurant Chef</Link>.
           </p>
 
           <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border-l-4 border-purple-600 p-6 my-8 rounded-r-lg">
@@ -165,7 +165,7 @@ export default function MaillardReactionPost() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <Flame className="w-6 h-6 text-orange-600" />
+            <Flame className="w-6 h-6 text-orange-700" />
             The Key Conditions for Maillard Magic
           </h2>
           <p>
@@ -174,7 +174,7 @@ export default function MaillardReactionPost() {
 
           <h3>1. High Heat (At Least 300°F / 150°C)</h3>
           <p>
-            The Maillard reaction doesn&apos;t begin until food reaches around 285-300°F. That&apos;s why <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 underline">cast iron skillets</Link> are a chef&apos;s best friend—they hold heat beautifully and maintain temperature even when cold food hits the surface.
+            The Maillard reaction doesn&apos;t begin until food reaches around 285-300°F. That&apos;s why <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 underline">cast iron skillets</Link> are a chef&apos;s best friend—they hold heat beautifully and maintain temperature even when cold food hits the surface.
           </p>
 
           <h3>2. Dry Surface</h3>
@@ -189,7 +189,7 @@ export default function MaillardReactionPost() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -219,7 +219,7 @@ export default function MaillardReactionPost() {
               Chef&apos;s Note: The Pan Must Be Hot
             </p>
             <p className="mb-0">
-              After 24 years on the line, I can tell you the biggest mistake home cooks make is starting too soon. If your pan isn&apos;t properly preheated—and I mean <em>hot</em> hot, not &quot;kind of&quot; hot—you&apos;ll steam your food instead of browning it. Give it an extra minute. That patience is where the magic starts. If you&apos;re using a <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 underline">Lodge Cast Iron Skillet</Link>, preheat for at least 5-7 minutes over medium-high. A drop of water should sizzle and evaporate instantly on contact.
+              After 24 years on the line, I can tell you the biggest mistake home cooks make is starting too soon. If your pan isn&apos;t properly preheated—and I mean <em>hot</em> hot, not &quot;kind of&quot; hot—you&apos;ll steam your food instead of browning it. Give it an extra minute. That patience is where the magic starts. If you&apos;re using a <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 underline">Lodge Cast Iron Skillet</Link>, preheat for at least 5-7 minutes over medium-high. A drop of water should sizzle and evaporate instantly on contact.
             </p>
           </div>
 
@@ -233,7 +233,7 @@ export default function MaillardReactionPost() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <AlertTriangle className="w-6 h-6 text-orange-600" />
+            <AlertTriangle className="w-6 h-6 text-orange-700" />
             Avoiding the &quot;Burn&quot; Zone
           </h2>
           <p>
@@ -291,19 +291,19 @@ export default function MaillardReactionPost() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/how-to-sear-steaks-restaurant-chef" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/how-to-sear-steaks-restaurant-chef" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Sear Steaks Like a Restaurant Chef
             </Link>
-            <Link href="/blog/why-resting-meat-key-cooking" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/why-resting-meat-key-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Why Resting Is the Key to Cooking Meat
             </Link>
-            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Lodge Cast Iron Skillet Bundle Review
             </Link>
-            <Link href="/guides/cookware-materials" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/guides/cookware-materials" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Cookware Materials Explained
             </Link>
-            <Link href="/blog/why-professional-chefs-use-kosher-salt" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/why-professional-chefs-use-kosher-salt" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Why Professional Chefs Use Kosher Salt
             </Link>
           </div>

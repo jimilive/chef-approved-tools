@@ -119,7 +119,7 @@ export default function CaramelizingOnionsPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Beaker className="w-8 h-8 text-orange-600" />
+            <Beaker className="w-8 h-8 text-orange-700" />
             The Science of Caramelization
           </h2>
 
@@ -229,7 +229,7 @@ export default function CaramelizingOnionsPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Clock className="w-8 h-8 text-orange-600" />
+            <Clock className="w-8 h-8 text-orange-700" />
             The 45-Minute Method
           </h2>
 
@@ -387,7 +387,7 @@ export default function CaramelizingOnionsPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <ThermometerSun className="w-8 h-8 text-orange-600" />
+            <ThermometerSun className="w-8 h-8 text-orange-700" />
             Chef&apos;s Tips and Tools
           </h2>
 

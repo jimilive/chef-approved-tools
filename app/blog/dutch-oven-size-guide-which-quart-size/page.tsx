@@ -112,7 +112,7 @@ export default function DutchOvenSizeGuidePage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Ruler className="w-8 h-8 text-orange-600" />
+            <Ruler className="w-8 h-8 text-orange-700" />
             The Most Common Dutch Oven Sizes (and What They&apos;re For)
           </h2>
 
@@ -160,7 +160,7 @@ export default function DutchOvenSizeGuidePage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <ChefHat className="w-8 h-8 text-orange-600" />
+            <ChefHat className="w-8 h-8 text-orange-700" />
             Matching Size to Your Cooking Style
           </h2>
 
@@ -236,7 +236,7 @@ export default function DutchOvenSizeGuidePage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Scale className="w-8 h-8 text-orange-600" />
+            <Scale className="w-8 h-8 text-orange-700" />
             Material and Brand Considerations
           </h2>
 
@@ -340,7 +340,7 @@ export default function DutchOvenSizeGuidePage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Users className="w-8 h-8 text-orange-600" />
+            <Users className="w-8 h-8 text-orange-700" />
             Why Size Affects Flavor (and Efficiency)
           </h2>
 

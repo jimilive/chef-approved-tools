@@ -67,7 +67,7 @@ export default function KnifeCutsGuidePage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Target className="w-5 h-5" />
             <span className="text-sm font-medium">Knife Skills</span>
           </div>
@@ -152,7 +152,7 @@ export default function KnifeCutsGuidePage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <Ruler className="w-6 h-6 text-orange-600" />
+            <Ruler className="w-6 h-6 text-orange-700" />
             The Essential Knife Cuts (with Actual Measurements)
           </h2>
 
@@ -230,7 +230,7 @@ export default function KnifeCutsGuidePage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -349,7 +349,7 @@ export default function KnifeCutsGuidePage() {
           </p>
 
           <p>
-            <strong>Fix:</strong> Use proper <Link href="/blog/knife-skills-how-to-hold-chef-knife" className="text-orange-600 hover:text-orange-800">pinch grip</Link>—thumb and forefinger on blade, not handle. Gives maximum control.
+            <strong>Fix:</strong> Use proper <Link href="/blog/knife-skills-how-to-hold-chef-knife" className="text-orange-700 hover:text-orange-800">pinch grip</Link>—thumb and forefinger on blade, not handle. Gives maximum control.
           </p>
 
           <h3>Mistake #3: Unstable Cutting Board</h3>
@@ -433,7 +433,7 @@ export default function KnifeCutsGuidePage() {
           </ul>
 
           <h2 className="flex items-center gap-2">
-            <CheckCircle2 className="w-6 h-6 text-orange-600" />
+            <CheckCircle2 className="w-6 h-6 text-orange-700" />
             The Bottom Line: Precision Where It Matters
           </h2>
 
@@ -468,16 +468,16 @@ export default function KnifeCutsGuidePage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/knife-skills-how-to-hold-chef-knife" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/knife-skills-how-to-hold-chef-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Knife Skills: How to Hold and Use a Chef&apos;s Knife
             </Link>
-            <Link href="/blog/knife-safety-professional-kitchen" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/knife-safety-professional-kitchen" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Knife Safety in a Professional Kitchen
             </Link>
-            <Link href="/blog/onions-cooking-guide" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/onions-cooking-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Complete Guide to Cooking Onions
             </Link>
-            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Victorinox Fibrox 8&quot; Chef&apos;s Knife Review
             </Link>
           </div>

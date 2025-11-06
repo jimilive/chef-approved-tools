@@ -115,7 +115,7 @@ export default function KnifeStoragePage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Shield className="w-8 h-8 text-orange-600" />
+            <Shield className="w-8 h-8 text-orange-700" />
             The Problem: Why Knife Storage Matters More Than You Think
           </h2>
 
@@ -146,7 +146,7 @@ export default function KnifeStoragePage() {
           </h2>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4 flex items-center gap-3">
-            <Grid3x3 className="w-6 h-6 text-orange-600" />
+            <Grid3x3 className="w-6 h-6 text-orange-700" />
             1. Knife Block: Classic, but Flawed
           </h3>
 
@@ -180,7 +180,7 @@ export default function KnifeStoragePage() {
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4 flex items-center gap-3">
-            <Magnet className="w-6 h-6 text-orange-600" />
+            <Magnet className="w-6 h-6 text-orange-700" />
             2. Magnetic Strip: Professional Favorite
           </h3>
 
@@ -228,7 +228,7 @@ export default function KnifeStoragePage() {
           </p> */}
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4 flex items-center gap-3">
-            <Box className="w-6 h-6 text-orange-600" />
+            <Box className="w-6 h-6 text-orange-700" />
             3. Drawer Insert: Safe for Kids and Small Kitchens
           </h3>
 

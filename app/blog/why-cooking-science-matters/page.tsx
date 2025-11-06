@@ -67,7 +67,7 @@ export default function CookingSciencePage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Beaker className="w-5 h-5" />
             <span className="text-sm font-medium">Cooking Science</span>
           </div>
@@ -124,7 +124,7 @@ export default function CookingSciencePage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <FlaskConical className="w-6 h-6 text-orange-600" />
+            <FlaskConical className="w-6 h-6 text-orange-700" />
             The Core Principles of Cooking Science
           </h2>
 
@@ -135,7 +135,7 @@ export default function CookingSciencePage() {
           <h3>1. The Maillard Reaction (Chemistry)</h3>
 
           <p>
-            The <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-600 hover:text-orange-800 underline">Maillard reaction</Link> is the chemical reaction between amino acids (from protein) and reducing sugars (from carbohydrates) when exposed to heat above 285°F. It creates hundreds of new flavor compounds and gives food a brown, savory crust.
+            The <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-700 hover:text-orange-800 underline">Maillard reaction</Link> is the chemical reaction between amino acids (from protein) and reducing sugars (from carbohydrates) when exposed to heat above 285°F. It creates hundreds of new flavor compounds and gives food a brown, savory crust.
           </p>
 
           <p>
@@ -154,7 +154,7 @@ export default function CookingSciencePage() {
           <h3>2. Caramelization (Chemistry)</h3>
 
           <p>
-            <Link href="/blog/caramelization-science" className="text-orange-600 hover:text-orange-800 underline">Caramelization</Link> is the breakdown of sugar into new compounds when heated above 320°F. It creates sweet, nutty, complex flavors and brown color.
+            <Link href="/blog/caramelization-science" className="text-orange-700 hover:text-orange-800 underline">Caramelization</Link> is the breakdown of sugar into new compounds when heated above 320°F. It creates sweet, nutty, complex flavors and brown color.
           </p>
 
           <p>
@@ -163,13 +163,13 @@ export default function CookingSciencePage() {
           <ul>
             <li>Caramelization is sugar-only (no protein needed)</li>
             <li>It takes time—you can&apos;t rush it without burning</li>
-            <li>It&apos;s responsible for the sweetness in <Link href="/blog/onions-cooking-guide" className="text-orange-600 hover:text-orange-800 underline">caramelized onions</Link>, crème brûlée, and roasted root vegetables</li>
+            <li>It&apos;s responsible for the sweetness in <Link href="/blog/onions-cooking-guide" className="text-orange-700 hover:text-orange-800 underline">caramelized onions</Link>, crème brûlée, and roasted root vegetables</li>
           </ul>
 
           <h3>3. Emulsification (Chemistry)</h3>
 
           <p>
-            <Link href="/blog/what-is-emulsification" className="text-orange-600 hover:text-orange-800 underline">Emulsification</Link> is the process of mixing two liquids that normally don&apos;t mix (oil and water) into a stable blend using an emulsifier.
+            <Link href="/blog/what-is-emulsification" className="text-orange-700 hover:text-orange-800 underline">Emulsification</Link> is the process of mixing two liquids that normally don&apos;t mix (oil and water) into a stable blend using an emulsifier.
           </p>
 
           <p>
@@ -179,7 +179,7 @@ export default function CookingSciencePage() {
           <h3>4. Fat is Flavor (Biology & Chemistry)</h3>
 
           <p>
-            <Link href="/blog/fat-is-flavor" className="text-orange-600 hover:text-orange-800 underline">Fat</Link> carries flavor compounds better than water because many aromatic molecules are fat-soluble, not water-soluble. Fat also provides mouthfeel, richness, and satiety.
+            <Link href="/blog/fat-is-flavor" className="text-orange-700 hover:text-orange-800 underline">Fat</Link> carries flavor compounds better than water because many aromatic molecules are fat-soluble, not water-soluble. Fat also provides mouthfeel, richness, and satiety.
           </p>
 
           <p>
@@ -189,7 +189,7 @@ export default function CookingSciencePage() {
           <h3>5. Acid Brightens and Balances (Chemistry)</h3>
 
           <p>
-            <Link href="/blog/understanding-acids-cooking" className="text-orange-600 hover:text-orange-800 underline">Acids</Link> (citrus, vinegar, wine, tomatoes) interact with taste receptors to provide brightness, cut through richness, and balance sweetness.
+            <Link href="/blog/understanding-acids-cooking" className="text-orange-700 hover:text-orange-800 underline">Acids</Link> (citrus, vinegar, wine, tomatoes) interact with taste receptors to provide brightness, cut through richness, and balance sweetness.
           </p>
 
           <p>
@@ -208,7 +208,7 @@ export default function CookingSciencePage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -292,16 +292,16 @@ export default function CookingSciencePage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-700 hover:text-orange-800 font-semibold">
               → The Maillard Reaction: Why Browning = Flavor
             </Link>
-            <Link href="/blog/caramelization-science" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/caramelization-science" className="text-orange-700 hover:text-orange-800 font-semibold">
               → The Science of Caramelization
             </Link>
-            <Link href="/blog/what-is-emulsification" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/what-is-emulsification" className="text-orange-700 hover:text-orange-800 font-semibold">
               → What is Emulsification?
             </Link>
-            <Link href="/blog/why-resting-meat-key-cooking" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/why-resting-meat-key-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Why Resting Meat is Critical
             </Link>
           </div>

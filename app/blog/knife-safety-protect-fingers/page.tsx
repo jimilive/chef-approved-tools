@@ -79,7 +79,7 @@ export default function KnifeSafetyPage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Shield className="w-5 h-5" />
             <span className="text-sm font-medium">Technique</span>
           </div>
@@ -113,7 +113,7 @@ export default function KnifeSafetyPage() {
 
           <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Restaurant Reality
             </h3>
             <p className="mb-0">
@@ -128,7 +128,7 @@ export default function KnifeSafetyPage() {
           </p>
 
           <h3 className="flex items-center gap-2">
-            <Zap className="w-5 h-5 text-orange-600" />
+            <Zap className="w-5 h-5 text-orange-700" />
             The Professional Pinch Grip
           </h3>
 
@@ -155,7 +155,7 @@ export default function KnifeSafetyPage() {
           </p>
 
           <p>
-            When I recommend the <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</Link>, it&apos;s partly because the handle shape naturally encourages proper grip. The bolster is designed for pinching.
+            When I recommend the <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</Link>, it&apos;s partly because the handle shape naturally encourages proper grip. The bolster is designed for pinching.
           </p>
 
           <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border-l-4 border-purple-600 p-6 my-8 rounded-r-lg">
@@ -169,7 +169,7 @@ export default function KnifeSafetyPage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <Shield className="w-6 h-6 text-orange-600" />
+            <Shield className="w-6 h-6 text-orange-700" />
             The &quot;Claw&quot; Technique: Your Built-In Shield
           </h2>
 
@@ -215,7 +215,7 @@ export default function KnifeSafetyPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <Zap className="w-6 h-6 text-orange-600" />
+            <Zap className="w-6 h-6 text-orange-700" />
             Keep Your Blades Sharp
           </h2>
 
@@ -258,7 +258,7 @@ export default function KnifeSafetyPage() {
           </ul>
 
           <p>
-            Learn proper technique in my guides: <Link href="/blog/how-to-sharpen-tri-stone" className="text-orange-600 hover:text-orange-800 underline">How to Sharpen with a Tri-Stone</Link> and <Link href="/blog/how-to-steel-knife" className="text-orange-600 hover:text-orange-800 underline">How to Steel a Knife</Link>. I use and recommend the <Link href="/reviews/norton-im200-tri-stone-sharpener" className="text-orange-600 hover:text-orange-800 underline">Norton IM200 Tri-Stone Sharpener</Link>—it&apos;s the same system I learned on in culinary school.
+            Learn proper technique in my guides: <Link href="/blog/how-to-sharpen-tri-stone" className="text-orange-700 hover:text-orange-800 underline">How to Sharpen with a Tri-Stone</Link> and <Link href="/blog/how-to-steel-knife" className="text-orange-700 hover:text-orange-800 underline">How to Steel a Knife</Link>. I use and recommend the <Link href="/reviews/norton-im200-tri-stone-sharpener" className="text-orange-700 hover:text-orange-800 underline">Norton IM200 Tri-Stone Sharpener</Link>—it&apos;s the same system I learned on in culinary school.
           </p>
 
           <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
@@ -285,7 +285,7 @@ export default function KnifeSafetyPage() {
           <h3>The Pro Method</h3>
 
           <p>
-            Use an <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-600 hover:text-orange-800 underline">OXO Good Grips Bench Scraper</Link> to scoop and transfer chopped ingredients. Or turn your knife over and use the spine (the dull back edge) to push food around. Both methods preserve your edge and keep your fingers safe.
+            Use an <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-700 hover:text-orange-800 underline">OXO Good Grips Bench Scraper</Link> to scoop and transfer chopped ingredients. Or turn your knife over and use the spine (the dull back edge) to push food around. Both methods preserve your edge and keep your fingers safe.
           </p>
 
           <p>
@@ -294,7 +294,7 @@ export default function KnifeSafetyPage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -351,7 +351,7 @@ export default function KnifeSafetyPage() {
           </ul>
 
           <p>
-            I use and recommend both the <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 underline">John Boos Platinum Commercial Cutting Board</Link> for heavy butchering work and the <Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-600 hover:text-orange-800 underline">Epicurean Kitchen Cutting Board</Link> for everyday prep. Both provide the stability and surface quality you need for safe cutting.
+            I use and recommend both the <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800 underline">John Boos Platinum Commercial Cutting Board</Link> for heavy butchering work and the <Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-700 hover:text-orange-800 underline">Epicurean Kitchen Cutting Board</Link> for everyday prep. Both provide the stability and surface quality you need for safe cutting.
           </p>
 
           <h2>Focus and Respect Every Time</h2>
@@ -417,7 +417,7 @@ export default function KnifeSafetyPage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <AlertTriangle className="w-6 h-6 text-orange-600" />
+            <AlertTriangle className="w-6 h-6 text-orange-700" />
             When Accidents Happen
           </h2>
 
@@ -457,7 +457,7 @@ export default function KnifeSafetyPage() {
 
           <h3>What&apos;s the safest knife for beginners?</h3>
           <p>
-            Counterintuitively, a properly sharpened 8-inch chef&apos;s knife. It&apos;s predictable, comfortable in hand, and safe when you use proper technique. Small paring knives slip more easily on certain tasks. Get a quality chef&apos;s knife like the <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline">Victorinox Fibrox 8&quot;</Link>, learn the claw grip and pinch grip, and practice slowly. Size isn&apos;t the danger—improper technique is.
+            Counterintuitively, a properly sharpened 8-inch chef&apos;s knife. It&apos;s predictable, comfortable in hand, and safe when you use proper technique. Small paring knives slip more easily on certain tasks. Get a quality chef&apos;s knife like the <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 underline">Victorinox Fibrox 8&quot;</Link>, learn the claw grip and pinch grip, and practice slowly. Size isn&apos;t the danger—improper technique is.
           </p>
 
           <h3>Should I use cut-resistant gloves?</h3>
@@ -507,25 +507,25 @@ export default function KnifeSafetyPage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Victorinox Fibrox 8&quot; Chef&apos;s Knife Review
             </Link>
-            <Link href="/blog/how-to-sharpen-tri-stone" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/how-to-sharpen-tri-stone" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Sharpen with a Tri-Stone
             </Link>
-            <Link href="/blog/how-to-steel-knife" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/how-to-steel-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Steel a Knife
             </Link>
-            <Link href="/reviews/norton-im200-tri-stone-sharpener" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/norton-im200-tri-stone-sharpener" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Norton IM200 Tri-Stone Sharpener Review
             </Link>
-            <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800 font-semibold">
               → John Boos Platinum Cutting Board Review
             </Link>
-            <Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Epicurean Kitchen Cutting Board Review
             </Link>
-            <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-700 hover:text-orange-800 font-semibold">
               → OXO Good Grips Bench Scraper Review
             </Link>
           </div>

@@ -71,7 +71,7 @@ export default function CaramelizationPage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Beaker className="w-5 h-5" />
             <span className="text-sm font-medium">Science</span>
           </div>
@@ -96,7 +96,7 @@ export default function CaramelizationPage() {
           </p>
 
           <p>
-            It&apos;s one of the most important chemical reactions in cooking, responsible for some of the deepest, most satisfying flavors in food. But it&apos;s also one of the most misunderstood. Home cooks confuse it with the <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-600 hover:text-orange-800 underline">Maillard reaction</Link>, rush it, or never get their pans hot enough to make it happen properly.
+            It&apos;s one of the most important chemical reactions in cooking, responsible for some of the deepest, most satisfying flavors in food. But it&apos;s also one of the most misunderstood. Home cooks confuse it with the <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-700 hover:text-orange-800 underline">Maillard reaction</Link>, rush it, or never get their pans hot enough to make it happen properly.
           </p>
 
           <p>
@@ -104,7 +104,7 @@ export default function CaramelizationPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <Beaker className="w-6 h-6 text-orange-600" />
+            <Beaker className="w-6 h-6 text-orange-700" />
             What is Caramelization?
           </h2>
 
@@ -205,7 +205,7 @@ export default function CaramelizationPage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -263,16 +263,16 @@ export default function CaramelizationPage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-700 hover:text-orange-800 font-semibold">
               → The Maillard Reaction: Why Browning Equals Flavor
             </Link>
-            <Link href="/blog/how-to-sear-steaks-restaurant-chef" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/how-to-sear-steaks-restaurant-chef" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Sear Steaks Like a Restaurant Chef
             </Link>
-            <Link href="/blog/how-to-make-roux" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/how-to-make-roux" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Make a Perfect Roux
             </Link>
-            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Lodge Cast Iron Skillet Bundle Review
             </Link>
           </div>

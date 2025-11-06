@@ -115,7 +115,7 @@ export default function BlanchingVegetablesPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Sparkles className="w-8 h-8 text-orange-600" />
+            <Sparkles className="w-8 h-8 text-orange-700" />
             The Problem: Why Home Vegetables Lose Color and Texture
           </h2>
 
@@ -144,7 +144,7 @@ export default function BlanchingVegetablesPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Timer className="w-8 h-8 text-orange-600" />
+            <Timer className="w-8 h-8 text-orange-700" />
             The Professional Method: Blanching Step-by-Step
           </h2>
 
@@ -244,7 +244,7 @@ export default function BlanchingVegetablesPage() {
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4 flex items-center gap-3">
-            <Droplets className="w-6 h-6 text-orange-600" />
+            <Droplets className="w-6 h-6 text-orange-700" />
             4. Shock Immediately
           </h3>
 

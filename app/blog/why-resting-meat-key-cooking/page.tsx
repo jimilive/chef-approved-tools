@@ -79,7 +79,7 @@ export default function RestingMeatPage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Clock className="w-5 h-5" />
             <span className="text-sm font-medium">Technique</span>
           </div>
@@ -113,7 +113,7 @@ export default function RestingMeatPage() {
 
           <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Restaurant Reality
             </h3>
             <p className="mb-0">
@@ -144,7 +144,7 @@ export default function RestingMeatPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <ThermometerSun className="w-6 h-6 text-orange-600" />
+            <ThermometerSun className="w-6 h-6 text-orange-700" />
             The Science of Carry-Over Cooking
           </h2>
 
@@ -174,7 +174,7 @@ export default function RestingMeatPage() {
           </p>
 
           <p>
-            This is exactly why a reliable instant-read thermometer is one of the most important tools in your kitchen. I use and recommend <Link href="/blog/meat-cooking-temperatures-thermometers" className="text-orange-600 hover:text-orange-800 underline">checking our guide to the best meat thermometers</Link>—it changed how I cooked at home after decades in restaurants.
+            This is exactly why a reliable instant-read thermometer is one of the most important tools in your kitchen. I use and recommend <Link href="/blog/meat-cooking-temperatures-thermometers" className="text-orange-700 hover:text-orange-800 underline">checking our guide to the best meat thermometers</Link>—it changed how I cooked at home after decades in restaurants.
           </p>
 
           <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border-l-4 border-purple-600 p-6 my-8 rounded-r-lg">
@@ -188,7 +188,7 @@ export default function RestingMeatPage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <Clock className="w-6 h-6 text-orange-600" />
+            <Clock className="w-6 h-6 text-orange-700" />
             How Long Should You Rest Different Cuts?
           </h2>
 
@@ -249,11 +249,11 @@ export default function RestingMeatPage() {
           </p>
 
           <p>
-            <strong>Cooling rack + sheet pan:</strong> This is the professional standard. Set your meat on a wire cooling rack placed over a sheet pan—I use <Link href="/reviews/nordic-ware-half-sheet-pan" className="text-orange-600 hover:text-orange-800 underline">Nordic Ware</Link> exclusively. Air circulates underneath, preventing the bottom from steaming and getting soggy. The sheet pan catches any drippings (save those for pan sauce!).
+            <strong>Cooling rack + sheet pan:</strong> This is the professional standard. Set your meat on a wire cooling rack placed over a sheet pan—I use <Link href="/reviews/nordic-ware-half-sheet-pan" className="text-orange-700 hover:text-orange-800 underline">Nordic Ware</Link> exclusively. Air circulates underneath, preventing the bottom from steaming and getting soggy. The sheet pan catches any drippings (save those for pan sauce!).
           </p>
 
           <p>
-            <strong>Reliable probe thermometer:</strong> You need to monitor that carry-over cooking. A good instant-read or leave-in probe tells you exactly when the meat has hit your target temperature during the rest. Check out my recommendations in the <Link href="/blog/meat-cooking-temperatures-thermometers" className="text-orange-600 hover:text-orange-800 underline">Kitchen Thermometer Guide</Link>.
+            <strong>Reliable probe thermometer:</strong> You need to monitor that carry-over cooking. A good instant-read or leave-in probe tells you exactly when the meat has hit your target temperature during the rest. Check out my recommendations in the <Link href="/blog/meat-cooking-temperatures-thermometers" className="text-orange-700 hover:text-orange-800 underline">Kitchen Thermometer Guide</Link>.
           </p>
 
           <p>
@@ -306,7 +306,7 @@ export default function RestingMeatPage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -331,7 +331,7 @@ export default function RestingMeatPage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <AlertTriangle className="w-6 h-6 text-orange-600" />
+            <AlertTriangle className="w-6 h-6 text-orange-700" />
             Common Resting Mistakes to Avoid
           </h2>
 
@@ -404,7 +404,7 @@ export default function RestingMeatPage() {
           <h2>Bringing It All Together</h2>
 
           <p>
-            Cooking meat isn&apos;t just about hitting a number on a thermometer—it&apos;s about timing, patience, and understanding the chemistry happening inside that protein. The <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-600 hover:text-orange-800 underline">Maillard reaction</Link> builds incredible flavor on the outside through browning; resting preserves moisture and texture inside. Master both, and you&apos;re cooking like a professional.
+            Cooking meat isn&apos;t just about hitting a number on a thermometer—it&apos;s about timing, patience, and understanding the chemistry happening inside that protein. The <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-700 hover:text-orange-800 underline">Maillard reaction</Link> builds incredible flavor on the outside through browning; resting preserves moisture and texture inside. Master both, and you&apos;re cooking like a professional.
           </p>
 
           <p>
@@ -423,22 +423,22 @@ export default function RestingMeatPage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/how-to-sear-steaks-restaurant-chef" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/how-to-sear-steaks-restaurant-chef" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Sear Steaks Like a Restaurant Chef
             </Link>
-            <Link href="/blog/meat-cooking-temperatures-thermometers" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/meat-cooking-temperatures-thermometers" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Meat Cooking Temperatures & Thermometers Guide
             </Link>
-            <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-700 hover:text-orange-800 font-semibold">
               → The Maillard Reaction: Why Browning = Flavor
             </Link>
-            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Lodge Cast Iron Skillet Bundle Review
             </Link>
-            <Link href="/reviews/nordic-ware-half-sheet-pan" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/nordic-ware-half-sheet-pan" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Nordic Ware Half Sheet Pan Review
             </Link>
-            <Link href="/blog/why-professional-chefs-use-kosher-salt" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/why-professional-chefs-use-kosher-salt" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Why Professional Chefs Use Kosher Salt
             </Link>
           </div>

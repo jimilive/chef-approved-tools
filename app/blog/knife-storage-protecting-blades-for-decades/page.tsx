@@ -115,7 +115,7 @@ export default function KnifeStorageProtectionPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <AlertTriangle className="w-8 h-8 text-orange-600" />
+            <AlertTriangle className="w-8 h-8 text-orange-700" />
             The Problem: Why Knives Dull and Rust in Storage
           </h2>
 
@@ -141,12 +141,12 @@ export default function KnifeStorageProtectionPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Shield className="w-8 h-8 text-orange-600" />
+            <Shield className="w-8 h-8 text-orange-700" />
             The Professional Method: Knife Storage for the Long Haul
           </h2>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4 flex items-center gap-3">
-            <Droplet className="w-6 h-6 text-orange-600" />
+            <Droplet className="w-6 h-6 text-orange-700" />
             1. Dry Immediately and Thoroughly
           </h3>
 
@@ -195,7 +195,7 @@ export default function KnifeStorageProtectionPage() {
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4 flex items-center gap-3">
-            <Wind className="w-6 h-6 text-orange-600" />
+            <Wind className="w-6 h-6 text-orange-700" />
             3. Control Humidity and Airflow
           </h3>
 

@@ -71,7 +71,7 @@ export default function BreadSciencePage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Wheat className="w-5 h-5" />
             <span className="text-sm font-medium">Baking Science</span>
           </div>
@@ -112,7 +112,7 @@ export default function BreadSciencePage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <FlaskConical className="w-6 h-6 text-orange-600" />
+            <FlaskConical className="w-6 h-6 text-orange-700" />
             What is Gluten? The Chemistry
           </h2>
 
@@ -171,7 +171,7 @@ export default function BreadSciencePage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <Wheat className="w-6 h-6 text-orange-600" />
+            <Wheat className="w-6 h-6 text-orange-700" />
             How to Develop Gluten: Techniques
           </h2>
 
@@ -266,7 +266,7 @@ export default function BreadSciencePage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -291,7 +291,7 @@ export default function BreadSciencePage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <Timer className="w-6 h-6 text-orange-600" />
+            <Timer className="w-6 h-6 text-orange-700" />
             The Stages of Gluten Development
           </h2>
 
@@ -411,16 +411,16 @@ export default function BreadSciencePage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/why-cooking-science-matters" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/why-cooking-science-matters" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Why Cooking Science Matters
             </Link>
-            <Link href="/blog/what-is-emulsification" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/what-is-emulsification" className="text-orange-700 hover:text-orange-800 font-semibold">
               → What is Emulsification?
             </Link>
-            <Link href="/blog/cheese-sauce-mac-and-cheese" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/cheese-sauce-mac-and-cheese" className="text-orange-700 hover:text-orange-800 font-semibold">
               → The Science of Cheese Sauce &amp; Mac and Cheese
             </Link>
-            <Link href="/blog/mis-en-place-professional-cooking" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/mis-en-place-professional-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Mise en Place: The Foundation of Professional Cooking
             </Link>
           </div>

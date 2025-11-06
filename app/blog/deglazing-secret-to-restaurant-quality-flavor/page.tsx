@@ -115,7 +115,7 @@ export default function DeglazingPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Droplets className="w-8 h-8 text-orange-600" />
+            <Droplets className="w-8 h-8 text-orange-700" />
             What Deglazing Really Does
           </h2>
 
@@ -142,7 +142,7 @@ export default function DeglazingPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Beaker className="w-8 h-8 text-orange-600" />
+            <Beaker className="w-8 h-8 text-orange-700" />
             The Science of Fond
           </h2>
 
@@ -182,7 +182,7 @@ export default function DeglazingPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Sparkles className="w-8 h-8 text-orange-600" />
+            <Sparkles className="w-8 h-8 text-orange-700" />
             Step-by-Step: Professional Deglazing Method
           </h2>
 
@@ -252,7 +252,7 @@ export default function DeglazingPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
-            <Wine className="w-8 h-8 text-orange-600" />
+            <Wine className="w-8 h-8 text-orange-700" />
             Choosing Your Liquid
           </h2>
 

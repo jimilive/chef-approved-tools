@@ -67,7 +67,7 @@ export default function EmulsificationPage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Beaker className="w-5 h-5" />
             <span className="text-sm font-medium">Cooking Science</span>
           </div>
@@ -100,7 +100,7 @@ export default function EmulsificationPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <Droplets className="w-6 h-6 text-orange-600" />
+            <Droplets className="w-6 h-6 text-orange-700" />
             What is Emulsification? The Basic Science
           </h2>
 
@@ -166,7 +166,7 @@ export default function EmulsificationPage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -224,7 +224,7 @@ export default function EmulsificationPage() {
             <li>Perfect mayonnaise and aioli</li>
             <li>Stable hollandaise and béarnaise</li>
             <li>Creamy vinaigrettes that stay together</li>
-            <li><Link href="/blog/cheese-sauce-mac-and-cheese" className="text-orange-600 hover:text-orange-800 underline">Smooth cheese sauces</Link> that never break</li>
+            <li><Link href="/blog/cheese-sauce-mac-and-cheese" className="text-orange-700 hover:text-orange-800 underline">Smooth cheese sauces</Link> that never break</li>
             <li>Pan sauces that emulsify butter seamlessly</li>
           </ul>
 
@@ -240,16 +240,16 @@ export default function EmulsificationPage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/cheese-sauce-mac-and-cheese" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/cheese-sauce-mac-and-cheese" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Make Perfect Cheese Sauce
             </Link>
-            <Link href="/blog/understanding-acids-cooking" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/understanding-acids-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Understanding Acids in Cooking
             </Link>
-            <Link href="/blog/fat-is-flavor" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/fat-is-flavor" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Why Fat is Flavor
             </Link>
-            <Link href="/blog/how-to-make-roux" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/how-to-make-roux" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Make a Perfect Roux
             </Link>
           </div>

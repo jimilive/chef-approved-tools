@@ -79,7 +79,7 @@ export default function HerbsPage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Leaf className="w-5 h-5" />
             <span className="text-sm font-medium">Cooking Techniques</span>
           </div>
@@ -123,7 +123,7 @@ export default function HerbsPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <Scissors className="w-6 h-6 text-orange-600" />
+            <Scissors className="w-6 h-6 text-orange-700" />
             Why Technique Matters for Herbs
           </h2>
 
@@ -171,7 +171,7 @@ export default function HerbsPage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <Leaf className="w-6 h-6 text-orange-600" />
+            <Leaf className="w-6 h-6 text-orange-700" />
             Herb Categories &amp; Characteristics
           </h2>
 
@@ -406,7 +406,7 @@ export default function HerbsPage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <Droplet className="w-6 h-6 text-orange-600" />
+            <Droplet className="w-6 h-6 text-orange-700" />
             Storage Techniques That Actually Work
           </h2>
 
@@ -808,16 +808,16 @@ export default function HerbsPage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/oxidization-effect-on-food" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/oxidization-effect-on-food" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Oxidization&apos;s Effect on Food
             </Link>
-            <Link href="/blog/how-acid-helps-cooking" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/how-acid-helps-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How Acid Helps in Cooking
             </Link>
-            <Link href="/blog/mis-en-place" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/mis-en-place" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Mis en Place Guide
             </Link>
-            <Link href="/guides/best-chef-knives" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/guides/best-chef-knives" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Best Chef Knives Guide
             </Link>
           </div>

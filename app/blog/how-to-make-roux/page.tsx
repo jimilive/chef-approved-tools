@@ -71,7 +71,7 @@ export default function RouxPage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <Flame className="w-5 h-5" />
             <span className="text-sm font-medium">Technique</span>
           </div>
@@ -237,7 +237,7 @@ export default function RouxPage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-600" />
+              <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
             </h3>
             <p className="mb-4">
@@ -262,7 +262,7 @@ export default function RouxPage() {
           </div>
 
           <h2 className="flex items-center gap-2">
-            <AlertTriangle className="w-6 h-6 text-orange-600" />
+            <AlertTriangle className="w-6 h-6 text-orange-700" />
             Common Roux Mistakes (And Fixes)
           </h2>
 
@@ -364,16 +364,16 @@ export default function RouxPage() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/cheese-sauce-mac-and-cheese" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/cheese-sauce-mac-and-cheese" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Make Perfect Cheese Sauce for Mac and Cheese
             </Link>
-            <Link href="/blog/what-is-braising" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/what-is-braising" className="text-orange-700 hover:text-orange-800 font-semibold">
               → What is Braising and Why It&apos;s Amazing
             </Link>
-            <Link href="/blog/caramelization-science" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/blog/caramelization-science" className="text-orange-700 hover:text-orange-800 font-semibold">
               → The Science of Caramelization
             </Link>
-            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-800 font-semibold">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Lodge Cast Iron Skillet Bundle Review
             </Link>
           </div>

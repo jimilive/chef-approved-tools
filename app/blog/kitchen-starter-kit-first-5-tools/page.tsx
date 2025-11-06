@@ -87,7 +87,7 @@ export default function KitchenStarterKitPage() {
 
       <article className="max-w-4xl mx-auto px-4 py-8">
         <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-600 mb-4">
+          <div className="flex items-center gap-2 text-orange-700 mb-4">
             <ChefHat className="w-5 h-5" />
             <span className="text-sm font-medium">Buying Guides</span>
           </div>
@@ -120,7 +120,7 @@ export default function KitchenStarterKitPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <AlertTriangle className="w-6 h-6 text-orange-600" />
+            <AlertTriangle className="w-6 h-6 text-orange-700" />
             The Problem: Why Most Home Cooks Buy the Wrong Tools
           </h2>
 
@@ -155,7 +155,7 @@ export default function KitchenStarterKitPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <Utensils className="w-6 h-6 text-orange-600" />
+            <Utensils className="w-6 h-6 text-orange-700" />
             The Professional Method: Building Your Starter Kit
           </h2>
 
@@ -175,7 +175,7 @@ export default function KitchenStarterKitPage() {
             productSlug="victorinox-fibrox-chef-knife"
             merchant="internal"
           >
-            <Link href="/reviews/victorinox-fibrox-10-inch-chefs-knife" className="text-orange-600 hover:text-orange-700 font-medium">
+            <Link href="/reviews/victorinox-fibrox-10-inch-chefs-knife" className="text-orange-700 hover:text-orange-700 font-medium">
               Read my full Victorinox knife review →
             </Link>
           </CTAVisibilityTracker> */}
@@ -226,7 +226,7 @@ export default function KitchenStarterKitPage() {
             productSlug="lodge-cast-iron-skillet"
             merchant="internal"
           >
-            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-700 font-medium">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-700 font-medium">
               See my cast iron skillet review →
             </Link>
           </CTAVisibilityTracker> */}
@@ -267,7 +267,7 @@ export default function KitchenStarterKitPage() {
             productSlug="kitchen-thermometer-comparison"
             merchant="internal"
           >
-            <Link href="/blog/kitchen-thermometer-guide" className="text-orange-600 hover:text-orange-700 font-medium">
+            <Link href="/blog/kitchen-thermometer-guide" className="text-orange-700 hover:text-orange-700 font-medium">
               See my thermometer comparison →
             </Link>
           </CTAVisibilityTracker> */}
@@ -304,7 +304,7 @@ export default function KitchenStarterKitPage() {
             productSlug="bench-scraper"
             merchant="internal"
           >
-            <Link href="/blog/best-bench-scraper" className="text-orange-600 hover:text-orange-700 font-medium">
+            <Link href="/blog/best-bench-scraper" className="text-orange-700 hover:text-orange-700 font-medium">
               Read my full scraper story →
             </Link>
           </CTAVisibilityTracker>
@@ -323,7 +323,7 @@ export default function KitchenStarterKitPage() {
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ShoppingCart className="w-6 h-6 text-orange-600" />
+              <ShoppingCart className="w-6 h-6 text-orange-700" />
               Want my complete kitchen setup under $200?
             </h3>
             <p className="mb-4">
@@ -363,7 +363,7 @@ export default function KitchenStarterKitPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <AlertTriangle className="w-6 h-6 text-orange-600" />
+            <AlertTriangle className="w-6 h-6 text-orange-700" />
             Common Mistakes (And How to Avoid Them)
           </h2>
 
@@ -432,7 +432,7 @@ export default function KitchenStarterKitPage() {
           </p>
 
           <h2 className="flex items-center gap-2">
-            <Thermometer className="w-6 h-6 text-orange-600" />
+            <Thermometer className="w-6 h-6 text-orange-700" />
             Troubleshooting Guide
           </h2>
 
@@ -475,7 +475,7 @@ export default function KitchenStarterKitPage() {
                 productSlug="victorinox-fibrox-chef-knife"
                 merchant="internal"
               >
-                <Link href="/reviews/victorinox-fibrox-10-inch-chefs-knife" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/reviews/victorinox-fibrox-10-inch-chefs-knife" className="text-orange-700 hover:text-orange-700 font-medium">
                   Victorinox 8" Chef&apos;s Knife
                 </Link>
               </CTAVisibilityTracker> */}
@@ -488,7 +488,7 @@ export default function KitchenStarterKitPage() {
                 productSlug="lodge-cast-iron-skillet"
                 merchant="internal"
               >
-                <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-700 font-medium">
                   Lodge Cast Iron Skillet
                 </Link>
               </CTAVisibilityTracker> */}
@@ -514,7 +514,7 @@ export default function KitchenStarterKitPage() {
                 productSlug="bench-scraper"
                 merchant="internal"
               >
-                <Link href="/blog/best-bench-scraper" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/blog/best-bench-scraper" className="text-orange-700 hover:text-orange-700 font-medium">
                   Rubbermaid Bench Scraper
                 </Link>
               </CTAVisibilityTracker>
@@ -577,7 +577,7 @@ export default function KitchenStarterKitPage() {
                 productSlug="first-chef-knife-guide"
                 merchant="internal"
               >
-                <Link href="/blog/how-to-choose-first-chef-knife" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/blog/how-to-choose-first-chef-knife" className="text-orange-700 hover:text-orange-700 font-medium">
                   How to Choose Your First Chef Knife
                 </Link>
               </CTAVisibilityTracker>
@@ -589,7 +589,7 @@ export default function KitchenStarterKitPage() {
                 productSlug="season-cast-iron-guide"
                 merchant="internal"
               >
-                <Link href="/blog/season-cast-iron-restaurant-method" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/blog/season-cast-iron-restaurant-method" className="text-orange-700 hover:text-orange-700 font-medium">
                   How to Season Cast Iron Like a Restaurant Chef
                 </Link>
               </CTAVisibilityTracker>
@@ -601,7 +601,7 @@ export default function KitchenStarterKitPage() {
                 productSlug="wasting-money-tools"
                 merchant="internal"
               >
-                <Link href="/blog/kitchen-tools-wasting-money" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/blog/kitchen-tools-wasting-money" className="text-orange-700 hover:text-orange-700 font-medium">
                   10 Kitchen Tools You&apos;re Wasting Money On
                 </Link>
               </CTAVisibilityTracker>
@@ -620,7 +620,7 @@ export default function KitchenStarterKitPage() {
                 productSlug="chef-knives-guide"
                 merchant="internal"
               >
-                <Link href="/guides/best-chef-knives" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/guides/best-chef-knives" className="text-orange-700 hover:text-orange-700 font-medium">
                   Best Chef Knives: Budget to Premium
                 </Link>
               </CTAVisibilityTracker>
@@ -633,7 +633,7 @@ export default function KitchenStarterKitPage() {
                 productSlug="cookware-materials-explained"
                 merchant="internal"
               >
-                <Link href="/blog/cookware-materials-explained" className="text-orange-600 hover:text-orange-700 font-medium">
+                <Link href="/blog/cookware-materials-explained" className="text-orange-700 hover:text-orange-700 font-medium">
                   Cookware Materials Explained
                 </Link>
               </CTAVisibilityTracker>
@@ -655,7 +655,7 @@ export default function KitchenStarterKitPage() {
             productSlug="kitchen-starter-kit-first-5-tools"
             merchant="internal"
           >
-            <Link href="/about" className="text-orange-600 hover:text-orange-700 font-medium">
+            <Link href="/about" className="text-orange-700 hover:text-orange-700 font-medium">
               About Scott →
             </Link>
           </CTAVisibilityTracker>
