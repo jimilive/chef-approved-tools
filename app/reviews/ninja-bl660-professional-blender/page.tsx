@@ -282,7 +282,7 @@ export default async function NinjaBL660ReviewPage() {
                   → View {productData.name} on Amazon
                 </a>
               </p>
-              <p className="text-xs text-slate-500 text-center mt-3">As an Amazon Associate, I earn from qualifying purchases.</p>
+              <p className="text-xs text-slate-700 text-center mt-3">As an Amazon Associate, I earn from qualifying purchases.</p>
             </div>
             <p className="text-sm text-slate-600 mt-6 italic">{reviewData.whereToBuy.disclaimer}</p>
           </div>
@@ -309,7 +309,7 @@ export default async function NinjaBL660ReviewPage() {
                     → View {productData.name} on Amazon
                   </a>
                 </p>
-                <p className="text-xs text-slate-500 text-center mt-3">As an Amazon Associate, I earn from qualifying purchases.</p>
+                <p className="text-xs text-slate-700 text-center mt-3">As an Amazon Associate, I earn from qualifying purchases.</p>
               </div>
             }
           />

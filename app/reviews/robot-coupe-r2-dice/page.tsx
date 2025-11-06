@@ -340,7 +340,7 @@ export default async function RobotCoupeR2DiceReview() {
             <h3 className="text-xl font-semibold text-slate-900 mb-4 mt-6">Performance Results</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-semibold text-green-700 mb-2">✅ Outstanding Performance Results</h4>
+                <h3 className="font-semibold text-green-700 mb-2">✅ Outstanding Performance Results</h3>
                 <ul className="text-sm text-slate-700 space-y-1">
                   <li>• Excellent speed and efficiency (5/5 rating)</li>
                   <li>• Superior cut quality and consistency (5/5 rating)</li>
@@ -350,7 +350,7 @@ export default async function RobotCoupeR2DiceReview() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-orange-800 mb-2">⚠️ Considerations</h4>
+                <h3 className="font-semibold text-orange-800 mb-2">⚠️ Considerations</h3>
                 <ul className="text-sm text-slate-700 space-y-1">
                   <li>• Cleaning requires more attention (4/5 rating)</li>
                   <li>• Commercial equipment requires proper maintenance</li>
@@ -888,7 +888,7 @@ export default async function RobotCoupeR2DiceReview() {
 
             {/* Product 1 */}
             <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
-              <h4 className="mt-0">KitchenAid Commercial Mixer</h4>
+              <h3 className="mt-0">KitchenAid Commercial Mixer</h3>
               <p>The commercial mixer that worked alongside the Robot Coupe in our prep operations.
               Together, they transformed our prep efficiency and paid for themselves in months.</p>
               <p className="text-sm text-gray-600">
@@ -904,7 +904,7 @@ export default async function RobotCoupeR2DiceReview() {
 
             {/* Product 2 */}
             <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
-              <h4 className="mt-0">John Boos Commercial Cutting Board</h4>
+              <h3 className="mt-0">John Boos Commercial Cutting Board</h3>
               <p>The prep surface where we staged ingredients before processing. The 24x18 size provides
               perfect workspace for high-volume prep operations.</p>
               <p className="text-sm text-gray-600">
@@ -920,7 +920,7 @@ export default async function RobotCoupeR2DiceReview() {
 
             {/* Product 3 */}
             <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
-              <h4 className="mt-0">Rubbermaid Commercial Scraper</h4>
+              <h3 className="mt-0">Rubbermaid Commercial Scraper</h3>
               <p>Essential for scraping down the Robot Coupe bowl between batches. This professional-grade rubber spatula handles the demands of commercial food processing and lasts decades.</p>
               <p className="text-sm text-gray-600">
                 <strong>After 18 years:</strong> Still my go-to scraper for food processor cleanup.

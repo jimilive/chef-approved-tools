@@ -264,7 +264,7 @@ export default async function BenrinerLargeMandolineReview() {
           {reviewData.whoShouldBuy.sizing && (
             <div className="bg-white rounded-2xl px-6 pt-0 pb-12 md:px-12 shadow-sm mb-6 -mt-6">
               <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
-                <h4 className="text-base font-semibold text-amber-900 mb-3 mt-0">💡 {reviewData.whoShouldBuy.sizing.title}</h4>
+                <h3 className="text-base font-semibold text-amber-900 mb-3 mt-0">💡 {reviewData.whoShouldBuy.sizing.title}</h3>
                 {reviewData.whoShouldBuy.sizing.options.map((option, index) => (
                   <p key={index} className={`text-sm text-amber-900 ${index < reviewData.whoShouldBuy.sizing.options.length - 1 ? 'mb-2' : 'mb-0'}`}>
                     <strong>{option.name}:</strong> {option.note}

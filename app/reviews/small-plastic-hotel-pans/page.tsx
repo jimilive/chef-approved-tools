@@ -176,9 +176,9 @@ export default async function ProductReview() {
                           ⭐ RECOMMENDED
                         </div>
                       )}
-                      <h4 className="font-bold text-lg mb-2 text-gray-900 mt-0">
+                      <h3 className="font-bold text-lg mb-2 text-gray-900 mt-0">
                         {option.size} - {option.depth}
-                      </h4>
+                      </h3>
                       <div className="text-sm text-gray-600 space-y-1 mb-4">
                         <p><strong>Dimensions:</strong> {option.dimensions}</p>
                         <p><strong>Capacity:</strong> {option.capacity}</p>
@@ -218,7 +218,7 @@ export default async function ProductReview() {
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-gray-200">
-                  <h4 className="font-bold text-base mb-3 text-gray-900">Replacement Lids</h4>
+                  <h3 className="font-bold text-base mb-3 text-gray-900">Replacement Lids</h3>
                   <div className="space-y-3">
                     {reviewData.sizeOptions.lidOptions.map((lid) => (
                       <div key={lid.id} className="flex items-center justify-between bg-gray-50 p-3 rounded-lg">
@@ -329,7 +329,7 @@ export default async function ProductReview() {
                 </a>
               </p>
 
-              <p className="text-xs text-slate-500 text-center mt-3">
+              <p className="text-xs text-slate-700 text-center mt-3">
                 As an Amazon Associate, I earn from qualifying purchases.
               </p>
             </div>
@@ -376,7 +376,7 @@ export default async function ProductReview() {
                   </a>
                 </p>
 
-                <p className="text-xs text-slate-500 text-center mt-3">
+                <p className="text-xs text-slate-700 text-center mt-3">
                   As an Amazon Associate, I earn from qualifying purchases.
                 </p>
               </div>

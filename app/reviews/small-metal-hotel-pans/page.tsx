@@ -158,9 +158,9 @@ export default async function ProductReview() {
 
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                     <div className="flex-1">
-                      <h4 className="font-bold text-lg text-gray-900 mb-1">
+                      <h3 className="font-bold text-lg text-gray-900 mb-1">
                         {option.size} — {option.depth}
-                      </h4>
+                      </h3>
                       <p className="text-sm text-gray-600 mb-2">{option.dimensions}</p>
                       <p className="text-sm text-gray-700 mb-1">
                         <strong>Capacity:</strong> {option.capacity}
@@ -206,7 +206,7 @@ export default async function ProductReview() {
 
             {/* Lid Options */}
             <div className="mt-6 pt-6 border-t border-gray-200">
-              <h4 className="font-bold text-base mb-3 text-gray-900">Lids (Sold Separately)</h4>
+              <h3 className="font-bold text-base mb-3 text-gray-900">Lids (Sold Separately)</h3>
               <p className="text-sm text-gray-600 mb-4">
                 Choose solid lids for covering or slotted lids to keep serving utensils in pan during buffet service
               </p>
@@ -334,7 +334,7 @@ export default async function ProductReview() {
                 </a>
               </p>
 
-              <p className="text-xs text-slate-500 text-center mt-3">
+              <p className="text-xs text-slate-700 text-center mt-3">
                 As an Amazon Associate, I earn from qualifying purchases.
               </p>
             </div>

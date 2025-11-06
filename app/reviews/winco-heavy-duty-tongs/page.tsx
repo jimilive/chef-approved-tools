@@ -167,7 +167,7 @@ export default async function ProductReview() {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="bg-gradient-to-br from-orange-50 to-red-50 p-5 rounded-lg border-2 border-orange-300">
-                    <h4 className="font-bold text-lg mb-2 text-gray-900 mt-0">12&quot; Tongs (Grilling)</h4>
+                    <h3 className="font-bold text-lg mb-2 text-gray-900 mt-0">12&quot; Tongs (Grilling)</h3>
                     <p className="text-sm text-gray-700 mb-4">
                       Perfect for grilling and keeping your hands away from heat. The standard professional length.
                     </p>
@@ -189,7 +189,7 @@ export default async function ProductReview() {
                   </div>
 
                   <div className="bg-gradient-to-br from-orange-50 to-red-50 p-5 rounded-lg border-2 border-orange-300">
-                    <h4 className="font-bold text-lg mb-2 text-gray-900 mt-0">9&quot; Tongs (Sautéing)</h4>
+                    <h3 className="font-bold text-lg mb-2 text-gray-900 mt-0">9&quot; Tongs (Sautéing)</h3>
                     <p className="text-sm text-gray-700 mb-4">
                       More maneuverable for sautéing and stovetop cooking. Perfect for everyday kitchen tasks.
                     </p>
@@ -294,7 +294,7 @@ export default async function ProductReview() {
                   </a>
                 </p>
 
-                <p className="text-xs text-slate-500 text-center mt-3">
+                <p className="text-xs text-slate-700 text-center mt-3">
                   As an Amazon Associate, I earn from qualifying purchases.
                 </p>
               </div>

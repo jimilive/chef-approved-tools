@@ -185,7 +185,7 @@ export default async function ProductReview() {
                     → View {productData.name} on Amazon
                   </a>
                 </p>
-                <p className="text-xs text-slate-500 text-center mt-3">
+                <p className="text-xs text-slate-700 text-center mt-3">
                   As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
                 </p>
               </div>
@@ -301,7 +301,7 @@ export default async function ProductReview() {
                 </a>
               </p>
 
-              <p className="text-xs text-slate-500 text-center mt-3">
+              <p className="text-xs text-slate-700 text-center mt-3">
                 As an Amazon Associate, I earn from qualifying purchases.
               </p>
             </div>
@@ -348,7 +348,7 @@ export default async function ProductReview() {
                   </a>
                 </p>
 
-                <p className="text-xs text-slate-500 text-center mt-3">
+                <p className="text-xs text-slate-700 text-center mt-3">
                   As an Amazon Associate, I earn from qualifying purchases.
                 </p>
               </div>

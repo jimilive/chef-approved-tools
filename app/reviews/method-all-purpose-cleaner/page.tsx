@@ -223,7 +223,7 @@ export default async function MethodAllPurposeCleanerReviewPage() {
                   </a>
                 </p>
 
-                <p className="text-xs text-slate-500 text-center mt-3">
+                <p className="text-xs text-slate-700 text-center mt-3">
                   As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
                 </p>
               </div>
@@ -266,7 +266,7 @@ export default async function MethodAllPurposeCleanerReviewPage() {
                 <div key={index} className="flex items-start gap-3 p-4 bg-green-50 rounded-lg border border-green-200">
                   <div className="text-2xl">🌱</div>
                   <div>
-                    <h4 className="font-semibold text-slate-900 mb-1 text-base">{feature.title}</h4>
+                    <h3 className="font-semibold text-slate-900 mb-1 text-base">{feature.title}</h3>
                     <p className="text-sm text-slate-700 m-0">{feature.description}</p>
                   </div>
                 </div>
@@ -362,7 +362,7 @@ export default async function MethodAllPurposeCleanerReviewPage() {
                 </a>
               </p>
 
-              <p className="text-xs text-slate-500 text-center mt-3">
+              <p className="text-xs text-slate-700 text-center mt-3">
                 As an Amazon Associate, I earn from qualifying purchases.
               </p>
             </div>
@@ -431,7 +431,7 @@ export default async function MethodAllPurposeCleanerReviewPage() {
                   </a>
                 </p>
 
-                <p className="text-xs text-slate-500 text-center mt-3">
+                <p className="text-xs text-slate-700 text-center mt-3">
                   As an Amazon Associate, I earn from qualifying purchases.
                 </p>
               </div>

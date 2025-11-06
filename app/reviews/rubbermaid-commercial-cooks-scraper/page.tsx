@@ -400,7 +400,7 @@ export default async function RubbermaidScraperReview() {
                 <h3 className="text-xl font-semibold text-slate-900 mb-4">{section.title}</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <h4 className="font-semibold text-green-700 mb-2">{section.rubbermaidAdvantages.title}</h4>
+                    <h3 className="font-semibold text-green-700 mb-2">{section.rubbermaidAdvantages.title}</h3>
                     <ul className="text-sm space-y-1 text-slate-700">
                       {section.rubbermaidAdvantages.points.map((point, pointIndex) => (
                         <li key={pointIndex}>• {point}</li>
@@ -408,9 +408,9 @@ export default async function RubbermaidScraperReview() {
                     </ul>
                   </div>
                   <div>
-                    <h4 className={`font-semibold mb-2 ${section.competitorProblems ? 'text-red-700' : 'text-orange-700'}`}>
+                    <h3 className={`font-semibold mb-2 ${section.competitorProblems ? 'text-red-700' : 'text-orange-700'}`}>
                       {section.competitorProblems ? section.competitorProblems.title : section.competitorAdvantages?.title}
-                    </h4>
+                    </h3>
                     <ul className="text-sm space-y-1 text-slate-700">
                       {(section.competitorProblems ? section.competitorProblems.points : section.competitorAdvantages?.points || []).map((point, pointIndex) => (
                         <li key={pointIndex}>• {point}</li>
@@ -506,7 +506,7 @@ export default async function RubbermaidScraperReview() {
             <div className="bg-white p-5 my-4 rounded-md border-2 border-yellow-600">
               <div className="flex justify-between items-center flex-wrap gap-4">
                 <div>
-                  <h4 className="m-0 mb-2.5">🏆 {reviewData.whereToBuy.sizes[0].name}</h4>
+                  <h3 className="m-0 mb-2.5">🏆 {reviewData.whereToBuy.sizes[0].name}</h3>
                   <p className="mt-1 mb-0 text-gray-600">
                     {reviewData.whereToBuy.sizes[0].features.join(' | ')}
                   </p>
@@ -541,7 +541,7 @@ export default async function RubbermaidScraperReview() {
             <div className="bg-white p-5 my-4 rounded-md border-2 border-green-600">
               <div className="flex justify-between items-center flex-wrap gap-4">
                 <div>
-                  <h4 className="m-0 mb-2.5">⭐ {reviewData.whereToBuy.sizes[1].name}</h4>
+                  <h3 className="m-0 mb-2.5">⭐ {reviewData.whereToBuy.sizes[1].name}</h3>
                   <p className="mt-1 mb-0 text-gray-600">
                     {reviewData.whereToBuy.sizes[1].features.join(' | ')}
                   </p>
@@ -693,7 +693,7 @@ export default async function RubbermaidScraperReview() {
 
             {reviewData.alternatives.sections.map((section, index) => (
               <div key={index} className="my-5">
-                <h4>{section.title}</h4>
+                <h3>{section.title}</h3>
                 {section.options.map((option, optionIndex) => (
                   <p key={optionIndex} className="mb-2.5">
                     → <strong>{option.name}</strong> ({option.price}) - {option.description}
@@ -703,7 +703,7 @@ export default async function RubbermaidScraperReview() {
             ))}
 
             <div className="my-5">
-              <h4>If You&apos;re Building a Complete Professional Kitchen:</h4>
+              <h3>If You&apos;re Building a Complete Professional Kitchen:</h3>
               <p className="mb-2.5">
                 → See our <Link href="/kitchen-bundle" className="text-orange-600 hover:text-orange-800 underline">Complete Kitchen Starter Kit</Link> for recommended equipment combinations at different budget levels.
               </p>

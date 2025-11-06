@@ -183,9 +183,9 @@ export default async function ProductReview() {
                 <div className="grid md:grid-cols-2 gap-4 mb-4">
                   {/* 4-inch variant */}
                   <div className="bg-gradient-to-br from-orange-50 to-red-50 p-4 rounded-lg border-2 border-orange-300">
-                    <h4 className="font-bold text-base mb-2 text-gray-900">
+                    <h3 className="font-bold text-base mb-2 text-gray-900">
                       {reviewData.sizeVariants.options[0].label}
-                    </h4>
+                    </h3>
                     <p className="text-sm text-gray-700 mb-4">
                       {reviewData.sizeVariants.options[0].description}
                     </p>
@@ -219,9 +219,9 @@ export default async function ProductReview() {
 
                   {/* 3.25-inch variant */}
                   <div className="bg-gradient-to-br from-orange-50 to-red-50 p-4 rounded-lg border-2 border-orange-300">
-                    <h4 className="font-bold text-base mb-2 text-gray-900">
+                    <h3 className="font-bold text-base mb-2 text-gray-900">
                       {reviewData.sizeVariants.options[1].label}
-                    </h4>
+                    </h3>
                     <p className="text-sm text-gray-700 mb-4">
                       {reviewData.sizeVariants.options[1].description}
                     </p>
@@ -254,7 +254,7 @@ export default async function ProductReview() {
                   </div>
                 </div>
 
-                <p className="text-xs text-slate-500 text-center mt-3">
+                <p className="text-xs text-slate-700 text-center mt-3">
                   As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
                 </p>
               </div>
@@ -671,7 +671,7 @@ export default async function ProductReview() {
                   </div>
                 </div>
 
-                <p className="text-xs text-slate-500 text-center mt-3">
+                <p className="text-xs text-slate-700 text-center mt-3">
                   As an Amazon Associate, I earn from qualifying purchases.
                 </p>
               </div>
