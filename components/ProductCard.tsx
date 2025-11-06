@@ -91,7 +91,7 @@ export default function ProductCard({
 
         {/* Rating */}
         <div className="flex items-center gap-2 mb-3">
-          <div className="text-yellow-600 text-lg" aria-label={`Rating: ${rating} out of 5 stars`}>
+          <div className="text-amber-600 text-lg" aria-label={`Rating: ${rating} out of 5 stars`}>
             {'★'.repeat(Math.floor(rating))}
             {rating % 1 !== 0 && '½'}
             {'☆'.repeat(5 - Math.ceil(rating))}
