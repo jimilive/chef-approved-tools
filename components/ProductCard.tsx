@@ -85,13 +85,13 @@ export default function ProductCard({
         </div>
 
         {/* Product Name */}
-        <h3 className={`${featured ? 'text-xl' : 'text-lg'} font-bold m-0 mb-3 leading-snug text-gray-900`}>
+        <h2 className={`${featured ? 'text-xl' : 'text-lg'} font-bold m-0 mb-3 leading-snug text-gray-900`}>
           {name}
-        </h3>
+        </h2>
 
         {/* Rating */}
         <div className="flex items-center gap-2 mb-3">
-          <div className="text-yellow-400 text-lg">
+          <div className="text-yellow-600 text-lg" aria-label={`Rating: ${rating} out of 5 stars`}>
             {'★'.repeat(Math.floor(rating))}
             {rating % 1 !== 0 && '½'}
             {'☆'.repeat(5 - Math.ceil(rating))}
