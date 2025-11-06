@@ -1,17 +1,16 @@
-'use client'
-
-import { lazy, Suspense } from 'react'
+import { Suspense } from 'react'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 
-// Lazy load below-fold sections for better performance
-const EmailCaptureSection = lazy(() => import('@/components/home/EmailCaptureSection'))
-const WhyListenSection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.WhyListenSection })))
-const ShopByCategorySection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.ShopByCategorySection })))
-const SecondaryCTASection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.SecondaryCTASection })))
-const TopProfessionalPicksSection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.TopProfessionalPicksSection })))
-const FinalCTASection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.FinalCTASection })))
-const TrustBarSection = lazy(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.TrustBarSection })))
+// Dynamic import below-fold sections for better performance (server-side compatible)
+const EmailCaptureSection = dynamic(() => import('@/components/home/EmailCaptureSection'))
+const WhyListenSection = dynamic(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.WhyListenSection })))
+const ShopByCategorySection = dynamic(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.ShopByCategorySection })))
+const SecondaryCTASection = dynamic(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.SecondaryCTASection })))
+const TopProfessionalPicksSection = dynamic(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.TopProfessionalPicksSection })))
+const FinalCTASection = dynamic(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.FinalCTASection })))
+const TrustBarSection = dynamic(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.TrustBarSection })))
 
 // Simple loading fallback
 const SectionFallback = () => <div className="py-16" />
