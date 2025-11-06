@@ -353,13 +353,7 @@ export default async function KitchenAidCommercialReviewPage() {
         />
 
         {/* SECTION 6: EMAIL CAPTURE */}
-        <EmailCaptureSection
-          title={reviewData.emailCapture.title}
-          subtitle={reviewData.emailCapture.subtitle}
-          inputPlaceholder={reviewData.emailCapture.inputPlaceholder}
-          buttonText={reviewData.emailCapture.buttonText}
-          finePrint={reviewData.emailCapture.finePrint}
-        />
+        <EmailCaptureSection />
 
         {/* SECTION 7: FAQ */}
         <FAQSection

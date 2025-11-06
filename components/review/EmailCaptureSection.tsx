@@ -1,17 +1,17 @@
 interface EmailCaptureSectionProps {
-  title: string
-  subtitle: string
+  title?: string
+  subtitle?: string
   inputPlaceholder?: string
   buttonText?: string
-  finePrint: string
+  finePrint?: string
 }
 
 export default function EmailCaptureSection({
-  title,
-  subtitle,
+  title = "Get My Free Equipment Guide",
+  subtitle = "Download my free guide: The 11 tools I use most after 24 years in professional kitchens",
   inputPlaceholder = "Enter your email",
   buttonText = "Get Free Guide",
-  finePrint
+  finePrint = "No spam. Unsubscribe anytime. I'll send you my top equipment picks and maintenance tips from decades in professional kitchens."
 }: EmailCaptureSectionProps) {
   return (
     <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl px-6 pt-8 pb-8 md:px-12 shadow-lg mb-6 text-center">

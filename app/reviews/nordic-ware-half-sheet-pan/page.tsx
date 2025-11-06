@@ -10,6 +10,7 @@ import {
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
+  EmailCaptureSection,
   RelatedProductsGrid
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
@@ -539,6 +540,9 @@ export default async function NordicWareHalfSheetPanReview() {
             </p>
           </div>
         </section>
+
+        {/* EMAIL CAPTURE */}
+        <EmailCaptureSection />
 
         {/* Related Products */}
         <RelatedProductsGrid

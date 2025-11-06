@@ -6,6 +6,7 @@ import { generateOGImageURL } from '@/lib/og-image'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import FTCDisclosure from '@/components/FTCDisclosure'
+import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import { reviewData } from './oxo-good-grips-swivel-peeler-data'
 
 // ISR configuration - revalidate every hour
@@ -531,6 +532,9 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
             </p>
           </div>
         </section>
+
+        {/* EMAIL CAPTURE */}
+        <EmailCaptureSection />
 
         {/* Structured Data Schemas */}
         <script

@@ -8,6 +8,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   ProsConsGrid,
   FAQSection,
+  EmailCaptureSection,
   RelatedProductsGrid
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
@@ -566,6 +567,9 @@ export default async function NortonTriStoneSharpenerReview() {
             to every question.
           </p>
         </div>
+
+        {/* EMAIL CAPTURE */}
+        <EmailCaptureSection />
 
         {/* Author Bio */}
         <AuthorBio />

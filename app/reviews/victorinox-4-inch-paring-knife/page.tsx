@@ -595,13 +595,7 @@ export default async function ProductReview() {
           </div>
 
           {/* SECTION 9: EMAIL CAPTURE */}
-          <EmailCaptureSection
-            title={reviewData.emailCapture.title}
-            subtitle={reviewData.emailCapture.subtitle}
-            inputPlaceholder={reviewData.emailCapture.inputPlaceholder}
-            buttonText={reviewData.emailCapture.buttonText}
-            finePrint={reviewData.emailCapture.finePrint}
-          />
+          <EmailCaptureSection />
 
           {/* SECTION 10: BOTTOM LINE */}
           <BottomLineSection

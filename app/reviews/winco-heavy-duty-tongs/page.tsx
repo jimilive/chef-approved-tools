@@ -258,13 +258,7 @@ export default async function ProductReview() {
           />
 
           {/* SECTION 7: EMAIL CAPTURE */}
-          <EmailCaptureSection
-            title={reviewData.emailCapture.title}
-            subtitle={reviewData.emailCapture.subtitle}
-            inputPlaceholder={reviewData.emailCapture.inputPlaceholder}
-            buttonText={reviewData.emailCapture.buttonText}
-            finePrint={reviewData.emailCapture.finePrint}
-          />
+          <EmailCaptureSection />
 
           {/* SECTION 8: BOTTOM LINE */}
           <BottomLineSection

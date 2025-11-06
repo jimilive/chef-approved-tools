@@ -110,12 +110,13 @@ export function getPrimaryAffiliateLink(product: Product): string {
 
 /**
  * Get all products from Supabase
- * @returns Array of all products
+ * @returns Array of all products with full reviews (excludes comparison-only products)
  */
 export async function getAllProducts(): Promise<Product[]> {
   const { data, error } = await getSupabase()
     .from('products')
     .select('*')
+    .not('expert_rating', 'is', null)
 
   if (error || !data) {
     console.error('Error fetching all products:', error)
@@ -128,13 +129,14 @@ export async function getAllProducts(): Promise<Product[]> {
 /**
  * Get all products in a specific category
  * @param category - Category name (e.g., 'knives', 'cookware')
- * @returns Array of products in that category
+ * @returns Array of products in that category with full reviews (excludes comparison-only products)
  */
 export async function getProductsByCategory(category: string): Promise<Product[]> {
   const { data, error } = await getSupabase()
     .from('products')
     .select('*')
     .eq('category', category)
+    .not('expert_rating', 'is', null)
 
   if (error || !data) {
     console.error('Error fetching products by category:', error)
@@ -149,7 +151,7 @@ export async function getProductsByCategory(category: string): Promise<Product[]
  * @param currentProductSlug - Slug of current product to exclude
  * @param category - Category to search in
  * @param limit - Maximum number of products to return (default: 3)
- * @returns Array of related products
+ * @returns Array of related products with full reviews (excludes comparison-only products)
  */
 export async function getRelatedProducts(
   currentProductSlug: string,
@@ -161,6 +163,7 @@ export async function getRelatedProducts(
     .select('*')
     .eq('category', category)
     .neq('slug', currentProductSlug)
+    .not('expert_rating', 'is', null)
     .limit(limit)
 
   if (error || !data) {

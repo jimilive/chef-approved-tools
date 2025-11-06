@@ -9,6 +9,7 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 import type { Metadata } from 'next'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
+import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import AuthorBio from '@/components/review/AuthorBio'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
@@ -740,6 +741,9 @@ export default async function RubbermaidScraperReview() {
 
         {/* Social Proof */}
         <TestimonialsSection />
+
+        {/* EMAIL CAPTURE */}
+        <EmailCaptureSection />
 
         {/* Footer Transparency Elements */}
         <section className="mb-8">

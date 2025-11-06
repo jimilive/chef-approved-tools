@@ -455,13 +455,7 @@ export default async function BlackDeckerToasterOvenReview() {
           </div>
 
           {/* SECTION 10: EMAIL CAPTURE */}
-          <EmailCaptureSection
-            title={reviewData.emailCapture.title}
-            subtitle={reviewData.emailCapture.subtitle}
-            inputPlaceholder={reviewData.emailCapture.inputPlaceholder}
-            buttonText={reviewData.emailCapture.buttonText}
-            finePrint={reviewData.emailCapture.finePrint}
-          />
+          <EmailCaptureSection />
 
           {/* SECTION 11: BOTTOM LINE */}
           <BottomLineSection

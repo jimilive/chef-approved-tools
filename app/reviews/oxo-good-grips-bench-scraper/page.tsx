@@ -7,6 +7,7 @@ import { generateOGImageURL } from '@/lib/og-image'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import AuthorBio from '@/components/review/AuthorBio'
+import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import FTCDisclosure from '@/components/FTCDisclosure'
 
 // Import review data
@@ -550,6 +551,9 @@ export default async function OXOGoodGripsBenchScraperReview() {
             ))}
           </div>
         </section>
+
+        {/* EMAIL CAPTURE */}
+        <EmailCaptureSection />
 
         {/* Author Bio */}
         <AuthorBio />

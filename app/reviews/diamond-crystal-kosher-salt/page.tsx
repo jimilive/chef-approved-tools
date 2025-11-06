@@ -321,13 +321,7 @@ export default async function DiamondCrystalKosherSaltReview() {
           </div>
 
           {/* SECTION 8: EMAIL CAPTURE */}
-          <EmailCaptureSection
-            title={reviewData.emailCapture.title}
-            subtitle={reviewData.emailCapture.subtitle}
-            inputPlaceholder={reviewData.emailCapture.inputPlaceholder}
-            buttonText={reviewData.emailCapture.buttonText}
-            finePrint={reviewData.emailCapture.finePrint}
-          />
+          <EmailCaptureSection />
 
           {/* SECTION 9: BOTTOM LINE */}
           <BottomLineSection

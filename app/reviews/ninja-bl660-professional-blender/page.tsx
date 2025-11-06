@@ -9,6 +9,7 @@ import {
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
+  EmailCaptureSection,
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
@@ -285,6 +286,9 @@ export default async function NinjaBL660ReviewPage() {
             </div>
             <p className="text-sm text-slate-600 mt-6 italic">{reviewData.whereToBuy.disclaimer}</p>
           </div>
+
+          {/* EMAIL CAPTURE */}
+          <EmailCaptureSection />
 
           {/* BOTTOM LINE */}
           <BottomLineSection

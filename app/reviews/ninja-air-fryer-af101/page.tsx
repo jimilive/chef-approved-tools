@@ -9,6 +9,7 @@ import {
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
+  EmailCaptureSection,
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
@@ -341,6 +342,9 @@ export default async function NinjaAirFryerAF101ReviewPage() {
               {reviewData.whereToBuy.disclaimer}
             </p>
           </div>
+
+          {/* SECTION 6.5: EMAIL CAPTURE */}
+          <EmailCaptureSection />
 
           {/* SECTION 7: BOTTOM LINE */}
           <BottomLineSection

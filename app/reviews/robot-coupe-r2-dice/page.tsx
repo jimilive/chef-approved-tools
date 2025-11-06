@@ -3,6 +3,7 @@ import { Star, CheckCircle, XCircle } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
+import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import PriceDisplay from '@/components/PriceDisplay'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 
@@ -944,6 +945,9 @@ export default async function RobotCoupeR2DiceReview() {
 
         {/* Social Proof */}
         <TestimonialsSection />
+
+        {/* EMAIL CAPTURE */}
+        <EmailCaptureSection />
 
         {/* Footer Transparency Elements */}
         <section className="mb-8">
