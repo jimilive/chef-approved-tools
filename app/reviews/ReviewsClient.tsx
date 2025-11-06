@@ -395,7 +395,7 @@ const ReviewCard: React.FC<{ review: Review; featured?: boolean; position?: numb
 
         {/* Rating */}
         <div className="flex items-center gap-2 mb-3">
-          <div className="text-yellow-400 text-lg">
+          <div className="text-amber-700 text-lg" aria-label={`Rating: ${review.rating} out of 5 stars`}>
             {'★'.repeat(Math.floor(review.rating))}
             {review.rating % 1 !== 0 && '½'}
             {'☆'.repeat(5 - Math.ceil(review.rating))}

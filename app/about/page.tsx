@@ -303,13 +303,13 @@ export default function AboutPage() {
                         <h4 className="text-xl font-bold text-slate-900">
                           Phase {index + 1}: {phase.phase}
                         </h4>
-                        <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
+                        <span className="bg-orange-100 text-orange-900 px-3 py-1 rounded-full text-sm font-medium">
                           {phase.duration}
                         </span>
                       </div>
                       <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                         {phase.tasks.map((task, taskIndex) => (
-                          <li key={taskIndex} className="flex items-center gap-2 text-slate-700">
+                          <li key={taskIndex} className="flex items-center gap-2 text-slate-900">
                             <div className="w-1.5 h-1.5 bg-orange-700 rounded-full flex-shrink-0" />
                             {task}
                           </li>
@@ -345,11 +345,11 @@ export default function AboutPage() {
                 <h4 className="text-xl font-bold text-amber-900">Tier 1</h4>
               </div>
               <h5 className="font-bold text-slate-900 mb-3">Professional Kitchen Tested</h5>
-              <p className="text-sm text-slate-700 mb-3">
+              <p className="text-sm text-slate-900 mb-3">
                 18+ months of testing in demanding restaurant environments serving 200+ covers nightly.
                 These products have survived the ultimate stress test.
               </p>
-              <p className="text-xs text-slate-600 italic">
+              <p className="text-xs text-slate-700 italic">
                 The gold standard: proven where failure means lost revenue.
               </p>
             </div>
@@ -361,11 +361,11 @@ export default function AboutPage() {
                 <h4 className="text-xl font-bold text-blue-900">Tier 2</h4>
               </div>
               <h5 className="font-bold text-slate-900 mb-3">Currently Testing</h5>
-              <p className="text-sm text-slate-700 mb-3">
+              <p className="text-sm text-slate-900 mb-3">
                 Active home testing for 30-90+ days with real-time updates. Reviews evolve as I
                 discover strengths and weaknesses.
               </p>
-              <p className="text-xs text-slate-600 italic">
+              <p className="text-xs text-slate-700 italic">
                 Transparent insights during the testing period with professional perspective.
               </p>
             </div>
@@ -377,18 +377,18 @@ export default function AboutPage() {
                 <h4 className="text-xl font-bold text-slate-900">Tier 3</h4>
               </div>
               <h5 className="font-bold text-slate-900 mb-3">Professional Recommendation</h5>
-              <p className="text-sm text-slate-700 mb-3">
+              <p className="text-sm text-slate-900 mb-3">
                 Informed opinions based on 45 years of cooking experience (including 24 years professionally) and understanding what
                 makes equipment work in real kitchens.
               </p>
-              <p className="text-xs text-slate-600 italic">
+              <p className="text-xs text-slate-700 italic">
                 Experience-based guidance with clear disclosure about testing status.
               </p>
             </div>
           </div>
 
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center">
-            <p className="text-slate-700 mb-4">
+            <p className="text-slate-900 mb-4">
               This tier system exists for one reason: <strong>radical transparency</strong>. You deserve
               to know exactly what experience backs each recommendation.
             </p>
@@ -398,7 +398,7 @@ export default function AboutPage() {
             >
               <Link
                 href="/review-tiers"
-                className="inline-block text-orange-600 hover:text-orange-800 font-semibold underline"
+                className="inline-block text-orange-700 hover:text-orange-800 font-semibold underline"
               >
                 Learn more about our tier system →
               </Link>
@@ -422,19 +422,19 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {evaluationCriteria.map((criteria, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6">
+              <div key={index} className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <h4 className="text-xl font-bold text-slate-900">{criteria.category}</h4>
                   <span className="bg-orange-700 text-white px-3 py-1 rounded-full text-sm font-bold">
                     {criteria.weight}
                   </span>
                 </div>
-                <p className="text-slate-700 mb-4">{criteria.description}</p>
+                <p className="text-slate-900 mb-4">{criteria.description}</p>
                 <div className="space-y-2">
-                  <h5 className="font-semibold text-slate-800 text-sm">Key Metrics:</h5>
+                  <h5 className="font-semibold text-slate-900 text-sm">Key Metrics:</h5>
                   <ul className="space-y-1">
                     {criteria.metrics.map((metric, metricIndex) => (
-                      <li key={metricIndex} className="flex items-center gap-2 text-sm text-slate-600">
+                      <li key={metricIndex} className="flex items-center gap-2 text-sm text-slate-700">
                         <div className="w-1 h-1 bg-slate-400 rounded-full flex-shrink-0" />
                         {metric}
                       </li>
@@ -526,7 +526,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
               <h4 className="font-bold text-slate-900 mb-3">What We DON&apos;T Do</h4>
-              <ul className="text-left space-y-2 text-slate-700">
+              <ul className="text-left space-y-2 text-slate-900">
                 <li>❌ Accept free products for review</li>
                 <li>❌ Allow manufacturers to influence ratings</li>
                 <li>❌ Publish reviews after just weeks of testing</li>
@@ -535,7 +535,7 @@ export default function AboutPage() {
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
               <h4 className="font-bold text-slate-900 mb-3">What We DO</h4>
-              <ul className="text-left space-y-2 text-slate-700">
+              <ul className="text-left space-y-2 text-slate-900">
                 <li>✅ Purchase equipment with our own funds</li>
                 <li>✅ Test Tier 1 equipment for minimum 6 months in real kitchens</li>
                 <li>✅ Report both strengths and weaknesses</li>
@@ -546,7 +546,7 @@ export default function AboutPage() {
 
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-6">
             <h4 className="font-bold text-slate-900 mb-3">Our Commitment</h4>
-            <p className="text-slate-700">
+            <p className="text-slate-900">
               Every recommendation is one I&apos;d make to my own kitchen staff. Every &quot;avoid&quot;
               recommendation is based on real problems we encountered, not minor nitpicks.
               Your success in the kitchen depends on reliable equipment, and that&apos;s what we help you find.

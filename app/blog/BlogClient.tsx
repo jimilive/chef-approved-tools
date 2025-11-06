@@ -10,6 +10,7 @@ interface BlogPost {
   title: string
   excerpt: string
   publishDate: string
+  formattedDate: string
   readTime: string
   category: string
   featured: boolean
@@ -167,13 +168,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
                     <div className="flex items-center gap-4 text-xs text-slate-500 pt-4 border-t border-gray-200">
                       <div className="flex items-center gap-1.5">
                         <Calendar className="w-3.5 h-3.5 text-orange-600" />
-                        <span>
-                          {new Date(post.publishDate).toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'short',
-                            day: 'numeric'
-                          })}
-                        </span>
+                        <span>{post.formattedDate}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
                         <Clock className="w-3.5 h-3.5 text-orange-600" />

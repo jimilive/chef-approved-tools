@@ -6,6 +6,7 @@ export interface BlogPost {
   title: string
   excerpt: string
   publishDate: string
+  formattedDate: string
   readTime: string
   category: string
   featured: boolean
@@ -112,11 +113,19 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
       // Featured posts
       const featured = slug === 'best-scrambled-eggs'
 
+      // Format date on server to prevent hydration mismatch
+      const formattedDate = new Date(publishDate).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      })
+
       blogPosts.push({
         slug,
         title,
         excerpt,
         publishDate,
+        formattedDate,
         readTime,
         category,
         featured
