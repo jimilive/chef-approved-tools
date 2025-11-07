@@ -9,7 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, FlaskConical, Timer, AlertTriangle, Wheat } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Bread Science: Understanding Gluten Development | Chef Approved Tools",
+  title: "Bread Science: Understanding Gluten Development",
   description: "Learn the chemistry of gluten formation, kneading techniques, and how to troubleshoot bread problems. From a chef with 24 years of professional baking experience.",
   keywords: ["gluten development", "bread science", "how to knead bread", "gluten formation", "bread making", "windowpane test", "no-knead bread", "bread chemistry"],
   alternates: {

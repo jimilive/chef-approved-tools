@@ -5,7 +5,7 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata: Metadata = {
-  title: 'Hotel Pan System Review: Restaurant Organization for Home Kitchens',
+  title: 'Hotel Pan System: Restaurant Organization for Home',
   description: 'After 24 years in professional kitchens and 20 years using hotel pans at home, discover why this restaurant system eliminates Tupperware chaos forever.',
   keywords: ['hotel pan system', 'restaurant food storage', 'kitchen organization', 'meal prep containers', 'NSF approved containers', 'Curta hotel pans', 'Cambro alternative'],
   alternates: {

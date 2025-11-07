@@ -9,7 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Lightbulb, Apple } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Cooking with Tomatoes: Fresh vs Canned & When to Use Each | Chef Approved Tools",
+  title: "Cooking with Tomatoes: Fresh vs Canned & When to Use",
   description: "Learn when to use fresh tomatoes vs canned tomatoes in cooking. Professional insights from 24 years in restaurant kitchens on choosing the right tomatoes for every dish.",
   keywords: ["fresh vs canned tomatoes", "cooking with tomatoes", "when to use canned tomatoes", "best tomatoes for sauce", "San Marzano tomatoes", "professional tomato techniques"],
   alternates: {
