@@ -17,9 +17,11 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 // Import review data
 import { reviewData } from './vitamix-5200-professional-blender-data'
+import { blenderComparisonData } from './blender-comparison-data'
 
 // ISR configuration for better performance
 export const revalidate = 3600 // 1 hour cache
@@ -233,7 +235,13 @@ export default async function ProductReview() {
             })}
           />
 
-          {/* SECTION 4: PROS & CONS */}
+          {/* SECTION 4: BLENDER COMPARISON TABLE */}
+          <ProductComparisonTable
+            products={blenderComparisonData.products}
+            highlightedProduct={blenderComparisonData.highlightedProduct}
+          />
+
+          {/* SECTION 5: PROS & CONS */}
           <ProsConsGrid
             title={reviewData.prosConsTitle}
             prosTitle={reviewData.prosTitle}
@@ -242,7 +250,7 @@ export default async function ProductReview() {
             cons={productData.cons}
           />
 
-          {/* SECTION 5: WHO SHOULD BUY */}
+          {/* SECTION 6: WHO SHOULD BUY */}
           <WhoShouldBuyGrid
             title={reviewData.whoShouldBuy.title}
             perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
@@ -251,13 +259,13 @@ export default async function ProductReview() {
             considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
           />
 
-          {/* SECTION 6: FAQ */}
+          {/* SECTION 7: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 7: WHERE TO BUY */}
+          {/* SECTION 8: WHERE TO BUY */}
           <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
             <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
               {reviewData.whereToBuy.title}
@@ -311,10 +319,10 @@ export default async function ProductReview() {
             </p>
           </div>
 
-          {/* SECTION 8: EMAIL CAPTURE */}
+          {/* SECTION 9: EMAIL CAPTURE */}
           <EmailCaptureSection />
 
-          {/* SECTION 9: BOTTOM LINE */}
+          {/* SECTION 10: BOTTOM LINE */}
           <BottomLineSection
             title={reviewData.bottomLine.title}
             paragraphs={reviewData.bottomLine.paragraphs}
@@ -355,13 +363,13 @@ export default async function ProductReview() {
             }
           />
 
-          {/* SECTION 10: RELATED PRODUCTS */}
+          {/* SECTION 11: RELATED PRODUCTS */}
           <RelatedProductsGrid
             title={reviewData.relatedProducts.title}
             products={reviewData.relatedProducts.products}
           />
 
-          {/* SECTION 11: AUTHOR BIO */}
+          {/* SECTION 12: AUTHOR BIO */}
           <AuthorBio />
 
         </div>
