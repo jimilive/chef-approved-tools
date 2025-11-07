@@ -107,6 +107,7 @@ export default async function NordicWareHalfSheetPanReview() {
   const breadcrumbs = [
     { name: 'Home', url: 'https://www.chefapprovedtools.com' },
     { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
+    { name: 'Cookware', url: 'https://www.chefapprovedtools.com/cookware' },
     { name: reviewData.breadcrumb.productName, url: `https://www.chefapprovedtools.com/reviews/${reviewData.productSlug}` }
   ]
 
@@ -128,6 +129,8 @@ export default async function NordicWareHalfSheetPanReview() {
           <Link href="/" className="text-blue-600 no-underline">Home</Link>
           {' > '}
           <Link href="/reviews" className="text-blue-600 no-underline">Reviews</Link>
+          {' > '}
+          <Link href="/cookware" className="text-blue-600 no-underline">Cookware</Link>
           {' > '}
           <span className="text-gray-600">{reviewData.breadcrumb.productName}</span>
         </nav>

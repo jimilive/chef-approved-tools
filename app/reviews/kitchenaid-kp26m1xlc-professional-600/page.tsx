@@ -105,6 +105,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
   const breadcrumbs = [
     { name: "Home", url: "https://www.chefapprovedtools.com" },
     { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: "Appliances", url: "https://www.chefapprovedtools.com/appliances" },
     { name: reviewData.breadcrumb.productName, url: `https://www.chefapprovedtools.com/reviews/${reviewData.productSlug}` }
   ]
 

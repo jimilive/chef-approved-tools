@@ -107,7 +107,7 @@ export default async function NortonTriStoneSharpenerReview() {
   const breadcrumbs = [
     { name: 'Home', url: 'https://www.chefapprovedtools.com' },
     { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
-    { name: reviewData.breadcrumb.category, url: 'https://www.chefapprovedtools.com/knife-care' },
+    { name: 'Knives', url: 'https://www.chefapprovedtools.com/knives' },
     { name: reviewData.breadcrumb.productName, url: `https://www.chefapprovedtools.com/reviews/${reviewData.productSlug}` }
   ]
 
@@ -129,6 +129,8 @@ export default async function NortonTriStoneSharpenerReview() {
           <Link href="/" className="text-blue-600 no-underline">Home</Link>
           {' > '}
           <Link href="/reviews" className="text-blue-600 no-underline">Reviews</Link>
+          {' > '}
+          <Link href="/knives" className="text-blue-600 no-underline">Knives</Link>
           {' > '}
           <span className="text-gray-600">{reviewData.breadcrumb.productName}</span>
         </nav>

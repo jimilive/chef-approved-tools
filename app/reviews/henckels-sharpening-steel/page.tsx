@@ -129,6 +129,7 @@ export default async function HenckelsSharpeningSteelReview() {
   const breadcrumbs = [
     { name: "Home", url: "https://www.chefapprovedtools.com" },
     { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: "Knives", url: "https://www.chefapprovedtools.com/knives" },
     { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
   ]
 

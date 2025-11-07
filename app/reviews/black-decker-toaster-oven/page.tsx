@@ -125,6 +125,7 @@ export default async function BlackDeckerToasterOvenReview() {
   const breadcrumbs = [
     { name: "Home", url: "https://www.chefapprovedtools.com" },
     { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: "Appliances", url: "https://www.chefapprovedtools.com/appliances" },
     { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
   ]
 

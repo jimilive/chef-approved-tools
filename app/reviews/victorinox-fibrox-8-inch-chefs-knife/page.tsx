@@ -91,6 +91,7 @@ export default async function ProductReview() {
   const breadcrumbs = [
     { name: "Home", url: "https://www.chefapprovedtools.com" },
     { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+    { name: "Knives", url: "https://www.chefapprovedtools.com/knives" },
     { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
   ]
 
@@ -142,6 +143,8 @@ export default async function ProductReview() {
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
             <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+            {' / '}
+            <Link href="/knives" className="hover:text-orange-700">Knives</Link>
             {' / '}
             {reviewData.breadcrumb.productName}
           </div>
