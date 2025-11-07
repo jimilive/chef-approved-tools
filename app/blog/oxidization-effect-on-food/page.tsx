@@ -9,7 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Beaker, Apple, Droplet, AlertTriangle, Lightbulb, Flame } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Food Oxidation Guide - Stop Browning & Preserve Freshness | Chef Approved Tools",
+  title: "Food Oxidation Guide: Stop Browning & Preserve Freshness",
   description: "Learn how oxidation affects food quality and professional techniques to prevent browning, preserve flavor, and extend ingredient freshness in your kitchen.",
   keywords: ["food oxidation", "enzymatic browning", "prevent apple browning", "food preservation", "keeping produce fresh", "oxidation in cooking"],
   alternates: {

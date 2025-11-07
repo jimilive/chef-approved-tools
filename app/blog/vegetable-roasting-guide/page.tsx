@@ -9,7 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Thermometer, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Vegetable Roasting Guide: Times and Temperatures | Chef Approved Tools",
+  title: "Vegetable Roasting Guide: Times and Temperatures",
   description: "Master vegetable roasting from a professional chef with 24 years of restaurant experience. Learn exact times, temperatures, and techniques for perfectly roasted vegetables every time.",
   keywords: ["roasting vegetables", "how to roast vegetables", "roasted vegetables temperature", "vegetable roasting times", "how long to roast vegetables", "perfect roasted vegetables"],
   alternates: {

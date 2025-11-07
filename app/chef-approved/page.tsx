@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { generateBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Chef Approved Tools: What It Means | Professional Kitchen Equipment Reviews',
+  title: 'Chef Approved: What It Means | Pro Kitchen Reviews',
   description: 'Learn what "Chef Approved" means at ChefApprovedTools.com. Scott Bradley reviews kitchen equipment based on 24 years of professional restaurant experience using a transparent three-tier system.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/chef-approved',

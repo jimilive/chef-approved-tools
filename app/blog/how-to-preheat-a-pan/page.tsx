@@ -5,7 +5,7 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'How to Preheat a Pan: Temperature Matters More Than You Think',
+  title: 'How to Preheat a Pan: Temperature Matters More',
   description: 'Professional chef explains the science of preheating stainless steel and cast iron pans — how to prevent sticking and achieve perfect sear every time.',
   keywords: ['how to preheat a pan', 'stainless steel pan temperature', 'why food sticks', 'proper pan preheating', 'cooking temperature control'],
   alternates: {

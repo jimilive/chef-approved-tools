@@ -9,7 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Thermometer, AlertTriangle, Lightbulb } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "The Complete Guide to Kitchen Thermometers | Chef Approved Tools",
+  title: "Complete Guide to Kitchen Thermometers",
   description: "Master food temperature from a professional chef with 24 years of restaurant experience. Learn which thermometer to use, proper technique, and exact temperatures for perfect results every time.",
   keywords: ["kitchen thermometer", "meat thermometer", "instant read thermometer", "cooking temperatures", "food safety temperatures", "internal temperature guide", "how to use meat thermometer"],
   alternates: {

@@ -9,7 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Shield, AlertTriangle, CheckCircle2, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Knife Safety: How to Protect Your Fingers Like a Professional Chef",
+  title: "Knife Safety: How to Protect Your Fingers Like a Pro",
   description: "Learn the professional techniques that prevent knife accidents. Master the claw grip, proper knife handling, and the safety habits used in restaurant kitchens after 24 years on the line.",
   keywords: ["knife safety", "how to use knife safely", "claw grip technique", "knife skills", "professional knife techniques", "prevent knife accidents", "kitchen safety"],
   alternates: {

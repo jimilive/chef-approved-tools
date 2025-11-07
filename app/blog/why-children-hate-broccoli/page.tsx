@@ -9,7 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Sprout, Brain, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Why Kids Hate Broccoli - Science & Solutions | Chef Approved Tools",
+  title: "Why Kids Hate Broccoli: Science & Solutions",
   description: "Learn the science behind why children hate broccoli and professional techniques to make vegetables appealing. From bitter sensitivity to proper cooking methods.",
   keywords: ["kids hate broccoli", "why children hate vegetables", "cooking for kids", "bitter taste", "broccoli recipes kids", "vegetable cooking techniques"],
   alternates: {

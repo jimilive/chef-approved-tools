@@ -5,7 +5,7 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Kitchen Thermometer Guide: Instant Read (and Why Every Chef Trusts One)',
+  title: 'Kitchen Thermometer Guide: Instant Read & Why Chefs Trust It',
   description: 'Professional chef explains how to use an instant-read thermometer correctly for perfect doneness, safety, and consistency in every dish.',
   keywords: ['instant read thermometer', 'kitchen thermometer guide', 'cooking temperature', 'meat doneness chart', 'food safety tools'],
   alternates: {

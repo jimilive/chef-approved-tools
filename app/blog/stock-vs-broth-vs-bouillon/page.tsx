@@ -9,7 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplets, Flame, FlaskConical, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Stock vs Broth vs Bouillon: Differences & When to Use Each | Chef Approved Tools",
+  title: "Stock vs Broth vs Bouillon: Differences & When to Use",
   description: "Learn the real differences between stock, broth, and bouillon—gelatin content, flavor profiles, and when to use each. From a chef with 24 years of professional experience.",
   keywords: ["stock vs broth", "bouillon vs stock", "chicken stock", "bone broth", "gelatin in stock", "how to make stock", "stock making"],
   alternates: {

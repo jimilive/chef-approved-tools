@@ -9,7 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, AlertTriangle, Lightbulb } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "How to Make Perfect Risotto: Technique, Timing, and Science | Chef Approved Tools",
+  title: "How to Make Perfect Risotto: Technique, Timing & Science",
   description: "Master risotto from a professional chef with 24 years of restaurant experience. Learn proper technique, timing, stock selection, and the science behind perfectly creamy rice without cream.",
   keywords: ["how to make risotto", "perfect risotto", "risotto technique", "creamy risotto", "arborio rice", "risotto recipe", "italian risotto", "risotto without cream"],
   alternates: {
