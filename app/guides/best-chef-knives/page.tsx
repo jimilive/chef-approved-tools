@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { Star, CheckCircle, XCircle, DollarSign, Award, Zap } from 'lucide-react'
-import AuthorBio from '@/components/AuthorBio'
+import AuthorBio from '@/components/review/AuthorBio'
 import { generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
@@ -490,7 +490,7 @@ export default async function BestChefKnivesPage() {
 
         {/* Author & Methodology */}
         <section className="mb-12">
-          <AuthorBio variant="full" />
+          <AuthorBio />
 
           <div className="mt-6 bg-blue-50 border border-blue-200 rounded-xl p-6">
             <h3 className="font-bold text-blue-900 mb-3">Testing Methodology</h3>
