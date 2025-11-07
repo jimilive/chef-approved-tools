@@ -1,46 +1,45 @@
 'use client'
 
-interface ComparisonProduct {
-  name: string
-  brand: string
-  affiliateLink: string
-  motorPower: string
-  capacity: string
-  performance: number // 1-5 stars
-  durability: string
-  warranty: string
-  proUse: 'standard' | 'some' | 'limited' | 'home-only'
-  controls: string
-  height: string
-  madeIn: string
-  bestFor: string
-  priceTier: 'luxury' | 'premium' | 'mid-range' | 'budget'
+/**
+ * Flexible Product Comparison Table Component
+ *
+ * Works with ANY product type by accepting dynamic comparison rows.
+ * Each product review defines which fields matter for their category.
+ *
+ * Usage:
+ *   <ProductComparisonTable
+ *     title="Compare Dutch Ovens"
+ *     products={[...]}  // Array of products with any fields
+ *     comparisonRows={[...]}  // Which fields to show and their labels
+ *     highlightedProduct="Le Creuset 7.25 Qt"
+ *   />
+ */
+
+interface ComparisonRow {
+  label: string  // Display label (e.g., "Capacity", "Weight")
+  field: string  // Product property key (e.g., "capacity", "weight")
+  format?: string  // Optional format hint: 'stars', 'proUse', 'priceTier'
 }
 
 interface ProductComparisonTableProps {
-  products: ComparisonProduct[]
-  highlightedProduct: string // Product name to highlight
+  title?: string  // Table title (default: "Compare Products")
+  subtitle?: string  // Table subtitle
+  products: Record<string, any>[]  // Array of products (any shape)
+  comparisonRows: ComparisonRow[]  // Which fields to compare
+  highlightedProduct: string  // Product name to highlight
+  trustMessage?: string  // Custom trust message at bottom
 }
 
 export default function ProductComparisonTable({
+  title = "Compare Products",
+  subtitle,
   products,
-  highlightedProduct
+  comparisonRows,
+  highlightedProduct,
+  trustMessage
 }: ProductComparisonTableProps) {
 
-  const renderStars = (rating: number) => {
-    return '⭐'.repeat(rating)
-  }
-
-  const renderProUseIcon = (status: string) => {
-    switch(status) {
-      case 'standard': return '✅ Standard'
-      case 'some': return '✅ Some'
-      case 'limited': return '⚠️ Limited'
-      case 'home-only': return '⚠️ Home Only'
-      default: return status
-    }
-  }
-
+  // Helper to get price tier label
   const getPriceTierLabel = (tier: string) => {
     switch(tier) {
       case 'luxury': return 'Luxury'
@@ -51,15 +50,45 @@ export default function ProductComparisonTable({
     }
   }
 
+  // Helper to render cell value
+  const renderCellValue = (product: Record<string, any>, row: ComparisonRow) => {
+    const value = product[row.field]
+
+    // Use format hint if provided
+    if (row.format === 'stars' && typeof value === 'number') {
+      return '⭐'.repeat(value)
+    }
+
+    if (row.format === 'proUse') {
+      switch(value) {
+        case 'standard': return '✅ Standard'
+        case 'some': return '✅ Some'
+        case 'limited': return '⚠️ Limited'
+        case 'home-only': return '⚠️ Home Only'
+        default: return value
+      }
+    }
+
+    // Special handling for priceTier
+    if (row.field === 'priceTier' || row.format === 'priceTier') {
+      return getPriceTierLabel(value)
+    }
+
+    // Default: just display the value
+    return value
+  }
+
   return (
     <div className="bg-white rounded-xl shadow-lg p-6 my-8">
       <h2 className="text-2xl font-bold mb-4 text-slate-900">
-        Compare Professional Blenders
+        {title}
       </h2>
 
-      <p className="text-slate-600 mb-6">
-        See how the Vitamix 5200 stacks up against top competitors
-      </p>
+      {subtitle && (
+        <p className="text-slate-600 mb-6">
+          {subtitle}
+        </p>
+      )}
 
       {/* Desktop Table */}
       <div className="hidden lg:block overflow-x-auto">
@@ -87,221 +116,30 @@ export default function ProductComparisonTable({
           </thead>
 
           <tbody>
-            {/* Motor Power */}
-            <tr className="border-b border-gray-200 hover:bg-gray-50">
-              <td className="p-2 font-semibold text-slate-700 bg-gray-50 sticky left-0 text-xs">
-                Motor Power
-              </td>
-              {products.map((product, index) => (
-                <td
-                  key={index}
-                  className={`px-1 py-2 text-center text-xs ${
-                    product.name === highlightedProduct
-                      ? 'bg-orange-50 border-l-2 border-r-2 border-orange-600 font-semibold'
-                      : ''
-                  }`}
-                >
-                  {product.motorPower}
+            {/* Dynamic comparison rows */}
+            {comparisonRows.map((row, rowIndex) => (
+              <tr key={rowIndex} className="border-b border-gray-200 hover:bg-gray-50">
+                <td className="p-2 font-semibold text-slate-700 bg-gray-50 sticky left-0 text-xs">
+                  {row.label}
                 </td>
-              ))}
-            </tr>
-
-            {/* Capacity */}
-            <tr className="border-b border-gray-200 hover:bg-gray-50">
-              <td className="p-2 font-semibold text-slate-700 bg-gray-50 sticky left-0 text-xs">
-                Container Size
-              </td>
-              {products.map((product, index) => (
-                <td
-                  key={index}
-                  className={`px-1 py-2 text-center text-xs ${
-                    product.name === highlightedProduct
-                      ? 'bg-orange-50 border-l-2 border-r-2 border-orange-600 font-semibold'
-                      : ''
-                  }`}
-                >
-                  {product.capacity}
-                </td>
-              ))}
-            </tr>
-
-            {/* Performance */}
-            <tr className="border-b border-gray-200 hover:bg-gray-50">
-              <td className="p-2 font-semibold text-slate-700 bg-gray-50 sticky left-0 text-xs">
-                Performance
-              </td>
-              {products.map((product, index) => (
-                <td
-                  key={index}
-                  className={`p-2 text-center ${
-                    product.name === highlightedProduct
-                      ? 'bg-orange-50 border-l-2 border-r-2 border-orange-600'
-                      : ''
-                  }`}
-                >
-                  <div className="text-lg">
-                    {renderStars(product.performance)}
-                  </div>
-                </td>
-              ))}
-            </tr>
-
-            {/* Durability */}
-            <tr className="border-b border-gray-200 hover:bg-gray-50">
-              <td className="p-2 font-semibold text-slate-700 bg-gray-50 sticky left-0 text-xs">
-                Expected Lifespan
-              </td>
-              {products.map((product, index) => (
-                <td
-                  key={index}
-                  className={`px-1 py-2 text-center text-xs ${
-                    product.name === highlightedProduct
-                      ? 'bg-orange-50 border-l-2 border-r-2 border-orange-600 font-semibold'
-                      : ''
-                  }`}
-                >
-                  {product.durability}
-                </td>
-              ))}
-            </tr>
-
-            {/* Warranty */}
-            <tr className="border-b border-gray-200 hover:bg-gray-50">
-              <td className="p-2 font-semibold text-slate-700 bg-gray-50 sticky left-0 text-xs">
-                Warranty
-              </td>
-              {products.map((product, index) => (
-                <td
-                  key={index}
-                  className={`px-1 py-2 text-center text-xs ${
-                    product.name === highlightedProduct
-                      ? 'bg-orange-50 border-l-2 border-r-2 border-orange-600 font-semibold'
-                      : ''
-                  }`}
-                >
-                  {product.warranty}
-                </td>
-              ))}
-            </tr>
-
-            {/* Professional Use */}
-            <tr className="border-b border-gray-200 hover:bg-gray-50">
-              <td className="p-2 font-semibold text-slate-700 bg-gray-50 sticky left-0 text-xs">
-                Pro Kitchen Use
-              </td>
-              {products.map((product, index) => (
-                <td
-                  key={index}
-                  className={`px-1 py-2 text-center text-xs ${
-                    product.name === highlightedProduct
-                      ? 'bg-orange-50 border-l-2 border-r-2 border-orange-600'
-                      : ''
-                  }`}
-                >
-                  {renderProUseIcon(product.proUse)}
-                </td>
-              ))}
-            </tr>
-
-            {/* Controls */}
-            <tr className="border-b border-gray-200 hover:bg-gray-50">
-              <td className="p-2 font-semibold text-slate-700 bg-gray-50 sticky left-0 text-xs">
-                Controls
-              </td>
-              {products.map((product, index) => (
-                <td
-                  key={index}
-                  className={`px-1 py-2 text-center text-xs ${
-                    product.name === highlightedProduct
-                      ? 'bg-orange-50 border-l-2 border-r-2 border-orange-600'
-                      : ''
-                  }`}
-                >
-                  {product.controls}
-                </td>
-              ))}
-            </tr>
-
-            {/* Height */}
-            <tr className="border-b border-gray-200 hover:bg-gray-50">
-              <td className="p-2 font-semibold text-slate-700 bg-gray-50 sticky left-0 text-xs">
-                Height
-              </td>
-              {products.map((product, index) => (
-                <td
-                  key={index}
-                  className={`px-1 py-2 text-center text-xs ${
-                    product.name === highlightedProduct
-                      ? 'bg-orange-50 border-l-2 border-r-2 border-orange-600'
-                      : ''
-                  }`}
-                >
-                  {product.height}
-                </td>
-              ))}
-            </tr>
-
-            {/* Made In */}
-            <tr className="border-b border-gray-200 hover:bg-gray-50">
-              <td className="p-2 font-semibold text-slate-700 bg-gray-50 sticky left-0 text-xs">
-                Made In
-              </td>
-              {products.map((product, index) => (
-                <td
-                  key={index}
-                  className={`px-1 py-2 text-center text-xs ${
-                    product.name === highlightedProduct
-                      ? 'bg-orange-50 border-l-2 border-r-2 border-orange-600'
-                      : ''
-                  }`}
-                >
-                  {product.madeIn}
-                </td>
-              ))}
-            </tr>
-
-            {/* Best For */}
-            <tr className="border-b border-gray-200 hover:bg-gray-50">
-              <td className="p-2 font-semibold text-slate-700 bg-gray-50 sticky left-0 text-xs">
-                Best For
-              </td>
-              {products.map((product, index) => (
-                <td
-                  key={index}
-                  className={`px-1 py-2 text-center text-xs ${
-                    product.name === highlightedProduct
-                      ? 'bg-orange-50 border-l-2 border-r-2 border-orange-600'
-                      : ''
-                  }`}
-                >
-                  {product.bestFor}
-                </td>
-              ))}
-            </tr>
-
-            {/* Price Tier */}
-            <tr className="border-b border-gray-200 hover:bg-gray-50">
-              <td className="p-2 font-semibold text-slate-700 bg-gray-50 sticky left-0 text-xs">
-                Price Tier
-              </td>
-              {products.map((product, index) => (
-                <td
-                  key={index}
-                  className={`px-1 py-2 text-center text-xs ${
-                    product.name === highlightedProduct
-                      ? 'bg-orange-50 border-l-2 border-r-2 border-orange-600'
-                      : ''
-                  }`}
-                >
-                  {getPriceTierLabel(product.priceTier)}
-                </td>
-              ))}
-            </tr>
+                {products.map((product, productIndex) => (
+                  <td
+                    key={productIndex}
+                    className={`px-1 py-2 text-center text-xs ${
+                      product.name === highlightedProduct
+                        ? 'bg-orange-50 border-l-2 border-r-2 border-orange-600 font-semibold'
+                        : ''
+                    }`}
+                  >
+                    {renderCellValue(product, row)}
+                  </td>
+                ))}
+              </tr>
+            ))}
 
             {/* CTA Row */}
             <tr className="bg-gray-50">
               <td className="p-2 font-semibold text-slate-700 sticky left-0 text-xs">
-
               </td>
               {products.map((product, index) => (
                 <td
@@ -353,45 +191,14 @@ export default function ProductComparisonTable({
             </div>
 
             <div className="space-y-3 mb-4">
-              <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                <span className="text-sm font-semibold text-slate-700">Motor Power:</span>
-                <span className="text-sm text-slate-900">{product.motorPower}</span>
-              </div>
-
-              <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                <span className="text-sm font-semibold text-slate-700">Capacity:</span>
-                <span className="text-sm text-slate-900">{product.capacity}</span>
-              </div>
-
-              <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                <span className="text-sm font-semibold text-slate-700">Performance:</span>
-                <span className="text-lg">{renderStars(product.performance)}</span>
-              </div>
-
-              <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                <span className="text-sm font-semibold text-slate-700">Lifespan:</span>
-                <span className="text-sm text-slate-900">{product.durability}</span>
-              </div>
-
-              <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                <span className="text-sm font-semibold text-slate-700">Warranty:</span>
-                <span className="text-sm text-slate-900">{product.warranty}</span>
-              </div>
-
-              <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                <span className="text-sm font-semibold text-slate-700">Pro Use:</span>
-                <span className="text-sm">{renderProUseIcon(product.proUse)}</span>
-              </div>
-
-              <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                <span className="text-sm font-semibold text-slate-700">Best For:</span>
-                <span className="text-sm text-slate-900 text-right">{product.bestFor}</span>
-              </div>
-
-              <div className="flex justify-between items-center py-2">
-                <span className="text-sm font-semibold text-slate-700">Price Tier:</span>
-                <span className="text-sm text-slate-900">{getPriceTierLabel(product.priceTier)}</span>
-              </div>
+              {comparisonRows.map((row, rowIndex) => (
+                <div key={rowIndex} className="flex justify-between items-center py-2 border-b border-gray-200">
+                  <span className="text-sm font-semibold text-slate-700">{row.label}:</span>
+                  <span className="text-sm text-slate-900 text-right">
+                    {renderCellValue(product, row)}
+                  </span>
+                </div>
+              ))}
             </div>
 
             <a
@@ -413,8 +220,7 @@ export default function ProductComparisonTable({
       <div className="mt-6 p-4 bg-blue-50 rounded-lg text-sm text-slate-700">
         <p className="font-semibold mb-2">Why Trust This Comparison?</p>
         <p>
-          This comparison is based on 24 years of professional kitchen experience testing blenders in high-volume restaurant settings.
-          All recommendations are honest assessments - we earn a small commission if you purchase through our links.
+          {trustMessage || 'This comparison is based on 24 years of professional kitchen experience testing equipment in high-volume restaurant settings. All recommendations are honest assessments - we earn a small commission if you purchase through our links.'}
         </p>
       </div>
     </div>

@@ -246,7 +246,10 @@ export default async function ProductReview() {
 
           {/* SECTION 4: BLENDER COMPARISON TABLE */}
           <ProductComparisonTable
+            title={blenderComparisonData.title}
+            subtitle={blenderComparisonData.subtitle}
             products={blenderComparisonData.products}
+            comparisonRows={blenderComparisonData.comparisonRows}
             highlightedProduct={blenderComparisonData.highlightedProduct}
           />
 

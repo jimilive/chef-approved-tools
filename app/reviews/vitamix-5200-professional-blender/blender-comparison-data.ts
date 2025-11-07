@@ -85,6 +85,21 @@ export const blenderComparisonData = {
   title: 'Compare Professional Blenders',
   subtitle: 'See how the Vitamix 5200 stacks up against top competitors',
 
+  // Define which fields to compare and their display labels
+  comparisonRows: [
+    { label: 'Motor Power', field: 'motorPower' },
+    { label: 'Container Size', field: 'capacity' },
+    { label: 'Performance', field: 'performance', format: 'stars' },
+    { label: 'Expected Lifespan', field: 'durability' },
+    { label: 'Warranty', field: 'warranty' },
+    { label: 'Pro Kitchen Use', field: 'proUse', format: 'proUse' },
+    { label: 'Controls', field: 'controls' },
+    { label: 'Height', field: 'height' },
+    { label: 'Made In', field: 'madeIn' },
+    { label: 'Best For', field: 'bestFor' },
+    { label: 'Price Tier', field: 'priceTier', format: 'priceTier' },
+  ],
+
   // Research notes
   researchNotes: {
     date: 'November 4, 2025',

@@ -17,9 +17,11 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 // Import review data
 import { reviewData } from './le-creuset-signature-7-25-qt-dutch-oven-data'
+import { dutchOvenComparisonData } from './dutch-oven-comparison-data'
 
 // Use ISR for better performance - revalidate every hour for price changes
 export const revalidate = 3600 // 1 hour in seconds
@@ -265,6 +267,15 @@ export default async function LeCreusetDutchOvenReviewPage() {
             considerAlternativesTitle={reviewData.whoShouldBuy.considerAlternativesTitle}
             perfectFor={reviewData.whoShouldBuy.perfectFor}
             considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
+          />
+
+          {/* SECTION 5.5: COMPARISON TABLE */}
+          <ProductComparisonTable
+            title={dutchOvenComparisonData.title}
+            subtitle={dutchOvenComparisonData.subtitle}
+            products={dutchOvenComparisonData.products}
+            comparisonRows={dutchOvenComparisonData.comparisonRows}
+            highlightedProduct={dutchOvenComparisonData.highlightedProduct}
           />
 
           {/* SECTION 6: FAQ */}
