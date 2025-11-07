@@ -308,6 +308,58 @@ const nextConfig = {
         permanent: true,
       },
 
+      // SEO Cannibalization Fixes - Merged Content Redirects
+      {
+        source: '/blog/professional-knife-grip-techniques',
+        destination: '/blog/knife-skills-how-to-hold-chef-knife',
+        permanent: true,
+      },
+      {
+        source: '/blog/deglazing-secret-to-restaurant-quality-flavor',
+        destination: '/blog/deglazing-pan-sauces',
+        permanent: true,
+      },
+      {
+        source: '/blog/kitchen-thermometer-guide',
+        destination: '/blog/kitchen-thermometers-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/cast-iron-mistakes-ruin-pan',
+        destination: '/blog/cast-iron-seasoning-care',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-season-cast-iron-like-restaurant-chef',
+        destination: '/blog/cast-iron-seasoning-care',
+        permanent: true,
+      },
+      {
+        source: '/blog/knife-mistakes-home-cooks-make',
+        destination: '/blog/knife-safety-rules-professional-kitchens',
+        permanent: true,
+      },
+      {
+        source: '/blog/knife-safety-protect-fingers',
+        destination: '/blog/knife-safety-rules-professional-kitchens',
+        permanent: true,
+      },
+      {
+        source: '/blog/knife-cuts-guide',
+        destination: '/blog/essential-knife-cuts-every-cook-should-master',
+        permanent: true,
+      },
+      {
+        source: '/blog/knife-block-vs-magnetic-strip-vs-drawer-storage',
+        destination: '/blog/knife-storage-protecting-blades-for-decades',
+        permanent: true,
+      },
+      {
+        source: '/blog/roasting-vegetables-restaurant-guide',
+        destination: '/blog/vegetable-roasting-guide',
+        permanent: true,
+      },
+
     ]
   },
   
