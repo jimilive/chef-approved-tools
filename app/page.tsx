@@ -2,6 +2,48 @@ import { Suspense } from 'react'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Professional Chef Reviews Kitchen Tools | 24 Years Experience',
+  description: 'Expert kitchen equipment reviews by Scott Bradley, former Mellow Mushroom Kitchen Manager. Honest, tested recommendations for chef knives, cookware, and appliances. No affiliate pressure—just tools that work.',
+  keywords: [
+    'chef approved kitchen tools',
+    'professional kitchen equipment',
+    'restaurant quality tools',
+    'Scott Bradley chef reviews',
+    'kitchen manager recommendations',
+    'tested chef knives',
+    'commercial cookware reviews',
+    'professional grade appliances'
+  ],
+  openGraph: {
+    title: 'Chef Approved Tools | Professional Reviews & Recommendations',
+    description: '24 years of professional kitchen experience. Honest reviews of chef knives, cookware, and appliances tested in real restaurants. No affiliate pressure.',
+    url: 'https://www.chefapprovedtools.com',
+    siteName: 'Chef Approved Tools',
+    images: [
+      {
+        url: 'https://www.chefapprovedtools.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Scott Bradley - Professional Chef with 24 years experience reviewing kitchen equipment'
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Chef Approved Kitchen Tools | 24 Years Restaurant Experience',
+    description: 'Professional kitchen equipment reviews by Scott Bradley. Real tools tested in real kitchens. Honest recommendations you can trust.',
+    images: ['https://www.chefapprovedtools.com/twitter-image.jpg'],
+    creator: '@chefapprovedtools',
+  },
+  alternates: {
+    canonical: 'https://www.chefapprovedtools.com'
+  }
+}
 
 // Dynamic import below-fold sections for better performance (server-side compatible)
 const EmailCaptureSection = dynamic(() => import('@/components/home/EmailCaptureSection'))
