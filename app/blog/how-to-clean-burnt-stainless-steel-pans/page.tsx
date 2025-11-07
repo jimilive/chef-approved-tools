@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'How to Clean Burnt Stainless Steel Pans',
-  description: 'Professional chef explains how to clean burnt stainless steel cookware using safe, effective methods — no harsh scrubbing or damage.',
+  title: 'How to Clean Burnt Stainless Steel Pans (Without Scrubbing)',
+  description: 'Safe, effective methods from 24 years in professional kitchens. Restore burnt stainless steel cookware without damage or harsh scrubbing.',
   keywords: ['clean burnt stainless steel pan', 'restore stainless steel cookware', 'remove burnt residue', 'baking soda pan cleaning', 'bar keepers friend stainless steel'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-clean-burnt-stainless-steel-pans',

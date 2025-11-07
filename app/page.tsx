@@ -5,8 +5,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Professional Chef Reviews Kitchen Tools | 24 Years Experience',
-  description: 'Expert kitchen equipment reviews by Scott Bradley, former Mellow Mushroom Kitchen Manager. Honest, tested recommendations for chef knives, cookware, and appliances. No affiliate pressure—just tools that work.',
+  title: 'Kitchen Tools That Actually Work | 24 Years Restaurant Tested',
+  description: 'Real equipment reviews from a chef who\'s used everything—from Purple Café line cook to Mellow Mushroom Kitchen Manager. No BS, just tools that work.',
   keywords: [
     'chef approved kitchen tools',
     'professional kitchen equipment',

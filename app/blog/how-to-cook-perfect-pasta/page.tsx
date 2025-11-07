@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplet, Timer, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "How to Cook Perfect Pasta: Professional Technique",
-  description: "Master pasta cooking from a professional chef with 24 years of restaurant experience. Learn proper water ratios, timing, salt levels, and the secret to restaurant-quality pasta at home.",
+  title: "Why Your Pasta Never Tastes Like Restaurant Pasta",
+  description: "Water ratios, salt levels, timing—the professional technique that creates restaurant-quality pasta. 24 years of restaurant experience.",
   keywords: ["how to cook pasta", "perfect pasta", "al dente pasta", "cooking pasta", "pasta water", "how much salt for pasta", "pasta technique"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-cook-perfect-pasta'

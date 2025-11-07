@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Sparkles, Flame, Lightbulb } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Complete Guide to Salts: Types, Uses & When to Use Each",
-  description: "Master salt with pro techniques. Learn differences between kosher, sea, table, and finishing salts—from a chef with 24 years experience.",
+  title: "Why Professional Chefs Only Keep 2 Types of Salt",
+  description: "After 24 years in kitchens, I only use kosher and finishing salt. Here\'s why—and when you actually need each one.",
   keywords: ["types of salt", "kosher salt vs sea salt", "cooking with salt", "best salt for cooking", "Diamond Crystal", "Morton kosher salt", "finishing salt guide"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/complete-guide-to-salts'

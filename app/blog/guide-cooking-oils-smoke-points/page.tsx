@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Droplets, Lightbulb } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Guide to Cooking Oils & Smoke Points: Which Oil for What",
-  description: "Master cooking oils with pro techniques. Learn smoke points, best uses, and which oils to use for searing, sautéing, frying, and finishing.",
+  title: "Which Cooking Oil When? Smoke Points Explained",
+  description: "Searing, sautéing, frying, finishing—which oil matters for each. Professional guide to smoke points and actual uses from 24 years.",
   keywords: ["cooking oils guide", "smoke points", "best oil for frying", "best oil for searing", "olive oil vs vegetable oil", "cooking oil types", "professional cooking fats"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/guide-cooking-oils-smoke-points'

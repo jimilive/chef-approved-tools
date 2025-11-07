@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata: Metadata = {
-  title: 'Hotel Pan System: Restaurant Organization for Home',
-  description: 'After 24 years in professional kitchens and 20 years using hotel pans at home, discover why this restaurant system eliminates Tupperware chaos forever.',
+  title: 'Why I Ditched Tupperware for Restaurant Hotel Pans',
+  description: '20 years of hotel pans at home. This restaurant storage system eliminates Tupperware chaos forever. Here\'s why every kitchen needs it.',
   keywords: ['hotel pan system', 'restaurant food storage', 'kitchen organization', 'meal prep containers', 'NSF approved containers', 'Curta hotel pans', 'Cambro alternative'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/hotel-pan-system-restaurant-organization-home',

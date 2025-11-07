@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Dutch Oven Size Guide: Which Quart Size Do You Need?',
-  description: 'A professional chef\'s guide to choosing the right Dutch oven size for soups, bread, braises, and everyday cooking. Learn what size fits your kitchen best.',
+  title: 'What Size Dutch Oven? 5.5-Qt vs 7-Qt Explained',
+  description: 'Most home cooks need 5.5 or 7 quarts. Here\'s how to choose based on family size and what you actually cook—from 24 years of experience.',
   keywords: ['dutch oven size guide', 'best dutch oven size', 'le creuset size chart', '5 quart dutch oven', '7 quart dutch oven', 'cooking capacity', 'dutch oven buying guide'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/dutch-oven-size-guide-which-quart-size',

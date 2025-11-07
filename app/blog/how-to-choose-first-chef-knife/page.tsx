@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'How to Choose Your First Chef Knife (Like a Pro)',
-  description: 'Learn how to choose your first chef knife from a professional chef. Understand balance, steel type, blade length, and why comfort matters more than price.',
+  title: 'How to Choose Your First Chef Knife (Avoid These Mistakes)',
+  description: 'Balance, steel type, blade length—what actually matters for your first knife. Why comfort beats price from 24 years of professional experience.',
   keywords: ['how to choose a chef knife', 'best chef knife for beginners', 'chef knife buying guide', 'kitchen knife selection', 'chef knife balance', 'professional knife advice'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-choose-first-chef-knife',

@@ -8,8 +8,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata: Metadata = {
-  title: 'How to Steel a Knife: Professional Honing',
-  description: 'How to steel a knife: Professional honing technique. Honing vs sharpening explained. Perfect angle, pressure. Chef guide to knife maintenance.',
+  title: 'How to Steel a Knife (Most People Do It Wrong)',
+  description: 'Professional honing technique: angle, pressure, and why it\'s not sharpening. Chef guide to proper knife maintenance from 24 years.',
   keywords: ['how to steel a knife', 'knife honing', 'honing steel', 'knife sharpening', 'honing vs sharpening', 'chef knife care', 'knife maintenance', 'professional knife technique'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-steel-a-knife',

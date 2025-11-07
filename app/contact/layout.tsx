@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact Professional Chef | Kitchen Equipment Questions',
-  description: 'Have questions about professional kitchen equipment? Contact Scott Bradley, former Mellow Mushroom Kitchen Manager with 24 years experience. Expert advice on chef knives, cookware, and appliances.',
+  title: 'Contact Chef Approved Tools | Questions & Feedback',
+  description: 'Have a question about kitchen equipment? Want to suggest a review? I read every message and respond personally.',
   keywords: [
     'contact professional chef',
     'kitchen equipment advice',

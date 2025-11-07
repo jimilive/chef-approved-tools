@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Carbon Footprint of Kitchen Equipment: Buy Once, Cry Once',
-  description: 'Professional chef explains how quality kitchen equipment reduces waste and carbon footprint — why durability is the real sustainability in the kitchen.',
+  title: 'Why Cheap Kitchen Tools Are Worse for the Environment',
+  description: 'Durability is sustainability. Quality equipment lasts decades vs. cheap tools in landfills every 2 years. Buy once, cry once.',
   keywords: ['sustainable kitchen equipment', 'buy once cry once', 'kitchen carbon footprint', 'durable cookware', 'eco-friendly kitchen tools', 'sustainable cooking'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once',

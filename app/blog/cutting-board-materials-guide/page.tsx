@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Which Cutting Board To Use? Advantages of Various Materials',
-  description: 'Chef Scott Bradley explains the pros and cons of wood, plastic, rubber, and bamboo cutting boards — and which are best for your knives and kitchen.',
+  title: 'Wood vs Plastic Cutting Boards: What Restaurants Use',
+  description: 'After cutting on everything for 24 years, here\'s what actually matters for your knives and food safety—wood, plastic, bamboo.',
   keywords: ['cutting board guide', 'best cutting board', 'wood vs plastic board', 'end-grain cutting board', 'knife edge protection'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/cutting-board-materials-guide',

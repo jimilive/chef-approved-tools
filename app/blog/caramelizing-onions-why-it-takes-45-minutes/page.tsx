@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Caramelizing Onions: Why It Takes 45 Minutes (Not 10)',
-  description: 'Professional chef explains the real process of caramelizing onions — why patience, temperature, and technique matter more than shortcuts.',
+  title: 'Why "10-Minute Caramelized Onions" Is A Lie',
+  description: 'Real caramelization takes 45 minutes. Here\'s why rushing it fails—and why the chemistry requires patience and proper heat.',
   keywords: ['caramelized onions', 'why onions take long', 'how to caramelize onions', 'onion cooking tips', 'caramelization science', 'professional cooking techniques', 'maillard reaction'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/caramelizing-onions-why-it-takes-45-minutes',

@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Scissors, Leaf, Droplet, AlertTriangle, Lightbulb, Flame, Snowflake } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "How to Cut & Store Fresh Herbs - Professional Chef's Guide | Chef Approved Tools",
-  description: "Master professional techniques for cutting, storing, and preserving fresh herbs. Learn why technique matters and how to keep herbs fresh for days.",
+  title: "Why Your Fresh Herbs Die in 2 Days (And Mine Don't)",
+  description: "Professional cutting and storage techniques that keep herbs fresh for a week. The methods restaurants use for prep efficiency.",
   keywords: ["cutting fresh herbs", "storing herbs", "herb storage", "fresh basil storage", "how to store cilantro", "keeping herbs fresh", "herb cutting techniques"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/cutting-storing-fresh-herbs'

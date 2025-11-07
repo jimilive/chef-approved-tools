@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Sharpen with Tri-Stone: Step-by-Step Pro',
-  description: 'Sharpen knives with tri-stone: 6-year restaurant technique. Step-by-step angles, pressure, progression guide. Professional results at home. Norton IM200 test.',
+  title: 'How to Sharpen Knives with Tri-Stone (Restaurant Method)',
+  description: 'Step-by-step tri-stone technique perfected over 6 years in restaurants. Angles, pressure, progression for professional results at home.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-sharpen-with-tri-stone',
   },

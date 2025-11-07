@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplets, Thermometer, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Kitchen Hydration Guide - Chef's Health & Performance Tips | Chef Approved Tools",
-  description: "Learn how professional chefs stay hydrated during long shifts and why proper water intake matters for home cooks. Science-backed hydration strategies for the kitchen.",
+  title: "How Restaurant Chefs Stay Hydrated During 12-Hour Shifts",
+  description: "Hydration strategies from 24 years in professional kitchens. Why water intake matters for performance and how chefs handle long shifts.",
   keywords: ["hydration for cooks", "kitchen hydration", "water intake", "chef health", "cooking hydration", "kitchen performance", "staying hydrated while cooking"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/hydration-health-water-intake'

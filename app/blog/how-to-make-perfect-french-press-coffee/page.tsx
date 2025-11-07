@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'French Press Coffee: Perfect Ratio & Method',
-  description: 'French press coffee perfected: 18 years usage experience. Perfect ratio, step-by-step technique, mistakes to avoid. Cafe-quality at home. Professional guide.',
+  title: 'French Press Coffee: The Ratio Everyone Gets Wrong',
+  description: 'After 18 years of daily French press: the perfect ratio, technique, and mistakes to avoid. Cafe-quality coffee at home.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-make-perfect-french-press-coffee',
   },
