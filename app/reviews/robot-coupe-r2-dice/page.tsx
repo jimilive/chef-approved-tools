@@ -90,7 +90,7 @@ export default async function RobotCoupeR2DiceReview() {
   const breadcrumbs = [
     { name: "Home", url: "https://www.chefapprovedtools.com" },
     { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-    { name: "Food Processors", url: "https://www.chefapprovedtools.com/appliances" },
+    { name: "Appliances", url: "https://www.chefapprovedtools.com/appliances" },
     { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
   ]
 
