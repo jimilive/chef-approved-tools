@@ -4,6 +4,7 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import EmailCaptureSection from '@/components/review/EmailCaptureSection'
+import AuthorBio from '@/components/review/AuthorBio'
 import PriceDisplay from '@/components/PriceDisplay'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 
@@ -976,29 +977,7 @@ export default async function RobotCoupeR2DiceReview() {
           </div>
 
           {/* Author Bio Box */}
-          <div className="bg-white p-6 my-8 border border-gray-300 rounded-lg grid grid-cols-[100px_1fr] gap-5 items-start">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/team/head-shot-1.jpg"
-              alt="Scott Bradley, Professional Chef"
-              className="w-[100px] h-[100px] rounded-full object-cover"
-            />
-            <div>
-              <h3 className="m-0 mb-2.5">About Scott Bradley</h3>
-              <p className="my-1 font-bold">
-                Professional Chef • 45 Years Cooking Experience
-              </p>
-              <p className="my-2.5 text-sm leading-relaxed">
-                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience.
-                A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-                University of Montana. Equipment tested in high-volume commercial operations serving
-                hundreds daily.
-              </p>
-              <Link href="/about" className="text-blue-600 font-bold hover:underline">
-                Read more about my testing methodology →
-              </Link>
-            </div>
-          </div>
+          <AuthorBio />
         </section>
 
         {/* Structured Data */}

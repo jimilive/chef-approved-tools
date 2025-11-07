@@ -7,6 +7,7 @@ import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import EmailCaptureSection from '@/components/review/EmailCaptureSection'
+import AuthorBio from '@/components/review/AuthorBio'
 import { reviewData } from './oxo-good-grips-swivel-peeler-data'
 
 // ISR configuration - revalidate every hour
@@ -535,6 +536,9 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
 
         {/* EMAIL CAPTURE */}
         <EmailCaptureSection />
+
+        {/* AUTHOR BIO */}
+        <AuthorBio />
 
         {/* Structured Data Schemas */}
         <script

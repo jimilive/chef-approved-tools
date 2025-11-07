@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Commercial Kitchen Appliances 2025: Guide',
@@ -263,6 +264,9 @@ export default function KitchenAppliancesPage() {
             </ul>
           </div>
         </section>
+
+        {/* Author Bio */}
+        <AuthorBio />
 
         <nav className="mt-12 pt-8 border-t border-gray-200">
           <CTAVisibilityTracker ctaId="guide-kitchen-appliances-back-to-guides"

@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { DollarSign, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
+import AuthorBio from '@/components/review/AuthorBio';
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers';
 
 // Force dynamic rendering since we fetch from Supabase
@@ -726,15 +727,7 @@ export default async function AffordableKitchenAppliancesPage() {
         </div>
 
         {/* Author Bio */}
-        <section className="bg-slate-50 p-6 rounded-xl border border-slate-200">
-          <p className="font-semibold text-slate-900 mb-2">Scott Bradley | Professional Chef • 45 Years Cooking Experience</p>
-          <p className="text-slate-700 text-sm mb-3">
-            Former Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom. 24 years restaurant experience testing equipment under real commercial conditions. All recommendations based on hands-on testing—if I haven&apos;t used it, I won&apos;t recommend it.
-          </p>
-          <p className="text-slate-600 text-xs">
-            <em>Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</em>
-          </p>
-        </section>
+        <AuthorBio />
       </article>
     </div>
   );

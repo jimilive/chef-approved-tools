@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Cookware Materials: Chef\'s Metal Comparison',
@@ -164,6 +165,9 @@ export default function CookwareMaterialsPage() {
             </div>
           </div>
         </section>
+
+        {/* Author Bio */}
+        <AuthorBio />
 
         <nav className="mt-12 pt-8 border-t border-gray-200">
           <CTAVisibilityTracker

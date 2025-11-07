@@ -17,6 +17,7 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
+import AuthorBio from '@/components/review/AuthorBio'
 
 // Import review data
 import { reviewData } from './small-metal-hotel-pans-data'
@@ -346,6 +347,9 @@ export default async function ProductReview() {
           title={reviewData.relatedProducts.title}
           products={reviewData.relatedProducts.products}
         />
+
+        {/* AUTHOR BIO */}
+        <AuthorBio />
 
       </article>
 

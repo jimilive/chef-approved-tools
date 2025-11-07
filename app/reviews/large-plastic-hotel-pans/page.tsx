@@ -16,6 +16,7 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
+import AuthorBio from '@/components/review/AuthorBio'
 
 // Import review data
 import { reviewData } from './large-plastic-hotel-pans-data'
@@ -356,67 +357,7 @@ export default async function LargePlasticHotelPansReview() {
           />
 
           {/* SECTION 11: AUTHOR BIO */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-8">
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6 pb-6 border-b border-gray-200">
-                <div className="w-20 h-20 bg-gradient-to-br from-orange-600 to-amber-500 rounded-full flex items-center justify-center text-[40px] flex-shrink-0">
-                  👨‍🍳
-                </div>
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-xl font-bold text-slate-900 mb-2 mt-0">About Scott Bradley</h3>
-                  <p className="text-base text-slate-600 m-0">Professional Chef • 24 Years in Professional Kitchens</p>
-                </div>
-              </div>
-
-              <div className="text-slate-600 leading-[1.8]">
-                <p className="mb-4">
-                  <strong>Scott Bradley brings 24 years of professional kitchen experience to Chef Approved Tools.</strong> His background includes roles at Purple Café (Pizzaiolo), Mellow Mushroom (Kitchen Manager), Il Pizzaiolo (Kitchen Manager), and Feierabend (Line Lead), giving him hands-on experience with equipment across different cuisines and volume levels.
-                </p>
-
-                <p className="mb-4">
-                  Scott holds an A.A.S. in Culinary Arts from Seattle Central College and a B.S. in Business Administration from the University of Montana. He&apos;s used large plastic hotel pans for 20 years in both professional and home kitchens, making him uniquely qualified to assess their real-world performance for batch cooking and food storage.
-                </p>
-
-                <p className="mb-0">
-                  <strong>All reviews are based on actual professional testing</strong>—equipment used daily in restaurant environments or tested extensively in home settings. No free samples, no sponsored content, just honest assessments from someone who&apos;s spent decades relying on kitchen tools to do their job.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-6 border-t border-gray-200">
-                <div className="flex items-start gap-3 text-sm text-slate-600">
-                  <div className="text-xl flex-shrink-0">🎓</div>
-                  <div>
-                    <strong className="block text-slate-900 font-semibold mb-0.5">Culinary Degree</strong>
-                    Seattle Central College (2005-2007)
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3 text-sm text-slate-600">
-                  <div className="text-xl flex-shrink-0">👨‍🍳</div>
-                  <div>
-                    <strong className="block text-slate-900 font-semibold mb-0.5">Professional Experience</strong>
-                    24 years in professional kitchens
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3 text-sm text-slate-600">
-                  <div className="text-xl flex-shrink-0">🏆</div>
-                  <div>
-                    <strong className="block text-slate-900 font-semibold mb-0.5">Professional Roles</strong>
-                    Kitchen Manager, Pizzaiolo, Line Lead
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3 text-sm text-slate-600">
-                  <div className="text-xl flex-shrink-0">🔧</div>
-                  <div>
-                    <strong className="block text-slate-900 font-semibold mb-0.5">Testing Approach</strong>
-                    Tier 1: Professional use | Tier 2: Long-term personal | Tier 3: Expert evaluation
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <AuthorBio />
 
         </div>
       </div>
