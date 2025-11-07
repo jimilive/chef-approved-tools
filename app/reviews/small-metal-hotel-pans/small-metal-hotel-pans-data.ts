@@ -8,7 +8,7 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Small Metal Hotel Pans Review: Stainless Steel for Hot Holding & Oven Use',
+    title: 'Small Metal Hotel Pans: Stainless for Hot Holding & Oven',
     description: '24 years professional experience: Small metal hotel pans for BBQs, hot holding, oven roasting, and family gatherings. Essential for home hosting.',
     ogTitle: 'Small Metal Hotel Pans Review: Stainless Steel for Hot Holding',
     ogDescription: 'Professional chef review of small metal hotel pans for hosting, BBQs, and oven use.',

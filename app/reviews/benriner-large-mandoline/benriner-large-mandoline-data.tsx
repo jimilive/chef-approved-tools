@@ -6,7 +6,7 @@ export const reviewData = {
 
   // Metadata for SEO and OG images
   metadata: {
-    title: 'Benriner Mandoline: Pro Safety & Precision | Chef Approved Tools',
+    title: 'Benriner Mandoline: Pro Safety & Precision',
     description: 'Professional chef tests Benriner mandoline after years of restaurant use. Complete review: precision slicing, safety features, durability analysis.',
     ogTitle: 'Benriner Mandoline: Professional Review',
     ogDescription: 'Professional chef tests Benriner mandoline after years of restaurant use',

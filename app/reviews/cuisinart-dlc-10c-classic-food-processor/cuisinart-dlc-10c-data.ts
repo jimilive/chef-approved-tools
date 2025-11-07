@@ -8,7 +8,7 @@ export const reviewData = {
   
   // Metadata
   metadata: {
-    title: 'Cuisinart DLC-10C: 30-Year Durability Test | Chef Approved Tools',
+    title: 'Cuisinart DLC-10C: 30-Year Durability Test',
     description: 'Cuisinart DLC-10C review: 30 years home use. Professional chef tests shredding, slicing, durability. Buy-it-for-life appliance.',
     ogTitle: 'Cuisinart DLC-10C Food Processor | 30 Years Daily Use',
     ogDescription: '30 years testing Cuisinart food processor at home. Chef reviews shredding, durability, longevity. Still running strong.',

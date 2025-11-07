@@ -8,7 +8,7 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Large Metal Hotel Pans Review: Commercial Hot Holding for Catering & Events',
+    title: 'Large Metal Hotel Pans: Commercial Hot Holding & Catering',
     description: '24 years professional kitchen experience: Large metal hotel pans for catering businesses, commercial kitchens, and large-scale event hosting.',
     ogTitle: 'Large Metal Hotel Pans Review: Commercial Hot Holding',
     ogDescription: 'Professional chef review of large metal hotel pans for catering and commercial operations.',

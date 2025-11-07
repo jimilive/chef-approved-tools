@@ -8,7 +8,7 @@ export const reviewData = {
   
   // Metadata
   metadata: {
-    title: 'Black+Decker Toaster Oven: 48-Year Review | Chef Approved Tools',
+    title: 'Black+Decker Toaster Oven: 48-Year Review',
     description: 'Black+Decker toaster oven review: 48 years across 4 models (1977-present). Professional chef tests durability and performance.',
     ogTitle: 'Black+Decker Toaster Oven Review | 48-Year Test',
     ogDescription: 'Black+Decker toaster oven review: 48 years across 4 models (1977-present). Professional chef tests durability and performance.',

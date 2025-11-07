@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 import FAQSchema from '@/components/FAQSchema'
 
 export const metadata: Metadata = {
-  title: 'The Tools That Started It All - My Culinary School Essentials | Chef Approved Tools',
+  title: 'Tools That Started It All: My Culinary School Essentials',
   description: 'The 11 essential kitchen tools I packed for culinary school in 2005 that I still use 20 years later. Professional-grade equipment that survived decades of restaurant abuse.',
   keywords: 'culinary school tools, professional kitchen equipment, Victorinox knives, essential kitchen tools, chef knife bag, restaurant kitchen tools',
   alternates: {

@@ -8,7 +8,7 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Large Plastic Hotel Pans Review: Full & 1/3 Pans for Serious Meal Prep',
+    title: 'Large Plastic Hotel Pans: Full & 1/3 for Meal Prep',
     description: '20 years professional experience: Large plastic hotel pans for batch cooking, party prep, and professional-level meal organization at home.',
     ogTitle: 'Large Plastic Hotel Pans Review: Full & 1/3 Pans for Batch Cooking',
     ogDescription: 'Professional chef review of large plastic hotel pans for serious meal prep and batch cooking.',

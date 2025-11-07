@@ -35,7 +35,7 @@ export const reviewData = {
 
   // Metadata
   metadata: {
-    title: "J.A. Henckels Sharpening Steel Review: 20 Years Professional Use",
+    title: "J.A. Henckels Sharpening Steel: 20 Years Pro Use",
     description: "Professional review of the J.A. Henckels sharpening steel after 20 years of daily use. Part of my required culinary school kit in 2005, still going strong today.",
     ogTitle: "J.A. Henckels Sharpening Steel: 20-Year Professional Review",
     ogDescription: "After 20 years of daily professional and home use, this steel is still the tool I reach for before every shift. Tier 1 testing from Seattle kitchens.",
