@@ -9,7 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Beaker, Lightbulb, FlaskConical } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Why Cooking Science Matters: Understanding Chemistry Makes You Better | Chef Approved Tools",
+  title: "Why Cooking Science Matters: Chemistry Makes You Better",
   description: "Learn why understanding cooking science transforms you from following recipes to mastering techniques. Professional insights from 24 years in restaurant kitchens.",
   keywords: ["cooking science", "why cooking science matters", "food chemistry", "culinary science", "professional cooking techniques", "understanding cooking", "maillard reaction", "emulsification"],
   alternates: {

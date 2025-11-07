@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Droplets, FlaskConical, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Cast Iron Seasoning & Care: The Complete Professional Guide | Chef Approved Tools",
-  description: "Learn the chemistry of cast iron seasoning, proper care techniques, and restoration methods from a chef with 24 years of professional experience. Make your cast iron last forever.",
+  title: "Cast Iron Seasoning & Care: Complete Pro Guide",
+  description: "Learn cast iron seasoning chemistry, proper care techniques, and restoration from a chef with 24 years experience. Make your cast iron last forever.",
   keywords: ["cast iron seasoning", "cast iron care", "how to season cast iron", "cast iron maintenance", "polymerization", "cast iron restoration", "cast iron cleaning"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/cast-iron-seasoning-care'

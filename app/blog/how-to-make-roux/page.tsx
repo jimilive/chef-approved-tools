@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, AlertTriangle, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "How to Make a Perfect Roux: Master This Essential Sauce Technique | Chef Approved Tools",
-  description: "Learn how to make a roux the right way—from white to blonde to dark. Master the technique that's the foundation of countless sauces, from béchamel to gumbo, with professional chef guidance.",
+  title: "How to Make Perfect Roux: Master This Sauce Technique",
+  description: "Learn how to make a roux the right way—from white to blonde to dark. Master the foundation technique for bechamel, gumbo, and gravy.",
   keywords: ["how to make a roux", "roux technique", "white roux", "blonde roux", "dark roux", "béchamel sauce", "gumbo roux", "sauce thickening"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-make-roux'

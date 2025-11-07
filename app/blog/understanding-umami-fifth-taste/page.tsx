@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplets, FlaskConical, Leaf, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Understanding Umami: The Fifth Taste That Makes Food Delicious | Chef Approved Tools",
-  description: "Learn what umami is, the science behind it, and how to use it to make food taste incredible. Includes natural sources, MSG facts, and professional techniques from 24 years in kitchens.",
+  title: "Understanding Umami: The Fifth Taste Makes Food Delicious",
+  description: "Learn what umami is, the science behind it, and how to use it to make food taste incredible. Natural sources, MSG facts, pro techniques from 24 years in kitchens.",
   keywords: ["umami", "fifth taste", "glutamate", "MSG", "savory flavor", "umami foods", "cooking with umami", "nucleotides", "umami bomb"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/understanding-umami-fifth-taste'

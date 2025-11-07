@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Target, Ruler, AlertTriangle, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Understanding Knife Cuts: Julienne, Brunoise, Chiffonade | Chef Approved Tools",
-  description: "Master classical knife cuts from a professional chef with 24 years of restaurant experience. Learn proper julienne, brunoise, chiffonade, and more—with techniques that actually work in real kitchens.",
+  title: "Knife Cuts Guide: Julienne, Brunoise, Chiffonade",
+  description: "Master classical knife cuts from a pro chef with 24 years restaurant experience. Learn julienne, brunoise, chiffonade, macedoine, paysanne with precision.",
   keywords: ["knife cuts", "julienne", "brunoise", "chiffonade", "knife skills", "knife techniques", "how to julienne", "how to brunoise", "classical knife cuts", "professional knife cuts"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/knife-cuts-guide'

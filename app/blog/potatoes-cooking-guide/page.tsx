@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Utensils, Info } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Complete Guide to Cooking Potatoes: Varieties, Methods & Pro Tips | Chef Approved Tools",
-  description: "Master potatoes with this complete guide from a professional chef. Learn which potato varieties work best for frying, roasting, mashing, and boiling—plus professional techniques.",
+  title: "Guide to Cooking Potatoes: Varieties, Methods & Tips",
+  description: "Master potatoes from a pro chef. Learn which varieties work best for specific cooking methods and how starch content affects texture and browning.",
   keywords: ["how to cook potatoes", "potato varieties", "best potatoes for mashing", "russet vs yukon gold", "roasting potatoes", "potato cooking methods", "professional potato techniques"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/potatoes-cooking-guide'

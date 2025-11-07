@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Sprout, Flame, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Benefits of Cooking with Garlic: Flavor, Health & Pro Techniques | Chef Approved Tools",
-  description: "Learn why garlic is essential in cooking—health benefits, flavor science, and professional techniques for using garlic properly. From a chef with 24 years of experience.",
+  title: "Benefits of Cooking with Garlic: Flavor, Health & Pro Tips",
+  description: "Learn why garlic is essential—health benefits, flavor science, and pro techniques for using garlic properly. From a chef with 24 years experience.",
   keywords: ["benefits of garlic", "cooking with garlic", "garlic health benefits", "how to cook garlic", "garlic techniques", "roasted garlic", "garlic flavor", "allicin benefits"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/benefits-cooking-with-garlic'

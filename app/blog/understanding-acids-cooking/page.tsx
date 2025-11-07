@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Citrus, Sparkles, Droplet } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Understanding Acids in Cooking: How to Balance Flavor Like a Pro | Chef Approved Tools",
-  description: "Learn how professional chefs use acids (lemon, vinegar, tomatoes) to brighten dishes and balance flavors. Master the technique that transforms good food into great food.",
+  title: "Understanding Acids in Cooking: Balance Flavor Like a Pro",
+  description: "Learn how pro chefs use acids (lemon, vinegar, tomatoes) to brighten dishes, balance richness, and create layered flavors. Master acid timing and applications.",
   keywords: ["acid in cooking", "cooking with acid", "how to balance flavors", "lemon juice cooking", "vinegar in cooking", "brightening flavors"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/understanding-acids-cooking'

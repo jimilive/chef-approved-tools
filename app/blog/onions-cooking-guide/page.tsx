@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Utensils, Info, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Complete Guide to Cooking Onions: Types, Techniques & Pro Tips | Chef Approved Tools",
-  description: "Master onions with this guide from a professional chef. Learn which onion varieties work best for different dishes, how to cut without crying, and professional cooking techniques.",
+  title: "Guide to Cooking Onions: Types, Techniques & Pro Tips",
+  description: "Master onions with this guide from a pro chef. Learn which varieties work best for caramelizing, sautéing, grilling, roasting, and proper storage techniques.",
   keywords: ["how to cook onions", "onion types", "caramelizing onions", "how to cut onions without crying", "yellow vs white vs red onions", "professional onion techniques", "onion cooking methods"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/onions-cooking-guide'

@@ -9,12 +9,12 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, ThermometerSun, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "The Maillard Reaction: Why Browning Equals Flavor | Chef Approved Tools",
-  description: "Learn the food science behind perfect browning from a chef with 24 years of professional kitchen experience. Master the Maillard reaction for restaurant-quality flavor at home.",
+  title: "Maillard Reaction: Why Browning Equals Flavor",
+  description: "Learn food science behind perfect browning from a chef with 24 years pro experience. Understand temperature, time, surface moisture, and why proper searing matters.",
   keywords: ["maillard reaction", "browning food", "food science", "searing technique", "caramelization", "professional cooking", "restaurant cooking techniques"],
   openGraph: {
-    title: "The Maillard Reaction: Why Browning Equals Flavor | Chef Approved Tools",
-    description: "Learn the food science behind perfect browning from a chef with 24 years of professional kitchen experience. Master the Maillard reaction for restaurant-quality flavor at home.",
+    title: "Maillard Reaction: Why Browning Equals Flavor",
+    description: "Learn food science behind perfect browning from a chef with 24 years pro experience. Understand temperature, time, surface moisture, and why proper searing matters.",
     url: "https://www.chefapprovedtools.com/blog/maillard-reaction-browning-flavor",
     type: "article",
     publishedTime: "2025-10-23T00:00:00.000Z",
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Maillard Reaction: Why Browning Equals Flavor | Chef Approved Tools",
-    description: "Learn the food science behind perfect browning from a chef with 24 years of professional kitchen experience. Master the Maillard reaction for restaurant-quality flavor at home."
+    title: "Maillard Reaction: Why Browning Equals Flavor",
+    description: "Learn food science behind perfect browning from a chef with 24 years pro experience. Understand temperature, time, surface moisture, and why proper searing matters."
   },
   alternates: {
     canonical: "https://www.chefapprovedtools.com/blog/maillard-reaction-browning-flavor"
