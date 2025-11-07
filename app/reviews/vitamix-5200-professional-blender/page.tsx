@@ -18,6 +18,7 @@ import {
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
+import DateDisplay from '@/components/DateDisplay'
 
 // Import review data
 import { reviewData } from './vitamix-5200-professional-blender-data'
@@ -149,6 +150,14 @@ export default async function ProductReview() {
             {' / '}
             {reviewData.breadcrumb.productName}
           </div>
+
+          {/* DATES */}
+          <DateDisplay
+            published="2025-10-28"
+            updated="2025-11-07"
+            variant="review"
+            className="mb-4"
+          />
 
           {/* SECTION 1: HERO */}
           <ReviewHero
