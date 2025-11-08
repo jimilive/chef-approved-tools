@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'How to Turn Cheap Meat Into Restaurant-Quality Tender',
-  description: 'Braising transforms $8/lb tough cuts into fall-apart tenderness. The low-and-slow technique every professional chef masters.',
+  title: 'How To Turn Cheap Meat Into Restaurant-Quality Tender (Braising)',
+  description: 'Braising transforms $8/lb tough cuts into fall-apart tenderness. The low-and-slow technique every professional chef masters. Step-by-step guide.',
   keywords: ['braising', 'how to braise', 'tough cuts', 'slow cooking', 'dutch oven braise', 'braised beef technique', 'professional cooking methods'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/braising-101-tough-cuts-made-tender',

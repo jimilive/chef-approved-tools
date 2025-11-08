@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact Chef Approved Tools | Questions & Feedback',
-  description: 'Have a question about kitchen equipment? Want to suggest a review? I read every message and respond personally.',
+  title: 'Contact Chef Approved Tools | Equipment Questions & Feedback',
+  description: 'Have a question about kitchen equipment? Want to suggest a review? Chef Scott Bradley reads every message and responds personally.',
   keywords: [
     'contact professional chef',
     'kitchen equipment advice',

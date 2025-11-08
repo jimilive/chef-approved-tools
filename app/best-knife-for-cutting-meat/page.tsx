@@ -7,8 +7,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata = {
-  title: "Best Meat Cutting Knife 2025: Boning Guide",
-  description: "Victorinox 6\" boning knife: Best for trimming, deboning meat. Firm blade, Granton edge, NSF certified. Professional butcher's choice.",
+  title: "Best Knife For Cutting Meat 2025: Boning vs Breaking Knives",
+  description: "Victorinox 6\" boning knife: Best for trimming and deboning meat. Firm blade, Granton edge, NSF certified. Professional butcher's 20-year pick.",
   keywords: "best knife for cutting meat, boning knife, butcher knife, meat trimming knife, victorinox boning knife, flexible boning knife, deboning knife",
   openGraph: {
     title: "Best Knife for Cutting Meat: Victorinox Boning Knife | Pro's Pick",

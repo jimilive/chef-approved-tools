@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "7 Years, Same Cast Iron Pans: Lodge 3-Skillet Set",
-    description: "Three sizes (12\", 10.25\", 8\")—seven years of weekly use. The seasoning just keeps getting better. This is what $60 buys.",
+    title: "Lodge Cast Iron 3-Skillet Bundle: 7 Years, Seasoning Still Perfect",
+    description: "Three sizes (12\", 10.25\", 8\")—seven years of weekly use and the Lodge seasoning keeps getting better. This is what $60 buys you for life.",
     ogTitle: "Lodge Cast Iron 3-Skillet Bundle: Professional Review",
     ogDescription: "Restaurant manager's honest review of the Lodge seasoned cast iron skillet set",
     testingPeriod: "7 Years Weekly Home Testing",

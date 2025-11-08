@@ -35,8 +35,8 @@ export const reviewData = {
 
   // Metadata
   metadata: {
-    title: "20 Years, Same Honing Steel: Henckels Wins",
-    description: "Culinary school 2005, still using it today. This is the steel that keeps professional knives sharp between sharpenings.",
+    title: "Henckels Honing Steel: 20 Years Since Culinary School (Still Perfect)",
+    description: "Culinary school 2005, still using it today. Henckels honing steel keeps professional knives sharp between sharpenings. The $30 tool that lasts decades.",
     ogTitle: "J.A. Henckels Sharpening Steel: 20-Year Professional Review",
     ogDescription: "After 20 years of daily professional and home use, this steel is still the tool I reach for before every shift. Tier 1 testing from Seattle kitchens.",
     tier: 1,

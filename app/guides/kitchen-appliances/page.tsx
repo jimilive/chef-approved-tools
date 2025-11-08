@@ -5,8 +5,8 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
-  title: 'Commercial Kitchen Appliances 2025: Guide',
-  description: 'Professional kitchen appliance reviews. Blenders, mixers, food processors tested in restaurants or in my apartment kitchen. Commercial-grade performance.',
+  title: 'Kitchen Appliances Buying Guide 2025: Pro Chef Recommendations',
+  description: 'Professional kitchen appliance buying guide. Blenders, mixers, food processors tested in restaurant kitchens. Commercial-grade performance recommendations.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/guides/kitchen-appliances',
   },

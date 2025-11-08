@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, FlaskConical, Timer, AlertTriangle, Wheat } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Why Your Bread Is Dense (Gluten Science Explained)",
-  description: "The chemistry behind fluffy bread vs. dense bricks. Kneading techniques and troubleshooting from 24 years of professional baking.",
+  title: "Why Your Bread Is Dense: Gluten Development Science Explained",
+  description: "The chemistry behind fluffy bread vs. dense bricks. Kneading techniques and troubleshooting from 24 years of professional baking. Simple fixes.",
   keywords: ["gluten development", "bread science", "how to knead bread", "gluten formation", "bread making", "windowpane test", "no-knead bread", "bread chemistry"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/bread-science-gluten-development'

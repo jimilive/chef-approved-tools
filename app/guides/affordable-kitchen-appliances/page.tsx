@@ -10,8 +10,8 @@ import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Budget Kitchen Appliances 2025: What Works',
-  description: 'Affordable kitchen appliances that work: Budget-friendly blenders, mixers tested by a professional chef. Restaurant quality without premium price.',
+  title: 'Budget Kitchen Appliances 2025: What Actually Works Under $100',
+  description: 'Affordable kitchen appliances that actually work: Budget blenders, mixers tested by a professional chef. Restaurant quality without premium $300+ prices.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/guides/affordable-kitchen-appliances',
   },

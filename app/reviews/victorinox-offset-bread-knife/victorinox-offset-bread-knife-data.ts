@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Victorinox Bread Knife: The Offset Handle Advantage',
-    description: '10-year professional test. Offset handle provides knuckle clearance for crusty bread and tomatoes. Restaurant tested design.',
+    title: 'Victorinox Offset Bread Knife: 10-Year Test ($45 Serrated Edge)',
+    description: '10-year professional test. Victorinox bread knife with offset handle provides knuckle clearance for crusty bread and tomatoes. Restaurant-tested $45 design.',
     ogTitle: 'Victorinox Offset Bread Knife: Professional Review',
     ogDescription: 'Victorinox offset bread knife tested 20 years (including 10 professionally).',
     testingPeriod: '20 Years (Including 10 Professional)',

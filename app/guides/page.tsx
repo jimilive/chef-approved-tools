@@ -3,8 +3,8 @@ import FAQSchema from '@/components/FAQSchema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Kitchen Equipment Guides | Chef\'s Picks',
-  description: 'Expert guidance from a culinary professional to help you make informed equipment decisions.',
+  title: 'Kitchen Equipment Buying Guides From A Professional Chef',
+  description: 'Expert guidance from a professional chef with 24 years restaurant experience. Make informed equipment decisions with real testing data and recommendations.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/guides',
   },

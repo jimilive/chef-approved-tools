@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Why Your Vegetables Look Sad (And Restaurant\'s Don\'t)',
-  description: 'Blanching is the secret. It\'s why restaurant vegetables are vibrant and yours aren\'t. Here\'s the professional technique.',
+  title: 'Why Your Vegetables Look Sad (And Restaurant Vegetables Don\'t)',
+  description: 'Blanching is the secret. It\'s why restaurant vegetables are vibrant and yours aren\'t. Here\'s the professional 2-step blanching technique.',
   keywords: ['how to blanch vegetables', 'why blanch vegetables', 'restaurant blanching method', 'blanching and shocking', 'blanching technique', 'vegetable preparation', 'professional cooking'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/blanching-vegetables-why-restaurants-do-it',

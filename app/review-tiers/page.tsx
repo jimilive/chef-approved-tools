@@ -4,8 +4,8 @@ import { Shield, Clock, Award, CheckCircle } from 'lucide-react';
 import ReviewTierBadge, { Tier1Badge, Tier2Badge, Tier3Badge } from '@/components/ReviewTierBadge';
 
 export const metadata: Metadata = {
-  title: 'Three-Tier Testing: Review Methodology',
-  description: 'Understand how we test and review kitchen equipment. Three tiers of transparency: Restaurant-tested, actively testing, and experience-based recommendations.',
+  title: 'How We Test: 3-Tier Kitchen Equipment Review System',
+  description: 'How Chef Approved Tools tests kitchen equipment: 3 tiers of transparency from restaurant testing to long-term home use. Professional review methodology.',
   openGraph: {
     title: 'Our Three-Tier Review System | Chef Approved Tools',
     description: 'Transparent, honest kitchen equipment reviews based on real testing and 45 years of cooking experience.',

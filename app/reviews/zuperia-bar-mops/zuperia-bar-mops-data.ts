@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'ZUPERIA Bar Mops: Better Than Restaurant Grade',
-    description: 'Better quality than what I used for years in professional restaurants. Industry-standard ring-spun cotton that\'s absorbent and durable.',
+    title: 'ZUPERIA Bar Mops: Better Than Restaurant Grade ($20/Dozen)',
+    description: 'Better quality than what I used for years in professional restaurants. ZUPERIA ring-spun cotton bar mops are more absorbent than $40/dozen competitors.',
     ogTitle: 'ZUPERIA Bar Mops: Professional Kitchen Review',
     ogDescription: 'Professional kitchen bar mops. Industry standard quality.',
     testingPeriod: 'Years Restaurant Testing',

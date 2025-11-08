@@ -8,8 +8,8 @@ export const reviewData = {
   
   // Metadata
   metadata: {
-    title: '18 Years, Same French Press: Bodum Chambord',
-    description: '6 years at Purple Café, 18 years at home—still making perfect coffee. This French press doesn\'t quit.',
+    title: 'Bodum Chambord French Press: 18 Years, Still Making Perfect Coffee',
+    description: '6 years at Purple Café, 18 years at home—Bodum Chambord French press still making perfect coffee. The $40 press that lasts decades.',
     ogTitle: 'Bodum Chambord French Press: 18-Year Professional Review',
     ogDescription: 'Professional chef tests Bodum French Press for 18 years (6 years at Purple Café, 18 years at home). Complete review: durability, coffee quality, value.',
     testingPeriod: '18 Years Testing',

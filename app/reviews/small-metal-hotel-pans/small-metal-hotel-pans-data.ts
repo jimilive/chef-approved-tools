@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Small Metal Hotel Pans: Restaurant Secret for Hosting',
-    description: '24 years using these in restaurants and at home. Perfect for BBQs, hot holding, oven roasting, and big family meals.',
+    title: 'Small Metal Hotel Pans: Restaurant Secret For Hosting ($15/6-Pack)',
+    description: '24 years using small metal hotel pans in restaurants and at home. Perfect for BBQs, hot holding, oven roasting. NSF-certified for $15 per 6-pack.',
     ogTitle: 'Small Metal Hotel Pans Review: Stainless Steel for Hot Holding',
     ogDescription: 'Professional chef review of small metal hotel pans for hosting, BBQs, and oven use.',
     testingPeriod: '20 Years Using',

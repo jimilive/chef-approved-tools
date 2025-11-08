@@ -5,8 +5,8 @@ import ReviewsClient from './ReviewsClient'
 export const dynamic = 'force-dynamic'
 
 export const metadata = {
-  title: 'All Reviews: Chef-Tested Kitchen Equipment',
-  description: 'Complete collection of professional kitchen equipment reviews tested in real restaurant environments and home kitchens.',
+  title: 'All Equipment Reviews: 37 Products Chef-Tested In Restaurants',
+  description: 'Complete collection of 37 kitchen equipment reviews tested in real restaurant environments and home kitchens by Chef Scott Bradley. Professional testing.',
 }
 
 // Map Product to Review interface with editorial fields

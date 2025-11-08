@@ -4,8 +4,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
-  title: 'Knife Care: Sharpening & Storage Techniques',
-  description: 'Professional knife care guide: Sharpening, storage, maintenance from restaurant kitchen manager. Keep your knives performing for decades.',
+  title: 'Knife Care Guide: How To Keep Chef Knives Sharp For Decades',
+  description: 'Professional knife care guide: Sharpening, storage, maintenance from a restaurant kitchen manager. Keep your knives performing for decades like the pros.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/guides/knife-care',
   },

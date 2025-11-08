@@ -8,8 +8,8 @@ export const reviewData = {
   
   // Metadata
   metadata: {
-    title: 'Cuisinart 8" Nonstick: The $25 Pan That Lasted 2 Years',
-    description: 'Budget pan tested 2 years. Professional chef review of heat distribution, coating durability, and performance at this price point.',
+    title: 'Cuisinart 8" Nonstick Pan: 2-Year Test Of The $25 Budget Option',
+    description: 'Budget nonstick pan tested 2 years. Professional chef review of the Cuisinart 8" heat distribution, coating durability, and performance at $25.',
     ogTitle: 'Cuisinart 8" Nonstick Pan: 6-Month Professional Review',
     ogDescription: 'Professional chef tests for 6 months. Perfect for eggs, single servings. Induction ready.',
     testingPeriod: '6 Months Testing',

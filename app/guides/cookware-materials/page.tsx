@@ -4,8 +4,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
-  title: 'Cookware Materials: Chef\'s Metal Comparison',
-  description: 'Complete guide to cookware materials from 24 years of restaurant experience. Stainless steel, cast iron, carbon steel, and more.',
+  title: 'Cookware Materials Guide: Stainless vs Cast Iron vs Carbon Steel',
+  description: 'Complete guide to cookware materials from 24 years of restaurant experience. Stainless steel vs cast iron vs carbon steel - which is best for what.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/guides/cookware-materials',
   },

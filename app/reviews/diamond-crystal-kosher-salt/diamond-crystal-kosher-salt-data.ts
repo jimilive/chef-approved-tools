@@ -8,8 +8,8 @@ export const reviewData = {
   
   // Metadata
   metadata: {
-    title: 'Why Every Restaurant Uses Diamond Crystal Salt',
-    description: '18 years in professional kitchens—this is the salt. The flaky texture gives perfect control that table salt can\'t match.',
+    title: 'Diamond Crystal Kosher Salt: Why Every Restaurant Uses This ($5)',
+    description: '18 years in professional kitchens—this is the salt. Diamond Crystal\'s flaky texture gives perfect seasoning control. The $5 box that lasts months.',
     ogTitle: 'Diamond Crystal Kosher Salt: 18-Year Professional Review',
     ogDescription: '18 years professional and home use. Industry standard for chefs',
     testingPeriod: '18 Years Testing',

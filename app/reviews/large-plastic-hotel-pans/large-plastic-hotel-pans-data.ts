@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Why I Ditched Tupperware for Hotel Pans',
-    description: '20 years of meal prep—plastic hotel pans organize everything. Restaurant storage system that actually works at home.',
+    title: 'Why I Ditched Tupperware For Plastic Hotel Pans (20 Years Proof)',
+    description: '20 years of meal prep—plastic hotel pans organize everything better than Tupperware. Restaurant storage system for $20. NSF-approved, stackable.',
     ogTitle: 'Large Plastic Hotel Pans Review: Full & 1/3 Pans for Batch Cooking',
     ogDescription: 'Professional chef review of large plastic hotel pans for serious meal prep and batch cooking.',
     testingPeriod: '20 Years Using',

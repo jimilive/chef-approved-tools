@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "6 Years Sharpening in a 200-Cover Restaurant",
-    description: "Norton Tri-Stone kept every knife razor-sharp through 6 years at Purple Café. This is the sharpener professionals choose.",
+    title: "Norton IM200 Tri-Stone: 6 Years Sharpening 200-Cover Restaurant Knives",
+    description: "Norton Tri-Stone sharpener kept every knife razor-sharp through 6 years at Purple Café (200 covers nightly). The 3-grit system professionals choose.",
     ogTitle: "Norton IM200 Tri-Stone Sharpener Review: 6-Year Restaurant Test (2025)",
     ogDescription: "Professional chef tests Norton Tri-Stone sharpener for 6 years in a 200-cover restaurant. Complete review of sharpening performance, durability, and technique guide.",
     testingPeriod: "6 Years Restaurant Testing",

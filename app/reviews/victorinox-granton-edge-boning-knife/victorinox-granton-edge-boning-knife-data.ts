@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Victorinox Boning Knife: The Granton Edge Difference',
-    description: '20-year professional test. Firm blade for trimming and deboning—Granton edge prevents sticking on meat. Butcher\'s choice.',
+    title: 'Victorinox Boning Knife: 20-Year Test Of The Granton Edge ($35)',
+    description: '20-year professional test. Victorinox boning knife with firm blade for trimming and deboning—Granton edge prevents sticking. The $35 butcher\'s choice.',
     ogTitle: 'Victorinox Granton Edge Boning Knife: Professional Review',
     ogDescription: 'Victorinox Granton boning knife tested 20 years (including 10 professionally).',
     testingPeriod: '20 Years (Including 10 Professional)',

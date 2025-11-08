@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "10 Years, Never Warped: Nordic Ware Sheet Pan",
-    description: "I own 4 of these. 10 years of roasting, broiling, baking—perfectly flat. This is the pan professional bakers choose.",
+    title: "Nordic Ware Sheet Pan: 10 Years, Never Warped (I Own 4 Now)",
+    description: "I own 4 of these. 10 years of roasting, broiling, baking—still perfectly flat. The $20 commercial-grade sheet pan professional bakers choose.",
     ogTitle: "Nordic Ware Half Sheet Pan Review: 10 Years of Testing (2025)",
     ogDescription: "Professional chef tests Nordic Ware half sheet pan for 10 years. Complete review: durability, performance, why it's the baker's choice, comparison to alternatives.",
     testingPeriod: "10 Years of Testing",

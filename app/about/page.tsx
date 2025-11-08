@@ -6,8 +6,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Why A Restaurant Chef Reviews Kitchen Tools',
-  description: '24 years in professional kitchens—Purple Café, Mellow Mushroom, Il Pizzaiolo. I test equipment in real conditions, not lab settings.',
+  title: 'About Chef Approved Tools: 24 Years Restaurant Experience',
+  description: '24 years in professional kitchens—Purple Café, Mellow Mushroom, Il Pizzaiolo. Why a restaurant chef reviews equipment in real conditions, not labs.',
   keywords: 'Scott Bradley chef, professional chef background, kitchen equipment testing, restaurant equipment review process, chef equipment methodology, culinary expertise',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/about',

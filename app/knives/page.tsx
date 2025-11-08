@@ -10,8 +10,8 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Chef Knives Hub: All Reviews, Guides, Tips',
-  description: 'Professional chef reviews of kitchen knives tested over years in restaurant kitchens. Chef knives, paring knives, bread knives, and specialty blades.',
+  title: 'Chef Knives: Reviews, Guides & 20 Years Restaurant Testing',
+  description: 'Professional chef reviews of kitchen knives tested over 20 years in restaurant kitchens. Chef knives, paring knives, bread knives, and specialty blades.',
   keywords: ['chef knives', 'best kitchen knives', 'professional knives', 'knife reviews', 'Victorinox', 'Wüsthof'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/knives',

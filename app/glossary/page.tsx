@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { Book, Search, ChevronRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Kitchen Terms Glossary: Pro Cuts & Tools',
-  description: 'Kitchen terms defined: Equipment specs, knife cuts, baking conversions. Julienne, brunoise, NSF certification explained. Professional techniques guide.',
+  title: 'Kitchen Terms Glossary: Equipment Specs & Professional Techniques',
+  description: 'Kitchen terms defined by a professional chef: Equipment specs, knife cuts, baking conversions. Julienne, brunoise, NSF certification explained simply.',
   keywords: ['kitchen equipment glossary', 'recipe conversions', 'baking by weight', 'professional measurements', 'knife cuts guide', 'NSF certification', 'full tang knife', 'julienne cut', 'brunoise', 'chiffonade', 'professional knife techniques', 'restaurant equipment terms', 'volume to weight conversions', 'professional baking techniques'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/glossary',

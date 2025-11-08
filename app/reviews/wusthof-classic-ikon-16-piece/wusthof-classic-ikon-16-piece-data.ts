@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Wüsthof Ikon 16-Pc: German Engineering, $600 Price',
-    description: '6-year test of German-forged precision and ergonomic handles. Professional kitchen performance at premium pricing. Honest review.',
+    title: 'Wüsthof Classic Ikon 16-Piece Set: 6-Year Test (Worth $600?)',
+    description: '6-year test of Wüsthof Classic Ikon 16-piece German-forged knives. Professional kitchen performance with ergonomic handles. Honest review of $600 pricing.',
     ogTitle: 'WÜSTHOF Classic IKON 16-Piece: 2-Year Pro Test (2025)',
     ogDescription: 'Restaurant manager\'s honest review after 2 years testing this German knife set in professional kitchens',
     testingPeriod: '2 Years Professional Testing',

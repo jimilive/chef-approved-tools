@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "Victorinox 4\" Paring: Same Knife Since Culinary School",
-    description: "20 years of detail work, peeling, and trimming. Swiss precision at exceptional value—still using the same blade.",
+    title: "Victorinox 4\" Paring Knife: 20 Years Since Culinary School ($10)",
+    description: "20 years of detail work, peeling, and trimming. Victorinox 4\" paring knife with Swiss precision at exceptional value—still using the same $10 blade.",
     ogTitle: "Victorinox 4\" Paring Knife: 20-Year Professional Review",
     ogDescription: "Victorinox 4\" paring knife tested 20 years. Perfect for detail work.",
     testingPeriod: "20 Years (Including 10 Professional)",

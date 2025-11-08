@@ -7,8 +7,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata: Metadata = {
-  title: 'Essential Kitchen Starter: 10 Year Pro-Tested',
-  description: 'Professional kitchen starter kit: 10 essential tools tested 24 years. From knives to cookware. Restaurant veteran-approved. Build your pro kitchen.',
+  title: 'Essential Kitchen Bundle: 10 Tools Tested Over 24 Years',
+  description: 'Professional kitchen starter kit: 10 essential tools tested 24 years in restaurants. From knives to cookware. Build your pro kitchen for under $500.',
   keywords: 'chef approved kitchen kit, essential kitchen tools, professional kitchen starter, restaurant tested equipment',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/kitchen-bundle',

@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Why Cheap Kitchen Tools Are Worse for the Environment',
-  description: 'Durability is sustainability. Quality equipment lasts decades vs. cheap tools in landfills every 2 years. Buy once, cry once.',
+  title: 'Why Cheap Kitchen Tools Are Worse For The Environment',
+  description: 'Durability is sustainability. Quality equipment lasts decades vs. cheap tools in landfills every 2 years. Buy once, cry once. Environmental case.',
   keywords: ['sustainable kitchen equipment', 'buy once cry once', 'kitchen carbon footprint', 'durable cookware', 'eco-friendly kitchen tools', 'sustainable cooking'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once',

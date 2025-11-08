@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "Robot Coupe R2: The $3,000 Machine That Replaces 2 Cooks",
-    description: "3-year commercial test. 2 HP motor that saves hours daily in restaurant prep. Professional review of this prep powerhouse.",
+    title: "Robot Coupe R2 DICE: $3,000 Commercial Food Processor (Worth It?)",
+    description: "3-year commercial test. Robot Coupe R2 DICE 2 HP motor saves hours daily in restaurant prep. Professional review of this $3,000 prep powerhouse.",
     keywords: ['Robot Coupe R2 Dice', 'commercial food processor', 'restaurant equipment', 'professional kitchen', 'food prep equipment', 'continuous feed processor'],
     ogTitle: "Robot Coupe R2 Dice: The Commercial Food Processor That Transformed Our Prep Kitchen",
     ogDescription: "Professional review after 3 years of intensive testing in high-volume restaurant prep kitchen",

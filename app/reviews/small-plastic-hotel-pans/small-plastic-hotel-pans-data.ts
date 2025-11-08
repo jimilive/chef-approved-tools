@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Small Plastic Hotel Pans: Better Than Tupperware',
-    description: '20 years using these at home. NSF-approved containers that eliminate kitchen organization chaos. Restaurant storage system.',
+    title: 'Small Plastic Hotel Pans: Better Than Tupperware ($12/6-Pack)',
+    description: '20 years using small plastic hotel pans at home. NSF-approved containers eliminate kitchen chaos. Restaurant storage system for $12 per 6-pack.',
     ogTitle: 'Small Plastic Hotel Pans Review: End Tupperware Chaos Forever',
     ogDescription: 'Professional chef\'s 20-year review of small plastic hotel pans for home organization.',
     testingPeriod: '20 Years Using',

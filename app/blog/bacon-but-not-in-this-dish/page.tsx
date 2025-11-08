@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Sparkles, Scale, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "7 Dishes Where Bacon Ruins Everything",
-  description: "Bacon doesn\'t belong everywhere. A chef with 24 years experience reveals when bacon overpowers instead of enhances.",
+  title: "7 Dishes Where Bacon Actually Ruins The Flavor (Chef's Take)",
+  description: "Bacon doesn't belong everywhere. A chef with 24 years experience reveals when bacon overpowers instead of enhances delicate flavors. Controversial but true.",
   keywords: ["when not to use bacon", "bacon in cooking", "professional cooking advice", "bacon flavors", "cooking with bacon", "food pairing mistakes"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/bacon-but-not-in-this-dish'

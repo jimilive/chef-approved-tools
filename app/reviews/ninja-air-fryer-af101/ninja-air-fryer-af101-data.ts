@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "Ninja Air Fryer: 4 Years of Daily Use (Honest Review)",
-    description: "Professional chef tests this popular countertop convection oven for 4 years. What it does well and what it doesn't.",
+    title: "Ninja Air Fryer AF101: 4-Year Daily Use Test (Honest Results)",
+    description: "Professional chef tests the Ninja Air Fryer AF101 for 4 years of daily use. What this countertop convection oven does well and what disappoints.",
     ogTitle: "Ninja Air Fryer AF101 Review: 90-Day Professional Test",
     ogDescription: "After 90 days testing wings, frozen foods, and everything in between.",
     testingPeriod: "90 Days Testing",
