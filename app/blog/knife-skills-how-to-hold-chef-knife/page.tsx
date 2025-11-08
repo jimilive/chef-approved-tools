@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Target, Hand, AlertTriangle, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Professional Knife Grip Techniques: Complete Guide",
-  description: "Learn professional knife grips from a chef with 24 years experience. Pinch grip, claw position, paring grip, rocking motion, and practice methods for safety and control.",
+  title: "You're Holding Your Knife Wrong (Here's Why)",
+  description: "The pinch grip changed everything. 24 years of professional knife work reveals the grip that actually gives control.",
   keywords: ["knife skills", "how to hold chef knife", "pinch grip", "claw position", "knife technique", "professional knife skills", "chef knife grip", "knife grip techniques"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/knife-skills-how-to-hold-chef-knife'

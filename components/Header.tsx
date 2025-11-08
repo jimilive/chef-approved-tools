@@ -36,6 +36,7 @@ export default function Header() {
     { name: 'Appliances', href: '/appliances' },
     { name: 'Blog', href: '/blog' },
     { name: 'Glossary', href: '/glossary' },
+    { name: 'Chef Approved', href: '/chef-approved' },
     { name: 'About & Testing', href: '/about' },
   ]
   

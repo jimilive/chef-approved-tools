@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "KitchenAid Pro 600: Home Baker's Workhorse",
-    description: "KitchenAid Professional 600 review: 18 years home use. Chef tests pizza dough, attachments, durability, value. Buy-it-for-life mixer.",
+    title: "18 Years, Same Stand Mixer: KitchenAid Pro 600",
+    description: "Weekly pizza dough for 18 years—never faltered. This is the mixer that handles what home bakers actually make.",
     ogTitle: "KitchenAid Professional 600 Review: 18 Years of Home Baking",
     ogDescription: "18 years testing KitchenAid mixer at home. Chef reviews pizza dough power, durability, attachment versatility.",
     testingPeriod: "18 Years Testing",

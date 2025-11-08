@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "Victorinox 10\" Chef: Large Hand Pro Choice",
-    description: "Victorinox 10\" chef's knife: 10-year pro test. Perfect for larger hands, big cutting tasks. Swiss precision, commercial durability. Best value in chef knives.",
+    title: "Victorinox 10\" Chef: For Larger Hands (Pro Test)",
+    description: "10-year professional test. Perfect for big hands and big cutting tasks. Swiss precision and commercial durability at half the price.",
     ogTitle: "Victorinox 10\" Fibrox Chef's Knife: Professional Review",
     ogDescription: "Victorinox 10\" chef's knife tested 20 years. Perfect for larger hands.",
     testingPeriod: "20 Years (Including 10 Professional)",

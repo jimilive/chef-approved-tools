@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, ShoppingCart, AlertTriangle, Thermometer, Utensils } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Kitchen Starter Kit: First 5 Tools to Buy",
-  description: "Chef Scott Bradley reveals the five essential kitchen tools every home cook needs first. No fluff, no gimmicks—just the gear professionals actually use daily.",
+  title: "The Only 5 Kitchen Tools You Actually Need",
+  description: "Most starter kits are garbage. A chef with 24 years experience reveals the only 5 tools worth buying first.",
   keywords: ["kitchen starter kit", "essential kitchen tools", "tools for home cooks", "beginner kitchen equipment", "chef recommended tools", "cooking basics"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/kitchen-starter-kit-first-5-tools'

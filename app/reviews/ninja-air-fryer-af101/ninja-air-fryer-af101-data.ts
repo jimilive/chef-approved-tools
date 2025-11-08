@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "Ninja Air Fryer AF101 Review: 90-Day Wing & Frozen Food Test",
-    description: "Professional chef tests the Ninja AF101 4qt air fryer for 90 days. Fresh wings, frozen foods, real results. Honest pros and cons from 24 years in kitchens.",
+    title: "Ninja Air Fryer: 4 Years of Daily Use (Honest Review)",
+    description: "Professional chef tests this popular countertop convection oven for 4 years. What it does well and what it doesn't.",
     ogTitle: "Ninja Air Fryer AF101 Review: 90-Day Professional Test",
     ogDescription: "After 90 days testing wings, frozen foods, and everything in between.",
     testingPeriod: "90 Days Testing",

@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Vitamix 5200 Blender: 5+ Years Pro Testing',
-    description: 'After 5+ years as our primary blending workhorse at Purple Cafe, the Vitamix 5200 delivered flawless performance under demanding commercial conditions. Professional chef review with honest pros and cons.',
+    title: 'Vitamix 5200: 5 Years at Purple Café (Honest Review)',
+    description: 'Primary blending workhorse under demanding commercial conditions. Professional chef review with honest pros and cons of this $450 investment.',
     ogTitle: 'Vitamix 5200 Blender Review: 5+ Years Professional Testing',
     ogDescription: 'Professional chef review after 5+ years of commercial kitchen testing',
     testingPeriod: '5+ Years Professional Testing',

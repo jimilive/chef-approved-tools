@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "John Boos Board: 14-Year Butcher Block Test",
-    description: "John Boos 24x18 cutting board review: 14 years home use. Chef tests knife preservation, durability, maintenance. Generational quality.",
+    title: "14 Years, Same Cutting Board: John Boos Wins",
+    description: "Sanded it once. Oiled it occasionally. Still perfect after 14 years of daily chopping. This is what generational quality looks like.",
     ogTitle: "John Boos Platinum Commercial Cutting Board: Professional Review",
     ogDescription: "Restaurant manager's honest review of the John Boos Platinum commercial cutting board",
     testingPeriod: "14 Years Testing",

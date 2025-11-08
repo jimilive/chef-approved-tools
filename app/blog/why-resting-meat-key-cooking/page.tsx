@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Clock, ThermometerSun, AlertTriangle, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Why Resting Meat is Critical - Professional Chef's Guide | Chef Approved Tools",
-  description: "Learn why professional chefs never skip resting meat. Master carry-over cooking, juice redistribution, and the science behind perfectly cooked steaks, roasts, and poultry.",
+  title: "Why Cutting Meat Immediately Ruins It",
+  description: "Resting redistributes juices. 24 years of professional cooking reveals the science of carryover cooking and why patience matters.",
   keywords: ["resting meat", "carry-over cooking", "how long to rest steak", "how long to rest meat", "meat cooking technique", "professional cooking", "steak resting time"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/why-resting-meat-key-cooking'

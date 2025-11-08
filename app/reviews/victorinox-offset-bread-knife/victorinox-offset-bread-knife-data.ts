@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Victorinox Bread Knife: Offset Ergo Design',
-    description: 'Victorinox offset bread knife: 10-year pro test. Perfect for crusty bread and tomatoes. Knuckle clearance that matters. Restaurant tested.',
+    title: 'Victorinox Bread Knife: The Offset Handle Advantage',
+    description: '10-year professional test. Offset handle provides knuckle clearance for crusty bread and tomatoes. Restaurant tested design.',
     ogTitle: 'Victorinox Offset Bread Knife: Professional Review',
     ogDescription: 'Victorinox offset bread knife tested 20 years (including 10 professionally).',
     testingPeriod: '20 Years (Including 10 Professional)',

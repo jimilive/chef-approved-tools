@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Winco Extra Heavyweight Tongs: Restaurant Grade',
-    description: 'Professional chef review of Winco extra heavyweight tongs after 24 years of professional cooking. Restaurant-grade tongs at a fraction of the price.',
+    title: 'Winco Tongs: Restaurant Quality for $8',
+    description: '24 years of professional cooking with these extra heavyweight tongs. Restaurant-grade quality at a fraction of typical prices.',
     ogTitle: 'Winco Extra Heavyweight Tongs: 24-Year Professional Review',
     ogDescription: 'Restaurant-grade tongs tested 24 years in professional kitchens.',
     testingPeriod: '24 Years Professional Use',

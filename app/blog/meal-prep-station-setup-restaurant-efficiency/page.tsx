@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Meal Prep Station Setup: Restaurant Efficiency at Home',
-  description: 'Professional chef explains how to create a restaurant-style meal prep station at home — mise en place, flow, and efficiency techniques that make cooking effortless.',
+  title: 'Why Restaurant Cooks Are 3x Faster Than You',
+  description: 'It\'s the prep station. 24 years of professional cooking reveals the setup that eliminates kitchen chaos and wasted time.',
   keywords: ['meal prep station', 'mise en place', 'kitchen organization', 'chef efficiency tips', 'home cooking prep', 'professional kitchen setup', 'cooking workflow'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/meal-prep-station-setup-restaurant-efficiency',

@@ -6,8 +6,8 @@ export const reviewData = {
 
   // Metadata for SEO and OG images
   metadata: {
-    title: 'Benriner Mandoline: Pro Safety & Precision',
-    description: 'Professional chef tests Benriner mandoline after years of restaurant use. Complete review: precision slicing, safety features, durability analysis.',
+    title: 'Benriner Mandoline: The $40 Japanese Slicer',
+    description: 'Professional review of the Benriner mandoline after years of restaurant and home use. Japanese precision at an accessible price point.',
     ogTitle: 'Benriner Mandoline: Professional Review',
     ogDescription: 'Professional chef tests Benriner mandoline after years of restaurant use',
     testingPeriod: 'Years of Professional Testing',

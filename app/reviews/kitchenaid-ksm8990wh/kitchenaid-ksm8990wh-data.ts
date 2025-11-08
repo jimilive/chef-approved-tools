@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "KitchenAid Commercial: Test NSF",
-    description: "KitchenAid Commercial mixer review: 18 months restaurant testing. Chef reviews 1.3HP motor, NSF cert, 8-qt capacity, durability, ROI.",
+    title: "KitchenAid Commercial: 18 Months Restaurant Abuse",
+    description: "Daily service in a real restaurant kitchen—pizza dough, bread, pasta. The NSF-certified mixer that handles commercial workloads.",
     ogTitle: "KitchenAid Commercial Mixer: Professional Review After 18 Months Commercial Use",
     ogDescription: "Professional KitchenAid stand mixer review after 18 months commercial kitchen testing",
     testingPeriod: "18 Months Restaurant Testing",

@@ -8,8 +8,8 @@ export const reviewData = {
   
   // Metadata
   metadata: {
-    title: 'Epicurean Board: Dishwasher-Safe Pro Choice',
-    description: 'Professional chef review of the Epicurean kitchen cutting board after 10 years of continual use in my apartment. Dishwasher-safe and better than wood.',
+    title: 'The Cutting Board You Can Dishwasher (Really)',
+    description: '10 years of testing—Epicurean survives the dishwasher without warping. Wood boards can\'t do that.',
     ogTitle: 'Epicurean Cutting Board: Professional Review',
     ogDescription: 'Professional chef review after 10 years. Dishwasher-safe and better than wood',
     testingPeriod: '10+ Years Testing',

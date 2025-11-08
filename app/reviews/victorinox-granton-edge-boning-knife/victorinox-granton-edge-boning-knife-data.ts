@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Victorinox Granton Boning: Firm Blade Pro',
-    description: 'Victorinox Granton boning knife: 20-year pro test. Firm blade for trimming, deboning. Granton edge prevents sticking. Professional butcher tool.',
+    title: 'Victorinox Boning Knife: The Granton Edge Difference',
+    description: '20-year professional test. Firm blade for trimming and deboning—Granton edge prevents sticking on meat. Butcher\'s choice.',
     ogTitle: 'Victorinox Granton Edge Boning Knife: Professional Review',
     ogDescription: 'Victorinox Granton boning knife tested 20 years (including 10 professionally).',
     testingPeriod: '20 Years (Including 10 Professional)',

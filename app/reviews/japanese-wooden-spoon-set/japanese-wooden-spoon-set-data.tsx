@@ -32,8 +32,8 @@ export const reviewData = {
 
   // Metadata
   metadata: {
-    title: 'Japanese Wooden Spoon Set: 3-Year Dishwasher Test',
-    description: 'After 3 years and 100+ dishwasher cycles, these Japanese wooden spoons became my go-to cooking tools. Honest review of durability, performance, and exceptional value.',
+    title: 'Japanese Wooden Spoons: Why Chefs Use These',
+    description: 'Professional review of traditional Japanese wooden cooking spoons. Why these handcrafted tools work better than metal or plastic.',
     ogTitle: 'Japanese Wooden Spoon Set: 3-Year Dishwasher Test',
     ogDescription: 'Professional chef tests wooden spoons through 3 years of daily use and dishwasher cycles.',
     testingPeriod: '3 Years + 100 Dishwasher Cycles',

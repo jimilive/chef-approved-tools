@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Knife Safety: 10 Rules From 24 Years in Pro Kitchens',
-  description: 'Professional chef Scott Bradley shares 10 essential knife safety rules from 24 years in restaurants. Learn grip, stance, focus, and habits to prevent injuries in your kitchen.',
+  title: 'How Not to Cut Yourself (10 Professional Rules)',
+  description: '24 years in restaurant kitchens, zero serious cuts. Here are the safety rules that actually prevent knife injuries.',
   keywords: ['knife safety', 'how to use a chef knife safely', 'kitchen knife rules', 'professional kitchen safety', 'knife accidents prevention', 'claw grip technique', 'knife mistakes'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/knife-safety-rules-professional-kitchens',

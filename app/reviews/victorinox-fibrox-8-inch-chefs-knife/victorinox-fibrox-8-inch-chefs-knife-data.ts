@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "Victorinox 8\" Fibrox: Budget Pro Performance",
-    description: "Victorinox 8\" Fibrox tested 20 years: professional-grade chef's knife with exceptional value and NSF certification. The workhorse choice in restaurant kitchens.",
+    title: "Victorinox 8\" Fibrox: Why Restaurants Buy This Knife",
+    description: "20-year test: professional-grade performance with exceptional value and NSF certification. The workhorse in restaurant kitchens.",
     ogTitle: "Victorinox 8\" Fibrox Chef's Knife: 20-Year Professional Review",
     ogDescription: "Victorinox 8\" Fibrox tested 20 years in professional kitchens. The workhorse knife.",
     testingPeriod: "20 Years (Including 10 Professional)",

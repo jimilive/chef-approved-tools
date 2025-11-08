@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Large Metal Hotel Pans: Commercial Hot Holding & Catering',
-    description: '24 years professional kitchen experience: Large metal hotel pans for catering businesses, commercial kitchens, and large-scale event hosting.',
+    title: 'Why Restaurants Use Metal Hotel Pans (Not Plastic)',
+    description: '24 years in commercial kitchens—metal hotel pans handle heat, steam tables, and high-volume service. Plastic can\'t.',
     ogTitle: 'Large Metal Hotel Pans Review: Commercial Hot Holding',
     ogDescription: 'Professional chef review of large metal hotel pans for catering and commercial operations.',
     testingPeriod: '24 Years Pro Use',

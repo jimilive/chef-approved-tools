@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "OXO Swivel Peeler: Ergonomic Design Winner",
-    description: "OXO swivel peeler tested 20 years (including 10 professional). Ergonomic design, sharp blade, and comfortable grip make this the best peeler for extended use.",
+    title: "OXO Peeler: Doesn't Hurt Your Hand After 50 Potatoes",
+    description: "20 years of professional and home use. Ergonomic design and comfortable grip for extended peeling sessions without hand fatigue.",
     ogTitle: "OXO Good Grips Swivel Peeler: 20-Year Professional Review",
     ogDescription: "OXO swivel peeler tested 20 years (including 10 professional). Ergonomic and reliable.",
     testingPeriod: "20 Years (Including 10 Professional)",

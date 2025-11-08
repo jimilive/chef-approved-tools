@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: "Meat Temps & Thermometers: Safety Guide",
-  description: 'Professional chef explains meat thermometers and proper cooking temps. 24 years restaurant experience. Food safety + perfect doneness every time.',
+  title: "The Temperature Chart Every Cook Needs",
+  description: 'Perfect doneness isn\'t guesswork. 24 years of professional cooking reveals the exact temps that ensure safety and quality.',
   keywords: ['meat cooking temperatures', 'meat thermometer', 'food safety temperatures', 'instant read thermometer', 'cooking temperatures', 'professional chef techniques', 'USDA temperature guidelines', 'carryover cooking'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/meat-cooking-temperatures-thermometers',

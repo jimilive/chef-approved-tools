@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Beaker, Apple, Droplet, AlertTriangle, Lightbulb, Flame } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Food Oxidation Guide: Stop Browning & Preserve Freshness",
-  description: "Learn how oxidation affects food quality and professional techniques to prevent browning, preserve flavor, and extend ingredient freshness in your kitchen.",
+  title: "Why Apples Turn Brown (And How to Stop It)",
+  description: "Oxidation ruins color and flavor. 24 years of professional kitchen work reveals the chemistry behind browning—and how to prevent it.",
   keywords: ["food oxidation", "enzymatic browning", "prevent apple browning", "food preservation", "keeping produce fresh", "oxidation in cooking"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/oxidization-effect-on-food'

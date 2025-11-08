@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Sprout, Brain, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Why Kids Hate Broccoli: Science & Solutions",
-  description: "Learn the science behind why children hate broccoli and professional techniques to make vegetables appealing. From bitter sensitivity to proper cooking methods.",
+  title: "Why Kids Hate Broccoli (It's Genetic)",
+  description: "Bitter taste receptors change with age. 24 years of professional cooking reveals the techniques that make vegetables kid-friendly.",
   keywords: ["kids hate broccoli", "why children hate vegetables", "cooking for kids", "bitter taste", "broccoli recipes kids", "vegetable cooking techniques"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/why-children-hate-broccoli'

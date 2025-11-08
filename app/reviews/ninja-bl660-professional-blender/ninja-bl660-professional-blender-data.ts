@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "Ninja BL660 Professional Blender Review: 90-Day Honest Test",
-    description: "Professional chef's brutally honest review of the Ninja BL660 after 90 days. Wing sauce, smoothies, margaritas—plus the quality control issue nobody talks about.",
+    title: "This $90 Blender Cracked After 2 Weeks",
+    description: "90 days testing the Ninja BL660—wing sauce was perfect, but the pitcher cracked within 2 weeks. Here's the truth.",
     ogTitle: "Ninja BL660 Professional Blender Review: Honest 90-Day Test",
     ogDescription: "After 90 days testing the Ninja BL660—including a quality control issue—here's what you need to know before buying.",
     testingPeriod: "90 Days Testing",

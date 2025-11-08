@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Small Plastic Hotel Pans: End Tupperware Chaos',
-    description: 'After 20 years using plastic hotel pans at home, professional chef review of the NSF-approved containers that eliminate kitchen organization chaos.',
+    title: 'Small Plastic Hotel Pans: Better Than Tupperware',
+    description: '20 years using these at home. NSF-approved containers that eliminate kitchen organization chaos. Restaurant storage system.',
     ogTitle: 'Small Plastic Hotel Pans Review: End Tupperware Chaos Forever',
     ogDescription: 'Professional chef\'s 20-year review of small plastic hotel pans for home organization.',
     testingPeriod: '20 Years Using',

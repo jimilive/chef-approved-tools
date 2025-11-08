@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Thermometer, AlertTriangle, Clock, Flame } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Making Stock: Pro Chef Method – How to Build Flavor",
-  description: "Pro chef Scott Bradley explains the real restaurant method for making stock. Build deep flavor with bones, vegetables, and proper simmering technique.",
+  title: "Why Restaurant Stock Tastes 20x Better",
+  description: "Stock isn't soup base—it's liquid flavor. 24 years of professional kitchens reveals the technique that builds real depth.",
   keywords: ["how to make stock", "chicken stock recipe", "restaurant stock method", "stock vs broth", "building flavor in stock", "homemade stock"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/making-stock-professional-chef-method'

@@ -8,8 +8,8 @@ export const reviewData = {
   
   // Metadata
   metadata: {
-    title: 'Instant Pot Duo Plus 6 Qt Review: 90-Day Professional Test',
-    description: 'Professional chef\'s honest review of the Instant Pot Duo Plus 6qt after 90 days of daily testing. Real results with pot roast, rice, beans, and more.',
+    title: '90 Days Testing Instant Pot: Honest Results',
+    description: 'Daily testing by a professional chef—pot roast, rice, beans. Here\'s what the Instant Pot actually does well (and what it doesn\'t).',
     ogTitle: 'Instant Pot Duo Plus 6 Qt Review: 90-Day Professional Test',
     ogDescription: 'After 90 days testing the Instant Pot Duo Plus with 24 years of professional kitchen experience.',
     testingPeriod: '90 Days Testing',

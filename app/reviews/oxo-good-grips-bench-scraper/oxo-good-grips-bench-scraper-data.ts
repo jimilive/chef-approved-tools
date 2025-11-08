@@ -8,8 +8,8 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "OXO Bench Scraper: Underrated Kitchen MVP",
-    description: "Professional chef review of the OXO Good Grips bench scraper after 20 years of use (including 10 professional). The most underrated tool in any kitchen.",
+    title: "OXO Bench Scraper: The Tool You Didn't Know You Needed",
+    description: "20 years of professional and home use. Why this underrated tool belongs in every kitchen—not just bakeries.",
     ogTitle: "OXO Good Grips Bench Scraper: 20-Year Professional Review",
     ogDescription: "The most underrated kitchen tool tested 18 years professionally.",
     testingPeriod: "20 Years (Including 10 Professional)",

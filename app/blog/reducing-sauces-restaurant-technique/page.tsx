@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Reducing Sauces: The Technique Restaurants Use Daily',
-  description: 'Professional chef explains the art of reducing sauces — how to concentrate flavor, control consistency, and create restaurant-quality reductions at home.',
+  title: 'How Restaurants Make Sauce Taste 10x Better',
+  description: 'Reduction concentrates flavor. 24 years of professional cooking reveals the technique that turns thin liquid into restaurant sauce.',
   keywords: ['reducing sauces', 'sauce reduction', 'how to reduce sauce', 'professional cooking techniques', 'sauce making', 'nappe consistency', 'demi-glace'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/reducing-sauces-restaurant-technique',

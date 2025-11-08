@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, ThermometerSun, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Maillard Reaction: Why Browning Equals Flavor",
-  description: "Learn food science behind perfect browning from a chef with 24 years pro experience. Understand temperature, time, surface moisture, and why proper searing matters.",
+  title: "The Chemistry That Makes Food Taste Amazing",
+  description: "Browning isn't just color—it's hundreds of new flavor compounds. 24 years of searing reveals why the Maillard reaction matters.",
   keywords: ["maillard reaction", "browning food", "food science", "searing technique", "caramelization", "professional cooking", "restaurant cooking techniques"],
   openGraph: {
     title: "Maillard Reaction: Why Browning Equals Flavor",
