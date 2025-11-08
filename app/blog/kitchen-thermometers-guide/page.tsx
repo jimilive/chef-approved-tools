@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Thermometer, AlertTriangle, Lightbulb, ThermometerSun, Target } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Why Guessing Temperature Ruins Good Meat",
-  description: "Thermometers are the difference between perfect and overcooked. 24 years of restaurant cooking reveals the truth.",
+  title: "Kitchen Thermometers Guide: Instant-Read vs Leave-In Types",
+  description: "Kitchen thermometers guide: Instant-read vs leave-in vs infrared types explained. Professional chef's recommendations after 24 years of precise cooking.",
   keywords: ["kitchen thermometer", "meat thermometer", "instant read thermometer", "cooking temperatures", "food safety temperatures", "internal temperature guide", "how to use meat thermometer"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/kitchen-thermometers-guide'

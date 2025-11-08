@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplets, Thermometer, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "How Restaurant Chefs Stay Hydrated During 12-Hour Shifts",
-  description: "Hydration strategies from 24 years in professional kitchens. Why water intake matters for performance and how chefs handle long shifts.",
+  title: "Hydration & Water Intake: How Much Water Do You Need?",
+  description: "Hydration and water intake guide: How much water you actually need based on activity level. Myth-busting from a chef who worked 14-hour shifts.",
   keywords: ["hydration for cooks", "kitchen hydration", "water intake", "chef health", "cooking hydration", "kitchen performance", "staying hydrated while cooking"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/hydration-health-water-intake'

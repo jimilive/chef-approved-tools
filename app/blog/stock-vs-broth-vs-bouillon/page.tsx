@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplets, Flame, FlaskConical, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Stock vs Broth: They're Not the Same Thing",
-  description: "Gelatin changes everything. 24 years of professional cooking reveals why stock and broth aren't interchangeable.",
+  title: "Stock vs Broth vs Bouillon: The Differences Explained",
+  description: "Stock vs broth vs bouillon: The differences explained by a professional chef. When to use each in cooking. 24 years making stock in restaurants.",
   keywords: ["stock vs broth", "bouillon vs stock", "chicken stock", "bone broth", "gelatin in stock", "how to make stock", "stock making"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/stock-vs-broth-vs-bouillon'

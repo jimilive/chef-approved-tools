@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, AlertTriangle, ThermometerSun } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Why Your Cheese Sauce Breaks (And How to Fix It)",
-  description: "The béchamel technique that creates silky, smooth cheese sauce every time. No graininess, no breaking. Restaurant-quality results.",
+  title: "Perfect Cheese Sauce For Mac & Cheese (Never Grainy Again)",
+  description: "How to make perfect cheese sauce for mac and cheese that never breaks or gets grainy. The emulsification technique from 24 years in professional kitchens.",
   keywords: ["how to make cheese sauce", "cheese sauce recipe", "mac and cheese sauce", "smooth cheese sauce", "béchamel sauce", "mornay sauce", "how to fix broken cheese sauce"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/cheese-sauce-mac-and-cheese'

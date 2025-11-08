@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Lightbulb, Apple } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "When Canned Tomatoes Are Better Than Fresh",
-  description: "Controversial take: canned tomatoes often beat fresh. Here\'s when to use each—from 24 years in professional kitchens.",
+  title: "Fresh vs Canned Tomatoes: When To Use Each (Chef's Guide)",
+  description: "Fresh vs canned tomatoes: When to use each in cooking. Professional chef's guide from 24 years making Italian food in restaurants. Surprising answers.",
   keywords: ["fresh vs canned tomatoes", "cooking with tomatoes", "when to use canned tomatoes", "best tomatoes for sauce", "San Marzano tomatoes", "professional tomato techniques"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/cooking-with-tomatoes-fresh-vs-canned'

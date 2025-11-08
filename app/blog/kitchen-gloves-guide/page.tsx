@@ -7,8 +7,8 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Kitchen Gloves: When to Use (And When Not To)',
-  description: 'Single-use, cut-resistant, and proper layering from 24 years in professional kitchens. When gloves protect and when they\'re dangerous.',
+  title: 'Kitchen Gloves Guide: When To Use Each Type',
+  description: 'Kitchen gloves guide: When to use heat-resistant vs cut-resistant vs disposable gloves. Professional chef\'s recommendations after 24 years in kitchens.',
   keywords: ['kitchen gloves', 'cut resistant gloves', 'food safety gloves', 'disposable gloves', 'kitchen safety', 'professional chef gloves', 'mandoline safety', 'kitchen glove layering'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/kitchen-gloves-guide',

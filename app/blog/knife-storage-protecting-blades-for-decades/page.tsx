@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Why Drawer Storage Destroys Your Knives',
-  description: 'Most knife storage ruins blades. 24 years of professional kitchen experience reveals the storage methods that keep knives sharp.',
+  title: 'Knife Storage: How To Protect Blades For Decades',
+  description: 'Knife storage methods that protect blades for decades: Magnetic strips, knife blocks, drawer guards. Professional chef\'s guide to keeping knives sharp.',
   keywords: ['knife care', 'how to store knives', 'knife protection', 'prevent dull knives', 'blade storage', 'professional knife maintenance', 'knife longevity', 'knife rust prevention', 'knife block', 'magnetic strip', 'drawer knife storage'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/knife-storage-protecting-blades-for-decades',

@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: '10 Kitchen Tools That Are Complete Garbage',
-  description: 'Stop wasting money. A chef with 24 years experience reveals which popular tools are useless—and what to buy instead.',
+  title: '10 Kitchen Tools That Waste Your Money (Skip These)',
+  description: '10 kitchen tools that waste your money—skip these trendy gadgets. Professional chef reveals what doesn\'t work after 24 years testing equipment.',
   keywords: ['kitchen tools to avoid', 'waste of money kitchen gadgets', 'essential kitchen tools', 'professional kitchen gear', 'chef recommended tools', 'kitchen equipment advice'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/kitchen-tools-wasting-money',

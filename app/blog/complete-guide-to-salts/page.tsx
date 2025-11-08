@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Sparkles, Flame, Lightbulb } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Why Professional Chefs Only Keep 2 Types of Salt",
-  description: "After 24 years in kitchens, I only use kosher and finishing salt. Here\'s why—and when you actually need each one.",
+  title: "Complete Guide To Cooking Salts: When To Use Each Type",
+  description: "Complete guide to kitchen salts from a professional chef: Kosher, sea salt, fleur de sel, Maldon. When to use each type and why it matters for cooking.",
   keywords: ["types of salt", "kosher salt vs sea salt", "cooking with salt", "best salt for cooking", "Diamond Crystal", "Morton kosher salt", "finishing salt guide"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/complete-guide-to-salts'

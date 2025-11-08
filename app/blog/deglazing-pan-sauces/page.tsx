@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Flame, AlertTriangle, Lightbulb, Droplets, Beaker, Wine, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "How to Turn Pan Drippings Into Restaurant Sauce",
-  description: "Deglazing is the secret to professional pan sauces. Master fond, technique, and create restaurant-quality results in minutes.",
+  title: "Deglazing & Pan Sauces: The Restaurant Technique Explained",
+  description: "Deglazing and pan sauce technique explained by a professional chef. How to turn brown bits into restaurant-quality sauces in 3 minutes. Game-changer.",
   keywords: ["deglazing", "how to deglaze", "pan sauce", "fond", "making pan sauce", "deglazing wine", "restaurant pan sauce", "sauce technique"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/deglazing-pan-sauces'

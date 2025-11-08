@@ -6,8 +6,8 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'How Restaurants Get That Perfect Steak Crust',
-  description: 'The searing techniques that create perfect crust and temperature control. Restaurant methods from 24 years in professional kitchens.',
+  title: 'How To Sear Steaks Like A Restaurant Chef (High Heat Secret)',
+  description: 'How to sear steaks like a restaurant chef using the high heat method. Cast iron temperature, oil choice, timing. 24 years of professional steak cooking.',
   keywords: ['how to sear steak', 'restaurant steak techniques', 'professional steak cooking', 'perfect steak sear', 'restaurant quality steak', 'cast iron steak', 'steak cooking temperature', 'chef steak methods'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-sear-steaks-like-restaurant-chef',

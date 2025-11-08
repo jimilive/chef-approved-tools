@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Citrus, Sparkles, Droplet } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Why Your Food Tastes Flat (It Needs Acid)",
-  description: "Acid is the missing ingredient. 24 years of professional cooking reveals how lemon and vinegar transform bland into balanced.",
+  title: "Understanding Acids In Cooking: How They Brighten Flavor",
+  description: "Understanding acids in cooking: How lemon, vinegar, and wine brighten flavor. Professional chef explains balancing acids after 24 years in kitchens.",
   keywords: ["acid in cooking", "cooking with acid", "how to balance flavors", "lemon juice cooking", "vinegar in cooking", "brightening flavors"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/understanding-acids-cooking'

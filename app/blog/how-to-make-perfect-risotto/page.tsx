@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, AlertTriangle, Lightbulb } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "How Restaurants Make Risotto Creamy (Without Cream)",
-  description: "The technique, timing, and science behind perfectly creamy risotto. Professional method from 24 years in restaurant kitchens.",
+  title: "How To Make Perfect Risotto: The Italian Restaurant Technique",
+  description: "How to make perfect risotto using the Italian restaurant technique. Constant stirring, wine timing, broth temperature. Professional method explained.",
   keywords: ["how to make risotto", "perfect risotto", "risotto technique", "creamy risotto", "arborio rice", "risotto recipe", "italian risotto", "risotto without cream"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-make-perfect-risotto'

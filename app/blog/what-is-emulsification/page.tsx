@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplets, Beaker, AlertTriangle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "How Restaurants Make Oil and Water Mix (Emulsification)",
-  description: "The science behind mayonnaise, hollandaise, and vinaigrettes. Emulsification technique from 24 years in professional kitchens.",
+  title: "What Is Emulsification? The Science Behind Stable Sauces",
+  description: "What is emulsification? The science behind stable sauces like mayonnaise and hollandaise. Professional chef explains fat and water chemistry simply.",
   keywords: ["emulsification", "what is emulsification", "how to emulsify", "emulsion sauce", "mayonnaise science", "hollandaise technique", "vinaigrette emulsion", "broken sauce fix"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/what-is-emulsification'

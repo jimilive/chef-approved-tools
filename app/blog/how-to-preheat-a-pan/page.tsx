@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Why Your Food Sticks (You\'re Not Preheating Right)',
-  description: 'The science of preheating stainless steel and cast iron pans. How to prevent sticking and achieve perfect sear from 24 years experience.',
+  title: 'How To Preheat A Pan The Right Way (Most People Do This Wrong)',
+  description: 'How to preheat a pan the right way—most people do this wrong. Water drop test and timing from 24 years in professional kitchens. Game-changing technique.',
   keywords: ['how to preheat a pan', 'stainless steel pan temperature', 'why food sticks', 'proper pan preheating', 'cooking temperature control'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-preheat-a-pan',

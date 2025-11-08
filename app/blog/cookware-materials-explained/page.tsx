@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'What Cookware Do Restaurant Chefs Actually Use?',
-  description: 'Stainless, cast iron, nonstick, carbon steel—which actually matter? A chef\'s honest take after 24 years of restaurant cooking.',
+  title: 'Cookware Materials Explained: Stainless, Cast Iron & More',
+  description: 'Cookware materials explained by a professional chef: Stainless steel, cast iron, copper, aluminum. Which material is best for different cooking methods.',
   keywords: ['cookware materials', 'best cookware', 'cast iron vs stainless steel', 'nonstick pros and cons', 'what chefs use'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/cookware-materials-explained',

@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'How Not to Cut Yourself (10 Professional Rules)',
-  description: '24 years in restaurant kitchens, zero serious cuts. Here are the safety rules that actually prevent knife injuries.',
+  title: 'Knife Safety Rules From Professional Kitchens (Never Get Cut)',
+  description: 'Knife safety rules from professional kitchens to prevent cuts. 24 years of restaurant experience without serious injury. Essential techniques everyone needs.',
   keywords: ['knife safety', 'how to use a chef knife safely', 'kitchen knife rules', 'professional kitchen safety', 'knife accidents prevention', 'claw grip technique', 'knife mistakes'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/knife-safety-rules-professional-kitchens',

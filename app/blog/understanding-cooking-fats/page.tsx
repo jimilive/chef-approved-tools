@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Droplet, AlertTriangle, Lightbulb } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "When to Use Butter vs Oil (It Matters)",
-  description: "Choosing the wrong fat ruins dishes. 24 years of professional cooking reveals which fat to use when—and why it matters.",
+  title: "Understanding Cooking Fats: Butter, Oil & Lard Compared",
+  description: "Understanding cooking fats: Butter vs oil vs lard compared. When to use each fat for best results. Professional chef's guide from 24 years cooking.",
   keywords: ["cooking fats", "butter vs oil", "when to use butter", "when to use oil", "cooking with lard", "smoke points", "best cooking fat", "butter or oil for cooking"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/understanding-cooking-fats'

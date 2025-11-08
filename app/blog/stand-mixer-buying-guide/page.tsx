@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Is KitchenAid Worth $400? (Honest Answer)',
-  description: '24 years of professional baking reveals what actually matters in stand mixers—and whether KitchenAid is worth the price.',
+  title: 'Stand Mixer Buying Guide: KitchenAid vs Other Brands',
+  description: 'Stand mixer buying guide: KitchenAid vs other brands compared. Tilt-head vs bowl-lift, wattage, capacity. 18 years testing mixers in professional kitchens.',
   keywords: ['stand mixer guide', 'KitchenAid vs alternatives', 'best stand mixer', 'baking tools', 'mixer buying guide'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/stand-mixer-buying-guide',

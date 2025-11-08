@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: '5 Knife Cuts That Make You Look Like a Pro Chef',
-  description: 'Dice, julienne, chiffonade, mince, bias—these cuts separate amateurs from cooks who know what they\'re doing. Technique from 24 years.',
+  title: 'Essential Knife Cuts Every Cook Should Master (With Photos)',
+  description: 'Essential knife cuts every cook should master: Julienne, brunoise, chiffonade, dice. Professional chef teaches proper knife technique with photo guides.',
   keywords: ['knife cuts', 'basic knife skills', 'how to dice vegetables', 'julienne cut', 'chiffonade technique', 'professional knife training', 'brunoise', 'knife techniques'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/essential-knife-cuts-every-cook-should-master',

@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Thermometer, AlertTriangle, ThermometerSun } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Why Restaurant Vegetables Taste Better Roasted",
-  description: "High heat creates caramelization. 24 years of professional cooking reveals the temperature and timing for perfect roasted vegetables.",
+  title: "Complete Vegetable Roasting Guide: Times & Temperatures",
+  description: "Complete vegetable roasting guide: Times and temperatures for 20 common vegetables. Restaurant techniques for perfect caramelization every time.",
   keywords: ["roasting vegetables", "how to roast vegetables", "roasted vegetables temperature", "vegetable roasting times", "how long to roast vegetables", "perfect roasted vegetables", "caramelized vegetables"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/vegetable-roasting-guide'

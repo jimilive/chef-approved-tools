@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, AlertTriangle, CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "How to Make Roux: White, Blonde, Dark (Don't Burn It)",
-  description: "The foundation technique for bechamel, gumbo, and gravy. How to make each type of roux without burning from 24 years experience.",
+  title: "How To Make Roux: 3 Colors For Different Sauces",
+  description: "How to make roux in three different colors for different sauces. White, blonde, and dark roux explained by a professional chef. Foundation of French cooking.",
   keywords: ["how to make a roux", "roux technique", "white roux", "blonde roux", "dark roux", "béchamel sauce", "gumbo roux", "sauce thickening"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-make-roux'

@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: '5 Sheet Pan Tricks From Restaurant Kitchens',
-  description: 'High heat changes everything. 24 years of professional cooking reveals the sheet pan techniques restaurants use daily.',
+  title: 'Sheet Pan Cooking: Restaurant Techniques For Home Cooks',
+  description: 'Sheet pan cooking using restaurant techniques: How to roast multiple items perfectly. Professional method from 24 years using commercial ovens.',
   keywords: ['sheet pan cooking', 'sheet pan techniques', 'restaurant cooking methods', 'professional chef techniques', 'batch cooking', 'high heat roasting', 'sheet pan tips'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/sheet-pan-cooking-restaurant-techniques',

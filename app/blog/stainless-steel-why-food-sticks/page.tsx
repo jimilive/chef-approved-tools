@@ -5,8 +5,8 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 export const metadata: Metadata = {
-  title: 'Why Food Sticks to Stainless Steel Pans',
-  description: 'It\'s not the pan—it\'s the heat. 24 years of professional cooking reveals the temperature trick that stops sticking.',
+  title: 'Why Food Sticks To Stainless Steel (And How To Prevent It)',
+  description: 'Why food sticks to stainless steel pans and how to prevent it. Temperature, oil, timing from 24 years cooking on stainless in restaurants.',
   keywords: ['stainless steel cooking', 'why food sticks', 'how to prevent sticking', 'stainless steel pan searing', 'cooking temperature control'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/stainless-steel-why-food-sticks',
