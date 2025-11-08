@@ -8,10 +8,10 @@ export const reviewData = {
   
   // Metadata
   metadata: {
-    title: '48 Years, 4 Toaster Ovens: Black+Decker Wins',
-    description: '1977 to today—Black+Decker keeps working. Real-world testing from a chef who\'s owned 4 models across nearly 5 decades.',
-    ogTitle: 'Black+Decker Toaster Oven Review | 48-Year Test',
-    ogDescription: 'Black+Decker toaster oven review: 48 years across 4 models (1977-present). Professional chef tests durability and performance.',
+    title: '48 Years, 4 Toaster Ovens: Why Black+Decker Still Wins',
+    description: '1977 to today, Black+Decker toaster ovens keep working. Real-world testing from a chef who\'s owned 4 models across nearly 5 decades. Best value.',
+    ogTitle: '48 Years, 4 Toaster Ovens: Why Black+Decker Still Wins',
+    ogDescription: '1977 to today, Black+Decker toaster ovens keep working. Real-world testing from a chef who\'s owned 4 models across nearly 5 decades. Best value.',
     testingPeriod: '48 Years Testing',
     tier: 2,
   },

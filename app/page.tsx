@@ -5,8 +5,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Kitchen Tools That Actually Work | 24 Years Restaurant Tested',
-  description: 'Real equipment reviews from a chef who\'s used everything—from Purple Café line cook to Mellow Mushroom Kitchen Manager. No BS, just tools that work.',
+  title: 'Chef Approved Tools: 24 Years Restaurant Testing Kitchen Equipment',
+  description: 'Professional chef reviews after 24 years in restaurant kitchens, Purple Café, Mellow Mushroom, Il Pizzaiolo. Equipment tested in real commercial conditions.',
   keywords: [
     'chef approved kitchen tools',
     'professional kitchen equipment',
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     'professional grade appliances'
   ],
   openGraph: {
-    title: 'Chef Approved Tools | Professional Reviews & Recommendations',
-    description: '24 years of professional kitchen experience. Honest reviews of chef knives, cookware, and appliances tested in real restaurants. No affiliate pressure.',
+    title: 'Chef Approved Tools: 24 Years Restaurant Testing Kitchen Equipment',
+    description: 'Professional chef reviews after 24 years in restaurant kitchens, Purple Café, Mellow Mushroom, Il Pizzaiolo. Equipment tested in real commercial conditions.',
     url: 'https://www.chefapprovedtools.com',
     siteName: 'Chef Approved Tools',
     images: [
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chef Approved Kitchen Tools | 24 Years Restaurant Experience',
-    description: 'Professional kitchen equipment reviews by Scott Bradley. Real tools tested in real kitchens. Honest recommendations you can trust.',
+    title: 'Chef Approved Tools: 24 Years Restaurant Testing Kitchen Equipment',
+    description: 'Professional chef reviews after 24 years in restaurant kitchens, Purple Café, Mellow Mushroom, Il Pizzaiolo. Equipment tested in real commercial conditions.',
     images: ['https://www.chefapprovedtools.com/twitter-image.jpg'],
     creator: '@chefapprovedtools',
   },

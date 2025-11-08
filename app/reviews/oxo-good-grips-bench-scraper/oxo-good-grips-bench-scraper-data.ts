@@ -8,10 +8,10 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "OXO Bench Scraper: The Tool You Didn't Know You Needed",
-    description: "20 years of professional and home use. Why this underrated tool belongs in every kitchen—not just bakeries.",
-    ogTitle: "OXO Good Grips Bench Scraper: 20-Year Professional Review",
-    ogDescription: "The most underrated kitchen tool tested 18 years professionally.",
+    title: "The $15 Tool That Cuts Dough, Cleans Counters & Transfers Garlic",
+    description: "20 years using bench scrapers in restaurants, this OXO model handles dough portioning, counter scraping, and transferring chopped ingredients. Non-slip grip.",
+    ogTitle: "The $15 Tool That Cuts Dough, Cleans Counters & Transfers Garlic",
+    ogDescription: "20 years using bench scrapers in restaurants, this OXO model handles dough portioning, counter scraping, and transferring chopped ingredients. Non-slip grip.",
     testingPeriod: "20 Years (Including 10 Professional)",
     tier: 2
   },

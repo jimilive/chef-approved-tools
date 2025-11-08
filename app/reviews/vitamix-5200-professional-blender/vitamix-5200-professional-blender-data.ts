@@ -8,10 +8,10 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Vitamix 5200: 5 Years at Purple Café (Honest Review)',
-    description: 'Primary blending workhorse under demanding commercial conditions. Professional chef review with honest pros and cons of this $450 investment.',
-    ogTitle: 'Vitamix 5200 Blender Review: 5+ Years Professional Testing',
-    ogDescription: 'Professional chef review after 5+ years of commercial kitchen testing',
+    title: 'Vitamix 5200: 5 Years At Purple Café (The $450 Truth)',
+    description: 'Professional blender tested 5 years in a commercial restaurant kitchen. Honest review of the $450 Vitamix 5200 - what it does well and what it doesn\'t.',
+    ogTitle: 'Vitamix 5200: 5 Years At Purple Café (The $450 Truth)',
+    ogDescription: 'Professional blender tested 5 years in a commercial restaurant kitchen. Honest review of the $450 Vitamix 5200 - what it does well and what it doesn\'t.',
     testingPeriod: '5+ Years Professional Testing',
     tier: 1
   },

@@ -8,10 +8,10 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "OXO Peeler: Doesn't Hurt Your Hand After 50 Potatoes",
-    description: "20 years of professional and home use. Ergonomic design and comfortable grip for extended peeling sessions without hand fatigue.",
-    ogTitle: "OXO Good Grips Swivel Peeler: 20-Year Professional Review",
-    ogDescription: "OXO swivel peeler tested 20 years (including 10 professional). Ergonomic and reliable.",
+    title: "OXO Peeler: The $10 Design That Doesn't Hurt After 50 Potatoes",
+    description: "20 years testing: OXO Good Grips peeler with ergonomic design and comfortable grip. Peel 50 potatoes without hand fatigue. Restaurant kitchen proven.",
+    ogTitle: "OXO Peeler: The $10 Design That Doesn't Hurt After 50 Potatoes",
+    ogDescription: "20 years testing: OXO Good Grips peeler with ergonomic design and comfortable grip. Peel 50 potatoes without hand fatigue. Restaurant kitchen proven.",
     testingPeriod: "20 Years (Including 10 Professional)",
     tier: 2 as const
   },

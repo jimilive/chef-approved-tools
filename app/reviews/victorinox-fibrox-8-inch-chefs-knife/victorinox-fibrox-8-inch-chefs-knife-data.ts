@@ -8,10 +8,10 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "Victorinox 8\" Fibrox: Why Restaurants Buy This Knife",
-    description: "20-year test: professional-grade performance with exceptional value and NSF certification. The workhorse in restaurant kitchens.",
-    ogTitle: "Victorinox 8\" Fibrox Chef's Knife: 20-Year Professional Review",
-    ogDescription: "Victorinox 8\" Fibrox tested 20 years in professional kitchens. The workhorse knife.",
+    title: "Victorinox Fibrox 8\": The $50 Knife America's Test Kitchen Recommends",
+    description: "20-year restaurant test of the Victorinox Fibrox 8\" chef knife. Why this $50 Swiss knife outperforms $200 German blades. NSF-certified workhorse.",
+    ogTitle: "Victorinox Fibrox 8\": The $50 Knife America's Test Kitchen Recommends",
+    ogDescription: "20-year restaurant test of the Victorinox Fibrox 8\" chef knife. Why this $50 Swiss knife outperforms $200 German blades. NSF-certified workhorse.",
     testingPeriod: "20 Years (Including 10 Professional)",
     tier: 1
   },

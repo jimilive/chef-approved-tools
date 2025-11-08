@@ -11,11 +11,11 @@ import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Best Chef Knives 2025: Expert Buying Guide',
-  description: 'Best chef knives 2025: Professional chef reviews from 24 years experience. German workhorses to Japanese precision. Real restaurant kitchen testing.',
+  title: 'Best Chef Knives 2025: Pro Chef Tests 8 Knives ($50-$300)',
+  description: 'Professional chef tests 8 chef knives from $50 to $300 after 24 years in restaurant kitchens. German workhorses vs Japanese precision. Real testing results.',
   openGraph: {
-    title: 'Best Chef Knives 2025: Expert Buying Guide',
-    description: 'Tested in professional kitchens doing $80K+ monthly revenue. Find your perfect chef knife.',
+    title: 'Best Chef Knives 2025: Pro Chef Tests 8 Knives ($50-$300)',
+    description: 'Professional chef tests 8 chef knives from $50 to $300 after 24 years in restaurant kitchens. German workhorses vs Japanese precision. Real testing results.',
   },
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/guides/best-chef-knives',

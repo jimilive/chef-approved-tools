@@ -8,10 +8,10 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "The Non-Toxic Cleaner That Actually Cuts Grease",
-    description: "5 years in a chef's kitchen—Method cleaner handles bacon grease and oil spills without harsh chemicals. It actually works.",
-    ogTitle: "Method All-Purpose Cleaner: 5-Year Review",
-    ogDescription: "Professional chef's honest review: powerful grease-cutting with genuinely non-toxic ingredients.",
+    title: "Method All-Purpose: The $4 Non-Toxic Cleaner That Actually Works",
+    description: "5 years in a professional chef's kitchen, Method cleaner handles bacon grease and oil spills without harsh chemicals. Gentle enough for daily use, tough on grease.",
+    ogTitle: "Method All-Purpose: The $4 Non-Toxic Cleaner That Actually Works",
+    ogDescription: "5 years in a professional chef's kitchen, Method cleaner handles bacon grease and oil spills without harsh chemicals. Gentle enough for daily use, tough on grease.",
     testingPeriod: "5 Years Daily Home Use",
     tier: 2
   },

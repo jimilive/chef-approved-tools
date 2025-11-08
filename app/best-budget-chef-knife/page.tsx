@@ -7,12 +7,12 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata = {
-  title: 'Best Budget Chef Knife 2025: Victorinox 8"',
-  description: "Victorinox Fibrox 8\" tested 20 years: Best budget chef knife under $50. NSF certified, dishwasher safe, outperforms $200+ knives. Professional pick.",
+  title: 'Best Budget Chef Knife 2025: Why Pros Choose The $50 Victorinox',
+  description: "Victorinox Fibrox 8\" tested 20 years in restaurants: Best budget chef knife under $50. NSF certified, dishwasher safe, outperforms $200+ German blades.",
   keywords: "best budget chef knife, affordable chef knife, victorinox fibrox, cheap chef knife that's good, professional knife under $50, budget kitchen knife",
   openGraph: {
-    title: "Best Budget Chef Knife: Victorinox Fibrox 8\" | Professional Pick",
-    description: "45 years of cooking proves this $40 knife outperforms $200+ knives. NSF certified, dishwasher safe, and razor sharp.",
+    title: 'Best Budget Chef Knife 2025: Why Pros Choose The $50 Victorinox',
+    description: "Victorinox Fibrox 8\" tested 20 years in restaurants: Best budget chef knife under $50. NSF certified, dishwasher safe, outperforms $200+ German blades.",
     url: "https://www.chefapprovedtools.com/best-budget-chef-knife",
     type: "article"
   },

@@ -9,8 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Thermometer, AlertTriangle, Clock, Flame } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Why Restaurant Stock Tastes 20x Better",
-  description: "Stock isn't soup base—it's liquid flavor. 24 years of professional kitchens reveals the technique that builds real depth.",
+  title: "The 3-Step Method That Makes Restaurant-Quality Stock",
+  description: "24 years making stock in professional kitchens: The 3-step method that creates deep, rich flavor. Why restaurant stock tastes better than store-bought.",
   keywords: ["how to make stock", "chicken stock recipe", "restaurant stock method", "stock vs broth", "building flavor in stock", "homemade stock"],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/making-stock-professional-chef-method'

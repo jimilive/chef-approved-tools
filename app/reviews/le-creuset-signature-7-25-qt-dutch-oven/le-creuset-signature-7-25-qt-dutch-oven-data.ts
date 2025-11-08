@@ -8,10 +8,10 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "12 Years, Same Dutch Oven: Le Creuset 7.25-Qt",
-    description: "Braising, baking, roasting—12 years of heavy use. The enamel coating is still perfect. This is what $400 actually buys.",
-    ogTitle: "Le Creuset 7.25-Qt Dutch Oven: 12-Year Test (2025)",
-    ogDescription: "Le Creuset 7.25-qt Signature Dutch Oven review after 12 years of home use. Enameled cast iron, 500°F oven safe, made in France since 1925.",
+    title: "Le Creuset 7.25-Qt Dutch Oven: 12 Years Later (Worth $400?)",
+    description: "Braising, baking, roasting, 12 years of heavy use and the Le Creuset enamel coating is still perfect. Honest review of what $400 actually buys you.",
+    ogTitle: "Le Creuset 7.25-Qt Dutch Oven: 12 Years Later (Worth $400?)",
+    ogDescription: "Braising, baking, roasting, 12 years of heavy use and the Le Creuset enamel coating is still perfect. Honest review of what $400 actually buys you.",
     testingPeriod: "12 Years Home Testing",
     tier: 2
   },

@@ -8,11 +8,11 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "Rubbermaid Scraper: 18 Years, Never Replaced",
-    description: "Professional test across two commercial kitchens. This buy-it-for-life tool handles 500°F and outlasts everything else.",
+    title: "The $8 High-Heat Scraper That Survived 18 Years (500°F Rated)",
+    description: "Rubbermaid Commercial scraper tested 18 years across two restaurant kitchens. Handles 500°F griddles, never melts. The buy-it-for-life kitchen scraper.",
     keywords: ['Rubbermaid scraper review', 'commercial spatula', 'professional scraper', 'NSF certified spatula', 'best kitchen scraper', 'rubber spatula', 'high-heat spatula', 'professional kitchen spatula', 'commercial kitchen spatula'],
-    ogTitle: "Rubbermaid Commercial Scraper: 18-Year Professional Review",
-    ogDescription: "18 years of testing proves this scraper is true buy-it-for-life equipment with NSF certification",
+    ogTitle: "The $8 High-Heat Scraper That Survived 18 Years (500°F Rated)",
+    ogDescription: "Rubbermaid Commercial scraper tested 18 years across two restaurant kitchens. Handles 500°F griddles, never melts. The buy-it-for-life kitchen scraper.",
     testingPeriod: "18-Year Real-World Test (2007-2025)",
     tier: 1 as const
   },

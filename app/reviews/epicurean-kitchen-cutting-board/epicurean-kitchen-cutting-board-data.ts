@@ -8,10 +8,10 @@ export const reviewData = {
   
   // Metadata
   metadata: {
-    title: 'The Cutting Board You Can Dishwasher (Really)',
-    description: '10 years of testing—Epicurean survives the dishwasher without warping. Wood boards can\'t do that.',
-    ogTitle: 'Epicurean Cutting Board: Professional Review',
-    ogDescription: 'Professional chef review after 10 years. Dishwasher-safe and better than wood',
+    title: 'Epicurean Cutting Board: 10 Years Testing The Dishwasher-Safe Board',
+    description: '10 years of testing, Epicurean cutting board survives the dishwasher without warping or cracking. NSF-certified composite that wood boards can\'t match.',
+    ogTitle: 'Epicurean Cutting Board: 10 Years Testing The Dishwasher-Safe Board',
+    ogDescription: '10 years of testing, Epicurean cutting board survives the dishwasher without warping or cracking. NSF-certified composite that wood boards can\'t match.',
     testingPeriod: '10+ Years Testing',
     tier: 2,
   },

@@ -8,10 +8,10 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "Victorinox 10\" Chef: For Larger Hands (Pro Test)",
-    description: "10-year professional test. Perfect for big hands and big cutting tasks. Swiss precision and commercial durability at half the price.",
-    ogTitle: "Victorinox 10\" Fibrox Chef's Knife: Professional Review",
-    ogDescription: "Victorinox 10\" chef's knife tested 20 years. Perfect for larger hands.",
+    title: "Victorinox 10\" Chef Knife: For Larger Hands ($60 vs $200 Knives)",
+    description: "10-year professional test. The Victorinox 10\" chef knife is perfect for larger hands and big cutting tasks. Swiss precision at $60 vs $200+ German knives.",
+    ogTitle: "Victorinox 10\" Chef Knife: For Larger Hands ($60 vs $200 Knives)",
+    ogDescription: "10-year professional test. The Victorinox 10\" chef knife is perfect for larger hands and big cutting tasks. Swiss precision at $60 vs $200+ German knives.",
     testingPeriod: "20 Years (Including 10 Professional)",
     tier: 1
   },

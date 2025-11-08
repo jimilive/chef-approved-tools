@@ -8,10 +8,10 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "KitchenAid Commercial: 18 Months Restaurant Abuse",
-    description: "Daily service in a real restaurant kitchen—pizza dough, bread, pasta. The NSF-certified mixer that handles commercial workloads.",
-    ogTitle: "KitchenAid Commercial Mixer: Professional Review After 18 Months Commercial Use",
-    ogDescription: "Professional KitchenAid stand mixer review after 18 months commercial kitchen testing",
+    title: "KitchenAid Commercial NSF Mixer: 18 Months In A Real Restaurant",
+    description: "Daily service in a real restaurant kitchen, pizza dough, bread, pasta. The KitchenAid KSM8990WH commercial mixer that handles professional workloads.",
+    ogTitle: "KitchenAid Commercial NSF Mixer: 18 Months In A Real Restaurant",
+    ogDescription: "Daily service in a real restaurant kitchen, pizza dough, bread, pasta. The KitchenAid KSM8990WH commercial mixer that handles professional workloads.",
     testingPeriod: "18 Months Restaurant Testing",
     tier: 1
   },
