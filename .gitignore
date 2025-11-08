@@ -18,3 +18,10 @@ tsconfig.tsbuildinfo
 .netlify
 netlify.toml
 netlify/
+
+# Archive folder
+_ARCHIVE_DO_NOT_USE/
+
+# Excel temp files
+~$*.xlsx
+~$*.xls
