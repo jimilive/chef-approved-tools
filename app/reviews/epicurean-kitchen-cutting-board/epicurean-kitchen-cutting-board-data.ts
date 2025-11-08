@@ -73,7 +73,7 @@ export const reviewData = {
     },
     verdict: `I've used wooden boards for decades. These are better. Period. Dishwasher-safe changes everything - truly sanitary, knife-friendly, and won't harbor bacteria like wood. After 24 years of professional cooking experience, I thought I knew cutting boards. Wood or bamboo, hand-wash only, oil regularly to prevent cracking. That was the gospel.`,
     verdictStrong: `Then I discovered Epicurean boards and everything changed. These boards are made from compressed wood fibers - knife-friendly like wood, but completely dishwasher-safe and non-porous. No more worrying about bacteria hiding in knife scars. This is the future of cutting boards.`,
-    ctaText: 'View on Amazon →',
+    ctaText: 'Check Price on Amazon →',
   },
 
   // Testing Results

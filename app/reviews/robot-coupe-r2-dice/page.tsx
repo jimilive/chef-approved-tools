@@ -387,7 +387,7 @@ export default async function RobotCoupeR2DiceReview() {
           <p className="text-center mt-3 text-sm">
             <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
               target="_blank" rel="noopener noreferrer sponsored">
-              → View on Amazon
+              → Check Price on Amazon
             </a>
           </p>
         </div>

@@ -531,7 +531,7 @@ export default async function RubbermaidScraperReview() {
                   <p className="text-center mt-2 text-sm">
                     <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
                       target="_blank" rel="noopener noreferrer sponsored">
-                      → View on Amazon
+                      → Check Price on Amazon
                     </a>
                   </p>
                 </div>
@@ -566,7 +566,7 @@ export default async function RubbermaidScraperReview() {
                   <p className="text-center mt-2 text-sm">
                     <a href={affiliate9_5Url} className="text-green-700 hover:text-green-800 underline font-medium"
                       target="_blank" rel="noopener noreferrer sponsored">
-                      → View on Amazon
+                      → Check Price on Amazon
                     </a>
                   </p>
                 </div>

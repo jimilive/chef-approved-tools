@@ -72,7 +72,7 @@ export const reviewData = {
     },
     verdict: `For 6 years at Purple Café, a 200+ cover restaurant, Diamond Crystal Kosher Salt was the only salt we used in the kitchen. Cases of it. Monthly deliveries. Every station had a container within reach. Why? Because when you're seasoning hundreds of plates per service, you need salt that's predictable, fast to pinch, and clean-tasting every time.`,
     verdictStrong: `Eighteen years later, it's still the only salt in my home kitchen. That's 18 years of continuous use—from 2007 to today—both professionally and at home. I've never found a reason to switch.`,
-    ctaText: 'View on Amazon →',
+    ctaText: 'Check Price on Amazon →',
   },
 
   // Testing Results

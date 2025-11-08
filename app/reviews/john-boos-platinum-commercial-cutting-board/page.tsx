@@ -244,7 +244,7 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
               />
             </a>
             <p className="text-center text-sm text-slate-500 mt-3 italic">
-              Click image to view on Amazon
+              Click image to check price on Amazon
             </p>
           </div>
 
@@ -286,7 +286,7 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
               />
             </a>
             <p className="text-center text-sm text-slate-500 mt-3 italic">
-              Click image to view on Amazon
+              Click image to check price on Amazon
             </p>
           </div>
 

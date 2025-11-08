@@ -196,7 +196,7 @@ export default async function ProductReview() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          View on Amazon
+                          Check Price on Amazon
                         </a>
                       </div>
                     </div>
@@ -245,7 +245,7 @@ export default async function ProductReview() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        View on Amazon
+                        Check Price on Amazon
                       </a>
                     </div>
                   </div>
