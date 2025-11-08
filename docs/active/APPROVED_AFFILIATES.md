@@ -1,6 +1,6 @@
 # Approved Affiliate Programs
 
-**Last Updated:** 2025-10-07
+**Last Updated:** 2025-11-08
 
 ---
 
@@ -26,6 +26,14 @@
    - Status: ✅ Approved
    - Products: Cutting boards, butcher blocks, kitchen furniture
 
+3. **Vitamix**
+   - Status: ✅ Approved
+   - Products: Professional blenders, containers, accessories
+
+4. **Instant Brands (Instant Pot)**
+   - Status: ✅ Approved
+   - Products: Instant Pot multi-cookers, pressure cookers, air fryers
+
 ---
 
 ## Pending Applications
@@ -49,6 +57,8 @@
 - **Amazon:** Primary affiliate for most products
 - **CJ - Zwilling:** Premium knife collections
 - **CJ - John Boos:** Professional cutting boards
+- **CJ - Vitamix:** Professional blenders
+- **CJ - Instant Brands:** Instant Pot multi-cookers
 
 ---
 
