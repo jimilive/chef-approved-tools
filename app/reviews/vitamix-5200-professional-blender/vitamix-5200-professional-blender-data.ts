@@ -45,6 +45,16 @@ export const reviewData = {
     ctaText: 'Check Price on Amazon →'
   },
 
+  // QUICK STATS (displayed in hero section)
+  quickStats: {
+    specifications: [
+      { label: "Motor", value: "2.0 HP", icon: "⚡" },
+      { label: "Capacity", value: "64 oz", icon: "🥤" },
+      { label: "Tested", value: "5+ Years", icon: "⏰" },
+      { label: "Made In", value: "USA", icon: "🇺🇸" }
+    ]
+  },
+
   // SECTION 2: TESTING RESULTS
   testingResults: {
     title: '5+ Years of Professional Kitchen Testing',

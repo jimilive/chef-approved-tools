@@ -18,7 +18,6 @@ import {
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
-import DateDisplay from '@/components/DateDisplay'
 
 // Import review data
 import { reviewData } from './vitamix-5200-professional-blender-data'
@@ -71,6 +70,28 @@ export async function generateMetadata(): Promise<Metadata> {
       })],
     },
   }
+}
+
+// Helper function to process inline product links
+function processInlineLinks(text: string, affiliateUrl: string, productName: string): (string | JSX.Element)[] {
+  const parts = text.split(/(<LINK>.*?<\/LINK>)/g)
+  return parts.map((part, index) => {
+    if (part.startsWith('<LINK>') && part.endsWith('</LINK>')) {
+      const linkText = part.slice(6, -7)
+      return (
+        <a
+          key={index}
+          href={affiliateUrl}
+          className="text-orange-700 hover:text-orange-800 font-medium no-underline hover:underline"
+          target="_blank"
+          rel="noopener noreferrer sponsored"
+        >
+          {linkText}
+        </a>
+      )
+    }
+    return part
+  })
 }
 
 export default async function ProductReview() {
@@ -152,14 +173,6 @@ export default async function ProductReview() {
             {reviewData.breadcrumb.productName}
           </div>
 
-          {/* DATES */}
-          <DateDisplay
-            published="2025-10-28"
-            updated="2025-11-07"
-            variant="review"
-            className="mb-4"
-          />
-
           {/* SECTION 1: HERO */}
           <ReviewHero
             title={reviewData.hero.title}
@@ -171,6 +184,17 @@ export default async function ProductReview() {
             verdictStrong={reviewData.hero.verdictStrong}
             customCTA={
               <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
+                {/* Quick Stats Grid */}
+                <div className="grid grid-cols-2 gap-2 text-sm mb-6">
+                  {reviewData.quickStats.specifications.map((spec, i) => (
+                    <div key={i} className="flex items-center gap-2">
+                      <span>{spec.icon}</span>
+                      <span className="text-slate-700"><strong>{spec.label}:</strong> {spec.value}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA Button */}
                 <CTAVisibilityTracker
                   ctaId={`${reviewData.productSlug}-hero-cta`}
                   position="above_fold"
@@ -186,7 +210,8 @@ export default async function ProductReview() {
                     {reviewData.hero.ctaText}
                   </a>
                 </CTAVisibilityTracker>
-                {/* V2: TEXT LINK UNDER BUTTON */}
+
+                {/* Text link under button */}
                 <p className="text-center mt-3 text-sm">
                   <a
                     href={affiliateUrl}
@@ -197,6 +222,7 @@ export default async function ProductReview() {
                     → View {productData.name} on Amazon
                   </a>
                 </p>
+
                 <p className="text-xs text-slate-700 text-center mt-3">
                   As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
                 </p>
@@ -207,7 +233,10 @@ export default async function ProductReview() {
           {/* SECTION 2: TESTING RESULTS */}
           <TestingResultsGrid
             title={reviewData.testingResults.title}
-            sections={reviewData.testingResults.sections}
+            sections={reviewData.testingResults.sections.map(section => ({
+              ...section,
+              content: <>{processInlineLinks(typeof section.content === 'string' ? section.content : '', affiliateUrl, productData.name)}</>
+            }))}
             testingEnvironment={reviewData.testingResults.testingEnvironment}
             outstandingPerformance={reviewData.testingResults.outstandingPerformance}
             minorConsiderations={reviewData.testingResults.minorConsiderations}
@@ -216,33 +245,10 @@ export default async function ProductReview() {
           {/* SECTION 3: PERFORMANCE ANALYSIS */}
           <PerformanceAnalysis
             title={reviewData.performanceAnalysis.title}
-            sections={reviewData.performanceAnalysis.sections.map((section, idx) => {
-              // Add inline product links to 2-3 sections
-              if (idx === 0 || idx === 1) {
-                const content = typeof section.content === 'string' ? section.content : '';
-                const parts = content.split('This blender');
-                if (parts.length > 1) {
-                  return {
-                    ...section,
-                    content: (
-                      <>
-                        {parts[0]}
-                        <a
-                          href={affiliateUrl}
-                          className="text-orange-700 hover:text-orange-800 font-medium"
-                          target="_blank"
-                          rel="noopener noreferrer sponsored"
-                        >
-                          This blender
-                        </a>
-                        {parts.slice(1).join('This blender')}
-                      </>
-                    )
-                  };
-                }
-              }
-              return section;
-            })}
+            sections={reviewData.performanceAnalysis.sections.map(section => ({
+              ...section,
+              content: <>{processInlineLinks(typeof section.content === 'string' ? section.content : '', affiliateUrl, productData.name)}</>
+            }))}
           />
 
           {/* SECTION 4: BLENDER COMPARISON TABLE */}
@@ -338,7 +344,11 @@ export default async function ProductReview() {
           {/* SECTION 10: BOTTOM LINE */}
           <BottomLineSection
             title={reviewData.bottomLine.title}
-            paragraphs={reviewData.bottomLine.paragraphs}
+            paragraphs={reviewData.bottomLine.paragraphs.map((paragraph, i) => (
+              <p key={i} className="text-lg leading-relaxed">
+                {processInlineLinks(paragraph, affiliateUrl, productData.name)}
+              </p>
+            ))}
             customCTA={
               <div className="bg-white rounded-xl p-6">
                 <CTAVisibilityTracker
@@ -357,7 +367,7 @@ export default async function ProductReview() {
                   </a>
                 </CTAVisibilityTracker>
 
-                {/* V2: TEXT LINK UNDER BUTTON */}
+                {/* Text link under button */}
                 <p className="text-center mt-3 text-sm">
                   <a
                     href={affiliateUrl}
