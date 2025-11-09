@@ -220,6 +220,8 @@ const nextConfig = {
         destination: '/reviews/:slug',
         permanent: true,
       },
+
+      // ===== GHOST PAGE CLEANUP - Methodology & Renamed Reviews =====
       {
         source: '/methodology',
         destination: '/about',
@@ -235,8 +237,70 @@ const nextConfig = {
         destination: '/reviews/vitamix-5200-professional-blender',
         permanent: true,
       },
+      {
+        source: '/reviews/gold-textiles-bar-mops',
+        destination: '/reviews/zuperia-bar-mops',
+        permanent: true,
+      },
+      {
+        source: '/reviews/victorinox-fibrox-pro-knife-set',
+        destination: '/reviews/victorinox-fibrox-8-inch-chefs-knife',
+        permanent: true,
+      },
 
-      // Blog link redirects - remove -review suffix and fix common variations
+      // ===== SEO CANNIBALIZATION FIXES - Merged Blog Posts =====
+      {
+        source: '/blog/cast-iron-mistakes-ruin-pan',
+        destination: '/blog/cast-iron-seasoning-care',
+        permanent: true,
+      },
+      {
+        source: '/blog/deglazing-secret-to-restaurant-quality-flavor',
+        destination: '/blog/deglazing-pan-sauces',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-season-cast-iron-like-restaurant-chef',
+        destination: '/blog/cast-iron-seasoning-care',
+        permanent: true,
+      },
+      {
+        source: '/blog/kitchen-thermometer-guide',
+        destination: '/blog/kitchen-thermometers-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/knife-block-vs-magnetic-strip-vs-drawer-storage',
+        destination: '/blog/knife-storage-protecting-blades-for-decades',
+        permanent: true,
+      },
+      {
+        source: '/blog/knife-cuts-guide',
+        destination: '/blog/essential-knife-cuts-every-cook-should-master',
+        permanent: true,
+      },
+      {
+        source: '/blog/knife-mistakes-home-cooks-make',
+        destination: '/blog/knife-safety-rules-professional-kitchens',
+        permanent: true,
+      },
+      {
+        source: '/blog/knife-safety-protect-fingers',
+        destination: '/blog/knife-safety-rules-professional-kitchens',
+        permanent: true,
+      },
+      {
+        source: '/blog/professional-knife-grip-techniques',
+        destination: '/blog/knife-skills-how-to-hold-chef-knife',
+        permanent: true,
+      },
+      {
+        source: '/blog/roasting-vegetables-restaurant-guide',
+        destination: '/blog/vegetable-roasting-guide',
+        permanent: true,
+      },
+
+      // ===== BLOG LINK VARIATIONS - Common URL Patterns =====
       {
         source: '/reviews/victorinox-fibrox-8-inch-chef-knife',
         destination: '/reviews/victorinox-fibrox-8-inch-chefs-knife',
@@ -307,63 +371,8 @@ const nextConfig = {
         destination: '/reviews/cuisinart-8-inch-nonstick-pan',
         permanent: true,
       },
-
-      // SEO Cannibalization Fixes - Merged Content Redirects
-      {
-        source: '/blog/professional-knife-grip-techniques',
-        destination: '/blog/knife-skills-how-to-hold-chef-knife',
-        permanent: true,
-      },
-      {
-        source: '/blog/deglazing-secret-to-restaurant-quality-flavor',
-        destination: '/blog/deglazing-pan-sauces',
-        permanent: true,
-      },
-      {
-        source: '/blog/kitchen-thermometer-guide',
-        destination: '/blog/kitchen-thermometers-guide',
-        permanent: true,
-      },
-      {
-        source: '/blog/cast-iron-mistakes-ruin-pan',
-        destination: '/blog/cast-iron-seasoning-care',
-        permanent: true,
-      },
-      {
-        source: '/blog/how-to-season-cast-iron-like-restaurant-chef',
-        destination: '/blog/cast-iron-seasoning-care',
-        permanent: true,
-      },
-      {
-        source: '/blog/knife-mistakes-home-cooks-make',
-        destination: '/blog/knife-safety-rules-professional-kitchens',
-        permanent: true,
-      },
-      {
-        source: '/blog/knife-safety-protect-fingers',
-        destination: '/blog/knife-safety-rules-professional-kitchens',
-        permanent: true,
-      },
-      {
-        source: '/blog/knife-cuts-guide',
-        destination: '/blog/essential-knife-cuts-every-cook-should-master',
-        permanent: true,
-      },
-      {
-        source: '/blog/knife-block-vs-magnetic-strip-vs-drawer-storage',
-        destination: '/blog/knife-storage-protecting-blades-for-decades',
-        permanent: true,
-      },
-      {
-        source: '/blog/roasting-vegetables-restaurant-guide',
-        destination: '/blog/vegetable-roasting-guide',
-        permanent: true,
-      },
-
     ]
   },
-  
-
 }
 
 module.exports = nextConfig
