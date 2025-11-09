@@ -109,8 +109,12 @@ export default async function ProductReview() {
       : reviewData.legacyProductData.affiliateLinks
   } : reviewData.legacyProductData
 
-  // Get primary affiliate link
-  const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
+  // ===== STRATEGIC AFFILIATE LINK SELECTION =====
+  // Priority: Supabase primary link > Strategic primary > Fallback
+  const primaryLink = product ? getPrimaryAffiliateLink(product) : reviewData.strategicLinks.primary.url
+  const salePageLink = reviewData.strategicLinks.secondary.url
+  const shopAllLink = reviewData.strategicLinks.tertiary.url
+  const vitamixDirectLink = reviewData.strategicLinks.vitamixDirect.url
 
   // Generate breadcrumbs
   const breadcrumbs = [
@@ -194,36 +198,36 @@ export default async function ProductReview() {
                   ))}
                 </div>
 
-                {/* CTA Button */}
+                {/* PRIMARY CTA Button */}
                 <CTAVisibilityTracker
                   ctaId={`${reviewData.productSlug}-hero-cta`}
                   position="above_fold"
                   productSlug={reviewData.productSlug}
-                  merchant="amazon"
+                  merchant="vitamix"
                 >
                   <a
-                    href={affiliateUrl}
+                    href={primaryLink}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl mb-3"
                   >
                     {reviewData.hero.ctaText}
                   </a>
                 </CTAVisibilityTracker>
 
-                {/* Text link under button */}
-                <p className="text-center mt-3 text-sm">
+                {/* SECONDARY CTA - Sale Page Link (EPC: $178.16!) */}
+                <p className="text-center text-sm mb-4">
                   <a
-                    href={affiliateUrl}
+                    href={salePageLink}
                     className="text-orange-700 hover:text-orange-800 underline font-medium"
                     target="_blank"
                     rel="noopener noreferrer sponsored"
                   >
-                    → View {productData.name} on Amazon
+                    → Check Current Vitamix Deals & Promotions
                   </a>
                 </p>
 
-                <p className="text-xs text-slate-700 text-center mt-3">
+                <p className="text-xs text-slate-600 text-center">
                   As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
                 </p>
               </div>
@@ -235,7 +239,7 @@ export default async function ProductReview() {
             title={reviewData.testingResults.title}
             sections={reviewData.testingResults.sections.map(section => ({
               ...section,
-              content: <>{processInlineLinks(typeof section.content === 'string' ? section.content : '', affiliateUrl, productData.name)}</>
+              content: <>{processInlineLinks(typeof section.content === 'string' ? section.content : '', primaryLink, productData.name)}</>
             }))}
             testingEnvironment={reviewData.testingResults.testingEnvironment}
             outstandingPerformance={reviewData.testingResults.outstandingPerformance}
@@ -247,7 +251,7 @@ export default async function ProductReview() {
             title={reviewData.performanceAnalysis.title}
             sections={reviewData.performanceAnalysis.sections.map(section => ({
               ...section,
-              content: <>{processInlineLinks(typeof section.content === 'string' ? section.content : '', affiliateUrl, productData.name)}</>
+              content: <>{processInlineLinks(typeof section.content === 'string' ? section.content : '', primaryLink, productData.name)}</>
             }))}
           />
 
@@ -284,7 +288,7 @@ export default async function ProductReview() {
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 8: WHERE TO BUY */}
+          {/* SECTION 8: WHERE TO BUY - STRATEGIC MULTI-LINK SECTION */}
           <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
             <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
               {reviewData.whereToBuy.title}
@@ -294,67 +298,56 @@ export default async function ProductReview() {
               {reviewData.whereToBuy.introText}
             </p>
 
-            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
+            {/* PRIMARY OPTION: Vitamix Direct - Direct Product */}
+            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50 mb-4">
               <div className="text-center mb-4">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-                <p className="text-sm text-slate-900 mb-4">Prime shipping, verified reviews, easy returns</p>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Vitamix Direct</h3>
+                <p className="text-sm text-slate-900 mb-4">Factory direct, full warranty, occasional promotions</p>
               </div>
 
               <CTAVisibilityTracker
-                ctaId={`${reviewData.productSlug}-where-to-buy-cta`}
+                ctaId={`${reviewData.productSlug}-where-to-buy-primary`}
                 position="mid_article"
                 productSlug={reviewData.productSlug}
-                merchant="amazon"
+                merchant="vitamix"
               >
                 <a
-                  href={affiliateUrl}
+                  href={primaryLink}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
                   className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
                 >
-                  Check Price on Amazon →
+                  Check Price on Vitamix.com →
                 </a>
               </CTAVisibilityTracker>
 
-              {/* V2: TEXT LINK UNDER BUTTON */}
+              {/* SECONDARY: Sale Page Link (HIGHEST EPC) */}
               <p className="text-center mt-3 text-sm">
                 <a
-                  href={affiliateUrl}
+                  href={salePageLink}
                   className="text-orange-700 hover:text-orange-800 underline font-medium"
                   target="_blank"
                   rel="noopener noreferrer sponsored"
                 >
-                  → View {productData.name} on Amazon
+                  → Check Current Vitamix Deals & Promotions
+                </a>
+              </p>
+
+              {/* TERTIARY: Compare Models Link */}
+              <p className="text-center mt-2 text-sm">
+                <a
+                  href={shopAllLink}
+                  className="text-orange-700 hover:text-orange-800 underline font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                >
+                  → Compare All Vitamix Models
                 </a>
               </p>
 
               <p className="text-xs text-slate-700 text-center mt-3">
-                As an Amazon Associate, I earn from qualifying purchases.
+                As a Vitamix affiliate, I earn from qualifying purchases.
               </p>
-            </div>
-
-            <div className="border border-gray-200 rounded-xl p-6 mt-4">
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Vitamix Direct</h3>
-                  <p className="text-sm text-slate-600 m-0">Factory direct, full warranty, occasional promotions</p>
-                </div>
-                <CTAVisibilityTracker
-                  ctaId={`${reviewData.productSlug}-where-to-buy-vitamix-direct`}
-                  position="mid_article"
-                  productSlug={reviewData.productSlug}
-                  merchant="vitamix"
-                >
-                  <a
-                    href="https://www.anrdoezrs.net/links/101557027/type/dlg/sid/7745121/https://www.vitamix.com/us/en_us/products/5200-standard-getting-started"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold px-8 py-3 rounded-lg text-base transition-all whitespace-nowrap"
-                  >
-                    Visit Vitamix.com →
-                  </a>
-                </CTAVisibilityTracker>
-              </div>
             </div>
 
             <p className="text-sm text-slate-600 mt-6 italic">
@@ -370,7 +363,7 @@ export default async function ProductReview() {
             title={reviewData.bottomLine.title}
             paragraphs={reviewData.bottomLine.paragraphs.map((paragraph, i) => (
               <p key={i} className="text-lg leading-relaxed">
-                {processInlineLinks(paragraph, affiliateUrl, productData.name)}
+                {processInlineLinks(paragraph, primaryLink, productData.name)}
               </p>
             ))}
             customCTA={
@@ -379,10 +372,10 @@ export default async function ProductReview() {
                   ctaId={`${reviewData.productSlug}-bottom-line-cta`}
                   position="final_cta"
                   productSlug={reviewData.productSlug}
-                  merchant="amazon"
+                  merchant="vitamix"
                 >
                   <a
-                    href={affiliateUrl}
+                    href={primaryLink}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
                     className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
@@ -391,20 +384,20 @@ export default async function ProductReview() {
                   </a>
                 </CTAVisibilityTracker>
 
-                {/* Text link under button */}
+                {/* Secondary sale link */}
                 <p className="text-center mt-3 text-sm">
                   <a
-                    href={affiliateUrl}
+                    href={salePageLink}
                     className="text-orange-700 hover:text-orange-800 underline font-medium"
                     target="_blank"
                     rel="noopener noreferrer sponsored"
                   >
-                    → View {productData.name} on Amazon
+                    → Check Current Vitamix Deals
                   </a>
                 </p>
 
                 <p className="text-xs text-slate-700 text-center mt-3">
-                  As an Amazon Associate, I earn from qualifying purchases.
+                  As a Vitamix affiliate, I earn from qualifying purchases.
                 </p>
               </div>
             }

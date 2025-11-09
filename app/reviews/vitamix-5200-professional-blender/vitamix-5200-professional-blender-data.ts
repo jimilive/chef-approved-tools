@@ -1,8 +1,12 @@
 /**
  * Vitamix 5200 Professional Blender Review Data
  *
- * This file contains all content for the Vitamix 5200 review page.
- * Separated from page.tsx for maintainability and reusability.
+ * UPDATED: Strategic multi-link affiliate approach for maximum conversions
+ * Based on CJ Commission Junction EPC analysis (November 2025)
+ * 
+ * Works with existing Supabase structure - no database changes needed.
+ * Strategic links are added as supplementary CTAs while maintaining
+ * backward compatibility with getPrimaryAffiliateLink().
  */
 
 export const reviewData = {
@@ -25,6 +29,67 @@ export const reviewData = {
     hook: 'Professional-grade blending power that survived 5+ years of daily restaurant abuse',
   },
 
+  // ===== STRATEGIC AFFILIATE LINKS =====
+  // Based on CJ Commission Junction program analysis
+  // Cookie window: 30 days (vs Amazon's 24 hours)
+  // Commission: ~10% on Vitamix direct sales
+  // 
+  // KEY INSIGHT: Any click sets a 30-day cookie. If they buy ANY Vitamix 
+  // product within 30 days, you get credit. This makes strategic link 
+  // placement critical for maximizing revenue.
+  //
+  // EPC = Earnings Per Click (higher = better converting link)
+  strategicLinks: {
+    // PRIMARY CTA: Direct Product Link
+    // EPC: $65.44 (7-day average)
+    // Use for: Main CTA buttons, hero section, bottom line
+    // Buyer psychology: High intent, ready to buy THIS model
+    primary: {
+      url: 'https://www.anrdoezrs.net/click-101557027-7745121',
+      displayText: 'Check Price on Vitamix.com',
+      linkId: '7745121',
+      epc: 65.44,
+      merchant: 'vitamix',
+      description: 'Direct 5200 product page - for high-intent buyers'
+    },
+
+    // SECONDARY CTA: Sale Page (HIGHEST EPC!)
+    // EPC: $178.16 (3-month average) - 2.7x higher than direct!
+    // Use for: Secondary text links, "current deals" mentions
+    // Buyer psychology: Price-conscious, browsers, comparison shoppers
+    // Why it converts: People buy higher-end models on sale, bundles
+    secondary: {
+      url: 'https://www.jdoqocy.com/click-101557027-15472587',
+      displayText: 'Check Current Vitamix Deals',
+      linkId: '15472587',
+      epc: 178.16,
+      merchant: 'vitamix',
+      description: 'Sale page - catches browsers, deal hunters, upgraders'
+    },
+
+    // TERTIARY CTA: Shop All Models
+    // EPC: $65.71 (3-month average)
+    // Use for: Comparison contexts, "not sure?" scenarios
+    // Buyer psychology: Researchers, comparison shoppers
+    tertiary: {
+      url: 'https://www.anrdoezrs.net/click-101557027-13032097',
+      displayText: 'Compare All Vitamix Models',
+      linkId: '13032097',
+      epc: 65.71,
+      merchant: 'vitamix',
+      description: 'Main shop - for model comparisons'
+    },
+
+    // VITAMIX DIRECT: Original link (keep for compatibility)
+    vitamixDirect: {
+      url: 'https://www.anrdoezrs.net/links/101557027/type/dlg/sid/7745121/https://www.vitamix.com/us/en_us/products/5200-standard-getting-started',
+      displayText: 'Visit Vitamix.com',
+      linkId: '7745121',
+      merchant: 'vitamix',
+      description: 'Factory direct - Getting Started bundle'
+    }
+  },
+
   // BREADCRUMB
   breadcrumb: {
     productName: 'Vitamix 5200'
@@ -42,7 +107,7 @@ export const reviewData = {
     },
     verdict: 'After 5+ years as our primary blending workhorse at Purple Cafe, the Vitamix 5200 delivered flawless performance under demanding commercial conditions. Extremely durable under daily commercial usage, handling restaurant volume spectacularly with consistent, thorough results. The power and ability to create even, smooth products far exceeds other blenders we\'ve tested.',
     verdictStrong: 'Professional-grade blending power proven in 5+ years of restaurant use',
-    ctaText: 'Check Price on Amazon →'
+    ctaText: 'Check Price on Vitamix.com →'
   },
 
   // QUICK STATS (displayed in hero section)
@@ -196,7 +261,7 @@ export const reviewData = {
       'After 5+ years as our primary blending workhorse at Purple Cafe, the Vitamix 5200 has more than proven its worth. This isn\'t a blender—it\'s a professional-grade food processing system that happens to excel at blending. The 2.0 HP motor delivers commercial-level power that transforms ingredients into restaurant-quality results.',
       'The durability is remarkable. Zero maintenance, zero repairs, zero performance degradation after 5+ years of daily commercial abuse. The 7-year warranty is industry-leading, but based on our testing, this machine will outlast its warranty period by a decade or more. For serious home cooks who blend regularly and want buy-it-for-life quality, the Vitamix 5200 justifies its premium pricing through decades of reliable performance.'
     ],
-    ctaText: 'Check Price on Amazon →'
+    ctaText: 'Check Price on Vitamix.com →'
   },
 
   // SECTION 10: RELATED PRODUCTS
@@ -222,7 +287,7 @@ export const reviewData = {
         href: '/reviews/ninja-bl660-professional-blender'
       },
       {
-        emoji: '📏',
+        emoji: '🔪',
         name: 'John Boos Cutting Board',
         description: 'Professional cutting board for prep work',
         href: '/reviews/john-boos-platinum-commercial-cutting-board'
@@ -256,12 +321,13 @@ export const reviewData = {
       'Premium pricing requires serious commitment',
       'Large footprint requires dedicated counter space'
     ],
+    // Keep affiliateLinks array empty - strategic links are in strategicLinks object
     affiliateLinks: [],
     inStock: true,
     expertRating: 4.8,
     expertOpinion: 'After 5+ years as our primary blending workhorse at Purple Cafe, the Vitamix 5200 delivered flawless performance under demanding commercial conditions.',
     dateAdded: '2024-09-23',
-    lastUpdated: '2024-09-23'
+    lastUpdated: '2024-11-08'
   }
 }
 
