@@ -333,6 +333,30 @@ export default async function ProductReview() {
               </p>
             </div>
 
+            <div className="border border-gray-200 rounded-xl p-6 mt-4">
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Vitamix Direct</h3>
+                  <p className="text-sm text-slate-600 m-0">Factory direct, full warranty, occasional promotions</p>
+                </div>
+                <CTAVisibilityTracker
+                  ctaId={`${reviewData.productSlug}-where-to-buy-vitamix-direct`}
+                  position="mid_article"
+                  productSlug={reviewData.productSlug}
+                  merchant="vitamix"
+                >
+                  <a
+                    href="https://www.anrdoezrs.net/links/101557027/type/dlg/sid/7745121/https://www.vitamix.com/us/en_us/products/5200-standard-getting-started"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold px-8 py-3 rounded-lg text-base transition-all whitespace-nowrap"
+                  >
+                    Visit Vitamix.com →
+                  </a>
+                </CTAVisibilityTracker>
+              </div>
+            </div>
+
             <p className="text-sm text-slate-600 mt-6 italic">
               {reviewData.whereToBuy.disclaimer}
             </p>
