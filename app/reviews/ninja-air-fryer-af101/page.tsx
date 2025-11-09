@@ -98,6 +98,7 @@ export default async function NinjaAirFryerAF101ReviewPage() {
   // Generate schemas
   const productSchema = generateProductSchema({
     name: productData.name,
+    slug: productData.slug,
     description: productData.expertOpinion,
     brand: productData.brand,
     rating: productData.expertRating,

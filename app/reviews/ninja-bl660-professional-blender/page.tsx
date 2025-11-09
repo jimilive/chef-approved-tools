@@ -87,6 +87,7 @@ export default async function NinjaBL660ReviewPage() {
 
   const productSchema = generateProductSchema({
     name: productData.name,
+    slug: productData.slug,
     description: productData.expertOpinion,
     brand: productData.brand,
     rating: productData.expertRating,
