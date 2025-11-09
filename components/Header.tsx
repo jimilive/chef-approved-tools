@@ -46,7 +46,7 @@ export default function Header() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 no-underline hover:opacity-90 transition-opacity">
+            <Link href="/" className="flex items-center gap-3 no-underline hover:opacity-90 transition-opacity mr-8">
               <div className="relative">
                 <Image
                   src="/logo.png"
@@ -70,7 +70,7 @@ export default function Header() {
                 </span>
               </div>
             </Link>
-            
+
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               {navigation.map((item) => (
@@ -84,7 +84,7 @@ export default function Header() {
               ))}
               <Link
                 href="/newsletter"
-                className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-all"
+                className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-all whitespace-nowrap"
               >
                 Free Guide
               </Link>

@@ -63,7 +63,7 @@ export default function HomePage() {
       {/* Inline Critical CSS for LCP optimization */}
       <style dangerouslySetInnerHTML={{__html: `
         .hero-section {
-          min-height: 100vh;
+          min-height: 60vh;
           display: flex;
           align-items: center;
         }
@@ -89,8 +89,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-xl text-slate-300 leading-relaxed">
-                24 years in professional kitchens—from Mellow Mushroom to Purple Café to your home kitchen.
-                Honest reviews. No affiliate pressure. Just the tools that actually work.
+                24 years cooking professionally at Mellow Mushroom, Purple Café, and more. Now sharing what actually works in your kitchen. Honest reviews. Zero pressure. Just results.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
