@@ -2,6 +2,10 @@
  * Dutch Oven Comparison Data for Le Creuset 7.25 Qt Review
  * Research completed: November 4, 2025
  * Sources: America's Test Kitchen, Prudent Reviews, Consumer Reports
+ * 
+ * AFFILIATE LINK UPDATE: November 8, 2025
+ * - Staub link changed from Amazon (1-3%) to Zwilling direct (8%)
+ * - Using CJ Affiliate Link ID: 15728361 (Staub Cocotte category)
  */
 
 export const dutchOvenComparisonData = {
@@ -22,11 +26,11 @@ export const dutchOvenComparisonData = {
       priceTier: 'luxury' as const,
     },
 
-    // STAUB 7 QT
+    // STAUB 7 QT - Updated to Zwilling Direct (8% commission)
     {
       name: 'Staub 7 Qt',
       brand: 'Staub',
-      affiliateLink: 'https://amzn.to/43gi7s4',
+      affiliateLink: 'https://www.dpbolvw.net/click-101557027-15728361',
       capacity: '7 Qt',
       weight: '15.6 lbs',
       dimensions: '11.25" diameter x 7.25" tall',
