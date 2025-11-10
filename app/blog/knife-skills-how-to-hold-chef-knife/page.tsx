@@ -6,7 +6,10 @@ import {
   generateFAQSchema
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
-import { ChefHat, Target, Hand, AlertTriangle, CheckCircle2 } from 'lucide-react';
+import { ChefHat, Hand, AlertTriangle, CheckCircle2, Target } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: "How To Hold A Chef Knife: Proper Grip For Control & Safety",
@@ -93,30 +96,16 @@ export default function KnifeSkillsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-700 mb-4">
-            <Target className="w-5 h-5" />
-            <span className="text-sm font-medium">Technique Guide</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Professional Knife Grip Techniques: Complete Guide
-          </h1>
-          <p className="text-xl text-slate-600">
-            The professional pinch grip, claw position, paring grip, and rocking motion that make cooking safer, faster, and more enjoyable.
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
-            <span>By Chef Scott Bradley</span>
-            <span>•</span>
-            <span>October 6, 2025</span>
-            <span>•</span>
-            <span>Updated November 7, 2025</span>
-            <span>•</span>
-            <span>12 min read</span>
-          </div>
-        </header>
+      <BlogLayout breadcrumbTitle="Knife Grip Techniques">
+        <BlogHero
+          title="Professional Knife Grip Techniques: Complete Guide"
+          introduction={["The professional pinch grip, claw position, paring grip, and rocking motion that make cooking safer, faster, and more enjoyable."]}
+          publishedDate="2025-10-06"
+          lastUpdated="2025-11-07"
+          readTime="12 min read"
+        />
 
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             The first thing I learned in culinary school wasn&apos;t a recipe. It wasn&apos;t a cooking technique. It was <strong>how to hold a knife.</strong>
           </p>
@@ -578,7 +567,7 @@ export default function KnifeSkillsPage() {
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+        <div className="bg-slate-50 rounded-xl p-8 mb-8">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link href="/blog/essential-knife-cuts-every-cook-should-master" className="text-orange-700 hover:text-orange-800 font-semibold">
@@ -608,20 +597,8 @@ export default function KnifeSkillsPage() {
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-          <div className="flex items-start gap-4">
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-700 mb-3">
-                Scott Bradley is a professional chef with 45 years of cooking experience, including 24 years in professional kitchens. He served as Kitchen Manager at Mellow Mushroom in Athens, GA, and held line positions at Purple Café, Feierabend, Il Pizzaiolo, and Paragary&apos;s. Scott holds an A.A.S. in Culinary Arts from Seattle Central College and a B.S. in Business Administration from the University of Montana.
-              </p>
-              <p className="text-slate-700">
-                At Chef Approved Tools, Scott combines decades of professional experience with hands-on equipment testing to recommend the best kitchen tools for home cooks who want professional results without professional prices.
-              </p>
-            </div>
-          </div>
-        </div>
-      </article>
+        <AuthorBio />
+      </BlogLayout>
     </>
   );
 }

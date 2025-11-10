@@ -1,8 +1,11 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Calendar, Clock, User } from 'lucide-react'
+import { Calendar, Clock } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: "Meat Cooking Temperatures: Complete Safety & Doneness Chart",
@@ -26,7 +29,7 @@ const articleSchema = generateArticleSchema({
 
 export default function MeatCookingTemperaturesThermometers() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -90,51 +93,16 @@ export default function MeatCookingTemperaturesThermometers() {
         }}
       />
 
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-700">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
-          <span className="mx-2">/</span>
-          <span>Meat Cooking Temperatures &amp; Thermometers</span>
-        </nav>
+      <BlogLayout breadcrumbTitle="Meat Cooking Temperatures & Thermometers">
+        <BlogHero
+          title="Meat Cooking Temperatures & Thermometers: Professional Chef Guide"
+          introduction={["A meat thermometer is the single most important tool for cooking perfect proteins—and the most underused tool in home kitchens. After 24 years in professional restaurants, I've never seen a chef rely on guesswork for doneness. Thermometers ensure food safety, consistent results, and perfectly cooked meat every single time."]}
+          publishedDate="2025-09-20"
+          lastUpdated="2025-10-27"
+          readTime="14 min read"
+        />
 
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>10 min read</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Scott Bradley</span>
-            </div>
-            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-              Cooking Techniques
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            Meat Cooking Temperatures &amp; Thermometers: Professional Chef Guide
-          </h1>
-
-          <p className="text-xl text-slate-600 leading-relaxed">
-            A meat thermometer is the single most important tool for cooking perfect proteins—and
-            the most underused tool in home kitchens. After 24 years in professional restaurants,
-            I&apos;ve never seen a chef rely on guesswork for doneness. Thermometers ensure food
-            safety, consistent results, and perfectly cooked meat every single time.
-          </p>
-        </div>
-
-        {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
             At Purple Café, where I managed kitchen operations serving 200+ covers nightly,
@@ -637,40 +605,17 @@ export default function MeatCookingTemperaturesThermometers() {
           </div>
         </div>
 
-        {/* Author Bio */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center flex-shrink-0">
-              <User className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing 200+ cover operations.
-                A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-                University of Montana. Implemented strict thermometer protocols that maintained perfect
-                health inspection records and consistent food quality.
-              </p>
-              <div className="mt-4">
-                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
-                  Read more about Scott →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Related Content */}
-        <div className="border-t border-gray-200 pt-8 mt-8">
+        <div className="bg-slate-50 rounded-xl p-8 mb-8">
           <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Cast Iron: Ideal for Searing Steaks</h4>
               <p className="text-slate-600 text-sm">
                 Professional cast iron skillets that hold heat for perfect sears and precise temperature control.
               </p>
             </Link>
-            <Link href="/blog/kitchen-gloves-guide" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+            <Link href="/blog/kitchen-gloves-guide" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Kitchen Safety Guide</h4>
               <p className="text-slate-600 text-sm">
                 Professional kitchen safety protocols including food handling, thermometer sanitation, and more.
@@ -678,7 +623,9 @@ export default function MeatCookingTemperaturesThermometers() {
             </Link>
           </div>
         </div>
-      </article>
-    </div>
+
+        <AuthorBio />
+      </BlogLayout>
+    </>
   );
 }

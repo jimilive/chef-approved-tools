@@ -7,6 +7,9 @@ import {
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Beaker, Apple, Droplet, AlertTriangle, Lightbulb, Flame } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: "Why Cut Apples Turn Brown: Oxidation Science Explained",
@@ -77,28 +80,16 @@ export default function OxidizationPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-700 mb-4">
-            <Beaker className="w-5 h-5" />
-            <span className="text-sm font-medium">Cooking Science</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Oxidization&apos;s Effect on Food: Why Your Produce Turns Brown (And How to Stop It)
-          </h1>
-          <p className="text-xl text-slate-600">
-            Learn how oxidation affects food quality and professional techniques to prevent browning, preserve flavor, and extend ingredient freshness in your kitchen.
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
-            <span>By Chef Scott Bradley</span>
-            <span>•</span>
-            <span>October 24, 2025</span>
-            <span>•</span>
-            <span>8 min read</span>
-          </div>
-        </header>
+      <BlogLayout breadcrumbTitle="Food Oxidation Guide">
+        <BlogHero
+          title="Oxidization's Effect on Food: Why Your Produce Turns Brown (And How to Stop It)"
+          introduction={["Learn how oxidation affects food quality and professional techniques to prevent browning, preserve flavor, and extend ingredient freshness in your kitchen."]}
+          publishedDate="2025-09-21"
+          lastUpdated="2025-10-24"
+          readTime="8 min read"
+        />
 
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-6 rounded-xl my-8 border-l-4 border-orange-600">
             <h3 className="text-white text-xl font-bold mt-0 mb-3">Restaurant Reality: The $300 Guacamole Lesson</h3>
             <p className="text-white mb-0 leading-relaxed">
@@ -807,27 +798,8 @@ export default function OxidizationPage() {
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-          <div className="flex items-start gap-4">
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-700 mb-3">
-                Scott Bradley is a professional chef with 45 years of cooking experience, including 24 years in professional kitchens. He served as Kitchen Manager at Mellow Mushroom in Athens, GA, and held line positions at Purple Café, Feierabend, Il Pizzaiolo (Seattle), and Paragary&apos;s (Sacramento).
-              </p>
-              <p className="text-slate-700 mb-3">
-                Throughout his restaurant career, Scott learned to manage oxidation through proper prep techniques, smart storage, and timing—skills essential for maintaining food quality during service.
-              </p>
-              <p className="text-slate-700 mb-3">
-                He holds an A.A.S. in Culinary Arts from Seattle Central College and a B.S. in Business Administration from the University of Montana.
-              </p>
-              <p className="text-slate-700">
-                Scott&apos;s approach to cooking science emphasizes practical application over theory—understanding the &quot;why&quot; behind oxidation helps you solve real kitchen problems efficiently.
-              </p>
-              <p className="text-sm text-slate-500 italic mt-4">Last updated: October 24, 2025</p>
-            </div>
-          </div>
-        </div>
-      </article>
+        <AuthorBio />
+      </BlogLayout>
     </>
   );
 }

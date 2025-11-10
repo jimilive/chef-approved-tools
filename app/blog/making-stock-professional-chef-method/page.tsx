@@ -7,6 +7,9 @@ import {
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Thermometer, AlertTriangle, Clock, Flame } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: "The 3-Step Method That Makes Restaurant-Quality Stock",
@@ -85,28 +88,16 @@ export default function MakingStockPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-700 mb-4">
-            <ChefHat className="w-5 h-5" />
-            <span className="text-sm font-medium">Cooking Techniques</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Making Stock: Professional Chef Method – How to Build Flavor
-          </h1>
-          <p className="text-xl text-slate-600">
-            Professional chef Scott Bradley explains the real restaurant method for making stock. Build deep flavor with bones, vegetables, and proper simmering technique.
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
-            <span>By Chef Scott Bradley</span>
-            <span>•</span>
-            <span>October 22, 2025</span>
-            <span>•</span>
-            <span>10 min read</span>
-          </div>
-        </header>
+      <BlogLayout breadcrumbTitle="Making Stock: Professional Chef Method">
+        <BlogHero
+          title="Making Stock: Professional Chef Method – How to Build Flavor"
+          introduction={["Professional chef Scott Bradley explains the real restaurant method for making stock. Build deep flavor with bones, vegetables, and proper simmering technique."]}
+          publishedDate="2025-09-07"
+          lastUpdated="2025-10-22"
+          readTime="10 min read"
+        />
 
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             I learned to make stock in culinary school long before I learned to make money. We&apos;d start each morning with bones, vegetables, and 20-gallon steam kettles that simmered all day. That aroma of roasted bones and bay leaf—it&apos;s the foundation of every great kitchen.
           </p>
@@ -547,26 +538,8 @@ export default function MakingStockPage() {
           </ul>
         </div>
 
-        <footer className="mt-12 pt-8 border-t border-slate-200">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">About Scott Bradley</h2>
-          <p className="text-slate-700 mb-2">
-            <strong>Professional Chef • 45 Years Cooking Experience • 24 Years Professional Kitchens</strong>
-          </p>
-          <p className="text-slate-600 mb-4">
-            Former Kitchen Manager at Mellow Mushroom. A.A.S. Culinary Arts (Seattle Central College), B.S. Business Administration (University of Montana). Thousands of gallons of stock made, strained, and reduced over decades.
-          </p>
-          <CTAVisibilityTracker
-            ctaId="about-scott-footer-link"
-            position="final_cta"
-            productSlug="making-stock-professional-chef-method"
-            merchant="internal"
-          >
-            <Link href="/about" className="text-orange-700 hover:text-orange-700 font-medium">
-              About Scott →
-            </Link>
-          </CTAVisibilityTracker>
-        </footer>
-      </article>
+        <AuthorBio />
+      </BlogLayout>
     </>
   );
 }

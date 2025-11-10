@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Droplets, Thermometer, Eye, Clock } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Restaurant Sauce Technique: How Reduction Creates Deep Flavor',
@@ -84,24 +87,16 @@ export default function ReducingSaucesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Reducing Sauces: The Technique Restaurants Use Daily
-          </h1>
+      <BlogLayout breadcrumbTitle="Reducing Sauces">
+        <BlogHero
+          title="Reducing Sauces: The Technique Restaurants Use Daily"
+          introduction={["Professional chef explains the art of reducing sauces — how to concentrate flavor, control consistency, and create restaurant-quality reductions at home."]}
+          publishedDate="2025-09-09"
+          lastUpdated="2025-10-21"
+          readTime="8 min read"
+        />
 
-          <div className="flex items-center gap-4 text-slate-600 text-sm mb-6">
-            <time dateTime="2025-10-21">October 21, 2025</time>
-            <span>•</span>
-            <span>8 min read</span>
-          </div>
-
-          <p className="text-xl text-slate-700 leading-relaxed">
-            Professional chef explains the art of reducing sauces — how to concentrate flavor, control consistency, and create restaurant-quality reductions at home.
-          </p>
-        </header>
-
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             If there&apos;s one sound that tells a chef things are going right, it&apos;s that gentle, confident simmer of a sauce reducing on the stove. Not boiling, not splattering — just a calm <em>blip... blip... blip</em> as the liquid thickens, aromas deepen, and the flavor builds toward perfection.
           </p>
@@ -585,7 +580,9 @@ export default function ReducingSaucesPage() {
             </div>
           </div>
         </div>
-      </article>
+
+        <AuthorBio />
+      </BlogLayout>
     </>
   )
 }

@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Shield, Droplet, Wind, AlertTriangle, Grid3x3, Magnet, Box } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Knife Storage: How To Protect Blades For Decades',
@@ -112,24 +115,16 @@ export default function KnifeStorageProtectionPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Knife Storage: Protecting Your Blades for Decades
-          </h1>
+      <BlogLayout breadcrumbTitle="Knife Storage: Protecting Your Blades for Decades">
+        <BlogHero
+          title="Knife Storage: Protecting Your Blades for Decades"
+          introduction={["Learn how to store knives like a professional chef. Prevent dull edges, rust, and damage with proven storage techniques and chef-approved tools."]}
+          publishedDate="2025-09-13"
+          lastUpdated="2025-11-07"
+          readTime="12 min read"
+        />
 
-          <div className="flex items-center gap-4 text-slate-600 text-sm mb-6">
-            <time dateTime="2025-11-07">November 7, 2025</time>
-            <span>•</span>
-            <span>12 min read</span>
-          </div>
-
-          <p className="text-xl text-slate-700 leading-relaxed">
-            Learn how to store knives like a professional chef. Prevent dull edges, rust, and damage with proven storage techniques and chef-approved tools.
-          </p>
-        </header>
-
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             I&apos;ve had the same Victorinox chef&apos;s knife for nearly two decades. It&apos;s been sharpened, honed, and re-handled once—but it still slices like new. Why? Because I stored it right.
           </p>
@@ -815,7 +810,9 @@ export default function KnifeStorageProtectionPage() {
             </div>
           </div>
         </div>
-      </article>
+
+        <AuthorBio />
+      </BlogLayout>
     </>
   )
 }

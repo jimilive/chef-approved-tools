@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Flame, Thermometer, Clock, ChefHat } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Sheet Pan Cooking: Restaurant Techniques For Home Cooks',
@@ -84,24 +87,16 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Sheet Pan Cooking: 5 Restaurant Techniques for Home
-          </h1>
+      <BlogLayout breadcrumbTitle="Sheet Pan Cooking">
+        <BlogHero
+          title="Sheet Pan Cooking: 5 Restaurant Techniques for Home"
+          introduction={["Professional chef reveals 5 restaurant sheet pan techniques that transform home cooking. Learn high-heat roasting, batch prep, and finishing methods from 24 years in commercial kitchens."]}
+          publishedDate="2025-09-12"
+          lastUpdated="2025-10-21"
+          readTime="8 min read"
+        />
 
-          <div className="flex items-center gap-4 text-slate-600 text-sm mb-6">
-            <time dateTime="2025-10-21">October 21, 2025</time>
-            <span>•</span>
-            <span>8 min read</span>
-          </div>
-
-          <p className="text-xl text-slate-700 leading-relaxed">
-            Professional chef reveals 5 restaurant sheet pan techniques that transform home cooking. Learn high-heat roasting, batch prep, and finishing methods from 24 years in commercial kitchens.
-          </p>
-        </header>
-
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             Sheet pans are the workhorses of professional kitchens. They&apos;re simple, versatile, and when used correctly, they deliver restaurant-quality results at home. But most home cooks use them wrong—too low heat, overcrowded surfaces, and missed finishing techniques.
           </p>
@@ -551,7 +546,9 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
             </div>
           </div>
         </div>
-      </article>
+
+        <AuthorBio />
+      </BlogLayout>
     </>
   )
 }
