@@ -7,6 +7,9 @@ import {
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, ShoppingCart, AlertTriangle, Thermometer, Utensils } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: "Kitchen Starter Kit: The First 5 Tools You Actually Need",
@@ -85,28 +88,16 @@ export default function KitchenStarterKitPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-700 mb-4">
-            <ChefHat className="w-5 h-5" />
-            <span className="text-sm font-medium">Buying Guides</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Kitchen Starter Kit: First 5 Tools to Buy
-          </h1>
-          <p className="text-xl text-slate-600">
-            Chef Scott Bradley reveals the five essential kitchen tools every home cook needs first. No fluff, no gimmicks—just the gear professionals actually use daily.
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
-            <span>By Chef Scott Bradley</span>
-            <span>•</span>
-            <span>October 22, 2025</span>
-            <span>•</span>
-            <span>9 min read</span>
-          </div>
-        </header>
+      <BlogLayout breadcrumbTitle="Kitchen Starter Kit: First 5 Tools">
+        <BlogHero
+          title="Kitchen Starter Kit: First 5 Tools to Buy"
+          introduction={["Chef Scott Bradley reveals the five essential kitchen tools every home cook needs first. No fluff, no gimmicks—just the gear professionals actually use daily."]}
+          publishedDate="2025-09-24"
+          lastUpdated="2025-10-22"
+          readTime="10 min read"
+        />
 
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             When I moved into my first apartment after culinary school, I owned two knives, a sauté pan, and a wooden spoon. That was it. But it didn&apos;t stop me from cooking like a pro.
           </p>
@@ -641,26 +632,8 @@ export default function KitchenStarterKitPage() {
           </ul>
         </div>
 
-        <footer className="mt-12 pt-8 border-t border-slate-200">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">About Scott Bradley</h2>
-          <p className="text-slate-700 mb-2">
-            <strong>Professional Chef • 45 Years Cooking Experience • 24 Years Professional Kitchens</strong>
-          </p>
-          <p className="text-slate-600 mb-4">
-            Former Kitchen Manager at Mellow Mushroom. Graduate of Seattle Central College (Culinary Arts) and University of Montana (B.S. Business Administration). Tested gear, tested methods, no gimmicks.
-          </p>
-          <CTAVisibilityTracker
-            ctaId="about-scott-footer-link"
-            position="final_cta"
-            productSlug="kitchen-starter-kit-first-5-tools"
-            merchant="internal"
-          >
-            <Link href="/about" className="text-orange-700 hover:text-orange-700 font-medium">
-              About Scott →
-            </Link>
-          </CTAVisibilityTracker>
-        </footer>
-      </article>
+        <AuthorBio />
+      </BlogLayout>
     </>
   );
 }

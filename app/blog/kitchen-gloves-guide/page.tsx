@@ -1,10 +1,13 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Calendar, Clock, User, Shield } from 'lucide-react'
+import { Shield } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Kitchen Gloves Guide: When To Use Each Type',
@@ -28,7 +31,7 @@ const articleSchema = generateArticleSchema({
 
 export default function KitchenGlovesGuide() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -92,48 +95,17 @@ export default function KitchenGlovesGuide() {
         }}
       />
 
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-700">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
-          <span className="mx-2">/</span>
-          <span>Essential Guide to Kitchen Gloves</span>
-        </nav>
-
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>9 min read</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Scott Bradley</span>
-            </div>
-            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-              Kitchen Safety
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            Essential Guide to Kitchen Gloves: Professional Safety Protocols
-          </h1>
-
-          <p className="text-xl text-slate-600 leading-relaxed">
-            Kitchen gloves are your first line of defense against both food contamination and serious injuries. After 24 years in professional kitchens, I&apos;ve seen how proper glove protocols prevent disasters—from mandoline accidents to cross-contamination incidents that could shut down a restaurant.
-          </p>
-        </div>
+      <BlogLayout breadcrumbTitle="Essential Guide to Kitchen Gloves">
+        <BlogHero
+          title="Essential Guide to Kitchen Gloves: Professional Safety Protocols"
+          introduction={["Kitchen gloves are your first line of defense against both food contamination and serious injuries. After 24 years in professional kitchens, I've seen how proper glove protocols prevent disasters—from mandoline accidents to cross-contamination incidents that could shut down a restaurant."]}
+          publishedDate="2025-09-23"
+          lastUpdated="2025-09-23"
+          readTime="9 min read"
+        />
 
         {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
             At Purple Café, where I managed kitchen operations for 6 years, glove safety wasn&apos;t optional—it was mandatory. With dozens of staff handling sharp tools and ready-to-eat foods daily, proper glove protocols prevented both contamination and injuries.
@@ -542,40 +514,17 @@ export default function KitchenGlovesGuide() {
           </div>
         </div>
 
-        {/* Author Bio */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center flex-shrink-0">
-              <User className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing 200+ cover operations.
-                A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-                University of Montana. Implemented mandatory glove safety protocols that prevented injuries and
-                maintained perfect health inspection records.
-              </p>
-              <div className="mt-4">
-                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
-                  Read more about Scott →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Related Content */}
-        <div className="border-t border-gray-200 pt-8 mt-8">
-          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
+        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/reviews/benriner-large-mandoline" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+            <Link href="/reviews/benriner-large-mandoline" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Benriner Mandoline: Professional Test &amp; Safety</h4>
               <p className="text-slate-600 text-sm">
                 The professional mandoline that requires cut-resistant gloves—learn safe techniques for perfect slices.
               </p>
             </Link>
-            <Link href="/reviews/victorinox-granton-edge-boning-knife" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+            <Link href="/reviews/victorinox-granton-edge-boning-knife" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Boning Knife Safety &amp; Technique</h4>
               <p className="text-slate-600 text-sm">
                 Professional boning knife techniques and safety protocols for butchering tasks.
@@ -583,7 +532,9 @@ export default function KitchenGlovesGuide() {
             </Link>
           </div>
         </div>
-      </article>
-    </div>
+
+        <AuthorBio />
+      </BlogLayout>
+    </>
   );
 }

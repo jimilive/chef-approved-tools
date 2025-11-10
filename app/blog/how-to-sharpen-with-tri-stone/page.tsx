@@ -1,8 +1,10 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Calendar, Clock, User } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'How To Sharpen Knives With A Tri-Stone (Step-By-Step)',
@@ -31,7 +33,7 @@ const articleSchema = generateArticleSchema({
 
 export default function HowToSharpenWithTriStonePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -95,52 +97,17 @@ export default function HowToSharpenWithTriStonePage() {
         }}
       />
 
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-700">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
-          <span className="mx-2">/</span>
-          <span>How to Sharpen with a Stone</span>
-        </nav>
-
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>8 min read</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Scott Bradley</span>
-            </div>
-            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-              Knife Care
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            How to Sharpen Knives with a Stone: Professional Chef&apos;s Technique
-          </h1>
-
-          <p className="text-xl text-slate-600 leading-relaxed">
-            For 6 years at Purple Café, I sharpened 8-12 professional knives weekly using the Norton
-            IM200 Tri-Stone. In a 200+ cover restaurant where dull knives meant service delays, this
-            three-stage system kept every blade razor-sharp through demanding dinner services. This
-            isn&apos;t complicated—follow this exact technique and you&apos;ll achieve professional-quality
-            results at home.
-          </p>
-        </div>
+      <BlogLayout breadcrumbTitle="How to Sharpen with a Stone">
+        <BlogHero
+          title="How to Sharpen Knives with a Stone: Professional Chef's Technique"
+          introduction={["For 6 years at Purple Café, I sharpened 8-12 professional knives weekly using the Norton IM200 Tri-Stone. In a 200+ cover restaurant where dull knives meant service delays, this three-stage system kept every blade razor-sharp through demanding dinner services. This isn't complicated—follow this exact technique and you'll achieve professional-quality results at home."]}
+          publishedDate="2025-10-16"
+          lastUpdated="2025-10-16"
+          readTime="8 min read"
+        />
 
         {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           {/* Early Link to Review */}
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
@@ -559,33 +526,9 @@ export default function HowToSharpenWithTriStonePage() {
           </div>
         </div>
 
-        {/* Author Bio */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center flex-shrink-0">
-              <User className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing 200+ cover operations.
-                A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-                University of Montana. Sharpened 8-12 professional knives weekly for 6 years using the Norton
-                Tri-Stone system—this technique produces consistently sharp edges that survived demanding
-                dinner services.
-              </p>
-              <div className="mt-4">
-                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
-                  Read more about Scott →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Related Content */}
-        <div className="border-t border-gray-200 pt-8 mt-8">
-          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
+        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <CTAVisibilityTracker
               ctaId="blog-how-to-sharpen-with-tri-stone-related-1"
@@ -593,7 +536,7 @@ export default function HowToSharpenWithTriStonePage() {
               productSlug="how-to-sharpen-with-tri-stone"
               merchant="internal"
             >
-              <Link href="/reviews/norton-im200-tri-stone-sharpener" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <Link href="/reviews/norton-im200-tri-stone-sharpener" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Norton IM200 Tri-Stone Review: 6-Year Professional Test</h4>
                 <p className="text-slate-600 text-sm">
                   The sharpening system that survived 6 years of professional restaurant use—detailed review and techniques.
@@ -606,7 +549,7 @@ export default function HowToSharpenWithTriStonePage() {
               productSlug="how-to-sharpen-with-tri-stone"
               merchant="internal"
             >
-              <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Victorinox 8&quot; Chef Knife: Professional Quality</h4>
                 <p className="text-slate-600 text-sm">
                   The professional chef&apos;s knife that responds beautifully to proper sharpening techniques.
@@ -619,7 +562,7 @@ export default function HowToSharpenWithTriStonePage() {
               productSlug="how-to-sharpen-with-tri-stone"
               merchant="internal"
             >
-              <Link href="/blog/how-to-steel-a-knife" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <Link href="/blog/how-to-steel-a-knife" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">How to Steel a Knife: Proper Technique</h4>
                 <p className="text-slate-600 text-sm">
                   Learn professional honing technique to maintain your sharp edge between sharpening sessions.
@@ -632,7 +575,7 @@ export default function HowToSharpenWithTriStonePage() {
               productSlug="how-to-sharpen-with-tri-stone"
               merchant="internal"
             >
-              <Link href="/kitchen-bundle" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <Link href="/kitchen-bundle" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Complete Professional Kitchen Starter Kit</h4>
                 <p className="text-slate-600 text-sm">
                   Build your professional kitchen with chef-approved tools including knives and sharpening systems.
@@ -641,7 +584,9 @@ export default function HowToSharpenWithTriStonePage() {
             </CTAVisibilityTracker>
           </div>
         </div>
-      </article>
-    </div>
+
+        <AuthorBio />
+      </BlogLayout>
+    </>
   );
 }

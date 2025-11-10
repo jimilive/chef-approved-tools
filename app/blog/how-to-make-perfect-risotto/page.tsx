@@ -7,6 +7,9 @@ import {
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, AlertTriangle, Lightbulb } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: "How To Make Perfect Risotto: The Italian Restaurant Technique",
@@ -78,38 +81,25 @@ export default function PerfectRisottoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-700 mb-4">
-            <ChefHat className="w-5 h-5" />
-            <span className="text-sm font-medium">{articleMeta.category}</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            How to Make Perfect Risotto: Technique, Timing, and the Science Behind Creamy Rice
-          </h1>
-          <p className="text-xl text-slate-600">
-            Master risotto from a professional chef with 24 years of restaurant experience. Learn proper technique, timing, stock selection, and the science behind perfectly creamy rice without cream.
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
-            <span>By {articleMeta.author}</span>
-            <span>•</span>
-            <span>{articleMeta.publishDate}</span>
-            <span>•</span>
-            <span>{articleMeta.readTime}</span>
-          </div>
-        </header>
+      <BlogLayout breadcrumbTitle="How to Make Perfect Risotto">
+        <BlogHero
+          title="How to Make Perfect Risotto: Technique, Timing, and the Science Behind Creamy Rice"
+          introduction={["Master risotto from a professional chef with 24 years of restaurant experience. Learn proper technique, timing, stock selection, and the science behind perfectly creamy rice without cream."]}
+          publishedDate="2025-09-30"
+          lastUpdated="2025-10-24"
+          readTime="11 min read"
+        />
 
-        <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white p-6 rounded-xl border-l-4 border-blue-500 mb-8 shadow-lg">
-          <p className="font-bold text-lg mb-3 flex items-center gap-2">
-            <ChefHat className="w-5 h-5" />
-            Restaurant Reality
-          </p>
-          <p className="leading-relaxed mb-0">
-            At Feierabend in Seattle, we had mushroom risotto on the menu nightly. I&apos;d watch new cooks try to rush it, adding all the stock at once or stirring frantically like their life depended on it. The result? Gummy, sticky rice that looked like porridge. Risotto isn&apos;t difficult, but it requires understanding what&apos;s happening at a chemical level and respecting the timing. The secret to creamy risotto isn&apos;t cream—it&apos;s starch release controlled through gradual hydration and gentle agitation. Today I&apos;m going to show you the exact technique that creates restaurant-quality risotto every single time.
-          </p>
-        </div>
-
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
+          <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white p-6 rounded-xl border-l-4 border-blue-500 my-8 shadow-lg">
+            <p className="font-bold text-lg mb-3 flex items-center gap-2">
+              <ChefHat className="w-5 h-5" />
+              Restaurant Reality
+            </p>
+            <p className="leading-relaxed mb-0">
+              At Feierabend in Seattle, we had mushroom risotto on the menu nightly. I&apos;d watch new cooks try to rush it, adding all the stock at once or stirring frantically like their life depended on it. The result? Gummy, sticky rice that looked like porridge. Risotto isn&apos;t difficult, but it requires understanding what&apos;s happening at a chemical level and respecting the timing. The secret to creamy risotto isn&apos;t cream—it&apos;s starch release controlled through gradual hydration and gentle agitation. Today I&apos;m going to show you the exact technique that creates restaurant-quality risotto every single time.
+            </p>
+          </div>
           <p>
             Risotto intimidates home cooks more than it should. There&apos;s this mythology around it—constant stirring for 45 minutes, mysterious techniques, special skills only Italian grandmothers possess. Food TV hasn&apos;t helped, making it seem like you need to stir non-stop or the rice police will arrest you.
           </p>
@@ -403,21 +393,8 @@ export default function PerfectRisottoPage() {
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-          <div className="flex items-start gap-4">
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-700 mb-3">
-                Scott Bradley is a professional chef with 45 years of cooking experience, including 24 years in professional kitchens. At Feierabend in Seattle, Scott prepared mushroom risotto nightly as a popular menu item, perfecting the technique through hundreds of service shifts. He holds an A.A.S. in Culinary Arts from Seattle Central College and a B.S. in Business Administration from the University of Montana.
-              </p>
-              <p className="text-slate-700">
-                Scott&apos;s approach to risotto demystifies the technique by focusing on understanding the science rather than following rigid rules. He believes that once cooks understand why each step matters, they can adapt and improvise confidently. His method has helped countless home cooks overcome their risotto intimidation and create restaurant-quality results.
-              </p>
-            </div>
-          </div>
-          <p className="text-sm text-slate-500 mt-4 mb-0 italic">Last updated: {articleMeta.lastModified}</p>
-        </div>
-      </article>
+        <AuthorBio />
+      </BlogLayout>
     </>
   );
 }

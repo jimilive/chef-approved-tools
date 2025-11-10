@@ -1,8 +1,11 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Calendar, Clock, User, Sparkles, AlertTriangle } from 'lucide-react'
+import { Sparkles, AlertTriangle } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'How To Clean Burnt Stainless Steel Pans (Restaurant Method)',
@@ -26,7 +29,7 @@ const articleSchema = generateArticleSchema({
 
 export default function CleanBurntStainlessSteelPost() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -82,48 +85,17 @@ export default function CleanBurntStainlessSteelPost() {
         }}
       />
 
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-700">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
-          <span className="mx-2">/</span>
-          <span>How to Clean Burnt Stainless Steel Pans</span>
-        </nav>
-
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>October 21, 2025</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>8 min read</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Scott Bradley</span>
-            </div>
-            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-              Cooking Techniques
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            How to Clean Burnt Stainless Steel Pans
-          </h1>
-
-          <p className="text-xl text-slate-600 leading-relaxed">
-            Every chef burns a pan eventually. It&apos;s not failure — it&apos;s seasoning for your ego. The key isn&apos;t avoiding it; it&apos;s knowing how to fix it without destroying your cookware.
-          </p>
-        </div>
+      <BlogLayout breadcrumbTitle="How to Clean Burnt Stainless Steel Pans">
+        <BlogHero
+          title="How to Clean Burnt Stainless Steel Pans"
+          introduction={["Every chef burns a pan eventually. It's not failure — it's seasoning for your ego. The key isn't avoiding it; it's knowing how to fix it without destroying your cookware."]}
+          publishedDate="2025-10-18"
+          lastUpdated="2025-10-21"
+          readTime="8 min read"
+        />
 
         {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
             In a professional kitchen, stainless steel pans take a daily beating — scorched proteins, caramelized sugars, and sauces left a minute too long. But you&apos;ll never see a line cook scrubbing like mad or reaching for steel wool. We know that burnt doesn&apos;t mean ruined — it just means you&apos;ve unlocked the next level of care.
@@ -479,40 +451,17 @@ export default function CleanBurntStainlessSteelPost() {
           </div>
         </div>
 
-        {/* Author Bio */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center">
-              <User className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-600 text-sm leading-relaxed mb-2">
-                <strong>Professional Chef • 45 Years Cooking Experience • 24 Years Professional Kitchens</strong>
-              </p>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from the University of Montana. Techniques tested on thousands of dishes in high-volume kitchens serving hundreds daily.
-              </p>
-              <div className="mt-4">
-                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
-                  Learn more about Scott →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Related Content */}
-        <div className="border-t border-gray-200 pt-8 mt-8">
-          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
+        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/blog/stainless-steel-why-food-sticks" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+            <Link href="/blog/stainless-steel-why-food-sticks" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Stainless Steel Cooking: Why Food Sticks</h4>
               <p className="text-slate-600 text-sm">
                 Learn how to prevent food from sticking to stainless steel in the first place.
               </p>
             </Link>
-            <Link href="/blog/cookware-materials-explained" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+            <Link href="/blog/cookware-materials-explained" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Cookware Materials Explained: What Chefs Actually Use</h4>
               <p className="text-slate-600 text-sm">
                 Understand the pros and cons of different cookware materials and how to care for each.
@@ -520,7 +469,9 @@ export default function CleanBurntStainlessSteelPost() {
             </Link>
           </div>
         </div>
-      </article>
-    </div>
+
+        <AuthorBio />
+      </BlogLayout>
+    </>
   )
 }

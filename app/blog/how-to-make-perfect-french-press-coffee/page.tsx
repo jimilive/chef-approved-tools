@@ -1,8 +1,10 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Calendar, Clock, User } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'How To Make Perfect French Press Coffee (Barista Method)',
@@ -31,7 +33,7 @@ const articleSchema = generateArticleSchema({
 
 export default function HowToMakePerfectFrenchPressCoffeePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -95,56 +97,17 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
         }}
       />
 
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-700">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
-          <span className="mx-2">/</span>
-          <span>How to Make Perfect French Press Coffee</span>
-        </nav>
-
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>9 min read</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Scott Bradley</span>
-            </div>
-            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-              Cooking Techniques
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            How to Make Perfect French Press Coffee Every Time
-          </h1>
-
-          <p className="text-xl text-slate-600 leading-relaxed mb-6">
-            <strong>By Scott Bradley</strong> | Professional Chef | 24 Years Testing the{' '}
-            <CTAVisibilityTracker
-              ctaId="blog-how-to-make-perfect-french-press-coffee-review-link-1"
-              position="above_fold"
-              productSlug="how-to-make-perfect-french-press-coffee"
-              merchant="internal"
-            >
-              <Link href="/reviews/bodum-chambord-french-press" className="text-blue-700 underline">Bodum Chambord French Press</Link>
-            </CTAVisibilityTracker>
-          </p>
-        </div>
+      <BlogLayout breadcrumbTitle="How to Make Perfect French Press Coffee">
+        <BlogHero
+          title="How to Make Perfect French Press Coffee Every Time"
+          introduction={["Master French press coffee with 24 years of professional experience. Learn the perfect ratio, step-by-step technique, common mistakes to avoid, and pro tips for cafe-quality coffee at home."]}
+          publishedDate="2025-10-24"
+          lastUpdated="2025-10-24"
+          readTime="9 min read"
+        />
 
         {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           {/* Purple Café Context Box */}
           <div className="bg-slate-50 border-l-4 border-blue-600 rounded-r-lg p-6 my-6">
@@ -552,31 +515,9 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
           </div>
         </div>
 
-        {/* Author Bio */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center flex-shrink-0">
-              <User className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing 200+ cover operations.
-                A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-                University of Montana. Brewed hundreds of French press pots for guests at Purple Café over 6 years, then continued perfecting the technique for 18 years at home—24 years of daily French press experience.
-              </p>
-              <div className="mt-4">
-                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
-                  Read more about Scott →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Related Content */}
-        <div className="border-t border-gray-200 pt-8 mt-8">
-          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
+        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <CTAVisibilityTracker
               ctaId="blog-how-to-make-perfect-french-press-coffee-related-1"
@@ -584,7 +525,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
               productSlug="how-to-make-perfect-french-press-coffee"
               merchant="internal"
             >
-              <Link href="/reviews/bodum-chambord-french-press" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <Link href="/reviews/bodum-chambord-french-press" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Bodum Chambord French Press Review: 24-Year Professional Test</h4>
                 <p className="text-slate-600 text-sm">
                   The French press that survived 24 years of daily use—6 years professional, 18 years at home.
@@ -597,7 +538,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
               productSlug="how-to-make-perfect-french-press-coffee"
               merchant="internal"
             >
-              <Link href="/guides/best-chef-knives" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <Link href="/guides/best-chef-knives" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Best Chef Knives: Complete Professional Buying Guide</h4>
                 <p className="text-slate-600 text-sm">
                   Professional chef knife recommendations based on 24 years restaurant experience.
@@ -610,7 +551,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
               productSlug="how-to-make-perfect-french-press-coffee"
               merchant="internal"
             >
-              <Link href="/reviews/diamond-crystal-kosher-salt" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <Link href="/reviews/diamond-crystal-kosher-salt" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Diamond Crystal Kosher Salt Review: 18-Year Professional Test</h4>
                 <p className="text-slate-600 text-sm">
                   The professional chef&apos;s salt choice—pure flavor and perfect seasoning control.
@@ -623,7 +564,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
               productSlug="how-to-make-perfect-french-press-coffee"
               merchant="internal"
             >
-              <Link href="/blog/why-professional-chefs-use-kosher-salt" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+              <Link href="/blog/why-professional-chefs-use-kosher-salt" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Why Professional Chefs Use Kosher Salt</h4>
                 <p className="text-slate-600 text-sm">
                   Learn why kosher salt is the professional standard for consistent seasoning.
@@ -632,7 +573,9 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             </CTAVisibilityTracker>
           </div>
         </div>
-      </article>
-    </div>
+
+        <AuthorBio />
+      </BlogLayout>
+    </>
   );
 }

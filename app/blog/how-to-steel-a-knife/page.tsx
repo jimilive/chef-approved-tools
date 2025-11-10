@@ -1,11 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Calendar, Clock, User, Scissors } from 'lucide-react'
+import { Scissors } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'How To Steel A Knife: Honing vs Sharpening Explained',
@@ -40,7 +43,7 @@ export default async function HowToSteelAKnife() {
   const henckelsUrl = 'https://amzn.to/4qh96Zu' // Fallback - product not in database yet
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -104,48 +107,17 @@ export default async function HowToSteelAKnife() {
         }}
       />
 
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-700">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
-          <span className="mx-2">/</span>
-          <span>How to Steel a Knife</span>
-        </nav>
-
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>6 min read</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Scott Bradley</span>
-            </div>
-            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-              Knife Care
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            How to Steel a Knife (The Right Way to Hone Like a Chef)
-          </h1>
-
-          <p className="text-xl text-slate-600 leading-relaxed">
-            If you spend any time in a professional kitchen, you&apos;ll see one tool come out far more often than a whetstone: the <strong>sharpening steel</strong>. It&apos;s that long, rod-shaped tool chefs use to &quot;steel&quot; their knives before prep. You&apos;ve probably seen it in movies—quick, rhythmic strokes before the cook dives into slicing onions like a magician.
-          </p>
-        </div>
+      <BlogLayout breadcrumbTitle="How to Steel a Knife">
+        <BlogHero
+          title="How to Steel a Knife (The Right Way to Hone Like a Chef)"
+          introduction={["If you spend any time in a professional kitchen, you'll see one tool come out far more often than a whetstone: the sharpening steel. It's that long, rod-shaped tool chefs use to \"steel\" their knives before prep. You've probably seen it in movies—quick, rhythmic strokes before the cook dives into slicing onions like a magician."]}
+          publishedDate="2025-09-13"
+          lastUpdated="2025-09-13"
+          readTime="6 min read"
+        />
 
         {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
             But what exactly are they doing? Are they sharpening the knife? Why do they do it so often? And how should you do it at home without nicking your fingers or wrecking your edge?
@@ -437,39 +409,17 @@ export default async function HowToSteelAKnife() {
           </div>
         </div>
 
-        {/* Author Bio */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center flex-shrink-0">
-              <User className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing 200+ cover operations.
-                A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-                University of Montana. Honed knives daily at Purple Café before every service for 6 years.
-              </p>
-              <div className="mt-4">
-                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
-                  Read more about Scott →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Related Content */}
-        <div className="border-t border-gray-200 pt-8 mt-8">
-          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
+        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Victorinox Fibrox 8&quot; Chef&apos;s Knife</h4>
               <p className="text-slate-600 text-sm">
                 The professional-grade chef&apos;s knife that responds beautifully to regular honing and sharpening.
               </p>
             </Link>
-            <Link href="/guides/knife-care" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+            <Link href="/guides/knife-care" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Complete Knife Care Guide</h4>
               <p className="text-slate-600 text-sm">
                 Professional knife maintenance techniques including honing, sharpening, storage, and cleaning.
@@ -477,7 +427,9 @@ export default async function HowToSteelAKnife() {
             </Link>
           </div>
         </div>
-      </article>
-    </div>
+
+        <AuthorBio />
+      </BlogLayout>
+    </>
   );
 }
