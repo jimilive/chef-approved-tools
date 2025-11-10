@@ -13,12 +13,12 @@ import {
 } from '@/components/blog'
 
 export const metadata: Metadata = {
-  title: comparisonData.metadata.title,
-  description: comparisonData.metadata.description,
+  title: 'Cast Iron vs Carbon Steel Pans: What 24 Years Taught Me',
+  description: 'Cast iron holds heat 3x longer for searing. Carbon steel heats/cools instantly for control. Which cooking style matches yours + when to use each.',
   openGraph: {
     type: 'article',
-    publishedTime: `${comparisonData.metadata.publishedDate}T00:00:00Z`,
-    modifiedTime: `${comparisonData.metadata.lastUpdated}T00:00:00Z`,
+    publishedTime: '2025-11-09T00:00:00Z',
+    modifiedTime: '2025-11-09T00:00:00Z',
   },
 }
 

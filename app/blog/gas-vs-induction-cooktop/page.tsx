@@ -13,12 +13,12 @@ import {
 } from '@/components/blog'
 
 export const metadata: Metadata = {
-  title: comparisonData.metadata.title,
-  description: comparisonData.metadata.description,
+  title: 'Gas vs Induction Cooktops: Why I Switched After 24 Years',
+  description: 'Induction boils water 2x faster and wastes 50% less energy. Gas offers instant visual control. Cost analysis + which matches your cooking style.',
   openGraph: {
     type: 'article',
-    publishedTime: `${comparisonData.metadata.publishedDate}T00:00:00Z`,
-    modifiedTime: `${comparisonData.metadata.lastUpdated}T00:00:00Z`,
+    publishedTime: '2025-11-09T00:00:00Z',
+    modifiedTime: '2025-11-09T00:00:00Z',
   },
 }
 

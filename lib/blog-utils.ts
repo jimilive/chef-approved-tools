@@ -31,12 +31,24 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
     try {
       const content = fs.readFileSync(pagePath, 'utf-8')
 
-      // Extract metadata from the Metadata export - handle both single and double quotes
-      const titleMatch = content.match(/title:\s*["']((?:[^"'\\]|\\.)*?)["']/)
-      const descriptionMatch = content.match(/description:\s*["']((?:[^"'\\]|\\.)*?)["']/)
+      // Check if this is a data-driven post (imports from a data file)
+      let titleMatch = content.match(/title:\s*["']((?:[^"'\\]|\\.)*?)["']/)
+      let descriptionMatch = content.match(/description:\s*["']((?:[^"'\\]|\\.)*?)["']/)
+      let datePublishedMatch = content.match(/datePublished:\s*["'](\d{4}-\d{2}-\d{2})["']/)
 
-      // Extract from articleSchema (used in newer blog posts)
-      const datePublishedMatch = content.match(/datePublished:\s*["'](\d{4}-\d{2}-\d{2})["']/)
+      // Check for data file pattern (e.g., comparisonData.metadata.title)
+      const dataFileMatch = content.match(/from\s+['"]\.\/(.*?-data(?:\.ts)?)['"]/i)
+      if (dataFileMatch && !titleMatch) {
+        // Try to read the data file
+        const dataFilePath = path.join(blogDir, slug, dataFileMatch[1].endsWith('.ts') ? dataFileMatch[1] : `${dataFileMatch[1]}.ts`)
+        if (fs.existsSync(dataFilePath)) {
+          const dataContent = fs.readFileSync(dataFilePath, 'utf-8')
+          // Extract from data file
+          titleMatch = dataContent.match(/title:\s*["']((?:[^"'\\]|\\.)*?)["']/)
+          descriptionMatch = dataContent.match(/description:\s*["']((?:[^"'\\]|\\.)*?)["']/)
+          datePublishedMatch = dataContent.match(/publishedDate:\s*["'](\d{4}-\d{2}-\d{2})["']/)
+        }
+      }
 
       // Estimate read time from content length
       const wordCount = content.split(/\s+/).length

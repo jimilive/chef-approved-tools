@@ -13,12 +13,12 @@ import {
 } from '@/components/blog'
 
 export const metadata: Metadata = {
-  title: comparisonData.metadata.title,
-  description: comparisonData.metadata.description,
+  title: 'Immersion vs Countertop Blender: Why You Need Both',
+  description: 'Countertop crushes ice and makes smoothies. Immersion purees soup in the pot with zero cleanup. When each shines + $60 immersion pick that rivals $300 models.',
   openGraph: {
     type: 'article',
-    publishedTime: `${comparisonData.metadata.publishedDate}T00:00:00Z`,
-    modifiedTime: `${comparisonData.metadata.lastUpdated}T00:00:00Z`,
+    publishedTime: '2025-11-09T00:00:00Z',
+    modifiedTime: '2025-11-09T00:00:00Z',
   },
 }
 

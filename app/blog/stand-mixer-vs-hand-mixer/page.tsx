@@ -13,12 +13,12 @@ import {
 } from '@/components/blog'
 
 export const metadata: Metadata = {
-  title: comparisonData.metadata.title,
-  description: comparisonData.metadata.description,
+  title: 'Stand Mixer vs Hand Mixer: When $400 Is Worth It',
+  description: 'Stand mixers excel at bread dough and hands-free mixing. Hand mixers handle 80% of tasks for $50. Which matches your baking frequency + best picks.',
   openGraph: {
     type: 'article',
-    publishedTime: `${comparisonData.metadata.publishedDate}T00:00:00Z`,
-    modifiedTime: `${comparisonData.metadata.lastUpdated}T00:00:00Z`,
+    publishedTime: '2025-11-09T00:00:00Z',
+    modifiedTime: '2025-11-09T00:00:00Z',
   },
 }
 

@@ -14,12 +14,12 @@ import {
 } from '@/components/blog'
 
 export const metadata: Metadata = {
-  title: comparisonData.metadata.title,
-  description: comparisonData.metadata.description,
+  title: 'Wood vs Composite Cutting Boards: Why 90% of Pros Choose Wood',
+  description: '24 years testing both: Wood cutting boards win on knife preservation and natural sanitation. When composite makes sense + best picks for each type.',
   openGraph: {
     type: 'article',
-    publishedTime: `${comparisonData.metadata.publishedDate}T00:00:00Z`,
-    modifiedTime: `${comparisonData.metadata.lastUpdated}T00:00:00Z`,
+    publishedTime: '2025-11-09T00:00:00Z',
+    modifiedTime: '2025-11-09T00:00:00Z',
   },
 }
 
