@@ -77,6 +77,12 @@ export default async function AffordableKitchenAppliancesPage() {
             </div>
           </div>
 
+          <div className="flex items-center gap-3 text-sm text-slate-500 mb-6">
+            <span>Published: November 10, 2025</span>
+            <span>•</span>
+            <span>Updated: November 10, 2025</span>
+          </div>
+
           <p className="text-xl text-slate-700 leading-relaxed mb-4">
             <strong>I&apos;m tired of &quot;budget appliance&quot; lists written by people who&apos;ve never used the equipment.</strong> This guide covers only affordable kitchen appliances I&apos;ve personally owned, tested, or used extensively—both in professional kitchens and at home.
           </p>

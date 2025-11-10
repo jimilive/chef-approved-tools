@@ -20,10 +20,17 @@ export default function BestCookwarePage() {
           <h1 className="text-4xl font-bold text-slate-900 mb-4">
             Best Cookware 2024: Restaurant-Grade Pans for Home Use
           </h1>
-          <p className="text-xl text-slate-600 leading-relaxed">
+          <p className="text-xl text-slate-600 leading-relaxed mb-4">
             Professional cookware that can handle the heat of commercial kitchens
             and still perform perfectly in your home kitchen.
           </p>
+          <div className="flex items-center gap-3 text-sm text-slate-500">
+            <span>By Scott Bradley, Professional Chef</span>
+            <span>•</span>
+            <span>Published: November 10, 2025</span>
+            <span>•</span>
+            <span>Updated: November 10, 2025</span>
+          </div>
         </header>
 
         <section className="mt-12">

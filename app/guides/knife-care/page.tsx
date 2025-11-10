@@ -19,10 +19,17 @@ export default function KnifeCareGuidePage() {
           <h1 className="text-4xl font-bold text-slate-900 mb-4">
             Professional Knife Care Guide
           </h1>
-          <p className="text-xl text-slate-600 leading-relaxed">
+          <p className="text-xl text-slate-600 leading-relaxed mb-4">
             24 years of professional kitchen experience condensed into
             the essential knife care techniques that actually matter.
           </p>
+          <div className="flex items-center gap-3 text-sm text-slate-500">
+            <span>By Scott Bradley, Professional Chef</span>
+            <span>•</span>
+            <span>Published: November 10, 2025</span>
+            <span>•</span>
+            <span>Updated: November 10, 2025</span>
+          </div>
         </header>
 
         <section className="mt-12">

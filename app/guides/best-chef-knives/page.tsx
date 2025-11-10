@@ -140,7 +140,9 @@ export default async function BestChefKnivesPage() {
           <div className="flex items-center gap-4 text-sm text-slate-500">
             <span>By Scott Bradley, Professional Chef</span>
             <span>•</span>
-            <span>Last Updated: October 5, 2025</span>
+            <span>Published: November 10, 2025</span>
+            <span>•</span>
+            <span>Updated: November 10, 2025</span>
           </div>
         </header>
 
