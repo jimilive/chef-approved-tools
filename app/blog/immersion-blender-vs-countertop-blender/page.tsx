@@ -8,9 +8,9 @@ import {
   BlogQuickAnswer,
   BlogComparisonTable,
   BlogFAQ,
-  BlogEmailCapture,
-  BlogAuthorBio
+  BlogEmailCapture
 } from '@/components/blog'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Immersion vs Countertop Blender: Why You Need Both',
@@ -161,7 +161,7 @@ export default function ImmersionVsCountertopBlenderComparison() {
 
         <BlogFAQ questions={comparisonData.faq.questions} />
         <BlogEmailCapture />
-        <BlogAuthorBio />
+        <AuthorBio />
       </BlogLayout>
     </>
   )

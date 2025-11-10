@@ -419,9 +419,6 @@ export default function FoodProcessorVsBlenderPost() {
             <div className="mb-6">
               <h4 className="font-bold text-orange-800 mb-2">Technique Guides:</h4>
               <ul className="text-orange-700 space-y-1 text-sm">
-                {/* <li>• Reducing Sauces: The Technique Restaurants Use Daily</li> */}
-                {/* <li>• Braising 101: Tough Cuts Made Tender</li> */}
-                {/* <li>• Making Stock: Professional Chef Method</li> */}
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-food-processor-vs-blender-roasting-guide-1"
                   position="final_cta"
@@ -436,8 +433,6 @@ export default function FoodProcessorVsBlenderPost() {
             <div className="mb-6">
               <h4 className="font-bold text-orange-800 mb-2">Essential Equipment:</h4>
               <ul className="text-orange-700 space-y-1 text-sm">
-                {/* <li>• Vitamix 5200 Blender Review</li> */}
-                {/* <li>• Cuisinart 14-Cup Food Processor Review</li> */}
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-food-processor-vs-blender-scraper-2"
                   position="final_cta"
@@ -452,8 +447,6 @@ export default function FoodProcessorVsBlenderPost() {
             <div>
               <h4 className="font-bold text-orange-800 mb-2">Complete Buying Guides:</h4>
               <ul className="text-orange-700 space-y-1 text-sm">
-                {/* <li>• Kitchen Starter Kit: First 5 Tools to Buy</li> */}
-                {/* <li>• Cookware Materials Explained: What Chefs Actually Use</li> */}
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-food-processor-vs-blender-kitchen-tools-guide-1"
                   position="final_cta"

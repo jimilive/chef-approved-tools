@@ -115,7 +115,7 @@ export default function VegetableRoastingGuidePage() {
         </header>
 
         <div className="prose prose-lg prose-slate max-w-none">
-          <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-6 rounded-xl border-l-6 border-blue-600 my-8 shadow-lg">
+          <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-6 rounded-xl border-l-4 border-blue-600 my-8 shadow-lg">
             <p className="text-white font-semibold mb-3 flex items-center gap-2">
               <Flame className="w-5 h-5" />
               Restaurant Reality

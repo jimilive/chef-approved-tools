@@ -422,16 +422,12 @@ export default function HowToPreheatPanPost() {
                 >
                   <Link href="/blog/how-to-clean-burnt-stainless-steel-pans" className="text-orange-700 underline">How to Clean Burnt Stainless Steel Pans</Link>
                 </CTAVisibilityTracker></li>
-                {/* <li>• Deglazing: The Secret to Restaurant-Quality Flavor</li> */}
               </ul>
             </div>
 
             <div className="mb-6">
               <h4 className="font-bold text-orange-800 mb-2">Essential Equipment:</h4>
               <ul className="text-orange-700 space-y-1 text-sm">
-                {/* <li>• All-Clad D3 Stainless Skillet Review</li> */}
-                {/* <li>• ThermoWorks Thermapen ONE Review</li> */}
-                {/* <li>• Matfer Bourgeat Carbon Steel Pan Review</li> */}
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-preheat-pan-lodge-2"
                   position="final_cta"
@@ -454,7 +450,6 @@ export default function HowToPreheatPanPost() {
                 >
                   <Link href="/blog/cookware-materials-explained" className="text-orange-700 underline">Cookware Materials Explained: What Chefs Actually Use</Link>
                 </CTAVisibilityTracker></li>
-                {/* <li>• Kitchen Starter Kit: First 5 Tools to Buy</li> */}
               </ul>
             </div>
           </div>

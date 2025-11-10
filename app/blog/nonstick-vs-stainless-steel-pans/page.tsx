@@ -8,9 +8,9 @@ import {
   BlogQuickAnswer,
   BlogComparisonTable,
   BlogFAQ,
-  BlogEmailCapture,
-  BlogAuthorBio
+  BlogEmailCapture
 } from '@/components/blog'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Nonstick vs Stainless Steel Pans: When to Use Each',
@@ -161,7 +161,7 @@ export default function NonstickVsStainlessSteelComparison() {
 
         <BlogFAQ questions={comparisonData.faq.questions} />
         <BlogEmailCapture />
-        <BlogAuthorBio />
+        <AuthorBio />
       </BlogLayout>
     </>
   )

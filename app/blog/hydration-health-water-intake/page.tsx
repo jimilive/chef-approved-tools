@@ -87,7 +87,7 @@ export default function HydrationHealthWaterIntakePage() {
         </header>
 
         <div className="prose prose-lg prose-slate max-w-none">
-          <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-6 rounded-xl border-l-6 border-blue-600 my-8 shadow-lg">
+          <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-6 rounded-xl border-l-4 border-blue-600 my-8 shadow-lg">
             <p className="text-white font-semibold mb-3 flex items-center gap-2">
               <ChefHat className="w-5 h-5" />
               Restaurant Reality: The Dehydration Collapse
@@ -121,12 +121,12 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>The Heat Factor</h3>
 
           <p>
-            <strong>Kitchen Temperatures Are Brutal</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Kitchen Temperatures Are Brutal</h4>
             Professional kitchens regularly hit 95-105°F during service. Even home kitchens reach 80-85°F when multiple burners are running. Your body sweats to cool down—and that sweat contains water you need to replace.
           </p>
 
           <p>
-            <strong>You&apos;re Sweating More Than You Think</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">You&apos;re Sweating More Than You Think</h4>
             In a hot kitchen, you can lose 1-2 liters of fluid per hour through sweat. That&apos;s 2-4 pounds of water weight. If you&apos;re not replacing it, you&apos;re dehydrating rapidly.
           </p>
 
@@ -137,12 +137,12 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>The Activity Factor</h3>
 
           <p>
-            <strong>Constant Movement Burns Fluid</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Constant Movement Burns Fluid</h4>
             Cooking isn&apos;t just standing there. You&apos;re moving, lifting, stirring, carrying hot pans, walking back and forth to coolers. This activity increases fluid loss beyond just the heat.
           </p>
 
           <p>
-            <strong>Physical Demands Add Up</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Physical Demands Add Up</h4>
             A professional cook burns 300-400 calories per hour and loses significant fluid through exertion alone—even before accounting for kitchen heat.
           </p>
 
@@ -161,17 +161,17 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>Impaired Taste Perception</h3>
 
           <p>
-            <strong>Dry Mouth Kills Flavor</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Dry Mouth Kills Flavor</h4>
             Taste buds need saliva to function properly. When you&apos;re dehydrated, you produce less saliva, and your ability to taste food accurately decreases by 20-30%.
           </p>
 
           <p>
-            <strong>You&apos;ll Oversalt Everything</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">You&apos;ll Oversalt Everything</h4>
             Dehydrated cooks consistently oversalt food because they can&apos;t taste properly. Then the family complains dinner is too salty.
           </p>
 
           <p>
-            <strong>Acid Balance Suffers</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Acid Balance Suffers</h4>
             Your ability to detect acid also decreases when dehydrated. You can&apos;t balance flavors correctly when your taste perception is off.
           </p>
 
@@ -182,24 +182,24 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>Reduced Cognitive Function</h3>
 
           <p>
-            <strong>Slower Decision-Making</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Slower Decision-Making</h4>
             Even 2% dehydration (losing just 2% of body weight in water) reduces cognitive function by 20-30%. This means slower cooking decisions, more mistakes, and lower quality output.
           </p>
 
           <p>
-            <strong>Recipe Following Gets Harder</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Recipe Following Gets Harder</h4>
             Following complex recipes requires attention and memory. Dehydration impairs both. You&apos;ll skip steps, forget ingredients, or lose track of timing.
           </p>
 
           <h3>Physical Performance Decline</h3>
 
           <p>
-            <strong>Slower Movements</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Slower Movements</h4>
             Dehydration reduces physical performance by 10-30%. You move slower, react slower, and tire faster.
           </p>
 
           <p>
-            <strong>Coordination Suffers</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Coordination Suffers</h4>
             Fine motor skills—like knife work—decline with dehydration. This increases injury risk.
           </p>
 
@@ -234,7 +234,7 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>General Baseline</h3>
 
           <p>
-            <strong>The 8x8 Rule Is Too Simple</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">The 8x8 Rule Is Too Simple</h4>
             &quot;Eight 8-ounce glasses&quot; (64 ounces total) is a starting point, but activity level, climate, and individual factors matter more.
           </p>
 
@@ -248,7 +248,7 @@ export default function HydrationHealthWaterIntakePage() {
           </ul>
 
           <p>
-            <strong>Example Calculation:</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Example Calculation:</h4>
             A 150-pound home cook needs:
           </p>
           <ul>
@@ -285,39 +285,39 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>Before You Start Cooking</h3>
 
           <p>
-            <strong>Pre-Hydrate</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Pre-Hydrate</h4>
             Drink 16-20 ounces of water 30 minutes before cooking. This ensures you start well-hydrated.
           </p>
 
           <p>
-            <strong>Set Up Your Water Station</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Set Up Your Water Station</h4>
             Before turning on the stove, place a large water bottle or pitcher near your cooking area. If it&apos;s in arm&apos;s reach, you&apos;ll drink it.
           </p>
 
           <p>
-            <strong>Use a Water Bottle You Like</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Use a Water Bottle You Like</h4>
             Sounds silly, but using a water bottle you enjoy drinking from increases consumption. I use an insulated bottle that keeps water cold—much more appealing in a hot kitchen.
           </p>
 
           <h3>During Cooking</h3>
 
           <p>
-            <strong>The Every-Timer-Beep Rule</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">The Every-Timer-Beep Rule</h4>
             Every time your timer beeps (checking pasta, flipping meat, etc.), take 2-3 sips of water. This builds hydration into your cooking rhythm.
           </p>
 
           <p>
-            <strong>The Every-Transition Rule</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">The Every-Transition Rule</h4>
             Between cooking tasks (finished chopping, starting to sauté, etc.), take a water break. Drink 4-6 ounces.
           </p>
 
           <p>
-            <strong>Don&apos;t Wait for Thirst</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Don&apos;t Wait for Thirst</h4>
             If you feel thirsty, you&apos;re behind. Drink proactively, not reactively.
           </p>
 
           <p>
-            <strong>Cold Water Works Best</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Cold Water Works Best</h4>
             Cold water (45-55°F) empties from the stomach faster and feels more refreshing in hot kitchens. Keep water in the fridge or add ice.
           </p>
 
@@ -328,17 +328,17 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>After Cooking</h3>
 
           <p>
-            <strong>Continue Rehydrating</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Continue Rehydrating</h4>
             Don&apos;t stop drinking once you finish cooking. Continue drinking water through dinner and evening to fully recover.
           </p>
 
           <p>
-            <strong>Monitor Urine Color</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Monitor Urine Color</h4>
             Check urine color. Pale yellow = well hydrated. Dark yellow = need more water.
           </p>
 
           <p>
-            <strong>Replace Lost Electrolytes (Long Sessions)</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Replace Lost Electrolytes (Long Sessions)</h4>
             If you cooked for 2+ hours in a very hot kitchen and sweated heavily, consider adding electrolytes (sports drink, coconut water, or electrolyte powder).
           </p>
 
@@ -347,19 +347,19 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>Coffee and Tea</h3>
 
           <p>
-            <strong>Mild Diuretic Effect</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Mild Diuretic Effect</h4>
             Coffee and tea cause slight fluid loss, but the net effect is still positive (you gain more fluid than you lose). They count toward hydration, but water is better.
           </p>
 
           <p>
-            <strong>Best Practice:</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Best Practice:</h4>
             Drink 1 cup of water for every cup of coffee/tea during cooking sessions.
           </p>
 
           <h3>Alcohol</h3>
 
           <p>
-            <strong>Dehydrating Effect</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Dehydrating Effect</h4>
             Alcohol is a strong diuretic. Drinking while cooking increases dehydration risk and impairs judgment. Save drinks for after dinner.
           </p>
 

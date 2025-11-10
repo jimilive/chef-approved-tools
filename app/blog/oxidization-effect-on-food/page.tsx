@@ -130,22 +130,22 @@ export default function OxidizationPage() {
           <h3>The Chemical Reaction</h3>
 
           <p>
-            <strong>Oxidation = Reaction with Oxygen</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Oxidation = Reaction with Oxygen</h4>
             When food is exposed to oxygen in the air, chemical reactions occur that change the food&apos;s properties. This is oxidation.
           </p>
 
           <p>
-            <strong>Enzymatic Browning (Most Common)</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Enzymatic Browning (Most Common)</h4>
             Foods contain enzymes (like polyphenol oxidase) that react with oxygen when cells are damaged (by cutting, bruising, or biting). This creates brown pigments called melanins.
           </p>
 
           <p>
-            <strong>Non-Enzymatic Oxidation</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Non-Enzymatic Oxidation</h4>
             Some oxidation happens without enzymes—like fats going rancid or vitamin C degrading. This is slower but equally damaging to food quality.
           </p>
 
           <p>
-            <strong>Why It Happens</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Why It Happens</h4>
             Oxidation is a natural process. In nature, it helps plants seal wounds (brown flesh protects the apple from infection). In your kitchen, it&apos;s usually unwanted.
           </p>
 
@@ -167,76 +167,76 @@ export default function OxidizationPage() {
           <h3>High-Risk Produce</h3>
 
           <p>
-            <strong>Apples and Pears</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Apples and Pears</h4>
             Cut surfaces brown within minutes due to high polyphenol oxidase enzyme levels.
           </p>
 
           <p>
-            <strong>Avocados</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Avocados</h4>
             Turn brown extremely quickly. Guacamole can oxidize in 30 minutes unprotected.
           </p>
 
           <p>
-            <strong>Bananas</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Bananas</h4>
             Brown spots on skins are oxidation. Peeled bananas brown rapidly.
           </p>
 
           <p>
-            <strong>Potatoes</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Potatoes</h4>
             Raw cut potatoes oxidize to gray-brown within 5-10 minutes.
           </p>
 
           <p>
-            <strong>Artichokes</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Artichokes</h4>
             Extremely prone to oxidation. Turn brown almost immediately when cut.
           </p>
 
           <p>
-            <strong>Eggplant</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Eggplant</h4>
             Cut surfaces oxidize quickly, especially at warm temperatures.
           </p>
 
           <h3>Leafy Greens and Herbs</h3>
 
           <p>
-            <strong>Basil</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Basil</h4>
             Fresh basil oxidizes within hours, turning black and losing flavor.
           </p>
 
           <p>
-            <strong>Lettuce</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Lettuce</h4>
             Cut edges brown, especially iceberg and romaine.
           </p>
 
           <p>
-            <strong>Spinach</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Spinach</h4>
             Wilts and darkens when exposed to air too long.
           </p>
 
           <p>
-            <strong>Parsley and Cilantro</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Parsley and Cilantro</h4>
             Stems oxidize faster than leaves, turning slimy.
           </p>
 
           <h3>Specialty Items</h3>
 
           <p>
-            <strong>Fresh Pasta</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Fresh Pasta</h4>
             Oxidizes and dries out within hours if not stored properly.
           </p>
 
           <p>
-            <strong>Fresh Juice</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Fresh Juice</h4>
             Vitamin C oxidizes rapidly; fresh juice loses nutrition and flavor.
           </p>
 
           <p>
-            <strong>Cooking Oils</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Cooking Oils</h4>
             Unsaturated fats oxidize over time, becoming rancid.
           </p>
 
           <p>
-            <strong>Nuts</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Nuts</h4>
             High-fat nuts go rancid through oxidation (especially walnuts, pecans).
           </p>
 
@@ -249,34 +249,34 @@ export default function OxidizationPage() {
           <h3>Visual Changes (The Obvious Problem)</h3>
 
           <p>
-            <strong>Browning</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Browning</h4>
             Brown apples, gray guacamole, black basil—all visual turn-offs that suggest (incorrectly) that food has spoiled.
           </p>
 
           <p>
-            <strong>Color Loss</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Color Loss</h4>
             Bright green pesto turns dull olive-green. Vibrant red strawberries become dull.
           </p>
 
           <p>
-            <strong>Appearance of Spoilage</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Appearance of Spoilage</h4>
             Even though oxidized food is usually safe to eat, it looks unappealing and customers (or family) won&apos;t want it.
           </p>
 
           <h3>Flavor Changes</h3>
 
           <p>
-            <strong>Off Flavors</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Off Flavors</h4>
             Oxidation creates bitter, metallic, or stale flavors. Fresh juice tastes flat after oxidation.
           </p>
 
           <p>
-            <strong>Loss of Aromatic Compounds</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Loss of Aromatic Compounds</h4>
             Herbs lose their fresh, bright flavors. Oils develop rancid tastes.
           </p>
 
           <p>
-            <strong>Reduced Sweetness</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Reduced Sweetness</h4>
             Oxidation can break down sugars, making fruit taste less sweet.
           </p>
 
@@ -287,34 +287,34 @@ export default function OxidizationPage() {
           <h3>Texture Changes</h3>
 
           <p>
-            <strong>Softening</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Softening</h4>
             Cut apples and pears soften as oxidation progresses.
           </p>
 
           <p>
-            <strong>Sliminess</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Sliminess</h4>
             Oxidation can break down cell walls, creating slimy textures in leafy greens.
           </p>
 
           <p>
-            <strong>Drying Out</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Drying Out</h4>
             Surface oxidation can create a dry, leathery texture on cut produce.
           </p>
 
           <h3>Nutritional Loss</h3>
 
           <p>
-            <strong>Vitamin C Degradation</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Vitamin C Degradation</h4>
             Vitamin C (ascorbic acid) is extremely susceptible to oxidation. Fresh juice can lose 50% of vitamin C within hours.
           </p>
 
           <p>
-            <strong>Antioxidant Loss</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Antioxidant Loss</h4>
             Many beneficial plant compounds (polyphenols, flavonoids) degrade through oxidation.
           </p>
 
           <p>
-            <strong>Enzyme Activity</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Enzyme Activity</h4>
             Beneficial enzymes in raw food can be destroyed by oxidation.
           </p>
 
@@ -336,7 +336,7 @@ export default function OxidizationPage() {
           <h3>Method #1: Acid Treatment (Most Common)</h3>
 
           <p>
-            <strong>Why It Works:</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Why It Works:</h4>
             Acid (citric acid, ascorbic acid) lowers pH, which deactivates the enzymes that cause browning.
           </p>
 
@@ -388,7 +388,7 @@ export default function OxidizationPage() {
           <h3>Method #2: Water Submersion</h3>
 
           <p>
-            <strong>Why It Works:</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Why It Works:</h4>
             Blocking oxygen access prevents oxidation. No air = no oxidation.
           </p>
 
@@ -412,14 +412,14 @@ export default function OxidizationPage() {
           </ul>
 
           <p>
-            <strong>Limitations:</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Limitations:</h4>
             Soaking too long (over 2 hours) can leach flavor and nutrients. This is a short-term solution.
           </p>
 
           <h3>Method #3: Blanching (For Greens and Herbs)</h3>
 
           <p>
-            <strong>Why It Works:</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Why It Works:</h4>
             Brief exposure to boiling water denatures the enzymes that cause oxidation. Dead enzymes can&apos;t cause browning.
           </p>
 
@@ -444,14 +444,14 @@ export default function OxidizationPage() {
           </ul>
 
           <p>
-            <strong>The Trade-Off:</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">The Trade-Off:</h4>
             Blanching changes texture slightly and reduces raw flavor. It&apos;s worth it for pesto and sauces where color matters.
           </p>
 
           <h3>Method #4: Oil Coating</h3>
 
           <p>
-            <strong>Why It Works:</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Why It Works:</h4>
             Oil creates a barrier between food and oxygen. No oxygen exposure = slower oxidation.
           </p>
 
@@ -488,7 +488,7 @@ export default function OxidizationPage() {
           <h3>Method #5: Vacuum Sealing</h3>
 
           <p>
-            <strong>Why It Works:</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Why It Works:</h4>
             Removes oxygen completely from storage environment.
           </p>
 
@@ -512,7 +512,7 @@ export default function OxidizationPage() {
           </ul>
 
           <p>
-            <strong>Equipment Needed:</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Equipment Needed:</h4>
             Food-safe vacuum sealer (like FoodSaver)
           </p>
 
@@ -554,7 +554,7 @@ export default function OxidizationPage() {
           </ul>
 
           <p>
-            <strong>Commercial Trick:</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Commercial Trick:</h4>
             Some restaurants add a thin layer of water on top of guacamole, which they pour off before service. The water blocks oxygen.
           </p>
 
@@ -615,22 +615,22 @@ export default function OxidizationPage() {
           <h3>General Rules</h3>
 
           <p>
-            <strong>Keep It Cold</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Keep It Cold</h4>
             Oxidation slows dramatically at refrigerator temperatures. Cold = slower chemical reactions.
           </p>
 
           <p>
-            <strong>Block Air Exposure</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Block Air Exposure</h4>
             Use airtight containers, press plastic wrap directly on surfaces, or vacuum seal.
           </p>
 
           <p>
-            <strong>Minimize Light</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Minimize Light</h4>
             Light accelerates oxidation. Store in opaque containers or dark places.
           </p>
 
           <p>
-            <strong>Reduce Time</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Reduce Time</h4>
             The less time between prep and use, the better. Prep as close to cooking time as practical.
           </p>
 
@@ -659,32 +659,32 @@ export default function OxidizationPage() {
           <h3>Beneficial Oxidation</h3>
 
           <p>
-            <strong>Caramelizing Onions</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Caramelizing Onions</h4>
             The browning is oxidation—and it&apos;s delicious.
           </p>
 
           <p>
-            <strong>Searing Meat</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Searing Meat</h4>
             Maillard reaction (browning) involves oxidation and creates incredible flavor.
           </p>
 
           <p>
-            <strong>Aging Cheese</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Aging Cheese</h4>
             Controlled oxidation develops complex flavors.
           </p>
 
           <p>
-            <strong>Curing Meats</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Curing Meats</h4>
             Oxidation is part of the curing process.
           </p>
 
           <p>
-            <strong>Wine and Beer</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">Wine and Beer</h4>
             Controlled oxidation develops depth and character.
           </p>
 
           <p>
-            <strong>The Difference:</strong><br />
+            <h4 className="font-semibold text-slate-900 mb-2">The Difference:</h4>
             Controlled vs. uncontrolled oxidation. You want oxidation during cooking (for flavor), not during storage (which degrades quality).
           </p>
 

@@ -8,9 +8,9 @@ import {
   BlogQuickAnswer,
   BlogComparisonTable,
   BlogFAQ,
-  BlogEmailCapture,
-  BlogAuthorBio
+  BlogEmailCapture
 } from '@/components/blog'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Gas vs Induction Cooktops: Why I Switched After 24 Years',
@@ -157,7 +157,7 @@ export default function GasVsInductionComparison() {
 
         <BlogFAQ questions={comparisonData.faq.questions} />
         <BlogEmailCapture />
-        <BlogAuthorBio />
+        <AuthorBio />
       </BlogLayout>
     </>
   )

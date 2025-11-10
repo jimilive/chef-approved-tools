@@ -8,9 +8,9 @@ import {
   BlogQuickAnswer,
   BlogComparisonTable,
   BlogFAQ,
-  BlogEmailCapture,
-  BlogAuthorBio
+  BlogEmailCapture
 } from '@/components/blog'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Carbon Steel vs Stainless Knives: 24-Year Test Results',
@@ -178,7 +178,7 @@ export default function CarbonSteelVsStainlessKnifeComparison() {
 
         <BlogFAQ questions={comparisonData.faq.questions} />
         <BlogEmailCapture />
-        <BlogAuthorBio />
+        <AuthorBio />
       </BlogLayout>
     </>
   )

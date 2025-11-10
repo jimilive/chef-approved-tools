@@ -8,9 +8,9 @@ import {
   BlogQuickAnswer,
   BlogComparisonTable,
   BlogFAQ,
-  BlogEmailCapture,
-  BlogAuthorBio
+  BlogEmailCapture
 } from '@/components/blog'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Dutch Oven vs Slow Cooker: Flavor vs Convenience',
@@ -161,7 +161,7 @@ export default function DutchOvenVsSlowCookerComparison() {
 
         <BlogFAQ questions={comparisonData.faq.questions} />
         <BlogEmailCapture />
-        <BlogAuthorBio />
+        <AuthorBio />
       </BlogLayout>
     </>
   )

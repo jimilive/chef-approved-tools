@@ -317,22 +317,18 @@ export default function StandMixerBuyingGuidePost() {
             <ul className="space-y-4">
               <li>
                 <strong>KitchenAid Artisan 5-Quart Tilt-Head</strong>
-                {/* <br />→ Read full review */}
                 <br />Classic reliability, ideal for 90% of home cooks.
               </li>
               <li>
                 <strong>KitchenAid Professional 600 Bowl-Lift</strong>
-                {/* <br />→ Read full review */}
                 <br />Built for bread, bagels, and dense batters.
               </li>
               <li>
                 <strong>Ankarsrum Original Stand Mixer</strong>
-                {/* <br />→ Read full review */}
                 <br />Swedish engineering, unmatched torque, built to last decades.
               </li>
               <li>
                 <strong>Cuisinart Precision Master 5.5-Qt</strong>
-                {/* <br />→ Read full review */}
                 <br />Affordable starter mixer for light-duty baking.
               </li>
             </ul>
@@ -420,9 +416,6 @@ export default function StandMixerBuyingGuidePost() {
             <div className="mb-6">
               <h4 className="font-bold text-orange-800 mb-2">Technique Guides:</h4>
               <ul className="text-orange-700 space-y-1 text-sm">
-                {/* <li>• Braising 101: Tough Cuts Made Tender</li> */}
-                {/* <li>• Reducing Sauces: The Technique Restaurants Use Daily</li> */}
-                {/* <li>• Making Stock: Professional Chef Method</li> */}
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-stand-mixer-buying-guide-roasting-guide-1"
                   position="final_cta"
@@ -437,9 +430,6 @@ export default function StandMixerBuyingGuidePost() {
             <div className="mb-6">
               <h4 className="font-bold text-orange-800 mb-2">Essential Equipment:</h4>
               <ul className="text-orange-700 space-y-1 text-sm">
-                {/* <li>• KitchenAid Artisan 5-Qt Review</li> */}
-                {/* <li>• Ankarsrum Original Review</li> */}
-                {/* <li>• Cuisinart Precision Master Review</li> */}
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-stand-mixer-buying-guide-processor-guide-1"
                   position="final_cta"
@@ -454,8 +444,6 @@ export default function StandMixerBuyingGuidePost() {
             <div>
               <h4 className="font-bold text-orange-800 mb-2">Complete Buying Guides:</h4>
               <ul className="text-orange-700 space-y-1 text-sm">
-                {/* <li>• Cookware Materials Explained: What Chefs Actually Use</li> */}
-                {/* <li>• Kitchen Starter Kit: First 5 Tools to Buy</li> */}
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-stand-mixer-buying-guide-kitchen-tools-guide-1"
                   position="final_cta"
