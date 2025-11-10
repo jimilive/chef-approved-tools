@@ -7,6 +7,9 @@ import {
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Clock, ThermometerSun, AlertTriangle, CheckCircle2 } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: "Why Resting Meat Is Key To Juicy Results",
@@ -77,28 +80,16 @@ export default function RestingMeatPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-700 mb-4">
-            <Clock className="w-5 h-5" />
-            <span className="text-sm font-medium">Technique</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Why Resting Is the Key to Cooking Meat
-          </h1>
-          <p className="text-xl text-slate-600">
-            Learn why professional chefs never skip resting meat. Master carry-over cooking, juice redistribution, and the science behind perfectly cooked steaks, roasts, and poultry.
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
-            <span>By Chef Scott Bradley</span>
-            <span>•</span>
-            <span>October 23, 2025</span>
-            <span>•</span>
-            <span>6 min read</span>
-          </div>
-        </header>
+      <BlogLayout breadcrumbTitle="Why Resting Is the Key to Cooking Meat">
+        <BlogHero
+          title="Why Resting Is the Key to Cooking Meat"
+          introduction={["Learn why professional chefs never skip resting meat. Master carry-over cooking, juice redistribution, and the science behind perfectly cooked steaks, roasts, and poultry."]}
+          publishedDate="2025-09-05"
+          lastUpdated="2025-10-23"
+          readTime="6 min read"
+        />
 
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             You&apos;ve nailed the sear, hit the perfect internal temperature with your thermometer, and the aroma is driving everyone wild. But if you slice that steak or roast the moment it leaves the heat, you&apos;ll lose everything you worked for—watching all those precious juices pool on the cutting board instead of staying in the meat where they belong.
           </p>
@@ -420,7 +411,7 @@ export default function RestingMeatPage() {
           </p>
         </div>
 
-        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+        <div className="bg-slate-50 rounded-xl p-8 mb-8">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link href="/blog/how-to-sear-steaks-restaurant-chef" className="text-orange-700 hover:text-orange-800 font-semibold">
@@ -444,20 +435,8 @@ export default function RestingMeatPage() {
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-          <div className="flex items-start gap-4">
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-700 mb-3">
-                Scott Bradley is a professional chef with 45 years of cooking experience, including 24 years in professional kitchens. He served as Kitchen Manager at Mellow Mushroom in Athens, GA, and held line positions at Purple Café, Feierabend, Il Pizzaiolo, and Paragary&apos;s. Scott holds an A.A.S. in Culinary Arts from Seattle Central College and a B.S. in Business Administration from the University of Montana.
-              </p>
-              <p className="text-slate-700">
-                At Chef Approved Tools, Scott combines decades of professional experience with hands-on equipment testing to recommend the best kitchen tools for home cooks who want professional results without professional prices.
-              </p>
-            </div>
-          </div>
-        </div>
-      </article>
+        <AuthorBio />
+      </BlogLayout>
     </>
   );
 }

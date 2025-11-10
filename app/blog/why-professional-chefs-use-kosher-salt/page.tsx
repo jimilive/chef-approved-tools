@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Calendar, Clock, User } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Why Professional Chefs Use Kosher Salt (Not Table Salt)',
@@ -24,28 +27,13 @@ const articleSchema = generateArticleSchema({
   urlSuffix: 'why-professional-chefs-use-kosher-salt'
 });
 
-export default function WhyChefsUseKosherSalt() {
-  return (
-    <div className="min-h-screen bg-white">
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBreadcrumbSchema([
-            { name: "Home", url: "https://www.chefapprovedtools.com" },
-            { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-            { name: "Why All Professional Cooks Use Kosher Salt", url: "https://www.chefapprovedtools.com/blog/why-professional-chefs-use-kosher-salt" }
-          ]))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema([
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
+  { name: "Why All Professional Cooks Use Kosher Salt", url: "https://www.chefapprovedtools.com/blog/why-professional-chefs-use-kosher-salt" }
+]);
+
+const faqSchema = generateFAQSchema([
             {
               question: "What's the difference between kosher salt and table salt?",
               answer: "Kosher salt has larger, irregular flakes with no additives, while table salt has fine, uniform grains plus iodine and anti-caking agents. Kosher salt is easier to pinch and control, dissolves at an ideal rate for seasoning, and has clean flavor untainted by iodine. The flake size makes over-salting harder—you can see and feel how much you're using."
@@ -86,52 +74,34 @@ export default function WhyChefsUseKosherSalt() {
               question: "How should I store kosher salt?",
               answer: "Store kosher salt in an airtight container in a cool, dry place—a jar or container near the stove for easy pinching. Salt doesn't spoil, but moisture causes clumping (especially with humid kitchens). At Purple Café, we kept Diamond Crystal in large containers on the line for easy access during service. Avoid storing directly in the cardboard box—it absorbs moisture and the box deteriorates."
             }
-          ]))
-        }}
+]);
+
+export default function WhyChefsUseKosherSalt() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-700">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
-          <span className="mx-2">/</span>
-          <span>Why All Professional Cooks Use Kosher Salt</span>
-        </nav>
+      <BlogLayout breadcrumbTitle="Why All Professional Cooks Use Kosher Salt">
+        <BlogHero
+          title="Why All Professional Cooks Use Kosher Salt"
+          introduction={["Discover why professional chefs prefer kosher salt. Learn about Diamond Crystal vs Morton, proper seasoning technique, and why it's essential in commercial kitchens."]}
+          publishedDate="2025-10-13"
+          lastUpdated="2025-10-27"
+          readTime="8 min read"
+        />
 
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>October 27, 2025</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>6 min read</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Scott Bradley</span>
-            </div>
-            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-              Cooking Techniques
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            Why All Professional Cooks Use Kosher Salt
-          </h1>
-
-          <p className="text-xl text-slate-600 leading-relaxed">
-            If you spend any time in professional kitchens or watch culinary tutorials, one thing is immediately obvious: <strong>kosher salt is everywhere</strong>. From restaurant prep tables to home kitchens of serious cooks, kosher salt has become the go-to seasoning for chefs of every level.
-          </p>
-        </div>
-
-        {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
             At <CTAVisibilityTracker
@@ -483,39 +453,16 @@ export default function WhyChefsUseKosherSalt() {
           </div>
         </div>
 
-        {/* Author Bio */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center flex-shrink-0">
-              <User className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing 200+ cover operations.
-                A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-                University of Montana. Diamond Crystal Kosher Salt has been my only salt choice for 24 years—6 years professional, 18 years at home.
-              </p>
-              <div className="mt-4">
-                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
-                  Read more about Scott →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Related Content */}
-        <div className="border-t border-gray-200 pt-8 mt-8">
+        <div className="bg-slate-50 rounded-xl p-8 mb-8">
           <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/reviews/diamond-crystal-kosher-salt" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+            <Link href="/reviews/diamond-crystal-kosher-salt" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Diamond Crystal Kosher Salt Review</h4>
               <p className="text-slate-600 text-sm">
                 The professional chef&apos;s choice for 24 years—flaky crystals, pure flavor, perfect control.
               </p>
             </Link>
-            <Link href="/blog/how-to-sear-steaks-like-restaurant-chef" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+            <Link href="/blog/how-to-sear-steaks-like-restaurant-chef" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">How to Sear Steaks Like a Restaurant Chef</h4>
               <p className="text-slate-600 text-sm">
                 Professional steak searing techniques using kosher salt for perfect crust formation.
@@ -523,7 +470,9 @@ export default function WhyChefsUseKosherSalt() {
             </Link>
           </div>
         </div>
-      </article>
-    </div>
+
+        <AuthorBio />
+      </BlogLayout>
+    </>
   );
 }
