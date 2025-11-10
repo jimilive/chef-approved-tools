@@ -19,6 +19,8 @@ interface ReviewHeroProps {
   ctaText?: string
   ctaSubtext?: string
   customCTA?: React.ReactNode
+  publishedDate?: string
+  lastUpdated?: string
 }
 
 export default function ReviewHero({
@@ -32,7 +34,9 @@ export default function ReviewHero({
   ctaUrl,
   ctaText = "Check Price on Amazon →",
   ctaSubtext = "View current pricing and availability",
-  customCTA
+  customCTA,
+  publishedDate,
+  lastUpdated
 }: ReviewHeroProps) {
   // Generate star display (★★★★☆ format)
   const fullStars = Math.floor(rating)
@@ -70,6 +74,15 @@ export default function ReviewHero({
           <div className="text-amber-500 text-base">{stars}</div>
         </div>
       </div>
+
+      {/* Dates - optional */}
+      {(publishedDate || lastUpdated) && (
+        <div className="flex items-center gap-3 text-xs text-slate-500 mb-4">
+          {publishedDate && <span>Published: {publishedDate}</span>}
+          {publishedDate && lastUpdated && <span>•</span>}
+          {lastUpdated && <span>Updated: {lastUpdated}</span>}
+        </div>
+      )}
 
       {/* Tier Badge */}
       <div className="inline-flex items-center gap-1.5 text-[13px] text-amber-900 bg-amber-100 px-3 py-1 rounded-md font-medium mb-5">

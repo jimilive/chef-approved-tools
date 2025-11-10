@@ -156,6 +156,8 @@ export default async function KitchenAidProfessional600ReviewPage() {
             tierBadge={reviewData.hero.tierBadge}
             verdict={reviewData.hero.verdict}
             verdictStrong={reviewData.hero.verdictStrong}
+            publishedDate="November 10, 2025"
+            lastUpdated="November 10, 2025"
             ctaUrl={primaryLink}
             ctaText={reviewData.hero.ctaText}
             customCTA={(

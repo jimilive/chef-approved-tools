@@ -184,6 +184,8 @@ export default async function LeCreusetDutchOvenReviewPage() {
             tierBadge={reviewData.hero.tierBadge}
             verdict={reviewData.hero.verdict}
             verdictStrong={reviewData.hero.verdictStrong}
+            publishedDate="November 10, 2025"
+            lastUpdated="November 10, 2025"
             customCTA={
               <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
                 {/* Quick Stats Grid */}

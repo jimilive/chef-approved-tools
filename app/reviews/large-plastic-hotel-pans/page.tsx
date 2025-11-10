@@ -198,6 +198,8 @@ export default async function LargePlasticHotelPansReview() {
             tierBadge={reviewData.hero.tierBadge}
             verdict={reviewData.hero.verdict}
             verdictStrong={reviewData.hero.verdictStrong}
+            publishedDate="November 10, 2025"
+            lastUpdated="November 10, 2025"
             ctaUrl={affiliateUrl}
             ctaText={reviewData.hero.ctaText}
             customCTA={(
