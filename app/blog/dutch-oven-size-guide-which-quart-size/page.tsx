@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Ruler, Users, ChefHat, Scale } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Dutch Oven Size Guide: 5.5-Qt vs 7-Qt (Which For Your Family?)',
@@ -81,24 +84,16 @@ export default function DutchOvenSizeGuidePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Dutch Oven Size Guide: Which Quart Size Do You Need?
-          </h1>
+      <BlogLayout breadcrumbTitle="Dutch Oven Size Guide">
+        <BlogHero
+          title="Dutch Oven Size Guide: Which Quart Size Do You Need?"
+          introduction={["A professional chef's guide to choosing the right Dutch oven size for soups, bread, braises, and everyday cooking. Learn what size fits your kitchen best."]}
+          publishedDate="2025-09-06"
+          lastUpdated="2025-10-21"
+          readTime="8 min read"
+        />
 
-          <div className="flex items-center gap-4 text-slate-600 text-sm mb-6">
-            <time dateTime="2025-10-21">October 21, 2025</time>
-            <span>•</span>
-            <span>8 min read</span>
-          </div>
-
-          <p className="text-xl text-slate-700 leading-relaxed">
-            A professional chef&apos;s guide to choosing the right Dutch oven size for soups, bread, braises, and everyday cooking. Learn what size fits your kitchen best.
-          </p>
-        </header>
-
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             If you&apos;ve ever tried to make sourdough in a too-small Dutch oven or fit a roast chicken into a pot better suited for soup, you know — size matters.
           </p>
@@ -533,7 +528,9 @@ export default function DutchOvenSizeGuidePage() {
             </div>
           </div>
         </div>
-      </article>
+
+        <AuthorBio />
+      </BlogLayout>
     </>
   )
 }

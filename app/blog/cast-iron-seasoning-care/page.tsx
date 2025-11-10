@@ -7,6 +7,9 @@ import {
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Droplets, FlaskConical, AlertTriangle } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: "Cast Iron Seasoning & Care: How To Build Bulletproof Coating",
@@ -109,30 +112,16 @@ export default function CastIronCarePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-700 mb-4">
-            <Flame className="w-5 h-5" />
-            <span className="text-sm font-medium">Equipment Care</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Cast Iron Seasoning &amp; Care: The Complete Professional Guide
-          </h1>
-          <p className="text-xl text-slate-600">
-            The chemistry of cast iron seasoning, proper care techniques, restoration methods, and common mistakes to avoid. Make your cast iron last forever with professional methods.
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
-            <span>By Chef Scott Bradley</span>
-            <span>•</span>
-            <span>September 27, 2025</span>
-            <span>•</span>
-            <span>Updated November 7, 2025</span>
-            <span>•</span>
-            <span>18 min read</span>
-          </div>
-        </header>
+      <BlogLayout breadcrumbTitle="Cast Iron Seasoning & Care">
+        <BlogHero
+          title="Cast Iron Seasoning & Care: The Complete Professional Guide"
+          introduction={["The chemistry of cast iron seasoning, proper care techniques, restoration methods, and common mistakes to avoid. Make your cast iron last forever with professional methods."]}
+          publishedDate="2025-09-27"
+          lastUpdated="2025-11-07"
+          readTime="18 min read"
+        />
 
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             Cast iron is one of the most durable, versatile, and misunderstood pieces of cookware in the kitchen. People either love it or avoid it entirely, and most of the fear comes from confusion about seasoning and care.
           </p>
@@ -858,21 +847,8 @@ export default function CastIronCarePage() {
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-          <div className="flex items-start gap-4">
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-700 mb-3">
-                Scott Bradley is a professional chef with 45 years of cooking experience, including 24 years in professional kitchens. He served as Kitchen Manager at Mellow Mushroom in Athens, GA, where he maintained and restored cast iron cookware used daily in high-volume service. He also held line positions at Purple Café, Feierabend, Il Pizzaiolo, and Paragary&apos;s. Scott holds an A.A.S. in Culinary Arts from Seattle Central College and a B.S. in Business Administration from the University of Montana.
-              </p>
-              <p className="text-slate-700">
-                Scott has used cast iron throughout his career, from casual dining to upscale restaurants. His approach focuses on helping home cooks understand that cast iron care isn&apos;t complicated—it&apos;s just different from other cookware. With simple, consistent habits, cast iron becomes the most reliable and longest-lasting piece of equipment in your kitchen.
-              </p>
-            </div>
-          </div>
-          <p className="text-sm text-slate-500 mt-4 mb-0 italic">Last updated: November 7, 2025</p>
-        </div>
-      </article>
+        <AuthorBio />
+      </BlogLayout>
     </>
   );
 }

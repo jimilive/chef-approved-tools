@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Flame, ThermometerSun, Clock, Utensils } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'How To Turn Cheap Meat Into Restaurant-Quality Tender (Braising)',
@@ -84,24 +87,16 @@ export default function Braising101Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Braising 101: Tough Cuts Made Tender
-          </h1>
+      <BlogLayout breadcrumbTitle="Braising 101: Tough Cuts Made Tender">
+        <BlogHero
+          title="Braising 101: Tough Cuts Made Tender"
+          introduction={["Professional chef explains the art and science of braising — transforming tough cuts into tender, flavorful perfection through low, slow heat and control."]}
+          publishedDate="2025-09-25"
+          lastUpdated="2025-10-21"
+          readTime="8 min read"
+        />
 
-          <div className="flex items-center gap-4 text-slate-600 text-sm mb-6">
-            <time dateTime="2025-10-21">October 21, 2025</time>
-            <span>•</span>
-            <span>8 min read</span>
-          </div>
-
-          <p className="text-xl text-slate-700 leading-relaxed">
-            Professional chef explains the art and science of braising — transforming tough cuts into tender, flavorful perfection through low, slow heat and control.
-          </p>
-        </header>
-
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             At Purple Café, we had a prep cook who was one of the best on the line—fast, sharp, cool under pressure. But one night, he tried to save time by leaving a braise running overnight. He set the burner too high, sealed the lid tight, and went home.
           </p>
@@ -466,12 +461,6 @@ export default function Braising101Page() {
             </CTAVisibilityTracker>—another slow technique that builds deep flavor through patience.
           </p>
 
-          <div className="bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-600 p-6 my-12 rounded-r-lg">
-            <p className="text-slate-900 mb-0">
-              <strong>About the Author:</strong> Scott Bradley spent 24 years in professional kitchens, including time at Purple Café in Seattle and a long tenure as Kitchen Manager at Mellow Mushroom. He specializes in teaching home cooks the professional techniques that create consistent, restaurant-quality results.
-            </p>
-          </div>
-
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">
             Frequently Asked Questions
           </h2>
@@ -550,7 +539,9 @@ export default function Braising101Page() {
             </div>
           </div>
         </div>
-      </article>
+
+        <AuthorBio />
+      </BlogLayout>
     </>
   )
 }

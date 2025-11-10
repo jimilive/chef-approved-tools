@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Flame, Clock, ThermometerSun, Beaker } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Why "10-Minute Caramelized Onions" Is A Lie (Chemistry Proof)',
@@ -84,24 +87,16 @@ export default function CaramelizingOnionsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Caramelizing Onions: Why It Takes 45 Minutes (Not 10)
-          </h1>
+      <BlogLayout breadcrumbTitle="Caramelizing Onions: Why It Takes 45 Minutes (Not 10)">
+        <BlogHero
+          title="Caramelizing Onions: Why It Takes 45 Minutes (Not 10)"
+          introduction={["Professional chef explains the real process of caramelizing onions — why patience, temperature, and technique matter more than shortcuts."]}
+          publishedDate="2025-09-19"
+          lastUpdated="2025-10-21"
+          readTime="8 min read"
+        />
 
-          <div className="flex items-center gap-4 text-slate-600 text-sm mb-6">
-            <time dateTime="2025-10-21">October 21, 2025</time>
-            <span>•</span>
-            <span>8 min read</span>
-          </div>
-
-          <p className="text-xl text-slate-700 leading-relaxed">
-            Professional chef explains the real process of caramelizing onions — why patience, temperature, and technique matter more than shortcuts.
-          </p>
-        </header>
-
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             There&apos;s a special kind of quiet in the kitchen when onions first hit the pan. Butter melts, the air thickens with sweetness, and you know what&apos;s coming — a slow transformation that smells like comfort and patience.
           </p>
@@ -510,12 +505,6 @@ export default function CaramelizingOnionsPage() {
             That&apos;s how professionals cook—not rushing the process, just respecting it.
           </p>
 
-          <div className="bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-600 p-6 my-12 rounded-r-lg">
-            <p className="text-slate-900 mb-0">
-              <strong>About the Author:</strong> Scott Bradley spent 24 years in professional kitchens, including a long tenure as Kitchen Manager at Mellow Mushroom. He specializes in teaching home cooks the professional techniques that create consistent, restaurant-quality results.
-            </p>
-          </div>
-
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">
             Frequently Asked Questions
           </h2>
@@ -594,7 +583,9 @@ export default function CaramelizingOnionsPage() {
             </div>
           </div>
         </div>
-      </article>
+
+        <AuthorBio />
+      </BlogLayout>
     </>
   )
 }

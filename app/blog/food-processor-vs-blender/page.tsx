@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Calendar, Clock, User, Zap, Settings } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Food Processor vs Blender: 90% of Home Cooks Only Need One',
@@ -26,7 +29,7 @@ const articleSchema = generateArticleSchema({
 
 export default function FoodProcessorVsBlenderPost() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -82,48 +85,16 @@ export default function FoodProcessorVsBlenderPost() {
         }}
       />
 
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-700">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
-          <span className="mx-2">/</span>
-          <span>Food Processor vs Blender</span>
-        </nav>
+      <BlogLayout breadcrumbTitle="Food Processor vs Blender">
+        <BlogHero
+          title="Food Processor vs Blender: Which Do You Actually Need?"
+          introduction={["Walk into any kitchen store and you'll see both — a blender promising silky smoothies and a food processor boasting chopping power. Most home cooks think they're interchangeable. In restaurant kitchens, they're not."]}
+          publishedDate="2025-09-28"
+          lastUpdated="2025-10-21"
+          readTime="8 min read"
+        />
 
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>October 21, 2025</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>8 min read</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Scott Bradley</span>
-            </div>
-            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-              Cooking Techniques
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            Food Processor vs Blender: Which Do You Actually Need?
-          </h1>
-
-          <p className="text-xl text-slate-600 leading-relaxed">
-            Walk into any kitchen store and you&apos;ll see both — a blender promising silky smoothies and a food processor boasting chopping power. Most home cooks think they&apos;re interchangeable. In restaurant kitchens, they&apos;re not.
-          </p>
-        </div>
-
-        {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
             Each has a distinct job, and using the wrong one can ruin your prep.
@@ -539,24 +510,20 @@ export default function FoodProcessorVsBlenderPost() {
         </div>
 
         {/* Related Content */}
-        <div className="border-t border-gray-200 pt-8 mt-8">
-          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/blog/kitchen-tools-wasting-money" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">10 Kitchen Tools You&apos;re Wasting Money On</h4>
-              <p className="text-slate-600 text-sm">
-                Professional chef reveals which kitchen tools are worth buying and which are marketing gimmicks.
-              </p>
+        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/blog/kitchen-tools-wasting-money" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → 10 Kitchen Tools You&apos;re Wasting Money On
             </Link>
-            <Link href="/blog/roasting-vegetables-restaurant-guide" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">Roasting Vegetables: Restaurant Temperature & Timing Guide</h4>
-              <p className="text-slate-600 text-sm">
-                Learn the professional techniques for perfectly roasted vegetables every time.
-              </p>
+            <Link href="/blog/roasting-vegetables-restaurant-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Roasting Vegetables: Restaurant Temperature & Timing Guide
             </Link>
           </div>
         </div>
-      </article>
-    </div>
+
+        <AuthorBio />
+      </BlogLayout>
+    </>
   )
 }

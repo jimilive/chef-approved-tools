@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Calendar, Clock, User, Flame, Settings } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Cookware Materials Explained: Stainless, Cast Iron & More',
@@ -26,7 +29,7 @@ const articleSchema = generateArticleSchema({
 
 export default function CookwareMaterialsPost() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -82,48 +85,16 @@ export default function CookwareMaterialsPost() {
         }}
       />
 
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-700">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
-          <span className="mx-2">/</span>
-          <span>Cookware Materials Explained</span>
-        </nav>
+      <BlogLayout breadcrumbTitle="Cookware Materials Explained">
+        <BlogHero
+          title="Cookware Materials Explained: What Chefs Actually Use"
+          introduction={["Walk into any kitchen store and you'll find a wall of shiny pots and pans — stainless steel, cast iron, copper, aluminum, nonstick — all promising 'professional results.' Most home cooks grab what looks nice, only to find themselves fighting hot spots, stuck food, and warped pans within a year."]}
+          publishedDate="2025-10-14"
+          lastUpdated="2025-10-21"
+          readTime="10 min read"
+        />
 
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>October 21, 2025</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>10 min read</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Scott Bradley</span>
-            </div>
-            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-              Cooking Techniques
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            Cookware Materials Explained: What Chefs Actually Use
-          </h1>
-
-          <p className="text-xl text-slate-600 leading-relaxed">
-            Walk into any kitchen store and you&apos;ll find a wall of shiny pots and pans — stainless steel, cast iron, copper, aluminum, nonstick — all promising &quot;professional results.&quot; Most home cooks grab what looks nice, only to find themselves fighting hot spots, stuck food, and warped pans within a year.
-          </p>
-        </div>
-
-        {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
             In 24 years of restaurant kitchens, I&apos;ve cooked on every surface imaginable. From $400 All-Clad saucepans to $20 carbon steel skillets that outlasted entire kitchens. The truth is, each material has strengths and weaknesses — and chefs choose based on function, not flash.
@@ -539,48 +510,21 @@ export default function CookwareMaterialsPost() {
           </div>
         </div>
 
-        {/* Author Bio */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center">
-              <User className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-600 text-sm leading-relaxed mb-2">
-                <strong>Professional Chef • 45 Years Cooking Experience • 24 Years Professional Kitchens</strong>
-              </p>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from the University of Montana. Techniques tested on thousands of dishes in high-volume kitchens serving hundreds daily.
-              </p>
-              <div className="mt-4">
-                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
-                  Learn more about Scott →
-                </Link>
-              </div>
-            </div>
+        {/* Related Content */}
+        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/blog/stainless-steel-why-food-sticks" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Stainless Steel Cooking: Why Food Sticks
+            </Link>
+            <Link href="/blog/cast-iron-mistakes-ruin-pan" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Cast Iron Mistakes That Ruin Your Pan
+            </Link>
           </div>
         </div>
 
-        {/* Related Content */}
-        <div className="border-t border-gray-200 pt-8 mt-8">
-          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/blog/stainless-steel-why-food-sticks" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">Stainless Steel Cooking: Why Food Sticks</h4>
-              <p className="text-slate-600 text-sm">
-                Learn how to use stainless steel cookware correctly for perfect food release every time.
-              </p>
-            </Link>
-            <Link href="/blog/cast-iron-mistakes-ruin-pan" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">Cast Iron Mistakes That Ruin Your Pan</h4>
-              <p className="text-slate-600 text-sm">
-                Avoid common cast iron mistakes and learn proper maintenance for lifetime performance.
-              </p>
-            </Link>
-          </div>
-        </div>
-      </article>
-    </div>
+        <AuthorBio />
+      </BlogLayout>
+    </>
   )
 }

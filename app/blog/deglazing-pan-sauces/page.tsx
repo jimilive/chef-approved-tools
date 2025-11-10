@@ -7,6 +7,9 @@ import {
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Flame, AlertTriangle, Lightbulb, Droplets, Beaker, Wine, Sparkles } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: "Deglazing & Pan Sauces: The Restaurant Technique Explained",
@@ -110,30 +113,16 @@ export default function DeglazingPanSaucesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-700 mb-4">
-            <Flame className="w-5 h-5" />
-            <span className="text-sm font-medium">{articleMeta.category}</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            The Art of Deglazing: Making Pan Sauces That Elevate Every Meal
-          </h1>
-          <p className="text-xl text-slate-600">
-            Master deglazing and pan sauces from a professional chef with 24 years of restaurant experience. Learn the technique, understand fond, and create restaurant-quality sauces at home in minutes.
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
-            <span>By {articleMeta.author}</span>
-            <span>•</span>
-            <span>{articleMeta.publishDate}</span>
-            <span>•</span>
-            <span>Updated {articleMeta.lastModified}</span>
-            <span>•</span>
-            <span>{articleMeta.readTime}</span>
-          </div>
-        </header>
+      <BlogLayout breadcrumbTitle="The Art of Deglazing">
+        <BlogHero
+          title="The Art of Deglazing: Making Pan Sauces That Elevate Every Meal"
+          introduction={["Master deglazing and pan sauces from a professional chef with 24 years of restaurant experience. Learn the technique, understand fond, and create restaurant-quality sauces at home in minutes."]}
+          publishedDate="2025-09-11"
+          lastUpdated="2025-11-07"
+          readTime="12 min read"
+        />
 
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             Every chef remembers the first time they really understood deglazing. That moment when you pour wine or stock into a hot pan, and it explodes into steam with that hiss of pure magic — lifting every browned bit of flavor from the surface and turning it into gold.
           </p>
@@ -788,21 +777,8 @@ export default function DeglazingPanSaucesPage() {
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-          <div className="flex items-start gap-4">
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-700 mb-3">
-                Scott Bradley is a professional chef with 45 years of cooking experience, including 24 years in professional kitchens. At Purple Cafe in Seattle, Scott prepared dozens of pan sauces nightly during dinner service, developing the speed and efficiency that comes from thousands of repetitions. He holds an A.A.S. in Culinary Arts from Seattle Central College and a B.S. in Business Administration from the University of Montana.
-              </p>
-              <p className="text-slate-700">
-                Scott&apos;s approach to pan sauces demystifies a technique that seems intimidating but is actually one of the simplest and fastest ways to elevate home cooking. He believes that mastering deglazing is more valuable than learning 50 different sauce recipes—once you understand the basic technique, you can improvise confidently with whatever ingredients you have available.
-              </p>
-            </div>
-          </div>
-          <p className="text-sm text-slate-500 mt-4 mb-0 italic">Last updated: {articleMeta.lastModified}</p>
-        </div>
-      </article>
+        <AuthorBio />
+      </BlogLayout>
     </>
   );
 }

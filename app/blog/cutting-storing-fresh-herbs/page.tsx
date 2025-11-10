@@ -7,6 +7,9 @@ import {
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Scissors, Leaf, Droplet, AlertTriangle, Lightbulb, Flame, Snowflake } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: "How To Cut & Store Fresh Herbs (Keep Them Fresh For Weeks)",
@@ -77,28 +80,16 @@ export default function HerbsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-700 mb-4">
-            <Leaf className="w-5 h-5" />
-            <span className="text-sm font-medium">Cooking Techniques</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Cutting and Storing Fresh Herbs: Professional Techniques for Maximum Flavor
-          </h1>
-          <p className="text-xl text-slate-600">
-            Master professional techniques for cutting, storing, and preserving fresh herbs. Learn why technique matters and how to keep herbs fresh for days.
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
-            <span>By Chef Scott Bradley</span>
-            <span>•</span>
-            <span>October 24, 2025</span>
-            <span>•</span>
-            <span>8 min read</span>
-          </div>
-        </header>
+      <BlogLayout breadcrumbTitle="Cutting and Storing Fresh Herbs">
+        <BlogHero
+          title="Cutting and Storing Fresh Herbs: Professional Techniques for Maximum Flavor"
+          introduction={["Master professional techniques for cutting, storing, and preserving fresh herbs. Learn why technique matters and how to keep herbs fresh for days."]}
+          publishedDate="2025-09-14"
+          lastUpdated="2025-10-24"
+          readTime="8 min read"
+        />
 
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-6 rounded-xl my-8 border-l-4 border-orange-600">
             <h3 className="text-white text-xl font-bold mt-0 mb-3">Restaurant Reality: The $50 Basil Massacre</h3>
             <p className="text-white mb-0 leading-relaxed">
@@ -823,27 +814,8 @@ export default function HerbsPage() {
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-          <div className="flex items-start gap-4">
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-700 mb-3">
-                Scott Bradley is a professional chef with 45 years of cooking experience, including 24 years in professional kitchens. He served as Kitchen Manager at Mellow Mushroom in Athens, GA, and held line positions at Purple Café, Feierabend, Il Pizzaiolo (Seattle), and Paragary&apos;s (Sacramento).
-              </p>
-              <p className="text-slate-700 mb-3">
-                At Il Pizzaiolo, Scott learned proper herb handling was non-negotiable—black basil couldn&apos;t go on pizza, and wilted cilantro ruined presentations. He developed systems for herb prep and storage that kept ingredients fresh through long service periods.
-              </p>
-              <p className="text-slate-700 mb-3">
-                He holds an A.A.S. in Culinary Arts from Seattle Central College and a B.S. in Business Administration from the University of Montana.
-              </p>
-              <p className="text-slate-700">
-                Scott&apos;s approach to ingredients emphasizes respect for quality through proper technique—fresh herbs deserve sharp knives and correct storage to reach their full potential.
-              </p>
-              <p className="text-sm text-slate-500 italic mt-4">Last updated: October 24, 2025</p>
-            </div>
-          </div>
-        </div>
-      </article>
+        <AuthorBio />
+      </BlogLayout>
     </>
   );
 }

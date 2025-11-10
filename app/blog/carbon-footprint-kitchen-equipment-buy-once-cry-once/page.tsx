@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Leaf, Recycle, Shield, TrendingDown } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Why Cheap Kitchen Tools Are Worse For The Environment',
@@ -84,24 +87,16 @@ export default function CarbonFootprintKitchenEquipmentPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Carbon Footprint of Kitchen Equipment: Buy Once, Cry Once
-          </h1>
+      <BlogLayout breadcrumbTitle="Carbon Footprint of Kitchen Equipment: Buy Once, Cry Once">
+        <BlogHero
+          title="Carbon Footprint of Kitchen Equipment: Buy Once, Cry Once"
+          introduction={["Professional chef explains how quality kitchen equipment reduces waste and carbon footprint — why durability is the real sustainability in the kitchen."]}
+          publishedDate="2025-09-26"
+          lastUpdated="2025-10-21"
+          readTime="8 min read"
+        />
 
-          <div className="flex items-center gap-4 text-slate-600 text-sm mb-6">
-            <time dateTime="2025-10-21">October 21, 2025</time>
-            <span>•</span>
-            <span>8 min read</span>
-          </div>
-
-          <p className="text-xl text-slate-700 leading-relaxed">
-            Professional chef explains how quality kitchen equipment reduces waste and carbon footprint — why durability is the real sustainability in the kitchen.
-          </p>
-        </header>
-
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             It started, as most lessons in the kitchen do, with something breaking at the worst possible time.
           </p>
@@ -573,7 +568,9 @@ export default function CarbonFootprintKitchenEquipmentPage() {
             </div>
           </div>
         </div>
-      </article>
+
+        <AuthorBio />
+      </BlogLayout>
     </>
   )
 }

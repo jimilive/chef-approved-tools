@@ -5,6 +5,9 @@ import { Calendar, Clock, User, Egg } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'The Scrambled Egg Method That Changed Everything (No Bowl Needed)',
@@ -28,7 +31,7 @@ const articleSchema = generateArticleSchema({
 
 export default function BestScrambledEggs() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -92,50 +95,16 @@ export default function BestScrambledEggs() {
         }}
       />
 
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-700">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
-          <span className="mx-2">/</span>
-          <span>The Simplest Way to Perfect Scrambled Eggs</span>
-        </nav>
+      <BlogLayout breadcrumbTitle="The Simplest Way to Perfect Scrambled Eggs">
+        <BlogHero
+          title="The Simplest Way to Perfect Scrambled Eggs: No Bowl, No Whisk"
+          introduction={["Forget everything you've been told about scrambled eggs. No bowl. No whisk. No milk. No cream. Just eggs, butter, and a fork—directly in the pan. This revolutionary technique produces the creamiest, most tender scrambled eggs you've ever made, with half the cleanup and none of the fuss."]}
+          publishedDate="2025-10-09"
+          lastUpdated="2025-10-09"
+          readTime="7 min read"
+        />
 
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>7 min read</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Scott Bradley</span>
-            </div>
-            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-              Cooking Techniques
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            The Simplest Way to Perfect Scrambled Eggs: No Bowl, No Whisk
-          </h1>
-
-          <p className="text-xl text-slate-600 leading-relaxed">
-            Forget everything you&apos;ve been told about scrambled eggs. No bowl. No whisk. No milk. No cream.
-            Just eggs, butter, and a fork—directly in the pan. This revolutionary technique produces the
-            creamiest, most tender scrambled eggs you&apos;ve ever made, with half the cleanup and none of the fuss.
-          </p>
-        </div>
-
-        {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
             After 45 years of cooking and 24 years managing professional kitchens, I&apos;ve cooked thousands
@@ -616,47 +585,20 @@ export default function BestScrambledEggs() {
         </div>
 
         {/* Author Bio */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center flex-shrink-0">
-              <User className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 mb-2">Scott Bradley</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Purple Café with 24 years of restaurant experience managing 200+ cover operations.
-                A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from
-                University of Montana. Cooked thousands of eggs across 45 years—this simple method
-                produces consistently perfect results.
-              </p>
-              <div className="mt-4">
-                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
-                  Read more about Scott →
-                </Link>
-              </div>
-            </div>
+        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4">Related Content</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/reviews/cuisinart-8-inch-nonstick-pan" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Cuisinart 8&quot; Pan: Perfect for Eggs
+            </Link>
+            <Link href="/reviews/diamond-crystal-kosher-salt" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Diamond Crystal Salt: Chef&apos;s Choice
+            </Link>
           </div>
         </div>
 
-        {/* Related Content */}
-        <div className="border-t border-gray-200 pt-8 mt-8">
-          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/reviews/cuisinart-8-inch-nonstick-pan" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">Cuisinart 8&quot; Pan: Perfect for Eggs</h4>
-              <p className="text-slate-600 text-sm">
-                The nonstick pan that makes scrambled eggs effortless. Even heating, easy cleanup, and restaurant-quality results.
-              </p>
-            </Link>
-            <Link href="/reviews/diamond-crystal-kosher-salt" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">Diamond Crystal Salt: Chef&apos;s Choice</h4>
-              <p className="text-slate-600 text-sm">
-                Why professional chefs prefer this kosher salt for precise seasoning control in delicate dishes like eggs.
-              </p>
-            </Link>
-          </div>
-        </div>
-      </article>
-    </div>
+        <AuthorBio />
+      </BlogLayout>
+    </>
   );
 }

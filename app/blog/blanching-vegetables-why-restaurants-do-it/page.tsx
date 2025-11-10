@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Timer, Thermometer, Droplets, Sparkles } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Why Your Vegetables Look Sad (And Restaurant Vegetables Don\'t)',
@@ -84,24 +87,16 @@ export default function BlanchingVegetablesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Blanching Vegetables: Why Restaurants Do It
-          </h1>
+      <BlogLayout breadcrumbTitle="Blanching Vegetables: Why Restaurants Do It">
+        <BlogHero
+          title="Blanching Vegetables: Why Restaurants Do It"
+          introduction={["Learn why professional kitchens blanch vegetables before service. Preserve color, texture, and flavor with a chef-tested method for perfect results."]}
+          publishedDate="2025-10-07"
+          lastUpdated="2025-10-21"
+          readTime="8 min read"
+        />
 
-          <div className="flex items-center gap-4 text-slate-600 text-sm mb-6">
-            <time dateTime="2025-10-21">October 21, 2025</time>
-            <span>•</span>
-            <span>8 min read</span>
-          </div>
-
-          <p className="text-xl text-slate-700 leading-relaxed">
-            Learn why professional kitchens blanch vegetables before service. Preserve color, texture, and flavor with a chef-tested method for perfect results.
-          </p>
-        </header>
-
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             If you&apos;ve ever wondered why restaurant green beans stay crisp and bright while yours turn dull and mushy, here&apos;s the secret: we blanch everything.
           </p>
@@ -585,7 +580,9 @@ export default function BlanchingVegetablesPage() {
             </div>
           </div>
         </div>
-      </article>
+
+        <AuthorBio />
+      </BlogLayout>
     </>
   )
 }
