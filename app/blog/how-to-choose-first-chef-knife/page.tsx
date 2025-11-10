@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Calendar, Clock, User, Target, Check } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'How To Choose Your First Chef Knife (Skip These Mistakes)',
@@ -26,7 +29,7 @@ const articleSchema = generateArticleSchema({
 
 export default function ChooseFirstChefKnifePost() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -82,48 +85,16 @@ export default function ChooseFirstChefKnifePost() {
         }}
       />
 
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-700">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
-          <span className="mx-2">/</span>
-          <span>How to Choose Your First Chef Knife</span>
-        </nav>
+      <BlogLayout breadcrumbTitle="How to Choose Your First Chef Knife">
+        <BlogHero
+          title="How to Choose Your First Chef Knife"
+          introduction={["Most home cooks overthink knives. They chase fancy steel, exotic handles, or brands they saw on YouTube — and miss the fundamentals that actually matter: balance, geometry, and comfort."]}
+          publishedDate="2025-10-10"
+          lastUpdated="2025-10-21"
+          readTime="8 min read"
+        />
 
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>October 21, 2025</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>8 min read</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Scott Bradley</span>
-            </div>
-            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-              Knife Care
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            How to Choose Your First Chef Knife
-          </h1>
-
-          <p className="text-xl text-slate-600 leading-relaxed">
-            Most home cooks overthink knives. They chase fancy steel, exotic handles, or brands they saw on YouTube — and miss the fundamentals that actually matter: balance, geometry, and comfort.
-          </p>
-        </div>
-
-        {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
             When I trained new cooks at Mellow Mushroom, I&apos;d hand them one knife — a Victorinox Fibrox 8&quot; chef knife — and tell them to use it for everything. After two weeks, they always said the same thing: &quot;I had no idea a cheap knife could work this well.&quot;
@@ -552,48 +523,20 @@ export default function ChooseFirstChefKnifePost() {
           </div>
         </div>
 
-        {/* Author Bio */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center">
-              <User className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-600 text-sm leading-relaxed mb-2">
-                <strong>Professional Chef • 45 Years Cooking Experience • 24 Years Professional Kitchens</strong>
-              </p>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from the University of Montana. Techniques tested on thousands of dishes in high-volume kitchens serving hundreds daily.
-              </p>
-              <div className="mt-4">
-                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
-                  Learn more about Scott →
-                </Link>
-              </div>
-            </div>
+        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4">Related Articles</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/blog/knife-mistakes-home-cooks-make" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → 5 Knife Mistakes Home Cooks Make
+            </Link>
+            <Link href="/blog/how-to-steel-a-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → How to Steel a Knife
+            </Link>
           </div>
         </div>
 
-        {/* Related Content */}
-        <div className="border-t border-gray-200 pt-8 mt-8">
-          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/blog/knife-mistakes-home-cooks-make" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">5 Knife Mistakes Home Cooks Make</h4>
-              <p className="text-slate-600 text-sm">
-                Learn the common knife mistakes that wreck edges and slow prep, plus how to fix them.
-              </p>
-            </Link>
-            <Link href="/blog/how-to-steel-a-knife" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">How to Steel a Knife</h4>
-              <p className="text-slate-600 text-sm">
-                Master the professional honing technique that keeps your knives sharp between sharpenings.
-              </p>
-            </Link>
-          </div>
-        </div>
-      </article>
-    </div>
+        <AuthorBio />
+      </BlogLayout>
+    </>
   )
 }

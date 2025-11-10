@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Calendar, Clock, User, Target, Check, Ruler, AlertTriangle, CheckCircle2, ChefHat } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Essential Knife Cuts Every Cook Should Master (With Photos)',
@@ -26,7 +29,7 @@ const articleSchema = generateArticleSchema({
 
 export default function EssentialKnifeCutsPost() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -94,48 +97,16 @@ export default function EssentialKnifeCutsPost() {
         }}
       />
 
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-700">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
-          <span className="mx-2">/</span>
-          <span>The 5 Essential Knife Cuts Every Home Cook Should Master</span>
-        </nav>
+      <BlogLayout breadcrumbTitle="The 5 Essential Knife Cuts Every Home Cook Should Master">
+        <BlogHero
+          title="The 5 Essential Knife Cuts Every Home Cook Should Master"
+          introduction={["Most home cooks think \"knife skills\" mean cutting faster. They don't. In professional kitchens, knife technique is about control, consistency, and safety — speed comes later."]}
+          publishedDate="2025-10-12"
+          lastUpdated="2025-11-07"
+          readTime="12 min read"
+        />
 
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>November 7, 2025</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>12 min read</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Scott Bradley</span>
-            </div>
-            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-              Cooking Techniques
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            The 5 Essential Knife Cuts Every Home Cook Should Master
-          </h1>
-
-          <p className="text-xl text-slate-600 leading-relaxed">
-            Most home cooks think &quot;knife skills&quot; mean cutting faster. They don&apos;t. In professional kitchens, knife technique is about control, consistency, and safety — speed comes later.
-          </p>
-        </div>
-
-        {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
             When I trained prep cooks at Mellow Mushroom, I&apos;d hand them a single onion and say, &quot;Cut it 100 times the same way.&quot; No shortcuts, no tricks — just repetition. Two weeks later, they&apos;d be twice as fast and ten times more accurate.
@@ -810,48 +781,20 @@ export default function EssentialKnifeCutsPost() {
           </div>
         </div>
 
-        {/* Author Bio */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center">
-              <User className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-600 text-sm leading-relaxed mb-2">
-                <strong>Professional Chef • 45 Years Cooking Experience • 24 Years Professional Kitchens</strong>
-              </p>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from University of Montana. Techniques tested on thousands of dishes in high-volume kitchens serving hundreds daily.
-              </p>
-              <div className="mt-4">
-                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
-                  Learn more about Scott →
-                </Link>
-              </div>
-            </div>
+        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4">Related Articles</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/blog/knife-safety-rules-professional-kitchens" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Knife Safety: 10 Rules From 24 Years in Pro Kitchens
+            </Link>
+            <Link href="/blog/how-to-steel-a-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → How to Steel a Knife
+            </Link>
           </div>
         </div>
 
-        {/* Related Content */}
-        <div className="border-t border-gray-200 pt-8 mt-8">
-          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/blog/knife-safety-rules-professional-kitchens" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">Knife Safety: 10 Rules From 24 Years in Pro Kitchens</h4>
-              <p className="text-slate-600 text-sm">
-                Learn the safety rules and techniques that prevent knife accidents in professional kitchens.
-              </p>
-            </Link>
-            <Link href="/blog/how-to-steel-a-knife" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">How to Steel a Knife</h4>
-              <p className="text-slate-600 text-sm">
-                Master the professional honing technique that keeps your knives sharp between sharpenings.
-              </p>
-            </Link>
-          </div>
-        </div>
-      </article>
-    </div>
+        <AuthorBio />
+      </BlogLayout>
+    </>
   )
 }

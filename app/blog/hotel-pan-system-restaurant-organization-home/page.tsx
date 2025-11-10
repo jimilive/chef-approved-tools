@@ -3,6 +3,9 @@ import Link from 'next/link'
 import AffiliateButton from '@/components/AffiliateButton'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Restaurant Organization System For Home: Hotel Pan Guide',
@@ -91,25 +94,16 @@ export default async function HotelPanSystemPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Hotel Pan System Review: The Professional Organization System Every Kitchen Needs
-          </h1>
+      <BlogLayout breadcrumbTitle="Hotel Pan System Guide">
+        <BlogHero
+          title="Hotel Pan System Review: The Professional Organization System Every Kitchen Needs"
+          introduction={["After 24 years in professional kitchens and 20 years using hotel pans at home, discover why every restaurant uses this system and how it eliminates Tupperware chaos."]}
+          publishedDate="2025-10-19"
+          lastUpdated="2025-10-25"
+          readTime="15 min read"
+        />
 
-          <div className="flex items-center gap-4 text-slate-600 text-sm mb-6">
-            <span>By Scott Bradley</span>
-            <span>•</span>
-            <time dateTime="2025-10-25">October 25, 2025</time>
-            <span>•</span>
-            <span>15 min read</span>
-          </div>
-
-          <p className="text-xl text-slate-700 leading-relaxed mb-4">
-            24 Years Professional Kitchen Experience | Kitchen Manager at Mellow Mushroom
-          </p>
-        </header>
-
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
         {/* Quick Verdict */}
         <section className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-12">
           <h2 className="text-2xl font-bold mb-3 text-gray-900">Quick Verdict</h2>
@@ -929,23 +923,10 @@ export default async function HotelPanSystemPage() {
             </div>
           </div>
         </section>
+        </div>
 
-        {/* Author Bio */}
-        <section className="bg-slate-100 p-6 rounded-lg border border-slate-200">
-          <h3 className="text-lg font-bold text-slate-900 mb-2">About the Author</h3>
-          <p className="text-slate-700">
-            Scott Bradley has 24 years of professional kitchen experience, including roles as Kitchen Manager at Mellow Mushroom and line positions at Purple Café, Feierabend, Il Pizzaiolo, and Paragary&rsquo;s. He has been using hotel pans at home for 20 years and currently writes equipment reviews based on decades of real-world professional experience.
-          </p>
-        </section>
-
-        {/* FTC Disclosure */}
-        <section className="mt-8 text-sm text-slate-600 italic">
-          <p>
-            This article contains affiliate links. As an Amazon Associate, I earn from qualifying purchases at no additional cost to you. I only recommend products I&rsquo;ve personally used for years in professional and home kitchens.
-          </p>
-        </section>
-
-      </article>
+        <AuthorBio />
+      </BlogLayout>
     </>
   )
 }
