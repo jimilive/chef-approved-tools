@@ -7,6 +7,9 @@ import {
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Droplet, AlertTriangle, Lightbulb } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: "Understanding Cooking Fats: Butter, Oil & Lard Compared",
@@ -78,26 +81,14 @@ export default function UnderstandingCookingFatsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-700 mb-4">
-            <Droplet className="w-5 h-5" />
-            <span className="text-sm font-medium">{articleMeta.category}</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Understanding Cooking Fats: Butter vs Oil vs Lard - When to Use Each
-          </h1>
-          <p className="text-xl text-slate-600">
-            Learn when to use butter, oil, or lard from a professional chef with 24 years of restaurant experience. Understand smoke points, flavor profiles, and the science behind cooking fats.
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
-            <span>By {articleMeta.author}</span>
-            <span>•</span>
-            <span>{articleMeta.publishDate}</span>
-            <span>•</span>
-            <span>{articleMeta.readTime}</span>
-          </div>
-        </header>
+      <BlogLayout breadcrumbTitle="Understanding Cooking Fats">
+        <BlogHero
+          title="Understanding Cooking Fats: Butter vs Oil vs Lard - When to Use Each"
+          introduction={["Learn when to use butter, oil, or lard from a professional chef with 24 years of restaurant experience. Understand smoke points, flavor profiles, and the science behind cooking fats."]}
+          publishedDate={articleMeta.publishDate}
+          lastUpdated={articleMeta.lastModified}
+          readTime={articleMeta.readTime}
+        />
 
         <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white p-6 rounded-xl border-l-4 border-blue-500 mb-8 shadow-lg">
           <p className="font-bold text-lg mb-3 flex items-center gap-2">
@@ -109,7 +100,7 @@ export default function UnderstandingCookingFatsPage() {
           </p>
         </div>
 
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             Home cooks use fats randomly—butter because it tastes good, olive oil because it&apos;s &quot;healthy,&quot; vegetable oil because it&apos;s cheap. Then they wonder why their steak didn&apos;t sear properly (butter burned) or their cookies spread too much (liquid oil when recipe needed solid fat) or their fried chicken tastes wrong (olive oil smoke point too low).
           </p>
@@ -430,7 +421,7 @@ export default function UnderstandingCookingFatsPage() {
           </p>
         </div>
 
-        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+        <div className="bg-slate-50 rounded-xl p-8 mb-8">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link href="/blog/how-to-sear-steaks" className="text-orange-700 hover:text-orange-800 font-semibold">
@@ -448,21 +439,8 @@ export default function UnderstandingCookingFatsPage() {
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-          <div className="flex items-start gap-4">
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-700 mb-3">
-                Scott Bradley is a professional chef with 45 years of cooking experience, including 24 years in professional kitchens. At Paragary&apos;s in Sacramento, Scott managed multiple cooking stations, each requiring different fats for optimal results. He holds an A.A.S. in Culinary Arts from Seattle Central College and a B.S. in Business Administration from the University of Montana.
-              </p>
-              <p className="text-slate-700">
-                Scott&apos;s approach to cooking fats focuses on matching fat properties to cooking applications rather than following nutritional fads or rigid rules. He believes that understanding smoke points, flavor profiles, and appropriate uses makes cooking simpler and more successful. His method has helped countless home cooks stop wasting expensive oils on wrong applications and start achieving restaurant-quality results.
-              </p>
-            </div>
-          </div>
-          <p className="text-sm text-slate-500 mt-4 mb-0 italic">Last updated: {articleMeta.lastModified}</p>
-        </div>
-      </article>
+        <AuthorBio />
+      </BlogLayout>
     </>
   );
 }

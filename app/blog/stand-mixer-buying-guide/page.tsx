@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Calendar, Clock, User, Zap, Target } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Stand Mixer Buying Guide: KitchenAid vs Other Brands',
@@ -24,106 +27,73 @@ const articleSchema = generateArticleSchema({
   urlSuffix: 'stand-mixer-buying-guide'
 });
 
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
+  { name: "Stand Mixer Buying Guide", url: "https://www.chefapprovedtools.com/blog/stand-mixer-buying-guide" }
+]);
+
+const faqSchema = generateFAQSchema([
+  {
+    question: "Is KitchenAid still the best brand?",
+    answer: "For most cooks, yes. The balance of power, attachments, and support is unmatched."
+  },
+  {
+    question: "What about commercial models?",
+    answer: "If you bake bread weekly, the Pro 600 or Ankarsrum is worth it."
+  },
+  {
+    question: "Can I make dough in smaller mixers?",
+    answer: "Yes, but cut batch sizes in half and mix longer."
+  },
+  {
+    question: "What attachments are worth it?",
+    answer: "Pasta roller, meat grinder, and slicer/shredder. Skip the juicer."
+  },
+  {
+    question: "How long do they last?",
+    answer: "Well-built gear-drive mixers can last 20+ years with maintenance."
+  },
+  {
+    question: "Should I buy tilt-head or bowl-lift?",
+    answer: "Tilt-head is easier to use for everyday baking. Bowl-lift offers more stability and power for heavy doughs like bread and bagels. Choose based on what you bake most often."
+  },
+  {
+    question: "What's the difference between gear-driven and belt-driven mixers?",
+    answer: "Gear-driven mixers use metal gears for direct power transfer — more durable and powerful but louder. Belt-driven mixers use rubber belts — quieter but less durable under heavy loads. Professional-grade mixers are almost always gear-driven."
+  },
+  {
+    question: "Can I repair a stand mixer myself?",
+    answer: "Basic maintenance like greasing gears is doable at home. But gear replacement or motor issues require professional service. KitchenAid has widespread service networks; alternatives may have limited repair options."
+  }
+]);
+
 export default function StandMixerBuyingGuidePost() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* JSON-LD Structured Data */}
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBreadcrumbSchema([
-            { name: "Home", url: "https://www.chefapprovedtools.com" },
-            { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-            { name: "Stand Mixer Buying Guide", url: "https://www.chefapprovedtools.com/blog/stand-mixer-buying-guide" }
-          ]))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema([
-            {
-              question: "Is KitchenAid still the best brand?",
-              answer: "For most cooks, yes. The balance of power, attachments, and support is unmatched."
-            },
-            {
-              question: "What about commercial models?",
-              answer: "If you bake bread weekly, the Pro 600 or Ankarsrum is worth it."
-            },
-            {
-              question: "Can I make dough in smaller mixers?",
-              answer: "Yes, but cut batch sizes in half and mix longer."
-            },
-            {
-              question: "What attachments are worth it?",
-              answer: "Pasta roller, meat grinder, and slicer/shredder. Skip the juicer."
-            },
-            {
-              question: "How long do they last?",
-              answer: "Well-built gear-drive mixers can last 20+ years with maintenance."
-            },
-            {
-              question: "Should I buy tilt-head or bowl-lift?",
-              answer: "Tilt-head is easier to use for everyday baking. Bowl-lift offers more stability and power for heavy doughs like bread and bagels. Choose based on what you bake most often."
-            },
-            {
-              question: "What's the difference between gear-driven and belt-driven mixers?",
-              answer: "Gear-driven mixers use metal gears for direct power transfer — more durable and powerful but louder. Belt-driven mixers use rubber belts — quieter but less durable under heavy loads. Professional-grade mixers are almost always gear-driven."
-            },
-            {
-              question: "Can I repair a stand mixer myself?",
-              answer: "Basic maintenance like greasing gears is doable at home. But gear replacement or motor issues require professional service. KitchenAid has widespread service networks; alternatives may have limited repair options."
-            }
-          ]))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-700">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
-          <span className="mx-2">/</span>
-          <span>Stand Mixer Buying Guide</span>
-        </nav>
+      <BlogLayout breadcrumbTitle="Stand Mixer Buying Guide">
+        <BlogHero
+          title="Stand Mixer Buying Guide: KitchenAid vs Alternatives"
+          introduction={["A stand mixer isn't just another appliance — it's the heartbeat of a serious kitchen. From bread dough to whipped cream, it's the tool that saves your shoulders, streamlines prep, and brings consistency to recipes that demand precision."]}
+          publishedDate="2025-10-01"
+          lastUpdated="2025-10-21"
+          readTime="8 min read"
+        />
 
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>October 21, 2025</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>8 min read</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Scott Bradley</span>
-            </div>
-            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-              Cooking Techniques
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            Stand Mixer Buying Guide: KitchenAid vs Alternatives
-          </h1>
-
-          <p className="text-xl text-slate-600 leading-relaxed">
-            A stand mixer isn&apos;t just another appliance — it&apos;s the heartbeat of a serious kitchen. From bread dough to whipped cream, it&apos;s the tool that saves your shoulders, streamlines prep, and brings consistency to recipes that demand precision.
-          </p>
-        </div>
-
-        {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
             In restaurant kitchens, mixers aren&apos;t just about convenience — they&apos;re about efficiency. When I worked the line, the mixer ran more than the radio: pizza dough in the morning, meringue before service, mashed potatoes during the dinner rush. It was the one tool that never rested.
@@ -512,40 +482,16 @@ export default function StandMixerBuyingGuidePost() {
           </div>
         </div>
 
-        {/* Author Bio */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center">
-              <User className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-600 text-sm leading-relaxed mb-2">
-                <strong>Professional Chef • 45 Years Cooking Experience • 24 Years Professional Kitchens</strong>
-              </p>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from the University of Montana. Techniques tested on thousands of dishes in high-volume kitchens serving hundreds daily.
-              </p>
-              <div className="mt-4">
-                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
-                  Learn more about Scott →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Related Content */}
-        <div className="border-t border-gray-200 pt-8 mt-8">
+        <div className="bg-slate-50 rounded-xl p-8 mb-8">
           <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/blog/food-processor-vs-blender" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+            <Link href="/blog/food-processor-vs-blender" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Food Processor vs Blender: Which Do You Actually Need?</h4>
               <p className="text-slate-600 text-sm">
                 Professional chef explains the difference between blenders and food processors and when to use each.
               </p>
             </Link>
-            <Link href="/blog/kitchen-tools-wasting-money" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
+            <Link href="/blog/kitchen-tools-wasting-money" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">10 Kitchen Tools You&apos;re Wasting Money On</h4>
               <p className="text-slate-600 text-sm">
                 Professional chef reveals which kitchen tools are worth buying and which are marketing gimmicks.
@@ -553,7 +499,9 @@ export default function StandMixerBuyingGuidePost() {
             </Link>
           </div>
         </div>
-      </article>
-    </div>
+
+        <AuthorBio />
+      </BlogLayout>
+    </>
   )
 }

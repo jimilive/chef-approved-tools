@@ -7,6 +7,9 @@ import {
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplets, Beaker, AlertTriangle } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: "What Is Emulsification? The Science Behind Stable Sauces",
@@ -65,28 +68,16 @@ export default function EmulsificationPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-700 mb-4">
-            <Beaker className="w-5 h-5" />
-            <span className="text-sm font-medium">Cooking Science</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            What is Emulsification? The Science Behind Creamy Sauces
-          </h1>
-          <p className="text-xl text-slate-600">
-            Understanding the chemistry and technique behind mixing oil and water to create stable, creamy sauces—from mayonnaise to hollandaise to vinaigrettes.
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
-            <span>By Chef Scott Bradley</span>
-            <span>•</span>
-            <span>October 24, 2025</span>
-            <span>•</span>
-            <span>7 min read</span>
-          </div>
-        </header>
+      <BlogLayout breadcrumbTitle="What is Emulsification">
+        <BlogHero
+          title="What is Emulsification? The Science Behind Creamy Sauces"
+          introduction={["Understanding the chemistry and technique behind mixing oil and water to create stable, creamy sauces—from mayonnaise to hollandaise to vinaigrettes."]}
+          publishedDate="2025-09-18"
+          lastUpdated="2025-10-24"
+          readTime="7 min read"
+        />
 
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             Ever wonder why oil and vinegar separate in a bottle, but mayonnaise stays thick and creamy? Or why hollandaise sauce can &quot;break&quot; at the slightest temperature change? The answer is emulsification—one of the most important chemical processes in cooking, and one that separates home cooks from professionals.
           </p>
@@ -237,7 +228,7 @@ export default function EmulsificationPage() {
           </p>
         </div>
 
-        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+        <div className="bg-slate-50 rounded-xl p-8 mb-8">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link href="/blog/cheese-sauce-mac-and-cheese" className="text-orange-700 hover:text-orange-800 font-semibold">
@@ -255,20 +246,8 @@ export default function EmulsificationPage() {
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-          <div className="flex items-start gap-4">
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-700 mb-3">
-                Scott Bradley is a professional chef with 45 years of cooking experience, including 24 years in professional kitchens. He served as Kitchen Manager at Mellow Mushroom in Athens, GA, and held line positions at Purple Café, Feierabend, Il Pizzaiolo, and Paragary&apos;s. Scott holds an A.A.S. in Culinary Arts from Seattle Central College and a B.S. in Business Administration from the University of Montana.
-              </p>
-              <p className="text-slate-700">
-                At Chef Approved Tools, Scott combines decades of professional experience with hands-on equipment testing to recommend the best kitchen tools for home cooks who want professional results without professional prices.
-              </p>
-            </div>
-          </div>
-        </div>
-      </article>
+        <AuthorBio />
+      </BlogLayout>
     </>
   );
 }
