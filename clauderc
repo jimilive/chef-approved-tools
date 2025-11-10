@@ -1,9 +1,8 @@
 # Chef Approved Tools - Claude Code Rules
 
-**Last Updated:** November 6, 2025
+**Last Updated:** November 7, 2025
 **Project:** chefapprovedtools.com
 **Owner:** Scott Bradley
-**Major Milestone:** All 35 review pages migrated to component/template system ✅
 
 ---
 
@@ -79,10 +78,20 @@ hasCredential: Associate degree in Culinary Arts
 
 **Note:** Schema uses "45 years cooking / 24 years restaurant management" wording - this is intentional and correct.
 
+**AuthorBio Component Default Text (DO NOT CHANGE):**
+```
+Professional chef with 24 years of restaurant experience including
+Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom, and line
+positions at Feierabend, Il Pizzaiolo, and Paragary's. A.A.S. Culinary
+Arts from Seattle Central College, B.S. Business Administration from
+University of Montana. Every product tested through real professional
+kitchen use or extensive long-term home testing.
+```
+
 ### Restaurant Names (Real - Never Invent)
 ```
 ✅ Mellow Mushroom (Kitchen Manager)
-✅ Purple Café (Line Cook)
+✅ Purple Café (Pizzaiolo - Line Cook)
 ✅ Feierabend (Line Cook)
 ✅ Il Pizzaiolo (Line Cook)
 ✅ Paragary's (Line Cook)
@@ -99,6 +108,19 @@ hasCredential: Associate degree in Culinary Arts
 
 ❌ NEVER change affiliate tag
 ❌ NEVER change lead magnet reference
+```
+
+### CTA Text Standards
+```
+✅ Primary CTA: "Check Price on Amazon"
+✅ Alternative: "View on Amazon" (if context requires)
+
+❌ NOT "Buy on Amazon"
+❌ NOT "Purchase on Amazon"
+❌ NOT "Shop on Amazon"
+❌ NOT any other variations
+
+Rule: ALL CTAs must say "Check Price on Amazon" unless explicitly approved otherwise.
 ```
 
 ---
@@ -141,6 +163,276 @@ hasCredential: Associate degree in Culinary Arts
 - All custom colors/styles are in `/app/globals.css`
 - Never modify globals.css without testing Lighthouse scores
 - Contains critical SVG sizing fixes - DO NOT REMOVE
+
+---
+
+## ♿ ACCESSIBILITY REQUIREMENTS - MANDATORY
+
+### The 4 Critical Accessibility Rules
+
+**1. Text Link Colors (WCAG AA Compliance)**
+```
+✅ Body text links: text-orange-700 (#c2410c) - 4.6:1 contrast ratio
+✅ Hover state: hover:text-orange-800
+
+❌ NEVER use text-orange-600 for links (fails WCAG contrast)
+❌ NEVER use orange-500 or lighter for text links
+```
+
+**2. Text on Orange Backgrounds**
+```
+✅ Use text-slate-900 on orange backgrounds (proper contrast)
+
+❌ NEVER use text-slate-700 on orange (fails contrast)
+❌ NEVER use text-slate-600 or lighter on orange backgrounds
+```
+
+**3. Heading Hierarchy (Sequential Order)**
+```
+✅ ALWAYS use sequential heading order: h1 → h2 → h3 → h4
+✅ Only ONE h1 per page
+✅ Don't skip levels (e.g., h1 → h3 without h2)
+
+❌ NEVER skip heading levels
+❌ NEVER use multiple h1 tags on same page
+❌ NEVER use headings for styling only (use CSS instead)
+```
+
+**4. Star Ratings Color**
+```
+✅ Use text-amber-700 for star ratings (accessibility compliant)
+
+❌ NEVER use text-yellow-400 (fails contrast requirements)
+```
+
+### Focus States
+```
+✅ All interactive elements MUST have visible focus states
+✅ Use focus:ring-2 focus:ring-orange-500 focus:ring-offset-2
+✅ Never remove focus outlines without replacing with alternative
+```
+
+---
+
+## 📅 DATE REQUIREMENTS - MANDATORY
+
+### Every Page Must Have Dates
+
+**Required on ALL pages:**
+- Published date (when first created)
+- Last updated date (when meaningfully updated)
+- Both dates in schema markup (datePublished, dateModified)
+
+### Date Placement Standards
+
+**For Review Pages:**
+```tsx
+// Above the title, below breadcrumbs
+<div className="text-sm text-slate-600 mb-2">
+  <time dateTime="2024-10-15">Published: October 15, 2024</time>
+  {' • '}
+  <time dateTime="2025-01-20">Updated: January 20, 2025</time>
+</div>
+```
+
+**For Blog Posts:**
+```tsx
+// Below the title, above author info
+<div className="text-sm text-slate-600 mb-4">
+  <time dateTime="2024-11-05">November 5, 2024</time>
+  {' • '}
+  <span>Updated: <time dateTime="2025-01-10">January 10, 2025</time></span>
+</div>
+```
+
+### Schema Markup Requirements
+```typescript
+// ALWAYS include in metadata
+export async function generateMetadata() {
+  return {
+    // ... other metadata
+    openGraph: {
+      publishedTime: '2024-10-15T00:00:00Z',
+      modifiedTime: '2025-01-20T00:00:00Z',
+    }
+  }
+}
+
+// ALWAYS include in Article schema
+const articleSchema = {
+  '@type': 'Article',
+  datePublished: '2024-10-15',
+  dateModified: '2025-01-20',
+  // ... other fields
+}
+```
+
+### Update Schedule
+```
+- Quarterly reviews: Top 10 products (every 3 months)
+- Annual reviews: All flagship products (yearly)
+- Version changes: Immediate update when product version changes
+- Price changes: Update within 1 week if major price shift
+- Feature updates: Update when product gets new features/models
+```
+
+---
+
+## 📊 SEO & METADATA REQUIREMENTS
+
+### Title Tags
+```
+✅ Maximum 60 characters
+✅ Include primary keyword
+✅ Include benefit or hook
+✅ Must be <80% similar to other titles on site
+✅ NO unescaped apostrophes or quotes
+✅ NO slash errors that truncate titles
+
+Format examples:
+- "[Product Name] Review: [Key Benefit] | Chef Approved Tools"
+- "[Product Name]: [Testing Period] of Professional Use"
+- "Best [Product Category]: [Year] Professional Chef Review"
+```
+
+### Meta Descriptions
+```
+✅ 150-160 characters (optimal)
+✅ Include primary keyword
+✅ Include compelling benefit/promise
+✅ Must be <80% similar to other meta descriptions
+✅ NO unescaped apostrophes or quotes
+✅ Call to action when appropriate
+
+Similarity Formula: (matching words / total words) < 0.80
+```
+
+### Character Encoding Rules
+```
+✅ ALWAYS escape apostrophes: use &apos; or ' (curly)
+✅ ALWAYS escape quotes: use &quot; or " " (curly quotes)
+✅ Test all titles in Google Rich Results Test
+✅ Watch for slash errors that truncate content
+
+Common Issues to Avoid:
+- "Chef's knife" → "Chef's knife" or "Chef&apos;s knife"
+- "It's perfect" → "It's perfect" or "It&apos;s perfect"
+- "Best "Cast Iron" pan" → "Best 'Cast Iron' pan"
+```
+
+### Breadcrumb Requirements
+```
+✅ MUST be present on ALL content pages
+✅ MUST include schema markup (BreadcrumbList)
+✅ MUST be above page title
+✅ MUST use hover:text-orange-700 for links
+
+Standard format:
+Home / Reviews / [Product Name]
+Home / Blog / [Post Title]
+Home / Guides / [Guide Title]
+Home / [Category] / [Subcategory] / [Item]
+```
+
+---
+
+## 📋 COMPARISON TABLES - MANDATORY FOR REVIEWS
+
+### When to Include
+```
+✅ EVERY product review page MUST have a comparison table
+✅ Compare 4 products: Reviewed product + Premium + Mid-range + Budget
+✅ Place after "Testing Results" or "Performance Analysis" section
+✅ Before "Pros & Cons" section
+```
+
+### Research Process
+```
+1. Identify your reviewed product's price tier
+2. Find 1 premium alternative (higher price, more features)
+3. Find 1 mid-range alternative (similar price, different brand)
+4. Find 1 budget alternative (lower price, good value)
+5. Verify all products have working affiliate links
+6. Research accurate specifications for all 4 products
+```
+
+### Specs by Category
+
+**Cookware (Pans, Pots, Skillets):**
+```
+- Material (e.g., Stainless Steel, Cast Iron, Nonstick)
+- Diameter/Size (e.g., 12", 10", 14")
+- Weight (e.g., 5.8 lbs, 3.2 lbs)
+- Oven Safe Temp (e.g., 500°F, 450°F)
+- Dishwasher Safe (Yes/No)
+- Induction Compatible (Yes/No)
+- Warranty (Lifetime, 10 Years, 1 Year)
+- Price Tier (Premium, Mid-Range, Budget)
+```
+
+**Knives:**
+```
+- Blade Length (e.g., 8", 10", 7")
+- Material (e.g., German Steel, Japanese VG-10, High-Carbon Stainless)
+- Handle Material (e.g., Pakkawood, Plastic, Composite)
+- Weight (e.g., 8.8 oz, 6.2 oz)
+- HRC Hardness (e.g., 58, 56, 60)
+- Full Tang (Yes/No)
+- Dishwasher Safe (typically No for all)
+- Warranty (Lifetime, Limited, 1 Year)
+- Price Tier
+```
+
+**Appliances (Blenders, Food Processors):**
+```
+- Motor Power (e.g., 1,400W, 1,200W, 750W)
+- Capacity (e.g., 64 oz, 48 oz, 40 oz)
+- Speed Settings (e.g., Variable, 10-speed, 3-speed)
+- Included Accessories (e.g., 2 cups, tamper, recipe book)
+- Noise Level (High, Medium, Low - if available)
+- Warranty (7 Years, 5 Years, 1 Year)
+- Dishwasher Safe Parts (Yes/No)
+- Price Tier
+```
+
+**Tools (Thermometers, Peelers, Mandolines):**
+```
+- Type/Mechanism (e.g., Digital, Dial, Manual, Electric)
+- Range/Size (e.g., -40°F to 450°F, 3-blade system)
+- Material (e.g., Stainless Steel, Plastic, Ceramic)
+- Special Features (e.g., Waterproof, Auto-shutoff, Safety guard)
+- Battery Type (if applicable)
+- Dishwasher Safe (Yes/No)
+- Warranty (if notable)
+- Price Tier
+```
+
+### Price Tier Definitions
+```
+Premium: Top 10-20% of category price range
+Mid-Range: Middle 40-60% of category price range
+Budget: Bottom 20-30% of category price range
+```
+
+### Component Usage
+```tsx
+<ComparisonTable
+  products={[
+    {
+      name: "Product Name",
+      isReviewed: true, // Highlight the reviewed product
+      specs: {
+        "Material": "Stainless Steel",
+        "Size": "12 inches",
+        // ... all specs
+      },
+      affiliateUrl: getPrimaryAffiliateLink(product),
+      priceTier: "Mid-Range"
+    },
+    // ... 3 more products
+  ]}
+/>
+```
 
 ---
 
@@ -295,173 +587,189 @@ export default async function ProductReview() {
 
 ---
 
-## ⚙️ PERFORMANCE & SECURITY
+## ⚙️ PERFORMANCE & LIGHTHOUSE REQUIREMENTS
 
-### Next.js Config Critical Settings
+### Performance Targets (Non-Negotiable)
+```
+✅ Desktop Lighthouse: 100 across all metrics (current baseline)
+✅ Mobile Lighthouse: 80 Performance, 100 other metrics (current baseline)
+✅ LCP (Largest Contentful Paint): <1.2s (target), <2.5s (maximum)
+✅ TBT (Total Blocking Time): <50ms
+✅ FCP (First Contentful Paint): <1.0s
+✅ CLS (Cumulative Layout Shift): <0.1
 
-**⚠️ NEVER modify these without explicit approval and Lighthouse testing:**
-
-```javascript
-// next.config.js - Performance Optimizations
-const nextConfig = {
-  images: {
-    formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
-  },
-
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on'
-          },
-          {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=31536000; includeSubDomains'
-          },
-          // ... etc
-        ],
-      },
-    ]
-  },
-}
+Note: 125 pages currently indexed in Google (November 2025)
 ```
 
-**Why these matter:**
-- Image optimization: Reduces load times, improves LCP
-- Security headers: Prevents XSS, clickjacking
-- Cache settings: Balances freshness with performance
+### Image Optimization Standards
+```
+✅ Format: WebP preferred, JPEG fallback
+✅ Quality: 75% for all images (NOT 80% or higher)
+✅ Sizing: Properly sized for display (no oversized images)
+✅ Alt text: REQUIRED on ALL images
+✅ Lazy loading: Use for below-the-fold images
+✅ Priority: Use priority prop for above-the-fold hero images
 
-**Before changing next.config.js:**
-1. Testing Lighthouse scores before/after
-2. Verifying redirects still work
-3. Checking CSP doesn't break analytics
-4. Confirming image optimization settings
+Example:
+<Image
+  src="/images/product.jpg"
+  alt="Descriptive alt text"
+  width={662}
+  height={606}
+  quality={75}
+  priority // Only for above-the-fold
+  placeholder="blur"
+/>
+```
 
-**Tailwind Config:**
-- Uses DEFAULT Tailwind theme (no custom colors in config)
-- All color customization in globals.css
-- Simple content paths only
+### LCP Optimization
+```
+✅ Inline critical CSS for above-the-fold content
+✅ Preload hero images
+✅ Minimize render-blocking resources
+✅ Use Next.js Image component (automatic optimization)
+
+Critical CSS Example:
+<style dangerouslySetInnerHTML={{__html: `
+  .hero-section { min-height: 100vh; display: flex; }
+  .hero-heading { font-size: clamp(2rem, 5vw, 3.75rem); }
+`}} />
+```
+
+### Code Splitting
+```
+✅ Use dynamic imports for heavy components
+✅ Defer third-party scripts with strategy="lazyOnload"
+✅ Break up large JavaScript files
+
+Example:
+import dynamic from 'next/dynamic'
+
+const HeavyComponent = dynamic(() => import('@/components/HeavyComponent'), {
+  loading: () => <div>Loading...</div>,
+  ssr: false
+})
+```
+
+### Resource Hints
+```
+✅ Preconnect to critical origins
+✅ DNS-prefetch for external resources
+✅ Preload critical assets
+
+Example in layout.tsx:
+<link rel="preconnect" href="https://www.chefapprovedtools.com" />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+```
 
 ---
 
 ## 🔄 DEVELOPMENT WORKFLOW
 
-### Before Committing
+### Git Commit Standards
 ```
-✅ Test locally (npm run dev)
-✅ Build succeeds (npm run build) - includes prebuild validation
-✅ Lighthouse scores verified (95+) - CRITICAL after recent optimizations
-✅ Run validation suite: npm run validate:all
-✅ Mobile responsive checked
-✅ Affiliate links tested (click through to Amazon)
-✅ No TypeScript errors (npm run type-check)
-✅ No console errors
-✅ Schema markup validates (use Google Rich Results Test)
+✅ Use conventional commit format:
+   - feat: New feature
+   - fix: Bug fix
+   - refactor: Code restructure (no behavior change)
+   - docs: Documentation changes
+   - style: Formatting, white-space
+   - test: Adding tests
+   - chore: Maintenance
+
+✅ Be specific in commit messages
+✅ Reference issue numbers when applicable
+
+Examples:
+- "feat: add comparison table to Le Creuset review"
+- "fix: correct contrast ratio for orange-600 links to orange-700"
+- "refactor: standardize AuthorBio component across 43 pages"
 ```
 
-**Available Validation Scripts (use these!):**
-```bash
-npm run validate:all        # Run all validations
-npm run validate:db         # Validate database integrity
-npm run validate:images     # Validate image optimization
-npm run validate:links      # Validate affiliate links
-npm run validate:duplicates # Check for duplicate links
-npm run type-check          # TypeScript validation
-npm run lighthouse          # Performance testing
+### Branch Strategy
+```
+✅ main = production-ready code
+✅ Feature branches for new work
+✅ Test locally before pushing
+✅ Deploy to Vercel preview before merging to main
+
+Never push directly to main without testing.
 ```
 
-### Commit Message Format
+### Testing Requirements
 ```
-feat: add new product review page
-fix: broken affiliate link on cast iron page
-refactor: optimize image loading
-docs: update README
-style: adjust accessibility colors
-perf: reduce bundle size
-```
+✅ npm run build (must succeed)
+✅ npm run type-check (must pass)
+✅ npm run validate:all (if available)
+✅ Lighthouse audit (must maintain 95+ desktop)
+✅ Visual inspection (mobile and desktop)
+✅ Test affiliate links click-through
 
-### Git Rules
-```
-❌ NEVER modify .github/workflows without permission
-❌ NEVER force push without consultation
-❌ NEVER skip prebuild validation (runs automatically on npm run build)
-✅ ALWAYS write descriptive commit messages
-✅ ALWAYS test before committing
-✅ ALWAYS run npm run validate:all before major commits
+Before ANY deployment to production.
 ```
 
 ---
 
 ## 🚫 COMMON MISTAKES - AVOID THESE
 
-### Content Mistakes
+### Character Encoding Errors
 ```
-❌ Changing "24 years" to any other number
-❌ Saying "Kitchen Manager for 24 years" (it was 7 years)
-❌ Inventing fake restaurant stories
-❌ Using generic AI phrases
-❌ Changing Scott's authentic voice
+❌ Unescaped apostrophes in titles: "Chef's Knife"
+✅ Use curly apostrophe: "Chef's Knife"
+
+❌ Unescaped quotes: Best "Cast Iron" Skillet
+✅ Use proper quotes: Best "Cast Iron" Skillet
+
+❌ Slash errors that truncate titles
+✅ Test all titles in Google Rich Results Test
 ```
 
-### Technical Mistakes
+### Accessibility Mistakes
 ```
-❌ Converting Tailwind to inline styles
-❌ Hardcoding affiliate links in JSX
-❌ Using export const dynamic = 'force-dynamic' for review pages (use ISR)
-❌ Importing from @/lib/affiliate-links (doesn't exist, use product-helpers)
-❌ Adding dependencies that bloat bundle
-❌ Breaking schema markup
-❌ Removing ProductViewTrackerWrapper or CTAVisibilityTracker
+❌ Using orange-600 for text links (fails contrast)
+✅ Use orange-700 for text links
+
+❌ Skipping heading levels (h1 → h3)
+✅ Sequential headings (h1 → h2 → h3)
+
+❌ No focus states on buttons
+✅ Add focus:ring-2 focus:ring-orange-500
 ```
 
-### SEO Mistakes
+### Component Mistakes
 ```
-❌ Removing meta descriptions or alt text
-❌ Breaking internal links
-❌ Changing publish dates
-❌ Deleting existing content
-❌ Breaking schema markup (use validators!)
+❌ Hardcoding content in page files
+✅ Use separate data files (product-slug-data.ts)
+
+❌ Using old monolithic structure
+✅ Use component system (Benriner standard)
+
+❌ Not using ISR caching
+✅ Add revalidate: 3600 and fetchCache: 'force-cache'
 ```
 
-### Performance Mistakes
+### Metadata Mistakes
 ```
-❌ Removing Next.js Image components
-❌ Adding inline styles that hurt Lighthouse scores
-❌ Breaking lazy loading
-❌ Removing width/height from images (causes CLS)
-❌ Not testing Lighthouse after changes
+❌ Titles over 60 characters
+✅ Keep titles under 60 characters
+
+❌ Meta descriptions over 160 characters or under 150
+✅ Keep meta descriptions 150-160 characters
+
+❌ Similar titles across multiple pages
+✅ Ensure <80% similarity between titles
 ```
 
-### Process Mistakes
+### Image Mistakes
 ```
-❌ Running scripts without approval
-❌ Making "improvements" without asking
-❌ Assuming you know what's best
-❌ Cutting corners to save time
-❌ Deviating from component/template system for review pages
-✅ Always use Benriner as reference (gold standard for review architecture)
-```
+❌ Using quality={80} or higher
+✅ Use quality={75}
 
-### Review Page Mistakes (AVOID - All Pages Now Compliant)
-```
-❌ Using old monolithic architecture instead of component system
-❌ Hardcoding content in page.tsx instead of data file
-❌ Creating custom HTML when standard component exists
-❌ Using export const dynamic = 'force-dynamic' instead of ISR
-❌ Not separating data from presentation
-❌ Mixing old and new patterns
-❌ Page.tsx file over 500 lines (means content not properly separated)
-❌ Not using all standard components (ReviewHero, TestingResultsGrid, etc)
-❌ Forgetting ISR configuration (revalidate + fetchCache)
+❌ Oversized images (display at 331px, source is 452px)
+✅ Properly sized images (2x for retina = 662px for 331px display)
 
-Note: All 35 review pages now follow best practices. Use Benriner as reference for new pages.
+❌ Missing alt text
+✅ Descriptive alt text on ALL images
 ```
 
 ---
@@ -469,368 +777,248 @@ Note: All 35 review pages now follow best practices. Use Benriner as reference f
 ## 📞 WHEN YOU DON'T KNOW
 
 ```
-If unsure about ANYTHING:
+If unsure about anything:
 
-1. STOP - Don't guess or assume
-2. ASK SCOTT - Explain what and why
-3. WAIT - Don't proceed without approval
-4. DOCUMENT - Add learnings to this file
+1. STOP - Don't guess
+2. REFERENCE - Check Benriner page, STYLE_GUIDE.md, or CONTENT_GUIDELINES.md
+3. SEARCH - Look for similar implementations in codebase
+4. ASK - Ask Scott before proceeding
+5. TEST - Test locally before committing
+
+Remember: Asking takes 30 seconds. Fixing mistakes takes 30 minutes.
 ```
-
-Better to ask than to break 300+ hours of work.
 
 ---
 
 ## 🆘 IF YOU BREAK SOMETHING
 
 ```
-1. Immediately notify Scott
-2. Explain what changed (be specific)
-3. Provide rollback steps (git revert commands)
-4. Document root cause
-5. Update this file with prevention rules
-```
+1. Don't panic
+2. Note what changed
+3. Git revert if needed: git revert HEAD
+4. Tell Scott immediately
+5. Document what happened
+6. Learn from it
 
-Don't try to cover up mistakes. Be transparent immediately.
+GitSaved exists for this reason.
+```
 
 ---
 
 ## 💡 WORKING WITH SCOTT
 
-### Communication Style
+### Communication Standards
 ```
-✅ Direct and concise (no fluff)
-✅ Provide immediate next steps
-✅ Action-oriented recommendations
-✅ Ask clarifying questions if unclear
-❌ Don't over-explain simple things
-❌ Don't apologize excessively
+✅ Be direct and specific
+✅ Explain reasoning for suggestions
+✅ Ask clarifying questions
+✅ Confirm understanding before executing
+✅ Report progress on long tasks
+
+Scott operates in "kitchen mode" - clear, systematic, quality-focused.
 ```
 
-### Scott's Work Style
+### ADHD Considerations
 ```
-- Intensive "kitchen mode" sessions (17+ hours)
-- ADHD - needs structure, clear tasks
-- Prefers systematic execution
-- Frustrated by incomplete solutions
-- Values quality over speed
-- Reviews code word-for-word before deployment
+✅ Provide clear, structured information
+✅ Break large tasks into smaller milestones
+✅ Confirm deliverables before starting
+✅ Use systematic checklists
+✅ Allow for hyperfocus work sessions
+
+Scott excels at pattern recognition and systematic execution.
 ```
 
 ---
 
 ## 📚 REFERENCE DOCUMENTATION
 
-**Review Page Gold Standard (Updated November 2025):**
-
+### Primary Documentation (Always Reference)
 ```
-✅ ALL 35 review pages use component/template system (COMPLETE)
-✅ Benriner established the architecture blueprint
-✅ /app/reviews/benriner-large-mandoline/page.tsx = Reference implementation
-✅ Uses reusable components from @/components/review
-✅ Separates content (data file) from presentation (components)
-✅ ISR caching for performance (revalidate: 3600 = 1 hour)
-✅ Lighthouse scores 95-100 maintained across all pages
+1. clauderc.md (this file) - Protection rules, standards
+2. CONTENT_GUIDELINES.md - Content creation standards
+3. STYLE_GUIDE.md - Visual design standards
+4. SEO_AND_ACCESSIBILITY_REQUIREMENTS.md - SEO/accessibility checklist
+5. REVIEW_PAGE_MASTER_TEMPLATE.md - Review page structure
+6. BLOG_POST_TEMPLATE.md - Blog post structure
+7. SUPABASE_WORKFLOW.md - Database operations
 ```
 
-**Component System Benefits (Achieved Across All Reviews):**
-- Component/template architecture (scalable)
-- Content separated from code (easier updates)
-- ISR caching (better performance than dynamic)
-- Reusable components (consistency across all 35 pages)
-- Average 440 lines vs 1000 lines (56% reduction)
-- Type-safe data structure
-- Custom sections support (product-specific needs)
+### Code References
+```
+- Benriner review page: /app/reviews/benriner-large-mandoline/page.tsx
+- Product helpers: /lib/product-helpers.ts
+- Schema helpers: /lib/schema.ts
+- Review components: /components/review/
+- Global styles: /app/globals.css
+```
 
-**This file (.clauderc) contains:** Core rules, protected values, workflow requirements
-
-**Other docs contain:** Detailed implementation guidance and best practices
+### External Resources
+```
+- Google Rich Results Test: https://search.google.com/test/rich-results
+- Lighthouse: Chrome DevTools or npx lighthouse
+- WCAG Contrast Checker: https://webaim.org/resources/contrastchecker/
+```
 
 ---
 
 ## 🔧 REVIEW PAGE COMPONENT/TEMPLATE SYSTEM
 
-### Architecture Overview
+### Gold Standard: Benriner Page
+**Reference:** `/app/reviews/benriner-large-mandoline/page.tsx`
 
-Every review page uses this structure:
+This is the NEW architecture that ALL review pages must follow.
 
+### File Structure
 ```
-app/reviews/[product-slug]/
-├── page.tsx                        # 400-500 lines: composition only
-└── [product-slug]-data.ts          # All content and configuration
+/app/reviews/[product-slug]/
+├── page.tsx                 // Main page component
+└── [product-slug]-data.ts   // ALL review content/data
 ```
 
-**page.tsx responsibilities:**
-- Import components from @/components/review
-- Import reviewData from data file
-- Fetch product from Supabase
-- Compose page from components
-- NO hardcoded content
+### Component Order (13 Standard Components)
+```tsx
+1. ProductViewTrackerWrapper  // Analytics tracking
+2. Schema markup              // Product, Breadcrumb, FAQ schemas
+3. Breadcrumbs                // Navigation trail
+4. ReviewHero                 // Title, verdict, rating, CTA
+5. TestingResultsGrid         // Testing summary
+6. PerformanceAnalysis        // Detailed analysis
+7. ComparisonTable            // 4-product comparison (NEW - MANDATORY)
+8. ProsConsGrid               // Pros and cons
+9. WhoShouldBuyGrid          // Target audience
+10. FAQSection                // Q&A
+11. EmailCaptureSection       // Lead magnet
+12. BottomLineSection         // Final verdict
+13. RelatedProductsGrid       // Cross-sell
+14. AuthorBio                 // Scott's credentials (NEW - MANDATORY)
+```
 
-**data file responsibilities:**
-- All copy, headings, descriptions
-- Product-specific configuration
-- FAQ data, testing notes
-- Legacy product fallback data
-- Type-safe structure
-
----
-
-### Required Components (All Review Pages)
-
+### Data File Structure (product-slug-data.ts)
 ```typescript
-import {
-  ReviewHero,              // Title, rating, verdict, CTA
-  TestingResultsGrid,      // Testing environment, key findings
-  PerformanceAnalysis,     // Detailed performance sections
-  ProsConsGrid,            // Pros and cons
-  WhoShouldBuyGrid,        // Perfect for / Consider alternatives
-  FAQSection,              // FAQs with schema markup
-  EmailCaptureSection,     // Lead magnet signup
-  BottomLineSection,       // Final recommendation + CTA
-  RelatedProductsGrid      // Related products
-} from '@/components/review'
-```
-
-**Every review page must use ALL of these components** unless there's a specific reason to omit one.
-
----
-
-### Optional Custom Components
-
-For product-specific needs, create custom components in:
-```
-@/components/review/custom/
-```
-
-**Examples:**
-- SafetySection (sharp tools like mandolines, knives)
-- CompatibilityGuide (mandoline vegetable guide, processor blade guide)
-- ComparisonTable (vs competitors)
-- MaintenanceGuide (complex equipment)
-- SizeSelector (products with multiple sizes)
-
-**Rule:** Only create custom components when standard components can't handle the content.
-
----
-
-### ISR Configuration (CRITICAL)
-
-```typescript
-// At top of page.tsx - REQUIRED for all review pages
-
-// Revalidate every hour (good balance for price changes)
-export const revalidate = 3600  // 1 hour in seconds
-
-// Enable fetch caching for Supabase
-export const fetchCache = 'force-cache'
-```
-
-**DO NOT use:**
-```typescript
-❌ export const dynamic = 'force-dynamic'  // Old pattern, worse performance
-```
-
-**Why ISR is better:**
-- First request: Server-rendered, cached for 1 hour
-- Next requests: Served from cache (much faster)
-- Supabase queries cached (reduces database load)
-- Better Lighthouse scores
-- Lower hosting costs (less compute time)
-
-**When to revalidate:**
-- 3600 (1 hour): Standard for most products
-- 7200 (2 hours): Stable products, rarely change
-- 1800 (30 min): Popular products with frequent price changes
-
----
-
-### Step-by-Step: Creating a New Review Page
-
-**1. Check Existing Components**
-```bash
-ls components/review/
-```
-Don't reinvent the wheel - use what exists.
-
-**2. Create Data File**
-```typescript
-// app/reviews/[product-slug]/[product-slug]-data.ts
-
 export const reviewData = {
-  productSlug: 'product-name',
-
+  // Metadata
   metadata: {
-    title: 'Product Name Review: Professional Testing',
-    description: '...',
-    ogTitle: '...',
-    ogDescription: '...',
-    testingPeriod: '5+ years',
-    tier: 1
+    title: "Page title",
+    description: "Meta description",
+    publishedDate: "2024-10-15",
+    lastUpdated: "2025-01-20",
+    tier: 1, // 1, 2, or 3
   },
 
-  hero: {
-    title: 'Product Name: Subtitle',
-    authorName: 'Scott Bradley',
-    authorCredentials: '24 years professional kitchen experience',
-    rating: 4.8,
-    tierBadge: 'Tier 1: 5+ Years Professional Use',
-    verdict: 'Main verdict text...',
-    verdictStrong: 'Strong opening line',
-    ctaText: 'View on Amazon →'
-  },
+  // Product identification
+  productSlug: "product-slug", // Must match Supabase
 
-  testingResults: {
-    title: 'Testing Results',
-    sections: [ ... ],
-    testingEnvironment: '...',
-    outstandingPerformance: [ ... ],
-    minorConsiderations: [ ... ]
-  },
-
-  performanceAnalysis: {
-    title: 'Performance Analysis',
-    sections: [ ... ]
-  },
-
-  prosConsTitle: 'The Bottom Line',
-  prosTitle: 'What Makes It Exceptional',
-  consTitle: 'What to Consider',
-
-  whoShouldBuy: {
-    title: 'Who Should Buy This?',
-    perfectForTitle: 'Perfect For:',
-    considerAlternativesTitle: 'Consider Alternatives If:',
-    perfectFor: [ ... ],
-    considerAlternatives: [ ... ]
-  },
-
-  faq: {
-    title: 'Common Questions',
-    items: [ ... ]
-  },
-
-  whereToBuy: {
-    title: 'Where to Buy',
-    introText: '...',
-    disclaimer: '...'
-  },
-
-  emailCapture: {
-    title: '...',
-    subtitle: '...',
-    inputPlaceholder: 'Your email',
-    buttonText: 'Get Free Guide',
-    finePrint: '...'
-  },
-
-  bottomLine: {
-    title: 'Bottom Line',
-    paragraphs: [ ... ],
-    ctaText: 'View on Amazon →'
-  },
-
-  relatedProducts: {
-    title: 'You Might Also Like',
-    products: [ ... ]
-  },
-
+  // Legacy fallback data
   legacyProductData: {
-    // Fallback if Supabase is down
-    name: '...',
-    slug: '...',
-    brand: '...',
-    pros: [ ... ],
-    cons: [ ... ],
-    // ... etc
+    name: "Product Name",
+    slug: "product-slug",
+    category: "Category",
+    // ... full product object
   },
 
+  // Tracking data
   tracking: {
-    // For ProductViewTrackerWrapper
-    testingPeriod: '5+ years',
-    hook: '...'
+    testingPeriod: "5+ years",
+    hook: "Professional kitchen use",
   },
 
+  // Breadcrumb
   breadcrumb: {
-    productName: 'Product Name'
+    productName: "Product Name"
   },
 
-  faqData: [
-    // For FAQ schema markup
-    { question: '...', answer: '...' }
-  ]
+  // Hero section
+  hero: {
+    title: "Main heading",
+    verdict: "Quick verdict paragraph",
+    // ... hero props
+  },
+
+  // Testing results
+  testingResults: {
+    title: "Testing Results",
+    sections: [
+      { title: "Section 1", content: "..." },
+      // ...
+    ]
+  },
+
+  // Performance analysis
+  performanceAnalysis: {
+    // ... analysis content
+  },
+
+  // Comparison table (NEW - MANDATORY)
+  comparisonTable: {
+    products: [
+      {
+        name: "This Product",
+        isReviewed: true,
+        specs: { /* ... */ },
+        affiliateUrl: "#",
+        priceTier: "Mid-Range"
+      },
+      // ... 3 more products
+    ]
+  },
+
+  // Pros/cons
+  prosConsTitle: "Pros & Cons",
+  prosTitle: "What We Love",
+  consTitle: "What Could Be Better",
+  // Note: pros/cons arrays come from Supabase
+
+  // Who should buy
+  whoShouldBuy: {
+    // ... target audience content
+  },
+
+  // FAQ
+  faq: {
+    questions: [
+      { question: "Q?", answer: "A." },
+      // ... 5-6 questions
+    ]
+  },
+
+  // Email capture
+  emailCapture: {
+    // Usually uses component defaults
+  },
+
+  // Bottom line
+  bottomLine: {
+    title: "The Bottom Line",
+    content: "Final verdict paragraph",
+  },
+
+  // Related products
+  relatedProducts: {
+    title: "You Might Also Like",
+    productSlugs: ["product-1", "product-2", "product-3"]
+  }
 }
 ```
 
-**Reference:** Use Benriner data file as template
-
-**3. Create Page File**
+### Page Component Structure (page.tsx)
 ```typescript
-// app/reviews/[product-slug]/page.tsx
-
-import Link from 'next/link'
-import type { Metadata } from 'next'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { generateOGImageURL } from '@/lib/og-image'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import {
-  ReviewHero,
-  TestingResultsGrid,
-  PerformanceAnalysis,
-  ProsConsGrid,
-  WhoShouldBuyGrid,
-  FAQSection,
-  EmailCaptureSection,
-  BottomLineSection,
-  RelatedProductsGrid
-} from '@/components/review'
-
-// Import custom sections if needed
-// import SafetySection from '@/components/review/custom/SafetySection'
-
-// Import review data
 import { reviewData } from './product-slug-data'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+// ... component imports
 
 // ISR configuration
 export const revalidate = 3600
 export const fetchCache = 'force-cache'
 
-// Generate metadata
-export async function generateMetadata(): Promise<Metadata> {
-  const product = await getProductBySlug(reviewData.productSlug)
-  const productData = product || reviewData.legacyProductData
-
+export async function generateMetadata() {
   return {
     title: reviewData.metadata.title,
     description: reviewData.metadata.description,
-    alternates: {
-      canonical: `https://www.chefapprovedtools.com/reviews/${reviewData.productSlug}`,
-    },
     openGraph: {
-      title: reviewData.metadata.ogTitle,
-      description: reviewData.metadata.ogDescription,
-      url: `https://www.chefapprovedtools.com/reviews/${reviewData.productSlug}`,
-      siteName: 'Chef Approved Tools',
-      images: [{
-        url: generateOGImageURL({
-          title: productData.name,
-          rating: productData.expertRating ?? reviewData.hero.rating,
-          testingPeriod: reviewData.metadata.testingPeriod,
-          tier: reviewData.metadata.tier as 1 | 2 | 3,
-        }),
-        width: 1200,
-        height: 630,
-        alt: `${productData.name} - Professional Review`,
-      }],
-      type: 'article',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: reviewData.metadata.ogTitle,
-      description: reviewData.metadata.ogDescription,
-      images: [generateOGImageURL({ /* same as openGraph */ })],
-    },
+      publishedTime: reviewData.metadata.publishedDate,
+      modifiedTime: reviewData.metadata.lastUpdated,
+    }
   }
 }
 
@@ -884,14 +1072,22 @@ export default async function ProductReview() {
             {reviewData.breadcrumb.productName}
           </div>
 
+          {/* Date stamps */}
+          <div className="text-sm text-slate-600 mb-2">
+            <time dateTime={reviewData.metadata.publishedDate}>
+              Published: {formatDate(reviewData.metadata.publishedDate)}
+            </time>
+            {' • '}
+            <time dateTime={reviewData.metadata.lastUpdated}>
+              Updated: {formatDate(reviewData.metadata.lastUpdated)}
+            </time>
+          </div>
+
           {/* Compose from components */}
           <ReviewHero {...reviewData.hero} />
           <TestingResultsGrid {...reviewData.testingResults} />
           <PerformanceAnalysis {...reviewData.performanceAnalysis} />
-
-          {/* Custom sections if needed */}
-          {/* <SafetySection {...reviewData.safety} /> */}
-
+          <ComparisonTable {...reviewData.comparisonTable} />
           <ProsConsGrid
             title={reviewData.prosConsTitle}
             prosTitle={reviewData.prosTitle}
@@ -904,9 +1100,7 @@ export default async function ProductReview() {
           <EmailCaptureSection {...reviewData.emailCapture} />
           <BottomLineSection {...reviewData.bottomLine} />
           <RelatedProductsGrid {...reviewData.relatedProducts} />
-
-          {/* Author bio - standard across all pages */}
-          {/* Copy from Benriner page */}
+          <AuthorBio />
 
         </div>
       </div>
@@ -915,25 +1109,13 @@ export default async function ProductReview() {
 }
 ```
 
-**4. Test Locally**
-```bash
-npm run dev
-# Visit localhost:3000/reviews/[product-slug]
-```
-
-**5. Verify Checklist**
-```
-□ Page loads without errors
-□ All images have alt text
-□ Affiliate link works (clicks through to Amazon)
-□ Schema markup validates (Google Rich Results Test)
-□ Mobile responsive (test on phone)
-□ Lighthouse score 95+ (npm run lighthouse)
-□ No TypeScript errors (npm run type-check)
-□ ISR configuration present (revalidate + fetchCache)
-□ ProductViewTrackerWrapper included
-□ All standard components used
-```
+**Critical Notes:**
+- Data and JSX are SEPARATED
+- ALL content lives in data file
+- Components are composed, not custom HTML
+- ISR caching is REQUIRED (revalidate: 3600)
+- Supabase data takes priority over legacy fallback
+- ALL review pages MUST use this structure
 
 ---
 
@@ -988,16 +1170,39 @@ const hero = {
 import { reviewData } from './product-data'
 ```
 
+**❌ Missing Comparison Table**
+```typescript
+// DON'T DO THIS - skip comparison table
+
+// DO THIS - include comparison table on EVERY review
+<ComparisonTable {...reviewData.comparisonTable} />
+```
+
+**❌ Missing AuthorBio**
+```typescript
+// DON'T DO THIS - skip author bio
+
+// DO THIS - include AuthorBio on EVERY page
+<AuthorBio />
+```
+
 ---
 
 ### Migration Status
 
-**✅ Completed (November 2025):**
-- All 35 review pages migrated to component/template system
-- Benriner established as the gold standard architecture
-- Consistent structure across all review pages
-- ISR caching implemented site-wide for reviews
-- Lighthouse scores 95+ maintained across all pages
+**✅ Completed:**
+- Benriner (November 2025) - New gold standard
+
+**⏳ In Progress:**
+- AuthorBio component added to 37 reviews + 6 guides (Nov 6, 2025)
+- Comparison tables being rolled out to all reviews (Nov 2025)
+
+**⏳ Pending (35+ pages):**
+- All other review pages need full component conversion
+- Systematic rebuild, not rushed
+- Use Benriner as exact template for each
+
+**Target:** All review pages using full component system by Q1 2026
 
 ---
 
@@ -1031,6 +1236,14 @@ If unsure about component/template system:
 9. Benriner component system for ALL review pages (no exceptions)
 10. Separate data files for all content (no hardcoded copy in JSX)
 11. ISR caching (revalidate: 3600) for review pages
+12. Comparison tables MANDATORY on all reviews
+13. AuthorBio component on ALL pages
+14. Dates (published/updated) on ALL pages
+15. All CTAs say "Check Price on Amazon"
+16. All accessibility requirements followed (4 rules)
+17. All images optimized (quality: 75, WebP preferred)
+18. All breadcrumbs present with schema markup
+19. All metadata follows character limits and encoding rules
 ```
 
 ---
@@ -1039,16 +1252,20 @@ If unsure about component/template system:
 
 **Current Baseline (November 2025):**
 ```
-✅ 78+ pages indexed in Google
-✅ Lighthouse scores 95-100 (RECENTLY OPTIMIZED)
+✅ 125 pages indexed in Google
+✅ Lighthouse scores: Desktop 100 (all metrics), Mobile 80 Performance / 100 (other metrics)
+✅ LCP <2.5s (target: <1.2s)
 ✅ Page load times <2.5 seconds
 ✅ Zero hardcoded affiliate links
 ✅ Amazon tag: chefapprovedt-20
 ✅ Dynamic Supabase integration working
-✅ Schema markup validates
+✅ Schema markup validates (Product, FAQ, Breadcrumb)
 ✅ Analytics tracking functional (ProductViewTracker, CTAVisibilityTracker)
-✅ Component/template system complete (ALL 35 review pages migrated)
-✅ ISR caching across all review pages (revalidate: 3600)
+✅ Component/template system established (Benriner standard)
+✅ AuthorBio component standardized (43 pages as of Nov 6)
+✅ Accessibility compliant (4 critical rules followed)
+✅ All review pages have comparison tables (rolling out Nov 2025)
+✅ Dates present on all pages (published/updated with schema)
 ```
 
 If these decline after your changes, investigate immediately.
@@ -1061,45 +1278,62 @@ If these decline after your changes, investigate immediately.
 Before deploying to production:
 
 □ npm run build succeeds (includes prebuild validation)
-□ npm run validate:all passes
+□ npm run validate:all passes (if available)
 □ npm run type-check passes (no TypeScript errors)
-□ Lighthouse score 95+ (mobile and desktop) - TEST THIS
-□ All images have alt text (npm run validate:images)
+□ Lighthouse score: Desktop 100 (all metrics), Mobile 80 Performance / 100 (others) - TEST THIS
+□ LCP <2.5s (target: <1.2s)
+□ All images have alt text
+□ All images use quality={75}
+□ All images properly sized (not oversized)
 □ No console errors
 □ Mobile responsive tested
 □ Affiliate links use correct tag (chefapprovedt-20)
-□ Affiliate links click through to Amazon successfully (npm run validate:links)
-□ No duplicate affiliate links (npm run validate:duplicates)
+□ All CTAs say "Check Price on Amazon"
+□ Affiliate links click through successfully
+□ No duplicate affiliate links
 □ Internal links working
+□ Breadcrumbs present on all content pages
+□ Breadcrumb schema markup included
+□ Dates present (published/updated) on all pages
+□ Date schema markup included (datePublished, dateModified)
 □ Schema markup validates (Google Rich Results Test)
-□ Meta tags complete (title, description, OG tags)
+□ Meta tags complete (title <60 chars, description 150-160 chars)
+□ Meta tags <80% similar to other pages
+□ No unescaped apostrophes or quotes in metadata
+□ Heading hierarchy correct (h1 → h2 → h3, no skipping)
+□ Text links use orange-700 (not orange-600)
+□ Star ratings use amber-700 (not yellow-400)
+□ Text on orange backgrounds uses slate-900 (not slate-700)
+□ Focus states visible on all interactive elements
 □ ProductViewTrackerWrapper present (if product page)
 □ CTAVisibilityTracker present on CTAs (if applicable)
 □ ISR configuration present (revalidate + fetchCache) for review pages
 □ Review pages use component system (not old monolithic structure)
+□ Comparison table included on review pages
+□ AuthorBio component included on all content pages
+□ Separate data file for content (not hardcoded in page.tsx)
 ```
 
 ---
 
 **Remember:** This is Scott's path to financial independence after job loss. Every decision matters. Quality, authenticity, and performance are non-negotiable.
 
-**The component/template system is now COMPLETE** - established in November 2025 with Benriner as the gold standard. All 35 review pages have been successfully migrated to this architecture.
+**The Benriner review page is the NEW gold standard** - it uses the component/template system established in November 2025. All review pages need to be converted to this architecture.
 
-**System Benefits Achieved:**
-- Component/template architecture (scalable, maintainable)
-- Content separated from code (easier updates)
-- ISR caching across all reviews (better performance than dynamic)
-- Reusable components (consistency across all pages)
-- Type-safe data structure
-- Custom sections support (product-specific needs)
-- Lighthouse 95+ scores maintained
-- Proper schema markup and tracking components throughout
+**Microsoft AI Optimization Validation (Nov 6, 2025):**
+- ✅ Already using structured data (Product, FAQ, Breadcrumb schemas)
+- ✅ Already have real expertise documented (24 years professional)
+- ✅ Already have comparison content (rolling out now)
+- ✅ Already have proper structure (component system)
+- ✅ Already have author bios on all pages (completed Nov 6)
+- ✅ Need freshness signals (dates - implementing now)
+- ✅ Need content refresh schedule (quarterly top 10, annual flagship)
 
 **When in doubt: STOP and ASK.**
 
 ---
 
 *This file must be read by any AI assistant before working on Chef Approved Tools.*
-*Last Updated: November 6, 2025*
-*All 35 review pages migrated to component/template system (COMPLETE)*
-*Reference implementation: /app/reviews/benriner-large-mandoline/page.tsx*
+*Last Updated: November 7, 2025*
+*Verified against: /app/reviews/benriner-large-mandoline/page.tsx*
+*Includes: Nov 6 session updates, Microsoft AI optimization requirements, Lighthouse fixes*
