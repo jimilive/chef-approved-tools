@@ -2,8 +2,8 @@ export const comparisonData = {
   metadata: {
     title: "Nonstick vs Stainless Steel Pans: When to Use Each",
     description: "Nonstick for eggs and delicate fish, dies in 3 years. Stainless for searing and sauces, lasts decades. Professional kitchens use both + best picks at every price.",
-    publishedDate: "2024-11-29",
-    lastUpdated: "2025-01-18",
+    publishedDate: "2025-11-09",
+    lastUpdated: "2025-11-09",
     primaryKeyword: "nonstick vs stainless steel pans",
     readTime: "12 min read"
   },

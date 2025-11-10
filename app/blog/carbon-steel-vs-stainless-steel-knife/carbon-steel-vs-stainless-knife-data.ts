@@ -3,8 +3,8 @@ export const comparisonData = {
   metadata: {
     title: "Carbon Steel vs Stainless Knives: 24-Year Test Results",
     description: "Carbon holds edges 2x longer but needs daily oiling. Stainless survives neglect but dulls faster. Which matches your maintenance willingness + best picks.",
-    publishedDate: "2024-11-15",
-    lastUpdated: "2025-01-16",
+    publishedDate: "2025-11-09",
+    lastUpdated: "2025-11-09",
     primaryKeyword: "carbon steel vs stainless steel knife",
     readTime: "9 min read"
   },

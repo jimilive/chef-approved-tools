@@ -2,8 +2,8 @@ export const comparisonData = {
   metadata: {
     title: "Dutch Oven vs Slow Cooker: Flavor vs Convenience",
     description: "Dutch ovens develop deeper flavor through browning and layering. Slow cookers cook unattended for 8 hours. Which matches your schedule + best picks for each.",
-    publishedDate: "2024-11-28",
-    lastUpdated: "2025-01-18",
+    publishedDate: "2025-11-09",
+    lastUpdated: "2025-11-09",
     primaryKeyword: "dutch oven vs slow cooker",
     readTime: "11 min read"
   },

@@ -3,8 +3,8 @@ export const comparisonData = {
   metadata: {
     title: "Wood vs Composite Cutting Boards: Why 90% of Pros Choose Wood",
     description: "24 years testing both: Wood cutting boards win on knife preservation and natural sanitation. When composite makes sense + best picks for each type.",
-    publishedDate: "2024-11-01",
-    lastUpdated: "2025-01-15",
+    publishedDate: "2025-11-09",
+    lastUpdated: "2025-11-09",
     primaryKeyword: "wood vs composite cutting board",
     readTime: "8 min read"
   },

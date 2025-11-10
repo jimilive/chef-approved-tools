@@ -2,8 +2,8 @@ export const comparisonData = {
   metadata: {
     title: "Stand Mixer vs Hand Mixer: When $400 Is Worth It",
     description: "Stand mixers excel at bread dough and hands-free mixing. Hand mixers handle 80% of tasks for $50. Which matches your baking frequency + best picks.",
-    publishedDate: "2024-11-26",
-    lastUpdated: "2025-01-18",
+    publishedDate: "2025-11-09",
+    lastUpdated: "2025-11-09",
     primaryKeyword: "stand mixer vs hand mixer",
     readTime: "13 min read"
   },

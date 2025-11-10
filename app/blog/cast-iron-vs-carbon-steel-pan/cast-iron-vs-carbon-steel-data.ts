@@ -3,8 +3,8 @@ export const comparisonData = {
   metadata: {
     title: "Cast Iron vs Carbon Steel Pans: What 24 Years Taught Me",
     description: "Cast iron holds heat 3x longer for searing. Carbon steel heats/cools instantly for control. Which cooking style matches yours + when to use each.",
-    publishedDate: "2024-11-20",
-    lastUpdated: "2025-01-17",
+    publishedDate: "2025-11-09",
+    lastUpdated: "2025-11-09",
     primaryKeyword: "cast iron vs carbon steel pan",
     readTime: "10 min read"
   },
