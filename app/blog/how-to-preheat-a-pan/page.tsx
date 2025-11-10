@@ -1,8 +1,15 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import { Calendar, Clock, User, Flame, ThermometerSun } from 'lucide-react'
-import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import Link from 'next/link';
+import { Metadata } from 'next';
+import {
+  generateArticleSchema,
+  generateBreadcrumbSchema,
+  generateFAQSchema
+} from '@/lib/schema';
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
+import { Flame, CheckCircle2 } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: 'How To Preheat A Pan The Right Way (Most People Do This Wrong)',
@@ -11,7 +18,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-preheat-a-pan',
   },
-}
+};
 
 const articleSchema = generateArticleSchema({
   headline: "How to Preheat a Pan: Temperature Matters More Than You Think",
@@ -24,107 +31,73 @@ const articleSchema = generateArticleSchema({
   urlSuffix: 'how-to-preheat-a-pan'
 });
 
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
+  { name: "How to Preheat a Pan", url: "https://www.chefapprovedtools.com/blog/how-to-preheat-a-pan" }
+]);
+
+const faqSchema = generateFAQSchema([
+  {
+    question: "Why does my food stick even after preheating?",
+    answer: "The pan may not be hot enough, or you moved food too soon. Wait for natural release."
+  },
+  {
+    question: "Can I preheat in the oven instead?",
+    answer: "Yes — for cast iron, oven preheating gives perfectly even heat."
+  },
+  {
+    question: "Do I always need oil?",
+    answer: "For stainless and cast iron, yes. Dry heat causes sticking and discoloration."
+  },
+  {
+    question: "How do I know if I've overheated?",
+    answer: "If your pan shows rainbow tinting, you've gone too hot — clean with vinegar or Bar Keepers Friend."
+  },
+  {
+    question: "Does preheating save energy?",
+    answer: "Absolutely. A properly heated pan cooks faster and more evenly, reducing wasted heat and time."
+  },
+  {
+    question: "How long should I preheat a nonstick pan?",
+    answer: "1-2 minutes maximum on medium heat. Never preheat nonstick empty or on high heat — the coating degrades above 500°F. Always add oil or food before heating."
+  },
+  {
+    question: "What's the best heat setting for preheating?",
+    answer: "Start with medium heat for most pans. You can always increase heat after preheating, but starting too hot causes uneven heating and can warp pans. Medium gives you control and even heat distribution."
+  },
+  {
+    question: "Why do restaurants preheat pans in the oven?",
+    answer: "Oven preheating ensures completely even heat across the entire pan surface — no hot spots. It's especially useful for cast iron before searing steaks. Set oven to 400°F, place pan inside for 10 minutes, then transfer to stovetop."
+  }
+]);
+
 export default function HowToPreheatPanPost() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* JSON-LD Structured Data */}
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBreadcrumbSchema([
-            { name: "Home", url: "https://www.chefapprovedtools.com" },
-            { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-            { name: "How to Preheat a Pan", url: "https://www.chefapprovedtools.com/blog/how-to-preheat-a-pan" }
-          ]))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema([
-            {
-              question: "Why does my food stick even after preheating?",
-              answer: "The pan may not be hot enough, or you moved food too soon. Wait for natural release."
-            },
-            {
-              question: "Can I preheat in the oven instead?",
-              answer: "Yes — for cast iron, oven preheating gives perfectly even heat."
-            },
-            {
-              question: "Do I always need oil?",
-              answer: "For stainless and cast iron, yes. Dry heat causes sticking and discoloration."
-            },
-            {
-              question: "How do I know if I've overheated?",
-              answer: "If your pan shows rainbow tinting, you've gone too hot — clean with vinegar or Bar Keepers Friend."
-            },
-            {
-              question: "Does preheating save energy?",
-              answer: "Absolutely. A properly heated pan cooks faster and more evenly, reducing wasted heat and time."
-            },
-            {
-              question: "How long should I preheat a nonstick pan?",
-              answer: "1-2 minutes maximum on medium heat. Never preheat nonstick empty or on high heat — the coating degrades above 500°F. Always add oil or food before heating."
-            },
-            {
-              question: "What's the best heat setting for preheating?",
-              answer: "Start with medium heat for most pans. You can always increase heat after preheating, but starting too hot causes uneven heating and can warp pans. Medium gives you control and even heat distribution."
-            },
-            {
-              question: "Why do restaurants preheat pans in the oven?",
-              answer: "Oven preheating ensures completely even heat across the entire pan surface — no hot spots. It's especially useful for cast iron before searing steaks. Set oven to 400°F, place pan inside for 10 minutes, then transfer to stovetop."
-            }
-          ]))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Article Header */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-slate-600 mb-8">
-          <Link href="/" className="hover:text-orange-700">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-orange-700">Blog</Link>
-          <span className="mx-2">/</span>
-          <span>How to Preheat a Pan</span>
-        </nav>
+      <BlogLayout breadcrumbTitle="How to Preheat a Pan">
+        <BlogHero
+          title="How to Preheat a Pan: Temperature Matters More Than You Think"
+          introduction={["You can spot an experienced cook by the way they preheat a pan. They don't just toss it on high and hope — they wait, test, and feel. Preheating isn't about impatience; it's about control."]}
+          publishedDate="2025-10-02"
+          lastUpdated="2025-10-21"
+          readTime="8 min read"
+        />
 
-        {/* Article Meta */}
-        <div className="mb-8">
-          <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6">
-            <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              <span>October 21, 2025</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>8 min read</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Scott Bradley</span>
-            </div>
-            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-              Cooking Techniques
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-            How to Preheat a Pan: Temperature Matters More Than You Think
-          </h1>
-
-          <p className="text-xl text-slate-600 leading-relaxed">
-            You can spot an experienced cook by the way they preheat a pan. They don&apos;t just toss it on high and hope — they wait, test, and feel. Preheating isn&apos;t about impatience; it&apos;s about control.
-          </p>
-        </div>
-
-        {/* Article Content */}
-        <div className="prose prose-lg prose-slate max-w-none">
-
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
             In every professional kitchen I&apos;ve worked in, preheating is the difference between a golden sear and a gray, steamed mess. It&apos;s why steaks crust beautifully and eggs slide cleanly off the pan — and why home cooks often wonder why their food sticks or burns.
           </p>
@@ -351,7 +324,7 @@ export default function HowToPreheatPanPost() {
             <h4 className="font-bold text-slate-800 mb-4">Essential Pans for Proper Preheating</h4>
             <ul className="space-y-3">
               <li>
-                <strong>Stainless:</strong> {/* All-Clad D3 10&quot; Stainless Skillet */} All-Clad D3 stainless skillet — even heat, responsive.
+                <strong>Stainless:</strong> All-Clad D3 stainless skillet — even heat, responsive.
               </li>
               <li>
                 <strong>Cast Iron:</strong> <CTAVisibilityTracker
@@ -364,16 +337,16 @@ export default function HowToPreheatPanPost() {
                 </CTAVisibilityTracker> — unbeatable for searing and oven finish.
               </li>
               <li>
-                <strong>Carbon Steel:</strong> {/* Matfer Bourgeat 11&quot; Fry Pan */} Matfer Bourgeat carbon steel fry pan — lightweight with pro heat control.
+                <strong>Carbon Steel:</strong> Matfer Bourgeat carbon steel fry pan — lightweight with pro heat control.
               </li>
               <li>
-                <strong>Thermometer:</strong> {/* ThermoWorks Thermapen ONE */} Instant-read thermometer — for instant surface readings. See <CTAVisibilityTracker
+                <strong>Thermometer:</strong> Instant-read thermometer — for instant surface readings. See <CTAVisibilityTracker
                   ctaId="blog-preheat-pan-thermometer-guide-1"
                   position="mid_article"
                   productSlug="how-to-preheat-a-pan"
                   merchant="internal"
                 >
-                  <Link href="/blog/kitchen-thermometer-guide" className="text-orange-700 hover:text-orange-800 underline">Kitchen Thermometer Guide</Link>
+                  <Link href="/blog/kitchen-thermometers-guide" className="text-orange-700 hover:text-orange-800 underline">Kitchen Thermometer Guide</Link>
                 </CTAVisibilityTracker>.
               </li>
             </ul>
@@ -453,105 +426,82 @@ export default function HowToPreheatPanPost() {
               </ul>
             </div>
           </div>
-        </div>
 
-        {/* FAQ Section */}
-        <div className="border-t border-gray-200 pt-12 mt-12" id="faq">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why does my food stick even after preheating?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                The pan may not be hot enough, or you moved food too soon. Wait for natural release.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I preheat in the oven instead?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Yes — for cast iron, oven preheating gives perfectly even heat.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Do I always need oil?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                For stainless and cast iron, yes. Dry heat causes sticking and discoloration.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I know if I&apos;ve overheated?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                If your pan shows rainbow tinting, you&apos;ve gone too hot — clean with vinegar or Bar Keepers Friend.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Does preheating save energy?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Absolutely. A properly heated pan cooks faster and more evenly, reducing wasted heat and time.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How long should I preheat a nonstick pan?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                1-2 minutes maximum on medium heat. Never preheat nonstick empty or on high heat — the coating degrades above 500°F. Always add oil or food before heating.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the best heat setting for preheating?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Start with medium heat for most pans. You can always increase heat after preheating, but starting too hot causes uneven heating and can warp pans. Medium gives you control and even heat distribution.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why do restaurants preheat pans in the oven?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Oven preheating ensures completely even heat across the entire pan surface — no hot spots. It&apos;s especially useful for cast iron before searing steaks. Set oven to 400°F, place pan inside for 10 minutes, then transfer to stovetop.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Author Bio */}
-        <div className="border-t border-gray-200 pt-8 mt-12">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-16 bg-orange-700 rounded-full flex items-center justify-center">
-              <User className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-600 text-sm leading-relaxed mb-2">
-                <strong>Professional Chef • 45 Years Cooking Experience • 24 Years Professional Kitchens</strong>
-              </p>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from the University of Montana. Techniques tested on thousands of dishes in high-volume kitchens serving hundreds daily.
-              </p>
-              <div className="mt-4">
-                <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
-                  Learn more about Scott →
-                </Link>
+          <div className="border-t border-gray-200 pt-12 mt-12" id="faq">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Why does my food stick even after preheating?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  The pan may not be hot enough, or you moved food too soon. Wait for natural release.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I preheat in the oven instead?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Yes — for cast iron, oven preheating gives perfectly even heat.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Do I always need oil?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  For stainless and cast iron, yes. Dry heat causes sticking and discoloration.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I know if I&apos;ve overheated?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  If your pan shows rainbow tinting, you&apos;ve gone too hot — clean with vinegar or Bar Keepers Friend.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Does preheating save energy?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Absolutely. A properly heated pan cooks faster and more evenly, reducing wasted heat and time.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">How long should I preheat a nonstick pan?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  1-2 minutes maximum on medium heat. Never preheat nonstick empty or on high heat — the coating degrades above 500°F. Always add oil or food before heating.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the best heat setting for preheating?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Start with medium heat for most pans. You can always increase heat after preheating, but starting too hot causes uneven heating and can warp pans. Medium gives you control and even heat distribution.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Why do restaurants preheat pans in the oven?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Oven preheating ensures completely even heat across the entire pan surface — no hot spots. It&apos;s especially useful for cast iron before searing steaks. Set oven to 400°F, place pan inside for 10 minutes, then transfer to stovetop.
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Related Content */}
-        <div className="border-t border-gray-200 pt-8 mt-8">
-          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/blog/stainless-steel-why-food-sticks" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">Stainless Steel Cooking: Why Food Sticks</h4>
-              <p className="text-slate-600 text-sm">
-                Learn how to prevent food from sticking to stainless steel pans with proper technique.
-              </p>
+        <div className="bg-slate-50 rounded-xl p-8 mb-8">
+          <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/blog/stainless-steel-why-food-sticks" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Stainless Steel Cooking: Why Food Sticks
             </Link>
-            <Link href="/blog/how-to-clean-burnt-stainless-steel-pans" className="block bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">How to Clean Burnt Stainless Steel Pans</h4>
-              <p className="text-slate-600 text-sm">
-                Professional methods for restoring burnt stainless steel without damaging the surface.
-              </p>
+            <Link href="/blog/how-to-clean-burnt-stainless-steel-pans" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → How to Clean Burnt Stainless Steel Pans
+            </Link>
+            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Lodge Cast Iron Skillet Review
+            </Link>
+            <Link href="/blog/cookware-materials-explained" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Cookware Materials Explained: What Chefs Actually Use
             </Link>
           </div>
         </div>
-      </article>
-    </div>
-  )
+
+        <AuthorBio />
+      </BlogLayout>
+    </>
+  );
 }

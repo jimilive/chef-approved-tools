@@ -7,6 +7,9 @@ import {
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplets, Thermometer, AlertTriangle } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: "Hydration & Water Intake: How Much Water Do You Need?",
@@ -65,28 +68,16 @@ export default function HydrationHealthWaterIntakePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-700 mb-4">
-            <Droplets className="w-5 h-5" />
-            <span className="text-sm font-medium">Kitchen Health</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Hydration, Health, and Water Intake for Home Cooks
-          </h1>
-          <p className="text-xl text-slate-600">
-            Learn how professional chefs stay hydrated during long shifts and why proper water intake matters for home cooks. Science-backed hydration strategies for the kitchen.
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
-            <span>By Chef Scott Bradley</span>
-            <span>•</span>
-            <span>October 24, 2025</span>
-            <span>•</span>
-            <span>7 min read</span>
-          </div>
-        </header>
+      <BlogLayout breadcrumbTitle="Kitchen Hydration Guide">
+        <BlogHero
+          title="Hydration, Health, and Water Intake for Home Cooks"
+          introduction={["Learn how professional chefs stay hydrated during long shifts and why proper water intake matters for home cooks. Science-backed hydration strategies for the kitchen."]}
+          publishedDate="2025-09-03"
+          lastUpdated="2025-10-24"
+          readTime="7 min read"
+        />
 
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-6 rounded-xl border-l-4 border-blue-600 my-8 shadow-lg">
             <p className="text-white font-semibold mb-3 flex items-center gap-2">
               <ChefHat className="w-5 h-5" />
@@ -121,13 +112,11 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>The Heat Factor</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Kitchen Temperatures Are Brutal</h4>
-            Professional kitchens regularly hit 95-105°F during service. Even home kitchens reach 80-85°F when multiple burners are running. Your body sweats to cool down—and that sweat contains water you need to replace.
+            <strong className="text-slate-900">Kitchen Temperatures Are Brutal:</strong> Professional kitchens regularly hit 95-105°F during service. Even home kitchens reach 80-85°F when multiple burners are running. Your body sweats to cool down—and that sweat contains water you need to replace.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">You&apos;re Sweating More Than You Think</h4>
-            In a hot kitchen, you can lose 1-2 liters of fluid per hour through sweat. That&apos;s 2-4 pounds of water weight. If you&apos;re not replacing it, you&apos;re dehydrating rapidly.
+            <strong className="text-slate-900">You&apos;re Sweating More Than You Think:</strong> In a hot kitchen, you can lose 1-2 liters of fluid per hour through sweat. That&apos;s 2-4 pounds of water weight. If you&apos;re not replacing it, you&apos;re dehydrating rapidly.
           </p>
 
           <p>
@@ -137,13 +126,11 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>The Activity Factor</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Constant Movement Burns Fluid</h4>
-            Cooking isn&apos;t just standing there. You&apos;re moving, lifting, stirring, carrying hot pans, walking back and forth to coolers. This activity increases fluid loss beyond just the heat.
+            <strong className="text-slate-900">Constant Movement Burns Fluid:</strong> Cooking isn&apos;t just standing there. You&apos;re moving, lifting, stirring, carrying hot pans, walking back and forth to coolers. This activity increases fluid loss beyond just the heat.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Physical Demands Add Up</h4>
-            A professional cook burns 300-400 calories per hour and loses significant fluid through exertion alone—even before accounting for kitchen heat.
+            <strong className="text-slate-900">Physical Demands Add Up:</strong> A professional cook burns 300-400 calories per hour and loses significant fluid through exertion alone—even before accounting for kitchen heat.
           </p>
 
           <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
@@ -161,18 +148,15 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>Impaired Taste Perception</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Dry Mouth Kills Flavor</h4>
-            Taste buds need saliva to function properly. When you&apos;re dehydrated, you produce less saliva, and your ability to taste food accurately decreases by 20-30%.
+            <strong className="text-slate-900">Dry Mouth Kills Flavor:</strong> Taste buds need saliva to function properly. When you&apos;re dehydrated, you produce less saliva, and your ability to taste food accurately decreases by 20-30%.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">You&apos;ll Oversalt Everything</h4>
-            Dehydrated cooks consistently oversalt food because they can&apos;t taste properly. Then the family complains dinner is too salty.
+            <strong className="text-slate-900">You&apos;ll Oversalt Everything:</strong> Dehydrated cooks consistently oversalt food because they can&apos;t taste properly. Then the family complains dinner is too salty.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Acid Balance Suffers</h4>
-            Your ability to detect acid also decreases when dehydrated. You can&apos;t balance flavors correctly when your taste perception is off.
+            <strong className="text-slate-900">Acid Balance Suffers:</strong> Your ability to detect acid also decreases when dehydrated. You can&apos;t balance flavors correctly when your taste perception is off.
           </p>
 
           <p>
@@ -182,25 +166,21 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>Reduced Cognitive Function</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Slower Decision-Making</h4>
-            Even 2% dehydration (losing just 2% of body weight in water) reduces cognitive function by 20-30%. This means slower cooking decisions, more mistakes, and lower quality output.
+            <strong className="text-slate-900">Slower Decision-Making:</strong> Even 2% dehydration (losing just 2% of body weight in water) reduces cognitive function by 20-30%. This means slower cooking decisions, more mistakes, and lower quality output.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Recipe Following Gets Harder</h4>
-            Following complex recipes requires attention and memory. Dehydration impairs both. You&apos;ll skip steps, forget ingredients, or lose track of timing.
+            <strong className="text-slate-900">Recipe Following Gets Harder:</strong> Following complex recipes requires attention and memory. Dehydration impairs both. You&apos;ll skip steps, forget ingredients, or lose track of timing.
           </p>
 
           <h3>Physical Performance Decline</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Slower Movements</h4>
-            Dehydration reduces physical performance by 10-30%. You move slower, react slower, and tire faster.
+            <strong className="text-slate-900">Slower Movements:</strong> Dehydration reduces physical performance by 10-30%. You move slower, react slower, and tire faster.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Coordination Suffers</h4>
-            Fine motor skills—like knife work—decline with dehydration. This increases injury risk.
+            <strong className="text-slate-900">Coordination Suffers:</strong> Fine motor skills—like knife work—decline with dehydration. This increases injury risk.
           </p>
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
@@ -234,8 +214,7 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>General Baseline</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">The 8x8 Rule Is Too Simple</h4>
-            &quot;Eight 8-ounce glasses&quot; (64 ounces total) is a starting point, but activity level, climate, and individual factors matter more.
+            <strong className="text-slate-900">The 8x8 Rule Is Too Simple:</strong> &quot;Eight 8-ounce glasses&quot; (64 ounces total) is a starting point, but activity level, climate, and individual factors matter more.
           </p>
 
           <p>
@@ -248,8 +227,7 @@ export default function HydrationHealthWaterIntakePage() {
           </ul>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Example Calculation:</h4>
-            A 150-pound home cook needs:
+            <strong className="text-slate-900">Example Calculation:</strong> A 150-pound home cook needs:
           </p>
           <ul>
             <li>Baseline: 75-112 ounces per day (about 9-14 cups)</li>
@@ -285,40 +263,33 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>Before You Start Cooking</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Pre-Hydrate</h4>
-            Drink 16-20 ounces of water 30 minutes before cooking. This ensures you start well-hydrated.
+            <strong className="text-slate-900">Pre-Hydrate:</strong> Drink 16-20 ounces of water 30 minutes before cooking. This ensures you start well-hydrated.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Set Up Your Water Station</h4>
-            Before turning on the stove, place a large water bottle or pitcher near your cooking area. If it&apos;s in arm&apos;s reach, you&apos;ll drink it.
+            <strong className="text-slate-900">Set Up Your Water Station:</strong> Before turning on the stove, place a large water bottle or pitcher near your cooking area. If it&apos;s in arm&apos;s reach, you&apos;ll drink it.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Use a Water Bottle You Like</h4>
-            Sounds silly, but using a water bottle you enjoy drinking from increases consumption. I use an insulated bottle that keeps water cold—much more appealing in a hot kitchen.
+            <strong className="text-slate-900">Use a Water Bottle You Like:</strong> Sounds silly, but using a water bottle you enjoy drinking from increases consumption. I use an insulated bottle that keeps water cold—much more appealing in a hot kitchen.
           </p>
 
           <h3>During Cooking</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">The Every-Timer-Beep Rule</h4>
-            Every time your timer beeps (checking pasta, flipping meat, etc.), take 2-3 sips of water. This builds hydration into your cooking rhythm.
+            <strong className="text-slate-900">The Every-Timer-Beep Rule:</strong> Every time your timer beeps (checking pasta, flipping meat, etc.), take 2-3 sips of water. This builds hydration into your cooking rhythm.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">The Every-Transition Rule</h4>
-            Between cooking tasks (finished chopping, starting to sauté, etc.), take a water break. Drink 4-6 ounces.
+            <strong className="text-slate-900">The Every-Transition Rule:</strong> Between cooking tasks (finished chopping, starting to sauté, etc.), take a water break. Drink 4-6 ounces.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Don&apos;t Wait for Thirst</h4>
-            If you feel thirsty, you&apos;re behind. Drink proactively, not reactively.
+            <strong className="text-slate-900">Don&apos;t Wait for Thirst:</strong> If you feel thirsty, you&apos;re behind. Drink proactively, not reactively.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Cold Water Works Best</h4>
-            Cold water (45-55°F) empties from the stomach faster and feels more refreshing in hot kitchens. Keep water in the fridge or add ice.
+            <strong className="text-slate-900">Cold Water Works Best:</strong> Cold water (45-55°F) empties from the stomach faster and feels more refreshing in hot kitchens. Keep water in the fridge or add ice.
           </p>
 
           <p>
@@ -328,18 +299,15 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>After Cooking</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Continue Rehydrating</h4>
-            Don&apos;t stop drinking once you finish cooking. Continue drinking water through dinner and evening to fully recover.
+            <strong className="text-slate-900">Continue Rehydrating:</strong> Don&apos;t stop drinking once you finish cooking. Continue drinking water through dinner and evening to fully recover.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Monitor Urine Color</h4>
-            Check urine color. Pale yellow = well hydrated. Dark yellow = need more water.
+            <strong className="text-slate-900">Monitor Urine Color:</strong> Check urine color. Pale yellow = well hydrated. Dark yellow = need more water.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Replace Lost Electrolytes (Long Sessions)</h4>
-            If you cooked for 2+ hours in a very hot kitchen and sweated heavily, consider adding electrolytes (sports drink, coconut water, or electrolyte powder).
+            <strong className="text-slate-900">Replace Lost Electrolytes (Long Sessions):</strong> If you cooked for 2+ hours in a very hot kitchen and sweated heavily, consider adding electrolytes (sports drink, coconut water, or electrolyte powder).
           </p>
 
           <h2>What About Other Beverages?</h2>
@@ -347,20 +315,17 @@ export default function HydrationHealthWaterIntakePage() {
           <h3>Coffee and Tea</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Mild Diuretic Effect</h4>
-            Coffee and tea cause slight fluid loss, but the net effect is still positive (you gain more fluid than you lose). They count toward hydration, but water is better.
+            <strong className="text-slate-900">Mild Diuretic Effect:</strong> Coffee and tea cause slight fluid loss, but the net effect is still positive (you gain more fluid than you lose). They count toward hydration, but water is better.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Best Practice:</h4>
-            Drink 1 cup of water for every cup of coffee/tea during cooking sessions.
+            <strong className="text-slate-900">Best Practice:</strong> Drink 1 cup of water for every cup of coffee/tea during cooking sessions.
           </p>
 
           <h3>Alcohol</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Dehydrating Effect</h4>
-            Alcohol is a strong diuretic. Drinking while cooking increases dehydration risk and impairs judgment. Save drinks for after dinner.
+            <strong className="text-slate-900">Dehydrating Effect:</strong> Alcohol is a strong diuretic. Drinking while cooking increases dehydration risk and impairs judgment. Save drinks for after dinner.
           </p>
 
           <h3>Sports Drinks and Electrolyte Solutions</h3>
@@ -414,7 +379,7 @@ export default function HydrationHealthWaterIntakePage() {
           </p>
         </div>
 
-        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+        <div className="bg-slate-50 rounded-xl p-8 mb-8">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link href="/blog/benefits-cooking-with-garlic" className="text-orange-700 hover:text-orange-800 font-semibold">
@@ -432,20 +397,8 @@ export default function HydrationHealthWaterIntakePage() {
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-          <div className="flex items-start gap-4">
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-700 mb-3">
-                Scott Bradley is a professional chef with 45 years of cooking experience, including 24 years in professional kitchens. He served as Kitchen Manager at Mellow Mushroom in Athens, GA, and held line positions at Purple Café, Feierabend, Il Pizzaiolo, and Paragary&apos;s. Scott holds an A.A.S. in Culinary Arts from Seattle Central College and a B.S. in Business Administration from the University of Montana.
-              </p>
-              <p className="text-slate-700">
-                At Chef Approved Tools, Scott combines decades of professional experience with hands-on equipment testing to recommend the best kitchen tools for home cooks who want professional results without professional prices.
-              </p>
-            </div>
-          </div>
-        </div>
-      </article>
+        <AuthorBio />
+      </BlogLayout>
     </>
   );
 }

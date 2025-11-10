@@ -7,6 +7,9 @@ import {
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Thermometer, AlertTriangle, Lightbulb, ThermometerSun, Target } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: "Kitchen Thermometers Guide: Instant-Read vs Leave-In Types",
@@ -110,40 +113,28 @@ export default function KitchenThermometersGuidePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-700 mb-4">
-            <Thermometer className="w-5 h-5" />
-            <span className="text-sm font-medium">{articleMeta.category}</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            The Complete Guide to Kitchen Thermometers: Types, Techniques, and Temperature Targets
-          </h1>
-          <p className="text-xl text-slate-600">
-            Master food temperature from a professional chef with 24 years of restaurant experience. Learn which thermometer to use, proper technique, and exact temperatures for perfect results every time.
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
-            <span>By {articleMeta.author}</span>
-            <span>•</span>
-            <span>{articleMeta.publishDate}</span>
-            <span>•</span>
-            <span>Updated {articleMeta.lastModified}</span>
-            <span>•</span>
-            <span>{articleMeta.readTime}</span>
-          </div>
-        </header>
+      <BlogLayout breadcrumbTitle="Complete Guide to Kitchen Thermometers">
+        <BlogHero
+          title="The Complete Guide to Kitchen Thermometers: Types, Techniques, and Temperature Targets"
+          introduction={[
+            "Master food temperature from a professional chef with 24 years of restaurant experience. Learn which thermometer to use, proper technique, and exact temperatures for perfect results every time."
+          ]}
+          publishedDate="2025-09-11"
+          lastUpdated="2025-11-07"
+          readTime="15 min read"
+        />
 
-        <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white p-6 rounded-xl border-l-4 border-blue-500 mb-8 shadow-lg">
-          <p className="font-bold text-lg mb-3 flex items-center gap-2">
-            <Thermometer className="w-5 h-5" />
-            Restaurant Reality
-          </p>
-          <p className="leading-relaxed mb-0">
-            During my time as Kitchen Manager at Mellow Mushroom, the health inspector would randomly check our cooler temperatures, our hot holding temps, and the internal temperature of proteins coming off the grill. We had to hit exact numbers—not close, exact. Below 40°F for cold storage, above 140°F for hot holding, 165°F for chicken. Miss those numbers? Violation. Miss them twice? Closure. A $15 thermometer was the difference between passing inspection and losing the restaurant license. Temperature isn&apos;t a suggestion in professional kitchens—it&apos;s the law and the standard. Today I&apos;m going to show you how to use thermometers like a professional.
-          </p>
-        </div>
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
+          <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white p-6 rounded-xl border-l-4 border-blue-500 mb-8 shadow-lg">
+            <p className="font-bold text-lg mb-3 flex items-center gap-2">
+              <Thermometer className="w-5 h-5" />
+              Restaurant Reality
+            </p>
+            <p className="leading-relaxed mb-0">
+              During my time as Kitchen Manager at Mellow Mushroom, the health inspector would randomly check our cooler temperatures, our hot holding temps, and the internal temperature of proteins coming off the grill. We had to hit exact numbers—not close, exact. Below 40°F for cold storage, above 140°F for hot holding, 165°F for chicken. Miss those numbers? Violation. Miss them twice? Closure. A $15 thermometer was the difference between passing inspection and losing the restaurant license. Temperature isn&apos;t a suggestion in professional kitchens—it&apos;s the law and the standard. Today I&apos;m going to show you how to use thermometers like a professional.
+            </p>
+          </div>
 
-        <div className="prose prose-lg prose-slate max-w-none">
           <p>
             Home cooks guess at doneness more than they&apos;d admit. They poke meat and hope. They cut into chicken to check for pink. They stick forks in cakes. They trust their instincts over instruments.
           </p>
@@ -665,81 +656,81 @@ export default function KitchenThermometersGuidePage() {
           <p>
             Buy a good instant-read. Learn the target temps. Check multiple spots. Account for carryover. That&apos;s it. Start with a reliable digital instant-read, memorize your target temperatures, account for carryover heat, and clean your probe between uses. Those four habits will elevate your cooking immediately.
           </p>
-        </div>
 
-        <div className="border-t border-gray-200 pt-12 mt-12" id="faq">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Do I really need a thermometer, or is the poke/feel method good enough?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                The poke method works only after years of practice with specific cuts. Even then, it&apos;s less accurate than a $30 thermometer. For food safety alone, you need a thermometer. Plus, you&apos;ll stop overcooking everything.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I leave my instant-read thermometer in the oven during roasting?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Not designed for that. The display and batteries can be damaged by prolonged heat exposure. Use a probe thermometer with remote display for roasts. Instant-reads are for quick checks only.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I know if my thermometer is still accurate?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Ice water test (should read 32°F) or boiling water test (212°F at sea level, adjust for altitude). If off by more than 2°F, replace or recalibrate it.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Do I need an expensive thermometer?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Not necessarily. A reliable instant-read under $50 beats guessing every time. The ThermoWorks Thermapen ONE is the gold standard at $100, but budget options like ThermoPro TP19 ($30) work great for home cooks.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why do pros always carry one?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                It&apos;s faster, safer, and ensures every dish hits temp consistency — critical in a restaurant. In professional kitchens, thermometers aren&apos;t optional, they&apos;re required for health code compliance.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the safest temperature for chicken?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                165°F internal, held for 15 seconds (USDA standard). However, holding chicken at 155°F for 60 seconds achieves the same safety. Home cooks should stick to 165°F unless monitoring time carefully.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I use it for candy or oil?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Only if rated for high heat (400°F+). Check specs before trying. Most instant-reads max out around 400-500°F.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How often should I replace mine?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Every few years, depending on accuracy and build. Good ones last 5–10 years with proper care and maintenance.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the difference between instant-read and leave-in thermometers?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Instant-read thermometers are for quick spot checks and can&apos;t stay in the oven. Leave-in (probe) thermometers have heat-resistant cables and monitor food continuously during cooking. Pros use both for different tasks.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I temp meat right after taking it off heat?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Wait 30-60 seconds for the temperature to stabilize and distribute evenly. Checking immediately can give false low readings because heat hasn&apos;t equilibrated from the surface to the center.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Does meat need to rest after cooking, or can I cut right away?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Resting is critical. Juices redistribute, carryover cooking finishes the job, and you don&apos;t lose moisture. Small cuts: 5 minutes. Large roasts: 10-20 minutes. Always rest.
-              </p>
+          <div className="border-t border-gray-200 pt-12 mt-12" id="faq">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Do I really need a thermometer, or is the poke/feel method good enough?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  The poke method works only after years of practice with specific cuts. Even then, it&apos;s less accurate than a $30 thermometer. For food safety alone, you need a thermometer. Plus, you&apos;ll stop overcooking everything.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I leave my instant-read thermometer in the oven during roasting?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Not designed for that. The display and batteries can be damaged by prolonged heat exposure. Use a probe thermometer with remote display for roasts. Instant-reads are for quick checks only.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I know if my thermometer is still accurate?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Ice water test (should read 32°F) or boiling water test (212°F at sea level, adjust for altitude). If off by more than 2°F, replace or recalibrate it.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Do I need an expensive thermometer?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Not necessarily. A reliable instant-read under $50 beats guessing every time. The ThermoWorks Thermapen ONE is the gold standard at $100, but budget options like ThermoPro TP19 ($30) work great for home cooks.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Why do pros always carry one?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  It&apos;s faster, safer, and ensures every dish hits temp consistency — critical in a restaurant. In professional kitchens, thermometers aren&apos;t optional, they&apos;re required for health code compliance.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the safest temperature for chicken?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  165°F internal, held for 15 seconds (USDA standard). However, holding chicken at 155°F for 60 seconds achieves the same safety. Home cooks should stick to 165°F unless monitoring time carefully.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I use it for candy or oil?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Only if rated for high heat (400°F+). Check specs before trying. Most instant-reads max out around 400-500°F.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">How often should I replace mine?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Every few years, depending on accuracy and build. Good ones last 5–10 years with proper care and maintenance.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the difference between instant-read and leave-in thermometers?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Instant-read thermometers are for quick spot checks and can&apos;t stay in the oven. Leave-in (probe) thermometers have heat-resistant cables and monitor food continuously during cooking. Pros use both for different tasks.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I temp meat right after taking it off heat?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Wait 30-60 seconds for the temperature to stabilize and distribute evenly. Checking immediately can give false low readings because heat hasn&apos;t equilibrated from the surface to the center.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Does meat need to rest after cooking, or can I cut right away?</h3>
+                <p className="text-slate-700 leading-relaxed">
+                  Resting is critical. Juices redistribute, carryover cooking finishes the job, and you don&apos;t lose moisture. Small cuts: 5 minutes. Large roasts: 10-20 minutes. Always rest.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+        <div className="bg-slate-50 rounded-xl p-8 mb-8">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link href="/blog/how-to-sear-steaks-like-restaurant-chef" className="text-orange-700 hover:text-orange-800 font-semibold">
@@ -763,21 +754,8 @@ export default function KitchenThermometersGuidePage() {
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-          <div className="flex items-start gap-4">
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-700 mb-3">
-                Scott Bradley is a professional chef with 45 years of cooking experience, including 24 years in professional kitchens. As Kitchen Manager at Mellow Mushroom, Scott was responsible for maintaining health code compliance including temperature monitoring—his restaurant never failed an inspection in his tenure. He holds an A.A.S. in Culinary Arts from Seattle Central College and a B.S. in Business Administration from the University of Montana.
-              </p>
-              <p className="text-slate-700">
-                Scott has used thermometers in every professional kitchen he&apos;s worked in, from casual dining to upscale restaurants. His approach focuses on helping home cooks understand that temperature measurement isn&apos;t optional—it&apos;s the foundation of consistent, safe, delicious cooking. He believes a $30 thermometer is the most valuable tool in any home kitchen.
-              </p>
-            </div>
-          </div>
-          <p className="text-sm text-slate-500 mt-4 mb-0 italic">Last updated: {articleMeta.lastModified}</p>
-        </div>
-      </article>
+        <AuthorBio />
+      </BlogLayout>
     </>
   );
 }

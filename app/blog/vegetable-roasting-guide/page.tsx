@@ -7,6 +7,9 @@ import {
 } from '@/lib/schema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Thermometer, AlertTriangle, ThermometerSun } from 'lucide-react';
+import BlogLayout from '@/components/blog/BlogLayout';
+import BlogHero from '@/components/blog/BlogHero';
+import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
   title: "Complete Vegetable Roasting Guide: Times & Temperatures",
@@ -93,28 +96,18 @@ export default function VegetableRoastingGuidePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-2 text-orange-700 mb-4">
-            <Flame className="w-5 h-5" />
-            <span className="text-sm font-medium">Cooking Techniques</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Vegetable Roasting Guide: Times and Temperatures for Perfect Results
-          </h1>
-          <p className="text-xl text-slate-600">
-            Master vegetable roasting from a professional chef with 24 years of restaurant experience. Learn exact times, temperatures, and techniques for perfectly roasted vegetables every time.
-          </p>
-          <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
-            <span>By Chef Scott Bradley</span>
-            <span>•</span>
-            <span>November 7, 2025</span>
-            <span>•</span>
-            <span>13 min read</span>
-          </div>
-        </header>
+      <BlogLayout breadcrumbTitle="Vegetable Roasting Guide">
+        <BlogHero
+          title="Vegetable Roasting Guide: Times and Temperatures for Perfect Results"
+          introduction={[
+            "Master vegetable roasting from a professional chef with 24 years of restaurant experience. Learn exact times, temperatures, and techniques for perfectly roasted vegetables every time."
+          ]}
+          publishedDate="2025-10-15"
+          lastUpdated="2025-11-07"
+          readTime="13 min read"
+        />
 
-        <div className="prose prose-lg prose-slate max-w-none">
+        <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-6 rounded-xl border-l-4 border-blue-600 my-8 shadow-lg">
             <p className="text-white font-semibold mb-3 flex items-center gap-2">
               <Flame className="w-5 h-5" />
@@ -602,71 +595,6 @@ export default function VegetableRoastingGuidePage() {
             Start with 425°F, cut evenly, dry thoroughly, spread out generously, and resist the urge to stir constantly. These four habits will deliver restaurant-quality results every time.
           </p>
 
-          <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 mt-8">
-            <h3 className="text-xl font-bold text-orange-800 mb-3">Keep Learning: Related Guides</h3>
-
-            <div className="mb-6">
-              <h4 className="font-bold text-orange-800 mb-2">Technique Guides:</h4>
-              <ul className="text-orange-700 space-y-1 text-sm">
-                <li>• <CTAVisibilityTracker
-                  ctaId="vegetable-roasting-guide-steak-guide-1"
-                  position="final_cta"
-                  productSlug="vegetable-roasting-guide"
-                  merchant="internal"
-                >
-                  <Link href="/blog/how-to-sear-steaks-like-restaurant-chef" className="text-orange-700 underline">How to Sear Steaks Like a Restaurant Chef</Link>
-                </CTAVisibilityTracker></li>
-                <li>• <CTAVisibilityTracker
-                  ctaId="vegetable-roasting-guide-garlic-guide-1"
-                  position="final_cta"
-                  productSlug="vegetable-roasting-guide"
-                  merchant="internal"
-                >
-                  <Link href="/blog/benefits-cooking-with-garlic" className="text-orange-700 underline">Benefits of Cooking with Garlic</Link>
-                </CTAVisibilityTracker></li>
-                <li>• <CTAVisibilityTracker
-                  ctaId="vegetable-roasting-guide-fat-guide-1"
-                  position="final_cta"
-                  productSlug="vegetable-roasting-guide"
-                  merchant="internal"
-                >
-                  <Link href="/blog/fat-is-flavor" className="text-orange-700 underline">Why Fat is Flavor</Link>
-                </CTAVisibilityTracker></li>
-              </ul>
-            </div>
-
-            <div className="mb-6">
-              <h4 className="font-bold text-orange-800 mb-2">Essential Equipment:</h4>
-              <ul className="text-orange-700 space-y-1 text-sm">
-                <li>• <CTAVisibilityTracker
-                  ctaId="vegetable-roasting-guide-sheet-pan-2"
-                  position="final_cta"
-                  productSlug="vegetable-roasting-guide"
-                  merchant="internal"
-                >
-                  <Link href="/reviews/nordic-ware-half-sheet-pan" className="text-orange-700 underline">Nordic Ware Half Sheet Pan Review</Link>
-                </CTAVisibilityTracker></li>
-                <li>• <CTAVisibilityTracker
-                  ctaId="vegetable-roasting-guide-scraper-2"
-                  position="final_cta"
-                  productSlug="vegetable-roasting-guide"
-                  merchant="internal"
-                >
-                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 underline">Rubbermaid Commercial Cook&apos;s Scraper Review</Link>
-                </CTAVisibilityTracker></li>
-                <li>• <CTAVisibilityTracker
-                  ctaId="vegetable-roasting-guide-victorinox-1"
-                  position="final_cta"
-                  productSlug="vegetable-roasting-guide"
-                  merchant="internal"
-                >
-                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife Review</Link>
-                </CTAVisibilityTracker></li>
-              </ul>
-            </div>
-          </div>
-
-          {/* FAQ Section */}
           <div className="border-t border-gray-200 pt-12 mt-12" id="faq">
             <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
             <div className="space-y-8">
@@ -734,20 +662,54 @@ export default function VegetableRoastingGuidePage() {
           </div>
         </div>
 
-        <div className="mt-12 p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-          <div className="flex items-start gap-4">
-            <div className="flex-1">
-              <h4 className="text-xl font-bold text-slate-900 mb-2">About Scott Bradley</h4>
-              <p className="text-slate-700 mb-3">
-                Scott Bradley is a professional chef with 45 years of cooking experience, including 24 years in professional kitchens. He served as Kitchen Manager at Mellow Mushroom in Athens, GA, and held line positions at Purple Café, Feierabend, Il Pizzaiolo, and Paragary&apos;s. Scott holds an A.A.S. in Culinary Arts from Seattle Central College and a B.S. in Business Administration from the University of Montana.
-              </p>
-              <p className="text-slate-700">
-                At Chef Approved Tools, Scott combines decades of professional experience with hands-on equipment testing to recommend the best kitchen tools for home cooks who want professional results without professional prices.
-              </p>
-            </div>
+        <div className="bg-slate-50 rounded-xl p-8 mb-8">
+          <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <CTAVisibilityTracker
+              ctaId="vegetable-roasting-guide-steak-guide-1"
+              position="final_cta"
+              productSlug="vegetable-roasting-guide"
+              merchant="internal"
+            >
+              <Link href="/blog/how-to-sear-steaks-like-restaurant-chef" className="text-orange-700 hover:text-orange-800 font-semibold">
+                → How to Sear Steaks Like a Restaurant Chef
+              </Link>
+            </CTAVisibilityTracker>
+            <CTAVisibilityTracker
+              ctaId="vegetable-roasting-guide-garlic-guide-1"
+              position="final_cta"
+              productSlug="vegetable-roasting-guide"
+              merchant="internal"
+            >
+              <Link href="/blog/benefits-cooking-with-garlic" className="text-orange-700 hover:text-orange-800 font-semibold">
+                → Benefits of Cooking with Garlic
+              </Link>
+            </CTAVisibilityTracker>
+            <CTAVisibilityTracker
+              ctaId="vegetable-roasting-guide-fat-guide-1"
+              position="final_cta"
+              productSlug="vegetable-roasting-guide"
+              merchant="internal"
+            >
+              <Link href="/blog/fat-is-flavor" className="text-orange-700 hover:text-orange-800 font-semibold">
+                → Why Fat is Flavor
+              </Link>
+            </CTAVisibilityTracker>
+            <CTAVisibilityTracker
+              ctaId="vegetable-roasting-guide-sheet-pan-2"
+              position="final_cta"
+              productSlug="vegetable-roasting-guide"
+              merchant="internal"
+            >
+              <Link href="/reviews/nordic-ware-half-sheet-pan" className="text-orange-700 hover:text-orange-800 font-semibold">
+                → Nordic Ware Half Sheet Pan Review
+              </Link>
+            </CTAVisibilityTracker>
           </div>
         </div>
-      </article>
+
+        <AuthorBio />
+      </BlogLayout>
     </>
   );
 }
