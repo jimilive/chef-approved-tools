@@ -4,6 +4,9 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import { BudgetVsPremiumTeaser } from '@/components/BudgetVsPremiumMagnet'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
+import {
+  ReviewHero,
+} from '@/components/review'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
@@ -79,7 +82,7 @@ export default async function RubbermaidScraperReview() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
@@ -90,149 +93,64 @@ export default async function RubbermaidScraperReview() {
         category={productData.category}
       />
 
-      {/* Breadcrumbs */}
-      <nav className="bg-white border-b border-gray-200 py-3">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ol className="flex space-x-2 text-sm text-gray-500">
-            {breadcrumbs.map((crumb, index) => (
-              <li key={crumb.name} className="flex items-center">
-                {index > 0 && <span className="mr-2">/</span>}
-                {index === breadcrumbs.length - 1 ? (
-                  <span className="text-gray-900 font-medium">{crumb.name}</span>
-                ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-800 transition-colors">
-                    {crumb.name}
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ol>
-        </div>
-      </nav>
+      <div className="bg-gray-50 min-h-screen">
+        <div className="max-w-[900px] mx-auto px-5">
 
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
-        <header className="mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
-            {reviewData.header.title}
-          </h1>
-
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                <span className="text-xl">👨‍🍳</span>
-              </div>
-              <div>
-                <p className="font-semibold text-slate-900">{reviewData.header.author}</p>
-                <p className="text-sm text-slate-600">{reviewData.header.authorTitle}</p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200 text-center">
-              <div className="text-2xl font-bold text-orange-800 mb-1">{reviewData.header.expertRating}/5</div>
-              <div className="flex justify-center text-yellow-400 mb-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className={`w-4 h-4 ${i < Math.floor(reviewData.header.expertRating) ? 'fill-current' : ''}`} />
-                ))}
-              </div>
-              <div className="text-xs text-slate-600">Chef Approved Rating</div>
-            </div>
+          {/* BREADCRUMBS */}
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+            <Link href="/" className="hover:text-orange-700">Home</Link>
+            {' / '}
+            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+            {' / '}
+            {reviewData.breadcrumb.productName}
           </div>
 
-          <Tier1Badge showDescription={true} />
-
-          {/* Quick Stats */}
-          <div className="bg-slate-50 p-5 my-6 border-l-4 border-green-500 rounded-r-lg">
-            <p className="text-lg font-medium mb-2">
-              ⭐⭐⭐⭐⭐ {reviewData.quickStats.rating}/5 | {reviewData.quickStats.testingPeriod}
-            </p>
-            <p className="text-slate-700">
-              {reviewData.quickStats.features.map((feature, index) => (
-                <span key={index}>
-                  <strong>{feature}</strong>{index < reviewData.quickStats.features.length - 1 ? ' | ' : ''}
-                </span>
-              ))}
-            </p>
-          </div>
-
-          {/* Primary CTA */}
-          <div className="bg-yellow-50 border border-yellow-300 p-6 rounded-lg text-center my-8">
-            <h3 className="text-xl font-semibold mb-3">{reviewData.primaryCTA.title}</h3>
-            <div className="space-y-3">
+          {/* SECTION 1: HERO */}
+          <ReviewHero
+            title={reviewData.header.title}
+            authorName={reviewData.header.author}
+            authorCredentials="45 Years Cooking Experience"
+            rating={reviewData.header.expertRating}
+            tierBadge={{
+              text: "Tier 1: Years of Professional Use",
+              icon: "⭐"
+            }}
+            verdict={reviewData.professionalSummary.text + " " + reviewData.professionalSummary.detail}
+            verdictStrong="buy-it-for-life equipment"
+            publishedDate="November 10, 2025"
+            lastUpdated="November 10, 2025"
+            ctaUrl={affiliateUrl}
+            ctaText="Check Amazon Price →"
+            customCTA={
               <div>
-                <p className="text-sm font-medium mb-2">{reviewData.primaryCTA.sizes[0].description}</p>
-                <CTAVisibilityTracker
-                  ctaId={`${reviewData.productSlug}-above-fold-13`}
-                  position="above_fold"
-                  productSlug={reviewData.productSlug}
-                  merchant="amazon"
-                >
+                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
                   <a
                     href={affiliateUrl}
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold px-10 py-3 my-2 rounded-xl transition-all hover:scale-105 active:scale-95 text-lg shadow-lg hover:shadow-xl"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
                   >
-                    View 13.5&quot; on Amazon →
+                    Check Amazon Price →
                   </a>
                 </CTAVisibilityTracker>
-              </div>
-              <div>
-                <p className="text-sm font-medium mb-2">{reviewData.primaryCTA.sizes[1].description}</p>
-                <CTAVisibilityTracker
-                  ctaId={`${reviewData.productSlug}-above-fold-9`}
-                  position="above_fold"
-                  productSlug={reviewData.productSlug}
-                  merchant="amazon"
-                >
+                <p className="text-center mt-3 text-sm">
                   <a
-                    href={affiliate9_5Url}
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-10 py-3 my-2 rounded-xl transition-all hover:scale-105 active:scale-95 text-lg shadow-lg hover:shadow-xl"
                   >
-                    View 9.5&quot; on Amazon →
+                    → View {productData.name} on Amazon
                   </a>
-                </CTAVisibilityTracker>
-              </div>
-            </div>
-
-            {/* Text link fallbacks */}
-            <div className="mt-3 space-y-1 text-sm">
-              <p className="text-center">
-                <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
-                  target="_blank" rel="noopener noreferrer sponsored">
-                  → View 13.5&quot; {productData.name} on Amazon
-                </a>
-              </p>
-              <p className="text-center">
-                <a href={affiliate9_5Url} className="text-green-700 hover:text-green-800 underline font-medium"
-                  target="_blank" rel="noopener noreferrer sponsored">
-                  → View 9.5&quot; {productData.name} on Amazon
-                </a>
-              </p>
-            </div>
-
-            <p className="text-sm text-gray-600 mt-3">{reviewData.primaryCTA.note}</p>
-          </div>
-
-          {/* Professional Summary */}
-          <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-8">
-            <div className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-orange-800 flex-shrink-0 mt-1" />
-              <div>
-                <p className="text-slate-800 font-medium leading-relaxed mb-2">
-                  <strong>{reviewData.professionalSummary.text}</strong>
-                </p>
-                <p className="text-slate-700 text-sm">
-                  {reviewData.professionalSummary.detail}
                 </p>
               </div>
-            </div>
-          </div>
-        </header>
+            }
+          />
 
+        {/* SECTION 2: FTC Disclosure */}
         <FTCDisclosure />
+
+        {/* SECTION 3: Content starts */}
 
         {/* Quick Navigation */}
         <nav className="bg-slate-50 p-4 rounded-lg mb-8 border border-slate-200">
@@ -790,7 +708,8 @@ export default async function RubbermaidScraperReview() {
             __html: JSON.stringify(generateFAQSchema(reviewData.faq.items))
           }}
         />
-      </article>
-    </div>
+        </div>
+      </div>
+    </>
   )
 }
