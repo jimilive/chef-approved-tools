@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import Image from 'next/image'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
@@ -6,6 +7,9 @@ import { generateOGImageURL } from '@/lib/og-image'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import FTCDisclosure from '@/components/FTCDisclosure'
+import {
+  ReviewHero,
+} from '@/components/review'
 import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import AuthorBio from '@/components/review/AuthorBio'
 import { reviewData } from './oxo-good-grips-swivel-peeler-data'
@@ -68,7 +72,7 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
@@ -79,55 +83,59 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
         category={productData.category}
       />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="inline-block bg-orange-500/20 border border-orange-500/30 rounded-full px-4 py-2 mb-6">
-            <span className="text-orange-200 font-semibold text-sm">{reviewData.hero.badge}</span>
+      <div className="bg-gray-50 min-h-screen">
+        <div className="max-w-[900px] mx-auto px-5">
+
+          {/* BREADCRUMBS */}
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+            <Link href="/" className="hover:text-orange-700">Home</Link>
+            {' / '}
+            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+            {' / '}
+            {reviewData.breadcrumb.productName}
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            {reviewData.hero.title}
-          </h1>
-
-          <p className="text-xl text-slate-300 mb-6">
-            {reviewData.hero.subtitle}
-          </p>
-
-          <div className="flex items-center gap-6 text-sm">
-            <div className="flex items-center gap-2">
-              <span className="text-yellow-400">★★★★★</span>
-              <span>{reviewData.hero.rating}/5</span>
-            </div>
-            {reviewData.hero.tags.map((tag, index) => (
-              <div key={index}>{tag}</div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <article className="max-w-4xl mx-auto px-4 py-12">
-
-        {/* Product Images */}
-        <div className="mb-8">
-          <Image
-            src="/images/products/oxo-good-grips-swivel-peeler/oxo-good-grips-swivel-peeler-1.webp"
-            alt="OXO Good Grips Swivel Peeler"
-            width={1000}
-            height={1500}
-            className="rounded-lg w-full h-auto max-w-2xl mx-auto"
-            priority
+          {/* SECTION 1: HERO */}
+          <ReviewHero
+            title={reviewData.hero.title}
+            authorName="Scott Bradley"
+            authorCredentials="45 Years Cooking Experience"
+            rating={reviewData.hero.rating}
+            tierBadge={{
+              text: "Tier 2: Home Testing | 20 Years",
+              icon: "🏡"
+            }}
+            verdict={reviewData.quickVerdict.text}
+            verdictStrong="just works"
+            publishedDate="November 10, 2025"
+            lastUpdated="November 10, 2025"
+            ctaUrl={affiliateUrl}
+            ctaText="Check Amazon Price →"
+            customCTA={
+              <div>
+                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
+                  >
+                    Check Amazon Price →
+                  </a>
+                </CTAVisibilityTracker>
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
+                </p>
+              </div>
+            }
           />
-        </div>
-
-        {/* Quick Verdict */}
-        <div className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-8">
-          <h2 className="text-2xl font-bold mb-3 text-gray-900">{reviewData.quickVerdict.title}</h2>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            {reviewData.quickVerdict.text}
-          </p>
-        </div>
 
         {/* Why I Chose This */}
         <section className="mb-12">
@@ -559,7 +567,8 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
             __html: JSON.stringify(generateFAQSchema(reviewData.faqData))
           }}
         />
-      </article>
-    </div>
+        </div>
+      </div>
+    </>
   )
 }
