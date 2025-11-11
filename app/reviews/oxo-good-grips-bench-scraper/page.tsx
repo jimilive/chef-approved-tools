@@ -119,7 +119,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
             publishedDate="November 10, 2025"
             lastUpdated="November 10, 2025"
             ctaUrl={affiliateUrl}
-            ctaText="Check Amazon Price →"
+            ctaText="Check Price on Amazon"
             customCTA={
               <div>
                 <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
@@ -129,7 +129,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
                     rel="noopener noreferrer"
                     className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
                   >
-                    Check Amazon Price →
+                    Check Price on Amazon
                   </a>
                 </CTAVisibilityTracker>
                 <p className="text-center mt-3 text-sm">
@@ -301,7 +301,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
               rel="noopener noreferrer sponsored"
               className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
             >
-              Check Current Price on Amazon →
+              Check Price on Amazon
             </a>
           </CTAVisibilityTracker>
 
@@ -428,7 +428,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
               rel="noopener noreferrer sponsored"
               className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
             >
-              Check Current Price on Amazon
+              Check Price on Amazon
             </a>
           </CTAVisibilityTracker>
 
@@ -529,7 +529,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
                 rel="noopener noreferrer sponsored"
                 className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
               >
-                Check Current Price on Amazon →
+                Check Price on Amazon
               </a>
             </CTAVisibilityTracker>
           </div>

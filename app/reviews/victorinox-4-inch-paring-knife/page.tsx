@@ -206,7 +206,7 @@ export default async function ProductReview() {
                         rel="noopener noreferrer sponsored"
                         className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 py-3 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-base shadow-lg hover:shadow-xl"
                       >
-                        Check 4&quot; Price →
+                        Check Price on Amazon
                       </a>
                     </CTAVisibilityTracker>
                     {/* V2: TEXT LINK UNDER BUTTON */}
@@ -242,7 +242,7 @@ export default async function ProductReview() {
                         rel="noopener noreferrer sponsored"
                         className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 py-3 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-base shadow-lg hover:shadow-xl"
                       >
-                        Check 3.25&quot; Price →
+                        Check Price on Amazon
                       </a>
                     </CTAVisibilityTracker>
                     {/* V2: TEXT LINK UNDER BUTTON */}
@@ -540,7 +540,7 @@ export default async function ProductReview() {
                   rel="noopener noreferrer sponsored"
                   className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
                 >
-                  Check 4&quot; Price on Amazon →
+                  Check Price on Amazon
                 </a>
               </CTAVisibilityTracker>
 
@@ -577,7 +577,7 @@ export default async function ProductReview() {
                   rel="noopener noreferrer sponsored"
                   className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
                 >
-                  Check 3.25&quot; Price on Amazon →
+                  Check Price on Amazon
                 </a>
               </CTAVisibilityTracker>
 
@@ -626,7 +626,7 @@ export default async function ProductReview() {
                         rel="noopener noreferrer sponsored"
                         className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 py-3 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-base shadow-lg hover:shadow-xl"
                       >
-                        Check 4&quot; Price →
+                        Check Price on Amazon
                       </a>
                     </CTAVisibilityTracker>
                     {/* V2: TEXT LINK UNDER BUTTON */}
@@ -659,7 +659,7 @@ export default async function ProductReview() {
                         rel="noopener noreferrer sponsored"
                         className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 py-3 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-base shadow-lg hover:shadow-xl"
                       >
-                        Check 3.25&quot; Price →
+                        Check Price on Amazon
                       </a>
                     </CTAVisibilityTracker>
                     {/* V2: TEXT LINK UNDER BUTTON */}
