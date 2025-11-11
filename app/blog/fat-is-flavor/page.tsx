@@ -9,6 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplets, Flame, Sparkles } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
@@ -129,7 +130,7 @@ export default function FatIsFlavorPage() {
               Restaurant Reality: The Butter Finish
             </p>
             <p className="mb-0">
-              At Purple Café, one of the first things I learned on the sauté station was <strong>the butter finish</strong>. Every pan sauce, every sautéed protein, every plated vegetable got a final knob of butter swirled in at the last second. &quot;Why?&quot; I asked the Chef. &quot;Isn&apos;t the dish already rich enough?&quot; <strong>&quot;Taste it without butter,&quot;</strong> he said. <strong>&quot;Then taste it with butter. Tell me which one you&apos;d pay $32 for.&quot;</strong> The difference was undeniable. The butter-finished dish had gloss, richness, and a lingering flavor that the butter-free version lacked. It wasn&apos;t &quot;heavy&quot; or &quot;greasy&quot;—it was <em>balanced</em>. That tablespoon of butter was the difference between good food and restaurant-quality food. <strong>The lesson:</strong> Fat isn&apos;t about excess. It&apos;s about completing flavor profiles and creating the eating experience people expect from great food.
+              In professional kitchens, one of the first things I learned on the sauté station was <strong>the butter finish</strong>. Every pan sauce, every sautéed protein, every plated vegetable got a final knob of butter swirled in at the last second. &quot;Why?&quot; I asked the Chef. &quot;Isn&apos;t the dish already rich enough?&quot; <strong>&quot;Taste it without butter,&quot;</strong> he said. <strong>&quot;Then taste it with butter. Tell me which one you&apos;d pay $32 for.&quot;</strong> The difference was undeniable. The butter-finished dish had gloss, richness, and a lingering flavor that the butter-free version lacked. It wasn&apos;t &quot;heavy&quot; or &quot;greasy&quot;—it was <em>balanced</em>. That tablespoon of butter was the difference between good food and restaurant-quality food. <strong>The lesson:</strong> Fat isn&apos;t about excess. It&apos;s about completing flavor profiles and creating the eating experience people expect from great food.
             </p>
           </div>
 
@@ -233,6 +234,7 @@ export default function FatIsFlavorPage() {
           </div>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>

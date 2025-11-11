@@ -5,6 +5,7 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
@@ -161,7 +162,7 @@ export default async function HotelPanSystemPage() {
           <h2 className="text-3xl font-bold mb-6 text-gray-900">My 24 Years of Professional Experience</h2>
 
           <p className="text-lg text-gray-700 mb-4">
-            I&rsquo;ve worked in professional kitchens for 24 years—including roles at Mellow Mushroom, Purple Café, Feierabend, Il Pizzaiolo, and Paragary&rsquo;s. In every single one of these restaurants, we used the hotel pan system for organization.
+            I&rsquo;ve worked in professional kitchens for 24 years across multiple restaurants. In every single one of these kitchens, we used the hotel pan system for organization.
           </p>
 
           <h3 className="text-2xl font-bold mb-4 text-gray-900 mt-8">Work Station Organization</h3>
@@ -258,7 +259,7 @@ export default async function HotelPanSystemPage() {
             <div>
               <h4 className="text-xl font-bold mb-2 text-gray-900">4. Batch Cooking and Family Events</h4>
               <p className="text-gray-700 mb-2">
-                When I&rsquo;m cooking for family gatherings, BBQs, or potlucks, <strong>metal hotel pans are game-changers for hot holding:</strong>
+                When I&rsquo;m cooking for family gatherings, BBQs, or potlucks, <strong>metal hotel pans excel at hot holding:</strong>
               </p>
               <ul className="list-disc list-inside space-y-1 text-gray-700 mb-4">
                 <li>Fill with hot food (after it cools enough)</li>
@@ -925,6 +926,7 @@ export default async function HotelPanSystemPage() {
         </section>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>

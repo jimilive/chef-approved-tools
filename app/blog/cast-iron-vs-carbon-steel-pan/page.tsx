@@ -92,7 +92,7 @@ export default function CastIronVsCarbonSteelComparison() {
                 <ul className="space-y-3 text-slate-700">
                   {comparisonData.quickAnswer.castIronChoice.points.map((point, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <span className="text-orange-600 text-xl mt-1 flex-shrink-0">✓</span>
+                      <span className="text-orange-700 text-xl mt-1 flex-shrink-0">✓</span>
                       <span>{point}</span>
                     </li>
                   ))}

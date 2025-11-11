@@ -5,6 +5,7 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
@@ -98,7 +99,7 @@ export default function KitchenToolsWastePost() {
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
-            When I worked as Kitchen Manager at Mellow Mushroom, space was sacred. Every tool had to earn its keep. If it didn&apos;t speed up prep, improve consistency, or survive a year of daily use, it didn&apos;t belong on the line.
+            When I worked as Kitchen Manager at Mellow Mushroom (1992-1994), space was sacred. Every tool had to earn its keep. If it didn&apos;t speed up prep, improve consistency, or survive a year of daily use, it didn&apos;t belong on the line.
           </p>
 
           <p>
@@ -556,6 +557,7 @@ export default function KitchenToolsWastePost() {
           </div>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>

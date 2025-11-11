@@ -8,6 +8,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
@@ -69,7 +70,7 @@ export default async function HowToSteelAKnife() {
             },
             {
               question: "How often should I steel my kitchen knives?",
-              answer: "Steel (hone) your knives every 2-3 uses for home cooking, or before every shift in professional kitchens. At Purple Café during 6 years as Kitchen Manager, we required every cook to hone their knives at the start of service. Regular honing extends the time between sharpenings from weeks to months. If honing no longer restores sharpness, it's time to sharpen."
+              answer: "Steel (hone) your knives every 2-3 uses for home cooking, or before every shift in professional kitchens. At Purple Café (2007-2012), we required every cook to hone their knives at the start of service. Regular honing extends the time between sharpenings from weeks to months. If honing no longer restores sharpness, it's time to sharpen."
             },
             {
               question: "What angle should I hold the knife against the honing steel?",
@@ -355,7 +356,7 @@ export default async function HowToSteelAKnife() {
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">How often should I steel my kitchen knives?</h3>
               <p className="text-slate-700 leading-relaxed">
-                Steel (hone) your knives every 2-3 uses for home cooking, or before every shift in professional kitchens. At Purple Café during 6 years as Kitchen Manager, we required every cook to hone their knives at the start of service. Regular honing extends the time between sharpenings from weeks to months. If honing no longer restores sharpness, it&apos;s time to sharpen.
+                Steel (hone) your knives every 2-3 uses for home cooking, or before every shift in professional kitchens. At Purple Café (2007-2012), we required every cook to hone their knives at the start of service. Regular honing extends the time between sharpenings from weeks to months. If honing no longer restores sharpness, it&apos;s time to sharpen.
               </p>
             </div>
             <div>
@@ -428,6 +429,7 @@ export default async function HowToSteelAKnife() {
           </div>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>

@@ -9,6 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Beaker, Lightbulb, FlaskConical } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
@@ -112,7 +113,7 @@ export default function CookingSciencePage() {
               Restaurant Reality: The Line Cook Test
             </p>
             <p className="mb-0">
-              At Purple Café, new line cooks had to pass a basic cooking science quiz before they were allowed on the line during service. Questions like: &quot;What temperature does the Maillard reaction start?&quot; (285°F). &quot;Why do you rest meat?&quot; (Allows muscle fibers to relax and redistribute juices). &quot;What&apos;s the difference between caramelization and the Maillard reaction?&quot; (Caramelization is sugar-only; Maillard needs both sugar and protein). <strong>Why we did this:</strong> Because when you&apos;re cooking 200 covers on a Saturday night, you don&apos;t have time to troubleshoot. You need to know why techniques work so you can execute them perfectly, every single time, under pressure. Recipes don&apos;t work on the line—understanding does. The cooks who understood the science made fewer mistakes, worked faster, and cooked better food.
+              In professional kitchens, new line cooks had to pass a basic cooking science quiz before they were allowed on the line during service. Questions like: &quot;What temperature does the Maillard reaction start?&quot; (285°F). &quot;Why do you rest meat?&quot; (Allows muscle fibers to relax and redistribute juices). &quot;What&apos;s the difference between caramelization and the Maillard reaction?&quot; (Caramelization is sugar-only; Maillard needs both sugar and protein). <strong>Why we did this:</strong> Because when you&apos;re cooking 200 covers on a Saturday night, you don&apos;t have time to troubleshoot. You need to know why techniques work so you can execute them perfectly, every single time, under pressure. Recipes don&apos;t work on the line—understanding does. The cooks who understood the science made fewer mistakes, worked faster, and cooked better food.
             </p>
           </div>
 
@@ -300,6 +301,7 @@ export default function CookingSciencePage() {
           </div>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>

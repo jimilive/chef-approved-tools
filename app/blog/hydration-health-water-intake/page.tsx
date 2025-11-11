@@ -9,6 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplets, Thermometer, AlertTriangle } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
@@ -84,7 +85,7 @@ export default function HydrationHealthWaterIntakePage() {
               Restaurant Reality: The Dehydration Collapse
             </p>
             <p className="text-blue-100 mb-0 leading-relaxed">
-              During a brutal dinner rush at Mellow Mushroom, I watched a new line cook collapse mid-service. Not from heat exhaustion—from dehydration. He&apos;d been working six hours in 95°F kitchen temperatures without drinking water. The paramedics said his core temperature was 103°F. After that, our Kitchen Manager instituted mandatory water breaks every 45 minutes. Your body can&apos;t cook well if you&apos;re dehydrated—and dehydration sneaks up on you.
+              During a brutal dinner rush in a professional kitchen, I watched a new line cook collapse mid-service. Not from heat exhaustion—from dehydration. He&apos;d been working six hours in 95°F kitchen temperatures without drinking water. The paramedics said his core temperature was 103°F. After that, our Kitchen Manager instituted mandatory water breaks every 45 minutes. Your body can&apos;t cook well if you&apos;re dehydrated—and dehydration sneaks up on you.
             </p>
           </div>
 
@@ -120,7 +121,7 @@ export default function HydrationHealthWaterIntakePage() {
           </p>
 
           <p>
-            At Purple Café, we kept water stations every 20 feet in the kitchen. Not as a luxury—as a necessity. Chefs who didn&apos;t hydrate made mistakes, got headaches, and performed worse.
+            In professional kitchens, we keep water stations every 20 feet in the kitchen. Not as a luxury—as a necessity. Chefs who don&apos;t hydrate make mistakes, get headaches, and perform worse.
           </p>
 
           <h3>The Activity Factor</h3>
@@ -160,7 +161,7 @@ export default function HydrationHealthWaterIntakePage() {
           </p>
 
           <p>
-            I learned this the hard way at Il Pizzaiolo. I was testing a marinara sauce while dehydrated. The chef tasted it after me and said, &quot;You added way too much salt.&quot; I had—because I couldn&apos;t taste it properly.
+            I learned this the hard way in a professional kitchen. I was testing a marinara sauce while dehydrated. The chef tasted it after me and said, &quot;You added way too much salt.&quot; I had—because I couldn&apos;t taste it properly.
           </p>
 
           <h3>Reduced Cognitive Function</h3>
@@ -293,7 +294,7 @@ export default function HydrationHealthWaterIntakePage() {
           </p>
 
           <p>
-            At Mellow Mushroom, I kept a 32-ounce water bottle at my station. The rule was: if it&apos;s not empty by end of shift, you didn&apos;t drink enough. Simple, effective.
+            In professional kitchens, I keep a 32-ounce water bottle at my station. The rule is: if it&apos;s not empty by end of shift, you didn&apos;t drink enough. Simple, effective.
           </p>
 
           <h3>After Cooking</h3>
@@ -397,6 +398,7 @@ export default function HydrationHealthWaterIntakePage() {
           </div>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>

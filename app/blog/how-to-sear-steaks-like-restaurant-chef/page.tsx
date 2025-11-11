@@ -6,6 +6,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 
 const articleSchema = generateArticleSchema({
   headline: "How to Sear Steaks Like a Restaurant Chef",
-  description: "Learn the professional steak searing techniques used in restaurant kitchens. 24 years of experience from a former Mellow Mushroom Kitchen Manager reveals the secrets to perfect sears.",
+  description: "Learn the professional steak searing techniques used in restaurant kitchens. 24 years of professional experience including 3 years as Kitchen Manager at Mellow Mushroom (1992-1994) reveals the secrets to perfect sears.",
   datePublished: "2025-09-10",
   dateModified: "2024-09-27",
   authorName: "Scott Bradley",
@@ -97,7 +98,7 @@ export default function SteakSearingPost() {
       <BlogLayout breadcrumbTitle="How to Sear Steaks Like a Restaurant Chef">
         <BlogHero
           title="How to Sear Steaks Like a Restaurant Chef"
-          introduction={["After 24 years in restaurant kitchens, including my time as Kitchen Manager at Mellow Mushroom, I've seared thousands of steaks. Here's exactly how we achieve that perfect crust every single time."]}
+          introduction={["After 24 years in restaurant kitchens, including 3 years as Kitchen Manager at Mellow Mushroom (1992-1994), I've seared thousands of steaks. Here's exactly how we achieve that perfect crust every single time."]}
           publishedDate="2025-09-10"
           lastUpdated="2024-09-27"
           readTime="8 min read"
@@ -491,6 +492,7 @@ export default function SteakSearingPost() {
           </div>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>

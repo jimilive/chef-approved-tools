@@ -7,6 +7,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 
 const articleSchema = generateArticleSchema({
   headline: "The Simplest Way to Perfect Scrambled Eggs: No Bowl, No Whisk",
-  description: "Professional chef shares revolutionary scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 45 years of cooking wisdom.",
+  description: "Professional chef shares streamlined scrambled egg technique. No bowl, no whisk, no milk. Creamy, tender eggs in minutes. 45 years of cooking wisdom.",
   datePublished: "2025-10-09",
   dateModified: "2025-10-09",
   authorName: "Scott Bradley",
@@ -98,7 +99,7 @@ export default function BestScrambledEggs() {
       <BlogLayout breadcrumbTitle="The Simplest Way to Perfect Scrambled Eggs">
         <BlogHero
           title="The Simplest Way to Perfect Scrambled Eggs: No Bowl, No Whisk"
-          introduction={["Forget everything you've been told about scrambled eggs. No bowl. No whisk. No milk. No cream. Just eggs, butter, and a fork—directly in the pan. This revolutionary technique produces the creamiest, most tender scrambled eggs you've ever made, with half the cleanup and none of the fuss."]}
+          introduction={["Forget everything you've been told about scrambled eggs. No bowl. No whisk. No milk. No cream. Just eggs, butter, and a fork—directly in the pan. This streamlined technique produces the creamiest, most tender scrambled eggs you've ever made, with half the cleanup and none of the fuss."]}
           publishedDate="2025-10-09"
           lastUpdated="2025-10-09"
           readTime="7 min read"
@@ -144,7 +145,7 @@ export default function BestScrambledEggs() {
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
             <p className="mb-0">
               <strong>From Purple Café:</strong> At Purple Café, where speed and consistency mattered,
-              this method would have been revolutionary. The simplicity produces restaurant-quality
+              this method would have been highly effective. The simplicity produces restaurant-quality
               results without restaurant equipment. During busy brunch service, eliminating the bowl
               step would have saved precious seconds per order—and those seconds add up over 200 covers.
             </p>
@@ -597,6 +598,7 @@ export default function BestScrambledEggs() {
           </div>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>

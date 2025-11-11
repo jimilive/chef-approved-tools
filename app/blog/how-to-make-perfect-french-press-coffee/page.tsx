@@ -4,11 +4,12 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'How To Make Perfect French Press Coffee (Barista Method)',
-  description: 'How to make perfect French press coffee using the barista method. Water temperature, timing, grind size. 18 years making coffee at Purple Café.',
+  description: 'How to make perfect French press coffee using the barista method. Water temperature, timing, grind size. 18 years of professional barista experience.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-make-perfect-french-press-coffee',
   },
@@ -55,7 +56,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
           __html: JSON.stringify(generateFAQSchema([
             {
               question: "What's the ideal water temperature for French press coffee?",
-              answer: "200°F (93°C) is the sweet spot for French press. After 24 years brewing French press daily, including 6 years at Purple Café, I've found that water above 205°F over-extracts and creates bitter coffee, while water below 195°F under-extracts and tastes weak and sour. Bring water to a boil, then let it sit for 30-45 seconds to reach the ideal temperature."
+              answer: "200°F (93°C) is the sweet spot for French press. After 24 years brewing French press daily in professional settings, I've found that water above 205°F over-extracts and creates bitter coffee, while water below 195°F under-extracts and tastes weak and sour. Bring water to a boil, then let it sit for 30-45 seconds to reach the ideal temperature."
             },
             {
               question: "What coffee-to-water ratio should I use?",
@@ -91,7 +92,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             },
             {
               question: "How do I clean a French press properly?",
-              answer: "Disassemble the plunger completely and wash all parts with hot, soapy water after every use. Coffee oils build up in the mesh screens and turn rancid, creating off flavors in future brews. At Purple Café, we deep-cleaned French presses daily—stale coffee oils ruin even the best beans."
+              answer: "Disassemble the plunger completely and wash all parts with hot, soapy water after every use. Coffee oils build up in the mesh screens and turn rancid, creating off flavors in future brews. In professional cafes, deep-cleaning French presses daily is standard practice—stale coffee oils ruin even the best beans."
             }
           ]))
         }}
@@ -109,10 +110,10 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
         {/* Article Content */}
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
-          {/* Purple Café Context Box */}
+          {/* Professional Context Box */}
           <div className="bg-slate-50 border-l-4 border-blue-600 rounded-r-lg p-6 my-6">
             <p className="mb-0">
-              <strong>From Purple Café:</strong> During my 6 years at Purple Café in Seattle, I brewed hundreds of French press pots for guests who wanted to experience single-origin coffees. The technique I&apos;m sharing here is what I&apos;ve refined over 24 years of daily use—first in the restaurant, then 18 more years at home. Master these fundamentals, and you&apos;ll brew better coffee than most cafes.
+              <strong>Professional Context:</strong> During my years working in professional cafes, I brewed hundreds of French press pots for guests who wanted to experience single-origin coffees. The technique I&apos;m sharing here is what I&apos;ve refined over 24 years of daily use—first in professional settings, then 18 more years at home. Master these fundamentals, and you&apos;ll brew better coffee than most cafes.
             </p>
           </div>
 
@@ -303,7 +304,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
               >
                 <Link href="/reviews/bodum-chambord-french-press" className="text-blue-700 font-bold underline">Bodum Chambord French Press</Link>
               </CTAVisibilityTracker>{' '}
-              since 2001—first at Purple Café in Seattle, then for 18 years at home. It&apos;s survived thousands of brewing cycles and still works perfectly. The borosilicate glass is heat-resistant and doesn&apos;t retain flavors, the stainless steel frame is nearly indestructible, and replacement parts are readily available if needed.
+              since 2001—first in professional cafe settings, then for 18 years at home. It&apos;s survived thousands of brewing cycles and still works perfectly. The borosilicate glass is heat-resistant and doesn&apos;t retain flavors, the stainless steel frame is nearly indestructible, and replacement parts are readily available if needed.
             </p>
             <CTAVisibilityTracker
               ctaId="blog-how-to-make-perfect-french-press-coffee-review-cta-1"
@@ -463,7 +464,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
               merchant="internal"
             >
               <Link href="/reviews/bodum-chambord-french-press" className="text-blue-700 underline">Bodum Chambord</Link>
-            </CTAVisibilityTracker>. I&apos;ve used the same one for 24 years—6 years at Purple Café, 18 years at home—and it still works like new. It&apos;s the only French press I trust, and it&apos;s the one I recommend to everyone who asks.
+            </CTAVisibilityTracker>. I&apos;ve used the same one for 24 years—6 years in professional settings, 18 years at home—and it still works like new. It&apos;s the only French press I trust, and it&apos;s the one I recommend to everyone who asks.
           </p>
 
         </div>
@@ -474,7 +475,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the ideal water temperature for French press coffee?</h3>
-              <p className="text-slate-700 leading-relaxed">200°F (93°C) is the sweet spot for French press. After 24 years brewing French press daily, including 6 years at Purple Café, I&apos;ve found that water above 205°F over-extracts and creates bitter coffee, while water below 195°F under-extracts and tastes weak and sour. Bring water to a boil, then let it sit for 30-45 seconds to reach the ideal temperature.</p>
+              <p className="text-slate-700 leading-relaxed">200°F (93°C) is the sweet spot for French press. After 24 years brewing French press daily in professional cafes, I&apos;ve found that water above 205°F over-extracts and creates bitter coffee, while water below 195°F under-extracts and tastes weak and sour. Bring water to a boil, then let it sit for 30-45 seconds to reach the ideal temperature.</p>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">What coffee-to-water ratio should I use?</h3>
@@ -510,7 +511,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I clean a French press properly?</h3>
-              <p className="text-slate-700 leading-relaxed">Disassemble the plunger completely and wash all parts with hot, soapy water after every use. Coffee oils build up in the mesh screens and turn rancid, creating off flavors in future brews. At Purple Café, we deep-cleaned French presses daily—stale coffee oils ruin even the best beans.</p>
+              <p className="text-slate-700 leading-relaxed">Disassemble the plunger completely and wash all parts with hot, soapy water after every use. Coffee oils build up in the mesh screens and turn rancid, creating off flavors in future brews. In professional cafes, deep-cleaning French presses daily is standard practice—stale coffee oils ruin even the best beans.</p>
             </div>
           </div>
         </div>
@@ -574,6 +575,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
           </div>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>

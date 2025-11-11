@@ -9,6 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Hand, AlertTriangle, CheckCircle2, Target } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
@@ -306,7 +307,7 @@ export default function KnifeSkillsPage() {
               Restaurant Reality: The Knife Lesson
             </p>
             <p className="mb-0">
-              On my first day at Il Pizzaiolo in Sacramento, the head chef handed me a knife and told me to dice five pounds of onions for marinara. I grabbed the knife with a full-handle grip (the way I&apos;d been holding knives at home for years). He stopped me immediately. <em>&quot;No. Pinch the blade. Like this.&quot;</em> He showed me the pinch grip and made me practice on a single onion until I got it right. Then he walked away. For the first 20 minutes, it felt awkward and slow. But by the third onion, it started to click. By the fifth pound, I understood. <strong>The pinch grip gave me control I didn&apos;t know I was missing.</strong> That lesson—holding a knife properly—was the foundation for every knife skill I developed over the next 24 years.
+              On my first day in a professional kitchen, the head chef handed me a knife and told me to dice five pounds of onions for marinara. I grabbed the knife with a full-handle grip (the way I&apos;d been holding knives at home for years). He stopped me immediately. <em>&quot;No. Pinch the blade. Like this.&quot;</em> He showed me the pinch grip and made me practice on a single onion until I got it right. Then he walked away. For the first 20 minutes, it felt awkward and slow. But by the third onion, it started to click. By the fifth pound, I understood. <strong>The pinch grip gave me control I didn&apos;t know I was missing.</strong> That lesson—holding a knife properly—was the foundation for every knife skill I developed over the next 24 years.
             </p>
           </div>
 
@@ -597,6 +598,7 @@ export default function KnifeSkillsPage() {
           </div>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>

@@ -5,6 +5,7 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
@@ -44,7 +45,7 @@ const faqSchema = generateFAQSchema([
             },
             {
               question: "What's the difference between Diamond Crystal and Morton kosher salt?",
-              answer: "Diamond Crystal has hollow, light flakes (280mg sodium per ¼ tsp) formed by evaporation, while Morton has dense, rolled flakes (480mg per ¼ tsp) from mechanical processing. Diamond Crystal is less salty by volume, dissolves faster, and is more forgiving—it's harder to over-salt. After 24 years using Diamond Crystal (6 at Purple Café, 18 at home), I've never switched—it's what professionals prefer."
+              answer: "Diamond Crystal has hollow, light flakes (280mg sodium per ¼ tsp) formed by evaporation, while Morton has dense, rolled flakes (480mg per ¼ tsp) from mechanical processing. Diamond Crystal is less salty by volume, dissolves faster, and is more forgiving—it's harder to over-salt. After 24 years using Diamond Crystal in professional kitchens and at home, I've never switched—it's what professionals prefer."
             },
             {
               question: "Can I substitute table salt for kosher salt in recipes?",
@@ -52,7 +53,7 @@ const faqSchema = generateFAQSchema([
             },
             {
               question: "Why do chefs prefer Diamond Crystal over Morton?",
-              answer: "Diamond Crystal dissolves faster (reducing over-salting risk), has lighter texture (easier to pinch evenly), contains zero additives (pure salt flavor), and is less dense (more forgiving in seasoning). At Purple Café, we used exclusively Diamond Crystal because the faster dissolving rate prevented the over-salted steaks that happen with Morton. Professional kitchens standardize on one brand to ensure consistency."
+              answer: "Diamond Crystal dissolves faster (reducing over-salting risk), has lighter texture (easier to pinch evenly), contains zero additives (pure salt flavor), and is less dense (more forgiving in seasoning). In professional kitchens, we use exclusively Diamond Crystal because the faster dissolving rate prevents the over-salted steaks that happen with Morton. Professional kitchens standardize on one brand to ensure consistency."
             },
             {
               question: "Is kosher salt healthier than table salt?",
@@ -60,7 +61,7 @@ const faqSchema = generateFAQSchema([
             },
             {
               question: "Does kosher salt have iodine?",
-              answer: "No—kosher salt typically contains no iodine or other additives, just pure salt. Table salt has added iodine to prevent iodine deficiency diseases. If you use kosher salt exclusively, ensure your diet includes iodine from other sources: seafood, dairy, eggs, or iodized salt in baking. At Purple Café, we used kosher salt for cooking but kept iodized salt in storage for specific recipes."
+              answer: "No—kosher salt typically contains no iodine or other additives, just pure salt. Table salt has added iodine to prevent iodine deficiency diseases. If you use kosher salt exclusively, ensure your diet includes iodine from other sources: seafood, dairy, eggs, or iodized salt in baking. In professional kitchens, we use kosher salt for cooking but keep iodized salt in storage for specific recipes."
             },
             {
               question: "Why does kosher salt taste different from table salt?",
@@ -72,7 +73,7 @@ const faqSchema = generateFAQSchema([
             },
             {
               question: "How should I store kosher salt?",
-              answer: "Store kosher salt in an airtight container in a cool, dry place—a jar or container near the stove for easy pinching. Salt doesn't spoil, but moisture causes clumping (especially with humid kitchens). At Purple Café, we kept Diamond Crystal in large containers on the line for easy access during service. Avoid storing directly in the cardboard box—it absorbs moisture and the box deteriorates."
+              answer: "Store kosher salt in an airtight container in a cool, dry place—a jar or container near the stove for easy pinching. Salt doesn't spoil, but moisture causes clumping (especially with humid kitchens). In professional kitchens, we keep Diamond Crystal in large containers on the line for easy access during service. Avoid storing directly in the cardboard box—it absorbs moisture and the box deteriorates."
             }
 ]);
 
@@ -104,21 +105,14 @@ export default function WhyChefsUseKosherSalt() {
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
-            At <CTAVisibilityTracker
-              ctaId="blog-why-professional-chefs-use-kosher-salt-about-link-1"
-              position="above_fold"
-              productSlug="why-professional-chefs-use-kosher-salt"
-              merchant="internal"
-            >
-              <Link href="/about" className="text-blue-700 underline">Purple Café</Link>
-            </CTAVisibilityTracker>, a 200+ cover restaurant where I worked for 6 years, <CTAVisibilityTracker
+            In professional kitchens, <CTAVisibilityTracker
               ctaId="blog-why-professional-chefs-use-kosher-salt-review-link-1"
               position="above_fold"
               productSlug="why-professional-chefs-use-kosher-salt"
               merchant="internal"
             >
               <Link href="/reviews/diamond-crystal-kosher-salt" className="text-blue-700 underline">Diamond Crystal Kosher Salt</Link>
-            </CTAVisibilityTracker> was the only salt we used. Cases of it delivered monthly. Every station had a container within reach. Why? Because when you&apos;re seasoning hundreds of plates per service, you need salt that&apos;s predictable, fast to pinch, and clean-tasting every single time.
+            </CTAVisibilityTracker> is often the only salt used. Cases of it delivered monthly. Every station has a container within reach. Why? Because when you&apos;re seasoning hundreds of plates per service, you need salt that&apos;s predictable, fast to pinch, and clean-tasting every single time.
           </p>
 
           <p>
@@ -188,7 +182,7 @@ export default function WhyChefsUseKosherSalt() {
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
             <p className="mb-0">
-              <strong>From 24 Years of Experience:</strong> After 6 years using Diamond Crystal exclusively at Purple Café and 18 more years at home, it&apos;s the only brand I recommend. The lighter, flakier crystals make seasoning more precise and forgiving. We went through cases of it monthly at the restaurant, and I&apos;ve never switched brands at home. Read my complete <CTAVisibilityTracker
+              <strong>From 24 Years of Experience:</strong> After years using Diamond Crystal exclusively in professional kitchens and at home, it&apos;s the only brand I recommend. The lighter, flakier crystals make seasoning more precise and forgiving. Professional kitchens go through cases of it monthly, and I&apos;ve never switched brands at home. Read my complete <CTAVisibilityTracker
                 ctaId="blog-why-professional-chefs-use-kosher-salt-review-link-4"
                 position="mid_article"
                 productSlug="why-professional-chefs-use-kosher-salt"
@@ -298,7 +292,7 @@ export default function WhyChefsUseKosherSalt() {
           </ul>
 
           <p>
-            At Purple Café, we used Diamond Crystal for all of these applications daily. From brining chicken for our rotisserie to finishing vegetables at expo, it was the workhorse of our seasoning program.
+            In professional kitchens, Diamond Crystal is used for all of these applications daily. From brining chicken for rotisserie to finishing vegetables at expo, it&apos;s the workhorse of seasoning programs.
           </p>
 
           <h2>Why Chefs Avoid Table Salt for Most Tasks</h2>
@@ -320,7 +314,7 @@ export default function WhyChefsUseKosherSalt() {
           </ul>
 
           <p>
-            Kosher salt solves all of these problems, making it the default choice for chefs. In 6 years at Purple Café, I never saw table salt used on the line—only kosher salt for cooking and fine sea salt for the table.
+            Kosher salt solves all of these problems, making it the default choice for chefs. In professional kitchens, table salt is rarely used on the line—only kosher salt for cooking and fine sea salt for the table.
           </p>
 
           <h2>Choosing the Right Kosher Salt Brand</h2>
@@ -366,7 +360,7 @@ export default function WhyChefsUseKosherSalt() {
           </p>
 
           <p>
-            After 6 years at Purple Café and 18 years in my home kitchen, Diamond Crystal remains the only salt I buy. It&apos;s been the foundation of consistent, professional seasoning for nearly a quarter-century. Whether you&apos;re running a restaurant or cooking dinner at home, it makes a difference you can taste.
+            After years in professional kitchens and at home, Diamond Crystal remains the only salt I buy. It&apos;s been the foundation of consistent, professional seasoning for nearly a quarter-century. Whether you&apos;re running a restaurant or cooking dinner at home, it makes a difference you can taste.
           </p>
 
           <p>
@@ -405,7 +399,7 @@ export default function WhyChefsUseKosherSalt() {
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the difference between Diamond Crystal and Morton kosher salt?</h3>
               <p className="text-slate-700 leading-relaxed">
-                Diamond Crystal has hollow, light flakes (280mg sodium per ¼ tsp) formed by evaporation, while Morton has dense, rolled flakes (480mg per ¼ tsp) from mechanical processing. Diamond Crystal is less salty by volume, dissolves faster, and is more forgiving—it&apos;s harder to over-salt. After 24 years using Diamond Crystal (6 at Purple Café, 18 at home), I&apos;ve never switched—it&apos;s what professionals prefer.
+                Diamond Crystal has hollow, light flakes (280mg sodium per ¼ tsp) formed by evaporation, while Morton has dense, rolled flakes (480mg per ¼ tsp) from mechanical processing. Diamond Crystal is less salty by volume, dissolves faster, and is more forgiving—it&apos;s harder to over-salt. After 24 years using Diamond Crystal in professional kitchens and at home, I&apos;ve never switched—it&apos;s what professionals prefer.
               </p>
             </div>
             <div>
@@ -417,7 +411,7 @@ export default function WhyChefsUseKosherSalt() {
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Why do chefs prefer Diamond Crystal over Morton?</h3>
               <p className="text-slate-700 leading-relaxed">
-                Diamond Crystal dissolves faster (reducing over-salting risk), has lighter texture (easier to pinch evenly), contains zero additives (pure salt flavor), and is less dense (more forgiving in seasoning). At Purple Café, we used exclusively Diamond Crystal because the faster dissolving rate prevented the over-salted steaks that happen with Morton. Professional kitchens standardize on one brand to ensure consistency.
+                Diamond Crystal dissolves faster (reducing over-salting risk), has lighter texture (easier to pinch evenly), contains zero additives (pure salt flavor), and is less dense (more forgiving in seasoning). In professional kitchens, we use exclusively Diamond Crystal because the faster dissolving rate prevents the over-salted steaks that happen with Morton. Professional kitchens standardize on one brand to ensure consistency.
               </p>
             </div>
             <div>
@@ -429,7 +423,7 @@ export default function WhyChefsUseKosherSalt() {
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Does kosher salt have iodine?</h3>
               <p className="text-slate-700 leading-relaxed">
-                No—kosher salt typically contains no iodine or other additives, just pure salt. Table salt has added iodine to prevent iodine deficiency diseases. If you use kosher salt exclusively, ensure your diet includes iodine from other sources: seafood, dairy, eggs, or iodized salt in baking. At Purple Café, we used kosher salt for cooking but kept iodized salt in storage for specific recipes.
+                No—kosher salt typically contains no iodine or other additives, just pure salt. Table salt has added iodine to prevent iodine deficiency diseases. If you use kosher salt exclusively, ensure your diet includes iodine from other sources: seafood, dairy, eggs, or iodized salt in baking. In professional kitchens, we use kosher salt for cooking but keep iodized salt in storage for specific recipes.
               </p>
             </div>
             <div>
@@ -447,7 +441,7 @@ export default function WhyChefsUseKosherSalt() {
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">How should I store kosher salt?</h3>
               <p className="text-slate-700 leading-relaxed">
-                Store kosher salt in an airtight container in a cool, dry place—a jar or container near the stove for easy pinching. Salt doesn&apos;t spoil, but moisture causes clumping (especially with humid kitchens). At Purple Café, we kept Diamond Crystal in large containers on the line for easy access during service. Avoid storing directly in the cardboard box—it absorbs moisture and the box deteriorates.
+                Store kosher salt in an airtight container in a cool, dry place—a jar or container near the stove for easy pinching. Salt doesn&apos;t spoil, but moisture causes clumping (especially with humid kitchens). In professional kitchens, we keep Diamond Crystal in large containers on the line for easy access during service. Avoid storing directly in the cardboard box—it absorbs moisture and the box deteriorates.
               </p>
             </div>
           </div>
@@ -471,6 +465,7 @@ export default function WhyChefsUseKosherSalt() {
           </div>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>

@@ -9,6 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Thermometer, AlertTriangle, Lightbulb, ThermometerSun, Target } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
@@ -53,7 +54,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 const faqSchema = generateFAQSchema([
   {
     question: "Do I really need a thermometer, or is the poke/feel method good enough?",
-    answer: "The poke method works only after years of practice. Even then, it's less accurate than a $30 thermometer. For food safety alone, you need a thermometer, plus you'll stop overcooking everything."
+    answer: "The poke method works only after years of practice. Even then, it's less accurate than an affordable digital thermometer. For food safety alone, you need a thermometer, plus you'll stop overcooking everything."
   },
   {
     question: "Can I leave my instant-read thermometer in the oven during roasting?",
@@ -65,7 +66,7 @@ const faqSchema = generateFAQSchema([
   },
   {
     question: "Do I need an expensive thermometer?",
-    answer: "Not necessarily. A reliable instant-read under $50 beats guessing every time. The ThermoWorks Thermapen ONE is the gold standard, but budget options like ThermoPro TP19 work great for home cooks."
+    answer: "Not necessarily. A reliable instant-read thermometer beats guessing every time. The ThermoWorks Thermapen ONE is the gold standard, but budget options like ThermoPro TP19 work great for home cooks."
   },
   {
     question: "Why do pros always carry one?",
@@ -131,7 +132,7 @@ export default function KitchenThermometersGuidePage() {
               Restaurant Reality
             </p>
             <p className="leading-relaxed mb-0">
-              During my time as Kitchen Manager at Mellow Mushroom, the health inspector would randomly check our cooler temperatures, our hot holding temps, and the internal temperature of proteins coming off the grill. We had to hit exact numbers—not close, exact. Below 40°F for cold storage, above 140°F for hot holding, 165°F for chicken. Miss those numbers? Violation. Miss them twice? Closure. A $15 thermometer was the difference between passing inspection and losing the restaurant license. Temperature isn&apos;t a suggestion in professional kitchens—it&apos;s the law and the standard. Today I&apos;m going to show you how to use thermometers like a professional.
+              During my time as Kitchen Manager at Mellow Mushroom (1992-1994), the health inspector would randomly check our cooler temperatures, our hot holding temps, and the internal temperature of proteins coming off the grill. We had to hit exact numbers—not close, exact. Below 40°F for cold storage, above 140°F for hot holding, 165°F for chicken. Miss those numbers? Violation. Miss them twice? Closure. An affordable thermometer was the difference between passing inspection and losing the restaurant license. Temperature isn&apos;t a suggestion in professional kitchens—it&apos;s the law and the standard. Today I&apos;m going to show you how to use thermometers like a professional.
             </p>
           </div>
 
@@ -156,7 +157,7 @@ export default function KitchenThermometersGuidePage() {
           </p>
 
           <p>
-            The difference between a $100 steak that&apos;s perfectly medium-rare and one that&apos;s gray and disappointing? <strong>3-4 degrees Fahrenheit.</strong> You cannot eyeball that kind of precision. You need a thermometer.
+            The difference between a premium steak that&apos;s perfectly medium-rare and one that&apos;s gray and disappointing? <strong>3-4 degrees Fahrenheit.</strong> You cannot eyeball that kind of precision. You need a thermometer.
           </p>
 
           <p>
@@ -266,9 +267,9 @@ export default function KitchenThermometersGuidePage() {
 
           <p><strong>Top picks</strong>:</p>
           <ul>
-            <li><strong>ThermoWorks Thermapen ONE</strong> (professional, $100) - Ultra-fast 1-second read, waterproof, lab-accurate. The gold standard.</li>
-            <li><strong>ThermoPro TP19</strong> (home cook, $30) - Affordable, reliable, great value</li>
-            <li><strong>Lavatools Javelin PRO Duo</strong> (budget, $25) - Durable, folds flat, great for home use</li>
+            <li><strong>ThermoWorks Thermapen ONE</strong> (professional) - Ultra-fast 1-second read, waterproof, lab-accurate. The gold standard.</li>
+            <li><strong>ThermoPro TP19</strong> (home cook) - Affordable, reliable, great value</li>
+            <li><strong>Lavatools Javelin PRO Duo</strong> (budget) - Durable, folds flat, great for home use</li>
             <li><strong>OXO Good Grips Instant Read</strong> - Simple, accurate, reliable budget pick</li>
           </ul>
 
@@ -532,7 +533,7 @@ export default function KitchenThermometersGuidePage() {
           </p>
 
           <p>
-            <strong>Fix:</strong> Upgrade to a digital instant-read model. A $30 investment changes everything.
+            <strong>Fix:</strong> Upgrade to a digital instant-read model. An affordable thermometer changes everything.
           </p>
 
           <h3>Mistake #4: Not Cleaning Between Proteins</h3>
@@ -563,22 +564,22 @@ export default function KitchenThermometersGuidePage() {
             <div className="space-y-4 mb-6">
               <div>
                 <strong>1. ThermoWorks Thermapen ONE</strong>
-                <br />Ultra-fast (1-second read), waterproof, and lab-accurate. The gold standard in professional kitchens. $100.
+                <br />Ultra-fast (1-second read), waterproof, and lab-accurate. The gold standard in professional kitchens.
               </div>
 
               <div>
                 <strong>2. ThermoPro TP19</strong>
-                <br />Affordable, reliable, and accurate. Great value for home cooks. $30.
+                <br />Affordable, reliable, and accurate. Great value for home cooks.
               </div>
 
               <div>
                 <strong>3. Lavatools Javelin PRO Duo</strong>
-                <br />Affordable, durable, and folds flat. Great for home use. $25.
+                <br />Affordable, durable, and folds flat. Great for home use.
               </div>
 
               <div>
                 <strong>4. OXO Good Grips Instant Read</strong>
-                <br />Simple, accurate, and reliable — a great budget pick. $20.
+                <br />Simple, accurate, and reliable — a great budget pick.
               </div>
             </div>
 
@@ -642,7 +643,7 @@ export default function KitchenThermometersGuidePage() {
           </p>
 
           <p>
-            One $30 instant-read thermometer will improve your cooking more than a $300 knife or a $500 pan. It&apos;s the single most important tool in your kitchen after your chef&apos;s knife.
+            An affordable instant-read thermometer will improve your cooking more than an expensive knife or premium pan. It&apos;s the single most important tool in your kitchen after your chef&apos;s knife.
           </p>
 
           <p>
@@ -663,7 +664,7 @@ export default function KitchenThermometersGuidePage() {
               <div>
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">Do I really need a thermometer, or is the poke/feel method good enough?</h3>
                 <p className="text-slate-700 leading-relaxed">
-                  The poke method works only after years of practice with specific cuts. Even then, it&apos;s less accurate than a $30 thermometer. For food safety alone, you need a thermometer. Plus, you&apos;ll stop overcooking everything.
+                  The poke method works only after years of practice with specific cuts. Even then, it&apos;s less accurate than an affordable digital thermometer. For food safety alone, you need a thermometer. Plus, you&apos;ll stop overcooking everything.
                 </p>
               </div>
               <div>
@@ -681,7 +682,7 @@ export default function KitchenThermometersGuidePage() {
               <div>
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">Do I need an expensive thermometer?</h3>
                 <p className="text-slate-700 leading-relaxed">
-                  Not necessarily. A reliable instant-read under $50 beats guessing every time. The ThermoWorks Thermapen ONE is the gold standard at $100, but budget options like ThermoPro TP19 ($30) work great for home cooks.
+                  Not necessarily. A reliable instant-read thermometer beats guessing every time. The ThermoWorks Thermapen ONE is the gold standard, but budget options like ThermoPro TP19 work great for home cooks.
                 </p>
               </div>
               <div>
@@ -754,6 +755,7 @@ export default function KitchenThermometersGuidePage() {
           </div>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>

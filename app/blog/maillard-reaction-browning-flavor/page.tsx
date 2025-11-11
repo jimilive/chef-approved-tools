@@ -9,6 +9,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, ThermometerSun, AlertTriangle } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata: Metadata = {
@@ -101,7 +102,7 @@ export default function MaillardReactionPost() {
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
-            If you&apos;ve ever wondered why a seared steak, golden roasted chicken, or perfectly toasted bread tastes so irresistible, it all comes down to one beautiful bit of food science: the Maillard reaction. After 24 years in professional kitchens—including a 5-year run as Kitchen Manager at Mellow Mushroom in Athens, GA, where we served hundreds of pizzas and steaks every Friday night—I can tell you that chasing that deep brown crust isn&apos;t just about looks. It&apos;s about unlocking flavor at the molecular level.
+            If you&apos;ve ever wondered why a seared steak, golden roasted chicken, or perfectly toasted bread tastes so irresistible, it all comes down to one beautiful bit of food science: the Maillard reaction. After 24 years in professional kitchens—including 3 years as Kitchen Manager at Mellow Mushroom (1992-1994), where we served hundreds of pizzas and steaks every Friday night—I can tell you that chasing that deep brown crust isn&apos;t just about looks. It&apos;s about unlocking flavor at the molecular level.
           </p>
 
           <p>
@@ -300,6 +301,7 @@ export default function MaillardReactionPost() {
           </div>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>

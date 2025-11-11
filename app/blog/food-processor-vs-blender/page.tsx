@@ -5,6 +5,7 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
@@ -498,7 +499,7 @@ export default function FoodProcessorVsBlenderPost() {
                 <strong>Professional Chef • 45 Years Cooking Experience • 24 Years Professional Kitchens</strong>
               </p>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Former Kitchen Manager at Mellow Mushroom with 24 years of restaurant experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from the University of Montana. Techniques tested on thousands of dishes in high-volume kitchens serving hundreds daily.
+                24 years of professional kitchen experience including 3 years as Kitchen Manager at Mellow Mushroom (1992-1994). A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from the University of Montana. Techniques tested on thousands of dishes in high-volume kitchens serving hundreds daily.
               </p>
               <div className="mt-4">
                 <Link href="/about" className="text-orange-700 hover:text-orange-800 text-sm font-semibold">
@@ -522,6 +523,7 @@ export default function FoodProcessorVsBlenderPost() {
           </div>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>

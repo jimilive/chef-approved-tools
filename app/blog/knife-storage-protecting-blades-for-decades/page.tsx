@@ -5,6 +5,7 @@ import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
@@ -665,7 +666,7 @@ export default function KnifeStorageProtectionPage() {
 
           <div className="bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-600 p-6 my-12 rounded-r-lg">
             <p className="text-slate-900 mb-0">
-              <strong>About the Author:</strong> Scott Bradley spent 24 years in professional kitchens, trained at Seattle Central Culinary, and served as Kitchen Manager at Mellow Mushroom. He specializes in teaching home cooks the professional techniques that create consistent, restaurant-quality results.
+              <strong>About the Author:</strong> Scott Bradley has 24 years of professional kitchen experience, trained at Seattle Central Culinary, and served as Kitchen Manager at Mellow Mushroom (1992-1994). He specializes in teaching home cooks the professional techniques that create consistent, restaurant-quality results.
             </p>
           </div>
 
@@ -811,6 +812,7 @@ export default function KnifeStorageProtectionPage() {
           </div>
         </div>
 
+        <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>
