@@ -6,6 +6,7 @@ import { generateOGImageURL } from '@/lib/og-image'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
+  ReviewHero,
   ProsConsGrid,
   FAQSection,
   EmailCaptureSection,
@@ -112,7 +113,7 @@ export default async function NortonTriStoneSharpenerReview() {
   ]
 
   return (
-    <div className="max-w-3xl mx-auto px-5 py-10">
+    <>
       <ProductViewTrackerWrapper
         slug={reviewData.productSlug}
         name={productData.name}
@@ -123,83 +124,58 @@ export default async function NortonTriStoneSharpenerReview() {
         category={reviewData.breadcrumb.category}
       />
 
-      <article>
-        {/* Breadcrumb */}
-        <nav className="mb-5 text-sm">
-          <Link href="/" className="text-blue-600 no-underline">Home</Link>
-          {' > '}
-          <Link href="/reviews" className="text-blue-600 no-underline">Reviews</Link>
-          {' > '}
-          <Link href="/knives" className="text-blue-600 no-underline">Knives</Link>
-          {' > '}
-          <span className="text-gray-600">{reviewData.breadcrumb.productName}</span>
-        </nav>
+      <div className="bg-gray-50 min-h-screen">
+        <div className="max-w-[900px] mx-auto px-5">
 
-        {/* H1 Title */}
-        <h1 className="text-5xl font-bold mb-5 leading-tight text-gray-900">
-          {reviewData.hero.title}
-        </h1>
-
-        {/* Author Byline */}
-        <div className="text-base text-gray-600 mb-8 pb-5 border-b border-gray-300">
-          <strong>By {reviewData.hero.authorName}</strong> | {reviewData.hero.authorCredentials}
-        </div>
-
-        {/* Tier 1 Badge */}
-        <div className="bg-green-50 border-2 border-green-500 rounded-lg p-6 mb-8">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="text-3xl">{reviewData.hero.tierBadge.icon}</span>
-            <h3 className="text-xl font-bold text-green-900 m-0">{reviewData.hero.tierBadge.text}</h3>
+          {/* BREADCRUMBS */}
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+            <Link href="/" className="hover:text-orange-700">Home</Link>
+            {' / '}
+            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+            {' / '}
+            <Link href="/knives" className="hover:text-orange-700">Knives</Link>
+            {' / '}
+            {reviewData.breadcrumb.productName}
           </div>
-          <p className="text-sm text-green-800 mb-0">
-            This product has been tested extensively in real professional kitchen conditions, not just at home.
-            Reviews at this tier represent genuine long-term professional use.
-          </p>
-        </div>
 
-        {/* Quick Stats Box */}
-        <div className="bg-green-50 border-2 border-green-300 rounded-xl p-6 my-8">
-          <p className="m-0 text-lg leading-relaxed whitespace-pre-line">
-            {reviewData.hero.quickStats}
-          </p>
-        </div>
-
-        {/* Primary CTA Above the Fold */}
-        <div className="bg-orange-50 border-2 border-orange-200 rounded-xl p-6 my-8">
-          <h3 className="mt-0 text-2xl font-bold text-slate-900 mb-4">Current Best Price:</h3>
-
-          <CTAVisibilityTracker
-            ctaId={`${reviewData.productSlug}-hero-cta`}
-            position="above_fold"
-            productSlug={reviewData.productSlug}
-            merchant="amazon"
-          >
-            <a
-              href={affiliateUrl}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
-              className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-            >
-              {reviewData.hero.ctaText}
-            </a>
-          </CTAVisibilityTracker>
-
-          {/* Text link under button */}
-          <p className="text-center mt-3 text-sm">
-            <a
-              href={affiliateUrl}
-              className="text-orange-700 hover:text-orange-800 underline font-medium"
-              target="_blank"
-              rel="noopener noreferrer sponsored"
-            >
-              → View {productData.name} on Amazon
-            </a>
-          </p>
-
-          <p className="text-sm text-slate-600 mt-4 mb-0">
-            💡 Price updated daily. We earn commission at no extra cost to you.
-          </p>
-        </div>
+          {/* SECTION 1: HERO */}
+          <ReviewHero
+            title={reviewData.hero.title}
+            authorName={reviewData.hero.authorName}
+            authorCredentials={reviewData.hero.authorCredentials}
+            rating={reviewData.hero.rating}
+            tierBadge={reviewData.hero.tierBadge}
+            verdict={reviewData.hero.verdict}
+            verdictStrong={reviewData.hero.verdictStrong}
+            publishedDate="November 10, 2025"
+            lastUpdated="November 10, 2025"
+            ctaUrl={affiliateUrl}
+            ctaText={reviewData.hero.ctaText}
+            customCTA={
+              <div>
+                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
+                  >
+                    {reviewData.hero.ctaText}
+                  </a>
+                </CTAVisibilityTracker>
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
+                </p>
+              </div>
+            }
+          />
 
         {/* Professional Verdict */}
         <section className="bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
@@ -595,7 +571,8 @@ export default async function NortonTriStoneSharpenerReview() {
             __html: JSON.stringify(generateFAQSchema(reviewData.faqData))
           }}
         />
-      </article>
-    </div>
+        </div>
+      </div>
+    </>
   )
 }
