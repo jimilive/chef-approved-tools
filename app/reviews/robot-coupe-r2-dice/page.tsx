@@ -3,6 +3,9 @@ import { Star, CheckCircle, XCircle } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
+import {
+  ReviewHero,
+} from '@/components/review'
 import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import AuthorBio from '@/components/review/AuthorBio'
 import PriceDisplay from '@/components/PriceDisplay'
@@ -95,7 +98,7 @@ export default async function RobotCoupeR2DiceReview() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
@@ -106,134 +109,61 @@ export default async function RobotCoupeR2DiceReview() {
         category="Food Processors"
       />
 
-      {/* Breadcrumbs */}
-      <nav className="bg-white border-b border-gray-200 py-3">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ol className="flex space-x-2 text-sm text-gray-500">
-            {breadcrumbs.map((crumb, index) => (
-              <li key={crumb.name} className="flex items-center">
-                {index > 0 && <span className="mr-2">/</span>}
-                {index === breadcrumbs.length - 1 ? (
-                  <span className="text-gray-900 font-medium">{crumb.name}</span>
-                ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-800 transition-colors">
-                    {crumb.name}
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ol>
-        </div>
-      </nav>
+      <div className="bg-gray-50 min-h-screen">
+        <div className="max-w-[900px] mx-auto px-5">
 
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header Section */}
-        <header className="mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
-            Robot Coupe R2 Dice: 3-Year Commercial Review (2025)
-          </h1>
+          {/* BREADCRUMBS */}
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+            <Link href="/" className="hover:text-orange-700">Home</Link>
+            {' / '}
+            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+            {' / '}
+            <Link href="/appliances" className="hover:text-orange-700">Appliances</Link>
+            {' / '}
+            {reviewData.breadcrumb.productName}
+          </div>
 
-          {/* Author & Rating */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                <span className="text-xl">👨‍🍳</span>
-              </div>
+          {/* SECTION 1: HERO */}
+          <ReviewHero
+            title={reviewData.header.title}
+            authorName={reviewData.header.author}
+            authorCredentials="45 Years Cooking Experience"
+            rating={reviewData.header.expertRating}
+            tierBadge={{
+              text: "Tier 1: Years of Professional Use",
+              icon: "⭐"
+            }}
+            verdict={reviewData.professionalVerdict.paragraphs[0]}
+            verdictStrong="essential commercial equipment"
+            publishedDate="November 10, 2025"
+            lastUpdated="November 10, 2025"
+            ctaUrl={affiliateUrl}
+            ctaText="Check Amazon Price →"
+            customCTA={
               <div>
-                <p className="font-semibold text-slate-900">Scott Bradley</p>
-                <p className="text-sm text-slate-600">Professional Chef • 45 Years Cooking Experience</p>
+                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
+                  >
+                    Check Amazon Price →
+                  </a>
+                </CTAVisibilityTracker>
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
+                </p>
               </div>
-            </div>
-
-            {/* Rating */}
-            <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-orange-800 mb-1">{productData.expertRating}/5</div>
-                <div className="flex justify-center text-yellow-400 mb-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className={`w-4 h-4 ${i < Math.floor(productData.expertRating) ? 'fill-current' : ''}`} />
-                  ))}
-                </div>
-                <div className="text-xs text-slate-600">Chef Approved Rating</div>
-              </div>
-            </div>
-          </div>
-
-          <Tier1Badge showDescription={true} />
-
-          {/* Quick Rating Box */}
-          <div className="quick-stats bg-gray-50 p-5 my-5 border-l-4 border-green-600 rounded">
-            <p className="m-0 text-lg leading-relaxed">
-              <strong>⭐⭐⭐⭐⭐ 4.7/5</strong> | Based on 3 years of commercial testing<br/>
-              <strong>💼 Commercial-Grade Investment</strong> | Professional food processor<br/>
-              <strong>✔ 2 HP Motor</strong> | <strong>✔ 850 Servings/3 Hours</strong> | <strong>✔ Continuous Feed</strong>
-            </p>
-          </div>
-
-          {/* Primary CTA Above Fold */}
-          <div className="primary-cta bg-yellow-100 p-6 my-6 rounded-lg text-center border-2 border-yellow-400">
-            <h3 className="mt-0 text-2xl">Check Current Availability:</h3>
-
-            <CTAVisibilityTracker
-              ctaId={`review-${productData.slug}-above_fold`}
-              position="above_fold"
-              productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold px-10 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl text-lg"
-              >
-                Check Price on Amazon →
-              </a>
-            </CTAVisibilityTracker>
-
-            {/* Text link fallback */}
-            <p className="text-center mt-3 text-sm">
-              <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
-                target="_blank" rel="noopener noreferrer sponsored">
-                → View {productData.name} on Amazon
-              </a>
-            </p>
-
-            <p className="text-sm text-gray-600 mt-4">
-              💡 We earn commission at no extra cost to you.<br/>
-              Commercial equipment suppliers will be added soon.
-            </p>
-          </div>
-
-          {/* Professional Verdict */}
-          <div className="verdict-box bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
-            <h2>Professional Verdict</h2>
-
-            <p className="text-lg leading-relaxed">
-              <strong>After 3 years as our primary food processor at Purple Cafe, the Robot Coupe R2 Dice
-              proved itself as essential commercial equipment.</strong> The combination of 5/5 performance
-              ratings for speed, efficiency, and cut quality—combined with exceptional reliability under
-              high-volume demands—makes this processor significantly superior to home alternatives.
-            </p>
-
-            <p className="text-lg leading-relaxed">
-              The continuous feed design and 2 HP motor process up to 850 servings in 3 hours, drastically
-              cutting prep time. Professional kitchens report saving hours daily—this machine pays for
-              itself through labor efficiency alone.
-            </p>
-
-            <div className="bg-white p-4 mt-5 rounded">
-              <p className="my-2.5">
-                <strong>✔ Perfect For:</strong> Commercial kitchens, high-volume operations, restaurants
-                needing consistent cuts, catering businesses, operations prioritizing efficiency
-              </p>
-              <p className="my-2.5">
-                <strong>✗ Skip If:</strong> You only need occasional home food processing, budget doesn&apos;t
-                justify commercial equipment, kitchen space is restricted, volume doesn&apos;t justify
-                commercial-grade power
-              </p>
-            </div>
-          </div>
-        </header>
+            }
+          />
 
         {/* FTC Disclosure */}
         <FTCDisclosure />
@@ -999,7 +929,8 @@ export default async function RobotCoupeR2DiceReview() {
             __html: JSON.stringify(generateFAQSchema(faqData))
           }}
         />
-      </article>
-    </div>
+        </div>
+      </div>
+    </>
   )
 }
