@@ -302,7 +302,7 @@ export default async function LodgeCastIronReviewPage() {
                       <td className="border border-slate-300 p-3 font-medium text-slate-900">{test.technique}</td>
                       <td className="border border-slate-300 p-3">
                         <div className="flex items-center gap-2">
-                          <div className="flex text-yellow-400">
+                          <div className="flex text-amber-700">
                             {[...Array(5)].map((_, i) => (
                               <Star key={i} className={`w-4 h-4 ${i < test.performance ? 'fill-current' : ''}`} />
                             ))}

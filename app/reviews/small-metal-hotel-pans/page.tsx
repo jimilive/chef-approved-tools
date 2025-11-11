@@ -111,13 +111,13 @@ export default async function ProductReview() {
       <nav className="max-w-4xl mx-auto px-4 py-4 text-sm" aria-label="Breadcrumb">
         <ol className="flex items-center gap-2 flex-wrap">
           <li>
-            <Link href="/" className="text-gray-600 hover:text-orange-600 transition-colors">
+            <Link href="/" className="text-gray-600 hover:text-orange-700 transition-colors">
               Home
             </Link>
           </li>
           <li className="text-gray-400">/</li>
           <li>
-            <Link href="/reviews" className="text-gray-600 hover:text-orange-600 transition-colors">
+            <Link href="/reviews" className="text-gray-600 hover:text-orange-700 transition-colors">
               Reviews
             </Link>
           </li>
@@ -194,7 +194,7 @@ export default async function ProductReview() {
                       <div className="text-center mt-2">
                         <a
                           href={option.affiliateUrl}
-                          className="text-xs text-gray-600 hover:text-orange-600 underline transition-colors"
+                          className="text-xs text-gray-600 hover:text-orange-700 underline transition-colors"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -243,7 +243,7 @@ export default async function ProductReview() {
                     <div className="text-center mt-2">
                       <a
                         href={lid.affiliateUrl}
-                        className="text-xs text-gray-600 hover:text-orange-600 underline transition-colors"
+                        className="text-xs text-gray-600 hover:text-orange-700 underline transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
