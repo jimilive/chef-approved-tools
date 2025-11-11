@@ -45,6 +45,51 @@ findFiles('./components')
 
 const issues = []
 const missingAltTags = []
+const poorAltText = []
+
+// Function to validate alt text quality
+function validateAltTextQuality(altText, imageSrc) {
+  const issues = []
+
+  // Check for empty alt (only OK for decorative images)
+  if (altText.trim() === '') {
+    // Empty alt is acceptable for decorative images
+    return issues
+  }
+
+  // Check for redundant phrases
+  const badPhrases = ['image of', 'picture of', 'photo of', 'graphic of', 'illustration of']
+  const lowerAlt = altText.toLowerCase()
+  badPhrases.forEach(phrase => {
+    if (lowerAlt.startsWith(phrase)) {
+      issues.push({
+        type: 'redundant',
+        message: `Starts with "${phrase}" (redundant)`,
+        suggestion: `Remove "${phrase}" and start with the subject`
+      })
+    }
+  })
+
+  // Check length (should be under 125 characters)
+  if (altText.length > 125) {
+    issues.push({
+      type: 'too_long',
+      message: `${altText.length} characters (max 125)`,
+      suggestion: 'Shorten to key information only'
+    })
+  }
+
+  // Check for filename-like alt text
+  if (altText.includes('.jpg') || altText.includes('.png') || altText.includes('.webp')) {
+    issues.push({
+      type: 'filename',
+      message: 'Contains file extension',
+      suggestion: 'Use descriptive text, not filename'
+    })
+  }
+
+  return issues
+}
 
 // Function to check if image path exists
 function checkImagePath(imagePath, sourceFile) {
@@ -97,6 +142,21 @@ files.forEach(filePath => {
         file: filePath.replace('./', ''),
         image: imageSrc
       })
+    } else {
+      // Check alt text quality
+      const altMatch = match[0].match(/alt=["']([^"']*)["']/)
+      if (altMatch) {
+        const altText = altMatch[1]
+        const qualityIssues = validateAltTextQuality(altText, imageSrc)
+        if (qualityIssues.length > 0) {
+          poorAltText.push({
+            file: filePath.replace('./', ''),
+            image: imageSrc,
+            altText: altText,
+            issues: qualityIssues
+          })
+        }
+      }
     }
   })
 
@@ -128,6 +188,21 @@ files.forEach(filePath => {
         file: filePath.replace('./', ''),
         image: imageSrc
       })
+    } else {
+      // Check alt text quality
+      const altMatch = match[0].match(/alt=["']([^"']*)["']/)
+      if (altMatch) {
+        const altText = altMatch[1]
+        const qualityIssues = validateAltTextQuality(altText, imageSrc)
+        if (qualityIssues.length > 0) {
+          poorAltText.push({
+            file: filePath.replace('./', ''),
+            image: imageSrc,
+            altText: altText,
+            issues: qualityIssues
+          })
+        }
+      }
     }
   })
 
@@ -194,6 +269,32 @@ if (missingAltTags.length === 0) {
   }
 
   console.log(`\n  ${YELLOW}Note: Missing alt tags are warnings, not errors${RESET}`)
+}
+
+console.log(`\n${BOLD}3. Checking Alt Text Quality...${RESET}`)
+
+if (poorAltText.length === 0) {
+  console.log(`${GREEN}✓ All alt text follows best practices${RESET}`)
+} else {
+  console.log(`${YELLOW}⚠ ${poorAltText.length} image(s) with alt text quality issues:${RESET}`)
+  console.log(`  (Can improve accessibility and SEO)\n`)
+
+  poorAltText.slice(0, 5).forEach(item => {
+    console.log(`  ${item.file}`)
+    console.log(`    Image: ${item.image}`)
+    console.log(`    Current: "${item.altText}"`)
+    item.issues.forEach(issue => {
+      console.log(`    ${YELLOW}⚠${RESET} ${issue.message}`)
+      console.log(`      → ${issue.suggestion}`)
+    })
+    console.log('')
+  })
+
+  if (poorAltText.length > 5) {
+    console.log(`  ... and ${poorAltText.length - 5} more`)
+  }
+
+  console.log(`  ${YELLOW}Note: Alt text quality issues are suggestions, not errors${RESET}`)
 }
 
 console.log(`\n${BOLD}${BLUE}╔════════════════════════════════════════════╗${RESET}`)

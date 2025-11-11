@@ -270,6 +270,132 @@ function formatInfo(text) {
   return `${colors.blue}ℹ️  ${text}${colors.reset}`;
 }
 
+/**
+ * Find forbidden pricing phrases that violate voice guidelines
+ */
+function findForbiddenPricingPhrases(content) {
+  const forbiddenPhrases = [
+    'best value',
+    'budget-friendly',
+    'budget friendly',
+    'affordable',
+    'cheap',
+    'expensive',
+    'costs around',
+    'priced at',
+    'worth the money',
+    'good deal',
+    'great deal',
+    'price point'
+  ];
+
+  const lines = content.split('\n');
+  const issues = [];
+
+  lines.forEach((line, index) => {
+    // Skip if in cost-analysis section (prices allowed there)
+    if (line.includes('id="cost-analysis"') || line.includes('TODO')) {
+      return;
+    }
+
+    forbiddenPhrases.forEach(phrase => {
+      const regex = new RegExp(phrase, 'gi');
+      if (regex.test(line)) {
+        issues.push({
+          line: index + 1,
+          phrase: phrase,
+          content: line.trim().substring(0, 80)
+        });
+      }
+    });
+  });
+
+  return issues;
+}
+
+/**
+ * Find incorrect credential numbers
+ */
+function findIncorrectCredentials(content) {
+  const issues = [];
+  const lines = content.split('\n');
+
+  // Correct credentials from VOICE_AND_CREDENTIALS.md
+  const correctCredentials = {
+    totalExperience: '24 years',
+    purpleCafe: '6 years',
+    kitchenManager: '4 years'
+  };
+
+  // Wrong patterns to catch
+  const wrongPatterns = [
+    { pattern: /(?:20|18|22|25)\s+years.*(?:experience|professional|kitchen)/i, correct: '24 years total experience' },
+    { pattern: /(?:5|7|8)\s+years.*(?:Purple|Purple Caf)/i, correct: '6 years at Purple Café' },
+    { pattern: /(?:3|5|7|24)\s+years.*(?:Kitchen Manager|managing)/i, correct: '4 years as Kitchen Manager' }
+  ];
+
+  lines.forEach((line, index) => {
+    wrongPatterns.forEach(({ pattern, correct }) => {
+      if (pattern.test(line)) {
+        issues.push({
+          line: index + 1,
+          content: line.trim().substring(0, 80),
+          suggestion: `Should be: ${correct}`
+        });
+      }
+    });
+  });
+
+  return issues;
+}
+
+/**
+ * Find forbidden phrases that violate voice guidelines
+ */
+function findForbiddenPhrases(content) {
+  const forbiddenPhrases = [
+    { phrase: "let's dive in", severity: 'warning' },
+    { phrase: "let\\'s dive in", severity: 'warning' },
+    { phrase: "without further ado", severity: 'warning' },
+    { phrase: "game-changer", severity: 'warning' },
+    { phrase: "game changer", severity: 'warning' },
+    { phrase: "revolutionary", severity: 'warning' },
+    { phrase: "amazing", severity: 'warning' },
+    { phrase: "incredible", severity: 'warning' },
+    { phrase: "awesome", severity: 'warning' },
+    { phrase: "many chefs agree", severity: 'error' },
+    { phrase: "experts recommend", severity: 'error' },
+    { phrase: "professionals prefer", severity: 'error' },
+    { phrase: "chefs love", severity: 'error' },
+    { phrase: "restaurant-quality", severity: 'error', suggestion: 'Use "professional kitchen quality" instead' }
+  ];
+
+  const lines = content.split('\n');
+  const issues = [];
+
+  lines.forEach((line, index) => {
+    // Skip comments and TODO sections
+    if (line.trim().startsWith('//') || line.includes('TODO')) {
+      return;
+    }
+
+    forbiddenPhrases.forEach(({ phrase, severity, suggestion }) => {
+      const regex = new RegExp(phrase, 'gi');
+      if (regex.test(line)) {
+        issues.push({
+          line: index + 1,
+          phrase: phrase,
+          severity: severity,
+          content: line.trim().substring(0, 80),
+          suggestion: suggestion || 'Use specific, measured language instead'
+        });
+      }
+    });
+  });
+
+  return issues;
+}
+
 module.exports = {
   getReviewPath,
   reviewExists,
@@ -283,6 +409,9 @@ module.exports = {
   findUnescapedApostrophes,
   hasSection,
   findSpecificPrices,
+  findForbiddenPricingPhrases,
+  findIncorrectCredentials,
+  findForbiddenPhrases,
   createBackup,
   colors,
   formatHeader,

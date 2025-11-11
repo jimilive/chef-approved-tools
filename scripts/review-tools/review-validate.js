@@ -18,6 +18,9 @@ const {
   findUnescapedApostrophes,
   hasSection,
   findSpecificPrices,
+  findForbiddenPricingPhrases,
+  findIncorrectCredentials,
+  findForbiddenPhrases,
   formatHeader,
   formatError,
   formatWarning,
@@ -61,6 +64,35 @@ function validateReview(slug) {
     }
   });
 
+  // Component System Checks (for migrated reviews)
+  console.log('\n🧩 COMPONENT SYSTEM CHECKS:');
+  const componentSystemChecks = [
+    { test: () => hasImport(content, 'ReviewHero'), label: 'Has ReviewHero component', optional: true },
+    { test: () => hasImport(content, 'TestingResultsGrid'), label: 'Has TestingResultsGrid component', optional: true },
+    { test: () => hasImport(content, 'ProsConsGrid'), label: 'Has ProsConsGrid component', optional: true },
+    { test: () => hasImport(content, 'WhoShouldBuyGrid'), label: 'Has WhoShouldBuyGrid component', optional: true },
+    { test: () => hasImport(content, 'FAQSection'), label: 'Has FAQSection component', optional: true },
+    { test: () => hasImport(content, 'EmailCaptureSection'), label: 'Has EmailCaptureSection component', optional: true },
+    { test: () => hasImport(content, 'BottomLineSection'), label: 'Has BottomLineSection component', optional: true },
+    { test: () => hasImport(content, 'AuthorBio'), label: 'Has AuthorBio component', optional: true }
+  ];
+
+  const hasAnyNewComponents = componentSystemChecks.some(check => check.test());
+
+  if (hasAnyNewComponents) {
+    console.log(formatInfo('(Migrated to new component system)'));
+    componentSystemChecks.forEach(check => {
+      if (check.test()) {
+        console.log(formatSuccess(check.label));
+      } else {
+        console.log(formatWarning(check.label + ' (missing)'));
+        warningCount++;
+      }
+    });
+  } else {
+    console.log(formatInfo('(Legacy review - not yet migrated to component system)'));
+  }
+
   // Content Checks
   console.log('\n📝 CONTENT CHECKS:');
 
@@ -70,9 +102,9 @@ function validateReview(slug) {
     console.log(formatWarning(` (Quality indicator: Consider expanding)`));
     warningCount++;
   } else if (wordCount < 3500) {
-    console.log(formatSuccess(' (Good depth for Quality Level 2)'));
+    console.log(formatSuccess(' (Good depth for Tier 2)'));
   } else {
-    console.log(formatSuccess(' (Excellent depth for Quality Level 1)'));
+    console.log(formatSuccess(' (Excellent depth for Tier 1)'));
   }
 
   const sections = [
@@ -161,6 +193,61 @@ function validateReview(slug) {
     warningCount++;
   }
 
+  // Voice & Guidelines Checks
+  console.log('\n📝 VOICE & GUIDELINES CHECKS:');
+
+  // Check for forbidden pricing phrases
+  const pricingPhrases = findForbiddenPricingPhrases(content);
+  if (pricingPhrases.length === 0) {
+    console.log(formatSuccess('No forbidden pricing phrases'));
+  } else {
+    console.log(formatWarning(`Found ${pricingPhrases.length} forbidden pricing phrase(s)`));
+    pricingPhrases.slice(0, 3).forEach(issue => {
+      console.log(`  Line ${issue.line}: "${issue.phrase}"`);
+    });
+    if (pricingPhrases.length > 3) {
+      console.log(`  ... and ${pricingPhrases.length - 3} more`);
+    }
+    warningCount++;
+  }
+
+  // Check for incorrect credentials
+  const credentialIssues = findIncorrectCredentials(content);
+  if (credentialIssues.length === 0) {
+    console.log(formatSuccess('No incorrect credentials found'));
+  } else {
+    console.log(formatError(`Found ${credentialIssues.length} credential issue(s)`));
+    credentialIssues.forEach(issue => {
+      console.log(`  Line ${issue.line}: ${issue.suggestion}`);
+    });
+    issueCount++;
+  }
+
+  // Check for forbidden phrases
+  const forbiddenPhraseIssues = findForbiddenPhrases(content);
+  if (forbiddenPhraseIssues.length === 0) {
+    console.log(formatSuccess('No forbidden phrases found'));
+  } else {
+    const errors = forbiddenPhraseIssues.filter(i => i.severity === 'error');
+    const warnings = forbiddenPhraseIssues.filter(i => i.severity === 'warning');
+
+    if (errors.length > 0) {
+      console.log(formatError(`Found ${errors.length} forbidden phrase error(s)`));
+      errors.slice(0, 2).forEach(issue => {
+        console.log(`  Line ${issue.line}: "${issue.phrase}" - ${issue.suggestion}`);
+      });
+      issueCount += errors.length;
+    }
+
+    if (warnings.length > 0) {
+      console.log(formatWarning(`Found ${warnings.length} generic phrase(s) to improve`));
+      warnings.slice(0, 2).forEach(issue => {
+        console.log(`  Line ${issue.line}: "${issue.phrase}"`);
+      });
+      warningCount += warnings.length;
+    }
+  }
+
   // Build Checks
   console.log('\n🔨 BUILD CHECKS:');
 
@@ -212,9 +299,9 @@ function validateReview(slug) {
   if (buttonCount < 2) qualityScore -= 5;
   if (rawLinks.length > 0) qualityScore -= 5;
 
-  const qualityLevel = qualityScore >= 90 ? 'QUALITY LEVEL 1' :
-                       qualityScore >= 75 ? 'QUALITY LEVEL 2' :
-                       'QUALITY LEVEL 3';
+  const qualityLevel = qualityScore >= 90 ? 'TIER 1' :
+                       qualityScore >= 75 ? 'TIER 2' :
+                       'TIER 3';
   const levelColor = qualityScore >= 75 ? formatSuccess : formatWarning;
 
   console.log(`Overall Grade: ${levelColor(qualityLevel)} (${qualityScore}/100 points)`);

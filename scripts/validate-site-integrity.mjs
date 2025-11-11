@@ -288,6 +288,205 @@ if (legacySlugIssues.length === 0) {
 }
 
 // ============================================================================
+// 6. VALIDATE CTAVisibilityTracker PROPS
+// ============================================================================
+console.log(`\n${BOLD}6. Validating CTAVisibilityTracker Components...${RESET}`)
+
+let ctaTrackerIssues = []
+
+pageFiles.forEach(({ folder, path }) => {
+  const content = readFileSync(path, 'utf-8')
+
+  // Find CTAVisibilityTracker components
+  const ctaPattern = /<CTAVisibilityTracker[^>]*>/g
+  const matches = [...content.matchAll(ctaPattern)]
+
+  matches.forEach(match => {
+    const componentText = match[0]
+
+    // Common AI error: ctaPosition instead of position
+    if (componentText.includes('ctaPosition=')) {
+      ctaTrackerIssues.push({
+        file: `app/reviews/${folder}/page.tsx`,
+        issue: 'Uses "ctaPosition" prop (should be "position")',
+        line: componentText.substring(0, 100) + '...'
+      })
+      errors++
+    }
+
+    // Check for required props
+    if (!componentText.includes('ctaId=')) {
+      ctaTrackerIssues.push({
+        file: `app/reviews/${folder}/page.tsx`,
+        issue: 'Missing required "ctaId" prop',
+        line: componentText.substring(0, 100) + '...'
+      })
+      errors++
+    }
+
+    if (!componentText.includes('position=')) {
+      ctaTrackerIssues.push({
+        file: `app/reviews/${folder}/page.tsx`,
+        issue: 'Missing required "position" prop',
+        line: componentText.substring(0, 100) + '...'
+      })
+      errors++
+    }
+  })
+
+  // Check for testingEnvironment: null
+  if (content.includes('testingEnvironment: null')) {
+    ctaTrackerIssues.push({
+      file: `app/reviews/${folder}/page.tsx`,
+      issue: 'testingEnvironment is null (should be array [])',
+      severity: 'CRITICAL - BREAKS BUILD'
+    })
+    errors++
+  }
+})
+
+if (ctaTrackerIssues.length === 0) {
+  console.log(`${GREEN}✓ All CTAVisibilityTracker components are correct${RESET}`)
+} else {
+  console.log(`${RED}✗ Found ${ctaTrackerIssues.length} CTAVisibilityTracker issue(s):${RESET}`)
+  ctaTrackerIssues.forEach(issue => {
+    console.log(`  ${RED}•${RESET} ${issue.file}`)
+    console.log(`    Issue: ${issue.issue}`)
+    if (issue.line) {
+      console.log(`    Code: ${YELLOW}${issue.line}${RESET}`)
+    }
+  })
+}
+
+// ============================================================================
+// 7. VALIDATE HEADING HIERARCHY
+// ============================================================================
+console.log(`\n${BOLD}7. Validating Heading Hierarchy...${RESET}`)
+
+let headingIssues = []
+
+pageFiles.forEach(({ folder, path }) => {
+  const content = readFileSync(path, 'utf-8')
+
+  // Check if this is a migrated review using component system
+  const hasReviewHero = content.includes('ReviewHero')
+  const isComponentBased = hasReviewHero || content.includes('import reviewData from')
+
+  // Find all heading tags
+  const h1Count = (content.match(/<h1[^>]*>/g) || []).length
+  const headings = []
+
+  // Extract all heading levels
+  for (let level = 1; level <= 6; level++) {
+    const regex = new RegExp(`<h${level}[^>]*>`, 'g')
+    let match
+    while ((match = regex.exec(content)) !== null) {
+      const lineNumber = content.substring(0, match.index).split('\n').length
+      headings.push({ level, lineNumber, tag: match[0] })
+    }
+  }
+
+  // Sort by line number
+  headings.sort((a, b) => a.lineNumber - b.lineNumber)
+
+  // Check for single h1
+  if (isComponentBased) {
+    // For component-based reviews, ReviewHero component provides the h1
+    // Just check that there are no additional h1 tags in the page
+    if (h1Count > 0) {
+      headingIssues.push({
+        file: `app/reviews/${folder}/page.tsx`,
+        issue: `Found ${h1Count} h1 tag(s) in component-based review (ReviewHero provides h1)`,
+        severity: 'warning'
+      })
+      warnings++
+    }
+  } else {
+    // For legacy reviews, check for exactly 1 h1
+    if (h1Count !== 1) {
+      headingIssues.push({
+        file: `app/reviews/${folder}/page.tsx`,
+        issue: `Found ${h1Count} h1 tags (should be exactly 1)`,
+        severity: 'error'
+      })
+      errors++
+    }
+  }
+
+  // Check for sequential hierarchy (no skipping levels)
+  let lastLevel = 0
+  headings.forEach((heading, index) => {
+    if (heading.level > lastLevel + 1 && lastLevel > 0) {
+      headingIssues.push({
+        file: `app/reviews/${folder}/page.tsx`,
+        issue: `Skipped heading level: h${lastLevel} → h${heading.level} (line ${heading.lineNumber})`,
+        severity: 'error'
+      })
+      errors++
+    }
+    lastLevel = heading.level
+  })
+})
+
+if (headingIssues.length === 0) {
+  console.log(`${GREEN}✓ All heading hierarchies are correct${RESET}`)
+} else {
+  console.log(`${RED}✗ Found ${headingIssues.length} heading hierarchy issue(s):${RESET}`)
+  headingIssues.forEach(issue => {
+    console.log(`  ${RED}•${RESET} ${issue.file}`)
+    console.log(`    Issue: ${issue.issue}`)
+  })
+}
+
+// ============================================================================
+// 8. VALIDATE ISR CONFIGURATION
+// ============================================================================
+console.log(`\n${BOLD}8. Validating ISR Configuration...${RESET}`)
+
+let isrIssues = []
+
+pageFiles.forEach(({ folder, path }) => {
+  const content = readFileSync(path, 'utf-8')
+
+  // Check for force-dynamic (WRONG - disables caching)
+  if (content.includes("export const dynamic = 'force-dynamic'")) {
+    isrIssues.push({
+      file: `app/reviews/${folder}/page.tsx`,
+      issue: 'Uses force-dynamic (disables caching - should use ISR)',
+      severity: 'error',
+      fix: 'Use: export const revalidate = 3600'
+    })
+    errors++
+  }
+
+  // Check for ISR config (CORRECT)
+  const hasRevalidate = content.includes('export const revalidate')
+  const hasFetchCache = content.includes("export const fetchCache = 'force-cache'")
+
+  if (!hasRevalidate) {
+    isrIssues.push({
+      file: `app/reviews/${folder}/page.tsx`,
+      issue: 'Missing ISR revalidate configuration',
+      severity: 'warning',
+      fix: 'Add: export const revalidate = 3600'
+    })
+    warnings++
+  }
+})
+
+if (isrIssues.length === 0) {
+  console.log(`${GREEN}✓ All pages have correct ISR configuration${RESET}`)
+} else {
+  console.log(`${YELLOW}⚠ Found ${isrIssues.length} ISR configuration issue(s):${RESET}`)
+  isrIssues.forEach(issue => {
+    const color = issue.severity === 'error' ? RED : YELLOW
+    console.log(`  ${color}•${RESET} ${issue.file}`)
+    console.log(`    Issue: ${issue.issue}`)
+    console.log(`    Fix: ${GREEN}${issue.fix}${RESET}`)
+  })
+}
+
+// ============================================================================
 // SUMMARY
 // ============================================================================
 console.log(`\n${BOLD}${BLUE}╔════════════════════════════════════════════╗${RESET}`)

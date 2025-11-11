@@ -220,7 +220,7 @@ export default async function ProductReview() {
                     key={lid.id}
                     className="border border-gray-300 rounded-lg p-4 bg-white"
                   >
-                    <h5 className="font-bold text-sm text-gray-900 mb-1">{lid.size}</h5>
+                    <h4 className="font-bold text-sm text-gray-900 mb-1">{lid.size}</h4>
                     <p className="text-xs text-gray-600 mb-3">{lid.description}</p>
                     <p className="text-xs text-gray-500 mb-3">{lid.includes}</p>
 

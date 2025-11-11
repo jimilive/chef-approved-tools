@@ -14,11 +14,14 @@ const GREEN = '\x1b[32m'
 const RESET = '\x1b[0m'
 
 const validators = [
-  { name: 'Site Integrity', script: 'scripts/validate-site-integrity.mjs' },
-  { name: 'Database Integrity', script: 'scripts/validate-database-integrity.mjs' },
-  { name: 'Image References', script: 'scripts/validate-images.mjs' },
-  { name: 'Affiliate Links', script: 'scripts/validate-affiliate-links.mjs' },
-  { name: 'Duplicate Link Check', script: 'scripts/validate-duplicate-links.mjs' },
+  { name: 'TypeScript Check', command: 'npx', args: ['tsc', '--noEmit'] },
+  { name: 'Site Integrity', command: 'node', args: ['scripts/validate-site-integrity.mjs'] },
+  { name: 'Database Integrity', command: 'node', args: ['scripts/validate-database-integrity.mjs'] },
+  { name: 'Image References', command: 'node', args: ['scripts/validate-images.mjs'] },
+  { name: 'Affiliate Links', command: 'node', args: ['scripts/validate-affiliate-links.mjs'] },
+  { name: 'Duplicate Link Check', command: 'node', args: ['scripts/validate-duplicate-links.mjs'] },
+  { name: 'Review Content Quality', command: 'node', args: ['scripts/review-tools/batch-audit.js'], ignoreError: true },
+  { name: 'SEO Metadata Quality', command: 'node', args: ['scripts/extract-all-metadata.mjs'], ignoreError: true },
 ]
 
 console.log(`${BOLD}${BLUE}╔════════════════════════════════════════════╗${RESET}`)
@@ -31,15 +34,19 @@ async function runValidator(validator) {
   return new Promise((resolve) => {
     console.log(`${BOLD}Running ${validator.name}...${RESET}\n`)
 
-    const proc = spawn('node', [validator.script], {
+    const proc = spawn(validator.command, validator.args, {
       stdio: 'inherit',
       shell: true
     })
 
     proc.on('close', (code) => {
       if (code !== 0) {
-        totalErrors++
-        console.log(`${RED}✗ ${validator.name} failed${RESET}\n`)
+        if (validator.ignoreError) {
+          console.log(`${GREEN}✓ ${validator.name} completed (informational only)${RESET}\n`)
+        } else {
+          totalErrors++
+          console.log(`${RED}✗ ${validator.name} failed${RESET}\n`)
+        }
       } else {
         console.log(`${GREEN}✓ ${validator.name} passed${RESET}\n`)
       }
