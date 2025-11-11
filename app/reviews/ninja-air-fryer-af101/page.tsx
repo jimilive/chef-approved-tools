@@ -6,6 +6,7 @@ import { generateOGImageURL } from '@/lib/og-image'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
+  ReviewHero,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -137,61 +138,76 @@ export default async function NinjaAirFryerAF101ReviewPage() {
       />
 
       <div className="bg-gray-50 min-h-screen">
+        <div className="max-w-[900px] mx-auto px-5">
 
-        {/* TIER 3 HERO SECTION - Dark gradient */}
-        <section className="bg-gradient-to-br from-slate-800 via-slate-700 to-orange-600 text-white py-16">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className={`inline-block ${reviewData.hero.badge.className} border rounded-full px-4 py-2 mb-6`}>
-              <span className="font-semibold text-sm">{reviewData.hero.badge.text}</span>
-            </div>
-
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              {reviewData.hero.title}
-            </h1>
-
-            <p className="text-xl text-slate-300 mb-6">
-              After 90 days of testing wings, frozen foods, and everything in between—the honest truth from a chef who has used commercial fryers for 24 years
-            </p>
-
-            <div className="flex items-center gap-6 text-sm">
-              <div className="flex items-center gap-2">
-                <span className="text-yellow-400">★★★★☆</span>
-                <span>{reviewData.hero.rating}/5</span>
-              </div>
-              <div>{reviewData.hero.tierBadge.text}</div>
-              <div>~$70-90</div>
-            </div>
+          {/* BREADCRUMBS */}
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+            <Link href="/" className="hover:text-orange-700">Home</Link>
+            {' / '}
+            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+            {' / '}
+            {reviewData.breadcrumb.productName}
           </div>
-        </section>
 
-        <div className="max-w-4xl mx-auto px-4 py-12">
-
-          {/* TESTING IN PROGRESS BADGE */}
-          <div className="bg-amber-50 border-2 border-amber-400 rounded-lg p-6 mb-8">
-            <div className="flex items-start gap-3">
-              <span className="text-2xl">⏱️</span>
+          {/* SECTION 1: HERO */}
+          <ReviewHero
+            title={reviewData.hero.title}
+            authorName={reviewData.hero.authorName}
+            authorCredentials={reviewData.hero.authorCredentials}
+            rating={reviewData.hero.rating}
+            tierBadge={reviewData.hero.tierBadge}
+            verdict={reviewData.hero.verdict}
+            verdictStrong={reviewData.hero.verdictStrong}
+            publishedDate="November 10, 2025"
+            lastUpdated="November 10, 2025"
+            ctaUrl={affiliateUrl}
+            ctaText={reviewData.hero.ctaText}
+            customCTA={
               <div>
-                <p className="font-semibold text-amber-900 mb-2">{reviewData.testingInProgress.title}</p>
-                <p className="text-sm text-amber-800 mb-2">
-                  {reviewData.testingInProgress.intro}
+                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
+                  >
+                    {reviewData.hero.ctaText}
+                  </a>
+                </CTAVisibilityTracker>
+                <p className="text-center mt-3 text-sm">
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 underline font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                  >
+                    → View {productData.name} on Amazon
+                  </a>
                 </p>
-                <p className="text-sm text-amber-800">
-                  <strong>Next Update:</strong> {reviewData.testingInProgress.nextUpdate}<br/>
-                  <strong>Tier 2 Upgrade:</strong> {reviewData.testingInProgress.tier2Upgrade}
-                </p>
+              </div>
+            }
+          />
+
+          {/* TESTING IN PROGRESS NOTICE */}
+          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <div className="bg-amber-50 border-2 border-amber-400 rounded-lg p-6">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">⏱️</span>
+                <div>
+                  <p className="font-semibold text-amber-900 mb-2">{reviewData.testingInProgress.title}</p>
+                  <p className="text-sm text-amber-800 mb-2">
+                    {reviewData.testingInProgress.intro}
+                  </p>
+                  <p className="text-sm text-amber-800">
+                    <strong>Next Update:</strong> {reviewData.testingInProgress.nextUpdate}<br/>
+                    <strong>Tier 2 Upgrade:</strong> {reviewData.testingInProgress.tier2Upgrade}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* QUICK VERDICT */}
-          <div className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-8">
-            <h2 className="text-2xl font-bold mb-3 text-gray-900">Scott&rsquo;s Professional Verdict</h2>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              {reviewData.hero.verdict}
-            </p>
-          </div>
-
-          {/* SECTION 1: PROS & CONS */}
+          {/* SECTION 2: PROS & CONS */}
           <ProsConsGrid
             title={reviewData.prosConsTitle}
             prosTitle={reviewData.prosTitle}
@@ -200,54 +216,7 @@ export default async function NinjaAirFryerAF101ReviewPage() {
             cons={productData.cons}
           />
 
-          {/* BUY SECTION - ABOVE FOLD CTA */}
-          <section className="mb-12 bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-xl border-2 border-orange-200">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">Ready for Crispy Wings Without the Oil?</h2>
-
-            <p className="text-lg text-gray-700 mb-6">
-              After 90 days of professional testing, the Ninja AF101 delivers 85% of deep-fryer results with zero oil mess.
-              Perfect for small households who want fried food results without the hassle.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <CTAVisibilityTracker
-                ctaId={`${reviewData.productSlug}-above-fold-cta`}
-                position="above_fold"
-                productSlug={reviewData.productSlug}
-                merchant="amazon"
-              >
-                <a
-                  href={affiliateUrl}
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
-                >
-                  {reviewData.hero.ctaText}
-                </a>
-              </CTAVisibilityTracker>
-
-              {/* Text link */}
-              <p className="text-center text-sm mt-2">
-                <a
-                  href={affiliateUrl}
-                  className="text-orange-700 hover:text-orange-800 underline font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                >
-                  → View {productData.name} on Amazon
-                </a>
-              </p>
-
-              <Link
-                href="/reviews"
-                className="inline-flex items-center justify-center border-2 border-orange-700 text-orange-700 hover:bg-orange-50 font-bold py-4 px-8 rounded-lg transition-all duration-200"
-              >
-                See All Reviews
-              </Link>
-            </div>
-          </section>
-
-          {/* SECTION 2: PROFESSIONAL CONTEXT */}
+          {/* SECTION 3: PROFESSIONAL CONTEXT */}
           <section className="mb-12 bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.professionalContext.title}</h2>
 
@@ -258,7 +227,7 @@ export default async function NinjaAirFryerAF101ReviewPage() {
             ))}
           </section>
 
-          {/* SECTION 3: REAL-WORLD TESTING */}
+          {/* SECTION 4: REAL-WORLD TESTING */}
           <section className="mb-12 bg-slate-50 rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.realWorldTesting.title}</h2>
 
@@ -277,7 +246,7 @@ export default async function NinjaAirFryerAF101ReviewPage() {
             ))}
           </section>
 
-          {/* SECTION 4: WHO SHOULD BUY */}
+          {/* SECTION 5: WHO SHOULD BUY */}
           <WhoShouldBuyGrid
             title={reviewData.whoShouldBuy.title}
             perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
@@ -286,13 +255,13 @@ export default async function NinjaAirFryerAF101ReviewPage() {
             considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
           />
 
-          {/* SECTION 5: FAQ */}
+          {/* SECTION 6: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 6: WHERE TO BUY */}
+          {/* SECTION 7: WHERE TO BUY */}
           <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
             <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
               {reviewData.whereToBuy.title}
@@ -346,10 +315,10 @@ export default async function NinjaAirFryerAF101ReviewPage() {
             </p>
           </div>
 
-          {/* SECTION 6.5: EMAIL CAPTURE */}
+          {/* SECTION 8: EMAIL CAPTURE */}
           <EmailCaptureSection />
 
-          {/* SECTION 7: BOTTOM LINE */}
+          {/* SECTION 9: BOTTOM LINE */}
           <BottomLineSection
             title={reviewData.bottomLine.title}
             paragraphs={reviewData.bottomLine.paragraphs.map((paragraph, i) => (
@@ -394,13 +363,13 @@ export default async function NinjaAirFryerAF101ReviewPage() {
             }
           />
 
-          {/* SECTION 8: RELATED PRODUCTS */}
+          {/* SECTION 10: RELATED PRODUCTS */}
           <RelatedProductsGrid
             title={reviewData.relatedProducts.title}
             products={reviewData.relatedProducts.products}
           />
 
-          {/* SECTION 9: AUTHOR BIO */}
+          {/* SECTION 11: AUTHOR BIO */}
           <AuthorBio />
 
         </div>
