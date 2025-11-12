@@ -38,7 +38,13 @@
     "optimize:replace": "node scripts/replace-optimized.js",
     "backup:images": "tar -czf images-backup-$(date +%Y%m%d-%H%M%S).tar.gz public/images",
     "cleanup:backups": "find public/images -name '*.backup' -delete",
-    "indexnow": "tsx scripts/submit-indexnow.ts"
+    "indexnow": "tsx scripts/submit-indexnow.ts",
+    "validate:types": "npm run type-check",
+    "validate:metadata": "node scripts/validate-metadata.js",
+    "validate:content": "node scripts/validate-content.js",
+    "validate:new-images": "node scripts/validate-images.js",
+    "validate:schema": "node scripts/validate-schema.js",
+    "validate:phase1": "npm run validate:types && npm run validate:metadata && npm run validate:content && npm run validate:new-images && npm run validate:schema"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.8",
@@ -75,6 +81,7 @@
     "postcss": "^8.4.35",
     "sharp": "^0.34.4",
     "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
     "tsx": "^4.20.6",
     "typescript": "5.4.5"
   }
