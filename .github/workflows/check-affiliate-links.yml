@@ -47,21 +47,25 @@ jobs:
             process.exit(1)
           }
 
-          // Extract all Amazon affiliate links
-          const amazonLinks = new Set()
+          // Extract all Amazon affiliate links with product names
+          const linksMap = {}
           data.forEach(product => {
             if (product.affiliate_links) {
               product.affiliate_links.forEach(link => {
                 if (link.merchant === 'amazon' && link.url) {
-                  amazonLinks.add(link.url)
+                  linksMap[link.url] = product.name
                 }
               })
             }
           })
 
-          // Write links to file
-          writeFileSync('/tmp/links.txt', Array.from(amazonLinks).join('\n'))
-          console.log(`Found ${amazonLinks.size} unique Amazon affiliate links from ${data.length} products`)
+          // Write links to file (one per line)
+          writeFileSync('/tmp/links.txt', Object.keys(linksMap).join('\n'))
+
+          // Write product names mapping to separate file
+          writeFileSync('/tmp/link-names.json', JSON.stringify(linksMap, null, 2))
+
+          console.log(`Found ${Object.keys(linksMap).length} unique Amazon affiliate links from ${data.length} products`)
           SCRIPT
 
           node fetch-links.mjs
@@ -77,7 +81,13 @@ jobs:
           working_count=0
           broken_count=0
 
+          # Load product names mapping
+          link_names=$(cat /tmp/link-names.json)
+
           while IFS= read -r link; do
+            # Get product name for this link
+            product_name=$(echo "$link_names" | jq -r --arg url "$link" '.[$url]')
+
             # Test with proper browser headers to avoid bot detection
             # Capture both status code AND final redirect URL
             response=$(curl -s -o /dev/null -w "%{http_code}|%{url_effective}" -L "$link" \
@@ -97,17 +107,20 @@ jobs:
                  [[ "$final_url" =~ ^https?://www\.amazon\.com/ref= ]] || \
                  [[ "$final_url" == "https://www.amazon.com/" ]]; then
                 echo "❌ $link - HTTP $status - REDIRECTS TO HOMEPAGE"
+                echo "   Product: $product_name"
                 echo "   Final URL: $final_url"
-                broken_links="$broken_links\n- $link → AMAZON HOMEPAGE (broken ASIN)"
+                broken_links="$broken_links\n- **$product_name**\n  $link → AMAZON HOMEPAGE (broken ASIN)"
                 ((broken_count++))
               else
                 echo "✅ $link - HTTP $status"
+                echo "   Product: $product_name"
                 echo "   → $final_url"
                 ((working_count++))
               fi
             else
               echo "❌ $link - HTTP $status - BAD STATUS"
-              broken_links="$broken_links\n- $link (HTTP $status)"
+              echo "   Product: $product_name"
+              broken_links="$broken_links\n- **$product_name**\n  $link (HTTP $status)"
               ((broken_count++))
             fi
 
