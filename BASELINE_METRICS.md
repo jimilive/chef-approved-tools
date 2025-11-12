@@ -27,24 +27,24 @@
 ## Lighthouse Scores (Desktop)
 
 ### Home Page
-- **Performance:** [TBD]/100
-- **Accessibility:** [TBD]/100
-- **Best Practices:** [TBD]/100
-- **SEO:** [TBD]/100
+- **Performance:** 67/100
+- **Accessibility:** 100/100
+- **Best Practices:** 89/100
+- **SEO:** 92/100
 - **Test Date:** November 12, 2025
 
 ### Vitamix 5200 Review
-- **Performance:** [TBD]/100
-- **Accessibility:** [TBD]/100
-- **Best Practices:** [TBD]/100
-- **SEO:** [TBD]/100
+- **Performance:** 69/100
+- **Accessibility:** 96/100
+- **Best Practices:** 89/100
+- **SEO:** 92/100
 - **Test Date:** November 12, 2025
 
 ### Benriner Review
-- **Performance:** [TBD]/100
-- **Accessibility:** [TBD]/100
-- **Best Practices:** [TBD]/100
-- **SEO:** [TBD]/100
+- **Performance:** 67/100
+- **Accessibility:** 100/100
+- **Best Practices:** 89/100
+- **SEO:** 92/100
 - **Test Date:** November 12, 2025
 
 ---
@@ -52,24 +52,24 @@
 ## Lighthouse Scores (Mobile)
 
 ### Home Page
-- **Performance:** [TBD]/100
-- **Accessibility:** [TBD]/100
-- **Best Practices:** [TBD]/100
-- **SEO:** [TBD]/100
+- **Performance:** 45/100
+- **Accessibility:** 100/100
+- **Best Practices:** 93/100
+- **SEO:** 92/100
 - **Test Date:** November 12, 2025
 
 ### Vitamix 5200 Review
-- **Performance:** [TBD]/100
-- **Accessibility:** [TBD]/100
-- **Best Practices:** [TBD]/100
-- **SEO:** [TBD]/100
+- **Performance:** 48/100
+- **Accessibility:** 96/100
+- **Best Practices:** 93/100
+- **SEO:** 92/100
 - **Test Date:** November 12, 2025
 
 ### Benriner Review
-- **Performance:** [TBD]/100
-- **Accessibility:** [TBD]/100
-- **Best Practices:** [TBD]/100
-- **SEO:** [TBD]/100
+- **Performance:** 47/100
+- **Accessibility:** 100/100
+- **Best Practices:** 93/100
+- **SEO:** 92/100
 - **Test Date:** November 12, 2025
 
 ---
@@ -98,4 +98,4 @@
 
 ---
 
-**Next Steps:** Lighthouse baseline testing
+**Next Steps:** Vercel baseline, GSC data, then Phase 1
