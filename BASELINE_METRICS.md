@@ -76,9 +76,10 @@
 
 ## Vercel Build Metrics
 
-**Latest Deployment:** [TO BE CHECKED]  
-**Build Time:** [TBD]  
-**Bundle Size:** [TBD] MB
+**Latest Deployment:** November 12, 2025  
+**Build Time:** 34 seconds  
+**Bundle Size:** 197 kB (shared JS)  
+**Build Warnings:** 1 warning (edge runtime disables static generation)
 
 ---
 
@@ -98,4 +99,4 @@
 
 ---
 
-**Next Steps:** Vercel baseline, GSC data, then Phase 1
+**Next Steps:** GSC data, then Phase 0 complete
