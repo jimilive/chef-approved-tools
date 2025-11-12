@@ -322,22 +322,6 @@ export default async function RobotCoupeR2DiceReview() {
           </p>
         </div>
 
-        {/* Mid-Content Lead Magnet */}
-        <section className="mb-8">
-          <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 text-center">
-            <h3 className="text-xl font-bold text-slate-900 mb-3">📊 Free Download: Commercial Equipment ROI Calculator</h3>
-            <p className="text-slate-700 mb-4 max-w-2xl mx-auto">
-              Get the exact spreadsheet I used to evaluate equipment ROI for restaurant purchases. Includes cost-per-use calculators, payback period formulas, and volume processing analysis.
-            </p>
-            <Link
-              href="/newsletter"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-            >
-              Get Free ROI Calculator →
-            </Link>
-          </div>
-        </section>
-
         {/* User Reviews */}
         <section className="mb-8" id="reviews">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">What Real Users Are Saying</h2>
@@ -880,35 +864,8 @@ export default async function RobotCoupeR2DiceReview() {
         {/* EMAIL CAPTURE */}
         <EmailCaptureSection />
 
-        {/* Footer Transparency Elements */}
-        <section className="mb-8">
-          <div className="bg-gray-50 p-5 my-8 rounded-md border-l-4 border-gray-500">
-            <p className="my-2.5">
-              <strong>📅 Last Updated:</strong> {new Date(productData.lastUpdated).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-              })}
-            </p>
-            <p className="my-2.5">
-              <strong>🔍 Next Review:</strong> {new Date(Date.now() + 180 * 24 * 60 * 60 * 1000).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long'
-              })}
-            </p>
-            <p className="my-2.5">
-              <strong>💬 Own a Robot Coupe?</strong> Share your experience in the comments below—I
-              read and respond to every comment.
-            </p>
-            <p className="my-2.5">
-              <strong>📧 Questions about commercial equipment?</strong> <Link href="/contact" className="text-blue-600 hover:underline">
-              Contact me directly</Link> and I&apos;ll help you make the best decision for your operation.
-            </p>
-          </div>
-
-          {/* Author Bio Box */}
-          <AuthorBio />
-        </section>
+        {/* Author Bio Box */}
+        <AuthorBio />
 
         {/* Structured Data */}
         <script

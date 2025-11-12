@@ -328,10 +328,10 @@ export const reviewData = {
         href: "/reviews/john-boos-platinum-commercial-cutting-board"
       },
       {
-        emoji: "🌡️",
-        name: "ThermoWorks Thermapen",
-        description: "Professional instant-read thermometer",
-        href: "/reviews/thermoworks-thermapen-one"
+        emoji: "🔧",
+        name: "KitchenAid Professional 600",
+        description: "Professional 6-quart stand mixer",
+        href: "/reviews/kitchenaid-kp26m1xlc-professional-600"
       }
     ]
   },

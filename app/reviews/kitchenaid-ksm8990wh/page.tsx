@@ -105,6 +105,9 @@ export default async function KitchenAidCommercialReviewPage() {
   const compareLink = reviewData.strategicLinks.secondary.url
   const trustLink = reviewData.strategicLinks.tertiary.url
 
+  // Get Amazon affiliate link
+  const amazonLink = product?.affiliateLinks.find(link => link.merchant === 'amazon')?.url || 'https://amzn.to/4nVlUTM'
+
   const breadcrumbs = [
     { name: "Home", url: "https://www.chefapprovedtools.com" },
     { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
@@ -161,22 +164,42 @@ export default async function KitchenAidCommercialReviewPage() {
             ctaText={reviewData.hero.ctaText}
             customCTA={(
               <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
-                {/* PRIMARY CTA Button */}
-                <CTAVisibilityTracker
-                  ctaId={`${reviewData.productSlug}-hero-cta`}
-                  position="above_fold"
-                  productSlug={reviewData.productSlug}
-                  merchant="kitchenaid"
-                >
-                  <a
-                    href={primaryLink}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl mb-3"
+                {/* DUAL CTA Buttons - Amazon + KitchenAid */}
+                <div className="grid md:grid-cols-2 gap-4 mb-3">
+                  {/* Amazon CTA */}
+                  <CTAVisibilityTracker
+                    ctaId={`${reviewData.productSlug}-hero-amazon`}
+                    position="above_fold"
+                    productSlug={reviewData.productSlug}
+                    merchant="amazon"
                   >
-                    {reviewData.hero.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
+                    <a
+                      href={amazonLink}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                    >
+                      Check Price on Amazon
+                    </a>
+                  </CTAVisibilityTracker>
+
+                  {/* KitchenAid Direct CTA */}
+                  <CTAVisibilityTracker
+                    ctaId={`${reviewData.productSlug}-hero-kitchenaid`}
+                    position="above_fold"
+                    productSlug={reviewData.productSlug}
+                    merchant="kitchenaid"
+                  >
+                    <a
+                      href={primaryLink}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                    >
+                      {reviewData.hero.ctaText}
+                    </a>
+                  </CTAVisibilityTracker>
+                </div>
 
                 {/* SECONDARY CTA - Compare Link (Evergreen Link EPC: $193.89!) */}
                 <p className="text-center text-sm mb-3">
@@ -191,7 +214,7 @@ export default async function KitchenAidCommercialReviewPage() {
                 </p>
 
                 <p className="text-xs text-slate-600 text-center">
-                  As a KitchenAid affiliate, I earn from qualifying purchases. Price and availability may change.
+                  As an Amazon and KitchenAid affiliate, I earn from qualifying purchases. Price and availability may change.
                 </p>
               </div>
             )}
