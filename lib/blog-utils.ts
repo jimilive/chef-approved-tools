@@ -32,8 +32,9 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
       const content = fs.readFileSync(pagePath, 'utf-8')
 
       // Check if this is a data-driven post (imports from a data file)
-      let titleMatch = content.match(/title:\s*["']((?:[^"'\\]|\\.)*?)["']/)
-      let descriptionMatch = content.match(/description:\s*["']((?:[^"'\\]|\\.)*?)["']/)
+      // Updated regex to handle quotes inside strings by matching until the closing quote that matches the opening quote
+      let titleMatch = content.match(/title:\s*'([^']*(?:\\'[^']*)*)'/s) || content.match(/title:\s*"([^"]*(?:\\"[^"]*)*)"/s)
+      let descriptionMatch = content.match(/description:\s*'([^']*(?:\\'[^']*)*)'/s) || content.match(/description:\s*"([^"]*(?:\\"[^"]*)*)"/s)
       let datePublishedMatch = content.match(/datePublished:\s*["'](\d{4}-\d{2}-\d{2})["']/)
 
       // Check for data file pattern (e.g., comparisonData.metadata.title)
@@ -44,8 +45,8 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
         if (fs.existsSync(dataFilePath)) {
           const dataContent = fs.readFileSync(dataFilePath, 'utf-8')
           // Extract from data file
-          titleMatch = dataContent.match(/title:\s*["']((?:[^"'\\]|\\.)*?)["']/)
-          descriptionMatch = dataContent.match(/description:\s*["']((?:[^"'\\]|\\.)*?)["']/)
+          titleMatch = dataContent.match(/title:\s*'([^']*(?:\\'[^']*)*)'/s) || dataContent.match(/title:\s*"([^"]*(?:\\"[^"]*)*)"/s)
+          descriptionMatch = dataContent.match(/description:\s*'([^']*(?:\\'[^']*)*)'/s) || dataContent.match(/description:\s*"([^"]*(?:\\"[^"]*)*)"/s)
           datePublishedMatch = dataContent.match(/publishedDate:\s*["'](\d{4}-\d{2}-\d{2})["']/)
         }
       }
