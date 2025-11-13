@@ -106,7 +106,7 @@ export const METADATA = {
     
     'about': {
       title: "About Chef Approved Tools: 24 Years Professional Testing",
-      description: "24 years in professional kitchens—Purple Café, Mellow Mushroom, Feierabend. Every product tested through real commercial use or long-term testing.",
+      description: "Scott Bradley tested equipment 24 years in professional kitchens—Purple Café, Mellow Mushroom, Feierabend. Every product tested through commercial use.",
       canonical: "https://www.chefapprovedtools.com/about",
       author: "Scott Bradley",
       imageUrl: "/images/og/about-scott-bradley.jpg",
@@ -189,7 +189,7 @@ export const METADATA = {
   blog: {
     'cast-iron-vs-carbon-steel-pan': {
       title: "Cast Iron vs Carbon Steel: Heat Retention vs Responsiveness",
-      description: "Cast iron holds heat 3x longer for searing. Carbon steel heats/cools fast for control. After 24 years testing both, here's when each type wins.",
+      description: "Cast iron holds heat 3x longer for searing steaks. Carbon steel heats and cools fast for control. After 24 years testing both, here's when each type wins.",
       canonical: "https://www.chefapprovedtools.com/blog/cast-iron-vs-carbon-steel-pan",
       author: "Scott Bradley",
       imageUrl: "/images/blog/cast-iron-vs-carbon-steel.jpg",
@@ -272,7 +272,7 @@ export const METADATA = {
   reviews: {
     'kitchenaid-ksm8990wh': {
       title: "KitchenAid Commercial NSF: Survived 18 Months at Purple Café",
-      description: "18 months at Purple Café: mixed 300+ cracker dough batches—zero failures. NSF-certified commercial mixer that actually survives restaurant workload.",
+      description: "KitchenAid NSF commercial tested 18 months at Purple Café: mixed 300+ cracker dough batches—zero failures. Restaurant-grade mixer survives heavy workload.",
       canonical: "https://www.chefapprovedtools.com/reviews/kitchenaid-ksm8990wh",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/kitchenaid-commercial-hero.jpg",
@@ -297,7 +297,7 @@ export const METADATA = {
     
     'method-all-purpose-cleaner': {
       title: "Method All-Purpose Cleaner: 5 Years of Grease-Cutting Tests",
-      description: "Method All-Purpose cleaner tested 5 years in a real kitchen: 1,800+ messes from bacon grease to tomato sauce cleaned without harsh fumes. Find out when it beats the classic blue stuff.",
+      description: "Method All-Purpose tested 5 years: 1,800+ kitchen messes from bacon grease to tomato sauce cleaned without harsh fumes. Effective, pleasant alternative.",
       canonical: "https://www.chefapprovedtools.com/reviews/method-all-purpose-cleaner",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/method-cleaner-hero.jpg",
@@ -319,7 +319,7 @@ export const METADATA = {
     
     'kitchenaid-kp26m1xlc-professional-600': {
       title: "KitchenAid Pro 600 Review: 18 Years of Heavy Dough Batches",
-      description: "KitchenAid Pro 600 review from 18 years of use: 575W motor mixing triple pizza dough batches and 900+ baking sessions. See if this metal-gear workhorse belongs in your kitchen.",
+      description: "KitchenAid Pro 600 tested 18 years: 575W motor handles triple pizza dough batches without strain. Metal gears survived 900+ baking sessions. True workhorse.",
       canonical: "https://www.chefapprovedtools.com/reviews/kitchenaid-kp26m1xlc-professional-600",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/kitchenaid-pro-600-hero.jpg",
@@ -341,8 +341,8 @@ export const METADATA = {
     } as ReviewMetadata,
     
     'victorinox-fibrox-8-inch-chefs-knife': {
-      title: "Victorinox Fibrox 8\": Held Edge Through 10,000+ Restaurant Cuts",
-      description: "20 years, 5 professional kitchens: stayed sharp through daily line work at Purple Café. NSF-certified Swiss steel. Sharpened 2x/year, not 2x/month.",
+      title: "Victorinox Fibrox 8\": Sharp After 10,000+ Restaurant Cuts",
+      description: "Victorinox 8-inch tested 20 years across 5 kitchens: stayed sharp through line work at Purple Café. NSF-certified Swiss steel sharpened twice per year.",
       canonical: "https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/victorinox-8-inch-hero.jpg",
@@ -364,8 +364,8 @@ export const METADATA = {
     } as ReviewMetadata,
     
     'epicurean-kitchen-cutting-board': {
-      title: "Epicurean Cutting Board: 10-Year, 2,000-Cycle Dishwasher Test",
-      description: "Epicurean Kitchen cutting board tested 10 years and 2,000+ dishwasher cycles with no warping or cracking. See why it replaced warped wood boards and how it holds up to daily prep.",
+      title: "Epicurean Cutting Board: 10-Year, 2,000+ Dishwasher Cycles",
+      description: "Epicurean board tested 10 years and 2,000+ dishwasher cycles: no warping or cracking. See why it replaced warped wood boards and survives daily prep work.",
       canonical: "https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/epicurean-board-hero.jpg",
@@ -388,7 +388,7 @@ export const METADATA = {
     
     'vitamix-5200-professional-blender': {
       title: "Vitamix 5200 Review: 6 Years of Restaurant Testing",
-      description: "Vitamix 5200 review from a pro chef after 6 years at Purple Café blending sauces, soups and smoothies with zero failures. See if its price really matches the performance.",
+      description: "Vitamix 5200 tested 6 years at Purple Café blending sauces, soups and smoothies with zero failures. Professional-grade power and durability validated.",
       canonical: "https://www.chefapprovedtools.com/reviews/vitamix-5200-professional-blender",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/vitamix-5200-hero.jpg",
@@ -412,8 +412,8 @@ export const METADATA = {
     // ========== BATCH 2: NEXT HIGH-PRIORITY REVIEWS ==========
     
     'le-creuset-signature-7-25-qt-dutch-oven': {
-      title: "Le Creuset 7.25-Qt: Enamel Still Perfect After 12 Years Heavy Use",
-      description: "12 years heavy use: braised 300+ roasts, baked 200+ loaves—enamel coating still perfect. Zero staining, zero chipping. Lifetime warranty proven.",
+      title: "Le Creuset 7.25-Qt Dutch Oven: 12 Years, Never Chipped",
+      description: "Le Creuset 7.25-quart tested 12 years: braised 300+ roasts, baked 200+ loaves—enamel still perfect. Zero staining, zero chipping. Lifetime warranty validated.",
       canonical: "https://www.chefapprovedtools.com/reviews/le-creuset-signature-7-25-qt-dutch-oven",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/le-creuset-dutch-oven-hero.jpg",
@@ -435,8 +435,8 @@ export const METADATA = {
     } as ReviewMetadata,
     
     'ninja-bl660-professional-blender': {
-      title: "Ninja BL660 Review: Pitcher Cracked After 2 Weeks (90 Days)",
-      description: "Ninja BL660 tested 90 days: first pitcher cracked after 2 weeks, replacement handled 200+ smoothies but loud. See if budget price outweighs quality control issues.",
+      title: "Ninja BL660 Blender Review: Cracked Pitcher, Good Smoothies",
+      description: "Ninja BL660 tested 90 days: first pitcher cracked after 2 weeks. Replacement handled daily smoothies and wing sauce but durability and noise remain concerns.",
       canonical: "https://www.chefapprovedtools.com/reviews/ninja-bl660-professional-blender",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/ninja-bl660-hero.jpg",
@@ -458,8 +458,8 @@ export const METADATA = {
     } as ReviewMetadata,
     
     'diamond-crystal-kosher-salt': {
-      title: "Diamond Crystal Kosher Salt: Used in Every Restaurant I Worked (18 Years)",
-      description: "18 years, 5 professional kitchens: flaky texture gives precise seasoning control. Purple Café, Mellow Mushroom, Feierabend—all used Diamond Crystal.",
+      title: "Diamond Crystal: Used in 5 Professional Kitchens (18 Years)",
+      description: "Diamond Crystal tested 18 years across 5 kitchens: flaky texture gives precise seasoning control. Purple Café, Mellow Mushroom, Feierabend all used it.",
       canonical: "https://www.chefapprovedtools.com/reviews/diamond-crystal-kosher-salt",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/diamond-crystal-salt-hero.jpg",
@@ -481,7 +481,7 @@ export const METADATA = {
     
     'oxo-good-grips-swivel-peeler': {
       title: "OXO Peeler: Peeled 10,000+ Potatoes, Zero Hand Fatigue",
-      description: "OXO Good Grips swivel peeler tested 20 years peeling 10,000+ potatoes and veggies. Soft handle prevents hand fatigue while the blade stays sharp. Find out why chefs still recommend it.",
+      description: "OXO swivel peeler tested 20 years peeling 10,000+ potatoes and veggies. Soft handle prevents hand fatigue, blade stays sharp. Professional-grade durability.",
       canonical: "https://www.chefapprovedtools.com/reviews/oxo-good-grips-swivel-peeler",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/oxo-peeler-hero.jpg",
@@ -506,7 +506,7 @@ export const METADATA = {
 
     'oxo-good-grips-bench-scraper': {
       title: "OXO Bench Scraper Review: Most-Used Tool at Purple Café",
-      description: "OXO Good Grips bench scraper reviewed after 20 years in restaurant kitchens: portioning dough, scraping benches and grills daily. Learn the tricks that make it a top prep tool at home.",
+      description: "OXO bench scraper tested 20 years in restaurants: portioning dough, scraping benches and grills daily. Versatile prep tool for professional and home use.",
       canonical: "https://www.chefapprovedtools.com/reviews/oxo-good-grips-bench-scraper",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/oxo-bench-scraper-hero.jpg",
@@ -529,7 +529,7 @@ export const METADATA = {
 
     'john-boos-platinum-commercial-cutting-board': {
       title: "John Boos Cutting Board: 14-Year Buy-It-for-Life Workhorse",
-      description: "John Boos maple cutting board tested 14 years: oiled a few times, still flat and smooth after 5,000+ meals. See how to care for it so it truly becomes a lifetime board.",
+      description: "John Boos maple board tested 14 years: oiled occasionally, still flat and smooth after 5,000+ meals. Minimal maintenance for genuine lifetime durability.",
       canonical: "https://www.chefapprovedtools.com/reviews/john-boos-platinum-commercial-cutting-board",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/john-boos-board-hero.jpg",
@@ -551,8 +551,8 @@ export const METADATA = {
     } as ReviewMetadata,
 
     'instant-pot-duo-plus-6qt': {
-      title: "Instant Pot Duo Plus: Rice Perfect, Roast Failed (90 Days)",
-      description: "Instant Pot tested 90 days: rice and beans perfect every time, pot roast lacked browning and depth. Saves time on some dishes, not all. See honest results.",
+      title: "Instant Pot Duo Plus: Rice Perfect, Roast Disappointing",
+      description: "Instant Pot tested 90 days: rice and beans perfect every time. Pot roast lacked browning. Saves time on some dishes, not all. Honest assessment from 24 years.",
       canonical: "https://www.chefapprovedtools.com/reviews/instant-pot-duo-plus-6qt",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/instant-pot-hero.jpg",
@@ -575,7 +575,7 @@ export const METADATA = {
 
     'norton-im200-tri-stone-sharpener': {
       title: "Norton IM200: Knives sharpened 1,000+ times at Purple Café",
-      description: "Norton IM200 tri-stone sharpener reviewed after 6 years at Purple Café keeping eight knives razor-sharp. Three grits restore edges in about 15 minutes. Learn the simple sharpening routine.",
+      description: "Norton IM200 tested 6 years at Purple Café keeping eight knives razor-sharp. Three grits restore edges in 15 minutes. Simple, effective, reliable sharpening.",
       canonical: "https://www.chefapprovedtools.com/reviews/norton-im200-tri-stone-sharpener",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/norton-sharpener-hero.jpg",
@@ -597,8 +597,8 @@ export const METADATA = {
     } as ReviewMetadata,
 
     'benriner-large-mandoline': {
-      title: "Benriner Mandoline: 10,000+ Vegetables at Purple Café (Pro Test)",
-      description: "Benriner mandoline tested at Purple Café slicing 10,000+ vegetables into paper-thin cuts. See how to avoid finger injuries and whether it beats bulkier metal slicers.",
+      title: "Benriner Mandoline: 10,000+ Vegetables at Purple Café",
+      description: "Benriner mandoline tested at Purple Café slicing 10,000+ vegetables paper-thin. See how to avoid finger injuries and if it beats bulkier metal slicers.",
       canonical: "https://www.chefapprovedtools.com/reviews/benriner-large-mandoline",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/benriner-mandoline-hero.jpg",
@@ -622,8 +622,8 @@ export const METADATA = {
     // ========== BATCH 4: CONTINUING MIGRATION ==========
 
     'victorinox-offset-bread-knife': {
-      title: "Victorinox Offset Bread Knife: Knuckle Clearance (20-Year Test)",
-      description: "Victorinox offset knife tested 20 years: unique offset handle prevents scraped knuckles on crusty bread, tomatoes. Serrated edge stayed sharp through 5,000+ loaves.",
+      title: "Victorinox Offset Bread Knife: 20-Year Test (Serrated)",
+      description: "20 years professional testing: offset handle provides knuckle clearance for crusty bread, tomatoes. Serrated edge stays sharp. Restaurant-tested design.",
       canonical: "https://www.chefapprovedtools.com/reviews/victorinox-offset-bread-knife",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/victorinox-bread-knife-hero.jpg",
@@ -645,8 +645,8 @@ export const METADATA = {
     } as ReviewMetadata,
 
     'victorinox-4-inch-paring-knife': {
-      title: "Victorinox 4\" Paring Knife: Same Blade Since Culinary School (20 Years)",
-      description: "Victorinox paring knife tested 20 years since culinary school 2005: still sharp for precision cuts, peeling, trimming. See why it's still the same blade after thousands of uses.",
+      title: "Victorinox 4\" Paring Knife: 20 Years Since Culinary School",
+      description: "Victorinox paring knife tested 20 years: still sharp for peeling, trimming, precision cuts. Swiss steel holds edge. Same blade since culinary school in 2005.",
       canonical: "https://www.chefapprovedtools.com/reviews/victorinox-4-inch-paring-knife",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/victorinox-paring-knife-hero.jpg",
@@ -668,8 +668,8 @@ export const METADATA = {
     } as ReviewMetadata,
 
     'robot-coupe-r2-dice': {
-      title: "Robot Coupe R2 DICE: Saves 3+ Hours Daily (3-Year Restaurant Test)",
-      description: "Robot Coupe tested 3 years in commercial kitchen: 2 HP motor processes 50+ pounds vegetables in 15 minutes vs 3+ hours manual prep. See if worth the investment.",
+      title: "Robot Coupe R2 DICE: 3 Years Commercial Testing",
+      description: "Robot Coupe tested 3 years commercially: 2 HP motor processes 50+ pounds vegetables in 15 minutes. Continuous feed transforms high-volume vegetable prep work.",
       canonical: "https://www.chefapprovedtools.com/reviews/robot-coupe-r2-dice",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/robot-coupe-hero.jpg",
@@ -691,8 +691,8 @@ export const METADATA = {
     } as ReviewMetadata,
 
     'winco-heavy-duty-tongs': {
-      title: "Winco Heavy Duty Tongs: Restaurant Quality, Budget Price (24 Years)",
-      description: "Professional chef used Winco tongs 24 years across 5 kitchens: restaurant-grade stainless, perfect spring tension, never bent. See why pros choose these over expensive brands.",
+      title: "Winco Heavy Duty Tongs: 24 Years Restaurant-Grade Use",
+      description: "Winco tongs tested 24 years: restaurant-grade stainless at budget price. Perfect spring tension, scalloped grip, dishwasher-safe. Still performing daily.",
       canonical: "https://www.chefapprovedtools.com/reviews/winco-heavy-duty-tongs",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/winco-tongs-hero.jpg",
@@ -715,7 +715,7 @@ export const METADATA = {
 
     'bodum-chambord-french-press': {
       title: "Bodum Chambord French Press: 18 Years, Still Perfect Coffee",
-      description: "6 years at Purple Café, 18 years home use: Bodum Chambord still making perfect coffee. Classic design that lasts decades.",
+      description: "Bodum Chambord tested 18 years (6 at Purple Café): still brewing perfect coffee with consistent extraction. Classic design, stainless filter, zero breakage.",
       canonical: "https://www.chefapprovedtools.com/reviews/bodum-chambord-french-press",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/bodum-french-press-hero.jpg",
@@ -740,7 +740,7 @@ export const METADATA = {
 
     'black-decker-toaster-oven': {
       title: "Black+Decker Toaster Oven: 48 Years, 4 Models—Still Works",
-      description: "Black+Decker toaster ovens tested 48 years across 4 models (1977-present). Each lasted 5-18 years. Simple mechanical controls outlast digital competitors. Best value for daily use.",
+      description: "Black+Decker toaster ovens tested 48 years across 4 models: each lasted 5-18 years. Mechanical controls outlast digital competitors. Daily reliability.",
       canonical: "https://www.chefapprovedtools.com/reviews/black-decker-toaster-oven",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/black-decker-toaster-oven-hero.jpg",
@@ -763,7 +763,7 @@ export const METADATA = {
 
     'victorinox-fibrox-10-inch-chefs-knife': {
       title: "Victorinox 10\" Chef Knife: For Larger Hands & Big Tasks",
-      description: "Victorinox 10-inch chef knife tested 20 years (10 professional). Extra 2 inches perfect for breaking down proteins, larger vegetables. Swiss precision for bigger hands and tasks.",
+      description: "Victorinox 10-inch tested 20 years (10 professional). Extra 2 inches ideal for breaking down proteins, larger vegetables. Swiss precision for bigger tasks.",
       canonical: "https://www.chefapprovedtools.com/reviews/victorinox-fibrox-10-inch-chefs-knife",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/victorinox-10-inch-hero.jpg",
@@ -786,7 +786,7 @@ export const METADATA = {
 
     'cuisinart-dlc-10c-classic-food-processor': {
       title: "Cuisinart DLC-10C: Same Food Processor for 30 Years",
-      description: "Cuisinart DLC-10C food processor tested 30 years: shredding cheese, making hashbrowns nearly daily. Motor still strong, genuine buy-it-for-life equipment. One of the best products ever owned.",
+      description: "Cuisinart DLC-10C tested 30 years shredding cheese and making hashbrowns nearly daily. Motor still strong—genuine buy-it-for-life equipment that delivers.",
       canonical: "https://www.chefapprovedtools.com/reviews/cuisinart-dlc-10c-classic-food-processor",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/cuisinart-dlc-10c-hero.jpg",
@@ -809,7 +809,7 @@ export const METADATA = {
 
     'cuisinart-8-inch-nonstick-pan': {
       title: "Cuisinart 8\" Nonstick Pan: 2-Year Test of Budget Option",
-      description: "Cuisinart 8-inch nonstick pan tested 2 years: perfect for eggs, single servings. High impact bonded base ensures even heating. Induction ready. Coating stays flawless with proper care.",
+      description: "Cuisinart 8-inch nonstick tested 2 years: perfect for eggs and single servings. Impact-bonded base heats evenly, induction ready. Coating stays flawless.",
       canonical: "https://www.chefapprovedtools.com/reviews/cuisinart-8-inch-nonstick-pan",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/cuisinart-8-inch-pan-hero.jpg",
@@ -832,7 +832,7 @@ export const METADATA = {
 
     'nordic-ware-half-sheet-pan': {
       title: "Nordic Ware Sheet Pan: 10 Years, Never Warped (I Own 4)",
-      description: "Nordic Ware half sheet pan tested 10 years: roasting, broiling, baking—still perfectly flat. Commercial-grade 13-gauge aluminum. Develops patina that improves non-stick properties over time.",
+      description: "Nordic Ware sheet pan tested 10 years: roasting, broiling, baking—still perfectly flat. Commercial 13-gauge aluminum develops patina that improves non-stick.",
       canonical: "https://www.chefapprovedtools.com/reviews/nordic-ware-half-sheet-pan",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/nordic-ware-sheet-pan-hero.jpg",
@@ -857,7 +857,7 @@ export const METADATA = {
 
     'rubbermaid-commercial-cooks-scraper': {
       title: "Rubbermaid Scraper: 18 Years, 500°F Rated, Never Melted",
-      description: "Rubbermaid Commercial scraper tested 18 years across two professional kitchens. Handles 500°F griddles without melting. NSF-certified, one-piece molded design. Buy-it-for-life kitchen scraper.",
+      description: "Rubbermaid Commercial scraper tested 18 years professionally. Handles 500°F griddles without melting. NSF-certified one-piece molded design—lifetime tool.",
       canonical: "https://www.chefapprovedtools.com/reviews/rubbermaid-commercial-cooks-scraper",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/rubbermaid-scraper-hero.jpg",
@@ -879,8 +879,8 @@ export const METADATA = {
     } as ReviewMetadata,
 
     'ninja-air-fryer-af101': {
-      title: "Ninja Air Fryer AF101: 85% of Deep-Fryer Results (4 Years)",
-      description: "Ninja AF101 tested 4 years daily: delivers 85% of deep-fryer crispness on wings, fries, frozen foods. 4-quart capacity perfect for 1-2 people. See honest results vs deep frying.",
+      title: "Ninja Air Fryer AF101: 4-Year Test (Honest Results)",
+      description: "Ninja AF101 tested 4 years daily: delivers 85% of deep-fryer results on wings and frozen foods. 4-quart capacity ideal for 1-2 people, not large families.",
       canonical: "https://www.chefapprovedtools.com/reviews/ninja-air-fryer-af101",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/ninja-air-fryer-hero.jpg",
@@ -903,7 +903,7 @@ export const METADATA = {
 
     'victorinox-granton-edge-boning-knife': {
       title: "Victorinox Boning Knife: 20-Year Test, Granton Edge",
-      description: "Victorinox Granton Edge boning knife tested 20 years (10 professional). Flexible blade follows bone contours, granton edge prevents sticking. Breaks down chicken in 3 minutes vs 8-10 with chef knife.",
+      description: "Victorinox Granton boning knife tested 20 years (10 professional). Flexible blade follows contours, granton prevents stick. Breaks down chicken in 3 minutes.",
       canonical: "https://www.chefapprovedtools.com/reviews/victorinox-granton-edge-boning-knife",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/victorinox-boning-knife-hero.jpg",
@@ -926,7 +926,7 @@ export const METADATA = {
 
     'zuperia-bar-mops': {
       title: "ZUPERIA Bar Mops: Better Than Restaurant Grade (100% Cotton)",
-      description: "ZUPERIA bar mops tested in professional kitchens: 100% ring-spun cotton absorbs more than competitors. Industry standard used in restaurants worldwide. Commercial durability survives hundreds of washes.",
+      description: "ZUPERIA bar mops tested professionally: 100% ring-spun cotton absorbs more than competitors. Industry standard in restaurants. Survives hundreds of washes.",
       canonical: "https://www.chefapprovedtools.com/reviews/zuperia-bar-mops",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/zuperia-bar-mops-hero.jpg",
@@ -948,7 +948,7 @@ export const METADATA = {
 
     'small-metal-hotel-pans': {
       title: "Small Metal Hotel Pans: Restaurant Secret for Home Hosting",
-      description: "Small metal hotel pans tested 20 years in restaurants and home. Oven-safe to 500°F, perfect for BBQs, hot holding, roasting. NSF-certified 18-8 stainless steel lasts decades. Restaurant standard.",
+      description: "Small metal hotel pans tested 20 years: oven-safe to 500°F for BBQs, hot holding, roasting. NSF-certified 18-8 stainless steel—decades of professional use.",
       canonical: "https://www.chefapprovedtools.com/reviews/small-metal-hotel-pans",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/small-metal-hotel-pans-hero.jpg",
@@ -972,7 +972,7 @@ export const METADATA = {
 
     'henckels-sharpening-steel': {
       title: "Henckels Honing Steel: 20 Years Since Culinary School",
-      description: "Henckels honing steel tested 20 years since culinary school 2005. Keeps professional knives sharp between sharpenings. Still functional after decades of daily use. Essential maintenance tool.",
+      description: "Henckels honing steel tested 20 years since culinary school 2005. Keeps knives sharp between sharpenings. Still functional after decades of daily use.",
       canonical: "https://www.chefapprovedtools.com/reviews/henckels-sharpening-steel",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/henckels-steel-hero.jpg",
@@ -995,7 +995,7 @@ export const METADATA = {
 
     'large-metal-hotel-pans': {
       title: "Why Restaurant Kitchens Use Metal Hotel Pans (Not Plastic)",
-      description: "Large metal hotel pans tested 24 years in commercial kitchens. Handle heat, steam tables, high-volume service. NSF-certified 18-8 stainless steel for catering operations and event hosting.",
+      description: "Large metal hotel pans tested 24 years commercially: handle heat, steam tables, high-volume service. NSF-certified 18-8 stainless steel for catering ops.",
       canonical: "https://www.chefapprovedtools.com/reviews/large-metal-hotel-pans",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/large-metal-hotel-pans-hero.jpg",
@@ -1017,7 +1017,7 @@ export const METADATA = {
 
     'small-plastic-hotel-pans': {
       title: "Small Plastic Hotel Pans: Better Than Tupperware (20 Years)",
-      description: "Small plastic hotel pans tested 20 years at home. NSF-approved containers eliminate kitchen chaos with standardized sizing. Restaurant storage system organizes everything better than Tupperware.",
+      description: "Small plastic hotel pans tested 20 years: NSF-approved standardized sizing eliminates chaos. Restaurant storage system organizes better than Tupperware.",
       canonical: "https://www.chefapprovedtools.com/reviews/small-plastic-hotel-pans",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/small-plastic-hotel-pans-hero.jpg",
@@ -1039,7 +1039,7 @@ export const METADATA = {
 
     'large-plastic-hotel-pans': {
       title: "Why I Ditched Tupperware For Plastic Hotel Pans (20 Years)",
-      description: "Large plastic hotel pans tested 20 years for meal prep. Full and 1/3 pans organize batch cooking better than Tupperware. Restaurant storage system with NSF-approved stackable containers.",
+      description: "Large plastic hotel pans tested 20 years: full and 1/3 sizes organize batch cooking better than Tupperware. NSF-approved stackable restaurant storage.",
       canonical: "https://www.chefapprovedtools.com/reviews/large-plastic-hotel-pans",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/large-plastic-hotel-pans-hero.jpg",
@@ -1061,7 +1061,7 @@ export const METADATA = {
 
     'lodge-seasoned-cast-iron-3-skillet-bundle': {
       title: "Lodge Cast Iron Bundle: 7 Years, Seasoning Still Perfect",
-      description: "Lodge cast iron 3-skillet bundle tested 7 years weekly. Three sizes (12\", 10.25\", 8\") with seasoning that keeps improving. Professional-grade heat retention, lifetime durability, exceptional value.",
+      description: "Lodge 3-skillet bundle tested 7 years weekly: 12\", 10.25\", 8\" sizes. Seasoning improves with use. Professional heat retention, genuine lifetime durability.",
       canonical: "https://www.chefapprovedtools.com/reviews/lodge-seasoned-cast-iron-3-skillet-bundle",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/lodge-cast-iron-bundle-hero.jpg",
@@ -1084,7 +1084,7 @@ export const METADATA = {
 
     'japanese-wooden-spoon-set': {
       title: "Japanese Wooden Spoons: 3 Years + 100 Dishwasher Cycles",
-      description: "Japanese wooden spoon set tested 3 years with 100+ dishwasher cycles. Still look like new. Won't scratch non-stick or cast iron. No metallic taste transfer. Genuinely dishwasher-safe wooden utensils.",
+      description: "Japanese spoons tested 3 years with 100+ dishwasher cycles: still look new. Won't scratch non-stick or cast iron. No metallic taste. Truly dishwasher-safe.",
       canonical: "https://www.chefapprovedtools.com/reviews/japanese-wooden-spoon-set",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/japanese-wooden-spoons-hero.jpg",
@@ -1107,7 +1107,7 @@ export const METADATA = {
 
     'wusthof-classic-ikon-16-piece': {
       title: "Wüsthof Classic Ikon 16-Piece: 6-Year Professional Test",
-      description: "Wüsthof Classic Ikon 16-piece German-forged knife set tested 6 years professionally. Ergonomic handles reduce hand fatigue. Chef, santoku, bread, paring knives justify set purchase. Premium performance.",
+      description: "Wüsthof Classic Ikon 16-piece tested 6 years professionally. German-forged handles reduce fatigue. Essential chef, santoku, bread, paring knives included.",
       canonical: "https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-16-piece",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/wusthof-ikon-hero.jpg",
