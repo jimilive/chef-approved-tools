@@ -144,36 +144,91 @@ if (slugCallIssues.length === 0) {
 }
 
 // ============================================================================
-// 3. VALIDATE CANONICAL URLs
+// 3. VALIDATE CANONICAL URLs (Check centralized metadata.ts)
 // ============================================================================
 console.log(`\n${BOLD}3. Validating Canonical URLs...${RESET}`)
 
 let canonicalIssues = []
 
+// Read centralized metadata file
+const metadataPath = './data/metadata.ts'
+const metadataContent = readFileSync(metadataPath, 'utf-8')
+
 pageFiles.forEach(({ folder, path }) => {
-  const content = readFileSync(path, 'utf-8')
+  const pageContent = readFileSync(path, 'utf-8')
 
-  // Find canonical URL
-  const canonicalMatch = content.match(/canonical:\s*['"`](https:\/\/[^'"`]+)['"`]/)
-  if (canonicalMatch) {
-    const canonicalUrl = canonicalMatch[1]
-    const expectedUrl = `https://www.chefapprovedtools.com/reviews/${folder}`
+  // Check if page uses centralized metadata
+  const usesGetReviewMetadata = pageContent.includes('getReviewMetadata')
 
-    if (canonicalUrl !== expectedUrl) {
-      canonicalIssues.push({
-        file: `app/reviews/${folder}/page.tsx`,
-        current: canonicalUrl,
-        expected: expectedUrl
-      })
-      errors++
+  if (usesGetReviewMetadata) {
+    // Extract the slug passed to getReviewMetadata
+    const getReviewMetadataMatch = pageContent.match(/getReviewMetadata\(['"`]([^'"`]+)['"`]\)/)
+    if (getReviewMetadataMatch) {
+      const metadataSlug = getReviewMetadataMatch[1]
+
+      // Find this slug's metadata block in metadata.ts
+      // Format is: 'slug': { canonical: "...", ... productSlug: "slug", ... } as ReviewMetadata,
+      const escapedSlug = metadataSlug.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+      const blockRegex = new RegExp(`'${escapedSlug}':\\s*\\{([\\s\\S]*?)\\}\\s*as\\s+ReviewMetadata`, 'm')
+      const blockMatch = metadataContent.match(blockRegex)
+
+      if (blockMatch) {
+        const block = blockMatch[1]  // Get the captured group (the contents between { and })
+        // Now extract canonical from this specific block
+        const canonicalMatch = block.match(/canonical:\s*["'](https:\/\/[^"']+)["']/)
+
+        if (canonicalMatch) {
+          const canonicalUrl = canonicalMatch[1]
+          const expectedUrl = `https://www.chefapprovedtools.com/reviews/${folder}`
+
+          if (canonicalUrl !== expectedUrl) {
+            canonicalIssues.push({
+              file: `data/metadata.ts (${metadataSlug})`,
+              current: canonicalUrl,
+              expected: expectedUrl
+            })
+            errors++
+          }
+        } else {
+          canonicalIssues.push({
+            file: `data/metadata.ts (${metadataSlug})`,
+            current: 'NO CANONICAL IN BLOCK',
+            expected: `https://www.chefapprovedtools.com/reviews/${folder}`
+          })
+          warnings++
+        }
+      } else {
+        canonicalIssues.push({
+          file: `data/metadata.ts (${metadataSlug})`,
+          current: 'BLOCK NOT FOUND',
+          expected: `https://www.chefapprovedtools.com/reviews/${folder}`
+        })
+        warnings++
+      }
     }
   } else {
-    canonicalIssues.push({
-      file: `app/reviews/${folder}/page.tsx`,
-      current: 'NOT FOUND',
-      expected: `https://www.chefapprovedtools.com/reviews/${folder}`
-    })
-    warnings++
+    // Legacy: check for hardcoded canonical in page file
+    const canonicalMatch = pageContent.match(/canonical:\s*['"`](https:\/\/[^'"`]+)['"`]/)
+    if (canonicalMatch) {
+      const canonicalUrl = canonicalMatch[1]
+      const expectedUrl = `https://www.chefapprovedtools.com/reviews/${folder}`
+
+      if (canonicalUrl !== expectedUrl) {
+        canonicalIssues.push({
+          file: `app/reviews/${folder}/page.tsx`,
+          current: canonicalUrl,
+          expected: expectedUrl
+        })
+        errors++
+      }
+    } else {
+      canonicalIssues.push({
+        file: `app/reviews/${folder}/page.tsx`,
+        current: 'NOT FOUND',
+        expected: `https://www.chefapprovedtools.com/reviews/${folder}`
+      })
+      warnings++
+    }
   }
 })
 
