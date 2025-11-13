@@ -16,6 +16,7 @@ import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import AuthorBio from '@/components/review/AuthorBio'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
+import { getReviewMetadata } from '@/data/metadata'
 import { reviewData } from './rubbermaid-commercial-cooks-scraper-data'
 
 // ISR configuration - revalidate every hour
@@ -23,39 +24,45 @@ export const revalidate = 3600
 export const fetchCache = 'force-cache'
 
 export async function generateMetadata(): Promise<Metadata> {
+  const centralMeta = getReviewMetadata('rubbermaid-commercial-cooks-scraper')
+  const product = await getProductBySlug(reviewData.productSlug)
+  const productData = product || reviewData.legacyProductData
+
   return {
-    title: reviewData.metadata.title,
-    description: reviewData.metadata.description,
-    keywords: reviewData.metadata.keywords,
-    robots: {
-      index: true,
-      follow: true,
-    },
+    title: centralMeta.title,
+    description: centralMeta.description,
     alternates: {
-      canonical: 'https://www.chefapprovedtools.com/reviews/rubbermaid-commercial-cooks-scraper',
+      canonical: centralMeta.canonical,
     },
     openGraph: {
-      title: reviewData.metadata.ogTitle,
-      description: reviewData.metadata.ogDescription,
-      images: [generateOGImageURL({
-        title: "Rubbermaid Commercial Scraper Review",
-        rating: reviewData.header.expertRating,
-        testingPeriod: "18 Years Professional Testing",
-        tier: reviewData.metadata.tier
-      })],
-      url: 'https://www.chefapprovedtools.com/reviews/rubbermaid-commercial-cooks-scraper',
-      type: 'article',
+      title: centralMeta.ogTitle || centralMeta.title,
+      description: centralMeta.ogDescription || centralMeta.description,
+      url: centralMeta.canonical,
       siteName: 'Chef Approved Tools',
+      images: [
+        {
+          url: centralMeta.imageUrl || generateOGImageURL({
+            title: productData.name,
+            rating: productData.expertRating ?? reviewData.header.expertRating,
+            testingPeriod: centralMeta.testingPeriod,
+            tier: centralMeta.tier,
+          }),
+          width: 1200,
+          height: 630,
+          alt: centralMeta.imageAlt || `${productData.name} - Professional Review`,
+        },
+      ],
+      type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
-      title: reviewData.metadata.ogTitle,
-      description: reviewData.metadata.ogDescription,
-      images: [generateOGImageURL({
-        title: "Rubbermaid Commercial Scraper Review",
-        rating: reviewData.header.expertRating,
-        testingPeriod: "18 Years Professional Testing",
-        tier: reviewData.metadata.tier
+      title: centralMeta.ogTitle || centralMeta.title,
+      description: centralMeta.ogDescription || centralMeta.description,
+      images: [centralMeta.imageUrl || generateOGImageURL({
+        title: productData.name,
+        rating: productData.expertRating ?? reviewData.header.expertRating,
+        testingPeriod: centralMeta.testingPeriod,
+        tier: centralMeta.tier,
       })],
     },
   }

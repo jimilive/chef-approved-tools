@@ -16,6 +16,7 @@ import type { Metadata } from 'next';
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
+import { getReviewMetadata } from '@/data/metadata'
 import { reviewData } from './robot-coupe-r2-dice-data'
 
 // ISR configuration - revalidate every hour
@@ -27,46 +28,45 @@ const legacyProductData = reviewData.legacyProductData
 const faqData = reviewData.faq.items
 
 export async function generateMetadata(): Promise<Metadata> {
+  const centralMeta = getReviewMetadata('robot-coupe-r2-dice')
+  const product = await getProductBySlug(reviewData.productSlug)
+  const productData = product || reviewData.legacyProductData
+
   return {
-    title: "Robot Coupe R2: Commercial Prep Powerhouse",
-    description: "Robot Coupe R2 Dice: 3-year commercial test. 2 HP motor, continuous feed. Saves hours daily in restaurant prep. Professional review.",
-    keywords: ["Robot Coupe R2 Dice", "commercial food processor", "restaurant equipment", "professional kitchen", "food prep equipment", "continuous feed processor"],
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
+    title: centralMeta.title,
+    description: centralMeta.description,
     alternates: {
-      canonical: 'https://www.chefapprovedtools.com/reviews/robot-coupe-r2-dice',
+      canonical: centralMeta.canonical,
     },
     openGraph: {
-      title: "Robot Coupe R2 Dice: The Commercial Food Processor That Transformed Our Prep Kitchen",
-      description: "Professional review after 3 years of intensive testing in high-volume restaurant prep kitchen",
-      images: [generateOGImageURL({
-        title: "Robot Coupe R2 Dice Review",
-        rating: 4.9,
-        testingPeriod: "3 Years Commercial Testing",
-        tier: 1
-      })],
-      url: 'https://www.chefapprovedtools.com/reviews/robot-coupe-r2-dice',
-      type: 'article',
+      title: centralMeta.ogTitle || centralMeta.title,
+      description: centralMeta.ogDescription || centralMeta.description,
+      url: centralMeta.canonical,
       siteName: 'Chef Approved Tools',
+      images: [
+        {
+          url: centralMeta.imageUrl || generateOGImageURL({
+            title: productData.name,
+            rating: productData.expertRating ?? 4.9,
+            testingPeriod: centralMeta.testingPeriod,
+            tier: centralMeta.tier,
+          }),
+          width: 1200,
+          height: 630,
+          alt: centralMeta.imageAlt || `${productData.name} - Professional Review`,
+        },
+      ],
+      type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
-      title: "Robot Coupe R2 Dice: Commercial Food Processor Review",
-      description: "3 years of intensive commercial testing",
-      images: [generateOGImageURL({
-        title: "Robot Coupe R2 Dice Review",
-        rating: 4.9,
-        testingPeriod: "3 Years Commercial Testing",
-        tier: 1
+      title: centralMeta.ogTitle || centralMeta.title,
+      description: centralMeta.ogDescription || centralMeta.description,
+      images: [centralMeta.imageUrl || generateOGImageURL({
+        title: productData.name,
+        rating: productData.expertRating ?? 4.9,
+        testingPeriod: centralMeta.testingPeriod,
+        tier: centralMeta.tier,
       })],
     },
   }

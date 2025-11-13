@@ -7,15 +7,9 @@ import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-export const metadata: Metadata = {
-  title: 'Food Processor vs Blender: 90% of Home Cooks Only Need One',
-  description: "24 years in professional kitchens: Most home cooks only need a blender OR food processor, not both. Here's which one based on what you actually cook.",
-  keywords: ['food processor vs blender', 'blender or food processor', 'kitchen appliance guide', 'cooking tools explained', 'what chefs use in the kitchen'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/food-processor-vs-blender',
-  },
-}
+export const metadata: Metadata = generateBlogMetadata('food-processor-vs-blender')
 
 const articleSchema = generateArticleSchema({
   headline: "Food Processor vs Blender: Which Do You Actually Need?",

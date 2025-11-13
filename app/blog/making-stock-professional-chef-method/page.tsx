@@ -11,15 +11,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "The 3-Step Method That Makes Restaurant-Quality Stock",
-  description: "24 years making stock in professional kitchens: The 3-step method that creates deep, rich flavor. Why restaurant stock tastes better than store-bought.",
-  keywords: ["how to make stock", "chicken stock recipe", "restaurant stock method", "stock vs broth", "building flavor in stock", "homemade stock"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/making-stock-professional-chef-method'
-  }
-};
+export const metadata: Metadata = generateBlogMetadata('making-stock-professional-chef-method');
 
 const articleSchema = generateArticleSchema({
   headline: "Making Stock: Professional Chef Method – How to Build Flavor",
