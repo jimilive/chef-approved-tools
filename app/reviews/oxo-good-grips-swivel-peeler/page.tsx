@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
+import { getReviewMetadata } from '@/data/metadata'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import FTCDisclosure from '@/components/FTCDisclosure'
@@ -19,34 +20,38 @@ export const revalidate = 3600
 export const fetchCache = 'force-cache'
 
 export async function generateMetadata(): Promise<Metadata> {
+  const centralMeta = getReviewMetadata('oxo-good-grips-swivel-peeler')
+  const product = await getProductBySlug(reviewData.productSlug)
+  const productData = product || reviewData.legacyProductData
+
   return {
+    title: centralMeta.title,
+    description: centralMeta.description,
     alternates: {
-      canonical: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-swivel-peeler',
+      canonical: centralMeta.canonical,
     },
-    title: reviewData.metadata.title,
-    description: reviewData.metadata.description,
     openGraph: {
-      title: reviewData.metadata.ogTitle,
-      description: reviewData.metadata.ogDescription,
-      type: 'article',
-      url: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-swivel-peeler',
+      title: centralMeta.ogTitle || centralMeta.title,
+      description: centralMeta.ogDescription || centralMeta.description,
+      url: centralMeta.canonical,
       siteName: 'Chef Approved Tools',
-      images: [generateOGImageURL({
-        title: "OXO Good Grips Swivel Peeler Review",
-        rating: reviewData.hero.rating,
-        testingPeriod: reviewData.metadata.testingPeriod,
-        tier: reviewData.metadata.tier
+      type: 'article',
+      images: [centralMeta.imageUrl || generateOGImageURL({
+        title: productData.name,
+        rating: productData.expertRating ?? reviewData.hero.rating,
+        testingPeriod: centralMeta.testingPeriod,
+        tier: centralMeta.tier
       })],
     },
     twitter: {
       card: 'summary_large_image',
-      title: reviewData.metadata.ogTitle,
-      description: reviewData.metadata.ogDescription,
-      images: [generateOGImageURL({
-        title: "OXO Good Grips Swivel Peeler Review",
-        rating: reviewData.hero.rating,
-        testingPeriod: reviewData.metadata.testingPeriod,
-        tier: reviewData.metadata.tier
+      title: centralMeta.ogTitle || centralMeta.title,
+      description: centralMeta.ogDescription || centralMeta.description,
+      images: [centralMeta.imageUrl || generateOGImageURL({
+        title: productData.name,
+        rating: productData.expertRating ?? reviewData.hero.rating,
+        testingPeriod: centralMeta.testingPeriod,
+        tier: centralMeta.tier
       })],
     },
   }

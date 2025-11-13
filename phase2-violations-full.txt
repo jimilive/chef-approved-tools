@@ -1,0 +1,347 @@
+
+> chefapprovedtools@2.0.0 validate:phase1
+> npm run validate:types && npm run validate:metadata && npm run validate:content && npm run validate:new-images && npm run validate:schema
+
+
+> chefapprovedtools@2.0.0 validate:types
+> npm run type-check
+
+
+> chefapprovedtools@2.0.0 type-check
+> tsc --noEmit
+
+
+> chefapprovedtools@2.0.0 validate:metadata
+> node scripts/validate-metadata.js
+
+📋 Validating metadata...
+
+❌ METADATA VALIDATION FAILED
+
+File: app/page.tsx
+Issue: Title too long: 66 chars (max 60)
+Title: Chef Approved Tools: 24 Years Restaurant Testing Kitchen Equipment
+---
+File: app/the-tools-that-started-it-all/page.tsx
+Issue: Description wrong length: 161 chars (should be 150-160)
+Desc: The 11 essential kitchen tools I packed for culina...
+---
+File: app/terms/page.tsx
+Issue: Description wrong length: 148 chars (should be 150-160)
+Desc: Terms of Service for Chef Approved Tools. Legal te...
+---
+File: app/reviews/page.tsx
+Issue: Title too long: 61 chars (max 60)
+Title: All Equipment Reviews: 37 Products Chef-Tested In Restaurants
+---
+File: app/reviews/robot-coupe-r2-dice/page.tsx
+Issue: Description wrong length: 132 chars (should be 150-160)
+Desc: Robot Coupe R2 Dice: 3-year commercial test. 2 HP ...
+---
+File: app/reviews/benriner-large-mandoline/page.tsx
+Issue: Description wrong length: 63 chars (should be 150-160)
+Desc: Professional size, handles big vegetables. Include...
+---
+File: app/privacy-policy/page.tsx
+Issue: Description wrong length: 144 chars (should be 150-160)
+Desc: Privacy policy for Chef Approved Tools. How we col...
+---
+File: app/kitchen-bundle/page.tsx
+Issue: Description wrong length: 148 chars (should be 150-160)
+Desc: Professional kitchen starter kit: 10 essential too...
+---
+File: app/guides/kitchen-appliances/page.tsx
+Issue: Title too long: 62 chars (max 60)
+Title: Kitchen Appliances Buying Guide 2025: Pro Chef Recommendations
+---
+File: app/guides/cookware-materials/page.tsx
+Issue: Title too long: 64 chars (max 60)
+Title: Cookware Materials Guide: Stainless vs Cast Iron vs Carbon Steel
+---
+File: app/guides/cookware-materials/page.tsx
+Issue: Description wrong length: 147 chars (should be 150-160)
+Desc: Complete guide to cookware materials from 24 years...
+---
+File: app/guides/best-cookware/page.tsx
+Issue: Description wrong length: 116 chars (should be 150-160)
+Desc: Professional cookware recommendations from 24 year...
+---
+File: app/guides/affordable-kitchen-appliances/page.tsx
+Issue: Title too long: 62 chars (max 60)
+Title: Budget Kitchen Appliances 2025: What Actually Works Under $100
+---
+File: app/glossary/page.tsx
+Issue: Title too long: 65 chars (max 60)
+Title: Kitchen Terms Glossary: Equipment Specs & Professional Techniques
+---
+File: app/disclosure/page.tsx
+Issue: Title too long: 64 chars (max 60)
+Title: Affiliate Disclosure | How Chef Approved Tools Earns Commissions
+---
+File: app/cookware/page.tsx
+Issue: Title too long: 61 chars (max 60)
+Title: Best Cookware 2025: Pans & Pots Tested In Restaurant Kitchens
+---
+File: app/cookie-policy/page.tsx
+Issue: Description wrong length: 132 chars (should be 150-160)
+Desc: Cookie Policy for Chef Approved Tools. How we use ...
+---
+File: app/chef-approved/page.tsx
+Issue: Description wrong length: 5 chars (should be 150-160)
+Desc: What ...
+---
+File: app/blog/page.tsx
+Issue: Description wrong length: 108 chars (should be 150-160)
+Desc: 24 years of professional cooking methods translate...
+---
+File: app/blog/wood-vs-composite-cutting-board/page.tsx
+Issue: Title too long: 61 chars (max 60)
+Title: Wood vs Composite Cutting Boards: Why 90% of Pros Choose Wood
+---
+File: app/blog/wood-vs-composite-cutting-board/page.tsx
+Issue: Description wrong length: 147 chars (should be 150-160)
+Desc: 24 years testing both: Wood cutting boards win on ...
+---
+File: app/blog/why-resting-meat-key-cooking/page.tsx
+Issue: Description wrong length: 147 chars (should be 150-160)
+Desc: Why resting meat after cooking is key to juicy res...
+---
+File: app/blog/why-cooking-science-matters/page.tsx
+Issue: Description wrong length: 127 chars (should be 150-160)
+Desc: 24 years in professional kitchens: Understanding t...
+---
+File: app/blog/what-is-emulsification/page.tsx
+Issue: Description wrong length: 148 chars (should be 150-160)
+Desc: What is emulsification? The science behind stable ...
+---
+File: app/blog/what-is-braising/page.tsx
+Issue: Description wrong length: 147 chars (should be 150-160)
+Desc: What is braising? The low and slow cooking method ...
+---
+File: app/blog/vegetable-roasting-guide/page.tsx
+Issue: Description wrong length: 144 chars (should be 150-160)
+Desc: Complete vegetable roasting guide: Times and tempe...
+---
+File: app/blog/understanding-umami-fifth-taste/page.tsx
+Issue: Description wrong length: 137 chars (should be 150-160)
+Desc: Understanding umami: The fifth taste explained by ...
+---
+File: app/blog/understanding-cooking-fats/page.tsx
+Issue: Description wrong length: 116 chars (should be 150-160)
+Desc: Understanding cooking fats: Butter vs oil vs lard ...
+---
+File: app/blog/understanding-acids-cooking/page.tsx
+Issue: Description wrong length: 148 chars (should be 150-160)
+Desc: Understanding acids in cooking: How lemon, vinegar...
+---
+File: app/blog/stock-vs-broth-vs-bouillon/page.tsx
+Issue: Description wrong length: 144 chars (should be 150-160)
+Desc: Stock vs broth vs bouillon: The differences explai...
+---
+File: app/blog/stand-mixer-vs-hand-mixer/page.tsx
+Issue: Description wrong length: 147 chars (should be 150-160)
+Desc: Stand mixers excel at bread dough and hands-free m...
+---
+File: app/blog/stainless-steel-why-food-sticks/page.tsx
+Issue: Description wrong length: 138 chars (should be 150-160)
+Desc: Why food sticks to stainless steel pans and how to...
+---
+File: app/blog/sheet-pan-cooking-restaurant-techniques/page.tsx
+Issue: Description wrong length: 143 chars (should be 150-160)
+Desc: Sheet pan cooking using restaurant techniques: How...
+---
+File: app/blog/reducing-sauces-restaurant-technique/page.tsx
+Issue: Title too long: 61 chars (max 60)
+Title: Restaurant Sauce Technique: How Reduction Creates Deep Flavor
+---
+File: app/blog/onions-cooking-guide/page.tsx
+Issue: Description wrong length: 133 chars (should be 150-160)
+Desc: Complete onions cooking guide: Different types and...
+---
+File: app/blog/nonstick-vs-stainless-steel-pans/page.tsx
+Issue: Description wrong length: 162 chars (should be 150-160)
+Desc: Nonstick for eggs and delicate fish, dies in 3 yea...
+---
+File: app/blog/mis-en-place-professional-cooking/page.tsx
+Issue: Description wrong length: 145 chars (should be 150-160)
+Desc: Mise en place explained: The professional cooking ...
+---
+File: app/blog/maillard-reaction-browning-flavor/page.tsx
+Issue: Description wrong length: 148 chars (should be 150-160)
+Desc: Maillard reaction explained: The science behind br...
+---
+File: app/blog/knife-storage-protecting-blades-for-decades/page.tsx
+Issue: Description wrong length: 119 chars (should be 150-160)
+Desc: Knife storage methods that protect blades for deca...
+---
+File: app/blog/knife-safety-rules-professional-kitchens/page.tsx
+Issue: Title too long: 61 chars (max 60)
+Title: Knife Safety Rules From Professional Kitchens (Never Get Cut)
+---
+File: app/blog/kitchen-tools-wasting-money/page.tsx
+Issue: Description wrong length: 103 chars (should be 150-160)
+Desc: 10 kitchen tools that waste your money—skip these ...
+---
+File: app/blog/kitchen-thermometers-guide/page.tsx
+Issue: Description wrong length: 99 chars (should be 150-160)
+Desc: Kitchen thermometers guide: Instant-read vs leave-...
+---
+File: app/blog/kitchen-starter-kit-first-5-tools/page.tsx
+Issue: Description wrong length: 103 chars (should be 150-160)
+Desc: Kitchen starter kit: The first 5 tools you actuall...
+---
+File: app/blog/kitchen-gloves-guide/page.tsx
+Issue: Description wrong length: 106 chars (should be 150-160)
+Desc: Kitchen gloves guide: When to use heat-resistant v...
+---
+File: app/blog/hydration-health-water-intake/page.tsx
+Issue: Description wrong length: 143 chars (should be 150-160)
+Desc: Hydration and water intake guide: How much water y...
+---
+File: app/blog/how-to-steel-a-knife/page.tsx
+Issue: Description wrong length: 146 chars (should be 150-160)
+Desc: How to steel a knife properly: Honing vs sharpenin...
+---
+File: app/blog/how-to-preheat-a-pan/page.tsx
+Issue: Title too long: 62 chars (max 60)
+Title: How To Preheat A Pan The Right Way (Most People Do This Wrong)
+---
+File: app/blog/how-to-make-perfect-risotto/page.tsx
+Issue: Title too long: 61 chars (max 60)
+Title: How To Make Perfect Risotto: The Italian Restaurant Technique
+---
+File: app/blog/how-to-make-perfect-risotto/page.tsx
+Issue: Description wrong length: 149 chars (should be 150-160)
+Desc: How to make perfect risotto using the Italian rest...
+---
+File: app/blog/how-to-make-perfect-french-press-coffee/page.tsx
+Issue: Description wrong length: 149 chars (should be 150-160)
+Desc: How to make perfect French press coffee using the ...
+---
+File: app/blog/how-to-cook-perfect-pasta/page.tsx
+Issue: Description wrong length: 149 chars (should be 150-160)
+Desc: How to cook perfect pasta every time using the Ita...
+---
+File: app/blog/how-to-clean-burnt-stainless-steel-pans/page.tsx
+Issue: Description wrong length: 80 chars (should be 150-160)
+Desc: How to clean burnt stainless steel pans using the ...
+---
+File: app/blog/how-to-choose-first-chef-knife/page.tsx
+Issue: Description wrong length: 77 chars (should be 150-160)
+Desc: How to choose your first chef knife without wastin...
+---
+File: app/blog/guide-cooking-oils-smoke-points/page.tsx
+Issue: Description wrong length: 130 chars (should be 150-160)
+Desc: 24 years cooking with every oil: Smoke point chart...
+---
+File: app/blog/gas-vs-induction-cooktop/page.tsx
+Issue: Description wrong length: 144 chars (should be 150-160)
+Desc: Induction boils water 2x faster and wastes 50% les...
+---
+File: app/blog/food-processor-vs-blender/page.tsx
+Issue: Description wrong length: 105 chars (should be 150-160)
+Desc: 24 years in professional kitchens: Most home cooks...
+---
+File: app/blog/fat-is-flavor/page.tsx
+Issue: Description wrong length: 149 chars (should be 150-160)
+Desc: Why fat is flavor: The science behind why restaura...
+---
+File: app/blog/dutch-oven-size-guide-which-quart-size/page.tsx
+Issue: Title too long: 62 chars (max 60)
+Title: Dutch Oven Size Guide: 5.5-Qt vs 7-Qt (Which For Your Family?)
+---
+File: app/blog/dutch-oven-size-guide-which-quart-size/page.tsx
+Issue: Description wrong length: 148 chars (should be 150-160)
+Desc: Most families need either 5.5-qt or 7-qt. Choose b...
+---
+File: app/blog/deglazing-pan-sauces/page.tsx
+Issue: Description wrong length: 149 chars (should be 150-160)
+Desc: Deglazing and pan sauce technique explained by a p...
+---
+File: app/blog/cutting-board-materials-guide/page.tsx
+Issue: Description wrong length: 82 chars (should be 150-160)
+Desc: Cutting board materials compared: Wood vs plastic ...
+---
+File: app/blog/cooking-with-tomatoes-fresh-vs-canned/page.tsx
+Issue: Description wrong length: 72 chars (should be 150-160)
+Desc: Fresh vs canned tomatoes: When to use each in cook...
+---
+File: app/blog/cast-iron-vs-carbon-steel-pan/page.tsx
+Issue: Description wrong length: 145 chars (should be 150-160)
+Desc: Cast iron holds heat 3x longer for searing. Carbon...
+---
+File: app/blog/cast-iron-seasoning-care/page.tsx
+Issue: Description wrong length: 148 chars (should be 150-160)
+Desc: How to season and care for cast iron cookware. Bui...
+---
+File: app/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once/page.tsx
+Issue: Description wrong length: 145 chars (should be 150-160)
+Desc: Durability is sustainability. Quality equipment la...
+---
+File: app/blog/caramelizing-onions-why-it-takes-45-minutes/page.tsx
+Issue: Description wrong length: 43 chars (should be 150-160)
+Desc: Real caramelization takes 45 minutes. Here\...
+---
+File: app/blog/caramelization-science/page.tsx
+Issue: Title too long: 61 chars (max 60)
+Title: Why Restaurant Caramel Tastes Better: Temperature & Technique
+---
+File: app/blog/caramelization-science/page.tsx
+Issue: Description wrong length: 60 chars (should be 150-160)
+Desc: Temperature and technique matter more than ingredi...
+---
+File: app/blog/bread-science-gluten-development/page.tsx
+Issue: Title too long: 61 chars (max 60)
+Title: Why Your Bread Is Dense: Gluten Development Science Explained
+---
+File: app/blog/bread-science-gluten-development/page.tsx
+Issue: Description wrong length: 143 chars (should be 150-160)
+Desc: The chemistry behind fluffy bread vs. dense bricks...
+---
+File: app/blog/braising-101-tough-cuts-made-tender/page.tsx
+Issue: Title too long: 64 chars (max 60)
+Title: How To Turn Cheap Meat Into Restaurant-Quality Tender (Braising)
+---
+File: app/blog/braising-101-tough-cuts-made-tender/page.tsx
+Issue: Description wrong length: 144 chars (should be 150-160)
+Desc: Braising transforms $8/lb tough cuts into fall-apa...
+---
+File: app/blog/blanching-vegetables-why-restaurants-do-it/page.tsx
+Issue: Description wrong length: 28 chars (should be 150-160)
+Desc: Blanching is the secret. It\...
+---
+File: app/blog/best-scrambled-eggs/page.tsx
+Issue: Title too long: 65 chars (max 60)
+Title: The Scrambled Egg Method That Changed Everything (No Bowl Needed)
+---
+File: app/blog/best-scrambled-eggs/page.tsx
+Issue: Description wrong length: 92 chars (should be 150-160)
+Desc: No bowl. No whisk. No milk. Just perfect, creamy s...
+---
+File: app/blog/benefits-cooking-with-garlic/page.tsx
+Issue: Description wrong length: 61 chars (should be 150-160)
+Desc: Professional kitchens go through cases of garlic w...
+---
+File: app/blog/bacon-but-not-in-this-dish/page.tsx
+Issue: Description wrong length: 11 chars (should be 150-160)
+Desc: Bacon doesn...
+---
+File: app/best-knife-for-cutting-meat/page.tsx
+Issue: Description wrong length: 13 chars (should be 150-160)
+Desc: Victorinox 6\...
+---
+File: app/best-budget-chef-knife/page.tsx
+Issue: Title too long: 63 chars (max 60)
+Title: Best Budget Chef Knife 2025: Why Pros Choose The $50 Victorinox
+---
+File: app/best-budget-chef-knife/page.tsx
+Issue: Description wrong length: 20 chars (should be 150-160)
+Desc: Victorinox Fibrox 8\...
+---
+File: app/about/page.tsx
+Issue: Description wrong length: 147 chars (should be 150-160)
+Desc: 24 years in professional kitchens—Purple Café, Mel...
+---
+
+Total errors: 81
+

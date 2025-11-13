@@ -12,6 +12,7 @@ import {
 import AuthorBio from '@/components/review/AuthorBio'
 import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import FTCDisclosure from '@/components/FTCDisclosure'
+import { getReviewMetadata } from '@/data/metadata'
 
 // Import review data
 import { reviewData } from './oxo-good-grips-bench-scraper-data'
@@ -21,42 +22,43 @@ export const revalidate = 3600
 export const fetchCache = 'force-cache'
 
 export async function generateMetadata(): Promise<Metadata> {
+  const centralMeta = getReviewMetadata('oxo-good-grips-bench-scraper')
   const product = await getProductBySlug(reviewData.productSlug)
   const productData = product || reviewData.legacyProductData
 
   return {
-    title: reviewData.metadata.title,
-    description: reviewData.metadata.description,
+    title: centralMeta.title,
+    description: centralMeta.description,
     alternates: {
-      canonical: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-bench-scraper',
+      canonical: centralMeta.canonical,
     },
     openGraph: {
-      title: reviewData.metadata.ogTitle,
-      description: reviewData.metadata.ogDescription,
-      url: 'https://www.chefapprovedtools.com/reviews/oxo-good-grips-bench-scraper',
+      title: centralMeta.ogTitle || centralMeta.title,
+      description: centralMeta.ogDescription || centralMeta.description,
+      url: centralMeta.canonical,
       siteName: 'Chef Approved Tools',
       images: [{
-        url: generateOGImageURL({
+        url: centralMeta.imageUrl || generateOGImageURL({
           title: productData.name,
           rating: productData.expertRating ?? reviewData.hero.rating,
-          testingPeriod: reviewData.metadata.testingPeriod,
-          tier: reviewData.metadata.tier as 1 | 2 | 3,
+          testingPeriod: centralMeta.testingPeriod,
+          tier: centralMeta.tier,
         }),
         width: 1200,
         height: 630,
-        alt: `${productData.name} - Professional Review`,
+        alt: centralMeta.imageAlt || `${productData.name} - Professional Review`,
       }],
       type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
-      title: reviewData.metadata.ogTitle,
-      description: reviewData.metadata.ogDescription,
-      images: [generateOGImageURL({
+      title: centralMeta.ogTitle || centralMeta.title,
+      description: centralMeta.ogDescription || centralMeta.description,
+      images: [centralMeta.imageUrl || generateOGImageURL({
         title: productData.name,
         rating: productData.expertRating ?? reviewData.hero.rating,
-        testingPeriod: reviewData.metadata.testingPeriod,
-        tier: reviewData.metadata.tier as 1 | 2 | 3,
+        testingPeriod: centralMeta.testingPeriod,
+        tier: centralMeta.tier,
       })],
     },
   }

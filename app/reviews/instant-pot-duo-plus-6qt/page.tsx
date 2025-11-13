@@ -17,6 +17,7 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getReviewMetadata } from '@/data/metadata'
 
 // Import review data
 import { reviewData } from './instant-pot-duo-plus-6qt-data'
@@ -27,44 +28,45 @@ export const fetchCache = 'force-cache'
 
 // Generate metadata dynamically
 export async function generateMetadata(): Promise<Metadata> {
+  const centralMeta = getReviewMetadata('instant-pot-duo-plus-6qt')
   const product = await getProductBySlug(reviewData.productSlug)
   const productData = product || reviewData.legacyProductData
 
   return {
-    title: reviewData.metadata.title,
-    description: reviewData.metadata.description,
+    title: centralMeta.title,
+    description: centralMeta.description,
     alternates: {
-      canonical: 'https://www.chefapprovedtools.com/reviews/instant-pot-duo-plus-6qt',
+      canonical: centralMeta.canonical,
     },
     openGraph: {
-      title: reviewData.metadata.ogTitle,
-      description: reviewData.metadata.ogDescription,
-      url: 'https://www.chefapprovedtools.com/reviews/instant-pot-duo-plus-6qt',
+      title: centralMeta.ogTitle || centralMeta.title,
+      description: centralMeta.ogDescription || centralMeta.description,
+      url: centralMeta.canonical,
       siteName: 'Chef Approved Tools',
       images: [
         {
-          url: generateOGImageURL({
+          url: centralMeta.imageUrl || generateOGImageURL({
             title: productData.name,
             rating: productData.expertRating ?? reviewData.hero.rating,
-            testingPeriod: reviewData.metadata.testingPeriod,
-            tier: reviewData.metadata.tier as 1 | 2 | 3,
+            testingPeriod: centralMeta.testingPeriod,
+            tier: centralMeta.tier,
           }),
           width: 1200,
           height: 630,
-          alt: `${productData.name} - Professional Review`,
+          alt: centralMeta.imageAlt || `${productData.name} - Professional Review`,
         },
       ],
       type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
-      title: reviewData.metadata.ogTitle,
-      description: reviewData.metadata.ogDescription,
-      images: [generateOGImageURL({
+      title: centralMeta.ogTitle || centralMeta.title,
+      description: centralMeta.ogDescription || centralMeta.description,
+      images: [centralMeta.imageUrl || generateOGImageURL({
         title: productData.name,
         rating: productData.expertRating ?? reviewData.hero.rating,
-        testingPeriod: reviewData.metadata.testingPeriod,
-        tier: reviewData.metadata.tier as 1 | 2 | 3,
+        testingPeriod: centralMeta.testingPeriod,
+        tier: centralMeta.tier,
       })],
     },
   }

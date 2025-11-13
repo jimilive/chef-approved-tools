@@ -50,7 +50,8 @@ When in doubt: **STOP and ASK before changing anything.**
 
 **Email Content:**
 1. Read [VOICE_AND_CREDENTIALS.md] first
-2. See [CONTENT_STANDARDS.md - Part 1: Content Strategy]
+2. See [CONTENT_STANDARDS.md - Part 5: Email System] (Friend voice - different rules!)
+3. **Remember:** Emails CAN use personal stories and restaurant names
 
 ---
 
@@ -240,11 +241,8 @@ done
 
 **❌ NEVER include:**
 ```tsx
-"This costs around $50"
 "At roughly the same price as two lattes"
-"Best value in its price range"
 "The budget-friendly option"
-"Worth the extra money"
 ```
 
 **✅ ALWAYS use instead:**
@@ -428,8 +426,8 @@ https://amazon.com/dp/[ASIN]?tag=chefapprovedt-20
 - Decision tree for which pattern
 
 **Part 4: SEO Standards**
-- Title tag format (<60 chars, <80% similar)
-- Meta description format (150-160 chars, <80% similar)
+- Title tag format (<60 chars, <80% similar. optimize for CTR)
+- Meta description format (150-160 chars, <80% similar, optimize for CTR)
 - Character encoding (apostrophes, quotes)
 - Schema markup requirements
 - Image alt text
@@ -570,6 +568,281 @@ Does the script modify files?
 
 ---
 
+## 🧩 Component Inventory & Usage Guide
+
+**Purpose:** Clarify what components EXIST (just import) vs what needs DATA (generate content)
+
+### Self-Contained Components (Just Import - No Data Needed)
+
+These components are complete. **Just import and use. DO NOT generate content for them.**
+
+#### Review Pages
+
+**`<AuthorBio />`**
+- Pre-built with Scott's complete bio
+- Located at: `/components/AuthorBio.tsx`
+- **What AI does:** Import it, don't generate bio text
+- **Never pass:** name, credentials, or bio content as props
+
+**`<Breadcrumb />`**
+- Auto-generates breadcrumb navigation from URL structure
+- **What AI does:** Just import and use
+- **Never pass:** paths or navigation data
+
+**`<Dates />`**
+- Displays formatted dates (added/updated)
+- **What AI does:** Pass dateAdded and lastUpdated from product data
+- Takes data from product metadata, formats automatically
+
+#### Blog Pages
+
+**`<BlogAuthorBio />`**
+- Pre-built with Scott's complete bio (blog version)
+- Located at: `/components/blog/BlogAuthorBio.tsx`
+- **What AI does:** Import it, don't generate bio text
+- **Never pass:** name, credentials, or bio content as props
+
+**`<BlogLayout />`**
+- Wrapper component that provides blog page structure
+- **What AI does:** Import and wrap content
+- Pass: metadata (title, description, etc.)
+
+---
+
+### Data-Hungry Components (AI Generates Content)
+
+These components **need data from AI**. Generate content following voice/credential standards.
+
+#### Review Pages - AI Must Create Data For:
+
+**`<ReviewHero />`**
+- **Needs:** title, authorName, authorCredentials, rating, tierBadge, verdict, verdictStrong
+- **What AI does:** Generate title, verdict statements, rating based on testing
+- See COMPONENT_INTERFACES.md for exact structure
+
+**`<TestingResultsGrid />`**
+- **Needs:** testingEnvironment array, outstandingPerformance, minorConsiderations
+- **What AI does:** Create testing details from review data
+- Must populate sections and testing environment
+
+**`<PerformanceAnalysis />`**
+- **Needs:** sections array with title and content
+- **What AI does:** Write analysis sections based on testing
+- Can use inline `<LINK>` tags for affiliate links
+
+**`<ProsConsGrid />`**
+- **Needs:** pros and cons arrays (strings)
+- **What AI does:** Generate honest pros and cons from testing
+
+**`<WhoShouldBuyGrid />`**
+- **Needs:** perfectFor and considerAlternatives arrays
+- **What AI does:** Create recommendation lists
+
+**`<FAQSection />`**
+- **Needs:** faqs array with question/answer pairs
+- **What AI does:** Generate relevant FAQs for product
+
+**`<EmailCaptureSection />`**
+- **Needs:** title, subtitle, finePrint
+- **What AI does:** Create email signup copy (put all benefits in subtitle)
+
+**`<BottomLineSection />`**
+- **Needs:** paragraphs array (plain strings, not JSX)
+- **What AI does:** Write final verdict paragraphs
+
+**`<RelatedProductsGrid />`**
+- **Needs:** products array with name, description, emoji, href
+- **What AI does:** Select and describe related products
+
+#### Blog Pages - AI Must Create Data For:
+
+**`<BlogHero />`**
+- **Needs:** title, subtitle, heroImage, publishedDate, updatedDate
+- **What AI does:** Create compelling title and subtitle
+
+**`<BlogQuickAnswer />`** *(NOT ComparisonSummary!)*
+- **Needs:** winner, winnerReasoning (for Pattern A comparisons)
+- **What AI does:** Determine winner and explain reasoning
+
+**`<ComparisonTable />`**
+- **Needs:** products array, comparisonRows, highlightedProduct
+- **What AI does:** Build comparison data structure
+- See COMPARISON_TABLE_GUIDE.md for structure
+
+**`<DetailedAnalysis />` or inline content**
+- **Needs:** Analysis sections with professional observations
+- **What AI does:** Write detailed comparison analysis
+
+**`<BlogEmailCapture />`**
+- **Needs:** title, subtitle
+- **What AI does:** Create email capture copy for blog context
+
+**`<FinalVerdict />`**
+- **Needs:** recommendation, buyProductA, buyProductB (for Pattern A)
+- **What AI does:** Write final recommendations
+
+---
+
+### Decision Tree: "Do I Need to Create Content?"
+
+```
+Is this component in the "Self-Contained" list above?
+├─ YES → Just import it, don't generate content
+│         Examples: AuthorBio, BlogAuthorBio, Breadcrumb
+│
+└─ NO → Is it in the "Data-Hungry" list?
+    ├─ YES → Generate content per VOICE_AND_CREDENTIALS.md standards
+    │         Examples: ReviewHero, TestingResultsGrid, FAQSection
+    │
+    └─ NO → Check COMPONENT_INTERFACES.md for details
+            or ASK if unsure
+```
+
+---
+
+### Common Mistakes with Components
+
+**❌ WRONG: Generating bio text for AuthorBio**
+```typescript
+// DON'T DO THIS
+const bioText = "Scott Bradley has 24 years..."
+<AuthorBio text={bioText} />  // Component doesn't take text prop!
+```
+
+**✅ CORRECT: Just import and use**
+```typescript
+import AuthorBio from '@/components/AuthorBio'
+
+// In your JSX:
+<AuthorBio />  // That's it! No props needed.
+```
+
+---
+
+**❌ WRONG: Forgetting to create data for ReviewHero**
+```typescript
+<ReviewHero />  // Missing all required data!
+```
+
+**✅ CORRECT: Generate the data**
+```typescript
+<ReviewHero
+  title={reviewData.title}
+  rating={reviewData.expertRating}
+  verdict={reviewData.verdict}
+  // ... all required props
+/>
+```
+
+---
+
+### Quick Reference Card
+
+**Self-Contained (Import Only):**
+- AuthorBio ✅
+- BlogAuthorBio ✅
+- Breadcrumb ✅
+- BlogLayout ✅ (needs metadata)
+
+**Data-Hungry (Create Content):**
+- ReviewHero ⚠️
+- TestingResultsGrid ⚠️
+- PerformanceAnalysis ⚠️
+- ProsConsGrid ⚠️
+- WhoShouldBuyGrid ⚠️
+- FAQSection ⚠️
+- EmailCaptureSection ⚠️
+- BottomLineSection ⚠️
+- RelatedProductsGrid ⚠️
+- BlogHero ⚠️
+- BlogQuickAnswer ⚠️
+- ComparisonTable ⚠️
+- FinalVerdict ⚠️
+
+**When in doubt:** Check COMPONENT_INTERFACES.md or ASK.
+
+---
+
+## 📊 Content Type Decision Matrix
+
+**Purpose:** Clarify which voice rules apply to what you're creating
+
+### Quick Decision Tree
+
+```
+What are you creating?
+│
+├─ Product Review Page?
+│   ├─ Voice: Encyclopedia (professional observations, no personal stories)
+│   ├─ Restaurant names: ❌ NO (use "professional kitchens" instead)
+│   ├─ Personal anecdotes: ❌ NO (save for emails)
+│   ├─ Family mentions: ❌ NO
+│   ├─ Components: AuthorBio (self-contained), data for ReviewHero/TestingResults/etc.
+│   └─ Reference: CONTENT_STANDARDS.md Part 2
+│
+├─ Blog Post (Pattern A or B)?
+│   ├─ Voice: Encyclopedia (professional observations, no personal stories)
+│   ├─ Restaurant names: ❌ NO (use "commercial settings" instead)
+│   ├─ Personal anecdotes: ❌ NO (save for emails)
+│   ├─ Family mentions: ❌ NO
+│   ├─ Components: BlogAuthorBio (self-contained), data for BlogHero/content/etc.
+│   └─ Reference: CONTENT_STANDARDS.md Part 3
+│
+├─ Email to Subscribers?
+│   ├─ Voice: Friend (personal stories encouraged!)
+│   ├─ Restaurant names: ✅ YES (Purple Café, Mellow Mushroom, etc.)
+│   ├─ Personal anecdotes: ✅ YES ("Let me tell you about...")
+│   ├─ Family mentions: ✅ YES (when relevant)
+│   ├─ Home kitchen: ✅ YES ("In my kitchen...")
+│   ├─ Personal recommendations: ✅ YES ("This is what I use")
+│   └─ Reference: CONTENT_STANDARDS.md Part 5
+│
+└─ Category/Landing Page?
+    ├─ Voice: Encyclopedia (comprehensive, educational)
+    ├─ Restaurant names: ❌ NO
+    ├─ Personal anecdotes: ❌ NO
+    └─ Reference: CONTENT_STANDARDS.md Part 1
+```
+
+### Voice Comparison Chart
+
+| Element | Reviews | Blogs | Emails |
+|---------|---------|-------|--------|
+| **Voice Type** | Encyclopedia | Encyclopedia | Friend |
+| **Personal Stories** | ❌ No | ❌ No | ✅ Yes |
+| **Restaurant Names** | ❌ No | ❌ No | ✅ Yes |
+| **"I/My" Language** | ⚠️ Minimal | ⚠️ Minimal | ✅ Frequent |
+| **Family Mentions** | ❌ No | ❌ No | ✅ Yes |
+| **Credential** | ✅ 24 years | ✅ 24 years | ✅ 24 years |
+| **Professional Context** | ✅ Generic | ✅ Generic | ✅ Specific |
+
+### Common Mistakes by Content Type
+
+**REVIEW PAGES - Common Mistakes:**
+- ❌ Including "At Purple Café, I used this..." → Use "In commercial kitchens..."
+- ❌ "My family loves this" → Use test results instead
+- ❌ "I personally bought this" → Use professional testing context
+
+**BLOG POSTS - Common Mistakes:**
+- ❌ "When I worked at Mellow Mushroom..." → Use "In professional settings..."
+- ❌ "My personal journey with knives" → Use professional observations
+- ❌ "In my home kitchen" → Use generic professional context
+
+**EMAILS - Common Mistakes:**
+- ❌ Being too formal (defeats the purpose)
+- ❌ Not using personal stories (should be story-driven!)
+- ❌ Avoiding restaurant names (they're allowed in emails!)
+
+### When In Doubt
+
+**Ask yourself:**
+1. Is this PUBLIC content for Google? → Use Encyclopedia voice (no personal stories)
+2. Is this PRIVATE content for subscribers? → Use Friend voice (personal stories OK)
+
+**Default to Encyclopedia voice if unsure** - you can always be more personal in emails later.
+
+---
+
 ## ✅ Pre-Deployment Checklist
 
 **Before deploying ANYTHING to production:**
@@ -584,7 +857,7 @@ Does the script modify files?
 - [ ] Credentials correct ("24 years professional", not "Kitchen Manager for 24 years")
 - [ ] Restaurant references approved (Purple Café preferred)
 - [ ] Voice matches guidelines (no "let's dive in", "game-changer", etc.)
-- [ ] No pricing violations (no "$50", "best value", etc.)
+- [ ] No pricing violations
 - [ ] CTA text: "Check Price on Amazon"
 
 ### Technical Standards
@@ -615,7 +888,7 @@ Does the script modify files?
 - [ ] Comparison table included (if applicable)
 
 ### Performance
-- [ ] Lighthouse score: Desktop 100, Mobile 80+
+- [ ] Lighthouse score: Desktop 95, Mobile 80+
 - [ ] LCP <2.5s
 - [ ] No layout shift (CLS <0.1)
 - [ ] Mobile responsive (test at 375px width)
@@ -914,7 +1187,7 @@ git commit -m "Add comparison table to Vitamix 5200 review
 
 ### This Project Matters
 
-- 300+ hours of work
+- 400+ hours of work
 - Scott's path to financial independence
 - Real revenue impact
 - Every detail counts
@@ -983,7 +1256,7 @@ START_HERE.md (you are here)
 
 ---
 
-**Remember: Better to ask than to break 300 hours of work.**
+**Remember: Better to ask than to break 400 hours of work.**
 
 **When in doubt: STOP and ASK.**
 

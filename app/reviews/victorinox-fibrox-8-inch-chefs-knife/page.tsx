@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
+import { getReviewMetadata } from '@/data/metadata'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
@@ -27,44 +28,45 @@ export const fetchCache = 'force-cache'
 
 // Generate metadata dynamically
 export async function generateMetadata(): Promise<Metadata> {
+  const centralMeta = getReviewMetadata('victorinox-fibrox-8-inch-chefs-knife')
   const product = await getProductBySlug(reviewData.productSlug)
   const productData = product || reviewData.legacyProductData
 
   return {
-    title: reviewData.metadata.title,
-    description: reviewData.metadata.description,
+    title: centralMeta.title,
+    description: centralMeta.description,
     alternates: {
-      canonical: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife',
+      canonical: centralMeta.canonical,
     },
     openGraph: {
-      title: reviewData.metadata.ogTitle,
-      description: reviewData.metadata.ogDescription,
-      url: 'https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife',
+      title: centralMeta.ogTitle || centralMeta.title,
+      description: centralMeta.ogDescription || centralMeta.description,
+      url: centralMeta.canonical,
       siteName: 'Chef Approved Tools',
       images: [
         {
-          url: generateOGImageURL({
+          url: centralMeta.imageUrl || generateOGImageURL({
             title: productData.name,
             rating: productData.expertRating ?? reviewData.hero.rating,
-            testingPeriod: reviewData.metadata.testingPeriod,
-            tier: reviewData.metadata.tier as 1 | 2 | 3,
+            testingPeriod: centralMeta.testingPeriod,
+            tier: centralMeta.tier,
           }),
           width: 1200,
           height: 630,
-          alt: `${productData.name} - Professional Review`,
+          alt: centralMeta.imageAlt || `${productData.name} - Professional Review`,
         },
       ],
       type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
-      title: reviewData.metadata.ogTitle,
-      description: reviewData.metadata.ogDescription,
-      images: [generateOGImageURL({
+      title: centralMeta.ogTitle || centralMeta.title,
+      description: centralMeta.ogDescription || centralMeta.description,
+      images: [centralMeta.imageUrl || generateOGImageURL({
         title: productData.name,
         rating: productData.expertRating ?? reviewData.hero.rating,
-        testingPeriod: reviewData.metadata.testingPeriod,
-        tier: reviewData.metadata.tier as 1 | 2 | 3,
+        testingPeriod: centralMeta.testingPeriod,
+        tier: centralMeta.tier,
       })],
     },
   }

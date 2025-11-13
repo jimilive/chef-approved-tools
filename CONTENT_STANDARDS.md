@@ -229,12 +229,7 @@ These mantras guide every content decision across the site.
 - "$199.95" or exact pricing
 - "Currently priced at $129"
 - "Was $150, now $99"
-- "around $40" or "about $50"
-- "typically under $100"
-- "mid-range price point"
 - "budget-friendly option"
-- "best value"
-- "worth the extra money"
 - "costs the same as two lattes"
 - "The cost difference is minimal—just a few cents"
 
@@ -342,67 +337,14 @@ The exact tools I'd buy again if I lost everything.
 [Email input field]
 [Button: Get Free Guide]
 
-Join 10,000+ home cooks. Unsubscribe anytime.
+Unsubscribe anytime.
 ```
 
 **Value Proposition:**
 - Free, immediate value (PDF guide)
 - Professional credibility (24 years)
 - Curated, specific (11 tools, not 100)
-- Social proof (10,000+ subscribers)
 - Low friction (unsubscribe anytime)
-
----
-
-## 📅 Content Calendar Strategy
-
-### Monthly Goals
-
-**Content Production:**
-- 2-3 new blog posts (mix of technique, guide, seasonal)
-- 1-2 new product reviews (Tier 1 or 2 testing)
-- 4-8 email sends (weekly during sequence, bi-weekly after)
-
-### Seasonal Focus
-
-**Q1 (Jan-Mar):**
-- New Year cooking goals
-- Kitchen setup and organization
-- Meal prep and batch cooking
-
-**Q2 (Apr-Jun):**
-- Grilling season preparation
-- Outdoor cooking equipment
-- Summer entertaining
-
-**Q3 (Jul-Sep):**
-- Back-to-school quick meals
-- Weeknight efficiency
-- Batch cooking for busy schedules
-
-**Q4 (Oct-Dec):**
-- Holiday cooking and baking
-- Gift guides for cooks
-- Party prep and entertaining
-
----
-
-### Evergreen Priority
-
-**80% of effort on evergreen content:**
-- Knife guides and techniques
-- Cookware comparisons
-- Fundamental technique tutorials
-- Equipment buying guides
-- Year-round relevant topics
-
-**20% on seasonal/timely content:**
-- Holiday-specific guides
-- Seasonal ingredient focus
-- Trending cooking topics
-- Current product releases
-
-**Rationale:** Evergreen content ranks for years. Seasonal content drives short-term traffic spikes but has limited long-term value.
 
 ---
 
@@ -411,6 +353,23 @@ Join 10,000+ home cooks. Unsubscribe anytime.
 **Last Updated:** November 10, 2025  
 **Purpose:** Complete guide for creating product review pages  
 **Gold Standard:** `/app/reviews/benriner-large-mandoline/page.tsx`
+
+---
+
+## ⚠️ CRITICAL: Review Page Voice Rules
+
+**Reviews use ENCYCLOPEDIA voice (from Part 1)
+
+### ✅ DO Use in Reviews:
+- **Professional observations:** "Professional experience shows..."
+- **Generic professional context:** "In commercial kitchens..." or "In high-volume settings..."
+- **Standard credential:** "24 years of professional kitchen experience"
+- **Specific test results:** "Tested for 6 months" or "Used daily for 2 years"
+- **Honest pros and cons:** Based on actual testing
+- **Technical analysis:** Performance, durability, specifications
+
+### Why This Matters:
+- Reviews = PUBLIC content for Google ranking (Encyclopedia)
 
 ---
 
@@ -497,103 +456,6 @@ export default async function ReviewPage() {
 - Email capture AFTER value delivery (not at top)
 - Author bio at end (proves authority after content demonstrates it)
 - Related products after main content (keeps users engaged)
-
----
-
-## 🎨 Custom Inline Sections (Product-Specific)
-
-**When standard components aren't enough, you can add custom inline sections for product-specific needs.**
-
-### When to Add Custom Sections
-
-Add custom inline sections when:
-- Product has unique considerations (e.g., "Testing in Progress" for new items)
-- Safety-critical information needs emphasis (e.g., mandoline safety warnings)
-- Product-specific guides enhance value (e.g., vegetable compatibility charts)
-- Compliance or legal notices are required
-- Special purchasing considerations exist (e.g., model variations)
-
-### Where to Place Custom Sections
-
-**Recommended insertion points:**
-1. **After ReviewHero, before TestingResultsGrid** - For notices, disclaimers, safety warnings
-2. **After PerformanceAnalysis, before ProsConsGrid** - For usage guides, compatibility charts
-3. **After FAQSection, before EmailCaptureSection** - For additional resources, buying guides
-
-### How to Implement
-
-```tsx
-{/* Custom section - inline JSX */}
-{reviewData.customSection?.show && (
-  <div className="bg-white rounded-2xl px-6 pt-6 pb-12 shadow-sm mb-6">
-    <h2 className="text-2xl font-bold text-slate-900 mb-4">
-      {reviewData.customSection.title}
-    </h2>
-    <div className="prose prose-slate max-w-none">
-      {reviewData.customSection.content}
-    </div>
-  </div>
-)}
-```
-
-### Real Examples from Production
-
-**1. Testing in Progress Notice (Instant Pot):**
-```tsx
-{reviewData.testingInProgress?.show && (
-  <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl px-6 pt-6 pb-12 mb-6">
-    <h2 className="text-2xl font-bold text-amber-900 mb-4">
-      ⏱️ Testing in Progress
-    </h2>
-    <p className="text-slate-700">
-      Currently conducting extended durability testing. This review will be 
-      updated with long-term performance data as testing continues.
-    </p>
-  </div>
-)}
-```
-
-**2. Safety Warnings (Benriner Mandoline):**
-```tsx
-<div className="bg-red-50 border-2 border-red-200 rounded-2xl px-6 pt-6 pb-12 mb-6">
-  <h2 className="text-2xl font-bold text-red-900 mb-4">
-    ⚠️ Critical Safety Information
-  </h2>
-  <ul className="space-y-2 text-slate-700">
-    <li>Always use the safety guard provided</li>
-    <li>Never operate with wet hands</li>
-    <li>Store blade covered when not in use</li>
-  </ul>
-</div>
-```
-
-**3. Where to Buy Section (Alternative retailers):**
-```tsx
-<div className="bg-white rounded-2xl px-6 pt-6 pb-12 shadow-sm mb-6">
-  <h2 className="text-2xl font-bold text-slate-900 mb-4">Where to Buy</h2>
-  <CTAVisibilityTracker ctaId="where-to-buy-cta" position="where_to_buy">
-    <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800">
-      Check availability and pricing on Amazon →
-    </a>
-  </CTAVisibilityTracker>
-</div>
-```
-
-### Guidelines for Custom Sections
-
-**DO:**
-- ✅ Use for genuinely product-specific information
-- ✅ Maintain consistent styling (`bg-white rounded-2xl px-6 pt-6 pb-12`)
-- ✅ Use appropriate h2 headings
-- ✅ Keep content concise and scannable
-- ✅ Wrap CTAs in CTAVisibilityTracker
-
-**DON'T:**
-- ❌ Use custom sections for standard content (use standard components instead)
-- ❌ Break heading hierarchy (always use h2 for section titles)
-- ❌ Place custom sections randomly (follow recommended insertion points)
-- ❌ Skip accessibility considerations (color contrast, alt text)
-- ❌ Forget to make sections conditional when appropriate (`?.show`)
 
 ---
 
@@ -981,6 +843,34 @@ Before publishing any review:
 
 ---
 
+## ⚠️ CRITICAL: Blog Post Voice Rules
+
+**Blog posts use ENCYCLOPEDIA voice (from Part 1) - NOT personal stories!**
+
+### ✅ DO Use in Blog Posts:
+- **Professional observations:** "Professional experience shows..."
+- **Generic professional patterns:** "In commercial settings..." or "Professional kitchens typically..."
+- **Standard credential:** "24 years of professional kitchen experience"
+- **Technical comparisons:** Feature analysis, performance data
+- **Professional insights:** Based on testing and expertise
+- **Educational content:** How-tos, guides, explanations
+
+### ❌ DO NOT Use in Blog Posts:
+- **Personal anecdotes:** "When I worked at..." or "In my kitchen..."
+- **Specific restaurant names:** "At Purple Café..." or "During my time at Mellow Mushroom..."
+- **Personal stories:** "I remember when..." or "My journey with..."
+- **Family mentions:** "My wife uses..." or "My family prefers..."
+- **Personal buying journeys:** "When I first bought..." or "Over the years I..."
+
+### Why This Matters:
+- Blog posts = PUBLIC content for SEO (Encyclopedia voice)
+- Personal stories = PRIVATE content for subscribers (Email voice - Friend)
+- Keeping them separate maintains content strategy
+
+**Personal stories and restaurant names belong in EMAILS, not blog posts!**
+
+---
+
 ## 🎯 Blog Post Types: Two Distinct Patterns
 
 Chef Approved Tools uses **TWO patterns** for blog posts:
@@ -1044,7 +934,7 @@ Am I comparing EXACTLY TWO specific products?
 
 1. **BlogLayout** - Wrapper component with metadata
 2. **BlogHero** - Title, subtitle, dates, author, image
-3. **BlogQuickAnswer** - Quick verdict and winner badge
+3. **ComparisonSummary** - Quick verdict and winner badge
 4. **ComparisonTable** - Side-by-side feature comparison
 5. **DetailedAnalysis** - In-depth comparison sections
 6. **BlogEmailCapture** - Email signup (middle of post)
@@ -1357,38 +1247,6 @@ export default function HowToSharpenKnivesPost() {
 - **Format:** Include primary keyword + benefit/hook
 - **Placement:** In page metadata and schema markup
 
-### Formula by Page Type
-
-**Review Pages:**
-```
-[Product Name] Review: [Key Benefit/Testing Period] | Chef Approved Tools
-
-Examples:
-✅ "Vitamix 5200 Review: 6 Years Professional Testing"
-✅ "Le Creuset Dutch Oven Review: 10 Years of Abuse"
-✅ "Victorinox Knife Review: 20 Years, 5 Kitchens"
-```
-
-**Blog Posts:**
-```
-[Topic]: [Benefit/Hook] | Chef Approved Tools
-
-Examples:
-✅ "How to Sharpen Knives: Professional Chef Method"
-✅ "Cast Iron Seasoning: Restaurant Method That Works"
-✅ "Carbon Steel vs Stainless: When to Use Each"
-```
-
-**Guide Pages:**
-```
-Best [Category]: [Qualifier] Guide | Chef Approved Tools
-
-Examples:
-✅ "Best Chef Knives: Professional Kitchen Tested"
-✅ "Best Dutch Ovens: Restaurant-Grade Reviews"
-✅ "Best Blenders: 24 Years Testing Results"
-```
-
 ### Title Tag Best Practices
 
 **DO:**
@@ -1439,28 +1297,6 @@ Examples:
 - **Format:** Benefit + credentials + call to action
 - **Tone:** Direct, benefit-focused, persuasive
 
-### Formula by Page Type
-
-**Review Pages:**
-```
-Professional chef with 24 years reviews [Product]. [Testing period/context], honest pros/cons, and [specific benefit/finding].
-
-Examples:
-✅ "Professional chef with 24 years reviews the Vitamix 5200. 6 years at Purple Café, honest pros/cons, zero failures after thousands of blends."
-
-✅ "Chef with 24 years tests Le Creuset Dutch oven. 10 years of daily abuse, real performance results, honest limitations explained."
-
-Length: 155-160 characters (fill the space)
-```
-
-**Blog Posts:**
-```
-Learn [topic] from a chef with 24 years professional experience. [Specific benefit]. [Technique/method type]. [Call to action].
-
-Examples:
-✅ "Learn knife sharpening from a chef with 24 years in professional kitchens. Step-by-step restaurant methods. Get razor-sharp edges safely."
-
-Length: 155-160 characters
 ```
 
 ### Meta Description Best Practices
@@ -1709,6 +1545,208 @@ export const metadata = {
 
 ---
 
+# Part 5: Email Content System
+
+**Last Updated:** November 11, 2025  
+**Purpose:** Standards for email content (different from website content!)  
+**Key Difference:** Emails use FRIEND voice, not ENCYCLOPEDIA voice
+
+---
+
+## ⚠️ CRITICAL: Email Voice = FRIEND (Different from Reviews/Blogs!)
+
+**Emails have DIFFERENT rules than website content. This is intentional.**
+
+### The Friend Voice Strategy
+
+**Website (Encyclopedia):** Attracts traffic, builds authority, educates broadly  
+**Email (Friend):** Builds relationships, drives purchases, personalizes recommendations
+
+**Why separate:** Different audiences, different goals, different conversion strategies
+
+---
+
+## ✅ What's ALLOWED in Emails (NOT on Website)
+
+### Personal Stories
+**✅ DO use in emails:**
+- "Let me tell you about the time at Purple Café..."
+- "When I was working the sauté station during a 250-cover Saturday..."
+- "I remember learning this lesson the hard way at Mellow Mushroom..."
+- Opening with restaurant experiences and anecdotes
+
+### Specific Restaurant Names
+**✅ DO use in emails:**
+- Purple Café (primary reference, 2007-2012, Pizzaiolo role)
+- Mellow Mushroom (Kitchen Manager, 3 years)
+- Other restaurants where Scott worked (Feierabend, Il Pizzaiolo, Paragary's)
+- Specific stories from each restaurant
+
+### Personal Recommendations
+**✅ DO use in emails:**
+- "This is the exact one I use in my home kitchen"
+- "I bought this one because..."
+- "Here's my personal setup for..."
+- "My family's favorite..."
+- "In my kitchen, I only use 2 oils. Here's why..."
+
+### First-Person Language
+**✅ DO use in emails:**
+- "I", "my", "me" throughout
+- Personal experiences and observations
+- Family mentions when relevant
+- Home kitchen examples
+
+### Story-Driven Format
+**✅ DO use in emails:**
+```
+Opening: Restaurant story or personal experience
+Body: Lesson learned or technique explained
+Close: Specific product recommendation
+CTA: Direct link to purchase
+```
+
+---
+
+## ❌ What's STILL FORBIDDEN in Emails
+
+Even though emails are more personal, these rules still apply:
+
+### Credentials Must Be Accurate
+- ✅ "24 years of professional kitchen experience" (correct)
+- ❌ "40 years of cooking" (wrong)
+- ✅ "6 years at Purple Café" (correct)
+- ❌ "18 years at Purple Café" (wrong)
+
+### Forbidden Phrases
+- ❌ "game-changer"
+- ❌ "let's dive in"
+- ❌ "amazing" / "incredible" (overused hype words)
+- ❌ "you won't believe"
+
+### Pricing Rules
+- ❌ Specific prices ("$49.99")
+- ❌ "Best value" claims
+- ❌ Cost-per-use calculations
+- ✅ Can say "worth the investment" with context
+
+### Honesty
+- ❌ Fake experiences
+- ❌ Exaggerations
+- ❌ Products not actually tested
+- ✅ Honest limitations and cons
+
+---
+
+## 📊 Email vs Website Content Matrix
+
+| Element | Website (Encyclopedia) | Email (Friend) |
+|---------|----------------------|----------------|
+| **Personal Stories** | ❌ No | ✅ Yes |
+| **Restaurant Names** | ❌ Generic only | ✅ Specific names OK |
+| **"I/My" Language** | ⚠️ Minimal, professional | ✅ Encouraged |
+| **Anecdotes** | ❌ No | ✅ Yes |
+| **Credentials** | ✅ "24 years professional" | ✅ Same, but with stories |
+| **Family Mentions** | ❌ No | ✅ OK if relevant |
+| **Restaurant Specifics** | ❌ No | ✅ Yes (Purple Café, etc.) |
+| **Home Kitchen** | ❌ Avoid | ✅ Encouraged |
+| **Buying Journey** | ❌ No | ✅ Yes |
+| **Personal Recommendations** | ⚠️ Generic | ✅ Specific ("I use this") |
+
+---
+
+## 📝 Example Comparisons
+
+### Scenario: Recommending an 8-Inch Chef's Knife
+
+**WEBSITE (Review/Blog) - Encyclopedia Voice:**
+> "Professional experience in high-volume commercial kitchens shows that an 8-inch chef's knife handles 80% of cutting tasks efficiently. In professional settings, this size provides optimal balance between maneuverability and cutting capacity for most cooks."
+
+**EMAIL - Friend Voice:**
+> "Let me tell you about the time I worked the sauté station at Purple Café during a 250-cover Saturday night. I had one 8-inch Victorinox and that was it. That knife got me through 6 hours of non-stop prep and plating. Here's what I learned: you don't need a dozen knives. You need ONE great 8-inch chef's knife. This is the exact one I still use at home."
+
+**See the difference?**
+- Website: Professional observation, generic context
+- Email: Personal story, specific restaurant, specific recommendation
+
+---
+
+### Scenario: Explaining Why Cast Iron is Great
+
+**WEBSITE (Review/Blog) - Encyclopedia Voice:**
+> "Cast iron cookware provides excellent heat retention and distribution when properly maintained. Professional testing shows these pans can last decades with basic care, making them economical choices for serious home cooks."
+
+**EMAIL - Friend Voice:**
+> "I've been using the same Lodge cast iron skillet for 18 years. I bought it right after culinary school for $25. That pan cooked thousands of meals at Purple Café, survived 4 moves, and it's STILL in my kitchen today. Here's why I'll never switch to anything else..."
+
+---
+
+## 🎯 Email Content Types & Voice Guidelines
+
+### Onboarding Sequence (13 weeks)
+**Voice:** Personal, educational, story-driven  
+**Can include:** Restaurant stories, personal tool recommendations, "here's what I use"  
+**Goal:** Build relationship, establish expertise through experience
+
+### Product Recommendations
+**Voice:** Direct, personal, specific  
+**Can include:** "This is the one I bought", personal experience, why Scott chose it  
+**Goal:** Drive specific purchase with personal credibility
+
+### Technique Tips
+**Voice:** Teaching from experience  
+**Can include:** Restaurant shortcuts, professional methods Scott learned, stories of mistakes  
+**Goal:** Provide value through insider knowledge
+
+### Behind-the-Scenes Content
+**Voice:** Conversational, insider perspective  
+**Can include:** Restaurant industry insights, what Scott learned from mistakes, real kitchen stories  
+**Goal:** Build connection through shared insider knowledge
+
+---
+
+## ✅ Email Content Checklist
+
+**Before sending ANY email:**
+
+- [ ] Uses personal stories (not just generic professional observations)
+- [ ] Includes specific context (Purple Café, home kitchen, actual experiences)
+- [ ] Credentials are accurate (24 years, 6 years at Purple Café, etc.)
+- [ ] No forbidden phrases ("game-changer", "let's dive in")
+- [ ] No specific prices or "best value" claims
+- [ ] Honest about limitations (not just hype)
+- [ ] Includes specific recommendation or actionable advice
+- [ ] Links to relevant website content
+- [ ] Clear CTA (what to do next)
+
+---
+
+## 🎓 Key Principle: Separation of Content Strategy
+
+**The Rule:**
+- Public content (website) = Encyclopedia = Attracts and educates
+- Private content (email) = Friend = Builds relationships and converts
+
+**Why it works:**
+- SEO content needs authority and breadth
+- Conversion content needs personality and specificity
+- Different content for different stages of funnel
+
+**Common mistake:**
+- Putting personal stories on website (hurts SEO, wastes relationship-building content)
+- Being too formal in emails (doesn't build connection)
+
+**Solution:**
+- Keep voices separate
+- Website gets professional, educational content
+- Emails get personal, relationship-building content
+
+---
+
+**Remember:** When writing emails, you CAN and SHOULD use personal stories, restaurant names, and specific recommendations. This is the ONE place where "In my kitchen..." and "At Purple Café..." are not just allowed—they're encouraged!
+
+---
+
 # Appendix: Master Checklists
 
 ## ✅ Universal Pre-Publishing Checklist
@@ -1719,7 +1757,7 @@ export const metadata = {
 - [ ] Read VOICE_AND_CREDENTIALS.md before creating content
 - [ ] Credentials correct ("24 years professional", "6 years Purple Café")
 - [ ] Voice matches guidelines (no forbidden phrases)
-- [ ] No pricing violations (no "$50", "best value", etc.)
+- [ ] No pricing violations (no "$50", etc.)
 - [ ] Professional context included (specific restaurant when relevant)
 - [ ] Honest, balanced tone (pros AND cons)
 - [ ] All affiliate links include `?tag=chefapprovedt-20`
@@ -1755,7 +1793,7 @@ export const metadata = {
 - [ ] All affiliate links work
 
 ### Performance
-- [ ] Lighthouse Desktop: 100 (all metrics)
+- [ ] Lighthouse Desktop: 95 (all metrics)
 - [ ] Lighthouse Mobile: 80+ Performance
 - [ ] LCP <2.5s
 - [ ] No layout shift (CLS <0.1)
