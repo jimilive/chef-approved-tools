@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Contact Scott Bradley | Professional Chef & Kitchen Equipment Expert',
-    description: 'Get expert advice on professional kitchen tools from a chef with 24 years restaurant experience. Questions about knives, cookware, or appliances? Let\'s talk.',
+    description: "Get expert advice on professional kitchen tools from a chef with 24 years restaurant experience. Questions about knives, cookware, or appliances? Let's talk.",
     url: 'https://www.chefapprovedtools.com/contact',
     siteName: 'Chef Approved Tools',
     locale: 'en_US',

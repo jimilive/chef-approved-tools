@@ -10,7 +10,7 @@ import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'How To Choose Your First Chef Knife (Skip These Mistakes)',
-  description: 'How to choose your first chef knife without wasting money. Professional chef\'s guide to what matters and what doesn\'t. Avoid these common mistakes.',
+  description: "How to choose your first chef knife without wasting money. Professional chef's guide to what matters and what doesn't. Avoid these common mistakes.",
   keywords: ['how to choose a chef knife', 'best chef knife for beginners', 'chef knife buying guide', 'kitchen knife selection', 'chef knife balance', 'professional knife advice'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-choose-first-chef-knife',

@@ -4,7 +4,7 @@ import { getAllBlogPosts } from '@/lib/blog-utils'
 
 export const metadata: Metadata = {
   title: 'Restaurant Cooking Techniques For Home Kitchens (71 Guides)',
-  description: '24 years of professional cooking methods translated for home kitchens. Learn what actually matters vs. what\'s just chef theater. 71 technique guides.',
+  description: "24 years of professional cooking methods translated for home kitchens. Learn what actually matters vs. what's just chef theater. 71 technique guides.",
   keywords: ['professional cooking techniques', 'restaurant cooking methods', 'chef techniques', 'kitchen manager tips', 'restaurant quality cooking', 'professional chef blog'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog',

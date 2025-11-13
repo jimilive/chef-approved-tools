@@ -10,7 +10,7 @@ import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'How To Clean Burnt Stainless Steel Pans (Restaurant Method)',
-  description: 'How to clean burnt stainless steel pans using the restaurant method. Bar Keeper\'s Friend and the technique that saves every pan. Actually works.',
+  description: "How to clean burnt stainless steel pans using the restaurant method. Bar Keeper's Friend and the technique that saves every pan. Actually works.",
   keywords: ['clean burnt stainless steel pan', 'restore stainless steel cookware', 'remove burnt residue', 'baking soda pan cleaning', 'bar keepers friend stainless steel'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-clean-burnt-stainless-steel-pans',

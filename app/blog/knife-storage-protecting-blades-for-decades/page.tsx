@@ -10,7 +10,7 @@ import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Knife Storage: How To Protect Blades For Decades',
-  description: 'Knife storage methods that protect blades for decades: Magnetic strips, knife blocks, drawer guards. Professional chef\'s guide to keeping knives sharp.',
+  description: "Knife storage methods that protect blades for decades: Magnetic strips, knife blocks, drawer guards. Professional chef's guide to keeping knives sharp.",
   keywords: ['knife care', 'how to store knives', 'knife protection', 'prevent dull knives', 'blade storage', 'professional knife maintenance', 'knife longevity', 'knife rust prevention', 'knife block', 'magnetic strip', 'drawer knife storage'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/knife-storage-protecting-blades-for-decades',

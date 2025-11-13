@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com/blog/how-to-sharpen-with-tri-stone',
   },
   openGraph: {
-    title: 'How to Sharpen with a Stone: Professional Chef\'s Technique (2025)',
+    title: "How to Sharpen with a Stone: Professional Chef's Technique (2025)",
     description: 'Professional chef shares technique perfected over 6 years in restaurant kitchen. Step-by-step guide: angles, pressure, three-stage progression, troubleshooting.',
     type: 'article',
     url: 'https://www.chefapprovedtools.com/blog/how-to-sharpen-with-tri-stone',

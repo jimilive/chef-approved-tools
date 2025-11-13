@@ -10,7 +10,7 @@ import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: 'Cutting Board Materials: Wood vs Plastic vs Composite',
-  description: 'Cutting board materials compared: Wood vs plastic vs composite. Professional chef\'s guide after 24 years in restaurant kitchens. Which is safest and best.',
+  description: "Cutting board materials compared: Wood vs plastic vs composite. Professional chef's guide after 24 years in restaurant kitchens. Which is safest and best.",
   keywords: ['cutting board guide', 'best cutting board', 'wood vs plastic board', 'end-grain cutting board', 'knife edge protection'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/cutting-board-materials-guide',

@@ -10,7 +10,7 @@ import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata: Metadata = {
   title: '10 Kitchen Tools That Waste Your Money (Skip These)',
-  description: '10 kitchen tools that waste your money—skip these trendy gadgets. Professional chef reveals what doesn\'t work after 24 years testing equipment.',
+  description: "10 kitchen tools that waste your money—skip these trendy gadgets. Professional chef reveals what doesn't work after 24 years testing equipment.",
   keywords: ['kitchen tools to avoid', 'waste of money kitchen gadgets', 'essential kitchen tools', 'professional kitchen gear', 'chef recommended tools', 'kitchen equipment advice'],
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/blog/kitchen-tools-wasting-money',
