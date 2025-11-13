@@ -503,8 +503,8 @@ export const METADATA = {
     } as ReviewMetadata,
     
     'oxo-good-grips-swivel-peeler': {
-      title: "OXO Peeler: Peeled 10,000+ Potatoes, Zero Hand Fatigue (20 Years)",
-      description: "20 years testing: ergonomic grip prevented fatigue through 50-potato prep sessions at Purple Café. Sharp blade stayed sharp through 10,000+ vegetables.",
+      title: "OXO Peeler: Peeled 10,000+ Potatoes, Zero Hand Fatigue",
+      description: "OXO Good Grips swivel peeler tested 20 years peeling 10,000+ potatoes and veggies. Soft handle prevents hand fatigue while the blade stays sharp. Find out why chefs still recommend it.",
       canonical: "https://www.chefapprovedtools.com/reviews/oxo-good-grips-swivel-peeler",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/oxo-peeler-hero.jpg",
@@ -528,8 +528,8 @@ export const METADATA = {
     // ========== BATCH 3: CONTINUING HIGH-PRIORITY REVIEWS ==========
 
     'oxo-good-grips-bench-scraper': {
-      title: "OXO Bench Scraper: Most-Used Tool at Purple Café (20 Years)",
-      description: "20 years in restaurants: portioned 1,000+ dough batches, scraped counters 10,000+ times. Non-slip grip stayed secure when wet with flour paste.",
+      title: "OXO Bench Scraper Review: Most-Used Tool at Purple Café",
+      description: "OXO Good Grips bench scraper reviewed after 20 years in restaurant kitchens: portioning dough, scraping benches and grills daily. Learn the tricks that make it a top prep tool at home.",
       canonical: "https://www.chefapprovedtools.com/reviews/oxo-good-grips-bench-scraper",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/oxo-bench-scraper-hero.jpg",
@@ -551,8 +551,8 @@ export const METADATA = {
     } as ReviewMetadata,
 
     'john-boos-platinum-commercial-cutting-board': {
-      title: "John Boos Cutting Board: Sanded Once in 14 Years, Still Perfect",
-      description: "14 years daily chopping: sanded once at year 7, oiled 3x/year—still perfect. Hard maple survived 5,000+ meals. Buy-it-for-life proven.",
+      title: "John Boos Cutting Board: 14-Year Buy-It-for-Life Workhorse",
+      description: "John Boos maple cutting board tested 14 years: oiled a few times, still flat and smooth after 5,000+ meals. See how to care for it so it truly becomes a lifetime board.",
       canonical: "https://www.chefapprovedtools.com/reviews/john-boos-platinum-commercial-cutting-board",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/john-boos-board-hero.jpg",
@@ -597,8 +597,8 @@ export const METADATA = {
     } as ReviewMetadata,
 
     'norton-im200-tri-stone-sharpener': {
-      title: "Norton IM200: Sharpened 1,000+ Knives at Purple Café (6 Years)",
-      description: "6 years at Purple Café: kept 8 knives razor-sharp through 200 covers nightly. 3-grit system restored edges in 15 minutes. Restaurant-proven.",
+      title: "Norton IM200: Knives sharpened 1,000+ times at Purple Café",
+      description: "Norton IM200 tri-stone sharpener reviewed after 6 years at Purple Café keeping eight knives razor-sharp. Three grits restore edges in about 15 minutes. Learn the simple sharpening routine.",
       canonical: "https://www.chefapprovedtools.com/reviews/norton-im200-tri-stone-sharpener",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/norton-sharpener-hero.jpg",
@@ -621,7 +621,7 @@ export const METADATA = {
 
     'benriner-large-mandoline': {
       title: "Benriner Mandoline: Sliced 10,000+ Vegetables at Purple Café",
-      description: "Years at Purple Café: sliced 10,000+ vegetables with zero thickness variation. Japanese steel stayed sharp through daily commercial prep. Under $50.",
+      description: "Benriner large mandoline tested in a pro kitchen slicing 10,000+ vegetables into paper-thin cuts. See how to use it safely, avoid cuts, and decide if it beats bulkier metal slicers",
       canonical: "https://www.chefapprovedtools.com/reviews/benriner-large-mandoline",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/benriner-mandoline-hero.jpg",
