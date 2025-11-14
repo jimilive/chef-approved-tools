@@ -32,7 +32,11 @@ export const fetchCache = 'force-cache'
 export async function generateMetadata(): Promise<Metadata> {
   const centralMeta = getReviewMetadata('vitamix-5200-professional-blender')
   const product = await getProductBySlug(reviewData.productSlug)
-  const productData = product!
+
+  if (!product) {
+    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+  }
+  const productData = product
 
   return {
     title: centralMeta.title,
@@ -99,6 +103,10 @@ function processInlineLinks(text: string, affiliateUrl: string, productName: str
 export default async function ProductReview() {
   // Get product data from Supabase
   const product = await getProductBySlug(reviewData.productSlug)
+
+  if (!product) {
+    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+  }
 
   // Merge Supabase data with legacy data
   const productData = product ? {

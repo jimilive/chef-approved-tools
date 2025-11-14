@@ -24,7 +24,11 @@ export const fetchCache = 'force-cache'
 export async function generateMetadata(): Promise<Metadata> {
   const centralMeta = getReviewMetadata('oxo-good-grips-bench-scraper')
   const product = await getProductBySlug(reviewData.productSlug)
-  const productData = product!
+
+  if (!product) {
+    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+  }
+  const productData = product
 
   return {
     title: centralMeta.title,
@@ -66,6 +70,10 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function OXOGoodGripsBenchScraperReview() {
   const product = await getProductBySlug(reviewData.productSlug)
+
+  if (!product) {
+    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+  }
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = product ? {

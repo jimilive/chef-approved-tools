@@ -55,7 +55,11 @@ function processInlineLinks(text: string): React.ReactNode {
 export async function generateMetadata(): Promise<Metadata> {
   const centralMeta = getReviewMetadata('norton-im200-tri-stone-sharpener')
   const product = await getProductBySlug(reviewData.productSlug)
-  const productData = product!
+
+  if (!product) {
+    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+  }
+  const productData = product
 
   return {
     title: centralMeta.title,
@@ -97,6 +101,10 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function NortonTriStoneSharpenerReview() {
   const product = await getProductBySlug(reviewData.productSlug)
+
+  if (!product) {
+    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+  }
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = product ? {

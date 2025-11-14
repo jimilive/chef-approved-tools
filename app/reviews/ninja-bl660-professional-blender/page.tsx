@@ -27,7 +27,11 @@ export const fetchCache = 'force-cache'
 export async function generateMetadata(): Promise<Metadata> {
   const centralMeta = getReviewMetadata('ninja-bl660-professional-blender')
   const product = await getProductBySlug(reviewData.productSlug)
-  const productData = product!
+
+  if (!product) {
+    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+  }
+  const productData = product
 
   return {
     title: centralMeta.title,
@@ -69,6 +73,10 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function NinjaBL660ReviewPage() {
   const product = await getProductBySlug(reviewData.productSlug)
+
+  if (!product) {
+    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+  }
   const productData = product ? {
     ...reviewData.legacyProductData,
     ...product,

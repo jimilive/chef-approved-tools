@@ -30,7 +30,11 @@ const faqData = reviewData.faq.items
 export async function generateMetadata(): Promise<Metadata> {
   const centralMeta = getReviewMetadata('robot-coupe-r2-dice')
   const product = await getProductBySlug(reviewData.productSlug)
-  const productData = product!
+
+  if (!product) {
+    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+  }
+  const productData = product
 
   return {
     title: centralMeta.title,
@@ -75,6 +79,10 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function RobotCoupeR2DiceReview() {
   // Get product data from Supabase
   const product = await getProductBySlug('robot-coupe-r2-dice')
+
+  if (!product) {
+    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+  }
   if (!product) {
     throw new Error('Product not found: robot-coupe-r2-dice')
   }
