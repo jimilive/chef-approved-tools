@@ -5,19 +5,27 @@ import { generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getPageMetadata } from '@/data/metadata'
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Best Budget Chef Knife 2025: Why Pros Choose The $50 Victorinox',
-  description: "Victorinox Fibrox 8\" tested 20 years in restaurants: Best budget chef knife under $50. NSF certified, dishwasher safe, outperforms $200+ German blades.",
-  keywords: "best budget chef knife, affordable chef knife, victorinox fibrox, cheap chef knife that's good, professional knife under $50, budget kitchen knife",
-  openGraph: {
-    title: 'Best Budget Chef Knife 2025: Why Pros Choose The $50 Victorinox',
-    description: "Victorinox Fibrox 8\" tested 20 years in restaurants: Best budget chef knife under $50. NSF certified, dishwasher safe, outperforms $200+ German blades.",
-    url: "https://www.chefapprovedtools.com/best-budget-chef-knife",
-    type: "article"
-  },
+const pageMetadata = getPageMetadata('best-budget-chef-knife')
+
+export const metadata: Metadata = {
+  title: pageMetadata.title,
+  description: pageMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/best-budget-chef-knife',
+    canonical: pageMetadata.canonical,
+  },
+  openGraph: {
+    title: pageMetadata.title,
+    description: pageMetadata.description,
+    url: pageMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: pageMetadata.imageUrl ? [{
+      url: pageMetadata.imageUrl,
+      alt: pageMetadata.imageAlt || pageMetadata.title,
+    }] : undefined,
+    type: 'website',
   },
 }
 

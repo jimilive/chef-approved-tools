@@ -6,19 +6,27 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { getProductsByCategory } from '@/lib/product-helpers';
 import { getEditorialMetadataWithDefaults } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next'
+import { getPageMetadata } from '@/data/metadata'
 
 export const dynamic = 'force-dynamic'
 
+const pageMetadata = getPageMetadata('cookware')
+
 export const metadata: Metadata = {
-  title: 'Best Cookware 2025: Pans & Pots Tested In Restaurant Kitchens',
-  description: 'Professional cookware reviews: Pans, pots, Dutch ovens tested in restaurant kitchens and at home. What works, what lasts. Chef-approved recommendations.',
-  keywords: ['best cookware', 'cast iron', 'stainless steel pans', 'non-stick cookware', 'professional cookware'],
+  title: pageMetadata.title,
+  description: pageMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/cookware',
+    canonical: pageMetadata.canonical,
   },
   openGraph: {
-    title: 'Best Cookware 2025 | Chef-Tested Pots & Pans',
-    description: 'Restaurant-tested cookware reviews from a professional chef.',
+    title: pageMetadata.title,
+    description: pageMetadata.description,
+    url: pageMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: pageMetadata.imageUrl ? [{
+      url: pageMetadata.imageUrl,
+      alt: pageMetadata.imageAlt || pageMetadata.title,
+    }] : undefined,
     type: 'website',
   }
 }

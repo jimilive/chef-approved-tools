@@ -4,13 +4,26 @@ import { Metadata } from 'next'
 import FAQSchema from '@/components/FAQSchema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import Link from 'next/link'
+import { getPageMetadata } from '@/data/metadata'
+
+const pageMetadata = getPageMetadata('about')
 
 export const metadata: Metadata = {
-  title: 'About Chef Approved Tools: 24 Years Restaurant Experience',
-  description: '24 years in professional kitchens—Purple Café, Mellow Mushroom, Il Pizzaiolo. Why a restaurant chef reviews equipment in real conditions, not labs.',
-  keywords: 'Scott Bradley chef, professional chef background, kitchen equipment testing, restaurant equipment review process, chef equipment methodology, culinary expertise',
+  title: pageMetadata.title,
+  description: pageMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/about',
+    canonical: pageMetadata.canonical,
+  },
+  openGraph: {
+    title: pageMetadata.title,
+    description: pageMetadata.description,
+    url: pageMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: pageMetadata.imageUrl ? [{
+      url: pageMetadata.imageUrl,
+      alt: pageMetadata.imageAlt || pageMetadata.title,
+    }] : undefined,
+    type: 'website',
   },
 }
 

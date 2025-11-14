@@ -6,19 +6,27 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { getProductsByCategory } from '@/lib/product-helpers';
 import { getEditorialMetadataWithDefaults } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next'
+import { getPageMetadata } from '@/data/metadata'
 
 export const dynamic = 'force-dynamic'
 
+const pageMetadata = getPageMetadata('knives')
+
 export const metadata: Metadata = {
-  title: 'Chef Knives: Reviews, Guides & 20 Years Restaurant Testing',
-  description: 'Professional chef reviews of kitchen knives tested over 20 years in restaurant kitchens. Chef knives, paring knives, bread knives, and specialty blades.',
-  keywords: ['chef knives', 'best kitchen knives', 'professional knives', 'knife reviews', 'Victorinox', 'Wüsthof'],
+  title: pageMetadata.title,
+  description: pageMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/knives',
+    canonical: pageMetadata.canonical,
   },
   openGraph: {
-    title: 'Chef Knives: All Reviews & Guides',
-    description: 'Chef knives tested in professional kitchens for 20 years.',
+    title: pageMetadata.title,
+    description: pageMetadata.description,
+    url: pageMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: pageMetadata.imageUrl ? [{
+      url: pageMetadata.imageUrl,
+      alt: pageMetadata.imageAlt || pageMetadata.title,
+    }] : undefined,
     type: 'website',
   }
 }

@@ -6,19 +6,27 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { getProductsByCategory } from '@/lib/product-helpers';
 import { getEditorialMetadataWithDefaults } from '@/lib/editorial-metadata';
 import type { Metadata } from 'next'
+import { getPageMetadata } from '@/data/metadata'
 
 export const dynamic = 'force-dynamic'
 
+const pageMetadata = getPageMetadata('appliances')
+
 export const metadata: Metadata = {
-  title: 'Kitchen Appliances 2025: Blenders, Mixers & Chef Reviews',
-  description: 'Professional chef reviews of blenders, mixers, food processors, and essential kitchen appliances tested in commercial restaurant settings over 24 years.',
-  keywords: ['kitchen appliances', 'blender reviews', 'mixer reviews', 'food processor reviews', 'professional kitchen equipment'],
+  title: pageMetadata.title,
+  description: pageMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/appliances',
+    canonical: pageMetadata.canonical,
   },
   openGraph: {
-    title: 'Best Kitchen Appliances 2025 | Chef-Tested Reviews',
-    description: 'Professional chef reviews of blenders, mixers, and essential kitchen appliances.',
+    title: pageMetadata.title,
+    description: pageMetadata.description,
+    url: pageMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: pageMetadata.imageUrl ? [{
+      url: pageMetadata.imageUrl,
+      alt: pageMetadata.imageAlt || pageMetadata.title,
+    }] : undefined,
     type: 'website',
   }
 }

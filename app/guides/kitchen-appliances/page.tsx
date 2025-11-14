@@ -3,12 +3,26 @@ import { Metadata } from 'next'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getGuideMetadata } from '@/data/metadata'
+
+const guideMetadata = getGuideMetadata('kitchen-appliances')
 
 export const metadata: Metadata = {
-  title: 'Kitchen Appliances Buying Guide 2025: Pro Chef Recommendations',
-  description: 'Professional kitchen appliance buying guide. Blenders, mixers, food processors tested in restaurant kitchens. Commercial-grade performance recommendations.',
+  title: guideMetadata.title,
+  description: guideMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/guides/kitchen-appliances',
+    canonical: guideMetadata.canonical,
+  },
+  openGraph: {
+    title: guideMetadata.title,
+    description: guideMetadata.description,
+    url: guideMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: guideMetadata.imageUrl ? [{
+      url: guideMetadata.imageUrl,
+      alt: guideMetadata.imageAlt || guideMetadata.title,
+    }] : undefined,
+    type: 'article',
   },
 }
 

@@ -1,13 +1,26 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Book, Search, ChevronRight } from 'lucide-react'
+import { getPageMetadata } from '@/data/metadata'
+
+const pageMetadata = getPageMetadata('glossary')
 
 export const metadata: Metadata = {
-  title: 'Kitchen Terms Glossary: Equipment Specs & Professional Techniques',
-  description: 'Kitchen terms defined by a professional chef: Equipment specs, knife cuts, baking conversions. Julienne, brunoise, NSF certification explained simply.',
-  keywords: ['kitchen equipment glossary', 'recipe conversions', 'baking by weight', 'professional measurements', 'knife cuts guide', 'NSF certification', 'full tang knife', 'julienne cut', 'brunoise', 'chiffonade', 'professional knife techniques', 'restaurant equipment terms', 'volume to weight conversions', 'professional baking techniques'],
+  title: pageMetadata.title,
+  description: pageMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/glossary',
+    canonical: pageMetadata.canonical,
+  },
+  openGraph: {
+    title: pageMetadata.title,
+    description: pageMetadata.description,
+    url: pageMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: pageMetadata.imageUrl ? [{
+      url: pageMetadata.imageUrl,
+      alt: pageMetadata.imageAlt || pageMetadata.title,
+    }] : undefined,
+    type: 'website',
   },
 }
 

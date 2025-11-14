@@ -2,12 +2,26 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getGuideMetadata } from '@/data/metadata'
+
+const guideMetadata = getGuideMetadata('knife-care')
 
 export const metadata: Metadata = {
-  title: 'Knife Care Guide: How To Keep Chef Knives Sharp For Decades',
-  description: 'Professional knife care guide: Sharpening, storage, maintenance from a restaurant kitchen manager. Keep your knives performing for decades like the pros.',
+  title: guideMetadata.title,
+  description: guideMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/guides/knife-care',
+    canonical: guideMetadata.canonical,
+  },
+  openGraph: {
+    title: guideMetadata.title,
+    description: guideMetadata.description,
+    url: guideMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: guideMetadata.imageUrl ? [{
+      url: guideMetadata.imageUrl,
+      alt: guideMetadata.imageAlt || guideMetadata.title,
+    }] : undefined,
+    type: 'article',
   },
 }
 

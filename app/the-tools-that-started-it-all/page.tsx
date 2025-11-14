@@ -2,13 +2,26 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import FAQSchema from '@/components/FAQSchema'
+import { getPageMetadata } from '@/data/metadata'
+
+const pageMetadata = getPageMetadata('the-tools-that-started-it-all')
 
 export const metadata: Metadata = {
-  title: '11 Culinary School Tools I Still Use 20 Years Later',
-  description: 'The 11 essential kitchen tools I packed for culinary school in 2005 that I still use 20 years later. Professional-grade equipment that survived restaurant abuse.',
-  keywords: 'culinary school tools, professional kitchen equipment, Victorinox knives, essential kitchen tools, chef knife bag, restaurant kitchen tools',
+  title: pageMetadata.title,
+  description: pageMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/the-tools-that-started-it-all',
+    canonical: pageMetadata.canonical,
+  },
+  openGraph: {
+    title: pageMetadata.title,
+    description: pageMetadata.description,
+    url: pageMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: pageMetadata.imageUrl ? [{
+      url: pageMetadata.imageUrl,
+      alt: pageMetadata.imageAlt || pageMetadata.title,
+    }] : undefined,
+    type: 'website',
   },
 }
 

@@ -5,15 +5,29 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import AuthorBio from '@/components/review/AuthorBio';
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers';
+import { getGuideMetadata } from '@/data/metadata';
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
 
+const guideMetadata = getGuideMetadata('affordable-kitchen-appliances')
+
 export const metadata: Metadata = {
-  title: 'Budget Kitchen Appliances 2025: What Actually Works Under $100',
-  description: 'Affordable kitchen appliances that actually work: Budget blenders, mixers tested by a professional chef. Restaurant quality without premium $300+ prices.',
+  title: guideMetadata.title,
+  description: guideMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/guides/affordable-kitchen-appliances',
+    canonical: guideMetadata.canonical,
+  },
+  openGraph: {
+    title: guideMetadata.title,
+    description: guideMetadata.description,
+    url: guideMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: guideMetadata.imageUrl ? [{
+      url: guideMetadata.imageUrl,
+      alt: guideMetadata.imageAlt || guideMetadata.title,
+    }] : undefined,
+    type: 'article',
   },
 }
 

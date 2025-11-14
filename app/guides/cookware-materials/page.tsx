@@ -2,12 +2,26 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getGuideMetadata } from '@/data/metadata'
+
+const guideMetadata = getGuideMetadata('cookware-materials')
 
 export const metadata: Metadata = {
-  title: 'Cookware Materials Guide: Stainless vs Cast Iron vs Carbon Steel',
-  description: 'Complete guide to cookware materials from 24 years of restaurant experience. Stainless steel vs cast iron vs carbon steel - which is best for what.',
+  title: guideMetadata.title,
+  description: guideMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/guides/cookware-materials',
+    canonical: guideMetadata.canonical,
+  },
+  openGraph: {
+    title: guideMetadata.title,
+    description: guideMetadata.description,
+    url: guideMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: guideMetadata.imageUrl ? [{
+      url: guideMetadata.imageUrl,
+      alt: guideMetadata.imageAlt || guideMetadata.title,
+    }] : undefined,
+    type: 'article',
   },
 }
 

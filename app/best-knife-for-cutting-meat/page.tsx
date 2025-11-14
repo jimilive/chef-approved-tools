@@ -5,19 +5,27 @@ import { generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getPageMetadata } from '@/data/metadata'
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title: "Best Knife For Cutting Meat 2025: Boning vs Breaking Knives",
-  description: "Victorinox 6\" boning knife: Best for trimming and deboning meat. Firm blade, Granton edge, NSF certified. Professional butcher's 20-year pick.",
-  keywords: "best knife for cutting meat, boning knife, butcher knife, meat trimming knife, victorinox boning knife, flexible boning knife, deboning knife",
-  openGraph: {
-    title: "Best Knife for Cutting Meat: Victorinox Boning Knife | Pro's Pick",
-    description: "24 years of professional cooking: This $25 flexible boning knife is the professional's choice for trimming, deboning, and portioning all types of meat.",
-    url: "https://www.chefapprovedtools.com/best-knife-for-cutting-meat",
-    type: "article"
-  },
+const pageMetadata = getPageMetadata('best-knife-for-cutting-meat')
+
+export const metadata: Metadata = {
+  title: pageMetadata.title,
+  description: pageMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/best-knife-for-cutting-meat',
+    canonical: pageMetadata.canonical,
+  },
+  openGraph: {
+    title: pageMetadata.title,
+    description: pageMetadata.description,
+    url: pageMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: pageMetadata.imageUrl ? [{
+      url: pageMetadata.imageUrl,
+      alt: pageMetadata.imageAlt || pageMetadata.title,
+    }] : undefined,
+    type: 'website',
   },
 }
 

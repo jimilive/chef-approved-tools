@@ -3,12 +3,26 @@ import { Metadata } from 'next'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import AuthorBio from '@/components/review/AuthorBio'
+import { getGuideMetadata } from '@/data/metadata'
+
+const guideMetadata = getGuideMetadata('best-cookware')
 
 export const metadata: Metadata = {
-  title: 'Restaurant-Grade Cookware: Pro Comparison',
-  description: 'Professional cookware recommendations from 24 years of restaurant experience. Find pans that survive commercial use.',
+  title: guideMetadata.title,
+  description: guideMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/guides/best-cookware',
+    canonical: guideMetadata.canonical,
+  },
+  openGraph: {
+    title: guideMetadata.title,
+    description: guideMetadata.description,
+    url: guideMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: guideMetadata.imageUrl ? [{
+      url: guideMetadata.imageUrl,
+      alt: guideMetadata.imageAlt || guideMetadata.title,
+    }] : undefined,
+    type: 'article',
   },
 }
 

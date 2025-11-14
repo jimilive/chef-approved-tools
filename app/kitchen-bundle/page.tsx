@@ -5,13 +5,26 @@ import { ArrowRight, ShoppingCart } from 'lucide-react'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getPageMetadata } from '@/data/metadata'
+
+const pageMetadata = getPageMetadata('kitchen-bundle')
 
 export const metadata: Metadata = {
-  title: 'Essential Kitchen Bundle: 10 Tools Tested Over 24 Years',
-  description: 'Professional kitchen starter kit: 10 essential tools tested 24 years in restaurants. From knives to cookware. Build your pro kitchen for under $500.',
-  keywords: 'chef approved kitchen kit, essential kitchen tools, professional kitchen starter, restaurant tested equipment',
+  title: pageMetadata.title,
+  description: pageMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/kitchen-bundle',
+    canonical: pageMetadata.canonical,
+  },
+  openGraph: {
+    title: pageMetadata.title,
+    description: pageMetadata.description,
+    url: pageMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: pageMetadata.imageUrl ? [{
+      url: pageMetadata.imageUrl,
+      alt: pageMetadata.imageAlt || pageMetadata.title,
+    }] : undefined,
+    type: 'website',
   },
 }
 

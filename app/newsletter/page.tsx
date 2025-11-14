@@ -1,12 +1,25 @@
 import { Metadata } from 'next'
 import NewsletterForm from './NewsletterForm'
+import { getPageMetadata } from '@/data/metadata'
+
+const pageMetadata = getPageMetadata('newsletter')
 
 export const metadata: Metadata = {
-  title: "Equipment Newsletter: Chef's Tips & Honest Product Reviews",
-  description: 'Get equipment insights and honest product recommendations from 24 years of restaurant experience. Join home chefs getting expert advice. Weekly emails.',
-  keywords: 'kitchen tools guide, essential kitchen equipment, chef recommendations, professional kitchen tools, kitchen equipment list',
+  title: pageMetadata.title,
+  description: pageMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/newsletter',
+    canonical: pageMetadata.canonical,
+  },
+  openGraph: {
+    title: pageMetadata.title,
+    description: pageMetadata.description,
+    url: pageMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: pageMetadata.imageUrl ? [{
+      url: pageMetadata.imageUrl,
+      alt: pageMetadata.imageAlt || pageMetadata.title,
+    }] : undefined,
+    type: 'website',
   },
 }
 

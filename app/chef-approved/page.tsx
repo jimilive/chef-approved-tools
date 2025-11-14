@@ -1,19 +1,26 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { generateBreadcrumbSchema } from '@/lib/schema'
+import { getPageMetadata } from '@/data/metadata'
+
+const pageMetadata = getPageMetadata('chef-approved')
 
 export const metadata: Metadata = {
-  title: 'What "Chef Approved" Means: 24 Years Restaurant Testing System',
-  description: 'What "Chef Approved" means at ChefApprovedTools.com. Chef Scott Bradley\'s transparent 3-tier testing system based on 24 years professional restaurant experience.',
+  title: pageMetadata.title,
+  description: pageMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/chef-approved',
+    canonical: pageMetadata.canonical,
   },
   openGraph: {
-    title: 'Chef Approved Tools: What It Actually Means',
-    description: 'Professional kitchen equipment reviews based on 24 years of restaurant experience. Learn about our three-tier review system.',
-    type: 'website',
-    url: 'https://www.chefapprovedtools.com/chef-approved',
+    title: pageMetadata.title,
+    description: pageMetadata.description,
+    url: pageMetadata.canonical,
     siteName: 'Chef Approved Tools',
+    images: pageMetadata.imageUrl ? [{
+      url: pageMetadata.imageUrl,
+      alt: pageMetadata.imageAlt || pageMetadata.title,
+    }] : undefined,
+    type: 'website',
   },
 }
 

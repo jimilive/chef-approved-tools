@@ -6,19 +6,29 @@ import { generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getGuideMetadata } from '@/data/metadata'
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
 
+const guideMetadata = getGuideMetadata('best-chef-knives')
+
 export const metadata: Metadata = {
-  title: 'Best Chef Knives 2025: Pro Chef Tests 8 Knives ($50-$300)',
-  description: 'Professional chef tests 8 chef knives from $50 to $300 after 24 years in restaurant kitchens. German workhorses vs Japanese precision. Real testing results.',
-  openGraph: {
-    title: 'Best Chef Knives 2025: Pro Chef Tests 8 Knives ($50-$300)',
-    description: 'Professional chef tests 8 chef knives from $50 to $300 after 24 years in restaurant kitchens. German workhorses vs Japanese precision. Real testing results.',
-  },
+  title: guideMetadata.title,
+  description: guideMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/guides/best-chef-knives',
+    canonical: guideMetadata.canonical,
+  },
+  openGraph: {
+    title: guideMetadata.title,
+    description: guideMetadata.description,
+    url: guideMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: guideMetadata.imageUrl ? [{
+      url: guideMetadata.imageUrl,
+      alt: guideMetadata.imageAlt || guideMetadata.title,
+    }] : undefined,
+    type: 'article',
   },
 }
 

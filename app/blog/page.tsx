@@ -1,13 +1,26 @@
 import { Metadata } from 'next'
 import BlogClient from './BlogClient'
 import { getAllBlogPosts } from '@/lib/blog-utils'
+import { getPageMetadata } from '@/data/metadata'
+
+const pageMetadata = getPageMetadata('blog')
 
 export const metadata: Metadata = {
-  title: 'Restaurant Cooking Techniques For Home Kitchens (71 Guides)',
-  description: "24 years of professional cooking methods translated for home kitchens. Learn what actually matters vs. what's just chef theater. 71 technique guides.",
-  keywords: ['professional cooking techniques', 'restaurant cooking methods', 'chef techniques', 'kitchen manager tips', 'restaurant quality cooking', 'professional chef blog'],
+  title: pageMetadata.title,
+  description: pageMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog',
+    canonical: pageMetadata.canonical,
+  },
+  openGraph: {
+    title: pageMetadata.title,
+    description: pageMetadata.description,
+    url: pageMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: pageMetadata.imageUrl ? [{
+      url: pageMetadata.imageUrl,
+      alt: pageMetadata.imageAlt || pageMetadata.title,
+    }] : undefined,
+    type: 'website',
   },
 }
 
