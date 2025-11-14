@@ -206,7 +206,7 @@ export default function StandMixerBuyingGuidePost() {
                   <td className="border border-gray-300 px-4 py-2">Precision Master 5.5-Qt</td>
                   <td className="border border-gray-300 px-4 py-2">Affordable, decent power</td>
                   <td className="border border-gray-300 px-4 py-2">Less torque, smaller bowl</td>
-                  <td className="border border-gray-300 px-4 py-2">Budget-friendly starter mixer</td>
+                  <td className="border border-gray-300 px-4 py-2">Lower-cost starter mixer</td>
                 </tr>
               </tbody>
             </table>

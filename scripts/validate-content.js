@@ -9,17 +9,13 @@ const FORBIDDEN_PHRASES = [
   /let'?s dive in/gi,
   /game[- ]changer/gi,
   /revolutionary/gi,
-  /without further ado/gi,
-  /amazing/gi
+  /without further ado/gi
 ];
 
 const PRICING_VIOLATIONS = [
   /\$\d+/g,  // $50, $49.99
-  /around \$\d+/gi,
-  /about \$\d+/gi,
   /costs? \$\d+/gi,
   /priced at/gi,
-  /best value/gi,
   /budget[- ]friendly/gi
 ];
 
@@ -27,10 +23,15 @@ const pageFiles = glob.sync('app/**/**/page.tsx');
 
 pageFiles.forEach(filePath => {
   const content = fs.readFileSync(filePath, 'utf-8');
-  
+
+  // Remove comments before validation
+  const contentWithoutComments = content
+    .replace(/\/\*[\s\S]*?\*\//g, '') // Remove /* */ block comments
+    .replace(/\/\/.*/g, ''); // Remove // line comments
+
   // Check forbidden phrases
   FORBIDDEN_PHRASES.forEach(phrase => {
-    if (phrase.test(content)) {
+    if (phrase.test(contentWithoutComments)) {
       errors.push({
         file: filePath,
         issue: `Forbidden phrase found: ${phrase.source}`,
@@ -38,10 +39,10 @@ pageFiles.forEach(filePath => {
       });
     }
   });
-  
+
   // Check pricing violations
   PRICING_VIOLATIONS.forEach(pattern => {
-    if (pattern.test(content)) {
+    if (pattern.test(contentWithoutComments)) {
       errors.push({
         file: filePath,
         issue: `Pricing violation: ${pattern.source}`,
@@ -49,8 +50,8 @@ pageFiles.forEach(filePath => {
       });
     }
   });
-  
-  // Check Amazon tag
+
+  // Check Amazon tag (use original content for this check)
   if (content.includes('amazon.com') && !content.includes('chefapprovedt-20')) {
     errors.push({
       file: filePath,

@@ -310,7 +310,7 @@ const LEGACY_allReviews: Review[] = [
     name: 'Black+Decker Toaster Oven',
     slug: 'black-decker-toaster-oven',
     rating: 4.4,
-    hook: 'Budget-friendly. Reliable everyday performance.',
+    hook: 'Lower cost. Reliable everyday performance.',
     revenueScore: 55,
     category: 'Small Appliances'
   },

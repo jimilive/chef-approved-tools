@@ -155,7 +155,7 @@ export default function CuttingBoardMaterialsPost() {
             </p>
           </div>
 
-          <h3>2. Edge-Grain Wood — The Budget-Friendly Classic</h3>
+          <h3>2. Edge-Grain Wood — The Less Costly Classic</h3>
 
           <p>
             <strong>Pros:</strong> Affordable, sturdy, attractive.

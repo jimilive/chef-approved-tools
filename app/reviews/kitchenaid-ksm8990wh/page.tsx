@@ -288,8 +288,8 @@ export default async function KitchenAidCommercialReviewPage() {
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="p-4 font-medium">Price Range</td>
-                  <td className="p-4 text-orange-800">$759-$1,100</td>
-                  <td className="p-4 text-gray-600">$300-$600</td>
+                  <td className="p-4 text-orange-800">Premium tier</td>
+                  <td className="p-4 text-gray-600">Consumer tier</td>
                 </tr>
               </tbody>
             </table>
@@ -314,25 +314,25 @@ export default async function KitchenAidCommercialReviewPage() {
               <tbody>
                 <tr className="border-b border-gray-100 bg-orange-50">
                   <td className="p-4 font-semibold">KitchenAid Commercial</td>
-                  <td className="p-4">$759-1,100</td>
+                  <td className="p-4">Premium prosumer</td>
                   <td className="p-4">1.3 HP</td>
                   <td className="p-4">Small bakeries, serious home use, catering</td>
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="p-4">Hobart N50</td>
-                  <td className="p-4">$2,100-2,400</td>
-                  <td className="p-4">1/5 HP (gear-driven)</td>
+                  <td className="p-4">High-end commercial</td>
+                  <td className="p-4">0.2 HP (gear-driven)</td>
                   <td className="p-4">High-volume commercial (5+ hours daily)</td>
                 </tr>
                 <tr className="border-b border-gray-100 bg-gray-50">
                   <td className="p-4">Globe SP8</td>
-                  <td className="p-4">$1,600-1,900</td>
-                  <td className="p-4">1/3 HP</td>
+                  <td className="p-4">Mid-range commercial</td>
+                  <td className="p-4">0.33 HP</td>
                   <td className="p-4">Mid-volume commercial</td>
                 </tr>
                 <tr>
                   <td className="p-4">Avantco MX20</td>
-                  <td className="p-4">$800-950</td>
+                  <td className="p-4">Entry commercial</td>
                   <td className="p-4">1 HP</td>
                   <td className="p-4">Budget commercial (quality concerns)</td>
                 </tr>
@@ -364,7 +364,7 @@ export default async function KitchenAidCommercialReviewPage() {
               </ul>
             </div>
             <p className="text-slate-700 mb-0">
-              <strong>Cost factor:</strong> Electrician installation of dedicated 20-amp circuit typically runs $150-300. Factor this into your total investment.
+              <strong>Cost factor:</strong> Electrician installation of dedicated 20-amp circuit requires professional installation. Factor this into your total investment.
             </p>
           </div>
         </section>

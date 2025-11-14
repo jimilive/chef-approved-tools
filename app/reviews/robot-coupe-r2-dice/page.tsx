@@ -339,7 +339,7 @@ export default async function RobotCoupeR2DiceReview() {
 
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
-                &quot;Upgraded from a home-grade Cuisinart and the difference is night and day. The 2 HP motor handles hard cheeses without bogging down. The continuous feed is a game-changer for volume prep. Expensive upfront but pays for itself quickly in labor savings.&quot;
+                &quot;Upgraded from a home-grade Cuisinart and the difference is night and day. The 2 HP motor handles hard cheeses without bogging down. The continuous feed transforms volume prep. Expensive upfront but pays for itself quickly in labor savings.&quot;
               </p>
               <p className="text-sm text-slate-500">— WebstaurantStore verified purchaser (M.R., July 2024) | Small Restaurant</p>
             </div>

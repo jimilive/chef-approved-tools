@@ -17,7 +17,7 @@ const guidesFAQs = [
   },
   {
     question: "Do you recommend budget alternatives in your guides?",
-    answer: "Absolutely. Each guide includes recommendations across different price points, including budget-friendly options that still meet our quality standards. We believe great cooking shouldn't require expensive equipment, just the right equipment for your needs."
+    answer: "Absolutely. Each guide includes recommendations across different price points, including lower-cost options that still meet our quality standards. We believe great cooking shouldn't require expensive equipment, just the right equipment for your needs."
   },
   {
     question: "How do you choose which equipment to include in guides?",

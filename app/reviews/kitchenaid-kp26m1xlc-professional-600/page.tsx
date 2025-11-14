@@ -265,7 +265,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
           <div className="border border-gray-200 rounded-xl p-6 bg-orange-50 mb-4">
             <div className="text-center mb-4">
               <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">KitchenAid Direct</h3>
-              <p className="text-sm text-slate-900 mb-4">Factory direct, full warranty, free shipping on orders $50+</p>
+              <p className="text-sm text-slate-900 mb-4">Factory direct, full warranty, free shipping</p>
             </div>
 
             <CTAVisibilityTracker

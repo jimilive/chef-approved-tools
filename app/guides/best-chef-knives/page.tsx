@@ -58,7 +58,7 @@ const topKnives = [
     tag: 'Best for Pros',
     tagColor: 'bg-blue-500',
     affiliateUrl: 'https://amzn.to/4o6pPwW',
-    quickPros: ['Longer blade for efficiency', 'Restaurant standard', 'Budget-friendly'],
+    quickPros: ['Longer blade for efficiency', 'Restaurant standard', 'Lower cost'],
     quickCons: ['Too big for some', 'Requires counter space']
   },
   {

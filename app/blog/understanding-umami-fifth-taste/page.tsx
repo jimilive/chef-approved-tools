@@ -332,7 +332,7 @@ export default function UmamiGuidePage() {
             <strong>Pro tip:</strong> Keep anchovy paste, fish sauce, and dried mushrooms in your pantry. These three ingredients can transform almost any dish.
           </p>
 
-          <h2>The Bottom Line: Umami is a Game-Changer</h2>
+          <h2>The Bottom Line: Understanding Umami Transforms Your Cooking</h2>
 
           <p>
             Understanding umami changed the way I cook. Once you learn to recognize it and layer it intentionally, your food will taste richer, more complex, and more satisfying—without needing more salt or fat.
