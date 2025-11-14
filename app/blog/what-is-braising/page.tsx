@@ -85,7 +85,7 @@ export default function BraisingPage() {
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
-            Here&apos;s something that surprised me when I first started cooking professionally: <strong>The best-tasting dishes in restaurants often come from the cheapest cuts of meat.</strong> That $6-per-pound beef chuck? In the right hands, it tastes better than $40-per-pound tenderloin. Short ribs that cost less than ground beef become the most-requested special on the menu. Pork shoulder transforms into something so tender it doesn&apos;t need teeth.
+            Here&apos;s something that surprised me when I first started cooking professionally: <strong>The best-tasting dishes in restaurants often come from the cheapest cuts of meat.</strong> That $6-per-pound beef chuck? In the right hands, it tastes better than $25-per-pound tenderloin. Short ribs that cost less than ground beef become the most-requested special on the menu. Pork shoulder transforms into something so tender it doesn&apos;t need teeth.
           </p>
 
           <p>

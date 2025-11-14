@@ -233,7 +233,7 @@ export default function KitchenToolsWastePost() {
           </p>
 
           <p>
-            <strong>The fix:</strong> A $15 ceramic honing rod and a solid cutting board will do more for your cooking than any gadget.
+            <strong>The fix:</strong> A ceramic honing rod and a solid cutting board will do more for your cooking than any gadget.
           </p>
 
           <h3>Mistake #7: Buying Matching Sets for Aesthetic</h3>

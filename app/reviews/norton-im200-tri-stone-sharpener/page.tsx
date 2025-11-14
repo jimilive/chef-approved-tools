@@ -34,7 +34,7 @@ function processInlineLinks(text: string): React.ReactNode {
         'KitchenAid commercial mixer': '/reviews/kitchenaid-ksm8990wh',
         'Robot Coupe food processor': '/reviews/robot-coupe-r2-dice',
         'premium John Boos cutting board': '/reviews/john-boos-platinum-commercial-cutting-board',
-        '$50 Victorinox chef knife': '/reviews/victorinox-fibrox-10-inch-chefs-knife',
+        'Victorinox chef knife': '/reviews/victorinox-fibrox-10-inch-chefs-knife',
         'Le Creuset Dutch oven': '/reviews/le-creuset-signature-7-25-qt-dutch-oven',
         'professional kitchen starter kit': '/kitchen-bundle',
         'proper knife care and maintenance': '/guides/knife-care'

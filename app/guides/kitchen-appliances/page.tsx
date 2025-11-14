@@ -258,7 +258,7 @@ export default function KitchenAppliancesPage() {
                 an hour of scrubbing.</li>
 
                 <li><strong>Lubricate moving parts annually:</strong> KitchenAid mixers need their planetary gears greased
-                yearly if you use them weekly. Food-safe grease costs $8 and takes 10 minutes. Skipping it means $200 gear
+                yearly if you use them weekly. Food-safe grease costs around $8 and takes 10 minutes. Skipping it means $200 gear
                 replacement in 3 years.</li>
 
                 <li><strong>Check blade sharpness:</strong> Blender blades don&rsquo;t stay sharp forever. If your smoothies take

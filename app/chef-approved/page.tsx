@@ -411,7 +411,7 @@ export default function ChefApprovedPage() {
               <span className="ml-2 text-emerald-700 font-semibold">(Tier 1)</span>
               <ul className="mt-2 ml-6 text-orange-800">
                 <li>Daily use in multiple restaurant kitchens</li>
-                <li>Essential prep tool for under $10</li>
+                <li>Essential prep tool for around $15</li>
                 <li>What every culinary school student should own</li>
               </ul>
             </li>
@@ -472,7 +472,7 @@ export default function ChefApprovedPage() {
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Do you only recommend expensive &ldquo;professional&rdquo; equipment?</h3>
               <p className="text-slate-700">
-                No. Some of my favorite Tier 1 recommendations are budget tools (like the Victorinox Fibrox Pro at $40) because they perform as well as knives costing 5x more. Professional kitchens have budgets too—I know where to save and where to splurge.
+                No. Some of my favorite Tier 1 recommendations are budget tools (like the Victorinox Fibrox Pro at around $50) because they perform as well as knives costing 5x more. Professional kitchens have budgets too—I know where to save and where to splurge.
               </p>
             </div>
 

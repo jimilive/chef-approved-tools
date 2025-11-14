@@ -65,11 +65,11 @@ export default async function BestBudgetChefKnife() {
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            Best Budget Chef Knife: The $40 Knife I've Used for 20 Years
+            Best Budget Chef Knife: The $50 Knife I've Used for 20 Years
           </h1>
           <p className="text-lg sm:text-xl text-slate-200 leading-relaxed max-w-3xl">
             After two decades in professional kitchens, I've learned you don't need to spend $200+ on a chef's knife.
-            The Victorinox Fibrox 8" offers professional-grade performance for under $50.
+            The Victorinox Fibrox 8" offers professional-grade performance for around $50.
           </p>
         </div>
       </section>
@@ -85,7 +85,7 @@ export default async function BestBudgetChefKnife() {
           </h2>
           <p className="text-slate-700 text-lg leading-relaxed mb-4">
             The <strong>Victorinox Fibrox 8" Chef's Knife</strong> is the best budget chef knife for home cooks and professionals.
-            At around $40, it delivers professional-grade performance that rivals knives costing $200+.
+            At around $50, it delivers professional-grade performance that rivals knives costing $200+.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
             <CTAVisibilityTracker
@@ -153,7 +153,7 @@ export default async function BestBudgetChefKnife() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-600 font-bold">✓</span>
-                  <span>Exceptional value at $40-50</span>
+                  <span>Exceptional value at around $50</span>
                 </li>
               </ul>
             </div>
@@ -215,7 +215,7 @@ export default async function BestBudgetChefKnife() {
               <tbody className="divide-y divide-gray-200">
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Price</td>
-                  <td className="px-4 py-3 text-sm text-green-600 font-bold">~$40</td>
+                  <td className="px-4 py-3 text-sm text-green-600 font-bold">~$50</td>
                   <td className="px-4 py-3 text-sm text-slate-600">~$150</td>
                   <td className="px-4 py-3 text-sm text-slate-600">~$200</td>
                 </tr>

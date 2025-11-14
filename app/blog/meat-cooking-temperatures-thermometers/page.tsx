@@ -156,7 +156,7 @@ export default function MeatCookingTemperaturesThermometers() {
           <h3>4. Cost Savings</h3>
           <p>
             Overcooked meat is wasted money. When you&apos;re cooking expensive proteins—ribeyes,
-            lamb chops, whole fish—a $20 thermometer protects hundreds of dollars worth of food.
+            lamb chops, whole fish—a low-cost thermometer protects hundreds of dollars worth of food.
           </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">

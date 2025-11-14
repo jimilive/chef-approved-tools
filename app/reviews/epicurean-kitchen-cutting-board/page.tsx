@@ -364,12 +364,6 @@ export default async function EpicureanKitchenCuttingBoardReview() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="p-3 border-b border-gray-200">Price Range</td>
-                    <td className="p-3 border-b border-gray-200 font-bold text-green-700">$32-40</td>
-                    <td className="p-3 border-b border-gray-200">$80-150</td>
-                    <td className="p-3 border-b border-gray-200">$15-30</td>
-                  </tr>
-                  <tr className="bg-gray-50">
                     <td className="p-3 border-b border-gray-200">Dishwasher Safe</td>
                     <td className="p-3 border-b border-gray-200 font-bold">✓ Yes</td>
                     <td className="p-3 border-b border-gray-200">✗ Hand wash only</td>

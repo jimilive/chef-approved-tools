@@ -34,7 +34,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 const faqSchema = generateFAQSchema([
   {
     question: "Can I start with cheaper tools?",
-    answer: "Yes, but buy the best version of the basic tool you can afford. Reliability matters more than brand names. A $40 Victorinox chef's knife will outperform a $15 supermarket knife every time—and it's still affordable. The key is avoiding tools that will fail quickly or require immediate replacement."
+    answer: "Yes, but buy the best version of the basic tool you can afford. Reliability matters more than brand names. A $50 Victorinox chef's knife will outperform a $15 supermarket knife every time—and it's still affordable. The key is avoiding tools that will fail quickly or require immediate replacement."
   },
   {
     question: "Do I need specialty pans or knives?",
@@ -514,7 +514,7 @@ export default function KitchenStarterKitPage() {
 
           <h3>Can I start with cheaper tools?</h3>
           <p>
-            Yes, but buy the best version of the basic tool you can afford. Reliability matters more than brand names. A $40 Victorinox chef&apos;s knife will outperform a $15 supermarket knife every time—and it&apos;s still affordable. The key is avoiding tools that will fail quickly or require immediate replacement.
+            Yes, but buy the best version of the basic tool you can afford. Reliability matters more than brand names. A $50 Victorinox chef&apos;s knife will outperform a $15 supermarket knife every time—and it&apos;s still affordable. The key is avoiding tools that will fail quickly or require immediate replacement.
           </p>
 
           <h3>Do I need specialty pans or knives?</h3>

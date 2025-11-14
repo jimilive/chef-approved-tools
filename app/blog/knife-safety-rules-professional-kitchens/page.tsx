@@ -363,7 +363,7 @@ export default function KnifeSafetyPost() {
               merchant="internal"
             >
               <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link>
-            </CTAVisibilityTracker> for 19 years, and it&apos;s perfect for transferring chopped veggies or herbs without damaging your knife. A $10 bench scraper saves you hundreds in sharpening services and potentially thousands in hospital bills.
+            </CTAVisibilityTracker> for 19 years, and it&apos;s perfect for transferring chopped veggies or herbs without damaging your knife. An under $20 bench scraper saves you hundreds in sharpening services and potentially thousands in hospital bills.
           </p>
 
           <h3>Step 5: Store Knives Correctly</h3>

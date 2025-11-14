@@ -339,7 +339,7 @@ export default async function BestChefKnivesPage() {
                       )}
                       {knife.id === 3 && (
                         <p className="text-slate-700 leading-relaxed">
-                          Every chef needs a great paring knife, and this Victorinox delivers professional performance at an unbeatable price. Perfect for detail work, peeling, and small tasks where an 8-inch blade is overkill. I keep two of these in my kit—one for savory, one for fruit work to avoid flavor transfer. At $12, there&apos;s no excuse not to have a sharp paring knife.
+                          Every chef needs a great paring knife, and this Victorinox delivers professional performance at an unbeatable price. Perfect for detail work, peeling, and small tasks where an 8-inch blade is overkill. I keep two of these in my kit—one for savory, one for fruit work to avoid flavor transfer. At around $15, there&apos;s no excuse not to have a sharp paring knife.
                         </p>
                       )}
                       {knife.id === 4 && (
@@ -452,7 +452,7 @@ export default async function BestChefKnivesPage() {
             <div className="bg-white rounded-xl p-6 shadow-md">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Maintenance Reality Check</h3>
               <p className="text-slate-700 leading-relaxed">
-                Here&apos;s what nobody tells you: Even the best knife is useless if you don&apos;t maintain it. You need three things: a honing steel (use before each session), a sharpening stone or service (monthly to quarterly depending on use), and proper storage (knife block or magnetic strip, never loose in a drawer). I&apos;ve seen $500 Japanese knives ruined by dishwashers and $40 Victorinox knives lasting 10 years with proper care. Maintenance discipline matters more than initial investment.
+                Here&apos;s what nobody tells you: Even the best knife is useless if you don&apos;t maintain it. You need three things: a honing steel (use before each session), a sharpening stone or service (monthly to quarterly depending on use), and proper storage (knife block or magnetic strip, never loose in a drawer). I&apos;ve seen $500 Japanese knives ruined by dishwashers and $50 Victorinox knives lasting 10 years with proper care. Maintenance discipline matters more than initial investment.
               </p>
             </div>
           </div>
@@ -478,9 +478,9 @@ export default async function BestChefKnivesPage() {
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-md">
-              <h3 className="font-bold text-slate-900 mb-2">Is a $150 knife really better than a $40 knife?</h3>
+              <h3 className="font-bold text-slate-900 mb-2">Is a $150 knife really better than a $50 knife?</h3>
               <p className="text-slate-700 text-sm">
-                Yes and no. A $150 premium knife will hold an edge slightly longer and may have fancier handle materials. But a $40 Victorinox with proper maintenance outperforms a neglected $500 knife. The difference is incremental, not transformational. After 15 years of professional use, the Victorinox Fibrox 8&quot; is my daily driver—it simply works. For home cooks, Victorinox offers 90% of premium knife performance at 25% of the cost.
+                Yes and no. A $150 premium knife will hold an edge slightly longer and may have fancier handle materials. But a $50 Victorinox with proper maintenance outperforms a neglected $500 knife. The difference is incremental, not transformational. After 15 years of professional use, the Victorinox Fibrox 8&quot; is my daily driver—it simply works. For home cooks, Victorinox offers 90% of premium knife performance at 25% of the cost.
               </p>
             </div>
 
