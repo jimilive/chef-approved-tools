@@ -1,7 +1,7 @@
 export const comparisonData = {
   // Metadata
   metadata: {
-    title: "Cast Iron vs Carbon Steel Pans: What 24 Years Taught Me",
+    title: "Cast Iron vs Carbon Steel Pans: Heat Retention vs Control",
     description: "Cast iron holds heat 3x longer for searing. Carbon steel heats/cools instantly for control. Which cooking style matches yours + when to use each.",
     publishedDate: "2025-11-09",
     lastUpdated: "2025-11-09",
@@ -17,7 +17,7 @@ export const comparisonData = {
 
   // Hero Section
   hero: {
-    title: "Cast Iron vs Carbon Steel Pans: Which Should You Buy?",
+    title: "Cast Iron vs Carbon Steel Pans: Heat Retention vs Control",
     introduction: [
       "The cast iron versus carbon steel debate confuses even experienced home cooks. Both are raw iron. Both need seasoning. Both develop nonstick surfaces over time. So what's the actual difference, and why would you choose one over the other?",
       "Cast iron is a 10-pound workhorse that retains heat like a thermal battery. Carbon steel is a 3-pound athlete that heats instantly and responds to temperature changes within seconds. Understanding this fundamental trade-off determines which pan belongs in your kitchen.",

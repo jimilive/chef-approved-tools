@@ -11,7 +11,7 @@ import AuthorBio from '@/components/review/AuthorBio'
 export const metadata = generateBlogMetadata('reducing-sauces-restaurant-technique')
 
 const articleSchema = generateArticleSchema({
-  headline: 'Reducing Sauces: The Technique Restaurants Use Daily',
+  headline: 'Sauce Reduction: Restaurant Technique Explained',
   description: 'Professional chef explains the art of reducing sauces — how to concentrate flavor, control consistency, and create restaurant-quality reductions at home.',
   datePublished: "2025-09-09",
   dateModified: '2025-10-21',
@@ -27,7 +27,7 @@ const articleSchema = generateArticleSchema({
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },
   { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
-  { name: 'Reducing Sauces: The Technique Restaurants Use Daily', url: 'https://www.chefapprovedtools.com/blog/reducing-sauces-restaurant-technique' }
+  { name: 'Sauce Reduction: Restaurant Technique Explained', url: 'https://www.chefapprovedtools.com/blog/reducing-sauces-restaurant-technique' }
 ])
 
 const faqJsonLd = generateFAQSchema([
@@ -81,9 +81,9 @@ export default function ReducingSaucesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <BlogLayout breadcrumbTitle="Reducing Sauces">
+      <BlogLayout breadcrumbTitle="Sauce Reduction: Restaurant Technique Explained">
         <BlogHero
-          title="Reducing Sauces: The Technique Restaurants Use Daily"
+          title="Sauce Reduction: Restaurant Technique Explained"
           introduction={["Professional chef explains the art of reducing sauces — how to concentrate flavor, control consistency, and create restaurant-quality reductions at home."]}
           publishedDate="2025-09-09"
           lastUpdated="2025-10-21"

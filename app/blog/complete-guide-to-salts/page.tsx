@@ -15,7 +15,7 @@ import AuthorBio from '@/components/review/AuthorBio';
 export const metadata = generateBlogMetadata('complete-guide-to-salts');
 
 const articleSchema = generateArticleSchema({
-  headline: "The Complete Guide to Salts",
+  headline: "Cooking Salts Guide: Kosher vs Sea Salt vs Fleur de Sel",
   description: "Understanding different types of salt, their uses in cooking, and why choosing the right salt actually matters for your food.",
   datePublished: "2025-10-05",
   dateModified: "2025-10-24",
@@ -28,7 +28,7 @@ const articleSchema = generateArticleSchema({
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "Complete Guide to Salts", url: "https://www.chefapprovedtools.com/blog/complete-guide-to-salts" }
+  { name: "Cooking Salts Guide: Kosher vs Sea Salt vs Fleur de Sel", url: "https://www.chefapprovedtools.com/blog/complete-guide-to-salts" }
 ]);
 
 const faqSchema = generateFAQSchema([
@@ -62,9 +62,9 @@ export default function SaltsGuidePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <BlogLayout breadcrumbTitle="Complete Guide to Salts">
+      <BlogLayout breadcrumbTitle="Cooking Salts Guide: Kosher vs Sea Salt vs Fleur de Sel">
         <BlogHero
-          title="The Complete Guide to Salts: Types, Uses & Why It Matters"
+          title="Cooking Salts Guide: Kosher vs Sea Salt vs Fleur de Sel"
           introduction={["Understanding different types of salt, their uses in cooking, and why choosing the right salt actually matters for your food."]}
           publishedDate="2025-10-05"
           lastUpdated="2025-10-24"

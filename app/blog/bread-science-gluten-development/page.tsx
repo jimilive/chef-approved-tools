@@ -15,7 +15,7 @@ import AuthorBio from '@/components/review/AuthorBio';
 export const metadata = generateBlogMetadata('bread-science-gluten-development');
 
 const articleSchema = generateArticleSchema({
-  headline: "Bread Science: Understanding Gluten Development",
+  headline: "Why Bread Gets Dense: Gluten Development Explained",
   description: "The chemistry of gluten formation, kneading techniques, and how to troubleshoot bread problems. From a chef with 24 years of professional baking experience.",
   datePublished: "2025-10-18",
   dateModified: "2025-10-24",
@@ -28,7 +28,7 @@ const articleSchema = generateArticleSchema({
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "Bread Science: Gluten Development", url: "https://www.chefapprovedtools.com/blog/bread-science-gluten-development" }
+  { name: "Why Bread Gets Dense: Gluten Development Explained", url: "https://www.chefapprovedtools.com/blog/bread-science-gluten-development" }
 ]);
 
 const faqSchema = generateFAQSchema([
@@ -66,9 +66,9 @@ export default function BreadSciencePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <BlogLayout breadcrumbTitle="Bread Science: Understanding Gluten Development">
+      <BlogLayout breadcrumbTitle="Why Bread Gets Dense: Gluten Development Explained">
         <BlogHero
-          title="Bread Science: Understanding Gluten Development"
+          title="Why Bread Gets Dense: Gluten Development Explained"
           introduction={["The chemistry of gluten formation, kneading techniques, and how to troubleshoot bread problems. From a chef with 24 years of professional baking experience."]}
           publishedDate="2025-10-18"
           lastUpdated="2025-10-24"

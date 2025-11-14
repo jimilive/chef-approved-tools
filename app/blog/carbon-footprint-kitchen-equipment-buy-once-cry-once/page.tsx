@@ -11,7 +11,7 @@ import AuthorBio from '@/components/review/AuthorBio'
 export const metadata = generateBlogMetadata('carbon-footprint-kitchen-equipment-buy-once-cry-once');
 
 const articleSchema = generateArticleSchema({
-  headline: 'Carbon Footprint of Kitchen Equipment: Buy Once, Cry Once',
+  headline: 'Buy Once, Cry Once: Why Cheap Tools Cost The Planet',
   description: 'Professional chef explains how quality kitchen equipment reduces waste and carbon footprint — why durability is the real sustainability in the kitchen.',
   datePublished: "2025-09-26",
   dateModified: '2025-10-21',
@@ -27,7 +27,7 @@ const articleSchema = generateArticleSchema({
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },
   { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
-  { name: 'Carbon Footprint of Kitchen Equipment', url: 'https://www.chefapprovedtools.com/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once' }
+  { name: 'Buy Once, Cry Once: Why Cheap Tools Cost The Planet', url: 'https://www.chefapprovedtools.com/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once' }
 ])
 
 const faqJsonLd = generateFAQSchema([
@@ -81,9 +81,9 @@ export default function CarbonFootprintKitchenEquipmentPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <BlogLayout breadcrumbTitle="Carbon Footprint of Kitchen Equipment: Buy Once, Cry Once">
+      <BlogLayout breadcrumbTitle="Buy Once, Cry Once: Why Cheap Tools Cost The Planet">
         <BlogHero
-          title="Carbon Footprint of Kitchen Equipment: Buy Once, Cry Once"
+          title="Buy Once, Cry Once: Why Cheap Tools Cost The Planet"
           introduction={["Professional chef explains how quality kitchen equipment reduces waste and carbon footprint — why durability is the real sustainability in the kitchen."]}
           publishedDate="2025-09-26"
           lastUpdated="2025-10-21"

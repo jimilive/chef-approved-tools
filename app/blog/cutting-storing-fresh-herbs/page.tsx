@@ -15,7 +15,7 @@ import AuthorBio from '@/components/review/AuthorBio';
 export const metadata = generateBlogMetadata('cutting-storing-fresh-herbs');
 
 const articleSchema = generateArticleSchema({
-  headline: "Cutting and Storing Fresh Herbs: Professional Techniques for Maximum Flavor",
+  headline: "How To Cut & Store Fresh Herbs (Stay Fresh For Weeks)",
   description: "Master professional techniques for cutting, storing, and preserving fresh herbs. Learn why technique matters and how to keep herbs fresh for days.",
   datePublished: "2025-09-14",
   dateModified: "2025-10-24",
@@ -28,7 +28,7 @@ const articleSchema = generateArticleSchema({
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "Cutting and Storing Fresh Herbs", url: "https://www.chefapprovedtools.com/blog/cutting-storing-fresh-herbs" }
+  { name: "How To Cut & Store Fresh Herbs (Stay Fresh For Weeks)", url: "https://www.chefapprovedtools.com/blog/cutting-storing-fresh-herbs" }
 ]);
 
 const faqSchema = generateFAQSchema([
@@ -74,9 +74,9 @@ export default function HerbsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <BlogLayout breadcrumbTitle="Cutting and Storing Fresh Herbs">
+      <BlogLayout breadcrumbTitle="How To Cut & Store Fresh Herbs (Stay Fresh For Weeks)">
         <BlogHero
-          title="Cutting and Storing Fresh Herbs: Professional Techniques for Maximum Flavor"
+          title="How To Cut & Store Fresh Herbs (Stay Fresh For Weeks)"
           introduction={["Master professional techniques for cutting, storing, and preserving fresh herbs. Learn why technique matters and how to keep herbs fresh for days."]}
           publishedDate="2025-09-14"
           lastUpdated="2025-10-24"

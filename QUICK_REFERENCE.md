@@ -31,8 +31,6 @@
 
 **NEVER SAY:**
 - "$50" or any specific price
-- "around $40" or approximate prices
-- "best value" or price comparisons
 - "budget-friendly" or price categories
 
 **ALWAYS SAY:**
@@ -94,7 +92,7 @@ testingEnvironment: []
 **Every piece of content:**
 - [ ] Credentials correct (24 years, 6 years Purple Café)
 - [ ] No forbidden phrases ("let's dive in", "game-changer")
-- [ ] No pricing violations (no "$50", "around", "best value")
+- [ ] No pricing violations (no "$50")
 - [ ] Professional context (specific restaurant when relevant)
 - [ ] Honest pros AND cons
 - [ ] CTA text: "Check Price on Amazon"
@@ -207,4 +205,4 @@ testingEnvironment: []
 
 **Print this page and keep it next to your monitor!**
 
-*Last updated: November 10, 2025*
+*Last updated: November 13, 2025*

@@ -11,7 +11,7 @@ import { generateBlogMetadata } from '@/lib/metadata-helpers'
 export const metadata = generateBlogMetadata('knife-safety-rules-professional-kitchens')
 
 const articleSchema = generateArticleSchema({
-  headline: "Knife Safety: 10 Rules From 24 Years in Professional Kitchens",
+  headline: "10 Knife Safety Rules From Professional Kitchens",
   description: "Professional chef Scott Bradley shares 10 essential knife safety rules from 24 years in restaurants. Learn grip, stance, focus, and habits to prevent injuries in your kitchen.",
   datePublished: "2025-09-08",
   dateModified: "2025-11-07",
@@ -119,9 +119,9 @@ export default function KnifeSafetyPost() {
         }}
       />
 
-      <BlogLayout breadcrumbTitle="Knife Safety: 10 Rules From 24 Years in Professional Kitchens">
+      <BlogLayout breadcrumbTitle="10 Knife Safety Rules From Professional Kitchens">
         <BlogHero
-          title="Knife Safety: 10 Rules From 24 Years in Professional Kitchens"
+          title="10 Knife Safety Rules From Professional Kitchens"
           introduction={["Every cook has a scar story. Mine came one night at Mellow Mushroom, after a long double shift. I was cutting basil using the claw method when a few leaves slid off the pile. Without thinking, I tried to swipe them back with my thumb — and sliced right across it."]}
           publishedDate="2025-11-07"
           lastUpdated="2025-11-07"

@@ -685,7 +685,7 @@ Before creating ANY content, verify:
 
 ---
 
-**Last Updated:** November 10, 2025  
+**Last Updated:** November 12, 2025  
 **Next Review:** When credentials need updating or major content strategy changes
 
 ---

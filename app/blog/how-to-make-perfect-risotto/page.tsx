@@ -23,7 +23,7 @@ const articleMeta = {
 };
 
 const articleSchema = generateArticleSchema({
-  headline: "How to Make Perfect Risotto: Technique, Timing, and the Science Behind Creamy Rice",
+  headline: "Perfect Risotto: Italian Restaurant Technique Explained",
   description: "Master risotto from a professional chef with 24 years of restaurant experience. Learn proper technique, timing, stock selection, and the science behind perfectly creamy rice without cream.",
   datePublished: articleMeta.publishDate,
   dateModified: articleMeta.lastModified,
@@ -36,7 +36,7 @@ const articleSchema = generateArticleSchema({
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "How to Make Perfect Risotto", url: "https://www.chefapprovedtools.com/blog/how-to-make-perfect-risotto" }
+  { name: "Perfect Risotto: Italian Restaurant Technique Explained", url: "https://www.chefapprovedtools.com/blog/how-to-make-perfect-risotto" }
 ]);
 
 const faqSchema = generateFAQSchema([
@@ -70,9 +70,9 @@ export default function PerfectRisottoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <BlogLayout breadcrumbTitle="How to Make Perfect Risotto">
+      <BlogLayout breadcrumbTitle="Perfect Risotto: Italian Restaurant Technique Explained">
         <BlogHero
-          title="How to Make Perfect Risotto: Technique, Timing, and the Science Behind Creamy Rice"
+          title="Perfect Risotto: Italian Restaurant Technique Explained"
           introduction={["Master risotto from a professional chef with 24 years of restaurant experience. Learn proper technique, timing, stock selection, and the science behind perfectly creamy rice without cream."]}
           publishedDate="2025-09-30"
           lastUpdated="2025-10-24"

@@ -1,6 +1,6 @@
 export const comparisonData = {
   metadata: {
-    title: "Stand Mixer vs Hand Mixer: When $400 Is Worth It",
+    title: "Stand Mixer vs Hand Mixer: When The Investment Pays Off",
     description: "Stand mixers excel at bread dough and hands-free mixing. Hand mixers handle 80% of tasks for $50. Which matches your baking frequency + best picks.",
     publishedDate: "2025-11-09",
     lastUpdated: "2025-11-09",
@@ -14,7 +14,7 @@ export const comparisonData = {
   },
 
   hero: {
-    title: "Stand Mixer vs Hand Mixer: Which Should You Buy?",
+    title: "Stand Mixer vs Hand Mixer: When The Investment Pays Off",
     introduction: [
       "The stand mixer versus hand mixer debate centers on understanding what you bake and how often you bake it. Stand mixers are powerful countertop machines that mix hands-free while you prep other ingredients. Hand mixers are portable tools you hold and control directly. Neither is universally better—each excels at different tasks.",
       "Stand mixers dominate for bread doughs, large batches, and heavy mixing tasks. They're also expensive, heavy, and occupy permanent counter space. Hand mixers excel at quick tasks, small batches, and occasional baking. They're affordable, store in drawers, but tire your arm during extended mixing and lack power for heavy doughs.",

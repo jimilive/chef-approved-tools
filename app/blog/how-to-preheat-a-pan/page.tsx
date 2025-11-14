@@ -15,7 +15,7 @@ import AuthorBio from '@/components/review/AuthorBio';
 export const metadata = generateBlogMetadata('how-to-preheat-a-pan');
 
 const articleSchema = generateArticleSchema({
-  headline: "How to Preheat a Pan: Temperature Matters More Than You Think",
+  headline: "How To Preheat A Pan (Most People Do This Wrong)",
   description: "Professional chef explains the science of preheating stainless steel and cast iron pans — how to prevent sticking and achieve perfect sear every time.",
   datePublished: "2025-10-02",
   dateModified: "2025-10-21",
@@ -28,7 +28,7 @@ const articleSchema = generateArticleSchema({
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "How to Preheat a Pan", url: "https://www.chefapprovedtools.com/blog/how-to-preheat-a-pan" }
+  { name: "How To Preheat A Pan (Most People Do This Wrong)", url: "https://www.chefapprovedtools.com/blog/how-to-preheat-a-pan" }
 ]);
 
 const faqSchema = generateFAQSchema([
@@ -82,9 +82,9 @@ export default function HowToPreheatPanPost() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <BlogLayout breadcrumbTitle="How to Preheat a Pan">
+      <BlogLayout breadcrumbTitle="How To Preheat A Pan (Most People Do This Wrong)">
         <BlogHero
-          title="How to Preheat a Pan: Temperature Matters More Than You Think"
+          title="How To Preheat A Pan (Most People Do This Wrong)"
           introduction={["You can spot an experienced cook by the way they preheat a pan. They don't just toss it on high and hope — they wait, test, and feel. Preheating isn't about impatience; it's about control."]}
           publishedDate="2025-10-02"
           lastUpdated="2025-10-21"

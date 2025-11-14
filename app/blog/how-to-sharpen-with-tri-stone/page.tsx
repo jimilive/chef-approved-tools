@@ -10,7 +10,7 @@ import AuthorBio from '@/components/review/AuthorBio'
 export const metadata = generateBlogMetadata('how-to-sharpen-with-tri-stone')
 
 const articleSchema = generateArticleSchema({
-  headline: "How to Sharpen Knives with a Stone: Professional Chef's Technique",
+  headline: "How to Sharpen with a Stone: Professional Technique",
   description: "Professional chef shares technique perfected over 6 years in restaurant kitchen. Step-by-step guide: angles, pressure, three-stage progression, troubleshooting.",
   datePublished: "2025-10-16",
   dateModified: "2025-10-16",
@@ -86,9 +86,9 @@ export default function HowToSharpenWithTriStonePage() {
         }}
       />
 
-      <BlogLayout breadcrumbTitle="How to Sharpen with a Stone">
+      <BlogLayout breadcrumbTitle="How to Sharpen with a Stone: Professional Technique">
         <BlogHero
-          title="How to Sharpen Knives with a Stone: Professional Chef's Technique"
+          title="How to Sharpen with a Stone: Professional Technique"
           introduction={["For 6 years at Purple Café, I sharpened 8-12 professional knives weekly using the Norton IM200 Tri-Stone. In a 200+ cover restaurant where dull knives meant service delays, this three-stage system kept every blade razor-sharp through demanding dinner services. This isn't complicated—follow this exact technique and you'll achieve professional-quality results at home."]}
           publishedDate="2025-10-16"
           lastUpdated="2025-10-16"

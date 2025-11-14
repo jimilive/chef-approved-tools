@@ -11,7 +11,7 @@ import AuthorBio from '@/components/review/AuthorBio'
 export const metadata = generateBlogMetadata('essential-knife-cuts-every-cook-should-master')
 
 const articleSchema = generateArticleSchema({
-  headline: "The 5 Essential Knife Cuts Every Home Cook Should Master",
+  headline: "5 Knife Cuts Every Cook Should Master (With Photos)",
   description: "Learn the five professional knife cuts—dice, julienne, chiffonade, mince, and bias—taught by chef Scott Bradley. Technique, precision, and practice tips for home cooks.",
   datePublished: "2025-10-12",
   dateModified: "2025-11-07",
@@ -35,7 +35,7 @@ export default function EssentialKnifeCutsPost() {
           __html: JSON.stringify(generateBreadcrumbSchema([
             { name: "Home", url: "https://www.chefapprovedtools.com" },
             { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-            { name: "The 5 Essential Knife Cuts Every Home Cook Should Master", url: "https://www.chefapprovedtools.com/blog/essential-knife-cuts-every-cook-should-master" }
+            { name: "5 Knife Cuts Every Cook Should Master", url: "https://www.chefapprovedtools.com/blog/essential-knife-cuts-every-cook-should-master" }
           ]))
         }}
       />
@@ -91,9 +91,9 @@ export default function EssentialKnifeCutsPost() {
         }}
       />
 
-      <BlogLayout breadcrumbTitle="The 5 Essential Knife Cuts Every Home Cook Should Master">
+      <BlogLayout breadcrumbTitle="5 Knife Cuts Every Cook Should Master (With Photos)">
         <BlogHero
-          title="The 5 Essential Knife Cuts Every Home Cook Should Master"
+          title="5 Knife Cuts Every Cook Should Master (With Photos)"
           introduction={["Most home cooks think \"knife skills\" mean cutting faster. They don't. In professional kitchens, knife technique is about control, consistency, and safety — speed comes later."]}
           publishedDate="2025-10-12"
           lastUpdated="2025-11-07"

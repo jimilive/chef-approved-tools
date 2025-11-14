@@ -1877,7 +1877,7 @@ Even though emails are more personal, these rules still apply:
 
 ---
 
-**Last Updated:** November 10, 2025  
+**Last Updated:** November 12, 2025  
 **References:** VOICE_AND_CREDENTIALS.md, COMPONENT_INTERFACES.md, COMPARISON_TABLE_GUIDE.md, START_HERE.md  
 
 ---

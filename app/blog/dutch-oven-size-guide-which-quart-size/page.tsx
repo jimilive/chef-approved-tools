@@ -11,7 +11,7 @@ import AuthorBio from '@/components/review/AuthorBio'
 export const metadata = generateBlogMetadata('dutch-oven-size-guide-which-quart-size')
 
 const articleSchema = generateArticleSchema({
-  headline: 'Dutch Oven Size Guide: Which Quart Size Do You Need?',
+  headline: 'Dutch Oven Size Guide: 5.5-Qt vs 7-Qt for Your Family',
   description: 'A professional chef\'s guide to choosing the right Dutch oven size for soups, bread, braises, and everyday cooking. Learn what size fits your kitchen best.',
   datePublished: "2025-09-06",
   dateModified: '2025-10-21',
@@ -24,7 +24,7 @@ const articleSchema = generateArticleSchema({
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },
   { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
-  { name: 'Dutch Oven Size Guide', url: 'https://www.chefapprovedtools.com/blog/dutch-oven-size-guide-which-quart-size' }
+  { name: 'Dutch Oven Size Guide: 5.5-Qt vs 7-Qt for Your Family', url: 'https://www.chefapprovedtools.com/blog/dutch-oven-size-guide-which-quart-size' }
 ])
 
 const faqJsonLd = generateFAQSchema([
@@ -78,9 +78,9 @@ export default function DutchOvenSizeGuidePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <BlogLayout breadcrumbTitle="Dutch Oven Size Guide">
+      <BlogLayout breadcrumbTitle="Dutch Oven Size Guide: 5.5-Qt vs 7-Qt for Your Family">
         <BlogHero
-          title="Dutch Oven Size Guide: Which Quart Size Do You Need?"
+          title="Dutch Oven Size Guide: 5.5-Qt vs 7-Qt for Your Family"
           introduction={["A professional chef's guide to choosing the right Dutch oven size for soups, bread, braises, and everyday cooking. Learn what size fits your kitchen best."]}
           publishedDate="2025-09-06"
           lastUpdated="2025-10-21"

@@ -11,7 +11,7 @@ import AuthorBio from '@/components/review/AuthorBio'
 export const metadata = generateBlogMetadata('cutting-board-materials-guide')
 
 const articleSchema = generateArticleSchema({
-  headline: "Which Cutting Board To Use? Advantages of Various Materials",
+  headline: "Cutting Board Materials: Wood vs Plastic (Why Wood Wins)",
   description: "Chef Scott Bradley explains the pros and cons of wood, plastic, rubber, and bamboo cutting boards — and which are best for your knives and kitchen.",
   datePublished: "2025-10-05",
   dateModified: "2025-10-21",
@@ -35,7 +35,7 @@ export default function CuttingBoardMaterialsPost() {
           __html: JSON.stringify(generateBreadcrumbSchema([
             { name: "Home", url: "https://www.chefapprovedtools.com" },
             { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-            { name: "Cutting Board Materials Guide", url: "https://www.chefapprovedtools.com/blog/cutting-board-materials-guide" }
+            { name: "Cutting Board Materials: Wood vs Plastic (Why Wood Wins)", url: "https://www.chefapprovedtools.com/blog/cutting-board-materials-guide" }
           ]))
         }}
       />
@@ -79,9 +79,9 @@ export default function CuttingBoardMaterialsPost() {
         }}
       />
 
-      <BlogLayout breadcrumbTitle="Cutting Board Materials Guide">
+      <BlogLayout breadcrumbTitle="Cutting Board Materials: Wood vs Plastic (Why Wood Wins)">
         <BlogHero
-          title="Which Cutting Board To Use? Advantages of Various Materials"
+          title="Cutting Board Materials: Wood vs Plastic (Why Wood Wins)"
           introduction={["You can tell a lot about a cook by their cutting board. Not by the brand or color — but by the knife marks. A professional's board is scarred in straight, consistent lines. A home cook's often looks like a road map of hesitation."]}
           publishedDate="2025-10-05"
           lastUpdated="2025-10-21"

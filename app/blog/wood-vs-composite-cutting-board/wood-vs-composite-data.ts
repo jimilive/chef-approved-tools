@@ -1,7 +1,7 @@
 export const comparisonData = {
   // Metadata
   metadata: {
-    title: "Wood vs Composite Cutting Boards: Why 90% of Pros Choose Wood",
+    title: "Wood vs Composite Cutting Boards: Why Pros Choose Wood",
     description: "24 years testing both: Wood cutting boards win on knife preservation and natural sanitation. When composite makes sense + best picks for each type.",
     publishedDate: "2025-11-09",
     lastUpdated: "2025-11-09",
@@ -17,7 +17,7 @@ export const comparisonData = {
 
   // Hero Section
   hero: {
-    title: "Wood vs Composite Cutting Boards: Which Should You Choose?",
+    title: "Wood vs Composite Cutting Boards: Why Pros Choose Wood",
     introduction: [
       "The wood versus composite cutting board debate has been ongoing in professional kitchens for decades. Both materials have distinct advantages: wood boards offer superior knife feel and natural antibacterial properties, while composite boards provide bulletproof sanitation and commercial dishwasher durability.",
       "The truth? Neither is universally \"better\"—they excel at different things. Your choice depends on your priorities: traditional craftsmanship and knife care versus modern convenience and strict hygiene protocols.",

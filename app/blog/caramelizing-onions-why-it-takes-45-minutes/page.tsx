@@ -11,7 +11,7 @@ import AuthorBio from '@/components/review/AuthorBio'
 export const metadata = generateBlogMetadata('caramelizing-onions-why-it-takes-45-minutes');
 
 const articleSchema = generateArticleSchema({
-  headline: 'Caramelizing Onions: Why It Takes 45 Minutes (Not 10)',
+  headline: 'Why Caramelized Onions Take 45 Minutes (Not 10)',
   description: 'Professional chef explains the real process of caramelizing onions — why patience, temperature, and technique matter more than shortcuts.',
   datePublished: "2025-09-19",
   dateModified: '2025-10-21',
@@ -27,7 +27,7 @@ const articleSchema = generateArticleSchema({
 const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Home', url: 'https://www.chefapprovedtools.com' },
   { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
-  { name: 'Caramelizing Onions: Why It Takes 45 Minutes', url: 'https://www.chefapprovedtools.com/blog/caramelizing-onions-why-it-takes-45-minutes' }
+  { name: 'Why Caramelized Onions Take 45 Minutes (Not 10)', url: 'https://www.chefapprovedtools.com/blog/caramelizing-onions-why-it-takes-45-minutes' }
 ])
 
 const faqJsonLd = generateFAQSchema([
@@ -81,9 +81,9 @@ export default function CaramelizingOnionsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <BlogLayout breadcrumbTitle="Caramelizing Onions: Why It Takes 45 Minutes (Not 10)">
+      <BlogLayout breadcrumbTitle="Why Caramelized Onions Take 45 Minutes (Not 10)">
         <BlogHero
-          title="Caramelizing Onions: Why It Takes 45 Minutes (Not 10)"
+          title="Why Caramelized Onions Take 45 Minutes (Not 10)"
           introduction={["Professional chef explains the real process of caramelizing onions — why patience, temperature, and technique matter more than shortcuts."]}
           publishedDate="2025-09-19"
           lastUpdated="2025-10-21"

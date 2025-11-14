@@ -23,7 +23,7 @@ const articleMeta = {
 };
 
 const articleSchema = generateArticleSchema({
-  headline: "The Art of Deglazing: Making Pan Sauces That Elevate Every Meal",
+  headline: "Deglazing & Pan Sauces: Turn Brown Bits Into Sauce",
   description: "Master deglazing and pan sauces from a professional chef with 24 years of restaurant experience. Learn the technique, understand fond, and create restaurant-quality sauces at home in minutes.",
   datePublished: articleMeta.publishDate,
   dateModified: articleMeta.lastModified,
@@ -36,7 +36,7 @@ const articleSchema = generateArticleSchema({
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "The Art of Deglazing", url: "https://www.chefapprovedtools.com/blog/deglazing-pan-sauces" }
+  { name: "Deglazing & Pan Sauces: Turn Brown Bits Into Sauce", url: "https://www.chefapprovedtools.com/blog/deglazing-pan-sauces" }
 ]);
 
 const faqSchema = generateFAQSchema([
@@ -102,9 +102,9 @@ export default function DeglazingPanSaucesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <BlogLayout breadcrumbTitle="The Art of Deglazing">
+      <BlogLayout breadcrumbTitle="Deglazing & Pan Sauces: Turn Brown Bits Into Sauce">
         <BlogHero
-          title="The Art of Deglazing: Making Pan Sauces That Elevate Every Meal"
+          title="Deglazing & Pan Sauces: Turn Brown Bits Into Sauce"
           introduction={["Master deglazing and pan sauces from a professional chef with 24 years of restaurant experience. Learn the technique, understand fond, and create restaurant-quality sauces at home in minutes."]}
           publishedDate="2025-09-11"
           lastUpdated="2025-11-07"

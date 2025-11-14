@@ -1262,6 +1262,6 @@ START_HERE.md (you are here)
 
 ---
 
-*Last Updated: November 10, 2025*  
+*Last Updated: November 12, 2025*  
 *This is your entry point. Read it every session.*  
 *All other documentation links from here.*

@@ -15,7 +15,7 @@ import { generateBlogMetadata } from '@/lib/metadata-helpers';
 export const metadata = generateBlogMetadata('making-stock-professional-chef-method');
 
 const articleSchema = generateArticleSchema({
-  headline: "Making Stock: Professional Chef Method – How to Build Flavor",
+  headline: "Making Stock: The Professional Chef Method",
   description: "Professional chef Scott Bradley explains the real restaurant method for making stock. Build deep flavor with bones, vegetables, and proper simmering technique.",
   datePublished: "2025-09-07",
   dateModified: "2025-10-22",
@@ -28,7 +28,7 @@ const articleSchema = generateArticleSchema({
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Home", url: "https://www.chefapprovedtools.com" },
   { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "Making Stock: Professional Chef Method", url: "https://www.chefapprovedtools.com/blog/making-stock-professional-chef-method" }
+  { name: "Making Stock: The Professional Chef Method", url: "https://www.chefapprovedtools.com/blog/making-stock-professional-chef-method" }
 ]);
 
 const faqSchema = generateFAQSchema([
@@ -82,9 +82,9 @@ export default function MakingStockPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <BlogLayout breadcrumbTitle="Making Stock: Professional Chef Method">
+      <BlogLayout breadcrumbTitle="Making Stock: The Professional Chef Method">
         <BlogHero
-          title="Making Stock: Professional Chef Method – How to Build Flavor"
+          title="Making Stock: The Professional Chef Method"
           introduction={["Professional chef Scott Bradley explains the real restaurant method for making stock. Build deep flavor with bones, vegetables, and proper simmering technique."]}
           publishedDate="2025-09-07"
           lastUpdated="2025-10-22"

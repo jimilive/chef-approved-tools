@@ -238,8 +238,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'best-scrambled-eggs': {
-      title: "The Scrambled Egg Method That Changed Everything (No Bowl Needed)",
-      description: "No bowl. No whisk. No milk. Just perfect, creamy scrambled eggs every time. The technique I've used for 45 years in professional kitchens.",
+      title: "Stop Using a Bowl for Scrambled Eggs (Do This Instead)",
+      description: "Ditch the bowl and whisk. This 45-second pan technique creates creamy eggs every time. The method I've used in professional kitchens for 24 years—zero cleanup.",
       canonical: "https://www.chefapprovedtools.com/blog/best-scrambled-eggs",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -263,8 +263,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'blanching-vegetables-why-restaurants-do-it': {
-      title: "Why Your Vegetables Look Sad (And Restaurant Vegetables Don't)",
-      description: "Blanching is the secret. It's why restaurant vegetables are vibrant and yours aren't. Here's the professional 2-step blanching technique.",
+      title: "Why Restaurant Vegetables Stay Vibrant (You Skip This)",
+      description: "Blanching keeps vegetables bright green and crisp. Skip it and they turn gray and mushy. The 2-step professional technique from 24 years in restaurant kitchens.",
       canonical: "https://www.chefapprovedtools.com/blog/blanching-vegetables-why-restaurants-do-it",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/blanching-vegetables.jpg",
@@ -288,8 +288,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'braising-101-tough-cuts-made-tender': {
-      title: "How To Turn Cheap Meat Into Restaurant-Quality Tender (Braising)",
-      description: "Braising transforms $8/lb tough cuts into fall-apart tenderness. The low-and-slow technique every professional chef masters. Step-by-step guide.",
+      title: "Braising 101: Turn Tough Cuts Into Fall-Apart Tender",
+      description: "Braising transforms tough cuts into fall-apart tenderness in 3 hours. The low-and-slow technique from 24 years in professional kitchens. Step-by-step method.",
       canonical: "https://www.chefapprovedtools.com/blog/braising-101-tough-cuts-made-tender",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/braising.jpg",
@@ -313,8 +313,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'bread-science-gluten-development': {
-      title: "Why Your Bread Is Dense: Gluten Development Science Explained",
-      description: "The chemistry behind fluffy bread vs. dense bricks. Kneading techniques and troubleshooting from 24 years of professional baking. Simple fixes.",
+      title: "Why Bread Gets Dense: Gluten Development Explained",
+      description: "Dense bread means poor gluten development. The chemistry behind fluffy vs. brick-like loaves. Kneading techniques and fixes from 24 years in kitchens.",
       canonical: "https://www.chefapprovedtools.com/blog/bread-science-gluten-development",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/bread-science-og.jpg",
@@ -338,8 +338,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'caramelization-science': {
-      title: "Why Restaurant Caramel Tastes Better: Temperature & Technique",
-      description: "Temperature and technique matter more than ingredients. Here's the chemistry behind deep, complex caramelization from 24 years making desserts.",
+      title: "Caramelization Science: Why Temperature Matters Most",
+      description: "Temperature controls caramel flavor—not ingredients. The chemistry behind deep, complex caramelization from 24 years of dessert making. Exact temps.",
       canonical: "https://www.chefapprovedtools.com/blog/caramelization-science",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/caramelization-og.jpg",
@@ -363,8 +363,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'caramelizing-onions-why-it-takes-45-minutes': {
-      title: "Why \"10-Minute Caramelized Onions\" Is A Lie (Chemistry Proof)",
-      description: "Real caramelization takes 45 minutes. Here's why rushing it fails—and why the chemistry requires patience and proper heat. No shortcuts work.",
+      title: "Why Caramelized Onions Take 45 Minutes (Not 10)",
+      description: "Real caramelized onions need 45 minutes—no shortcuts. The chemistry requires low heat and patience. Why rushing creates burnt, not caramelized onions.",
       canonical: "https://www.chefapprovedtools.com/blog/caramelizing-onions-why-it-takes-45-minutes",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/caramelized-onions.jpg",
@@ -388,8 +388,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'carbon-footprint-kitchen-equipment-buy-once-cry-once': {
-      title: "Why Cheap Kitchen Tools Are Worse For The Environment",
-      description: "Durability is sustainability. Quality equipment lasts decades vs. cheap tools in landfills every 2 years. Buy once, cry once. Environmental case.",
+      title: "Buy Once, Cry Once: Why Cheap Tools Cost The Planet",
+      description: "Quality kitchen tools last 30+ years. Cheap ones hit landfills every 2 years. The environmental math from 24 years buying restaurant equipment daily.",
       canonical: "https://www.chefapprovedtools.com/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/carbon-footprint-kitchen.jpg",
@@ -414,7 +414,7 @@ export const METADATA = {
 
     'carbon-steel-vs-stainless-steel-knife': {
       title: "Carbon Steel vs Stainless Knives: 24-Year Test Results",
-      description: "Carbon holds edges 2x longer but needs daily oiling. Stainless survives neglect but dulls faster. Which matches your maintenance willingness + best picks.",
+      description: "24 years testing both: Carbon holds edges 2x longer but needs daily care. Stainless survives neglect but dulls faster. Which maintenance habit matches yours.",
       canonical: "https://www.chefapprovedtools.com/blog/carbon-steel-vs-stainless-steel-knife",
       author: "Scott Bradley",
       imageUrl: "/images/blog/default.jpg",
@@ -438,8 +438,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'cast-iron-seasoning-care': {
-      title: "Cast Iron Seasoning & Care: How To Build Bulletproof Coating",
-      description: "How to season and care for cast iron cookware. Build bulletproof non-stick coating through proper maintenance. 24 years of restaurant cast iron use.",
+      title: "Cast Iron Seasoning & Care: Build Bulletproof Coating",
+      description: "Season cast iron to build bulletproof non-stick coating that lasts decades. The 3-step method from 24 years maintaining restaurant cast iron. Never flakes.",
       canonical: "https://www.chefapprovedtools.com/blog/cast-iron-seasoning-care",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/cast-iron-care-og.jpg",
@@ -463,8 +463,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'cast-iron-vs-carbon-steel-pan': {
-      title: "Cast Iron vs Carbon Steel Pans: What 24 Years Taught Me",
-      description: "Cast iron holds heat 3x longer for searing. Carbon steel heats/cools instantly for control. Which cooking style matches yours + when to use each.",
+      title: "Cast Iron vs Carbon Steel Pans: Heat Retention vs Control",
+      description: "24 years using both: Cast iron holds heat 3x longer for perfect sears. Carbon steel heats/cools instantly for precise control. Which cooking style fits you.",
       canonical: "https://www.chefapprovedtools.com/blog/cast-iron-vs-carbon-steel-pan",
       author: "Scott Bradley",
       imageUrl: "/images/blog/default.jpg",
@@ -489,7 +489,7 @@ export const METADATA = {
 
     'cheese-sauce-mac-and-cheese': {
       title: "Perfect Cheese Sauce For Mac & Cheese (Never Grainy Again)",
-      description: "How to make perfect cheese sauce for mac and cheese that never breaks or gets grainy. The emulsification technique from 24 years in professional kitchens.",
+      description: "The emulsification method from 24 years in professional kitchens: perfect cheese sauce that never breaks or gets grainy. Simple technique, foolproof results.",
       canonical: "https://www.chefapprovedtools.com/blog/cheese-sauce-mac-and-cheese",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/cheese-sauce-og.jpg",
@@ -513,8 +513,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'complete-guide-to-salts': {
-      title: "Complete Guide To Cooking Salts: When To Use Each Type",
-      description: "Complete guide to kitchen salts from a professional chef: Kosher, sea salt, fleur de sel, Maldon. When to use each type and why it matters for cooking.",
+      title: "Cooking Salts Guide: Kosher vs Sea Salt vs Fleur de Sel",
+      description: "24 years using salts in professional kitchens: Kosher for everyday cooking, sea salt for finishing, fleur de sel for texture. When each type matters most.",
       canonical: "https://www.chefapprovedtools.com/blog/complete-guide-to-salts",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/salts-guide-og.jpg",
@@ -539,7 +539,7 @@ export const METADATA = {
 
     'cooking-with-tomatoes-fresh-vs-canned': {
       title: "Fresh vs Canned Tomatoes: When To Use Each (Chef's Guide)",
-      description: "Fresh vs canned tomatoes: When to use each in cooking. Professional chef's guide from 24 years making Italian food in restaurants. Surprising answers.",
+      description: "24 years making Italian food: Canned tomatoes win for sauce every time. Fresh for salads and finishing. The chemistry behind when each type performs best.",
       canonical: "https://www.chefapprovedtools.com/blog/cooking-with-tomatoes-fresh-vs-canned",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/tomatoes-guide-og.jpg",
@@ -588,8 +588,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'cutting-board-materials-guide': {
-      title: "Cutting Board Materials: Wood vs Plastic vs Composite",
-      description: "Cutting board materials compared: Wood vs plastic vs composite. Professional chef's guide after 24 years in restaurant kitchens. Which is safest and best.",
+      title: "Cutting Board Materials: Wood vs Plastic (Why Wood Wins)",
+      description: "24 years testing all three: Wood is safest and protects knife edges. Plastic dulls blades faster, composite warps. Why professional kitchens choose wood.",
       canonical: "https://www.chefapprovedtools.com/blog/cutting-board-materials-guide",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -613,8 +613,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'cutting-storing-fresh-herbs': {
-      title: "How To Cut & Store Fresh Herbs (Keep Them Fresh For Weeks)",
-      description: "How to cut and store fresh herbs to keep them fresh for weeks. Professional techniques from 24 years in restaurant kitchens. Basil, cilantro, parsley tips.",
+      title: "How To Cut & Store Fresh Herbs (Stay Fresh For Weeks)",
+      description: "Restaurant prep technique from 24 years: Cut herbs properly to extend life 3x longer. Basil, cilantro, parsley stay fresh for weeks, not days. Simple method.",
       canonical: "https://www.chefapprovedtools.com/blog/cutting-storing-fresh-herbs",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/cutting-storing-fresh-herbs.jpg",
@@ -638,8 +638,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'deglazing-pan-sauces': {
-      title: "Deglazing & Pan Sauces: The Restaurant Technique Explained",
-      description: "Deglazing and pan sauce technique explained by a professional chef. How to turn brown bits into restaurant-quality sauces in 3 minutes. Game-changer.",
+      title: "Deglazing & Pan Sauces: Turn Brown Bits Into Sauce",
+      description: "24 years making pan sauces: Deglaze to transform brown bits into restaurant-quality sauce in 3 minutes. Wine, stock, or cream—simple technique, big flavor.",
       canonical: "https://www.chefapprovedtools.com/blog/deglazing-pan-sauces",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/deglazing-pan-sauce.jpg",
@@ -663,8 +663,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'dutch-oven-size-guide-which-quart-size': {
-      title: "Dutch Oven Size Guide: 5.5-Qt vs 7-Qt (Which For Your Family?)",
-      description: "Most families need either 5.5-qt or 7-qt. Choose based on household size and cooking style. 24 years of restaurant experience breaks it down simply.",
+      title: "Dutch Oven Size Guide: 5.5-Qt vs 7-Qt for Your Family",
+      description: "Most families need 5.5-qt or 7-qt. Choose based on household size and what you cook. Professional chef breaks down the size decision after 24 years experience.",
       canonical: "https://www.chefapprovedtools.com/blog/dutch-oven-size-guide-which-quart-size",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -689,7 +689,7 @@ export const METADATA = {
 
     'dutch-oven-vs-slow-cooker': {
       title: "Dutch Oven vs Slow Cooker: Flavor vs Convenience",
-      description: "Dutch ovens develop deeper flavor through browning and layering. Slow cookers cook unattended for 8 hours. Which matches your schedule + best picks for each.",
+      description: "24 years using both: Dutch ovens build deeper flavor through browning. Slow cookers handle 8-hour unattended cooking. Which matches your cooking style.",
       canonical: "https://www.chefapprovedtools.com/blog/dutch-oven-vs-slow-cooker",
       author: "Scott Bradley",
       imageUrl: "/images/blog/default.jpg",
@@ -713,8 +713,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'essential-knife-cuts-every-cook-should-master': {
-      title: "Essential Knife Cuts Every Cook Should Master (With Photos)",
-      description: "Learn the five professional knife cuts—dice, julienne, chiffonade, mince, and bias—taught by chef Scott Bradley. Technique, precision, and practice tips for home cooks.",
+      title: "5 Knife Cuts Every Cook Should Master (With Photos)",
+      description: "Master these 5 professional knife cuts: dice, julienne, chiffonade, mince, and bias. Photo guide with technique tips from 24 years where speed matters.",
       canonical: "https://www.chefapprovedtools.com/blog/essential-knife-cuts-every-cook-should-master",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -739,7 +739,7 @@ export const METADATA = {
 
     'fat-is-flavor': {
       title: "Why Fat Is Flavor: The Science Restaurants Use",
-      description: "Why fat is flavor: The science behind why restaurant food tastes better. How professional chefs use fats to enhance taste. 24 years of cooking proof.",
+      description: "24 years in professional kitchens: Fat carries flavor compounds your tongue can't detect otherwise. Why restaurant food tastes better—the science explained.",
       canonical: "https://www.chefapprovedtools.com/blog/fat-is-flavor",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/fat-is-flavor-og.jpg",
@@ -763,8 +763,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'food-processor-vs-blender': {
-      title: "food-processor-vs-blender - Title Missing",
-      description: "Professional chef explains the difference between blenders and food processors, when to use each, and which models perform best in real kitchens.",
+      title: "Food Processor vs Blender: When To Use Each",
+      description: "24 years using both: Blenders liquefy and puree. Food processors chop, shred, and slice. Which tool for which task—and when you actually need both.",
       canonical: "https://www.chefapprovedtools.com/blog/food-processor-vs-blender",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -789,7 +789,7 @@ export const METADATA = {
 
     'gas-vs-induction-cooktop': {
       title: "Gas vs Induction Cooktops: Why I Switched After 24 Years",
-      description: "Induction boils water 2x faster and wastes 50% less energy. Gas offers instant visual control. Cost analysis + which matches your cooking style.",
+      description: "Induction boils water 2x faster and wastes 50% less energy. Gas offers instant visual control. Which matches your cooking style from 24 years using both.",
       canonical: "https://www.chefapprovedtools.com/blog/gas-vs-induction-cooktop",
       author: "Scott Bradley",
       imageUrl: "/images/blog/default.jpg",
@@ -814,7 +814,7 @@ export const METADATA = {
 
     'guide-cooking-oils-smoke-points': {
       title: "Complete Guide To Cooking Oils: Smoke Points & Best Uses",
-      description: "24 years cooking with every oil: Smoke point chart for 15 common oils. Which oils for high heat, which for flavor. Restaurant chef's practical guide.",
+      description: "Smoke point chart for 15 common oils from 24 years cooking with each: Which for high heat, which for flavor, which to avoid. Simple decision framework.",
       canonical: "https://www.chefapprovedtools.com/blog/guide-cooking-oils-smoke-points",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/cooking-oils-og.jpg",
@@ -864,7 +864,7 @@ export const METADATA = {
 
     'how-to-choose-first-chef-knife': {
       title: "How To Choose Your First Chef Knife (Skip These Mistakes)",
-      description: "How to choose your first chef knife without wasting money. Professional chef's guide to what matters and what doesn't. Avoid these common mistakes.",
+      description: "24 years testing knives: Blade length matters more than steel type. Balance beats weight. Skip expensive handles. What actually matters for your first knife.",
       canonical: "https://www.chefapprovedtools.com/blog/how-to-choose-first-chef-knife",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -889,7 +889,7 @@ export const METADATA = {
 
     'how-to-clean-burnt-stainless-steel-pans': {
       title: "How To Clean Burnt Stainless Steel Pans (Restaurant Method)",
-      description: "How to clean burnt stainless steel pans using the restaurant method. Bar Keeper's Friend and the technique that saves every pan. Actually works.",
+      description: "Bar Keeper's Friend plus this 3-step technique removes every burnt spot. The restaurant method that saved thousands of pans over 24 years of cooking.",
       canonical: "https://www.chefapprovedtools.com/blog/how-to-clean-burnt-stainless-steel-pans",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -914,7 +914,7 @@ export const METADATA = {
 
     'how-to-cook-perfect-pasta': {
       title: "How To Cook Perfect Pasta: The Italian Restaurant Method",
-      description: "How to cook perfect pasta every time using the Italian restaurant method. Salt amount, water ratio, timing. 24 years of professional Italian cooking.",
+      description: "The Italian restaurant method from 24 years cooking: Exact salt amount, water ratio, timing. Perfect pasta every time—al dente texture, never sticky.",
       canonical: "https://www.chefapprovedtools.com/blog/how-to-cook-perfect-pasta",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/perfect-pasta-guide.jpg",
@@ -939,7 +939,7 @@ export const METADATA = {
 
     'how-to-make-perfect-french-press-coffee': {
       title: "How To Make Perfect French Press Coffee (Barista Method)",
-      description: "Master French press coffee with 24 years of professional experience. Learn the perfect ratio, step-by-step technique, common mistakes to avoid, and pro tips for cafe-quality coffee at home.",
+      description: "Perfect French press needs the right ratio and 4-minute steep time. Step-by-step technique and common mistakes to avoid for cafe-quality coffee at home.",
       canonical: "https://www.chefapprovedtools.com/blog/how-to-make-perfect-french-press-coffee",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -963,8 +963,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'how-to-make-perfect-risotto': {
-      title: "How To Make Perfect Risotto: The Italian Restaurant Technique",
-      description: "How to make perfect risotto using the Italian restaurant technique. Constant stirring, wine timing, broth temperature. Professional method explained.",
+      title: "Perfect Risotto: Italian Restaurant Technique Explained",
+      description: "Perfect risotto needs constant stirring, proper wine timing, and hot broth. The Italian restaurant technique from 24 years in professional kitchens.",
       canonical: "https://www.chefapprovedtools.com/blog/how-to-make-perfect-risotto",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/perfect-risotto-guide.jpg",
@@ -989,7 +989,7 @@ export const METADATA = {
 
     'how-to-make-roux': {
       title: "How To Make Roux: 3 Colors For Different Sauces",
-      description: "How to make roux in three different colors for different sauces. White, blonde, and dark roux explained by a professional chef. Foundation of French cooking.",
+      description: "24 years making French sauces: White roux for béchamel, blonde for velouté, dark for gumbo. Exact cook times and temperatures for each. Foundation technique.",
       canonical: "https://www.chefapprovedtools.com/blog/how-to-make-roux",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/roux-og.jpg",
@@ -1013,8 +1013,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'how-to-preheat-a-pan': {
-      title: "How To Preheat A Pan The Right Way (Most People Do This Wrong)",
-      description: "Professional chef explains the science of preheating stainless steel and cast iron pans — how to prevent sticking and achieve perfect sear every time.",
+      title: "How To Preheat A Pan (Most People Do This Wrong)",
+      description: "Preheat pans for 3-5 minutes on medium heat—not high. The science behind preventing sticking and achieving perfect sear on stainless steel and cast iron.",
       canonical: "https://www.chefapprovedtools.com/blog/how-to-preheat-a-pan",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -1039,7 +1039,7 @@ export const METADATA = {
 
     'how-to-sear-steaks-like-restaurant-chef': {
       title: "How To Sear Steaks Like A Restaurant Chef (High Heat Secret)",
-      description: "Learn the professional steak searing techniques used in restaurant kitchens. 24 years of professional experience including 3 years as Kitchen Manager at Mellow Mushroom (1992-1994) reveals the secrets to perfect sears.",
+      description: "Perfect steak sear needs 500°F+ heat and a dry surface. Professional techniques from 24 years in restaurant kitchens. High-heat method and common mistakes.",
       canonical: "https://www.chefapprovedtools.com/blog/how-to-sear-steaks-like-restaurant-chef",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -1063,8 +1063,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'how-to-sharpen-with-tri-stone': {
-      title: "How to Sharpen with a Stone: Professional Chef's Technique (2025)",
-      description: "Professional chef shares technique perfected over 6 years in restaurant kitchen. Step-by-step guide: angles, pressure, three-stage progression, troubleshooting.",
+      title: "How to Sharpen with a Stone: Professional Technique",
+      description: "Master knife sharpening with whetstones using proper angles and pressure. Three-stage progression from coarse to fine from 24 years sharpening knives.",
       canonical: "https://www.chefapprovedtools.com/blog/how-to-sharpen-with-tri-stone",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -1089,7 +1089,7 @@ export const METADATA = {
 
     'how-to-steel-a-knife': {
       title: "How To Steel A Knife: Honing vs Sharpening Explained",
-      description: "Learn how to steel a knife properly using a honing steel. Professional chef guide to honing vs sharpening, perfect technique, and top tool recommendations.",
+      description: "Honing realigns the edge daily. Sharpening removes metal every few months. 24 years maintaining restaurant knives—the difference explained, proper technique.",
       canonical: "https://www.chefapprovedtools.com/blog/how-to-steel-a-knife",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -1114,7 +1114,7 @@ export const METADATA = {
 
     'hydration-health-water-intake': {
       title: "Hydration & Water Intake: How Much Water Do You Need?",
-      description: "Hydration and water intake guide: How much water you actually need based on activity level. Myth-busting from a chef who worked 14-hour shifts.",
+      description: "How much water you actually need based on activity level and sweat rate. Myth-busting hydration advice from 14-hour kitchen shifts in 100°F+ heat.",
       canonical: "https://www.chefapprovedtools.com/blog/hydration-health-water-intake",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/kitchen-hydration-guide.jpg",
@@ -1139,7 +1139,7 @@ export const METADATA = {
 
     'immersion-blender-vs-countertop-blender': {
       title: "Immersion vs Countertop Blender: Why You Need Both",
-      description: "Countertop crushes ice and makes smoothies. Immersion purees soup in the pot with zero cleanup. When each shines + $60 immersion pick that rivals $300 models.",
+      description: "24 years using both: Countertop crushes ice for smoothies. Immersion purees soup in the pot with zero cleanup. When each tool shines—and when you need both.",
       canonical: "https://www.chefapprovedtools.com/blog/immersion-blender-vs-countertop-blender",
       author: "Scott Bradley",
       imageUrl: "/images/blog/default.jpg",
@@ -1164,7 +1164,7 @@ export const METADATA = {
 
     'kitchen-gloves-guide': {
       title: "Kitchen Gloves Guide: When To Use Each Type",
-      description: "Kitchen gloves guide: When to use heat-resistant vs cut-resistant vs disposable gloves. Professional chef's recommendations after 24 years in kitchens.",
+      description: "24 years in professional kitchens: Heat-resistant for oven work, cut-resistant for mandolins, disposable for raw meat. When to use each glove type.",
       canonical: "https://www.chefapprovedtools.com/blog/kitchen-gloves-guide",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -1189,7 +1189,7 @@ export const METADATA = {
 
     'kitchen-starter-kit-first-5-tools': {
       title: "Kitchen Starter Kit: The First 5 Tools You Actually Need",
-      description: "Kitchen starter kit: The first 5 tools you actually need before buying anything else. Professional chef's guide to essentials under $200 total.",
+      description: "Start with these 5 essential tools: chef's knife, cutting board, skillet, pot, and thermometer. Professional chef's starter kit from 24 years experience.",
       canonical: "https://www.chefapprovedtools.com/blog/kitchen-starter-kit-first-5-tools",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/kitchen-starter-kit-og.jpg",
@@ -1214,7 +1214,7 @@ export const METADATA = {
 
     'kitchen-thermometers-guide': {
       title: "Kitchen Thermometers Guide: Instant-Read vs Leave-In Types",
-      description: "Kitchen thermometers guide: Instant-read vs leave-in vs infrared types explained. Professional chef's recommendations after 24 years of precise cooking.",
+      description: "24 years cooking precisely: Instant-read for quick checks, leave-in for roasts, infrared for surface temps. Which thermometer type for which task.",
       canonical: "https://www.chefapprovedtools.com/blog/kitchen-thermometers-guide",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/kitchen-thermometers-guide.jpg",
@@ -1239,7 +1239,7 @@ export const METADATA = {
 
     'kitchen-tools-wasting-money': {
       title: "10 Kitchen Tools That Waste Your Money (Skip These)",
-      description: "10 kitchen tools that waste your money—skip these trendy gadgets. Professional chef reveals what doesn't work after 24 years testing equipment.",
+      description: "Skip these 10 trendy kitchen gadgets that don't work: garlic presses, egg slicers, and unitaskers that clutter drawers. What works from 24 years testing.",
       canonical: "https://www.chefapprovedtools.com/blog/kitchen-tools-wasting-money",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -1263,8 +1263,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'knife-safety-rules-professional-kitchens': {
-      title: "Knife Safety Rules From Professional Kitchens (Never Get Cut)",
-      description: "Professional chef Scott Bradley shares 10 essential knife safety rules from 24 years in restaurants. Learn grip, stance, focus, and habits to prevent injuries in your kitchen.",
+      title: "10 Knife Safety Rules From Professional Kitchens",
+      description: "Master these 10 knife safety rules to prevent cuts: proper grip, claw hand, sharp blades, and focus. Injury prevention from 24 years in restaurant kitchens.",
       canonical: "https://www.chefapprovedtools.com/blog/knife-safety-rules-professional-kitchens",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -1289,7 +1289,7 @@ export const METADATA = {
 
     'knife-skills-how-to-hold-chef-knife': {
       title: "How To Hold A Chef Knife: Proper Grip For Control & Safety",
-      description: "How to hold a chef knife with proper grip for control and safety. Professional technique from 24 years in restaurant kitchens. Most people do this wrong.",
+      description: "Pinch grip on the blade, not the handle. 24 years teaching this in professional kitchens—most people hold knives wrong. Proper technique for control and safety.",
       canonical: "https://www.chefapprovedtools.com/blog/knife-skills-how-to-hold-chef-knife",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/knife-skills-og.jpg",
@@ -1314,7 +1314,7 @@ export const METADATA = {
 
     'knife-storage-protecting-blades-for-decades': {
       title: "Knife Storage: How To Protect Blades For Decades",
-      description: "Knife storage methods that protect blades for decades: Magnetic strips, knife blocks, drawer guards. Professional chef's guide to keeping knives sharp.",
+      description: "24 years maintaining restaurant knives: Magnetic strips protect edges best. Knife blocks dull blades. Drawer guards work if positioned correctly.",
       canonical: "https://www.chefapprovedtools.com/blog/knife-storage-protecting-blades-for-decades",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/knife-storage-protection.jpg",
@@ -1339,7 +1339,7 @@ export const METADATA = {
 
     'maillard-reaction-browning-flavor': {
       title: "Maillard Reaction: The Science Behind Browning & Flavor",
-      description: "Maillard reaction explained: The science behind browning and flavor development. Why restaurant food tastes better. Chemistry made simple for cooks.",
+      description: "Why restaurant steaks taste better: Maillard reaction creates hundreds of flavor compounds when proteins meet heat. The browning science from 24 years cooking.",
       canonical: "https://www.chefapprovedtools.com/blog/maillard-reaction-browning-flavor",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/maillard-reaction.jpg",
@@ -1363,8 +1363,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'making-stock-professional-chef-method': {
-      title: "making-stock-professional-chef-method - Title Missing",
-      description: "Professional chef Scott Bradley explains the real restaurant method for making stock. Build deep flavor with bones, vegetables, and proper simmering technique.",
+      title: "Making Stock: The Professional Chef Method",
+      description: "24 years making restaurant stock: Roast bones first, simmer 8-12 hours, never boil. How to build deep flavor that transforms everything you cook.",
       canonical: "https://www.chefapprovedtools.com/blog/making-stock-professional-chef-method",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/making-stock-og.jpg",
@@ -1389,7 +1389,7 @@ export const METADATA = {
 
     'meal-prep-station-setup-restaurant-efficiency': {
       title: "Meal Prep Station Setup For Restaurant-Level Efficiency",
-      description: "Meal prep station setup using restaurant efficiency principles. How to organize your kitchen for speed. 24 years of professional mise en place habits.",
+      description: "24 years of restaurant mise en place: Everything within arm's reach, tools above prep surface, ingredients at eye level. How to organize for speed.",
       canonical: "https://www.chefapprovedtools.com/blog/meal-prep-station-setup-restaurant-efficiency",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/meal-prep-station.jpg",
@@ -1414,7 +1414,7 @@ export const METADATA = {
 
     'meat-cooking-temperatures-thermometers': {
       title: "Meat Cooking Temperatures: Complete Safety & Doneness Chart",
-      description: "Professional chef explains meat thermometers and proper cooking temps. 24 years restaurant experience. Food safety + perfect doneness every time.",
+      description: "24 years cooking meat professionally: 145°F for safety, 135°F for medium-rare perfection. Complete temperature chart for chicken, beef, pork, lamb, fish.",
       canonical: "https://www.chefapprovedtools.com/blog/meat-cooking-temperatures-thermometers",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -1439,7 +1439,7 @@ export const METADATA = {
 
     'mis-en-place-professional-cooking': {
       title: "Mise En Place: The Professional Cooking Organization System",
-      description: "Mise en place explained: The professional cooking organization system that changes everything. 24 years using restaurant prep techniques at home.",
+      description: "Everything in its place before you start cooking. 24 years using restaurant mise en place at home—reduces stress, eliminates mistakes, cuts cooking time 30%.",
       canonical: "https://www.chefapprovedtools.com/blog/mis-en-place-professional-cooking",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/mis-en-place-og.jpg",
@@ -1464,7 +1464,7 @@ export const METADATA = {
 
     'nonstick-vs-stainless-steel-pans': {
       title: "Nonstick vs Stainless Steel Pans: When to Use Each",
-      description: "Nonstick for eggs and delicate fish, dies in 3 years. Stainless for searing and sauces, lasts decades. Professional kitchens use both + best picks at every price.",
+      description: "Nonstick for eggs and delicate fish, dies in 3 years. Stainless for searing and sauces, lasts decades. When to use each from 24 years in kitchens.",
       canonical: "https://www.chefapprovedtools.com/blog/nonstick-vs-stainless-steel-pans",
       author: "Scott Bradley",
       imageUrl: "/images/blog/default.jpg",
@@ -1489,7 +1489,7 @@ export const METADATA = {
 
     'onions-cooking-guide': {
       title: "Complete Onions Cooking Guide: Types & Techniques",
-      description: "Complete onions cooking guide: Different types and cooking techniques for each. Yellow vs white vs red vs shallots. Professional chef's comprehensive guide.",
+      description: "24 years cooking with onions: Yellow for caramelizing, white for Mexican dishes, red raw only, shallots for finesse. When to use each onion type.",
       canonical: "https://www.chefapprovedtools.com/blog/onions-cooking-guide",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/onions-guide-og.jpg",
@@ -1514,7 +1514,7 @@ export const METADATA = {
 
     'oxidization-effect-on-food': {
       title: "Why Cut Apples Turn Brown: Oxidation Science Explained",
-      description: "The chemistry behind why apples, avocados, and potatoes turn brown when cut. How to prevent oxidation in food using simple techniques from restaurant kitchens.",
+      description: "24 years preventing browning in restaurant kitchens: Acid stops oxidation instantly. Lemon juice, salt water, or airtight storage. Chemistry explained.",
       canonical: "https://www.chefapprovedtools.com/blog/oxidization-effect-on-food",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/food-oxidation-guide.jpg",
@@ -1539,7 +1539,7 @@ export const METADATA = {
 
     'potatoes-cooking-guide': {
       title: "Complete Potatoes Cooking Guide: Every Type & Method",
-      description: "Complete potatoes cooking guide: Every variety and cooking method explained. Russet vs Yukon Gold vs red vs fingerling. 24 years of professional cooking.",
+      description: "24 years cooking potatoes: Russet for baking/frying, Yukon Gold for mashing, red for roasting, fingerlings for showpieces. Starch content determines method.",
       canonical: "https://www.chefapprovedtools.com/blog/potatoes-cooking-guide",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/potatoes-guide-og.jpg",
@@ -1563,8 +1563,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'reducing-sauces-restaurant-technique': {
-      title: "Restaurant Sauce Technique: How Reduction Creates Deep Flavor",
-      description: "24 years in professional kitchens: How reduction transforms thin liquids into intensely flavored sauces. The technique that makes restaurant food taste better.",
+      title: "Sauce Reduction: Restaurant Technique Explained",
+      description: "Reduction transforms thin liquids into intensely flavored sauces through evaporation. The restaurant technique that creates deep flavor from 24 years.",
       canonical: "https://www.chefapprovedtools.com/blog/reducing-sauces-restaurant-technique",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/reducing-sauces.jpg",
@@ -1589,7 +1589,7 @@ export const METADATA = {
 
     'sheet-pan-cooking-restaurant-techniques': {
       title: "Sheet Pan Cooking: Restaurant Techniques For Home Cooks",
-      description: "Sheet pan cooking using restaurant techniques: How to roast multiple items perfectly. Professional method from 24 years using commercial ovens.",
+      description: "Roast multiple items perfectly on one sheet pan using restaurant techniques. Proper spacing, temperature zones, and timing from 24 years using commercial ovens.",
       canonical: "https://www.chefapprovedtools.com/blog/sheet-pan-cooking-restaurant-techniques",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/sheet-pan-cooking.jpg",
@@ -1614,7 +1614,7 @@ export const METADATA = {
 
     'stainless-steel-why-food-sticks': {
       title: "Why Food Sticks To Stainless Steel (And How To Prevent It)",
-      description: "Professional chef explains why food sticks to stainless steel pans and how to prevent it using temperature, oil, and timing. Learn the science behind perfect sears.",
+      description: "Food sticks to stainless steel when pans aren't hot enough or protein hasn't released. Prevent sticking using proper temperature, oil, and timing.",
       canonical: "https://www.chefapprovedtools.com/blog/stainless-steel-why-food-sticks",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -1639,7 +1639,7 @@ export const METADATA = {
 
     'stand-mixer-buying-guide': {
       title: "Stand Mixer Buying Guide: KitchenAid vs Other Brands",
-      description: "Professional chef compares KitchenAid mixers vs top alternatives. Learn what to look for in power, capacity, attachments, and reliability before you buy.",
+      description: "24 years using stand mixers: Look for motor power (325W minimum), bowl size (5-qt+), metal gears, and attachment hub. KitchenAid vs alternatives compared.",
       canonical: "https://www.chefapprovedtools.com/blog/stand-mixer-buying-guide",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -1663,8 +1663,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'stand-mixer-vs-hand-mixer': {
-      title: "Stand Mixer vs Hand Mixer: When $400 Is Worth It",
-      description: "Stand mixers excel at bread dough and hands-free mixing. Hand mixers handle 80% of tasks for $50. Which matches your baking frequency + best picks.",
+      title: "Stand Mixer vs Hand Mixer: When The Investment Pays Off",
+      description: "Stand mixers excel at bread dough and hands-free mixing. Hand mixers handle 80% of tasks. 24 years baking—which matches your frequency and budget.",
       canonical: "https://www.chefapprovedtools.com/blog/stand-mixer-vs-hand-mixer",
       author: "Scott Bradley",
       imageUrl: "/images/blog/default.jpg",
@@ -1689,7 +1689,7 @@ export const METADATA = {
 
     'stock-vs-broth-vs-bouillon': {
       title: "Stock vs Broth vs Bouillon: The Differences Explained",
-      description: "Stock vs broth vs bouillon: The differences explained by a professional chef. When to use each in cooking. 24 years making stock in restaurants.",
+      description: "Stock uses bones for gelatin, broth uses meat for flavor, bouillon is concentrated paste. When to use each in cooking from 24 years making stock in kitchens.",
       canonical: "https://www.chefapprovedtools.com/blog/stock-vs-broth-vs-bouillon",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/stock-vs-broth-og.jpg",
@@ -1714,7 +1714,7 @@ export const METADATA = {
 
     'understanding-acids-cooking': {
       title: "Understanding Acids In Cooking: How They Brighten Flavor",
-      description: "Understanding acids in cooking: How lemon, vinegar, and wine brighten flavor. Professional chef explains balancing acids after 24 years in kitchens.",
+      description: "24 years balancing acids: Lemon brightens fish, vinegar cuts richness, wine adds depth. How acids transform flat dishes into balanced, craveable food.",
       canonical: "https://www.chefapprovedtools.com/blog/understanding-acids-cooking",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/acids-cooking-og.jpg",
@@ -1739,7 +1739,7 @@ export const METADATA = {
 
     'understanding-cooking-fats': {
       title: "Understanding Cooking Fats: Butter, Oil & Lard Compared",
-      description: "Understanding cooking fats: Butter vs oil vs lard compared. When to use each fat for best results. Professional chef's guide from 24 years cooking.",
+      description: "24 years cooking with fats: Butter for flavor, neutral oil for high heat, lard for flaky pastry. Smoke points, flavor profiles, and when to use each.",
       canonical: "https://www.chefapprovedtools.com/blog/understanding-cooking-fats",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/cooking-fats-guide.jpg",
@@ -1764,7 +1764,7 @@ export const METADATA = {
 
     'understanding-umami-fifth-taste': {
       title: "Understanding Umami: The Fifth Taste Explained",
-      description: "Understanding umami: The fifth taste explained by a professional chef. How to add savory depth to cooking. Glutamate science made simple.",
+      description: "Umami is savory depth from glutamate in tomatoes, mushrooms, aged cheese, and soy sauce. How to add umami to cooking from 24 years in professional kitchens.",
       canonical: "https://www.chefapprovedtools.com/blog/understanding-umami-fifth-taste",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/umami-og.jpg",
@@ -1789,7 +1789,7 @@ export const METADATA = {
 
     'vegetable-roasting-guide': {
       title: "Complete Vegetable Roasting Guide: Times & Temperatures",
-      description: "Complete vegetable roasting guide: Times and temperatures for 20 common vegetables. Restaurant techniques for perfect caramelization every time.",
+      description: "Roasting times and temperatures for 20 common vegetables. Restaurant techniques for perfect caramelization: high heat, proper spacing, and when to flip.",
       canonical: "https://www.chefapprovedtools.com/blog/vegetable-roasting-guide",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/vegetable-roasting-guide.jpg",
@@ -1814,7 +1814,7 @@ export const METADATA = {
 
     'what-is-braising': {
       title: "What Is Braising? The Low & Slow Cooking Method Explained",
-      description: "What is braising? The low and slow cooking method explained by a professional chef. How to turn tough cuts tender using moist heat. Complete guide.",
+      description: "24 years braising tough cuts: Sear first, add liquid halfway up, cook low (300°F) for 3+ hours. How moist heat breaks down collagen into tender meat.",
       canonical: "https://www.chefapprovedtools.com/blog/what-is-braising",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/braising-og.jpg",
@@ -1839,7 +1839,7 @@ export const METADATA = {
 
     'what-is-emulsification': {
       title: "What Is Emulsification? The Science Behind Stable Sauces",
-      description: "What is emulsification? The science behind stable sauces like mayonnaise and hollandaise. Professional chef explains fat and water chemistry simply.",
+      description: "24 years making emulsions: Oil and water don't mix—unless you add an emulsifier like egg yolk or mustard. The chemistry behind mayonnaise, hollandaise.",
       canonical: "https://www.chefapprovedtools.com/blog/what-is-emulsification",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/emulsification-og.jpg",
@@ -1864,7 +1864,7 @@ export const METADATA = {
 
     'why-children-hate-broccoli': {
       title: "Why Children Hate Broccoli: The Genetic Science Explained",
-      description: "Why children hate broccoli: The genetic science explained. Bitter taste receptors and what parents can do. Understanding from 24 years feeding people.",
+      description: "Kids have 2x more bitter taste receptors than adults. Broccoli triggers them. 24 years feeding people—roasting reduces bitterness 70%, raw guarantees rejection.",
       canonical: "https://www.chefapprovedtools.com/blog/why-children-hate-broccoli",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/blog/broccoli-kids-guide.jpg",
@@ -1914,7 +1914,7 @@ export const METADATA = {
 
     'why-professional-chefs-use-kosher-salt': {
       title: "Why Professional Chefs Use Kosher Salt (Not Table Salt)",
-      description: "Discover why professional chefs prefer kosher salt. Learn about Diamond Crystal vs Morton, proper seasoning technique, and why it's essential in commercial kitchens.",
+      description: "Kosher salt has larger flakes for better control and no additives. Diamond Crystal vs Morton differences and proper seasoning technique from 24 years.",
       canonical: "https://www.chefapprovedtools.com/blog/why-professional-chefs-use-kosher-salt",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
@@ -1939,7 +1939,7 @@ export const METADATA = {
 
     'why-resting-meat-key-cooking': {
       title: "Why Resting Meat Is Key To Juicy Results",
-      description: "Why resting meat after cooking is key to juicy results. The science behind juice redistribution. Professional technique that changes steak forever.",
+      description: "24 years cooking steaks: Rest 5-10 minutes for juices to redistribute. Cut immediately, lose 40% of moisture to the plate. The science behind resting.",
       canonical: "https://www.chefapprovedtools.com/blog/why-resting-meat-key-cooking",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/resting-meat-og.jpg",
@@ -1963,8 +1963,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'wood-vs-composite-cutting-board': {
-      title: "Wood vs Composite Cutting Boards: Why 90% of Pros Choose Wood",
-      description: "24 years testing both: Wood cutting boards win on knife preservation and natural sanitation. When composite makes sense + best picks for each type.",
+      title: "Wood vs Composite Cutting Boards: Why Pros Choose Wood",
+      description: "Wood cutting boards preserve knife edges and naturally resist bacteria. Composite is dishwasher-safe but dulls knives faster. When to use each from 24 years.",
       canonical: "https://www.chefapprovedtools.com/blog/wood-vs-composite-cutting-board",
       author: "Scott Bradley",
       imageUrl: "/images/blog/default.jpg",
