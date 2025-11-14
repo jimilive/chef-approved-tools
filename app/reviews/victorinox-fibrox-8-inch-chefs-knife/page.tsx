@@ -30,7 +30,7 @@ export const fetchCache = 'force-cache'
 export async function generateMetadata(): Promise<Metadata> {
   const centralMeta = getReviewMetadata('victorinox-fibrox-8-inch-chefs-knife')
   const product = await getProductBySlug(reviewData.productSlug)
-  const productData = product || reviewData.legacyProductData
+  const productData = product!
 
   return {
     title: centralMeta.title,

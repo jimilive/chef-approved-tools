@@ -55,7 +55,7 @@ function processInlineLinks(text: string): React.ReactNode {
 export async function generateMetadata(): Promise<Metadata> {
   const centralMeta = getReviewMetadata('norton-im200-tri-stone-sharpener')
   const product = await getProductBySlug(reviewData.productSlug)
-  const productData = product || reviewData.legacyProductData
+  const productData = product!
 
   return {
     title: centralMeta.title,

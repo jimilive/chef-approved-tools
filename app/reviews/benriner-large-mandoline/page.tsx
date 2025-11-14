@@ -37,7 +37,12 @@ export const fetchCache = 'force-cache'
 export async function generateMetadata(): Promise<Metadata> {
   const centralMeta = getReviewMetadata('benriner-large-mandoline')
   const product = await getProductBySlug(reviewData.productSlug)
-  const productData = product || reviewData.legacyProductData
+
+  if (!product) {
+    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+  }
+
+  const productData = product!
 
   return {
     title: centralMeta.title,

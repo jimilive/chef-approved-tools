@@ -30,7 +30,7 @@ const faqData = reviewData.faq.items
 export async function generateMetadata(): Promise<Metadata> {
   const centralMeta = getReviewMetadata('robot-coupe-r2-dice')
   const product = await getProductBySlug(reviewData.productSlug)
-  const productData = product || reviewData.legacyProductData
+  const productData = product!
 
   return {
     title: centralMeta.title,

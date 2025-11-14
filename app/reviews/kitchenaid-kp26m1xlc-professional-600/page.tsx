@@ -33,7 +33,7 @@ export const fetchCache = 'force-cache'
 export async function generateMetadata(): Promise<Metadata> {
   const centralMeta = getReviewMetadata('kitchenaid-kp26m1xlc-professional-600')
   const product = await getProductBySlug(reviewData.productSlug)
-  const productData = product || reviewData.legacyProductData
+  const productData = product!
 
   return {
     title: centralMeta.title,
@@ -99,7 +99,7 @@ function processInlineLinks(text: string): (string | JSX.Element)[] {
 export default async function KitchenAidProfessional600ReviewPage() {
   // Get product data from Supabase
   const product = await getProductBySlug(reviewData.productSlug)
-  const productData = product || reviewData.legacyProductData
+  const productData = product!
 
   // ===== STRATEGIC AFFILIATE LINK SELECTION =====
   // Priority: Supabase primary link > Strategic primary > Fallback

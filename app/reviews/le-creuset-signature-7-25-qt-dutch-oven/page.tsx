@@ -34,7 +34,7 @@ export const fetchCache = 'force-cache'
 export async function generateMetadata(): Promise<Metadata> {
   const centralMeta = getReviewMetadata('le-creuset-signature-7-25-qt-dutch-oven')
   const product = await getProductBySlug(reviewData.productSlug)
-  const productData = product || reviewData.legacyProductData
+  const productData = product!
 
   return {
     title: centralMeta.title,
