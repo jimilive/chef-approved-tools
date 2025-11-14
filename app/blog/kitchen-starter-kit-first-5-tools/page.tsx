@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,15 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "Kitchen Starter Kit: The First 5 Tools You Actually Need",
-  description: "Kitchen starter kit: The first 5 tools you actually need before buying anything else. Professional chef's guide to essentials under $200 total.",
-  keywords: ["kitchen starter kit", "essential kitchen tools", "tools for home cooks", "beginner kitchen equipment", "chef recommended tools", "cooking basics"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/kitchen-starter-kit-first-5-tools'
-  }
-};
+export const metadata = generateBlogMetadata('kitchen-starter-kit-first-5-tools');
 
 const articleSchema = generateArticleSchema({
   headline: "Kitchen Starter Kit: First 5 Tools to Buy",

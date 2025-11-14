@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Sparkles, Scale, AlertTriangle } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "7 Dishes Where Bacon Actually Ruins The Flavor (Chef's Take)",
-  description: "Bacon doesn't belong everywhere. A chef with 24 years experience reveals when bacon overpowers instead of enhances delicate flavors. Controversial but true.",
-  keywords: ["when not to use bacon", "bacon in cooking", "professional cooking advice", "bacon flavors", "cooking with bacon", "food pairing mistakes"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/bacon-but-not-in-this-dish'
-  }
-};
+export const metadata = generateBlogMetadata('bacon-but-not-in-this-dish');
 
 const articleSchema = generateArticleSchema({
   headline: "Oh Sweet, Sweet Bacon: How I Love Thee (But Not in This Dish)",

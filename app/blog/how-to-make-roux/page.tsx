@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, AlertTriangle, CheckCircle2 } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "How To Make Roux: 3 Colors For Different Sauces",
-  description: "How to make roux in three different colors for different sauces. White, blonde, and dark roux explained by a professional chef. Foundation of French cooking.",
-  keywords: ["how to make a roux", "roux technique", "white roux", "blonde roux", "dark roux", "béchamel sauce", "gumbo roux", "sauce thickening"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/how-to-make-roux'
-  }
-};
+export const metadata = generateBlogMetadata('how-to-make-roux');
 
 const articleSchema = generateArticleSchema({
   headline: "How to Make a Perfect Roux: The Foundation of Great Sauces",

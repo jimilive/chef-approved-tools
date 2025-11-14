@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { Metadata } from 'next'
 import { comparisonData } from './immersion-vs-countertop-blender-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import {
   BlogLayout,
   BlogHero,
@@ -12,15 +12,7 @@ import {
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'Immersion vs Countertop Blender: Why You Need Both',
-  description: 'Countertop crushes ice and makes smoothies. Immersion purees soup in the pot with zero cleanup. When each shines + $60 immersion pick that rivals $300 models.',
-  openGraph: {
-    type: 'article',
-    publishedTime: '2025-11-09T00:00:00Z',
-    modifiedTime: '2025-11-09T00:00:00Z',
-  },
-}
+export const metadata = generateBlogMetadata('immersion-blender-vs-countertop-blender')
 
 export default function ImmersionVsCountertopBlenderComparison() {
   const articleSchema = generateArticleSchema({

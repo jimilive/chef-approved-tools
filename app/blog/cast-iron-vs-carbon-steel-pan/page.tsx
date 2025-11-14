@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { Metadata } from 'next'
 import { comparisonData } from './cast-iron-vs-carbon-steel-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import {
   BlogLayout,
   BlogHero,
@@ -12,15 +12,7 @@ import {
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'Cast Iron vs Carbon Steel Pans: What 24 Years Taught Me',
-  description: 'Cast iron holds heat 3x longer for searing. Carbon steel heats/cools instantly for control. Which cooking style matches yours + when to use each.',
-  openGraph: {
-    type: 'article',
-    publishedTime: '2025-11-09T00:00:00Z',
-    modifiedTime: '2025-11-09T00:00:00Z',
-  },
-}
+export const metadata = generateBlogMetadata('cast-iron-vs-carbon-steel-pan')
 
 export default function CastIronVsCarbonSteelComparison() {
   const articleSchema = generateArticleSchema({

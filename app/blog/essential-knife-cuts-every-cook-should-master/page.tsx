@@ -1,21 +1,14 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User, Target, Check, Ruler, AlertTriangle, CheckCircle2, ChefHat } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'Essential Knife Cuts Every Cook Should Master (With Photos)',
-  description: 'Essential knife cuts every cook should master: Julienne, brunoise, chiffonade, dice. Professional chef teaches proper knife technique with photo guides.',
-  keywords: ['knife cuts', 'basic knife skills', 'how to dice vegetables', 'julienne cut', 'chiffonade technique', 'professional knife training', 'brunoise', 'knife techniques'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/essential-knife-cuts-every-cook-should-master',
-  },
-}
+export const metadata = generateBlogMetadata('essential-knife-cuts-every-cook-should-master')
 
 const articleSchema = generateArticleSchema({
   headline: "The 5 Essential Knife Cuts Every Home Cook Should Master",

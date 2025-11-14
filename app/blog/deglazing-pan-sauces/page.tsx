@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Flame, AlertTriangle, Lightbulb, Droplets, Beaker, Wine, Sparkles } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,19 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "Deglazing & Pan Sauces: The Restaurant Technique Explained",
-  description: "Deglazing and pan sauce technique explained by a professional chef. How to turn brown bits into restaurant-quality sauces in 3 minutes. Game-changer.",
-  keywords: ["deglazing", "how to deglaze", "pan sauce", "fond", "making pan sauce", "deglazing wine", "restaurant pan sauce", "sauce technique"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/deglazing-pan-sauces'
-  },
-  openGraph: {
-    title: "The Art of Deglazing: Making Pan Sauces",
-    description: "Professional chef's guide to deglazing and creating perfect pan sauces",
-    images: [{ url: "/images/blog/deglazing-pan-sauce.jpg" }],
-  },
-};
+export const metadata = generateBlogMetadata('deglazing-pan-sauces');
 
 const articleMeta = {
   author: "Scott Bradley",

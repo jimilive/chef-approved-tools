@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Metadata } from 'next'
 import { comparisonData } from './stand-mixer-vs-hand-mixer-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import {
@@ -11,16 +10,9 @@ import {
   BlogEmailCapture
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-export const metadata: Metadata = {
-  title: 'Stand Mixer vs Hand Mixer: When $400 Is Worth It',
-  description: 'Stand mixers excel at bread dough and hands-free mixing. Hand mixers handle 80% of tasks for $50. Which matches your baking frequency + best picks.',
-  openGraph: {
-    type: 'article',
-    publishedTime: '2025-11-09T00:00:00Z',
-    modifiedTime: '2025-11-09T00:00:00Z',
-  },
-}
+export const metadata = generateBlogMetadata('stand-mixer-vs-hand-mixer')
 
 export default function StandMixerVsHandMixerComparison() {
   const articleSchema = generateArticleSchema({

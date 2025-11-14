@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -13,7 +12,7 @@ import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = generateBlogMetadata('making-stock-professional-chef-method');
+export const metadata = generateBlogMetadata('making-stock-professional-chef-method');
 
 const articleSchema = generateArticleSchema({
   headline: "Making Stock: Professional Chef Method – How to Build Flavor",

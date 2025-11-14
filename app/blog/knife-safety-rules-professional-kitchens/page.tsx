@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { AlertTriangle, Shield, CheckCircle2, Zap, ChefHat } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
@@ -7,15 +6,9 @@ import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-export const metadata: Metadata = {
-  title: 'Knife Safety Rules From Professional Kitchens (Never Get Cut)',
-  description: 'Knife safety rules from professional kitchens to prevent cuts. 24 years of restaurant experience without serious injury. Essential techniques everyone needs.',
-  keywords: ['knife safety', 'how to use a chef knife safely', 'kitchen knife rules', 'professional kitchen safety', 'knife accidents prevention', 'claw grip technique', 'knife mistakes'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/knife-safety-rules-professional-kitchens',
-  },
-}
+export const metadata = generateBlogMetadata('knife-safety-rules-professional-kitchens')
 
 const articleSchema = generateArticleSchema({
   headline: "Knife Safety: 10 Rules From 24 Years in Professional Kitchens",

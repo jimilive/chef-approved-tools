@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,15 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "Complete Onions Cooking Guide: Types & Techniques",
-  description: "Complete onions cooking guide: Different types and cooking techniques for each. Yellow vs white vs red vs shallots. Professional chef's comprehensive guide.",
-  keywords: ["how to cook onions", "onion types", "caramelizing onions", "how to cut onions without crying", "yellow vs white vs red onions", "professional onion techniques", "onion cooking methods"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/onions-cooking-guide'
-  }
-};
+export const metadata = generateBlogMetadata('onions-cooking-guide');
 
 const articleSchema = generateArticleSchema({
   headline: "The Complete Guide to Cooking Onions",

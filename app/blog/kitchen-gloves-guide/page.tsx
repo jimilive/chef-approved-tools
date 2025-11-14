@@ -1,8 +1,8 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Shield } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
@@ -10,14 +10,7 @@ import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'Kitchen Gloves Guide: When To Use Each Type',
-  description: "Kitchen gloves guide: When to use heat-resistant vs cut-resistant vs disposable gloves. Professional chef's recommendations after 24 years in kitchens.",
-  keywords: ['kitchen gloves', 'cut resistant gloves', 'food safety gloves', 'disposable gloves', 'kitchen safety', 'professional chef gloves', 'mandoline safety', 'kitchen glove layering'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/kitchen-gloves-guide',
-  },
-};
+export const metadata = generateBlogMetadata('kitchen-gloves-guide')
 
 const articleSchema = generateArticleSchema({
   headline: "Essential Guide to Kitchen Gloves: Professional Safety Protocols",

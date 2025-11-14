@@ -1,21 +1,14 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User, Flame, Settings } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'Cookware Materials Explained: Stainless, Cast Iron & More',
-  description: 'Cookware materials explained by a professional chef: Stainless steel, cast iron, copper, aluminum. Which material is best for different cooking methods.',
-  keywords: ['cookware materials', 'best cookware', 'cast iron vs stainless steel', 'nonstick pros and cons', 'what chefs use'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/cookware-materials-explained',
-  },
-}
+export const metadata = generateBlogMetadata('cookware-materials-explained')
 
 const articleSchema = generateArticleSchema({
   headline: "Cookware Materials Explained: What Chefs Actually Use",

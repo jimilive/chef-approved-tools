@@ -1,21 +1,14 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User, Target, Check } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'How To Choose Your First Chef Knife (Skip These Mistakes)',
-  description: "How to choose your first chef knife without wasting money. Professional chef's guide to what matters and what doesn't. Avoid these common mistakes.",
-  keywords: ['how to choose a chef knife', 'best chef knife for beginners', 'chef knife buying guide', 'kitchen knife selection', 'chef knife balance', 'professional knife advice'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/how-to-choose-first-chef-knife',
-  },
-}
+export const metadata = generateBlogMetadata('how-to-choose-first-chef-knife')
 
 const articleSchema = generateArticleSchema({
   headline: "How to Choose Your First Chef Knife (Like a Professional Chef)",

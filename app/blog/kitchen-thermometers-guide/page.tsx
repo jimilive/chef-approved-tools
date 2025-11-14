@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,20 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "Kitchen Thermometers Guide: Instant-Read vs Leave-In Types",
-  description: "Kitchen thermometers guide: Instant-read vs leave-in vs infrared types explained. Professional chef's recommendations after 24 years of precise cooking.",
-  keywords: ["kitchen thermometer", "meat thermometer", "instant read thermometer", "cooking temperatures", "food safety temperatures", "internal temperature guide", "how to use meat thermometer"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/kitchen-thermometers-guide'
-  },
-  openGraph: {
-    title: "The Complete Guide to Kitchen Thermometers",
-    description: "Professional guide to using kitchen thermometers for perfect, safe cooking",
-    images: [{ url: "/images/blog/kitchen-thermometers-guide.jpg" }],
-  },
-};
+export const metadata = generateBlogMetadata('kitchen-thermometers-guide');
 
 const articleMeta = {
   author: "Scott Bradley",

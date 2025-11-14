@@ -1,21 +1,14 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Timer, Thermometer, Droplets, Sparkles } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: "Why Your Vegetables Look Sad (And Restaurant Vegetables Don't)",
-  description: "Blanching is the secret. It's why restaurant vegetables are vibrant and yours aren't. Here's the professional 2-step blanching technique.",
-  keywords: ['how to blanch vegetables', 'why blanch vegetables', 'restaurant blanching method', 'blanching and shocking', 'blanching technique', 'vegetable preparation', 'professional cooking'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/blanching-vegetables-why-restaurants-do-it',
-  },
-}
+export const metadata = generateBlogMetadata('blanching-vegetables-why-restaurants-do-it');
 
 const articleSchema = generateArticleSchema({
   headline: 'Blanching Vegetables: Why Restaurants Do It',

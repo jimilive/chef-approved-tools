@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Sparkles, Flame, Lightbulb } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "Complete Guide To Cooking Salts: When To Use Each Type",
-  description: "Complete guide to kitchen salts from a professional chef: Kosher, sea salt, fleur de sel, Maldon. When to use each type and why it matters for cooking.",
-  keywords: ["types of salt", "kosher salt vs sea salt", "cooking with salt", "best salt for cooking", "Diamond Crystal", "Morton kosher salt", "finishing salt guide"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/complete-guide-to-salts'
-  }
-};
+export const metadata = generateBlogMetadata('complete-guide-to-salts');
 
 const articleSchema = generateArticleSchema({
   headline: "The Complete Guide to Salts",

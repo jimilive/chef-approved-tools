@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
@@ -7,15 +6,9 @@ import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-export const metadata: Metadata = {
-  title: "Meat Cooking Temperatures: Complete Safety & Doneness Chart",
-  description: 'Meat cooking temperatures for safety and doneness: Complete chart from a professional chef. USDA guidelines plus restaurant standards for perfect results.',
-  keywords: ['meat cooking temperatures', 'meat thermometer', 'food safety temperatures', 'instant read thermometer', 'cooking temperatures', 'professional chef techniques', 'USDA temperature guidelines', 'carryover cooking'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/meat-cooking-temperatures-thermometers',
-  },
-};
+export const metadata = generateBlogMetadata('meat-cooking-temperatures-thermometers')
 
 const articleSchema = generateArticleSchema({
   headline: "Meat Cooking Temperatures & Thermometers: Professional Chef Guide",

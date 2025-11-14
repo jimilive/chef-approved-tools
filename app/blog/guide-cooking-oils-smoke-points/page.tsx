@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Droplets, Lightbulb } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "Complete Guide To Cooking Oils: Smoke Points & Best Uses",
-  description: "24 years cooking with every oil: Smoke point chart for 15 common oils. Which oils for high heat, which for flavor. Restaurant chef's practical guide.",
-  keywords: ["cooking oils guide", "smoke points", "best oil for frying", "best oil for searing", "olive oil vs vegetable oil", "cooking oil types", "professional cooking fats"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/guide-cooking-oils-smoke-points'
-  }
-};
+export const metadata = generateBlogMetadata('guide-cooking-oils-smoke-points');
 
 const articleSchema = generateArticleSchema({
   headline: "Guide to Cooking Oils & Smoke Points",

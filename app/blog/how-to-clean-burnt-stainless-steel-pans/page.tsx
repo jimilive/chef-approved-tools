@@ -1,21 +1,14 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Sparkles, AlertTriangle } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'How To Clean Burnt Stainless Steel Pans (Restaurant Method)',
-  description: "How to clean burnt stainless steel pans using the restaurant method. Bar Keeper's Friend and the technique that saves every pan. Actually works.",
-  keywords: ['clean burnt stainless steel pan', 'restore stainless steel cookware', 'remove burnt residue', 'baking soda pan cleaning', 'bar keepers friend stainless steel'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/how-to-clean-burnt-stainless-steel-pans',
-  },
-}
+export const metadata = generateBlogMetadata('how-to-clean-burnt-stainless-steel-pans')
 
 const articleSchema = generateArticleSchema({
   headline: "How to Clean Burnt Stainless Steel Pans",

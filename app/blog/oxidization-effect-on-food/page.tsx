@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Beaker, Apple, Droplet, AlertTriangle, Lightbulb, Flame } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "Why Cut Apples Turn Brown: Oxidation Science Explained",
-  description: "The chemistry behind why apples, avocados, and potatoes turn brown when cut. How to prevent oxidation in food using simple techniques from restaurant kitchens.",
-  keywords: ["food oxidation", "enzymatic browning", "prevent apple browning", "food preservation", "keeping produce fresh", "oxidation in cooking"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/oxidization-effect-on-food'
-  }
-};
+export const metadata = generateBlogMetadata('oxidization-effect-on-food');
 
 const articleSchema = generateArticleSchema({
   headline: "Oxidization's Effect on Food: Why Your Produce Turns Brown (And How to Stop It)",

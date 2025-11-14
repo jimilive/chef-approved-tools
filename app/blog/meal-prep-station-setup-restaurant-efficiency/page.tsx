@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { ChefHat, Layers, Tag, RotateCcw } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
@@ -7,15 +6,9 @@ import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-export const metadata: Metadata = {
-  title: 'Meal Prep Station Setup For Restaurant-Level Efficiency',
-  description: 'Meal prep station setup using restaurant efficiency principles. How to organize your kitchen for speed. 24 years of professional mise en place habits.',
-  keywords: ['meal prep station', 'mise en place', 'kitchen organization', 'chef efficiency tips', 'home cooking prep', 'professional kitchen setup', 'cooking workflow'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/meal-prep-station-setup-restaurant-efficiency',
-  },
-}
+export const metadata = generateBlogMetadata('meal-prep-station-setup-restaurant-efficiency')
 
 const articleSchema = generateArticleSchema({
   headline: 'Meal Prep Station Setup: Restaurant Efficiency at Home',

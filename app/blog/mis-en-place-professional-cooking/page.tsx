@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,15 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "Mise En Place: The Professional Cooking Organization System",
-  description: "Mise en place explained: The professional cooking organization system that changes everything. 24 years using restaurant prep techniques at home.",
-  keywords: ["mis en place", "mise en place", "kitchen organization", "prep cooking", "professional cooking techniques", "kitchen efficiency"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/mis-en-place-professional-cooking'
-  }
-};
+export const metadata = generateBlogMetadata('mis-en-place-professional-cooking');
 
 const articleSchema = generateArticleSchema({
   headline: "Mis en Place: The Foundation of Professional Cooking",

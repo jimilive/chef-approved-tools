@@ -1,25 +1,13 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'How To Make Perfect French Press Coffee (Barista Method)',
-  description: 'How to make perfect French press coffee using the barista method. Water temperature, timing, grind size. 18 years of professional barista experience.',
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/how-to-make-perfect-french-press-coffee',
-  },
-  openGraph: {
-    title: 'How to Make Perfect French Press Coffee: Professional Guide (2025)',
-    description: 'Master French press coffee with 24 years of professional experience. Learn the perfect ratio, step-by-step technique, common mistakes to avoid, and pro tips for cafe-quality coffee at home.',
-    type: 'article',
-    url: 'https://www.chefapprovedtools.com/blog/how-to-make-perfect-french-press-coffee',
-  },
-};
+export const metadata = generateBlogMetadata('how-to-make-perfect-french-press-coffee')
 
 const articleSchema = generateArticleSchema({
   headline: "How to Make Perfect French Press Coffee Every Time",

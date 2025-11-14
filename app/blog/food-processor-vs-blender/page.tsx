@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User, Zap, Settings } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
@@ -9,7 +8,7 @@ import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-export const metadata: Metadata = generateBlogMetadata('food-processor-vs-blender')
+export const metadata = generateBlogMetadata('food-processor-vs-blender')
 
 const articleSchema = generateArticleSchema({
   headline: "Food Processor vs Blender: Which Do You Actually Need?",

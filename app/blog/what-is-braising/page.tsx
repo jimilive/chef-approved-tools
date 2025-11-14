@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,15 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "What Is Braising? The Low & Slow Cooking Method Explained",
-  description: "What is braising? The low and slow cooking method explained by a professional chef. How to turn tough cuts tender using moist heat. Complete guide.",
-  keywords: ["what is braising", "braising technique", "how to braise meat", "braising vs roasting", "best cuts for braising", "dutch oven braising"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/what-is-braising'
-  }
-};
+export const metadata = generateBlogMetadata('what-is-braising');
 
 const articleSchema = generateArticleSchema({
   headline: "What is Braising and Why It's So Profoundly Amazing",

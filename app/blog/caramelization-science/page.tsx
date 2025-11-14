@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Beaker, ThermometerSun } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "Why Restaurant Caramel Tastes Better: Temperature & Technique",
-  description: "Temperature and technique matter more than ingredients. Here's the chemistry behind deep, complex caramelization from 24 years making desserts.",
-  keywords: ["caramelization", "caramelizing onions", "caramel science", "cooking sugar", "maillard reaction vs caramelization", "how to caramelize"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/caramelization-science'
-  }
-};
+export const metadata = generateBlogMetadata('caramelization-science');
 
 const articleSchema = generateArticleSchema({
   headline: "The Science of Caramelization: Why Sugar Turns Into Liquid Gold",

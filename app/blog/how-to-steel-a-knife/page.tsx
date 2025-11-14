@@ -1,8 +1,8 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Scissors } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
@@ -11,14 +11,7 @@ import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'How To Steel A Knife: Honing vs Sharpening Explained',
-  description: 'How to steel a knife properly: Honing vs sharpening explained by a professional chef. Angle, pressure, strokes. 20 years using honing steel daily.',
-  keywords: ['how to steel a knife', 'knife honing', 'honing steel', 'knife sharpening', 'honing vs sharpening', 'chef knife care', 'knife maintenance', 'professional knife technique'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/how-to-steel-a-knife',
-  },
-};
+export const metadata = generateBlogMetadata('how-to-steel-a-knife')
 
 const articleSchema = generateArticleSchema({
   headline: "How to Steel a Knife (The Right Way to Hone Like a Chef)",

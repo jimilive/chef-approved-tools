@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,20 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "Understanding Cooking Fats: Butter, Oil & Lard Compared",
-  description: "Understanding cooking fats: Butter vs oil vs lard compared. When to use each fat for best results. Professional chef's guide from 24 years cooking.",
-  keywords: ["cooking fats", "butter vs oil", "when to use butter", "when to use oil", "cooking with lard", "smoke points", "best cooking fat", "butter or oil for cooking"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/understanding-cooking-fats'
-  },
-  openGraph: {
-    title: "Understanding Cooking Fats: Butter vs Oil vs Lard",
-    description: "Professional guide to choosing the right cooking fat for every application",
-    images: [{ url: "/images/blog/cooking-fats-guide.jpg" }],
-  },
-};
+export const metadata = generateBlogMetadata('understanding-cooking-fats');
 
 const articleMeta = {
   author: "Scott Bradley",

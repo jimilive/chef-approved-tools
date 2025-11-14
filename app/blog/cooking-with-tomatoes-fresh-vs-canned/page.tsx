@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Lightbulb, Apple } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "Fresh vs Canned Tomatoes: When To Use Each (Chef's Guide)",
-  description: "Fresh vs canned tomatoes: When to use each in cooking. Professional chef's guide from 24 years making Italian food in restaurants. Surprising answers.",
-  keywords: ["fresh vs canned tomatoes", "cooking with tomatoes", "when to use canned tomatoes", "best tomatoes for sauce", "San Marzano tomatoes", "professional tomato techniques"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/cooking-with-tomatoes-fresh-vs-canned'
-  }
-};
+export const metadata = generateBlogMetadata('cooking-with-tomatoes-fresh-vs-canned');
 
 const articleSchema = generateArticleSchema({
   headline: "Cooking with Tomatoes: Fresh vs Canned",

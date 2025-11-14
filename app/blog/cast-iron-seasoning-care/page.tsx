@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Droplets, FlaskConical, AlertTriangle } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "Cast Iron Seasoning & Care: How To Build Bulletproof Coating",
-  description: "How to season and care for cast iron cookware. Build bulletproof non-stick coating through proper maintenance. 24 years of restaurant cast iron use.",
-  keywords: ["cast iron seasoning", "cast iron care", "how to season cast iron", "cast iron maintenance", "polymerization", "cast iron restoration", "cast iron cleaning", "cast iron mistakes"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/cast-iron-seasoning-care'
-  }
-};
+export const metadata = generateBlogMetadata('cast-iron-seasoning-care');
 
 const articleSchema = generateArticleSchema({
   headline: "Cast Iron Seasoning & Care: The Complete Professional Guide",

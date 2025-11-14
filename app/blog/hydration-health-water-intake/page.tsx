@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplets, Thermometer, AlertTriangle } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "Hydration & Water Intake: How Much Water Do You Need?",
-  description: "Hydration and water intake guide: How much water you actually need based on activity level. Myth-busting from a chef who worked 14-hour shifts.",
-  keywords: ["hydration for cooks", "kitchen hydration", "water intake", "chef health", "cooking hydration", "kitchen performance", "staying hydrated while cooking"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/hydration-health-water-intake'
-  }
-};
+export const metadata = generateBlogMetadata('hydration-health-water-intake');
 
 const articleSchema = generateArticleSchema({
   headline: "Hydration, Health, and Water Intake for Home Cooks",

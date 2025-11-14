@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Metadata } from 'next'
 import { comparisonData } from './wood-vs-composite-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import {
@@ -12,16 +11,9 @@ import {
   BlogEmailCapture
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-export const metadata: Metadata = {
-  title: 'Wood vs Composite Cutting Boards: Why 90% of Pros Choose Wood',
-  description: '24 years testing both: Wood cutting boards win on knife preservation and natural sanitation. When composite makes sense + best picks for each type.',
-  openGraph: {
-    type: 'article',
-    publishedTime: '2025-11-09T00:00:00Z',
-    modifiedTime: '2025-11-09T00:00:00Z',
-  },
-}
+export const metadata = generateBlogMetadata('wood-vs-composite-cutting-board')
 
 export default function WoodVsCompositeComparison() {
   // Generate schemas

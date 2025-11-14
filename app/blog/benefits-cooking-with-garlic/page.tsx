@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Sprout, Flame, AlertTriangle } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "Why Restaurants Use 10x More Garlic (And You Should Too)",
-  description: "Professional kitchens go through cases of garlic weekly. Here's why garlic matters more than you think—and how to use it right. 24 years of proof.",
-  keywords: ["benefits of garlic", "cooking with garlic", "garlic health benefits", "how to cook garlic", "garlic techniques", "roasted garlic", "garlic flavor", "allicin benefits"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/benefits-cooking-with-garlic'
-  }
-};
+export const metadata = generateBlogMetadata('benefits-cooking-with-garlic');
 
 const articleSchema = generateArticleSchema({
   headline: "The Benefits of Cooking with Garlic",

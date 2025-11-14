@@ -1,25 +1,13 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'How To Sharpen Knives With A Tri-Stone (Step-By-Step)',
-  description: 'How to sharpen knives with a tri-stone sharpener. Step-by-step guide with angles and technique from 6 years sharpening at Purple Café. Professional method.',
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/how-to-sharpen-with-tri-stone',
-  },
-  openGraph: {
-    title: "How to Sharpen with a Stone: Professional Chef's Technique (2025)",
-    description: 'Professional chef shares technique perfected over 6 years in restaurant kitchen. Step-by-step guide: angles, pressure, three-stage progression, troubleshooting.',
-    type: 'article',
-    url: 'https://www.chefapprovedtools.com/blog/how-to-sharpen-with-tri-stone',
-  },
-};
+export const metadata = generateBlogMetadata('how-to-sharpen-with-tri-stone')
 
 const articleSchema = generateArticleSchema({
   headline: "How to Sharpen Knives with a Stone: Professional Chef's Technique",

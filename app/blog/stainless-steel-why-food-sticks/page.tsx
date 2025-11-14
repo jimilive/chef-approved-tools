@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User, Flame, Droplet } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
@@ -7,15 +6,9 @@ import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-export const metadata: Metadata = {
-  title: 'Why Food Sticks To Stainless Steel (And How To Prevent It)',
-  description: 'Why food sticks to stainless steel pans and how to prevent it. Temperature, oil, timing from 24 years cooking on stainless in restaurants.',
-  keywords: ['stainless steel cooking', 'why food sticks', 'how to prevent sticking', 'stainless steel pan searing', 'cooking temperature control'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/stainless-steel-why-food-sticks',
-  },
-}
+export const metadata = generateBlogMetadata('stainless-steel-why-food-sticks')
 
 const articleSchema = generateArticleSchema({
   headline: "Stainless Steel Cooking: Why Food Sticks (And How to Fix It)",

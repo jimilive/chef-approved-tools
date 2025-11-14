@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { Metadata } from 'next'
 import { comparisonData } from './dutch-oven-vs-slow-cooker-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import {
   BlogLayout,
   BlogHero,
@@ -12,15 +12,7 @@ import {
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'Dutch Oven vs Slow Cooker: Flavor vs Convenience',
-  description: 'Dutch ovens develop deeper flavor through browning and layering. Slow cookers cook unattended for 8 hours. Which matches your schedule + best picks for each.',
-  openGraph: {
-    type: 'article',
-    publishedTime: '2025-11-09T00:00:00Z',
-    modifiedTime: '2025-11-09T00:00:00Z',
-  },
-}
+export const metadata = generateBlogMetadata('dutch-oven-vs-slow-cooker')
 
 export default function DutchOvenVsSlowCookerComparison() {
   const articleSchema = generateArticleSchema({

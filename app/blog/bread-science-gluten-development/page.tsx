@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, FlaskConical, Timer, AlertTriangle, Wheat } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "Why Your Bread Is Dense: Gluten Development Science Explained",
-  description: "The chemistry behind fluffy bread vs. dense bricks. Kneading techniques and troubleshooting from 24 years of professional baking. Simple fixes.",
-  keywords: ["gluten development", "bread science", "how to knead bread", "gluten formation", "bread making", "windowpane test", "no-knead bread", "bread chemistry"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/bread-science-gluten-development'
-  }
-};
+export const metadata = generateBlogMetadata('bread-science-gluten-development');
 
 const articleSchema = generateArticleSchema({
   headline: "Bread Science: Understanding Gluten Development",

@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
@@ -7,15 +6,9 @@ import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-export const metadata: Metadata = {
-  title: 'Why Professional Chefs Use Kosher Salt (Not Table Salt)',
-  description: 'Why professional chefs use kosher salt instead of table salt. Texture, control, flavor from 24 years in restaurant kitchens. Diamond Crystal vs Morton.',
-  keywords: ['kosher salt', 'diamond crystal kosher salt', 'why chefs use kosher salt', 'professional chef salt', 'seasoning technique', 'cooking with kosher salt', 'morton vs diamond crystal', 'best salt for cooking'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/why-professional-chefs-use-kosher-salt',
-  },
-};
+export const metadata = generateBlogMetadata('why-professional-chefs-use-kosher-salt')
 
 const articleSchema = generateArticleSchema({
   headline: "Why All Professional Cooks Use Kosher Salt",

@@ -1,21 +1,14 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User, Target, Layers } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'Cutting Board Materials: Wood vs Plastic vs Composite',
-  description: "Cutting board materials compared: Wood vs plastic vs composite. Professional chef's guide after 24 years in restaurant kitchens. Which is safest and best.",
-  keywords: ['cutting board guide', 'best cutting board', 'wood vs plastic board', 'end-grain cutting board', 'knife edge protection'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/cutting-board-materials-guide',
-  },
-}
+export const metadata = generateBlogMetadata('cutting-board-materials-guide')
 
 const articleSchema = generateArticleSchema({
   headline: "Which Cutting Board To Use? Advantages of Various Materials",

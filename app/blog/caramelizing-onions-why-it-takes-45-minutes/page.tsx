@@ -1,21 +1,14 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Flame, Clock, ThermometerSun, Beaker } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'Why "10-Minute Caramelized Onions" Is A Lie (Chemistry Proof)',
-  description: "Real caramelization takes 45 minutes. Here's why rushing it fails—and why the chemistry requires patience and proper heat. No shortcuts work.",
-  keywords: ['caramelized onions', 'why onions take long', 'how to caramelize onions', 'onion cooking tips', 'caramelization science', 'professional cooking techniques', 'maillard reaction'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/caramelizing-onions-why-it-takes-45-minutes',
-  },
-}
+export const metadata = generateBlogMetadata('caramelizing-onions-why-it-takes-45-minutes');
 
 const articleSchema = generateArticleSchema({
   headline: 'Caramelizing Onions: Why It Takes 45 Minutes (Not 10)',

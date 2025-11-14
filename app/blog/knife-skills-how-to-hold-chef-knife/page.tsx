@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,15 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "How To Hold A Chef Knife: Proper Grip For Control & Safety",
-  description: "How to hold a chef knife with proper grip for control and safety. Professional technique from 24 years in restaurant kitchens. Most people do this wrong.",
-  keywords: ["knife skills", "how to hold chef knife", "pinch grip", "claw position", "knife technique", "professional knife skills", "chef knife grip", "knife grip techniques"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/knife-skills-how-to-hold-chef-knife'
-  }
-};
+export const metadata = generateBlogMetadata('knife-skills-how-to-hold-chef-knife');
 
 const articleSchema = generateArticleSchema({
   headline: "Professional Knife Grip Techniques: Complete Guide",

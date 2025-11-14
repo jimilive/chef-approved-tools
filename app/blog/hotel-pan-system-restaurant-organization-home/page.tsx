@@ -1,21 +1,14 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import AffiliateButton from '@/components/AffiliateButton'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'Restaurant Organization System For Home: Hotel Pan Guide',
-  description: 'Hotel pan system explained: How restaurants organize kitchens using standardized pans. Bring professional organization home for $50. 24 years using these.',
-  keywords: ['hotel pan system', 'restaurant food storage', 'kitchen organization', 'meal prep containers', 'NSF approved containers', 'Curta hotel pans', 'Cambro alternative'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/hotel-pan-system-restaurant-organization-home',
-  },
-}
+export const metadata = generateBlogMetadata('hotel-pan-system-restaurant-organization-home')
 
 const articleSchema = generateArticleSchema({
   headline: 'Hotel Pan System Review: The Professional Organization System Every Kitchen Needs',

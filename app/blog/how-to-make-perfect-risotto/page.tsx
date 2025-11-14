@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, AlertTriangle, Lightbulb } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,19 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "How To Make Perfect Risotto: The Italian Restaurant Technique",
-  description: "How to make perfect risotto using the Italian restaurant technique. Constant stirring, wine timing, broth temperature. Professional method explained.",
-  keywords: ["how to make risotto", "perfect risotto", "risotto technique", "creamy risotto", "arborio rice", "risotto recipe", "italian risotto", "risotto without cream"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/how-to-make-perfect-risotto'
-  },
-  openGraph: {
-    title: "How to Make Perfect Risotto: Professional Technique Guide",
-    description: "Professional chef's complete guide to making restaurant-quality risotto at home",
-    images: [{ url: "/images/blog/perfect-risotto-guide.jpg" }],
-  },
-};
+export const metadata = generateBlogMetadata('how-to-make-perfect-risotto');
 
 const articleMeta = {
   author: "Scott Bradley",

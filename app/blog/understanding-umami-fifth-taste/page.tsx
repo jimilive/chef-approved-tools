@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,15 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "Understanding Umami: The Fifth Taste Explained",
-  description: "Understanding umami: The fifth taste explained by a professional chef. How to add savory depth to cooking. Glutamate science made simple.",
-  keywords: ["umami", "fifth taste", "glutamate", "MSG", "savory flavor", "umami foods", "cooking with umami", "nucleotides", "umami bomb"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/understanding-umami-fifth-taste'
-  }
-};
+export const metadata = generateBlogMetadata('understanding-umami-fifth-taste');
 
 const articleSchema = generateArticleSchema({
   headline: "Understanding Umami: The Fifth Taste That Makes Food Delicious",

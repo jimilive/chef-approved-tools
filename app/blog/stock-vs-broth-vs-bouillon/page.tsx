@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,15 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "Stock vs Broth vs Bouillon: The Differences Explained",
-  description: "Stock vs broth vs bouillon: The differences explained by a professional chef. When to use each in cooking. 24 years making stock in restaurants.",
-  keywords: ["stock vs broth", "bouillon vs stock", "chicken stock", "bone broth", "gelatin in stock", "how to make stock", "stock making"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/stock-vs-broth-vs-bouillon'
-  }
-};
+export const metadata = generateBlogMetadata('stock-vs-broth-vs-bouillon');
 
 const articleSchema = generateArticleSchema({
   headline: "Stock vs Broth vs Bouillon: Differences & When to Use Each",

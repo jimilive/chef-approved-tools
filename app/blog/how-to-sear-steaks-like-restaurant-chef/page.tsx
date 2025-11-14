@@ -1,7 +1,7 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { ThermometerSun, Timer, Flame } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
@@ -9,14 +9,7 @@ import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'How To Sear Steaks Like A Restaurant Chef (High Heat Secret)',
-  description: 'How to sear steaks like a restaurant chef using the high heat method. Cast iron temperature, oil choice, timing. 24 years of professional steak cooking.',
-  keywords: ['how to sear steak', 'restaurant steak techniques', 'professional steak cooking', 'perfect steak sear', 'restaurant quality steak', 'cast iron steak', 'steak cooking temperature', 'chef steak methods'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/how-to-sear-steaks-like-restaurant-chef',
-  },
-}
+export const metadata = generateBlogMetadata('how-to-sear-steaks-like-restaurant-chef')
 
 const articleSchema = generateArticleSchema({
   headline: "How to Sear Steaks Like a Restaurant Chef",

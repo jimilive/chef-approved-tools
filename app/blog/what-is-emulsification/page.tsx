@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,15 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "What Is Emulsification? The Science Behind Stable Sauces",
-  description: "What is emulsification? The science behind stable sauces like mayonnaise and hollandaise. Professional chef explains fat and water chemistry simply.",
-  keywords: ["emulsification", "what is emulsification", "how to emulsify", "emulsion sauce", "mayonnaise science", "hollandaise technique", "vinaigrette emulsion", "broken sauce fix"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/what-is-emulsification'
-  }
-};
+export const metadata = generateBlogMetadata('what-is-emulsification');
 
 const articleSchema = generateArticleSchema({
   headline: "What is Emulsification? The Science Behind Creamy Sauces",

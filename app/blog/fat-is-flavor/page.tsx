@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplets, Flame, Sparkles } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "Why Fat Is Flavor: The Science Restaurants Use",
-  description: "Why fat is flavor: The science behind why restaurant food tastes better. How professional chefs use fats to enhance taste. 24 years of cooking proof.",
-  keywords: ["fat is flavor", "cooking with fat", "butter vs oil", "flavor development", "professional cooking techniques", "why butter tastes good"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/fat-is-flavor'
-  }
-};
+export const metadata = generateBlogMetadata('fat-is-flavor');
 
 const articleSchema = generateArticleSchema({
   headline: "Why Fat is Flavor (And How to Use It Like a Pro)",

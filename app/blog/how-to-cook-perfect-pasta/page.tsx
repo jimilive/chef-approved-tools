@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplet, AlertTriangle } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "How To Cook Perfect Pasta: The Italian Restaurant Method",
-  description: "How to cook perfect pasta every time using the Italian restaurant method. Salt amount, water ratio, timing. 24 years of professional Italian cooking.",
-  keywords: ["how to cook pasta", "perfect pasta", "al dente pasta", "cooking pasta", "pasta water", "how much salt for pasta", "pasta technique"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/how-to-cook-perfect-pasta'
-  }
-};
+export const metadata = generateBlogMetadata('how-to-cook-perfect-pasta');
 
 const articleSchema = generateArticleSchema({
   headline: "How to Cook Perfect Pasta: The Professional's Guide to Al Dente Every Time",

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,15 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "Why Resting Meat Is Key To Juicy Results",
-  description: "Why resting meat after cooking is key to juicy results. The science behind juice redistribution. Professional technique that changes steak forever.",
-  keywords: ["resting meat", "carry-over cooking", "how long to rest steak", "how long to rest meat", "meat cooking technique", "professional cooking", "steak resting time"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/why-resting-meat-key-cooking'
-  }
-};
+export const metadata = generateBlogMetadata('why-resting-meat-key-cooking');
 
 const articleSchema = generateArticleSchema({
   headline: "Why Resting Is the Key to Cooking Meat",

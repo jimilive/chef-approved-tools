@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Flame, Thermometer, Clock, ChefHat } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
@@ -7,15 +6,9 @@ import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-export const metadata: Metadata = {
-  title: 'Sheet Pan Cooking: Restaurant Techniques For Home Cooks',
-  description: 'Sheet pan cooking using restaurant techniques: How to roast multiple items perfectly. Professional method from 24 years using commercial ovens.',
-  keywords: ['sheet pan cooking', 'sheet pan techniques', 'restaurant cooking methods', 'professional chef techniques', 'batch cooking', 'high heat roasting', 'sheet pan tips'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/sheet-pan-cooking-restaurant-techniques',
-  },
-}
+export const metadata = generateBlogMetadata('sheet-pan-cooking-restaurant-techniques')
 
 const articleSchema = generateArticleSchema({
   headline: 'Sheet Pan Cooking: 5 Restaurant Techniques for Home',

@@ -1,21 +1,14 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Droplets, Thermometer, Eye, Clock } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'Restaurant Sauce Technique: How Reduction Creates Deep Flavor',
-  description: '24 years in professional kitchens: How reduction transforms thin liquids into intensely flavored sauces. The technique that makes restaurant food taste better.',
-  keywords: ['reducing sauces', 'sauce reduction', 'how to reduce sauce', 'professional cooking techniques', 'sauce making', 'nappe consistency', 'demi-glace'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/reducing-sauces-restaurant-technique',
-  },
-}
+export const metadata = generateBlogMetadata('reducing-sauces-restaurant-technique')
 
 const articleSchema = generateArticleSchema({
   headline: 'Reducing Sauces: The Technique Restaurants Use Daily',

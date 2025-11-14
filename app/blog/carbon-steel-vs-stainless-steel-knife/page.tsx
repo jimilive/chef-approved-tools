@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { Metadata } from 'next'
 import { comparisonData } from './carbon-steel-vs-stainless-knife-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import {
   BlogLayout,
   BlogHero,
@@ -12,15 +12,7 @@ import {
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'Carbon Steel vs Stainless Knives: 24-Year Test Results',
-  description: 'Carbon holds edges 2x longer but needs daily oiling. Stainless survives neglect but dulls faster. Which matches your maintenance willingness + best picks.',
-  openGraph: {
-    type: 'article',
-    publishedTime: '2025-11-09T00:00:00Z',
-    modifiedTime: '2025-11-09T00:00:00Z',
-  },
-}
+export const metadata = generateBlogMetadata('carbon-steel-vs-stainless-steel-knife');
 
 export default function CarbonSteelVsStainlessKnifeComparison() {
   const articleSchema = generateArticleSchema({

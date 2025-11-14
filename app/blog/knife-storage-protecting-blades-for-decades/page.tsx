@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Shield, Droplet, Wind, AlertTriangle, Grid3x3, Magnet, Box } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
@@ -7,15 +6,9 @@ import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-export const metadata: Metadata = {
-  title: 'Knife Storage: How To Protect Blades For Decades',
-  description: "Knife storage methods that protect blades for decades: Magnetic strips, knife blocks, drawer guards. Professional chef's guide to keeping knives sharp.",
-  keywords: ['knife care', 'how to store knives', 'knife protection', 'prevent dull knives', 'blade storage', 'professional knife maintenance', 'knife longevity', 'knife rust prevention', 'knife block', 'magnetic strip', 'drawer knife storage'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/knife-storage-protecting-blades-for-decades',
-  },
-}
+export const metadata = generateBlogMetadata('knife-storage-protecting-blades-for-decades')
 
 const articleSchema = generateArticleSchema({
   headline: 'Knife Storage: Protecting Your Blades for Decades',

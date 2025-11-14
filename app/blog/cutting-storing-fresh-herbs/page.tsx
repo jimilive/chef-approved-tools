@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Scissors, Leaf, Droplet, AlertTriangle, Lightbulb, Flame, Snowflake } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "How To Cut & Store Fresh Herbs (Keep Them Fresh For Weeks)",
-  description: "How to cut and store fresh herbs to keep them fresh for weeks. Professional techniques from 24 years in restaurant kitchens. Basil, cilantro, parsley tips.",
-  keywords: ["cutting fresh herbs", "storing herbs", "herb storage", "fresh basil storage", "how to store cilantro", "keeping herbs fresh", "herb cutting techniques"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/cutting-storing-fresh-herbs'
-  }
-};
+export const metadata = generateBlogMetadata('cutting-storing-fresh-herbs');
 
 const articleSchema = generateArticleSchema({
   headline: "Cutting and Storing Fresh Herbs: Professional Techniques for Maximum Flavor",

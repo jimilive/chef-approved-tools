@@ -1,21 +1,14 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Leaf, Recycle, Shield, TrendingDown } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'Why Cheap Kitchen Tools Are Worse For The Environment',
-  description: 'Durability is sustainability. Quality equipment lasts decades vs. cheap tools in landfills every 2 years. Buy once, cry once. Environmental case.',
-  keywords: ['sustainable kitchen equipment', 'buy once cry once', 'kitchen carbon footprint', 'durable cookware', 'eco-friendly kitchen tools', 'sustainable cooking'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once',
-  },
-}
+export const metadata = generateBlogMetadata('carbon-footprint-kitchen-equipment-buy-once-cry-once');
 
 const articleSchema = generateArticleSchema({
   headline: 'Carbon Footprint of Kitchen Equipment: Buy Once, Cry Once',

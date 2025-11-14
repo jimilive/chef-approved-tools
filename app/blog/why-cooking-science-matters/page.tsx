@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Beaker, Lightbulb, FlaskConical } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "Why Cooking Science Beats Following Recipes (24 Years Proof)",
-  description: "24 years in professional kitchens: Understanding the science behind cooking techniques means you can adapt any recipe. Why the 'why' matters more than steps.",
-  keywords: ["cooking science", "why cooking science matters", "food chemistry", "culinary science", "professional cooking techniques", "understanding cooking", "maillard reaction", "emulsification"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/why-cooking-science-matters'
-  }
-};
+export const metadata = generateBlogMetadata('why-cooking-science-matters');
 
 const articleSchema = generateArticleSchema({
   headline: "Why Cooking Science Matters",

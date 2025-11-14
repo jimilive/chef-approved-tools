@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { Metadata } from 'next'
 import { comparisonData } from './gas-vs-induction-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import {
   BlogLayout,
   BlogHero,
@@ -12,15 +12,7 @@ import {
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'Gas vs Induction Cooktops: Why I Switched After 24 Years',
-  description: 'Induction boils water 2x faster and wastes 50% less energy. Gas offers instant visual control. Cost analysis + which matches your cooking style.',
-  openGraph: {
-    type: 'article',
-    publishedTime: '2025-11-09T00:00:00Z',
-    modifiedTime: '2025-11-09T00:00:00Z',
-  },
-}
+export const metadata = generateBlogMetadata('gas-vs-induction-cooktop')
 
 export default function GasVsInductionComparison() {
   const articleSchema = generateArticleSchema({

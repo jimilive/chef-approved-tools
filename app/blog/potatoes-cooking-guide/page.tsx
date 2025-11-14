@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,15 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "Complete Potatoes Cooking Guide: Every Type & Method",
-  description: "Complete potatoes cooking guide: Every variety and cooking method explained. Russet vs Yukon Gold vs red vs fingerling. 24 years of professional cooking.",
-  keywords: ["how to cook potatoes", "potato varieties", "best potatoes for mashing", "russet vs yukon gold", "roasting potatoes", "potato cooking methods", "professional potato techniques"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/potatoes-cooking-guide'
-  }
-};
+export const metadata = generateBlogMetadata('potatoes-cooking-guide');
 
 const articleSchema = generateArticleSchema({
   headline: "The Complete Guide to Cooking Potatoes",

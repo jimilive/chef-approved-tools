@@ -1,21 +1,14 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Ruler, Users, ChefHat, Scale } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'Dutch Oven Size Guide: 5.5-Qt vs 7-Qt (Which For Your Family?)',
-  description: 'Most families need either 5.5-qt or 7-qt. Choose based on household size and cooking style. 24 years of restaurant experience breaks it down simply.',
-  keywords: ['dutch oven size guide', 'best dutch oven size', 'le creuset size chart', '5 quart dutch oven', '7 quart dutch oven', 'cooking capacity', 'dutch oven buying guide'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/dutch-oven-size-guide-which-quart-size',
-  },
-}
+export const metadata = generateBlogMetadata('dutch-oven-size-guide-which-quart-size')
 
 const articleSchema = generateArticleSchema({
   headline: 'Dutch Oven Size Guide: Which Quart Size Do You Need?',

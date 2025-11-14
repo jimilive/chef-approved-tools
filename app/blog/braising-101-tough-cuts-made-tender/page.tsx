@@ -1,21 +1,14 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Flame, ThermometerSun, Clock, Utensils } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata: Metadata = {
-  title: 'How To Turn Cheap Meat Into Restaurant-Quality Tender (Braising)',
-  description: 'Braising transforms $8/lb tough cuts into fall-apart tenderness. The low-and-slow technique every professional chef masters. Step-by-step guide.',
-  keywords: ['braising', 'how to braise', 'tough cuts', 'slow cooking', 'dutch oven braise', 'braised beef technique', 'professional cooking methods'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/braising-101-tough-cuts-made-tender',
-  },
-}
+export const metadata = generateBlogMetadata('braising-101-tough-cuts-made-tender');
 
 const articleSchema = generateArticleSchema({
   headline: 'Braising 101: Tough Cuts Made Tender',

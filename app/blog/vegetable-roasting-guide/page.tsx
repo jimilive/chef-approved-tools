@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,15 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "Complete Vegetable Roasting Guide: Times & Temperatures",
-  description: "Complete vegetable roasting guide: Times and temperatures for 20 common vegetables. Restaurant techniques for perfect caramelization every time.",
-  keywords: ["roasting vegetables", "how to roast vegetables", "roasted vegetables temperature", "vegetable roasting times", "how long to roast vegetables", "perfect roasted vegetables", "caramelized vegetables"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/vegetable-roasting-guide'
-  }
-};
+export const metadata = generateBlogMetadata('vegetable-roasting-guide');
 
 const articleSchema = generateArticleSchema({
   headline: "Vegetable Roasting Guide: Times and Temperatures for Perfect Results",

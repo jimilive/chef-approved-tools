@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,15 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "Why Children Hate Broccoli: The Genetic Science Explained",
-  description: "Why children hate broccoli: The genetic science explained. Bitter taste receptors and what parents can do. Understanding from 24 years feeding people.",
-  keywords: ["kids hate broccoli", "why children hate vegetables", "cooking for kids", "bitter taste", "broccoli recipes kids", "vegetable cooking techniques"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/why-children-hate-broccoli'
-  }
-};
+export const metadata = generateBlogMetadata('why-children-hate-broccoli');
 
 const articleSchema = generateArticleSchema({
   headline: "Why Children Hate Broccoli (And How to Fix It)",

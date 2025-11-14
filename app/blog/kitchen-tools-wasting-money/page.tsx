@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { AlertTriangle, Target } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
@@ -7,15 +6,9 @@ import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-export const metadata: Metadata = {
-  title: '10 Kitchen Tools That Waste Your Money (Skip These)',
-  description: "10 kitchen tools that waste your money—skip these trendy gadgets. Professional chef reveals what doesn't work after 24 years testing equipment.",
-  keywords: ['kitchen tools to avoid', 'waste of money kitchen gadgets', 'essential kitchen tools', 'professional kitchen gear', 'chef recommended tools', 'kitchen equipment advice'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/kitchen-tools-wasting-money',
-  },
-}
+export const metadata = generateBlogMetadata('kitchen-tools-wasting-money')
 
 const articleSchema = generateArticleSchema({
   headline: "10 Kitchen Tools You're Wasting Money On (And What to Buy Instead)",

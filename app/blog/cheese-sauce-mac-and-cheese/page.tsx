@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, AlertTriangle, ThermometerSun } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: "Perfect Cheese Sauce For Mac & Cheese (Never Grainy Again)",
-  description: "How to make perfect cheese sauce for mac and cheese that never breaks or gets grainy. The emulsification technique from 24 years in professional kitchens.",
-  keywords: ["how to make cheese sauce", "cheese sauce recipe", "mac and cheese sauce", "smooth cheese sauce", "béchamel sauce", "mornay sauce", "how to fix broken cheese sauce"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/cheese-sauce-mac-and-cheese'
-  }
-};
+export const metadata = generateBlogMetadata('cheese-sauce-mac-and-cheese');
 
 const articleSchema = generateArticleSchema({
   headline: "How to Make a Cheese Sauce (Mac and Cheese Perfection)",

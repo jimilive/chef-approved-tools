@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Flame, CheckCircle2 } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -12,14 +12,7 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
 
-export const metadata: Metadata = {
-  title: 'How To Preheat A Pan The Right Way (Most People Do This Wrong)',
-  description: 'How to preheat a pan the right way—most people do this wrong. Water drop test and timing from 24 years in professional kitchens. Game-changing technique.',
-  keywords: ['how to preheat a pan', 'stainless steel pan temperature', 'why food sticks', 'proper pan preheating', 'cooking temperature control'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/how-to-preheat-a-pan',
-  },
-};
+export const metadata = generateBlogMetadata('how-to-preheat-a-pan');
 
 const articleSchema = generateArticleSchema({
   headline: "How to Preheat a Pan: Temperature Matters More Than You Think",

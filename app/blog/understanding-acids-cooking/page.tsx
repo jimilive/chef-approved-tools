@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,15 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "Understanding Acids In Cooking: How They Brighten Flavor",
-  description: "Understanding acids in cooking: How lemon, vinegar, and wine brighten flavor. Professional chef explains balancing acids after 24 years in kitchens.",
-  keywords: ["acid in cooking", "cooking with acid", "how to balance flavors", "lemon juice cooking", "vinegar in cooking", "brightening flavors"],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/understanding-acids-cooking'
-  }
-};
+export const metadata = generateBlogMetadata('understanding-acids-cooking');
 
 const articleSchema = generateArticleSchema({
   headline: "Understanding Acids in Cooking: The Secret to Balanced Flavor",

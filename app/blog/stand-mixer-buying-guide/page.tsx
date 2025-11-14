@@ -1,4 +1,3 @@
-import { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, User, Zap, Target } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
@@ -7,15 +6,9 @@ import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-export const metadata: Metadata = {
-  title: 'Stand Mixer Buying Guide: KitchenAid vs Other Brands',
-  description: 'Stand mixer buying guide: KitchenAid vs other brands compared. Tilt-head vs bowl-lift, wattage, capacity. 18 years testing mixers in professional kitchens.',
-  keywords: ['stand mixer guide', 'KitchenAid vs alternatives', 'best stand mixer', 'baking tools', 'mixer buying guide'],
-  alternates: {
-    canonical: 'https://www.chefapprovedtools.com/blog/stand-mixer-buying-guide',
-  },
-}
+export const metadata = generateBlogMetadata('stand-mixer-buying-guide')
 
 const articleSchema = generateArticleSchema({
   headline: "Stand Mixer Buying Guide: KitchenAid vs Alternatives",

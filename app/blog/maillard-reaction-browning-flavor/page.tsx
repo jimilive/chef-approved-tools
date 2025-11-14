@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
@@ -11,29 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import AuthorBio from '@/components/review/AuthorBio';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata: Metadata = {
-  title: "Maillard Reaction: The Science Behind Browning & Flavor",
-  description: "Maillard reaction explained: The science behind browning and flavor development. Why restaurant food tastes better. Chemistry made simple for cooks.",
-  keywords: ["maillard reaction", "browning food", "food science", "searing technique", "caramelization", "professional cooking", "restaurant cooking techniques"],
-  openGraph: {
-    title: "Maillard Reaction: Why Browning Equals Flavor",
-    description: "Learn food science behind perfect browning from a chef with 24 years pro experience. Understand temperature, time, surface moisture, and why proper searing matters.",
-    url: "https://www.chefapprovedtools.com/blog/maillard-reaction-browning-flavor",
-    type: "article",
-    publishedTime: "2025-10-23T00:00:00.000Z",
-    authors: ["Scott Bradley"],
-    tags: ["Kitchen Science", "Technique", "Searing", "Professional Cooking"]
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Maillard Reaction: Why Browning Equals Flavor",
-    description: "Learn food science behind perfect browning from a chef with 24 years pro experience. Understand temperature, time, surface moisture, and why proper searing matters."
-  },
-  alternates: {
-    canonical: "https://www.chefapprovedtools.com/blog/maillard-reaction-browning-flavor"
-  }
-};
+export const metadata = generateBlogMetadata('maillard-reaction-browning-flavor');
 
 const articleSchema = generateArticleSchema({
   headline: "The Maillard Reaction: Why Browning = Flavor",

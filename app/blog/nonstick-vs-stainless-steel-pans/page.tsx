@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Metadata } from 'next'
 import { comparisonData } from './nonstick-vs-stainless-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import {
@@ -11,16 +10,9 @@ import {
   BlogEmailCapture
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-export const metadata: Metadata = {
-  title: 'Nonstick vs Stainless Steel Pans: When to Use Each',
-  description: 'Nonstick for eggs and delicate fish, dies in 3 years. Stainless for searing and sauces, lasts decades. Professional kitchens use both + best picks at every price.',
-  openGraph: {
-    type: 'article',
-    publishedTime: '2025-11-09T00:00:00Z',
-    modifiedTime: '2025-11-09T00:00:00Z',
-  },
-}
+export const metadata = generateBlogMetadata('nonstick-vs-stainless-steel-pans')
 
 export default function NonstickVsStainlessSteelComparison() {
   const articleSchema = generateArticleSchema({
