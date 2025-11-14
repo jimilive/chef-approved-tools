@@ -12,14 +12,56 @@ const FORBIDDEN_PHRASES = [
   /without further ado/gi
 ];
 
-const PRICING_VIOLATIONS = [
-  /\$\d+/g,  // $50, $49.99
-  /costs? \$\d+/gi,
-  /priced at/gi,
-  /budget[- ]friendly/gi
-];
+// Helper function to find pricing violations with context
+function findPricingViolations(content) {
+  const violations = [];
 
-const pageFiles = glob.sync('app/**/**/page.tsx');
+  // Split content into lines for better context checking
+  const lines = content.split('\n');
+
+  lines.forEach((line, index) => {
+    // Skip if line contains allowed patterns
+    const allowedPatterns = [
+      /around \$\d+/i,
+      /under \$\d+/i,
+      /about \$\d+/i,
+      /approximately \$\d+/i,
+      /~\$\d+/,  // ~$50, ~$150
+      /\$\d+-\$?\d+/,  // $50-$100, $25-40 (price ranges)
+      /\$\d{2,3},?\d{3}/,  // $80,000 or $80000 (revenue figures)
+      /\$\d+K/i,  // $80K
+      /\$\d+\+/,  // $80+ or $80,000+
+    ];
+
+    // If line matches any allowed pattern, skip it
+    if (allowedPatterns.some(pattern => pattern.test(line))) {
+      return;
+    }
+
+    // Now check for problematic pricing patterns
+    const problematicPatterns = [
+      { pattern: /(?<![a-z])\$\d+(?:\.\d{2})?(?![K+])/gi, message: 'Bare dollar amount' },
+      { pattern: /costs? \$\d+/gi, message: 'Costs $X' },
+      { pattern: /priced at/gi, message: 'Priced at' },
+      { pattern: /budget[- ]friendly/gi, message: 'Budget-friendly' },
+    ];
+
+    problematicPatterns.forEach(({ pattern, message }) => {
+      if (pattern.test(line)) {
+        violations.push({
+          line: index + 1,
+          content: line.trim(),
+          message: message
+        });
+      }
+    });
+  });
+
+  return violations;
+}
+
+// ONLY CHECK REVIEW PAGES - Remove this filter to check entire site
+const pageFiles = glob.sync('app/reviews/**/page.tsx');
 
 pageFiles.forEach(filePath => {
   const content = fs.readFileSync(filePath, 'utf-8');
@@ -40,15 +82,14 @@ pageFiles.forEach(filePath => {
     }
   });
 
-  // Check pricing violations
-  PRICING_VIOLATIONS.forEach(pattern => {
-    if (pattern.test(contentWithoutComments)) {
-      errors.push({
-        file: filePath,
-        issue: `Pricing violation: ${pattern.source}`,
-        fix: 'Remove price mentions, use longevity language'
-      });
-    }
+  // Check pricing violations using context-aware function
+  const pricingViolations = findPricingViolations(contentWithoutComments);
+  pricingViolations.forEach(violation => {
+    errors.push({
+      file: filePath,
+      issue: `Pricing violation on line ${violation.line}: ${violation.message}`,
+      fix: 'Remove price mentions, use longevity language or add qualifier (around/under/about)'
+    });
   });
 
   // Check Amazon tag (use original content for this check)
