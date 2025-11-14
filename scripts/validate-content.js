@@ -100,6 +100,27 @@ pageFiles.forEach(filePath => {
       fix: 'Add ?tag=chefapprovedt-20'
     });
   }
+
+  // Check CTA text (must be "Check Price on Amazon")
+  const incorrectCTAPatterns = [
+    /Buy on Amazon/gi,
+    /Purchase on Amazon/gi,
+    /Shop on Amazon/gi,
+    /View Price on Amazon/gi,
+    /View on Amazon/gi,
+    /Get it on Amazon/gi,
+    /Order on Amazon/gi,
+  ];
+
+  incorrectCTAPatterns.forEach(pattern => {
+    if (pattern.test(content)) {
+      errors.push({
+        file: filePath,
+        issue: `Incorrect CTA text found: ${pattern.source}`,
+        fix: 'Change to "Check Price on Amazon"'
+      });
+    }
+  });
 });
 
 if (errors.length > 0) {
