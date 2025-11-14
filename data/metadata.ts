@@ -117,9 +117,9 @@ export const METADATA = {
       conversionPotential: "low",
     } as PageMetadata,
     
-    'reviews-hub': {
-      title: "Equipment Reviews: 24 Years Testing What Lasts vs. Fails",
-      description: "Real testing from 24 years in restaurant kitchens—see which blenders handle 2,000+ smoothies, which knives stay sharp after 6 years of daily use.",
+    'reviews': {
+      title: "All Equipment Reviews: 37 Products Chef-Tested",
+      description: "Complete collection of 37 kitchen equipment reviews tested in real restaurant environments and home kitchens by Chef Scott Bradley. Professional testing.",
       canonical: "https://www.chefapprovedtools.com/reviews",
       author: "Scott Bradley",
       imageUrl: "/images/og/reviews-hub.jpg",
@@ -128,6 +128,19 @@ export const METADATA = {
       modifiedTime: "2025-11-14T10:00:00Z",
       searchIntent: "commercial",
       conversionPotential: "high",
+    } as PageMetadata,
+
+    'guides': {
+      title: "Kitchen Equipment Buying Guides From Professional Chef",
+      description: "Expert guidance from a professional chef with 24 years restaurant experience. Make informed equipment decisions with real testing data and recommendations.",
+      canonical: "https://www.chefapprovedtools.com/guides",
+      author: "Scott Bradley",
+      imageUrl: "/images/og/guides-hub.jpg",
+      imageAlt: "Professional chef equipment buying guides",
+      publishedTime: "2024-01-15T10:00:00Z",
+      modifiedTime: "2025-11-14T10:00:00Z",
+      searchIntent: "informational",
+      conversionPotential: "medium",
     } as PageMetadata,
 
     'knives': {

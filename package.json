@@ -40,7 +40,7 @@
     "cleanup:backups": "find public/images -name '*.backup' -delete",
     "indexnow": "tsx scripts/submit-indexnow.ts",
     "validate:types": "npm run type-check",
-    "validate:metadata": "node scripts/validate-metadata.js",
+    "validate:metadata": "node scripts/validate-metadata.mjs",
     "validate:content": "node scripts/validate-content.js",
     "validate:new-images": "node scripts/validate-images.js",
     "validate:schema": "node scripts/validate-schema.js",
