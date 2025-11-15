@@ -117,6 +117,7 @@ export async function getAllProducts(): Promise<Product[]> {
     .from('products')
     .select('*')
     .not('expert_rating', 'is', null)
+    .order('id') // Explicit ordering to ensure consistent results
 
   if (error || !data) {
     console.error('Error fetching all products:', error)
