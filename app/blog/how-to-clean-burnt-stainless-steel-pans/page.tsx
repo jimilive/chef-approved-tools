@@ -21,6 +21,12 @@ const articleSchema = generateArticleSchema({
   urlSuffix: 'how-to-clean-burnt-stainless-steel-pans'
 });
 
+// CACHE-BUSTING: Prevent Next.js from serving stale HTML
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+export const fetchCache = 'force-no-store'
+
+
 export default function CleanBurntStainlessSteelPost() {
   return (
     <>

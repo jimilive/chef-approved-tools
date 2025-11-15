@@ -8,6 +8,12 @@ import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
+// CACHE-BUSTING: Prevent Next.js from serving stale HTML
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+export const fetchCache = 'force-no-store'
+
+
 export const metadata = generateBlogMetadata('knife-storage-protecting-blades-for-decades')
 
 const articleSchema = generateArticleSchema({

@@ -19,9 +19,11 @@ import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
 import { reviewData } from './robot-coupe-r2-dice-data'
 
-// ISR configuration - revalidate every hour
-export const revalidate = 3600
-export const fetchCache = 'force-cache'
+// CACHE-BUSTING: Prevent Next.js from serving stale HTML
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+export const fetchCache = 'force-no-store'
+
 
 // Use data from centralized data file
 const legacyProductData = reviewData.legacyProductData

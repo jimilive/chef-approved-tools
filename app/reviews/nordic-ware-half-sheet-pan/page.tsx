@@ -19,9 +19,11 @@ import AuthorBio from '@/components/review/AuthorBio'
 // Import review data
 import { reviewData } from './nordic-ware-half-sheet-pan-data'
 
-// Use ISR for better performance
-export const revalidate = 3600
-export const fetchCache = 'force-cache'
+// CACHE-BUSTING: Prevent Next.js from serving stale HTML
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+export const fetchCache = 'force-no-store'
+
 
 // Helper to process inline links
 function processInlineLinks(text: string): React.ReactNode {

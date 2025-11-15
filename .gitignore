@@ -25,3 +25,4 @@ _ARCHIVE_DO_NOT_USE/
 # Excel temp files
 ~$*.xlsx
 ~$*.xls
+.cache-busting-backups/

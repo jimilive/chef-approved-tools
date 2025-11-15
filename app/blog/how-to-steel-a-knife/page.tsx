@@ -24,6 +24,12 @@ const articleSchema = generateArticleSchema({
   urlSuffix: 'how-to-steel-a-knife'
 });
 
+// CACHE-BUSTING: Prevent Next.js from serving stale HTML
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+export const fetchCache = 'force-no-store'
+
+
 export default async function HowToSteelAKnife() {
   // Fetch products from Supabase
   const products = await Promise.all([

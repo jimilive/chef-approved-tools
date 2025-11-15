@@ -24,11 +24,11 @@ import ProductComparisonTable from '@/components/comparison/ProductComparisonTab
 import { reviewData } from './le-creuset-signature-7-25-qt-dutch-oven-data'
 import { getDutchOvenComparison } from './get-dutch-oven-comparison'
 
-// Use ISR for better performance - revalidate every hour for price changes
-export const revalidate = 3600 // 1 hour in seconds
+// CACHE-BUSTING: Prevent Next.js from serving stale HTML
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+export const fetchCache = 'force-no-store'
 
-// Enable fetch caching for Supabase requests
-export const fetchCache = 'force-cache'
 
 // Generate metadata dynamically
 export async function generateMetadata(): Promise<Metadata> {

@@ -12,6 +12,12 @@ import {
 } from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
 
+// CACHE-BUSTING: Prevent Next.js from serving stale HTML
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+export const fetchCache = 'force-no-store'
+
+
 export const metadata = generateBlogMetadata('gas-vs-induction-cooktop')
 
 export default function GasVsInductionComparison() {
