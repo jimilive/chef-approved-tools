@@ -89,7 +89,7 @@ export default function RestingMeatPage() {
           </p>
 
           <p>
-            After 24 years in professional kitchens—including managing kitchen operations at Mellow Mushroom in Athens, GA, where we served hundreds of steaks and smoked meats every Friday and Saturday night—I can tell you that resting is non-negotiable. It&apos;s not a suggestion you can skip when you&apos;re hungry. It&apos;s the difference between good meat and great meat, between a decent meal and one people remember and talk about days later.
+            After 24 years in professional kitchens—including 6 years at Purple Café in Seattle—I can tell you that resting is non-negotiable. One day I asked my sous chef after he cooked a scrap end from cutting a whole row of NY steaks: &quot;Why is your steak so much better than everyone else&apos;s?&quot; His answer: &quot;I rest it in butter for 10 minutes.&quot; That&apos;s when I truly understood—resting isn&apos;t a suggestion you can skip when you&apos;re hungry. It&apos;s the difference between good meat and great meat, between a decent meal and one people remember and talk about days later.
           </p>
 
           <p>
@@ -102,7 +102,7 @@ export default function RestingMeatPage() {
               Restaurant Reality
             </h3>
             <p className="mb-0">
-              In every professional kitchen I&apos;ve run—from Mellow Mushroom to Purple Café—resting was part of the cook time, not an afterthought. When we pulled a steak at 130°F for medium-rare, we knew it needed 8-10 minutes to rest before hitting the plate. That&apos;s why restaurant steaks are consistently juicy from edge to center while home-cooked steaks often disappoint. We built the rest into our timing. We respected the science. And most importantly, we never, ever let impatient servers rush us into slicing too early.
+              At Purple Café, resting was part of the cook time, not an afterthought. When we pulled a steak at 130°F for medium-rare, we knew it needed 8-10 minutes to rest before hitting the plate. That&apos;s why restaurant steaks are consistently juicy from edge to center while home-cooked steaks often disappoint. We built the rest into our timing. We respected the science. And most importantly, we never, ever let impatient servers rush us into slicing too early.
             </p>
           </div>
 
@@ -282,7 +282,7 @@ export default function RestingMeatPage() {
           </p>
 
           <p>
-            <strong>Brisket and large roasts:</strong> Resting allows rendered fat to set slightly, making slicing cleaner and preventing that &quot;everything falls apart&quot; problem. At Mellow Mushroom, we&apos;d rest whole briskets for 45 minutes before slicing—the difference was night and day.
+            <strong>Brisket and large roasts:</strong> Resting lets everything (including the temperature) rebalance itself inside of the meat, removing most of that color gradient you commonly see in cut steaks and resulting in a moister cut of any meat.
           </p>
 
           <p>
@@ -378,7 +378,7 @@ export default function RestingMeatPage() {
 
           <h3>Do you rest meat covered or uncovered?</h3>
           <p>
-            It depends on what you&apos;re cooking. For anything with a crispy crust or seared surface—steaks, pork chops, chicken thighs with skin—rest uncovered to preserve that texture. For larger roasts that might lose heat too quickly, tent loosely with foil. The key word is <em>loosely</em>—never wrap tight. At Mellow Mushroom, we rested steaks uncovered on a rack, and large roasts got a loose foil tent. Simple as that.
+            It depends on what you&apos;re cooking. For anything with a crispy crust or seared surface—steaks, pork chops, chicken thighs with skin—rest uncovered to preserve that texture. For larger roasts that might lose heat too quickly, tent loosely with foil. The key word is <em>loosely</em>—never wrap tight. At Purple Café, my sous chef taught me to rest steaks in butter in a warm spot. For large roasts that might lose heat too quickly, tent loosely with foil.
           </p>
 
           <h3>Does resting work for all types of meat?</h3>
