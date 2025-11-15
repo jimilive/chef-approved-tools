@@ -122,7 +122,7 @@ export default function KnifeSafetyPost() {
       <BlogLayout breadcrumbTitle="10 Knife Safety Rules From Professional Kitchens">
         <BlogHero
           title="10 Knife Safety Rules From Professional Kitchens"
-          introduction={["Every cook has a scar story. Mine came one night at Mellow Mushroom, after a long double shift. I was cutting basil using the claw method when a few leaves slid off the pile. Without thinking, I tried to swipe them back with my thumb — and sliced right across it."]}
+          introduction={["Every cook has a scar story. Mine came one night at Purple Café, after a long double shift. I was cutting basil using the claw method when a few leaves slid off the pile. Without thinking, I tried to swipe them back with my thumb — and sliced right across it."]}
           publishedDate="2025-11-07"
           lastUpdated="2025-11-07"
           readTime="12 min read"
@@ -139,7 +139,7 @@ export default function KnifeSafetyPost() {
           </p>
 
           <p>
-            I&apos;ve watched hundreds of home cooks struggle with their knives — and most of the time, it&apos;s not the knife&apos;s fault. It&apos;s how they&apos;re using it. Back when I was running prep at Mellow Mushroom, I had a new line cook who went through three chef knives in two months. Chips in the blade, cracked handle, edge duller than a butter knife. He wasn&apos;t careless — just untrained. The problem was technique, not intent.
+            I&apos;ve watched hundreds of home cooks struggle with their knives — and most of the time, it&apos;s not the knife&apos;s fault. It&apos;s how they&apos;re using it. At Mellow Mushroom, cooks would stab cans with chef knives to create vents instead of using a can opener. After stabbing 10 cans, the blade edge was destroyed—chips, rolls, dull as a butter knife. We weren&apos;t careless — just untrained. The problem was technique, not intent.
           </p>
 
           <p>
