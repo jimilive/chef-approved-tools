@@ -81,7 +81,7 @@ export default function MaillardReactionPost() {
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
-            If you&apos;ve ever wondered why a seared steak, golden roasted chicken, or perfectly toasted bread tastes so irresistible, it all comes down to one beautiful bit of food science: the Maillard reaction. After 24 years in professional kitchens—including 3 years as Kitchen Manager at Mellow Mushroom (1992-1994), where we served hundreds of pizzas and steaks every Friday night—I can tell you that chasing that deep brown crust isn&apos;t just about looks. It&apos;s about unlocking flavor at the molecular level.
+            If you&apos;ve ever wondered why a seared steak, golden roasted chicken, or perfectly toasted bread tastes so irresistible, it all comes down to one beautiful bit of food science: the Maillard reaction. After 24 years in professional kitchens—serving hundreds of chicken breasts and steaks every Friday night in high-volume restaurants—I can tell you that chasing that deep brown crust isn&apos;t just about looks. It&apos;s about unlocking flavor at the molecular level.
           </p>
 
           <p>
@@ -94,7 +94,7 @@ export default function MaillardReactionPost() {
               Restaurant Reality
             </h3>
             <p className="mb-0">
-              In professional kitchens, we don&apos;t guess at heat—we <em>know</em> it. Every sauté station at Mellow Mushroom had an infrared thermometer, and we wouldn&apos;t drop a steak until the cast iron hit 450-500°F. That precision is what separates okay food from great food, and you can achieve it at home with a $25 thermometer and proper preheating.
+              In professional kitchens, we don&apos;t guess at heat—we know it. We know to heat the pan on high for 2-3 minutes before using and know from thousands of times and dozens of mistakes when the pan is ready. That precision is what separates okay food from great food.
             </p>
           </div>
 
