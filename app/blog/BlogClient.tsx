@@ -147,7 +147,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
                     </div>
 
                     {/* Title */}
-                    <h2 className="text-xl font-bold text-slate-900 mb-3 hover:text-orange-700 transition-colors leading-snug">
+                    <h2 className="text-xl font-bold text-slate-900 mb-3 hover:text-orange-700 transition-colors leading-snug line-clamp-2">
                       <CTAVisibilityTracker
                         ctaId={`blog-hub-post-${index + 1}`}
                         merchant="internal"
