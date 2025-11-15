@@ -160,7 +160,7 @@ export default function ProductComparisonTable({
                         : 'bg-white border-2 border-orange-600 text-orange-700 hover:bg-orange-50'
                     }`}
                   >
-                    Check Price on Amazon
+                    Check Current Price →
                   </a>
                 </td>
               ))}
@@ -211,7 +211,7 @@ export default function ProductComparisonTable({
                   : 'bg-white border-2 border-orange-600 text-orange-700 hover:bg-orange-50'
               }`}
             >
-              Check Price on Amazon
+              Check Current Price →
             </a>
           </div>
         ))}
