@@ -94,7 +94,7 @@ export default function StainlessSteelStickingPost() {
           </p>
 
           <p>
-            I learned this the hard way early in my career. Back at Mellow Mushroom, we had a line cook who&apos;d scrub pans until the metal dulled, convinced the issue was &quot;old stainless.&quot; One afternoon, I took his pan, preheated it properly, and dropped in the same chicken breast. It released perfectly. His jaw hit the floor.
+            I learned this the hard way early in my career. In professional kitchens, I&apos;ve seen line cooks scrub pans until the metal dulled, convinced the issue was &quot;old stainless.&quot; One afternoon, I took his pan, preheated it properly, and dropped in the same chicken breast. It released perfectly. His jaw hit the floor.
           </p>
 
           <p>
@@ -161,7 +161,7 @@ export default function StainlessSteelStickingPost() {
           </p>
 
           <p>
-            At Mellow Mushroom, we&apos;d preheat pans during our mise en place setup, giving them a full 3-5 minutes over medium heat. By the time orders started coming in, those pans were perfectly primed. That investment of time eliminated 90% of sticking problems.
+            In professional kitchens, we&apos;d preheat pans during mise en place setup, giving them a full 3-5 minutes over medium heat. By the time orders started coming in, those pans were perfectly primed. That investment of time eliminated 90% of sticking problems.
           </p>
 
           <h3>Step 2: Add Oil and Watch It</h3>
@@ -207,7 +207,7 @@ export default function StainlessSteelStickingPost() {
           </p>
 
           <p>
-            Deglazing is a restaurant cook&apos;s secret weapon. Not only does it make cleanup effortless, but those caramelized proteins stuck to the pan contain concentrated flavor compounds. Dissolving them into a wine or stock reduction creates depth you can&apos;t get any other way. At Mellow Mushroom, we rarely made a pan sauce from scratch — we built them on the fond from whatever we&apos;d just cooked.
+            Deglazing is a restaurant cook&apos;s secret weapon. Not only does it make cleanup effortless, but those caramelized proteins stuck to the pan contain concentrated flavor compounds. Dissolving them into a wine or stock reduction creates depth you can&apos;t get any other way. In professional kitchens, we rarely make pan sauces from scratch — we build them on the fond from whatever we just cooked.
           </p>
 
           <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
