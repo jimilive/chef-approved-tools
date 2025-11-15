@@ -450,7 +450,8 @@ export default function FoodProcessorVsBlenderPost() {
             After 24 years testing equipment in professional and home kitchens, this is what lasts. The motor is strong enough for daily use but quiet enough for home kitchens. Expect 10-15 years of regular home use.
           </p>
 
-          <CTAVisibilityTracker
+          {/* TODO: Add Cuisinart 14-Cup Food Processor (ASIN: B01AXM4WV2) to database and fetch via getProductBySlug */}
+          {/* <CTAVisibilityTracker
             ctaId="food-processor-vs-blender-cuisinart-fp"
             position="mid_article"
             productSlug="food-processor-vs-blender"
@@ -464,7 +465,7 @@ export default function FoodProcessorVsBlenderPost() {
             >
               Check Price on Amazon →
             </a>
-          </CTAVisibilityTracker>
+          </CTAVisibilityTracker> */}
 
           <h3>Blenders</h3>
 
@@ -484,7 +485,8 @@ export default function FoodProcessorVsBlenderPost() {
             Professional blenders cost more upfront, but after testing dozens of models in kitchens over 24 years, the Vitamix&rsquo;s durability justifies the investment. Expect 15-20 years of home use based on restaurant testing.
           </p>
 
-          <CTAVisibilityTracker
+          {/* TODO: Fetch Vitamix 5200 from database using getProductBySlug('vitamix-5200-professional-blender') */}
+          {/* <CTAVisibilityTracker
             ctaId="food-processor-vs-blender-vitamix-5200"
             position="mid_article"
             productSlug="food-processor-vs-blender"
@@ -498,7 +500,7 @@ export default function FoodProcessorVsBlenderPost() {
             >
               Check Price on Amazon →
             </a>
-          </CTAVisibilityTracker>
+          </CTAVisibilityTracker> */}
 
           <h2>The Bottom Line</h2>
 

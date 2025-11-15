@@ -197,7 +197,7 @@ export default async function BenrinerLargeMandolineReview() {
                       id: 'medium',
                       label: 'Original',
                       description: 'Compact size with 3 julienne blade inserts. Includes hand guard.',
-                      affiliateUrl: 'https://amzn.to/4hG8jO6',
+                      affiliateUrl: '', // TODO: Add Benriner Original (medium) to database
                       ctaId: 'hero-cta-medium'
                     }
                   ]}
@@ -218,16 +218,17 @@ export default async function BenrinerLargeMandolineReview() {
                       → View Large {productData.name} on Amazon
                     </a>
                   </p>
-                  <p className="text-sm">
+                  {/* TODO: Add Benriner Original (medium) to database */}
+                  {/* <p className="text-sm">
                     <a
-                      href="https://amzn.to/4hG8jO6"
+                      href=""
                       className="text-orange-700 hover:text-orange-800 underline font-medium"
                       target="_blank"
                       rel="noopener noreferrer sponsored"
                     >
                       → View Original Benriner on Amazon
                     </a>
-                  </p>
+                  </p> */}
                 </div>
               </div>
             }
@@ -329,7 +330,7 @@ export default async function BenrinerLargeMandolineReview() {
                       id: 'medium',
                       label: 'Original',
                       description: 'Compact size with 3 julienne blade inserts. Includes hand guard.',
-                      affiliateUrl: 'https://amzn.to/4hG8jO6',
+                      affiliateUrl: '', // TODO: Add Benriner Original (medium) to database
                       ctaId: 'where-to-buy-medium'
                     }
                   ]}
@@ -350,16 +351,17 @@ export default async function BenrinerLargeMandolineReview() {
                       → View Large {productData.name} on Amazon
                     </a>
                   </p>
-                  <p className="text-sm">
+                  {/* TODO: Add Benriner Original (medium) to database */}
+                  {/* <p className="text-sm">
                     <a
-                      href="https://amzn.to/4hG8jO6"
+                      href=""
                       className="text-orange-700 hover:text-orange-800 underline font-medium"
                       target="_blank"
                       rel="noopener noreferrer sponsored"
                     >
                       → View Original Benriner on Amazon
                     </a>
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -392,7 +394,7 @@ export default async function BenrinerLargeMandolineReview() {
                       id: 'medium',
                       label: 'Original',
                       description: 'Compact size with 3 julienne blade inserts. Includes hand guard.',
-                      affiliateUrl: 'https://amzn.to/4hG8jO6',
+                      affiliateUrl: '', // TODO: Add Benriner Original (medium) to database
                       ctaId: 'bottom-line-medium'
                     }
                   ]}
@@ -413,16 +415,17 @@ export default async function BenrinerLargeMandolineReview() {
                       → View Large {productData.name} on Amazon
                     </a>
                   </p>
-                  <p className="text-sm">
+                  {/* TODO: Add Benriner Original (medium) to database */}
+                  {/* <p className="text-sm">
                     <a
-                      href="https://amzn.to/4hG8jO6"
+                      href=""
                       className="text-orange-700 hover:text-orange-800 underline font-medium"
                       target="_blank"
                       rel="noopener noreferrer sponsored"
                     >
                       → View Original Benriner on Amazon
                     </a>
-                  </p>
+                  </p> */}
                 </div>
               </div>
             }

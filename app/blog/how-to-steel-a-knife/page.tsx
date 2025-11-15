@@ -31,10 +31,10 @@ export default async function HowToSteelAKnife() {
     getProductBySlug('victorinox-fibrox-10-inch-chefs-knife'),
   ])
 
-  // Get affiliate URLs with fallbacks
-  const victorinox8Url = products[0] ? getPrimaryAffiliateLink(products[0]) : 'https://amzn.to/3U4PsT1'
-  const victorinox10Url = products[1] ? getPrimaryAffiliateLink(products[1]) : 'https://amzn.to/4o6pPwW'
-  const henckelsUrl = 'https://amzn.to/4qh96Zu' // Fallback - product not in database yet
+  // Get affiliate URLs from database
+  const victorinox8Url = products[0] ? getPrimaryAffiliateLink(products[0]) : ''
+  const victorinox10Url = products[1] ? getPrimaryAffiliateLink(products[1]) : ''
+  const henckelsUrl = '' // TODO: Add Henckels sharpening steel to database
 
   return (
     <>

@@ -115,8 +115,8 @@ export default async function KitchenAidCommercialReviewPage() {
   const compareLink = reviewData.strategicLinks.secondary.url
   const trustLink = reviewData.strategicLinks.tertiary.url
 
-  // Get Amazon affiliate link
-  const amazonLink = product?.affiliateLinks.find(link => link.merchant === 'amazon')?.url || 'https://amzn.to/4nVlUTM'
+  // Get Amazon affiliate link from database
+  const amazonLink = product?.affiliateLinks.find(link => link.merchant === 'amazon')?.url || ''
 
   const breadcrumbs = [
     { name: "Home", url: "https://www.chefapprovedtools.com" },

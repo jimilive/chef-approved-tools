@@ -67,11 +67,11 @@ export default async function HotelPanSystemPage() {
     getProductBySlug('large-metal-hotel-pans'),
   ])
 
-  // Get affiliate URLs with fallbacks
-  const smallPlasticUrl = products[0] ? getPrimaryAffiliateLink(products[0]) : 'https://amzn.to/47oh8qZ'
-  const largePlasticUrl = products[1] ? getPrimaryAffiliateLink(products[1]) : 'https://amzn.to/4qtKjSe'
-  const smallMetalUrl = products[2] ? getPrimaryAffiliateLink(products[2]) : 'https://amzn.to/3Wny7og'
-  const largeMetalUrl = products[3] ? getPrimaryAffiliateLink(products[3]) : 'https://amzn.to/4hoWZ8C'
+  // Get affiliate URLs from database
+  const smallPlasticUrl = products[0] ? getPrimaryAffiliateLink(products[0]) : ''
+  const largePlasticUrl = products[1] ? getPrimaryAffiliateLink(products[1]) : ''
+  const smallMetalUrl = products[2] ? getPrimaryAffiliateLink(products[2]) : ''
+  const largeMetalUrl = products[3] ? getPrimaryAffiliateLink(products[3]) : ''
 
   return (
     <>

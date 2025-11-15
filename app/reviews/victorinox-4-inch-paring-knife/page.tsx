@@ -99,9 +99,9 @@ export default async function ProductReview() {
   const link4inch = product?.affiliateLinks.find(link => link.tag === '4-inch')
   const link325inch = product?.affiliateLinks.find(link => link.tag === '3.25-inch')
 
-  // Use tagged links if available, otherwise use primary for 4" and fallback for 3.25"
+  // Use tagged links if available, otherwise use primary for 4"
   const affiliateUrl4inch = link4inch?.url || (product ? getPrimaryAffiliateLink(product) : '#')
-  const affiliateUrl325inch = link325inch?.url || 'https://amzn.to/4qN4b31'
+  const affiliateUrl325inch = link325inch?.url || '' // TODO: Add 3.25" variant to database
 
   // Generate breadcrumbs
   const breadcrumbs = [

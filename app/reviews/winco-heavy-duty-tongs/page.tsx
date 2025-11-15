@@ -100,7 +100,7 @@ export default async function ProductReview() {
   const link9inch = product?.affiliateLinks.find(link => link.tag === '9-inch')
 
   const affiliateUrl = link12inch?.url || (product ? getPrimaryAffiliateLink(product) : '#')
-  const variant9inchUrl = link9inch?.url || 'https://amzn.to/4oilO91'
+  const variant9inchUrl = link9inch?.url || '' // TODO: Add 9" variant to database
 
   // Generate breadcrumbs
   const breadcrumbs = [
