@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { Star, CheckCircle, XCircle, DollarSign, Award, Zap } from 'lucide-react'
 import AuthorBio from '@/components/review/AuthorBio'
-import { generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema'
+import { generateItemListSchema, generateBreadcrumbSchema, generateArticleSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
@@ -106,9 +106,26 @@ export default async function BestChefKnivesPage() {
   if (products[2]) topKnives[2].affiliateUrl = getPrimaryAffiliateLink(products[2])
   if (products[3]) topKnives[3].affiliateUrl = getPrimaryAffiliateLink(products[3])
 
+  // Generate schemas
+  const articleSchema = generateArticleSchema({
+    headline: guideMetadata.title,
+    description: guideMetadata.description,
+    datePublished: '2025-11-10',
+    dateModified: '2025-11-10',
+    slug: 'best-chef-knives',
+    urlPrefix: 'guides',
+    imageUrl: guideMetadata.imageUrl,
+  })
+
   return (
     <main className="min-h-screen bg-gray-50">
       {/* JSON-LD Structured Data */}
+      {articleSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
