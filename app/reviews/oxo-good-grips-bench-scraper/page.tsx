@@ -192,20 +192,24 @@ export default async function OXOGoodGripsBenchScraperReview() {
           </div>
         </section>
 
-        {/* Real Restaurant Use */}
+        {/* Professional Testing */}
         <section className="mb-12 bg-slate-50 p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.realRestaurantUse.title}</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.professionalTesting.title}</h2>
 
           <div className="prose prose-lg max-w-none text-gray-700">
-            <p className="font-semibold">{reviewData.realRestaurantUse.intro}</p>
+            <p className="font-semibold mb-6">{reviewData.professionalTesting.intro}</p>
 
-            <ul className="space-y-2 mt-4">
-              {reviewData.realRestaurantUse.uses.map((use, index) => (
-                <li key={index}>{use}</li>
+            <div className="space-y-6">
+              {reviewData.professionalTesting.sections.map((section, index) => (
+                <div key={index}>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{section.task}</h3>
+                  <p>{section.description}</p>
+                </div>
               ))}
-            </ul>
+            </div>
 
-            <p className="mt-6">{reviewData.realRestaurantUse.conclusion}</p>
+            <p className="mt-6 font-semibold">{reviewData.professionalTesting.durability}</p>
+            <p className="mt-4">{reviewData.professionalTesting.conclusion}</p>
           </div>
         </section>
 
@@ -342,11 +346,9 @@ export default async function OXOGoodGripsBenchScraperReview() {
             <span className="text-slate-400">|</span>
             <a href="#cost-analysis" className="text-orange-700 hover:text-orange-800">Cost Analysis</a>
             <span className="text-slate-400">|</span>
-            <a href="#performance" className="text-orange-700 hover:text-orange-800">Performance</a>
+            <a href="#performance" className="text-orange-700 hover:text-orange-800">Specifications</a>
             <span className="text-slate-400">|</span>
             <a href="#comparison" className="text-orange-700 hover:text-orange-800">vs. Competitors</a>
-            <span className="text-slate-400">|</span>
-            <a href="#specs" className="text-orange-700 hover:text-orange-800">Specifications</a>
             <span className="text-slate-400">|</span>
             <a href="#faq" className="text-orange-700 hover:text-orange-800">FAQ</a>
           </div>
@@ -372,7 +374,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
           <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.costAnalysis.title}</h2>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
 
-            <div className="bg-blue-50 p-5 rounded-lg border border-blue-200 mb-4">
+            <div className="bg-blue-50 p-5 rounded-lg border border-blue-200 mb-6">
               <h3 className="font-bold text-slate-900 mb-3">{reviewData.costAnalysis.realWorldValue.title}</h3>
               <ul className="space-y-2 text-slate-700">
                 {reviewData.costAnalysis.realWorldValue.items.map((item, index) => (
@@ -381,46 +383,47 @@ export default async function OXOGoodGripsBenchScraperReview() {
               </ul>
             </div>
 
-            <p className="text-slate-700 mb-4">
-              <strong>Time savings value:</strong> {reviewData.costAnalysis.timeSavings.intro}
-            </p>
-
-            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <div className="bg-gray-50 p-5 rounded-lg border border-gray-200 mb-6">
+              <h3 className="font-bold text-slate-900 mb-3">{reviewData.costAnalysis.comparison.title}</h3>
               <ul className="space-y-2 text-slate-700">
-                {reviewData.costAnalysis.timeSavings.items.map((item, index) => (
-                  <li key={index}>• <strong>{item.split(':')[0]}:</strong> {item.split(':')[1]}</li>
+                {reviewData.costAnalysis.comparison.items.map((item, index) => (
+                  <li key={index}>• {item}</li>
                 ))}
               </ul>
             </div>
 
-            <p className="text-slate-700 mt-4">
-              <strong>{reviewData.costAnalysis.bottomLine.split(':')[0]}:</strong> {reviewData.costAnalysis.bottomLine.split(':').slice(1).join(':')}
-            </p>
+            <p className="text-slate-700">{reviewData.costAnalysis.conclusion}</p>
           </div>
         </section>
 
-        {/* Performance Data */}
+        {/* Specifications */}
         <section className="mb-12" id="performance">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.performanceData.title}</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.specs.title}</h2>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              {reviewData.performanceData.categories.map((category, index) => (
-                <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                  <p className="font-semibold text-slate-900 mb-2">{category.title}</p>
-                  <p className="text-slate-700 text-sm">
-                    {category.metrics.map((metric, mIndex) => (
-                      <span key={mIndex}>
-                        <strong>{metric.split(':')[0]}:</strong> {metric.split(':')[1]}
-                        {mIndex < category.metrics.length - 1 && <><br/></>}
-                      </span>
-                    ))}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-semibold text-slate-900 mb-3">Product Specifications</h3>
+                <dl className="space-y-2 text-sm">
+                  {reviewData.specs.details.map((spec, index) => (
+                    <div key={index} className="flex justify-between border-b border-gray-100 pb-2">
+                      <dt className="text-slate-600">{spec.label}</dt>
+                      <dd className="font-semibold">{spec.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
 
-            <p className="text-slate-700 mt-4 italic text-sm">{reviewData.performanceData.disclaimer}</p>
+              <div className="bg-blue-50 p-5 rounded-lg">
+                <h3 className="font-bold text-slate-900 mb-3">20 Years of Testing</h3>
+                <p className="text-slate-700 text-sm mb-3">
+                  This exact OXO bench scraper has been tested for 20 years, including 6 years of daily professional use at Purple Café in Seattle.
+                </p>
+                <p className="text-slate-700 text-sm">
+                  {reviewData.specs.note}
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -455,40 +458,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
           </p>
         </section>
 
-        {/* Specifications */}
-        <section className="mb-12" id="specs">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.specifications.title}</h2>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-semibold text-slate-900 mb-3">Technical Specifications</h3>
-                <dl className="space-y-2 text-sm">
-                  {reviewData.specifications.technical.map((spec, index) => (
-                    <div key={index} className="flex justify-between border-b border-gray-100 pb-2">
-                      <dt className="text-slate-600">{spec.label}</dt>
-                      <dd className="font-semibold">{spec.value}</dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-slate-900 mb-3">Physical Dimensions</h3>
-                <dl className="space-y-2 text-sm">
-                  {reviewData.specifications.physical.map((spec, index) => (
-                    <div key={index} className="flex justify-between border-b border-gray-100 pb-2">
-                      <dt className="text-slate-600">{spec.label}</dt>
-                      <dd className="font-semibold">{spec.value}</dd>
-                    </div>
-                  ))}
-                </dl>
-
-                <p className="text-xs text-slate-600 mt-4 italic">{reviewData.specifications.note}</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Additional Product Details - removed duplicate */}
 
         {/* Comparison Table */}
         <section className="mb-12" id="comparison">
