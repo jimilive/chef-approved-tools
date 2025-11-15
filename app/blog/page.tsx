@@ -49,7 +49,7 @@ export default async function BlogPage() {
         "position": index + 1,
         "url": `https://www.chefapprovedtools.com/blog/${post.slug}`,
         "name": post.title,
-        "description": post.excerpt || post.description
+        "description": post.excerpt
       }))
     },
     "author": {

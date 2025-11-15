@@ -5,7 +5,6 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogQuickAnswer from '@/components/blog/BlogQuickAnswer'
-import ComparisonTable from '@/components/blog/ComparisonTable'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
@@ -24,25 +23,6 @@ const articleSchema = generateArticleSchema({
 });
 
 // Comparison table data
-const comparisonProducts = [
-  {
-    name: "Food Processor",
-    image: "/images/comparison-food-processor.jpg",
-    rating: 4.8,
-    affiliateUrl: "https://amazon.com/dp/B01AXM4WV2?tag=chefapprovedt-20",
-    merchant: "amazon" as const,
-    isHighlighted: true
-  },
-  {
-    name: "Blender",
-    image: "/images/comparison-blender.jpg",
-    rating: 4.7,
-    affiliateUrl: "https://amazon.com/dp/B008H4SLV6?tag=chefapprovedt-20",
-    merchant: "amazon" as const,
-    isHighlighted: false
-  }
-];
-
 const comparisonRows = [
   {
     feature: "Primary Function",
@@ -203,13 +183,24 @@ export default function FoodProcessorVsBlenderPost() {
 
         {/* Quick Answer Section */}
         <BlogQuickAnswer
-          winner="Food Processor (for most home cooks)"
-          winnerReasoning={[
-            "After testing both in professional kitchens for 24 years, the food processor handles the tasks most home cooks actually do daily: chopping vegetables, shredding cheese, making dough, and mixing ingredients.",
-            "A blender excels at pureed soups and sauces—but those are weekly tasks for most people, not daily. The food processor's versatility makes it the better first purchase.",
-            "At Purple Café, we processed 50 lbs of vegetables and 10 lbs of cheese weekly through our Robot Coupe food processor. The same unit ran for 6 years without failure. The blender ran 2-3 times weekly for pureed soups and sauces.",
-            "Buy the food processor first. Add the blender later when you find yourself making pureed soups or sauces regularly."
-          ]}
+          optionA={{
+            title: "Choose a Food Processor If:",
+            points: [
+              "You chop vegetables, shred cheese, or make pesto regularly",
+              "You need versatile daily prep work (slicing, shredding, chopping)",
+              "You want one appliance that handles most kitchen tasks",
+              "You&rsquo;re building your first kitchen setup"
+            ]
+          }}
+          optionB={{
+            title: "Choose a Blender If:",
+            points: [
+              "You make smoothies, pureed soups, or sauces weekly",
+              "You need silky-smooth textures and emulsified liquids",
+              "You already own a food processor",
+              "You frequently work with hot liquids (with proper venting)"
+            ]
+          }}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
@@ -231,7 +222,7 @@ export default function FoodProcessorVsBlenderPost() {
           <h2 id="the-fundamental-difference">The Fundamental Difference: Liquids vs Solids</h2>
 
           <p>
-            Walk into any professional kitchen and you'll see both appliances, but they're never in the same station. The blender lives near the smoothie area or soup station. The food processor sits at prep, surrounded by vegetables.
+            Walk into any professional kitchen and you&rsquo;ll see both appliances, but they&rsquo;re never in the same station. The blender lives near the smoothie area or soup station. The food processor sits at prep, surrounded by vegetables.
           </p>
 
           <p>
@@ -239,34 +230,49 @@ export default function FoodProcessorVsBlenderPost() {
           </p>
 
           <p>
-            A blender creates a cyclonic vortex that pulls ingredients down into the blades. This only works when there's enough liquid to create fluid dynamics. Without liquid, frozen strawberries just bounce around the pitcher. That's why every smoothie recipe starts with liquid at the bottom.
+            A blender creates a cyclonic vortex that pulls ingredients down into the blades. This only works when there&rsquo;s enough liquid to create fluid dynamics. Without liquid, frozen strawberries just bounce around the pitcher. That&rsquo;s why every smoothie recipe starts with liquid at the bottom.
           </p>
 
           <p>
-            A food processor uses a wide, flat bowl with an S-shaped blade that rotates just above the bottom. The blade's job is to chop through solid ingredients as they tumble through the bowl. Adding liquid actually prevents this action—the ingredients float instead of getting chopped.
+            A food processor uses a wide, flat bowl with an S-shaped blade that rotates just above the bottom. The blade&rsquo;s job is to chop through solid ingredients as they tumble through the bowl. Adding liquid actually prevents this action—the ingredients float instead of getting chopped.
           </p>
 
           <p>
-            At Purple Café from 2007-2012, I watched new cooks make this mistake constantly. They'd try to make pesto in the blender because "it has basil and oil, that's a liquid." The basil would stick to the walls. Or they'd attempt smoothies in the food processor because "it has blades." The frozen fruit would ricochet off the bowl without blending.
+            At Purple Café from 2007-2012, I watched new cooks make this mistake constantly. They&rsquo;d try to make pesto in the blender because &quot;it has basil and oil, that&rsquo;s a liquid.&quot; The basil would stick to the walls. Or they&rsquo;d attempt smoothies in the food processor because &quot;it has blades.&quot; The frozen fruit would ricochet off the bowl without blending.
           </p>
 
           <p>
-            The machines aren't interchangeable. They're engineered for opposite tasks.
+            The machines aren&rsquo;t interchangeable. They&rsquo;re engineered for opposite tasks.
           </p>
 
           <h2 id="comparison-table">Complete Comparison Table</h2>
 
           <p>
-            After 6 years testing both appliances in a high-volume restaurant kitchen, here's every meaningful difference:
+            After 6 years testing both appliances in a high-volume restaurant kitchen, here&rsquo;s every meaningful difference:
           </p>
         </div>
 
         {/* Comparison Table */}
-        <ComparisonTable
-          products={comparisonProducts}
-          comparisonRows={comparisonRows}
-          highlightedProduct={0}
-        />
+        <div className="bg-white rounded-xl shadow-lg p-6 mb-8 overflow-x-auto">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="bg-slate-100">
+                <th className="p-3 text-left font-semibold text-slate-900 border-b-2 border-slate-300">Feature</th>
+                <th className="p-3 text-left font-semibold text-slate-900 border-b-2 border-slate-300 bg-orange-50">Food Processor</th>
+                <th className="p-3 text-left font-semibold text-slate-900 border-b-2 border-slate-300">Blender</th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparisonRows.map((row, index) => (
+                <tr key={index} className="border-b border-slate-200 hover:bg-slate-50">
+                  <td className="p-3 font-medium text-slate-900">{row.feature}</td>
+                  <td className="p-3 text-slate-700 bg-orange-50/30">{row.foodProcessor}</td>
+                  <td className="p-3 text-slate-700">{row.blender}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8 mt-8">
           <h2 id="professional-testing">Professional Testing Results: Purple Café (2007-2012)</h2>
@@ -302,13 +308,13 @@ export default function FoodProcessorVsBlenderPost() {
           </p>
 
           <p>
-            <strong>Critical safety lesson:</strong> You can make small batches of cold sauces in the food processor if you're careful—the lid sits loosely on top, so ingredients can't create pressure. But never hot liquids. I watched a prep cook try to puree hot soup in a food processor early in my career. The liquid exploded through the lid, coating the wall and two line cooks. That's when I learned: hot liquids only go in the blender.
+            <strong>Critical safety lesson:</strong> You can make small batches of cold sauces in the food processor if you&rsquo;re careful—the lid sits loosely on top, so ingredients can&rsquo;t create pressure. But never hot liquids. I watched a prep cook try to puree hot soup in a food processor early in my career. The liquid exploded through the lid, coating the wall and two line cooks. That&rsquo;s when I learned: hot liquids only go in the blender.
           </p>
 
           <h3>Blender: Vitamix (Commercial Model)</h3>
 
           <p>
-            <strong>Weekly volume:</strong> 5-10 sauces, 2 pureed soups, various salsas and coulis. The blender ran 2-3 times per week—far less than the food processor's daily use.
+            <strong>Weekly volume:</strong> 5-10 sauces, 2 pureed soups, various salsas and coulis. The blender ran 2-3 times per week—far less than the food processor&rsquo;s daily use.
           </p>
 
           <p>
@@ -331,7 +337,7 @@ export default function FoodProcessorVsBlenderPost() {
           </p>
 
           <p>
-            <strong>The key difference:</strong> The blender handled tasks the food processor couldn't—mainly hot liquids and ultra-smooth purees. But the food processor handled far more daily prep work. If we could only keep one machine, it would be the food processor without question.
+            <strong>The key difference:</strong> The blender handled tasks the food processor couldn&rsquo;t—mainly hot liquids and ultra-smooth purees. But the food processor handled far more daily prep work. If we could only keep one machine, it would be the food processor without question.
           </p>
 
           <h3>Why the Food Processor Dominated</h3>
@@ -345,7 +351,7 @@ export default function FoodProcessorVsBlenderPost() {
           </p>
 
           <p>
-            For home cooks, this ratio is even more pronounced. You're chopping onions and shredding cheese regularly. You're making pureed soup occasionally. That's why the food processor should be your first purchase.
+            For home cooks, this ratio is even more pronounced. You&rsquo;re chopping onions and shredding cheese regularly. You&rsquo;re making pureed soup occasionally. That&rsquo;s why the food processor should be your first purchase.
           </p>
 
           <h2 id="when-to-use-food-processor">When To Use a Food Processor</h2>
@@ -364,17 +370,17 @@ export default function FoodProcessorVsBlenderPost() {
 
           <p><strong>Making pesto and chunky sauces:</strong> Basil pesto needs chopping, not emulsifying. The food processor chops basil leaves, pine nuts, and garlic into a textured sauce. A blender over-processes it into paste. At Purple Café, we made fresh pesto regularly in the Robot Coupe—always perfectly textured.</p>
 
-          <p><strong>Grinding nuts:</strong> Almonds into almond flour. Walnuts for pesto. Hazelnuts for praline. The food processor can go from coarse chop to fine powder in seconds. Just don't over-process or you'll make nut butter (which also works, but requires scraping the bowl frequently).</p>
+          <p><strong>Grinding nuts:</strong> Almonds into almond flour. Walnuts for pesto. Hazelnuts for praline. The food processor can go from coarse chop to fine powder in seconds. Just don&rsquo;t over-process or you&rsquo;ll make nut butter (which also works, but requires scraping the bowl frequently).</p>
 
           <p><strong>Making breadcrumbs:</strong> Stale bread torn into chunks becomes breadcrumbs in 20 seconds. Fresh herbs added at the end create herb breadcrumbs. We made these daily for eggplant parmesan and chicken piccata.</p>
 
           <h3>NOT Good For:</h3>
 
           <ul>
-            <li><strong>Smoothies:</strong> The wide bowl doesn't create a vortex. Frozen fruit bounces around without blending.</li>
-            <li><strong>Hot liquids:</strong> The lid isn't sealed. Hot soup will leak or explode through the top.</li>
+            <li><strong>Smoothies:</strong> The wide bowl doesn&rsquo;t create a vortex. Frozen fruit bounces around without blending.</li>
+            <li><strong>Hot liquids:</strong> The lid isn&rsquo;t sealed. Hot soup will leak or explode through the top.</li>
             <li><strong>Large batches of liquid:</strong> Even cold liquids can leak through the center column where the blade attaches.</li>
-            <li><strong>Crushing ice:</strong> The S-blade isn't designed for this. Use a blender.</li>
+            <li><strong>Crushing ice:</strong> The S-blade isn&rsquo;t designed for this. Use a blender.</li>
           </ul>
 
           <h2 id="when-to-use-blender">When To Use a Blender</h2>
@@ -385,9 +391,9 @@ export default function FoodProcessorVsBlenderPost() {
 
           <h3>Perfect For:</h3>
 
-          <p><strong>Pureed soups:</strong> Tomato bisque, butternut squash soup, broccoli cheddar. The blender creates velvety texture that a food processor can't match. At Purple Café, we pureed 2 soups weekly—always in the blender. Critical safety rule: Remove the center cap from the blender lid to vent steam. Hot liquid creates pressure that can blow the lid off.</p>
+          <p><strong>Pureed soups:</strong> Tomato bisque, butternut squash soup, broccoli cheddar. The blender creates velvety texture that a food processor can&rsquo;t match. At Purple Café, we pureed 2 soups weekly—always in the blender. Critical safety rule: Remove the center cap from the blender lid to vent steam. Hot liquid creates pressure that can blow the lid off.</p>
 
-          <p><strong>Sauces and coulis:</strong> Red pepper coulis, chimichurri, roasted tomato salsa. The blender emulsifies ingredients into smooth, uniform sauces. At Purple Café, we made 5-10 sauces weekly in the blender—the tall pitcher and vortex action created texture the food processor couldn't achieve.</p>
+          <p><strong>Sauces and coulis:</strong> Red pepper coulis, chimichurri, roasted tomato salsa. The blender emulsifies ingredients into smooth, uniform sauces. At Purple Café, we made 5-10 sauces weekly in the blender—the tall pitcher and vortex action created texture the food processor couldn&rsquo;t achieve.</p>
 
           <p><strong>Emulsified dressings:</strong> Vinaigrettes, aioli, Caesar dressing. The blender emulsifies oil and vinegar into stable dressings. Balsamic vinaigrette made in a blender stays emulsified for 20 minutes. Mixed in a bowl, it separates in 3 minutes.</p>
 
@@ -400,16 +406,16 @@ export default function FoodProcessorVsBlenderPost() {
           <h3>NOT Good For:</h3>
 
           <ul>
-            <li><strong>Chopping vegetables:</strong> They'll just spin around the pitcher. Use the food processor.</li>
-            <li><strong>Shredding cheese:</strong> It'll turn to mush. Use the food processor with shredding disc.</li>
+            <li><strong>Chopping vegetables:</strong> They&rsquo;ll just spin around the pitcher. Use the food processor.</li>
+            <li><strong>Shredding cheese:</strong> It&rsquo;ll turn to mush. Use the food processor with shredding disc.</li>
             <li><strong>Making dough:</strong> Will burn out the motor. Use a food processor or stand mixer.</li>
-            <li><strong>Dry ingredients without liquid:</strong> They'll fly around without blending. Add liquid or use the food processor.</li>
+            <li><strong>Dry ingredients without liquid:</strong> They&rsquo;ll fly around without blending. Add liquid or use the food processor.</li>
           </ul>
 
           <h2 id="the-mistake-that-costs-money">The Mistake That Costs Money</h2>
 
           <p>
-            Most home cooks buy a blender first because smoothies are trendy and visible. Then they realize they need to chop onions, shred cheese, or make pesto—tasks the blender can't handle. So they buy a food processor second.
+            Most home cooks buy a blender first because smoothies are trendy and visible. Then they realize they need to chop onions, shred cheese, or make pesto—tasks the blender can&rsquo;t handle. So they buy a food processor second.
           </p>
 
           <p>
@@ -421,7 +427,7 @@ export default function FoodProcessorVsBlenderPost() {
           </p>
 
           <p>
-            One more consideration: space. If you have limited counter or cabinet space, the food processor's versatility makes it the better single appliance. You'll find workarounds for pureed soups (immersion blender) more easily than you'll find workarounds for chopping 5 lbs of vegetables.
+            One more consideration: space. If you have limited counter or cabinet space, the food processor&rsquo;s versatility makes it the better single appliance. You&rsquo;ll find workarounds for pureed soups (immersion blender) more easily than you&rsquo;ll find workarounds for chopping 5 lbs of vegetables.
           </p>
 
           <h2 id="recommended-models">Recommended Models (Tested in Professional Kitchens)</h2>
@@ -475,7 +481,7 @@ export default function FoodProcessorVsBlenderPost() {
           </p>
 
           <p>
-            Professional blenders cost more upfront, but after testing dozens of models in kitchens over 24 years, the Vitamix's durability justifies the investment. Expect 15-20 years of home use based on restaurant testing.
+            Professional blenders cost more upfront, but after testing dozens of models in kitchens over 24 years, the Vitamix&rsquo;s durability justifies the investment. Expect 15-20 years of home use based on restaurant testing.
           </p>
 
           <CTAVisibilityTracker
@@ -497,7 +503,7 @@ export default function FoodProcessorVsBlenderPost() {
           <h2>The Bottom Line</h2>
 
           <p>
-            The choice between a food processor and a blender isn't about which is better. Each is engineered for specific tasks that the other can't handle.
+            The choice between a food processor and a blender isn&rsquo;t about which is better. Each is engineered for specific tasks that the other can&rsquo;t handle.
           </p>
 
           <p>
@@ -505,11 +511,11 @@ export default function FoodProcessorVsBlenderPost() {
           </p>
 
           <p>
-            Buy the food processor first. It'll chop your vegetables, shred your cheese, make your pesto, and handle most daily prep work. If you later find yourself making pureed soups or sauces regularly, add the blender.
+            Buy the food processor first. It&rsquo;ll chop your vegetables, shred your cheese, make your pesto, and handle most daily prep work. If you later find yourself making pureed soups or sauces regularly, add the blender.
           </p>
 
           <p>
-            But if you cook seriously, you'll eventually want both. They're not interchangeable—they're complementary. Understanding which tool to reach for will make your prep faster, cleaner, and more consistent.
+            But if you cook seriously, you&rsquo;ll eventually want both. They&rsquo;re not interchangeable—they&rsquo;re complementary. Understanding which tool to reach for will make your prep faster, cleaner, and more consistent.
           </p>
 
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 mt-8">
@@ -524,7 +530,7 @@ export default function FoodProcessorVsBlenderPost() {
                   productSlug="food-processor-vs-blender"
                   merchant="internal"
                 >
-                  <Link href="/reviews/victorinox-8-inch-chefs-knife" className="text-orange-700 underline">Victorinox 8-Inch Chef's Knife Review (20+ Years Professional Testing)</Link>
+                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 underline">Victorinox 8-Inch Chef&rsquo;s Knife Review (20+ Years Professional Testing)</Link>
                 </CTAVisibilityTracker></li>
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-food-processor-vs-blender-vitamix"
@@ -566,17 +572,17 @@ export default function FoodProcessorVsBlenderPost() {
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Can a blender replace a food processor?</h3>
               <p className="text-slate-700 leading-relaxed">
-                No. A blender requires liquid to create the vortex that pulls ingredients into the blades. Without liquid, ingredients just fly around the pitcher. A food processor's wide, flat bowl and S-blade are designed specifically to handle dry, solid ingredients like vegetables, cheese, and herbs.
+                No. A blender requires liquid to create the vortex that pulls ingredients into the blades. Without liquid, ingredients just fly around the pitcher. A food processor&rsquo;s wide, flat bowl and S-blade are designed specifically to handle dry, solid ingredients like vegetables, cheese, and herbs.
               </p>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I use a food processor for smoothies?</h3>
               <p className="text-slate-700 leading-relaxed">
-                No. The wide bowl doesn't create the cyclonic vortex needed for smooth blending. Frozen fruit just bounces around without getting smooth. Use a blender—it's specifically designed for this task with a tall, narrow pitcher that creates proper vortex action.
+                No. The wide bowl doesn&rsquo;t create the cyclonic vortex needed for smooth blending. Frozen fruit just bounces around without getting smooth. Use a blender—it&rsquo;s specifically designed for this task with a tall, narrow pitcher that creates proper vortex action.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What's better for making pesto?</h3>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&rsquo;s better for making pesto?</h3>
               <p className="text-slate-700 leading-relaxed">
                 Food processor. Pesto needs chopping, not emulsifying. In professional kitchens at Purple Café, we made fresh pesto regularly in the Robot Coupe—the S-blade chops basil leaves without over-processing. Blenders risk turning pesto into paste unless you pulse carefully and scrape constantly.
               </p>
@@ -584,7 +590,7 @@ export default function FoodProcessorVsBlenderPost() {
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Can a food processor handle hot liquids?</h3>
               <p className="text-slate-700 leading-relaxed">
-                Never. I watched a prep cook try to puree hot soup in a food processor early in my career. The liquid exploded through the lid, coating the wall and two line cooks. Food processor lids aren't sealed for pressure. Use a blender with the center cap removed to vent steam.
+                Never. I watched a prep cook try to puree hot soup in a food processor early in my career. The liquid exploded through the lid, coating the wall and two line cooks. Food processor lids aren&rsquo;t sealed for pressure. Use a blender with the center cap removed to vent steam.
               </p>
             </div>
             <div>
@@ -602,7 +608,7 @@ export default function FoodProcessorVsBlenderPost() {
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Which one is more versatile?</h3>
               <p className="text-slate-700 leading-relaxed">
-                Food processor. It handles chopping, shredding, slicing, mixing, and kneading—tasks most home cooks do daily. Blenders excel at smoothies, soups, and sauces but can't replace the food processor's functions. If you can only own one, choose the food processor.
+                Food processor. It handles chopping, shredding, slicing, mixing, and kneading—tasks most home cooks do daily. Blenders excel at smoothies, soups, and sauces but can&rsquo;t replace the food processor&rsquo;s functions. If you can only own one, choose the food processor.
               </p>
             </div>
           </div>
