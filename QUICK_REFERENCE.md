@@ -111,6 +111,7 @@ testingEnvironment: []
 - [ ] Only one h1
 - [ ] All images have alt text
 - [ ] Lighthouse: Desktop 100, Mobile 80+
+- [ ] Build output shows correct render mode (`○` for ISR, `ƒ` for dynamic)
 
 ---
 
@@ -121,7 +122,7 @@ testingEnvironment: []
 - ❌ "Let me update all the reviews"
 - ❌ Changing credentials (20 years, 18 years, etc.)
 - ❌ Using `text-orange-600` for links
-- ❌ Using `export const dynamic = 'force-dynamic'`
+- ❌ Using `export const dynamic = 'force-dynamic'` ALONE (needs all 3 exports!)
 - ❌ Skipping heading levels (h1 → h3)
 
 **Then:** STOP. Check START_HERE.md. Ask Scott.
@@ -152,6 +153,7 @@ testingEnvironment: []
 - Migrating old pages → MIGRATION_PROCESSES.md
 - Component props → COMPONENT_INTERFACES.md
 - Comparison table → COMPARISON_TABLE_GUIDE.md
+- Caching bug? → docs/bugs/NEXTJS_CACHING_BUG_2025-11-15.md
 
 **"Which blog pattern?"**
 - Comparing 2 products (X vs Y) → Pattern A
@@ -160,6 +162,10 @@ testingEnvironment: []
 **"Which database pattern?"**
 - Core review page → Pattern 1 (no fallback)
 - Guide or blog → Pattern 2 (with fallback)
+
+**"Which caching strategy?"**
+- Product reviews/blogs → ISR (`revalidate = 3600`)
+- Real-time data page → Dynamic (all 3 exports: `force-dynamic`, `revalidate = 0`, `fetchCache = 'force-no-store'`)
 
 ---
 

@@ -1206,30 +1206,94 @@ const relatedProducts = await getProductsBySlugs([
 
 ### Caching Strategy
 
-**Use ISR (Incremental Static Regeneration):**
+⚠️ **CRITICAL: Next.js Caching Bug (Nov 2025)**
+See `/docs/bugs/NEXTJS_CACHING_BUG_2025-11-15.md` for detailed incident report.
+
+**Two strategies depending on data freshness requirements:**
+
+---
+
+**Strategy 1: ISR (Incremental Static Regeneration) - For Static/Infrequent Updates**
+
+Use for product review pages, blog posts, and content that changes infrequently.
 
 ```typescript
-// ✅ CORRECT - ISR caching
+// ✅ CORRECT - ISR caching (most pages)
 export const revalidate = 3600        // Revalidate every hour
-export const fetchCache = 'force-cache'
 
 export default async function ReviewPage() {
   const product = await getProductBySlug('product-slug')
-  // ...
+  // Page will be cached and regenerated every hour
 }
 ```
 
-**❌ WRONG - Force dynamic:**
-```typescript
-export const dynamic = 'force-dynamic'  // Don't use this
-```
-
-**Why ISR:**
-- Pages cached for 1 hour
+**Benefits:**
 - Fast page loads (served from cache)
-- Automatic revalidation (fresh data)
+- Automatic revalidation (fresh data every hour)
 - Lower database load
 - Better user experience
+
+**Build output:** `○` (Static)
+
+---
+
+**Strategy 2: Force Dynamic - For Real-Time Data**
+
+Use ONLY for pages that MUST show real-time database data (e.g., `/reviews` landing page).
+
+```typescript
+// ✅ CORRECT - Truly dynamic (use sparingly!)
+export const dynamic = 'force-dynamic'      // Don't pre-render
+export const revalidate = 0                 // Never cache (no ISR)
+export const fetchCache = 'force-no-store'  // Force fresh fetches
+
+export default async function DynamicPage() {
+  const products = await getAllProducts()
+  // Always fetches fresh data on every request
+}
+```
+
+**⚠️ ALL THREE EXPORTS REQUIRED!**
+`force-dynamic` alone is NOT enough! Must also set `revalidate = 0` and `fetchCache = 'force-no-store'`.
+
+**Benefits:**
+- Always shows latest database data
+- No stale content issues
+- Immediate updates when data changes
+
+**Drawbacks:**
+- Slower page loads (hits database every time)
+- Higher database load
+- Higher server costs
+
+**Build output:** `ƒ` (Dynamic)
+
+---
+
+**Verification:**
+
+After `npm run build`, check the build output:
+
+```bash
+# ISR (cached) - GOOD for most pages
+├ ○ /reviews/product-name    213 B    207 kB
+
+# Dynamic (uncached) - ONLY use when necessary
+├ ƒ /reviews                 2.5 kB   210 kB
+```
+
+**If you see `○` but expected `ƒ`**, your page is being cached despite `force-dynamic`!
+
+---
+
+**Quick Reference:**
+
+| Use Case | Strategy | Exports Needed |
+|----------|----------|----------------|
+| Product reviews | ISR | `revalidate = 3600` |
+| Blog posts | ISR | `revalidate = 3600` |
+| Reviews landing | Dynamic | All 3: `force-dynamic`, `revalidate = 0`, `fetchCache = 'force-no-store'` |
+| Static pages | Static | None (default) |
 
 ---
 
