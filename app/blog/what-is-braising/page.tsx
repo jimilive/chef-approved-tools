@@ -93,7 +93,7 @@ export default function BraisingPage() {
           </p>
 
           <p>
-            After 24 years in professional kitchens—including managing operations at Mellow Mushroom where we&apos;d braise 40-pound batches of short ribs for weekend specials—I can tell you that braising is the technique that separates cooks who just follow recipes from cooks who truly understand how to coax maximum flavor and texture from ingredients.
+            After 24 years in professional kitchens—including at Purple Café where the braised short rib risotto could make you sleepy and fulfilled after one bite—I can tell you that braising is the technique that separates cooks who just follow recipes from cooks who truly understand how to coax maximum flavor and texture from ingredients.
           </p>
 
           <p>
@@ -106,7 +106,7 @@ export default function BraisingPage() {
               Restaurant Reality
             </h3>
             <p className="mb-0">
-              At Mellow Mushroom, our braised short ribs were legendary. We&apos;d braise them for 3-4 hours until the bones practically fell out when you touched them with tongs. The meat wasn&apos;t just tender—it was silky, rich, and deeply flavored in a way that expensive cuts never achieve. Customers would ask what our &quot;secret&quot; was. The secret was time, patience, and understanding that collagen is your friend when you cook low and slow. This is why professional kitchens treasure &quot;cheap&quot; cuts—we know they taste better when cooked right.
+              At Purple Café, the braised short rib risotto was legendary. The short ribs were braised for 3-4 hours until the bones practically fell out when you touched them with tongs. The meat wasn&apos;t just tender—it was silky, rich, and deeply flavored in a way that expensive cuts never achieve. One bite would make you sleepy and fulfilled—that&apos;s the power of proper braising. The secret was time, patience, and understanding that collagen is your friend when you cook low and slow. This is why professional kitchens treasure &quot;cheap&quot; cuts—we know they taste better when cooked right.
             </p>
           </div>
 
