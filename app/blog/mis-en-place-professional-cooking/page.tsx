@@ -111,7 +111,7 @@ export default function MiseEnPlacePage() {
               Restaurant Reality: The Sacred Prep Hour
             </p>
             <p className="mb-0">
-              At Mellow Mushroom, we had a strict rule: <strong>no cook touched the line until their mise was complete and inspected</strong>. I&apos;d walk the line with the Chef, checking every station. Onions diced consistently? Check. Sauce portioned in squeeze bottles? Check. Six-pans full and labeled? Check. Backup prepped and stored? Check. If your mise wasn&apos;t perfect, you weren&apos;t cooking during service—you were scrambling. And scrambling in a busy restaurant is how tickets die, food gets sent back, and cooks get fired. Mise en place wasn&apos;t a suggestion; it was survival. <strong>The lesson:</strong> Prep time is never wasted time. It&apos;s an investment that pays massive dividends when you&apos;re in the middle of cooking.
+              In professional kitchens, there&apos;s a strict rule: <strong>no cook touches the line until their mise is complete and inspected</strong>. Chef walks the line, checking every station. Onions diced consistently? Check. Sauce portioned in squeeze bottles? Check. Six-pans full and labeled? Check. Backup prepped and stored? Check. If your mise isn&apos;t perfect, you&apos;re not cooking during service—you&apos;re scrambling. And scrambling in a busy restaurant is how tickets die, food gets sent back, and cooks get fired. Mise en place isn&apos;t a suggestion; it&apos;s survival. <strong>The lesson:</strong> Prep time is never wasted time. It&apos;s an investment that pays massive dividends when you&apos;re in the middle of cooking.
             </p>
           </div>
 
