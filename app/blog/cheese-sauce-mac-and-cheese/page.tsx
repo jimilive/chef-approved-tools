@@ -89,7 +89,7 @@ export default function CheeseSaucePage() {
           </p>
 
           <p>
-            After 24 years in professional kitchens—including preparing thousands of mac and cheese orders at Mellow Mushroom and working garde manger stations at Purple Café where perfect sauces were non-negotiable—I can tell you that cheese sauce failures almost always come down to one thing: <strong>adding cheese at too high a temperature.</strong>
+            After 24 years in professional kitchens—including at Purple Café where our lobster mac and cheese was legendary—I can tell you that cheese sauce failures almost always come down to one thing: <strong>adding cheese at too high a temperature.</strong> When you&apos;re using Gruyère for lobster mac, you can&apos;t screw up a batch. Perfect sauces were non-negotiable.
           </p>
 
           <p>
