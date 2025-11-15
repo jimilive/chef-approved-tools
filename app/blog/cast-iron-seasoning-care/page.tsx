@@ -223,7 +223,7 @@ export default function CastIronCarePage() {
               Restaurant Reality: The Cast Iron Skillet Rule
             </p>
             <p className="mb-0">
-              At Mellow Mushroom, we had a 12-inch Lodge cast iron skillet that was older than most of the staff. It had been seasoned, used, and re-seasoned thousands of times. The surface was jet black, glass-smooth, and more non-stick than any Teflon pan in the building. <strong>The secret?</strong> It was used every single day. We cooked pizzas, cornbread, roasted vegetables, and seared steaks in it. After each use, we wiped it out, rinsed it if needed, dried it on the stove, and rubbed a thin layer of oil on it before putting it away. That&apos;s it. No obsessive scrubbing. No fancy oils. Just <strong>consistent use and simple care.</strong> The lesson: cast iron gets better with use. Don&apos;t baby it. Use it.
+              In professional kitchens, the oldest cast iron skillets are often the best performers. After being seasoned, used, and re-seasoned thousands of times, they develop surfaces that are jet black, glass-smooth, and more non-stick than any Teflon pan. <strong>The secret?</strong> Daily use. Cooking pizzas, cornbread, roasted vegetables, and seared steaks. After each use, wiping out, rinsing if needed, drying on the stove, and rubbing a thin layer of oil before storage. That&apos;s it. No obsessive scrubbing. No fancy oils. Just <strong>consistent use and simple care.</strong> The lesson: cast iron gets better with use. Don&apos;t baby it. Use it.
             </p>
           </div>
 
@@ -454,7 +454,7 @@ export default function CastIronCarePage() {
           </p>
 
           <p>
-            If you live in a humid climate, wipe the inside with a drop of oil once a week even if you&apos;re not using it. At Mellow Mushroom, we stored cast iron on open shelves near the ovens—the warmth and air circulation kept them bone-dry. At home, avoid storing cast iron in cabinets near the sink or dishwasher, where humidity accumulates.
+            If you live in a humid climate, wipe the inside with a drop of oil once a week even if you&apos;re not using it. In professional kitchens, cast iron is often stored on open shelves near ovens—the warmth and air circulation keep them bone-dry. At home, avoid storing cast iron in cabinets near the sink or dishwasher, where humidity accumulates.
           </p>
 
           <p>
