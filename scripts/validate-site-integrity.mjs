@@ -503,13 +503,18 @@ let isrIssues = []
 pageFiles.forEach(({ folder, path }) => {
   const content = readFileSync(path, 'utf-8')
 
-  // Check for force-dynamic (WRONG - disables caching)
-  if (content.includes("export const dynamic = 'force-dynamic'")) {
+  // Check for force-dynamic WITHOUT full cache-busting (WRONG)
+  const hasForceDynamic = content.includes("export const dynamic = 'force-dynamic'")
+  const hasRevalidateZero = content.includes('export const revalidate = 0')
+  const hasFetchNoStore = content.includes("export const fetchCache = 'force-no-store'")
+
+  // Allow force-dynamic ONLY if all three cache-busting exports are present
+  if (hasForceDynamic && !(hasRevalidateZero && hasFetchNoStore)) {
     isrIssues.push({
       file: `app/reviews/${folder}/page.tsx`,
-      issue: 'Uses force-dynamic (disables caching - should use ISR)',
+      issue: 'Uses force-dynamic without full cache-busting (must have all 3 exports)',
       severity: 'error',
-      fix: 'Use: export const revalidate = 3600'
+      fix: 'Add: export const revalidate = 0 AND export const fetchCache = \'force-no-store\''
     })
     errors++
   }
