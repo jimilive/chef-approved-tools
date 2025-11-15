@@ -167,6 +167,7 @@ export default async function ChefApprovedKitchenKit() {
                   alt="Scott Bradley - Professional Chef"
                   fill
                   sizes="64px"
+                  quality={75}
                   className="object-cover"
                 />
               </div>
@@ -223,6 +224,7 @@ export default async function ChefApprovedKitchenKit() {
                       width={160}
                       height={160}
                       sizes="(max-width: 768px) 160px, 200px"
+                      quality={75}
                       className="object-contain opacity-50"
                     />
                   </div>
@@ -321,6 +323,7 @@ export default async function ChefApprovedKitchenKit() {
                       width={200}
                       height={200}
                       sizes="(max-width: 768px) 200px, 250px"
+                      quality={75}
                       className="object-contain opacity-50"
                     />
                   </div>
@@ -407,6 +410,7 @@ export default async function ChefApprovedKitchenKit() {
                   width={240}
                   height={240}
                   sizes="240px"
+                  quality={75}
                   className="object-contain opacity-50"
                 />
               </div>

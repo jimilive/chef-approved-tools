@@ -181,6 +181,7 @@ export default function AboutPage() {
                 src="/images/team/head-shot-1.jpg"
                 alt="Scott Bradley - Professional Chef"
                 fill
+                quality={75}
                 className="object-cover rounded-full shadow-xl border-4 border-orange-500"
                 priority
               />

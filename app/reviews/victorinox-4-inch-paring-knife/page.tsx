@@ -184,6 +184,7 @@ export default async function ProductReview() {
                     alt="Victorinox 4-inch Paring Knife"
                     width={800}
                     height={600}
+                    quality={75}
                     className="rounded-lg w-full h-auto"
                     priority
                   />

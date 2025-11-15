@@ -55,6 +55,7 @@ export default function TestHeaderPage() {
                   width={48}
                   height={48}
                   sizes="48px"
+                  quality={75}
                   className="h-12 w-auto drop-shadow-lg"
                   priority
                 />

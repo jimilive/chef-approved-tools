@@ -242,6 +242,7 @@ export default function HomePage() {
                   alt="Pot roast dinner plated"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={75}
                   loading="lazy"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -270,6 +271,7 @@ export default function HomePage() {
                   alt="Perfect eggs cooking"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={75}
                   loading="lazy"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -298,6 +300,7 @@ export default function HomePage() {
                   alt="BBQ ribs on sheet pan"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={75}
                   loading="lazy"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
