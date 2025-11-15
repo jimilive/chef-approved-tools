@@ -50,6 +50,14 @@ export default function ProductComparisonTable({
     }
   }
 
+  // Helper to detect affiliate network from URL
+  const getButtonText = (affiliateLink: string) => {
+    if (affiliateLink.includes('amazon.com') || affiliateLink.includes('amzn.to')) {
+      return 'Check Price on Amazon'
+    }
+    return 'Check Current Price →'
+  }
+
   // Helper to render cell value
   const renderCellValue = (product: Record<string, any>, row: ComparisonRow) => {
     const value = product[row.field]
@@ -160,7 +168,7 @@ export default function ProductComparisonTable({
                         : 'bg-white border-2 border-orange-600 text-orange-700 hover:bg-orange-50'
                     }`}
                   >
-                    Check Current Price →
+                    {getButtonText(product.affiliateLink)}
                   </a>
                 </td>
               ))}
@@ -211,7 +219,7 @@ export default function ProductComparisonTable({
                   : 'bg-white border-2 border-orange-600 text-orange-700 hover:bg-orange-50'
               }`}
             >
-              Check Current Price →
+              {getButtonText(product.affiliateLink)}
             </a>
           </div>
         ))}

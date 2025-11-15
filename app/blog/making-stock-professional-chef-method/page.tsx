@@ -99,16 +99,7 @@ export default function MakingStockPage() {
           lastUpdated="2025-11-14"
           readTime="12 min read"
         />
-
-        <div className="prose prose-lg prose-slate max-w-3xl mx-auto
-  prose-headings:font-bold prose-headings:text-slate-900 prose-headings:mb-4
-  prose-h2:text-3xl prose-h2:mt-8 prose-h3:text-xl prose-h3:mt-6
-  prose-p:text-lg prose-p:leading-relaxed prose-p:mb-6 prose-p:text-slate-700
-  prose-ul:my-6 prose-ul:space-y-2 prose-li:leading-relaxed
-  prose-strong:text-slate-900 prose-strong:font-semibold
-  prose-a:text-orange-700 prose-a:no-underline hover:prose-a:underline
-  bg-white rounded-xl shadow-lg p-8 mb-8">
-          
+        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           {/* Table of Contents */}
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
             <h4 className="font-bold text-blue-800 mb-3">In This Guide:</h4>

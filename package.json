@@ -63,6 +63,7 @@
   },
   "devDependencies": {
     "@axe-core/cli": "^4.10.2",
+    "@tailwindcss/typography": "^0.5.19",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
     "@types/node": "20.14.10",

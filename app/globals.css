@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global reset */
-* {
+/* Base styles - REMOVED global margin/padding reset that conflicts with prose */
+body {
   margin: 0;
   padding: 0;
+}
+
+/* Apply box-sizing globally but not margin/padding reset */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -185,4 +191,52 @@ button {
 
 .spinner {
   animation: spin 1s linear infinite;
+}
+/* PROSE CONTENT OVERRIDES - Ensure blog content always looks correct */
+.prose {
+  max-width: none;
+}
+
+.prose p {
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+}
+
+.prose h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.prose h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.prose ul {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.prose a {
+  color: #c2410c;
+  text-decoration: none;
+}
+
+.prose a:hover {
+  text-decoration: underline;
 }
