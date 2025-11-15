@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import { getBlogMetadata } from '@/data/metadata'
 
 export interface BlogPost {
   slug: string
@@ -29,25 +30,25 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
     if (!fs.existsSync(pagePath)) continue
 
     try {
+      // Get title and description from centralized metadata
+      const metadata = getBlogMetadata(slug)
+      const title = metadata.title
+      const excerpt = metadata.description
+
       const content = fs.readFileSync(pagePath, 'utf-8')
 
-      // Check if this is a data-driven post (imports from a data file)
-      // Updated regex to handle quotes inside strings by matching until the closing quote that matches the opening quote
-      let titleMatch = content.match(/title:\s*'([^']*(?:\\'[^']*)*)'/s) || content.match(/title:\s*"([^"]*(?:\\"[^"]*)*)"/s)
-      let descriptionMatch = content.match(/description:\s*'([^']*(?:\\'[^']*)*)'/s) || content.match(/description:\s*"([^"]*(?:\\"[^"]*)*)"/s)
+      // Try to extract publish date from page content
       let datePublishedMatch = content.match(/datePublished:\s*["'](\d{4}-\d{2}-\d{2})["']/)
 
-      // Check for data file pattern (e.g., comparisonData.metadata.title)
-      const dataFileMatch = content.match(/from\s+['"]\.\/(.*?-data(?:\.ts)?)['"]/i)
-      if (dataFileMatch && !titleMatch) {
-        // Try to read the data file
-        const dataFilePath = path.join(blogDir, slug, dataFileMatch[1].endsWith('.ts') ? dataFileMatch[1] : `${dataFileMatch[1]}.ts`)
-        if (fs.existsSync(dataFilePath)) {
-          const dataContent = fs.readFileSync(dataFilePath, 'utf-8')
-          // Extract from data file
-          titleMatch = dataContent.match(/title:\s*'([^']*(?:\\'[^']*)*)'/s) || dataContent.match(/title:\s*"([^"]*(?:\\"[^"]*)*)"/s)
-          descriptionMatch = dataContent.match(/description:\s*'([^']*(?:\\'[^']*)*)'/s) || dataContent.match(/description:\s*"([^"]*(?:\\"[^"]*)*)"/s)
-          datePublishedMatch = dataContent.match(/publishedDate:\s*["'](\d{4}-\d{2}-\d{2})["']/)
+      // Check for data file pattern if date not found
+      if (!datePublishedMatch) {
+        const dataFileMatch = content.match(/from\s+['"]\.\/(.*?-data(?:\.ts)?)['"]/i)
+        if (dataFileMatch) {
+          const dataFilePath = path.join(blogDir, slug, dataFileMatch[1].endsWith('.ts') ? dataFileMatch[1] : `${dataFileMatch[1]}.ts`)
+          if (fs.existsSync(dataFilePath)) {
+            const dataContent = fs.readFileSync(dataFilePath, 'utf-8')
+            datePublishedMatch = dataContent.match(/publishedDate:\s*["'](\d{4}-\d{2}-\d{2})["']/)
+          }
         }
       }
 
@@ -58,7 +59,6 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
       const readTime = `${estimatedMinutes} min read`
 
       // Determine category - check slug and title first for most accurate categorization
-      const title = titleMatch ? titleMatch[1].replace(/\\'/g, "'").replace(/\\"/g, '"') : slug.replace(/-/g, ' ')
       const titleLower = title.toLowerCase()
       const slugLower = slug.toLowerCase()
 
@@ -119,9 +119,8 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
       }
       // Everything else defaults to Cooking Techniques
 
-      // Clean up escaped characters for other fields
+      // Clean up date
       const publishDate = datePublishedMatch ? datePublishedMatch[1] : '2024-01-01'
-      const excerpt = descriptionMatch ? descriptionMatch[1].replace(/\\'/g, "'").replace(/\\"/g, '"') : ''
 
       // Featured posts
       const featured = slug === 'best-scrambled-eggs'
