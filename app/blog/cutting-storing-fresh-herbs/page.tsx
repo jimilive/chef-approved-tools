@@ -577,7 +577,7 @@ export default function HerbsPage() {
               Chef&apos;s Insight
             </p>
             <p className="mb-0 text-slate-700">
-              At Mellow Mushroom, we grew our own basil and always had excess. Freezing in oil cubes worked perfectly for pizza sauce, but for fresh applications, nothing beats fresh basil. Know what you&apos;re using herbs for, then store accordingly.
+              At Purple Café, proper basil handling was critical. Use a razor-sharp, finely-steeled knife for clean cuts—dull blades bruise the leaves and cause oxidation. Never push down on basil to fit more in your storage container; the pressure bruises it and turns it black. For fresh applications, nothing beats fresh basil. Know what you&apos;re using herbs for, then store accordingly.
             </p>
           </div>
 
