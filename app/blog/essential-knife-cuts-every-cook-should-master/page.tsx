@@ -103,7 +103,7 @@ export default function EssentialKnifeCutsPost() {
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
-            When I trained prep cooks at Mellow Mushroom, I&apos;d hand them a single onion and say, &quot;Cut it 100 times the same way.&quot; No shortcuts, no tricks — just repetition. Two weeks later, they&apos;d be twice as fast and ten times more accurate.
+            In professional kitchens, new cooks learn through repetition—cutting a single onion 100 times the same way. No shortcuts, no tricks — just repetition. Two weeks later, they&apos;re twice as fast and ten times more accurate.
           </p>
 
           <p>
