@@ -128,7 +128,7 @@ export default function KnifeStorageProtectionPage() {
           </p>
 
           <p>
-            I&apos;ve seen it all—knife blocks crusted with years of dust, magnetic strips hanging dangerously close to stoves, and drawers that might as well be knife graveyards. When I managed kitchens at Mellow Mushroom in the late &apos;90s, every cook had their own method. One guy kept his knives in a leather roll, another used a strip above the prep table, and one poor soul jammed his chef&apos;s knife into the utensil drawer (that didn&apos;t last long).
+            I&apos;ve seen it all—knife blocks crusted with years of dust, magnetic strips hanging dangerously close to stoves, and drawers that might as well be knife graveyards. In professional kitchens, every cook has their own method. Some keep knives in leather rolls, others use strips above prep tables, and some make the mistake of jamming chef&apos;s knives into utensil drawers (that never lasts long).
           </p>
 
           <p>
@@ -544,7 +544,7 @@ export default function KnifeStorageProtectionPage() {
           </p>
 
           <p>
-            Every bump chips your blade. A drawer insert solves this, but only if knives never touch. Loose storage is a recipe for dull knives and cut fingers. I&apos;ve seen knife edges chipped beyond repair from months in a junk drawer. One cook at Mellow Mushroom brought in a &quot;new&quot; knife that looked like it had been through a blender. Turned out he&apos;d been storing it next to metal spatulas and tongs for six months.
+            Every bump chips your blade. A drawer insert solves this, but only if knives never touch. Loose storage is a recipe for dull knives and cut fingers. I&apos;ve seen knife edges chipped beyond repair from months in a junk drawer. Professional cooks sometimes bring in &quot;new&quot; knives that look like they&apos;ve been through a blender. Often it&apos;s from storing them next to metal spatulas and tongs for months.
           </p>
 
           <h3 className="text-xl font-semibold text-slate-900 mt-6 mb-3">
@@ -659,7 +659,7 @@ export default function KnifeStorageProtectionPage() {
 
           <div className="bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-600 p-6 my-12 rounded-r-lg">
             <p className="text-slate-900 mb-0">
-              <strong>About the Author:</strong> Scott Bradley has 24 years of professional kitchen experience, trained at Seattle Central Culinary, and served as Kitchen Manager at Mellow Mushroom (1992-1994). He specializes in teaching home cooks the professional techniques that create consistent, restaurant-quality results.
+              <strong>About the Author:</strong> Scott Bradley has 24 years of professional kitchen experience, trained at Seattle Central Culinary, and served as Kitchen Manager at Mellow Mushroom (1992-1994). He specializes in home cooking using the professional techniques that create consistent, restaurant-quality results.
             </p>
           </div>
 
