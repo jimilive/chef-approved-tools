@@ -6,6 +6,7 @@ import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import AuthorBio from '@/components/review/AuthorBio';
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers';
 import { getGuideMetadata } from '@/data/metadata';
+import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 // Force dynamic rendering since we fetch from Supabase
 export const dynamic = 'force-dynamic'
@@ -49,8 +50,38 @@ export default async function AffordableKitchenAppliancesPage() {
   const airFryerUrl = products[4] ? getPrimaryAffiliateLink(products[4]) : 'https://amzn.to/4q8G9Pn'
   const pizzaOvenUrl = 'https://amzn.to/4qfaiMU' // Fallback - product not in database yet
 
+  // Generate schemas
+  const articleSchema = generateArticleSchema({
+    headline: guideMetadata.title,
+    description: guideMetadata.description,
+    datePublished: '2025-11-10',
+    dateModified: '2025-11-10',
+    slug: 'affordable-kitchen-appliances',
+    urlPrefix: 'guides',
+    imageUrl: guideMetadata.imageUrl,
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+    { name: 'Guides', url: 'https://www.chefapprovedtools.com/guides' },
+    { name: 'Affordable Kitchen Appliances', url: 'https://www.chefapprovedtools.com/guides/affordable-kitchen-appliances' }
+  ])
+
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Schema.org markup */}
+      {articleSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+      )}
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

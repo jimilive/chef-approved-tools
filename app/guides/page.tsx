@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import FAQSchema from '@/components/FAQSchema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import { generateBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Kitchen Equipment Buying Guides From A Professional Chef',
@@ -39,9 +40,40 @@ export default function GuidesPage() {
     { title: "Knife Care & Maintenance", description: "Keep your blades sharp and safe", href: "/guides/knife-care" }
   ];
 
+  // Generate schemas
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+    { name: 'Guides', url: 'https://www.chefapprovedtools.com/guides' }
+  ])
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Kitchen Equipment Buying Guides",
+    "description": "Expert buying guides from a professional chef with 24 years restaurant experience",
+    "numberOfItems": guides.length,
+    "itemListElement": guides.map((guide, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "url": `https://www.chefapprovedtools.com${guide.href}`,
+      "name": guide.title,
+      "description": guide.description
+    }))
+  }
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <FAQSchema faqs={guidesFAQs} />
+
+      {/* Additional Schema.org markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
 
       <div className="max-w-3xl mx-auto mb-12">
         <h1 className="text-4xl font-bold mb-4">

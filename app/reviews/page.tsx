@@ -1,5 +1,6 @@
 import { getAllProducts } from '@/lib/product-helpers'
 import { EDITORIAL_METADATA } from '@/lib/editorial-metadata'
+import { generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import ReviewsClient from './ReviewsClient'
 
 export const dynamic = 'force-dynamic'
@@ -33,5 +34,33 @@ export default async function ReviewsPage() {
   // Map products to review format
   const reviews = products.map((product, index) => mapProductToReview(product, index))
 
-  return <ReviewsClient reviews={reviews} />
+  // Generate schemas
+  const itemListSchema = generateItemListSchema(
+    products,
+    'Professional Kitchen Equipment Reviews'
+  )
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+    { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' }
+  ])
+
+  return (
+    <>
+      {/* Schema.org markup */}
+      {itemListSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+      )}
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
+      <ReviewsClient reviews={reviews} />
+    </>
+  )
 }

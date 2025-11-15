@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import AuthorBio from '@/components/review/AuthorBio'
 import { getGuideMetadata } from '@/data/metadata'
+import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
 const guideMetadata = getGuideMetadata('knife-care')
 
@@ -26,8 +27,39 @@ export const metadata: Metadata = {
 }
 
 export default function KnifeCareGuidePage() {
+  // Generate schemas
+  const articleSchema = generateArticleSchema({
+    headline: guideMetadata.title,
+    description: guideMetadata.description,
+    datePublished: '2025-11-10',
+    dateModified: '2025-11-10',
+    slug: 'knife-care',
+    urlPrefix: 'guides',
+    imageUrl: guideMetadata.imageUrl,
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+    { name: 'Guides', url: 'https://www.chefapprovedtools.com/guides' },
+    { name: 'Knife Care', url: 'https://www.chefapprovedtools.com/guides/knife-care' }
+  ])
+
   return (
     <main className="min-h-screen bg-gray-50">
+      {/* Schema.org markup */}
+      {articleSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        />
+      )}
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <header>
           <h1 className="text-4xl font-bold text-slate-900 mb-4">
