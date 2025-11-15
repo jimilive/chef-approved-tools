@@ -96,7 +96,7 @@ export default function BlanchingVegetablesPage() {
           </p>
 
           <p>
-            Back when I ran prep at Mellow Mushroom, our mornings were a ballet of boiling and ice water. We&apos;d blanch cases of broccoli, asparagus, and peppers before lunch rush—so they&apos;d reheat perfectly without overcooking.
+            At Purple Café, our mornings were a ballet of boiling and ice water. We&apos;d blanch broccoli, asparagus, and green beans before lunch rush—so they&apos;d reheat perfectly without overcooking.
           </p>
 
           <p>
@@ -483,7 +483,7 @@ export default function BlanchingVegetablesPage() {
           </p>
 
           <p>
-            At Mellow Mushroom, we&apos;d blanch 20 pounds of vegetables every morning before service. By the time dinner rush hit, we could plate six different sides in under 10 minutes—all perfectly crisp, all brilliantly colored, all timed to finish together.
+            At Purple Café, we&apos;d blanch pounds of vegetables every morning before service. By the time dinner rush hit, we could plate six different sides in under 10 minutes—all perfectly crisp, all brilliantly colored, all timed to finish together.
           </p>
 
           <p>
@@ -492,7 +492,7 @@ export default function BlanchingVegetablesPage() {
 
           <div className="bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-600 p-6 my-12 rounded-r-lg">
             <p className="text-slate-900 mb-0">
-              <strong>About the Author:</strong> Scott Bradley spent 24 years in professional kitchens, including running prep operations at Mellow Mushroom. He specializes in teaching home cooks the professional techniques that create consistent, restaurant-quality results.
+              <strong>About the Author:</strong> Scott Bradley spent 24 years in professional kitchens, including 6 years at Purple Café in Seattle. He specializes in teaching home cooks the professional techniques that create consistent, restaurant-quality results.
             </p>
           </div>
 
