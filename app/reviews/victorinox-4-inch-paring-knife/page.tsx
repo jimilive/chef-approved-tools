@@ -95,13 +95,13 @@ export default async function ProductReview() {
       : reviewData.legacyProductData.affiliateLinks
   } : reviewData.legacyProductData
 
-  // Get affiliate URLs for both size variants
+  // Get affiliate URLs for both size variants from the SAME product
   const link4inch = product?.affiliateLinks.find(link => link.tag === '4-inch')
   const link325inch = product?.affiliateLinks.find(link => link.tag === '3.25-inch')
 
-  // Use tagged links if available, otherwise use primary for 4"
+  // Use tagged links if available, otherwise use primary
   const affiliateUrl4inch = link4inch?.url || (product ? getPrimaryAffiliateLink(product) : '#')
-  const affiliateUrl325inch = link325inch?.url || '' // TODO: Add 3.25" variant to database
+  const affiliateUrl325inch = link325inch?.url || ''
 
   // Generate breadcrumbs
   const breadcrumbs = [

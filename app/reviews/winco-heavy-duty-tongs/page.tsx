@@ -95,12 +95,12 @@ export default async function ProductReview() {
       : reviewData.legacyProductData.affiliateLinks
   } : reviewData.legacyProductData
 
-  // Get affiliate URLs for both size variants
+  // Get affiliate URLs for both size variants from the SAME product
   const link12inch = product?.affiliateLinks.find(link => link.tag === '12-inch')
   const link9inch = product?.affiliateLinks.find(link => link.tag === '9-inch')
 
   const affiliateUrl = link12inch?.url || (product ? getPrimaryAffiliateLink(product) : '#')
-  const variant9inchUrl = link9inch?.url || '' // TODO: Add 9" variant to database
+  const variant9inchUrl = link9inch?.url || ''
 
   // Generate breadcrumbs
   const breadcrumbs = [

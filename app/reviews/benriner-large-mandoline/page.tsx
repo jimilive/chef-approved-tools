@@ -107,8 +107,14 @@ export default async function BenrinerLargeMandolineReview() {
       : reviewData.legacyProductData.affiliateLinks
   } : reviewData.legacyProductData
 
-  // Get primary affiliate link (for Large size)
-  const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
+  // Get affiliate links for both size variants from the SAME product
+  // Note: Using type assertion since database has additional fields not in TS type
+  const links = product?.affiliateLinks as any[]
+  const linkLarge = links?.find((link: any) => link.is_primary === true)
+  const linkOriginal = links?.find((link: any) => link.is_primary === false)
+
+  const affiliateUrl = linkLarge?.url || (product ? getPrimaryAffiliateLink(product) : '#')
+  const affiliateUrlMedium = linkOriginal?.url || ''
 
   // Generate breadcrumbs
   const breadcrumbs = [
@@ -197,7 +203,7 @@ export default async function BenrinerLargeMandolineReview() {
                       id: 'medium',
                       label: 'Original',
                       description: 'Compact size with 3 julienne blade inserts. Includes hand guard.',
-                      affiliateUrl: '', // TODO: Add Benriner Original (medium) to database
+                      affiliateUrl: affiliateUrlMedium,
                       ctaId: 'hero-cta-medium'
                     }
                   ]}
@@ -218,17 +224,16 @@ export default async function BenrinerLargeMandolineReview() {
                       → View Large {productData.name} on Amazon
                     </a>
                   </p>
-                  {/* TODO: Add Benriner Original (medium) to database */}
-                  {/* <p className="text-sm">
+                  <p className="text-sm">
                     <a
-                      href=""
+                      href={affiliateUrlMedium}
                       className="text-orange-700 hover:text-orange-800 underline font-medium"
                       target="_blank"
                       rel="noopener noreferrer sponsored"
                     >
                       → View Original Benriner on Amazon
                     </a>
-                  </p> */}
+                  </p>
                 </div>
               </div>
             }
@@ -330,7 +335,7 @@ export default async function BenrinerLargeMandolineReview() {
                       id: 'medium',
                       label: 'Original',
                       description: 'Compact size with 3 julienne blade inserts. Includes hand guard.',
-                      affiliateUrl: '', // TODO: Add Benriner Original (medium) to database
+                      affiliateUrl: affiliateUrlMedium,
                       ctaId: 'where-to-buy-medium'
                     }
                   ]}
@@ -351,17 +356,16 @@ export default async function BenrinerLargeMandolineReview() {
                       → View Large {productData.name} on Amazon
                     </a>
                   </p>
-                  {/* TODO: Add Benriner Original (medium) to database */}
-                  {/* <p className="text-sm">
+                  <p className="text-sm">
                     <a
-                      href=""
+                      href={affiliateUrlMedium}
                       className="text-orange-700 hover:text-orange-800 underline font-medium"
                       target="_blank"
                       rel="noopener noreferrer sponsored"
                     >
                       → View Original Benriner on Amazon
                     </a>
-                  </p> */}
+                  </p>
                 </div>
               </div>
             </div>
@@ -394,7 +398,7 @@ export default async function BenrinerLargeMandolineReview() {
                       id: 'medium',
                       label: 'Original',
                       description: 'Compact size with 3 julienne blade inserts. Includes hand guard.',
-                      affiliateUrl: '', // TODO: Add Benriner Original (medium) to database
+                      affiliateUrl: affiliateUrlMedium,
                       ctaId: 'bottom-line-medium'
                     }
                   ]}
@@ -415,17 +419,16 @@ export default async function BenrinerLargeMandolineReview() {
                       → View Large {productData.name} on Amazon
                     </a>
                   </p>
-                  {/* TODO: Add Benriner Original (medium) to database */}
-                  {/* <p className="text-sm">
+                  <p className="text-sm">
                     <a
-                      href=""
+                      href={affiliateUrlMedium}
                       className="text-orange-700 hover:text-orange-800 underline font-medium"
                       target="_blank"
                       rel="noopener noreferrer sponsored"
                     >
                       → View Original Benriner on Amazon
                     </a>
-                  </p> */}
+                  </p>
                 </div>
               </div>
             }

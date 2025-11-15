@@ -29,12 +29,13 @@ export default async function HowToSteelAKnife() {
   const products = await Promise.all([
     getProductBySlug('victorinox-fibrox-8-inch-chefs-knife'),
     getProductBySlug('victorinox-fibrox-10-inch-chefs-knife'),
+    getProductBySlug('henckels-sharpening-steel'),
   ])
 
   // Get affiliate URLs from database
   const victorinox8Url = products[0] ? getPrimaryAffiliateLink(products[0]) : ''
   const victorinox10Url = products[1] ? getPrimaryAffiliateLink(products[1]) : ''
-  const henckelsUrl = '' // TODO: Add Henckels sharpening steel to database
+  const henckelsUrl = products[2] ? getPrimaryAffiliateLink(products[2]) : ''
 
   return (
     <>

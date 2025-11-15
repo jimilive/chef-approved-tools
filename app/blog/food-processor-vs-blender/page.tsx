@@ -8,6 +8,7 @@ import BlogQuickAnswer from '@/components/blog/BlogQuickAnswer'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 
 export const metadata = generateBlogMetadata('food-processor-vs-blender')
 
@@ -111,7 +112,14 @@ const comparisonRows = [
   }
 ];
 
-export default function FoodProcessorVsBlenderPost() {
+export default async function FoodProcessorVsBlenderPost() {
+  // Fetch products from database
+  const cuisinartFP = await getProductBySlug('cuisinart-14-cup-food-processor')
+  const vitamix5200 = await getProductBySlug('vitamix-5200-professional-blender')
+
+  const cuisinartUrl = cuisinartFP ? getPrimaryAffiliateLink(cuisinartFP) : ''
+  const vitamixUrl = vitamix5200 ? getPrimaryAffiliateLink(vitamix5200) : ''
+
   return (
     <>
       {/* JSON-LD Structured Data */}
@@ -450,22 +458,21 @@ export default function FoodProcessorVsBlenderPost() {
             After 24 years testing equipment in professional and home kitchens, this is what lasts. The motor is strong enough for daily use but quiet enough for home kitchens. Expect 10-15 years of regular home use.
           </p>
 
-          {/* TODO: Add Cuisinart 14-Cup Food Processor (ASIN: B01AXM4WV2) to database and fetch via getProductBySlug */}
-          {/* <CTAVisibilityTracker
+          <CTAVisibilityTracker
             ctaId="food-processor-vs-blender-cuisinart-fp"
             position="mid_article"
-            productSlug="food-processor-vs-blender"
+            productSlug="cuisinart-14-cup-food-processor"
             merchant="amazon"
           >
             <a
-              href="https://amazon.com/dp/B01AXM4WV2?tag=chefapprovedt-20"
+              href={cuisinartUrl}
               className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer sponsored"
             >
               Check Price on Amazon →
             </a>
-          </CTAVisibilityTracker> */}
+          </CTAVisibilityTracker>
 
           <h3>Blenders</h3>
 
@@ -485,22 +492,21 @@ export default function FoodProcessorVsBlenderPost() {
             Professional blenders cost more upfront, but after testing dozens of models in kitchens over 24 years, the Vitamix&rsquo;s durability justifies the investment. Expect 15-20 years of home use based on restaurant testing.
           </p>
 
-          {/* TODO: Fetch Vitamix 5200 from database using getProductBySlug('vitamix-5200-professional-blender') */}
-          {/* <CTAVisibilityTracker
+          <CTAVisibilityTracker
             ctaId="food-processor-vs-blender-vitamix-5200"
             position="mid_article"
-            productSlug="food-processor-vs-blender"
+            productSlug="vitamix-5200-professional-blender"
             merchant="amazon"
           >
             <a
-              href="https://amazon.com/dp/B008H4SLV6?tag=chefapprovedt-20"
+              href={vitamixUrl}
               className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer sponsored"
             >
               Check Price on Amazon →
             </a>
-          </CTAVisibilityTracker> */}
+          </CTAVisibilityTracker>
 
           <h2>The Bottom Line</h2>
 
