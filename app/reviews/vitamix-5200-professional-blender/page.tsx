@@ -22,7 +22,7 @@ import ProductComparisonTable from '@/components/comparison/ProductComparisonTab
 
 // Import review data
 import { reviewData } from './vitamix-5200-professional-blender-data'
-import { blenderComparisonData } from './blender-comparison-data'
+import { getBlenderComparison } from './get-blender-comparison'
 
 // ISR configuration for better performance
 export const revalidate = 3600 // 1 hour cache
@@ -107,6 +107,9 @@ export default async function ProductReview() {
   if (!product) {
     throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
   }
+
+  // Get comparison data with live affiliate links from database
+  const blenderComparisonData = await getBlenderComparison()
 
   // Merge Supabase data with legacy data
   const productData = product ? {

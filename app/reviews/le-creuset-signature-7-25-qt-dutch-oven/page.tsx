@@ -22,7 +22,7 @@ import ProductComparisonTable from '@/components/comparison/ProductComparisonTab
 
 // Import review data
 import { reviewData } from './le-creuset-signature-7-25-qt-dutch-oven-data'
-import { dutchOvenComparisonData } from './dutch-oven-comparison-data'
+import { getDutchOvenComparison } from './get-dutch-oven-comparison'
 
 // Use ISR for better performance - revalidate every hour for price changes
 export const revalidate = 3600 // 1 hour in seconds
@@ -109,6 +109,9 @@ export default async function LeCreusetDutchOvenReviewPage() {
   if (!product) {
     throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
   }
+
+  // Get comparison data with live affiliate links from database
+  const dutchOvenComparisonData = await getDutchOvenComparison()
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = product ? {
