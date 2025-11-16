@@ -29,6 +29,11 @@ const nextConfig: NextConfig = {
         destination: '/blog/oxidization-effect-on-food',
         permanent: true, // 301 redirect
       },
+      {
+        source: '/reviews/blenders',
+        destination: '/appliances',
+        permanent: true, // 301 redirect
+      },
     ];
   },
 
