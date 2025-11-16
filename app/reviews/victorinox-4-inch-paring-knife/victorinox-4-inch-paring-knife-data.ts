@@ -35,7 +35,7 @@ export const reviewData = {
     title: "Victorinox 4\" Paring Knife Review",
     authorName: "Scott Bradley",
     authorCredentials: "24 Years in Professional Kitchens",
-    rating: 5.0,
+    rating: 4.9,
     tierBadge: {
       icon: "🏆",
       text: "Tier 1: 20+ Years Professional Use"
@@ -288,7 +288,7 @@ export const reviewData = {
     slug: "victorinox-4-inch-paring-knife",
     brand: "Victorinox",
     category: "Kitchen Knives",
-    expertRating: 5.0,
+    expertRating: 4.9,
     expertOpinion: "After 24 years in professional kitchens, this Victorinox paring knife is my go-to for all precision work - the perfect balance of Swiss quality, razor-sharp performance, and affordability that makes it easy to keep multiple in rotation.",
     pros: [
       "Perfect 4-inch blade size provides complete control for precision tasks",

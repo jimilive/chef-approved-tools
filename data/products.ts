@@ -261,14 +261,14 @@ export const sampleProducts: ProductCollection = {
       primaryAffiliate: 'amazon',
 
       reviews: {
-        rating: 4.8,
+        rating: 5.0,
         count: 6234,
         verified: true,
         source: 'Amazon',
         lastUpdated: '2025-10-14T00:00:00Z'
       },
 
-      expertRating: 4.8,
+      expertRating: 5.0,
 
       pros: [
         'Longer blade perfect for larger cuts',
@@ -553,14 +553,14 @@ export const sampleProducts: ProductCollection = {
       primaryAffiliate: 'amazon',
 
       reviews: {
-        rating: 4.7,
+        rating: 4.9,
         count: 12453,
         verified: true,
         source: 'Amazon',
         lastUpdated: '2025-10-14T00:00:00Z'
       },
 
-      expertRating: 4.6,
+      expertRating: 4.9,
 
       pros: [
         'Essential for detailed work',

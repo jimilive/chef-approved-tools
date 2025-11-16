@@ -35,7 +35,7 @@ export const reviewData = {
     title: "Victorinox 10\" Chef's Knife Review",
     authorName: "Scott Bradley",
     authorCredentials: "24 Years in Professional Kitchens",
-    rating: 4.8,
+    rating: 5.0,
     tierBadge: {
       icon: "🏆",
       text: "Tier 1: 20+ Years Professional Use"
@@ -306,7 +306,7 @@ export const reviewData = {
     slug: "victorinox-fibrox-10-inch-chefs-knife",
     brand: "Victorinox",
     category: "Knives",
-    expertRating: 4.8,
+    expertRating: 5.0,
     expertOpinion: "After 20 years of use (including 10 in professional kitchens), the Victorinox 10-inch chef's knife is my go-to for breaking down whole proteins and large vegetable prep. The extra 2 inches makes a real difference for bigger hands and larger cutting tasks. Same professional quality as the 8-inch model—just sized for cooks who need more reach.",
     pros: [
       "Perfect length for breaking down whole chickens and large cuts",
