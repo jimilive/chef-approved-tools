@@ -8,10 +8,8 @@ import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 
-// CACHE-BUSTING: Prevent Next.js from serving stale HTML
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
-export const fetchCache = 'force-no-store'
+// ISR: Regenerate page every hour for fresh content while allowing search engine caching
+export const revalidate = 3600 // 1 hour
 
 
 export const metadata = generateBlogMetadata('meal-prep-station-setup-restaurant-efficiency')

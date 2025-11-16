@@ -27,10 +27,8 @@ import CompatibilityGuide from '@/components/review/custom/CompatibilityGuide'
 // Import review data
 import { reviewData } from './benriner-large-mandoline-data'
 
-// CACHE-BUSTING: Prevent Next.js from serving stale HTML
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
-export const fetchCache = 'force-no-store'
+// ISR: Regenerate page every hour for fresh content while allowing search engine caching
+export const revalidate = 3600 // 1 hour
 
 
 // Generate metadata dynamically

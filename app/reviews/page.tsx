@@ -3,9 +3,8 @@ import { EDITORIAL_METADATA } from '@/lib/editorial-metadata'
 import { generateItemListSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import ReviewsClient from './ReviewsClient'
 
-export const dynamic = 'force-dynamic'
-export const revalidate = 0 // Never cache - always fetch fresh data
-export const fetchCache = 'force-no-store'
+// ISR: Regenerate page every hour for fresh content while allowing search engine caching
+export const revalidate = 3600 // 1 hour
 
 export const metadata = {
   title: 'All Equipment Reviews: 37 Products Chef-Tested In Restaurants',
