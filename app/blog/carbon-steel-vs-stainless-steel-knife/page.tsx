@@ -25,6 +25,8 @@ export default function CarbonSteelVsStainlessKnifeComparison() {
     datePublished: comparisonData.metadata.publishedDate,
     dateModified: comparisonData.metadata.lastUpdated,
     authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'carbon-steel-vs-stainless-steel-knife',
     images: []
   })
 

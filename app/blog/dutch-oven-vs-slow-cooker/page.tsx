@@ -25,6 +25,8 @@ export default function DutchOvenVsSlowCookerComparison() {
     datePublished: comparisonData.metadata.publishedDate,
     dateModified: comparisonData.metadata.lastUpdated,
     authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'dutch-oven-vs-slow-cooker',
     images: []
   })
 

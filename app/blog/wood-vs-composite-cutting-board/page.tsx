@@ -27,6 +27,8 @@ export default function WoodVsCompositeComparison() {
     datePublished: comparisonData.metadata.publishedDate,
     dateModified: comparisonData.metadata.lastUpdated,
     authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'wood-vs-composite-cutting-board',
     images: []
   })
 

@@ -25,6 +25,8 @@ export default function StandMixerVsHandMixerComparison() {
     datePublished: comparisonData.metadata.publishedDate,
     dateModified: comparisonData.metadata.lastUpdated,
     authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'stand-mixer-vs-hand-mixer',
     images: []
   })
 

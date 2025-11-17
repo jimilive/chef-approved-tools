@@ -25,6 +25,8 @@ export default function ImmersionVsCountertopBlenderComparison() {
     datePublished: comparisonData.metadata.publishedDate,
     dateModified: comparisonData.metadata.lastUpdated,
     authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'immersion-blender-vs-countertop-blender',
     images: []
   })
 

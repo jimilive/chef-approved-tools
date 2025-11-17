@@ -25,6 +25,8 @@ export default function CastIronVsCarbonSteelComparison() {
     datePublished: comparisonData.metadata.publishedDate,
     dateModified: comparisonData.metadata.lastUpdated,
     authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'cast-iron-vs-carbon-steel-pan',
     images: []
   })
 

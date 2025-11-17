@@ -25,6 +25,8 @@ export default function NonstickVsStainlessSteelComparison() {
     datePublished: comparisonData.metadata.publishedDate,
     dateModified: comparisonData.metadata.lastUpdated,
     authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'nonstick-vs-stainless-steel-pans',
     images: []
   })
 

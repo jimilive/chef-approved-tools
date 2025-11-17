@@ -25,6 +25,8 @@ export default function GasVsInductionComparison() {
     datePublished: comparisonData.metadata.publishedDate,
     dateModified: comparisonData.metadata.lastUpdated,
     authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'gas-vs-induction-cooktop',
     images: []
   })
 
