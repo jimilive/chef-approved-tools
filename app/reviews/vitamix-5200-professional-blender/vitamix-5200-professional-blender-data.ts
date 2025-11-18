@@ -40,17 +40,17 @@ export const reviewData = {
   //
   // EPC = Earnings Per Click (higher = better converting link)
   strategicLinks: {
-    // PRIMARY CTA: Direct Product Link
-    // EPC: $65.44 (7-day average)
+    // PRIMARY CTA: Sale Page Link (HIGHEST EPC!)
+    // EPC: $178.16 (3-month average)
     // Use for: Main CTA buttons, hero section, bottom line
-    // Buyer psychology: High intent, ready to buy THIS model
+    // Buyer psychology: High intent, ready to buy, price-conscious
     primary: {
-      url: 'https://www.anrdoezrs.net/click-101557027-7745121',
+      url: 'https://www.jdoqocy.com/click-101557027-15472587',
       displayText: 'Check Price on Vitamix.com',
-      linkId: '7745121',
-      epc: 65.44,
+      linkId: '15472587',
+      epc: 178.16,
       merchant: 'vitamix',
-      description: 'Direct 5200 product page - for high-intent buyers'
+      description: 'Sale page - highest converting link'
     },
 
     // SECONDARY CTA: Sale Page (HIGHEST EPC!)
