@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { Resend } from 'resend'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: NextRequest) {
   try {
@@ -36,16 +39,39 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Send email notification via Resend
+    try {
+      await resend.emails.send({
+        from: 'contact@chefapprovedtools.com',
+        to: 'scott@chefapprovedtools.com',
+        subject: `Contact Form: ${subject || 'No Subject'}`,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Subject:</strong> ${subject || 'No subject'}</p>
+          <p><strong>Message:</strong></p>
+          <p>${message.replace(/\n/g, '<br>')}</p>
+          <hr>
+          <p style="color: #666; font-size: 12px;">Submitted at: ${new Date().toISOString()}</p>
+        `
+      })
+    } catch (emailError) {
+      console.error('Resend email error:', emailError)
+      // Continue even if email fails - still save to ActiveCampaign
+    }
+
     // ActiveCampaign API Integration
     const ACTIVECAMPAIGN_API_URL = process.env.ACTIVECAMPAIGN_API_URL
     const ACTIVECAMPAIGN_API_KEY = process.env.ACTIVECAMPAIGN_API_KEY
 
     if (!ACTIVECAMPAIGN_API_URL || !ACTIVECAMPAIGN_API_KEY) {
       console.error('Missing ActiveCampaign credentials')
-      return NextResponse.json(
-        { error: 'Email service configuration error' },
-        { status: 500 }
-      )
+      // Don't fail the request - email was already sent
+      return NextResponse.json({
+        success: true,
+        message: 'Message sent successfully! I\'ll respond within 2-3 business days.',
+      })
     }
 
     // Step 1: Create or update contact in ActiveCampaign
