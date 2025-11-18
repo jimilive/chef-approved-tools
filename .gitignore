@@ -26,3 +26,6 @@ _ARCHIVE_DO_NOT_USE/
 ~$*.xlsx
 ~$*.xls
 .cache-busting-backups/
+
+# Supabase backups (contains sensitive data - DO NOT COMMIT)
+supabase-backups/
