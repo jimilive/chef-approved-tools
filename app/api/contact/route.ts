@@ -36,73 +36,102 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // TODO: Integrate with your email service (Email Octopus, SendGrid, etc.)
-    // For now, log the contact form submission
+    // ActiveCampaign API Integration
+    const ACTIVECAMPAIGN_API_URL = process.env.ACTIVECAMPAIGN_API_URL
+    const ACTIVECAMPAIGN_API_KEY = process.env.ACTIVECAMPAIGN_API_KEY
+
+    if (!ACTIVECAMPAIGN_API_URL || !ACTIVECAMPAIGN_API_KEY) {
+      console.error('Missing ActiveCampaign credentials')
+      return NextResponse.json(
+        { error: 'Email service configuration error' },
+        { status: 500 }
+      )
+    }
+
+    // Step 1: Create or update contact in ActiveCampaign
+    const contactResponse = await fetch(
+      `${ACTIVECAMPAIGN_API_URL}/api/3/contact/sync`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Api-Token': ACTIVECAMPAIGN_API_KEY,
+        },
+        body: JSON.stringify({
+          contact: {
+            email: email,
+            firstName: name.split(' ')[0] || name,
+            lastName: name.split(' ').slice(1).join(' ') || '',
+            fieldValues: [
+              {
+                field: '2', // Contact form message field - configure in ActiveCampaign
+                value: `Subject: ${subject || 'No subject'}\n\nMessage: ${message}`
+              }
+            ]
+          }
+        }),
+      }
+    )
+
+    const contactData = await contactResponse.json()
+
+    if (!contactResponse.ok) {
+      console.error('ActiveCampaign contact sync error:', contactData)
+      throw new Error(`ActiveCampaign API error: ${contactData.message || 'Unknown error'}`)
+    }
+
+    const contactId = contactData.contact.id
+
+    // Step 2: Add to Contact Form Submissions list (list ID = 5, adjust if needed)
+    await fetch(
+      `${ACTIVECAMPAIGN_API_URL}/api/3/contactLists`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Api-Token': ACTIVECAMPAIGN_API_KEY,
+        },
+        body: JSON.stringify({
+          contactList: {
+            list: 5, // Contact Form Submissions list
+            contact: contactId,
+            status: 1 // 1 = subscribed
+          }
+        }),
+      }
+    )
+
+    // Step 3: Add tags for subject and source
+    const tags = ['contact-form', subject || 'general-inquiry']
+
+    for (const tag of tags) {
+      await fetch(
+        `${ACTIVECAMPAIGN_API_URL}/api/3/contactTags`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Api-Token': ACTIVECAMPAIGN_API_KEY,
+          },
+          body: JSON.stringify({
+            contactTag: {
+              contact: contactId,
+              tag: tag
+            }
+          }),
+        }
+      )
+    }
+
+    // Log successful submission
     console.log('Contact form submission:', {
       name,
       email,
       subject,
-      message: message.substring(0, 100) + '...', // Log first 100 chars
-      timestamp: new Date().toISOString()
+      message: message.substring(0, 100) + '...',
+      timestamp: new Date().toISOString(),
+      activeCampaignId: contactId
     })
-
-    // Option 1: Send email using Email Octopus transactional emails (if available)
-    // Option 2: Send to your personal email using SendGrid, Resend, or similar
-    // Option 3: Store in a database for later review
-
-    // For demonstration, you could send this to Email Octopus as a tagged contact:
-    const EMAILOCTOPUS_API_KEY = process.env.EMAILOCTOPUS_API_KEY
-    const EMAILOCTOPUS_LIST_ID = process.env.EMAILOCTOPUS_LIST_ID
-
-    if (EMAILOCTOPUS_API_KEY && EMAILOCTOPUS_LIST_ID) {
-      try {
-        // Add the contact to your Email Octopus list with contact form data in tags
-        await fetch(
-          `https://emailoctopus.com/api/1.6/lists/${EMAILOCTOPUS_LIST_ID}/contacts`,
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              api_key: EMAILOCTOPUS_API_KEY,
-              email_address: email,
-              fields: {
-                FirstName: name.split(' ')[0] || name,
-                LastName: name.split(' ').slice(1).join(' ') || '',
-              },
-              tags: ['contact-form', subject || 'general-inquiry'],
-              status: 'SUBSCRIBED',
-            }),
-          }
-        )
-      } catch (emailError) {
-        // Don't fail the whole request if email list addition fails
-        console.error('Email Octopus contact addition failed:', emailError)
-      }
-    }
-
-    // IMPORTANT: You should implement actual email sending here
-    // Recommended services:
-    // - Resend (https://resend.com) - Simple and developer-friendly
-    // - SendGrid - Enterprise-grade
-    // - AWS SES - Cost-effective at scale
-
-    // Example with Resend (you'd need to install: npm install resend)
-    // const resend = new Resend(process.env.RESEND_API_KEY)
-    // await resend.emails.send({
-    //   from: 'contact@chefapprovedtools.com',
-    //   to: 'scott@chefapprovedtools.com',
-    //   subject: `Contact Form: ${subject}`,
-    //   html: `
-    //     <h2>New Contact Form Submission</h2>
-    //     <p><strong>Name:</strong> ${name}</p>
-    //     <p><strong>Email:</strong> ${email}</p>
-    //     <p><strong>Subject:</strong> ${subject}</p>
-    //     <p><strong>Message:</strong></p>
-    //     <p>${message.replace(/\n/g, '<br>')}</p>
-    //   `
-    // })
 
     return NextResponse.json({
       success: true,
