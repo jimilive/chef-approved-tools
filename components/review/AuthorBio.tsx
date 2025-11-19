@@ -13,7 +13,7 @@ interface AuthorBioProps {
 export default function AuthorBio({
   name = "Scott Bradley",
   title = "Professional Chef • 24 Years Professional Kitchen Experience",
-  bio = "Professional chef with 24 years of restaurant experience including Pizzaiolo at Purple Café, Kitchen Manager at Mellow Mushroom, and line positions at Feierabend, Il Pizzaiolo, and Paragary's. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from University of Montana. Every product tested through real professional kitchen use or extensive long-term home testing.",
+  bio = "Professional chef with 24 years of restaurant experience including Pizzaiolo at Purple Café, high-volume restaurant management, and line positions at Feierabend, Il Pizzaiolo, and Paragary's. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from University of Montana. Every product tested through real professional kitchen use or extensive long-term home testing.",
   imageSrc = "/images/team/head-shot-1.jpg",
   imageAlt = "Scott Bradley, Professional Chef"
 }: AuthorBioProps) {

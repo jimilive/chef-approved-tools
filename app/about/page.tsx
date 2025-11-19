@@ -30,11 +30,11 @@ export const metadata: Metadata = {
 const combinedFAQs = [
   {
     question: "What's your professional culinary background?",
-    answer: "I hold an A.A.S. in Culinary Arts from Seattle Culinary Academy and a B.S. in Business Administration from University of Montana. With 24 years of professional kitchen experience, including 7 years as Kitchen Manager at Mellow Mushroom (managing $80K+ monthly revenue) and time as a certified Pizzaiolo at Purple Café & Wine Bar, I have extensive real-world experience with professional kitchen equipment."
+    answer: "I hold an A.A.S. in Culinary Arts from Seattle Culinary Academy and a B.S. in Business Administration from University of Montana. With 24 years of professional kitchen experience in high-volume restaurant operations (managing $80K+ monthly revenue) and time as a certified Pizzaiolo at Purple Café & Wine Bar, I have extensive real-world experience with professional kitchen equipment."
   },
   {
     question: "How did you transition from restaurant work to equipment reviews?",
-    answer: "After 24 years in professional kitchens, including 7 years as Kitchen Manager, I moved into e-commerce, working as Internet Production Lead at The Sharper Image. This combination of culinary expertise and e-commerce experience helps me understand both what works in kitchens and what information helps people make purchasing decisions."
+    answer: "After 24 years in professional kitchens, including high-volume restaurant management, I moved into e-commerce, working as Internet Production Lead at The Sharper Image. This combination of culinary expertise and e-commerce experience helps me understand both what works in kitchens and what information helps people make purchasing decisions."
   },
   {
     question: "How long do you test each piece of equipment?",
@@ -198,15 +198,14 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-slate-700 mb-6 text-lg leading-relaxed">
-              Former Kitchen Manager at Mellow Mushroom with 24 years of professional restaurant experience.
+              24 years of professional restaurant experience in high-volume kitchens.
               Seattle Culinary Academy graduate who&apos;s tested equipment in
-              high-volume restaurant operations serving hundreds of customers daily.
+              restaurant operations serving hundreds of customers daily.
             </p>
 
             <p className="text-slate-700 mb-6 text-lg leading-relaxed">
               I hold an A.A.S. in Culinary Arts from Seattle Culinary Academy and a B.S. in Business
-              Administration from University of Montana. My career has taken me from managing kitchen operations with $80K+ monthly revenue at
-              Mellow Mushroom to working as a certified Pizzaiolo
+              Administration from University of Montana. My career has taken me from managing high-volume kitchen operations with $80K+ monthly revenue to working as a certified Pizzaiolo
               at Purple Café & Wine Bar, where equipment reliability wasn&apos;t just important—it was critical to
               our success during peak service hours.
             </p>

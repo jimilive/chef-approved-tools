@@ -35,7 +35,7 @@ export default function ProductSchema({ product, category, reviewUrl }: ProductS
         "@type": "Person",
         "name": "Scott Bradley",
         "jobTitle": "Professional Chef & Kitchen Manager",
-        "description": "24 years restaurant experience, former Kitchen Manager at Mellow Mushroom"
+        "description": "24 years restaurant experience including high-volume kitchen management"
       },
       "reviewRating": {
         "@type": "Rating",

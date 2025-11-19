@@ -13,7 +13,7 @@ export const metadata = generateBlogMetadata('how-to-sear-steaks-like-restaurant
 
 const articleSchema = generateArticleSchema({
   headline: "How to Sear Steaks Like a Restaurant Chef",
-  description: "Learn the professional steak searing techniques used in restaurant kitchens. 24 years of professional experience including 3 years as Kitchen Manager at Mellow Mushroom (1992-1994) reveals the secrets to perfect sears.",
+  description: "Learn the professional steak searing techniques used in restaurant kitchens. 24 years of professional experience including high-volume restaurant operations reveals the secrets to perfect sears.",
   datePublished: "2025-09-10",
   dateModified: "2024-09-27",
   authorName: "Scott Bradley",
@@ -95,7 +95,7 @@ export default function SteakSearingPost() {
       <BlogLayout breadcrumbTitle="How to Sear Steaks Like a Restaurant Chef">
         <BlogHero
           title="How to Sear Steaks Like a Restaurant Chef"
-          introduction={["After 24 years in restaurant kitchens, including 3 years as Kitchen Manager at Mellow Mushroom (1992-1994), I've seared thousands of steaks. Here's exactly how we achieve that perfect crust every single time."]}
+          introduction={["After 24 years in restaurant kitchens, including high-volume operations, I've seared thousands of steaks. Here's exactly how we achieve that perfect crust every single time."]}
           publishedDate="2025-09-10"
           lastUpdated="2024-09-27"
           readTime="8 min read"

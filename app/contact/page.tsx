@@ -83,9 +83,9 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold text-slate-900 mb-2">Professional Background</h3>
                 <p className="text-slate-600 text-sm">
-                  Former Kitchen Manager at Mellow Mushroom (Athens, GA)<br />
+                  24 years in professional kitchens<br />
                   Seattle Central College - A.A.S. Culinary Arts<br />
-                  24 years in professional kitchens
+                  High-volume restaurant operations experience
                 </p>
               </div>
 

@@ -22,7 +22,7 @@ export function WhyListenSection() {
                 24 Years in Professional Kitchens
               </h3>
               <p className="text-slate-600 leading-relaxed">
-                From Mellow Mushroom (Kitchen Manager, 7 years) to Purple Café (6 years),
+                From high-volume pizza operations to Purple Café (6 years),
                 Il Pizzaiolo, Feierabend, and Paragary&apos;s. I know what holds up under restaurant abuse.
               </p>
             </div>
@@ -364,7 +364,7 @@ export function TrustBarSection() {
       <div className="container max-w-6xl mx-auto px-4">
         <div className="flex flex-wrap justify-center items-center gap-6 text-sm">
           <span className="flex items-center gap-2">
-            <span className="text-green-400">✓</span> Kitchen Manager, Mellow Mushroom (3 years)
+            <span className="text-green-400">✓</span> High-volume restaurant operations
           </span>
           <span className="flex items-center gap-2">
             <span className="text-green-400">✓</span> Line Cook, Purple Café (6 years)

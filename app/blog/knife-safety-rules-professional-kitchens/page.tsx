@@ -143,7 +143,7 @@ export default function KnifeSafetyPost() {
           </p>
 
           <p>
-            I&apos;ve watched hundreds of home cooks struggle with their knives — and most of the time, it&apos;s not the knife&apos;s fault. It&apos;s how they&apos;re using it. At Mellow Mushroom, cooks would stab cans with chef knives to create vents instead of using a can opener. After stabbing 10 cans, the blade edge was destroyed—chips, rolls, dull as a butter knife. We weren&apos;t careless — just untrained. The problem was technique, not intent.
+            I&apos;ve watched hundreds of home cooks struggle with their knives — and most of the time, it&apos;s not the knife&apos;s fault. It&apos;s how they&apos;re using it. In high-volume pizza kitchens, cooks would stab cans with chef knives to create vents instead of using a can opener. After stabbing 10 cans, the blade edge was destroyed—chips, rolls, dull as a butter knife. We weren&apos;t careless — just untrained. The problem was technique, not intent.
           </p>
 
           <p>
