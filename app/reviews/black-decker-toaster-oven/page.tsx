@@ -18,9 +18,11 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 // Import review data
 import { reviewData, specifications, comparisonTable } from './black-decker-toaster-oven-data'
+import { getToasterOvenComparison } from './get-toaster-oven-comparison'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -83,6 +85,9 @@ export default async function BlackDeckerToasterOvenReview() {
   if (!product) {
     throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
   }
+
+  // Get comparison table data from Supabase
+  const toasterOvenComparisonData = await getToasterOvenComparison()
 
   // Merge Supabase data with legacy data (Supabase takes priority, but preserve legacy pros/cons if Supabase is empty)
   const productData = product ? {
@@ -265,97 +270,14 @@ export default async function BlackDeckerToasterOvenReview() {
             }))}
           />
 
-          {/* SECTION 4: COMPARISON TABLE (Inline) */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              {comparisonTable.title}
-            </h2>
-
-            <div className="overflow-x-auto my-6 rounded-xl border border-gray-200">
-              <table className="w-full border-collapse bg-white">
-                <thead>
-                  <tr className="bg-slate-800">
-                    <th className="text-white text-left px-4 py-4 font-semibold text-[15px]">Feature</th>
-                    {comparisonTable.competitors.map((competitor, idx) => (
-                      <th key={idx} className="text-white text-left px-4 py-4 font-semibold text-[15px]">
-                        {competitor.name}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-gray-200">
-                    <td className="px-4 py-4 font-semibold text-slate-900 text-[15px]">Price Range</td>
-                    {comparisonTable.competitors.map((competitor, idx) => (
-                      <td key={idx} className={`px-4 py-4 text-[15px] ${idx === 0 ? 'text-orange-700 font-semibold' : 'text-slate-600'}`}>
-                        {competitor.priceRange}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr className="bg-gray-50 border-b border-gray-200">
-                    <td className="px-4 py-4 font-semibold text-slate-900 text-[15px]">Capacity</td>
-                    {comparisonTable.competitors.map((competitor, idx) => (
-                      <td key={idx} className="px-4 py-4 text-slate-600 text-[15px]">
-                        {competitor.capacity}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="px-4 py-4 font-semibold text-slate-900 text-[15px]">Power</td>
-                    {comparisonTable.competitors.map((competitor, idx) => (
-                      <td key={idx} className="px-4 py-4 text-slate-600 text-[15px]">
-                        {competitor.power}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr className="bg-gray-50 border-b border-gray-200">
-                    <td className="px-4 py-4 font-semibold text-slate-900 text-[15px]">Controls</td>
-                    {comparisonTable.competitors.map((competitor, idx) => (
-                      <td key={idx} className="px-4 py-4 text-slate-600 text-[15px]">
-                        {competitor.controls}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="px-4 py-4 font-semibold text-slate-900 text-[15px]">Expected Lifespan</td>
-                    {comparisonTable.competitors.map((competitor, idx) => (
-                      <td key={idx} className={`px-4 py-4 text-[15px] ${idx === 0 ? 'text-green-700 font-semibold' : 'text-slate-600'}`}>
-                        {competitor.expectedLifespan}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr className="bg-gray-50 border-b border-gray-200">
-                    <td className="px-4 py-4 font-semibold text-slate-900 text-[15px]">Warranty</td>
-                    {comparisonTable.competitors.map((competitor, idx) => (
-                      <td key={idx} className="px-4 py-4 text-slate-600 text-[15px]">
-                        {competitor.warranty}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="px-4 py-4 font-semibold text-slate-900 text-[15px]">Best For</td>
-                    {comparisonTable.competitors.map((competitor, idx) => (
-                      <td key={idx} className="px-4 py-4 text-slate-600 text-[15px]">
-                        {competitor.bestFor}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-4 font-semibold text-slate-900 text-[15px]">Value Rating</td>
-                    {comparisonTable.competitors.map((competitor, idx) => (
-                      <td key={idx} className={`px-4 py-4 text-[15px] ${idx === 0 ? 'text-green-700 font-semibold' : 'text-slate-600'}`}>
-                        {competitor.valueRating}
-                      </td>
-                    ))}
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p className="text-slate-600 leading-relaxed mb-0">
-              <strong>Bottom line:</strong> {comparisonTable.bottomLine}
-            </p>
-          </div>
+          {/* SECTION 4: TOASTER OVEN COMPARISON TABLE */}
+          <ProductComparisonTable
+            title={toasterOvenComparisonData.title}
+            subtitle={toasterOvenComparisonData.subtitle}
+            products={toasterOvenComparisonData.products}
+            comparisonRows={toasterOvenComparisonData.comparisonRows}
+            highlightedProduct={toasterOvenComparisonData.highlightedProduct}
+          />
 
           {/* SECTION 5: SPECIFICATIONS (Inline) */}
           <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
