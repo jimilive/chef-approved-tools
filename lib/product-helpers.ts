@@ -109,6 +109,25 @@ export function getPrimaryAffiliateLink(product: Product): string {
 }
 
 /**
+ * Get all affiliate links for a product, sorted by priority
+ * @param product - The product object
+ * @returns Array of affiliate links with primary first, then alphabetically by merchant
+ */
+export function getAllAffiliateLinks(product: Product): Array<{
+  url: string
+  label: string
+  merchant: string
+  is_primary: boolean
+}> {
+  // Sort so primary is first, then alphabetically by merchant
+  return [...product.affiliateLinks].sort((a, b) => {
+    if (a.is_primary && !b.is_primary) return -1
+    if (!a.is_primary && b.is_primary) return 1
+    return a.merchant.localeCompare(b.merchant)
+  })
+}
+
+/**
  * Get all products from Supabase
  * @returns Array of all products with full reviews (excludes comparison-only products)
  */

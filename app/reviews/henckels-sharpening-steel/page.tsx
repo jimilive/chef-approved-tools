@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink, getAllAffiliateLinks } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import MultiVendorCTA from '@/components/review/MultiVendorCTA'
 import {
   ReviewHero,
   TestingResultsGrid,
@@ -132,8 +133,11 @@ export default async function HenckelsSharpeningSteelReview() {
       : reviewData.legacyProductData.affiliateLinks
   } : reviewData.legacyProductData
 
-  // Get primary affiliate link
+  // Get primary affiliate link (for legacy inline links)
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
+
+  // Get all affiliate links for multi-vendor CTAs
+  const affiliateLinks = product ? getAllAffiliateLinks(product) : []
 
   // Generate breadcrumbs
   const breadcrumbs = [
@@ -214,26 +218,13 @@ export default async function HenckelsSharpeningSteelReview() {
             ctaText={reviewData.hero.ctaText}
             customCTA={(
               <div>
-                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
-                  >
-                    {reviewData.hero.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
+                <MultiVendorCTA
+                  affiliateLinks={affiliateLinks}
+                  productName={productData.name}
+                  ctaId="hero-cta"
+                  position="above_fold"
+                  productSlug={productData.slug}
+                />
               </div>
             )}
           />
@@ -292,35 +283,18 @@ export default async function HenckelsSharpeningSteelReview() {
 
             <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
               <div className="flex flex-col gap-4">
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-                  <p className="text-sm text-slate-600 mb-4">Prime shipping, verified reviews, easy returns</p>
+                <div className="text-center mb-2">
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Available From</h3>
+                  <p className="text-sm text-slate-600">Choose your preferred retailer</p>
                 </div>
-                <CTAVisibilityTracker
+                <MultiVendorCTA
+                  affiliateLinks={affiliateLinks}
+                  productName={productData.name}
                   ctaId="where-to-buy-cta"
                   position="where_to_buy"
                   productSlug={productData.slug}
-                >
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow sponsored"
-                    className="block w-full text-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 py-3 rounded-xl transition-all hover:scale-105 active:scale-95"
-                  >
-                    Check Price on Amazon →
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-                <p className="text-xs text-slate-500 text-center italic">
+                />
+                <p className="text-xs text-slate-500 text-center italic mt-2">
                   As an Amazon Associate, I earn from qualifying purchases. This comes at no extra cost to you.
                 </p>
               </div>
@@ -341,27 +315,14 @@ export default async function HenckelsSharpeningSteelReview() {
             ctaUrl={affiliateUrl}
             ctaText={reviewData.bottomLine.ctaText}
             customCTA={(
-              <div className="text-center">
-                <CTAVisibilityTracker ctaId="bottom-line-cta" position="final_cta">
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
-                  >
-                    {reviewData.bottomLine.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
+              <div className="flex justify-center">
+                <MultiVendorCTA
+                  affiliateLinks={affiliateLinks}
+                  productName={productData.name}
+                  ctaId="bottom-line-cta"
+                  position="final_cta"
+                  productSlug={productData.slug}
+                />
               </div>
             )}
           />
