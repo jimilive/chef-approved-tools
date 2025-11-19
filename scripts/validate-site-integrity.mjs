@@ -56,7 +56,7 @@ if (dbError) {
 
 const reviewsDir = './app/reviews'
 const reviewFolders = readdirSync(reviewsDir, { withFileTypes: true })
-  .filter(dirent => dirent.isDirectory())
+  .filter(dirent => dirent.isDirectory() && !dirent.name.startsWith('_'))
   .map(dirent => dirent.name)
 
 const dbSlugs = new Set(products.map(p => p.slug))

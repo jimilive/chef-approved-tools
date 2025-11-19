@@ -53,7 +53,7 @@ export default function ProductComparisonTable({
   // Helper to detect affiliate network from URL
   const getButtonText = (affiliateLink: string) => {
     if (affiliateLink.includes('amazon.com') || affiliateLink.includes('amzn.to')) {
-      return 'Check Price on Amazon'
+      return 'Check Price on Amazon →'
     }
     return 'Check Current Price →'
   }
@@ -100,21 +100,20 @@ export default function ProductComparisonTable({
 
       {/* Desktop Table */}
       <div className="hidden lg:block overflow-x-auto">
-        <table className="w-full border-collapse">
+        <table className="w-full border-collapse table-fixed">
           <thead>
             <tr className="border-b-2 border-gray-300">
-              <th className="text-left p-2 font-semibold text-slate-900 bg-gray-50 sticky left-0 w-24 text-sm">
+              <th className="text-left p-2 font-semibold text-slate-900 bg-gray-50 sticky left-0 text-sm" style={{ width: '17%' }}>
                 Feature
               </th>
               {products.map((product, index) => (
                 <th
                   key={index}
-                  className={`px-1 py-2 text-center font-semibold w-1/5 ${
+                  className={`px-1 py-2 text-center font-semibold ${
                     product.name === highlightedProduct
                       ? 'bg-orange-50 border-l-2 border-r-2 border-orange-600'
                       : 'bg-white'
                   }`}
-                  style={{ width: '20%' }}
                 >
                   <div className="text-xs text-slate-500 uppercase mb-1">{product.brand}</div>
                   <div className="text-xs font-bold text-slate-900 leading-tight">{product.name}</div>
@@ -162,7 +161,7 @@ export default function ProductComparisonTable({
                     href={product.affiliateLink}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className={`inline-block px-4 py-2 rounded-lg font-semibold text-sm transition-all whitespace-nowrap ${
+                    className={`block px-3 py-2 rounded-lg font-semibold text-xs transition-all leading-tight ${
                       product.name === highlightedProduct
                         ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700'
                         : 'bg-white border-2 border-orange-600 text-orange-700 hover:bg-orange-50'
