@@ -772,7 +772,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'complete-victorinox-knife-lineup-comparison': {
-      title: "Complete Victorinox Knife Lineup: Comparing All 5 Models for Your Kitchen",
+      title: "Victorinox Knife Lineup: Which 5 Models You Actually Need",
       description: "After 24 years of professional kitchen experience, here's exactly which Victorinox knives you actually need—and which ones you can skip. Strategic buying guide for the complete Fibrox lineup.",
       canonical: "https://www.chefapprovedtools.com/blog/complete-victorinox-knife-lineup-comparison",
       author: "Scott Bradley",
@@ -847,7 +847,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'victorinox-budget-vs-wusthof-premium-knives': {
-      title: "Budget vs Premium Knives: Victorinox vs Wüsthof — The Honest Truth After 24 Years",
+      title: "Victorinox vs Wüsthof: Budget vs Premium Chef Knives",
       description: "After 24 years in professional kitchens using both brands daily, here's the brutal truth about budget vs premium chef knives. Spoiler: The expensive knife isn't always better.",
       canonical: "https://www.chefapprovedtools.com/blog/victorinox-budget-vs-wusthof-premium-knives",
       author: "Scott Bradley",
