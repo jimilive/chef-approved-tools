@@ -27,10 +27,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.chefapprovedtools.com'),
-  title: {
-    default: 'Best Kitchen Tools | Chef-Approved Reviews 2025',
-    template: '%s | Chef Approved Tools'
-  },
+  title: 'Best Kitchen Tools | Chef-Approved Reviews 2025',
   description: 'Discover the best chef-approved kitchen tools, tested and reviewed for home cooks. 24 years of professional cooking. Shop smarter with expert recommendations on knives, cookware, and appliances.',
   keywords: [
     'professional kitchen tools',
