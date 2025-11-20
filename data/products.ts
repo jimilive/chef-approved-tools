@@ -20,6 +20,8 @@ export const sampleProducts: ProductCollection = {
         {
           url: 'https://amzn.to/3KtlPYS',
           merchant: 'amazon',
+          label: 'Amazon',
+          is_primary: true,
           tag: 'chefapprovedt-20',
           lastChecked: new Date().toISOString()
         }
@@ -142,6 +144,8 @@ export const sampleProducts: ProductCollection = {
         {
           url: 'https://amzn.to/4o7BUSV',
           merchant: 'amazon',
+          label: 'Amazon',
+          is_primary: true,
           tag: 'chefapprovedt-20',
           lastChecked: '2025-10-14T00:00:00Z'
         }
@@ -242,6 +246,8 @@ export const sampleProducts: ProductCollection = {
         {
           url: 'https://amzn.to/4o6pPwW',
           merchant: 'amazon',
+          label: 'Amazon',
+          is_primary: true,
           tag: 'chefapprovedt-20',
           lastChecked: '2025-10-14T00:00:00Z'
         }
@@ -340,6 +346,8 @@ export const sampleProducts: ProductCollection = {
         {
           url: 'https://amzn.to/4nAIR4F',
           merchant: 'amazon',
+          label: 'Amazon',
+          is_primary: true,
           tag: 'chefapprovedt-20',
           lastChecked: '2025-10-14T00:00:00Z'
         }
@@ -437,6 +445,8 @@ export const sampleProducts: ProductCollection = {
         {
           url: 'https://amzn.to/4pUDed1',
           merchant: 'amazon',
+          label: 'Amazon',
+          is_primary: true,
           tag: 'chefapprovedt-20',
           lastChecked: '2025-10-14T00:00:00Z'
         }
@@ -534,6 +544,8 @@ export const sampleProducts: ProductCollection = {
         {
           url: 'https://amzn.to/4gVm0Le',
           merchant: 'amazon',
+          label: 'Amazon',
+          is_primary: true,
           tag: 'chefapprovedt-20',
           lastChecked: '2025-10-14T00:00:00Z'
         }
@@ -635,6 +647,8 @@ export const sampleProducts: ProductCollection = {
         {
           url: 'https://amzn.to/4ejb3eZ',
           merchant: 'amazon',
+          label: 'Amazon',
+          is_primary: true,
           tag: 'chefapprovedt-20',
           lastChecked: new Date().toISOString()
         }
@@ -726,6 +740,8 @@ export const sampleProducts: ProductCollection = {
         {
           url: 'https://amzn.to/4e6GceC',
           merchant: 'amazon',
+          label: 'Amazon',
+          is_primary: true,
           tag: 'chefapprovedt-20',
           lastChecked: new Date().toISOString()
         }

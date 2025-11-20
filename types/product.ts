@@ -26,9 +26,11 @@ export interface Vendor {
 
 export interface AffiliateLink {
   url: string;
-  merchant: 'amazon' | 'walmart' | 'target' | 'other';
+  merchant: string;
+  label: string;
+  is_primary: boolean;
   tag?: string;
-  lastChecked: string;
+  lastChecked?: string;
 }
 
 export interface Review {
