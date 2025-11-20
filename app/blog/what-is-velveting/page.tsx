@@ -124,7 +124,7 @@ export default function WhatIsVelvetingPage() {
           </p>
 
           <p>
-            <strong>Important note:</strong> There is no direct Chinese word for "velveting"—it's an English term coined by the food world, likely from Irene Kuo's 1970s book "The Key to Chinese Cooking." In Chinese cooking, this combines tenderization (嫩化), coating with starch (上浆), and passing through oil (过油) or water (过水).
+            <strong>Important note:</strong> There is no direct Chinese word for &quot;velveting&quot;—it&apos;s an English term coined by the food world, likely from Irene Kuo&apos;s 1970s book &quot;The Key to Chinese Cooking.&quot; In Chinese cooking, this combines tenderization (嫩化), coating with starch (上浆), and passing through oil (过油) or water (过水).
           </p>
 
           <h2 id="science">The Science Behind Velveting</h2>
@@ -263,7 +263,7 @@ export default function WhatIsVelvetingPage() {
           </p>
 
           <p>
-            <strong>Pro tip:</strong> Freeze chicken for 15 minutes before slicing—the firmer texture makes even slicing easier. A sharp knife is essential: dull knives tear chicken instead of cutting cleanly, releasing moisture and creating ragged edges that don't coat evenly.
+            <strong>Pro tip:</strong> Freeze chicken for 15 minutes before slicing—the firmer texture makes even slicing easier. A sharp knife is essential: dull knives tear chicken instead of cutting cleanly, releasing moisture and creating ragged edges that don&apos;t coat evenly.
           </p>
 
           <h3>Step 2: Prepare the Velveting Mixture (2 Minutes)</h3>
@@ -283,21 +283,21 @@ export default function WhatIsVelvetingPage() {
           </p>
 
           <p>
-            Let marinate at room temperature for 15-30 minutes. <strong>Don't exceed 30 minutes</strong>—the egg white starts breaking down chicken proteins after that point, creating mushy texture instead of tender texture. Don't marinate for less than 15 minutes—the coating needs time to adhere and the salt needs time to penetrate.
+            Let marinate at room temperature for 15-30 minutes. <strong>Don&apos;t exceed 30 minutes</strong>—the egg white starts breaking down chicken proteins after that point, creating mushy texture instead of tender texture. Don&apos;t marinate for less than 15 minutes—the coating needs time to adhere and the salt needs time to penetrate.
           </p>
 
           <h3>Step 4: Blanch in Boiling Water (30-45 Seconds)</h3>
 
           <p>
-            Bring a large pot of water to a rolling boil—at least 8 cups for 1 pound of chicken. The water must be boiling vigorously before adding chicken. If the water isn't hot enough, the coating won't set properly.
+            Bring a large pot of water to a rolling boil—at least 8 cups for 1 pound of chicken. The water must be boiling vigorously before adding chicken. If the water isn&apos;t hot enough, the coating won&apos;t set properly.
           </p>
 
           <p>
-            Add all chicken at once. Use tongs or spider strainer to gently separate pieces—they'll want to clump initially. Cook for exactly 30-45 seconds. The chicken will turn from translucent pink to opaque white. Remove immediately with tongs or spider strainer.
+            Add all chicken at once. Use tongs or spider strainer to gently separate pieces—they&apos;ll want to clump initially. Cook for exactly 30-45 seconds. The chicken will turn from translucent pink to opaque white. Remove immediately with tongs or spider strainer.
           </p>
 
           <p>
-            Drain in a colander for 10-15 seconds—you want surface moisture gone but don't need to dry completely. The chicken is now ready for stir-frying. Use immediately or refrigerate for up to 2 hours (bring back to room temperature before stir-frying).
+            Drain in a colander for 10-15 seconds—you want surface moisture gone but don&apos;t need to dry completely. The chicken is now ready for stir-frying. Use immediately or refrigerate for up to 2 hours (bring back to room temperature before stir-frying).
           </p>
 
           <h3>Step 5: Stir-Fry as Normal (2-3 Minutes)</h3>
@@ -307,7 +307,7 @@ export default function WhatIsVelvetingPage() {
           </p>
 
           <p>
-            The total time the chicken spends in the wok is 90 seconds maximum. That's the entire point of velveting—the chicken is already 70% cooked from blanching, so it only needs brief exposure to wok heat to finish and absorb sauce flavor.
+            The total time the chicken spends in the wok is 90 seconds maximum. That&apos;s the entire point of velveting—the chicken is already 70% cooked from blanching, so it only needs brief exposure to wok heat to finish and absorb sauce flavor.
           </p>
 
           <h2 id="proteins">Which Proteins Benefit From Velveting</h2>
@@ -325,7 +325,7 @@ export default function WhatIsVelvetingPage() {
           </p>
 
           <p>
-            Don't velvet fattier pork cuts like shoulder or belly—they have enough intramuscular fat to stay moist during high-heat cooking.
+            Don&apos;t velvet fattier pork cuts like shoulder or belly—they have enough intramuscular fat to stay moist during high-heat cooking.
           </p>
 
           <h3>Shrimp: Quick and Effective</h3>
@@ -337,7 +337,7 @@ export default function WhatIsVelvetingPage() {
           <h3>Beef: Only for Tough, Economical Cuts</h3>
 
           <p>
-            Velvet tough cuts like flank steak, round, or chuck that would normally be used for stew. Velveting transforms them into stir-fry-suitable protein. Don't velvet premium tender cuts like tenderloin or high-grade sirloin—they're already tender and juicy.
+            Velvet tough cuts like flank steak, round, or chuck that would normally be used for stew. Velveting transforms them into stir-fry-suitable protein. Don&apos;t velvet premium tender cuts like tenderloin or high-grade sirloin—they&apos;re already tender and juicy.
           </p>
 
           <h3>What NOT to Velvet</h3>
@@ -347,7 +347,7 @@ export default function WhatIsVelvetingPage() {
           </p>
 
           <p>
-            <strong>Premium beef cuts:</strong> Tenderloin, ribeye, high-grade sirloin don't need tenderizing.
+            <strong>Premium beef cuts:</strong> Tenderloin, ribeye, high-grade sirloin don&apos;t need tenderizing.
           </p>
 
           <p>
@@ -377,11 +377,11 @@ export default function WhatIsVelvetingPage() {
           <h3>Insufficient Water Temperature</h3>
 
           <p>
-            <strong>The problem:</strong> Adding chicken to barely-simmering water doesn't set the coating properly. The chicken steams instead of blanching, and the coating stays gummy instead of forming a protective layer.
+            <strong>The problem:</strong> Adding chicken to barely-simmering water doesn&apos;t set the coating properly. The chicken steams instead of blanching, and the coating stays gummy instead of forming a protective layer.
           </p>
 
           <p>
-            <strong>The fix:</strong> Use plenty of water (minimum 8 cups for 1 pound chicken) and make sure it's boiling hard before adding chicken. More water = smaller temperature drop when cold chicken is added.
+            <strong>The fix:</strong> Use plenty of water (minimum 8 cups for 1 pound chicken) and make sure it&apos;s boiling hard before adding chicken. More water = smaller temperature drop when cold chicken is added.
           </p>
 
           <h3>Over-Blanching</h3>
@@ -391,7 +391,7 @@ export default function WhatIsVelvetingPage() {
           </p>
 
           <p>
-            <strong>The fix:</strong> Set a timer for 30 seconds the first time you velvet. Check the chicken—it should be opaque white with possibly some translucent pink remaining in the center. That's correct. If it's fully white throughout, you've over-blanched. Reduce time to 25-30 seconds for subsequent batches.
+            <strong>The fix:</strong> Set a timer for 30 seconds the first time you velvet. Check the chicken—it should be opaque white with possibly some translucent pink remaining in the center. That&apos;s correct. If it&apos;s fully white throughout, you&apos;ve over-blanched. Reduce time to 25-30 seconds for subsequent batches.
           </p>
 
           <h2 id="home-stoves">How Velveting Compensates for Low-BTU Home Stoves</h2>
@@ -413,7 +413,7 @@ export default function WhatIsVelvetingPage() {
           <h3>How Velveting Solves the Home Stove Problem</h3>
 
           <p>
-            <strong>1. Pre-cooking at controlled temperature:</strong> Meat is already 70% cooked at gentle, controlled temperature before hitting the wok. Eliminates need for extended high-heat exposure that home stoves can't sustain. Prevents the toughening that occurs when raw meat sits too long on insufficient heat.
+            <strong>1. Pre-cooking at controlled temperature:</strong> Meat is already 70% cooked at gentle, controlled temperature before hitting the wok. Eliminates need for extended high-heat exposure that home stoves can&apos;t sustain. Prevents the toughening that occurs when raw meat sits too long on insufficient heat.
           </p>
 
           <p>

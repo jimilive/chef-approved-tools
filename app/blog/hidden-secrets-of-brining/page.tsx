@@ -30,7 +30,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 const faqSchema = generateFAQSchema([
   {
     question: "What does brining actually do to meat?",
-    answer: "Brining causes salt to penetrate meat through diffusion, denaturing muscle proteins and creating a gel-like matrix that traps water molecules. This restructured protein can't contract as tightly during cooking, preventing moisture loss and resulting in juicier meat."
+    answer: "Brining causes salt to penetrate meat through diffusion, denaturing muscle proteins and creating a gel-like matrix that traps water molecules. This restructured protein can&apos;t contract as tightly during cooking, preventing moisture loss and resulting in juicier meat."
   },
   {
     question: "What is the correct brine ratio?",
@@ -45,7 +45,7 @@ const faqSchema = generateFAQSchema([
     answer: "No. Beef has adequate fat marbling and rich natural flavor that brining would dilute. Brining is best for lean proteins like chicken breast, turkey, and pork tenderloin that lack internal fat."
   },
   {
-    question: "What's the difference between wet and dry brining?",
+    question: "What&apos;s the difference between wet and dry brining?",
     answer: "Wet brining submerges meat in salt-water solution, adding moisture and requiring refrigerator space. Dry brining coats meat with salt and refrigerates uncovered, producing crispier skin and concentrated flavor without dilution."
   },
   {
@@ -87,8 +87,8 @@ export default function BriningSecretsPage() {
         <BlogHero
           title="The Hidden Secrets of Brining"
           introduction={[
-            "Professional kitchens brine lean proteins because the difference between brined and unbrined meat isn't subtle—it's the difference between juicy, tender results and dry, disappointing texture.",
-            "Brining isn't magic. It's controlled protein chemistry that restructures muscle tissue to trap moisture during cooking."
+            "Professional kitchens brine lean proteins because the difference between brined and unbrined meat isn&apos;t subtle—it&apos;s the difference between juicy, tender results and dry, disappointing texture.",
+            "Brining isn&apos;t magic. It&apos;s controlled protein chemistry that restructures muscle tissue to trap moisture during cooking."
           ]}
           publishedDate="2025-01-20"
           lastUpdated="2025-01-20"
@@ -138,7 +138,7 @@ export default function BriningSecretsPage() {
           </p>
 
           <p>
-            The key: denatured proteins lose their ability to contract tightly when heat is applied. During cooking, un-brined proteins squeeze together forcefully, expelling moisture. Brined proteins can't contract as tightly, so they retain more liquid.
+            The key: denatured proteins lose their ability to contract tightly when heat is applied. During cooking, un-brined proteins squeeze together forcefully, expelling moisture. Brined proteins can&apos;t contract as tightly, so they retain more liquid.
           </p>
 
           <h3>Moisture Retention Mechanism</h3>
@@ -183,7 +183,7 @@ export default function BriningSecretsPage() {
           <h3>Best Candidates: Lean, Low-Fat Proteins</h3>
 
           <p>
-            <strong>Poultry:</strong> Chicken (whole, parts, breasts), turkey, capon, poussin. These lean proteins lack internal fat for moisture and benefit dramatically from brining's moisture insurance.
+            <strong>Poultry:</strong> Chicken (whole, parts, breasts), turkey, capon, poussin. These lean proteins lack internal fat for moisture and benefit dramatically from brining&apos;s moisture insurance.
           </p>
 
           <p>
@@ -206,7 +206,7 @@ export default function BriningSecretsPage() {
 
           <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
             <p className="text-yellow-800 mb-0">
-              <strong>Important:</strong> Never brine pre-enhanced or pre-seasoned meat. Commercial poultry and pork often come injected with salt solution (check labels for "enhanced," "seasoned," or "contains up to 15% solution"). Brining these creates inedibly salty results.
+              <strong>Important:</strong> Never brine pre-enhanced or pre-seasoned meat. Commercial poultry and pork often come injected with salt solution (check labels for &quot;enhanced,&quot; &quot;seasoned,&quot; or &quot;contains up to 15% solution&quot;). Brining these creates inedibly salty results.
             </p>
           </div>
 
@@ -239,7 +239,7 @@ export default function BriningSecretsPage() {
 
           <div className="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
             <p className="text-red-800 mb-0">
-              <strong>Critical timing warning:</strong> Over-brining creates salty, spongy, "cured" texture. Set timers. Under-brining provides minimal benefit; over-brining ruins meat. Follow maximum times strictly.
+              <strong>Critical timing warning:</strong> Over-brining creates salty, spongy, &quot;cured&quot; texture. Set timers. Under-brining provides minimal benefit; over-brining ruins meat. Follow maximum times strictly.
             </p>
           </div>
 
@@ -327,7 +327,7 @@ export default function BriningSecretsPage() {
           </p>
 
           <p>
-            <strong>Consequence:</strong> Wildly inconsistent results. Table salt is much denser than kosher salt—using "1 cup" of each produces drastically different concentrations.
+            <strong>Consequence:</strong> Wildly inconsistent results. Table salt is much denser than kosher salt—using &quot;1 cup&quot; of each produces drastically different concentrations.
           </p>
 
           <p>
@@ -359,7 +359,7 @@ export default function BriningSecretsPage() {
           </p>
 
           <p>
-            <strong>Correct:</strong> Check labels carefully. Avoid "enhanced," "seasoned," or poultry containing salt solution. Look for "all natural" or "no added solution."
+            <strong>Correct:</strong> Check labels carefully. Avoid &quot;enhanced,&quot; &quot;seasoned,&quot; or poultry containing salt solution. Look for &quot;all natural&quot; or &quot;no added solution.&quot;
           </p>
 
           <h3>Reusing Brine</h3>
@@ -379,7 +379,7 @@ export default function BriningSecretsPage() {
           <h2>Putting It All Together</h2>
 
           <p>
-            Brining works because the science is sound. Salt restructures muscle proteins, creating a matrix that traps moisture during cooking. This isn't chef mythology—it's measurable, repeatable chemistry.
+            Brining works because the science is sound. Salt restructures muscle proteins, creating a matrix that traps moisture during cooking. This isn&apos;t chef mythology—it&apos;s measurable, repeatable chemistry.
           </p>
 
           <p>

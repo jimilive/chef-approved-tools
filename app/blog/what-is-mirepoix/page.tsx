@@ -114,7 +114,7 @@ export default function WhatIsMirepoixPage() {
           <h2 id="definition">What Mirepoix Is (The Simple Definition)</h2>
 
           <p>
-            Mirepoix is a combination of diced onions, carrots, and celery cooked in fat until softened. That's it. The ratio matters, the size of the dice matters, and the cooking method matters—but the concept is straightforward.
+            Mirepoix is a combination of diced onions, carrots, and celery cooked in fat until softened. That&apos;s it. The ratio matters, the size of the dice matters, and the cooking method matters—but the concept is straightforward.
           </p>
 
           <div className="bg-orange-50 border-l-4 border-orange-700 p-6 my-8">
@@ -140,7 +140,7 @@ export default function WhatIsMirepoixPage() {
           <h3>It Builds Foundational Flavor</h3>
 
           <p>
-            Mirepoix doesn't add a specific taste you can identify—it adds depth. The science: onions contain sulfur compounds that become sweet when cooked slowly. Carrots add natural sugars that caramelize. Celery contributes savory, slightly bitter notes that balance the sweetness. Combined, they create a flavor base that makes everything layered on top taste more complete.
+            Mirepoix doesn&apos;t add a specific taste you can identify—it adds depth. The science: onions contain sulfur compounds that become sweet when cooked slowly. Carrots add natural sugars that caramelize. Celery contributes savory, slightly bitter notes that balance the sweetness. Combined, they create a flavor base that makes everything layered on top taste more complete.
           </p>
 
           <h3>It Replaces Multiple Ingredients</h3>
@@ -180,13 +180,13 @@ export default function WhatIsMirepoixPage() {
           </p>
 
           <p>
-            <strong>Large dice (¾-1 inch):</strong> For long-cooking stocks and braises. Won't break down during 6-8 hour simmers, releases flavor gradually over extended cooking, easier to strain out at the end. Use for stocks that simmer all day.
+            <strong>Large dice (¾-1 inch):</strong> For long-cooking stocks and braises. Won&apos;t break down during 6-8 hour simmers, releases flavor gradually over extended cooking, easier to strain out at the end. Use for stocks that simmer all day.
           </p>
 
           <h3>Cooking Method Changes the Flavor Profile</h3>
 
           <p>
-            Mirepoix isn't always cooked the same way. The method you choose determines the final flavor:
+            Mirepoix isn&apos;t always cooked the same way. The method you choose determines the final flavor:
           </p>
 
           <p>
@@ -251,7 +251,7 @@ export default function WhatIsMirepoixPage() {
           <h3>The Holy Trinity (Cajun/Creole Cooking)</h3>
 
           <p>
-            Replace carrots with green bell peppers. Same ratio: 2 parts onion, 1 part celery, 1 part green bell pepper. The bell pepper adds a vegetal, slightly bitter note that carrots don't provide—it's essential for authentic Cajun flavor in gumbo, jambalaya, and étouffée.
+            Replace carrots with green bell peppers. Same ratio: 2 parts onion, 1 part celery, 1 part green bell pepper. The bell pepper adds a vegetal, slightly bitter note that carrots don&apos;t provide—it&apos;s essential for authentic Cajun flavor in gumbo, jambalaya, and étouffée.
           </p>
 
           <h3>Soffritto (Italian Cooking)</h3>
@@ -271,11 +271,11 @@ export default function WhatIsMirepoixPage() {
           <h3>The Professional Method</h3>
 
           <p>
-            Professional kitchens prep mirepoix in large batches during morning prep—enough for the entire day's service. Home cooks can replicate this efficiency:
+            Professional kitchens prep mirepoix in large batches during morning prep—enough for the entire day&apos;s service. Home cooks can replicate this efficiency:
           </p>
 
           <p>
-            <strong>Step 1: Prep vegetables separately, then combine.</strong> Dice all onions first, all carrots second, all celery third. Don't alternate between vegetables—every time you switch, you lose efficiency picking up a different vegetable, washing a different cutting board, resetting your knife rhythm.
+            <strong>Step 1: Prep vegetables separately, then combine.</strong> Dice all onions first, all carrots second, all celery third. Don&apos;t alternate between vegetables—every time you switch, you lose efficiency picking up a different vegetable, washing a different cutting board, resetting your knife rhythm.
           </p>
 
           <p>
@@ -289,7 +289,7 @@ export default function WhatIsMirepoixPage() {
           <h3>The Tool That Matters Most</h3>
 
           <p>
-            A sharp chef's knife with good balance makes mirepoix prep faster and produces better results. Sharp knives make clean cuts that preserve cell structure—the vegetables release less moisture during storage, staying firmer longer. Dull knives crush cells, releasing enzymes that cause browning and off-flavors.
+            A sharp chef&apos;s knife with good balance makes mirepoix prep faster and produces better results. Sharp knives make clean cuts that preserve cell structure—the vegetables release less moisture during storage, staying firmer longer. Dull knives crush cells, releasing enzymes that cause browning and off-flavors.
           </p>
 
           <p>
@@ -305,23 +305,23 @@ export default function WhatIsMirepoixPage() {
           </p>
 
           <p>
-            <strong>The fix:</strong> Take an extra 60 seconds to dice consistently. All pieces should be roughly the same size within ⅛ inch. It's fine if onions are slightly larger than carrots (onions soften faster), but within each vegetable, consistency matters.
+            <strong>The fix:</strong> Take an extra 60 seconds to dice consistently. All pieces should be roughly the same size within ⅛ inch. It&apos;s fine if onions are slightly larger than carrots (onions soften faster), but within each vegetable, consistency matters.
           </p>
 
           <h3>Cooking Over High Heat</h3>
 
           <p>
-            <strong>The problem:</strong> Using high heat to "save time." The onions burn around the edges before the carrots soften, and the final stock tastes bitter.
+            <strong>The problem:</strong> Using high heat to &quot;save time.&quot; The onions burn around the edges before the carrots soften, and the final stock tastes bitter.
           </p>
 
           <p>
-            <strong>The fix:</strong> Medium heat, patience. Mirepoix takes 10-15 minutes to soften properly—there's no shortcut. If you try to rush it with high heat, you'll get burnt aromatics and harsh flavors.
+            <strong>The fix:</strong> Medium heat, patience. Mirepoix takes 10-15 minutes to soften properly—there&apos;s no shortcut. If you try to rush it with high heat, you&apos;ll get burnt aromatics and harsh flavors.
           </p>
 
           <h3>Forgetting Salt</h3>
 
           <p>
-            <strong>The problem:</strong> Mirepoix cooked without salt doesn't release moisture properly and stays drier than it should.
+            <strong>The problem:</strong> Mirepoix cooked without salt doesn&apos;t release moisture properly and stays drier than it should.
           </p>
 
           <p>
@@ -329,17 +329,17 @@ export default function WhatIsMirepoixPage() {
           </p>
 
           <p>
-            <strong>The fix:</strong> Salt isn't optional—it's a chemical catalyst that makes the entire process work. Always add salt when you add mirepoix to the pan.
+            <strong>The fix:</strong> Salt isn&apos;t optional—it&apos;s a chemical catalyst that makes the entire process work. Always add salt when you add mirepoix to the pan.
           </p>
 
           <h2>Putting It All Together</h2>
 
           <p>
-            Mirepoix isn't flashy. It doesn't have visual drama or technical complexity. But professional kitchens worldwide use some form of aromatic vegetable base in nearly every refined savory dish.
+            Mirepoix isn&apos;t flashy. It doesn&apos;t have visual drama or technical complexity. But professional kitchens worldwide use some form of aromatic vegetable base in nearly every refined savory dish.
           </p>
 
           <p>
-            The reason: it's reliable. Dice it consistently, cook it properly, let it do its job, and the results are predictable. That matters in professional kitchens where the same dish needs to taste identical whether it's cooked on Tuesday or Saturday.
+            The reason: it&apos;s reliable. Dice it consistently, cook it properly, let it do its job, and the results are predictable. That matters in professional kitchens where the same dish needs to taste identical whether it&apos;s cooked on Tuesday or Saturday.
           </p>
 
           <p>

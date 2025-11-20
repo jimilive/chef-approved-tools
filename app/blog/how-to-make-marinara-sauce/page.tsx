@@ -111,7 +111,7 @@ export default function MarinaraSaucePage() {
           </div>
 
           <p>
-            Marinara sauce proves that simplicity beats complexity when executed correctly. Five ingredients, proper technique, and the discipline to stop cooking at 35 minutes instead of letting it simmer for "just another hour" separate authentic Italian marinara from American adaptations.
+            Marinara sauce proves that simplicity beats complexity when executed correctly. Five ingredients, proper technique, and the discipline to stop cooking at 35 minutes instead of letting it simmer for &quot;just another hour&quot; separate authentic Italian marinara from American adaptations.
           </p>
 
           <h2 id="ingredients">The Five Essential Ingredients (And Why Each Matters)</h2>
@@ -137,7 +137,7 @@ export default function MarinaraSaucePage() {
           </p>
 
           <p>
-            San Marzano tomatoes from Italy's Campania region have naturally balanced sweetness (pH 4.0-4.5), thick flesh, fewer seeds, and lower moisture content. Look for "Pomodoro San Marzano dell'Agro Sarnese-Nocerino DOP" certification.
+            San Marzano tomatoes from Italy&apos;s Campania region have naturally balanced sweetness (pH 4.0-4.5), thick flesh, fewer seeds, and lower moisture content. Look for &quot;Pomodoro San Marzano dell&apos;Agro Sarnese-Nocerino DOP&quot; certification.
           </p>
 
           <p>
@@ -147,7 +147,7 @@ export default function MarinaraSaucePage() {
           <h3>Extra-Virgin Olive Oil: Not Negotiable</h3>
 
           <p>
-            Extra-virgin olive oil has the flavor compounds and fruitiness that regular olive oil lacks. The peppery, fruity backbone is essential to marinara's character. Regular olive oil adds fat without flavor.
+            Extra-virgin olive oil has the flavor compounds and fruitiness that regular olive oil lacks. The peppery, fruity backbone is essential to marinara&apos;s character. Regular olive oil adds fat without flavor.
           </p>
 
           <h3>Fresh Garlic, Thinly Sliced</h3>
@@ -159,7 +159,7 @@ export default function MarinaraSaucePage() {
           <h3>Kosher Salt</h3>
 
           <p>
-            Kosher salt dissolves evenly and seasons predictably. Table salt is twice as concentrated by volume because the crystals pack tighter. If you substitute table salt without adjusting, you'll over-salt the sauce.
+            Kosher salt dissolves evenly and seasons predictably. Table salt is twice as concentrated by volume because the crystals pack tighter. If you substitute table salt without adjusting, you&apos;ll over-salt the sauce.
           </p>
 
           <h3>Fresh Basil, Added at the End</h3>
@@ -181,7 +181,7 @@ export default function MarinaraSaucePage() {
           </p>
 
           <p>
-            Professional Italian chefs specify 20-30 minutes as optimal: "You want just enough time for everything to get acquainted without losing that 'hey, I'm actually a tomato' personality." Anything beyond 45 minutes eliminates the fresh, bright character that defines authentic marinara.
+            Professional Italian chefs specify 20-30 minutes as optimal: &quot;You want just enough time for everything to get acquainted without losing that &apos;hey, I&apos;m actually a tomato&apos; personality.&quot; Anything beyond 45 minutes eliminates the fresh, bright character that defines authentic marinara.
           </p>
 
           <h3>Long Simmering Creates Different Sauce</h3>
@@ -191,12 +191,12 @@ export default function MarinaraSaucePage() {
           </p>
 
           <p>
-            Natural sugars caramelize extensively during long cooking. Acids break down (after 2 hours, acidity is almost imperceptible). The result is concentrated, rich, cooked tomato flavor—the opposite of fresh marinara's bright, tomato-forward character.
+            Natural sugars caramelize extensively during long cooking. Acids break down (after 2 hours, acidity is almost imperceptible). The result is concentrated, rich, cooked tomato flavor—the opposite of fresh marinara&apos;s bright, tomato-forward character.
           </p>
 
           <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
             <p className="text-yellow-800 mb-0">
-              <strong>Critical distinction:</strong> Marinara = fresh, bright, quick (30-45 min). Long-cooked sauce = deep, caramelized, complex (2-3 hours). Different sauces with different purposes. Don't confuse them.
+              <strong>Critical distinction:</strong> Marinara = fresh, bright, quick (30-45 min). Long-cooked sauce = deep, caramelized, complex (2-3 hours). Different sauces with different purposes. Don&apos;t confuse them.
             </p>
           </div>
 
@@ -205,7 +205,7 @@ export default function MarinaraSaucePage() {
           <h3>Step 1: Prepare the Tomatoes (2 Minutes)</h3>
 
           <p>
-            Open the can of whole tomatoes. Pour tomatoes into a bowl—reserve the juice. Using your hands, crush each tomato gently—break them into roughly 1-inch pieces. Don't purée, don't blend. The goal is chunky texture with some liquid, not smooth paste.
+            Open the can of whole tomatoes. Pour tomatoes into a bowl—reserve the juice. Using your hands, crush each tomato gently—break them into roughly 1-inch pieces. Don&apos;t purée, don&apos;t blend. The goal is chunky texture with some liquid, not smooth paste.
           </p>
 
           <p>
@@ -223,7 +223,7 @@ export default function MarinaraSaucePage() {
           </p>
 
           <p>
-            This step takes 2-3 minutes total. If garlic browns in under 2 minutes, your heat is too high. If it hasn't colored after 4 minutes, your heat is too low. The smell tells you when it's ready—when the raw garlic smell turns sweet and nutty, move immediately to the next step.
+            This step takes 2-3 minutes total. If garlic browns in under 2 minutes, your heat is too high. If it hasn&apos;t colored after 4 minutes, your heat is too low. The smell tells you when it&apos;s ready—when the raw garlic smell turns sweet and nutty, move immediately to the next step.
           </p>
 
           <div className="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
@@ -250,11 +250,11 @@ export default function MarinaraSaucePage() {
           </p>
 
           <p>
-            Simmer uncovered for 30-40 minutes, stirring every 5-7 minutes. The sauce will gradually thicken as water evaporates. You'll see the color deepen from pale orange-red to deep red. The texture will change from watery to coating-consistency.
+            Simmer uncovered for 30-40 minutes, stirring every 5-7 minutes. The sauce will gradually thicken as water evaporates. You&apos;ll see the color deepen from pale orange-red to deep red. The texture will change from watery to coating-consistency.
           </p>
 
           <p>
-            Professional standard: 35 minutes. The sauce should be thick enough to coat a spoon but still pourable—not pasty, not watery. If your sauce is too thick at 35 minutes, your heat was too high. If it's still watery, your heat was too low or your pan was too narrow.
+            Professional standard: 35 minutes. The sauce should be thick enough to coat a spoon but still pourable—not pasty, not watery. If your sauce is too thick at 35 minutes, your heat was too high. If it&apos;s still watery, your heat was too low or your pan was too narrow.
           </p>
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
@@ -283,7 +283,7 @@ export default function MarinaraSaucePage() {
           <h3>Step 5: Add Basil and Finish (3-4 Minutes)</h3>
 
           <p>
-            After 30-40 minutes, turn off the heat. Tear 8-10 fresh basil leaves by hand directly into the sauce. Don't chop them with a knife—tearing releases aromatics better and doesn't bruise the leaves the way cutting does.
+            After 30-40 minutes, turn off the heat. Tear 8-10 fresh basil leaves by hand directly into the sauce. Don&apos;t chop them with a knife—tearing releases aromatics better and doesn&apos;t bruise the leaves the way cutting does.
           </p>
 
           <p>
@@ -299,7 +299,7 @@ export default function MarinaraSaucePage() {
           <h3>Cooking the Sauce Too Long</h3>
 
           <p>
-            <strong>The problem:</strong> Simmering for 2-3 hours thinking "longer = better." Overcooking kills the bright tomato flavor, leaving dull, flat sauce.
+            <strong>The problem:</strong> Simmering for 2-3 hours thinking &quot;longer = better.&quot; Overcooking kills the bright tomato flavor, leaving dull, flat sauce.
           </p>
 
           <p>
@@ -313,15 +313,15 @@ export default function MarinaraSaucePage() {
           <h3>Adding Sugar</h3>
 
           <p>
-            <strong>The problem:</strong> Adding sugar to "balance acidity." Italian chefs never add sugar to authentic marinara.
+            <strong>The problem:</strong> Adding sugar to &quot;balance acidity.&quot; Italian chefs never add sugar to authentic marinara.
           </p>
 
           <p>
-            <strong>Why it's wrong:</strong> Quality San Marzano tomatoes have natural sweetness. If your sauce tastes too acidic, you're using inferior tomatoes. Sugar masks problems instead of solving them, creating one-dimensional sweetness that covers harsh acidity.
+            <strong>Why it&apos;s wrong:</strong> Quality San Marzano tomatoes have natural sweetness. If your sauce tastes too acidic, you&apos;re using inferior tomatoes. Sugar masks problems instead of solving them, creating one-dimensional sweetness that covers harsh acidity.
           </p>
 
           <p>
-            <strong>The fix:</strong> Buy better tomatoes. San Marzano DOP tomatoes from Italy are naturally sweet with low acidity. Domestic alternatives like Cento or Muir Glen also work. Avoid generic store-brand tomatoes—they're picked under-ripe and taste harsh no matter how much you cook them.
+            <strong>The fix:</strong> Buy better tomatoes. San Marzano DOP tomatoes from Italy are naturally sweet with low acidity. Domestic alternatives like Cento or Muir Glen also work. Avoid generic store-brand tomatoes—they&apos;re picked under-ripe and taste harsh no matter how much you cook them.
           </p>
 
           <h3>Burning the Garlic</h3>
@@ -349,7 +349,7 @@ export default function MarinaraSaucePage() {
           </p>
 
           <p>
-            <strong>What blending does:</strong> Homogenizes texture and releases pectin from tomato cells, creating thick, pasty consistency. The sauce becomes harder to portion and doesn't cling to pasta as well.
+            <strong>What blending does:</strong> Homogenizes texture and releases pectin from tomato cells, creating thick, pasty consistency. The sauce becomes harder to portion and doesn&apos;t cling to pasta as well.
           </p>
 
           <p>
@@ -377,7 +377,7 @@ export default function MarinaraSaucePage() {
           <h3>A Wooden Spoon for Stirring</h3>
 
           <p>
-            Metal spoons scrape and scratch pan surfaces, damaging non-stick coatings and seasoned cast iron. Wooden spoons are gentle on all pan surfaces and don't conduct heat—you can leave them in the sauce while it cooks without burning your hand when you grab the handle.
+            Metal spoons scrape and scratch pan surfaces, damaging non-stick coatings and seasoned cast iron. Wooden spoons are gentle on all pan surfaces and don&apos;t conduct heat—you can leave them in the sauce while it cooks without burning your hand when you grab the handle.
           </p>
 
           <h2>Why This Recipe Works Consistently</h2>
@@ -391,15 +391,15 @@ export default function MarinaraSaucePage() {
           </p>
 
           <p>
-            <strong>The timing is precise.</strong> Thirty-five minutes of simmering isn't arbitrary—it's the point where water evaporates sufficiently without over-cooking the tomatoes. Go shorter and the sauce is watery. Go longer and the fresh tomato flavor fades.
+            <strong>The timing is precise.</strong> Thirty-five minutes of simmering isn&apos;t arbitrary—it&apos;s the point where water evaporates sufficiently without over-cooking the tomatoes. Go shorter and the sauce is watery. Go longer and the fresh tomato flavor fades.
           </p>
 
           <p>
-            <strong>The technique is simple.</strong> Toast garlic, add tomatoes, simmer, add basil. No complex reduction schedules, no multiple additions, no finicky temperature adjustments. The simplicity means the method works whether you're making marinara for the first time or the thousandth time.
+            <strong>The technique is simple.</strong> Toast garlic, add tomatoes, simmer, add basil. No complex reduction schedules, no multiple additions, no finicky temperature adjustments. The simplicity means the method works whether you&apos;re making marinara for the first time or the thousandth time.
           </p>
 
           <p>
-            Professional kitchens rely on marinara because it doesn't require constant attention—just the right ingredients, the right pan, and the discipline to stop at 35 minutes instead of continuing for "just 10 more minutes." That consistency is what separates restaurant marinara from home marinara: following the method exactly, trusting the timing, and resisting the urge to add sugar or cook longer or blend until smooth.
+            Professional kitchens rely on marinara because it doesn&apos;t require constant attention—just the right ingredients, the right pan, and the discipline to stop at 35 minutes instead of continuing for &quot;just 10 more minutes.&quot; That consistency is what separates restaurant marinara from home marinara: following the method exactly, trusting the timing, and resisting the urge to add sugar or cook longer or blend until smooth.
           </p>
 
         </div>

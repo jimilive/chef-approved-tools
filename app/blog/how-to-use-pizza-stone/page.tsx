@@ -124,13 +124,13 @@ export default function PizzaStonePage() {
           </p>
 
           <p>
-            When you place cold pizza dough on a preheated stone, the stone doesn't cool down dramatically. It maintains temperature and immediately begins cooking the pizza. Metal baking sheets lose heat rapidly when cold dough touches them—the surface temperature drops 100+ degrees instantly.
+            When you place cold pizza dough on a preheated stone, the stone doesn&apos;t cool down dramatically. It maintains temperature and immediately begins cooking the pizza. Metal baking sheets lose heat rapidly when cold dough touches them—the surface temperature drops 100+ degrees instantly.
           </p>
 
           <h3>Heat Capacity vs. Thermal Conductivity</h3>
 
           <p>
-            <strong>Heat capacity:</strong> The amount of heat required to raise a material's temperature by one degree. Baking stones are much heavier than metal sheets, allowing them to store significantly more thermal energy.
+            <strong>Heat capacity:</strong> The amount of heat required to raise a material&apos;s temperature by one degree. Baking stones are much heavier than metal sheets, allowing them to store significantly more thermal energy.
           </p>
 
           <p>
@@ -140,7 +140,7 @@ export default function PizzaStonePage() {
           <h3>Moisture Absorption Creates Crispness</h3>
 
           <p>
-            The porous structure of pizza stones provides a critical advantage. The stone's tiny pores absorb excess moisture from the pizza dough during baking. This moisture-wicking action, combined with intense bottom heat, causes rapid evaporation from the dough's surface.
+            The porous structure of pizza stones provides a critical advantage. The stone&apos;s tiny pores absorb excess moisture from the pizza dough during baking. This moisture-wicking action, combined with intense bottom heat, causes rapid evaporation from the dough&apos;s surface.
           </p>
 
           <p>
@@ -150,7 +150,7 @@ export default function PizzaStonePage() {
           <h2 id="preheating">Why 45-60 Minutes Preheating is Essential</h2>
 
           <p>
-            The most common mistake that ruins home pizza: inadequate preheating. Manufacturers recommend 30-45 minutes. Testing by America's Test Kitchen proved that 60 minutes is optimal, though 45 minutes is acceptable when time is limited.
+            The most common mistake that ruins home pizza: inadequate preheating. Manufacturers recommend 30-45 minutes. Testing by America&apos;s Test Kitchen proved that 60 minutes is optimal, though 45 minutes is acceptable when time is limited.
           </p>
 
           <h3>The Data</h3>
@@ -166,7 +166,7 @@ export default function PizzaStonePage() {
 
           <ol>
             <li>The stone to fully absorb maximum heat from the oven</li>
-            <li>Temperature to equalize throughout the stone's mass</li>
+            <li>Temperature to equalize throughout the stone&apos;s mass</li>
             <li>The porous structure to heat uniformly, ensuring consistent moisture absorption</li>
           </ol>
 
@@ -189,7 +189,7 @@ export default function PizzaStonePage() {
           </div>
 
           <p>
-            Without adequate preheating, you get soggy, undercooked pizza because the stone lacks the thermal energy to rapidly cook the bottom crust while the top finishes. If your pizza comes out pale after 45-minute preheat, the issue isn't preheat time—it's oven temperature limitation or dough hydration problems.
+            Without adequate preheating, you get soggy, undercooked pizza because the stone lacks the thermal energy to rapidly cook the bottom crust while the top finishes. If your pizza comes out pale after 45-minute preheat, the issue isn&apos;t preheat time—it&apos;s oven temperature limitation or dough hydration problems.
           </p>
 
           <h2 id="stone-vs-steel">Stone vs. Steel: Heat Transfer Differences</h2>
@@ -284,7 +284,7 @@ export default function PizzaStonePage() {
           </p>
 
           <p>
-            <strong>The rule:</strong> If you think you've used enough sauce, you've used too much. Pizza isn't pasta—the crust should be the primary flavor and texture, not the sauce. Two ounces (roughly 3 tablespoons) spread thin is sufficient for a 12-inch pizza.
+            <strong>The rule:</strong> If you think you&apos;ve used enough sauce, you&apos;ve used too much. Pizza isn&apos;t pasta—the crust should be the primary flavor and texture, not the sauce. Two ounces (roughly 3 tablespoons) spread thin is sufficient for a 12-inch pizza.
           </p>
 
           <p>
@@ -298,7 +298,7 @@ export default function PizzaStonePage() {
           </p>
 
           <p>
-            If edges are pale after 12 minutes, your oven isn't hot enough or the stone wasn't preheated long enough. If edges burn before the center sets, move the stone to a lower rack position—too much top heat, not enough bottom heat.
+            If edges are pale after 12 minutes, your oven isn&apos;t hot enough or the stone wasn&apos;t preheated long enough. If edges burn before the center sets, move the stone to a lower rack position—too much top heat, not enough bottom heat.
           </p>
 
           <h3>Step 5: Let Stone Cool Naturally</h3>
@@ -368,7 +368,7 @@ export default function PizzaStonePage() {
           <h3>Storage</h3>
 
           <p>
-            Many bakers leave stones permanently in the oven (on the bottom rack) because stones are heavy and awkward to move, there's no risk of thermal shock if always present, it acts as heat diffuser for other baking, and it's always ready for pizza. Exception: Remove stones before running self-cleaning cycles.
+            Many bakers leave stones permanently in the oven (on the bottom rack) because stones are heavy and awkward to move, there&apos;s no risk of thermal shock if always present, it acts as heat diffuser for other baking, and it&apos;s always ready for pizza. Exception: Remove stones before running self-cleaning cycles.
           </p>
 
           <h2>Choosing the Right Stone</h2>
