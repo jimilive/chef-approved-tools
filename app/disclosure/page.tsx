@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Affiliate Disclosure | How Chef Approved Tools Earns Commissions',
+  title: 'Affiliate Disclosure | How We Earn Commissions',
   description: 'Full disclosure of affiliate relationships. How Chef Approved Tools earns commissions from Amazon and other retailers through product recommendations.',
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/disclosure',
