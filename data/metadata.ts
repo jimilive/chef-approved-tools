@@ -106,7 +106,7 @@ export const METADATA = {
     
     'about': {
       title: "24 Years Testing Kitchen Tools: What Survives, What Fails",
-      description: "Pizzaiolo at Purple Café, line cook at Feierabend—24 years testing what actually lasts in professional kitchens vs. what breaks in 6 months.",
+      description: "Pizzaiolo at Purple Café for 6 years, line cook at Feierabend—24 years testing what actually lasts in professional kitchens vs what breaks in 6 months.",
       canonical: "https://www.chefapprovedtools.com/about",
       author: "Scott Bradley",
       imageUrl: "/images/og/about-scott-bradley.jpg",
