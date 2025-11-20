@@ -73,7 +73,7 @@ export default function MeatCookingTemperaturesThermometers() {
             },
             {
               question: "What's the difference between instant-read and probe thermometers?",
-              answer: "Instant-read thermometers give readings in 2-10 seconds and aren't oven-safe—you open the oven, check temp, remove thermometer. Probe thermometers stay in meat during cooking with a cable running to a display outside the oven, giving continuous readings. At Purple Café, we used instant-reads for steaks (quick checks) and leave-in probes for roasts (long cooks)."
+              answer: "Instant-read thermometers give readings in 2-10 seconds and aren't oven-safe—you open the oven, check temp, remove thermometer. Probe thermometers stay in meat during cooking with a cable running to a display outside the oven, giving continuous readings. In professional kitchens, instant-reads are used for quick checks on steaks and grilled items, while leave-in probes are ideal for long roasts where you want continuous monitoring."
             },
             {
               question: "Can I rely on meat color to check doneness?",
@@ -103,7 +103,7 @@ export default function MeatCookingTemperaturesThermometers() {
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
-            At Purple Café, where I managed kitchen operations serving 200+ covers nightly,
+            At Purple Café, where we served 200+ covers on busy nights,
             thermometers weren&apos;t optional—they were mandatory. When serving hundreds of guests,
             food safety and consistency aren&apos;t negotiable. Every protein got checked.
           </p>
@@ -444,7 +444,7 @@ export default function MeatCookingTemperaturesThermometers() {
           <h2>Professional Kitchen Thermometer Protocols</h2>
 
           <p>
-            Based on 24 years managing restaurant operations, here&apos;s how professionals
+            Based on 24 years in professional kitchens, here&apos;s how professionals
             actually use thermometers:
           </p>
 
@@ -579,7 +579,7 @@ export default function MeatCookingTemperaturesThermometers() {
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the difference between instant-read and probe thermometers?</h3>
               <p className="text-slate-700 leading-relaxed">
-                Instant-read thermometers give readings in 2-10 seconds and aren&apos;t oven-safe—you open the oven, check temp, remove thermometer. Probe thermometers stay in meat during cooking with a cable running to a display outside the oven, giving continuous readings. At Purple Café, we used instant-reads for steaks (quick checks) and leave-in probes for roasts (long cooks).
+                Instant-read thermometers give readings in 2-10 seconds and aren&apos;t oven-safe—you open the oven, check temp, remove thermometer. Probe thermometers stay in meat during cooking with a cable running to a display outside the oven, giving continuous readings. In professional kitchens, instant-reads are used for quick checks on steaks and grilled items, while leave-in probes are ideal for long roasts where you want continuous monitoring.
               </p>
             </div>
             <div>

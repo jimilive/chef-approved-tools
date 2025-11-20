@@ -50,7 +50,7 @@ export default function SteakSearingPost() {
           __html: JSON.stringify(generateFAQSchema([
             {
               question: "How hot should my pan be for searing steak?",
-              answer: "Your pan should reach 400-450°F for optimal searing. The Maillard reaction—which creates that beautiful brown crust—starts at 300°F and ramps up quickly around 350°F. At Purple Café, we preheated cast iron pans for 5-7 minutes over medium-high heat until a drop of water instantly vaporized. If you can't hold your hand over the pan for more than 2-3 seconds, it's ready."
+              answer: "Your pan should reach 400-450°F for optimal searing. The Maillard reaction—which creates that beautiful brown crust—starts at 300°F and ramps up quickly around 350°F. In professional kitchens, pans are preheated for 5-7 minutes over medium-high heat until a drop of water instantly vaporized. If you can't hold your hand over the pan for more than 2-3 seconds, it's ready."
             },
             {
               question: "What is the Maillard reaction and why does it matter?",
@@ -70,7 +70,7 @@ export default function SteakSearingPost() {
             },
             {
               question: "What's the best oil for high-heat steak searing?",
-              answer: "Refined avocado oil (smoke point 520°F) or ghee/clarified butter (480°F) are ideal for searing. At Purple Café during 200+ cover nights, we used clarified butter because it combines high smoke point with rich flavor. Avoid extra virgin olive oil (320°F smoke point) and regular butter (350°F)—both burn and create acrid flavors at searing temperatures."
+              answer: "Refined avocado oil (smoke point 520°F) or ghee/clarified butter (480°F) are ideal for searing. Professional kitchens often use clarified butter because it combines high smoke point with rich flavor. Avoid extra virgin olive oil (320°F smoke point) and regular butter (350°F)—both burn and create acrid flavors at searing temperatures."
             },
             {
               question: "How do I know when to flip my steak?",
@@ -86,7 +86,7 @@ export default function SteakSearingPost() {
             },
             {
               question: "Can I sear steak in a stainless steel pan instead of cast iron?",
-              answer: "Yes—stainless steel works excellently for searing if it's heavy-gauge. Cast iron retains heat better when you add cold meat, but stainless steel heats more evenly and is easier to deglaze for pan sauces. At Purple Café, we used both. The key is a heavy pan (thin pans lose heat instantly) preheated for 5-7 minutes until screaming hot."
+              answer: "Yes—stainless steel works excellently for searing if it's heavy-gauge. Cast iron retains heat better when you add cold meat, but stainless steel heats more evenly and is easier to deglaze for pan sauces. Professional kitchens use both depending on the situation. The key is a heavy pan (thin pans lose heat instantly) preheated for 5-7 minutes until screaming hot."
             }
           ]))
         }}
@@ -410,7 +410,7 @@ export default function SteakSearingPost() {
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">How hot should my pan be for searing steak?</h3>
               <p className="text-slate-700 leading-relaxed">
-                Your pan should reach 400-450°F for optimal searing. The Maillard reaction—which creates that beautiful brown crust—starts at 300°F and ramps up quickly around 350°F. At Purple Café, we preheated cast iron pans for 5-7 minutes over medium-high heat until a drop of water instantly vaporized. If you can&apos;t hold your hand over the pan for more than 2-3 seconds, it&apos;s ready.
+                Your pan should reach 400-450°F for optimal searing. The Maillard reaction—which creates that beautiful brown crust—starts at 300°F and ramps up quickly around 350°F. In professional kitchens, pans are preheated for 5-7 minutes over medium-high heat until a drop of water instantly vaporized. If you can&apos;t hold your hand over the pan for more than 2-3 seconds, it&apos;s ready.
               </p>
             </div>
             <div>
@@ -440,7 +440,7 @@ export default function SteakSearingPost() {
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the best oil for high-heat steak searing?</h3>
               <p className="text-slate-700 leading-relaxed">
-                Refined avocado oil (smoke point 520°F) or ghee/clarified butter (480°F) are ideal for searing. At Purple Café during 200+ cover nights, we used clarified butter because it combines high smoke point with rich flavor. Avoid extra virgin olive oil (320°F smoke point) and regular butter (350°F)—both burn and create acrid flavors at searing temperatures.
+                Refined avocado oil (smoke point 520°F) or ghee/clarified butter (480°F) are ideal for searing. Professional kitchens often use clarified butter because it combines high smoke point with rich flavor. Avoid extra virgin olive oil (320°F smoke point) and regular butter (350°F)—both burn and create acrid flavors at searing temperatures.
               </p>
             </div>
             <div>
@@ -464,7 +464,7 @@ export default function SteakSearingPost() {
             <div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I sear steak in a stainless steel pan instead of cast iron?</h3>
               <p className="text-slate-700 leading-relaxed">
-                Yes—stainless steel works excellently for searing if it&apos;s heavy-gauge. Cast iron retains heat better when you add cold meat, but stainless steel heats more evenly and is easier to deglaze for pan sauces. At Purple Café, we used both. The key is a heavy pan (thin pans lose heat instantly) preheated for 5-7 minutes until screaming hot.
+                Yes—stainless steel works excellently for searing if it&apos;s heavy-gauge. Cast iron retains heat better when you add cold meat, but stainless steel heats more evenly and is easier to deglaze for pan sauces. Professional kitchens use both depending on the situation. The key is a heavy pan (thin pans lose heat instantly) preheated for 5-7 minutes until screaming hot.
               </p>
             </div>
           </div>

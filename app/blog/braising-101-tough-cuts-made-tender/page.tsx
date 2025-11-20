@@ -96,15 +96,7 @@ export default function Braising101Page() {
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
-            At Purple Café, we had a prep cook who was one of the best on the line—fast, sharp, cool under pressure. But one night, he tried to save time by leaving a braise running overnight. He set the burner too high, sealed the lid tight, and went home.
-          </p>
-
-          <p>
-            The next morning, the kitchen smelled like burnt beef, panic, and bad decisions. We were one flare-up away from a fire report. He caught plenty of heat from the crew that day—from the oven and from us.
-          </p>
-
-          <p>
-            That&apos;s the day I learned—and taught—that braising isn&apos;t about time, it&apos;s about control.
+            Braising isn&apos;t about time, it&apos;s about control. Temperature, moisture, and patience transform tough cuts into tender meals.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">

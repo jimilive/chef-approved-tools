@@ -179,10 +179,6 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
             Moisture is the enemy of browning. Professional kitchens dry every ingredient before it hits the sheet pan—vegetables, proteins, everything. If the surface is wet, the oven has to evaporate that water before browning can begin.
           </p>
 
-          <p>
-            I learned this from bacon. At Purple Café in Seattle, we cooked hundreds of pounds of bacon weekly on sheet pans. The cooks who skipped drying the bacon ended up with pale, chewy strips that steamed in their own moisture. The cooks who patted each strip dry got crisp, evenly browned bacon every time.
-          </p>
-
           <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
             <p className="font-semibold text-slate-900 mb-2">Drying Checklist:</p>
             <ul className="space-y-2 mb-0">
