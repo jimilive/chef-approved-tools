@@ -107,6 +107,12 @@ export default function MealPrepStationSetupPage() {
             He wasn&apos;t wrong. Every professional chef learns that mise en place — everything in its place — is more than organization. It&apos;s mindset, discipline, and calm in the chaos.
           </p>
 
+          <div className="bg-gradient-to-r from-blue-50 to-blue-100 border-l-4 border-blue-600 p-6 my-8 rounded-r-lg">
+            <p className="mb-0">
+              <strong>New to mise en place?</strong> Start with <Link href="/blog/mis-en-place-professional-cooking" className="text-blue-700 hover:text-blue-800 font-semibold underline">understanding the foundation of professional cooking</Link> before diving into station setup—it&apos;ll make these techniques click instantly.
+            </p>
+          </div>
+
           <p>
             At home, the same principle transforms your kitchen. You don&apos;t need stainless counters or speed racks; you just need flow, awareness, and the right tools in the right places. This guide shows you how to build restaurant efficiency into your home meal prep — so cooking feels effortless, not overwhelming.
           </p>

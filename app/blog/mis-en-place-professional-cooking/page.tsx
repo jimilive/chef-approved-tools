@@ -280,9 +280,19 @@ export default function MiseEnPlacePage() {
           </p>
         </div>
 
+        <div className="bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
+          <h3 className="text-xl font-bold text-slate-900 mt-0 mb-3">Ready to Put This Into Practice?</h3>
+          <p className="mb-0">
+            Now that you understand the mise en place philosophy, learn exactly how to <Link href="/blog/meal-prep-station-setup-restaurant-efficiency" className="text-orange-700 hover:text-orange-800 font-semibold underline">set up your meal prep station with restaurant efficiency</Link> using the zone-based workflow system I use in professional kitchens.
+          </p>
+        </div>
+
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/blog/meal-prep-station-setup-restaurant-efficiency" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Meal Prep Station Setup: Restaurant Efficiency
+            </Link>
             <Link href="/blog/knife-safety-protect-fingers" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Knife Safety: How to Protect Your Fingers
             </Link>
@@ -297,9 +307,6 @@ export default function MiseEnPlacePage() {
             </Link>
             <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-700 hover:text-orange-800 font-semibold">
               → OXO Good Grips Bench Scraper Review
-            </Link>
-            <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → John Boos Platinum Cutting Board Review
             </Link>
           </div>
         </div>
