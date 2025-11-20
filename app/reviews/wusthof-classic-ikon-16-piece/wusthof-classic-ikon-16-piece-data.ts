@@ -21,7 +21,7 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: 'Years at Purple Café',
+    testingPeriod: 'Years at Feierabend',
     hook: 'Premium German steel. Professional performance.',
   },
 

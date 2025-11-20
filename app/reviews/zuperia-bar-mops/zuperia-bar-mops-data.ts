@@ -21,7 +21,7 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: 'Years at Purple Café',
+    testingPeriod: '18 years home use',
     hook: 'Industry standard. 100% ring spun cotton. Restaurant grade.',
   },
 

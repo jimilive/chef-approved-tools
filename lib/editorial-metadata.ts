@@ -48,7 +48,7 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'diamond-crystal-kosher-salt': {
     tier: 1,
-    testingPeriod: '24 years (6 Purple Café + 18 home)',
+    testingPeriod: '18 years (6 Purple Café + home)',
     hook: 'Professional chef standard. Clean flavor, perfect texture.',
     revenueScore: 75
   },

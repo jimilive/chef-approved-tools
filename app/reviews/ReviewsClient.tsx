@@ -98,7 +98,7 @@ const LEGACY_allReviews: Review[] = [
     name: 'Wusthof Classic Ikon 16 Piece Set',
     slug: 'wusthof-classic-ikon-16-piece',
     rating: 4.7,
-    testingPeriod: 'Years at Purple Café',
+    testingPeriod: 'Years at Feierabend',
     hook: 'Premium German steel. Professional performance.',
     revenueScore: 83,
     category: 'Knife Sets'
@@ -120,7 +120,7 @@ const LEGACY_allReviews: Review[] = [
     name: 'Diamond Crystal Kosher Salt',
     slug: 'diamond-crystal-kosher-salt',
     rating: 4.9,
-    testingPeriod: '24 years (6 Purple Café + 18 home)',
+    testingPeriod: '18 years (6 Purple Café + home)',
     hook: 'Professional chef standard. Clean flavor, perfect texture.',
     revenueScore: 75,
     category: 'Ingredients'
@@ -215,11 +215,11 @@ const LEGACY_allReviews: Review[] = [
   },
   {
     id: 16,
-    tier: 1,
+    tier: 3,
     name: 'ZUPERIA Bar Mops',
     slug: 'zuperia-bar-mops',
     rating: 4.8,
-    testingPeriod: 'Years at Purple Café',
+    testingPeriod: '18 years home use',
     hook: 'Industry standard. 100% ring spun cotton. Restaurant grade.',
     revenueScore: 50,
     category: 'Kitchen Textiles'
@@ -230,7 +230,7 @@ const LEGACY_allReviews: Review[] = [
     name: "Rubbermaid Commercial Cook's Scraper",
     slug: 'rubbermaid-commercial-cooks-scraper',
     rating: 4.9,
-    testingPeriod: '18 years (9 Purple Café + Feireabend + 9 home)',
+    testingPeriod: '18 years (Purple Café + home)',
     hook: '$15 buy-it-for-life spatula. 500°F heat resistance. NSF certified.',
     revenueScore: 67,
     category: 'Utensils'
