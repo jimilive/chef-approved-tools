@@ -76,16 +76,6 @@ export default function BaconButNotInThisDishPage() {
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
-          <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-6 rounded-xl border-l-4 border-blue-600 my-8 shadow-lg">
-            <p className="text-white font-semibold mb-3 flex items-center gap-2">
-              <ChefHat className="w-5 h-5" />
-              Restaurant Reality: The Bacon Incident
-            </p>
-            <p className="text-blue-100 mb-0 leading-relaxed">
-              At Purple Café in Seattle, a server once asked the chef to add bacon to our signature tomato bisque. The chef looked up from his station and said something I&apos;ll never forget: &quot;Bacon is not seasoning. Bacon is not a fix for boring food. Bacon is an ingredient that belongs in specific dishes, and this isn&apos;t one of them.&quot; That moment taught me more about cooking philosophy than a semester of culinary school.
-            </p>
-          </div>
-
           <p>
             I love bacon. I really do. I&apos;ve cooked thousands of pounds of it in professional kitchens. I&apos;ve rendered bacon fat for cooking, made bacon-wrapped everything, and created countless dishes where bacon was the star.
           </p>

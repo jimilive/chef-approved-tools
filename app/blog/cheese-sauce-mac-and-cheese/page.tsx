@@ -100,16 +100,6 @@ export default function CheeseSaucePage() {
             Most home cooks think making cheese sauce is complicated. It&apos;s not. But it is precise. Once you understand the structure and the science, your mac and cheese, veggie gratins, and nacho sauces will turn out perfect every single time.
           </p>
 
-          <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
-            <h2 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-700" />
-              Restaurant Reality
-            </h2>
-            <p className="mb-0">
-              During family meal at Purple Café, I watched dozens of line cooks attempt mac and cheese. The ones who added cheese while the béchamel was still bubbling got grainy, broken sauce. The ones who pulled the pot off heat first—every single time—got silk. Temperature is everything. In restaurants, we&apos;d make gallons of cheese sauce for brunch service, and if one batch broke, it meant redoing everything. You learn to respect the temperature rules real fast when 200 covers are waiting.
-            </p>
-          </div>
-
           <h2>The Structure: Béchamel → Mornay (Cheese Sauce)</h2>
 
           <p>

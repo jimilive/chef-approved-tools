@@ -54,8 +54,8 @@ export const reviewData = {
         content: 'Stainless steel maintains food at safe serving temperatures (140°F+) for 3-4 hours in chafing dishes with Sterno fuel. Essential for catering operations where food must stay hot during transport and service. The metal conducts heat efficiently and survives the abuse of commercial catering environments.'
       },
       {
-        title: 'Catering Transport Durability',
-        content: 'After 24 years of professional catering use, large metal pans are virtually indestructible. They survive being loaded into vans, transported to events, set up in chafing dishes, and cleaned in commercial dishwashers at 180°F+. No coating to wear off, no warping, no degradation—just restaurant-grade 18-8 stainless steel that lasts decades.'
+        title: 'Professional Kitchen Transport Durability',
+        content: 'After 24 years of professional kitchen use, large metal pans are virtually indestructible. They survive being loaded into vans, transported to events, set up in chafing dishes, and cleaned in commercial dishwashers at 180°F+. No coating to wear off, no warping, no degradation—just restaurant-grade 18-8 stainless steel that lasts decades.'
       },
       {
         title: 'Buffet Service Excellence',

@@ -41,7 +41,7 @@ export const reviewData = {
       text: "Tier 2: Extended Professional Testing",
       icon: "🏆"
     },
-    verdict: "On the bottle, Method boldly claims: \"powerful, non-toxic cleaning is not a myth, we're still working on the unicorns.\" Let me tell you—this product IS the unicorn. After 5 years of daily use and 24 years managing professional kitchens, I've never found a cleaner that combines serious grease-cutting power with genuinely safe, non-toxic ingredients.",
+    verdict: "On the bottle, Method boldly claims: \"powerful, non-toxic cleaning is not a myth, we're still working on the unicorns.\" Let me tell you—this product IS the unicorn. After 5 years of daily use and 24 years in professional kitchens, I've never found a cleaner that combines serious grease-cutting power with genuinely safe, non-toxic ingredients.",
     verdictStrong: "this product IS the unicorn",
     ctaText: "Check Price on Amazon →"
   },
@@ -90,7 +90,7 @@ export const reviewData = {
       },
       {
         label: "Context",
-        value: "After 24 years managing professional kitchens"
+        value: "After 24 years in professional kitchens"
       }
     ],
     outstandingPerformance: [
@@ -365,7 +365,7 @@ export const reviewData = {
     affiliateLinks: [],
     inStock: true,
     expertRating: 4.8,
-    expertOpinion: "After 5 years of daily use and 24 years managing professional kitchens, I've never found a cleaner that combines serious grease-cutting power with genuinely safe, non-toxic ingredients. Method All-Purpose Cleaner is the rare product that refuses to compromise—it cuts through kitchen grease as effectively as harsh chemical cleaners, but it's plant-based, biodegradable, and safe around food prep surfaces.",
+    expertOpinion: "After 5 years of daily use and 24 years in professional kitchens, I've never found a cleaner that combines serious grease-cutting power with genuinely safe, non-toxic ingredients. Method All-Purpose Cleaner is the rare product that refuses to compromise—it cuts through kitchen grease as effectively as harsh chemical cleaners, but it's plant-based, biodegradable, and safe around food prep surfaces.",
     dateAdded: "2025-10-13",
     lastUpdated: "2025-10-13"
   }

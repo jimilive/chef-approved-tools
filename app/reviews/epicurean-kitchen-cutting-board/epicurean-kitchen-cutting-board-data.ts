@@ -47,7 +47,7 @@ export const reviewData = {
     ],
     affiliateLinks: [],
     expertRating: 5.0,
-    expertOpinion: "After decades with wood boards, these dishwasher-safe composite boards are better in every practical way - truly sanitary, zero maintenance, and knife-friendly for 24 years of use.",
+    expertOpinion: "After decades with wood boards, these dishwasher-safe composite boards are better in every practical way - truly sanitary, zero maintenance, and knife-friendly for 10 years of use.",
     dateAdded: "2025-01-15",
     lastUpdated: "2025-10-13"
   },
@@ -129,7 +129,7 @@ export const reviewData = {
       },
       {
         title: 'Knife Edge Preservation',
-        content: `**Surface hardness:** Comparable to hard maple - one of the most knife-friendly woods. The Richlite material is firm enough to provide good cutting resistance but not so hard that it damages knife edges.\n\n**Edge retention testing:** After 24 years of testing with my Victorinox knives (including 10 years on this specific board), I've seen no difference in sharpening frequency compared to wood boards.\n\n**Professional validation:** Used by chefs worldwide. If these boards damaged knife edges, professional cooks wouldn't use them. The surface is genuinely knife-safe.\n\n**Knife marks are cosmetic:** Yes, the board shows knife marks over time. But unlike grooves in wood that harbor bacteria, these marks don't create porous areas. The surface remains non-porous and sanitary throughout its life.`
+        content: `**Surface hardness:** Comparable to hard maple - one of the most knife-friendly woods. The Richlite material is firm enough to provide good cutting resistance but not so hard that it damages knife edges.\n\n**Edge retention testing:** After 10 years of testing with my Victorinox knives on this specific board, I've seen no difference in sharpening frequency compared to wood boards. My 24 years of professional experience confirms this is genuinely knife-safe.\n\n**Professional validation:** Used by chefs worldwide. If these boards damaged knife edges, professional cooks wouldn't use them. The surface is genuinely knife-safe.\n\n**Knife marks are cosmetic:** Yes, the board shows knife marks over time. But unlike grooves in wood that harbor bacteria, these marks don't create porous areas. The surface remains non-porous and sanitary throughout its life.`
       },
       {
         title: 'Practical Daily Use',
@@ -166,7 +166,7 @@ export const reviewData = {
   faqData: [
     {
       question: "Are dishwasher-safe boards really safe for knives?",
-      answer: "Yes. Epicurean boards use Richlite, a wood fiber composite that's as gentle on knife edges as hard maple. After 24 years of testing with my Victorinox knives, I've seen no difference in edge retention compared to traditional wood boards. The surface is firm enough to provide good cutting resistance but not so hard that it damages edges. Professional chefs worldwide use these boards - if they damaged knives, pros wouldn't use them."
+      answer: "Yes. Epicurean boards use Richlite, a wood fiber composite that's as gentle on knife edges as hard maple. After 10 years of testing with my Victorinox knives, I've seen no difference in edge retention compared to traditional wood boards. The surface is firm enough to provide good cutting resistance but not so hard that it damages edges. Professional chefs worldwide use these boards - if they damaged knives, pros wouldn't use them."
     },
     {
       question: "Will these boards warp in the dishwasher?",

@@ -66,7 +66,7 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'rubbermaid-commercial-cooks-scraper': {
     tier: 1,
-    testingPeriod: '18 years (9 Purple Café + Feireabend + 9 home)',
+    testingPeriod: '18 years (Purple Café + home)',
     hook: '$15 buy-it-for-life spatula. 500°F heat resistance. NSF certified.',
     revenueScore: 67
   },

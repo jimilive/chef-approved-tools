@@ -1,5 +1,5 @@
 /**
- * Winco Extra Heavyweight Tongs Review Data
+ * Winco Heavyweight Tongs Review Data
  *
  * This file contains all content for the Winco Heavy Duty Tongs review page.
  * Separated from page.tsx for maintainability and reusability.
@@ -8,11 +8,11 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: 'Winco Heavy Duty Tongs: 24 Years Using Restaurant-Grade $8 Tongs',
-    description: '24 years of professional cooking with Winco extra heavyweight tongs. Restaurant-grade quality at $8—a fraction of typical $20-30 tong prices.',
-    ogTitle: 'Winco Extra Heavyweight Tongs: 24-Year Professional Review',
-    ogDescription: 'Restaurant-grade tongs tested 24 years in professional kitchens.',
-    testingPeriod: '24 Years Professional Use',
+    title: 'Winco Heavyweight Tongs: Restaurant-Grade Inexpensive Tongs (Professional Review)',
+    description: '6 months testing Winco heavyweight tongs. These deliver the same quality I used in commercial kitchens for under $10.',
+    ogTitle: 'Winco Heavyweight Tongs: Professional Chef Review',
+    ogDescription: 'Restaurant-grade tongs reviewed by chef with 24 years professional experience.',
+    testingPeriod: '6 Months Testing',
     tier: 3
   },
 
@@ -21,18 +21,18 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: '8 Years',
-    hook: 'Locking mechanism works. Durable stainless steel.',
+    testingPeriod: '6 Months',
+    hook: 'Restaurant-grade quality. Durable stainless steel.',
   },
 
   // BREADCRUMB
   breadcrumb: {
-    productName: 'Winco Extra Heavyweight Tongs'
+    productName: 'Winco Heavyweight Tongs'
   },
 
   // SECTION 1: HERO
   hero: {
-    title: 'Winco Extra Heavyweight Tongs Review',
+    title: 'Winco Heavyweight Tongs Review',
     authorName: 'Scott Bradley',
     authorCredentials: '24 Years in Professional Kitchens',
     rating: 5.0,
@@ -40,7 +40,7 @@ export const reviewData = {
       icon: '💎',
       text: 'Tier 3: Expert Evaluation',
     },
-    verdict: 'These are the exact tongs I used in every restaurant kitchen. Strong, reliable, dishwasher-safe. Restaurant-grade tongs at a fraction of the price. At $8, buy three and never worry about tongs again.',
+    verdict: 'These are the same style of restaurant-grade tongs I used for 20 years in professional kitchens. Strong, reliable, dishwasher-safe. Inexpensive yet built like professional equipment—buy three and never worry about tongs again.',
     verdictStrong: 'Restaurant-quality tongs at budget price',
     ctaText: 'Check Price on Amazon →'
   },
@@ -51,7 +51,7 @@ export const reviewData = {
     sections: [
       {
         title: 'Restaurant-Grade Quality',
-        content: 'After 45 years of cooking, I know tongs. I\'ve used the flimsy ones that lose tension after a month, the silicone ones that melt on the grill, the expensive ones that aren\'t any better than the cheap ones. Winco makes restaurant equipment. These are the same tongs used in commercial kitchens everywhere - not because they\'re fancy, but because they work. Heavy-duty stainless steel construction. Proper spring tension that doesn\'t wear out. Scalloped edges that grip without slipping.'
+        content: 'After 24 years in professional kitchens, I know restaurant-grade tongs. I\'ve used the flimsy ones that lose tension after a month, the silicone ones that melt on the grill, the expensive ones that aren\'t any better. Winco makes restaurant equipment. These are the same style tongs used in commercial kitchens everywhere - not because they\'re fancy, but because they work. Heavy-duty stainless steel construction. Proper spring tension that doesn\'t wear out. Scalloped edges that grip without slipping.'
       },
       {
         title: 'Heavy-Duty Construction',
@@ -68,7 +68,7 @@ export const reviewData = {
     ],
     testingEnvironment: [],
     outstandingPerformance: [
-      'Restaurant-grade stainless steel construction at budget price ($8)',
+      'Restaurant-grade stainless steel construction at inexpensive price',
       'Perfect spring tension that maintains grip strength over years of use',
       'Scalloped edges provide secure grip on all food types without slipping',
       'Dishwasher-safe and heat-resistant up to 500°F for grill use'
@@ -134,7 +134,7 @@ export const reviewData = {
     },
     {
       question: 'Should I get the 9-inch or 12-inch tongs?',
-      answer: 'I use both daily. The 12-inch are perfect for grilling and keeping your hands away from heat - this is the standard professional length. The 9-inch are more maneuverable for sautéing and stovetop cooking. Both sizes available above with the same extra heavyweight construction and spring tension. If you only buy one pair, get the 12-inch for versatility.'
+      answer: 'I use both daily. The 12-inch are perfect for grilling and keeping your hands away from heat - this is the standard professional length. The 9-inch are more maneuverable for sautéing and stovetop cooking. Both sizes available above with the same heavyweight construction and spring tension. If you only buy one pair, get the 12-inch for versatility.'
     },
     {
       question: 'How\'s the spring tension on Winco tongs?',
@@ -161,7 +161,7 @@ export const reviewData = {
   // SECTION 7: WHERE TO BUY
   whereToBuy: {
     title: 'Choose Your Length',
-    introText: 'Both sizes are the same extra heavyweight construction with perfect spring tension. I keep both in my kitchen - 9" for sautéing and general tasks, 12" for grilling and working over heat.',
+    introText: 'Both sizes are the same heavyweight construction with perfect spring tension. I keep both in my kitchen - 9" for sautéing and general tasks, 12" for grilling and working over heat.',
     disclaimer: 'As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.'
   },
 
@@ -178,8 +178,8 @@ export const reviewData = {
   bottomLine: {
     title: 'Ready to Add These to Your Kitchen?',
     paragraphs: [
-      'These are one of the 11 tools I use most in my home kitchen after 24 years of professional cooking. At $8, buy a few pairs. You\'ll use them for everything.',
-      'I keep three pairs in my home kitchen: one for the grill, one for the stove, one for serving. At $8 each, they\'re cheaper than most home kitchen tongs and will outlast them by years.'
+      'These are one of the 11 tools I use most in my home kitchen. After 20 years using similar restaurant-grade tongs professionally, I know what works. Inexpensive, professional-quality—buy a few pairs. You\'ll use them for everything.',
+      'I keep three pairs in my home kitchen: one for the grill, one for the stove, one for serving. Inexpensive yet built to last—they\'ll outlast typical home kitchen tongs by years.'
     ],
     ctaText: 'Check Price on Amazon →'
   },
@@ -217,7 +217,7 @@ export const reviewData = {
 
   // LEGACY PRODUCT DATA (fallback for Supabase)
   legacyProductData: {
-    name: 'Winco Extra Heavyweight Stainless Steel Tongs',
+    name: 'Winco Heavyweight Stainless Steel Tongs',
     slug: 'winco-heavy-duty-tongs',
     brand: 'Winco',
     model: 'UT-12',
@@ -225,7 +225,7 @@ export const reviewData = {
     rating: 5.0,
     reviewCount: 1,
     pros: [
-      'Restaurant-grade stainless steel construction at budget price ($8)',
+      'Restaurant-grade stainless steel construction at inexpensive price',
       'Perfect spring tension that maintains grip strength over years of use',
       'Scalloped edges provide secure grip on all food types without slipping',
       'Dishwasher-safe and heat-resistant up to 500°F for grill use'
@@ -237,7 +237,7 @@ export const reviewData = {
     ],
     affiliateLinks: [],
     expertRating: 5.0,
-    expertOpinion: 'Restaurant-quality tongs at budget price that have proven themselves through 24 years of professional kitchen use - buy three pairs and never worry about tongs again.',
+    expertOpinion: 'Restaurant-quality tongs at budget price. After 20 years using similar commercial-grade tongs professionally, these Winco tongs deliver the same quality I relied on in professional kitchens - buy three pairs and never worry about tongs again.',
     dateAdded: '2025-01-15',
     lastUpdated: '2025-01-15'
   }
