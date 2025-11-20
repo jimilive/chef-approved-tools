@@ -787,9 +787,6 @@ export default function OxidizationPage() {
             <Link href="/blog/why-cooking-science-matters" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Why Cooking Science Matters
             </Link>
-            <Link href="/blog/storing-raw-foods" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → Storing Raw Foods
-            </Link>
             <Link href="/guides/best-chef-knives" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Best Chef Knives Guide
             </Link>

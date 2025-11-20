@@ -417,9 +417,6 @@ export default function UnderstandingCookingFatsPage() {
         <div className="bg-slate-50 rounded-xl p-8 mb-8">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/how-to-sear-steaks" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → How to Sear Steaks Like a Restaurant
-            </Link>
             <Link href="/blog/fat-is-flavor" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Fat is Flavor: The Science Behind Richness
             </Link>

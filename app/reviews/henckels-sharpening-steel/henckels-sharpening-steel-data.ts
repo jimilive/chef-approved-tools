@@ -244,19 +244,19 @@ export const reviewData = {
         emoji: '🔪',
         name: 'Victorinox Fibrox 8" Chef\'s Knife',
         description: 'The knife I hone most often - professional workhorse',
-        href: '/reviews/victorinox-8-inch-chefs-knife'
+        href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
       },
       {
         emoji: '🔪',
         name: 'Victorinox Fibrox 10" Chef\'s Knife',
         description: 'Longer blade requires proper honing for best performance',
-        href: '/reviews/victorinox-10-inch-chefs-knife'
+        href: '/reviews/victorinox-fibrox-10-inch-chefs-knife'
       },
       {
         emoji: '🧽',
         name: 'OXO Bench Scraper',
         description: 'Another culinary school essential still in my kit',
-        href: '/reviews/oxo-bench-scraper'
+        href: '/reviews/oxo-good-grips-bench-scraper'
       }
     ]
   }

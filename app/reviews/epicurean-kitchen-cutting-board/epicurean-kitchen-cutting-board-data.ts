@@ -254,12 +254,6 @@ export const reviewData = {
         name: 'Victorinox 8" Chef\'s Knife',
         description: 'The perfect knife for this board. Professional-quality blade that stays sharp with proper cutting surface. 20+ years of proven performance.',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
-      },
-      {
-        emoji: '🧼',
-        name: 'OXO Good Grips Dish Brush',
-        description: 'For the rare times you hand-wash this board. Though honestly, just throw it in the dishwasher - that\'s the whole point.',
-        href: '/reviews/oxo-good-grips-dish-brush'
       }
     ]
   }

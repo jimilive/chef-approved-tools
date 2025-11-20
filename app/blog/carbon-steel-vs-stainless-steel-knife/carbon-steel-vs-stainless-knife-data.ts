@@ -422,7 +422,7 @@ export const comparisonData = {
             "Full tang construction",
             "Lifetime warranty"
           ],
-          reviewSlug: "wusthof-classic-chefs-knife"
+          reviewSlug: "wusthof-classic-ikon-16-piece"
         },
         {
           name: "Victorinox Fibrox Pro Chef's Knife",

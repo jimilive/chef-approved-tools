@@ -306,9 +306,9 @@ export const reviewData = {
       },
       {
         emoji: "🔪",
-        name: "Wüsthof Classic Chef's Knife",
-        description: "German-made 8-inch chef's knife",
-        href: "/reviews/wusthof-classic-chefs-knife"
+        name: "Victorinox Fibrox 8\" Chef's Knife",
+        description: "Professional workhorse knife, perfect for prep work",
+        href: "/reviews/victorinox-fibrox-8-inch-chefs-knife"
       }
     ]
   },

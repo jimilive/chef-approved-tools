@@ -287,16 +287,6 @@ export default function KitchenStarterKitPage() {
             My <strong>Rubbermaid Commercial scraper</strong> has survived 19 years—still the same one I used on the line. It&apos;s a simple rectangle of stiff plastic with a beveled edge, but it&apos;s the most-used tool after my knife.
           </p>
 
-          <CTAVisibilityTracker
-            ctaId="bench-scraper-story-link"
-            position="mid_article"
-            productSlug="bench-scraper"
-            merchant="internal"
-          >
-            <Link href="/blog/best-bench-scraper" className="text-orange-700 hover:text-orange-700 font-medium">
-              Read my full scraper story →
-            </Link>
-          </CTAVisibilityTracker>
 
           <p>
             Chop an onion, then use the scraper to transfer every piece from board to pan in one motion. No balancing handfuls, no stray pieces on the counter, no dulling your knife by scraping with the blade.
@@ -497,17 +487,7 @@ export default function KitchenStarterKitPage() {
               <strong>Thermapen Thermometer</strong> – Precision and speed you can trust in professional settings
             </li>
             <li>
-              <CTAVisibilityTracker
-                ctaId="rubbermaid-scraper-equipment-link"
-                position="mid_article"
-                productSlug="bench-scraper"
-                merchant="internal"
-              >
-                <Link href="/blog/best-bench-scraper" className="text-orange-700 hover:text-orange-700 font-medium">
-                  Rubbermaid Bench Scraper
-                </Link>
-              </CTAVisibilityTracker>
-              {" "}– 19 years and still going strong
+              <strong>Rubbermaid Bench Scraper</strong> – 19 years and still going strong
             </li>
             <li>
               <strong>Rubbermaid Commercial Cutting Board</strong> – Large white boards that survive professional dishwashers

@@ -800,10 +800,7 @@ export default function HerbsPage() {
             <Link href="/blog/oxidization-effect-on-food" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Oxidization&apos;s Effect on Food
             </Link>
-            <Link href="/blog/how-acid-helps-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → How Acid Helps in Cooking
-            </Link>
-            <Link href="/blog/mis-en-place" className="text-orange-700 hover:text-orange-800 font-semibold">
+            <Link href="/blog/mis-en-place-professional-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Mis en Place Guide
             </Link>
             <Link href="/guides/best-chef-knives" className="text-orange-700 hover:text-orange-800 font-semibold">

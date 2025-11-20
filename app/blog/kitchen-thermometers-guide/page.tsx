@@ -732,12 +732,6 @@ export default function KitchenThermometersGuidePage() {
             <Link href="/blog/roasting-vegetables-restaurant-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Roasting Vegetables: Restaurant Temperature & Timing Guide
             </Link>
-            <Link href="/blog/understanding-carryover-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → Understanding Carryover Cooking
-            </Link>
-            <Link href="/blog/reverse-sear-technique" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → Reverse Sear Method
-            </Link>
             <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Rubbermaid Cook&apos;s Scraper Review
             </Link>

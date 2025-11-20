@@ -590,16 +590,6 @@ export default function CompleteVictorinoxLineupPage() {
             <strong>The best solution:</strong> Own both. They&rsquo;re different tools for different jobs, and having both gives you the right knife for every situation.
           </p>
 
-          <CTAVisibilityTracker
-            ctaId="victorinox-10-inch-link"
-            position="mid_article"
-            productSlug="victorinox-10-inch"
-            merchant="internal"
-          >
-            <Link href="/blog/victorinox-8-inch-vs-10-inch-comparison" className="text-orange-700 hover:text-orange-800 font-medium">
-              Read the complete 8-inch vs 10-inch comparison →
-            </Link>
-          </CTAVisibilityTracker>
 
           <h2 id="boning-knife">Knife #5: The Granton Boning Knife (Specialty)</h2>
 
@@ -801,7 +791,7 @@ export default function CompleteVictorinoxLineupPage() {
             productSlug="victorinox-vs-wusthof"
             merchant="internal"
           >
-            <Link href="/blog/victorinox-budget-vs-wusthof-premium-comparison" className="text-orange-700 hover:text-orange-800 font-medium">
+            <Link href="/blog/victorinox-budget-vs-wusthof-premium-knives" className="text-orange-700 hover:text-orange-800 font-medium">
               Read the complete budget vs premium comparison →
             </Link>
           </CTAVisibilityTracker>
@@ -891,24 +881,12 @@ export default function CompleteVictorinoxLineupPage() {
           <ul>
             <li>
               <CTAVisibilityTracker
-                ctaId="8-vs-10-link"
-                position="mid_article"
-                productSlug="8-vs-10-comparison"
-                merchant="internal"
-              >
-                <Link href="/blog/victorinox-8-inch-vs-10-inch-comparison" className="text-orange-700 hover:text-orange-800 font-medium">
-                  8-Inch vs 10-Inch Chef&rsquo;s Knife: Complete Size Guide
-                </Link>
-              </CTAVisibilityTracker>
-            </li>
-            <li>
-              <CTAVisibilityTracker
                 ctaId="paring-vs-chef-link"
                 position="mid_article"
                 productSlug="paring-vs-chef"
                 merchant="internal"
               >
-                <Link href="/blog/paring-knife-vs-chefs-knife-comparison" className="text-orange-700 hover:text-orange-800 font-medium">
+                <Link href="/blog/paring-knife-vs-chefs-knife" className="text-orange-700 hover:text-orange-800 font-medium">
                   Paring Knife vs Chef&rsquo;s Knife: When to Use Which
                 </Link>
               </CTAVisibilityTracker>
@@ -920,7 +898,7 @@ export default function CompleteVictorinoxLineupPage() {
                 productSlug="budget-vs-premium"
                 merchant="internal"
               >
-                <Link href="/blog/victorinox-budget-vs-wusthof-premium-comparison" className="text-orange-700 hover:text-orange-800 font-medium">
+                <Link href="/blog/victorinox-budget-vs-wusthof-premium-knives" className="text-orange-700 hover:text-orange-800 font-medium">
                   Budget vs Premium Knives: Victorinox vs Wüsthof
                 </Link>
               </CTAVisibilityTracker>

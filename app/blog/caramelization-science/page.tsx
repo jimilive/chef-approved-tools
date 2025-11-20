@@ -255,7 +255,7 @@ export default function CaramelizationPage() {
             <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-700 hover:text-orange-800 font-semibold">
               → The Maillard Reaction: Why Browning Equals Flavor
             </Link>
-            <Link href="/blog/how-to-sear-steaks-restaurant-chef" className="text-orange-700 hover:text-orange-800 font-semibold">
+            <Link href="/blog/how-to-sear-steaks-like-restaurant-chef" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Sear Steaks Like a Restaurant Chef
             </Link>
             <Link href="/blog/how-to-make-roux" className="text-orange-700 hover:text-orange-800 font-semibold">

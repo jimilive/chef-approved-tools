@@ -126,7 +126,7 @@ export default function MaillardReactionPost() {
           </ul>
 
           <p>
-            For the complete technique on how restaurants nail that crust every time, see <Link href="/blog/how-to-sear-steaks-restaurant-chef" className="text-orange-700 hover:text-orange-800 underline">How to Sear Steaks Like a Restaurant Chef</Link>.
+            For the complete technique on how restaurants nail that crust every time, see <Link href="/blog/how-to-sear-steaks-like-restaurant-chef" className="text-orange-700 hover:text-orange-800 underline">How to Sear Steaks Like a Restaurant Chef</Link>.
           </p>
 
           <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border-l-4 border-purple-600 p-6 my-8 rounded-r-lg">
@@ -266,7 +266,7 @@ export default function MaillardReactionPost() {
         <div className="bg-slate-50 rounded-xl p-8 mb-8">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/how-to-sear-steaks-restaurant-chef" className="text-orange-700 hover:text-orange-800 font-semibold">
+            <Link href="/blog/how-to-sear-steaks-like-restaurant-chef" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Sear Steaks Like a Restaurant Chef
             </Link>
             <Link href="/blog/why-resting-meat-key-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
