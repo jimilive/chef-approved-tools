@@ -773,7 +773,7 @@ export const METADATA = {
 
     'complete-victorinox-knife-lineup-comparison': {
       title: "Victorinox Knife Lineup: Which 5 Models You Actually Need",
-      description: "After 24 years of professional kitchen experience, here's exactly which Victorinox knives you actually need—and which ones you can skip. Strategic buying guide for the complete Fibrox lineup.",
+      description: "24 years experience: which Victorinox knives you actually need and which to skip. Strategic buying guide for the Fibrox lineup.",
       canonical: "https://www.chefapprovedtools.com/blog/complete-victorinox-knife-lineup-comparison",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/victorinox-lineup-og.jpg",
@@ -798,7 +798,7 @@ export const METADATA = {
 
     'victorinox-8-inch-vs-10-inch-chefs-knife': {
       title: "Victorinox 8-Inch vs 10-Inch Chef's Knife: Which Size Is Right for Your Kitchen?",
-      description: "After 24 years of professional kitchen experience, here's exactly how to choose between these two workhorses. Size matters—get the wrong one and you'll struggle with control, speed, and fatigue.",
+      description: "24 years experience: how to choose between 8-inch vs 10-inch. Wrong size means poor control, slower speed, and hand fatigue.",
       canonical: "https://www.chefapprovedtools.com/blog/victorinox-8-inch-vs-10-inch-chefs-knife",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/victorinox-8-vs-10-og.jpg",
@@ -823,7 +823,7 @@ export const METADATA = {
 
     'paring-knife-vs-chefs-knife': {
       title: "Paring Knife vs Chef's Knife: When to Use Which Blade",
-      description: "After 24 years of professional kitchen experience, here's exactly when to reach for each knife—and why most home cooks are using the wrong one. Master this decision and cut your prep time by 30%.",
+      description: "24 years experience: exactly when to use each knife and why most home cooks choose wrong. Master this and cut prep time 30%.",
       canonical: "https://www.chefapprovedtools.com/blog/paring-knife-vs-chefs-knife",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/paring-vs-chef-og.jpg",
@@ -848,7 +848,7 @@ export const METADATA = {
 
     'victorinox-budget-vs-wusthof-premium-knives': {
       title: "Victorinox vs Wüsthof: Budget vs Premium Chef Knives",
-      description: "After 24 years in professional kitchens using both brands daily, here's the brutal truth about budget vs premium chef knives. Spoiler: The expensive knife isn't always better.",
+      description: "24 years using both brands daily: brutal truth about budget vs premium chef knives. Spoiler: expensive isn't always better.",
       canonical: "https://www.chefapprovedtools.com/blog/victorinox-budget-vs-wusthof-premium-knives",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/victorinox-vs-wusthof-og.jpg",
@@ -2323,7 +2323,7 @@ export const METADATA = {
 
     'hidden-secrets-of-brining': {
       title: "The Hidden Secrets of Brining: Professional Techniques Explained",
-      description: "Learn professional brining techniques that transform lean proteins. Understand the science of moisture retention, proper ratios, timing, and which meats benefit most from brining.",
+      description: "Professional brining transforms lean proteins. Science of moisture retention, proper ratios, timing, and which meats benefit most.",
       canonical: "https://www.chefapprovedtools.com/blog/hidden-secrets-of-brining",
       author: "Scott Bradley",
       imageUrl: "/images/blog/default.jpg",
@@ -2348,7 +2348,7 @@ export const METADATA = {
 
     'how-to-make-marinara-sauce': {
       title: "How to Make Marinara Sauce: Authentic Italian Technique",
-      description: "Learn authentic Italian marinara sauce technique. Understand why 30-45 minutes is optimal, why quality tomatoes need no sugar, and the mistakes that ruin most homemade marinara.",
+      description: "Authentic Italian marinara: why 30-45 minutes is optimal, quality tomatoes need no sugar, and mistakes that ruin homemade sauce.",
       canonical: "https://www.chefapprovedtools.com/blog/how-to-make-marinara-sauce",
       author: "Scott Bradley",
       imageUrl: "/images/blog/default.jpg",
@@ -2373,7 +2373,7 @@ export const METADATA = {
 
     'how-to-use-pizza-stone': {
       title: "How to Use a Pizza Stone: Professional Techniques for Home Ovens",
-      description: "Master pizza stone technique for home ovens. Learn why 45-60 minute preheat is essential, how to prevent thermal shock, and the differences between stone and steel for crispy crusts.",
+      description: "Why 45-60 minute preheat is essential, preventing thermal shock, stone vs steel for crispy crusts. Professional techniques for home ovens.",
       canonical: "https://www.chefapprovedtools.com/blog/how-to-use-pizza-stone",
       author: "Scott Bradley",
       imageUrl: "/images/blog/default.jpg",
@@ -2423,7 +2423,7 @@ export const METADATA = {
 
     'what-is-velveting': {
       title: "What is Velveting: Chinese Restaurant Technique Explained",
-      description: "Learn the Chinese technique that makes restaurant stir-fry chicken impossibly tender. Understand the science of velveting, oil vs water methods, and how it compensates for home stove limitations.",
+      description: "Chinese technique for impossibly tender stir-fry chicken. Science of velveting, oil vs water methods, and compensating for low-BTU home stoves.",
       canonical: "https://www.chefapprovedtools.com/blog/what-is-velveting",
       author: "Scott Bradley",
       imageUrl: "/images/blog/default.jpg",
