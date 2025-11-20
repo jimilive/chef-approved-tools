@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { getProductBySlug, getPrimaryAffiliateLink, getAllAffiliateLinks } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import MultiVendorCTA from '@/components/review/MultiVendorCTA'
 import {
   ReviewHero,
   TestingResultsGrid,
@@ -114,6 +115,9 @@ export default async function KitchenAidProfessional600ReviewPage() {
   const compareAllLink = reviewData.strategicLinks.tertiary.url
   const trustLink = reviewData.strategicLinks.trust.url
 
+  // Get all affiliate links for multi-vendor CTAs
+  const affiliateLinks = product ? getAllAffiliateLinks(product) : []
+
   const breadcrumbs = [
     { name: "Home", url: "https://www.chefapprovedtools.com" },
     { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
@@ -170,36 +174,16 @@ export default async function KitchenAidProfessional600ReviewPage() {
             ctaText={reviewData.hero.ctaText}
             customCTA={(
               <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
-                {/* PRIMARY CTA Button */}
-                <CTAVisibilityTracker
-                  ctaId={`${reviewData.productSlug}-hero-cta`}
+                {/* Multi-Vendor CTA Buttons */}
+                <MultiVendorCTA
+                  affiliateLinks={affiliateLinks}
+                  productName={productData.name}
+                  ctaId="hero-cta"
                   position="above_fold"
-                  productSlug={reviewData.productSlug}
-                  merchant="kitchenaid"
-                >
-                  <a
-                    href={primaryLink}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-                  >
-                    {reviewData.hero.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
+                  productSlug={productData.slug}
+                />
 
-                {/* SECONDARY CTA - Compare Bowl-Lift Models (Evergreen Link EPC: $193.89!) */}
-                <p className="text-center text-sm mb-3 mt-3">
-                  <a
-                    href={bowlLiftLink}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → Compare All Bowl-Lift Models
-                  </a>
-                </p>
-
-                <p className="text-xs text-slate-600 text-center">
+                <p className="text-xs text-slate-600 text-center mt-4">
                   As a KitchenAid affiliate, I earn from qualifying purchases. Price and availability may change.
                 </p>
               </div>
@@ -267,66 +251,21 @@ export default async function KitchenAidProfessional600ReviewPage() {
             {reviewData.whereToBuy.introText}
           </p>
 
-          {/* PRIMARY OPTION: KitchenAid Direct */}
           <div className="border border-gray-200 rounded-xl p-6 bg-orange-50 mb-4">
             <div className="text-center mb-4">
-              <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">KitchenAid Direct</h3>
-              <p className="text-sm text-slate-900 mb-4">Factory direct, full warranty, free shipping</p>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Available From</h3>
+              <p className="text-sm text-slate-900 mb-4">Choose your preferred retailer</p>
             </div>
 
-            <CTAVisibilityTracker
-              ctaId={`${reviewData.productSlug}-where-to-buy-primary`}
+            <MultiVendorCTA
+              affiliateLinks={affiliateLinks}
+              productName={productData.name}
+              ctaId="where-to-buy-cta"
               position="mid_article"
-              productSlug={reviewData.productSlug}
-              merchant="kitchenaid"
-            >
-              <a
-                href={primaryLink}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-              >
-                Check Price on KitchenAid.com →
-              </a>
-            </CTAVisibilityTracker>
+              productSlug={productData.slug}
+            />
 
-            {/* SECONDARY: Compare Bowl-Lift Models (Evergreen Link) */}
-            <p className="text-center mt-3 text-sm">
-              <a
-                href={bowlLiftLink}
-                className="text-orange-700 hover:text-orange-800 underline font-medium"
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-              >
-                → Compare Bowl-Lift vs Tilt-Head
-              </a>
-            </p>
-
-            {/* TERTIARY: All Stand Mixers (Evergreen Link) */}
-            <p className="text-center mt-2 text-sm">
-              <a
-                href={compareAllLink}
-                className="text-orange-700 hover:text-orange-800 underline font-medium"
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-              >
-                → See All KitchenAid Mixers
-              </a>
-            </p>
-
-            {/* TRUST: Free Delivery */}
-            <p className="text-center mt-2 text-sm">
-              <a
-                href={trustLink}
-                className="text-orange-700 hover:text-orange-800 underline font-medium"
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-              >
-                → Free Delivery + 60 Day Returns
-              </a>
-            </p>
-
-            <p className="text-xs text-slate-700 text-center mt-3">
+            <p className="text-xs text-slate-700 text-center mt-4">
               As a KitchenAid affiliate, I earn from qualifying purchases.
             </p>
           </div>
@@ -345,38 +284,14 @@ export default async function KitchenAidProfessional600ReviewPage() {
             </p>
           ))}
           customCTA={(
-            <div className="bg-white rounded-xl p-6">
-              <CTAVisibilityTracker
-                ctaId={`${reviewData.productSlug}-bottom-line-cta`}
+            <div className="bg-white rounded-xl p-6 flex justify-center">
+              <MultiVendorCTA
+                affiliateLinks={affiliateLinks}
+                productName={productData.name}
+                ctaId="bottom-line-cta"
                 position="final_cta"
-                productSlug={reviewData.productSlug}
-                merchant="kitchenaid"
-              >
-                <a
-                  href={primaryLink}
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                  className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-                >
-                  {reviewData.bottomLine.ctaText}
-                </a>
-              </CTAVisibilityTracker>
-
-              {/* Secondary compare link */}
-              <p className="text-center mt-3 text-sm">
-                <a
-                  href={compareAllLink}
-                  className="text-orange-700 hover:text-orange-800 underline font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                >
-                  → Compare All KitchenAid Models
-                </a>
-              </p>
-
-              <p className="text-xs text-slate-700 text-center mt-3">
-                As a KitchenAid affiliate, I earn from qualifying purchases.
-              </p>
+                productSlug={productData.slug}
+              />
             </div>
           )}
         />
