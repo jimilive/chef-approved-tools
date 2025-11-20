@@ -89,7 +89,7 @@ export default function OxidizationPage() {
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-6 rounded-xl my-8 border-l-4 border-orange-600">
-            <h3 className="text-white text-xl font-bold mt-0 mb-3">Restaurant Reality: Timing Prep Around Oxidation</h3>
+            <h2 className="text-white text-xl font-bold mt-0 mb-3">Restaurant Reality: Timing Prep Around Oxidation</h2>
             <p className="text-white mb-0 leading-relaxed">
               In professional kitchens, timing prep around oxidation is critical. Make guacamole at 10 AM for evening service and by 5 PM, it&apos;s turned gray-brown and unappetizing. The lesson: oxidation doesn&apos;t care about your prep schedule. Either acidify immediately or make it closer to service. Work with oxidation, not against it.
             </p>

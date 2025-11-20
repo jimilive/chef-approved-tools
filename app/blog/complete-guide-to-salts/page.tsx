@@ -77,7 +77,7 @@ export default function SaltsGuidePage() {
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
-            <h3 className="mt-0 text-amber-900 font-bold">Restaurant Reality</h3>
+            <h2 className="mt-0 text-amber-900 font-bold">Restaurant Reality</h2>
             <p>
               <strong>First week on the line,</strong> I grabbed the salt closest to me and started seasoning vegetables for service. The sous chef stopped me immediately.
             </p>

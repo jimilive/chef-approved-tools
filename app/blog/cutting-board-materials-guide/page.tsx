@@ -107,7 +107,7 @@ export default function CuttingBoardMaterialsPost() {
           </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-blue-800 mb-3">In This Guide:</h4>
+            <h2 className="font-bold text-blue-800 mb-3">In This Guide:</h2>
             <ul className="text-blue-700 space-y-1 text-sm mb-0">
               <li>• <a href="#problem" className="text-blue-700 underline">The Problem: Why Board Material Matters More Than You Think</a></li>
               <li>• <a href="#materials" className="text-blue-700 underline">The Professional Breakdown: Materials Explained</a></li>
@@ -370,7 +370,7 @@ export default function CuttingBoardMaterialsPost() {
           <h2 id="equipment">Recommended Boards (Chef Approved)</h2>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Top Cutting Board Picks</h4>
+            <h3 className="font-bold text-slate-800 mb-4">Top Cutting Board Picks</h3>
             <ul className="space-y-3">
               <li>
                 <strong>End-Grain Wood:</strong> {/* John Boos Maple Butcher Block */} John Boos end-grain maple cutting board — industry classic.

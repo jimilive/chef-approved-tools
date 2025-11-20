@@ -107,7 +107,7 @@ export default function ChooseFirstChefKnifePost() {
           </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-blue-800 mb-3">In This Guide:</h4>
+            <h2 className="font-bold text-blue-800 mb-3">In This Guide:</h2>
             <ul className="text-blue-700 space-y-1 text-sm mb-0">
               <li>• <a href="#problem" className="text-blue-700 underline">The Problem (And Why It Happens)</a></li>
               <li>• <a href="#method" className="text-blue-700 underline">The Professional Method (Step-by-Step)</a></li>
@@ -316,7 +316,7 @@ export default function ChooseFirstChefKnifePost() {
           </p>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Essential Knife Equipment</h4>
+            <h3 className="font-bold text-slate-800 mb-4">Essential Knife Equipment</h3>
             <ul className="space-y-3">
               <li>
                 <strong>Chef Knife:</strong> Start with the <CTAVisibilityTracker
@@ -351,28 +351,28 @@ export default function ChooseFirstChefKnifePost() {
 
           <div className="space-y-4 my-8">
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If your knife feels dull out of the box:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If your knife feels dull out of the box:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Factory edges are often conservative. Hone first — if it&apos;s still dull, strop gently or sharpen lightly at 15°–20° per side.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If your knife feels heavy or unbalanced:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If your knife feels heavy or unbalanced:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 The handle may be too thick or blade too long. Try a lighter 6-inch knife or a stamped blade.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If the handle feels slippery:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If the handle feels slippery:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Wash with warm water and dish soap — residue can make even grippy handles slick. Avoid oils or conditioners.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If the edge chips:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If the edge chips:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 You&apos;re twisting or torquing the blade. Use a straight slice, not a prying motion.
               </p>

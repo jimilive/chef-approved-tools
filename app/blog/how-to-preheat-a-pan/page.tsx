@@ -105,7 +105,7 @@ export default function HowToPreheatPanPost() {
           </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-blue-800 mb-3">In This Guide:</h4>
+            <h2 className="font-bold text-blue-800 mb-3">In This Guide:</h2>
             <ul className="text-blue-700 space-y-1 text-sm mb-0">
               <li>• <a href="#problem" className="text-blue-700 underline">The Problem: Why Preheating Matters</a></li>
               <li>• <a href="#science" className="text-blue-700 underline">The Science of Heat Transfer</a></li>
@@ -319,7 +319,7 @@ export default function HowToPreheatPanPost() {
           <h2 id="equipment">Recommended Pans &amp; Tools</h2>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Essential Pans for Proper Preheating</h4>
+            <h3 className="font-bold text-slate-800 mb-4">Essential Pans for Proper Preheating</h3>
             <ul className="space-y-3">
               <li>
                 <strong>Stainless:</strong> All-Clad D3 stainless skillet — even heat, responsive.

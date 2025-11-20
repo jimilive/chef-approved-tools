@@ -151,7 +151,7 @@ export default function KnifeSafetyPost() {
           </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-blue-800 mb-3">In This Guide:</h4>
+            <h2 className="font-bold text-blue-800 mb-3">In This Guide:</h2>
             <ul className="text-blue-700 space-y-1 text-sm mb-0">
               <li>• <a href="#why" className="text-blue-700 underline">Why Knife Safety Matters More Than You Think</a></li>
               <li>• <a href="#rules" className="text-blue-700 underline">The 10 Rules of Professional Knife Safety</a></li>

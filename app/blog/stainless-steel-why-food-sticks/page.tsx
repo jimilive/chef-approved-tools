@@ -110,7 +110,7 @@ export default function StainlessSteelStickingPost() {
           </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-blue-800 mb-3">In This Guide:</h4>
+            <h2 className="font-bold text-blue-800 mb-3">In This Guide:</h2>
             <ul className="text-blue-700 space-y-1 text-sm mb-0">
               <li>• <a href="#problem" className="text-blue-700 underline">The Problem (And Why It Happens)</a></li>
               <li>• <a href="#method" className="text-blue-700 underline">The Professional Method (Step-by-Step)</a></li>
@@ -304,7 +304,7 @@ export default function StainlessSteelStickingPost() {
           </p>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Essential Stainless Steel Equipment</h4>
+            <h3 className="font-bold text-slate-800 mb-4">Essential Stainless Steel Equipment</h3>
             <ul className="space-y-3">
               <li>
                 <strong>Pan:</strong> {/* All-Clad D3 Stainless Skillet or */} <CTAVisibilityTracker
@@ -342,28 +342,28 @@ export default function StainlessSteelStickingPost() {
 
           <div className="space-y-4 my-8">
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If food sticks immediately:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If food sticks immediately:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 You added it too soon — let the pan heat longer.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If oil smokes:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If oil smokes:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Heat was too high or oil&apos;s smoke point too low.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If pan browns unevenly:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If pan browns unevenly:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Burner might be off-center or warped — rotate pan mid-cook.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If cleanup&apos;s rough:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If cleanup&apos;s rough:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Deglaze while pan&apos;s still hot; soak with baking soda if needed.
               </p>

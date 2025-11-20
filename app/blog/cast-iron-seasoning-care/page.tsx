@@ -141,7 +141,7 @@ export default function CastIronCarePage() {
           </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-blue-800 mb-3">In This Complete Guide:</h4>
+            <h2 className="font-bold text-blue-800 mb-3">In This Complete Guide:</h2>
             <ul className="text-blue-700 space-y-1 text-sm mb-0">
               <li>• <a href="#chemistry" className="text-blue-700 underline">The Chemistry: What Seasoning Actually Is</a></li>
               <li>• <a href="#seasoning" className="text-blue-700 underline">How to Season Cast Iron: Professional Methods</a></li>

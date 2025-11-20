@@ -105,10 +105,10 @@ export default function BraisingPage() {
           </p>
 
           <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
-            <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ChefHat className="w-6 h-6 text-orange-700" />
               Restaurant Reality
-            </h3>
+            </h2>
             <p className="mb-0">
               At Purple Café, the braised short rib risotto was legendary. The short ribs were braised for 3-4 hours until the bones practically fell out when you touched them with tongs. The meat wasn&apos;t just tender—it was silky, rich, and deeply flavored in a way that expensive cuts never achieve. One bite would make you sleepy and fulfilled—that&apos;s the power of proper braising. The secret was time, patience, and understanding that collagen is your friend when you cook low and slow. This is why professional kitchens treasure &quot;cheap&quot; cuts—we know they taste better when cooked right.
             </p>
@@ -169,10 +169,10 @@ export default function BraisingPage() {
           </p>
 
           <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border-l-4 border-purple-600 p-6 my-8 rounded-r-lg">
-            <h4 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
               <Clock className="w-5 h-5 text-purple-600" />
               Pro Tip: The Oven Is Your Best Sous Chef
-            </h4>
+            </h3>
             <p className="mb-0">
               Once everything&apos;s seared, deglazed, and simmering in the pot, the oven takes over. Set it to 300°F (150°C) and walk away. In my kitchens, we&apos;d start short ribs at 11 AM for 5 PM service. No stirring, no checking, no babysitting. Just low, even heat doing its work. The oven provides consistent, all-around heat that a stovetop can&apos;t match. This is how restaurants can prep multiple braises simultaneously—everything goes in the oven and cooks itself while we work on other things.
             </p>

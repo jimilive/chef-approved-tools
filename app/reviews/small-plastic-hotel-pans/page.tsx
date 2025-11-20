@@ -172,7 +172,7 @@ export default async function ProductReview() {
             lastUpdated="November 10, 2025"
             customCTA={
               <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
-                <h3 className="text-xl font-bold mb-4 text-gray-900 mt-0">Choose Your Size</h3>
+                <h2 className="text-xl font-bold mb-4 text-gray-900 mt-0">Choose Your Size</h2>
                 <p className="text-gray-700 mb-6">{reviewData.sizeOptions.subtitle}</p>
 
                 <div className="space-y-4">

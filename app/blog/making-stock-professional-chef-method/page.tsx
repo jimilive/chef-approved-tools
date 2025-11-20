@@ -100,7 +100,7 @@ export default function MakingStockPage() {
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           {/* Table of Contents */}
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-blue-800 mb-3">In This Guide:</h4>
+            <h2 className="font-bold text-blue-800 mb-3">In This Guide:</h2>
             <ul className="text-blue-700 space-y-1 text-sm mb-0">
               <li>• <a href="#why-stock-matters" className="text-blue-700 underline">Why Stock Matters More Than You Think</a></li>
               <li>• <a href="#purple-cafe-experience" className="text-blue-700 underline">6 Years of Stock Making at Purple Café</a></li>

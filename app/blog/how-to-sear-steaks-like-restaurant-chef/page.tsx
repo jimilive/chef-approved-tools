@@ -106,10 +106,10 @@ export default function SteakSearingPost() {
 
           {/* Introduction */}
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 mb-8">
-            <h3 className="text-xl font-bold text-orange-800 mb-3 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-orange-800 mb-3 flex items-center gap-2">
               <Flame className="w-5 h-5" />
               The Restaurant Reality
-            </h3>
+            </h2>
             <p className="text-orange-800 mb-0">
               In a busy restaurant, we don&apos;t have time for second chances. Every steak needs a perfect sear on the first try,
               whether it&apos;s the 10th or 200th steak of the night. The techniques I&apos;m sharing aren&apos;t just theory—they&apos;re
@@ -317,7 +317,7 @@ export default function SteakSearingPost() {
 
           <div className="space-y-4 my-8">
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">Problem: Steak sticks to pan</h4>
+              <h3 className="font-bold text-slate-900 mb-2">Problem: Steak sticks to pan</h3>
               <p className="text-slate-700 text-sm">
                 <strong>Solution:</strong> Pan isn&apos;t hot enough, or you&apos;re moving it too soon. Properly seared meat
                 releases naturally when ready to flip.
@@ -325,7 +325,7 @@ export default function SteakSearingPost() {
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">Problem: Gray band around edges</h4>
+              <h3 className="font-bold text-slate-900 mb-2">Problem: Gray band around edges</h3>
               <p className="text-slate-700 text-sm">
                 <strong>Solution:</strong> Start with room temperature steak and use higher heat for shorter time.
                 The reverse sear method works great for thick steaks.
@@ -333,7 +333,7 @@ export default function SteakSearingPost() {
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">Problem: No crust formation</h4>
+              <h3 className="font-bold text-slate-900 mb-2">Problem: No crust formation</h3>
               <p className="text-slate-700 text-sm">
                 <strong>Solution:</strong> Steak was too wet, pan wasn&apos;t hot enough, or you moved it too much.
                 All three prevent the Maillard reaction that creates the crust.
@@ -349,7 +349,7 @@ export default function SteakSearingPost() {
           </p>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Tested Equipment Recommendations</h4>
+            <h3 className="font-bold text-slate-800 mb-4">Tested Equipment Recommendations</h3>
             <ul className="space-y-3">
               <li>
                 <strong>Cast Iron Skillet:</strong> <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 underline">Lodge Cast Iron Bundle</Link> -
@@ -382,7 +382,7 @@ export default function SteakSearingPost() {
           </p>
 
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 mt-8">
-            <h4 className="font-bold text-orange-800 mb-3">What&apos;s Next?</h4>
+            <h3 className="font-bold text-orange-800 mb-3">What&apos;s Next?</h3>
             <p className="text-orange-800 mb-4">
               This is just one technique from 24 years of professional kitchen experience. Want to learn more
               restaurant secrets for home cooking?

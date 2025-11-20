@@ -104,7 +104,7 @@ export default function KitchenToolsWastePost() {
           </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-blue-800 mb-3">In This Guide:</h4>
+            <h2 className="font-bold text-blue-800 mb-3">In This Guide:</h2>
             <ul className="text-blue-700 space-y-1 text-sm mb-0">
               <li>• <a href="#problem" className="text-blue-700 underline">The Problem (And Why It Happens)</a></li>
               <li>• <a href="#method" className="text-blue-700 underline">The Professional Method (Step-by-Step)</a></li>
@@ -287,7 +287,7 @@ export default function KitchenToolsWastePost() {
           </p>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Essential Kitchen Tools</h4>
+            <h3 className="font-bold text-slate-800 mb-4">Essential Kitchen Tools</h3>
             <ul className="space-y-3">
               <li>
                 <strong>Chef Knife:</strong> <CTAVisibilityTracker
@@ -358,14 +358,14 @@ export default function KitchenToolsWastePost() {
 
           <div className="space-y-4 my-8">
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If your drawers are overflowing:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If your drawers are overflowing:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Lay out every tool you own. Ask: &quot;Have I used this in the past 6 months?&quot; If not, donate or store it elsewhere.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If your knife dulls quickly:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If your knife dulls quickly:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 You&apos;re cutting on the wrong surface or not honing enough. See <CTAVisibilityTracker
                   ctaId="blog-kitchen-tools-wasting-money-knife-mistakes-1"
@@ -379,14 +379,14 @@ export default function KitchenToolsWastePost() {
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If you feel disorganized:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If you feel disorganized:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Set up a &quot;station&quot; like a pro line cook — knife, board, towels, and scraper all within reach.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If cooking feels slow or frustrating:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If cooking feels slow or frustrating:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 You&apos;re using inefficient tools. Simplify your setup. Speed follows organization.
               </p>

@@ -102,7 +102,7 @@ export default function StandMixerBuyingGuidePost() {
           </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-blue-800 mb-3">In This Guide:</h4>
+            <h2 className="font-bold text-blue-800 mb-3">In This Guide:</h2>
             <ul className="text-blue-700 space-y-1 text-sm mb-0">
               <li>• <a href="#problem" className="text-blue-700 underline">The Problem: Why Buying Mixers Is Confusing</a></li>
               <li>• <a href="#method" className="text-blue-700 underline">Professional Breakdown: What Matters Most</a></li>
@@ -281,7 +281,7 @@ export default function StandMixerBuyingGuidePost() {
           <h2 id="equipment">Recommended Models</h2>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Top Stand Mixer Picks</h4>
+            <h3 className="font-bold text-slate-800 mb-4">Top Stand Mixer Picks</h3>
             <ul className="space-y-4">
               <li>
                 <strong>KitchenAid Artisan 5-Quart Tilt-Head</strong>
@@ -329,35 +329,35 @@ export default function StandMixerBuyingGuidePost() {
 
           <div className="space-y-4 my-8">
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If mixer struggles with dough:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If mixer struggles with dough:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Dough is too stiff — add liquid, reduce batch size, or upgrade to a bowl-lift model.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If head bounces during mixing:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If head bounces during mixing:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Check hinge pin or locking lever — tighten if needed.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If gears grind:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If gears grind:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Stop immediately — overloading or worn gears. Service or replace before permanent damage.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If attachments don&apos;t fit snugly:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If attachments don&apos;t fit snugly:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Grease or debris in hub. Clean connection point with a towel.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">Cleaning Tip:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">Cleaning Tip:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Wipe, don&apos;t wash the motor base. Remove attachments and clean with warm soapy water.
               </p>

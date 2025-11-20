@@ -192,7 +192,7 @@ export default async function ProductReview() {
                 </div>
 
                 {/* Size Selection */}
-                <h3 className="text-xl font-bold mb-3 text-slate-900">{reviewData.sizeVariants.title}</h3>
+                <h2 className="text-xl font-bold mb-3 text-slate-900">{reviewData.sizeVariants.title}</h2>
                 <p className="text-sm text-slate-600 mb-4">
                   {reviewData.sizeVariants.note}
                 </p>

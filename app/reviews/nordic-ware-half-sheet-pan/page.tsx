@@ -170,7 +170,7 @@ export default async function NordicWareHalfSheetPanReview() {
 
         {/* Above Fold CTA */}
         <div className="bg-orange-50 border-2 border-orange-200 rounded-xl p-6 my-8">
-          <h3 className="mt-0 text-2xl font-bold text-slate-900 mb-4">Current Best Price:</h3>
+          <h2 className="mt-0 text-2xl font-bold text-slate-900 mb-4">Current Best Price:</h2>
 
           <CTAVisibilityTracker
             ctaId={`${reviewData.productSlug}-hero-cta`}

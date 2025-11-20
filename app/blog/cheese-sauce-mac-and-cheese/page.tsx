@@ -101,10 +101,10 @@ export default function CheeseSaucePage() {
           </p>
 
           <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
-            <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ChefHat className="w-6 h-6 text-orange-700" />
               Restaurant Reality
-            </h3>
+            </h2>
             <p className="mb-0">
               During family meal at Purple Café, I watched dozens of line cooks attempt mac and cheese. The ones who added cheese while the béchamel was still bubbling got grainy, broken sauce. The ones who pulled the pot off heat first—every single time—got silk. Temperature is everything. In restaurants, we&apos;d make gallons of cheese sauce for brunch service, and if one batch broke, it meant redoing everything. You learn to respect the temperature rules real fast when 200 covers are waiting.
             </p>
@@ -125,10 +125,10 @@ export default function CheeseSaucePage() {
           </p>
 
           <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border-l-4 border-purple-600 p-6 my-8 rounded-r-lg">
-            <h4 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ThermometerSun className="w-5 h-5 text-purple-600" />
               Pro Tip: Warm Your Milk
-            </h4>
+            </h3>
             <p className="mb-0">
               Cold milk hitting a hot roux can shock it and cause lumps. Warm milk (not hot, just warm—about 120-140°F) flows in smoothly and builds a glossy béchamel with minimal whisking. I microwave my milk for 90 seconds before adding it to the roux. This single step prevents 90% of the lumping issues home cooks encounter. It&apos;s a tiny detail that makes a massive difference.
             </p>

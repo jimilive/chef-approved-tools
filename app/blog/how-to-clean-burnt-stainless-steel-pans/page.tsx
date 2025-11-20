@@ -104,7 +104,7 @@ export default function CleanBurntStainlessSteelPost() {
           </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-blue-800 mb-3">In This Guide:</h4>
+            <h2 className="font-bold text-blue-800 mb-3">In This Guide:</h2>
             <ul className="text-blue-700 space-y-1 text-sm mb-0">
               <li>• <a href="#problem" className="text-blue-700 underline">The Problem: Why Stainless Steel Burns</a></li>
               <li>• <a href="#science" className="text-blue-700 underline">The Science: What&apos;s Actually Happening</a></li>
@@ -296,7 +296,7 @@ export default function CleanBurntStainlessSteelPost() {
           <h2 id="equipment">Recommended Products &amp; Tools</h2>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Essential Cleaning Tools</h4>
+            <h3 className="font-bold text-slate-800 mb-4">Essential Cleaning Tools</h3>
             <ul className="space-y-3">
               <li>
                 <strong>Cleaner:</strong> {/* Bar Keepers Friend Soft Cleanser */} Bar Keepers Friend — the gold standard for stainless steel restoration.

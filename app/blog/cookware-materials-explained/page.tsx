@@ -103,7 +103,7 @@ export default function CookwareMaterialsPost() {
           </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-blue-800 mb-3">In This Guide:</h4>
+            <h2 className="font-bold text-blue-800 mb-3">In This Guide:</h2>
             <ul className="text-blue-700 space-y-1 text-sm mb-0">
               <li>• <a href="#problem" className="text-blue-700 underline">The Problem: Why Cookware Confuses Everyone</a></li>
               <li>• <a href="#materials" className="text-blue-700 underline">The Professional Breakdown: 5 Materials Explained</a></li>
@@ -350,7 +350,7 @@ export default function CookwareMaterialsPost() {
           <h2 id="equipment">Chef-Approved Picks</h2>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Top Cookware by Material</h4>
+            <h3 className="font-bold text-slate-800 mb-4">Top Cookware by Material</h3>
             <ul className="space-y-3">
               <li>
                 <strong>Stainless:</strong> {/* All-Clad D3 10&quot; Skillet */} All-Clad D3 tri-ply stainless steel skillet

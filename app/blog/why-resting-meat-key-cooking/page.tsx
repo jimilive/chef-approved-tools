@@ -101,10 +101,10 @@ export default function RestingMeatPage() {
           </p>
 
           <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
-            <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ChefHat className="w-6 h-6 text-orange-700" />
               Restaurant Reality
-            </h3>
+            </h2>
             <p className="mb-0">
               At Purple Café, resting was part of the cook time, not an afterthought. When we pulled a steak at 130°F for medium-rare, we knew it needed 8-10 minutes to rest before hitting the plate. That&apos;s why restaurant steaks are consistently juicy from edge to center while home-cooked steaks often disappoint. We built the rest into our timing. We respected the science. And most importantly, we never, ever let impatient servers rush us into slicing too early.
             </p>
@@ -167,10 +167,10 @@ export default function RestingMeatPage() {
           </p>
 
           <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border-l-4 border-purple-600 p-6 my-8 rounded-r-lg">
-            <h4 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ThermometerSun className="w-5 h-5 text-purple-600" />
               Pro Tip: Know Your Numbers
-            </h4>
+            </h3>
             <p className="mb-0">
               After thousands of steaks on the line, I learned to pull everything 5°F under target and rest it. A steak pulled at 125°F will hit 130-132°F after 10 minutes—perfect medium-rare. Pull it at 135°F and by the time it rests, you&apos;re at 140-145°F (medium to medium-well). Know your numbers, trust the process, and your meat will be perfect every time. This isn&apos;t guesswork—it&apos;s physics.
             </p>
@@ -349,10 +349,10 @@ export default function RestingMeatPage() {
           </p>
 
           <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border-l-4 border-emerald-600 p-6 my-8 rounded-r-lg">
-            <h4 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-emerald-600" />
               Success Tip: Build Rest Into Your Workflow
-            </h4>
+            </h3>
             <p className="mb-0">
               Here&apos;s the timing I taught every line cook: When you pull the steak from heat, that&apos;s when you start plating everything else. By the time your sides are on the plate, the starch is portioned, and the sauce is ready, your meat has rested perfectly. Build rest time into your workflow—it&apos;s not waiting around doing nothing, it&apos;s cooking smarter. This is how professionals handle timing on the line during a busy service.
             </p>

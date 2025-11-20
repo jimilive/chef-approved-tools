@@ -93,10 +93,10 @@ export default function MaillardReactionPost() {
           </p>
 
           <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
-            <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ChefHat className="w-6 h-6 text-orange-700" />
               Restaurant Reality
-            </h3>
+            </h2>
             <p className="mb-0">
               In professional kitchens, we don&apos;t guess at heat—we know it. We know to heat the pan on high for 2-3 minutes before using and know from thousands of times and dozens of mistakes when the pan is ready. That precision is what separates okay food from great food.
             </p>
@@ -130,10 +130,10 @@ export default function MaillardReactionPost() {
           </p>
 
           <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border-l-4 border-purple-600 p-6 my-8 rounded-r-lg">
-            <h4 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ThermometerSun className="w-5 h-5 text-purple-600" />
               Pro Tip: Dry Surface = Better Browning
-            </h4>
+            </h3>
             <p className="mb-0">
               Moisture is the enemy of the Maillard reaction. Pat your protein dry with paper towels before it hits the pan. Even a little surface water will steam instead of sear, keeping temperatures below 212°F (boiling point) and preventing browning. This single step—taking 15 seconds to blot dry—makes a bigger difference than expensive equipment.
             </p>
@@ -220,7 +220,7 @@ export default function MaillardReactionPost() {
           </p>
 
           <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border-l-4 border-emerald-600 p-6 my-8 rounded-r-lg">
-            <h4 className="text-lg font-bold text-slate-900 mt-0">✓ Success Tip: Use Your Senses</h4>
+            <h3 className="text-lg font-bold text-slate-900 mt-0">✓ Success Tip: Use Your Senses</h3>
             <p className="mb-0">
               Your nose will tell you when the Maillard reaction is happening. That toasted, nutty, caramelized aroma? That&apos;s the signal. If it starts smelling burnt or acrid, pull back the heat. Perfect browning smells amazing—burning smells like... burning.
             </p>
