@@ -92,7 +92,7 @@ export const METADATA = {
   
   pages: {
     'home': {
-      title: "Chef Approved Tools: 24 Years Testing Kitchen Equipment",
+      title: "Chef Approved Tools: 24 Years Restaurant Testing",
       description: "Professional kitchen equipment tested by chefs with 24 years restaurant experience. Honest reviews of what actually survives commercial use and lasts decades.",
       canonical: "https://www.chefapprovedtools.com",
       author: "Scott Bradley",
@@ -118,7 +118,7 @@ export const METADATA = {
     } as PageMetadata,
     
     'reviews': {
-      title: "All Equipment Reviews: 37 Products Chef-Tested",
+      title: "All Equipment Reviews: 37 Products Tested",
       description: "Complete collection of 37 kitchen equipment reviews tested in real restaurant environments and home kitchens by Chef Scott Bradley. Professional testing.",
       canonical: "https://www.chefapprovedtools.com/reviews",
       author: "Scott Bradley",
@@ -797,7 +797,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'victorinox-8-inch-vs-10-inch-chefs-knife': {
-      title: "Victorinox 8-Inch vs 10-Inch Chef's Knife: Which Size Is Right for Your Kitchen?",
+      title: "Victorinox 8-Inch vs 10-Inch: What Size Kitchen?",
       description: "24 years experience: how to choose between 8-inch vs 10-inch. Wrong size means poor control, slower speed, and hand fatigue.",
       canonical: "https://www.chefapprovedtools.com/blog/victorinox-8-inch-vs-10-inch-chefs-knife",
       author: "Scott Bradley",
@@ -1747,7 +1747,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'meat-cooking-temperatures-thermometers': {
-      title: "Meat Cooking Temperatures: Complete Safety & Doneness Chart",
+      title: "Meat Temperatures: Quick Reference to Doneness",
       description: "24 years cooking meat professionally: 145°F for safety, 135°F for medium-rare perfection. Complete temperature chart for chicken, beef, pork, lamb, fish.",
       canonical: "https://www.chefapprovedtools.com/blog/meat-cooking-temperatures-thermometers",
       author: "Scott Bradley",
@@ -2222,7 +2222,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'why-cooking-science-matters': {
-      title: "Why Cooking Science Beats Following Recipes (24 Years Proof)",
+      title: "Why Cooking Science Beats Recipes (24 Years Proof)",
       description: "24 years in professional kitchens: Understanding the science behind cooking techniques means you can adapt any recipe. Why the 'why' matters more than steps.",
       canonical: "https://www.chefapprovedtools.com/blog/why-cooking-science-matters",
       author: "Scott Bradley",
@@ -2322,7 +2322,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'hidden-secrets-of-brining': {
-      title: "The Hidden Secrets of Brining: Professional Techniques Explained",
+      title: "Hidden Secrets of Brining: Pro Techniques Explained",
       description: "Professional brining transforms lean proteins. Science of moisture retention, proper ratios, timing, and which meats benefit most.",
       canonical: "https://www.chefapprovedtools.com/blog/hidden-secrets-of-brining",
       author: "Scott Bradley",
@@ -2372,7 +2372,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'how-to-use-pizza-stone': {
-      title: "How to Use a Pizza Stone: Professional Techniques for Home Ovens",
+      title: "How to Use a Pizza Stone: Pro Techniques Home Ovens",
       description: "Why 45-60 minute preheat is essential, preventing thermal shock, stone vs steel for crispy crusts. Professional techniques for home ovens.",
       canonical: "https://www.chefapprovedtools.com/blog/how-to-use-pizza-stone",
       author: "Scott Bradley",
@@ -2456,7 +2456,7 @@ export const METADATA = {
   
   reviews: {
     'kitchenaid-ksm8990wh': {
-      title: "KitchenAid Commercial NSF: Survived 18 Months at Purple Café",
+      title: "KitchenAid Commercial NSF: 18 Months at Purple Café",
       description: "KitchenAid NSF commercial tested 18 months at Purple Café: mixed 300+ cracker dough batches—zero failures. Restaurant-grade mixer survives heavy workload.",
       canonical: "https://www.chefapprovedtools.com/reviews/kitchenaid-ksm8990wh",
       author: "Scott Bradley",
@@ -3110,7 +3110,7 @@ export const METADATA = {
     } as ReviewMetadata,
 
     'zuperia-bar-mops': {
-      title: "ZUPERIA Bar Mops: Better Than Restaurant Grade (100% Cotton)",
+      title: "ZUPERIA Bar Mops: Better Than Restaurant Grade",
       description: "ZUPERIA bar mops tested professionally: 100% ring-spun cotton absorbs more than competitors. Industry standard in restaurants. Survives hundreds of washes.",
       canonical: "https://www.chefapprovedtools.com/reviews/zuperia-bar-mops",
       author: "Scott Bradley",
