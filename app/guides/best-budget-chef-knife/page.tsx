@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Home", url: "/" },
   { name: "Guides", url: "/guides" },
-  { name: "Best Budget Chef Knife", url: "/best-budget-chef-knife" }
+  { name: "Best Budget Chef Knife", url: "/guides/best-budget-chef-knife" }
 ])
 
 export default async function BestBudgetChefKnife() {
@@ -320,7 +320,7 @@ export default async function BestBudgetChefKnife() {
               merchant="internal"
             >
             <Link
-              href="/best-knife-for-cutting-meat"
+              href="/guides/best-knife-for-cutting-meat"
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
             >
               <h3 className="font-bold text-slate-900 mb-2">Best Knife for Cutting Meat</h3>

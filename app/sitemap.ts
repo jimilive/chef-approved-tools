@@ -111,18 +111,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // SEO landing pages - HIGH PRIORITY
   const seoLandingPages = [
     {
-      url: `${baseUrl}/best-budget-chef-knife`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/best-knife-for-cutting-meat`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.95,
-    },
-    {
       url: `${baseUrl}/kitchen-bundle`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,

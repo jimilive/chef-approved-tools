@@ -289,7 +289,7 @@ export const METADATA = {
     'best-budget-chef-knife': {
       title: "Best Budget Chef Knife: Sharp After 6 Years Daily Use",
       description: "This budget knife stayed sharp through 6 years professional prep. Edge retention vs. premium knives, real performance testing. What actually matters.",
-      canonical: "https://www.chefapprovedtools.com/best-budget-chef-knife",
+      canonical: "https://www.chefapprovedtools.com/guides/best-budget-chef-knife",
       author: "Scott Bradley",
       imageUrl: "/images/og/best-budget-chef-knife.jpg",
       imageAlt: "Best budget chef knife review",
@@ -302,7 +302,7 @@ export const METADATA = {
     'best-knife-for-cutting-meat': {
       title: "Best Knife for Cutting Meat: Brisket to Ribeye Testing",
       description: "Which knife cuts raw brisket, breaks down whole chickens, slices cooked ribeye perfectly. Testing edge retention through hundreds of pounds of meat prep.",
-      canonical: "https://www.chefapprovedtools.com/best-knife-for-cutting-meat",
+      canonical: "https://www.chefapprovedtools.com/guides/best-knife-for-cutting-meat",
       author: "Scott Bradley",
       imageUrl: "/images/og/best-knife-for-cutting-meat.jpg",
       imageAlt: "Best knife for cutting meat review",

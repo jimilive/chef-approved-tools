@@ -30,6 +30,8 @@ export default function GuidesPage() {
   const guides = [
     { title: "Best Cookware: What Survives 24 Years Restaurant Use", description: "Stainless steel handles tomato sauce, cast iron lasts decades, nonstick fails fast", href: "/guides/best-cookware" },
     { title: "Best Chef Knives 2025", description: "Complete buying guide for professional knives", href: "/guides/best-chef-knives" },
+    { title: "Best Budget Chef Knife", description: "The $50 knife I've used for 20 years in professional kitchens", href: "/guides/best-budget-chef-knife" },
+    { title: "Best Knife for Cutting Meat", description: "The boning knife professionals use for trimming, deboning, and portioning", href: "/guides/best-knife-for-cutting-meat" },
     { title: "Affordable Appliances: Budget Options That Actually Last", description: "Which budget blenders survive 2 years, which mixers match premium performance", href: "/guides/affordable-kitchen-appliances" },
     { title: "Cookware Materials Guide", description: "Stainless steel vs cast iron vs non-stick", href: "/guides/cookware-materials" },
     { title: "Kitchen Appliance Essentials", description: "Must-have appliances for serious cooking", href: "/guides/kitchen-appliances" },

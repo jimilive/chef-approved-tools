@@ -34,6 +34,16 @@ const nextConfig: NextConfig = {
         destination: '/appliances',
         permanent: true, // 301 redirect
       },
+      {
+        source: '/best-budget-chef-knife',
+        destination: '/guides/best-budget-chef-knife',
+        permanent: true, // 301 redirect
+      },
+      {
+        source: '/best-knife-for-cutting-meat',
+        destination: '/guides/best-knife-for-cutting-meat',
+        permanent: true, // 301 redirect
+      },
     ];
   },
 
