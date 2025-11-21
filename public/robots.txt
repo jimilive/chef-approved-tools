@@ -6,6 +6,12 @@ Disallow: /admin/
 Disallow: /_next/
 Disallow: /api/
 
+# Disallow filter/query parameters (legacy URLs)
+Disallow: /*?filter=
+Disallow: /*?type=
+Disallow: /*&filter=
+Disallow: /*&type=
+
 # Disallow non-page assets
 Disallow: /favicon.ico
 Disallow: /*.ico
