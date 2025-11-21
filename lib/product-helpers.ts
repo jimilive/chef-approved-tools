@@ -148,15 +148,23 @@ export async function getAllProducts(): Promise<Product[]> {
 
 /**
  * Get all products in a specific category
- * @param category - Category name (e.g., 'knives', 'cookware')
+ * @param category - Category name (e.g., 'knives', 'cookware') or array of categories
  * @returns Array of products in that category with full reviews (excludes comparison-only products)
  */
-export async function getProductsByCategory(category: string): Promise<Product[]> {
-  const { data, error } = await getSupabase()
+export async function getProductsByCategory(category: string | string[]): Promise<Product[]> {
+  // Handle both single category and array of categories
+  const query = getSupabase()
     .from('products')
     .select('*')
-    .eq('category', category)
     .not('expert_rating', 'is', null)
+
+  if (Array.isArray(category)) {
+    query.in('category', category)
+  } else {
+    query.eq('category', category)
+  }
+
+  const { data, error } = await query
 
   if (error || !data) {
     console.error('Error fetching products by category:', error)
