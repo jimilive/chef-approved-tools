@@ -34,27 +34,22 @@ export default async function AppliancesPage() {
   const supabaseProducts = await getProductsByCategory(categoryConfig.supabaseCategory)
 
   // Map products to format expected by ProductCard
-  // Filter out comparison-only products (those without editorial metadata)
-  const products = supabaseProducts
-    .map((p, index) => {
-      const editorial = getEditorialMetadataWithDefaults(p.slug)
+  const products = supabaseProducts.map((p, index) => {
+    const editorial = getEditorialMetadataWithDefaults(p.slug)
 
-      return {
-        id: p.slug,
-        name: p.name,
-        slug: p.slug,
-        category: categoryConfig.displayName,
-        tier: editorial.tier,
-        testingPeriod: editorial.testingPeriod,
-        rating: p.expertRating || 4.5,
-        hook: editorial.hook,
-        position: index + 1,
-        listName: categoryConfig.listName,
-        isPlaceholder: editorial.testingPeriod === 'Under evaluation'
-      }
-    })
-    .filter(p => !p.isPlaceholder)
-    .map((p, index) => ({ ...p, position: index + 1 })) // Renumber positions after filtering
+    return {
+      id: p.slug,
+      name: p.name,
+      slug: p.slug,
+      category: categoryConfig.displayName,
+      tier: editorial.tier,
+      testingPeriod: editorial.testingPeriod,
+      rating: p.expertRating || 4.5,
+      hook: editorial.hook,
+      position: index + 1,
+      listName: categoryConfig.listName
+    }
+  })
 
   // FAQPage schema with unique appliances FAQs (NO Product schema - avoiding image/rating issues)
   const faqSchema = {

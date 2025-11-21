@@ -49,7 +49,7 @@ export const reviewData = {
     ],
     affiliateLinks: [],
     inStock: true,
-    expertRating: 4.5,
+    expertRating: 5.0,
     expertOpinion: 'After years of professional use at Purple Cafe, the Benriner mandoline proved itself as genuine professional equipment.',
     dateAdded: '2025-10-13',
     lastUpdated: '2025-10-13',
@@ -96,7 +96,7 @@ export const reviewData = {
     title: 'Benriner Large Mandoline Review: Professional Kitchen Test',
     authorName: 'Scott Bradley',
     authorCredentials: 'Professional Chef • 24 Years in Professional Kitchens',
-    rating: 4.5,
+    rating: 5.0,
     tierBadge: {
       icon: '🏆',
       text: 'Tier 1: Professional Kitchen Use',
