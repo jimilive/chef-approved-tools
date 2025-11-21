@@ -29,14 +29,10 @@ const guidesFAQs = [
 export default function GuidesPage() {
   const guides = [
     { title: "Best Chef Knives 2025", description: "Complete buying guide for professional knives", href: "/guides/best-chef-knives" },
-    { title: "OXO Good Grips Swivel Peeler", description: "The peeler that actually lasts - 24 years of professional cooking", href: "/reviews/oxo-good-grips-swivel-peeler" },
-    { title: "OXO Good Grips Bench Scraper", description: "Most underrated kitchen tool - transfers, portions, cleans", href: "/reviews/oxo-good-grips-bench-scraper" },
-    { title: "Winco Heavy Duty Tongs", description: "Restaurant-grade tongs at budget price - the ones pros use", href: "/reviews/winco-heavy-duty-tongs" },
-    { title: "Benriner Large Mandoline", description: "Professional consistency for perfect slices every time", href: "/reviews/benriner-large-mandoline" },
-    { title: "ZUPERIA Bar Mops", description: "Industry standard bar mops - 100% ring spun cotton, restaurant grade", href: "/reviews/zuperia-bar-mops" },
-    { title: "Epicurean Kitchen Cutting Board", description: "Dishwasher-safe board better than wood - truly sanitary", href: "/reviews/epicurean-kitchen-cutting-board" },
+    { title: "Best Cookware: What Survives 24 Years Restaurant Use", description: "Stainless steel handles tomato sauce, cast iron lasts decades, nonstick fails fast", href: "/guides/best-cookware" },
     { title: "Cookware Materials Guide", description: "Stainless steel vs cast iron vs non-stick", href: "/guides/cookware-materials" },
     { title: "Kitchen Appliance Essentials", description: "Must-have appliances for serious cooking", href: "/guides/kitchen-appliances" },
+    { title: "Affordable Appliances: Budget Options That Actually Last", description: "Which budget blenders survive 2 years, which mixers match premium performance", href: "/guides/affordable-kitchen-appliances" },
     { title: "Knife Care & Maintenance", description: "Keep your blades sharp and safe", href: "/guides/knife-care" }
   ];
 
