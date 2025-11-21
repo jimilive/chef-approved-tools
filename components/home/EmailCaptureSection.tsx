@@ -27,7 +27,7 @@ export default function EmailCaptureSection() {
   }
 
   return (
-    <section id="get-guide" className="py-16 bg-gray-100">
+    <section id="get-guide" className="py-16 bg-gradient-to-br from-orange-50 to-red-50">
       <div className="max-w-2xl mx-auto px-4">
         <div className="bg-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-2xl">
           {/* Curiosity Badge */}
