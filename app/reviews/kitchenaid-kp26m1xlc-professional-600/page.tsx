@@ -18,11 +18,13 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import AuthorBio from '@/components/review/AuthorBio'
 import TestimonialsSection from '@/components/TestimonialsSection'
 
 // Import review data
 import { reviewData } from './kitchenaid-kp26m1xlc-professional-600-data'
+import { kitchenaidPro600ComparisonData } from './stand-mixer-comparison-data'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -213,6 +215,23 @@ export default async function KitchenAidProfessional600ReviewPage() {
             content: <>{processInlineLinks(typeof section.content === 'string' ? section.content : '')}</>
           }))}
         />
+
+        {/* SECTION 3.5: COMPARISON TABLE */}
+        <section className="my-12">
+          <h2 className="text-3xl font-bold mb-6 text-slate-900">
+            How Does the Professional 600 Compare?
+          </h2>
+          <p className="text-lg text-slate-600 mb-8">
+            After 18 years using this mixer professionally at Purple Café, Mellow Mushroom, and Il Pizzaiolo,
+            I&apos;ve tested every major stand mixer in high-volume settings. Here&apos;s how the Professional 600
+            stacks up against the modern replacements and alternatives.
+          </p>
+          <ProductComparisonTable
+            products={kitchenaidPro600ComparisonData.products}
+            comparisonRows={kitchenaidPro600ComparisonData.comparisonRows}
+            highlightedProduct={kitchenaidPro600ComparisonData.highlightedProduct}
+          />
+        </section>
 
         {/* SECTION 4: PROS & CONS */}
         <ProsConsGrid
