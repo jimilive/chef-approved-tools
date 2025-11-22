@@ -13,7 +13,7 @@ export const kitchenaidPro600ComparisonData = {
     {
       name: 'Professional 600',
       brand: 'KitchenAid',
-      affiliateLink: '', // Discontinued - not available except eBay
+      affiliateLink: 'https://www.dpbolvw.net/click-101557027-14071349?url=https%3A%2F%2Fwww.kitchenaid.com%2Fcountertop-appliances%2Fstand-mixers%2Fbowl-lift-stand-mixers%2Fp.kitchenaid-5-5-quart-bowl-lift-stand-mixer.KSM55SXXXBM.html', // Links to KSM55 replacement
 
       // Stand mixer-specific fields
       motorPower: '575 watts',

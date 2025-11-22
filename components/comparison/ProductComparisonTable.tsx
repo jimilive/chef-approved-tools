@@ -55,6 +55,9 @@ export default function ProductComparisonTable({
     if (affiliateLink.includes('amazon.com') || affiliateLink.includes('amzn.to')) {
       return 'Check Price on Amazon →'
     }
+    if (affiliateLink.includes('kitchenaid.com') || affiliateLink.includes('dpbolvw.net') || affiliateLink.includes('jdoqocy.com')) {
+      return 'View Price on KitchenAid →'
+    }
     return 'Check Current Price →'
   }
 
