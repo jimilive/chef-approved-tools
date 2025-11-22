@@ -4,27 +4,9 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata = {
-  title: "Why Removing Silverskin Matters | Chef Approved Tools",
-  description: "Professional chef explains why removing silverskin from meat is essential after 24 years in restaurant kitchens. Proper technique prevents tough, chewy texture. Learn in 5 minutes.",
-  openGraph: {
-    title: "Why Removing Silverskin Matters",
-    description: "Professional chef explains why removing silverskin from meat is essential after 24 years in restaurant kitchens. Proper technique prevents tough, chewy texture. Learn in 5 minutes.",
-    type: "article",
-    publishedTime: "2025-11-20T00:00:00-08:00",
-    modifiedTime: "2025-11-20T00:00:00-08:00",
-    authors: ["Scott Bradley"],
-    images: [
-      {
-        url: "https://chefapprovedtools.com/images/blog/silverskin-removal.jpg",
-        width: 1200,
-        height: 675,
-        alt: "Chef's knife removing silverskin from tenderloin on cutting board"
-      }
-    ]
-  }
-};
+export const metadata = generateBlogMetadata('why-removing-silverskin-matters');
 
 export default function WhyRemovingSilverskinMattersPage() {
   const jsonLd = {

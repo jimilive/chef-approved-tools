@@ -4,27 +4,9 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata = {
-  title: "Hand-Washing in the Kitchen: The Right Way | Chef Approved Tools",
-  description: "Professional chef teaches proper hand-washing technique after 24 years in restaurant kitchens. Prevents foodborne illness through critical 20-second protocol. Master immediately.",
-  openGraph: {
-    title: "Hand-Washing in the Kitchen: The Right Way",
-    description: "Professional chef teaches proper hand-washing technique after 24 years in restaurant kitchens. Prevents foodborne illness through critical 20-second protocol. Master immediately.",
-    type: "article",
-    publishedTime: "2025-11-20T00:00:00-08:00",
-    modifiedTime: "2025-11-20T00:00:00-08:00",
-    authors: ["Scott Bradley"],
-    images: [
-      {
-        url: "https://chefapprovedtools.com/images/blog/hand-washing.jpg",
-        width: 1200,
-        height: 675,
-        alt: "Chef washing hands thoroughly at commercial kitchen sink"
-      }
-    ]
-  }
-};
+export const metadata = generateBlogMetadata('hand-washing-kitchen');
 
 export default function HandWashingInKitchenPage() {
   const jsonLd = {

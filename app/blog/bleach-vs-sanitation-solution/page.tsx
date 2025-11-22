@@ -4,27 +4,9 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata = {
-  title: "Bleach vs Sanitation Solution: Which to Use | Chef Approved Tools",
-  description: "Professional chef explains chemical sanitation methods after 24 years in restaurant kitchens. Proper dilution ratios, contact time, and safety protocols. Critical food safety guide.",
-  openGraph: {
-    title: "Bleach vs Sanitation Solution: Which to Use",
-    description: "Professional chef explains chemical sanitation methods after 24 years in restaurant kitchens. Proper dilution ratios, contact time, and safety protocols. Critical food safety guide.",
-    type: "article",
-    publishedTime: "2025-11-20T00:00:00-08:00",
-    modifiedTime: "2025-11-20T00:00:00-08:00",
-    authors: ["Scott Bradley"],
-    images: [
-      {
-        url: "https://chefapprovedtools.com/images/blog/sanitation-solution.jpg",
-        width: 1200,
-        height: 675,
-        alt: "Sanitizer buckets and test strips in professional kitchen"
-      }
-    ]
-  }
-};
+export const metadata = generateBlogMetadata('bleach-vs-sanitation-solution');
 
 export default function BleachVsSanitationSolutionPage() {
   const jsonLd = {

@@ -4,27 +4,9 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata = {
-  title: "How to Store Raw Foods Safely | Chef Approved Tools",
-  description: "Professional chef teaches proper raw food storage after 24 years in restaurant kitchens. Temperature control and storage hierarchy prevent cross-contamination. Critical safety technique.",
-  openGraph: {
-    title: "How to Store Raw Foods Safely",
-    description: "Professional chef teaches proper raw food storage after 24 years in restaurant kitchens. Temperature control and storage hierarchy prevent cross-contamination. Critical safety technique.",
-    type: "article",
-    publishedTime: "2025-11-20T00:00:00-08:00",
-    modifiedTime: "2025-11-20T00:00:00-08:00",
-    authors: ["Scott Bradley"],
-    images: [
-      {
-        url: "https://chefapprovedtools.com/images/blog/food-storage.jpg",
-        width: 1200,
-        height: 675,
-        alt: "Organized commercial refrigerator with properly stored raw foods"
-      }
-    ]
-  }
-};
+export const metadata = generateBlogMetadata('how-to-store-raw-foods-safely');
 
 export default function HowToStoreRawFoodsSafelyPage() {
   const jsonLd = {

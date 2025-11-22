@@ -4,27 +4,9 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata = {
-  title: "How to Prep and Grill Asparagus | Chef Approved Tools",
-  description: "Professional chef teaches asparagus grilling after 24 years in restaurant kitchens. High heat, minimal time, and the bending trick for perfect spears. Master in 10 minutes.",
-  openGraph: {
-    title: "How to Prep and Grill Asparagus",
-    description: "Professional chef teaches asparagus grilling after 24 years in restaurant kitchens. High heat, minimal time, and the bending trick for perfect spears. Master in 10 minutes.",
-    type: "article",
-    publishedTime: "2025-11-20T00:00:00-08:00",
-    modifiedTime: "2025-11-20T00:00:00-08:00",
-    authors: ["Scott Bradley"],
-    images: [
-      {
-        url: "https://chefapprovedtools.com/images/blog/grilled-asparagus.jpg",
-        width: 1200,
-        height: 675,
-        alt: "Fresh asparagus spears with char marks on hot grill grates"
-      }
-    ]
-  }
-};
+export const metadata = generateBlogMetadata('how-to-prep-and-grill-asparagus');
 
 export default function HowToPrepAndGrillAsparagusPage() {
   const jsonLd = {

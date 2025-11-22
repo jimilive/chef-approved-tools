@@ -4,27 +4,9 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata = {
-  title: "How to Wash Lettuce Properly | Chef Approved Tools",
-  description: "Professional chef teaches proper lettuce washing after 24 years in restaurant kitchens. Lift from water, never drain—wash three times for truly clean greens. Learn in 5 minutes.",
-  openGraph: {
-    title: "How to Wash Lettuce Properly",
-    description: "Professional chef teaches proper lettuce washing after 24 years in restaurant kitchens. Lift from water, never drain—wash three times for truly clean greens. Learn in 5 minutes.",
-    type: "article",
-    publishedTime: "2025-11-20T00:00:00-08:00",
-    modifiedTime: "2025-11-20T00:00:00-08:00",
-    authors: ["Scott Bradley"],
-    images: [
-      {
-        url: "https://chefapprovedtools.com/images/blog/washing-lettuce.jpg",
-        width: 1200,
-        height: 675,
-        alt: "Fresh lettuce leaves being lifted from water in large bowl"
-      }
-    ]
-  }
-};
+export const metadata = generateBlogMetadata('how-to-wash-lettuce');
 
 export default function HowToWashLettucePage() {
   const jsonLd = {

@@ -4,27 +4,9 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata = {
-  title: "The Magic of Freshly Ground Pepper | Chef Approved Tools",
-  description: "Professional chef explains why freshly ground black pepper transforms dishes after 24 years in restaurant kitchens. Flavor difference is dramatic. Learn proper grinding technique.",
-  openGraph: {
-    title: "The Magic of Freshly Ground Pepper",
-    description: "Professional chef explains why freshly ground black pepper transforms dishes after 24 years in restaurant kitchens. Flavor difference is dramatic. Learn proper grinding technique.",
-    type: "article",
-    publishedTime: "2025-11-20T00:00:00-08:00",
-    modifiedTime: "2025-11-20T00:00:00-08:00",
-    authors: ["Scott Bradley"],
-    images: [
-      {
-        url: "https://chefapprovedtools.com/images/blog/pepper-grinder.jpg",
-        width: 1200,
-        height: 675,
-        alt: "Pepper mill grinding fresh black peppercorns over finished dish"
-      }
-    ]
-  }
-};
+export const metadata = generateBlogMetadata('magic-of-freshly-ground-pepper');
 
 export default function TheMagicOfFreshlyGroundPepperPage() {
   const jsonLd = {

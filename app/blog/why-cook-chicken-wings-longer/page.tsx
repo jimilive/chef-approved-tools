@@ -4,27 +4,9 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata = {
-  title: "Why You Should Cook Chicken Wings Longer | Chef Approved Tools",
-  description: "Professional chef explains why extended cooking time breaks down connective tissue in chicken wings after 24 years in restaurant kitchens. Meat falls off bone perfectly.",
-  openGraph: {
-    title: "Why You Should Cook Chicken Wings Longer",
-    description: "Professional chef explains why extended cooking time breaks down connective tissue in chicken wings after 24 years in restaurant kitchens. Meat falls off bone perfectly.",
-    type: "article",
-    publishedTime: "2025-11-20T00:00:00-08:00",
-    modifiedTime: "2025-11-20T00:00:00-08:00",
-    authors: ["Scott Bradley"],
-    images: [
-      {
-        url: "https://chefapprovedtools.com/images/blog/chicken-wings.jpg",
-        width: 1200,
-        height: 675,
-        alt: "Perfectly cooked chicken wings with crispy golden skin"
-      }
-    ]
-  }
-};
+export const metadata = generateBlogMetadata('why-cook-chicken-wings-longer');
 
 export default function WhyYouShouldCookChickenWingsLongerPage() {
   const jsonLd = {

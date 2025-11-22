@@ -4,27 +4,9 @@ import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
+import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
-export const metadata = {
-  title: "Why You Should Always Wash Eggs and Produce | Chef Approved Tools",
-  description: "Professional chef explains proper egg and produce washing after 24 years in restaurant kitchens. Bacterial contamination removal prevents foodborne illness. Critical safety technique.",
-  openGraph: {
-    title: "Why You Should Always Wash Eggs and Produce",
-    description: "Professional chef explains proper egg and produce washing after 24 years in restaurant kitchens. Bacterial contamination removal prevents foodborne illness. Critical safety technique.",
-    type: "article",
-    publishedTime: "2025-11-20T00:00:00-08:00",
-    modifiedTime: "2025-11-20T00:00:00-08:00",
-    authors: ["Scott Bradley"],
-    images: [
-      {
-        url: "https://chefapprovedtools.com/images/blog/washing-produce.jpg",
-        width: 1200,
-        height: 675,
-        alt: "Fresh vegetables being washed under running water in commercial sink"
-      }
-    ]
-  }
-};
+export const metadata = generateBlogMetadata('why-wash-eggs-and-produce');
 
 export default function WhyYouShouldAlwaysWashEggsAndProducePage() {
   const jsonLd = {

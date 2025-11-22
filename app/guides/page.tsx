@@ -2,12 +2,26 @@ import { Metadata } from 'next'
 import FAQSchema from '@/components/FAQSchema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateBreadcrumbSchema } from '@/lib/schema'
+import { getPageMetadata } from '@/data/metadata'
+
+const pageMetadata = getPageMetadata('guides')
 
 export const metadata: Metadata = {
-  title: 'Kitchen Equipment Buying Guides From A Professional Chef',
-  description: 'Expert guidance from a professional chef with 24 years restaurant experience. Make informed equipment decisions with real testing data and recommendations.',
+  title: pageMetadata.title,
+  description: pageMetadata.description,
   alternates: {
-    canonical: 'https://www.chefapprovedtools.com/guides',
+    canonical: pageMetadata.canonical,
+  },
+  openGraph: {
+    title: pageMetadata.title,
+    description: pageMetadata.description,
+    url: pageMetadata.canonical,
+    siteName: 'Chef Approved Tools',
+    images: pageMetadata.imageUrl ? [{
+      url: pageMetadata.imageUrl,
+      alt: pageMetadata.imageAlt || pageMetadata.title,
+    }] : undefined,
+    type: 'website',
   },
 }
 
