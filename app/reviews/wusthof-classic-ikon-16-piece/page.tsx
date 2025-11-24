@@ -18,9 +18,11 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 // Import review data
 import { reviewData } from './wusthof-classic-ikon-16-piece-data'
+import { knifeSetComparisonData } from './knife-set-comparison-data'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -215,6 +217,81 @@ export default async function ProductReview() {
             minorConsiderations={reviewData.testingResults.minorConsiderations}
           />
 
+          {/* SECTION 2.5: WHAT'S INCLUDED */}
+          <section className="bg-white rounded-2xl px-6 pt-6 pb-8 md:px-12 shadow-sm mb-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
+              What&apos;s Included in the Set
+            </h2>
+
+            <p className="text-slate-600 leading-relaxed mb-6">
+              The Wüsthof Classic Ikon 16-Piece set includes everything you need for a complete kitchen knife collection.
+              All knife blades are forged in Solingen, Germany, and each piece features the signature contoured POM handles
+              with the half-bolster design that allows full-length sharpening.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-x-8 gap-y-3">
+              <div className="flex items-center">
+                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">1.</span>
+                <span className="text-slate-700">3&quot; Straight Paring Knife</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">2.</span>
+                <span className="text-slate-700">3.5&quot; Paring Knife</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">3.</span>
+                <span className="text-slate-700">4.5&quot; Utility Knife</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">4.</span>
+                <span className="text-slate-700">5&quot; Serrated Utility Knife</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">5.</span>
+                <span className="text-slate-700">6&quot; Utility Knife</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">6.</span>
+                <span className="text-slate-700">7&quot; Hollow Edge Santoku Knife</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">7.</span>
+                <span className="text-slate-700">8&quot; Bread Knife</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">8.</span>
+                <span className="text-slate-700">8&quot; Chef&apos;s Knife</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">9.</span>
+                <span className="text-slate-700">9&quot; Hollow Edge Carving Knife</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">10-13.</span>
+                <span className="text-slate-700">Four 4.5&quot; Steak Knives (fully forged)</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">14.</span>
+                <span className="text-slate-700">9&quot; Honing Steel (brushed stainless handle)</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">15.</span>
+                <span className="text-slate-700">Kitchen Shears (come-apart, stainless steel)</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">16.</span>
+                <span className="text-slate-700">15-Slot Walnut Knife Block</span>
+              </div>
+            </div>
+
+            <div className="mt-6 p-4 bg-orange-50 border border-orange-200 rounded-lg">
+              <p className="text-sm text-slate-700">
+                <strong className="text-slate-900">Note:</strong> All knife blades are made in Solingen, Germany.
+                The honing steel, kitchen shears, and knife block are manufactured in China to Wüsthof&apos;s specifications.
+              </p>
+            </div>
+          </section>
+
           {/* SECTION 3: PERFORMANCE ANALYSIS */}
           <PerformanceAnalysis
             title={reviewData.performanceAnalysis.title}
@@ -246,6 +323,24 @@ export default async function ProductReview() {
               return section;
             })}
           />
+
+          {/* SECTION 3.5: COMPARISON TABLE */}
+          <section className="my-12">
+            <h2 className="text-3xl font-bold mb-4 text-slate-900">
+              How Does the Wüsthof Classic Ikon Compare?
+            </h2>
+            <p className="text-lg text-slate-600 mb-8">
+              After 24 years in professional kitchens, I&apos;ve tested dozens of knife sets.
+              Here&apos;s how the Wüsthof Classic Ikon 16-Piece stacks up against the top competitors.
+            </p>
+            <ProductComparisonTable
+              title={knifeSetComparisonData.title}
+              subtitle={knifeSetComparisonData.subtitle}
+              products={knifeSetComparisonData.products}
+              comparisonRows={knifeSetComparisonData.comparisonRows}
+              highlightedProduct={knifeSetComparisonData.highlightedProduct}
+            />
+          </section>
 
           {/* SECTION 4: PROS & CONS */}
           <ProsConsGrid
