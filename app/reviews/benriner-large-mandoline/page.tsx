@@ -19,6 +19,7 @@ import {
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
 import { getReviewMetadata } from '@/data/metadata'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 // Import custom sections
 import SafetySection from '@/components/review/custom/SafetySection'
@@ -26,6 +27,7 @@ import CompatibilityGuide from '@/components/review/custom/CompatibilityGuide'
 
 // Import review data
 import { reviewData } from './benriner-large-mandoline-data'
+import { mandolineComparisonData } from './mandoline-comparison-data'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -264,6 +266,24 @@ export default async function BenrinerLargeMandolineReview() {
             title="What Works Best: Vegetable Compatibility Guide"
             categories={reviewData.compatibility.categories}
           />
+
+          {/* SECTION 4.5: COMPARISON TABLE */}
+          <section className="my-12">
+            <h2 className="text-3xl font-bold mb-4 text-slate-900">
+              How Does the Benriner Compare?
+            </h2>
+            <p className="text-lg text-slate-600 mb-8">
+              After 24 years in professional kitchens, I&apos;ve tested dozens of mandolines.
+              Here&apos;s how the Benriner Super Benriner stacks up against the top competitors.
+            </p>
+            <ProductComparisonTable
+              title={mandolineComparisonData.title}
+              subtitle={mandolineComparisonData.subtitle}
+              products={mandolineComparisonData.products}
+              comparisonRows={mandolineComparisonData.comparisonRows}
+              highlightedProduct={mandolineComparisonData.highlightedProduct}
+            />
+          </section>
 
           {/* SECTION 5: PROS & CONS */}
           <ProsConsGrid
