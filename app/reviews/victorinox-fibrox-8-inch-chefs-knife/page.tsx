@@ -18,9 +18,11 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 // Import review data
 import { reviewData } from './victorinox-fibrox-8-inch-chefs-knife-data'
+import { chefKnifeComparisonData } from './chef-knife-comparison-data'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -276,181 +278,23 @@ export default async function ProductReview() {
             ))}
           </div>
 
-          {/* V2: COMPARISON TABLE */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              {reviewData.comparisonTable.title}
+          {/* SECTION 4: COMPARISON TABLE */}
+          <section className="my-12">
+            <h2 className="text-3xl font-bold mb-4 text-slate-900">
+              How Does the Victorinox Compare?
             </h2>
-
-            <div className="overflow-x-auto -mx-6 md:mx-0">
-              <table className="w-full border-collapse bg-white">
-                <thead>
-                  <tr className="bg-slate-800">
-                    <th className="border border-slate-300 p-3 text-left text-white font-semibold">Feature</th>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <th
-                        key={index}
-                        className={`border border-slate-300 p-3 text-left text-white font-semibold ${
-                          competitor.highlight ? 'bg-orange-600' : ''
-                        }`}
-                      >
-                        {competitor.name}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Price Range</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.priceRange}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Blade Material</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.bladeMaterial}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Handle Material</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.handleMaterial}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Weight</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.weight}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Country of Origin</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.origin}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Out-of-Box Sharpness</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.sharpness}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Edge Retention</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.edgeRetention}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Balance</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.balance}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Professional Use Rating</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.professionalRating}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Warranty</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.warranty}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr className="bg-green-50">
-                    <td className="border border-slate-300 p-3 font-semibold">Best For</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 font-semibold ${
-                          competitor.highlight ? 'bg-green-200' : ''
-                        }`}
-                      >
-                        {competitor.bestFor}
-                      </td>
-                    ))}
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p className="text-sm text-slate-600 mt-4 italic">
-              <strong>My Verdict:</strong> {reviewData.comparisonTable.verdict}
+            <p className="text-lg text-slate-600 mb-8">
+              After 24 years in professional kitchens, I&apos;ve tested dozens of chef&apos;s knives.
+              Here&apos;s how the Victorinox Fibrox Pro stacks up against the top competitors.
             </p>
-          </div>
+            <ProductComparisonTable
+              title={chefKnifeComparisonData.title}
+              subtitle={chefKnifeComparisonData.subtitle}
+              products={chefKnifeComparisonData.products}
+              comparisonRows={chefKnifeComparisonData.comparisonRows}
+              highlightedProduct={chefKnifeComparisonData.highlightedProduct}
+            />
+          </section>
 
           {/* SECTION 5: PROS & CONS */}
           <ProsConsGrid
