@@ -1,7 +1,8 @@
 // components/StickyMobileCTA.tsx
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { usePathname } from 'next/navigation';
 import { AffiliateButtonCompact } from './AffiliateButtonVariations';
 import { getAssignedVariant, type CTAVariant } from '@/lib/ab-test';
@@ -17,7 +18,7 @@ interface StickyMobileCTAProps {
  * Sticky mobile CTA that appears at bottom of screen
  * - Only shows on mobile devices
  * - Fades in after 3 seconds or 50% scroll (whichever first)
- * - Hides when user reaches bottom of page
+ * - Hides when user reaches bottom of page (90%+)
  * - Only appears on /reviews/* pages
  */
 export default function StickyMobileCTA({
@@ -26,99 +27,65 @@ export default function StickyMobileCTA({
   merchant = 'amazon',
   productSlug
 }: StickyMobileCTAProps) {
-  const [isVisible, setIsVisible] = useState(false);
+  const [shouldShow, setShouldShow] = useState(false);
   const [variant, setVariant] = useState<CTAVariant>('a');
   const pathname = usePathname();
-  const hasTriggered = useRef(false);
-  const triggerTimer = useRef<NodeJS.Timeout>();
+
+  // Check if we're on a review page
+  const isReviewPage = pathname?.startsWith('/reviews/');
 
   useEffect(() => {
-    // Only show on review pages
-    if (!pathname?.startsWith('/reviews/')) {
-      return;
-    }
+    if (!isReviewPage) return;
 
-    // Get assigned A/B test variant
+    // Get A/B test variant
     setVariant(getAssignedVariant());
 
-    // Trigger after 3 seconds
-    triggerTimer.current = setTimeout(() => {
-      if (!hasTriggered.current) {
-        hasTriggered.current = true;
-        setIsVisible(true);
-      }
-    }, 3000);
+    // Simple: show after 1 second
+    const timer = setTimeout(() => {
+      console.log('StickyMobileCTA: Timer fired, showing CTA');
+      setShouldShow(true);
+    }, 1000);
 
-    // Scroll handler
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
+    return () => clearTimeout(timer);
+  }, [isReviewPage]);
 
-      // Calculate scroll percentage
-      const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 100;
-
-      // Show after 50% scroll
-      if (scrollPercentage >= 50 && !hasTriggered.current) {
-        hasTriggered.current = true;
-        setIsVisible(true);
-        if (triggerTimer.current) {
-          clearTimeout(triggerTimer.current);
-        }
-      }
-
-      // Hide at bottom (last 10% of page)
-      if (scrollPercentage >= 90) {
-        setIsVisible(false);
-      } else if (hasTriggered.current && scrollPercentage < 90) {
-        setIsVisible(true);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (triggerTimer.current) {
-        clearTimeout(triggerTimer.current);
-      }
-    };
-  }, [pathname]);
-
-  // Don't render on desktop or non-review pages
-  if (!pathname?.startsWith('/reviews/')) {
+  // Don't render on non-review pages
+  if (!isReviewPage) {
     return null;
   }
 
-  return (
-    <>
-      {/* Mobile only - hidden on md breakpoint and above */}
-      <div
-        className={`fixed bottom-0 left-0 right-0 z-40 md:hidden transform transition-all duration-500 ease-in-out shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1),0_-2px_4px_-1px_rgba(0,0,0,0.06)] ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
-        }`}
-      >
-        {/* Backdrop blur effect */}
-        <div className="absolute inset-0 bg-white/95 backdrop-blur-sm" />
+  // Use portal to render directly to body (avoids transform parent issues)
+  if (typeof document === 'undefined') {
+    return null;
+  }
 
-        {/* Content */}
-        <div className="relative px-4 py-3 safe-area-bottom">
-          {/* Product name - truncated */}
-          <div className="text-xs font-semibold text-slate-700 mb-2 truncate">
-            {productName}
-          </div>
+  return createPortal(
+    <div
+      className={`fixed bottom-0 left-0 right-0 z-40 md:hidden transition-all duration-500 ease-in-out shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1),0_-2px_4px_-1px_rgba(0,0,0,0.06)] ${
+        shouldShow ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0 pointer-events-none'
+      }`}
+    >
+      {/* Backdrop blur effect */}
+      <div className="absolute inset-0 bg-white/95 backdrop-blur-sm" />
 
-          {/* CTA Button */}
-          <AffiliateButtonCompact
-            href={affiliateUrl}
-            merchant={merchant}
-            product={productSlug}
-            position="final_cta"
-            variant={variant}
-          />
+      {/* Content */}
+      <div className="relative px-4 py-3 safe-area-bottom">
+        {/* Product name - truncated */}
+        <div className="text-xs font-semibold text-slate-700 mb-2 truncate">
+          {productName}
         </div>
+
+        {/* CTA Button */}
+        <AffiliateButtonCompact
+          href={affiliateUrl}
+          merchant={merchant}
+          product={productSlug}
+          position="final_cta"
+          variant={variant}
+        />
       </div>
-    </>
+    </div>,
+    document.body
   );
 }
 
