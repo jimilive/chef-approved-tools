@@ -77,7 +77,7 @@ export default function HomePage() {
       {/* HERO SECTION - Dual Impact */}
       <section className="hero-section relative bg-gradient-to-br from-slate-800 via-slate-700 to-orange-700 text-white">
         <div className="container max-w-7xl mx-auto px-4 py-16 md:py-24">
-          <div className="grid md:grid-cols-2 items-center max-w-7xl mx-auto px-32">
+          <div className="grid md:grid-cols-2 items-center max-w-7xl mx-auto px-6 md:px-12 lg:px-32">
             {/* Left: Message */}
             <div className="space-y-6 -mr-12">
               <h1 className="hero-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">

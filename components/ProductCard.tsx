@@ -7,22 +7,22 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 
 // Tier Badge Components
 const Tier1Badge = () => (
-  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-md font-bold text-sm shadow-md shadow-yellow-400/30 mb-3">
-    <span className="text-lg">🛡️</span>
+  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-yellow-400 to-orange-500 text-black px-3 py-1.5 sm:px-4 sm:py-2 rounded-md font-bold text-xs sm:text-sm shadow-md shadow-yellow-400/30 mb-3 whitespace-nowrap">
+    <span className="text-base sm:text-lg">🛡️</span>
     <span>TIER 1: Professional Kitchen Tested</span>
   </div>
 );
 
 const Tier2Badge: React.FC<{ testingPeriod: string }> = ({ testingPeriod }) => (
-  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-blue-500 to-blue-600 text-white px-4 py-2 rounded-md font-bold text-sm shadow-md shadow-blue-500/30 mb-3">
-    <span className="text-lg">🏠</span>
+  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-blue-500 to-blue-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-md font-bold text-xs sm:text-sm shadow-md shadow-blue-500/30 mb-3 whitespace-nowrap">
+    <span className="text-base sm:text-lg">🏠</span>
     <span>TIER 2: Home Tested ({testingPeriod})</span>
   </div>
 );
 
 const Tier3Badge = () => (
-  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-purple-500 to-purple-600 text-white px-4 py-2 rounded-md font-bold text-sm shadow-md shadow-purple-500/30 mb-3">
-    <span className="text-lg">🎓</span>
+  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-purple-500 to-purple-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-md font-bold text-xs sm:text-sm shadow-md shadow-purple-500/30 mb-3 whitespace-nowrap">
+    <span className="text-base sm:text-lg">🎓</span>
     <span>TIER 3: Expert Evaluation</span>
   </div>
 );
