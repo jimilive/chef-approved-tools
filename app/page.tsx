@@ -79,7 +79,7 @@ export default function HomePage() {
         <div className="container max-w-7xl mx-auto px-4 py-16 md:py-24">
           <div className="grid md:grid-cols-2 items-center max-w-7xl mx-auto px-6 md:px-12 lg:px-32">
             {/* Left: Message */}
-            <div className="space-y-6 -mr-12">
+            <div className="space-y-6 md:-mr-12">
               <h1 className="hero-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Rigorously Tested,
                 <br />
@@ -109,7 +109,7 @@ export default function HomePage() {
             </div>
 
             {/* Right: Scott in Chef's Coat */}
-            <div className="relative flex items-center py-12 justify-end mr-5">
+            <div className="relative flex items-center py-12 justify-center md:justify-end md:mr-5">
               <div className="relative rounded-2xl">
                 <Image
                   src="/images/scott-chef-coat-cropped.jpg"
@@ -122,7 +122,7 @@ export default function HomePage() {
                   priority
                 />
               </div>
-              <div className="absolute bottom-4 -right-6 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-xl shadow-xl">
+              <div className="absolute bottom-4 right-0 md:-right-6 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-xl shadow-xl">
                 <p className="font-bold text-lg">24 Years</p>
                 <p className="text-sm font-bold">Professional Kitchens</p>
               </div>
