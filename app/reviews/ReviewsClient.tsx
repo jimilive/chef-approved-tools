@@ -1,5 +1,5 @@
 'use client';
-// Force rebuild v2
+
 import React, { Suspense } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
@@ -166,7 +166,7 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
         </p>
 
         {/* Featured Grid - 2 columns */}
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,450px),1fr))] gap-8">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(450px,1fr))] gap-8">
           {featuredReviews.map((review, index) => (
             <ReviewCard key={review.id} review={review} featured={true} position={index + 1} />
           ))}
@@ -210,7 +210,7 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
         </div>
 
         {/* All Reviews Grid - 3 columns */}
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,320px),1fr))] gap-8">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-8">
           {filteredReviews.map((review, index) => (
             <ReviewCard key={review.id} review={review} position={index + 1} />
           ))}
