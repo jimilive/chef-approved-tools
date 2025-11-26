@@ -15,6 +15,7 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
+import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './nordic-ware-half-sheet-pan-data'
@@ -122,6 +123,7 @@ export default async function NordicWareHalfSheetPanReview() {
   ]
 
   return (
+    <>
     <div className="max-w-3xl mx-auto px-5 py-10">
       <ProductViewTrackerWrapper
         slug={reviewData.productSlug}
@@ -589,5 +591,14 @@ export default async function NordicWareHalfSheetPanReview() {
         />
       </article>
     </div>
+
+    {/* STICKY MOBILE CTA */}
+    <StickyMobileCTAWrapper
+      productName={productData.name}
+      affiliateUrl={affiliateUrl}
+      merchant="amazon"
+      productSlug={reviewData.productSlug}
+    />
+    </>
   )
 }

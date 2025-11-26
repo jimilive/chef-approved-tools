@@ -19,6 +19,7 @@ import {
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
+import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './le-creuset-signature-7-25-qt-dutch-oven-data'
@@ -412,6 +413,14 @@ export default async function LeCreusetDutchOvenReviewPage() {
 
         </div>
       </div>
+
+      {/* STICKY MOBILE CTA */}
+      <StickyMobileCTAWrapper
+        productName={productData.name}
+        affiliateUrl={affiliateUrl}
+        merchant="amazon"
+        productSlug={productData.slug}
+      />
     </>
   )
 }

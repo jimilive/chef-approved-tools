@@ -19,6 +19,7 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
+import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './lodge-seasoned-cast-iron-3-skillet-bundle-data'
@@ -561,6 +562,14 @@ export default async function LodgeCastIronReviewPage() {
         rating={productData.expertRating}
         hook={reviewData.tracking.hook}
         category={productData.category}
+      />
+
+      {/* STICKY MOBILE CTA */}
+      <StickyMobileCTAWrapper
+        productName={productData.name}
+        affiliateUrl={affiliateUrl}
+        merchant="amazon"
+        productSlug={productData.slug}
       />
     </>
   )
