@@ -14,23 +14,24 @@ const RecentlyViewed = dynamic(() => import('@/components/RecentlyViewed'), {
 const Tier1Badge = () => (
   <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-br from-yellow-400 to-orange-500 text-black px-2 py-1 sm:px-4 sm:py-2 rounded-md font-bold text-[10px] sm:text-sm shadow-md shadow-yellow-400/30 mb-3">
     <span className="text-sm sm:text-lg">🛡️</span>
-    <span>Pro Tested</span>
+    <span className="hidden sm:inline">TIER 1: Professional Kitchen Tested</span>
+    <span className="inline sm:hidden">Pro Tested</span>
   </div>
 );
 
 const Tier2Badge: React.FC<{ testingPeriod: string }> = ({ testingPeriod }) => (
   <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-br from-blue-500 to-blue-600 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-md font-bold text-[10px] sm:text-sm shadow-md shadow-blue-500/30 mb-3">
     <span className="text-sm sm:text-lg">🏠</span>
-    <span className="hidden sm:block">TIER 2: Home Tested ({testingPeriod})</span>
-    <span className="block sm:hidden">Home Tested</span>
+    <span className="hidden sm:inline">TIER 2: Home Tested ({testingPeriod})</span>
+    <span className="inline sm:hidden">Home Tested</span>
   </div>
 );
 
 const Tier3Badge = () => (
   <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-br from-purple-500 to-purple-600 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-md font-bold text-[10px] sm:text-sm shadow-md shadow-purple-500/30 mb-3">
     <span className="text-sm sm:text-lg">🎓</span>
-    <span className="hidden sm:block">TIER 3: Expert Evaluation</span>
-    <span className="block sm:hidden">Expert Evaluated</span>
+    <span className="hidden sm:inline">TIER 3: Expert Evaluation</span>
+    <span className="inline sm:hidden">Expert Eval</span>
   </div>
 );
 
@@ -158,8 +159,7 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
       <section className="mb-20">
         <div className="flex items-center gap-3 mb-8">
           <h2 className="text-xl sm:text-3xl font-bold m-0 text-gray-900">
-            <span className="hidden sm:inline">🔥 Featured: Professional Kitchen Tested</span>
-            <span className="sm:hidden">🔥 Pro Kitchen Tested</span>
+            🔥 Featured: Professional Kitchen Tested
           </h2>
         </div>
 
@@ -168,8 +168,8 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
           Equipment failure in a restaurant means lost revenue—these tools never failed.
         </p>
 
-        {/* Featured Grid - 2 columns */}
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(450px,1fr))] gap-8">
+        {/* Featured Grid - 1 col mobile, 2 col desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
           {featuredReviews.map((review, index) => (
             <ReviewCard key={review.id} review={review} featured={true} position={index + 1} />
           ))}
@@ -212,8 +212,8 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
           </div>
         </div>
 
-        {/* All Reviews Grid - 3 columns */}
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-8">
+        {/* All Reviews Grid - 1 col mobile, 2 col tablet, 3 col desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
           {filteredReviews.map((review, index) => (
             <ReviewCard key={review.id} review={review} position={index + 1} />
           ))}

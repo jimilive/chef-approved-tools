@@ -23,7 +23,7 @@ const Tier1Badge = () => (
   <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-br from-yellow-400 to-orange-500 text-black px-2 py-1 sm:px-4 sm:py-2 rounded-md font-bold text-[10px] sm:text-sm shadow-md shadow-yellow-400/30 mb-3">
     <span className="text-sm sm:text-lg">🛡️</span>
     <span className="hidden sm:inline">TIER 1: Professional Kitchen Tested</span>
-    <span className="sm:hidden">Pro Kitchen Tested</span>
+    <span className="inline sm:hidden">Pro Tested</span>
   </div>
 );
 
@@ -31,7 +31,7 @@ const Tier2Badge: React.FC<{ testingPeriod: string }> = ({ testingPeriod }) => (
   <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-br from-blue-500 to-blue-600 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-md font-bold text-[10px] sm:text-sm shadow-md shadow-blue-500/30 mb-3">
     <span className="text-sm sm:text-lg">🏠</span>
     <span className="hidden sm:inline">TIER 2: Home Tested ({testingPeriod})</span>
-    <span className="sm:hidden">Home Tested</span>
+    <span className="inline sm:hidden">Home Tested</span>
   </div>
 );
 

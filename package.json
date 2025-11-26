@@ -43,7 +43,10 @@
     "validate:metadata": "node scripts/validate-metadata.mjs",
     "validate:content": "node scripts/validate-content.js",
     "validate:new-images": "node scripts/validate-images.js",
-    "validate:schema": "node scripts/validate-schema.js",
+    "validate:schema": "tsx scripts/validate-schema.ts",
+    "validate:schema:local": "tsx scripts/validate-schema.ts --local",
+    "validate:schema:live": "tsx scripts/validate-schema.ts --live",
+    "validate:schema:report": "tsx scripts/validate-schema.ts --report schema-validation-report.txt",
     "validate:phase1": "npm run validate:types && npm run validate:metadata && npm run validate:content && npm run validate:new-images && npm run validate:schema"
   },
   "dependencies": {

@@ -1,0 +1,123 @@
+
+> chefapprovedtools@2.0.0 validate:schema:live
+> tsx scripts/validate-schema.ts --live
+
+[34m📋 Schema Validation Tool[0m
+
+Mode: live
+
+Validating 127 live URLs...
+
+
+═══════════════════════════════════════════════════════════════════
+  SCHEMA VALIDATION REPORT
+═══════════════════════════════════════════════════════════════════
+
+Scanned: 37 product reviews, 90 blog posts
+
+SUMMARY:
+[32m✅ Valid: 118[0m
+[33m⚠️  Warnings: 36[0m
+[31m❌ Errors: 0[0m
+[31m🚫 No Schema: 0[0m
+
+═══════════════════════════════════════════════════════════════════
+[33m⚠️  WARNINGS (9 files)[0m
+═══════════════════════════════════════════════════════════════════
+
+[33m⚠️  https://www.chefapprovedtools.com/blog/why-wash-eggs-and-produce[0m
+   Article.author.@id: author missing @id reference
+   [90mFix: Add @id reference to centralized author (e.g., /about#scott-bradley)[0m
+   Article.publisher: publisher should reference Organization via @id
+   [90mFix: Use publisher: { "@id": "https://www.chefapprovedtools.com/#organization" }[0m
+   Article.mainEntityOfPage: Missing mainEntityOfPage
+   [90mFix: Add mainEntityOfPage with @type: "WebPage" and @id[0m
+   Article.@id: Missing @id for proper entity reference
+   [90mFix: Add @id with format: https://www.chefapprovedtools.com/blog/[slug]#article[0m
+
+[33m⚠️  https://www.chefapprovedtools.com/blog/why-removing-silverskin-matters[0m
+   Article.author.@id: author missing @id reference
+   [90mFix: Add @id reference to centralized author (e.g., /about#scott-bradley)[0m
+   Article.publisher: publisher should reference Organization via @id
+   [90mFix: Use publisher: { "@id": "https://www.chefapprovedtools.com/#organization" }[0m
+   Article.mainEntityOfPage: Missing mainEntityOfPage
+   [90mFix: Add mainEntityOfPage with @type: "WebPage" and @id[0m
+   Article.@id: Missing @id for proper entity reference
+   [90mFix: Add @id with format: https://www.chefapprovedtools.com/blog/[slug]#article[0m
+
+[33m⚠️  https://www.chefapprovedtools.com/blog/why-cook-chicken-wings-longer[0m
+   Article.author.@id: author missing @id reference
+   [90mFix: Add @id reference to centralized author (e.g., /about#scott-bradley)[0m
+   Article.publisher: publisher should reference Organization via @id
+   [90mFix: Use publisher: { "@id": "https://www.chefapprovedtools.com/#organization" }[0m
+   Article.mainEntityOfPage: Missing mainEntityOfPage
+   [90mFix: Add mainEntityOfPage with @type: "WebPage" and @id[0m
+   Article.@id: Missing @id for proper entity reference
+   [90mFix: Add @id with format: https://www.chefapprovedtools.com/blog/[slug]#article[0m
+
+[33m⚠️  https://www.chefapprovedtools.com/blog/magic-of-freshly-ground-pepper[0m
+   Article.author.@id: author missing @id reference
+   [90mFix: Add @id reference to centralized author (e.g., /about#scott-bradley)[0m
+   Article.publisher: publisher should reference Organization via @id
+   [90mFix: Use publisher: { "@id": "https://www.chefapprovedtools.com/#organization" }[0m
+   Article.mainEntityOfPage: Missing mainEntityOfPage
+   [90mFix: Add mainEntityOfPage with @type: "WebPage" and @id[0m
+   Article.@id: Missing @id for proper entity reference
+   [90mFix: Add @id with format: https://www.chefapprovedtools.com/blog/[slug]#article[0m
+
+[33m⚠️  https://www.chefapprovedtools.com/blog/how-to-wash-lettuce[0m
+   Article.author.@id: author missing @id reference
+   [90mFix: Add @id reference to centralized author (e.g., /about#scott-bradley)[0m
+   Article.publisher: publisher should reference Organization via @id
+   [90mFix: Use publisher: { "@id": "https://www.chefapprovedtools.com/#organization" }[0m
+   Article.mainEntityOfPage: Missing mainEntityOfPage
+   [90mFix: Add mainEntityOfPage with @type: "WebPage" and @id[0m
+   Article.@id: Missing @id for proper entity reference
+   [90mFix: Add @id with format: https://www.chefapprovedtools.com/blog/[slug]#article[0m
+
+[33m⚠️  https://www.chefapprovedtools.com/blog/how-to-store-raw-foods-safely[0m
+   Article.author.@id: author missing @id reference
+   [90mFix: Add @id reference to centralized author (e.g., /about#scott-bradley)[0m
+   Article.publisher: publisher should reference Organization via @id
+   [90mFix: Use publisher: { "@id": "https://www.chefapprovedtools.com/#organization" }[0m
+   Article.mainEntityOfPage: Missing mainEntityOfPage
+   [90mFix: Add mainEntityOfPage with @type: "WebPage" and @id[0m
+   Article.@id: Missing @id for proper entity reference
+   [90mFix: Add @id with format: https://www.chefapprovedtools.com/blog/[slug]#article[0m
+
+[33m⚠️  https://www.chefapprovedtools.com/blog/how-to-prep-and-grill-asparagus[0m
+   Article.author.@id: author missing @id reference
+   [90mFix: Add @id reference to centralized author (e.g., /about#scott-bradley)[0m
+   Article.publisher: publisher should reference Organization via @id
+   [90mFix: Use publisher: { "@id": "https://www.chefapprovedtools.com/#organization" }[0m
+   Article.mainEntityOfPage: Missing mainEntityOfPage
+   [90mFix: Add mainEntityOfPage with @type: "WebPage" and @id[0m
+   Article.@id: Missing @id for proper entity reference
+   [90mFix: Add @id with format: https://www.chefapprovedtools.com/blog/[slug]#article[0m
+
+[33m⚠️  https://www.chefapprovedtools.com/blog/hand-washing-kitchen[0m
+   Article.author.@id: author missing @id reference
+   [90mFix: Add @id reference to centralized author (e.g., /about#scott-bradley)[0m
+   Article.publisher: publisher should reference Organization via @id
+   [90mFix: Use publisher: { "@id": "https://www.chefapprovedtools.com/#organization" }[0m
+   Article.mainEntityOfPage: Missing mainEntityOfPage
+   [90mFix: Add mainEntityOfPage with @type: "WebPage" and @id[0m
+   Article.@id: Missing @id for proper entity reference
+   [90mFix: Add @id with format: https://www.chefapprovedtools.com/blog/[slug]#article[0m
+
+[33m⚠️  https://www.chefapprovedtools.com/blog/bleach-vs-sanitation-solution[0m
+   Article.author.@id: author missing @id reference
+   [90mFix: Add @id reference to centralized author (e.g., /about#scott-bradley)[0m
+   Article.publisher: publisher should reference Organization via @id
+   [90mFix: Use publisher: { "@id": "https://www.chefapprovedtools.com/#organization" }[0m
+   Article.mainEntityOfPage: Missing mainEntityOfPage
+   [90mFix: Add mainEntityOfPage with @type: "WebPage" and @id[0m
+   Article.@id: Missing @id for proper entity reference
+   [90mFix: Add @id with format: https://www.chefapprovedtools.com/blog/[slug]#article[0m
+
+═══════════════════════════════════════════════════════════════════
+DETAILS: [full breakdown above]
+═══════════════════════════════════════════════════════════════════
+
+[33m⚠️  Validation passed with warnings[0m
+
