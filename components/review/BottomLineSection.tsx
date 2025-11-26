@@ -1,3 +1,6 @@
+'use client'
+
+import { trackAffiliateClick } from '@/lib/tracking'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { ReactNode } from 'react'
 
@@ -7,6 +10,18 @@ interface BottomLineSectionProps {
   ctaUrl?: string
   ctaText?: string
   customCTA?: ReactNode
+  productSlug?: string  // For click tracking
+}
+
+// Helper to detect merchant from affiliate URL
+const getMerchant = (url: string): string => {
+  if (url.includes('amazon.com') || url.includes('amzn.to')) {
+    return 'amazon'
+  }
+  if (url.includes('kitchenaid.com') || url.includes('dpbolvw.net') || url.includes('jdoqocy.com')) {
+    return 'kitchenaid_direct'
+  }
+  return 'other'
 }
 
 export default function BottomLineSection({
@@ -14,8 +29,18 @@ export default function BottomLineSection({
   paragraphs,
   ctaUrl,
   ctaText = "View Current Pricing on Amazon →",
-  customCTA
+  customCTA,
+  productSlug
 }: BottomLineSectionProps) {
+
+  const handleClick = () => {
+    if (ctaUrl) {
+      const merchant = getMerchant(ctaUrl)
+      const product = productSlug || 'unknown-product'
+      trackAffiliateClick(merchant, product, 'final_cta', 0)
+    }
+  }
+
   return (
     <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
       <div className="bg-gradient-to-br from-purple-700 via-purple-800 to-purple-900 rounded-xl px-10 py-10 text-white">
@@ -41,6 +66,7 @@ export default function BottomLineSection({
                   href={ctaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={handleClick}
                   className="inline-block bg-white text-purple-800 font-semibold px-12 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl hover:bg-purple-50"
                 >
                   {ctaText}

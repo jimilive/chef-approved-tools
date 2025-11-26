@@ -1,5 +1,7 @@
 'use client'
 
+import { trackAffiliateClick } from '@/lib/tracking'
+
 /**
  * Flexible Product Comparison Table Component
  *
@@ -59,6 +61,24 @@ export default function ProductComparisonTable({
       return 'View Price on KitchenAid →'
     }
     return 'Check Current Price →'
+  }
+
+  // Helper to detect merchant from affiliate URL
+  const getMerchant = (affiliateLink: string): string => {
+    if (affiliateLink.includes('amazon.com') || affiliateLink.includes('amzn.to')) {
+      return 'amazon'
+    }
+    if (affiliateLink.includes('kitchenaid.com') || affiliateLink.includes('dpbolvw.net') || affiliateLink.includes('jdoqocy.com')) {
+      return 'kitchenaid_direct'
+    }
+    return 'other'
+  }
+
+  // Handle affiliate click with tracking
+  const handleAffiliateClick = (product: Record<string, unknown>) => {
+    const merchant = getMerchant(product.affiliateLink as string)
+    const productName = (product.name as string) || 'Unknown Product'
+    trackAffiliateClick(merchant, productName, 'comparison_table', 0)
   }
 
   // Helper to render cell value
@@ -164,6 +184,7 @@ export default function ProductComparisonTable({
                     href={product.affiliateLink}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
+                    onClick={() => handleAffiliateClick(product)}
                     className={`block px-3 py-2 rounded-lg font-semibold text-xs transition-all leading-tight ${
                       product.name === highlightedProduct
                         ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700'
@@ -215,6 +236,7 @@ export default function ProductComparisonTable({
               href={product.affiliateLink}
               target="_blank"
               rel="noopener noreferrer sponsored"
+              onClick={() => handleAffiliateClick(product)}
               className={`block w-full text-center px-6 py-3 rounded-lg font-semibold transition-all ${
                 product.name === highlightedProduct
                   ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700'
