@@ -124,10 +124,8 @@ export default async function ProductReview() {
       : reviewData.legacyProductData.affiliateLinks
   } : reviewData.legacyProductData
 
-  // ===== STRATEGIC AFFILIATE LINK SELECTION =====
-  // Use database link if available, otherwise fall back to strategic links
-  const dbPrimaryLink = product ? getPrimaryAffiliateLink(product) : null
-  const primaryLink = (dbPrimaryLink && dbPrimaryLink !== '#') ? dbPrimaryLink : reviewData.strategicLinks.primary.url
+  // ===== AFFILIATE LINK FROM DATABASE =====
+  const primaryLink = product ? getPrimaryAffiliateLink(product) : '#'
   const salePageLink = reviewData.strategicLinks.secondary.url
 
   // Get all affiliate links for multi-vendor CTAs

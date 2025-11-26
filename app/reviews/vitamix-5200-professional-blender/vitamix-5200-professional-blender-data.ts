@@ -45,7 +45,7 @@ export const reviewData = {
     // Use for: Main CTA buttons, hero section, bottom line
     // Buyer psychology: High intent, ready to buy, price-conscious
     primary: {
-      url: 'https://www.jdoqocy.com/click-101557027-15472587',
+      url: 'https://www.kqzyfj.com/click-101557027-13084467',
       displayText: 'Check Price on Vitamix.com',
       linkId: '15472587',
       epc: 178.16,
