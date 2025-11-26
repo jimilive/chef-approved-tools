@@ -13,6 +13,7 @@ import AuthorBio from '@/components/review/AuthorBio'
 import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { getReviewMetadata } from '@/data/metadata'
+import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './oxo-good-grips-bench-scraper-data'
@@ -569,6 +570,14 @@ export default async function OXOGoodGripsBenchScraperReview() {
 
         </div>
       </div>
+
+      {/* STICKY MOBILE CTA */}
+      <StickyMobileCTAWrapper
+        productName={productData.name}
+        affiliateUrl={affiliateUrl}
+        merchant="amazon"
+        productSlug={reviewData.productSlug}
+      />
     </>
   )
 }

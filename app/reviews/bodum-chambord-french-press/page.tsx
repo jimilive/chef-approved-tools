@@ -19,6 +19,7 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
+import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './bodum-chambord-french-press-data'
@@ -375,6 +376,14 @@ export default async function BodumChambordFrenchPressReview() {
 
         </div>
       </div>
+
+      {/* STICKY MOBILE CTA */}
+      <StickyMobileCTAWrapper
+        productName={productData.name}
+        affiliateUrl={affiliateUrl}
+        merchant="amazon"
+        productSlug={productData.slug}
+      />
     </>
   )
 }

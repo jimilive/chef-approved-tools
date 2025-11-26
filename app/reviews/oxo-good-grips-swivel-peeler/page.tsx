@@ -13,6 +13,7 @@ import {
 } from '@/components/review'
 import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import AuthorBio from '@/components/review/AuthorBio'
+import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 import { reviewData } from './oxo-good-grips-swivel-peeler-data'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
@@ -582,6 +583,14 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
         />
         </div>
       </div>
+
+      {/* STICKY MOBILE CTA */}
+      <StickyMobileCTAWrapper
+        productName={productData.name}
+        affiliateUrl={affiliateUrl}
+        merchant="amazon"
+        productSlug={productData.slug}
+      />
     </>
   )
 }

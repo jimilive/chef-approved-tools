@@ -18,6 +18,7 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
+import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './victorinox-offset-bread-knife-data'
@@ -380,6 +381,14 @@ export default async function ProductReview() {
 
         </div>
       </div>
+
+      {/* STICKY MOBILE CTA */}
+      <StickyMobileCTAWrapper
+        productName={productData.name}
+        affiliateUrl={affiliateUrl}
+        merchant="amazon"
+        productSlug={productData.slug}
+      />
     </>
   )
 }

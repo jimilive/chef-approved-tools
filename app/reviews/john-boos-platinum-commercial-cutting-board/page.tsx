@@ -19,6 +19,7 @@ import {
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
 import { getReviewMetadata } from '@/data/metadata'
+import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './john-boos-platinum-commercial-cutting-board-data'
@@ -424,6 +425,14 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
 
         </div>
       </div>
+
+      {/* STICKY MOBILE CTA */}
+      <StickyMobileCTAWrapper
+        productName={productData.name}
+        affiliateUrl={affiliateUrl}
+        merchant="amazon"
+        productSlug={productData.slug}
+      />
     </>
   )
 }
