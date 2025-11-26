@@ -5,9 +5,8 @@ import ReviewsClient from './ReviewsClient'
 import { getPageMetadata } from '@/data/metadata'
 import { Metadata } from 'next'
 
-// Force dynamic rendering temporarily to bust cache
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
+// ISR: Regenerate page every hour for fresh content while allowing search engine caching
+export const revalidate = 3600 // 1 hour
 
 const pageMetadata = getPageMetadata('reviews')
 

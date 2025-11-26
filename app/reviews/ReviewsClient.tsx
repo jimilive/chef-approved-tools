@@ -12,26 +12,23 @@ const RecentlyViewed = dynamic(() => import('@/components/RecentlyViewed'), {
 
 // Tier Badge Components
 const Tier1Badge = () => (
-  <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-br from-yellow-400 to-orange-500 text-black px-2 py-1 sm:px-4 sm:py-2 rounded-md font-bold text-[10px] sm:text-sm shadow-md shadow-yellow-400/30 mb-3">
-    <span className="text-sm sm:text-lg">🛡️</span>
-    <span className="hidden sm:inline">TIER 1: Professional Kitchen Tested</span>
-    <span className="inline sm:hidden">Pro Tested</span>
+  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-md font-bold text-sm shadow-md shadow-yellow-400/30 mb-3">
+    <span className="text-lg">🛡️</span>
+    <span>TIER 1: Professional Kitchen Tested</span>
   </div>
 );
 
 const Tier2Badge: React.FC<{ testingPeriod: string }> = ({ testingPeriod }) => (
-  <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-br from-blue-500 to-blue-600 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-md font-bold text-[10px] sm:text-sm shadow-md shadow-blue-500/30 mb-3">
-    <span className="text-sm sm:text-lg">🏠</span>
-    <span className="hidden sm:inline">TIER 2: Home Tested ({testingPeriod})</span>
-    <span className="inline sm:hidden">Home Tested</span>
+  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-blue-500 to-blue-600 text-white px-4 py-2 rounded-md font-bold text-sm shadow-md shadow-blue-500/30 mb-3">
+    <span className="text-lg">🏠</span>
+    <span>TIER 2: Home Tested ({testingPeriod})</span>
   </div>
 );
 
 const Tier3Badge = () => (
-  <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-br from-purple-500 to-purple-600 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-md font-bold text-[10px] sm:text-sm shadow-md shadow-purple-500/30 mb-3">
-    <span className="text-sm sm:text-lg">🎓</span>
-    <span className="hidden sm:inline">TIER 3: Expert Evaluation</span>
-    <span className="inline sm:hidden">Expert Eval</span>
+  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-purple-500 to-purple-600 text-white px-4 py-2 rounded-md font-bold text-sm shadow-md shadow-purple-500/30 mb-3">
+    <span className="text-lg">🎓</span>
+    <span>TIER 3: Expert Evaluation</span>
   </div>
 );
 
@@ -62,7 +59,7 @@ const ReviewCard: React.FC<{ review: Review; featured?: boolean; position?: numb
       position={position}
       listName={featured ? "reviews_landing_featured" : "reviews_landing_all"}
     >
-      <div className="review-card bg-white border border-gray-300 rounded-lg p-4 sm:p-6 shadow-md transition-all duration-300 cursor-pointer h-full flex flex-col hover:shadow-xl overflow-hidden">
+      <div className="review-card bg-white border border-gray-300 rounded-lg p-6 shadow-md transition-all duration-300 cursor-pointer h-full flex flex-col hover:shadow-xl">
 
         {/* Tier Badge */}
         {review.tier === 1 ? (
@@ -158,7 +155,7 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
       {/* Featured Section */}
       <section className="mb-20">
         <div className="flex items-center gap-3 mb-8">
-          <h2 className="text-xl sm:text-3xl font-bold m-0 text-gray-900">
+          <h2 className="text-3xl font-bold m-0 text-gray-900">
             🔥 Featured: Professional Kitchen Tested
           </h2>
         </div>
@@ -168,8 +165,8 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
           Equipment failure in a restaurant means lost revenue—these tools never failed.
         </p>
 
-        {/* Featured Grid - 1 col mobile, 2 col desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
+        {/* Featured Grid - 2 columns */}
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(450px,1fr))] gap-8">
           {featuredReviews.map((review, index) => (
             <ReviewCard key={review.id} review={review} featured={true} position={index + 1} />
           ))}
@@ -212,8 +209,8 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
           </div>
         </div>
 
-        {/* All Reviews Grid - 1 col mobile, 2 col tablet, 3 col desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+        {/* All Reviews Grid - 3 columns */}
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-8">
           {filteredReviews.map((review, index) => (
             <ReviewCard key={review.id} review={review} position={index + 1} />
           ))}
