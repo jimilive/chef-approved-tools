@@ -165,8 +165,8 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
           Equipment failure in a restaurant means lost revenue—these tools never failed.
         </p>
 
-        {/* Featured Grid - 2 columns */}
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-8">
+        {/* Featured Grid - 1 col mobile, 2 col desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {featuredReviews.map((review, index) => (
             <ReviewCard key={review.id} review={review} featured={true} position={index + 1} />
           ))}
