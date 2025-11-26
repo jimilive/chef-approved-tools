@@ -157,8 +157,9 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
       {/* Featured Section */}
       <section className="mb-20">
         <div className="flex items-center gap-3 mb-8">
-          <h2 className="text-3xl font-bold m-0 text-gray-900">
-            🔥 Featured: Professional Kitchen Tested
+          <h2 className="text-xl sm:text-3xl font-bold m-0 text-gray-900">
+            <span className="hidden sm:inline">🔥 Featured: Professional Kitchen Tested</span>
+            <span className="sm:hidden">🔥 Pro Kitchen Tested</span>
           </h2>
         </div>
 
