@@ -21,6 +21,7 @@ import {
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import AuthorBio from '@/components/review/AuthorBio'
 import TestimonialsSection from '@/components/TestimonialsSection'
+import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './kitchenaid-kp26m1xlc-professional-600-data'
@@ -128,6 +129,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
   ]
 
   return (
+    <>
     <div className="min-h-screen bg-gray-50">
       <ProductViewTrackerWrapper
         slug={reviewData.productSlug}
@@ -348,5 +350,14 @@ export default async function KitchenAidProfessional600ReviewPage() {
         />
       </article>
     </div>
+
+    {/* STICKY MOBILE CTA */}
+    <StickyMobileCTAWrapper
+      productName={productData.name}
+      affiliateUrl={primaryLink}
+      merchant="kitchenaid_direct"
+      productSlug={productData.slug}
+    />
+    </>
   )
 }

@@ -20,6 +20,7 @@ import {
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
 import TestimonialsSection from '@/components/TestimonialsSection'
+import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './kitchenaid-ksm8990wh-data'
@@ -128,6 +129,7 @@ export default async function KitchenAidCommercialReviewPage() {
   ]
 
   return (
+    <>
     <div className="min-h-screen bg-gray-50">
       <ProductViewTrackerWrapper
         slug={reviewData.productSlug}
@@ -495,5 +497,14 @@ export default async function KitchenAidCommercialReviewPage() {
         />
       </article>
     </div>
+
+    {/* STICKY MOBILE CTA */}
+    <StickyMobileCTAWrapper
+      productName={productData.name}
+      affiliateUrl={primaryLink}
+      merchant="kitchenaid_direct"
+      productSlug={productData.slug}
+    />
+    </>
   )
 }

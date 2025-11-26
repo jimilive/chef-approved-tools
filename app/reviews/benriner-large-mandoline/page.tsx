@@ -19,6 +19,7 @@ import {
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
 import { getReviewMetadata } from '@/data/metadata'
+import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 // Import custom sections
@@ -463,6 +464,14 @@ export default async function BenrinerLargeMandolineReview() {
 
         </div>
       </div>
+
+      {/* STICKY MOBILE CTA */}
+      <StickyMobileCTAWrapper
+        productName={productData.name}
+        affiliateUrl={affiliateUrl}
+        merchant="amazon"
+        productSlug={productData.slug}
+      />
     </>
   )
 }
