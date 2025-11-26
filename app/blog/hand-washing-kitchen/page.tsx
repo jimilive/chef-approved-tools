@@ -5,39 +5,37 @@ import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
+import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata = generateBlogMetadata('hand-washing-kitchen');
 
-export default function HandWashingInKitchenPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Hand-Washing in the Kitchen: The Right Way",
-    "description": "Professional chef teaches proper hand-washing technique after 24 years in restaurant kitchens. Prevents foodborne illness through critical 20-second protocol. Master immediately.",
-    "image": "https://chefapprovedtools.com/images/blog/hand-washing.jpg",
-    "datePublished": "2025-11-20T00:00:00-08:00",
-    "dateModified": "2025-11-20T00:00:00-08:00",
-    "author": {
-      "@type": "Person",
-      "name": "Scott Bradley",
-      "jobTitle": "Kitchen Manager & Culinary Professional",
-      "description": "Professional chef with 24 years of restaurant experience"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Chef Approved Tools",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://chefapprovedtools.com/logo.png"
-      }
-    }
-  };
+const articleSchema = generateArticleSchema({
+  headline: "Hand-Washing in the Kitchen: The Right Way",
+  description: "Professional chef teaches proper hand-washing technique after 24 years in restaurant kitchens. Prevents foodborne illness through critical 20-second protocol. Master immediately.",
+  datePublished: "2025-11-20",
+  dateModified: "2025-11-20",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'hand-washing-kitchen'
+});
 
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
+  { name: "Hand-Washing in the Kitchen", url: "https://www.chefapprovedtools.com/blog/hand-washing-kitchen" }
+]);
+
+export default function HandWashingInKitchenPage() {
   return (
     <BlogLayout breadcrumbTitle="Hand-Washing in the Kitchen: The Right Way">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <BlogHero

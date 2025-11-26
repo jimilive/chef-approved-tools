@@ -5,39 +5,37 @@ import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
+import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata = generateBlogMetadata('why-cook-chicken-wings-longer');
 
-export default function WhyYouShouldCookChickenWingsLongerPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Why You Should Cook Chicken Wings Longer",
-    "description": "Professional chef explains why extended cooking time breaks down connective tissue in chicken wings after 24 years in restaurant kitchens. Meat falls off bone perfectly.",
-    "image": "https://chefapprovedtools.com/images/blog/chicken-wings.jpg",
-    "datePublished": "2025-11-20T00:00:00-08:00",
-    "dateModified": "2025-11-20T00:00:00-08:00",
-    "author": {
-      "@type": "Person",
-      "name": "Scott Bradley",
-      "jobTitle": "Kitchen Manager & Culinary Professional",
-      "description": "Professional chef with 24 years of restaurant experience"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Chef Approved Tools",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://chefapprovedtools.com/logo.png"
-      }
-    }
-  };
+const articleSchema = generateArticleSchema({
+  headline: "Why You Should Cook Chicken Wings Longer",
+  description: "Professional chef explains why extended cooking time breaks down connective tissue in chicken wings after 24 years in restaurant kitchens. Meat falls off bone perfectly.",
+  datePublished: "2025-11-20",
+  dateModified: "2025-11-20",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'why-cook-chicken-wings-longer'
+});
 
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
+  { name: "Why Cook Chicken Wings Longer", url: "https://www.chefapprovedtools.com/blog/why-cook-chicken-wings-longer" }
+]);
+
+export default function WhyYouShouldCookChickenWingsLongerPage() {
   return (
     <BlogLayout breadcrumbTitle="Why You Should Cook Chicken Wings Longer">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <BlogHero

@@ -5,39 +5,37 @@ import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
+import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata = generateBlogMetadata('magic-of-freshly-ground-pepper');
 
-export default function TheMagicOfFreshlyGroundPepperPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "The Magic of Freshly Ground Pepper",
-    "description": "Professional chef explains why freshly ground black pepper transforms dishes after 24 years in restaurant kitchens. Flavor difference is dramatic. Learn proper grinding technique.",
-    "image": "https://chefapprovedtools.com/images/blog/pepper-grinder.jpg",
-    "datePublished": "2025-11-20T00:00:00-08:00",
-    "dateModified": "2025-11-20T00:00:00-08:00",
-    "author": {
-      "@type": "Person",
-      "name": "Scott Bradley",
-      "jobTitle": "Kitchen Manager & Culinary Professional",
-      "description": "Professional chef with 24 years of restaurant experience"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Chef Approved Tools",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://chefapprovedtools.com/logo.png"
-      }
-    }
-  };
+const articleSchema = generateArticleSchema({
+  headline: "The Magic of Freshly Ground Pepper",
+  description: "Professional chef explains why freshly ground black pepper transforms dishes after 24 years in restaurant kitchens. Flavor difference is dramatic. Learn proper grinding technique.",
+  datePublished: "2025-11-20",
+  dateModified: "2025-11-20",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'magic-of-freshly-ground-pepper'
+});
 
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
+  { name: "The Magic of Freshly Ground Pepper", url: "https://www.chefapprovedtools.com/blog/magic-of-freshly-ground-pepper" }
+]);
+
+export default function TheMagicOfFreshlyGroundPepperPage() {
   return (
     <BlogLayout breadcrumbTitle="The Magic of Freshly Ground Pepper">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <BlogHero

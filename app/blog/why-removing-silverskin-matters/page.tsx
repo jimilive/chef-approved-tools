@@ -5,39 +5,37 @@ import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
+import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema';
 
 export const metadata = generateBlogMetadata('why-removing-silverskin-matters');
 
-export default function WhyRemovingSilverskinMattersPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Why Removing Silverskin Matters",
-    "description": "Professional chef explains why removing silverskin from meat is essential after 24 years in restaurant kitchens. Proper technique prevents tough, chewy texture. Learn in 5 minutes.",
-    "image": "https://chefapprovedtools.com/images/blog/silverskin-removal.jpg",
-    "datePublished": "2025-11-20T00:00:00-08:00",
-    "dateModified": "2025-11-20T00:00:00-08:00",
-    "author": {
-      "@type": "Person",
-      "name": "Scott Bradley",
-      "jobTitle": "Kitchen Manager & Culinary Professional",
-      "description": "Professional chef with 24 years of restaurant experience"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Chef Approved Tools",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://chefapprovedtools.com/logo.png"
-      }
-    }
-  };
+const articleSchema = generateArticleSchema({
+  headline: "Why Removing Silverskin Matters",
+  description: "Professional chef explains why removing silverskin from meat is essential after 24 years in restaurant kitchens. Proper technique prevents tough, chewy texture. Learn in 5 minutes.",
+  datePublished: "2025-11-20",
+  dateModified: "2025-11-20",
+  authorName: "Scott Bradley",
+  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+  urlPrefix: 'blog',
+  urlSuffix: 'why-removing-silverskin-matters'
+});
 
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: "Home", url: "https://www.chefapprovedtools.com" },
+  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
+  { name: "Why Removing Silverskin Matters", url: "https://www.chefapprovedtools.com/blog/why-removing-silverskin-matters" }
+]);
+
+export default function WhyRemovingSilverskinMattersPage() {
   return (
     <BlogLayout breadcrumbTitle="Why Removing Silverskin Matters">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <BlogHero
