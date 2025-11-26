@@ -9,6 +9,7 @@ import {
 import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import AuthorBio from '@/components/review/AuthorBio'
 import PriceDisplay from '@/components/PriceDisplay'
+import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 import { Tier1Badge } from '@/components/ReviewTierBadge'
 
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
@@ -896,6 +897,14 @@ export default async function RobotCoupeR2DiceReview() {
         />
         </div>
       </div>
+
+      {/* STICKY MOBILE CTA */}
+      <StickyMobileCTAWrapper
+        productName={productData.name}
+        affiliateUrl={affiliateUrl}
+        merchant="amazon"
+        productSlug={productData.slug}
+      />
     </>
   )
 }
