@@ -166,7 +166,7 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
         </p>
 
         {/* Featured Grid - 2 columns */}
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(450px,1fr))] gap-8">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-8">
           {featuredReviews.map((review, index) => (
             <ReviewCard key={review.id} review={review} featured={true} position={index + 1} />
           ))}
