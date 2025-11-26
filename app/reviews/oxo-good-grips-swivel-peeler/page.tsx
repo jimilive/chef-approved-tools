@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
@@ -10,8 +9,13 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import {
   ReviewHero,
+  ProsConsGrid,
+  WhoShouldBuyGrid,
+  FAQSection,
+  EmailCaptureSection,
+  BottomLineSection,
+  RelatedProductsGrid
 } from '@/components/review'
-import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import AuthorBio from '@/components/review/AuthorBio'
 import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 import { reviewData } from './oxo-good-grips-swivel-peeler-data'
@@ -87,6 +91,20 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
 
   return (
     <>
+      {/* Schema.org markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateProductSchema(productData)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(reviewData.faqData)) }}
+      />
+
       <ProductViewTrackerWrapper
         slug={productData.slug}
         name={productData.name}
@@ -125,266 +143,118 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
             lastUpdated="November 10, 2025"
             ctaUrl={affiliateUrl}
             ctaText="Check Price on Amazon"
-            customCTA={
-              <div>
-                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
-                  >
-                    Check Price on Amazon
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-              </div>
-            }
           />
 
-        {/* Why I Chose This */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.whyIChoseThis.title}</h2>
-
-          <div className="prose prose-lg max-w-none text-gray-700">
-            {reviewData.whyIChoseThis.paragraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-          </div>
-        </section>
-
-        {/* What Makes It Work */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.whatMakesItWork.title}</h2>
-
-          <div className="space-y-6">
-            {reviewData.whatMakesItWork.features.map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg border border-gray-200">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">{feature.title}</h3>
-                <p className="text-gray-700">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Real Restaurant Use */}
-        <section className="mb-12 bg-slate-50 p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.realRestaurantUse.title}</h2>
-
-          <div className="prose prose-lg max-w-none text-gray-700">
-            <p className="font-semibold">
-              {reviewData.realRestaurantUse.intro}
-            </p>
-
-            <ul className="space-y-2 mt-4">
-              {reviewData.realRestaurantUse.uses.map((use, index) => (
-                <li key={index}>{use}</li>
+          {/* Why I Chose This */}
+          <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.whyIChoseThis.title}</h2>
+            <div className="prose prose-lg max-w-none text-slate-700">
+              {reviewData.whyIChoseThis.paragraphs.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
               ))}
-            </ul>
+            </div>
+          </section>
 
-            <p className="mt-6">
-              {reviewData.realRestaurantUse.conclusion}
-            </p>
-          </div>
-        </section>
+          {/* What Makes It Work */}
+          <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.whatMakesItWork.title}</h2>
+            <div className="space-y-6">
+              {reviewData.whatMakesItWork.features.map((feature, index) => (
+                <div key={index} className="bg-slate-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-bold mb-3 text-slate-900">{feature.title}</h3>
+                  <p className="text-slate-700">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
 
-        {/* Pros & Cons */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Honest Assessment</h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-green-50 p-6 rounded-lg border border-green-200">
-              <h3 className="text-xl font-bold mb-4 text-green-900">What Works</h3>
-              <ul className="space-y-2 text-gray-700">
-                {productData.pros.map((pro, index) => (
-                  <li key={index}>✓ {pro}</li>
+          {/* Real Restaurant Use */}
+          <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.realRestaurantUse.title}</h2>
+            <div className="prose prose-lg max-w-none text-slate-700">
+              <p className="font-semibold">{reviewData.realRestaurantUse.intro}</p>
+              <ul className="space-y-2 mt-4">
+                {reviewData.realRestaurantUse.uses.map((use, index) => (
+                  <li key={index}>{use}</li>
                 ))}
               </ul>
+              <p className="mt-6">{reviewData.realRestaurantUse.conclusion}</p>
             </div>
+          </section>
 
-            <div className="bg-red-50 p-6 rounded-lg border border-red-200">
-              <h3 className="text-xl font-bold mb-4 text-red-900">Limitations</h3>
-              <ul className="space-y-2 text-gray-700">
-                {productData.cons.map((con, index) => (
-                  <li key={index}>✗ {con}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Who Should Buy This */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.whoShouldBuy.title}</h2>
-
-          <div className="bg-white p-6 rounded-lg border-l-4 border-orange-600 mb-6">
-            <h3 className="text-xl font-bold mb-3 text-gray-900">Perfect If You:</h3>
-            <ul className="space-y-2 text-gray-700">
-              {reviewData.whoShouldBuy.perfectFor.map((item, index) => (
-                <li key={index}>• {item}</li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg border-l-4 border-gray-400">
-            <h3 className="text-xl font-bold mb-3 text-gray-900">Skip If You:</h3>
-            <ul className="space-y-2 text-gray-700">
-              {reviewData.whoShouldBuy.skipIf.map((item, index) => (
-                <li key={index}>• {item}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* Care & Maintenance */}
-        <section className="mb-12 bg-blue-50 p-8 rounded-xl">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.careAndMaintenance.title}</h2>
-
-          <div className="space-y-4 text-gray-700">
-            {reviewData.careAndMaintenance.sections.map((section, index) => (
-              <div key={index}>
-                <h3 className="font-bold text-lg mb-2">{section.title}</h3>
-                <ul className="space-y-1 ml-4">
-                  {section.items.map((item, itemIndex) => (
-                    <li key={itemIndex}>• {item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Buy Section */}
-        <section className="mb-12 bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-xl border-2 border-orange-200">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">{reviewData.buySection.title}</h2>
-
-          <p className="text-lg text-gray-700 mb-6">
-            {reviewData.buySection.description}
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
+          {/* MID-CONTENT CTA */}
+          <div className="text-center my-8">
             <CTAVisibilityTracker
-              ctaId={`${reviewData.productSlug}-above-fold-cta`}
-              position="above_fold"
-              productSlug={reviewData.productSlug}
+              ctaId={`${productData.slug}-mid-content`}
+              position="mid_article"
+              productSlug={productData.slug}
               merchant="amazon"
             >
               <a
                 href={affiliateUrl}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95"
+                className="text-orange-700 hover:text-orange-800 font-medium underline"
               >
-                {reviewData.buySection.ctaText}
+                → See current Amazon price and reviews
               </a>
             </CTAVisibilityTracker>
-
-            <a
-              href="/reviews"
-              className="inline-flex items-center justify-center border-2 border-orange-700 text-orange-700 hover:bg-orange-50 font-bold py-4 px-8 rounded-lg transition-all duration-200"
-            >
-              See All Reviews
-            </a>
           </div>
 
-          {/* Text link fallback */}
-          <p className="text-center mt-3 text-sm">
-            <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
-              target="_blank" rel="noopener noreferrer sponsored">
-              → View {productData.name} on Amazon
-            </a>
-          </p>
+          {/* PROS & CONS - Using standardized component */}
+          <ProsConsGrid
+            title="Honest Assessment"
+            prosTitle="What Works"
+            consTitle="Limitations"
+            pros={productData.pros}
+            cons={productData.cons}
+          />
 
-          <p className="text-sm text-gray-600 mt-4">
-            {reviewData.buySection.note}
-          </p>
-        </section>
+          {/* WHO SHOULD BUY - Using standardized component */}
+          <WhoShouldBuyGrid
+            title={reviewData.whoShouldBuy.title}
+            perfectForTitle="Perfect If You:"
+            considerAlternativesTitle="Skip If You:"
+            perfectFor={reviewData.whoShouldBuy.perfectFor}
+            considerAlternatives={reviewData.whoShouldBuy.skipIf}
+          />
 
-        {/* FTC Disclosure */}
-        <FTCDisclosure />
-
-        {/* Quick Navigation */}
-        <nav className="bg-slate-50 p-4 rounded-lg mb-8 border border-slate-200">
-          <p className="font-semibold text-slate-900 mb-2">Quick Navigation:</p>
-          <div className="flex flex-wrap gap-2 text-sm">
-            <a href="#testimonials" className="text-orange-700 hover:text-orange-800">User Reviews</a>
-            <span className="text-slate-400">|</span>
-            <a href="#cost-analysis" className="text-orange-700 hover:text-orange-800">Cost Analysis</a>
-            <span className="text-slate-400">|</span>
-            <a href="#performance" className="text-orange-700 hover:text-orange-800">Performance</a>
-            <span className="text-slate-400">|</span>
-            <a href="#comparison" className="text-orange-700 hover:text-orange-800">vs. Competitors</a>
-            <span className="text-slate-400">|</span>
-            <a href="#specs" className="text-orange-700 hover:text-orange-800">Specifications</a>
-            <span className="text-slate-400">|</span>
-            <a href="#faq" className="text-orange-700 hover:text-orange-800">FAQ</a>
-          </div>
-        </nav>
-
-        {/* Testimonials */}
-        <section className="mb-12" id="testimonials">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.testimonials.title}</h2>
-          <p className="text-sm text-slate-600 mb-4 italic">
-            {reviewData.testimonials.subtitle}
-          </p>
-
-          <div className="space-y-4">
-            {reviewData.testimonials.reviews.map((review, index) => (
-              <div key={index} className="bg-white p-5 rounded-lg border border-gray-200">
-                <p className="text-slate-700 mb-2">
-                  &quot;{review.quote}&quot;
-                </p>
-                <p className="text-sm text-slate-500">— Amazon verified purchaser ({review.author})</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 p-6 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-orange-200">
-            <p className="text-slate-800 text-center mb-4 font-semibold">
-              Ready to experience the OXO difference? See current pricing and availability:
-            </p>
-            <div className="flex justify-center">
-              <CTAVisibilityTracker
-                ctaId={`${reviewData.productSlug}-mid-article-cta`}
-                position="mid_article"
-                productSlug={reviewData.productSlug}
-                merchant="amazon"
-              >
-                <a
-                  href={affiliateUrl}
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95"
-                >
-                  {reviewData.buySection.ctaText}
-                </a>
-              </CTAVisibilityTracker>
+          {/* Care & Maintenance */}
+          <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.careAndMaintenance.title}</h2>
+            <div className="space-y-4 text-slate-700">
+              {reviewData.careAndMaintenance.sections.map((section, index) => (
+                <div key={index} className="bg-slate-50 p-5 rounded-lg">
+                  <h3 className="font-bold text-lg mb-2">{section.title}</h3>
+                  <ul className="space-y-1 ml-4">
+                    {section.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
-            {/* Text link fallback */}
-            <p className="text-center mt-3 text-sm">
-              <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
-                target="_blank" rel="noopener noreferrer sponsored">
-                → View {productData.name} on Amazon
-              </a>
-            </p>
-          </div>
-        </section>
+          </section>
 
-        {/* Cost Analysis */}
-        <section className="mb-12" id="cost-analysis">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.costAnalysis.title}</h2>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+          <FTCDisclosure />
+
+          {/* Testimonials */}
+          <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6" id="testimonials">
+            <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.testimonials.title}</h2>
+            <p className="text-sm text-slate-600 mb-4 italic">{reviewData.testimonials.subtitle}</p>
+            <div className="space-y-4">
+              {reviewData.testimonials.reviews.map((review, index) => (
+                <div key={index} className="bg-slate-50 p-5 rounded-lg">
+                  <p className="text-slate-700 mb-2">&quot;{review.quote}&quot;</p>
+                  <p className="text-sm text-slate-500">— Amazon verified purchaser ({review.author})</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Cost Analysis */}
+          <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6" id="cost-analysis">
+            <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.costAnalysis.title}</h2>
 
             <div className="bg-blue-50 p-5 rounded-lg border border-blue-200 mb-4">
               <h3 className="font-bold text-slate-900 mb-3">{reviewData.costAnalysis.realWorldValue.title}</h3>
@@ -400,21 +270,17 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
             </p>
 
             <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-              <p className="text-slate-800 font-semibold">
-                {reviewData.costAnalysis.bottomLine}
-              </p>
+              <p className="text-slate-800 font-semibold">{reviewData.costAnalysis.bottomLine}</p>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Performance Data */}
-        <section className="mb-12" id="performance">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.performanceData.title}</h2>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+          {/* Performance Data */}
+          <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6" id="performance">
+            <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.performanceData.title}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               {reviewData.performanceData.categories.map((category, index) => (
-                <div key={index} className="bg-gray-50 p-4 rounded-lg">
+                <div key={index} className="bg-slate-50 p-4 rounded-lg">
                   <p className="font-semibold text-slate-900 mb-2">{category.title}</p>
                   <p className="text-slate-700 text-sm">
                     {category.metrics.map((metric, metricIndex) => (
@@ -433,13 +299,11 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
                 <strong>{reviewData.performanceData.keyInsight}</strong>
               </p>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Specifications */}
-        <section className="mb-12" id="specs">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.specifications.title}</h2>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+          {/* Specifications */}
+          <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6" id="specs">
+            <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.specifications.title}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -466,121 +330,75 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
                 </dl>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Comparison */}
-        <section className="mb-12" id="comparison">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">
-            {reviewData.comparison.title}
-          </h2>
+          {/* Comparison */}
+          <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6" id="comparison">
+            <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.comparison.title}</h2>
 
-          <div className="overflow-x-auto my-5">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="bg-gray-50">
-                  {reviewData.comparison.headers.map((header, index) => (
-                    <th key={index} className={`p-3 text-left border-b-2 border-gray-300 ${index === 1 ? 'bg-orange-50' : ''}`}>
-                      {header}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {reviewData.comparison.rows.map((row, index) => (
-                  <tr key={index}>
-                    <td className="p-3 border-b border-gray-300 font-semibold">{row.feature}</td>
-                    <td className="p-3 border-b border-gray-300 bg-orange-50">{row.oxo}</td>
-                    <td className="p-3 border-b border-gray-300">{row.kuhnRikon}</td>
-                    <td className="p-3 border-b border-gray-300">{row.oxoY}</td>
+            <div className="overflow-x-auto my-5">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr className="bg-slate-100">
+                    {reviewData.comparison.headers.map((header, index) => (
+                      <th key={index} className={`p-3 text-left border-b-2 border-gray-300 ${index === 1 ? 'bg-orange-50' : ''}`}>
+                        {header}
+                      </th>
+                    ))}
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 mt-6">
-            <h3 className="font-bold text-slate-900 mb-3">{reviewData.comparison.guidance.title}</h3>
-            <ul className="space-y-3 text-slate-700">
-              {reviewData.comparison.guidance.options.map((option, index) => (
-                <li key={index}>
-                  <strong>{option.title}</strong> {option.description}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="mb-12" id="faq">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">{reviewData.faq.title}</h2>
-          <div className="space-y-4">
-            {reviewData.faq.items.map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg border border-gray-200">
-                <h3 className="font-bold text-slate-900 mb-2">{item.question}</h3>
-                <p className="text-slate-700">
-                  {item.answer}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 p-6 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-orange-200">
-            <p className="text-slate-800 text-center mb-4 font-semibold">
-              Ready to upgrade your kitchen prep? Get the OXO Good Grips Swivel Peeler today:
-            </p>
-            <div className="flex justify-center">
-              <CTAVisibilityTracker
-                ctaId={`${reviewData.productSlug}-final-cta`}
-                position="final_cta"
-                productSlug={reviewData.productSlug}
-                merchant="amazon"
-              >
-                <a
-                  href={affiliateUrl}
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95"
-                >
-                  {reviewData.buySection.ctaText}
-                </a>
-              </CTAVisibilityTracker>
+                </thead>
+                <tbody>
+                  {reviewData.comparison.rows.map((row, index) => (
+                    <tr key={index} className={index % 2 === 0 ? '' : 'bg-slate-50'}>
+                      <td className="p-3 border-b border-gray-200 font-semibold">{row.feature}</td>
+                      <td className="p-3 border-b border-gray-200 bg-orange-50">{row.oxo}</td>
+                      <td className="p-3 border-b border-gray-200">{row.kuhnRikon}</td>
+                      <td className="p-3 border-b border-gray-200">{row.oxoY}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-            {/* Text link fallback */}
-            <p className="text-center mt-3 text-sm">
-              <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
-                target="_blank" rel="noopener noreferrer sponsored">
-                → View {productData.name} on Amazon
-              </a>
-            </p>
-          </div>
-        </section>
 
-        {/* EMAIL CAPTURE */}
-        <EmailCaptureSection />
+            <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 mt-6">
+              <h3 className="font-bold text-slate-900 mb-3">{reviewData.comparison.guidance.title}</h3>
+              <ul className="space-y-3 text-slate-700">
+                {reviewData.comparison.guidance.options.map((option, index) => (
+                  <li key={index}>
+                    <strong>{option.title}</strong> {option.description}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
 
-        {/* AUTHOR BIO */}
-        <AuthorBio />
+          {/* FAQ - Using standardized component */}
+          <FAQSection
+            title={reviewData.faq.title}
+            faqs={reviewData.faq.items}
+          />
 
-        {/* Structured Data Schemas */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateProductSchema(productData))
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateFAQSchema(reviewData.faqData))
-          }}
-        />
+          {/* EMAIL CAPTURE */}
+          <EmailCaptureSection />
+
+          {/* BOTTOM LINE - Using standardized component with tracking */}
+          <BottomLineSection
+            title={reviewData.bottomLine.title}
+            paragraphs={reviewData.bottomLine.paragraphs}
+            ctaUrl={affiliateUrl}
+            ctaText={reviewData.bottomLine.ctaText}
+            productSlug={reviewData.productSlug}
+          />
+
+          {/* RELATED PRODUCTS - Using standardized component */}
+          <RelatedProductsGrid
+            title={reviewData.relatedProducts.title}
+            products={reviewData.relatedProducts.products}
+          />
+
+          {/* AUTHOR BIO */}
+          <AuthorBio />
+
         </div>
       </div>
 

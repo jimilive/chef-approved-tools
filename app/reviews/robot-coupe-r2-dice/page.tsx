@@ -1,16 +1,19 @@
 import Link from 'next/link'
-import { Star, CheckCircle, XCircle } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import {
   ReviewHero,
+  ProsConsGrid,
+  WhoShouldBuyGrid,
+  FAQSection,
+  BottomLineSection,
+  RelatedProductsGrid,
 } from '@/components/review'
 import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import AuthorBio from '@/components/review/AuthorBio'
 import PriceDisplay from '@/components/PriceDisplay'
 import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
-import { Tier1Badge } from '@/components/ReviewTierBadge'
 
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import type { Metadata } from 'next';
@@ -426,33 +429,11 @@ export default async function RobotCoupeR2DiceReview() {
         </section>
 
         {/* Pros and Cons */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Pros & Cons Based on Professional Use</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h3 className="flex items-center font-semibold text-green-800 mb-4">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                What Works Well
-              </h3>
-              <ul className="space-y-2">
-                {productData.pros.map((pro, index) => (
-                  <li key={index} className="text-green-700 text-sm">• {pro}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-              <h3 className="flex items-center font-semibold text-red-800 mb-4">
-                <XCircle className="w-5 h-5 mr-2" />
-                Limitations & Considerations
-              </h3>
-              <ul className="space-y-2">
-                {productData.cons.map((con, index) => (
-                  <li key={index} className="text-red-700 text-sm">• {con}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
+        <ProsConsGrid
+          title="Pros & Cons Based on Professional Use"
+          pros={productData.pros}
+          cons={productData.cons}
+        />
 
         {/* Pricing and Where to Buy */}
         <section className="mb-8" id="pricing">
@@ -467,214 +448,17 @@ export default async function RobotCoupeR2DiceReview() {
         </section>
 
         {/* Who Should Buy This */}
-        <section className="mb-8" id="who-buys">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Who Should (and Shouldn&apos;t) Buy This Processor</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="bg-white rounded-lg p-6 border border-gray-200">
-              <h3 className="font-semibold text-green-700 mb-3">✅ Ideal For:</h3>
-              <ul className="space-y-2 text-slate-700">
-                <li>• Restaurants and commercial kitchens</li>
-                <li>• High-volume food preparation operations</li>
-                <li>• Operations requiring consistent, quality cuts</li>
-                <li>• Establishments needing reliable equipment</li>
-                <li>• Professional kitchens prioritizing efficiency</li>
-              </ul>
+        <WhoShouldBuyGrid
+          title="Who Should (and Shouldn't) Buy This Processor"
+          perfectFor={reviewData.whoShouldBuy.idealFor}
+          considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
+        />
 
-              <p className="text-slate-700 mt-4 text-sm">
-                Building a complete commercial kitchen? See our <Link href="/kitchen-bundle" className="text-orange-700 hover:text-orange-800 underline">professional kitchen starter kit</Link> for recommended equipment combinations.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg p-6 border border-gray-200">
-              <h3 className="font-semibold text-orange-800 mb-3">⚠️ Consider Alternatives If:</h3>
-              <ul className="space-y-2 text-slate-700">
-                <li>• You only need occasional home food processing</li>
-                <li>• Budget is limited for commercial equipment</li>
-                <li>• Kitchen space is restricted</li>
-                <li>• Volume doesn&apos;t justify commercial-grade equipment</li>
-                <li>• You prefer simpler cleaning requirements</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section - EXPANDED TO 10 QUESTIONS */}
-        <section className="mb-8" id="faq">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Frequently Asked Questions About Robot Coupe R2 Dice</h2>
-
-          <div>
-            
-            {/* Question 1 */}
-            <div className="my-5 p-5 bg-gray-50 rounded-md">
-              <h3>Is the Robot Coupe R2 Dice worth it for a restaurant?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> After 3 years in our commercial kitchen, absolutely yes—if
-                  you process high volumes daily. The combination of speed (850 servings/3 hours),
-                  consistent cut quality (5/5 rating), and commercial reliability makes this processor
-                  pay for itself through labor savings alone.</p>
-
-                  <p>Professional kitchens report saving significant prep time daily. The continuous feed
-                  design and commercial-grade motor process massive volume quickly—this is equipment that
-                  transforms prep operations and pays for itself through efficiency gains.</p>
-
-                  <p><strong>Who should skip it:</strong> If you only process small volumes occasionally,
-                  a quality home food processor will suffice. But for high-volume operations where speed
-                  and consistency matter, this is essential equipment.</p>
-
-                  <p><strong>My verdict:</strong> After 3 years of daily commercial use, this is the kind
-                  of equipment that becomes indispensable. Worth every dollar for serious operations.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 2 */}
-            <div className="my-5 p-5 bg-gray-50 rounded-md">
-              <h3>How difficult is cleaning compared to home processors?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> More involved, taking 8-10 minutes vs 3-5 minutes for home
-                  units. The continuous feed chute, bowl, and blades all require thorough cleaning. However,
-                  the time saved in processing far outweighs cleaning time.</p>
-                  
-                  <p>For efficient cleaning: disassemble components immediately after use, soak in warm soapy
-                  water while still warm, use a brush for the feed chute, and dry thoroughly to prevent water
-                  spots on polycarbonate. Most commercial operations factor this into their closing procedures.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 3 */}
-            <div className="my-5 p-5 bg-gray-50 rounded-md">
-              <h3>Is this worth it for serious home cooks?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Only if you regularly process large volumes (10+ pounds per
-                  session). For typical home use—even serious cooking—a Cuisinart DLC-10 or KitchenAid
-                  processor handles 95% of tasks at a fraction of the investment.</p>
-                  
-                  <p>The R2 Dice excels when you need to process ingredients for dozens of servings multiple
-                  times per week. If you&apos;re meal-prepping for one family or cooking for dinner parties
-                  occasionally, residential equipment is more appropriate and easier to maintain.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 4 */}
-            <div className="my-5 p-5 bg-gray-50 rounded-md">
-              <h3>What is the difference between R2 Dice and R2N?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> The R2 Dice has a 2 HP motor vs the R2N&apos;s standard motor.
-                  For dense vegetables, hard cheeses, and continuous high-volume use, the extra horsepower
-                  prevents stalling and maintains consistent speed under load.</p>
-                  
-                  <p>For lighter-duty commercial use (smaller cafes, prep volumes under 50 servings per service),
-                  the R2N is adequate at lower cost. But for serious commercial operations processing hundreds
-                  of servings daily, the R2 Dice&apos;s power advantage is worth the investment.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 5 */}
-            <div className="my-5 p-5 bg-gray-50 rounded-md">
-              <h3>How long do the blades and discs last under commercial use?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Based on our Purple Cafe experience: shredding discs last 12-18
-                  months with daily heavy use, slicing blades 18-24 months. The S-blade for chopping lasts 2+
-                  years with proper care.</p>
-                  
-                  <p>Replacement components are reasonably priced for commercial equipment. Performance degradation
-                  is gradual—you&apos;ll notice slightly longer processing times before complete failure. Keep spare
-                  discs on hand for busy operations to avoid downtime.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 6 */}
-            <div className="my-5 p-5 bg-gray-50 rounded-md">
-              <h3>What electrical requirements are needed?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Requires a standard 120V 15-amp circuit. Verify your kitchen
-                  circuit can handle the load, especially if sharing with other equipment. Dedicated circuit
-                  recommended for heavy daily use to prevent breaker trips during peak operations.</p>
-                  
-                  <p>Most commercial kitchens have adequate power, but verify before installation. The 2 HP motor
-                  draws significant amperage during startup and under heavy load.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 7 */}
-            <div className="my-5 p-5 bg-gray-50 rounded-md">
-              <h3>How does this compare to the Cuisinart DLC-10 for commercial use?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> The R2 Dice is purpose-built for commercial operations with a
-                  2 HP motor, continuous feed design, and commercial-grade construction. The Cuisinart is
-                  excellent for home use but cannot sustain the speed and durability needed for daily commercial
-                  operations.</p>
-                  
-                  <p>The Cuisinart will overheat and stall under continuous high-volume processing. It&apos;s
-                  designed for batch processing with rest periods between uses. The Robot Coupe handles
-                  continuous operation for hours without degradation.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 8 - NEW */}
-            <div className="my-5 p-5 bg-gray-50 rounded-md">
-              <h3>What size operation needs the Robot Coupe R2 Dice?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> This processor is designed for operations processing significant
-                  volumes daily. If you&apos;re preparing food for 50+ covers per service, catering events
-                  regularly, or running high-volume prep operations, the R2 Dice delivers the speed and
-                  reliability you need.</p>
-                  
-                  <p>For smaller operations or occasional high-volume needs, consider the standard R2N model or
-                  quality home processors. The continuous feed design and commercial motor really shine when
-                  you&apos;re processing pounds of ingredients multiple times per day.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 9 - NEW */}
-            <div className="my-5 p-5 bg-gray-50 rounded-md">
-              <h3>Can I use the Robot Coupe R2 Dice for purées and wet ingredients?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> While the R2 Dice can handle some wet ingredients, it excels at
-                  slicing, shredding, and dicing rather than puréeing. The continuous feed design and processing
-                  discs are optimized for solid foods.</p>
-                  
-                  <p>For purées, soups, and sauces, we used our Vitamix 5200 blender alongside the Robot Coupe.
-                  Together, they covered every processing need in our commercial kitchen. The Robot Coupe for
-                  prep work, the Vitamix for purées and liquid-based tasks.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question 10 - NEW */}
-            <div className="my-5 p-5 bg-gray-50 rounded-md">
-              <h3>What maintenance does the Robot Coupe R2 Dice require?</h3>
-              <div>
-                <div>
-                  <p><strong>Answer:</strong> Daily maintenance is straightforward: thorough cleaning of all
-                  components after each use, checking blade sharpness weekly, and inspecting seals monthly.
-                  The polycarbonate bowl should be checked for cracks or wear every few months.</p>
-                  
-                  <p>Every 6-12 months under commercial use, have components professionally inspected. Blades
-                  should be professionally sharpened or replaced when performance decreases. Proper maintenance
-                  extends component life significantly and ensures consistent performance throughout the
-                  machine&apos;s lifespan.</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
+        {/* FAQ Section */}
+        <FAQSection
+          title={reviewData.faq.title}
+          faqs={reviewData.faq.items}
+        />
 
         {/* Bottom Line with Strong Final CTA */}
         <section className="mb-8" id="verdict">
@@ -799,79 +583,25 @@ export default async function RobotCoupeR2DiceReview() {
         </section>
 
         {/* Related Products Section */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">Complete Your Commercial Kitchen Setup</h2>
-
-          <p className="text-base leading-relaxed mb-6">
-            A commercial food processor is essential prep equipment, but it works best as part of a
-            complete professional kitchen. Based on 24 years of restaurant experience, here are the
-            tools I used alongside this processor:
-          </p>
-
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5 my-8">
-
-            {/* Product 1 */}
-            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
-              <h3 className="mt-0">KitchenAid Commercial Mixer</h3>
-              <p>The commercial mixer that worked alongside the Robot Coupe in our prep operations.
-              Together, they transformed our prep efficiency and paid for themselves in months.</p>
-              <p className="text-sm text-gray-600">
-                <strong>After 18 months:</strong> Essential commercial equipment.
-              </p>
-              <Link
-                href="/reviews/kitchenaid-ksm8990wh"
-                className="inline-block bg-green-600 text-white px-5 py-2.5 no-underline rounded mt-2.5 font-bold hover:bg-green-700"
-              >
-                Read Full Review →
-              </Link>
-            </div>
-
-            {/* Product 2 */}
-            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
-              <h3 className="mt-0">John Boos Commercial Cutting Board</h3>
-              <p>The prep surface where we staged ingredients before processing. The 24x18 size provides
-              perfect workspace for high-volume prep operations.</p>
-              <p className="text-sm text-gray-600">
-                <strong>After 18 years:</strong> Still my daily prep station.
-              </p>
-              <Link
-                href="/reviews/john-boos-platinum-commercial-cutting-board"
-                className="inline-block bg-green-600 text-white px-5 py-2.5 no-underline rounded mt-2.5 font-bold hover:bg-green-700"
-              >
-                Read Full Review →
-              </Link>
-            </div>
-
-            {/* Product 3 */}
-            <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
-              <h3 className="mt-0">Rubbermaid Commercial Scraper</h3>
-              <p>Essential for scraping down the Robot Coupe bowl between batches. This professional-grade rubber spatula handles the demands of commercial food processing and lasts decades.</p>
-              <p className="text-sm text-gray-600">
-                <strong>After 18 years:</strong> Still my go-to scraper for food processor cleanup.
-              </p>
-              <Link
-                href="/reviews/rubbermaid-commercial-cooks-scraper"
-                className="inline-block bg-green-600 text-white px-5 py-2.5 no-underline rounded mt-2.5 font-bold hover:bg-green-700"
-              >
-                Read Full Review →
-              </Link>
-            </div>
-
-          </div>
-
-          <p className="text-center my-8 text-lg p-5 bg-gray-50 rounded-md">
-            <strong>Equipping a complete commercial kitchen?</strong><br/>
-            <Link href="/kitchen-bundle" className="text-blue-600 font-bold text-xl hover:underline">
-              See My Complete Commercial Kitchen Setup Guide →
-            </Link>
-          </p>
-        </section>
+        <RelatedProductsGrid
+          title={reviewData.relatedProducts.title}
+          products={reviewData.relatedProducts.products}
+        />
 
         {/* Social Proof */}
         <TestimonialsSection />
 
         {/* EMAIL CAPTURE */}
         <EmailCaptureSection />
+
+        {/* Bottom Line Section with Click Tracking */}
+        <BottomLineSection
+          title={reviewData.bottomLine.title}
+          paragraphs={reviewData.bottomLine.paragraphs}
+          ctaText={reviewData.bottomLine.ctaText}
+          ctaUrl={affiliateUrl}
+          productSlug={productData.slug}
+        />
 
         {/* Author Bio Box */}
         <AuthorBio />

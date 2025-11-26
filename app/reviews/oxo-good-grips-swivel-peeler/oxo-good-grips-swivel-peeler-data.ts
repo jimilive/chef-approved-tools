@@ -429,6 +429,47 @@ export const reviewData = {
     }
   ],
 
+  // BOTTOM LINE SECTION
+  bottomLine: {
+    title: "The Peeler That Just Works",
+    paragraphs: [
+      "After 20 years of testing dozens of peelers—including 10 years of professional kitchen use—this OXO Good Grips Swivel Peeler is the one I reach for every single day. The comfortable grip doesn't slip when wet, the sharp blade glides through skins without digging in, and the swivel action follows contours effortlessly.",
+      "At around $10, this is one of the best values in any kitchen. The ergonomic handle is a game-changer for anyone who peels vegetables regularly, and it's especially appreciated by those with arthritis or hand issues. Stop overthinking it and buy one—you'll wonder why you waited so long."
+    ],
+    ctaText: "Check Price on Amazon →"
+  },
+
+  // RELATED PRODUCTS
+  relatedProducts: {
+    title: "Complete Your Prep Station",
+    products: [
+      {
+        name: "OXO Bench Scraper",
+        description: "Transfer chopped vegetables efficiently",
+        emoji: "🔪",
+        href: "/reviews/oxo-good-grips-bench-scraper"
+      },
+      {
+        name: "Victorinox Paring Knife",
+        description: "For detailed prep work",
+        emoji: "🔪",
+        href: "/reviews/victorinox-4-inch-paring-knife"
+      },
+      {
+        name: "John Boos Cutting Board",
+        description: "The perfect prep surface",
+        emoji: "🪵",
+        href: "/reviews/john-boos-platinum-commercial-cutting-board"
+      },
+      {
+        name: "Zuperia Bar Mops",
+        description: "Keep your station clean",
+        emoji: "🧺",
+        href: "/reviews/zuperia-bar-mops"
+      }
+    ]
+  },
+
   // LEGACY PRODUCT DATA (fallback for Supabase)
   legacyProductData: {
     name: "OXO Good Grips Swivel Peeler",

@@ -9,6 +9,7 @@ import {
   ReviewHero,
   ProsConsGrid,
   FAQSection,
+  BottomLineSection,
   EmailCaptureSection,
   RelatedProductsGrid
 } from '@/components/review'
@@ -559,6 +560,15 @@ export default async function NortonTriStoneSharpenerReview() {
 
         {/* EMAIL CAPTURE */}
         <EmailCaptureSection />
+
+        {/* Bottom Line Section with Click Tracking */}
+        <BottomLineSection
+          title={reviewData.bottomLineSection.title}
+          paragraphs={reviewData.bottomLineSection.paragraphs}
+          ctaText={reviewData.bottomLineSection.ctaText}
+          ctaUrl={affiliateUrl}
+          productSlug={reviewData.productSlug}
+        />
 
         {/* Author Bio */}
         <AuthorBio />

@@ -356,6 +356,16 @@ export const reviewData = {
     ctaText: "Check Amazon Price →"
   },
 
+  // BOTTOM LINE SECTION (for click-tracking CTA)
+  bottomLineSection: {
+    title: "The Professional Sharpening System That Lasts Decades",
+    paragraphs: [
+      "After 6 years maintaining 8-12 knives weekly in a 200+ cover restaurant, the Norton IM200 Tri-Stone has proven itself as professional-grade equipment that delivers restaurant-quality edges. The three-stage progressive system takes the guesswork out of sharpening, and the commercial durability ensures decades of service for home cooks.",
+      "This is the sharpening system I trust to maintain our professional kitchen knives. For serious home cooks who want to keep their knives razor-sharp without relying on expensive professional services, the Norton Tri-Stone delivers exceptional value."
+    ],
+    ctaText: "Check Current Price →"
+  },
+
   // LEGACY PRODUCT DATA (fallback for Supabase)
   legacyProductData: {
     name: "Norton im200 tri stone sharpener",

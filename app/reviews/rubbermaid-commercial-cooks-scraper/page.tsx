@@ -1,15 +1,18 @@
 import Link from 'next/link'
-import { Star, CheckCircle, XCircle } from 'lucide-react'
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { BudgetVsPremiumTeaser } from '@/components/BudgetVsPremiumMagnet'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import {
   ReviewHero,
+  ProsConsGrid,
+  WhoShouldBuyGrid,
+  FAQSection,
+  BottomLineSection,
+  RelatedProductsGrid,
 } from '@/components/review'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import { Tier1Badge } from '@/components/ReviewTierBadge'
 import type { Metadata } from 'next'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import EmailCaptureSection from '@/components/review/EmailCaptureSection'
@@ -361,69 +364,24 @@ export default async function RubbermaidScraperReview() {
         </section>
 
         {/* Pros and Cons */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Pros & Cons After 18 Years</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h3 className="flex items-center font-semibold text-green-800 mb-4">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                What Makes This Exceptional
-              </h3>
-              <ul className="space-y-2">
-                {productData.pros.map((pro, index) => (
-                  <li key={index} className="text-green-700 text-sm">• {pro}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-              <h3 className="flex items-center font-semibold text-red-800 mb-4">
-                <XCircle className="w-5 h-5 mr-2" />
-                Limitations to Consider
-              </h3>
-              <ul className="space-y-2">
-                {productData.cons.map((con, index) => (
-                  <li key={index} className="text-red-700 text-sm">• {con}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
+        <ProsConsGrid
+          title="Pros & Cons After 18 Years"
+          pros={productData.pros}
+          cons={productData.cons}
+        />
 
         {/* Who Should Buy */}
-        <section className="mb-8" id="who-buys">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">{reviewData.whoShouldBuy.title}</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="bg-white rounded-lg p-6 border border-gray-200">
-              <h3 className="font-semibold text-green-700 mb-3">✅ Perfect For:</h3>
-              <ul className="space-y-2 text-slate-700">
-                {reviewData.whoShouldBuy.perfectFor.map((item, index) => (
-                  <li key={index}>• {item}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-white rounded-lg p-6 border border-gray-200">
-              <h3 className="font-semibold text-orange-800 mb-3">⚠️ Consider Alternatives If:</h3>
-              <ul className="space-y-2 text-slate-700">
-                {reviewData.whoShouldBuy.considerAlternatives.map((item, index) => (
-                  <li key={index}>• {item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
+        <WhoShouldBuyGrid
+          title={reviewData.whoShouldBuy.title}
+          perfectFor={reviewData.whoShouldBuy.perfectFor}
+          considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
+        />
 
         {/* FAQ */}
-        <section className="mb-8" id="faq">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">{reviewData.faq.title}</h2>
-          <div className="space-y-4">
-            {reviewData.faq.items.map((faq, index) => (
-              <div key={index} className="bg-slate-50 p-5 rounded-lg">
-                <h3 className="font-semibold text-slate-900 mb-2">{faq.question}</h3>
-                <p className="text-slate-700 leading-relaxed">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <FAQSection
+          title={reviewData.faq.title}
+          faqs={reviewData.faq.items}
+        />
 
         {/* WHERE TO BUY SECTION */}
         <section className="mb-8">
@@ -650,25 +608,10 @@ export default async function RubbermaidScraperReview() {
         </section>
 
         {/* Related Products */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">{reviewData.relatedProducts.title}</h2>
-          <p className="text-slate-700 mb-6">
-            {reviewData.relatedProducts.description}
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {reviewData.relatedProducts.products.map((product, index) => (
-              <div key={index} className="bg-slate-50 p-5 rounded-lg border border-gray-200">
-                <h3 className="font-semibold text-slate-900 mb-2">{product.name}</h3>
-                <p className="text-sm text-slate-700 mb-3">
-                  {product.description}
-                </p>
-                <Link href={product.href} className="text-orange-700 hover:text-orange-800 font-semibold text-sm">
-                  Read Review →
-                </Link>
-              </div>
-            ))}
-          </div>
-        </section>
+        <RelatedProductsGrid
+          title={reviewData.relatedProducts.title}
+          products={reviewData.relatedProducts.products}
+        />
 
         {/* Lead Magnet Teaser */}
         <BudgetVsPremiumTeaser />
@@ -678,6 +621,15 @@ export default async function RubbermaidScraperReview() {
 
         {/* EMAIL CAPTURE */}
         <EmailCaptureSection />
+
+        {/* Bottom Line Section with Click Tracking */}
+        <BottomLineSection
+          title={reviewData.bottomLineSection.title}
+          paragraphs={reviewData.bottomLineSection.paragraphs}
+          ctaText={reviewData.bottomLineSection.ctaText}
+          ctaUrl={affiliateUrl}
+          productSlug={productData.slug}
+        />
 
         {/* Footer Transparency Elements */}
         <section className="mb-8">

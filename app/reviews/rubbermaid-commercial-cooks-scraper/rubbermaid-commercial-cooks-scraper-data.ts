@@ -399,24 +399,36 @@ export const reviewData = {
   // RELATED PRODUCTS
   relatedProducts: {
     title: "Complete Your Professional Kitchen",
-    description: "This scraper pairs perfectly with other commercial-grade essentials from my professional testing:",
     products: [
       {
+        emoji: "🥤",
         name: "Vitamix 5200 Blender",
         description: "The container you'll be scraping clean. Commercial power that demands a commercial-grade scraper.",
         href: "/reviews/vitamix-5200-professional-blender"
       },
       {
+        emoji: "🔪",
         name: "Robot Coupe R2 Dice",
         description: "Professional food processor with bowls that need thorough scraping. This scraper handles the job perfectly.",
         href: "/reviews/robot-coupe-r2-dice"
       },
       {
+        emoji: "🍞",
         name: "KitchenAid Commercial Mixer",
         description: "The bowls you'll be scraping. Commercial durability for heavy batters and doughs.",
         href: "/reviews/kitchenaid-ksm8990wh"
       }
     ]
+  },
+
+  // BOTTOM LINE SECTION (for click-tracking CTA)
+  bottomLineSection: {
+    title: "The Buy-It-For-Life Kitchen Scraper",
+    paragraphs: [
+      "After 18 years across two professional kitchens and home use, this $15-20 scraper has proven itself as genuine buy-it-for-life equipment. The one-piece molded construction, 500°F heat resistance, and NSF certification deliver commercial-grade durability at consumer pricing.",
+      "While premium silicone spatulas offer more flexibility for delicate work, the Rubbermaid Commercial Scraper excels at everyday scraping tasks with unmatched longevity. At roughly $1 per year of use, this is the kind of value that's nearly impossible to find in kitchen equipment."
+    ],
+    ctaText: "Check Current Price →"
   },
 
   // FOOTER INFO

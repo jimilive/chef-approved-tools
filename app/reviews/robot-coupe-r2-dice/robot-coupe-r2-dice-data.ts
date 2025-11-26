@@ -262,32 +262,39 @@ export const reviewData = {
     wouldBuyAgain: "Without hesitation. This is the kind of equipment that becomes indispensable—highly recommended for any serious commercial kitchen."
   },
 
+  // BOTTOM LINE SECTION
+  bottomLine: {
+    title: "The Commercial Food Processor That Pays for Itself",
+    paragraphs: [
+      "After 3 years of daily commercial use, the Robot Coupe R2 Dice has proven itself as essential equipment that transforms prep operations. The 2 HP motor and continuous feed design process massive volumes quickly—saving hours of labor daily and delivering ROI in approximately 2 months.",
+      "This is genuine commercial equipment built for professional kitchens. The combination of 5/5 performance ratings for speed, efficiency, and cut quality makes it significantly superior to home alternatives. If you're running any serious food service operation, this processor is an investment that pays dividends in efficiency and consistency."
+    ],
+    ctaText: "Check Current Price →"
+  },
+
   // RELATED PRODUCTS
   relatedProducts: {
     title: "Complete Your Commercial Kitchen Setup",
-    intro: "A commercial food processor is essential prep equipment, but it works best as part of a complete professional kitchen. Based on 24 years of restaurant experience, here are the tools I used alongside this processor:",
     products: [
       {
-        title: "KitchenAid Commercial Mixer",
-        description: "The commercial mixer that worked alongside the Robot Coupe in our prep operations. Together, they transformed our prep efficiency and paid for themselves in months.",
-        testingNote: "After 18 months: Essential commercial equipment.",
+        emoji: "🍞",
+        name: "KitchenAid Commercial Mixer",
+        description: "The commercial mixer that worked alongside the Robot Coupe in our prep operations.",
         href: "/reviews/kitchenaid-ksm8990wh"
       },
       {
-        title: "John Boos Commercial Cutting Board",
-        description: "The prep surface where we staged ingredients before processing. The 24x18 size provides perfect workspace for high-volume prep operations.",
-        testingNote: "After 18 years: Still my daily prep station.",
+        emoji: "🪵",
+        name: "John Boos Cutting Board",
+        description: "The prep surface where we staged ingredients before processing. Perfect workspace for high-volume prep.",
         href: "/reviews/john-boos-platinum-commercial-cutting-board"
       },
       {
-        title: "Rubbermaid Commercial Scraper",
-        description: "Essential for scraping down the Robot Coupe bowl between batches. This professional-grade rubber spatula handles the demands of commercial food processing and lasts decades.",
-        testingNote: "After 18 years: Still my go-to scraper for food processor cleanup.",
+        emoji: "🥄",
+        name: "Rubbermaid Commercial Scraper",
+        description: "Essential for scraping down the Robot Coupe bowl between batches. Lasts decades.",
         href: "/reviews/rubbermaid-commercial-cooks-scraper"
       }
-    ],
-    outro: "Equipping a complete commercial kitchen?",
-    link: { text: "See My Complete Commercial Kitchen Setup Guide", href: "/kitchen-bundle" }
+    ]
   },
 
   // EMAIL CAPTURE

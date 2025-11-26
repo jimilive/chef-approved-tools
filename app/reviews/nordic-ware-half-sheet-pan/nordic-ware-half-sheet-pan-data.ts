@@ -348,6 +348,16 @@ export const reviewData = {
     ctaTip: "💡 Buy 2-3 for maximum versatility in your kitchen"
   },
 
+  // BOTTOM LINE SECTION (for click-tracking CTA)
+  bottomLineSection: {
+    title: "The Sheet Pan Professional Bakers Choose",
+    paragraphs: [
+      "After 10 years of daily use across roasting, baking, and broiling, the Nordic Ware Natural Aluminum Commercial Baker's Half Sheet has earned its place as the most-used pan in my kitchen. The commercial 13-gauge thickness, warp-resistant construction, and perfect heat distribution deliver professional results every time.",
+      "I own four of these pans. At this price point, that's still less than many single premium alternatives. For serious home cooks who want commercial-grade equipment that lasts decades, this is the obvious choice."
+    ],
+    ctaText: "Check Current Price →"
+  },
+
   // RELATED PRODUCTS
   relatedProducts: {
     title: "Complete Your Kitchen Setup",

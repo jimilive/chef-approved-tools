@@ -413,6 +413,47 @@ export const reviewData = {
     ]
   },
 
+  // BOTTOM LINE SECTION
+  bottomLine: {
+    title: "The Most Underrated Tool in Any Kitchen",
+    paragraphs: [
+      "After 20 years with this exact bench scraper—including 6 years of daily professional use at Purple Café—I can tell you this is the tool most home cooks don't know they need. It transforms your workflow: chop vegetables, scrape them directly into the pan. Portion dough cleanly without a sticky knife. Keep your cutting board spotless between tasks.",
+      "At $15, this is one of the best investments you can make in your kitchen efficiency. The OXO Good Grips handle makes it comfortable for extended use, the measurement markings help with consistent portioning, and the stainless steel blade will last decades. Once you start using one, you'll wonder how you ever cooked without it."
+    ],
+    ctaText: "Check Price on Amazon →"
+  },
+
+  // RELATED PRODUCTS
+  relatedProducts: {
+    title: "Essential Partner Tools",
+    products: [
+      {
+        name: "John Boos Cutting Board",
+        description: "The perfect surface for your bench scraper",
+        emoji: "🪵",
+        href: "/reviews/john-boos-platinum-commercial-cutting-board"
+      },
+      {
+        name: "Victorinox Chef's Knife",
+        description: "Complete your prep station",
+        emoji: "🔪",
+        href: "/reviews/victorinox-fibrox-8-inch-chefs-knife"
+      },
+      {
+        name: "OXO Swivel Peeler",
+        description: "Another essential OXO tool",
+        emoji: "🥕",
+        href: "/reviews/oxo-good-grips-swivel-peeler"
+      },
+      {
+        name: "Zuperia Bar Mops",
+        description: "Keep your workspace clean",
+        emoji: "🧺",
+        href: "/reviews/zuperia-bar-mops"
+      }
+    ]
+  },
+
   // LEGACY PRODUCT DATA (fallback for Supabase)
   legacyProductData: {
     name: "OXO Good Grips Multi-Purpose Bench Scraper",
