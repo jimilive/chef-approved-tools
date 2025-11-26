@@ -165,8 +165,8 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
           Equipment failure in a restaurant means lost revenue—these tools never failed.
         </p>
 
-        {/* Featured Grid - 1 col mobile, 2 col tablet+ */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        {/* Featured Grid - 2 columns */}
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,450px),1fr))] gap-8">
           {featuredReviews.map((review, index) => (
             <ReviewCard key={review.id} review={review} featured={true} position={index + 1} />
           ))}
@@ -209,8 +209,8 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
           </div>
         </div>
 
-        {/* All Reviews Grid - 1 col mobile, 2 col tablet, 3 col desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* All Reviews Grid - 3 columns */}
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,320px),1fr))] gap-8">
           {filteredReviews.map((review, index) => (
             <ReviewCard key={review.id} review={review} position={index + 1} />
           ))}
