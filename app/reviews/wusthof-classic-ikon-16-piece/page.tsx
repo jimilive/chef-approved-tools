@@ -218,6 +218,25 @@ export default async function ProductReview() {
             minorConsiderations={reviewData.testingResults.minorConsiderations}
           />
 
+          {/* MID-CONTENT CTA */}
+          <div className="text-center my-8">
+            <CTAVisibilityTracker
+              ctaId={`${productData.slug}-mid-content`}
+              position="mid_article"
+              productSlug={productData.slug}
+              merchant="amazon"
+            >
+              <a
+                href={affiliateUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="text-orange-700 hover:text-orange-800 font-medium underline"
+              >
+                → See current Amazon price and reviews
+              </a>
+            </CTAVisibilityTracker>
+          </div>
+
           {/* SECTION 2.5: WHAT'S INCLUDED */}
           <section className="bg-white rounded-2xl px-6 pt-6 pb-8 md:px-12 shadow-sm mb-6">
             <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
@@ -341,6 +360,28 @@ export default async function ProductReview() {
               comparisonRows={knifeSetComparisonData.comparisonRows}
               highlightedProduct={knifeSetComparisonData.highlightedProduct}
             />
+
+            {/* POST-COMPARISON CTA */}
+            <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">
+              <p className="text-lg font-medium text-slate-900 mb-4">
+                Ready to upgrade your kitchen?
+              </p>
+              <CTAVisibilityTracker
+                ctaId={`${productData.slug}-post-comparison`}
+                position="comparison_table"
+                productSlug={productData.slug}
+                merchant="amazon"
+              >
+                <a
+                  href={affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg"
+                >
+                  Check Price on Amazon →
+                </a>
+              </CTAVisibilityTracker>
+            </div>
           </section>
 
           {/* SECTION 4: PROS & CONS */}

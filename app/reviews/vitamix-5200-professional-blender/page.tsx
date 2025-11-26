@@ -241,6 +241,25 @@ export default async function ProductReview() {
           minorConsiderations={reviewData.testingResults.minorConsiderations}
         />
 
+        {/* MID-CONTENT CTA */}
+        <div className="text-center my-8">
+          <CTAVisibilityTracker
+            ctaId={`${productData.slug}-mid-content`}
+            position="mid_article"
+            productSlug={productData.slug}
+            merchant="amazon"
+          >
+            <a
+              href={primaryLink}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="text-orange-700 hover:text-orange-800 font-medium underline"
+            >
+              → See current Amazon price and reviews
+            </a>
+          </CTAVisibilityTracker>
+        </div>
+
         {/* SECTION 3: PERFORMANCE ANALYSIS */}
         <PerformanceAnalysis
           title={reviewData.performanceAnalysis.title}
@@ -258,6 +277,28 @@ export default async function ProductReview() {
           comparisonRows={blenderComparisonData.comparisonRows}
           highlightedProduct={blenderComparisonData.highlightedProduct}
         />
+
+        {/* POST-COMPARISON CTA */}
+        <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">
+          <p className="text-lg font-medium text-slate-900 mb-4">
+            Ready to upgrade your kitchen?
+          </p>
+          <CTAVisibilityTracker
+            ctaId={`${productData.slug}-post-comparison`}
+            position="comparison_table"
+            productSlug={productData.slug}
+            merchant="amazon"
+          >
+            <a
+              href={primaryLink}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg"
+            >
+              Check Price on Amazon →
+            </a>
+          </CTAVisibilityTracker>
+        </div>
 
         {/* SECTION 5: PROS & CONS */}
         <ProsConsGrid

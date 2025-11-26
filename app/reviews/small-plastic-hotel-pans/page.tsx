@@ -270,6 +270,25 @@ export default async function ProductReview() {
             minorConsiderations={reviewData.testingResults.minorConsiderations}
           />
 
+          {/* MID-CONTENT CTA */}
+          <div className="text-center my-8">
+            <CTAVisibilityTracker
+              ctaId={`${productData.slug}-mid-content`}
+              position="mid_article"
+              productSlug={productData.slug}
+              merchant="amazon"
+            >
+              <a
+                href={affiliateUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="text-orange-700 hover:text-orange-800 font-medium underline"
+              >
+                → See current Amazon price and reviews
+              </a>
+            </CTAVisibilityTracker>
+          </div>
+
           {/* SECTION 3: PERFORMANCE ANALYSIS */}
           <PerformanceAnalysis
             title={reviewData.performanceAnalysis.title}

@@ -223,6 +223,25 @@ export default async function KitchenAidCommercialReviewPage() {
           />
         </div>
 
+        {/* MID-CONTENT CTA */}
+        <div className="text-center my-8">
+          <CTAVisibilityTracker
+            ctaId={`${productData.slug}-mid-content`}
+            position="mid_article"
+            productSlug={productData.slug}
+            merchant="kitchenaid_direct"
+          >
+            <a
+              href={primaryLink}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="text-orange-700 hover:text-orange-800 font-medium underline"
+            >
+              → See current KitchenAid price and availability
+            </a>
+          </CTAVisibilityTracker>
+        </div>
+
         {/* SECTION 3: PERFORMANCE ANALYSIS */}
         <PerformanceAnalysis
           title={reviewData.performanceAnalysis.title}
