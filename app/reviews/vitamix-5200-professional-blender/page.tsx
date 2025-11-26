@@ -20,7 +20,8 @@ import {
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
-import ReviewLayout from '@/components/review/ReviewLayout' // ← NEW IMPORT
+import ReviewLayout from '@/components/review/ReviewLayout'
+import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './vitamix-5200-professional-blender-data'
@@ -353,6 +354,14 @@ export default async function ProductReview() {
       {/* ========================================
           END: ReviewLayout
           ======================================== */}
+
+      {/* STICKY MOBILE CTA */}
+      <StickyMobileCTAWrapper
+        productName={productData.name}
+        affiliateUrl={primaryLink}
+        merchant="amazon"
+        productSlug={productData.slug}
+      />
     </>
   )
 }
