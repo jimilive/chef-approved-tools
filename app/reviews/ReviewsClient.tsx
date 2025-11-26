@@ -14,8 +14,7 @@ const RecentlyViewed = dynamic(() => import('@/components/RecentlyViewed'), {
 const Tier1Badge = () => (
   <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-br from-yellow-400 to-orange-500 text-black px-2 py-1 sm:px-4 sm:py-2 rounded-md font-bold text-[10px] sm:text-sm shadow-md shadow-yellow-400/30 mb-3">
     <span className="text-sm sm:text-lg">🛡️</span>
-    <span className="hidden sm:block">TIER 1: Professional Kitchen Tested</span>
-    <span className="block sm:hidden">Pro Kitchen Tested</span>
+    <span>Pro Tested</span>
   </div>
 );
 
