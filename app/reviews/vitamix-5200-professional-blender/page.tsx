@@ -359,7 +359,7 @@ export default async function ProductReview() {
       <StickyMobileCTAWrapper
         productName={productData.name}
         affiliateUrl={primaryLink}
-        merchant="amazon"
+        merchant="other"
         productSlug={productData.slug}
       />
     </>
