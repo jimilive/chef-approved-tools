@@ -15,11 +15,13 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import AuthorBio from '@/components/review/AuthorBio'
 import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './ninja-air-fryer-af101-data'
+import { getAirFryerComparison } from './get-air-fryer-comparison'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -78,6 +80,9 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function NinjaAirFryerAF101ReviewPage() {
   // Get product data from Supabase
   const product = await getProductBySlug(reviewData.productSlug)
+
+  // Get comparison table data
+  const comparisonData = await getAirFryerComparison()
 
   if (!product) {
     throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
@@ -264,7 +269,44 @@ export default async function NinjaAirFryerAF101ReviewPage() {
             considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
           />
 
-          {/* SECTION 6: FAQ */}
+          {/* SECTION 6: PRODUCT COMPARISON */}
+          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-8 shadow-sm mb-6">
+            <p className="text-lg text-slate-600 mb-8">
+              How does the Ninja AF101 compare to the competition? Here&apos;s a side-by-side
+              look at the top air fryers in this category.
+            </p>
+            <ProductComparisonTable
+              title={comparisonData.title}
+              subtitle={comparisonData.subtitle}
+              products={comparisonData.products}
+              comparisonRows={comparisonData.comparisonRows}
+              highlightedProduct={comparisonData.highlightedProduct}
+            />
+
+            {/* POST-COMPARISON CTA */}
+            <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center mt-8">
+              <p className="text-lg font-medium text-slate-900 mb-4">
+                Ready for crispy, healthier cooking?
+              </p>
+              <CTAVisibilityTracker
+                ctaId={`${productData.slug}-post-comparison`}
+                position="comparison_table"
+                productSlug={productData.slug}
+                merchant="amazon"
+              >
+                <a
+                  href={affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105"
+                >
+                  Check Price on Amazon
+                </a>
+              </CTAVisibilityTracker>
+            </div>
+          </div>
+
+          {/* SECTION 7: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
             faqs={reviewData.faq.items}
