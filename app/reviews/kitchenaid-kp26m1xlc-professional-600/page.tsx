@@ -25,7 +25,7 @@ import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './kitchenaid-kp26m1xlc-professional-600-data'
-import { kitchenaidPro600ComparisonData } from './stand-mixer-comparison-data'
+import { standMixerComparisonData } from './stand-mixer-comparison-data'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -248,9 +248,11 @@ export default async function KitchenAidProfessional600ReviewPage() {
             stacks up against the modern replacements and alternatives.
           </p>
           <ProductComparisonTable
-            products={kitchenaidPro600ComparisonData.products}
-            comparisonRows={kitchenaidPro600ComparisonData.comparisonRows}
-            highlightedProduct={kitchenaidPro600ComparisonData.highlightedProduct}
+            title={standMixerComparisonData.title}
+            subtitle={standMixerComparisonData.subtitle}
+            products={standMixerComparisonData.products}
+            comparisonRows={standMixerComparisonData.comparisonRows}
+            highlightedProduct={standMixerComparisonData.highlightedProduct}
           />
 
           {/* POST-COMPARISON CTA */}

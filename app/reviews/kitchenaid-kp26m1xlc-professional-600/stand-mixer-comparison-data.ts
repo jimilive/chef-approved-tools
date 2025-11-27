@@ -7,7 +7,7 @@
  * NOTE: Pro 600 discontinued 2023, replaced by KSM55/KSM60/KSM70 series
  */
 
-export const kitchenaidPro600ComparisonData = {
+export const standMixerComparisonData = {
   products: [
     // PRODUCT 1: KITCHENAID PROFESSIONAL 600 (Featured Product - Discontinued)
     {
@@ -30,9 +30,10 @@ export const kitchenaidPro600ComparisonData = {
       performance: 5,
       durability: '18+ years proven',
       warranty: '1 year limited',
-      proUse: 'limited',
+      proUse: 'limited' as const,
+      keyAdvantage: 'Proven 18+ year track record',
       bestFor: 'Proven reliability, traditional design',
-      priceTier: 'premium',
+      priceTier: 'premium' as const,
     },
 
     // PRODUCT 2: KITCHENAID KSM55 (5.5 Quart - Modern Replacement)
@@ -54,9 +55,10 @@ export const kitchenaidPro600ComparisonData = {
       performance: 5,
       durability: '10-20+ years expected',
       warranty: '1 year limited',
-      proUse: 'limited',
+      proUse: 'limited' as const,
+      keyAdvantage: 'Quieter dual planetary gearbox',
       bestFor: 'Modern engineering, quieter operation',
-      priceTier: 'premium',
+      priceTier: 'premium' as const,
     },
 
     // PRODUCT 3: KITCHENAID KSM70 (7.0 Quart - Larger Replacement)
@@ -78,9 +80,10 @@ export const kitchenaidPro600ComparisonData = {
       performance: 5,
       durability: '10-20+ years expected',
       warranty: '1 year limited',
-      proUse: 'limited',
+      proUse: 'limited' as const,
+      keyAdvantage: 'Largest capacity, includes shield',
       bestFor: 'Large batches, modern engineering',
-      priceTier: 'premium',
+      priceTier: 'premium' as const,
     },
 
     // PRODUCT 4: BOSCH UNIVERSAL PLUS (No Kneading Restrictions)
@@ -102,17 +105,23 @@ export const kitchenaidPro600ComparisonData = {
       performance: 5,
       durability: '15-30+ years proven',
       warranty: '1 year limited',
-      proUse: 'standard',
+      proUse: 'standard' as const,
+      keyAdvantage: 'No kneading restrictions, lightest',
       bestFor: 'Bread bakers, no kneading restrictions',
-      priceTier: 'premium',
+      priceTier: 'premium' as const,
     },
   ],
 
   // Specify which product to highlight
   highlightedProduct: 'Professional 600',
 
+  // Table context
+  title: 'Compare Stand Mixers',
+  subtitle: 'See how the KitchenAid Professional 600 stacks up against top alternatives',
+
   // Define which fields to compare and their display labels
   comparisonRows: [
+    // Category-specific fields
     { label: 'Motor Power', field: 'motorPower' },
     { label: 'Bowl Capacity', field: 'bowlCapacity' },
     { label: 'Speed Settings', field: 'speedSettings' },
@@ -122,9 +131,11 @@ export const kitchenaidPro600ComparisonData = {
     { label: 'Touchpoints', field: 'touchpoints' },
     { label: 'Pouring Shield', field: 'pouringShield' },
     { label: 'Performance', field: 'performance', format: 'stars' },
+    // Universal fields
     { label: 'Durability', field: 'durability' },
     { label: 'Warranty', field: 'warranty' },
     { label: 'Professional Use', field: 'proUse', format: 'proUse' },
+    { label: 'Key Advantage', field: 'keyAdvantage' },
     { label: 'Best For', field: 'bestFor' },
     { label: 'Price Tier', field: 'priceTier', format: 'priceTier' },
     { label: 'Made In', field: 'madeIn' },
