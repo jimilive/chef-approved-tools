@@ -9,12 +9,12 @@ import { getProductsBySlugs, getPrimaryAffiliateLink } from '@/lib/product-helpe
  * Sources: TechGearLab, Good Housekeeping, Tom's Guide, TechRadar, Amazon reviews
  */
 export async function getPressureCookerComparison() {
-  // Fetch all 4 pressure cooker products from database
+  // Fetch pressure cooker products from database
+  // Note: Cosori removed - not currently available on Amazon
   const products = await getProductsBySlugs([
     'instant-pot-duo-plus-6qt',
     'ninja-foodi-11-in-1-pro',
     'breville-fast-slow-pro',
-    'cosori-premium-6qt'
   ])
 
   // Helper to get affiliate link safely
@@ -105,32 +105,7 @@ export async function getPressureCookerComparison() {
       priceTier: 'luxury' as const,
       madeIn: 'China (Australian company)',
     },
-
-    // COSORI CP016-PC 6 QT
-    {
-      name: 'Premium 6 Qt',
-      brand: 'Cosori',
-      affiliateLink: getLink('cosori-premium-6qt'),
-
-      capacity: '6 quart',
-      functions: '9-in-1',
-      power: '1000-1100 watts',
-      innerPotMaterial: 'Stainless steel or ceramic',
-      steamRelease: 'Manual (30° angled)',
-      presets: '13 preset programs',
-      controls: 'Digital touchpad',
-      weight: '11 lbs',
-      airFryer: 'No',
-      recipeSupport: 'Small (uses IP recipes)',
-
-      durability: '3-5 years',
-      warranty: '1 year limited',
-      proUse: 'home-only' as const,
-      keyAdvantage: 'Best budget, includes glass lid',
-      bestFor: 'Budget-conscious buyers',
-      priceTier: 'budget' as const,
-      madeIn: 'China (designed in USA)',
-    },
+    // Note: Cosori removed - not currently available on Amazon
   ]
 
   return {
