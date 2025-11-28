@@ -98,6 +98,9 @@ export const metadata: Metadata = {
     yandex: 'yandex-verification-code',
     yahoo: 'yahoo-verification-code',
   },
+  other: {
+    'fo-verify': 'c706467f-f5b7-4096-abd7-5f5ee8472e09',
+  },
 }
 
 export default function RootLayout({
