@@ -242,3 +242,32 @@ export function getEditorialMetadataWithDefaults(slug: string): EditorialMetadat
     revenueScore: 0
   }
 }
+
+// Tier badge configuration - SINGLE SOURCE OF TRUTH
+// Matches ReviewTierBadge.tsx and review-tiers/page.tsx
+const TIER_BADGES = {
+  1: {
+    icon: '🏆',
+    text: 'Tier 1: Professional Kitchen Proven',
+    linkText: 'What does this mean?',
+    linkHref: '/review-tiers'
+  },
+  2: {
+    icon: '🏠',
+    text: 'Tier 2: Long-Term Home Tested',
+    linkText: 'What does this mean?',
+    linkHref: '/review-tiers'
+  },
+  3: {
+    icon: '✓',
+    text: 'Tier 3: Expert Evaluation',
+    linkText: 'What does this mean?',
+    linkHref: '/review-tiers'
+  }
+} as const
+
+// Helper function to get tier badge for a product
+export function getTierBadge(slug: string) {
+  const metadata = getEditorialMetadataWithDefaults(slug)
+  return TIER_BADGES[metadata.tier]
+}

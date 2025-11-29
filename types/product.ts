@@ -1,5 +1,17 @@
 // Enhanced type definitions with better structure and validation
 
+/**
+ * ProductImages - Used for conditional image display across components
+ * All fields are optional - components render without images if not provided
+ */
+export interface ProductImages {
+  hero?: string | null;
+  thumbnail?: string | null;
+  gallery?: string[];
+  action?: string[];
+  pinterest?: string | null;
+}
+
 export interface ProductSpecification {
   [key: string]: string | number;
 }
