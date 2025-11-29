@@ -1,36 +1,15 @@
 'use client';
 
-import React, { Suspense } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import ProductImpressionTracker from '@/components/ProductImpressionTracker';
+import ProductCard from '@/components/ProductCard';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
+import { ProductImages } from '@/types/product';
 
 const RecentlyViewed = dynamic(() => import('@/components/RecentlyViewed'), {
   ssr: false
 });
-
-// Tier Badge Components
-const Tier1Badge = () => (
-  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-md font-bold text-sm shadow-md shadow-yellow-400/30 mb-3">
-    <span className="text-lg">🛡️</span>
-    <span>TIER 1: Professional Kitchen Tested</span>
-  </div>
-);
-
-const Tier2Badge: React.FC<{ testingPeriod: string }> = ({ testingPeriod }) => (
-  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-blue-500 to-blue-600 text-white px-4 py-2 rounded-md font-bold text-sm shadow-md shadow-blue-500/30 mb-3">
-    <span className="text-lg">🏠</span>
-    <span>TIER 2: Home Tested ({testingPeriod})</span>
-  </div>
-);
-
-const Tier3Badge = () => (
-  <div className="inline-flex items-center gap-2 bg-gradient-to-br from-purple-500 to-purple-600 text-white px-4 py-2 rounded-md font-bold text-sm shadow-md shadow-purple-500/30 mb-3">
-    <span className="text-lg">🎓</span>
-    <span>TIER 3: Expert Evaluation</span>
-  </div>
-);
 
 // Types
 export interface Review {
@@ -43,80 +22,8 @@ export interface Review {
   hook: string;
   revenueScore: number;
   category: string;
+  images?: ProductImages | null;
 }
-
-// All review data now comes from Supabase via server component props
-
-// Review Card Component
-const ReviewCard: React.FC<{ review: Review; featured?: boolean; position?: number }> = ({ review, featured = false, position = 0 }) => {
-  return (
-    <ProductImpressionTracker
-      productName={review.name}
-      productSlug={review.slug}
-      category={review.category}
-      brand={review.name.split(' ')[0]}
-      price={0}
-      position={position}
-      listName={featured ? "reviews_landing_featured" : "reviews_landing_all"}
-    >
-      <div className="review-card bg-white border border-gray-300 rounded-lg p-6 shadow-md transition-all duration-300 cursor-pointer h-full flex flex-col hover:shadow-xl">
-
-        {/* Tier Badge */}
-        {review.tier === 1 ? (
-          <Tier1Badge />
-        ) : review.tier === 2 ? (
-          <Tier2Badge testingPeriod={review.testingPeriod || ''} />
-        ) : (
-          <Tier3Badge />
-        )}
-
-        {/* Category Tag */}
-        <div className="text-xs text-gray-600 uppercase tracking-wider mb-2 font-semibold">
-          {review.category}
-        </div>
-
-        {/* Product Name */}
-        <h3 className={`${featured ? 'text-xl' : 'text-lg'} font-bold m-0 mb-3 leading-snug text-gray-900`}>
-          {review.name}
-        </h3>
-
-        {/* Rating */}
-        <div className="flex items-center gap-2 mb-3">
-          <div className="text-amber-700 text-lg" aria-label={`Rating: ${review.rating} out of 5 stars`}>
-            {'★'.repeat(Math.floor(review.rating))}
-            {review.rating % 1 !== 0 && '½'}
-            {'☆'.repeat(5 - Math.ceil(review.rating))}
-          </div>
-          <span className="text-sm font-bold text-gray-800">
-            {review.rating}/5
-          </span>
-        </div>
-
-        {/* Testing Period */}
-        <div className="bg-gray-100 px-3 py-2 rounded text-xs text-gray-700 mb-3 italic">
-          📊 Tested: {review.testingPeriod}
-        </div>
-
-        {/* Hook */}
-        <p className="text-sm leading-relaxed text-gray-700 m-0 mb-5 flex-1">
-          {review.hook}
-        </p>
-
-        {/* CTA Button */}
-        <CTAVisibilityTracker ctaId={`reviews-landing-${featured ? 'featured' : 'all'}-review-${review.id}`}
-          merchant="internal"
-          position="mid_article">
-          <Link
-            href={`/reviews/${review.slug}`}
-            className="block bg-green-600 text-white px-6 py-3 text-center rounded-md no-underline font-bold text-sm transition-colors duration-200 hover:bg-green-700"
-          >
-            Read Full Review →
-          </Link>
-        </CTAVisibilityTracker>
-      </div>
-    </ProductImpressionTracker>
-  );
-};
 
 // Main Component
 
@@ -168,7 +75,22 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
         {/* Featured Grid - 2 columns */}
         <div className="grid grid-cols-[repeat(auto-fit,minmax(450px,1fr))] gap-8">
           {featuredReviews.map((review, index) => (
-            <ReviewCard key={review.id} review={review} featured={true} position={index + 1} />
+            <ProductCard
+              key={review.id}
+              id={review.id}
+              name={review.name}
+              slug={review.slug}
+              category={review.category}
+              tier={review.tier}
+              testingPeriod={review.testingPeriod || ''}
+              rating={review.rating}
+              hook={review.hook}
+              position={index + 1}
+              listName="reviews_landing_featured"
+              featured={true}
+              ctaPrefix="reviews-featured"
+              images={review.images}
+            />
           ))}
         </div>
       </section>
@@ -212,7 +134,22 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
         {/* All Reviews Grid - 3 columns */}
         <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-8">
           {filteredReviews.map((review, index) => (
-            <ReviewCard key={review.id} review={review} position={index + 1} />
+            <ProductCard
+              key={review.id}
+              id={review.id}
+              name={review.name}
+              slug={review.slug}
+              category={review.category}
+              tier={review.tier}
+              testingPeriod={review.testingPeriod || ''}
+              rating={review.rating}
+              hook={review.hook}
+              position={index + 1}
+              listName="reviews_landing_all"
+              featured={false}
+              ctaPrefix="reviews-all"
+              images={review.images}
+            />
           ))}
         </div>
       </section>

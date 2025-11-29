@@ -176,6 +176,8 @@ export default async function NinjaAirFryerAF101ReviewPage() {
             lastUpdated="November 10, 2025"
             ctaUrl={affiliateUrl}
             ctaText={reviewData.hero.ctaText}
+            heroImage={(product?.images as any)?.hero}
+            productName={product?.name}
             customCTA={
               <div>
                 <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">

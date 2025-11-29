@@ -42,7 +42,8 @@ function mapProductToReview(product: any, index: number) {
     rating: product.expertRating || product.reviews?.rating || 4.5,
     hook: editorial?.hook || product.expertOpinion || product.description || '',
     revenueScore: editorial?.revenueScore || 40,
-    category: product.category
+    category: product.category,
+    images: product.images || null
   }
 }
 

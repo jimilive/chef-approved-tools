@@ -47,7 +47,8 @@ export default async function AppliancesPage() {
       rating: p.expertRating || 4.5,
       hook: editorial.hook,
       position: index + 1,
-      listName: categoryConfig.listName
+      listName: categoryConfig.listName,
+      images: p.images || null
     }
   })
 

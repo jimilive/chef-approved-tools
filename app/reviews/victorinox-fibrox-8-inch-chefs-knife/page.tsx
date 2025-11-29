@@ -175,6 +175,8 @@ export default async function ProductReview() {
             verdictStrong={reviewData.hero.verdictStrong}
             publishedDate="November 10, 2025"
             lastUpdated="November 10, 2025"
+            heroImage={(product.images as any)?.hero}
+            productName={product.name}
             customCTA={(
               <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
                 <CTAVisibilityTracker

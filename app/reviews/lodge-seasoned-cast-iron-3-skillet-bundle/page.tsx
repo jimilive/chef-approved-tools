@@ -5,6 +5,8 @@ import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
+import { getReviewGitDates } from '@/lib/git-dates'
+import { getTierBadge } from '@/lib/editorial-metadata'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
@@ -104,6 +106,9 @@ export default async function LodgeCastIronReviewPage() {
   // Get product data from Supabase
   const product = await getProductBySlug(reviewData.productSlug)
 
+  // Get git dates for this review
+  const gitDates = getReviewGitDates('lodge-seasoned-cast-iron-3-skillet-bundle')
+
   if (!product) {
     throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
   }
@@ -161,7 +166,7 @@ export default async function LodgeCastIronReviewPage() {
       />
 
       <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-[900px] mx-auto px-5">
+        <div className="max-w-5xl mx-auto px-5">
 
           {/* BREADCRUMBS */}
           <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
@@ -178,11 +183,14 @@ export default async function LodgeCastIronReviewPage() {
             authorName={reviewData.hero.authorName}
             authorCredentials={reviewData.hero.authorCredentials}
             rating={reviewData.hero.rating}
-            tierBadge={reviewData.hero.tierBadge}
+            tierBadge={getTierBadge('lodge-seasoned-cast-iron-3-skillet-bundle')}
             verdict={reviewData.hero.verdict}
             verdictStrong={reviewData.hero.verdictStrong}
-            publishedDate="November 10, 2025"
-            lastUpdated="November 10, 2025"
+            publishedDate={gitDates.firstPublished}
+            lastUpdated={gitDates.lastUpdated}
+            heroImage={(product.images as any)?.hero}
+            productName={product.name}
+            ctaUrl={affiliateUrl}
             customCTA={
               <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
                 {/* Quick Stats */}
