@@ -2,8 +2,10 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import ProductImpressionTracker from '@/components/ProductImpressionTracker';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
+import { ProductImages } from '@/types/product';
 
 // Tier Badge Components
 const Tier1Badge = () => (
@@ -40,6 +42,8 @@ export interface ProductCardProps {
   listName: string;
   featured?: boolean;
   ctaPrefix?: string;
+  // Image support - optional, renders without image if not provided
+  images?: ProductImages | null;
 }
 
 export default function ProductCard({
@@ -54,8 +58,11 @@ export default function ProductCard({
   position,
   listName,
   featured = false,
-  ctaPrefix = 'product-card'
+  ctaPrefix = 'product-card',
+  images
 }: ProductCardProps) {
+  // Image fallback chain: thumbnail → hero → nothing
+  const displayImage = images?.thumbnail || images?.hero || null;
   const brand = name.split(' ')[0];
 
   return (
@@ -68,7 +75,24 @@ export default function ProductCard({
       position={position}
       listName={listName}
     >
-      <div className="review-card bg-white border border-gray-300 rounded-lg p-6 shadow-md transition-all duration-300 cursor-pointer h-full flex flex-col hover:shadow-xl">
+      <div className="review-card bg-white border border-gray-300 rounded-lg shadow-md transition-all duration-300 cursor-pointer h-full flex flex-col hover:shadow-xl overflow-hidden">
+
+        {/* Image at top - CONDITIONAL */}
+        {displayImage && (
+          <div className="relative aspect-[4/3] w-full">
+            <Image
+              src={displayImage}
+              alt={name}
+              fill
+              className="object-cover"
+              quality={75}
+              sizes="(max-width: 768px) 100vw, 400px"
+            />
+          </div>
+        )}
+
+        {/* Card content with padding */}
+        <div className="p-6 flex flex-col flex-1">
 
         {/* Tier Badge */}
         {tier === 1 ? (
@@ -125,7 +149,9 @@ export default function ProductCard({
             Read Full Review →
           </Link>
         </CTAVisibilityTracker>
-      </div>
+
+        </div>{/* End card content with padding */}
+      </div>{/* End review-card */}
     </ProductImpressionTracker>
   );
 }
