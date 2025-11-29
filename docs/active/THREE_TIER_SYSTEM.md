@@ -28,9 +28,9 @@
 
 Every product review on Chef Approved Tools displays one of three badges indicating the depth and nature of testing behind the recommendation:
 
-- **Tier 1 (Gold):** Professional Kitchen Tested - 18+ months commercial use
-- **Tier 2 (Blue):** Currently Testing - Active 30-90 day home testing with real-time updates
-- **Tier 3 (Silver):** Professional Recommendation - Experience-based opinion without long-term personal testing
+- **Tier 1 (Gold):** Professional Kitchen Proven - Tested 18+ months in commercial restaurant environments
+- **Tier 2 (Blue):** Long-Term Home Tested - 6+ months of daily home kitchen use
+- **Tier 3 (Silver):** Expert Evaluation - Professional assessment based on 24 years of kitchen experience
 
 ### The Problem This Solves
 
@@ -51,7 +51,7 @@ Clear visual badges immediately communicate the depth of testing behind each rev
 
 **What Makes Us Different:**
 1. **Tier 1 gives us authority:** 18+ months commercial testing = unmatched credibility
-2. **Tier 2 shows our process:** Real-time testing builds engagement and return visits
+2. **Tier 2 shows our process:** 6+ months home testing builds trust through real-world use
 3. **Tier 3 maintains coverage:** Professional opinions on products we haven't personally tested (honest about it)
 
 ### The Trust Formula

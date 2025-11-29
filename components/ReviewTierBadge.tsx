@@ -12,37 +12,37 @@ interface ReviewTierBadgeProps {
 
 const tierConfig = {
   1: {
-    name: 'Professional Kitchen Tested',
+    name: 'Professional Kitchen Proven',
     icon: Shield,
     color: 'from-amber-500 to-yellow-600',
-    bgColor: 'bg-gradient-to-r from-amber-50 to-yellow-50',
-    borderColor: 'border-amber-400',
-    textColor: 'text-amber-900',
+    bgColor: 'bg-amber-100',
+    borderColor: 'border-amber-300',
+    textColor: 'text-amber-800',
     iconColor: 'text-amber-600',
-    description: 'Tested for 18+ months in demanding restaurant environments serving 200+ covers nightly. Every claim backed by real commercial kitchen experience.',
-    badge: '🏆 GOLD STANDARD'
+    description: 'Tested 18+ months in commercial restaurant environments',
+    badge: '🏆 PROFESSIONAL KITCHEN PROVEN'
   },
   2: {
-    name: 'Home Tested',
+    name: 'Long-Term Home Tested',
     icon: Clock,
     color: 'from-blue-500 to-indigo-600',
-    bgColor: 'bg-gradient-to-r from-blue-50 to-indigo-50',
-    borderColor: 'border-blue-400',
-    textColor: 'text-blue-900',
+    bgColor: 'bg-blue-100',
+    borderColor: 'border-blue-300',
+    textColor: 'text-blue-800',
     iconColor: 'text-blue-600',
-    description: 'Real-world home testing with ongoing updates',
-    badge: '🏠 HOME TESTED'
+    description: '6+ months of daily home kitchen use',
+    badge: '🏠 LONG-TERM HOME TESTED'
   },
   3: {
-    name: 'Professional Recommendation',
+    name: 'Expert Evaluation',
     icon: Award,
     color: 'from-slate-400 to-gray-600',
-    bgColor: 'bg-gradient-to-r from-slate-50 to-gray-50',
-    borderColor: 'border-slate-400',
-    textColor: 'text-slate-900',
+    bgColor: 'bg-slate-100',
+    borderColor: 'border-slate-300',
+    textColor: 'text-slate-700',
     iconColor: 'text-slate-600',
-    description: 'Based on 45 years cooking experience and 23 years restaurant management',
-    badge: '✓ EXPERIENCE-BASED'
+    description: 'Professional assessment based on 24 years of kitchen experience',
+    badge: '✓ EXPERT EVALUATION'
   }
 };
 

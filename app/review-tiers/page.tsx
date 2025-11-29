@@ -56,12 +56,12 @@ export default function ReviewTiersPage() {
 
             <h2 className="text-3xl font-bold text-amber-900 mb-4 flex items-center gap-3">
               <Shield className="w-8 h-8" />
-              Tier 1: Professional Kitchen Tested
+              Tier 1: Professional Kitchen Proven
             </h2>
 
             <div className="space-y-4 text-slate-800">
               <p className="text-lg font-semibold">
-                The Gold Standard: 18+ months in demanding restaurant environments
+                Tested 18+ months in commercial restaurant environments
               </p>
 
               <div className="bg-white/60 rounded-lg p-5">
@@ -112,12 +112,12 @@ export default function ReviewTiersPage() {
 
             <h2 className="text-3xl font-bold text-blue-900 mb-4 flex items-center gap-3">
               <Clock className="w-8 h-8" />
-              Tier 2: Currently Testing
+              Tier 2: Long-Term Home Tested
             </h2>
 
             <div className="space-y-4 text-slate-800">
               <p className="text-lg font-semibold">
-                Active home testing with real-time updates as I learn
+                6+ months of daily home kitchen use
               </p>
 
               <div className="bg-white/60 rounded-lg p-5">
@@ -125,19 +125,19 @@ export default function ReviewTiersPage() {
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Currently using this product in my home kitchen for 30-90+ days</span>
+                    <span>6+ months of daily use in my home kitchen</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Review evolves and updates as I discover strengths and weaknesses</span>
+                    <span>Long-term durability and performance validated through extended use</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Honest about what I know so far vs. what still needs long-term validation</span>
+                    <span>Real-world testing in a home environment, not just initial impressions</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Testing includes comparing against restaurant equipment I&apos;ve used professionally</span>
+                    <span>Compared against restaurant equipment I&apos;ve used professionally</span>
                   </li>
                 </ul>
               </div>
@@ -182,12 +182,12 @@ export default function ReviewTiersPage() {
 
             <h2 className="text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
               <Award className="w-8 h-8" />
-              Tier 3: Professional Recommendation
+              Tier 3: Expert Evaluation
             </h2>
 
             <div className="space-y-4 text-slate-800">
               <p className="text-lg font-semibold">
-                Informed opinions based on 45 years of cooking experience
+                Professional assessment based on 24 years of kitchen experience
               </p>
 
               <div className="bg-white/60 rounded-lg p-5">

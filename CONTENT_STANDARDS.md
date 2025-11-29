@@ -513,7 +513,7 @@ export const heroData = {
   verdict: "Main verdict paragraph with professional testing context",
   tierBadge: {
     tier: 1,
-    label: "Tier 1: Professional Kitchen Testing",
+    label: "Tier 1: Professional Kitchen Proven",
     description: "Used daily at [Restaurant] for [X] years"
   },
   ctaText: "Check Price on Amazon"
@@ -633,16 +633,16 @@ export const relatedProductSlugs = [
 
 ## 🏆 Tier System (Testing Credibility)
 
-### Tier 1: Professional Kitchen Use
+### Tier 1: Professional Kitchen Proven
 **Highest credibility - This is your differentiator**
 
 **Requirements:**
 - Used daily/regularly in actual restaurant operations
-- Minimum 1 year of professional use
+- Minimum 18 months of professional use
 - Real restaurant name must be referenced
 - Specific use cases documented
 
-**Badge text:** "Tier 1: Professional Kitchen Testing - Used daily at [Restaurant] for [X] years"
+**Badge text:** "🏆 PROFESSIONAL KITCHEN PROVEN - Tested 18+ months in commercial restaurant environments"
 
 **Example:** Vitamix 5200 (6 years at Purple Café)
 
@@ -650,16 +650,16 @@ export const relatedProductSlugs = [
 
 ---
 
-### Tier 2: Long-Term Personal Testing
+### Tier 2: Long-Term Home Tested
 **High credibility - Extensive home testing**
 
 **Requirements:**
-- Minimum 1 year of regular home use
+- Minimum 6 months of regular home use
 - Documented testing period
 - Multiple use cases tested
 - Honest assessment including limitations
 
-**Badge text:** "Tier 2: Long-Term Personal Testing - [X] years extensive home testing"
+**Badge text:** "🏠 LONG-TERM HOME TESTED - 6+ months of daily home kitchen use"
 
 **Example:** Lodge Cast Iron (5+ years home use)
 
@@ -676,7 +676,7 @@ export const relatedProductSlugs = [
 - Comparison to similar products actually used
 - Honest about not having personal testing
 
-**Badge text:** "Tier 3: Expert Evaluation - Analyzed through 24 years professional experience"
+**Badge text:** "✓ EXPERT EVALUATION - Professional assessment based on 24 years of kitchen experience"
 
 **Example:** New products, high-end items not yet tested
 

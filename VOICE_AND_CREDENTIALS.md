@@ -466,12 +466,12 @@ Consumables get used up, so longevity doesn't apply. Instead:
 
 Scott's product reviews use a 3-tier credibility system. This MUST be explained clearly in every review.
 
-### Tier 1: Professional Kitchen Use
+### Tier 1: Professional Kitchen Proven
 **Definition:** Product used extensively in actual restaurant operations
 
 **Requirements:**
 - Used daily/regularly in a professional kitchen
-- Minimum 1 year of professional use
+- Minimum 18 months of professional use
 - Real restaurant name must be referenced
 - Specific use cases documented
 
@@ -481,18 +481,18 @@ Scott's product reviews use a 3-tier credibility system. This MUST be explained 
 - Cast iron pans (daily use at Feierabend)
 
 **Content Template:**
-> "**Tier 1: Professional Kitchen Testing**  
+> "**Tier 1: Professional Kitchen Proven**  
 > Used daily at [Restaurant Name] for [X] years during [specific role]. This review is based on [specific quantity] of real-world professional use under high-volume restaurant conditions."
 
 **Credibility:** HIGHEST - This is your strongest differentiator from other affiliate sites.
 
 ---
 
-### Tier 2: Long-Term Personal Testing
+### Tier 2: Long-Term Home Tested
 **Definition:** Extensive home testing over significant time period
 
 **Requirements:**
-- Minimum 1 year of regular home use
+- Minimum 6 months of regular home use
 - Documented testing period
 - Multiple use cases tested
 - Honest assessment including limitations
@@ -503,7 +503,7 @@ Scott's product reviews use a 3-tier credibility system. This MUST be explained 
 - Instant Pot (2+ years regular use)
 
 **Content Template:**
-> "**Tier 2: Long-Term Personal Testing**  
+> "**Tier 2: Long-Term Home Tested**  
 > Tested extensively in my home kitchen for [X] years with [frequency] use. This review covers [specific use cases] based on real cooking habits, not manufacturer claims."
 
 **Credibility:** HIGH - Still based on real, extended testing.
