@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
-import { Star, CheckCircle, XCircle, DollarSign, Award, Zap } from 'lucide-react'
+import { Star, CheckCircle, XCircle, Award } from 'lucide-react'
 import AuthorBio from '@/components/review/AuthorBio'
 import { generateItemListSchema, generateBreadcrumbSchema, generateArticleSchema } from '@/lib/schema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
@@ -38,7 +38,7 @@ const topKnives = [
     name: 'Victorinox Fibrox 8"',
     slug: 'victorinox-fibrox-8-inch-chefs-knife',
     image: '🔪',
-    rating: 4.8,
+    rating: 5.0,
     price: 45,
     bestFor: 'Best Value for Money',
     tag: 'Top Pick',
@@ -52,7 +52,7 @@ const topKnives = [
     name: 'Victorinox Fibrox 10"',
     slug: 'victorinox-fibrox-10-inch-chefs-knife',
     image: '🔪',
-    rating: 4.8,
+    rating: 5.0,
     price: 50,
     bestFor: 'Large Volume Prep',
     tag: 'Best for Pros',
@@ -66,7 +66,7 @@ const topKnives = [
     name: 'Victorinox 4" Paring',
     slug: 'victorinox-4-inch-paring-knife',
     image: '🔪',
-    rating: 4.7,
+    rating: 4.9,
     price: 12,
     bestFor: 'Precision Detail Work',
     tag: 'Essential Tool',
@@ -80,7 +80,7 @@ const topKnives = [
     name: 'Victorinox Granton Boning',
     slug: 'victorinox-granton-edge-boning-knife',
     image: '🔪',
-    rating: 4.6,
+    rating: 4.7,
     price: 40,
     bestFor: 'Meat Fabrication',
     tag: 'Specialty',
@@ -185,23 +185,12 @@ export default async function BestChefKnivesPage() {
                   <th className="text-left p-4 font-semibold">Knife</th>
                   <th className="text-left p-4 font-semibold">Rating</th>
                   <th className="text-left p-4 font-semibold">Best For</th>
-                  <th className="text-left p-4 font-semibold">Price</th>
                   <th className="text-left p-4 font-semibold"></th>
                 </tr>
               </thead>
               <tbody>
                 {topKnives.map((knife, index) => (
-                  <ProductImpressionTracker
-                    key={knife.id}
-                    productName={knife.name}
-                    productSlug={knife.slug}
-                    category="Knives"
-                    brand={knife.name.split(' ')[0]}
-                    price={knife.price}
-                    position={index + 1}
-                    listName="guide_best_chef_knives_table"
-                  >
-                    <tr className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                    <tr key={knife.id} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                       <td className="p-4">
                         <div className="flex items-center gap-3">
                           <div className="text-4xl">{knife.image}</div>
@@ -225,9 +214,6 @@ export default async function BestChefKnivesPage() {
                       </td>
                       <td className="p-4 text-slate-700">{knife.bestFor}</td>
                       <td className="p-4">
-                        <span className="text-lg font-bold text-orange-600">${knife.price}</span>
-                      </td>
-                      <td className="p-4">
                         <CTAVisibilityTracker ctaId={`guide-best-chef-knives-table-price-${index + 1}`}
 
                           merchant="amazon"
@@ -245,7 +231,6 @@ export default async function BestChefKnivesPage() {
                         </CTAVisibilityTracker>
                       </td>
                     </tr>
-                  </ProductImpressionTracker>
                 ))}
               </tbody>
             </table>
@@ -260,7 +245,7 @@ export default async function BestChefKnivesPage() {
                 productSlug={knife.slug}
                 category="Knives"
                 brand={knife.name.split(' ')[0]}
-                price={knife.price}
+                price={0}
                 position={index + 1}
                 listName="guide_best_chef_knives_mobile"
               >
@@ -282,10 +267,8 @@ export default async function BestChefKnivesPage() {
                     </div>
                     <span className="text-sm font-semibold text-slate-700">{knife.rating}/5</span>
                   </div>
-                  <p className="text-sm text-slate-600 mb-2">{knife.bestFor}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xl font-bold text-orange-600">${knife.price}</span>
-                    <CTAVisibilityTracker ctaId={`guide-best-chef-knives-mobile-price-${index + 1}`}
+                  <p className="text-sm text-slate-600 mb-3">{knife.bestFor}</p>
+                  <CTAVisibilityTracker ctaId={`guide-best-chef-knives-mobile-price-${index + 1}`}
 
                       merchant="amazon"
 
@@ -295,12 +278,11 @@ export default async function BestChefKnivesPage() {
                         href={knife.affiliateUrl}
                         target="_blank"
                         rel="noopener noreferrer sponsored nofollow"
-                        className="inline-flex items-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md text-sm"
+                        className="inline-flex items-center w-full justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md text-sm"
                       >
                         Check Price →
                       </a>
                     </CTAVisibilityTracker>
-                  </div>
                 </div>
               </ProductImpressionTracker>
             ))}
@@ -346,7 +328,7 @@ export default async function BestChefKnivesPage() {
                     <div className="mb-4">
                       {knife.id === 1 && (
                         <p className="text-slate-700 leading-relaxed">
-                          The best value in professional cutlery, hands down. Swiss precision at a fraction of premium knife costs. I&apos;ve watched line cooks abuse these knives at Purple Cafe for years—they just keep performing. The Fibrox handle provides excellent grip even when wet, which is critical in a fast-paced kitchen. After 15 years of professional use, this is my daily driver. If you&apos;re on a budget or just starting out, this is your knife.
+                          The best value in professional cutlery, hands down. Swiss precision at a fraction of premium knife costs. I&apos;ve watched line cooks abuse these knives at Purple Cafe for years—they just keep performing. The Fibrox handle provides excellent grip even when wet, which is critical in a fast-paced kitchen. After 10 years of professional kitchen use and 20+ years total, this is my daily driver. If you&apos;re on a budget or just starting out, this is your knife.
                         </p>
                       )}
                       {knife.id === 2 && (
@@ -422,10 +404,6 @@ export default async function BestChefKnivesPage() {
                       </CTAVisibilityTracker>
                     </div>
 
-                    <div className="mt-3 flex items-center gap-2 text-sm text-slate-500">
-                      <DollarSign className="w-4 h-4" />
-                      <span>Price: ${knife.price} | Free returns with Amazon Prime</span>
-                    </div>
                   </div>
                 </div>
               </article>
@@ -497,7 +475,7 @@ export default async function BestChefKnivesPage() {
             <div className="bg-white rounded-xl p-6 shadow-md">
               <h3 className="font-bold text-slate-900 mb-2">Is a $150 knife really better than a $50 knife?</h3>
               <p className="text-slate-700 text-sm">
-                Yes and no. A $150 premium knife will hold an edge slightly longer and may have fancier handle materials. But a $50 Victorinox with proper maintenance outperforms a neglected $500 knife. The difference is incremental, not transformational. After 15 years of professional use, the Victorinox Fibrox 8&quot; is my daily driver—it simply works. For home cooks, Victorinox offers 90% of premium knife performance at 25% of the cost.
+                Yes and no. A $150 premium knife will hold an edge slightly longer and may have fancier handle materials. But a $50 Victorinox with proper maintenance outperforms a neglected $500 knife. The difference is incremental, not transformational. After 10 years of professional kitchen use and 20+ years total, the Victorinox Fibrox 8&quot; is my daily driver—it simply works. For home cooks, Victorinox offers 90% of premium knife performance at 25% of the cost.
               </p>
             </div>
 
@@ -527,9 +505,8 @@ export default async function BestChefKnivesPage() {
               All knives reviewed were purchased with our own funds and tested in real professional kitchen environments, including:
             </p>
             <ul className="text-blue-800 text-sm space-y-1 mb-3">
-              <li>• <strong>Mellow Mushroom:</strong> High-volume pizza restaurant doing $80K+ monthly revenue</li>
-              <li>• <strong>Purple Cafe:</strong> Fine dining establishment with precision knife work requirements</li>
-              <li>• <strong>Home Kitchen Testing:</strong> Regular cooking 3-5 times weekly for 10 years</li>
+              <li>• <strong>Professional Kitchens (10 years):</strong> Mellow Mushroom, Purple Cafe, and other high-volume operations</li>
+              <li>• <strong>Home Kitchen Testing (20+ years total):</strong> Regular cooking 3-5 times weekly</li>
             </ul>
             <p className="text-blue-800 text-sm">
               Knives were evaluated on edge retention, handle comfort, balance, ease of sharpening, and long-term durability. No free samples or sponsored reviews—just honest assessment from someone who&apos;s used these tools professionally for over two decades.
