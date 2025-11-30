@@ -61,8 +61,8 @@ export default function ProductCard({
   ctaPrefix = 'product-card',
   images
 }: ProductCardProps) {
-  // Image fallback chain: thumbnail → hero → nothing
-  const displayImage = images?.thumbnail || images?.hero || null;
+  // Only use thumbnail for cards - hero images are too large
+  const displayImage = images?.thumbnail || null;
   const brand = name.split(' ')[0];
 
   return (
