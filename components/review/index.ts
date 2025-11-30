@@ -1,6 +1,8 @@
 export { default as ReviewHero } from './ReviewHero'
 export { default as TestingResultsGrid } from './TestingResultsGrid'
+export { default as TestingStory } from './TestingStory'
 export { default as PerformanceAnalysis } from './PerformanceAnalysis'
+export { default as RealWorldUseCases } from './RealWorldUseCases'
 export { default as ComparisonTable } from './ComparisonTable'
 export { default as ProductComparisonTable } from './ProductComparisonTable'
 export { default as ProsConsGrid } from './ProsConsGrid'
