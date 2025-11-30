@@ -25,6 +25,8 @@ interface ReviewHeroProps {
   // Image support - optional, renders without image if not provided
   heroImage?: string | null
   productName?: string
+  // Value highlights - optional, only shows if provided
+  valueHighlights?: string
 }
 
 export default function ReviewHero({
@@ -42,7 +44,8 @@ export default function ReviewHero({
   publishedDate,
   lastUpdated,
   heroImage,
-  productName
+  productName,
+  valueHighlights
 }: ReviewHeroProps) {
   // Generate star display (★★★★☆ format)
   const fullStars = Math.floor(rating)
@@ -61,8 +64,9 @@ export default function ReviewHero({
       {heroImage ? (
         <>
         {/* Two-column layout with image - CTA in right column */}
-        <div style={{ display: 'grid', gridTemplateColumns: '400px 1fr', gap: '24px', marginBottom: '24px' }}>
-          {/* Image column - LEFT */}
+        {/* Mobile: stacked (image top), Desktop: side-by-side (image left 350px) */}
+        <div className="grid grid-cols-1 md:grid-cols-[350px_1fr] gap-6 mb-6">
+          {/* Image column - LEFT on desktop, TOP on mobile */}
           <div className="w-full">
             <div className="relative aspect-[4/3] w-full">
               <Image
@@ -123,10 +127,12 @@ export default function ReviewHero({
               )}
             </div>
 
-            {/* Value highlights */}
-            <div className="mt-2 text-sm text-slate-600">
-              💰 Outstanding Value Investment | ✔ Pre-Seasoned | ✔ Made in USA | ✔ 3 Versatile Sizes
-            </div>
+            {/* Value highlights - only show if provided */}
+            {valueHighlights && (
+              <div className="mt-2 text-sm text-slate-600">
+                {valueHighlights}
+              </div>
+            )}
 
             {/* CTA Button - simple button below tier badge for image layout */}
             <div className="mt-3">
