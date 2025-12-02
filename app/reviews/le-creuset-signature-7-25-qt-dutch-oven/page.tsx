@@ -3,13 +3,17 @@ import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
+import { getReviewGitDates } from '@/lib/git-dates'
+import { getTierBadge } from '@/lib/editorial-metadata'
 import { getReviewMetadata } from '@/data/metadata'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   ReviewHero,
   TestingResultsGrid,
+  TestingStory,
   PerformanceAnalysis,
+  RealWorldUseCases,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -24,6 +28,8 @@ import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 // Import review data
 import { reviewData } from './le-creuset-signature-7-25-qt-dutch-oven-data'
 import { getDutchOvenComparison } from './get-dutch-oven-comparison'
+
+const PRODUCT_SLUG = 'le-creuset-signature-7-25-qt-dutch-oven'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -103,10 +109,16 @@ function processInlineLinks(text: string, affiliateUrl: string, productName: str
 
 export default async function LeCreusetDutchOvenReviewPage() {
   // Get product data from Supabase
-  const product = await getProductBySlug(reviewData.productSlug)
+  const product = await getProductBySlug(PRODUCT_SLUG)
+
+  // Get git dates for this review
+  const gitDates = getReviewGitDates(PRODUCT_SLUG)
+
+  // Get tier badge
+  const tierBadge = getTierBadge(PRODUCT_SLUG)
 
   if (!product) {
-    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+    throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
 
   // Get comparison data with live affiliate links from database
@@ -164,19 +176,8 @@ export default async function LeCreusetDutchOvenReviewPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Product view tracking */}
-      <ProductViewTrackerWrapper
-        slug={productData.slug}
-        name={productData.name}
-        tier={reviewData.metadata.tier as 1 | 2 | 3}
-        testingPeriod={reviewData.tracking.testingPeriod}
-        rating={productData.expertRating}
-        hook={reviewData.tracking.hook}
-        category={productData.category}
-      />
-
       <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-[900px] mx-auto px-5">
+        <div className="max-w-5xl mx-auto px-5">
 
           {/* BREADCRUMBS */}
           <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
@@ -192,12 +193,14 @@ export default async function LeCreusetDutchOvenReviewPage() {
             title={reviewData.hero.title}
             authorName={reviewData.hero.authorName}
             authorCredentials={reviewData.hero.authorCredentials}
-            rating={reviewData.hero.rating}
-            tierBadge={reviewData.hero.tierBadge}
+            rating={productData.expertRating ?? reviewData.hero.rating}
+            tierBadge={tierBadge}
             verdict={reviewData.hero.verdict}
             verdictStrong={reviewData.hero.verdictStrong}
-            publishedDate="November 10, 2025"
-            lastUpdated="November 10, 2025"
+            publishedDate={gitDates.firstPublished}
+            lastUpdated={gitDates.lastUpdated}
+            heroImage={(product.images as any)?.hero}
+            productName={product.name}
             customCTA={
               <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
                 {/* Quick Stats Grid */}
@@ -258,7 +261,15 @@ export default async function LeCreusetDutchOvenReviewPage() {
             minorConsiderations={reviewData.testingResults.minorConsiderations}
           />
 
-          {/* MID-CONTENT CTA */}
+          {/* SECTION 6: TESTING STORY (E-E-A-T) - Conditional */}
+          {(reviewData as any).testingStory && (
+            <TestingStory
+              title={(reviewData as any).testingStory.title}
+              paragraphs={(reviewData as any).testingStory.paragraphs}
+            />
+          )}
+
+          {/* CTA #2 - MID-CONTENT SOFT LINK */}
           <div className="text-center my-8">
             <CTAVisibilityTracker
               ctaId={`${productData.slug}-mid-content`}
@@ -286,6 +297,15 @@ export default async function LeCreusetDutchOvenReviewPage() {
             }))}
           />
 
+          {/* SECTION 9: REAL-WORLD USE CASES (E-E-A-T) - Conditional */}
+          {(reviewData as any).realWorldUseCases && (
+            <RealWorldUseCases
+              title={(reviewData as any).realWorldUseCases.title}
+              subtitle={(reviewData as any).realWorldUseCases.subtitle}
+              useCases={(reviewData as any).realWorldUseCases.useCases}
+            />
+          )}
+
           {/* SECTION 4: PROS & CONS */}
           <ProsConsGrid
             title={reviewData.prosConsTitle}
@@ -304,7 +324,29 @@ export default async function LeCreusetDutchOvenReviewPage() {
             considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
           />
 
-          {/* SECTION 5.5: COMPARISON TABLE */}
+          {/* CTA #4 - AFTER WHO SHOULD BUY (Decision Point) */}
+          <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">
+            <p className="text-lg font-medium text-slate-900 mb-4">
+              Sound like the right fit for your kitchen?
+            </p>
+            <CTAVisibilityTracker
+              ctaId={`${PRODUCT_SLUG}-post-who-should-buy`}
+              position="who_should_buy"
+              productSlug={PRODUCT_SLUG}
+              merchant="amazon"
+            >
+              <a
+                href={affiliateUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg shadow-lg hover:shadow-xl"
+              >
+                Check Price on Amazon →
+              </a>
+            </CTAVisibilityTracker>
+          </div>
+
+          {/* SECTION 10: COMPARISON TABLE */}
           <ProductComparisonTable
             title={dutchOvenComparisonData.title}
             subtitle={dutchOvenComparisonData.subtitle}
@@ -454,6 +496,17 @@ export default async function LeCreusetDutchOvenReviewPage() {
 
         </div>
       </div>
+
+      {/* Product view tracking - at bottom to avoid blocking first paint */}
+      <ProductViewTrackerWrapper
+        slug={PRODUCT_SLUG}
+        name={productData.name}
+        tier={reviewData.metadata.tier as 1 | 2 | 3}
+        testingPeriod={reviewData.tracking.testingPeriod}
+        rating={productData.expertRating ?? reviewData.hero.rating}
+        hook={reviewData.tracking.hook}
+        category={productData.category}
+      />
 
       {/* STICKY MOBILE CTA */}
       <StickyMobileCTAWrapper

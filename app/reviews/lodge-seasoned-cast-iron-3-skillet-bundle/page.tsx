@@ -117,6 +117,9 @@ export default async function LodgeCastIronReviewPage() {
     throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
   }
 
+  // Get comparison data with live affiliate links from database
+  const castIronComparison = await getCastIronComparison()
+
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = product ? {
     ...reviewData.legacyProductData,
@@ -399,19 +402,14 @@ export default async function LodgeCastIronReviewPage() {
           />
 
           {/* SECTION 10: COMPARISON TABLE */}
-          {(() => {
-            const comparison = getCastIronComparison()
-            return (
-              <ProductComparisonTable
-                title={comparison.title}
-                subtitle={comparison.subtitle}
-                products={comparison.products}
-                comparisonRows={comparison.comparisonRows}
-                highlightedProduct={comparison.highlightedProduct}
-                trustMessage={comparison.trustMessage}
-              />
-            )
-          })()}
+          <ProductComparisonTable
+            title={castIronComparison.title}
+            subtitle={castIronComparison.subtitle}
+            products={castIronComparison.products}
+            comparisonRows={castIronComparison.comparisonRows}
+            highlightedProduct={castIronComparison.highlightedProduct}
+            trustMessage={castIronComparison.trustMessage}
+          />
 
           {/* CTA #3 - POST-COMPARISON (CRITICAL CONVERSION POINT) */}
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">

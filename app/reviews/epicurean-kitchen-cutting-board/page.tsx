@@ -3,13 +3,17 @@ import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
+import { getReviewGitDates } from '@/lib/git-dates'
+import { getTierBadge } from '@/lib/editorial-metadata'
 import { getReviewMetadata } from '@/data/metadata'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   ReviewHero,
   TestingResultsGrid,
+  TestingStory,
   PerformanceAnalysis,
+  RealWorldUseCases,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -18,10 +22,15 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
+import ReviewLayout from '@/components/review/ReviewLayout'
 import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './epicurean-kitchen-cutting-board-data'
+import { getCuttingBoardComparison } from './get-cutting-board-comparison'
+
+const PRODUCT_SLUG = 'epicurean-kitchen-cutting-board'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -79,11 +88,28 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function EpicureanKitchenCuttingBoardReview() {
   // Get product data from Supabase
-  const product = await getProductBySlug(reviewData.productSlug)
+  const product = await getProductBySlug(PRODUCT_SLUG)
+
+  // Get git dates for this review
+  const gitDates = getReviewGitDates(PRODUCT_SLUG)
+
+  // Get tier badge
+  const tierBadge = getTierBadge(PRODUCT_SLUG)
 
   if (!product) {
-    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+    throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
+
+  // Get comparison data with live affiliate links from database
+  const cuttingBoardComparisonData = await getCuttingBoardComparison()
+
+  // Epicurean size options with affiliate links
+  const sizeOptions = [
+    { size: '8" × 6"', link: 'https://amzn.to/48LkYMw', label: 'Small' },
+    { size: '11.5" × 9"', link: 'https://amzn.to/3KwvCxw', label: 'Medium' },
+    { size: '14.5" × 11.25"', link: 'https://amzn.to/4ouAe5h', label: 'Large (Reviewed)' },
+    { size: '17.5" × 13"', link: 'https://amzn.to/3Mi0sKK', label: 'XL' },
+  ]
 
   // Helper function to process inline affiliate links
   const processInlineLinks = (content: string) => {
@@ -176,124 +202,175 @@ export default async function EpicureanKitchenCuttingBoardReview() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Product view tracking */}
-      <ProductViewTrackerWrapper
-        slug={productData.slug}
-        name={productData.name}
-        tier={reviewData.metadata.tier as 1 | 2 | 3}
-        testingPeriod={reviewData.tracking.testingPeriod}
-        rating={productData.expertRating}
-        hook={reviewData.tracking.hook}
-        category={productData.category}
-      />
+      {/* ========================================
+          NEW: ReviewLayout wraps everything
+          ======================================== */}
+      <ReviewLayout
+        breadcrumbCategory="Kitchen Tools"
+        breadcrumbTitle={reviewData.breadcrumb.productName}
+      >
 
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-[900px] mx-auto px-5">
-
-          {/* BREADCRUMBS */}
-          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
-            <Link href="/" className="hover:text-orange-700">Home</Link>
-            {' / '}
-            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-            {' / '}
-            {reviewData.breadcrumb.productName}
-          </div>
-
-          {/* SECTION 1: HERO */}
-          <ReviewHero
-            title={reviewData.hero.title}
-            authorName={reviewData.hero.authorName}
-            authorCredentials={reviewData.hero.authorCredentials}
-            rating={reviewData.hero.rating}
-            tierBadge={reviewData.hero.tierBadge}
-            verdict={reviewData.hero.verdict}
-            verdictStrong={reviewData.hero.verdictStrong}
-            publishedDate="November 10, 2025"
-            lastUpdated="November 10, 2025"
-            ctaUrl={affiliateUrl}
-            ctaText={reviewData.hero.ctaText}
-            customCTA={(
-              <div>
-                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
+        {/* SECTION 1: HERO */}
+        <ReviewHero
+          title={reviewData.hero.title}
+          authorName={reviewData.hero.authorName}
+          authorCredentials={reviewData.hero.authorCredentials}
+          rating={productData.expertRating ?? reviewData.hero.rating}
+          tierBadge={tierBadge}
+          verdict={reviewData.hero.verdict}
+          verdictStrong={reviewData.hero.verdictStrong}
+          publishedDate={gitDates.firstPublished}
+          lastUpdated={gitDates.lastUpdated}
+          heroImage={(product.images as any)?.hero}
+          productName={product.name}
+          ctaUrl={affiliateUrl}
+          ctaText={reviewData.hero.ctaText}
+          customCTA={(
+            <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
+              {/* Size Selection */}
+              <h3 className="text-sm font-semibold text-slate-700 mb-3 text-center">Choose Your Size:</h3>
+              <div className="grid grid-cols-2 gap-2 mb-4">
+                {sizeOptions.map((option, index) => (
+                  <CTAVisibilityTracker
+                    key={index}
+                    ctaId={`hero-size-${option.label.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
+                    position="above_fold"
+                    productSlug={PRODUCT_SLUG}
+                    merchant="amazon"
                   >
-                    {reviewData.hero.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
+                    <a
+                      href={option.link}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className={`block text-center p-3 rounded-lg border-2 transition-all hover:scale-105 ${
+                        option.label.includes('Reviewed')
+                          ? 'border-orange-500 bg-orange-50 hover:bg-orange-100'
+                          : 'border-gray-200 hover:border-orange-300 hover:bg-orange-50'
+                      }`}
+                    >
+                      <span className="block text-sm font-semibold text-slate-900">{option.size}</span>
+                      <span className={`block text-xs ${option.label.includes('Reviewed') ? 'text-orange-700 font-medium' : 'text-slate-500'}`}>
+                        {option.label}
+                      </span>
+                    </a>
+                  </CTAVisibilityTracker>
+                ))}
               </div>
-            )}
-          />
 
-          {/* SECTION 2: TESTING RESULTS */}
-          <TestingResultsGrid
-            title={reviewData.testingResults.title}
-            sections={reviewData.testingResults.sections}
-            testingEnvironment={reviewData.testingResults.testingEnvironment}
-            outstandingPerformance={reviewData.testingResults.outstandingPerformance}
-            minorConsiderations={reviewData.testingResults.minorConsiderations}
-          />
+              {/* Main CTA */}
+              <CTAVisibilityTracker ctaId="hero-cta" position="above_fold" productSlug={PRODUCT_SLUG} merchant="amazon">
+                <a
+                  href={affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105"
+                >
+                  {reviewData.hero.ctaText}
+                </a>
+              </CTAVisibilityTracker>
 
-          {/* MID-CONTENT CTA */}
-          <div className="text-center my-8">
-            <CTAVisibilityTracker
-              ctaId={`${productData.slug}-mid-content`}
-              position="mid_article"
-              productSlug={productData.slug}
-              merchant="amazon"
+              <p className="text-xs text-slate-600 text-center mt-4">
+                As an Amazon Associate, I earn from qualifying purchases.
+              </p>
+            </div>
+          )}
+        />
+
+        {/* SECTION 2: TESTING RESULTS */}
+        <TestingResultsGrid
+          title={reviewData.testingResults.title}
+          sections={reviewData.testingResults.sections}
+          testingEnvironment={reviewData.testingResults.testingEnvironment}
+          outstandingPerformance={reviewData.testingResults.outstandingPerformance}
+          minorConsiderations={reviewData.testingResults.minorConsiderations}
+        />
+
+        {/* SECTION 2.5: TESTING STORY (E-E-A-T) - Conditional */}
+        {(reviewData as any).testingStory && (
+          <TestingStory
+            title={(reviewData as any).testingStory.title}
+            paragraphs={(reviewData as any).testingStory.paragraphs}
+          />
+        )}
+
+        {/* MID-CONTENT CTA */}
+        <div className="text-center my-8">
+          <CTAVisibilityTracker
+            ctaId={`${PRODUCT_SLUG}-mid-content`}
+            position="mid_article"
+            productSlug={PRODUCT_SLUG}
+            merchant="amazon"
+          >
+            <a
+              href={affiliateUrl}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="text-orange-700 hover:text-orange-800 font-medium underline"
             >
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="text-orange-700 hover:text-orange-800 font-medium underline"
-              >
-                → See current Amazon price and reviews
-              </a>
-            </CTAVisibilityTracker>
-          </div>
+              → See current Amazon price and reviews
+            </a>
+          </CTAVisibilityTracker>
+        </div>
 
-          {/* SECTION 3: PERFORMANCE ANALYSIS */}
-          <PerformanceAnalysis
-            title={reviewData.performanceAnalysis.title}
-            sections={reviewData.performanceAnalysis.sections.map(section => ({
-              ...section,
-              content: processInlineLinks(section.content)
-            }))}
+        {/* SECTION 3: PERFORMANCE ANALYSIS */}
+        <PerformanceAnalysis
+          title={reviewData.performanceAnalysis.title}
+          sections={reviewData.performanceAnalysis.sections.map(section => ({
+            ...section,
+            content: processInlineLinks(section.content)
+          }))}
+        />
+
+        {/* SECTION 3.5: REAL-WORLD USE CASES (E-E-A-T) - Conditional */}
+        {(reviewData as any).realWorldUseCases && (
+          <RealWorldUseCases
+            title={(reviewData as any).realWorldUseCases.title}
+            subtitle={(reviewData as any).realWorldUseCases.subtitle}
+            useCases={(reviewData as any).realWorldUseCases.useCases}
           />
+        )}
 
-          {/* SECTION 4: PROS & CONS */}
-          <ProsConsGrid
-            title="Honest Assessment After 10 Years"
-            prosTitle="What Works Exceptionally Well"
-            consTitle="Limitations to Consider"
-            pros={productData.pros}
-            cons={productData.cons}
-          />
+        {/* SECTION 4: PROS & CONS */}
+        <ProsConsGrid
+          title="Honest Assessment After 10 Years"
+          prosTitle="What Works Exceptionally Well"
+          consTitle="Limitations to Consider"
+          pros={productData.pros}
+          cons={productData.cons}
+        />
 
-          {/* SECTION 5: WHO SHOULD BUY */}
-          <WhoShouldBuyGrid
-            title={reviewData.whoShouldBuy.title}
-            perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
-            considerAlternativesTitle={reviewData.whoShouldBuy.considerAlternativesTitle}
-            perfectFor={reviewData.whoShouldBuy.perfectFor}
-            considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
-          />
+        {/* SECTION 5: WHO SHOULD BUY */}
+        <WhoShouldBuyGrid
+          title={reviewData.whoShouldBuy.title}
+          perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
+          considerAlternativesTitle={reviewData.whoShouldBuy.considerAlternativesTitle}
+          perfectFor={reviewData.whoShouldBuy.perfectFor}
+          considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
+        />
 
-          {/* INLINE SECTION: SPECIFICATIONS */}
+        {/* CTA #4 - AFTER WHO SHOULD BUY (Decision Point) */}
+        <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">
+          <p className="text-lg font-medium text-slate-900 mb-4">
+            Sound like the right fit for your kitchen?
+          </p>
+          <CTAVisibilityTracker
+            ctaId={`${PRODUCT_SLUG}-post-who-should-buy`}
+            position="who_should_buy"
+            productSlug={PRODUCT_SLUG}
+            merchant="amazon"
+          >
+            <a
+              href={affiliateUrl}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg shadow-lg hover:shadow-xl"
+            >
+              Check Price on Amazon →
+            </a>
+          </CTAVisibilityTracker>
+        </div>
+
+        {/* INLINE SECTION: SPECIFICATIONS */}
           <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
             <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
               Complete Specifications & Dimensions
@@ -366,130 +443,97 @@ export default async function EpicureanKitchenCuttingBoardReview() {
             </div>
           </div>
 
-          {/* INLINE SECTION: COMPARISON TABLE */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              Comparison vs. Competitors
-            </h2>
+        {/* SECTION: COMPARISON TABLE */}
+        <ProductComparisonTable
+          title={cuttingBoardComparisonData.title}
+          subtitle={cuttingBoardComparisonData.subtitle}
+          products={cuttingBoardComparisonData.products}
+          comparisonRows={cuttingBoardComparisonData.comparisonRows}
+          highlightedProduct={cuttingBoardComparisonData.highlightedProduct}
+        />
 
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse text-sm">
-                <thead>
-                  <tr className="bg-gray-100">
-                    <th className="p-3 text-left border-b-2 border-gray-300">Feature</th>
-                    <th className="p-3 text-left border-b-2 border-gray-300">Epicurean</th>
-                    <th className="p-3 text-left border-b-2 border-gray-300">John Boos Maple</th>
-                    <th className="p-3 text-left border-b-2 border-gray-300">Bamboo Board</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="p-3 border-b border-gray-200">Dishwasher Safe</td>
-                    <td className="p-3 border-b border-gray-200 font-bold">✓ Yes</td>
-                    <td className="p-3 border-b border-gray-200">✗ Hand wash only</td>
-                    <td className="p-3 border-b border-gray-200">✗ Hand wash only</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 border-b border-gray-200">Material</td>
-                    <td className="p-3 border-b border-gray-200">Wood fiber composite</td>
-                    <td className="p-3 border-b border-gray-200">Solid maple</td>
-                    <td className="p-3 border-b border-gray-200">Bamboo</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="p-3 border-b border-gray-200">Warping Risk</td>
-                    <td className="p-3 border-b border-gray-200 font-bold">None (dimensionally stable)</td>
-                    <td className="p-3 border-b border-gray-200">Low (with proper care)</td>
-                    <td className="p-3 border-b border-gray-200">High (prone to warping)</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 border-b border-gray-200">Maintenance</td>
-                    <td className="p-3 border-b border-gray-200 font-bold">None</td>
-                    <td className="p-3 border-b border-gray-200">Monthly oiling required</td>
-                    <td className="p-3 border-b border-gray-200">Monthly oiling required</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="p-3 border-b border-gray-200">Porosity</td>
-                    <td className="p-3 border-b border-gray-200 font-bold">Non-porous</td>
-                    <td className="p-3 border-b border-gray-200">Porous (can harbor bacteria)</td>
-                    <td className="p-3 border-b border-gray-200">Porous</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 border-b border-gray-200">NSF Certified</td>
-                    <td className="p-3 border-b border-gray-200 font-bold">✓ Yes</td>
-                    <td className="p-3 border-b border-gray-200">✓ Yes</td>
-                    <td className="p-3 border-b border-gray-200">✗ No</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="p-3 border-b border-gray-200">Best For</td>
-                    <td className="p-3 border-b border-gray-200 font-bold">Easy sanitation, zero maintenance</td>
-                    <td className="p-3 border-b border-gray-200">Traditional aesthetics, heavy use</td>
-                    <td className="p-3 border-b border-gray-200">Budget-conscious buyers</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+        {/* POST-COMPARISON CTA */}
+        <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">
+          <p className="text-lg font-medium text-slate-900 mb-4">
+            Ready to upgrade your cutting board?
+          </p>
+          <CTAVisibilityTracker
+            ctaId={`${PRODUCT_SLUG}-post-comparison`}
+            position="comparison_table"
+            productSlug={PRODUCT_SLUG}
+            merchant="amazon"
+          >
+            <a
+              href={affiliateUrl}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg"
+            >
+              Check Price on Amazon →
+            </a>
+          </CTAVisibilityTracker>
+        </div>
 
-            <p className="text-slate-700 mt-6">
-              <strong>My take:</strong> For practical daily use, Epicurean boards are superior. Dishwasher-safe sanitation and zero maintenance trump the traditional appeal of wood. <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800 font-semibold">John Boos boards</Link> are excellent but require dedication to maintenance. Bamboo boards warp too easily.
-            </p>
-          </div>
-
-          {/* SECTION 6: FAQ */}
+        {/* SECTION 6: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 7: WHERE TO BUY */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              {reviewData.whereToBuy.title}
-            </h2>
+        {/* SECTION 7: WHERE TO BUY */}
+        <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
+            {reviewData.whereToBuy.title}
+          </h2>
 
-            <p className="text-slate-600 leading-relaxed mb-6">
-              {reviewData.whereToBuy.introText}
-            </p>
+          <p className="text-slate-600 leading-relaxed mb-6">
+            {reviewData.whereToBuy.introText}
+          </p>
 
-            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
-              <div className="flex flex-col gap-4">
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-                  <p className="text-sm text-slate-600 mb-4">Prime shipping, verified reviews, multiple sizes available</p>
-                </div>
-                <CTAVisibilityTracker
-                  ctaId="where-to-buy-cta"
-                  position="where_to_buy"
-                  productSlug={productData.slug}
-                >
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow sponsored"
-                    className="block w-full text-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 py-3 rounded-xl transition-all hover:scale-105 active:scale-95"
-                  >
-                    Check Price on Amazon →
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-                <p className="text-xs text-slate-500 text-center italic">
-                  As an Amazon Associate, I earn from qualifying purchases. This comes at no extra cost to you.
-                </p>
-              </div>
+          <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
+            <div className="text-center mb-4">
+              <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Available Sizes on Amazon</h3>
+              <p className="text-sm text-slate-600">Prime shipping available on all sizes</p>
             </div>
 
-            <p className="text-sm text-slate-500 mt-6 italic">
-              {reviewData.whereToBuy.disclaimer}
+            {/* Size Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+              {sizeOptions.map((option, index) => (
+                <CTAVisibilityTracker
+                  key={index}
+                  ctaId={`where-to-buy-size-${option.label.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
+                  position="where_to_buy"
+                  productSlug={PRODUCT_SLUG}
+                  merchant="amazon"
+                >
+                  <a
+                    href={option.link}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className={`block text-center p-3 rounded-lg border-2 transition-all hover:scale-105 ${
+                      option.label.includes('Reviewed')
+                        ? 'border-orange-500 bg-white hover:bg-orange-100'
+                        : 'border-gray-200 bg-white hover:border-orange-300 hover:bg-orange-50'
+                    }`}
+                  >
+                    <span className="block text-sm font-semibold text-slate-900">{option.size}</span>
+                    <span className={`block text-xs ${option.label.includes('Reviewed') ? 'text-orange-700 font-medium' : 'text-slate-500'}`}>
+                      {option.label}
+                    </span>
+                  </a>
+                </CTAVisibilityTracker>
+              ))}
+            </div>
+
+            <p className="text-xs text-slate-600 text-center mt-4">
+              As an Amazon Associate, I earn from qualifying purchases.
             </p>
           </div>
+
+          <p className="text-sm text-slate-500 mt-6 italic">
+            {reviewData.whereToBuy.disclaimer}
+          </p>
+        </div>
 
           {/* SECTION 8: EMAIL CAPTURE */}
           <EmailCaptureSection />
@@ -532,18 +576,31 @@ export default async function EpicureanKitchenCuttingBoardReview() {
             products={reviewData.relatedProducts.products}
           />
 
-          {/* SECTION 11: AUTHOR BIO */}
-          <AuthorBio />
+        {/* SECTION 11: AUTHOR BIO */}
+        <AuthorBio />
 
-        </div>
-      </div>
+      </ReviewLayout>
+      {/* ========================================
+          END: ReviewLayout
+          ======================================== */}
+
+      {/* Product view tracking - at bottom to avoid blocking first paint */}
+      <ProductViewTrackerWrapper
+        slug={PRODUCT_SLUG}
+        name={productData.name}
+        tier={reviewData.metadata.tier as 1 | 2 | 3}
+        testingPeriod={reviewData.tracking.testingPeriod}
+        rating={productData.expertRating ?? reviewData.hero.rating}
+        hook={reviewData.tracking.hook}
+        category={productData.category}
+      />
 
       {/* STICKY MOBILE CTA */}
       <StickyMobileCTAWrapper
         productName={productData.name}
         affiliateUrl={affiliateUrl}
         merchant="amazon"
-        productSlug={productData.slug}
+        productSlug={PRODUCT_SLUG}
       />
     </>
   )

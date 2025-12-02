@@ -5,13 +5,31 @@
  * Sources: Nothing But Knives, TechGearLab, Amazon reviews, manufacturer specs
  */
 
-export const knifeSetComparisonData = {
-  products: [
+import { getProductsBySlugs, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+
+/**
+ * Fetch knife set comparison data from Supabase
+ * Returns the comparison table structure with live affiliate links
+ */
+export async function getKnifeSetComparison() {
+  // Fetch all 4 knife set products from database
+  const products = await getProductsBySlugs([
+    'wusthof-classic-ikon-16-piece',
+    'zwilling-professional-s-18-piece',
+    'shun-premier-15-piece',
+    'global-20-piece-knife-set'
+  ])
+
+  // Map database products to comparison table structure
+  // Note: Static specs are kept here since they're not in the database
+  const comparisonProducts = [
     // WÜSTHOF CLASSIC IKON 16-PIECE - The Featured Product
     {
       name: 'Classic Ikon 16-Piece',
       brand: 'Wüsthof',
-      affiliateLink: 'https://amzn.to/3XdVcdu',
+      affiliateLink: products.find(p => p.slug === 'wusthof-classic-ikon-16-piece')
+        ? getPrimaryAffiliateLink(products.find(p => p.slug === 'wusthof-classic-ikon-16-piece')!)
+        : '#',
 
       // Knife set-specific fields
       steelType: 'X50CrMoV15 German',
@@ -39,7 +57,9 @@ export const knifeSetComparisonData = {
     {
       name: 'Professional S 18-Piece',
       brand: 'Zwilling',
-      affiliateLink: 'https://www.anrdoezrs.net/links/101557027/type/dlg/https://www.zwilling.com/us/zwilling-professional-s-18-pc-knife-block-set-natural-35617-100/35617-100-0.html',
+      affiliateLink: products.find(p => p.slug === 'zwilling-professional-s-18-piece')
+        ? getPrimaryAffiliateLink(products.find(p => p.slug === 'zwilling-professional-s-18-piece')!)
+        : '#',
 
       steelType: 'Special Formula German (280+ years)',
       construction: 'SIGMAFORGE precision forged, full tang',
@@ -65,7 +85,9 @@ export const knifeSetComparisonData = {
     {
       name: 'Premier 15-Piece',
       brand: 'Shun',
-      affiliateLink: 'https://amzn.to/4ohkqmr',
+      affiliateLink: products.find(p => p.slug === 'shun-premier-15-piece')
+        ? getPrimaryAffiliateLink(products.find(p => p.slug === 'shun-premier-15-piece')!)
+        : '#',
 
       steelType: 'VG-MAX core + 68-layer Damascus cladding',
       construction: 'Handcrafted (100+ steps per knife)',
@@ -91,7 +113,9 @@ export const knifeSetComparisonData = {
     {
       name: '20-Piece Set',
       brand: 'Global',
-      affiliateLink: 'https://amzn.to/49x4gl2',
+      affiliateLink: products.find(p => p.slug === 'global-20-piece-knife-set')
+        ? getPrimaryAffiliateLink(products.find(p => p.slug === 'global-20-piece-knife-set')!)
+        : '#',
 
       steelType: 'Cromova 18 Japanese',
       construction: 'One-piece seamless (blade + handle)',
@@ -112,144 +136,143 @@ export const knifeSetComparisonData = {
       bestFor: 'Lightweight precision, maximum hygiene',
       priceTier: 'premium' as const,
     },
-  ],
+  ]
 
-  highlightedProduct: 'Classic Ikon 16-Piece', // Which product to highlight with orange border
-
-  // Additional context for the comparison section
-  title: 'Compare Premium Knife Sets',
-  subtitle: 'See how the Wüsthof Classic Ikon stacks up against top competitors',
-
-  // Define which fields to compare and their display labels
-  comparisonRows: [
-    { label: 'Steel Type', field: 'steelType' },
-    { label: 'Construction', field: 'construction' },
-    { label: 'Rockwell Hardness', field: 'rockwellHardness' },
-    { label: 'Blade Angle', field: 'bladeAngle' },
-    { label: 'Handle Material', field: 'handleMaterial' },
-    { label: 'Bolster Type', field: 'bolsterType' },
-    { label: 'Weight', field: 'weight' },
-    { label: 'Made In', field: 'madeIn' },
-    { label: 'Pieces Included', field: 'piecesIncluded' },
-    { label: 'Steak Knives', field: 'steakKnives' },
-    { label: 'Durability', field: 'durability' },
-    { label: 'Warranty', field: 'warranty' },
-    { label: 'Professional Use', field: 'proUse', format: 'proUse' },
-    { label: 'Edge Technology', field: 'edgeTechnology' },
-    { label: 'Key Advantage', field: 'keyAdvantage' },
-    { label: 'Best For', field: 'bestFor' },
-    { label: 'Price Tier', field: 'priceTier', format: 'priceTier' },
-  ],
-
-  // Research notes
-  researchNotes: {
-    date: 'November 23, 2025',
-    researchTime: '3 hours',
-    sources: [
-      'Nothing But Knives - Wüsthof Classic Ikon Review (October 2024)',
-      'Nothing But Knives - Zwilling Professional S Review (June 2021)',
-      'Nothing But Knives - Shun Premier Review (July 2022)',
-      'TechGearLab - Best Kitchen Knife Sets of 2025 (March 2025)',
-      'Kitchen Knife Guru - Shun Premier Analysis (June 2024)',
-      'Steamy Kitchen - Wüsthof Classic Ikon Review (March 2017)',
-      'Borough Kitchen - Classic vs Ikon Differences (August 2024)',
-      'Amazon customer reviews (100+ analyzed across all products)',
-      'Manufacturer websites (Wüsthof.com, Zwilling.com, Shun, Global)',
-      'Reddit r/Cooking, r/AskCulinary, r/Chefit discussions',
+  return {
+    products: comparisonProducts,
+    highlightedProduct: 'Classic Ikon 16-Piece', // Which product to highlight with orange border
+    title: 'Compare Premium Knife Sets',
+    subtitle: 'See how the Wüsthof Classic Ikon stacks up against top competitors',
+    comparisonRows: [
+      { label: 'Steel Type', field: 'steelType' },
+      { label: 'Construction', field: 'construction' },
+      { label: 'Rockwell Hardness', field: 'rockwellHardness' },
+      { label: 'Blade Angle', field: 'bladeAngle' },
+      { label: 'Handle Material', field: 'handleMaterial' },
+      { label: 'Bolster Type', field: 'bolsterType' },
+      { label: 'Weight', field: 'weight' },
+      { label: 'Made In', field: 'madeIn' },
+      { label: 'Pieces Included', field: 'piecesIncluded' },
+      { label: 'Steak Knives', field: 'steakKnives' },
+      { label: 'Durability', field: 'durability' },
+      { label: 'Warranty', field: 'warranty' },
+      { label: 'Professional Use', field: 'proUse', format: 'proUse' },
+      { label: 'Edge Technology', field: 'edgeTechnology' },
+      { label: 'Key Advantage', field: 'keyAdvantage' },
+      { label: 'Best For', field: 'bestFor' },
+      { label: 'Price Tier', field: 'priceTier', format: 'priceTier' },
     ],
-    keyFindings: [
-      'Wüsthof Ikon occupies "Goldilocks" position - not as delicate as Shun, more refined than Zwilling, warmer than Global',
-      'Half bolster (Wüsthof) allows full-length sharpening throughout lifetime - major differentiator vs. Zwilling full bolster',
-      'PEtec technology delivers measurable 20% sharper edge with 2x retention vs. standard German knives',
-      'Zwilling offers 8 steak knives vs. Wüsthof\'s 4 - significant for entertaining',
-      'Shun\'s free lifetime sharpening service adds ongoing value over product lifetime',
-      'Global\'s seamless one-piece construction genuinely superior for hygiene (no crevices)',
-      'Professional use varies: German knives (Wüsthof, Zwilling) are commercial workhorses; Japanese knives (Shun, Global) are professionals\' precision tools',
-      'Edge retention: Harder steel (Shun 60-61 HRC) should hold edge longer, but users report Wüsthof PEtec at 58 HRC gets better longevity - composition matters as much as hardness',
-      'Handle material strongly impacts user preference: PakkaWood (warm, grippy) vs. synthetic (practical, durable) vs. all-metal (modern, polarizing)',
+  }
+}
+
+// Research notes (kept for reference)
+export const researchNotes = {
+  date: 'November 23, 2025',
+  researchTime: '3 hours',
+  sources: [
+    'Nothing But Knives - Wüsthof Classic Ikon Review (October 2024)',
+    'Nothing But Knives - Zwilling Professional S Review (June 2021)',
+    'Nothing But Knives - Shun Premier Review (July 2022)',
+    'TechGearLab - Best Kitchen Knife Sets of 2025 (March 2025)',
+    'Kitchen Knife Guru - Shun Premier Analysis (June 2024)',
+    'Steamy Kitchen - Wüsthof Classic Ikon Review (March 2017)',
+    'Borough Kitchen - Classic vs Ikon Differences (August 2024)',
+    'Amazon customer reviews (100+ analyzed across all products)',
+    'Manufacturer websites (Wüsthof.com, Zwilling.com, Shun, Global)',
+    'Reddit r/Cooking, r/AskCulinary, r/Chefit discussions',
+  ],
+  keyFindings: [
+    'Wüsthof Ikon occupies "Goldilocks" position - not as delicate as Shun, more refined than Zwilling, warmer than Global',
+    'Half bolster (Wüsthof) allows full-length sharpening throughout lifetime - major differentiator vs. Zwilling full bolster',
+    'PEtec technology delivers measurable 20% sharper edge with 2x retention vs. standard German knives',
+    'Zwilling offers 8 steak knives vs. Wüsthof\'s 4 - significant for entertaining',
+    'Shun\'s free lifetime sharpening service adds ongoing value over product lifetime',
+    'Global\'s seamless one-piece construction genuinely superior for hygiene (no crevices)',
+    'Professional use varies: German knives (Wüsthof, Zwilling) are commercial workhorses; Japanese knives (Shun, Global) are professionals\' precision tools',
+    'Edge retention: Harder steel (Shun 60-61 HRC) should hold edge longer, but users report Wüsthof PEtec at 58 HRC gets better longevity - composition matters as much as hardness',
+    'Handle material strongly impacts user preference: PakkaWood (warm, grippy) vs. synthetic (practical, durable) vs. all-metal (modern, polarizing)',
+  ],
+  competitiveAnalysis: {
+    whereWusthofWins: [
+      'Superior ergonomics - half bolster with contoured POM handles universally praised as most comfortable',
+      'Full-length sharpening capability - half bolster allows entire blade edge to be maintained throughout lifetime',
+      'Professional kitchen standard - "easy answer" recommended by line cooks and chefs per Nothing But Knives',
+      'PEtec edge technology - proprietary treatment delivers measurable performance advantage',
+      'Complete set value - all 15 block slots filled with matching pieces, includes fully forged steak knives',
+      'Lifetime durability track record - users commonly report 15-20+ years of heavy use',
+      'Best compromise - tougher than Shun (won\'t chip), more refined than Zwilling, warmer than Global',
     ],
-    competitiveAnalysis: {
-      whereWusthofWins: [
-        'Superior ergonomics - half bolster with contoured POM handles universally praised as most comfortable',
-        'Full-length sharpening capability - half bolster allows entire blade edge to be maintained throughout lifetime',
-        'Professional kitchen standard - "easy answer" recommended by line cooks and chefs per Nothing But Knives',
-        'PEtec edge technology - proprietary treatment delivers measurable performance advantage',
-        'Complete set value - all 15 block slots filled with matching pieces, includes fully forged steak knives',
-        'Lifetime durability track record - users commonly report 15-20+ years of heavy use',
-        'Best compromise - tougher than Shun (won\'t chip), more refined than Zwilling, warmer than Global',
+    whereCompetitorsWin: {
+      zwilling: [
+        'More steak knives (8 vs. 4) - better for entertaining',
+        'Extra expansion slots in block - allows building custom collection',
+        'Lower price point ($800-900 vs. $1,000+) - 15-20% less expensive',
+        'Traditional aesthetic - classic three-rivet styling appeals to purists',
+        'Officially dishwasher safe (though hand wash still recommended)',
       ],
-      whereCompetitorsWin: {
-        zwilling: [
-          'More steak knives (8 vs. 4) - better for entertaining',
-          'Extra expansion slots in block - allows building custom collection',
-          'Lower price point ($800-900 vs. $1,000+) - 15-20% less expensive',
-          'Traditional aesthetic - classic three-rivet styling appeals to purists',
-          'Officially dishwasher safe (though hand wash still recommended)',
-        ],
-        shun: [
-          'Superior sharpness - 60-61 HRC vs. 58 HRC holds sharper edge',
-          'Aesthetic beauty - Damascus pattern with tsuchime finish objectively more striking',
-          'Lighter weight - significantly lighter, less fatigue for precision work',
-          'Free lifetime sharpening - mail-in service adds ongoing value',
-          'Food release - hammered tsuchime finish improves food release from blade',
-          'More specialized knives - includes boning/fillet, nakiri, longer slicing knife',
-        ],
-        global: [
-          'Most comprehensive set - 20 pieces vs. competitors\' 15-18',
-          'Ultimate hygiene - seamless one-piece eliminates bacteria-harboring crevices',
-          'Lightest weight - maximum agility for delicate work',
-          'Unique design - distinctive aesthetic prevents "borrowing" in kitchens',
-          '6 steak knives - more than Wüsthof\'s 4',
-          'Lower price than Shun - $600-800 less for comprehensive set',
-        ],
-      },
+      shun: [
+        'Superior sharpness - 60-61 HRC vs. 58 HRC holds sharper edge',
+        'Aesthetic beauty - Damascus pattern with tsuchime finish objectively more striking',
+        'Lighter weight - significantly lighter, less fatigue for precision work',
+        'Free lifetime sharpening - mail-in service adds ongoing value',
+        'Food release - hammered tsuchime finish improves food release from blade',
+        'More specialized knives - includes boning/fillet, nakiri, longer slicing knife',
+      ],
+      global: [
+        'Most comprehensive set - 20 pieces vs. competitors\' 15-18',
+        'Ultimate hygiene - seamless one-piece eliminates bacteria-harboring crevices',
+        'Lightest weight - maximum agility for delicate work',
+        'Unique design - distinctive aesthetic prevents "borrowing" in kitchens',
+        '6 steak knives - more than Wüsthof\'s 4',
+        'Lower price than Shun - $600-800 less for comprehensive set',
+      ],
     },
-    buyerDecisionMatrix: [
-      {
-        need: 'Best all-around professional workhorse',
-        recommendation: 'Wüsthof Ikon',
-        reason: 'Perfect balance of durability, comfort, performance, and professional pedigree. Half bolster is key feature for lifetime value.',
-      },
-      {
-        need: 'Traditional German knife, budget-conscious',
-        recommendation: 'Zwilling Professional S',
-        reason: '90% of Wüsthof quality for 20% less money. Extra steak knives. Full bolster for classic feel.',
-      },
-      {
-        need: 'Precision slicing, artistic cooking, careful user',
-        recommendation: 'Shun Premier',
-        reason: 'Hardest, sharpest, most beautiful. Best for delicate work. Requires commitment to proper care.',
-      },
-      {
-        need: 'Lightweight agility, maximum hygiene',
-        recommendation: 'Global 20-Piece',
-        reason: 'Lightest weight, seamless hygiene, comprehensive set. Unique aesthetic. Best for smaller hands.',
-      },
-      {
-        need: 'Best for beginners transitioning to premium',
-        recommendation: 'Wüsthof Ikon',
-        reason: 'Forgiving durability, comfortable handles, will last through skill progression. Resists abuse better than Japanese options.',
-      },
-      {
-        need: 'Professional line cook / restaurant kitchen',
-        recommendation: 'Wüsthof Ikon or Zwilling',
-        reason: 'Both handle commercial kitchen abuse. Wüsthof edges ahead on ergonomics for long shifts.',
-      },
-      {
-        need: 'Home chef who entertains frequently',
-        recommendation: 'Zwilling Professional S',
-        reason: '8 steak knives vs. 4 makes difference for dinner parties. Extra block slots allow expansion.',
-      },
-      {
-        need: 'Collector / knife enthusiast',
-        recommendation: 'Shun Premier',
-        reason: 'Most visually impressive. Damascus patterns make each knife unique. Display-worthy aesthetics.',
-      },
-    ],
-    uncertainties: [
-      'Exact long-term durability timelines vary by use intensity - estimates based on user reports',
-      'Amazon ratings and review counts fluctuate - captured November 23, 2025 snapshot',
-      'Shun VG-MAX edge retention claims vs. user reports suggest brittleness may offset hardness benefits',
-    ],
   },
+  buyerDecisionMatrix: [
+    {
+      need: 'Best all-around professional workhorse',
+      recommendation: 'Wüsthof Ikon',
+      reason: 'Perfect balance of durability, comfort, performance, and professional pedigree. Half bolster is key feature for lifetime value.',
+    },
+    {
+      need: 'Traditional German knife, budget-conscious',
+      recommendation: 'Zwilling Professional S',
+      reason: '90% of Wüsthof quality for 20% less money. Extra steak knives. Full bolster for classic feel.',
+    },
+    {
+      need: 'Precision slicing, artistic cooking, careful user',
+      recommendation: 'Shun Premier',
+      reason: 'Hardest, sharpest, most beautiful. Best for delicate work. Requires commitment to proper care.',
+    },
+    {
+      need: 'Lightweight agility, maximum hygiene',
+      recommendation: 'Global 20-Piece',
+      reason: 'Lightest weight, seamless hygiene, comprehensive set. Unique aesthetic. Best for smaller hands.',
+    },
+    {
+      need: 'Best for beginners transitioning to premium',
+      recommendation: 'Wüsthof Ikon',
+      reason: 'Forgiving durability, comfortable handles, will last through skill progression. Resists abuse better than Japanese options.',
+    },
+    {
+      need: 'Professional line cook / restaurant kitchen',
+      recommendation: 'Wüsthof Ikon or Zwilling',
+      reason: 'Both handle commercial kitchen abuse. Wüsthof edges ahead on ergonomics for long shifts.',
+    },
+    {
+      need: 'Home chef who entertains frequently',
+      recommendation: 'Zwilling Professional S',
+      reason: '8 steak knives vs. 4 makes difference for dinner parties. Extra block slots allow expansion.',
+    },
+    {
+      need: 'Collector / knife enthusiast',
+      recommendation: 'Shun Premier',
+      reason: 'Most visually impressive. Damascus patterns make each knife unique. Display-worthy aesthetics.',
+    },
+  ],
+  uncertainties: [
+    'Exact long-term durability timelines vary by use intensity - estimates based on user reports',
+    'Amazon ratings and review counts fluctuate - captured November 23, 2025 snapshot',
+    'Shun VG-MAX edge retention claims vs. user reports suggest brittleness may offset hardness benefits',
+  ],
 }

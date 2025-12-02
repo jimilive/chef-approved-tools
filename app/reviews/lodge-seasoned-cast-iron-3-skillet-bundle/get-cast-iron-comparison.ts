@@ -3,12 +3,29 @@
  * Only three brands offer complete 8", 10", 12" skillet sets on Amazon
  */
 
-export function getCastIronComparison() {
+import { getProductsBySlugs, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+
+/**
+ * Fetch cast iron comparison data from Supabase
+ * Returns the comparison table structure with live affiliate links
+ */
+export async function getCastIronComparison() {
+  // Fetch all 3 cast iron set products from database
+  const products = await getProductsBySlugs([
+    'lodge-seasoned-cast-iron-3-skillet-bundle',
+    'utopia-kitchen-cast-iron-set',
+    'cuisinel-cast-iron-set'
+  ])
+
+  // Map database products to comparison table structure
+  // Note: Static specs are kept here since they're not in the database
   const comparisonProducts = [
     {
       name: 'Lodge 3-Skillet Set',
       brand: 'Lodge',
-      affiliateLink: 'https://amzn.to/4qwcAaV',
+      affiliateLink: products.find(p => p.slug === 'lodge-seasoned-cast-iron-3-skillet-bundle')
+        ? getPrimaryAffiliateLink(products.find(p => p.slug === 'lodge-seasoned-cast-iron-3-skillet-bundle')!)
+        : '#',
       madeIn: '🇺🇸 Tennessee, USA',
       durability: '20+ years',
       proUse: 'standard' as const,
@@ -20,7 +37,9 @@ export function getCastIronComparison() {
     {
       name: 'Utopia Kitchen Set',
       brand: 'Utopia Kitchen',
-      affiliateLink: 'https://amzn.to/3KxBF4X',
+      affiliateLink: products.find(p => p.slug === 'utopia-kitchen-cast-iron-set')
+        ? getPrimaryAffiliateLink(products.find(p => p.slug === 'utopia-kitchen-cast-iron-set')!)
+        : '#',
       madeIn: 'China',
       durability: '10-15 years',
       proUse: 'home-only' as const,
@@ -32,7 +51,9 @@ export function getCastIronComparison() {
     {
       name: 'Cuisinel Set',
       brand: 'Cuisinel',
-      affiliateLink: 'https://amzn.to/4pIWdGO',
+      affiliateLink: products.find(p => p.slug === 'cuisinel-cast-iron-set')
+        ? getPrimaryAffiliateLink(products.find(p => p.slug === 'cuisinel-cast-iron-set')!)
+        : '#',
       madeIn: 'China',
       durability: '10-15 years',
       proUse: 'home-only' as const,

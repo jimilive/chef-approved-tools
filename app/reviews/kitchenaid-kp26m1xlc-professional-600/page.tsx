@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink, getAllAffiliateLinks } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
+import { getReviewGitDates } from '@/lib/git-dates'
+import { getTierBadge } from '@/lib/editorial-metadata'
 import { getReviewMetadata } from '@/data/metadata'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
@@ -10,7 +12,9 @@ import MultiVendorCTA from '@/components/review/MultiVendorCTA'
 import {
   ReviewHero,
   TestingResultsGrid,
+  TestingStory,
   PerformanceAnalysis,
+  RealWorldUseCases,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -25,7 +29,9 @@ import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './kitchenaid-kp26m1xlc-professional-600-data'
-import { standMixerComparisonData } from './stand-mixer-comparison-data'
+import { getStandMixerComparison } from './stand-mixer-comparison-data'
+
+const PRODUCT_SLUG = 'kitchenaid-kp26m1xlc-professional-600'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -104,11 +110,21 @@ function processInlineLinks(text: string): (string | JSX.Element)[] {
 
 export default async function KitchenAidProfessional600ReviewPage() {
   // Get product data from Supabase
-  const product = await getProductBySlug(reviewData.productSlug)
+  const product = await getProductBySlug(PRODUCT_SLUG)
+
+  // Get git dates for this review
+  const gitDates = getReviewGitDates(PRODUCT_SLUG)
+
+  // Get tier badge
+  const tierBadge = getTierBadge(PRODUCT_SLUG)
 
   if (!product) {
-    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+    throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
+
+  // Get comparison data with live affiliate links from database
+  const standMixerComparisonData = await getStandMixerComparison()
+
   const productData = product
 
   // ===== STRATEGIC AFFILIATE LINK SELECTION =====
@@ -131,19 +147,9 @@ export default async function KitchenAidProfessional600ReviewPage() {
   return (
     <>
     <div className="min-h-screen bg-gray-50">
-      <ProductViewTrackerWrapper
-        slug={reviewData.productSlug}
-        name={productData.name}
-        tier={reviewData.metadata.tier as 1 | 2 | 3}
-        testingPeriod={reviewData.tracking.testingPeriod}
-        rating={reviewData.hero.rating}
-        hook={reviewData.tracking.hook}
-        category={productData.category}
-      />
-
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ol className="flex space-x-2 text-sm text-gray-500">
             {breadcrumbs.map((crumb, index) => (
               <li key={crumb.name} className="flex items-center">
@@ -161,19 +167,21 @@ export default async function KitchenAidProfessional600ReviewPage() {
         </div>
       </nav>
 
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <article className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* SECTION 1: HERO */}
         <div className="mb-8">
           <ReviewHero
             title={reviewData.hero.title}
             authorName={reviewData.hero.authorName}
             authorCredentials={reviewData.hero.authorCredentials}
-            rating={reviewData.hero.rating}
-            tierBadge={reviewData.hero.tierBadge}
+            rating={productData.expertRating ?? reviewData.hero.rating}
+            tierBadge={tierBadge}
             verdict={reviewData.hero.verdict}
             verdictStrong={reviewData.hero.verdictStrong}
-            publishedDate="November 10, 2025"
-            lastUpdated="November 10, 2025"
+            publishedDate={gitDates.firstPublished}
+            lastUpdated={gitDates.lastUpdated}
+            heroImage={(product.images as any)?.hero}
+            productName={product.name}
             ctaUrl={primaryLink}
             ctaText={reviewData.hero.ctaText}
             customCTA={(
@@ -209,7 +217,15 @@ export default async function KitchenAidProfessional600ReviewPage() {
           />
         </div>
 
-        {/* MID-CONTENT CTA */}
+        {/* SECTION 6: TESTING STORY (E-E-A-T) - Conditional */}
+        {(reviewData as any).testingStory && (
+          <TestingStory
+            title={(reviewData as any).testingStory.title}
+            paragraphs={(reviewData as any).testingStory.paragraphs}
+          />
+        )}
+
+        {/* CTA #2 - MID-CONTENT SOFT LINK */}
         <div className="text-center my-8">
           <CTAVisibilityTracker
             ctaId={`${productData.slug}-mid-content`}
@@ -237,7 +253,16 @@ export default async function KitchenAidProfessional600ReviewPage() {
           }))}
         />
 
-        {/* SECTION 3.5: COMPARISON TABLE */}
+        {/* SECTION 9: REAL-WORLD USE CASES (E-E-A-T) - Conditional */}
+        {(reviewData as any).realWorldUseCases && (
+          <RealWorldUseCases
+            title={(reviewData as any).realWorldUseCases.title}
+            subtitle={(reviewData as any).realWorldUseCases.subtitle}
+            useCases={(reviewData as any).realWorldUseCases.useCases}
+          />
+        )}
+
+        {/* SECTION 10: COMPARISON TABLE */}
         <section className="my-12">
           <h2 className="text-3xl font-bold mb-6 text-slate-900">
             How Does the Professional 600 Compare?
@@ -295,6 +320,28 @@ export default async function KitchenAidProfessional600ReviewPage() {
           perfectFor={reviewData.whoShouldBuy.perfectFor}
           considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
         />
+
+        {/* CTA #4 - AFTER WHO SHOULD BUY (Decision Point) */}
+        <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">
+          <p className="text-lg font-medium text-slate-900 mb-4">
+            Sound like the right fit for your kitchen?
+          </p>
+          <CTAVisibilityTracker
+            ctaId={`${PRODUCT_SLUG}-post-who-should-buy`}
+            position="who_should_buy"
+            productSlug={PRODUCT_SLUG}
+            merchant="kitchenaid_direct"
+          >
+            <a
+              href={primaryLink}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg shadow-lg hover:shadow-xl"
+            >
+              Check Price on KitchenAid →
+            </a>
+          </CTAVisibilityTracker>
+        </div>
 
         {/* SECTION 6: EMAIL CAPTURE */}
         <EmailCaptureSection />
@@ -393,6 +440,17 @@ export default async function KitchenAidProfessional600ReviewPage() {
         />
       </article>
     </div>
+
+    {/* Product view tracking - at bottom to avoid blocking first paint */}
+    <ProductViewTrackerWrapper
+      slug={PRODUCT_SLUG}
+      name={productData.name}
+      tier={reviewData.metadata.tier as 1 | 2 | 3}
+      testingPeriod={reviewData.tracking.testingPeriod}
+      rating={productData.expertRating ?? reviewData.hero.rating}
+      hook={reviewData.tracking.hook}
+      category={productData.category}
+    />
 
     {/* STICKY MOBILE CTA */}
     <StickyMobileCTAWrapper

@@ -4,12 +4,16 @@ import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
+import { getReviewGitDates } from '@/lib/git-dates'
+import { getTierBadge } from '@/lib/editorial-metadata'
 import { getReviewMetadata } from '@/data/metadata'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   ReviewHero,
   TestingResultsGrid,
+  TestingStory,
+  RealWorldUseCases,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -23,7 +27,9 @@ import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './victorinox-fibrox-8-inch-chefs-knife-data'
-import { chefKnifeComparisonData } from './chef-knife-comparison-data'
+import { getChefKnifeComparison } from './chef-knife-comparison-data'
+
+const PRODUCT_SLUG = 'victorinox-fibrox-8-inch-chefs-knife'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -82,11 +88,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function ProductReview() {
   // Get product data from Supabase
-  const product = await getProductBySlug(reviewData.productSlug)
+  const product = await getProductBySlug(PRODUCT_SLUG)
+
+  // Get git dates for this review
+  const gitDates = getReviewGitDates(PRODUCT_SLUG)
+
+  // Get tier badge
+  const tierBadge = getTierBadge(PRODUCT_SLUG)
 
   if (!product) {
-    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+    throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
+
+  // Get comparison data with live affiliate links from database
+  const chefKnifeComparisonData = await getChefKnifeComparison()
 
   // Merge Supabase data with legacy data
   const productData = product ? {
@@ -139,19 +154,8 @@ export default async function ProductReview() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* Product view tracking */}
-      <ProductViewTrackerWrapper
-        slug={productData.slug}
-        name={productData.name}
-        tier={reviewData.metadata.tier as 1 | 2 | 3}
-        testingPeriod={reviewData.tracking.testingPeriod}
-        rating={productData.expertRating}
-        hook={reviewData.tracking.hook}
-        category={productData.category}
-      />
-
       <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-[900px] mx-auto px-5">
+        <div className="max-w-5xl mx-auto px-5">
 
           {/* BREADCRUMBS */}
           <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
@@ -169,12 +173,12 @@ export default async function ProductReview() {
             title={reviewData.hero.title}
             authorName={reviewData.hero.authorName}
             authorCredentials={reviewData.hero.authorCredentials}
-            rating={reviewData.hero.rating}
-            tierBadge={reviewData.hero.tierBadge}
+            rating={productData.expertRating ?? reviewData.hero.rating}
+            tierBadge={tierBadge}
             verdict={reviewData.hero.verdict}
             verdictStrong={reviewData.hero.verdictStrong}
-            publishedDate="November 10, 2025"
-            lastUpdated="November 10, 2025"
+            publishedDate={gitDates.firstPublished}
+            lastUpdated={gitDates.lastUpdated}
             heroImage={(product.images as any)?.hero}
             productName={product.name}
             customCTA={(
@@ -358,6 +362,28 @@ export default async function ProductReview() {
             considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
           />
 
+          {/* CTA #4 - AFTER WHO SHOULD BUY (Decision Point) */}
+          <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">
+            <p className="text-lg font-medium text-slate-900 mb-4">
+              Sound like the right fit for your kitchen?
+            </p>
+            <CTAVisibilityTracker
+              ctaId={`${PRODUCT_SLUG}-post-who-should-buy`}
+              position="who_should_buy"
+              productSlug={PRODUCT_SLUG}
+              merchant="amazon"
+            >
+              <a
+                href={affiliateUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg shadow-lg hover:shadow-xl"
+              >
+                Check Price on Amazon →
+              </a>
+            </CTAVisibilityTracker>
+          </div>
+
           {/* SECTION 7: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
@@ -470,6 +496,17 @@ export default async function ProductReview() {
 
         </div>
       </div>
+
+      {/* Product view tracking - at bottom to avoid blocking first paint */}
+      <ProductViewTrackerWrapper
+        slug={PRODUCT_SLUG}
+        name={productData.name}
+        tier={reviewData.metadata.tier as 1 | 2 | 3}
+        testingPeriod={reviewData.tracking.testingPeriod}
+        rating={productData.expertRating ?? reviewData.hero.rating}
+        hook={reviewData.tracking.hook}
+        category={productData.category}
+      />
 
       {/* STICKY MOBILE CTA */}
       <StickyMobileCTAWrapper
