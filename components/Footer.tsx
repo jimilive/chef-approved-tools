@@ -8,7 +8,7 @@ export default function Footer() {
       { name: 'Knives & Cutting Tools', href: '/knives' },
       { name: 'Cookware & Bakeware', href: '/cookware' },
       { name: 'Small Appliances', href: '/appliances' },
-      { name: 'Moving & Stirring', href: '/moving-stirring' },
+      { name: 'Moving & Stirring Tools', href: '/moving-stirring' },
       { name: 'Prep Tools', href: '/prep-tools' },
       { name: 'Cleaning & Maintenance', href: '/cleaning-maintenance' }
     ],
@@ -56,7 +56,7 @@ export default function Footer() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-sm text-slate-400 no-underline hover:text-white transition-colors"
+                  className="text-sm text-slate-400 no-underline hover:text-white transition-colors whitespace-nowrap"
                 >
                   {link.name}
                 </Link>

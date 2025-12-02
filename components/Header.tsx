@@ -30,10 +30,10 @@ export default function Header() {
   }, [isMobileMenuOpen])
 
   const navigation = [
-    { name: 'Knives & Cutting', href: '/knives', id: 'knives' },
+    { name: 'Knives & Cutting Tools', href: '/knives', id: 'knives' },
     { name: 'Cookware', href: '/cookware', id: 'cookware' },
     { name: 'Appliances', href: '/appliances', id: 'appliances' },
-    { name: 'Moving & Stirring', href: '/moving-stirring', id: 'moving-stirring' },
+    { name: 'Moving & Stirring Tools', href: '/moving-stirring', id: 'moving-stirring' },
     { name: 'Prep Tools', href: '/prep-tools', id: 'prep-tools' },
     { name: 'Cleaning & Maintenance', href: '/cleaning-maintenance', id: 'cleaning-maintenance' },
     { name: 'Blog', href: '/blog', id: 'blog' },
