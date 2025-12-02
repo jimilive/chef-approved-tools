@@ -338,7 +338,7 @@ export function TopProfessionalPicksSection() {
 
 export function FinalCTASection() {
   return (
-    <section className="py-16 bg-orange-800 text-white">
+    <section className="py-16 bg-gradient-to-r from-orange-600 to-red-600 text-white">
       <div className="container max-w-4xl mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Stop Guessing. Start Cooking Like a Chef.
@@ -349,7 +349,7 @@ export function FinalCTASection() {
         </p>
         <a
           href="#get-guide"
-          className="inline-block bg-white text-orange-800 hover:bg-orange-50 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95"
+          className="inline-block bg-white text-orange-600 hover:bg-orange-50 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95"
         >
           Get The Free Guide
         </a>

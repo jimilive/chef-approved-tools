@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -29,15 +30,21 @@ export default function Footer() {
   return (
     <footer className="bg-slate-800 text-slate-200">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-5 py-12">
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-2 lg:grid-cols-[1.75fr_2fr_1fr_1fr] gap-8">
 
           {/* Brand Column */}
-          <div>
+          <div className="lg:pr-8">
             <Link href="/" className="flex items-center gap-2 no-underline mb-4">
-              <span className="text-2xl">👨‍🍳</span>
+              <Image
+                src="/logo.png"
+                alt="Chef Approved Tools"
+                width={40}
+                height={40}
+                className="h-10 w-auto"
+              />
               <span className="text-xl font-bold text-white">
-                Chef<span className="text-orange-600">Approved</span>Tools
+                Chef<span className="text-orange-400">Approved</span>Tools
               </span>
             </Link>
             <p className="text-sm text-slate-400 mb-4 leading-relaxed">
@@ -49,9 +56,9 @@ export default function Footer() {
           </div>
 
           {/* Shop Links */}
-          <div>
+          <div className="lg:pt-3">
             <h3 className="font-bold text-white mb-4">Categories</h3>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2 w-fit">
               {footerLinks.shop.map((link) => (
                 <Link
                   key={link.name}
@@ -65,7 +72,7 @@ export default function Footer() {
           </div>
 
           {/* Resources Links */}
-          <div>
+          <div className="lg:pt-3">
             <h3 className="font-bold text-white mb-4">Resources</h3>
             <div className="flex flex-col gap-2">
               {footerLinks.resources.map((link) => (
@@ -81,7 +88,7 @@ export default function Footer() {
           </div>
 
           {/* Legal Links */}
-          <div>
+          <div className="lg:pt-3 lg:pl-16">
             <h3 className="font-bold text-white mb-4">Legal</h3>
             <div className="flex flex-col gap-2">
               {footerLinks.legal.map((link) => (
