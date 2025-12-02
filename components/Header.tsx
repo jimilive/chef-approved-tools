@@ -31,8 +31,8 @@ export default function Header() {
 
   const navigation = [
     { name: 'Knives & Cutting Tools', href: '/knives', id: 'knives' },
-    { name: 'Cookware', href: '/cookware', id: 'cookware' },
-    { name: 'Appliances', href: '/appliances', id: 'appliances' },
+    { name: 'Cookware & Bakeware', href: '/cookware', id: 'cookware' },
+    { name: 'Small Appliances', href: '/appliances', id: 'appliances' },
     { name: 'Moving & Stirring Tools', href: '/moving-stirring', id: 'moving-stirring' },
     { name: 'Prep Tools', href: '/prep-tools', id: 'prep-tools' },
     { name: 'Cleaning & Maintenance', href: '/cleaning-maintenance', id: 'cleaning-maintenance' },
