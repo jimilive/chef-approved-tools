@@ -5,15 +5,18 @@ export default function Footer() {
   
   const footerLinks = {
     shop: [
-      { name: 'All Products', href: '/products' },
-      { name: 'Knives', href: '/knives' },
-      { name: 'Cookware', href: '/cookware' },
-      { name: 'Appliances', href: '/appliances' }
+      { name: 'Knives & Cutting Tools', href: '/knives' },
+      { name: 'Cookware & Bakeware', href: '/cookware' },
+      { name: 'Small Appliances', href: '/appliances' },
+      { name: 'Moving & Stirring', href: '/moving-stirring' },
+      { name: 'Prep Tools', href: '/prep-tools' },
+      { name: 'Cleaning & Maintenance', href: '/cleaning-maintenance' }
     ],
     resources: [
       { name: 'Buying Guides', href: '/guides' },
-      { name: 'Reviews', href: '/reviews' },
-      { name: 'About & Testing', href: '/about' }
+      { name: 'About', href: '/about' },
+      { name: 'Our Review System', href: '/chef-approved' },
+      { name: 'The Tools That Started It All', href: '/the-tools-that-started-it-all' }
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy-policy' },
@@ -47,8 +50,8 @@ export default function Footer() {
 
           {/* Shop Links */}
           <div>
-            <h3 className="font-bold text-white mb-4">Shop</h3>
-            <div className="flex flex-col gap-2">
+            <h3 className="font-bold text-white mb-4">Categories</h3>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2">
               {footerLinks.shop.map((link) => (
                 <Link
                   key={link.name}
