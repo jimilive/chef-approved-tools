@@ -4,8 +4,12 @@ import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
+import { getReviewGitDates } from '@/lib/git-dates'
+import { getTierBadge } from '@/lib/editorial-metadata'
+import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import AmazonCTA from '@/components/AmazonCTA'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import {
   ReviewHero,
   TestingResultsGrid,
@@ -22,6 +26,9 @@ import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './diamond-crystal-kosher-salt-data'
+import { getSaltComparison } from './salt-comparison-data'
+
+const PRODUCT_SLUG = 'diamond-crystal-kosher-salt'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -29,11 +36,11 @@ export const revalidate = 3600 // 1 hour
 
 // Generate metadata dynamically
 export async function generateMetadata(): Promise<Metadata> {
-  const centralMeta = getReviewMetadata('diamond-crystal-kosher-salt')
-  const product = await getProductBySlug(reviewData.productSlug)
+  const centralMeta = getReviewMetadata(PRODUCT_SLUG)
+  const product = await getProductBySlug(PRODUCT_SLUG)
 
   if (!product) {
-    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+    throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
   const productData = product
 
@@ -79,14 +86,26 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function DiamondCrystalKosherSaltReview() {
   // Get product data from Supabase
-  const product = await getProductBySlug(reviewData.productSlug)
+  const product = await getProductBySlug(PRODUCT_SLUG)
 
   if (!product) {
-    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+    throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
 
+  // Get comparison data with live affiliate links from database
+  const comparisonData = await getSaltComparison()
+
+  // Get git dates for this review
+  const gitDates = getReviewGitDates(PRODUCT_SLUG)
+
+  // Get tier badge from centralized config
+  const tierBadge = getTierBadge(PRODUCT_SLUG)
+
+  // Get category breadcrumb
+  const categoryBreadcrumb = getCategoryBreadcrumb(product.category)
+
   // Merge Supabase data with legacy data (Supabase takes priority, but preserve legacy pros/cons if Supabase is empty)
-  const productData = product ? {
+  const productData = {
     ...reviewData.legacyProductData,
     ...product,
     pros: product.pros && product.pros.length > 0 ? product.pros : reviewData.legacyProductData.pros,
@@ -94,10 +113,10 @@ export default async function DiamondCrystalKosherSaltReview() {
     affiliateLinks: product.affiliateLinks && product.affiliateLinks.length > 0
       ? product.affiliateLinks
       : reviewData.legacyProductData.affiliateLinks
-  } : reviewData.legacyProductData
+  }
 
   // Get primary affiliate link
-  const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
+  const affiliateUrl = getPrimaryAffiliateLink(product)
 
   // Helper function to convert <LINK> tags to affiliate links
   const processInlineLinks = (content: string) => {
@@ -106,7 +125,7 @@ export default async function DiamondCrystalKosherSaltReview() {
     let inLink = false
     let linkCounter = 0
 
-    parts.forEach((part, index) => {
+    parts.forEach((part) => {
       if (part === '<LINK>') {
         inLink = true
       } else if (part === '</LINK>') {
@@ -132,12 +151,18 @@ export default async function DiamondCrystalKosherSaltReview() {
     return elements
   }
 
-  // Generate breadcrumbs
-  const breadcrumbs = [
-    { name: "Home", url: "https://www.chefapprovedtools.com" },
-    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-  ]
+  // Generate breadcrumbs with category
+  const breadcrumbs = categoryBreadcrumb
+    ? [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
+      ]
+    : [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
+      ]
 
   // Generate schemas
   const productSchema = generateProductSchema({
@@ -147,9 +172,7 @@ export default async function DiamondCrystalKosherSaltReview() {
     brand: productData.brand,
     rating: productData.expertRating,
     reviewCount: 1,
-    category: productData.category,
-    dateAdded: productData.dateAdded,
-    lastUpdated: productData.lastUpdated,
+    url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}`,
   })
 
   const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
@@ -189,9 +212,18 @@ export default async function DiamondCrystalKosherSaltReview() {
           <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
-            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-            {' / '}
-            {reviewData.breadcrumb.productName}
+            {categoryBreadcrumb ? (
+              <>
+                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
+                {' / '}
+              </>
+            ) : (
+              <>
+                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+                {' / '}
+              </>
+            )}
+            {productData.name}
           </div>
 
           {/* SECTION 1: HERO */}
@@ -199,42 +231,18 @@ export default async function DiamondCrystalKosherSaltReview() {
             title={reviewData.hero.title}
             authorName={reviewData.hero.authorName}
             authorCredentials={reviewData.hero.authorCredentials}
-            rating={reviewData.hero.rating}
-            tierBadge={reviewData.hero.tierBadge}
+            rating={productData.expertRating ?? reviewData.hero.rating}
+            tierBadge={tierBadge}
             verdict={reviewData.hero.verdict}
             verdictStrong={reviewData.hero.verdictStrong}
-            publishedDate="November 10, 2025"
-            lastUpdated="November 10, 2025"
+            publishedDate={gitDates.firstPublished}
+            lastUpdated={gitDates.lastUpdated}
             customCTA={
-              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
-                <CTAVisibilityTracker
-                  ctaId="hero-cta"
-                  position="above_fold"
-                >
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-                  >
-                    {reviewData.hero.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-                {/* V2: TEXT LINK UNDER BUTTON */}
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-                <p className="text-xs text-slate-700 text-center mt-3">
-                  As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
-                </p>
-              </div>
+              <AmazonCTA
+                productSlug={PRODUCT_SLUG}
+                affiliateUrl={affiliateUrl}
+                position="above_fold"
+              />
             }
           />
 
@@ -252,21 +260,11 @@ export default async function DiamondCrystalKosherSaltReview() {
 
           {/* MID-CONTENT CTA */}
           <div className="text-center my-8">
-            <CTAVisibilityTracker
-              ctaId={`${productData.slug}-mid-content`}
+            <AmazonCTA
+              productSlug={PRODUCT_SLUG}
+              affiliateUrl={affiliateUrl}
               position="mid_article"
-              productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="text-orange-700 hover:text-orange-800 font-medium underline"
-              >
-                → See current Amazon price and reviews
-              </a>
-            </CTAVisibilityTracker>
+            />
           </div>
 
           {/* SECTION 3: PERFORMANCE ANALYSIS */}
@@ -287,6 +285,24 @@ export default async function DiamondCrystalKosherSaltReview() {
             cons={productData.cons}
           />
 
+          {/* COMPARISON TABLE */}
+          <section className="my-12">
+            <ProductComparisonTable
+              title={comparisonData.title}
+              subtitle={comparisonData.subtitle}
+              products={comparisonData.products}
+              comparisonRows={comparisonData.comparisonRows}
+              highlightedProduct={comparisonData.highlightedProduct}
+            />
+
+            {/* POST-COMPARISON CTA */}
+            <AmazonCTA
+              productSlug={PRODUCT_SLUG}
+              affiliateUrl={affiliateUrl}
+              position="comparison_table"
+            />
+          </section>
+
           {/* SECTION 5: WHO SHOULD BUY */}
           <WhoShouldBuyGrid
             title={reviewData.whoShouldBuy.title}
@@ -296,106 +312,40 @@ export default async function DiamondCrystalKosherSaltReview() {
             considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
           />
 
+          {/* CTA - AFTER WHO SHOULD BUY */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="who_should_buy"
+            boxHeading="Sound like the right fit for your kitchen?"
+          />
+
           {/* SECTION 6: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 7: WHERE TO BUY - Inline Section */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              {reviewData.whereToBuy.title}
-            </h2>
-
-            <p className="text-slate-600 leading-relaxed mb-6">
-              {reviewData.whereToBuy.introText}
-            </p>
-
-            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
-              <div className="flex flex-col gap-4">
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-                  <p className="text-sm text-slate-600 mb-4">Prime shipping, Subscribe & Save available, 3-pack option</p>
-                </div>
-                <CTAVisibilityTracker
-                  ctaId="where-to-buy-cta"
-                  position="where_to_buy"
-                  productSlug={productData.slug}
-                >
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow sponsored"
-                    className="block w-full text-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 py-3 rounded-xl transition-all hover:scale-105 active:scale-95"
-                  >
-                    Check Price on Amazon →
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-                <p className="text-xs text-slate-500 text-center italic">
-                  As an Amazon Associate, I earn from qualifying purchases. This comes at no extra cost to you.
-                </p>
-              </div>
-            </div>
-
-            <p className="text-sm text-slate-500 mt-6 italic">
-              {reviewData.whereToBuy.disclaimer}
-            </p>
-          </div>
-
-          {/* SECTION 8: EMAIL CAPTURE */}
+          {/* EMAIL CAPTURE */}
           <EmailCaptureSection />
 
-          {/* SECTION 9: BOTTOM LINE */}
+          {/* BOTTOM LINE */}
           <BottomLineSection
             title={reviewData.bottomLine.title}
-            paragraphs={reviewData.bottomLine.paragraphs.map((para, idx) => (
-              <span key={`bottom-para-${idx}`}>{processInlineLinks(para)}</span>
-            ))}
-            customCTA={
-              <div className="bg-white rounded-xl p-6">
-                <CTAVisibilityTracker
-                  ctaId="bottom-line-cta"
-                  position="final_cta"
-                >
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-                  >
-                    {reviewData.bottomLine.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-                {/* V2: TEXT LINK UNDER BUTTON */}
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-                <p className="text-xs text-slate-700 text-center mt-3">
-                  As an Amazon Associate, I earn from qualifying purchases.
-                </p>
-              </div>
-            }
+            paragraphs={reviewData.bottomLine.paragraphs}
+            ctaText={reviewData.bottomLine.ctaText}
+            ctaUrl={affiliateUrl}
+            productSlug={PRODUCT_SLUG}
           />
 
-          {/* SECTION 10: RELATED PRODUCTS */}
+          {/* FINAL CTA */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="final_cta"
+          />
+
+          {/* RELATED PRODUCTS */}
           <RelatedProductsGrid
             title={reviewData.relatedProducts.title}
             products={reviewData.relatedProducts.products}
@@ -412,7 +362,7 @@ export default async function DiamondCrystalKosherSaltReview() {
         productName={productData.name}
         affiliateUrl={affiliateUrl}
         merchant="amazon"
-        productSlug={productData.slug}
+        productSlug={PRODUCT_SLUG}
       />
     </>
   )
