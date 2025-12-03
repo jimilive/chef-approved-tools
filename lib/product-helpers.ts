@@ -101,7 +101,7 @@ export async function getProductsBySlugs(slugs: string[]): Promise<Product[]> {
 export function getPrimaryAffiliateLink(product: Product): string {
   // Return the first affiliate link that matches the primary affiliate
   const primaryLink = product.affiliateLinks.find(
-    link => link.merchant === product.primaryAffiliate
+    link => link.vendor === product.primaryAffiliate
   )
 
   // Fallback to first available link if primary not found
@@ -111,19 +111,16 @@ export function getPrimaryAffiliateLink(product: Product): string {
 /**
  * Get all affiliate links for a product, sorted by priority
  * @param product - The product object
- * @returns Array of affiliate links with primary first, then alphabetically by merchant
+ * @returns Array of affiliate links with primary first, then alphabetically by vendor
  */
-export function getAllAffiliateLinks(product: Product): Array<{
-  url: string
-  label: string
-  merchant: string
-  is_primary: boolean
-}> {
-  // Sort so primary is first, then alphabetically by merchant
-  return [...product.affiliateLinks].sort((a, b) => {
-    if (a.is_primary && !b.is_primary) return -1
+export function getAllAffiliateLinks(product: Product) {
+  // Sort so primary is first, then alphabetically by vendor
+  return [...product.affiliateLinks].sort((a: any, b: any) => {
+    if (a.primary && !b.primary) return -1
+    if (!a.primary && b.primary) return 1
+    if (a.is_primary && !b.is_primary) return -1 // Fallback for old format
     if (!a.is_primary && b.is_primary) return 1
-    return a.merchant.localeCompare(b.merchant)
+    return (a.vendor || '').localeCompare(b.vendor || '')
   })
 }
 

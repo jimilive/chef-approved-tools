@@ -3,7 +3,7 @@ import { ReactNode } from 'react'
 
 interface ReviewLayoutProps {
   children: ReactNode
-  breadcrumbCategory: string
+  breadcrumbCategory: string | { href: string; label: string }
   breadcrumbTitle: string
 }
 
@@ -50,11 +50,19 @@ export default function ReviewLayout({
         <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
           <Link href="/" className="hover:text-orange-700">Home</Link>
           {' / '}
-          <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-          {' / '}
-          <Link href={`/${breadcrumbCategory.toLowerCase()}`} className="hover:text-orange-700">
-            {breadcrumbCategory}
-          </Link>
+          {typeof breadcrumbCategory === 'string' ? (
+            <>
+              <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+              {' / '}
+              <Link href={`/${breadcrumbCategory.toLowerCase()}`} className="hover:text-orange-700">
+                {breadcrumbCategory}
+              </Link>
+            </>
+          ) : (
+            <Link href={breadcrumbCategory.href} className="hover:text-orange-700">
+              {breadcrumbCategory.label}
+            </Link>
+          )}
           {' / '}
           <span>{breadcrumbTitle}</span>
         </div>

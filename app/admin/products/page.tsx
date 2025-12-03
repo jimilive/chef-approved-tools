@@ -11,7 +11,7 @@ interface Product {
   category: string
   affiliate_links: Array<{
     url: string
-    merchant: string
+    vendor: string
     tag?: string
     lastChecked: string
   }>
@@ -192,11 +192,11 @@ export default function AdminProductsPage() {
                         <div className="grid grid-cols-2 gap-3 mb-2">
                           <div>
                             <label className="block text-xs text-gray-600 mb-1">
-                              Merchant
+                              Vendor
                             </label>
                             <select
-                              value={link.merchant}
-                              onChange={(e) => updateAffiliateLink(index, 'merchant', e.target.value)}
+                              value={link.vendor}
+                              onChange={(e) => updateAffiliateLink(index, 'vendor', e.target.value)}
                               className="border rounded px-2 py-1 w-full text-sm"
                             >
                               <option value="amazon">Amazon</option>
@@ -272,7 +272,7 @@ export default function AdminProductsPage() {
                     <div className="space-y-1">
                       {product.affiliate_links.map((link, index) => (
                         <div key={index} className="text-sm bg-gray-50 p-2 rounded">
-                          <span className="font-medium text-blue-600">{link.merchant}</span>:{' '}
+                          <span className="font-medium text-blue-600">{link.vendor}</span>:{' '}
                           <span className="font-mono text-xs">{link.url}</span>
                         </div>
                       ))}

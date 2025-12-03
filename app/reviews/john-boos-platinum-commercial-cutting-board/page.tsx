@@ -4,12 +4,15 @@ import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
+import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   ReviewHero,
   TestingResultsGrid,
+  TestingStory,
   PerformanceAnalysis,
+  RealWorldUseCases,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -18,11 +21,13 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import AuthorBio from '@/components/review/AuthorBio'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import { getReviewMetadata } from '@/data/metadata'
 import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './john-boos-platinum-commercial-cutting-board-data'
+import { getJohnBoosComparison } from './get-john-boos-comparison'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -83,6 +88,26 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
   // Get product data from Supabase
   const product = await getProductBySlug(reviewData.productSlug)
 
+  // Get comparison data with live affiliate links from database
+  const johnBoosComparisonData = await getJohnBoosComparison()
+
+  // Get affiliate URLs for size variants from the product's affiliateLinks
+  const link24x18 = product?.affiliateLinks.find(link => link.tag === '24x18')
+  const link20x15 = product?.affiliateLinks.find(link => link.tag === '20x15')
+  const link18x12 = product?.affiliateLinks.find(link => link.tag === '18x12')
+
+  // Use tagged links if available, otherwise use primary
+  const affiliateUrl24x18 = link24x18?.url || (product ? getPrimaryAffiliateLink(product) : '#')
+  const affiliateUrl20x15 = link20x15?.url || ''
+  const affiliateUrl18x12 = link18x12?.url || ''
+
+  // John Boos size options with affiliate links from database
+  const sizeOptions = [
+    { size: '18" × 12"', link: affiliateUrl18x12, label: 'Small', tag: '18x12' },
+    { size: '20" × 15"', link: affiliateUrl20x15, label: 'Medium', tag: '20x15' },
+    { size: '24" × 18"', link: affiliateUrl24x18, label: 'Large (Reviewed)', tag: '24x18' },
+  ].filter(option => option.link) // Only show sizes that have affiliate links
+
   // Helper function to process inline affiliate links
   const processInlineLinks = (content: string) => {
     const parts = content.split(/(<LINK>|<\/LINK>)/)
@@ -134,12 +159,21 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
   // Get primary affiliate link
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
 
+  // Get category breadcrumb from Supabase category
+  const categoryBreadcrumb = getCategoryBreadcrumb(productData.category)
+
   // Generate breadcrumbs
-  const breadcrumbs = [
-    { name: "Home", url: "https://www.chefapprovedtools.com" },
-    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-  ]
+  const breadcrumbs = categoryBreadcrumb
+    ? [
+        { name: "Home", url: "https://www.chefapprovedtools.com" },
+        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+      ]
+    : [
+        { name: "Home", url: "https://www.chefapprovedtools.com" },
+        { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+      ]
 
   // Generate schemas
   const productSchema = generateProductSchema({
@@ -192,8 +226,17 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
           <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
-            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-            {' / '}
+            {categoryBreadcrumb ? (
+              <>
+                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
+                {' / '}
+              </>
+            ) : (
+              <>
+                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+                {' / '}
+              </>
+            )}
             {reviewData.breadcrumb.productName}
           </div>
 
@@ -211,26 +254,55 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
             ctaUrl={affiliateUrl}
             ctaText={reviewData.hero.ctaText}
             customCTA={(
-              <div>
-                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
+              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
+                {/* Size Selection */}
+                {sizeOptions.length > 0 && (
+                  <>
+                    <h3 className="text-sm font-semibold text-slate-700 mb-3 text-center">Choose Your Size:</h3>
+                    <div className="grid grid-cols-3 gap-2 mb-4">
+                      {sizeOptions.map((option, index) => (
+                        <CTAVisibilityTracker
+                          key={index}
+                          ctaId={`hero-size-${option.tag}`}
+                          position="above_fold"
+                          productSlug={reviewData.productSlug}
+                          merchant="amazon"
+                        >
+                          <a
+                            href={option.link}
+                            target="_blank"
+                            rel="noopener noreferrer sponsored"
+                            className={`block text-center p-3 rounded-lg border-2 transition-all hover:scale-105 ${
+                              option.label.includes('Reviewed')
+                                ? 'border-orange-500 bg-orange-50 hover:bg-orange-100'
+                                : 'border-gray-200 hover:border-orange-300 hover:bg-orange-50'
+                            }`}
+                          >
+                            <span className="block text-sm font-semibold text-slate-900">{option.size}</span>
+                            <span className={`block text-xs ${option.label.includes('Reviewed') ? 'text-orange-700 font-medium' : 'text-slate-500'}`}>
+                              {option.label}
+                            </span>
+                          </a>
+                        </CTAVisibilityTracker>
+                      ))}
+                    </div>
+                  </>
+                )}
+
+                {/* Main CTA */}
+                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold" productSlug={reviewData.productSlug} merchant="amazon">
                   <a
                     href={affiliateUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
+                    className="block w-full text-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105"
                   >
                     {reviewData.hero.ctaText}
                   </a>
                 </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
+
+                <p className="text-xs text-slate-600 text-center mt-4">
+                  As an Amazon Associate, I earn from qualifying purchases.
                 </p>
               </div>
             )}
@@ -271,6 +343,14 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
             minorConsiderations={reviewData.testingResults.minorConsiderations}
           />
 
+          {/* SECTION 2.5: TESTING STORY (E-E-A-T) - Conditional */}
+          {(reviewData as any).testingStory && (
+            <TestingStory
+              title={(reviewData as any).testingStory.title}
+              paragraphs={(reviewData as any).testingStory.paragraphs}
+            />
+          )}
+
           {/* MID-CONTENT CTA */}
           <div className="text-center my-8">
             <CTAVisibilityTracker
@@ -298,6 +378,15 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
               content: processInlineLinks(section.content)
             }))}
           />
+
+          {/* SECTION 3.5: REAL-WORLD USE CASES (E-E-A-T) - Conditional */}
+          {(reviewData as any).realWorldUseCases && (
+            <RealWorldUseCases
+              title={(reviewData as any).realWorldUseCases.title}
+              subtitle={(reviewData as any).realWorldUseCases.subtitle}
+              useCases={(reviewData as any).realWorldUseCases.useCases}
+            />
+          )}
 
           {/* PRODUCT IMAGE 2 - CLICKABLE */}
           <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
@@ -339,66 +428,66 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
             considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
           />
 
+          {/* CTA - AFTER WHO SHOULD BUY (Decision Point) */}
+          <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">
+            <p className="text-lg font-medium text-slate-900 mb-4">
+              Sound like the right fit for your kitchen?
+            </p>
+            <CTAVisibilityTracker
+              ctaId={`${reviewData.productSlug}-post-who-should-buy`}
+              position="who_should_buy"
+              productSlug={reviewData.productSlug}
+              merchant="amazon"
+            >
+              <a
+                href={affiliateUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg shadow-lg hover:shadow-xl"
+              >
+                Check Price on Amazon →
+              </a>
+            </CTAVisibilityTracker>
+          </div>
+
+          {/* SECTION: COMPARISON TABLE */}
+          <ProductComparisonTable
+            title={johnBoosComparisonData.title}
+            subtitle={johnBoosComparisonData.subtitle}
+            products={johnBoosComparisonData.products}
+            comparisonRows={johnBoosComparisonData.comparisonRows}
+            highlightedProduct={johnBoosComparisonData.highlightedProduct}
+          />
+
+          {/* POST-COMPARISON CTA */}
+          <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">
+            <p className="text-lg font-medium text-slate-900 mb-4">
+              Ready to upgrade your cutting board?
+            </p>
+            <CTAVisibilityTracker
+              ctaId={`${reviewData.productSlug}-post-comparison`}
+              position="comparison_table"
+              productSlug={reviewData.productSlug}
+              merchant="amazon"
+            >
+              <a
+                href={affiliateUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg"
+              >
+                Check Price on Amazon →
+              </a>
+            </CTAVisibilityTracker>
+          </div>
+
           {/* SECTION 6: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 7: WHERE TO BUY */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              {reviewData.whereToBuy.title}
-            </h2>
-
-            <p className="text-slate-600 leading-relaxed mb-6">
-              {reviewData.whereToBuy.introText}
-            </p>
-
-            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
-              <div className="text-center mb-4">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-                <p className="text-sm text-slate-900 mb-4">Prime shipping, verified reviews, easy returns</p>
-              </div>
-
-              <CTAVisibilityTracker
-                ctaId="where-to-buy-cta"
-                position="mid_article"
-                productSlug={reviewData.productSlug}
-                merchant="amazon"
-              >
-                <a
-                  href={affiliateUrl}
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                  className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-                >
-                  Check Price on Amazon →
-                </a>
-              </CTAVisibilityTracker>
-
-              <p className="text-center mt-3 text-sm">
-                <a
-                  href={affiliateUrl}
-                  className="text-orange-700 hover:text-orange-800 underline font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                >
-                  → View {productData.name} on Amazon
-                </a>
-              </p>
-
-              <p className="text-xs text-slate-700 text-center mt-3">
-                As an Amazon Associate, I earn from qualifying purchases.
-              </p>
-            </div>
-
-            <p className="text-sm text-slate-600 mt-6 italic">
-              {reviewData.whereToBuy.disclaimer}
-            </p>
-          </div>
-
-          {/* SECTION 8: EMAIL CAPTURE */}
+          {/* SECTION 7: EMAIL CAPTURE */}
           <EmailCaptureSection />
 
           {/* SECTION 9: BOTTOM LINE */}

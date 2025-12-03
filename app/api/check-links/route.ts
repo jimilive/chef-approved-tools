@@ -128,7 +128,7 @@ export async function GET(request: Request) {
       const links = Array.isArray(product.affiliateLinks) ? product.affiliateLinks : []
 
       for (const link of links) {
-        if (link.url && link.merchant === 'amazon') {
+        if (link.url && link.vendor === 'amazon') {
           const result = await checkAffiliateLink(
             link.url,
             product.slug,
@@ -213,7 +213,7 @@ export async function POST(request: Request) {
         const links = Array.isArray(product.affiliateLinks) ? product.affiliateLinks : []
 
         for (const link of links) {
-          if (link.url && link.merchant === 'amazon') {
+          if (link.url && link.vendor === 'amazon') {
             const result = await checkAffiliateLink(
               link.url,
               product.slug,

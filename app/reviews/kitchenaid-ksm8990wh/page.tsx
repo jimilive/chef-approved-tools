@@ -116,7 +116,7 @@ export default async function KitchenAidCommercialReviewPage() {
   const trustLink = reviewData.strategicLinks.tertiary.url
 
   // Get Amazon affiliate link from database
-  const amazonLink = product?.affiliateLinks.find(link => link.merchant === 'amazon')?.url || ''
+  const amazonLink = product?.affiliateLinks.find(link => link.vendor === 'amazon')?.url || ''
 
   // Get all affiliate links for multi-vendor CTAs
   const affiliateLinks = product ? getAllAffiliateLinks(product) : []

@@ -6,6 +6,7 @@ import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getReviewMetadata } from '@/data/metadata'
+import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
@@ -103,13 +104,25 @@ export default async function EpicureanKitchenCuttingBoardReview() {
   // Get comparison data with live affiliate links from database
   const cuttingBoardComparisonData = await getCuttingBoardComparison()
 
-  // Epicurean size options with affiliate links
+  // Get affiliate URLs for size variants from the product's affiliateLinks
+  const link8x6 = product?.affiliateLinks.find(link => link.tag === '8x6')
+  const link11x9 = product?.affiliateLinks.find(link => link.tag === '11x9')
+  const link14x11 = product?.affiliateLinks.find(link => link.tag === '14x11')
+  const link17x13 = product?.affiliateLinks.find(link => link.tag === '17x13')
+
+  // Use tagged links if available, otherwise use primary
+  const affiliateUrl8x6 = link8x6?.url || ''
+  const affiliateUrl11x9 = link11x9?.url || ''
+  const affiliateUrl14x11 = link14x11?.url || (product ? getPrimaryAffiliateLink(product) : '#')
+  const affiliateUrl17x13 = link17x13?.url || ''
+
+  // Epicurean size options with affiliate links from database
   const sizeOptions = [
-    { size: '8" × 6"', link: 'https://amzn.to/48LkYMw', label: 'Small' },
-    { size: '11.5" × 9"', link: 'https://amzn.to/3KwvCxw', label: 'Medium' },
-    { size: '14.5" × 11.25"', link: 'https://amzn.to/4ouAe5h', label: 'Large (Reviewed)' },
-    { size: '17.5" × 13"', link: 'https://amzn.to/3Mi0sKK', label: 'XL' },
-  ]
+    { size: '8" × 6"', link: affiliateUrl8x6, label: 'Small', tag: '8x6' },
+    { size: '11.5" × 9"', link: affiliateUrl11x9, label: 'Medium', tag: '11x9' },
+    { size: '14.5" × 11.25"', link: affiliateUrl14x11, label: 'Large (Reviewed)', tag: '14x11' },
+    { size: '17.5" × 13"', link: affiliateUrl17x13, label: 'XL', tag: '17x13' },
+  ].filter(option => option.link) // Only show sizes that have affiliate links
 
   // Helper function to process inline affiliate links
   const processInlineLinks = (content: string) => {
@@ -162,12 +175,21 @@ export default async function EpicureanKitchenCuttingBoardReview() {
   // Get primary affiliate link
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
 
+  // Get category breadcrumb from Supabase category
+  const categoryBreadcrumb = getCategoryBreadcrumb(productData.category)
+
   // Generate breadcrumbs
-  const breadcrumbs = [
-    { name: "Home", url: "https://www.chefapprovedtools.com" },
-    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-  ]
+  const breadcrumbs = categoryBreadcrumb
+    ? [
+        { name: "Home", url: "https://www.chefapprovedtools.com" },
+        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+      ]
+    : [
+        { name: "Home", url: "https://www.chefapprovedtools.com" },
+        { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+      ]
 
   // Generate schemas
   const productSchema = generateProductSchema({
@@ -206,7 +228,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
           NEW: ReviewLayout wraps everything
           ======================================== */}
       <ReviewLayout
-        breadcrumbCategory="Kitchen Tools"
+        breadcrumbCategory={categoryBreadcrumb || "Reviews"}
         breadcrumbTitle={reviewData.breadcrumb.productName}
       >
 
@@ -233,7 +255,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
                 {sizeOptions.map((option, index) => (
                   <CTAVisibilityTracker
                     key={index}
-                    ctaId={`hero-size-${option.label.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
+                    ctaId={`hero-size-${option.tag}`}
                     position="above_fold"
                     productSlug={PRODUCT_SLUG}
                     merchant="amazon"
@@ -480,62 +502,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
             faqs={reviewData.faq.items}
           />
 
-        {/* SECTION 7: WHERE TO BUY */}
-        <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-            {reviewData.whereToBuy.title}
-          </h2>
-
-          <p className="text-slate-600 leading-relaxed mb-6">
-            {reviewData.whereToBuy.introText}
-          </p>
-
-          <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
-            <div className="text-center mb-4">
-              <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Available Sizes on Amazon</h3>
-              <p className="text-sm text-slate-600">Prime shipping available on all sizes</p>
-            </div>
-
-            {/* Size Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-              {sizeOptions.map((option, index) => (
-                <CTAVisibilityTracker
-                  key={index}
-                  ctaId={`where-to-buy-size-${option.label.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-                  position="where_to_buy"
-                  productSlug={PRODUCT_SLUG}
-                  merchant="amazon"
-                >
-                  <a
-                    href={option.link}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className={`block text-center p-3 rounded-lg border-2 transition-all hover:scale-105 ${
-                      option.label.includes('Reviewed')
-                        ? 'border-orange-500 bg-white hover:bg-orange-100'
-                        : 'border-gray-200 bg-white hover:border-orange-300 hover:bg-orange-50'
-                    }`}
-                  >
-                    <span className="block text-sm font-semibold text-slate-900">{option.size}</span>
-                    <span className={`block text-xs ${option.label.includes('Reviewed') ? 'text-orange-700 font-medium' : 'text-slate-500'}`}>
-                      {option.label}
-                    </span>
-                  </a>
-                </CTAVisibilityTracker>
-              ))}
-            </div>
-
-            <p className="text-xs text-slate-600 text-center mt-4">
-              As an Amazon Associate, I earn from qualifying purchases.
-            </p>
-          </div>
-
-          <p className="text-sm text-slate-500 mt-6 italic">
-            {reviewData.whereToBuy.disclaimer}
-          </p>
-        </div>
-
-          {/* SECTION 8: EMAIL CAPTURE */}
+          {/* SECTION 7: EMAIL CAPTURE */}
           <EmailCaptureSection />
 
           {/* SECTION 9: BOTTOM LINE */}

@@ -5,9 +5,10 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 interface MultiVendorCTAProps {
   affiliateLinks: Array<{
     url: string
-    label: string
-    merchant: string
-    is_primary: boolean
+    label?: string
+    vendor: string
+    is_primary?: boolean
+    primary?: boolean
   }>
   productName: string
   ctaId: string
@@ -74,17 +75,17 @@ export default function MultiVendorCTA({
   return (
     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-center">
       {affiliateLinks.map((link, index) => {
-        const isPrimary = link.is_primary
-        const buttonText = getButtonText(link.merchant, link.label, isPrimary)
-        const merchantLabel = getMerchantLabel(link.merchant, link.label)
+        const isPrimary = link.is_primary || link.primary || false
+        const buttonText = getButtonText(link.vendor, link.label || '', isPrimary)
+        const merchantLabel = getMerchantLabel(link.vendor, link.label || '')
 
         return (
           <CTAVisibilityTracker
-            key={`${ctaId}-${link.merchant}-${index}`}
-            ctaId={`${ctaId}-${link.merchant}`}
+            key={`${ctaId}-${link.vendor}-${index}`}
+            ctaId={`${ctaId}-${link.vendor}`}
             position={position}
             productSlug={productSlug}
-            merchant={link.merchant}
+            merchant={link.vendor}
           >
             <a
               href={link.url}

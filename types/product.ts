@@ -38,10 +38,9 @@ export interface Vendor {
 
 export interface AffiliateLink {
   url: string;
-  merchant: string;
-  label: string;
-  is_primary: boolean;
-  tag?: string;
+  vendor: string;  // e.g., 'amazon', 'direct'
+  primary?: boolean;  // Marks the primary affiliate link
+  tag?: string;  // For size variants: '24x18', '8x6', etc.
   lastChecked?: string;
 }
 
