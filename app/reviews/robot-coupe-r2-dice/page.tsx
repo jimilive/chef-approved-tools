@@ -12,24 +12,25 @@ import {
 } from '@/components/review'
 import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import AuthorBio from '@/components/review/AuthorBio'
-import PriceDisplay from '@/components/PriceDisplay'
 import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
+import AmazonCTA from '@/components/AmazonCTA'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import type { Metadata } from 'next';
+import type { Metadata } from 'next'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
+import { getReviewGitDates } from '@/lib/git-dates'
+import { getTierBadge } from '@/lib/editorial-metadata'
+import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import { reviewData } from './robot-coupe-r2-dice-data'
+import { getFoodProcessorComparison } from './food-processor-comparison-data'
+
+const PRODUCT_SLUG = 'robot-coupe-r2-dice'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
-
-
-// Use data from centralized data file
-const legacyProductData = reviewData.legacyProductData
-const faqData = reviewData.faq.items
 
 export async function generateMetadata(): Promise<Metadata> {
   const centralMeta = getReviewMetadata('robot-coupe-r2-dice')
@@ -82,32 +83,50 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function RobotCoupeR2DiceReview() {
   // Get product data from Supabase
-  const product = await getProductBySlug('robot-coupe-r2-dice')
+  const product = await getProductBySlug(PRODUCT_SLUG)
 
   if (!product) {
-    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
-  }
-  if (!product) {
-    throw new Error('Product not found: robot-coupe-r2-dice')
+    throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
 
-  // Get primary affiliate link from Supabase product data
-  const affiliateUrl = getPrimaryAffiliateLink(product)
+  // Get comparison data with live affiliate links from database
+  const comparisonData = await getFoodProcessorComparison()
+
+  // Get git dates for this review
+  const gitDates = getReviewGitDates(PRODUCT_SLUG)
+
+  // Get tier badge from centralized config
+  const tierBadge = getTierBadge(PRODUCT_SLUG)
+
+  // Get category breadcrumb
+  const categoryBreadcrumb = getCategoryBreadcrumb(product.category)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = {
-    ...legacyProductData,
+    ...reviewData.legacyProductData,
     ...product,
-    // Use legacy affiliateLinks to maintain compatibility with component expectations
-    affiliateLinks: legacyProductData.affiliateLinks
+    pros: product.pros && product.pros.length > 0 ? product.pros : reviewData.legacyProductData.pros,
+    cons: product.cons && product.cons.length > 0 ? product.cons : reviewData.legacyProductData.cons,
+    affiliateLinks: product.affiliateLinks && product.affiliateLinks.length > 0
+      ? product.affiliateLinks
+      : reviewData.legacyProductData.affiliateLinks
   }
 
-  const breadcrumbs = [
-    { name: "Home", url: "https://www.chefapprovedtools.com" },
-    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-    { name: "Appliances", url: "https://www.chefapprovedtools.com/appliances" },
-    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-  ]
+  // Get primary affiliate link
+  const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
+
+  // Generate breadcrumbs with category
+  const breadcrumbs = categoryBreadcrumb
+    ? [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+      ]
+    : [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+      ]
 
   return (
     <>
@@ -128,11 +147,18 @@ export default async function RobotCoupeR2DiceReview() {
           <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
-            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-            {' / '}
-            <Link href="/appliances" className="hover:text-orange-700">Appliances</Link>
-            {' / '}
-            {reviewData.breadcrumb.productName}
+            {categoryBreadcrumb ? (
+              <>
+                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
+                {' / '}
+              </>
+            ) : (
+              <>
+                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+                {' / '}
+              </>
+            )}
+            {productData.name}
           </div>
 
           {/* SECTION 1: HERO */}
@@ -140,40 +166,18 @@ export default async function RobotCoupeR2DiceReview() {
             title={reviewData.header.title}
             authorName={reviewData.header.author}
             authorCredentials="45 Years Cooking Experience"
-            rating={reviewData.header.expertRating}
-            tierBadge={{
-              text: "Tier 1: Years of Professional Use",
-              icon: "⭐"
-            }}
+            rating={productData.expertRating ?? reviewData.header.expertRating}
+            tierBadge={tierBadge}
             verdict={reviewData.professionalVerdict.paragraphs[0]}
             verdictStrong="essential commercial equipment"
-            publishedDate="November 10, 2025"
-            lastUpdated="November 10, 2025"
-            ctaUrl={affiliateUrl}
-            ctaText="Check Price on Amazon"
+            publishedDate={gitDates.firstPublished}
+            lastUpdated={gitDates.lastUpdated}
             customCTA={
-              <div>
-                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
-                  >
-                    Check Price on Amazon
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-              </div>
+              <AmazonCTA
+                productSlug={PRODUCT_SLUG}
+                affiliateUrl={affiliateUrl}
+                position="above_fold"
+              />
             }
           />
 
@@ -305,33 +309,13 @@ export default async function RobotCoupeR2DiceReview() {
           </div>
         </section>
 
-        {/* Mid-Article CTA - NEW */}
-        <div className="bg-blue-50 p-5 my-6 rounded-md border-l-4 border-blue-600 text-center">
-          <p className="my-2.5 text-lg font-bold">
-            Convinced this is right for your operation?
-          </p>
-          <CTAVisibilityTracker
-            ctaId={`review-${productData.slug}-mid_article`}
+        {/* Mid-Article CTA */}
+        <div className="text-center my-8">
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
             position="mid_article"
-            productSlug={productData.slug}
-            merchant="amazon"
-          >
-            <a
-              href={affiliateUrl}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
-              className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
-            >
-              Check Current Availability →
-            </a>
-          </CTAVisibilityTracker>
-          {/* Text link fallback */}
-          <p className="text-center mt-3 text-sm">
-            <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
-              target="_blank" rel="noopener noreferrer sponsored">
-              → Check Price on Amazon
-            </a>
-          </p>
+          />
         </div>
 
         {/* User Reviews */}
@@ -435,15 +419,21 @@ export default async function RobotCoupeR2DiceReview() {
           cons={productData.cons}
         />
 
-        {/* Pricing and Where to Buy */}
-        <section className="mb-8" id="pricing">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Current Pricing & Where to Buy</h2>
-          <PriceDisplay
-            productName={productData.name}
-            dealStatus={productData.dealStatus}
-            dealText="Professional equipment - consider used/refurbished options for better value"
-            affiliateLinks={productData.affiliateLinks}
-            lastUpdated="Updated weekly"
+        {/* COMPARISON TABLE */}
+        <section className="my-12">
+          <ProductComparisonTable
+            title={comparisonData.title}
+            subtitle={comparisonData.subtitle}
+            products={comparisonData.products}
+            comparisonRows={comparisonData.comparisonRows}
+            highlightedProduct={comparisonData.highlightedProduct}
+          />
+
+          {/* POST-COMPARISON CTA */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="comparison_table"
           />
         </section>
 
@@ -452,6 +442,14 @@ export default async function RobotCoupeR2DiceReview() {
           title="Who Should (and Shouldn't) Buy This Processor"
           perfectFor={reviewData.whoShouldBuy.idealFor}
           considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
+        />
+
+        {/* CTA - AFTER WHO SHOULD BUY */}
+        <AmazonCTA
+          productSlug={PRODUCT_SLUG}
+          affiliateUrl={affiliateUrl}
+          position="who_should_buy"
+          boxHeading="Sound like the right fit for your kitchen?"
         />
 
         {/* FAQ Section */}
@@ -502,46 +500,12 @@ export default async function RobotCoupeR2DiceReview() {
 
           </div>
 
-          {/* STRONG FINAL CTA */}
-          <div className="bg-yellow-100 p-8 my-8 rounded-lg text-center border-4 border-yellow-400">
-
-            <h3 className="mt-0 text-3xl">
-              Ready to Transform Your Prep Operations?
-            </h3>
-
-            <p className="text-lg my-5">
-              Check current availability and invest in equipment that pays for itself:
-            </p>
-
-            <CTAVisibilityTracker
-              ctaId={`review-${productData.slug}-final_cta`}
-              position="final_cta"
-              productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold px-10 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl text-lg"
-              >
-                Check Price on Amazon
-              </a>
-            </CTAVisibilityTracker>
-
-            {/* Text link fallback */}
-            <p className="text-center mt-3 text-sm">
-              <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
-                target="_blank" rel="noopener noreferrer sponsored">
-                → View {productData.name} on Amazon
-              </a>
-            </p>
-
-            <p className="text-sm text-gray-600 mt-5">
-              💡 Commercial equipment suppliers will be added soon
-            </p>
-
-          </div>
+          {/* FINAL CTA */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="final_cta"
+          />
         </section>
 
         {/* Content Upgrade Email Capture */}
@@ -622,7 +586,7 @@ export default async function RobotCoupeR2DiceReview() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateFAQSchema(faqData))
+            __html: JSON.stringify(generateFAQSchema(reviewData.faq.items))
           }}
         />
         </div>
