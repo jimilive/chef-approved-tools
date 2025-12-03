@@ -8,6 +8,7 @@ import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import AmazonCTA from '@/components/AmazonCTA'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import {
@@ -261,21 +262,11 @@ export default async function LodgeCastIronReviewPage() {
 
           {/* CTA #2 - SOFT TEXT LINK */}
           <div className="text-center my-8">
-            <CTAVisibilityTracker
-              ctaId={`${productData.slug}-mid-content`}
-              position="mid_article"
+            <AmazonCTA
               productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="text-orange-700 hover:text-orange-800 font-medium underline"
-              >
-                → See current Amazon price and reviews
-              </a>
-            </CTAVisibilityTracker>
+              affiliateUrl={affiliateUrl}
+              position="mid_article"
+            />
           </div>
 
           {/* SECTION 3: PERFORMANCE ANALYSIS */}
@@ -412,29 +403,12 @@ export default async function LodgeCastIronReviewPage() {
           />
 
           {/* CTA #3 - POST-COMPARISON (CRITICAL CONVERSION POINT) */}
-          <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">
-            <p className="text-lg font-medium text-slate-900 mb-4">
-              Ready to invest in cookware that lasts a lifetime?
-            </p>
-            <CTAVisibilityTracker
-              ctaId={`${reviewData.productSlug}-post-comparison`}
-              position="comparison_table"
-              productSlug={reviewData.productSlug}
-              merchant="amazon"
-            >
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg shadow-lg hover:shadow-xl"
-              >
-                Check Price on Amazon →
-              </a>
-            </CTAVisibilityTracker>
-            <p className="text-sm text-slate-600 mt-3">
-              Lodge costs $10-30 more but lasts 2x longer—that&apos;s actually cheaper per year of use.
-            </p>
-          </div>
+          <AmazonCTA
+            productSlug={reviewData.productSlug}
+            affiliateUrl={affiliateUrl}
+            position="comparison_table"
+            boxHeading="Ready to invest in cookware that lasts a lifetime?"
+          />
 
           {/* SECTION 4: PROS & CONS */}
           <ProsConsGrid
@@ -455,26 +429,12 @@ export default async function LodgeCastIronReviewPage() {
           />
 
           {/* CTA #4 - AFTER WHO SHOULD BUY (Decision Point) */}
-          <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">
-            <p className="text-lg font-medium text-slate-900 mb-4">
-              Sound like the right fit for your kitchen?
-            </p>
-            <CTAVisibilityTracker
-              ctaId={`${reviewData.productSlug}-post-who-should-buy`}
-              position="who_should_buy"
-              productSlug={reviewData.productSlug}
-              merchant="amazon"
-            >
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg shadow-lg hover:shadow-xl"
-              >
-                Check Price on Amazon →
-              </a>
-            </CTAVisibilityTracker>
-          </div>
+          <AmazonCTA
+            productSlug={reviewData.productSlug}
+            affiliateUrl={affiliateUrl}
+            position="who_should_buy"
+            boxHeading="Sound like the right fit for your kitchen?"
+          />
 
           {/* SECTION 15: FAQ */}
           <FAQSection
@@ -494,38 +454,12 @@ export default async function LodgeCastIronReviewPage() {
               </p>
             ))}
             customCTA={
-              <div className="bg-white rounded-xl p-6">
-                <CTAVisibilityTracker
-                  ctaId={`${reviewData.productSlug}-bottom-line-cta`}
-                  position="final_cta"
+              <div className="text-center">
+                <AmazonCTA
                   productSlug={reviewData.productSlug}
-                  merchant="amazon"
-                >
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-                  >
-                    {reviewData.bottomLine.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-
-                {/* Text link under button */}
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-
-                <p className="text-xs text-slate-700 text-center mt-3">
-                  As an Amazon Associate, I earn from qualifying purchases.
-                </p>
+                  affiliateUrl={affiliateUrl}
+                  position="final_cta"
+                />
               </div>
             }
           />

@@ -52,15 +52,34 @@ export default function ProductComparisonTable({
     }
   }
 
-  // Helper to detect affiliate network from URL
+  // Helper to detect affiliate network from URL and generate consistent button text
   const getButtonText = (affiliateLink: string) => {
     if (affiliateLink.includes('amazon.com') || affiliateLink.includes('amzn.to')) {
-      return 'Check Price on Amazon →'
+      return 'Check Price on Amazon'
     }
     if (affiliateLink.includes('kitchenaid.com') || affiliateLink.includes('dpbolvw.net') || affiliateLink.includes('jdoqocy.com')) {
-      return 'View Price on KitchenAid →'
+      return 'Check Price on KitchenAid'
     }
-    return 'Check Current Price →'
+    if (affiliateLink.includes('zwilling.com') || affiliateLink.includes('anrdoezrs.net')) {
+      return 'Check Price on Zwilling'
+    }
+    if (affiliateLink.includes('vitamix.com')) {
+      return 'Check Price on Vitamix'
+    }
+    if (affiliateLink.includes('henckels.com')) {
+      return 'Check Price on Henckels'
+    }
+    if (affiliateLink.includes('lecreuset.com')) {
+      return 'Check Price on Le Creuset'
+    }
+    if (affiliateLink.includes('lodge.com') || affiliateLink.includes('lodgecastiron.com')) {
+      return 'Check Price on Lodge'
+    }
+    // DEVELOPER NOTE: If you see "Check Price" without a merchant name,
+    // ASK SCOTT to add the merchant detection for this affiliate link.
+    // We want all CTAs to say "Check Price on [Merchant]" for consistency.
+    console.warn(`Unknown merchant for affiliate link: ${affiliateLink}. Ask Scott to add merchant detection.`)
+    return 'Check Price'
   }
 
   // Helper to detect merchant from affiliate URL

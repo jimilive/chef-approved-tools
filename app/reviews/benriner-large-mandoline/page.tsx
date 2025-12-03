@@ -6,6 +6,7 @@ import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import AmazonCTA from '@/components/AmazonCTA'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import SizeSelector from '@/components/SizeSelector'
 import {
@@ -265,21 +266,11 @@ export default async function BenrinerLargeMandolineReview() {
 
           {/* CTA #2 - MID-CONTENT SOFT LINK */}
           <div className="text-center my-8">
-            <CTAVisibilityTracker
-              ctaId={`${productData.slug}-mid-content`}
-              position="mid_article"
+            <AmazonCTA
               productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="text-orange-700 hover:text-orange-800 font-medium underline"
-              >
-                → See current Amazon price and reviews
-              </a>
-            </CTAVisibilityTracker>
+              affiliateUrl={affiliateUrl}
+              position="mid_article"
+            />
           </div>
 
           {/* SECTION 3: PERFORMANCE ANALYSIS */}
@@ -328,26 +319,11 @@ export default async function BenrinerLargeMandolineReview() {
             />
 
             {/* POST-COMPARISON CTA */}
-            <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">
-              <p className="text-lg font-medium text-slate-900 mb-4">
-                Ready to upgrade your kitchen?
-              </p>
-              <CTAVisibilityTracker
-                ctaId={`${productData.slug}-post-comparison`}
-                position="comparison_table"
-                productSlug={productData.slug}
-                merchant="amazon"
-              >
-                <a
-                  href={affiliateUrl}
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                  className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg"
-                >
-                  Check Price on Amazon →
-                </a>
-              </CTAVisibilityTracker>
-            </div>
+            <AmazonCTA
+              productSlug={productData.slug}
+              affiliateUrl={affiliateUrl}
+              position="comparison_table"
+            />
           </section>
 
           {/* SECTION 5: PROS & CONS */}
@@ -383,26 +359,12 @@ export default async function BenrinerLargeMandolineReview() {
           )}
 
           {/* CTA #4 - AFTER WHO SHOULD BUY (Decision Point) */}
-          <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">
-            <p className="text-lg font-medium text-slate-900 mb-4">
-              Sound like the right fit for your kitchen?
-            </p>
-            <CTAVisibilityTracker
-              ctaId={`${PRODUCT_SLUG}-post-who-should-buy`}
-              position="who_should_buy"
-              productSlug={PRODUCT_SLUG}
-              merchant="amazon"
-            >
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg shadow-lg hover:shadow-xl"
-              >
-                Check Price on Amazon →
-              </a>
-            </CTAVisibilityTracker>
-          </div>
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="who_should_buy"
+            boxHeading="Sound like the right fit for your kitchen?"
+          />
 
           {/* SECTION 7: FAQ */}
           <FAQSection

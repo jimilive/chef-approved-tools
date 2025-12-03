@@ -2,6 +2,9 @@
 
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
+type CTAPosition = 'above_fold' | 'mid_article' | 'comparison_table' | 'who_should_buy' | 'final_cta' | 'where_to_buy' | 'sticky_mobile'
+type CTAVariant = 'button' | 'textLink' | 'styledBox'
+
 interface MultiVendorCTAProps {
   affiliateLinks: Array<{
     url: string
@@ -12,43 +15,65 @@ interface MultiVendorCTAProps {
   }>
   productName: string
   ctaId: string
-  position: 'above_fold' | 'mid_article' | 'final_cta' | 'where_to_buy'
+  position: CTAPosition
   productSlug?: string
+  variant?: CTAVariant
+  boxHeading?: string
 }
 
 /**
  * MultiVendorCTA Component
  *
  * Displays multiple affiliate buying options (Amazon, manufacturer sites, etc.)
- * in a professional button row on product review pages.
+ * on product review pages.
+ *
+ * For single Amazon-only products, use AmazonCTA instead (simpler API).
+ *
+ * Variants:
+ * - button: Bold gradient buttons (default for hero, final CTA)
+ * - textLink: Subtle underlined links with arrow prefix (mid-article)
+ * - styledBox: Buttons inside an orange highlight box (comparison table, who should buy)
  *
  * Features:
  * - Primary button gets prominent gradient styling
  * - Secondary buttons get subtle outline styling
  * - Responsive: horizontal row on desktop, stacked on mobile
  * - Each button wrapped in CTAVisibilityTracker for analytics
- * - Merchant name in button text (e.g., "Buy on Amazon →")
+ * - Smart defaults by position
  */
 export default function MultiVendorCTA({
   affiliateLinks,
   productName,
   ctaId,
   position,
-  productSlug
+  productSlug,
+  variant,
+  boxHeading = 'Ready to upgrade your kitchen?'
 }: MultiVendorCTAProps) {
   // If no links, don't render anything
   if (!affiliateLinks || affiliateLinks.length === 0) {
     return null
   }
 
+  // Default variants by position
+  const defaultVariants: Record<CTAPosition, CTAVariant> = {
+    above_fold: 'button',
+    mid_article: 'textLink',
+    comparison_table: 'styledBox',
+    who_should_buy: 'styledBox',
+    final_cta: 'button',
+    where_to_buy: 'button',
+    sticky_mobile: 'button'
+  }
+
+  const resolvedVariant = variant || defaultVariants[position]
+
   // Helper: Generate merchant display name
   const getMerchantLabel = (merchant: string, label?: string): string => {
-    // Use provided label first
     if (label && label !== merchant) {
       return label
     }
 
-    // Otherwise map merchant code to display name
     const merchantMap: Record<string, string> = {
       'amazon': 'Amazon',
       'vitamix_cj': 'Vitamix.com',
@@ -61,23 +86,43 @@ export default function MultiVendorCTA({
     return merchantMap[merchant] || 'Manufacturer Site'
   }
 
-  // Helper: Generate button text
+  // Helper: Generate button text based on variant
   const getButtonText = (merchant: string, label: string, isPrimary: boolean): string => {
     const merchantLabel = getMerchantLabel(merchant, label)
 
+    if (resolvedVariant === 'textLink') {
+      return `Check price on ${merchantLabel}`
+    }
+
     if (isPrimary) {
-      return `Buy on ${merchantLabel} →`
+      return `Check Price on ${merchantLabel}`
     } else {
-      return `Also on ${merchantLabel} →`
+      return `Also on ${merchantLabel}`
     }
   }
 
-  return (
+  // Styling constants
+  const primaryButtonStyles = "inline-block w-full sm:w-auto text-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105 whitespace-nowrap"
+  const secondaryButtonStyles = "inline-block w-full sm:w-auto text-center border-2 border-gray-300 hover:border-orange-600 bg-white text-gray-700 hover:text-orange-700 font-semibold px-6 py-3 rounded-xl text-base transition-all hover:scale-105 whitespace-nowrap"
+  const textLinkStyles = "text-orange-700 hover:text-orange-800 font-medium underline"
+
+  const renderLinks = () => (
     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center justify-center">
       {affiliateLinks.map((link, index) => {
         const isPrimary = link.is_primary || link.primary || false
         const buttonText = getButtonText(link.vendor, link.label || '', isPrimary)
         const merchantLabel = getMerchantLabel(link.vendor, link.label || '')
+
+        let linkClassName: string
+        let displayText: string
+
+        if (resolvedVariant === 'textLink') {
+          linkClassName = textLinkStyles
+          displayText = `→ ${buttonText}`
+        } else {
+          linkClassName = isPrimary ? primaryButtonStyles : secondaryButtonStyles
+          displayText = buttonText
+        }
 
         return (
           <CTAVisibilityTracker
@@ -91,18 +136,28 @@ export default function MultiVendorCTA({
               href={link.url}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className={
-                isPrimary
-                  ? "inline-block w-full sm:w-auto text-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
-                  : "inline-block w-full sm:w-auto text-center border-2 border-gray-300 hover:border-orange-600 bg-white text-gray-700 hover:text-orange-700 font-semibold px-6 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap"
-              }
+              className={linkClassName}
               aria-label={`Buy ${productName} on ${merchantLabel}`}
             >
-              {buttonText}
+              {displayText}
             </a>
           </CTAVisibilityTracker>
         )
       })}
     </div>
   )
+
+  // Render based on variant
+  if (resolvedVariant === 'styledBox') {
+    return (
+      <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center my-8">
+        <p className="text-lg font-medium text-slate-900 mb-4">
+          {boxHeading}
+        </p>
+        {renderLinks()}
+      </div>
+    )
+  }
+
+  return renderLinks()
 }
