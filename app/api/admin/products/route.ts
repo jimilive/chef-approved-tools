@@ -25,14 +25,14 @@ function getSupabaseAdmin() {
  *   brand: string,          // e.g., 'Ninja'
  *   category: string,       // e.g., 'appliances'
  *   affiliateUrl: string,   // The affiliate link URL
- *   merchant?: string       // Default: 'amazon'
+ *   vendor?: string          // Default: 'amazon'
  * }
  */
 export async function POST(request: Request) {
   const supabaseAdmin = getSupabaseAdmin()
   try {
     const body = await request.json()
-    const { slug, name, brand, category, affiliateUrl, merchant = 'amazon' } = body
+    const { slug, name, brand, category, affiliateUrl, vendor = 'amazon' } = body
 
     // Validate required fields
     if (!slug || !name || !brand || !affiliateUrl) {
@@ -54,8 +54,8 @@ export async function POST(request: Request) {
       const { data, error } = await supabaseAdmin
         .from('products')
         .update({
-          affiliate_links: [{ url: affiliateUrl, merchant, isPrimary: true }],
-          primary_affiliate: merchant,
+          affiliate_links: [{ url: affiliateUrl, vendor, isPrimary: true }],
+          primary_affiliate: vendor,
           updated_at: new Date().toISOString()
         })
         .eq('slug', slug)
@@ -81,8 +81,8 @@ export async function POST(request: Request) {
         name,
         brand,
         category: category || 'appliances',
-        affiliate_links: [{ url: affiliateUrl, merchant, isPrimary: true }],
-        primary_affiliate: merchant,
+        affiliate_links: [{ url: affiliateUrl, vendor, isPrimary: true }],
+        primary_affiliate: vendor,
         in_stock: true,
         // Minimal defaults for competitor products
         description: `${name} - Competitor product for comparison tables`,

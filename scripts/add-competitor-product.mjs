@@ -3,7 +3,7 @@
  * Add a competitor product to Supabase for comparison tables
  *
  * Usage:
- *   node scripts/add-competitor-product.mjs <slug> <name> <brand> <affiliateUrl> [category] [merchant]
+ *   node scripts/add-competitor-product.mjs <slug> <name> <brand> <affiliateUrl> [category] [vendor]
  *
  * Examples:
  *   node scripts/add-competitor-product.mjs ninja-foodi-11-in-1-pro "Ninja Foodi 11-in-1 Pro 6.5 Qt" "Ninja" "https://amzn.to/xxxxx"
@@ -17,19 +17,19 @@ import readline from 'readline'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 
-async function addProduct({ slug, name, brand, affiliateUrl, category = 'appliances', merchant = 'amazon' }) {
+async function addProduct({ slug, name, brand, affiliateUrl, category = 'appliances', vendor = 'amazon' }) {
   console.log(`\nAdding product: ${slug}`)
   console.log(`  Name: ${name}`)
   console.log(`  Brand: ${brand}`)
   console.log(`  URL: ${affiliateUrl}`)
   console.log(`  Category: ${category}`)
-  console.log(`  Merchant: ${merchant}`)
+  console.log(`  Vendor: ${vendor}`)
 
   try {
     const response = await fetch(`${BASE_URL}/api/admin/products`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slug, name, brand, affiliateUrl, category, merchant })
+      body: JSON.stringify({ slug, name, brand, affiliateUrl, category, vendor })
     })
 
     const result = await response.json()
@@ -65,11 +65,11 @@ async function interactiveMode() {
   const brand = await question('Brand (e.g., Ninja): ')
   const affiliateUrl = await question('Affiliate URL: ')
   const category = await question('Category [appliances]: ') || 'appliances'
-  const merchant = await question('Merchant [amazon]: ') || 'amazon'
+  const vendor = await question('Vendor [amazon]: ') || 'amazon'
 
   rl.close()
 
-  await addProduct({ slug, name, brand, affiliateUrl, category, merchant })
+  await addProduct({ slug, name, brand, affiliateUrl, category, vendor })
 }
 
 // Main
@@ -80,12 +80,12 @@ if (args.length === 0) {
   interactiveMode()
 } else if (args.length >= 4) {
   // Command line mode
-  const [slug, name, brand, affiliateUrl, category, merchant] = args
-  addProduct({ slug, name, brand, affiliateUrl, category, merchant })
+  const [slug, name, brand, affiliateUrl, category, vendor] = args
+  addProduct({ slug, name, brand, affiliateUrl, category, vendor })
 } else {
   console.log(`
 Usage:
-  node scripts/add-competitor-product.mjs <slug> <name> <brand> <affiliateUrl> [category] [merchant]
+  node scripts/add-competitor-product.mjs <slug> <name> <brand> <affiliateUrl> [category] [vendor]
 
 Or run without arguments for interactive mode.
 
