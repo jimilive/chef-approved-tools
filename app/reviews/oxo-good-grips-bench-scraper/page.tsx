@@ -4,8 +4,12 @@ import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
+import { getReviewGitDates } from '@/lib/git-dates'
+import { getTierBadge } from '@/lib/editorial-metadata'
+import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import AmazonCTA from '@/components/AmazonCTA'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import {
   ReviewHero,
   ProsConsGrid,
@@ -22,6 +26,9 @@ import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './oxo-good-grips-bench-scraper-data'
+import { getBenchScraperComparison } from './bench-scraper-comparison-data'
+
+const PRODUCT_SLUG = 'oxo-good-grips-bench-scraper'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -75,26 +82,45 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function OXOGoodGripsBenchScraperReview() {
-  const product = await getProductBySlug(reviewData.productSlug)
+  const product = await getProductBySlug(PRODUCT_SLUG)
 
   if (!product) {
-    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+    throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
 
+  // Get comparison data with live affiliate links from database
+  const comparisonData = await getBenchScraperComparison()
+
+  // Get git dates for this review
+  const gitDates = getReviewGitDates(PRODUCT_SLUG)
+
+  // Get tier badge from centralized config
+  const tierBadge = getTierBadge(PRODUCT_SLUG)
+
+  // Get category breadcrumb
+  const categoryBreadcrumb = getCategoryBreadcrumb(product.category)
+
   // Merge Supabase data with legacy data (Supabase takes priority)
-  const productData = product ? {
+  const productData = {
     ...reviewData.legacyProductData,
     ...product,
     affiliateLinks: product.affiliateLinks.length > 0 ? product.affiliateLinks : reviewData.legacyProductData.affiliateLinks
-  } : reviewData.legacyProductData
+  }
 
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
 
-  const breadcrumbs = [
-    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-    { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
-    { name: reviewData.breadcrumb.productName, url: `https://www.chefapprovedtools.com/reviews/${reviewData.productSlug}` }
-  ]
+  // Generate breadcrumbs with category
+  const breadcrumbs = categoryBreadcrumb
+    ? [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
+      ]
+    : [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
+      ]
 
   return (
     <>
@@ -129,9 +155,18 @@ export default async function OXOGoodGripsBenchScraperReview() {
           <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
-            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-            {' / '}
-            {reviewData.breadcrumb.productName}
+            {categoryBreadcrumb ? (
+              <>
+                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
+                {' / '}
+              </>
+            ) : (
+              <>
+                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+                {' / '}
+              </>
+            )}
+            {productData.name}
           </div>
 
           {/* SECTION 1: HERO */}
@@ -139,17 +174,19 @@ export default async function OXOGoodGripsBenchScraperReview() {
             title={reviewData.hero.title}
             authorName="Scott Bradley"
             authorCredentials="45 Years Cooking Experience"
-            rating={reviewData.hero.rating}
-            tierBadge={{
-              text: "Tier 2: Home Testing | 20 Years",
-              icon: "🏡"
-            }}
+            rating={productData.expertRating ?? reviewData.hero.rating}
+            tierBadge={tierBadge}
             verdict={reviewData.quickVerdict.content}
             verdictStrong="essential tool"
-            publishedDate="November 10, 2025"
-            lastUpdated="November 10, 2025"
-            ctaUrl={affiliateUrl}
-            ctaText="Check Price on Amazon"
+            publishedDate={gitDates.firstPublished}
+            lastUpdated={gitDates.lastUpdated}
+            customCTA={
+              <AmazonCTA
+                productSlug={PRODUCT_SLUG}
+                affiliateUrl={affiliateUrl}
+                position="above_fold"
+              />
+            }
           />
 
           {/* Why I Chose This */}
@@ -210,21 +247,11 @@ export default async function OXOGoodGripsBenchScraperReview() {
 
           {/* MID-CONTENT CTA */}
           <div className="text-center my-8">
-            <CTAVisibilityTracker
-              ctaId={`${productData.slug}-mid-content`}
+            <AmazonCTA
+              productSlug={PRODUCT_SLUG}
+              affiliateUrl={affiliateUrl}
               position="mid_article"
-              productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="text-orange-700 hover:text-orange-800 font-medium underline"
-              >
-                → See current Amazon price and reviews
-              </a>
-            </CTAVisibilityTracker>
+            />
           </div>
 
           {/* PROS & CONS - Using standardized component */}
@@ -243,6 +270,14 @@ export default async function OXOGoodGripsBenchScraperReview() {
             considerAlternativesTitle={reviewData.whoShouldBuy.skipIfTitle}
             perfectFor={reviewData.whoShouldBuy.perfectFor}
             considerAlternatives={reviewData.whoShouldBuy.skipIf}
+          />
+
+          {/* CTA - AFTER WHO SHOULD BUY */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="who_should_buy"
+            boxHeading="Sound like the right fit for your kitchen?"
           />
 
           {/* Related Tools */}
@@ -350,35 +385,22 @@ export default async function OXOGoodGripsBenchScraperReview() {
             </div>
           </section>
 
-          {/* Comparison Table */}
-          <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6" id="comparison">
-            <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.comparison.title}</h2>
+          {/* COMPARISON TABLE */}
+          <section className="my-12">
+            <ProductComparisonTable
+              title={comparisonData.title}
+              subtitle={comparisonData.subtitle}
+              products={comparisonData.products}
+              comparisonRows={comparisonData.comparisonRows}
+              highlightedProduct={comparisonData.highlightedProduct}
+            />
 
-            <div className="overflow-x-auto my-5">
-              <table className="w-full border-collapse text-sm">
-                <thead>
-                  <tr className="bg-slate-100">
-                    {reviewData.comparison.headers.map((header, index) => (
-                      <th key={index} className="p-3 text-left border-b-2 border-gray-300">{header}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {reviewData.comparison.rows.map((row, index) => (
-                    <tr key={index} className={index % 2 === 0 ? '' : 'bg-slate-50'}>
-                      <td className="p-3 border-b border-gray-200">{row.feature}</td>
-                      <td className={`p-3 border-b border-gray-200 ${row.oxoBold ? 'font-bold text-green-700' : ''}`}>{row.oxo}</td>
-                      <td className="p-3 border-b border-gray-200">{row.dexterRussell}</td>
-                      <td className="p-3 border-b border-gray-200">{row.generic}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <p className="text-slate-700 mt-6">
-              <strong>My take:</strong> {reviewData.comparison.conclusion}
-            </p>
+            {/* POST-COMPARISON CTA */}
+            <AmazonCTA
+              productSlug={PRODUCT_SLUG}
+              affiliateUrl={affiliateUrl}
+              position="comparison_table"
+            />
           </section>
 
           {/* FAQ - Using standardized component */}
@@ -396,7 +418,14 @@ export default async function OXOGoodGripsBenchScraperReview() {
             paragraphs={reviewData.bottomLine.paragraphs}
             ctaUrl={affiliateUrl}
             ctaText={reviewData.bottomLine.ctaText}
-            productSlug={reviewData.productSlug}
+            productSlug={PRODUCT_SLUG}
+          />
+
+          {/* FINAL CTA */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="final_cta"
           />
 
           {/* RELATED PRODUCTS - Using standardized component */}
@@ -416,7 +445,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
         productName={productData.name}
         affiliateUrl={affiliateUrl}
         merchant="amazon"
-        productSlug={reviewData.productSlug}
+        productSlug={PRODUCT_SLUG}
       />
     </>
   )
