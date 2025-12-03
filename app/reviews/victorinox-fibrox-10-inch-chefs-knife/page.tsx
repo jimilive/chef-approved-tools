@@ -4,8 +4,12 @@ import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
+import { getReviewGitDates } from '@/lib/git-dates'
+import { getTierBadge } from '@/lib/editorial-metadata'
+import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import AmazonCTA from '@/components/AmazonCTA'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import {
   ReviewHero,
   TestingResultsGrid,
@@ -21,12 +25,13 @@ import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './victorinox-fibrox-10-inch-chefs-knife-data'
+import { getChefKnifeComparison } from './chef-knife-comparison-data'
+
+const PRODUCT_SLUG = 'victorinox-fibrox-10-inch-chefs-knife'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
 
-
-// ISR configuration for better performance
 // Generate metadata dynamically
 export async function generateMetadata(): Promise<Metadata> {
   const centralMeta = getReviewMetadata('victorinox-fibrox-10-inch-chefs-knife')
@@ -79,14 +84,26 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function ProductReview() {
   // Get product data from Supabase
-  const product = await getProductBySlug(reviewData.productSlug)
+  const product = await getProductBySlug(PRODUCT_SLUG)
 
   if (!product) {
-    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+    throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
 
+  // Get comparison data with live affiliate links from database
+  const comparisonData = await getChefKnifeComparison()
+
+  // Get git dates for this review
+  const gitDates = getReviewGitDates(PRODUCT_SLUG)
+
+  // Get tier badge from centralized config
+  const tierBadge = getTierBadge(PRODUCT_SLUG)
+
+  // Get category breadcrumb
+  const categoryBreadcrumb = getCategoryBreadcrumb(product.category)
+
   // Merge Supabase data with legacy data
-  const productData = product ? {
+  const productData = {
     ...reviewData.legacyProductData,
     ...product,
     pros: product.pros && product.pros.length > 0 ? product.pros : reviewData.legacyProductData.pros,
@@ -94,17 +111,22 @@ export default async function ProductReview() {
     affiliateLinks: product.affiliateLinks && product.affiliateLinks.length > 0
       ? product.affiliateLinks
       : reviewData.legacyProductData.affiliateLinks
-  } : reviewData.legacyProductData
+  }
 
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
 
-  // Generate breadcrumbs
-  const breadcrumbs = [
-    { name: "Home", url: "https://www.chefapprovedtools.com" },
-    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-    { name: "Knives", url: "https://www.chefapprovedtools.com/knives" },
-    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-  ]
+  // Generate breadcrumbs with category
+  const breadcrumbs = categoryBreadcrumb
+    ? [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
+      ]
+    : [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
+      ]
 
   // Generate schemas
   const productSchema = generateProductSchema({
@@ -114,7 +136,7 @@ export default async function ProductReview() {
     brand: productData.brand,
     rating: productData.expertRating,
     reviewCount: 1,
-    url: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
+    url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}`,
   })
 
   const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
@@ -154,9 +176,18 @@ export default async function ProductReview() {
           <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
-            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-            {' / '}
-            {reviewData.breadcrumb.productName}
+            {categoryBreadcrumb ? (
+              <>
+                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
+                {' / '}
+              </>
+            ) : (
+              <>
+                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+                {' / '}
+              </>
+            )}
+            {productData.name}
           </div>
 
           {/* SECTION 1: HERO */}
@@ -164,44 +195,19 @@ export default async function ProductReview() {
             title={reviewData.hero.title}
             authorName={reviewData.hero.authorName}
             authorCredentials={reviewData.hero.authorCredentials}
-            rating={reviewData.hero.rating}
-            tierBadge={reviewData.hero.tierBadge}
+            rating={productData.expertRating ?? reviewData.hero.rating}
+            tierBadge={tierBadge}
             verdict={reviewData.hero.verdict}
             verdictStrong={reviewData.hero.verdictStrong}
-            publishedDate="November 10, 2025"
-            lastUpdated="November 10, 2025"
-            customCTA={(
-              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
-                <CTAVisibilityTracker
-                  ctaId={`${reviewData.productSlug}-hero-cta`}
-                  position="above_fold"
-                  productSlug={reviewData.productSlug}
-                  merchant="amazon"
-                >
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-                  >
-                    {reviewData.hero.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-                <p className="text-xs text-slate-700 text-center mt-3">
-                  As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
-                </p>
-              </div>
-            )}
+            publishedDate={gitDates.firstPublished}
+            lastUpdated={gitDates.lastUpdated}
+            customCTA={
+              <AmazonCTA
+                productSlug={PRODUCT_SLUG}
+                affiliateUrl={affiliateUrl}
+                position="above_fold"
+              />
+            }
           />
 
           {/* SECTION 2: TESTING RESULTS */}
@@ -215,21 +221,11 @@ export default async function ProductReview() {
 
           {/* MID-CONTENT CTA */}
           <div className="text-center my-8">
-            <CTAVisibilityTracker
-              ctaId={`${productData.slug}-mid-content`}
+            <AmazonCTA
+              productSlug={PRODUCT_SLUG}
+              affiliateUrl={affiliateUrl}
               position="mid_article"
-              productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="text-orange-700 hover:text-orange-800 font-medium underline"
-              >
-                → See current Amazon price and reviews
-              </a>
-            </CTAVisibilityTracker>
+            />
           </div>
 
           {/* SECTION 3: PERFORMANCE ANALYSIS */}
@@ -293,181 +289,23 @@ export default async function ProductReview() {
             ))}
           </div>
 
-          {/* V2: COMPARISON TABLE */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              {reviewData.comparisonTable.title}
-            </h2>
+          {/* COMPARISON TABLE */}
+          <section className="my-12">
+            <ProductComparisonTable
+              title={comparisonData.title}
+              subtitle={comparisonData.subtitle}
+              products={comparisonData.products}
+              comparisonRows={comparisonData.comparisonRows}
+              highlightedProduct={comparisonData.highlightedProduct}
+            />
 
-            <div className="overflow-x-auto -mx-6 md:mx-0">
-              <table className="w-full border-collapse bg-white">
-                <thead>
-                  <tr className="bg-slate-800">
-                    <th className="border border-slate-300 p-3 text-left text-white font-semibold">Feature</th>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <th
-                        key={index}
-                        className={`border border-slate-300 p-3 text-left text-white font-semibold ${
-                          competitor.highlight ? 'bg-orange-600' : ''
-                        }`}
-                      >
-                        {competitor.name}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Price Range</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.priceRange}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Blade Material</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.bladeMaterial}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Handle Material</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.handleMaterial}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Weight</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.weight}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Country of Origin</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.origin}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Out-of-Box Sharpness</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.sharpness}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Edge Retention</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.edgeRetention}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Balance</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.balance}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Professional Use Rating</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.professionalRating}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="border border-slate-300 p-3 font-semibold bg-gray-50">Warranty</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 ${
-                          competitor.highlight ? 'bg-orange-50' : ''
-                        }`}
-                      >
-                        {competitor.warranty}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr className="bg-green-50">
-                    <td className="border border-slate-300 p-3 font-semibold">Best For</td>
-                    {reviewData.comparisonTable.competitors.map((competitor, index) => (
-                      <td
-                        key={index}
-                        className={`border border-slate-300 p-3 font-semibold ${
-                          competitor.highlight ? 'bg-green-200' : ''
-                        }`}
-                      >
-                        {competitor.bestFor}
-                      </td>
-                    ))}
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p className="text-sm text-slate-600 mt-4 italic">
-              <strong>My Verdict:</strong> {reviewData.comparisonTable.verdict}
-            </p>
-          </div>
+            {/* POST-COMPARISON CTA */}
+            <AmazonCTA
+              productSlug={PRODUCT_SLUG}
+              affiliateUrl={affiliateUrl}
+              position="comparison_table"
+            />
+          </section>
 
           {/* SECTION 5: PROS & CONS */}
           <ProsConsGrid
@@ -487,108 +325,40 @@ export default async function ProductReview() {
             considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
           />
 
+          {/* CTA - AFTER WHO SHOULD BUY */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="who_should_buy"
+            boxHeading="Sound like the right fit for your kitchen?"
+          />
+
           {/* SECTION 7: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 8: WHERE TO BUY */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              {reviewData.whereToBuy.title}
-            </h2>
-
-            <p className="text-slate-600 leading-relaxed mb-6">
-              {reviewData.whereToBuy.introText}
-            </p>
-
-            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50 mb-4">
-              <div className="text-center mb-4">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">
-                  Amazon - Prime Shipping Available
-                </h3>
-                <p className="text-sm text-slate-900 mb-4">Prime shipping, verified reviews, easy returns</p>
-              </div>
-
-              <CTAVisibilityTracker
-                ctaId={`${reviewData.productSlug}-where-to-buy`}
-                position="mid_article"
-                productSlug={reviewData.productSlug}
-                merchant="amazon"
-              >
-                <a
-                  href={affiliateUrl}
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                  className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-                >
-                  Check Price on Amazon →
-                </a>
-              </CTAVisibilityTracker>
-
-              {/* V2: TEXT LINK UNDER BUTTON */}
-              <p className="text-center mt-3 text-sm">
-                <a
-                  href={affiliateUrl}
-                  className="text-orange-700 hover:text-orange-800 underline font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                >
-                  → View {productData.name} on Amazon
-                </a>
-              </p>
-            </div>
-
-            <p className="text-sm text-slate-600 mt-6 italic">
-              {reviewData.whereToBuy.disclaimer}
-            </p>
-          </div>
-
-          {/* SECTION 9: EMAIL CAPTURE */}
+          {/* EMAIL CAPTURE */}
           <EmailCaptureSection />
 
-          {/* SECTION 10: BOTTOM LINE */}
+          {/* BOTTOM LINE */}
           <BottomLineSection
             title={reviewData.bottomLine.title}
             paragraphs={reviewData.bottomLine.paragraphs}
-            customCTA={(
-              <div className="bg-white rounded-xl p-6">
-                <CTAVisibilityTracker
-                  ctaId={`${reviewData.productSlug}-bottom-line-cta`}
-                  position="final_cta"
-                  productSlug={reviewData.productSlug}
-                  merchant="amazon"
-                >
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-                  >
-                    {reviewData.bottomLine.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-
-                <p className="text-xs text-slate-700 text-center mt-3">
-                  As an Amazon Associate, I earn from qualifying purchases.
-                </p>
-              </div>
-            )}
+            ctaText={reviewData.bottomLine.ctaText}
+            ctaUrl={affiliateUrl}
+            productSlug={PRODUCT_SLUG}
           />
 
-          {/* SECTION 11: RELATED PRODUCTS */}
+          {/* FINAL CTA */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="final_cta"
+          />
+
+          {/* RELATED PRODUCTS */}
           <RelatedProductsGrid
             title={reviewData.relatedProducts.title}
             products={reviewData.relatedProducts.products}
@@ -605,7 +375,7 @@ export default async function ProductReview() {
         productName={productData.name}
         affiliateUrl={affiliateUrl}
         merchant="amazon"
-        productSlug={productData.slug}
+        productSlug={PRODUCT_SLUG}
       />
     </>
   )
