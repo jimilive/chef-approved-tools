@@ -11,7 +11,9 @@ import {
   BottomLineSection,
   RelatedProductsGrid,
 } from '@/components/review'
+import AmazonCTA from '@/components/AmazonCTA'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import type { Metadata } from 'next'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
@@ -21,7 +23,13 @@ import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
+import { getReviewGitDates } from '@/lib/git-dates'
+import { getTierBadge } from '@/lib/editorial-metadata'
+import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import { reviewData } from './rubbermaid-commercial-cooks-scraper-data'
+import { getScraperComparison } from './scraper-comparison-data'
+
+const PRODUCT_SLUG = 'rubbermaid-commercial-cooks-scraper'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -78,11 +86,23 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function RubbermaidScraperReview() {
   // Get product data from Supabase
-  const product = await getProductBySlug(reviewData.productSlug)
+  const product = await getProductBySlug(PRODUCT_SLUG)
 
   if (!product) {
-    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+    throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
+
+  // Get comparison data with live affiliate links from database
+  const comparisonData = await getScraperComparison()
+
+  // Get git dates for this review
+  const gitDates = getReviewGitDates(PRODUCT_SLUG)
+
+  // Get tier badge from centralized config
+  const tierBadge = getTierBadge(PRODUCT_SLUG)
+
+  // Get category breadcrumb
+  const categoryBreadcrumb = getCategoryBreadcrumb(product.category)
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = product ? {
@@ -94,11 +114,18 @@ export default async function RubbermaidScraperReview() {
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
   const affiliate9_5Url = productData.affiliateLinks[1]?.url || '#'
 
-  const breadcrumbs = [
-    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-    { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
-    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-  ]
+  // Generate breadcrumbs with category
+  const breadcrumbs = categoryBreadcrumb
+    ? [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+      ]
+    : [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+      ]
 
   return (
     <>
@@ -119,9 +146,18 @@ export default async function RubbermaidScraperReview() {
           <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
-            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-            {' / '}
-            {reviewData.breadcrumb.productName}
+            {categoryBreadcrumb ? (
+              <>
+                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
+                {' / '}
+              </>
+            ) : (
+              <>
+                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+                {' / '}
+              </>
+            )}
+            {productData.name}
           </div>
 
           {/* SECTION 1: HERO */}
@@ -129,38 +165,48 @@ export default async function RubbermaidScraperReview() {
             title={reviewData.header.title}
             authorName={reviewData.header.author}
             authorCredentials="45 Years Cooking Experience"
-            rating={reviewData.header.expertRating}
-            tierBadge={{
-              text: "Tier 1: Years of Professional Use",
-              icon: "⭐"
-            }}
+            rating={productData.expertRating ?? reviewData.header.expertRating}
+            tierBadge={tierBadge}
             verdict={reviewData.professionalSummary.text + " " + reviewData.professionalSummary.detail}
             verdictStrong="buy-it-for-life equipment"
-            publishedDate="November 10, 2025"
-            lastUpdated="November 10, 2025"
-            ctaUrl={affiliateUrl}
-            ctaText="Check Price on Amazon"
+            publishedDate={gitDates.firstPublished}
+            lastUpdated={gitDates.lastUpdated}
             customCTA={
-              <div>
-                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
-                  >
-                    Check Price on Amazon
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
+              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
+                <p className="font-semibold text-slate-900 mb-4">Current Best Price:</p>
+
+                {/* 13.5-inch Size Option */}
+                <div className="mb-4">
+                  <p className="text-sm text-slate-700 mb-2">13.5-inch (Professional/Large Batches):</p>
+                  <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-above-fold-13-5`} productSlug={PRODUCT_SLUG} position="above_fold">
+                    <a
+                      href={affiliateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-6 rounded-lg font-semibold transition-colors"
+                    >
+                      Check Price on Amazon →
+                    </a>
+                  </CTAVisibilityTracker>
+                </div>
+
+                {/* 9.5-inch Size Option */}
+                <div className="mb-4">
+                  <p className="text-sm text-slate-700 mb-2">9.5-inch (Home Kitchens - Recommended):</p>
+                  <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-above-fold-9-5`} productSlug={PRODUCT_SLUG} position="above_fold">
+                    <a
+                      href={affiliate9_5Url}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-6 rounded-lg font-semibold transition-colors"
+                    >
+                      Check Price on Amazon →
+                    </a>
+                  </CTAVisibilityTracker>
+                </div>
+
+                <p className="text-xs text-slate-500 mt-3">
+                  💡 We earn a commission at no extra cost to you.
                 </p>
               </div>
             }
@@ -251,61 +297,38 @@ export default async function RubbermaidScraperReview() {
           </div>
         </section>
 
-        {/* Mid-Article CTA */}
-        <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg text-center my-8">
-          <p className="font-semibold text-lg mb-3">Ready for Buy-It-For-Life Quality?</p>
-          <div className="space-y-3">
+        {/* Mid-Article CTA - Both Size Options */}
+        <div className="bg-white border-2 border-orange-200 rounded-xl p-6 my-8">
+          <p className="font-semibold text-slate-900 mb-4 text-center">Choose your size:</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <p className="text-sm mb-2">13.5&quot; (Professional Use):</p>
-              <CTAVisibilityTracker
-                ctaId={`${reviewData.productSlug}-mid-13`}
-                position="mid_article"
-                productSlug={reviewData.productSlug}
-                merchant="amazon"
-              >
+              <p className="text-sm text-slate-600 mb-2 text-center">13.5-inch (Professional)</p>
+              <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-mid-article-13-5`} productSlug={PRODUCT_SLUG} position="mid_article">
                 <a
                   href={affiliateUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
+                  className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                 >
-                  Check 13.5&quot; Price →
+                  Check Price →
                 </a>
               </CTAVisibilityTracker>
-              {/* Text link fallback */}
-              <p className="text-center mt-2 text-sm">
-                <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
-                  target="_blank" rel="noopener noreferrer sponsored">
-                  → View 13.5&quot; on Amazon
-                </a>
-              </p>
             </div>
             <div>
-              <p className="text-sm mb-2">9.5&quot; (Home Kitchens):</p>
-              <CTAVisibilityTracker
-                ctaId={`${reviewData.productSlug}-mid-9`}
-                position="mid_article"
-                productSlug={reviewData.productSlug}
-                merchant="amazon"
-              >
+              <p className="text-sm text-slate-600 mb-2 text-center">9.5-inch (Home - Recommended)</p>
+              <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-mid-article-9-5`} productSlug={PRODUCT_SLUG} position="mid_article">
                 <a
                   href={affiliate9_5Url}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
+                  className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                 >
-                  Check 9.5&quot; Price →
+                  Check Price →
                 </a>
               </CTAVisibilityTracker>
-              {/* Text link fallback */}
-              <p className="text-center mt-2 text-sm">
-                <a href={affiliate9_5Url} className="text-green-700 hover:text-green-800 underline font-medium"
-                  target="_blank" rel="noopener noreferrer sponsored">
-                  → View 9.5&quot; on Amazon
-                </a>
-              </p>
             </div>
           </div>
+          <p className="text-xs text-slate-500 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
         </div>
 
         {/* User Reviews */}
@@ -327,7 +350,7 @@ export default async function RubbermaidScraperReview() {
           </div>
         </section>
 
-        {/* Comparisons */}
+        {/* Comparisons - Narrative */}
         <section className="mb-8" id="comparison">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">{reviewData.comparisons.title}</h2>
 
@@ -363,6 +386,51 @@ export default async function RubbermaidScraperReview() {
           </div>
         </section>
 
+        {/* COMPARISON TABLE */}
+        <section className="my-12">
+          <ProductComparisonTable
+            title={comparisonData.title}
+            subtitle={comparisonData.subtitle}
+            products={comparisonData.products}
+            comparisonRows={comparisonData.comparisonRows}
+            highlightedProduct={comparisonData.highlightedProduct}
+          />
+
+          {/* POST-COMPARISON CTA - Both Size Options */}
+          <div className="bg-white border-2 border-orange-200 rounded-xl p-6 mt-6">
+            <p className="font-semibold text-slate-900 mb-4 text-center">Choose your size:</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <p className="text-sm text-slate-600 mb-2 text-center">13.5-inch (Professional)</p>
+                <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-comparison-13-5`} productSlug={PRODUCT_SLUG} position="comparison_table">
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
+                  >
+                    Check Price →
+                  </a>
+                </CTAVisibilityTracker>
+              </div>
+              <div>
+                <p className="text-sm text-slate-600 mb-2 text-center">9.5-inch (Home - Recommended)</p>
+                <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-comparison-9-5`} productSlug={PRODUCT_SLUG} position="comparison_table">
+                  <a
+                    href={affiliate9_5Url}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
+                  >
+                    Check Price →
+                  </a>
+                </CTAVisibilityTracker>
+              </div>
+            </div>
+            <p className="text-xs text-slate-500 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
+          </div>
+        </section>
+
         {/* Pros and Cons */}
         <ProsConsGrid
           title="Pros & Cons After 18 Years"
@@ -377,99 +445,45 @@ export default async function RubbermaidScraperReview() {
           considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
         />
 
+        {/* CTA - AFTER WHO SHOULD BUY - Both Size Options */}
+        <div className="bg-white border-2 border-orange-200 rounded-xl p-6 my-8">
+          <p className="font-semibold text-slate-900 mb-4 text-center">Sound like the right fit for your kitchen? Choose your size:</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <p className="text-sm text-slate-600 mb-2 text-center">13.5-inch (Professional)</p>
+              <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-who-should-buy-13-5`} productSlug={PRODUCT_SLUG} position="who_should_buy">
+                <a
+                  href={affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
+                >
+                  Check Price →
+                </a>
+              </CTAVisibilityTracker>
+            </div>
+            <div>
+              <p className="text-sm text-slate-600 mb-2 text-center">9.5-inch (Home - Recommended)</p>
+              <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-who-should-buy-9-5`} productSlug={PRODUCT_SLUG} position="who_should_buy">
+                <a
+                  href={affiliate9_5Url}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
+                >
+                  Check Price →
+                </a>
+              </CTAVisibilityTracker>
+            </div>
+          </div>
+          <p className="text-xs text-slate-500 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
+        </div>
+
         {/* FAQ */}
         <FAQSection
           title={reviewData.faq.title}
           faqs={reviewData.faq.items}
         />
-
-        {/* WHERE TO BUY SECTION */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">{reviewData.whereToBuy.title}</h2>
-          <p><strong>Updated:</strong> {new Date(reviewData.whereToBuy.lastUpdated).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}</p>
-
-          <div className="bg-gray-50 p-6 my-6 rounded-lg">
-            <h3 className="mt-0">{reviewData.whereToBuy.subtitle}</h3>
-
-            <div className="bg-white p-5 my-4 rounded-md border-2 border-yellow-600">
-              <div className="flex justify-between items-center flex-wrap gap-4">
-                <div>
-                  <h3 className="m-0 mb-2.5">🏆 {reviewData.whereToBuy.sizes[0].name}</h3>
-                  <p className="mt-1 mb-0 text-gray-600">
-                    {reviewData.whereToBuy.sizes[0].features.join(' | ')}
-                  </p>
-                </div>
-                <div>
-                  <CTAVisibilityTracker
-                    ctaId={`${reviewData.productSlug}-where-to-buy-13`}
-                    position="mid_article"
-                    productSlug={reviewData.productSlug}
-                    merchant="amazon"
-                  >
-                    <a
-                      href={affiliateUrl}
-                      target="_blank"
-                      rel="noopener noreferrer sponsored"
-                      className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold px-8 py-3 rounded-lg transition-all hover:scale-105 active:scale-95"
-                    >
-                      View 13.5&quot; on Amazon →
-                    </a>
-                  </CTAVisibilityTracker>
-                  {/* Text link fallback */}
-                  <p className="text-center mt-2 text-sm">
-                    <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
-                      target="_blank" rel="noopener noreferrer sponsored">
-                      → Check Price on Amazon
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-5 my-4 rounded-md border-2 border-green-600">
-              <div className="flex justify-between items-center flex-wrap gap-4">
-                <div>
-                  <h3 className="m-0 mb-2.5">⭐ {reviewData.whereToBuy.sizes[1].name}</h3>
-                  <p className="mt-1 mb-0 text-gray-600">
-                    {reviewData.whereToBuy.sizes[1].features.join(' | ')}
-                  </p>
-                </div>
-                <div>
-                  <CTAVisibilityTracker
-                    ctaId={`${reviewData.productSlug}-where-to-buy-9`}
-                    position="mid_article"
-                    productSlug={reviewData.productSlug}
-                    merchant="amazon"
-                  >
-                    <a
-                      href={affiliate9_5Url}
-                      target="_blank"
-                      rel="noopener noreferrer sponsored"
-                      className="inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-8 py-3 rounded-lg transition-all hover:scale-105 active:scale-95"
-                    >
-                      View 9.5&quot; on Amazon →
-                    </a>
-                  </CTAVisibilityTracker>
-                  {/* Text link fallback */}
-                  <p className="text-center mt-2 text-sm">
-                    <a href={affiliate9_5Url} className="text-green-700 hover:text-green-800 underline font-medium"
-                      target="_blank" rel="noopener noreferrer sponsored">
-                      → Check Price on Amazon
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <p className="text-sm text-gray-600 mt-5 text-center">
-              {reviewData.whereToBuy.note}
-            </p>
-          </div>
-        </section>
 
         {/* Email Capture Section */}
         <section className="mb-8">
@@ -512,68 +526,42 @@ export default async function RubbermaidScraperReview() {
             </p>
           </div>
 
-          {/* STRONG FINAL CTA */}
-          <div className="bg-yellow-100 p-8 my-8 rounded-lg text-center border-3 border-yellow-400">
-            <h3 className="mt-0 text-3xl">
-              Ready for Commercial-Grade Durability?
-            </h3>
-            <p className="text-lg my-5">
-              This is a buy-it-for-life investment that costs less than dinner out.
-            </p>
-            <div className="space-y-3">
+          {/* FINAL CTA - Both Size Options */}
+          <div className="bg-white border-2 border-orange-200 rounded-xl p-6 mt-6">
+            <p className="font-semibold text-slate-900 mb-4 text-center">Ready to buy? Choose your size:</p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <p className="text-sm mb-2.5">13.5&quot; (Professional/Large Batches):</p>
-                <CTAVisibilityTracker
-                  ctaId={`${reviewData.productSlug}-final-13`}
-                  position="final_cta"
-                  productSlug={reviewData.productSlug}
-                  merchant="amazon"
-                >
+                <p className="text-sm text-slate-600 mb-2 text-center">13.5-inch (Professional)</p>
+                <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-final-cta-13-5`} productSlug={PRODUCT_SLUG} position="final_cta">
                   <a
                     href={affiliateUrl}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
+                    className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                   >
-                    Check 13.5&quot; Price →
+                    Check Price →
                   </a>
                 </CTAVisibilityTracker>
-                {/* Text link fallback */}
-                <p className="text-center mt-2 text-sm">
-                  <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank" rel="noopener noreferrer sponsored">
-                    → View 13.5&quot; on Amazon
-                  </a>
-                </p>
               </div>
+
               <div>
-                <p className="text-sm mb-2.5">9.5&quot; (Home Kitchens - Most Popular):</p>
-                <CTAVisibilityTracker
-                  ctaId={`${reviewData.productSlug}-final-9`}
-                  position="final_cta"
-                  productSlug={reviewData.productSlug}
-                  merchant="amazon"
-                >
+                <p className="text-sm text-slate-600 mb-2 text-center">9.5-inch (Home - Recommended)</p>
+                <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-final-cta-9-5`} productSlug={PRODUCT_SLUG} position="final_cta">
                   <a
                     href={affiliate9_5Url}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="inline-flex items-center justify-center bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
+                    className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                   >
-                    Check 9.5&quot; Price →
+                    Check Price →
                   </a>
                 </CTAVisibilityTracker>
-                {/* Text link fallback */}
-                <p className="text-center mt-2 text-sm">
-                  <a href={affiliate9_5Url} className="text-green-700 hover:text-green-800 underline font-medium"
-                    target="_blank" rel="noopener noreferrer sponsored">
-                    → View 9.5&quot; on Amazon
-                  </a>
-                </p>
               </div>
             </div>
-            <p className="text-sm text-gray-600 mt-5">
-              💡 Pricing updated daily.
+
+            <p className="text-xs text-slate-500 mt-3 text-center">
+              💡 We earn a commission at no extra cost to you.
             </p>
           </div>
         </section>
@@ -626,9 +614,34 @@ export default async function RubbermaidScraperReview() {
         <BottomLineSection
           title={reviewData.bottomLineSection.title}
           paragraphs={reviewData.bottomLineSection.paragraphs}
-          ctaText={reviewData.bottomLineSection.ctaText}
-          ctaUrl={affiliateUrl}
           productSlug={productData.slug}
+          customCTA={
+            <div className="text-center">
+              <p className="text-white/90 text-sm mb-4">Choose your size:</p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-bottom-line-13-5`} productSlug={PRODUCT_SLUG} position="final_cta">
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="inline-block bg-white text-purple-800 font-semibold px-8 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl hover:bg-purple-50"
+                  >
+                    13.5-inch (Pro) →
+                  </a>
+                </CTAVisibilityTracker>
+                <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-bottom-line-9-5`} productSlug={PRODUCT_SLUG} position="final_cta">
+                  <a
+                    href={affiliate9_5Url}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="inline-block bg-[#FF9900] text-white font-semibold px-8 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl hover:bg-[#e8890a]"
+                  >
+                    9.5-inch (Home) →
+                  </a>
+                </CTAVisibilityTracker>
+              </div>
+            </div>
+          }
         />
 
         {/* Footer Transparency Elements */}
