@@ -1,4 +1,4 @@
-name: Check Amazon Affiliate Links
+name: Check All Affiliate Links
 
 # Run daily at 6 AM Pacific (2 PM UTC / 14:00 UTC)
 on:
@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Extract Amazon Links from Supabase
+      - name: Extract All Affiliate Links from Supabase
         id: extract
         run: |
           # Create a script to fetch affiliate links from Supabase
@@ -47,25 +47,37 @@ jobs:
             process.exit(1)
           }
 
-          // Extract all Amazon affiliate links with product names
-          const linksMap = {}
+          // Extract ALL affiliate links with product names and vendor info
+          const linksData = []
           data.forEach(product => {
             if (product.affiliate_links) {
               product.affiliate_links.forEach(link => {
-                if (link.merchant === 'amazon' && link.url) {
-                  linksMap[link.url] = product.name
+                if (link.url) {
+                  linksData.push({
+                    url: link.url,
+                    product: product.name,
+                    vendor: link.vendor || 'unknown',
+                    tag: link.tag || null
+                  })
                 }
               })
             }
           })
 
-          // Write links to file (one per line)
-          writeFileSync('/tmp/links.txt', Object.keys(linksMap).join('\n'))
+          // Write links data to JSON file for structured access
+          writeFileSync('/tmp/links-data.json', JSON.stringify(linksData, null, 2))
 
-          // Write product names mapping to separate file
-          writeFileSync('/tmp/link-names.json', JSON.stringify(linksMap, null, 2))
+          // Count by vendor
+          const vendorCounts = {}
+          linksData.forEach(link => {
+            vendorCounts[link.vendor] = (vendorCounts[link.vendor] || 0) + 1
+          })
 
-          console.log(`Found ${Object.keys(linksMap).length} unique Amazon affiliate links from ${data.length} products`)
+          console.log(`Found ${linksData.length} total affiliate links from ${data.length} products`)
+          console.log('Breakdown by vendor:')
+          Object.entries(vendorCounts).forEach(([vendor, count]) => {
+            console.log(`  ${vendor}: ${count} links`)
+          })
           SCRIPT
 
           node fetch-links.mjs
@@ -73,24 +85,43 @@ jobs:
           # Set the current date/time as an output
           echo "check_date=$(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_OUTPUT
 
-      - name: Test Links with Browser Headers
+      - name: Test All Links with Browser Headers
         id: test
         run: |
           set +e
           broken_links=""
           working_count=0
           broken_count=0
+          vendor_summary=""
 
-          # Load product names mapping
-          link_names=$(cat /tmp/link-names.json)
+          # Track counts by vendor
+          declare -A vendor_working
+          declare -A vendor_broken
 
-          while IFS= read -r link; do
-            # Get product name for this link
-            product_name=$(echo "$link_names" | jq -r --arg url "$link" '.[$url]')
+          # Read all links data
+          links_json=$(cat /tmp/links-data.json)
+          total_links=$(echo "$links_json" | jq '. | length')
+
+          echo "Testing $total_links affiliate links..."
+          echo ""
+
+          # Process each link
+          for i in $(seq 0 $((total_links - 1))); do
+            link_data=$(echo "$links_json" | jq -r ".[$i]")
+            url=$(echo "$link_data" | jq -r '.url')
+            product=$(echo "$link_data" | jq -r '.product')
+            vendor=$(echo "$link_data" | jq -r '.vendor')
+            tag=$(echo "$link_data" | jq -r '.tag')
+
+            # Build display label
+            if [ "$tag" != "null" ] && [ -n "$tag" ]; then
+              display_label="$product [$vendor] (variant: $tag)"
+            else
+              display_label="$product [$vendor]"
+            fi
 
             # Test with proper browser headers to avoid bot detection
-            # Capture both status code AND final redirect URL
-            response=$(curl -s -o /dev/null -w "%{http_code}|%{url_effective}" -L "$link" \
+            response=$(curl -s -o /dev/null -w "%{http_code}|%{url_effective}" -L "$url" \
               -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
               -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
               -H "Accept-Language: en-US,en;q=0.9" \
@@ -99,39 +130,73 @@ jobs:
             status=$(echo "$response" | cut -d'|' -f1)
             final_url=$(echo "$response" | cut -d'|' -f2)
 
-            # Check if status is good
+            # Determine if link is broken based on vendor
+            is_broken=false
+            error_msg=""
+
             if [ "$status" -eq 200 ] || ([ "$status" -ge 300 ] && [ "$status" -lt 400 ]); then
-              # Now check WHERE it redirected to
-              # Flag as broken if it goes to Amazon homepage or generic pages
-              if [[ "$final_url" =~ ^https?://www\.amazon\.com/?(\?|$) ]] || \
-                 [[ "$final_url" =~ ^https?://www\.amazon\.com/ref= ]] || \
-                 [[ "$final_url" == "https://www.amazon.com/" ]]; then
-                echo "❌ $link - HTTP $status - REDIRECTS TO HOMEPAGE"
-                echo "   Product: $product_name"
-                echo "   Final URL: $final_url"
-                broken_links="$broken_links\n- **$product_name**\n  $link → AMAZON HOMEPAGE (broken ASIN)"
-                ((broken_count++))
-              else
-                echo "✅ $link - HTTP $status"
-                echo "   Product: $product_name"
-                echo "   → $final_url"
-                ((working_count++))
-              fi
+              # Check vendor-specific failure patterns
+              case "$vendor" in
+                amazon)
+                  # Amazon: flag if redirects to homepage or generic pages
+                  if [[ "$final_url" =~ ^https?://www\.amazon\.com/?(\?|$) ]] || \
+                     [[ "$final_url" =~ ^https?://www\.amazon\.com/ref= ]] || \
+                     [[ "$final_url" == "https://www.amazon.com/" ]]; then
+                    is_broken=true
+                    error_msg="REDIRECTS TO AMAZON HOMEPAGE (broken ASIN)"
+                  fi
+                  ;;
+                vitamix_cj|zwilling_cj|kitchenaid|henckels)
+                  # CJ Network links: basic validation that it doesn't redirect to error page
+                  if [[ "$final_url" =~ (404|error|not-found) ]]; then
+                    is_broken=true
+                    error_msg="REDIRECTS TO ERROR PAGE"
+                  fi
+                  ;;
+              esac
             else
-              echo "❌ $link - HTTP $status - BAD STATUS"
-              echo "   Product: $product_name"
-              broken_links="$broken_links\n- **$product_name**\n  $link (HTTP $status)"
+              # Bad HTTP status
+              is_broken=true
+              error_msg="HTTP $status"
+            fi
+
+            # Record result
+            if [ "$is_broken" = true ]; then
+              echo "❌ $display_label"
+              echo "   URL: $url"
+              echo "   Error: $error_msg"
+              echo "   Final: $final_url"
+              echo ""
+              broken_links="$broken_links\n- **$display_label**\n  $url\n  Error: $error_msg"
               ((broken_count++))
+              vendor_broken[$vendor]=$((${vendor_broken[$vendor]:-0} + 1))
+            else
+              echo "✅ $display_label"
+              ((working_count++))
+              vendor_working[$vendor]=$((${vendor_working[$vendor]:-0} + 1))
             fi
 
             # Rate limit: wait 1 second between checks
             sleep 1
-          done < /tmp/links.txt
+          done
+
+          # Build vendor summary
+          echo ""
+          echo "Summary by vendor:"
+          for vendor in "${!vendor_working[@]}" "${!vendor_broken[@]}"; do
+            working=${vendor_working[$vendor]:-0}
+            broken=${vendor_broken[$vendor]:-0}
+            total=$((working + broken))
+            vendor_summary="$vendor_summary\n$vendor: $working/$total working"
+          done
 
           total_count=$((working_count + broken_count))
           echo "working_count=$working_count" >> $GITHUB_OUTPUT
           echo "broken_count=$broken_count" >> $GITHUB_OUTPUT
           echo "total_count=$total_count" >> $GITHUB_OUTPUT
+          echo "vendor_summary<<EOF" >> $GITHUB_OUTPUT
+          echo -e "$vendor_summary" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
           echo "broken_links<<EOF" >> $GITHUB_OUTPUT
           echo -e "$broken_links" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
@@ -166,14 +231,19 @@ jobs:
             </head>
             <body>
               <div class="header">
-                <h1>🚨 Broken Amazon Affiliate Links Detected</h1>
+                <h1>🚨 Broken Affiliate Links Detected</h1>
               </div>
 
               <div class="stats">
                 <strong>Status:</strong> ${{ steps.test.outputs.broken_count }} broken link(s) found out of ${{ steps.test.outputs.total_count }} total<br>
                 <strong>Site:</strong> www.chefapprovedtools.com<br>
-                <strong>Affiliate Tag:</strong> chefapprovedt-20<br>
-                <strong>Check Date:</strong> ${{ steps.extract.outputs.check_date }}
+                <strong>Check Date:</strong> ${{ steps.extract.outputs.check_date }}<br>
+                <strong>Vendors Checked:</strong> Amazon, Vitamix, Zwilling, KitchenAid, and others
+              </div>
+
+              <div class="stats">
+                <strong>Breakdown by Vendor:</strong><br>
+                <pre style="white-space: pre-wrap; font-family: monospace; font-size: 12px;">${{ steps.test.outputs.vendor_summary }}</pre>
               </div>
 
               <div class="broken-links">
@@ -184,17 +254,23 @@ jobs:
               <div class="action-items">
                 <h2 style="margin-top: 0; color: #2563eb;">Action Required:</h2>
                 <ol>
-                  <li>Log into Amazon Associates at <a href="https://affiliate-program.amazon.com">https://affiliate-program.amazon.com</a></li>
+                  <li>Log into the appropriate affiliate program:
+                    <ul>
+                      <li>Amazon: <a href="https://affiliate-program.amazon.com">affiliate-program.amazon.com</a></li>
+                      <li>CJ Network (Vitamix, Zwilling, etc): <a href="https://www.cj.com">cj.com</a></li>
+                    </ul>
+                  </li>
                   <li>Verify these products still exist and are available</li>
-                  <li>Generate fresh affiliate links if needed using tag: <code>chefapprovedt-20</code></li>
-                  <li>Update links in Supabase using the scripts in <code>/scripts</code> folder</li>
+                  <li>Generate fresh affiliate links if needed</li>
+                  <li>Update links in Supabase database</li>
                   <li>Test the updated links manually before deploying</li>
                 </ol>
                 <p><strong>Common Issues:</strong></p>
                 <ul style="margin: 5px 0; padding-left: 20px;">
-                  <li><strong>AMAZON HOMEPAGE</strong> - The ASIN in the link is invalid/discontinued. Create a new affiliate link.</li>
+                  <li><strong>AMAZON HOMEPAGE</strong> - The ASIN is invalid/discontinued. Create a new affiliate link.</li>
                   <li><strong>HTTP 404/410</strong> - Product no longer available. Find replacement product.</li>
-                  <li><strong>HTTP 403/429</strong> - Amazon rate limiting. Links are likely fine, will recheck tomorrow.</li>
+                  <li><strong>HTTP 403/429</strong> - Rate limiting. Links are likely fine, will recheck tomorrow.</li>
+                  <li><strong>CJ ERROR PAGE</strong> - Deep link expired or product removed from advertiser catalog.</li>
                 </ul>
               </div>
 
@@ -202,10 +278,10 @@ jobs:
                 <p><strong>Automated Check Details:</strong></p>
                 <ul style="margin: 5px 0; padding-left: 20px;">
                   <li>This check runs daily at 6 AM Pacific (2 PM UTC)</li>
-                  <li>Fetches all affiliate links from Supabase products database</li>
-                  <li>Uses proper browser headers to avoid Amazon's bot detection</li>
+                  <li>Fetches ALL affiliate links from Supabase (Amazon, Vitamix, Zwilling, KitchenAid, variants, comparison products)</li>
+                  <li>Uses proper browser headers to avoid bot detection</li>
                   <li>Tests HTTP status codes AND verifies final redirect URL</li>
-                  <li>Flags links that redirect to Amazon homepage (broken ASIN)</li>
+                  <li>Vendor-specific validation (Amazon homepage check, CJ error page detection)</li>
                 </ul>
                 <p style="margin-top: 15px;"><em>This email was sent automatically by the Chef Approved Tools affiliate link checker workflow.</em></p>
               </div>
@@ -244,11 +320,16 @@ jobs:
               <div class="stats">
                 <strong>Status:</strong> All ${{ steps.test.outputs.working_count }} affiliate links are working correctly<br>
                 <strong>Site:</strong> www.chefapprovedtools.com<br>
-                <strong>Affiliate Tag:</strong> chefapprovedt-20<br>
-                <strong>Check Date:</strong> ${{ steps.extract.outputs.check_date }}
+                <strong>Check Date:</strong> ${{ steps.extract.outputs.check_date }}<br>
+                <strong>Vendors Checked:</strong> Amazon, Vitamix, Zwilling, KitchenAid, and others
               </div>
 
-              <p>Great news! All Amazon affiliate links on your site are working properly and directing to the correct products with your affiliate tag.</p>
+              <div class="stats">
+                <strong>Breakdown by Vendor:</strong><br>
+                <pre style="white-space: pre-wrap; font-family: monospace; font-size: 12px;">${{ steps.test.outputs.vendor_summary }}</pre>
+              </div>
+
+              <p>Great news! All affiliate links on your site are working properly, including Amazon, CJ Network (Vitamix, Zwilling, KitchenAid), size variants, and comparison products.</p>
 
               <div class="footer">
                 <p><em>This email was sent automatically by the Chef Approved Tools affiliate link checker workflow running daily at 6 AM Pacific.</em></p>
