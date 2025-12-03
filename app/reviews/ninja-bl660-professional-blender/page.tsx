@@ -4,8 +4,12 @@ import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
+import { getReviewGitDates } from '@/lib/git-dates'
+import { getTierBadge } from '@/lib/editorial-metadata'
+import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import AmazonCTA from '@/components/AmazonCTA'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import {
   ReviewHero,
   ProsConsGrid,
@@ -20,6 +24,9 @@ import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './ninja-bl660-professional-blender-data'
+import { getBlenderComparison } from './blender-comparison-data'
+
+const PRODUCT_SLUG = 'ninja-bl660-professional-blender'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -73,12 +80,25 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function NinjaBL660ReviewPage() {
-  const product = await getProductBySlug(reviewData.productSlug)
+  const product = await getProductBySlug(PRODUCT_SLUG)
 
   if (!product) {
-    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+    throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
-  const productData = product ? {
+
+  // Get comparison data with live affiliate links from database
+  const comparisonData = await getBlenderComparison()
+
+  // Get git dates for this review
+  const gitDates = getReviewGitDates(PRODUCT_SLUG)
+
+  // Get tier badge from centralized config
+  const tierBadge = getTierBadge(PRODUCT_SLUG)
+
+  // Get category breadcrumb
+  const categoryBreadcrumb = getCategoryBreadcrumb(product.category)
+
+  const productData = {
     ...reviewData.legacyProductData,
     ...product,
     pros: product.pros && product.pros.length > 0 ? product.pros : reviewData.legacyProductData.pros,
@@ -86,16 +106,22 @@ export default async function NinjaBL660ReviewPage() {
     affiliateLinks: product.affiliateLinks && product.affiliateLinks.length > 0
       ? product.affiliateLinks
       : reviewData.legacyProductData.affiliateLinks
-  } : reviewData.legacyProductData
+  }
 
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
 
-  const breadcrumbs = [
-    { name: "Home", url: "https://www.chefapprovedtools.com" },
-    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-    { name: "Appliances", url: "https://www.chefapprovedtools.com/appliances" },
-    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-  ]
+  // Generate breadcrumbs with category
+  const breadcrumbs = categoryBreadcrumb
+    ? [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+      ]
+    : [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+      ]
 
   const productSchema = generateProductSchema({
     name: productData.name,
@@ -133,9 +159,18 @@ export default async function NinjaBL660ReviewPage() {
           <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
-            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-            {' / '}
-            {reviewData.breadcrumb.productName}
+            {categoryBreadcrumb ? (
+              <>
+                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
+                {' / '}
+              </>
+            ) : (
+              <>
+                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+                {' / '}
+              </>
+            )}
+            {productData.name}
           </div>
 
           {/* SECTION 1: HERO */}
@@ -143,37 +178,18 @@ export default async function NinjaBL660ReviewPage() {
             title={reviewData.hero.title}
             authorName={reviewData.hero.authorName}
             authorCredentials={reviewData.hero.authorCredentials}
-            rating={reviewData.hero.rating}
-            tierBadge={reviewData.hero.tierBadge}
+            rating={productData.expertRating ?? reviewData.hero.rating}
+            tierBadge={tierBadge}
             verdict={reviewData.hero.verdict}
             verdictStrong={reviewData.hero.verdictStrong}
-            publishedDate="November 10, 2025"
-            lastUpdated="November 10, 2025"
-            ctaUrl={affiliateUrl}
-            ctaText={reviewData.hero.ctaText}
+            publishedDate={gitDates.firstPublished}
+            lastUpdated={gitDates.lastUpdated}
             customCTA={
-              <div>
-                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
-                  >
-                    {reviewData.hero.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-              </div>
+              <AmazonCTA
+                productSlug={PRODUCT_SLUG}
+                affiliateUrl={affiliateUrl}
+                position="above_fold"
+              />
             }
           />
 
@@ -218,6 +234,24 @@ export default async function NinjaBL660ReviewPage() {
             pros={productData.pros}
             cons={productData.cons}
           />
+
+          {/* COMPARISON TABLE */}
+          <section className="my-12">
+            <ProductComparisonTable
+              title={comparisonData.title}
+              subtitle={comparisonData.subtitle}
+              products={comparisonData.products}
+              comparisonRows={comparisonData.comparisonRows}
+              highlightedProduct={comparisonData.highlightedProduct}
+            />
+
+            {/* POST-COMPARISON CTA */}
+            <AmazonCTA
+              productSlug={PRODUCT_SLUG}
+              affiliateUrl={affiliateUrl}
+              position="comparison_table"
+            />
+          </section>
 
           {/* SECTION 3: PROFESSIONAL CONTEXT */}
           <section className="mb-12 bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm">
@@ -276,33 +310,16 @@ export default async function NinjaBL660ReviewPage() {
             considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
           />
 
+          {/* CTA - AFTER WHO SHOULD BUY */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="who_should_buy"
+            boxHeading="Sound like the right fit for your kitchen?"
+          />
+
           {/* FAQ */}
           <FAQSection title={reviewData.faq.title} faqs={reviewData.faq.items} />
-
-          {/* WHERE TO BUY */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">{reviewData.whereToBuy.title}</h2>
-            <p className="text-slate-600 leading-relaxed mb-6">{reviewData.whereToBuy.introText}</p>
-            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
-              <div className="text-center mb-4">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-                <p className="text-sm text-slate-900 mb-4">Prime shipping, verified reviews, easy returns</p>
-              </div>
-              <CTAVisibilityTracker ctaId={`${reviewData.productSlug}-where-to-buy-cta`} position="mid_article" productSlug={reviewData.productSlug} merchant="amazon">
-                <a href={affiliateUrl} target="_blank" rel="noopener noreferrer sponsored"
-                  className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl">
-                  Check Price on Amazon →
-                </a>
-              </CTAVisibilityTracker>
-              <p className="text-center mt-3 text-sm">
-                <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium" target="_blank" rel="noopener noreferrer sponsored">
-                  → View {productData.name} on Amazon
-                </a>
-              </p>
-              <p className="text-xs text-slate-700 text-center mt-3">As an Amazon Associate, I earn from qualifying purchases.</p>
-            </div>
-            <p className="text-sm text-slate-600 mt-6 italic">{reviewData.whereToBuy.disclaimer}</p>
-          </div>
 
           {/* EMAIL CAPTURE */}
           <EmailCaptureSection />
@@ -310,25 +327,17 @@ export default async function NinjaBL660ReviewPage() {
           {/* BOTTOM LINE */}
           <BottomLineSection
             title={reviewData.bottomLine.title}
-            paragraphs={reviewData.bottomLine.paragraphs.map((p, i) => (
-              <p key={i} className="text-lg leading-relaxed text-slate-700">{p}</p>
-            ))}
-            customCTA={
-              <div className="bg-white rounded-xl p-6">
-                <CTAVisibilityTracker ctaId={`${reviewData.productSlug}-bottom-line-cta`} position="final_cta" productSlug={reviewData.productSlug} merchant="amazon">
-                  <a href={affiliateUrl} target="_blank" rel="noopener noreferrer sponsored"
-                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl">
-                    {reviewData.bottomLine.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a href={affiliateUrl} className="text-orange-700 hover:text-orange-800 underline font-medium" target="_blank" rel="noopener noreferrer sponsored">
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-                <p className="text-xs text-slate-700 text-center mt-3">As an Amazon Associate, I earn from qualifying purchases.</p>
-              </div>
-            }
+            paragraphs={reviewData.bottomLine.paragraphs}
+            ctaText={reviewData.bottomLine.ctaText}
+            ctaUrl={affiliateUrl}
+            productSlug={PRODUCT_SLUG}
+          />
+
+          {/* FINAL CTA */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="final_cta"
           />
 
           {/* RELATED PRODUCTS */}
