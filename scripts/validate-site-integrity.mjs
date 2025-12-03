@@ -20,10 +20,18 @@ import { config } from 'dotenv'
 // Load environment variables
 config({ path: '.env.local' })
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-)
+// Check if Supabase env vars are available (skip validation in CI/CD if not)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+if (!supabaseUrl || !supabaseKey) {
+  console.log('\x1b[33m⚠️  Supabase environment variables not found\x1b[0m')
+  console.log('\x1b[33m   Skipping site integrity validation (CI/CD environment)\x1b[0m')
+  console.log('\x1b[32m✓  Build can proceed\x1b[0m\n')
+  process.exit(0)
+}
+
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 // ANSI color codes
 const RED = '\x1b[31m'
