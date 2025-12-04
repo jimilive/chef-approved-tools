@@ -204,7 +204,7 @@ const nextConfig = {
               "img-src 'self' data: https: http:",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' data: https://fonts.gstatic.com",
-              "frame-src 'self' https://www.googletagmanager.com",
+              "frame-src 'self' https://www.googletagmanager.com https://ct.pinterest.com",
             ].join('; ')
           }
         ]

@@ -349,7 +349,7 @@ export function FinalCTASection() {
         </p>
         <a
           href="#get-guide"
-          className="inline-block bg-white text-orange-600 hover:bg-orange-50 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95"
+          className="inline-block bg-white text-orange-800 hover:bg-orange-50 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95"
         >
           Get The Free Guide
         </a>
