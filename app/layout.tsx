@@ -124,13 +124,13 @@ export default function RootLayout({
         {/* Preload critical resources */}
         <link rel="preload" href="/logo.png" as="image" type="image/png" />
 
-        {/* Preload LCP hero image for homepage */}
+        {/* Preload LCP hero image for homepage - Scott's photo is the actual LCP element on mobile */}
         <link
           rel="preload"
           as="image"
-          href="/images/cast-iron-steak-sear.jpg"
-          imageSrcSet="/_next/image?url=%2Fimages%2Fcast-iron-steak-sear.jpg&w=640&q=80 640w, /_next/image?url=%2Fimages%2Fcast-iron-steak-sear.jpg&w=750&q=80 750w, /_next/image?url=%2Fimages%2Fcast-iron-steak-sear.jpg&w=828&q=80 828w, /_next/image?url=%2Fimages%2Fcast-iron-steak-sear.jpg&w=1080&q=80 1080w"
-          imageSizes="(max-width: 768px) 100vw, 50vw"
+          href="/images/scott-chef-coat-cropped.jpg"
+          imageSrcSet="/_next/image?url=%2Fimages%2Fscott-chef-coat-cropped.jpg&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fscott-chef-coat-cropped.jpg&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fscott-chef-coat-cropped.jpg&w=750&q=75 750w"
+          imageSizes="(max-width: 768px) 100vw, 300px"
           fetchPriority="high"
         />
 
