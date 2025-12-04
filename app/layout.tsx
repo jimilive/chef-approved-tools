@@ -12,9 +12,7 @@ const ExitIntentWrapper = lazy(() => import('@/components/ExitIntentWrapper'))
 const Analytics = lazy(() => import('@/components/Analytics'))
 const ScrollTracker = lazy(() => import('@/components/ScrollTracker'))
 const ThirdPartyScripts = lazy(() => import('@/components/ThirdPartyScripts'))
-import MobileOptimizedLayout from '@/components/MobileOptimizedLayout'
 import { organizationSchema, websiteSchema } from '@/lib/schema'
-import MobileOptimizationProvider from '@/components/MobileOptimizationProvider'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -299,43 +297,39 @@ export default function RootLayout({
           <ThirdPartyScripts />
         </Suspense>
 
-        <MobileOptimizedLayout>
-          <MobileOptimizationProvider>
-            {/* Skip to main content for accessibility */}
-            <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-orange-700 text-white px-4 py-2 rounded-md z-50">
-              Skip to main content
-            </a>
+        {/* Skip to main content for accessibility */}
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-orange-700 text-white px-4 py-2 rounded-md z-50">
+          Skip to main content
+        </a>
 
-            {/* Main Header */}
-            <Header />
+        {/* Main Header */}
+        <Header />
 
-            {/* Main Content */}
-            <main id="main-content" className="min-h-screen mobile-scroll">
-              {children}
-            </main>
+        {/* Main Content */}
+        <main id="main-content" className="min-h-screen mobile-scroll">
+          {children}
+        </main>
 
-            {/* Footer */}
-            <Footer />
+        {/* Footer */}
+        <Footer />
 
-            {/* Cookie Consent (GDPR/CCPA Compliance) - Lazy loaded */}
-            <Suspense fallback={null}>
-              <CookieConsent />
-            </Suspense>
+        {/* Cookie Consent (GDPR/CCPA Compliance) - Lazy loaded */}
+        <Suspense fallback={null}>
+          <CookieConsent />
+        </Suspense>
 
-            {/* Exit Intent Modal - Lazy loaded */}
-            <Suspense fallback={null}>
-              <ExitIntentWrapper />
-            </Suspense>
+        {/* Exit Intent Modal - Lazy loaded */}
+        <Suspense fallback={null}>
+          <ExitIntentWrapper />
+        </Suspense>
 
-            {/* Analytics - Page views and scroll tracking (lazy loaded) */}
-            <Suspense fallback={null}>
-              <Analytics />
-            </Suspense>
-            <Suspense fallback={null}>
-              <ScrollTracker />
-            </Suspense>
-          </MobileOptimizationProvider>
-        </MobileOptimizedLayout>
+        {/* Analytics - Page views and scroll tracking (lazy loaded) */}
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
+        <Suspense fallback={null}>
+          <ScrollTracker />
+        </Suspense>
 
         {/* Vercel Analytics */}
         <VercelAnalytics />
