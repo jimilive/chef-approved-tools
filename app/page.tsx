@@ -1,8 +1,15 @@
-import { Suspense } from 'react'
-import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import EmailCaptureSection from '@/components/home/EmailCaptureSection'
+import {
+  WhyListenSection,
+  ShopByCategorySection,
+  SecondaryCTASection,
+  TopProfessionalPicksSection,
+  FinalCTASection,
+  TrustBarSection
+} from '@/components/home/BelowFoldSections'
 
 export const metadata: Metadata = {
   title: 'Chef Approved Tools: 24 Years Restaurant Testing Kitchen Equipment',
@@ -44,18 +51,6 @@ export const metadata: Metadata = {
     canonical: 'https://www.chefapprovedtools.com'
   }
 }
-
-// Dynamic import below-fold sections for better performance (server-side compatible)
-const EmailCaptureSection = dynamic(() => import('@/components/home/EmailCaptureSection'))
-const WhyListenSection = dynamic(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.WhyListenSection })))
-const ShopByCategorySection = dynamic(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.ShopByCategorySection })))
-const SecondaryCTASection = dynamic(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.SecondaryCTASection })))
-const TopProfessionalPicksSection = dynamic(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.TopProfessionalPicksSection })))
-const FinalCTASection = dynamic(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.FinalCTASection })))
-const TrustBarSection = dynamic(() => import('@/components/home/BelowFoldSections').then(mod => ({ default: mod.TrustBarSection })))
-
-// Simple loading fallback
-const SectionFallback = () => <div className="py-16" />
 
 export default function HomePage() {
   return (
@@ -323,34 +318,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* LAZY LOADED BELOW-FOLD SECTIONS */}
-      <Suspense fallback={<SectionFallback />}>
-        <EmailCaptureSection />
-      </Suspense>
-
-      <Suspense fallback={<SectionFallback />}>
-        <WhyListenSection />
-      </Suspense>
-
-      <Suspense fallback={<SectionFallback />}>
-        <ShopByCategorySection />
-      </Suspense>
-
-      <Suspense fallback={<SectionFallback />}>
-        <SecondaryCTASection />
-      </Suspense>
-
-      <Suspense fallback={<SectionFallback />}>
-        <TopProfessionalPicksSection />
-      </Suspense>
-
-      <Suspense fallback={<SectionFallback />}>
-        <FinalCTASection />
-      </Suspense>
-
-      <Suspense fallback={<SectionFallback />}>
-        <TrustBarSection />
-      </Suspense>
+      {/* BELOW-FOLD SECTIONS - Server Components for optimal performance */}
+      <EmailCaptureSection />
+      <WhyListenSection />
+      <ShopByCategorySection />
+      <SecondaryCTASection />
+      <TopProfessionalPicksSection />
+      <FinalCTASection />
+      <TrustBarSection />
     </main>
   )
 }
