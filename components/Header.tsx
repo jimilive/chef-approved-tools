@@ -46,16 +46,15 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 no-underline hover:opacity-90 transition-opacity mr-8">
-            <div className="relative">
+            <div className="relative w-12 h-12">
               <Image
                 src="/logo.png"
                 alt="Chef Approved Tools"
                 width={48}
                 height={48}
-                quality={75}
+                sizes="48px"
                 className="drop-shadow-lg"
                 priority
-                style={{ width: '48px', height: '48px' }}
               />
             </div>
             <div className="flex flex-col text-center">
