@@ -52,10 +52,10 @@ export default function Header() {
                 alt="Chef Approved Tools"
                 width={48}
                 height={48}
-                sizes="48px"
                 quality={75}
-                className="h-12 w-12 drop-shadow-lg"
+                className="drop-shadow-lg"
                 priority
+                style={{ width: '48px', height: '48px' }}
               />
             </div>
             <div className="flex flex-col text-center">
