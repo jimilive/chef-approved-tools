@@ -2699,7 +2699,7 @@ export const METADATA = {
       averagePrice: "200-plus",
       productCategory: "mixers",
       brand: "KitchenAid",
-      model: "KSM8990WH",
+      model: "KSMC895OB",
       articleSection: "Stand Mixer Reviews",
     } as ReviewMetadata,
     
@@ -2774,12 +2774,12 @@ export const METADATA = {
     } as ReviewMetadata,
     
     'epicurean-kitchen-cutting-board': {
-      title: "Epicurean Cutting Board: 10-Year, 2,000+ Dishwasher Cycles",
-      description: "Epicurean board tested 10 years and 2,000+ dishwasher cycles: no warping or cracking. See why it replaced warped wood boards and survives daily prep work.",
+      title: "Epicurean Cutting Board Review: 10 Years, Zero Issues",
+      description: "Epicurean board tested 10 years with 2,000+ dishwasher cycles: no warping, no cracking. Gentler on knives than bamboo or glass. Why I ditched wood boards.",
       canonical: "https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/epicurean-board-hero.jpg",
-      imageAlt: "Epicurean cutting board after 10 years of dishwasher use",
+      imageAlt: "Epicurean cutting board after 10 years of daily use and dishwasher cycles",
       tier: 2,
       testingPeriod: "10+ Years Testing",
       productSlug: "epicurean-kitchen-cutting-board",
@@ -3516,14 +3516,14 @@ export const METADATA = {
     } as ReviewMetadata,
 
     'wusthof-classic-ikon-16-piece': {
-      title: "Wüsthof Classic Ikon 16-Piece: 6-Year Professional Test",
-      description: "Wüsthof Classic Ikon 16-piece tested 6 years professionally. German-forged handles reduce fatigue. Essential chef, santoku, bread, paring knives included.",
+      title: "Wüsthof Ikon 16-Piece Review: 6 Years, Worth the Price?",
+      description: "Wüsthof Classic Ikon 16-piece tested 6 years professionally. German steel holds edge, ergonomic handles reduce fatigue. Worth it? Honest chef verdict inside.",
       canonical: "https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-16-piece",
       author: "Scott Bradley",
       imageUrl: "/images/reviews/wusthof-ikon-hero.jpg",
       imageAlt: "Wüsthof Classic Ikon 16-piece knife set tested 6 years professionally",
       tier: 1,
-      testingPeriod: "2 Years Professional Testing",
+      testingPeriod: "6 Years Professional Testing",
       productSlug: "wusthof-classic-ikon-16-piece",
       publishedTime: "2024-05-20T10:00:00Z",
       modifiedTime: "2025-11-13T10:00:00Z",
