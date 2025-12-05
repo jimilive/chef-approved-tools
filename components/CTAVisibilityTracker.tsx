@@ -36,7 +36,7 @@ export default function CTAVisibilityTracker({
   merchant,
   children
 }: CTAVisibilityTrackerProps) {
-  const elementRef = useRef<HTMLDivElement>(null)
+  const elementRef = useRef<HTMLSpanElement>(null)
   const impressionTracked = useRef(false)
   const viewCount = useRef(0)
   const timeInView = useRef(0)
@@ -150,8 +150,8 @@ export default function CTAVisibilityTracker({
   }, [ctaId, position, productSlug, merchant, isVisible])
 
   return (
-    <div ref={elementRef} data-cta-id={ctaId} data-cta-position={position}>
+    <span ref={elementRef} data-cta-id={ctaId} data-cta-position={position}>
       {children}
-    </div>
+    </span>
   )
 }

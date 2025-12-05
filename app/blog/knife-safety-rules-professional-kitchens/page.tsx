@@ -294,7 +294,7 @@ export default function KnifeSafetyPost() {
             >
               <Link
                 href="/newsletter"
-                className="bg-orange-800 text-white hover:bg-orange-900 px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
+                className="bg-slate-800 text-white hover:bg-slate-900 px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
               >
                 Get the Free Guide →
               </Link>
