@@ -1,7 +1,7 @@
 // components/AffiliateButton.tsx
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { trackAffiliateClick } from '@/lib/tracking';
 import { getAssignedVariant, getVariantText, type CTAVariant } from '@/lib/ab-test';
 
@@ -17,11 +17,17 @@ interface AffiliateButtonProps {
   enableABTest?: boolean; // Toggle A/B testing on/off
 }
 
+// Default CTA text that matches what the server renders
+const DEFAULT_CTA_TEXT = 'Check Price on Amazon';
+
 /**
  * Enhanced Affiliate Button with A/B Testing
  *
  * By default, uses A/B tested CTA text variations
  * Set enableABTest={false} to use custom children text
+ *
+ * Note: To avoid hydration errors, the button always renders with a consistent
+ * initial text. The A/B variant is applied via DOM manipulation after mount.
  */
 export default function AffiliateButton({
   href,
@@ -34,14 +40,16 @@ export default function AffiliateButton({
   variant = 'primary',
   enableABTest = true
 }: AffiliateButtonProps) {
-  const [ctaVariant, setCtaVariant] = useState<CTAVariant>('a');
-  const [mounted, setMounted] = useState(false);
+  const buttonRef = useRef<HTMLAnchorElement>(null);
+  const ctaVariantRef = useRef<CTAVariant>('a');
 
-  // Get A/B test variant on client side
+  // Apply A/B test variant text after mount (DOM manipulation, no re-render)
   useEffect(() => {
-    setMounted(true);
-    if (enableABTest) {
-      setCtaVariant(getAssignedVariant());
+    if (enableABTest && buttonRef.current) {
+      ctaVariantRef.current = getAssignedVariant();
+      const variantText = getVariantText(ctaVariantRef.current);
+      buttonRef.current.textContent = variantText;
+      buttonRef.current.setAttribute('aria-label', `${variantText} - Opens in new window`);
     }
   }, [enableABTest]);
 
@@ -52,8 +60,8 @@ export default function AffiliateButton({
     if (enableABTest && typeof window !== 'undefined' && window.dataLayer) {
       window.dataLayer.push({
         event: 'cta_variant_click',
-        variant: ctaVariant,
-        variant_text: getVariantText(ctaVariant),
+        variant: ctaVariantRef.current,
+        variant_text: getVariantText(ctaVariantRef.current),
         merchant: merchant,
         product: product,
         position: position,
@@ -71,14 +79,13 @@ export default function AffiliateButton({
 
   const baseStyles = 'inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold text-base sm:text-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95';
 
-  // Determine CTA text
-  const ctaText = enableABTest && mounted ? getVariantText(ctaVariant) : children;
-
-  // If A/B testing not enabled and no children provided, use default
-  const displayText = ctaText || 'Check Price on Amazon';
+  // Use children if provided, otherwise use default text
+  // A/B test text is applied via DOM after mount to avoid hydration mismatch
+  const displayText = children || DEFAULT_CTA_TEXT;
 
   return (
     <a
+      ref={buttonRef}
       href={href}
       onClick={handleClick}
       target="_blank"

@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { usePathname } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import { AffiliateButtonCompact } from './AffiliateButtonVariations';
 import { getAssignedVariant, type CTAVariant } from '@/lib/ab-test';
 
@@ -17,11 +18,12 @@ interface StickyMobileCTAProps {
 /**
  * Sticky mobile CTA that appears at bottom of screen
  * - Only shows on mobile devices
- * - Fades in after 3 seconds or 50% scroll (whichever first)
- * - Hides when user reaches bottom of page (90%+)
+ * - Fades in after 1 second
  * - Only appears on /reviews/* pages
+ *
+ * This component is client-only (uses createPortal and browser APIs)
  */
-export default function StickyMobileCTA({
+function StickyMobileCTAClient({
   productName,
   affiliateUrl,
   merchant = 'amazon',
@@ -42,7 +44,6 @@ export default function StickyMobileCTA({
 
     // Simple: show after 1 second
     const timer = setTimeout(() => {
-      console.log('StickyMobileCTA: Timer fired, showing CTA');
       setShouldShow(true);
     }, 1000);
 
@@ -51,11 +52,6 @@ export default function StickyMobileCTA({
 
   // Don't render on non-review pages
   if (!isReviewPage) {
-    return null;
-  }
-
-  // Use portal to render directly to body (avoids transform parent issues)
-  if (typeof document === 'undefined') {
     return null;
   }
 
@@ -89,20 +85,14 @@ export default function StickyMobileCTA({
   );
 }
 
+// Default export for backward compatibility
+export default StickyMobileCTAClient;
+
 /**
- * Wrapper component for lazy loading
+ * Dynamic wrapper that prevents SSR hydration issues
  * Use this in your review pages
  */
-export function StickyMobileCTAWrapper(props: StickyMobileCTAProps) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null; // Avoid SSR hydration issues
-  }
-
-  return <StickyMobileCTA {...props} />;
-}
+export const StickyMobileCTAWrapper = dynamic(
+  () => Promise.resolve(StickyMobileCTAClient),
+  { ssr: false }
+);
