@@ -3,7 +3,6 @@ import { Star, CheckCircle, XCircle, TrendingUp, Shield, Clock, Award } from 'lu
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateProductSchema, generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
-import PriceDisplay from '@/components/PriceDisplay'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 // TIER 1: PROFESSIONAL TESTING REVIEW

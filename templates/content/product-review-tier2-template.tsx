@@ -3,7 +3,6 @@ import { Star, CheckCircle, XCircle, TrendingUp, Shield, Info, Award } from 'luc
 import TestimonialsSection from '@/components/TestimonialsSection'
 import { generateBreadcrumbSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
-import PriceDisplay from '@/components/PriceDisplay'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 
 // TIER 2: RESEARCH-BASED EXPERT REVIEW
