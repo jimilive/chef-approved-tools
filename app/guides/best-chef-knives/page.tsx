@@ -551,7 +551,7 @@ export default async function BestChefKnivesPage() {
                   href={topKnives[1].affiliateUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored nofollow"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg"
                 >
                   Get the Victorinox 10&quot; (High Volume) →
                 </a>
