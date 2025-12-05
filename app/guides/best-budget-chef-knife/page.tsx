@@ -50,7 +50,7 @@ export default async function BestBudgetChefKnife() {
             <li className="text-gray-400">/</li>
             <li><Link href="/guides" className="text-orange-600 hover:text-orange-800">Guides</Link></li>
             <li className="text-gray-400">/</li>
-            <li className="text-gray-600">Best Budget Chef Knife</li>
+            <li className="text-gray-700">Best Budget Chef Knife</li>
           </ol>
         </div>
       </nav>
@@ -104,7 +104,7 @@ export default async function BestBudgetChefKnife() {
               Check Current Price on Amazon
             </a>
             </CTAVisibilityTracker>
-            <div className="flex items-center gap-2 text-slate-600">
+            <div className="flex items-center gap-2 text-slate-700">
               <Star className="w-5 h-5 text-yellow-500 fill-current" />
               <span className="font-semibold">4.8/5</span>
               <span className="text-sm">(25,000+ reviews)</span>
@@ -216,26 +216,26 @@ export default async function BestBudgetChefKnife() {
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Price</td>
                   <td className="px-4 py-3 text-sm text-green-600 font-bold">~$50</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">~$150</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">~$200</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">~$150</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">~$200</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Edge Retention</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">Excellent</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">Excellent</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">Superior</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">Excellent</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">Excellent</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">Superior</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Ease of Sharpening</td>
                   <td className="px-4 py-3 text-sm text-green-600">Very Easy</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">Easy</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">Moderate</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">Easy</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">Moderate</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Weight</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">5.6 oz (light)</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">8 oz (medium)</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">6 oz (light)</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">5.6 oz (light)</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">8 oz (medium)</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">6 oz (light)</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Dishwasher Safe</td>
@@ -246,14 +246,14 @@ export default async function BestBudgetChefKnife() {
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">NSF Certified</td>
                   <td className="px-4 py-3 text-sm text-green-600">Yes</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">Yes</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">Yes</td>
                   <td className="px-4 py-3 text-sm text-red-600">No</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Value Rating</td>
                   <td className="px-4 py-3 text-sm text-green-600 font-bold">⭐⭐⭐⭐⭐</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">⭐⭐⭐⭐</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">⭐⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">⭐⭐⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">⭐⭐⭐</td>
                 </tr>
               </tbody>
             </table>
@@ -310,7 +310,7 @@ export default async function BestBudgetChefKnife() {
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
             >
               <h3 className="font-bold text-slate-900 mb-2">How to Care for Your Chef's Knife</h3>
-              <p className="text-sm text-slate-600">Essential maintenance tips to keep your knife razor-sharp for decades.</p>
+              <p className="text-sm text-slate-700">Essential maintenance tips to keep your knife razor-sharp for decades.</p>
             </Link>
             </CTAVisibilityTracker>
             <CTAVisibilityTracker
@@ -324,7 +324,7 @@ export default async function BestBudgetChefKnife() {
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
             >
               <h3 className="font-bold text-slate-900 mb-2">Best Knife for Cutting Meat</h3>
-              <p className="text-sm text-slate-600">Discover the professional's choice for butchering, trimming, and deboning.</p>
+              <p className="text-sm text-slate-700">Discover the professional's choice for butchering, trimming, and deboning.</p>
             </Link>
             </CTAVisibilityTracker>
           </div>

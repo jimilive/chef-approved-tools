@@ -189,7 +189,7 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">
               About Scott Bradley
             </h1>
-            <p className="text-xl text-slate-600">Professional Chef • 24 Years Professional Kitchen Experience</p>
+            <p className="text-xl text-slate-700">Professional Chef • 24 Years Professional Kitchen Experience</p>
           </div>
 
           <div className="prose prose-lg max-w-none">
@@ -294,7 +294,7 @@ export default function AboutPage() {
             <h3 className="text-3xl font-bold text-slate-900 mb-4">
               Our 4-Phase Testing Process
             </h3>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-700 max-w-3xl mx-auto">
               Every piece of equipment goes through the same rigorous process, from initial unboxing
               to final recommendation after months of professional kitchen use.
             </p>
@@ -344,7 +344,7 @@ export default function AboutPage() {
             <h3 className="text-3xl font-bold text-slate-900 mb-4">
               Our Three-Tier Review System
             </h3>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-700 max-w-3xl mx-auto">
               Every review displays one of three tier badges showing exactly what kind of testing
               and experience backs each recommendation.
             </p>
@@ -386,7 +386,7 @@ export default function AboutPage() {
             {/* Tier 3 */}
             <div className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-xl p-6 border-2 border-slate-400">
               <div className="flex items-center gap-3 mb-4">
-                <Award className="w-8 h-8 text-slate-600" />
+                <Award className="w-8 h-8 text-slate-700" />
                 <h4 className="text-xl font-bold text-slate-900">Tier 3</h4>
               </div>
               <h5 className="font-bold text-slate-900 mb-3">Professional Recommendation</h5>
@@ -427,7 +427,7 @@ export default function AboutPage() {
             <h3 className="text-3xl font-bold text-slate-900 mb-4">
               Our Scoring System
             </h3>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-700 max-w-3xl mx-auto">
               Each piece of equipment is scored across 5 key categories, weighted by importance
               for professional kitchen environments.
             </p>

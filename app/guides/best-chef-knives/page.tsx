@@ -161,10 +161,10 @@ export default async function BestChefKnivesPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Best Chef Knives of 2025: Professional Kitchen Testing
           </h1>
-          <p className="text-xl text-slate-600 leading-relaxed mb-4">
+          <p className="text-xl text-slate-700 leading-relaxed mb-4">
             After 24 years managing professional kitchens doing $80K+ monthly revenue at Mellow Mushroom and testing knives in high-volume operations, here are the chef knives that actually survive real restaurant abuse.
           </p>
-          <div className="flex items-center gap-4 text-sm text-slate-500">
+          <div className="flex items-center gap-4 text-sm text-slate-600">
             <span>By Scott Bradley, Professional Chef</span>
             <span>•</span>
             <span>Published: November 10, 2025</span>
@@ -267,7 +267,7 @@ export default async function BestChefKnivesPage() {
                     </div>
                     <span className="text-sm font-semibold text-slate-700">{knife.rating}/5</span>
                   </div>
-                  <p className="text-sm text-slate-600 mb-3">{knife.bestFor}</p>
+                  <p className="text-sm text-slate-700 mb-3">{knife.bestFor}</p>
                   <CTAVisibilityTracker ctaId={`guide-best-chef-knives-mobile-price-${index + 1}`}
 
                       merchant="amazon"
@@ -312,7 +312,7 @@ export default async function BestChefKnivesPage() {
                         <h3 className="text-2xl font-bold text-slate-900">
                           #{index + 1}: {knife.name}
                         </h3>
-                        <p className="text-lg text-slate-600 mt-1">{knife.bestFor}</p>
+                        <p className="text-lg text-slate-700 mt-1">{knife.bestFor}</p>
                       </div>
                       <div className="text-right">
                         <div className="flex text-yellow-400 justify-end mb-1">

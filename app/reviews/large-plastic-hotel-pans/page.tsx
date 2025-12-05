@@ -307,7 +307,7 @@ export default async function LargePlasticHotelPansReview() {
               {reviewData.whereToBuy.title}
             </h2>
 
-            <p className="text-slate-600 leading-relaxed mb-6">
+            <p className="text-slate-700 leading-relaxed mb-6">
               {reviewData.whereToBuy.introText}
             </p>
 
@@ -316,7 +316,7 @@ export default async function LargePlasticHotelPansReview() {
                 <div className="flex flex-col gap-4">
                   <div className="text-center">
                     <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-                    <p className="text-sm text-slate-600 m-0">Prime shipping, verified reviews, easy returns</p>
+                    <p className="text-sm text-slate-700 m-0">Prime shipping, verified reviews, easy returns</p>
                   </div>
                   <CTAVisibilityTracker ctaId="where-to-buy-amazon" position="mid_article">
                     <a

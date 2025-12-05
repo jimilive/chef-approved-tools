@@ -222,7 +222,7 @@ export default async function NortonTriStoneSharpenerReview() {
               <div key={index} className="bg-white rounded-lg border-2 border-slate-200 p-6 hover:border-orange-300 transition-colors">
                 <div className="text-4xl mb-3">{feature.emoji}</div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed text-base">{feature.description}</p>
+                <p className="text-slate-700 leading-relaxed text-base">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -417,7 +417,7 @@ export default async function NortonTriStoneSharpenerReview() {
             Where to Buy
           </h2>
 
-          <p className="text-slate-600 leading-relaxed mb-6">
+          <p className="text-slate-700 leading-relaxed mb-6">
             The Norton IM200 Tri-Stone Sharpener is available on Amazon with Prime shipping. This professional-grade sharpening system delivers consistent results for maintaining your kitchen knives.
           </p>
 
@@ -459,7 +459,7 @@ export default async function NortonTriStoneSharpenerReview() {
             </p>
           </div>
 
-          <p className="text-sm text-slate-600 mt-6 italic">
+          <p className="text-sm text-slate-700 mt-6 italic">
             Price and availability subject to change. Always verify current specifications before purchasing.
           </p>
         </section>

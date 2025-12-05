@@ -196,7 +196,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
                   productSlug={productData.slug}
                 />
 
-                <p className="text-xs text-slate-600 text-center mt-4">
+                <p className="text-xs text-slate-700 text-center mt-4">
                   As a KitchenAid affiliate, I earn from qualifying purchases. Price and availability may change.
                 </p>
               </div>
@@ -268,7 +268,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
           <h2 className="text-3xl font-bold mb-6 text-slate-900">
             How Does the Professional 600 Compare?
           </h2>
-          <p className="text-lg text-slate-600 mb-8">
+          <p className="text-lg text-slate-700 mb-8">
             After 18 years using this mixer professionally at Purple Café, Mellow Mushroom, and Il Pizzaiolo,
             I&apos;ve tested every major stand mixer in high-volume settings. Here&apos;s how the Professional 600
             stacks up against the modern replacements and alternatives.
@@ -332,7 +332,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
             {reviewData.whereToBuy.title}
           </h2>
 
-          <p className="text-slate-600 leading-relaxed mb-6">
+          <p className="text-slate-700 leading-relaxed mb-6">
             {reviewData.whereToBuy.introText}
           </p>
 
@@ -355,7 +355,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
             </p>
           </div>
 
-          <p className="text-sm text-slate-600 mt-6 italic">
+          <p className="text-sm text-slate-700 mt-6 italic">
             {reviewData.whereToBuy.disclaimer}
           </p>
         </div>

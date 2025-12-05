@@ -233,7 +233,7 @@ export default async function LodgeCastIronReviewPage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-sm text-slate-600 mt-4 italic">
+            <p className="text-sm text-slate-700 mt-4 italic">
               All three sizes used equally in testing. The 12-inch is most versatile if buying only one.
             </p>
           </div>
@@ -303,7 +303,7 @@ export default async function LodgeCastIronReviewPage() {
                               <Star key={i} className={`w-4 h-4 ${i < test.performance ? 'fill-current' : ''}`} />
                             ))}
                           </div>
-                          <span className="text-sm text-slate-600">({test.performance}/5)</span>
+                          <span className="text-sm text-slate-700">({test.performance}/5)</span>
                         </div>
                       </td>
                       <td className="border border-slate-300 p-3 text-slate-700">{test.notes}</td>
@@ -312,7 +312,7 @@ export default async function LodgeCastIronReviewPage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-sm text-slate-600 mt-4 italic">
+            <p className="text-sm text-slate-700 mt-4 italic">
               All performance ratings based on 7 years of weekly home testing.
             </p>
           </div>

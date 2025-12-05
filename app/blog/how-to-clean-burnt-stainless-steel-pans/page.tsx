@@ -455,13 +455,13 @@ export default function CleanBurntStainlessSteelPost() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link href="/blog/stainless-steel-why-food-sticks" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Stainless Steel Cooking: Why Food Sticks</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Learn how to prevent food from sticking to stainless steel in the first place.
               </p>
             </Link>
             <Link href="/blog/cookware-materials-explained" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Cookware Materials Explained: What Chefs Actually Use</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Understand the pros and cons of different cookware materials and how to care for each.
               </p>
             </Link>

@@ -338,7 +338,7 @@ export default function GlossaryPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
               Essential Equipment Terms
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-700 max-w-2xl mx-auto">
               These are the terms that matter when buying professional-quality equipment for your home kitchen.
             </p>
           </div>
@@ -398,7 +398,7 @@ export default function GlossaryPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
               Professional Recipe Conversions
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-700 max-w-2xl mx-auto">
               Master the measurements and conversions that professional bakers and chefs use for consistent,
               reproducible results every time.
             </p>
@@ -465,49 +465,49 @@ export default function GlossaryPage() {
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">All-Purpose Flour</span>
-                    <span className="text-sm text-slate-600">1 cup = 120g</span>
+                    <span className="text-sm text-slate-700">1 cup = 120g</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Bread Flour</span>
-                    <span className="text-sm text-slate-600">1 cup = 125g</span>
+                    <span className="text-sm text-slate-700">1 cup = 125g</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Granulated Sugar</span>
-                    <span className="text-sm text-slate-600">1 cup = 200g</span>
+                    <span className="text-sm text-slate-700">1 cup = 200g</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Brown Sugar (packed)</span>
-                    <span className="text-sm text-slate-600">1 cup = 220g</span>
+                    <span className="text-sm text-slate-700">1 cup = 220g</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Butter</span>
-                    <span className="text-sm text-slate-600">1 cup = 225g</span>
+                    <span className="text-sm text-slate-700">1 cup = 225g</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Cocoa Powder</span>
-                    <span className="text-sm text-slate-600">1 cup = 85g</span>
+                    <span className="text-sm text-slate-700">1 cup = 85g</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Powdered Sugar</span>
-                    <span className="text-sm text-slate-600">1 cup = 120g</span>
+                    <span className="text-sm text-slate-700">1 cup = 120g</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Rolled Oats</span>
-                    <span className="text-sm text-slate-600">1 cup = 90g</span>
+                    <span className="text-sm text-slate-700">1 cup = 90g</span>
                   </div>
                 </div>
               </div>
@@ -520,43 +520,43 @@ export default function GlossaryPage() {
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Room Temperature</span>
-                    <span className="text-sm text-slate-600">68-72°F (20-22°C)</span>
+                    <span className="text-sm text-slate-700">68-72°F (20-22°C)</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Warm Water (Yeast)</span>
-                    <span className="text-sm text-slate-600">105-110°F (40-43°C)</span>
+                    <span className="text-sm text-slate-700">105-110°F (40-43°C)</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Soft Ball (Candy)</span>
-                    <span className="text-sm text-slate-600">235-240°F (113-116°C)</span>
+                    <span className="text-sm text-slate-700">235-240°F (113-116°C)</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Hard Crack (Candy)</span>
-                    <span className="text-sm text-slate-600">300-310°F (149-154°C)</span>
+                    <span className="text-sm text-slate-700">300-310°F (149-154°C)</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Deep Frying</span>
-                    <span className="text-sm text-slate-600">350-375°F (175-190°C)</span>
+                    <span className="text-sm text-slate-700">350-375°F (175-190°C)</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Bread Baking</span>
-                    <span className="text-sm text-slate-600">375-450°F (190-230°C)</span>
+                    <span className="text-sm text-slate-700">375-450°F (190-230°C)</span>
                   </div>
                 </div>
                 <div className="border-b border-gray-200 pb-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Pizza Oven</span>
-                    <span className="text-sm text-slate-600">500-550°F (260-290°C)</span>
+                    <span className="text-sm text-slate-700">500-550°F (260-290°C)</span>
                   </div>
                 </div>
               </div>
@@ -638,7 +638,7 @@ export default function GlossaryPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
               Professional Knife Cuts
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-700 max-w-2xl mx-auto">
               Master these fundamental cuts to cook like a professional. Uniform cuts ensure even cooking
               and professional presentation.
             </p>

@@ -118,7 +118,7 @@ export default async function AffordableKitchenAppliancesPage() {
             </div>
             <div>
               <p className="font-semibold text-slate-900">Scott Bradley</p>
-              <p className="text-sm text-slate-600">Professional Chef • 45 Years Cooking Experience</p>
+              <p className="text-sm text-slate-700">Professional Chef • 45 Years Cooking Experience</p>
             </div>
           </div>
 
@@ -132,7 +132,7 @@ export default async function AffordableKitchenAppliancesPage() {
             <strong>I&apos;m tired of &quot;budget appliance&quot; lists written by people who&apos;ve never used the equipment.</strong> This guide covers only affordable kitchen appliances I&apos;ve personally owned, tested, or used extensively—both in professional kitchens and at home.
           </p>
 
-          <p className="text-lg text-slate-600 leading-relaxed">
+          <p className="text-lg text-slate-700 leading-relaxed">
             After 24 years in restaurant kitchens, I know what works and what fails. Here&apos;s what I&apos;d buy (or have bought) when budget is limited but quality matters.
           </p>
         </header>

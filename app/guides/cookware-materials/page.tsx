@@ -65,11 +65,11 @@ export default function CookwareMaterialsPage() {
           <h1 className="text-4xl font-bold text-slate-900 mb-4">
             Cookware Materials Guide: What Really Works
           </h1>
-          <p className="text-xl text-slate-600 leading-relaxed mb-4">
+          <p className="text-xl text-slate-700 leading-relaxed mb-4">
             The truth about cookware materials from someone who&apos;s used them all
             in high-volume commercial kitchens for 24 years.
           </p>
-          <div className="flex items-center gap-3 text-sm text-slate-500">
+          <div className="flex items-center gap-3 text-sm text-slate-700">
             <span>By Scott Bradley, Professional Chef</span>
             <span>•</span>
             <span>Published: November 10, 2025</span>
@@ -86,8 +86,8 @@ export default function CookwareMaterialsPage() {
               <h3 className="text-xl font-bold text-slate-900 mb-3">Stainless Steel</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <h4 className="font-semibold text-green-700 mb-2">Pros:</h4>
-                  <ul className="text-sm text-slate-600 space-y-1">
+                  <p className="font-semibold text-green-800 mb-2">Pros:</p>
+                  <ul className="text-sm text-slate-700 space-y-1">
                     <li>• Durable and long-lasting</li>
                     <li>• Non-reactive to acids</li>
                     <li>• Dishwasher safe</li>
@@ -96,15 +96,15 @@ export default function CookwareMaterialsPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-red-700 mb-2">Cons:</h4>
-                  <ul className="text-sm text-slate-600 space-y-1">
+                  <p className="font-semibold text-red-800 mb-2">Cons:</p>
+                  <ul className="text-sm text-slate-700 space-y-1">
                     <li>• Can have hot spots without tri-ply</li>
                     <li>• Food can stick if not preheated properly</li>
                     <li>• More expensive for quality pieces</li>
                   </ul>
                 </div>
               </div>
-              <p className="text-slate-600">
+              <p className="text-slate-700">
                 <strong>Best for:</strong> Searing, sauces, browning, everyday cooking.
                 The workhorse of professional kitchens.
               </p>
@@ -114,8 +114,8 @@ export default function CookwareMaterialsPage() {
               <h3 className="text-xl font-bold text-slate-900 mb-3">Cast Iron</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <h4 className="font-semibold text-green-700 mb-2">Pros:</h4>
-                  <ul className="text-sm text-slate-600 space-y-1">
+                  <p className="font-semibold text-green-800 mb-2">Pros:</p>
+                  <ul className="text-sm text-slate-700 space-y-1">
                     <li>• Excellent heat retention</li>
                     <li>• Naturally non-stick when seasoned</li>
                     <li>• Oven to stovetop versatility</li>
@@ -124,8 +124,8 @@ export default function CookwareMaterialsPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-red-700 mb-2">Cons:</h4>
-                  <ul className="text-sm text-slate-600 space-y-1">
+                  <p className="font-semibold text-red-800 mb-2">Cons:</p>
+                  <ul className="text-sm text-slate-700 space-y-1">
                     <li>• Requires seasoning maintenance</li>
                     <li>• Heavy</li>
                     <li>• Can rust if not dried properly</li>
@@ -133,7 +133,7 @@ export default function CookwareMaterialsPage() {
                   </ul>
                 </div>
               </div>
-              <p className="text-slate-600">
+              <p className="text-slate-700">
                 <strong>Best for:</strong> Searing, frying, baking, high-heat cooking.
                 Perfect for building flavor layers.
               </p>
@@ -143,8 +143,8 @@ export default function CookwareMaterialsPage() {
               <h3 className="text-xl font-bold text-slate-900 mb-3">Enameled Cast Iron</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <h4 className="font-semibold text-green-700 mb-2">Pros:</h4>
-                  <ul className="text-sm text-slate-600 space-y-1">
+                  <p className="font-semibold text-green-800 mb-2">Pros:</p>
+                  <ul className="text-sm text-slate-700 space-y-1">
                     <li>• No seasoning required</li>
                     <li>• Great for acidic foods</li>
                     <li>• Beautiful presentation</li>
@@ -153,8 +153,8 @@ export default function CookwareMaterialsPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-red-700 mb-2">Cons:</h4>
-                  <ul className="text-sm text-slate-600 space-y-1">
+                  <p className="font-semibold text-red-800 mb-2">Cons:</p>
+                  <ul className="text-sm text-slate-700 space-y-1">
                     <li>• Expensive</li>
                     <li>• Enamel can chip</li>
                     <li>• Heavy</li>
@@ -162,7 +162,7 @@ export default function CookwareMaterialsPage() {
                   </ul>
                 </div>
               </div>
-              <p className="text-slate-600">
+              <p className="text-slate-700">
                 <strong>Best for:</strong> Braising, stewing, baking bread, slow cooking.
                 The Dutch oven champion.
               </p>
@@ -172,8 +172,8 @@ export default function CookwareMaterialsPage() {
               <h3 className="text-xl font-bold text-slate-900 mb-3">Carbon Steel</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <h4 className="font-semibold text-green-700 mb-2">Pros:</h4>
-                  <ul className="text-sm text-slate-600 space-y-1">
+                  <p className="font-semibold text-green-800 mb-2">Pros:</p>
+                  <ul className="text-sm text-slate-700 space-y-1">
                     <li>• Lighter than cast iron</li>
                     <li>• Heats up quickly</li>
                     <li>• Develops natural non-stick surface</li>
@@ -182,8 +182,8 @@ export default function CookwareMaterialsPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-red-700 mb-2">Cons:</h4>
-                  <ul className="text-sm text-slate-600 space-y-1">
+                  <p className="font-semibold text-red-800 mb-2">Cons:</p>
+                  <ul className="text-sm text-slate-700 space-y-1">
                     <li>• Requires seasoning like cast iron</li>
                     <li>• Can rust without proper care</li>
                     <li>• Limited availability</li>
@@ -191,7 +191,7 @@ export default function CookwareMaterialsPage() {
                   </ul>
                 </div>
               </div>
-              <p className="text-slate-600">
+              <p className="text-slate-700">
                 <strong>Best for:</strong> High-heat stir-frying, searing, professional techniques.
                 The secret weapon of restaurant chefs.
               </p>
@@ -202,17 +202,17 @@ export default function CookwareMaterialsPage() {
         <section className="mt-12">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Material Recommendations by Cooking Style</h2>
           <div className="bg-white rounded-xl p-6 shadow-lg">
-            <div className="space-y-4 text-slate-600">
+            <div className="space-y-4 text-slate-700">
               <div>
-                <h4 className="font-semibold text-slate-900 mb-1">Beginner Cook</h4>
+                <h3 className="font-semibold text-slate-900 mb-1">Beginner Cook</h3>
                 <p>Start with stainless steel tri-ply and one cast iron skillet. Easy maintenance, versatile.</p>
               </div>
               <div>
-                <h4 className="font-semibold text-slate-900 mb-1">Serious Home Chef</h4>
+                <h3 className="font-semibold text-slate-900 mb-1">Serious Home Chef</h3>
                 <p>Add enameled cast iron Dutch oven, carbon steel wok, and specialized pieces as needed.</p>
               </div>
               <div>
-                <h4 className="font-semibold text-slate-900 mb-1">Professional/Commercial</h4>
+                <h3 className="font-semibold text-slate-900 mb-1">Professional/Commercial</h3>
                 <p>Heavy-duty stainless steel, commercial-grade carbon steel, and cast iron that can handle abuse.</p>
               </div>
             </div>

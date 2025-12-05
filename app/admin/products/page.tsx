@@ -134,7 +134,7 @@ export default function AdminProductsPage() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">Product Admin Dashboard</h1>
-          <p className="text-gray-600">Manage affiliate links and product data</p>
+          <p className="text-gray-700">Manage affiliate links and product data</p>
         </div>
 
         {saveStatus && (
@@ -152,7 +152,7 @@ export default function AdminProductsPage() {
             <div key={product.id} className="bg-white rounded-lg shadow p-6">
               <div className="mb-4">
                 <h2 className="text-xl font-bold">{product.name}</h2>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-700">
                   {product.brand} • {product.category} • Slug: {product.slug}
                 </p>
               </div>
@@ -191,7 +191,7 @@ export default function AdminProductsPage() {
                       <div key={index} className="border rounded p-3 mb-2 bg-gray-50">
                         <div className="grid grid-cols-2 gap-3 mb-2">
                           <div>
-                            <label className="block text-xs text-gray-600 mb-1">
+                            <label className="block text-xs text-gray-700 mb-1">
                               Vendor
                             </label>
                             <select
@@ -206,7 +206,7 @@ export default function AdminProductsPage() {
                             </select>
                           </div>
                           <div>
-                            <label className="block text-xs text-gray-600 mb-1">
+                            <label className="block text-xs text-gray-700 mb-1">
                               Tag (optional)
                             </label>
                             <input
@@ -219,7 +219,7 @@ export default function AdminProductsPage() {
                           </div>
                         </div>
                         <div>
-                          <label className="block text-xs text-gray-600 mb-1">
+                          <label className="block text-xs text-gray-700 mb-1">
                             Affiliate URL
                           </label>
                           <div className="flex gap-2">

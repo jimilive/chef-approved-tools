@@ -89,10 +89,10 @@ export default async function CookwarePage() {
             </h1>
 
             <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-slate-600 mb-4">
+              <p className="text-lg text-slate-700 mb-4">
                 {categoryConfig.introParagraph1}
               </p>
-              <p className="text-lg text-slate-600">
+              <p className="text-lg text-slate-700">
                 {categoryConfig.introParagraph2}
               </p>
             </div>
@@ -127,7 +127,7 @@ export default async function CookwarePage() {
                     <h3 className="text-xl font-bold text-slate-900 mb-2">
                       {guide.title}
                     </h3>
-                    <p className="text-slate-600">
+                    <p className="text-slate-700">
                       {guide.description}
                     </p>
                     <span className="inline-flex items-center mt-4 text-orange-700 font-semibold">
@@ -168,7 +168,7 @@ export default async function CookwarePage() {
                     <h3 className="text-lg font-bold text-slate-900 mb-2">
                       {blog.title}
                     </h3>
-                    <p className="text-sm text-slate-600 mb-3">
+                    <p className="text-sm text-slate-700 mb-3">
                       {blog.description}
                     </p>
                     <span className="inline-flex items-center text-sm text-orange-700 font-semibold">
@@ -208,7 +208,7 @@ export default async function CookwarePage() {
                     <h3 className="text-xl font-bold text-slate-900 mb-3">
                       {faq.question}
                     </h3>
-                    <p className="text-slate-600">
+                    <p className="text-slate-700">
                       {faq.answer}
                     </p>
                   </div>
@@ -222,7 +222,7 @@ export default async function CookwarePage() {
             <h2 className="text-2xl font-bold text-slate-900 mb-4">
               Questions About Cookware?
             </h2>
-            <p className="text-lg text-slate-600 mb-6 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-700 mb-6 max-w-2xl mx-auto">
               Get expert advice from a professional chef with 24 years of restaurant experience.
               I respond to every question personally.
             </p>

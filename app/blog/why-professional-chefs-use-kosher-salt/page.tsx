@@ -449,13 +449,13 @@ export default function WhyChefsUseKosherSalt() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link href="/reviews/diamond-crystal-kosher-salt" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Diamond Crystal Kosher Salt Review</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 The professional chef&apos;s choice for 24 years—flaky crystals, pure flavor, perfect control.
               </p>
             </Link>
             <Link href="/blog/how-to-sear-steaks-like-restaurant-chef" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">How to Sear Steaks Like a Restaurant Chef</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Professional steak searing techniques using kosher salt for perfect crust formation.
               </p>
             </Link>

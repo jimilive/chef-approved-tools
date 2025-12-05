@@ -520,7 +520,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             >
               <Link href="/reviews/bodum-chambord-french-press" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Bodum Chambord French Press Review: 24-Year Professional Test</h4>
-                <p className="text-slate-600 text-sm">
+                <p className="text-slate-700 text-sm">
                   The French press that survived 24 years of daily use—6 years professional, 18 years at home.
                 </p>
               </Link>
@@ -533,7 +533,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             >
               <Link href="/guides/best-chef-knives" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Best Chef Knives: Complete Professional Buying Guide</h4>
-                <p className="text-slate-600 text-sm">
+                <p className="text-slate-700 text-sm">
                   Professional chef knife recommendations based on 24 years restaurant experience.
                 </p>
               </Link>
@@ -546,7 +546,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             >
               <Link href="/reviews/diamond-crystal-kosher-salt" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Diamond Crystal Kosher Salt Review: 18-Year Professional Test</h4>
-                <p className="text-slate-600 text-sm">
+                <p className="text-slate-700 text-sm">
                   The professional chef&apos;s salt choice—pure flavor and perfect seasoning control.
                 </p>
               </Link>
@@ -559,7 +559,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             >
               <Link href="/blog/why-professional-chefs-use-kosher-salt" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Why Professional Chefs Use Kosher Salt</h4>
-                <p className="text-slate-600 text-sm">
+                <p className="text-slate-700 text-sm">
                   Learn why kosher salt is the professional standard for consistent seasoning.
                 </p>
               </Link>

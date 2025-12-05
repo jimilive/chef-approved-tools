@@ -63,7 +63,7 @@ export default function BlogQuickAnswer({ optionA, optionB }: BlogQuickAnswerPro
             ))}
           </ul>
         </div>
-        <p className="text-sm text-slate-600 pt-2">
+        <p className="text-sm text-slate-700 pt-2">
           Keep reading for detailed performance testing and professional insights.
         </p>
       </div>

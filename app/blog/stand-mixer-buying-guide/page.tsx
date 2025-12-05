@@ -485,13 +485,13 @@ export default function StandMixerBuyingGuidePost() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link href="/blog/food-processor-vs-blender" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Food Processor vs Blender: Which Do You Actually Need?</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Professional chef explains the difference between blenders and food processors and when to use each.
               </p>
             </Link>
             <Link href="/blog/kitchen-tools-wasting-money" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">10 Kitchen Tools You&apos;re Wasting Money On</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Professional chef reveals which kitchen tools are worth buying and which are marketing gimmicks.
               </p>
             </Link>

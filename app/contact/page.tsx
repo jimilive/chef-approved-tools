@@ -55,7 +55,7 @@ export default function ContactPage() {
           <h1 className="text-4xl font-bold text-slate-900 mb-4">
             Get in Touch
           </h1>
-          <p className="text-xl text-slate-600 leading-relaxed">
+          <p className="text-xl text-slate-700 leading-relaxed">
             Questions about kitchen equipment? Want to share your own professional experience?
             I&apos;d love to hear from fellow chefs and home cooks.
           </p>
@@ -82,7 +82,7 @@ export default function ContactPage() {
             <div className="bg-white rounded-xl p-6 shadow-lg space-y-4">
               <div>
                 <h3 className="font-semibold text-slate-900 mb-2">Professional Background</h3>
-                <p className="text-slate-600 text-sm">
+                <p className="text-slate-700 text-sm">
                   24 years in professional kitchens<br />
                   Seattle Central College - A.A.S. Culinary Arts<br />
                   High-volume restaurant operations experience
@@ -91,7 +91,7 @@ export default function ContactPage() {
 
               <div>
                 <h3 className="font-semibold text-slate-900 mb-2">What I Review</h3>
-                <ul className="text-slate-600 text-sm space-y-1">
+                <ul className="text-slate-700 text-sm space-y-1">
                   <li>• Professional kitchen knives</li>
                   <li>• Commercial-grade cookware</li>
                   <li>• Restaurant equipment for home use</li>
@@ -101,7 +101,7 @@ export default function ContactPage() {
 
               <div>
                 <h3 className="font-semibold text-slate-900 mb-2">Response Time</h3>
-                <p className="text-slate-600 text-sm">
+                <p className="text-slate-700 text-sm">
                   I typically respond within 2-3 business days. For urgent equipment questions,
                   please mention it in your subject line.
                 </p>
@@ -122,7 +122,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">Thank You!</h3>
-                  <p className="text-slate-600 mb-6">
+                  <p className="text-slate-700 mb-6">
                     Your message has been sent successfully. I&apos;ll get back to you within 2-3 business days.
                   </p>
                   <button
@@ -237,7 +237,7 @@ export default function ContactPage() {
 
               {formState !== 'success' && (
                 <div className="mt-6 pt-6 border-t border-gray-200">
-                  <p className="text-xs text-slate-500">
+                  <p className="text-xs text-slate-700">
                     By submitting this form, you agree that your message may be used to improve
                     our content and help other professional chefs and home cooks.
                   </p>
@@ -258,7 +258,7 @@ export default function ContactPage() {
               <h3 className="font-semibold text-slate-900 mb-2">
                 Do you accept products for review?
               </h3>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 I only review equipment I purchase myself or have extensive experience with
                 in professional kitchens. This ensures honest, unbiased recommendations.
               </p>
@@ -268,7 +268,7 @@ export default function ContactPage() {
               <h3 className="font-semibold text-slate-900 mb-2">
                 Can you recommend equipment for my restaurant?
               </h3>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 While I can&apos;t provide personalized consulting, my reviews focus on commercial-grade
                 equipment that performs well in high-volume operations.
               </p>
@@ -278,7 +278,7 @@ export default function ContactPage() {
               <h3 className="font-semibold text-slate-900 mb-2">
                 How do you test equipment?
               </h3>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 All recommendations are based on real-world use in professional kitchens,
                 typically 6+ months of daily service before I&apos;ll recommend anything.{' '}
                 <Link href="/about" className="text-orange-600 hover:text-orange-800 font-medium">
@@ -291,7 +291,7 @@ export default function ContactPage() {
               <h3 className="font-semibold text-slate-900 mb-2">
                 Do you offer knife sharpening services?
               </h3>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 I don&apos;t offer sharpening services, but I can recommend local professionals
                 and provide guidance on maintaining your knives properly.
               </p>

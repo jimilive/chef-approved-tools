@@ -272,7 +272,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
                       }`}
                     >
                       <span className="block text-sm font-semibold text-slate-900">{option.size}</span>
-                      <span className={`block text-xs ${option.label.includes('Reviewed') ? 'text-orange-700 font-medium' : 'text-slate-500'}`}>
+                      <span className={`block text-xs ${option.label.includes('Reviewed') ? 'text-orange-700 font-medium' : 'text-slate-600'}`}>
                         {option.label}
                       </span>
                     </a>
@@ -292,7 +292,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
                 </a>
               </CTAVisibilityTracker>
 
-              <p className="text-xs text-slate-600 text-center mt-4">
+              <p className="text-xs text-slate-700 text-center mt-4">
                 As an Amazon Associate, I earn from qualifying purchases.
               </p>
             </div>
@@ -380,31 +380,31 @@ export default async function EpicureanKitchenCuttingBoardReview() {
                 <h3 className="font-semibold text-slate-900 mb-3 text-lg">Technical Specifications</h3>
                 <dl className="space-y-2 text-sm">
                   <div className="flex justify-between border-b border-gray-200 pb-2">
-                    <dt className="text-slate-600">Model Number:</dt>
+                    <dt className="text-slate-700">Model Number:</dt>
                     <dd className="font-semibold">KS11130101</dd>
                   </div>
                   <div className="flex justify-between border-b border-gray-200 pb-2">
-                    <dt className="text-slate-600">Material:</dt>
+                    <dt className="text-slate-700">Material:</dt>
                     <dd className="font-semibold">Richlite (wood fiber composite)</dd>
                   </div>
                   <div className="flex justify-between border-b border-gray-200 pb-2">
-                    <dt className="text-slate-600">NSF Certified:</dt>
+                    <dt className="text-slate-700">NSF Certified:</dt>
                     <dd className="font-semibold">Yes</dd>
                   </div>
                   <div className="flex justify-between border-b border-gray-200 pb-2">
-                    <dt className="text-slate-600">Heat Resistance:</dt>
+                    <dt className="text-slate-700">Heat Resistance:</dt>
                     <dd className="font-semibold">Up to 350°F</dd>
                   </div>
                   <div className="flex justify-between border-b border-gray-200 pb-2">
-                    <dt className="text-slate-600">Dishwasher Safe:</dt>
+                    <dt className="text-slate-700">Dishwasher Safe:</dt>
                     <dd className="font-semibold">Yes</dd>
                   </div>
                   <div className="flex justify-between border-b border-gray-200 pb-2">
-                    <dt className="text-slate-600">Non-Porous:</dt>
+                    <dt className="text-slate-700">Non-Porous:</dt>
                     <dd className="font-semibold">Yes</dd>
                   </div>
                   <div className="flex justify-between border-b border-gray-200 pb-2">
-                    <dt className="text-slate-600">Made in USA:</dt>
+                    <dt className="text-slate-700">Made in USA:</dt>
                     <dd className="font-semibold">Yes</dd>
                   </div>
                 </dl>
@@ -414,28 +414,28 @@ export default async function EpicureanKitchenCuttingBoardReview() {
                 <h3 className="font-semibold text-slate-900 mb-3 text-lg">Physical Dimensions</h3>
                 <dl className="space-y-2 text-sm">
                   <div className="flex justify-between border-b border-gray-200 pb-2">
-                    <dt className="text-slate-600">Length:</dt>
+                    <dt className="text-slate-700">Length:</dt>
                     <dd className="font-semibold">14.5 inches</dd>
                   </div>
                   <div className="flex justify-between border-b border-gray-200 pb-2">
-                    <dt className="text-slate-600">Width:</dt>
+                    <dt className="text-slate-700">Width:</dt>
                     <dd className="font-semibold">11.25 inches</dd>
                   </div>
                   <div className="flex justify-between border-b border-gray-200 pb-2">
-                    <dt className="text-slate-600">Thickness:</dt>
+                    <dt className="text-slate-700">Thickness:</dt>
                     <dd className="font-semibold">0.25 inches</dd>
                   </div>
                   <div className="flex justify-between border-b border-gray-200 pb-2">
-                    <dt className="text-slate-600">Weight:</dt>
+                    <dt className="text-slate-700">Weight:</dt>
                     <dd className="font-semibold">1.5 lbs</dd>
                   </div>
                   <div className="flex justify-between border-b border-gray-200 pb-2">
-                    <dt className="text-slate-600">Available Sizes:</dt>
+                    <dt className="text-slate-700">Available Sizes:</dt>
                     <dd className="font-semibold">Multiple sizes available</dd>
                   </div>
                 </dl>
 
-                <p className="text-xs text-slate-600 mt-4 italic">
+                <p className="text-xs text-slate-700 mt-4 italic">
                   This review covers the standard 14.5 × 11.25 inch size, ideal for most home kitchens.
                 </p>
               </div>

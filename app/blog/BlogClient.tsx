@@ -114,7 +114,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {filteredPosts.length === 0 ? (
             <div className="text-center py-12">
-              <p className="text-slate-600">No posts found in this category.</p>
+              <p className="text-slate-700">No posts found in this category.</p>
             </div>
           ) : (
             <div className="blog-posts-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -160,12 +160,12 @@ export default function BlogClient({ posts }: BlogClientProps) {
                     </h2>
 
                     {/* Excerpt */}
-                    <p className="text-slate-600 leading-relaxed mb-4 flex-grow line-clamp-3 text-[15px]">
+                    <p className="text-slate-700 leading-relaxed mb-4 flex-grow line-clamp-3 text-[15px]">
                       {post.excerpt}
                     </p>
 
                     {/* Metadata Footer */}
-                    <div className="flex items-center gap-4 text-xs text-slate-500 pt-4 border-t border-gray-200">
+                    <div className="flex items-center gap-4 text-xs text-slate-600 pt-4 border-t border-gray-200">
                       <div className="flex items-center gap-1.5">
                         <Calendar className="w-3.5 h-3.5 text-orange-600" />
                         <span>{post.formattedDate}</span>

@@ -34,7 +34,7 @@ export default function TestingResultsGrid({
       {sections.map((section, index) => (
         <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
           <h3 className="text-lg font-semibold text-slate-900 mb-4 mt-0">{section.title}</h3>
-          <div className="text-slate-600 leading-[1.7]">
+          <div className="text-slate-700 leading-[1.7]">
             {section.content}
           </div>
         </div>
@@ -43,10 +43,10 @@ export default function TestingResultsGrid({
       {/* Testing Environment & Performance Results */}
       <div className="bg-white border border-gray-200 rounded-xl p-6">
         <div className="mb-6">
-          <h4 className="text-lg font-semibold text-slate-900 mb-4 mt-0">Testing Environment</h4>
+          <h3 className="text-lg font-semibold text-slate-900 mb-4 mt-0">Testing Environment</h3>
           <ul className="list-none p-0 m-0">
             {testingEnvironment.map((item, index) => (
-              <li key={index} className="text-slate-600 py-2 border-b border-gray-100 last:border-0">
+              <li key={index} className="text-slate-700 py-2 border-b border-gray-100 last:border-0">
                 <strong className="text-slate-900 font-semibold">{item.label}:</strong> {item.value}
               </li>
             ))}
@@ -54,12 +54,12 @@ export default function TestingResultsGrid({
         </div>
 
         <div>
-          <h4 className="text-lg font-semibold text-slate-900 mb-4 mt-0">Performance Results</h4>
+          <h3 className="text-lg font-semibold text-slate-900 mb-4 mt-0">Performance Results</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             <div className="bg-gray-50 rounded-lg p-5">
-              <h4 className="text-base font-semibold mb-3 mt-0 flex items-center gap-2 text-green-700">
+              <p className="text-base font-semibold mb-3 mt-0 flex items-center gap-2 text-green-800">
                 ✅ Outstanding Performance
-              </h4>
+              </p>
               <ul className="list-none p-0 m-0">
                 {outstandingPerformance.map((item, index) => (
                   <li key={index} className="text-sm py-1.5 pl-5 relative text-green-900 before:content-['•'] before:absolute before:left-0 before:font-bold before:text-xl">
@@ -69,9 +69,9 @@ export default function TestingResultsGrid({
               </ul>
             </div>
             <div className="bg-gray-50 rounded-lg p-5">
-              <h4 className="text-base font-semibold mb-3 mt-0 flex items-center gap-2 text-orange-700">
+              <p className="text-base font-semibold mb-3 mt-0 flex items-center gap-2 text-orange-800">
                 ⚠️ Minor Considerations
-              </h4>
+              </p>
               <ul className="list-none p-0 m-0">
                 {minorConsiderations.map((item, index) => (
                   <li key={index} className="text-sm py-1.5 pl-5 relative text-amber-900 before:content-['•'] before:absolute before:left-0 before:font-bold before:text-xl">

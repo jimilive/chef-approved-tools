@@ -240,7 +240,7 @@ export default async function ProductReview() {
                 <h3 className="text-xl font-semibold text-slate-900 mb-3 leading-[1.4]">
                   {section.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-700 leading-relaxed">
                   {/* V2: Add inline product links in strategic sections */}
                   {index === 0 ? (
                     <>

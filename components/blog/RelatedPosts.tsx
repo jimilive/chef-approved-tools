@@ -28,7 +28,7 @@ export default function RelatedPosts({ posts }: RelatedPostsProps) {
           >
             → {post.title}
             {post.excerpt && (
-              <p className="text-sm text-slate-600 font-normal mt-1">{post.excerpt}</p>
+              <p className="text-sm text-slate-700 font-normal mt-1">{post.excerpt}</p>
             )}
           </Link>
         ))}

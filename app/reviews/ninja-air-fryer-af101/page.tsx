@@ -283,7 +283,7 @@ export default async function NinjaAirFryerAF101ReviewPage() {
 
           {/* SECTION 6: PRODUCT COMPARISON */}
           <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-8 shadow-sm mb-6">
-            <p className="text-lg text-slate-600 mb-8">
+            <p className="text-lg text-slate-700 mb-8">
               How does the Ninja AF101 compare to the competition? Here&apos;s a side-by-side
               look at the top air fryers in this category.
             </p>
@@ -316,7 +316,7 @@ export default async function NinjaAirFryerAF101ReviewPage() {
               {reviewData.whereToBuy.title}
             </h2>
 
-            <p className="text-slate-600 leading-relaxed mb-6">
+            <p className="text-slate-700 leading-relaxed mb-6">
               {reviewData.whereToBuy.introText}
             </p>
 
@@ -359,7 +359,7 @@ export default async function NinjaAirFryerAF101ReviewPage() {
               </p>
             </div>
 
-            <p className="text-sm text-slate-600 mt-6 italic">
+            <p className="text-sm text-slate-700 mt-6 italic">
               {reviewData.whereToBuy.disclaimer}
             </p>
           </div>

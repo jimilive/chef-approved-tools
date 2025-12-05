@@ -208,7 +208,7 @@ export default function HowToSharpenWithTriStonePage() {
             Apply thin film of mineral oil to coarse stone. You need just enough to create slick
             surface—2-3 drops spread across the stone. Excessive oil doesn&apos;t improve results.
           </p>
-          <p className="text-sm text-slate-600">
+          <p className="text-sm text-slate-700">
             <strong>Alternative:</strong> Water works but mineral oil prevents rust on carbon steel
             knives and suspends metal particles better.
           </p>
@@ -531,7 +531,7 @@ export default function HowToSharpenWithTriStonePage() {
             >
               <Link href="/reviews/norton-im200-tri-stone-sharpener" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Norton IM200 Tri-Stone Review: 6-Year Professional Test</h4>
-                <p className="text-slate-600 text-sm">
+                <p className="text-slate-700 text-sm">
                   The sharpening system that survived 6 years of professional restaurant use—detailed review and techniques.
                 </p>
               </Link>
@@ -544,7 +544,7 @@ export default function HowToSharpenWithTriStonePage() {
             >
               <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Victorinox 8&quot; Chef Knife: Professional Quality</h4>
-                <p className="text-slate-600 text-sm">
+                <p className="text-slate-700 text-sm">
                   The professional chef&apos;s knife that responds beautifully to proper sharpening techniques.
                 </p>
               </Link>
@@ -557,7 +557,7 @@ export default function HowToSharpenWithTriStonePage() {
             >
               <Link href="/blog/how-to-steel-a-knife" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">How to Steel a Knife: Proper Technique</h4>
-                <p className="text-slate-600 text-sm">
+                <p className="text-slate-700 text-sm">
                   Learn professional honing technique to maintain your sharp edge between sharpening sessions.
                 </p>
               </Link>
@@ -570,7 +570,7 @@ export default function HowToSharpenWithTriStonePage() {
             >
               <Link href="/kitchen-bundle" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Complete Professional Kitchen Starter Kit</h4>
-                <p className="text-slate-600 text-sm">
+                <p className="text-slate-700 text-sm">
                   Build your professional kitchen with chef-approved tools including knives and sharpening systems.
                 </p>
               </Link>

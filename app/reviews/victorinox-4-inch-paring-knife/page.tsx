@@ -194,7 +194,7 @@ export default async function ProductReview() {
 
                 {/* Size Selection */}
                 <h2 className="text-xl font-bold mb-3 text-slate-900">{reviewData.sizeVariants.title}</h2>
-                <p className="text-sm text-slate-600 mb-4">
+                <p className="text-sm text-slate-700 mb-4">
                   {reviewData.sizeVariants.note}
                 </p>
 
@@ -319,7 +319,7 @@ export default async function ProductReview() {
                 <h3 className="text-xl font-semibold text-slate-900 mb-3 leading-[1.4]">
                   {section.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-700 leading-relaxed">
                   {/* V2: Add inline product link in first section */}
                   {index === 0 ? (
                     <>
@@ -513,7 +513,7 @@ export default async function ProductReview() {
               </table>
             </div>
 
-            <p className="text-sm text-slate-600 mt-4 italic">
+            <p className="text-sm text-slate-700 mt-4 italic">
               <strong>My Verdict:</strong> {reviewData.comparisonTable.verdict}
             </p>
           </div>
@@ -548,7 +548,7 @@ export default async function ProductReview() {
               {reviewData.whereToBuy.title}
             </h2>
 
-            <p className="text-slate-600 leading-relaxed mb-6">
+            <p className="text-slate-700 leading-relaxed mb-6">
               {reviewData.whereToBuy.introText}
             </p>
 
@@ -626,7 +626,7 @@ export default async function ProductReview() {
               </p>
             </div>
 
-            <p className="text-sm text-slate-600 mt-6 italic">
+            <p className="text-sm text-slate-700 mt-6 italic">
               {reviewData.whereToBuy.disclaimer}
             </p>
           </div>

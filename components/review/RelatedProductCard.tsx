@@ -16,9 +16,9 @@ export default function RelatedProductCard({
 }: RelatedProductCardProps) {
   return (
     <div className="bg-gray-50 p-5 rounded-lg border border-gray-300">
-      <h4 className="mt-0">{title}</h4>
+      <h3 className="mt-0">{title}</h3>
       <p className="text-gray-700">{description}</p>
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-gray-700">
         <strong>{badge}</strong>
       </p>
       <Link

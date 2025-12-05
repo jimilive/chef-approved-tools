@@ -503,13 +503,13 @@ export default function StainlessSteelStickingPost() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link href="/blog/how-to-sear-steaks-like-restaurant-chef" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">How to Sear Steaks Like a Restaurant Chef</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Master professional steak searing techniques for perfect crust and release every time.
               </p>
             </Link>
             <Link href="/blog/cast-iron-mistakes-ruin-pan" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Cast Iron Mistakes That Ruin Your Pan</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Learn the common cast iron mistakes and how proper maintenance creates nonstick surfaces.
               </p>
             </Link>

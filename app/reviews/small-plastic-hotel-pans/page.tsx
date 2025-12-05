@@ -152,7 +152,7 @@ export default async function ProductReview() {
         <div className="max-w-[900px] mx-auto px-5">
 
           {/* BREADCRUMBS */}
-          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
             <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
@@ -194,7 +194,7 @@ export default async function ProductReview() {
                       <h3 className="font-bold text-lg mb-2 text-gray-900 mt-0">
                         {option.size} - {option.depth}
                       </h3>
-                      <div className="text-sm text-gray-600 space-y-1 mb-4">
+                      <div className="text-sm text-gray-700 space-y-1 mb-4">
                         <p><strong>Dimensions:</strong> {option.dimensions}</p>
                         <p><strong>Capacity:</strong> {option.capacity}</p>
                         <p><strong>Best for:</strong> {option.bestFor}</p>
@@ -239,7 +239,7 @@ export default async function ProductReview() {
                       <div key={lid.id} className="flex items-center justify-between bg-gray-50 p-3 rounded-lg">
                         <div className="flex-1">
                           <p className="font-semibold text-sm text-gray-900">{lid.size}</p>
-                          <p className="text-xs text-gray-600">{lid.includes}</p>
+                          <p className="text-xs text-gray-700">{lid.includes}</p>
                         </div>
                         <a
                           href={lid.affiliateUrl}
@@ -325,7 +325,7 @@ export default async function ProductReview() {
               {reviewData.whereToBuy.title}
             </h2>
 
-            <p className="text-slate-600 leading-relaxed mb-6">
+            <p className="text-slate-700 leading-relaxed mb-6">
               {reviewData.whereToBuy.introText}
             </p>
 
@@ -368,7 +368,7 @@ export default async function ProductReview() {
               </p>
             </div>
 
-            <p className="text-sm text-slate-600 mt-6 italic">
+            <p className="text-sm text-slate-700 mt-6 italic">
               {reviewData.whereToBuy.disclaimer}
             </p>
           </div>

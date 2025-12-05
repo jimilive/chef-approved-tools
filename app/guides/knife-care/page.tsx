@@ -65,11 +65,11 @@ export default function KnifeCareGuidePage() {
           <h1 className="text-4xl font-bold text-slate-900 mb-4">
             Professional Knife Care Guide
           </h1>
-          <p className="text-xl text-slate-600 leading-relaxed mb-4">
+          <p className="text-xl text-slate-700 leading-relaxed mb-4">
             24 years of professional kitchen experience condensed into
             the essential knife care techniques that actually matter.
           </p>
-          <div className="flex items-center gap-3 text-sm text-slate-500">
+          <div className="flex items-center gap-3 text-sm text-slate-700">
             <span>By Scott Bradley, Professional Chef</span>
             <span>•</span>
             <span>Published: November 10, 2025</span>
@@ -84,7 +84,7 @@ export default function KnifeCareGuidePage() {
           <div className="space-y-8">
             <article className="bg-white rounded-xl p-6 shadow-lg">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Proper Cleaning</h3>
-              <ul className="space-y-2 text-slate-600">
+              <ul className="space-y-2 text-slate-700">
                 <li>• Hand wash immediately after use with warm soapy water</li>
                 <li>• Never put knives in the dishwasher - heat damages handles and dulls blades</li>
                 <li>• Dry immediately with a clean towel to prevent rust</li>
@@ -94,7 +94,7 @@ export default function KnifeCareGuidePage() {
 
             <article className="bg-white rounded-xl p-6 shadow-lg">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Safe Storage</h3>
-              <ul className="space-y-2 text-slate-600">
+              <ul className="space-y-2 text-slate-700">
                 <li>• Magnetic knife strips are best for professional kitchens</li>
                 <li>• Knife blocks can harbor bacteria - keep them clean</li>
                 <li>• Edge guards for drawer storage protect blades and fingers</li>
@@ -108,21 +108,21 @@ export default function KnifeCareGuidePage() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Sharpening Your Knives</h2>
 
           <div className="bg-white rounded-xl p-6 shadow-lg">
-            <div className="space-y-4 text-slate-600">
+            <div className="space-y-4 text-slate-700">
               <div>
-                <h4 className="font-semibold text-slate-900 mb-2">Honing vs Sharpening</h4>
+                <h3 className="font-semibold text-slate-900 mb-2">Honing vs Sharpening</h3>
                 <p>Honing (with a steel) realigns the edge between sharpenings.
                 True sharpening removes metal to create a new edge.</p>
               </div>
 
               <div>
-                <h4 className="font-semibold text-slate-900 mb-2">When to Sharpen</h4>
+                <h3 className="font-semibold text-slate-900 mb-2">When to Sharpen</h3>
                 <p>Home cooks: every 2-3 months with regular use.
                 Professional kitchens: weekly or when the knife struggles through paper.</p>
               </div>
 
               <div>
-                <h4 className="font-semibold text-slate-900 mb-2">Sharpening Options</h4>
+                <h3 className="font-semibold text-slate-900 mb-2">Sharpening Options</h3>
                 <ul className="list-disc list-inside space-y-1">
                   <li>Whetstones: Best results, requires skill</li>
                   <li>Professional service: $3-5 per knife, convenient</li>
@@ -137,7 +137,7 @@ export default function KnifeCareGuidePage() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">What NOT to Do</h2>
 
           <div className="bg-red-50 border border-red-200 rounded-xl p-6">
-            <ul className="space-y-2 text-red-700">
+            <ul className="space-y-2 text-red-800">
               <li>• Never cut on glass, stone, or metal surfaces</li>
               <li>• Don&apos;t use knives as screwdrivers or can openers</li>
               <li>• Avoid cutting frozen foods - it chips the blade</li>

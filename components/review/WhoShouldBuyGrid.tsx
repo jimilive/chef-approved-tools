@@ -22,12 +22,12 @@ export default function WhoShouldBuyGrid({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Perfect For */}
         <div className="bg-white border border-gray-200 rounded-xl p-6">
-          <h3 className="text-lg font-semibold mb-4 mt-0 text-green-700">{perfectForTitle}</h3>
+          <h3 className="text-lg font-semibold mb-4 mt-0 text-green-800">{perfectForTitle}</h3>
           <ul className="list-none p-0 m-0">
             {perfectFor.map((item, index) => (
               <li
                 key={index}
-                className="py-2 pl-6 relative text-[15px] leading-relaxed text-slate-600 before:content-['•'] before:absolute before:left-0 before:text-green-600 before:font-bold before:text-xl"
+                className="py-2 pl-6 relative text-[15px] leading-relaxed text-slate-700 before:content-['•'] before:absolute before:left-0 before:text-green-600 before:font-bold before:text-xl"
               >
                 {item}
               </li>
@@ -37,12 +37,12 @@ export default function WhoShouldBuyGrid({
 
         {/* Consider Alternatives */}
         <div className="bg-white border border-gray-200 rounded-xl p-6">
-          <h3 className="text-lg font-semibold mb-4 mt-0 text-orange-700">{considerAlternativesTitle}</h3>
+          <h3 className="text-lg font-semibold mb-4 mt-0 text-orange-800">{considerAlternativesTitle}</h3>
           <ul className="list-none p-0 m-0">
             {considerAlternatives.map((item, index) => (
               <li
                 key={index}
-                className="py-2 pl-6 relative text-[15px] leading-relaxed text-slate-600 before:content-['•'] before:absolute before:left-0 before:text-orange-500 before:font-bold before:text-xl"
+                className="py-2 pl-6 relative text-[15px] leading-relaxed text-slate-700 before:content-['•'] before:absolute before:left-0 before:text-orange-500 before:font-bold before:text-xl"
               >
                 {item}
               </li>

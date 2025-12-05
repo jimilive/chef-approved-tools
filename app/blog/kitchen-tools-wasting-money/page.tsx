@@ -326,7 +326,7 @@ export default function KitchenToolsWastePost() {
                 <strong>Instant-Read Thermometer:</strong> Stop guessing. A fast thermometer eliminates 90% of cooking errors.
               </li>
             </ul>
-            <p className="text-slate-600 text-sm mt-4">
+            <p className="text-slate-700 text-sm mt-4">
               With just these five tools, you can cook almost anything — efficiently and well.
             </p>
           </div>
@@ -541,13 +541,13 @@ export default function KitchenToolsWastePost() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link href="/blog/knife-mistakes-home-cooks-make" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">5 Knife Mistakes Home Cooks Make</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Learn the common knife mistakes that wreck edges and slow prep, plus professional fixes.
               </p>
             </Link>
             <Link href="/blog/how-to-season-cast-iron-like-restaurant-chef" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">How to Season Cast Iron Like a Restaurant Chef</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Master professional cast iron seasoning with thin layers and proper heat discipline.
               </p>
             </Link>

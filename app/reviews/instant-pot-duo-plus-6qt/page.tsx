@@ -341,7 +341,7 @@ export default async function InstantPotDuoPlus6QtReview() {
 
           {/* SECTION 6: PRODUCT COMPARISON */}
           <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-8 shadow-sm mb-6">
-            <p className="text-lg text-slate-600 mb-8">
+            <p className="text-lg text-slate-700 mb-8">
               How does the Instant Pot Duo Plus compare to the competition? Here&apos;s
               a side-by-side look at the top electric pressure cookers on the market.
             </p>
@@ -374,7 +374,7 @@ export default async function InstantPotDuoPlus6QtReview() {
               {reviewData.whereToBuy.title}
             </h2>
 
-            <p className="text-slate-600 leading-relaxed mb-6">
+            <p className="text-slate-700 leading-relaxed mb-6">
               {reviewData.whereToBuy.introText}
             </p>
 
@@ -382,7 +382,7 @@ export default async function InstantPotDuoPlus6QtReview() {
               <div className="flex flex-col gap-4">
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-                  <p className="text-sm text-slate-600 mb-4">Free shipping with Prime | Easy returns</p>
+                  <p className="text-sm text-slate-700 mb-4">Free shipping with Prime | Easy returns</p>
                 </div>
                 <CTAVisibilityTracker
                   ctaId="where-to-buy-cta"

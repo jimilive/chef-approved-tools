@@ -247,7 +247,7 @@ export default function SteakSearingPost() {
                 <p><strong>Medium-well (150-155°F):</strong> 6 min + 5 min</p>
               </div>
             </div>
-            <p className="text-gray-600 text-xs mt-3">
+            <p className="text-gray-700 text-xs mt-3">
               Always use thermometer for accuracy - timing varies with stove power and pan thickness.
             </p>
           </div>
@@ -362,7 +362,7 @@ export default function SteakSearingPost() {
                 <strong>Quality Tongs:</strong> Heavy-duty restaurant-style tongs that won&apos;t bend under pressure.
               </li>
             </ul>
-            <p className="text-slate-600 text-sm mt-4">
+            <p className="text-slate-700 text-sm mt-4">
               These are the same tools I relied on when cooking 200+ covers per night. If they can handle restaurant volume,
               they&apos;ll serve you well at home.
             </p>
@@ -476,13 +476,13 @@ export default function SteakSearingPost() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Lodge Cast Iron Skillet Bundle</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 The cast iron skillets that deliver restaurant-quality heat retention for perfect sears every time.
               </p>
             </Link>
             <Link href="/glossary" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Recipe Conversions & Techniques</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Professional measurements, conversions, and knife techniques used in restaurant kitchens.
               </p>
             </Link>

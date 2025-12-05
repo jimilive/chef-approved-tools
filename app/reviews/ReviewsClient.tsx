@@ -67,7 +67,7 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
           </h2>
         </div>
 
-        <p className="text-base text-gray-600 mb-8 leading-relaxed">
+        <p className="text-base text-gray-700 mb-8 leading-relaxed">
           These 6 products survived the most demanding commercial environments.
           Equipment failure in a restaurant means lost revenue—these tools never failed.
         </p>

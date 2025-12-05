@@ -123,13 +123,13 @@ export default async function ProductReview() {
       <nav className="max-w-4xl mx-auto px-4 py-4 text-sm" aria-label="Breadcrumb">
         <ol className="flex items-center gap-2 flex-wrap">
           <li>
-            <Link href="/" className="text-gray-600 hover:text-orange-700 transition-colors">
+            <Link href="/" className="text-gray-700 hover:text-orange-700 transition-colors">
               Home
             </Link>
           </li>
           <li className="text-gray-400">/</li>
           <li>
-            <Link href="/reviews" className="text-gray-600 hover:text-orange-700 transition-colors">
+            <Link href="/reviews" className="text-gray-700 hover:text-orange-700 transition-colors">
               Reviews
             </Link>
           </li>
@@ -176,14 +176,14 @@ export default async function ProductReview() {
                       <h3 className="font-bold text-lg text-gray-900 mb-1">
                         {option.size} — {option.depth}
                       </h3>
-                      <p className="text-sm text-gray-600 mb-2">{option.dimensions}</p>
+                      <p className="text-sm text-gray-700 mb-2">{option.dimensions}</p>
                       <p className="text-sm text-gray-700 mb-1">
                         <strong>Capacity:</strong> {option.capacity}
                       </p>
                       <p className="text-sm text-gray-700 mb-3">
                         <strong>Best For:</strong> {option.bestFor}
                       </p>
-                      <p className="text-xs text-gray-600">{option.includes}</p>
+                      <p className="text-xs text-gray-700">{option.includes}</p>
                     </div>
 
                     <div className="sm:w-48 flex-shrink-0">
@@ -206,7 +206,7 @@ export default async function ProductReview() {
                       <div className="text-center mt-2">
                         <a
                           href={option.affiliateUrl}
-                          className="text-xs text-gray-600 hover:text-orange-700 underline transition-colors"
+                          className="text-xs text-gray-700 hover:text-orange-700 underline transition-colors"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -222,7 +222,7 @@ export default async function ProductReview() {
             {/* Lid Options */}
             <div className="mt-6 pt-6 border-t border-gray-200">
               <h3 className="font-bold text-base mb-3 text-gray-900">Lids (Sold Separately)</h3>
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-sm text-gray-700 mb-4">
                 Choose solid lids for covering or slotted lids to keep serving utensils in pan during buffet service
               </p>
 
@@ -233,7 +233,7 @@ export default async function ProductReview() {
                     className="border border-gray-300 rounded-lg p-4 bg-white"
                   >
                     <h4 className="font-bold text-sm text-gray-900 mb-1">{lid.size}</h4>
-                    <p className="text-xs text-gray-600 mb-3">{lid.description}</p>
+                    <p className="text-xs text-gray-700 mb-3">{lid.description}</p>
                     <p className="text-xs text-gray-500 mb-3">{lid.includes}</p>
 
                     <CTAVisibilityTracker
@@ -255,7 +255,7 @@ export default async function ProductReview() {
                     <div className="text-center mt-2">
                       <a
                         href={lid.affiliateUrl}
-                        className="text-xs text-gray-600 hover:text-orange-700 underline transition-colors"
+                        className="text-xs text-gray-700 hover:text-orange-700 underline transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
                       >

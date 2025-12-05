@@ -609,13 +609,13 @@ export default function MeatCookingTemperaturesThermometers() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Cast Iron: Ideal for Searing Steaks</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Professional cast iron skillets that hold heat for perfect sears and precise temperature control.
               </p>
             </Link>
             <Link href="/blog/kitchen-gloves-guide" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Kitchen Safety Guide</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Professional kitchen safety protocols including food handling, thermometer sanitation, and more.
               </p>
             </Link>

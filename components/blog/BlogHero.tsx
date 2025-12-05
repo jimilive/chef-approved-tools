@@ -39,7 +39,7 @@ export default function BlogHero({
   return (
     <>
       {/* Date Stamps */}
-      <div className="text-sm text-slate-600 mb-4">
+      <div className="text-sm text-slate-700 mb-4">
         <time dateTime={publishedDate}>
           {new Date(publishedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
         </time>
@@ -52,7 +52,7 @@ export default function BlogHero({
       {/* Hero Article */}
       <article className="bg-white rounded-xl shadow-lg p-8 mb-8">
         <h1 className="text-4xl font-bold text-slate-900 mb-4">{title}</h1>
-        <div className="flex items-center gap-4 text-sm text-slate-600 mb-6">
+        <div className="flex items-center gap-4 text-sm text-slate-700 mb-6">
           <span>By {authorName}</span>
           <span>•</span>
           <span>{authorYears}</span>

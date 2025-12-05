@@ -241,12 +241,12 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
           {/* Testimonials */}
           <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6" id="testimonials">
             <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.testimonials.title}</h2>
-            <p className="text-sm text-slate-600 mb-4 italic">{reviewData.testimonials.subtitle}</p>
+            <p className="text-sm text-slate-700 mb-4 italic">{reviewData.testimonials.subtitle}</p>
             <div className="space-y-4">
               {reviewData.testimonials.reviews.map((review, index) => (
                 <div key={index} className="bg-slate-50 p-5 rounded-lg">
                   <p className="text-slate-700 mb-2">&quot;{review.quote}&quot;</p>
-                  <p className="text-sm text-slate-500">— Amazon verified purchaser ({review.author})</p>
+                  <p className="text-sm text-slate-600">— Amazon verified purchaser ({review.author})</p>
                 </div>
               ))}
             </div>
@@ -311,7 +311,7 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
                 <dl className="space-y-2 text-sm">
                   {reviewData.specifications.technical.map((spec, index) => (
                     <div key={index} className="flex justify-between border-b border-gray-100 pb-2">
-                      <dt className="text-slate-600">{spec.label}:</dt>
+                      <dt className="text-slate-700">{spec.label}:</dt>
                       <dd className="font-semibold">{spec.value}</dd>
                     </div>
                   ))}
@@ -323,7 +323,7 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
                 <dl className="space-y-2 text-sm">
                   {reviewData.specifications.physical.map((spec, index) => (
                     <div key={index} className="flex justify-between border-b border-gray-100 pb-2">
-                      <dt className="text-slate-600">{spec.label}:</dt>
+                      <dt className="text-slate-700">{spec.label}:</dt>
                       <dd className="font-semibold">{spec.value}</dd>
                     </div>
                   ))}

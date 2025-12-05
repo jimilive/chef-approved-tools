@@ -26,7 +26,7 @@ export default function FAQSection({
             <h3 className="text-lg font-semibold text-slate-900 mb-3 mt-0">
               {faq.question}
             </h3>
-            <div className="text-[15px] text-slate-600 leading-relaxed space-y-4">
+            <div className="text-[15px] text-slate-700 leading-relaxed space-y-4">
               {faq.answer}
             </div>
           </div>

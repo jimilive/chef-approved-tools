@@ -37,7 +37,7 @@ export default function PerformanceAnalysis({
           }`}
         >
           <h3 className="text-lg font-semibold text-slate-900 mb-4 mt-0">{section.title}</h3>
-          <div className="text-slate-600 leading-[1.7]">
+          <div className="text-slate-700 leading-[1.7]">
             {section.content}
           </div>
 
@@ -49,7 +49,7 @@ export default function PerformanceAnalysis({
                   <div className="text-xl font-bold text-green-700 mb-2">
                     {metric.score}/{metric.maxScore}
                   </div>
-                  <div className="text-sm text-slate-600 leading-snug">{metric.label}</div>
+                  <div className="text-sm text-slate-700 leading-snug">{metric.label}</div>
                 </div>
               ))}
             </div>
@@ -61,7 +61,7 @@ export default function PerformanceAnalysis({
               {section.bulletPoints.map((point, pointIndex) => (
                 <li
                   key={pointIndex}
-                  className="text-slate-600 py-2 pl-6 relative leading-relaxed before:content-['•'] before:absolute before:left-0 before:text-orange-700 before:font-bold before:text-xl"
+                  className="text-slate-700 py-2 pl-6 relative leading-relaxed before:content-['•'] before:absolute before:left-0 before:text-orange-700 before:font-bold before:text-xl"
                 >
                   <strong className="text-slate-900 font-semibold">{point.label}:</strong> {point.value}
                 </li>

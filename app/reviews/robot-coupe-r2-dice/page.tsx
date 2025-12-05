@@ -321,7 +321,7 @@ export default async function RobotCoupeR2DiceReview() {
         {/* User Reviews */}
         <section className="mb-8" id="reviews">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">What Real Users Are Saying</h2>
-          <p className="text-sm text-slate-600 mb-4 italic">
+          <p className="text-sm text-slate-700 mb-4 italic">
             Customer reviews curated from WebstaurantStore verified purchasers. These represent selected experiences.
           </p>
 
@@ -330,35 +330,35 @@ export default async function RobotCoupeR2DiceReview() {
               <p className="text-slate-700 mb-2">
                 &quot;After 2 years in our busy cafe, this Robot Coupe has been worth every penny. We process 15-20 lbs of vegetables daily—the continuous feed design means we can keep working without stopping to empty the bowl constantly. Saves us at least 2 hours of prep time daily.&quot;
               </p>
-              <p className="text-sm text-slate-500">— WebstaurantStore verified purchaser (J.K., August 2024) | Cafe Operations</p>
+              <p className="text-sm text-slate-600">— WebstaurantStore verified purchaser (J.K., August 2024) | Cafe Operations</p>
             </div>
 
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
                 &quot;Upgraded from a home-grade Cuisinart and the difference is night and day. The 2 HP motor handles hard cheeses without bogging down. The continuous feed transforms volume prep. Expensive upfront but pays for itself quickly in labor savings.&quot;
               </p>
-              <p className="text-sm text-slate-500">— WebstaurantStore verified purchaser (M.R., July 2024) | Small Restaurant</p>
+              <p className="text-sm text-slate-600">— WebstaurantStore verified purchaser (M.R., July 2024) | Small Restaurant</p>
             </div>
 
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
                 &quot;We use this for catering prep—the ability to process large quantities quickly is essential. The consistency of cuts is excellent for professional presentation. Only downside is cleaning takes 15 minutes after heavy use, but that&apos;s the trade-off for commercial capacity.&quot;
               </p>
-              <p className="text-sm text-slate-500">— WebstaurantStore verified purchaser (S.L., June 2024) | Catering Business</p>
+              <p className="text-sm text-slate-600">— WebstaurantStore verified purchaser (S.L., June 2024) | Catering Business</p>
             </div>
 
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
                 &quot;Solid machine but be prepared: it&apos;s MUCH larger than home food processors. Make sure you have the counter space (we had to rearrange our prep station). Also needed an electrician to verify our circuit could handle it.&quot;
               </p>
-              <p className="text-sm text-slate-500">— WebstaurantStore verified purchaser (D.T., May 2024) | Restaurant Kitchen</p>
+              <p className="text-sm text-slate-600">— WebstaurantStore verified purchaser (D.T., May 2024) | Restaurant Kitchen</p>
             </div>
 
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
                 &quot;Been using this daily for 18 months in our pizza shop for cheese shredding. The blades and discs do wear—we replaced the shredding disc after 14 months of heavy use. Factor replacement parts into your budget.&quot;
               </p>
-              <p className="text-sm text-slate-500">— WebstaurantStore verified purchaser (A.P., April 2024) | Pizzeria</p>
+              <p className="text-sm text-slate-600">— WebstaurantStore verified purchaser (A.P., April 2024) | Pizzeria</p>
             </div>
           </div>
         </section>

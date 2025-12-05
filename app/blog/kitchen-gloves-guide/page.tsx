@@ -518,13 +518,13 @@ export default function KitchenGlovesGuide() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link href="/reviews/benriner-large-mandoline" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Benriner Mandoline: Professional Test &amp; Safety</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 The professional mandoline that requires cut-resistant gloves—learn safe techniques for perfect slices.
               </p>
             </Link>
             <Link href="/reviews/victorinox-granton-edge-boning-knife" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Boning Knife Safety &amp; Technique</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Professional boning knife techniques and safety protocols for butchering tasks.
               </p>
             </Link>

@@ -151,7 +151,7 @@ export default async function KitchenAidCommercialReviewPage() {
                 {index === breadcrumbs.length - 1 ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>
                 ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-800 transition-colors">
+                  <Link href={crumb.url} className="text-gray-700 hover:text-orange-800 transition-colors">
                     {crumb.name}
                   </Link>
                 )}
@@ -201,7 +201,7 @@ export default async function KitchenAidCommercialReviewPage() {
                   </a>
                 </p>
 
-                <p className="text-xs text-slate-600 text-center">
+                <p className="text-xs text-slate-700 text-center">
                   As an Amazon and KitchenAid affiliate, I earn from qualifying purchases. Price and availability may change.
                 </p>
               </div>
@@ -269,22 +269,22 @@ export default async function KitchenAidCommercialReviewPage() {
                 <tr className="border-b border-gray-100">
                   <td className="p-4 font-medium">Motor Power</td>
                   <td className="p-4 text-green-700">1.3 HP (0.44 HP to bowl)</td>
-                  <td className="p-4 text-gray-600">0.5-1.0 HP</td>
+                  <td className="p-4 text-gray-700">0.5-1.0 HP</td>
                 </tr>
                 <tr className="border-b border-gray-100 bg-gray-50">
                   <td className="p-4 font-medium">Bowl Capacity</td>
                   <td className="p-4 text-green-700">8 quarts</td>
-                  <td className="p-4 text-gray-600">4.5-6 quarts</td>
+                  <td className="p-4 text-gray-700">4.5-6 quarts</td>
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="p-4 font-medium">Attachments</td>
                   <td className="p-4 text-green-700">Stainless, dishwasher safe</td>
-                  <td className="p-4 text-gray-600">Cast aluminum, hand wash</td>
+                  <td className="p-4 text-gray-700">Cast aluminum, hand wash</td>
                 </tr>
                 <tr className="border-b border-gray-100 bg-gray-50">
                   <td className="p-4 font-medium">Warranty</td>
                   <td className="p-4 text-green-700">2 years commercial</td>
-                  <td className="p-4 text-gray-600">1 year residential</td>
+                  <td className="p-4 text-gray-700">1 year residential</td>
                 </tr>
                 <tr className="border-b border-gray-100">
                   <td className="p-4 font-medium">NSF Certified</td>
@@ -294,7 +294,7 @@ export default async function KitchenAidCommercialReviewPage() {
                 <tr className="bg-gray-50">
                   <td className="p-4 font-medium">Price Range</td>
                   <td className="p-4 text-orange-800">Premium tier</td>
-                  <td className="p-4 text-gray-600">Consumer tier</td>
+                  <td className="p-4 text-gray-700">Consumer tier</td>
                 </tr>
               </tbody>
             </table>
@@ -407,7 +407,7 @@ export default async function KitchenAidCommercialReviewPage() {
             {reviewData.whereToBuy.title}
           </h2>
 
-          <p className="text-slate-600 leading-relaxed mb-6">
+          <p className="text-slate-700 leading-relaxed mb-6">
             {reviewData.whereToBuy.introText}
           </p>
 
@@ -455,7 +455,7 @@ export default async function KitchenAidCommercialReviewPage() {
             </p>
           </div>
 
-          <p className="text-sm text-slate-600 mt-6 italic">
+          <p className="text-sm text-slate-700 mt-6 italic">
             {reviewData.whereToBuy.disclaimer}
           </p>
         </div>

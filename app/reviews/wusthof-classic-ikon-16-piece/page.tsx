@@ -240,7 +240,7 @@ export default async function ProductReview() {
               What&apos;s Included in the Set
             </h2>
 
-            <p className="text-slate-600 leading-relaxed mb-6">
+            <p className="text-slate-700 leading-relaxed mb-6">
               The Wüsthof Classic Ikon 16-Piece set includes everything you need for a complete kitchen knife collection.
               All knife blades are forged in Solingen, Germany, and each piece features the signature contoured POM handles
               with the half-bolster design that allows full-length sharpening.
@@ -346,7 +346,7 @@ export default async function ProductReview() {
             <h2 className="text-3xl font-bold mb-4 text-slate-900">
               How Does the Wüsthof Classic Ikon Compare?
             </h2>
-            <p className="text-lg text-slate-600 mb-8">
+            <p className="text-lg text-slate-700 mb-8">
               After 24 years in professional kitchens, I&apos;ve tested dozens of knife sets.
               Here&apos;s how the Wüsthof Classic Ikon 16-Piece stacks up against the top competitors.
             </p>
@@ -404,7 +404,7 @@ export default async function ProductReview() {
               {reviewData.whereToBuy.title}
             </h2>
 
-            <p className="text-slate-600 leading-relaxed mb-6">
+            <p className="text-slate-700 leading-relaxed mb-6">
               {reviewData.whereToBuy.introText}
             </p>
 
@@ -447,7 +447,7 @@ export default async function ProductReview() {
               </p>
             </div>
 
-            <p className="text-sm text-slate-600 mt-6 italic">
+            <p className="text-sm text-slate-700 mt-6 italic">
               {reviewData.whereToBuy.disclaimer}
             </p>
           </div>

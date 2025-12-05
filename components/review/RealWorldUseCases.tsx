@@ -39,7 +39,7 @@ export default function RealWorldUseCases({
       </h2>
 
       {subtitle && (
-        <p className="text-slate-600 mb-8">{subtitle}</p>
+        <p className="text-slate-700 mb-8">{subtitle}</p>
       )}
 
       <div className="space-y-8">

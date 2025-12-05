@@ -255,7 +255,7 @@ export default function SaltsGuidePage() {
                 Get the Free Guide →
               </Link>
             </CTAVisibilityTracker>
-            <p className="text-sm text-slate-600 mt-3 mb-0">
+            <p className="text-sm text-slate-700 mt-3 mb-0">
               Unsubscribe anytime. No spam, ever.
             </p>
           </div>

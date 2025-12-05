@@ -66,11 +66,11 @@ export default function BestCookwarePage() {
           <h1 className="text-4xl font-bold text-slate-900 mb-4">
             Best Cookware 2024: Restaurant-Grade Pans for Home Use
           </h1>
-          <p className="text-xl text-slate-600 leading-relaxed mb-4">
+          <p className="text-xl text-slate-700 leading-relaxed mb-4">
             Professional cookware that can handle the heat of commercial kitchens
             and still perform perfectly in your home kitchen.
           </p>
-          <div className="flex items-center gap-3 text-sm text-slate-500">
+          <div className="flex items-center gap-3 text-sm text-slate-700">
             <span>By Scott Bradley, Professional Chef</span>
             <span>•</span>
             <span>Published: November 10, 2025</span>
@@ -93,11 +93,11 @@ export default function BestCookwarePage() {
             >
               <article className="bg-white rounded-xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">1. All-Clad D3 Tri-Ply Stainless Steel</h3>
-                <p className="text-slate-600 mb-4">
+                <p className="text-slate-700 mb-4">
                   The gold standard for professional kitchens. Even heat distribution,
                   durable construction, and works on all cooktops including induction.
                 </p>
-                <div className="text-slate-500">
+                <div className="text-slate-700">
                   Full review coming soon
                 </div>
               </article>
@@ -113,7 +113,7 @@ export default function BestCookwarePage() {
             >
               <article className="bg-white rounded-xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">2. Lodge Cast Iron Skillet</h3>
-                <p className="text-slate-600 mb-4">
+                <p className="text-slate-700 mb-4">
                   American-made cast iron that improves with age. Perfect for searing,
                   baking, and building flavor. Used these for 10 years.
                 </p>
@@ -143,7 +143,7 @@ export default function BestCookwarePage() {
             >
               <article className="bg-white rounded-xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">3. Le Creuset Dutch Oven</h3>
-                <p className="text-slate-600 mb-4">
+                <p className="text-slate-700 mb-4">
                   French craftsmanship that lasts generations. Perfect for braises,
                   stews, and bread baking. Investment piece worth every penny.
                 </p>
@@ -169,28 +169,28 @@ export default function BestCookwarePage() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">What Professional Chefs Look For in Cookware</h2>
           <div className="bg-white rounded-xl p-6 shadow-lg">
             <div className="prose prose-slate max-w-none">
-              <p className="text-slate-600 mb-4">
+              <p className="text-slate-700 mb-4">
                 After 24 years in professional kitchens, from Purple Café&rsquo;s 200+ cover nights to teaching at culinary schools,
                 I&rsquo;ve learned that cookware selection makes or breaks your cooking efficiency. Here&rsquo;s what actually matters when
                 you&rsquo;re cooking under pressure.
               </p>
 
               <h3 className="text-lg font-semibold text-slate-900 mt-6 mb-3">Heat Distribution Over Marketing Claims</h3>
-              <p className="text-slate-600 mb-4">
+              <p className="text-slate-700 mb-4">
                 Restaurant kitchens expose the truth about cookware fast. A pan that heats unevenly means burned garlic while
                 your onions stay raw. I look for tri-ply or 5-ply construction where the aluminum core extends all the way up
                 the sides, not just the base. Disk-bottom pans create hot spots that wreck sauces.
               </p>
 
               <h3 className="text-lg font-semibold text-slate-900 mt-6 mb-3">Weight and Balance Matter More Than You Think</h3>
-              <p className="text-slate-600 mb-4">
+              <p className="text-slate-700 mb-4">
                 A 12-inch skillet should feel substantial but not require two hands for every flip. I&rsquo;ve watched line cooks
                 develop wrist problems from poorly balanced pans. The handle should offset the pan&rsquo;s weight when full. Pick it
                 up loaded with food before you buy—if it feels awkward empty, it&rsquo;s unusable during service.
               </p>
 
               <h3 className="text-lg font-semibold text-slate-900 mt-6 mb-3">The Dishwasher Test (When It Matters)</h3>
-              <p className="text-slate-600 mb-4">
+              <p className="text-slate-700 mb-4">
                 In a home kitchen, dishwasher-safe means you&rsquo;ll actually clean it properly. Cast iron and carbon steel earn
                 their hand-wash requirement through superior performance. Stainless steel that can&rsquo;t handle a dishwasher is
                 just badly made. After running cookware through commercial dishwashers at 180°F for years, I can tell you:
@@ -207,7 +207,7 @@ export default function BestCookwarePage() {
               <div className="space-y-4">
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 mb-2">Buying Complete Sets</h3>
-                  <p className="text-slate-600">
+                  <p className="text-slate-700">
                     That 14-piece set looks attractive, but you&rsquo;ll use 3 pieces regularly and the rest collect dust.
                     Build your collection around what you actually cook. Most home cooks need: one 10-12&quot; stainless skillet,
                     one 10-12&quot; cast iron skillet, a 3-quart saucepan, and a 6-8 quart pot. Buy quality in these four, not
@@ -217,7 +217,7 @@ export default function BestCookwarePage() {
 
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 mb-2">Overheating Nonstick Pans</h3>
-                  <p className="text-slate-600">
+                  <p className="text-slate-700">
                     I&rsquo;ve killed nonstick pans by leaving them on high heat empty. Nonstick coatings break down above 500°F—
                     which happens fast on high heat. Use medium-low for eggs, medium for most tasks. When you need high heat
                     for searing, switch to stainless or cast iron.
@@ -226,7 +226,7 @@ export default function BestCookwarePage() {
 
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 mb-2">Ignoring Handle Design</h3>
-                  <p className="text-slate-600">
+                  <p className="text-slate-700">
                     Hollow handles stay cooler but break at the weld point. I&rsquo;ve had two All-Clad handles snap off in commercial
                     use. Solid handles conduct more heat but last forever. Cast stainless or riveted handles outlive the pan&rsquo;s
                     cooking surface. If the handle feels cheap, the pan is cheap.
@@ -241,11 +241,11 @@ export default function BestCookwarePage() {
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Making Your Cookware Last</h2>
           <div className="bg-white rounded-xl p-6 shadow-lg">
             <div className="prose prose-slate max-w-none">
-              <p className="text-slate-600 mb-4">
+              <p className="text-slate-700 mb-4">
                 Quality cookware should outlast your mortgage. Here&rsquo;s how to maintain restaurant performance at home:
               </p>
 
-              <ul className="space-y-3 text-slate-600">
+              <ul className="space-y-3 text-slate-700">
                 <li><strong>Bar Keeper&rsquo;s Friend is your friend:</strong> The same powder we use in professional kitchens.
                 Works on stainless without scratching. Use it monthly to prevent buildup.</li>
 
@@ -270,17 +270,17 @@ export default function BestCookwarePage() {
         <section className="mt-12">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Cookware Materials Guide</h2>
           <div className="bg-white rounded-xl p-6 shadow-lg">
-            <div className="space-y-4 text-slate-600">
+            <div className="space-y-4 text-slate-700">
               <div>
-                <h4 className="font-semibold text-slate-900 mb-1">Stainless Steel</h4>
+                <h3 className="font-semibold text-slate-900 mb-1">Stainless Steel</h3>
                 <p>Durable, non-reactive, dishwasher safe. Best for searing and sauces.</p>
               </div>
               <div>
-                <h4 className="font-semibold text-slate-900 mb-1">Cast Iron</h4>
+                <h3 className="font-semibold text-slate-900 mb-1">Cast Iron</h3>
                 <p>Excellent heat retention, naturally non-stick when seasoned. Perfect for high-heat cooking.</p>
               </div>
               <div>
-                <h4 className="font-semibold text-slate-900 mb-1">Enameled Cast Iron</h4>
+                <h3 className="font-semibold text-slate-900 mb-1">Enameled Cast Iron</h3>
                 <p>No seasoning required, great for acidic foods. Ideal for braising and stewing.</p>
               </div>
             </div>

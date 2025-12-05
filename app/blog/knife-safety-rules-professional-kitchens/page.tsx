@@ -843,13 +843,13 @@ export default function KnifeSafetyPost() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link href="/blog/essential-knife-cuts-every-cook-should-master" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">The 5 Essential Knife Cuts Every Home Cook Should Master</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Master the fundamental knife cuts used in professional kitchens every day.
               </p>
             </Link>
             <Link href="/blog/how-to-steel-a-knife" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">How to Steel a Knife</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Learn the professional honing technique that keeps your knives sharp between sharpenings.
               </p>
             </Link>

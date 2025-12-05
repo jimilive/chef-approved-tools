@@ -306,7 +306,7 @@ export default async function HowToSteelAKnife() {
               </li>
             </ul>
 
-            <p className="text-sm text-slate-600 mt-4 text-center mb-0">
+            <p className="text-sm text-slate-700 mt-4 text-center mb-0">
               We earn commission at no extra cost to you.
             </p>
           </div>
@@ -414,13 +414,13 @@ export default async function HowToSteelAKnife() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Victorinox Fibrox 8&quot; Chef&apos;s Knife</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 The professional-grade chef&apos;s knife that responds beautifully to regular honing and sharpening.
               </p>
             </Link>
             <Link href="/guides/knife-care" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
               <h4 className="font-bold text-slate-900 mb-2">Complete Knife Care Guide</h4>
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-700 text-sm">
                 Professional knife maintenance techniques including honing, sharpening, storage, and cleaning.
               </p>
             </Link>

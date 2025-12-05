@@ -145,7 +145,7 @@ export default async function NordicWareHalfSheetPanReview() {
           {' > '}
           <Link href="/cookware" className="text-blue-600 no-underline">Cookware</Link>
           {' > '}
-          <span className="text-gray-600">{reviewData.breadcrumb.productName}</span>
+          <span className="text-gray-700">{reviewData.breadcrumb.productName}</span>
         </nav>
 
         {/* Hero Section */}
@@ -203,7 +203,7 @@ export default async function NordicWareHalfSheetPanReview() {
             </a>
           </p>
 
-          <p className="text-sm text-slate-600 mt-4 mb-0">
+          <p className="text-sm text-slate-700 mt-4 mb-0">
             💡 Price updated daily. We earn commission at no extra cost to you.
           </p>
         </div>
@@ -241,7 +241,7 @@ export default async function NordicWareHalfSheetPanReview() {
               <div key={index} className="bg-white rounded-lg border-2 border-slate-200 p-6 hover:border-orange-300 transition-colors">
                 <div className="text-4xl mb-3">{feature.emoji}</div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed text-base">{feature.description}</p>
+                <p className="text-slate-700 leading-relaxed text-base">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -451,7 +451,7 @@ export default async function NordicWareHalfSheetPanReview() {
             </a>
           </p>
 
-          <p className="text-sm text-slate-600 mt-6 mb-0 italic">
+          <p className="text-sm text-slate-700 mt-6 mb-0 italic">
             As an Amazon Associate, I earn from qualifying purchases. Amazon Prime members get free 2-day shipping.
           </p>
         </section>
@@ -553,7 +553,7 @@ export default async function NordicWareHalfSheetPanReview() {
               </a>
             </p>
 
-            <p className="text-sm text-slate-600 mt-4 mb-0">
+            <p className="text-sm text-slate-700 mt-4 mb-0">
               {reviewData.bottomLine.ctaTip}
             </p>
           </div>

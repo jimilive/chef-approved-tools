@@ -124,8 +124,8 @@ export default function GasVsInductionComparison() {
                   {comparisonData.productRecommendations.gas.products.map((product, index) => (
                     <div key={index} className="border border-gray-200 rounded-lg p-4">
                       <h4 className="text-lg font-semibold mb-2">{product.name}</h4>
-                      <p className="text-sm text-slate-600 mb-3">{product.priceRange}</p>
-                      <ul className="text-sm text-slate-600 space-y-1">
+                      <p className="text-sm text-slate-700 mb-3">{product.priceRange}</p>
+                      <ul className="text-sm text-slate-700 space-y-1">
                         {product.features.map((feature, fIndex) => (
                           <li key={fIndex}>• {feature}</li>
                         ))}
@@ -140,8 +140,8 @@ export default function GasVsInductionComparison() {
                   {comparisonData.productRecommendations.induction.products.map((product, index) => (
                     <div key={index} className="border border-gray-200 rounded-lg p-4">
                       <h4 className="text-lg font-semibold mb-2">{product.name}</h4>
-                      <p className="text-sm text-slate-600 mb-3">{product.priceRange}</p>
-                      <ul className="text-sm text-slate-600 space-y-1">
+                      <p className="text-sm text-slate-700 mb-3">{product.priceRange}</p>
+                      <ul className="text-sm text-slate-700 space-y-1">
                         {product.features.map((feature, fIndex) => (
                           <li key={fIndex}>• {feature}</li>
                         ))}

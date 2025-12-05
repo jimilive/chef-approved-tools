@@ -50,7 +50,7 @@ export default async function BestKnifeForCuttingMeat() {
             <li className="text-gray-400">/</li>
             <li><Link href="/guides" className="text-orange-600 hover:text-orange-800">Guides</Link></li>
             <li className="text-gray-400">/</li>
-            <li className="text-gray-600">Best Knife for Cutting Meat</li>
+            <li className="text-gray-700">Best Knife for Cutting Meat</li>
           </ol>
         </div>
       </nav>
@@ -105,7 +105,7 @@ export default async function BestKnifeForCuttingMeat() {
               Check Current Price on Amazon
             </a>
             </CTAVisibilityTracker>
-            <div className="flex items-center gap-2 text-slate-600">
+            <div className="flex items-center gap-2 text-slate-700">
               <Star className="w-5 h-5 text-yellow-500 fill-current" />
               <span className="font-semibold">4.8/5</span>
               <span className="text-sm">(15,000+ reviews)</span>
@@ -235,43 +235,43 @@ export default async function BestKnifeForCuttingMeat() {
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Deboning chicken</td>
                   <td className="px-4 py-3 text-sm text-green-600 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">Poor ⭐</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">Poor ⭐</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Trimming fat</td>
                   <td className="px-4 py-3 text-sm text-green-600 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">Fair ⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">Fair ⭐⭐</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Portioning steaks</td>
                   <td className="px-4 py-3 text-sm text-green-600 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">Good ⭐⭐⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">Good ⭐⭐⭐⭐</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Removing silver skin</td>
                   <td className="px-4 py-3 text-sm text-green-600 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">Poor ⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">Poor ⭐⭐</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Breaking down whole cuts</td>
                   <td className="px-4 py-3 text-sm text-green-600 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">Good ⭐⭐⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">Good ⭐⭐⭐⭐</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Slicing cooked meat</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">Fair ⭐⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">Fair ⭐⭐⭐</td>
                   <td className="px-4 py-3 text-sm text-green-600 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">General prep work</td>
-                  <td className="px-4 py-3 text-sm text-slate-600">Fair ⭐⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-slate-700">Fair ⭐⭐⭐</td>
                   <td className="px-4 py-3 text-sm text-green-600 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <p className="text-slate-600 mt-4 text-sm italic">
+          <p className="text-slate-700 mt-4 text-sm italic">
             <strong>Bottom line:</strong> You need both knives. Use the boning knife for raw meat prep and butchery,
             and the chef's knife for general cooking and slicing cooked meat.
           </p>
@@ -363,7 +363,7 @@ export default async function BestKnifeForCuttingMeat() {
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
             >
               <h3 className="font-bold text-slate-900 mb-2">Best Budget Chef Knife</h3>
-              <p className="text-sm text-slate-600">The $50 chef's knife I've used for 20 years in professional kitchens.</p>
+              <p className="text-sm text-slate-700">The $50 chef's knife I've used for 20 years in professional kitchens.</p>
             </Link>
             </CTAVisibilityTracker>
             <CTAVisibilityTracker
@@ -377,7 +377,7 @@ export default async function BestKnifeForCuttingMeat() {
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
             >
               <h3 className="font-bold text-slate-900 mb-2">Knife Care Guide</h3>
-              <p className="text-sm text-slate-600">Learn how to maintain and sharpen your knives like a professional.</p>
+              <p className="text-sm text-slate-700">Learn how to maintain and sharpen your knives like a professional.</p>
             </Link>
             </CTAVisibilityTracker>
           </div>

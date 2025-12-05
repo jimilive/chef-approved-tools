@@ -63,7 +63,7 @@ export default function TestingStory({
                 />
               </div>
               {image.caption && (
-                <p className="text-sm text-slate-600 mt-2 italic text-center">
+                <p className="text-sm text-slate-700 mt-2 italic text-center">
                   {image.caption}
                 </p>
               )}

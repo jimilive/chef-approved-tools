@@ -205,7 +205,7 @@ export default async function RubbermaidScraperReview() {
                   </CTAVisibilityTracker>
                 </div>
 
-                <p className="text-xs text-slate-500 mt-3">
+                <p className="text-xs text-slate-600 mt-3">
                   💡 We earn a commission at no extra cost to you.
                 </p>
               </div>
@@ -302,7 +302,7 @@ export default async function RubbermaidScraperReview() {
           <p className="font-semibold text-slate-900 mb-4 text-center">Choose your size:</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <p className="text-sm text-slate-600 mb-2 text-center">13.5-inch (Professional)</p>
+              <p className="text-sm text-slate-700 mb-2 text-center">13.5-inch (Professional)</p>
               <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-mid-article-13-5`} productSlug={PRODUCT_SLUG} position="mid_article">
                 <a
                   href={affiliateUrl}
@@ -315,7 +315,7 @@ export default async function RubbermaidScraperReview() {
               </CTAVisibilityTracker>
             </div>
             <div>
-              <p className="text-sm text-slate-600 mb-2 text-center">9.5-inch (Home - Recommended)</p>
+              <p className="text-sm text-slate-700 mb-2 text-center">9.5-inch (Home - Recommended)</p>
               <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-mid-article-9-5`} productSlug={PRODUCT_SLUG} position="mid_article">
                 <a
                   href={affiliate9_5Url}
@@ -328,13 +328,13 @@ export default async function RubbermaidScraperReview() {
               </CTAVisibilityTracker>
             </div>
           </div>
-          <p className="text-xs text-slate-500 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
+          <p className="text-xs text-slate-600 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
         </div>
 
         {/* User Reviews */}
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">{reviewData.userReviews.title}</h2>
-          <p className="text-sm text-slate-600 mb-4 italic">
+          <p className="text-sm text-slate-700 mb-4 italic">
             {reviewData.userReviews.subtitle}
           </p>
 
@@ -344,7 +344,7 @@ export default async function RubbermaidScraperReview() {
                 <p className="text-slate-700 mb-2">
                   &quot;{review.quote}&quot;
                 </p>
-                <p className="text-sm text-slate-500">— {review.author}</p>
+                <p className="text-sm text-slate-600">— {review.author}</p>
               </div>
             ))}
           </div>
@@ -401,7 +401,7 @@ export default async function RubbermaidScraperReview() {
             <p className="font-semibold text-slate-900 mb-4 text-center">Choose your size:</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <p className="text-sm text-slate-600 mb-2 text-center">13.5-inch (Professional)</p>
+                <p className="text-sm text-slate-700 mb-2 text-center">13.5-inch (Professional)</p>
                 <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-comparison-13-5`} productSlug={PRODUCT_SLUG} position="comparison_table">
                   <a
                     href={affiliateUrl}
@@ -414,7 +414,7 @@ export default async function RubbermaidScraperReview() {
                 </CTAVisibilityTracker>
               </div>
               <div>
-                <p className="text-sm text-slate-600 mb-2 text-center">9.5-inch (Home - Recommended)</p>
+                <p className="text-sm text-slate-700 mb-2 text-center">9.5-inch (Home - Recommended)</p>
                 <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-comparison-9-5`} productSlug={PRODUCT_SLUG} position="comparison_table">
                   <a
                     href={affiliate9_5Url}
@@ -427,7 +427,7 @@ export default async function RubbermaidScraperReview() {
                 </CTAVisibilityTracker>
               </div>
             </div>
-            <p className="text-xs text-slate-500 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
+            <p className="text-xs text-slate-600 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
           </div>
         </section>
 
@@ -450,7 +450,7 @@ export default async function RubbermaidScraperReview() {
           <p className="font-semibold text-slate-900 mb-4 text-center">Sound like the right fit for your kitchen? Choose your size:</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <p className="text-sm text-slate-600 mb-2 text-center">13.5-inch (Professional)</p>
+              <p className="text-sm text-slate-700 mb-2 text-center">13.5-inch (Professional)</p>
               <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-who-should-buy-13-5`} productSlug={PRODUCT_SLUG} position="who_should_buy">
                 <a
                   href={affiliateUrl}
@@ -463,7 +463,7 @@ export default async function RubbermaidScraperReview() {
               </CTAVisibilityTracker>
             </div>
             <div>
-              <p className="text-sm text-slate-600 mb-2 text-center">9.5-inch (Home - Recommended)</p>
+              <p className="text-sm text-slate-700 mb-2 text-center">9.5-inch (Home - Recommended)</p>
               <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-who-should-buy-9-5`} productSlug={PRODUCT_SLUG} position="who_should_buy">
                 <a
                   href={affiliate9_5Url}
@@ -476,7 +476,7 @@ export default async function RubbermaidScraperReview() {
               </CTAVisibilityTracker>
             </div>
           </div>
-          <p className="text-xs text-slate-500 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
+          <p className="text-xs text-slate-600 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
         </div>
 
         {/* FAQ */}
@@ -532,7 +532,7 @@ export default async function RubbermaidScraperReview() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <p className="text-sm text-slate-600 mb-2 text-center">13.5-inch (Professional)</p>
+                <p className="text-sm text-slate-700 mb-2 text-center">13.5-inch (Professional)</p>
                 <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-final-cta-13-5`} productSlug={PRODUCT_SLUG} position="final_cta">
                   <a
                     href={affiliateUrl}
@@ -546,7 +546,7 @@ export default async function RubbermaidScraperReview() {
               </div>
 
               <div>
-                <p className="text-sm text-slate-600 mb-2 text-center">9.5-inch (Home - Recommended)</p>
+                <p className="text-sm text-slate-700 mb-2 text-center">9.5-inch (Home - Recommended)</p>
                 <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-final-cta-9-5`} productSlug={PRODUCT_SLUG} position="final_cta">
                   <a
                     href={affiliate9_5Url}
@@ -560,7 +560,7 @@ export default async function RubbermaidScraperReview() {
               </div>
             </div>
 
-            <p className="text-xs text-slate-500 mt-3 text-center">
+            <p className="text-xs text-slate-600 mt-3 text-center">
               💡 We earn a commission at no extra cost to you.
             </p>
           </div>

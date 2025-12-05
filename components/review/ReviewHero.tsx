@@ -97,7 +97,7 @@ export default function ReviewHero({
                 </div>
                 <div className="min-w-0">
                   <div className="font-semibold text-slate-900 text-sm">{authorName}</div>
-                  <div className="text-xs text-slate-600 truncate">{authorCredentials}</div>
+                  <div className="text-xs text-slate-700 truncate">{authorCredentials}</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 bg-orange-50 px-3 py-1.5 rounded-lg border border-orange-200 flex-shrink-0">
@@ -108,7 +108,7 @@ export default function ReviewHero({
 
             {/* Dates - optional */}
             {(publishedDate || lastUpdated) && (
-              <div className="flex items-center gap-3 text-xs text-slate-500 mb-2">
+              <div className="flex items-center gap-3 text-xs text-slate-600 mb-2">
                 {publishedDate && <span>Published: {publishedDate}</span>}
                 {publishedDate && lastUpdated && <span>•</span>}
                 {lastUpdated && <span>Updated: {lastUpdated}</span>}
@@ -128,7 +128,7 @@ export default function ReviewHero({
 
             {/* Value highlights - only show if provided */}
             {valueHighlights && (
-              <div className="mt-2 text-sm text-slate-600">
+              <div className="mt-2 text-sm text-slate-700">
                 {valueHighlights}
               </div>
             )}
@@ -184,7 +184,7 @@ export default function ReviewHero({
               </div>
               <div className="min-w-0">
                 <div className="font-semibold text-slate-900 text-sm sm:text-base">{authorName}</div>
-                <div className="text-xs sm:text-sm text-slate-600 truncate">{authorCredentials}</div>
+                <div className="text-xs sm:text-sm text-slate-700 truncate">{authorCredentials}</div>
               </div>
             </div>
             <div className="flex items-center gap-2 bg-orange-50 px-4 py-2 rounded-lg border border-orange-200 flex-shrink-0">
@@ -195,7 +195,7 @@ export default function ReviewHero({
 
           {/* Dates - optional */}
           {(publishedDate || lastUpdated) && (
-            <div className="flex items-center gap-3 text-xs text-slate-500 mb-4">
+            <div className="flex items-center gap-3 text-xs text-slate-600 mb-4">
               {publishedDate && <span>Published: {publishedDate}</span>}
               {publishedDate && lastUpdated && <span>•</span>}
               {lastUpdated && <span>Updated: {lastUpdated}</span>}

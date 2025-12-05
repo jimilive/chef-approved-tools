@@ -33,7 +33,7 @@ export default function RelatedProductsGrid({
                 <h3 className="text-base font-semibold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">
                   {product.name}
                 </h3>
-                <p className="text-sm text-slate-600 mb-3 flex-1">
+                <p className="text-sm text-slate-700 mb-3 flex-1">
                   {product.description}
                 </p>
                 <div className="text-orange-700 font-semibold text-sm">
