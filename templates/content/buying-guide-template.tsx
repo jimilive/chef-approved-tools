@@ -130,12 +130,12 @@ export default function BuyingGuidePage() {
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <h2 className="text-xl font-bold text-slate-900 mb-4">In This Guide:</h2>
             <ul className="space-y-2 text-slate-700">
-              <li>• <a href="#key-factors" className="text-orange-600 hover:text-orange-700">Key Factors to Consider</a></li>
-              <li>• <a href="#types" className="text-orange-600 hover:text-orange-700">Types and Styles Explained</a></li>
-              <li>• <a href="#mistakes" className="text-orange-600 hover:text-orange-700">Common Buying Mistakes</a></li>
-              <li>• <a href="#recommendations" className="text-orange-600 hover:text-orange-700">My Top Recommendations</a></li>
-              <li>• <a href="#maintenance" className="text-orange-600 hover:text-orange-700">Care and Maintenance</a></li>
-              <li>• <a href="#faq" className="text-orange-600 hover:text-orange-700">Frequently Asked Questions</a></li>
+              <li>• <a href="#key-factors" className="text-orange-700 hover:text-orange-700">Key Factors to Consider</a></li>
+              <li>• <a href="#types" className="text-orange-700 hover:text-orange-700">Types and Styles Explained</a></li>
+              <li>• <a href="#mistakes" className="text-orange-700 hover:text-orange-700">Common Buying Mistakes</a></li>
+              <li>• <a href="#recommendations" className="text-orange-700 hover:text-orange-700">My Top Recommendations</a></li>
+              <li>• <a href="#maintenance" className="text-orange-700 hover:text-orange-700">Care and Maintenance</a></li>
+              <li>• <a href="#faq" className="text-orange-700 hover:text-orange-700">Frequently Asked Questions</a></li>
             </ul>
           </div>
         </section>
@@ -274,7 +274,7 @@ export default function BuyingGuidePage() {
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
                       <div>
                         <h3 className="text-xl font-bold text-slate-900 mb-1">{product.name}</h3>
-                        <p className="text-sm text-orange-600 font-semibold">{product.bestFor}</p>
+                        <p className="text-sm text-orange-700 font-semibold">{product.bestFor}</p>
                       </div>
                       <div className="text-2xl font-bold text-orange-700 mt-2 md:mt-0">
                         ${product.price}
@@ -286,7 +286,7 @@ export default function BuyingGuidePage() {
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Link
                         href={product.affiliateLink}
-                        className="flex-1 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
+                        className="flex-1 bg-orange-600 hover:bg-orange-800 text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
                         rel="nofollow sponsored"
                         target="_blank"
                       >

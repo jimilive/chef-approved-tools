@@ -406,7 +406,7 @@ export default function HowToSharpenWithTriStonePage() {
             >
               <Link
                 href="/reviews/norton-im200-tri-stone-sharpener"
-                className="inline-block bg-orange-700 text-white hover:bg-orange-800 px-8 py-3 rounded-lg font-bold text-lg transition-colors"
+                className="inline-block bg-orange-800 text-white hover:bg-orange-800 px-8 py-3 rounded-lg font-bold text-lg transition-colors"
               >
                 Read My Complete Norton Tri-Stone Review →
               </Link>

@@ -176,14 +176,14 @@ export default function Tier3GuidePage() {
             <h2 className="text-xl font-bold text-slate-900 mb-4">Quick Navigation</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <ul className="space-y-2 text-slate-700">
-                <li>• <a href="#quick-picks" className="text-orange-600 hover:text-orange-700">Top Picks at a Glance</a></li>
-                <li>• <a href="#detailed-reviews" className="text-orange-600 hover:text-orange-700">Detailed Reviews</a></li>
-                <li>• <a href="#how-to-choose" className="text-orange-600 hover:text-orange-700">How to Choose</a></li>
+                <li>• <a href="#quick-picks" className="text-orange-700 hover:text-orange-700">Top Picks at a Glance</a></li>
+                <li>• <a href="#detailed-reviews" className="text-orange-700 hover:text-orange-700">Detailed Reviews</a></li>
+                <li>• <a href="#how-to-choose" className="text-orange-700 hover:text-orange-700">How to Choose</a></li>
               </ul>
               <ul className="space-y-2 text-slate-700">
-                <li>• <a href="#comparison" className="text-orange-600 hover:text-orange-700">Comparison Table</a></li>
-                <li>• <a href="#faq" className="text-orange-600 hover:text-orange-700">FAQs</a></li>
-                <li>• <a href="#methodology" className="text-orange-600 hover:text-orange-700">How We Tested</a></li>
+                <li>• <a href="#comparison" className="text-orange-700 hover:text-orange-700">Comparison Table</a></li>
+                <li>• <a href="#faq" className="text-orange-700 hover:text-orange-700">FAQs</a></li>
+                <li>• <a href="#methodology" className="text-orange-700 hover:text-orange-700">How We Tested</a></li>
               </ul>
             </div>
           </div>
@@ -204,11 +204,11 @@ export default function Tier3GuidePage() {
                   </div>
                 )}
                 <h3 className="font-bold text-slate-900 mb-1">{product.name}</h3>
-                <p className="text-sm text-orange-600 font-semibold mb-2">{product.bestFor}</p>
+                <p className="text-sm text-orange-700 font-semibold mb-2">{product.bestFor}</p>
                 <div className="text-2xl font-bold text-slate-900 mb-3">${product.price}</div>
                 <Link
                   href={product.affiliateLink}
-                  className="inline-block w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
+                  className="inline-block w-full bg-orange-600 hover:bg-orange-800 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
                   rel="nofollow sponsored"
                   target="_blank"
                 >
@@ -240,7 +240,7 @@ export default function Tier3GuidePage() {
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                       <div>
                         <h3 className="text-xl font-bold text-slate-900 mb-1">{product.name}</h3>
-                        <p className="text-sm text-orange-600 font-semibold mb-2">{product.bestFor}</p>
+                        <p className="text-sm text-orange-700 font-semibold mb-2">{product.bestFor}</p>
 
                         {/* Badges */}
                         <div className="flex flex-wrap gap-2 mb-3">
@@ -293,7 +293,7 @@ export default function Tier3GuidePage() {
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Link
                         href={product.affiliateLink}
-                        className="flex-1 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
+                        className="flex-1 bg-orange-600 hover:bg-orange-800 text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
                         rel="nofollow sponsored"
                         target="_blank"
                       >

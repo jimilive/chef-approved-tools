@@ -130,11 +130,11 @@ export default function ImageCompareSlider({
         {/* Handle Circle */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg border-4 border-orange-600 flex items-center justify-center cursor-ew-resize">
           {/* Left Arrow */}
-          <svg className="w-3 h-3 text-orange-600 -ml-1" fill="currentColor" viewBox="0 0 20 20">
+          <svg className="w-3 h-3 text-orange-700 -ml-1" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
           </svg>
           {/* Right Arrow */}
-          <svg className="w-3 h-3 text-orange-600 ml-1" fill="currentColor" viewBox="0 0 20 20">
+          <svg className="w-3 h-3 text-orange-700 ml-1" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
           </svg>
         </div>

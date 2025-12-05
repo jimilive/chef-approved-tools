@@ -149,7 +149,7 @@ export default async function AllCladD5SautePanReview() {
               href={affiliateUrl}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200 text-lg"
+              className="inline-block bg-orange-600 hover:bg-orange-800 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200 text-lg"
             >
               Check Price on Amazon →
             </a>
@@ -318,7 +318,7 @@ export default async function AllCladD5SautePanReview() {
               href={affiliateUrl}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200 text-lg"
+              className="inline-block bg-orange-600 hover:bg-orange-800 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200 text-lg"
             >
               Check Price on Amazon →
             </a>

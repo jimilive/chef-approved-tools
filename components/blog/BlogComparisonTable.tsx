@@ -78,7 +78,7 @@ export default function BlogComparisonTable({
       ratingLower.includes('challenging') ||
       ratingLower.includes('difficult')
     ) {
-      return 'text-orange-600'
+      return 'text-orange-700'
     }
 
     // Red for negative ratings

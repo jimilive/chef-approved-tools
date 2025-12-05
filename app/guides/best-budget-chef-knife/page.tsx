@@ -46,9 +46,9 @@ export default async function BestBudgetChefKnife() {
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ol className="flex items-center space-x-2 text-sm">
-            <li><Link href="/" className="text-orange-600 hover:text-orange-800">Home</Link></li>
+            <li><Link href="/" className="text-orange-700 hover:text-orange-800">Home</Link></li>
             <li className="text-gray-400">/</li>
-            <li><Link href="/guides" className="text-orange-600 hover:text-orange-800">Guides</Link></li>
+            <li><Link href="/guides" className="text-orange-700 hover:text-orange-800">Guides</Link></li>
             <li className="text-gray-400">/</li>
             <li className="text-gray-700">Best Budget Chef Knife</li>
           </ol>
@@ -80,7 +80,7 @@ export default async function BestBudgetChefKnife() {
         {/* Quick Answer Box */}
         <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-l-4 border-orange-500 rounded-r-lg p-6 mb-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-3 flex items-center gap-2">
-            <TrendingUp className="w-6 h-6 text-orange-600" />
+            <TrendingUp className="w-6 h-6 text-orange-700" />
             Quick Answer
           </h2>
           <p className="text-slate-700 text-lg leading-relaxed mb-4">

@@ -228,7 +228,7 @@ export default async function CookwarePage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center px-6 py-3 bg-orange-700 text-white font-semibold rounded-lg hover:bg-orange-800 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-orange-800 text-white font-semibold rounded-lg hover:bg-orange-800 transition-colors"
             >
               Contact Me
             </Link>

@@ -192,7 +192,7 @@ export default async function ChefApprovedKitchenKit() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
               Part 1: The Core Essentials
             </h2>
-            <p className="text-lg sm:text-xl text-orange-600 font-semibold mb-4">
+            <p className="text-lg sm:text-xl text-orange-700 font-semibold mb-4">
               The Essential Foundation
             </p>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -288,7 +288,7 @@ export default async function ChefApprovedKitchenKit() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
               Part 2: Investing in Your Kitchen
             </h2>
-            <p className="text-lg sm:text-xl text-orange-600 font-semibold mb-4">
+            <p className="text-lg sm:text-xl text-orange-700 font-semibold mb-4">
               The Professional&apos;s Upgrade Path
             </p>
             <div className="max-w-3xl mx-auto">
@@ -387,7 +387,7 @@ export default async function ChefApprovedKitchenKit() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
               Part 3: The Specialist Tool
             </h2>
-            <p className="text-lg sm:text-xl text-orange-600 font-semibold mb-4">
+            <p className="text-lg sm:text-xl text-orange-700 font-semibold mb-4">
               For Next-Level Technique
             </p>
           </div>
@@ -513,7 +513,7 @@ export default async function ChefApprovedKitchenKit() {
               href={coreEssentials[0].affiliateUrl}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="inline-flex items-center gap-2 bg-white text-orange-600 hover:bg-orange-50 font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:scale-105 active:scale-95"
+              className="inline-flex items-center gap-2 bg-white text-orange-700 hover:bg-orange-50 font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:scale-105 active:scale-95"
             >
               <ShoppingCart className="w-5 h-5" />
               Get the Victorinox Chef&apos;s Knife First ($45)

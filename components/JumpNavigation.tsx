@@ -69,7 +69,7 @@ export default function JumpNavigation({ items }: JumpNavigationProps) {
           aria-controls="jump-navigation-content"
         >
           <div className="flex items-center gap-2">
-            <Hash className="w-4 h-4 text-orange-600" />
+            <Hash className="w-4 h-4 text-orange-700" />
             <span className="font-semibold text-gray-900">Jump to Section</span>
           </div>
           <ChevronDown

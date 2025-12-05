@@ -65,7 +65,7 @@ export default function EmailCaptureSection() {
           {/* Benefit Preview Box */}
           <div className="bg-slate-800 border-2 border-orange-600 rounded-xl p-6 md:p-8 mb-8">
             <div className="flex items-center gap-3 mb-6">
-              <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-orange-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               <h3 className="text-xl font-semibold text-white">

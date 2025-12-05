@@ -160,7 +160,7 @@ export default function PriceDisplay({
                     <span className="text-xs text-red-600 font-medium">Out of Stock</span>
                   )}
                 </div>
-                <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-orange-600 flex-shrink-0" />
+                <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-orange-700 flex-shrink-0" />
               </a>
             )
           })}

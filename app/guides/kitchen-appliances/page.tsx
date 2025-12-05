@@ -125,7 +125,7 @@ export default function KitchenAppliancesPage() {
                  position="mid_article">
                   <Link
                     href="/reviews/vitamix-5200-professional-blender"
-                    className="text-orange-600 hover:text-orange-800 font-semibold"
+                    className="text-orange-700 hover:text-orange-800 font-semibold"
                   >
                     Read full review →
                   </Link>
@@ -155,7 +155,7 @@ export default function KitchenAppliancesPage() {
                  position="mid_article">
                   <Link
                     href="/reviews/robot-coupe-r2-dice"
-                    className="text-orange-600 hover:text-orange-800 font-semibold"
+                    className="text-orange-700 hover:text-orange-800 font-semibold"
                   >
                     Read full review →
                   </Link>
@@ -326,7 +326,7 @@ export default function KitchenAppliancesPage() {
             position="final_cta" productSlug="guides" merchant="internal">
             <Link
               href="/guides"
-              className="text-orange-600 hover:text-orange-800 font-semibold"
+              className="text-orange-700 hover:text-orange-800 font-semibold"
             >
               ← Back to All Guides
             </Link>

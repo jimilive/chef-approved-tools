@@ -152,15 +152,15 @@ export default async function AffordableKitchenAppliancesPage() {
         <nav className="bg-slate-50 p-4 rounded-lg mb-8 border border-slate-200">
           <p className="font-semibold text-slate-900 mb-2">Quick Navigation:</p>
           <div className="flex flex-wrap gap-2 text-sm">
-            <a href="#blenders" className="text-orange-600 hover:text-orange-800">Budget Blenders</a>
+            <a href="#blenders" className="text-orange-700 hover:text-orange-800">Budget Blenders</a>
             <span className="text-slate-400">|</span>
-            <a href="#mixers" className="text-orange-600 hover:text-orange-800">Stand Mixers</a>
+            <a href="#mixers" className="text-orange-700 hover:text-orange-800">Stand Mixers</a>
             <span className="text-slate-400">|</span>
-            <a href="#processors" className="text-orange-600 hover:text-orange-800">Food Processors</a>
+            <a href="#processors" className="text-orange-700 hover:text-orange-800">Food Processors</a>
             <span className="text-slate-400">|</span>
-            <a href="#countertop" className="text-orange-600 hover:text-orange-800">Countertop Appliances</a>
+            <a href="#countertop" className="text-orange-700 hover:text-orange-800">Countertop Appliances</a>
             <span className="text-slate-400">|</span>
-            <a href="#philosophy" className="text-orange-600 hover:text-orange-800">Budget Philosophy</a>
+            <a href="#philosophy" className="text-orange-700 hover:text-orange-800">Budget Philosophy</a>
           </div>
         </nav>
 
@@ -183,7 +183,7 @@ export default async function AffordableKitchenAppliancesPage() {
                 position="mid_article"
                 productSlug="vitamix-5200"
               >
-                <Link href="/reviews/vitamix-5200-professional-blender" className="text-orange-600 hover:text-orange-800 underline font-semibold">
+                <Link href="/reviews/vitamix-5200-professional-blender" className="text-orange-700 hover:text-orange-800 underline font-semibold">
                   Vitamix 5200
                 </Link>
               </CTAVisibilityTracker>{' '}
@@ -272,7 +272,7 @@ export default async function AffordableKitchenAppliancesPage() {
                 position="mid_article"
                 productSlug="kitchenaid-ksm8990wh"
               >
-                <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline font-semibold">
+                <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-700 hover:text-orange-800 underline font-semibold">
                   Commercial Series I tested at Purple Cafe
                 </Link>
               </CTAVisibilityTracker>. It&apos;s the sweet spot for serious home bakers.
@@ -370,7 +370,7 @@ export default async function AffordableKitchenAppliancesPage() {
                 position="mid_article"
                 productSlug="robot-coupe-r2-dice"
               >
-                <Link href="/reviews/robot-coupe-r2-dice" className="text-orange-600 hover:text-orange-800 underline font-semibold">
+                <Link href="/reviews/robot-coupe-r2-dice" className="text-orange-700 hover:text-orange-800 underline font-semibold">
                   Robot Coupe R2 in professional kitchens
                 </Link>
               </CTAVisibilityTracker>, here&apos;s what I learned: <strong>The Cuisinart delivers 70-75% of commercial processor performance at 1/3 the price.</strong>
@@ -508,7 +508,7 @@ export default async function AffordableKitchenAppliancesPage() {
                   position="mid_article"
                   productSlug="black-decker-toaster-oven"
                 >
-                  <Link href="/reviews/black-decker-toaster-oven" className="text-orange-600 hover:text-orange-800 underline font-semibold">
+                  <Link href="/reviews/black-decker-toaster-oven" className="text-orange-700 hover:text-orange-800 underline font-semibold">
                     complete Black & Decker toaster oven review
                   </Link>
                 </CTAVisibilityTracker>{' '}
@@ -624,19 +624,19 @@ export default async function AffordableKitchenAppliancesPage() {
                 <h3 className="font-semibold text-slate-900 mb-2">⚠️ When to Invest in Premium:</h3>
                 <ul className="space-y-2 text-slate-700">
                   <li className="flex items-start gap-2">
-                    <TrendingUp className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <TrendingUp className="w-5 h-5 text-orange-700 mt-0.5 flex-shrink-0" />
                     <span><strong>Daily use:</strong> 5+ hours weekly justifies premium durability</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <TrendingUp className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <TrendingUp className="w-5 h-5 text-orange-700 mt-0.5 flex-shrink-0" />
                     <span><strong>Revenue-generating:</strong> Equipment failure = lost income</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <TrendingUp className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <TrendingUp className="w-5 h-5 text-orange-700 mt-0.5 flex-shrink-0" />
                     <span><strong>Specialized tasks:</strong> Hot soup blending, heavy doughs, commercial volume</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <TrendingUp className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <TrendingUp className="w-5 h-5 text-orange-700 mt-0.5 flex-shrink-0" />
                     <span><strong>10 year ownership:</strong> Premium often outlasts 3-4 budget replacements</span>
                   </li>
                 </ul>
@@ -748,7 +748,7 @@ export default async function AffordableKitchenAppliancesPage() {
                     ctaId="guide-affordable-appliances-reviews-link"
                     position="mid_article"
                   >
-                    <Link href="/reviews" className="text-orange-600 hover:text-orange-800 underline font-semibold">
+                    <Link href="/reviews" className="text-orange-700 hover:text-orange-800 underline font-semibold">
                       professional equipment reviews
                     </Link>
                   </CTAVisibilityTracker>.

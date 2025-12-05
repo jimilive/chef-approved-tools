@@ -378,7 +378,7 @@ export default function GlossaryPage() {
                     <div className="mt-4 pt-4 border-t border-gray-200">
                       <Link
                         href={item.linkUrl}
-                        className="inline-flex items-center text-orange-600 hover:text-orange-800 font-medium"
+                        className="inline-flex items-center text-orange-700 hover:text-orange-800 font-medium"
                       >
                         {item.linkText} →
                       </Link>

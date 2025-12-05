@@ -250,16 +250,16 @@ export default function ChefApprovedPage() {
 
             <p className="font-semibold text-emerald-700 mb-2">Tier 1 - Professional Kitchen Use:</p>
             <ul className="mb-4">
-              <li><Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-700">Victorinox Fibrox Pro 8&rdquo; Chef&rsquo;s Knife</Link> - My daily knife for 2+ years at Purple Café</li>
-              <li><Link href="/reviews/victorinox-granton-edge-boning-knife" className="text-orange-600 hover:text-orange-700">Victorinox Boning Knife</Link> - Broke down hundreds of chickens with this</li>
+              <li><Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-700">Victorinox Fibrox Pro 8&rdquo; Chef&rsquo;s Knife</Link> - My daily knife for 2+ years at Purple Café</li>
+              <li><Link href="/reviews/victorinox-granton-edge-boning-knife" className="text-orange-700 hover:text-orange-700">Victorinox Boning Knife</Link> - Broke down hundreds of chickens with this</li>
             </ul>
 
             <p className="font-semibold text-blue-700 mb-2">Tier 2 - Long-Term Personal Use:</p>
             <ul className="mb-4">
-              <li><Link href="/reviews/wusthof-classic-ikon-16-piece" className="text-orange-600 hover:text-orange-700">Wüsthof Classic Ikon 8&rdquo; Chef&rsquo;s Knife</Link> - My home kitchen workhorse for 3+ years</li>
+              <li><Link href="/reviews/wusthof-classic-ikon-16-piece" className="text-orange-700 hover:text-orange-700">Wüsthof Classic Ikon 8&rdquo; Chef&rsquo;s Knife</Link> - My home kitchen workhorse for 3+ years</li>
             </ul>
 
-            <Link href="/knives" className="text-orange-600 hover:text-orange-700 font-semibold">
+            <Link href="/knives" className="text-orange-700 hover:text-orange-700 font-semibold">
               Browse All Chef Approved Knives →
             </Link>
           </div>
@@ -269,11 +269,11 @@ export default function ChefApprovedPage() {
 
             <p className="font-semibold text-blue-700 mb-2">Tier 2 - Long-Term Personal Use:</p>
             <ul className="mb-4">
-              <li><Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-700">Le Creuset Dutch Oven</Link> - 5+ years of home use</li>
-              <li><Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-600 hover:text-orange-700">Lodge Cast Iron Skillets</Link> - Long-term testing</li>
+              <li><Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-700 hover:text-orange-700">Le Creuset Dutch Oven</Link> - 5+ years of home use</li>
+              <li><Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-700">Lodge Cast Iron Skillets</Link> - Long-term testing</li>
             </ul>
 
-            <Link href="/cookware" className="text-orange-600 hover:text-orange-700 font-semibold">
+            <Link href="/cookware" className="text-orange-700 hover:text-orange-700 font-semibold">
               Browse All Chef Approved Cookware →
             </Link>
           </div>
@@ -283,15 +283,15 @@ export default function ChefApprovedPage() {
 
             <p className="font-semibold text-emerald-700 mb-2">Tier 1 - Professional Kitchen Use:</p>
             <ul className="mb-4">
-              <li><Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-600 hover:text-orange-700">OXO Bench Scraper</Link> - Daily prep tool in multiple restaurants</li>
+              <li><Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-700 hover:text-orange-700">OXO Bench Scraper</Link> - Daily prep tool in multiple restaurants</li>
             </ul>
 
             <p className="font-semibold text-blue-700 mb-2">Tier 2 - Long-Term Personal Use:</p>
             <ul className="mb-4">
-              <li><Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-600 hover:text-orange-700">Epicurean Cutting Boards</Link> - 3+ years of home use</li>
+              <li><Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-700 hover:text-orange-700">Epicurean Cutting Boards</Link> - 3+ years of home use</li>
             </ul>
 
-            <Link href="/reviews" className="text-orange-600 hover:text-orange-700 font-semibold">
+            <Link href="/reviews" className="text-orange-700 hover:text-orange-700 font-semibold">
               Browse All Chef Approved Tools →
             </Link>
           </div>
@@ -393,7 +393,7 @@ export default function ChefApprovedPage() {
 
           <ol className="space-y-6 text-orange-900">
             <li>
-              <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-xl font-bold text-orange-600 hover:text-orange-700">
+              <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-xl font-bold text-orange-700 hover:text-orange-700">
                 Victorinox Fibrox Pro 8&rdquo; Chef&rsquo;s Knife
               </Link>
               <span className="ml-2 text-emerald-700 font-semibold">(Tier 1)</span>
@@ -405,7 +405,7 @@ export default function ChefApprovedPage() {
             </li>
 
             <li>
-              <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-xl font-bold text-orange-600 hover:text-orange-700">
+              <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-xl font-bold text-orange-700 hover:text-orange-700">
                 OXO Bench Scraper
               </Link>
               <span className="ml-2 text-emerald-700 font-semibold">(Tier 1)</span>
@@ -438,20 +438,20 @@ export default function ChefApprovedPage() {
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-4">Browse by Category</h3>
               <ul className="space-y-2">
-                <li><Link href="/reviews" className="text-orange-600 hover:text-orange-700">👨‍🍳 All Chef Approved Reviews</Link></li>
-                <li><Link href="/knives" className="text-orange-600 hover:text-orange-700">🔪 Knives & Cutting Tools</Link></li>
-                <li><Link href="/cookware" className="text-orange-600 hover:text-orange-700">🍳 Cookware & Bakeware</Link></li>
-                <li><Link href="/reviews" className="text-orange-600 hover:text-orange-700">📏 Kitchen Tools & Gadgets</Link></li>
-                <li><Link href="/appliances" className="text-orange-600 hover:text-orange-700">🔥 Appliances & Equipment</Link></li>
+                <li><Link href="/reviews" className="text-orange-700 hover:text-orange-700">👨‍🍳 All Chef Approved Reviews</Link></li>
+                <li><Link href="/knives" className="text-orange-700 hover:text-orange-700">🔪 Knives & Cutting Tools</Link></li>
+                <li><Link href="/cookware" className="text-orange-700 hover:text-orange-700">🍳 Cookware & Bakeware</Link></li>
+                <li><Link href="/reviews" className="text-orange-700 hover:text-orange-700">📏 Kitchen Tools & Gadgets</Link></li>
+                <li><Link href="/appliances" className="text-orange-700 hover:text-orange-700">🔥 Appliances & Equipment</Link></li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-4">Learn More</h3>
               <ul className="space-y-2">
-                <li><Link href="/about" className="text-orange-600 hover:text-orange-700">About Scott Bradley - My professional background</Link></li>
-                <li><Link href="/methodology" className="text-orange-600 hover:text-orange-700">How I Review Products - My testing methodology</Link></li>
-                <li><Link href="/newsletter" className="text-orange-600 hover:text-orange-700">Newsletter Signup - Professional tips & new reviews</Link></li>
+                <li><Link href="/about" className="text-orange-700 hover:text-orange-700">About Scott Bradley - My professional background</Link></li>
+                <li><Link href="/methodology" className="text-orange-700 hover:text-orange-700">How I Review Products - My testing methodology</Link></li>
+                <li><Link href="/newsletter" className="text-orange-700 hover:text-orange-700">Newsletter Signup - Professional tips & new reviews</Link></li>
               </ul>
             </div>
           </div>

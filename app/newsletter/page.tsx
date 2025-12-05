@@ -47,19 +47,19 @@ export default function NewsletterPage() {
         <h2 className="text-2xl font-bold mb-4">What You&rsquo;ll Get:</h2>
         <ul className="list-none p-0">
           <li className="mb-3 flex items-center">
-            <span className="text-orange-600 mr-2">✓</span>
+            <span className="text-orange-700 mr-2">✓</span>
             Weekly equipment recommendations from a certified chef
           </li>
           <li className="mb-3 flex items-center">
-            <span className="text-orange-600 mr-2">✓</span>
+            <span className="text-orange-700 mr-2">✓</span>
             Exclusive deals on professional kitchen tools
           </li>
           <li className="mb-3 flex items-center">
-            <span className="text-orange-600 mr-2">✓</span>
+            <span className="text-orange-700 mr-2">✓</span>
             Pro cooking tips from restaurant experience
           </li>
           <li className="mb-3 flex items-center">
-            <span className="text-orange-600 mr-2">✓</span>
+            <span className="text-orange-700 mr-2">✓</span>
             Equipment maintenance guides
           </li>
         </ul>

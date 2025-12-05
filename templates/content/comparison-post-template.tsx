@@ -158,7 +158,7 @@ export default function ComparisonPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-orange-300 rounded-xl p-6">
               <div className="flex items-center mb-2">
-                <Award className="w-6 h-6 text-orange-600 mr-2" />
+                <Award className="w-6 h-6 text-orange-700 mr-2" />
                 <h3 className="font-bold text-slate-900">Overall Winner</h3>
               </div>
               <p className="text-lg font-semibold text-orange-700">{comparisonData.quickVerdict.overallWinner}</p>
@@ -235,7 +235,7 @@ export default function ComparisonPage() {
                 <div className="space-y-2">
                   <Link
                     href={product.affiliateLink}
-                    className="block w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
+                    className="block w-full bg-orange-600 hover:bg-orange-800 text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
                     rel="nofollow sponsored"
                     target="_blank"
                   >
@@ -325,7 +325,7 @@ export default function ComparisonPage() {
               </ul>
               <Link
                 href={comparisonData.products[0].affiliateLink}
-                className="block w-full mt-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
+                className="block w-full mt-4 bg-orange-600 hover:bg-orange-800 text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
                 rel="nofollow sponsored"
                 target="_blank"
               >

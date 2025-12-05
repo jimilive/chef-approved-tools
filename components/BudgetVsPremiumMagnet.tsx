@@ -124,7 +124,7 @@ export default function BudgetVsPremiumMagnet({
       <div className="mb-6">
         <div className={`${variant === 'sidebar' ? 'bg-white' : 'bg-slate-800'} border border-orange-200 rounded-lg p-4 mb-4`}>
           <h3 className="font-semibold mb-3 flex items-center gap-2">
-            <Download className="w-5 h-5 text-orange-600" />
+            <Download className="w-5 h-5 text-orange-700" />
             What You&apos;ll Get (FREE Guide):
           </h3>
 

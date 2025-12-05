@@ -248,55 +248,55 @@ export default async function ProductReview() {
 
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-3">
               <div className="flex items-center">
-                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">1.</span>
+                <span className="text-orange-700 font-bold mr-3 flex-shrink-0">1.</span>
                 <span className="text-slate-700">3&quot; Straight Paring Knife</span>
               </div>
               <div className="flex items-center">
-                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">2.</span>
+                <span className="text-orange-700 font-bold mr-3 flex-shrink-0">2.</span>
                 <span className="text-slate-700">3.5&quot; Paring Knife</span>
               </div>
               <div className="flex items-center">
-                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">3.</span>
+                <span className="text-orange-700 font-bold mr-3 flex-shrink-0">3.</span>
                 <span className="text-slate-700">4.5&quot; Utility Knife</span>
               </div>
               <div className="flex items-center">
-                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">4.</span>
+                <span className="text-orange-700 font-bold mr-3 flex-shrink-0">4.</span>
                 <span className="text-slate-700">5&quot; Serrated Utility Knife</span>
               </div>
               <div className="flex items-center">
-                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">5.</span>
+                <span className="text-orange-700 font-bold mr-3 flex-shrink-0">5.</span>
                 <span className="text-slate-700">6&quot; Utility Knife</span>
               </div>
               <div className="flex items-center">
-                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">6.</span>
+                <span className="text-orange-700 font-bold mr-3 flex-shrink-0">6.</span>
                 <span className="text-slate-700">7&quot; Hollow Edge Santoku Knife</span>
               </div>
               <div className="flex items-center">
-                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">7.</span>
+                <span className="text-orange-700 font-bold mr-3 flex-shrink-0">7.</span>
                 <span className="text-slate-700">8&quot; Bread Knife</span>
               </div>
               <div className="flex items-center">
-                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">8.</span>
+                <span className="text-orange-700 font-bold mr-3 flex-shrink-0">8.</span>
                 <span className="text-slate-700">8&quot; Chef&apos;s Knife</span>
               </div>
               <div className="flex items-center">
-                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">9.</span>
+                <span className="text-orange-700 font-bold mr-3 flex-shrink-0">9.</span>
                 <span className="text-slate-700">9&quot; Hollow Edge Carving Knife</span>
               </div>
               <div className="flex items-center">
-                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">10-13.</span>
+                <span className="text-orange-700 font-bold mr-3 flex-shrink-0">10-13.</span>
                 <span className="text-slate-700">Four 4.5&quot; Steak Knives (fully forged)</span>
               </div>
               <div className="flex items-center">
-                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">14.</span>
+                <span className="text-orange-700 font-bold mr-3 flex-shrink-0">14.</span>
                 <span className="text-slate-700">9&quot; Honing Steel (brushed stainless handle)</span>
               </div>
               <div className="flex items-center">
-                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">15.</span>
+                <span className="text-orange-700 font-bold mr-3 flex-shrink-0">15.</span>
                 <span className="text-slate-700">Kitchen Shears (come-apart, stainless steel)</span>
               </div>
               <div className="flex items-center">
-                <span className="text-orange-600 font-bold mr-3 flex-shrink-0">16.</span>
+                <span className="text-orange-700 font-bold mr-3 flex-shrink-0">16.</span>
                 <span className="text-slate-700">15-Slot Walnut Knife Block</span>
               </div>
             </div>

@@ -143,7 +143,7 @@ export default function GuidesPage() {
               <div className="bg-white rounded-xl shadow-sm p-8 border border-slate-200 transition-shadow duration-200 hover:shadow-lg">
                 <h3 className="text-2xl font-bold mb-3 text-slate-900">{guide.title}</h3>
                 <p className="text-slate-500 mb-4">{guide.description}</p>
-                <span className="text-orange-600 font-semibold">Read Guide →</span>
+                <span className="text-orange-700 font-semibold">Read Guide →</span>
               </div>
             </a>
           </CTAVisibilityTracker>

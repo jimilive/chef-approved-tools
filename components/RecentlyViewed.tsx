@@ -67,7 +67,7 @@ export default function RecentlyViewed() {
     <section className="mt-20 mb-10">
       <div className="max-w-6xl mx-auto px-5">
         <div className="flex items-center gap-3 mb-8">
-        <Clock className="w-6 h-6 text-orange-600" />
+        <Clock className="w-6 h-6 text-orange-700" />
         <h2 className="text-3xl font-bold m-0 text-gray-900">
           Recently Viewed Products
         </h2>

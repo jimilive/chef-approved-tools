@@ -53,7 +53,7 @@ export default function SizeSelector({
                 value={option.id}
                 checked={selectedSize === option.id}
                 onChange={(e) => setSelectedSize(e.target.value)}
-                className="mt-1 w-4 h-4 text-orange-600 focus:ring-orange-500"
+                className="mt-1 w-4 h-4 text-orange-700 focus:ring-orange-500"
               />
               <div className="flex-1">
                 <div className="font-semibold text-slate-900">{option.label}</div>

@@ -56,7 +56,7 @@ export default function AffiliateButtonVariations({
   const variantStyles = {
     primary: 'bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white',
     secondary: 'bg-orange-700 hover:bg-orange-800 text-white',
-    outline: 'border-2 border-orange-500 text-orange-600 hover:bg-orange-50'
+    outline: 'border-2 border-orange-500 text-orange-700 hover:bg-orange-50'
   };
 
   const baseStyles = 'inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold text-base sm:text-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95';

@@ -306,7 +306,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             >
               <Link
                 href="/reviews/bodum-chambord-french-press"
-                className="inline-block bg-orange-700 text-white hover:bg-orange-800 px-8 py-3 rounded-lg font-bold text-lg transition-colors"
+                className="inline-block bg-orange-800 text-white hover:bg-orange-800 px-8 py-3 rounded-lg font-bold text-lg transition-colors"
               >
                 Read My Complete 24-Year Review →
               </Link>

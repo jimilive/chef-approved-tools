@@ -85,7 +85,7 @@ export default function ToolsThatStartedItAllPage() {
             <div className="space-y-6 mb-12">
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 transition-colors">
+                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 transition-colors">
                     Victorinox Fibrox 8&quot; Chef&apos;s Knife
                   </Link>
                 </h3>
@@ -96,7 +96,7 @@ export default function ToolsThatStartedItAllPage() {
 
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  <Link href="/reviews/victorinox-fibrox-10-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 transition-colors">
+                  <Link href="/reviews/victorinox-fibrox-10-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 transition-colors">
                     Victorinox Fibrox 10&quot; Chef&apos;s Knife
                   </Link>
                 </h3>
@@ -107,7 +107,7 @@ export default function ToolsThatStartedItAllPage() {
 
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  <Link href="/reviews/victorinox-4-inch-paring-knife" className="text-orange-600 hover:text-orange-800 transition-colors">
+                  <Link href="/reviews/victorinox-4-inch-paring-knife" className="text-orange-700 hover:text-orange-800 transition-colors">
                     Victorinox Fibrox 4&quot; Paring Knife
                   </Link>
                 </h3>
@@ -118,7 +118,7 @@ export default function ToolsThatStartedItAllPage() {
 
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  <Link href="/reviews/victorinox-granton-edge-boning-knife" className="text-orange-600 hover:text-orange-800 transition-colors">
+                  <Link href="/reviews/victorinox-granton-edge-boning-knife" className="text-orange-700 hover:text-orange-800 transition-colors">
                     Victorinox Fibrox Granton Edge Boning Knife
                   </Link>
                 </h3>
@@ -129,7 +129,7 @@ export default function ToolsThatStartedItAllPage() {
 
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  <Link href="/reviews/victorinox-offset-bread-knife" className="text-orange-600 hover:text-orange-800 transition-colors">
+                  <Link href="/reviews/victorinox-offset-bread-knife" className="text-orange-700 hover:text-orange-800 transition-colors">
                     Victorinox Fibrox Offset Bread Knife
                   </Link>
                 </h3>
@@ -147,7 +147,7 @@ export default function ToolsThatStartedItAllPage() {
             <div className="space-y-6 mb-12">
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  <Link href="/reviews/oxo-good-grips-swivel-peeler" className="text-orange-600 hover:text-orange-800 transition-colors">
+                  <Link href="/reviews/oxo-good-grips-swivel-peeler" className="text-orange-700 hover:text-orange-800 transition-colors">
                     OXO Good Grips Swivel Peeler
                   </Link>
                 </h3>
@@ -167,7 +167,7 @@ export default function ToolsThatStartedItAllPage() {
 
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-600 hover:text-orange-800 transition-colors">
+                  <Link href="/reviews/oxo-good-grips-bench-scraper" className="text-orange-700 hover:text-orange-800 transition-colors">
                     OXO Bench Scraper
                   </Link>
                 </h3>
@@ -178,7 +178,7 @@ export default function ToolsThatStartedItAllPage() {
 
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  <Link href="/reviews/winco-heavy-duty-tongs" className="text-orange-600 hover:text-orange-800 transition-colors">
+                  <Link href="/reviews/winco-heavy-duty-tongs" className="text-orange-700 hover:text-orange-800 transition-colors">
                     Winco 12&quot; Tongs
                   </Link>
                 </h3>
@@ -285,7 +285,7 @@ export default function ToolsThatStartedItAllPage() {
           </p>
           <Link
             href="/reviews"
-            className="inline-block bg-white text-orange-600 hover:bg-orange-50 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95"
+            className="inline-block bg-white text-orange-700 hover:bg-orange-50 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95"
           >
             Browse All Reviews →
           </Link>

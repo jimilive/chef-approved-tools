@@ -397,7 +397,7 @@ export default async function BestChefKnivesPage() {
                        position="mid_article">
                         <Link
                           href={`/reviews/${knife.slug}`}
-                          className="inline-flex items-center justify-center border-2 border-orange-600 text-orange-600 hover:bg-orange-50 font-bold py-3 px-6 rounded-lg transition-all duration-200"
+                          className="inline-flex items-center justify-center border-2 border-orange-600 text-orange-700 hover:bg-orange-50 font-bold py-3 px-6 rounded-lg transition-all duration-200"
                         >
                           Read Full Review
                         </Link>
@@ -536,7 +536,7 @@ export default async function BestChefKnivesPage() {
                   href={topKnives[0].affiliateUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored nofollow"
-                  className="inline-flex items-center justify-center bg-white text-orange-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg"
+                  className="inline-flex items-center justify-center bg-white text-orange-700 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-lg"
                 >
                   Get the Victorinox 8&quot; (Top Pick) →
                 </a>
@@ -564,7 +564,7 @@ export default async function BestChefKnivesPage() {
         <nav className="pt-8 border-t border-gray-200">
           <Link
             href="/guides"
-            className="text-orange-600 hover:text-orange-800 font-semibold"
+            className="text-orange-700 hover:text-orange-800 font-semibold"
           >
             ← Back to All Guides
           </Link>

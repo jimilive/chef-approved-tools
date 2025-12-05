@@ -89,9 +89,9 @@ export default function ReviewTiersPage() {
               <div className="bg-amber-100/60 rounded-lg p-5">
                 <h3 className="font-bold text-amber-900 mb-3">Examples of Tier 1 Products:</h3>
                 <ul className="space-y-2">
-                  <li>• <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-600 hover:text-orange-800 underline font-semibold">KitchenAid Commercial Mixer</Link> - 18 months at Purple Cafe</li>
-                  <li>• <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-600 hover:text-orange-800 underline font-semibold">Victorinox 8&quot; Chef&apos;s Knife</Link> - 20 years of daily use</li>
-                  <li>• <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-600 hover:text-orange-800 underline font-semibold">Le Creuset Dutch Oven</Link> - 10 years home use</li>
+                  <li>• <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-700 hover:text-orange-800 underline font-semibold">KitchenAid Commercial Mixer</Link> - 18 months at Purple Cafe</li>
+                  <li>• <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 underline font-semibold">Victorinox 8&quot; Chef&apos;s Knife</Link> - 20 years of daily use</li>
+                  <li>• <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-700 hover:text-orange-800 underline font-semibold">Le Creuset Dutch Oven</Link> - 10 years home use</li>
                 </ul>
               </div>
 

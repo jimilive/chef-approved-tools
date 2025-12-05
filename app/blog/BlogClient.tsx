@@ -96,7 +96,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
                   className={`
                     px-4 py-2 rounded-full text-sm font-medium transition-all
                     ${isActive
-                      ? 'bg-orange-700 text-white shadow-md'
+                      ? 'bg-orange-800 text-white shadow-md'
                       : 'bg-white text-slate-700 border border-gray-300 hover:border-orange-700 hover:text-orange-700 hover:shadow-sm'
                     }
                   `}
@@ -167,11 +167,11 @@ export default function BlogClient({ posts }: BlogClientProps) {
                     {/* Metadata Footer */}
                     <div className="flex items-center gap-4 text-xs text-slate-600 pt-4 border-t border-gray-200">
                       <div className="flex items-center gap-1.5">
-                        <Calendar className="w-3.5 h-3.5 text-orange-600" />
+                        <Calendar className="w-3.5 h-3.5 text-orange-700" />
                         <span>{post.formattedDate}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5 text-orange-600" />
+                        <Clock className="w-3.5 h-3.5 text-orange-700" />
                         <span>{post.readTime}</span>
                       </div>
                     </div>
