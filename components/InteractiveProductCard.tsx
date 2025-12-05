@@ -88,7 +88,7 @@ export default function InteractiveProductCard({
         <Link
           href={`/reviews/${product.slug}`}
           onClick={handleReviewClick}
-          className="flex-1 border-2 border-orange-600 text-orange-800 hover:bg-orange-600 hover:text-white font-semibold py-3 px-4 rounded-lg text-center text-sm transition-all duration-200 active:scale-95"
+          className="flex-1 border-2 border-orange-700 text-orange-800 hover:bg-orange-700 hover:text-white font-semibold py-3 px-4 rounded-lg text-center text-sm transition-all duration-200 active:scale-95"
         >
           Review
         </Link>

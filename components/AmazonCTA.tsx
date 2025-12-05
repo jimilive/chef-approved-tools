@@ -67,7 +67,7 @@ export default function AmazonCTA({
   const resolvedText = text || defaultText[position]
 
   // Button variant styling
-  const buttonStyles = "inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg"
+  const buttonStyles = "inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg"
 
   // Text link variant styling
   const textLinkStyles = "text-orange-700 hover:text-orange-800 font-medium underline"

@@ -102,7 +102,7 @@ export default function MultiVendorCTA({
   }
 
   // Styling constants
-  const primaryButtonStyles = "inline-block w-full sm:w-auto text-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105 whitespace-nowrap"
+  const primaryButtonStyles = "inline-block w-full sm:w-auto text-center bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105 whitespace-nowrap"
   const secondaryButtonStyles = "inline-block w-full sm:w-auto text-center border-2 border-gray-300 hover:border-orange-600 bg-white text-gray-700 hover:text-orange-700 font-semibold px-6 py-3 rounded-xl text-base transition-all hover:scale-105 whitespace-nowrap"
   const textLinkStyles = "text-orange-700 hover:text-orange-800 font-medium underline"
 

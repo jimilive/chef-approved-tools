@@ -206,8 +206,8 @@ export default function ProductComparisonTable({
                     onClick={() => handleAffiliateClick(product)}
                     className={`block px-3 py-2 rounded-lg font-semibold text-xs transition-all leading-tight ${
                       product.name === highlightedProduct
-                        ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700'
-                        : 'bg-white border-2 border-orange-600 text-orange-700 hover:bg-orange-50'
+                        ? 'bg-gradient-to-r from-orange-700 to-red-700 text-white hover:from-orange-800 hover:to-red-800'
+                        : 'bg-white border-2 border-orange-700 text-orange-800 hover:bg-orange-50'
                     }`}
                   >
                     {getButtonText(product.affiliateLink)}
@@ -234,7 +234,7 @@ export default function ProductComparisonTable({
               <div className="text-xs text-slate-500 uppercase mb-1">{product.brand}</div>
               <h3 className="text-lg font-bold text-slate-900">{product.name}</h3>
               {product.name === highlightedProduct && (
-                <span className="inline-block mt-2 px-3 py-1 bg-orange-600 text-white text-xs font-semibold rounded-full">
+                <span className="inline-block mt-2 px-3 py-1 bg-orange-700 text-white text-xs font-semibold rounded-full">
                   RECOMMENDED
                 </span>
               )}
@@ -258,8 +258,8 @@ export default function ProductComparisonTable({
               onClick={() => handleAffiliateClick(product)}
               className={`block w-full text-center px-6 py-3 rounded-lg font-semibold transition-all ${
                 product.name === highlightedProduct
-                  ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700'
-                  : 'bg-white border-2 border-orange-600 text-orange-700 hover:bg-orange-50'
+                  ? 'bg-gradient-to-r from-orange-700 to-red-700 text-white hover:from-orange-800 hover:to-red-800'
+                  : 'bg-white border-2 border-orange-700 text-orange-800 hover:bg-orange-50'
               }`}
             >
               {getButtonText(product.affiliateLink)}

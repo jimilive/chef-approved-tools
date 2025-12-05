@@ -150,7 +150,7 @@ export default function LazyProductCard({
               href={primaryLink.url}
               target="_blank"
               rel="sponsored nofollow noopener noreferrer"
-              className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block"
+              className="w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block"
               aria-label={`View ${product.name} on Amazon (opens in new tab)`}
             >
               🛒 Check Latest Price on Amazon

@@ -213,7 +213,7 @@ export default function ProductComparisonTable({
                                 href={product.affiliateUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-4 py-2 rounded-lg text-xs transition-all hover:scale-105 mt-2"
+                                className="inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-4 py-2 rounded-lg text-xs transition-all hover:scale-105 mt-2"
                               >
                                 {ctaText}
                               </a>

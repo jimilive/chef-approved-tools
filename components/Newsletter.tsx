@@ -77,7 +77,7 @@ export default function Newsletter() {
               />
               <button
                 type="submit"
-                className="w-full px-8 py-3 bg-orange-600 text-white font-semibold rounded-md hover:bg-orange-700 focus:ring-2 focus:ring-orange-300 focus:outline-none transition-colors"
+                className="w-full px-8 py-3 bg-orange-700 text-white font-semibold rounded-md hover:bg-orange-800 focus:ring-2 focus:ring-orange-300 focus:outline-none transition-colors"
               >
                 {isSubmitted ? 'Subscribed!' : 'Get My Free Kitchen Bundle'}
               </button>

@@ -186,7 +186,7 @@ export default function BudgetVsPremiumMagnet({
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 disabled:opacity-50 shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-95"
+          className="w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 disabled:opacity-50 shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-95"
         >
           {isSubmitting ? (
             'Sending Your Guide...'
@@ -219,7 +219,7 @@ export function BudgetVsPremiumTeaser() {
   return (
     <div className="bg-gradient-to-r from-orange-100 to-red-100 border border-orange-200 rounded-xl p-6 my-8">
       <div className="flex items-start gap-4">
-        <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+        <div className="w-12 h-12 bg-orange-700 rounded-full flex items-center justify-center flex-shrink-0">
           <DollarSign className="w-6 h-6 text-white" />
         </div>
         <div className="flex-1">
@@ -232,7 +232,7 @@ export function BudgetVsPremiumTeaser() {
           </p>
           <a
             href="#budget-vs-premium-signup"
-            className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
+            className="inline-flex items-center gap-2 bg-orange-700 hover:bg-orange-800 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
           >
             Get Free Kitchen Bundle Guide
             <Download className="w-4 h-4" />

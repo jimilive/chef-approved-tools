@@ -144,7 +144,7 @@ export default function ProductCard({
         >
           <Link
             href={`/reviews/${slug}`}
-            className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white text-center px-6 py-3 rounded-lg no-underline font-bold text-sm transition-all hover:shadow-md"
+            className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white text-center px-6 py-3 rounded-lg no-underline font-bold text-sm transition-all hover:shadow-md"
           >
             Read Full Review →
           </Link>

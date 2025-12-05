@@ -54,8 +54,8 @@ export default function AffiliateButtonVariations({
 
   // Button variant styles
   const variantStyles = {
-    primary: 'bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white',
-    secondary: 'bg-orange-500 hover:bg-orange-600 text-white',
+    primary: 'bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white',
+    secondary: 'bg-orange-700 hover:bg-orange-800 text-white',
     outline: 'border-2 border-orange-500 text-orange-600 hover:bg-orange-50'
   };
 
@@ -113,7 +113,7 @@ export function AffiliateButtonCompact({
       onClick={handleClick}
       target="_blank"
       rel="nofollow noopener"
-      className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold text-base rounded-lg shadow-lg transition-all duration-200 active:scale-95 ${className}`}
+      className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-bold text-base rounded-lg shadow-lg transition-all duration-200 active:scale-95 ${className}`}
       aria-label={`${ctaText} - Opens in new window`}
     >
       {ctaText} →

@@ -170,7 +170,7 @@ export default function NewsletterModal({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-orange-700 hover:to-red-700 transition-all transform hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed text-base"
+                  className="w-full bg-gradient-to-r from-orange-700 to-red-700 text-white font-semibold py-3 px-6 rounded-lg hover:from-orange-800 hover:to-red-800 transition-all transform hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed text-base"
                 >
                   {isSubmitting ? 'Sending...' : 'Get My Free Kitchen Bundle →'}
                 </button>

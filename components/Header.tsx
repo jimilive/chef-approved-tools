@@ -135,7 +135,7 @@ export default function Header() {
                 <div className="pt-4 border-t border-gray-600 mt-4">
                   <Link
                     href="/newsletter"
-                    className="flex items-center justify-center w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-6 py-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+                    className="flex items-center justify-center w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-6 py-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     🎯 Get Free Chef Guide

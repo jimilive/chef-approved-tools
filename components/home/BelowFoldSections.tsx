@@ -197,7 +197,7 @@ export function SecondaryCTASection() {
         </p>
         <Link
           href="/the-tools-that-started-it-all"
-          className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95"
+          className="inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95"
         >
           See the Essential Toolkit
         </Link>
@@ -326,7 +326,7 @@ export function TopProfessionalPicksSection() {
         <div className="text-center">
           <Link
             href="/reviews"
-            className="inline-block border-2 border-orange-600 text-orange-700 hover:bg-orange-600 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all"
+            className="inline-block border-2 border-orange-700 text-orange-800 hover:bg-orange-700 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all"
           >
             See All Reviews
           </Link>
@@ -338,7 +338,7 @@ export function TopProfessionalPicksSection() {
 
 export function FinalCTASection() {
   return (
-    <section className="py-16 bg-gradient-to-r from-orange-600 to-red-600 text-white">
+    <section className="py-16 bg-gradient-to-r from-orange-700 to-red-700 text-white">
       <div className="container max-w-4xl mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Stop Guessing. Start Cooking Like a Chef.

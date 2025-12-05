@@ -151,7 +151,7 @@ export default function TopPicksComparisonClient({ topPick }: TopPicksComparison
                 target="_blank"
                 rel="sponsored nofollow noopener noreferrer"
                 onClick={() => handleAffiliateClick(pick)}
-                className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
+                className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
               >
                 Check Price on Amazon →
               </a>

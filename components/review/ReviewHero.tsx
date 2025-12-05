@@ -141,7 +141,7 @@ export default function ReviewHero({
                   ctaText={ctaText}
                   productName={title || 'Product'}
                   position="review-hero-button"
-                  className="inline-flex items-center justify-center w-full px-6 py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 transition-all shadow-md hover:shadow-lg"
+                  className="inline-flex items-center justify-center w-full px-6 py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 transition-all shadow-md hover:shadow-lg"
                 />
               </CTAVisibilityTracker>
             </div>
@@ -230,7 +230,7 @@ export default function ReviewHero({
         customCTA ? (
           customCTA
         ) : (
-          <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-xl px-10 py-5 text-center max-w-[500px] mx-auto flex flex-col justify-center items-center">
+          <div className="bg-gradient-to-br from-orange-700 to-red-700 rounded-xl px-10 py-5 text-center max-w-[500px] mx-auto flex flex-col justify-center items-center">
             <CTAVisibilityTracker ctaId="primary-hero-cta" position="above_fold">
               <ReviewHeroCTA
                 ctaUrl={ctaUrl || '#'}
