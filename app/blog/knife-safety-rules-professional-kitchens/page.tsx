@@ -431,10 +431,10 @@ export default function KnifeSafetyPost() {
           </p>
 
           <div className="bg-gradient-to-br from-purple-50 to-indigo-50 border-l-4 border-purple-600 p-6 my-8 rounded-r-lg">
-            <h4 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
               <Zap className="w-5 h-5 text-purple-600" />
               Pro Tip: Relax Your Grip
-            </h4>
+            </h3>
             <p className="mb-0">
               White-knuckling a knife is a recipe for disaster. After thousands of hours on the line, I learned that a relaxed grip with firm control keeps your cuts clean and your fingers safe. When your hand is tense, the blade shakes and you lose precision. Relax your grip, trust your technique, and let the sharp blade do the work. Forcing it means your knife is too dull.
             </p>
@@ -535,7 +535,7 @@ export default function KnifeSafetyPost() {
           </p>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Essential Safety Equipment</h4>
+            <h3 className="font-bold text-slate-800 mb-4">Essential Safety Equipment</h3>
             <ul className="space-y-3">
               <li>
                 <strong>Chef Knife:</strong> <CTAVisibilityTracker
@@ -587,42 +587,42 @@ export default function KnifeSafetyPost() {
 
           <div className="space-y-4 my-8">
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If you get a small cut:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If you get a small cut:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Stop immediately, apply direct pressure with a clean towel, and elevate the wound above your heart. Maintain pressure for 10 minutes, then rinse with clean water, apply antiseptic, and cover with a waterproof bandage. Never continue cooking with an open wound. Seek medical attention for cuts deeper than ¼ inch or cuts that won&apos;t stop bleeding.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If your knife feels unsafe or dull even after honing:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If your knife feels unsafe or dull even after honing:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 It&apos;s probably dull, unbalanced, or you&apos;ve rolled/chipped the edge. It&apos;s time for a proper sharpening on a whetstone or by a professional. Hone it or sharpen properly before use.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If your grip feels awkward or slips while cutting:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If your grip feels awkward or slips while cutting:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Your grip is too far back, or the cutting surface is slick. Adjust handle size or knife weight. Wipe both knife and board dry and use the pinch grip. Comfort equals safety.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If you&apos;re anxious using knives:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If you&apos;re anxious using knives:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 Slow down and focus on the motion — not the result. Confidence builds through rhythm. Start with soft vegetables and practice the claw grip in slow motion. Speed will come naturally with proper technique.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If food sticks to the blade:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If food sticks to the blade:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 This is normal with flat blades. Slightly angle the knife during slicing, or use a granton (hollow-edge) style for sticky foods.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If the knife rusts or stains:</h4>
+              <h3 className="font-bold text-slate-900 mb-2">If the knife rusts or stains:</h3>
               <p className="text-slate-700 text-sm mb-0">
                 You left it damp or used acidic ingredients without rinsing. Wash and dry immediately after use, then apply a tiny amount of food-safe mineral oil to the blade.
               </p>
@@ -648,10 +648,10 @@ export default function KnifeSafetyPost() {
           </p>
 
           <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border-l-4 border-emerald-600 p-6 my-8 rounded-r-lg">
-            <h4 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-slate-900 mt-0 flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-emerald-600" />
               Success Tip: Make Safety Automatic
-            </h4>
+            </h3>
             <p className="mb-0">
               In professional kitchens, proper technique isn&apos;t something we think about—it&apos;s automatic. The claw grip, the pinch grip, knife handling—these become muscle memory through deliberate practice. Start slow, practice the right way every time, and within a few weeks, safe cutting will feel natural. That&apos;s when you can start increasing speed. Speed built on proper technique is safe speed. Speed built on shortcuts is a hospital visit waiting to happen.
             </p>
@@ -662,14 +662,14 @@ export default function KnifeSafetyPost() {
 
             <div className="mb-6">
               <h4 className="font-bold text-orange-800 mb-2">Technique Guides:</h4>
-              <ul className="text-orange-700 space-y-1 text-sm">
+              <ul className="text-orange-800 space-y-1 text-sm">
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-knife-safety-rules-professional-kitchens-cuts-guide-1"
                   position="final_cta"
                   productSlug="knife-safety-rules-professional-kitchens"
                   merchant="internal"
                 >
-                  <Link href="/blog/essential-knife-cuts-every-cook-should-master" className="text-orange-700 underline">The 5 Essential Knife Cuts Every Home Cook Should Master</Link>
+                  <Link href="/blog/essential-knife-cuts-every-cook-should-master" className="text-orange-800 underline">The 5 Essential Knife Cuts Every Home Cook Should Master</Link>
                 </CTAVisibilityTracker></li>
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-knife-safety-rules-professional-kitchens-honing-guide-1"
@@ -677,7 +677,7 @@ export default function KnifeSafetyPost() {
                   productSlug="knife-safety-rules-professional-kitchens"
                   merchant="internal"
                 >
-                  <Link href="/blog/how-to-steel-a-knife" className="text-orange-700 underline">How to Steel a Knife: Honing Guide for Sharp Edges</Link>
+                  <Link href="/blog/how-to-steel-a-knife" className="text-orange-800 underline">How to Steel a Knife: Honing Guide for Sharp Edges</Link>
                 </CTAVisibilityTracker></li>
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-knife-safety-rules-professional-kitchens-sharpening-guide-1"
@@ -685,21 +685,21 @@ export default function KnifeSafetyPost() {
                   productSlug="knife-safety-rules-professional-kitchens"
                   merchant="internal"
                 >
-                  <Link href="/blog/how-to-sharpen-with-tri-stone" className="text-orange-700 underline">How to Sharpen with a Tri-Stone: Complete Tutorial</Link>
+                  <Link href="/blog/how-to-sharpen-with-tri-stone" className="text-orange-800 underline">How to Sharpen with a Tri-Stone: Complete Tutorial</Link>
                 </CTAVisibilityTracker></li>
               </ul>
             </div>
 
             <div className="mb-6">
               <h4 className="font-bold text-orange-800 mb-2">Essential Equipment:</h4>
-              <ul className="text-orange-700 space-y-1 text-sm">
+              <ul className="text-orange-800 space-y-1 text-sm">
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-knife-safety-rules-professional-kitchens-victorinox-2"
                   position="final_cta"
                   productSlug="knife-safety-rules-professional-kitchens"
                   merchant="internal"
                 >
-                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife Review</Link>
+                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-800 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife Review</Link>
                 </CTAVisibilityTracker></li>
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-knife-safety-rules-professional-kitchens-scraper-3"
@@ -707,7 +707,7 @@ export default function KnifeSafetyPost() {
                   productSlug="knife-safety-rules-professional-kitchens"
                   merchant="internal"
                 >
-                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 underline">Rubbermaid Commercial Cook&apos;s Scraper Review</Link>
+                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper Review</Link>
                 </CTAVisibilityTracker></li>
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-knife-safety-rules-professional-kitchens-cutting-board-2"
@@ -715,7 +715,7 @@ export default function KnifeSafetyPost() {
                   productSlug="knife-safety-rules-professional-kitchens"
                   merchant="internal"
                 >
-                  <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 underline">John Boos Platinum Cutting Board Review</Link>
+                  <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-800 underline">John Boos Platinum Cutting Board Review</Link>
                 </CTAVisibilityTracker></li>
               </ul>
             </div>

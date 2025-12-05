@@ -19,8 +19,8 @@ export default function DisclosurePage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Affiliate Disclosure
           </h1>
-          <p className="text-sm text-gray-600 italic">
-            Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+          <p className="text-sm text-gray-700 italic">
+            Last updated: December 2024
           </p>
         </div>
 

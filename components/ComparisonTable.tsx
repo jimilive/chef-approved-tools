@@ -343,8 +343,8 @@ export default function ComparisonTable({ products, title, ctaText = 'Check Pric
       {/* Footer Disclaimer */}
       <div className="border-t border-gray-200 px-6 py-3 bg-amber-50">
         <p className="text-xs text-amber-800">
-          * Affiliate links - we earn commissions from qualifying purchases at no extra cost to you. 
-          Prices updated {new Date().toLocaleDateString()}. 
+          * Affiliate links - we earn commissions from qualifying purchases at no extra cost to you.
+          Prices may vary.
           <Link href="/disclosure" className="underline ml-1">Full disclosure</Link>
         </p>
       </div>
