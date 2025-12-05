@@ -157,7 +157,7 @@ export default function ProductComparisonTable({
                       : 'bg-white'
                   }`}
                 >
-                  <div className="text-xs text-slate-500 uppercase mb-1">{product.brand}</div>
+                  <div className="text-xs text-slate-600 uppercase mb-1">{product.brand}</div>
                   <div className="text-xs font-bold text-slate-900 leading-tight">{product.name}</div>
                 </th>
               ))}
@@ -231,7 +231,7 @@ export default function ProductComparisonTable({
             }`}
           >
             <div className="text-center mb-4">
-              <div className="text-xs text-slate-500 uppercase mb-1">{product.brand}</div>
+              <div className="text-xs text-slate-600 uppercase mb-1">{product.brand}</div>
               <h3 className="text-lg font-bold text-slate-900">{product.name}</h3>
               {product.name === highlightedProduct && (
                 <span className="inline-block mt-2 px-3 py-1 bg-orange-800 text-white text-xs font-semibold rounded-full">

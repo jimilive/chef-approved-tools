@@ -91,7 +91,7 @@ export default function GuidesPage() {
         <h1 className="text-4xl font-bold mb-4">
           Kitchen Equipment Buying Guides
         </h1>
-        <p className="text-lg text-slate-500 mb-6 leading-relaxed">
+        <p className="text-lg text-slate-600 mb-6 leading-relaxed">
           Expert guidance from a certified chef with 24 years in professional kitchens. Every recommendation
           here has survived real restaurant use—not laboratory testing, not sponsored reviews, just equipment
           that works when you need it to.
@@ -142,7 +142,7 @@ export default function GuidesPage() {
             <a href={guide.href} className="no-underline">
               <div className="bg-white rounded-xl shadow-sm p-8 border border-slate-200 transition-shadow duration-200 hover:shadow-lg">
                 <h3 className="text-2xl font-bold mb-3 text-slate-900">{guide.title}</h3>
-                <p className="text-slate-500 mb-4">{guide.description}</p>
+                <p className="text-slate-600 mb-4">{guide.description}</p>
                 <span className="text-orange-700 font-semibold">Read Guide →</span>
               </div>
             </a>

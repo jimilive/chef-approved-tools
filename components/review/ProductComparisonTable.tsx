@@ -271,7 +271,7 @@ export default function ProductComparisonTable({
 
       {/* Mobile scroll hint */}
       <div className="sm:hidden text-center mt-3">
-        <p className="text-xs text-slate-500 italic">
+        <p className="text-xs text-slate-600 italic">
           👉 Scroll horizontally to see all products
         </p>
       </div>

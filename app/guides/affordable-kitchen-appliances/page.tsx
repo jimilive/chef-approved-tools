@@ -122,7 +122,7 @@ export default async function AffordableKitchenAppliancesPage() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 text-sm text-slate-500 mb-6">
+          <div className="flex items-center gap-3 text-sm text-slate-600 mb-6">
             <span>Published: November 10, 2025</span>
             <span>•</span>
             <span>Updated: November 10, 2025</span>

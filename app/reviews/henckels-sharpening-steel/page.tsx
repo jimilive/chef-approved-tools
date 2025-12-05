@@ -314,13 +314,13 @@ export default async function HenckelsSharpeningSteelReview() {
                   position="where_to_buy"
                   productSlug={productData.slug}
                 />
-                <p className="text-xs text-slate-500 text-center italic mt-2">
+                <p className="text-xs text-slate-600 text-center italic mt-2">
                   As an Amazon Associate, I earn from qualifying purchases. This comes at no extra cost to you.
                 </p>
               </div>
             </div>
 
-            <p className="text-sm text-slate-500 mt-6 italic">
+            <p className="text-sm text-slate-600 mt-6 italic">
               {reviewData.whereToBuy.disclaimer}
             </p>
           </div>

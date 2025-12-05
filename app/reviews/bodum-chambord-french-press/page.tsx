@@ -339,12 +339,12 @@ export default async function BodumChambordFrenchPressReview() {
                       → View {productData.name} on Amazon
                     </a>
                   </p>
-                  <p className="text-xs text-slate-500 italic text-center m-0">*As an Amazon Associate, I earn from qualifying purchases</p>
+                  <p className="text-xs text-slate-600 italic text-center m-0">*As an Amazon Associate, I earn from qualifying purchases</p>
                 </div>
               </div>
             </div>
 
-            <p className="text-sm text-slate-500 mt-6 italic">
+            <p className="text-sm text-slate-600 mt-6 italic">
               {reviewData.whereToBuy.disclaimer}
             </p>
           </div>

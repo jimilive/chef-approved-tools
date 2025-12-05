@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
               <div className="border-t border-gray-200 pt-4">
                 <div className="font-semibold text-slate-900">{testimonial.author}</div>
                 <div className="text-sm text-slate-600">{testimonial.role}</div>
-                <div className="text-xs text-slate-500">{testimonial.location}</div>
+                <div className="text-xs text-slate-600">{testimonial.location}</div>
               </div>
             </div>
           ))}

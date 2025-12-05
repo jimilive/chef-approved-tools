@@ -308,7 +308,7 @@ export default async function ProductReview() {
                 </a>
               </p>
 
-              <p className="text-xs text-slate-500 text-center mt-3">
+              <p className="text-xs text-slate-600 text-center mt-3">
                 As an Amazon Associate, I earn from qualifying purchases.
               </p>
             </div>

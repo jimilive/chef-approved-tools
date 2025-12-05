@@ -61,7 +61,7 @@ export default function TrustSignals({
  */
 export function TrustSignalsBelow({ className = '' }: { className?: string }) {
   return (
-    <div className={`text-center text-xs text-slate-500 mt-2 ${className}`}>
+    <div className={`text-center text-xs text-slate-600 mt-2 ${className}`}>
       ✓ Free Returns • ✓ Secure Checkout • ✓ Fast Shipping
     </div>
   );
