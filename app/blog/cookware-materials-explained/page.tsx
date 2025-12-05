@@ -16,7 +16,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-14",
   dateModified: "2025-10-21",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'cookware-materials-explained'
 });

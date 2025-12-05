@@ -15,7 +15,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-11-20",
   dateModified: "2025-11-20",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'bleach-vs-sanitation-solution'
 });

@@ -18,7 +18,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-28",
   dateModified: "2025-11-14",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'food-processor-vs-blender'
 });

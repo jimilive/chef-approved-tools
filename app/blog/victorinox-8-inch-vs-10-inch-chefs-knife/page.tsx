@@ -20,7 +20,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-11-15",
   dateModified: "2025-11-15",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/victorinox-8-vs-10-og.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'victorinox-8-inch-vs-10-inch-chefs-knife'
 });

@@ -28,7 +28,6 @@ const articleSchema = generateArticleSchema({
   datePublished: articleMeta.publishDate,
   dateModified: articleMeta.lastModified,
   authorName: articleMeta.author,
-  imageUrl: "https://www.chefapprovedtools.com/images/blog/deglazing-pan-sauce.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'deglazing-pan-sauces'
 });

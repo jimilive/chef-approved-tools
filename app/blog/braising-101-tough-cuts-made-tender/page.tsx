@@ -22,7 +22,6 @@ const articleSchema = generateArticleSchema({
   authorName: 'Scott Bradley',
   authorUrl: 'https://www.chefapprovedtools.com/about',
   url: 'https://www.chefapprovedtools.com/blog/braising-101-tough-cuts-made-tender',
-  imageUrl: 'https://www.chefapprovedtools.com/images/blog/braising.jpg',
   keywords: ['braising', 'how to braise', 'tough cuts', 'slow cooking', 'dutch oven braise']
 ,
   urlPrefix: 'blog',

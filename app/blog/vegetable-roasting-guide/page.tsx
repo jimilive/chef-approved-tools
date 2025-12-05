@@ -20,7 +20,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-15",
   dateModified: "2025-11-07",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/blog/vegetable-roasting-guide.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'vegetable-roasting-guide'
 });

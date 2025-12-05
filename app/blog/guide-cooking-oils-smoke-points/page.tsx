@@ -20,7 +20,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-02",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/cooking-oils-og.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'guide-cooking-oils-smoke-points'
 });

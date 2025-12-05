@@ -20,7 +20,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-19",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/caramelization-og.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'caramelization-science'
 });

@@ -22,7 +22,6 @@ const articleSchema = generateArticleSchema({
   authorName: 'Scott Bradley',
   authorUrl: 'https://www.chefapprovedtools.com/about',
   url: 'https://www.chefapprovedtools.com/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once',
-  imageUrl: 'https://www.chefapprovedtools.com/images/blog/carbon-footprint-kitchen.jpg',
   keywords: ['sustainable kitchen equipment', 'buy once cry once', 'kitchen carbon footprint', 'durable cookware']
 ,
   urlPrefix: 'blog',

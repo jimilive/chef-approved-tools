@@ -28,7 +28,6 @@ const articleSchema = generateArticleSchema({
   datePublished: articleMeta.publishDate,
   dateModified: articleMeta.lastModified,
   authorName: articleMeta.author,
-  imageUrl: "https://www.chefapprovedtools.com/images/blog/perfect-risotto-guide.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'how-to-make-perfect-risotto'
 });

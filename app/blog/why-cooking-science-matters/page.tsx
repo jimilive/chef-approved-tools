@@ -20,7 +20,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-03",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/cooking-science-og.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'why-cooking-science-matters'
 });

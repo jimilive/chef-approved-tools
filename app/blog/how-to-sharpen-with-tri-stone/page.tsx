@@ -15,7 +15,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-16",
   dateModified: "2025-10-16",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'how-to-sharpen-with-tri-stone'
 });

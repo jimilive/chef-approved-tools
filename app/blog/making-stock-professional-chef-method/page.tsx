@@ -20,7 +20,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-07",
   dateModified: "2025-11-14",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/making-stock-og.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'making-stock-professional-chef-method'
 });

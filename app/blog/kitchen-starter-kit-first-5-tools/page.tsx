@@ -20,7 +20,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-24",
   dateModified: "2025-10-22",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/kitchen-starter-kit-og.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'kitchen-starter-kit-first-5-tools'
 });

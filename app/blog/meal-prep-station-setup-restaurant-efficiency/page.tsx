@@ -22,7 +22,6 @@ const articleSchema = generateArticleSchema({
   authorName: 'Scott Bradley',
   authorUrl: 'https://www.chefapprovedtools.com/about',
   url: 'https://www.chefapprovedtools.com/blog/meal-prep-station-setup-restaurant-efficiency',
-  imageUrl: 'https://www.chefapprovedtools.com/images/blog/meal-prep-station.jpg',
   keywords: ['meal prep station', 'mise en place', 'kitchen organization', 'chef efficiency tips', 'home cooking prep']
 ,
   urlPrefix: 'blog',

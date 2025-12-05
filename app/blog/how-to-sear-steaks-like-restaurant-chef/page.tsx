@@ -17,7 +17,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-10",
   dateModified: "2024-09-27",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'how-to-sear-steaks-like-restaurant-chef'
 });

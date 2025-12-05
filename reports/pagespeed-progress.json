@@ -1,0 +1,700 @@
+{
+  "completed": {
+    "https://www.chefapprovedtools.com": {
+      "mobile": {
+        "performance": 94,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 977,
+        "lcp": 3151,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 300,
+        "lcp": 661,
+        "cls": 0.025949926568749383,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/about": {
+      "mobile": {
+        "performance": 86,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1382,
+        "lcp": 3901,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 267,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/contact": {
+      "mobile": {
+        "performance": 96,
+        "accessibility": 97,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 949,
+        "lcp": 2851,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 97,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 286,
+        "lcp": 481,
+        "cls": 0,
+        "tbt": 2,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/chef-approved": {
+      "mobile": {
+        "performance": 92,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 985,
+        "lcp": 3301,
+        "cls": 0,
+        "tbt": 17,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 265,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/knives": {
+      "mobile": {
+        "performance": 97,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 944,
+        "lcp": 2551,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 284,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/cookware": {
+      "mobile": {
+        "performance": 88,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1234,
+        "lcp": 3601,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 279,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/appliances": {
+      "mobile": {
+        "performance": 92,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 935,
+        "lcp": 3301,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 279,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/moving-stirring": {
+      "mobile": {
+        "performance": 87,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1256,
+        "lcp": 3676,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 292,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/prep-tools": {
+      "mobile": {
+        "performance": 97,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 942,
+        "lcp": 2551,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 273,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/cleaning-maintenance": {
+      "mobile": {
+        "performance": 87,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1241,
+        "lcp": 3751,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 307,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/glossary": {
+      "mobile": {
+        "performance": 88,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1362.5,
+        "lcp": 3526.5,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 287,
+        "lcp": 601,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/newsletter": {
+      "mobile": {
+        "performance": 89,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1210,
+        "lcp": 3451,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 241,
+        "lcp": 521,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/disclosure": {
+      "mobile": {
+        "performance": 87,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1237,
+        "lcp": 3601,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 271,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/privacy-policy": {
+      "mobile": {
+        "performance": 97,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 932,
+        "lcp": 2551,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 279,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/terms": {
+      "mobile": {
+        "performance": 89,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1325,
+        "lcp": 3451,
+        "cls": 0,
+        "tbt": 57,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 260,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/cookie-policy": {
+      "mobile": {
+        "performance": 92,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 926,
+        "lcp": 3301,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 260,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/kitchen-bundle": {
+      "mobile": {
+        "performance": 97,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 972,
+        "lcp": 2551,
+        "cls": 0,
+        "tbt": 9.5,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 285,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/reviews": {
+      "mobile": {
+        "performance": 91,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 974,
+        "lcp": 3451,
+        "cls": 0,
+        "tbt": 6,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 280,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/reviews/benriner-large-mandoline": {
+      "mobile": {
+        "performance": 85,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1515,
+        "lcp": 3901,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 97,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 352,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 21,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/reviews/black-decker-toaster-oven": {
+      "mobile": {
+        "performance": 94,
+        "accessibility": 97,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1051,
+        "lcp": 3151,
+        "cls": 0,
+        "tbt": 2,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 97,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 287,
+        "lcp": 601,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/reviews/bodum-chambord-french-press": {
+      "mobile": {
+        "performance": 87,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 92,
+        "fcp": 1212,
+        "lcp": 3751,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 92,
+        "fcp": 292,
+        "lcp": 521,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/reviews/cuisinart-8-inch-nonstick-pan": {
+      "mobile": {
+        "performance": 92,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 92,
+        "fcp": 1051,
+        "lcp": 3301,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 92,
+        "fcp": 284,
+        "lcp": 601,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/reviews/cuisinart-dlc-10c-classic-food-processor": {
+      "mobile": {
+        "performance": 92,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 92,
+        "fcp": 1051,
+        "lcp": 3301,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 92,
+        "fcp": 315,
+        "lcp": 561,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/reviews/diamond-crystal-kosher-salt": {
+      "mobile": {
+        "performance": 85,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1512,
+        "lcp": 3901,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 288,
+        "lcp": 601,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/reviews/epicurean-kitchen-cutting-board": {
+      "mobile": {
+        "performance": 85,
+        "accessibility": 95,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1514,
+        "lcp": 3976,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 95,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 335,
+        "lcp": 601,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/reviews/henckels-sharpening-steel": {
+      "mobile": {
+        "performance": 97,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1051,
+        "lcp": 2551,
+        "cls": 0,
+        "tbt": 10,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 281,
+        "lcp": 481,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/reviews/instant-pot-duo-plus-6qt": {
+      "mobile": {
+        "performance": 90,
+        "accessibility": 96,
+        "bestPractices": 100,
+        "seo": 92,
+        "fcp": 1051,
+        "lcp": 3526,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 97,
+        "bestPractices": 100,
+        "seo": 92,
+        "fcp": 307,
+        "lcp": 601,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/reviews/japanese-wooden-spoon-set": {
+      "mobile": {
+        "performance": 88,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1381,
+        "lcp": 3601,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 311,
+        "lcp": 521,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    },
+    "https://www.chefapprovedtools.com/reviews/john-boos-platinum-commercial-cutting-board": {
+      "mobile": {
+        "performance": 83,
+        "accessibility": 95,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 1513,
+        "lcp": 4201,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      },
+      "desktop": {
+        "performance": 100,
+        "accessibility": 95,
+        "bestPractices": 100,
+        "seo": 100,
+        "fcp": 282,
+        "lcp": 641,
+        "cls": 0,
+        "tbt": 0,
+        "error": null
+      }
+    }
+  }
+}

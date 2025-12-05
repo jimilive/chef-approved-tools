@@ -22,7 +22,6 @@ const articleSchema = generateArticleSchema({
   authorName: 'Scott Bradley',
   authorUrl: 'https://www.chefapprovedtools.com/about',
   url: 'https://www.chefapprovedtools.com/blog/knife-storage-protecting-blades-for-decades',
-  imageUrl: 'https://www.chefapprovedtools.com/images/blog/knife-storage-protection.jpg',
   keywords: ['knife care', 'how to store knives', 'knife protection', 'blade storage', 'knife longevity']
 ,
   urlPrefix: 'blog',

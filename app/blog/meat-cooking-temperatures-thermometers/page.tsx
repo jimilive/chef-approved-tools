@@ -16,7 +16,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-20",
   dateModified: "2025-10-27",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'meat-cooking-temperatures-thermometers'
 });

@@ -20,7 +20,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-05",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/salts-guide-og.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'complete-guide-to-salts'
 });

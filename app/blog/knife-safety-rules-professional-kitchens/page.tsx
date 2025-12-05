@@ -16,7 +16,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-08",
   dateModified: "2025-11-07",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'knife-safety-rules-professional-kitchens'
 });

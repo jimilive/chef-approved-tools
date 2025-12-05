@@ -20,7 +20,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-19",
   dateModified: '2025-10-25',
   authorName: 'Scott Bradley',
-  imageUrl: 'https://www.chefapprovedtools.com/og-image.jpg',
   urlPrefix: 'blog',
   urlSuffix: 'hotel-pan-system-restaurant-organization-home'
 })

@@ -20,7 +20,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-18",
   dateModified: "2025-10-24",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/bread-science-og.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'bread-science-gluten-development'
 });

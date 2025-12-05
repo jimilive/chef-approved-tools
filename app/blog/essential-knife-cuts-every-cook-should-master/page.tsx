@@ -16,7 +16,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-12",
   dateModified: "2025-11-07",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'essential-knife-cuts-every-cook-should-master'
 });

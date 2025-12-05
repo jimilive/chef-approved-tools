@@ -19,7 +19,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-13",
   dateModified: "2025-09-13",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'how-to-steel-a-knife'
 });

@@ -18,7 +18,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-10-09",
   dateModified: "2025-10-09",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'best-scrambled-eggs'
 });

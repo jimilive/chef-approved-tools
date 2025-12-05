@@ -22,7 +22,6 @@ const articleSchema = generateArticleSchema({
   authorName: 'Scott Bradley',
   authorUrl: 'https://www.chefapprovedtools.com/about',
   url: 'https://www.chefapprovedtools.com/blog/reducing-sauces-restaurant-technique',
-  imageUrl: 'https://www.chefapprovedtools.com/images/blog/reducing-sauces.jpg',
   keywords: ['reducing sauces', 'sauce reduction', 'how to reduce sauce', 'professional cooking techniques']
 ,
   urlPrefix: 'blog',

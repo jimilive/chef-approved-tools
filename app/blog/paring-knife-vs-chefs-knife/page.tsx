@@ -20,7 +20,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-11-15",
   dateModified: "2025-11-15",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/paring-vs-chef-og.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'paring-knife-vs-chefs-knife'
 });

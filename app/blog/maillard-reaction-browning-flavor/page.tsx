@@ -20,7 +20,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-05",
   dateModified: "2025-10-23",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/images/maillard-reaction.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'maillard-reaction-browning-flavor'
 });

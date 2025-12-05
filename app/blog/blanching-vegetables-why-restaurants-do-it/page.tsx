@@ -22,7 +22,6 @@ const articleSchema = generateArticleSchema({
   authorName: 'Scott Bradley',
   authorUrl: 'https://www.chefapprovedtools.com/about',
   url: 'https://www.chefapprovedtools.com/blog/blanching-vegetables-why-restaurants-do-it',
-  imageUrl: 'https://www.chefapprovedtools.com/images/blog/blanching-vegetables.jpg',
   keywords: ['how to blanch vegetables', 'blanching technique', 'vegetable preparation', 'professional cooking']
 ,
   urlPrefix: 'blog',

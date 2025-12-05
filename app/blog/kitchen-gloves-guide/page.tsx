@@ -18,7 +18,6 @@ const articleSchema = generateArticleSchema({
   datePublished: "2025-09-23",
   dateModified: "2025-09-23",
   authorName: "Scott Bradley",
-  imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
   urlPrefix: 'blog',
   urlSuffix: 'kitchen-gloves-guide'
 });
