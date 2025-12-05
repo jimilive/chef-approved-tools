@@ -156,7 +156,7 @@ export default function BriningSecretsPage() {
           <h2 id="ratios">Standard Brine Ratios</h2>
 
           <div className="bg-orange-50 border-l-4 border-orange-700 p-6 my-8">
-            <h4 className="text-xl font-semibold text-gray-900 mb-3">Standard Brine Formula</h4>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Standard Brine Formula</h3>
             <ul className="space-y-2">
               <li><strong>Concentration:</strong> 5-6% salt by weight of water</li>
               <li><strong>Common measurement:</strong> 1 cup kosher salt per gallon of water</li>

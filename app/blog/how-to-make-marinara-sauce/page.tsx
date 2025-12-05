@@ -117,7 +117,7 @@ export default function MarinaraSaucePage() {
           <h2 id="ingredients">The Five Essential Ingredients (And Why Each Matters)</h2>
 
           <div className="bg-orange-50 border-l-4 border-orange-700 p-6 my-8">
-            <h4 className="text-xl font-semibold text-gray-900 mb-3">Authentic Marinara Formula</h4>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Authentic Marinara Formula</h3>
             <ul className="space-y-2">
               <li><strong>1 (28-ounce) can whole peeled tomatoes</strong> - San Marzano DOP preferred</li>
               <li><strong>3 tablespoons extra-virgin olive oil</strong> - Must be extra-virgin for proper flavor</li>

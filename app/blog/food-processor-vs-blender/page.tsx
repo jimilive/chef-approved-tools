@@ -218,7 +218,7 @@ export default async function FoodProcessorVsBlenderPost() {
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           {/* Table of Contents */}
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-blue-800 mb-3">In This Guide:</h4>
+            <p className="font-bold text-blue-800 mb-3">In This Guide:</p>
             <ul className="text-blue-700 space-y-1 text-sm mb-0">
               <li>• <a href="#the-fundamental-difference" className="text-blue-700 underline">The Fundamental Difference: Liquids vs Solids</a></li>
               <li>• <a href="#comparison-table" className="text-blue-700 underline">Complete Comparison Table</a></li>

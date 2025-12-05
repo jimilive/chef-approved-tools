@@ -171,10 +171,10 @@ export default function PizzaStonePage() {
           </ol>
 
           <div className="bg-orange-50 border-l-4 border-orange-700 p-6 my-8">
-            <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+            <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
               <Flame className="w-6 h-6" />
               Pizza Stone Preheating Protocol
-            </h4>
+            </h3>
             <ol className="space-y-3 list-decimal pl-6">
               <li>Place stone on middle or lower-middle oven rack (never top rack)</li>
               <li>Set oven to maximum temperature (usually 500-550°F)</li>

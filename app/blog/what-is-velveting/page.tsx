@@ -160,7 +160,7 @@ export default function WhatIsVelvetingPage() {
           <h2 id="formula">The Basic Velveting Formula</h2>
 
           <div className="bg-orange-50 border-l-4 border-orange-700 p-6 my-8">
-            <h4 className="text-xl font-semibold text-gray-900 mb-3">Standard Velveting Marinade</h4>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Standard Velveting Marinade</h3>
             <p className="mb-3"><strong>For 1 pound (200g) thinly-sliced meat:</strong></p>
             <ul className="space-y-2">
               <li><strong>2 teaspoons cornstarch</strong> - Essential, creates the protective coating</li>

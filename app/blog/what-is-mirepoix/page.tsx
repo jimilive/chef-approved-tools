@@ -118,7 +118,7 @@ export default function WhatIsMirepoixPage() {
           </p>
 
           <div className="bg-orange-50 border-l-4 border-orange-700 p-6 my-8">
-            <h4 className="text-xl font-semibold text-gray-900 mb-3">Classic Mirepoix Ratio</h4>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Classic Mirepoix Ratio</h3>
             <ul className="space-y-2">
               <li><strong>2 parts onion</strong> (50% of total volume)</li>
               <li><strong>1 part carrot</strong> (25% of total volume)</li>
