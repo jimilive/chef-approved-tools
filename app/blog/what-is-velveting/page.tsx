@@ -246,7 +246,7 @@ export default function WhatIsVelvetingPage() {
             >
               <Link
                 href="/newsletter"
-                className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                className="inline-block bg-orange-700 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors"
               >
                 Download Free Guide →
               </Link>

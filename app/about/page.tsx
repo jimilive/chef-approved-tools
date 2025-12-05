@@ -438,7 +438,7 @@ export default function AboutPage() {
               <div key={index} className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <h4 className="text-xl font-bold text-slate-900">{criteria.category}</h4>
-                  <span className="bg-orange-800 text-white px-3 py-1 rounded-full text-sm font-bold">
+                  <span className="bg-orange-900 text-white px-3 py-1 rounded-full text-sm font-bold">
                     {criteria.weight}
                   </span>
                 </div>

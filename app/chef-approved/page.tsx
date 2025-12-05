@@ -513,7 +513,7 @@ export default function ChefApprovedPage() {
           </p>
           <Link
             href="/reviews"
-            className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors"
+            className="inline-block bg-orange-700 hover:bg-orange-900 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors"
           >
             Browse All Reviews →
           </Link>

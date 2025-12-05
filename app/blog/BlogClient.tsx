@@ -96,7 +96,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
                   className={`
                     px-4 py-2 rounded-full text-sm font-medium transition-all
                     ${isActive
-                      ? 'bg-orange-800 text-white shadow-md'
+                      ? 'bg-orange-900 text-white shadow-md'
                       : 'bg-white text-slate-700 border border-gray-300 hover:border-orange-700 hover:text-orange-700 hover:shadow-sm'
                     }
                   `}

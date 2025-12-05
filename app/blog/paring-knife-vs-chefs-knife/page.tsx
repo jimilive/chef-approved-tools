@@ -131,7 +131,7 @@ export default function ParingVsChefsKnifePage() {
                 >
                   <Link
                     href="https://amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
-                    className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                    className="inline-block bg-orange-700 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors"
                   >
                     Check Chef&rsquo;s Knife Price →
                   </Link>
@@ -147,7 +147,7 @@ export default function ParingVsChefsKnifePage() {
                 >
                   <Link
                     href="https://amazon.com/dp/B0019WXPQY?tag=chefapprovedt-20"
-                    className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                    className="inline-block bg-orange-700 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors"
                   >
                     Check Paring Knife Price →
                   </Link>
@@ -318,7 +318,7 @@ export default function ParingVsChefsKnifePage() {
           >
             <Link
               href="https://amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
-              className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
+              className="inline-block bg-orange-700 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
             >
               Check Chef&rsquo;s Knife Price →
             </Link>
@@ -439,7 +439,7 @@ export default function ParingVsChefsKnifePage() {
           >
             <Link
               href="https://amazon.com/dp/B0019WXPQY?tag=chefapprovedt-20"
-              className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
+              className="inline-block bg-orange-700 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
             >
               Check Paring Knife Price →
             </Link>
@@ -495,7 +495,7 @@ export default function ParingVsChefsKnifePage() {
             >
               <Link
                 href="/newsletter"
-                className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                className="inline-block bg-orange-700 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors"
               >
                 Download Free Guide →
               </Link>

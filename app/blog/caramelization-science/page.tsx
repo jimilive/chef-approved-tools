@@ -207,7 +207,7 @@ export default function CaramelizationPage() {
             >
               <Link
                 href="/newsletter"
-                className="inline-block bg-orange-800 text-white px-6 py-3 rounded font-bold hover:bg-orange-800 transition-colors"
+                className="inline-block bg-orange-900 text-white px-6 py-3 rounded font-bold hover:bg-orange-800 transition-colors"
               >
                 Get the Free Guide →
               </Link>

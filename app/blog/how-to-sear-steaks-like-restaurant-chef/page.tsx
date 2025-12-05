@@ -394,7 +394,7 @@ export default function SteakSearingPost() {
             >
               <Link
                 href="/newsletter"
-                className="bg-orange-800 text-white hover:bg-orange-800 px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
+                className="bg-orange-900 text-white hover:bg-orange-800 px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
               >
                 Get Free Restaurant Techniques
               </Link>
