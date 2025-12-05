@@ -241,7 +241,7 @@ export const reviewData = {
     paragraphs: [
       `After 6 months of daily testing, <LINK>this Cuisinart nonstick pan</LINK> has become my most-reached-for pan. The egg cooking performance alone justifies the investment, but the versatility for small-batch cooking makes it indispensable.`,
       `This is the pan I recommend to anyone who cooks eggs regularly or needs a reliable small pan for everyday tasks. Professional-quality nonstick performance at a home kitchen price point.`,
-      `Would I buy <LINK>this</LINK> again? Without hesitation. The nonstick surface remains flawless, the heat distribution is exceptional, and the value proposition is unbeatable in this category.`
+      `Would I buy <LINK>this Cuisinart nonstick pan</LINK> again? Without hesitation. The nonstick surface remains flawless, the heat distribution is exceptional, and the value proposition is unbeatable in this category.`
     ],
     ctaUrl: '', // Will be filled by affiliateUrl in page.tsx
     ctaText: 'Check Amazon Price →'
