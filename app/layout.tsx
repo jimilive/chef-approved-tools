@@ -257,8 +257,8 @@ export default function RootLayout({
             .header{position:relative;z-index:30}
             .nav-menu{position:relative;z-index:40}
             .main-navigation{display:flex;align-items:center;justify-content:space-between}
-            .btn-primary{background:linear-gradient(to right,#ea580c,#dc2626);color:#fff;font-weight:600;padding:0.75rem 1.5rem;border-radius:0.75rem;transition:all 0.2s;text-decoration:none;display:inline-block}
-            .btn-primary:hover{background:linear-gradient(to right,#c2410c,#b91c1c);transform:scale(1.02)}
+            .btn-primary{background:linear-gradient(to right,#7c2d12,#991b1b);color:#fff;font-weight:600;padding:0.75rem 1.5rem;border-radius:0.75rem;transition:all 0.2s;text-decoration:none;display:inline-block}
+            .btn-primary:hover{background:linear-gradient(to right,#5c2210,#7f1d1d);transform:scale(1.02)}
             .card{background:#fff;border-radius:0.75rem;box-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1);transition:box-shadow 0.2s}
             .card:hover{box-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1)}
             .container{max-width:72rem;margin:0 auto;padding:0 1rem}

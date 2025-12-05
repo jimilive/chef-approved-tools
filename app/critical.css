@@ -17,12 +17,12 @@
 
 /* Critical header styles */
 .header-gradient {
-  background: linear-gradient(135deg, #1e293b 0%, #ea580c 100%);
+  background: linear-gradient(135deg, #1e293b 0%, #7c2d12 100%);
 }
 
 /* Critical button styles */
 .btn-primary {
-  background: #ea580c;
+  background: #7c2d12;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
@@ -31,7 +31,7 @@
 }
 
 .btn-primary:hover {
-  background: #dc2626;
+  background: #991b1b;
 }
 
 /* Layout essentials */
