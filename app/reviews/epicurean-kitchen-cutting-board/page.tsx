@@ -286,7 +286,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
                   href={affiliateUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105"
+                  className="block w-full text-center bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105"
                 >
                   {reviewData.hero.ctaText}
                 </a>

@@ -398,7 +398,7 @@ export default function KitchenThermometersGuidePage() {
             >
               <Link
                 href="/newsletter"
-                className="inline-block bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-orange-600 hover:to-red-700 transition-all shadow-lg"
+                className="inline-block bg-gradient-to-r from-orange-500 to-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-orange-800 hover:to-red-800 transition-all shadow-lg"
               >
                 Get the Free Guide
               </Link>

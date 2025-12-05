@@ -224,7 +224,7 @@ export default async function BestChefKnivesPage() {
                             href={knife.affiliateUrl}
                             target="_blank"
                             rel="noopener noreferrer sponsored nofollow"
-                            className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg text-sm whitespace-nowrap"
+                            className="inline-flex items-center justify-center bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg text-sm whitespace-nowrap"
                           >
                             Check Price →
                           </a>
@@ -278,7 +278,7 @@ export default async function BestChefKnivesPage() {
                         href={knife.affiliateUrl}
                         target="_blank"
                         rel="noopener noreferrer sponsored nofollow"
-                        className="inline-flex items-center w-full justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md text-sm"
+                        className="inline-flex items-center w-full justify-center bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md text-sm"
                       >
                         Check Price →
                       </a>
@@ -384,7 +384,7 @@ export default async function BestChefKnivesPage() {
                           href={knife.affiliateUrl}
                           target="_blank"
                           rel="noopener noreferrer sponsored nofollow"
-                          className="inline-flex items-center justify-center bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+                          className="inline-flex items-center justify-center bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
                         >
                           Check Latest Price on Amazon →
                         </a>
@@ -519,7 +519,7 @@ export default async function BestChefKnivesPage() {
 
         {/* Final CTA */}
         <section className="mb-12">
-          <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl p-8 text-center text-white shadow-xl">
+          <div className="bg-gradient-to-br from-orange-700 to-red-700 rounded-2xl p-8 text-center text-white shadow-xl">
             <Award className="w-16 h-16 mx-auto mb-4" />
             <h3 className="text-3xl font-bold mb-4">Ready to Upgrade Your Kitchen?</h3>
             <p className="text-lg mb-6 max-w-2xl mx-auto">

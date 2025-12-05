@@ -228,7 +228,7 @@ export default async function AppliancesPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-orange-700 text-white font-semibold rounded-lg hover:bg-orange-800 transition-colors"
             >
               Contact Me
             </Link>

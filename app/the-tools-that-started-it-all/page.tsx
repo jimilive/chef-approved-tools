@@ -275,7 +275,7 @@ export default function ToolsThatStartedItAllPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-600 to-red-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-orange-700 to-red-700 text-white">
         <div className="container max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Start With What Works

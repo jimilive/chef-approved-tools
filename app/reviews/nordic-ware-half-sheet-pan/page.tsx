@@ -185,7 +185,7 @@ export default async function NordicWareHalfSheetPanReview() {
               href={affiliateUrl}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+              className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
             >
               {reviewData.hero.ctaText}
             </a>
@@ -433,7 +433,7 @@ export default async function NordicWareHalfSheetPanReview() {
               href={affiliateUrl}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+              className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
             >
               {reviewData.hero.ctaText}
             </a>
@@ -457,7 +457,7 @@ export default async function NordicWareHalfSheetPanReview() {
         </section>
 
         {/* Email Capture */}
-        <section className="bg-gradient-to-br from-orange-600 to-red-600 text-white rounded-2xl px-6 py-8 my-12">
+        <section className="bg-gradient-to-br from-orange-700 to-red-700 text-white rounded-2xl px-6 py-8 my-12">
           <div className="max-w-2xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-3 text-white">
               🔥 Get My 11 Essential Tools for a Professional Kitchen
@@ -535,7 +535,7 @@ export default async function NordicWareHalfSheetPanReview() {
                 href={affiliateUrl}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
               >
                 {reviewData.bottomLine.ctaText}
               </a>

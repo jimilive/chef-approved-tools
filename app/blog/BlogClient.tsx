@@ -139,7 +139,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
                           {post.category}
                         </span>
                         {isFeatured && (
-                          <span className="bg-gradient-to-r from-orange-600 to-red-600 text-white text-xs px-2.5 py-1 rounded-md font-medium">
+                          <span className="bg-gradient-to-r from-orange-700 to-red-700 text-white text-xs px-2.5 py-1 rounded-md font-medium">
                             ⭐ Featured
                           </span>
                         )}
@@ -185,7 +185,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
                       >
                         <Link
                           href={`/blog/${post.slug}`}
-                          className="inline-flex items-center gap-2 text-orange-700 hover:text-white hover:bg-orange-700 font-semibold text-sm px-4 py-2 rounded-lg border-2 border-orange-700 transition-all group"
+                          className="inline-flex items-center gap-2 text-orange-700 hover:text-white hover:bg-orange-800 font-semibold text-sm px-4 py-2 rounded-lg border-2 border-orange-700 transition-all group"
                         >
                           Read Article
                           <svg

@@ -233,7 +233,7 @@ export default function AboutPage() {
       </section>
 
       {/* Section 2: The Bridge - Personal Promise */}
-      <section className="py-12 bg-gradient-to-r from-orange-600 to-red-600">
+      <section className="py-12 bg-gradient-to-r from-orange-700 to-red-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-white text-center">
             <h2 className="text-3xl font-bold mb-6">

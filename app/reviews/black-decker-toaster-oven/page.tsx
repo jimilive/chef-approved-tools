@@ -231,7 +231,7 @@ export default async function BlackDeckerToasterOvenReview() {
                     href={affiliateUrl}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
+                    className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
                   >
                     {reviewData.hero.ctaText}
                   </a>
@@ -410,7 +410,7 @@ export default async function BlackDeckerToasterOvenReview() {
                       href={affiliateUrl}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
-                      className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap w-full text-center"
+                      className="inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap w-full text-center"
                     >
                       Check Price on Amazon →
                     </a>

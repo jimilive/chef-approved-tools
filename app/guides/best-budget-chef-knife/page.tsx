@@ -98,7 +98,7 @@ export default async function BestBudgetChefKnife() {
               href={affiliateUrl}
               target="_blank"
               rel="nofollow sponsored noopener"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-700 to-red-700 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-800 hover:to-red-800 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
             >
               <DollarSign className="w-5 h-5" />
               Check Current Price on Amazon
@@ -287,7 +287,7 @@ export default async function BestBudgetChefKnife() {
             href={affiliateUrl}
             target="_blank"
             rel="nofollow sponsored noopener"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-orange-700 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-700 to-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-orange-800 hover:to-red-800 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
           >
             <DollarSign className="w-6 h-6" />
             Check Price on Amazon

@@ -204,8 +204,8 @@ export default function RootLayout({
             .bg-orange-700{background-color:#ea580c}
             .rounded-md{border-radius:0.375rem}
             .z-50{z-index:50}
-            .from-orange-600{--tw-gradient-from:#ea580c;--tw-gradient-to:rgb(234 88 12 / 0);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}
-            .to-red-600{--tw-gradient-to:#dc2626}
+            .from-orange-700{--tw-gradient-from:#ea580c;--tw-gradient-to:rgb(234 88 12 / 0);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}
+            .to-red-700{--tw-gradient-to:#dc2626}
             .hover\\:from-orange-700:hover{--tw-gradient-from:#c2410c}
             .hover\\:to-red-700:hover{--tw-gradient-to:#b91c1c}
             .transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}

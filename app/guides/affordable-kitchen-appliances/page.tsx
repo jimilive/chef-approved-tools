@@ -229,7 +229,7 @@ export default async function AffordableKitchenAppliancesPage() {
                 href={ninjaBlenderUrl}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
+                className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
               >
                 🛒 Check Current Price on Amazon →
               </a>
@@ -326,7 +326,7 @@ export default async function AffordableKitchenAppliancesPage() {
                 href={kitchenAidUrl}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
+                className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
               >
                 🛒 Check Current Price on Amazon →
               </a>
@@ -444,7 +444,7 @@ export default async function AffordableKitchenAppliancesPage() {
                 href={cuisinartUrl}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
+                className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
               >
                 🛒 Check Current Price on Amazon →
               </a>
@@ -485,7 +485,7 @@ export default async function AffordableKitchenAppliancesPage() {
                   href={instantPotUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
+                  className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
                 >
                   🛒 Check Current Price on Amazon →
                 </a>
@@ -544,7 +544,7 @@ export default async function AffordableKitchenAppliancesPage() {
                   href={airFryerUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
+                  className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
                 >
                   🛒 Check Current Price on Amazon →
                 </a>
@@ -579,7 +579,7 @@ export default async function AffordableKitchenAppliancesPage() {
                   href={pizzaOvenUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="block w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
+                  className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
                 >
                   🛒 Check Current Price on Amazon →
                 </a>

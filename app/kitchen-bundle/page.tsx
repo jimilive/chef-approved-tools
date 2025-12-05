@@ -251,7 +251,7 @@ export default async function ChefApprovedKitchenKit() {
                       href={product.affiliateUrl}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
-                      className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block flex items-center justify-center gap-2 text-sm"
+                      className="w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block flex items-center justify-center gap-2 text-sm"
                     >
                       <ShoppingCart className="w-4 h-4" />
                       Check Price on Amazon
@@ -350,7 +350,7 @@ export default async function ChefApprovedKitchenKit() {
                       href={product.affiliateUrl}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
-                      className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block flex items-center justify-center gap-2"
+                      className="w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block flex items-center justify-center gap-2"
                     >
                       <ShoppingCart className="w-4 h-4" />
                       Check Price on Amazon
@@ -437,7 +437,7 @@ export default async function ChefApprovedKitchenKit() {
                   href={specialistTool.affiliateUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block flex items-center justify-center gap-2"
                 >
                   <ShoppingCart className="w-5 h-5" />
                   Check Price on Amazon

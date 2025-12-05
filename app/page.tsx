@@ -90,7 +90,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a
                   href="#get-guide"
-                  className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center"
+                  className="bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center"
                 >
                   Get My Free Guide
                 </a>
@@ -117,7 +117,7 @@ export default function HomePage() {
                   priority
                 />
               </div>
-              <div className="absolute bottom-4 right-0 md:-right-6 bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-xl shadow-xl">
+              <div className="absolute bottom-4 right-0 md:-right-6 bg-gradient-to-r from-orange-700 to-red-700 text-white px-6 py-3 rounded-xl shadow-xl">
                 <p className="font-bold text-lg">24 Years</p>
                 <p className="text-sm font-bold">Professional Kitchens</p>
               </div>
