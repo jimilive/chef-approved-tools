@@ -96,7 +96,7 @@ export default function TopPicksComparisonClient({ topPick }: TopPicksComparison
               </div>
 
               {/* Category */}
-              <div className="text-xs text-gray-500 font-medium mb-2 mt-2">
+              <div className="text-xs text-gray-600 font-medium mb-2 mt-2">
                 {pick.category}
               </div>
 

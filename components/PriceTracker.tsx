@@ -67,7 +67,7 @@ export default function PriceTracker({
           )}
 
           {trend && (
-            <div className={`flex items-center gap-1 ${trend === 'down' ? 'text-green-600' : trend === 'up' ? 'text-red-600' : 'text-gray-500'}`}>
+            <div className={`flex items-center gap-1 ${trend === 'down' ? 'text-green-600' : trend === 'up' ? 'text-red-600' : 'text-gray-600'}`}>
               {trend === 'down' && <TrendingDown className="w-3 h-3" />}
               {trend === 'up' && <TrendingUp className="w-3 h-3" />}
             </div>
@@ -98,7 +98,7 @@ export default function PriceTracker({
 
       {/* Price Trend Indicator */}
       {trend && (
-        <div className={`mt-1 text-xs ${trend === 'down' ? 'text-green-600' : trend === 'up' ? 'text-red-600' : 'text-gray-500'}`}>
+        <div className={`mt-1 text-xs ${trend === 'down' ? 'text-green-600' : trend === 'up' ? 'text-red-600' : 'text-gray-600'}`}>
           {trend === 'down' && '↓ Price dropped recently'}
           {trend === 'up' && '↑ Price increased recently'}
           {trend === 'stable' && '→ Price stable'}

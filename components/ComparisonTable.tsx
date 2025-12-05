@@ -83,7 +83,7 @@ export default function ComparisonTable({ products, title, ctaText = 'Check Pric
                     >
                       {product.name}
                     </Link>
-                    <div className="text-sm text-gray-500 mt-1">{product.brand}</div>
+                    <div className="text-sm text-gray-600 mt-1">{product.brand}</div>
                     <div className="flex flex-wrap gap-1 mt-2">
                       {isBestValue && (
                         <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
@@ -108,7 +108,7 @@ export default function ComparisonTable({ products, title, ctaText = 'Check Pric
                 <div className="mb-3">
                   <div className="text-xs font-semibold text-gray-600 mb-1">Rating</div>
                   <StarRating rating={product.reviews.rating} size="sm" showNumeric />
-                  <div className="text-xs text-gray-500 mt-1">
+                  <div className="text-xs text-gray-600 mt-1">
                     {product.reviews.count.toLocaleString()} reviews
                   </div>
                 </div>
@@ -136,7 +136,7 @@ export default function ComparisonTable({ products, title, ctaText = 'Check Pric
                       )}
                     </>
                   ) : (
-                    <div className="text-sm text-gray-500">Price not available</div>
+                    <div className="text-sm text-gray-600">Price not available</div>
                   )}
                 </div>
 
@@ -263,12 +263,12 @@ export default function ComparisonTable({ products, title, ctaText = 'Check Pric
                             {formatPrice(product.price.original, product.price.currency)}
                           </div>
                         )}
-                        <div className="text-xs text-gray-500 mt-1">
+                        <div className="text-xs text-gray-600 mt-1">
                           as of {formatDate(product.price.lastUpdated)}
                         </div>
                       </>
                     ) : (
-                      <div className="text-sm text-gray-500">Price not available</div>
+                      <div className="text-sm text-gray-600">Price not available</div>
                     )}
                   </td>
                   

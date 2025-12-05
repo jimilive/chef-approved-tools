@@ -83,7 +83,7 @@ export default function FAQ() {
                 </h3>
                 <div className="flex-shrink-0 ml-2">
                   <svg
-                    className={`w-6 h-6 text-gray-500 transition-transform duration-200 ${
+                    className={`w-6 h-6 text-gray-600 transition-transform duration-200 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                     fill="none"

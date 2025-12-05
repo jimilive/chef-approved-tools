@@ -116,13 +116,13 @@ export default function SearchBar() {
                   <p className="text-sm font-semibold text-gray-900 truncate">
                     {product.name}
                   </p>
-                  <p className="text-xs text-gray-500">{product.brand}</p>
+                  <p className="text-xs text-gray-600">{product.brand}</p>
                   <p className="text-sm font-bold text-brand-600 mt-1">
                     {product.price ? formatPrice(product.price.current, product.price.currency) : 'Price unavailable'}
                   </p>
                 </div>
                 <div className="flex-shrink-0">
-                  <span className="text-xs text-gray-500">
+                  <span className="text-xs text-gray-600">
                     ★ {product.reviews.rating.toFixed(1)}
                   </span>
                 </div>
@@ -143,7 +143,7 @@ export default function SearchBar() {
       {/* No Results */}
       {showResults && query.length > 1 && results.length === 0 && !isLoading && (
         <div className="absolute z-50 w-full mt-2 bg-white rounded-lg shadow-xl border border-gray-200 p-4">
-          <p className="text-sm text-gray-500 text-center">
+          <p className="text-sm text-gray-600 text-center">
             No products found for &ldquo;{query}&rdquo;
           </p>
         </div>

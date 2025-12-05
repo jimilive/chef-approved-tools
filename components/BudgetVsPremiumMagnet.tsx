@@ -201,7 +201,7 @@ export default function BudgetVsPremiumMagnet({
 
       {/* Trust indicators */}
       <div className="mt-4 text-center">
-        <p className={`text-xs ${variant === 'sidebar' ? 'text-gray-500' : 'text-gray-400'}`}>
+        <p className={`text-xs ${variant === 'sidebar' ? 'text-gray-600' : 'text-gray-400'}`}>
           No spam, unsubscribe anytime
         </p>
         <div className="flex justify-center items-center mt-2 space-x-4 text-xs text-gray-400">

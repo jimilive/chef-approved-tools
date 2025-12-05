@@ -222,11 +222,11 @@ export default async function RubbermaidScraperReview() {
           <p className="font-semibold text-slate-900 mb-2">Quick Navigation:</p>
           <div className="flex flex-wrap gap-2 text-sm">
             <a href="#testing" className="text-orange-700 hover:text-orange-800">Testing Results</a>
-            <span className="text-slate-400">|</span>
+            <span className="text-slate-600">|</span>
             <a href="#comparison" className="text-orange-700 hover:text-orange-800">vs Alternatives</a>
-            <span className="text-slate-400">|</span>
+            <span className="text-slate-600">|</span>
             <a href="#verdict" className="text-orange-700 hover:text-orange-800">Final Verdict</a>
-            <span className="text-slate-400">|</span>
+            <span className="text-slate-600">|</span>
             <a href="#faq" className="text-orange-700 hover:text-orange-800">FAQ</a>
           </div>
         </nav>

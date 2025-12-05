@@ -95,7 +95,7 @@ export default function PriceDisplay({
             {dealText && (
               <p className="text-sm text-green-700 font-medium">{dealText}</p>
             )}
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-600">
               Price range across retailers • {lastUpdated || 'Updated weekly'}
             </p>
           </div>
@@ -140,7 +140,7 @@ export default function PriceDisplay({
                   {vendor.price ? (
                     <div className="flex items-center gap-2 flex-1">
                       {hasSavings && (
-                        <span className="text-xs line-through text-gray-500">
+                        <span className="text-xs line-through text-gray-600">
                           {formatPrice(vendor.originalPrice!)}
                         </span>
                       )}
@@ -165,7 +165,7 @@ export default function PriceDisplay({
             )
           })}
         </div>
-        <p className="text-xs text-gray-500 mt-2">
+        <p className="text-xs text-gray-600 mt-2">
           💡 Comparing prices helps you find the best deal and supports our site at no extra cost
         </p>
       </div>

@@ -22,7 +22,7 @@ export default function ProductGrid({
   if (products.length === 0) {
     return (
       <div className="text-center py-12">
-        <p className="text-gray-500">No products found matching your criteria.</p>
+        <p className="text-gray-600">No products found matching your criteria.</p>
       </div>
     )
   }

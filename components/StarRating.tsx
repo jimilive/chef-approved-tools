@@ -103,7 +103,7 @@ export default function StarRating({
         </span>
       )}
       {reviewCount !== undefined && (
-        <span className="ml-2 text-sm text-gray-500">
+        <span className="ml-2 text-sm text-gray-600">
           ({reviewCount.toLocaleString()} reviews)
         </span>
       )}

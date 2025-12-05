@@ -47,9 +47,9 @@ export default async function BestBudgetChefKnife() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ol className="flex items-center space-x-2 text-sm">
             <li><Link href="/" className="text-orange-700 hover:text-orange-800">Home</Link></li>
-            <li className="text-gray-400">/</li>
+            <li className="text-gray-600">/</li>
             <li><Link href="/guides" className="text-orange-700 hover:text-orange-800">Guides</Link></li>
-            <li className="text-gray-400">/</li>
+            <li className="text-gray-600">/</li>
             <li className="text-gray-700">Best Budget Chef Knife</li>
           </ol>
         </div>

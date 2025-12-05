@@ -85,7 +85,7 @@ export default async function AffordableKitchenAppliancesPage() {
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ol className="flex space-x-2 text-sm text-gray-500">
+          <ol className="flex space-x-2 text-sm text-gray-600">
             <li className="flex items-center">
               <Link href="/" className="text-gray-600 hover:text-orange-800 transition-colors">
                 Home
@@ -153,13 +153,13 @@ export default async function AffordableKitchenAppliancesPage() {
           <p className="font-semibold text-slate-900 mb-2">Quick Navigation:</p>
           <div className="flex flex-wrap gap-2 text-sm">
             <a href="#blenders" className="text-orange-700 hover:text-orange-800">Budget Blenders</a>
-            <span className="text-slate-400">|</span>
+            <span className="text-slate-600">|</span>
             <a href="#mixers" className="text-orange-700 hover:text-orange-800">Stand Mixers</a>
-            <span className="text-slate-400">|</span>
+            <span className="text-slate-600">|</span>
             <a href="#processors" className="text-orange-700 hover:text-orange-800">Food Processors</a>
-            <span className="text-slate-400">|</span>
+            <span className="text-slate-600">|</span>
             <a href="#countertop" className="text-orange-700 hover:text-orange-800">Countertop Appliances</a>
-            <span className="text-slate-400">|</span>
+            <span className="text-slate-600">|</span>
             <a href="#philosophy" className="text-orange-700 hover:text-orange-800">Budget Philosophy</a>
           </div>
         </nav>

@@ -189,17 +189,17 @@ export default async function RobotCoupeR2DiceReview() {
           <p className="font-semibold text-slate-900 mb-2">Quick Navigation:</p>
           <div className="flex flex-wrap gap-2 text-sm">
             <a href="#testing" aria-label="Jump to testing results section" className="text-orange-700 hover:text-orange-800">Testing Results</a>
-            <span className="text-slate-400">|</span>
+            <span className="text-slate-600">|</span>
             <a href="#reviews" aria-label="Jump to user reviews section" className="text-orange-700 hover:text-orange-800">User Reviews</a>
-            <span className="text-slate-400">|</span>
+            <span className="text-slate-600">|</span>
             <a href="#comparison" aria-label="Jump to R2 Dice vs R2N comparison section" className="text-orange-700 hover:text-orange-800">R2 Dice vs R2N</a>
-            <span className="text-slate-400">|</span>
+            <span className="text-slate-600">|</span>
             <a href="#pricing" aria-label="Jump to pricing section" className="text-orange-700 hover:text-orange-800">Pricing</a>
-            <span className="text-slate-400">|</span>
+            <span className="text-slate-600">|</span>
             <a href="#who-buys" aria-label="Jump to buyer recommendations section" className="text-orange-700 hover:text-orange-800">Who Should Buy</a>
-            <span className="text-slate-400">|</span>
+            <span className="text-slate-600">|</span>
             <a href="#faq" aria-label="Jump to FAQ section" className="text-orange-700 hover:text-orange-800">FAQ</a>
-            <span className="text-slate-400">|</span>
+            <span className="text-slate-600">|</span>
             <a href="#verdict" aria-label="Jump to verdict section" className="text-orange-700 hover:text-orange-800">Verdict</a>
           </div>
         </nav>

@@ -103,7 +103,7 @@ export default function CategoryCards() {
           <div className="p-4 bg-white">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs text-gray-500 mb-1">Popular brands:</p>
+                <p className="text-xs text-gray-600 mb-1">Popular brands:</p>
                 <p className="text-sm text-gray-700 font-medium">
                   {category.popular.slice(0, 2).join(', ')}
                 </p>

@@ -288,7 +288,7 @@ export default function AdminProductsPage() {
                 </div>
               )}
 
-              <div className="mt-4 pt-4 border-t text-xs text-gray-500">
+              <div className="mt-4 pt-4 border-t text-xs text-gray-600">
                 Last updated: {new Date(product.updated_at).toLocaleString()}
               </div>
             </div>
@@ -296,7 +296,7 @@ export default function AdminProductsPage() {
         </div>
 
         {products.length === 0 && (
-          <div className="bg-white rounded-lg shadow p-8 text-center text-gray-500">
+          <div className="bg-white rounded-lg shadow p-8 text-center text-gray-600">
             No products found. Run the migration script to import products.
           </div>
         )}

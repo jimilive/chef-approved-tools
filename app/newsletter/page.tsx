@@ -37,7 +37,7 @@ export default function NewsletterPage() {
       <NewsletterForm />
 
       <div className="max-w-2xl mx-auto py-8">
-        <p className="text-sm text-slate-400 text-center leading-relaxed">
+        <p className="text-sm text-slate-600 text-center leading-relaxed">
           Join 2,000+ home cooks getting weekly insights from 24 years of professional kitchen experience.
           Unsubscribe anytime. No spam, no sponsored content, no BS.
         </p>

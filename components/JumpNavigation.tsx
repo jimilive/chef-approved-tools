@@ -73,7 +73,7 @@ export default function JumpNavigation({ items }: JumpNavigationProps) {
             <span className="font-semibold text-gray-900">Jump to Section</span>
           </div>
           <ChevronDown
-            className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${
+            className={`w-4 h-4 text-gray-600 transition-transform duration-200 ${
               isOpen ? 'rotate-180' : ''
             }`}
           />

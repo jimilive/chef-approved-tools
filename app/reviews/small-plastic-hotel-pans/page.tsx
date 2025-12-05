@@ -198,7 +198,7 @@ export default async function ProductReview() {
                         <p><strong>Dimensions:</strong> {option.dimensions}</p>
                         <p><strong>Capacity:</strong> {option.capacity}</p>
                         <p><strong>Best for:</strong> {option.bestFor}</p>
-                        <p className="text-xs text-gray-500">{option.includes}</p>
+                        <p className="text-xs text-gray-600">{option.includes}</p>
                       </div>
 
                       <CTAVisibilityTracker
