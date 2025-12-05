@@ -4,14 +4,15 @@ import { Inter } from 'next/font/google'
 import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { lazy, Suspense } from 'react'
+import dynamic from 'next/dynamic'
 
-// Lazy load non-critical components for better performance
-const CookieConsent = lazy(() => import('@/components/CookieConsent'))
-const ExitIntentWrapper = lazy(() => import('@/components/ExitIntentWrapper'))
-const Analytics = lazy(() => import('@/components/Analytics'))
-const ScrollTracker = lazy(() => import('@/components/ScrollTracker'))
-const ThirdPartyScripts = lazy(() => import('@/components/ThirdPartyScripts'))
+// Dynamic import with SSR disabled to prevent hydration mismatches
+// These components use browser APIs (localStorage, navigator, etc.)
+const CookieConsent = dynamic(() => import('@/components/CookieConsent'), { ssr: false })
+const ExitIntentWrapper = dynamic(() => import('@/components/ExitIntentWrapper'), { ssr: false })
+const Analytics = dynamic(() => import('@/components/Analytics'), { ssr: false })
+const ScrollTracker = dynamic(() => import('@/components/ScrollTracker'), { ssr: false })
+const ThirdPartyScripts = dynamic(() => import('@/components/ThirdPartyScripts'), { ssr: false })
 import { organizationSchema, websiteSchema } from '@/lib/schema'
 
 const inter = Inter({
@@ -292,10 +293,8 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-gray-50 antialiased">
-        {/* Third-party scripts (GTM, GA4) - Deferred for performance */}
-        <Suspense fallback={null}>
-          <ThirdPartyScripts />
-        </Suspense>
+        {/* Third-party scripts (GTM, GA4) - Client-only, no SSR */}
+        <ThirdPartyScripts />
 
         {/* Skip to main content for accessibility */}
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-orange-700 text-white px-4 py-2 rounded-md z-50">
@@ -313,23 +312,15 @@ export default function RootLayout({
         {/* Footer */}
         <Footer />
 
-        {/* Cookie Consent (GDPR/CCPA Compliance) - Lazy loaded */}
-        <Suspense fallback={null}>
-          <CookieConsent />
-        </Suspense>
+        {/* Cookie Consent (GDPR/CCPA Compliance) - Client-only, no SSR */}
+        <CookieConsent />
 
-        {/* Exit Intent Modal - Lazy loaded */}
-        <Suspense fallback={null}>
-          <ExitIntentWrapper />
-        </Suspense>
+        {/* Exit Intent Modal - Client-only, no SSR */}
+        <ExitIntentWrapper />
 
-        {/* Analytics - Page views and scroll tracking (lazy loaded) */}
-        <Suspense fallback={null}>
-          <Analytics />
-        </Suspense>
-        <Suspense fallback={null}>
-          <ScrollTracker />
-        </Suspense>
+        {/* Analytics - Page views and scroll tracking - Client-only, no SSR */}
+        <Analytics />
+        <ScrollTracker />
 
         {/* Vercel Analytics */}
         <VercelAnalytics />
