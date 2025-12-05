@@ -293,7 +293,18 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-gray-50 antialiased">
-        {/* Third-party scripts (GTM, GA4) - Client-only, no SSR */}
+        {/* Google Tag Manager (noscript fallback) - Must be in body for GTM */}
+        {/* This is static HTML, safe to render server-side */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PX8GPHKF"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+
+        {/* Third-party scripts (GTM JS loader) - Client-only, no SSR */}
         <ThirdPartyScripts />
 
         {/* Skip to main content for accessibility */}

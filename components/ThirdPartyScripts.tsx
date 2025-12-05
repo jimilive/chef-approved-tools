@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import Script from 'next/script'
 
 /**
  * ThirdPartyScripts
@@ -17,6 +16,9 @@ import Script from 'next/script'
  *
  * Note: GTM loads GA4 automatically via GTM configuration
  * We no longer load GA4 directly to avoid duplicate tracking
+ *
+ * IMPORTANT: The noscript fallback for GTM is in app/layout.tsx
+ * to avoid hydration mismatches (this component uses ssr: false)
  */
 export default function ThirdPartyScripts() {
   useEffect(() => {
@@ -72,17 +74,7 @@ export default function ThirdPartyScripts() {
     }
   }, [])
 
-  return (
-    <>
-      {/* Google Tag Manager (noscript fallback) */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-PX8GPHKF"
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-        />
-      </noscript>
-    </>
-  )
+  // Return null - no DOM rendering needed for this effect-only component
+  // The noscript GTM fallback is in app/layout.tsx to avoid hydration issues
+  return null
 }
