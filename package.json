@@ -50,14 +50,12 @@
     "validate:phase1": "npm run validate:types && npm run validate:metadata && npm run validate:content && npm run validate:new-images && npm run validate:schema"
   },
   "dependencies": {
-    "@headlessui/react": "^2.2.8",
     "@heroicons/react": "^2.2.0",
     "@supabase/supabase-js": "^2.76.1",
     "@vercel/analytics": "^1.5.0",
     "@vercel/og": "^0.8.5",
     "cloudinary": "^2.7.0",
     "clsx": "^2.1.0",
-    "date-fns": "^3.0.0",
     "dotenv": "^17.2.3",
     "lucide-react": "^0.542.0",
     "next": "^14.2.32",
