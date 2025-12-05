@@ -179,10 +179,10 @@ export default function KnifeSafetyPost() {
           </p>
 
           <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
-            <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ChefHat className="w-6 h-6 text-orange-700" />
               Restaurant Reality
-            </h3>
+            </p>
             <p className="mb-0">
               In professional kitchens, knife safety isn&apos;t optional—it&apos;s survival. During my time managing the kitchen at Mellow Mushroom, we processed hundreds of pounds of vegetables, meats, and toppings daily. Speed mattered because service waits for no one, but safety came first. I trained every prep cook on the claw grip, proper blade angles, and the difference between &quot;fast&quot; and &quot;reckless.&quot; The cooks who respected the blade and used proper technique kept working. The ones who got careless or cocky got stitches—and a very serious conversation about whether they were cut out for this work.
             </p>

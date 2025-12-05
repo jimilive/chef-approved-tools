@@ -251,7 +251,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
           customCTA={(
             <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
               {/* Size Selection */}
-              <h3 className="text-sm font-semibold text-slate-700 mb-3 text-center">Choose Your Size:</h3>
+              <p className="text-sm font-semibold text-slate-700 mb-3 text-center">Choose Your Size:</p>
               <div className="grid grid-cols-2 gap-2 mb-4">
                 {sizeOptions.map((option, index) => (
                   <CTAVisibilityTracker

@@ -511,10 +511,10 @@ export default function CompleteVictorinoxLineupPage() {
           </CTAVisibilityTracker>
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ChefHat className="w-6 h-6 text-orange-700" />
               Free Professional Kitchen Guide
-            </h3>
+            </p>
             <p className="mb-4">
               Get my &quot;Essential Kitchen Tools&quot; PDF—the 11 tools I use most from 24 years in professional kitchens, including why I chose each Victorinox knife.
             </p>

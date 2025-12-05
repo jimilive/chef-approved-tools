@@ -301,10 +301,10 @@ export default function KitchenStarterKitPage() {
           </p>
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ShoppingCart className="w-6 h-6 text-orange-700" />
               Want my complete kitchen setup under $200?
-            </h3>
+            </p>
             <p className="mb-4">
               Join 10,000+ home cooks who get my free guide: &quot;11 Essential Kitchen Tools I Use Every Day&quot;. Tested through 24 years in professional kitchens.
             </p>

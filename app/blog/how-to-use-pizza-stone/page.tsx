@@ -255,10 +255,10 @@ export default function PizzaStonePage() {
           </p>
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <Target className="w-6 h-6 text-orange-700" />
               Master More Pizza Techniques
-            </h3>
+            </p>
             <p className="mb-4">
               Get my &quot;Perfect Pizza at Home&quot; guide—dough techniques, sauce recipes, and professional methods from 24 years in professional kitchens.
             </p>

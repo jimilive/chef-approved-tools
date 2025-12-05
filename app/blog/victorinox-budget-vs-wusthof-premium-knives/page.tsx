@@ -114,10 +114,10 @@ export default function VictorinoxVsWusthofPage() {
           </p>
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <Target className="w-6 h-6 text-orange-700" />
               Compare the Options
-            </h3>
+            </p>
             <div className="space-y-3">
               <div>
                 <p className="mb-2"><strong>Budget Option: Victorinox 8&quot; Chef&rsquo;s Knife (~$45)</strong></p>
@@ -380,10 +380,10 @@ export default function VictorinoxVsWusthofPage() {
           </p>
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ChefHat className="w-6 h-6 text-orange-700" />
               Free Professional Kitchen Guide
-            </h3>
+            </p>
             <p className="mb-4">
               Get my &quot;Essential Kitchen Tools&quot; PDF—the 11 tools I use most from 24 years in professional kitchens. Free weekly tips on knife skills, equipment choices, and cooking techniques that actually work.
             </p>

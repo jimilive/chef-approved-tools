@@ -309,10 +309,10 @@ export default function KnifeSkillsPage() {
           </div>
 
           <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <h3 className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
+            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?
-            </h3>
+            </p>
             <p className="mb-4">
               Get my free &quot;11 Essential Tools I Use Most&quot; PDF—the exact equipment I rely on after 24 years in professional kitchens, including the knives I trust most and my daily 10-minute knife skills practice plan. No fluff, just the tools and techniques that actually matter.
             </p>
