@@ -7,6 +7,14 @@ import { Product } from '@/types/product'
 import StarRating from './StarRating'
 import { formatPrice } from '@/utils/formatters'
 
+// Format date consistently without timezone issues (avoids hydration mismatch)
+function formatDate(dateString: string): string {
+  const [year, month, day] = dateString.split('-').map(Number)
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  return `${months[month - 1]} ${day}, ${year}`
+}
+
 interface ComparisonTableProps {
   products: Product[]
   title?: string
@@ -256,7 +264,7 @@ export default function ComparisonTable({ products, title, ctaText = 'Check Pric
                           </div>
                         )}
                         <div className="text-xs text-gray-500 mt-1">
-                          as of {new Date(product.price.lastUpdated).toLocaleDateString()}
+                          as of {formatDate(product.price.lastUpdated)}
                         </div>
                       </>
                     ) : (
