@@ -59,7 +59,7 @@ export default function CompatibilityGuide({
       </h2>
 
       {introText && (
-        <div className="text-slate-600 leading-relaxed mb-6">
+        <div className="text-slate-700 leading-relaxed mb-6">
           {introText}
         </div>
       )}
@@ -77,7 +77,7 @@ export default function CompatibilityGuide({
                   {category.title}
                 </h3>
                 {category.description && (
-                  <p className="text-sm text-slate-600 m-0">{category.description}</p>
+                  <p className="text-sm text-slate-700 m-0">{category.description}</p>
                 )}
               </div>
             </div>
@@ -99,7 +99,7 @@ export default function CompatibilityGuide({
                     </span>
                   </div>
                   {item.note && (
-                    <p className="text-sm text-slate-600 m-0">{item.note}</p>
+                    <p className="text-sm text-slate-700 m-0">{item.note}</p>
                   )}
                 </div>
               ))}

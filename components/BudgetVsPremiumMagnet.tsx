@@ -111,11 +111,11 @@ export default function BudgetVsPremiumMagnet({
         <div className="flex items-center justify-center gap-4 text-sm mb-6">
           <div className="flex items-center gap-1">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-            <span className={variant === 'sidebar' ? 'text-gray-600' : 'text-gray-400'}>24 Years Professional</span>
+            <span className={variant === 'sidebar' ? 'text-gray-700' : 'text-gray-400'}>24 Years Professional</span>
           </div>
           <div className="flex items-center gap-1">
             <TrendingUp className="w-4 h-4 text-green-400" />
-            <span className={variant === 'sidebar' ? 'text-gray-600' : 'text-gray-400'}>11 Tools. That&apos;s It.</span>
+            <span className={variant === 'sidebar' ? 'text-gray-700' : 'text-gray-400'}>11 Tools. That&apos;s It.</span>
           </div>
         </div>
       </div>
@@ -201,7 +201,7 @@ export default function BudgetVsPremiumMagnet({
 
       {/* Trust indicators */}
       <div className="mt-4 text-center">
-        <p className={`text-xs ${variant === 'sidebar' ? 'text-gray-600' : 'text-gray-400'}`}>
+        <p className={`text-xs ${variant === 'sidebar' ? 'text-gray-700' : 'text-gray-400'}`}>
           No spam, unsubscribe anytime
         </p>
         <div className="flex justify-center items-center mt-2 space-x-4 text-xs text-gray-400">

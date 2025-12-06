@@ -37,7 +37,7 @@ export default function ComparisonTable({
       case 'info':
         return 'text-sky-700 font-semibold'
       default:
-        return 'text-slate-600'
+        return 'text-slate-700'
     }
   }
 
@@ -48,7 +48,7 @@ export default function ComparisonTable({
       </h2>
 
       {introText && (
-        <div className="text-slate-600 mb-6 leading-relaxed">
+        <div className="text-slate-700 mb-6 leading-relaxed">
           {introText}
         </div>
       )}

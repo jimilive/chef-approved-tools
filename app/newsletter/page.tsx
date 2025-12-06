@@ -30,14 +30,14 @@ export default function NewsletterPage() {
       <h1 className="text-4xl font-bold mb-2">
         The 11 Tools I Use Most in My Home Kitchen
       </h1>
-      <p className="text-lg text-slate-600 mb-8">
+      <p className="text-lg text-slate-700 mb-8">
         My daily workhorse tools after 45 years of cooking. Get the free guide plus equipment insights from 24 years of restaurant experience.
       </p>
 
       <NewsletterForm />
 
       <div className="max-w-2xl mx-auto py-8">
-        <p className="text-sm text-slate-600 text-center leading-relaxed">
+        <p className="text-sm text-slate-700 text-center leading-relaxed">
           Join 2,000+ home cooks getting weekly insights from 24 years of professional kitchen experience.
           Unsubscribe anytime. No spam, no sponsored content, no BS.
         </p>

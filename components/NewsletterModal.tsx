@@ -123,7 +123,7 @@ export default function NewsletterModal({
       <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full relative animate-in fade-in duration-300 max-h-[90vh] overflow-y-auto">
         <button
           onClick={() => setIsVisible(false)}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-colors"
           aria-label="Close modal"
         >
           <X size={24} />
@@ -136,7 +136,7 @@ export default function NewsletterModal({
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
                 Welcome to the Kitchen!
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base">
+              <p className="text-gray-700 text-sm sm:text-base">
                 Check your email for your free kitchen bundle guide and authentic gear recommendations!
               </p>
             </div>
@@ -147,7 +147,7 @@ export default function NewsletterModal({
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
                   Get My Professional Kitchen Bundle
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base">
+                <p className="text-gray-700 text-sm sm:text-base">
                   &ldquo;7 Tools I Actually Use Daily&rdquo; + authentic gear recommendations from 24 years experience
                 </p>
               </div>
@@ -177,7 +177,7 @@ export default function NewsletterModal({
               </form>
 
               <div className="mt-4 text-center">
-                <p className="text-xs text-gray-600">
+                <p className="text-xs text-gray-700">
                   No spam, unsubscribe anytime.
                 </p>
               </div>

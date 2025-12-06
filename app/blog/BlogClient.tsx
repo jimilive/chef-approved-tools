@@ -165,7 +165,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
                     </p>
 
                     {/* Metadata Footer */}
-                    <div className="flex items-center gap-4 text-xs text-slate-600 pt-4 border-t border-gray-200">
+                    <div className="flex items-center gap-4 text-xs text-slate-700 pt-4 border-t border-gray-200">
                       <div className="flex items-center gap-1.5">
                         <Calendar className="w-3.5 h-3.5 text-orange-700" />
                         <span>{post.formattedDate}</span>

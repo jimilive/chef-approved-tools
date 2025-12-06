@@ -23,7 +23,7 @@ export default function TrustSignals({
 
   if (variant === 'compact') {
     return (
-      <div className={`flex items-center justify-center gap-4 text-xs text-slate-600 mt-2 ${className}`}>
+      <div className={`flex items-center justify-center gap-4 text-xs text-slate-700 mt-2 ${className}`}>
         <span className="flex items-center gap-1">
           <CheckIcon className="h-3 w-3 text-green-600" />
           <span>Free Returns</span>
@@ -41,15 +41,15 @@ export default function TrustSignals({
     <div className={`grid grid-cols-3 gap-3 mt-3 ${className}`}>
       <div className="flex flex-col items-center text-center">
         <TruckIcon className="h-5 w-5 text-blue-600 mb-1" />
-        <span className="text-xs text-slate-600">Fast Shipping</span>
+        <span className="text-xs text-slate-700">Fast Shipping</span>
       </div>
       <div className="flex flex-col items-center text-center">
         <ShieldIcon className="h-5 w-5 text-green-600 mb-1" />
-        <span className="text-xs text-slate-600">Secure Checkout</span>
+        <span className="text-xs text-slate-700">Secure Checkout</span>
       </div>
       <div className="flex flex-col items-center text-center">
         <CheckIcon className="h-5 w-5 text-emerald-600 mb-1" />
-        <span className="text-xs text-slate-600">Free Returns</span>
+        <span className="text-xs text-slate-700">Free Returns</span>
       </div>
     </div>
   );
@@ -61,7 +61,7 @@ export default function TrustSignals({
  */
 export function TrustSignalsBelow({ className = '' }: { className?: string }) {
   return (
-    <div className={`text-center text-xs text-slate-600 mt-2 ${className}`}>
+    <div className={`text-center text-xs text-slate-700 mt-2 ${className}`}>
       ✓ Free Returns • ✓ Secure Checkout • ✓ Fast Shipping
     </div>
   );

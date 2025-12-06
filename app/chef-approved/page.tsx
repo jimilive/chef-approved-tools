@@ -520,7 +520,7 @@ export default function ChefApprovedPage() {
         </section>
 
         {/* Last Updated */}
-        <p className="text-center text-slate-600 text-sm mt-12">
+        <p className="text-center text-slate-700 text-sm mt-12">
           Last Updated: January 2025
         </p>
 

@@ -248,7 +248,7 @@ export default function RootLayout({
             .mb-1{margin-bottom:0.25rem}
             .text-xs{font-size:0.75rem;line-height:1rem}
             .sm\\:text-sm{font-size:0.875rem;line-height:1.25rem}
-            .text-slate-600{color:#94a3b8}
+            .text-slate-600{color:#64748b}
             .uppercase{text-transform:uppercase}
             .tracking-wide{letter-spacing:0.025em}
             .font-medium{font-weight:500}

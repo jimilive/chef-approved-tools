@@ -108,7 +108,7 @@ export default function ReviewHero({
 
             {/* Dates - optional */}
             {(publishedDate || lastUpdated) && (
-              <div className="flex items-center gap-3 text-xs text-slate-600 mb-2">
+              <div className="flex items-center gap-3 text-xs text-slate-700 mb-2">
                 {publishedDate && <span>Published: {publishedDate}</span>}
                 {publishedDate && lastUpdated && <span>•</span>}
                 {lastUpdated && <span>Updated: {lastUpdated}</span>}
@@ -195,7 +195,7 @@ export default function ReviewHero({
 
           {/* Dates - optional */}
           {(publishedDate || lastUpdated) && (
-            <div className="flex items-center gap-3 text-xs text-slate-600 mb-4">
+            <div className="flex items-center gap-3 text-xs text-slate-700 mb-4">
               {publishedDate && <span>Published: {publishedDate}</span>}
               {publishedDate && lastUpdated && <span>•</span>}
               {lastUpdated && <span>Updated: {lastUpdated}</span>}

@@ -46,7 +46,7 @@ export default function Newsletter() {
           </p>
 
           <div className="bg-white rounded-xl p-6 max-w-md mx-auto">
-            <div className="text-left text-sm text-gray-600 mb-4">
+            <div className="text-left text-sm text-gray-700 mb-4">
               ✓ The exact 7 tools from my daily toolkit<br/>
               ✓ Why each tool earned its spot<br/>
               ✓ Weekly authentic gear recommendations

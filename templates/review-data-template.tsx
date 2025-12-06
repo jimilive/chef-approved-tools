@@ -97,7 +97,7 @@ export const reviewData = {
       {
         title: '[Primary Performance Category in Action]',
         content: (
-          <p className="text-slate-600 leading-[1.7] mb-4 last:mb-0">
+          <p className="text-slate-700 leading-[1.7] mb-4 last:mb-0">
             During [X years] of [usage context] at [location], the [Product Name] [specific performance details]. The [key feature] consistently [performance outcome] that met our quality standards. The [Product Name] became as essential to our operations as our <Link href="#" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">[related tool 1]</Link> and <Link href="#" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">[related tool 2]</Link>, handling tasks that previously required multiple [tools/steps].
           </p>
         ),
@@ -105,7 +105,7 @@ export const reviewData = {
       {
         title: 'Exceptional Durability Under Pressure',
         content: (
-          <p className="text-slate-600 leading-[1.7] mb-4 last:mb-0">
+          <p className="text-slate-700 leading-[1.7] mb-4 last:mb-0">
             What sets this [product type] apart is its [construction quality]. After [X years] of daily [use type], including [specific demanding tasks], the [component] shows no signs of degradation. The [parts] maintain their [quality], the [component] integrity remains intact, and performance has stayed consistently [adjective] throughout our testing period. The [Product Name]&apos;s durability rivals that of my <Link href="#" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">[comparable high-quality tool]</Link>—both are genuine buy-it-for-life investments that justify premium pricing.
           </p>
         ),
@@ -113,7 +113,7 @@ export const reviewData = {
       {
         title: 'Superior Results vs Competition',
         content: (
-          <p className="text-slate-600 leading-[1.7] mb-4 last:mb-0">
+          <p className="text-slate-700 leading-[1.7] mb-4 last:mb-0">
             The [key differentiator] of the [Product Name] creates [results] that other [product type] simply cannot match. [Specific outcomes] achieve perfect [quality] without [common issues], while [results] reach restaurant-quality [standard]. The [control feature] allows for precise [control type] - essential for professional applications where [consistency factor] matters for customer satisfaction.
           </p>
         ),
@@ -148,7 +148,7 @@ export const reviewData = {
         title: '[Primary Performance Category]',
         content: (
           <>
-            <p className="text-slate-600 leading-[1.7] mb-4 last:mb-0">
+            <p className="text-slate-700 leading-[1.7] mb-4 last:mb-0">
               <strong>Real-World [Performance Type] Excellence:</strong> The [key component] handles [challenge] without strain, creating consistently [result] at [speed/efficiency] that dramatically reduce [pain point]. This [product type] pairs perfectly with other essentials in my <Link href="#" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">[collection/guide link]</Link>, streamlining [workflow] alongside my <Link href="#" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">[tool 1]</Link> and <Link href="#" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">[tool 2]</Link>.
             </p>
           </>
@@ -162,7 +162,7 @@ export const reviewData = {
       {
         title: '[X+ Year] Durability Assessment',
         content: (
-          <p className="text-slate-600 leading-[1.7] mb-4">
+          <p className="text-slate-700 leading-[1.7] mb-4">
             <strong>[X+ Year] Durability Report:</strong> Zero repairs needed during our entire testing period. [Component 1] remains excellent with no noticeable [wear type]. [Component 2] has stayed consistent without any [degradation type]. [Component 3] shows minimal wear despite daily commercial use. This level of reliability is exactly what professional kitchens demand.
           </p>
         ),
@@ -177,13 +177,13 @@ export const reviewData = {
         title: 'Why Chefs Choose [Product Name] in Professional Kitchens',
         content: (
           <>
-            <p className="text-slate-600 leading-[1.7] mb-4">
+            <p className="text-slate-700 leading-[1.7] mb-4">
               <strong>Industry Standard:</strong> The [Product Name] is [adoption statement in professional settings]. Chefs use it [specific use cases], to [achieve specific result].
             </p>
-            <p className="text-slate-600 leading-[1.7] mb-4">
+            <p className="text-slate-700 leading-[1.7] mb-4">
               <strong>Professional Preference:</strong> Many chefs actually prefer the [Product/Model] over [alternatives] because [specific reason with concrete example].
             </p>
-            <p className="text-slate-600 leading-[1.7] mb-4 last:mb-0">
+            <p className="text-slate-700 leading-[1.7] mb-4 last:mb-0">
               Found in [types of establishments], the [Product Name] has earned the trust of chefs for its [key attributes] in professional [application type].
             </p>
           </>

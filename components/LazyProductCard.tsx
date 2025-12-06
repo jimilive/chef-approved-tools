@@ -104,7 +104,7 @@ export default function LazyProductCard({
           <h3 className="font-semibold text-gray-900 line-clamp-2 mb-1">
             {product.name}
           </h3>
-          <p className="text-sm text-gray-600">{product.brand}</p>
+          <p className="text-sm text-gray-700">{product.brand}</p>
         </div>
 
         {/* Rating */}
@@ -181,7 +181,7 @@ export default function LazyProductCard({
 
         {/* Trust Signals */}
         <div className="mt-3 pt-3 border-t border-gray-100">
-          <div className="flex items-center gap-4 text-xs text-gray-600">
+          <div className="flex items-center gap-4 text-xs text-gray-700">
             <span className="flex items-center gap-1">
               ✓ <span>Free Prime Shipping</span>
             </span>

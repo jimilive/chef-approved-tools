@@ -9,7 +9,7 @@ export default function TestHeader() {
           <h1 className="text-sm font-semibold text-gray-900">
             ChefApprovedTools
           </h1>
-          <p className="text-xs text-gray-600">
+          <p className="text-xs text-gray-700">
             Professional Equipment Reviews
           </p>
         </div>

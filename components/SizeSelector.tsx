@@ -57,7 +57,7 @@ export default function SizeSelector({
               />
               <div className="flex-1">
                 <div className="font-semibold text-slate-900">{option.label}</div>
-                <div className="text-sm text-slate-600 mt-0.5">{option.description}</div>
+                <div className="text-sm text-slate-700 mt-0.5">{option.description}</div>
               </div>
             </label>
           ))}

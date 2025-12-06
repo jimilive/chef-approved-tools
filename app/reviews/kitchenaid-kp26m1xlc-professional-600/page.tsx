@@ -151,14 +151,14 @@ export default async function KitchenAidProfessional600ReviewPage() {
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ol className="flex space-x-2 text-sm text-gray-600">
+          <ol className="flex space-x-2 text-sm text-gray-700">
             {breadcrumbs.map((crumb, index) => (
               <li key={crumb.name} className="flex items-center">
                 {index > 0 && <span className="mr-2">/</span>}
                 {index === breadcrumbs.length - 1 ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>
                 ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-800 transition-colors">
+                  <Link href={crumb.url} className="text-gray-700 hover:text-orange-800 transition-colors">
                     {crumb.name}
                   </Link>
                 )}

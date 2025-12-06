@@ -106,14 +106,14 @@ export default function ComparisonPage() {
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ol className="flex space-x-2 text-sm text-gray-500">
+          <ol className="flex space-x-2 text-sm text-gray-700">
             {breadcrumbs.map((crumb, index) => (
               <li key={crumb.name} className="flex items-center">
                 {index > 0 && <span className="mr-2">/</span>}
                 {index === breadcrumbs.length - 1 ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>
                 ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-700 transition-colors">
+                  <Link href={crumb.url} className="text-gray-700 hover:text-orange-700 transition-colors">
                     {crumb.name}
                   </Link>
                 )}
@@ -137,7 +137,7 @@ export default function ComparisonPage() {
             </div>
             <div>
               <p className="font-semibold text-slate-900">Scott Bradley</p>
-              <p className="text-sm text-slate-600">24 Years Professional Kitchen Experience</p>
+              <p className="text-sm text-slate-700">24 Years Professional Kitchen Experience</p>
             </div>
           </div>
 
@@ -162,7 +162,7 @@ export default function ComparisonPage() {
                 <h3 className="font-bold text-slate-900">Overall Winner</h3>
               </div>
               <p className="text-lg font-semibold text-orange-700">{comparisonData.quickVerdict.overallWinner}</p>
-              <p className="text-sm text-slate-600 mt-2">[Why it wins overall]</p>
+              <p className="text-sm text-slate-700 mt-2">[Why it wins overall]</p>
             </div>
 
             <div className="bg-white border border-green-200 rounded-xl p-6">
@@ -171,7 +171,7 @@ export default function ComparisonPage() {
                 <h3 className="font-bold text-slate-900">Best Value</h3>
               </div>
               <p className="text-lg font-semibold text-green-700">{comparisonData.quickVerdict.budgetWinner}</p>
-              <p className="text-sm text-slate-600 mt-2">[Why it's best value]</p>
+              <p className="text-sm text-slate-700 mt-2">[Why it's best value]</p>
             </div>
 
             <div className="bg-white border border-purple-200 rounded-xl p-6">
@@ -180,7 +180,7 @@ export default function ComparisonPage() {
                 <h3 className="font-bold text-slate-900">Premium Choice</h3>
               </div>
               <p className="text-lg font-semibold text-purple-700">{comparisonData.quickVerdict.premiumChoice}</p>
-              <p className="text-sm text-slate-600 mt-2">[Why it's premium]</p>
+              <p className="text-sm text-slate-700 mt-2">[Why it's premium]</p>
             </div>
           </div>
         </section>
@@ -192,7 +192,7 @@ export default function ComparisonPage() {
             {comparisonData.products.map((product, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{product.name}</h3>
-                <p className="text-sm text-slate-600 mb-4">{product.brand}</p>
+                <p className="text-sm text-slate-700 mb-4">{product.brand}</p>
 
                 {/* Rating */}
                 <div className="flex items-center mb-4">
@@ -275,7 +275,7 @@ export default function ComparisonPage() {
                     <td className="p-4 text-center">
                       {criteria.winner === 'A' && <span className="text-green-600 font-semibold">✓ {comparisonData.products[0].brand}</span>}
                       {criteria.winner === 'B' && <span className="text-green-600 font-semibold">✓ {comparisonData.products[1].brand}</span>}
-                      {criteria.winner === 'Tie' && <span className="text-gray-600">Tie</span>}
+                      {criteria.winner === 'Tie' && <span className="text-gray-700">Tie</span>}
                     </td>
                   </tr>
                 ))}

@@ -60,7 +60,7 @@ export default function FAQ() {
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
           Frequently Asked Questions
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-700 max-w-3xl mx-auto">
           Everything you need to know about our reviews, testing process, and recommendations
         </p>
       </div>
@@ -83,7 +83,7 @@ export default function FAQ() {
                 </h3>
                 <div className="flex-shrink-0 ml-2">
                   <svg
-                    className={`w-6 h-6 text-gray-600 transition-transform duration-200 ${
+                    className={`w-6 h-6 text-gray-700 transition-transform duration-200 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -114,7 +114,7 @@ export default function FAQ() {
       </div>
       
       <div className="mt-12 text-center">
-        <p className="text-gray-600 mb-4">
+        <p className="text-gray-700 mb-4">
           Still have questions?
         </p>
         <a

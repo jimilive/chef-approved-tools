@@ -43,7 +43,7 @@ export default function EmailCaptureBox({
         </Link>
       </div>
 
-      <p className="text-xs text-gray-600 mt-4 text-center">
+      <p className="text-xs text-gray-700 mt-4 text-center">
         {disclaimer}
       </p>
     </div>

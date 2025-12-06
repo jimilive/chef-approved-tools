@@ -49,7 +49,7 @@ export default function InteractiveProductCard({
       </div>
 
       {/* Brand */}
-      <p className="text-slate-600 mb-3 text-sm">
+      <p className="text-slate-700 mb-3 text-sm">
         by {product.brand}
       </p>
       
@@ -57,7 +57,7 @@ export default function InteractiveProductCard({
       <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-4">
         <div className="flex items-center gap-1">
           <span className="text-amber-400 text-base">★★★★★</span>
-          <span className="text-slate-600 text-sm ml-1">9.8/10</span>
+          <span className="text-slate-700 text-sm ml-1">9.8/10</span>
         </div>
       </div>
       
@@ -95,7 +95,7 @@ export default function InteractiveProductCard({
       </div>
       
       {/* Disclaimer */}
-      <p className="text-xs text-gray-600 mt-3 text-center">
+      <p className="text-xs text-gray-700 mt-3 text-center">
         <span className="text-orange-800 font-medium">Affiliate link</span>
       </p>
     </div>

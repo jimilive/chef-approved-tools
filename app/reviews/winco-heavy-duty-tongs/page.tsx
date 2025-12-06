@@ -226,7 +226,7 @@ export default async function ProductReview() {
                   </div>
                 </div>
 
-                <p className="text-xs text-slate-600 text-center mt-4">
+                <p className="text-xs text-slate-700 text-center mt-4">
                   {reviewData.whereToBuy.disclaimer}
                 </p>
               </div>

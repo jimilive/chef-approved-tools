@@ -135,7 +135,7 @@ export function ExitIntentTrigger({ children }: { children: React.ReactNode }) {
       <div className="bg-white rounded-lg max-w-md w-full p-6 relative">
         <button
           onClick={() => setShowModal(false)}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl"
+          className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 text-xl"
         >
           ×
         </button>

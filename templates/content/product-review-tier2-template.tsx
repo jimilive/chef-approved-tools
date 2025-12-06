@@ -112,14 +112,14 @@ export default function Tier2ReviewPage() {
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ol className="flex space-x-2 text-sm text-gray-500">
+          <ol className="flex space-x-2 text-sm text-gray-700">
             {breadcrumbs.map((crumb, index) => (
               <li key={crumb.name} className="flex items-center">
                 {index > 0 && <span className="mr-2">/</span>}
                 {index === breadcrumbs.length - 1 ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>
                 ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-700 transition-colors">
+                  <Link href={crumb.url} className="text-gray-700 hover:text-orange-700 transition-colors">
                     {crumb.name}
                   </Link>
                 )}
@@ -152,7 +152,7 @@ export default function Tier2ReviewPage() {
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Scott Bradley</p>
-                <p className="text-sm text-slate-600">Professional Chef • 45 Years Experience</p>
+                <p className="text-sm text-slate-700">Professional Chef • 45 Years Experience</p>
               </div>
             </div>
 
@@ -167,7 +167,7 @@ export default function Tier2ReviewPage() {
                       <Star key={i} className={`w-3 h-3 ${i < Math.floor(productData.customerRating) ? 'fill-current' : ''}`} />
                     ))}
                   </div>
-                  <div className="text-xs text-slate-600">{productData.customerReviewCount.toLocaleString()} Reviews</div>
+                  <div className="text-xs text-slate-700">{productData.customerReviewCount.toLocaleString()} Reviews</div>
                 </div>
               </div>
 
@@ -180,7 +180,7 @@ export default function Tier2ReviewPage() {
                       <Star key={i} className={`w-3 h-3 ${i < Math.floor(productData.expertRating) ? 'fill-current' : ''}`} />
                     ))}
                   </div>
-                  <div className="text-xs text-slate-600">Expert Analysis</div>
+                  <div className="text-xs text-slate-700">Expert Analysis</div>
                 </div>
               </div>
             </div>
@@ -225,7 +225,7 @@ export default function Tier2ReviewPage() {
         <section className="mb-8">
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <div className="text-center">
-              <p className="text-sm text-gray-500 mb-4">[ADD PRODUCT IMAGE]</p>
+              <p className="text-sm text-gray-700 mb-4">[ADD PRODUCT IMAGE]</p>
               <Link
                 href={productData.affiliateLinks[0].url}
                 className="inline-block bg-orange-600 hover:bg-orange-800 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
@@ -245,22 +245,22 @@ export default function Tier2ReviewPage() {
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <TrendingUp className="w-8 h-8 text-orange-700 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">[KEY FEATURE 1]</h3>
-              <p className="text-sm text-slate-600">[Professional context on why this matters]</p>
+              <p className="text-sm text-slate-700">[Professional context on why this matters]</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Shield className="w-8 h-8 text-green-600 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">[BUILD QUALITY]</h3>
-              <p className="text-sm text-slate-600">[Expert assessment of construction]</p>
+              <p className="text-sm text-slate-700">[Expert assessment of construction]</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Award className="w-8 h-8 text-blue-600 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">[PERFORMANCE]</h3>
-              <p className="text-sm text-slate-600">[Based on specs + similar products]</p>
+              <p className="text-sm text-slate-700">[Based on specs + similar products]</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <CheckCircle className="w-8 h-8 text-purple-600 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">[VALUE]</h3>
-              <p className="text-sm text-slate-600">[Professional value assessment]</p>
+              <p className="text-sm text-slate-700">[Professional value assessment]</p>
             </div>
           </div>
         </section>
@@ -313,7 +313,7 @@ export default function Tier2ReviewPage() {
               </div>
 
               <div className="mt-4 pt-4 border-t border-gray-200">
-                <p className="text-sm text-slate-600 italic">
+                <p className="text-sm text-slate-700 italic">
                   Data synthesized from {productData.researchSources.customerReviews.toLocaleString()} verified
                   customer reviews on Amazon, focusing on patterns from 4-star and 3-star reviews (most balanced perspectives).
                 </p>
@@ -389,7 +389,7 @@ export default function Tier2ReviewPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-gray-600 mt-3">
+          <p className="text-sm text-gray-700 mt-3">
             ✓ = Products I've personally used long-term. Others assessed from specs, reviews, and professional knowledge.
           </p>
         </section>

@@ -164,7 +164,7 @@ export default async function BestChefKnivesPage() {
           <p className="text-xl text-slate-700 leading-relaxed mb-4">
             After 24 years managing professional kitchens doing $80K+ monthly revenue at Mellow Mushroom and testing knives in high-volume operations, here are the chef knives that actually survive real restaurant abuse.
           </p>
-          <div className="flex items-center gap-4 text-sm text-slate-600">
+          <div className="flex items-center gap-4 text-sm text-slate-700">
             <span>By Scott Bradley, Professional Chef</span>
             <span>•</span>
             <span>Published: November 10, 2025</span>

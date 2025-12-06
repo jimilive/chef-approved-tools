@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
             Professional Kitchen Experience
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-700 max-w-3xl mx-auto">
             Equipment reviews based on real commercial kitchen testing and 24 years of restaurant experience
           </p>
         </div>
@@ -58,8 +58,8 @@ export default function TestimonialsSection() {
               {/* Author Info */}
               <div className="border-t border-gray-200 pt-4">
                 <div className="font-semibold text-slate-900">{testimonial.author}</div>
-                <div className="text-sm text-slate-600">{testimonial.role}</div>
-                <div className="text-xs text-slate-600">{testimonial.location}</div>
+                <div className="text-sm text-slate-700">{testimonial.role}</div>
+                <div className="text-xs text-slate-700">{testimonial.location}</div>
               </div>
             </div>
           ))}
@@ -78,7 +78,7 @@ export default function TestimonialsSection() {
 
         {/* CTA */}
         <div className="text-center mt-8">
-          <p className="text-slate-600 mb-4">
+          <p className="text-slate-700 mb-4">
             Get professional equipment insights from 24 years of restaurant experience
           </p>
           <a

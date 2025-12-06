@@ -91,7 +91,7 @@ export default function GuidesPage() {
         <h1 className="text-4xl font-bold mb-4">
           Kitchen Equipment Buying Guides
         </h1>
-        <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+        <p className="text-lg text-slate-700 mb-6 leading-relaxed">
           Expert guidance from a certified chef with 24 years in professional kitchens. Every recommendation
           here has survived real restaurant use—not laboratory testing, not sponsored reviews, just equipment
           that works when you need it to.
@@ -101,17 +101,17 @@ export default function GuidesPage() {
           <h2 className="text-xl font-bold mb-3 text-slate-900">
             How to Use These Guides
           </h2>
-          <p className="text-slate-600 leading-relaxed mb-3">
+          <p className="text-slate-700 leading-relaxed mb-3">
             These aren&rsquo;t affiliate-stuffed product roundups. Each guide focuses on equipment I&rsquo;ve actually used in
             high-volume commercial kitchens or tested extensively at home. You&rsquo;ll find:
           </p>
-          <ul className="text-slate-600 leading-relaxed ml-5 mb-3">
+          <ul className="text-slate-700 leading-relaxed ml-5 mb-3">
             <li><strong>Specific recommendations</strong> with links to detailed reviews</li>
             <li><strong>Professional insights</strong> on what separates quality from marketing</li>
             <li><strong>Common mistakes</strong> that waste money and frustration</li>
             <li><strong>Maintenance tips</strong> that extend equipment lifespan</li>
           </ul>
-          <p className="text-slate-600 leading-relaxed">
+          <p className="text-slate-700 leading-relaxed">
             I update these guides quarterly based on new testing, price changes, and availability updates. If a product
             stops meeting standards or a better option appears, the guide changes.
           </p>
@@ -142,7 +142,7 @@ export default function GuidesPage() {
             <a href={guide.href} className="no-underline">
               <div className="bg-white rounded-xl shadow-sm p-8 border border-slate-200 transition-shadow duration-200 hover:shadow-lg">
                 <h3 className="text-2xl font-bold mb-3 text-slate-900">{guide.title}</h3>
-                <p className="text-slate-600 mb-4">{guide.description}</p>
+                <p className="text-slate-700 mb-4">{guide.description}</p>
                 <span className="text-orange-700 font-semibold">Read Guide →</span>
               </div>
             </a>

@@ -116,14 +116,14 @@ export default function ProductComparisonTable({
           {title}
         </h2>
         {subtitle && (
-          <p className="text-base text-slate-600 leading-relaxed">
+          <p className="text-base text-slate-700 leading-relaxed">
             {subtitle}
           </p>
         )}
       </div>
 
       {introText && (
-        <div className="text-slate-600 mb-6 leading-relaxed text-base">
+        <div className="text-slate-700 mb-6 leading-relaxed text-base">
           {introText}
         </div>
       )}
@@ -250,7 +250,7 @@ export default function ProductComparisonTable({
                         const isFeatured = product.isFeatured
                         const isHighlighted = feature.highlights?.includes(productIndex)
                         const bgColor = isHighlighted ? 'bg-green-50' : ''
-                        const textColor = isHighlighted ? 'font-semibold text-green-900' : 'text-slate-600'
+                        const textColor = isHighlighted ? 'font-semibold text-green-900' : 'text-slate-700'
                         const borderColor = isFeatured ? 'border-l-2 border-orange-200' : 'border-l border-gray-200'
 
                         return (
@@ -271,7 +271,7 @@ export default function ProductComparisonTable({
 
       {/* Mobile scroll hint */}
       <div className="sm:hidden text-center mt-3">
-        <p className="text-xs text-slate-600 italic">
+        <p className="text-xs text-slate-700 italic">
           👉 Scroll horizontally to see all products
         </p>
       </div>

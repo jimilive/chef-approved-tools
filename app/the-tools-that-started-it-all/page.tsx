@@ -158,7 +158,7 @@ export default function ToolsThatStartedItAllPage() {
 
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  J.A. Henckels Sharpening Steel <span className="text-sm text-slate-600">(Review coming soon)</span>
+                  J.A. Henckels Sharpening Steel <span className="text-sm text-slate-700">(Review coming soon)</span>
                 </h3>
                 <p className="text-slate-700 leading-relaxed">
                   This was part of the required kit. I hone every knife before service. The steel keeps edges aligned between using a whetstone to sharpen. Make sure to clean it every once in a while to keep the ridges clear and functional.
@@ -189,7 +189,7 @@ export default function ToolsThatStartedItAllPage() {
 
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  Microplane Zester <span className="text-sm text-slate-600">(Review coming soon)</span>
+                  Microplane Zester <span className="text-sm text-slate-700">(Review coming soon)</span>
                 </h3>
                 <p className="text-slate-700 leading-relaxed">
                   Required for baking class. Turns out zesting citrus, grating hard cheeses, and finishing dishes with fresh nutmeg became regular parts of the job. This tool earned permanent space in my roll.

@@ -42,7 +42,7 @@ export default function DateDisplay({
   if (variant === 'review') {
     // Review format: "Published: October 15, 2024 • Updated: January 20, 2025"
     return (
-      <div className={`text-sm text-slate-600 ${className}`}>
+      <div className={`text-sm text-slate-700 ${className}`}>
         <time dateTime={published}>Published: {publishedFormatted}</time>
         {updatedFormatted && (
           <>
@@ -56,7 +56,7 @@ export default function DateDisplay({
 
   // Blog format: "November 5, 2024 • Updated: January 10, 2025"
   return (
-    <div className={`text-sm text-slate-600 ${className}`}>
+    <div className={`text-sm text-slate-700 ${className}`}>
       <time dateTime={published}>{publishedFormatted}</time>
       {updatedFormatted && (
         <>

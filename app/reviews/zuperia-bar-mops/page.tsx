@@ -152,7 +152,7 @@ export default async function ProductReview() {
         <div className="max-w-[900px] mx-auto px-5">
 
           {/* BREADCRUMBS */}
-          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
             <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
@@ -308,7 +308,7 @@ export default async function ProductReview() {
                 </a>
               </p>
 
-              <p className="text-xs text-slate-600 text-center mt-3">
+              <p className="text-xs text-slate-700 text-center mt-3">
                 As an Amazon Associate, I earn from qualifying purchases.
               </p>
             </div>

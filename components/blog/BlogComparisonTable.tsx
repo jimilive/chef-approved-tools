@@ -127,13 +127,13 @@ export default function BlogComparisonTable({
                     <span className={`font-semibold ${getRatingColor(colAData.rating)}`}>
                       {colAData.rating}
                     </span>
-                    <p className="text-sm text-slate-600 mt-1">{colAData.description}</p>
+                    <p className="text-sm text-slate-700 mt-1">{colAData.description}</p>
                   </td>
                   <td className="p-4">
                     <span className={`font-semibold ${getRatingColor(colBData.rating)}`}>
                       {colBData.rating}
                     </span>
-                    <p className="text-sm text-slate-600 mt-1">{colBData.description}</p>
+                    <p className="text-sm text-slate-700 mt-1">{colBData.description}</p>
                   </td>
                 </tr>
               )

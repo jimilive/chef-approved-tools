@@ -198,7 +198,7 @@ export default async function ProductReview() {
                         <p><strong>Dimensions:</strong> {option.dimensions}</p>
                         <p><strong>Capacity:</strong> {option.capacity}</p>
                         <p><strong>Best for:</strong> {option.bestFor}</p>
-                        <p className="text-xs text-gray-600">{option.includes}</p>
+                        <p className="text-xs text-gray-700">{option.includes}</p>
                       </div>
 
                       <CTAVisibilityTracker
@@ -254,7 +254,7 @@ export default async function ProductReview() {
                   </div>
                 </div>
 
-                <p className="text-xs text-slate-600 text-center mt-4">
+                <p className="text-xs text-slate-700 text-center mt-4">
                   As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
                 </p>
               </div>

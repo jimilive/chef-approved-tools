@@ -98,12 +98,12 @@ export default function StarRating({
         {stars}
       </div>
       {showNumeric && (
-        <span className="ml-2 text-sm text-gray-600">
+        <span className="ml-2 text-sm text-gray-700">
           {rating.toFixed(1)}
         </span>
       )}
       {reviewCount !== undefined && (
-        <span className="ml-2 text-sm text-gray-600">
+        <span className="ml-2 text-sm text-gray-700">
           ({reviewCount.toLocaleString()} reviews)
         </span>
       )}

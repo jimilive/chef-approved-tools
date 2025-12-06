@@ -145,7 +145,7 @@ export default async function [PRODUCT_NAME]ReviewPage() {
         <div className="max-w-[900px] mx-auto px-5">
 
           {/* BREADCRUMBS */}
-          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
             <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
@@ -231,7 +231,7 @@ export default async function [PRODUCT_NAME]ReviewPage() {
               {reviewData.whereToBuy.title}
             </h2>
 
-            <p className="text-slate-600 leading-relaxed mb-6">
+            <p className="text-slate-700 leading-relaxed mb-6">
               {reviewData.whereToBuy.introText}
             </p>
 
@@ -244,7 +244,7 @@ export default async function [PRODUCT_NAME]ReviewPage() {
                   <div className="flex flex-col gap-4">
                     <div className="text-center">
                       <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">{retailer.name}</h3>
-                      <p className="text-sm text-slate-600 m-0">{retailer.description}</p>
+                      <p className="text-sm text-slate-700 m-0">{retailer.description}</p>
                     </div>
                     <CTAVisibilityTracker ctaId={retailer.ctaId} position="mid_article">
                       <a
@@ -264,7 +264,7 @@ export default async function [PRODUCT_NAME]ReviewPage() {
               ))}
             </div>
 
-            <p className="text-sm text-slate-500 mt-6 italic">
+            <p className="text-sm text-slate-700 mt-6 italic">
               {reviewData.whereToBuy.disclaimer}
             </p>
           </div>
@@ -301,11 +301,11 @@ export default async function [PRODUCT_NAME]ReviewPage() {
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-xl font-bold text-slate-900 mb-2 mt-0">About Scott Bradley</h3>
-                  <p className="text-base text-slate-600 m-0">Professional Chef • 24 Years in Professional Kitchens</p>
+                  <p className="text-base text-slate-700 m-0">Professional Chef • 24 Years in Professional Kitchens</p>
                 </div>
               </div>
 
-              <div className="text-slate-600 leading-[1.8]">
+              <div className="text-slate-700 leading-[1.8]">
                 <p className="mb-4">
                   <strong>Scott Bradley brings 24 years of professional kitchen experience to Chef Approved Tools.</strong> As former Kitchen Manager at Mellow Mushroom, he managed operations generating $80K+ monthly revenue while overseeing equipment procurement, staff training, and quality control for a high-volume operation.
                 </p>
@@ -320,7 +320,7 @@ export default async function [PRODUCT_NAME]ReviewPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-6 border-t border-gray-200">
-                <div className="flex items-start gap-3 text-sm text-slate-600">
+                <div className="flex items-start gap-3 text-sm text-slate-700">
                   <div className="text-xl flex-shrink-0">🎓</div>
                   <div>
                     <strong className="block text-slate-900 font-semibold mb-0.5">Culinary Degree</strong>
@@ -328,7 +328,7 @@ export default async function [PRODUCT_NAME]ReviewPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 text-sm text-slate-600">
+                <div className="flex items-start gap-3 text-sm text-slate-700">
                   <div className="text-xl flex-shrink-0">👨‍🍳</div>
                   <div>
                     <strong className="block text-slate-900 font-semibold mb-0.5">Professional Experience</strong>
@@ -336,7 +336,7 @@ export default async function [PRODUCT_NAME]ReviewPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 text-sm text-slate-600">
+                <div className="flex items-start gap-3 text-sm text-slate-700">
                   <div className="text-xl flex-shrink-0">🏆</div>
                   <div>
                     <strong className="block text-slate-900 font-semibold mb-0.5">Professional Roles</strong>
@@ -344,7 +344,7 @@ export default async function [PRODUCT_NAME]ReviewPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 text-sm text-slate-600">
+                <div className="flex items-start gap-3 text-sm text-slate-700">
                   <div className="text-xl flex-shrink-0">🔧</div>
                   <div>
                     <strong className="block text-slate-900 font-semibold mb-0.5">Testing Approach</strong>

@@ -75,7 +75,7 @@ export default function CookieConsent() {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               🍪 Cookie Settings
             </h3>
-            <p className="text-sm text-gray-600 mb-3">
+            <p className="text-sm text-gray-700 mb-3">
               We use cookies to enhance your experience, analyze site traffic, and show relevant ads. 
               By clicking &ldquo;Accept All&rdquo;, you consent to our use of cookies. 
               <Link href="/privacy-policy" className="underline ml-1 text-gray-700 hover:text-gray-900">View privacy policy</Link>

@@ -195,7 +195,7 @@ export default async function ChefApprovedKitchenKit() {
             <p className="text-lg sm:text-xl text-orange-700 font-semibold mb-4">
               The Essential Foundation
             </p>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-700 max-w-3xl mx-auto">
               This is the unbeatable professional foundation. These five items will handle 90% of your daily
               cooking tasks with performance and reliability.
             </p>
@@ -235,7 +235,7 @@ export default async function ChefApprovedKitchenKit() {
                   </h3>
 
                   {/* Justification */}
-                  <p className="text-sm text-slate-600 mb-4 text-center leading-relaxed">
+                  <p className="text-sm text-slate-700 mb-4 text-center leading-relaxed">
                     {product.justification}
                   </p>
 
@@ -334,7 +334,7 @@ export default async function ChefApprovedKitchenKit() {
                   </h3>
 
                   {/* Justification */}
-                  <p className="text-base text-slate-600 mb-6 text-center leading-relaxed">
+                  <p className="text-base text-slate-700 mb-6 text-center leading-relaxed">
                     {product.justification}
                   </p>
 

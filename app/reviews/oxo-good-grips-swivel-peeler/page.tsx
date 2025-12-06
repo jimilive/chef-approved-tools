@@ -119,7 +119,7 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
         <div className="max-w-[900px] mx-auto px-5">
 
           {/* BREADCRUMBS */}
-          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
             <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
@@ -246,7 +246,7 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
               {reviewData.testimonials.reviews.map((review, index) => (
                 <div key={index} className="bg-slate-50 p-5 rounded-lg">
                   <p className="text-slate-700 mb-2">&quot;{review.quote}&quot;</p>
-                  <p className="text-sm text-slate-600">— Amazon verified purchaser ({review.author})</p>
+                  <p className="text-sm text-slate-700">— Amazon verified purchaser ({review.author})</p>
                 </div>
               ))}
             </div>

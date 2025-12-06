@@ -87,14 +87,14 @@ export default function ProductReviewPage() {
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ol className="flex space-x-2 text-sm text-gray-500">
+          <ol className="flex space-x-2 text-sm text-gray-700">
             {breadcrumbs.map((crumb, index) => (
               <li key={crumb.name} className="flex items-center">
                 {index > 0 && <span className="mr-2">/</span>}
                 {index === breadcrumbs.length - 1 ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>
                 ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-700 transition-colors">
+                  <Link href={crumb.url} className="text-gray-700 hover:text-orange-700 transition-colors">
                     {crumb.name}
                   </Link>
                 )}
@@ -119,7 +119,7 @@ export default function ProductReviewPage() {
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Scott Bradley</p>
-                <p className="text-sm text-slate-600">Professional Chef • 45 Years Experience</p>
+                <p className="text-sm text-slate-700">Professional Chef • 45 Years Experience</p>
               </div>
             </div>
 
@@ -132,7 +132,7 @@ export default function ProductReviewPage() {
                     <Star key={i} className={`w-4 h-4 ${i < Math.floor(productData.expertRating) ? 'fill-current' : ''}`} />
                   ))}
                 </div>
-                <div className="text-xs text-slate-600">Chef Approved Rating</div>
+                <div className="text-xs text-slate-700">Chef Approved Rating</div>
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@ export default function ProductReviewPage() {
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             {/* Add your product image here */}
             <div className="text-center mb-4">
-              <p className="text-sm text-gray-500 mb-4">[ADD PRODUCT IMAGE]</p>
+              <p className="text-sm text-gray-700 mb-4">[ADD PRODUCT IMAGE]</p>
               <Link
                 href={productData.affiliateLinks[0].url}
                 className="inline-block bg-orange-600 hover:bg-orange-800 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
@@ -173,22 +173,22 @@ export default function ProductReviewPage() {
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <TrendingUp className="w-8 h-8 text-orange-700 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">[FEATURE 1]</h3>
-              <p className="text-sm text-slate-600">[Benefit description]</p>
+              <p className="text-sm text-slate-700">[Benefit description]</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Shield className="w-8 h-8 text-green-600 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">[FEATURE 2]</h3>
-              <p className="text-sm text-slate-600">[Benefit description]</p>
+              <p className="text-sm text-slate-700">[Benefit description]</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Clock className="w-8 h-8 text-blue-600 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">[FEATURE 3]</h3>
-              <p className="text-sm text-slate-600">[Benefit description]</p>
+              <p className="text-sm text-slate-700">[Benefit description]</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <DollarSign className="w-8 h-8 text-purple-600 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">[FEATURE 4]</h3>
-              <p className="text-sm text-slate-600">[Benefit description]</p>
+              <p className="text-sm text-slate-700">[Benefit description]</p>
             </div>
           </div>
         </section>

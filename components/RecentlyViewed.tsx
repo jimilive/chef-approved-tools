@@ -73,7 +73,7 @@ export default function RecentlyViewed() {
         </h2>
       </div>
 
-      <p className="text-base text-gray-600 mb-8 leading-relaxed">
+      <p className="text-base text-gray-700 mb-8 leading-relaxed">
         Pick up where you left off. These are the products you&apos;ve been researching.
       </p>
 
@@ -91,7 +91,7 @@ export default function RecentlyViewed() {
             )}
 
             {/* Category Tag */}
-            <div className="text-xs text-gray-600 uppercase tracking-wider mb-2 font-semibold">
+            <div className="text-xs text-gray-700 uppercase tracking-wider mb-2 font-semibold">
               {product.category}
             </div>
 
@@ -139,7 +139,7 @@ export default function RecentlyViewed() {
               localStorage.removeItem(STORAGE_KEY)
               setRecentProducts([])
             }}
-            className="bg-transparent border-none text-gray-600 underline text-sm cursor-pointer px-4 py-2 hover:text-gray-900"
+            className="bg-transparent border-none text-gray-700 underline text-sm cursor-pointer px-4 py-2 hover:text-gray-900"
           >
             Clear viewing history
           </button>

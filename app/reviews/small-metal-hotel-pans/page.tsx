@@ -127,13 +127,13 @@ export default async function ProductReview() {
               Home
             </Link>
           </li>
-          <li className="text-gray-600">/</li>
+          <li className="text-gray-700">/</li>
           <li>
             <Link href="/reviews" className="text-gray-700 hover:text-orange-700 transition-colors">
               Reviews
             </Link>
           </li>
-          <li className="text-gray-600">/</li>
+          <li className="text-gray-700">/</li>
           <li className="text-gray-900 font-medium">{reviewData.breadcrumb.productName}</li>
         </ol>
       </nav>
@@ -234,7 +234,7 @@ export default async function ProductReview() {
                   >
                     <h4 className="font-bold text-sm text-gray-900 mb-1">{lid.size}</h4>
                     <p className="text-xs text-gray-700 mb-3">{lid.description}</p>
-                    <p className="text-xs text-gray-600 mb-3">{lid.includes}</p>
+                    <p className="text-xs text-gray-700 mb-3">{lid.includes}</p>
 
                     <CTAVisibilityTracker
                       ctaId={`review-${reviewData.productSlug}-lid-${lid.id}`}

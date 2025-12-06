@@ -307,7 +307,7 @@ export default function GlossaryPage() {
               <span className="font-semibold text-slate-900 group-hover:text-orange-800">
                 Essential Equipment Terms
               </span>
-              <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-orange-800" />
+              <ChevronRight className="w-5 h-5 text-slate-700 group-hover:text-orange-800" />
             </a>
             <a
               href="#recipe-conversions"
@@ -316,7 +316,7 @@ export default function GlossaryPage() {
               <span className="font-semibold text-slate-900 group-hover:text-orange-800">
                 Professional Recipe Conversions
               </span>
-              <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-orange-800" />
+              <ChevronRight className="w-5 h-5 text-slate-700 group-hover:text-orange-800" />
             </a>
             <a
               href="#knife-cuts"
@@ -325,7 +325,7 @@ export default function GlossaryPage() {
               <span className="font-semibold text-slate-900 group-hover:text-orange-800">
                 Professional Knife Cuts
               </span>
-              <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-orange-800" />
+              <ChevronRight className="w-5 h-5 text-slate-700 group-hover:text-orange-800" />
             </a>
           </div>
         </div>

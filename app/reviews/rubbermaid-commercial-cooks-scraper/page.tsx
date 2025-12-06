@@ -143,7 +143,7 @@ export default async function RubbermaidScraperReview() {
         <div className="max-w-[900px] mx-auto px-5">
 
           {/* BREADCRUMBS */}
-          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
             {categoryBreadcrumb ? (
@@ -183,7 +183,7 @@ export default async function RubbermaidScraperReview() {
                       href={affiliateUrl}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
-                      className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-6 rounded-lg font-semibold transition-colors"
+                      className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-6 rounded-lg font-semibold transition-colors"
                     >
                       Check Price on Amazon →
                     </a>
@@ -198,14 +198,14 @@ export default async function RubbermaidScraperReview() {
                       href={affiliate9_5Url}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
-                      className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-6 rounded-lg font-semibold transition-colors"
+                      className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-6 rounded-lg font-semibold transition-colors"
                     >
                       Check Price on Amazon →
                     </a>
                   </CTAVisibilityTracker>
                 </div>
 
-                <p className="text-xs text-slate-600 mt-3">
+                <p className="text-xs text-slate-700 mt-3">
                   💡 We earn a commission at no extra cost to you.
                 </p>
               </div>
@@ -308,7 +308,7 @@ export default async function RubbermaidScraperReview() {
                   href={affiliateUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
+                  className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                 >
                   Check Price →
                 </a>
@@ -321,14 +321,14 @@ export default async function RubbermaidScraperReview() {
                   href={affiliate9_5Url}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
+                  className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                 >
                   Check Price →
                 </a>
               </CTAVisibilityTracker>
             </div>
           </div>
-          <p className="text-xs text-slate-600 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
+          <p className="text-xs text-slate-700 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
         </div>
 
         {/* User Reviews */}
@@ -344,7 +344,7 @@ export default async function RubbermaidScraperReview() {
                 <p className="text-slate-700 mb-2">
                   &quot;{review.quote}&quot;
                 </p>
-                <p className="text-sm text-slate-600">— {review.author}</p>
+                <p className="text-sm text-slate-700">— {review.author}</p>
               </div>
             ))}
           </div>
@@ -407,7 +407,7 @@ export default async function RubbermaidScraperReview() {
                     href={affiliateUrl}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
+                    className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                   >
                     Check Price →
                   </a>
@@ -420,14 +420,14 @@ export default async function RubbermaidScraperReview() {
                     href={affiliate9_5Url}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
+                    className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                   >
                     Check Price →
                   </a>
                 </CTAVisibilityTracker>
               </div>
             </div>
-            <p className="text-xs text-slate-600 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
+            <p className="text-xs text-slate-700 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
           </div>
         </section>
 
@@ -456,7 +456,7 @@ export default async function RubbermaidScraperReview() {
                   href={affiliateUrl}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
+                  className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                 >
                   Check Price →
                 </a>
@@ -469,14 +469,14 @@ export default async function RubbermaidScraperReview() {
                   href={affiliate9_5Url}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
+                  className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                 >
                   Check Price →
                 </a>
               </CTAVisibilityTracker>
             </div>
           </div>
-          <p className="text-xs text-slate-600 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
+          <p className="text-xs text-slate-700 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
         </div>
 
         {/* FAQ */}
@@ -538,7 +538,7 @@ export default async function RubbermaidScraperReview() {
                     href={affiliateUrl}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
+                    className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                   >
                     Check Price →
                   </a>
@@ -552,7 +552,7 @@ export default async function RubbermaidScraperReview() {
                     href={affiliate9_5Url}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="block w-full bg-[#FF9900] hover:bg-[#e8890a] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
+                    className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                   >
                     Check Price →
                   </a>
@@ -634,7 +634,7 @@ export default async function RubbermaidScraperReview() {
                     href={affiliate9_5Url}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="inline-block bg-[#FF9900] text-white font-semibold px-8 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl hover:bg-[#e8890a]"
+                    className="inline-block bg-[#B45309] text-white font-semibold px-8 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl hover:bg-[#92400E]"
                   >
                     9.5-inch (Home) →
                   </a>

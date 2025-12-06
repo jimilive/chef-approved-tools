@@ -78,7 +78,7 @@ export default function TopPicksComparisonClient({ topPick }: TopPicksComparison
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-slate-900">
             My Top Professional Tool Pick
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-700 max-w-2xl mx-auto">
             After testing hundreds of tools in real restaurant kitchens, this is the one I&apos;d buy again without hesitation.
           </p>
         </div>
@@ -96,7 +96,7 @@ export default function TopPicksComparisonClient({ topPick }: TopPicksComparison
               </div>
 
               {/* Category */}
-              <div className="text-xs text-gray-600 font-medium mb-2 mt-2">
+              <div className="text-xs text-gray-700 font-medium mb-2 mt-2">
                 {pick.category}
               </div>
 
@@ -115,7 +115,7 @@ export default function TopPicksComparisonClient({ topPick }: TopPicksComparison
                     />
                   ))}
                 </div>
-                <span className="text-sm text-gray-600">
+                <span className="text-sm text-gray-700">
                   {pick.rating} ({pick.testPeriod})
                 </span>
               </div>
@@ -131,7 +131,7 @@ export default function TopPicksComparisonClient({ topPick }: TopPicksComparison
               </div>
 
               {/* Why It's Best */}
-              <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+              <p className="text-sm text-gray-700 mb-4 leading-relaxed">
                 {pick.whyBest}
               </p>
 
@@ -139,7 +139,7 @@ export default function TopPicksComparisonClient({ topPick }: TopPicksComparison
               <div className="mb-4">
                 <a
                   href={`/reviews/${pick.id}`}
-                  className="inline-flex items-center text-sm text-slate-600 hover:text-orange-800 font-medium transition-colors"
+                  className="inline-flex items-center text-sm text-slate-700 hover:text-orange-800 font-medium transition-colors"
                 >
                   Read my complete {pick.testPeriod} testing review →
                 </a>
@@ -164,7 +164,7 @@ export default function TopPicksComparisonClient({ topPick }: TopPicksComparison
           <h3 className="text-lg font-bold text-slate-900 mb-2">
             Want My Complete Equipment Rankings?
           </h3>
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-700 mb-4">
             Get my detailed breakdown of kitchen tools tested in professional environments, including budget alternatives and what to avoid.
           </p>
           <a

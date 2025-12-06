@@ -272,7 +272,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
                       }`}
                     >
                       <span className="block text-sm font-semibold text-slate-900">{option.size}</span>
-                      <span className={`block text-xs ${option.label.includes('Reviewed') ? 'text-orange-700 font-medium' : 'text-slate-600'}`}>
+                      <span className={`block text-xs ${option.label.includes('Reviewed') ? 'text-orange-700 font-medium' : 'text-slate-700'}`}>
                         {option.label}
                       </span>
                     </a>

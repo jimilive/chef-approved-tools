@@ -26,7 +26,7 @@ export default function SizingGuide({
       </h2>
 
       {introText && (
-        <div className="text-slate-600 leading-relaxed mb-6">
+        <div className="text-slate-700 leading-relaxed mb-6">
           {introText}
         </div>
       )}
@@ -51,7 +51,7 @@ export default function SizingGuide({
               {size.name}
             </h3>
 
-            <div className="text-sm font-semibold text-slate-600 mb-4">
+            <div className="text-sm font-semibold text-slate-700 mb-4">
               {size.dimensions}
             </div>
 
@@ -63,7 +63,7 @@ export default function SizingGuide({
                 {size.bestFor.map((item, itemIndex) => (
                   <li
                     key={itemIndex}
-                    className="text-sm text-slate-600 pl-5 relative before:content-['•'] before:absolute before:left-0 before:text-green-600 before:font-bold"
+                    className="text-sm text-slate-700 pl-5 relative before:content-['•'] before:absolute before:left-0 before:text-green-600 before:font-bold"
                   >
                     {item}
                   </li>
@@ -80,7 +80,7 @@ export default function SizingGuide({
                   {size.considerations.map((item, itemIndex) => (
                     <li
                       key={itemIndex}
-                      className="text-sm text-slate-600 pl-5 relative before:content-['•'] before:absolute before:left-0 before:text-orange-500 before:font-bold"
+                      className="text-sm text-slate-700 pl-5 relative before:content-['•'] before:absolute before:left-0 before:text-orange-500 before:font-bold"
                     >
                       {item}
                     </li>

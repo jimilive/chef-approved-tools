@@ -97,14 +97,14 @@ export default function Tier3GuidePage() {
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ol className="flex space-x-2 text-sm text-gray-500">
+          <ol className="flex space-x-2 text-sm text-gray-700">
             {breadcrumbs.map((crumb, index) => (
               <li key={crumb.name} className="flex items-center">
                 {index > 0 && <span className="mr-2">/</span>}
                 {index === breadcrumbs.length - 1 ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>
                 ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-700 transition-colors">
+                  <Link href={crumb.url} className="text-gray-700 hover:text-orange-700 transition-colors">
                     {crumb.name}
                   </Link>
                 )}
@@ -119,7 +119,7 @@ export default function Tier3GuidePage() {
         <header className="mb-8">
           {/* TIER 3 BADGE */}
           <div className="inline-flex items-center bg-gray-50 border-2 border-gray-400 rounded-lg px-4 py-2 mb-4">
-            <Search className="w-5 h-5 text-gray-600 mr-2" />
+            <Search className="w-5 h-5 text-gray-700 mr-2" />
             <span className="text-gray-700 font-semibold">
               Researched Recommendation
             </span>
@@ -136,7 +136,7 @@ export default function Tier3GuidePage() {
             </div>
             <div>
               <p className="font-semibold text-slate-900">Scott Bradley</p>
-              <p className="text-sm text-slate-600">24 Years Professional Kitchen Experience</p>
+              <p className="text-sm text-slate-700">24 Years Professional Kitchen Experience</p>
             </div>
           </div>
 

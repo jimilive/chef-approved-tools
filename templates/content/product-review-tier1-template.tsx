@@ -102,14 +102,14 @@ export default function Tier1ReviewPage() {
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ol className="flex space-x-2 text-sm text-gray-500">
+          <ol className="flex space-x-2 text-sm text-gray-700">
             {breadcrumbs.map((crumb, index) => (
               <li key={crumb.name} className="flex items-center">
                 {index > 0 && <span className="mr-2">/</span>}
                 {index === breadcrumbs.length - 1 ? (
                   <span className="text-gray-900 font-medium">{crumb.name}</span>
                 ) : (
-                  <Link href={crumb.url} className="text-gray-600 hover:text-orange-700 transition-colors">
+                  <Link href={crumb.url} className="text-gray-700 hover:text-orange-700 transition-colors">
                     {crumb.name}
                   </Link>
                 )}
@@ -142,7 +142,7 @@ export default function Tier1ReviewPage() {
               </div>
               <div>
                 <p className="font-semibold text-slate-900">Scott Bradley</p>
-                <p className="text-sm text-slate-600">Professional Chef • 45 Years Experience</p>
+                <p className="text-sm text-slate-700">Professional Chef • 45 Years Experience</p>
               </div>
             </div>
 
@@ -155,7 +155,7 @@ export default function Tier1ReviewPage() {
                     <Star key={i} className={`w-4 h-4 ${i < Math.floor(productData.expertRating) ? 'fill-current' : ''}`} />
                   ))}
                 </div>
-                <div className="text-xs text-slate-600">After {productData.testingPeriod}</div>
+                <div className="text-xs text-slate-700">After {productData.testingPeriod}</div>
               </div>
             </div>
           </div>
@@ -186,7 +186,7 @@ export default function Tier1ReviewPage() {
         <section className="mb-8">
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <div className="text-center">
-              <p className="text-sm text-gray-500 mb-4">[ADD YOUR PRODUCT IMAGES - Show wear/use from testing period]</p>
+              <p className="text-sm text-gray-700 mb-4">[ADD YOUR PRODUCT IMAGES - Show wear/use from testing period]</p>
               <Link
                 href={productData.affiliateLinks[0].url}
                 className="inline-block bg-orange-600 hover:bg-orange-800 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
@@ -206,22 +206,22 @@ export default function Tier1ReviewPage() {
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <TrendingUp className="w-8 h-8 text-orange-700 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">[FEATURE 1 FROM EXPERIENCE]</h3>
-              <p className="text-sm text-slate-600">[What you learned about this feature]</p>
+              <p className="text-sm text-slate-700">[What you learned about this feature]</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Shield className="w-8 h-8 text-green-600 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">[DURABILITY FINDING]</h3>
-              <p className="text-sm text-slate-600">[Long-term durability observation]</p>
+              <p className="text-sm text-slate-700">[Long-term durability observation]</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Clock className="w-8 h-8 text-blue-600 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">[EFFICIENCY/TIME]</h3>
-              <p className="text-sm text-slate-600">[Time savings or efficiency gains]</p>
+              <p className="text-sm text-slate-700">[Time savings or efficiency gains]</p>
             </div>
             <div className="bg-white p-4 rounded-lg border border-gray-200">
               <Award className="w-8 h-8 text-purple-600 mb-2" />
               <h3 className="font-semibold text-slate-900 mb-1">[VALUE ASSESSMENT]</h3>
-              <p className="text-sm text-slate-600">[ROI or value over testing period]</p>
+              <p className="text-sm text-slate-700">[ROI or value over testing period]</p>
             </div>
           </div>
         </section>
@@ -344,7 +344,7 @@ export default function Tier1ReviewPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-gray-600 mt-3">
+          <p className="text-sm text-gray-700 mt-3">
             * All comparisons based on my personal hands-on experience with each product
           </p>
         </section>

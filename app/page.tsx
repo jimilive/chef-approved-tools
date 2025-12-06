@@ -133,7 +133,7 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               These Tools Create This Food
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-700 max-w-3xl mx-auto">
               Real equipment, real cooking, real results. No stock photos, no staged shots—just what happens
               when you use the right tools.
             </p>
@@ -158,7 +158,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">
                   Perfect Cast Iron Sear
                 </h3>
-                <p className="text-slate-600 mb-4">
+                <p className="text-slate-700 mb-4">
                   Restaurant-quality crust at home. The right pan makes all the difference.
                 </p>
                 <Link
@@ -187,7 +187,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">
                   The Perfect Smash Burger
                 </h3>
-                <p className="text-slate-600 mb-4">
+                <p className="text-slate-700 mb-4">
                   Cast iron heat retention creates that crispy, caramelized edge every time.
                 </p>
                 <Link
@@ -216,7 +216,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">
                   Knife-Friendly, Dishwasher-Safe
                 </h3>
-                <p className="text-slate-600 mb-4">
+                <p className="text-slate-700 mb-4">
                   After 20 years with wood boards, I switched. This changed everything.
                 </p>
                 <Link
@@ -245,7 +245,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">
                   Sunday Pot Roast Perfection
                 </h3>
-                <p className="text-slate-600 mb-4">
+                <p className="text-slate-700 mb-4">
                   Dutch oven cooking: low, slow, and foolproof. This is comfort food done right.
                 </p>
                 <Link
@@ -274,7 +274,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">
                   Eggs That Don&apos;t Stick
                 </h3>
-                <p className="text-slate-600 mb-4">
+                <p className="text-slate-700 mb-4">
                   The secret to restaurant breakfast? The right skillet, properly heated.
                 </p>
                 <Link
@@ -303,7 +303,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">
                   Fall-Off-The-Bone Ribs
                 </h3>
-                <p className="text-slate-600 mb-4">
+                <p className="text-slate-700 mb-4">
                   Perfect ribs every time. The right equipment makes all the difference.
                 </p>
                 <Link

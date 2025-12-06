@@ -9,7 +9,7 @@ export function WhyListenSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             Why Listen to Me?
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-700 max-w-2xl mx-auto">
             Because I&apos;ve actually worked the line—not just tested products for affiliate commissions.
           </p>
         </div>
@@ -21,7 +21,7 @@ export function WhyListenSection() {
               <h3 className="text-2xl font-bold text-slate-900 mb-3">
                 24 Years in Professional Kitchens
               </h3>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-700 leading-relaxed">
                 From high-volume pizza operations to Purple Café (6 years),
                 Il Pizzaiolo, Feierabend, and Paragary&apos;s. I know what holds up under restaurant abuse.
               </p>
@@ -31,7 +31,7 @@ export function WhyListenSection() {
               <h3 className="text-2xl font-bold text-slate-900 mb-3">
                 🎓 Formal Culinary Training
               </h3>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-700 leading-relaxed">
                 A.A.S. in Culinary Arts from Seattle Central College (2005-2007). Learned the foundations,
                 then spent two decades refining them.
               </p>
@@ -41,7 +41,7 @@ export function WhyListenSection() {
               <h3 className="text-2xl font-bold text-slate-900 mb-3">
                 ⚖️ Honest Reviews, Transparent System
               </h3>
-              <p className="text-slate-600 leading-relaxed mb-4">
+              <p className="text-slate-700 leading-relaxed mb-4">
                 I only recommend what I&apos;ve actually used—often for years. Every product has pros AND cons.
                 Perfect reviews are fake reviews.
               </p>
@@ -125,7 +125,7 @@ export function ShopByCategorySection() {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             Shop by Category
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-700 max-w-2xl mx-auto">
             Professional equipment recommendations for home cooks
           </p>
         </div>
@@ -142,7 +142,7 @@ export function ShopByCategorySection() {
             <h3 className="text-2xl font-bold text-center text-slate-900 mb-3">
               Professional Knives
             </h3>
-            <p className="text-slate-600 text-center leading-relaxed">
+            <p className="text-slate-700 text-center leading-relaxed">
               German steel, Japanese precision, commercial durability
             </p>
           </Link>
@@ -158,7 +158,7 @@ export function ShopByCategorySection() {
             <h3 className="text-2xl font-bold text-center text-slate-900 mb-3">
               Restaurant Cookware
             </h3>
-            <p className="text-slate-600 text-center leading-relaxed">
+            <p className="text-slate-700 text-center leading-relaxed">
               Cast iron, stainless steel, what actually lasts
             </p>
           </Link>
@@ -174,7 +174,7 @@ export function ShopByCategorySection() {
             <h3 className="text-2xl font-bold text-center text-slate-900 mb-3">
               Commercial Appliances
             </h3>
-            <p className="text-slate-600 text-center leading-relaxed">
+            <p className="text-slate-700 text-center leading-relaxed">
               Mixers, blenders, processors built for abuse
             </p>
           </Link>
@@ -214,7 +214,7 @@ export function TopProfessionalPicksSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             Top Professional Picks
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-700 max-w-2xl mx-auto">
             Equipment that survived restaurant abuse and earned a place in my home kitchen
           </p>
         </div>
@@ -245,7 +245,7 @@ export function TopProfessionalPicksSection() {
               <h3 className="text-xl font-semibold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">
                 Vitamix 5200 Professional Blender
               </h3>
-              <p className="text-slate-600 mb-4">
+              <p className="text-slate-700 mb-4">
                 Commercial power. Exceptional control. 5+ years daily use.
               </p>
               <span className="text-orange-700 font-semibold inline-flex items-center gap-2">
@@ -279,7 +279,7 @@ export function TopProfessionalPicksSection() {
               <h3 className="text-xl font-semibold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">
                 Lodge Cast Iron Skillet
               </h3>
-              <p className="text-slate-600 mb-4">
+              <p className="text-slate-700 mb-4">
                 Sear like a chef. Eat like a king. Lasts forever.
               </p>
               <span className="text-orange-700 font-semibold inline-flex items-center gap-2">
@@ -313,7 +313,7 @@ export function TopProfessionalPicksSection() {
               <h3 className="text-xl font-semibold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">
                 Victorinox Fibrox Pro Chef&apos;s Knife
               </h3>
-              <p className="text-slate-600 mb-4">
+              <p className="text-slate-700 mb-4">
                 20 years. Daily use. Dishwasher friendly.
               </p>
               <span className="text-orange-700 font-semibold inline-flex items-center gap-2">

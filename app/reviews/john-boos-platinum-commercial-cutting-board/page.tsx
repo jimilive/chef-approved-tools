@@ -280,7 +280,7 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
                             }`}
                           >
                             <span className="block text-sm font-semibold text-slate-900">{option.size}</span>
-                            <span className={`block text-xs ${option.label.includes('Reviewed') ? 'text-orange-700 font-medium' : 'text-slate-600'}`}>
+                            <span className={`block text-xs ${option.label.includes('Reviewed') ? 'text-orange-700 font-medium' : 'text-slate-700'}`}>
                               {option.label}
                             </span>
                           </a>
@@ -327,7 +327,7 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
                 priority
               />
             </a>
-            <p className="text-center text-sm text-slate-600 mt-3 italic">
+            <p className="text-center text-sm text-slate-700 mt-3 italic">
               Click image to check price on Amazon
             </p>
           </div>
@@ -396,7 +396,7 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
                 className="rounded-lg w-full h-auto max-w-2xl mx-auto"
               />
             </a>
-            <p className="text-center text-sm text-slate-600 mt-3 italic">
+            <p className="text-center text-sm text-slate-700 mt-3 italic">
               Click image to check price on Amazon
             </p>
           </div>

@@ -53,7 +53,7 @@ export default function SafetySection({
           {guidelines.items.map((item, index) => (
             <li
               key={index}
-              className="py-3 pl-6 relative leading-relaxed text-slate-600 border-b border-gray-100 last:border-0 before:content-['✓'] before:absolute before:left-0 before:text-green-600 before:font-bold before:text-xl"
+              className="py-3 pl-6 relative leading-relaxed text-slate-700 border-b border-gray-100 last:border-0 before:content-['✓'] before:absolute before:left-0 before:text-green-600 before:font-bold before:text-xl"
             >
               {item}
             </li>

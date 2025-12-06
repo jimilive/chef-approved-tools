@@ -199,7 +199,7 @@ export default async function InstantPotDuoPlus6QtReview() {
         <div className="max-w-5xl mx-auto px-5">
 
           {/* BREADCRUMBS */}
-          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-600 mb-4">
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
             <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
@@ -408,13 +408,13 @@ export default async function InstantPotDuoPlus6QtReview() {
                     → View {productData.name} on Amazon
                   </a>
                 </p>
-                <p className="text-xs text-slate-600 text-center italic">
+                <p className="text-xs text-slate-700 text-center italic">
                   As an Amazon Associate, I earn from qualifying purchases. This comes at no extra cost to you.
                 </p>
               </div>
             </div>
 
-            <p className="text-sm text-slate-600 mt-6 italic">
+            <p className="text-sm text-slate-700 mt-6 italic">
               {reviewData.whereToBuy.disclaimer}
             </p>
           </div>

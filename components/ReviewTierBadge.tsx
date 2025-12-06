@@ -40,7 +40,7 @@ const tierConfig = {
     bgColor: 'bg-slate-100',
     borderColor: 'border-slate-300',
     textColor: 'text-slate-700',
-    iconColor: 'text-slate-600',
+    iconColor: 'text-slate-700',
     description: 'Professional assessment based on 24 years of kitchen experience',
     badge: '✓ EXPERT EVALUATION'
   }
@@ -73,7 +73,7 @@ export default function ReviewTierBadge({
           <span className={`font-semibold text-sm ${config.textColor}`}>
             {displayName}
           </span>
-          <span className="text-xs text-slate-600">
+          <span className="text-xs text-slate-700">
             {config.badge}
           </span>
         </div>

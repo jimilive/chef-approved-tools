@@ -104,7 +104,7 @@ export default function ProductCard({
         )}
 
         {/* Category Tag */}
-        <div className="text-xs text-gray-600 uppercase tracking-wider mb-2 font-semibold">
+        <div className="text-xs text-gray-700 uppercase tracking-wider mb-2 font-semibold">
           {category}
         </div>
 

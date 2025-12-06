@@ -93,7 +93,7 @@ export default function ChefsPickHeroBox({ product, category }: ChefsPickProps) 
           </div>
 
           {/* Trust Signals */}
-          <div className="mt-4 flex flex-wrap gap-4 text-xs text-slate-600">
+          <div className="mt-4 flex flex-wrap gap-4 text-xs text-slate-700">
             <span className="flex items-center gap-1">
               ✓ <span>Free Prime Shipping</span>
             </span>

@@ -16,7 +16,7 @@ export default function TermsOfServicePage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-6">Terms of Service</h1>
-          <p className="text-sm text-gray-600 mb-8">Last updated: {lastUpdated}</p>
+          <p className="text-sm text-gray-700 mb-8">Last updated: {lastUpdated}</p>
 
           <div className="prose max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Agreement to Terms</h2>
