@@ -770,7 +770,7 @@ export default async function AffordableKitchenAppliancesPage() {
           >
             <Link
               href="/appliances"
-              className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+              className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
             >
               View Professional Kitchen Appliances →
             </Link>

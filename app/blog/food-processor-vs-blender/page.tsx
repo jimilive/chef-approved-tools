@@ -469,7 +469,7 @@ export default async function FoodProcessorVsBlenderPost() {
           >
             <a
               href={cuisinartUrl}
-              className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-bold py-3 px-6 rounded-lg transition-colors"
               target="_blank"
               rel="noopener noreferrer sponsored"
             >
@@ -503,7 +503,7 @@ export default async function FoodProcessorVsBlenderPost() {
           >
             <a
               href={vitamixUrl}
-              className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-bold py-3 px-6 rounded-lg transition-colors"
               target="_blank"
               rel="noopener noreferrer sponsored"
             >
