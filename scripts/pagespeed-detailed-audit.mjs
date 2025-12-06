@@ -10,6 +10,8 @@
  */
 
 import fs from 'fs/promises';
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
 
 const API_KEY = process.env.PAGESPEED_API_KEY;
 if (!API_KEY) {

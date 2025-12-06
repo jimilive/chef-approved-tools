@@ -349,9 +349,9 @@ export default function ChefApprovedPage() {
           <div className="overflow-x-auto">
             <table className="w-full border-collapse bg-white shadow-sm rounded-lg">
               <thead>
-                <tr className="bg-slate-800 text-white">
-                  <th className="p-4 text-left">Chef Approved Tools</th>
-                  <th className="p-4 text-left">Typical Review Sites</th>
+                <tr className="bg-slate-800">
+                  <th className="p-4 text-left text-white">Chef Approved Tools</th>
+                  <th className="p-4 text-left text-white">Typical Review Sites</th>
                 </tr>
               </thead>
               <tbody>
