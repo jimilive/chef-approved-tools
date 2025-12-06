@@ -12,7 +12,7 @@ export const reviewData = {
     description: '10 years of testing, Epicurean cutting board survives the dishwasher without warping or cracking. NSF-certified composite that wood boards can\'t match.',
     ogTitle: 'Epicurean Cutting Board: 10 Years Testing The Dishwasher-Safe Board',
     ogDescription: '10 years of testing, Epicurean cutting board survives the dishwasher without warping or cracking. NSF-certified composite that wood boards can\'t match.',
-    testingPeriod: '10+ Years Testing',
+    testingPeriod: '10 Years Testing',
     tier: 2,
   },
 
@@ -67,7 +67,7 @@ export const reviewData = {
     rating: 5.0,
     tierBadge: {
       icon: '🏡',
-      text: 'Tier 2: Home Testing | 10+ Years Daily Use',
+      text: 'Tier 2: Home Testing | 10 Years Daily Use',
       linkText: 'What is Tier 2?',
       linkHref: '/review-tiers'
     },
@@ -82,7 +82,7 @@ export const reviewData = {
     sections: [
       {
         title: 'Richlite Construction: The Game-Changer',
-        content: `These boards are made from compressed wood fiber and resin - essentially the same material as skateboards. The result is a surface that's heat-resistant up to 350°F, completely non-porous, and won't harbor bacteria.\n\n**What makes this work:** The surface is gentle on knife edges (comparable to hard maple) while being durable enough for daily professional use. NSF certified for commercial kitchens means it meets the same standards as restaurant equipment.\n\n**Real-world performance:** I was skeptical at first. But after using these for 10+ years, I'm converted. They don't warp, they don't crack, they don't absorb odors or stains like wood does. And they're gentle enough on knife edges that my Victorinox knives stay sharp.`
+        content: `These boards are made from compressed wood fiber and resin - essentially the same material as skateboards. The result is a surface that's heat-resistant up to 350°F, completely non-porous, and won't harbor bacteria.\n\n**What makes this work:** The surface is gentle on knife edges (comparable to hard maple) while being durable enough for daily professional use. NSF certified for commercial kitchens means it meets the same standards as restaurant equipment.\n\n**Real-world performance:** I was skeptical at first. But after using these for 10 years, I'm converted. They don't warp, they don't crack, they don't absorb odors or stains like wood does. And they're gentle enough on knife edges that my Victorinox knives stay sharp.`
       },
       {
         title: 'True Sanitation: The Dishwasher Advantage',
@@ -94,7 +94,7 @@ export const reviewData = {
       }
     ],
     testingEnvironment: [
-      { label: 'Testing Duration', value: '10+ years daily home use' },
+      { label: 'Testing Duration', value: '10 years daily home use' },
       { label: 'Dishwasher Cycles', value: '1,000+ cycles tested' },
       { label: 'Use Cases', value: 'Raw proteins, vegetables, acidic ingredients' },
       { label: 'Professional Context', value: '24 years culinary experience' }
@@ -125,7 +125,7 @@ export const reviewData = {
       },
       {
         title: 'Durability & Longevity',
-        content: `**Warping resistance:** After 1,000+ dishwasher cycles, zero warping. Wood boards typically warp within 1-3 years with dishwasher use (which is why they must be hand-washed).\n\n**Dimensional stability:** The composite material doesn't expand, contract, or split. It maintains its shape regardless of humidity, temperature, or moisture exposure.\n\n**Expected lifespan:** 10+ years with daily use. I'm on year 10 with my board and it's still fully functional with no signs of degradation.\n\n**Comparison to wood:** Most home cooks replace wood boards every 3-4 years due to warping or cracking. Epicurean boards last 2-3 times longer while requiring zero maintenance.`
+        content: `**Warping resistance:** After 1,000+ dishwasher cycles, zero warping. Wood boards typically warp within 1-3 years with dishwasher use (which is why they must be hand-washed).\n\n**Dimensional stability:** The composite material doesn't expand, contract, or split. It maintains its shape regardless of humidity, temperature, or moisture exposure.\n\n**Expected lifespan:** 10 years with daily use. I'm on year 10 with my board and it's still fully functional with no signs of degradation.\n\n**Comparison to wood:** Most home cooks replace wood boards every 3-4 years due to warping or cracking. Epicurean boards last 2-3 times longer while requiring zero maintenance.`
       },
       {
         title: 'Knife Edge Preservation',

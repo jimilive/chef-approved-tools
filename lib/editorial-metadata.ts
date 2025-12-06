@@ -132,7 +132,7 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'kitchenaid-kp26m1xlc-professional-600': {
     tier: 2,
-    testingPeriod: '8 Years',
+    testingPeriod: '18 Years',
     hook: 'Home baker favorite. Powerful 575-watt motor.',
     revenueScore: 76
   },
@@ -168,7 +168,7 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'epicurean-kitchen-cutting-board': {
     tier: 2,
-    testingPeriod: '6 Years',
+    testingPeriod: '10 Years',
     hook: 'Composite material. Dishwasher-safe convenience.',
     revenueScore: 52
   },
