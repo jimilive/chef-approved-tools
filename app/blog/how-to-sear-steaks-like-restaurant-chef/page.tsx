@@ -380,7 +380,7 @@ export default function SteakSearingPost() {
             and adequate resting. Master these basics, and you&apos;ll be cooking restaurant-quality steaks at home.
           </p>
 
-          <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 mt-8">
+          <div className="not-prose bg-orange-50 border border-orange-200 rounded-xl p-6 mt-8">
             <h3 className="font-bold text-orange-800 mb-3">What&apos;s Next?</h3>
             <p className="text-orange-800 mb-4">
               This is just one technique from 24 years of professional kitchen experience. Want to learn more

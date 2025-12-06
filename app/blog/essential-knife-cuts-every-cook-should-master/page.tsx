@@ -268,7 +268,7 @@ export default function EssentialKnifeCutsPost() {
             Hold your knife at a 30° angle and slice diagonally. This increases surface area, which means faster cooking and better presentation. Asian stir-fries and sautéed veggies often use this cut for that reason.
           </p>
 
-          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
+          <div className="not-prose bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
             <h3 className="text-xl font-bold text-yellow-800 mb-3 flex items-center gap-2">
               <Target className="w-5 h-5" />
               Want to Level Up Your Knife Skills?

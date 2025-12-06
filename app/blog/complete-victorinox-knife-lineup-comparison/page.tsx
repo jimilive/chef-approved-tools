@@ -509,7 +509,7 @@ export default function CompleteVictorinoxLineupPage() {
             </Link>
           </CTAVisibilityTracker>
 
-          <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
+          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ChefHat className="w-6 h-6 text-orange-700" />
               Free Professional Kitchen Guide

@@ -299,7 +299,7 @@ export default function KitchenStarterKitPage() {
             In professional kitchens, bench scrapers are mandatory. Watch any line cook during prep—they&apos;ll have a scraper within arm&apos;s reach at all times. It speeds up every repetitive task and keeps workstations organized under pressure.
           </p>
 
-          <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
+          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ShoppingCart className="w-6 h-6 text-orange-700" />
               Want my complete kitchen setup under $200?

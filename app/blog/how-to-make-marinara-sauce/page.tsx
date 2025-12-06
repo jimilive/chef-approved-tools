@@ -256,7 +256,7 @@ export default function MarinaraSaucePage() {
             Professional standard: 35 minutes. The sauce should be thick enough to coat a spoon but still pourable—not pasty, not watery. If your sauce is too thick at 35 minutes, your heat was too high. If it&apos;s still watery, your heat was too low or your pan was too narrow.
           </p>
 
-          <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
+          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <Target className="w-6 h-6 text-orange-700" />
               Master More Italian Techniques

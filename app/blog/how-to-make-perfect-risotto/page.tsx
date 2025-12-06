@@ -262,7 +262,7 @@ export default function PerfectRisottoPage() {
 
           <p><strong>Texture check</strong>: Risotto should flow slowly when you tilt the pan. &quot;All&apos;onda&quot; (wave-like) is the Italian term. If too thick, add splash more stock.</p>
 
-          <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white p-8 rounded-xl text-center my-8">
+          <div className="not-prose bg-gradient-to-br from-blue-900 to-blue-800 text-white p-8 rounded-xl text-center my-8">
             <h3 className="text-2xl font-bold mb-4 text-white">Want My Complete Italian Cooking Master Class?</h3>
             <p className="text-blue-100 mb-6 text-lg">
               Join 15,000+ home cooks getting my free weekly newsletter with professional techniques, equipment recommendations, and exclusive recipes you won&apos;t find on the blog.

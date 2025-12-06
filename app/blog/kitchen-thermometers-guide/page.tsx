@@ -381,7 +381,7 @@ export default function KitchenThermometersGuidePage() {
 
           <p className="text-sm italic">*Pull temperature = Remove from heat at this temp, carryover cooking brings it 5-10°F higher while resting</p>
 
-          <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white p-8 rounded-xl text-center my-8">
+          <div className="not-prose bg-gradient-to-br from-blue-900 to-blue-800 text-white p-8 rounded-xl text-center my-8">
             <h3 className="text-2xl font-bold mb-4 text-white flex items-center justify-center gap-2">
               <ThermometerSun className="w-6 h-6" />
               Want My Kitchen Temperature Chart?

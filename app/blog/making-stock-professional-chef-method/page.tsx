@@ -406,7 +406,7 @@ export default function MakingStockPage() {
             Stock sitting at warm temperatures grows bacteria rapidly. Use an ice bath or ice wands to drop temperature below 70°F within 2 hours. This isn&rsquo;t optional—it&rsquo;s food safety.
           </p>
 
-          <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
+          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ChefHat className="w-6 h-6 text-orange-700" />
               Free Kitchen Foundations Guide

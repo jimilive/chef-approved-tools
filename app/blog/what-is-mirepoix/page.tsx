@@ -200,7 +200,7 @@ export default function WhatIsMirepoixPage() {
             <strong>Caramelizing (high heat, stirring frequently):</strong> Browns vegetables deeply for maximum flavor. Adds rich, sweet, complex notes. Use for brown stocks, rich gravies, deeply-flavored braises. The dark brown vegetables give finished stock its deep mahogany color.
           </p>
 
-          <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
+          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <Target className="w-6 h-6 text-orange-700" />
               Master More Foundational Techniques

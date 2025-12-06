@@ -160,7 +160,7 @@ export default function FatIsFlavorPage() {
             Fat conducts heat more efficiently than air and creates better browning through the <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-700 hover:text-orange-800 underline">Maillard reaction</Link>. This is why sautéing and pan-frying create better flavor than steaming or boiling.
           </p>
 
-          <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
+          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?

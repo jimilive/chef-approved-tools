@@ -350,7 +350,7 @@ export default function CastIronCarePage() {
             Every use should strengthen your patina—not wear it away. This consistency is what separates cast iron that lasts decades from cast iron that rusts out in a year.
           </p>
 
-          <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
+          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?

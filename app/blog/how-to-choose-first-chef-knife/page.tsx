@@ -222,7 +222,7 @@ export default function ChooseFirstChefKnifePost() {
             Skip the full knife block. Start with one great chef knife, a honing steel, and a cutting board. That setup will outperform an expensive knife set in real cooking.
           </p>
 
-          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
+          <div className="not-prose bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
             <h3 className="text-xl font-bold text-yellow-800 mb-3 flex items-center gap-2">
               <Target className="w-5 h-5" />
               Want my full kitchen essentials list?

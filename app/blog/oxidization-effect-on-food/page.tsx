@@ -757,7 +757,7 @@ export default function OxidizationPage() {
           </p>
         </div>
 
-        <div className="mt-12 p-6 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl">
+        <div className="not-prose mt-12 p-6 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl">
           <h3 className="text-white text-2xl font-bold mb-3">Want More Cooking Science &amp; Techniques?</h3>
           <p className="text-white mb-6 leading-relaxed">
             Join 5,000+ home cooks getting my weekly email with professional techniques, cooking science explained, and equipment recommendations from 24 years in restaurant kitchens.

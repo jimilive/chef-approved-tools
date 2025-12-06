@@ -196,7 +196,7 @@ export default function CheeseSaucePage() {
             <strong>My house blend for mac and cheese:</strong> 60% sharp cheddar, 30% Gruyère, 10% Parm. It&apos;s sharp, nutty, and impossibly smooth.
           </p>
 
-          <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
+          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?

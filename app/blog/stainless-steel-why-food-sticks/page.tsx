@@ -213,7 +213,7 @@ export default function StainlessSteelStickingPost() {
             Deglazing is a restaurant cook&apos;s secret weapon. Not only does it make cleanup effortless, but those caramelized proteins stuck to the pan contain concentrated flavor compounds. Dissolving them into a wine or stock reduction creates depth you can&apos;t get any other way. In professional kitchens, we rarely make pan sauces from scratch — we build them on the fond from whatever we just cooked.
           </p>
 
-          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
+          <div className="not-prose bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
             <h3 className="text-xl font-bold text-yellow-800 mb-3 flex items-center gap-2">
               <Flame className="w-5 h-5" />
               Want Pro-Level Pan Control?

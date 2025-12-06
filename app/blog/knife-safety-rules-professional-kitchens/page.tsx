@@ -277,7 +277,7 @@ export default function KnifeSafetyPost() {
             Never leave knives in sinks or sudsy water. Wash immediately, blade away from your hand, and dry thoroughly. Rust dulls edges and breeds bacteria. Dishwasher heat and detergent corrode metal and weaken handles. Worse, knives knock into other utensils mid-cycle. Hand wash only — it takes 30 seconds and can add years to your knife&apos;s life.
           </p>
 
-          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
+          <div className="not-prose bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
             <h3 className="text-xl font-bold text-yellow-800 mb-3 flex items-center gap-2">
               <Shield className="w-5 h-5" />
               Want My Knife Maintenance Routine?

@@ -284,7 +284,7 @@ export default function BlanchingVegetablesPage() {
             </CTAVisibilityTracker> after blanching for restaurant-quality results with crisp edges and tender centers.
           </p>
 
-          <div className="bg-gradient-to-r from-orange-50 to-yellow-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
+          <div className="not-prose bg-gradient-to-r from-orange-50 to-yellow-50 border-l-4 border-orange-600 p-6 my-8 rounded-r-lg">
             <h3 className="text-xl font-semibold text-slate-900 mb-3">🎯 Free Temperature & Timing Guide</h3>
             <p className="text-slate-700 mb-3">
               Join 10,000+ cooks learning pro techniques for better texture and flavor.

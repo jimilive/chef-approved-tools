@@ -476,7 +476,7 @@ export default function DeglazingPanSaucesPage() {
           <p><strong>Time</strong>: 3 minutes<br />
           <strong>Flavor</strong>: Clean, savory, highlights the fond</p>
 
-          <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white p-8 rounded-xl text-center my-8">
+          <div className="not-prose bg-gradient-to-br from-blue-900 to-blue-800 text-white p-8 rounded-xl text-center my-8">
             <h3 className="text-2xl font-bold mb-4 text-white">Want My Complete Sauce-Making Master Class?</h3>
             <p className="text-blue-100 mb-6 text-lg">
               Join 15,000+ home cooks getting my free weekly newsletter with professional techniques, equipment recommendations, and exclusive recipes you won&apos;t find on the blog.

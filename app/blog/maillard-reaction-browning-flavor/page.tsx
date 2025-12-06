@@ -161,7 +161,7 @@ export default function MaillardReactionPost() {
             Don&apos;t move food too early. When you place a steak in a hot pan, it will stick initially. That&apos;s the proteins bonding to the metal. <em>Leave it alone.</em> After 3-4 minutes, when the Maillard crust forms, it will release naturally. Flip too soon and you tear the crust off, losing all that flavor.
           </p>
 
-          <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
+          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <ChefHat className="w-6 h-6 text-orange-700" />
               Want My Complete Kitchen Setup Guide?

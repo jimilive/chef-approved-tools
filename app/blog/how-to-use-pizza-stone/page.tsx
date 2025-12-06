@@ -253,7 +253,7 @@ export default function PizzaStonePage() {
             <strong>Parchment paper method (beginner-friendly):</strong> Stretch dough on parchment, dress the pizza on the parchment, then transfer parchment and pizza together onto the stone. After 2-3 minutes when the bottom has set, slide the parchment out from under the pizza. Foolproof technique with slightly less crust crispness.
           </p>
 
-          <div className="bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
+          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
             <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
               <Target className="w-6 h-6 text-orange-700" />
               Master More Pizza Techniques

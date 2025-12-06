@@ -271,7 +271,7 @@ export default function CookwareMaterialsPost() {
             Each one plays a role. If you buy quality once, you&apos;ll use them for life.
           </p>
 
-          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
+          <div className="not-prose bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
             <h3 className="text-xl font-bold text-yellow-800 mb-3 flex items-center gap-2">
               <Flame className="w-5 h-5" />
               Want My &quot;Buy Once, Cry Once&quot; Cookware List?
