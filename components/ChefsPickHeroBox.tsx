@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { trackAffiliateClick } from '@/lib/tracking'
+import { Button } from '@/components/ui'
 
 interface ChefsPickProps {
   product: {
@@ -75,21 +75,26 @@ export default function ChefsPickHeroBox({ product, category }: ChefsPickProps) 
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3">
-            <a
+            <Button
+              as="a"
               href={product.amazonUrl}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
+              external
+              sponsored
+              size="lg"
               onClick={() => trackAffiliateClick('Amazon', product.name, 'hero-cta', 0)}
-              className="flex-1 bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-bold py-4 px-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl text-center active:scale-95"
+              className="flex-1"
             >
               🛒 Check Price on Amazon
-            </a>
-            <Link
+            </Button>
+            <Button
+              as="link"
               href={`/reviews/${product.slug}`}
-              className="flex-1 border-2 border-orange-700 text-orange-800 hover:bg-orange-50 font-semibold py-4 px-6 rounded-xl transition-all duration-200 text-center"
+              variant="outline"
+              size="lg"
+              className="flex-1"
             >
               Read Full Review →
-            </Link>
+            </Button>
           </div>
 
           {/* Trust Signals */}

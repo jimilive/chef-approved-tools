@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Product } from '@/types/product'
 import StarRating from './StarRating'
+import { Button } from '@/components/ui'
 
 interface LazyProductCardProps {
   product: Product
@@ -146,15 +147,15 @@ export default function LazyProductCard({
         {/* Enhanced CTA Buttons - Only render when visible */}
         {isVisible && (
           <div className="space-y-2 pt-2">
-            <a
+            <Button
+              as="a"
               href={primaryLink.url}
-              target="_blank"
-              rel="sponsored nofollow noopener noreferrer"
-              className="w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block"
-              aria-label={`View ${product.name} on Amazon (opens in new tab)`}
+              external
+              sponsored
+              fullWidth
             >
               🛒 Check Latest Price on Amazon
-            </a>
+            </Button>
 
             <div className="flex gap-2">
               {showReviewLink && (

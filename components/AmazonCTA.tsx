@@ -1,6 +1,7 @@
 'use client'
 
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import { Button } from '@/components/ui'
 
 type CTAPosition = 'above_fold' | 'mid_article' | 'comparison_table' | 'who_should_buy' | 'final_cta' | 'sticky_mobile'
 type CTAVariant = 'button' | 'textLink' | 'styledBox'
@@ -66,30 +67,36 @@ export default function AmazonCTA({
   const resolvedVariant = variant || defaultVariants[position]
   const resolvedText = text || defaultText[position]
 
-  // Button variant styling
-  const buttonStyles = "inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 text-lg"
-
-  // Text link variant styling
+  // Text link variant styling (intentionally different - not a button)
   const textLinkStyles = "text-orange-700 hover:text-orange-800 font-medium underline"
-
-  const renderLink = (linkClassName: string, linkText: string) => (
-    <a
-      href={affiliateUrl}
-      target="_blank"
-      rel="noopener noreferrer sponsored"
-      className={`${linkClassName} ${className}`.trim()}
-    >
-      {linkText}
-    </a>
-  )
 
   const renderContent = () => {
     switch (resolvedVariant) {
       case 'button':
-        return renderLink(buttonStyles, resolvedText)
+        return (
+          <Button
+            as="a"
+            href={affiliateUrl}
+            external
+            sponsored
+            size="lg"
+            className={className}
+          >
+            {resolvedText}
+          </Button>
+        )
 
       case 'textLink':
-        return renderLink(textLinkStyles, `→ ${resolvedText}`)
+        return (
+          <a
+            href={affiliateUrl}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className={`${textLinkStyles} ${className}`.trim()}
+          >
+            → {resolvedText}
+          </a>
+        )
 
       case 'styledBox':
         return (
@@ -97,12 +104,32 @@ export default function AmazonCTA({
             <p className="text-lg font-medium text-slate-900 mb-4">
               {boxHeading}
             </p>
-            {renderLink(buttonStyles, resolvedText)}
+            <Button
+              as="a"
+              href={affiliateUrl}
+              external
+              sponsored
+              size="lg"
+              className={className}
+            >
+              {resolvedText}
+            </Button>
           </div>
         )
 
       default:
-        return renderLink(buttonStyles, resolvedText)
+        return (
+          <Button
+            as="a"
+            href={affiliateUrl}
+            external
+            sponsored
+            size="lg"
+            className={className}
+          >
+            {resolvedText}
+          </Button>
+        )
     }
   }
 

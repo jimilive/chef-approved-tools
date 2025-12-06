@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { X, Download } from 'lucide-react'
-import Link from 'next/link'
+import { Button } from '@/components/ui'
 
 interface ExitIntentModalProps {
   isOpen: boolean
@@ -59,14 +59,15 @@ export default function ExitIntentModal({ isOpen, onClose }: ExitIntentModalProp
             </li>
           </ul>
 
-          <Link
+          <Button
+            as="link"
             href="/newsletter"
             onClick={onClose}
-            className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-6 rounded-lg transition-all text-center"
+            fullWidth
           >
             <Download className="inline w-5 h-5 mr-2" />
             Get My Free Guide →
-          </Link>
+          </Button>
 
           <p className="text-xs text-slate-500 text-center mt-4">
             No spam, unsubscribe anytime
