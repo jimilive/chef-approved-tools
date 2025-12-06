@@ -181,7 +181,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
             verdictStrong={reviewData.hero.verdictStrong}
             publishedDate={gitDates.firstPublished}
             lastUpdated={gitDates.lastUpdated}
-            heroImage={(product.images as any)?.hero}
+            heroImage={(product.images as any)?.hero || `/images/products/${PRODUCT_SLUG}/${PRODUCT_SLUG}-hero.jpg`}
             productName={product.name}
             ctaUrl={primaryLink}
             ctaText={reviewData.hero.ctaText}

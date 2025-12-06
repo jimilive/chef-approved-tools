@@ -244,7 +244,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
           verdictStrong={reviewData.hero.verdictStrong}
           publishedDate={gitDates.firstPublished}
           lastUpdated={gitDates.lastUpdated}
-          heroImage={(product.images as any)?.hero}
+          heroImage={(product.images as any)?.hero || `/images/products/${PRODUCT_SLUG}/${PRODUCT_SLUG}-hero.jpg`}
           productName={product.name}
           ctaUrl={affiliateUrl}
           ctaText={reviewData.hero.ctaText}

@@ -227,6 +227,8 @@ export default async function MethodAllPurposeCleanerReviewPage() {
             verdictStrong={reviewData.hero.verdictStrong}
             publishedDate={gitDates.firstPublished}
             lastUpdated={gitDates.lastUpdated}
+            heroImage={(product.images as any)?.hero || `/images/products/${PRODUCT_SLUG}/${PRODUCT_SLUG}-hero.jpg`}
+            productName={product.name}
             customCTA={
               <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
                 {/* Quick Stats */}
