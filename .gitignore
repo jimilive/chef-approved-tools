@@ -13,6 +13,7 @@ tsconfig.tsbuildinfo
 # Lighthouse CI reports
 .lighthouseci/
 *.report.html
+reports/lighthouse.json
 
 # Netlify (migrated to Vercel)
 .netlify
