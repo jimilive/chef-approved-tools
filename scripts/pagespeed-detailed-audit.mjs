@@ -11,7 +11,11 @@
 
 import fs from 'fs/promises';
 
-const API_KEY = process.env.PAGESPEED_API_KEY || 'AIzaSyDmIiiK_gcndR3IzP7O9bKf0RlVCkm2iaU';
+const API_KEY = process.env.PAGESPEED_API_KEY;
+if (!API_KEY) {
+  console.error('Error: PAGESPEED_API_KEY environment variable is required');
+  process.exit(1);
+}
 const SITEMAP_URL = 'https://www.chefapprovedtools.com/sitemap.xml';
 const OUTPUT_DIR = 'reports';
 const PROGRESS_FILE = `${OUTPUT_DIR}/detailed-audit-progress.json`;
