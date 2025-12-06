@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { X } from 'lucide-react'
-import BudgetVsPremiumMagnet from './BudgetVsPremiumMagnet'
+import { X, Download } from 'lucide-react'
+import Link from 'next/link'
 
 interface ExitIntentModalProps {
   isOpen: boolean
@@ -9,18 +9,11 @@ interface ExitIntentModalProps {
 }
 
 export default function ExitIntentModal({ isOpen, onClose }: ExitIntentModalProps) {
-  const handleMagnetSignup = () => {
-    // Lead magnet component handles the signup internally
-    setTimeout(() => {
-      onClose()
-    }, 3000) // Auto-close after success message
-  }
-
   if (!isOpen) return null
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
-      <div className="relative max-w-2xl mx-4 bg-white rounded-xl shadow-2xl overflow-hidden">
+      <div className="relative max-w-md mx-4 bg-white rounded-xl shadow-2xl overflow-hidden">
         {/* Close button */}
         <button
           onClick={onClose}
@@ -36,16 +29,48 @@ export default function ExitIntentModal({ isOpen, onClose }: ExitIntentModalProp
             🛑 Wait! Before You Go...
           </h2>
           <p className="text-gray-300">
-            Get my free guide: The 11 Tools I Use Most in My Home Kitchen
+            Get my free guide to building a professional kitchen
           </p>
         </div>
 
-        {/* Magnet content */}
-        <div className="bg-white">
-          <BudgetVsPremiumMagnet
-            variant="modal"
-            onSignup={handleMagnetSignup}
-          />
+        {/* Content */}
+        <div className="p-6">
+          <h3 className="text-xl font-bold text-slate-900 mb-3 text-center">
+            The 11 Tools I Use Most in My Home Kitchen
+          </h3>
+
+          <p className="text-slate-700 text-center mb-6">
+            My daily workhorse tools from 24 years in professional kitchens.
+            Real recommendations, no BS.
+          </p>
+
+          <ul className="space-y-2 mb-6 text-sm">
+            <li className="flex items-center gap-2 text-slate-700">
+              <span className="text-green-600">✓</span>
+              5 Victorinox knives I actually use
+            </li>
+            <li className="flex items-center gap-2 text-slate-700">
+              <span className="text-green-600">✓</span>
+              Essential prep tools that last decades
+            </li>
+            <li className="flex items-center gap-2 text-slate-700">
+              <span className="text-green-600">✓</span>
+              Why I chose each one (real stories)
+            </li>
+          </ul>
+
+          <Link
+            href="/newsletter"
+            onClick={onClose}
+            className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-6 rounded-lg transition-all text-center"
+          >
+            <Download className="inline w-5 h-5 mr-2" />
+            Get My Free Guide →
+          </Link>
+
+          <p className="text-xs text-slate-500 text-center mt-4">
+            No spam, unsubscribe anytime
+          </p>
         </div>
       </div>
     </div>

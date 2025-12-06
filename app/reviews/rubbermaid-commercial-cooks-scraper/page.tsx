@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import { BudgetVsPremiumTeaser } from '@/components/BudgetVsPremiumMagnet'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import {
@@ -600,9 +599,6 @@ export default async function RubbermaidScraperReview() {
           title={reviewData.relatedProducts.title}
           products={reviewData.relatedProducts.products}
         />
-
-        {/* Lead Magnet Teaser */}
-        <BudgetVsPremiumTeaser />
 
         {/* Social Proof */}
         <TestimonialsSection />
