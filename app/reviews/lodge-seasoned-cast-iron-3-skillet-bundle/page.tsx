@@ -211,12 +211,12 @@ export default async function LodgeCastIronReviewPage() {
               <table className="w-full border-collapse bg-white">
                 <thead>
                   <tr className="bg-slate-800">
-                    <th className="border border-slate-300 p-3 text-left text-white font-semibold">Skillet Size</th>
-                    <th className="border border-slate-300 p-3 text-left text-white font-semibold">Weight</th>
-                    <th className="border border-slate-300 p-3 text-left text-white font-semibold">Cooking Surface</th>
-                    <th className="border border-slate-300 p-3 text-left text-white font-semibold">Capacity</th>
-                    <th className="border border-slate-300 p-3 text-left text-white font-semibold">Best For</th>
-                    <th className="border border-slate-300 p-3 text-left text-white font-semibold">Value Note</th>
+                    <th className="border border-slate-600 p-3 text-left text-white font-semibold">Skillet Size</th>
+                    <th className="border border-slate-600 p-3 text-left text-white font-semibold">Weight</th>
+                    <th className="border border-slate-600 p-3 text-left text-white font-semibold">Cooking Surface</th>
+                    <th className="border border-slate-600 p-3 text-left text-white font-semibold">Capacity</th>
+                    <th className="border border-slate-600 p-3 text-left text-white font-semibold">Best For</th>
+                    <th className="border border-slate-600 p-3 text-left text-white font-semibold">Value Note</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -287,9 +287,9 @@ export default async function LodgeCastIronReviewPage() {
               <table className="w-full border-collapse bg-white">
                 <thead>
                   <tr className="bg-slate-800">
-                    <th className="border border-slate-300 p-3 text-left text-white font-semibold">Cooking Technique</th>
-                    <th className="border border-slate-300 p-3 text-left text-white font-semibold">Performance Rating</th>
-                    <th className="border border-slate-300 p-3 text-left text-white font-semibold">Testing Notes</th>
+                    <th className="border border-slate-600 p-3 text-left text-white font-semibold">Cooking Technique</th>
+                    <th className="border border-slate-600 p-3 text-left text-white font-semibold">Performance Rating</th>
+                    <th className="border border-slate-600 p-3 text-left text-white font-semibold">Testing Notes</th>
                   </tr>
                 </thead>
                 <tbody>

@@ -365,11 +365,11 @@ export default async function ProductReview() {
               <table className="w-full border-collapse bg-white">
                 <thead>
                   <tr className="bg-slate-800">
-                    <th className="border border-slate-300 p-3 text-left text-white font-semibold">Feature</th>
+                    <th className="border border-slate-600 p-3 text-left text-white font-semibold">Feature</th>
                     {reviewData.comparisonTable.competitors.map((competitor, index) => (
                       <th
                         key={index}
-                        className={`border border-slate-300 p-3 text-left text-white font-semibold ${
+                        className={`border border-slate-600 p-3 text-left text-white font-semibold ${
                           competitor.highlight ? 'bg-orange-700' : ''
                         }`}
                       >
