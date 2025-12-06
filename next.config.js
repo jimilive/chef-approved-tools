@@ -228,6 +228,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/reviews/blenders',
+        destination: '/appliances',
+        permanent: true,
+      },
+      {
         source: '/reviews/wusthof-classic-ikon-15-piece',
         destination: '/reviews/wusthof-classic-ikon-16-piece',
         permanent: true,
@@ -245,6 +250,25 @@ const nextConfig = {
       {
         source: '/reviews/victorinox-fibrox-pro-knife-set',
         destination: '/reviews/victorinox-fibrox-8-inch-chefs-knife',
+        permanent: true,
+      },
+
+      // ===== SPELLING FIX - Affect vs Effect =====
+      {
+        source: '/blog/oxidization-affect-on-food',
+        destination: '/blog/oxidization-effect-on-food',
+        permanent: true,
+      },
+
+      // ===== GUIDE REDIRECTS - Old URLs to /guides/ =====
+      {
+        source: '/best-budget-chef-knife',
+        destination: '/guides/best-budget-chef-knife',
+        permanent: true,
+      },
+      {
+        source: '/best-knife-for-cutting-meat',
+        destination: '/guides/best-knife-for-cutting-meat',
         permanent: true,
       },
 
