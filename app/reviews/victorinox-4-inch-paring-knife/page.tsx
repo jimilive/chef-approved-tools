@@ -370,7 +370,7 @@ export default async function ProductReview() {
                       <th
                         key={index}
                         className={`border border-slate-600 p-3 text-left text-white font-semibold ${
-                          competitor.highlight ? 'bg-orange-700' : ''
+                          competitor.highlight ? 'bg-orange-900' : ''
                         }`}
                       >
                         {competitor.name}

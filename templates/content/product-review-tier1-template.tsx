@@ -189,7 +189,7 @@ export default function Tier1ReviewPage() {
               <p className="text-sm text-gray-700 mb-4">[ADD YOUR PRODUCT IMAGES - Show wear/use from testing period]</p>
               <Link
                 href={productData.affiliateLinks[0].url}
-                className="inline-block bg-orange-600 hover:bg-orange-800 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+                className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
                 rel="nofollow sponsored"
                 target="_blank"
               >

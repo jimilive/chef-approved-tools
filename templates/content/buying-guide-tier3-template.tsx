@@ -208,7 +208,7 @@ export default function Tier3GuidePage() {
                 <div className="text-2xl font-bold text-slate-900 mb-3">${product.price}</div>
                 <Link
                   href={product.affiliateLink}
-                  className="inline-block w-full bg-orange-600 hover:bg-orange-800 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
+                  className="inline-block w-full bg-orange-800 hover:bg-orange-900 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
                   rel="nofollow sponsored"
                   target="_blank"
                 >
@@ -293,7 +293,7 @@ export default function Tier3GuidePage() {
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Link
                         href={product.affiliateLink}
-                        className="flex-1 bg-orange-600 hover:bg-orange-800 text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
+                        className="flex-1 bg-orange-800 hover:bg-orange-900 text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
                         rel="nofollow sponsored"
                         target="_blank"
                       >

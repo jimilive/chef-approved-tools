@@ -286,7 +286,7 @@ export default function BuyingGuidePage() {
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Link
                         href={product.affiliateLink}
-                        className="flex-1 bg-orange-600 hover:bg-orange-800 text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
+                        className="flex-1 bg-orange-800 hover:bg-orange-900 text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
                         rel="nofollow sponsored"
                         target="_blank"
                       >

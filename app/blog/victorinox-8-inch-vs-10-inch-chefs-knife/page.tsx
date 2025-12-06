@@ -128,7 +128,7 @@ export default function Victorinox8vs10Page() {
                 >
                   <Link
                     href="https://amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
-                    className="inline-block bg-orange-700 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                    className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors"
                   >
                     Check 8-Inch Price on Amazon →
                   </Link>
@@ -144,7 +144,7 @@ export default function Victorinox8vs10Page() {
                 >
                   <Link
                     href="https://amazon.com/dp/B0061SWV8Y?tag=chefapprovedt-20"
-                    className="inline-block bg-orange-700 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                    className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors"
                   >
                     Check 10-Inch Price on Amazon →
                   </Link>
@@ -296,7 +296,7 @@ export default function Victorinox8vs10Page() {
           >
             <Link
               href="https://amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
-              className="inline-block bg-orange-700 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
+              className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
             >
               Check 8-Inch Price on Amazon →
             </Link>
@@ -390,7 +390,7 @@ export default function Victorinox8vs10Page() {
           >
             <Link
               href="https://amazon.com/dp/B0061SWV8Y?tag=chefapprovedt-20"
-              className="inline-block bg-orange-700 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
+              className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
             >
               Check 10-Inch Price on Amazon →
             </Link>
@@ -527,7 +527,7 @@ export default function Victorinox8vs10Page() {
             >
               <Link
                 href="/newsletter"
-                className="inline-block bg-orange-700 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors"
               >
                 Download Free Guide →
               </Link>
@@ -743,7 +743,7 @@ export default function Victorinox8vs10Page() {
           >
             <Link
               href="https://amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
-              className="inline-block bg-orange-700 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
+              className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
             >
               Check 8-Inch Price on Amazon →
             </Link>
@@ -773,7 +773,7 @@ export default function Victorinox8vs10Page() {
           >
             <Link
               href="https://amazon.com/dp/B0061SWV8Y?tag=chefapprovedt-20"
-              className="inline-block bg-orange-700 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
+              className="inline-block bg-orange-800 hover:bg-orange-900 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
             >
               Check 10-Inch Price on Amazon →
             </Link>

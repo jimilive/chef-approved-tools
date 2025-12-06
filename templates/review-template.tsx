@@ -252,8 +252,8 @@ export default async function [PRODUCT_NAME]ReviewPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={retailer.highlighted
-                          ? "inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap w-full text-center"
-                          : "inline-block border-2 border-orange-600 text-orange-700 hover:bg-orange-600 hover:text-white font-semibold px-8 py-3 rounded-lg text-base transition-all whitespace-nowrap w-full text-center"
+                          ? "inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap w-full text-center"
+                          : "inline-block border-2 border-orange-800 text-orange-800 hover:bg-orange-800 hover:text-white font-semibold px-8 py-3 rounded-lg text-base transition-all whitespace-nowrap w-full text-center"
                         }
                       >
                         {retailer.ctaText}

@@ -166,7 +166,7 @@ export default async function ProductReview() {
                   }`}
                 >
                   {option.recommended && (
-                    <div className="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
+                    <div className="inline-block bg-orange-800 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
                       ⭐ RECOMMENDED
                     </div>
                   )}

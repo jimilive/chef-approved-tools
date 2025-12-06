@@ -326,7 +326,7 @@ export function TopProfessionalPicksSection() {
         <div className="text-center">
           <Link
             href="/reviews"
-            className="inline-block border-2 border-orange-700 text-orange-800 hover:bg-orange-700 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all"
+            className="inline-block border-2 border-orange-800 text-orange-800 hover:bg-orange-800 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all"
           >
             See All Reviews
           </Link>
