@@ -7,6 +7,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata = generateBlogMetadata('how-to-sear-steaks-like-restaurant-chef')
@@ -380,26 +381,7 @@ export default function SteakSearingPost() {
             and adequate resting. Master these basics, and you&apos;ll be cooking restaurant-quality steaks at home.
           </p>
 
-          <div className="not-prose bg-orange-50 border border-orange-200 rounded-xl p-6 mt-8">
-            <h3 className="font-bold text-orange-800 mb-3">What&apos;s Next?</h3>
-            <p className="text-orange-800 mb-4">
-              This is just one technique from 24 years of professional kitchen experience. Want to learn more
-              restaurant secrets for home cooking?
-            </p>
-            <CTAVisibilityTracker
-              ctaId="blog-how-to-sear-steaks-like-restaurant-chef-newsletter-cta-1"
-              position="final_cta"
-              productSlug="how-to-sear-steaks-like-restaurant-chef"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="bg-orange-900 text-white hover:bg-orange-800 px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
-              >
-                Get Free Restaurant Techniques
-              </Link>
-            </CTAVisibilityTracker>
-          </div>
+          <BlogNewsletterCTA slug="how-to-sear-steaks-like-restaurant-chef" />
         </div>
 
         {/* FAQ Section */}
