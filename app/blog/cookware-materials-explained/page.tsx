@@ -6,6 +6,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata = generateBlogMetadata('cookware-materials-explained')
@@ -271,28 +272,7 @@ export default function CookwareMaterialsPost() {
             Each one plays a role. If you buy quality once, you&apos;ll use them for life.
           </p>
 
-          <div className="not-prose bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
-            <h3 className="text-xl font-bold text-yellow-800 mb-3 flex items-center gap-2">
-              <Flame className="w-5 h-5" />
-              Want My &quot;Buy Once, Cry Once&quot; Cookware List?
-            </h3>
-            <p className="text-yellow-800 mb-4">
-              Download my free <strong>&quot;Essential Cookware Checklist&quot;</strong> — the exact pans I use after 24 years in restaurant kitchens, from cast iron to stainless steel.
-            </p>
-            <CTAVisibilityTracker
-              ctaId="blog-cookware-materials-newsletter-cta-1"
-              position="mid_article"
-              productSlug="cookware-materials-explained"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="bg-orange-900 text-white hover:bg-orange-800 px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
-              >
-                Get the Free Guide →
-              </Link>
-            </CTAVisibilityTracker>
-          </div>
+          <BlogNewsletterCTA slug="cookware-materials-explained" />
 
           <h2 id="mistakes">Common Mistakes (And How to Avoid Them)</h2>
 

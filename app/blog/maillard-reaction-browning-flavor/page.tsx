@@ -9,6 +9,7 @@ import { ChefHat, Flame, ThermometerSun, AlertTriangle } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
@@ -161,31 +162,7 @@ export default function MaillardReactionPost() {
             Don&apos;t move food too early. When you place a steak in a hot pan, it will stick initially. That&apos;s the proteins bonding to the metal. <em>Leave it alone.</em> After 3-4 minutes, when the Maillard crust forms, it will release naturally. Flip too soon and you tear the crust off, losing all that flavor.
           </p>
 
-          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-700" />
-              Want My Complete Kitchen Setup Guide?
-            </p>
-            <p className="mb-4">
-              Get my free &quot;11 Essential Tools I Use Most&quot; PDF—the exact equipment I rely on after 24 years in professional kitchens. No fluff, just the tools that actually matter.
-            </p>
-            <CTAVisibilityTracker
-              ctaId="maillard-newsletter-cta"
-              position="mid_article"
-              productSlug="maillard-reaction-browning-flavor"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="inline-block bg-orange-900 text-white px-6 py-3 rounded font-bold hover:bg-orange-800 transition-colors"
-              >
-                Get the Free Guide →
-              </Link>
-            </CTAVisibilityTracker>
-            <p className="text-sm text-slate-700 mt-3 mb-0">
-              Unsubscribe anytime. No spam, ever.
-            </p>
-          </div>
+          <BlogNewsletterCTA slug="maillard-reaction-browning-flavor" />
 
           <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
             <p className="font-bold text-slate-900 mb-2 flex items-center gap-2">
