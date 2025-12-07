@@ -6,6 +6,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata = generateBlogMetadata('hidden-secrets-of-brining')
@@ -280,28 +281,7 @@ export default function BriningSecretsPage() {
             <strong>Disadvantages:</strong> Less moisture insurance—slightly easier to overcook. Takes longer for same level of salt penetration. Requires uncovered refrigerator storage.
           </p>
 
-          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <Target className="w-6 h-6 text-orange-700" />
-              Want More Professional Kitchen Techniques?
-            </p>
-            <p className="mb-4">
-              Get my &quot;Essential Cooking Techniques&quot; guide—stocks, brines, sauces, and foundational methods from 24 years in professional kitchens.
-            </p>
-            <CTAVisibilityTracker
-              ctaId="brining-newsletter-cta"
-              position="mid_article"
-              productSlug="hidden-secrets-of-brining"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Download Free Guide →
-              </Link>
-            </CTAVisibilityTracker>
-          </div>
+          <BlogNewsletterCTA slug="hidden-secrets-of-brining" />
 
           <h2 id="mistakes">Common Brining Mistakes</h2>
 
