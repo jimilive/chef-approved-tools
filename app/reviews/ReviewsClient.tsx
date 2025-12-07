@@ -170,7 +170,7 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
          position="mid_article">
           <Link
             href="/contact"
-            className="inline-block bg-white text-indigo-500 px-8 py-3 rounded-md no-underline font-bold text-base hover:bg-gray-100 transition-colors"
+            className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-md no-underline font-bold text-base hover:bg-gray-100 transition-colors"
           >
             Contact Scott →
           </Link>

@@ -42,7 +42,7 @@ const topKnives = [
     price: 45,
     bestFor: 'Best Value for Money',
     tag: 'Top Pick',
-    tagColor: 'bg-orange-700',
+    tagColor: 'bg-orange-800',
     affiliateUrl: 'https://amzn.to/3U4PsT1',
     quickPros: ['Incredible value', 'Restaurant-proven', 'Easy to sharpen'],
     quickCons: ['Basic handle', 'Less prestige']
