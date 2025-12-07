@@ -9,6 +9,7 @@ import { ChefHat, ShoppingCart, AlertTriangle, Thermometer, Utensils } from 'luc
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
@@ -299,28 +300,7 @@ export default function KitchenStarterKitPage() {
             In professional kitchens, bench scrapers are mandatory. Watch any line cook during prep—they&apos;ll have a scraper within arm&apos;s reach at all times. It speeds up every repetitive task and keeps workstations organized under pressure.
           </p>
 
-          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ShoppingCart className="w-6 h-6 text-orange-700" />
-              Want my complete kitchen setup under $200?
-            </p>
-            <p className="mb-4">
-              Join 10,000+ home cooks who get my free guide: &quot;11 Essential Kitchen Tools I Use Every Day&quot;. Tested through 24 years in professional kitchens.
-            </p>
-            <CTAVisibilityTracker
-              ctaId="starter-kit-newsletter-cta"
-              position="mid_article"
-              productSlug="kitchen-starter-kit-first-5-tools"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="inline-block bg-orange-900 text-white px-6 py-3 rounded font-bold hover:bg-orange-800 transition-colors"
-              >
-                Get the Free Guide →
-              </Link>
-            </CTAVisibilityTracker>
-          </div>
+          <BlogNewsletterCTA slug="kitchen-starter-kit-first-5-tools" />
 
           <h2>How These Five Tools Work Together</h2>
 
