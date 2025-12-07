@@ -9,6 +9,7 @@ import { ChefHat, Thermometer, AlertTriangle, Clock, Flame } from 'lucide-react'
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
@@ -406,28 +407,7 @@ export default function MakingStockPage() {
             Stock sitting at warm temperatures grows bacteria rapidly. Use an ice bath or ice wands to drop temperature below 70°F within 2 hours. This isn&rsquo;t optional—it&rsquo;s food safety.
           </p>
 
-          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-700" />
-              Free Kitchen Foundations Guide
-            </p>
-            <p className="mb-4">
-              Get my &quot;Essential Flavor Bases&quot; PDF—stocks, sauces, and reductions straight from 24 years in professional kitchens.
-            </p>
-            <CTAVisibilityTracker
-              ctaId="stock-newsletter-cta"
-              position="mid_article"
-              productSlug="making-stock"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Download Free Guide →
-              </Link>
-            </CTAVisibilityTracker>
-          </div>
+          <BlogNewsletterCTA slug="making-stock-professional-chef-method" />
 
           <h2 id="storage-tips">Storage & Freezing: Professional Tips</h2>
 

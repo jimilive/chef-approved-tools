@@ -6,6 +6,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata = generateBlogMetadata('how-to-use-pizza-stone')
@@ -253,28 +254,7 @@ export default function PizzaStonePage() {
             <strong>Parchment paper method (beginner-friendly):</strong> Stretch dough on parchment, dress the pizza on the parchment, then transfer parchment and pizza together onto the stone. After 2-3 minutes when the bottom has set, slide the parchment out from under the pizza. Foolproof technique with slightly less crust crispness.
           </p>
 
-          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <Target className="w-6 h-6 text-orange-700" />
-              Master More Pizza Techniques
-            </p>
-            <p className="mb-4">
-              Get my &quot;Perfect Pizza at Home&quot; guide—dough techniques, sauce recipes, and professional methods from 24 years in professional kitchens.
-            </p>
-            <CTAVisibilityTracker
-              ctaId="pizza-stone-newsletter-cta"
-              position="mid_article"
-              productSlug="how-to-use-pizza-stone"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Download Free Guide →
-              </Link>
-            </CTAVisibilityTracker>
-          </div>
+          <BlogNewsletterCTA slug="how-to-use-pizza-stone" />
 
           <h3>Step 3: Keep Toppings Moderate and Dry</h3>
 
