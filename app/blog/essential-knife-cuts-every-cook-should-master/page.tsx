@@ -6,6 +6,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata = generateBlogMetadata('essential-knife-cuts-every-cook-should-master')
@@ -268,28 +269,7 @@ export default function EssentialKnifeCutsPost() {
             Hold your knife at a 30° angle and slice diagonally. This increases surface area, which means faster cooking and better presentation. Asian stir-fries and sautéed veggies often use this cut for that reason.
           </p>
 
-          <div className="not-prose bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
-            <h3 className="text-xl font-bold text-yellow-800 mb-3 flex items-center gap-2">
-              <Target className="w-5 h-5" />
-              Want to Level Up Your Knife Skills?
-            </h3>
-            <p className="text-yellow-800 mb-4">
-              Join 10,000+ home cooks who get my free <strong>&quot;11 Essential Kitchen Tools I Use Every Day&quot;</strong> and weekly pro technique tips from 24 years in restaurant kitchens.
-            </p>
-            <CTAVisibilityTracker
-              ctaId="blog-essential-knife-cuts-every-cook-should-master-newsletter-cta-1"
-              position="mid_article"
-              productSlug="essential-knife-cuts-every-cook-should-master"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="bg-orange-900 text-white hover:bg-orange-800 px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
-              >
-                Get the Free Guide →
-              </Link>
-            </CTAVisibilityTracker>
-          </div>
+          <BlogNewsletterCTA slug="essential-knife-cuts-every-cook-should-master" />
 
           <h2 id="classical" className="flex items-center gap-2">
             <Ruler className="w-6 h-6 text-orange-700" />
