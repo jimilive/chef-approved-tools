@@ -153,7 +153,7 @@ export default function DisclosurePage() {
           </p>
           <Link 
             href="/"
-            className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+            className="inline-block bg-orange-900 hover:bg-orange-950 !text-white font-semibold px-6 py-3 rounded-lg transition-colors"
           >
             Back to Homepage
           </Link>

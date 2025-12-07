@@ -235,7 +235,7 @@ export default function ComparisonPage() {
                 <div className="space-y-2">
                   <Link
                     href={product.affiliateLink}
-                    className="block w-full bg-orange-800 hover:bg-orange-900 text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
+                    className="block w-full bg-orange-800 hover:bg-orange-900 !text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
                     rel="nofollow sponsored"
                     target="_blank"
                   >
@@ -325,7 +325,7 @@ export default function ComparisonPage() {
               </ul>
               <Link
                 href={comparisonData.products[0].affiliateLink}
-                className="block w-full mt-4 bg-orange-800 hover:bg-orange-900 text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
+                className="block w-full mt-4 bg-orange-800 hover:bg-orange-900 !text-white font-semibold text-center px-6 py-3 rounded-lg transition-colors"
                 rel="nofollow sponsored"
                 target="_blank"
               >

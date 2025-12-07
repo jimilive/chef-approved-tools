@@ -224,7 +224,7 @@ export default function BlogClient({ posts }: BlogClientProps) {
           >
             <Link
               href="/newsletter"
-              className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-bold px-10 py-4 rounded-lg transition-all hover:scale-105 shadow-lg text-lg"
+              className="inline-block bg-orange-900 hover:bg-orange-950 !text-white font-bold px-10 py-4 rounded-lg transition-all hover:scale-105 shadow-lg text-lg"
             >
               Subscribe for Free Tips
             </Link>

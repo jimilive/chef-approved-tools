@@ -300,7 +300,7 @@ export default function BlanchingVegetablesPage() {
             >
               <Link
                 href="/newsletter"
-                className="inline-block bg-orange-900 text-white px-6 py-3 rounded font-semibold hover:bg-orange-800 transition-colors"
+                className="inline-block bg-orange-900 !text-white px-6 py-3 rounded font-semibold hover:bg-orange-800 transition-colors"
               >
                 Get the Guide →
               </Link>

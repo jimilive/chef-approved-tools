@@ -39,9 +39,9 @@ interface ButtonAsNextLink extends ButtonBaseProps {
 type ButtonProps = ButtonAsButton | ButtonAsLink | ButtonAsNextLink
 
 const variantStyles: Record<ButtonVariant, string> = {
-  primary: 'bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white shadow-lg hover:shadow-xl',
-  secondary: 'bg-orange-900 hover:bg-orange-950 text-white shadow-md hover:shadow-lg',
-  outline: 'border-2 border-orange-800 text-orange-800 hover:bg-orange-800 hover:text-white',
+  primary: 'bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 !text-white shadow-lg hover:shadow-xl',
+  secondary: 'bg-orange-900 hover:bg-orange-950 !text-white shadow-md hover:shadow-lg',
+  outline: 'border-2 border-orange-800 text-orange-800 hover:bg-orange-800 hover:!text-white',
   ghost: 'text-orange-700 hover:text-orange-800 hover:bg-orange-50'
 }
 

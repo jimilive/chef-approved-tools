@@ -54,8 +54,8 @@ export default function AffiliateButtonVariations({
 
   // Button variant styles
   const variantStyles = {
-    primary: 'bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white',
-    secondary: 'bg-orange-900 hover:bg-orange-950 text-white',
+    primary: 'bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 !text-white',
+    secondary: 'bg-orange-900 hover:bg-orange-950 !text-white',
     outline: 'border-2 border-orange-500 text-orange-700 hover:bg-orange-50'
   };
 

@@ -129,7 +129,7 @@ export default function VictorinoxVsWusthofPage() {
                 >
                   <Link
                     href="https://amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
-                    className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                    className="inline-block bg-orange-900 hover:bg-orange-950 !text-white font-bold py-3 px-6 rounded-lg transition-colors"
                   >
                     Check Victorinox Price →
                   </Link>
@@ -145,7 +145,7 @@ export default function VictorinoxVsWusthofPage() {
                 >
                   <Link
                     href="https://amazon.com/dp/B000YBD3HK?tag=chefapprovedt-20"
-                    className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                    className="inline-block bg-orange-900 hover:bg-orange-950 !text-white font-bold py-3 px-6 rounded-lg transition-colors"
                   >
                     Check Wüsthof Price →
                   </Link>
@@ -309,7 +309,7 @@ export default function VictorinoxVsWusthofPage() {
           >
             <Link
               href="https://amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
-              className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
+              className="inline-block bg-orange-900 hover:bg-orange-950 !text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
             >
               Check Victorinox Price →
             </Link>
@@ -728,7 +728,7 @@ export default function VictorinoxVsWusthofPage() {
           >
             <Link
               href="https://amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
-              className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
+              className="inline-block bg-orange-900 hover:bg-orange-950 !text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
             >
               Start with Victorinox →
             </Link>
@@ -758,7 +758,7 @@ export default function VictorinoxVsWusthofPage() {
           >
             <Link
               href="https://amazon.com/dp/B000YBD3HK?tag=chefapprovedt-20"
-              className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
+              className="inline-block bg-orange-900 hover:bg-orange-950 !text-white font-bold py-3 px-6 rounded-lg transition-colors my-4"
             >
               Upgrade to Wüsthof →
             </Link>
