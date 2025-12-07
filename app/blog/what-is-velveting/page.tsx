@@ -6,6 +6,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
 
 export const metadata = generateBlogMetadata('what-is-velveting')
@@ -230,28 +231,7 @@ export default function WhatIsVelvetingPage() {
             Oil velveting produces superior results—the texture is silkier, richer, and more authentic. But water velveting is acceptable for home cooks who find using large amounts of oil prohibitive. The texture difference is noticeable but not dramatic, especially after the meat absorbs sauce during stir-frying.
           </p>
 
-          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <Target className="w-6 h-6 text-orange-700" />
-              Master More Asian Cooking Techniques
-            </p>
-            <p className="mb-4">
-              Get my &quot;Wok Cooking Essentials&quot; guide—stir-fry techniques, sauce formulas, and professional methods from 24 years in professional kitchens.
-            </p>
-            <CTAVisibilityTracker
-              ctaId="velveting-newsletter-cta"
-              position="mid_article"
-              productSlug="what-is-velveting"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Download Free Guide →
-              </Link>
-            </CTAVisibilityTracker>
-          </div>
+          <BlogNewsletterCTA slug="what-is-velveting" />
 
           <h2 id="step-by-step">Step-by-Step Velveting Process (Water Method)</h2>
 
