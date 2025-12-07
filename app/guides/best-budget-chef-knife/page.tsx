@@ -131,28 +131,28 @@ export default async function BestBudgetChefKnife() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
               <h3 className="font-bold text-lg text-slate-900 mb-3 flex items-center gap-2">
-                <Shield className="w-5 h-5 text-green-600" />
+                <Shield className="w-5 h-5 text-green-700" />
                 Key Strengths
               </h3>
               <ul className="space-y-2 text-slate-700">
                 <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
+                  <span className="text-green-700 font-bold">✓</span>
                   <span>20 years of daily professional use without stone sharpening</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
+                  <span className="text-green-700 font-bold">✓</span>
                   <span>NSF certified for commercial kitchens</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
+                  <span className="text-green-700 font-bold">✓</span>
                   <span>Lightweight design reduces hand fatigue</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
+                  <span className="text-green-700 font-bold">✓</span>
                   <span>No bolster = full blade sharpening</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
+                  <span className="text-green-700 font-bold">✓</span>
                   <span>Exceptional value at around $50</span>
                 </li>
               </ul>
@@ -215,7 +215,7 @@ export default async function BestBudgetChefKnife() {
               <tbody className="divide-y divide-gray-200">
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Price</td>
-                  <td className="px-4 py-3 text-sm text-green-600 font-bold">~$50</td>
+                  <td className="px-4 py-3 text-sm text-green-700 font-bold">~$50</td>
                   <td className="px-4 py-3 text-sm text-slate-700">~$150</td>
                   <td className="px-4 py-3 text-sm text-slate-700">~$200</td>
                 </tr>
@@ -227,7 +227,7 @@ export default async function BestBudgetChefKnife() {
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Ease of Sharpening</td>
-                  <td className="px-4 py-3 text-sm text-green-600">Very Easy</td>
+                  <td className="px-4 py-3 text-sm text-green-700">Very Easy</td>
                   <td className="px-4 py-3 text-sm text-slate-700">Easy</td>
                   <td className="px-4 py-3 text-sm text-slate-700">Moderate</td>
                 </tr>
@@ -239,19 +239,19 @@ export default async function BestBudgetChefKnife() {
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Dishwasher Safe</td>
-                  <td className="px-4 py-3 text-sm text-green-600">Yes (not recommended)</td>
+                  <td className="px-4 py-3 text-sm text-green-700">Yes (not recommended)</td>
                   <td className="px-4 py-3 text-sm text-red-600">No</td>
                   <td className="px-4 py-3 text-sm text-red-600">No</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">NSF Certified</td>
-                  <td className="px-4 py-3 text-sm text-green-600">Yes</td>
+                  <td className="px-4 py-3 text-sm text-green-700">Yes</td>
                   <td className="px-4 py-3 text-sm text-slate-700">Yes</td>
                   <td className="px-4 py-3 text-sm text-red-600">No</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Value Rating</td>
-                  <td className="px-4 py-3 text-sm text-green-600 font-bold">⭐⭐⭐⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-green-700 font-bold">⭐⭐⭐⭐⭐</td>
                   <td className="px-4 py-3 text-sm text-slate-700">⭐⭐⭐⭐</td>
                   <td className="px-4 py-3 text-sm text-slate-700">⭐⭐⭐</td>
                 </tr>

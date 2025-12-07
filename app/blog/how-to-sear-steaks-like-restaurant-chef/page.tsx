@@ -271,7 +271,7 @@ export default function SteakSearingPost() {
               <li>• Adds rich flavor without overpowering the beef</li>
               <li>• Creates a more tender, evenly cooked result</li>
             </ul>
-            <p className="text-yellow-600 text-xs mt-3">
+            <p className="text-yellow-700 text-xs mt-3">
               <strong>Pro tip:</strong> Use the residual heat from your oven (turned off) or a warming drawer if you have one.
               The key is warm, not hot—you don&apos;t want to continue cooking the steak.
             </p>
@@ -302,7 +302,7 @@ export default function SteakSearingPost() {
               <li><strong>5. Add wine or stock</strong> - 1/4 cup, reduce again</li>
               <li><strong>6. Finish with butter</strong> - 1-2 tablespoons, swirl off heat for glossy sauce</li>
             </ol>
-            <p className="text-green-600 text-xs mt-3">
+            <p className="text-green-700 text-xs mt-3">
               <strong>Restaurant tip:</strong> The resting liquid has concentrated beef flavor and adds richness you can&apos;t get
               from wine or stock alone. Don&apos;t waste it!
             </p>

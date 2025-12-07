@@ -108,7 +108,7 @@ export default function NewsletterForm() {
           disabled={isLoading}
           style={{
             width: '100%',
-            backgroundColor: isLoading ? '#9ca3af' : '#ea580c',
+            backgroundColor: isLoading ? '#9ca3af' : '#7c2d12',
             color: 'white',
             padding: '12px 24px',
             borderRadius: '8px',

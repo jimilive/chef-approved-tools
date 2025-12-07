@@ -42,7 +42,7 @@ const topKnives = [
     price: 45,
     bestFor: 'Best Value for Money',
     tag: 'Top Pick',
-    tagColor: 'bg-orange-500',
+    tagColor: 'bg-orange-700',
     affiliateUrl: 'https://amzn.to/3U4PsT1',
     quickPros: ['Incredible value', 'Restaurant-proven', 'Easy to sharpen'],
     quickCons: ['Basic handle', 'Less prestige']
@@ -56,7 +56,7 @@ const topKnives = [
     price: 50,
     bestFor: 'Large Volume Prep',
     tag: 'Best for Pros',
-    tagColor: 'bg-blue-500',
+    tagColor: 'bg-blue-700',
     affiliateUrl: 'https://amzn.to/4o6pPwW',
     quickPros: ['Longer blade for efficiency', 'Restaurant standard', 'Lower cost'],
     quickCons: ['Too big for some', 'Requires counter space']
@@ -70,7 +70,7 @@ const topKnives = [
     price: 12,
     bestFor: 'Precision Detail Work',
     tag: 'Essential Tool',
-    tagColor: 'bg-purple-500',
+    tagColor: 'bg-purple-700',
     affiliateUrl: 'https://amzn.to/3Lc3oIo',
     quickPros: ['Perfect for small tasks', 'Incredibly affordable', 'Sharp out of box'],
     quickCons: ['Not for main prep', 'Basic construction']
@@ -84,7 +84,7 @@ const topKnives = [
     price: 40,
     bestFor: 'Meat Fabrication',
     tag: 'Specialty',
-    tagColor: 'bg-red-500',
+    tagColor: 'bg-red-700',
     affiliateUrl: 'https://amzn.to/4pUDed1',
     quickPros: ['Flexible blade', 'Granton edge prevents sticking', 'Professional grade'],
     quickCons: ['Specialized use only', 'Not for vegetables']

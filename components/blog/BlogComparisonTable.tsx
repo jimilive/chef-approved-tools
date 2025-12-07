@@ -60,7 +60,7 @@ export default function BlogComparisonTable({
       ratingLower.includes('easy') ||
       ratingLower.includes('simple')
     ) {
-      return 'text-green-600'
+      return 'text-green-700'
     }
 
     // Yellow for moderate ratings
@@ -69,7 +69,7 @@ export default function BlogComparisonTable({
       ratingLower.includes('moderate') ||
       ratingLower.includes('average')
     ) {
-      return 'text-yellow-600'
+      return 'text-yellow-700'
     }
 
     // Orange for concerning ratings

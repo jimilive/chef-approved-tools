@@ -134,32 +134,32 @@ export default async function BestKnifeForCuttingMeat() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
               <h3 className="font-bold text-lg text-slate-900 mb-3 flex items-center gap-2">
-                <Scissors className="w-5 h-5 text-green-600" />
+                <Scissors className="w-5 h-5 text-green-700" />
                 What It Excels At
               </h3>
               <ul className="space-y-2 text-slate-700">
                 <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
+                  <span className="text-green-700 font-bold">✓</span>
                   <span>Deboning chicken, turkey, and poultry</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
+                  <span className="text-green-700 font-bold">✓</span>
                   <span>Trimming fat from steaks and roasts</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
+                  <span className="text-green-700 font-bold">✓</span>
                   <span>Portioning larger cuts into steaks</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
+                  <span className="text-green-700 font-bold">✓</span>
                   <span>Removing silver skin from tenderloin</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
+                  <span className="text-green-700 font-bold">✓</span>
                   <span>Trimming brisket, pork shoulder, etc.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold">✓</span>
+                  <span className="text-green-700 font-bold">✓</span>
                   <span>Breaking down whole fish</span>
                 </li>
               </ul>
@@ -234,38 +234,38 @@ export default async function BestKnifeForCuttingMeat() {
               <tbody className="divide-y divide-gray-200">
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Deboning chicken</td>
-                  <td className="px-4 py-3 text-sm text-green-600 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-green-700 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
                   <td className="px-4 py-3 text-sm text-slate-700">Poor ⭐</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Trimming fat</td>
-                  <td className="px-4 py-3 text-sm text-green-600 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-green-700 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
                   <td className="px-4 py-3 text-sm text-slate-700">Fair ⭐⭐</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Portioning steaks</td>
-                  <td className="px-4 py-3 text-sm text-green-600 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-green-700 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
                   <td className="px-4 py-3 text-sm text-slate-700">Good ⭐⭐⭐⭐</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Removing silver skin</td>
-                  <td className="px-4 py-3 text-sm text-green-600 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-green-700 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
                   <td className="px-4 py-3 text-sm text-slate-700">Poor ⭐⭐</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Breaking down whole cuts</td>
-                  <td className="px-4 py-3 text-sm text-green-600 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-green-700 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
                   <td className="px-4 py-3 text-sm text-slate-700">Good ⭐⭐⭐⭐</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">Slicing cooked meat</td>
                   <td className="px-4 py-3 text-sm text-slate-700">Fair ⭐⭐⭐</td>
-                  <td className="px-4 py-3 text-sm text-green-600 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-green-700 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 text-sm font-medium text-slate-900">General prep work</td>
                   <td className="px-4 py-3 text-sm text-slate-700">Fair ⭐⭐⭐</td>
-                  <td className="px-4 py-3 text-sm text-green-600 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
+                  <td className="px-4 py-3 text-sm text-green-700 font-bold">Excellent ⭐⭐⭐⭐⭐</td>
                 </tr>
               </tbody>
             </table>
