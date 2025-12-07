@@ -9,6 +9,7 @@ import { ChefHat, Target, TrendingUp, DollarSign } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
@@ -509,28 +510,7 @@ export default function CompleteVictorinoxLineupPage() {
             </Link>
           </CTAVisibilityTracker>
 
-          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-700" />
-              Free Professional Kitchen Guide
-            </p>
-            <p className="mb-4">
-              Get my &quot;Essential Kitchen Tools&quot; PDF—the 11 tools I use most from 24 years in professional kitchens, including why I chose each Victorinox knife.
-            </p>
-            <CTAVisibilityTracker
-              ctaId="victorinox-newsletter-cta"
-              position="mid_article"
-              productSlug="victorinox-knives"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Download Free Guide →
-              </Link>
-            </CTAVisibilityTracker>
-          </div>
+          <BlogNewsletterCTA slug="complete-victorinox-knife-lineup-comparison" />
 
           <h2 id="ten-inch-chef">Knife #4: The 10&quot; Chef&rsquo;s Knife (Optional)</h2>
 

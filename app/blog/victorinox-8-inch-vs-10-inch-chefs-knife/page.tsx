@@ -9,6 +9,7 @@ import { ChefHat, Target, TrendingUp, DollarSign } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
@@ -511,28 +512,7 @@ export default function Victorinox8vs10Page() {
 
           <p><strong>Winner:</strong> 10-inch, no contest</p>
 
-          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-700" />
-              Free Professional Kitchen Guide
-            </p>
-            <p className="mb-4">
-              Get my &quot;Essential Kitchen Tools&quot; PDF—the 11 tools I use most from 24 years in professional kitchens. Free weekly tips on knife skills, equipment choices, and cooking techniques that actually work.
-            </p>
-            <CTAVisibilityTracker
-              ctaId="newsletter-cta"
-              position="mid_article"
-              productSlug="victorinox-8-vs-10"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="inline-block bg-orange-900 hover:bg-orange-950 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Download Free Guide →
-              </Link>
-            </CTAVisibilityTracker>
-          </div>
+          <BlogNewsletterCTA slug="victorinox-8-inch-vs-10-inch-chefs-knife" />
 
           <h2 id="kitchen-space">Kitchen Space Considerations</h2>
 
