@@ -10,6 +10,7 @@ import { ChefHat, AlertTriangle, Lightbulb } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata = generateBlogMetadata('how-to-make-perfect-risotto');
@@ -262,28 +263,7 @@ export default function PerfectRisottoPage() {
 
           <p><strong>Texture check</strong>: Risotto should flow slowly when you tilt the pan. &quot;All&apos;onda&quot; (wave-like) is the Italian term. If too thick, add splash more stock.</p>
 
-          <div className="not-prose bg-gradient-to-br from-blue-900 to-blue-800 text-white p-8 rounded-xl text-center my-8">
-            <h3 className="text-2xl font-bold mb-4 text-white">Want My Complete Italian Cooking Master Class?</h3>
-            <p className="text-blue-100 mb-6 text-lg">
-              Join 15,000+ home cooks getting my free weekly newsletter with professional techniques, equipment recommendations, and exclusive recipes you won&apos;t find on the blog.
-            </p>
-            <CTAVisibilityTracker
-              ctaId="risotto-newsletter-cta"
-              position="mid_article"
-              productSlug="how-to-make-perfect-risotto"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="inline-block bg-gradient-to-r from-orange-500 to-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-orange-800 hover:to-red-800 transition-all shadow-lg"
-              >
-                Get the Free Guide
-              </Link>
-            </CTAVisibilityTracker>
-            <p className="text-blue-200 text-sm mt-4 mb-0">
-              Includes: Risotto timing chart, stock preparation guide, and my restaurant mushroom risotto recipe
-            </p>
-          </div>
+          <BlogNewsletterCTA slug="how-to-make-perfect-risotto" />
 
           <h2>Common Risotto Mistakes and Fixes</h2>
 

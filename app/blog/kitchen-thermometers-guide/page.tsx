@@ -9,6 +9,7 @@ import { Thermometer, AlertTriangle, Lightbulb, ThermometerSun, Target } from 'l
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
@@ -381,31 +382,7 @@ export default function KitchenThermometersGuidePage() {
 
           <p className="text-sm italic">*Pull temperature = Remove from heat at this temp, carryover cooking brings it 5-10°F higher while resting</p>
 
-          <div className="not-prose bg-gradient-to-br from-blue-900 to-blue-800 text-white p-8 rounded-xl text-center my-8">
-            <h3 className="text-2xl font-bold mb-4 text-white flex items-center justify-center gap-2">
-              <ThermometerSun className="w-6 h-6" />
-              Want My Kitchen Temperature Chart?
-            </h3>
-            <p className="text-blue-100 mb-6 text-lg">
-              Download my free <strong>&quot;Essential Cooking Temperature Guide&quot;</strong> — the exact temps we use in restaurant kitchens for perfect doneness and food safety. Join 15,000+ home cooks getting professional techniques and equipment recommendations.
-            </p>
-            <CTAVisibilityTracker
-              ctaId="thermometers-newsletter-cta"
-              position="mid_article"
-              productSlug="kitchen-thermometers-guide"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="inline-block bg-gradient-to-r from-orange-500 to-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-orange-800 hover:to-red-800 transition-all shadow-lg"
-              >
-                Get the Free Guide
-              </Link>
-            </CTAVisibilityTracker>
-            <p className="text-blue-200 text-sm mt-4 mb-0">
-              Includes: Downloadable temperature chart, thermometer calibration guide, and my perfect steak formula
-            </p>
-          </div>
+          <BlogNewsletterCTA slug="kitchen-thermometers-guide" />
 
           <h2 id="method">The Professional Method: How to Use One Correctly</h2>
 
