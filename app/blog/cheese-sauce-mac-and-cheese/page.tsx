@@ -10,6 +10,7 @@ import { ChefHat, Flame, AlertTriangle, ThermometerSun } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata = generateBlogMetadata('cheese-sauce-mac-and-cheese');
@@ -196,31 +197,10 @@ export default function CheeseSaucePage() {
             <strong>My house blend for mac and cheese:</strong> 60% sharp cheddar, 30% Gruyère, 10% Parm. It&apos;s sharp, nutty, and impossibly smooth.
           </p>
 
-          <div className="not-prose bg-amber-50 border-l-4 border-orange-600 p-6 my-8">
-            <p className="text-xl font-bold text-slate-900 mt-0 flex items-center gap-2">
-              <ChefHat className="w-6 h-6 text-orange-700" />
-              Want My Complete Kitchen Setup Guide?
-            </p>
-            <p className="mb-4">
-              Get my free &quot;11 Essential Tools I Use Most&quot; PDF—the exact equipment I rely on after 24 years in professional kitchens, including the pots and whisks that ensure perfect sauces every time. No fluff, just the tools that actually matter.
-            </p>
-            <CTAVisibilityTracker
-              ctaId="cheese-sauce-newsletter-cta"
-              position="mid_article"
-              productSlug="cheese-sauce-mac-and-cheese"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="inline-block bg-orange-900 text-white px-6 py-3 rounded font-bold hover:bg-orange-800 transition-colors"
-              >
-                Get the Free Guide →
-              </Link>
-            </CTAVisibilityTracker>
-            <p className="text-sm text-slate-700 mt-3 mb-0">
-              Unsubscribe anytime. No spam, ever.
-            </p>
-          </div>
+          <BlogNewsletterCTA
+            slug="cheese-sauce-mac-and-cheese"
+            description="Get my free &quot;11 Essential Tools I Use Most&quot; PDF—the exact equipment I rely on after 24 years in professional kitchens, including the pots and whisks that ensure perfect sauces every time. No fluff, just the tools that actually matter."
+          />
 
           <h2>Bringing It All Together</h2>
 

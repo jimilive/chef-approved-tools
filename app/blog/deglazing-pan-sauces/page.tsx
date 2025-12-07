@@ -10,6 +10,7 @@ import { Flame, AlertTriangle, Lightbulb, Droplets, Beaker, Wine, Sparkles } fro
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
 
 export const metadata = generateBlogMetadata('deglazing-pan-sauces');
@@ -476,28 +477,7 @@ export default function DeglazingPanSaucesPage() {
           <p><strong>Time</strong>: 3 minutes<br />
           <strong>Flavor</strong>: Clean, savory, highlights the fond</p>
 
-          <div className="not-prose bg-gradient-to-br from-blue-900 to-blue-800 text-white p-8 rounded-xl text-center my-8">
-            <h3 className="text-2xl font-bold mb-4 text-white">Want My Complete Sauce-Making Master Class?</h3>
-            <p className="text-blue-100 mb-6 text-lg">
-              Join 15,000+ home cooks getting my free weekly newsletter with professional techniques, equipment recommendations, and exclusive recipes you won&apos;t find on the blog.
-            </p>
-            <CTAVisibilityTracker
-              ctaId="deglazing-newsletter-cta"
-              position="mid_article"
-              productSlug="deglazing-pan-sauces"
-              merchant="internal"
-            >
-              <Link
-                href="/newsletter"
-                className="inline-block bg-gradient-to-r from-orange-500 to-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-orange-800 hover:to-red-800 transition-all shadow-lg"
-              >
-                Get the Free Guide
-              </Link>
-            </CTAVisibilityTracker>
-            <p className="text-blue-200 text-sm mt-4 mb-0">
-              Includes: Pan sauce formula chart, wine pairing guide, and my 10 favorite 5-minute sauces
-            </p>
-          </div>
+          <BlogNewsletterCTA slug="deglazing-pan-sauces" />
 
           <h2>Common Deglazing Mistakes (And How to Fix Them)</h2>
 
