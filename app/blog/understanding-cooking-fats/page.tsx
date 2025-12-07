@@ -367,19 +367,19 @@ export default function UnderstandingCookingFatsPage() {
           <h2>Frequently Asked Questions</h2>
 
           <div className="bg-slate-50 p-6 rounded-lg my-8">
-            <h4 className="font-bold text-lg mb-3">Q: Is butter really unhealthy compared to oil?</h4>
+            <p className="font-bold text-lg mb-3">Q: Is butter really unhealthy compared to oil?</p>
             <p className="mb-6">A: The science is complex and evolving. Both are pure fat (same calories). Butter has saturated fat, oils have unsaturated. Moderate amounts of either are fine for most people. Focus on overall diet quality, not individual ingredients.</p>
 
-            <h4 className="font-bold text-lg mb-3">Q: Can I substitute oil for butter in baking?</h4>
+            <p className="font-bold text-lg mb-3">Q: Can I substitute oil for butter in baking?</p>
             <p className="mb-6">A: Sometimes, but not always. Liquid oil behaves differently than solid butter—affects texture, spread, and rise. Recipes designed for one don&apos;t always work with the other. Follow recipe specifications unless you&apos;re experienced with substitutions.</p>
 
-            <h4 className="font-bold text-lg mb-3">Q: Why does my olive oil taste bitter after cooking?</h4>
+            <p className="font-bold text-lg mb-3">Q: Why does my olive oil taste bitter after cooking?</p>
             <p className="mb-6">A: EVOO&apos;s delicate compounds break down at high heat, creating bitter flavors. Either use refined olive oil for high heat, or use EVOO only for low-medium heat and finishing.</p>
 
-            <h4 className="font-bold text-lg mb-3">Q: Can I reuse frying oil?</h4>
+            <p className="font-bold text-lg mb-3">Q: Can I reuse frying oil?</p>
             <p className="mb-6">A: Yes, strain it after use, store in cool dark place. Good for 3-4 uses if oil doesn&apos;t smell bad or look dark. Discard if it smokes at lower temps than originally.</p>
 
-            <h4 className="font-bold text-lg mb-3">Q: What&apos;s the best all-purpose cooking fat?</h4>
+            <p className="font-bold text-lg mb-3">Q: What&apos;s the best all-purpose cooking fat?</p>
             <p className="mb-0">A: Canola oil for high-heat, butter for flavor. Having both covers most needs. Add EVOO for finishing and you&apos;re set for 95% of recipes.</p>
           </div>
 

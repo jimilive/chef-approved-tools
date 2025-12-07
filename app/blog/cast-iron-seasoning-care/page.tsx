@@ -588,7 +588,7 @@ export default function CastIronCarePage() {
           </p>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Essential Cast Iron Equipment</h4>
+            <p className="font-bold text-slate-800 mb-4 text-lg">Essential Cast Iron Equipment</p>
             <ul className="space-y-3">
               <li>
                 <strong>Cast Iron Skillet:</strong> The <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 underline">Lodge 12&quot; Cast Iron Skillet</Link> is my benchmark. Affordable, durable, pre-seasoned, and builds patina fast when treated right.
@@ -615,49 +615,49 @@ export default function CastIronCarePage() {
 
           <div className="space-y-4 my-8">
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If your pan rusts:</h4>
+              <p className="font-bold text-slate-900 mb-2">If your pan rusts:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Don&apos;t panic. Scrub the rust with coarse salt, steel wool, or a chainmail pad. Rinse, dry completely on stove, and re-season (light coat of oil, bake at 400-450°F for 1 hour, repeat 3-5 times). Rust is surface-level and doesn&apos;t ruin the pan permanently.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If food sticks:</h4>
+              <p className="font-bold text-slate-900 mb-2">If food sticks:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Your seasoning layer is thin or uneven. Cook high-fat foods (bacon, sausage) for a few uses to rebuild the patina, or do 2-3 rounds of oven seasoning.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If your pan is sticky:</h4>
+              <p className="font-bold text-slate-900 mb-2">If your pan is sticky:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Too much oil or not enough heat. Wipe thinner next time and bake hotter (450°F). You can also bake the sticky pan again empty at 400°F for an hour to carbonize and harden it.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If your pan smells rancid:</h4>
+              <p className="font-bold text-slate-900 mb-2">If your pan smells rancid:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Too much oil left behind. Reheat to 400°F for an hour to burn off residues, then re-oil lightly.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If seasoning flakes off:</h4>
+              <p className="font-bold text-slate-900 mb-2">If seasoning flakes off:</p>
               <p className="text-slate-700 text-sm mb-0">
                 It was applied too thickly or baked unevenly. Strip and start over with very thin layers of oil. You built layers too thickly.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If the surface looks dull:</h4>
+              <p className="font-bold text-slate-900 mb-2">If the surface looks dull:</p>
               <p className="text-slate-700 text-sm mb-0">
                 It&apos;s not a problem—it just means your seasoning is young. Cook fatty foods for a few weeks and it&apos;ll darken naturally to that glossy black finish.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If your cast iron smokes heavily in the oven:</h4>
+              <p className="font-bold text-slate-900 mb-2">If your cast iron smokes heavily in the oven:</p>
               <p className="text-slate-700 text-sm mb-0">
                 You&apos;ve used too much oil. Wipe thinner next time. Slight smoke is normal; billowing smoke is not.
               </p>

@@ -527,7 +527,7 @@ export default function KitchenThermometersGuidePage() {
           <h2 id="equipment">Equipment Recommendations</h2>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Instant-Read Thermometers (Chef Approved)</h4>
+            <p className="font-bold text-slate-800 mb-4 text-lg">Instant-Read Thermometers (Chef Approved)</p>
 
             <div className="space-y-4 mb-6">
               <div>
@@ -551,7 +551,7 @@ export default function KitchenThermometersGuidePage() {
               </div>
             </div>
 
-            <h4 className="font-bold text-slate-800 mb-4">Supporting Tools</h4>
+            <p className="font-bold text-slate-800 mb-4 text-lg">Supporting Tools</p>
             <ul className="space-y-2">
               <li>
                 <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link> — safely move food before temping.
@@ -564,28 +564,28 @@ export default function KitchenThermometersGuidePage() {
 
           <div className="space-y-4 my-8">
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If your thermometer reads inconsistently:</h4>
+              <p className="font-bold text-slate-900 mb-2">If your thermometer reads inconsistently:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Battery may be low or probe slightly bent — replace or recalibrate. Cheap thermometers often have ±5-10°F accuracy. Good thermometers are accurate to ±1°F.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If it fogs up:</h4>
+              <p className="font-bold text-slate-900 mb-2">If it fogs up:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Water intrusion — check seals, or choose a waterproof model like the Thermapen ONE.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If it reads way off:</h4>
+              <p className="font-bold text-slate-900 mb-2">If it reads way off:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Test both extremes (ice water: 32°F and boiling water: 212°F) to locate the drift. If off by more than 2°F, replace or recalibrate it.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If food still overcooks:</h4>
+              <p className="font-bold text-slate-900 mb-2">If food still overcooks:</p>
               <p className="text-slate-700 text-sm mb-0">
                 You&apos;re not accounting for carryover heat. Pull items 5-10°F early and let them rest. The temperature will continue to rise.
               </p>

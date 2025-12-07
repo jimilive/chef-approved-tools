@@ -479,7 +479,7 @@ export default function EssentialKnifeCutsPost() {
           </p>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Essential Knife Skills Equipment</h4>
+            <p className="font-bold text-slate-800 mb-4 text-lg">Essential Knife Skills Equipment</p>
             <ul className="space-y-3">
               <li>
                 <strong>Chef Knife:</strong> <CTAVisibilityTracker
@@ -551,28 +551,28 @@ export default function EssentialKnifeCutsPost() {
 
           <div className="space-y-4 my-8">
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If cuts look uneven:</h4>
+              <p className="font-bold text-slate-900 mb-2">If cuts look uneven:</p>
               <p className="text-slate-700 text-sm mb-0">
                 You&apos;re not anchoring your knife tip or your board is sliding. Put a damp towel under your board and focus on consistent thickness with each cut.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If food sticks to blade:</h4>
+              <p className="font-bold text-slate-900 mb-2">If food sticks to blade:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Wipe occasionally or use a granton-edge knife.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If greens bruise:</h4>
+              <p className="font-bold text-slate-900 mb-2">If greens bruise:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Knife is too dull or pressure too heavy. Sharpen your knife and use a lighter touch with leafy herbs.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If you get fatigued:</h4>
+              <p className="font-bold text-slate-900 mb-2">If you get fatigued:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Handle too large or grip too tight. Relax your hand and use the proper pinch grip.
               </p>
@@ -624,7 +624,7 @@ export default function EssentialKnifeCutsPost() {
             <h3 className="text-xl font-bold text-orange-800 mb-3">Keep Learning: Related Guides</h3>
 
             <div className="mb-6">
-              <h4 className="font-bold text-orange-800 mb-2">Technique Guides:</h4>
+              <p className="font-bold text-orange-800 mb-2">Technique Guides:</p>
               <ul className="text-orange-700 space-y-1 text-sm">
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-essential-knife-cuts-every-cook-should-master-safety-guide-1"
@@ -654,7 +654,7 @@ export default function EssentialKnifeCutsPost() {
             </div>
 
             <div className="mb-6">
-              <h4 className="font-bold text-orange-800 mb-2">Essential Equipment:</h4>
+              <p className="font-bold text-orange-800 mb-2">Essential Equipment:</p>
               <ul className="text-orange-700 space-y-1 text-sm">
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-essential-knife-cuts-every-cook-should-master-victorinox-2"

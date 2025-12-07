@@ -417,7 +417,7 @@ export default function KnifeSkillsPage() {
           <h2 id="equipment">Recommended Knives &amp; Tools</h2>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Essential Tools for Practicing Knife Grip</h4>
+            <p className="font-bold text-slate-800 mb-4 text-lg">Essential Tools for Practicing Knife Grip</p>
             <ul className="space-y-3 mb-0">
               <li>
                 <strong>Chef Knife:</strong> <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800">Victorinox Fibrox 8&quot; Chef&apos;s Knife</Link> — lightweight, balanced, forgiving for learning new grips. The best budget knife for mastering technique.

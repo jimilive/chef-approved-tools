@@ -99,18 +99,18 @@ export default function BaconButNotInThisDishPage() {
 
           <h3>Why We Overuse Bacon</h3>
 
+          <h4 className="font-semibold text-slate-900 mb-2">It&apos;s a Flavor Bomb</h4>
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">It&apos;s a Flavor Bomb</h4>
             Bacon provides intense umami, salt, fat, and smoke all at once. It&apos;s cooking on easy mode—add bacon and suddenly your dish has &quot;flavor.&quot; But that&apos;s exactly the problem.
           </p>
 
+          <h4 className="font-semibold text-slate-900 mb-2">It&apos;s Trendy (Still)</h4>
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">It&apos;s Trendy (Still)</h4>
             The bacon craze of the 2010s never really ended. We still see bacon in ice cream, cocktails, donuts, and every possible dish. Food media taught an entire generation that bacon = flavor = good cooking.
           </p>
 
+          <h4 className="font-semibold text-slate-900 mb-2">It Hides Poor Technique</h4>
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">It Hides Poor Technique</h4>
             Can&apos;t build proper fond? Add bacon. Can&apos;t develop complex flavors through layering? Add bacon. Can&apos;t season properly with salt and acid? Add bacon.
           </p>
 

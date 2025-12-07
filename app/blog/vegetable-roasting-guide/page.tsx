@@ -466,7 +466,7 @@ export default function VegetableRoastingGuidePage() {
           <h2 id="equipment">Equipment That Makes It Foolproof</h2>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-slate-800 mb-4">Essential Roasting Equipment</h4>
+            <p className="font-bold text-slate-800 mb-4 text-lg">Essential Roasting Equipment</p>
             <ul className="space-y-3">
               <li>
                 <strong>Sheet Pan:</strong> <CTAVisibilityTracker
@@ -504,35 +504,35 @@ export default function VegetableRoastingGuidePage() {
 
           <div className="space-y-4 my-8">
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If vegetables turn out soggy:</h4>
+              <p className="font-bold text-slate-900 mb-2">If vegetables turn out soggy:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Too much oil or crowding. Use more space and higher heat. Make sure vegetables are thoroughly dry before roasting.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If they burn before cooking through:</h4>
+              <p className="font-bold text-slate-900 mb-2">If they burn before cooking through:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Pieces are too small or oven too hot. Cut larger, reduce temp by 15°F, or use a lower rack position.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If they taste bland:</h4>
+              <p className="font-bold text-slate-900 mb-2">If they taste bland:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Salted too late. Season early and finish with acid (lemon, vinegar) or fresh herbs after roasting.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If they stick:</h4>
+              <p className="font-bold text-slate-900 mb-2">If they stick:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Didn&apos;t preheat pan or use enough oil. Try parchment for delicate veggies next time, or make sure your pan is fully preheated.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h4 className="font-bold text-slate-900 mb-2">If they&apos;re unevenly browned:</h4>
+              <p className="font-bold text-slate-900 mb-2">If they&apos;re unevenly browned:</p>
               <p className="text-slate-700 text-sm mb-0">
                 Your oven has hot spots — rotate pans halfway through cooking. Also verify pieces are cut to uniform size.
               </p>
