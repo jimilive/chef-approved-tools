@@ -118,29 +118,29 @@ export default function HerbsPage() {
           <h3>Herbs Are Delicate</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Cell Structure</h4>
+            <strong className="font-semibold text-slate-900">Cell Structure:</strong>{' '}
             Unlike dense vegetables (carrots, onions), herbs have delicate cell walls filled with aromatic essential oils. Damaging cells releases these oils—which is good for flavor, but bad for storage.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Oxidation Sensitivity</h4>
+            <strong className="font-semibold text-slate-900">Oxidation Sensitivity:</strong>{' '}
             Damaged herb cells oxidize rapidly when exposed to air, turning brown or black and losing flavor within hours (sometimes minutes).
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">The Balance</h4>
+            <strong className="font-semibold text-slate-900">The Balance:</strong>{' '}
             You want to release oils when adding herbs to dishes (flavor), but minimize cell damage during prep and storage (longevity).
           </p>
 
           <h3>Knife Sharpness Is Critical</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Sharp Knife = Clean Cut</h4>
+            <strong className="font-semibold text-slate-900">Sharp Knife = Clean Cut:</strong>{' '}
             A sharp knife slices cleanly through herb cells with minimal crushing. Less cell damage = slower oxidation = fresher herbs longer.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Dull Knife = Bruising</h4>
+            <strong className="font-semibold text-slate-900">Dull Knife = Bruising:</strong>{' '}
             A dull knife crushes and tears cells rather than cutting them. This releases oils prematurely and accelerates oxidation. Your basil turns black because your knife is dull, not because basil is temperamental.
           </p>
 
@@ -270,7 +270,7 @@ export default function HerbsPage() {
           <h3>Basil (Chiffonade Method)</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why This Technique:</h4>
+            <strong className="font-semibold text-slate-900">Why This Technique:</strong>{' '}
             Basil bruises easily and oxidizes almost instantly. Chiffonade minimizes cell damage by using very sharp knife and stacking leaves to cut through multiple layers at once with fewer strokes.
           </p>
 
@@ -295,14 +295,14 @@ export default function HerbsPage() {
           </ul>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Pro Tip:</h4>
+            <strong className="font-semibold text-slate-900">Pro Tip:</strong>{' '}
             At Il Pizzaiolo, we cut basil to order during service. It took 30 seconds but kept basil bright green. Planning ahead meant cutting with acid (for marinara) or oil (for garnish).
           </p>
 
           <h3>Cilantro and Parsley (Bunch Method)</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why This Technique:</h4>
+            <strong className="font-semibold text-slate-900">Why This Technique:</strong>{' '}
             Cilantro and parsley have tender leaves but sturdy stems. Grouping stems together allows efficient chopping while maintaining control.
           </p>
 
@@ -337,7 +337,7 @@ export default function HerbsPage() {
           <h3>Chives (Snip Method)</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why This Technique:</h4>
+            <strong className="font-semibold text-slate-900">Why This Technique:</strong>{' '}
             Chives are hollow and delicate. Cutting with a knife crushes them; scissors provide cleaner cuts.
           </p>
 
@@ -352,14 +352,14 @@ export default function HerbsPage() {
           </ol>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Alternative:</h4>
+            <strong className="font-semibold text-slate-900">Alternative:</strong>{' '}
             Very sharp knife can work, but scissors are faster and give cleaner cuts.
           </p>
 
           <h3>Hardy Herbs (Strip and Chop)</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why This Technique:</h4>
+            <strong className="font-semibold text-slate-900">Why This Technique:</strong>{' '}
             Woody stems are inedible and must be removed before chopping leaves.
           </p>
 
@@ -374,12 +374,12 @@ export default function HerbsPage() {
           </ol>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">For Rosemary:</h4>
+            <strong className="font-semibold text-slate-900">For Rosemary:</strong>{' '}
             Rosemary leaves are tough. After stripping, mince very finely or use whole sprigs (remove before serving).
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">For Thyme:</h4>
+            <strong className="font-semibold text-slate-900">For Thyme:</strong>{' '}
             Thyme leaves are tiny. Strip from stems directly into dish, or strip onto cutting board and gather.
           </p>
 
@@ -401,7 +401,7 @@ export default function HerbsPage() {
           <h3>Method #1: Stems in Water (Best for Cilantro, Parsley, Mint)</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why It Works:</h4>
+            <strong className="font-semibold text-slate-900">Why It Works:</strong>{' '}
             Treats herbs like flowers, keeping them hydrated through stems while protecting leaves.
           </p>
 
@@ -436,7 +436,7 @@ export default function HerbsPage() {
           <h3>Method #2: Damp Paper Towel Wrap (Universal Method)</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why It Works:</h4>
+            <strong className="font-semibold text-slate-900">Why It Works:</strong>{' '}
             Maintains humidity without creating condensation that causes rot. The paper towel absorbs excess moisture while keeping herbs from drying out.
           </p>
 
@@ -462,14 +462,14 @@ export default function HerbsPage() {
           </ul>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Pro Tip:</h4>
+            <strong className="font-semibold text-slate-900">Pro Tip:</strong>{' '}
             Check paper towel every 2-3 days. If it&apos;s too wet, replace with fresh damp towel. Too much moisture = slime and rot.
           </p>
 
           <h3>Method #3: Oil Preservation (Basil Specialty)</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why It Works:</h4>
+            <strong className="font-semibold text-slate-900">Why It Works:</strong>{' '}
             Oil blocks oxygen exposure, slowing oxidation dramatically. Also creates usable product (herb oil).
           </p>
 
@@ -495,7 +495,7 @@ export default function HerbsPage() {
           </ul>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Caution:</h4>
+            <strong className="font-semibold text-slate-900">Caution:</strong>{' '}
             Must be refrigerated. Herb + oil at room temperature can allow botulism growth.
           </p>
 
@@ -506,7 +506,7 @@ export default function HerbsPage() {
           <h3>Method #4: Freezing (Long-Term Storage)</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why It Works:</h4>
+            <strong className="font-semibold text-slate-900">Why It Works:</strong>{' '}
             Freezing stops oxidation and decay. While texture changes, flavor remains largely intact.
           </p>
 
@@ -541,7 +541,7 @@ export default function HerbsPage() {
           <h3>Method #5: Drying (Preservation Method)</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why It Works:</h4>
+            <strong className="font-semibold text-slate-900">Why It Works:</strong>{' '}
             Removes moisture that causes decay. Changes flavor profile (concentrates some flavors, loses others).
           </p>
 
@@ -589,12 +589,12 @@ export default function HerbsPage() {
           <h3>Why It Matters</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Dirt and Debris</h4>
+            <strong className="font-semibold text-slate-900">Dirt and Debris:</strong>{' '}
             Herbs (especially cilantro and parsley) often have dirt, sand, or debris hidden in leaves.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">But Water = Oxidation</h4>
+            <strong className="font-semibold text-slate-900">But Water = Oxidation:</strong>{' '}
             Wet herbs oxidize faster and become slimy in storage. You must dry them thoroughly.
           </p>
 
@@ -647,7 +647,7 @@ export default function HerbsPage() {
           <h3>Tender Herbs: End of Cooking</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why:</h4>
+            <strong className="font-semibold text-slate-900">Why:</strong>{' '}
             Heat destroys delicate flavors and aromas. Add at the very end (last 30 seconds to 2 minutes).
           </p>
 
@@ -662,14 +662,14 @@ export default function HerbsPage() {
           </ul>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Exception:</h4>
+            <strong className="font-semibold text-slate-900">Exception:</strong>{' '}
             Infusing tender herbs in warm (not hot) liquids for flavor extraction (like basil in tomato sauce that&apos;s been removed from heat).
           </p>
 
           <h3>Hardy Herbs: Beginning to Middle of Cooking</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why:</h4>
+            <strong className="font-semibold text-slate-900">Why:</strong>{' '}
             Woody herbs can handle heat and actually benefit from cooking time to release flavors.
           </p>
 
@@ -684,7 +684,7 @@ export default function HerbsPage() {
           </ul>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Method:</h4>
+            <strong className="font-semibold text-slate-900">Method:</strong>{' '}
             Tie hardy herbs in cheesecloth (&quot;bouquet garni&quot;) for easy removal later.
           </p>
 

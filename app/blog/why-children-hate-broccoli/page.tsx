@@ -116,17 +116,17 @@ export default function WhyChildrenHateBroccoliPage() {
           <h3>Super-Taster Genes</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Children Are More Sensitive to Bitter</h4>
+            <strong className="font-semibold text-slate-900">Children Are More Sensitive to Bitter</strong>{' '}
             Kids have more taste buds than adults (up to 30% more). These taste buds are more sensitive, especially to bitter compounds. What tastes mildly bitter to you tastes intensely bitter to them.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">The TAS2R38 Gene</h4>
+            <strong className="font-semibold text-slate-900">The TAS2R38 Gene</strong>{' '}
             Some children (and adults) have a gene variant that makes them &quot;super-tasters.&quot; They experience bitter flavors up to 10 times more intensely than non-super-tasters. For these kids, broccoli tastes genuinely awful—not because they&apos;re picky, but because their biology makes it taste that way.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Evolutionary Protection</h4>
+            <strong className="font-semibold text-slate-900">Evolutionary Protection</strong>{' '}
             This heightened bitter sensitivity evolved as protection. In nature, many poisonous plants taste bitter. Children who rejected bitter foods were more likely to survive. Your kid&apos;s broccoli hatred might literally be ancient survival instinct.
           </p>
 
@@ -143,34 +143,34 @@ export default function WhyChildrenHateBroccoliPage() {
           <h3>Smell Sensitivity</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Children Smell Things More Intensely</h4>
+            <strong className="font-semibold text-slate-900">Children Smell Things More Intensely</strong>{' '}
             Kids&apos; olfactory receptors are more sensitive than adults&apos;. Broccoli contains sulfur compounds that smell bad when overcooked. Adults might not notice; kids definitely do.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">The Overcooked Vegetable Problem</h4>
+            <strong className="font-semibold text-slate-900">The Overcooked Vegetable Problem</strong>{' '}
             Boiling or steaming broccoli too long releases glucosinolates—sulfur compounds that smell like rotten eggs or dirty socks. If your kitchen smells bad while cooking broccoli, your kid is experiencing that smell much more intensely.
           </p>
 
           <h3>The Green Food Problem</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Kids Reject Green Foods More Than Other Colors</h4>
+            <strong className="font-semibold text-slate-900">Kids Reject Green Foods More Than Other Colors</strong>{' '}
             Research shows that children exhibit food neophobia—fear of novel foods—particularly with green vegetables. This starts as early as 6 months when infants begin rejecting bitter-tasting green vegetables. The aversion intensifies between 18-24 months as mobility increases.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Evolutionary Survival Mechanism</h4>
+            <strong className="font-semibold text-slate-900">Evolutionary Survival Mechanism</strong>{' '}
             Children are naturally cautious about green foods because many poisonous plants in nature are green. This evolved as a protective mechanism—kids who were suspicious of unfamiliar green foods were more likely to survive. Your child&apos;s rejection of green vegetables isn&apos;t pickiness; it&apos;s ancient biology doing its job.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Professional Kitchen Reality</h4>
+            <strong className="font-semibold text-slate-900">Professional Kitchen Reality</strong>{' '}
             In many restaurant kitchens, chefs know not to garnish kids&apos; plates because the garnish is usually green—parsley, chives, microgreens. Adding that green garnish can make a kid reject an entire dish they would otherwise eat. Experienced chefs learned this through years of watching kids push away perfectly good food simply because of a green sprig on the plate.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Color Matters More Than You Think</h4>
+            <strong className="font-semibold text-slate-900">Color Matters More Than You Think</strong>{' '}
             Children&apos;s food avoidance is based heavily on perceptual properties: color, texture, smell, and taste. Green signals &quot;unfamiliar plant&quot; to a child&apos;s brain, triggering instinctive rejection. This is why kids might eat orange vegetables (carrots, sweet potatoes) more readily than green ones—orange doesn&apos;t trigger the same evolutionary warning system.
           </p>
 
@@ -195,7 +195,7 @@ export default function WhyChildrenHateBroccoliPage() {
           <h3>Mistake #2: No Fat or Browning</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">What Happens:</h4>
+            <strong className="font-semibold text-slate-900">What Happens:</strong>{' '}
             Steamed broccoli with no fat tastes bland and bitter. Fat carries flavor and makes food appealing. Browning (Maillard reaction) creates new, sweeter flavors that mask bitterness.
           </p>
 
@@ -206,7 +206,7 @@ export default function WhyChildrenHateBroccoliPage() {
           <h3>Mistake #3: Serving It Plain</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">What Happens:</h4>
+            <strong className="font-semibold text-slate-900">What Happens:</strong>{' '}
             Plain steamed broccoli on a plate looks boring and tastes bitter. No appeal, no flavor, no reason for a kid to try it.
           </p>
 
@@ -274,7 +274,7 @@ export default function WhyChildrenHateBroccoliPage() {
           <h3>Method #3: Hidden in Other Foods (Transition Strategy)</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why It Works:</h4>
+            <strong className="font-semibold text-slate-900">Why It Works:</strong>{' '}
             Kids get nutrition without food battles. Over time, they become familiar with the flavor in a positive context.
           </p>
 
@@ -294,24 +294,24 @@ export default function WhyChildrenHateBroccoliPage() {
           <h3>Remove the Pressure</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Don&apos;t Force It</h4>
+            <strong className="font-semibold text-slate-900">Don&apos;t Force It</strong>{' '}
             Requiring kids to &quot;just take one bite&quot; creates negative associations. They&apos;ll resist harder.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Model Enjoyment</h4>
+            <strong className="font-semibold text-slate-900">Model Enjoyment</strong>{' '}
             Eat broccoli yourself. Enjoy it visibly. Kids imitate more than they follow orders.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Offer Without Expectation</h4>
+            <strong className="font-semibold text-slate-900">Offer Without Expectation</strong>{' '}
             Put broccoli on their plate. Don&apos;t comment. Let curiosity do the work.
           </p>
 
           <h3>The 10-15 Exposure Rule</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Familiarity Breeds Acceptance</h4>
+            <strong className="font-semibold text-slate-900">Familiarity Breeds Acceptance</strong>{' '}
             Research shows kids need 10-15 exposures to a new food before accepting it. That means:
           </p>
           <ul>
@@ -323,7 +323,7 @@ export default function WhyChildrenHateBroccoliPage() {
           <h3>Involve Kids in Cooking</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Let Them Help</h4>
+            <strong className="font-semibold text-slate-900">Let Them Help</strong>{' '}
             Kids are more likely to eat food they helped prepare. Let them:
           </p>
           <ul>

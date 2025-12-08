@@ -99,17 +99,17 @@ export default function BaconButNotInThisDishPage() {
 
           <h3>Why We Overuse Bacon</h3>
 
-          <h4 className="font-semibold text-slate-900 mb-2">It&apos;s a Flavor Bomb</h4>
+          <strong className="font-semibold text-slate-900">It&apos;s a Flavor Bomb</strong>{' '}
           <p>
             Bacon provides intense umami, salt, fat, and smoke all at once. It&apos;s cooking on easy mode—add bacon and suddenly your dish has &quot;flavor.&quot; But that&apos;s exactly the problem.
           </p>
 
-          <h4 className="font-semibold text-slate-900 mb-2">It&apos;s Trendy (Still)</h4>
+          <strong className="font-semibold text-slate-900">It&apos;s Trendy (Still)</strong>{' '}
           <p>
             The bacon craze of the 2010s never really ended. We still see bacon in ice cream, cocktails, donuts, and every possible dish. Food media taught an entire generation that bacon = flavor = good cooking.
           </p>
 
-          <h4 className="font-semibold text-slate-900 mb-2">It Hides Poor Technique</h4>
+          <strong className="font-semibold text-slate-900">It Hides Poor Technique</strong>{' '}
           <p>
             Can&apos;t build proper fond? Add bacon. Can&apos;t develop complex flavors through layering? Add bacon. Can&apos;t season properly with salt and acid? Add bacon.
           </p>
@@ -129,7 +129,7 @@ export default function BaconButNotInThisDishPage() {
           <h3>1. Delicate Fish Preparations</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why Bacon Doesn&apos;t Work:</h4>
+            <strong className="font-semibold text-slate-900">Why Bacon Doesn&apos;t Work:</strong>{' '}
             Fish like halibut, sole, and cod have subtle, delicate flavors. Bacon obliterates those nuances completely. You&apos;re eating bacon that happens to have fish in it, not fish enhanced by supporting ingredients.
           </p>
 
@@ -150,7 +150,7 @@ export default function BaconButNotInThisDishPage() {
           <h3>2. Fresh Summer Tomato Dishes</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why Bacon Doesn&apos;t Work:</h4>
+            <strong className="font-semibold text-slate-900">Why Bacon Doesn&apos;t Work:</strong>{' '}
             Peak-season tomatoes are sweet, acidic, complex, and perfect. Adding bacon&apos;s smoke and salt covers everything that makes summer tomatoes special.
           </p>
 
@@ -171,7 +171,7 @@ export default function BaconButNotInThisDishPage() {
           <h3>3. Proper Carbonara</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why Bacon Doesn&apos;t Work:</h4>
+            <strong className="font-semibold text-slate-900">Why Bacon Doesn&apos;t Work:</strong>{' '}
             This one makes people angry, but traditional carbonara uses guanciale (cured pork jowl) or pancetta (Italian bacon), NOT American bacon. Bacon is smoked; guanciale and pancetta are cured but not smoked. The smoke overwhelms the delicate egg-cheese sauce.
           </p>
 
@@ -189,7 +189,7 @@ export default function BaconButNotInThisDishPage() {
           <h3>4. Asian-Style Stir-Fries</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why Bacon Doesn&apos;t Work:</h4>
+            <strong className="font-semibold text-slate-900">Why Bacon Doesn&apos;t Work:</strong>{' '}
             Stir-fries have carefully balanced flavors: ginger, garlic, soy sauce, sesame oil, sometimes fish sauce or oyster sauce. Bacon&apos;s smoke clashes with these flavors instead of complementing them.
           </p>
 
@@ -206,7 +206,7 @@ export default function BaconButNotInThisDishPage() {
           <h3>5. Mushroom Risotto</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why Bacon Doesn&apos;t Work:</h4>
+            <strong className="font-semibold text-slate-900">Why Bacon Doesn&apos;t Work:</strong>{' '}
             Mushrooms have earthy, umami-rich flavors that develop through proper sautéing and layering. Bacon&apos;s smoke and salt overpower that earthiness, turning complex mushroom flavors into &quot;bacon-flavored rice with mushroom texture.&quot;
           </p>
 
@@ -224,7 +224,7 @@ export default function BaconButNotInThisDishPage() {
           <h3>6. Proper French Onion Soup</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why Bacon Doesn&apos;t Work:</h4>
+            <strong className="font-semibold text-slate-900">Why Bacon Doesn&apos;t Work:</strong>{' '}
             French onion soup is about deeply caramelized onions, rich beef stock, and melted Gruyère. It&apos;s already a rich, complex dish. Bacon adds nothing except confusion.
           </p>
 
@@ -241,7 +241,7 @@ export default function BaconButNotInThisDishPage() {
           <h3>7. Caesar Salad (Usually)</h3>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Why Bacon Doesn&apos;t Work:</h4>
+            <strong className="font-semibold text-slate-900">Why Bacon Doesn&apos;t Work:</strong>{' '}
             Traditional Caesar dressing already has anchovy, Parmesan, and egg—tons of umami. Adding bacon creates umami overload and turns a balanced salad into a meat-and-cheese delivery vehicle.
           </p>
 
