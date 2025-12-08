@@ -275,7 +275,28 @@ export const categoryConfigs: Record<string, CategoryConfig> = {
 
     relatedGuides: [],
 
-    relatedBlogs: [],
+    relatedBlogs: [
+      {
+        title: 'How to Make Perfect Scrambled Eggs',
+        href: '/blog/best-scrambled-eggs',
+        description: 'Spatula technique that separates restaurant eggs from rubbery home versions.'
+      },
+      {
+        title: 'How to Make a Roux',
+        href: '/blog/how-to-make-roux',
+        description: 'The whisking technique behind every great sauce and gravy.'
+      },
+      {
+        title: 'How to Make Perfect Risotto',
+        href: '/blog/how-to-make-perfect-risotto',
+        description: 'Why constant stirring creates creamy risotto—and when to stop.'
+      },
+      {
+        title: 'Deglazing & Pan Sauces',
+        href: '/blog/deglazing-pan-sauces',
+        description: 'Using your spatula to capture every bit of fond for restaurant-quality sauces.'
+      }
+    ],
 
     faqs: [
       {
@@ -310,7 +331,28 @@ export const categoryConfigs: Record<string, CategoryConfig> = {
 
     relatedGuides: [],
 
-    relatedBlogs: [],
+    relatedBlogs: [
+      {
+        title: 'Cutting Board Materials Guide',
+        href: '/blog/cutting-board-materials-guide',
+        description: 'Wood, plastic, composite—which cutting board material is right for your kitchen.'
+      },
+      {
+        title: 'Wood vs Composite Cutting Boards',
+        href: '/blog/wood-vs-composite-cutting-board',
+        description: 'Head-to-head comparison of traditional wood and modern composite boards.'
+      },
+      {
+        title: 'Mise en Place: Professional Prep Organization',
+        href: '/blog/mis-en-place-professional-cooking',
+        description: 'The prep system that makes professional kitchens run smoothly.'
+      },
+      {
+        title: 'Restaurant-Style Prep Station Setup',
+        href: '/blog/meal-prep-station-setup-restaurant-efficiency',
+        description: 'How to organize your prep workspace like a professional kitchen.'
+      }
+    ],
 
     faqs: [
       {
