@@ -410,7 +410,7 @@ export default function AboutPage() {
               position="mid_article"
             >
               <Link
-                href="/review-tiers"
+                href="/chef-approved"
                 className="inline-block text-orange-700 hover:text-orange-800 font-semibold underline"
               >
                 Learn more about our tier system →

@@ -127,7 +127,7 @@ export default function BestCookwarePage() {
                     href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
                     className="text-orange-700 hover:text-orange-800 font-semibold"
                   >
-                    Read full review →
+                    Read Lodge Cast Iron review →
                   </Link>
                 </CTAVisibilityTracker>
               </article>
@@ -157,7 +157,7 @@ export default function BestCookwarePage() {
                     href="/reviews/le-creuset-signature-7-25-qt-dutch-oven"
                     className="text-orange-700 hover:text-orange-800 font-semibold"
                   >
-                    Read full review →
+                    Read Le Creuset review →
                   </Link>
                 </CTAVisibilityTracker>
               </article>

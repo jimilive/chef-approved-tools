@@ -668,7 +668,7 @@ export default async function AffordableKitchenAppliancesPage() {
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <p className="font-semibold text-blue-900 mb-1">Premium: Vitamix 5200</p>
                     <p className="text-sm text-blue-800">
-                      <Link href="/reviews/vitamix-5200-professional-blender" className="underline">See review</Link>
+                      <Link href="/reviews/vitamix-5200-professional-blender" className="underline">See Vitamix 5200 review</Link>
                     </p>
                     <p className="text-sm text-blue-700 mt-2">For daily use, hot soups, nut butters, commercial abuse</p>
                   </div>
@@ -686,7 +686,7 @@ export default async function AffordableKitchenAppliancesPage() {
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <p className="font-semibold text-blue-900 mb-1">Premium: KitchenAid Commercial</p>
                     <p className="text-sm text-blue-800">
-                      <Link href="/reviews/kitchenaid-ksm8990wh" className="underline">See review</Link>
+                      <Link href="/reviews/kitchenaid-ksm8990wh" className="underline">See KitchenAid Commercial review</Link>
                     </p>
                     <p className="text-sm text-blue-700 mt-2">For daily use, home bakeries, heavy doughs, NSF certification</p>
                   </div>
@@ -704,7 +704,7 @@ export default async function AffordableKitchenAppliancesPage() {
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <p className="font-semibold text-blue-900 mb-1">Premium: Robot Coupe R2</p>
                     <p className="text-sm text-blue-800">
-                      <Link href="/reviews/robot-coupe-r2-dice" className="underline">See review</Link>
+                      <Link href="/reviews/robot-coupe-r2-dice" className="underline">See Robot Coupe review</Link>
                     </p>
                     <p className="text-sm text-blue-700 mt-2">For commercial kitchens, high-volume prep, daily abuse</p>
                   </div>

@@ -127,7 +127,7 @@ export default function KitchenAppliancesPage() {
                     href="/reviews/vitamix-5200-professional-blender"
                     className="text-orange-700 hover:text-orange-800 font-semibold"
                   >
-                    Read full review →
+                    Read Vitamix 5200 review →
                   </Link>
                 </CTAVisibilityTracker>
               </article>
@@ -157,7 +157,7 @@ export default function KitchenAppliancesPage() {
                     href="/reviews/robot-coupe-r2-dice"
                     className="text-orange-700 hover:text-orange-800 font-semibold"
                   >
-                    Read full review →
+                    Read Robot Coupe review →
                   </Link>
                 </CTAVisibilityTracker>
               </article>

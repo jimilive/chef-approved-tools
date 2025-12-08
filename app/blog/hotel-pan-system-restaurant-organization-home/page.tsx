@@ -876,7 +876,7 @@ export default async function HotelPanSystemPage() {
                 href="/reviews/small-plastic-hotel-pans"
                 className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
               >
-                Read Full Review →
+                Read Small Plastic Hotel Pans review →
               </Link>
             </div>
 
@@ -889,7 +889,7 @@ export default async function HotelPanSystemPage() {
                 href="/reviews/large-plastic-hotel-pans"
                 className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
               >
-                Read Full Review →
+                Read Large Plastic Hotel Pans review →
               </Link>
             </div>
 
@@ -902,7 +902,7 @@ export default async function HotelPanSystemPage() {
                 href="/reviews/small-metal-hotel-pans"
                 className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
               >
-                Read Full Review →
+                Read Small Metal Hotel Pans review →
               </Link>
             </div>
 
@@ -915,7 +915,7 @@ export default async function HotelPanSystemPage() {
                 href="/reviews/large-metal-hotel-pans"
                 className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
               >
-                Read Full Review →
+                Read Large Metal Hotel Pans review →
               </Link>
             </div>
           </div>
