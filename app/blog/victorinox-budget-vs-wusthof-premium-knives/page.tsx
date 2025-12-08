@@ -238,6 +238,9 @@ export default function VictorinoxVsWusthofPage() {
               </tbody>
             </table>
           </div>
+          <p className="text-sm text-gray-600 mt-4">
+            Read our full reviews: <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800">Victorinox 8&quot; Chef&apos;s Knife</Link>, <Link href="/reviews/wusthof-classic-ikon-16-piece" className="text-orange-700 hover:text-orange-800">Wüsthof Classic Ikon Set</Link>
+          </p>
 
           <h2 id="single-knife-philosophy">The Single Knife Philosophy: Why Less Is Actually More</h2>
 

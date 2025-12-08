@@ -183,6 +183,9 @@ export default function CompleteVictorinoxLineupPage() {
               </tbody>
             </table>
           </div>
+          <p className="text-sm text-gray-600 mt-4">
+            Read our full reviews: <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800">Victorinox 8&quot; Chef&apos;s Knife</Link>, <Link href="/reviews/victorinox-fibrox-10-inch-chefs-knife" className="text-orange-700 hover:text-orange-800">Victorinox 10&quot; Chef&apos;s Knife</Link>, <Link href="/reviews/victorinox-4-inch-paring-knife" className="text-orange-700 hover:text-orange-800">Victorinox 4&quot; Paring Knife</Link>, <Link href="/reviews/victorinox-granton-edge-boning-knife" className="text-orange-700 hover:text-orange-800">Victorinox Boning Knife</Link>, <Link href="/reviews/victorinox-offset-bread-knife" className="text-orange-700 hover:text-orange-800">Victorinox Bread Knife</Link>
+          </p>
 
           <p>
             <strong>Most home cooks actually need:</strong> 2-3 knives maximum

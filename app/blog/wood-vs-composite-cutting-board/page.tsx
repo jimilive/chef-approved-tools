@@ -76,6 +76,9 @@ export default function WoodVsCompositeComparison() {
           columnB="Composite"
           features={comparisonData.comparisonTable.features}
         />
+        <p className="text-sm text-gray-600 mt-4">
+          Read our full reviews: <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800">John Boos Cutting Board</Link>, <Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-700 hover:text-orange-800">Epicurean Cutting Board</Link>
+        </p>
 
         <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">

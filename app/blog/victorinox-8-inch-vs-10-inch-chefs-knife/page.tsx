@@ -214,6 +214,9 @@ export default function Victorinox8vs10Page() {
               </tbody>
             </table>
           </div>
+          <p className="text-sm text-gray-600 mt-4">
+            Read our full reviews: <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800">Victorinox 8&quot; Chef&apos;s Knife</Link>, <Link href="/reviews/victorinox-fibrox-10-inch-chefs-knife" className="text-orange-700 hover:text-orange-800">Victorinox 10&quot; Chef&apos;s Knife</Link>
+          </p>
 
           <h2 id="eight-inch">The 8-Inch: The Kitchen Workhorse</h2>
 

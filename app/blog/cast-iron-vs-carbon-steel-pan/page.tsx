@@ -64,6 +64,9 @@ export default function CastIronVsCarbonSteelComparison() {
           columnB="Carbon Steel"
           features={comparisonData.comparisonTable.features}
         />
+        <p className="text-sm text-gray-600 mt-4">
+          Read our full review: <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800">Lodge Cast Iron Skillet Set</Link>
+        </p>
 
           <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
             <h2 className="text-3xl font-bold text-slate-900 mb-6">Detailed Comparison: What Actually Matters</h2>

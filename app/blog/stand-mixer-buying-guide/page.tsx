@@ -214,6 +214,9 @@ export default function StandMixerBuyingGuidePost() {
               </tbody>
             </table>
           </div>
+          <p className="text-sm text-gray-600 mt-4">
+            Read our full review: <Link href="/reviews/kitchenaid-kp26m1xlc-professional-600" className="text-orange-700 hover:text-orange-800">KitchenAid Professional 600</Link>
+          </p>
 
           <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
             <h3 className="text-xl font-bold text-yellow-800 mb-3 flex items-center gap-2">

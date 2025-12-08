@@ -284,6 +284,9 @@ export default async function FoodProcessorVsBlenderPost() {
             </tbody>
           </table>
         </div>
+        <p className="text-sm text-gray-600 mt-4">
+          Read our full reviews: <Link href="/reviews/vitamix-5200-professional-blender" className="text-orange-700 hover:text-orange-800">Vitamix 5200</Link>, <Link href="/reviews/ninja-bl660-professional-blender" className="text-orange-700 hover:text-orange-800">Ninja BL660</Link>
+        </p>
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8 mt-8">
           <h2 id="professional-testing">Professional Testing Results: Purple Café (2007-2012)</h2>
