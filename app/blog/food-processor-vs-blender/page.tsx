@@ -453,7 +453,7 @@ export default async function FoodProcessorVsBlenderPost() {
           </p>
 
           <p>
-            Professional kitchens use Robot Coupe (commercial grade), but for home use, the Cuisinart 14-cup delivers similar performance at home-appropriate pricing. After watching our Robot Coupe at Purple Café process 50 lbs of vegetables and 10 lbs of cheese weekly for 6 years without failure, I learned what matters: strong motor, wide bowl, quality S-blade, and interchangeable discs.
+            Professional kitchens use Robot Coupe (commercial grade)—for serious home cooks or small commercial operations, the <Link href="/reviews/robot-coupe-r2-dice" className="text-orange-700 hover:text-orange-800 underline">Robot Coupe R2 Dice</Link> brings restaurant-grade processing power to your counter. But for most home use, the Cuisinart 14-cup delivers similar performance at home-appropriate pricing. After watching our Robot Coupe at Purple Café process 50 lbs of vegetables and 10 lbs of cheese weekly for 6 years without failure, I learned what matters: strong motor, wide bowl, quality S-blade, and interchangeable discs.
           </p>
 
           <p>
@@ -461,7 +461,7 @@ export default async function FoodProcessorVsBlenderPost() {
           </p>
 
           <p>
-            After 24 years testing equipment in professional and home kitchens, this is what lasts. The motor is strong enough for daily use but quiet enough for home kitchens. Expect 10-15 years of regular home use.
+            After 24 years testing equipment in professional and home kitchens, this is what lasts. The motor is strong enough for daily use but quiet enough for home kitchens. Expect 10-15 years of regular home use. For smaller households, the <Link href="/reviews/cuisinart-dlc-10c-classic-food-processor" className="text-orange-700 hover:text-orange-800 underline">Cuisinart DLC-10C Classic</Link> offers the same reliability in a 7-cup size.
           </p>
 
           <CTAVisibilityTracker

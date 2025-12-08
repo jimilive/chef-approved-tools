@@ -1,0 +1,135 @@
+import Link from 'next/link'
+import { comparisonData } from './air-fryer-vs-convection-oven-data'
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import {
+  BlogLayout,
+  BlogHero,
+  BlogQuickAnswer,
+  BlogComparisonTable,
+  BlogFAQ,
+  BlogEmailCapture
+} from '@/components/blog'
+import AuthorBio from '@/components/review/AuthorBio'
+
+export const revalidate = 3600
+
+export const metadata = generateBlogMetadata('air-fryer-vs-convection-oven')
+
+export default function AirFryerVsConvectionOven() {
+  const articleSchema = generateArticleSchema({
+    headline: comparisonData.metadata.title,
+    description: comparisonData.metadata.description,
+    datePublished: comparisonData.metadata.publishedDate,
+    dateModified: comparisonData.metadata.lastUpdated,
+    authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'air-fryer-vs-convection-oven',
+    images: []
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+    { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
+    { name: comparisonData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/air-fryer-vs-convection-oven' }
+  ])
+
+  const faqSchema = generateFAQSchema(comparisonData.faq.questions)
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
+      <BlogLayout breadcrumbTitle={comparisonData.breadcrumb.title}>
+        <BlogHero
+          title={comparisonData.hero.title}
+          introduction={comparisonData.hero.introduction}
+          publishedDate={comparisonData.metadata.publishedDate}
+          lastUpdated={comparisonData.metadata.lastUpdated}
+          readTime={comparisonData.metadata.readTime}
+        />
+
+        <BlogQuickAnswer
+          optionA={comparisonData.quickAnswer.airFryerChoice}
+          optionB={comparisonData.quickAnswer.convectionOvenChoice}
+        />
+
+        <BlogComparisonTable
+          title={comparisonData.comparisonTable.title}
+          columnA="Air Fryer"
+          columnB="Convection Oven"
+          features={comparisonData.comparisonTable.features}
+        />
+
+        <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Detailed Comparison: What Actually Matters</h2>
+          {comparisonData.detailedSections.map((section, sectionIndex) => (
+            <div key={section.id} className={sectionIndex > 0 ? 'mt-8' : ''}>
+              <h3 className="text-2xl font-semibold text-slate-900 mb-4">{section.title}</h3>
+              {section.subsections.map((subsection, subIndex) => (
+                <div key={subIndex} className={`bg-gray-50 rounded-lg p-6 ${subIndex > 0 ? 'mt-4' : ''}`}>
+                  <h4 className="text-lg font-semibold text-slate-900 mb-3">{subsection.title}</h4>
+                  {subsection.content.map((paragraph, pIndex) => (
+                    <p key={pIndex} className="text-slate-700 leading-relaxed mb-3 last:mb-0">{paragraph}</p>
+                  ))}
+                </div>
+              ))}
+            </div>
+          ))}
+        </section>
+
+        <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Which Should You Choose?</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="border-2 border-green-600 rounded-xl p-6">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">{comparisonData.quickAnswer.airFryerChoice.title}</h3>
+              <ul className="space-y-3 text-slate-700">
+                {comparisonData.quickAnswer.airFryerChoice.points.map((point, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <span className="text-green-600 text-xl mt-1 flex-shrink-0">&#10003;</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="border-2 border-blue-600 rounded-xl p-6">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">{comparisonData.quickAnswer.convectionOvenChoice.title}</h3>
+              <ul className="space-y-3 text-slate-700">
+                {comparisonData.quickAnswer.convectionOvenChoice.points.map((point, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <span className="text-blue-600 text-xl mt-1 flex-shrink-0">&#10003;</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-lg">
+            <p className="text-slate-700 leading-relaxed">
+              <strong>Professional Perspective:</strong> Air fryers and convection ovens use identical technology applied differently. Air fryers concentrate heat and airflow in a small space, producing faster cooking and crispier results for small portions. Convection ovens distribute heat across larger spaces, enabling bigger batches and more cooking versatility. For 1-2 person households who prioritize speed and crispiness, air fryers outperform convection ovens for daily cooking. For families or anyone who bakes regularly, a convection oven&apos;s capacity and versatility matter more than an air fryer&apos;s speed.
+            </p>
+          </div>
+        </section>
+
+        <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Recommended Air Fryer</h2>
+          <p className="text-slate-700 mb-4">
+            After testing both extensively, here&apos;s my practical recommendation: if you don&apos;t already have a convection oven and you cook for more than two people, prioritize the oven. If you have a working oven and cook primarily for one or two, an air fryer adds genuine value for quick, crispy results you&apos;ll use multiple times per week.
+          </p>
+          <p className="text-slate-700 mb-4">
+            The <Link href="/reviews/ninja-air-fryer-af101" className="text-orange-700 hover:text-orange-800 underline">Ninja AF101 Air Fryer</Link> is an excellent entry point for those new to air frying—compact enough for small kitchens, powerful enough for consistent results. See our <Link href="/blog/air-fryer-vs-deep-fryer" className="text-orange-700 hover:text-orange-800 underline">Air Fryer vs Deep Fryer comparison</Link> for more on how air fryers stack up against traditional frying.
+          </p>
+          <p className="text-slate-700">
+            Browse our full selection of <Link href="/appliances" className="text-orange-700 hover:text-orange-800 underline">kitchen appliances</Link> for more options.
+          </p>
+        </section>
+
+        <BlogFAQ questions={comparisonData.faq.questions} />
+        <BlogEmailCapture />
+        <AuthorBio />
+      </BlogLayout>
+    </>
+  )
+}
