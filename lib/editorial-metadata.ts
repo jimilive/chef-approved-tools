@@ -30,13 +30,13 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'victorinox-fibrox-8-inch-chefs-knife': {
     tier: 1,
-    testingPeriod: '15 years professional use',
+    testingPeriod: '20 years (10 professional)',
     hook: 'Professional quality at accessible price. My daily knife.',
     revenueScore: 85
   },
   'wusthof-classic-ikon-16-piece': {
     tier: 1,
-    testingPeriod: 'Years at Purple Café',
+    testingPeriod: '4 years at Feierabend',
     hook: 'Premium German steel. Professional performance.',
     revenueScore: 83
   },
@@ -54,7 +54,7 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'norton-im200-tri-stone-sharpener': {
     tier: 1,
-    testingPeriod: '6 years professional use',
+    testingPeriod: '6 years professional',
     hook: 'Professional sharpening system. Restaurant-grade edge.',
     revenueScore: 72
   },
@@ -108,7 +108,7 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'zuperia-bar-mops': {
     tier: 3,
-    testingPeriod: 'Years at Purple Café',
+    testingPeriod: '40 years at every kitchen job',
     hook: 'Industry standard. 100% ring spun cotton. Restaurant grade.',
     revenueScore: 50
   },
@@ -144,13 +144,13 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'nordic-ware-half-sheet-pan': {
     tier: 2,
-    testingPeriod: '9 Years',
-    hook: 'Never warped. Even browning for 9 years straight.',
+    testingPeriod: '10 Years',
+    hook: 'Never warped. Even browning for 10 years straight.',
     revenueScore: 70
   },
   'cuisinart-dlc-10c-classic-food-processor': {
     tier: 2,
-    testingPeriod: '7 Years',
+    testingPeriod: '30 Years',
     hook: 'Home kitchen workhorse. Reliable performance.',
     revenueScore: 68
   },
@@ -174,7 +174,7 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
   },
   'winco-heavy-duty-tongs': {
     tier: 3,
-    testingPeriod: '8 Years',
+    testingPeriod: '6 Months',
     hook: 'Locking mechanism works. Durable stainless steel.',
     revenueScore: 48
   },

@@ -1,0 +1,1611 @@
+================================================================================
+INTERNAL LINKS AUDIT
+================================================================================
+
+================================================================================
+PHASE 1.1: BLOG POST INTERNAL LINKS INVENTORY
+================================================================================
+
+Blog: bacon-but-not-in-this-dish
+Word Count: ~355
+Internal Links Found:
+  - "→ Benefits of Cooking with Garlic" → /blog/benefits-cooking-with-garlic | blog
+  - "→ Why Fat is Flavor" → /blog/fat-is-flavor | blog
+  - "→ Understanding Acids in Cooking" → /blog/understanding-acids-cooking | blog
+  - "→ How to Cook Perfect Pasta" → /blog/how-to-cook-perfect-pasta | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: benefits-cooking-with-garlic
+Word Count: ~91
+Internal Links Found:
+  - "→ Complete Guide to Cooking Onions" → /blog/onions-cooking-guide | blog
+  - "→ Why Fat is Flavor (And How to Use It)" → /blog/fat-is-flavor | blog
+  - "→ Understanding Acids in Cooking" → /blog/understanding-acids-cooking | blog
+  - "→ Victorinox Fibrox 8&quot; Chef&apos;s Knife Review" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: best-scrambled-eggs
+Word Count: ~1930
+Internal Links Found:
+  - "Diamond Crystal Kosher Salt" → /reviews/diamond-crystal-kosher-salt | review
+  - "Cuisinart High Impact 8-inch pan" → /reviews/cuisinart-8-inch-nonstick-pan | review
+  - "bench scraper" → /reviews/oxo-good-grips-bench-scraper | review
+  - "professional bar mops" → /reviews/zuperia-bar-mops | review
+Links to Reviews: 4
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: blanching-vegetables-why-restaurants-do-it
+Word Count: ~998
+Internal Links Found:
+  - "Learn how to roast vegetables perfectly" → /blog/roasting-vegetables-restaurant-guide | blog
+  - "Get the Guide →" → /newsletter | other
+  - "Learn how to set up a professional meal prep station" → /blog/meal-prep-station-setup-restaurant-efficiency | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 2
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: bleach-vs-sanitation-solution
+Word Count: ~61
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: braising-101-tough-cuts-made-tender
+Word Count: ~1069
+Internal Links Found:
+  - "Learn how to properly preheat your pan" → /blog/how-to-preheat-a-pan | blog
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "Learn about different cookware materials" → /blog/cookware-materials-explained | blog
+  - "Learn how to caramelize onions properly" → /blog/caramelizing-onions-why-it-takes-45-minutes | blog
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: bread-science-gluten-development
+Word Count: ~91
+Internal Links Found:
+  - "→ Why Cooking Science Matters" → /blog/why-cooking-science-matters | blog
+  - "→ What is Emulsification?" → /blog/what-is-emulsification | blog
+  - "→ The Science of Cheese Sauce &amp; Mac and Cheese" → /blog/cheese-sauce-mac-and-cheese | blog
+  - "→ Mise en Place: The Foundation of Professional Cooking" → /blog/mis-en-place-professional-cooking | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: caramelization-science
+Word Count: ~89
+Internal Links Found:
+  - "Maillard reaction" → /blog/maillard-reaction-browning-flavor | blog
+  - "→ How to Sear Steaks Like a Restaurant Chef" → /blog/how-to-sear-steaks-like-restaurant-chef | blog
+  - "→ How to Make a Perfect Roux" → /blog/how-to-make-roux | blog
+  - "→ Lodge Cast Iron Skillet Bundle Review" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: caramelizing-onions-why-it-takes-45-minutes
+Word Count: ~1328
+Internal Links Found:
+  - "Lodge 12&quot; Cast Iron Skillet" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+  - "Learn about different cookware materials" → /blog/cookware-materials-explained | blog
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "Learn how to properly preheat your pan" → /blog/how-to-preheat-a-pan | blog
+Links to Reviews: 2
+Links to Category Pages: 0
+Links to Other Blogs: 2
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: carbon-footprint-kitchen-equipment-buy-once-cry-once
+Word Count: ~861
+Internal Links Found:
+  - "Learn about different cookware materials" → /blog/cookware-materials-explained | blog
+  - "Lodge Cast Iron Skillet" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "John Boos Maple Reversible Board" → /reviews/john-boos-platinum-commercial-cutting-board | review
+  - "Victorinox Fibrox 8&quot; Chef&apos;s Knife" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+  - "Learn how to set up an efficient meal prep station" → /blog/meal-prep-station-setup-restaurant-efficiency | blog
+  - "Master braising" → /blog/braising-101-tough-cuts-made-tender | blog
+Links to Reviews: 4
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: carbon-steel-vs-stainless-steel-knife
+Word Count: ~148
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: cast-iron-seasoning-care
+Word Count: ~91
+Internal Links Found:
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "Lodge 12&quot; Cast Iron Skillet" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+  - "→ Why Cooking Science Matters" → /blog/why-cooking-science-matters | blog
+  - "→ Guide to Cooking Oils &amp; Smoke Points" → /blog/guide-cooking-oils-smoke-points | blog
+  - "→ Why Fat is Flavor (And How to Use It)" → /blog/fat-is-flavor | blog
+  - "→ How to Sear Steaks Like a Restaurant Chef" → /blog/how-to-sear-steaks-like-restaurant-chef | blog
+Links to Reviews: 2
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: cast-iron-vs-carbon-steel-pan
+Word Count: ~141
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: cheese-sauce-mac-and-cheese
+Word Count: ~92
+Internal Links Found:
+  - "→ How to Make a Proper Roux (Foundation Technique)" → /blog/how-to-make-roux | blog
+  - "→ What Does Emulsify Mean and How Does It Work" → /blog/what-is-emulsification | blog
+  - "→ Why Professional Chefs Use Kosher Salt" → /blog/why-professional-chefs-use-kosher-salt | blog
+  - "→ Nordic Ware Half Sheet Pan Review" → /reviews/nordic-ware-half-sheet-pan | review
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: complete-guide-to-salts
+Word Count: ~91
+Internal Links Found:
+  - "onions" → /blog/onions-cooking-guide | blog
+  - "→ Understanding Acids in Cooking" → /blog/understanding-acids-cooking | blog
+  - "→ Why Fat is Flavor (And How to Use It)" → /blog/fat-is-flavor | blog
+  - "→ Complete Guide to Cooking Potatoes" → /blog/potatoes-cooking-guide | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: complete-victorinox-knife-lineup-comparison
+Word Count: ~2381
+Internal Links Found:
+  - "Read the complete budget vs premium comparison →" → /blog/victorinox-budget-vs-wusthof-premium-knives | blog
+  - "Paring Knife vs Chef&rsquo;s Knife: When to Use Which" → /blog/paring-knife-vs-chefs-knife | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 2
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: cooking-with-tomatoes-fresh-vs-canned
+Word Count: ~93
+Internal Links Found:
+  - "fat" → /blog/fat-is-flavor | blog
+  - "→ Understanding Acids in Cooking" → /blog/understanding-acids-cooking | blog
+  - "→ Complete Guide to Cooking Onions" → /blog/onions-cooking-guide | blog
+  - "→ Benefits of Cooking with Garlic" → /blog/benefits-cooking-with-garlic | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: cookware-materials-explained
+Word Count: ~1290
+Internal Links Found:
+  - "Stainless Steel Cooking: Why Food Sticks" → /blog/stainless-steel-why-food-sticks | blog
+  - "How to Season Cast Iron Like a Restaurant Chef" → /blog/how-to-season-cast-iron-like-restaurant-chef | blog
+  - "Lodge 12&quot; Skillet" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+  - "How to Sear Steaks Like a Restaurant Chef" → /blog/how-to-sear-steaks-like-restaurant-chef | blog
+  - "Cast Iron Mistakes That Ruin Your Pan (And How to Fix Them)" → /blog/cast-iron-mistakes-ruin-pan | blog
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: cutting-board-materials-guide
+Word Count: ~1489
+Internal Links Found:
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "Get the Free Guide →" → /newsletter | other
+  - "The 5 Essential Knife Cuts Every Home Cook Should Master" → /blog/essential-knife-cuts-every-cook-should-master | blog
+  - "Knife Safety: 10 Rules From 24 Years in Professional Kitchen" → /blog/knife-safety-rules-professional-kitchens | blog
+  - "5 Knife Mistakes Home Cooks Make" → /blog/knife-mistakes-home-cooks-make | blog
+  - "How to Choose Your First Chef Knife (Like a Professional Che" → /blog/how-to-choose-first-chef-knife | blog
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: cutting-storing-fresh-herbs
+Word Count: ~85
+Internal Links Found:
+  - "Get the Newsletter →" → /newsletter | other
+  - "→ Oxidization&apos;s Effect on Food" → /blog/oxidization-effect-on-food | blog
+  - "→ Mis en Place Guide" → /blog/mis-en-place-professional-cooking | blog
+  - "→ Best Chef Knives Guide" → /guides/best-chef-knives | guide
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 2
+Links to Guides: 1
+MISSING Category Hub Link: YES ❌
+
+Blog: deglazing-pan-sauces
+Word Count: ~92
+Internal Links Found:
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "Cuisinart Stainless Steel Sauté Pan" → /reviews/cuisinart-8-inch-nonstick-pan | review
+  - "→ How to Preheat a Pan Properly" → /blog/how-to-preheat-a-pan | blog
+  - "→ Stock vs Broth vs Bouillon" → /blog/stock-vs-broth-vs-bouillon | blog
+  - "→ Understanding Cooking Fats" → /blog/understanding-cooking-fats | blog
+  - "→ The Science of Caramelization" → /blog/caramelization-science | blog
+Links to Reviews: 2
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: dutch-oven-size-guide-which-quart-size
+Word Count: ~1115
+Internal Links Found:
+  - "Learn the professional braising method" → /blog/braising-101-tough-cuts-made-tender | blog
+  - "Le Creuset 5.5 Quart Dutch Oven" → /reviews/le-creuset-5.5-quart-dutch-oven-review | review
+  - "Learn about different cookware materials" → /blog/cookware-materials-explained | blog
+  - "Learn how to deglaze your Dutch oven" → /blog/deglazing-secret-to-restaurant-quality-flavor | blog
+  - "Learn why investing in quality Dutch ovens" → /blog/carbon-footprint-kitchen-equipment-buy-once-cry-once | blog
+  - "Learn how to set up your meal prep station" → /blog/meal-prep-station-setup-restaurant-efficiency | blog
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 5
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: dutch-oven-vs-slow-cooker
+Word Count: ~151
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: essential-knife-cuts-every-cook-should-master
+Word Count: ~2844
+Internal Links Found:
+  - "How to Steel a Knife Guide" → /blog/how-to-steel-a-knife | blog
+  - "Victorinox Fibrox 8″ Chef&apos;s Knife" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "Knife Safety: 10 Rules From 24 Years in Pro Kitchens" → /blog/knife-safety-rules-professional-kitchens | blog
+  - "How to Sharpen with a Tri-Stone" → /blog/how-to-sharpen-with-tri-stone | blog
+  - "Diamond Crystal Kosher Salt Review" → /reviews/diamond-crystal-kosher-salt | review
+Links to Reviews: 3
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: fat-is-flavor
+Word Count: ~90
+Internal Links Found:
+  - "Maillard reaction" → /blog/maillard-reaction-browning-flavor | blog
+  - "→ Understanding Acids in Cooking" → /blog/understanding-acids-cooking | blog
+  - "→ What is Emulsification?" → /blog/what-is-emulsification | blog
+  - "→ How to Make a Perfect Roux" → /blog/how-to-make-roux | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: food-processor-vs-blender
+Word Count: ~2673
+Internal Links Found:
+  - "Victorinox 8-Inch Chef&rsquo;s Knife Review (20+ Years Profe" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+  - "Vitamix 5200 Review (6 Years Restaurant Testing)" → /reviews/vitamix-5200 | review
+  - "Roasting Vegetables: Restaurant Temperature & Timing Guide" → /blog/roasting-vegetables-restaurant-guide | blog
+Links to Reviews: 2
+Links to Category Pages: 0
+Links to Other Blogs: 1
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: gas-vs-induction-cooktop
+Word Count: ~143
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: guide-cooking-oils-smoke-points
+Word Count: ~92
+Internal Links Found:
+  - "flavor" → /blog/fat-is-flavor | blog
+  - "browning" → /blog/maillard-reaction-browning-flavor | blog
+  - "→ The Complete Guide to Salts" → /blog/complete-guide-to-salts | blog
+  - "→ Lodge Cast Iron Skillet Bundle Review" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: hand-washing-kitchen
+Word Count: ~60
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: hidden-secrets-of-brining
+Word Count: ~1674
+Internal Links Found:
+  - "→ How to Make Marinara Sauce Like a Restaurant" → /blog/how-to-make-marinara-sauce | blog
+  - "→ Making Stock: The Professional Method" → /blog/making-stock-professional-chef-method | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 2
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: hotel-pan-system-restaurant-organization-home
+Word Count: ~2424
+Internal Links Found:
+  - "Read Full Review →" → /reviews/small-plastic-hotel-pans | review
+  - "Read Full Review →" → /reviews/large-plastic-hotel-pans | review
+  - "Read Full Review →" → /reviews/small-metal-hotel-pans | review
+  - "Read Full Review →" → /reviews/large-metal-hotel-pans | review
+Links to Reviews: 4
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-choose-first-chef-knife
+Word Count: ~1741
+Internal Links Found:
+  - "Victorinox Fibrox 8-Inch Chef&apos;s Knife" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+  - "Get the Free Guide →" → /newsletter | other
+  - "How to Steel a Knife Guide" → /blog/how-to-steel-a-knife | blog
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "5 Knife Mistakes Home Cooks Make" → /blog/knife-mistakes-home-cooks-make | blog
+  - "How to Sharpen with a Tri-Stone" → /blog/how-to-sharpen-with-tri-stone | blog
+  - "Diamond Crystal Kosher Salt Review" → /reviews/diamond-crystal-kosher-salt | review
+Links to Reviews: 3
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-clean-burnt-stainless-steel-pans
+Word Count: ~1312
+Internal Links Found:
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "preventing food from sticking to stainless steel" → /blog/stainless-steel-why-food-sticks | blog
+  - "Cookware Materials Explained: What Chefs Actually Use" → /blog/cookware-materials-explained | blog
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 2
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-cook-perfect-pasta
+Word Count: ~92
+Internal Links Found:
+  - "→ Benefits of Cooking with Garlic" → /blog/benefits-cooking-with-garlic | blog
+  - "→ Why Fat is Flavor" → /blog/fat-is-flavor | blog
+  - "→ Understanding Acids in Cooking" → /blog/understanding-acids-cooking | blog
+  - "→ Vegetable Roasting Guide" → /blog/vegetable-roasting-guide | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-make-marinara-sauce
+Word Count: ~2413
+Internal Links Found:
+  - "→ What is Mirepoix and Why Chefs Use It" → /blog/what-is-mirepoix | blog
+  - "→ Making Stock: The Professional Method" → /blog/making-stock-professional-chef-method | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 2
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-make-perfect-french-press-coffee
+Word Count: ~2826
+Internal Links Found:
+  - "Bodum Chambord" → /reviews/bodum-chambord-french-press | review
+  - "/guides/best-chef-knives" → /guides/best-chef-knives | guide
+  - "/reviews/diamond-crystal-kosher-salt" → /reviews/diamond-crystal-kosher-salt | review
+  - "/blog/why-professional-chefs-use-kosher-salt" → /blog/why-professional-chefs-use-kosher-salt | blog
+Links to Reviews: 2
+Links to Category Pages: 0
+Links to Other Blogs: 1
+Links to Guides: 1
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-make-perfect-risotto
+Word Count: ~94
+Internal Links Found:
+  - "→ Stock vs Broth vs Bouillon: What&apos;s the Difference?" → /blog/stock-vs-broth-vs-bouillon | blog
+  - "→ Understanding Acids in Cooking" → /blog/understanding-acids-cooking | blog
+  - "→ Fat is Flavor: The Science Behind Richness" → /blog/fat-is-flavor | blog
+  - "→ Cuisinart 12&quot; Stainless Steel Sauté Pan Review" → /reviews/cuisinart-8-inch-nonstick-pan | review
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-make-roux
+Word Count: ~91
+Internal Links Found:
+  - "→ How to Make Perfect Cheese Sauce for Mac and Cheese" → /blog/cheese-sauce-mac-and-cheese | blog
+  - "→ What is Braising and Why It&apos;s Amazing" → /blog/what-is-braising | blog
+  - "→ The Science of Caramelization" → /blog/caramelization-science | blog
+  - "→ Lodge Cast Iron Skillet Bundle Review" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-preheat-a-pan
+Word Count: ~86
+Internal Links Found:
+  - "Lodge 12&quot; Cast Iron Skillet" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+  - "Kitchen Thermometer Guide" → /blog/kitchen-thermometers-guide | blog
+  - "Stainless Steel Cooking: Why Food Sticks" → /blog/stainless-steel-why-food-sticks | blog
+  - "How to Clean Burnt Stainless Steel Pans" → /blog/how-to-clean-burnt-stainless-steel-pans | blog
+  - "Cookware Materials Explained: What Chefs Actually Use" → /blog/cookware-materials-explained | blog
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-prep-and-grill-asparagus
+Word Count: ~63
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-sear-steaks-like-restaurant-chef
+Word Count: ~2040
+Internal Links Found:
+  - "Lodge cast iron skillets" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+  - "/glossary" → /glossary | other
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-sharpen-with-tri-stone
+Word Count: ~2180
+Internal Links Found:
+  - "Norton IM200 Tri-Stone" → /reviews/norton-im200-tri-stone-sharpener | review
+  - "/reviews/victorinox-fibrox-8-inch-chefs-knife" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+  - "/blog/how-to-steel-a-knife" → /blog/how-to-steel-a-knife | blog
+  - "/kitchen-bundle" → /kitchen-bundle | other
+Links to Reviews: 2
+Links to Category Pages: 0
+Links to Other Blogs: 1
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-steel-a-knife
+Word Count: ~1581
+Internal Links Found:
+  - "Victorinox Fibrox 8&quot; Chef&apos;s Knife Review" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+  - "Knife Care Guide" → /guides/knife-care | guide
+  - "sharpening with a tri-stone" → /reviews/norton-im200-tri-stone-sharpener | review
+  - "Best Kitchen Knives for Everyday Cooking" → /guides/best-chef-knives | guide
+  - "Kitchen Starter Kit" → /kitchen-bundle | other
+Links to Reviews: 2
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 2
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-store-raw-foods-safely
+Word Count: ~63
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-use-pizza-stone
+Word Count: ~2371
+Internal Links Found:
+  - "→ How to Make Marinara Sauce for Pizza" → /blog/how-to-make-marinara-sauce | blog
+  - "→ Master Knife Skills for Pizza Prep" → /blog/knife-skills-how-to-hold-chef-knife | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 2
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: how-to-wash-lettuce
+Word Count: ~61
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: hydration-health-water-intake
+Word Count: ~91
+Internal Links Found:
+  - "→ Benefits of Cooking with Garlic" → /blog/benefits-cooking-with-garlic | blog
+  - "→ How to Cook Perfect Pasta" → /blog/how-to-cook-perfect-pasta | blog
+  - "→ Vegetable Roasting Guide" → /blog/vegetable-roasting-guide | blog
+  - "→ Why Children Hate Broccoli" → /blog/why-children-hate-broccoli | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: immersion-blender-vs-countertop-blender
+Word Count: ~140
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: kitchen-gloves-guide
+Word Count: ~2170
+Internal Links Found:
+  - "Benriner mandoline" → /reviews/benriner-large-mandoline | review
+  - "professional chef knives" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+  - "boning knives" → /reviews/victorinox-granton-edge-boning-knife | review
+  - "cutting board station" → /reviews/john-boos-platinum-commercial-cutting-board | review
+  - "non-toxic cleaners" → /reviews/method-all-purpose-cleaner | review
+  - "professional kitchen safety kit" → /kitchen-bundle | other
+Links to Reviews: 5
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: kitchen-starter-kit-first-5-tools
+Word Count: ~2436
+Internal Links Found:
+  - "Read my full Victorinox knife review →" → /reviews/victorinox-fibrox-10-inch-chefs-knife | review
+  - "See my cast iron skillet review →" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+  - "See my thermometer comparison →" → /blog/kitchen-thermometer-guide | blog
+  - "How to Choose Your First Chef Knife" → /blog/how-to-choose-first-chef-knife | blog
+  - "How to Season Cast Iron Like a Restaurant Chef" → /blog/season-cast-iron-restaurant-method | blog
+  - "10 Kitchen Tools You&apos;re Wasting Money On" → /blog/kitchen-tools-wasting-money | blog
+  - "Best Chef Knives: Budget to Premium" → /guides/best-chef-knives | guide
+  - "Cookware Materials Explained" → /blog/cookware-materials-explained | blog
+Links to Reviews: 2
+Links to Category Pages: 0
+Links to Other Blogs: 5
+Links to Guides: 1
+MISSING Category Hub Link: YES ❌
+
+Blog: kitchen-thermometers-guide
+Word Count: ~92
+Internal Links Found:
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "→ How to Sear Steaks Like a Restaurant Chef" → /blog/how-to-sear-steaks-like-restaurant-chef | blog
+  - "→ Roasting Vegetables: Restaurant Temperature & Timing Guide" → /blog/roasting-vegetables-restaurant-guide | blog
+  - "→ 10 Kitchen Tools You&apos;re Wasting Money On" → /blog/kitchen-tools-wasting-money | blog
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: kitchen-tools-wasting-money
+Word Count: ~1442
+Internal Links Found:
+  - "Victorinox Fibrox 8&quot; Chef&apos;s Knife" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+  - "Lodge Cast Iron Skillet" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+  - "How to Steel a Knife Guide" → /blog/how-to-steel-a-knife | blog
+  - "Nordic Ware Half Sheets" → /reviews/nordic-ware-half-sheet-pan | review
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "Get the Free Guide →" → /newsletter | other
+  - "Knife Mistakes Guide" → /blog/knife-mistakes-home-cooks-make | blog
+  - "How to Season Cast Iron Like a Restaurant Chef" → /blog/how-to-season-cast-iron-like-restaurant-chef | blog
+  - "How to Sear Steaks Like a Restaurant Chef" → /blog/how-to-sear-steaks-like-restaurant-chef | blog
+Links to Reviews: 4
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: knife-safety-rules-professional-kitchens
+Word Count: ~4839
+Internal Links Found:
+  - "Get the Free Guide →" → /newsletter | other
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "Victorinox Fibrox 8&quot; Chef&apos;s Knife" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+  - "John Boos Platinum Commercial Cutting Board" → /reviews/john-boos-platinum-commercial-cutting-board | review
+  - "Epicurean Kitchen Cutting Board" → /reviews/epicurean-kitchen-cutting-board | review
+  - "The 5 Essential Knife Cuts Every Home Cook Should Master" → /blog/essential-knife-cuts-every-cook-should-master | blog
+  - "How to Steel a Knife: Honing Guide for Sharp Edges" → /blog/how-to-steel-a-knife | blog
+  - "How to Sharpen with a Tri-Stone: Complete Tutorial" → /blog/how-to-sharpen-with-tri-stone | blog
+Links to Reviews: 4
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: knife-skills-how-to-hold-chef-knife
+Word Count: ~705
+Internal Links Found:
+  - "knife safety guide" → /blog/knife-safety-rules-professional-kitchens | blog
+  - "Victorinox Fibrox 8&quot; Chef&apos;s Knife" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+  - "Victorinox 4&quot; Paring Knife" → /reviews/victorinox-4-inch-paring-knife | review
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "complete cookware guide" → /guides/best-cookware | guide
+  - "→ The 5 Essential Knife Cuts Every Home Cook Should Master" → /blog/essential-knife-cuts-every-cook-should-master | blog
+  - "→ 5 Knife Mistakes Home Cooks Make" → /blog/knife-mistakes-home-cooks-make | blog
+  - "→ Mise en Place: The Foundation of Professional Cooking" → /blog/mis-en-place-professional-cooking | blog
+  - "→ Complete Guide to Cooking Onions" → /blog/onions-cooking-guide | blog
+  - "→ How to Choose Your First Chef Knife" → /blog/how-to-choose-first-chef-knife | blog
+Links to Reviews: 3
+Links to Category Pages: 0
+Links to Other Blogs: 6
+Links to Guides: 1
+MISSING Category Hub Link: YES ❌
+
+Blog: knife-storage-protecting-blades-for-decades
+Word Count: ~87
+Internal Links Found:
+  - "Get the Free Guide →" → /newsletter | other
+  - "Learn professional knife grip techniques" → /blog/knife-skills-how-to-hold-chef-knife | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 1
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: magic-of-freshly-ground-pepper
+Word Count: ~62
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: maillard-reaction-browning-flavor
+Word Count: ~91
+Internal Links Found:
+  - "How to Sear Steaks Like a Restaurant Chef" → /blog/how-to-sear-steaks-like-restaurant-chef | blog
+  - "cast iron skillets" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+  - "→ Why Resting Is the Key to Cooking Meat" → /blog/why-resting-meat-key-cooking | blog
+  - "→ Cookware Materials Explained" → /guides/cookware-materials | guide
+  - "→ Why Professional Chefs Use Kosher Salt" → /blog/why-professional-chefs-use-kosher-salt | blog
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 1
+MISSING Category Hub Link: YES ❌
+
+Blog: making-stock-professional-chef-method
+Word Count: ~3012
+Internal Links Found:
+  - "Blanching Vegetables: Why Restaurants Do It" → /blog/blanching-vegetables-why-restaurants-do-it | blog
+  - "Reducing Sauces: The Technique Restaurants Use Daily" → /blog/reducing-sauces-restaurant-technique | blog
+  - "Deglazing: The Secret to Restaurant-Quality Flavor" → /blog/deglazing-secret-to-restaurant-quality-flavor | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: meal-prep-station-setup-restaurant-efficiency
+Word Count: ~1268
+Internal Links Found:
+  - "understanding the foundation of professional cooking" → /blog/mis-en-place-professional-cooking | blog
+  - "baking sheet" → /blog/sheet-pan-cooking-restaurant-techniques | blog
+  - "Victorinox Fibrox 8&quot; Chef&apos;s Knife" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+  - "John Boos Reversible Maple Board" → /reviews/john-boos-platinum-commercial-cutting-board | review
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "Nordic Ware Half Sheet Pan" → /reviews/nordic-ware-half-sheet-pan | review
+  - "Learn about different cookware materials" → /blog/cookware-materials-explained | blog
+  - "Learn professional roasting techniques" → /blog/roasting-vegetables-restaurant-guide | blog
+  - "Master proper pan preheating" → /blog/how-to-preheat-a-pan | blog
+Links to Reviews: 4
+Links to Category Pages: 0
+Links to Other Blogs: 5
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: meat-cooking-temperatures-thermometers
+Word Count: ~2096
+Internal Links Found:
+  - "seasoning techniques" → /reviews/diamond-crystal-kosher-salt | review
+  - "quality knives" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+  - "professional cutting board" → /reviews/john-boos-platinum-commercial-cutting-board | review
+  - "Dutch ovens" → /reviews/le-creuset-signature-7-25-qt-dutch-oven | review
+  - "cast iron skillets" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+  - "kitchen safety protocols" → /blog/kitchen-gloves-guide | blog
+  - "complete professional kitchen kit" → /kitchen-bundle | other
+Links to Reviews: 5
+Links to Category Pages: 0
+Links to Other Blogs: 1
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: mis-en-place-professional-cooking
+Word Count: ~92
+Internal Links Found:
+  - "set up your meal prep station with restaurant efficiency" → /blog/meal-prep-station-setup-restaurant-efficiency | blog
+  - "→ Knife Safety: How to Protect Your Fingers" → /blog/knife-safety-protect-fingers | blog
+  - "→ How to Make a Perfect Roux" → /blog/how-to-make-roux | blog
+  - "→ The Science of Caramelization" → /blog/caramelization-science | blog
+  - "→ Victorinox Fibrox 8&quot; Chef&apos;s Knife Review" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+  - "→ OXO Good Grips Bench Scraper Review" → /reviews/oxo-good-grips-bench-scraper | review
+Links to Reviews: 2
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: nonstick-vs-stainless-steel-pans
+Word Count: ~148
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: onions-cooking-guide
+Word Count: ~90
+Internal Links Found:
+  - "Caramelized onions" → /blog/caramelization-science | blog
+  - "→ Complete Guide to Cooking Potatoes" → /blog/potatoes-cooking-guide | blog
+  - "→ Knife Safety: How to Protect Your Fingers" → /blog/knife-safety-protect-fingers | blog
+  - "→ Victorinox Fibrox 8&quot; Chef&apos;s Knife Review" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: oxidization-effect-on-food
+Word Count: ~85
+Internal Links Found:
+  - "Get the Newsletter →" → /newsletter | other
+  - "→ Cutting and Storing Fresh Herbs" → /blog/cutting-storing-fresh-herbs | blog
+  - "→ Why Cooking Science Matters" → /blog/why-cooking-science-matters | blog
+  - "→ Best Chef Knives Guide" → /guides/best-chef-knives | guide
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 2
+Links to Guides: 1
+MISSING Category Hub Link: YES ❌
+
+Blog: paring-knife-vs-chefs-knife
+Word Count: ~2324
+Internal Links Found:
+  - "→ Complete Victorinox Knife Lineup: Comparing All 5 Models" → /blog/complete-victorinox-knife-lineup-comparison | blog
+  - "→ 8-Inch vs 10-Inch Chef&rsquo;s Knife: Size Selection Guide" → /blog/victorinox-8-inch-vs-10-inch-chefs-knife | blog
+  - "→ Budget vs Premium Knives: Victorinox vs Wüsthof" → /blog/victorinox-budget-vs-wusthof-premium-knives | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: potatoes-cooking-guide
+Word Count: ~90
+Internal Links Found:
+  - "→ Complete Guide to Cooking Onions" → /blog/onions-cooking-guide | blog
+  - "→ The Science of Caramelization" → /blog/caramelization-science | blog
+  - "→ Mis en Place: Professional Cooking Foundation" → /blog/mis-en-place-professional-cooking | blog
+  - "→ Lodge Cast Iron Skillet Bundle Review" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: reducing-sauces-restaurant-technique
+Word Count: ~1133
+Internal Links Found:
+  - "Learn about different cookware materials" → /blog/cookware-materials-explained | blog
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "Learn how to deglaze properly" → /blog/deglazing-secret-to-restaurant-quality-flavor | blog
+  - "Learn how to braise" → /blog/braising-101-tough-cuts-made-tender | blog
+  - "Master caramelizing onions" → /blog/caramelizing-onions-why-it-takes-45-minutes | blog
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: sheet-pan-cooking-restaurant-techniques
+Word Count: ~1355
+Internal Links Found:
+  - "Learn the complete professional method for roasting vegetabl" → /blog/roasting-vegetables-restaurant-guide | blog
+  - "Learn the complete mise en place method" → /blog/mise-en-place-guide | blog
+  - "flexible scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "Learn the professional method for reducing sauces" → /blog/reducing-sauces-guide | blog
+  - "Nordic Ware Natural Aluminum Commercial Baker&apos;s Half Sh" → /reviews/nordic-ware-half-sheet-pan | review
+  - "Oven thermometer" → /guides/kitchen-starter-kit | guide
+  - "Learn about different cookware materials" → /blog/cookware-materials-explained | blog
+Links to Reviews: 2
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 1
+MISSING Category Hub Link: YES ❌
+
+Blog: stainless-steel-why-food-sticks
+Word Count: ~676
+Internal Links Found:
+  - "Get the Free Guide →" → /newsletter | other
+  - "Lodge Cast Iron Skillet" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "How to Sear Steaks Like a Restaurant Chef" → /blog/how-to-sear-steaks-like-restaurant-chef | blog
+  - "/blog/cast-iron-mistakes-ruin-pan" → /blog/cast-iron-mistakes-ruin-pan | blog
+Links to Reviews: 2
+Links to Category Pages: 0
+Links to Other Blogs: 2
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: stand-mixer-buying-guide
+Word Count: ~342
+Internal Links Found:
+  - "Get the Free Guide →" → /newsletter | other
+  - "Roasting Vegetables: Restaurant Temperature & Timing Guide" → /blog/roasting-vegetables-restaurant-guide | blog
+  - "Food Processor vs Blender: Which Do You Actually Need?" → /blog/food-processor-vs-blender | blog
+  - "10 Kitchen Tools You&apos;re Wasting Money On (And What to B" → /blog/kitchen-tools-wasting-money | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: stand-mixer-vs-hand-mixer
+Word Count: ~151
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: stock-vs-broth-vs-bouillon
+Word Count: ~92
+Internal Links Found:
+  - "→ How to Make Stock: The Professional Chef Method" → /blog/making-stock-professional-chef-method | blog
+  - "→ What is Braising? (And Why It Makes Meat Tender)" → /blog/what-is-braising | blog
+  - "→ Understanding Umami: The Fifth Taste" → /blog/understanding-umami-fifth-taste | blog
+  - "→ Why Cooking Science Matters" → /blog/why-cooking-science-matters | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: understanding-acids-cooking
+Word Count: ~90
+Internal Links Found:
+  - "fat" → /blog/fat-is-flavor | blog
+  - "→ What is Emulsification?" → /blog/what-is-emulsification | blog
+  - "→ How to Make Perfect Cheese Sauce" → /blog/cheese-sauce-mac-and-cheese | blog
+  - "→ Why Professional Chefs Use Kosher Salt" → /blog/why-professional-chefs-use-kosher-salt | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: understanding-cooking-fats
+Word Count: ~86
+Internal Links Found:
+  - "Get the Free Guide" → /newsletter | other
+  - "→ Fat is Flavor: The Science Behind Richness" → /blog/fat-is-flavor | blog
+  - "→ The Art of Deglazing" → /blog/deglazing-pan-sauces | blog
+  - "→ Cast Iron Skillet Review" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+Links to Reviews: 1
+Links to Category Pages: 0
+Links to Other Blogs: 2
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: understanding-umami-fifth-taste
+Word Count: ~91
+Internal Links Found:
+  - "→ Why Cooking Science Matters" → /blog/why-cooking-science-matters | blog
+  - "→ Why Fat is Flavor (And How to Use It)" → /blog/fat-is-flavor | blog
+  - "→ Understanding Acids in Cooking" → /blog/understanding-acids-cooking | blog
+  - "→ Complete Guide to Salts" → /blog/complete-guide-to-salts | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: vegetable-roasting-guide
+Word Count: ~90
+Internal Links Found:
+  - "essential knife cuts guide" → /blog/essential-knife-cuts-every-cook-should-master | blog
+  - "Nordic Ware Half Sheet Pan" → /reviews/nordic-ware-half-sheet-pan | review
+  - "Rubbermaid Commercial Cook&apos;s Scraper" → /reviews/rubbermaid-commercial-cooks-scraper | review
+  - "→ How to Sear Steaks Like a Restaurant Chef" → /blog/how-to-sear-steaks-like-restaurant-chef | blog
+  - "→ Benefits of Cooking with Garlic" → /blog/benefits-cooking-with-garlic | blog
+  - "→ Why Fat is Flavor" → /blog/fat-is-flavor | blog
+Links to Reviews: 2
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: victorinox-8-inch-vs-10-inch-chefs-knife
+Word Count: ~2391
+Internal Links Found:
+  - "→ Complete Victorinox Knife Lineup: Comparing All 5 Models" → /blog/complete-victorinox-knife-lineup-comparison | blog
+  - "→ Paring Knife vs Chef&rsquo;s Knife: When to Use Which" → /blog/paring-knife-vs-chefs-knife | blog
+  - "→ Budget vs Premium Knives: Victorinox vs Wüsthof" → /blog/victorinox-budget-vs-wusthof-premium-knives | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: victorinox-budget-vs-wusthof-premium-knives
+Word Count: ~2186
+Internal Links Found:
+  - "→ Complete Victorinox Knife Lineup: Comparing All 5 Models" → /blog/complete-victorinox-knife-lineup-comparison | blog
+  - "→ 8-Inch vs 10-Inch Chef&rsquo;s Knife: Size Selection Guide" → /blog/victorinox-8-inch-vs-10-inch-chefs-knife | blog
+  - "→ Paring Knife vs Chef&rsquo;s Knife: When to Use Which" → /blog/paring-knife-vs-chefs-knife | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 3
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: what-is-braising
+Word Count: ~253
+Internal Links Found:
+  - "the Maillard reaction" → /blog/maillard-reaction-browning-flavor | blog
+  - "→ Le Creuset 7.25 Qt Dutch Oven Review" → /reviews/le-creuset-signature-7-25-qt-dutch-oven | review
+  - "→ Lodge Cast Iron Skillet Bundle Review" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+  - "→ Why Resting Is the Key to Cooking Meat" → /blog/why-resting-meat-key-cooking | blog
+Links to Reviews: 2
+Links to Category Pages: 0
+Links to Other Blogs: 2
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: what-is-emulsification
+Word Count: ~90
+Internal Links Found:
+  - "Smooth cheese sauces" → /blog/cheese-sauce-mac-and-cheese | blog
+  - "→ Understanding Acids in Cooking" → /blog/understanding-acids-cooking | blog
+  - "→ Why Fat is Flavor" → /blog/fat-is-flavor | blog
+  - "→ How to Make a Perfect Roux" → /blog/how-to-make-roux | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: what-is-mirepoix
+Word Count: ~2036
+Internal Links Found:
+  - "→ Making Stock: The Professional Method" → /blog/making-stock-professional-chef-method | blog
+  - "→ Master Knife Skills for Efficient Prep" → /blog/knife-skills-how-to-hold-chef-knife | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 2
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: what-is-velveting
+Word Count: ~2534
+Internal Links Found:
+  - "→ The Hidden Secrets of Brining" → /blog/hidden-secrets-of-brining | blog
+  - "→ Master Knife Skills for Perfect Slicing" → /blog/knife-skills-how-to-hold-chef-knife | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 2
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: why-children-hate-broccoli
+Word Count: ~91
+Internal Links Found:
+  - "→ Vegetable Roasting Guide" → /blog/vegetable-roasting-guide | blog
+  - "→ Benefits of Cooking with Garlic" → /blog/benefits-cooking-with-garlic | blog
+  - "→ Why Fat is Flavor" → /blog/fat-is-flavor | blog
+  - "→ Understanding Acids in Cooking" → /blog/understanding-acids-cooking | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: why-cook-chicken-wings-longer
+Word Count: ~62
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: why-cooking-science-matters
+Word Count: ~91
+Internal Links Found:
+  - "Maillard reaction" → /blog/maillard-reaction-browning-flavor | blog
+  - "Caramelization" → /blog/caramelization-science | blog
+  - "caramelized onions" → /blog/onions-cooking-guide | blog
+  - "Emulsification" → /blog/what-is-emulsification | blog
+  - "Fat" → /blog/fat-is-flavor | blog
+  - "Acids" → /blog/understanding-acids-cooking | blog
+  - "→ Why Resting Meat is Critical" → /blog/why-resting-meat-key-cooking | blog
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 7
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: why-professional-chefs-use-kosher-salt
+Word Count: ~833
+Internal Links Found:
+  - "Diamond Crystal Kosher Salt" → /reviews/diamond-crystal-kosher-salt | review
+  - "sharp chef&apos;s knife" → /reviews/victorinox-fibrox-8-inch-chefs-knife | review
+  - "quality cutting board" → /reviews/john-boos-platinum-commercial-cutting-board | review
+  - "steak searing guide" → /blog/how-to-sear-steaks-like-restaurant-chef | blog
+  - "Kitchen Starter Kit" → /kitchen-bundle | other
+Links to Reviews: 3
+Links to Category Pages: 0
+Links to Other Blogs: 1
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: why-removing-silverskin-matters
+Word Count: ~61
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: why-resting-meat-key-cooking
+Word Count: ~92
+Internal Links Found:
+  - "checking our guide to the best meat thermometers" → /blog/meat-cooking-temperatures-thermometers | blog
+  - "Nordic Ware" → /reviews/nordic-ware-half-sheet-pan | review
+  - "Maillard reaction" → /blog/maillard-reaction-browning-flavor | blog
+  - "→ How to Sear Steaks Like a Restaurant Chef" → /blog/how-to-sear-steaks-like-restaurant-chef | blog
+  - "→ Lodge Cast Iron Skillet Bundle Review" → /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | review
+  - "→ Why Professional Chefs Use Kosher Salt" → /blog/why-professional-chefs-use-kosher-salt | blog
+Links to Reviews: 2
+Links to Category Pages: 0
+Links to Other Blogs: 4
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: why-wash-eggs-and-produce
+Word Count: ~62
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+Blog: wood-vs-composite-cutting-board
+Word Count: ~146
+Internal Links Found:
+  (none)
+Links to Reviews: 0
+Links to Category Pages: 0
+Links to Other Blogs: 0
+Links to Guides: 0
+MISSING Category Hub Link: YES ❌
+
+
+================================================================================
+PHASE 1.2: REVIEW PAGE INTERNAL LINKS INVENTORY
+================================================================================
+
+Review: benriner-large-mandoline
+Category: prep-tools
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: black-decker-toaster-oven
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: bodum-chambord-french-press
+Category: unknown
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: cuisinart-8-inch-nonstick-pan
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: cuisinart-dlc-10c-classic-food-processor
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: diamond-crystal-kosher-salt
+Category: cleaning-maintenance
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: epicurean-kitchen-cutting-board
+Category: cookware
+Internal Links in Body:
+  (none)
+Links BACK to Category Hub: NONE ❌
+
+Review: henckels-sharpening-steel
+Category: cleaning-maintenance
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: instant-pot-duo-plus-6qt
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: japanese-wooden-spoon-set
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: john-boos-platinum-commercial-cutting-board
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: kitchenaid-kp26m1xlc-professional-600
+Category: cookware
+Internal Links in Body:
+  (none)
+Links BACK to Category Hub: NONE ❌
+
+Review: kitchenaid-ksm8990wh
+Category: cookware
+Internal Links in Body:
+  (none)
+Links BACK to Category Hub: NONE ❌
+
+Review: large-metal-hotel-pans
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: large-plastic-hotel-pans
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: le-creuset-signature-7-25-qt-dutch-oven
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: lodge-seasoned-cast-iron-3-skillet-bundle
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: method-all-purpose-cleaner
+Category: cleaning-maintenance
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: ninja-air-fryer-af101
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: ninja-bl660-professional-blender
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: nordic-ware-half-sheet-pan
+Category: knives
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+  - "Cookware" → /cookware
+Links BACK to Category Hub: /cookware ✓
+
+Review: norton-im200-tri-stone-sharpener
+Category: knives
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+  - "Knives" → /knives
+Links BACK to Category Hub: /knives ✓
+
+Review: oxo-good-grips-bench-scraper
+Category: prep-tools
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+  - "→ See My John Boos Platinum Cutting Board Review" → /reviews/john-boos-platinum-commercial-cutting-board
+Links BACK to Category Hub: NONE ❌
+
+Review: oxo-good-grips-swivel-peeler
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: robot-coupe-r2-dice
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+  - "KitchenAid commercial mixer" → /reviews/kitchenaid-ksm8990wh
+  - "Vitamix 5200 blender" → /reviews/vitamix-5200-professional-blender
+  - "John Boos cutting board" → /reviews/john-boos-platinum-commercial-cutting-board
+  - "Download Free Guide →" → /newsletter
+Links BACK to Category Hub: NONE ❌
+
+Review: rubbermaid-commercial-cooks-scraper
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+  - "Complete Kitchen Starter Kit" → /kitchen-bundle
+  - "Contact me" → /contact
+Links BACK to Category Hub: NONE ❌
+
+Review: small-metal-hotel-pans
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: small-plastic-hotel-pans
+Category: cookware
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: victorinox-4-inch-paring-knife
+Category: knives
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: victorinox-fibrox-10-inch-chefs-knife
+Category: knives
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: victorinox-fibrox-8-inch-chefs-knife
+Category: knives
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+  - "Knives" → /knives
+Links BACK to Category Hub: /knives ✓
+
+Review: victorinox-granton-edge-boning-knife
+Category: knives
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: victorinox-offset-bread-knife
+Category: knives
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: vitamix-5200-professional-blender
+Category: cookware
+Internal Links in Body:
+  (none)
+Links BACK to Category Hub: NONE ❌
+
+Review: winco-heavy-duty-tongs
+Category: moving-stirring
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: wusthof-classic-ikon-16-piece
+Category: knives
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+Review: zuperia-bar-mops
+Category: unknown
+Internal Links in Body:
+  - "Home" → /
+  - "Reviews" → /reviews
+Links BACK to Category Hub: NONE ❌
+
+
+================================================================================
+PHASE 1.3: CATEGORY PAGE COVERAGE (from category-config.ts)
+================================================================================
+
+Category: knives
+Path: /knives
+Supabase Category: Knives & Cutting Tools
+Related Guides Linked:
+  - /guides/best-chef-knives
+  - /guides/knife-care
+Related Blogs Linked:
+  - /blog/how-to-choose-first-chef-knife
+  - /blog/how-to-sharpen-with-tri-stone
+  - /blog/essential-knife-cuts-every-cook-should-master
+  - /blog/knife-storage-protecting-blades-for-decades
+Potentially Relevant Blogs NOT Linked:
+  - /blog/carbon-steel-vs-stainless-steel-knife
+  - /blog/cast-iron-vs-carbon-steel-pan
+  - /blog/complete-victorinox-knife-lineup-comparison
+  - /blog/cutting-board-materials-guide
+  - /blog/cutting-storing-fresh-herbs
+  ... and 9 more
+
+Category: cookware
+Path: /cookware
+Supabase Category: Cookware & Bakeware
+Related Guides Linked:
+  - /guides/best-cookware
+  - /guides/cookware-materials
+Related Blogs Linked:
+  - /blog/stainless-steel-why-food-sticks
+  - /blog/how-to-clean-burnt-stainless-steel-pans
+  - /blog/cast-iron-seasoning-care
+  - /blog/nonstick-vs-stainless-steel-pans
+Potentially Relevant Blogs NOT Linked:
+  - /blog/carbon-steel-vs-stainless-steel-knife
+  - /blog/cast-iron-vs-carbon-steel-pan
+  - /blog/cookware-materials-explained
+  - /blog/deglazing-pan-sauces
+  - /blog/dutch-oven-size-guide-which-quart-size
+  ... and 5 more
+
+Category: appliances
+Path: /appliances
+Supabase Category: Small Appliances
+Related Guides Linked:
+  - /guides/kitchen-appliances
+  - /guides/affordable-kitchen-appliances
+Related Blogs Linked:
+  - /blog/stand-mixer-buying-guide
+  - /blog/stand-mixer-vs-hand-mixer
+  - /blog/immersion-blender-restaurant-workhorse
+  - /blog/food-processor-vs-blender-professional-uses
+Potentially Relevant Blogs NOT Linked:
+  - /blog/food-processor-vs-blender
+  - /blog/immersion-blender-vs-countertop-blender
+
+Category: moving-stirring
+Path: /moving-stirring
+Supabase Category: Moving & Stirring Tools
+Related Guides Linked:
+  (none) ❌
+Related Blogs Linked:
+  (none) ❌
+
+Category: prep-tools
+Path: /prep-tools
+Supabase Category: Prep Tools
+Related Guides Linked:
+  (none) ❌
+Related Blogs Linked:
+  (none) ❌
+Potentially Relevant Blogs NOT Linked:
+  - /blog/cutting-board-materials-guide
+  - /blog/how-to-prep-and-grill-asparagus
+  - /blog/meal-prep-station-setup-restaurant-efficiency
+  - /blog/wood-vs-composite-cutting-board
+
+Category: cleaning-maintenance
+Path: /cleaning-maintenance
+Supabase Category: Cleaning & Maintenance
+Related Guides Linked:
+  - /guides/knife-care
+Related Blogs Linked:
+  - /blog/how-to-sharpen-with-tri-stone
+  - /blog/how-to-steel-a-knife
+Potentially Relevant Blogs NOT Linked:
+  - /blog/cast-iron-seasoning-care
+  - /blog/how-to-clean-burnt-stainless-steel-pans
+
+
+================================================================================
+SUMMARY
+================================================================================
+
+Total Blog Posts: 90
+Blogs with NO review links: 45 (50%)
+Blogs with NO category hub links: 90 (100%)
+
+Total Review Pages: 37
+Reviews with NO link back to category hub: 34 (92%)
+
+Category Page Content Gaps:
+  ✓ /knives: 2 guides, 4 blogs
+  ✓ /cookware: 2 guides, 4 blogs
+  ✓ /appliances: 2 guides, 4 blogs
+  ❌ /moving-stirring: no guides, no blogs
+  ❌ /prep-tools: no guides, no blogs
+  ✓ /cleaning-maintenance: 1 guides, 2 blogs
+
+--- Blogs Missing Review Links (top 20) ---
+  bacon-but-not-in-this-dish
+  blanching-vegetables-why-restaurants-do-it
+  bleach-vs-sanitation-solution
+  bread-science-gluten-development
+  carbon-steel-vs-stainless-steel-knife
+  cast-iron-vs-carbon-steel-pan
+  complete-guide-to-salts
+  complete-victorinox-knife-lineup-comparison
+  cooking-with-tomatoes-fresh-vs-canned
+  cutting-storing-fresh-herbs
+  dutch-oven-vs-slow-cooker
+  fat-is-flavor
+  gas-vs-induction-cooktop
+  hand-washing-kitchen
+  hidden-secrets-of-brining
+  how-to-cook-perfect-pasta
+  how-to-make-marinara-sauce
+  how-to-prep-and-grill-asparagus
+  how-to-store-raw-foods-safely
+  how-to-use-pizza-stone
+  ... and 25 more
+
+--- Reviews Missing Category Hub Links ---
+  benriner-large-mandoline (prep-tools)
+  black-decker-toaster-oven (cookware)
+  bodum-chambord-french-press (unknown)
+  cuisinart-8-inch-nonstick-pan (cookware)
+  cuisinart-dlc-10c-classic-food-processor (cookware)
+  diamond-crystal-kosher-salt (cleaning-maintenance)
+  epicurean-kitchen-cutting-board (cookware)
+  henckels-sharpening-steel (cleaning-maintenance)
+  instant-pot-duo-plus-6qt (cookware)
+  japanese-wooden-spoon-set (cookware)
+  john-boos-platinum-commercial-cutting-board (cookware)
+  kitchenaid-kp26m1xlc-professional-600 (cookware)
+  kitchenaid-ksm8990wh (cookware)
+  large-metal-hotel-pans (cookware)
+  large-plastic-hotel-pans (cookware)
+  le-creuset-signature-7-25-qt-dutch-oven (cookware)
+  lodge-seasoned-cast-iron-3-skillet-bundle (cookware)
+  method-all-purpose-cleaner (cleaning-maintenance)
+  ninja-air-fryer-af101 (cookware)
+  ninja-bl660-professional-blender (cookware)
+  oxo-good-grips-bench-scraper (prep-tools)
+  oxo-good-grips-swivel-peeler (cookware)
+  robot-coupe-r2-dice (cookware)
+  rubbermaid-commercial-cooks-scraper (cookware)
+  small-metal-hotel-pans (cookware)
+  small-plastic-hotel-pans (cookware)
+  victorinox-4-inch-paring-knife (knives)
+  victorinox-fibrox-10-inch-chefs-knife (knives)
+  victorinox-granton-edge-boning-knife (knives)
+  victorinox-offset-bread-knife (knives)
+  vitamix-5200-professional-blender (cookware)
+  winco-heavy-duty-tongs (moving-stirring)
+  wusthof-classic-ikon-16-piece (knives)
+  zuperia-bar-mops (unknown)
+
+================================================================================
+END OF AUDIT
+================================================================================

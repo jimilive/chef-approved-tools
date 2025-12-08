@@ -12,7 +12,7 @@ export const reviewData = {
     description: 'Better quality than what I used for years in professional restaurants. ZUPERIA ring-spun cotton bar mops are more absorbent than $40/dozen competitors.',
     ogTitle: 'ZUPERIA Bar Mops: Professional Kitchen Review',
     ogDescription: 'Professional kitchen bar mops. Industry standard quality.',
-    testingPeriod: 'Years Restaurant Testing',
+    testingPeriod: '40 years at every kitchen job',
     tier: 3
   },
 
@@ -21,7 +21,7 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: '18 years home use',
+    testingPeriod: '40 years at every kitchen job',
     hook: 'Industry standard. 100% ring spun cotton. Restaurant grade.',
   },
 

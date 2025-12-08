@@ -1,0 +1,232 @@
+================================================================================
+PHASE 3: ANCHOR TEXT ANALYSIS
+================================================================================
+
+Analyzing 159 page files...
+
+Found 645 internal links with anchor text
+
+================================================================================
+3.1 ANCHOR TEXT VARIETY CHECK - TOP 10 MOST-LINKED PAGES
+================================================================================
+
+
+/reviews
+Total Links: 42
+Unique Anchor Variations: 8
+
+⚠️  OVER-USED ANCHORS (3+ times):
+   "Reviews" × 33
+
+All Anchors Used:
+   "Reviews" × 33
+   "Browse All Reviews →" × 2
+   "Browse Reviews" × 2
+   "Browse All Chef Approved Tools →" × 1
+   "👨‍🍳 All Chef Approved Reviews" × 1
+   "📏 Kitchen Tools & Gadgets" × 1
+   "professional equipment reviews" × 1
+   "Browse All Product Reviews See all professional kitchen equipment reviews" × 1
+
+/
+Total Links: 40
+Unique Anchor Variations: 5
+
+⚠️  OVER-USED ANCHORS (3+ times):
+   "Home" × 36
+
+All Anchors Used:
+   "Home" × 36
+   "← Back to Home" × 1
+   "Back to Homepage" × 1
+   "Browse All Reviews →" × 1
+   "Chef Approved Tools Professional Equipment Reviews Chef Approved Tools" × 1
+
+/reviews/rubbermaid-commercial-cooks-scraper
+Total Links: 36
+Unique Anchor Variations: 4
+
+⚠️  OVER-USED ANCHORS (3+ times):
+   "Rubbermaid Commercial Cook&apos;s Scraper" × 24
+   "Rubbermaid Commercial Cook&apos;s Scraper Review" × 7
+   "→ Rubbermaid Cook&apos;s Scraper Review" × 4
+
+⚠️  NO EXACT-MATCH ANCHOR for "rubbermaid-commercial-cooks-scraper"
+
+All Anchors Used:
+   "Rubbermaid Commercial Cook&apos;s Scraper" × 24
+   "Rubbermaid Commercial Cook&apos;s Scraper Review" × 7
+   "→ Rubbermaid Cook&apos;s Scraper Review" × 4
+   "flexible scraper" × 1
+
+/reviews/lodge-seasoned-cast-iron-3-skillet-bundle
+Total Links: 35
+Unique Anchor Variations: 14
+
+⚠️  OVER-USED ANCHORS (3+ times):
+   "→ Lodge Cast Iron Skillet Bundle Review" × 8
+   "Lodge Cast Iron Skillet" × 7
+   "Lodge 12&quot; Cast Iron Skillet" × 4
+   "Lodge Cast Iron Skillet Review" × 4
+
+⚠️  NO EXACT-MATCH ANCHOR for "lodge-seasoned-cast-iron-3-skillet-bundle"
+
+All Anchors Used:
+   "→ Lodge Cast Iron Skillet Bundle Review" × 8
+   "Lodge Cast Iron Skillet" × 7
+   "Lodge 12&quot; Cast Iron Skillet" × 4
+   "Lodge Cast Iron Skillet Review" × 4
+   "Lodge cast iron skillets" × 2
+   "cast iron skillets" × 2
+   "Lodge 12&quot; Skillet" × 1
+   "→ Lodge Cast Iron Skillet Review" × 1
+   ... and 6 more variations
+
+/reviews/victorinox-fibrox-8-inch-chefs-knife
+Total Links: 28
+Unique Anchor Variations: 14
+
+⚠️  OVER-USED ANCHORS (3+ times):
+   "Victorinox Fibrox 8&quot; Chef&apos;s Knife" × 7
+   "→ Victorinox Fibrox 8&quot; Chef&apos;s Knife Review" × 4
+   "Victorinox Fibrox 8&quot; Chef&apos;s Knife Review" × 4
+
+⚠️  NO EXACT-MATCH ANCHOR for "victorinox-fibrox-8-inch-chefs-knife"
+
+All Anchors Used:
+   "Victorinox Fibrox 8&quot; Chef&apos;s Knife" × 7
+   "→ Victorinox Fibrox 8&quot; Chef&apos;s Knife Review" × 4
+   "Victorinox Fibrox 8&quot; Chef&apos;s Knife Review" × 4
+   "Victorinox Fibrox 8-Inch Chef&apos;s Knife" × 2
+   "Victorinox Fibrox Pro 8&rdquo; Chef&rsquo;s Knife" × 2
+   "Victorinox Fibrox 8″ Chef&apos;s Knife" × 1
+   "Victorinox Fibrox 8″ Chef&apos;s Knife Review" × 1
+   "Victorinox 8-Inch Chef&rsquo;s Knife Review (20+ Years Professional Testing)" × 1
+   ... and 6 more variations
+
+/blog/fat-is-flavor
+Total Links: 20
+Unique Anchor Variations: 5
+
+⚠️  OVER-USED ANCHORS (3+ times):
+   "→ Why Fat is Flavor" × 6
+   "→ Why Fat is Flavor (And How to Use It)" × 6
+   "fat" × 5
+
+All Anchors Used:
+   "→ Why Fat is Flavor" × 6
+   "→ Why Fat is Flavor (And How to Use It)" × 6
+   "fat" × 5
+   "→ Fat is Flavor: The Science Behind Richness" × 2
+   "flavor" × 1
+
+/newsletter
+Total Links: 16
+Unique Anchor Variations: 9
+
+⚠️  OVER-USED ANCHORS (3+ times):
+   "Get the Free Guide →" × 7
+
+All Anchors Used:
+   "Get the Free Guide →" × 7
+   "Get the Newsletter →" × 2
+   "Get the Guide →" × 1
+   "Get the Free Guide" × 1
+   "Newsletter Signup - Professional tips & new reviews" × 1
+   "Download Free Conversion Chart →" × 1
+   "Download Free Guide →" × 1
+   "setIsMobileMenuOpen(false)}
+                    >
+                      🎯 Get Free Chef Guide" × 1
+   ... and 1 more variations
+
+/reviews/diamond-crystal-kosher-salt
+Total Links: 13
+Unique Anchor Variations: 7
+
+⚠️  OVER-USED ANCHORS (3+ times):
+   "Diamond Crystal Kosher Salt" × 5
+   "Diamond Crystal Kosher Salt Review" × 3
+
+All Anchors Used:
+   "Diamond Crystal Kosher Salt" × 5
+   "Diamond Crystal Kosher Salt Review" × 3
+   "→ Diamond Crystal Salt: Chef&apos;s Choice" × 1
+   "Diamond Crystal Kosher Salt Review: 18-Year Professional Test The professional" × 1
+   "seasoning techniques" × 1
+   "Diamond Crystal" × 1
+   "Diamond Crystal Kosher Salt Review The professional chef&apos;s choice for" × 1
+
+/blog/how-to-sear-steaks-like-restaurant-chef
+Total Links: 13
+Unique Anchor Variations: 5
+
+⚠️  OVER-USED ANCHORS (3+ times):
+   "→ How to Sear Steaks Like a Restaurant Chef" × 6
+   "How to Sear Steaks Like a Restaurant Chef" × 4
+
+⚠️  NO EXACT-MATCH ANCHOR for "how-to-sear-steaks-like-restaurant-chef"
+
+All Anchors Used:
+   "→ How to Sear Steaks Like a Restaurant Chef" × 6
+   "How to Sear Steaks Like a Restaurant Chef" × 4
+   "How to Sear Steaks Like a Restaurant Chef Master professional" × 1
+   "steak searing guide" × 1
+   "How to Sear Steaks Like a Restaurant Chef Professional steak" × 1
+
+/blog/cookware-materials-explained
+Total Links: 12
+Unique Anchor Variations: 5
+
+⚠️  OVER-USED ANCHORS (3+ times):
+   "Learn about different cookware materials" × 7
+
+All Anchors Used:
+   "Learn about different cookware materials" × 7
+   "Cookware Materials Explained: What Chefs Actually Use" × 2
+   "Cookware Materials Explained: What Chefs Actually Use Understand the pros" × 1
+   "→ Cookware Materials Explained: What Chefs Actually Use" × 1
+   "Cookware Materials Explained" × 1
+
+
+================================================================================
+3.2 ANCHOR TEXT QUALITY CHECK
+================================================================================
+
+--- GENERIC ANCHORS (0 found) ---
+✓ No generic anchors found!
+
+--- NAKED URL ANCHORS (0 found) ---
+✓ No naked URL anchors found!
+
+--- SAME ANCHOR → DIFFERENT PAGES ---
+Found 6 anchors pointing to multiple pages:
+
+⚠️  "read full review →" → 8 different pages
+      - /reviews/small-plastic-hotel-pans
+      - /reviews/large-plastic-hotel-pans
+      - /reviews/small-metal-hotel-pans
+      ... and 5 more
+⚠️  "see review" → /reviews/vitamix-5200-professional-blender, /reviews/kitchenaid-ksm8990wh, /reviews/robot-coupe-r2-dice
+⚠️  "how to season cast iron like a restaurant chef" → /blog/how-to-season-cast-iron-like-restaurant-chef, /blog/season-cast-iron-restaurant-method
+⚠️  "kitchen thermometer guide" → /blog/kitchen-thermometers-guide, /blog/meat-cooking-temperatures-thermometers
+⚠️  "caramelized onions" → /blog/caramelization-science, /blog/onions-cooking-guide
+⚠️  "browse all reviews →" → /reviews, /
+
+
+================================================================================
+SUMMARY
+================================================================================
+
+Total internal links analyzed: 645
+Unique target pages: 124
+
+Issues Found:
+  Generic anchors: 0
+  Naked URL anchors: 0
+  Anchors → multiple pages: 6
+  Over-used anchors (top 10 pages): 21
+
+================================================================================
+END OF PHASE 3 AUDIT
+================================================================================

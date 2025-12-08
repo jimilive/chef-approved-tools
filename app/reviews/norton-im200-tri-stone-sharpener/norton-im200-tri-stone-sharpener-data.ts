@@ -21,7 +21,7 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: "Years of professional use",
+    testingPeriod: "6 years professional",
     hook: "Professional sharpening system. Restaurant-grade edge.",
   },
 

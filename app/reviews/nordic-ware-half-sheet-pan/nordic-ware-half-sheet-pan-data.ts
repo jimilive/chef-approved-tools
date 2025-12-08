@@ -21,8 +21,8 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: "9 Years",
-    hook: "Never warped. Even browning for 9 years straight.",
+    testingPeriod: "10 Years",
+    hook: "Never warped. Even browning for 10 years straight.",
   },
 
   // BREADCRUMB

@@ -12,7 +12,7 @@ export const reviewData = {
     description: '6-year test of Wüsthof Classic Ikon 16-piece German-forged knives. Professional kitchen performance with ergonomic handles. Honest review of $600 pricing.',
     ogTitle: 'WÜSTHOF Classic IKON 16-Piece: 2-Year Pro Test (2025)',
     ogDescription: 'Restaurant manager\'s honest review after 2 years testing this German knife set in professional kitchens',
-    testingPeriod: '2 Years Professional Testing',
+    testingPeriod: '4 years at Feierabend',
     tier: 1
   },
 
@@ -21,7 +21,7 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: 'Years at Feierabend',
+    testingPeriod: '4 years at Feierabend',
     hook: 'Premium German steel. Professional performance.',
   },
 

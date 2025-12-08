@@ -1,0 +1,147 @@
+================================================================================
+INTERNAL LINKS AUDIT - PHASE 2
+Strategic Traffic → Conversion Analysis
+================================================================================
+
+================================================================================
+2.1 HIGH-PRIORITY TRAFFIC → CONVERSION GAPS
+================================================================================
+
+Based on traffic analysis, these high-value blog posts should link to reviews:
+
+Blog Post                                    | Should Link To                           | Status
+---------------------------------------------|------------------------------------------|--------
+/blog/cutting-board-materials-guide          | /reviews/epicurean-kitchen-cutting-board | ❌ MISSING
+/blog/cutting-board-materials-guide          | /reviews/john-boos-platinum-commercial   | ❌ MISSING
+/blog/dutch-oven-size-guide-which-quart-size | /reviews/le-creuset-signature-7-25-qt    | ✓ Has link (wrong slug)
+/blog/stock-vs-broth-vs-bouillon             | Any cookware reviews                     | ❌ MISSING
+/blog/carbon-steel-vs-stainless-steel-knife  | /reviews/victorinox-fibrox-8-inch        | ❌ MISSING
+/blog/victorinox-budget-vs-wusthof-premium   | /reviews/victorinox-fibrox-8-inch        | ❌ MISSING
+/blog/victorinox-budget-vs-wusthof-premium   | /reviews/wusthof-classic-ikon-16-piece   | ❌ MISSING
+/blog/stand-mixer-buying-guide               | /reviews/kitchenaid-kp26m1xlc-pro-600    | ❌ MISSING
+/blog/stand-mixer-buying-guide               | /reviews/kitchenaid-ksm8990wh            | ❌ MISSING
+/blog/immersion-blender-vs-countertop        | /reviews/vitamix-5200-professional       | ❌ MISSING
+/blog/immersion-blender-vs-countertop        | /reviews/ninja-bl660-professional        | ❌ MISSING
+
+IMPACT: These blogs discuss products we review but don't link to our reviews.
+        Readers leave without seeing our product recommendations.
+
+================================================================================
+2.2 ORPHAN PAGE DETECTION
+================================================================================
+
+--- REVIEWS NOT LINKED FROM ANY BLOG POST (15 total) ---
+These reviews have ZERO blog posts linking to them:
+
+❌ black-decker-toaster-oven
+❌ cuisinart-dlc-10c-classic-food-processor
+❌ henckels-sharpening-steel
+❌ instant-pot-duo-plus-6qt
+❌ japanese-wooden-spoon-set
+❌ kitchenaid-kp26m1xlc-professional-600
+❌ kitchenaid-ksm8990wh
+❌ ninja-air-fryer-af101
+❌ ninja-bl660-professional-blender
+❌ oxo-good-grips-swivel-peeler
+❌ robot-coupe-r2-dice
+❌ victorinox-offset-bread-knife
+❌ vitamix-5200-professional-blender
+❌ winco-heavy-duty-tongs
+❌ wusthof-classic-ikon-16-piece
+
+IMPACT: 15 of 37 reviews (41%) are orphaned - no blog traffic funnels to them.
+
+--- REVIEWS NOT LINKED BACK TO CATEGORY HUB (34 total) ---
+92% of review pages don't link back to their category page.
+
+================================================================================
+2.3 COMPARISON TABLE LINK AUDIT
+================================================================================
+
+Comparison tables exist in these reviews but link EXTERNALLY to Amazon,
+not to our internal reviews when we have them:
+
+Review: victorinox-fibrox-8-inch-chefs-knife
+  Comparison Table Products:
+  - Victorinox Fibrox Pro 8" → Amazon (WE HAVE REVIEW ✓)
+  - Mercer Genesis 8" → Amazon (no review)
+  - Wüsthof Gourmet 8" → Amazon (similar: wusthof-classic-ikon-16-piece)
+  - Mac Professional 8" → Amazon (no review)
+
+  ISSUE: Links go to Amazon even for products we review internally.
+         Should add "Read Our Review" links alongside affiliate buttons.
+
+Review: kitchenaid-kp26m1xlc-professional-600
+  Comparison Table Products:
+  - Professional 600 → Amazon (WE HAVE REVIEW ✓)
+  - KSM55 (5.5 Qt) → Amazon (no review)
+  - KSM70 (7.0 Qt) → Amazon (no review)
+  - Universal Plus → Amazon (no review)
+
+Review: vitamix-5200-professional-blender
+  Comparison Table Products:
+  - Vitamix 5200 → Amazon (WE HAVE REVIEW ✓)
+  - Other blenders → Amazon
+
+  ISSUE: No cross-link to ninja-bl660-professional-blender
+
+OPPORTUNITY: Add internal review links in comparison tables where we have reviews.
+
+================================================================================
+2.4 RELATED PRODUCTS / STRATEGIC LINKING GAPS
+================================================================================
+
+All review pages have RelatedProductsGrid components, but they pull from
+Supabase dynamically. The key issue is:
+
+1. RelatedProductsGrid shows products but doesn't prioritize:
+   - Complementary products (knife → cutting board → honing steel)
+   - Direct competitors we review (Vitamix → Ninja blender)
+   - Upgrade/downgrade paths
+
+STRATEGIC GAPS IDENTIFIED:
+
+Knives Category:
+- victorinox-fibrox-8-inch should link to:
+  → victorinox-fibrox-10-inch (size comparison)
+  → victorinox-4-inch-paring-knife (complementary)
+  → henckels-sharpening-steel (maintenance)
+  → norton-im200-tri-stone-sharpener (maintenance)
+
+Cookware Category:
+- lodge-seasoned-cast-iron should link to:
+  → cuisinart-8-inch-nonstick-pan (complementary/alternative)
+  → rubbermaid-commercial-cooks-scraper (maintenance tool)
+
+Appliances Category:
+- kitchenaid-kp26m1xlc-professional-600 should link to:
+  → kitchenaid-ksm8990wh (alternative model comparison)
+  → cuisinart-dlc-10c-classic-food-processor (complementary)
+
+Blenders:
+- vitamix-5200-professional-blender should link to:
+  → ninja-bl660-professional-blender (budget alternative)
+
+================================================================================
+PRIORITY ACTION ITEMS
+================================================================================
+
+CRITICAL (Revenue Impact):
+1. Add review links to cutting-board-materials-guide → epicurean + john-boos
+2. Add review links to victorinox-budget-vs-wusthof → victorinox + wusthof reviews
+3. Add review links to stand-mixer-buying-guide → kitchenaid reviews
+4. Add review links to immersion-blender-vs-countertop → vitamix + ninja
+
+HIGH (Traffic Optimization):
+5. Create blog content targeting the 15 orphaned reviews
+6. Add "Read Our Review" links in comparison tables
+7. Add category hub links to all 34 reviews missing them
+
+MEDIUM (Architecture):
+8. Populate relatedGuides and relatedBlogs for /moving-stirring
+9. Populate relatedGuides and relatedBlogs for /prep-tools
+10. Add strategic cross-links between complementary products
+
+================================================================================
+END OF PHASE 2 AUDIT
+================================================================================
