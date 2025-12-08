@@ -63,7 +63,7 @@ export default function HomePage() {
           align-items: center;
         }
         .hero-heading {
-          font-size: clamp(2rem, 5vw, 3.75rem);
+          font-size: clamp(1.875rem, 4.5vw, 3.25rem);
           font-weight: 700;
           line-height: 1.2;
         }
@@ -75,7 +75,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 items-center max-w-7xl mx-auto px-6 md:px-12 lg:px-32">
             {/* Left: Message */}
             <div className="space-y-6 md:-mr-12">
-              <h1 className="hero-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="hero-heading text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                 Rigorously Tested,
                 <br />
                 Professionally Vetted,
@@ -87,7 +87,7 @@ export default function HomePage() {
                 24 years cooking professionally at Mellow Mushroom, Purple Café, and more. Now sharing what actually works in your kitchen. Honest reviews. Zero pressure. Just results.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4 pb-8">
                 <a
                   href="#get-guide"
                   className="bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center"
@@ -117,7 +117,7 @@ export default function HomePage() {
                   priority
                 />
               </div>
-              <div className="absolute bottom-4 right-0 md:-right-6 bg-gradient-to-r from-orange-700 to-red-700 text-white px-6 py-3 rounded-xl shadow-xl">
+              <div className="absolute bottom-4 right-16 md:right-12 bg-gradient-to-r from-orange-700 to-red-700 text-white px-6 py-3 rounded-xl shadow-xl">
                 <p className="font-bold text-lg">24 Years</p>
                 <p className="text-sm font-bold">Professional Kitchens</p>
               </div>
