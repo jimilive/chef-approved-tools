@@ -159,6 +159,13 @@ export default async function RubbermaidScraperReview() {
             {productData.name}
           </div>
 
+          <Link
+            href="/moving-and-stirring-tools"
+            className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
+          >
+            ← Browse all Moving & Stirring Tools
+          </Link>
+
           {/* SECTION 1: HERO */}
           <ReviewHero
             title={reviewData.header.title}
@@ -639,6 +646,15 @@ export default async function RubbermaidScraperReview() {
             </div>
           }
         />
+
+        <div className="text-center my-8">
+          <Link
+            href="/moving-and-stirring-tools"
+            className="text-orange-700 hover:text-orange-800 font-medium"
+          >
+            Explore more Moving & Stirring Tools →
+          </Link>
+        </div>
 
         {/* Footer Transparency Elements */}
         <section className="mb-8">

@@ -162,6 +162,13 @@ export default async function ProductReview() {
             {reviewData.breadcrumb.productName}
           </div>
 
+          <Link
+            href="/knives-and-cutting-tools"
+            className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
+          >
+            ← Browse all Knives & Cutting Tools
+          </Link>
+
           {/* SECTION 1: HERO */}
           <ReviewHero
             title={reviewData.hero.title}
@@ -389,6 +396,15 @@ export default async function ProductReview() {
               </div>
             }
           />
+
+          <div className="text-center my-8">
+            <Link
+              href="/knives-and-cutting-tools"
+              className="text-orange-700 hover:text-orange-800 font-medium"
+            >
+              Explore more Knives & Cutting Tools →
+            </Link>
+          </div>
 
           {/* SECTION 10: RELATED PRODUCTS */}
           <RelatedProductsGrid

@@ -138,6 +138,15 @@ export default async function ProductReview() {
         </ol>
       </nav>
 
+      <div className="max-w-4xl mx-auto px-4 mb-4">
+        <Link
+          href="/prep-tools"
+          className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1"
+        >
+          ← Browse all Prep Tools
+        </Link>
+      </div>
+
       {/* Hero Section with Custom Size Selector */}
       <ReviewHero
         title={reviewData.hero.title}
@@ -374,6 +383,15 @@ export default async function ProductReview() {
             </div>
           }
         />
+
+        <div className="text-center my-8">
+          <Link
+            href="/prep-tools"
+            className="text-orange-700 hover:text-orange-800 font-medium"
+          >
+            Explore more Prep Tools →
+          </Link>
+        </div>
 
         {/* Related Products */}
         <RelatedProductsGrid

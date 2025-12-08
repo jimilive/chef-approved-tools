@@ -169,6 +169,13 @@ export default async function KitchenAidProfessional600ReviewPage() {
       </nav>
 
       <article className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <Link
+          href="/small-appliances"
+          className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
+        >
+          ← Browse all Small Appliances
+        </Link>
+
         {/* SECTION 1: HERO */}
         <div className="mb-8">
           <ReviewHero
@@ -380,6 +387,15 @@ export default async function KitchenAidProfessional600ReviewPage() {
             </div>
           )}
         />
+
+        <div className="text-center my-8">
+          <Link
+            href="/small-appliances"
+            className="text-orange-700 hover:text-orange-800 font-medium"
+          >
+            Explore more Small Appliances →
+          </Link>
+        </div>
 
         {/* SECTION 10: RELATED PRODUCTS */}
         <RelatedProductsGrid

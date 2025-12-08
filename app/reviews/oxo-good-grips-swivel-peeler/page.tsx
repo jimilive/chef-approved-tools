@@ -127,6 +127,13 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
             {reviewData.breadcrumb.productName}
           </div>
 
+          <Link
+            href="/prep-tools"
+            className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
+          >
+            ← Browse all Prep Tools
+          </Link>
+
           {/* SECTION 1: HERO */}
           <ReviewHero
             title={reviewData.hero.title}
@@ -389,6 +396,15 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
             ctaText={reviewData.bottomLine.ctaText}
             productSlug={reviewData.productSlug}
           />
+
+          <div className="text-center my-8">
+            <Link
+              href="/prep-tools"
+              className="text-orange-700 hover:text-orange-800 font-medium"
+            >
+              Explore more Prep Tools →
+            </Link>
+          </div>
 
           {/* RELATED PRODUCTS - Using standardized component */}
           <RelatedProductsGrid

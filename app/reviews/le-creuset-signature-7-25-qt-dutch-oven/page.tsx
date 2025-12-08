@@ -189,6 +189,13 @@ export default async function LeCreusetDutchOvenReviewPage() {
             {reviewData.breadcrumb.productName}
           </div>
 
+          <Link
+            href="/cookware-and-bakeware"
+            className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
+          >
+            ← Browse all Cookware & Bakeware
+          </Link>
+
           {/* SECTION 1: HERO - Includes LCP-optimized verdict */}
           <ReviewHero
             title={reviewData.hero.title}
@@ -420,6 +427,15 @@ export default async function LeCreusetDutchOvenReviewPage() {
               </div>
             }
           />
+
+          <div className="text-center my-8">
+            <Link
+              href="/cookware-and-bakeware"
+              className="text-orange-700 hover:text-orange-800 font-medium"
+            >
+              Explore more Cookware & Bakeware →
+            </Link>
+          </div>
 
           {/* SECTION 10: RELATED PRODUCTS */}
           <RelatedProductsGrid
