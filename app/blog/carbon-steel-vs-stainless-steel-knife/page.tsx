@@ -127,7 +127,7 @@ export default function CarbonSteelVsStainlessKnifeComparison() {
             </div>
             <div className="mt-8 bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-lg">
               <p className="text-slate-700 leading-relaxed">
-                <strong>Professional Perspective:</strong> High-end Japanese restaurants favor carbon steel for maximum edge performance and traditional craftsmanship. Corporate and high-volume kitchens mandate stainless for ease of maintenance and staff turnover tolerance. For home cooks, stainless steel is typically the better first serious knife, with carbon steel as a specialty addition once knife skills and care habits are established.
+                <strong>Professional Perspective:</strong> High-end Japanese restaurants favor carbon steel for maximum edge performance and traditional craftsmanship. Corporate and high-volume kitchens mandate stainless for ease of maintenance and staff turnover tolerance. For home cooks, stainless steel is typically the better first serious knife—see the <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 underline">stainless steel chef&apos;s knife we recommend</Link>—with carbon steel as a specialty addition once knife skills and care habits are established.
               </p>
             </div>
           </section>

@@ -318,7 +318,7 @@ export default function StockVsBrothPage() {
           <h2>How to Make Professional-Quality Stock at Home</h2>
 
           <p>
-            If you want to take your cooking to the next level, learn to make stock. It&apos;s simple, mostly hands-off, and freezes beautifully.
+            If you want to take your cooking to the next level, learn to make stock. It&apos;s simple, mostly hands-off, and freezes beautifully. A good <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-700 hover:text-orange-800 underline">Dutch oven for making stock</Link> makes the process even easier.
           </p>
 
           <h3>Basic Chicken Stock Recipe</h3>
@@ -358,6 +358,7 @@ export default function StockVsBrothPage() {
             <li><strong>Start with cold water</strong> – Helps extract more flavor from bones</li>
             <li><strong>Never boil</strong> – Gentle simmer keeps stock clear</li>
             <li><strong>Freeze in portions</strong> – Use ice cube trays or freezer bags for easy use</li>
+            <li><strong>Use an <Link href="/reviews/instant-pot-duo-plus-6qt" className="text-orange-700 hover:text-orange-800 underline">Instant Pot</Link></strong> – Pressure cooking reduces stock time to about 1-2 hours while still extracting good gelatin</li>
           </ul>
 
           <h2>The Bottom Line: Stock is Worth the Effort</h2>

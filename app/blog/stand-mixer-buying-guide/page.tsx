@@ -140,7 +140,7 @@ export default function StandMixerBuyingGuidePost() {
           <ul>
             <li><strong>4.5–5 qt:</strong> Best for home baking, cookies, small loaves.</li>
             <li><strong>6–7 qt:</strong> For serious bread and pizza dough.</li>
-            <li><strong>8+ qt:</strong> Commercial kitchens only.</li>
+            <li><strong>8+ qt:</strong> Commercial kitchens only. See our <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-700 hover:text-orange-800 underline">KitchenAid 8-quart commercial</Link> review.</li>
           </ul>
 
           <h3>3. Drive System</h3>
@@ -287,7 +287,7 @@ export default function StandMixerBuyingGuidePost() {
                 <br />Classic reliability, ideal for 90% of home cooks.
               </li>
               <li>
-                <strong>KitchenAid Professional 600 Bowl-Lift</strong>
+                <strong><Link href="/reviews/kitchenaid-kp26m1xlc-professional-600" className="text-orange-700 hover:text-orange-800 underline">KitchenAid Professional 600</Link> Bowl-Lift</strong>
                 <br />Built for bread, bagels, and dense batters.
               </li>
               <li>

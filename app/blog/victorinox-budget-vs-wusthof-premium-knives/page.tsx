@@ -298,7 +298,7 @@ export default function VictorinoxVsWusthofPage() {
           </ul>
 
           <p>
-            Professional testing shows a single quality chef&rsquo;s knife can handle high-volume prep work effectively. It&rsquo;s not about what you can&rsquo;t do with one knife—it&rsquo;s about mastering what you <em>can</em> do.
+            Professional testing shows a single quality chef&rsquo;s knife can handle high-volume prep work effectively. It&rsquo;s not about what you can&rsquo;t do with one knife—it&rsquo;s about mastering what you <em>can</em> do. See <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 underline">our full Victorinox review</Link> for 20+ years of testing data.
           </p>
 
           <CTAVisibilityTracker
@@ -452,6 +452,10 @@ export default function VictorinoxVsWusthofPage() {
             <li>Blade maintains thickness better</li>
             <li>Lifetime warranty</li>
           </ul>
+
+          <p>
+            See <Link href="/reviews/wusthof-classic-ikon-16-piece" className="text-orange-700 hover:text-orange-800 underline">our Wüsthof review</Link> for the full breakdown on build quality and long-term value.
+          </p>
 
           <p>
             <strong>Reality:</strong> Both knives will outlast your desire to use them if properly maintained. The difference in lifespan isn&rsquo;t enough to justify the price gap for most home cooks.

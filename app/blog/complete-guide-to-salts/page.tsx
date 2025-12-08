@@ -351,7 +351,7 @@ export default function SaltsGuidePage() {
           </p>
 
           <ul>
-            <li><strong>Diamond Crystal Kosher Salt:</strong> All-purpose cooking, seasoning in layers, everyday use</li>
+            <li><strong><Link href="/reviews/diamond-crystal-kosher-salt" className="text-orange-700 hover:text-orange-800 underline">Diamond Crystal kosher salt</Link>:</strong> All-purpose cooking, seasoning in layers, everyday use</li>
             <li><strong>Fine Sea Salt:</strong> Baking, dry rubs, table salt substitute</li>
             <li><strong>Finishing Salt (Maldon, Fleur de Sel):</strong> Garnish, texture, special occasions</li>
             <li><strong>Table Salt:</strong> Baking (if recipe specifies), iodine needs</li>

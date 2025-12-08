@@ -372,7 +372,10 @@ export default function CuttingBoardMaterialsPost() {
             <h3 className="font-bold text-slate-800 mb-4">Top Cutting Board Picks</h3>
             <ul className="space-y-3">
               <li>
-                <strong>End-Grain Wood:</strong> {/* John Boos Maple Butcher Block */} John Boos end-grain maple cutting board — industry classic.
+                <strong>End-Grain Wood:</strong> <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800 underline">Commercial-grade maple board</Link> — industry classic, built for decades of use.
+              </li>
+              <li>
+                <strong>Composite:</strong> <Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-700 hover:text-orange-800 underline">Our top composite pick</Link> — dishwasher-safe, knife-friendly, and nearly indestructible.
               </li>
               <li>
                 <strong>Rubber:</strong> {/* Sani-Tuff Rubber Cutting Board */} Sani-Tuff rubber board — used in pro kitchens worldwide.

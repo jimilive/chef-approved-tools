@@ -294,7 +294,7 @@ export default function CompleteVictorinoxLineupPage() {
           </p>
 
           <p>
-            <strong>Bottom line:</strong> If you buy only ONE knife ever, make it this one.
+            <strong>Bottom line:</strong> If you buy only ONE knife ever, make it this one. See our <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 underline">8-inch chef&rsquo;s knife review</Link> for detailed testing.
           </p>
 
           <CTAVisibilityTracker
@@ -400,7 +400,7 @@ export default function CompleteVictorinoxLineupPage() {
           </ul>
 
           <p>
-            The paring knife is a precision tool, not a workhorse. Use it for its strengths, not as a miniature chef&rsquo;s knife.
+            The paring knife is a precision tool, not a workhorse. Use it for its strengths, not as a miniature chef&rsquo;s knife. Read our <Link href="/reviews/victorinox-4-inch-paring-knife" className="text-orange-700 hover:text-orange-800 underline">paring knife review</Link> for the full breakdown.
           </p>
 
           <CTAVisibilityTracker
@@ -496,6 +496,10 @@ export default function CompleteVictorinoxLineupPage() {
             <li>You don&rsquo;t bake or work with delicate baked goods</li>
           </ul>
 
+          <p>
+            For bakers and bread lovers, see our <Link href="/reviews/victorinox-offset-bread-knife" className="text-orange-700 hover:text-orange-800 underline">bread knife review</Link>.
+          </p>
+
           <CTAVisibilityTracker
             ctaId="victorinox-bread-knife-cta"
             position="mid_article"
@@ -566,7 +570,7 @@ export default function CompleteVictorinoxLineupPage() {
           </ul>
 
           <p>
-            <strong>The best solution:</strong> Own both. They&rsquo;re different tools for different jobs, and having both gives you the right knife for every situation.
+            <strong>The best solution:</strong> Own both. They&rsquo;re different tools for different jobs, and having both gives you the right knife for every situation. See our <Link href="/reviews/victorinox-fibrox-10-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 underline">10-inch chef&rsquo;s knife review</Link> for the full comparison.
           </p>
 
 
