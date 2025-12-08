@@ -162,7 +162,7 @@ export default async function RobotCoupeR2DiceReview() {
           </div>
 
           <Link
-            href="/small-appliances"
+            href="/appliances"
             className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
           >
             ← Browse all Small Appliances
@@ -555,7 +555,7 @@ export default async function RobotCoupeR2DiceReview() {
 
         <div className="text-center my-8">
           <Link
-            href="/small-appliances"
+            href="/appliances"
             className="text-orange-700 hover:text-orange-800 font-medium"
           >
             Explore more Small Appliances →
