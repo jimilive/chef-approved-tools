@@ -297,19 +297,19 @@ export default function PerfectRisottoPage() {
           <h2>Frequently Asked Questions</h2>
 
           <div className="bg-slate-50 p-6 rounded-lg my-8">
-            <h4 className="font-bold text-lg mb-3">Q: Can I make risotto ahead of time?</h4>
+            <h3 className="font-bold text-lg mb-3">Q: Can I make risotto ahead of time?</h3>
             <p className="mb-6">A: Not really—risotto is best fresh. You can parcook it to 80% done, spread on a sheet pan to stop cooking, then finish later (restaurant technique). Add stock and reheat over medium heat, finish with butter and cheese. But it&apos;s never quite as good as fresh.</p>
 
-            <h4 className="font-bold text-lg mb-3">Q: Do I really need to use hot stock?</h4>
+            <h3 className="font-bold text-lg mb-3">Q: Do I really need to use hot stock?</h3>
             <p className="mb-6">A: Yes. Cold stock shocks the rice, stops the cooking process, and creates uneven texture. Keep stock at a steady simmer throughout.</p>
 
-            <h4 className="font-bold text-lg mb-3">Q: Can I use brown rice or wild rice?</h4>
+            <h3 className="font-bold text-lg mb-3">Q: Can I use brown rice or wild rice?</h3>
             <p className="mb-6">A: No. Brown rice and wild rice don&apos;t have the right starch content and won&apos;t create creamy texture. Stick with Arborio or Carnaroli.</p>
 
-            <h4 className="font-bold text-lg mb-3">Q: Why did my risotto turn out gluey?</h4>
+            <h3 className="font-bold text-lg mb-3">Q: Why did my risotto turn out gluey?</h3>
             <p className="mb-6">A: Over-stirring breaks rice grains and releases too much starch. Stir frequently but not constantly—every 30-45 seconds is sufficient.</p>
 
-            <h4 className="font-bold text-lg mb-3">Q: How do I know when risotto is done?</h4>
+            <h3 className="font-bold text-lg mb-3">Q: How do I know when risotto is done?</h3>
             <p className="mb-0">A: Taste it. Rice should have slight resistance when you bite (al dente), but not be crunchy or hard. The texture should be creamy and flow slowly on the plate.</p>
           </div>
 

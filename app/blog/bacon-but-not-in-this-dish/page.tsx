@@ -273,17 +273,17 @@ export default function BaconButNotInThisDishPage() {
           <h2>The Philosophy of Restraint in Cooking</h2>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Ingredients Should Shine</h4>
+            <strong className="font-semibold text-slate-900">Ingredients Should Shine:</strong>{' '}
             Good cooking highlights ingredients, not buries them. If you&apos;re using quality fish, vegetables, or meat, let those flavors come through.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Technique Over Additions</h4>
+            <strong className="font-semibold text-slate-900">Technique Over Additions:</strong>{' '}
             Adding bacon is easy. Developing proper fond, layering flavors, building complexity through technique—that&apos;s actual cooking skill.
           </p>
 
           <p>
-            <h4 className="font-semibold text-slate-900 mb-2">Balance Matters</h4>
+            <strong className="font-semibold text-slate-900">Balance Matters:</strong>{' '}
             Every ingredient should have a purpose. If you can&apos;t explain WHY bacon belongs in a dish beyond &quot;it tastes good,&quot; it probably doesn&apos;t belong.
           </p>
 
