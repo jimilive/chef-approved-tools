@@ -1,4 +1,8 @@
+'use client'
+
 import Link from 'next/link'
+import Image from 'next/image'
+import { useState } from 'react'
 
 interface RelatedProduct {
   name: string
@@ -10,6 +14,45 @@ interface RelatedProduct {
 interface RelatedProductsGridProps {
   title: string
   products: RelatedProduct[]
+}
+
+function ProductImage({ product }: { product: RelatedProduct }) {
+  const [imageError, setImageError] = useState(false)
+
+  // Extract slug from href (e.g., "/reviews/product-slug" -> "product-slug")
+  const slug = product.href.replace('/reviews/', '').replace(/\/$/, '')
+
+  // Try product image first, then hero image
+  const productImagePath = `/images/products/${slug}/${slug}-1.jpg`
+  const heroImagePath = `/images/products/${slug}/${slug}-hero.jpg`
+
+  if (imageError) {
+    // Fallback to Chef Approved logo
+    return (
+      <div className="w-full aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center p-6">
+        <Image
+          src="/logo.png"
+          alt="Chef Approved Tools"
+          width={120}
+          height={120}
+          className="object-contain opacity-60"
+        />
+      </div>
+    )
+  }
+
+  return (
+    <div className="w-full aspect-[4/3] relative bg-gray-100 overflow-hidden">
+      <Image
+        src={productImagePath}
+        alt={product.name}
+        fill
+        sizes="(max-width: 768px) 50vw, 25vw"
+        className="object-cover group-hover:scale-105 transition-transform duration-300"
+        onError={() => setImageError(true)}
+      />
+    </div>
+  )
 }
 
 export default function RelatedProductsGrid({
@@ -26,9 +69,7 @@ export default function RelatedProductsGrid({
         {products.map((product, index) => (
           <Link key={index} href={product.href} className="group no-underline">
             <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
-              <div className="w-full h-40 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-[40px] mb-3 rounded-lg">
-                {product.emoji}
-              </div>
+              <ProductImage product={product} />
               <div className="p-4 flex-1 flex flex-col">
                 <h3 className="text-base font-semibold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">
                   {product.name}
