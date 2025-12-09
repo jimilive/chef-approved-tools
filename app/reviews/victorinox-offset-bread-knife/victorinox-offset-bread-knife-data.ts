@@ -221,6 +221,18 @@ export const reviewData = {
     products: [
       {
         emoji: '🔪',
+        name: 'Henckels Sharpening Steel',
+        description: 'Serrated edges need honing too—light strokes keep the teeth aligned.',
+        href: '/reviews/henckels-sharpening-steel'
+      },
+      {
+        emoji: '🪵',
+        name: 'Epicurean Kitchen Cutting Board',
+        description: 'Knife-friendly composite board that survives the dishwasher',
+        href: '/reviews/epicurean-kitchen-cutting-board'
+      },
+      {
+        emoji: '🔪',
         name: 'Victorinox 8" Chef\'s Knife',
         description: 'The workhorse of my kitchen - handles 80% of all cutting tasks',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
@@ -230,18 +242,6 @@ export const reviewData = {
         name: 'Victorinox 10" Chef\'s Knife',
         description: 'Extra reach for large melons and big cutting tasks',
         href: '/reviews/victorinox-fibrox-10-inch-chefs-knife'
-      },
-      {
-        emoji: '🔪',
-        name: 'Victorinox Granton Edge Boning Knife',
-        description: 'Essential for trimming, deboning, and precise protein work',
-        href: '/reviews/victorinox-granton-edge-boning-knife'
-      },
-      {
-        emoji: '🔪',
-        name: 'Victorinox 4-Inch Paring Knife',
-        description: 'Perfect for detailed work and small cutting tasks',
-        href: '/reviews/victorinox-4-inch-paring-knife'
       }
     ]
   },

@@ -280,6 +280,18 @@ export const reviewData = {
     title: "Related Equipment Reviews",
     products: [
       {
+        name: "Henckels Sharpening Steel",
+        description: "A longer blade needs the same care. Hone before every use for consistent cuts.",
+        emoji: "🔪",
+        href: "/reviews/henckels-sharpening-steel"
+      },
+      {
+        name: "John Boos Cutting Board",
+        description: "The perfect prep surface - commercial maple that lasts decades",
+        emoji: "🪵",
+        href: "/reviews/john-boos-platinum-commercial-cutting-board"
+      },
+      {
         name: "Victorinox 8-Inch Chef's Knife",
         description: "The more versatile sibling - perfect for smaller hands and general tasks",
         emoji: "🔪",
@@ -290,12 +302,6 @@ export const reviewData = {
         description: "Essential companion for precision work - peeling, trimming, detailed tasks",
         emoji: "🔪",
         href: "/reviews/victorinox-4-inch-paring-knife"
-      },
-      {
-        name: "John Boos Cutting Board",
-        description: "The perfect prep surface - commercial maple that lasts decades",
-        emoji: "🪵",
-        href: "/reviews/john-boos-platinum-commercial-cutting-board"
       }
     ]
   },

@@ -210,6 +210,18 @@ export const reviewData = {
     products: [
       {
         emoji: '🔪',
+        name: 'Henckels Sharpening Steel',
+        description: 'Specialty blades need maintenance too. Keep your boning knife razor-ready.',
+        href: '/reviews/henckels-sharpening-steel'
+      },
+      {
+        emoji: '🪵',
+        name: 'John Boos Cutting Board',
+        description: 'Professional-grade cutting board for butchery work',
+        href: '/reviews/john-boos-platinum-commercial-cutting-board'
+      },
+      {
+        emoji: '🔪',
         name: 'Victorinox 10-Inch Chef\'s Knife',
         description: 'Professional chef\'s knife for general cutting tasks',
         href: '/reviews/victorinox-fibrox-10-inch-chefs-knife'
@@ -219,18 +231,6 @@ export const reviewData = {
         name: 'Victorinox 8-Inch Chef\'s Knife',
         description: 'Smaller chef\'s knife for detailed work',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
-      },
-      {
-        emoji: '🔪',
-        name: 'Victorinox Offset Bread Knife',
-        description: 'Essential for crusty bread and tomatoes',
-        href: '/reviews/victorinox-offset-bread-knife'
-      },
-      {
-        emoji: '📏',
-        name: 'John Boos Cutting Board',
-        description: 'Professional-grade cutting board for butchery work',
-        href: '/reviews/john-boos-platinum-commercial-cutting-board'
       }
     ]
   },

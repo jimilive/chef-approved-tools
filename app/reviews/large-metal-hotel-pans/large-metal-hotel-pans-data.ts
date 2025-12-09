@@ -224,9 +224,9 @@ export const reviewData = {
       },
       {
         emoji: '🔥',
-        name: 'Lodge Cast Iron Skillet',
+        name: 'Lodge Cast Iron Skillet Bundle',
         description: 'Essential for high-heat cooking',
-        href: '/reviews/lodge-cast-iron-skillet'
+        href: '/reviews/lodge-seasoned-cast-iron-3-skillet-bundle'
       }
     ]
   },

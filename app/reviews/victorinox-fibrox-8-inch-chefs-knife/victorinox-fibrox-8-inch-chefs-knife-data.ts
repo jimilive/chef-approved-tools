@@ -279,10 +279,10 @@ export const reviewData = {
     title: "Related Equipment Reviews",
     products: [
       {
-        name: "Victorinox 4-Inch Paring Knife",
-        description: "Essential companion for precision work - peeling, trimming, detailed tasks",
+        name: "Henckels Sharpening Steel",
+        description: "Keep your chef's knife edge aligned between sharpenings. Use before every session.",
         emoji: "🔪",
-        href: "/reviews/victorinox-4-inch-paring-knife"
+        href: "/reviews/henckels-sharpening-steel"
       },
       {
         name: "John Boos Cutting Board",
@@ -291,10 +291,16 @@ export const reviewData = {
         href: "/reviews/john-boos-platinum-commercial-cutting-board"
       },
       {
-        name: "Diamond Crystal Kosher Salt",
-        description: "The professional chef's choice for seasoning",
-        emoji: "🧂",
-        href: "/reviews/diamond-crystal-kosher-salt"
+        name: "Victorinox 4-Inch Paring Knife",
+        description: "Essential companion for precision work - peeling, trimming, detailed tasks",
+        emoji: "🔪",
+        href: "/reviews/victorinox-4-inch-paring-knife"
+      },
+      {
+        name: "Victorinox 10-Inch Chef's Knife",
+        description: "Extra reach for large proteins and big cutting tasks",
+        emoji: "🔪",
+        href: "/reviews/victorinox-fibrox-10-inch-chefs-knife"
       }
     ]
   },

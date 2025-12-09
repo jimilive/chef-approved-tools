@@ -570,6 +570,12 @@ export default async function NortonTriStoneSharpenerReview() {
           productSlug={reviewData.productSlug}
         />
 
+        {/* Related Products */}
+        <RelatedProductsGrid
+          title={reviewData.relatedProducts.title}
+          products={reviewData.relatedProducts.products}
+        />
+
         {/* Author Bio */}
         <AuthorBio />
 

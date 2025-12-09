@@ -202,9 +202,9 @@ export const reviewData = {
       },
       {
         emoji: '🥄',
-        name: 'Winco Heavy Duty Spoons',
-        description: 'Restaurant-grade serving spoons',
-        href: '/reviews'
+        name: 'Rubbermaid Commercial Scraper',
+        description: 'Professional high-heat spatula for scraping and stirring',
+        href: '/reviews/rubbermaid-commercial-cooks-scraper'
       },
       {
         emoji: '🧽',

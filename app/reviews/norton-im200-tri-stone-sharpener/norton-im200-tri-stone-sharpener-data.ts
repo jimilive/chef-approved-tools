@@ -366,6 +366,37 @@ export const reviewData = {
     ctaText: "Check Current Price →"
   },
 
+  // RELATED PRODUCTS
+  relatedProducts: {
+    title: 'Complete Your Knife Care Kit',
+    products: [
+      {
+        emoji: '🔪',
+        name: 'Henckels Sharpening Steel',
+        description: 'Use between sharpenings to realign the edge. The steel maintains, the stone restores.',
+        href: '/reviews/henckels-sharpening-steel'
+      },
+      {
+        emoji: '🔪',
+        name: 'Victorinox Fibrox 8-Inch Chef\'s Knife',
+        description: 'The professional\'s workhorse knife. Keep it razor-sharp with proper stone maintenance.',
+        href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
+      },
+      {
+        emoji: '🔪',
+        name: 'Victorinox Fibrox 10-Inch Chef\'s Knife',
+        description: 'When you need extra reach. Same Fibrox grip, same edge geometry, same sharpening needs.',
+        href: '/reviews/victorinox-fibrox-10-inch-chefs-knife'
+      },
+      {
+        emoji: '🔪',
+        name: 'Victorinox Granton Edge Boning Knife',
+        description: 'Specialty blades need sharpening too. The granton hollows require careful stone technique.',
+        href: '/reviews/victorinox-granton-edge-boning-knife'
+      }
+    ]
+  },
+
   // LEGACY PRODUCT DATA (fallback for Supabase)
   legacyProductData: {
     name: "Norton im200 tri stone sharpener",
