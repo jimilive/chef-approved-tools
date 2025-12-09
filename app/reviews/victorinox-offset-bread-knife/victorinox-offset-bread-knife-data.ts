@@ -228,19 +228,19 @@ export const reviewData = {
       {
         emoji: '🪵',
         name: 'Epicurean Kitchen Cutting Board',
-        description: 'Knife-friendly composite board that survives the dishwasher',
+        description: 'Knife-friendly composite board that survives the dishwasher.',
         href: '/reviews/epicurean-kitchen-cutting-board'
       },
       {
         emoji: '🔪',
-        name: 'Victorinox 8" Chef\'s Knife',
-        description: 'The workhorse of my kitchen - handles 80% of all cutting tasks',
+        name: 'Victorinox Fibrox Pro 8-Inch Chef\'s Knife',
+        description: 'The workhorse of my kitchen - handles 80% of all cutting tasks.',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
       },
       {
         emoji: '🔪',
-        name: 'Victorinox 10" Chef\'s Knife',
-        description: 'Extra reach for large melons and big cutting tasks',
+        name: 'Victorinox Fibrox Pro 10-Inch Chef\'s Knife',
+        description: 'Extra reach for large melons and big cutting tasks.',
         href: '/reviews/victorinox-fibrox-10-inch-chefs-knife'
       }
     ]

@@ -284,7 +284,7 @@ export const reviewData = {
       },
       {
         emoji: "🪵",
-        name: "John Boos Cutting Board",
+        name: "John Boos Platinum Commercial Cutting Board",
         description: "The prep surface where we staged ingredients before processing. Perfect workspace for high-volume prep.",
         href: "/reviews/john-boos-platinum-commercial-cutting-board"
       },

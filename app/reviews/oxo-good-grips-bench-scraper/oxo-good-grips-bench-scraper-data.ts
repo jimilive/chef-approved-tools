@@ -429,25 +429,25 @@ export const reviewData = {
     products: [
       {
         name: "John Boos Cutting Board",
-        description: "The perfect surface for your bench scraper",
+        description: "The perfect surface for your bench scraper.",
         emoji: "🪵",
         href: "/reviews/john-boos-platinum-commercial-cutting-board"
       },
       {
         name: "Victorinox Chef's Knife",
-        description: "Complete your prep station",
+        description: "Complete your prep station.",
         emoji: "🔪",
         href: "/reviews/victorinox-fibrox-8-inch-chefs-knife"
       },
       {
         name: "OXO Swivel Peeler",
-        description: "Another essential OXO tool",
+        description: "Another essential OXO tool.",
         emoji: "🥕",
         href: "/reviews/oxo-good-grips-swivel-peeler"
       },
       {
         name: "Zuperia Bar Mops",
-        description: "Keep your workspace clean",
+        description: "Keep your workspace clean.",
         emoji: "🧺",
         href: "/reviews/zuperia-bar-mops"
       }

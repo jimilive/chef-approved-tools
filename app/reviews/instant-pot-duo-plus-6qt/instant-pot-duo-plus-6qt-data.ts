@@ -252,13 +252,13 @@ export const reviewData = {
       },
       {
         emoji: '🔪',
-        name: 'Victorinox 8" Chef\'s Knife',
+        name: 'Victorinox Fibrox Pro 8-Inch Chef\'s Knife',
         description: 'For prep work before pressure cooking. Break down proteins, dice vegetables, prepare aromatics with professional efficiency.',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
       },
       {
         emoji: '🪵',
-        name: 'John Boos Cutting Board',
+        name: 'John Boos Platinum Commercial Cutting Board',
         description: 'Solid prep surface for all the chopping before pressure cooking. Restaurant-quality board that\'s lasted me 18 years.',
         href: '/reviews/john-boos-platinum-commercial-cutting-board'
       }

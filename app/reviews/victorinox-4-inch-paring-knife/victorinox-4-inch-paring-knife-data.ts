@@ -263,19 +263,19 @@ export const reviewData = {
     products: [
       {
         name: "Victorinox 8-Inch Chef's Knife",
-        description: "The perfect companion to this paring knife - professional chef's knife at exceptional value",
+        description: "The perfect companion to this paring knife - professional chef's knife at exceptional value.",
         emoji: "🔪",
         href: "/reviews/victorinox-fibrox-8-inch-chefs-knife"
       },
       {
         name: "Benriner Large Mandoline",
-        description: "Professional vegetable prep tool for precision slicing",
+        description: "Professional vegetable prep tool for precision slicing.",
         emoji: "🥕",
         href: "/reviews/benriner-large-mandoline"
       },
       {
         name: "Diamond Crystal Kosher Salt",
-        description: "The professional chef's choice for seasoning",
+        description: "The professional chef's choice for seasoning.",
         emoji: "🧂",
         href: "/reviews/diamond-crystal-kosher-salt"
       }

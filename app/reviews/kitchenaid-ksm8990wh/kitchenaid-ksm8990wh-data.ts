@@ -312,25 +312,25 @@ export const reviewData = {
       {
         emoji: "🥘",
         name: "Robot Coupe R2 Dice",
-        description: "Professional food processor for restaurant prep",
+        description: "Professional food processor for restaurant prep.",
         href: "/reviews/robot-coupe-r2-dice"
       },
       {
         emoji: "🍹",
         name: "Vitamix 5200",
-        description: "Commercial-grade blender for smoothest results",
+        description: "Commercial-grade blender for smoothest results.",
         href: "/reviews/vitamix-5200-professional-blender"
       },
       {
         emoji: "🔪",
         name: "John Boos Cutting Board",
-        description: "NSF-certified commercial cutting surface",
+        description: "NSF-certified commercial cutting surface.",
         href: "/reviews/john-boos-platinum-commercial-cutting-board"
       },
       {
         emoji: "🔧",
         name: "KitchenAid Professional 600",
-        description: "Professional 6-quart stand mixer",
+        description: "Professional 6-quart stand mixer.",
         href: "/reviews/kitchenaid-kp26m1xlc-professional-600"
       }
     ]

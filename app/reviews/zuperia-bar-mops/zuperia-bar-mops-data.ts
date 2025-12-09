@@ -202,25 +202,25 @@ export const reviewData = {
       {
         emoji: '🧼',
         name: 'Method All-Purpose Cleaner',
-        description: 'Used daily with these bar mops for years at Purple Café',
+        description: 'Used daily with these bar mops for years at Purple Café.',
         href: '/reviews/method-all-purpose-cleaner'
       },
       {
         emoji: '📏',
         name: 'John Boos Cutting Board',
-        description: 'Commercial-grade board maintained daily with bar mops',
+        description: 'Commercial-grade board maintained daily with bar mops.',
         href: '/reviews/john-boos-platinum-commercial-cutting-board'
       },
       {
         emoji: '🔪',
         name: 'Victorinox Chef\'s Knife',
-        description: 'Professional knife cleaned with lint-free bar mops',
+        description: 'Professional knife cleaned with lint-free bar mops.',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
       },
       {
         emoji: '🔧',
         name: 'Winco Heavy Duty Tongs',
-        description: 'Restaurant-grade utensils for professional kitchens',
+        description: 'Restaurant-grade utensils for professional kitchens.',
         href: '/reviews/winco-heavy-duty-tongs'
       }
     ]

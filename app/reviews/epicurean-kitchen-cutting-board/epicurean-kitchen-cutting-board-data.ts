@@ -245,13 +245,13 @@ export const reviewData = {
     products: [
       {
         emoji: '🪵',
-        name: 'John Boos Platinum Cutting Board',
+        name: 'John Boos Platinum Commercial Cutting Board',
         description: 'Prefer traditional wood? My John Boos maple board has served me for 18 years. Requires oiling but offers classic cutting experience and substantial feel.',
         href: '/reviews/john-boos-platinum-commercial-cutting-board'
       },
       {
         emoji: '🔪',
-        name: 'Victorinox 8" Chef\'s Knife',
+        name: 'Victorinox Fibrox Pro 8-Inch Chef\'s Knife',
         description: 'The perfect knife for this board. Professional-quality blade that stays sharp with proper cutting surface. 20+ years of proven performance.',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
       }

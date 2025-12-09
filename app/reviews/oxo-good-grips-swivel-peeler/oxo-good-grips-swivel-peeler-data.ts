@@ -445,25 +445,25 @@ export const reviewData = {
     products: [
       {
         name: "OXO Bench Scraper",
-        description: "Transfer chopped vegetables efficiently",
+        description: "Transfer chopped vegetables efficiently.",
         emoji: "🔪",
         href: "/reviews/oxo-good-grips-bench-scraper"
       },
       {
-        name: "Victorinox Paring Knife",
-        description: "For detailed prep work",
+        name: "Victorinox Fibrox Pro Paring Knife",
+        description: "For detailed prep work.",
         emoji: "🔪",
         href: "/reviews/victorinox-4-inch-paring-knife"
       },
       {
-        name: "John Boos Cutting Board",
-        description: "The perfect prep surface",
+        name: "John Boos Platinum Commercial Cutting Board",
+        description: "The perfect prep surface.",
         emoji: "🪵",
         href: "/reviews/john-boos-platinum-commercial-cutting-board"
       },
       {
         name: "Zuperia Bar Mops",
-        description: "Keep your station clean",
+        description: "Keep your station clean.",
         emoji: "🧺",
         href: "/reviews/zuperia-bar-mops"
       }

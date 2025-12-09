@@ -213,25 +213,25 @@ export const reviewData = {
       {
         emoji: '📦',
         name: 'Large Plastic Hotel Pans',
-        description: 'Full and 1/3 pans for bigger batch cooking',
+        description: 'Full and 1/3 pans for bigger batch cooking.',
         href: '/reviews/large-plastic-hotel-pans'
       },
       {
         emoji: '🔧',
         name: 'Small Metal Hotel Pans',
-        description: 'Oven-safe stainless steel for hot holding',
+        description: 'Oven-safe stainless steel for hot holding.',
         href: '/reviews/small-metal-hotel-pans'
       },
       {
         emoji: '📋',
         name: 'Hotel Pan System Guide',
-        description: 'Complete guide to restaurant organization at home',
+        description: 'Complete guide to restaurant organization at home.',
         href: '/blog/hotel-pan-system-restaurant-organization-home'
       },
       {
         emoji: '📏',
         name: 'John Boos Cutting Board',
-        description: 'NSF-certified commercial cutting board',
+        description: 'NSF-certified commercial cutting board.',
         href: '/reviews/john-boos-platinum-commercial-cutting-board'
       }
     ]

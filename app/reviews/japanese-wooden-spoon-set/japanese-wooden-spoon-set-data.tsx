@@ -241,19 +241,19 @@ export const reviewData = {
         name: 'Epicurean Kitchen Cutting Board',
         emoji: '🔪',
         href: '/reviews/epicurean-kitchen-cutting-board',
-        description: 'Another dishwasher-safe essential after 10 years of testing'
+        description: 'Another dishwasher-safe essential after 10 years of testing.'
       },
       {
         name: 'Cuisinart 8-Inch Nonstick Pan',
         emoji: '🍳',
         href: '/reviews/cuisinart-8-inch-nonstick-pan',
-        description: 'Perfect non-stick pan for use with wooden spoons'
+        description: 'Perfect non-stick pan for use with wooden spoons.'
       },
       {
         name: "Rubbermaid Cook's Scraper",
         emoji: '🥄',
         href: '/reviews/rubbermaid-commercial-cooks-scraper',
-        description: 'Another essential tool for daily cooking tasks'
+        description: 'Another essential tool for daily cooking tasks.'
       }
     ]
   }

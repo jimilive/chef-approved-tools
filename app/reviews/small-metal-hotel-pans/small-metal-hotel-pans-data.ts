@@ -213,25 +213,25 @@ export const reviewData = {
       {
         emoji: '📦',
         name: 'Small Plastic Hotel Pans',
-        description: '1/6 and 1/9 pans for refrigerator storage',
+        description: '1/6 and 1/9 pans for refrigerator storage.',
         href: '/reviews/small-plastic-hotel-pans'
       },
       {
         emoji: '🔧',
         name: 'Large Metal Hotel Pans',
-        description: 'Full and 1/3 pans for bigger gatherings',
+        description: 'Full and 1/3 pans for bigger gatherings.',
         href: '/reviews/large-metal-hotel-pans'
       },
       {
         emoji: '📋',
         name: 'Hotel Pan System Guide',
-        description: 'Complete guide to restaurant organization',
+        description: 'Complete guide to restaurant organization.',
         href: '/blog/hotel-pan-system-restaurant-organization-home'
       },
       {
         emoji: '🔥',
         name: 'Lodge Cast Iron Skillet Bundle',
-        description: 'Essential for high-heat cooking',
+        description: 'Essential for high-heat cooking.',
         href: '/reviews/lodge-seasoned-cast-iron-3-skillet-bundle'
       }
     ]

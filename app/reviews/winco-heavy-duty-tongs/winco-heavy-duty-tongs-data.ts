@@ -191,25 +191,25 @@ export const reviewData = {
       {
         emoji: '🔪',
         name: 'Victorinox 8-Inch Chef\'s Knife',
-        description: 'Professional chef\'s knife for general cutting tasks',
+        description: 'Professional chef\'s knife for general cutting tasks.',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
       },
       {
         emoji: '📏',
         name: 'John Boos Cutting Board',
-        description: 'Professional-grade cutting board',
+        description: 'Professional-grade cutting board.',
         href: '/reviews/john-boos-platinum-commercial-cutting-board'
       },
       {
         emoji: '🥄',
         name: 'Rubbermaid Commercial Scraper',
-        description: 'Professional high-heat spatula for scraping and stirring',
+        description: 'Professional high-heat spatula for scraping and stirring.',
         href: '/reviews/rubbermaid-commercial-cooks-scraper'
       },
       {
         emoji: '🧽',
         name: 'Zuperia Bar Mops',
-        description: 'Professional kitchen towels',
+        description: 'Professional kitchen towels.',
         href: '/reviews/zuperia-bar-mops'
       }
     ]

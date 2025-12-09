@@ -217,19 +217,19 @@ export const reviewData = {
       {
         emoji: '🪵',
         name: 'John Boos Cutting Board',
-        description: 'Professional-grade cutting board for butchery work',
+        description: 'Professional-grade cutting board for butchery work.',
         href: '/reviews/john-boos-platinum-commercial-cutting-board'
       },
       {
         emoji: '🔪',
-        name: 'Victorinox 10-Inch Chef\'s Knife',
-        description: 'Professional chef\'s knife for general cutting tasks',
+        name: 'Victorinox Fibrox Pro 10-Inch Chef\'s Knife',
+        description: 'Professional chef\'s knife for general cutting tasks.',
         href: '/reviews/victorinox-fibrox-10-inch-chefs-knife'
       },
       {
         emoji: '🔪',
-        name: 'Victorinox 8-Inch Chef\'s Knife',
-        description: 'Smaller chef\'s knife for detailed work',
+        name: 'Victorinox Fibrox Pro 8-Inch Chef\'s Knife',
+        description: 'Smaller chef\'s knife for detailed work.',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
       }
     ]

@@ -289,25 +289,25 @@ export const reviewData = {
       {
         emoji: "🏭",
         name: "KitchenAid Commercial Mixer",
-        description: "NSF-certified 8-qt mixer for commercial operations",
+        description: "NSF-certified 8-qt mixer for commercial operations.",
         href: "/reviews/kitchenaid-ksm8990wh"
       },
       {
         emoji: "🍹",
         name: "Vitamix 5200",
-        description: "Professional blender tested 5+ years",
+        description: "Professional blender tested 5+ years.",
         href: "/reviews/vitamix-5200-professional-blender"
       },
       {
         emoji: "🥘",
         name: "Robot Coupe R2 Dice",
-        description: "Commercial food processor for serious prep",
+        description: "Commercial food processor for serious prep.",
         href: "/reviews/robot-coupe-r2-dice"
       },
       {
         emoji: "🔪",
         name: "Victorinox Fibrox 8\" Chef's Knife",
-        description: "Professional workhorse knife, perfect for prep work",
+        description: "Professional workhorse knife, perfect for prep work.",
         href: "/reviews/victorinox-fibrox-8-inch-chefs-knife"
       }
     ]

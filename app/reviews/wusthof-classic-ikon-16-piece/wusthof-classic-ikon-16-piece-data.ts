@@ -219,26 +219,26 @@ export const reviewData = {
     products: [
       {
         emoji: '📏',
-        name: 'John Boos Cutting Board',
-        description: 'Protect your knife edges with this NSF-certified board',
+        name: 'John Boos Platinum Commercial Cutting Board',
+        description: 'Protect your knife edges with this NSF-certified board.',
         href: '/reviews/john-boos-platinum-commercial-cutting-board'
       },
       {
         emoji: '🔪',
-        name: 'Victorinox 8" Chef\'s Knife',
-        description: 'Budget-friendly alternative that matches WÜSTHOF in performance',
+        name: 'Victorinox Fibrox Pro 8-Inch Chef\'s Knife',
+        description: 'Budget-friendly alternative that matches WÜSTHOF in performance.',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
       },
       {
         emoji: '🥘',
         name: 'KitchenAid Commercial Mixer',
-        description: 'NSF-certified mixer for complete kitchen efficiency',
+        description: 'NSF-certified mixer for complete kitchen efficiency.',
         href: '/reviews/kitchenaid-ksm8990wh'
       },
       {
         emoji: '🔪',
-        name: 'Victorinox Boning Knife',
-        description: 'Add specialty knife for protein work',
+        name: 'Victorinox Granton Edge Boning Knife',
+        description: 'Add specialty knife for protein work.',
         href: '/reviews/victorinox-granton-edge-boning-knife'
       }
     ]

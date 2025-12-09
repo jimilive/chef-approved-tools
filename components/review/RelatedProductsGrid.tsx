@@ -22,14 +22,12 @@ function ProductImage({ product }: { product: RelatedProduct }) {
   // Extract slug from href (e.g., "/reviews/product-slug" -> "product-slug")
   const slug = product.href.replace('/reviews/', '').replace(/\/$/, '')
 
-  // Try product image first, then hero image
   const productImagePath = `/images/products/${slug}/${slug}-1.jpg`
-  const heroImagePath = `/images/products/${slug}/${slug}-hero.jpg`
 
   if (imageError) {
     // Fallback to Chef Approved logo
     return (
-      <div className="w-full aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center p-6">
+      <div className="w-full aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
         <Image
           src="/logo.png"
           alt="Chef Approved Tools"
@@ -42,7 +40,7 @@ function ProductImage({ product }: { product: RelatedProduct }) {
   }
 
   return (
-    <div className="w-full aspect-[4/3] relative bg-gray-100 overflow-hidden">
+    <div className="w-full aspect-[4/3] relative bg-white overflow-hidden">
       <Image
         src={productImagePath}
         alt={product.name}

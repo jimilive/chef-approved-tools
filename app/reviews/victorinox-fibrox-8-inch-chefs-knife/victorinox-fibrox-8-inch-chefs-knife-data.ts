@@ -285,20 +285,20 @@ export const reviewData = {
         href: "/reviews/henckels-sharpening-steel"
       },
       {
-        name: "John Boos Cutting Board",
-        description: "The perfect prep surface - commercial maple that lasts decades",
+        name: "John Boos Platinum Commercial Cutting Board",
+        description: "The perfect prep surface - commercial maple that lasts decades.",
         emoji: "🪵",
         href: "/reviews/john-boos-platinum-commercial-cutting-board"
       },
       {
         name: "Victorinox 4-Inch Paring Knife",
-        description: "Essential companion for precision work - peeling, trimming, detailed tasks",
+        description: "Essential companion for precision work - peeling, trimming, detailed tasks.",
         emoji: "🔪",
         href: "/reviews/victorinox-4-inch-paring-knife"
       },
       {
-        name: "Victorinox 10-Inch Chef's Knife",
-        description: "Extra reach for large proteins and big cutting tasks",
+        name: "Victorinox Fibrox Pro 10-Inch Chef's Knife",
+        description: "Extra reach for large proteins and big cutting tasks.",
         emoji: "🔪",
         href: "/reviews/victorinox-fibrox-10-inch-chefs-knife"
       }
