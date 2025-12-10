@@ -4,9 +4,13 @@ import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
+import { getReviewGitDates } from '@/lib/git-dates'
+import { getTierBadge } from '@/lib/editorial-metadata'
+import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import AffiliateButton from '@/components/AffiliateButton'
+import AmazonCTA from '@/components/AmazonCTA'
 import {
   ReviewHero,
   TestingResultsGrid,
@@ -79,12 +83,23 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
+const PRODUCT_SLUG = 'small-metal-hotel-pans'
+
 export default async function ProductReview() {
   // Get product data from Supabase
-  const product = await getProductBySlug(reviewData.productSlug)
+  const product = await getProductBySlug(PRODUCT_SLUG)
+
+  // Get git dates for this review
+  const gitDates = getReviewGitDates(PRODUCT_SLUG)
+
+  // Get tier badge from centralized config
+  const tierBadge = getTierBadge(PRODUCT_SLUG)
+
+  // Get category breadcrumb
+  const categoryBreadcrumb = getCategoryBreadcrumb(product?.category || '')
 
   if (!product) {
-    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+    throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
 
   // Merge Supabase data with legacy data
@@ -101,11 +116,17 @@ export default async function ProductReview() {
   // Get primary affiliate link - use product if available, otherwise fall back to recommended size option
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : reviewData.sizeOptions.options.find(o => o.recommended)?.affiliateUrl || reviewData.sizeOptions.options[0].affiliateUrl
 
-  const breadcrumbs = [
-    { name: "Home", url: "https://www.chefapprovedtools.com" },
-    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-    { name: reviewData.breadcrumb.productName, url: `https://www.chefapprovedtools.com/reviews/${reviewData.productSlug}` }
-  ]
+  const breadcrumbs = categoryBreadcrumb
+    ? [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
+      ]
+    : [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
+      ]
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -128,13 +149,26 @@ export default async function ProductReview() {
             </Link>
           </li>
           <li className="text-gray-700">/</li>
-          <li>
-            <Link href="/reviews" className="text-gray-700 hover:text-orange-700 transition-colors">
-              Reviews
-            </Link>
-          </li>
-          <li className="text-gray-700">/</li>
-          <li className="text-gray-900 font-medium">{reviewData.breadcrumb.productName}</li>
+          {categoryBreadcrumb ? (
+            <>
+              <li>
+                <Link href={categoryBreadcrumb.href} className="text-gray-700 hover:text-orange-700 transition-colors">
+                  {categoryBreadcrumb.label}
+                </Link>
+              </li>
+              <li className="text-gray-700">/</li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link href="/reviews" className="text-gray-700 hover:text-orange-700 transition-colors">
+                  Reviews
+                </Link>
+              </li>
+              <li className="text-gray-700">/</li>
+            </>
+          )}
+          <li className="text-gray-900 font-medium">{productData.name}</li>
         </ol>
       </nav>
 
@@ -152,12 +186,12 @@ export default async function ProductReview() {
         title={reviewData.hero.title}
         authorName={reviewData.hero.authorName}
         authorCredentials={reviewData.hero.authorCredentials}
-        rating={reviewData.hero.rating}
-        tierBadge={reviewData.hero.tierBadge}
+        rating={productData.expertRating ?? reviewData.hero.rating}
+        tierBadge={tierBadge}
         verdict={reviewData.hero.verdict}
         verdictStrong={reviewData.hero.verdictStrong}
-        publishedDate="November 10, 2025"
-        lastUpdated="November 10, 2025"
+        publishedDate={gitDates.firstPublished}
+        lastUpdated={gitDates.lastUpdated}
         customCTA={
           <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
             <h2 className="text-xl font-bold mb-4 text-gray-900 mt-0">{reviewData.sizeOptions.title}</h2>
@@ -332,6 +366,14 @@ export default async function ProductReview() {
           considerAlternativesTitle={reviewData.whoShouldBuy.considerAlternativesTitle}
           perfectFor={reviewData.whoShouldBuy.perfectFor}
           considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
+        />
+
+        {/* CTA - AFTER WHO SHOULD BUY (Decision Point) */}
+        <AmazonCTA
+          productSlug={PRODUCT_SLUG}
+          affiliateUrl={affiliateUrl}
+          position="who_should_buy"
+          boxHeading="Ready to organize your mise en place?"
         />
 
         {/* FAQ */}

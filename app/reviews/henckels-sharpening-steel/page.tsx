@@ -4,6 +4,9 @@ import { getProductBySlug, getPrimaryAffiliateLink, getAllAffiliateLinks } from 
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
+import { getReviewGitDates } from '@/lib/git-dates'
+import { getTierBadge } from '@/lib/editorial-metadata'
+import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import MultiVendorCTA from '@/components/review/MultiVendorCTA'
@@ -78,12 +81,23 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
+const PRODUCT_SLUG = 'henckels-sharpening-steel'
+
 export default async function HenckelsSharpeningSteelReview() {
   // Get product data from Supabase
-  const product = await getProductBySlug(reviewData.productSlug)
+  const product = await getProductBySlug(PRODUCT_SLUG)
+
+  // Get git dates for this review
+  const gitDates = getReviewGitDates(PRODUCT_SLUG)
+
+  // Get tier badge from centralized config
+  const tierBadge = getTierBadge(PRODUCT_SLUG)
+
+  // Get category breadcrumb
+  const categoryBreadcrumb = getCategoryBreadcrumb(product?.category || '')
 
   if (!product) {
-    throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
+    throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
 
   // Helper function to process inline affiliate links
@@ -140,13 +154,18 @@ export default async function HenckelsSharpeningSteelReview() {
   // Get all affiliate links for multi-vendor CTAs
   const affiliateLinks = product ? getAllAffiliateLinks(product) : []
 
-  // Generate breadcrumbs
-  const breadcrumbs = [
-    { name: "Home", url: "https://www.chefapprovedtools.com" },
-    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-    { name: "Knives", url: "https://www.chefapprovedtools.com/knives" },
-    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-  ]
+  // Generate breadcrumbs with category
+  const breadcrumbs = categoryBreadcrumb
+    ? [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
+      ]
+    : [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
+      ]
 
   // Generate schemas
   const productSchema = generateProductSchema({
@@ -199,9 +218,18 @@ export default async function HenckelsSharpeningSteelReview() {
           <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
-            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-            {' / '}
-            {reviewData.breadcrumb.productName}
+            {categoryBreadcrumb ? (
+              <>
+                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
+                {' / '}
+              </>
+            ) : (
+              <>
+                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+                {' / '}
+              </>
+            )}
+            {productData.name}
           </div>
 
           <Link
@@ -216,12 +244,12 @@ export default async function HenckelsSharpeningSteelReview() {
             title={reviewData.hero.title}
             authorName={reviewData.hero.authorName}
             authorCredentials={reviewData.hero.authorCredentials}
-            rating={reviewData.hero.rating}
-            tierBadge={reviewData.hero.tierBadge}
+            rating={productData.expertRating ?? reviewData.hero.rating}
+            tierBadge={tierBadge}
             verdict={reviewData.hero.verdict}
             verdictStrong={reviewData.hero.verdictStrong}
-            publishedDate="November 10, 2025"
-            lastUpdated="November 10, 2025"
+            publishedDate={gitDates.firstPublished}
+            lastUpdated={gitDates.lastUpdated}
             ctaUrl={affiliateUrl}
             ctaText={reviewData.hero.ctaText}
             customCTA={(
@@ -290,6 +318,16 @@ export default async function HenckelsSharpeningSteelReview() {
             considerAlternativesTitle={reviewData.whoShouldBuy.considerAlternativesTitle}
             perfectFor={reviewData.whoShouldBuy.perfectFor}
             considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
+          />
+
+          {/* CTA #4 - AFTER WHO SHOULD BUY (Decision Point) */}
+          <MultiVendorCTA
+            ctaId="who-should-buy-cta"
+            productSlug={PRODUCT_SLUG}
+            productName={productData.name}
+            affiliateLinks={affiliateLinks}
+            position="who_should_buy"
+            boxHeading="Ready to keep your knives sharp?"
           />
 
           {/* SECTION 6: FAQ */}
