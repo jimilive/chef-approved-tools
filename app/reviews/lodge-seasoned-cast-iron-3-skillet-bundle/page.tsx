@@ -7,6 +7,7 @@ import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
+import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import AmazonCTA from '@/components/AmazonCTA'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
@@ -114,6 +115,9 @@ export default async function LodgeCastIronReviewPage() {
   // Get git dates for this review
   const gitDates = getReviewGitDates('lodge-seasoned-cast-iron-3-skillet-bundle')
 
+  // Get category breadcrumb
+  const categoryBreadcrumb = getCategoryBreadcrumb(product?.category || '')
+
   if (!product) {
     throw new Error(`Product not found in Supabase: ${reviewData.productSlug}`)
   }
@@ -135,13 +139,18 @@ export default async function LodgeCastIronReviewPage() {
   // Get primary affiliate link
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
 
-  // Generate breadcrumbs
-  const breadcrumbs = [
-    { name: "Home", url: "https://www.chefapprovedtools.com" },
-    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-    { name: "Cookware", url: "https://www.chefapprovedtools.com/cookware" },
-    { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-  ]
+  // Generate breadcrumbs with category
+  const breadcrumbs = categoryBreadcrumb
+    ? [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+      ]
+    : [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
+      ]
 
   // Generate schemas
   const productSchema = generateProductSchema({
@@ -180,9 +189,18 @@ export default async function LodgeCastIronReviewPage() {
           <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
             <Link href="/" className="hover:text-orange-700">Home</Link>
             {' / '}
-            <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-            {' / '}
-            {reviewData.breadcrumb.productName}
+            {categoryBreadcrumb ? (
+              <>
+                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
+                {' / '}
+              </>
+            ) : (
+              <>
+                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+                {' / '}
+              </>
+            )}
+            {productData.name}
           </div>
 
           <Link

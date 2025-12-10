@@ -254,6 +254,14 @@ export default async function NordicWareHalfSheetPanReview() {
           </div>
         </section>
 
+        {/* CTA - AFTER PROFESSIONAL VERDICT (Decision Point) */}
+        <AmazonCTA
+          productSlug={PRODUCT_SLUG}
+          affiliateUrl={affiliateUrl}
+          position="who_should_buy"
+          boxHeading="Ready to upgrade your sheet pans?"
+        />
+
         {/* Hero Features */}
         <section className="my-12">
           <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">

@@ -5,6 +5,7 @@ import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } fr
 import { generateOGImageURL } from '@/lib/og-image'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
+import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import { getReviewMetadata } from '@/data/metadata'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import AmazonCTA from '@/components/AmazonCTA'
@@ -119,6 +120,9 @@ export default async function KitchenAidProfessional600ReviewPage() {
   // Get tier badge
   const tierBadge = getTierBadge(PRODUCT_SLUG)
 
+  // Get category breadcrumb
+  const categoryBreadcrumb = getCategoryBreadcrumb(product?.category || '')
+
   if (!product) {
     throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
@@ -138,12 +142,17 @@ export default async function KitchenAidProfessional600ReviewPage() {
   // Get all affiliate links for multi-vendor CTAs
   const affiliateLinks = product ? getAllAffiliateLinks(product) : []
 
-  const breadcrumbs = [
-    { name: "Home", url: "https://www.chefapprovedtools.com" },
-    { name: "Reviews", url: "https://www.chefapprovedtools.com/reviews" },
-    { name: "Appliances", url: "https://www.chefapprovedtools.com/appliances" },
-    { name: reviewData.breadcrumb.productName, url: `https://www.chefapprovedtools.com/reviews/${reviewData.productSlug}` }
-  ]
+  const breadcrumbs = categoryBreadcrumb
+    ? [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
+      ]
+    : [
+        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
+        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
+      ]
 
   return (
     <>
