@@ -2862,7 +2862,7 @@ export const METADATA = {
       testingPeriod: "20 Years (Including 10 Professional)",
       productSlug: "victorinox-fibrox-8-inch-chefs-knife",
       publishedTime: "2025-10-01T10:00:00Z",
-      modifiedTime: "2025-12-10T10:00:00Z",
+      modifiedTime: "2025-12-11T10:00:00Z",
       searchIntent: "transactional",
       conversionPotential: "high",
       affiliateProgram: "amazon",

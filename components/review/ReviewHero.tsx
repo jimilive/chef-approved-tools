@@ -64,7 +64,7 @@ export default function ReviewHero({
       {heroImage ? (
         <>
         {/* Two-column layout with image - CTA in right column */}
-        <div className="grid grid-cols-1 md:grid-cols-[350px_1fr] gap-6 mb-6">
+        <div style={{ display: 'grid', gridTemplateColumns: '350px 1fr', gap: '24px', marginBottom: '24px' }}>
           {/* Image column - LEFT */}
           <div className="w-full">
             <div className="relative aspect-[4/3] w-full">
@@ -72,7 +72,7 @@ export default function ReviewHero({
                 src={heroImage}
                 alt={`${productName || title || 'Product'} - professional review`}
                 fill
-                className="object-cover rounded-lg"
+                className="object-contain rounded-lg"
                 quality={75}
                 priority
                 sizes="(max-width: 768px) 100vw, 400px"
