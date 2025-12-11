@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { generateOGImageURL } from '@/lib/og-image'
+import { getOGImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
@@ -23,6 +23,8 @@ import {
 import AuthorBio from '@/components/review/AuthorBio'
 import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 import { reviewData } from './oxo-good-grips-swivel-peeler-data'
+
+const PRODUCT_SLUG = 'oxo-good-grips-swivel-peeler'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -49,7 +51,8 @@ export async function generateMetadata(): Promise<Metadata> {
       url: centralMeta.canonical,
       siteName: 'Chef Approved Tools',
       type: 'article',
-      images: [centralMeta.imageUrl || generateOGImageURL({
+      images: [centralMeta.imageUrl || getOGImageURL({
+        productSlug: PRODUCT_SLUG,
         title: productData.name,
         rating: productData.expertRating ?? reviewData.hero.rating,
         testingPeriod: centralMeta.testingPeriod,
@@ -60,7 +63,8 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title: centralMeta.ogTitle || centralMeta.title,
       description: centralMeta.ogDescription || centralMeta.description,
-      images: [centralMeta.imageUrl || generateOGImageURL({
+      images: [centralMeta.imageUrl || getOGImageURL({
+        productSlug: PRODUCT_SLUG,
         title: productData.name,
         rating: productData.expertRating ?? reviewData.hero.rating,
         testingPeriod: centralMeta.testingPeriod,
@@ -69,8 +73,6 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   }
 }
-
-const PRODUCT_SLUG = 'oxo-good-grips-swivel-peeler'
 
 export default async function OXOGoodGripsSwivelPeelerReview() {
   // Get product data from Supabase

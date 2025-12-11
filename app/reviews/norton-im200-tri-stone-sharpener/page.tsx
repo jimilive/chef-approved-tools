@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { generateOGImageURL } from '@/lib/og-image'
+import { getOGImageURL } from '@/lib/og-image'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
@@ -22,6 +22,8 @@ import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './norton-im200-tri-stone-sharpener-data'
+
+const PRODUCT_SLUG = 'norton-im200-tri-stone-sharpener'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -78,7 +80,8 @@ export async function generateMetadata(): Promise<Metadata> {
       url: centralMeta.canonical,
       siteName: 'Chef Approved Tools',
       images: [{
-        url: centralMeta.imageUrl || generateOGImageURL({
+        url: centralMeta.imageUrl || getOGImageURL({
+          productSlug: PRODUCT_SLUG,
           title: productData.name,
           rating: productData.expertRating ?? reviewData.hero.rating,
           testingPeriod: centralMeta.testingPeriod,
@@ -94,7 +97,8 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title: centralMeta.ogTitle || centralMeta.title,
       description: centralMeta.ogDescription || centralMeta.description,
-      images: [centralMeta.imageUrl || generateOGImageURL({
+      images: [centralMeta.imageUrl || getOGImageURL({
+        productSlug: PRODUCT_SLUG,
         title: productData.name,
         rating: productData.expertRating ?? reviewData.hero.rating,
         testingPeriod: centralMeta.testingPeriod,
@@ -103,8 +107,6 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   }
 }
-
-const PRODUCT_SLUG = 'norton-im200-tri-stone-sharpener'
 
 export default async function NortonTriStoneSharpenerReview() {
   const product = await getProductBySlug(PRODUCT_SLUG)

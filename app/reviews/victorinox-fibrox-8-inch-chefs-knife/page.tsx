@@ -3,7 +3,7 @@ import Image from 'next/image'
 import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { generateOGImageURL } from '@/lib/og-image'
+import { getOGImageURL } from '@/lib/og-image'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
@@ -61,7 +61,8 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'Chef Approved Tools',
       images: [
         {
-          url: centralMeta.imageUrl || generateOGImageURL({
+          url: centralMeta.imageUrl || getOGImageURL({
+            productSlug: PRODUCT_SLUG,
             title: productData.name,
             rating: productData.expertRating ?? reviewData.hero.rating,
             testingPeriod: centralMeta.testingPeriod,
@@ -78,7 +79,8 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title: centralMeta.ogTitle || centralMeta.title,
       description: centralMeta.ogDescription || centralMeta.description,
-      images: [centralMeta.imageUrl || generateOGImageURL({
+      images: [centralMeta.imageUrl || getOGImageURL({
+        productSlug: PRODUCT_SLUG,
         title: productData.name,
         rating: productData.expertRating ?? reviewData.hero.rating,
         testingPeriod: centralMeta.testingPeriod,

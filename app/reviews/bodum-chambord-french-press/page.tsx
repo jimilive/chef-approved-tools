@@ -3,7 +3,7 @@ import Image from 'next/image'
 import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { generateOGImageURL } from '@/lib/og-image'
+import { getOGImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
@@ -27,6 +27,8 @@ import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './bodum-chambord-french-press-data'
+
+const PRODUCT_SLUG = 'bodum-chambord-french-press'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -55,7 +57,8 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'Chef Approved Tools',
       images: [
         {
-          url: centralMeta.imageUrl || generateOGImageURL({
+          url: centralMeta.imageUrl || getOGImageURL({
+            productSlug: PRODUCT_SLUG,
             title: productData.name,
             rating: productData.expertRating ?? reviewData.hero.rating,
             testingPeriod: centralMeta.testingPeriod,
@@ -72,7 +75,8 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title: centralMeta.ogTitle || centralMeta.title,
       description: centralMeta.ogDescription || centralMeta.description,
-      images: [centralMeta.imageUrl || generateOGImageURL({
+      images: [centralMeta.imageUrl || getOGImageURL({
+        productSlug: PRODUCT_SLUG,
         title: productData.name,
         rating: productData.expertRating ?? reviewData.hero.rating,
         testingPeriod: centralMeta.testingPeriod,
@@ -81,8 +85,6 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   }
 }
-
-const PRODUCT_SLUG = 'bodum-chambord-french-press'
 
 export default async function BodumChambordFrenchPressReview() {
   // Get product data from Supabase
