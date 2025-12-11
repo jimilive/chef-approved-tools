@@ -1,4 +1,4 @@
-import { execSync } from 'child_process'
+import { getReviewMetadata, getBlogMetadata } from '@/data/metadata'
 
 interface GitDates {
   firstPublished: string
@@ -6,30 +6,36 @@ interface GitDates {
 }
 
 /**
- * Get git commit dates for a file
- * @param filePath - Path relative to repo root (e.g., 'app/reviews/some-product/page.tsx')
- * @returns Object with formatted date strings
+ * Format ISO date string to readable format
+ * "2024-06-20T10:00:00Z" -> "June 20, 2024"
  */
-export function getGitDates(filePath: string): GitDates {
+function formatDateString(isoDate: string | undefined): string {
+  if (!isoDate) return 'Unknown'
+
   try {
-    // Get first commit date (oldest)
-    const firstCommitRaw = execSync(
-      `git log --follow --format="%ad" --date=format:"%B %d, %Y" -- "${filePath}" | tail -1`,
-      { encoding: 'utf-8' }
-    ).trim()
+    const date = new Date(isoDate)
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    })
+  } catch {
+    return 'Unknown'
+  }
+}
 
-    // Get last commit date (newest)
-    const lastCommitRaw = execSync(
-      `git log --follow --format="%ad" --date=format:"%B %d, %Y" -1 -- "${filePath}"`,
-      { encoding: 'utf-8' }
-    ).trim()
-
+/**
+ * Get dates for a review page from centralized metadata
+ * @param slug - The review slug (e.g., 'lodge-seasoned-cast-iron-3-skillet-bundle')
+ */
+export function getReviewGitDates(slug: string): GitDates {
+  try {
+    const metadata = getReviewMetadata(slug)
     return {
-      firstPublished: firstCommitRaw || 'Unknown',
-      lastUpdated: lastCommitRaw || 'Unknown'
+      firstPublished: formatDateString(metadata.publishedTime),
+      lastUpdated: formatDateString(metadata.modifiedTime)
     }
-  } catch (error) {
-    console.error('Error getting git dates:', error)
+  } catch {
     return {
       firstPublished: 'Unknown',
       lastUpdated: 'Unknown'
@@ -38,9 +44,20 @@ export function getGitDates(filePath: string): GitDates {
 }
 
 /**
- * Get git dates for a review page by slug
- * @param slug - The review slug (e.g., 'lodge-seasoned-cast-iron-3-skillet-bundle')
+ * Get dates for a blog post from centralized metadata
+ * @param slug - The blog slug (e.g., 'how-to-choose-first-chef-knife')
  */
-export function getReviewGitDates(slug: string): GitDates {
-  return getGitDates(`app/reviews/${slug}/page.tsx`)
+export function getBlogGitDates(slug: string): GitDates {
+  try {
+    const metadata = getBlogMetadata(slug)
+    return {
+      firstPublished: formatDateString(metadata.publishedDate || metadata.publishedTime),
+      lastUpdated: formatDateString(metadata.lastUpdated || metadata.modifiedTime)
+    }
+  } catch {
+    return {
+      firstPublished: 'Unknown',
+      lastUpdated: 'Unknown'
+    }
+  }
 }

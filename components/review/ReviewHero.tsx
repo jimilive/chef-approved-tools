@@ -64,7 +64,7 @@ export default function ReviewHero({
       {heroImage ? (
         <>
         {/* Two-column layout with image - CTA in right column */}
-        <div style={{ display: 'grid', gridTemplateColumns: '400px 1fr', gap: '24px', marginBottom: '24px' }}>
+        <div className="grid grid-cols-1 md:grid-cols-[350px_1fr] gap-6 mb-6">
           {/* Image column - LEFT */}
           <div className="w-full">
             <div className="relative aspect-[4/3] w-full">
