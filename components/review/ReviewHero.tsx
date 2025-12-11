@@ -66,13 +66,13 @@ export default function ReviewHero({
         {/* Two-column layout with image - CTA in right column */}
         <div style={{ display: 'grid', gridTemplateColumns: '400px 1fr', gap: '24px', marginBottom: '24px' }}>
           {/* Image column - LEFT */}
-          <div className="w-full">
-            <div className="relative aspect-[4/3] w-full">
+          <div className="w-[400px]">
+            <div className="relative w-[400px] h-[300px]">
               <Image
                 src={heroImage}
                 alt={`${productName || title || 'Product'} - professional review`}
                 fill
-                className="object-contain rounded-lg"
+                className="object-cover rounded-lg"
                 quality={75}
                 priority
                 sizes="(max-width: 768px) 100vw, 400px"
