@@ -72,7 +72,7 @@ export default function ReviewHero({
                 src={heroImage}
                 alt={`${productName || title || 'Product'} - professional review`}
                 fill
-                className="object-cover rounded-lg"
+                className="object-contain rounded-lg"
                 quality={75}
                 priority
                 sizes="(max-width: 768px) 100vw, 400px"
