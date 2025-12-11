@@ -3,7 +3,7 @@ import Image from 'next/image'
 import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { getOGImageURL } from '@/lib/og-image'
+import { getOGImageURL, getStaticHeroImageURL } from '@/lib/og-image'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
@@ -205,7 +205,7 @@ export default async function ProductReview() {
             verdictStrong={reviewData.hero.verdictStrong}
             publishedDate={gitDates.firstPublished}
             lastUpdated={gitDates.lastUpdated}
-            heroImage={(product.images as any)?.hero}
+            heroImage={getStaticHeroImageURL(PRODUCT_SLUG) || (product.images as any)?.hero}
             productName={product.name}
             customCTA={(
               <div className="bg-white border-2 border-orange-200 rounded-xl p-6">

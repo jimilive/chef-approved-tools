@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Star } from 'lucide-react'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { getOGImageURL } from '@/lib/og-image'
+import { getOGImageURL, getStaticHeroImageURL } from '@/lib/og-image'
 import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
@@ -225,7 +225,7 @@ export default async function LodgeCastIronReviewPage() {
             verdictStrong={reviewData.hero.verdictStrong}
             publishedDate={gitDates.firstPublished}
             lastUpdated={gitDates.lastUpdated}
-            heroImage={(product.images as any)?.hero}
+            heroImage={getStaticHeroImageURL(PRODUCT_SLUG) || (product.images as any)?.hero}
             productName={product.name}
             ctaUrl={affiliateUrl}
             valueHighlights="💰 Outstanding Value Investment | ✔ Pre-Seasoned | ✔ Made in USA | ✔ 3 Versatile Sizes"

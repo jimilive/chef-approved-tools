@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { getOGImageURL } from '@/lib/og-image'
+import { getOGImageURL, getStaticHeroImageURL } from '@/lib/og-image'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getReviewMetadata } from '@/data/metadata'
@@ -253,7 +253,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
           verdictStrong={reviewData.hero.verdictStrong}
           publishedDate={gitDates.firstPublished}
           lastUpdated={gitDates.lastUpdated}
-          heroImage={(product.images as any)?.hero || `/images/products/${PRODUCT_SLUG}/${PRODUCT_SLUG}-hero.jpg`}
+          heroImage={getStaticHeroImageURL(PRODUCT_SLUG) || (product.images as any)?.hero}
           productName={product.name}
           ctaUrl={affiliateUrl}
           ctaText={reviewData.hero.ctaText}
