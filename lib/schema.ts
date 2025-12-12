@@ -1,5 +1,15 @@
 // Structured data schemas for SEO
-// Updated: 2025-10-14 - Schema refactor to fix Google Rich Results issues
+// Updated: 2025-12-12 - Schema refactor to fix Google Rich Results issues
+
+// Helper function to format dates as full ISO 8601 with timezone
+function formatSchemaDate(dateString: string): string {
+  // If already has time component, return as-is
+  if (dateString.includes('T')) {
+    return dateString;
+  }
+  // Add time and UTC timezone to date-only strings (e.g., "2025-11-09" -> "2025-11-09T00:00:00Z")
+  return `${dateString}T00:00:00Z`;
+}
 
 export const organizationSchema = {
   "@context": "https://schema.org",
@@ -152,8 +162,8 @@ export function generateProductSchema(product: any) {
       reviewBody: product.expertOpinion || product.description || `Professional review of ${product.name}`,
       name: `Professional Review: ${product.name}`,
       headline: `Kitchen Manager's Review: ${product.name}`,
-      datePublished: product.dateAdded || new Date().toISOString().split('T')[0],
-      dateModified: product.lastUpdated || product.dateAdded || new Date().toISOString().split('T')[0],
+      datePublished: formatSchemaDate(product.dateAdded || new Date().toISOString().split('T')[0]),
+      dateModified: formatSchemaDate(product.lastUpdated || product.dateAdded || new Date().toISOString().split('T')[0]),
       publisher: {
         "@id": "https://www.chefapprovedtools.com/#organization"
       }
@@ -226,8 +236,8 @@ export function generateArticleSchema(article: any) {
     headline: headline,
     description: description,
     image: article.imageUrl || article.image || "https://www.chefapprovedtools.com/og-image.jpg",
-    datePublished: datePublished,
-    dateModified: article.dateModified || article.lastUpdated || datePublished,
+    datePublished: formatSchemaDate(datePublished),
+    dateModified: formatSchemaDate(article.dateModified || article.lastUpdated || datePublished),
     author: {
       "@type": "Person",
       "@id": "https://www.chefapprovedtools.com/about#scott-bradley",
@@ -279,8 +289,8 @@ export function generateHowToSchema(howto: any) {
       name: "Scott Bradley",
       sameAs: "https://www.chefapprovedtools.com/about"
     },
-    datePublished: howto.datePublished,
-    dateModified: howto.lastUpdated || howto.datePublished,
+    datePublished: howto.datePublished ? formatSchemaDate(howto.datePublished) : undefined,
+    dateModified: howto.lastUpdated ? formatSchemaDate(howto.lastUpdated) : (howto.datePublished ? formatSchemaDate(howto.datePublished) : undefined),
     publisher: {
       "@id": "https://www.chefapprovedtools.com/#organization"
     },
