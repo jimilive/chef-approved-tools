@@ -64,10 +64,10 @@ export default function ReviewHero({
       {heroImage ? (
         <>
         {/* Two-column layout with image - CTA in right column */}
-        <div style={{ display: 'grid', gridTemplateColumns: '400px 1fr', gap: '24px', marginBottom: '24px' }}>
+        <div className="grid grid-cols-1 md:grid-cols-[400px_1fr] gap-6 mb-6">
           {/* Image column - LEFT */}
-          <div className="w-[400px]">
-            <div className="relative w-[400px] h-[300px]">
+          <div className="w-full md:w-[400px]">
+            <div className="relative w-full md:w-[400px] h-[250px] md:h-[300px]">
               <Image
                 src={heroImage}
                 alt={`${productName || title || 'Product'} - professional review`}
