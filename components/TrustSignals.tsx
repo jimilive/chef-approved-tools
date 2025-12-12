@@ -38,7 +38,7 @@ export default function TrustSignals({
 
   // Full variant - more detailed
   return (
-    <div className={`grid grid-cols-3 gap-3 mt-3 ${className}`}>
+    <div className={`grid grid-cols-3 gap-2 sm:gap-3 mt-3 ${className}`}>
       <div className="flex flex-col items-center text-center">
         <TruckIcon className="h-5 w-5 text-blue-600 mb-1" />
         <span className="text-xs text-slate-700">Fast Shipping</span>

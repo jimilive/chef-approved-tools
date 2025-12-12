@@ -65,7 +65,7 @@ export function WhyListenSection() {
           </div>
 
           {/* Right: Action Shots Collage */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-4">
               <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
                 <Image
