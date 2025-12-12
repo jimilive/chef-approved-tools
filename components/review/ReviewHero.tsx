@@ -63,11 +63,11 @@ export default function ReviewHero({
       {/* Conditional layout: with image = side-by-side, without = standard */}
       {heroImage ? (
         <>
-        {/* Two-column layout with image - CTA in right column */}
-        <div className="grid grid-cols-1 min-[860px]:grid-cols-[400px_1fr] gap-6 mb-6">
+        {/* Two-column layout with image - stacks on mobile, side-by-side on desktop */}
+        <div className="flex flex-col sm:flex-row gap-6 mb-6">
           {/* Image column - LEFT */}
-          <div className="w-full min-[860px]:w-[400px]">
-            <div className="relative w-full min-[860px]:w-[400px] h-[250px] min-[860px]:h-[300px]">
+          <div className="w-full sm:w-[400px] sm:flex-shrink-0">
+            <div className="relative w-full h-[250px] sm:h-[300px]">
               <Image
                 src={heroImage}
                 alt={`${productName || title || 'Product'} - professional review`}
@@ -75,7 +75,7 @@ export default function ReviewHero({
                 className="object-cover rounded-lg"
                 quality={75}
                 priority
-                sizes="(max-width: 768px) 100vw, 400px"
+                sizes="(max-width: 640px) 100vw, 400px"
               />
             </div>
           </div>
