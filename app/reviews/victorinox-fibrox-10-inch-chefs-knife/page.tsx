@@ -264,7 +264,7 @@ export default async function ProductReview() {
                       >
                         10-inch blade
                       </a>
-                      {' '}gives you the reach needed for whole chickens, large cabbages, and pork shoulders. Longer blade means better slicing motion and fewer strokes through large items. When you&apos;re breaking down a whole chicken or portioning a roast, those extra 2 inches make a noticeable difference in efficiency and control.
+                      {' '}gives you the reach needed for steaks, large cabbages, and pork shoulders. Longer blade means better slicing motion and fewer strokes through large items. When you&apos;re breaking down a steak or portioning a roast, those extra 2 inches make a noticeable difference in efficiency and control.
                     </>
                   ) : index === 2 ? (
                     <>
@@ -277,7 +277,7 @@ export default async function ProductReview() {
                       >
                         Victorinox 10-inch chef&apos;s knife
                       </a>
-                      {' '}is my choice for high-volume protein breakdown. From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I&apos;ve used this knife to break down 50+ whole chickens per week, portion large pork shoulders and beef roasts, slice through whole butternut squash and large cabbages, and prep oversized vegetables for bulk meal prep. The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day.
+                      {' '}is my choice for high-volume protein breakdown. From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I&apos;ve used this knife to break down 50+ steaks per week, portion large pork shoulders and beef roasts, slice through whole butternut squash and large cabbages, and prep oversized vegetables for bulk meal prep. The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day.
                     </>
                   ) : index === 4 ? (
                     <>

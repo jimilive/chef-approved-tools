@@ -161,7 +161,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Breadcrumbs */}
       <nav className="bg-white border-b border-gray-200 py-3">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8">
           <ol className="flex space-x-2 text-sm text-gray-700">
             {breadcrumbs.map((crumb, index) => (
               <li key={crumb.name} className="flex items-center">
@@ -179,7 +179,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
         </div>
       </nav>
 
-      <article className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <article className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link
           href="/appliances"
           className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"

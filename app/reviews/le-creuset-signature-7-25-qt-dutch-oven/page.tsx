@@ -189,7 +189,7 @@ export default async function LeCreusetDutchOvenReviewPage() {
       />
 
       <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-5xl mx-auto px-5">
+        <div className="max-w-[900px] mx-auto px-5">
 
           {/* BREADCRUMBS */}
           <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">

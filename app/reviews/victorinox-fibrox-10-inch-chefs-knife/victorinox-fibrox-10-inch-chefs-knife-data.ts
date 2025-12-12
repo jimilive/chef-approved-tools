@@ -40,7 +40,7 @@ export const reviewData = {
       icon: "🏆",
       text: "Tier 1: 20+ Years Professional Use"
     },
-    verdict: "After using PRODUCT_LINK for 20 years (including 10 in professional kitchens), it's my go-to for breaking down proteins and chopping larger vegetables. The extra 2 inches over the standard 8\" model makes a real difference when working fast with whole chickens, pork shoulders, or large butternut squash.",
+    verdict: "After 20 years with this knife (including a decade in professional kitchens), it's my go-to for breaking down proteins and chopping larger vegetables. The extra 2 inches over the standard 8\" model makes a real difference when working fast with steaks, pork shoulders, or large butternut squash.",
     verdictStrong: "The longer blade for bigger hands and larger cuts - tested through 20 years",
     ctaText: "Check Price on Amazon →"
   },
@@ -51,11 +51,11 @@ export const reviewData = {
     sections: [
       {
         title: "Cutting Performance on Large Items",
-        content: "Exceptional. The 10-inch blade excels at breaking down whole chickens, portioning large roasts, and slicing through oversized vegetables. Longer blade means better slicing motion with fewer strokes."
+        content: "Exceptional. The 10-inch blade excels at breaking down steaks, portioning large roasts, and slicing through oversized vegetables. Longer blade means better slicing motion with fewer strokes."
       },
       {
         title: "Balance & Control",
-        content: "Outstanding for larger hands. The extra length provides excellent reach without sacrificing control. Best suited for cooks 6 feet or taller, or those with larger hand spans."
+        content: "Outstanding for larger hands. The extra length provides excellent reach without sacrificing control. Best suited for larger projects in larger work spaces."
       },
       {
         title: "Edge Retention",
@@ -89,7 +89,7 @@ export const reviewData = {
       }
     ],
     outstandingPerformance: [
-      "10-inch blade perfect for breaking down whole chickens and large cuts",
+      "10-inch blade perfect for breaking down steaks and large cuts",
       "Exceptional reach for slicing motion on oversized vegetables",
       "Professional-grade balance despite longer length",
       "Edge holds sharpness for months with regular honing",
@@ -110,7 +110,7 @@ export const reviewData = {
     sections: [
       {
         title: "Perfect Length for Larger Cuts",
-        content: "The 10-inch blade gives you the reach needed for whole chickens, large cabbages, and pork shoulders. Longer blade means better slicing motion and fewer strokes through large items. When you're breaking down a whole chicken or portioning a roast, those extra 2 inches make a noticeable difference in efficiency and control."
+        content: "The 10-inch blade gives you the reach needed for steaks, large cabbages, and pork shoulders. Longer blade means better slicing motion and fewer strokes through large items. When you're breaking down a steak or portioning a roast, those extra 2 inches make a noticeable difference in efficiency and control."
       },
       {
         title: "Ideal for Larger Hands",
@@ -118,7 +118,7 @@ export const reviewData = {
       },
       {
         title: "Professional Kitchen Performance",
-        content: "After 45 years of cooking and countless knives tested, the Victorinox 10-inch chef's knife is my choice for high-volume protein breakdown. From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I've used this knife to break down 50+ whole chickens per week, portion large pork shoulders and beef roasts, slice through whole butternut squash and large cabbages, and prep oversized vegetables for bulk meal prep. The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day."
+        content: "After 45 years of cooking and countless knives tested, the Victorinox 10-inch chef's knife is my choice for high-volume protein breakdown. From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I've used this knife to break down 50+ steaks per week, portion large pork shoulders and beef roasts, slice through whole butternut squash and large cabbages, and prep oversized vegetables for bulk meal prep. The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day."
       },
       {
         title: "When to Choose 10-Inch Over 8-Inch",
@@ -143,7 +143,7 @@ export const reviewData = {
     considerAlternativesTitle: "Skip If You:",
     perfectFor: [
       "Have larger hands (generally 6 feet or taller)",
-      "Regularly break down whole chickens and large cuts",
+      "Regularly break down steaks and large cuts",
       "Do bulk meal prep with oversized vegetables",
       "Have ample counter and cutting board space",
       "Want professional quality without premium pricing",
@@ -188,7 +188,7 @@ export const reviewData = {
       },
       {
         question: "Is the 10\" knife too big for home cooking?",
-        answer: "Not if you have larger hands or regularly work with whole proteins and large vegetables. The 10\" excels at breaking down whole chickens, portioning roasts, and slicing through large butternut squash. However, if you have smaller hands or a compact kitchen, the 8\" version will be more comfortable. Consider your hand size and the types of cutting tasks you do most often."
+        answer: "Not if you have larger hands or regularly work with whole proteins and large vegetables. The 10\" excels at breaking down steaks, portioning roasts, and slicing through large butternut squash. However, if you have smaller hands or a compact kitchen, the 8\" version will be more comfortable. Consider your hand size and the types of cutting tasks you do most often."
       },
       {
         question: "Does this knife come sharp from the factory?",
@@ -233,7 +233,7 @@ export const reviewData = {
     },
     {
       question: "Is the 10\" knife too big for home cooking?",
-      answer: "Not if you have larger hands or regularly work with whole proteins and large vegetables. The 10\" excels at breaking down whole chickens, portioning roasts, and slicing through large butternut squash. However, if you have smaller hands or a compact kitchen, the 8\" version will be more comfortable. Consider your hand size and the types of cutting tasks you do most often."
+      answer: "Not if you have larger hands or regularly work with whole proteins and large vegetables. The 10\" excels at breaking down steaks, portioning roasts, and slicing through large butternut squash. However, if you have smaller hands or a compact kitchen, the 8\" version will be more comfortable. Consider your hand size and the types of cutting tasks you do most often."
     },
     {
       question: "Does this knife come sharp from the factory?",
@@ -270,7 +270,7 @@ export const reviewData = {
     title: "The Bottom Line",
     paragraphs: [
       "After 20 years of use (including 10 years in professional kitchens), the Victorinox 10-inch chef's knife is my go-to for breaking down whole proteins and large vegetable prep. The extra 2 inches over the 8-inch model makes a real difference for bigger hands and larger cutting tasks.",
-      "Same professional quality as the 8-inch model—just sized for cooks who need more reach. If you have larger hands or regularly work with whole chickens and oversized vegetables, this is your knife. If you're under 6 feet tall or have smaller hands, get the 8-inch instead."
+      "Same professional quality as the 8-inch model—just sized for cooks who need more reach. If you have larger hands or regularly work with steaks and oversized vegetables, this is your knife. If you're under 6 feet tall or have smaller hands, get the 8-inch instead."
     ],
     ctaText: "Check Price on Amazon →"
   },
@@ -315,7 +315,7 @@ export const reviewData = {
     expertRating: 5.0,
     expertOpinion: "After 20 years of use (including 10 in professional kitchens), the Victorinox 10-inch chef's knife is my go-to for breaking down whole proteins and large vegetable prep. The extra 2 inches makes a real difference for bigger hands and larger cutting tasks. Same professional quality as the 8-inch model—just sized for cooks who need more reach.",
     pros: [
-      "Perfect length for breaking down whole chickens and large cuts",
+      "Perfect length for breaking down steaks and large cuts",
       "Ideal for larger hands (6 feet or taller)",
       "Professional quality at accessible pricing",
       "Exceptionally well-balanced despite longer blade",
