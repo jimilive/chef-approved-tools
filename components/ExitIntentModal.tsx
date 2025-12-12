@@ -85,9 +85,14 @@ export function useExitIntent() {
   useEffect(() => {
     let hasShown = false
 
-    const handleMouseLeave = (e: MouseEvent) => {
-      // Only trigger on upward movement near top of page
-      if (e.clientY <= 0 && !hasShown) {
+    const handleMouseOut = (e: MouseEvent) => {
+      // Only trigger when mouse leaves toward top of viewport (exit intent)
+      // Check if the mouse is leaving the document and moving upward
+      if (
+        e.clientY <= 0 &&
+        !hasShown &&
+        (e.relatedTarget === null || (e.relatedTarget as Node).nodeName === 'HTML')
+      ) {
         // Check if user hasn't already signed up
         const hasSignedUp = localStorage.getItem('newsletter-signup')
         const hasSeenModal = localStorage.getItem('exit-intent-shown')
@@ -102,12 +107,12 @@ export function useExitIntent() {
 
     // Add delay before enabling exit intent
     const timer = setTimeout(() => {
-      document.addEventListener('mouseleave', handleMouseLeave)
+      document.documentElement.addEventListener('mouseout', handleMouseOut)
     }, 30000) // Wait 30 seconds before enabling
 
     return () => {
       clearTimeout(timer)
-      document.removeEventListener('mouseleave', handleMouseLeave)
+      document.documentElement.removeEventListener('mouseout', handleMouseOut)
     }
   }, [])
 
