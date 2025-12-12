@@ -17,10 +17,10 @@ export default function ExitIntentModal({ isOpen, onClose }: ExitIntentModalProp
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 p-2 rounded-full hover:bg-gray-100 transition-colors"
+          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/90 hover:bg-white shadow-md transition-colors"
           aria-label="Close modal"
         >
-          <X className="w-5 h-5 text-gray-700" />
+          <X className="w-5 h-5 text-slate-800" />
         </button>
 
         {/* Header */}
