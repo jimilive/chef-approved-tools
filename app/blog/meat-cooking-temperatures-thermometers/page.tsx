@@ -280,7 +280,7 @@ export default function MeatCookingTemperaturesThermometers() {
                   <td><strong>Poultry (Chicken, Turkey, Duck)</strong></td>
                   <td>Fully Cooked</td>
                   <td>165°F</td>
-                  <td><strong>CRITICAL:</strong> Breast and thigh</td>
+                  <td><strong>CRITICAL:</strong> Breast and thigh (<Link href="/blog/why-cook-chicken-wings-longer" className="text-orange-700 hover:text-orange-800 underline">wings need extra time</Link>)</td>
                 </tr>
                 <tr className="bg-yellow-50">
                   <td><strong>Ground Poultry</strong></td>

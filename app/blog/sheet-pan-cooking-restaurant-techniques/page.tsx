@@ -159,7 +159,7 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
             <p className="font-semibold text-slate-900 mb-2">Resting Protocol:</p>
             <ul className="space-y-2 mb-0">
               <li><strong>Vegetables:</strong> 2–3 minutes on the pan</li>
-              <li><strong>Chicken or pork:</strong> 5 minutes loosely tented with foil</li>
+              <li><strong>Chicken or pork:</strong> 5 minutes loosely tented with foil (<Link href="/blog/why-cook-chicken-wings-longer" className="text-orange-700 hover:text-orange-800 underline">wings need extra cooking time</Link>)</li>
               <li><strong>Beef or lamb:</strong> 5–10 minutes depending on thickness</li>
               <li><strong>Fish:</strong> 1–2 minutes—fish is delicate and doesn&apos;t need long rests</li>
             </ul>

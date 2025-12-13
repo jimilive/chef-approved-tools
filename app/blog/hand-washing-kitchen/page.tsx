@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
@@ -132,7 +133,7 @@ export default function HandWashingInKitchenPage() {
           </p>
 
           <p>
-            <strong>After touching eggshells:</strong> Eggs commonly carry Salmonella on exterior surfaces. Wash after cracking eggs before continuing with other prep tasks.
+            <strong>After touching eggshells:</strong> Eggs commonly carry Salmonella on exterior surfaces. <Link href="/blog/why-wash-eggs-and-produce" className="text-orange-700 hover:text-orange-800 underline">Washing eggs and produce properly</Link> before prep is equally critical. Wash hands after cracking eggs before continuing with other prep tasks.
           </p>
 
           <p>
@@ -152,7 +153,7 @@ export default function HandWashingInKitchenPage() {
           </p>
 
           <p>
-            <strong>After handling cleaning chemicals:</strong> Sanitizers, detergents, and other chemicals shouldn&apos;t contact food. Wash thoroughly after cleaning tasks before resuming food prep.
+            <strong>After handling cleaning chemicals:</strong> Sanitizers, detergents, and other chemicals shouldn&apos;t contact food. Understanding <Link href="/blog/bleach-vs-sanitation-solution" className="text-orange-700 hover:text-orange-800 underline">proper bleach vs sanitation solution usage</Link> is also important. Wash thoroughly after cleaning tasks before resuming food prep.
           </p>
 
           <p>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
@@ -333,7 +334,7 @@ export default function HowToStoreRawFoodsSafelyPage() {
             <li><strong>Overpacking the refrigerator</strong> – Crowded refrigerators prevent cold air circulation. Maintain 70% capacity maximum for proper cooling</li>
             <li><strong>Storing raw meat in refrigerator door</strong> – Door temperature fluctuates with opening/closing. Always store raw meat on shelves, not in doors</li>
             <li><strong>Leaving cooked food out to cool before refrigerating</strong> – Refrigerate cooked food within 2 hours. Modern refrigerators handle hot food without significant temperature impact</li>
-            <li><strong>Storing eggs on refrigerator door</strong> – Temperature fluctuation shortens egg shelf life. Store eggs in their carton on a shelf</li>
+            <li><strong>Storing eggs on refrigerator door</strong> – Temperature fluctuation shortens egg shelf life. Store eggs in their carton on a shelf. Remember to <Link href="/blog/why-wash-eggs-and-produce" className="text-orange-700 hover:text-orange-800 underline">wash eggs before use</Link>, not before storage</li>
             <li><strong>Mixing old and new batches</strong> – Adding new ground beef to a package opened three days ago combines different age foods. Keep separate and use older package first</li>
             <li><strong>Trusting smell tests</strong> – Dangerous bacteria grow without creating detectable odors. Discard food past maximum storage time regardless of smell</li>
           </ul>

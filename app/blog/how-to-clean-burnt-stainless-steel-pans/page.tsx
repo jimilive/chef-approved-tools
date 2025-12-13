@@ -279,7 +279,7 @@ export default function CleanBurntStainlessSteelPost() {
           <h3>Mistake #4: Mixing Cleaners</h3>
 
           <p>
-            Bleach + BKF = chemical reaction.
+            Bleach + BKF = chemical reaction. If you use bleach for kitchen sanitation, learn <Link href="/blog/bleach-vs-sanitation-solution" className="text-orange-700 hover:text-orange-800 underline">proper bleach vs sanitation solution usage</Link>.
           </p>
 
           <p>
