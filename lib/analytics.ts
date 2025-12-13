@@ -1,12 +1,15 @@
 /**
- * @deprecated This file is deprecated - use /lib/tracking.ts instead
+ * ⛔️ DEPRECATED - DO NOT USE ⛔️
  *
- * All tracking now goes through GTM dataLayer (lib/tracking.ts).
- * This file used direct gtag calls which caused duplicate events
- * when GTM was also running.
+ * This file is DEPRECATED. Use /lib/tracking.ts instead.
  *
- * DO NOT import from this file in new code.
- * Existing imports should be migrated to lib/tracking.ts
+ * CRITICAL: The function signatures here are DIFFERENT from tracking.ts:
+ * - analytics.ts: trackAffiliateClick(productName, category, price, brand, position)
+ * - tracking.ts: trackAffiliateClick(merchant, product, position, price)
+ *
+ * Using the wrong import will cause tracking to fail silently.
+ *
+ * TODO: Delete this file once all imports are migrated.
  */
 
 // Google Analytics 4 configuration

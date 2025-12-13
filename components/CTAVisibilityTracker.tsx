@@ -76,13 +76,6 @@ export default function CTAVisibilityTracker({
           view_number: viewCount.current,
           timestamp: new Date().toISOString()
         })
-
-        console.log('CTA impression tracked:', {
-          ctaId,
-          position,
-          scrollDepth,
-          viewNumber: viewCount.current
-        })
       }
     }
 

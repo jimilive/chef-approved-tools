@@ -81,6 +81,7 @@ export default function AmazonCTA({
             sponsored
             size="lg"
             className={className}
+            aria-label={`Check price for ${productSlug.replace(/-/g, ' ')} on Amazon`}
           >
             {resolvedText}
           </Button>
@@ -93,6 +94,7 @@ export default function AmazonCTA({
             target="_blank"
             rel="nofollow noopener noreferrer sponsored"
             className={`${textLinkStyles} ${className}`.trim()}
+            aria-label={`Check price for ${productSlug.replace(/-/g, ' ')} on Amazon`}
           >
             → {resolvedText}
           </a>
@@ -111,6 +113,7 @@ export default function AmazonCTA({
               sponsored
               size="lg"
               className={className}
+              aria-label={`Check price for ${productSlug.replace(/-/g, ' ')} on Amazon`}
             >
               {resolvedText}
             </Button>
@@ -126,6 +129,7 @@ export default function AmazonCTA({
             sponsored
             size="lg"
             className={className}
+            aria-label={`Check price for ${productSlug.replace(/-/g, ' ')} on Amazon`}
           >
             {resolvedText}
           </Button>

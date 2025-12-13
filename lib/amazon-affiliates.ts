@@ -1,5 +1,4 @@
 // Amazon Affiliates Link Management
-import { trackAffiliateClick } from './analytics'
 
 export const AMAZON_TAG = process.env.AMAZON_ASSOCIATE_TAG || 'chefapprovedt-20'
 

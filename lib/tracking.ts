@@ -62,9 +62,6 @@ export const trackAffiliateClick = (
       viewport_width: getViewportSize().width,
       timestamp: new Date().toISOString()
     });
-
-    // Console log for debugging (remove in production)
-    console.log('Affiliate click tracked:', { merchant, product, position, price, device: getDeviceType() });
   }
 };
 
@@ -86,8 +83,6 @@ export const trackEmailSignup = (
       device_type: getDeviceType(),
       timestamp: new Date().toISOString()
     });
-
-    console.log('Email signup tracked:', { location, upgradeType, device: getDeviceType() });
   }
 };
 
@@ -111,8 +106,6 @@ export const trackInternalClick = (
       device_type: getDeviceType(),
       timestamp: new Date().toISOString()
     });
-
-    console.log('Internal click tracked:', { sourcePage, destinationPage, linkType });
   }
 };
 
@@ -154,8 +147,6 @@ export const trackVariantAssignment = (
       variant_text: variantText,
       timestamp: new Date().toISOString()
     });
-
-    console.log('CTA variant assigned:', { variant, variantText });
   }
 };
 
@@ -184,8 +175,6 @@ export const trackVariantClick = (
       cta_position: position,
       timestamp: new Date().toISOString()
     });
-
-    console.log('CTA variant clicked:', { variant, variantText, merchant, product, position });
   }
 };
 
@@ -224,8 +213,6 @@ export const trackNewsletterSignup = (
       device_type: getDeviceType(),
       timestamp: new Date().toISOString()
     });
-
-    console.log('Newsletter signup tracked:', { source, emailProvided: !!email });
   }
 };
 
@@ -252,8 +239,6 @@ export const trackProductView = (
       device_type: getDeviceType(),
       timestamp: new Date().toISOString()
     });
-
-    console.log('Product view tracked:', { productName, category, price, brand });
   }
 };
 
@@ -274,8 +259,6 @@ export const trackSearch = (
       device_type: getDeviceType(),
       timestamp: new Date().toISOString()
     });
-
-    console.log('Search tracked:', { query, resultsCount });
   }
 };
 
@@ -299,7 +282,5 @@ export const event = (params: {
       device_type: getDeviceType(),
       timestamp: new Date().toISOString()
     });
-
-    console.log('Custom event tracked:', params);
   }
 };

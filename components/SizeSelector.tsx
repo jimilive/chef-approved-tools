@@ -18,6 +18,7 @@ interface SizeSelectorProps {
   ctaText?: string
   ctaPosition?: 'above_fold' | 'mid_article' | 'final_cta'
   showDisclosure?: boolean
+  productSlug?: string
 }
 
 export default function SizeSelector({
@@ -26,7 +27,8 @@ export default function SizeSelector({
   defaultSize,
   ctaText = 'Check Price on Amazon →',
   ctaPosition = 'mid_article',
-  showDisclosure = true
+  showDisclosure = true,
+  productSlug
 }: SizeSelectorProps) {
   const [selectedSize, setSelectedSize] = useState(defaultSize)
 
@@ -65,12 +67,13 @@ export default function SizeSelector({
       </div>
 
       {/* CTA Button */}
-      <CTAVisibilityTracker ctaId={selectedOption.ctaId} position={ctaPosition}>
+      <CTAVisibilityTracker ctaId={selectedOption.ctaId} position={ctaPosition} productSlug={productSlug}>
         <a
           href={selectedOption.affiliateUrl}
           target="_blank"
           rel="nofollow noopener noreferrer sponsored"
           className="inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap w-full text-center"
+          aria-label={`${ctaText} - ${selectedOption.label}`}
         >
           {ctaText}
         </a>
@@ -83,6 +86,7 @@ export default function SizeSelector({
           target="_blank"
           rel="nofollow noopener noreferrer sponsored"
           className="text-base text-orange-700 underline hover:text-orange-800 transition-colors"
+          aria-label={`View ${selectedOption.label} product details on Amazon`}
         >
           View product details
         </a>
