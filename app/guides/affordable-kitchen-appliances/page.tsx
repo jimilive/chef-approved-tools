@@ -228,7 +228,7 @@ export default async function AffordableKitchenAppliancesPage() {
               <a
                 href={ninjaBlenderUrl}
                 target="_blank"
-                rel="noopener noreferrer sponsored"
+                rel="nofollow noopener noreferrer sponsored"
                 className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
               >
                 🛒 Check Current Price on Amazon →
@@ -325,7 +325,7 @@ export default async function AffordableKitchenAppliancesPage() {
               <a
                 href={kitchenAidUrl}
                 target="_blank"
-                rel="noopener noreferrer sponsored"
+                rel="nofollow noopener noreferrer sponsored"
                 className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
               >
                 🛒 Check Current Price on Amazon →
@@ -443,7 +443,7 @@ export default async function AffordableKitchenAppliancesPage() {
               <a
                 href={cuisinartUrl}
                 target="_blank"
-                rel="noopener noreferrer sponsored"
+                rel="nofollow noopener noreferrer sponsored"
                 className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center"
               >
                 🛒 Check Current Price on Amazon →
@@ -484,7 +484,7 @@ export default async function AffordableKitchenAppliancesPage() {
                 <a
                   href={instantPotUrl}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="nofollow noopener noreferrer sponsored"
                   className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
                 >
                   🛒 Check Current Price on Amazon →
@@ -543,7 +543,7 @@ export default async function AffordableKitchenAppliancesPage() {
                 <a
                   href={airFryerUrl}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="nofollow noopener noreferrer sponsored"
                   className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
                 >
                   🛒 Check Current Price on Amazon →
@@ -578,7 +578,7 @@ export default async function AffordableKitchenAppliancesPage() {
                 <a
                   href={pizzaOvenUrl}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="nofollow noopener noreferrer sponsored"
                   className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl text-center text-sm sm:text-base"
                 >
                   🛒 Check Current Price on Amazon →

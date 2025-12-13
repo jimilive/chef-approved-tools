@@ -218,7 +218,7 @@ export default async function ProductReview() {
                   <a
                     href={affiliateUrl}
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
+                    rel="nofollow noopener noreferrer sponsored"
                     className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
                   >
                     {reviewData.hero.ctaText}
@@ -229,7 +229,7 @@ export default async function ProductReview() {
                     href={affiliateUrl}
                     className="text-orange-700 hover:text-orange-800 underline font-medium"
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
+                    rel="nofollow noopener noreferrer sponsored"
                   >
                     → View {productData.name} on Amazon
                   </a>
@@ -280,7 +280,7 @@ export default async function ProductReview() {
                         href={affiliateUrl}
                         className="text-orange-700 hover:text-orange-800 font-medium"
                         target="_blank"
-                        rel="noopener noreferrer sponsored"
+                        rel="nofollow noopener noreferrer sponsored"
                       >
                         Victorinox
                       </a>
@@ -293,7 +293,7 @@ export default async function ProductReview() {
                         href={affiliateUrl}
                         className="text-orange-700 hover:text-orange-800 font-medium"
                         target="_blank"
-                        rel="noopener noreferrer sponsored"
+                        rel="nofollow noopener noreferrer sponsored"
                       >
                         Victorinox 8-inch chef&apos;s knife
                       </a>
@@ -306,7 +306,7 @@ export default async function ProductReview() {
                         href={affiliateUrl}
                         className="text-orange-700 hover:text-orange-800 font-medium"
                         target="_blank"
-                        rel="noopener noreferrer sponsored"
+                        rel="nofollow noopener noreferrer sponsored"
                       >
                         Victorinox
                       </a>
@@ -404,7 +404,7 @@ export default async function ProductReview() {
                 <a
                   href={affiliateUrl}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="nofollow noopener noreferrer sponsored"
                   className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
                 >
                   Check Price on Amazon →
@@ -417,7 +417,7 @@ export default async function ProductReview() {
                   href={affiliateUrl}
                   className="text-orange-700 hover:text-orange-800 underline font-medium"
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="nofollow noopener noreferrer sponsored"
                 >
                   → View {productData.name} on Amazon
                 </a>

@@ -315,7 +315,7 @@ export default function ProductComparisonTable({
                   <a
                     href={product.affiliateLink}
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
+                    rel="nofollow noopener noreferrer sponsored"
                     className={`inline-block px-4 py-2 rounded-lg font-semibold text-sm transition-all whitespace-nowrap ${
                       product.name === highlightedProduct
                         ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700'
@@ -397,7 +397,7 @@ export default function ProductComparisonTable({
             <a
               href={product.affiliateLink}
               target="_blank"
-              rel="noopener noreferrer sponsored"
+              rel="nofollow noopener noreferrer sponsored"
               className={`block w-full text-center px-6 py-3 rounded-lg font-semibold transition-all ${
                 product.name === highlightedProduct
                   ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700'

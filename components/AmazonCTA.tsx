@@ -91,7 +91,7 @@ export default function AmazonCTA({
           <a
             href={affiliateUrl}
             target="_blank"
-            rel="noopener noreferrer sponsored"
+            rel="nofollow noopener noreferrer sponsored"
             className={`${textLinkStyles} ${className}`.trim()}
           >
             → {resolvedText}

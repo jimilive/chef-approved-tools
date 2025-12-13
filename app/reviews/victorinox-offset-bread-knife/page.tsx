@@ -257,7 +257,7 @@ export default async function ProductReview() {
                           href={affiliateUrl}
                           className="text-orange-700 hover:text-orange-800 font-medium"
                           target="_blank"
-                          rel="noopener noreferrer sponsored"
+                          rel="nofollow noopener noreferrer sponsored"
                         >
                           bread knife
                         </a>

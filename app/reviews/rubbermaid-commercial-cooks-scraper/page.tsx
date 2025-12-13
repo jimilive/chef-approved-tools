@@ -190,7 +190,7 @@ export default async function RubbermaidScraperReview() {
                     <a
                       href={affiliateUrl}
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="nofollow noopener noreferrer sponsored"
                       className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-6 rounded-lg font-semibold transition-colors"
                     >
                       Check Price on Amazon →
@@ -205,7 +205,7 @@ export default async function RubbermaidScraperReview() {
                     <a
                       href={affiliate9_5Url}
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="nofollow noopener noreferrer sponsored"
                       className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-6 rounded-lg font-semibold transition-colors"
                     >
                       Check Price on Amazon →
@@ -315,7 +315,7 @@ export default async function RubbermaidScraperReview() {
                 <a
                   href={affiliateUrl}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="nofollow noopener noreferrer sponsored"
                   className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                 >
                   Check Price →
@@ -328,7 +328,7 @@ export default async function RubbermaidScraperReview() {
                 <a
                   href={affiliate9_5Url}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="nofollow noopener noreferrer sponsored"
                   className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                 >
                   Check Price →
@@ -414,7 +414,7 @@ export default async function RubbermaidScraperReview() {
                   <a
                     href={affiliateUrl}
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
+                    rel="nofollow noopener noreferrer sponsored"
                     className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                   >
                     Check Price →
@@ -427,7 +427,7 @@ export default async function RubbermaidScraperReview() {
                   <a
                     href={affiliate9_5Url}
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
+                    rel="nofollow noopener noreferrer sponsored"
                     className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                   >
                     Check Price →
@@ -463,7 +463,7 @@ export default async function RubbermaidScraperReview() {
                 <a
                   href={affiliateUrl}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="nofollow noopener noreferrer sponsored"
                   className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                 >
                   Check Price →
@@ -476,7 +476,7 @@ export default async function RubbermaidScraperReview() {
                 <a
                   href={affiliate9_5Url}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="nofollow noopener noreferrer sponsored"
                   className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                 >
                   Check Price →
@@ -545,7 +545,7 @@ export default async function RubbermaidScraperReview() {
                   <a
                     href={affiliateUrl}
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
+                    rel="nofollow noopener noreferrer sponsored"
                     className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                   >
                     Check Price →
@@ -559,7 +559,7 @@ export default async function RubbermaidScraperReview() {
                   <a
                     href={affiliate9_5Url}
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
+                    rel="nofollow noopener noreferrer sponsored"
                     className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
                   >
                     Check Price →
@@ -628,7 +628,7 @@ export default async function RubbermaidScraperReview() {
                   <a
                     href={affiliateUrl}
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
+                    rel="nofollow noopener noreferrer sponsored"
                     className="inline-block bg-white text-purple-800 font-semibold px-8 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl hover:bg-purple-50"
                   >
                     13.5-inch (Pro) →
@@ -638,7 +638,7 @@ export default async function RubbermaidScraperReview() {
                   <a
                     href={affiliate9_5Url}
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
+                    rel="nofollow noopener noreferrer sponsored"
                     className="inline-block bg-[#B45309] text-white font-semibold px-8 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl hover:bg-[#92400E]"
                   >
                     9.5-inch (Home) →

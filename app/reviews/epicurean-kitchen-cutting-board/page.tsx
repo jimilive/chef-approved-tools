@@ -147,7 +147,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
             key={`inline-link-${linkIndex++}`}
             href={affiliateUrl}
             target="_blank"
-            rel="noopener noreferrer sponsored"
+            rel="nofollow noopener noreferrer sponsored"
             className="text-orange-700 hover:text-orange-800 underline font-medium"
           >
             {linkContent}
@@ -273,7 +273,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
                     <a
                       href={option.link}
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="nofollow noopener noreferrer sponsored"
                       className={`block text-center p-3 rounded-lg border-2 transition-all hover:scale-105 ${
                         option.label.includes('Reviewed')
                           ? 'border-orange-500 bg-orange-50 hover:bg-orange-100'

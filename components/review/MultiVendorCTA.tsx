@@ -135,7 +135,7 @@ export default function MultiVendorCTA({
             <a
               href={link.url}
               target="_blank"
-              rel="noopener noreferrer sponsored"
+              rel="nofollow noopener noreferrer sponsored"
               className={linkClassName}
               aria-label={`Buy ${productName} on ${merchantLabel}`}
             >

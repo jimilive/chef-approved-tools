@@ -337,7 +337,7 @@ export default async function ProductReview() {
             <a
               href={affiliateUrl}
               target="_blank"
-              rel="noopener noreferrer sponsored"
+              rel="nofollow noopener noreferrer sponsored"
               className="text-orange-700 hover:text-orange-800 font-medium underline"
             >
               → See current Amazon price and reviews
@@ -414,7 +414,7 @@ export default async function ProductReview() {
                   href={reviewData.sizeOptions.options.find(o => o.recommended)?.affiliateUrl || reviewData.sizeOptions.options[0].affiliateUrl}
                   className="text-orange-700 hover:text-orange-800 underline font-medium"
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="nofollow noopener noreferrer sponsored"
                 >
                   → View {reviewData.breadcrumb.productName} on Amazon
                 </a>

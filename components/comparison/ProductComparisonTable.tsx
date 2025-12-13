@@ -202,7 +202,7 @@ export default function ProductComparisonTable({
                   <a
                     href={product.affiliateLink}
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
+                    rel="nofollow noopener noreferrer sponsored"
                     onClick={() => handleAffiliateClick(product)}
                     className={`block px-3 py-2 rounded-lg font-semibold text-xs transition-all leading-tight ${
                       product.name === highlightedProduct
@@ -254,7 +254,7 @@ export default function ProductComparisonTable({
             <a
               href={product.affiliateLink}
               target="_blank"
-              rel="noopener noreferrer sponsored"
+              rel="nofollow noopener noreferrer sponsored"
               onClick={() => handleAffiliateClick(product)}
               className={`block w-full text-center px-6 py-3 rounded-lg font-semibold transition-all ${
                 product.name === highlightedProduct

@@ -147,7 +147,28 @@ export default async function NordicWareHalfSheetPanReview() {
 
   return (
     <>
-    <div className="max-w-3xl mx-auto px-5 py-10">
+      {/* Schema.org markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateProductSchema(productData))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQSchema(reviewData.faqData))
+        }}
+      />
+
+      <div className="bg-gray-50 min-h-screen">
+        <div className="max-w-[900px] mx-auto px-5">
       <ProductViewTrackerWrapper
         slug={reviewData.productSlug}
         name={productData.name}
@@ -158,24 +179,32 @@ export default async function NordicWareHalfSheetPanReview() {
         category={productData.category || 'Bakeware'}
       />
 
+          {/* BREADCRUMBS */}
+          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
+            <Link href="/" className="hover:text-orange-700">Home</Link>
+            {' / '}
+            {categoryBreadcrumb ? (
+              <>
+                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
+                {' / '}
+              </>
+            ) : (
+              <>
+                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
+                {' / '}
+              </>
+            )}
+            {productData.name}
+          </div>
+
+          <Link
+            href="/cookware-and-bakeware"
+            className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
+          >
+            ← Browse all Cookware & Bakeware
+          </Link>
+
       <article>
-        {/* Breadcrumb */}
-        <nav className="mb-5 text-sm">
-          <Link href="/" className="text-blue-600 no-underline">Home</Link>
-          {' > '}
-          {categoryBreadcrumb ? (
-            <>
-              <Link href={categoryBreadcrumb.href} className="text-blue-600 no-underline">{categoryBreadcrumb.label}</Link>
-              {' > '}
-            </>
-          ) : (
-            <>
-              <Link href="/reviews" className="text-blue-600 no-underline">Reviews</Link>
-              {' > '}
-            </>
-          )}
-          <span className="text-gray-700">{productData.name}</span>
-        </nav>
 
         {/* Hero Section */}
         <ReviewHero
@@ -188,6 +217,7 @@ export default async function NordicWareHalfSheetPanReview() {
           verdictStrong={reviewData.hero.verdictStrong}
           publishedDate={gitDates.firstPublished}
           lastUpdated={gitDates.lastUpdated}
+          ctaUrl={affiliateUrl}
         />
 
         {/* Quick Stats */}
@@ -210,7 +240,7 @@ export default async function NordicWareHalfSheetPanReview() {
             <a
               href={affiliateUrl}
               target="_blank"
-              rel="noopener noreferrer sponsored"
+              rel="nofollow noopener noreferrer sponsored"
               className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
             >
               {reviewData.hero.ctaText}
@@ -223,7 +253,7 @@ export default async function NordicWareHalfSheetPanReview() {
               href={affiliateUrl}
               className="text-orange-700 hover:text-orange-800 underline font-medium"
               target="_blank"
-              rel="noopener noreferrer sponsored"
+              rel="nofollow noopener noreferrer sponsored"
             >
               → View {productData.name} on Amazon
             </a>
@@ -466,7 +496,7 @@ export default async function NordicWareHalfSheetPanReview() {
             <a
               href={affiliateUrl}
               target="_blank"
-              rel="noopener noreferrer sponsored"
+              rel="nofollow noopener noreferrer sponsored"
               className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
             >
               {reviewData.hero.ctaText}
@@ -479,7 +509,7 @@ export default async function NordicWareHalfSheetPanReview() {
               href={affiliateUrl}
               className="text-orange-700 hover:text-orange-800 underline font-medium"
               target="_blank"
-              rel="noopener noreferrer sponsored"
+              rel="nofollow noopener noreferrer sponsored"
             >
               → View {productData.name} on Amazon
             </a>
@@ -568,7 +598,7 @@ export default async function NordicWareHalfSheetPanReview() {
               <a
                 href={affiliateUrl}
                 target="_blank"
-                rel="noopener noreferrer sponsored"
+                rel="nofollow noopener noreferrer sponsored"
                 className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
               >
                 {reviewData.bottomLine.ctaText}
@@ -581,7 +611,7 @@ export default async function NordicWareHalfSheetPanReview() {
                 href={affiliateUrl}
                 className="text-orange-700 hover:text-orange-800 underline font-medium"
                 target="_blank"
-                rel="noopener noreferrer sponsored"
+                rel="nofollow noopener noreferrer sponsored"
               >
                 → View {productData.name} on Amazon
               </a>
@@ -614,27 +644,9 @@ export default async function NordicWareHalfSheetPanReview() {
         {/* Author Bio */}
         <AuthorBio />
 
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateProductSchema(productData))
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateFAQSchema(reviewData.faqData))
-          }}
-        />
       </article>
-    </div>
+        </div>
+      </div>
 
     {/* STICKY MOBILE CTA */}
     <StickyMobileCTAWrapper

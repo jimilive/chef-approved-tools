@@ -250,7 +250,7 @@ export default async function ChefApprovedKitchenKit() {
                     <a
                       href={product.affiliateUrl}
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="nofollow noopener noreferrer sponsored"
                       className="w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block flex items-center justify-center gap-2 text-sm"
                     >
                       <ShoppingCart className="w-4 h-4" />
@@ -349,7 +349,7 @@ export default async function ChefApprovedKitchenKit() {
                     <a
                       href={product.affiliateUrl}
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="nofollow noopener noreferrer sponsored"
                       className="w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block flex items-center justify-center gap-2"
                     >
                       <ShoppingCart className="w-4 h-4" />
@@ -436,7 +436,7 @@ export default async function ChefApprovedKitchenKit() {
                 <a
                   href={specialistTool.affiliateUrl}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="nofollow noopener noreferrer sponsored"
                   className="w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-center block flex items-center justify-center gap-2"
                 >
                   <ShoppingCart className="w-5 h-5" />
@@ -512,7 +512,7 @@ export default async function ChefApprovedKitchenKit() {
             <a
               href={coreEssentials[0].affiliateUrl}
               target="_blank"
-              rel="noopener noreferrer sponsored"
+              rel="nofollow noopener noreferrer sponsored"
               className="inline-flex items-center gap-2 bg-white text-orange-700 hover:bg-orange-50 font-bold py-4 px-8 rounded-xl transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:scale-105 active:scale-95"
             >
               <ShoppingCart className="w-5 h-5" />

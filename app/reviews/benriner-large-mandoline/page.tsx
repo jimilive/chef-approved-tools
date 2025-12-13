@@ -255,7 +255,7 @@ export default async function BenrinerLargeMandolineReview() {
                       href={affiliateUrl}
                       className="text-orange-700 hover:text-orange-800 underline font-medium"
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="nofollow noopener noreferrer sponsored"
                     >
                       → View Large {productData.name} on Amazon
                     </a>
@@ -265,7 +265,7 @@ export default async function BenrinerLargeMandolineReview() {
                       href={affiliateUrlMedium}
                       className="text-orange-700 hover:text-orange-800 underline font-medium"
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="nofollow noopener noreferrer sponsored"
                     >
                       → View Original Benriner on Amazon
                     </a>
@@ -446,7 +446,7 @@ export default async function BenrinerLargeMandolineReview() {
                       href={affiliateUrl}
                       className="text-orange-700 hover:text-orange-800 underline font-medium"
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="nofollow noopener noreferrer sponsored"
                     >
                       → View Large {productData.name} on Amazon
                     </a>
@@ -456,7 +456,7 @@ export default async function BenrinerLargeMandolineReview() {
                       href={affiliateUrlMedium}
                       className="text-orange-700 hover:text-orange-800 underline font-medium"
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="nofollow noopener noreferrer sponsored"
                     >
                       → View Original Benriner on Amazon
                     </a>
@@ -509,7 +509,7 @@ export default async function BenrinerLargeMandolineReview() {
                       href={affiliateUrl}
                       className="text-orange-700 hover:text-orange-800 underline font-medium"
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="nofollow noopener noreferrer sponsored"
                     >
                       → View Large {productData.name} on Amazon
                     </a>
@@ -519,7 +519,7 @@ export default async function BenrinerLargeMandolineReview() {
                       href={affiliateUrlMedium}
                       className="text-orange-700 hover:text-orange-800 underline font-medium"
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="nofollow noopener noreferrer sponsored"
                     >
                       → View Original Benriner on Amazon
                     </a>

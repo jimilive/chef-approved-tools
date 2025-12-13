@@ -229,7 +229,7 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
               <a
                 href={affiliateUrl}
                 target="_blank"
-                rel="noopener noreferrer sponsored"
+                rel="nofollow noopener noreferrer sponsored"
                 className="text-orange-700 hover:text-orange-800 font-medium underline"
               >
                 → See current Amazon price and reviews

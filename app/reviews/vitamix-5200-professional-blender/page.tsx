@@ -102,7 +102,7 @@ function processInlineLinks(text: string, affiliateUrl: string, productName: str
           href={affiliateUrl}
           className="text-orange-700 hover:text-orange-800 font-medium no-underline hover:underline"
           target="_blank"
-          rel="noopener noreferrer sponsored"
+          rel="nofollow noopener noreferrer sponsored"
         >
           {linkText}
         </a>

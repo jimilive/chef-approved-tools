@@ -223,7 +223,7 @@ export default async function KitchenAidCommercialReviewPage() {
                     href={compareLink}
                     className="text-orange-700 hover:text-orange-800 underline font-medium"
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
+                    rel="nofollow noopener noreferrer sponsored"
                   >
                     → Compare All KitchenAid Stand Mixers
                   </a>
@@ -262,7 +262,7 @@ export default async function KitchenAidCommercialReviewPage() {
             <a
               href={primaryLink}
               target="_blank"
-              rel="noopener noreferrer sponsored"
+              rel="nofollow noopener noreferrer sponsored"
               className="text-orange-700 hover:text-orange-800 font-medium underline"
             >
               → See current KitchenAid price and availability
@@ -470,7 +470,7 @@ export default async function KitchenAidCommercialReviewPage() {
                 href={compareLink}
                 className="text-orange-700 hover:text-orange-800 underline font-medium"
                 target="_blank"
-                rel="noopener noreferrer sponsored"
+                rel="nofollow noopener noreferrer sponsored"
               >
                 → Compare All Stand Mixer Models
               </a>
@@ -482,7 +482,7 @@ export default async function KitchenAidCommercialReviewPage() {
                 href={trustLink}
                 className="text-orange-700 hover:text-orange-800 underline font-medium"
                 target="_blank"
-                rel="noopener noreferrer sponsored"
+                rel="nofollow noopener noreferrer sponsored"
               >
                 → Free Delivery + 60 Day Returns
               </a>

@@ -122,7 +122,7 @@ export default async function BodumChambordFrenchPressReview() {
             key={`inline-link-${linkIndex++}`}
             href={affiliateUrl}
             target="_blank"
-            rel="noopener noreferrer sponsored"
+            rel="nofollow noopener noreferrer sponsored"
             className="text-orange-700 hover:text-orange-800 underline font-medium"
           >
             {linkContent}
@@ -271,7 +271,7 @@ export default async function BodumChambordFrenchPressReview() {
                     href={affiliateUrl}
                     className="text-orange-700 hover:text-orange-800 underline font-medium"
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
+                    rel="nofollow noopener noreferrer sponsored"
                   >
                     → View {productData.name} on Amazon
                   </a>
@@ -300,7 +300,7 @@ export default async function BodumChambordFrenchPressReview() {
               <a
                 href={affiliateUrl}
                 target="_blank"
-                rel="noopener noreferrer sponsored"
+                rel="nofollow noopener noreferrer sponsored"
                 className="text-orange-700 hover:text-orange-800 font-medium underline"
               >
                 → See current Amazon price and reviews
@@ -381,7 +381,7 @@ export default async function BodumChambordFrenchPressReview() {
                       href={affiliateUrl}
                       className="text-orange-700 hover:text-orange-800 underline font-medium"
                       target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      rel="nofollow noopener noreferrer sponsored"
                     >
                       → View {productData.name} on Amazon
                     </a>
@@ -422,7 +422,7 @@ export default async function BodumChambordFrenchPressReview() {
                     href={affiliateUrl}
                     className="text-orange-700 hover:text-orange-800 underline font-medium"
                     target="_blank"
-                    rel="noopener noreferrer sponsored"
+                    rel="nofollow noopener noreferrer sponsored"
                   >
                     → View {productData.name} on Amazon
                   </a>

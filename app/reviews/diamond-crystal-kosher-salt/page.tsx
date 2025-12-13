@@ -140,7 +140,7 @@ export default async function DiamondCrystalKosherSaltReview() {
             href={affiliateUrl}
             className="text-orange-700 hover:text-orange-800 font-medium no-underline"
             target="_blank"
-            rel="noopener noreferrer sponsored"
+            rel="nofollow noopener noreferrer sponsored"
           >
             {part}
           </a>
