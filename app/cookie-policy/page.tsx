@@ -100,7 +100,7 @@ export default function CookiePolicyPage() {
             <ul className="list-disc pl-6 mb-4">
               <li>Purpose: Website analytics and performance tracking</li>
               <li>Data collected: Page views, session duration, traffic sources</li>
-              <li>Privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Google Privacy Policy</a></li>
+              <li>Privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow noopener noreferrer sponsored" className="text-blue-600 hover:text-blue-700 underline">Google Privacy Policy</a></li>
             </ul>
 
             <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Amazon Associates</h3>
@@ -171,7 +171,7 @@ export default function CookiePolicyPage() {
               You can opt out of Google Analytics tracking by:
             </p>
             <ul className="list-disc pl-6 mb-4">
-              <li>Installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Google Analytics Opt-out Browser Add-on</a></li>
+              <li>Installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="nofollow noopener noreferrer sponsored" className="text-blue-600 hover:text-blue-700 underline">Google Analytics Opt-out Browser Add-on</a></li>
               <li>Using our cookie consent banner to disable analytics cookies</li>
             </ul>
 
@@ -180,9 +180,9 @@ export default function CookiePolicyPage() {
               Opt out of interest-based advertising through:
             </p>
             <ul className="list-disc pl-6 mb-4">
-              <li><a href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Network Advertising Initiative</a></li>
-              <li><a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">Digital Advertising Alliance</a></li>
-              <li><a href="https://youronlinechoices.eu/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline">European Interactive Digital Advertising Alliance</a> (EU residents)</li>
+              <li><a href="https://www.networkadvertising.org/choices/" target="_blank" rel="nofollow noopener noreferrer sponsored" className="text-blue-600 hover:text-blue-700 underline">Network Advertising Initiative</a></li>
+              <li><a href="https://www.aboutads.info/choices/" target="_blank" rel="nofollow noopener noreferrer sponsored" className="text-blue-600 hover:text-blue-700 underline">Digital Advertising Alliance</a></li>
+              <li><a href="https://youronlinechoices.eu/" target="_blank" rel="nofollow noopener noreferrer sponsored" className="text-blue-600 hover:text-blue-700 underline">European Interactive Digital Advertising Alliance</a> (EU residents)</li>
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">8. Do Not Track</h2>

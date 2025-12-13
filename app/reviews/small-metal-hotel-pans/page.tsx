@@ -252,7 +252,7 @@ export default async function ProductReview() {
                           href={option.affiliateUrl}
                           className="text-xs text-gray-700 hover:text-orange-700 underline transition-colors"
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel="nofollow noopener noreferrer sponsored"
                         >
                           Check Price on Amazon
                         </a>
@@ -301,7 +301,7 @@ export default async function ProductReview() {
                         href={lid.affiliateUrl}
                         className="text-xs text-gray-700 hover:text-orange-700 underline transition-colors"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="nofollow noopener noreferrer sponsored"
                       >
                         Check Price on Amazon
                       </a>

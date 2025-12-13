@@ -23,7 +23,7 @@ export function ReviewHeroCTA({
     <a
       href={ctaUrl}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="nofollow noopener noreferrer sponsored"
       onClick={() => trackAffiliateClick('Amazon', productName, position, 0)}
       className={className}
     >

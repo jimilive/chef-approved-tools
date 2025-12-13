@@ -69,7 +69,7 @@ export default function SizeSelector({
         <a
           href={selectedOption.affiliateUrl}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow noopener noreferrer sponsored"
           className="inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap w-full text-center"
         >
           {ctaText}
@@ -81,7 +81,7 @@ export default function SizeSelector({
         <a
           href={selectedOption.affiliateUrl}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow noopener noreferrer sponsored"
           className="text-base text-orange-700 underline hover:text-orange-800 transition-colors"
         >
           View product details

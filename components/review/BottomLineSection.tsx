@@ -65,7 +65,7 @@ export default function BottomLineSection({
                 <a
                   href={ctaUrl}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer sponsored"
                   onClick={handleClick}
                   className="inline-block bg-white text-purple-800 font-semibold px-12 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl hover:bg-purple-50"
                 >

@@ -89,7 +89,7 @@ export default function AffiliateButton({
       href={href}
       onClick={handleClick}
       target="_blank"
-      rel="nofollow noopener"
+      rel="nofollow noopener noreferrer sponsored"
       className={`${baseStyles} ${variantStyles[variant]} ${className}`}
       aria-label={`${displayText} - Opens in new window`}
     >

@@ -66,7 +66,7 @@ export default function AffiliateButtonVariations({
       href={href}
       onClick={handleClick}
       target="_blank"
-      rel="nofollow noopener"
+      rel="nofollow noopener noreferrer sponsored"
       className={`${baseStyles} ${variantStyles[buttonVariant]} ${className}`}
       aria-label={`${ctaText} - Opens in new window`}
     >
@@ -112,7 +112,7 @@ export function AffiliateButtonCompact({
       href={href}
       onClick={handleClick}
       target="_blank"
-      rel="nofollow noopener"
+      rel="nofollow noopener noreferrer sponsored"
       className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-bold text-base rounded-lg shadow-lg transition-all duration-200 active:scale-95 ${className}`}
       aria-label={`${ctaText} - Opens in new window`}
     >
