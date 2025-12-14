@@ -124,7 +124,7 @@ export default function Victorinox8vs10Page() {
                 <CTAVisibilityTracker
                   ctaId="eight-inch-top-cta"
                   position="above_fold"
-                  productSlug="victorinox-8-inch-chef-knife"
+                  productSlug="victorinox-fibrox-8-inch-chefs-knife"
                   merchant="amazon"
                 >
                   <Link
@@ -140,7 +140,7 @@ export default function Victorinox8vs10Page() {
                 <CTAVisibilityTracker
                   ctaId="ten-inch-top-cta"
                   position="above_fold"
-                  productSlug="victorinox-10-inch-chef-knife"
+                  productSlug="victorinox-fibrox-10-inch-chefs-knife"
                   merchant="amazon"
                 >
                   <Link
@@ -295,7 +295,7 @@ export default function Victorinox8vs10Page() {
           <CTAVisibilityTracker
             ctaId="eight-inch-mid-cta"
             position="mid_article"
-            productSlug="victorinox-8-inch-chef-knife"
+            productSlug="victorinox-fibrox-8-inch-chefs-knife"
             merchant="amazon"
           >
             <Link
@@ -389,7 +389,7 @@ export default function Victorinox8vs10Page() {
           <CTAVisibilityTracker
             ctaId="ten-inch-mid-cta"
             position="mid_article"
-            productSlug="victorinox-10-inch-chef-knife"
+            productSlug="victorinox-fibrox-10-inch-chefs-knife"
             merchant="amazon"
           >
             <Link
@@ -633,30 +633,37 @@ export default function Victorinox8vs10Page() {
             <strong>Total investment for both knives: Complete knife size versatility for every kitchen task</strong>
           </p>
 
-          <CTAVisibilityTracker
-            ctaId="both-knives-cta"
-            position="final_cta"
-            productSlug="victorinox-knife-set"
-            merchant="amazon"
-          >
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-              <h4 className="font-bold text-blue-800 mb-3">Get Both Knives:</h4>
-              <div className="space-y-3">
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+            <h4 className="font-bold text-blue-800 mb-3">Get Both Knives:</h4>
+            <div className="space-y-3">
+              <CTAVisibilityTracker
+                ctaId="both-knives-8-inch-cta"
+                position="final_cta"
+                productSlug="victorinox-fibrox-8-inch-chefs-knife"
+                merchant="amazon"
+              >
                 <Link
                   href="https://amazon.com/dp/B008M5U1C2?tag=chefapprovedt-20"
                   className="block text-orange-700 hover:text-orange-800 font-medium"
                 >
                   → 8-Inch Victorinox Fibrox Chef&rsquo;s Knife
                 </Link>
+              </CTAVisibilityTracker>
+              <CTAVisibilityTracker
+                ctaId="both-knives-10-inch-cta"
+                position="final_cta"
+                productSlug="victorinox-fibrox-10-inch-chefs-knife"
+                merchant="amazon"
+              >
                 <Link
                   href="https://amazon.com/dp/B0061SWV8Y?tag=chefapprovedt-20"
                   className="block text-orange-700 hover:text-orange-800 font-medium"
                 >
                   → 10-Inch Victorinox Fibrox Chef&rsquo;s Knife
                 </Link>
-              </div>
+              </CTAVisibilityTracker>
             </div>
-          </CTAVisibilityTracker>
+          </div>
 
           <h2 id="faq">Common Questions Answered</h2>
 
@@ -721,7 +728,7 @@ export default function Victorinox8vs10Page() {
           <CTAVisibilityTracker
             ctaId="final-eight-inch-cta"
             position="final_cta"
-            productSlug="victorinox-8-inch-chef-knife"
+            productSlug="victorinox-fibrox-8-inch-chefs-knife"
             merchant="amazon"
           >
             <Link
@@ -751,7 +758,7 @@ export default function Victorinox8vs10Page() {
           <CTAVisibilityTracker
             ctaId="final-ten-inch-cta"
             position="final_cta"
-            productSlug="victorinox-10-inch-chef-knife"
+            productSlug="victorinox-fibrox-10-inch-chefs-knife"
             merchant="amazon"
           >
             <Link

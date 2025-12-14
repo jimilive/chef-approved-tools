@@ -303,7 +303,7 @@ export default function CompleteVictorinoxLineupPage() {
           <CTAVisibilityTracker
             ctaId="victorinox-8-inch-cta"
             position="mid_article"
-            productSlug="victorinox-8-inch-chef-knife"
+            productSlug="victorinox-fibrox-8-inch-chefs-knife"
             merchant="amazon"
           >
             <Link
@@ -409,7 +409,7 @@ export default function CompleteVictorinoxLineupPage() {
           <CTAVisibilityTracker
             ctaId="victorinox-paring-cta"
             position="mid_article"
-            productSlug="victorinox-paring-knife"
+            productSlug="victorinox-4-inch-paring-knife"
             merchant="amazon"
           >
             <Link
@@ -506,7 +506,7 @@ export default function CompleteVictorinoxLineupPage() {
           <CTAVisibilityTracker
             ctaId="victorinox-bread-knife-cta"
             position="mid_article"
-            productSlug="victorinox-bread-knife"
+            productSlug="victorinox-offset-bread-knife"
             merchant="amazon"
           >
             <Link

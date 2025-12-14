@@ -10,7 +10,7 @@ import { getReviewMetadata } from '@/data/metadata'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import AmazonCTA from '@/components/AmazonCTA'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import MultiVendorCTA from '@/components/review/MultiVendorCTA'
+import MultiVendorCTA from '@/components/MultiVendorCTA'
 import {
   ReviewHero,
   TestingResultsGrid,

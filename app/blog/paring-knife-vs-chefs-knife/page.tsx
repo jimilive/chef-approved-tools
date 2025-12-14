@@ -127,7 +127,7 @@ export default function ParingVsChefsKnifePage() {
                 <CTAVisibilityTracker
                   ctaId="chefs-knife-top-cta"
                   position="above_fold"
-                  productSlug="victorinox-8-inch-chef-knife"
+                  productSlug="victorinox-fibrox-8-inch-chefs-knife"
                   merchant="amazon"
                 >
                   <Link
@@ -143,7 +143,7 @@ export default function ParingVsChefsKnifePage() {
                 <CTAVisibilityTracker
                   ctaId="paring-knife-top-cta"
                   position="above_fold"
-                  productSlug="victorinox-paring-knife"
+                  productSlug="victorinox-4-inch-paring-knife"
                   merchant="amazon"
                 >
                   <Link
@@ -317,7 +317,7 @@ export default function ParingVsChefsKnifePage() {
           <CTAVisibilityTracker
             ctaId="chefs-knife-mid-cta"
             position="mid_article"
-            productSlug="victorinox-8-inch-chef-knife"
+            productSlug="victorinox-fibrox-8-inch-chefs-knife"
             merchant="amazon"
           >
             <Link
@@ -438,7 +438,7 @@ export default function ParingVsChefsKnifePage() {
           <CTAVisibilityTracker
             ctaId="paring-knife-mid-cta"
             position="mid_article"
-            productSlug="victorinox-paring-knife"
+            productSlug="victorinox-4-inch-paring-knife"
             merchant="amazon"
           >
             <Link
@@ -724,7 +724,7 @@ export default function ParingVsChefsKnifePage() {
               <CTAVisibilityTracker
                 ctaId="final-chefs-cta"
                 position="final_cta"
-                productSlug="victorinox-8-inch-chef-knife"
+                productSlug="victorinox-fibrox-8-inch-chefs-knife"
                 merchant="amazon"
               >
                 <Link
@@ -738,7 +738,7 @@ export default function ParingVsChefsKnifePage() {
               <CTAVisibilityTracker
                 ctaId="final-paring-cta"
                 position="final_cta"
-                productSlug="victorinox-paring-knife"
+                productSlug="victorinox-4-inch-paring-knife"
                 merchant="amazon"
               >
                 <Link

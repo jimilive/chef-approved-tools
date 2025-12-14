@@ -9,7 +9,7 @@ import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import MultiVendorCTA from '@/components/review/MultiVendorCTA'
+import MultiVendorCTA from '@/components/MultiVendorCTA'
 import {
   ReviewHero,
   TestingResultsGrid,

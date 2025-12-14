@@ -247,6 +247,7 @@ export default async function BenrinerLargeMandolineReview() {
                   ctaText={reviewData.hero.ctaText || 'Check Price on Amazon →'}
                   ctaPosition="above_fold"
                   showDisclosure={true}
+                  productSlug={PRODUCT_SLUG}
                 />
                 {/* V2: TEXT LINKS UNDER SIZE SELECTOR */}
                 <div className="text-center mt-4 space-y-1">
@@ -438,6 +439,7 @@ export default async function BenrinerLargeMandolineReview() {
                   ctaText="Check Price on Amazon →"
                   ctaPosition="mid_article"
                   showDisclosure={true}
+                  productSlug={PRODUCT_SLUG}
                 />
                 {/* V2: TEXT LINKS UNDER SIZE SELECTOR */}
                 <div className="text-center space-y-1">
@@ -501,6 +503,7 @@ export default async function BenrinerLargeMandolineReview() {
                   ctaText={reviewData.bottomLine.ctaText || 'Check Price on Amazon →'}
                   ctaPosition="final_cta"
                   showDisclosure={true}
+                  productSlug={PRODUCT_SLUG}
                 />
                 {/* V2: TEXT LINKS UNDER SIZE SELECTOR */}
                 <div className="text-center mt-4 space-y-1">
