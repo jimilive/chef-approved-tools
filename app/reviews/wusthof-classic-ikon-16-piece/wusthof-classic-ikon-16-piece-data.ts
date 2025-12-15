@@ -225,7 +225,7 @@ export const reviewData = {
       },
       {
         emoji: '🔪',
-        name: 'Victorinox Fibrox Pro 8-Inch Chef\'s Knife',
+        name: 'Victorinox Fibrox 8-Inch Chef\'s Knife',
         description: 'Budget-friendly alternative that matches WÜSTHOF in performance.',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
       },

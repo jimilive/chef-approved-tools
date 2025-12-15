@@ -1,5 +1,5 @@
 /**
- * Chef's Knife Comparison Data for Victorinox Fibrox Pro 8-Inch Review
+ * Chef's Knife Comparison Data for Victorinox Fibrox 8-Inch Review
  * Research completed: November 4, 2025
  * Research time: 2 hours
  * Sources: America's Test Kitchen, Prudent Reviews, TechGearLab, Reviewed.com
@@ -25,7 +25,7 @@ export async function getChefKnifeComparison() {
   const comparisonProducts = [
     // VICTORINOX FIBROX PRO 8-INCH - The Featured Product
     {
-      name: 'Fibrox Pro 8-Inch',
+      name: 'Fibrox 8-Inch',
       brand: 'Victorinox',
       affiliateLink: products.find(p => p.slug === 'victorinox-fibrox-8-inch-chefs-knife')
         ? getPrimaryAffiliateLink(products.find(p => p.slug === 'victorinox-fibrox-8-inch-chefs-knife')!)
@@ -144,9 +144,9 @@ export async function getChefKnifeComparison() {
 
   return {
     products: comparisonProducts,
-    highlightedProduct: 'Fibrox Pro 8-Inch', // Which product to highlight with orange border
+    highlightedProduct: 'Fibrox 8-Inch', // Which product to highlight with orange border
     title: 'Compare Professional Chef\'s Knives',
-    subtitle: 'See how the Victorinox Fibrox Pro stacks up against top competitors',
+    subtitle: 'See how the Victorinox Fibrox stacks up against top competitors',
     comparisonRows: [
       { label: 'Steel Type', field: 'steelType' },
       { label: 'Construction', field: 'construction' },
@@ -238,17 +238,17 @@ export const researchNotes = {
   buyerDecisionMatrix: [
     {
       need: 'Best value under $50',
-      recommendation: 'Victorinox Fibrox Pro',
+      recommendation: 'Victorinox Fibrox',
       reason: 'ATK favorite for 30 years, performs like $100+ knives, perfect for beginners and pros.',
     },
     {
       need: 'Commercial kitchen workhorse',
-      recommendation: 'Victorinox Fibrox Pro',
+      recommendation: 'Victorinox Fibrox',
       reason: 'Industry standard, survives abuse, lightweight for all-day use.',
     },
     {
       need: 'Beginner\'s first quality knife',
-      recommendation: 'Victorinox Fibrox Pro',
+      recommendation: 'Victorinox Fibrox',
       reason: 'Forgiving soft steel won\'t chip, easy to sharpen, teaches good knife habits.',
     },
     {

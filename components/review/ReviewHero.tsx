@@ -64,7 +64,7 @@ export default function ReviewHero({
       {heroImage ? (
         <>
         {/* Two-column layout with image - stacks on mobile, side-by-side on desktop */}
-        <div className="flex flex-col sm:flex-row gap-6 mb-6">
+        <div className="flex flex-col sm:flex-row gap-6 mb-6 overflow-hidden">
           {/* Image column - LEFT */}
           <div className="w-full sm:w-[400px] sm:flex-shrink-0">
             <div className="relative w-full h-[250px] sm:h-[300px]">
@@ -81,7 +81,7 @@ export default function ReviewHero({
           </div>
 
           {/* Content column - RIGHT */}
-          <div className="flex flex-col">
+          <div className="flex flex-col min-w-0">
             {/* Title */}
             {title && (
               <h1 className="text-2xl font-bold text-slate-900 leading-[1.3] mb-3">
@@ -134,17 +134,19 @@ export default function ReviewHero({
             )}
 
             {/* CTA Button - simple button below tier badge for image layout */}
-            <div className="mt-3">
-              <CTAVisibilityTracker ctaId="primary-hero-cta" position="above_fold">
-                <ReviewHeroCTA
-                  ctaUrl={ctaUrl || '#'}
-                  ctaText={ctaText}
-                  productName={title || 'Product'}
-                  position="review-hero-button"
-                  className="inline-flex items-center justify-center w-full px-6 py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 transition-all shadow-md hover:shadow-lg"
-                />
-              </CTAVisibilityTracker>
-            </div>
+            {ctaUrl && (
+              <div className="mt-3">
+                <CTAVisibilityTracker ctaId="primary-hero-cta" position="above_fold">
+                  <ReviewHeroCTA
+                    ctaUrl={ctaUrl}
+                    ctaText={ctaText}
+                    productName={title || 'Product'}
+                    position="review-hero-button"
+                    className="inline-flex items-center justify-center w-full px-6 py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 transition-all shadow-md hover:shadow-lg"
+                  />
+                </CTAVisibilityTracker>
+              </div>
+            )}
 
           </div>
         </div>

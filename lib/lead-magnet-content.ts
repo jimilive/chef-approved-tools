@@ -8,13 +8,13 @@ export const leadMagnetContent = {
   // The 11 actual tools with Amazon affiliate links
   tools: [
     {
-      name: "Victorinox Fibrox Pro 10-Inch Chef's Knife",
+      name: "Victorinox Fibrox 10-Inch Chef's Knife",
       amazonUrl: "https://amzn.to/4o6pPwW",
       why: "The longer blade is perfect for larger cuts and if you have bigger hands. I keep both sizes.",
       story: "This is the knife I grab for breaking down proteins and chopping larger vegetables. The extra 2 inches makes a real difference when you're working fast."
     },
     {
-      name: "Victorinox Fibrox Pro 8-Inch Chef's Knife",
+      name: "Victorinox Fibrox 8-Inch Chef's Knife",
       amazonUrl: "https://amzn.to/4o7BUSV",
       why: "More maneuverable for precise cuts. Perfect for most home cooking tasks.",
       story: "This is the workhorse. 80% of my knife work happens with this 8-inch. It's balanced, sharp, and never lets me down."

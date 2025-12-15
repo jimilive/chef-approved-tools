@@ -450,7 +450,7 @@ export const reviewData = {
         href: "/reviews/oxo-good-grips-bench-scraper"
       },
       {
-        name: "Victorinox Fibrox Pro Paring Knife",
+        name: "Victorinox Fibrox Paring Knife",
         description: "For detailed prep work.",
         emoji: "🔪",
         href: "/reviews/victorinox-4-inch-paring-knife"

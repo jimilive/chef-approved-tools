@@ -425,7 +425,7 @@ export const comparisonData = {
           reviewSlug: "wusthof-classic-ikon-16-piece"
         },
         {
-          name: "Victorinox Fibrox Pro Chef's Knife",
+          name: "Victorinox Fibrox Chef's Knife",
           size: "8\"",
           priceRange: "~$40-50",
           whyBest: "Professional performance at entry-level pricing",

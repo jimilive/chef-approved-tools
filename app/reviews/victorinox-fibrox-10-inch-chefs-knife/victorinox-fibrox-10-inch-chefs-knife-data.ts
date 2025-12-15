@@ -8,10 +8,10 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "Victorinox 10\" Chef Knife: For Larger Hands ($60 vs $200 Knives)",
-    description: "10-year professional test. The Victorinox 10\" chef knife is perfect for larger hands and big cutting tasks. Swiss precision at $60 vs $200+ German knives.",
-    ogTitle: "Victorinox 10\" Chef Knife: For Larger Hands ($60 vs $200 Knives)",
-    ogDescription: "10-year professional test. The Victorinox 10\" chef knife is perfect for larger hands and big cutting tasks. Swiss precision at $60 vs $200+ German knives.",
+    title: "Victorinox Fibrox 10\" Review: Chef-Tested, Big Blade Value",
+    description: "10-year professional test. Victorinox Fibrox 10\" chef knife—perfect for larger hands and big cuts. Swiss precision at $60 vs $200 German knives.",
+    ogTitle: "Victorinox Fibrox 10\" Review: Chef-Tested, Big Blade Value",
+    ogDescription: "10-year professional test. Victorinox Fibrox 10\" chef knife—perfect for larger hands and big cuts. Swiss precision at $60 vs $200 German knives.",
     testingPeriod: "20 Years (Including 10 Professional)",
     tier: 1
   },
@@ -27,12 +27,12 @@ export const reviewData = {
 
   // BREADCRUMB
   breadcrumb: {
-    productName: "Victorinox Fibrox Pro 10-Inch Chef's Knife"
+    productName: "Victorinox Fibrox 10-Inch Chef's Knife"
   },
 
   // SECTION 1: HERO
   hero: {
-    title: "Victorinox 10\" Chef's Knife Review",
+    title: "Victorinox Fibrox 10\" Chef's Knife",
     authorName: "Scott Bradley",
     authorCredentials: "24 Years in Professional Kitchens",
     rating: 5.0,
@@ -163,7 +163,7 @@ export const reviewData = {
     title: "Frequently Asked Questions",
     items: [
       {
-        question: "Is the Victorinox Fibrox Pro 10\" chef's knife worth the money?",
+        question: "Is the Victorinox Fibrox 10\" chef's knife worth the money?",
         answer: "Absolutely. Based on 20 years using this knife (including 10 professionally), it delivers the same performance as chef knives costing hundreds more. The high-carbon stainless steel holds an edge exceptionally well, the Fibrox handle provides superior grip, and it's proven reliable in professional kitchens worldwide. The exceptional value makes it one of the best investments for serious home cooks and professionals alike."
       },
       {
@@ -171,7 +171,7 @@ export const reviewData = {
         answer: "Choose the 10\" if you have larger hands (generally if you're over 6 feet tall), regularly break down whole proteins, or do extensive meal prep with large vegetables. The 8\" is better for smaller hands, compact kitchens, or more precise cutting work. I keep both in my home kitchen - the 8\" for daily tasks and the 10\" for bigger jobs like breaking down chickens or portioning large roasts."
       },
       {
-        question: "How do I sharpen the Victorinox Fibrox Pro knife?",
+        question: "How do I sharpen the Victorinox Fibrox knife?",
         answer: "Hone the knife before each use with a honing steel (10 seconds). For actual sharpening, either take it to a professional sharpener monthly or learn to use a whetstone. I recommend a 1000/6000 grit whetstone for home use. The high-carbon stainless steel sharpens easily and holds an edge well between sharpenings. Avoid pull-through sharpeners as they can damage the blade geometry."
       },
       {
@@ -183,7 +183,7 @@ export const reviewData = {
         answer: "Use wood or high-quality plastic cutting boards. Never use glass, ceramic, or marble cutting boards as they will dull the blade quickly. I use end-grain wooden cutting boards in my professional kitchen as they're gentle on knife edges while being durable and naturally antimicrobial. A good cutting board is just as important as a good knife for maintaining edge sharpness."
       },
       {
-        question: "How long does the Victorinox Fibrox Pro knife last?",
+        question: "How long does the Victorinox Fibrox knife last?",
         answer: "With proper care, this knife will last decades. I've been using Victorinox knives for 20 years, and they show minimal wear. The key is regular honing, proper sharpening when needed, hand-washing, and storing properly. The Fibrox handle is incredibly durable and resistant to cracking or degrading. This is genuinely a buy-it-for-life tool if you maintain it correctly."
       },
       {
@@ -208,7 +208,7 @@ export const reviewData = {
   // FAQ SCHEMA DATA (separate for schema markup)
   faqData: [
     {
-      question: "Is the Victorinox Fibrox Pro 10\" chef's knife worth the money?",
+      question: "Is the Victorinox Fibrox 10\" chef's knife worth the money?",
       answer: "Absolutely. Based on 20 years using this knife (including 10 professionally), it delivers the same performance as chef knives costing hundreds more. The high-carbon stainless steel holds an edge exceptionally well, the Fibrox handle provides superior grip, and it's proven reliable in professional kitchens worldwide. The exceptional value makes it one of the best investments for serious home cooks and professionals alike."
     },
     {
@@ -216,7 +216,7 @@ export const reviewData = {
       answer: "Choose the 10\" if you have larger hands (generally if you're over 6 feet tall), regularly break down whole proteins, or do extensive meal prep with large vegetables. The 8\" is better for smaller hands, compact kitchens, or more precise cutting work. I keep both in my home kitchen - the 8\" for daily tasks and the 10\" for bigger jobs like breaking down chickens or portioning large roasts."
     },
     {
-      question: "How do I sharpen the Victorinox Fibrox Pro knife?",
+      question: "How do I sharpen the Victorinox Fibrox knife?",
       answer: "Hone the knife before each use with a honing steel (10 seconds). For actual sharpening, either take it to a professional sharpener monthly or learn to use a whetstone. I recommend a 1000/6000 grit whetstone for home use. The high-carbon stainless steel sharpens easily and holds an edge well between sharpenings. Avoid pull-through sharpeners as they can damage the blade geometry."
     },
     {
@@ -228,7 +228,7 @@ export const reviewData = {
       answer: "Use wood or high-quality plastic cutting boards. Never use glass, ceramic, or marble cutting boards as they will dull the blade quickly. I use end-grain wooden cutting boards in my professional kitchen as they're gentle on knife edges while being durable and naturally antimicrobial. A good cutting board is just as important as a good knife for maintaining edge sharpness."
     },
     {
-      question: "How long does the Victorinox Fibrox Pro knife last?",
+      question: "How long does the Victorinox Fibrox knife last?",
       answer: "With proper care, this knife will last decades. I've been using Victorinox knives for 20 years, and they show minimal wear. The key is regular honing, proper sharpening when needed, hand-washing, and storing properly. The Fibrox handle is incredibly durable and resistant to cracking or degrading. This is genuinely a buy-it-for-life tool if you maintain it correctly."
     },
     {
@@ -292,7 +292,7 @@ export const reviewData = {
         href: "/reviews/john-boos-platinum-commercial-cutting-board"
       },
       {
-        name: "Victorinox Fibrox Pro 8-Inch Chef's Knife",
+        name: "Victorinox Fibrox 8-Inch Chef's Knife",
         description: "The more versatile sibling - perfect for smaller hands and general tasks.",
         emoji: "🔪",
         href: "/reviews/victorinox-fibrox-8-inch-chefs-knife"
@@ -308,7 +308,7 @@ export const reviewData = {
 
   // LEGACY PRODUCT DATA (fallback for Supabase)
   legacyProductData: {
-    name: "Victorinox Fibrox Pro 10-Inch Chef's Knife",
+    name: "Victorinox Fibrox 10-Inch Chef's Knife",
     slug: "victorinox-fibrox-10-inch-chefs-knife",
     brand: "Victorinox",
     category: "Knives",

@@ -8,9 +8,9 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "Victorinox Fibrox 8\": The $50 Knife America's Test Kitchen Recommends",
+    title: "Victorinox Fibrox 8\" Review: 20-Year Test, Beats $200 Knives",
     description: "20-year restaurant test of the Victorinox Fibrox 8\" chef knife. Why this $50 Swiss knife outperforms $200 German blades. NSF-certified workhorse.",
-    ogTitle: "Victorinox Fibrox 8\": The $50 Knife America's Test Kitchen Recommends",
+    ogTitle: "Victorinox Fibrox 8\" Review: 20-Year Test, Beats $200 Knives",
     ogDescription: "20-year restaurant test of the Victorinox Fibrox 8\" chef knife. Why this $50 Swiss knife outperforms $200 German blades. NSF-certified workhorse.",
     testingPeriod: "20 Years (Including 10 Professional)",
     tier: 1
@@ -27,12 +27,12 @@ export const reviewData = {
 
   // BREADCRUMB
   breadcrumb: {
-    productName: "Victorinox Fibrox Pro 8-Inch Chef's Knife"
+    productName: "Victorinox Fibrox 8-Inch Chef's Knife"
   },
 
   // SECTION 1: HERO
   hero: {
-    title: "Victorinox 8\" Chef's Knife Review",
+    title: "Victorinox Fibrox 8\" Chef's Knife",
     authorName: "Scott Bradley",
     authorCredentials: "24 Years in Professional Kitchens",
     rating: 4.8,
@@ -297,7 +297,7 @@ export const reviewData = {
         href: "/reviews/victorinox-4-inch-paring-knife"
       },
       {
-        name: "Victorinox Fibrox Pro 10-Inch Chef's Knife",
+        name: "Victorinox Fibrox 10-Inch Chef's Knife",
         description: "Extra reach for large proteins and big cutting tasks.",
         emoji: "🔪",
         href: "/reviews/victorinox-fibrox-10-inch-chefs-knife"
@@ -307,7 +307,7 @@ export const reviewData = {
 
   // LEGACY PRODUCT DATA (fallback for Supabase)
   legacyProductData: {
-    name: "Victorinox Fibrox Pro 8-Inch Chef's Knife",
+    name: "Victorinox Fibrox 8-Inch Chef's Knife",
     slug: "victorinox-fibrox-8-inch-chefs-knife",
     brand: "Victorinox",
     category: "Knives",

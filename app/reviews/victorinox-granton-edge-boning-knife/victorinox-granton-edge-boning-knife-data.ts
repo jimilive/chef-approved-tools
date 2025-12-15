@@ -222,13 +222,13 @@ export const reviewData = {
       },
       {
         emoji: '🔪',
-        name: 'Victorinox Fibrox Pro 10-Inch Chef\'s Knife',
+        name: 'Victorinox Fibrox 10-Inch Chef\'s Knife',
         description: 'Professional chef\'s knife for general cutting tasks.',
         href: '/reviews/victorinox-fibrox-10-inch-chefs-knife'
       },
       {
         emoji: '🔪',
-        name: 'Victorinox Fibrox Pro 8-Inch Chef\'s Knife',
+        name: 'Victorinox Fibrox 8-Inch Chef\'s Knife',
         description: 'Smaller chef\'s knife for detailed work.',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
       }

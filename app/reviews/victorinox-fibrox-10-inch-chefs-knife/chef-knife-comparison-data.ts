@@ -20,7 +20,7 @@ export async function getChefKnifeComparison() {
     subtitle: 'Budget workhorses vs premium heirlooms: construction, steel, and value',
     products: [
       {
-        name: 'Victorinox Fibrox Pro',
+        name: 'Victorinox Fibrox',
         slug: 'victorinox-fibrox-10-inch-chefs-knife',
         affiliateLink: getLink('victorinox-fibrox-10-inch-chefs-knife'),
         steel: 'X50CrMoV15 (stamped)',

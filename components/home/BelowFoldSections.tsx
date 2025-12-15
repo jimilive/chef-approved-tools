@@ -296,7 +296,7 @@ export function TopProfessionalPicksSection() {
             <div className="relative h-64 bg-white overflow-hidden">
               <Image
                 src="/images/products/victorinox-fibrox-8-inch-chefs-knife/victorinox-fibrox-8-inch-chefs-knife-1.jpg"
-                alt="Victorinox Fibrox Pro 8-inch Chef's Knife"
+                alt="Victorinox Fibrox 8-inch Chef's Knife"
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 loading="lazy"
@@ -311,7 +311,7 @@ export function TopProfessionalPicksSection() {
                 </span>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">
-                Victorinox Fibrox Pro Chef&apos;s Knife
+                Victorinox Fibrox 8-Inch Chef&apos;s Knife
               </h3>
               <p className="text-slate-700 mb-4">
                 20 years. Daily use. Dishwasher friendly.

@@ -9,6 +9,7 @@ import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import SizeSelector from '@/components/SizeSelector'
 import AmazonCTA from '@/components/AmazonCTA'
 import {
   ReviewHero,
@@ -210,91 +211,40 @@ export default async function ProductReview() {
             publishedDate={gitDates.firstPublished}
             lastUpdated={gitDates.lastUpdated}
             customCTA={
-              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
-                <h2 className="text-xl font-bold mb-4 text-gray-900 mt-0">Choose Your Size</h2>
-                <p className="text-gray-700 mb-6">{reviewData.sizeOptions.subtitle}</p>
+              <div className="bg-white border-2 border-orange-200 rounded-xl p-6 min-h-[280px]">
+                <SizeSelector
+                  title="Choose Your Size:"
+                  options={reviewData.sizeOptions.options.map((option) => ({
+                    id: option.id,
+                    label: `${option.size} — ${option.depth}`,
+                    description: `${option.dimensions} | ${option.capacity} | ${option.bestFor}`,
+                    affiliateUrl: option.affiliateUrl,
+                    ctaId: `hero-cta-${option.id}`
+                  }))}
+                  defaultSize={reviewData.sizeOptions.options.find(o => o.recommended)?.id || reviewData.sizeOptions.options[0].id}
+                  ctaText="Check Price on Amazon →"
+                  ctaPosition="above_fold"
+                  showDisclosure={true}
+                  productSlug={PRODUCT_SLUG}
+                />
 
-                <div className="space-y-4">
-                  {reviewData.sizeOptions.options.map((option) => (
-                    <div
-                      key={option.id}
-                      className={`border-2 rounded-xl p-5 ${
-                        option.recommended
-                          ? 'border-orange-400 bg-gradient-to-br from-orange-50 to-red-50'
-                          : 'border-gray-300 bg-white'
-                      }`}
-                    >
-                      {option.recommended && (
-                        <div className="inline-block bg-orange-900 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
-                          ⭐ RECOMMENDED
-                        </div>
-                      )}
-                      <h3 className="font-bold text-lg mb-2 text-gray-900 mt-0">
-                        {option.size} - {option.depth}
-                      </h3>
-                      <div className="text-sm text-gray-700 space-y-1 mb-4">
-                        <p><strong>Dimensions:</strong> {option.dimensions}</p>
-                        <p><strong>Capacity:</strong> {option.capacity}</p>
-                        <p><strong>Best for:</strong> {option.bestFor}</p>
-                        <p className="text-xs text-gray-700">{option.includes}</p>
-                      </div>
-
-                      <CTAVisibilityTracker
-                        ctaId={`${reviewData.productSlug}-hero-${option.id}`}
-                        position="above_fold"
-                        productSlug={reviewData.productSlug}
-                        merchant="amazon"
-                      >
-                        <a
-                          href={option.affiliateUrl}
-                          target="_blank"
-                          rel="nofollow noopener noreferrer sponsored"
-                          className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-6 py-3 rounded-lg transition-all hover:scale-105 active:scale-95 text-center"
-                        >
-                          Check {option.size} Price →
-                        </a>
-                      </CTAVisibilityTracker>
-
-                      {/* V2: TEXT LINK UNDER BUTTON */}
-                      <p className="text-center mt-2 text-sm">
-                        <a
-                          href={option.affiliateUrl}
-                          className="text-orange-700 hover:text-orange-800 underline font-medium"
-                          target="_blank"
-                          rel="nofollow noopener noreferrer sponsored"
-                        >
-                          → View {option.size} on Amazon
-                        </a>
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
+                {/* Lid Options */}
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <h3 className="font-bold text-base mb-3 text-gray-900">Replacement Lids</h3>
-                  <div className="space-y-3">
+                  <div className="grid gap-2 sm:grid-cols-2">
                     {reviewData.sizeOptions.lidOptions.map((lid) => (
-                      <div key={lid.id} className="flex items-center justify-between bg-gray-50 p-3 rounded-lg">
-                        <div className="flex-1">
-                          <p className="font-semibold text-sm text-gray-900">{lid.size}</p>
-                          <p className="text-xs text-gray-700">{lid.includes}</p>
-                        </div>
-                        <a
-                          href={lid.affiliateUrl}
-                          target="_blank"
-                          rel="nofollow noopener noreferrer sponsored"
-                          className="text-orange-700 hover:text-orange-800 font-medium text-sm underline"
-                        >
-                          View Lids →
-                        </a>
-                      </div>
+                      <a
+                        key={lid.id}
+                        href={lid.affiliateUrl}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer sponsored"
+                        className="text-sm text-orange-700 hover:text-orange-800 underline"
+                      >
+                        → {lid.size}
+                      </a>
                     ))}
                   </div>
                 </div>
-
-                <p className="text-xs text-slate-700 text-center mt-4">
-                  As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
-                </p>
               </div>
             }
           />
@@ -375,43 +325,26 @@ export default async function ProductReview() {
               {reviewData.whereToBuy.introText}
             </p>
 
-            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
+            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50 min-h-[280px]">
               <div className="text-center mb-4">
                 <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
                 <p className="text-sm text-slate-900 mb-4">Prime shipping, NSF-certified quality</p>
               </div>
-
-              <CTAVisibilityTracker
-                ctaId={`${reviewData.productSlug}-where-to-buy-cta`}
-                position="mid_article"
-                productSlug={reviewData.productSlug}
-                merchant="amazon"
-              >
-                <a
-                  href={affiliateUrl}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer sponsored"
-                  className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-                >
-                  Check Price on Amazon →
-                </a>
-              </CTAVisibilityTracker>
-
-              {/* V2: TEXT LINK UNDER BUTTON */}
-              <p className="text-center mt-3 text-sm">
-                <a
-                  href={affiliateUrl}
-                  className="text-orange-700 hover:text-orange-800 underline font-medium"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer sponsored"
-                >
-                  → View {productData.name} on Amazon
-                </a>
-              </p>
-
-              <p className="text-xs text-slate-700 text-center mt-3">
-                As an Amazon Associate, I earn from qualifying purchases.
-              </p>
+              <SizeSelector
+                title="Choose Your Size:"
+                options={reviewData.sizeOptions.options.map((option) => ({
+                  id: option.id,
+                  label: `${option.size} — ${option.depth}`,
+                  description: `${option.dimensions} | ${option.capacity} | ${option.bestFor}`,
+                  affiliateUrl: option.affiliateUrl,
+                  ctaId: `where-to-buy-${option.id}`
+                }))}
+                defaultSize={reviewData.sizeOptions.options.find(o => o.recommended)?.id || reviewData.sizeOptions.options[0].id}
+                ctaText="Check Price on Amazon →"
+                ctaPosition="mid_article"
+                showDisclosure={true}
+                productSlug={PRODUCT_SLUG}
+              />
             </div>
 
             <p className="text-sm text-slate-700 mt-6 italic">
@@ -427,38 +360,22 @@ export default async function ProductReview() {
             title={reviewData.bottomLine.title}
             paragraphs={reviewData.bottomLine.paragraphs}
             customCTA={
-              <div className="bg-white rounded-xl p-6">
-                <CTAVisibilityTracker
-                  ctaId={`${reviewData.productSlug}-bottom-line-cta`}
-                  position="final_cta"
-                  productSlug={reviewData.productSlug}
-                  merchant="amazon"
-                >
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                    className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-                  >
-                    {reviewData.bottomLine.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-
-                {/* V2: TEXT LINK UNDER BUTTON */}
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-
-                <p className="text-xs text-slate-700 text-center mt-3">
-                  As an Amazon Associate, I earn from qualifying purchases.
-                </p>
+              <div className="bg-white rounded-xl p-6 min-h-[280px]">
+                <SizeSelector
+                  title="Choose Your Size:"
+                  options={reviewData.sizeOptions.options.map((option) => ({
+                    id: option.id,
+                    label: `${option.size} — ${option.depth}`,
+                    description: `${option.dimensions} | ${option.capacity} | ${option.bestFor}`,
+                    affiliateUrl: option.affiliateUrl,
+                    ctaId: `bottom-line-${option.id}`
+                  }))}
+                  defaultSize={reviewData.sizeOptions.options.find(o => o.recommended)?.id || reviewData.sizeOptions.options[0].id}
+                  ctaText={reviewData.bottomLine.ctaText}
+                  ctaPosition="final_cta"
+                  showDisclosure={true}
+                  productSlug={PRODUCT_SLUG}
+                />
               </div>
             }
           />

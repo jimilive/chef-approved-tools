@@ -116,7 +116,7 @@ export default function ChefApprovedPage() {
 
             <p className="text-emerald-900 font-semibold mb-2">Examples of Tier 1 reviews:</p>
             <ul className="text-emerald-900 mb-4">
-              <li>Victorinox Fibrox Pro Chef&rsquo;s Knife (used 2+ years at Purple Café)</li>
+              <li>Victorinox Fibrox Chef&rsquo;s Knife (used 2+ years at Purple Café)</li>
               <li>OXO Bench Scraper (daily prep use at multiple restaurants)</li>
               <li>Professional thermometers that lived in my apron pocket for years</li>
             </ul>
@@ -250,7 +250,7 @@ export default function ChefApprovedPage() {
 
             <p className="font-semibold text-emerald-700 mb-2">Tier 1 - Professional Kitchen Use:</p>
             <ul className="mb-4">
-              <li><Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-700">Victorinox Fibrox Pro 8&rdquo; Chef&rsquo;s Knife</Link> - My daily knife for 2+ years at Purple Café</li>
+              <li><Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-700">Victorinox Fibrox 8&rdquo; Chef&rsquo;s Knife</Link> - My daily knife for 2+ years at Purple Café</li>
               <li><Link href="/reviews/victorinox-granton-edge-boning-knife" className="text-orange-700 hover:text-orange-700">Victorinox Boning Knife</Link> - Broke down hundreds of chickens with this</li>
             </ul>
 
@@ -394,7 +394,7 @@ export default function ChefApprovedPage() {
           <ol className="space-y-6 text-orange-900">
             <li>
               <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-xl font-bold text-orange-700 hover:text-orange-700">
-                Victorinox Fibrox Pro 8&rdquo; Chef&rsquo;s Knife
+                Victorinox Fibrox 8&rdquo; Chef&rsquo;s Knife
               </Link>
               <span className="ml-2 text-emerald-700 font-semibold">(Tier 1)</span>
               <ul className="mt-2 ml-6 text-orange-800">
@@ -472,7 +472,7 @@ export default function ChefApprovedPage() {
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Do you only recommend expensive &ldquo;professional&rdquo; equipment?</h3>
               <p className="text-slate-700">
-                No. Some of my favorite Tier 1 recommendations are budget tools (like the Victorinox Fibrox Pro at around $50) because they perform as well as knives costing 5x more. Professional kitchens have budgets too—I know where to save and where to splurge.
+                No. Some of my favorite Tier 1 recommendations are budget tools (like the Victorinox Fibrox at around $50) because they perform as well as knives costing 5x more. Professional kitchens have budgets too—I know where to save and where to splurge.
               </p>
             </div>
 

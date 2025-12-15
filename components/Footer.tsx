@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
-  
+
   const footerLinks = {
     shop: [
       { name: 'Knives & Cutting Tools', href: '/knives' },
@@ -26,15 +26,15 @@ export default function Footer() {
       { name: 'Cookie Policy', href: '/cookie-policy' }
     ]
   }
-  
+
   return (
     <footer className="bg-slate-800 text-slate-200">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.75fr_2fr_1fr_1fr] gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-[1.75fr_2fr_1fr_1fr] gap-8">
 
           {/* Brand Column */}
-          <div className="lg:pr-8">
+          <div className="md:pr-8">
             <Link href="/" className="flex items-center gap-2 no-underline mb-4">
               <Image
                 src="/logo.png"
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
 
           {/* Shop Links */}
-          <div className="lg:pt-3">
+          <div className="md:pt-3">
             <h3 className="font-bold text-white mb-4">Categories</h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2 w-fit">
               {footerLinks.shop.map((link) => (
@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
 
           {/* Resources Links */}
-          <div className="lg:pt-3">
+          <div className="md:pt-3">
             <h3 className="font-bold text-white mb-4">Resources</h3>
             <div className="flex flex-col gap-2">
               {footerLinks.resources.map((link) => (
@@ -88,7 +88,7 @@ export default function Footer() {
           </div>
 
           {/* Legal Links */}
-          <div className="lg:pt-3 lg:pl-16">
+          <div className="md:pt-3 md:pl-16">
             <h3 className="font-bold text-white mb-4">Legal</h3>
             <div className="flex flex-col gap-2">
               {footerLinks.legal.map((link) => (

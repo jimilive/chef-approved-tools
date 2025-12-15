@@ -49,7 +49,7 @@ export default async function ChefApprovedKitchenKit() {
   // Dynamic affiliate links with fallbacks
   const coreEssentials = [
     {
-      name: "Victorinox Fibrox Pro 8\" Chef's Knife",
+      name: "Victorinox Fibrox 8\" Chef's Knife",
       justification: "The workhorse knife that will handle 90% of your daily prep. Professional-grade Swiss engineering at an unbeatable price.",
       reviewSlug: "victorinox-fibrox-8-inch-chefs-knife",
       affiliateUrl: products[0] ? getPrimaryAffiliateLink(products[0]) : "https://amzn.to/3U4PsT1",

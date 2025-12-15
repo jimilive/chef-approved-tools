@@ -130,7 +130,7 @@ export const sampleProducts: ProductCollection = {
     {
       id: 'victorinox-fibrox-8',
       slug: 'victorinox-fibrox-8-inch-chefs-knife',
-      name: 'Victorinox Fibrox Pro 8-Inch Chef\'s Knife',
+      name: 'Victorinox Fibrox 8-Inch Chef\'s Knife',
       brand: 'Victorinox',
       model: '5.2063.20',
       category: 'knives',
@@ -206,7 +206,7 @@ export const sampleProducts: ProductCollection = {
 
       images: {
         primary: 'https://www.chefapprovedtools.com/images/products/victorinox-fibrox-8-inch-chefs-knife/primary.jpg',
-        alt: 'Victorinox Fibrox Pro 8-inch chef knife'
+        alt: 'Victorinox Fibrox 8-inch chef knife'
       },
 
       tags: ['chef-knife', 'budget', 'swiss', 'nsf-certified', 'lightweight', 'professional'],
@@ -231,7 +231,7 @@ export const sampleProducts: ProductCollection = {
     {
       id: 'victorinox-fibrox-10',
       slug: 'victorinox-fibrox-10-inch-chefs-knife',
-      name: 'Victorinox Fibrox Pro 10-Inch Chef\'s Knife',
+      name: 'Victorinox Fibrox 10-Inch Chef\'s Knife',
       brand: 'Victorinox',
       model: '5.2063.25',
       category: 'knives',
@@ -305,7 +305,7 @@ export const sampleProducts: ProductCollection = {
 
       images: {
         primary: 'https://www.chefapprovedtools.com/images/products/victorinox-fibrox-10-inch-chefs-knife/primary.jpg',
-        alt: 'Victorinox Fibrox Pro 10-inch chef knife'
+        alt: 'Victorinox Fibrox 10-inch chef knife'
       },
 
       tags: ['chef-knife', 'budget', 'swiss', 'nsf-certified', 'professional', 'large-blade'],

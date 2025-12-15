@@ -12,6 +12,7 @@ import {
 } from '@/components/review'
 import AmazonCTA from '@/components/AmazonCTA'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import SizeSelector from '@/components/SizeSelector'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import type { Metadata } from 'next'
@@ -115,6 +116,24 @@ export default async function RubbermaidScraperReview() {
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
   const affiliate9_5Url = productData.affiliateLinks[1]?.url || '#'
 
+  // Size options for SizeSelector
+  const sizeOptions = [
+    {
+      id: '9-5-inch',
+      label: '9.5-inch (Home Kitchens)',
+      description: 'Perfect for everyday home cooking - Recommended',
+      affiliateUrl: affiliate9_5Url,
+      ctaId: 'cta-9-5-inch'
+    },
+    {
+      id: '13-5-inch',
+      label: '13.5-inch (Professional)',
+      description: 'Best for professional kitchens and large batches',
+      affiliateUrl: affiliateUrl,
+      ctaId: 'cta-13-5-inch'
+    }
+  ]
+
   // Generate breadcrumbs with category
   const breadcrumbs = categoryBreadcrumb
     ? [
@@ -180,42 +199,22 @@ export default async function RubbermaidScraperReview() {
             publishedDate={gitDates.firstPublished}
             lastUpdated={gitDates.lastUpdated}
             customCTA={
-              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
-                <p className="font-semibold text-slate-900 mb-4">Current Best Price:</p>
-
-                {/* 13.5-inch Size Option */}
-                <div className="mb-4">
-                  <p className="text-sm text-slate-700 mb-2">13.5-inch (Professional/Large Batches):</p>
-                  <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-above-fold-13-5`} productSlug={PRODUCT_SLUG} position="above_fold">
-                    <a
-                      href={affiliateUrl}
-                      target="_blank"
-                      rel="nofollow noopener noreferrer sponsored"
-                      className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-6 rounded-lg font-semibold transition-colors"
-                    >
-                      Check Price on Amazon →
-                    </a>
-                  </CTAVisibilityTracker>
-                </div>
-
-                {/* 9.5-inch Size Option */}
-                <div className="mb-4">
-                  <p className="text-sm text-slate-700 mb-2">9.5-inch (Home Kitchens - Recommended):</p>
-                  <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-above-fold-9-5`} productSlug={PRODUCT_SLUG} position="above_fold">
-                    <a
-                      href={affiliate9_5Url}
-                      target="_blank"
-                      rel="nofollow noopener noreferrer sponsored"
-                      className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-6 rounded-lg font-semibold transition-colors"
-                    >
-                      Check Price on Amazon →
-                    </a>
-                  </CTAVisibilityTracker>
-                </div>
-
-                <p className="text-xs text-slate-700 mt-3">
-                  💡 We earn a commission at no extra cost to you.
-                </p>
+              <div className="bg-white border-2 border-orange-200 rounded-xl p-6 min-h-[280px]">
+                <SizeSelector
+                  title="Choose Your Size:"
+                  options={sizeOptions.map((option) => ({
+                    id: option.id,
+                    label: option.label,
+                    description: option.description,
+                    affiliateUrl: option.affiliateUrl,
+                    ctaId: `hero-${option.ctaId}`
+                  }))}
+                  defaultSize="9-5-inch"
+                  ctaText="Check Price on Amazon →"
+                  ctaPosition="above_fold"
+                  showDisclosure={true}
+                  productSlug={PRODUCT_SLUG}
+                />
               </div>
             }
           />
@@ -305,38 +304,23 @@ export default async function RubbermaidScraperReview() {
           </div>
         </section>
 
-        {/* Mid-Article CTA - Both Size Options */}
-        <div className="bg-white border-2 border-orange-200 rounded-xl p-6 my-8">
-          <p className="font-semibold text-slate-900 mb-4 text-center">Choose your size:</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <p className="text-sm text-slate-700 mb-2 text-center">13.5-inch (Professional)</p>
-              <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-mid-article-13-5`} productSlug={PRODUCT_SLUG} position="mid_article">
-                <a
-                  href={affiliateUrl}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer sponsored"
-                  className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
-                >
-                  Check Price →
-                </a>
-              </CTAVisibilityTracker>
-            </div>
-            <div>
-              <p className="text-sm text-slate-700 mb-2 text-center">9.5-inch (Home - Recommended)</p>
-              <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-mid-article-9-5`} productSlug={PRODUCT_SLUG} position="mid_article">
-                <a
-                  href={affiliate9_5Url}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer sponsored"
-                  className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
-                >
-                  Check Price →
-                </a>
-              </CTAVisibilityTracker>
-            </div>
-          </div>
-          <p className="text-xs text-slate-700 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
+        {/* Mid-Article CTA */}
+        <div className="bg-white border-2 border-orange-200 rounded-xl p-6 my-8 min-h-[280px]">
+          <SizeSelector
+            title="Choose Your Size:"
+            options={sizeOptions.map((option) => ({
+              id: option.id,
+              label: option.label,
+              description: option.description,
+              affiliateUrl: option.affiliateUrl,
+              ctaId: `mid-article-${option.ctaId}`
+            }))}
+            defaultSize="9-5-inch"
+            ctaText="Check Price on Amazon →"
+            ctaPosition="mid_article"
+            showDisclosure={true}
+            productSlug={PRODUCT_SLUG}
+          />
         </div>
 
         {/* User Reviews */}
@@ -404,38 +388,23 @@ export default async function RubbermaidScraperReview() {
             highlightedProduct={comparisonData.highlightedProduct}
           />
 
-          {/* POST-COMPARISON CTA - Both Size Options */}
-          <div className="bg-white border-2 border-orange-200 rounded-xl p-6 mt-6">
-            <p className="font-semibold text-slate-900 mb-4 text-center">Choose your size:</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <p className="text-sm text-slate-700 mb-2 text-center">13.5-inch (Professional)</p>
-                <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-comparison-13-5`} productSlug={PRODUCT_SLUG} position="comparison_table">
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                    className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
-                  >
-                    Check Price →
-                  </a>
-                </CTAVisibilityTracker>
-              </div>
-              <div>
-                <p className="text-sm text-slate-700 mb-2 text-center">9.5-inch (Home - Recommended)</p>
-                <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-comparison-9-5`} productSlug={PRODUCT_SLUG} position="comparison_table">
-                  <a
-                    href={affiliate9_5Url}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                    className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
-                  >
-                    Check Price →
-                  </a>
-                </CTAVisibilityTracker>
-              </div>
-            </div>
-            <p className="text-xs text-slate-700 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
+          {/* POST-COMPARISON CTA */}
+          <div className="bg-white border-2 border-orange-200 rounded-xl p-6 mt-6 min-h-[280px]">
+            <SizeSelector
+              title="Choose Your Size:"
+              options={sizeOptions.map((option) => ({
+                id: option.id,
+                label: option.label,
+                description: option.description,
+                affiliateUrl: option.affiliateUrl,
+                ctaId: `comparison-${option.ctaId}`
+              }))}
+              defaultSize="9-5-inch"
+              ctaText="Check Price on Amazon →"
+              ctaPosition="mid_article"
+              showDisclosure={true}
+              productSlug={PRODUCT_SLUG}
+            />
           </div>
         </section>
 
@@ -453,38 +422,23 @@ export default async function RubbermaidScraperReview() {
           considerAlternatives={reviewData.whoShouldBuy.considerAlternatives}
         />
 
-        {/* CTA - AFTER WHO SHOULD BUY - Both Size Options */}
-        <div className="bg-white border-2 border-orange-200 rounded-xl p-6 my-8">
-          <p className="font-semibold text-slate-900 mb-4 text-center">Sound like the right fit for your kitchen? Choose your size:</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <p className="text-sm text-slate-700 mb-2 text-center">13.5-inch (Professional)</p>
-              <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-who-should-buy-13-5`} productSlug={PRODUCT_SLUG} position="who_should_buy">
-                <a
-                  href={affiliateUrl}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer sponsored"
-                  className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
-                >
-                  Check Price →
-                </a>
-              </CTAVisibilityTracker>
-            </div>
-            <div>
-              <p className="text-sm text-slate-700 mb-2 text-center">9.5-inch (Home - Recommended)</p>
-              <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-who-should-buy-9-5`} productSlug={PRODUCT_SLUG} position="who_should_buy">
-                <a
-                  href={affiliate9_5Url}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer sponsored"
-                  className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
-                >
-                  Check Price →
-                </a>
-              </CTAVisibilityTracker>
-            </div>
-          </div>
-          <p className="text-xs text-slate-700 mt-3 text-center">💡 We earn a commission at no extra cost to you.</p>
+        {/* CTA - AFTER WHO SHOULD BUY */}
+        <div className="bg-white border-2 border-orange-200 rounded-xl p-6 my-8 min-h-[280px]">
+          <SizeSelector
+            title="Sound like the right fit? Choose your size:"
+            options={sizeOptions.map((option) => ({
+              id: option.id,
+              label: option.label,
+              description: option.description,
+              affiliateUrl: option.affiliateUrl,
+              ctaId: `who-should-buy-${option.ctaId}`
+            }))}
+            defaultSize="9-5-inch"
+            ctaText="Check Price on Amazon →"
+            ctaPosition="mid_article"
+            showDisclosure={true}
+            productSlug={PRODUCT_SLUG}
+          />
         </div>
 
         {/* FAQ */}
@@ -534,43 +488,23 @@ export default async function RubbermaidScraperReview() {
             </p>
           </div>
 
-          {/* FINAL CTA - Both Size Options */}
-          <div className="bg-white border-2 border-orange-200 rounded-xl p-6 mt-6">
-            <p className="font-semibold text-slate-900 mb-4 text-center">Ready to buy? Choose your size:</p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <p className="text-sm text-slate-700 mb-2 text-center">13.5-inch (Professional)</p>
-                <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-final-cta-13-5`} productSlug={PRODUCT_SLUG} position="final_cta">
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                    className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
-                  >
-                    Check Price →
-                  </a>
-                </CTAVisibilityTracker>
-              </div>
-
-              <div>
-                <p className="text-sm text-slate-700 mb-2 text-center">9.5-inch (Home - Recommended)</p>
-                <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-final-cta-9-5`} productSlug={PRODUCT_SLUG} position="final_cta">
-                  <a
-                    href={affiliate9_5Url}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                    className="block w-full bg-[#B45309] hover:bg-[#92400E] text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
-                  >
-                    Check Price →
-                  </a>
-                </CTAVisibilityTracker>
-              </div>
-            </div>
-
-            <p className="text-xs text-slate-600 mt-3 text-center">
-              💡 We earn a commission at no extra cost to you.
-            </p>
+          {/* FINAL CTA */}
+          <div className="bg-white border-2 border-orange-200 rounded-xl p-6 mt-6 min-h-[280px]">
+            <SizeSelector
+              title="Ready to buy? Choose your size:"
+              options={sizeOptions.map((option) => ({
+                id: option.id,
+                label: option.label,
+                description: option.description,
+                affiliateUrl: option.affiliateUrl,
+                ctaId: `final-cta-${option.ctaId}`
+              }))}
+              defaultSize="9-5-inch"
+              ctaText="Check Price on Amazon →"
+              ctaPosition="final_cta"
+              showDisclosure={true}
+              productSlug={PRODUCT_SLUG}
+            />
           </div>
         </section>
 
@@ -621,30 +555,22 @@ export default async function RubbermaidScraperReview() {
           paragraphs={reviewData.bottomLineSection.paragraphs}
           productSlug={productData.slug}
           customCTA={
-            <div className="text-center">
-              <p className="text-white/90 text-sm mb-4">Choose your size:</p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-bottom-line-13-5`} productSlug={PRODUCT_SLUG} position="final_cta">
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                    className="inline-block bg-white text-purple-800 font-semibold px-8 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl hover:bg-purple-50"
-                  >
-                    13.5-inch (Pro) →
-                  </a>
-                </CTAVisibilityTracker>
-                <CTAVisibilityTracker ctaId={`${PRODUCT_SLUG}-bottom-line-9-5`} productSlug={PRODUCT_SLUG} position="final_cta">
-                  <a
-                    href={affiliate9_5Url}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                    className="inline-block bg-[#B45309] text-white font-semibold px-8 py-4 rounded-lg text-base transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl hover:bg-[#92400E]"
-                  >
-                    9.5-inch (Home) →
-                  </a>
-                </CTAVisibilityTracker>
-              </div>
+            <div className="bg-white rounded-xl p-6 min-h-[280px]">
+              <SizeSelector
+                title="Choose Your Size:"
+                options={sizeOptions.map((option) => ({
+                  id: option.id,
+                  label: option.label,
+                  description: option.description,
+                  affiliateUrl: option.affiliateUrl,
+                  ctaId: `bottom-line-${option.ctaId}`
+                }))}
+                defaultSize="9-5-inch"
+                ctaText={reviewData.bottomLineSection.ctaText}
+                ctaPosition="final_cta"
+                showDisclosure={true}
+                productSlug={PRODUCT_SLUG}
+              />
             </div>
           }
         />

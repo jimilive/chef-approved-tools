@@ -251,7 +251,7 @@ export const reviewData = {
       },
       {
         emoji: '🔪',
-        name: 'Victorinox Fibrox Pro 8-Inch Chef\'s Knife',
+        name: 'Victorinox Fibrox 8-Inch Chef\'s Knife',
         description: 'The perfect knife for this board. Professional-quality blade that stays sharp with proper cutting surface. 20+ years of proven performance.',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
       }
