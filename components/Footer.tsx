@@ -31,7 +31,7 @@ export default function Footer() {
     <footer className="bg-slate-800 text-slate-200">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-2 lg:grid-cols-[1.75fr_2fr_1fr_1fr] gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.75fr_2fr_1fr_1fr] gap-8">
 
           {/* Brand Column */}
           <div className="md:pr-8">
