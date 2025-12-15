@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { generateBreadcrumbSchema } from '@/lib/schema'
 import { getPageMetadata } from '@/data/metadata'
 
@@ -438,7 +439,7 @@ export default function ChefApprovedPage() {
             <div>
               <h3 className="text-xl font-bold text-slate-900 mb-4">Browse by Category</h3>
               <ul className="space-y-2">
-                <li><Link href="/reviews" className="text-orange-700 hover:text-orange-700">👨‍🍳 All Chef Approved Reviews</Link></li>
+                <li><Link href="/reviews" className="text-orange-700 hover:text-orange-700 inline-flex items-center gap-2"><Image src="/images/branding/scott-ai-portrait-circle.jpg" alt="Scott Bradley" width={20} height={20} className="rounded-full" /> All Chef Approved Reviews</Link></li>
                 <li><Link href="/knives" className="text-orange-700 hover:text-orange-700">🔪 Knives & Cutting Tools</Link></li>
                 <li><Link href="/cookware" className="text-orange-700 hover:text-orange-700">🍳 Cookware & Bakeware</Link></li>
                 <li><Link href="/reviews" className="text-orange-700 hover:text-orange-700">📏 Kitchen Tools & Gadgets</Link></li>

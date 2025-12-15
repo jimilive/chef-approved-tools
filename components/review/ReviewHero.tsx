@@ -92,9 +92,13 @@ export default function ReviewHero({
             {/* Meta Row */}
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-3 border-b border-gray-200 mb-3 gap-2">
               <div className="flex items-center gap-3 min-w-0">
-                <div className="w-10 h-10 bg-gradient-to-br from-orange-600 to-amber-500 rounded-full flex items-center justify-center text-xl flex-shrink-0">
-                  👨‍🍳
-                </div>
+                <Image
+                src="/images/branding/scott-ai-portrait-circle.jpg"
+                alt="Scott Bradley"
+                width={40}
+                height={40}
+                className="rounded-full flex-shrink-0"
+              />
                 <div className="min-w-0">
                   <div className="font-semibold text-slate-900 text-sm">{authorName}</div>
                   <div className="text-xs text-slate-700 truncate">{authorCredentials}</div>
@@ -181,9 +185,13 @@ export default function ReviewHero({
           {/* Meta Row */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-5 border-b border-gray-200 mb-4 gap-3">
             <div className="flex items-center gap-3 min-w-0">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-amber-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
-                👨‍🍳
-              </div>
+              <Image
+                src="/images/branding/scott-ai-portrait-circle.jpg"
+                alt="Scott Bradley"
+                width={48}
+                height={48}
+                className="rounded-full flex-shrink-0"
+              />
               <div className="min-w-0">
                 <div className="font-semibold text-slate-900 text-sm sm:text-base">{authorName}</div>
                 <div className="text-xs sm:text-sm text-slate-700 truncate">{authorCredentials}</div>

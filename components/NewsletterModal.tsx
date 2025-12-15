@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { X } from 'lucide-react'
 import { trackNewsletterSignup } from '@/lib/tracking'
 
@@ -143,7 +144,13 @@ export default function NewsletterModal({
           ) : (
             <>
               <div className="text-center mb-6">
-                <div className="text-3xl sm:text-4xl mb-3">👨‍🍳</div>
+                <Image
+                  src="/images/branding/scott-ai-portrait-circle.jpg"
+                  alt="Scott Bradley"
+                  width={56}
+                  height={56}
+                  className="rounded-full mx-auto mb-3"
+                />
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
                   Get My Professional Kitchen Bundle
                 </h3>

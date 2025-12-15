@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import { DollarSign, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
@@ -113,9 +114,13 @@ export default async function AffordableKitchenAppliancesPage() {
           </h1>
 
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-              <span className="text-xl">👨‍🍳</span>
-            </div>
+            <Image
+              src="/images/branding/scott-ai-portrait-circle.jpg"
+              alt="Scott Bradley"
+              width={48}
+              height={48}
+              className="rounded-full"
+            />
             <div>
               <p className="font-semibold text-slate-900">Scott Bradley</p>
               <p className="text-sm text-slate-700">Professional Chef • 45 Years Cooking Experience</p>
