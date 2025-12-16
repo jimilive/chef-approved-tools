@@ -31,10 +31,11 @@ export default function Footer() {
     <footer className="bg-slate-800 text-slate-200">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        {/* Mobile: stacked, Desktop: flex with custom widths */}
+        <div className="flex flex-col lg:!flex-row gap-8">
 
-          {/* Brand Column */}
-          <div className="md:pr-8">
+          {/* Brand Column - 28% on desktop */}
+          <div className="lg:w-[28%] lg:pr-4">
             <Link href="/" className="flex items-center gap-2 no-underline mb-4">
               <Image
                 src="/logo.png"
@@ -55,10 +56,10 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Shop Links */}
-          <div className="md:pt-3">
+          {/* Shop Links - 32% on desktop (wider for 2-col layout) */}
+          <div className="lg:w-[32%] lg:pr-8">
             <h3 className="font-bold text-white mb-4">Categories</h3>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-2 w-fit">
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2">
               {footerLinks.shop.map((link) => (
                 <Link
                   key={link.name}
@@ -71,8 +72,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Resources Links */}
-          <div className="md:pt-3">
+          {/* Resources Links - 20% on desktop */}
+          <div className="lg:w-[20%]">
             <h3 className="font-bold text-white mb-4">Resources</h3>
             <div className="flex flex-col gap-2">
               {footerLinks.resources.map((link) => (
@@ -87,8 +88,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Legal Links */}
-          <div className="md:pt-3 md:pl-16">
+          {/* Legal Links - 20% on desktop */}
+          <div className="lg:w-[20%]">
             <h3 className="font-bold text-white mb-4">Legal</h3>
             <div className="flex flex-col gap-2">
               {footerLinks.legal.map((link) => (
