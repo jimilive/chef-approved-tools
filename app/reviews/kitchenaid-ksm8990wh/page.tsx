@@ -1,16 +1,14 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink, getAllAffiliateLinks } from '@/lib/product-helpers'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { getOGImageURL } from '@/lib/og-image'
 import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import MultiVendorCTA from '@/components/MultiVendorCTA'
+import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
   TestingResultsGrid,
@@ -22,9 +20,7 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
-import AuthorBio from '@/components/review/AuthorBio'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './kitchenaid-ksm8990wh-data'
@@ -126,61 +122,21 @@ export default async function KitchenAidCommercialReviewPage() {
   // Get all affiliate links for multi-vendor CTAs
   const affiliateLinks = product ? getAllAffiliateLinks(product) : []
 
-  const breadcrumbs = categoryBreadcrumb
-    ? [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
-      ]
-    : [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
-      ]
-
   return (
-    <>
-    <div className="min-h-screen bg-gray-50">
-      <ProductViewTrackerWrapper
-        slug={reviewData.productSlug}
-        name={productData.name}
-        tier={reviewData.metadata.tier as 1 | 2 | 3}
-        testingPeriod={reviewData.tracking.testingPeriod}
-        rating={reviewData.hero.rating}
-        hook={reviewData.tracking.hook}
-        category={productData.category}
-      />
-
-      {/* Breadcrumbs */}
-      <nav className="bg-white border-b border-gray-200 py-3">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ol className="flex space-x-2 text-sm text-gray-700">
-            {breadcrumbs.map((crumb, index) => (
-              <li key={crumb.name} className="flex items-center">
-                {index > 0 && <span className="mr-2">/</span>}
-                {index === breadcrumbs.length - 1 ? (
-                  <span className="text-gray-900 font-medium">{crumb.name}</span>
-                ) : (
-                  <Link href={crumb.url} className="text-gray-700 hover:text-orange-800 transition-colors">
-                    {crumb.name}
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ol>
-        </div>
-      </nav>
-
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link
-          href="/appliances"
-          className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
-        >
-          ← Browse all Small Appliances
-        </Link>
-
-        {/* SECTION 1: HERO */}
-        <div className="mb-8">
+    <ReviewLayout
+      product={product}
+      slug={PRODUCT_SLUG}
+      affiliateUrl={primaryLink}
+      gitDates={gitDates}
+      categoryBreadcrumb={categoryBreadcrumb}
+      faqData={reviewData.faqData}
+      tier={reviewData.metadata.tier as 1 | 2 | 3}
+      testingPeriod={reviewData.tracking.testingPeriod}
+      hook={reviewData.tracking.hook}
+      backLinkHref="/appliances"
+      backLinkText="Browse all Small Appliances"
+    >
+      {/* SECTION 1: HERO */}
           <ReviewHero
             title={reviewData.hero.title}
             authorName={reviewData.hero.authorName}
@@ -225,7 +181,6 @@ export default async function KitchenAidCommercialReviewPage() {
               </div>
             )}
           />
-        </div>
 
         {/* SECTION 2: TESTING RESULTS */}
         <div className="mb-8" id="primary-cta">
@@ -526,41 +481,9 @@ export default async function KitchenAidCommercialReviewPage() {
           products={reviewData.relatedProducts.products}
         />
 
-        {/* SECTION 11: AUTHOR BIO */}
-        <AuthorBio />
-
-        {/* SECTION 12: TESTIMONIALS */}
+        {/* SECTION 11: TESTIMONIALS */}
         <TestimonialsSection />
 
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateProductSchema(productData))
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateFAQSchema(reviewData.faqData))
-          }}
-        />
-      </article>
-    </div>
-
-    {/* STICKY MOBILE CTA */}
-    <StickyMobileCTAWrapper
-      productName={productData.name}
-      affiliateUrl={primaryLink}
-      merchant="kitchenaid_direct"
-      productSlug={productData.slug}
-    />
-    </>
+    </ReviewLayout>
   )
 }

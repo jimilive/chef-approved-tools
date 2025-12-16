@@ -1,6 +1,6 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import {
   ReviewHero,
@@ -10,18 +10,12 @@ import {
   BottomLineSection,
   RelatedProductsGrid,
 } from '@/components/review'
-import AmazonCTA from '@/components/AmazonCTA'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import SizeSelector from '@/components/SizeSelector'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
-import type { Metadata } from 'next'
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import EmailCaptureSection from '@/components/review/EmailCaptureSection'
-import AuthorBio from '@/components/review/AuthorBio'
-import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
+import ReviewLayout from '@/components/review/ReviewLayout'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
-import { getOGImageURL } from '@/lib/og-image'
 import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
@@ -123,64 +117,25 @@ export default async function RubbermaidScraperReview() {
     }
   ]
 
-  // Generate breadcrumbs with category
-  const breadcrumbs = categoryBreadcrumb
-    ? [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-      ]
-    : [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-      ]
-
   return (
-    <>
-      <ProductViewTrackerWrapper
-        slug={productData.slug}
-        name={productData.name}
-        tier={reviewData.metadata.tier}
-        testingPeriod={reviewData.tracking.testingPeriod}
-        rating={productData.expertRating}
-        hook={reviewData.tracking.hook}
-        category={productData.category}
-      />
-
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-[900px] mx-auto px-5">
-
-          {/* BREADCRUMBS */}
-          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
-            <Link href="/" className="hover:text-orange-700">Home</Link>
-            {' / '}
-            {categoryBreadcrumb ? (
-              <>
-                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
-                {' / '}
-              </>
-            ) : (
-              <>
-                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-                {' / '}
-              </>
-            )}
-            {productData.name}
-          </div>
-
-          <Link
-            href="/moving-and-stirring-tools"
-            className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
-          >
-            ← Browse all Moving & Stirring Tools
-          </Link>
-
-          {/* SECTION 1: HERO */}
-          <ReviewHero
-            title={reviewData.header.title}
-            authorName={reviewData.header.author}
-            authorCredentials="45 Years Cooking Experience"
+    <ReviewLayout
+      product={product}
+      slug={PRODUCT_SLUG}
+      affiliateUrl={affiliateUrl}
+      gitDates={gitDates}
+      categoryBreadcrumb={categoryBreadcrumb}
+      faqData={reviewData.faq.items}
+      tier={reviewData.metadata.tier as 1 | 2 | 3}
+      testingPeriod={reviewData.tracking.testingPeriod}
+      hook={reviewData.tracking.hook}
+      backLinkHref="/moving-and-stirring-tools"
+      backLinkText="Browse all Moving & Stirring Tools"
+    >
+      {/* SECTION 1: HERO */}
+      <ReviewHero
+        title={reviewData.header.title}
+        authorName={reviewData.header.author}
+        authorCredentials="24 Years in Professional Kitchens"
             rating={productData.expertRating ?? reviewData.header.expertRating}
             tierBadge={tierBadge}
             verdict={reviewData.professionalSummary.text + " " + reviewData.professionalSummary.detail}
@@ -596,39 +551,9 @@ export default async function RubbermaidScraperReview() {
               Contact me directly</Link> and I&apos;ll help you choose the right equipment for your needs.
             </p>
           </div>
-
-          <AuthorBio />
         </section>
 
-        {/* Schema Markup */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateProductSchema(productData))
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateFAQSchema(reviewData.faq.items))
-          }}
-        />
-        </div>
-      </div>
-
-      {/* STICKY MOBILE CTA */}
-      <StickyMobileCTAWrapper
-        productName={productData.name}
-        affiliateUrl={affiliateUrl}
-        merchant="amazon"
-        productSlug={productData.slug}
-      />
-    </>
+        {/* AuthorBio, ProductViewTracker, and StickyMobileCTA handled by ReviewLayout */}
+    </ReviewLayout>
   )
 }

@@ -2,17 +2,14 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { Star } from 'lucide-react'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { getOGImageURL } from '@/lib/og-image'
 import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import AmazonCTA from '@/components/AmazonCTA'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
+import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
   TestingResultsGrid,
@@ -26,8 +23,6 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
-import AuthorBio from '@/components/review/AuthorBio'
-import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './lodge-seasoned-cast-iron-3-skillet-bundle-data'
@@ -132,78 +127,21 @@ export default async function LodgeCastIronReviewPage() {
   // Get primary affiliate link
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
 
-  // Generate breadcrumbs with category
-  const breadcrumbs = categoryBreadcrumb
-    ? [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-      ]
-    : [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-      ]
-
-  // Generate schemas
-  const productSchema = generateProductSchema({
-    name: productData.name,
-    slug: productData.slug,
-    description: productData.expertOpinion,
-    brand: productData.brand,
-    rating: productData.expertRating,
-    reviewCount: 1,
-    url: `https://www.chefapprovedtools.com/reviews/${productData.slug}`,
-  })
-
-  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
-  const faqSchema = generateFAQSchema(reviewData.faqData)
-
   return (
-    <>
-      {/* Schema.org markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-[900px] mx-auto px-5">
-
-          {/* BREADCRUMBS */}
-          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
-            <Link href="/" className="hover:text-orange-700">Home</Link>
-            {' / '}
-            {categoryBreadcrumb ? (
-              <>
-                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
-                {' / '}
-              </>
-            ) : (
-              <>
-                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-                {' / '}
-              </>
-            )}
-            {productData.name}
-          </div>
-
-          <Link
-            href="/cookware-and-bakeware"
-            className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
-          >
-            ← Browse all Cookware & Bakeware
-          </Link>
-
-          {/* SECTION 1: HERO */}
+    <ReviewLayout
+      product={product}
+      slug={PRODUCT_SLUG}
+      affiliateUrl={affiliateUrl}
+      gitDates={gitDates}
+      categoryBreadcrumb={categoryBreadcrumb}
+      faqData={reviewData.faqData}
+      tier={reviewData.metadata.tier as 1 | 2 | 3}
+      testingPeriod={reviewData.tracking.testingPeriod}
+      hook={reviewData.tracking.hook}
+      backLinkHref="/cookware-and-bakeware"
+      backLinkText="Browse all Cookware & Bakeware"
+    >
+      {/* SECTION 1: HERO */}
           <ReviewHero
             title={reviewData.hero.title}
             authorName={reviewData.hero.authorName}
@@ -497,30 +435,6 @@ export default async function LodgeCastIronReviewPage() {
             products={reviewData.relatedProducts.products}
           />
 
-          {/* SECTION 19: AUTHOR BIO */}
-          <AuthorBio />
-
-        </div>
-      </div>
-
-      {/* Product view tracking - moved to bottom to avoid blocking first paint */}
-      <ProductViewTrackerWrapper
-        slug={productData.slug}
-        name={productData.name}
-        tier={reviewData.metadata.tier as 1 | 2 | 3}
-        testingPeriod={reviewData.tracking.testingPeriod}
-        rating={productData.expertRating}
-        hook={reviewData.tracking.hook}
-        category={productData.category}
-      />
-
-      {/* STICKY MOBILE CTA */}
-      <StickyMobileCTAWrapper
-        productName={productData.name}
-        affiliateUrl={affiliateUrl}
-        merchant="amazon"
-        productSlug={productData.slug}
-      />
-    </>
+    </ReviewLayout>
   )
 }

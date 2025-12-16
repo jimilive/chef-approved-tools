@@ -1,17 +1,15 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { getOGImageURL } from '@/lib/og-image'
 import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import SizeSelector from '@/components/SizeSelector'
 import AmazonCTA from '@/components/AmazonCTA'
+import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
   TestingResultsGrid,
@@ -23,8 +21,6 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
-import AuthorBio from '@/components/review/AuthorBio'
-import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './small-metal-hotel-pans-data'
@@ -106,71 +102,20 @@ export default async function ProductReview() {
   // Get primary affiliate link - use product if available, otherwise fall back to recommended size option
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : reviewData.sizeOptions.options.find(o => o.recommended)?.affiliateUrl || reviewData.sizeOptions.options[0].affiliateUrl
 
-  const breadcrumbs = categoryBreadcrumb
-    ? [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
-      ]
-    : [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
-      ]
-
   return (
-    <div className="min-h-screen bg-gray-50">
-      <ProductViewTrackerWrapper
-        slug={reviewData.productSlug}
-        name={reviewData.breadcrumb.productName}
-        tier={reviewData.metadata.tier as 1 | 2 | 3}
-        testingPeriod={reviewData.tracking.testingPeriod}
-        rating={reviewData.hero.rating}
-        hook={reviewData.tracking.hook}
-        category={productData.category}
-      />
-
-      {/* Breadcrumb */}
-      <nav className="max-w-4xl mx-auto px-4 py-4 text-sm" aria-label="Breadcrumb">
-        <ol className="flex items-center gap-2 flex-wrap">
-          <li>
-            <Link href="/" className="text-gray-700 hover:text-orange-700 transition-colors">
-              Home
-            </Link>
-          </li>
-          <li className="text-gray-700">/</li>
-          {categoryBreadcrumb ? (
-            <>
-              <li>
-                <Link href={categoryBreadcrumb.href} className="text-gray-700 hover:text-orange-700 transition-colors">
-                  {categoryBreadcrumb.label}
-                </Link>
-              </li>
-              <li className="text-gray-700">/</li>
-            </>
-          ) : (
-            <>
-              <li>
-                <Link href="/reviews" className="text-gray-700 hover:text-orange-700 transition-colors">
-                  Reviews
-                </Link>
-              </li>
-              <li className="text-gray-700">/</li>
-            </>
-          )}
-          <li className="text-gray-900 font-medium">{productData.name}</li>
-        </ol>
-      </nav>
-
-      <div className="max-w-4xl mx-auto px-4 mb-4">
-        <Link
-          href="/prep-tools"
-          className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1"
-        >
-          ← Browse all Prep Tools
-        </Link>
-      </div>
-
+    <ReviewLayout
+      product={product}
+      slug={PRODUCT_SLUG}
+      affiliateUrl={affiliateUrl}
+      gitDates={gitDates}
+      categoryBreadcrumb={categoryBreadcrumb}
+      faqData={reviewData.faqData}
+      tier={reviewData.metadata.tier as 1 | 2 | 3}
+      testingPeriod={reviewData.tracking.testingPeriod}
+      hook={reviewData.tracking.hook}
+      backLinkHref="/prep-tools"
+      backLinkText="Browse all Prep Tools"
+    >
       {/* Hero Section with Size Selector */}
       <ReviewHero
         title={reviewData.hero.title}
@@ -224,9 +169,6 @@ export default async function ProductReview() {
           </div>
         }
       />
-
-      {/* Main Content */}
-      <article className="max-w-4xl mx-auto px-4 py-12">
 
         {/* Testing Results */}
         <TestingResultsGrid
@@ -371,38 +313,6 @@ export default async function ProductReview() {
           products={reviewData.relatedProducts.products}
         />
 
-        {/* AUTHOR BIO */}
-        <AuthorBio />
-
-      </article>
-
-      {/* Structured Data Schemas */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateProductSchema(productData))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema(reviewData.faqData))
-        }}
-      />
-
-      {/* STICKY MOBILE CTA */}
-      <StickyMobileCTAWrapper
-        productName={productData.name}
-        affiliateUrl={affiliateUrl}
-        merchant="amazon"
-        productSlug={productData.slug}
-      />
-    </div>
+    </ReviewLayout>
   )
 }

@@ -1,14 +1,12 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { getOGImageURL } from '@/lib/og-image'
 import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
   ProsConsGrid,
@@ -17,9 +15,7 @@ import {
   EmailCaptureSection,
   RelatedProductsGrid
 } from '@/components/review'
-import AuthorBio from '@/components/review/AuthorBio'
 import { getReviewMetadata } from '@/data/metadata'
-import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './norton-im200-tri-stone-sharpener-data'
@@ -124,51 +120,20 @@ export default async function NortonTriStoneSharpenerReview() {
 
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
 
-  const breadcrumbs = categoryBreadcrumb
-    ? [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
-      ]
-    : [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
-      ]
-
   return (
-    <>
-      <ProductViewTrackerWrapper
-        slug={reviewData.productSlug}
-        name={productData.name}
-        tier={reviewData.metadata.tier as 1 | 2 | 3}
-        testingPeriod={reviewData.tracking.testingPeriod}
-        rating={reviewData.hero.rating}
-        hook={reviewData.tracking.hook}
-        category={reviewData.breadcrumb.category}
-      />
-
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-[900px] mx-auto px-5">
-
-          {/* BREADCRUMBS */}
-          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
-            <Link href="/" className="hover:text-orange-700">Home</Link>
-            {' / '}
-            {categoryBreadcrumb ? (
-              <>
-                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
-                {' / '}
-              </>
-            ) : (
-              <>
-                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-                {' / '}
-              </>
-            )}
-            {productData.name}
-          </div>
-
+    <ReviewLayout
+      product={product}
+      slug={PRODUCT_SLUG}
+      affiliateUrl={affiliateUrl}
+      gitDates={gitDates}
+      categoryBreadcrumb={categoryBreadcrumb}
+      faqData={reviewData.faqData}
+      tier={reviewData.metadata.tier as 1 | 2 | 3}
+      testingPeriod={reviewData.tracking.testingPeriod}
+      hook={reviewData.tracking.hook}
+      backLinkHref="/cleaning-and-maintenance"
+      backLinkText="Browse all Cleaning & Maintenance"
+    >
           {/* SECTION 1: HERO */}
           <ReviewHero
             title={reviewData.hero.title}
@@ -596,38 +561,6 @@ export default async function NortonTriStoneSharpenerReview() {
           products={reviewData.relatedProducts.products}
         />
 
-        {/* Author Bio */}
-        <AuthorBio />
-
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateProductSchema(productData))
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateFAQSchema(reviewData.faqData))
-          }}
-        />
-        </div>
-      </div>
-
-      {/* STICKY MOBILE CTA */}
-      <StickyMobileCTAWrapper
-        productName={productData.name}
-        affiliateUrl={affiliateUrl}
-        merchant="amazon"
-        productSlug={productData.slug}
-      />
-    </>
+    </ReviewLayout>
   )
 }

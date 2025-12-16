@@ -1,17 +1,14 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { getOGImageURL } from '@/lib/og-image'
 import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import AmazonCTA from '@/components/AmazonCTA'
+import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
   TestingResultsGrid,
@@ -23,8 +20,6 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
-import AuthorBio from '@/components/review/AuthorBio'
-import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './cuisinart-8-inch-nonstick-pan-data'
@@ -143,95 +138,21 @@ export default async function Cuisinart8InchNonstickPanReview() {
   // Get primary affiliate link
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
 
-  // Generate breadcrumbs with category
-  const breadcrumbs = categoryBreadcrumb
-    ? [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
-      ]
-    : [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
-      ]
-
-  // Generate schemas with correct fields
-  const productSchema = generateProductSchema({
-    // REQUIRED
-    name: productData.name,
-    slug: productData.slug,
-    // HIGHLY RECOMMENDED
-    description: productData.expertOpinion,
-    brand: productData.brand,
-    rating: productData.expertRating,
-    reviewCount: 1,
-    // GOOD FOR SEO
-    model: productData.model,
-    category: productData.category,
-    dateAdded: productData.dateAdded,
-    lastUpdated: productData.lastUpdated,
-  })
-
-  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
-  const faqSchema = generateFAQSchema(reviewData.faqData)
-
   return (
-    <>
-      {/* Schema.org markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Product view tracking */}
-      <ProductViewTrackerWrapper
-        slug={productData.slug}
-        name={productData.name}
-        tier={reviewData.metadata.tier as 1 | 2 | 3}
-        testingPeriod={reviewData.tracking.testingPeriod}
-        rating={productData.expertRating}
-        hook={reviewData.tracking.hook}
-        category={productData.category}
-      />
-
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-[900px] mx-auto px-5">
-
-          {/* BREADCRUMBS */}
-          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
-            <Link href="/" className="hover:text-orange-700">Home</Link>
-            {' / '}
-            {categoryBreadcrumb ? (
-              <>
-                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
-                {' / '}
-              </>
-            ) : (
-              <>
-                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-                {' / '}
-              </>
-            )}
-            {productData.name}
-          </div>
-
-          <Link
-            href="/cookware-and-bakeware"
-            className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
-          >
-            ← Browse all Cookware & Bakeware
-          </Link>
-
-          {/* SECTION 1: HERO */}
+    <ReviewLayout
+      product={product}
+      slug={PRODUCT_SLUG}
+      affiliateUrl={affiliateUrl}
+      gitDates={gitDates}
+      categoryBreadcrumb={categoryBreadcrumb}
+      faqData={reviewData.faqData}
+      tier={reviewData.metadata.tier as 1 | 2 | 3}
+      testingPeriod={reviewData.tracking.testingPeriod}
+      hook={reviewData.tracking.hook}
+      backLinkHref="/cookware-and-bakeware"
+      backLinkText="Browse all Cookware & Bakeware"
+    >
+      {/* SECTION 1: HERO */}
           <ReviewHero
             title={reviewData.hero.title}
             authorName={reviewData.hero.authorName}
@@ -340,54 +261,7 @@ export default async function Cuisinart8InchNonstickPanReview() {
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 7: WHERE TO BUY */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              {reviewData.whereToBuy.title}
-            </h2>
-
-            <p className="text-slate-700 leading-relaxed mb-6">
-              {reviewData.whereToBuy.introText}
-            </p>
-
-            <div className="space-y-4">
-              <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
-                <div className="flex flex-col gap-4">
-                  <div className="text-center">
-                    <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-                    <p className="text-sm text-slate-700 m-0">Prime shipping, verified reviews, easy returns</p>
-                  </div>
-                  <CTAVisibilityTracker ctaId="where-to-buy-amazon" position="mid_article">
-                    <a
-                      href={affiliateUrl}
-                      target="_blank"
-                      rel="nofollow noopener noreferrer sponsored"
-                      className="inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap w-full text-center"
-                    >
-                      Check Price on Amazon →
-                    </a>
-                  </CTAVisibilityTracker>
-                  <p className="text-center mt-3 text-sm">
-                    <a
-                      href={affiliateUrl}
-                      className="text-orange-700 hover:text-orange-800 underline font-medium"
-                      target="_blank"
-                      rel="nofollow noopener noreferrer sponsored"
-                    >
-                      → View {productData.name} on Amazon
-                    </a>
-                  </p>
-                  <p className="text-xs text-slate-700 italic text-center m-0">*As an Amazon Associate, I earn from qualifying purchases</p>
-                </div>
-              </div>
-            </div>
-
-            <p className="text-sm text-slate-700 mt-6 italic">
-              {reviewData.whereToBuy.disclaimer}
-            </p>
-          </div>
-
-          {/* SECTION 8: EMAIL CAPTURE */}
+          {/* SECTION 7: EMAIL CAPTURE */}
           <EmailCaptureSection />
 
           {/* SECTION 9: BOTTOM LINE */}
@@ -437,19 +311,7 @@ export default async function Cuisinart8InchNonstickPanReview() {
             products={reviewData.relatedProducts.products}
           />
 
-          {/* SECTION 11: AUTHOR BIO */}
-          <AuthorBio />
-
-        </div>
-      </div>
-
-      {/* STICKY MOBILE CTA */}
-      <StickyMobileCTAWrapper
-        productName={productData.name}
-        affiliateUrl={affiliateUrl}
-        merchant="amazon"
-        productSlug={productData.slug}
-      />
-    </>
+          {/* AuthorBio, ProductViewTracker, and StickyMobileCTA handled by ReviewLayout */}
+    </ReviewLayout>
   )
 }

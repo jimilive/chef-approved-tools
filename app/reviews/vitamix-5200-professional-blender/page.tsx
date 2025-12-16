@@ -1,23 +1,17 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink, getAllAffiliateLinks } from '@/lib/product-helpers'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { getOGImageURL } from '@/lib/og-image'
 import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import { getReviewMetadata } from '@/data/metadata'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import AmazonCTA from '@/components/AmazonCTA'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import MultiVendorCTA from '@/components/MultiVendorCTA'
 import {
   ReviewHero,
   TestingResultsGrid,
-  TestingStory,
   PerformanceAnalysis,
-  RealWorldUseCases,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -25,10 +19,8 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
-import AuthorBio from '@/components/review/AuthorBio'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import ReviewLayout from '@/components/review/ReviewLayout'
-import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './vitamix-5200-professional-blender-data'
@@ -141,64 +133,20 @@ export default async function ProductReview() {
   const shopAllLink = reviewData.strategicLinks.tertiary.url
   const vitamixDirectLink = reviewData.strategicLinks.vitamixDirect.url
 
-  // Generate breadcrumbs with category
-  const breadcrumbs = categoryBreadcrumb
-    ? [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
-      ]
-    : [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
-      ]
-
-  // Generate schemas
-  const productSchema = generateProductSchema({
-    name: productData.name,
-    slug: productData.slug,
-    description: productData.expertOpinion,
-    brand: productData.brand,
-    rating: productData.expertRating,
-    reviewCount: 1,
-    category: productData.category,
-  })
-
-  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbs)
-  const faqSchema = generateFAQSchema(reviewData.faqData)
-
   return (
-    <>
-      {/* Schema.org markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* ========================================
-          NEW: ReviewLayout wraps everything
-          ======================================== */}
-      <ReviewLayout
-        breadcrumbCategory="Appliances"
-        breadcrumbTitle={reviewData.breadcrumb.productName}
-      >
-
-        <Link
-          href="/appliances"
-          className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
-        >
-          ← Browse all Small Appliances
-        </Link>
-
+    <ReviewLayout
+      product={product}
+      slug={PRODUCT_SLUG}
+      affiliateUrl={primaryLink}
+      gitDates={gitDates}
+      categoryBreadcrumb={categoryBreadcrumb}
+      faqData={reviewData.faqData}
+      tier={reviewData.metadata.tier as 1 | 2 | 3}
+      testingPeriod={reviewData.tracking.testingPeriod}
+      hook={reviewData.tracking.hook}
+      backLinkHref="/appliances"
+      backLinkText="Browse all Small Appliances"
+    >
         {/* SECTION 1: HERO */}
         <ReviewHero
           title={reviewData.hero.title}
@@ -391,32 +339,6 @@ export default async function ProductReview() {
           products={reviewData.relatedProducts.products}
         />
 
-        {/* SECTION 12: AUTHOR BIO */}
-        <AuthorBio />
-
-      </ReviewLayout>
-      {/* ========================================
-          END: ReviewLayout
-          ======================================== */}
-
-      {/* Product view tracking - at bottom to avoid blocking first paint */}
-      <ProductViewTrackerWrapper
-        slug={PRODUCT_SLUG}
-        name={productData.name}
-        tier={reviewData.metadata.tier as 1 | 2 | 3}
-        testingPeriod={reviewData.tracking.testingPeriod}
-        rating={productData.expertRating ?? reviewData.hero.rating}
-        hook={reviewData.tracking.hook}
-        category={productData.category}
-      />
-
-      {/* STICKY MOBILE CTA */}
-      <StickyMobileCTAWrapper
-        productName={productData.name}
-        affiliateUrl={primaryLink}
-        merchant="other"
-        productSlug={productData.slug}
-      />
-    </>
+    </ReviewLayout>
   )
 }

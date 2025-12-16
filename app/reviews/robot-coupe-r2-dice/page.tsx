@@ -1,6 +1,6 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import {
   ReviewHero,
@@ -11,15 +11,10 @@ import {
   RelatedProductsGrid,
 } from '@/components/review'
 import EmailCaptureSection from '@/components/review/EmailCaptureSection'
-import AuthorBio from '@/components/review/AuthorBio'
-import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 import AmazonCTA from '@/components/AmazonCTA'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
-
-import type { Metadata } from 'next'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
+import ReviewLayout from '@/components/review/ReviewLayout'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
-import { getOGImageURL } from '@/lib/og-image'
 import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
@@ -106,64 +101,25 @@ export default async function RobotCoupeR2DiceReview() {
   // Get primary affiliate link
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
 
-  // Generate breadcrumbs with category
-  const breadcrumbs = categoryBreadcrumb
-    ? [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-      ]
-    : [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${productData.slug}` }
-      ]
-
   return (
-    <>
-      <ProductViewTrackerWrapper
-        slug={productData.slug}
-        name={productData.name}
-        tier={1}
-        testingPeriod="5 years commercial use"
-        rating={4.7}
-        hook="Commercial power. Prep time reduced by 60% vs manual."
-        category="Food Processors"
-      />
-
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-[900px] mx-auto px-5">
-
-          {/* BREADCRUMBS */}
-          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
-            <Link href="/" className="hover:text-orange-700">Home</Link>
-            {' / '}
-            {categoryBreadcrumb ? (
-              <>
-                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
-                {' / '}
-              </>
-            ) : (
-              <>
-                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-                {' / '}
-              </>
-            )}
-            {productData.name}
-          </div>
-
-          <Link
-            href="/appliances"
-            className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
-          >
-            ← Browse all Small Appliances
-          </Link>
-
-          {/* SECTION 1: HERO */}
-          <ReviewHero
-            title={reviewData.header.title}
-            authorName={reviewData.header.author}
-            authorCredentials="45 Years Cooking Experience"
+    <ReviewLayout
+      product={product}
+      slug={PRODUCT_SLUG}
+      affiliateUrl={affiliateUrl}
+      gitDates={gitDates}
+      categoryBreadcrumb={categoryBreadcrumb}
+      faqData={reviewData.faq.items}
+      tier={1}
+      testingPeriod="5 years commercial use"
+      hook="Commercial power. Prep time reduced by 60% vs manual."
+      backLinkHref="/appliances"
+      backLinkText="Browse all Small Appliances"
+    >
+      {/* SECTION 1: HERO */}
+      <ReviewHero
+        title={reviewData.header.title}
+        authorName={reviewData.header.author}
+        authorCredentials="24 Years in Professional Kitchens"
             rating={productData.expertRating ?? reviewData.header.expertRating}
             tierBadge={tierBadge}
             verdict={reviewData.professionalVerdict.paragraphs[0]}
@@ -575,38 +531,7 @@ export default async function RobotCoupeR2DiceReview() {
           productSlug={productData.slug}
         />
 
-        {/* Author Bio Box */}
-        <AuthorBio />
-
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateProductSchema(productData))
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs))
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateFAQSchema(reviewData.faq.items))
-          }}
-        />
-        </div>
-      </div>
-
-      {/* STICKY MOBILE CTA */}
-      <StickyMobileCTAWrapper
-        productName={productData.name}
-        affiliateUrl={affiliateUrl}
-        merchant="amazon"
-        productSlug={productData.slug}
-      />
-    </>
+        {/* AuthorBio, ProductViewTracker, and StickyMobileCTA handled by ReviewLayout */}
+    </ReviewLayout>
   )
 }

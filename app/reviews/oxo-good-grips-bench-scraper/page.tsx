@@ -2,15 +2,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { getOGImageURL } from '@/lib/og-image'
 import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import AmazonCTA from '@/components/AmazonCTA'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
+import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
   ProsConsGrid,
@@ -20,10 +18,8 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
-import AuthorBio from '@/components/review/AuthorBio'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { getReviewMetadata } from '@/data/metadata'
-import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 
 // Import review data
 import { reviewData } from './oxo-good-grips-bench-scraper-data'
@@ -100,78 +96,25 @@ export default async function OXOGoodGripsBenchScraperReview() {
 
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
 
-  // Generate breadcrumbs with category
-  const breadcrumbs = categoryBreadcrumb
-    ? [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
-      ]
-    : [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
-      ]
-
   return (
-    <>
-      {/* Schema.org markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateProductSchema(productData)) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs)) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(reviewData.faqData)) }}
-      />
-
-      <ProductViewTrackerWrapper
-        slug={reviewData.productSlug}
-        name={productData.name}
-        tier={reviewData.metadata.tier as 1 | 2 | 3}
-        testingPeriod={reviewData.tracking.testingPeriod}
-        rating={reviewData.hero.rating}
-        hook={reviewData.tracking.hook}
-        category={productData.category || 'Baking Tools'}
-      />
-
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-[900px] mx-auto px-5">
-
-          {/* BREADCRUMBS */}
-          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
-            <Link href="/" className="hover:text-orange-700">Home</Link>
-            {' / '}
-            {categoryBreadcrumb ? (
-              <>
-                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
-                {' / '}
-              </>
-            ) : (
-              <>
-                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-                {' / '}
-              </>
-            )}
-            {productData.name}
-          </div>
-
-          <Link
-            href="/prep-tools"
-            className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
-          >
-            ← Browse all Prep Tools
-          </Link>
-
-          {/* SECTION 1: HERO */}
-          <ReviewHero
-            title={reviewData.hero.title}
-            authorName="Scott Bradley"
-            authorCredentials="45 Years Cooking Experience"
+    <ReviewLayout
+      product={product}
+      slug={PRODUCT_SLUG}
+      affiliateUrl={affiliateUrl}
+      gitDates={gitDates}
+      categoryBreadcrumb={categoryBreadcrumb}
+      faqData={reviewData.faqData}
+      tier={reviewData.metadata.tier as 1 | 2 | 3}
+      testingPeriod={reviewData.tracking.testingPeriod}
+      hook={reviewData.tracking.hook}
+      backLinkHref="/prep-tools"
+      backLinkText="Browse all Prep Tools"
+    >
+      {/* SECTION 1: HERO */}
+      <ReviewHero
+        title={reviewData.hero.title}
+        authorName="Scott Bradley"
+        authorCredentials="24 Years in Professional Kitchens"
             rating={productData.expertRating ?? reviewData.hero.rating}
             tierBadge={tierBadge}
             verdict={reviewData.quickVerdict.content}
@@ -442,19 +385,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
             products={reviewData.relatedProducts.products}
           />
 
-          {/* AUTHOR BIO */}
-          <AuthorBio />
-
-        </div>
-      </div>
-
-      {/* STICKY MOBILE CTA */}
-      <StickyMobileCTAWrapper
-        productName={productData.name}
-        affiliateUrl={affiliateUrl}
-        merchant="amazon"
-        productSlug={PRODUCT_SLUG}
-      />
-    </>
+          {/* AuthorBio, ProductViewTracker, and StickyMobileCTA handled by ReviewLayout */}
+    </ReviewLayout>
   )
 }

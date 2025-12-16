@@ -1,17 +1,15 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
-import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { getOGImageURL } from '@/lib/og-image'
 import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
-import ProductViewTrackerWrapper from '@/components/ProductViewTrackerWrapper'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import AmazonCTA from '@/components/AmazonCTA'
+import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
   ProsConsGrid,
@@ -21,8 +19,6 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
-import AuthorBio from '@/components/review/AuthorBio'
-import { StickyMobileCTAWrapper } from '@/components/StickyMobileCTA'
 import { reviewData } from './oxo-good-grips-swivel-peeler-data'
 
 const PRODUCT_SLUG = 'oxo-good-grips-swivel-peeler'
@@ -89,77 +85,25 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
 
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
 
-  const breadcrumbs = categoryBreadcrumb
-    ? [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: categoryBreadcrumb.label, url: `https://www.chefapprovedtools.com${categoryBreadcrumb.href}` },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
-      ]
-    : [
-        { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-        { name: 'Reviews', url: 'https://www.chefapprovedtools.com/reviews' },
-        { name: productData.name, url: `https://www.chefapprovedtools.com/reviews/${PRODUCT_SLUG}` }
-      ]
-
   return (
-    <>
-      {/* Schema.org markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateProductSchema(productData)) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs)) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(reviewData.faqData)) }}
-      />
-
-      <ProductViewTrackerWrapper
-        slug={productData.slug}
-        name={productData.name}
-        tier={reviewData.metadata.tier}
-        testingPeriod={reviewData.tracking.testingPeriod}
-        rating={reviewData.hero.rating}
-        hook={reviewData.tracking.hook}
-        category={productData.category}
-      />
-
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-[900px] mx-auto px-5">
-
-          {/* BREADCRUMBS */}
-          <div className="bg-white border-b border-gray-200 -mx-5 px-5 py-3 text-sm text-gray-700 mb-4">
-            <Link href="/" className="hover:text-orange-700">Home</Link>
-            {' / '}
-            {categoryBreadcrumb ? (
-              <>
-                <Link href={categoryBreadcrumb.href} className="hover:text-orange-700">{categoryBreadcrumb.label}</Link>
-                {' / '}
-              </>
-            ) : (
-              <>
-                <Link href="/reviews" className="hover:text-orange-700">Reviews</Link>
-                {' / '}
-              </>
-            )}
-            {productData.name}
-          </div>
-
-          <Link
-            href="/prep-tools"
-            className="text-orange-700 hover:text-orange-800 text-sm flex items-center gap-1 mb-4"
-          >
-            ← Browse all Prep Tools
-          </Link>
-
-          {/* SECTION 1: HERO */}
-          <ReviewHero
+    <ReviewLayout
+      product={product}
+      slug={PRODUCT_SLUG}
+      affiliateUrl={affiliateUrl}
+      gitDates={gitDates}
+      categoryBreadcrumb={categoryBreadcrumb}
+      faqData={reviewData.faqData}
+      tier={reviewData.metadata.tier as 1 | 2 | 3}
+      testingPeriod={reviewData.tracking.testingPeriod}
+      hook={reviewData.tracking.hook}
+      backLinkHref="/prep-tools"
+      backLinkText="Browse all Prep Tools"
+    >
+      {/* SECTION 1: HERO */}
+      <ReviewHero
             title={reviewData.hero.title}
             authorName="Scott Bradley"
-            authorCredentials="45 Years Cooking Experience"
+            authorCredentials="24 Years in Professional Kitchens"
             rating={productData.expertRating ?? reviewData.hero.rating}
             tierBadge={tierBadge}
             verdict={reviewData.quickVerdict.text}
@@ -433,25 +377,13 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
             </Link>
           </div>
 
-          {/* RELATED PRODUCTS - Using standardized component */}
-          <RelatedProductsGrid
-            title={reviewData.relatedProducts.title}
-            products={reviewData.relatedProducts.products}
-          />
-
-          {/* AUTHOR BIO */}
-          <AuthorBio />
-
-        </div>
-      </div>
-
-      {/* STICKY MOBILE CTA */}
-      <StickyMobileCTAWrapper
-        productName={productData.name}
-        affiliateUrl={affiliateUrl}
-        merchant="amazon"
-        productSlug={productData.slug}
+      {/* RELATED PRODUCTS */}
+      <RelatedProductsGrid
+        title={reviewData.relatedProducts.title}
+        products={reviewData.relatedProducts.products}
       />
-    </>
+
+      {/* AuthorBio, ProductViewTracker, and StickyMobileCTA handled by ReviewLayout */}
+    </ReviewLayout>
   )
 }
