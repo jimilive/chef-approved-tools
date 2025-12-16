@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { getOGImageURL } from '@/lib/og-image'
+import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
@@ -51,25 +52,13 @@ export async function generateMetadata(): Promise<Metadata> {
       url: centralMeta.canonical,
       siteName: 'Chef Approved Tools',
       type: 'article',
-      images: [centralMeta.imageUrl || getOGImageURL({
-        productSlug: PRODUCT_SLUG,
-        title: productData.name,
-        rating: productData.expertRating ?? reviewData.hero.rating,
-        testingPeriod: centralMeta.testingPeriod,
-        tier: centralMeta.tier
-      })],
+      images: [getProductOgImage(PRODUCT_SLUG)],
     },
     twitter: {
       card: 'summary_large_image',
       title: centralMeta.ogTitle || centralMeta.title,
       description: centralMeta.ogDescription || centralMeta.description,
-      images: [centralMeta.imageUrl || getOGImageURL({
-        productSlug: PRODUCT_SLUG,
-        title: productData.name,
-        rating: productData.expertRating ?? reviewData.hero.rating,
-        testingPeriod: centralMeta.testingPeriod,
-        tier: centralMeta.tier
-      })],
+      images: [getProductOgImage(PRODUCT_SLUG)],
     },
   }
 }
@@ -177,6 +166,7 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
             verdictStrong="just works"
             publishedDate={gitDates.firstPublished}
             lastUpdated={gitDates.lastUpdated}
+            heroImage={getProductHeroImage(PRODUCT_SLUG)}
             ctaUrl={affiliateUrl}
             ctaText="Check Price on Amazon"
           />

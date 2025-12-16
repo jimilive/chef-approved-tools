@@ -2,7 +2,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import { getOGImageURL, getStaticHeroImageURL } from '@/lib/og-image'
+import { getOGImageURL } from '@/lib/og-image'
+import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
@@ -61,13 +62,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'Chef Approved Tools',
       images: [
         {
-          url: centralMeta.imageUrl || getOGImageURL({
-            productSlug: PRODUCT_SLUG,
-            title: productData.name,
-            rating: productData.expertRating ?? reviewData.hero.rating,
-            testingPeriod: centralMeta.testingPeriod,
-            tier: centralMeta.tier,
-          }),
+          url: getProductOgImage(PRODUCT_SLUG),
           width: 1200,
           height: 630,
           alt: centralMeta.imageAlt || `${productData.name} - Professional Review`,
@@ -79,13 +74,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title: centralMeta.ogTitle || centralMeta.title,
       description: centralMeta.ogDescription || centralMeta.description,
-      images: [centralMeta.imageUrl || getOGImageURL({
-        productSlug: PRODUCT_SLUG,
-        title: productData.name,
-        rating: productData.expertRating ?? reviewData.hero.rating,
-        testingPeriod: centralMeta.testingPeriod,
-        tier: centralMeta.tier,
-      })],
+      images: [getProductOgImage(PRODUCT_SLUG)],
     },
   }
 }
@@ -206,7 +195,7 @@ export default async function ProductReview() {
             verdictStrong={reviewData.hero.verdictStrong}
             publishedDate={gitDates.firstPublished}
             lastUpdated={gitDates.lastUpdated}
-            heroImage={getStaticHeroImageURL(PRODUCT_SLUG) || (product.images as any)?.hero}
+            heroImage={getProductHeroImage(PRODUCT_SLUG)}
             productName={product.name}
             customCTA={
               <div className="bg-white border-2 border-orange-200 rounded-xl p-6">

@@ -12,7 +12,8 @@
 
 import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
-import { getOGImageURL, getStaticHeroImageURL } from '@/lib/og-image'
+import { getOGImageURL } from '@/lib/og-image'
+import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
@@ -66,13 +67,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'Chef Approved Tools',
       images: [
         {
-          url: centralMeta.imageUrl || getOGImageURL({
-            productSlug: PRODUCT_SLUG,
-            title: product.name,
-            rating: product.expertRating ?? reviewData.hero.rating,
-            testingPeriod: centralMeta.testingPeriod,
-            tier: centralMeta.tier,
-          }),
+          url: getProductOgImage(PRODUCT_SLUG),
           width: 1200,
           height: 630,
           alt: centralMeta.imageAlt || `${product.name} - Professional Review`,
@@ -84,13 +79,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title: centralMeta.ogTitle || centralMeta.title,
       description: centralMeta.ogDescription || centralMeta.description,
-      images: [centralMeta.imageUrl || getOGImageURL({
-        productSlug: PRODUCT_SLUG,
-        title: product.name,
-        rating: product.expertRating ?? reviewData.hero.rating,
-        testingPeriod: centralMeta.testingPeriod,
-        tier: centralMeta.tier,
-      })],
+      images: [getProductOgImage(PRODUCT_SLUG)],
     },
   }
 }
@@ -145,7 +134,7 @@ export default async function ProductReview() {
         tierBadge={tierBadge || reviewData.hero.tierBadge}
         verdict={reviewData.hero.verdict}
         verdictStrong={reviewData.hero.verdictStrong}
-        heroImage={getStaticHeroImageURL(PRODUCT_SLUG) || (product.images as any)?.hero}
+        heroImage={getProductHeroImage(PRODUCT_SLUG)}
         productName={productData.name}
         ctaUrl={affiliateUrl}
       />

@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { getProductBySlug, getPrimaryAffiliateLink, getAllAffiliateLinks } from '@/lib/product-helpers'
 import { generateProductSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { getOGImageURL } from '@/lib/og-image'
+import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
@@ -56,13 +57,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'Chef Approved Tools',
       images: [
         {
-          url: centralMeta.imageUrl || getOGImageURL({
-            productSlug: PRODUCT_SLUG,
-            title: productData.name,
-            rating: productData.expertRating ?? reviewData.hero.rating,
-            testingPeriod: centralMeta.testingPeriod,
-            tier: centralMeta.tier,
-          }),
+          url: getProductOgImage(PRODUCT_SLUG),
           width: 1200,
           height: 630,
           alt: centralMeta.imageAlt || `${productData.name} - Professional Review`,
@@ -74,13 +69,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title: centralMeta.ogTitle || centralMeta.title,
       description: centralMeta.ogDescription || centralMeta.description,
-      images: [centralMeta.imageUrl || getOGImageURL({
-        productSlug: PRODUCT_SLUG,
-        title: productData.name,
-        rating: productData.expertRating ?? reviewData.hero.rating,
-        testingPeriod: centralMeta.testingPeriod,
-        tier: centralMeta.tier,
-      })],
+      images: [getProductOgImage(PRODUCT_SLUG)],
     },
   }
 }
@@ -252,6 +241,7 @@ export default async function HenckelsSharpeningSteelReview() {
             verdictStrong={reviewData.hero.verdictStrong}
             publishedDate={gitDates.firstPublished}
             lastUpdated={gitDates.lastUpdated}
+            heroImage={getProductHeroImage(PRODUCT_SLUG)}
             ctaUrl={affiliateUrl}
             ctaText={reviewData.hero.ctaText}
             customCTA={(
