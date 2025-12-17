@@ -40,7 +40,7 @@ export const reviewData = {
       icon: '🏆',
       text: 'Tier 1: Professional Kitchen Use',
     },
-    verdict: 'Breaking down a whole chicken takes 3 minutes with this knife. The granton edge prevents sticking, and the flexible blade gets close to bones. Also excellent for filleting fish. If you work with whole proteins, this is essential.',
+    verdict: 'Breaking down a whole chicken takes 3 minutes with this knife. The granton edge prevents sticking, and the blade gets close to bones. Also excellent for filleting fish. If you work with whole proteins, this is essential.',
     verdictStrong: 'The essential tool for breaking down proteins',
     ctaText: 'Check Price on Amazon →'
   },
@@ -90,15 +90,15 @@ export const reviewData = {
     sections: [
       {
         title: 'Why I Chose This for My Daily Toolkit',
-        content: 'After 45 years of cooking, I\'ve broken down thousands of chickens, deboned countless pork loins, and filleted more fish than I can count. This knife makes those tasks fast and efficient. The granton edge (those oval indentations along the blade) creates air pockets that prevent meat from sticking to the blade. The flexible blade bends to follow bone contours, giving you maximum yield and minimal waste. A chef\'s knife can break down a chicken, but it\'s not the right tool. This boning knife saves time, reduces waste, and makes butchery work cleaner and more precise.'
+        content: 'After 24 years in professional kitchens, I\'ve broken down thousands of chickens, deboned countless pork loins, and filleted more fish than I can count. This knife makes those tasks fast and efficient. The granton edge (those oval indentations along the blade) creates air pockets that prevent meat from sticking to the blade. The narrow blade profile allows you to work close to bone contours, giving you maximum yield and minimal waste. A chef\'s knife can break down a chicken, but it\'s not the right tool. This boning knife saves time, reduces waste, and makes butchery work cleaner and more precise.'
       },
       {
         title: 'Granton Edge Technology',
         content: 'The oval indentations along the blade create air pockets that prevent meat from sticking. This matters when you\'re making long cuts through proteins - the blade glides smoothly without resistance. Game-changer for efficiency in professional settings where speed matters.'
       },
       {
-        title: 'Flexible Blade Design',
-        content: 'The semi-flexible blade bends to follow bone contours, allowing you to get every bit of meat off the bone. Essential for breaking down chickens, deboning pork, and filleting fish. Provides control and precision that rigid knives can\'t match.'
+        title: 'Narrow Blade Design',
+        content: 'The narrow blade profile allows you to work close to bone contours, getting every bit of meat off the bone. Essential for breaking down chickens, deboning pork, and filleting fish. Provides control and precision for detailed butchery work.'
       },
       {
         title: 'Curved Blade Profile',
@@ -149,8 +149,8 @@ export const reviewData = {
       answer: 'The Granton edge features dimples (also called \'scallops\' or \'kullens\') along the blade that create air pockets, preventing meat from sticking to the knife during slicing.'
     },
     {
-      question: 'Is the blade flexible or stiff?',
-      answer: 'Victorinox offers both! Semi-flexible blades are best for poultry and fish, while stiff blades excel at beef and pork. The semi-stiff is the most versatile choice.'
+      question: 'What blade style is this knife?',
+      answer: 'This is a stiff boning knife, which excels at beef, pork, and poultry. The stiff blade provides more control for working around bones and joints.'
     },
     {
       question: 'What meats is this knife best for?',
@@ -170,7 +170,7 @@ export const reviewData = {
     },
     {
       question: 'What\'s the difference between boning and fillet knives?',
-      answer: 'Boning knives are typically stiffer and better for red meat and poultry. Fillet knives are more flexible and specialized for fish.'
+      answer: 'Boning knives have a stiff blade designed for working around bones in red meat and poultry. Fillet knives have a thinner, more flexible blade specialized for fish.'
     },
     {
       question: 'Can I use this for general cutting tasks?',
@@ -199,7 +199,7 @@ export const reviewData = {
     title: 'The Bottom Line',
     paragraphs: [
       'This is one of the 11 tools I use most in my home kitchen after 20 years of cooking (including 10 professional). If you work with whole proteins, this knife pays for itself in saved money on the first few uses.',
-      'If you work with whole proteins, this knife will pay for itself in saved money within the first month. Professional Swiss quality at a budget price. The granton edge and flexible blade make butchery work faster, cleaner, and more efficient.'
+      'If you work with whole proteins, this knife will pay for itself in saved money within the first month. Professional Swiss quality at a budget price. The granton edge and narrow blade profile make butchery work faster, cleaner, and more efficient.'
     ],
     ctaText: 'Check Price on Amazon →'
   },

@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Calendar, Clock } from 'lucide-react'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
@@ -24,11 +25,11 @@ interface BlogClientProps {
 const CATEGORIES = [
   { id: 'all', label: 'All Posts', color: 'orange' },
   { id: 'Cooking Techniques', label: 'Cooking Techniques', color: 'blue' },
+  { id: 'Comparisons', label: 'Comparisons', color: 'yellow' },
   { id: 'Knife Care', label: 'Knife Care', color: 'green' },
   { id: 'Ingredients', label: 'Ingredients', color: 'purple' },
   { id: 'Buying Guides', label: 'Buying Guides', color: 'amber' },
   { id: 'Kitchen Safety', label: 'Kitchen Safety', color: 'red' },
-  { id: 'Coffee', label: 'Coffee', color: 'yellow' },
 ]
 
 const getCategoryColor = (category: string) => {
@@ -62,18 +63,22 @@ export default function BlogClient({ posts }: BlogClientProps) {
       {/* Header Section - Enhanced with Gradient */}
       <section className="bg-gradient-to-r from-slate-900 via-orange-900 to-slate-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjAzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-50"></div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pb-20 relative">
           <div className="text-center mb-10">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-orange-200 to-white bg-clip-text text-transparent">
-              Professional Cooking Techniques
+              Professional Kitchen Insights
             </h1>
             <p className="text-xl md:text-2xl text-orange-100 max-w-3xl mx-auto mb-6">
               24 years restaurant experience, explained for home cooks
             </p>
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center font-bold text-white">
-                SB
-              </div>
+            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm">
+              <Image
+                src="/images/branding/scott-ai-portrait-circle.jpg"
+                alt="Scott Bradley"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
               <div className="text-left">
                 <div className="font-semibold">Scott Bradley</div>
                 <div className="text-xs text-orange-200">24 Years in Professional Kitchens • {posts.length} Guides</div>

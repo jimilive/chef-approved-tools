@@ -224,7 +224,6 @@ export default function CompleteVictorinoxLineupPage() {
 
           <ul>
             <li>Same steel quality as knives costing 5x more</li>
-            <li>Used in Michelin-starred restaurants worldwide</li>
             <li>Holds edge well with regular honing</li>
             <li>NSF certified for commercial use</li>
           </ul>

@@ -64,9 +64,9 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
 
       let category = 'Cooking Techniques' // default
 
-      // Coffee
-      if (slugLower.includes('coffee') || slugLower.includes('french-press')) {
-        category = 'Coffee'
+      // Comparisons - any post with "vs" in the slug
+      if (slugLower.includes('-vs-')) {
+        category = 'Comparisons'
       }
       // Knife Care - ONLY maintenance, storage, sharpening, and buying guides
       else if (
