@@ -167,10 +167,72 @@ const evaluationCriteria = [
   }
 ]
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.chefapprovedtools.com/about#scott-bradley",
+  "name": "Scott Bradley",
+  "jobTitle": "Professional Chef & Kitchen Equipment Expert",
+  "description": "Professional chef with 24 years of professional kitchen experience. A.A.S. Culinary Arts from Seattle Central College, B.S. Business Administration from University of Montana.",
+  "url": "https://www.chefapprovedtools.com/about",
+  "image": "https://www.chefapprovedtools.com/images/team/head-shot-1.jpg",
+  "sameAs": [],
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Seattle Central College",
+      "url": "https://seattlecentral.edu"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Montana",
+      "url": "https://www.umt.edu"
+    }
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "degree",
+      "name": "A.A.S. Culinary Arts",
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "Seattle Central College"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "degree",
+      "name": "B.S. Business Administration",
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Montana"
+      }
+    }
+  ],
+  "knowsAbout": [
+    "Professional Cooking",
+    "Kitchen Equipment Reviews",
+    "Restaurant Operations",
+    "Commercial Kitchen Equipment",
+    "Chef Knives",
+    "Cookware",
+    "Kitchen Appliances",
+    "Pizza Making",
+    "Food Safety"
+  ],
+  "worksFor": {
+    "@id": "https://www.chefapprovedtools.com/#organization"
+  }
+}
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       <FAQSchema faqs={combinedFAQs} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
 
       {/* Section 1: Personal Introduction - The "Who" */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
@@ -391,7 +453,7 @@ export default function AboutPage() {
               </div>
               <h5 className="font-bold text-slate-900 mb-3">Professional Recommendation</h5>
               <p className="text-sm text-slate-900 mb-3">
-                Informed opinions based on 45 years of cooking experience (including 24 years professionally) and understanding what
+                Informed opinions based on 24 years of professional kitchen experience and understanding what
                 makes equipment work in real kitchens.
               </p>
               <p className="text-xs text-slate-700 italic">

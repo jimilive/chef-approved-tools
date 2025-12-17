@@ -31,28 +31,7 @@ export const organizationSchema = {
     "https://www.pinterest.com/chefapprovedtools"
   ],
   founder: {
-    "@type": "Person",
-    name: "Professional Chef",
-    jobTitle: "Executive Chef & Restaurant Manager",
-    alumniOf: [
-      {
-        "@type": "EducationalOrganization",
-        name: "Seattle Central College",
-        department: "Culinary Arts Program"
-      },
-      {
-        "@type": "EducationalOrganization",
-        name: "University of Montana",
-        department: "Business Administration"
-      }
-    ],
-    knowsAbout: [
-      "Professional Cooking",
-      "Restaurant Management",
-      "Kitchen Equipment",
-      "Culinary Techniques",
-      "Food Safety"
-    ]
+    "@id": "https://www.chefapprovedtools.com/about#scott-bradley"
   },
   contactPoint: {
     "@type": "ContactPoint",
@@ -136,7 +115,7 @@ export function generateProductSchema(product: any) {
         url: "https://www.chefapprovedtools.com/about",
         image: "https://www.chefapprovedtools.com/images/team/head-shot-1.jpg",
         jobTitle: "Kitchen Manager & Culinary Professional",
-        description: "Professional chef with 45 years of cooking experience and 24 years in restaurant management. A.A.S. Culinary Arts from Seattle Central College.",
+        description: "Professional chef with 24 years of professional kitchen experience. A.A.S. Culinary Arts from Seattle Central College.",
         sameAs: [
           "https://www.chefapprovedtools.com/about"
         ],
