@@ -4,6 +4,7 @@ import {
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import HowToSchema from '@/components/HowToSchema';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Flame, CheckCircle2 } from 'lucide-react';
@@ -83,6 +84,19 @@ export default function HowToPreheatPanPost() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <HowToSchema
+        name="How to Preheat a Pan Properly"
+        description="Professional chef technique for preheating stainless steel and cast iron pans to prevent sticking and achieve perfect sears."
+        datePublished="2025-10-02"
+        totalTime="PT5M"
+        tools={["Stainless steel or cast iron pan", "Cooking oil with high smoke point"]}
+        steps={[
+          { name: "Place Pan on Burner", text: "Set your pan on the burner over medium heat. Starting with medium (not high) gives you control and prevents warping." },
+          { name: "Wait 2-3 Minutes", text: "Let the pan heat undisturbed for 2-3 minutes. The metal needs time to heat evenly across the entire surface." },
+          { name: "Test with Water Droplet", text: "Flick a few drops of water onto the pan. If they sizzle and evaporate slowly, it's not ready. If they bead up and dance across the surface (Leidenfrost effect), the pan is properly preheated." },
+          { name: "Add Oil", text: "Add oil to the hot pan. It should shimmer and flow easily across the surface, indicating proper temperature for cooking." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="How To Preheat A Pan (Most People Do This Wrong)">

@@ -4,6 +4,7 @@ import {
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import HowToSchema from '@/components/HowToSchema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Thermometer, AlertTriangle, Clock, Flame } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -84,6 +85,22 @@ export default function MakingStockPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <HowToSchema
+        name="How to Make Stock: Professional Chef Method"
+        description="Restaurant-quality stock making technique from 6 years at Purple Café. Learn proper bone preparation, simmering, skimming, and straining for rich, flavorful stock."
+        datePublished="2025-09-07"
+        totalTime="PT10H"
+        tools={["Large stockpot (12+ quarts)", "Fine-mesh strainer or cheesecloth", "Ladle", "Roasting pan (for brown stock)"]}
+        steps={[
+          { name: "Prepare the Bones", text: "For brown stock, roast bones at 400°F for 45-60 minutes until deeply browned. For white stock, rinse bones under cold water. Use 5-6 lbs bones per gallon of water." },
+          { name: "Start with Cold Water", text: "Place bones in stockpot and cover with cold water by 2 inches. Starting cold allows proteins to dissolve gradually for clearer stock." },
+          { name: "Bring to a Simmer Slowly", text: "Heat gradually over medium-low. Never boil—boiling emulsifies fats and clouds the stock. You want gentle bubbles breaking the surface." },
+          { name: "Skim Constantly", text: "Skim foam and impurities every few minutes during the first hour. This removes coagulated proteins that would cloud the stock and create off-flavors." },
+          { name: "Add Aromatics", text: "After skimming, add mirepoix (onion, carrot, celery), peppercorns, bay leaves, and thyme. Don't add salt—stock will be reduced and seasoned later." },
+          { name: "Simmer for Hours", text: "Simmer chicken stock 8 hours, beef stock 12-16 hours. Maintain barely-there bubbles. Add water if level drops below bones." },
+          { name: "Strain and Cool", text: "Strain through fine-mesh strainer lined with cheesecloth. Cool quickly in ice bath to below 40°F within 2 hours. Remove solidified fat from chilled stock." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="Making Stock: The Professional Chef Method">

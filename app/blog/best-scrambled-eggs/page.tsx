@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, Clock, User, Egg } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import HowToSchema from '@/components/HowToSchema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
@@ -90,6 +91,21 @@ export default function BestScrambledEggs() {
             }
           ]))
         }}
+      />
+      <HowToSchema
+        name="How to Make Perfect Scrambled Eggs (No Bowl Method)"
+        description="Professional chef technique for creamy scrambled eggs without using a bowl. Skip the whisk, skip the cleanup—this pan-only method takes 2 minutes."
+        datePublished="2025-10-09"
+        totalTime="PT3M"
+        tools={["Nonstick pan", "Rubber spatula or wooden spoon", "Butter"]}
+        steps={[
+          { name: "Heat Pan to Medium-Low", text: "Place nonstick pan over medium-low heat. Low heat is essential—eggs cooked too fast become rubbery. Let pan warm for 1 minute." },
+          { name: "Add Butter", text: "Add 1 tablespoon butter and let it melt completely, swirling to coat the pan. Don't let it brown." },
+          { name: "Crack Eggs Directly into Pan", text: "Crack 2-3 eggs directly into the warm, buttered pan. No bowl, no whisk—they go straight in." },
+          { name: "Break Yolks and Stir", text: "Using a spatula, break the yolks and begin stirring continuously. The whites and yolks will combine as you stir—this replaces whisking in a bowl." },
+          { name: "Keep Moving Constantly", text: "Stir continuously, scraping the bottom and sides. Form small, soft curds. Total cooking time is about 2 minutes." },
+          { name: "Remove While Still Wet", text: "Remove from heat when eggs still look slightly underdone and glossy. They continue cooking off-heat for 30 seconds. Season with salt and pepper, serve immediately." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="Stop Using a Bowl for Scrambled Eggs">

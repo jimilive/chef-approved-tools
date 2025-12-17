@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Scissors } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import HowToSchema from '@/components/HowToSchema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import ProductImpressionTracker from '@/components/ProductImpressionTracker'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
@@ -103,6 +104,20 @@ export default async function HowToSteelAKnife() {
             }
           ]))
         }}
+      />
+      <HowToSchema
+        name="How to Steel a Knife"
+        description="Learn proper knife honing technique using a honing steel. Professional chef guide to maintaining razor-sharp edges between sharpenings."
+        datePublished="2025-09-13"
+        totalTime="PT2M"
+        tools={["Honing steel (traditional rod)", "Kitchen knife"]}
+        steps={[
+          { name: "Grip the Steel Securely", text: "Hold the honing steel vertically with the tip resting on a cutting board or towel for stability. Keep your grip firm but relaxed." },
+          { name: "Position the Knife", text: "Place the knife heel against the steel at a 15-20 degree angle (roughly the angle of a matchbook). The blade should be perpendicular to the steel." },
+          { name: "Draw the Blade Down", text: "Using light pressure, draw the knife down and across the steel in a sweeping motion from heel to tip. Maintain the same angle throughout the stroke." },
+          { name: "Alternate Sides", text: "Repeat on the opposite side of the blade. Perform 5-8 strokes per side, alternating after each stroke for even honing." },
+          { name: "Test the Edge", text: "Test sharpness with the paper test—hold paper vertically and slice down. A properly honed knife cuts cleanly without tearing." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="How to Steel a Knife">

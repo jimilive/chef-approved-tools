@@ -4,6 +4,7 @@ import {
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import HowToSchema from '@/components/HowToSchema';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, AlertTriangle, CheckCircle2 } from 'lucide-react';
@@ -68,6 +69,21 @@ export default function RouxPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <HowToSchema
+        name="How to Make a Perfect Roux"
+        description="Master the foundation of classic sauces. Learn to make white, blonde, and dark roux with professional technique for béchamel, gravy, and gumbo."
+        datePublished="2025-09-24"
+        totalTime="PT10M"
+        tools={["Heavy-bottomed saucepan", "Whisk or wooden spoon", "Measuring cups"]}
+        steps={[
+          { name: "Measure Equal Parts", text: "Use equal parts fat and flour by weight (e.g., 2 oz butter to 2 oz flour). This ratio ensures proper thickening without greasiness or pastiness." },
+          { name: "Melt the Fat", text: "Melt butter (or other fat) over medium heat until foaming subsides. Don't let it brown unless making a dark roux." },
+          { name: "Add Flour All at Once", text: "Add all the flour at once and stir immediately. This prevents lumps and ensures even cooking." },
+          { name: "Cook and Stir Constantly", text: "Stir constantly to prevent burning. For white roux: 2-3 minutes (no color). For blonde roux: 4-5 minutes (light tan). For dark roux: 30-40 minutes (deep brown)." },
+          { name: "Test for Raw Flour Smell", text: "The roux is ready when the raw flour smell disappears and it smells nutty. White roux should still be pale; darker roux develops deeper color and aroma." },
+          { name: "Add Liquid or Cool", text: "Either add hot liquid gradually while whisking to make a sauce, or spread on a plate to cool for later use. Roux keeps refrigerated for weeks." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="How to Make a Perfect Roux">

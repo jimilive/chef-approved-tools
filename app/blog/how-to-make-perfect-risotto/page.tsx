@@ -4,6 +4,7 @@ import {
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import HowToSchema from '@/components/HowToSchema';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, AlertTriangle, Lightbulb } from 'lucide-react';
@@ -72,6 +73,22 @@ export default function PerfectRisottoPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <HowToSchema
+        name="How to Make Perfect Risotto"
+        description="Master restaurant-quality risotto with proper Italian technique. Learn the science of starch release for creamy risotto without cream."
+        datePublished="2025-09-30"
+        totalTime="PT35M"
+        tools={["Wide, heavy-bottomed pan or Dutch oven", "Wooden spoon", "Ladle", "Saucepan for stock"]}
+        steps={[
+          { name: "Heat the Stock", text: "Bring 6 cups of stock to a simmer in a separate pot. Keep it hot throughout cooking—cold stock shocks the rice and creates uneven texture." },
+          { name: "Make the Soffritto", text: "Sauté finely diced onion in butter and olive oil over medium heat until translucent, about 3-4 minutes. Don't brown." },
+          { name: "Toast the Rice", text: "Add 1.5 cups Arborio or Carnaroli rice. Stir to coat with fat and toast for 2 minutes until edges become translucent. This develops nutty flavor." },
+          { name: "Add Wine", text: "Pour in 1/2 cup dry white wine. Stir until completely absorbed. The acid helps break down the rice's outer layer." },
+          { name: "Add Stock Gradually", text: "Add one ladle of hot stock at a time, stirring frequently. Wait until each addition is mostly absorbed before adding more. This takes 18-22 minutes." },
+          { name: "Test for Doneness", text: "Taste the rice—it should have slight resistance (al dente) but not be crunchy. The texture should be creamy and flow slowly." },
+          { name: "Finish with Mantecatura", text: "Remove from heat. Vigorously stir in cold butter and grated Parmigiano-Reggiano. This creates the final creamy emulsion. Serve immediately." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="Perfect Risotto: Italian Restaurant Technique Explained">

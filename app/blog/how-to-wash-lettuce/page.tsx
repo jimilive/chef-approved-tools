@@ -6,6 +6,7 @@ import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import HowToSchema from '@/components/HowToSchema';
 
 export const metadata = generateBlogMetadata('how-to-wash-lettuce');
 
@@ -27,7 +28,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 
 export default function HowToWashLettucePage() {
   return (
-    <BlogLayout breadcrumbTitle="How to Wash Lettuce Properly">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -36,6 +37,23 @@ export default function HowToWashLettucePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <HowToSchema
+        name="How to Wash Lettuce Properly"
+        description="Professional chef technique for washing lettuce. Learn the lifting method and three-wash rule used in restaurant kitchens for perfectly clean greens."
+        datePublished="2025-11-20"
+        totalTime="PT10M"
+        tools={["Large bowl or clean sink", "Salad spinner", "Clean towels"]}
+        steps={[
+          { name: "Fill Container with Cold Water", text: "Fill a large bowl or clean sink with cold water. Use enough water so lettuce can float freely and move around when agitated." },
+          { name: "Separate and Submerge Leaves", text: "Separate lettuce leaves from the head. Submerge leaves completely in the water, pushing them under gently." },
+          { name: "Agitate Gently", text: "Swish the leaves around in the water for 20-30 seconds to dislodge dirt and grit. Be gentle to avoid bruising delicate leaves." },
+          { name: "Let Dirt Settle", text: "Stop agitating and wait 15-30 seconds. Dirt, sand, and grit are heavier than water and will sink to the bottom." },
+          { name: "Lift Greens Out", text: "Lift the lettuce up and out of the water—never pour or drain. This leaves the settled dirt behind in the water." },
+          { name: "Repeat Three Times", text: "Empty dirty water, refill with fresh cold water, and repeat the wash process. Three washes removes virtually all contamination." },
+          { name: "Dry the Lettuce", text: "Spin in a salad spinner or pat dry with clean towels. Wet lettuce dilutes dressings and doesn't store well." }
+        ]}
+      />
+      <BlogLayout breadcrumbTitle="How to Wash Lettuce Properly">
 
       <BlogHero
         title="How to Wash Lettuce Properly"
@@ -304,5 +322,6 @@ export default function HowToWashLettucePage() {
         ]}
       />
     </BlogLayout>
+    </>
   );
 }

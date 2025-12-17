@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import HowToSchema from '@/components/HowToSchema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
@@ -87,6 +88,23 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
             }
           ]))
         }}
+      />
+      <HowToSchema
+        name="How to Make Perfect French Press Coffee"
+        description="Master French press coffee with professional technique. Learn the perfect ratio, timing, and method for cafe-quality coffee at home."
+        datePublished="2025-10-24"
+        totalTime="PT10M"
+        tools={["French press (8-cup/34oz)", "Burr coffee grinder", "Kitchen scale", "Kettle", "Timer"]}
+        steps={[
+          { name: "Heat Water", text: "Bring water to a boil, then let it cool for 30-45 seconds to reach 200°F (93°C). Water that's too hot over-extracts and creates bitter coffee." },
+          { name: "Measure and Grind Coffee", text: "Weigh 60g of coffee beans. Grind coarse—like raw sugar or coarse sea salt. You should still see the original bean shape on most particles." },
+          { name: "Pre-warm the Press", text: "Pour hot water into the empty French press to warm the glass. Swirl and discard. This prevents temperature drop during brewing." },
+          { name: "Add Coffee and Bloom", text: "Add ground coffee to the press. Pour 120g of water to saturate grounds. Wait 30 seconds for CO2 to release (you'll see bubbles)." },
+          { name: "Add Remaining Water", text: "Pour remaining water (840g) in a slow, steady stream. Total water: 960g. Place the lid on with plunger pulled up." },
+          { name: "Steep for 4 Minutes", text: "Set a timer for exactly 4 minutes. Don't touch the press—let the coffee steep undisturbed for proper extraction." },
+          { name: "Press Slowly", text: "Press the plunger down with slow, steady pressure over 15-20 seconds. Forcing it down fast stirs up fine particles and makes coffee muddy." },
+          { name: "Serve Immediately", text: "Pour all coffee into cups or a thermal carafe immediately. Coffee left in the press continues extracting and becomes bitter." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="How to Make Perfect French Press Coffee">

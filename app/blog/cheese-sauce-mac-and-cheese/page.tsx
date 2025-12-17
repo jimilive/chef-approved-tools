@@ -5,6 +5,7 @@ import {
   generateFAQSchema
 } from '@/lib/schema';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
+import HowToSchema from '@/components/HowToSchema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, AlertTriangle, ThermometerSun } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -76,6 +77,18 @@ export default function CheeseSaucePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <HowToSchema
+        name="How to Make a Cheese Sauce (Mac and Cheese)"
+        description="Learn the professional technique for silky, smooth cheese sauce every time. Master béchamel, avoid graininess, and make restaurant-quality mac and cheese that never breaks."
+        datePublished="2025-09-29"
+        totalTime="PT20M"
+        tools={["Heavy-bottomed saucepan", "Whisk", "Wooden spoon"]}
+        steps={[
+          { name: "Make the Roux", text: "In a heavy-bottomed saucepan, melt butter over medium heat. Whisk in flour all at once. Cook the roux for 2-3 minutes, whisking constantly, until it smells nutty and reaches a pale blond color." },
+          { name: "Stream in Warm Milk", text: "Add warm milk (120-140°F) in 3-4 additions, whisking vigorously after each. Simmer gently for 2-3 minutes until smooth and thick enough to coat a spoon. Season lightly with salt." },
+          { name: "Remove from Heat and Add Cheese", text: "Take the pot completely off the burner. Let it sit for 30-60 seconds until around 150-160°F. Add shredded cheese gradually, stirring gently until each addition is melted before adding more. Never return to high heat." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="How to Make a Cheese Sauce">

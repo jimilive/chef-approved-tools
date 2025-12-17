@@ -5,6 +5,7 @@ import {
   generateFAQSchema
 } from '@/lib/schema';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
+import HowToSchema from '@/components/HowToSchema';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { Scissors, Leaf, Droplet, AlertTriangle, Lightbulb, Flame } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
@@ -75,6 +76,20 @@ export default function HerbsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <HowToSchema
+        name="How to Cut and Store Fresh Herbs"
+        description="Master professional techniques for cutting, storing, and preserving fresh herbs. Learn why technique matters and how to keep herbs fresh for days."
+        datePublished="2025-09-14"
+        tools={["Sharp chef's knife or kitchen scissors", "Salad spinner", "Paper towels", "Glass jar or container", "Plastic bag"]}
+        steps={[
+          { name: "Wash Herbs Properly", text: "Fill a large bowl with cold water. Submerge herbs and agitate gently. Lift herbs out (dirt sinks to bottom). Repeat if water is dirty. Never run herbs under direct stream—it damages leaves." },
+          { name: "Dry Herbs Thoroughly", text: "Place washed herbs in a salad spinner and spin until no water droplets remain. This is critical—wet herbs oxidize faster and become slimy in storage." },
+          { name: "Cut with Sharp Knife", text: "Use a very sharp knife to slice cleanly through herb cells with minimal crushing. For basil, use chiffonade method: stack leaves, roll tightly, slice thin ribbons. For cilantro/parsley, group stems and chop with rocking motion. Dull knives bruise herbs and cause rapid blackening." },
+          { name: "Store Tender Herbs in Water", text: "For cilantro, parsley, and mint: trim ½ inch from stem bottoms, place in glass with 1-2 inches of water, cover loosely with plastic bag, refrigerate. Change water every 2-3 days. Lasts 1-2 weeks." },
+          { name: "Store Hardy Herbs in Damp Towel", text: "For rosemary, thyme, sage: lay herbs on damp (not wet) paper towel, roll loosely, place in plastic bag or container, refrigerate. Lasts 1-2 weeks." },
+          { name: "Handle Basil Specially", text: "Basil hates cold—never refrigerate. Store at room temperature with stems in water, loosely covered. Cut basil immediately before use as it oxidizes within 10-15 minutes." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="How To Cut & Store Fresh Herbs (Stay Fresh For Weeks)">

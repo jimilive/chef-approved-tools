@@ -4,6 +4,7 @@ import {
   generateBreadcrumbSchema,
   generateFAQSchema
 } from '@/lib/schema';
+import HowToSchema from '@/components/HowToSchema';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Droplets, FlaskConical, AlertTriangle } from 'lucide-react';
@@ -108,6 +109,21 @@ export default function CastIronCarePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <HowToSchema
+        name="How to Season Cast Iron Cookware"
+        description="Professional oven seasoning method for cast iron pans and skillets. Build durable, naturally non-stick seasoning that lasts decades."
+        datePublished="2025-09-27"
+        totalTime="PT2H"
+        tools={["Cast iron pan", "Vegetable shortening or grapeseed oil", "Paper towels", "Aluminum foil", "Oven"]}
+        steps={[
+          { name: "Clean the Pan", text: "Wash the pan with hot water and mild soap to remove any residue. Dry completely—water causes rust. For new pans, this removes factory coatings." },
+          { name: "Preheat Oven to 400°F", text: "Set oven to 400°F (or just below your oil's smoke point). Place aluminum foil on the bottom rack to catch drips." },
+          { name: "Apply a Thin Layer of Oil", text: "Apply a very thin layer of vegetable shortening or grapeseed oil to the entire pan—inside, outside, and handle. Then wipe it all off with a clean paper towel until it looks almost dry." },
+          { name: "Bake Upside Down for 1 Hour", text: "Place the pan upside down on the middle oven rack. Bake for 1 hour. The inverted position prevents oil from pooling." },
+          { name: "Cool in Oven", text: "Turn off the oven and let the pan cool inside for at least 1 hour. Avoid thermal shock from rapid cooling." },
+          { name: "Repeat for Best Results", text: "For optimal seasoning, repeat the oil application and baking process 3-4 times. Each layer builds a more durable, slick surface." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="Cast Iron Seasoning & Care">

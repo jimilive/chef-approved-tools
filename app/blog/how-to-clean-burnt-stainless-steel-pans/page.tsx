@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Sparkles, AlertTriangle } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import HowToSchema from '@/components/HowToSchema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
@@ -80,6 +81,22 @@ export default function CleanBurntStainlessSteelPost() {
             }
           ]))
         }}
+      />
+      <HowToSchema
+        name="How to Clean Burnt Stainless Steel Pans"
+        description="Professional chef method for cleaning burnt stainless steel cookware without damaging the surface. Safe, effective techniques using common household items."
+        datePublished="2025-10-18"
+        totalTime="PT30M"
+        tools={["Nylon scrub brush or non-abrasive sponge", "Bar Keepers Friend", "Baking soda", "White vinegar", "Hot water"]}
+        steps={[
+          { name: "Let Pan Cool Completely", text: "Never put cold water on a hot pan—thermal shock can warp stainless steel. Let it cool to room temperature first." },
+          { name: "Soak in Hot Water", text: "Fill the pan with hot water and let it soak for 15-30 minutes. This loosens burnt-on food and makes scrubbing easier." },
+          { name: "Make Baking Soda Paste", text: "Mix baking soda with just enough water to form a thick paste. This mild abrasive is safe for stainless steel." },
+          { name: "Apply and Scrub Gently", text: "Apply paste to burnt areas. Scrub with a nylon brush using circular motions. Never use steel wool—it scratches the surface permanently." },
+          { name: "Use Vinegar for Stubborn Spots", text: "For tough burns, add white vinegar to the pan, bring to a simmer, then scrub. The acid helps break down carbonized residue." },
+          { name: "Polish with Bar Keepers Friend", text: "For final polish or rainbow discoloration, apply Bar Keepers Friend, scrub gently, and rinse. This restores the original shine." },
+          { name: "Dry Immediately", text: "Dry the pan completely with a clean towel to prevent water spots and maintain the finish." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="How to Clean Burnt Stainless Steel Pans">

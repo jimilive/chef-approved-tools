@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import HowToSchema from '@/components/HowToSchema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
@@ -87,6 +88,22 @@ export default function HowToSharpenWithTriStonePage() {
             }
           ]))
         }}
+      />
+      <HowToSchema
+        name="How to Sharpen a Knife with a Whetstone"
+        description="Professional chef technique for sharpening kitchen knives using a tri-stone system. Learn angle control, burr formation, and grit progression."
+        datePublished="2025-10-16"
+        totalTime="PT20M"
+        tools={["Tri-stone sharpening system (Norton IM200 or similar)", "Honing oil", "Towel", "Kitchen knife"]}
+        steps={[
+          { name: "Set Up the Stone", text: "Place the tri-stone on a stable surface with a towel underneath. Apply honing oil liberally to the coarse stone. Oil prevents metal particles from clogging the stone." },
+          { name: "Establish the Angle", text: "Position knife at 15-20 degrees (use coin trick: stack two quarters under spine of 8-inch knife). Lock wrists and maintain this angle throughout." },
+          { name: "Form the Burr on Coarse Stone", text: "Draw knife across coarse stone from heel to tip with moderate pressure. Repeat 20-30 strokes until you feel a burr along the entire edge. Flip and repeat on other side." },
+          { name: "Refine on Medium Stone", text: "Switch to medium stone. Apply fresh oil. Use lighter pressure and 15-20 strokes per side. The burr becomes smaller and more refined." },
+          { name: "Polish on Fine Stone", text: "Switch to fine stone with fresh oil. Use very light pressure—just the weight of the knife. Alternate sides after each stroke for 10-15 passes." },
+          { name: "Remove the Burr", text: "On the fine stone, make 5-10 alternating passes with minimal pressure to break off the remaining burr cleanly." },
+          { name: "Test Sharpness", text: "Test with paper test (slice vertically) or tomato test (slice without downward pressure). A properly sharpened knife glides through effortlessly." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="How to Sharpen with a Stone: Professional Technique">

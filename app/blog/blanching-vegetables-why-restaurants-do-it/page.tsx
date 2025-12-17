@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Timer, Thermometer, Droplets, Sparkles } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import HowToSchema from '@/components/HowToSchema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
@@ -82,6 +83,20 @@ export default function BlanchingVegetablesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <HowToSchema
+        name="How to Blanch Vegetables Like a Restaurant"
+        description="Learn why professional kitchens blanch vegetables before service. Preserve color, texture, and flavor with a chef-tested method for perfect results."
+        datePublished="2025-10-07"
+        totalTime="PT15M"
+        tools={["Large stockpot (8-quart minimum)", "Spider strainer or slotted spoon", "Large bowl for ice bath", "Kitchen timer", "Clean towels"]}
+        steps={[
+          { name: "Prep Salted Boiling Water", text: "Fill a large stockpot with water and add 1 tablespoon kosher salt per quart. The water should taste like the sea. Bring to a rolling boil—bubbles should be aggressive across the entire surface." },
+          { name: "Prepare Ice Bath", text: "Fill a large bowl with a 50/50 ratio of ice to water. You need at least a gallon of ice water for every pound of vegetables. The ice bath must be ready before you start blanching." },
+          { name: "Blanch in Small Batches", text: "Add vegetables to boiling water in small batches (about 1 pound at a time) to maintain water temperature. Blanch briefly: green beans 2-3 min, broccoli 1½-2 min, asparagus 2-4 min depending on thickness." },
+          { name: "Shock Immediately", text: "Transfer vegetables to ice bath within 5 seconds using a spider strainer. Leave in ice bath until completely cold to the touch (2-3 minutes). This stops cooking and locks in color." },
+          { name: "Drain and Dry Thoroughly", text: "Remove from ice bath and spread in a single layer on clean kitchen towels. Pat dry gently. Store blanched vegetables in the refrigerator for up to 2-3 days before final cooking." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="Why Restaurant Vegetables Stay Vibrant">

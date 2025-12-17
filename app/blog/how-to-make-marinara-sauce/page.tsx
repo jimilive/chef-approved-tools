@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Calendar, Clock, User, Target, Check, AlertTriangle } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import HowToSchema from '@/components/HowToSchema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
@@ -81,6 +82,20 @@ export default function MarinaraSaucePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <HowToSchema
+        name="How to Make Marinara Sauce: Authentic Italian Technique"
+        description="Learn authentic Italian marinara sauce technique. Five ingredients, 30-45 minutes, professional results."
+        datePublished="2025-01-20"
+        totalTime="PT45M"
+        tools={["12-inch sauté pan or skillet", "Sharp knife", "Wooden spoon", "Bowl for crushing tomatoes"]}
+        steps={[
+          { name: "Prepare the Tomatoes", text: "Open can of whole tomatoes, pour into bowl, and hand-crush each tomato into roughly 1-inch pieces. Reserve the juice." },
+          { name: "Toast the Garlic", text: "Heat 3 tablespoons olive oil in a wide pan over medium heat. Add thinly sliced garlic and cook 2-3 minutes until fragrant and light golden." },
+          { name: "Add Tomatoes and Salt", text: "Add crushed tomatoes and reserved juice immediately when garlic is ready. Add 1 teaspoon kosher salt and stir to combine." },
+          { name: "Simmer and Reduce", text: "Bring to a simmer, reduce heat to medium-low, and cook uncovered for 30-40 minutes, stirring every 5-7 minutes until thickened." },
+          { name: "Add Basil and Finish", text: "Turn off heat, tear 8-10 fresh basil leaves into sauce, stir, and let sit 2-3 minutes. Taste and adjust salt as needed." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="How to Make Marinara Sauce">

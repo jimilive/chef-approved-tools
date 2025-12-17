@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Droplets, Thermometer, Eye, Clock } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import HowToSchema from '@/components/HowToSchema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
@@ -82,6 +83,21 @@ export default function ReducingSaucesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <HowToSchema
+        name="How to Reduce Sauces Like a Professional Chef"
+        description="Professional chef explains the art of reducing sauces — how to concentrate flavor, control consistency, and create restaurant-quality reductions at home."
+        datePublished="2025-09-09"
+        totalTime="PT30M"
+        tools={["Wide shallow pan (saucier or skillet)", "Wooden spoon or heat-resistant scraper", "Ladle for skimming", "Thermometer (optional)"]}
+        steps={[
+          { name: "Start with a Flavorful Base", text: "Use homemade stock, pan drippings, or wine—not watery broth. Avoid store-bought broths with added salt, as salt concentrates during reduction and can make the sauce too salty." },
+          { name: "Choose the Right Pan", text: "Use a wide, shallow pan to maximize surface area for evaporation. Stainless steel sauciers or skillets work best. Avoid aluminum pans when reducing acidic liquids like wine or tomato-based sauces." },
+          { name: "Bring to a Gentle Simmer", text: "Heat the liquid to a gentle simmer with small, lazy bubbles—never a full boil. Keep the lid off throughout the process. Target temperature is around 195°F." },
+          { name: "Skim Impurities Regularly", text: "Every few minutes, use a ladle or spoon to skim off impurities, proteins, and fat that rise to the surface. This keeps your sauce clear and clean-tasting." },
+          { name: "Watch, Stir, and Taste", text: "Stir occasionally to prevent scorching. Taste throughout the process—the balance changes as water evaporates. Don't season heavily early; salt concentrates during reduction." },
+          { name: "Stop at Nappe Consistency", text: "The sauce is done when it coats the back of a spoon and leaves a clean trail when you drag your finger through it. Pull it early if unsure—it continues thickening off heat. Finish with cold butter whisked in for shine." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="Sauce Reduction: Restaurant Technique Explained">

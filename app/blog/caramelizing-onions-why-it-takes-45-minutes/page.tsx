@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Flame, Clock, ThermometerSun, Beaker } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import HowToSchema from '@/components/HowToSchema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
@@ -82,6 +83,20 @@ export default function CaramelizingOnionsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <HowToSchema
+        name="How to Caramelize Onions"
+        description="Professional chef explains the real process of caramelizing onions — why patience, temperature, and technique matter more than shortcuts."
+        datePublished="2025-09-19"
+        totalTime="PT45M"
+        tools={["10-inch skillet (stainless steel or cast iron)", "Sharp knife", "Scraper"]}
+        steps={[
+          { name: "Prep the Onions", text: "Slice onions pole to pole, about ⅛\" thick. Thinner burns, thicker takes forever. Use a sharp knife — dull blades crush, releasing water too fast." },
+          { name: "Start with Fat", text: "Heat 2 tbsp of butter and a touch of oil in the pan over medium heat. The oil raises the butter's smoke point, giving you cushion." },
+          { name: "Sweat and Steam", text: "Add the onions and a pinch of salt. Stir to coat evenly. At first, they'll soften and release moisture. This isn't caramelization — it's prep work. Keep the heat steady. If you hear sizzling, reduce it." },
+          { name: "The Slow Browning", text: "Stir every 5–7 minutes, scraping the fond (those brown bits) from the pan. If the pan dries or starts to stick, add a splash of water or stock to deglaze. The onions will shift from white → gold → deep amber. Each shade is sweeter than the last." },
+          { name: "The Finish", text: "When the onions are mahogany brown and jammy, deglaze one last time with water, wine, or sherry. Stir and reduce. The texture should be glossy and thick, not oily. Taste — if they're bitter, you went too hot. If they're bland, you didn't go long enough." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="Why Caramelized Onions Take 45 Minutes (Not 10)">

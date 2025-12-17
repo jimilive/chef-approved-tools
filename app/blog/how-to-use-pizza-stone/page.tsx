@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Calendar, Clock, User, Target, Check, Flame } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import HowToSchema from '@/components/HowToSchema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
@@ -81,6 +82,22 @@ export default function PizzaStonePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <HowToSchema
+        name="How to Use a Pizza Stone"
+        description="Master pizza stone technique for home ovens. Learn proper preheating, temperature management, and transfer techniques for crispy pizzeria-style crusts."
+        datePublished="2025-01-20"
+        totalTime="PT75M"
+        tools={["Pizza stone (¾-inch thick)", "Pizza peel or parchment paper", "Oven", "Infrared thermometer (optional)"]}
+        steps={[
+          { name: "Place Stone in Cold Oven", text: "Position the pizza stone on the middle or lower rack of a cold oven. Never place a cold stone in a hot oven—thermal shock causes cracking." },
+          { name: "Preheat for 45-60 Minutes", text: "Set oven to maximum temperature (500-550°F). Preheat for a full 45-60 minutes. The stone needs this time to reach proper surface temperature for crispy crusts." },
+          { name: "Prepare Your Pizza", text: "While the stone preheats, stretch your dough and add toppings. Use minimal sauce (2-3 tablespoons) and don't overload toppings—wet toppings cause soggy crusts." },
+          { name: "Transfer Pizza to Stone", text: "Dust your pizza peel with cornmeal or semolina. Slide the pizza onto the preheated stone with a quick back-and-forth motion. Work quickly to minimize heat loss." },
+          { name: "Bake Until Done", text: "Bake for 8-12 minutes until the crust is golden brown and cheese is bubbling. Rotate pizza halfway through if your oven has hot spots." },
+          { name: "Remove and Rest", text: "Use the peel to slide the pizza off the stone. Let it rest 2-3 minutes before slicing—this allows cheese to set and prevents burns." },
+          { name: "Let Stone Cool in Oven", text: "Leave the stone in the oven and let it cool completely with the oven. Never run water on a hot stone or remove it immediately—thermal shock causes cracking." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="How to Use a Pizza Stone">

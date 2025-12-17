@@ -6,6 +6,7 @@ import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
 import RelatedPosts from '@/components/blog/RelatedPosts';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import HowToSchema from '@/components/HowToSchema';
 
 export const metadata = generateBlogMetadata('how-to-prep-and-grill-asparagus');
 
@@ -27,7 +28,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 
 export default function HowToPrepAndGrillAsparagusPage() {
   return (
-    <BlogLayout breadcrumbTitle="How to Prep and Grill Asparagus">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -36,6 +37,22 @@ export default function HowToPrepAndGrillAsparagusPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <HowToSchema
+        name="How to Prep and Grill Asparagus"
+        description="Professional chef technique for grilling asparagus. High heat, minimal time, and the bending trick for perfect charred spears."
+        datePublished="2025-11-20"
+        totalTime="PT15M"
+        tools={["Grill or grill pan", "Tongs", "Olive oil", "Paper towels"]}
+        steps={[
+          { name: "Select and Clean", text: "Choose thick asparagus spears (pencil-thin overcooks quickly). Rinse under cold water and pat dry thoroughly." },
+          { name: "Remove Woody Ends", text: "Hold spear at each end and bend until it snaps naturally. The asparagus breaks exactly where the woody portion ends—no guessing required." },
+          { name: "Season Simply", text: "Toss with olive oil, salt, and pepper. Don't overcomplicate—asparagus flavor shines with minimal seasoning." },
+          { name: "Preheat Grill to High", text: "Get grill screaming hot (500°F+). High heat creates char marks and caramelization before the inside overcooks." },
+          { name: "Grill Perpendicular to Grates", text: "Place asparagus perpendicular to grill grates to prevent falling through. Don't crowd—single layer only." },
+          { name: "Cook 3-4 Minutes Total", text: "Grill 1.5-2 minutes per side. Asparagus should be bright green with char marks, tender but still have snap. Remove immediately." }
+        ]}
+      />
+      <BlogLayout breadcrumbTitle="How to Prep and Grill Asparagus">
 
       <BlogHero
         title="How to Prep and Grill Asparagus"
@@ -311,5 +328,6 @@ export default function HowToPrepAndGrillAsparagusPage() {
         ]}
       />
     </BlogLayout>
+    </>
   );
 }

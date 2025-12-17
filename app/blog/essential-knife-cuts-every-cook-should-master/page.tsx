@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Calendar, Clock, User, Target, Check, Ruler, AlertTriangle, CheckCircle2, ChefHat } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import HowToSchema from '@/components/HowToSchema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
@@ -93,6 +94,20 @@ export default function EssentialKnifeCutsPost() {
             }
           ]))
         }}
+      />
+      <HowToSchema
+        name="How to Master Essential Knife Cuts"
+        description="Learn the five professional knife cuts—dice, julienne, chiffonade, mince, and bias—taught by chef Scott Bradley. Technique, precision, and practice tips for home cooks."
+        datePublished="2025-10-12"
+        tools={["8-inch chef's knife", "Cutting board (end-grain wood or heavy plastic)", "Honing rod", "Bench scraper", "Damp towel"]}
+        steps={[
+          { name: "Set Up Your Station", text: "Place a damp towel under your cutting board to prevent slipping. Use the pinch grip—thumb and index finger on the blade just ahead of the handle. This gives maximum control." },
+          { name: "Master Medium Dice", text: "Trim one side of the vegetable to create a flat base. Cut lengthwise planks to ½-inch thickness, stack them, slice lengthwise again, then cross-cut into ½-inch cubes. This is the foundation cut—master it first." },
+          { name: "Learn Julienne", text: "Cut vegetable into 2-2.5 inch segments. Slice thin layers off all sides to create a rectangle. Cut into ⅛-inch thick planks, stack them, then slice into ⅛-inch matchsticks." },
+          { name: "Practice Chiffonade", text: "Stack leafy herbs or greens, roll into a tight cigar, and slice crosswise into fine ribbons using a razor-sharp knife. Keep the knife angled forward with a smooth slicing motion." },
+          { name: "Perfect Your Mince", text: "After rough chopping garlic or shallots, anchor your knife tip and rock the blade back and forth, gathering the pile as you go. Add a pinch of salt when mincing garlic to create a paste." },
+          { name: "Master Bias Cuts", text: "Hold your knife at a 30° angle and slice diagonally. This increases surface area for faster cooking and better presentation, especially for scallions, carrots, and asparagus." }
+        ]}
       />
 
       <BlogLayout breadcrumbTitle="5 Knife Cuts Every Cook Should Master (With Photos)">
