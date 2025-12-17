@@ -133,6 +133,14 @@ export const productImages: Record<string, {
     ]
   },
 
+  'wusthof-classic-ikon-santoku': {
+    hero: '/images/products/wusthof-classic-ikon-santoku/wusthof-classic-ikon-santoku-hero.jpg',
+    og: '/images/products/wusthof-classic-ikon-santoku/wusthof-classic-ikon-santoku-og.jpg',
+    gallery: [
+      '/images/products/wusthof-classic-ikon-santoku/wusthof-classic-ikon-santoku-hero.jpg',
+    ]
+  },
+
   // ============================================
   // ⚠️ PRODUCTS WITH GALLERY ONLY (no hero/og)
   // Will fallback to first gallery image for OG

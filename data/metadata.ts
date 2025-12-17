@@ -2869,7 +2869,29 @@ export const METADATA = {
       model: "Fibrox 8-Inch",
       articleSection: "Chef Knife Reviews",
     } as ReviewMetadata,
-    
+
+    'wusthof-classic-ikon-santoku': {
+      title: "Wüsthof Classic Ikon Santoku Review 2025: 14 Years Tested",
+      description: "Wüsthof Classic Ikon 7\" Santoku tested 14 years: 5 in professional kitchens (Purple Café, Feierabend), 9 at home. Thin blade, 10° edge, honest maintenance requirements.",
+      canonical: "https://www.chefapprovedtools.com/reviews/wusthof-classic-ikon-santoku",
+      author: "Scott Bradley",
+      imageAlt: "Wüsthof Classic Ikon 7-inch Santoku knife tested 14 years professionally",
+      tier: 1,
+      testingPeriod: "14 Years (5 Professional + 9 Home)",
+      productSlug: "wusthof-classic-ikon-santoku",
+      publishedTime: "2025-12-16T10:00:00Z",
+      modifiedTime: "2025-12-16T10:00:00Z",
+      searchIntent: "transactional",
+      conversionPotential: "high",
+      affiliateProgram: "amazon",
+      commissionRate: 4.0,
+      averagePrice: "100-200",
+      productCategory: "knives",
+      brand: "Wüsthof",
+      model: "Classic Ikon 7\" Santoku",
+      articleSection: "Knife Reviews",
+    } as ReviewMetadata,
+
     'epicurean-kitchen-cutting-board': {
       title: "Epicurean Cutting Board Review 2025: 10 Years Tested",
       description: "Best dishwasher-safe cutting board? 10 years, 2,000+ dishwasher cycles: no warping, no cracking, gentler on knives than bamboo. See our long-term results.",

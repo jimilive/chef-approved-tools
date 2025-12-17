@@ -40,6 +40,12 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
     hook: 'Premium German steel. Professional performance.',
     revenueScore: 83
   },
+  'wusthof-classic-ikon-santoku': {
+    tier: 1,
+    testingPeriod: '14 years (5 professional + 9 home)',
+    hook: 'Precision vegetable knife. 10-degree edge for effortless slicing.',
+    revenueScore: 78
+  },
   'victorinox-fibrox-10-inch-chefs-knife': {
     tier: 1,
     testingPeriod: 'Professional kitchen tested',
