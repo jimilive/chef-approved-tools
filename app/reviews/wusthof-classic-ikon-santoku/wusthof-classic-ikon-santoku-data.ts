@@ -33,7 +33,7 @@ export const reviewData = {
     affiliateLinks: [
       {
         merchant: 'amazon',
-        url: 'https://amazon.com/dp/B000YMURSE?tag=chefapprovedt-20',
+        url: 'https://amzn.to/4af1RvI',
         primary: true
       }
     ],
