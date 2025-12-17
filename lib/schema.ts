@@ -145,7 +145,28 @@ export function generateProductSchema(product: any) {
       dateModified: formatSchemaDate(product.lastUpdated || product.dateAdded || new Date().toISOString().split('T')[0]),
       publisher: {
         "@id": "https://www.chefapprovedtools.com/#organization"
-      }
+      },
+      // Pros/Cons for Google Rich Results
+      ...(product.pros && product.pros.length > 0 && {
+        positiveNotes: {
+          "@type": "ItemList",
+          itemListElement: product.pros.map((pro: string, index: number) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: pro
+          }))
+        }
+      }),
+      ...(product.cons && product.cons.length > 0 && {
+        negativeNotes: {
+          "@type": "ItemList",
+          itemListElement: product.cons.map((con: string, index: number) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: con
+          }))
+        }
+      })
     }
   }
 }

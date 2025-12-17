@@ -56,6 +56,8 @@ interface ProductData {
   category?: string
   expertRating?: number
   expertOpinion?: string
+  pros?: string[]
+  cons?: string[]
 }
 
 interface GitDates {
@@ -149,6 +151,8 @@ export default function ReviewLayout({
     rating: product.expertRating,
     reviewCount: 1,
     url: `https://www.chefapprovedtools.com/reviews/${product.slug}`,
+    pros: product.pros,
+    cons: product.cons,
   }) : null
 
   const breadcrumbSchema = productSlug ? generateBreadcrumbSchema(breadcrumbs) : null
