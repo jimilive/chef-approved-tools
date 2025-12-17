@@ -257,7 +257,7 @@ export default function ChefApprovedPage() {
 
             <p className="font-semibold text-blue-700 mb-2">Tier 2 - Long-Term Personal Use:</p>
             <ul className="mb-4">
-              <li><Link href="/reviews/wusthof-classic-ikon-16-piece" className="text-orange-700 hover:text-orange-700">Wüsthof Classic Ikon 8&rdquo; Chef&rsquo;s Knife</Link> - My home kitchen workhorse for 3+ years</li>
+              <li><Link href="/reviews/wusthof-classic-ikon-16-piece" className="text-orange-700 hover:text-orange-700">Wüsthof Classic Ikon 16-Piece Set</Link> - My home kitchen workhorse for 3+ years</li>
             </ul>
 
             <Link href="/knives" className="text-orange-700 hover:text-orange-700 font-semibold">
