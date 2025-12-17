@@ -328,18 +328,8 @@ export function generateItemListSchema(products: any[], listName: string) {
     itemListElement: products.map((product, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      item: {
-        "@type": "Product",
-        name: product.name,
-        image: product.images?.primary || "https://www.chefapprovedtools.com/logo.png",
-        url: `https://www.chefapprovedtools.com/reviews/${product.slug}`,
-        aggregateRating: product.reviews?.rating > 0 ? {
-          "@type": "AggregateRating",
-          ratingValue: product.reviews.rating,
-          reviewCount: product.reviews.count
-        } : undefined
-        // Removed "offers" - we're an affiliate site, not a merchant, and don't control pricing
-      }
+      url: `https://www.chefapprovedtools.com/reviews/${product.slug}`,
+      name: product.name
     }))
   }
 }
