@@ -20,9 +20,11 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 // Import review data
 import { reviewData } from './winco-heavy-duty-tongs-data'
+import { getTongsComparison } from './tongs-comparison-data'
 
 const PRODUCT_SLUG = 'winco-heavy-duty-tongs'
 
@@ -86,6 +88,9 @@ export default async function ProductReview() {
   if (!product) {
     throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
+
+  // Get comparison data with live affiliate links from database
+  const tongsComparisonData = await getTongsComparison()
 
   // Merge Supabase data with legacy data
   const productData = product ? {
@@ -223,7 +228,23 @@ export default async function ProductReview() {
             sections={reviewData.performanceAnalysis.sections}
           />
 
-          {/* SECTION 4: PROS & CONS */}
+          {/* SECTION 4: COMPARISON TABLE */}
+          <ProductComparisonTable
+            title={tongsComparisonData.title}
+            subtitle={tongsComparisonData.subtitle}
+            products={tongsComparisonData.products}
+            comparisonRows={tongsComparisonData.comparisonRows}
+            highlightedProduct={tongsComparisonData.highlightedProduct}
+          />
+
+          {/* POST-COMPARISON CTA */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="comparison_table"
+          />
+
+          {/* SECTION 5: PROS & CONS */}
           <ProsConsGrid
             title={reviewData.prosConsTitle}
             prosTitle={reviewData.prosTitle}
@@ -232,7 +253,7 @@ export default async function ProductReview() {
             cons={productData.cons}
           />
 
-          {/* SECTION 5: WHO SHOULD BUY */}
+          {/* SECTION 6: WHO SHOULD BUY */}
           <WhoShouldBuyGrid
             title={reviewData.whoShouldBuy.title}
             perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
@@ -249,16 +270,16 @@ export default async function ProductReview() {
             boxHeading="Ready to upgrade your kitchen tongs?"
           />
 
-          {/* SECTION 6: FAQ */}
+          {/* SECTION 7: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 7: EMAIL CAPTURE */}
+          {/* SECTION 8: EMAIL CAPTURE */}
           <EmailCaptureSection />
 
-          {/* SECTION 8: BOTTOM LINE */}
+          {/* SECTION 9: BOTTOM LINE */}
           <BottomLineSection
             title={reviewData.bottomLine.title}
             paragraphs={reviewData.bottomLine.paragraphs}
@@ -308,7 +329,7 @@ export default async function ProductReview() {
             </Link>
           </div>
 
-          {/* SECTION 9: RELATED PRODUCTS */}
+          {/* SECTION 10: RELATED PRODUCTS */}
           <RelatedProductsGrid
             title={reviewData.relatedProducts.title}
             products={reviewData.relatedProducts.products}

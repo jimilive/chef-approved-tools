@@ -3417,7 +3417,7 @@ export const METADATA = {
       testingPeriod: "20 Years (Including 10 Professional)",
       productSlug: "victorinox-granton-edge-boning-knife",
       publishedTime: "2025-10-01T10:00:00Z",
-      modifiedTime: "2025-12-16T10:00:00Z",
+      modifiedTime: "2025-12-18T10:00:00Z",
       searchIntent: "transactional",
       conversionPotential: "medium",
       affiliateProgram: "amazon",
