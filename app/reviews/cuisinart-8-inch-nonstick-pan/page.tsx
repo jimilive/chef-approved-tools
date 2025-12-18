@@ -20,9 +20,11 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 // Import review data
 import { reviewData } from './cuisinart-8-inch-nonstick-pan-data'
+import { getNonstickPanComparison } from './nonstick-pan-comparison-data'
 
 const PRODUCT_SLUG = 'cuisinart-8-inch-nonstick-pan'
 
@@ -86,6 +88,9 @@ export default async function Cuisinart8InchNonstickPanReview() {
   if (!product) {
     throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
+
+  // Get comparison data with live affiliate links from database
+  const nonstickPanComparisonData = await getNonstickPanComparison()
 
   // Helper function to process inline affiliate links
   const processInlineLinks = (content: string) => {
@@ -229,7 +234,23 @@ export default async function Cuisinart8InchNonstickPanReview() {
             }))}
           />
 
-          {/* SECTION 4: PROS & CONS */}
+          {/* SECTION 4: COMPARISON TABLE */}
+          <ProductComparisonTable
+            title={nonstickPanComparisonData.title}
+            subtitle={nonstickPanComparisonData.subtitle}
+            products={nonstickPanComparisonData.products}
+            comparisonRows={nonstickPanComparisonData.comparisonRows}
+            highlightedProduct={nonstickPanComparisonData.highlightedProduct}
+          />
+
+          {/* POST-COMPARISON CTA */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="comparison_table"
+          />
+
+          {/* SECTION 5: PROS & CONS */}
           <ProsConsGrid
             title={reviewData.prosConsTitle}
             prosTitle={reviewData.prosTitle}
@@ -238,7 +259,7 @@ export default async function Cuisinart8InchNonstickPanReview() {
             cons={productData.cons}
           />
 
-          {/* SECTION 5: WHO SHOULD BUY */}
+          {/* SECTION 6: WHO SHOULD BUY */}
           <WhoShouldBuyGrid
             title={reviewData.whoShouldBuy.title}
             perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
@@ -255,13 +276,13 @@ export default async function Cuisinart8InchNonstickPanReview() {
             boxHeading="Ready for a reliable nonstick pan?"
           />
 
-          {/* SECTION 6: FAQ */}
+          {/* SECTION 7: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 7: EMAIL CAPTURE */}
+          {/* SECTION 8: EMAIL CAPTURE */}
           <EmailCaptureSection />
 
           {/* SECTION 9: BOTTOM LINE */}
