@@ -8,6 +8,7 @@ import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import AmazonCTA from '@/components/AmazonCTA'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
@@ -21,6 +22,7 @@ import {
 
 // Import review data
 import { reviewData } from './nordic-ware-half-sheet-pan-data'
+import { getSheetPanComparison } from './sheet-pan-comparison-data'
 
 const PRODUCT_SLUG = 'nordic-ware-half-sheet-pan'
 
@@ -110,6 +112,9 @@ export default async function NordicWareHalfSheetPanReview() {
   if (!product) {
     throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
+
+  // Get comparison data with live affiliate links from database
+  const comparisonData = await getSheetPanComparison()
 
   // Merge Supabase data with legacy data (Supabase takes priority)
   const productData = product ? {
@@ -239,6 +244,31 @@ export default async function NordicWareHalfSheetPanReview() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Comparison Table */}
+        <section className="my-12">
+          <h2 className="text-3xl font-bold mb-4 text-gray-900">
+            How Does the Nordic Ware Compare?
+          </h2>
+          <p className="text-lg text-slate-700 mb-8">
+            After 10 years of owning 4 of these pans, here&apos;s how the Nordic Ware stacks up against the top competitors.
+          </p>
+          <ProductComparisonTable
+            title={comparisonData.title}
+            subtitle={comparisonData.subtitle}
+            products={comparisonData.products}
+            comparisonRows={comparisonData.comparisonRows}
+            highlightedProduct={comparisonData.highlightedProduct}
+            trustMessage={comparisonData.trustMessage}
+          />
+
+          {/* CTA: AFTER COMPARISON TABLE */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="comparison_table"
+          />
         </section>
 
         {/* The Testing Story */}
