@@ -2791,7 +2791,7 @@ export const METADATA = {
       testingPeriod: "18 Months Restaurant Testing",
       productSlug: "kitchenaid-ksm8990wh",
       publishedTime: "2025-09-25T10:00:00Z",
-      modifiedTime: "2025-12-16T10:00:00Z",
+      modifiedTime: "2025-12-18T10:00:00Z",
       searchIntent: "transactional",
       conversionPotential: "high",
       affiliateProgram: "amazon",

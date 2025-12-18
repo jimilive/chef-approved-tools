@@ -20,9 +20,11 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 // Import review data
 import { reviewData } from './bodum-chambord-french-press-data'
+import { getFrenchPressComparison } from './french-press-comparison-data'
 
 const PRODUCT_SLUG = 'bodum-chambord-french-press'
 
@@ -86,6 +88,9 @@ export default async function BodumChambordFrenchPressReview() {
   if (!product) {
     throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
+
+  // Get comparison data with live affiliate links from database
+  const frenchPressComparisonData = await getFrenchPressComparison()
 
   // Helper function to process inline affiliate links
   const processInlineLinks = (content: string) => {
@@ -228,7 +233,23 @@ export default async function BodumChambordFrenchPressReview() {
             }))}
           />
 
-          {/* SECTION 4: PROS & CONS */}
+          {/* SECTION 4: COMPARISON TABLE */}
+          <ProductComparisonTable
+            title={frenchPressComparisonData.title}
+            subtitle={frenchPressComparisonData.subtitle}
+            products={frenchPressComparisonData.products}
+            comparisonRows={frenchPressComparisonData.comparisonRows}
+            highlightedProduct={frenchPressComparisonData.highlightedProduct}
+          />
+
+          {/* POST-COMPARISON CTA */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="comparison_table"
+          />
+
+          {/* SECTION 5: PROS & CONS */}
           <ProsConsGrid
             title={reviewData.prosConsTitle}
             prosTitle={reviewData.prosTitle}
@@ -237,7 +258,7 @@ export default async function BodumChambordFrenchPressReview() {
             cons={productData.cons}
           />
 
-          {/* SECTION 5: WHO SHOULD BUY */}
+          {/* SECTION 6: WHO SHOULD BUY */}
           <WhoShouldBuyGrid
             title={reviewData.whoShouldBuy.title}
             perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
@@ -254,13 +275,13 @@ export default async function BodumChambordFrenchPressReview() {
             boxHeading="Ready to upgrade your morning coffee?"
           />
 
-          {/* SECTION 6: FAQ */}
+          {/* SECTION 7: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 7: EMAIL CAPTURE */}
+          {/* SECTION 8: EMAIL CAPTURE */}
           <EmailCaptureSection />
 
           {/* SECTION 9: BOTTOM LINE */}
