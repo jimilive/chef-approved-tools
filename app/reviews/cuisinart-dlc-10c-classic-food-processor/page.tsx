@@ -20,9 +20,11 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 // Import review data
 import { reviewData } from './cuisinart-dlc-10c-data'
+import { getFoodProcessorComparison } from './food-processor-comparison-data'
 
 const PRODUCT_SLUG = 'cuisinart-dlc-10c-classic-food-processor'
 
@@ -86,6 +88,9 @@ export default async function CuisinartDLC10CReview() {
   if (!product) {
     throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
+
+  // Get comparison data with live affiliate links from database
+  const foodProcessorComparisonData = await getFoodProcessorComparison()
 
   // Merge Supabase data with legacy data (Supabase takes priority, but preserve legacy pros/cons if Supabase is empty)
   const productData = product ? {
@@ -270,7 +275,23 @@ export default async function CuisinartDLC10CReview() {
             }))}
           />
 
-          {/* SECTION 4: PROS & CONS */}
+          {/* SECTION 4: COMPARISON TABLE */}
+          <ProductComparisonTable
+            title={foodProcessorComparisonData.title}
+            subtitle={foodProcessorComparisonData.subtitle}
+            products={foodProcessorComparisonData.products}
+            comparisonRows={foodProcessorComparisonData.comparisonRows}
+            highlightedProduct={foodProcessorComparisonData.highlightedProduct}
+          />
+
+          {/* POST-COMPARISON CTA */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="comparison_table"
+          />
+
+          {/* SECTION 5: PROS & CONS */}
           <ProsConsGrid
             title={reviewData.prosConsTitle}
             prosTitle={reviewData.prosTitle}
@@ -279,7 +300,7 @@ export default async function CuisinartDLC10CReview() {
             cons={productData.cons}
           />
 
-          {/* SECTION 5: WHO SHOULD BUY */}
+          {/* SECTION 6: WHO SHOULD BUY */}
           <WhoShouldBuyGrid
             title={reviewData.whoShouldBuy.title}
             perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
@@ -296,13 +317,13 @@ export default async function CuisinartDLC10CReview() {
             boxHeading="Ready to level up your food prep?"
           />
 
-          {/* SECTION 6: FAQ */}
+          {/* SECTION 7: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 7: EMAIL CAPTURE */}
+          {/* SECTION 8: EMAIL CAPTURE */}
           <EmailCaptureSection />
 
           {/* SECTION 9: BOTTOM LINE */}
