@@ -3305,7 +3305,7 @@ export const METADATA = {
       testingPeriod: "30 Years Testing",
       productSlug: "cuisinart-dlc-10c-classic-food-processor",
       publishedTime: "2025-10-11T10:00:00Z",
-      modifiedTime: "2025-12-16T10:00:00Z",
+      modifiedTime: "2025-12-18T10:00:00Z",
       searchIntent: "transactional",
       conversionPotential: "high",
       affiliateProgram: "amazon",

@@ -20,9 +20,12 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
+import AmazonCTA from '@/components/AmazonCTA'
 
 // Import review data
 import { reviewData } from './henckels-sharpening-steel-data'
+import { getHoningSteelComparison } from './honing-steel-comparison-data'
 
 const PRODUCT_SLUG = 'henckels-sharpening-steel'
 
@@ -86,6 +89,9 @@ export default async function HenckelsSharpeningSteelReview() {
   if (!product) {
     throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
+
+  // Get comparison data with live affiliate links from database
+  const honingSteelComparisonData = await getHoningSteelComparison()
 
   // Helper function to process inline affiliate links
   const processInlineLinks = (content: string) => {
@@ -219,7 +225,23 @@ export default async function HenckelsSharpeningSteelReview() {
             }))}
           />
 
-          {/* SECTION 4: PROS & CONS */}
+          {/* SECTION 4: COMPARISON TABLE */}
+          <ProductComparisonTable
+            title={honingSteelComparisonData.title}
+            subtitle={honingSteelComparisonData.subtitle}
+            products={honingSteelComparisonData.products}
+            comparisonRows={honingSteelComparisonData.comparisonRows}
+            highlightedProduct={honingSteelComparisonData.highlightedProduct}
+          />
+
+          {/* POST-COMPARISON CTA */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="comparison_table"
+          />
+
+          {/* SECTION 5: PROS & CONS */}
           <ProsConsGrid
             title={reviewData.prosConsTitle}
             prosTitle={reviewData.prosTitle}
@@ -228,7 +250,7 @@ export default async function HenckelsSharpeningSteelReview() {
             cons={productData.cons}
           />
 
-          {/* SECTION 5: WHO SHOULD BUY */}
+          {/* SECTION 6: WHO SHOULD BUY */}
           <WhoShouldBuyGrid
             title={reviewData.whoShouldBuy.title}
             perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
@@ -247,13 +269,13 @@ export default async function HenckelsSharpeningSteelReview() {
             boxHeading="Ready to keep your knives sharp?"
           />
 
-          {/* SECTION 6: FAQ */}
+          {/* SECTION 7: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 7: WHERE TO BUY - Inline Section */}
+          {/* SECTION 8: WHERE TO BUY - Inline Section */}
           <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
             <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
               {reviewData.whereToBuy.title}
@@ -287,10 +309,10 @@ export default async function HenckelsSharpeningSteelReview() {
             </p>
           </div>
 
-          {/* SECTION 8: EMAIL CAPTURE */}
+          {/* SECTION 9: EMAIL CAPTURE */}
           <EmailCaptureSection />
 
-          {/* SECTION 9: BOTTOM LINE */}
+          {/* SECTION 10: BOTTOM LINE */}
           <BottomLineSection
             title={reviewData.bottomLine.title}
             paragraphs={reviewData.bottomLine.paragraphs.map(p => processInlineLinks(p))}
@@ -318,7 +340,7 @@ export default async function HenckelsSharpeningSteelReview() {
             </Link>
           </div>
 
-          {/* SECTION 10: RELATED PRODUCTS */}
+          {/* SECTION 11: RELATED PRODUCTS */}
           <RelatedProductsGrid
             title={reviewData.relatedProducts.title}
             products={reviewData.relatedProducts.products}
