@@ -3483,7 +3483,7 @@ export const METADATA = {
       testingPeriod: "20 Years Testing",
       productSlug: "henckels-sharpening-steel",
       publishedTime: "2025-10-30T10:00:00Z",
-      modifiedTime: "2025-12-16T10:00:00Z",
+      modifiedTime: "2025-12-18T10:00:00Z",
       searchIntent: "transactional",
       conversionPotential: "medium",
       affiliateProgram: "amazon",

@@ -20,10 +20,13 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
+import AmazonCTA from '@/components/AmazonCTA'
 import TestimonialsSection from '@/components/TestimonialsSection'
 
 // Import review data
 import { reviewData } from './kitchenaid-ksm8990wh-data'
+import { getCommercialMixerComparison } from './commercial-mixer-comparison-data'
 
 const PRODUCT_SLUG = 'kitchenaid-ksm8990wh'
 
@@ -109,6 +112,9 @@ export default async function KitchenAidCommercialReviewPage() {
     throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
   const productData = product
+
+  // Get comparison data with live affiliate links from database
+  const commercialMixerComparisonData = await getCommercialMixerComparison()
 
   // ===== STRATEGIC AFFILIATE LINK SELECTION =====
   // Priority: Supabase primary link > Strategic primary > Fallback
@@ -222,6 +228,22 @@ export default async function KitchenAidCommercialReviewPage() {
             ...section,
             content: <>{processInlineLinks(typeof section.content === 'string' ? section.content : '')}</>
           }))}
+        />
+
+        {/* SECTION 4: COMPARISON TABLE */}
+        <ProductComparisonTable
+          title={commercialMixerComparisonData.title}
+          subtitle={commercialMixerComparisonData.subtitle}
+          products={commercialMixerComparisonData.products}
+          comparisonRows={commercialMixerComparisonData.comparisonRows}
+          highlightedProduct={commercialMixerComparisonData.highlightedProduct}
+        />
+
+        {/* POST-COMPARISON CTA */}
+        <AmazonCTA
+          productSlug={PRODUCT_SLUG}
+          affiliateUrl={primaryLink}
+          position="comparison_table"
         />
 
         {/* COMMERCIAL VS RESIDENTIAL COMPARISON */}
@@ -347,7 +369,7 @@ export default async function KitchenAidCommercialReviewPage() {
           </div>
         </section>
 
-        {/* SECTION 4: PROS & CONS */}
+        {/* SECTION 5: PROS & CONS */}
         <ProsConsGrid
           title={reviewData.prosConsTitle}
           prosTitle={reviewData.prosTitle}
@@ -356,7 +378,7 @@ export default async function KitchenAidCommercialReviewPage() {
           cons={productData.cons}
         />
 
-        {/* SECTION 5: WHO SHOULD BUY */}
+        {/* SECTION 6: WHO SHOULD BUY */}
         <WhoShouldBuyGrid
           title={reviewData.whoShouldBuy.title}
           perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
@@ -375,16 +397,16 @@ export default async function KitchenAidCommercialReviewPage() {
           boxHeading="Ready to upgrade your mixing power?"
         />
 
-        {/* SECTION 6: EMAIL CAPTURE */}
+        {/* SECTION 7: EMAIL CAPTURE */}
         <EmailCaptureSection />
 
-        {/* SECTION 7: FAQ */}
+        {/* SECTION 8: FAQ */}
         <FAQSection
           title={reviewData.faq.title}
           faqs={reviewData.faq.items}
         />
 
-        {/* SECTION 8: WHERE TO BUY - STRATEGIC MULTI-LINK SECTION */}
+        {/* SECTION 9: WHERE TO BUY - STRATEGIC MULTI-LINK SECTION */}
         <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
           <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
             {reviewData.whereToBuy.title}
@@ -443,7 +465,7 @@ export default async function KitchenAidCommercialReviewPage() {
           </p>
         </div>
 
-        {/* SECTION 9: BOTTOM LINE */}
+        {/* SECTION 10: BOTTOM LINE */}
         <BottomLineSection
           title={reviewData.bottomLine.title}
           paragraphs={reviewData.bottomLine.paragraphs.map((paragraph, i) => (
@@ -475,13 +497,13 @@ export default async function KitchenAidCommercialReviewPage() {
           </Link>
         </div>
 
-        {/* SECTION 10: RELATED PRODUCTS */}
+        {/* SECTION 11: RELATED PRODUCTS */}
         <RelatedProductsGrid
           title={reviewData.relatedProducts.title}
           products={reviewData.relatedProducts.products}
         />
 
-        {/* SECTION 11: TESTIMONIALS */}
+        {/* SECTION 12: TESTIMONIALS */}
         <TestimonialsSection />
 
     </ReviewLayout>
