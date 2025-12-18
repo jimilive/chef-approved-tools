@@ -20,9 +20,11 @@ import {
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 // Import review data
 import { reviewData } from './victorinox-granton-edge-boning-knife-data'
+import { getBoningKnifeComparison } from './boning-knife-comparison-data'
 
 const PRODUCT_SLUG = 'victorinox-granton-edge-boning-knife'
 
@@ -86,6 +88,9 @@ export default async function ProductReview() {
   if (!product) {
     throw new Error(`Product not found in Supabase: ${PRODUCT_SLUG}`)
   }
+
+  // Get comparison data with live affiliate links from database
+  const boningKnifeComparisonData = await getBoningKnifeComparison()
 
   // Merge Supabase data with legacy data
   const productData = product ? {
@@ -222,7 +227,23 @@ export default async function ProductReview() {
             })}
           />
 
-          {/* SECTION 4: PROS & CONS */}
+          {/* SECTION 4: COMPARISON TABLE */}
+          <ProductComparisonTable
+            title={boningKnifeComparisonData.title}
+            subtitle={boningKnifeComparisonData.subtitle}
+            products={boningKnifeComparisonData.products}
+            comparisonRows={boningKnifeComparisonData.comparisonRows}
+            highlightedProduct={boningKnifeComparisonData.highlightedProduct}
+          />
+
+          {/* POST-COMPARISON CTA */}
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="comparison_table"
+          />
+
+          {/* SECTION 5: PROS & CONS */}
           <ProsConsGrid
             title={reviewData.prosConsTitle}
             prosTitle={reviewData.prosTitle}
@@ -231,7 +252,7 @@ export default async function ProductReview() {
             cons={productData.cons}
           />
 
-          {/* SECTION 5: WHO SHOULD BUY */}
+          {/* SECTION 6: WHO SHOULD BUY */}
           <WhoShouldBuyGrid
             title={reviewData.whoShouldBuy.title}
             perfectForTitle={reviewData.whoShouldBuy.perfectForTitle}
@@ -248,13 +269,13 @@ export default async function ProductReview() {
             boxHeading="Ready to master your meat prep?"
           />
 
-          {/* SECTION 6: FAQ */}
+          {/* SECTION 7: FAQ */}
           <FAQSection
             title={reviewData.faq.title}
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 7: EMAIL CAPTURE */}
+          {/* SECTION 8: EMAIL CAPTURE */}
           <EmailCaptureSection />
 
           {/* SECTION 9: BOTTOM LINE */}
