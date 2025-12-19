@@ -77,7 +77,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 // Helper function to process inline product links
-function processInlineLinks(text: string): (string | JSX.Element)[] {
+function processInlineLinks(text: string, affiliateUrl: string): (string | JSX.Element)[] {
   const parts = text.split(/(<LINK>.*?<\/LINK>)/g)
 
   return parts.map((part, index) => {
@@ -86,7 +86,7 @@ function processInlineLinks(text: string): (string | JSX.Element)[] {
       return (
         <a
           key={index}
-          href="#primary-cta"
+          href={affiliateUrl}
           className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700"
         >
           {linkText}
@@ -184,7 +184,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
             title={reviewData.testingResults.title}
             sections={reviewData.testingResults.sections.map(section => ({
               ...section,
-              content: <>{processInlineLinks(typeof section.content === 'string' ? section.content : '')}</>
+              content: <>{processInlineLinks(typeof section.content === 'string' ? section.content : '', primaryLink)}</>
             }))}
             testingEnvironment={reviewData.testingResults.testingEnvironment}
             outstandingPerformance={reviewData.testingResults.outstandingPerformance}
@@ -224,7 +224,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
           title={reviewData.performanceAnalysis.title}
           sections={reviewData.performanceAnalysis.sections.map(section => ({
             ...section,
-            content: <>{processInlineLinks(typeof section.content === 'string' ? section.content : '')}</>
+            content: <>{processInlineLinks(typeof section.content === 'string' ? section.content : '', primaryLink)}</>
           }))}
         />
 
@@ -305,7 +305,7 @@ export default async function KitchenAidProfessional600ReviewPage() {
           title={reviewData.bottomLine.title}
           paragraphs={reviewData.bottomLine.paragraphs.map((paragraph, i) => (
             <p key={i} className="text-lg leading-relaxed">
-              {processInlineLinks(paragraph)}
+              {processInlineLinks(paragraph, primaryLink)}
             </p>
           ))}
           customCTA={(
