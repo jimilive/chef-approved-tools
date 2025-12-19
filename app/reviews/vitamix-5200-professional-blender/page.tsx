@@ -206,6 +206,7 @@ export default async function ProductReview() {
             productSlug={productData.slug}
             affiliateUrl={primaryLink}
             position="mid_article"
+            variant="textLink"
           />
         </div>
 
@@ -287,6 +288,7 @@ export default async function ProductReview() {
               productName={productData.name}
               ctaId="where-to-buy-cta"
               position="mid_article"
+              variant="textLink"
               productSlug={productData.slug}
             />
 

@@ -46,7 +46,7 @@ function processInlineLinks(text: string): React.ReactNode {
       const href = linkMap[linkText]
       if (href) {
         return (
-          <Link key={index} href={href} className="text-blue-600 no-underline">
+          <Link key={index} href={href} className="text-orange-700 no-underline">
             {linkText}
           </Link>
         )
@@ -175,7 +175,7 @@ export default async function NortonTriStoneSharpenerReview() {
           />
 
         {/* Professional Verdict */}
-        <section className="bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
+        <section className="bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-orange-600">
           <h2 className="text-3xl font-bold mb-5 text-gray-900">
             {reviewData.professionalVerdict.title}
           </h2>

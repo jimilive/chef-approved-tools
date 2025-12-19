@@ -193,6 +193,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
               productSlug={PRODUCT_SLUG}
               affiliateUrl={affiliateUrl}
               position="mid_article"
+              variant="textLink"
             />
           </div>
 
@@ -277,7 +278,7 @@ export default async function OXOGoodGripsBenchScraperReview() {
           <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6" id="cost-analysis">
             <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.costAnalysis.title}</h2>
 
-            <div className="bg-blue-50 p-5 rounded-lg border border-blue-200 mb-6">
+            <div className="bg-orange-50 p-5 rounded-lg border border-orange-200 mb-6">
               <h3 className="font-bold text-slate-900 mb-3">{reviewData.costAnalysis.realWorldValue.title}</h3>
               <ul className="space-y-2 text-slate-700">
                 {reviewData.costAnalysis.realWorldValue.items.map((item, index) => (

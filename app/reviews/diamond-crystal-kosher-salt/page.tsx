@@ -191,6 +191,7 @@ export default async function DiamondCrystalKosherSaltReview() {
               productSlug={PRODUCT_SLUG}
               affiliateUrl={affiliateUrl}
               position="mid_article"
+              variant="textLink"
             />
           </div>
 

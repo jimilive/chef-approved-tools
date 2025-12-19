@@ -339,7 +339,7 @@ export default async function KitchenAidCommercialReviewPage() {
               </tbody>
             </table>
           </div>
-          <div className="mt-4 bg-blue-50 p-4 rounded-lg border border-blue-200">
+          <div className="mt-4 bg-orange-50 p-4 rounded-lg border border-orange-200">
             <p className="text-slate-800 mb-0">
               <strong>Value Analysis:</strong> This KitchenAid Commercial mixer delivers 85-90% of the Hobart&apos;s capability at 32% of the cost. For operations mixing under 4 hours daily, the price-to-performance ratio is unmatched.
             </p>

@@ -7,14 +7,17 @@ Disallow: /test/
 Disallow: /_next/
 Disallow: /api/
 
-# Allow important API endpoints
-Allow: /api/newsletter-signup
+# Block query parameter variations (prevent duplicate content)
+Disallow: /*?filter=
+Disallow: /*?type=
+Disallow: /*&filter=
+Disallow: /*&type=
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
 
 # Host
-Host: https://chefapprovedtools.com
+Host: https://www.chefapprovedtools.com
 
 # Sitemaps
-Sitemap: https://chefapprovedtools.com/sitemap.xml
+Sitemap: https://www.chefapprovedtools.com/sitemap.xml

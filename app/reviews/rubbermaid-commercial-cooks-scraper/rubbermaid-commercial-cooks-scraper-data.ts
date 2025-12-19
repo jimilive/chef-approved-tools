@@ -111,7 +111,72 @@ export const reviewData = {
     ]
   },
 
-  // TESTING RESULTS
+  // TESTING RESULTS GRID (for TestingResultsGrid component)
+  testingResultsGrid: {
+    title: "Testing Results",
+    testingEnvironment: [
+      { label: "Testing Duration", value: "18 years (2007-2025)" },
+      { label: "Professional Use", value: "Purple Café and Feireabend kitchens" },
+      { label: "Home Use", value: "Daily baking and cooking since 2016" },
+      { label: "Conditions", value: "Commercial dishwasher cycling, high-heat contact" }
+    ],
+    outstandingPerformance: [
+      "Seamless construction — no crevices where batter hides and bacteria grows",
+      "Clean-Rest notch — blade stays off the counter when you set it down",
+      "Bowl scraping efficiency — gets every last bit without scratching",
+      "Commercial durability — survives dishwasher cycles that warp cheap spatulas",
+      "NSF certification — meets actual food safety standards, not just marketing claims"
+    ],
+    minorConsiderations: [
+      "Cold temperature only — not rated for stovetop use or hot pans",
+      "Sticker residue — the adhesive from the product label is stubborn to remove",
+      "White color only — shows staining from turmeric or tomato-based batters",
+      "Flexibility trade-off — less flexible than silicone, more rigid than rubber"
+    ],
+    sections: [
+      {
+        title: "Seamless Construction Testing",
+        content: "Every professional kitchen has a drawer full of spatulas with handles separating from blades. The gap starts small, then grows, then harbors moisture and bacteria. The Rubbermaid Commercial solves this by molding the blade directly onto the polypropylene handle — one continuous piece, no seam, no gap. After years of use and hundreds of dishwasher cycles, mine shows zero separation. This is why professional kitchens specify seamless construction in their equipment orders."
+      },
+      {
+        title: "The Clean-Rest Feature",
+        content: "Small design detail, significant practical impact: a notch in the blade elevates it slightly when you set the scraper down. The working surface never touches the counter. In a professional kitchen, this prevents cross-contamination during prep. At home, it means you're not picking up counter debris every time you set down your spatula. I didn't appreciate this feature until I used other spatulas and realized how often I was wiping the blade before returning to my bowl."
+      },
+      {
+        title: "Scraping Efficiency",
+        content: "A good scraper gets batter out of a bowl. A great scraper gets all of it. The Rubbermaid's blade flexes enough to conform to curved bowl surfaces without being so floppy that it folds over on itself. The 9.5-inch length provides adequate reach for standard mixing bowls. For professional baking applications — cake batters, cookie doughs, bread mixes — this extracts every usable ounce. When ingredients cost money, waste costs money."
+      },
+      {
+        title: "Durability Over Time",
+        content: "The true test of kitchen equipment is how it performs after years of use, not weeks. Commercial dishwasher temperatures and detergents destroy cheap spatulas — warping, cracking, discoloration. The Rubbermaid Commercial maintains its shape and function through repeated high-heat sanitizing cycles. The white color does show staining from certain ingredients (turmeric is the worst offender), but the blade integrity remains sound. Function over aesthetics."
+      }
+    ]
+  },
+
+  // PERFORMANCE ANALYSIS (for PerformanceAnalysis component)
+  performanceAnalysisData: {
+    title: "Performance Analysis",
+    sections: [
+      {
+        title: "Cold Temperature Design",
+        content: "This is a cold-prep tool, not a cooking utensil. The thermoplastic rubber (TPR) blade is rated to 200°F maximum — fine for room temperature batters and refrigerated ingredients, not for stirring hot sauces or scraping hot pans. Rubbermaid makes a separate high-heat silicone line for stovetop use (red handle, 500°F rating). Use the right tool for the right job. Trying to use this for hot applications will deform the blade and create food safety issues."
+      },
+      {
+        title: "NSF Certification Matters",
+        content: "NSF certification isn't a marketing badge — it's third-party verification that the product meets food safety standards for commercial kitchens. The seamless construction, materials, and dishwasher-safe design all contribute to this certification. Health inspectors look for NSF marks on kitchen equipment during inspections. For home cooks, it means the same hygiene standards that protect restaurant customers protect your family."
+      },
+      {
+        title: "Comparison to Silicone Alternatives",
+        content: "Silicone spatulas flex more and handle higher temperatures. The Rubbermaid Commercial TPR blade offers a middle ground: more rigid than silicone (better for scraping thick doughs), more flexible than plastic (conforms to bowl curves). The trade-off is temperature limitation. If you bake frequently with cold ingredients — cookies, cakes, pastry — this is the better scraper. If you cook more than you bake, invest in Rubbermaid's high-heat silicone line instead."
+      },
+      {
+        title: "The Sticker Problem",
+        content: "Every Amazon review mentions it, and they're right: the adhesive from the product label is absurdly stubborn. Goo-Gone, soap, scrubbing — nothing works completely. You'll have a small strip of residue until you accept it or sand it off. It's a frustrating design oversight on an otherwise well-engineered product. Rubbermaid should use peel-clean labels like every other kitchen equipment manufacturer."
+      }
+    ]
+  },
+
+  // TESTING RESULTS (legacy format)
   testingResults: {
     title: "18 Years of Real-World Testing",
     professionalUse: {

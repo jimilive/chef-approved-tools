@@ -270,6 +270,7 @@ export default async function RobotCoupeR2DiceReview() {
             productSlug={PRODUCT_SLUG}
             affiliateUrl={affiliateUrl}
             position="mid_article"
+            variant="textLink"
           />
         </div>
 
@@ -465,7 +466,7 @@ export default async function RobotCoupeR2DiceReview() {
 
         {/* Content Upgrade Email Capture */}
         <section className="mb-8">
-          <div className="bg-blue-50 p-8 my-8 rounded-lg border-l-4 border-blue-600">
+          <div className="bg-orange-50 p-8 my-8 rounded-lg border-l-4 border-orange-600">
 
             <h3 className="mt-0 text-2xl">
               🔥 Get My Complete Commercial Kitchen Equipment Guide

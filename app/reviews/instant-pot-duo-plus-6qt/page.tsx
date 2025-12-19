@@ -244,6 +244,7 @@ export default async function InstantPotDuoPlus6QtReview() {
               productSlug={productData.slug}
               affiliateUrl={affiliateUrl}
               position="mid_article"
+              variant="textLink"
             />
           </div>
 

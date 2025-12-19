@@ -200,7 +200,7 @@ export default async function NordicWareHalfSheetPanReview() {
         </div>
 
         {/* Professional Verdict */}
-        <section className="bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-blue-600">
+        <section className="bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-orange-600">
           <h2 className="text-3xl font-bold mb-5 text-gray-900">
             {reviewData.professionalVerdict.title}
           </h2>

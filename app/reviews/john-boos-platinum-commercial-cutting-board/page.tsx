@@ -296,6 +296,7 @@ export default async function JohnBoosPlatinumCuttingBoardReview() {
               productSlug={reviewData.productSlug}
               affiliateUrl={affiliateUrl}
               position="mid_article"
+              variant="textLink"
             />
           </div>
 

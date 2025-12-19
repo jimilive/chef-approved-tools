@@ -231,6 +231,7 @@ export default async function LeCreusetDutchOvenReviewPage() {
               productSlug={productData.slug}
               affiliateUrl={affiliateUrl}
               position="mid_article"
+              variant="textLink"
             />
           </div>
 

@@ -222,6 +222,7 @@ export default async function LodgeCastIronReviewPage() {
               productSlug={productData.slug}
               affiliateUrl={affiliateUrl}
               position="mid_article"
+              variant="textLink"
             />
           </div>
 

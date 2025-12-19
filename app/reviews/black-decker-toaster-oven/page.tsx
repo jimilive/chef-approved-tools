@@ -227,6 +227,7 @@ export default async function BlackDeckerToasterOvenReview() {
               productSlug={productData.slug}
               affiliateUrl={affiliateUrl}
               position="mid_article"
+              variant="textLink"
             />
           </div>
 
@@ -296,7 +297,7 @@ export default async function BlackDeckerToasterOvenReview() {
               </div>
             </div>
 
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg mt-6">
+            <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg mt-6">
               <p className="text-slate-800 text-sm mb-0">
                 <strong>💡 Space Requirements:</strong> {specifications.spaceRequirements}
               </p>

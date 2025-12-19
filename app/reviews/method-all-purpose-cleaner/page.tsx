@@ -196,6 +196,7 @@ export default async function MethodAllPurposeCleanerReviewPage() {
               productSlug={PRODUCT_SLUG}
               affiliateUrl={affiliateUrl}
               position="mid_article"
+              variant="textLink"
             />
           </div>
 

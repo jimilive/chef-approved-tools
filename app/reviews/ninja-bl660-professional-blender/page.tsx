@@ -11,6 +11,8 @@ import ProductComparisonTable from '@/components/comparison/ProductComparisonTab
 import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
+  TestingResultsGrid,
+  PerformanceAnalysis,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -167,7 +169,32 @@ export default async function NinjaBL660ReviewPage() {
             </div>
           </div>
 
-          {/* SECTION 2: PROS & CONS */}
+          {/* SECTION 2: TESTING RESULTS */}
+          <TestingResultsGrid
+            title={reviewData.testingResults.title}
+            sections={reviewData.testingResults.sections}
+            testingEnvironment={reviewData.testingResults.testingEnvironment}
+            outstandingPerformance={reviewData.testingResults.outstandingPerformance}
+            minorConsiderations={reviewData.testingResults.minorConsiderations}
+          />
+
+          {/* MID-CONTENT CTA */}
+          <div className="text-center my-8">
+            <AmazonCTA
+              productSlug={PRODUCT_SLUG}
+              affiliateUrl={affiliateUrl}
+              position="mid_article"
+              variant="textLink"
+            />
+          </div>
+
+          {/* SECTION 3: PERFORMANCE ANALYSIS */}
+          <PerformanceAnalysis
+            title={reviewData.performanceAnalysis.title}
+            sections={reviewData.performanceAnalysis.sections}
+          />
+
+          {/* SECTION 4: PROS & CONS */}
           <ProsConsGrid
             title={reviewData.prosConsTitle}
             prosTitle={reviewData.prosTitle}

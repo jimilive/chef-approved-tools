@@ -4,6 +4,8 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import {
   ReviewHero,
+  TestingResultsGrid,
+  PerformanceAnalysis,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -15,6 +17,7 @@ import ProductComparisonTable from '@/components/comparison/ProductComparisonTab
 import EmailCaptureBox from '@/components/review/EmailCaptureBox'
 import EmailCaptureSection from '@/components/review/EmailCaptureSection'
 import ReviewLayout from '@/components/review/ReviewLayout'
+import AmazonCTA from '@/components/AmazonCTA'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
 import { getProductOgImage, getProductHeroImage } from '@/lib/images'
 import { getReviewMetadata } from '@/data/metadata'
@@ -185,7 +188,7 @@ export default async function RubbermaidScraperReview() {
 
         {/* Bottom Line Up Front */}
         <section className="mb-8">
-          <div className="bg-slate-50 p-6 border-l-4 border-blue-500 rounded-r-lg">
+          <div className="bg-slate-50 p-6 border-l-4 border-orange-500 rounded-r-lg">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">{reviewData.bottomLine.title}</h2>
             <p className="text-lg text-slate-800 mb-4">
               <strong>{reviewData.bottomLine.headline}</strong>
@@ -216,7 +219,32 @@ export default async function RubbermaidScraperReview() {
           </div>
         </section>
 
-        {/* Testing Results */}
+        {/* TESTING RESULTS GRID */}
+        <TestingResultsGrid
+          title={reviewData.testingResultsGrid.title}
+          sections={reviewData.testingResultsGrid.sections}
+          testingEnvironment={reviewData.testingResultsGrid.testingEnvironment}
+          outstandingPerformance={reviewData.testingResultsGrid.outstandingPerformance}
+          minorConsiderations={reviewData.testingResultsGrid.minorConsiderations}
+        />
+
+        {/* MID-CONTENT CTA */}
+        <div className="text-center my-8">
+          <AmazonCTA
+            productSlug={PRODUCT_SLUG}
+            affiliateUrl={affiliateUrl}
+            position="mid_article"
+            variant="textLink"
+          />
+        </div>
+
+        {/* PERFORMANCE ANALYSIS */}
+        <PerformanceAnalysis
+          title={reviewData.performanceAnalysisData.title}
+          sections={reviewData.performanceAnalysisData.sections}
+        />
+
+        {/* Testing Results (Legacy) */}
         <section className="mb-8" id="testing">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">{reviewData.testingResults.title}</h2>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 space-y-6">
@@ -547,7 +575,7 @@ export default async function RubbermaidScraperReview() {
               below—I read and respond to every comment.
             </p>
             <p className="my-2.5">
-              <strong>🔧 Questions about kitchen tools?</strong> <Link href="/contact" className="text-blue-600">
+              <strong>🔧 Questions about kitchen tools?</strong> <Link href="/contact" className="text-orange-700">
               Contact me directly</Link> and I&apos;ll help you choose the right equipment for your needs.
             </p>
           </div>

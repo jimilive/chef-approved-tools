@@ -227,6 +227,7 @@ export default async function BenrinerLargeMandolineReview() {
               productSlug={productData.slug}
               affiliateUrl={affiliateUrl}
               position="mid_article"
+              variant="textLink"
             />
           </div>
 
