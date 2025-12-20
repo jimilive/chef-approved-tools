@@ -275,44 +275,10 @@ export default async function HenckelsSharpeningSteelReview() {
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 8: WHERE TO BUY - Inline Section */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              {reviewData.whereToBuy.title}
-            </h2>
-
-            <p className="text-slate-700 leading-relaxed mb-6">
-              {reviewData.whereToBuy.introText}
-            </p>
-
-            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
-              <div className="flex flex-col gap-4">
-                <div className="text-center mb-2">
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Available From</h3>
-                  <p className="text-sm text-slate-700">Choose your preferred retailer</p>
-                </div>
-                <MultiVendorCTA
-                  affiliateLinks={affiliateLinks}
-                  productName={productData.name}
-                  ctaId="where-to-buy-cta"
-                  position="where_to_buy"
-                  productSlug={productData.slug}
-                />
-                <p className="text-xs text-slate-700 text-center italic mt-2">
-                  As an Amazon Associate, I earn from qualifying purchases. This comes at no extra cost to you.
-                </p>
-              </div>
-            </div>
-
-            <p className="text-sm text-slate-700 mt-6 italic">
-              {reviewData.whereToBuy.disclaimer}
-            </p>
-          </div>
-
-          {/* SECTION 9: EMAIL CAPTURE */}
+          {/* SECTION 8: EMAIL CAPTURE */}
           <EmailCaptureSection />
 
-          {/* SECTION 10: BOTTOM LINE */}
+          {/* SECTION 9: BOTTOM LINE */}
           <BottomLineSection
             title={reviewData.bottomLine.title}
             paragraphs={reviewData.bottomLine.paragraphs.map(p => processInlineLinks(p))}

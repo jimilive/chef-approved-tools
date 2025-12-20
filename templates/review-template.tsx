@@ -225,51 +225,7 @@ export default async function [PRODUCT_NAME]ReviewPage() {
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 8: WHERE TO BUY (Custom inline section) */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              {reviewData.whereToBuy.title}
-            </h2>
-
-            <p className="text-slate-700 leading-relaxed mb-6">
-              {reviewData.whereToBuy.introText}
-            </p>
-
-            <div className="space-y-4">
-              {reviewData.whereToBuy.retailers.map((retailer, index) => (
-                <div
-                  key={index}
-                  className={`border border-gray-200 rounded-xl p-6 ${retailer.highlighted ? 'bg-orange-50' : ''}`}
-                >
-                  <div className="flex flex-col gap-4">
-                    <div className="text-center">
-                      <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">{retailer.name}</h3>
-                      <p className="text-sm text-slate-700 m-0">{retailer.description}</p>
-                    </div>
-                    <CTAVisibilityTracker ctaId={retailer.ctaId} position="mid_article">
-                      <a
-                        href={retailer.url === '[AFFILIATE_URL]' ? affiliateUrl : retailer.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={retailer.highlighted
-                          ? "inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap w-full text-center"
-                          : "inline-block border-2 border-orange-800 text-orange-800 hover:bg-orange-800 hover:text-white font-semibold px-8 py-3 rounded-lg text-base transition-all whitespace-nowrap w-full text-center"
-                        }
-                      >
-                        {retailer.ctaText}
-                      </a>
-                    </CTAVisibilityTracker>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <p className="text-sm text-slate-700 mt-6 italic">
-              {reviewData.whereToBuy.disclaimer}
-            </p>
-          </div>
-
-          {/* SECTION 9: EMAIL CAPTURE */}
+          {/* SECTION 8: EMAIL CAPTURE */}
           <EmailCaptureSection
             title={reviewData.emailCapture.title}
             subtitle={reviewData.emailCapture.subtitle}
@@ -278,7 +234,7 @@ export default async function [PRODUCT_NAME]ReviewPage() {
             finePrint={reviewData.emailCapture.finePrint}
           />
 
-          {/* SECTION 10: BOTTOM LINE */}
+          {/* SECTION 9: BOTTOM LINE */}
           <BottomLineSection
             title={reviewData.bottomLine.title}
             paragraphs={reviewData.bottomLine.paragraphs}
@@ -286,7 +242,7 @@ export default async function [PRODUCT_NAME]ReviewPage() {
             ctaText={reviewData.bottomLine.ctaText}
           />
 
-          {/* SECTION 11: RELATED PRODUCTS */}
+          {/* SECTION 10: RELATED PRODUCTS */}
           <RelatedProductsGrid
             title={reviewData.relatedProducts.title}
             products={reviewData.relatedProducts.products}

@@ -272,47 +272,10 @@ export default async function LargePlasticHotelPansReview() {
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 7: WHERE TO BUY */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              {reviewData.whereToBuy.title}
-            </h2>
-
-            <p className="text-slate-700 leading-relaxed mb-6">
-              {reviewData.whereToBuy.introText}
-            </p>
-
-            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50 min-h-[280px]">
-              <div className="text-center mb-4">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-                <p className="text-sm text-slate-700 m-0">Prime shipping, verified reviews, easy returns</p>
-              </div>
-              <SizeSelector
-                title="Choose Your Size:"
-                options={reviewData.sizeOptions.options.map((option) => ({
-                  id: option.id,
-                  label: `${option.size} — ${option.depth}`,
-                  description: `${option.dimensions} | ${option.capacity} | ${option.bestFor}`,
-                  affiliateUrl: option.affiliateUrl,
-                  ctaId: `where-to-buy-${option.id}`
-                }))}
-                defaultSize={reviewData.sizeOptions.options.find(o => o.recommended)?.id || reviewData.sizeOptions.options[0].id}
-                ctaText="Check Price on Amazon →"
-                ctaPosition="mid_article"
-                showDisclosure={true}
-                productSlug={PRODUCT_SLUG}
-              />
-            </div>
-
-            <p className="text-sm text-slate-700 mt-6 italic">
-              {reviewData.whereToBuy.disclaimer}
-            </p>
-          </div>
-
-          {/* SECTION 8: EMAIL CAPTURE */}
+          {/* SECTION 7: EMAIL CAPTURE */}
           <EmailCaptureSection />
 
-          {/* SECTION 9: BOTTOM LINE */}
+          {/* SECTION 8: BOTTOM LINE */}
           <BottomLineSection
             title={reviewData.bottomLine.title}
             paragraphs={reviewData.bottomLine.paragraphs.map(p => processInlineLinks(p))}
@@ -346,7 +309,7 @@ export default async function LargePlasticHotelPansReview() {
             </Link>
           </div>
 
-          {/* SECTION 10: RELATED PRODUCTS */}
+          {/* SECTION 9: RELATED PRODUCTS */}
           <RelatedProductsGrid
             title={reviewData.relatedProducts.title}
             products={reviewData.relatedProducts.products}

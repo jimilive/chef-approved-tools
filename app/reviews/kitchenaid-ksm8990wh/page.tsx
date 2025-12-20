@@ -406,66 +406,7 @@ export default async function KitchenAidCommercialReviewPage() {
           faqs={reviewData.faq.items}
         />
 
-        {/* SECTION 9: WHERE TO BUY - STRATEGIC MULTI-LINK SECTION */}
-        <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-            {reviewData.whereToBuy.title}
-          </h2>
-
-          <p className="text-slate-700 leading-relaxed mb-6">
-            {reviewData.whereToBuy.introText}
-          </p>
-
-          {/* PRIMARY OPTION: Multi-Vendor */}
-          <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
-            <div className="text-center mb-4">
-              <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Available From</h3>
-              <p className="text-sm text-slate-900">Choose your preferred retailer</p>
-            </div>
-
-            <MultiVendorCTA
-              affiliateLinks={affiliateLinks}
-              productName={productData.name}
-              ctaId="where-to-buy-cta"
-              position="mid_article"
-              productSlug={productData.slug}
-            />
-
-            {/* SECONDARY: Compare Models Link (Evergreen Link - HIGHEST EPC!) */}
-            <p className="text-center mt-3 text-sm">
-              <a
-                href={compareLink}
-                className="text-orange-700 hover:text-orange-800 underline font-medium"
-                target="_blank"
-                rel="nofollow noopener noreferrer sponsored"
-              >
-                → Compare All Stand Mixer Models
-              </a>
-            </p>
-
-            {/* TERTIARY: Trust Signal Link */}
-            <p className="text-center mt-2 text-sm">
-              <a
-                href={trustLink}
-                className="text-orange-700 hover:text-orange-800 underline font-medium"
-                target="_blank"
-                rel="nofollow noopener noreferrer sponsored"
-              >
-                → Free Delivery + 60 Day Returns
-              </a>
-            </p>
-
-            <p className="text-xs text-slate-700 text-center mt-3">
-              As a KitchenAid affiliate, I earn from qualifying purchases.
-            </p>
-          </div>
-
-          <p className="text-sm text-slate-700 mt-6 italic">
-            {reviewData.whereToBuy.disclaimer}
-          </p>
-        </div>
-
-        {/* SECTION 10: BOTTOM LINE */}
+        {/* SECTION 9: BOTTOM LINE */}
         <BottomLineSection
           title={reviewData.bottomLine.title}
           paragraphs={reviewData.bottomLine.paragraphs.map((paragraph, i) => (
@@ -497,13 +438,13 @@ export default async function KitchenAidCommercialReviewPage() {
           </Link>
         </div>
 
-        {/* SECTION 11: RELATED PRODUCTS */}
+        {/* SECTION 10: RELATED PRODUCTS */}
         <RelatedProductsGrid
           title={reviewData.relatedProducts.title}
           products={reviewData.relatedProducts.products}
         />
 
-        {/* SECTION 12: TESTIMONIALS */}
+        {/* SECTION 11: TESTIMONIALS */}
         <TestimonialsSection />
 
     </ReviewLayout>

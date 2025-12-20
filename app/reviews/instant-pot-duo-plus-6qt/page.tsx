@@ -321,57 +321,6 @@ export default async function InstantPotDuoPlus6QtReview() {
             faqs={reviewData.faq.items}
           />
 
-          {/* SECTION 7: WHERE TO BUY */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              {reviewData.whereToBuy.title}
-            </h2>
-
-            <p className="text-slate-700 leading-relaxed mb-6">
-              {reviewData.whereToBuy.introText}
-            </p>
-
-            <div className="border border-gray-200 rounded-xl p-6 bg-orange-50">
-              <div className="flex flex-col gap-4">
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-                  <p className="text-sm text-slate-700 mb-4">Free shipping with Prime | Easy returns</p>
-                </div>
-                <CTAVisibilityTracker
-                  ctaId="where-to-buy-cta"
-                  position="where_to_buy"
-                  productSlug={productData.slug}
-                >
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow sponsored"
-                    className="block w-full text-center bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-6 py-3 rounded-xl transition-all hover:scale-105 active:scale-95"
-                  >
-                    Check Price on Amazon
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-                <p className="text-xs text-slate-700 text-center italic">
-                  As an Amazon Associate, I earn from qualifying purchases. This comes at no extra cost to you.
-                </p>
-              </div>
-            </div>
-
-            <p className="text-sm text-slate-700 mt-6 italic">
-              {reviewData.whereToBuy.disclaimer}
-            </p>
-          </div>
-
           {/* SECTION 8: EMAIL CAPTURE */}
           <EmailCaptureSection />
 

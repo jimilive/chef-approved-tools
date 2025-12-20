@@ -138,8 +138,8 @@ export default async function ProductReview() {
             heroImage={getProductHeroImage(PRODUCT_SLUG)}
             customCTA={
               <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
-                <h2 className="text-xl font-bold mb-4 text-gray-900 mt-0">{reviewData.whereToBuy.title}</h2>
-                <p className="text-gray-700 mb-6">{reviewData.whereToBuy.introText}</p>
+                <h2 className="text-xl font-bold mb-4 text-gray-900 mt-0">Choose Your Length</h2>
+                <p className="text-gray-700 mb-6">Both sizes are the same heavyweight construction with perfect spring tension. I keep both in my kitchen - 9&quot; for sautéing and general tasks, 12&quot; for grilling and working over heat.</p>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="bg-gradient-to-br from-orange-50 to-red-50 p-5 rounded-lg border-2 border-orange-300">
@@ -188,7 +188,7 @@ export default async function ProductReview() {
                 </div>
 
                 <p className="text-xs text-slate-700 text-center mt-4">
-                  {reviewData.whereToBuy.disclaimer}
+                  As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
                 </p>
               </div>
             }
