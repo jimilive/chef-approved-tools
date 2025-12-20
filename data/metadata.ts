@@ -3460,7 +3460,7 @@ export const METADATA = {
       testingPeriod: "20 Years Using",
       productSlug: "small-metal-hotel-pans",
       publishedTime: "2025-10-25T10:00:00Z",
-      modifiedTime: "2025-12-16T10:00:00Z",
+      modifiedTime: "2025-12-20T10:00:00Z",
       searchIntent: "transactional",
       conversionPotential: "medium",
       affiliateProgram: "amazon",
