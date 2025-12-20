@@ -13,6 +13,7 @@ import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
   TestingResultsGrid,
+  PerformanceAnalysis,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -263,52 +264,39 @@ export default async function ProductReview() {
           </div>
 
           {/* SECTION 3: PERFORMANCE ANALYSIS */}
-          {/* V2: Add inline product name links */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              {reviewData.performanceAnalysis.title}
-            </h2>
-
-            {reviewData.performanceAnalysis.sections.map((section, index) => (
-              <div key={index} className="mb-8 last:mb-0">
-                <h3 className="text-xl font-semibold text-slate-900 mb-3 leading-[1.4]">
-                  {section.title}
-                </h3>
-                <p className="text-slate-700 leading-relaxed">
-                  {/* V2: Add inline product link in first section */}
-                  {index === 0 ? (
-                    <>
-                      The{' '}
-                      <a
-                        href={affiliateUrl4inch}
-                        className="text-orange-700 hover:text-orange-800 font-medium"
-                        target="_blank"
-                        rel="nofollow noopener noreferrer sponsored"
-                      >
-                        {productData.name}
-                      </a>
-                      {' '}gives you complete control for detailed tasks. Sharp tip gets into tight spaces for deveining shrimp, removing tomato cores, or hulling strawberries. Comfortable to hold for extended precision work.
-                    </>
-                  ) : index === 3 ? (
-                    <>
-                      From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I&apos;ve used{' '}
-                      <a
-                        href={affiliateUrl4inch}
-                        className="text-orange-700 hover:text-orange-800 font-medium"
-                        target="_blank"
-                        rel="nofollow noopener noreferrer sponsored"
-                      >
-                        this knife
-                      </a>
-                      {' '}to devein hundreds of shrimp per shift, peel and trim vegetables for garnishes, remove silver skin from tenderloins, hull strawberries for dessert prep, and trim fat and connective tissue from proteins. These knives take abuse in a professional kitchen. At this price, I don&apos;t worry about replacing them when needed. But honestly, with basic care, they last for years.
-                    </>
-                  ) : (
-                    section.content
-                  )}
-                </p>
-              </div>
-            ))}
-          </div>
+          <PerformanceAnalysis
+            title={reviewData.performanceAnalysis.title}
+            sections={reviewData.performanceAnalysis.sections.map((section, index) => ({
+              ...section,
+              content: index === 0 ? (
+                <>
+                  The{' '}
+                  <a
+                    href={affiliateUrl4inch}
+                    className="text-orange-700 hover:text-orange-800 font-medium"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer sponsored"
+                  >
+                    {productData.name}
+                  </a>
+                  {' '}gives you complete control for detailed tasks. Sharp tip gets into tight spaces for deveining shrimp, removing tomato cores, or hulling strawberries. Comfortable to hold for extended precision work.
+                </>
+              ) : index === 3 ? (
+                <>
+                  From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I&apos;ve used{' '}
+                  <a
+                    href={affiliateUrl4inch}
+                    className="text-orange-700 hover:text-orange-800 font-medium"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer sponsored"
+                  >
+                    this knife
+                  </a>
+                  {' '}to devein hundreds of shrimp per shift, peel and trim vegetables for garnishes, remove silver skin from tenderloins, hull strawberries for dessert prep, and trim fat and connective tissue from proteins. These knives take abuse in a professional kitchen. At this price, I don&apos;t worry about replacing them when needed. But honestly, with basic care, they last for years.
+                </>
+              ) : section.content
+            }))}
+          />
 
           {/* V2: COMPARISON TABLE */}
           <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">

@@ -12,6 +12,7 @@ import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
   TestingResultsGrid,
+  PerformanceAnalysis,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -158,65 +159,52 @@ export default async function ProductReview() {
           </div>
 
           {/* SECTION 3: PERFORMANCE ANALYSIS */}
-          {/* V2: Add inline product name links */}
-          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-              {reviewData.performanceAnalysis.title}
-            </h2>
-
-            {reviewData.performanceAnalysis.sections.map((section, index) => (
-              <div key={index} className="mb-8 last:mb-0">
-                <h3 className="text-xl font-semibold text-slate-900 mb-3 leading-[1.4]">
-                  {section.title}
-                </h3>
-                <p className="text-slate-700 leading-relaxed">
-                  {/* V2: Add inline product links in strategic sections */}
-                  {index === 0 ? (
-                    <>
-                      The{' '}
-                      <a
-                        href={affiliateUrl}
-                        className="text-orange-700 hover:text-orange-800 font-medium"
-                        target="_blank"
-                        rel="nofollow noopener noreferrer sponsored"
-                      >
-                        10-inch blade
-                      </a>
-                      {' '}gives you the reach needed for steaks, large cabbages, and pork shoulders. Longer blade means better slicing motion and fewer strokes through large items. When you&apos;re breaking down a steak or portioning a roast, those extra 2 inches make a noticeable difference in efficiency and control.
-                    </>
-                  ) : index === 2 ? (
-                    <>
-                      After 45 years of cooking and countless knives tested, the{' '}
-                      <a
-                        href={affiliateUrl}
-                        className="text-orange-700 hover:text-orange-800 font-medium"
-                        target="_blank"
-                        rel="nofollow noopener noreferrer sponsored"
-                      >
-                        Victorinox 10-inch chef&apos;s knife
-                      </a>
-                      {' '}is my choice for high-volume protein breakdown. From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I&apos;ve used this knife to break down 50+ steaks per week, portion large pork shoulders and beef roasts, slice through whole butternut squash and large cabbages, and prep oversized vegetables for bulk meal prep. The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day.
-                    </>
-                  ) : index === 4 ? (
-                    <>
-                      This isn&apos;t a different knife—it&apos;s the same professional-grade{' '}
-                      <a
-                        href={affiliateUrl}
-                        className="text-orange-700 hover:text-orange-800 font-medium"
-                        target="_blank"
-                        rel="nofollow noopener noreferrer sponsored"
-                      >
-                        Victorinox
-                      </a>
-                      {' '}with 2 extra inches. Same high-carbon stainless steel, same NSF-certified fibrox handle, same Swiss manufacturing quality, same exceptional edge retention, and same unbeatable value proposition. The only difference is blade length and who it&apos;s best suited for.
-                    </>
-                  ) : (
-                    section.content
-                  )}
-                </p>
-              </div>
-            ))}
-          </div>
+          <PerformanceAnalysis
+            title={reviewData.performanceAnalysis.title}
+            sections={reviewData.performanceAnalysis.sections.map((section, index) => ({
+              ...section,
+              content: index === 0 ? (
+                <>
+                  The{' '}
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 font-medium"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer sponsored"
+                  >
+                    10-inch blade
+                  </a>
+                  {' '}gives you the reach needed for steaks, large cabbages, and pork shoulders. Longer blade means better slicing motion and fewer strokes through large items. When you&apos;re breaking down a steak or portioning a roast, those extra 2 inches make a noticeable difference in efficiency and control.
+                </>
+              ) : index === 2 ? (
+                <>
+                  After 45 years of cooking and countless knives tested, the{' '}
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 font-medium"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer sponsored"
+                  >
+                    Victorinox 10-inch chef&apos;s knife
+                  </a>
+                  {' '}is my choice for high-volume protein breakdown. From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I&apos;ve used this knife to break down 50+ steaks per week, portion large pork shoulders and beef roasts, slice through whole butternut squash and large cabbages, and prep oversized vegetables for bulk meal prep. The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day.
+                </>
+              ) : index === 4 ? (
+                <>
+                  This isn&apos;t a different knife—it&apos;s the same professional-grade{' '}
+                  <a
+                    href={affiliateUrl}
+                    className="text-orange-700 hover:text-orange-800 font-medium"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer sponsored"
+                  >
+                    Victorinox
+                  </a>
+                  {' '}with 2 extra inches. Same high-carbon stainless steel, same NSF-certified fibrox handle, same Swiss manufacturing quality, same exceptional edge retention, and same unbeatable value proposition. The only difference is blade length and who it&apos;s best suited for.
+                </>
+              ) : section.content
+            }))}
+          />
 
           {/* COMPARISON TABLE */}
           <section className="my-12">
