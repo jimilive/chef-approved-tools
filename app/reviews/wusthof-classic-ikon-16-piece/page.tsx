@@ -183,9 +183,10 @@ export default async function ProductReview() {
           {/* MID-CONTENT CTA */}
           <div className="text-center my-8">
             <AmazonCTA
-              productSlug={productData.slug}
+              productSlug={PRODUCT_SLUG}
               affiliateUrl={affiliateUrl}
               position="mid_article"
+              variant="textLink"
             />
           </div>
 

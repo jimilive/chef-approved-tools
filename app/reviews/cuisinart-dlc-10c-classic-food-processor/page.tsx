@@ -249,21 +249,12 @@ export default async function CuisinartDLC10CReview() {
 
           {/* MID-CONTENT CTA */}
           <div className="text-center my-8">
-            <CTAVisibilityTracker
-              ctaId={`${productData.slug}-mid-content`}
+            <AmazonCTA
+              productSlug={PRODUCT_SLUG}
+              affiliateUrl={affiliateUrl}
               position="mid_article"
-              productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="nofollow noopener noreferrer sponsored"
-                className="text-orange-700 hover:text-orange-800 font-medium underline"
-              >
-                → See current Amazon price and reviews
-              </a>
-            </CTAVisibilityTracker>
+              variant="textLink"
+            />
           </div>
 
           {/* SECTION 3: PERFORMANCE ANALYSIS */}

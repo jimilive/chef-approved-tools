@@ -6,7 +6,6 @@ import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import MultiVendorCTA from '@/components/MultiVendorCTA'
 import ReviewLayout from '@/components/review/ReviewLayout'
 import {
@@ -199,21 +198,12 @@ export default async function HenckelsSharpeningSteelReview() {
 
           {/* MID-CONTENT CTA */}
           <div className="text-center my-8">
-            <CTAVisibilityTracker
-              ctaId={`${productData.slug}-mid-content`}
+            <AmazonCTA
+              productSlug={PRODUCT_SLUG}
+              affiliateUrl={affiliateUrl}
               position="mid_article"
-              productSlug={productData.slug}
-              merchant="amazon"
-            >
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="nofollow noopener noreferrer sponsored"
-                className="text-orange-700 hover:text-orange-800 font-medium underline"
-              >
-                → See current Amazon price and reviews
-              </a>
-            </CTAVisibilityTracker>
+              variant="textLink"
+            />
           </div>
 
           {/* SECTION 3: PERFORMANCE ANALYSIS */}
