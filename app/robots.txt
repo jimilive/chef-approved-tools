@@ -1,7 +1,42 @@
+# Chef Approved Tools - robots.txt
+# Updated: December 20, 2025
+# Purpose: Explicitly allow AI crawlers for visibility in AI search engines
+
 User-agent: *
 Allow: /
 
-# Block admin and test pages
+# === AI CRAWLERS - EXPLICITLY ALLOWED ===
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Google AI Training
+User-agent: Google-Extended
+Allow: /
+
+# === BLOCKED PATHS ===
+
 Disallow: /admin/
 Disallow: /test/
 Disallow: /_next/
@@ -13,11 +48,10 @@ Disallow: /*?type=
 Disallow: /*&filter=
 Disallow: /*&type=
 
-# Crawl-delay for respectful crawling
+# === CONFIGURATION ===
+
 Crawl-delay: 1
 
-# Host
 Host: https://www.chefapprovedtools.com
 
-# Sitemaps
 Sitemap: https://www.chefapprovedtools.com/sitemap.xml
