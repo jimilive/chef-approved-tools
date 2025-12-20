@@ -454,6 +454,73 @@ export const reviewData = {
     ]
   },
 
+  // TESTING RESULTS
+  testingResults: {
+    title: "Testing Results",
+    testingEnvironment: [
+      { label: "Testing Duration", value: "10+ years professional and home use" },
+      { label: "Location", value: "Multiple professional kitchens + home" },
+      { label: "Primary Use", value: "Dough portioning, board scraping, ingredient transfer" },
+      { label: "Secondary Uses", value: "Cutting brownies, lifting cookies, vegetable chopping" },
+      { label: "Frequency", value: "Daily use in professional settings" }
+    ],
+    outstandingPerformance: [
+      "Stainless steel blade maintains sharp edge for clean dough cuts",
+      "Non-slip handle provides secure grip during heavy scraping pressure",
+      "Etched measurement markings (inches) enable precise dough portioning",
+      "Flat blade edge transfers ingredients from board to pan in one motion",
+      "Dishwasher-safe construction survives commercial kitchen cleaning",
+      "Wide blade (6 inches) covers more surface area per scrape"
+    ],
+    minorConsiderations: [
+      "Not sharp enough for hard vegetables—still need a knife for carrots",
+      "Blade can scratch non-stick surfaces if used carelessly",
+      "Measurements only in inches (no metric markings)",
+      "Handle adds height—won't fit in shallow utensil drawers"
+    ],
+    sections: [
+      {
+        title: "Dough Work Performance",
+        content: "Every baker needs a bench scraper. At Purple Café, I used this daily for pizza dough portioning—the 6-inch blade cuts through 1-2 pound dough balls cleanly, and the etched measurements let me portion consistently without a scale. The blade is sharp enough to cut cleanly but not so sharp it's dangerous. For bread, pastry, or pizza dough, this is the single most useful tool after your hands."
+      },
+      {
+        title: "Board Scraping Efficiency",
+        content: "After dicing onions, mincing garlic, or chopping herbs, a bench scraper clears your board in seconds. One sweep transfers everything to your bowl or pan. In professional kitchens, efficiency is everything—a bench scraper saves dozens of trips to the trash or sink per shift. It keeps your hands clean and your workspace organized. Every prep cook has one within arm's reach."
+      },
+      {
+        title: "Handle Ergonomics",
+        content: "The soft, wide handle distributes pressure evenly across your palm. During extended dough work or heavy scraping, this matters. Thin-handled scrapers cause hand fatigue; cheap plastic handles crack under pressure. The OXO handle is comfortable enough for extended use and durable enough to survive years of daily professional work."
+      },
+      {
+        title: "Versatility Beyond Baking",
+        content: "I use my bench scraper for tasks the designers probably didn't intend: cutting brownies into perfect squares, lifting cookies from baking sheets, even as a makeshift transfer board for delicate items. The flat blade and comfortable handle make it useful whenever you need to move or cut soft items. It's one of those tools that, once you have it, you wonder how you worked without it."
+      }
+    ]
+  },
+
+  // PERFORMANCE ANALYSIS
+  performanceAnalysis: {
+    title: "Performance Analysis",
+    sections: [
+      {
+        title: "The Most Underrated Kitchen Tool",
+        content: "A bench scraper isn't glamorous, but it's indispensable. In 24 years of professional kitchens, I've never worked in one that didn't have multiple bench scrapers within reach. The OXO version has the perfect combination of features: sharp but safe edge for cutting dough, comfortable grip for scraping cutting boards, measurement markings for portioning, and a flat edge for transferring ingredients."
+      },
+      {
+        title: "Construction Quality",
+        content: "The stainless steel blade is thick enough to resist bending but thin enough to slide under cookies or dough without tearing. The handle-to-blade connection is solid—no wobble, no loosening after years of use. The measurements are etched into the metal, not printed, so they won't wear off. These details separate professional-grade tools from consumer junk."
+      },
+      {
+        title: "Cutting Board Partnership",
+        content: "A bench scraper is only as good as the cutting board you use it with. I use mine most with my John Boos maple board—the smooth wood surface makes scraping effortless, and the bench scraper keeps it clean between tasks. On plastic boards, it works well but can leave scratches over time. Never use on glass or ceramic—you'll dull the edge immediately."
+      },
+      {
+        title: "Professional vs. Consumer Use",
+        content: "In professional kitchens, a bench scraper sees 50+ uses per day. At home, maybe 5-10 times per cooking session. Either way, the OXO version handles the workload. This isn't a tool you replace often—mine has lasted 10+ years with zero issues. For something under $15 that you'll use for a decade, the value is exceptional."
+      }
+    ]
+  },
+
   // LEGACY PRODUCT DATA (fallback for Supabase)
   legacyProductData: {
     name: "OXO Good Grips Multi-Purpose Bench Scraper",

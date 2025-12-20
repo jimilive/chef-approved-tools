@@ -366,6 +366,78 @@ export const reviewData = {
     ctaText: "Check Current Price →"
   },
 
+  // TESTING RESULTS
+  testingResults: {
+    title: "Testing Results",
+    testingEnvironment: [
+      { label: "Testing Duration", value: "6 years professional use at Purple Café" },
+      { label: "Sharpening Frequency", value: "8-12 knives weekly during service" },
+      { label: "Stone Types", value: "Coarse Crystolon, Medium Crystolon, Fine India" },
+      { label: "Knife Types Sharpened", value: "Chef's knives, paring knives, slicers, cleavers" },
+      { label: "Current Status", value: "Same system still in use after 6+ years" }
+    ],
+    outstandingPerformance: [
+      "Three-stone progression restores completely dull edges to razor sharpness",
+      "Oil reservoir keeps stones clean and ready for immediate use",
+      "Rotating base provides instant access to coarse, medium, and fine grits",
+      "Professional-grade results match or exceed electric sharpener quality",
+      "Replaceable stones extend system lifespan indefinitely",
+      "Included angle guide helps beginners maintain consistent 20-degree angle"
+    ],
+    minorConsiderations: [
+      "Learning curve for beginners—takes practice to maintain consistent angle",
+      "Requires mineral oil (included initially, needs replenishment)",
+      "Slower than electric sharpeners—10-15 minutes per knife vs. seconds",
+      "Oil-based system creates some mess during sharpening",
+      "Not suitable for serrated knives or ceramic blades"
+    ],
+    sections: [
+      {
+        title: "Restaurant Sharpening Reality",
+        content: "At Purple Café, we served 200+ covers nightly. Every knife needed weekly sharpening to maintain edge through that volume. The Norton IM200 handled 8-12 professional knives per week for 6 years. No stone replacement needed, no system failures. The tri-stone progression (coarse to medium to fine) takes a completely dull knife back to razor-sharp in 10-15 minutes."
+      },
+      {
+        title: "Stone Quality and Durability",
+        content: "Norton has manufactured sharpening stones for over 80 years—the IM200 reflects that expertise. The Crystolon (silicon carbide) stones cut aggressively for initial sharpening, while the India (aluminum oxide) stone provides fine finishing. Stone wear is minimal with proper oil use. My 6-year-old stones show surface wear but sharpen as effectively as new."
+      },
+      {
+        title: "The Oil Reservoir System",
+        content: "The plastic base holds stones in an oil bath when not in use, keeping them saturated and clean. This matters because dry oil stones load with metal particles and become less effective. The rotating carousel provides instant access to all three grits—no fumbling between stones during the sharpening process. It's a clever design that speeds up the workflow."
+      },
+      {
+        title: "Results vs. Electric Sharpeners",
+        content: "Electric sharpeners are faster but remove more metal and create a less refined edge. The Norton system removes only what's necessary and creates a polished edge that holds longer. For professional or serious home cooks who value their knives, manual sharpening is worth the extra time. The control over angle and pressure produces superior results."
+      }
+    ]
+  },
+
+  // PERFORMANCE ANALYSIS
+  performanceAnalysis: {
+    title: "Performance Analysis",
+    sections: [
+      {
+        title: "Why Manual Sharpening Produces Better Edges",
+        content: "Electric sharpeners work fast by removing significant metal at fixed angles. Manual stones let you control exactly how much metal you remove and at what angle. The result is a more refined edge that lasts longer before needing re-sharpening. For quality knives like Victorinox, Wüsthof, or Japanese brands, manual sharpening preserves your investment."
+      },
+      {
+        title: "The Three-Stone Progression",
+        content: "Each stone serves a specific purpose. The coarse Crystolon (100 grit) repairs damaged edges and removes chips. The medium Crystolon (150 grit) refines the edge and removes coarse scratches. The fine India stone (320 grit) polishes to a sharp, smooth edge. Using all three in sequence takes a neglected knife back to professional condition."
+      },
+      {
+        title: "Learning Curve Reality",
+        content: "The included angle guide helps, but developing a consistent 20-degree angle takes practice. Expect your first few attempts to be imperfect. By your 10th knife, you'll have the feel. By your 50th, it becomes automatic. This learning curve is why many home cooks prefer electric sharpeners—but the superior results justify the investment in skill."
+      },
+      {
+        title: "Long-Term Value Calculation",
+        content: "The Norton IM200 costs approximately $60 and lasts decades with proper care. Replacement stones cost $15-25 each when eventually needed. Compare this to professional sharpening services at $5-10 per knife, or electric sharpeners that wear out and need replacement. Over 10 years of use, the Norton system costs pennies per sharpening. That's professional-grade value."
+      },
+      {
+        title: "Proper Technique Summary",
+        content: "Use food-grade mineral oil (not water, not cooking oil). Maintain consistent 20-degree angle. Apply light pressure—let the abrasive do the work. Work through all three grits in sequence. Rinse and dry knives after sharpening. Clean stones occasionally by scrubbing with soap and water. These basics produce professional results at home."
+      }
+    ]
+  },
+
   // RELATED PRODUCTS
   relatedProducts: {
     title: 'Complete Your Knife Care Kit',

@@ -9,6 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
+  TestingResultsGrid,
+  PerformanceAnalysis,
   ProsConsGrid,
   FAQSection,
   BottomLineSection,
@@ -213,6 +215,15 @@ export default async function NortonTriStoneSharpenerReview() {
           </div>
         </section>
 
+        {/* TESTING RESULTS */}
+        <TestingResultsGrid
+          title={reviewData.testingResults.title}
+          sections={reviewData.testingResults.sections}
+          testingEnvironment={reviewData.testingResults.testingEnvironment}
+          outstandingPerformance={reviewData.testingResults.outstandingPerformance}
+          minorConsiderations={reviewData.testingResults.minorConsiderations}
+        />
+
         {/* The Testing Story */}
         <section className="my-12">
           <h2 className="text-3xl font-bold mt-10 mb-5 text-gray-900">
@@ -284,6 +295,12 @@ export default async function NortonTriStoneSharpenerReview() {
             ))}
           </div>
         </section>
+
+        {/* PERFORMANCE ANALYSIS */}
+        <PerformanceAnalysis
+          title={reviewData.performanceAnalysis.title}
+          sections={reviewData.performanceAnalysis.sections}
+        />
 
         {/* Why Manual Stones Beat Electric */}
         <section className="my-12">

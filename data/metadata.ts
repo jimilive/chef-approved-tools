@@ -3193,7 +3193,7 @@ export const METADATA = {
       testingPeriod: "3 Years Commercial Testing",
       productSlug: "robot-coupe-r2-dice",
       publishedTime: "2025-09-25T10:00:00Z",
-      modifiedTime: "2025-12-19T10:00:00Z",
+      modifiedTime: "2025-12-20T10:00:00Z",
       searchIntent: "transactional",
       conversionPotential: "medium",
       affiliateProgram: "amazon",

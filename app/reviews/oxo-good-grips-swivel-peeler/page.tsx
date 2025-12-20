@@ -12,6 +12,8 @@ import AmazonCTA from '@/components/AmazonCTA'
 import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
+  TestingResultsGrid,
+  PerformanceAnalysis,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -152,6 +154,15 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
             </div>
           </section>
 
+          {/* TESTING RESULTS */}
+          <TestingResultsGrid
+            title={reviewData.testingResults.title}
+            sections={reviewData.testingResults.sections}
+            testingEnvironment={reviewData.testingResults.testingEnvironment}
+            outstandingPerformance={reviewData.testingResults.outstandingPerformance}
+            minorConsiderations={reviewData.testingResults.minorConsiderations}
+          />
+
           {/* MID-CONTENT CTA */}
           <div className="text-center my-8">
             <CTAVisibilityTracker
@@ -170,6 +181,12 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
               </a>
             </CTAVisibilityTracker>
           </div>
+
+          {/* PERFORMANCE ANALYSIS */}
+          <PerformanceAnalysis
+            title={reviewData.performanceAnalysis.title}
+            sections={reviewData.performanceAnalysis.sections}
+          />
 
           {/* PROS & CONS - Using standardized component */}
           <ProsConsGrid

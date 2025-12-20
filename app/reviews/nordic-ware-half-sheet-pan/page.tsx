@@ -12,6 +12,8 @@ import ProductComparisonTable from '@/components/comparison/ProductComparisonTab
 import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
+  TestingResultsGrid,
+  PerformanceAnalysis,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -161,6 +163,15 @@ export default async function NordicWareHalfSheetPanReview() {
             {reviewData.hero.quickStats}
           </p>
         </div>
+
+        {/* TESTING RESULTS */}
+        <TestingResultsGrid
+          title={reviewData.testingResults.title}
+          sections={reviewData.testingResults.sections}
+          testingEnvironment={reviewData.testingResults.testingEnvironment}
+          outstandingPerformance={reviewData.testingResults.outstandingPerformance}
+          minorConsiderations={reviewData.testingResults.minorConsiderations}
+        />
 
         {/* Above Fold CTA */}
         <div className="bg-orange-50 border-2 border-orange-200 rounded-xl p-6 my-8">
@@ -316,6 +327,12 @@ export default async function NordicWareHalfSheetPanReview() {
             ))}
           </div>
         </section>
+
+        {/* PERFORMANCE ANALYSIS */}
+        <PerformanceAnalysis
+          title={reviewData.performanceAnalysis.title}
+          sections={reviewData.performanceAnalysis.sections}
+        />
 
         {/* Understanding Patina */}
         <section className="my-12">

@@ -13,6 +13,8 @@ import {
   ReviewHero,
   TestingStory,
   RealWorldUseCases,
+  TestingResultsGrid,
+  PerformanceAnalysis,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -180,6 +182,15 @@ export default async function NinjaAirFryerAF101ReviewPage() {
             </div>
           </div>
 
+          {/* TESTING RESULTS */}
+          <TestingResultsGrid
+            title={reviewData.testingResults.title}
+            sections={reviewData.testingResults.sections}
+            testingEnvironment={reviewData.testingResults.testingEnvironment}
+            outstandingPerformance={reviewData.testingResults.outstandingPerformance}
+            minorConsiderations={reviewData.testingResults.minorConsiderations}
+          />
+
           {/* SECTION 2: PROS & CONS */}
           <ProsConsGrid
             title={reviewData.prosConsTitle}
@@ -218,6 +229,12 @@ export default async function NinjaAirFryerAF101ReviewPage() {
               </div>
             ))}
           </section>
+
+          {/* PERFORMANCE ANALYSIS */}
+          <PerformanceAnalysis
+            title={reviewData.performanceAnalysis.title}
+            sections={reviewData.performanceAnalysis.sections}
+          />
 
           {/* SECTION 5: WHO SHOULD BUY */}
           <WhoShouldBuyGrid
