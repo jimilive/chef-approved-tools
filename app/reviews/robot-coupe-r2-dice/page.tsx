@@ -5,6 +5,7 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import {
   ReviewHero,
   TestingResultsGrid,
+  PerformanceAnalysis,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -208,6 +209,12 @@ export default async function RobotCoupeR2DiceReview() {
             minorConsiderations={reviewData.testingResults.minorConsiderations}
           />
         </div>
+
+        {/* PERFORMANCE ANALYSIS */}
+        <PerformanceAnalysis
+          title={reviewData.performanceAnalysis.title}
+          sections={reviewData.performanceAnalysis.sections}
+        />
 
         {/* Mid-Article CTA */}
         <div className="text-center my-8">
