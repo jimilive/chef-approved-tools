@@ -4,6 +4,7 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import {
   ReviewHero,
+  TestingResultsGrid,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -198,71 +199,15 @@ export default async function RobotCoupeR2DiceReview() {
         </section>
 
         {/* Real-World Testing */}
-        <section className="mb-8" id="testing">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Professional Kitchen Testing</h2>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-bold text-slate-900 mb-3">Commercial Kitchen Performance</h3>
-                <p className="text-slate-700 leading-relaxed mb-4">
-                  In the demanding environment of Purple Cafe&apos;s prep kitchen, the Robot Coupe R2 Dice became our go-to workhorse for cheese shredding operations—working alongside our <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-700 hover:text-orange-800 underline">KitchenAid commercial mixer</Link> and <Link href="/reviews/vitamix-5200-professional-blender" className="text-orange-700 hover:text-orange-800 underline">Vitamix 5200 blender</Link> as the foundation of our prep station.
-                  The continuous feed design allowed us to process large volumes of cheese efficiently during busy prep periods, maintaining consistent quality
-                  that manual shredding simply couldn&apos;t match. The precision cuts and uniform results were essential for presentation standards.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-slate-900 mb-3">Speed and Efficiency Excellence</h3>
-                <p className="text-slate-700 leading-relaxed mb-4">
-                  The 2 HP fan-cooled induction motor running at 1,725 RPM delivers the same professional-grade performance we relied on in our <Link href="/reviews/kitchenaid-ksm8990wh" className="text-orange-700 hover:text-orange-800 underline">KitchenAid commercial mixer</Link>—equipment built for daily commercial abuse, not occasional home use.
-                  With the ability to process up to 850 servings in three hours, this machine drastically cuts prep time. Professional kitchens report
-                  &quot;saving hours daily&quot; and being able to &quot;do in minutes what used to take hours&quot; thanks to the continuous feed design and powerful motor.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-bold text-slate-900 mb-3">Reliability Under Pressure</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Professional kitchens consistently rate this as &quot;the hardest working employee&quot; due to its reliability under continuous use. However,
-                  component durability varies - while the motor and overall unit perform excellently, some users report issues with blades and discharge
-                  discs within 1.5-2 years of heavy commercial use. Regular maintenance and component inspection are essential for maximizing longevity
-                  in high-volume operations.
-                </p>
-              </div>
-            </div>
-
-            <h3 className="text-xl font-semibold text-slate-900 mb-4 mt-6">Testing Environment</h3>
-            <ul className="space-y-2 text-slate-700">
-              <li>• <strong>Location:</strong> Purple Cafe</li>
-              <li>• <strong>Usage:</strong> Primarily used for shredding cheese</li>
-              <li>• <strong>Volume:</strong> Daily high-volume restaurant operations</li>
-              <li>• <strong>Duration:</strong> 3 years of continuous testing</li>
-            </ul>
-
-            <h3 className="text-xl font-semibold text-slate-900 mb-4 mt-6">Performance Results</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-semibold text-green-700 mb-2">✅ Outstanding Performance Results</h3>
-                <ul className="text-sm text-slate-700 space-y-1">
-                  <li>• Excellent speed and efficiency (5/5 rating)</li>
-                  <li>• Superior cut quality and consistency (5/5 rating)</li>
-                  <li>• Very reliable under high-volume restaurant operations</li>
-                  <li>• Significantly more powerful than home food processors</li>
-                  <li>• Faster processing speeds than residential alternatives</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-semibold text-orange-800 mb-2">⚠️ Considerations</h3>
-                <ul className="text-sm text-slate-700 space-y-1">
-                  <li>• Cleaning requires more attention (4/5 rating)</li>
-                  <li>• Commercial equipment requires proper maintenance</li>
-                  <li>• Learning curve for optimal performance</li>
-                  <li>• Higher investment than home alternatives</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+        <div id="testing">
+          <TestingResultsGrid
+            title={reviewData.testingResults.title}
+            sections={reviewData.testingResults.sections}
+            testingEnvironment={reviewData.testingResults.testingEnvironment}
+            outstandingPerformance={reviewData.testingResults.outstandingPerformance}
+            minorConsiderations={reviewData.testingResults.minorConsiderations}
+          />
+        </div>
 
         {/* Mid-Article CTA */}
         <div className="text-center my-8">

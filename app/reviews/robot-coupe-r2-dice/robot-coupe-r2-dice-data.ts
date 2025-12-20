@@ -107,27 +107,25 @@ export const reviewData = {
         content: "Professional kitchens consistently rate this as \"the hardest working employee\" due to its reliability under continuous use. However, component durability varies - while the motor and overall unit perform excellently, some users report issues with blades and discharge discs within 1.5-2 years of heavy commercial use. Regular maintenance and component inspection are essential for maximizing longevity in high-volume operations."
       }
     ],
-    environment: {
-      location: "Purple Cafe",
-      usage: "Primarily used for shredding cheese",
-      volume: "Daily high-volume restaurant operations",
-      duration: "3 years of continuous testing"
-    },
-    performance: {
-      outstanding: [
-        "Excellent speed and efficiency (5/5 rating)",
-        "Superior cut quality and consistency (5/5 rating)",
-        "Very reliable under high-volume restaurant operations",
-        "Significantly more powerful than home food processors",
-        "Faster processing speeds than residential alternatives"
-      ],
-      considerations: [
-        "Cleaning requires more attention (4/5 rating)",
-        "Commercial equipment requires proper maintenance",
-        "Learning curve for optimal performance",
-        "Higher investment than home alternatives"
-      ]
-    }
+    testingEnvironment: [
+      { label: "Location", value: "Purple Cafe prep kitchen" },
+      { label: "Primary Use", value: "Cheese shredding operations" },
+      { label: "Volume", value: "Daily high-volume restaurant operations" },
+      { label: "Duration", value: "3 years of continuous testing" }
+    ],
+    outstandingPerformance: [
+      "Excellent speed and efficiency (5/5 rating)",
+      "Superior cut quality and consistency (5/5 rating)",
+      "Very reliable under high-volume restaurant operations",
+      "Significantly more powerful than home food processors",
+      "Faster processing speeds than residential alternatives"
+    ],
+    minorConsiderations: [
+      "Cleaning requires more attention (4/5 rating)",
+      "Commercial equipment requires proper maintenance",
+      "Learning curve for optimal performance",
+      "Higher investment than home alternatives"
+    ]
   },
 
   // USER REVIEWS

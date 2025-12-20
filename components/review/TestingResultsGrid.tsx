@@ -6,15 +6,71 @@ interface TestingEnvironmentItem {
   value: string
 }
 
+interface SectionLink {
+  text: string
+  href: string
+}
+
+interface TestingSection {
+  title: string
+  content: ReactNode
+  links?: SectionLink[]
+}
+
 interface TestingResultsGridProps {
   title: string
-  sections: {
-    title: string
-    content: ReactNode
-  }[]
+  sections: TestingSection[]
   testingEnvironment: TestingEnvironmentItem[]
   outstandingPerformance: string[]
   minorConsiderations: string[]
+}
+
+// Helper to process content and inject links
+function processContentWithLinks(content: ReactNode, links?: SectionLink[]): ReactNode {
+  // If content is not a string or no links, return as-is
+  if (typeof content !== 'string' || !links || links.length === 0) {
+    return content
+  }
+
+  // Build result by finding and replacing link text
+  let result: (string | JSX.Element)[] = [content]
+
+  links.forEach((link, linkIndex) => {
+    const newResult: (string | JSX.Element)[] = []
+
+    result.forEach((part, partIndex) => {
+      if (typeof part !== 'string') {
+        newResult.push(part)
+        return
+      }
+
+      const splitIndex = part.indexOf(link.text)
+      if (splitIndex === -1) {
+        newResult.push(part)
+        return
+      }
+
+      // Split and insert link
+      const before = part.slice(0, splitIndex)
+      const after = part.slice(splitIndex + link.text.length)
+
+      if (before) newResult.push(before)
+      newResult.push(
+        <Link
+          key={`link-${linkIndex}-${partIndex}`}
+          href={link.href}
+          className="text-orange-700 hover:text-orange-800 underline"
+        >
+          {link.text}
+        </Link>
+      )
+      if (after) newResult.push(after)
+    })
+
+    result = newResult
+  })
+
+  return <>{result}</>
 }
 
 export default function TestingResultsGrid({
@@ -35,7 +91,7 @@ export default function TestingResultsGrid({
         <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
           <h3 className="text-lg font-semibold text-slate-900 mb-4 mt-0">{section.title}</h3>
           <div className="text-slate-700 leading-[1.7]">
-            {section.content}
+            {processContentWithLinks(section.content, section.links)}
           </div>
         </div>
       ))}
