@@ -456,47 +456,6 @@ export default async function NordicWareHalfSheetPanReview() {
         {/* FAQ Section */}
         <FAQSection faqs={reviewData.faq.items} title={reviewData.faq.title} />
 
-        {/* Where to Buy */}
-        <section className="bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-200 rounded-xl p-8 my-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Where to Buy</h2>
-
-          <p className="text-lg text-slate-700 mb-6 leading-relaxed">
-            The Nordic Ware Natural Aluminum Commercial Baker&apos;s Half Sheet is available through Amazon with Prime shipping, verified customer reviews, and easy returns. This is the pan professional bakers choose for commercial kitchens.
-          </p>
-
-          <CTAVisibilityTracker
-            ctaId={`${reviewData.productSlug}-where-to-buy-cta`}
-            position="mid_article"
-            productSlug={reviewData.productSlug}
-            merchant="amazon"
-          >
-            <a
-              href={affiliateUrl}
-              target="_blank"
-              rel="nofollow noopener noreferrer sponsored"
-              className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-            >
-              {reviewData.hero.ctaText}
-            </a>
-          </CTAVisibilityTracker>
-
-          {/* Text link under button */}
-          <p className="text-center mt-3 text-sm">
-            <a
-              href={affiliateUrl}
-              className="text-orange-700 hover:text-orange-800 underline font-medium"
-              target="_blank"
-              rel="nofollow noopener noreferrer sponsored"
-            >
-              → View {productData.name} on Amazon
-            </a>
-          </p>
-
-          <p className="text-sm text-slate-700 mt-6 mb-0 italic">
-            As an Amazon Associate, I earn from qualifying purchases. Amazon Prime members get free 2-day shipping.
-          </p>
-        </section>
-
         {/* Email Capture */}
         <section className="bg-gradient-to-br from-orange-700 to-red-700 text-white rounded-2xl px-6 py-8 my-12">
           <div className="max-w-2xl">

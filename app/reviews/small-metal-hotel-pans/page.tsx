@@ -236,40 +236,6 @@ export default async function ProductReview() {
           faqs={reviewData.faq.items}
         />
 
-        {/* Where to Buy Section */}
-        <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-            {reviewData.whereToBuy.title}
-          </h2>
-          <p className="text-slate-700 leading-relaxed mb-6">
-            {reviewData.whereToBuy.introText}
-          </p>
-          <div className="border border-gray-200 rounded-xl p-6 bg-orange-50 min-h-[280px]">
-            <div className="text-center mb-4">
-              <h3 className="text-lg font-semibold text-slate-900 mb-2 mt-0">Amazon</h3>
-              <p className="text-sm text-slate-900 mb-4">Prime shipping, NSF-certified quality</p>
-            </div>
-            <SizeSelector
-              title="Choose Your Size:"
-              options={reviewData.sizeOptions.options.map((option) => ({
-                id: option.id,
-                label: `${option.size} — ${option.depth}`,
-                description: `${option.dimensions} | ${option.capacity} | ${option.bestFor}`,
-                affiliateUrl: option.affiliateUrl,
-                ctaId: `where-to-buy-${option.id}`
-              }))}
-              defaultSize={reviewData.sizeOptions.options.find(o => o.recommended)?.id || reviewData.sizeOptions.options[0].id}
-              ctaText="Check Price on Amazon →"
-              ctaPosition="mid_article"
-              showDisclosure={true}
-              productSlug={PRODUCT_SLUG}
-            />
-          </div>
-          <p className="text-sm text-slate-700 mt-6 italic">
-            {reviewData.whereToBuy.disclaimer}
-          </p>
-        </div>
-
         {/* Email Capture */}
         <EmailCaptureSection />
 
