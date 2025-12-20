@@ -27,6 +27,7 @@ import AmazonCTA from '@/components/AmazonCTA'
 import {
   ReviewHero,
   TestingResultsGrid,
+  PerformanceAnalysis,
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
@@ -158,66 +159,53 @@ export default async function ProductReview() {
         />
       </div>
 
-      {/* ========== SECTION 3: PERFORMANCE ANALYSIS (Inline with affiliate links) ========== */}
-      <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
-        <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
-          {reviewData.performanceAnalysis.title}
-        </h2>
-        {reviewData.performanceAnalysis.sections.map((section, index) => (
-          <div
-            key={index}
-            className={`bg-white border border-gray-200 rounded-xl p-6 ${
-              index < reviewData.performanceAnalysis.sections.length - 1 ? 'mb-6' : ''
-            }`}
-          >
-            <h3 className="text-lg font-semibold text-slate-900 mb-4 mt-0">{section.title}</h3>
-            <p className="text-slate-700 leading-[1.7]">
-              {index === 0 ? (
-                <>
-                  The lightweight fibrox handle and thin, flexible blade create exceptional balance. Unlike heavy German knives, the{' '}
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 font-medium"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                  >
-                    Victorinox
-                  </a>
-                  {' '}delivers nimble control for detailed work. No hand fatigue during extended prep sessions—critical for professional use where you&apos;re prepping 200+ covers daily.
-                </>
-              ) : index === 3 ? (
-                <>
-                  After 45 years of cooking and countless knives tested, the{' '}
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 font-medium"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                  >
-                    Victorinox 8-inch chef&apos;s knife
-                  </a>
-                  {' '}remains my primary blade. From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I&apos;ve used this knife to prep 200+ covers worth of mise en place daily, slice 5 lbs of mushrooms in under 10 minutes, dice pounds of onions and vegetables per shift, and portion proteins during service. The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day.
-                </>
-              ) : index === 4 ? (
-                <>
-                  Here&apos;s the truth about expensive knives: Beyond basic quality standards, you&apos;re paying for aesthetics, brand prestige, and premium materials that don&apos;t improve cutting performance. The{' '}
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 font-medium"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                  >
-                    Victorinox
-                  </a>
-                  {' '}delivers what matters—sharpness, balance, durability—at a fraction of premium pricing. In 24 years in professional kitchens, I&apos;ve seen expensive premium knives and Victorinox knives side-by-side. The expensive knives look prettier on the magnetic strip. The Victorinox knives get used daily because they work better for actual cooking.
-                </>
-              ) : (
-                section.content
-              )}
-            </p>
-          </div>
-        ))}
-      </div>
+      {/* ========== SECTION 3: PERFORMANCE ANALYSIS ========== */}
+      <PerformanceAnalysis
+        title={reviewData.performanceAnalysis.title}
+        sections={reviewData.performanceAnalysis.sections.map((section, index) => ({
+          ...section,
+          content: index === 0 ? (
+            <>
+              The lightweight fibrox handle and thin, flexible blade create exceptional balance. Unlike heavy German knives, the{' '}
+              <a
+                href={affiliateUrl}
+                className="text-orange-700 hover:text-orange-800 font-medium"
+                target="_blank"
+                rel="nofollow noopener noreferrer sponsored"
+              >
+                Victorinox
+              </a>
+              {' '}delivers nimble control for detailed work. No hand fatigue during extended prep sessions—critical for professional use where you&apos;re prepping 200+ covers daily.
+            </>
+          ) : index === 3 ? (
+            <>
+              After 45 years of cooking and countless knives tested, the{' '}
+              <a
+                href={affiliateUrl}
+                className="text-orange-700 hover:text-orange-800 font-medium"
+                target="_blank"
+                rel="nofollow noopener noreferrer sponsored"
+              >
+                Victorinox 8-inch chef&apos;s knife
+              </a>
+              {' '}remains my primary blade. From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I&apos;ve used this knife to prep 200+ covers worth of mise en place daily, slice 5 lbs of mushrooms in under 10 minutes, dice pounds of onions and vegetables per shift, and portion proteins during service. The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day.
+            </>
+          ) : index === 4 ? (
+            <>
+              Here&apos;s the truth about expensive knives: Beyond basic quality standards, you&apos;re paying for aesthetics, brand prestige, and premium materials that don&apos;t improve cutting performance. The{' '}
+              <a
+                href={affiliateUrl}
+                className="text-orange-700 hover:text-orange-800 font-medium"
+                target="_blank"
+                rel="nofollow noopener noreferrer sponsored"
+              >
+                Victorinox
+              </a>
+              {' '}delivers what matters—sharpness, balance, durability—at a fraction of premium pricing. In 24 years in professional kitchens, I&apos;ve seen expensive premium knives and Victorinox knives side-by-side. The expensive knives look prettier on the magnetic strip. The Victorinox knives get used daily because they work better for actual cooking.
+            </>
+          ) : section.content
+        }))}
+      />
 
       {/* ========== SECTION 4: COMPARISON TABLE ========== */}
       <section className="my-12">
