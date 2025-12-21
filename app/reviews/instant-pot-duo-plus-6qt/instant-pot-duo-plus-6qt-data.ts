@@ -202,7 +202,7 @@ export const reviewData = {
       answer: "The 6-quart capacity is perfect for 4-6 people or meal prep for 2-3 people. I can fit a 2.5-pound roast, 4 cups of dried beans, or enough rice for 8-10 servings. However, pressure cookers shouldn't be filled more than 2/3 full for liquids or 1/2 full for grains, so the effective capacity is 4 quarts for most dishes."
     },
     {
-      question: "Is the Instant Pot safe? I'm worried about pressure cooker explosions.",
+      question: "Is the Instant Pot safe?",
       answer: "The Instant Pot has 10 proven safety mechanisms and is UL certified. Modern electric pressure cookers are dramatically safer than old stovetop models from the 1970s-80s. The lid won't open while under pressure, the pressure release valve is automated, and there are multiple backup systems. In 90 days of daily use, I've had zero safety concerns."
     }
   ],

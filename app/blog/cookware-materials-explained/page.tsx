@@ -57,11 +57,11 @@ export default function CookwareMaterialsPost() {
             },
             {
               question: "Can I put cast iron in the dishwasher?",
-              answer: "Never. It'll rust and lose its seasoning."
+              answer: "Never. The dishwasher's heat and detergent will strip the seasoning and cause rust. Hand wash with hot water, dry immediately, and apply a thin coat of oil."
             },
             {
               question: "Why does my nonstick pan wear out so fast?",
-              answer: "Too much heat or metal utensils. Treat it gently."
+              answer: "Usually high heat or metal utensils. Nonstick coatings break down above 500°F and scratch easily. Use medium heat max, wooden or silicone tools only, and expect to replace the pan every 3-5 years with regular use."
             },
             {
               question: "Is copper really worth it?",

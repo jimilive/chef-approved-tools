@@ -48,11 +48,11 @@ export default function CuttingBoardMaterialsPost() {
           __html: JSON.stringify(generateFAQSchema([
             {
               question: "How often should I oil my wood board?",
-              answer: "Once a month, or anytime it looks dry."
+              answer: "Once a month for regular use, or whenever the wood looks dry or feels rough. Use food-grade mineral oil or a board cream—never cooking oils, which can go rancid. A well-oiled board resists stains and lasts decades."
             },
             {
               question: "Can I put wooden boards in the dishwasher?",
-              answer: "Never. They'll warp and split."
+              answer: "Never. The heat and prolonged water exposure will warp, crack, and split the wood. Hand wash with warm soapy water, rinse quickly, and stand upright to air dry. This takes 30 seconds and saves your board."
             },
             {
               question: "How do I sanitize after cutting meat?",

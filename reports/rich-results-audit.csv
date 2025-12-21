@@ -1,0 +1,2 @@
+URL,Status,Schema Types,Has Product,Has Article,Has FAQ,Has Breadcrumb,Errors,Warnings,Test URL
+"/reviews/instant-pot-duo-plus-6qt",WARN,"Organization, WebSite, Product, BreadcrumbList, FAQPage",Yes,No,Yes,Yes,"","Product: reviewCount=1 may look like self-review to Google; FAQPage: Q6: question should end with "?"","https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.chefapprovedtools.com%2Freviews%2Finstant-pot-duo-plus-6qt"

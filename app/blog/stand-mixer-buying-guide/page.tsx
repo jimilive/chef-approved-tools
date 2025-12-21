@@ -37,7 +37,7 @@ const faqSchema = generateFAQSchema([
   },
   {
     question: "Can I make dough in smaller mixers?",
-    answer: "Yes, but cut batch sizes in half and mix longer."
+    answer: "Yes, but reduce batch sizes by half to avoid straining the motor. Mix on lower speeds for longer periods. Smaller mixers work fine for occasional bread—just don't push them with double batches of stiff dough."
   },
   {
     question: "What attachments are worth it?",
