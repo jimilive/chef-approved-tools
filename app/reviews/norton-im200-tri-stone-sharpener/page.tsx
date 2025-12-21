@@ -150,30 +150,6 @@ export default async function NortonTriStoneSharpenerReview() {
             heroImage={getProductHeroImage(PRODUCT_SLUG)}
             ctaUrl={affiliateUrl}
             ctaText={reviewData.hero.ctaText}
-            customCTA={
-              <div>
-                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                    className="inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
-                  >
-                    {reviewData.hero.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-              </div>
-            }
           />
 
         {/* Professional Verdict */}

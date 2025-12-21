@@ -174,41 +174,12 @@ export default async function NordicWareHalfSheetPanReview() {
         />
 
         {/* Above Fold CTA */}
-        <div className="bg-orange-50 border-2 border-orange-200 rounded-xl p-6 my-8">
-          <h2 className="mt-0 text-2xl font-bold text-slate-900 mb-4">Current Best Price:</h2>
-
-          <CTAVisibilityTracker
-            ctaId={`${reviewData.productSlug}-hero-cta`}
-            position="above_fold"
-            productSlug={reviewData.productSlug}
-            merchant="amazon"
-          >
-            <a
-              href={affiliateUrl}
-              target="_blank"
-              rel="nofollow noopener noreferrer sponsored"
-              className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-            >
-              {reviewData.hero.ctaText}
-            </a>
-          </CTAVisibilityTracker>
-
-          {/* Text link under button */}
-          <p className="text-center mt-3 text-sm">
-            <a
-              href={affiliateUrl}
-              className="text-orange-700 hover:text-orange-800 underline font-medium"
-              target="_blank"
-              rel="nofollow noopener noreferrer sponsored"
-            >
-              → View {productData.name} on Amazon
-            </a>
-          </p>
-
-          <p className="text-sm text-slate-700 mt-4 mb-0">
-            💡 Price updated daily. We earn commission at no extra cost to you.
-          </p>
-        </div>
+        <AmazonCTA
+          productSlug={PRODUCT_SLUG}
+          affiliateUrl={affiliateUrl}
+          position="above_fold"
+          boxHeading="Current Best Price:"
+        />
 
         {/* Professional Verdict */}
         <section className="bg-gray-50 p-6 my-6 rounded-lg border-l-4 border-orange-600">

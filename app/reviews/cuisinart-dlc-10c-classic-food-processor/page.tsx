@@ -165,36 +165,8 @@ export default async function CuisinartDLC10CReview() {
             publishedDate={gitDates.firstPublished}
             lastUpdated={gitDates.lastUpdated}
             heroImage={getProductHeroImage(PRODUCT_SLUG)}
-            customCTA={
-              <div className="bg-white border-2 border-orange-200 rounded-xl p-6">
-                <CTAVisibilityTracker
-                  ctaId="hero-cta"
-                  position="above_fold"
-                >
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                    className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-                  >
-                    {reviewData.hero.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-                <p className="text-xs text-slate-700 text-center mt-3">
-                  As an Amazon Associate, I earn from qualifying purchases. Price and availability may change.
-                </p>
-              </div>
-            }
+            ctaUrl={affiliateUrl}
+            ctaText={reviewData.hero.ctaText}
           />
 
           {/* MODEL DISCONTINUED NOTICE - Inline Section */}
@@ -324,33 +296,12 @@ export default async function CuisinartDLC10CReview() {
               <span key={`bottom-para-${idx}`}>{processInlineLinks(para)}</span>
             ))}
             customCTA={
-              <div className="bg-white rounded-xl p-6">
-                <CTAVisibilityTracker
-                  ctaId="bottom-line-cta"
+              <div className="text-center">
+                <AmazonCTA
+                  productSlug={PRODUCT_SLUG}
+                  affiliateUrl={affiliateUrl}
                   position="final_cta"
-                >
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                    className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
-                  >
-                    {reviewData.bottomLine.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-                <p className="text-xs text-slate-700 text-center mt-3">
-                  As an Amazon Associate, I earn from qualifying purchases.
-                </p>
+                />
               </div>
             }
           />

@@ -6,7 +6,6 @@ import { getReviewMetadata } from '@/data/metadata'
 import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import AmazonCTA from '@/components/AmazonCTA'
 import ReviewLayout from '@/components/review/ReviewLayout'
 import {
@@ -170,30 +169,6 @@ export default async function BodumChambordFrenchPressReview() {
             heroImage={getProductHeroImage(PRODUCT_SLUG)}
             ctaUrl={affiliateUrl}
             ctaText={reviewData.hero.ctaText}
-            customCTA={(
-              <div>
-                <CTAVisibilityTracker ctaId="hero-cta" position="above_fold">
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                    className="inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
-                  >
-                    {reviewData.hero.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
-              </div>
-            )}
           />
 
           {/* SECTION 2: TESTING RESULTS */}
@@ -279,32 +254,15 @@ export default async function BodumChambordFrenchPressReview() {
           <BottomLineSection
             title={reviewData.bottomLine.title}
             paragraphs={reviewData.bottomLine.paragraphs.map(p => processInlineLinks(p))}
-            ctaUrl={affiliateUrl}
-            ctaText={reviewData.bottomLine.ctaText}
-            customCTA={(
+            customCTA={
               <div className="text-center">
-                <CTAVisibilityTracker ctaId="bottom-line-cta" position="final_cta">
-                  <a
-                    href={affiliateUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                    className="inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 whitespace-nowrap"
-                  >
-                    {reviewData.bottomLine.ctaText}
-                  </a>
-                </CTAVisibilityTracker>
-                <p className="text-center mt-3 text-sm">
-                  <a
-                    href={affiliateUrl}
-                    className="text-orange-700 hover:text-orange-800 underline font-medium"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
-                  >
-                    → View {productData.name} on Amazon
-                  </a>
-                </p>
+                <AmazonCTA
+                  productSlug={PRODUCT_SLUG}
+                  affiliateUrl={affiliateUrl}
+                  position="final_cta"
+                />
               </div>
-            )}
+            }
           />
 
           <div className="text-center my-8">
