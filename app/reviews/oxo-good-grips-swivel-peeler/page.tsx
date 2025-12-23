@@ -21,6 +21,8 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import { reviewData } from './oxo-good-grips-swivel-peeler-data'
+import { getPeelerComparison } from './get-peeler-comparison'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 const PRODUCT_SLUG = 'oxo-good-grips-swivel-peeler'
 
@@ -85,6 +87,9 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
   } : reviewData.legacyProductData
 
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
+
+  // Get comparison table data
+  const comparisonData = await getPeelerComparison()
 
   return (
     <ReviewLayout
@@ -317,45 +322,15 @@ export default async function OXOGoodGripsSwivelPeelerReview() {
             </div>
           </section>
 
-          {/* Comparison */}
-          <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6" id="comparison">
-            <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.comparison.title}</h2>
-
-            <div className="overflow-x-auto my-5">
-              <table className="w-full border-collapse text-sm">
-                <thead>
-                  <tr className="bg-slate-100">
-                    {reviewData.comparison.headers.map((header, index) => (
-                      <th key={index} className={`p-3 text-left border-b-2 border-gray-300 ${index === 1 ? 'bg-orange-50' : ''}`}>
-                        {header}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {reviewData.comparison.rows.map((row, index) => (
-                    <tr key={index} className={index % 2 === 0 ? '' : 'bg-slate-50'}>
-                      <td className="p-3 border-b border-gray-200 font-semibold">{row.feature}</td>
-                      <td className="p-3 border-b border-gray-200 bg-orange-50">{row.oxo}</td>
-                      <td className="p-3 border-b border-gray-200">{row.kuhnRikon}</td>
-                      <td className="p-3 border-b border-gray-200">{row.oxoY}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <div className="bg-orange-50 p-6 rounded-lg border border-orange-200 mt-6">
-              <h3 className="font-bold text-slate-900 mb-3">{reviewData.comparison.guidance.title}</h3>
-              <ul className="space-y-3 text-slate-700">
-                {reviewData.comparison.guidance.options.map((option, index) => (
-                  <li key={index}>
-                    <strong>{option.title}</strong> {option.description}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
+          {/* Comparison Table */}
+          <ProductComparisonTable
+            title={comparisonData.title}
+            subtitle={comparisonData.subtitle}
+            products={comparisonData.products}
+            comparisonRows={comparisonData.comparisonRows}
+            highlightedProduct={comparisonData.highlightedProduct}
+            trustMessage={comparisonData.trustMessage}
+          />
 
           {/* FAQ - Using standardized component */}
           <FAQSection

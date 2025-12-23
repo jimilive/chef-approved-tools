@@ -18,9 +18,11 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import { getReviewMetadata } from '@/data/metadata'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 // Import review data
 import { reviewData } from './norton-im200-tri-stone-sharpener-data'
+import { getSharpenerComparison } from './get-sharpener-comparison'
 
 const PRODUCT_SLUG = 'norton-im200-tri-stone-sharpener'
 
@@ -121,6 +123,9 @@ export default async function NortonTriStoneSharpenerReview() {
   } : reviewData.legacyProductData
 
   const affiliateUrl = product ? getPrimaryAffiliateLink(product) : '#'
+
+  // Get comparison table data
+  const comparisonData = await getSharpenerComparison()
 
   return (
     <ReviewLayout
@@ -358,6 +363,16 @@ export default async function NortonTriStoneSharpenerReview() {
           consTitle="Limitations"
           pros={reviewData.legacyProductData.pros}
           cons={reviewData.legacyProductData.cons}
+        />
+
+        {/* Comparison Table */}
+        <ProductComparisonTable
+          title={comparisonData.title}
+          subtitle={comparisonData.subtitle}
+          products={comparisonData.products}
+          comparisonRows={comparisonData.comparisonRows}
+          highlightedProduct={comparisonData.highlightedProduct}
+          trustMessage={comparisonData.trustMessage}
         />
 
         {/* FAQ Section */}
