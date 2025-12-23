@@ -1,6 +1,7 @@
 'use client'
 
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import { trackAffiliateClick } from '@/lib/tracking'
 
 type CTAPosition = 'above_fold' | 'mid_article' | 'comparison_table' | 'who_should_buy' | 'final_cta' | 'where_to_buy' | 'sticky_mobile'
 type CTAVariant = 'button' | 'textLink' | 'styledBox'
@@ -113,6 +114,11 @@ export default function MultiVendorCTA({
         const buttonText = getButtonText(link.vendor, link.label || '', isPrimary)
         const merchantLabel = getMerchantLabel(link.vendor, link.label || '')
 
+        // Click handler for this specific vendor link
+        const handleClick = () => {
+          trackAffiliateClick(link.vendor, productSlug || ctaId, position)
+        }
+
         let linkClassName: string
         let displayText: string
 
@@ -137,6 +143,7 @@ export default function MultiVendorCTA({
               target="_blank"
               rel="nofollow noopener noreferrer sponsored"
               className={linkClassName}
+              onClick={handleClick}
               aria-label={`Buy ${productName} on ${merchantLabel}`}
             >
               {displayText}

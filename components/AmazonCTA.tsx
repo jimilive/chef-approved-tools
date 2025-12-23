@@ -2,6 +2,7 @@
 
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Button } from '@/components/ui'
+import { trackAffiliateClick } from '@/lib/tracking'
 
 type CTAPosition = 'above_fold' | 'mid_article' | 'comparison_table' | 'who_should_buy' | 'final_cta' | 'sticky_mobile'
 type CTAVariant = 'button' | 'textLink' | 'styledBox'
@@ -67,6 +68,11 @@ export default function AmazonCTA({
   const resolvedVariant = variant || defaultVariants[position]
   const resolvedText = text || defaultText[position]
 
+  // Click handler for affiliate tracking
+  const handleClick = () => {
+    trackAffiliateClick('amazon', productSlug, position)
+  }
+
   // Text link variant styling (intentionally different - not a button)
   const textLinkStyles = "text-orange-700 hover:text-orange-800 font-medium underline"
 
@@ -81,6 +87,7 @@ export default function AmazonCTA({
             sponsored
             size="lg"
             className={className}
+            onClick={handleClick}
             aria-label={`Check price for ${productSlug.replace(/-/g, ' ')} on Amazon`}
           >
             {resolvedText}
@@ -94,6 +101,7 @@ export default function AmazonCTA({
             target="_blank"
             rel="nofollow noopener noreferrer sponsored"
             className={`${textLinkStyles} ${className}`.trim()}
+            onClick={handleClick}
             aria-label={`Check price for ${productSlug.replace(/-/g, ' ')} on Amazon`}
           >
             → {resolvedText}
@@ -113,6 +121,7 @@ export default function AmazonCTA({
               sponsored
               size="lg"
               className={className}
+              onClick={handleClick}
               aria-label={`Check price for ${productSlug.replace(/-/g, ' ')} on Amazon`}
             >
               {resolvedText}
@@ -129,6 +138,7 @@ export default function AmazonCTA({
             sponsored
             size="lg"
             className={className}
+            onClick={handleClick}
             aria-label={`Check price for ${productSlug.replace(/-/g, ' ')} on Amazon`}
           >
             {resolvedText}
