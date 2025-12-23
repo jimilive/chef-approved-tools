@@ -36,6 +36,8 @@ import {
 
 // Data
 import { reviewData } from './wusthof-classic-ikon-santoku-data'
+import { getSantokuComparison } from './get-santoku-comparison'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
 const PRODUCT_SLUG = 'wusthof-classic-ikon-santoku'
 
@@ -106,6 +108,9 @@ export default async function WusthofClassicIkonSantokuReview() {
 
   const affiliateUrl = getPrimaryAffiliateLink(product)
 
+  // Get comparison table data
+  const comparisonData = await getSantokuComparison()
+
   // ==================== RENDER ====================
   return (
     <ReviewLayout
@@ -175,6 +180,16 @@ export default async function WusthofClassicIkonSantokuReview() {
         consTitle={reviewData.consTitle}
         pros={productData.pros}
         cons={productData.cons}
+      />
+
+      {/* ========== COMPARISON TABLE ========== */}
+      <ProductComparisonTable
+        title={comparisonData.title}
+        subtitle={comparisonData.subtitle}
+        products={comparisonData.products}
+        comparisonRows={comparisonData.comparisonRows}
+        highlightedProduct={comparisonData.highlightedProduct}
+        trustMessage={comparisonData.trustMessage}
       />
 
       {/* ========== SECTION 6: WHO SHOULD BUY ========== */}
