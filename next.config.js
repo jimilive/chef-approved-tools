@@ -534,6 +534,67 @@ const nextConfig = {
         destination: '/reviews/henckels-sharpening-steel',
         permanent: true,
       },
+
+      // ===== OLD ROOT-LEVEL GUIDE URLS =====
+      // These were moved to /guides/ subdirectory
+      {
+        source: '/best-budget-chef-knife',
+        destination: '/guides/best-budget-chef-knife',
+        permanent: true,
+      },
+      {
+        source: '/best-knife-for-cutting-meat',
+        destination: '/guides/best-knife-for-cutting-meat',
+        permanent: true,
+      },
+
+      // ===== RENAMED BLOG POSTS =====
+      // Posts that were renamed/consolidated - Google still has old URLs
+      {
+        source: '/blog/cast-iron-mistakes-ruin-pan',
+        destination: '/blog/cast-iron-seasoning-care',
+        permanent: true,
+      },
+      {
+        source: '/blog/deglazing-secret-to-restaurant-quality-flavor',
+        destination: '/blog/deglazing-pan-sauces',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-season-cast-iron-like-restaurant-chef',
+        destination: '/blog/cast-iron-seasoning-care',
+        permanent: true,
+      },
+      {
+        source: '/blog/kitchen-thermometer-guide',
+        destination: '/blog/kitchen-thermometers-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/knife-cuts-guide',
+        destination: '/blog/essential-knife-cuts-every-cook-should-master',
+        permanent: true,
+      },
+      {
+        source: '/blog/knife-mistakes-home-cooks-make',
+        destination: '/blog/how-to-choose-first-chef-knife',
+        permanent: true,
+      },
+      {
+        source: '/blog/knife-safety-protect-fingers',
+        destination: '/blog/knife-safety-rules-professional-kitchens',
+        permanent: true,
+      },
+      {
+        source: '/blog/oxidization-affect-on-food',
+        destination: '/blog/oxidization-effect-on-food',
+        permanent: true,
+      },
+      {
+        source: '/blog/roasting-vegetables-restaurant-guide',
+        destination: '/blog/vegetable-roasting-guide',
+        permanent: true,
+      },
     ]
   },
 }
