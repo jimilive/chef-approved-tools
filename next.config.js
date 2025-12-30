@@ -395,6 +395,145 @@ const nextConfig = {
         destination: '/reviews/cuisinart-8-inch-nonstick-pan',
         permanent: true,
       },
+
+      // ===== COMPETITOR PRODUCT 404 FIXES =====
+      // These competitor products were in comparison tables but never had review pages
+      // Redirecting to similar reviewed products to fix Google 404 errors
+      {
+        source: '/reviews/henckels-classic-4-inch-paring-knife',
+        destination: '/reviews/victorinox-4-inch-paring-knife',
+        permanent: true,
+      },
+      {
+        source: '/reviews/hobart-n50-commercial-mixer',
+        destination: '/reviews/kitchenaid-ksm8990wh',
+        permanent: true,
+      },
+      {
+        source: '/reviews/idahone-ceramic-12-inch-honing-rod',
+        destination: '/reviews/henckels-sharpening-steel',
+        permanent: true,
+      },
+      {
+        source: '/reviews/kitchenaid-kfp0718-food-processor',
+        destination: '/reviews/cuisinart-dlc-10c-classic-food-processor',
+        permanent: true,
+      },
+      {
+        source: '/reviews/mercer-genesis-3-5-inch-paring-knife',
+        destination: '/reviews/victorinox-4-inch-paring-knife',
+        permanent: true,
+      },
+      {
+        source: '/reviews/swissmar-y-peeler-stainless',
+        destination: '/reviews/oxo-good-grips-swivel-peeler',
+        permanent: true,
+      },
+      {
+        source: '/reviews/wusthof-9-inch-honing-steel',
+        destination: '/reviews/henckels-sharpening-steel',
+        permanent: true,
+      },
+      {
+        source: '/reviews/wusthof-classic-3-5-inch-paring-knife',
+        destination: '/reviews/victorinox-4-inch-paring-knife',
+        permanent: true,
+      },
+      {
+        source: '/reviews/all-clad-d3-pro-8-inch-nonstick',
+        destination: '/reviews/cuisinart-8-inch-nonstick-pan',
+        permanent: true,
+      },
+      {
+        source: '/reviews/bodum-columbia-french-press',
+        destination: '/reviews/bodum-chambord-french-press',
+        permanent: true,
+      },
+      {
+        source: '/reviews/dexter-russell-1376pcp-boning-knife',
+        destination: '/reviews/victorinox-granton-edge-boning-knife',
+        permanent: true,
+      },
+      {
+        source: '/reviews/dexter-russell-s116-6-sani-safe-boning-knife',
+        destination: '/reviews/victorinox-granton-edge-boning-knife',
+        permanent: true,
+      },
+      {
+        source: '/reviews/edlund-4412hdl-heavy-duty-tongs',
+        destination: '/reviews/winco-heavy-duty-tongs',
+        permanent: true,
+      },
+      {
+        source: '/reviews/espro-p3-french-press',
+        destination: '/reviews/bodum-chambord-french-press',
+        permanent: true,
+      },
+      {
+        source: '/reviews/globe-sp08-commercial-mixer',
+        destination: '/reviews/kitchenaid-ksm8990wh',
+        permanent: true,
+      },
+      {
+        source: '/reviews/hamilton-beach-70725a-food-processor',
+        destination: '/reviews/cuisinart-dlc-10c-classic-food-processor',
+        permanent: true,
+      },
+      {
+        source: '/reviews/kitchenaid-12-inch-stainless-tongs',
+        destination: '/reviews/winco-heavy-duty-tongs',
+        permanent: true,
+      },
+      {
+        source: '/reviews/kuhn-rikon-swiss-peeler',
+        destination: '/reviews/oxo-good-grips-swivel-peeler',
+        permanent: true,
+      },
+      {
+        source: '/reviews/mercer-genesis-m20106-stiff-boning-knife',
+        destination: '/reviews/victorinox-granton-edge-boning-knife',
+        permanent: true,
+      },
+      {
+        source: '/reviews/ninja-bn601-food-processor',
+        destination: '/reviews/cuisinart-dlc-10c-classic-food-processor',
+        permanent: true,
+      },
+      {
+        source: '/reviews/oxo-good-grips-12-inch-tongs',
+        destination: '/reviews/winco-heavy-duty-tongs',
+        permanent: true,
+      },
+      {
+        source: '/reviews/spring-chef-premium-swivel-peeler',
+        destination: '/reviews/oxo-good-grips-swivel-peeler',
+        permanent: true,
+      },
+      {
+        source: '/reviews/stanley-stay-hot-french-press',
+        destination: '/reviews/bodum-chambord-french-press',
+        permanent: true,
+      },
+      {
+        source: '/reviews/t-fal-experience-8-inch-nonstick',
+        destination: '/reviews/cuisinart-8-inch-nonstick-pan',
+        permanent: true,
+      },
+      {
+        source: '/reviews/tramontina-tri-ply-base-8-inch-nonstick',
+        destination: '/reviews/cuisinart-8-inch-nonstick-pan',
+        permanent: true,
+      },
+      {
+        source: '/reviews/waring-wsm7q-commercial-mixer',
+        destination: '/reviews/kitchenaid-ksm8990wh',
+        permanent: true,
+      },
+      {
+        source: '/reviews/zwilling-9-inch-sharpening-steel',
+        destination: '/reviews/henckels-sharpening-steel',
+        permanent: true,
+      },
     ]
   },
 }

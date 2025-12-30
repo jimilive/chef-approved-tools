@@ -21,7 +21,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 
 interface ComparisonProduct {
   name: string
-  slug?: string // Optional: link to internal review
+  slug?: string // Product slug (used for tracking, etc.)
+  hasReviewPage?: boolean // Set to true ONLY if we have a review page for this product
   affiliateUrl: string
   imageUrl?: string // Optional: product image
   imageAlt?: string
@@ -177,8 +178,9 @@ export default function ProductComparisonTable({
                             )}
 
                             {/* Product Name (clickable) */}
+                            {/* Only link internally if hasReviewPage is explicitly true */}
                             <h3 className="text-sm font-bold text-slate-900 text-center mt-2 mb-0 leading-tight">
-                              {product.slug ? (
+                              {product.hasReviewPage && product.slug ? (
                                 <Link
                                   href={`/reviews/${product.slug}`}
                                   className="text-orange-700 hover:underline no-underline"

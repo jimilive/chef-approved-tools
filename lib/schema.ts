@@ -315,8 +315,21 @@ export function generateHowToSchema(howto: any) {
 }
 
 // ItemList Schema - For product comparisons and lists
+// IMPORTANT: Only creates internal URLs for products with hasReviewPage: true
+// or products that have expert_rating (indicating they're reviewed, not just comparison products)
 export function generateItemListSchema(products: any[], listName: string) {
   if (!products || products.length === 0) {
+    return null;
+  }
+
+  // Filter to only products that have actual review pages
+  // A product has a review page if hasReviewPage is true OR expert_rating is set
+  const reviewedProducts = products.filter(p =>
+    p.hasReviewPage === true ||
+    (p.expert_rating !== null && p.expert_rating !== undefined)
+  )
+
+  if (reviewedProducts.length === 0) {
     return null;
   }
 
@@ -324,8 +337,8 @@ export function generateItemListSchema(products: any[], listName: string) {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: listName,
-    numberOfItems: products.length,
-    itemListElement: products.map((product, index) => ({
+    numberOfItems: reviewedProducts.length,
+    itemListElement: reviewedProducts.map((product, index) => ({
       "@type": "ListItem",
       position: index + 1,
       url: `https://www.chefapprovedtools.com/reviews/${product.slug}`,
