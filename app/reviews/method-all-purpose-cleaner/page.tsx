@@ -16,6 +16,7 @@ import {
   ProsConsGrid,
   WhoShouldBuyGrid,
   FAQSection,
+  EmailCaptureSection,
   BottomLineSection,
   RelatedProductsGrid
 } from '@/components/review'
@@ -303,25 +304,7 @@ export default async function MethodAllPurposeCleanerReviewPage() {
           />
 
           {/* SECTION 7: EMAIL CAPTURE */}
-          <div className="bg-gradient-to-br from-purple-600 to-purple-800 text-white rounded-2xl px-6 pt-10 pb-10 md:px-12 shadow-sm mb-6 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4 leading-[1.3]">
-              {reviewData.emailCapture.title}
-            </h2>
-            <p className="text-lg text-white mb-6">
-              {reviewData.emailCapture.subtitle}
-            </p>
-            <ul className="text-left max-w-[500px] mx-auto mb-6 text-base leading-loose">
-              {reviewData.emailCapture.benefits.map((benefit, i) => (
-                <li key={i} className="mb-1">✓ {benefit}</li>
-              ))}
-            </ul>
-            <a
-              href="/newsletter"
-              className="inline-block bg-white text-purple-700 py-4 px-10 no-underline rounded-md font-bold text-lg mt-2 hover:bg-gray-100 transition-colors"
-            >
-              {reviewData.emailCapture.buttonText} →
-            </a>
-          </div>
+          <EmailCaptureSection />
 
           {/* SECTION 8: BOTTOM LINE */}
           <BottomLineSection

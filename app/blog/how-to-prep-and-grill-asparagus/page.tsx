@@ -2,10 +2,11 @@ import React from 'react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
-import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 import RelatedPosts from '@/components/blog/RelatedPosts';
+import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
-import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import HowToSchema from '@/components/HowToSchema';
 
 export const metadata = generateBlogMetadata('how-to-prep-and-grill-asparagus');
@@ -26,6 +27,33 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "How to Prep and Grill Asparagus", url: "https://www.chefapprovedtools.com/blog/how-to-prep-and-grill-asparagus" }
 ]);
 
+const faqQuestions = [
+  {
+    question: "Should I use thick or thin asparagus for grilling?",
+    answer: "Use thick asparagus (pencil-thick or larger) for grilling. Thick spears maintain their structure under high heat and develop proper char before overcooking internally. Thin asparagus turns limp and mushy before achieving char marks. Save thin spears for other cooking methods."
+  },
+  {
+    question: "How do you know where to trim asparagus ends?",
+    answer: "Use the bending trick: hold the spear at each end and gently bend until it snaps naturally. The asparagus breaks exactly where the woody portion ends—no guessing required. This method is faster and more accurate than cutting with a knife."
+  },
+  {
+    question: "How long does asparagus take to grill?",
+    answer: "At proper high heat (500°F+), asparagus takes only 3-4 minutes total. Cook 1.5-2 minutes per side, rolling once or twice. If your asparagus takes longer than 5 minutes, your grill isn't hot enough. Most home cooks dramatically overcook asparagus."
+  },
+  {
+    question: "How do you prevent asparagus from falling through grill grates?",
+    answer: "Place asparagus perpendicular to the grill grates so spears lay across multiple grates rather than between them. Alternatively, use a grill basket with small perforations. Arrange spears side by side with minimal spacing for easy rolling."
+  },
+  {
+    question: "Should I oil asparagus before grilling?",
+    answer: "Yes, coat asparagus lightly with high smoke-point oil before grilling. Use about one tablespoon per pound. Too little oil causes sticking; too much causes flare-ups. Pat asparagus completely dry before oiling—wet spears steam rather than char."
+  },
+  {
+    question: "How do you know when grilled asparagus is done?",
+    answer: "Asparagus is done when it has visible char marks on multiple sides and bends slightly when lifted with tongs—but still maintains enough structure to hold its shape. Remove immediately when done; it continues cooking from residual heat."
+  }
+];
+
 export default function HowToPrepAndGrillAsparagusPage() {
   return (
     <>
@@ -36,6 +64,10 @@ export default function HowToPrepAndGrillAsparagusPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqQuestions)) }}
       />
       <HowToSchema
         name="How to Prep and Grill Asparagus"
@@ -64,17 +96,17 @@ export default function HowToPrepAndGrillAsparagusPage() {
 
       <div className="max-w-3xl mx-auto px-4 py-12">
         <div className="prose prose-lg max-w-none">
-          <p className="text-xl text-gray-700 leading-relaxed mb-8">
+          <p className="text-xl text-slate-700 leading-relaxed mb-8">
             After 24 years in professional kitchens preparing asparagus at high volume, the method remains consistent: extremely high heat and far less time than most home cooks imagine. Asparagus becomes tender remarkably fast—usually in 3-4 minutes total—and the line between perfectly charred and overcooked is measured in seconds. Master the prep technique and timing, and grilled asparagus transforms from a forgettable side dish into something worth making repeatedly.
           </p>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Selecting Quality Asparagus</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Selecting Quality Asparagus</h2>
           
           <p>
             Asparagus quality varies dramatically depending on thickness and freshness. Look for these indicators at the market:
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Thickness Matters</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Thickness Matters</h3>
 
           <p>
             <strong>Thick spears (pencil-thick or larger)</strong> are ideal for grilling. They maintain structure under high heat while developing char on the exterior before overcooking internally. Thin asparagus turns limp and soggy before achieving proper char. The thicker the spear, the more forgiving the timing window becomes.
@@ -84,7 +116,7 @@ export default function HowToPrepAndGrillAsparagusPage() {
             Medium to thick spears also contain more of the tender, sweet flesh inside. Thin asparagus has a higher ratio of fibrous exterior to tender interior, making texture less appealing regardless of cooking method.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Freshness Indicators</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Freshness Indicators</h3>
 
           <ul className="list-disc pl-6 space-y-2 mb-6">
             <li><strong>Tight, closed tips</strong> – Fresh asparagus has compact tips. Flowering or spreading tips indicate age</li>
@@ -98,7 +130,14 @@ export default function HowToPrepAndGrillAsparagusPage() {
             Buy asparagus as close to cooking time as possible. It degrades noticeably even after 2-3 days of refrigeration. The natural sugars convert to starches, and the tender texture becomes increasingly fibrous.
           </p>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Bending Trick for Perfect Trimming</h2>
+          <div className="bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-lg my-6">
+            <p className="font-semibold text-slate-900 mb-2">Professional Insight</p>
+            <p className="text-slate-700">
+              In professional kitchens, we grill asparagus at temperatures most home cooks consider too aggressive—over 500°F. The result is char marks in under 4 minutes with a perfectly tender interior. If your asparagus takes 8-10 minutes, your grill isn&apos;t hot enough.
+            </p>
+          </div>
+
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">The Bending Trick for Perfect Trimming</h2>
 
           <p>
             Every asparagus spear has a natural breaking point where the tender portion meets the woody, fibrous bottom section. Attempting to eyeball this transition point and cut with a knife wastes edible asparagus—you inevitably cut too high to be safe, discarding perfectly good product.
@@ -108,7 +147,7 @@ export default function HowToPrepAndGrillAsparagusPage() {
             The professional method eliminates guesswork entirely and takes seconds per spear:
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">The Technique</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">The Technique</h3>
 
           <ol className="list-decimal pl-6 space-y-4 mb-6">
             <li>
@@ -132,7 +171,7 @@ export default function HowToPrepAndGrillAsparagusPage() {
             This method is superior to knife trimming for several reasons: it&apos;s faster, it&apos;s more accurate (the asparagus literally tells you where to separate), and it maximizes yield. You never waste tender asparagus by cutting too conservatively, and you never include woody portions by cutting too aggressively.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Why This Works</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Why This Works</h3>
 
           <p>
             Asparagus structure changes at a specific point along the stalk. The upper portion contains tender, water-filled cells that snap cleanly under pressure. The lower woody portion contains lignin—a rigid structural compound that makes it fibrous and tough. This transition point is visible if you look closely, appearing as a subtle color change from bright green to paler green or white.
@@ -144,19 +183,19 @@ export default function HowToPrepAndGrillAsparagusPage() {
 
           <BlogEmailCapture />
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Prep and Seasoning</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Prep and Seasoning</h2>
 
           <p>
             After trimming the woody ends, asparagus requires minimal additional preparation:
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Washing</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Washing</h3>
 
           <p>
             Rinse the trimmed spears under cold running water, paying particular attention to the tips where dirt accumulates. Pat completely dry with paper towels or a clean kitchen towel. Wet asparagus won&apos;t char properly on the grill—the moisture creates steam rather than sear.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Coating with Oil</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Coating with Oil</h3>
 
           <p>
             Toss the dried spears with just enough oil to coat them lightly. Too little oil results in sticking and uneven char. Too much oil causes flare-ups on the grill and greasy texture. Approximately one tablespoon of oil per pound of asparagus provides adequate coverage.
@@ -166,7 +205,7 @@ export default function HowToPrepAndGrillAsparagusPage() {
             Use an oil with a high smoke point: vegetable oil, grapeseed oil, or avocado oil work well. Olive oil is acceptable but will smoke more at the high temperatures required for proper grilling.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Seasoning</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Seasoning</h3>
 
           <p>
             Season generously with salt immediately after coating with oil. The salt needs time to begin dissolving on the surface—at least 2-3 minutes before grilling. This allows it to penetrate slightly rather than sitting on the exterior.
@@ -176,9 +215,9 @@ export default function HowToPrepAndGrillAsparagusPage() {
             Black pepper can be added before or after grilling. Other seasonings—garlic powder, lemon zest, red pepper flakes—should be added after grilling. These burn easily and become acrid at high grill temperatures.
           </p>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Grilling Process</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">The Grilling Process</h2>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Very High Heat Is Essential</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Very High Heat Is Essential</h3>
 
           <p>
             Asparagus grills best at temperatures far higher than most home cooks use. The grill should be at maximum heat—500°F to 600°F if you have a thermometer, or hot enough that you can hold your hand 6 inches above the grates for only 2-3 seconds before pulling away.
@@ -192,7 +231,7 @@ export default function HowToPrepAndGrillAsparagusPage() {
             If using a gas grill, turn all burners to high and preheat for 10-15 minutes with the lid closed. If using charcoal, arrange coals in a single, densely packed layer directly beneath where you&apos;ll place the asparagus. Wait until the coals are fully ignited and covered with white ash before grilling.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Timing: Less Than You Think</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Timing: Less Than You Think</h3>
 
           <p>
             Asparagus cooks remarkably fast at proper temperature. Most home cooks dramatically overcook it, turning tender spears into limp, mushy vegetables. The entire process from placing spears on the grill to removing them typically takes 3-4 minutes total—occasionally up to 5 minutes for very thick spears.
@@ -212,7 +251,7 @@ export default function HowToPrepAndGrillAsparagusPage() {
             The asparagus is done when it develops visible char marks on multiple sides and bends slightly when lifted with tongs—but still maintains enough structure to hold its shape. The spears should not be floppy or completely limp. That texture indicates overcooking.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">The Rolling Technique</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">The Rolling Technique</h3>
 
           <ol className="list-decimal pl-6 space-y-4 mb-6">
             <li>
@@ -235,33 +274,33 @@ export default function HowToPrepAndGrillAsparagusPage() {
             </li>
           </ol>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Avoiding Common Mistakes</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Avoiding Common Mistakes</h2>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Grill Temperature Too Low</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Grill Temperature Too Low</h3>
 
           <p>
             Moderate heat (350°F to 400°F) requires 8-10 minutes to fully cook asparagus. By that point, the spears have lost their structural integrity and become mushy. High heat delivers char and tender texture simultaneously in one-third of the time. If your asparagus takes longer than 5 minutes to cook, your grill isn&apos;t hot enough.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Moving the Asparagus Too Frequently</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Moving the Asparagus Too Frequently</h3>
 
           <p>
             Char requires sustained contact with hot metal. Constantly rolling or flipping prevents the exterior from caramelizing properly. You end up with steamed asparagus with minimal browning instead of grilled asparagus with deep char marks. Let each side cook undisturbed for at least 60 seconds before rolling.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Overcooking</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Overcooking</h3>
 
           <p>
             The difference between perfectly cooked and overcooked asparagus is approximately 30-60 seconds. Watch carefully during the final minute. The moment the spears begin bending when lifted with tongs—while still maintaining enough rigidity to hold their shape—remove them immediately. Waiting until they&apos;re completely limp means they&apos;re already overcooked.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Using Thin Spears</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Using Thin Spears</h3>
 
           <p>
             Pencil-thin asparagus becomes overcooked before developing proper char at high temperatures. The timing window becomes too narrow—often just 90-120 seconds total cooking time—making it nearly impossible to achieve both char and proper texture. Save thin asparagus for other cooking methods. Grill only medium to thick spears.
           </p>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Finishing and Serving</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Finishing and Serving</h2>
 
           <p>
             Transfer the grilled asparagus to a serving platter immediately after removing from the grill. At this point, you can add finishing touches:
@@ -280,7 +319,7 @@ export default function HowToPrepAndGrillAsparagusPage() {
             Serve immediately while still hot. Grilled asparagus loses its appeal as it cools—the char flavors become muted, and the texture turns increasingly limp. If you must hold it briefly, keep it uncovered. Covering with foil traps steam, which continues cooking and eliminates the crisp-tender texture you worked to achieve.
           </p>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Grill Basket Alternative</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Grill Basket Alternative</h2>
 
           <p>
             If your grill grates have wide spacing that makes rolling individual spears impractical, a grill basket provides a solution. Look for baskets with small perforations that allow heat and smoke to reach the asparagus while preventing spears from falling through.
@@ -290,7 +329,7 @@ export default function HowToPrepAndGrillAsparagusPage() {
             Preheat the basket on the grill for 2-3 minutes before adding asparagus. This ensures immediate searing when the spears make contact. Toss the asparagus in the basket every 60-90 seconds to expose all sides to the hot metal. The timing remains the same: 3-4 minutes total at very high heat.
           </p>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">The Bottom Line</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">The Bottom Line</h2>
 
           <p>
             Perfect grilled asparagus requires three elements: thick, fresh spears properly trimmed using the bending technique; a very hot grill (500°F+); and minimal cooking time (3-4 minutes total). The intense heat creates the char that defines grilled asparagus, while the brief cooking time preserves the tender-crisp texture that makes it worth eating.
@@ -306,24 +345,26 @@ export default function HowToPrepAndGrillAsparagusPage() {
         </div>
       </div>
 
-      <BlogAuthorBio />
+      <BlogFAQ questions={faqQuestions} />
+
+      <AuthorBio />
 
       <RelatedPosts
         posts={[
           {
-            title: "Best Grilling Tools for Perfect Results",
-            slug: "best-grilling-tools",
-            excerpt: "Professional testing reveals which grilling equipment delivers restaurant-quality results at home."
+            title: "The Complete Guide to Roasting Vegetables",
+            slug: "vegetable-roasting-guide",
+            excerpt: "Professional techniques for perfectly roasted vegetables every time. High heat, proper spacing, and timing secrets."
           },
           {
-            title: "How to Season Cast Iron Grill Grates",
-            slug: "season-cast-iron-grill-grates",
-            excerpt: "Proper seasoning prevents sticking and creates natural non-stick surface. Professional technique in 30 minutes."
+            title: "Cast Iron Seasoning and Care",
+            slug: "cast-iron-seasoning-care",
+            excerpt: "Build and maintain the perfect seasoning layer. Professional cast iron care from 24 years of kitchen experience."
           },
           {
-            title: "Essential Grilling Techniques Every Cook Should Know",
-            slug: "essential-grilling-techniques",
-            excerpt: "Master heat zones, timing, and professional methods after 24 years of restaurant grilling."
+            title: "How to Preheat a Pan Properly",
+            slug: "how-to-preheat-a-pan",
+            excerpt: "The foundation of great cooking starts with proper pan temperature. Professional preheating techniques."
           }
         ]}
       />

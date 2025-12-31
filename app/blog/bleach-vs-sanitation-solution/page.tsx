@@ -2,10 +2,11 @@ import React from 'react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
-import BlogAuthorBio from '@/components/blog/BlogAuthorBio';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 import RelatedPosts from '@/components/blog/RelatedPosts';
+import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
-import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema';
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 
 export const metadata = generateBlogMetadata('bleach-vs-sanitation-solution');
 
@@ -25,6 +26,33 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Bleach vs Sanitation Solution", url: "https://www.chefapprovedtools.com/blog/bleach-vs-sanitation-solution" }
 ]);
 
+const faqQuestions = [
+  {
+    question: "What is the correct bleach to water ratio for sanitizing kitchen surfaces?",
+    answer: "For standard 5.25% household bleach, use 1 tablespoon per gallon of water to achieve 50-100 ppm chlorine concentration. For 8.25% bleach, use 2 teaspoons per gallon. Always verify concentration with test strips."
+  },
+  {
+    question: "How long does sanitizer need to stay wet on a surface to work?",
+    answer: "Chlorine bleach sanitizer requires minimum 7-second contact time at proper concentration, though 30 seconds is standard protocol. Quaternary ammonium (quat) sanitizers require 30-60 seconds contact time. The surface must remain visibly wet for the entire duration."
+  },
+  {
+    question: "What is the difference between cleaning and sanitizing?",
+    answer: "Cleaning removes visible dirt, food particles, and grease using detergent and mechanical action. Sanitizing reduces bacterial populations to safe levels using chemical agents at specific concentrations. You must clean first, then sanitize—sanitizers don't work effectively on dirty surfaces."
+  },
+  {
+    question: "Can you mix bleach with other cleaning products?",
+    answer: "Never mix bleach with other chemicals, particularly acids, ammonia, or other cleaners. Mixing creates toxic gases that can cause severe respiratory damage or death. Use only one sanitizer type at a time and rinse thoroughly if switching between types."
+  },
+  {
+    question: "How often should you replace bleach sanitizer solution?",
+    answer: "Chlorine bleach sanitizer degrades rapidly and should be replaced every 2-4 hours, or immediately when visibly dirty or when test strips show concentration has dropped below 50 ppm. Quat sanitizers remain stable for 24+ hours."
+  },
+  {
+    question: "What are quaternary ammonium sanitizers and when should you use them?",
+    answer: "Quaternary ammonium compounds (quats) are synthetic sanitizers that are non-corrosive, odorless, and stable for 24+ hours. Use quats for sanitizing metal surfaces, maintaining all-day solution strength, or when bleach odor or corrosion is a concern."
+  }
+];
+
 export default function BleachVsSanitationSolutionPage() {
   return (
     <BlogLayout breadcrumbTitle="Bleach vs Sanitation Solution: Which to Use">
@@ -35,6 +63,10 @@ export default function BleachVsSanitationSolutionPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqQuestions)) }}
       />
 
       <BlogHero
@@ -47,29 +79,29 @@ export default function BleachVsSanitationSolutionPage() {
 
       <div className="max-w-3xl mx-auto px-4 py-12">
         <div className="prose prose-lg max-w-none">
-          <p className="text-xl text-gray-700 leading-relaxed mb-8">
+          <p className="text-xl text-slate-700 leading-relaxed mb-8">
             After 24 years in professional kitchens where chemical sanitation is health department-mandated, understanding the difference between cleaning and sanitizing remains fundamental to food safety. Cleaning removes visible dirt and food debris. Sanitizing reduces bacterial populations to safe levels. Professional kitchens use specific chemical sanitizers at precise concentrations with defined contact times—not arbitrary cleaning products in random amounts. The two primary sanitizers are chlorine bleach and quaternary ammonium compounds, each with distinct applications, strengths, and limitations.
           </p>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Understanding Sanitation vs Cleaning</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Understanding Sanitation vs Cleaning</h2>
           
           <p>
             The distinction between cleaning and sanitizing is critical but frequently misunderstood. Professional kitchens maintain separate protocols for each process:
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Cleaning</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Cleaning</h3>
 
           <p>
             Cleaning removes visible soil, food particles, grease, and debris using detergent and mechanical action. This prepares surfaces for sanitizing but doesn&apos;t kill bacteria. A visibly clean surface can still harbor millions of bacteria. Cleaning is the first step, never the final step, in proper sanitation protocol.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Sanitizing</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Sanitizing</h3>
 
           <p>
             Sanitizing reduces bacterial populations to safe levels defined by health codes (typically 99.999% reduction). This requires chemical agents at specific concentrations with adequate contact time. Sanitizers work only on clean surfaces—organic material interferes with chemical effectiveness. You must clean first, then sanitize.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">The Three-Step Process</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">The Three-Step Process</h3>
 
           <p>
             Professional kitchens follow a mandated three-step sanitation protocol:
@@ -85,13 +117,20 @@ export default function BleachVsSanitationSolutionPage() {
             Skipping any step compromises the entire process. Sanitizing without cleaning wastes sanitizer on surfaces where organic material blocks chemical action. Sanitizing without rinsing leaves soap that neutralizes sanitizer effectiveness.
           </p>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Chlorine Bleach Sanitizing Solution</h2>
+          <div className="bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-lg my-6">
+            <p className="font-semibold text-slate-900 mb-2">Professional Insight</p>
+            <p className="text-slate-700">
+              In 24 years of restaurant work, I&apos;ve seen more health code violations from improper sanitizer concentration than almost any other issue. Test strips cost pennies per use—there&apos;s no excuse for guessing. Every professional kitchen keeps them at every sanitizer station.
+            </p>
+          </div>
+
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Chlorine Bleach Sanitizing Solution</h2>
 
           <p>
             Chlorine bleach (sodium hypochlorite) is the most common and cost-effective sanitizer in professional kitchens. When properly diluted, it provides fast, effective bacterial reduction on food-contact surfaces.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Proper Dilution Ratio</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Proper Dilution Ratio</h3>
 
           <p>
             Health codes specify 50-100 parts per million (ppm) chlorine for food-contact surface sanitation. Most household bleach is 5.25% to 8.25% sodium hypochlorite. The correct dilution varies based on bleach concentration:
@@ -117,7 +156,7 @@ export default function BleachVsSanitationSolutionPage() {
             <strong>Critical note:</strong> Always check bleach concentration on the bottle label. Using the wrong ratio creates either ineffective sanitizer (too dilute) or unnecessarily strong solution that requires longer rinsing (too concentrated).
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Contact Time Requirements</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Contact Time Requirements</h3>
 
           <p>
             Chlorine sanitizer requires minimum 7-second contact time at 50-100 ppm to achieve proper bacterial reduction. Most professional protocols specify 30 seconds to ensure adequate exposure. The surface must remain visibly wet for the entire contact period—solution that evaporates or drips off before 7 seconds hasn&apos;t provided adequate sanitation.
@@ -127,13 +166,13 @@ export default function BleachVsSanitationSolutionPage() {
             For porous surfaces or heavily contaminated areas, extend contact time to 1-2 minutes. This allows deeper chemical penetration into surface irregularities where bacteria harbor.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Water Temperature</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Water Temperature</h3>
 
           <p>
             Chlorine sanitizers work effectively in cool to warm water (55°F-120°F). Water above 120°F causes chlorine to dissipate rapidly, reducing effectiveness. Professional kitchens typically maintain bleach sanitizer buckets at room temperature (68-75°F) for optimal stability and effectiveness.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Advantages of Chlorine Bleach</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Advantages of Chlorine Bleach</h3>
 
           <ul className="list-disc pl-6 space-y-2 mb-6">
             <li><strong>Low cost:</strong> Most economical sanitizer option available</li>
@@ -144,7 +183,7 @@ export default function BleachVsSanitationSolutionPage() {
             <li><strong>No residue when properly diluted:</strong> Evaporates without leaving harmful residue at correct concentrations</li>
           </ul>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Disadvantages of Chlorine Bleach</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Disadvantages of Chlorine Bleach</h3>
 
           <ul className="list-disc pl-6 space-y-2 mb-6">
             <li><strong>Corrosive to some metals:</strong> Damages stainless steel, aluminum, and other metals with prolonged exposure</li>
@@ -155,13 +194,13 @@ export default function BleachVsSanitationSolutionPage() {
             <li><strong>Can bleach fabrics:</strong> Causes permanent staining on colored cloths and employee clothing</li>
           </ul>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Quaternary Ammonium Sanitizers (Quats)</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Quaternary Ammonium Sanitizers (Quats)</h2>
 
           <p>
             Quaternary ammonium compounds—commonly called &quot;quats&quot;—are synthetic chemical sanitizers widely used in professional kitchens as an alternative to chlorine bleach. These compounds provide longer-lasting sanitation with less corrosion and odor.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Proper Dilution</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Proper Dilution</h3>
 
           <p>
             Quat concentration requirements vary by product, typically 150-400 ppm for food-contact surfaces. Always follow manufacturer instructions—different quat formulations require different dilutions. Many commercial quat products come in pre-measured packets designed to mix with specific water volumes (commonly 1 packet per gallon).
@@ -171,7 +210,7 @@ export default function BleachVsSanitationSolutionPage() {
             Unlike bleach where you can calculate dilution from concentration percentage, quats must be diluted according to manufacturer specifications. Using test strips is essential to verify proper concentration since visual inspection cannot determine quat strength.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Contact Time Requirements</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Contact Time Requirements</h3>
 
           <p>
             Quat sanitizers require 30-60 seconds contact time at proper concentration. This longer contact time compared to chlorine is offset by quats&apos; greater stability—solution strength remains consistent throughout the day rather than degrading hourly like bleach.
@@ -179,13 +218,13 @@ export default function BleachVsSanitationSolutionPage() {
 
           <BlogEmailCapture />
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Water Temperature</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Water Temperature</h3>
 
           <p>
             Quats work effectively in a wide temperature range (75°F-120°F), with optimal effectiveness around 75°F. Unlike chlorine, quats don&apos;t degrade in warmer water, making them suitable for situations where temperature control is challenging.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Advantages of Quat Sanitizers</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Advantages of Quat Sanitizers</h3>
 
           <ul className="list-disc pl-6 space-y-2 mb-6">
             <li><strong>Non-corrosive:</strong> Safe for use on all surfaces including metals, plastics, and rubber</li>
@@ -196,7 +235,7 @@ export default function BleachVsSanitationSolutionPage() {
             <li><strong>Safe for food-contact surfaces:</strong> No rinse required when used at proper concentrations</li>
           </ul>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Disadvantages of Quat Sanitizers</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Disadvantages of Quat Sanitizers</h3>
 
           <ul className="list-disc pl-6 space-y-2 mb-6">
             <li><strong>Higher cost:</strong> Significantly more expensive than chlorine bleach</li>
@@ -207,9 +246,9 @@ export default function BleachVsSanitationSolutionPage() {
             <li><strong>Less effective against certain viruses:</strong> Chlorine shows broader viral kill spectrum</li>
           </ul>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">When to Use Which Sanitizer</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">When to Use Which Sanitizer</h2>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Use Chlorine Bleach When:</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Use Chlorine Bleach When:</h3>
 
           <ul className="list-disc pl-6 space-y-2 mb-6">
             <li>Budget is primary concern—bleach costs a fraction of quat sanitizers</li>
@@ -220,7 +259,7 @@ export default function BleachVsSanitationSolutionPage() {
             <li>Cleaning between different raw food types—quick sanitizing prevents cross-contamination</li>
           </ul>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Use Quat Sanitizers When:</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Use Quat Sanitizers When:</h3>
 
           <ul className="list-disc pl-6 space-y-2 mb-6">
             <li>Sanitizing metal surfaces regularly—prevents corrosion on stainless steel equipment</li>
@@ -231,13 +270,13 @@ export default function BleachVsSanitationSolutionPage() {
             <li>Areas where bleach damage is concern—near fabrics, colored surfaces</li>
           </ul>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Testing Sanitizer Concentration</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Testing Sanitizer Concentration</h2>
 
           <p>
             Professional kitchens never rely on guessing sanitizer strength. Health departments require verification using chemical test strips. These strips provide instant visual confirmation of proper concentration.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">How to Use Test Strips</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">How to Use Test Strips</h3>
 
           <ol className="list-decimal pl-6 space-y-4 mb-6">
             <li>
@@ -257,33 +296,33 @@ export default function BleachVsSanitationSolutionPage() {
             </li>
           </ol>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Why Testing Matters</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Why Testing Matters</h3>
 
           <p>
             Visual inspection cannot determine sanitizer concentration. Clear solution might contain proper sanitizer concentration, no sanitizer at all, or dangerously high levels. Test strips eliminate guessing, ensure health code compliance, and verify surfaces receive adequate sanitation. The cost of test strips (pennies per test) is negligible compared to foodborne illness risk from inadequate sanitation.
           </p>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Application Methods</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Application Methods</h2>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Immersion Method</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Immersion Method</h3>
 
           <p>
             Submerging items completely in sanitizer bucket provides thorough coverage. This works for small items: cutting boards, utensils, smallwares, removable equipment parts. Ensure solution completely covers all surfaces. Leave submerged for minimum contact time, then air dry without rinsing (for properly diluted solutions).
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Wipe Method</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Wipe Method</h3>
 
           <p>
             Using sanitizer-soaked towels to wipe large surfaces or equipment that cannot be immersed. Keep sanitizer buckets with clean towels on hand throughout service. Wring excess solution onto surface, ensure visible wetness for entire contact period. Replace towels frequently as they become soiled—dirty towels deposit bacteria while removing them.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Spray Method</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Spray Method</h3>
 
           <p>
             Spray bottles filled with properly diluted sanitizer enable quick application to large surface areas. Spray until surface is completely wet, allow contact time, let air dry. Never spray sanitizer on hot cooking surfaces—heat causes immediate evaporation before contact time completes.
           </p>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Professional Kitchen Sanitizer Protocols</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Professional Kitchen Sanitizer Protocols</h2>
 
           <p>
             Restaurant kitchens maintain multiple sanitizer solutions simultaneously for different applications:
@@ -296,27 +335,27 @@ export default function BleachVsSanitationSolutionPage() {
             <li><strong>End-of-night sanitizing:</strong> Chlorine solution for complete kitchen sanitizing after closing—floors, walls, equipment, all surfaces</li>
           </ul>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Safety Considerations</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Safety Considerations</h2>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Never Mix Sanitizers</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Never Mix Sanitizers</h3>
 
           <p>
             Mixing chlorine bleach with other chemicals—particularly acids, ammonia, or other cleaners—creates toxic gases that can cause severe respiratory damage or death. Use only one sanitizer type at a time. Thoroughly rinse surfaces if switching between sanitizer types.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Proper Storage</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Proper Storage</h3>
 
           <p>
             Store sanitizer chemicals in original labeled containers away from food storage areas. Keep in cool, dry locations away from direct sunlight. Never store sanitizers above food or food-contact surfaces—spills or leaks could contaminate food directly.
           </p>
 
-          <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Personal Protection</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Personal Protection</h3>
 
           <p>
             Concentrated sanitizers can irritate skin and eyes. When mixing solutions or handling concentrates, wear gloves and eye protection. Ensure adequate ventilation when using chlorine solutions in enclosed spaces. Wash hands thoroughly after sanitizer use even when wearing gloves.
           </p>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Home Kitchen Adaptation</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Home Kitchen Adaptation</h2>
 
           <p>
             Home cooks can implement professional sanitizing practices without commercial equipment:
@@ -330,7 +369,7 @@ export default function BleachVsSanitationSolutionPage() {
             <li><strong>Choose appropriate sanitizer:</strong> Bleach for cost-effectiveness and broad-spectrum kill, quats for non-corrosive applications</li>
           </ol>
 
-          <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Final Thoughts</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Final Thoughts</h2>
 
           <p>
             Chemical sanitization transforms food safety from hopeful to verifiable. Soap and water clean surfaces, but invisible bacteria remain. Proper sanitizer application—whether chlorine or quat—reduces bacterial populations to documented safe levels. This isn&apos;t theoretical protection; it&apos;s measured, verified bacterial reduction proven through decades of professional kitchen use and health department enforcement.
@@ -350,7 +389,9 @@ export default function BleachVsSanitationSolutionPage() {
         </div>
       </div>
 
-      <BlogAuthorBio />
+      <BlogFAQ questions={faqQuestions} />
+
+      <AuthorBio />
 
       <RelatedPosts
         posts={[
