@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import CTAVisibilityTracker from './CTAVisibilityTracker'
+import { trackAffiliateClick } from '@/lib/tracking'
 
 interface SizeOption {
   id: string
@@ -33,6 +34,10 @@ export default function SizeSelector({
   const [selectedSize, setSelectedSize] = useState(defaultSize)
 
   const selectedOption = options.find(opt => opt.id === selectedSize) || options[0]
+
+  const handleClick = () => {
+    trackAffiliateClick('amazon', productSlug || selectedOption.ctaId, ctaPosition)
+  }
 
   return (
     <div className="space-y-4">
@@ -72,6 +77,7 @@ export default function SizeSelector({
           href={selectedOption.affiliateUrl}
           target="_blank"
           rel="nofollow noopener noreferrer sponsored"
+          onClick={handleClick}
           className="inline-block bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-3 rounded-lg text-base transition-all hover:scale-105 whitespace-nowrap w-full text-center"
           aria-label={`${ctaText} - ${selectedOption.label}`}
         >
@@ -85,6 +91,7 @@ export default function SizeSelector({
           href={selectedOption.affiliateUrl}
           target="_blank"
           rel="nofollow noopener noreferrer sponsored"
+          onClick={handleClick}
           className="text-base text-orange-700 underline hover:text-orange-800 transition-colors"
           aria-label={`View ${selectedOption.label} product details on Amazon`}
         >

@@ -5,6 +5,7 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogQuickAnswer from '@/components/blog/BlogQuickAnswer'
+import BlogComparisonTable from '@/components/blog/BlogComparisonTable'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import AuthorBio from '@/components/review/AuthorBio'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
@@ -212,6 +213,55 @@ export default async function FoodProcessorVsBlenderPost() {
               "You frequently work with hot liquids (with proper venting)"
             ]
           }}
+        />
+
+        {/* Comparison Table */}
+        <BlogComparisonTable
+          title="Food Processor vs Blender: At a Glance"
+          columnA="Food Processor"
+          columnB="Blender"
+          features={[
+            {
+              feature: "Chopping Vegetables",
+              columnA: { rating: "Excellent", description: "Wide bowl and S-blade designed for this" },
+              columnB: { rating: "Poor", description: "Ingredients fly around without liquid" }
+            },
+            {
+              feature: "Pureeing Soups",
+              columnA: { rating: "Poor", description: "Dangerous—lid leaks with hot liquids" },
+              columnB: { rating: "Excellent", description: "Designed for hot liquids with vented lid" }
+            },
+            {
+              feature: "Making Pesto",
+              columnA: { rating: "Excellent", description: "Chops without over-processing" },
+              columnB: { rating: "Limited", description: "Risks turning into paste" }
+            },
+            {
+              feature: "Smoothies",
+              columnA: { rating: "Poor", description: "No vortex action for blending" },
+              columnB: { rating: "Excellent", description: "Tall pitcher creates perfect vortex" }
+            },
+            {
+              feature: "Shredding Cheese",
+              columnA: { rating: "Excellent", description: "Shredding disc included" },
+              columnB: { rating: "Poor", description: "Turns to mush" }
+            },
+            {
+              feature: "Kneading Dough",
+              columnA: { rating: "Very Good", description: "Plastic dough blade works well" },
+              columnB: { rating: "Poor", description: "Will burn out motor" }
+            },
+            {
+              feature: "Daily Versatility",
+              columnA: { rating: "Excellent", description: "Handles 90% of prep tasks" },
+              columnB: { rating: "Limited", description: "Specific use cases only" }
+            },
+            {
+              feature: "Cleanup",
+              columnA: { rating: "Good", description: "More parts (blades, discs, bowl)" },
+              columnB: { rating: "Very Good", description: "Simple—pitcher + blade assembly" }
+            }
+          ]}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">

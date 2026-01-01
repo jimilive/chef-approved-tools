@@ -9,6 +9,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Flame, Lightbulb, Apple } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
+import BlogQuickAnswer from '@/components/blog/BlogQuickAnswer';
+import BlogComparisonTable from '@/components/blog/BlogComparisonTable';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
@@ -73,6 +75,75 @@ export default function TomatoesGuidePage() {
           publishedDate="2025-10-08"
           lastUpdated="2025-10-24"
           readTime="7 min read"
+        />
+
+        <BlogQuickAnswer
+          optionA={{
+            title: "Use Fresh Tomatoes When:",
+            points: [
+              "Raw applications (salads, salsas, sandwiches)",
+              "Quick-cooked dishes under 15 minutes",
+              "Peak summer season (July-September)",
+              "Buying from farmers markets or local growers"
+            ]
+          }}
+          optionB={{
+            title: "Use Canned Tomatoes When:",
+            points: [
+              "Long-cooked sauces (marinara, bolognese, pizza sauce)",
+              "Soups, stews, and braises",
+              "Off-season cooking (November-June)",
+              "You need consistent, concentrated tomato flavor"
+            ]
+          }}
+        />
+
+        <BlogComparisonTable
+          title="Fresh vs Canned Tomatoes: At a Glance"
+          columnA="Fresh Tomatoes"
+          columnB="Canned Tomatoes"
+          features={[
+            {
+              feature: "Flavor (Peak Season)",
+              columnA: { rating: "Excellent", description: "Unbeatable when vine-ripened and local" },
+              columnB: { rating: "Very Good", description: "Consistent quality year-round" }
+            },
+            {
+              feature: "Flavor (Off-Season)",
+              columnA: { rating: "Poor", description: "Picked green, gassed, bland" },
+              columnB: { rating: "Excellent", description: "Vine-ripened at peak, packed fresh" }
+            },
+            {
+              feature: "Raw Applications",
+              columnA: { rating: "Excellent", description: "Essential for salads, salsas, sandwiches" },
+              columnB: { rating: "Poor", description: "Wrong texture and flavor" }
+            },
+            {
+              feature: "Long-Cooked Sauces",
+              columnA: { rating: "Limited", description: "Too watery, need 2x quantity" },
+              columnB: { rating: "Excellent", description: "Already concentrated, consistent" }
+            },
+            {
+              feature: "Convenience",
+              columnA: { rating: "Limited", description: "Peeling, seeding, chopping required" },
+              columnB: { rating: "Excellent", description: "Ready to use, no prep" }
+            },
+            {
+              feature: "Consistency",
+              columnA: { rating: "Limited", description: "Varies by season and source" },
+              columnB: { rating: "Excellent", description: "Same quality every time" }
+            },
+            {
+              feature: "Cost",
+              columnA: { rating: "Limited", description: "$3-6/lb, seasonal availability" },
+              columnB: { rating: "Very Good", description: "$2-4 per 28oz can" }
+            },
+            {
+              feature: "Shelf Life",
+              columnA: { rating: "Poor", description: "Days at room temp, week refrigerated" },
+              columnB: { rating: "Excellent", description: "Years in pantry" }
+            }
+          ]}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">

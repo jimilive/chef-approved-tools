@@ -8,6 +8,8 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Target, TrendingUp, DollarSign } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
+import BlogQuickAnswer from '@/components/blog/BlogQuickAnswer';
+import BlogComparisonTable from '@/components/blog/BlogComparisonTable';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
@@ -79,6 +81,77 @@ export default function Victorinox8vs10Page() {
           publishedDate="2025-11-15"
           lastUpdated="2025-11-15"
           readTime="12 min read"
+        />
+
+        {/* Quick Answer Section */}
+        <BlogQuickAnswer
+          optionA={{
+            title: "Choose the 8-Inch If:",
+            points: [
+              "You cook for 1-4 people regularly",
+              "You have average-sized hands or are under 6 feet tall",
+              "You value control and precision over cutting speed",
+              "Your kitchen has limited counter space"
+            ]
+          }}
+          optionB={{
+            title: "Choose the 10-Inch If:",
+            points: [
+              "You&rsquo;re 6&rsquo;+ tall with larger hands",
+              "You regularly cook for 6+ people or do meal prep",
+              "You work with large cuts of meat or bulk vegetables",
+              "You have ample counter and cutting board space"
+            ]
+          }}
+        />
+
+        {/* Comparison Table */}
+        <BlogComparisonTable
+          title="8-Inch vs 10-Inch Chef's Knife: At a Glance"
+          columnA="8-Inch"
+          columnB="10-Inch"
+          features={[
+            {
+              feature: "Control & Precision",
+              columnA: { rating: "Excellent", description: "Tip stays close for fine work" },
+              columnB: { rating: "Good", description: "Requires more deliberate technique" }
+            },
+            {
+              feature: "Bulk Prep Speed",
+              columnA: { rating: "Good", description: "Adequate for home cooking volume" },
+              columnB: { rating: "Excellent", description: "Fewer strokes, faster processing" }
+            },
+            {
+              feature: "Large Proteins",
+              columnA: { rating: "Good", description: "Works for chickens, standard cuts" },
+              columnB: { rating: "Excellent", description: "Better leverage for primals, roasts" }
+            },
+            {
+              feature: "Mincing Herbs",
+              columnA: { rating: "Excellent", description: "Quick direction changes, intuitive" },
+              columnB: { rating: "Good", description: "Extra length isn't an advantage" }
+            },
+            {
+              feature: "Board Space Needed",
+              columnA: { rating: "Excellent", description: "Works on 12x18 inch boards" },
+              columnB: { rating: "Limited", description: "Needs 14-16 inch minimum" }
+            },
+            {
+              feature: "Learning Curve",
+              columnA: { rating: "Easy", description: "Intuitive for beginners" },
+              columnB: { rating: "Moderate", description: "Takes practice to control" }
+            },
+            {
+              feature: "Hand Fatigue",
+              columnA: { rating: "Excellent", description: "~6 oz, lighter for extended use" },
+              columnB: { rating: "Good", description: "~8 oz, heavier during long prep" }
+            },
+            {
+              feature: "Versatility",
+              columnA: { rating: "Excellent", description: "Handles 80% of kitchen tasks" },
+              columnB: { rating: "Very Good", description: "Specialized for volume work" }
+            }
+          ]}
         />
 
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">

@@ -7,6 +7,7 @@ import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import TrackedAffiliateLink from '@/components/TrackedAffiliateLink'
 import AmazonCTA from '@/components/AmazonCTA'
 import ReviewLayout from '@/components/review/ReviewLayout'
 import {
@@ -184,14 +185,15 @@ export default async function CuisinartDLC10CReview() {
                   position="model_notice"
                   productSlug={productData.slug}
                 >
-                  <a
+                  <TrackedAffiliateLink
                     href={affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow sponsored"
+                    merchant="amazon"
+                    productSlug={productData.slug}
+                    position="model_notice"
                     className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-6 py-3 rounded-xl transition-all hover:scale-105 active:scale-95 text-base"
                   >
                     View Current Model on Amazon →
-                  </a>
+                  </TrackedAffiliateLink>
                 </CTAVisibilityTracker>
                 <p className="text-center mt-3 text-sm">
                   <a

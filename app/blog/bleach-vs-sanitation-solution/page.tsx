@@ -1,6 +1,8 @@
 import React from 'react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
+import BlogQuickAnswer from '@/components/blog/BlogQuickAnswer';
+import BlogComparisonTable from '@/components/blog/BlogComparisonTable';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogFAQ from '@/components/blog/BlogFAQ';
 import RelatedPosts from '@/components/blog/RelatedPosts';
@@ -75,6 +77,77 @@ export default function BleachVsSanitationSolutionPage() {
         publishedDate="2025-11-20"
         lastUpdated="2025-11-20"
         readTime="10 min read"
+      />
+
+      {/* Quick Answer Section */}
+      <BlogQuickAnswer
+        optionA={{
+          title: "Use Chlorine Bleach When:",
+          points: [
+            "Budget is the primary concern (cheapest option)",
+            "You need fast sanitization (7-second contact time)",
+            "Sanitizing non-metal surfaces (plastic, composite, ceramic)",
+            "Dealing with high-risk pathogens (broadest kill spectrum)"
+          ]
+        }}
+        optionB={{
+          title: "Use Quat Sanitizers When:",
+          points: [
+            "Sanitizing metal surfaces regularly (prevents corrosion)",
+            "You need all-day solution stability (24+ hours)",
+            "Odor is a concern (odorless operation)",
+            "Sanitizing colored towels (won&apos;t bleach fabrics)"
+          ]
+        }}
+      />
+
+      {/* Comparison Table */}
+      <BlogComparisonTable
+        title="Chlorine Bleach vs Quat Sanitizers: At a Glance"
+        columnA="Chlorine Bleach"
+        columnB="Quat Sanitizers"
+        features={[
+          {
+            feature: "Cost",
+            columnA: { rating: "Excellent", description: "Pennies per gallon" },
+            columnB: { rating: "Good", description: "Significantly more expensive" }
+          },
+          {
+            feature: "Contact Time",
+            columnA: { rating: "Excellent", description: "7-30 seconds" },
+            columnB: { rating: "Good", description: "30-60 seconds required" }
+          },
+          {
+            feature: "Solution Stability",
+            columnA: { rating: "Poor", description: "Replace every 2-4 hours" },
+            columnB: { rating: "Excellent", description: "Stable for 24+ hours" }
+          },
+          {
+            feature: "Metal Safety",
+            columnA: { rating: "Poor", description: "Corrodes stainless steel over time" },
+            columnB: { rating: "Excellent", description: "Non-corrosive on all surfaces" }
+          },
+          {
+            feature: "Odor",
+            columnA: { rating: "Limited", description: "Strong chlorine smell" },
+            columnB: { rating: "Excellent", description: "Odorless operation" }
+          },
+          {
+            feature: "Kill Spectrum",
+            columnA: { rating: "Excellent", description: "Bacteria, viruses, and fungi" },
+            columnB: { rating: "Very Good", description: "Less effective on some viruses" }
+          },
+          {
+            feature: "Fabric Safety",
+            columnA: { rating: "Poor", description: "Bleaches colored towels" },
+            columnB: { rating: "Excellent", description: "Safe for all fabrics" }
+          },
+          {
+            feature: "Organic Matter Resistance",
+            columnA: { rating: "Poor", description: "Food debris neutralizes quickly" },
+            columnB: { rating: "Good", description: "Works better with light soiling" }
+          }
+        ]}
       />
 
       <div className="max-w-3xl mx-auto px-4 py-12">

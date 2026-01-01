@@ -8,6 +8,7 @@ import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import { getReviewMetadata } from '@/data/metadata'
 import AmazonCTA from '@/components/AmazonCTA'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import TrackedAffiliateLink from '@/components/TrackedAffiliateLink'
 import MultiVendorCTA from '@/components/MultiVendorCTA'
 import ReviewLayout from '@/components/review/ReviewLayout'
 import {
@@ -208,14 +209,15 @@ export default async function KitchenAidProfessional600ReviewPage() {
             productSlug={productData.slug}
             merchant="kitchenaid_direct"
           >
-            <a
+            <TrackedAffiliateLink
               href={primaryLink}
-              target="_blank"
-              rel="nofollow noopener noreferrer sponsored"
+              merchant="kitchenaid_direct"
+              productSlug={productData.slug}
+              position="mid_article"
               className="text-orange-700 hover:text-orange-800 font-medium underline"
             >
               → See current KitchenAid price and availability
-            </a>
+            </TrackedAffiliateLink>
           </CTAVisibilityTracker>
         </div>
 

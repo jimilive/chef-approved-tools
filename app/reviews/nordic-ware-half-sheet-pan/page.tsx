@@ -7,6 +7,7 @@ import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import TrackedAffiliateLink from '@/components/TrackedAffiliateLink'
 import AmazonCTA from '@/components/AmazonCTA'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import ReviewLayout from '@/components/review/ReviewLayout'
@@ -502,14 +503,15 @@ export default async function NordicWareHalfSheetPanReview() {
               productSlug={reviewData.productSlug}
               merchant="amazon"
             >
-              <a
+              <TrackedAffiliateLink
                 href={affiliateUrl}
-                target="_blank"
-                rel="nofollow noopener noreferrer sponsored"
+                merchant="amazon"
+                productSlug={reviewData.productSlug}
+                position="final_cta"
                 className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
               >
                 {reviewData.bottomLine.ctaText}
-              </a>
+              </TrackedAffiliateLink>
             </CTAVisibilityTracker>
 
             {/* Text link under button */}

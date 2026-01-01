@@ -8,6 +8,7 @@ import { getReviewMetadata } from '@/data/metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import AmazonCTA from '@/components/AmazonCTA'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import TrackedAffiliateLink from '@/components/TrackedAffiliateLink'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import ReviewLayout from '@/components/review/ReviewLayout'
 import {
@@ -207,10 +208,11 @@ export default async function EpicureanKitchenCuttingBoardReview() {
                     productSlug={PRODUCT_SLUG}
                     merchant="amazon"
                   >
-                    <a
+                    <TrackedAffiliateLink
                       href={option.link}
-                      target="_blank"
-                      rel="nofollow noopener noreferrer sponsored"
+                      merchant="amazon"
+                      productSlug={PRODUCT_SLUG}
+                      position="above_fold"
                       className={`block text-center p-3 rounded-lg border-2 transition-all hover:scale-105 ${
                         option.label.includes('Reviewed')
                           ? 'border-orange-500 bg-orange-50 hover:bg-orange-100'
@@ -221,21 +223,22 @@ export default async function EpicureanKitchenCuttingBoardReview() {
                       <span className={`block text-xs ${option.label.includes('Reviewed') ? 'text-orange-700 font-medium' : 'text-slate-700'}`}>
                         {option.label}
                       </span>
-                    </a>
+                    </TrackedAffiliateLink>
                   </CTAVisibilityTracker>
                 ))}
               </div>
 
               {/* Main CTA */}
               <CTAVisibilityTracker ctaId="hero-cta" position="above_fold" productSlug={PRODUCT_SLUG} merchant="amazon">
-                <a
+                <TrackedAffiliateLink
                   href={affiliateUrl}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer sponsored"
+                  merchant="amazon"
+                  productSlug={PRODUCT_SLUG}
+                  position="above_fold"
                   className="block w-full text-center bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105"
                 >
                   {reviewData.hero.ctaText}
-                </a>
+                </TrackedAffiliateLink>
               </CTAVisibilityTracker>
 
               <p className="text-xs text-slate-700 text-center mt-4">

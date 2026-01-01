@@ -7,6 +7,7 @@ import { getReviewGitDates } from '@/lib/git-dates'
 import { getTierBadge } from '@/lib/editorial-metadata'
 import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import TrackedAffiliateLink from '@/components/TrackedAffiliateLink'
 import MultiVendorCTA from '@/components/MultiVendorCTA'
 import ReviewLayout from '@/components/review/ReviewLayout'
 import {
@@ -210,14 +211,15 @@ export default async function KitchenAidCommercialReviewPage() {
             productSlug={productData.slug}
             merchant="kitchenaid_direct"
           >
-            <a
+            <TrackedAffiliateLink
               href={primaryLink}
-              target="_blank"
-              rel="nofollow noopener noreferrer sponsored"
+              merchant="kitchenaid_direct"
+              productSlug={productData.slug}
+              position="mid_article"
               className="text-orange-700 hover:text-orange-800 font-medium underline"
             >
               → See current KitchenAid price and availability
-            </a>
+            </TrackedAffiliateLink>
           </CTAVisibilityTracker>
         </div>
 

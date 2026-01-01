@@ -8,6 +8,7 @@ import { getCategoryBreadcrumb } from '@/lib/category-helpers'
 import { getReviewMetadata } from '@/data/metadata'
 import AmazonCTA from '@/components/AmazonCTA'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
+import TrackedAffiliateLink from '@/components/TrackedAffiliateLink'
 import ReviewLayout from '@/components/review/ReviewLayout'
 import {
   ReviewHero,
@@ -176,14 +177,15 @@ export default async function LeCreusetDutchOvenReviewPage() {
                   productSlug={reviewData.productSlug}
                   merchant="amazon"
                 >
-                  <a
+                  <TrackedAffiliateLink
                     href={affiliateUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer sponsored"
+                    merchant="amazon"
+                    productSlug={reviewData.productSlug}
+                    position="above_fold"
                     className="block w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 active:scale-95 text-center text-lg shadow-lg hover:shadow-xl"
                   >
                     {reviewData.hero.ctaText}
-                  </a>
+                  </TrackedAffiliateLink>
                 </CTAVisibilityTracker>
 
                 {/* Text link under button */}
