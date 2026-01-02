@@ -8,10 +8,13 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
 import { ChefHat, Droplets, Flame, FlaskConical, AlertTriangle } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
+import BlogQuickAnswer from '@/components/blog/BlogQuickAnswer';
+import BlogComparisonTable from '@/components/blog/BlogComparisonTable';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
+import { comparisonData } from './stock-vs-broth-data';
 
 export const metadata = generateBlogMetadata('stock-vs-broth-vs-bouillon');
 
@@ -78,6 +81,31 @@ export default function StockVsBrothPage() {
           lastUpdated="2025-10-24"
           readTime="9 min read"
         />
+
+        <BlogQuickAnswer
+          optionA={comparisonData.quickAnswer.stockChoice}
+          optionB={comparisonData.quickAnswer.brothChoice}
+        />
+
+        <BlogComparisonTable
+          title={comparisonData.comparisonTable.title}
+          columnA="Stock"
+          columnB="Broth"
+          features={comparisonData.comparisonTable.features}
+        />
+
+        <div className="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-6 mb-8">
+          <h3 className="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+            <FlaskConical className="w-5 h-5 text-amber-600" />
+            What About Bouillon?
+          </h3>
+          <p className="text-slate-700 mb-3">
+            <strong>Bouillon is a shortcut, not a substitute.</strong> It&apos;s dehydrated, concentrated stock or broth mixed with salt and flavorings. Use it when you need something quick—cooking rice, adding flavor to vegetables, or making a simple soup.
+          </p>
+          <p className="text-slate-700 mb-0">
+            <strong>Don&apos;t use bouillon</strong> for sauces that reduce (it gets too salty), dishes where body matters (no gelatin), or anything where stock is the star ingredient. Better Than Bouillon paste is the best option if you go this route.
+          </p>
+        </div>
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
