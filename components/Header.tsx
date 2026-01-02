@@ -2,10 +2,12 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Search } from 'lucide-react'
+import SearchInput from './search/SearchInput'
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   // Close mobile menu on escape key press
   useEffect(() => {
@@ -39,6 +41,10 @@ export default function Header() {
     { name: 'Blog', href: '/blog', id: 'blog' },
     { name: 'About', href: '/about', id: 'about', highlight: true },
   ]
+
+  const handleMobileResultSelect = () => {
+    setIsMobileMenuOpen(false)
+  }
 
   return (
     <header className="sticky top-0 z-40 bg-slate-800 border-b border-gray-600 shadow-sm">
@@ -77,14 +83,32 @@ export default function Header() {
                 key={item.id}
                 href={item.href}
                 className={`font-medium px-2 py-2 rounded-md text-sm transition-colors text-center ${
-                  item.highlight 
-                    ? 'text-orange-400 hover:text-orange-300' 
+                  item.highlight
+                    ? 'text-orange-400 hover:text-orange-300'
                     : 'text-gray-300 hover:text-white'
                 }`}
               >
                 {item.name}
               </Link>
             ))}
+          </div>
+
+          {/* Desktop Search */}
+          <div className="hidden lg:flex items-center ml-4">
+            {isSearchOpen ? (
+              <SearchInput
+                onClose={() => setIsSearchOpen(false)}
+                autoFocus
+              />
+            ) : (
+              <button
+                onClick={() => setIsSearchOpen(true)}
+                className="p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 transition-colors"
+                aria-label="Open search"
+              >
+                <Search className="h-5 w-5" />
+              </button>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -115,6 +139,14 @@ export default function Header() {
             {/* Mobile Menu Panel */}
             <div className="lg:hidden fixed left-0 right-0 top-16 z-30 bg-slate-900 border-t border-gray-600 shadow-xl transform transition-transform duration-200 ease-in-out">
               <div className="px-4 pt-4 pb-6 space-y-2 max-h-[calc(100vh-4rem)] overflow-y-auto">
+                {/* Mobile Search */}
+                <div className="pb-4 border-b border-gray-600 mb-2">
+                  <SearchInput
+                    onClose={handleMobileResultSelect}
+                    fullWidth
+                  />
+                </div>
+
                 {navigation.map((item, index) => (
                   <Link
                     key={item.id}
@@ -138,7 +170,7 @@ export default function Header() {
                     className="flex items-center justify-center w-full bg-gradient-to-r from-orange-700 to-red-700 hover:from-orange-800 hover:to-red-800 text-white font-semibold px-6 py-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    🎯 Get Free Chef Guide
+                    Get Free Chef Guide
                   </Link>
                 </div>
 
