@@ -78,9 +78,9 @@ function SearchResults() {
             {/* Results Summary */}
             <p className="text-gray-600 mb-6">
               {totalResults === 0 ? (
-                <>No results found for "<span className="font-medium">{query}</span>"</>
+                <>No results found for &ldquo;<span className="font-medium">{query}</span>&rdquo;</>
               ) : (
-                <>Found {totalResults} result{totalResults !== 1 ? 's' : ''} for "<span className="font-medium">{query}</span>"</>
+                <>Found {totalResults} result{totalResults !== 1 ? 's' : ''} for &ldquo;<span className="font-medium">{query}</span>&rdquo;</>
               )}
             </p>
 

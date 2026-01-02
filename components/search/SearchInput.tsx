@@ -239,7 +239,7 @@ export default function SearchInput({ onClose, autoFocus = false, fullWidth = fa
               onClick={handleViewAll}
               className="w-full px-4 py-3 text-center text-orange-700 hover:text-orange-800 hover:bg-orange-50 font-medium border-t border-gray-200"
             >
-              View all {totalCount} result{totalCount !== 1 ? 's' : ''} for "{query}" →
+              View all {totalCount} result{totalCount !== 1 ? 's' : ''} for &ldquo;{query}&rdquo; →
             </button>
           )}
         </div>
@@ -249,7 +249,7 @@ export default function SearchInput({ onClose, autoFocus = false, fullWidth = fa
       {isOpen && query.length >= 2 && !hasResults && (
         <div className="absolute top-full mt-2 w-full bg-white rounded-lg shadow-xl border border-gray-200 z-50 min-w-[320px]">
           <div className="px-4 py-6 text-center text-gray-500">
-            No results found for "{query}"
+            No results found for &ldquo;{query}&rdquo;
           </div>
         </div>
       )}
