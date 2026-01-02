@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { comparisonData } from './toaster-oven-vs-slot-toaster-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   BlogLayout,
   BlogHero,
@@ -116,7 +117,7 @@ export default function ToasterOvenVsSlotToaster() {
         <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Recommended Toaster Oven</h2>
           <p className="text-slate-700 mb-4">
-            If versatility matters to you, the <Link href="/reviews/black-decker-toaster-oven" className="text-orange-700 hover:text-orange-800 underline">Black+Decker Toaster Oven</Link> offers solid performance for small households. It handles toast, reheating, and small baking tasks without dominating your counter space. The controls are straightforward, cleanup is simple, and the build quality holds up to daily use.
+            If versatility matters to you, the <CTAVisibilityTracker ctaId="blog-toaster-oven-vs-slot-black-decker" position="mid_article" productSlug="black-decker-toaster-oven" merchant="internal"><Link href="/reviews/black-decker-toaster-oven" className="text-orange-700 hover:text-orange-800 underline">Black+Decker Toaster Oven</Link></CTAVisibilityTracker> offers solid performance for small households. It handles toast, reheating, and small baking tasks without dominating your counter space. The controls are straightforward, cleanup is simple, and the build quality holds up to daily use.
           </p>
           <p className="text-slate-700">
             Browse our full selection of <Link href="/appliances" className="text-orange-700 hover:text-orange-800 underline">kitchen appliances</Link> for more options.

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { comparisonData } from './air-fryer-vs-deep-fryer-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   BlogLayout,
   BlogHero,
@@ -116,7 +117,7 @@ export default function AirFryerVsDeepFryer() {
         <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Recommended Air Fryer</h2>
           <p className="text-slate-700 mb-4">
-            For home cooks ready to try air frying, the <Link href="/reviews/ninja-air-fryer-af101" className="text-orange-700 hover:text-orange-800 underline">Ninja AF101 Air Fryer</Link> offers excellent performance at a reasonable entry point. Its 4-quart capacity handles 1-2 person portions well, and the ceramic-coated basket makes cleanup simple. For those who discover they love air frying, larger capacity models are available—but starting with a compact unit helps you learn the technique without major investment.
+            For home cooks ready to try air frying, the <CTAVisibilityTracker ctaId="blog-air-fryer-vs-deep-fryer-ninja-af101" position="mid_article" productSlug="ninja-air-fryer-af101" merchant="internal"><Link href="/reviews/ninja-air-fryer-af101" className="text-orange-700 hover:text-orange-800 underline">Ninja AF101 Air Fryer</Link></CTAVisibilityTracker> offers excellent performance at a reasonable entry point. Its 4-quart capacity handles 1-2 person portions well, and the ceramic-coated basket makes cleanup simple. For those who discover they love air frying, larger capacity models are available—but starting with a compact unit helps you learn the technique without major investment.
           </p>
           <p className="text-slate-700">
             Browse our full selection of <Link href="/appliances" className="text-orange-700 hover:text-orange-800 underline">kitchen appliances</Link> for more options.

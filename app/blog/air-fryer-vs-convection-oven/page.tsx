@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { comparisonData } from './air-fryer-vs-convection-oven-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   BlogLayout,
   BlogHero,
@@ -119,7 +120,7 @@ export default function AirFryerVsConvectionOven() {
             After testing both extensively, here&apos;s my practical recommendation: if you don&apos;t already have a convection oven and you cook for more than two people, prioritize the oven. If you have a working oven and cook primarily for one or two, an air fryer adds genuine value for quick, crispy results you&apos;ll use multiple times per week.
           </p>
           <p className="text-slate-700 mb-4">
-            The <Link href="/reviews/ninja-air-fryer-af101" className="text-orange-700 hover:text-orange-800 underline">Ninja AF101 Air Fryer</Link> is an excellent entry point for those new to air frying—compact enough for small kitchens, powerful enough for consistent results. See our <Link href="/blog/air-fryer-vs-deep-fryer" className="text-orange-700 hover:text-orange-800 underline">Air Fryer vs Deep Fryer comparison</Link> for more on how air fryers stack up against traditional frying.
+            The <CTAVisibilityTracker ctaId="blog-air-fryer-vs-convection-oven-ninja-af101" position="mid_article" productSlug="ninja-air-fryer-af101" merchant="internal"><Link href="/reviews/ninja-air-fryer-af101" className="text-orange-700 hover:text-orange-800 underline">Ninja AF101 Air Fryer</Link></CTAVisibilityTracker> is an excellent entry point for those new to air frying—compact enough for small kitchens, powerful enough for consistent results. See our <Link href="/blog/air-fryer-vs-deep-fryer" className="text-orange-700 hover:text-orange-800 underline">Air Fryer vs Deep Fryer comparison</Link> for more on how air fryers stack up against traditional frying.
           </p>
           <p className="text-slate-700">
             Browse our full selection of <Link href="/appliances" className="text-orange-700 hover:text-orange-800 underline">kitchen appliances</Link> for more options.

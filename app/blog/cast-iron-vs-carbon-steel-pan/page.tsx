@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { comparisonData } from './cast-iron-vs-carbon-steel-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   BlogLayout,
   BlogHero,
@@ -65,7 +66,7 @@ export default function CastIronVsCarbonSteelComparison() {
           features={comparisonData.comparisonTable.features}
         />
         <p className="text-sm text-gray-600 mt-4">
-          Read our full review: <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800">Lodge Cast Iron Skillet Set</Link>
+          Read our full review: <CTAVisibilityTracker ctaId="blog-cast-iron-vs-carbon-steel-lodge" position="mid_article" productSlug="lodge-seasoned-cast-iron-3-skillet-bundle" merchant="internal"><Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800">Lodge Cast Iron Skillet Set</Link></CTAVisibilityTracker>
         </p>
 
           <section className="bg-white rounded-xl shadow-lg p-8 mb-8">

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { comparisonData } from './wood-vs-composite-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   BlogLayout,
   BlogHero,
@@ -77,7 +78,7 @@ export default function WoodVsCompositeComparison() {
           features={comparisonData.comparisonTable.features}
         />
         <p className="text-sm text-gray-600 mt-4">
-          Read our full reviews: <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800">John Boos Cutting Board</Link>, <Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-700 hover:text-orange-800">Epicurean Cutting Board</Link>
+          Read our full reviews: <CTAVisibilityTracker ctaId="blog-wood-vs-composite-john-boos" position="mid_article" productSlug="john-boos-platinum-commercial-cutting-board" merchant="internal"><Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800">John Boos Cutting Board</Link></CTAVisibilityTracker>, <CTAVisibilityTracker ctaId="blog-wood-vs-composite-epicurean" position="mid_article" productSlug="epicurean-kitchen-cutting-board" merchant="internal"><Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-700 hover:text-orange-800">Epicurean Cutting Board</Link></CTAVisibilityTracker>
         </p>
 
         <section className="bg-white rounded-xl shadow-lg p-8 mb-8">

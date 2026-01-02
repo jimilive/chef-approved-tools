@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { comparisonData } from './instant-pot-vs-crockpot-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   BlogLayout,
   BlogHero,
@@ -116,7 +117,7 @@ export default function InstantPotVsCrockpot() {
         <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Recommended Products</h2>
           <p className="text-slate-700 mb-4">
-            The <Link href="/reviews/instant-pot-duo-plus-6qt" className="text-orange-700 hover:text-orange-800 underline">Instant Pot Duo Plus 6qt</Link> offers excellent value with multiple cooking functions and reliable performance for those interested in pressure cooking versatility. It combines pressure cooking, slow cooking, and multiple other functions in one device.
+            The <CTAVisibilityTracker ctaId="blog-instant-pot-vs-crockpot-instant-pot" position="mid_article" productSlug="instant-pot-duo-plus-6qt" merchant="internal"><Link href="/reviews/instant-pot-duo-plus-6qt" className="text-orange-700 hover:text-orange-800 underline">Instant Pot Duo Plus 6qt</Link></CTAVisibilityTracker> offers excellent value with multiple cooking functions and reliable performance for those interested in pressure cooking versatility. It combines pressure cooking, slow cooking, and multiple other functions in one device.
           </p>
           <p className="text-slate-700">
             Browse our full selection of <Link href="/appliances" className="text-orange-700 hover:text-orange-800 underline">kitchen appliances</Link> for more options.

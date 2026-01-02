@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { comparisonData } from './nutribullet-vs-magic-bullet-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   BlogLayout,
   BlogHero,
@@ -116,10 +117,10 @@ export default function NutribulletVsMagicBullet() {
         <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Looking for More Power?</h2>
           <p className="text-slate-700 mb-4">
-            If you&apos;re interested in professional-grade blending that surpasses both personal blender options, consider upgrading to a full-size blender. The <Link href="/reviews/vitamix-5200-professional-blender" className="text-orange-700 hover:text-orange-800 underline">Vitamix 5200 Professional Blender</Link> offers exceptional performance and reliability for serious smoothie enthusiasts.
+            If you&apos;re interested in professional-grade blending that surpasses both personal blender options, consider upgrading to a full-size blender. The <CTAVisibilityTracker ctaId="blog-nutribullet-vs-magic-bullet-vitamix-5200" position="mid_article" productSlug="vitamix-5200-professional-blender" merchant="internal"><Link href="/reviews/vitamix-5200-professional-blender" className="text-orange-700 hover:text-orange-800 underline">Vitamix 5200 Professional Blender</Link></CTAVisibilityTracker> offers exceptional performance and reliability for serious smoothie enthusiasts.
           </p>
           <p className="text-slate-700 mb-4">
-            For a more affordable full-size option, the <Link href="/reviews/ninja-bl660-professional-blender" className="text-orange-700 hover:text-orange-800 underline">Ninja BL660 Professional Blender</Link> provides solid everyday blending at a fraction of the premium blender cost.
+            For a more affordable full-size option, the <CTAVisibilityTracker ctaId="blog-nutribullet-vs-magic-bullet-ninja-bl660" position="mid_article" productSlug="ninja-bl660-professional-blender" merchant="internal"><Link href="/reviews/ninja-bl660-professional-blender" className="text-orange-700 hover:text-orange-800 underline">Ninja BL660 Professional Blender</Link></CTAVisibilityTracker> provides solid everyday blending at a fraction of the premium blender cost.
           </p>
           <p className="text-slate-700">
             Browse our full selection of <Link href="/appliances" className="text-orange-700 hover:text-orange-800 underline">kitchen appliances</Link> for more options.

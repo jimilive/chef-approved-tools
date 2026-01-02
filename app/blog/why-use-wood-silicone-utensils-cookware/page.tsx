@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
@@ -110,10 +111,10 @@ export default function WhyUseWoodSiliconeUtensils() {
 
           <ul>
             <li>
-              <strong>Cast Iron:</strong> Metal spatulas can chip and scrape the seasoning you&apos;ve spent months building. While cast iron is durable, aggressive metal scraping—especially at sharp angles—removes seasoning faster than cooking rebuilds it. The <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 underline">Lodge Cast Iron Skillets</Link> I recommend can last generations, but only with proper care.
+              <strong>Cast Iron:</strong> Metal spatulas can chip and scrape the seasoning you&apos;ve spent months building. While cast iron is durable, aggressive metal scraping—especially at sharp angles—removes seasoning faster than cooking rebuilds it. The <CTAVisibilityTracker ctaId="blog-wood-silicone-utensils-lodge-1" position="mid_article" productSlug="lodge-seasoned-cast-iron-3-skillet-bundle" merchant="internal"><Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 underline">Lodge Cast Iron Skillets</Link></CTAVisibilityTracker> I recommend can last generations, but only with proper care.
             </li>
             <li>
-              <strong>Enameled Cast Iron:</strong> That beautiful <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-700 hover:text-orange-800 underline">Le Creuset interior</Link>? Metal utensils can chip the enamel coating, creating rough spots where food sticks and potentially exposing the cast iron beneath.
+              <strong>Enameled Cast Iron:</strong> That beautiful <CTAVisibilityTracker ctaId="blog-wood-silicone-utensils-le-creuset-1" position="mid_article" productSlug="le-creuset-signature-7-25-qt-dutch-oven" merchant="internal"><Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-700 hover:text-orange-800 underline">Le Creuset interior</Link></CTAVisibilityTracker>? Metal utensils can chip the enamel coating, creating rough spots where food sticks and potentially exposing the cast iron beneath.
             </li>
             <li>
               <strong>Stainless Steel:</strong> While stainless won&apos;t release particles, metal-on-metal contact creates visible scratches that trap food residue and make cleaning harder.
@@ -202,7 +203,7 @@ export default function WhyUseWoodSiliconeUtensils() {
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
             <p className="mb-0">
-              <strong>Professional Tip:</strong> For nonstick cookware like the <Link href="/reviews/cuisinart-8-inch-nonstick-pan" className="text-orange-700 hover:text-orange-800 underline">Cuisinart 8-inch nonstick pan</Link>, silicone spatulas are ideal—they&apos;ll never damage the coating while still providing the control you need for delicate work like eggs and fish.
+              <strong>Professional Tip:</strong> For nonstick cookware like the <CTAVisibilityTracker ctaId="blog-wood-silicone-utensils-cuisinart-1" position="mid_article" productSlug="cuisinart-8-inch-nonstick-pan" merchant="internal"><Link href="/reviews/cuisinart-8-inch-nonstick-pan" className="text-orange-700 hover:text-orange-800 underline">Cuisinart 8-inch nonstick pan</Link></CTAVisibilityTracker>, silicone spatulas are ideal—they&apos;ll never damage the coating while still providing the control you need for delicate work like eggs and fish.
             </p>
           </div>
 
@@ -346,15 +347,21 @@ export default function WhyUseWoodSiliconeUtensils() {
         <div className="p-6 bg-slate-50 rounded-xl mb-8">
           <h3 className="text-2xl font-bold mb-4">Related Content</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → Lodge Cast Iron Skillets
-            </Link>
-            <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → Le Creuset Dutch Oven
-            </Link>
-            <Link href="/reviews/cuisinart-8-inch-nonstick-pan" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → Cuisinart Nonstick Pan
-            </Link>
+            <CTAVisibilityTracker ctaId="blog-wood-silicone-utensils-lodge-2" position="bottom_article" productSlug="lodge-seasoned-cast-iron-3-skillet-bundle" merchant="internal">
+              <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 font-semibold">
+                → Lodge Cast Iron Skillets
+              </Link>
+            </CTAVisibilityTracker>
+            <CTAVisibilityTracker ctaId="blog-wood-silicone-utensils-le-creuset-2" position="bottom_article" productSlug="le-creuset-signature-7-25-qt-dutch-oven" merchant="internal">
+              <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-700 hover:text-orange-800 font-semibold">
+                → Le Creuset Dutch Oven
+              </Link>
+            </CTAVisibilityTracker>
+            <CTAVisibilityTracker ctaId="blog-wood-silicone-utensils-cuisinart-2" position="bottom_article" productSlug="cuisinart-8-inch-nonstick-pan" merchant="internal">
+              <Link href="/reviews/cuisinart-8-inch-nonstick-pan" className="text-orange-700 hover:text-orange-800 font-semibold">
+                → Cuisinart Nonstick Pan
+              </Link>
+            </CTAVisibilityTracker>
             <Link href="/moving-stirring" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Spatulas & Stirring Tools
             </Link>

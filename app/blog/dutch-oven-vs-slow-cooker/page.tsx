@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { comparisonData } from './dutch-oven-vs-slow-cooker-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   BlogLayout,
   BlogHero,
@@ -65,7 +66,7 @@ export default function DutchOvenVsSlowCookerComparison() {
           features={comparisonData.comparisonTable.features}
         />
         <p className="text-sm text-gray-600 mt-4">
-          Read our full review: <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-700 hover:text-orange-800">Le Creuset 7.25-Qt Dutch Oven</Link>
+          Read our full review: <CTAVisibilityTracker ctaId="blog-dutch-oven-vs-slow-cooker-le-creuset" position="mid_article" productSlug="le-creuset-signature-7-25-qt-dutch-oven" merchant="internal"><Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-700 hover:text-orange-800">Le Creuset 7.25-Qt Dutch Oven</Link></CTAVisibilityTracker>
         </p>
 
         <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
