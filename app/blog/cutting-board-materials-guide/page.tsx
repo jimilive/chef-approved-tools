@@ -1,303 +1,208 @@
+// ============================================================================
+// CUTTING BOARD MATERIALS GUIDE - Educational Blog Page (Data-Driven)
+// Migrated from inline (554 lines) to data-driven architecture
+// ============================================================================
+
 import Link from 'next/link'
-import { Calendar, Clock, User, Target, Layers } from 'lucide-react'
+import { Target } from 'lucide-react'
+import { educationalData } from './cutting-board-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import BlogLayout from '@/components/blog/BlogLayout'
-import BlogHero from '@/components/blog/BlogHero'
-import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import {
+  BlogLayout,
+  BlogHero,
+  BlogFAQ,
+  BlogEmailCapture
+} from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
 
+// ISR: Regenerate every hour
+export const revalidate = 3600
+
+// SEO Metadata
 export const metadata = generateBlogMetadata('cutting-board-materials-guide')
 
-const articleSchema = generateArticleSchema({
-  headline: "Cutting Board Materials: Wood vs Plastic (Why Wood Wins)",
-  description: "Chef Scott Bradley explains the pros and cons of wood, plastic, rubber, and bamboo cutting boards — and which are best for your knives and kitchen.",
-  datePublished: "2025-10-05",
-  dateModified: "2025-10-21",
-  authorName: "Scott Bradley",
-  urlPrefix: 'blog',
-  urlSuffix: 'cutting-board-materials-guide'
-});
+export default function CuttingBoardMaterialsPage() {
+  // Generate schemas from data
+  const articleSchema = generateArticleSchema({
+    headline: educationalData.metadata.title,
+    description: educationalData.metadata.description,
+    datePublished: educationalData.metadata.publishedDate,
+    dateModified: educationalData.metadata.lastUpdated,
+    authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'cutting-board-materials-guide',
+    images: []
+  })
 
-// ISR: Regenerate page every hour for fresh content while allowing search engine caching
-export const revalidate = 3600 // 1 hour
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+    { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
+    { name: educationalData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/cutting-board-materials-guide' }
+  ])
 
+  const faqSchema = generateFAQSchema(educationalData.faq.questions)
 
-export default function CuttingBoardMaterialsPost() {
+  // Type assertions for complex sections
+  const introSection = educationalData.sections[0] as {
+    id: string
+    title: string
+    content: string[]
+  }
+
+  const problemSection = educationalData.sections[1] as {
+    id: string
+    title: string
+    content: string[]
+  }
+
+  const materialsSection = educationalData.sections[2] as {
+    id: string
+    title: string
+    materials: {
+      name: string
+      subtitle: string
+      pros: string
+      cons: string
+      description: string
+      bestFor?: string
+      avoidFor?: string
+      proTip?: string
+    }[]
+  }
+
+  const chooseSection = educationalData.sections[3] as {
+    id: string
+    title: string
+    intro: string
+    recommendation: { board: string; use: string }[]
+    closing: string
+    scraperTip: { text: string; link: string; linkText: string; suffix: string }
+    newsletterCta: { title: string; description: string; buttonText: string; buttonLink: string }
+  }
+
+  const mistakesSection = educationalData.sections[4] as {
+    id: string
+    title: string
+    mistakes: { number: number; title: string; problem: string; fix: string }[]
+  }
+
+  const equipmentSection = educationalData.sections[5] as {
+    id: string
+    title: string
+    recommendations: { material: string; product: string; link?: string; description: string }[]
+  }
+
+  const conclusionSection = educationalData.sections[6] as {
+    id: string
+    title: string
+    content: string[]
+    relatedGuides: {
+      techniques: { href: string; title: string }[]
+      equipment: { href: string; title: string }[]
+      buyingGuides: { href: string; title: string }[]
+    }
+  }
+
   return (
     <>
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBreadcrumbSchema([
-            { name: "Home", url: "https://www.chefapprovedtools.com" },
-            { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-            { name: "Cutting Board Materials: Wood vs Plastic (Why Wood Wins)", url: "https://www.chefapprovedtools.com/blog/cutting-board-materials-guide" }
-          ]))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema([
-            {
-              question: "How often should I oil my wood board?",
-              answer: "Once a month for regular use, or whenever the wood looks dry or feels rough. Use food-grade mineral oil or a board cream—never cooking oils, which can go rancid. A well-oiled board resists stains and lasts decades."
-            },
-            {
-              question: "Can I put wooden boards in the dishwasher?",
-              answer: "Never. The heat and prolonged water exposure will warp, crack, and split the wood. Hand wash with warm soapy water, rinse quickly, and stand upright to air dry. This takes 30 seconds and saves your board."
-            },
-            {
-              question: "How do I sanitize after cutting meat?",
-              answer: "Wash, rinse, spray with diluted bleach or vinegar, air dry."
-            },
-            {
-              question: "Why does my board smell?",
-              answer: "Bacteria or oil buildup. Scrub with coarse salt and lemon, then re-oil."
-            },
-            {
-              question: "Do chefs use plastic or wood?",
-              answer: "Both — wood for knife work, plastic or rubber for sanitation."
-            },
-            {
-              question: "What size cutting board should I buy?",
-              answer: "At least 12x18 inches for general prep. Larger boards (15x20 or bigger) give you more workspace and are worth it if you have counter space. Small boards are frustrating for anything beyond quick jobs."
-            },
-            {
-              question: "How do I remove deep stains from my board?",
-              answer: "Make a paste of baking soda and water, scrub into stains, let sit 10 minutes, then rinse. For tougher stains, use coarse salt and half a lemon as an abrasive scrub. Never use harsh chemicals on wood boards."
-            },
-            {
-              question: "Can I use the same board for raw meat and vegetables?",
-              answer: "Not without thorough sanitizing in between. Cross-contamination is a real risk. Professional kitchens use separate color-coded boards for this reason. At minimum, wash with hot soapy water and sanitize with diluted bleach before switching tasks."
-            }
-          ]))
-        }}
-      />
+      {/* Schema Scripts */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <BlogLayout breadcrumbTitle="Cutting Board Materials: Wood vs Plastic (Why Wood Wins)">
+      <BlogLayout breadcrumbTitle={educationalData.breadcrumb.title}>
+        {/* Hero */}
         <BlogHero
-          title="Cutting Board Materials: Wood vs Plastic (Why Wood Wins)"
-          introduction={["You can tell a lot about a cook by their cutting board. Not by the brand or color — but by the knife marks. A professional's board is scarred in straight, consistent lines. A home cook's often looks like a road map of hesitation."]}
-          publishedDate="2025-10-05"
-          lastUpdated="2025-10-21"
-          readTime="8 min read"
+          title={educationalData.hero.title}
+          introduction={educationalData.hero.introduction}
+          publishedDate={educationalData.metadata.publishedDate}
+          lastUpdated={educationalData.metadata.lastUpdated}
+          readTime={educationalData.metadata.readTime}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
+          {/* Introduction */}
+          {introSection.content.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
 
-          <p>
-            The difference? Knowing what material works best for both your knife and your workflow.
-          </p>
-
-          <p>
-            After two decades in professional kitchens, I&apos;ve used every board imaginable: end-grain maple, NSF plastic, rubber, bamboo, even glass (once — never again). Each has a distinct feel, maintenance routine, and impact on knife edges. The board isn&apos;t just a surface — it&apos;s part of the cutting system.
-          </p>
-
-          <p>
-            Let&apos;s break down which cutting board materials professionals actually use, why, and what&apos;s worth your money at home.
-          </p>
-
+          {/* Table of Contents */}
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
             <h2 className="font-bold text-blue-800 mb-3">In This Guide:</h2>
             <ul className="text-blue-700 space-y-1 text-sm mb-0">
-              <li>• <a href="#problem" className="text-blue-700 underline">The Problem: Why Board Material Matters More Than You Think</a></li>
-              <li>• <a href="#materials" className="text-blue-700 underline">The Professional Breakdown: Materials Explained</a></li>
-              <li>• <a href="#choose" className="text-blue-700 underline">How to Choose the Right Board for Your Kitchen</a></li>
-              <li>• <a href="#mistakes" className="text-blue-700 underline">Common Mistakes (And How to Avoid Them)</a></li>
-              <li>• <a href="#equipment" className="text-blue-700 underline">Recommended Boards (Chef Approved)</a></li>
-              <li>• <a href="#faq" className="text-blue-700 underline">Frequently Asked Questions</a></li>
+              {educationalData.tableOfContents.map((item, index) => (
+                <li key={index}>
+                  • <a href={`#${item.id}`} className="text-blue-700 underline">{item.title}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <h2 id="problem">The Problem: Why Board Material Matters More Than You Think</h2>
+          {/* Problem Section */}
+          <h2 id={problemSection.id}>{problemSection.title}</h2>
+          {problemSection.content.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
 
-          <p>
-            A dull knife isn&apos;t always the knife&apos;s fault. In many cases, it&apos;s the board. Hard surfaces like bamboo or glass dull blades faster than any ingredient ever could. Every cut on a hard board sends microscopic chips into your knife&apos;s edge.
-          </p>
+          {/* Materials Section */}
+          <h2 id={materialsSection.id}>{materialsSection.title}</h2>
+          {materialsSection.materials.map((material, index) => (
+            <div key={index}>
+              <h3>{index + 1}. {material.name} — {material.subtitle}</h3>
+              <p><strong>Pros:</strong> {material.pros}</p>
+              <p><strong>Cons:</strong> {material.cons}</p>
+              <p>{material.description}</p>
+              {material.bestFor && (
+                <p>
+                  <strong>Best for:</strong> {material.bestFor}<br />
+                  <strong>Avoid for:</strong> {material.avoidFor}
+                </p>
+              )}
+              {material.proTip && (
+                <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+                  <p className="text-blue-800 mb-0">
+                    <strong>Pro Tip:</strong> {material.proTip}
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
 
-          <p>
-            In restaurants, a good cutting board is sacred — it&apos;s where prep happens, where consistency lives, and where mistakes (or injuries) begin. The wrong board can ruin hundreds of dollars in knives and hours of prep.
-          </p>
-
-          <p>
-            At home, it&apos;s even more important. You&apos;re not sharpening every day or replacing blades monthly. The right board keeps your knives sharper longer, and your food safer.
-          </p>
-
-          <h2 id="materials">The Professional Breakdown: Materials Explained</h2>
-
-          <h3>1. End-Grain Wood — The Gold Standard</h3>
-
-          <p>
-            <strong>Pros:</strong> Gentle on knives, self-healing, beautiful, long-lasting.
-          </p>
-
-          <p>
-            <strong>Cons:</strong> Pricey, needs oiling, can&apos;t soak or dishwash.
-          </p>
-
-          <p>
-            End-grain means the wood fibers face upward, like a bundle of straws. When your knife cuts down, the fibers separate and then close again, minimizing wear. That&apos;s why professional kitchens use butcher-block boards that last decades.
-          </p>
-
-          <p>
-            <strong>Best for:</strong> Daily prep, vegetables, proteins, herbs.<br />
-            <strong>Avoid for:</strong> Raw meat (unless cleaned immediately).
-          </p>
-
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <p className="text-blue-800 mb-0">
-              <strong>Pro Tip:</strong> Oil monthly with mineral oil or board cream. Never leave in water.
-            </p>
-          </div>
-
-          <h3>2. Edge-Grain Wood — The Less Costly Classic</h3>
-
-          <p>
-            <strong>Pros:</strong> Affordable, sturdy, attractive.
-          </p>
-
-          <p>
-            <strong>Cons:</strong> Harder on knives than end-grain, more prone to warping.
-          </p>
-
-          <p>
-            Edge-grain boards are made from long planks glued side-by-side. They&apos;re durable and great for everyday cooking, but not quite as forgiving as end-grain.
-          </p>
-
-          <p>
-            <strong>Best for:</strong> General prep and cutting tasks.<br />
-            <strong>Avoid for:</strong> Heavy cleaver work or prolonged wet use.
-          </p>
-
-          <h3>3. Plastic (NSF-Grade Poly) — The Workhorse of Restaurants</h3>
-
-          <p>
-            <strong>Pros:</strong> Dishwasher-safe, sanitary, cheap.
-          </p>
-
-          <p>
-            <strong>Cons:</strong> Dulls knives faster, grooves harbor bacteria if not replaced.
-          </p>
-
-          <p>
-            Every professional kitchen keeps a set of color-coded plastic boards: red for raw meat, green for produce, yellow for poultry, blue for fish. They&apos;re not glamorous, but they&apos;re safe and easy to sanitize.
-          </p>
-
-          <p>
-            <strong>Best for:</strong> Raw meat and high-volume prep.<br />
-            <strong>Avoid for:</strong> Heavy chopping — they&apos;re too hard for long-term knife health.
-          </p>
-
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <p className="text-blue-800 mb-0">
-              <strong>Pro Tip:</strong> Replace once deep grooves form. Bacteria hide where bleach can&apos;t reach.
-            </p>
-          </div>
-
-          <h3>4. Rubber (Synthetic Rubber Boards) — The Pro Favorite You&apos;ve Never Tried</h3>
-
-          <p>
-            <strong>Pros:</strong> Gentle on knives, non-slip, dishwasher-safe, lasts forever.
-          </p>
-
-          <p>
-            <strong>Cons:</strong> Expensive, heavy, hard to find in stores.
-          </p>
-
-          <p>
-            Top restaurants often use rubber boards like Hi-Soft or Sani-Tuff. They have just enough give to protect your knife but stay firm for control. They also don&apos;t absorb odors or liquids.
-          </p>
-
-          <p>
-            <strong>Best for:</strong> Professional prep, knife care, daily chopping.<br />
-            <strong>Avoid for:</strong> Presentation — they&apos;re industrial-looking.
-          </p>
-
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <p className="text-blue-800 mb-0">
-              <strong>Pro Tip:</strong> If you&apos;re serious about knives, this is the board to own.
-            </p>
-          </div>
-
-          <h3>5. Bamboo — Pretty but Problematic</h3>
-
-          <p>
-            <strong>Pros:</strong> Eco-friendly, lightweight, inexpensive.
-          </p>
-
-          <p>
-            <strong>Cons:</strong> Extremely hard, dulls knives quickly, prone to cracking.
-          </p>
-
-          <p>
-            Bamboo is marketed as sustainable — and it is — but it&apos;s too hard for long-term knife care. In pro kitchens, we avoid it completely.
-          </p>
-
-          <p>
-            <strong>Best for:</strong> Serving boards or cheese plates.<br />
-            <strong>Avoid for:</strong> Daily knife use.
-          </p>
-
-          <h3>6. Glass, Marble, or Granite — The Villains</h3>
-
-          <p>
-            <strong>Pros:</strong> Pretty. That&apos;s it.
-          </p>
-
-          <p>
-            <strong>Cons:</strong> Instantly dull knives, slippery, unsafe, noisy.
-          </p>
-
-          <p>
-            These surfaces are for rolling dough, not cutting. Every pro cook has watched someone ruin a good knife on glass. Don&apos;t be that person.
-          </p>
-
-          <h2 id="choose">How to Choose the Right Board for Your Kitchen</h2>
-
-          <p>
-            You don&apos;t need five boards — just two or three for different jobs.
-          </p>
-
-          <p>
-            <strong>My Professional Recommendation:</strong>
-          </p>
-
+          {/* Choose Section */}
+          <h2 id={chooseSection.id}>{chooseSection.title}</h2>
+          <p>{chooseSection.intro}</p>
+          <p><strong>My Professional Recommendation:</strong></p>
           <ul>
-            <li><strong>End-grain wood board</strong> — for all general prep.</li>
-            <li><strong>Plastic or rubber board</strong> — for raw proteins.</li>
-            <li><strong>Small secondary board</strong> — for fruit or quick jobs.</li>
+            {chooseSection.recommendation.map((item, index) => (
+              <li key={index}><strong>{item.board}</strong> — {item.use}</li>
+            ))}
           </ul>
-
+          <p>{chooseSection.closing}</p>
           <p>
-            If you cook daily, this combo covers 100% of your needs while keeping your knives in top shape.
-          </p>
-
-          <p>
-            <strong>Bonus:</strong> Keep a <CTAVisibilityTracker
+            <strong>Bonus:</strong> {chooseSection.scraperTip.text}{' '}
+            <CTAVisibilityTracker
               ctaId="blog-cutting-board-materials-scraper-1"
               position="mid_article"
               productSlug="cutting-board-materials-guide"
               merchant="internal"
             >
-              <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link>
-            </CTAVisibilityTracker> nearby to move food — not your knife. That&apos;s how pros preserve their edges.
+              <Link href={chooseSection.scraperTip.link} className="text-blue-700 underline">
+                {chooseSection.scraperTip.linkText}
+              </Link>
+            </CTAVisibilityTracker>
+            {' '}{chooseSection.scraperTip.suffix}
           </p>
 
+          {/* Newsletter CTA */}
           <div className="not-prose bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
             <h3 className="text-xl font-bold text-yellow-800 mb-3 flex items-center gap-2">
               <Target className="w-5 h-5" />
-              Want My Cutting Board Maintenance Guide?
+              {chooseSection.newsletterCta.title}
             </h3>
             <p className="text-yellow-800 mb-4">
-              Get my free <strong>&quot;Board Care &amp; Knife Longevity Checklist&quot;</strong> — how to clean, oil, and maintain wood or rubber boards like a pro.
+              {chooseSection.newsletterCta.description}
             </p>
             <CTAVisibilityTracker
               ctaId="blog-cutting-board-materials-newsletter-cta-1"
@@ -306,246 +211,150 @@ export default function CuttingBoardMaterialsPost() {
               merchant="internal"
             >
               <Link
-                href="/newsletter"
+                href={chooseSection.newsletterCta.buttonLink}
                 className="bg-orange-900 !text-white hover:bg-orange-800 px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
               >
-                Get the Free Guide →
+                {chooseSection.newsletterCta.buttonText}
               </Link>
             </CTAVisibilityTracker>
           </div>
 
-          <h2 id="mistakes">Common Mistakes (And How to Avoid Them)</h2>
+          {/* Mistakes Section */}
+          <h2 id={mistakesSection.id}>{mistakesSection.title}</h2>
+          {mistakesSection.mistakes.map((mistake) => (
+            <div key={mistake.number}>
+              <h3>Mistake #{mistake.number}: {mistake.title}</h3>
+              <p>{mistake.problem}</p>
+              <p><strong>Fix:</strong> {mistake.fix}</p>
+            </div>
+          ))}
 
-          <h3>Mistake #1: Cutting on Glass or Marble</h3>
-
-          <p>
-            Hard surfaces destroy edges.
-          </p>
-
-          <p>
-            <strong>Fix:</strong> Only use wood, plastic, or rubber.
-          </p>
-
-          <h3>Mistake #2: Not Cleaning Properly</h3>
-
-          <p>
-            Food and bacteria collect in grooves.
-          </p>
-
-          <p>
-            <strong>Fix:</strong> Scrub with hot soapy water, rinse, and dry upright.
-          </p>
-
-          <h3>Mistake #3: Neglecting to Oil Wood Boards</h3>
-
-          <p>
-            Dry wood cracks and warps.
-          </p>
-
-          <p>
-            <strong>Fix:</strong> Monthly mineral oil rub, overnight absorption, wipe clean.
-          </p>
-
-          <h3>Mistake #4: Moving Food with Knife Edges</h3>
-
-          <p>
-            Scraping dulls your knife faster than cutting.
-          </p>
-
-          <p>
-            <strong>Fix:</strong> Use a bench scraper instead.
-          </p>
-
-          <h3>Mistake #5: Overusing One Board for Everything</h3>
-
-          <p>
-            Cross-contamination risk.
-          </p>
-
-          <p>
-            <strong>Fix:</strong> Keep one for proteins, one for produce.
-          </p>
-
-          <h2 id="equipment">Recommended Boards (Chef Approved)</h2>
-
+          {/* Equipment Section */}
+          <h2 id={equipmentSection.id}>{equipmentSection.title}</h2>
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
             <h3 className="font-bold text-slate-800 mb-4">Top Cutting Board Picks</h3>
             <ul className="space-y-3">
-              <li>
-                <strong>End-Grain Wood:</strong> <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800 underline">Commercial-grade maple board</Link> — industry classic, built for decades of use.
-              </li>
-              <li>
-                <strong>Composite:</strong> <Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-700 hover:text-orange-800 underline">Our top composite pick</Link> — dishwasher-safe, knife-friendly, and nearly indestructible.
-              </li>
-              <li>
-                <strong>Rubber:</strong> {/* Sani-Tuff Rubber Cutting Board */} Sani-Tuff rubber board — used in pro kitchens worldwide.
-              </li>
-              <li>
-                <strong>Plastic:</strong> {/* Dexas NSF Cutting Board Set */} Dexas NSF color-coded board set — affordable, safe, color-coded.
-              </li>
-              <li>
-                <strong>Accessory:</strong> <CTAVisibilityTracker
-                  ctaId="blog-cutting-board-materials-scraper-2"
-                  position="mid_article"
-                  productSlug="cutting-board-materials-guide"
-                  merchant="internal"
-                >
-                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link>
-                </CTAVisibilityTracker> — protect your blades while cleaning your board.
-              </li>
+              {equipmentSection.recommendations.map((rec, index) => (
+                <li key={index}>
+                  <strong>{rec.material}:</strong>{' '}
+                  {rec.link ? (
+                    <CTAVisibilityTracker
+                      ctaId={`blog-cutting-board-materials-${rec.material.toLowerCase().replace(/\s+/g, '-')}-pick`}
+                      position="mid_article"
+                      productSlug="cutting-board-materials-guide"
+                      merchant="internal"
+                    >
+                      <Link href={rec.link} className="text-orange-700 hover:text-orange-800 underline">
+                        {rec.product}
+                      </Link>
+                    </CTAVisibilityTracker>
+                  ) : (
+                    rec.product
+                  )}
+                  {' '}— {rec.description}
+                </li>
+              ))}
             </ul>
           </div>
 
-          <h2>Putting It All Together</h2>
+          {/* Conclusion */}
+          <h2>{conclusionSection.title}</h2>
+          {conclusionSection.content.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
 
-          <p>
-            The right cutting board protects your knives, improves your prep workflow, and ensures food safety. It&apos;s not about having the prettiest board — it&apos;s about having the right material for the job at hand.
-          </p>
-
-          <p>
-            In my 24 years in professional kitchens, I&apos;ve watched countless cooks struggle with dull knives, never realizing their bamboo or glass cutting board was the culprit. The moment they switched to end-grain wood or rubber, their knife performance transformed.
-          </p>
-
-          <p>
-            Start with two boards: an end-grain wood board for general prep, and a plastic or rubber board for raw proteins. Oil the wood monthly, clean both properly, and replace plastic boards when grooves get deep. These simple habits will keep your knives sharp and your food safe for years.
-          </p>
-
+          {/* Related Guides */}
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 mt-8">
             <h3 className="text-xl font-bold text-orange-800 mb-3">Keep Learning: Related Guides</h3>
 
             <div className="mb-6">
               <h4 className="font-bold text-orange-800 mb-2">Technique Guides:</h4>
               <ul className="text-orange-700 space-y-1 text-sm">
-                <li>• <CTAVisibilityTracker
-                  ctaId="blog-cutting-board-materials-knife-cuts-guide-1"
-                  position="final_cta"
-                  productSlug="cutting-board-materials-guide"
-                  merchant="internal"
-                >
-                  <Link href="/blog/essential-knife-cuts-every-cook-should-master" className="text-orange-700 underline">The 5 Essential Knife Cuts Every Home Cook Should Master</Link>
-                </CTAVisibilityTracker></li>
-                <li>• <CTAVisibilityTracker
-                  ctaId="blog-cutting-board-materials-knife-safety-guide-1"
-                  position="final_cta"
-                  productSlug="cutting-board-materials-guide"
-                  merchant="internal"
-                >
-                  <Link href="/blog/knife-safety-rules-professional-kitchens" className="text-orange-700 underline">Knife Safety: 10 Rules From 24 Years in Professional Kitchens</Link>
-                </CTAVisibilityTracker></li>
-                <li>• <CTAVisibilityTracker
-                  ctaId="blog-cutting-board-materials-knife-mistakes-guide-1"
-                  position="final_cta"
-                  productSlug="cutting-board-materials-guide"
-                  merchant="internal"
-                >
-                  <Link href="/blog/knife-mistakes-home-cooks-make" className="text-orange-700 underline">5 Knife Mistakes Home Cooks Make</Link>
-                </CTAVisibilityTracker></li>
+                {conclusionSection.relatedGuides.techniques.map((guide, index) => (
+                  <li key={index}>
+                    •{' '}
+                    <CTAVisibilityTracker
+                      ctaId={`blog-cutting-board-materials-technique-${index}`}
+                      position="final_cta"
+                      productSlug="cutting-board-materials-guide"
+                      merchant="internal"
+                    >
+                      <Link href={guide.href} className="text-orange-700 underline">
+                        {guide.title}
+                      </Link>
+                    </CTAVisibilityTracker>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div className="mb-6">
               <h4 className="font-bold text-orange-800 mb-2">Essential Equipment:</h4>
               <ul className="text-orange-700 space-y-1 text-sm">
-                <li>• <CTAVisibilityTracker
-                  ctaId="blog-cutting-board-materials-scraper-3"
-                  position="final_cta"
-                  productSlug="cutting-board-materials-guide"
-                  merchant="internal"
-                >
-                  <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 underline">Rubbermaid Commercial Cook&apos;s Scraper Review</Link>
-                </CTAVisibilityTracker></li>
-                {/* <li>• John Boos End-Grain Board Review</li> */}
-                {/* <li>• Sani-Tuff Rubber Board Review</li> */}
+                {conclusionSection.relatedGuides.equipment.map((guide, index) => (
+                  <li key={index}>
+                    •{' '}
+                    <CTAVisibilityTracker
+                      ctaId={`blog-cutting-board-materials-equipment-${index}`}
+                      position="final_cta"
+                      productSlug="cutting-board-materials-guide"
+                      merchant="internal"
+                    >
+                      <Link href={guide.href} className="text-orange-700 underline">
+                        {guide.title}
+                      </Link>
+                    </CTAVisibilityTracker>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold text-orange-800 mb-2">Complete Buying Guides:</h4>
               <ul className="text-orange-700 space-y-1 text-sm">
-                {/* <li>• Kitchen Starter Kit: First 5 Tools to Buy</li> */}
-                {/* <li>• Knife Storage: Protecting Your Blades for Decades</li> */}
-                <li>• <CTAVisibilityTracker
-                  ctaId="blog-cutting-board-materials-first-knife-guide-1"
-                  position="final_cta"
-                  productSlug="cutting-board-materials-guide"
-                  merchant="internal"
-                >
-                  <Link href="/blog/how-to-choose-first-chef-knife" className="text-orange-700 underline">How to Choose Your First Chef Knife (Like a Professional Chef)</Link>
-                </CTAVisibilityTracker></li>
+                {conclusionSection.relatedGuides.buyingGuides.map((guide, index) => (
+                  <li key={index}>
+                    •{' '}
+                    <CTAVisibilityTracker
+                      ctaId={`blog-cutting-board-materials-buying-${index}`}
+                      position="final_cta"
+                      productSlug="cutting-board-materials-guide"
+                      merchant="internal"
+                    >
+                      <Link href={guide.href} className="text-orange-700 underline">
+                        {guide.title}
+                      </Link>
+                    </CTAVisibilityTracker>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
 
-        {/* FAQ Section */}
-        <div className="border-t border-gray-200 pt-12 mt-12" id="faq">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How often should I oil my wood board?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Once a month, or anytime it looks dry.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I put wooden boards in the dishwasher?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Never. They&apos;ll warp and split.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I sanitize after cutting meat?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Wash, rinse, spray with diluted bleach or vinegar, air dry.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why does my board smell?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Bacteria or oil buildup. Scrub with coarse salt and lemon, then re-oil.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Do chefs use plastic or wood?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Both — wood for knife work, plastic or rubber for sanitation.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What size cutting board should I buy?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                At least 12x18 inches for general prep. Larger boards (15x20 or bigger) give you more workspace and are worth it if you have counter space. Small boards are frustrating for anything beyond quick jobs.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I remove deep stains from my board?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Make a paste of baking soda and water, scrub into stains, let sit 10 minutes, then rinse. For tougher stains, use coarse salt and half a lemon as an abrasive scrub. Never use harsh chemicals on wood boards.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I use the same board for raw meat and vegetables?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Not without thorough sanitizing in between. Cross-contamination is a real risk. Professional kitchens use separate color-coded boards for this reason. At minimum, wash with hot soapy water and sanitize with diluted bleach before switching tasks.
-              </p>
-            </div>
-          </div>
-        </div>
+        {/* FAQ - Single Source of Truth */}
+        <BlogFAQ questions={educationalData.faq.questions} />
 
-        {/* Related Content */}
-        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
-          <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
+        {/* Related Reading */}
+        <div className="bg-slate-50 rounded-xl p-8 mb-8">
+          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/knife-mistakes-home-cooks-make" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → 5 Knife Mistakes Home Cooks Make
-            </Link>
-            <Link href="/blog/knife-safety-rules-professional-kitchens" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → Knife Safety: 10 Rules From Professional Kitchens
-            </Link>
+            {educationalData.relatedArticles.map((article, index) => (
+              <Link
+                key={index}
+                href={article.href}
+                className="text-orange-700 hover:text-orange-800 font-semibold"
+              >
+                → {article.title}
+              </Link>
+            ))}
           </div>
         </div>
 
+        {/* Email Capture */}
         <BlogEmailCapture />
+
+        {/* Author Bio */}
         <AuthorBio />
       </BlogLayout>
     </>
