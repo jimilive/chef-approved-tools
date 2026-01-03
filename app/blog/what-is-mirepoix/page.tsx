@@ -1,410 +1,263 @@
+// ============================================================================
+// WHAT IS MIREPOIX - Blog Page (Data-Driven)
+// Migrated from inline (417 lines) to data-driven architecture
+// ============================================================================
+
 import Link from 'next/link'
-import { Calendar, Clock, User, Target, Check } from 'lucide-react'
+import { mirepoixData } from './mirepoix-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import BlogLayout from '@/components/blog/BlogLayout'
-import BlogHero from '@/components/blog/BlogHero'
-import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import {
+  BlogLayout,
+  BlogHero,
+  BlogFAQ,
+  BlogEmailCapture
+} from '@/components/blog'
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
 
+// ISR: Regenerate every hour
+export const revalidate = 3600
+
+// SEO Metadata
 export const metadata = generateBlogMetadata('what-is-mirepoix')
 
-const articleSchema = generateArticleSchema({
-  headline: "What is Mirepoix and Why Professional Chefs Use It",
-  description: "Learn the French aromatic base that appears in professional kitchens worldwide. Understand the 2:1:1 ratio, dice sizes, cooking methods, and global variations.",
-  datePublished: "2025-01-20",
-  dateModified: "2025-01-20",
-  authorName: "Scott Bradley",
-  urlPrefix: 'blog',
-  urlSuffix: 'what-is-mirepoix'
-});
-
-const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "What is Mirepoix", url: "https://www.chefapprovedtools.com/blog/what-is-mirepoix" }
-]);
-
-const faqSchema = generateFAQSchema([
-  {
-    question: "What is the correct mirepoix ratio?",
-    answer: "The classic French ratio is 2 parts onion, 1 part carrot, 1 part celery by weight. For example: 1 pound onions (2 large), 8 ounces carrots (3 medium), 8 ounces celery (4 stalks). This produces approximately 6 cups diced mirepoix."
-  },
-  {
-    question: "Why do professional kitchens use mirepoix?",
-    answer: "Mirepoix builds foundational flavor depth without adding identifiable taste. It provides aromatic complexity in one step instead of measuring multiple seasonings. It's essential for stock extraction—helping pull flavor compounds and gelatin from bones. Professional kitchens value the efficiency and consistency."
-  },
-  {
-    question: "What dice size should I use for mirepoix?",
-    answer: "Small dice (¼ inch) for quick-cooking dishes and sauces. Medium dice (½ inch) for most applications—the standard. Large dice (¾-1 inch) for long-cooking stocks and braises. Consistent dice size within each batch ensures even cooking."
-  },
-  {
-    question: "What's the difference between sweating, sautéing, and caramelizing mirepoix?",
-    answer: "Sweating (low heat, covered) softens vegetables without browning for light-colored sauces. Sautéing (medium-high heat) adds mild caramel notes for tomato sauces and braises. Caramelizing (high heat, stirring frequently) creates deep brown color and rich flavor for brown stocks and gravies."
-  },
-  {
-    question: "What is the Holy Trinity and how is it different from mirepoix?",
-    answer: "Holy Trinity is the Cajun/Creole aromatic base: onion, celery, and green bell pepper (replacing carrots). Same 2:1:1 ratio. The bell pepper adds vegetal, slightly bitter notes essential for authentic gumbo, jambalaya, and étouffée. It's the Louisiana version of French mirepoix."
-  },
-  {
-    question: "Should I peel vegetables for mirepoix?",
-    answer: "For stocks: don't peel, just wash thoroughly. The peels add color and flavor. For sauces where vegetables will be left in: peel carrots, trim celery ends, peel onions as usual. The goal is clean flavor without bitterness."
-  },
-  {
-    question: "Why does my mirepoix burn before softening?",
-    answer: "Heat is too high. Mirepoix needs steady, moderate heat (medium or medium-low) to release flavors without burning. Cook for 10-15 minutes—there's no shortcut. High heat creates burnt aromatics and harsh, bitter flavors."
-  },
-  {
-    question: "What's the difference between soffritto and sofrito?",
-    answer: "Soffritto (Italian) is mirepoix plus garlic and sometimes tomato paste/pancetta, sautéed in olive oil. Sofrito (Spanish/Latin) uses onion, garlic, tomatoes, and peppers (no carrots or celery), cooked until tomatoes break down. Different aromatic bases for different cuisines."
-  }
-]);
-
-// ISR: Regenerate page every hour for fresh content while allowing search engine caching
-export const revalidate = 3600 // 1 hour
-
-
 export default function WhatIsMirepoixPage() {
+  // Generate schemas from data
+  const articleSchema = generateArticleSchema({
+    headline: mirepoixData.metadata.title,
+    description: mirepoixData.metadata.description,
+    datePublished: mirepoixData.metadata.publishedDate,
+    dateModified: mirepoixData.metadata.lastUpdated,
+    authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'what-is-mirepoix',
+    images: []
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+    { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
+    { name: mirepoixData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/what-is-mirepoix' }
+  ])
+
+  const faqSchema = generateFAQSchema(mirepoixData.faq.questions)
+
+  // Type assertions for sections
+  const definitionSection = mirepoixData.sections[0] as {
+    id: string
+    title: string
+    content: string[]
+    ratio: {
+      title: string
+      parts: { ingredient: string; amount: string; percentage: string }[]
+      byWeight: string
+    }
+    history: { title: string; content: string }
+  }
+
+  const whyUseSection = mirepoixData.sections[1] as {
+    id: string
+    title: string
+    subsections: { title: string; content: string[] }[]
+  }
+
+  const variablesSection = mirepoixData.sections[2] as {
+    id: string
+    title: string
+    diceSize: {
+      title: string
+      intro: string
+      sizes: { name: string; use: string }[]
+    }
+    cookingMethod: {
+      title: string
+      intro: string
+      methods: { name: string; description: string }[]
+    }
+    fatChoice: {
+      title: string
+      intro: string
+      fats: { name: string; description: string }[]
+    }
+  }
+
+  const variationsSection = mirepoixData.sections[3] as {
+    id: string
+    title: string
+    intro: string
+    variations: { name: string; description: string }[]
+  }
+
+  const techniqueSection = mirepoixData.sections[4] as {
+    id: string
+    title: string
+    professionalMethod: {
+      title: string
+      intro: string
+      steps: { step: number; instruction: string; detail: string }[]
+    }
+    toolNote: { title: string; content: string[] }
+  }
+
+  const mistakesSection = mirepoixData.sections[5] as {
+    id: string
+    title: string
+    mistakes: { name: string; problem: string; whyItMatters?: string; fix: string }[]
+  }
+
+  const conclusionSection = mirepoixData.sections[6] as {
+    id: string
+    title: string
+    content: string[]
+  }
+
   return (
     <>
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {/* Schema Scripts */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <BlogLayout breadcrumbTitle="What is Mirepoix">
+      <BlogLayout breadcrumbTitle={mirepoixData.breadcrumb.title}>
+        {/* Hero */}
         <BlogHero
-          title="What is Mirepoix and Why Professional Chefs Use It"
-          introduction={[
-            "Mirepoix—the three-vegetable foundation of French cooking—appears in professional kitchens worldwide because it builds flavor depth that you can't taste directly but would notice immediately if it was missing.",
-            "Understanding this aromatic base transforms dozens of recipes from good to professional-quality."
-          ]}
-          publishedDate="2025-01-20"
-          lastUpdated="2025-01-20"
-          readTime="11 min read"
+          title={mirepoixData.hero.title}
+          introduction={mirepoixData.hero.introduction}
+          publishedDate={mirepoixData.metadata.publishedDate}
+          lastUpdated={mirepoixData.metadata.lastUpdated}
+          readTime={mirepoixData.metadata.readTime}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
-
           {/* Table of Contents */}
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
             <h2 className="font-bold text-blue-800 mb-3">In This Guide:</h2>
             <ul className="text-blue-700 space-y-1 text-sm mb-0">
-              <li>• <a href="#definition" className="text-blue-700 underline">What Mirepoix Is (The Simple Definition)</a></li>
-              <li>• <a href="#why-use" className="text-blue-700 underline">Why Professional Kitchens Use Mirepoix</a></li>
-              <li>• <a href="#variables" className="text-blue-700 underline">Dice Size, Cooking Method, Fat Choice</a></li>
-              <li>• <a href="#variations" className="text-blue-700 underline">Global Variations Across Cuisines</a></li>
-              <li>• <a href="#technique" className="text-blue-700 underline">How to Prep Mirepoix Efficiently</a></li>
-              <li>• <a href="#mistakes" className="text-blue-700 underline">Common Mistakes to Avoid</a></li>
-              <li>• <a href="#faq" className="text-blue-700 underline">Frequently Asked Questions</a></li>
+              {mirepoixData.tableOfContents.map((item, index) => (
+                <li key={index}>
+                  <a href={`#${item.id}`} className="text-blue-700 underline">{item.label}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <h2 id="definition">What Mirepoix Is (The Simple Definition)</h2>
-
-          <p>
-            Mirepoix is a combination of diced onions, carrots, and celery cooked in fat until softened. That&apos;s it. The ratio matters, the size of the dice matters, and the cooking method matters—but the concept is straightforward.
-          </p>
+          {/* Definition */}
+          <h2 id={definitionSection.id}>{definitionSection.title}</h2>
+          {definitionSection.content.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
 
           <div className="bg-orange-50 border-l-4 border-orange-700 p-6 my-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Classic Mirepoix Ratio</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">{definitionSection.ratio.title}</h3>
             <ul className="space-y-2">
-              <li><strong>2 parts onion</strong> (50% of total volume)</li>
-              <li><strong>1 part carrot</strong> (25% of total volume)</li>
-              <li><strong>1 part celery</strong> (25% of total volume)</li>
+              {definitionSection.ratio.parts.map((part, index) => (
+                <li key={index}><strong>{part.amount} {part.ingredient}</strong> ({part.percentage})</li>
+              ))}
             </ul>
-            <p className="mt-4 text-sm text-gray-700">
-              <strong>By weight:</strong> 1 pound onions (roughly 2 large onions), 8 ounces carrots (roughly 3 medium carrots), 8 ounces celery (roughly 4 stalks with leaves removed) = 6 cups diced mirepoix
-            </p>
+            <p className="mt-4 text-sm text-gray-700"><strong>By weight:</strong> {definitionSection.ratio.byWeight}</p>
           </div>
 
-          <h3>History and Etymology</h3>
+          <h3>{definitionSection.history.title}</h3>
+          <p>{definitionSection.history.content}</p>
 
-          <p>
-            The name comes from Charles-Pierre-Gaston François de Lévis, Duke of Mirepoix, an 18th-century French marshal whose chef popularized the mixture. But the technique predates the name by centuries—aromatic vegetables cooked in fat as a flavor base appear in medieval European cooking, Middle Eastern cooking, and Asian cooking under different names.
-          </p>
+          {/* Why Professional Kitchens Use Mirepoix */}
+          <h2 id={whyUseSection.id}>{whyUseSection.title}</h2>
+          {whyUseSection.subsections.map((subsection, index) => (
+            <div key={index}>
+              <h3>{subsection.title}</h3>
+              {subsection.content.map((paragraph, pIndex) => (
+                <p key={pIndex}>{paragraph}</p>
+              ))}
+            </div>
+          ))}
 
-          <h2 id="why-use">Why Professional Kitchens Use Mirepoix</h2>
+          {/* The Three Variables */}
+          <h2 id={variablesSection.id}>{variablesSection.title}</h2>
 
-          <h3>It Builds Foundational Flavor</h3>
+          <h3>{variablesSection.diceSize.title}</h3>
+          <p>{variablesSection.diceSize.intro}</p>
+          {variablesSection.diceSize.sizes.map((size, index) => (
+            <p key={index}><strong>{size.name}:</strong> {size.use}</p>
+          ))}
 
-          <p>
-            Mirepoix doesn&apos;t add a specific taste you can identify—it adds depth. The science: onions contain sulfur compounds that become sweet when cooked slowly. Carrots add natural sugars that caramelize. Celery contributes savory, slightly bitter notes that balance the sweetness. Combined, they create a flavor base that makes everything layered on top taste more complete.
-          </p>
+          <h3>{variablesSection.cookingMethod.title}</h3>
+          <p>{variablesSection.cookingMethod.intro}</p>
+          {variablesSection.cookingMethod.methods.map((method, index) => (
+            <p key={index}><strong>{method.name}:</strong> {method.description}</p>
+          ))}
 
-          <h3>It Replaces Multiple Ingredients</h3>
+          <BlogNewsletterCTA slug={mirepoixData.newsletterCTA.slug} />
 
-          <p>
-            Professional kitchens value efficiency. Mirepoix provides what would otherwise require five or six separate aromatics. One prep step (dice mirepoix) replaces multiple steps (peel and dice onions, peel and dice carrots, wash and dice celery, measure garlic, measure herbs, measure spices).
-          </p>
+          <h3>{variablesSection.fatChoice.title}</h3>
+          <p>{variablesSection.fatChoice.intro}</p>
+          {variablesSection.fatChoice.fats.map((fat, index) => (
+            <p key={index}><strong>{fat.name}:</strong> {fat.description}</p>
+          ))}
 
-          <p>
-            During high-volume service, nobody has time to measure individual aromatics for each pan. Mirepoix is pre-portioned, ready to go, consistent.
-          </p>
+          {/* Global Variations */}
+          <h2 id={variationsSection.id}>{variationsSection.title}</h2>
+          <p>{variationsSection.intro}</p>
+          {variationsSection.variations.map((variation, index) => (
+            <div key={index}>
+              <h3>{variation.name}</h3>
+              <p>{variation.description}</p>
+            </div>
+          ))}
 
-          <h3>It Improves Stock Extraction</h3>
+          {/* How to Prep Efficiently */}
+          <h2 id={techniqueSection.id}>{techniqueSection.title}</h2>
 
-          <p>
-            The most important use of mirepoix is in stocks. The vegetables serve as an extraction vehicle: as they cook, their cell walls break down and release enzymes that help pull flavor compounds and gelatin from bones into the liquid.
-          </p>
+          <h3>{techniqueSection.professionalMethod.title}</h3>
+          <p>{techniqueSection.professionalMethod.intro}</p>
+          {techniqueSection.professionalMethod.steps.map((step) => (
+            <p key={step.step}><strong>Step {step.step}: {step.instruction}</strong> {step.detail}</p>
+          ))}
 
-          <p>
-            Stock made with mirepoix has more body, richer flavor, and better gelatin content than stock made with bones and water alone. The vegetables themselves get discarded, but the extraction they enable is what makes professional stock different from basic stock.
-          </p>
+          <h3>{techniqueSection.toolNote.title}</h3>
+          {techniqueSection.toolNote.content.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
 
-          <h2 id="variables">The Three Variables That Actually Matter</h2>
+          {/* Common Mistakes */}
+          <h2 id={mistakesSection.id}>{mistakesSection.title}</h2>
+          {mistakesSection.mistakes.map((mistake, index) => (
+            <div key={index}>
+              <h3>{mistake.name}</h3>
+              <p><strong>The problem:</strong> {mistake.problem}</p>
+              {mistake.whyItMatters && <p><strong>Why it matters:</strong> {mistake.whyItMatters}</p>}
+              <p><strong>The fix:</strong> {mistake.fix}</p>
+            </div>
+          ))}
 
-          <h3>Dice Size Determines Cooking Time and Flavor Extraction</h3>
-
-          <p>
-            Professional kitchens use three different dice sizes depending on the application:
-          </p>
-
-          <p>
-            <strong>Small dice (¼ inch):</strong> For quick-cooking dishes like pan sauces, quick braises, or sautés. Softens in 5-8 minutes, releases flavor fast, integrates into the final dish. Use when the vegetables need to disappear—nobody wants to bite into a chunk of carrot in a refined pan sauce.
-          </p>
-
-          <p>
-            <strong>Medium dice (½ inch):</strong> The standard for most applications. Takes 10-15 minutes to soften, provides steady flavor release throughout cooking, maintains some texture if you want visible vegetables. Efficient prep time, versatile application.
-          </p>
-
-          <p>
-            <strong>Large dice (¾-1 inch):</strong> For long-cooking stocks and braises. Won&apos;t break down during 6-8 hour simmers, releases flavor gradually over extended cooking, easier to strain out at the end. Use for stocks that simmer all day.
-          </p>
-
-          <h3>Cooking Method Changes the Flavor Profile</h3>
-
-          <p>
-            Mirepoix isn&apos;t always cooked the same way. The method you choose determines the final flavor:
-          </p>
-
-          <p>
-            <strong>Sweating (low heat, covered):</strong> Softens vegetables without browning. Preserves fresh, bright flavors. Use for white stocks, delicate fish sauces, light-colored soups. Professional kitchens sweat mirepoix for cream-based soups when they want vegetable flavor without any caramelization that would darken the soup.
-          </p>
-
-          <p>
-            <strong>Sautéing (medium-high heat, uncovered):</strong> Softens vegetables with light browning. Adds mild caramel notes without overpowering. Use for tomato sauces, braises, most stocks. The standard method—enough caramelization to add depth, not so much that it dominates.
-          </p>
-
-          <p>
-            <strong>Caramelizing (high heat, stirring frequently):</strong> Browns vegetables deeply for maximum flavor. Adds rich, sweet, complex notes. Use for brown stocks, rich gravies, deeply-flavored braises. The dark brown vegetables give finished stock its deep mahogany color.
-          </p>
-
-          <BlogNewsletterCTA slug="what-is-mirepoix" />
-
-          <h3>Fat Choice Affects the Base Flavor</h3>
-
-          <p>
-            Mirepoix is always cooked in fat—the fat carries and amplifies the aromatic compounds released by the vegetables. The fat you choose matters:
-          </p>
-
-          <p>
-            <strong>Butter:</strong> Traditional French choice. Adds richness and mild dairy notes. Use for refined sauces, cream-based soups, French-style braises. Professional kitchens use clarified butter (to prevent burning) for mirepoix in pan sauces.
-          </p>
-
-          <p>
-            <strong>Olive oil:</strong> Mediterranean choice. Adds fruity, slightly peppery notes. Use for Italian sauces, Mediterranean braises, rustic soups. Standard for marinara and tomato-based sauces.
-          </p>
-
-          <p>
-            <strong>Rendered animal fat:</strong> Traditional for stocks. Adds deep, meaty flavor. Use bacon fat for pork stocks, chicken fat for chicken stocks, beef fat for beef stocks. This amplifies the protein flavor beyond what olive oil or butter can provide.
-          </p>
-
-          <h2 id="variations">Global Variations Across Cuisines</h2>
-
-          <p>
-            The concept of aromatic vegetables cooked in fat as a flavor base appears in nearly every cuisine. The specific vegetables change, but the technique remains:
-          </p>
-
-          <h3>The Holy Trinity (Cajun/Creole Cooking)</h3>
-
-          <p>
-            Replace carrots with green bell peppers. Same ratio: 2 parts onion, 1 part celery, 1 part green bell pepper. The bell pepper adds a vegetal, slightly bitter note that carrots don&apos;t provide—it&apos;s essential for authentic Cajun flavor in gumbo, jambalaya, and étouffée.
-          </p>
-
-          <h3>Soffritto (Italian Cooking)</h3>
-
-          <p>
-            Add garlic, tomato paste, and sometimes pancetta to the base mirepoix. Onion, carrot, celery, and garlic sautéed in olive oil until soft, then tomato paste added and cooked until it darkens. The garlic and tomato paste intensify the base beyond what plain mirepoix provides. Used for Bolognese and many Italian braises.
-          </p>
-
-          <h3>Sofrito (Spanish/Latin American Cooking)</h3>
-
-          <p>
-            Onion, garlic, tomatoes, and peppers—no carrots or celery. Cooked in olive oil until the tomatoes break down into a thick paste. The result is brighter, more acidic, and tomato-forward compared to French mirepoix. Used as the base for paella and many Spanish dishes.
-          </p>
-
-          <h2 id="technique">How to Prep Mirepoix Efficiently</h2>
-
-          <h3>The Professional Method</h3>
-
-          <p>
-            Professional kitchens prep mirepoix in large batches during morning prep—enough for the entire day&apos;s service. Home cooks can replicate this efficiency:
-          </p>
-
-          <p>
-            <strong>Step 1: Prep vegetables separately, then combine.</strong> Dice all onions first, all carrots second, all celery third. Don&apos;t alternate between vegetables—every time you switch, you lose efficiency picking up a different vegetable, washing a different cutting board, resetting your knife rhythm.
-          </p>
-
-          <p>
-            <strong>Step 2: Use the correct ratio by weight, not volume.</strong> Volume measurements are inconsistent because onions compress more than carrots. Professional kitchens weigh everything. Home cooks should do the same for consistency.
-          </p>
-
-          <p>
-            <strong>Step 3: Store in airtight containers with damp paper towels on top.</strong> Mirepoix oxidizes quickly—onions brown, carrots dry out, celery wilts. Cover prepped mirepoix with a damp paper towel, seal the container, refrigerate. It stays fresh for 48 hours.
-          </p>
-
-          <h3>The Tool That Matters Most</h3>
-
-          <p>
-            A sharp chef&apos;s knife with good balance makes mirepoix prep faster and produces better results. Sharp knives make clean cuts that preserve cell structure—the vegetables release less moisture during storage, staying firmer longer. Dull knives crush cells, releasing enzymes that cause browning and off-flavors.
-          </p>
-
-          <p>
-            Mirepoix prepped with a dull knife turns brown and slimy within 12 hours. Mirepoix prepped with a sharp knife stays fresh for 48+ hours refrigerated.
-          </p>
-
-          <h2 id="mistakes">Common Mistakes to Avoid</h2>
-
-          <h3>Uneven Dice Sizes</h3>
-
-          <p>
-            <strong>The problem:</strong> ¼-inch pieces next to ¾-inch pieces. Small pieces burn while large pieces stay raw. Uneven cooking means uneven flavor extraction.
-          </p>
-
-          <p>
-            <strong>The fix:</strong> Take an extra 60 seconds to dice consistently. All pieces should be roughly the same size within ⅛ inch. It&apos;s fine if onions are slightly larger than carrots (onions soften faster), but within each vegetable, consistency matters.
-          </p>
-
-          <h3>Cooking Over High Heat</h3>
-
-          <p>
-            <strong>The problem:</strong> Using high heat to &quot;save time.&quot; The onions burn around the edges before the carrots soften, and the final stock tastes bitter.
-          </p>
-
-          <p>
-            <strong>The fix:</strong> Medium heat, patience. Mirepoix takes 10-15 minutes to soften properly—there&apos;s no shortcut. If you try to rush it with high heat, you&apos;ll get burnt aromatics and harsh flavors.
-          </p>
-
-          <h3>Forgetting Salt</h3>
-
-          <p>
-            <strong>The problem:</strong> Mirepoix cooked without salt doesn&apos;t release moisture properly and stays drier than it should.
-          </p>
-
-          <p>
-            <strong>Why it matters:</strong> Vegetables need salt to release their moisture and flavors. Salt draws out water, which prevents steaming and enables proper sautéing. Professional kitchens salt mirepoix as soon as it hits the pan—a three-finger pinch of kosher salt per 4 cups of vegetables.
-          </p>
-
-          <p>
-            <strong>The fix:</strong> Salt isn&apos;t optional—it&apos;s a chemical catalyst that makes the entire process work. Always add salt when you add mirepoix to the pan.
-          </p>
-
-          <h2>Putting It All Together</h2>
-
-          <p>
-            Mirepoix isn&apos;t flashy. It doesn&apos;t have visual drama or technical complexity. But professional kitchens worldwide use some form of aromatic vegetable base in nearly every refined savory dish.
-          </p>
-
-          <p>
-            The reason: it&apos;s reliable. Dice it consistently, cook it properly, let it do its job, and the results are predictable. That matters in professional kitchens where the same dish needs to taste identical whether it&apos;s cooked on Tuesday or Saturday.
-          </p>
-
-          <p>
-            Home cooks benefit from the same reliability. Master mirepoix—the ratio, the dice, the cooking method—and dozens of recipes suddenly become easier to execute. Stocks gain body, braises gain depth, sauces gain complexity. The vegetables themselves disappear, but their impact persists in every bite.
-          </p>
-
+          {/* Conclusion */}
+          <h2>{conclusionSection.title}</h2>
+          {conclusionSection.content.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
         </div>
 
-        {/* FAQ Section */}
-        <div className="border-t border-gray-200 pt-12 mt-12" id="faq">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What is the correct mirepoix ratio?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                The classic French ratio is 2 parts onion, 1 part carrot, 1 part celery by weight. For example: 1 pound onions (2 large), 8 ounces carrots (3 medium), 8 ounces celery (4 stalks). This produces approximately 6 cups diced mirepoix.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why do professional kitchens use mirepoix?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Mirepoix builds foundational flavor depth without adding identifiable taste. It provides aromatic complexity in one step instead of measuring multiple seasonings. It&apos;s essential for stock extraction—helping pull flavor compounds and gelatin from bones. Professional kitchens value the efficiency and consistency.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What dice size should I use for mirepoix?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Small dice (¼ inch) for quick-cooking dishes and sauces. Medium dice (½ inch) for most applications—the standard. Large dice (¾-1 inch) for long-cooking stocks and braises. Consistent dice size within each batch ensures even cooking.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the difference between sweating, sautéing, and caramelizing mirepoix?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Sweating (low heat, covered) softens vegetables without browning for light-colored sauces. Sautéing (medium-high heat) adds mild caramel notes for tomato sauces and braises. Caramelizing (high heat, stirring frequently) creates deep brown color and rich flavor for brown stocks and gravies.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What is the Holy Trinity and how is it different from mirepoix?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Holy Trinity is the Cajun/Creole aromatic base: onion, celery, and green bell pepper (replacing carrots). Same 2:1:1 ratio. The bell pepper adds vegetal, slightly bitter notes essential for authentic gumbo, jambalaya, and étouffée. It&apos;s the Louisiana version of French mirepoix.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I peel vegetables for mirepoix?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                For stocks: don&apos;t peel, just wash thoroughly. The peels add color and flavor. For sauces where vegetables will be left in: peel carrots, trim celery ends, peel onions as usual. The goal is clean flavor without bitterness.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why does my mirepoix burn before softening?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Heat is too high. Mirepoix needs steady, moderate heat (medium or medium-low) to release flavors without burning. Cook for 10-15 minutes—there&apos;s no shortcut. High heat creates burnt aromatics and harsh, bitter flavors.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the difference between soffritto and sofrito?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Soffritto (Italian) is mirepoix plus garlic and sometimes tomato paste/pancetta, sautéed in olive oil. Sofrito (Spanish/Latin) uses onion, garlic, tomatoes, and peppers (no carrots or celery), cooked until tomatoes break down. Different aromatic bases for different cuisines.
-              </p>
-            </div>
-          </div>
-        </div>
+        {/* FAQ - Single Source of Truth */}
+        <BlogFAQ questions={mirepoixData.faq.questions} />
 
+        {/* Related Articles */}
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <CTAVisibilityTracker
-              ctaId="mirepoix-related-stock"
-              position="final_cta"
-              productSlug="what-is-mirepoix"
-              merchant="internal"
-            >
-              <Link href="/blog/making-stock-professional-chef-method" className="text-orange-700 hover:text-orange-800 font-semibold">
-                → Making Stock: The Professional Method
-              </Link>
-            </CTAVisibilityTracker>
-            <CTAVisibilityTracker
-              ctaId="mirepoix-related-knife-skills"
-              position="final_cta"
-              productSlug="what-is-mirepoix"
-              merchant="internal"
-            >
-              <Link href="/blog/knife-skills-how-to-hold-chef-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
-                → Master Knife Skills for Efficient Prep
-              </Link>
-            </CTAVisibilityTracker>
+            {mirepoixData.relatedArticles.map((article, index) => (
+              <CTAVisibilityTracker
+                key={index}
+                ctaId={`mirepoix-related-${index}`}
+                position="final_cta"
+                productSlug="what-is-mirepoix"
+                merchant="internal"
+              >
+                <Link href={article.href} className="text-orange-700 hover:text-orange-800 font-semibold">
+                  &#8594; {article.title}
+                </Link>
+              </CTAVisibilityTracker>
+            ))}
           </div>
         </div>
 
