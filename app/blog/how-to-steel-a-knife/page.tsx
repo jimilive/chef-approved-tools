@@ -1,39 +1,35 @@
+// ============================================================================
+// HOW TO STEEL A KNIFE - Educational Blog Page (Data-Driven)
+// Migrated from inline (450 lines) to data-driven architecture
+// ============================================================================
+
 import Link from 'next/link'
-import Image from 'next/image'
-import { Scissors } from 'lucide-react'
+import { educationalData } from './steel-knife-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import HowToSchema from '@/components/HowToSchema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
-import ProductImpressionTracker from '@/components/ProductImpressionTracker'
+import HowToSchema from '@/components/HowToSchema'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
-import BlogLayout from '@/components/blog/BlogLayout'
-import BlogHero from '@/components/blog/BlogHero'
-import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import {
+  BlogLayout,
+  BlogHero,
+  BlogFAQ,
+  BlogEmailCapture
+} from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
 
+// ISR: Regenerate every hour
+export const revalidate = 3600
+
+// SEO Metadata
 export const metadata = generateBlogMetadata('how-to-steel-a-knife')
 
-const articleSchema = generateArticleSchema({
-  headline: "How to Steel a Knife (The Right Way to Hone Like a Chef)",
-  description: "Learn how to steel a knife properly using a honing steel. Professional chef guide to honing vs sharpening, perfect technique, and top tool recommendations.",
-  datePublished: "2025-09-13",
-  dateModified: "2025-09-13",
-  authorName: "Scott Bradley",
-  urlPrefix: 'blog',
-  urlSuffix: 'how-to-steel-a-knife'
-});
-
-// ISR: Regenerate page every hour for fresh content while allowing search engine caching
-export const revalidate = 3600 // 1 hour
-
-
-export default async function HowToSteelAKnife() {
+export default async function HowToSteelAKnifePage() {
   // Fetch products from Supabase
   const products = await Promise.all([
-    getProductBySlug('victorinox-fibrox-8-inch-chefs-knife'),
-    getProductBySlug('victorinox-fibrox-10-inch-chefs-knife'),
-    getProductBySlug('henckels-sharpening-steel'),
+    getProductBySlug(educationalData.products.victorinox8),
+    getProductBySlug(educationalData.products.victorinox10),
+    getProductBySlug(educationalData.products.henckelsSteel),
   ])
 
   // Get affiliate URLs from database
@@ -41,409 +37,384 @@ export default async function HowToSteelAKnife() {
   const victorinox10Url = products[1] ? getPrimaryAffiliateLink(products[1]) : ''
   const henckelsUrl = products[2] ? getPrimaryAffiliateLink(products[2]) : ''
 
+  // Generate schemas from data
+  const articleSchema = generateArticleSchema({
+    headline: educationalData.metadata.title,
+    description: educationalData.metadata.description,
+    datePublished: educationalData.metadata.publishedDate,
+    dateModified: educationalData.metadata.lastUpdated,
+    authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'how-to-steel-a-knife',
+    images: []
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+    { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
+    { name: educationalData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/how-to-steel-a-knife' }
+  ])
+
+  const faqSchema = generateFAQSchema(educationalData.faq.questions)
+
+  // Type assertions for complex sections
+  const introSection = educationalData.sections[0] as {
+    id: string
+    title: string
+    content: string[]
+    seeAlsoLinks: { href: string; text: string }[]
+  }
+
+  const whatSteelingSection = educationalData.sections[1] as {
+    id: string
+    title: string
+    content: string[]
+    sharpeningGuideLink: { href: string; text: string }
+  }
+
+  const whyHoningSection = educationalData.sections[2] as {
+    id: string
+    title: string
+    benefits: { icon: string; label: string; description: string }[]
+    closing: string
+    purpleCafeCallout: { title: string; content: string }
+  }
+
+  const toolsSection = educationalData.sections[3] as {
+    id: string
+    title: string
+    tools: { name: string; description: string; product?: string; products?: string[] }[]
+  }
+
+  const stepByStepSection = educationalData.sections[4] as {
+    id: string
+    title: string
+    steps: { step: number; title: string; content: string }[]
+    closing: string
+  }
+
+  const comparisonSection = educationalData.sections[5] as {
+    id: string
+    title: string
+    comparisonTable: { headers: string[]; rows: { cells: string[] }[] }
+  }
+
+  const mistakesSection = educationalData.sections[6] as {
+    id: string
+    title: string
+    mistakes: string[]
+  }
+
+  const proTipsSection = educationalData.sections[7] as {
+    id: string
+    title: string
+    tips: string[]
+  }
+
+  const maintenanceSection = educationalData.sections[8] as {
+    id: string
+    title: string
+    schedule: string[]
+  }
+
+  const recommendedSection = educationalData.sections[9] as {
+    id: string
+    title: string
+    intro: string
+    tools: { icon: string; name: string; product: string }[]
+    disclaimer: string
+    seeAlsoLinks: { href: string; text: string }[]
+  }
+
+  const finalSection = educationalData.sections[10] as {
+    id: string
+    title: string
+    content: string[]
+  }
+
   return (
     <>
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateBreadcrumbSchema([
-            { name: "Home", url: "https://www.chefapprovedtools.com" },
-            { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-            { name: "How to Steel a Knife", url: "https://www.chefapprovedtools.com/blog/how-to-steel-a-knife" }
-          ]))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema([
-            {
-              question: "What's the difference between honing and sharpening a knife?",
-              answer: "Honing (using a steel) realigns the edge without removing metal, while sharpening (using a stone) removes metal to create a new edge. At Purple Café, we honed knives before every service but only sharpened every 2-4 weeks. Think of honing as straightening a bent edge and sharpening as rebuilding a dull edge. Honing maintains sharpness; sharpening restores it."
-            },
-            {
-              question: "How often should I steel my kitchen knives?",
-              answer: "Steel (hone) your knives every 2-3 uses for home cooking, or before every shift in professional kitchens. At Purple Café (2007-2012), we required every cook to hone their knives at the start of service. Regular honing extends the time between sharpenings from weeks to months. If honing no longer restores sharpness, it's time to sharpen."
-            },
-            {
-              question: "What angle should I hold the knife against the honing steel?",
-              answer: "Hold the knife at 15-20 degrees against the steel—roughly the angle of a matchbook. This matches the factory edge angle on most kitchen knives. Consistency matters more than precision. After 6 years honing knives daily at Purple Café, the angle becomes muscle memory. Start with the matchbook visual until it feels natural."
-            },
-            {
-              question: "Should I use a ceramic steel or traditional steel rod?",
-              answer: "Traditional steel rods realign edges (true honing), while ceramic steels lightly abrade and sharpen. For daily maintenance, traditional steel is better—it's gentler and extends knife life. Ceramic steels remove metal and should be used sparingly. At Purple Café, we used traditional Henckels steel rods exclusively. Save ceramic for knives that need more than realignment but less than full sharpening."
-            },
-            {
-              question: "How many strokes should I use when steeling a knife?",
-              answer: "Use 5-8 strokes per side for regular maintenance. At Purple Café, our standard was 6 strokes alternating sides (12 total). More strokes don't improve results—consistency and proper angle matter more than quantity. If 8 strokes don't restore the edge, honing won't help; the knife needs sharpening."
-            },
-            {
-              question: "Why isn't my knife getting sharper when I steel it?",
-              answer: "Honing steel realigns edges but doesn't sharpen dull knives. If steeling doesn't restore sharpness, your knife is dull and needs actual sharpening with a stone. Other causes: wrong angle (too steep or too shallow), damaged steel rod (inspect for grooves), or applying too much pressure (light pressure works better). Remember: steeling maintains sharp knives; it can't fix dull ones."
-            },
-            {
-              question: "Can I damage my knife by using a honing steel?",
-              answer: "You can damage knives by using excessive pressure, wrong angle, or cheap diamond-coated steels that remove too much metal. Traditional smooth steel rods used properly won't damage knives—we honed the same knives daily for 6 years at Purple Café without issues. Use light pressure (let the steel do the work), maintain consistent angle, and choose quality traditional steel over aggressive diamond or ceramic options."
-            },
-            {
-              question: "Do I need to steel Japanese knives differently than German knives?",
-              answer: "Yes—Japanese knives need a shallower angle (10-15 degrees) compared to German knives (15-20 degrees), and lighter pressure because Japanese steel is harder and more brittle. At Purple Café, we had both: Wüsthof German knives and Shun Japanese knives. Japanese knives also need honing less frequently because harder steel holds edges longer but chips more easily with rough treatment."
-            },
-            {
-              question: "Should I steel a knife before or after using it?",
-              answer: "Steel knives before use, not after. At Purple Café, we required all cooks to hone at the start of their shift, not the end. Honing before use ensures optimal sharpness when you need it. Honing after use when the knife is already dirty is less effective and can transfer food particles to the steel, reducing its effectiveness."
-            },
-            {
-              question: "How do I test if my knife is properly honed?",
-              answer: "The paper test: hold paper vertically and slice—a well-honed knife cuts cleanly without tearing. Or the tomato test: rest the blade on tomato skin and slice with no downward pressure—it should glide through. At Purple Café, we used the fingernail test: gently rest the edge on your thumbnail—if it grips instead of sliding, it's sharp. These tests confirm proper edge alignment after honing."
-            }
-          ]))
-        }}
-      />
+      {/* Schema Scripts */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <HowToSchema
-        name="How to Steel a Knife"
-        description="Learn proper knife honing technique using a honing steel. Professional chef guide to maintaining razor-sharp edges between sharpenings."
-        datePublished="2025-09-13"
-        totalTime="PT2M"
-        tools={["Honing steel (traditional rod)", "Kitchen knife"]}
-        steps={[
-          { name: "Grip the Steel Securely", text: "Hold the honing steel vertically with the tip resting on a cutting board or towel for stability. Keep your grip firm but relaxed." },
-          { name: "Position the Knife", text: "Place the knife heel against the steel at a 15-20 degree angle (roughly the angle of a matchbook). The blade should be perpendicular to the steel." },
-          { name: "Draw the Blade Down", text: "Using light pressure, draw the knife down and across the steel in a sweeping motion from heel to tip. Maintain the same angle throughout the stroke." },
-          { name: "Alternate Sides", text: "Repeat on the opposite side of the blade. Perform 5-8 strokes per side, alternating after each stroke for even honing." },
-          { name: "Test the Edge", text: "Test sharpness with the paper test—hold paper vertically and slice down. A properly honed knife cuts cleanly without tearing." }
-        ]}
+        name={educationalData.howToSchema.name}
+        description={educationalData.howToSchema.description}
+        datePublished={educationalData.howToSchema.datePublished}
+        totalTime={educationalData.howToSchema.totalTime}
+        tools={educationalData.howToSchema.tools}
+        steps={educationalData.howToSchema.steps}
       />
 
-      <BlogLayout breadcrumbTitle="How to Steel a Knife">
+      <BlogLayout breadcrumbTitle={educationalData.breadcrumb.title}>
+        {/* Hero */}
         <BlogHero
-          title="How to Steel a Knife (The Right Way to Hone Like a Chef)"
-          introduction={["If you spend any time in a professional kitchen, you'll see one tool come out far more often than a whetstone: the sharpening steel. It's that long, rod-shaped tool chefs use to \"steel\" their knives before prep. You've probably seen it in movies—quick, rhythmic strokes before the cook dives into slicing onions like a magician."]}
-          publishedDate="2025-09-13"
-          lastUpdated="2025-09-13"
-          readTime="6 min read"
+          title={educationalData.hero.title}
+          introduction={educationalData.hero.introduction}
+          publishedDate={educationalData.metadata.publishedDate}
+          lastUpdated={educationalData.metadata.lastUpdated}
+          readTime={educationalData.metadata.readTime}
         />
 
-        {/* Article Content */}
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
-
-          <p>
-            But what exactly are they doing? Are they sharpening the knife? Why do they do it so often? And how should you do it at home without nicking your fingers or wrecking your edge?
-          </p>
-
-          <p>
-            In this guide, we&apos;ll walk through <strong>how to steel a knife properly</strong>—the difference between honing and sharpening, the right technique, and why it&apos;s one of the easiest ways to extend the life of your blades.
-          </p>
+          {/* Introduction */}
+          {introSection.content.map((paragraph, index) => (
+            <p
+              key={index}
+              dangerouslySetInnerHTML={{ __html: paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}
+            />
+          ))}
 
           <p className="text-blue-700">
-            See also: <CTAVisibilityTracker
+            See also:{' '}
+            <CTAVisibilityTracker
               ctaId="blog-how-to-steel-a-knife-review-link-1"
               position="above_fold"
               productSlug="how-to-steel-a-knife"
               merchant="internal"
             >
-              <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-700 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife Review</Link>
-            </CTAVisibilityTracker> and our <CTAVisibilityTracker
+              <Link href={introSection.seeAlsoLinks[0].href} className="text-blue-700 underline">
+                {introSection.seeAlsoLinks[0].text}
+              </Link>
+            </CTAVisibilityTracker>
+            {' '}and our{' '}
+            <CTAVisibilityTracker
               ctaId="blog-how-to-steel-a-knife-guide-link-1"
               position="above_fold"
               productSlug="how-to-steel-a-knife"
               merchant="internal"
             >
-              <Link href="/guides/knife-care" className="text-blue-700 underline">Knife Care Guide</Link>
+              <Link href={introSection.seeAlsoLinks[1].href} className="text-blue-700 underline">
+                {introSection.seeAlsoLinks[1].text}
+              </Link>
             </CTAVisibilityTracker>.
           </p>
 
-          <h2>What &quot;Steeling&quot; a Knife Actually Means</h2>
-
+          {/* What Steeling Means */}
+          <h2>{whatSteelingSection.title}</h2>
+          {whatSteelingSection.content.map((paragraph, index) => (
+            <p
+              key={index}
+              dangerouslySetInnerHTML={{ __html: paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}
+            />
+          ))}
           <p>
-            <strong>Steeling a knife is not sharpening it.</strong> When you sharpen a knife, you remove metal from the edge to create a new bevel. When you hone or steel it, you&apos;re simply <strong>realigning the existing edge</strong> that&apos;s bent or rolled from use.
-          </p>
-
-          <p>
-            A honing steel brings that fine edge back to center, making your knife feel sharp again—without grinding away precious metal. Think of honing as alignment maintenance; sharpening is edge reconstruction.
-          </p>
-
-          <p>
-            When you need actual sharpening, check out our guide on <CTAVisibilityTracker
+            When you need actual sharpening, check out our guide on{' '}
+            <CTAVisibilityTracker
               ctaId="blog-how-to-steel-a-knife-review-link-2"
               position="mid_article"
               productSlug="how-to-steel-a-knife"
               merchant="internal"
             >
-              <Link href="/reviews/norton-im200-tri-stone-sharpener" className="text-blue-700 underline">sharpening with a tri-stone</Link>
-            </CTAVisibilityTracker> for professional results.
+              <Link href={whatSteelingSection.sharpeningGuideLink.href} className="text-blue-700 underline">
+                {whatSteelingSection.sharpeningGuideLink.text}
+              </Link>
+            </CTAVisibilityTracker>
+            {' '}for professional results.
           </p>
 
-          <h2>Why Honing Matters More Than You Think</h2>
-
+          {/* Why Honing Matters */}
+          <h2>{whyHoningSection.title}</h2>
           <ul>
-            <li>
-              ✅ <strong>Cleaner, safer cuts</strong>—less pressure means fewer slips.
-            </li>
-            <li>
-              ✅ <strong>Longer edge life</strong> between sharpenings.
-            </li>
-            <li>
-              ✅ <strong>Consistent performance</strong> across proteins, veggies, and herbs.
-            </li>
-            <li>
-              ✅ <strong>Protects your investment</strong> in quality blades like the <a href={victorinox8Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</a> or the <a href={victorinox10Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 10&quot; Chef&apos;s Knife</a>.
-            </li>
+            {whyHoningSection.benefits.map((benefit, index) => (
+              <li key={index}>
+                {benefit.icon} <strong>{benefit.label}</strong>—{benefit.description}
+                {index === 3 && victorinox8Url && victorinox10Url && (
+                  <>
+                    {' '}like the{' '}
+                    <a href={victorinox8Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">
+                      Victorinox Fibrox 8&quot; Chef&apos;s Knife
+                    </a>
+                    {' '}or the{' '}
+                    <a href={victorinox10Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">
+                      Victorinox Fibrox 10&quot; Chef&apos;s Knife
+                    </a>.
+                  </>
+                )}
+              </li>
+            ))}
           </ul>
-
-          <p>
-            Regular honing is quick and prevents your knife from dulling prematurely—a small ritual with big returns.
-          </p>
+          <p>{whyHoningSection.closing}</p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
             <p className="mb-0">
-              <strong>From Purple Café:</strong> At Purple Café, we honed knives before every service. Two hundred covers nightly meant knives needed to be sharp constantly. A quick session with the honing steel—15 seconds per knife—kept our Victorinox and specialty blades performing perfectly throughout rush. It became muscle memory: clock in, grab your knives, steel them, then start prep.
+              <strong>{whyHoningSection.purpleCafeCallout.title}:</strong> {whyHoningSection.purpleCafeCallout.content}
             </p>
           </div>
 
-          <h2>The Tools You&apos;ll Need</h2>
-
+          {/* Tools Section */}
+          <h2>{toolsSection.title}</h2>
           <h3>1. A Quality Honing Steel</h3>
-
           <p>
-            The essential tool here is a dependable <strong>honing steel</strong>. The <a href={henckelsUrl} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">Henckels 10-Inch Sharpening Steel</a> is a classic: balanced, grippy, and durable, with just enough abrasion to realign an edge without stripping metal. It&apos;s the same kind I&apos;ve used for decades in professional kitchens.
+            The essential tool here is a dependable <strong>honing steel</strong>. The{' '}
+            <a href={henckelsUrl} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">
+              Henckels 10-Inch Sharpening Steel
+            </a>
+            {' '}is a classic: balanced, grippy, and durable, with just enough abrasion to realign an edge without stripping metal. It&apos;s the same kind I&apos;ve used for decades in professional kitchens.
           </p>
 
           <h3>2. A Chef&apos;s Knife Worth Caring For</h3>
-
           <p>
-            Your knife should already be sharp. The <a href={victorinox8Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 8-Inch Chef&apos;s Knife</a> is perfect for home cooks, while the <a href={victorinox10Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 10-Inch Chef&apos;s Knife</a> offers extra reach and heft for larger jobs. Both respond beautifully to a steel.
+            Your knife should already be sharp. The{' '}
+            <a href={victorinox8Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">
+              Victorinox Fibrox 8-Inch Chef&apos;s Knife
+            </a>
+            {' '}is perfect for home cooks, while the{' '}
+            <a href={victorinox10Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">
+              Victorinox Fibrox 10-Inch Chef&apos;s Knife
+            </a>
+            {' '}offers extra reach and heft for larger jobs. Both respond beautifully to a steel.
           </p>
 
-          <h2>How to Steel a Knife (Step-by-Step)</h2>
-
+          {/* Step-by-Step */}
+          <h2>{stepByStepSection.title}</h2>
           <ol>
-            <li>
-              <strong>Grip the steel vertically.</strong> Hold it steady on a towel or board for control.
-            </li>
-            <li>
-              <strong>Set your angle (15–20°).</strong> Western knives ≈ 20°, Japanese ≈ 15°.
-            </li>
-            <li>
-              <strong>Draw the blade down and across.</strong> Heel to tip in one smooth motion.
-            </li>
-            <li>
-              <strong>Alternate sides.</strong> Six to eight passes per side is ideal.
-            </li>
-            <li>
-              <strong>Wipe and test.</strong> Clean the blade and test on paper or tomato skin.
-            </li>
+            {stepByStepSection.steps.map((step) => (
+              <li key={step.step}>
+                <strong>{step.title}.</strong> {step.content}
+              </li>
+            ))}
           </ol>
+          <p>{stepByStepSection.closing}</p>
 
-          <p>
-            Keep movements deliberate and consistent—speed isn&apos;t the goal; precision is.
-          </p>
-
-          <h2>Honing vs. Sharpening</h2>
-
+          {/* Honing vs Sharpening */}
+          <h2>{comparisonSection.title}</h2>
           <div className="overflow-x-auto my-6">
             <table>
               <thead>
                 <tr>
-                  <th>Action</th>
-                  <th>Tool</th>
-                  <th>Purpose</th>
-                  <th>Frequency</th>
+                  {comparisonSection.comparisonTable.headers.map((header, index) => (
+                    <th key={index}>{header}</th>
+                  ))}
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Honing</td>
-                  <td>Honing steel</td>
-                  <td>Realigns edge</td>
-                  <td>Every few uses</td>
-                </tr>
-                <tr>
-                  <td>Sharpening</td>
-                  <td>Whetstone or sharpener</td>
-                  <td>Removes metal to form new edge</td>
-                  <td>Every 3–6 months</td>
-                </tr>
+                {comparisonSection.comparisonTable.rows.map((row, rowIndex) => (
+                  <tr key={rowIndex}>
+                    {row.cells.map((cell, cellIndex) => (
+                      <td key={cellIndex}>{cell}</td>
+                    ))}
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
 
-          <h2>Common Mistakes to Avoid</h2>
-
+          {/* Common Mistakes */}
+          <h2>{mistakesSection.title}</h2>
           <ul>
-            <li>Using too much pressure.</li>
-            <li>Changing angles mid-stroke.</li>
-            <li>Speeding instead of focusing on accuracy.</li>
-            <li>Honing dirty knives.</li>
-            <li>Using a damaged or worn-out steel.</li>
+            {mistakesSection.mistakes.map((mistake, index) => (
+              <li key={index}>{mistake}</li>
+            ))}
           </ul>
 
-          <h2>Pro Chef Tips</h2>
-
+          {/* Pro Tips */}
+          <h2>{proTipsSection.title}</h2>
           <ul>
-            <li>Hone <em>before</em> cooking, not after.</li>
-            <li>Listen for a clean, even sound—it signals the right angle.</li>
-            <li>Alternate strokes evenly on both sides.</li>
-            <li>Replace your steel every few years if it smooths out.</li>
-            <li>Store your steel safely to prevent damage.</li>
+            {proTipsSection.tips.map((tip, index) => (
+              <li key={index} dangerouslySetInnerHTML={{ __html: tip.replace(/\*(.*?)\*/g, '<em>$1</em>') }} />
+            ))}
           </ul>
 
-          <h2>Maintenance Schedule</h2>
-
+          {/* Maintenance Schedule */}
+          <h2>{maintenanceSection.title}</h2>
           <ul>
-            <li>Hone every 2–3 uses (daily for pros).</li>
-            <li>Sharpen every 3–6 months.</li>
-            <li>Use wood or plastic boards—never glass.</li>
-            <li>Wash and dry knives immediately after use.</li>
-            <li>Store safely in a block, strip, or guard.</li>
+            {maintenanceSection.schedule.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
-          <h2>Recommended Tools</h2>
-
+          {/* Recommended Tools */}
+          <h2>{recommendedSection.title}</h2>
           <div className="bg-yellow-50 border-2 border-yellow-200 rounded-xl p-6 my-6">
-            <h3 className="mt-0">Professional-Grade Tools for Home Cooks:</h3>
-
+            <h3 className="mt-0">{recommendedSection.intro}</h3>
             <ul className="list-none p-0">
               <li className="mb-4">
-                🪄 <a href={henckelsUrl} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">Henckels 10-Inch Sharpening Steel</a>
+                🪄 <a href={henckelsUrl} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">
+                  Henckels 10-Inch Sharpening Steel
+                </a>
               </li>
               <li className="mb-4">
-                🔪 <a href={victorinox8Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</a>
+                🔪 <a href={victorinox8Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">
+                  Victorinox Fibrox 8&quot; Chef&apos;s Knife
+                </a>
               </li>
               <li className="mb-4">
-                🍖 <a href={victorinox10Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">Victorinox Fibrox 10&quot; Chef&apos;s Knife</a>
+                🍖 <a href={victorinox10Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">
+                  Victorinox Fibrox 10&quot; Chef&apos;s Knife
+                </a>
               </li>
             </ul>
-
             <p className="text-sm text-slate-700 mt-4 text-center mb-0">
-              We earn commission at no extra cost to you.
+              {recommendedSection.disclaimer}
             </p>
           </div>
 
           <p className="mt-6">
-            See also: <CTAVisibilityTracker
+            See also:{' '}
+            <CTAVisibilityTracker
               ctaId="blog-how-to-steel-a-knife-guide-link-2"
               position="mid_article"
               productSlug="how-to-steel-a-knife"
               merchant="internal"
             >
-              <Link href="/guides/best-chef-knives" className="text-blue-700 underline">Best Kitchen Knives for Everyday Cooking</Link>
-            </CTAVisibilityTracker> and our complete <CTAVisibilityTracker
+              <Link href={recommendedSection.seeAlsoLinks[0].href} className="text-blue-700 underline">
+                {recommendedSection.seeAlsoLinks[0].text}
+              </Link>
+            </CTAVisibilityTracker>
+            {' '}and our complete{' '}
+            <CTAVisibilityTracker
               ctaId="blog-how-to-steel-a-knife-bundle-link-1"
               position="mid_article"
               productSlug="how-to-steel-a-knife"
               merchant="internal"
             >
-              <Link href="/kitchen-bundle" className="text-blue-700 underline">Kitchen Starter Kit</Link>
-            </CTAVisibilityTracker> for chef-approved essentials.
+              <Link href={recommendedSection.seeAlsoLinks[1].href} className="text-blue-700 underline">
+                {recommendedSection.seeAlsoLinks[1].text}
+              </Link>
+            </CTAVisibilityTracker>
+            {' '}for chef-approved essentials.
           </p>
 
-          <h2>Final Thoughts</h2>
-
+          {/* Final Thoughts */}
+          <h2>{finalSection.title}</h2>
+          <p>{finalSection.content[0]}</p>
           <p>
-            Learning how to steel a knife is a simple but transformative skill. Once you master it, every prep task feels smoother, cleaner, and more professional. Your knives will last longer, perform better, and turn kitchen work into a true craft.
+            Grab your{' '}
+            <a href={henckelsUrl} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">
+              Henckels Honing Steel
+            </a>
+            , pick up your favorite{' '}
+            <a href={victorinox8Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">
+              Victorinox Fibrox Knife
+            </a>
+            , and keep that edge chef-sharp—because the best cooks always respect their tools.
           </p>
-
-          <p>
-            Grab your <a href={henckelsUrl} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">Henckels Honing Steel</a>, pick up your favorite <a href={victorinox8Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">Victorinox Fibrox Knife</a>, and keep that edge chef-sharp—because the best cooks always respect their tools.
-          </p>
-
         </div>
 
-        {/* FAQ Section */}
-        <div className="border-t border-gray-200 pt-12 mt-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the difference between honing and sharpening a knife?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Honing (using a steel) realigns the edge without removing metal, while sharpening (using a stone) removes metal to create a new edge. At Purple Café, we honed knives before every service but only sharpened every 2-4 weeks. Think of honing as straightening a bent edge and sharpening as rebuilding a dull edge. Honing maintains sharpness; sharpening restores it.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How often should I steel my kitchen knives?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Steel (hone) your knives every 2-3 uses for home cooking, or before every shift in professional kitchens. At Purple Café (2007-2012), we required every cook to hone their knives at the start of service. Regular honing extends the time between sharpenings from weeks to months. If honing no longer restores sharpness, it&apos;s time to sharpen.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What angle should I hold the knife against the honing steel?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Hold the knife at 15-20 degrees against the steel—roughly the angle of a matchbook. This matches the factory edge angle on most kitchen knives. Consistency matters more than precision. After 6 years honing knives daily at Purple Café, the angle becomes muscle memory. Start with the matchbook visual until it feels natural.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I use a ceramic steel or traditional steel rod?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Traditional steel rods realign edges (true honing), while ceramic steels lightly abrade and sharpen. For daily maintenance, traditional steel is better—it&apos;s gentler and extends knife life. Ceramic steels remove metal and should be used sparingly. At Purple Café, we used traditional Henckels steel rods exclusively. Save ceramic for knives that need more than realignment but less than full sharpening.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How many strokes should I use when steeling a knife?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Use 5-8 strokes per side for regular maintenance. At Purple Café, our standard was 6 strokes alternating sides (12 total). More strokes don&apos;t improve results—consistency and proper angle matter more than quantity. If 8 strokes don&apos;t restore the edge, honing won&apos;t help; the knife needs sharpening.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why isn&apos;t my knife getting sharper when I steel it?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Honing steel realigns edges but doesn&apos;t sharpen dull knives. If steeling doesn&apos;t restore sharpness, your knife is dull and needs actual sharpening with a stone. Other causes: wrong angle (too steep or too shallow), damaged steel rod (inspect for grooves), or applying too much pressure (light pressure works better). Remember: steeling maintains sharp knives; it can&apos;t fix dull ones.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I damage my knife by using a honing steel?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                You can damage knives by using excessive pressure, wrong angle, or cheap diamond-coated steels that remove too much metal. Traditional smooth steel rods used properly won&apos;t damage knives—we honed the same knives daily for 6 years at Purple Café without issues. Use light pressure (let the steel do the work), maintain consistent angle, and choose quality traditional steel over aggressive diamond or ceramic options.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Do I need to steel Japanese knives differently than German knives?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Yes—Japanese knives need a shallower angle (10-15 degrees) compared to German knives (15-20 degrees), and lighter pressure because Japanese steel is harder and more brittle. At Purple Café, we had both: Wüsthof German knives and Shun Japanese knives. Japanese knives also need honing less frequently because harder steel holds edges longer but chips more easily with rough treatment.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I steel a knife before or after using it?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Steel knives before use, not after. At Purple Café, we required all cooks to hone at the start of their shift, not the end. Honing before use ensures optimal sharpness when you need it. Honing after use when the knife is already dirty is less effective and can transfer food particles to the steel, reducing its effectiveness.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I test if my knife is properly honed?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                The paper test: hold paper vertically and slice—a well-honed knife cuts cleanly without tearing. Or the tomato test: rest the blade on tomato skin and slice with no downward pressure—it should glide through. At Purple Café, we used the fingernail test: gently rest the edge on your thumbnail—if it grips instead of sliding, it&apos;s sharp. These tests confirm proper edge alignment after honing.
-              </p>
-            </div>
-          </div>
-        </div>
+        {/* FAQ - Single Source of Truth */}
+        <BlogFAQ questions={educationalData.faq.questions} />
 
-        {/* Related Content */}
-        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
-          <h3 className="text-2xl font-bold mb-4">Related Articles</h3>
+        {/* Related Articles */}
+        <div className="bg-slate-50 rounded-xl p-8 mb-8">
+          <h3 className="text-xl font-bold text-slate-900 mb-6">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">Victorinox Fibrox 8&quot; Chef&apos;s Knife</h4>
-              <p className="text-slate-700 text-sm">
-                The professional-grade chef&apos;s knife that responds beautifully to regular honing and sharpening.
-              </p>
-            </Link>
-            <Link href="/guides/knife-care" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">Complete Knife Care Guide</h4>
-              <p className="text-slate-700 text-sm">
-                Professional knife maintenance techniques including honing, sharpening, storage, and cleaning.
-              </p>
-            </Link>
+            {educationalData.relatedArticles.map((article, index) => (
+              <Link key={index} href={article.href} className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
+                <h4 className="font-bold text-slate-900 mb-2">{article.title}</h4>
+                <p className="text-slate-700 text-sm">{article.description}</p>
+              </Link>
+            ))}
           </div>
         </div>
 
+        {/* Email Capture */}
         <BlogEmailCapture />
+
+        {/* Author Bio */}
         <AuthorBio />
       </BlogLayout>
     </>
-  );
+  )
 }
