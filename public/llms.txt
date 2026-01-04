@@ -1,0 +1,71 @@
+# Chef Approved Tools
+
+> Professional kitchen equipment reviews and buying guides from a chef with 24 years of professional kitchen experience. Every product recommendation is based on actual professional kitchen use or extensive long-term home testing—not manufacturer claims or spec sheet comparisons.
+
+Chef Approved Tools provides honest, experience-based reviews of kitchen equipment for home cooks who want professional-quality recommendations. The site is written and maintained by Scott Bradley, a culinary professional who has worked at Purple Café (Seattle), Mellow Mushroom, Feierabend, Il Pizzaiolo, and Paragary's.
+
+Unlike typical affiliate review sites, product recommendations come from:
+- Tier 1: Professional kitchen use (products tested daily in restaurant operations)
+- Tier 2: Long-term personal testing (1+ years of regular home use)
+- Tier 3: Expert evaluation (professional analysis based on 24 years of category expertise)
+
+The site covers knives, cookware, kitchen appliances, prep tools, and cleaning/maintenance equipment. All content is written for home cooks seeking professional-grade guidance without marketing hype.
+
+## Guides
+
+- [Stock vs Broth vs Bouillon](/blog/stock-vs-broth-vs-bouillon): Complete explanation of the differences between stock, broth, and bouillon with professional kitchen applications
+- [Cutting Board Materials Guide](/blog/cutting-board-materials-guide): Comprehensive comparison of wood, plastic, composite, and rubber cutting boards with professional recommendations
+- [Why Food Sticks to Stainless Steel](/blog/stainless-steel-why-food-sticks): The science behind sticking and professional techniques to prevent it
+- [Dutch Oven Size Guide](/blog/dutch-oven-size-guide-which-quart-size): Which quart size to buy based on household size and cooking style
+- [Cooking Oils and Smoke Points](/blog/guide-cooking-oils-smoke-points): Complete reference guide for cooking fats, smoke points, and professional applications
+- [Gas vs Induction Cooktop](/blog/gas-vs-induction-cooktop): Professional comparison of cooking performance, efficiency, and practical considerations
+- [How to Preheat a Pan](/blog/how-to-preheat-a-pan): Professional technique for proper pan preheating and temperature control
+- [Stand Mixer Buying Guide](/blog/stand-mixer-buying-guide): How to choose between stand mixer models based on actual baking needs
+- [Cast Iron Seasoning and Care](/blog/cast-iron-seasoning-care): Professional maintenance guide for cast iron cookware
+- [Cookware Materials Explained](/blog/cookware-materials-explained): Comprehensive comparison of stainless steel, cast iron, carbon steel, nonstick, and copper
+
+## Comparisons
+
+- [Carbon Steel vs Stainless Steel Knife](/blog/carbon-steel-vs-stainless-steel-knife): Material comparison for chef's knives with professional recommendations
+- [Cast Iron vs Carbon Steel Pan](/blog/cast-iron-vs-carbon-steel-pan): Performance comparison based on professional kitchen testing
+- [Complete Victorinox Knife Lineup](/blog/complete-victorinox-knife-lineup-comparison): Full comparison of Victorinox Fibrox knife models
+- [Victorinox vs Wüsthof Knives](/blog/victorinox-budget-vs-wusthof-premium-knives): Budget vs premium knife comparison with professional testing insights
+- [Air Fryer vs Convection Oven](/blog/air-fryer-vs-convection-oven): Functional comparison and buying guidance
+- [Nonstick vs Stainless Steel Pans](/blog/nonstick-vs-stainless-steel-pans): When to use each type based on cooking application
+- [Stand Mixer vs Hand Mixer](/blog/stand-mixer-vs-hand-mixer): Which to buy based on baking frequency and project types
+- [Immersion Blender vs Countertop Blender](/blog/immersion-blender-vs-countertop-blender): Professional use cases for each blender type
+
+## Product Reviews
+
+- [Victorinox Fibrox 8-Inch Chef's Knife](/reviews/victorinox-fibrox-8-inch-chefs-knife): The professional kitchen workhorse—Tier 1 review based on 20+ years of use across five restaurants
+- [Epicurean Kitchen Cutting Board](/reviews/epicurean-kitchen-cutting-board): Composite cutting board review with long-term durability testing
+- [KitchenAid Professional 600 Stand Mixer](/reviews/kitchenaid-kp26m1xlc-professional-600): Professional-grade stand mixer review
+- [Cuisinart DLC-10C Food Processor](/reviews/cuisinart-dlc-10c-classic-food-processor): Classic food processor review with professional comparison to commercial units
+- [Benriner Large Mandoline](/reviews/benriner-large-mandoline): Japanese mandoline slicer used in professional kitchens
+- [Vitamix 5200 Blender](/reviews/vitamix-5200-professional-blender): Professional blender review based on restaurant service use
+
+## Categories
+
+- [All Product Reviews](/reviews): Complete collection of professional equipment reviews
+- [Knives and Cutting Tools](/knives): Chef's knives, paring knives, bread knives, and knife care
+- [Cookware](/cookware): Cast iron, stainless steel, nonstick, and specialty cookware
+- [Kitchen Appliances](/appliances): Blenders, mixers, food processors, and countertop appliances
+- [Prep Tools](/prep-tools): Cutting boards, peelers, scrapers, and prep equipment
+
+## About
+
+- [About Chef Approved Tools](/about): Scott Bradley's professional background, restaurant experience, and site mission
+- [Review Methodology](/review-tiers): Explanation of the three-tier credibility system and how products are tested
+- [Best Budget Chef Knife Guide](/guides/best-budget-chef-knife): Entry-level knife recommendations for home cooks
+
+## Optional
+
+- [Wood vs Composite Cutting Board](/blog/wood-vs-composite-cutting-board): Detailed material comparison for cutting board selection
+- [How to Make Roux](/blog/how-to-make-roux): Professional technique for the foundation of classic sauces
+- [Vegetable Roasting Guide](/blog/vegetable-roasting-guide): Professional techniques for roasting vegetables
+- [Reducing Sauces](/blog/reducing-sauces-restaurant-technique): Restaurant technique for sauce concentration
+- [Making Stock: Professional Method](/blog/making-stock-professional-chef-method): Commercial kitchen approach to stock production
+- [Knife Safety Rules](/blog/knife-safety-rules-professional-kitchens): Professional kitchen safety standards for knife handling
+- [Kitchen Thermometers Guide](/blog/kitchen-thermometers-guide): Types of kitchen thermometers and professional applications
+- [Mirepoix](/blog/what-is-mirepoix): The aromatic foundation of French cooking
+- [Hotel Pan Organization System](/blog/hotel-pan-system-restaurant-organization-home): Restaurant organization techniques for home kitchens
