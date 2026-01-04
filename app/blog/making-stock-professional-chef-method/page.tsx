@@ -11,8 +11,10 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
+import { stockData } from './stock-data';
 
 export const metadata = generateBlogMetadata('making-stock-professional-chef-method');
 
@@ -32,40 +34,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Making Stock: The Professional Chef Method", url: "https://www.chefapprovedtools.com/blog/making-stock-professional-chef-method" }
 ]);
 
-const faqSchema = generateFAQSchema([
-  {
-    question: "How long does it take to make stock in a professional kitchen?",
-    answer: "At Purple Café, we simmered chicken stock for 8 hours, beef stock for 12-16 hours, and fish/vegetable stocks for shorter periods (1-2 hours). The timing depends on extracting maximum collagen from bones without bitterness. There are no shortcuts—proper stock requires gentle simmering over many hours."
-  },
-  {
-    question: "Why is skimming stock so important?",
-    answer: "Skimming removes coagulated blood proteins and impurities that cloud stock and create off-flavors. At Purple Café, we skimmed religiously every few minutes during the first hour. Clean stock equals clean flavor—this repetitive task separates professional results from cloudy home stocks."
-  },
-  {
-    question: "What's the difference between stock and broth?",
-    answer: "Stock uses bones for collagen and body, creating a rich liquid that gels when chilled. Broth uses meat for flavor but lacks the body and gelatin that stock provides. Stock is the foundation for sauces and reductions; broth is more commonly used as a soup base or consumed on its own."
-  },
-  {
-    question: "Can you reuse bones for a second batch of stock?",
-    answer: "Yes, once. This second batch is called 'remouillage' in professional kitchens and yields a lighter stock perfect for soups or cooking grains. The bones won't have as much flavor or collagen left, but you're still extracting value. Don't attempt a third batch—there's nothing left at that point."
-  },
-  {
-    question: "Should I roast bones before making stock?",
-    answer: "For brown stocks (beef, lamb), yes—roasting at 400°F for 45-60 minutes caramelizes proteins and creates deep flavor through the Maillard reaction. At Purple Café, we always roasted beef and lamb bones first. For white stocks (chicken, fish), no—you want lighter, cleaner flavor without the roasted character."
-  },
-  {
-    question: "Why shouldn't I add salt to stock while it's cooking?",
-    answer: "Stock reduces as it simmers, concentrating flavors including salt. If you salt during cooking and later reduce the stock for a sauce, it can become inedibly salty. Always season stock when you use it, not when you make it. This gives you complete control over the final dish."
-  },
-  {
-    question: "What happens if stock boils instead of simmers?",
-    answer: "Boiling emulsifies fat and proteins into the liquid, creating cloudy, greasy stock. The goal isn't speed—it's gentle extraction. At Purple Café, we maintained stocks at barely a tremble (tiny bubbles every few seconds). One cook left stock boiling overnight and nearly burned down the restaurant—temperature control matters."
-  },
-  {
-    question: "How do I store homemade stock?",
-    answer: "Five days refrigerated in sealed containers, or six months frozen. At Purple Café, we stored stock in massive cambros with ice wands for rapid cooling. For home use, cool quickly in an ice bath, then refrigerate. Freeze in portions you'll actually use—ice cube trays for small amounts, quart containers for soups and sauces."
-  }
-]);
+const faqSchema = generateFAQSchema(stockData.faq.questions);
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -456,47 +425,9 @@ export default function MakingStockPage() {
             <strong>Reduction:</strong> Professional kitchens often reduce stock by 50-75% before freezing to save space. This creates glace de viande (meat glaze) that&rsquo;s intensely concentrated. Reconstitute with water when needed, or use small amounts for incredible flavor boosts.
           </p>
 
-          <h2 id="faq">Frequently Asked Questions</h2>
-
-          <h3>How long does it take to make stock in a professional kitchen?</h3>
-          <p>
-            At Purple Café, we simmered chicken stock for 8 hours, beef stock for 12-16 hours, and fish/vegetable stocks for shorter periods (1-2 hours). The timing depends on extracting maximum collagen from bones without bitterness. There are no shortcuts—proper stock requires gentle simmering over many hours.
-          </p>
-
-          <h3>Why is skimming stock so important?</h3>
-          <p>
-            Skimming removes coagulated blood proteins and impurities that cloud stock and create off-flavors. At Purple Café, we skimmed religiously every few minutes during the first hour. Clean stock equals clean flavor—this repetitive task separates professional results from cloudy home stocks.
-          </p>
-
-          <h3>What&rsquo;s the difference between stock and broth?</h3>
-          <p>
-            Stock uses bones for collagen and body, creating a rich liquid that gels when chilled. Broth uses meat for flavor but lacks the body and gelatin that stock provides. Stock is the foundation for sauces and reductions; broth is more commonly used as a soup base or consumed on its own.
-          </p>
-
-          <h3>Can you reuse bones for a second batch of stock?</h3>
-          <p>
-            Yes, once. This second batch is called &quot;remouillage&quot; in professional kitchens and yields a lighter stock perfect for soups or cooking grains. The bones won&rsquo;t have as much flavor or collagen left, but you&rsquo;re still extracting value. Don&rsquo;t attempt a third batch—there&rsquo;s nothing left at that point.
-          </p>
-
-          <h3>Should I roast bones before making stock?</h3>
-          <p>
-            For brown stocks (beef, lamb), yes—roasting at 400°F for 45-60 minutes caramelizes proteins and creates deep flavor through the Maillard reaction. At Purple Café, we always roasted beef and lamb bones first. For white stocks (chicken, fish), no—you want lighter, cleaner flavor without the roasted character.
-          </p>
-
-          <h3>Why shouldn&rsquo;t I add salt to stock while it&rsquo;s cooking?</h3>
-          <p>
-            Stock reduces as it simmers, concentrating flavors including salt. If you salt during cooking and later reduce the stock for a sauce, it can become inedibly salty. Always season stock when you use it, not when you make it. This gives you complete control over the final dish.
-          </p>
-
-          <h3>What happens if stock boils instead of simmers?</h3>
-          <p>
-            Boiling emulsifies fat and proteins into the liquid, creating cloudy, greasy stock. The goal isn&rsquo;t speed—it&rsquo;s gentle extraction. At Purple Café, we maintained stocks at barely a tremble (tiny bubbles every few seconds). One cook left stock boiling overnight and nearly burned down the restaurant—temperature control matters.
-          </p>
-
-          <h3>How do I store homemade stock?</h3>
-          <p>
-            Five days refrigerated in sealed containers, or six months frozen. At Purple Café, we stored stock in massive cambros with ice wands for rapid cooling. For home use, cool quickly in an ice bath, then refrigerate. Freeze in portions you&rsquo;ll actually use—ice cube trays for small amounts, quart containers for soups and sauces.
-          </p>
+          <div id="faq">
+            <BlogFAQ questions={stockData.faq.questions} />
+          </div>
 
           <h2>Keep Learning: Related Guides</h2>
 

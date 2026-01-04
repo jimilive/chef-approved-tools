@@ -4,6 +4,7 @@
 - Read START_HERE.md before any work
 - NO CHANGES without explicit approval
 - Never make assumptions. Always confirm or ask Scott.
+- Don't make assumptions about slugs ever
 
 ## Git Operations
 - Always ask for explicit approval before running `git commit` or `git push`

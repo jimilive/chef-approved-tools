@@ -11,7 +11,9 @@ import { Flame, CheckCircle2 } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 import AuthorBio from '@/components/review/AuthorBio';
+import { preheatData } from './preheat-data';
 
 export const metadata = generateBlogMetadata('how-to-preheat-a-pan');
 
@@ -31,40 +33,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "How To Preheat A Pan (Most People Do This Wrong)", url: "https://www.chefapprovedtools.com/blog/how-to-preheat-a-pan" }
 ]);
 
-const faqSchema = generateFAQSchema([
-  {
-    question: "Why does my food stick even after preheating?",
-    answer: "The pan may not be hot enough, or you moved food too soon. Wait for natural release."
-  },
-  {
-    question: "Can I preheat in the oven instead?",
-    answer: "Yes — for cast iron, oven preheating gives perfectly even heat."
-  },
-  {
-    question: "Do I always need oil?",
-    answer: "For stainless and cast iron, yes. Dry heat causes sticking and discoloration."
-  },
-  {
-    question: "How do I know if I've overheated?",
-    answer: "If your pan shows rainbow tinting, you've gone too hot — clean with vinegar or Bar Keepers Friend."
-  },
-  {
-    question: "Does preheating save energy?",
-    answer: "Absolutely. A properly heated pan cooks faster and more evenly, reducing wasted heat and time."
-  },
-  {
-    question: "How long should I preheat a nonstick pan?",
-    answer: "1-2 minutes maximum on medium heat. Never preheat nonstick empty or on high heat — the coating degrades above 500°F. Always add oil or food before heating."
-  },
-  {
-    question: "What's the best heat setting for preheating?",
-    answer: "Start with medium heat for most pans. You can always increase heat after preheating, but starting too hot causes uneven heating and can warp pans. Medium gives you control and even heat distribution."
-  },
-  {
-    question: "Why do restaurants preheat pans in the oven?",
-    answer: "Oven preheating ensures completely even heat across the entire pan surface — no hot spots. It's especially useful for cast iron before searing steaks. Set oven to 400°F, place pan inside for 10 minutes, then transfer to stovetop."
-  }
-]);
+const faqSchema = generateFAQSchema(preheatData.faq.questions);
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -438,58 +407,8 @@ export default function HowToPreheatPanPost() {
             </div>
           </div>
 
-          <div className="border-t border-gray-200 pt-12 mt-12" id="faq">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">Why does my food stick even after preheating?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  The pan may not be hot enough, or you moved food too soon. Wait for natural release.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I preheat in the oven instead?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Yes — for cast iron, oven preheating gives perfectly even heat.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">Do I always need oil?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  For stainless and cast iron, yes. Dry heat causes sticking and discoloration.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I know if I&apos;ve overheated?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  If your pan shows rainbow tinting, you&apos;ve gone too hot — clean with vinegar or Bar Keepers Friend.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">Does preheating save energy?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Absolutely. A properly heated pan cooks faster and more evenly, reducing wasted heat and time.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">How long should I preheat a nonstick pan?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  1-2 minutes maximum on medium heat. Never preheat nonstick empty or on high heat — the coating degrades above 500°F. Always add oil or food before heating.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the best heat setting for preheating?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Start with medium heat for most pans. You can always increase heat after preheating, but starting too hot causes uneven heating and can warp pans. Medium gives you control and even heat distribution.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">Why do restaurants preheat pans in the oven?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Oven preheating ensures completely even heat across the entire pan surface — no hot spots. It&apos;s especially useful for cast iron before searing steaks. Set oven to 400°F, place pan inside for 10 minutes, then transfer to stovetop.
-                </p>
-              </div>
-            </div>
+          <div id="faq">
+            <BlogFAQ questions={preheatData.faq.questions} />
           </div>
         </div>
 

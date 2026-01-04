@@ -5,8 +5,10 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import BlogFAQ from '@/components/blog/BlogFAQ'
 import AuthorBio from '@/components/review/AuthorBio'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import { wastingmoneyData } from './wastingmoney-data'
 
 export const metadata = generateBlogMetadata('kitchen-tools-wasting-money')
 
@@ -44,42 +46,7 @@ export default function KitchenToolsWastePost() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema([
-            {
-              question: "What's the #1 tool most home cooks waste money on?",
-              answer: "Single-use gadgets like garlic presses or avocado slicers. A good knife replaces them all."
-            },
-            {
-              question: "Are expensive knife sets worth it?",
-              answer: "Not for most cooks. One $50–$100 knife, properly maintained, will outperform a full designer set."
-            },
-            {
-              question: "What cookware should I actually invest in?",
-              answer: "One cast iron skillet, one stainless pan, one small nonstick. That's enough for 95% of meals."
-            },
-            {
-              question: "Do professionals use the same tools at home?",
-              answer: "Absolutely — just fewer of them. Pros value simplicity and reliability over novelty."
-            },
-            {
-              question: "How do I know if a gadget is worth buying?",
-              answer: "If it doesn't save time or improve consistency, skip it. The best tools disappear into your workflow."
-            },
-            {
-              question: "What are the tools every home cook truly needs?",
-              answer: "Chef knife, cutting board, scraper, thermometer, cast iron skillet, and tongs. Everything else is optional."
-            },
-            {
-              question: "Should I replace all my cheap tools at once?",
-              answer: "No. Replace them gradually as they wear out. Start with your most-used items: knife, cutting board, and primary pan. Quality over quantity."
-            },
-            {
-              question: "Are expensive brands always better quality?",
-              answer: "Not necessarily. Many professional-grade tools are unbranded or sold under commercial supplier names. Focus on construction quality, not marketing."
-            }
-          ]))
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(wastingmoneyData.faq.questions)) }}
       />
 
       <BlogLayout breadcrumbTitle="10 Kitchen Tools You're Wasting Money On">
@@ -479,59 +446,8 @@ export default function KitchenToolsWastePost() {
           </div>
         </div>
 
-        {/* FAQ Section */}
-        <div className="border-t border-gray-200 pt-12 mt-12" id="faq">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the #1 tool most home cooks waste money on?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Single-use gadgets like garlic presses or avocado slicers. A good knife replaces them all.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Are expensive knife sets worth it?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Not for most cooks. One $50–$100 knife, properly maintained, will outperform a full designer set.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What cookware should I actually invest in?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                One cast iron skillet, one stainless pan, one small nonstick. That&apos;s enough for 95% of meals.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Do professionals use the same tools at home?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Absolutely — just fewer of them. Pros value simplicity and reliability over novelty.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I know if a gadget is worth buying?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                If it doesn&apos;t save time or improve consistency, skip it. The best tools disappear into your workflow.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What are the tools every home cook truly needs?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Chef knife, cutting board, scraper, thermometer, cast iron skillet, and tongs. Everything else is optional.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I replace all my cheap tools at once?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                No. Replace them gradually as they wear out. Start with your most-used items: knife, cutting board, and primary pan. Quality over quantity.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Are expensive brands always better quality?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Not necessarily. Many professional-grade tools are unbranded or sold under commercial supplier names. Focus on construction quality, not marketing.
-              </p>
-            </div>
-          </div>
+        <div id="faq">
+          <BlogFAQ questions={wastingmoneyData.faq.questions} />
         </div>
 
         {/* Related Content */}

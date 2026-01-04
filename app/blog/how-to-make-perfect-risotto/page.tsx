@@ -12,7 +12,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 import AuthorBio from '@/components/review/AuthorBio';
+import { risottoData } from './risotto-data';
 
 export const metadata = generateBlogMetadata('how-to-make-perfect-risotto');
 
@@ -40,20 +42,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Perfect Risotto: Italian Restaurant Technique Explained", url: "https://www.chefapprovedtools.com/blog/how-to-make-perfect-risotto" }
 ]);
 
-const faqSchema = generateFAQSchema([
-  {
-    question: "Can I make risotto ahead of time?",
-    answer: "Not really—risotto is best fresh. You can parcook it to 80% done, spread on a sheet pan, then finish later (restaurant technique). But it's never quite as good as fresh."
-  },
-  {
-    question: "Do I really need to use hot stock?",
-    answer: "Yes. Cold stock shocks the rice, stops the cooking process, and creates uneven texture. Keep stock at a steady simmer throughout cooking."
-  },
-  {
-    question: "How do I know when risotto is done?",
-    answer: "Taste it. Rice should have slight resistance when you bite (al dente), but not be crunchy. The texture should be creamy and flow slowly on the plate."
-  }
-]);
+const faqSchema = generateFAQSchema(risottoData.faq.questions);
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -311,24 +300,7 @@ export default function PerfectRisottoPage() {
 
           <p><strong>Prevention</strong>: Keep stock at steady simmer throughout entire cooking process</p>
 
-          <h2>Frequently Asked Questions</h2>
-
-          <div className="bg-slate-50 p-6 rounded-lg my-8">
-            <h3 className="font-bold text-lg mb-3">Q: Can I make risotto ahead of time?</h3>
-            <p className="mb-6">A: Not really—risotto is best fresh. You can parcook it to 80% done, spread on a sheet pan to stop cooking, then finish later (restaurant technique). Add stock and reheat over medium heat, finish with butter and cheese. But it&apos;s never quite as good as fresh.</p>
-
-            <h3 className="font-bold text-lg mb-3">Q: Do I really need to use hot stock?</h3>
-            <p className="mb-6">A: Yes. Cold stock shocks the rice, stops the cooking process, and creates uneven texture. Keep stock at a steady simmer throughout.</p>
-
-            <h3 className="font-bold text-lg mb-3">Q: Can I use brown rice or wild rice?</h3>
-            <p className="mb-6">A: No. Brown rice and wild rice don&apos;t have the right starch content and won&apos;t create creamy texture. Stick with Arborio or Carnaroli.</p>
-
-            <h3 className="font-bold text-lg mb-3">Q: Why did my risotto turn out gluey?</h3>
-            <p className="mb-6">A: Over-stirring breaks rice grains and releases too much starch. Stir frequently but not constantly—every 30-45 seconds is sufficient.</p>
-
-            <h3 className="font-bold text-lg mb-3">Q: How do I know when risotto is done?</h3>
-            <p className="mb-0">A: Taste it. Rice should have slight resistance when you bite (al dente), but not be crunchy or hard. The texture should be creamy and flow slowly on the plate.</p>
-          </div>
+          <BlogFAQ questions={risottoData.faq.questions} />
 
           <h2>The Bottom Line: Technique Over Mystique</h2>
 

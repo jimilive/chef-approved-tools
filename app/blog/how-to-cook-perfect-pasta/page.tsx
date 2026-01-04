@@ -12,7 +12,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 import AuthorBio from '@/components/review/AuthorBio';
+import { pastaData } from './pasta-data';
 
 export const metadata = generateBlogMetadata('how-to-cook-perfect-pasta');
 
@@ -32,20 +34,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "How to Cook Perfect Pasta", url: "https://www.chefapprovedtools.com/blog/how-to-cook-perfect-pasta" }
 ]);
 
-const faqSchema = generateFAQSchema([
-  {
-    question: "Should I add oil to the pasta water?",
-    answer: "No. Oil floats on top and does nothing to prevent sticking. Proper water amount and occasional stirring prevent sticking. Oil actually makes sauce slide off pasta."
-  },
-  {
-    question: "How much pasta per person?",
-    answer: "2 oz dried pasta per person as a side, 4 oz as a main course. That's 1/4 pound for 2 people as main course."
-  },
-  {
-    question: "Why does restaurant pasta taste better than mine?",
-    answer: "Three reasons: (1) They salt the water properly, (2) They finish pasta in the sauce with pasta water, (3) They add fat at the end. Follow those three steps and yours will taste restaurant-quality."
-  }
-]);
+const faqSchema = generateFAQSchema(pastaData.faq.questions);
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -321,6 +310,8 @@ export default function HowToCookPerfectPastaPage() {
           <p>
             Stop cooking pasta like you&apos;re making kraft dinner and start finishing it like a professional.
           </p>
+
+          <BlogFAQ questions={pastaData.faq.questions} />
         </div>
 
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">

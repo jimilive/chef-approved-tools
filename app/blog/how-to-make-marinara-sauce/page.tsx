@@ -8,7 +8,9 @@ import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
+import BlogFAQ from '@/components/blog/BlogFAQ'
 import AuthorBio from '@/components/review/AuthorBio'
+import { marinaraData } from './marinara-data'
 
 export const metadata = generateBlogMetadata('how-to-make-marinara-sauce')
 
@@ -28,40 +30,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "How to Make Marinara Sauce", url: "https://www.chefapprovedtools.com/blog/how-to-make-marinara-sauce" }
 ]);
 
-const faqSchema = generateFAQSchema([
-  {
-    question: "Why does authentic marinara cook for only 30-45 minutes?",
-    answer: "Short cooking (30-45 minutes) preserves the bright, fresh tomato flavor. Longer cooking (2+ hours) transforms marinara into a different sauce with caramelized, concentrated flavors. Authentic marinara is meant to taste like fresh tomatoes, not cooked tomatoes."
-  },
-  {
-    question: "Should I add sugar to marinara sauce?",
-    answer: "No. Quality San Marzano tomatoes have natural sweetness and don't require added sugar. If your sauce tastes acidic enough to need sugar, you're using poor quality tomatoes. Italian chefs never add sugar to authentic marinara."
-  },
-  {
-    question: "Why use whole peeled tomatoes instead of crushed?",
-    answer: "Whole peeled tomatoes are the highest quality—the best tomatoes are canned whole. Crushed tomatoes include skins and seeds that add bitterness. Diced tomatoes contain calcium chloride that prevents proper breakdown. Hand-crushing whole tomatoes gives you complete control over texture."
-  },
-  {
-    question: "How do I prevent garlic from burning?",
-    answer: "Cook garlic over low to medium-low heat for only 30 seconds to 1 minute until fragrant but not colored. Add tomatoes immediately when garlic becomes aromatic. Garlic burns in as little as 30 seconds if heat is too high, creating bitter taste that ruins the sauce."
-  },
-  {
-    question: "When should I add fresh basil?",
-    answer: "Add fresh basil only 3-4 minutes before turning off heat. Cooking destroys fresh basil's delicate flavor and oils. Dried basil, if used, should be added early as it needs time to rehydrate and release flavors."
-  },
-  {
-    question: "Why does my marinara taste dull instead of bright?",
-    answer: "You cooked it too long. Extended cooking (more than 45 minutes) causes volatile flavor compounds to evaporate, leaving flat, overcooked taste. Keep marinara cooking time to 30-45 minutes maximum to preserve fresh tomato character."
-  },
-  {
-    question: "Should I blend marinara smooth?",
-    answer: "Authentic marinara is left chunky with rustic texture. Blending smooth homogenizes texture and releases pectin, creating pasty consistency. The varied texture—thick parts, thin parts, soft garlic pieces—adds interest and character."
-  },
-  {
-    question: "What's the difference between marinara and pomodoro sauce?",
-    answer: "Marinara uses tomatoes, olive oil, garlic, and basil with a runny texture and 30-45 minute cooking time. Pomodoro is thicker, simpler (minimal garlic, quick cooking), and more common in Italy. Both differ fundamentally from long-cooked tomato sauces that simmer for 2-3+ hours."
-  }
-]);
+const faqSchema = generateFAQSchema(marinaraData.faq.questions);
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -398,59 +367,8 @@ export default function MarinaraSaucePage() {
 
         </div>
 
-        {/* FAQ Section */}
-        <div className="border-t border-gray-200 pt-12 mt-12" id="faq">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why does authentic marinara cook for only 30-45 minutes?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Short cooking (30-45 minutes) preserves the bright, fresh tomato flavor. Longer cooking (2+ hours) transforms marinara into a different sauce with caramelized, concentrated flavors. Authentic marinara is meant to taste like fresh tomatoes, not cooked tomatoes.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I add sugar to marinara sauce?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                No. Quality San Marzano tomatoes have natural sweetness and don&apos;t require added sugar. If your sauce tastes acidic enough to need sugar, you&apos;re using poor quality tomatoes. Italian chefs never add sugar to authentic marinara.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why use whole peeled tomatoes instead of crushed?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Whole peeled tomatoes are the highest quality—the best tomatoes are canned whole. Crushed tomatoes include skins and seeds that add bitterness. Diced tomatoes contain calcium chloride that prevents proper breakdown. Hand-crushing whole tomatoes gives you complete control over texture.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I prevent garlic from burning?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Cook garlic over low to medium-low heat for only 30 seconds to 1 minute until fragrant but not colored. Add tomatoes immediately when garlic becomes aromatic. Garlic burns in as little as 30 seconds if heat is too high, creating bitter taste that ruins the sauce.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">When should I add fresh basil?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Add fresh basil only 3-4 minutes before turning off heat. Cooking destroys fresh basil&apos;s delicate flavor and oils. Dried basil, if used, should be added early as it needs time to rehydrate and release flavors.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Why does my marinara taste dull instead of bright?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                You cooked it too long. Extended cooking (more than 45 minutes) causes volatile flavor compounds to evaporate, leaving flat, overcooked taste. Keep marinara cooking time to 30-45 minutes maximum to preserve fresh tomato character.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I blend marinara smooth?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Authentic marinara is left chunky with rustic texture. Blending smooth homogenizes texture and releases pectin, creating pasty consistency. The varied texture—thick parts, thin parts, soft garlic pieces—adds interest and character.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the difference between marinara and pomodoro sauce?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Marinara uses tomatoes, olive oil, garlic, and basil with a runny texture and 30-45 minute cooking time. Pomodoro is thicker, simpler (minimal garlic, quick cooking), and more common in Italy. Both differ fundamentally from long-cooked tomato sauces that simmer for 2-3+ hours.
-              </p>
-            </div>
-          </div>
+        <div id="faq">
+          <BlogFAQ questions={marinaraData.faq.questions} />
         </div>
 
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">

@@ -11,7 +11,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 import AuthorBio from '@/components/review/AuthorBio';
+import { hydrationData } from './hydration-data';
 
 export const metadata = generateBlogMetadata('hydration-health-water-intake');
 
@@ -31,20 +33,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Kitchen Hydration Guide", url: "https://www.chefapprovedtools.com/blog/hydration-health-water-intake" }
 ]);
 
-const faqSchema = generateFAQSchema([
-  {
-    question: "Can you drink too much water while cooking?",
-    answer: "Overhydration (hyponatremia) is rare unless you drink several gallons in a short time without sweating. For typical home cooking sessions, this isn't a concern. Your body will naturally regulate fluid balance through urination. Professional athletes and extreme endurance events are more at risk than home cooks."
-  },
-  {
-    question: "Does drinking cold water help cool you down in a hot kitchen?",
-    answer: "Yes, but only slightly. Cold water (45-55°F) provides minor cooling and feels more refreshing than room-temperature water, which encourages you to drink more. The primary benefit is hydration; the cooling effect is secondary but welcome in hot kitchens."
-  },
-  {
-    question: "How do I remember to drink water when I'm focused on cooking?",
-    answer: "Build it into your cooking rhythm: 1) Keep water in arm's reach at your cooking station, 2) Drink every time a timer beeps, 3) Drink between cooking tasks (finished chopping? Drink. Done sautéing onions? Drink.), 4) Set a phone timer for every 30 minutes as a backup reminder."
-  }
-]);
+const faqSchema = generateFAQSchema(hydrationData.faq.questions);
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -370,6 +359,8 @@ export default function HydrationHealthWaterIntakePage() {
             </Link>
           </div>
         </div>
+
+        <BlogFAQ questions={hydrationData.faq.questions} />
 
         <BlogEmailCapture />
         <AuthorBio />

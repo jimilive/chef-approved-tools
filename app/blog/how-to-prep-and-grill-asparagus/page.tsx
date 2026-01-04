@@ -8,6 +8,7 @@ import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
 import HowToSchema from '@/components/HowToSchema';
+import { asparagusData } from './asparagus-data';
 
 export const metadata = generateBlogMetadata('how-to-prep-and-grill-asparagus');
 
@@ -27,32 +28,6 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "How to Prep and Grill Asparagus", url: "https://www.chefapprovedtools.com/blog/how-to-prep-and-grill-asparagus" }
 ]);
 
-const faqQuestions = [
-  {
-    question: "Should I use thick or thin asparagus for grilling?",
-    answer: "Use thick asparagus (pencil-thick or larger) for grilling. Thick spears maintain their structure under high heat and develop proper char before overcooking internally. Thin asparagus turns limp and mushy before achieving char marks. Save thin spears for other cooking methods."
-  },
-  {
-    question: "How do you know where to trim asparagus ends?",
-    answer: "Use the bending trick: hold the spear at each end and gently bend until it snaps naturally. The asparagus breaks exactly where the woody portion ends—no guessing required. This method is faster and more accurate than cutting with a knife."
-  },
-  {
-    question: "How long does asparagus take to grill?",
-    answer: "At proper high heat (500°F+), asparagus takes only 3-4 minutes total. Cook 1.5-2 minutes per side, rolling once or twice. If your asparagus takes longer than 5 minutes, your grill isn't hot enough. Most home cooks dramatically overcook asparagus."
-  },
-  {
-    question: "How do you prevent asparagus from falling through grill grates?",
-    answer: "Place asparagus perpendicular to the grill grates so spears lay across multiple grates rather than between them. Alternatively, use a grill basket with small perforations. Arrange spears side by side with minimal spacing for easy rolling."
-  },
-  {
-    question: "Should I oil asparagus before grilling?",
-    answer: "Yes, coat asparagus lightly with high smoke-point oil before grilling. Use about one tablespoon per pound. Too little oil causes sticking; too much causes flare-ups. Pat asparagus completely dry before oiling—wet spears steam rather than char."
-  },
-  {
-    question: "How do you know when grilled asparagus is done?",
-    answer: "Asparagus is done when it has visible char marks on multiple sides and bends slightly when lifted with tongs—but still maintains enough structure to hold its shape. Remove immediately when done; it continues cooking from residual heat."
-  }
-];
 
 export default function HowToPrepAndGrillAsparagusPage() {
   return (
@@ -67,7 +42,7 @@ export default function HowToPrepAndGrillAsparagusPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqQuestions)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(asparagusData.faq.questions)) }}
       />
       <HowToSchema
         name="How to Prep and Grill Asparagus"
@@ -345,7 +320,7 @@ export default function HowToPrepAndGrillAsparagusPage() {
         </div>
       </div>
 
-      <BlogFAQ questions={faqQuestions} />
+      <BlogFAQ questions={asparagusData.faq.questions} />
 
       <AuthorBio />
 

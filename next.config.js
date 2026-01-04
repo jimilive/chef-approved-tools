@@ -595,6 +595,46 @@ const nextConfig = {
         destination: '/blog/vegetable-roasting-guide',
         permanent: true,
       },
+
+      // ===== BING 404 FIXES - January 2026 =====
+      // Old category URL variations that never existed
+      {
+        source: '/moving-and-stirring-tools',
+        destination: '/moving-stirring',
+        permanent: true,
+      },
+      {
+        source: '/cleaning-and-maintenance',
+        destination: '/cleaning-maintenance',
+        permanent: true,
+      },
+      {
+        source: '/knives-and-cutting-tools',
+        destination: '/knives',
+        permanent: true,
+      },
+      {
+        source: '/cookware-and-bakeware',
+        destination: '/cookware',
+        permanent: true,
+      },
+      // Blog URL variations
+      {
+        source: '/blog/food-processor-vs-blender-professional-uses',
+        destination: '/blog/food-processor-vs-blender',
+        permanent: true,
+      },
+      {
+        source: '/blog/immersion-blender-restaurant-workhorse',
+        destination: '/blog/immersion-blender-vs-countertop-blender',
+        permanent: true,
+      },
+      // Review URL that never existed
+      {
+        source: '/reviews/wusthof-classic-4-inch-paring-knife',
+        destination: '/reviews/victorinox-4-inch-paring-knife',
+        permanent: true,
+      },
     ]
   },
 }
