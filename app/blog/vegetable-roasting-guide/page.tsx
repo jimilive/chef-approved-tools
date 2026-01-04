@@ -9,9 +9,11 @@ import { ChefHat, Flame, Thermometer, AlertTriangle, ThermometerSun } from 'luci
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
+import { roastingData } from './roasting-data';
 
 export const metadata = generateBlogMetadata('vegetable-roasting-guide');
 
@@ -31,48 +33,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Vegetable Roasting Guide", url: "https://www.chefapprovedtools.com/blog/vegetable-roasting-guide" }
 ]);
 
-const faqSchema = generateFAQSchema([
-  {
-    question: "Can I roast frozen vegetables?",
-    answer: "Yes, but results are inferior to fresh. Pat dry to remove ice crystals, increase roasting time by 10 minutes, and expect less crispy texture due to higher water content. Roast hotter (450°F) and longer."
-  },
-  {
-    question: "Why do my vegetables burn on the outside but stay raw inside?",
-    answer: "Cut size too large for temperature/time, or oven running too hot. Either cut smaller or lower temp to 400°F."
-  },
-  {
-    question: "How do I make vegetables extra crispy?",
-    answer: "Higher heat (450°F), less crowding, thorough drying before roasting, and don't stir too often. These four factors create maximum crispiness."
-  },
-  {
-    question: "Should I line my pans with parchment?",
-    answer: "Yes, for delicate veggies. For maximum browning, go bare pan. Parchment prevents sticking but can reduce caramelization slightly."
-  },
-  {
-    question: "Can I roast multiple types at once?",
-    answer: "Yes — group by cooking time. Add quick-cooking ones later. Start with dense vegetables like carrots and potatoes, then add faster-cooking vegetables like zucchini near the end."
-  },
-  {
-    question: "Why does restaurant-roasted food taste better?",
-    answer: "Higher heat, better airflow, and confident seasoning. Restaurants use professional sheet pans with excellent heat distribution, maintain proper spacing, and season aggressively."
-  },
-  {
-    question: "How do I reheat roasted vegetables?",
-    answer: "Skip the microwave. Use a 400°F oven for 5–7 minutes to restore texture. Microwaving makes them soggy."
-  },
-  {
-    question: "What oil is best for roasting vegetables?",
-    answer: "High smoke point oils work best: avocado oil (520°F), grapeseed oil (420°F), or light olive oil (465°F). Extra virgin olive oil can burn at 425°F."
-  },
-  {
-    question: "Should I salt before or after roasting?",
-    answer: "Always salt before roasting. Salt draws moisture to the surface, which evaporates during cooking and concentrates flavor. Waiting until after means the seasoning sits on top instead of penetrating."
-  },
-  {
-    question: "Why are my vegetables cooking unevenly?",
-    answer: "Most home ovens have hot spots. Rotate your pan 180 degrees halfway through cooking. Also check that pieces are cut to uniform size — variance in size creates variance in cooking time."
-  }
-]);
+const faqSchema = generateFAQSchema(roastingData.faq.questions);
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -572,72 +533,9 @@ export default function VegetableRoastingGuidePage() {
             Start with 425°F, cut evenly, dry thoroughly, spread out generously, and resist the urge to stir constantly. These four habits will deliver restaurant-quality results every time.
           </p>
 
-          <div className="border-t border-gray-200 pt-12 mt-12" id="faq">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I roast frozen vegetables?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Yes, but results are inferior to fresh. Pat dry to remove ice crystals, increase roasting time by 10 minutes, and expect less crispy texture due to higher water content. Roast hotter (450°F) and longer to compensate for the extra moisture.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">Why do my vegetables burn on the outside but stay raw inside?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Cut size too large for temperature/time, or oven running too hot. Either cut smaller (aim for ½-inch pieces) or lower temp to 400°F.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I make vegetables extra crispy?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Higher heat (450°F), less crowding, thorough drying before roasting, and don&apos;t stir too often. These four factors create maximum crispiness.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I line my pans with parchment?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Yes, for delicate veggies. For maximum browning, go bare pan. Parchment prevents sticking but can reduce caramelization slightly.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I roast multiple types at once?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Yes — group by cooking time. Add quick-cooking ones later. Start with dense vegetables like carrots and potatoes, then add faster-cooking vegetables like zucchini near the end.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">Why does restaurant-roasted food taste better?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Higher heat, better airflow, and confident seasoning. Restaurants use professional sheet pans with excellent heat distribution, maintain proper spacing, and season aggressively.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I reheat roasted vegetables?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Skip the microwave. Use a 400°F oven for 5–7 minutes to restore texture. Microwaving makes them soggy.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">What oil is best for roasting vegetables?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  High smoke point oils work best: avocado oil (520°F), grapeseed oil (420°F), or light olive oil (465°F). Extra virgin olive oil can burn at 425°F.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I salt before or after roasting?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Always salt before roasting. Salt draws moisture to the surface, which evaporates during cooking and concentrates flavor. Waiting until after means the seasoning sits on top instead of penetrating.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">Why are my vegetables cooking unevenly?</h3>
-                <p className="text-slate-700 leading-relaxed">
-                  Most home ovens have hot spots. Rotate your pan 180 degrees halfway through cooking. Also check that pieces are cut to uniform size — variance in size creates variance in cooking time.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
+
+        <BlogFAQ questions={roastingData.faq.questions} />
 
         <div className="bg-slate-50 rounded-xl p-8 mb-8">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>

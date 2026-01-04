@@ -9,8 +9,10 @@ import { Droplet, AlertTriangle, Lightbulb } from 'lucide-react';
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
+import { fatsData } from './fats-data';
 
 export const metadata = generateBlogMetadata('understanding-cooking-fats');
 
@@ -38,20 +40,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Understanding Cooking Fats", url: "https://www.chefapprovedtools.com/blog/understanding-cooking-fats" }
 ]);
 
-const faqSchema = generateFAQSchema([
-  {
-    question: "Can I substitute oil for butter in baking?",
-    answer: "Sometimes, but not always. Liquid oil behaves differently than solid butter—affects texture, spread, and rise. Recipes designed for one don't always work with the other. Follow recipe specifications unless you're experienced with substitutions."
-  },
-  {
-    question: "Why does my olive oil taste bitter after cooking?",
-    answer: "EVOO's delicate compounds break down at high heat, creating bitter flavors. Either use refined olive oil for high heat, or use EVOO only for low-medium heat and finishing."
-  },
-  {
-    question: "What's the best all-purpose cooking fat?",
-    answer: "Canola oil for high-heat, butter for flavor. Having both covers most needs. Add EVOO for finishing and you're set for 95% of recipes."
-  }
-]);
+const faqSchema = generateFAQSchema(fatsData.faq.questions);
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -427,6 +416,8 @@ export default function UnderstandingCookingFatsPage() {
             </Link>
           </div>
         </div>
+
+        <BlogFAQ questions={fatsData.faq.questions} />
 
         <BlogEmailCapture />
         <AuthorBio />

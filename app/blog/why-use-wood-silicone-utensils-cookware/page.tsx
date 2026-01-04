@@ -5,7 +5,9 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import BlogFAQ from '@/components/blog/BlogFAQ'
 import AuthorBio from '@/components/review/AuthorBio'
+import { utensilsData } from './utensils-data'
 
 export const metadata = generateBlogMetadata('why-use-wood-silicone-utensils-cookware')
 
@@ -41,24 +43,7 @@ export default function WhyUseWoodSiliconeUtensils() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema([
-            {
-              question: "Can I use metal utensils on cast iron?",
-              answer: "Yes, but carefully. Keep angles shallow to avoid scraping seasoning. Wood and silicone are gentler options that won't risk damaging the seasoning you've built."
-            },
-            {
-              question: "Do wooden spoons harbor bacteria?",
-              answer: "Research shows wood actually has antibacterial properties—bacteria die off on wooden surfaces while surviving in plastic grooves. Hand wash thoroughly with hot soapy water and dry immediately."
-            },
-            {
-              question: "What about bamboo utensils?",
-              answer: "Bamboo is harder than traditional hardwoods and may be more likely to scratch delicate surfaces. Stick with softer woods like maple, beechwood, or olive for coated cookware."
-            },
-            {
-              question: "How do I know if my nonstick pan is damaged?",
-              answer: "If you see visible scratches, the coating is flaking, or food starts sticking in specific areas, the pan should be replaced. Don't risk cooking with a damaged nonstick surface."
-            }
-          ]))
+          __html: JSON.stringify(generateFAQSchema(utensilsData.faq.questions))
         }}
       />
 
@@ -308,40 +293,7 @@ export default function WhyUseWoodSiliconeUtensils() {
 
         </div>
 
-        {/* FAQ Section */}
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
-
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I use metal utensils on cast iron?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Yes, but carefully. Keep angles shallow to avoid scraping seasoning. Wood and silicone are gentler options that won&apos;t risk damaging the seasoning you&apos;ve built.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Do wooden spoons harbor bacteria?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Research shows wood actually has antibacterial properties—bacteria die off on wooden surfaces while surviving in plastic grooves. Hand wash thoroughly with hot soapy water and dry immediately.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What about bamboo utensils?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Bamboo is harder than traditional hardwoods and may be more likely to scratch delicate surfaces. Stick with softer woods like maple, beechwood, or olive for coated cookware.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do I know if my nonstick pan is damaged?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                If you see visible scratches, the coating is flaking, or food starts sticking in specific areas, the pan should be replaced. Don&apos;t risk cooking with a damaged nonstick surface.
-              </p>
-            </div>
-          </div>
-        </div>
+        <BlogFAQ questions={utensilsData.faq.questions} />
 
         {/* Related Content */}
         <div className="p-6 bg-slate-50 rounded-xl mb-8">

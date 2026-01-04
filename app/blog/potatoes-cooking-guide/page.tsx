@@ -10,8 +10,10 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
+import { potatoesData } from './potatoes-data';
 
 export const metadata = generateBlogMetadata('potatoes-cooking-guide');
 
@@ -31,20 +33,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Complete Guide to Cooking Potatoes", url: "https://www.chefapprovedtools.com/blog/potatoes-cooking-guide" }
 ]);
 
-const faqSchema = generateFAQSchema([
-  {
-    question: "What's the best potato for mashing?",
-    answer: "Russets or Yukon Golds. Russets create the fluffiest, lightest mash. Yukon Golds create a creamier, buttery mash. Avoid red potatoes or new potatoes—they're too waxy and turn gluey when mashed."
-  },
-  {
-    question: "Can I use any potato for fries?",
-    answer: "No. Russets (high-starch) make the best fries—crispy outside, fluffy inside. Yukon Golds work but won't get as crispy. Red potatoes or fingerlings will be disappointing—they don't have enough starch for proper crisping."
-  },
-  {
-    question: "Why do my roasted potatoes turn mushy?",
-    answer: "Either you're overcrowding the pan (creating steam instead of roasting), using too much oil, or not roasting hot enough. Use high heat (425-450°F), give potatoes space, and use just enough oil to coat. Also, choose the right potato—waxy potatoes hold shape better than starchy ones for roasting."
-  }
-]);
+const faqSchema = generateFAQSchema(potatoesData.faq.questions);
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -207,6 +196,8 @@ export default function PotatoesGuidePage() {
             </Link>
           </div>
         </div>
+
+        <BlogFAQ questions={potatoesData.faq.questions} />
 
         <BlogEmailCapture />
         <AuthorBio />
