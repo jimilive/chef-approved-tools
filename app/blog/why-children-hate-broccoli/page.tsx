@@ -78,12 +78,12 @@ export default function WhyChildrenHateBroccoliPage() {
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
-          <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-6 rounded-xl border-l-4 border-blue-600 my-8 shadow-lg">
-            <p className="text-white font-semibold mb-3 flex items-center gap-2">
-              <ChefHat className="w-5 h-5" />
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
+            <p className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5 text-amber-600" />
               Restaurant Reality: The Staff Meal Revelation
             </p>
-            <p className="text-blue-100 mb-0 leading-relaxed">
+            <p className="mb-0">
               At Feierabend, we made staff meal every day before service. One day, our chef roasted broccoli with olive oil, salt, and high heat until the florets were crispy and caramelized. The dishwasher—who swore he hated broccoli his entire life—ate three servings. &quot;This isn&apos;t the same vegetable my mom made,&quot; he said. He was right. It wasn&apos;t the vegetable he hated—it was how it had been cooked.
             </p>
           </div>

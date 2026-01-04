@@ -16,7 +16,7 @@ import {
 } from '@/components/blog'
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
 import AuthorBio from '@/components/review/AuthorBio'
-import { Thermometer, AlertTriangle, Lightbulb } from 'lucide-react'
+import { AlertTriangle, Lightbulb } from 'lucide-react'
 
 // ISR: Regenerate every hour
 export const revalidate = 3600
@@ -149,12 +149,12 @@ export default function KitchenThermometersGuidePage() {
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           {/* Restaurant Reality Callout */}
-          <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white p-6 rounded-xl border-l-4 border-blue-500 mb-8 shadow-lg">
-            <p className="font-bold text-lg mb-3 flex items-center gap-2">
-              <Thermometer className="w-5 h-5" />
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
+            <p className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5 text-amber-600" />
               {introSection.restaurantReality.title}
             </p>
-            <p className="leading-relaxed mb-0">
+            <p className="mb-0">
               {introSection.restaurantReality.content}
             </p>
           </div>

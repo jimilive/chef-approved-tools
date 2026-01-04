@@ -102,9 +102,12 @@ export default function HerbsPage() {
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
-          <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-6 rounded-xl my-8 border-l-4 border-orange-600">
-            <h2 className="text-white text-xl font-bold mt-0 mb-3">Restaurant Reality: The $50 Basil Massacre</h2>
-            <p className="text-white mb-0 leading-relaxed">
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
+            <p className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5 text-amber-600" />
+              Restaurant Reality: The $50 Basil Massacre
+            </p>
+            <p className="mb-0">
               At Il Pizzaiolo, a new prep cook chopped an entire case of fresh basil with a dull knife. Within 30 minutes, every leaf had turned black from bruising and oxidation. Fifty dollars of perfect basil, destroyed. The head chef made him watch as we composted it, then handed him a sharp knife: &quot;Herbs are delicate. You&apos;re not chopping onions. Treat them with respect or you&apos;re just making expensive garbage.&quot; I never forgot that lesson.
             </p>
           </div>

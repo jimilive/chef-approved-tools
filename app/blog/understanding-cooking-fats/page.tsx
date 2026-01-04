@@ -82,12 +82,12 @@ export default function UnderstandingCookingFatsPage() {
           readTime={articleMeta.readTime}
         />
 
-        <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white p-6 rounded-xl border-l-4 border-blue-500 mb-8 shadow-lg">
-          <p className="font-bold text-lg mb-3 flex items-center gap-2">
-            <Droplet className="w-5 h-5" />
+        <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
+          <p className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+            <AlertTriangle className="w-5 h-5 text-amber-600" />
             Restaurant Reality
           </p>
-          <p className="leading-relaxed mb-0">
+          <p className="mb-0">
             At Paragary&apos;s in Sacramento, we had different fats for different stations. Clarified butter for sautéing fish. Canola oil for deep frying. Whole butter for finishing sauces. Olive oil for vegetables. Duck fat for potatoes. Every fat served a specific purpose based on flavor, smoke point, and cooking method. New cooks would grab whatever fat was closest and wonder why their food burned or tasted wrong. Understanding which fat to use when isn&apos;t pretentious—it&apos;s fundamental technique that determines whether food succeeds or fails.
           </p>
         </div>

@@ -106,12 +106,12 @@ export default function VegetableRoastingGuidePage() {
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
-          <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-6 rounded-xl border-l-4 border-blue-600 my-8 shadow-lg">
-            <p className="text-white font-semibold mb-3 flex items-center gap-2">
-              <Flame className="w-5 h-5" />
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
+            <p className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5 text-amber-600" />
               Restaurant Reality
             </p>
-            <p className="text-blue-100 mb-0 leading-relaxed">
+            <p className="mb-0">
               In professional kitchens, we roast vegetables for every service—Brussels sprouts, carrots, cauliflower, butternut squash. Every single day. New cooks would throw all the vegetables on one sheet pan at 425°F and wonder why some were burnt while others were raw. Different vegetables have different densities, water contents, and sugar levels—they require different treatment. Learning proper roasting times and temperatures turned vegetables from sad side dishes into menu highlights that people ordered specifically. In professional kitchens, you can tell who has line experience by how they roast potatoes. The pros always use two pans instead of one — not for volume, but for air circulation. Pan crowding is just as important as temperature—maybe more so. Those little choices separate restaurant results from home frustration. Today I&apos;m giving you the exact times, temps, and techniques that create perfect roasted vegetables every time.
             </p>
           </div>

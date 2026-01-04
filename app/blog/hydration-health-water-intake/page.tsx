@@ -76,12 +76,12 @@ export default function HydrationHealthWaterIntakePage() {
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
-          <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-6 rounded-xl border-l-4 border-blue-600 my-8 shadow-lg">
-            <p className="text-white font-semibold mb-3 flex items-center gap-2">
-              <ChefHat className="w-5 h-5" />
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
+            <p className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5 text-amber-600" />
               Restaurant Reality: The Dehydration Collapse
             </p>
-            <p className="text-blue-100 mb-0 leading-relaxed">
+            <p className="mb-0">
               During a brutal dinner rush in a professional kitchen, I watched a new line cook collapse mid-service. Not from heat exhaustion—from dehydration. He&apos;d been working six hours in 95°F kitchen temperatures without drinking water. The paramedics said his core temperature was 103°F. After that, our Kitchen Manager instituted mandatory water breaks every 45 minutes. Your body can&apos;t cook well if you&apos;re dehydrated—and dehydration sneaks up on you.
             </p>
           </div>

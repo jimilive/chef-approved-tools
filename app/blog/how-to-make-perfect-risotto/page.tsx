@@ -101,12 +101,12 @@ export default function PerfectRisottoPage() {
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
-          <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white p-6 rounded-xl border-l-4 border-blue-500 my-8 shadow-lg">
-            <p className="font-bold text-lg mb-3 flex items-center gap-2">
-              <ChefHat className="w-5 h-5" />
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
+            <p className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5 text-amber-600" />
               Restaurant Reality
             </p>
-            <p className="leading-relaxed mb-0">
+            <p className="mb-0">
               At Feierabend in Seattle, we had mushroom risotto on the menu nightly. I&apos;d watch new cooks try to rush it, adding all the stock at once or stirring frantically like their life depended on it. The result? Gummy, sticky rice that looked like porridge. Risotto isn&apos;t difficult, but it requires understanding what&apos;s happening at a chemical level and respecting the timing. The secret to creamy risotto isn&apos;t cream—it&apos;s starch release controlled through gradual hydration and gentle agitation. Today I&apos;m going to show you the exact technique that creates restaurant-quality risotto every single time.
             </p>
           </div>
