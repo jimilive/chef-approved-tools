@@ -6,7 +6,9 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import BlogFAQ from '@/components/blog/BlogFAQ'
 import AuthorBio from '@/components/review/AuthorBio'
+import { knifeData } from './knife-data'
 
 export const metadata = generateBlogMetadata('how-to-choose-first-chef-knife')
 
@@ -45,40 +47,7 @@ export default function ChooseFirstChefKnifePost() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema([
-            {
-              question: "What's the best knife brand for beginners?",
-              answer: "Victorinox Fibrox is my #1 recommendation — affordable, durable, and chef-approved. MAC and Mercer are great alternatives."
-            },
-            {
-              question: "What length chef knife should I buy?",
-              answer: "8 inches works for almost everyone. Go 6 inches if you have smaller hands, 10 inches for large prep work."
-            },
-            {
-              question: "What's better — Japanese or German steel?",
-              answer: "Japanese knives are harder and thinner (sharper but fragile). German knives are softer and more durable. Start with German-style balance."
-            },
-            {
-              question: "How often should I hone or sharpen?",
-              answer: "Hone daily, sharpen every few months. Think of honing like brushing your teeth — it prevents damage before it happens."
-            },
-            {
-              question: "Should I buy a santoku instead?",
-              answer: "Santoku knives are great for vegetables but lack the rock-chop motion of a Western chef knife. A chef knife is more versatile for beginners."
-            },
-            {
-              question: "What's the best cutting board for knives?",
-              answer: "End-grain wood or thick NSF plastic. Avoid bamboo, glass, or granite."
-            },
-            {
-              question: "Is a more expensive knife always better?",
-              answer: "No. An affordable knife that's properly maintained will outperform an expensive knife that's dull or poorly balanced. Maintenance and comfort matter more than price."
-            },
-            {
-              question: "Do I need different knives for different tasks?",
-              answer: "Not at first. A single 8-inch chef knife handles 90% of kitchen tasks. Add specialty knives only after you've mastered your chef knife and identified specific needs."
-            }
-          ]))
+          __html: JSON.stringify(generateFAQSchema(knifeData.faq.questions))
         }}
       />
 
@@ -465,59 +434,8 @@ export default function ChooseFirstChefKnifePost() {
           </div>
         </div>
 
-        {/* FAQ Section */}
-        <div className="border-t border-gray-200 pt-12 mt-12" id="faq">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the best knife brand for beginners?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Victorinox Fibrox is my #1 recommendation — affordable, durable, and chef-approved. MAC and Mercer are great alternatives.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What length chef knife should I buy?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                8 inches works for almost everyone. Go 6 inches if you have smaller hands, 10 inches for large prep work.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s better — Japanese or German steel?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Japanese knives are harder and thinner (sharper but fragile). German knives are softer and more durable. Start with German-style balance.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How often should I hone or sharpen?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Hone daily, sharpen every few months. Think of honing like brushing your teeth — it prevents damage before it happens.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Should I buy a santoku instead?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Santoku knives are great for vegetables but lack the rock-chop motion of a Western chef knife. A chef knife is more versatile for beginners.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&apos;s the best cutting board for knives?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                End-grain wood or thick NSF plastic. Avoid bamboo, glass, or granite.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Is a more expensive knife always better?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                No. An affordable knife that&apos;s properly maintained will outperform an expensive knife that&apos;s dull or poorly balanced. Maintenance and comfort matter more than price.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Do I need different knives for different tasks?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Not at first. A single 8-inch chef knife handles 90% of kitchen tasks. Add specialty knives only after you&apos;ve mastered your chef knife and identified specific needs.
-              </p>
-            </div>
-          </div>
+        <div id="faq">
+          <BlogFAQ questions={knifeData.faq.questions} />
         </div>
 
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">

@@ -13,7 +13,9 @@ import BlogQuickAnswer from '@/components/blog/BlogQuickAnswer';
 import BlogComparisonTable from '@/components/blog/BlogComparisonTable';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 import AuthorBio from '@/components/review/AuthorBio';
+import { tomatoesData } from './tomatoes-data';
 
 export const metadata = generateBlogMetadata('cooking-with-tomatoes-fresh-vs-canned');
 
@@ -33,20 +35,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Cooking with Tomatoes: Fresh vs Canned", url: "https://www.chefapprovedtools.com/blog/cooking-with-tomatoes-fresh-vs-canned" }
 ]);
 
-const faqSchema = generateFAQSchema([
-  {
-    question: "Should I use whole, crushed, or diced canned tomatoes?",
-    answer: "Whole peeled gives you the most control—crush them by hand for your desired texture. Crushed is convenient for smooth sauces (marinara, pizza sauce). Diced works for chunky sauces, soups, and chilis. All three are just tomatoes processed differently. Start with whole peeled and you can make the others yourself."
-  },
-  {
-    question: "Can I substitute fresh for canned in recipes?",
-    answer: "Yes, but you'll need more fresh tomatoes (they're watery). Use 2 pounds of fresh tomatoes for every 28oz can. Roast or cook them down first to concentrate flavor. Otherwise your sauce will be thin and bland."
-  },
-  {
-    question: "What's the best brand of canned tomatoes?",
-    answer: "For special dishes: San Marzano DOP (Cento, La Valle). For everyday cooking: Muir Glen Organic, Bianco DiNapoli. For budget cooking: Hunt's or any domestic brand (not generic store brand—those are too watery)."
-  }
-]);
+const faqSchema = generateFAQSchema(tomatoesData.faq.questions);
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -388,6 +377,8 @@ export default function TomatoesGuidePage() {
           <p>
             Master this framework and tomatoes become effortless. You&apos;ll know exactly which type to reach for, how to prep it, and how to make it taste incredible. This is the knowledge that separates home cooks from professionals.
           </p>
+
+          <BlogFAQ questions={tomatoesData.faq.questions} />
         </div>
 
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">

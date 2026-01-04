@@ -1,266 +1,207 @@
-import Link from 'next/link';
+// ============================================================================
+// BENEFITS OF COOKING WITH GARLIC - Blog Page (Data-Driven)
+// Migrated from inline to data-driven architecture
+// ============================================================================
+
+import Link from 'next/link'
+import { garlicData } from './garlic-data'
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import { Sprout, Flame, AlertTriangle } from 'lucide-react'
 import {
-  generateArticleSchema,
-  generateBreadcrumbSchema,
-  generateFAQSchema
-} from '@/lib/schema';
-import { generateBlogMetadata } from '@/lib/metadata-helpers';
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
-import { ChefHat, Sprout, Flame, AlertTriangle } from 'lucide-react';
-import BlogLayout from '@/components/blog/BlogLayout';
-import BlogHero from '@/components/blog/BlogHero';
-import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
-import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
-import AuthorBio from '@/components/review/AuthorBio';
+  BlogLayout,
+  BlogHero,
+  BlogFAQ,
+  BlogEmailCapture
+} from '@/components/blog'
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
+import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata = generateBlogMetadata('benefits-cooking-with-garlic');
+// ISR: Regenerate every hour
+export const revalidate = 3600
 
-const articleSchema = generateArticleSchema({
-  headline: "The Benefits of Cooking with Garlic",
-  description: "Why garlic is essential in cooking—health benefits, flavor science, and professional techniques for using this powerful ingredient properly.",
-  datePublished: "2025-10-22",
-  dateModified: "2025-10-24",
-  authorName: "Scott Bradley",
-  urlPrefix: 'blog',
-  urlSuffix: 'benefits-cooking-with-garlic'
-});
-
-const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "Benefits of Cooking with Garlic", url: "https://www.chefapprovedtools.com/blog/benefits-cooking-with-garlic" }
-]);
-
-const faqSchema = generateFAQSchema([
-  {
-    question: "Is garlic still healthy after cooking?",
-    answer: "Yes, but some of the health benefits are reduced. Allicin (the primary beneficial compound) is heat-sensitive and breaks down during cooking. However, other sulfur compounds remain intact and still provide health benefits. To maximize benefits, use a mix of cooked and raw garlic in your diet."
-  },
-  {
-    question: "Can I use garlic powder instead of fresh garlic?",
-    answer: "For convenience, yes, but the flavor is different. Garlic powder has a concentrated, somewhat flat flavor compared to fresh garlic's aromatic complexity. Use 1/4 teaspoon garlic powder to replace 1 fresh clove. Never use garlic powder in dishes where garlic is the star (like aglio e olio)."
-  },
-  {
-    question: "How do I get the smell of garlic off my hands?",
-    answer: "Rub your hands on stainless steel under cold running water. Stainless steel reacts with the sulfur compounds and neutralizes the odor. You can use a spoon, sink, or buy a special stainless steel 'soap' bar. Also works for onion smell."
-  }
-]);
-
-// ISR: Regenerate page every hour for fresh content while allowing search engine caching
-export const revalidate = 3600 // 1 hour
-
+// SEO Metadata
+export const metadata = generateBlogMetadata('benefits-cooking-with-garlic')
 
 export default function GarlicBenefitsPage() {
+  // Generate schemas from data
+  const articleSchema = generateArticleSchema({
+    headline: garlicData.metadata.title,
+    description: garlicData.metadata.description,
+    datePublished: garlicData.metadata.publishedDate,
+    dateModified: garlicData.metadata.lastUpdated,
+    authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'benefits-cooking-with-garlic',
+    images: []
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+    { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
+    { name: garlicData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/benefits-cooking-with-garlic' }
+  ])
+
+  const faqSchema = generateFAQSchema(garlicData.faq.questions)
+
+  // Type assertions for sections
+  const introSection = garlicData.sections[0] as { id: string; content: string[] }
+  const healthSection = garlicData.sections[1] as {
+    id: string; title: string; hasIcon: boolean; iconType: string; intro: string
+    subsections: { title: string; content?: string[]; intro?: string; benefits?: string[]; outro?: string }[]
+    restaurantReality: string
+  }
+  const cookingSection = garlicData.sections[2] as {
+    id: string; title: string; hasIcon: boolean; iconType: string; intro: string
+    methods: { name: string; result: string; bestFor: string; steps?: string[]; method?: string; criticalRule?: string; proTip?: string }[]
+  }
+  const conclusionSection = garlicData.sections[3] as {
+    id: string; title: string; content: string[]
+    keyLessons: { label: string; description: string }[]
+    outro: string
+  }
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {/* Schema Scripts */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <BlogLayout breadcrumbTitle="Benefits of Cooking with Garlic">
+      <BlogLayout breadcrumbTitle={garlicData.breadcrumb.title}>
+        {/* Hero */}
         <BlogHero
-          title="The Benefits of Cooking with Garlic"
-          introduction={["Why garlic is essential in cooking—health benefits, flavor science, and professional techniques for using this powerful ingredient properly."]}
-          publishedDate="2025-10-22"
-          lastUpdated="2025-10-24"
-          readTime="7 min read"
+          title={garlicData.hero.title}
+          introduction={garlicData.hero.introduction}
+          publishedDate={garlicData.metadata.publishedDate}
+          lastUpdated={garlicData.metadata.lastUpdated}
+          readTime={garlicData.metadata.readTime}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
-          <p>
-            Garlic is one of the most powerful ingredients in cooking. It adds depth, complexity, and aromatic intensity to virtually every savory dish. But garlic is more than just flavor—it&apos;s also one of the healthiest ingredients you can cook with, packed with compounds that support immunity, heart health, and inflammation reduction.
-          </p>
+          {/* Introduction */}
+          {introSection.content.map((paragraph, index) => (
+            <p key={index} dangerouslySetInnerHTML={{ __html: paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+          ))}
 
-          <p>
-            I learned to respect garlic early in my career at Il Pizzaiolo in Sacramento. The head chef was Italian, and he told me on my first day: <em>&quot;If you can&apos;t smell garlic in the kitchen, you&apos;re not cooking Italian food.&quot;</em> We went through five pounds of garlic every single day—minced for marinara, sliced thin for aglio e olio, roasted whole for spreads, confit in olive oil for richness. Garlic wasn&apos;t an ingredient; it was the foundation.
-          </p>
-
-          <p>
-            But here&apos;s what most home cooks don&apos;t understand: <strong>how you prepare and cook garlic completely changes what it contributes to a dish</strong>. Raw garlic is sharp and pungent. Sautéed garlic is mellow and aromatic. Roasted garlic is sweet and nutty. The same ingredient, three totally different flavors. And if you burn it—even slightly—it turns bitter and ruins the whole dish.
-          </p>
-
-          <p>
-            In this guide, I&apos;m breaking down everything you need to know about garlic: health benefits, flavor science, preparation techniques, and the professional methods that make garlic taste incredible in every dish. This is the knowledge that separates home cooks from professionals.
-          </p>
-
+          {/* Health Benefits */}
           <h2 className="flex items-center gap-2">
             <Sprout className="w-6 h-6 text-orange-700" />
-            The Health Benefits of Garlic
+            {healthSection.title}
           </h2>
 
-          <p>
-            Garlic isn&apos;t just delicious—it&apos;s also one of the healthiest foods you can eat. It&apos;s been used medicinally for thousands of years, and modern research backs up many of the traditional claims.
-          </p>
+          <p>{healthSection.intro}</p>
 
-          <h3>Active Compounds in Garlic</h3>
-
-          <p>
-            When you crush, chop, or chew garlic, an enzyme called <strong>alliinase</strong> converts <strong>alliin</strong> (a sulfur compound) into <strong>allicin</strong>, the compound responsible for garlic&apos;s distinctive smell and most of its health benefits.
-          </p>
-
-          <p>
-            Allicin is unstable and quickly breaks down into other sulfur compounds (like diallyl disulfide and ajoene), which also have health-promoting properties. This is why crushing or chopping garlic and letting it sit for 5-10 minutes before cooking is recommended—it allows allicin to form fully before heat destroys the enzyme.
-          </p>
-
-          <h3>Immune System Support</h3>
-
-          <p>
-            Garlic has powerful antimicrobial, antiviral, and antifungal properties. Studies show that regular garlic consumption can reduce the frequency and duration of colds and flu. One study found that people who took garlic supplements were 63% less likely to catch a cold than those who took a placebo.
-          </p>
-
-          <p>
-            <strong>How to maximize this benefit:</strong> Eat garlic raw or lightly cooked. Heavy cooking reduces allicin content, so if you&apos;re eating garlic for immune support, add it at the end of cooking or use it raw in dressings and spreads.
-          </p>
-
-          <h3>Heart Health and Cholesterol</h3>
-
-          <p>
-            Garlic has been shown to:
-          </p>
-          <ul>
-            <li>Lower total and LDL (bad) cholesterol</li>
-            <li>Reduce blood pressure in people with hypertension</li>
-            <li>Improve circulation by promoting healthy blood vessel function</li>
-            <li>Reduce arterial plaque buildup</li>
-          </ul>
-
-          <p>
-            The sulfur compounds in garlic help relax blood vessels, improving blood flow and reducing strain on the heart. Multiple studies show that consuming 1-2 cloves of garlic per day can have measurable cardiovascular benefits.
-          </p>
+          {healthSection.subsections.map((subsection, index) => (
+            <div key={index}>
+              <h3>{subsection.title}</h3>
+              {subsection.content?.map((para, pIndex) => (
+                <p key={pIndex} dangerouslySetInnerHTML={{ __html: para.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+              ))}
+              {subsection.intro && <p>{subsection.intro}</p>}
+              {subsection.benefits && (
+                <ul>
+                  {subsection.benefits.map((benefit, bIndex) => (
+                    <li key={bIndex}>{benefit}</li>
+                  ))}
+                </ul>
+              )}
+              {subsection.outro && <p>{subsection.outro}</p>}
+            </div>
+          ))}
 
           <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
             <p className="font-bold text-slate-900 mb-2 flex items-center gap-2">
               <AlertTriangle className="w-5 h-5 text-amber-600" />
               Restaurant Reality: The Garlic Lesson
             </p>
-            <p className="mb-0">
-              At Il Pizzaiolo, we prepped garlic two different ways: minced for quick cooking (marinara, sautés) and whole cloves confit in olive oil for spreads and roasted applications. The head chef was obsessive about garlic—it had to be perfectly prepped, never burned, and used generously. One night, a new line cook burned a pan of garlic while making aglio e olio. The whole dish went in the trash and we had to start over. <strong>The lesson he taught us:</strong> &quot;Garlic is powerful. It can make a dish incredible or ruin it completely. There&apos;s no middle ground. If you burn garlic, you throw it away and start over. You never serve burnt garlic.&quot; That lesson stuck with me for 24 years. Respect garlic, use it properly, and it rewards you. Rush it or ignore it, and it punishes you.
-            </p>
+            <p className="mb-0" dangerouslySetInnerHTML={{ __html: healthSection.restaurantReality.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
           </div>
 
           <BlogNewsletterCTA
-            slug="benefits-cooking-with-garlic"
-            description="Get my free &quot;11 Essential Tools I Use Most&quot; PDF—the exact equipment I rely on after 24 years in professional kitchens, including the knives that make garlic prep effortless. No fluff, just the tools that actually matter."
+            slug={garlicData.newsletterCTA.slug}
+            description={garlicData.newsletterCTA.description}
           />
 
+          {/* Cooking Techniques */}
           <h2 className="flex items-center gap-2">
             <Flame className="w-6 h-6 text-orange-700" />
-            Cooking with Garlic: Professional Techniques
+            {cookingSection.title}
           </h2>
 
-          <p>
-            How you cook garlic is just as important as how you prep it. Here are the main methods and when to use each.
-          </p>
+          <p>{cookingSection.intro}</p>
 
-          <h3>Sautéing Garlic (1-2 Minutes)</h3>
+          {cookingSection.methods.map((method, index) => (
+            <div key={index}>
+              <h3>{method.name}</h3>
 
-          <p>
-            <strong>Result:</strong> Aromatic, mellow, sweet<br />
-            <strong>Best for:</strong> Pasta sauces, stir-fries, sautéed vegetables
-          </p>
+              <p>
+                <strong>Result:</strong> {method.result}<br />
+                <strong>Best for:</strong> {method.bestFor}
+              </p>
 
-          <p>
-            <strong>Method:</strong>
-          </p>
-          <ol>
-            <li>Heat oil in a pan over medium heat (not high—garlic burns easily)</li>
-            <li>Add minced or sliced garlic</li>
-            <li>Stir constantly for 1-2 minutes until fragrant and lightly golden</li>
-            <li>Add other ingredients immediately (garlic should never cook alone for long)</li>
-          </ol>
+              {method.steps && (
+                <>
+                  <p><strong>Method:</strong></p>
+                  <ol>
+                    {method.steps.map((step, sIndex) => (
+                      <li key={sIndex}>{step}</li>
+                    ))}
+                  </ol>
+                </>
+              )}
 
-          <p>
-            <strong>Critical rule:</strong> Never walk away from sautéing garlic. It goes from perfectly golden to burnt in seconds. Burnt garlic is bitter and ruins the entire dish.
-          </p>
+              {method.method && (
+                <p><strong>Method:</strong> {method.method}</p>
+              )}
 
-          <h3>Roasting Garlic (35-40 Minutes)</h3>
+              {method.criticalRule && (
+                <p><strong>Critical rule:</strong> {method.criticalRule}</p>
+              )}
 
-          <p>
-            <strong>Result:</strong> Sweet, nutty, caramelized, spreadable<br />
-            <strong>Best for:</strong> Spreads, dips, mashed potatoes, compound butters
-          </p>
+              {method.proTip && (
+                <p><strong>Pro tip:</strong> {method.proTip}</p>
+              )}
+            </div>
+          ))}
 
-          <p>
-            <strong>Method:</strong>
-          </p>
-          <ol>
-            <li>Cut the top 1/4 inch off a whole head of garlic (exposing the cloves)</li>
-            <li>Drizzle with olive oil and wrap in foil</li>
-            <li>Roast at 400°F for 35-40 minutes until soft and golden</li>
-            <li>Squeeze the roasted cloves out of their skins</li>
-          </ol>
+          {/* Conclusion */}
+          <h2>{conclusionSection.title}</h2>
+          {conclusionSection.content.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
 
-          <p>
-            <strong>Pro tip:</strong> Roasted garlic keeps in the fridge for up to a week. Make a big batch and use it throughout the week.
-          </p>
-
-          <h3>Raw Garlic (Dressings, Aioli, Spreads)</h3>
-
-          <p>
-            <strong>Result:</strong> Sharp, pungent, powerful<br />
-            <strong>Best for:</strong> Caesar dressing, aioli, pesto, tzatziki, anywhere you want bold garlic flavor
-          </p>
-
-          <p>
-            <strong>Method:</strong> Grate or mince finely and mix directly into your dish.
-          </p>
-
-          <p>
-            <strong>Pro tip:</strong> Raw garlic gets stronger the longer it sits. If making something in advance (like aioli or dressing), reduce the amount of garlic slightly to account for flavor intensification over time.
-          </p>
-
-          <h2>The Bottom Line: Garlic is Essential</h2>
-
-          <p>
-            Garlic is one of the most important ingredients in cooking. It adds flavor, depth, and aromatic complexity to almost every savory dish. It&apos;s also one of the healthiest ingredients you can eat, with proven benefits for immunity, heart health, and inflammation.
-          </p>
-
-          <p>
-            <strong>The key lessons:</strong>
-          </p>
+          <p><strong>The key lessons:</strong></p>
           <ul>
-            <li><strong>Prep method affects flavor intensity</strong> – Whole is mild, grated is strong</li>
-            <li><strong>Cooking method changes character</strong> – Raw is sharp, roasted is sweet</li>
-            <li><strong>Never burn garlic</strong> – Burnt garlic is bitter and ruins the dish</li>
-            <li><strong>Let chopped garlic sit 5-10 minutes</strong> – Maximizes health benefits</li>
-            <li><strong>Use garlic generously</strong> – It&apos;s the foundation of flavor in cuisines around the world</li>
+            {conclusionSection.keyLessons.map((lesson, index) => (
+              <li key={index}><strong>{lesson.label}</strong> – {lesson.description}</li>
+            ))}
           </ul>
 
-          <p>
-            Master garlic and you unlock an entire dimension of flavor. Use it properly, respect its power, and it rewards you with dishes that taste incredible. This is one of the most valuable lessons you can learn in the kitchen.
-          </p>
+          <p>{conclusionSection.outro}</p>
         </div>
 
+        {/* Related Articles */}
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/onions-cooking-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → Complete Guide to Cooking Onions
-            </Link>
-            <Link href="/blog/fat-is-flavor" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → Why Fat is Flavor (And How to Use It)
-            </Link>
-            <Link href="/blog/understanding-acids-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → Understanding Acids in Cooking
-            </Link>
-            <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → Victorinox Fibrox 8&quot; Chef&apos;s Knife Review
-            </Link>
+            {garlicData.relatedArticles.map((article, index) => (
+              <Link key={index} href={article.href} className="text-orange-700 hover:text-orange-800 font-semibold">
+                → {article.title}
+              </Link>
+            ))}
           </div>
         </div>
 
+        {/* FAQ - Single Source of Truth */}
+        <BlogFAQ questions={garlicData.faq.questions} />
+
+        {/* Email Capture */}
         <BlogEmailCapture />
+
+        {/* Author Bio */}
         <AuthorBio />
       </BlogLayout>
     </>
-  );
+  )
 }

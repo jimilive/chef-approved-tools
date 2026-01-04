@@ -7,9 +7,11 @@ import BlogHero from '@/components/blog/BlogHero'
 import BlogQuickAnswer from '@/components/blog/BlogQuickAnswer'
 import BlogComparisonTable from '@/components/blog/BlogComparisonTable'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import BlogFAQ from '@/components/blog/BlogFAQ'
 import AuthorBio from '@/components/review/AuthorBio'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
+import { processorData } from './processor-data'
 
 export const metadata = generateBlogMetadata('food-processor-vs-blender')
 
@@ -144,40 +146,7 @@ export default async function FoodProcessorVsBlenderPost() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema([
-            {
-              question: "Which should I buy first: food processor or blender?",
-              answer: "For most home cooks, buy a food processor first. After testing both in professional kitchens for 6 years at Purple Café (processing 50 lbs of vegetables weekly), the food processor handles daily tasks: chopping vegetables, shredding cheese, making pesto. A blender is secondary unless you make pureed soups or sauces regularly."
-            },
-            {
-              question: "Can a blender replace a food processor?",
-              answer: "No. A blender requires liquid to create the vortex that pulls ingredients into the blades. Without liquid, ingredients just fly around the pitcher. A food processor's wide, flat bowl and S-blade are designed specifically to handle dry, solid ingredients like vegetables, cheese, and herbs."
-            },
-            {
-              question: "Can I use a food processor for smoothies?",
-              answer: "No. The wide bowl doesn't create the cyclonic vortex needed for smooth blending. Frozen fruit just bounces around without getting smooth. Use a blender—it's specifically designed for this task with a tall, narrow pitcher that creates proper vortex action."
-            },
-            {
-              question: "What's better for making pesto?",
-              answer: "Food processor. Pesto needs chopping, not emulsifying. In professional kitchens at Purple Café, we made fresh pesto regularly in the Robot Coupe—the S-blade chops basil leaves without over-processing. Blenders risk turning pesto into paste unless you pulse carefully and scrape constantly."
-            },
-            {
-              question: "Can a food processor handle hot liquids?",
-              answer: "Never. I watched a prep cook try to puree hot soup in a food processor early in my career. The liquid exploded through the lid, coating the wall and two line cooks. Food processor lids aren't sealed for pressure. Use a blender with the center cap removed to vent steam."
-            },
-            {
-              question: "What size should I buy?",
-              answer: "For most home cooks: 12-14 cup food processor and 64 oz blender pitcher. These sizes handled our volume at Purple Café without being oversized for home use. Smaller capacities mean multiple batches; larger sizes are harder to store and clean."
-            },
-            {
-              question: "How long do they last?",
-              answer: "Professional-grade models last decades. The Robot Coupe food processor at Purple Café processed 50 lbs of vegetables weekly for 6 years without failure. The Vitamix blender ran for the same period with zero maintenance. Good models outlive cheap replacements by 10-15 years."
-            },
-            {
-              question: "Which one is more versatile?",
-              answer: "Food processor. It handles chopping, shredding, slicing, mixing, and kneading—tasks most home cooks do daily. Blenders excel at smoothies, soups, and sauces but can't replace the food processor's functions. If you can only own one, choose the food processor."
-            }
-          ]))
+          __html: JSON.stringify(generateFAQSchema(processorData.faq.questions))
         }}
       />
 
@@ -623,59 +592,8 @@ export default async function FoodProcessorVsBlenderPost() {
           </div>
         </div>
 
-        {/* FAQ Section */}
-        <div className="border-t border-gray-200 pt-12 mt-12" id="faq">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Which should I buy first: food processor or blender?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                For most home cooks, buy a food processor first. After testing both in professional kitchens for 6 years at Purple Café (processing 50 lbs of vegetables weekly), the food processor handles daily tasks: chopping vegetables, shredding cheese, making pesto. A blender is secondary unless you make pureed soups or sauces regularly.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can a blender replace a food processor?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                No. A blender requires liquid to create the vortex that pulls ingredients into the blades. Without liquid, ingredients just fly around the pitcher. A food processor&rsquo;s wide, flat bowl and S-blade are designed specifically to handle dry, solid ingredients like vegetables, cheese, and herbs.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I use a food processor for smoothies?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                No. The wide bowl doesn&rsquo;t create the cyclonic vortex needed for smooth blending. Frozen fruit just bounces around without getting smooth. Use a blender—it&rsquo;s specifically designed for this task with a tall, narrow pitcher that creates proper vortex action.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What&rsquo;s better for making pesto?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Food processor. Pesto needs chopping, not emulsifying. In professional kitchens at Purple Café, we made fresh pesto regularly in the Robot Coupe—the S-blade chops basil leaves without over-processing. Blenders risk turning pesto into paste unless you pulse carefully and scrape constantly.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can a food processor handle hot liquids?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Never. I watched a prep cook try to puree hot soup in a food processor early in my career. The liquid exploded through the lid, coating the wall and two line cooks. Food processor lids aren&rsquo;t sealed for pressure. Use a blender with the center cap removed to vent steam.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What size should I buy?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                For most home cooks: 12-14 cup food processor and 64 oz blender pitcher. These sizes handled our volume at Purple Café without being oversized for home use. Smaller capacities mean multiple batches; larger sizes are harder to store and clean.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How long do they last?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Professional-grade models last decades. The Robot Coupe food processor at Purple Café processed 50 lbs of vegetables weekly for 6 years without failure. The Vitamix blender ran for the same period with zero maintenance. Good models outlive cheap replacements by 10-15 years.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Which one is more versatile?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Food processor. It handles chopping, shredding, slicing, mixing, and kneading—tasks most home cooks do daily. Blenders excel at smoothies, soups, and sauces but can&rsquo;t replace the food processor&rsquo;s functions. If you can only own one, choose the food processor.
-              </p>
-            </div>
-          </div>
+        <div id="faq">
+          <BlogFAQ questions={processorData.faq.questions} />
         </div>
 
         <BlogEmailCapture />

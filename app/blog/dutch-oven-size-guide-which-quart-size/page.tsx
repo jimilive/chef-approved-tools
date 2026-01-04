@@ -6,7 +6,9 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import BlogFAQ from '@/components/blog/BlogFAQ'
 import AuthorBio from '@/components/review/AuthorBio'
+import { dutchOvenData } from './dutch-oven-data'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -30,40 +32,7 @@ const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Dutch Oven Size Guide: 5.5-Qt vs 7-Qt for Your Family', url: 'https://www.chefapprovedtools.com/blog/dutch-oven-size-guide-which-quart-size' }
 ])
 
-const faqJsonLd = generateFAQSchema([
-  {
-    question: 'Can I use my Dutch oven on induction?',
-    answer: 'Yes. Cast iron and enameled Dutch ovens are magnetic—they work beautifully on induction cooktops. The heavy, flat bottom makes excellent contact with the induction surface, and cast iron\'s natural magnetic properties ensure efficient heat transfer. Enameled Dutch ovens are particularly ideal because they won\'t scratch glass induction surfaces.'
-  },
-  {
-    question: 'What\'s the best size for bread baking?',
-    answer: 'A 4.5–5 quart round model traps steam for perfect crusts. This size accommodates most sourdough boules while maintaining enough space for the dough to expand. The tight-fitting lid creates a steam chamber that mimics professional bread ovens, giving you crisp, golden crusts at home.'
-  },
-  {
-    question: 'Do I need more than one Dutch oven size?',
-    answer: 'Not unless you cook for groups regularly. A single 5.5–6.75 quart will handle 90% of tasks—from weeknight dinners to bread baking to small braises. Add a second size only if you frequently cook for large gatherings (go bigger) or want a dedicated bread baker (go smaller).'
-  },
-  {
-    question: 'Why are Le Creuset and Staub so expensive?',
-    answer: 'They use premium enamel coatings, tighter-fitting lids, and longer warranties. You pay for longevity and craftsmanship. These brands often last 30+ years with proper care, feature superior enamel that resists chipping, and include lifetime warranties. The upfront cost is offset by decades of reliable performance.'
-  },
-  {
-    question: 'What\'s the difference between round and oval Dutch ovens?',
-    answer: 'Round Dutch ovens distribute heat more evenly and fit standard burners better—ideal for soups, stews, and braises. Oval models accommodate long cuts like brisket, pork loin, or whole fish, but may overhang smaller burners. Choose round for versatility, oval if you frequently cook large roasts.'
-  },
-  {
-    question: 'How heavy is a 7-quart Dutch oven?',
-    answer: 'A 7-quart enameled cast iron Dutch oven typically weighs 14-16 pounds empty, and can exceed 25 pounds when full. If weight is a concern, consider a smaller 5-quart model (around 11-12 pounds) for everyday cooking, or choose stainless steel alternatives that weigh significantly less but don\'t retain heat as well.'
-  },
-  {
-    question: 'Can I put my Dutch oven in the dishwasher?',
-    answer: 'Most manufacturers recommend hand washing enameled Dutch ovens to preserve the finish. While some modern enameled models are technically dishwasher-safe, the harsh detergents can dull the exterior over time. Bare cast iron should never go in the dishwasher—it will strip the seasoning and cause rust.'
-  },
-  {
-    question: 'What\'s the ideal Dutch oven size for a family of four?',
-    answer: 'A 6.75–7.25 quart Dutch oven is perfect for a family of four. It handles one-pot meals with leftovers, accommodates a whole chicken, and provides enough capacity for batch cooking without being too heavy or cumbersome. This size balances everyday practicality with entertaining capacity.'
-  }
-])
+const faqJsonLd = generateFAQSchema(dutchOvenData.faq.questions)
 
 export default function DutchOvenSizeGuidePage() {
   return (
@@ -447,83 +416,7 @@ export default function DutchOvenSizeGuidePage() {
             </p>
           </div>
 
-          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">
-            Frequently Asked Questions
-          </h2>
-
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                Can I use my Dutch oven on induction?
-              </h3>
-              <p className="text-slate-700">
-                Yes. Cast iron and enameled Dutch ovens are magnetic—they work beautifully on induction cooktops. The heavy, flat bottom makes excellent contact with the induction surface, and cast iron&apos;s natural magnetic properties ensure efficient heat transfer. Enameled Dutch ovens are particularly ideal because they won&apos;t scratch glass induction surfaces.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                What&apos;s the best size for bread baking?
-              </h3>
-              <p className="text-slate-700">
-                A 4.5–5 quart round model traps steam for perfect crusts. This size accommodates most sourdough boules while maintaining enough space for the dough to expand. The tight-fitting lid creates a steam chamber that mimics professional bread ovens, giving you crisp, golden crusts at home.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                Do I need more than one Dutch oven size?
-              </h3>
-              <p className="text-slate-700">
-                Not unless you cook for groups regularly. A single 5.5–6.75 quart will handle 90% of tasks—from weeknight dinners to bread baking to small braises. Add a second size only if you frequently cook for large gatherings (go bigger) or want a dedicated bread baker (go smaller).
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                Why are Le Creuset and Staub so expensive?
-              </h3>
-              <p className="text-slate-700">
-                They use premium enamel coatings, tighter-fitting lids, and longer warranties. You pay for longevity and craftsmanship. These brands often last 30+ years with proper care, feature superior enamel that resists chipping, and include lifetime warranties. The upfront cost is offset by decades of reliable performance.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                What&apos;s the difference between round and oval Dutch ovens?
-              </h3>
-              <p className="text-slate-700">
-                Round Dutch ovens distribute heat more evenly and fit standard burners better—ideal for soups, stews, and braises. Oval models accommodate long cuts like brisket, pork loin, or whole fish, but may overhang smaller burners. Choose round for versatility, oval if you frequently cook large roasts.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                How heavy is a 7-quart Dutch oven?
-              </h3>
-              <p className="text-slate-700">
-                A 7-quart enameled cast iron Dutch oven typically weighs 14-16 pounds empty, and can exceed 25 pounds when full. If weight is a concern, consider a smaller 5-quart model (around 11-12 pounds) for everyday cooking, or choose stainless steel alternatives that weigh significantly less but don&apos;t retain heat as well.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                Can I put my Dutch oven in the dishwasher?
-              </h3>
-              <p className="text-slate-700">
-                Most manufacturers recommend hand washing enameled Dutch ovens to preserve the finish. While some modern enameled models are technically dishwasher-safe, the harsh detergents can dull the exterior over time. Bare cast iron should never go in the dishwasher—it will strip the seasoning and cause rust.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                What&apos;s the ideal Dutch oven size for a family of four?
-              </h3>
-              <p className="text-slate-700">
-                A 6.75–7.25 quart Dutch oven is perfect for a family of four. It handles one-pot meals with leftovers, accommodates a whole chicken, and provides enough capacity for batch cooking without being too heavy or cumbersome. This size balances everyday practicality with entertaining capacity.
-              </p>
-            </div>
-          </div>
+          <BlogFAQ questions={dutchOvenData.faq.questions} />
         </div>
 
         <BlogEmailCapture />

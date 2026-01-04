@@ -11,7 +11,9 @@ import { Scissors, Leaf, Droplet, AlertTriangle, Lightbulb, Flame } from 'lucide
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 import AuthorBio from '@/components/review/AuthorBio';
+import { herbsData } from './herbs-data';
 
 export const metadata = generateBlogMetadata('cutting-storing-fresh-herbs');
 
@@ -31,32 +33,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "How To Cut & Store Fresh Herbs (Stay Fresh For Weeks)", url: "https://www.chefapprovedtools.com/blog/cutting-storing-fresh-herbs" }
 ]);
 
-const faqSchema = generateFAQSchema([
-  {
-    question: "How do I know if my herbs have gone bad?",
-    answer: "Bad herbs show: slimy texture, dark brown/black color (not just on cut edges), moldy spots, or rotten smell. Slight wilting is okay (you can revive in cold water). But slime, mold, or bad smell = throw them out."
-  },
-  {
-    question: "Can I store different herbs together?",
-    answer: "Store similar herbs together (tender with tender, hardy with hardy), but keep strong-flavored herbs separate. Don't store basil with cilantro—flavors can transfer. Mint especially should be stored alone (it overpowers everything)."
-  },
-  {
-    question: "Should I wash herbs before storing or before using?",
-    answer: "Both methods work. Washing before storing means they're ready to use, but you MUST dry them completely (salad spinner). Washing just before using is safer if you're worried about moisture, but less convenient. Professional kitchens wash in the morning, dry completely, then store—ready when needed."
-  },
-  {
-    question: "Why does my basil turn black in the refrigerator?",
-    answer: "Basil is tropical and hates cold. Refrigeration causes cell damage (like frostbite), which leads to blackening. Store basil at room temperature (stems in water, loosely covered). It will last 3-5 days this way—longer than it would survive in the fridge."
-  },
-  {
-    question: "Can I revive wilted herbs?",
-    answer: "Yes, if they're just wilted (not slimy or brown). Trim stems, submerge entire herb in ice water for 10-15 minutes, then dry thoroughly and store properly. This rehydrates cells and perks them up. Works great for cilantro, parsley, and mint. Less effective for basil."
-  },
-  {
-    question: "Are herb stems usable or should I throw them away?",
-    answer: "Depends on the herb. Tender herb stems (cilantro, parsley) have great flavor—use in stocks, sauces, or chop finely with leaves. Basil stems are edible but texture is off—save for stocks. Woody stems (rosemary, thyme) are inedible—discard or save for smoking/grilling flavor."
-  }
-]);
+const faqSchema = generateFAQSchema(herbsData.faq.questions);
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -706,63 +683,7 @@ export default function HerbsPage() {
             Tie hardy herbs in cheesecloth (&quot;bouquet garni&quot;) for easy removal later.
           </p>
 
-          <h2>FAQ About Cutting and Storing Herbs</h2>
-
-          <div>
-            <div className="mb-6">
-              <h3 className="font-bold text-slate-900">How do I know if my herbs have gone bad?</h3>
-              <div>
-                <div>
-                  <p>Bad herbs show: slimy texture, dark brown/black color (not just on cut edges), moldy spots, or rotten smell. Slight wilting is okay (you can revive in cold water). But slime, mold, or bad smell = throw them out.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-bold text-slate-900">Can I store different herbs together?</h3>
-              <div>
-                <div>
-                  <p>Store similar herbs together (tender with tender, hardy with hardy), but keep strong-flavored herbs separate. Don&apos;t store basil with cilantro—flavors can transfer. Mint especially should be stored alone (it overpowers everything).</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-bold text-slate-900">Should I wash herbs before storing or before using?</h3>
-              <div>
-                <div>
-                  <p>Both methods work. Washing before storing means they&apos;re ready to use, but you MUST dry them completely (salad spinner). Washing just before using is safer if you&apos;re worried about moisture, but less convenient. Professional kitchens wash in the morning, dry completely, then store—ready when needed.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-bold text-slate-900">Why does my basil turn black in the refrigerator?</h3>
-              <div>
-                <div>
-                  <p>Basil is tropical and hates cold. Refrigeration causes cell damage (like frostbite), which leads to blackening. Store basil at room temperature (stems in water, loosely covered). It will last 3-5 days this way—longer than it would survive in the fridge.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-bold text-slate-900">Can I revive wilted herbs?</h3>
-              <div>
-                <div>
-                  <p>Yes, if they&apos;re just wilted (not slimy or brown). Trim stems, submerge entire herb in ice water for 10-15 minutes, then dry thoroughly and store properly. This rehydrates cells and perks them up. Works great for cilantro, parsley, and mint. Less effective for basil.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-bold text-slate-900">Are herb stems usable or should I throw them away?</h3>
-              <div>
-                <div>
-                  <p>Depends on the herb. Tender herb stems (cilantro, parsley) have great flavor—use in stocks, sauces, or chop finely with leaves. Basil stems are edible but texture is off—save for stocks. Woody stems (rosemary, thyme) are inedible—discard or save for smoking/grilling flavor.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <BlogFAQ questions={herbsData.faq.questions} />
 
           <h2>The Bottom Line on Herbs</h2>
 

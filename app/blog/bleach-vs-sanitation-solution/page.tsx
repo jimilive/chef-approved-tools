@@ -1,153 +1,74 @@
-import React from 'react';
-import BlogLayout from '@/components/blog/BlogLayout';
-import BlogHero from '@/components/blog/BlogHero';
-import BlogQuickAnswer from '@/components/blog/BlogQuickAnswer';
-import BlogComparisonTable from '@/components/blog/BlogComparisonTable';
-import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
-import BlogFAQ from '@/components/blog/BlogFAQ';
-import RelatedPosts from '@/components/blog/RelatedPosts';
-import AuthorBio from '@/components/review/AuthorBio';
-import { generateBlogMetadata } from '@/lib/metadata-helpers';
-import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
+// ============================================================================
+// BLEACH VS SANITATION SOLUTION - Blog Page (Data-Driven)
+// Migrated from inline to data-driven architecture
+// ============================================================================
 
-export const metadata = generateBlogMetadata('bleach-vs-sanitation-solution');
+import React from 'react'
+import { bleachData } from './bleach-data'
+import BlogLayout from '@/components/blog/BlogLayout'
+import BlogHero from '@/components/blog/BlogHero'
+import BlogQuickAnswer from '@/components/blog/BlogQuickAnswer'
+import BlogComparisonTable from '@/components/blog/BlogComparisonTable'
+import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import BlogFAQ from '@/components/blog/BlogFAQ'
+import RelatedPosts from '@/components/blog/RelatedPosts'
+import AuthorBio from '@/components/review/AuthorBio'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 
-const articleSchema = generateArticleSchema({
-  headline: "Bleach vs Sanitation Solution: Which to Use",
-  description: "Professional chef explains chemical sanitation methods after 24 years in restaurant kitchens. Proper dilution ratios, contact time, and safety protocols. Critical food safety guide.",
-  datePublished: "2025-11-20",
-  dateModified: "2025-11-20",
-  authorName: "Scott Bradley",
-  urlPrefix: 'blog',
-  urlSuffix: 'bleach-vs-sanitation-solution'
-});
+// ISR: Regenerate every hour
+export const revalidate = 3600
 
-const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "Bleach vs Sanitation Solution", url: "https://www.chefapprovedtools.com/blog/bleach-vs-sanitation-solution" }
-]);
-
-const faqQuestions = [
-  {
-    question: "What is the correct bleach to water ratio for sanitizing kitchen surfaces?",
-    answer: "For standard 5.25% household bleach, use 1 tablespoon per gallon of water to achieve 50-100 ppm chlorine concentration. For 8.25% bleach, use 2 teaspoons per gallon. Always verify concentration with test strips."
-  },
-  {
-    question: "How long does sanitizer need to stay wet on a surface to work?",
-    answer: "Chlorine bleach sanitizer requires minimum 7-second contact time at proper concentration, though 30 seconds is standard protocol. Quaternary ammonium (quat) sanitizers require 30-60 seconds contact time. The surface must remain visibly wet for the entire duration."
-  },
-  {
-    question: "What is the difference between cleaning and sanitizing?",
-    answer: "Cleaning removes visible dirt, food particles, and grease using detergent and mechanical action. Sanitizing reduces bacterial populations to safe levels using chemical agents at specific concentrations. You must clean first, then sanitize—sanitizers don't work effectively on dirty surfaces."
-  },
-  {
-    question: "Can you mix bleach with other cleaning products?",
-    answer: "Never mix bleach with other chemicals, particularly acids, ammonia, or other cleaners. Mixing creates toxic gases that can cause severe respiratory damage or death. Use only one sanitizer type at a time and rinse thoroughly if switching between types."
-  },
-  {
-    question: "How often should you replace bleach sanitizer solution?",
-    answer: "Chlorine bleach sanitizer degrades rapidly and should be replaced every 2-4 hours, or immediately when visibly dirty or when test strips show concentration has dropped below 50 ppm. Quat sanitizers remain stable for 24+ hours."
-  },
-  {
-    question: "What are quaternary ammonium sanitizers and when should you use them?",
-    answer: "Quaternary ammonium compounds (quats) are synthetic sanitizers that are non-corrosive, odorless, and stable for 24+ hours. Use quats for sanitizing metal surfaces, maintaining all-day solution strength, or when bleach odor or corrosion is a concern."
-  }
-];
+// SEO Metadata
+export const metadata = generateBlogMetadata('bleach-vs-sanitation-solution')
 
 export default function BleachVsSanitationSolutionPage() {
+  // Generate schemas from data
+  const articleSchema = generateArticleSchema({
+    headline: bleachData.metadata.title,
+    description: bleachData.metadata.description,
+    datePublished: bleachData.metadata.publishedDate,
+    dateModified: bleachData.metadata.lastUpdated,
+    authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'bleach-vs-sanitation-solution',
+    images: []
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+    { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
+    { name: bleachData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/bleach-vs-sanitation-solution' }
+  ])
+
+  const faqSchema = generateFAQSchema(bleachData.faq.questions)
+
   return (
-    <BlogLayout breadcrumbTitle="Bleach vs Sanitation Solution: Which to Use">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqQuestions)) }}
-      />
+    <BlogLayout breadcrumbTitle={bleachData.breadcrumb.title}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <BlogHero
-        title="Bleach vs Sanitation Solution: Which to Use"
-        introduction={["Professional kitchens rely on proper chemical sanitation—understanding dilution ratios, contact times, and application methods prevents foodborne illness"]}
-        publishedDate="2025-11-20"
-        lastUpdated="2025-11-20"
-        readTime="10 min read"
+        title={bleachData.hero.title}
+        introduction={bleachData.hero.introduction}
+        publishedDate={bleachData.metadata.publishedDate}
+        lastUpdated={bleachData.metadata.lastUpdated}
+        readTime={bleachData.metadata.readTime}
       />
 
       {/* Quick Answer Section */}
       <BlogQuickAnswer
-        optionA={{
-          title: "Use Chlorine Bleach When:",
-          points: [
-            "Budget is the primary concern (cheapest option)",
-            "You need fast sanitization (7-second contact time)",
-            "Sanitizing non-metal surfaces (plastic, composite, ceramic)",
-            "Dealing with high-risk pathogens (broadest kill spectrum)"
-          ]
-        }}
-        optionB={{
-          title: "Use Quat Sanitizers When:",
-          points: [
-            "Sanitizing metal surfaces regularly (prevents corrosion)",
-            "You need all-day solution stability (24+ hours)",
-            "Odor is a concern (odorless operation)",
-            "Sanitizing colored towels (won&apos;t bleach fabrics)"
-          ]
-        }}
+        optionA={bleachData.quickAnswer.optionA}
+        optionB={bleachData.quickAnswer.optionB}
       />
 
       {/* Comparison Table */}
       <BlogComparisonTable
-        title="Chlorine Bleach vs Quat Sanitizers: At a Glance"
-        columnA="Chlorine Bleach"
-        columnB="Quat Sanitizers"
-        features={[
-          {
-            feature: "Cost",
-            columnA: { rating: "Excellent", description: "Pennies per gallon" },
-            columnB: { rating: "Good", description: "Significantly more expensive" }
-          },
-          {
-            feature: "Contact Time",
-            columnA: { rating: "Excellent", description: "7-30 seconds" },
-            columnB: { rating: "Good", description: "30-60 seconds required" }
-          },
-          {
-            feature: "Solution Stability",
-            columnA: { rating: "Poor", description: "Replace every 2-4 hours" },
-            columnB: { rating: "Excellent", description: "Stable for 24+ hours" }
-          },
-          {
-            feature: "Metal Safety",
-            columnA: { rating: "Poor", description: "Corrodes stainless steel over time" },
-            columnB: { rating: "Excellent", description: "Non-corrosive on all surfaces" }
-          },
-          {
-            feature: "Odor",
-            columnA: { rating: "Limited", description: "Strong chlorine smell" },
-            columnB: { rating: "Excellent", description: "Odorless operation" }
-          },
-          {
-            feature: "Kill Spectrum",
-            columnA: { rating: "Excellent", description: "Bacteria, viruses, and fungi" },
-            columnB: { rating: "Very Good", description: "Less effective on some viruses" }
-          },
-          {
-            feature: "Fabric Safety",
-            columnA: { rating: "Poor", description: "Bleaches colored towels" },
-            columnB: { rating: "Excellent", description: "Safe for all fabrics" }
-          },
-          {
-            feature: "Organic Matter Resistance",
-            columnA: { rating: "Poor", description: "Food debris neutralizes quickly" },
-            columnB: { rating: "Good", description: "Works better with light soiling" }
-          }
-        ]}
+        title={bleachData.comparisonTable.title}
+        columnA={bleachData.comparisonTable.columnA}
+        columnB={bleachData.comparisonTable.columnB}
+        features={bleachData.comparisonTable.features}
       />
 
       <div className="max-w-3xl mx-auto px-4 py-12">
@@ -157,7 +78,7 @@ export default function BleachVsSanitationSolutionPage() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Understanding Sanitation vs Cleaning</h2>
-          
+
           <p>
             The distinction between cleaning and sanitizing is critical but frequently misunderstood. Professional kitchens maintain separate protocols for each process:
           </p>
@@ -462,29 +383,12 @@ export default function BleachVsSanitationSolutionPage() {
         </div>
       </div>
 
-      <BlogFAQ questions={faqQuestions} />
+      {/* FAQ - Single Source of Truth */}
+      <BlogFAQ questions={bleachData.faq.questions} />
 
       <AuthorBio />
 
-      <RelatedPosts
-        posts={[
-          {
-            title: "Why You Should Always Wash Eggs and Produce",
-            slug: "why-wash-eggs-and-produce",
-            excerpt: "Bacterial contamination on surfaces poses real health risks. Professional washing techniques from 24 years restaurant experience."
-          },
-          {
-            title: "How to Store Raw Foods Safely",
-            slug: "how-to-store-raw-foods-safely",
-            excerpt: "Temperature control and storage hierarchy prevent cross-contamination. Critical safety techniques from professional kitchens."
-          },
-          {
-            title: "Hand-Washing in the Kitchen",
-            slug: "hand-washing-kitchen",
-            excerpt: "Proper hand-washing technique prevents foodborne illness. Professional standards for home cooks."
-          }
-        ]}
-      />
+      <RelatedPosts posts={bleachData.relatedPosts} />
     </BlogLayout>
-  );
+  )
 }

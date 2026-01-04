@@ -1,96 +1,62 @@
+// ============================================================================
+// CARBON FOOTPRINT KITCHEN EQUIPMENT - Blog Page (Data-Driven)
+// Migrated from inline to data-driven architecture
+// ============================================================================
+
 import Link from 'next/link'
+import { carbonData } from './carbon-data'
 import { Leaf, Recycle, Shield, TrendingDown } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import BlogLayout from '@/components/blog/BlogLayout'
-import BlogHero from '@/components/blog/BlogHero'
-import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import {
+  BlogLayout,
+  BlogHero,
+  BlogFAQ,
+  BlogEmailCapture
+} from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
 
-// ISR: Regenerate page every hour for fresh content while allowing search engine caching
-export const revalidate = 3600 // 1 hour
+// ISR: Regenerate every hour
+export const revalidate = 3600
 
-
-export const metadata = generateBlogMetadata('carbon-footprint-kitchen-equipment-buy-once-cry-once');
-
-const articleSchema = generateArticleSchema({
-  headline: 'Buy Once, Cry Once: Why Cheap Tools Cost The Planet',
-  description: 'Professional chef explains how quality kitchen equipment reduces waste and carbon footprint — why durability is the real sustainability in the kitchen.',
-  datePublished: "2025-09-26",
-  dateModified: '2025-10-21',
-  authorName: 'Scott Bradley',
-  authorUrl: 'https://www.chefapprovedtools.com/about',
-  url: 'https://www.chefapprovedtools.com/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once',
-  keywords: ['sustainable kitchen equipment', 'buy once cry once', 'kitchen carbon footprint', 'durable cookware']
-,
-  urlPrefix: 'blog',
-  urlSuffix: 'carbon-footprint-kitchen-equipment-buy-once-cry-once'})
-
-const breadcrumbJsonLd = generateBreadcrumbSchema([
-  { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-  { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
-  { name: 'Buy Once, Cry Once: Why Cheap Tools Cost The Planet', url: 'https://www.chefapprovedtools.com/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once' }
-])
-
-const faqJsonLd = generateFAQSchema([
-  {
-    question: 'Is stainless steel really eco-friendly?',
-    answer: 'Yes—it&apos;s 100% recyclable and often made from reclaimed metal. Longevity is what makes it truly low-impact. Stainless steel cookware can last 20-30 years or more with proper care, and when it finally reaches end of life, every ounce can be melted down and reused. The embodied carbon is offset by decades of use.'
-  },
-  {
-    question: 'What&apos;s wrong with nonstick pans?',
-    answer: 'They wear out fast, and most coatings aren&apos;t recyclable. Use them only for delicate tasks and replace responsibly. Most nonstick pans last 1-3 years before the coating degrades. The constant replacement cycle creates waste and carbon emissions. If you use nonstick, invest in quality brands and replace when the coating fails—never use damaged nonstick.'
-  },
-  {
-    question: 'Can cast iron go on induction?',
-    answer: 'Absolutely—it&apos;s magnetic and works beautifully. Cast iron is one of the best materials for induction cooking because it&apos;s naturally magnetic and retains heat exceptionally well. The heavy mass pairs perfectly with induction&apos;s precise temperature control. It works on gas, electric, induction, and even campfires—true versatility.'
-  },
-  {
-    question: 'What&apos;s the most sustainable kitchen purchase?',
-    answer: 'Anything you&apos;ll use weekly for the next decade. Utility beats novelty every time. The greenest tool is the one you actually use and keep for years. A $200 pan you use daily for 20 years has far less environmental impact than a $30 pan you replace every 2 years. Buy for longevity and frequency of use, not trends.'
-  },
-  {
-    question: 'Should I repair or replace old cookware?',
-    answer: 'Repair if you can. Re-season, rehandle, or regrind—chefs have been doing it for centuries. Cast iron can be re-seasoned indefinitely. Stainless steel handles can be replaced. Knives can be sharpened, reground, and rehandled. Before you discard quality equipment, research repair options. The most sustainable tool is the one you already own.'
-  },
-  {
-    question: 'How much money does &quot;buy once, cry once&quot; actually save?',
-    answer: 'Replacing a $25 pan every 2 years for 20 years costs $250 and creates 10 discarded pans. Buying a $150 quality pan once costs $150 total and creates zero waste for decades. You save $100 and avoid contributing to landfills. The initial investment hurts, but the lifetime savings—financial and environmental—are substantial.'
-  },
-  {
-    question: 'Are bamboo cutting boards sustainable?',
-    answer: 'Quality solid bamboo is, but cheap glued bamboo boards aren&apos;t. Many bamboo boards use formaldehyde-based adhesives and split after a few years. Solid bamboo or end-grain hardwood boards last decades and can be resurfaced multiple times. Choose thick, single-piece construction or quality end-grain over cheap laminated bamboo.'
-  },
-  {
-    question: 'What should I do with old kitchen equipment I&apos;m replacing?',
-    answer: 'Donate functional items to shelters, culinary programs, or charity kitchens. Recycle metal cookware through scrap metal recycling. Many cities have metal recycling programs that accept stainless steel, aluminum, and cast iron. Avoid throwing usable equipment in the trash—someone else can benefit from what you&apos;re upgrading.'
-  }
-])
+// SEO Metadata
+export const metadata = generateBlogMetadata('carbon-footprint-kitchen-equipment-buy-once-cry-once')
 
 export default function CarbonFootprintKitchenEquipmentPage() {
+  // Generate schemas from data
+  const articleSchema = generateArticleSchema({
+    headline: carbonData.metadata.title,
+    description: carbonData.metadata.description,
+    datePublished: carbonData.metadata.publishedDate,
+    dateModified: carbonData.metadata.lastUpdated,
+    authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'carbon-footprint-kitchen-equipment-buy-once-cry-once',
+    images: []
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+    { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
+    { name: carbonData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once' }
+  ])
+
+  const faqSchema = generateFAQSchema(carbonData.faq.questions)
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <BlogLayout breadcrumbTitle="Buy Once, Cry Once: Why Cheap Tools Cost The Planet">
+      <BlogLayout breadcrumbTitle={carbonData.breadcrumb.title}>
         <BlogHero
-          title="Buy Once, Cry Once: Why Cheap Tools Cost The Planet"
-          introduction={["Professional chef explains how quality kitchen equipment reduces waste and carbon footprint — why durability is the real sustainability in the kitchen."]}
-          publishedDate="2025-09-26"
-          lastUpdated="2025-10-21"
-          readTime="8 min read"
+          title={carbonData.hero.title}
+          introduction={carbonData.hero.introduction}
+          publishedDate={carbonData.metadata.publishedDate}
+          lastUpdated={carbonData.metadata.lastUpdated}
+          readTime={carbonData.metadata.readTime}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
@@ -301,18 +267,6 @@ export default function CarbonFootprintKitchenEquipmentPage() {
                   </Link>
                 </CTAVisibilityTracker>:</strong> Season it right and it&apos;ll outlive you.
               </li>
-              {/* <li>
-                <strong><CTAVisibilityTracker
-                  ctaId="carbon-footprint-all-clad-1"
-                  position="mid_article"
-                  productSlug="all-clad-d3-10-inch"
-                  merchant="amazon"
-                >
-                  
-                    All-Clad D3 Stainless Skillet
-                  
-                </CTAVisibilityTracker>:</strong> The industry standard for a reason.
-              </li> */}
               <li>
                 <strong>All-Clad D3 Stainless Skillet:</strong> The industry standard for a reason.
               </li>
@@ -337,18 +291,6 @@ export default function CarbonFootprintKitchenEquipmentPage() {
                   </Link>
                 </CTAVisibilityTracker>:</strong> Nearly indestructible and dishwasher-safe.
               </li>
-              {/* <li>
-                <strong><CTAVisibilityTracker
-                  ctaId="carbon-footprint-tongs-1"
-                  position="mid_article"
-                  productSlug="oxo-good-grips-tongs"
-                  merchant="amazon"
-                >
-                  
-                    OXO Good Grips Tongs
-                  
-                </CTAVisibilityTracker>:</strong> Metal, replaceable spring, consistent performance.
-              </li> */}
               <li>
                 <strong>OXO Good Grips Tongs:</strong> Metal, replaceable spring, consistent performance.
               </li>
@@ -361,18 +303,6 @@ export default function CarbonFootprintKitchenEquipmentPage() {
 
           <div className="bg-slate-50 border border-slate-200 rounded-lg p-6 my-8">
             <ul className="space-y-3 mb-0">
-              {/* <li>
-                <strong><CTAVisibilityTracker
-                  ctaId="carbon-footprint-john-boos-1"
-                  position="mid_article"
-                  productSlug="john-boos-maple-board"
-                  merchant="amazon"
-                >
-                  <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-blue-700 underline">
-                    John Boos Maple Reversible Board
-                  </Link>
-                </CTAVisibilityTracker>:</strong> A classic — resurface it instead of replacing.
-              </li> */}
               <li>
                 <strong>John Boos Maple Reversible Board:</strong> A classic — resurface it instead of replacing.
               </li>
@@ -388,18 +318,6 @@ export default function CarbonFootprintKitchenEquipmentPage() {
 
           <div className="bg-slate-50 border border-slate-200 rounded-lg p-6 my-8">
             <ul className="space-y-3 mb-0">
-              {/* <li>
-                <strong><CTAVisibilityTracker
-                  ctaId="carbon-footprint-cambro-1"
-                  position="mid_article"
-                  productSlug="cambro-containers"
-                  merchant="amazon"
-                >
-                  
-                    Cambro Containers
-                  
-                </CTAVisibilityTracker>:</strong> Commercial-grade polycarbonate lasts 10x longer than consumer plastic tubs.
-              </li> */}
               <li>
                 <strong>Cambro Containers:</strong> Commercial-grade polycarbonate lasts 10x longer than consumer plastic tubs.
               </li>
@@ -412,18 +330,6 @@ export default function CarbonFootprintKitchenEquipmentPage() {
 
           <div className="bg-slate-50 border border-slate-200 rounded-lg p-6 my-8">
             <ul className="space-y-3 mb-0">
-              {/* <li>
-                <strong><CTAVisibilityTracker
-                  ctaId="carbon-footprint-victorinox-1"
-                  position="mid_article"
-                  productSlug="victorinox-fibrox-8-inch"
-                  merchant="amazon"
-                >
-                  <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-blue-700 underline">
-                    Victorinox Fibrox 8&quot; Chef&apos;s Knife
-                  </Link>
-                </CTAVisibilityTracker>:</strong> Affordable, repairable, and sharpenable — the antithesis of disposable blades.
-              </li> */}
               <li>
                 <strong>Victorinox Fibrox 8&quot; Chef&apos;s Knife:</strong> Affordable, repairable, and sharpenable — the antithesis of disposable blades.
               </li>
@@ -431,9 +337,7 @@ export default function CarbonFootprintKitchenEquipmentPage() {
           </div>
 
           <div className="bg-yellow-50 border-l-4 border-yellow-600 p-6 my-8">
-            <p className="font-semibold text-slate-900 mb-2 flex items-center gap-2">
-              <span className="text-2xl">🔥</span> Chef&apos;s Tip:
-            </p>
+            <p className="font-semibold text-slate-900 mb-2">Chef&apos;s Tip:</p>
             <p className="mb-0">
               If you can&apos;t afford high-end gear all at once, buy slowly and deliberately. Build your kitchen like a chef builds their line — one solid piece at a time.
             </p>
@@ -486,85 +390,10 @@ export default function CarbonFootprintKitchenEquipmentPage() {
               <strong>About the Author:</strong> Scott Bradley has 24 years of professional kitchen experience, including 3 years as Kitchen Manager at Mellow Mushroom (1992-1994). He specializes in teaching home cooks the professional techniques that create consistent, restaurant-quality results.
             </p>
           </div>
-
-          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">
-            Frequently Asked Questions
-          </h2>
-
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                Is stainless steel really eco-friendly?
-              </h3>
-              <p className="text-slate-700">
-                Yes—it&apos;s 100% recyclable and often made from reclaimed metal. Longevity is what makes it truly low-impact. Stainless steel cookware can last 20-30 years or more with proper care, and when it finally reaches end of life, every ounce can be melted down and reused. The embodied carbon is offset by decades of use.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                What&apos;s wrong with nonstick pans?
-              </h3>
-              <p className="text-slate-700">
-                They wear out fast, and most coatings aren&apos;t recyclable. Use them only for delicate tasks and replace responsibly. Most nonstick pans last 1-3 years before the coating degrades. The constant replacement cycle creates waste and carbon emissions. If you use nonstick, invest in quality brands and replace when the coating fails—never use damaged nonstick.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                Can cast iron go on induction?
-              </h3>
-              <p className="text-slate-700">
-                Absolutely—it&apos;s magnetic and works beautifully. Cast iron is one of the best materials for induction cooking because it&apos;s naturally magnetic and retains heat exceptionally well. The heavy mass pairs perfectly with induction&apos;s precise temperature control. It works on gas, electric, induction, and even campfires—true versatility.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                What&apos;s the most sustainable kitchen purchase?
-              </h3>
-              <p className="text-slate-700">
-                Anything you&apos;ll use weekly for the next decade. Utility beats novelty every time. The greenest tool is the one you actually use and keep for years. A $200 pan you use daily for 20 years has far less environmental impact than a $30 pan you replace every 2 years. Buy for longevity and frequency of use, not trends.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                Should I repair or replace old cookware?
-              </h3>
-              <p className="text-slate-700">
-                Repair if you can. Re-season, rehandle, or regrind—chefs have been doing it for centuries. Cast iron can be re-seasoned indefinitely. Stainless steel handles can be replaced. Knives can be sharpened, reground, and rehandled. Before you discard quality equipment, research repair options. The most sustainable tool is the one you already own.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                How much money does &quot;buy once, cry once&quot; actually save?
-              </h3>
-              <p className="text-slate-700">
-                Replacing a $25 pan every 2 years for 20 years costs $250 and creates 10 discarded pans. Buying a $150 quality pan once costs $150 total and creates zero waste for decades. You save $100 and avoid contributing to landfills. The initial investment hurts, but the lifetime savings—financial and environmental—are substantial.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                Are bamboo cutting boards sustainable?
-              </h3>
-              <p className="text-slate-700">
-                Quality solid bamboo is, but cheap glued bamboo boards aren&apos;t. Many bamboo boards use formaldehyde-based adhesives and split after a few years. Solid bamboo or end-grain hardwood boards last decades and can be resurfaced multiple times. Choose thick, single-piece construction or quality end-grain over cheap laminated bamboo.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                What should I do with old kitchen equipment I&apos;m replacing?
-              </h3>
-              <p className="text-slate-700">
-                Donate functional items to shelters, culinary programs, or charity kitchens. Recycle metal cookware through scrap metal recycling. Many cities have metal recycling programs that accept stainless steel, aluminum, and cast iron. Avoid throwing usable equipment in the trash—someone else can benefit from what you&apos;re upgrading.
-              </p>
-            </div>
-          </div>
         </div>
+
+        {/* FAQ - Single Source of Truth */}
+        <BlogFAQ questions={carbonData.faq.questions} />
 
         <BlogEmailCapture />
         <AuthorBio />

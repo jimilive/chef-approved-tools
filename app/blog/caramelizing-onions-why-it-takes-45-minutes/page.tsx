@@ -1,111 +1,71 @@
+// ============================================================================
+// CARAMELIZING ONIONS - Blog Page (Data-Driven)
+// Migrated from inline to data-driven architecture
+// ============================================================================
+
 import Link from 'next/link'
+import { onionsData } from './onions-data'
 import { Flame, Clock, ThermometerSun, Beaker } from 'lucide-react'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import HowToSchema from '@/components/HowToSchema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
-import BlogLayout from '@/components/blog/BlogLayout'
-import BlogHero from '@/components/blog/BlogHero'
-import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import {
+  BlogLayout,
+  BlogHero,
+  BlogFAQ,
+  BlogEmailCapture
+} from '@/components/blog'
 import AuthorBio from '@/components/review/AuthorBio'
 
-// ISR: Regenerate page every hour for fresh content while allowing search engine caching
-export const revalidate = 3600 // 1 hour
+// ISR: Regenerate every hour
+export const revalidate = 3600
 
-
-export const metadata = generateBlogMetadata('caramelizing-onions-why-it-takes-45-minutes');
-
-const articleSchema = generateArticleSchema({
-  headline: 'Why Caramelized Onions Take 45 Minutes (Not 10)',
-  description: 'Professional chef explains the real process of caramelizing onions — why patience, temperature, and technique matter more than shortcuts.',
-  datePublished: "2025-09-19",
-  dateModified: '2025-10-21',
-  authorName: 'Scott Bradley',
-  authorUrl: 'https://www.chefapprovedtools.com/about',
-  url: 'https://www.chefapprovedtools.com/blog/caramelizing-onions-why-it-takes-45-minutes',
-  keywords: ['caramelized onions', 'how to caramelize onions', 'onion cooking tips', 'caramelization science']
-,
-  urlPrefix: 'blog',
-  urlSuffix: 'caramelizing-onions-why-it-takes-45-minutes'})
-
-const breadcrumbJsonLd = generateBreadcrumbSchema([
-  { name: 'Home', url: 'https://www.chefapprovedtools.com' },
-  { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
-  { name: 'Why Caramelized Onions Take 45 Minutes (Not 10)', url: 'https://www.chefapprovedtools.com/blog/caramelizing-onions-why-it-takes-45-minutes' }
-])
-
-const faqJsonLd = generateFAQSchema([
-  {
-    question: 'Can I use olive oil instead of butter?',
-    answer: 'Yes, but butter adds depth and creaminess. Try a 50/50 mix for the best of both worlds. Pure olive oil works fine and has a higher smoke point, but you lose the rich, nutty flavor that butter develops during the long cooking process. The combination gives you both stability and flavor.'
-  },
-  {
-    question: 'How long does it really take to caramelize onions?',
-    answer: 'About 40-50 minutes, depending on pan, stove, and onion type. Stainless steel pans may take slightly longer than cast iron because they don&apos;t retain heat as aggressively. Sweet onions like Vidalia caramelize slightly faster than yellow onions due to higher sugar content. There are no legitimate shortcuts—the time is necessary for proper flavor development.'
-  },
-  {
-    question: 'Do I need to cover the pan when caramelizing onions?',
-    answer: 'No—you want evaporation, not steaming. Covering the pan traps moisture, which prevents the sugars from concentrating and browning. The goal is to slowly drive off the water content (about 89% of the onion) so the sugars can caramelize. Covering defeats this process and leaves you with soggy, pale onions instead of deep, sweet caramelization.'
-  },
-  {
-    question: 'Why are my caramelized onions watery?',
-    answer: 'You started too crowded or too low. Use a wider pan and a little more heat next time. Overcrowding traps steam between the onion pieces, preventing proper evaporation. The heat should be medium-low—high enough to evaporate moisture but not so high that the onions burn. If your onions are swimming in liquid after 20 minutes, increase the heat slightly.'
-  },
-  {
-    question: 'Can I freeze caramelized onions?',
-    answer: 'Absolutely. Portion into small containers or ice cube trays for instant flavor boosts. Caramelized onions freeze beautifully for up to 3 months. Freeze them in tablespoon-sized portions so you can grab exactly what you need for soups, sauces, eggs, or burgers. They thaw quickly and retain their deep, sweet flavor.'
-  },
-  {
-    question: 'Why do recipes say 10 minutes when it really takes 45?',
-    answer: 'Because many recipes confuse softened onions with caramelized onions. Softened onions are translucent and cooked through but still pale—that takes about 10 minutes. True caramelization requires breaking down the sugars into hundreds of new flavor compounds, which only happens with extended low heat. The difference in flavor is dramatic, but many home cooks have never tasted properly caramelized onions.'
-  },
-  {
-    question: 'Can I add sugar to speed up caramelization?',
-    answer: 'You can, but it flattens the flavor and creates a one-dimensional sweetness. Natural caramelization develops complex layers—sweet, savory, slightly bitter, umami—that added sugar can&apos;t replicate. The slow breakdown of the onion&apos;s natural sugars creates depth. Adding sugar just makes them brown faster without the same flavor development.'
-  },
-  {
-    question: 'What&apos;s the difference between sautéed and caramelized onions?',
-    answer: 'Sautéed onions are cooked quickly over medium-high heat until softened and lightly browned (about 8-10 minutes). Caramelized onions are cooked slowly over medium-low heat for 40-50 minutes until deep brown and jammy. The extended time allows the natural sugars to break down and create new flavor compounds through the Maillard reaction and caramelization. The taste difference is enormous.'
-  }
-])
+// SEO Metadata
+export const metadata = generateBlogMetadata('caramelizing-onions-why-it-takes-45-minutes')
 
 export default function CaramelizingOnionsPage() {
+  // Generate schemas from data
+  const articleSchema = generateArticleSchema({
+    headline: onionsData.metadata.title,
+    description: onionsData.metadata.description,
+    datePublished: onionsData.metadata.publishedDate,
+    dateModified: onionsData.metadata.lastUpdated,
+    authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'caramelizing-onions-why-it-takes-45-minutes',
+    images: []
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+    { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
+    { name: onionsData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/caramelizing-onions-why-it-takes-45-minutes' }
+  ])
+
+  const faqSchema = generateFAQSchema(onionsData.faq.questions)
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <HowToSchema
-        name="How to Caramelize Onions"
-        description="Professional chef explains the real process of caramelizing onions — why patience, temperature, and technique matter more than shortcuts."
-        datePublished="2025-09-19"
-        totalTime="PT45M"
-        tools={["10-inch skillet (stainless steel or cast iron)", "Sharp knife", "Scraper"]}
-        steps={[
-          { name: "Prep the Onions", text: "Slice onions pole to pole, about ⅛\" thick. Thinner burns, thicker takes forever. Use a sharp knife — dull blades crush, releasing water too fast." },
-          { name: "Start with Fat", text: "Heat 2 tbsp of butter and a touch of oil in the pan over medium heat. The oil raises the butter's smoke point, giving you cushion." },
-          { name: "Sweat and Steam", text: "Add the onions and a pinch of salt. Stir to coat evenly. At first, they'll soften and release moisture. This isn't caramelization — it's prep work. Keep the heat steady. If you hear sizzling, reduce it." },
-          { name: "The Slow Browning", text: "Stir every 5–7 minutes, scraping the fond (those brown bits) from the pan. If the pan dries or starts to stick, add a splash of water or stock to deglaze. The onions will shift from white → gold → deep amber. Each shade is sweeter than the last." },
-          { name: "The Finish", text: "When the onions are mahogany brown and jammy, deglaze one last time with water, wine, or sherry. Stir and reduce. The texture should be glossy and thick, not oily. Taste — if they're bitter, you went too hot. If they're bland, you didn't go long enough." }
-        ]}
+        name={onionsData.howToSchema.name}
+        description={onionsData.howToSchema.description}
+        datePublished={onionsData.howToSchema.datePublished}
+        totalTime={onionsData.howToSchema.totalTime}
+        tools={onionsData.howToSchema.tools}
+        steps={onionsData.howToSchema.steps}
       />
 
-      <BlogLayout breadcrumbTitle="Why Caramelized Onions Take 45 Minutes (Not 10)">
+      <BlogLayout breadcrumbTitle={onionsData.breadcrumb.title}>
         <BlogHero
-          title="Why Caramelized Onions Take 45 Minutes (Not 10)"
-          introduction={["Professional chef explains the real process of caramelizing onions — why patience, temperature, and technique matter more than shortcuts."]}
-          publishedDate="2025-09-19"
-          lastUpdated="2025-10-21"
-          readTime="8 min read"
+          title={onionsData.hero.title}
+          introduction={onionsData.hero.introduction}
+          publishedDate={onionsData.metadata.publishedDate}
+          lastUpdated={onionsData.metadata.lastUpdated}
+          readTime={onionsData.metadata.readTime}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
@@ -183,19 +143,6 @@ export default function CaramelizingOnionsPage() {
 
           <div className="bg-slate-50 border border-slate-200 rounded-lg p-6 my-8">
             <ul className="space-y-3 mb-0">
-              {/* <li>
-                <strong className="text-slate-900">Stainless steel:</strong> Even browning, full flavor.{' '}
-                <CTAVisibilityTracker
-                  ctaId="caramelizing-onions-all-clad-1"
-                  position="mid_article"
-                  productSlug="all-clad-d3-10-inch"
-                  merchant="amazon"
-                >
-                  
-                    All-Clad D3 10&quot; Skillet
-                  
-                </CTAVisibilityTracker> — my go-to.
-              </li> */}
               <li>
                 <strong className="text-slate-900">Stainless steel:</strong> Even browning, full flavor. All-Clad D3 10&quot; Skillet — my go-to.
               </li>
@@ -385,9 +332,7 @@ export default function CaramelizingOnionsPage() {
           </p>
 
           <div className="bg-yellow-50 border-l-4 border-yellow-600 p-6 my-8">
-            <p className="font-semibold text-slate-900 mb-2 flex items-center gap-2">
-              <span className="text-2xl">🔥</span> Chef&apos;s Tip:
-            </p>
+            <p className="font-semibold text-slate-900 mb-2">Chef&apos;s Tip:</p>
             <p className="mb-0">
               Add a splash of balsamic vinegar or soy sauce at the end for depth and color — it enhances sweetness and adds umami without altering texture.
             </p>
@@ -413,29 +358,6 @@ export default function CaramelizingOnionsPage() {
                   </Link>
                 </CTAVisibilityTracker> — gentle on stainless.
               </li>
-              {/* <li>
-                <strong>Skillet:</strong>{' '}
-                <CTAVisibilityTracker
-                  ctaId="caramelizing-onions-all-clad-2"
-                  position="mid_article"
-                  productSlug="all-clad-d3-10-inch"
-                  merchant="amazon"
-                >
-                  
-                    All-Clad D3 Stainless 10&quot;
-                  
-                </CTAVisibilityTracker> or{' '}
-                <CTAVisibilityTracker
-                  ctaId="caramelizing-onions-lodge-2"
-                  position="mid_article"
-                  productSlug="lodge-cast-iron-skillet"
-                  merchant="amazon"
-                >
-                  <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-blue-700 underline">
-                    Lodge Cast Iron Skillet
-                  </Link>
-                </CTAVisibilityTracker>.
-              </li> */}
               <li>
                 <strong>Skillet:</strong> All-Clad D3 Stainless 10&quot; or{' '}
                 <CTAVisibilityTracker
@@ -449,35 +371,9 @@ export default function CaramelizingOnionsPage() {
                   </Link>
                 </CTAVisibilityTracker>.
               </li>
-              {/* <li>
-                <strong>Thermometer:</strong>{' '}
-                <CTAVisibilityTracker
-                  ctaId="caramelizing-onions-thermapen-1"
-                  position="mid_article"
-                  productSlug="thermoworks-thermapen-one"
-                  merchant="amazon"
-                >
-                  
-                    ThermoWorks Thermapen ONE
-                  
-                </CTAVisibilityTracker> — great for monitoring pan surface temps (~300°F ideal).
-              </li> */}
               <li>
                 <strong>Thermometer:</strong> ThermoWorks Thermapen ONE — great for monitoring pan surface temps (~300°F ideal).
               </li>
-              {/* <li>
-                <strong>Storage:</strong>{' '}
-                <CTAVisibilityTracker
-                  ctaId="caramelizing-onions-cambro-1"
-                  position="mid_article"
-                  productSlug="cambro-1-qt-containers"
-                  merchant="amazon"
-                >
-                  
-                    Cambro 1-Qt Containers
-                  
-                </CTAVisibilityTracker> — airtight for fridge or freezer.
-              </li> */}
               <li>
                 <strong>Storage:</strong> Cambro 1-Qt Containers — airtight for fridge or freezer.
               </li>
@@ -516,85 +412,10 @@ export default function CaramelizingOnionsPage() {
           <p>
             That&apos;s how professionals cook—not rushing the process, just respecting it.
           </p>
-
-          <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">
-            Frequently Asked Questions
-          </h2>
-
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                Can I use olive oil instead of butter?
-              </h3>
-              <p className="text-slate-700">
-                Yes, but butter adds depth and creaminess. Try a 50/50 mix for the best of both worlds. Pure olive oil works fine and has a higher smoke point, but you lose the rich, nutty flavor that butter develops during the long cooking process. The combination gives you both stability and flavor.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                How long does it really take to caramelize onions?
-              </h3>
-              <p className="text-slate-700">
-                About 40-50 minutes, depending on pan, stove, and onion type. Stainless steel pans may take slightly longer than cast iron because they don&apos;t retain heat as aggressively. Sweet onions like Vidalia caramelize slightly faster than yellow onions due to higher sugar content. There are no legitimate shortcuts—the time is necessary for proper flavor development.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                Do I need to cover the pan when caramelizing onions?
-              </h3>
-              <p className="text-slate-700">
-                No—you want evaporation, not steaming. Covering the pan traps moisture, which prevents the sugars from concentrating and browning. The goal is to slowly drive off the water content (about 89% of the onion) so the sugars can caramelize. Covering defeats this process and leaves you with soggy, pale onions instead of deep, sweet caramelization.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                Why are my caramelized onions watery?
-              </h3>
-              <p className="text-slate-700">
-                You started too crowded or too low. Use a wider pan and a little more heat next time. Overcrowding traps steam between the onion pieces, preventing proper evaporation. The heat should be medium-low—high enough to evaporate moisture but not so high that the onions burn. If your onions are swimming in liquid after 20 minutes, increase the heat slightly.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                Can I freeze caramelized onions?
-              </h3>
-              <p className="text-slate-700">
-                Absolutely. Portion into small containers or ice cube trays for instant flavor boosts. Caramelized onions freeze beautifully for up to 3 months. Freeze them in tablespoon-sized portions so you can grab exactly what you need for soups, sauces, eggs, or burgers. They thaw quickly and retain their deep, sweet flavor.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                Why do recipes say 10 minutes when it really takes 45?
-              </h3>
-              <p className="text-slate-700">
-                Because many recipes confuse softened onions with caramelized onions. Softened onions are translucent and cooked through but still pale—that takes about 10 minutes. True caramelization requires breaking down the sugars into hundreds of new flavor compounds, which only happens with extended low heat. The difference in flavor is dramatic, but many home cooks have never tasted properly caramelized onions.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                Can I add sugar to speed up caramelization?
-              </h3>
-              <p className="text-slate-700">
-                You can, but it flattens the flavor and creates a one-dimensional sweetness. Natural caramelization develops complex layers—sweet, savory, slightly bitter, umami—that added sugar can&apos;t replicate. The slow breakdown of the onion&apos;s natural sugars creates depth. Adding sugar just makes them brown faster without the same flavor development.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-2">
-                What&apos;s the difference between sautéed and caramelized onions?
-              </h3>
-              <p className="text-slate-700">
-                Sautéed onions are cooked quickly over medium-high heat until softened and lightly browned (about 8-10 minutes). Caramelized onions are cooked slowly over medium-low heat for 40-50 minutes until deep brown and jammy. The extended time allows the natural sugars to break down and create new flavor compounds through the Maillard reaction and caramelization. The taste difference is enormous.
-              </p>
-            </div>
-          </div>
         </div>
+
+        {/* FAQ - Single Source of Truth */}
+        <BlogFAQ questions={onionsData.faq.questions} />
 
         <BlogEmailCapture />
         <AuthorBio />

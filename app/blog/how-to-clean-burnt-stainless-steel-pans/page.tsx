@@ -7,7 +7,9 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import BlogFAQ from '@/components/blog/BlogFAQ'
 import AuthorBio from '@/components/review/AuthorBio'
+import { stainlessData } from './stainless-data'
 
 export const metadata = generateBlogMetadata('how-to-clean-burnt-stainless-steel-pans')
 
@@ -46,40 +48,7 @@ export default function CleanBurntStainlessSteelPost() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateFAQSchema([
-            {
-              question: "Can I use steel wool just once?",
-              answer: "No — even once will leave micro-scratches that dull and discolor your pan."
-            },
-            {
-              question: "How do chefs clean stainless in restaurants?",
-              answer: "Hot water soak, nylon scrub, and BKF. No fancy hacks."
-            },
-            {
-              question: "What causes rainbow discoloration?",
-              answer: "Heat oxidation. Remove it with vinegar or BKF polish."
-            },
-            {
-              question: "Can I soak overnight?",
-              answer: "Yes, but only in water or baking soda mix — never with bleach or harsh chemicals."
-            },
-            {
-              question: "Will this work for All-Clad or Made In pans?",
-              answer: "Yes — all quality stainless responds to these same steps."
-            },
-            {
-              question: "Is it safe to use baking soda on non-stick pans?",
-              answer: "No, this guide is for stainless steel only. Non-stick coatings require gentler cleaning with mild soap and soft sponges. Baking soda can damage non-stick surfaces."
-            },
-            {
-              question: "Can I put stainless steel pans in the dishwasher?",
-              answer: "You can, but hand washing is better for longevity. Dishwasher detergent is harsh and can dull the finish over time. Plus, burnt residue won't come off in a dishwasher anyway."
-            },
-            {
-              question: "What if the burnt spot won't come off after one treatment?",
-              answer: "Repeat the baking soda paste treatment. Severe burns may need 2-3 rounds. Let the paste sit longer (up to an hour) for stubborn spots. Patience beats aggressive scrubbing every time."
-            }
-          ]))
+          __html: JSON.stringify(generateFAQSchema(stainlessData.faq.questions))
         }}
       />
       <HowToSchema
@@ -410,59 +379,8 @@ export default function CleanBurntStainlessSteelPost() {
           </div>
         </div>
 
-        {/* FAQ Section */}
-        <div className="border-t border-gray-200 pt-12 mt-12" id="faq">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Frequently Asked Questions</h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I use steel wool just once?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                No — even once will leave micro-scratches that dull and discolor your pan.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">How do chefs clean stainless in restaurants?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Hot water soak, nylon scrub, and BKF. No fancy hacks.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What causes rainbow discoloration?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Heat oxidation. Remove it with vinegar or BKF polish.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I soak overnight?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Yes, but only in water or baking soda mix — never with bleach or harsh chemicals.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Will this work for All-Clad or Made In pans?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Yes — all quality stainless responds to these same steps.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Is it safe to use baking soda on non-stick pans?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                No, this guide is for stainless steel only. Non-stick coatings require gentler cleaning with mild soap and soft sponges. Baking soda can damage non-stick surfaces.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Can I put stainless steel pans in the dishwasher?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                You can, but hand washing is better for longevity. Dishwasher detergent is harsh and can dull the finish over time. Plus, burnt residue won&apos;t come off in a dishwasher anyway.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">What if the burnt spot won&apos;t come off after one treatment?</h3>
-              <p className="text-slate-700 leading-relaxed">
-                Repeat the baking soda paste treatment. Severe burns may need 2-3 rounds. Let the paste sit longer (up to an hour) for stubborn spots. Patience beats aggressive scrubbing every time.
-              </p>
-            </div>
-          </div>
+        <div id="faq">
+          <BlogFAQ questions={stainlessData.faq.questions} />
         </div>
 
         {/* Related Content */}

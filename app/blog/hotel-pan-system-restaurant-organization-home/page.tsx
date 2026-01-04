@@ -7,7 +7,9 @@ import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
+import BlogFAQ from '@/components/blog/BlogFAQ'
 import AuthorBio from '@/components/review/AuthorBio'
+import { hotelPanData } from './hotel-pan-data'
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -31,36 +33,7 @@ const breadcrumbJsonLd = generateBreadcrumbSchema([
   { name: 'Hotel Pan System Guide', url: 'https://www.chefapprovedtools.com/blog/hotel-pan-system-restaurant-organization-home' }
 ])
 
-const faqJsonLd = generateFAQSchema([
-  {
-    question: 'Are hotel pans only for restaurants?',
-    answer: 'No—they are perfect for home cooks who want professional-level organization. If you meal prep, cook in batches, or host family gatherings, hotel pans will change your kitchen.'
-  },
-  {
-    question: 'How do I know which size to buy?',
-    answer: 'Start with 1/6 pans (6-inch depth) for most home use. These are the most versatile size—big enough for meal prep portions but not so large they dominate your refrigerator.'
-  },
-  {
-    question: 'Can I put plastic hotel pans in the freezer?',
-    answer: 'Yes—plastic hotel pans are freezer-safe. They can be used for freezing stock, soups, and cooked grains.'
-  },
-  {
-    question: 'Can metal hotel pans go in the oven?',
-    answer: 'Yes—metal hotel pans are oven-safe up to 500°F+. Use them for roasting vegetables, baking casseroles, or holding food hot.'
-  },
-  {
-    question: 'How long do hotel pans last?',
-    answer: 'Decades. Plastic pans can last 20+ years with daily use. Metal pans are essentially indestructible. This is a one-time investment.'
-  },
-  {
-    question: 'Will plastic pans stain from tomato sauce?',
-    answer: 'Not if you buy opaque white versions. Translucent/clear plastic can stain, but solid white plastic resists staining even from pigmented foods.'
-  },
-  {
-    question: 'Are Curta pans as good as Cambro?',
-    answer: 'Cambro is the premium standard, but Curta delivers 90% of the performance at 50% of the cost. For home use, Curta is the smarter choice. Both are NSF approved and restaurant-grade.'
-  }
-])
+const faqJsonLd = generateFAQSchema(hotelPanData.faq.questions)
 
 export default async function HotelPanSystemPage() {
   // Fetch hotel pan products from Supabase
@@ -698,85 +671,9 @@ export default async function HotelPanSystemPage() {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="mb-12" id="faq">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Frequently Asked Questions</h2>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-            <div className="space-y-6">
-              <div className="border-b border-gray-200 pb-6">
-                <h3 className="text-lg font-bold text-slate-900 mb-2">
-                  Are hotel pans only for restaurants?
-                </h3>
-                <p className="text-slate-700">
-                  No—they&rsquo;re perfect for home cooks who want professional-level organization. If you meal prep, cook in batches, or host family gatherings, hotel pans will change your kitchen.
-                </p>
-              </div>
-
-              <div className="border-b border-gray-200 pb-6">
-                <h3 className="text-lg font-bold text-slate-900 mb-2">
-                  How do I know which size to buy?
-                </h3>
-                <p className="text-slate-700">
-                  <strong>Start with 1/6 pans (6-inch depth) for most home use.</strong> These are the most versatile size—big enough for meal prep portions but not so large they dominate your refrigerator.
-                </p>
-              </div>
-
-              <div className="border-b border-gray-200 pb-6">
-                <h3 className="text-lg font-bold text-slate-900 mb-2">
-                  Can I put plastic hotel pans in the freezer?
-                </h3>
-                <p className="text-slate-700">
-                  Yes—plastic hotel pans are freezer-safe. I use them for freezing stock, soups, and cooked grains.
-                </p>
-              </div>
-
-              <div className="border-b border-gray-200 pb-6">
-                <h3 className="text-lg font-bold text-slate-900 mb-2">
-                  Can metal hotel pans go in the oven?
-                </h3>
-                <p className="text-slate-700">
-                  Yes—metal hotel pans are oven-safe up to 500°F+. Use them for roasting vegetables, baking casseroles, or holding food hot.
-                </p>
-              </div>
-
-              <div className="border-b border-gray-200 pb-6">
-                <h3 className="text-lg font-bold text-slate-900 mb-2">
-                  Do I need to buy lids separately?
-                </h3>
-                <p className="text-slate-700">
-                  Some Curta sets include lids; some don&rsquo;t. <strong>I recommend buying the versions with lids included</strong>—it&rsquo;s more convenient and often more cost-effective than buying lids separately.
-                </p>
-              </div>
-
-              <div className="border-b border-gray-200 pb-6">
-                <h3 className="text-lg font-bold text-slate-900 mb-2">
-                  How long do hotel pans last?
-                </h3>
-                <p className="text-slate-700">
-                  <strong>Decades.</strong> I&rsquo;ve been using the same plastic pans at home for 20 years. Metal pans are essentially indestructible. This is a one-time investment.
-                </p>
-              </div>
-
-              <div className="border-b border-gray-200 pb-6">
-                <h3 className="text-lg font-bold text-slate-900 mb-2">
-                  Will plastic pans stain from tomato sauce?
-                </h3>
-                <p className="text-slate-700">
-                  <strong>Not if you buy opaque white versions</strong> (which is what I recommend). Translucent/clear plastic can stain, but the solid white plastic resists staining even from pigmented foods.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">
-                  Are Curta pans as good as Cambro?
-                </h3>
-                <p className="text-slate-700">
-                  Cambro is the premium standard, but <strong>Curta delivers 90% of the performance at 50% of the cost</strong>. For home use, Curta is the smarter choice. Both are NSF approved and restaurant-grade.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <div id="faq">
+          <BlogFAQ questions={hotelPanData.faq.questions} />
+        </div>
 
         {/* Bottom Line */}
         <section className="mb-12">

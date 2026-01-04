@@ -1,82 +1,62 @@
-import Link from 'next/link';
+// ============================================================================
+// BREAD SCIENCE GLUTEN DEVELOPMENT - Blog Page (Data-Driven)
+// Migrated from inline to data-driven architecture
+// ============================================================================
+
+import Link from 'next/link'
+import { breadData } from './bread-data'
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
+import { generateBlogMetadata } from '@/lib/metadata-helpers'
+import { FlaskConical, Timer, AlertTriangle, Wheat } from 'lucide-react'
 import {
-  generateArticleSchema,
-  generateBreadcrumbSchema,
-  generateFAQSchema
-} from '@/lib/schema';
-import { generateBlogMetadata } from '@/lib/metadata-helpers';
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker';
-import { ChefHat, FlaskConical, Timer, AlertTriangle, Wheat } from 'lucide-react';
-import BlogLayout from '@/components/blog/BlogLayout';
-import BlogHero from '@/components/blog/BlogHero';
-import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
-import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
-import AuthorBio from '@/components/review/AuthorBio';
+  BlogLayout,
+  BlogHero,
+  BlogFAQ,
+  BlogEmailCapture
+} from '@/components/blog'
+import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA'
+import AuthorBio from '@/components/review/AuthorBio'
 
-export const metadata = generateBlogMetadata('bread-science-gluten-development');
+// ISR: Regenerate every hour
+export const revalidate = 3600
 
-const articleSchema = generateArticleSchema({
-  headline: "Why Bread Gets Dense: Gluten Development Explained",
-  description: "The chemistry of gluten formation, kneading techniques, and how to troubleshoot bread problems. From a chef with 24 years of professional baking experience.",
-  datePublished: "2025-10-18",
-  dateModified: "2025-10-24",
-  authorName: "Scott Bradley",
-  urlPrefix: 'blog',
-  urlSuffix: 'bread-science-gluten-development'
-});
-
-const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: "Home", url: "https://www.chefapprovedtools.com" },
-  { name: "Blog", url: "https://www.chefapprovedtools.com/blog" },
-  { name: "Why Bread Gets Dense: Gluten Development Explained", url: "https://www.chefapprovedtools.com/blog/bread-science-gluten-development" }
-]);
-
-const faqSchema = generateFAQSchema([
-  {
-    question: "What is gluten and why does it matter in bread?",
-    answer: "Gluten is a protein network that forms when two proteins in wheat flour—glutenin and gliadin—bond together in the presence of water and mechanical action (kneading). This network traps gas produced by yeast, allowing bread to rise and giving it structure and chewiness. Without gluten development, bread would be dense, crumbly, and flat."
-  },
-  {
-    question: "How do I know when I've kneaded dough enough?",
-    answer: "Use the windowpane test: Take a small piece of dough and gently stretch it. If it stretches thin enough to see light through it without tearing, the gluten is fully developed. If it tears immediately, keep kneading. Most doughs need 8-10 minutes of hand kneading or 5-7 minutes in a stand mixer."
-  },
-  {
-    question: "Can you over-knead bread dough?",
-    answer: "Yes, but it's rare when kneading by hand. Over-kneaded dough becomes tight, tears easily, and produces dense bread. This usually only happens with prolonged machine kneading (15+ minutes in a stand mixer). Signs: the dough feels dry, tears when stretched, and doesn't spring back when poked."
-  },
-  {
-    question: "Why does no-knead bread work if gluten needs mechanical action?",
-    answer: "Time replaces mechanical action. In no-knead recipes, gluten develops slowly through autolysis—enzymes in the flour break down proteins, and the gluten network forms naturally over 12-18 hours. The long fermentation also develops complex flavor. No-knead bread trades speed for convenience and flavor."
-  }
-]);
-
-// ISR: Regenerate page every hour for fresh content while allowing search engine caching
-export const revalidate = 3600 // 1 hour
-
+// SEO Metadata
+export const metadata = generateBlogMetadata('bread-science-gluten-development')
 
 export default function BreadSciencePage() {
+  // Generate schemas from data
+  const articleSchema = generateArticleSchema({
+    headline: breadData.metadata.title,
+    description: breadData.metadata.description,
+    datePublished: breadData.metadata.publishedDate,
+    dateModified: breadData.metadata.lastUpdated,
+    authorName: 'Scott Bradley',
+    urlPrefix: 'blog',
+    urlSuffix: 'bread-science-gluten-development',
+    images: []
+  })
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: 'https://www.chefapprovedtools.com' },
+    { name: 'Blog', url: 'https://www.chefapprovedtools.com/blog' },
+    { name: breadData.breadcrumb.title, url: 'https://www.chefapprovedtools.com/blog/bread-science-gluten-development' }
+  ])
+
+  const faqSchema = generateFAQSchema(breadData.faq.questions)
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <BlogLayout breadcrumbTitle="Why Bread Gets Dense: Gluten Development Explained">
+      <BlogLayout breadcrumbTitle={breadData.breadcrumb.title}>
         <BlogHero
-          title="Why Bread Gets Dense: Gluten Development Explained"
-          introduction={["The chemistry of gluten formation, kneading techniques, and how to troubleshoot bread problems. From a chef with 24 years of professional baking experience."]}
-          publishedDate="2025-10-18"
-          lastUpdated="2025-10-24"
-          readTime="10 min read"
+          title={breadData.hero.title}
+          introduction={breadData.hero.introduction}
+          publishedDate={breadData.metadata.publishedDate}
+          lastUpdated={breadData.metadata.lastUpdated}
+          readTime={breadData.metadata.readTime}
         />
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
@@ -253,7 +233,7 @@ export default function BreadSciencePage() {
             <strong>Drawback:</strong> Requires planning ahead
           </p>
 
-          <BlogNewsletterCTA slug="bread-science-gluten-development" description="Get my free &quot;11 Essential Tools I Use Most&quot; PDF—the exact equipment I rely on after 24 years in professional kitchens, including my favorite baking tools. No fluff, just the tools that actually matter." />
+          <BlogNewsletterCTA slug={breadData.newsletterCTA.slug} description={breadData.newsletterCTA.description} />
 
           <h2 className="flex items-center gap-2">
             <Timer className="w-6 h-6 text-orange-700" />
@@ -373,27 +353,24 @@ export default function BreadSciencePage() {
           </p>
         </div>
 
+        {/* Related Articles */}
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/why-cooking-science-matters" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → Why Cooking Science Matters
-            </Link>
-            <Link href="/blog/what-is-emulsification" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → What is Emulsification?
-            </Link>
-            <Link href="/blog/cheese-sauce-mac-and-cheese" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → The Science of Cheese Sauce &amp; Mac and Cheese
-            </Link>
-            <Link href="/blog/mis-en-place-professional-cooking" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → Mise en Place: The Foundation of Professional Cooking
-            </Link>
+            {breadData.relatedArticles.map((article, index) => (
+              <Link key={index} href={article.href} className="text-orange-700 hover:text-orange-800 font-semibold">
+                → {article.title}
+              </Link>
+            ))}
           </div>
         </div>
+
+        {/* FAQ - Single Source of Truth */}
+        <BlogFAQ questions={breadData.faq.questions} />
 
         <BlogEmailCapture />
         <AuthorBio />
       </BlogLayout>
     </>
-  );
+  )
 }

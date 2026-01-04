@@ -8,6 +8,7 @@ import RelatedPosts from '@/components/blog/RelatedPosts';
 import AuthorBio from '@/components/review/AuthorBio';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema';
+import { handwashingData } from './handwashing-data';
 
 export const metadata = generateBlogMetadata('hand-washing-kitchen');
 
@@ -27,32 +28,6 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Hand-Washing in the Kitchen", url: "https://www.chefapprovedtools.com/blog/hand-washing-kitchen" }
 ]);
 
-const faqQuestions = [
-  {
-    question: "What temperature should water be for proper hand-washing?",
-    answer: "Water should be comfortably warm, approximately 100°F. Very hot water doesn't kill bacteria on hands (that would require scalding temperatures) and actually damages skin, creating crevices where bacteria can harbor. Warm water helps soap lather effectively for better cleaning."
-  },
-  {
-    question: "How long should you wash your hands when cooking?",
-    answer: "Wash hands for a minimum of 20 seconds with soap and vigorous scrubbing. Research shows 10-second washing removes approximately 90% of bacteria, while 20-second washing removes 99%. Singing 'Happy Birthday' twice or counting slowly to 20 ensures adequate duration."
-  },
-  {
-    question: "When should you wash hands during food preparation?",
-    answer: "Wash hands before starting any food prep, after handling raw meat/poultry/seafood, after touching eggshells, between handling different food types, after touching garbage, after touching your face or hair, after using the restroom, and after handling cleaning chemicals or money."
-  },
-  {
-    question: "Is hand sanitizer as effective as washing with soap and water?",
-    answer: "No, hand sanitizer is not an adequate substitute for soap and water in food preparation. Sanitizer kills bacteria but doesn't remove physical contamination like food residue. It's also less effective on visibly dirty hands and doesn't eliminate all foodborne pathogens like norovirus."
-  },
-  {
-    question: "What is the proper hand-washing technique for food safety?",
-    answer: "Wet hands with warm water, apply soap, then scrub vigorously for 20 seconds covering palms, backs of hands, between fingers, under fingernails, thumbs, and wrists. Rinse from wrists toward fingertips, then dry with clean paper towel. Use the towel to turn off the faucet."
-  },
-  {
-    question: "Does antibacterial soap work better than regular soap for kitchen hand-washing?",
-    answer: "No, antibacterial soap offers no advantage over regular soap for food safety hand-washing. The mechanical action of scrubbing combined with any soap's surfactant properties physically removes bacteria. The 20-second duration and proper technique matter far more than soap type."
-  }
-];
 
 export default function HandWashingInKitchenPage() {
   return (
@@ -67,7 +42,7 @@ export default function HandWashingInKitchenPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(faqQuestions)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFAQSchema(handwashingData.faq.questions)) }}
       />
 
       <BlogHero
@@ -330,7 +305,7 @@ export default function HandWashingInKitchenPage() {
         </div>
       </div>
 
-      <BlogFAQ questions={faqQuestions} />
+      <BlogFAQ questions={handwashingData.faq.questions} />
 
       <AuthorBio />
 
