@@ -10,7 +10,9 @@ import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
 import BlogNewsletterCTA from '@/components/blog/BlogNewsletterCTA';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 import AuthorBio from '@/components/review/AuthorBio';
+import { onionsData } from './onions-data';
 import { generateBlogMetadata } from '@/lib/metadata-helpers';
 
 export const metadata = generateBlogMetadata('onions-cooking-guide');
@@ -31,20 +33,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Complete Guide to Cooking Onions", url: "https://www.chefapprovedtools.com/blog/onions-cooking-guide" }
 ]);
 
-const faqSchema = generateFAQSchema([
-  {
-    question: "How do I cut onions without crying?",
-    answer: "Several methods work: Use a sharp knife (less cell damage = less irritant release), chill onions for 30 minutes before cutting (slows enzyme reactions), cut near running water or a fan (disperses irritants), or wear safety goggles. The most effective? A truly sharp knife and good ventilation."
-  },
-  {
-    question: "Can I substitute red onions for yellow onions?",
-    answer: "It depends. For cooked dishes, yes—they'll taste similar, though red onions are slightly milder and lose their color. For raw applications, red onions are milder and sweeter, so the substitution works well. For caramelizing, yellow onions are better due to higher sugar content."
-  },
-  {
-    question: "Why do my caramelized onions take so long?",
-    answer: "Because proper caramelization takes 45-60 minutes. You need to evaporate water (90% of onion weight), concentrate sugars, and allow the Maillard reaction and caramelization to happen. Those '10-minute caramelized onions' recipes are just browned onions, not truly caramelized."
-  }
-]);
+const faqSchema = generateFAQSchema(onionsData.faq.questions);
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -228,6 +217,8 @@ export default function OnionsGuidePage() {
             </Link>
           </div>
         </div>
+
+        <BlogFAQ questions={onionsData.faq.questions} />
 
         <BlogEmailCapture />
         <AuthorBio />

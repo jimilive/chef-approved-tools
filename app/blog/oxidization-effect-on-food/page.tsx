@@ -10,7 +10,9 @@ import { Beaker, Apple, Droplet, AlertTriangle, Lightbulb, Flame } from 'lucide-
 import BlogLayout from '@/components/blog/BlogLayout';
 import BlogHero from '@/components/blog/BlogHero';
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 import AuthorBio from '@/components/review/AuthorBio';
+import { oxidizationData } from './oxidization-data';
 
 export const metadata = generateBlogMetadata('oxidization-effect-on-food');
 
@@ -30,32 +32,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Food Oxidation Guide", url: "https://www.chefapprovedtools.com/blog/oxidization-effect-on-food" }
 ]);
 
-const faqSchema = generateFAQSchema([
-  {
-    question: "Is oxidized food safe to eat?",
-    answer: "Yes, oxidized food is usually safe to eat (brown apples, gray guacamole). It looks and tastes worse but isn't dangerous. The exception is rancid fats/oils, which can cause digestive upset and contain harmful compounds. If nuts or oil smell bad, throw them out."
-  },
-  {
-    question: "Does the pit prevent guacamole from oxidizing?",
-    answer: "Barely. The pit only protects the small area directly under it. Lime juice and plastic wrap pressed on the entire surface work much better. The pit myth persists because people want easy solutions, but the science doesn't support it working significantly."
-  },
-  {
-    question: "How long can I store cut fruit in lemon water?",
-    answer: "Up to 24 hours refrigerated. Beyond that, texture suffers and flavor leaches into the water. For best results, prep fruit no more than 4-6 hours before serving. If you need longer storage, vacuum seal with acid treatment instead of water submersion."
-  },
-  {
-    question: "Why does some produce oxidize faster than others?",
-    answer: "Different foods contain different amounts of oxidative enzymes and phenolic compounds. Apples and avocados have high enzyme levels = fast browning. Citrus fruits have natural ascorbic acid (vitamin C) which inhibits oxidation = very slow browning. Genetics and growing conditions also affect oxidation rates."
-  },
-  {
-    question: "Can I use bottled lemon juice instead of fresh?",
-    answer: "Yes, bottled lemon juice works for preventing oxidation. It contains citric acid which is what prevents browning. Fresh tastes better and has more vitamin C, but for anti-browning purposes, bottled juice is fine and more convenient for large batches."
-  },
-  {
-    question: "Does saltwater prevent oxidation?",
-    answer: "Salt water helps slightly by limiting oxygen exposure and slowing enzyme activity, but acid water works much better. If you're storing potatoes or other vegetables where you'll discard the soaking liquid, salt water is fine. For fruit you'll eat raw, acid water is better (doesn't make fruit salty)."
-  }
-]);
+const faqSchema = generateFAQSchema(oxidizationData.faq.questions);
 
 // ISR: Regenerate page every hour for fresh content while allowing search engine caching
 export const revalidate = 3600 // 1 hour
@@ -679,64 +656,6 @@ export default function OxidizationPage() {
             Controlled vs. uncontrolled oxidation. You want oxidation during cooking (for flavor), not during storage (which degrades quality).
           </p>
 
-          <h2>FAQ About Food Oxidation</h2>
-
-          <div>
-            <div className="mb-6">
-              <h3 className="font-bold text-slate-900">Is oxidized food safe to eat?</h3>
-              <div>
-                <div>
-                  <p>Yes, oxidized food is usually safe to eat (brown apples, gray guacamole). It looks and tastes worse but isn&apos;t dangerous. The exception is rancid fats/oils, which can cause digestive upset and contain harmful compounds. If nuts or oil smell bad, throw them out.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-bold text-slate-900">Does the pit prevent guacamole from oxidizing?</h3>
-              <div>
-                <div>
-                  <p>Barely. The pit only protects the small area directly under it. Lime juice and plastic wrap pressed on the entire surface work much better. The pit myth persists because people want easy solutions, but the science doesn&apos;t support it working significantly.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-bold text-slate-900">How long can I store cut fruit in lemon water?</h3>
-              <div>
-                <div>
-                  <p>Up to 24 hours refrigerated. Beyond that, texture suffers and flavor leaches into the water. For best results, prep fruit no more than 4-6 hours before serving. If you need longer storage, vacuum seal with acid treatment instead of water submersion.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-bold text-slate-900">Why does some produce oxidize faster than others?</h3>
-              <div>
-                <div>
-                  <p>Different foods contain different amounts of oxidative enzymes and phenolic compounds. Apples and avocados have high enzyme levels = fast browning. Citrus fruits have natural ascorbic acid (vitamin C) which inhibits oxidation = very slow browning. Genetics and growing conditions also affect oxidation rates.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-bold text-slate-900">Can I use bottled lemon juice instead of fresh?</h3>
-              <div>
-                <div>
-                  <p>Yes, bottled lemon juice works for preventing oxidation. It contains citric acid which is what prevents browning. Fresh tastes better and has more vitamin C, but for anti-browning purposes, bottled juice is fine and more convenient for large batches.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-bold text-slate-900">Does saltwater prevent oxidation?</h3>
-              <div>
-                <div>
-                  <p>Salt water helps slightly by limiting oxygen exposure and slowing enzyme activity, but acid water works much better. If you&apos;re storing potatoes or other vegetables where you&apos;ll discard the soaking liquid, salt water is fine. For fruit you&apos;ll eat raw, acid water is better (doesn&apos;t make fruit salty).</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <h2>The Bottom Line on Oxidation</h2>
 
           <p>
@@ -794,6 +713,8 @@ export default function OxidizationPage() {
             </Link>
           </div>
         </div>
+
+        <BlogFAQ questions={oxidizationData.faq.questions} />
 
         <BlogEmailCapture />
         <AuthorBio />
