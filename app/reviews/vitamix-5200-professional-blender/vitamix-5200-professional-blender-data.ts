@@ -269,28 +269,22 @@ export const reviewData = {
     title: 'Complete Your Professional Kitchen Setup',
     products: [
       {
-        emoji: '🥘',
-        name: 'Robot Coupe R2 Dice',
-        description: 'Professional food processor for restaurant-quality prep.',
-        href: '/reviews/robot-coupe-r2-dice'
-      },
-      {
-        emoji: '🍞',
-        name: 'KitchenAid Commercial Mixer',
-        description: 'Heavy-duty mixer for serious baking projects.',
-        href: '/reviews/kitchenaid-ksm8990wh'
-      },
-      {
-        emoji: '🥄',
-        name: 'Ninja Professional Blender',
-        description: 'Budget alternative for occasional home use.',
-        href: '/reviews/ninja-bl660-professional-blender'
-      },
-      {
         emoji: '🔪',
         name: 'John Boos Cutting Board',
         description: 'Professional cutting board for prep work.',
         href: '/reviews/john-boos-platinum-commercial-cutting-board'
+      },
+      {
+        emoji: '🍳',
+        name: 'Cuisinart Food Processor',
+        description: 'Professional food processor for prep work.',
+        href: '/reviews/cuisinart-dlc-10c-classic-food-processor'
+      },
+      {
+        emoji: '🥘',
+        name: 'Le Creuset Dutch Oven',
+        description: 'Premium enameled cast iron for soups and stews.',
+        href: '/reviews/le-creuset-signature-7-25-qt-dutch-oven'
       }
     ]
   },

@@ -147,6 +147,7 @@ export const productImages: Record<string, {
   // ============================================
 
   'john-boos-platinum-commercial-cutting-board': {
+    hero: '/images/products/john-boos-platinum-commercial-cutting-board/john-boos-platinum-commercial-cutting-board-hero.jpg',
     gallery: [
       '/images/products/john-boos-platinum-commercial-cutting-board/john-boos-platinum-commercial-cutting-board-1.webp',
       '/images/products/john-boos-platinum-commercial-cutting-board/john-boos-platinum-commercial-cutting-board-2.webp',
@@ -157,6 +158,7 @@ export const productImages: Record<string, {
   },
 
   'oxo-good-grips-bench-scraper': {
+    hero: '/images/products/oxo-good-grips-bench-scraper/oxo-good-grips-bench-scraper-hero.jpg',
     gallery: [
       '/images/products/oxo-good-grips-bench-scraper/oxo-good-grips-bench-scraper-1.webp',
       '/images/products/oxo-good-grips-bench-scraper/oxo-good-grips-bench-scraper-2.webp',
@@ -171,6 +173,7 @@ export const productImages: Record<string, {
   },
 
   'oxo-good-grips-swivel-peeler': {
+    hero: '/images/products/oxo-good-grips-swivel-peeler/oxo-good-grips-swivel-peeler-hero.jpg',
     gallery: [
       '/images/products/oxo-good-grips-swivel-peeler/oxo-good-grips-swivel-peeler-1.webp',
       '/images/products/oxo-good-grips-swivel-peeler/oxo-good-grips-swivel-peeler-2.webp',
@@ -178,6 +181,7 @@ export const productImages: Record<string, {
   },
 
   'victorinox-4-inch-paring-knife': {
+    hero: '/images/products/victorinox-4-inch-paring-knife/victorinox-4-inch-paring-knife-hero.jpg',
     gallery: [
       '/images/products/victorinox-4-inch-paring-knife/victorinox-4-inch-paring-knife-1.webp',
       '/images/products/victorinox-4-inch-paring-knife/victorinox-4-inch-paring-knife-2.webp',
@@ -189,6 +193,7 @@ export const productImages: Record<string, {
   },
 
   'victorinox-granton-edge-boning-knife': {
+    hero: '/images/products/victorinox-granton-edge-boning-knife/victorinox-granton-edge-boning-knife-hero.jpg',
     gallery: [
       '/images/products/victorinox-granton-edge-boning-knife/victorinox-granton-edge-boning-knife-1.webp',
       '/images/products/victorinox-granton-edge-boning-knife/victorinox-granton-edge-boning-knife-2.webp',
@@ -196,6 +201,7 @@ export const productImages: Record<string, {
   },
 
   'victorinox-offset-bread-knife': {
+    hero: '/images/products/victorinox-offset-bread-knife/victorinox-offset-bread-knife-hero.jpg',
     gallery: [
       '/images/products/victorinox-offset-bread-knife/victorinox-offset-bread-knife-1.webp',
       '/images/products/victorinox-offset-bread-knife/victorinox-offset-bread-knife-2.webp',
@@ -213,6 +219,7 @@ export const productImages: Record<string, {
   },
 
   'winco-heavy-duty-tongs': {
+    hero: '/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-hero.jpg',
     gallery: [
       '/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-1.webp',
       '/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-2.webp',
@@ -226,6 +233,7 @@ export const productImages: Record<string, {
   // ============================================
 
   'henckels-sharpening-steel': {
+    hero: '/images/products/henckels-sharpening-steel/henckels-sharpening-steel-hero.jpg',
     gallery: [
       '/images/products/henckels-sharpening-steel/henckels-sharpening-steel-1.webp',
       '/images/products/henckels-sharpening-steel/henckels-sharpening-steel-2.webp',

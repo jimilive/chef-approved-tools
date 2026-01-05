@@ -201,12 +201,6 @@ export const reviewData = {
         href: '/reviews/john-boos-platinum-commercial-cutting-board'
       },
       {
-        emoji: '🥄',
-        name: 'Rubbermaid Commercial Scraper',
-        description: 'Professional high-heat spatula for scraping and stirring.',
-        href: '/reviews/rubbermaid-commercial-cooks-scraper'
-      },
-      {
         emoji: '🧽',
         name: 'Zuperia Bar Mops',
         description: 'Professional kitchen towels.',

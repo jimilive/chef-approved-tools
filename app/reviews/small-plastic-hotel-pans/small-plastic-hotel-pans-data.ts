@@ -208,20 +208,8 @@ export const reviewData = {
 
   // SECTION 10: RELATED PRODUCTS
   relatedProducts: {
-    title: 'Complete Your Hotel Pan System',
+    title: 'Complete Your Kitchen Organization',
     products: [
-      {
-        emoji: '📦',
-        name: 'Large Plastic Hotel Pans',
-        description: 'Full and 1/3 pans for bigger batch cooking.',
-        href: '/reviews/large-plastic-hotel-pans'
-      },
-      {
-        emoji: '🔧',
-        name: 'Small Metal Hotel Pans',
-        description: 'Oven-safe stainless steel for hot holding.',
-        href: '/reviews/small-metal-hotel-pans'
-      },
       {
         emoji: '📋',
         name: 'Hotel Pan System Guide',
@@ -233,6 +221,12 @@ export const reviewData = {
         name: 'John Boos Cutting Board',
         description: 'NSF-certified commercial cutting board.',
         href: '/reviews/john-boos-platinum-commercial-cutting-board'
+      },
+      {
+        emoji: '🧽',
+        name: 'Zuperia Bar Mops',
+        description: 'Professional kitchen towels for cleanup.',
+        href: '/reviews/zuperia-bar-mops'
       }
     ]
   },

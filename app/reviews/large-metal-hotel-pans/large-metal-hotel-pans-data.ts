@@ -202,20 +202,8 @@ export const reviewData = {
 
   // SECTION 10: RELATED PRODUCTS
   relatedProducts: {
-    title: 'Complete Your Hotel Pan System',
+    title: 'Complete Your Kitchen Organization',
     products: [
-      {
-        emoji: '📦',
-        name: 'Small Metal Hotel Pans',
-        description: '1/6 pans for home BBQs and family gatherings.',
-        href: '/reviews/small-metal-hotel-pans'
-      },
-      {
-        emoji: '🔧',
-        name: 'Large Plastic Hotel Pans',
-        description: 'Full and 1/3 pans for cold storage and batch cooking.',
-        href: '/reviews/large-plastic-hotel-pans'
-      },
       {
         emoji: '📋',
         name: 'Hotel Pan System Guide',
@@ -227,6 +215,12 @@ export const reviewData = {
         name: 'Lodge Cast Iron Skillet Bundle',
         description: 'Essential for high-heat cooking.',
         href: '/reviews/lodge-seasoned-cast-iron-3-skillet-bundle'
+      },
+      {
+        emoji: '🧽',
+        name: 'Zuperia Bar Mops',
+        description: 'Professional kitchen towels for cleanup.',
+        href: '/reviews/zuperia-bar-mops'
       }
     ]
   },

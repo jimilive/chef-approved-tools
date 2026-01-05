@@ -230,12 +230,6 @@ export const reviewData = {
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
       },
       {
-        emoji: '🥘',
-        name: 'KitchenAid Commercial Mixer',
-        description: 'NSF-certified mixer for complete kitchen efficiency.',
-        href: '/reviews/kitchenaid-ksm8990wh'
-      },
-      {
         emoji: '🔪',
         name: 'Victorinox Granton Edge Boning Knife',
         description: 'Add specialty knife for protein work.',
