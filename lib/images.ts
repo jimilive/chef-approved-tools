@@ -214,9 +214,9 @@ export const productImages: Record<string, {
 
   'winco-heavy-duty-tongs': {
     gallery: [
-      '/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-9-inch-1.webp',
-      '/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-9-inch-2.webp',
-      '/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-9-inch-3.webp',
+      '/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-1.webp',
+      '/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-2.webp',
+      '/images/products/winco-heavy-duty-tongs/winco-heavy-duty-tongs-3.webp',
     ]
   },
 
@@ -225,13 +225,12 @@ export const productImages: Record<string, {
   // Same product, different naming
   // ============================================
 
-  // henckels-sharpening-steel uses henckels-honing-steel images
   'henckels-sharpening-steel': {
     gallery: [
-      '/images/products/henckels-honing-steel/henckels-honing-steel-1.webp',
-      '/images/products/henckels-honing-steel/henckels-honing-steel-2.webp',
-      '/images/products/henckels-honing-steel/henckels-honing-steel-3.webp',
-      '/images/products/henckels-honing-steel/henckels-honing-steel-4.webp',
+      '/images/products/henckels-sharpening-steel/henckels-sharpening-steel-1.webp',
+      '/images/products/henckels-sharpening-steel/henckels-sharpening-steel-2.webp',
+      '/images/products/henckels-sharpening-steel/henckels-sharpening-steel-3.webp',
+      '/images/products/henckels-sharpening-steel/henckels-sharpening-steel-4.webp',
     ]
   },
 
