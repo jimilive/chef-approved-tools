@@ -872,7 +872,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'victorinox-budget-vs-wusthof-premium-knives': {
-      title: "Budget Workhorse vs Premium Precision: Victorinox Chef's Knife vs Wüsthof Santoku",
+      title: "Victorinox Chef's Knife vs Wüsthof Santoku Compared",
       description: "After 24 years in professional kitchens, here's why you might want both: the Victorinox for everyday tasks and the Wüsthof Santoku for precision vegetable work.",
       canonical: "https://www.chefapprovedtools.com/blog/victorinox-budget-vs-wusthof-premium-knives",
       author: "Scott Bradley",
@@ -2772,7 +2772,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'air-fryer-vs-toaster-oven': {
-      title: "Air Fryer vs Toaster Oven: Which Countertop Appliance Deserves Your Kitchen Space?",
+      title: "Air Fryer vs Toaster Oven: Which Should You Buy?",
       description: "Professional chef compares air fryers and toaster ovens. Learn which delivers crispier results, better versatility, and the best value for your cooking needs.",
       canonical: "https://www.chefapprovedtools.com/blog/air-fryer-vs-toaster-oven",
       author: "Scott Bradley",
@@ -2822,7 +2822,7 @@ export const METADATA = {
     } as BlogMetadata,
 
     'pressure-cooker-vs-slow-cooker': {
-      title: "Pressure Cooker vs Slow Cooker: Which Cooking Method is Best for Your Kitchen?",
+      title: "Pressure Cooker vs Slow Cooker: Which Is Better?",
       description: "Professional chef compares pressure cookers and slow cookers. Learn which preserves more nutrients, develops better flavor, and fits your cooking lifestyle.",
       canonical: "https://www.chefapprovedtools.com/blog/pressure-cooker-vs-slow-cooker",
       author: "Scott Bradley",

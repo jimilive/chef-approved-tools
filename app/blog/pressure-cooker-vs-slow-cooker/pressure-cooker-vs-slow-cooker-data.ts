@@ -1,6 +1,6 @@
 export const comparisonData = {
   metadata: {
-    title: "Pressure Cooker vs Slow Cooker: Which Cooking Method is Best for Your Kitchen?",
+    title: "Pressure Cooker vs Slow Cooker: Which Is Better?",
     description: "Professional chef compares pressure cookers and slow cookers. Learn which preserves more nutrients, develops better flavor, and fits your cooking lifestyle.",
     publishedDate: "2025-12-21",
     lastUpdated: "2025-12-21",
