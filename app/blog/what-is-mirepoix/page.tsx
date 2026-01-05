@@ -156,7 +156,7 @@ export default function WhatIsMirepoixPage() {
                 <li key={index}><strong>{part.amount} {part.ingredient}</strong> ({part.percentage})</li>
               ))}
             </ul>
-            <p className="mt-4 text-sm text-gray-700"><strong>By weight:</strong> {definitionSection.ratio.byWeight}</p>
+            <p className="mt-4 text-sm text-slate-700"><strong>By weight:</strong> {definitionSection.ratio.byWeight}</p>
           </div>
 
           <h3>{definitionSection.history.title}</h3>

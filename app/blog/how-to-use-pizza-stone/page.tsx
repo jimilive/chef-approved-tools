@@ -169,7 +169,7 @@ export default function PizzaStonePage() {
               <li>Only begin preparing pizza during final 15 minutes of preheat</li>
               <li>Stone is ready when timer reaches 45 minutes (60 for thicker stones)</li>
             </ol>
-            <p className="mt-4 text-sm text-gray-700">
+            <p className="mt-4 text-sm text-slate-700">
               <strong>Exception:</strong> If using a baking steel, reduce preheat time to 30-45 minutes (steel conducts heat faster than stone).
             </p>
           </div>

@@ -112,6 +112,13 @@ export default function KitchenStarterKitPage() {
             More importantly, these tools teach you fundamental skills. A good knife teaches knife technique. Cast iron teaches heat control. A thermometer teaches precision. You&apos;re not just buying equipment—you&apos;re investing in your cooking education.
           </p>
 
+          <div className="bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-lg my-6">
+            <p className="font-semibold text-slate-900 mb-2">Professional Perspective</p>
+            <p className="text-slate-700 mb-0">
+              In 24 years of professional kitchens, I&apos;ve watched countless cooks struggle with cheap, flimsy equipment. The frustration isn&apos;t worth the savings. These five tools cost roughly $150-200 total, but they&apos;ll serve you for decades. That&apos;s less than a single restaurant meal for equipment that transforms your cooking permanently.
+            </p>
+          </div>
+
           <h2 className="flex items-center gap-2">
             <Utensils className="w-6 h-6 text-orange-700" />
             The Professional Method: Building Your Starter Kit

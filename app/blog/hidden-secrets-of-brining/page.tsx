@@ -157,7 +157,7 @@ export default function BriningSecretsPage() {
                 <li key={index}><strong>{item.label}:</strong> {item.value}</li>
               ))}
             </ul>
-            <p className="mt-4 text-sm text-gray-700">
+            <p className="mt-4 text-sm text-slate-700">
               <strong>Critical:</strong> {ratiosSection.formula.critical}
             </p>
           </div>

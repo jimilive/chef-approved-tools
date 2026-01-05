@@ -247,7 +247,7 @@ export default function SteakSearingPage() {
               <Timer className="w-5 h-5" />
               {searStep.timingGuide?.title}
             </h4>
-            <p className="text-gray-700 mb-3">{searStep.timingGuide?.note}</p>
+            <p className="text-slate-700 mb-3">{searStep.timingGuide?.note}</p>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div>
                 {searStep.timingGuide?.doneness.slice(0, 2).map((d, index) => (
@@ -260,7 +260,7 @@ export default function SteakSearingPage() {
                 ))}
               </div>
             </div>
-            <p className="text-gray-700 text-xs mt-3">{searStep.timingGuide?.disclaimer}</p>
+            <p className="text-slate-700 text-xs mt-3">{searStep.timingGuide?.disclaimer}</p>
           </div>
 
           {/* Step 5: The Rest */}

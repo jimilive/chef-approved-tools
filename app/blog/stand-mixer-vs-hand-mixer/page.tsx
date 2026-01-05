@@ -157,6 +157,21 @@ export default function StandMixerVsHandMixerComparison() {
             </div>
           </section>
 
+        <section className="bg-slate-50 rounded-xl p-8 mb-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Related Reading</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/blog/stand-mixer-buying-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Stand Mixer Buying Guide
+            </Link>
+            <Link href="/blog/bread-science-gluten-development" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Bread Science: Gluten Development
+            </Link>
+            <Link href="/blog/kitchen-starter-kit-first-5-tools" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Kitchen Starter Kit: First 5 Tools
+            </Link>
+          </div>
+        </section>
+
         <BlogFAQ questions={comparisonData.faq.questions} />
         <BlogEmailCapture />
         <AuthorBio />

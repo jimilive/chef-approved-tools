@@ -109,7 +109,7 @@ export default function MarinaraSaucePage() {
               <li><strong>1 teaspoon kosher salt</strong> - Diamond Crystal preferred, adjust to taste</li>
               <li><strong>8-10 fresh basil leaves</strong> - Torn by hand, added at the end</li>
             </ul>
-            <p className="mt-4 text-sm text-gray-700">
+            <p className="mt-4 text-sm text-slate-700">
               Optional: ¼ teaspoon red pepper flakes for heat. <strong>NO</strong> sugar, onions, carrots, or celery in authentic marinara.
             </p>
           </div>

@@ -188,8 +188,8 @@ export default function WhatIsVelvetingPage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-sm text-gray-700"><strong>For beef only, add:</strong> {formulaSection.marinade.beefAddition.replace('For beef only, add: ', '')}</p>
-            <p className="mt-2 text-sm text-gray-700"><strong>Simplified ratio:</strong> {formulaSection.marinade.simplifiedRatio.replace('Liquid to cornstarch ratio of 2:1. ', '')}</p>
+            <p className="mt-4 text-sm text-slate-700"><strong>For beef only, add:</strong> {formulaSection.marinade.beefAddition.replace('For beef only, add: ', '')}</p>
+            <p className="mt-2 text-sm text-slate-700"><strong>Simplified ratio:</strong> {formulaSection.marinade.simplifiedRatio.replace('Liquid to cornstarch ratio of 2:1. ', '')}</p>
           </div>
 
           <h3>{formulaSection.optionalTenderizers.title}</h3>
