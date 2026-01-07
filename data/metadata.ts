@@ -3810,8 +3810,30 @@ export const METADATA = {
       articleSection: "Knife Set Reviews",
     } as ReviewMetadata,
 
+    'lamson-fish-spatula': {
+      title: "Lamson Fish Spatula Review: A Chef's 24-Year Verdict",
+      description: "Lamson fish spatula review from a chef with 24 years of professional kitchen experience. Why this stainless steel fish turner is the one I recommend.",
+      canonical: "https://www.chefapprovedtools.com/reviews/lamson-fish-spatula",
+      author: "Scott Bradley",
+      imageAlt: "LamsonSharp fish spatula with high-carbon stainless steel slotted blade and black POM handle",
+      tier: 1,
+      testingPeriod: "24 Years Professional Experience",
+      productSlug: "lamson-fish-spatula",
+      publishedTime: "2026-01-08T10:00:00Z",
+      modifiedTime: "2026-01-08T10:00:00Z",
+      searchIntent: "transactional",
+      conversionPotential: "high",
+      affiliateProgram: "amazon",
+      commissionRate: 4.0,
+      averagePrice: "under-50",
+      productCategory: "kitchen-tools",
+      brand: "Lamson",
+      model: "Fish Spatula",
+      articleSection: "Kitchen Tool Reviews",
+    } as ReviewMetadata,
+
     // ========== MIGRATION 100% COMPLETE! ==========
-    // All 37 reviews successfully migrated to centralized metadata system
+    // All 38 reviews successfully migrated to centralized metadata system
   },
   
 };
