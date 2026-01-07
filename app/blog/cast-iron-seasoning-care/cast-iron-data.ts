@@ -5,24 +5,24 @@
 
 export const educationalData = {
   metadata: {
-    title: "Cast Iron Seasoning & Care: The Complete Professional Guide",
-    description: "The chemistry of cast iron seasoning, proper care techniques, restoration methods, and common mistakes to avoid. Make your cast iron last forever with professional methods from a chef with 24 years of experience.",
+    title: "How to Season and Clean Cast Iron Skillets",
+    description: "Learn how to season, clean, and care for cast iron skillets. A professional chef shares restaurant-tested methods used across 24 years in commercial kitchens.",
     publishedDate: "2025-09-27",
-    lastUpdated: "2025-11-07",
-    primaryKeyword: "cast iron seasoning",
-    secondaryKeywords: ["cast iron care", "how to season cast iron", "cast iron maintenance", "cast iron rust"],
+    lastUpdated: "2026-01-08",
+    primaryKeyword: "how to season cast iron skillet",
+    secondaryKeywords: ["how to clean cast iron skillet", "how to reseason cast iron", "how to clean rusty cast iron", "best oil for cast iron"],
     readTime: "18 min read"
   },
 
   breadcrumb: {
     category: "Blog",
-    title: "Cast Iron Seasoning & Care"
+    title: "How to Season & Clean Cast Iron"
   },
 
   hero: {
-    title: "Cast Iron Seasoning & Care: The Complete Professional Guide",
+    title: "How to Season and Clean Cast Iron Skillets",
     introduction: [
-      "The chemistry of cast iron seasoning, proper care techniques, restoration methods, and common mistakes to avoid. Make your cast iron last forever with professional methods."
+      "The complete guide to cast iron seasoning, cleaning, and care. Learn the professional methods I've used across 24 years in commercial kitchens to build bulletproof seasoning that lasts decades."
     ]
   },
 
@@ -44,13 +44,14 @@ export const educationalData = {
   },
 
   tableOfContents: [
-    { id: "chemistry", title: "The Chemistry: What Seasoning Actually Is" },
-    { id: "seasoning", title: "How to Season Cast Iron: Professional Methods" },
-    { id: "care", title: "Daily Care: Cleaning & Maintenance" },
-    { id: "restoration", title: "How to Restore Rusty or Damaged Cast Iron" },
+    { id: "seasoning", title: "How to Season a Cast Iron Skillet" },
+    { id: "cleaning", title: "How to Clean a Cast Iron Skillet" },
+    { id: "reseason", title: "How to Reseason Cast Iron" },
+    { id: "rusty", title: "How to Clean a Rusty Cast Iron Skillet" },
+    { id: "restore", title: "How to Restore an Old Cast Iron Skillet" },
+    { id: "after-cooking", title: "How to Clean Cast Iron After Cooking" },
+    { id: "best-oils", title: "Best Oils for Seasoning Cast Iron" },
     { id: "mistakes", title: "Common Mistakes That Ruin Cast Iron" },
-    { id: "equipment", title: "Recommended Equipment" },
-    { id: "troubleshooting", title: "Troubleshooting Guide" },
     { id: "faq", title: "Frequently Asked Questions" }
   ],
 
@@ -124,7 +125,7 @@ export const educationalData = {
     },
     {
       id: "seasoning",
-      title: "How to Season Cast Iron: Professional Methods",
+      title: "How to Season a Cast Iron Skillet",
       icon: "Flame",
       content: [
         "Whether you're seasoning a new pan or restoring an old one, the process is the same. I learned the right way back in the late '90s working brunch at a small spot in Seattle. We had a set of cast iron skillets that were older than I was, and they looked like black glass. The secret wasn't fancy oil or endless baking cycles—it was thin layers, consistency, and heat discipline.",
@@ -206,8 +207,8 @@ export const educationalData = {
       ]
     },
     {
-      id: "care",
-      title: "Daily Care: How to Clean and Maintain Cast Iron",
+      id: "cleaning",
+      title: "How to Clean a Cast Iron Skillet",
       icon: "Droplets",
       content: [
         "Proper daily care keeps your seasoning intact and your pan performing well. Cast iron care comes down to three key things: clean properly, dry completely, and re-oil regularly."
@@ -267,10 +268,10 @@ export const educationalData = {
       ]
     },
     {
-      id: "restoration",
-      title: "How to Restore Rusty or Damaged Cast Iron",
+      id: "rusty",
+      title: "How to Clean a Rusty Cast Iron Skillet",
       content: [
-        "Cast iron can be brought back from almost any condition. Rust, caked-on grime, and flaking seasoning are all fixable. The pan you've given up on can be restored."
+        "Rust on cast iron looks alarming but it's completely fixable. Cast iron can be brought back from almost any condition—rust, caked-on grime, and flaking seasoning are all surface-level problems. The pan you've given up on can be restored to like-new condition."
       ],
       restorationMethods: [
         {
@@ -313,6 +314,198 @@ export const educationalData = {
           explanation: "Excess oil oxidizes and becomes sticky. Food particles attract moisture and mold. This mistake usually happens with good intentions—people think more oil equals better protection. But excess oil doesn't polymerize, it just sits there going rancid."
         }
       ]
+    },
+    {
+      id: "reseason",
+      title: "How to Reseason Cast Iron",
+      content: [
+        "Reseasoning is a full refresh of your cast iron's protective coating. It's different from the light oiling you do after each use—reseasoning means stripping back and rebuilding the polymerized layer from scratch or adding several new layers to restore performance."
+      ],
+      whenNeeded: {
+        title: "When Reseasoning is Needed",
+        signs: [
+          "Food sticks when it didn't before",
+          "Dull gray patches instead of glossy black",
+          "Visible rust spots (even small ones)",
+          "Rough or flaky surface texture",
+          "Metallic taste transferring to food",
+          "Uneven color or patchy appearance"
+        ]
+      },
+      ovenMethod: {
+        title: "Full Oven Reseasoning Method",
+        intro: "This is the complete reseasoning process for pans that need a fresh start:",
+        steps: [
+          "**Strip the old seasoning** – Scrub with steel wool or use a self-cleaning oven cycle to remove all existing seasoning. You want bare gray metal.",
+          "**Wash thoroughly** – Use hot soapy water to remove all residue and metal particles. Rinse completely.",
+          "**Dry immediately on the stove** – Heat over low for 5 minutes until all moisture evaporates. The pan should look dull gray.",
+          "**Apply a paper-thin layer of oil** – Use grapeseed, Crisco, or canola. Wipe until it looks almost dry.",
+          "**Bake at 450°F for 1 hour** – Place upside down on middle rack with foil below to catch drips.",
+          "**Cool in the oven** – Turn off heat and let cool completely inside (prevents thermal shock).",
+          "**Repeat 3-5 times** – Each thin layer builds a more durable foundation."
+        ]
+      },
+      stovetopMethod: {
+        title: "Quick Stovetop Reseasoning",
+        intro: "For minor touch-ups when you don't need a full strip and rebuild:",
+        steps: [
+          "Clean the pan and dry completely on the stove",
+          "Apply a very thin layer of oil while the pan is warm",
+          "Heat over medium until the oil smokes lightly (1-2 minutes)",
+          "Wipe out excess and repeat 2-3 times",
+          "Let cool and store"
+        ],
+        note: "This method works for maintenance and minor damage. For significant rust, flaking, or buildup, use the full oven method."
+      }
+    },
+    {
+      id: "restore",
+      title: "How to Restore an Old Cast Iron Skillet",
+      content: [
+        "Vintage and inherited cast iron pans are often the best candidates for restoration. Older pans were typically machined smoother than modern cast iron, and decades of use created incredibly slick surfaces. That rusty pan from your grandmother's garage might become your best piece of cookware."
+      ],
+      assessment: {
+        title: "Assessing Vintage or Inherited Pans",
+        points: [
+          "**Check for cracks** – Hold the pan up to light and look for hairline cracks. Small cracks can be used with care; large cracks mean the pan is unsafe.",
+          "**Look for warping** – Place on a flat surface. If it rocks or doesn't sit flat, the pan is warped. Minor warping is usable; severe warping affects heat distribution.",
+          "**Inspect for pitting** – Deep pits from rust damage are permanent but don't ruin the pan. Heavy pitting may require more seasoning layers.",
+          "**Feel the surface** – Vintage pans are often smoother than modern ones. This is a good sign—smooth surfaces season beautifully."
+        ]
+      },
+      deepCleaning: {
+        title: "Deep Cleaning for Neglected Pans",
+        intro: "For pans with years of buildup, carbon deposits, or unknown history:",
+        methods: [
+          {
+            name: "Oven Cleaner Method",
+            steps: [
+              "Spray the entire pan with oven cleaner (Easy-Off yellow cap works well)",
+              "Place in a garbage bag and seal for 24-48 hours",
+              "Scrub with steel wool and hot water",
+              "Repeat if needed until bare metal is exposed",
+              "Neutralize with vinegar solution, rinse thoroughly",
+              "Dry immediately and season from scratch"
+            ],
+            warning: "Use gloves and work outdoors or in a well-ventilated area. Oven cleaner is caustic."
+          },
+          {
+            name: "Electrolysis Method",
+            description: "For serious collectors, electrolysis uses electrical current to remove rust and old seasoning without damaging the iron. This requires a specific setup (battery charger, washing soda solution, sacrificial anode) and is beyond basic restoration, but it's the gentlest method for valuable vintage pieces."
+          }
+        ]
+      }
+    },
+    {
+      id: "after-cooking",
+      title: "How to Clean Cast Iron After Cooking",
+      content: [
+        "The moments immediately after cooking are critical for cast iron maintenance. Clean properly while the pan is still warm, and you'll preserve your seasoning and prevent rust. Wait too long or use the wrong technique, and you'll undo weeks of built-up patina."
+      ],
+      immediateSteps: {
+        title: "Immediate Post-Cooking Care",
+        steps: [
+          "**Let the pan cool slightly** – Don't rinse a screaming-hot pan. Wait 2-3 minutes until you can handle it safely, but don't let it cool completely.",
+          "**Wipe while warm** – Use paper towels to remove food residue and excess oil. Warm fat lifts away easily; cold fat sticks.",
+          "**Scrape stuck bits** – Use a plastic scraper or wooden spatula for anything that doesn't wipe off. A chainmail scrubber works for stubborn residue.",
+          "**Rinse with hot water if needed** – For sticky or burnt-on food, run hot water over the pan while scraping. No soap needed for most cleaning."
+        ]
+      },
+      deglazeMethod: {
+        title: "Hot Pan Deglaze Technique",
+        intro: "For stubborn stuck-on food, use the restaurant technique:",
+        steps: [
+          "While the pan is still hot (but not smoking), add about 1/4 cup of hot water",
+          "The water will sizzle and steam—this is normal",
+          "Use a wooden spoon or spatula to scrape the bottom as the water loosens residue",
+          "Pour out the dirty water and wipe clean",
+          "Dry on the stove and apply light oil"
+        ],
+        warning: "**Never** add cold water to a hot cast iron pan. Thermal shock can crack the iron. Always use hot water on hot pans."
+      },
+      whatNotToDo: {
+        title: "What NOT to Do After Cooking",
+        avoid: [
+          "**Don't soak the pan** – Even 10 minutes of soaking starts the rust process",
+          "**Don't use cold water on a hot pan** – Thermal shock can crack cast iron",
+          "**Don't air dry** – Towel dry, then heat dry on the stove. Hidden moisture causes rust.",
+          "**Don't scrub with steel wool** – Unless you're doing a full restoration",
+          "**Don't leave dirty overnight** – Food residue attracts moisture and can damage seasoning"
+        ]
+      }
+    },
+    {
+      id: "best-oils",
+      title: "Best Oils for Seasoning Cast Iron",
+      content: [
+        "The oil you choose for seasoning matters. Different oils create different finishes, and the wrong oil can leave your pan sticky, flaky, or rancid. After testing dozens of oils across 24 years of professional use, I have clear recommendations."
+      ],
+      scienceIntro: {
+        title: "What Makes an Oil Good for Seasoning",
+        content: "The best seasoning oils share three characteristics: high smoke point (allows polymerization without burning), high percentage of unsaturated fats (forms stronger polymer bonds), and neutral flavor (won't impart off-tastes). When you heat oil past its smoke point on cast iron, the fat molecules break down and reorganize into a hard, slick polymer coating."
+      },
+      comparisonTable: {
+        title: "Best Oils for Cast Iron Care",
+        headers: ["Oil", "Best Use", "Why It Works", "Rating"],
+        rows: [
+          {
+            oil: "Grapeseed Oil",
+            bestUse: "All-purpose seasoning & maintenance",
+            why: "High polyunsaturated fat content for strong polymerization. Durable, neutral, affordable. The Kitchn's top pick.",
+            rating: 5
+          },
+          {
+            oil: "Canola / Vegetable Oil",
+            bestUse: "Daily post-cooking maintenance",
+            why: "Lodge's official recommendation. Affordable, effective, widely available. Lodge uses soybean oil at their factory.",
+            rating: 5
+          },
+          {
+            oil: "Crisco (Vegetable Shortening)",
+            bestUse: "Initial seasoning & restoration",
+            why: "Professional standard for decades. Solid form makes thin application easier. Excellent adhesion to bare iron.",
+            rating: 5
+          },
+          {
+            oil: "Avocado Oil",
+            bestUse: "High-heat searing",
+            why: "Very high smoke point handles extreme heat. Builds durable layer. More expensive but works well.",
+            rating: 4
+          },
+          {
+            oil: "Sunflower Oil",
+            bestUse: "Alternative to grapeseed",
+            why: "Similar polyunsaturated fat profile to grapeseed. Good results, widely available.",
+            rating: 4
+          }
+        ]
+      },
+      smokePointNote: "For detailed smoke point information, see our Guide to Cooking Oils & Smoke Points.",
+      oilsToAvoid: {
+        title: "Oils to Avoid for Seasoning",
+        oils: [
+          {
+            name: "Olive Oil",
+            reason: "Low smoke point burns before polymerizing, leaving sticky residue. Save it for cooking, not seasoning."
+          },
+          {
+            name: "Flaxseed Oil",
+            reason: "Creates a beautiful hard finish but it's brittle and prone to flaking with regular use. Looks great on display pans but won't hold up to daily cooking."
+          },
+          {
+            name: "Butter",
+            reason: "Milk solids burn at low temperatures creating uneven, sticky coating. Use clarified butter (ghee) if you must."
+          },
+          {
+            name: "Lard / Bacon Grease",
+            reason: "Traditional but goes rancid if pan sits unused for weeks. Fine for cooking, not ideal for long-term seasoning storage."
+          }
+        ]
+      },
+      professionalRecommendation: {
+        title: "My Professional Recommendation",
+        content: "For most home cooks, I recommend **Crisco vegetable shortening** or **grapeseed oil**. Crisco is the professional standard—it's what commercial kitchens have used for decades because it's consistent, affordable, and creates durable seasoning. Grapeseed is my everyday choice because it's liquid (easier to apply), has a high smoke point, and works well for both oven seasoning and stovetop maintenance. Skip the flaxseed unless you're willing to be very precise with thin layers—it creates a beautiful finish but flakes easily if applied wrong."
+      }
     },
     {
       id: "mistakes",
@@ -490,8 +683,28 @@ export const educationalData = {
         answer: "Seasoning is a layer of polymerized oil bonded to the cast iron surface. When you heat oil past its smoke point, it undergoes a chemical reaction called polymerization, transforming from liquid fat into a hard, slick, protective coating. This layer prevents rust, creates a naturally non-stick surface, and improves with use over time."
       },
       {
-        question: "Can I use soap on cast iron?",
-        answer: "Yes, modern dish soap won't damage properly seasoned cast iron. The myth comes from old soaps containing lye. Today's gentle dish soaps are fine, but a little goes a long way. Repeated use can weaken seasoning over time, so think of soap as a last resort, not a habit."
+        question: "Can you use soap on cast iron?",
+        answer: "Yes, contrary to popular belief, mild dish soap is fine for cleaning cast iron. The seasoning is polymerized oil that's bonded to the metal—it won't wash off with soap. Just avoid soaking and harsh detergents."
+      },
+      {
+        question: "How often should you season cast iron?",
+        answer: "A well-maintained pan needs full re-seasoning only once or twice a year. However, you should apply a light coat of oil after every wash. If food starts sticking or the surface looks dull/patchy, it's time to re-season."
+      },
+      {
+        question: "Can cast iron go in the dishwasher?",
+        answer: "No. Dishwashers will strip the seasoning and cause rust. Always hand wash cast iron and dry immediately."
+      },
+      {
+        question: "What temperature do you season cast iron at?",
+        answer: "450-500°F for one hour. This temperature is above the smoke point of most oils, allowing the oil to polymerize and bond to the iron."
+      },
+      {
+        question: "How do you know if cast iron needs to be reseasoned?",
+        answer: "Signs include: food sticking when it didn't before, dull gray patches instead of black, visible rust spots, or a rough/flaky surface."
+      },
+      {
+        question: "Can you ruin cast iron?",
+        answer: "It's nearly impossible to permanently ruin cast iron. Even severely rusted or damaged pans can be restored. The only real damage is cracking from thermal shock (cold water on screaming hot pan) or dropping."
       },
       {
         question: "What oil is best for seasoning cast iron?",
@@ -545,9 +758,8 @@ export const educationalData = {
   },
 
   relatedArticles: [
-    { href: "/blog/why-cooking-science-matters", title: "Why Cooking Science Matters" },
+    { href: "/blog/cast-iron-vs-carbon-steel-pan", title: "Cast Iron vs Carbon Steel: Which Should You Buy?" },
     { href: "/blog/guide-cooking-oils-smoke-points", title: "Guide to Cooking Oils & Smoke Points" },
-    { href: "/blog/fat-is-flavor", title: "Why Fat is Flavor (And How to Use It)" },
     { href: "/blog/how-to-sear-steaks-like-restaurant-chef", title: "How to Sear Steaks Like a Restaurant Chef" },
     { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", title: "Lodge Cast Iron Skillet Bundle Review" },
     { href: "/reviews/rubbermaid-commercial-cooks-scraper", title: "Rubbermaid Cook's Scraper Review" }

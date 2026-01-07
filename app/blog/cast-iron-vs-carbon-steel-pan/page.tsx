@@ -161,6 +161,18 @@ export default function CastIronVsCarbonSteelComparison() {
             </div>
           </section>
 
+        <section className="bg-slate-50 rounded-xl p-8 mb-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Related Reading</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/blog/cast-iron-seasoning-care" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → How to Season and Clean Cast Iron Skillets
+            </Link>
+            <Link href="/blog/guide-cooking-oils-smoke-points" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Guide to Cooking Oils & Smoke Points
+            </Link>
+          </div>
+        </section>
+
         <BlogFAQ questions={comparisonData.faq.questions} />
         <BlogEmailCapture />
         <AuthorBio />

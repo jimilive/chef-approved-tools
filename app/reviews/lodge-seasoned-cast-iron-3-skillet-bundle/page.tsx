@@ -430,6 +430,20 @@ export default async function LodgeCastIronReviewPage() {
             </Link>
           </div>
 
+          {/* RELATED GUIDES */}
+          <div className="bg-slate-50 rounded-xl p-6 mb-8">
+            <h3 className="text-xl font-bold text-slate-900 mb-4">Cast Iron Care Resources</h3>
+            <p className="text-slate-700 mb-4">
+              Get the most out of your Lodge skillets with our complete care guide:
+            </p>
+            <Link
+              href="/blog/cast-iron-seasoning-care"
+              className="text-orange-700 hover:text-orange-800 font-semibold"
+            >
+              → How to Season and Clean Cast Iron Skillets
+            </Link>
+          </div>
+
           {/* SECTION 18: RELATED PRODUCTS */}
           <RelatedProductsGrid
             title={reviewData.relatedProducts.title}
