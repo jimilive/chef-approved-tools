@@ -522,6 +522,11 @@ export default function KitchenStarterKitPage() {
                 </Link>
               </CTAVisibilityTracker>
             </li>
+            <li>
+              <Link href="/blog/stand-mixer-vs-hand-mixer" className="text-orange-700 hover:text-orange-700 font-medium">
+                Hand Mixer vs Stand Mixer: Which Do You Need?
+              </Link>
+            </li>
           </ul>
         </div>
 

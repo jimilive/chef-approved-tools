@@ -56,6 +56,7 @@ export const breadData = {
     { href: "/blog/why-cooking-science-matters", title: "Why Cooking Science Matters" },
     { href: "/blog/what-is-emulsification", title: "What is Emulsification?" },
     { href: "/blog/cheese-sauce-mac-and-cheese", title: "The Science of Cheese Sauce & Mac and Cheese" },
-    { href: "/blog/mis-en-place-professional-cooking", title: "Mise en Place: The Foundation of Professional Cooking" }
+    { href: "/blog/mis-en-place-professional-cooking", title: "Mise en Place: The Foundation of Professional Cooking" },
+    { href: "/blog/stand-mixer-vs-hand-mixer", title: "Hand Mixer vs Stand Mixer: Which Do You Need?" }
   ]
 }
