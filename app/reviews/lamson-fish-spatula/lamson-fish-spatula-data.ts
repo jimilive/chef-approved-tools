@@ -151,39 +151,39 @@ export const reviewData = {
   },
 
   // SECTION: COMPARISON TABLE
+  // Note: Comparison data now in get-fish-spatula-comparison.ts with affiliate links
   comparisonTable: {
     title: 'How the Lamson Compares to Other Fish Spatulas',
     products: [
       { name: 'Lamson', isHighlighted: true },
       { name: 'Wüsthof' },
       { name: 'OXO' },
-      { name: 'Victorinox' },
-      { name: 'Winco' }
+      { name: 'Victorinox' }
     ],
     rows: [
       {
         feature: 'Material',
-        values: ['High-Carbon SS', 'Stainless Steel', 'Stainless Steel', 'Stainless Steel', 'Stainless Steel']
+        values: ['High-Carbon SS', 'Stainless Steel', 'Stainless Steel', 'Stainless Steel']
       },
       {
         feature: 'Made In',
-        values: ['USA', 'Germany', 'China', 'Switzerland', 'China']
+        values: ['USA', 'Germany', 'China', 'Switzerland']
       },
       {
         feature: 'Left-Hand Option',
-        values: ['Yes', 'No', 'No', 'No', 'No']
+        values: ['Yes', 'No', 'No', 'No']
       },
       {
         feature: 'Handle',
-        values: ['POM', 'POM', 'Silicone', 'Fibrox', 'Wood']
+        values: ['POM', 'POM', 'Silicone', 'Fibrox']
       },
       {
         feature: 'Professional Grade',
-        values: ['Yes', 'Yes', 'No', 'Yes', 'Yes']
+        values: ['Yes', 'Yes', 'No', 'Yes']
       },
       {
         feature: 'Scott\'s Pick',
-        values: ['Winner', 'Runner-up', 'Budget+', 'Good', 'Budget']
+        values: ['Winner', 'Runner-up', 'Budget+', 'Good']
       }
     ]
   },

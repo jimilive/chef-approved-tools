@@ -21,10 +21,12 @@ import {
   RelatedProductsGrid
 } from '@/components/review'
 import ReviewLayout from '@/components/review/ReviewLayout'
+import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import AuthorBio from '@/components/review/AuthorBio'
 
 // Import review data
 import { reviewData } from './lamson-fish-spatula-data'
+import { getFishSpatulaComparison } from './get-fish-spatula-comparison'
 
 const PRODUCT_SLUG = 'lamson-fish-spatula'
 
@@ -101,6 +103,9 @@ export default async function LamsonFishSpatulaReview() {
     { url: rightHandedLink, label: 'Right-Handed', vendor: 'amazon', is_primary: true },
     { url: leftHandedLink, label: 'Left-Handed', vendor: 'amazon', is_primary: false }
   ]
+
+  // Get comparison data for competitor table
+  const fishSpatulaComparisonData = getFishSpatulaComparison()
 
   return (
     <ReviewLayout
@@ -212,48 +217,13 @@ export default async function LamsonFishSpatulaReview() {
       </section>
 
       {/* SECTION 5: COMPARISON TABLE */}
-      <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
-        <h2 className="text-3xl font-bold text-slate-900 mb-6">{reviewData.comparisonTable.title}</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-left">
-            <thead>
-              <tr className="border-b-2 border-slate-200">
-                <th className="py-3 px-4 font-semibold text-slate-700">Feature</th>
-                {reviewData.comparisonTable.products.map((product, i) => (
-                  <th
-                    key={i}
-                    className={`py-3 px-4 font-semibold text-center ${product.isHighlighted ? 'bg-orange-50 text-orange-700' : 'text-slate-700'}`}
-                  >
-                    {product.name}
-                    {product.isHighlighted && <span className="block text-xs font-normal">Our Pick</span>}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {reviewData.comparisonTable.rows.map((row, rowIndex) => (
-                <tr key={rowIndex} className="border-b border-slate-100">
-                  <td className="py-3 px-4 font-medium text-slate-700">{row.feature}</td>
-                  {row.values.map((value, colIndex) => (
-                    <td
-                      key={colIndex}
-                      className={`py-3 px-4 text-center ${colIndex === 0 ? 'bg-orange-50 font-semibold' : ''}`}
-                    >
-                      {value === 'Yes' ? <span className="text-green-600">✓ Yes</span> :
-                       value === 'No' ? <span className="text-slate-400">✗ No</span> :
-                       value === 'Winner' ? <span className="text-orange-600 font-bold">⭐ Winner</span> :
-                       value}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="text-sm text-slate-600 mt-4">
-          The Wüsthof fish spatula (480/mo searches) and Winco fish spatula (140/mo, KD 3) are solid alternatives. The Victorinox fish spatula offers Fibrox handle comfort. But only Lamson offers a left-handed version.
-        </p>
-      </section>
+      <ProductComparisonTable
+        title={fishSpatulaComparisonData.title}
+        subtitle={fishSpatulaComparisonData.subtitle}
+        products={fishSpatulaComparisonData.products}
+        comparisonRows={fishSpatulaComparisonData.comparisonRows}
+        highlightedProduct={fishSpatulaComparisonData.highlightedProduct}
+      />
 
       {/* POST-COMPARISON CTA */}
       <AmazonCTA
