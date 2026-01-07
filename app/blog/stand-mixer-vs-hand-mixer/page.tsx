@@ -53,6 +53,14 @@ export default function StandMixerVsHandMixerComparison() {
           readTime={comparisonData.metadata.readTime}
         />
 
+        {/* Quick Answer for Featured Snippet */}
+        <section className="bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-lg mb-8">
+          <h2 className="text-xl font-bold text-slate-900 mb-3">Quick Answer</h2>
+          <p className="text-lg text-slate-800 leading-relaxed">
+            {comparisonData.directAnswer?.summary}
+          </p>
+        </section>
+
         <BlogQuickAnswer
           optionA={comparisonData.quickAnswer.standMixerChoice}
           optionB={comparisonData.quickAnswer.handMixerChoice}
