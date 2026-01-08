@@ -200,6 +200,14 @@ export const reviewData = {
       {
         question: "Should I buy the 8-inch or 10-inch Victorinox chef knife?",
         answer: "For most home cooks, the 8-inch is the better choice. It handles 90% of tasks with better maneuverability and control. Choose 8-inch if: You have limited counter space, prefer nimble/precise cutting, are new to cooking, want one versatile knife, have smaller hands. Choose 10-inch if: You regularly break down whole chickens/large roasts, prep in bulk for meal prep, have large cutting boards, prefer longer blade for slicing. Professional advice: I own both and use the 8-inch for 90% of tasks. The 10-inch comes out for breaking down proteins and large vegetable prep. Start with the 8-inch, add the 10-inch later if needed."
+      },
+      {
+        question: "Where is the Victorinox Fibrox made?",
+        answer: "The Victorinox Fibrox is made in Ibach, Switzerland, where Victorinox has manufactured knives since 1884. The same factory produces the iconic Swiss Army Knife. Swiss manufacturing means strict quality control, precision engineering, and over 140 years of knife-making expertise. The high-carbon stainless steel blade and fibrox handle are both produced to Swiss quality standards. This isn't outsourced production—it's genuine Swiss craftsmanship at an accessible price point."
+      },
+      {
+        question: "Is Victorinox better than Wüsthof for beginners?",
+        answer: "Yes, for most beginners, Victorinox is the better choice. Here's why: The lighter weight (5.6 oz vs 8.5 oz) is easier to control while learning proper technique. The softer steel is more forgiving—it flexes rather than chips if you make mistakes. The lower price means less anxiety about damaging an expensive knife while learning. The thin blade provides better feedback as you develop knife skills. Once you've mastered the basics with a Victorinox, you'll know exactly what you want (or don't want) in a premium knife if you decide to upgrade later."
       }
     ]
   },
@@ -245,6 +253,14 @@ export const reviewData = {
     {
       question: "Should I buy the 8-inch or 10-inch Victorinox chef knife?",
       answer: "For most home cooks, the 8-inch is the better choice. It handles 90% of tasks with better maneuverability and control. Choose 8-inch if: You have limited counter space, prefer nimble/precise cutting, are new to cooking, want one versatile knife, have smaller hands. Choose 10-inch if: You regularly break down whole chickens/large roasts, prep in bulk for meal prep, have large cutting boards, prefer longer blade for slicing. Professional advice: I own both and use the 8-inch for 90% of tasks. The 10-inch comes out for breaking down proteins and large vegetable prep. Start with the 8-inch, add the 10-inch later if needed."
+    },
+    {
+      question: "Where is the Victorinox Fibrox made?",
+      answer: "The Victorinox Fibrox is made in Ibach, Switzerland, where Victorinox has manufactured knives since 1884. The same factory produces the iconic Swiss Army Knife. Swiss manufacturing means strict quality control, precision engineering, and over 140 years of knife-making expertise. The high-carbon stainless steel blade and fibrox handle are both produced to Swiss quality standards. This isn't outsourced production—it's genuine Swiss craftsmanship at an accessible price point."
+    },
+    {
+      question: "Is Victorinox better than Wüsthof for beginners?",
+      answer: "Yes, for most beginners, Victorinox is the better choice. Here's why: The lighter weight (5.6 oz vs 8.5 oz) is easier to control while learning proper technique. The softer steel is more forgiving—it flexes rather than chips if you make mistakes. The lower price means less anxiety about damaging an expensive knife while learning. The thin blade provides better feedback as you develop knife skills. Once you've mastered the basics with a Victorinox, you'll know exactly what you want (or don't want) in a premium knife if you decide to upgrade later."
     }
   ],
 
@@ -276,7 +292,7 @@ export const reviewData = {
 
   // SECTION 10: RELATED PRODUCTS
   relatedProducts: {
-    title: "Related Equipment Reviews",
+    title: "Related Equipment & Guides",
     products: [
       {
         name: "Henckels Sharpening Steel",
@@ -301,6 +317,24 @@ export const reviewData = {
         description: "Extra reach for large proteins and big cutting tasks.",
         emoji: "🔪",
         href: "/reviews/victorinox-fibrox-10-inch-chefs-knife"
+      },
+      {
+        name: "8-Inch vs 10-Inch Size Guide",
+        description: "Not sure which size? Compare the 8-inch and 10-inch to find your perfect fit.",
+        emoji: "📏",
+        href: "/blog/victorinox-8-inch-vs-10-inch-chefs-knife"
+      },
+      {
+        name: "Victorinox vs Wüsthof Comparison",
+        description: "See how the Victorinox compares to premium Wüsthof knives.",
+        emoji: "⚖️",
+        href: "/blog/victorinox-budget-vs-wusthof-premium-knives"
+      },
+      {
+        name: "Best Budget Chef Knife Guide",
+        description: "Full guide to choosing the right budget chef knife.",
+        emoji: "📋",
+        href: "/guides/best-budget-chef-knife"
       }
     ]
   },

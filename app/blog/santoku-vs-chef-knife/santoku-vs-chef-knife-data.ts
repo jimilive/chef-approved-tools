@@ -217,6 +217,81 @@ export const comparisonData = {
       ]
     },
     {
+      id: "real-world-testing",
+      title: "Real-World Testing: Task-by-Task Comparison",
+      subsections: [
+        {
+          title: "Dicing Onions",
+          content: [
+            "Chef's knife: Excellent—the curved blade rocks through layers efficiently, making quick work of a mirepoix.",
+            "Santoku: Good—works fine, but the rocking motion feels less natural with the straighter edge.",
+            "Winner: Chef's knife, slight edge for the rocking technique."
+          ]
+        },
+        {
+          title: "Slicing Mushrooms Paper-Thin",
+          content: [
+            "Chef's knife: Good—requires more control to achieve consistent thin slices.",
+            "Santoku: Excellent—the thinner blade glides through with less resistance, uniform slices every time.",
+            "Winner: Santoku. At Feierabend, I sliced thousands of mushrooms for German cuisine. Paper-thin was the standard, and the santoku made it effortless."
+          ]
+        },
+        {
+          title: "Mincing Garlic and Herbs",
+          content: [
+            "Chef's knife: Excellent—curved blade rocks naturally, building up a fine mince quickly.",
+            "Santoku: Good—the straight edge requires a different up-and-down technique that's slower for mincing.",
+            "Winner: Chef's knife. The rocking motion is more efficient for achieving a paste-like consistency."
+          ]
+        },
+        {
+          title: "Slicing Potatoes for Gratin",
+          content: [
+            "Chef's knife: Good—potatoes tend to stick to the blade somewhat.",
+            "Santoku: Excellent—the granton edge (hollowed dimples along the blade) creates air pockets that release slices cleanly.",
+            "Winner: Santoku. The granton edge makes a real difference with sticky vegetables like potatoes, onions, and even cheese."
+          ]
+        },
+        {
+          title: "Breaking Down Chicken",
+          content: [
+            "Chef's knife: Excellent—the flexible blade navigates around joints well, and the pointed tip handles precision work.",
+            "Santoku: Adequate—the rigid blade and rounded tip are less ideal for working around bones.",
+            "Winner: Chef's knife. Flexibility and a pointed tip matter for protein work."
+          ]
+        },
+        {
+          title: "The Pattern",
+          content: [
+            "Chef's knife wins: Rocking cuts, protein work, tip precision, general versatility.",
+            "Santoku wins: Thin slicing, uniform cuts, sticky vegetables, high-volume prep.",
+            "The conclusion: They're genuinely different tools. Neither is 'better'—they excel at different tasks."
+          ]
+        }
+      ]
+    },
+    {
+      id: "my-santoku-experience",
+      title: "14 Years with My Santoku: Where It Earned Its Place",
+      subsections: [
+        {
+          title: "Professional Kitchen Testing",
+          content: [
+            "I bought my Wüsthof Classic Ikon Santoku because it was beautiful—the contoured handle and granton edge looked like they belonged in a professional kitchen. What kept me using it for 14 years was performance.",
+            "At Feierabend, I sliced thousands of mushrooms for German cuisine. Paper-thin was the standard, and the santoku made it effortless. The lighter weight meant less fatigue during high-volume prep.",
+            "At Purple Café, it handled pizza toppings and vegetable prep when we were doing 200+ cover nights. Speed mattered, and the up-and-down chopping motion was noticeably faster than rocking with a chef's knife for repetitive cuts."
+          ]
+        },
+        {
+          title: "Where the Granton Edge Shines",
+          content: [
+            "The granton edge—those hollowed dimples along the blade—creates air pockets between the steel and food. This prevents sticky ingredients from clinging to the blade.",
+            "For potatoes, onions, and cheese, this makes a real difference. Slices release cleanly instead of stacking up on the blade and slowing you down."
+          ]
+        }
+      ]
+    },
+    {
       id: "need-both",
       title: "Do You Need Both Knives?",
       subsections: [
@@ -268,10 +343,10 @@ export const comparisonData = {
   },
 
   relatedLinks: [
-    { href: "/blog/victorinox-budget-vs-wusthof-premium-knives", title: "Victorinox vs Wusthof: Brand Comparison" },
+    { href: "/blog/victorinox-budget-vs-wusthof-premium-knives", title: "Victorinox vs Wüsthof: Brand Comparison" },
     { href: "/blog/victorinox-8-inch-vs-10-inch-chefs-knife", title: "8-Inch vs 10-Inch Chef's Knife" },
-    { href: "/blog/how-to-choose-first-chef-knife", title: "How to Choose Your First Chef Knife" },
-    { href: "/blog/knife-skills-how-to-hold-chef-knife", title: "Knife Skills: How to Hold a Chef Knife" }
+    { href: "/guides/best-budget-chef-knife", title: "Best Budget Chef Knife Guide" },
+    { href: "/blog/how-to-choose-first-chef-knife", title: "How to Choose Your First Chef Knife" }
   ],
 
   faq: {

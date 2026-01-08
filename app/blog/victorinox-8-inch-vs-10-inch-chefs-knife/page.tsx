@@ -90,6 +90,17 @@ export default function Victorinox8vs10Page() {
           }}
         />
 
+        {/* What Size Chef Knife - Capture Non-Brand Searches */}
+        <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
+          <h2 id="what-size" className="text-3xl font-bold text-slate-900 mb-4">What Size Chef Knife Should You Get?</h2>
+          <p className="text-lg text-slate-700 mb-4">
+            The 8-inch vs 10-inch decision comes down to three factors: your hand size, your cooking volume, and your kitchen space. After 24 years in professional kitchens, I&apos;ve seen cooks of all sizes excel with both—but matching the right size to your situation makes cooking easier and more enjoyable.
+          </p>
+          <p className="text-lg text-slate-700">
+            Below, I&apos;ll break down exactly when each size shines, share the forearm test professionals use, and give you my honest recommendation based on real kitchen experience.
+          </p>
+        </section>
+
         {/* Comparison Table */}
         <BlogComparisonTable
           title="8-Inch vs 10-Inch Chef's Knife: At a Glance"

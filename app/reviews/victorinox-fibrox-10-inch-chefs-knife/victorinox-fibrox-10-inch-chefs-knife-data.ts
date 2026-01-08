@@ -277,7 +277,7 @@ export const reviewData = {
 
   // SECTION 10: RELATED PRODUCTS
   relatedProducts: {
-    title: "Related Equipment Reviews",
+    title: "Related Equipment & Guides",
     products: [
       {
         name: "Henckels Sharpening Steel",
@@ -302,6 +302,18 @@ export const reviewData = {
         description: "Essential companion for precision work - peeling, trimming, detailed tasks.",
         emoji: "🔪",
         href: "/reviews/victorinox-4-inch-paring-knife"
+      },
+      {
+        name: "8-Inch vs 10-Inch Size Guide",
+        description: "Not sure which size? Compare the 8-inch and 10-inch to find your perfect fit.",
+        emoji: "📏",
+        href: "/blog/victorinox-8-inch-vs-10-inch-chefs-knife"
+      },
+      {
+        name: "Victorinox vs Wüsthof Comparison",
+        description: "See how Victorinox compares to premium Wüsthof knives.",
+        emoji: "⚖️",
+        href: "/blog/victorinox-budget-vs-wusthof-premium-knives"
       }
     ]
   },

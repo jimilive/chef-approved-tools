@@ -822,8 +822,8 @@ export const METADATA = {
     } as BlogMetadata,
 
     'victorinox-8-inch-vs-10-inch-chefs-knife': {
-      title: "Victorinox 8-Inch vs 10-Inch: What Size Kitchen?",
-      description: "24 years experience: how to choose between 8-inch vs 10-inch. Wrong size means poor control, slower speed, and hand fatigue.",
+      title: "8-Inch vs 10-Inch Chef Knife: Size Guide from a Pro Chef",
+      description: "8-inch vs 10-inch chef knife comparison from a chef with 24 years experience. Learn which size fits your hands, kitchen, and cooking style.",
       canonical: "https://www.chefapprovedtools.com/blog/victorinox-8-inch-vs-10-inch-chefs-knife",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/victorinox-8-vs-10-og.jpg",
@@ -872,22 +872,22 @@ export const METADATA = {
     } as BlogMetadata,
 
     'victorinox-budget-vs-wusthof-premium-knives': {
-      title: "Victorinox Chef's Knife vs Wüsthof Santoku Compared",
-      description: "After 24 years in professional kitchens, here's why you might want both: the Victorinox for everyday tasks and the Wüsthof Santoku for precision vegetable work.",
+      title: "Victorinox vs Wüsthof Chef's Knife: Honest 24-Year Comparison",
+      description: "Victorinox vs Wüsthof chef knife comparison from a pro chef with 24 years experience. Which brand wins for your kitchen? Fair analysis of both.",
       canonical: "https://www.chefapprovedtools.com/blog/victorinox-budget-vs-wusthof-premium-knives",
       author: "Scott Bradley",
       imageUrl: "https://www.chefapprovedtools.com/images/victorinox-vs-wusthof-og.jpg",
-      imageAlt: "Victorinox Chef's Knife vs Wüsthof Santoku Comparison",
+      imageAlt: "Victorinox vs Wüsthof Chef's Knife Comparison",
       keywords: {
         primary: "victorinox vs wusthof",
-        secondary: ["budget chef knife","premium chef knife","victorinox fibrox","wusthof santoku","best value chef knife"],
-        searchVolume: 1200,
+        secondary: ["wusthof vs victorinox","victorinox vs wusthof chef knife","victorinox or wusthof","budget chef knife","premium chef knife"],
+        searchVolume: 1440,
         difficulty: "medium",
       },
       publishedDate: "2025-11-15",
       publishedTime: "2025-11-15T13:00:00Z",
-      lastUpdated: "2025-12-16",
-      modifiedTime: "2025-12-16T13:00:00Z",
+      lastUpdated: "2026-01-09",
+      modifiedTime: "2026-01-09T13:00:00Z",
       searchIntent: "commercial",
       conversionPotential: "high",
       articleSection: "Kitchen Equipment",
@@ -3035,8 +3035,8 @@ export const METADATA = {
     } as ReviewMetadata,
     
     'victorinox-fibrox-8-inch-chefs-knife': {
-      title: "Victorinox 8-Inch Chef Knife Review 2025: 20 Years Tested",
-      description: "Best budget chef knife? Tested 20 years in 5 professional kitchens. Still sharp after 10,000+ cuts. See why this knife beats alternatives costing 5x more.",
+      title: "Victorinox Fibrox Pro 8-Inch Chef's Knife Review: 20 Years Tested",
+      description: "Victorinox Fibrox Pro 8-inch chef's knife tested 20 years in professional kitchens. Swiss-made, NSF-certified workhorse that outperforms premium knives.",
       canonical: "https://www.chefapprovedtools.com/reviews/victorinox-fibrox-8-inch-chefs-knife",
       author: "Scott Bradley",
       imageAlt: "Victorinox Fibrox 8-inch chef's knife tested 20 years professionally",
