@@ -124,6 +124,22 @@ export default function InstantPotVsCrockpot() {
           </p>
         </section>
 
+        <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Related Guides</h2>
+          <ul className="space-y-3 text-slate-700">
+            <li>
+              <Link href="/reviews/instant-pot-duo-plus-6qt" className="text-orange-700 hover:text-orange-800 underline">
+                Instant Pot Duo Plus 6qt Review
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog/dutch-oven-vs-slow-cooker" className="text-orange-700 hover:text-orange-800 underline">
+                Dutch Oven vs Slow Cooker: Flavor vs Convenience
+              </Link>
+            </li>
+          </ul>
+        </section>
+
         <BlogFAQ questions={comparisonData.faq.questions} />
         <BlogEmailCapture />
         <AuthorBio />
