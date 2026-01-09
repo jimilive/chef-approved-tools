@@ -245,9 +245,8 @@ export default async function KitchenAidProfessional600ReviewPage() {
             How Does the Professional 600 Compare?
           </h2>
           <p className="text-lg text-slate-700 mb-8">
-            After 18 years using this mixer professionally at Purple Café, Mellow Mushroom, and Il Pizzaiolo,
-            I&apos;ve tested every major stand mixer in high-volume settings. Here&apos;s how the Professional 600
-            stacks up against the modern replacements and alternatives.
+            After 24 years of professional kitchen experience and 18 years with this Professional 600 at home,
+            I know exactly how it compares to commercial performance.
           </p>
           <ProductComparisonTable
             title={standMixerComparisonData.title}

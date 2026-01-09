@@ -3013,8 +3013,8 @@ export const METADATA = {
     } as ReviewMetadata,
     
     'kitchenaid-kp26m1xlc-professional-600': {
-      title: "KitchenAid Pro 600 Review 2025: 18 Years Chef Tested",
-      description: "Is KitchenAid Pro 600 worth upgrading to? 18 years testing: 575W motor handles triple pizza dough, metal gears survived 900+ sessions. See our verdict.",
+      title: "KitchenAid Professional 600 Review: 18 Years Tested (2026)",
+      description: "KitchenAid Professional 600 review after 18 years of testing. 575W motor handles pizza dough, bread, triple batches. Bowl-lift mixer vs Artisan comparison.",
       canonical: "https://www.chefapprovedtools.com/reviews/kitchenaid-kp26m1xlc-professional-600",
       author: "Scott Bradley",
       imageAlt: "KitchenAid Professional 600 stand mixer tested for 18 years",

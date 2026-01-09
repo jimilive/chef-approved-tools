@@ -10,10 +10,10 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "KitchenAid Pro 600: 18-Year Test Of The 6-Qt Bowl-Lift Mixer",
-    description: "KitchenAid Professional 600 tested 18 years, weekly pizza dough, bread, cookies. The 6-qt bowl-lift mixer that handles triple batches. 575W motor review.",
-    ogTitle: "KitchenAid Pro 600: 18-Year Test Of The 6-Qt Bowl-Lift Mixer",
-    ogDescription: "KitchenAid Professional 600 tested 18 years, weekly pizza dough, bread, cookies. The 6-qt bowl-lift mixer that handles triple batches. 575W motor review.",
+    title: "KitchenAid Professional 600 Review: 18 Years Tested (2026)",
+    description: "KitchenAid Professional 600 review after 18 years of testing. 575W motor handles pizza dough, bread, triple batches. Bowl-lift mixer vs Artisan comparison.",
+    ogTitle: "KitchenAid Professional 600 Review: 18 Years Tested",
+    ogDescription: "KitchenAid Professional 600 review after 18 years of home testing. See how this 575W bowl-lift mixer handles pizza dough, bread, and triple batches.",
     testingPeriod: "18 Years Testing",
     tier: 2
   },
@@ -191,6 +191,10 @@ export const reviewData = {
       {
         title: "18-Year Durability Assessment",
         content: "Zero motor repairs or replacements needed. Planetary mixing action remains smooth and consistent. Bowl-lift mechanism shows minimal wear despite thousands of uses. The all-metal construction justifies the premium price through decades of reliable service. This exemplifies buy-it-for-life quality that modern appliances rarely deliver."
+      },
+      {
+        title: "KitchenAid Professional 600 Series Specifications",
+        content: "The Professional 600 Series features a 575-watt motor—significantly more powerful than the 325-watt Artisan. The 6-quart stainless steel bowl handles double and triple batches without overflow. Bowl-lift design provides superior stability for heavy doughs compared to tilt-head models. All-metal construction throughout means this mixer is built to last decades, not years."
       }
     ]
   },
@@ -253,6 +257,14 @@ export const reviewData = {
     {
       question: "Is the 6-quart capacity worth the extra cost?",
       answer: "For serious bakers who regularly double recipes or make large batches, absolutely. The 20% additional capacity over 5-quart models eliminates batch splitting and saves significant time. For occasional bakers making single batches, the 5-quart Artisan may be more cost-effective."
+    },
+    {
+      question: "What attachments work with the KitchenAid Professional 600?",
+      answer: "The Professional 600 is compatible with all KitchenAid hub attachments including pasta makers (pasta roller, fettuccine cutter, spaghetti cutter), meat grinders, food grinders, ice cream makers, grain mills, spiralizers, and vegetable sheet cutters. Over 15 attachments transform this mixer into a complete kitchen system. The attachment hub is universal across all KitchenAid stand mixers, so your investment in attachments transfers if you ever upgrade models."
+    },
+    {
+      question: "KitchenAid Professional 600 vs 7 Qt: which should I buy?",
+      answer: "The Professional 600 (6 qt) handles most serious home baking needs including double batches of bread dough and large cookie batches. The 7 Qt model (KSM70) offers 17% more capacity for very large batches—useful if you regularly bake for crowds or run a home bakery. For most serious home bakers, the 6 Qt Professional 600 hits the sweet spot of capacity, power, and value. Choose the 7 Qt only if you consistently max out a 6-quart bowl."
     }
   ],
 
@@ -284,8 +296,14 @@ export const reviewData = {
 
   // SECTION 10: RELATED PRODUCTS
   relatedProducts: {
-    title: "Complete Your Professional Kitchen Setup",
+    title: "Related Equipment & Guides",
     products: [
+      {
+        emoji: "📊",
+        name: "Stand Mixer vs Hand Mixer Guide",
+        description: "When to use each type and which you actually need.",
+        href: "/blog/stand-mixer-vs-hand-mixer"
+      },
       {
         emoji: "🏭",
         name: "KitchenAid Commercial Mixer",
@@ -303,12 +321,6 @@ export const reviewData = {
         name: "Robot Coupe R2 Dice",
         description: "Commercial food processor for serious prep.",
         href: "/reviews/robot-coupe-r2-dice"
-      },
-      {
-        emoji: "🔪",
-        name: "Victorinox Fibrox 8\" Chef's Knife",
-        description: "Professional workhorse knife, perfect for prep work.",
-        href: "/reviews/victorinox-fibrox-8-inch-chefs-knife"
       }
     ]
   },
