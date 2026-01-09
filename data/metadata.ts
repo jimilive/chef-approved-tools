@@ -2992,8 +2992,8 @@ export const METADATA = {
     // ========== BATCH 1: HIGH-PRIORITY REVIEWS (Traffic Leaders) ==========
     
     'method-all-purpose-cleaner': {
-      title: "Method All-Purpose Cleaner: 5 Years of Grease-Cutting Tests",
-      description: "Method All-Purpose tested 5 years: 1,800+ kitchen messes from bacon grease to tomato sauce cleaned without harsh fumes. Effective, pleasant alternative.",
+      title: "Method All-Purpose Cleaner Review: 5 Years Tested (2026)",
+      description: "Method All-Purpose Cleaner review after 5 years of daily testing. Is Method cleaner safe? Yes—plant-based, non-toxic, and cuts grease like chemical cleaners.",
       canonical: "https://www.chefapprovedtools.com/reviews/method-all-purpose-cleaner",
       author: "Scott Bradley",
       imageAlt: "Method all-purpose cleaner tested in home kitchen for 5 years",

@@ -239,6 +239,43 @@ export default async function MethodAllPurposeCleanerReviewPage() {
             </p>
           </div>
 
+          {/* SAFETY & INGREDIENTS SECTION - Targets "is method cleaner safe" keyword */}
+          <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">
+              {reviewData.safetyIngredients.title}
+            </h2>
+
+            <p className="text-slate-700 mb-6">
+              {reviewData.safetyIngredients.intro}
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-green-50 rounded-lg p-6 border border-green-200">
+                <h3 className="font-bold text-green-800 mb-4">What Method Contains (Non-Toxic)</h3>
+                <ul className="space-y-3">
+                  {reviewData.safetyIngredients.whatMethodContains.map((item, index) => (
+                    <li key={index} className="text-slate-700">
+                      <strong>{item.ingredient}:</strong> {item.explanation}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-red-50 rounded-lg p-6 border border-red-200">
+                <h3 className="font-bold text-red-800 mb-4">What Method Does NOT Contain</h3>
+                <ul className="space-y-2">
+                  {reviewData.safetyIngredients.whatMethodDoesNotContain.map((item, index) => (
+                    <li key={index} className="text-slate-700">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <p className="text-slate-700 bg-blue-50 p-4 rounded-lg border border-blue-200">
+              <strong>Bottom Line:</strong> {reviewData.safetyIngredients.safetyNote}
+            </p>
+          </div>
+
           {/* CUSTOM SECTION: COMPARISON NARRATIVE */}
           <div className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6">
             <h2 className="text-2xl font-bold text-slate-900 mb-6 leading-[1.3]">

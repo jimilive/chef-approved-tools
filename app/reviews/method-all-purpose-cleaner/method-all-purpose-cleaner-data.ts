@@ -8,10 +8,10 @@
 export const reviewData = {
   // METADATA
   metadata: {
-    title: "Method All-Purpose: The $4 Non-Toxic Cleaner That Actually Works",
-    description: "5 years in a professional chef's kitchen, Method cleaner handles bacon grease and oil spills without harsh chemicals. Gentle enough for daily use, tough on grease.",
-    ogTitle: "Method All-Purpose: The $4 Non-Toxic Cleaner That Actually Works",
-    ogDescription: "5 years in a professional chef's kitchen, Method cleaner handles bacon grease and oil spills without harsh chemicals. Gentle enough for daily use, tough on grease.",
+    title: "Method All-Purpose Cleaner Review: 5 Years Tested (2026)",
+    description: "Method All-Purpose Cleaner review after 5 years of daily testing. Is Method cleaner safe? Yes—plant-based, non-toxic, and cuts grease like chemical cleaners.",
+    ogTitle: "Method All-Purpose Cleaner Review: 5 Years Tested",
+    ogDescription: "Method All-Purpose Cleaner review after 5 years of daily home testing. Plant-based, non-toxic formula that cuts grease like chemical cleaners.",
     testingPeriod: "5 Years Daily Home Use",
     tier: 2
   },
@@ -163,6 +163,40 @@ export const reviewData = {
     ]
   },
 
+  // SAFETY & INGREDIENTS SECTION
+  safetyIngredients: {
+    title: "Is Method Cleaner Safe? Complete Ingredient Breakdown",
+    intro: "After 24 years using industrial degreasers in professional kitchens—the kind that require gloves, ventilation, and keeping away from food—I can confirm Method is genuinely safe. Here's what makes it different:",
+    whatMethodContains: [
+      {
+        ingredient: "Plant-based surfactants",
+        explanation: "Derived from corn and coconut, these are what actually cut the grease"
+      },
+      {
+        ingredient: "Naturally-derived solvents",
+        explanation: "Help dissolve grime without petroleum-based chemicals"
+      },
+      {
+        ingredient: "Essential oil fragrances",
+        explanation: "Natural scents like pink grapefruit, not synthetic perfumes"
+      },
+      {
+        ingredient: "Water",
+        explanation: "The base of the formula"
+      }
+    ],
+    whatMethodDoesNotContain: [
+      "Ammonia (respiratory irritant)",
+      "Bleach (corrosive, toxic fumes)",
+      "Phosphates (environmental pollutant)",
+      "Phthalates (hormone disruptors)",
+      "Parabens (preservative concerns)",
+      "Formaldehyde (carcinogen)",
+      "Triclosan (antibacterial linked to health issues)"
+    ],
+    safetyNote: "I use Method directly on my cutting boards, countertops where I prep food, and around my kitchen without any concern. No rinsing required on food-contact surfaces. Pro tip: spray inside your microwave and wipe clean in 30 seconds to a minute—no joke. This is as safe as household cleaners get while still being effective."
+  },
+
   // COMPARISON SECTION
   comparison: {
     title: "How It Compares: Method vs. Traditional Cleaners",
@@ -260,6 +294,14 @@ export const reviewData = {
     {
       question: "What scent options are available?",
       answer: "Method offers multiple scent options including French Lavender, Pink Grapefruit, Ylang Ylang, Cucumber, and more. All scents are derived from natural fragrances—pleasant but not overwhelming. I personally use Pink Grapefruit, which has a fresh, clean scent that dissipates quickly. Unlike chemical cleaners with artificial perfumes, these natural scents are subtle and enjoyable."
+    },
+    {
+      question: "What are the ingredients in Method All-Purpose Cleaner?",
+      answer: "Method's formula contains plant-based surfactants (from corn and coconut), naturally-derived solvents, essential oil fragrances, and water. It does NOT contain ammonia, bleach, phosphates, phthalates, parabens, formaldehyde, or triclosan. The formula is biodegradable and designed to be safe for food-contact surfaces without rinsing."
+    },
+    {
+      question: "Can I use Method cleaner on surfaces where I prepare food?",
+      answer: "Yes, absolutely. Method All-Purpose Cleaner is safe for food-contact surfaces without rinsing. I use it directly on my cutting boards, prep counters, and anywhere I handle food. After 5 years of daily use, I've had zero concerns. The plant-based formula doesn't leave harmful residue like chemical cleaners can."
     }
   ],
 
