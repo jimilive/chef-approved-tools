@@ -3001,7 +3001,7 @@ export const METADATA = {
       testingPeriod: "5 Years Daily Home Use",
       productSlug: "method-all-purpose-cleaner",
       publishedTime: "2025-10-12T10:00:00Z",
-      modifiedTime: "2025-12-31T10:00:00Z",
+      modifiedTime: "2026-01-09T10:00:00Z",
       searchIntent: "transactional",
       conversionPotential: "medium",
       affiliateProgram: "amazon",

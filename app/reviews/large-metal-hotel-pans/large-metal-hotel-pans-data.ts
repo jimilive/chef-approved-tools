@@ -205,12 +205,6 @@ export const reviewData = {
     title: 'Complete Your Kitchen Organization',
     products: [
       {
-        emoji: '📋',
-        name: 'Hotel Pan System Guide',
-        description: 'Complete guide to restaurant organization.',
-        href: '/blog/hotel-pan-system-restaurant-organization-home'
-      },
-      {
         emoji: '🔥',
         name: 'Lodge Cast Iron Skillet Bundle',
         description: 'Essential for high-heat cooking.',
@@ -221,6 +215,19 @@ export const reviewData = {
         name: 'Zuperia Bar Mops',
         description: 'Professional kitchen towels for cleanup.',
         href: '/reviews/zuperia-bar-mops'
+      }
+    ]
+  },
+
+  // SECTION 11: RELATED ARTICLES
+  relatedArticles: {
+    title: 'Related Guides',
+    articles: [
+      {
+        emoji: '📋',
+        name: 'Hotel Pan System Guide',
+        description: 'Complete guide to restaurant organization.',
+        href: '/blog/hotel-pan-system-restaurant-organization-home'
       }
     ]
   },

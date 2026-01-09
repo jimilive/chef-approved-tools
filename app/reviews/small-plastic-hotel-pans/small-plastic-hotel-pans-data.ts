@@ -211,12 +211,6 @@ export const reviewData = {
     title: 'Complete Your Kitchen Organization',
     products: [
       {
-        emoji: '📋',
-        name: 'Hotel Pan System Guide',
-        description: 'Complete guide to restaurant organization at home.',
-        href: '/blog/hotel-pan-system-restaurant-organization-home'
-      },
-      {
         emoji: '📏',
         name: 'John Boos Cutting Board',
         description: 'NSF-certified commercial cutting board.',
@@ -227,6 +221,19 @@ export const reviewData = {
         name: 'Zuperia Bar Mops',
         description: 'Professional kitchen towels for cleanup.',
         href: '/reviews/zuperia-bar-mops'
+      }
+    ]
+  },
+
+  // SECTION 11: RELATED ARTICLES
+  relatedArticles: {
+    title: 'Related Guides',
+    articles: [
+      {
+        emoji: '📋',
+        name: 'Hotel Pan System Guide',
+        description: 'Complete guide to restaurant organization at home.',
+        href: '/blog/hotel-pan-system-restaurant-organization-home'
       }
     ]
   },

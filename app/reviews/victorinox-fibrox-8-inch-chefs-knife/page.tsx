@@ -33,7 +33,8 @@ import {
   FAQSection,
   EmailCaptureSection,
   BottomLineSection,
-  RelatedProductsGrid
+  RelatedProductsGrid,
+  RelatedArticlesGrid
 } from '@/components/review'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
@@ -286,6 +287,12 @@ export default async function ProductReview() {
       <RelatedProductsGrid
         title={reviewData.relatedProducts.title}
         products={reviewData.relatedProducts.products}
+      />
+
+      {/* ========== SECTION 11: RELATED ARTICLES ========== */}
+      <RelatedArticlesGrid
+        title={reviewData.relatedArticles.title}
+        articles={reviewData.relatedArticles.articles}
       />
 
       {/* NOTE: AuthorBio, ProductViewTracker, and StickyMobileCTA

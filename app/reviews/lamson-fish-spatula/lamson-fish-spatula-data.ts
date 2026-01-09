@@ -298,7 +298,14 @@ export const reviewData = {
         name: 'Victorinox Chef\'s Knife',
         description: 'Essential for fish prep and portioning.',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
-      },
+      }
+    ]
+  },
+
+  // SECTION 10: RELATED ARTICLES
+  relatedArticles: {
+    title: 'Related Guides',
+    articles: [
       {
         emoji: '🥩',
         name: 'Searing Technique Guide',

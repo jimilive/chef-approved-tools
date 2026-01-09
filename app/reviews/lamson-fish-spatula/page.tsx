@@ -18,7 +18,8 @@ import {
   FAQSection,
   EmailCaptureSection,
   BottomLineSection,
-  RelatedProductsGrid
+  RelatedProductsGrid,
+  RelatedArticlesGrid
 } from '@/components/review'
 import ReviewLayout from '@/components/review/ReviewLayout'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
@@ -118,8 +119,8 @@ export default async function LamsonFishSpatulaReview() {
       tier={reviewData.metadata.tier as 1 | 2 | 3}
       testingPeriod={reviewData.tracking.testingPeriod}
       hook={reviewData.tracking.hook}
-      backLinkHref="/kitchen-tools"
-      backLinkText="Browse all Kitchen Tools"
+      backLinkHref="/moving-and-stirring-tools"
+      backLinkText="Browse all Moving & Stirring Tools"
     >
       {/* SECTION 1: HERO */}
       <ReviewHero
@@ -290,10 +291,10 @@ export default async function LamsonFishSpatulaReview() {
 
       <div className="text-center my-8">
         <Link
-          href="/kitchen-tools"
+          href="/moving-and-stirring-tools"
           className="text-orange-700 hover:text-orange-800 font-medium"
         >
-          Explore more Kitchen Tools →
+          Explore more Moving & Stirring Tools →
         </Link>
       </div>
 
@@ -303,7 +304,13 @@ export default async function LamsonFishSpatulaReview() {
         products={reviewData.relatedProducts.products}
       />
 
-      {/* SECTION 12: AUTHOR BIO */}
+      {/* SECTION 12: RELATED ARTICLES */}
+      <RelatedArticlesGrid
+        title={reviewData.relatedArticles.title}
+        articles={reviewData.relatedArticles.articles}
+      />
+
+      {/* SECTION 13: AUTHOR BIO */}
       <AuthorBio />
     </ReviewLayout>
   )

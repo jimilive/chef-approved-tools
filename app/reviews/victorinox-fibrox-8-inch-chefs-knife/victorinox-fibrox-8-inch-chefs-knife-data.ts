@@ -292,7 +292,7 @@ export const reviewData = {
 
   // SECTION 10: RELATED PRODUCTS
   relatedProducts: {
-    title: "Related Equipment & Guides",
+    title: "Related Equipment",
     products: [
       {
         name: "Henckels Sharpening Steel",
@@ -317,7 +317,14 @@ export const reviewData = {
         description: "Extra reach for large proteins and big cutting tasks.",
         emoji: "🔪",
         href: "/reviews/victorinox-fibrox-10-inch-chefs-knife"
-      },
+      }
+    ]
+  },
+
+  // SECTION 11: RELATED ARTICLES
+  relatedArticles: {
+    title: "Related Guides",
+    articles: [
       {
         name: "8-Inch vs 10-Inch Size Guide",
         description: "Not sure which size? Compare the 8-inch and 10-inch to find your perfect fit.",

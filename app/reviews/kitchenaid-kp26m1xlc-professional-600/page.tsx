@@ -22,7 +22,8 @@ import {
   FAQSection,
   EmailCaptureSection,
   BottomLineSection,
-  RelatedProductsGrid
+  RelatedProductsGrid,
+  RelatedArticlesGrid
 } from '@/components/review'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 import TestimonialsSection from '@/components/TestimonialsSection'
@@ -335,6 +336,12 @@ export default async function KitchenAidProfessional600ReviewPage() {
         <RelatedProductsGrid
           title={reviewData.relatedProducts.title}
           products={reviewData.relatedProducts.products}
+        />
+
+        {/* SECTION 11: RELATED ARTICLES */}
+        <RelatedArticlesGrid
+          title={reviewData.relatedArticles.title}
+          articles={reviewData.relatedArticles.articles}
         />
 
         {/* SECTION 12: TESTIMONIALS */}

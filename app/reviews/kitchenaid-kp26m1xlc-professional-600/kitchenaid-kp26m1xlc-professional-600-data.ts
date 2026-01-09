@@ -296,14 +296,8 @@ export const reviewData = {
 
   // SECTION 10: RELATED PRODUCTS
   relatedProducts: {
-    title: "Related Equipment & Guides",
+    title: "Related Equipment",
     products: [
-      {
-        emoji: "📊",
-        name: "Stand Mixer vs Hand Mixer Guide",
-        description: "When to use each type and which you actually need.",
-        href: "/blog/stand-mixer-vs-hand-mixer"
-      },
       {
         emoji: "🏭",
         name: "KitchenAid Commercial Mixer",
@@ -321,6 +315,19 @@ export const reviewData = {
         name: "Robot Coupe R2 Dice",
         description: "Commercial food processor for serious prep.",
         href: "/reviews/robot-coupe-r2-dice"
+      }
+    ]
+  },
+
+  // SECTION 11: RELATED ARTICLES
+  relatedArticles: {
+    title: "Related Guides",
+    articles: [
+      {
+        emoji: "📊",
+        name: "Stand Mixer vs Hand Mixer Guide",
+        description: "When to use each type and which you actually need.",
+        href: "/blog/stand-mixer-vs-hand-mixer"
       }
     ]
   },

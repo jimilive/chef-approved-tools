@@ -19,7 +19,8 @@ import {
   FAQSection,
   EmailCaptureSection,
   BottomLineSection,
-  RelatedProductsGrid
+  RelatedProductsGrid,
+  RelatedArticlesGrid
 } from '@/components/review'
 
 // Import review data
@@ -313,6 +314,12 @@ export default async function LargePlasticHotelPansReview() {
           <RelatedProductsGrid
             title={reviewData.relatedProducts.title}
             products={reviewData.relatedProducts.products}
+          />
+
+          {/* SECTION 10: RELATED ARTICLES */}
+          <RelatedArticlesGrid
+            title={reviewData.relatedArticles.title}
+            articles={reviewData.relatedArticles.articles}
           />
 
     </ReviewLayout>

@@ -17,7 +17,8 @@ import {
   FAQSection,
   EmailCaptureSection,
   BottomLineSection,
-  RelatedProductsGrid
+  RelatedProductsGrid,
+  RelatedArticlesGrid
 } from '@/components/review'
 import ProductComparisonTable from '@/components/comparison/ProductComparisonTable'
 
@@ -279,6 +280,12 @@ export default async function Cuisinart8InchNonstickPanReview() {
           <RelatedProductsGrid
             title={reviewData.relatedProducts.title}
             products={reviewData.relatedProducts.products}
+          />
+
+          {/* SECTION 11: RELATED ARTICLES */}
+          <RelatedArticlesGrid
+            title={reviewData.relatedArticles.title}
+            articles={reviewData.relatedArticles.articles}
           />
 
           {/* AuthorBio, ProductViewTracker, and StickyMobileCTA handled by ReviewLayout */}

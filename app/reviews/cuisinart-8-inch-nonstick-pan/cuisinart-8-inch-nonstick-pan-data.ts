@@ -252,12 +252,6 @@ export const reviewData = {
     title: 'Complete Your Kitchen Setup',
     products: [
       {
-        emoji: '🍳',
-        name: 'Perfect Scrambled Eggs Guide',
-        description: 'Learn my revolutionary no-bowl, no-whisk technique that makes this pan essential. Crack eggs directly into this pan for the creamiest scrambled eggs you\'ve ever made.',
-        href: '/blog/best-scrambled-eggs'
-      },
-      {
         emoji: '🔥',
         name: 'Lodge Cast Iron Skillet Bundle',
         description: 'Complement your nonstick pan with cast iron for high-heat searing. Use the Cuisinart for eggs and delicate foods, cast iron for steaks.',
@@ -268,6 +262,19 @@ export const reviewData = {
         name: 'Victorinox 8" Chef\'s Knife',
         description: 'The knife I\'ve trusted for 20+ years. Perfect for prepping ingredients before cooking in your Cuisinart pan.',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife'
+      }
+    ]
+  },
+
+  // Related Articles
+  relatedArticles: {
+    title: 'Related Guides',
+    articles: [
+      {
+        emoji: '🍳',
+        name: 'Perfect Scrambled Eggs Guide',
+        description: 'Learn my revolutionary no-bowl, no-whisk technique that makes this pan essential. Crack eggs directly into this pan for the creamiest scrambled eggs you\'ve ever made.',
+        href: '/blog/best-scrambled-eggs'
       }
     ]
   }
