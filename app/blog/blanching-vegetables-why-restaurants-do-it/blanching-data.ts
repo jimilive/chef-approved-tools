@@ -277,7 +277,7 @@ export const blanchingData = {
   },
 
   relatedLinks: [
-    { href: "/blog/roasting-vegetables-restaurant-guide", text: "Learn how to roast vegetables perfectly" },
+    { href: "/blog/vegetable-roasting-guide", text: "Learn how to roast vegetables perfectly" },
     { href: "/blog/meal-prep-station-setup-restaurant-efficiency", text: "Learn how to set up a professional meal prep station" }
   ]
 }

@@ -68,8 +68,8 @@ export const restingMeatData = {
       ],
       closing: "During my years on the line, I watched countless home cooks overcook their steaks because they didn't account for carry-over. They'd pull a steak at 135°F thinking they'd get medium-rare, then wonder why it came out medium-well after resting. The numbers don't lie—you have to plan for that temperature climb.",
       thermometerLink: {
-        text: "checking our guide to the best meat thermometers",
-        href: "/blog/meat-cooking-temperatures-thermometers",
+        text: "checking our kitchen thermometer guide",
+        href: "/blog/kitchen-thermometers-guide",
         intro: "This is exactly why a reliable instant-read thermometer is one of the most important tools in your kitchen. I use and recommend"
       },
       proTip: {
@@ -110,7 +110,7 @@ export const restingMeatData = {
           name: "Reliable probe thermometer",
           description: "You need to monitor that carry-over cooking. A good instant-read or leave-in probe tells you exactly when the meat has hit your target temperature during the rest. Check out my recommendations in the",
           linkText: "Kitchen Thermometer Guide",
-          linkHref: "/blog/meat-cooking-temperatures-thermometers",
+          linkHref: "/blog/kitchen-thermometers-guide",
           closing: "."
         },
         {
@@ -213,7 +213,7 @@ export const restingMeatData = {
 
   relatedArticles: [
     { href: "/blog/how-to-sear-steaks-like-restaurant-chef", title: "How to Sear Steaks Like a Restaurant Chef" },
-    { href: "/blog/meat-cooking-temperatures-thermometers", title: "Meat Cooking Temperatures & Thermometers Guide" },
+    { href: "/blog/kitchen-thermometers-guide", title: "Complete Guide to Kitchen Thermometers" },
     { href: "/blog/maillard-reaction-browning-flavor", title: "The Maillard Reaction: Why Browning = Flavor" },
     { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", title: "Lodge Cast Iron Skillet Bundle Review" },
     { href: "/reviews/nordic-ware-half-sheet-pan", title: "Nordic Ware Half Sheet Pan Review" },

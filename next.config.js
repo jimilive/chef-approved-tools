@@ -323,6 +323,11 @@ const nextConfig = {
         destination: '/blog/vegetable-roasting-guide',
         permanent: true,
       },
+      {
+        source: '/blog/meat-cooking-temperatures-thermometers',
+        destination: '/blog/kitchen-thermometers-guide',
+        permanent: true,
+      },
 
       // ===== BLOG LINK VARIATIONS - Common URL Patterns =====
       {

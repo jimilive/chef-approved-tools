@@ -185,6 +185,9 @@ export default function PotatoesGuidePage() {
             <Link href="/blog/onions-cooking-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Complete Guide to Cooking Onions
             </Link>
+            <Link href="/blog/vegetable-roasting-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Complete Vegetable Roasting Guide
+            </Link>
             <Link href="/blog/caramelization-science" className="text-orange-700 hover:text-orange-800 font-semibold">
               → The Science of Caramelization
             </Link>

@@ -160,6 +160,7 @@ export const educationalData = {
   },
 
   relatedArticles: [
+    { href: "/blog/kitchen-thermometers-guide", title: "Complete Guide to Kitchen Thermometers" },
     { href: "/blog/how-to-sear-steaks-like-restaurant-chef", title: "How to Sear Steaks Like a Restaurant Chef" },
     { href: "/blog/why-resting-meat-key-cooking", title: "Why Resting Is the Key to Cooking Meat" },
     { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", title: "Lodge Cast Iron Skillet Bundle Review" },

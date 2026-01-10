@@ -122,7 +122,15 @@ export default function KitchenThermometersGuidePage() {
     issues: { problem: string; solution: string }[]
   }
 
-  const bottomLineSection = educationalData.sections[8] as {
+  const protocolsSection = educationalData.sections[8] as {
+    id: string
+    title: string
+    intro: string
+    protocols: { title: string; content: string }[]
+    callout: { title: string; content: string }
+  }
+
+  const bottomLineSection = educationalData.sections[9] as {
     id: string
     title: string
     intro: string
@@ -425,6 +433,26 @@ export default function KitchenThermometersGuidePage() {
                 <p className="text-slate-700 text-sm mb-0">{issue.solution}</p>
               </div>
             ))}
+          </div>
+
+          {/* Professional Protocols Section */}
+          <h2 id={protocolsSection.id}>{protocolsSection.title}</h2>
+          <p>{protocolsSection.intro}</p>
+          <div className="space-y-4 my-8">
+            {protocolsSection.protocols.map((protocol, index) => (
+              <div key={index}>
+                <p><strong>{protocol.title}:</strong> {protocol.content}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Protocol Callout */}
+          <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
+            <p className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5 text-amber-600" />
+              {protocolsSection.callout.title}
+            </p>
+            <p className="mb-0 text-amber-900">{protocolsSection.callout.content}</p>
           </div>
 
           {/* Bottom Line Section */}

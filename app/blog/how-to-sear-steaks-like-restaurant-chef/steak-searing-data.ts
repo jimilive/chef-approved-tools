@@ -242,6 +242,7 @@ export const educationalData = {
   },
 
   relatedArticles: [
+    { href: "/blog/kitchen-thermometers-guide", title: "Complete Guide to Kitchen Thermometers", description: "Use a thermometer for exact doneness every time—no more guesswork on your steaks." },
     { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", title: "Lodge Cast Iron Skillet Bundle", description: "The cast iron skillets that deliver restaurant-quality heat retention for perfect sears every time." },
     { href: "/blog/cast-iron-seasoning-care", title: "How to Season & Clean Cast Iron", description: "Keep your cast iron in perfect searing condition with proper seasoning and care techniques." },
     { href: "/glossary", title: "Recipe Conversions & Techniques", description: "Professional measurements, conversions, and knife techniques used in restaurant kitchens." }

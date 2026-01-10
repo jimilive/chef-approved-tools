@@ -127,6 +127,7 @@ export const braisingData = {
   },
 
   relatedArticles: [
+    { href: "/blog/kitchen-thermometers-guide", title: "Complete Guide to Kitchen Thermometers" },
     { href: "/blog/maillard-reaction-browning-flavor", title: "The Maillard Reaction: Why Browning = Flavor" },
     { href: "/reviews/le-creuset-signature-7-25-qt-dutch-oven", title: "Le Creuset 7.25 Qt Dutch Oven Review" },
     { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", title: "Lodge Cast Iron Skillet Bundle Review" },

@@ -157,6 +157,7 @@ export const educationalData = {
   },
 
   relatedArticles: [
+    { href: "/blog/kitchen-thermometers-guide", title: "Complete Guide to Kitchen Thermometers" },
     { href: "/blog/maillard-reaction-browning-flavor", title: "The Maillard Reaction: Why Browning Equals Flavor" },
     { href: "/blog/how-to-sear-steaks-like-restaurant-chef", title: "How to Sear Steaks Like a Restaurant Chef" },
     { href: "/blog/how-to-make-roux", title: "How to Make a Perfect Roux" },

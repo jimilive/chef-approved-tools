@@ -105,7 +105,7 @@ export default function SheetPanCookingRestaurantTechniquesPage() {
               productSlug="sheet-pan-cooking-restaurant-techniques"
               merchant="internal"
             >
-              <Link href="/blog/roasting-vegetables-restaurant-guide" className="text-blue-700 underline">
+              <Link href="/blog/vegetable-roasting-guide" className="text-blue-700 underline">
                 Learn the complete professional method for roasting vegetables
               </Link>
             </CTAVisibilityTracker>, including timing charts and spacing guidelines for every common vegetable.

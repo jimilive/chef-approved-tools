@@ -585,7 +585,7 @@ export default async function FoodProcessorVsBlenderPost() {
                   productSlug="food-processor-vs-blender"
                   merchant="internal"
                 >
-                  <Link href="/blog/roasting-vegetables-restaurant-guide" className="text-orange-700 underline">Roasting Vegetables: Restaurant Temperature & Timing Guide</Link>
+                  <Link href="/blog/vegetable-roasting-guide" className="text-orange-700 underline">Roasting Vegetables: Restaurant Temperature & Timing Guide</Link>
                 </CTAVisibilityTracker></li>
               </ul>
             </div>

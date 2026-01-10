@@ -355,6 +355,24 @@ export default function Braising101Page() {
           </p>
         </div>
 
+        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/blog/kitchen-thermometers-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Complete Guide to Kitchen Thermometers
+            </Link>
+            <Link href="/blog/what-is-braising" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → What is Braising?
+            </Link>
+            <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → The Maillard Reaction: Why Browning = Flavor
+            </Link>
+            <Link href="/reviews/le-creuset-signature-7-25-qt-dutch-oven" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Le Creuset Dutch Oven Review
+            </Link>
+          </div>
+        </div>
+
         {/* FAQ - Single Source of Truth */}
         <BlogFAQ questions={braisingData.faq.questions} />
 

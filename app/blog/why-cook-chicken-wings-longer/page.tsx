@@ -307,9 +307,9 @@ export default function WhyYouShouldCookChickenWingsLongerPage() {
             excerpt: "Professional techniques for achieving perfect crust and temperature control on any cut."
           },
           {
-            title: "Meat Cooking Temperatures and Thermometers",
-            slug: "meat-cooking-temperatures-thermometers",
-            excerpt: "Temperature targets and thermometer techniques for every cut of meat from a professional chef."
+            title: "Complete Guide to Kitchen Thermometers",
+            slug: "kitchen-thermometers-guide",
+            excerpt: "Temperature targets and thermometer techniques for every protein from a professional chef."
           }
         ]}
       />

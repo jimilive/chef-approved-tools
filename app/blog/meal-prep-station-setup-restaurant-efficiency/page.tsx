@@ -434,7 +434,7 @@ export default function MealPrepStationSetupPage() {
               productSlug="meal-prep-station-setup-restaurant-efficiency"
               merchant="internal"
             >
-              <Link href="/blog/roasting-vegetables-restaurant-guide" className="text-blue-700 underline">
+              <Link href="/blog/vegetable-roasting-guide" className="text-blue-700 underline">
                 Learn professional roasting techniques
               </Link>
             </CTAVisibilityTracker> to apply your new prep station efficiency to perfectly cooked vegetables.

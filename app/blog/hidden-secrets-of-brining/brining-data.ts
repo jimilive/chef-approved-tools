@@ -292,6 +292,7 @@ export const briningData = {
   },
 
   relatedArticles: [
+    { href: "/blog/kitchen-thermometers-guide", title: "Complete Guide to Kitchen Thermometers" },
     { href: "/blog/how-to-make-marinara-sauce", title: "How to Make Marinara Sauce Like a Restaurant" },
     { href: "/blog/making-stock-professional-chef-method", title: "Making Stock: The Professional Method" }
   ]

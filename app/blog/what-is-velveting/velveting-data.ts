@@ -328,6 +328,7 @@ export const velvetingData = {
   },
 
   relatedArticles: [
+    { href: "/blog/kitchen-thermometers-guide", title: "Complete Guide to Kitchen Thermometers" },
     { href: "/blog/hidden-secrets-of-brining", title: "The Hidden Secrets of Brining" },
     { href: "/blog/knife-skills-how-to-hold-chef-knife", title: "Master Knife Skills for Perfect Slicing" }
   ]

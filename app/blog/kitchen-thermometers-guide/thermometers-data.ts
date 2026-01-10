@@ -34,6 +34,7 @@ export const educationalData = {
     { id: "mistakes", title: "Common Mistakes (And How to Avoid Them)" },
     { id: "equipment", title: "Equipment Recommendations" },
     { id: "troubleshooting", title: "Troubleshooting Accuracy" },
+    { id: "professional-protocols", title: "Professional Kitchen Protocols" },
     { id: "faq", title: "Frequently Asked Questions" }
   ],
 
@@ -297,6 +298,24 @@ export const educationalData = {
       ]
     },
     {
+      id: "professional-protocols",
+      title: "Professional Kitchen Thermometer Protocols",
+      intro: "Based on 24 years in professional kitchens, here's how professionals actually use thermometers:",
+      protocols: [
+        { title: "Calibrate weekly", content: "Professional kitchens check thermometer accuracy regularly using ice water test (should read 32°F). Thermometers drift over time." },
+        { title: "Multiple check points", content: "For large roasts, we check multiple spots—thickest part, near bone, center, ends. Temperature gradients exist in large cuts." },
+        { title: "Rest time matters", content: "Remove from heat 5-10°F below target. Carryover cooking continues. This is non-negotiable for consistent results." },
+        { title: "Sanitize between uses", content: "Wipe probe with sanitizing solution between different proteins. Cross-contamination risk is real." },
+        { title: "Keep backup thermometer", content: "Equipment failures happen during service. Always have a spare. Can't serve without temperature verification." },
+        { title: "Log temperatures", content: "Professional kitchens document temps for health department compliance. HACCP protocols require records." },
+        { title: "Train all staff", content: "Everyone who touches proteins knows proper thermometer technique. Consistency requires universal standards." }
+      ],
+      callout: {
+        title: "From Purple Café",
+        content: "During a busy Saturday night serving 200+ covers, thermometers weren't suggestions—they were mandatory. Every protein got checked before leaving the kitchen. The 3 seconds it took to verify temperature prevented foodborne illness, customer complaints, and wasted food. That's the professional standard."
+      }
+    },
+    {
       id: "bottom-line",
       title: "The Bottom Line: Stop Guessing, Start Measuring",
       intro: "After 24 years of professional cooking and literally thousands of temperature checks, here's what I want home cooks to understand:",
@@ -357,13 +376,21 @@ export const educationalData = {
       {
         question: "Does meat need to rest after cooking, or can I cut right away?",
         answer: "Resting is critical. Juices redistribute, carryover cooking finishes the job, and you don't lose moisture. Small cuts: 5 minutes. Large roasts: 10-20 minutes. Always rest."
+      },
+      {
+        question: "What temperature is medium-rare steak?",
+        answer: "Medium-rare is 130-135°F internal temperature, measured at the thickest part. At this temp, steak has warm red center, pink throughout most of the meat, and browned exterior. After 24 years cooking steaks professionally, I pull them at 128-130°F because residual heat raises temperature 5-10 degrees during resting. At Purple Café, most guests ordering \"medium-rare\" wanted 130-135°F."
+      },
+      {
+        question: "Can I rely on meat color to check doneness?",
+        answer: "No—color is unreliable for food safety. Meat can turn brown before reaching safe temperatures, or stay pink even when fully cooked (especially with certain cooking methods or additives). The only reliable doneness test is internal temperature measured with a calibrated thermometer. After 24 years in professional kitchens, I trust thermometers over visual cues every time."
       }
     ]
   },
 
   relatedArticles: [
     { href: "/blog/how-to-sear-steaks-like-restaurant-chef", title: "How to Sear Steaks Like a Restaurant Chef" },
-    { href: "/blog/roasting-vegetables-restaurant-guide", title: "Roasting Vegetables: Restaurant Temperature & Timing Guide" },
+    { href: "/blog/vegetable-roasting-guide", title: "Roasting Vegetables: Restaurant Temperature & Timing Guide" },
     { href: "/reviews/rubbermaid-commercial-cooks-scraper", title: "Rubbermaid Cook's Scraper Review" },
     { href: "/blog/kitchen-tools-wasting-money", title: "10 Kitchen Tools You're Wasting Money On" }
   ]

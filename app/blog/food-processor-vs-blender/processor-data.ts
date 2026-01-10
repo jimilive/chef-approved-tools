@@ -88,6 +88,6 @@ export const processorData = {
   relatedLinks: [
     { href: "/reviews/victorinox-fibrox-8-inch-chefs-knife", text: "Victorinox 8-Inch Chef's Knife Review" },
     { href: "/reviews/vitamix-5200", text: "Vitamix 5200 Review" },
-    { href: "/blog/roasting-vegetables-restaurant-guide", text: "Roasting Vegetables: Restaurant Temperature & Timing Guide" }
+    { href: "/blog/vegetable-roasting-guide", text: "Roasting Vegetables: Restaurant Temperature & Timing Guide" }
   ]
 }

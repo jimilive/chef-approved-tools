@@ -414,6 +414,24 @@ export default function CaramelizingOnionsPage() {
           </p>
         </div>
 
+        <div className="mt-12 p-6 bg-slate-50 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4">Related Reading</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/blog/vegetable-roasting-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Complete Vegetable Roasting Guide
+            </Link>
+            <Link href="/blog/onions-cooking-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Complete Guide to Cooking Onions
+            </Link>
+            <Link href="/blog/caramelization-science" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → The Science of Caramelization
+            </Link>
+            <Link href="/blog/maillard-reaction-browning-flavor" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → The Maillard Reaction: Why Browning = Flavor
+            </Link>
+          </div>
+        </div>
+
         {/* FAQ - Single Source of Truth */}
         <BlogFAQ questions={onionsData.faq.questions} />
 
