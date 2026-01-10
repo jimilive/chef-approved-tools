@@ -1896,31 +1896,6 @@ export const METADATA = {
       competitorGap: "Professional chef perspective with 24 years experience",
     } as BlogMetadata,
 
-    'meat-cooking-temperatures-thermometers': {
-      title: "Meat Temperatures: Quick Reference to Doneness",
-      description: "24 years cooking meat professionally: 145°F for safety, 135°F for medium-rare perfection. Complete temperature chart for chicken, beef, pork, lamb, fish.",
-      canonical: "https://www.chefapprovedtools.com/blog/meat-cooking-temperatures-thermometers",
-      author: "Scott Bradley",
-      imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
-      imageAlt: "Meat Cooking Temperatures: Complete Safety & Doneness Chart",
-      keywords: {
-        primary: "meat cooking temperatures",
-        secondary: ["meat thermometer","food safety temperatures","instant read thermometer","cooking temperatures","professional chef techniques"],
-        searchVolume: 500,
-        difficulty: "medium",
-      },
-      publishedDate: "2025-09-20",
-      publishedTime: "2025-09-20T10:00:00Z",
-      lastUpdated: "2025-10-27",
-      modifiedTime: "2025-10-27T10:00:00Z",
-      searchIntent: "informational",
-      conversionPotential: "medium",
-      articleSection: "Cooking Techniques",
-      internalLinks: [],
-      competitorUrls: [],
-      competitorGap: "Professional chef perspective with 24 years experience",
-    } as BlogMetadata,
-
     'mis-en-place-professional-cooking': {
       title: "Mise En Place: The Professional Cooking Organization System",
       description: "Everything in its place before you start cooking. 24 years using restaurant mise en place at home—reduces stress, eliminates mistakes, cuts cooking time 30%.",
