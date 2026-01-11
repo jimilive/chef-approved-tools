@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { getProductHeroImage, getProductGallery } from '@/lib/images'
 
 interface RelatedProduct {
   name: string
@@ -17,22 +17,16 @@ interface RelatedProductsGridProps {
 }
 
 function ProductImage({ product }: { product: RelatedProduct }) {
-  const [fallbackIndex, setFallbackIndex] = useState(0)
-
   // Extract slug from href (e.g., "/reviews/product-slug" -> "product-slug")
   const slug = product.href.replace('/reviews/', '').replace(/\/$/, '')
 
-  // Try hero first, then -1.jpg, then -1.webp
-  const imagePaths = [
-    `/images/products/${slug}/${slug}-hero.jpg`,
-    `/images/products/${slug}/${slug}-1.jpg`,
-    `/images/products/${slug}/${slug}-1.webp`,
-  ]
+  // Use centralized image registry - only request images we know exist
+  const heroImage = getProductHeroImage(slug)
+  const gallery = getProductGallery(slug)
+  const imagePath = heroImage || gallery[0] || null
 
-  const currentImagePath = imagePaths[fallbackIndex]
-
-  if (fallbackIndex >= imagePaths.length) {
-    // All fallbacks exhausted - show logo
+  if (!imagePath) {
+    // No image in registry - show logo placeholder
     return (
       <div className="w-full aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
         <Image
@@ -49,12 +43,11 @@ function ProductImage({ product }: { product: RelatedProduct }) {
   return (
     <div className="w-full aspect-[4/3] relative bg-white overflow-hidden">
       <Image
-        src={currentImagePath}
+        src={imagePath}
         alt={product.name}
         fill
         sizes="(max-width: 768px) 50vw, 25vw"
         className="object-cover group-hover:scale-105 transition-transform duration-300"
-        onError={() => setFallbackIndex(fallbackIndex + 1)}
       />
     </div>
   )
