@@ -322,16 +322,9 @@ export default function DutchOvenSizeGuidePage() {
           </p>
 
           <p>
-            <CTAVisibilityTracker
-              ctaId="dutch-oven-size-deglazing-guide-1"
-              position="mid_article"
-              productSlug="dutch-oven-size-guide-which-quart-size"
-              merchant="internal"
-            >
-              <Link href="/blog/deglazing-secret-to-restaurant-quality-flavor" className="text-blue-700 underline">
-                Learn how to deglaze your Dutch oven
-              </Link>
-            </CTAVisibilityTracker> to capture every bit of browned flavor after searing.
+            <Link href="/blog/deglazing-pan-sauces" className="text-blue-700 underline">
+              Learn how to deglaze your Dutch oven
+            </Link> to capture every bit of browned flavor after searing.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">

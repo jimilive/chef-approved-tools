@@ -75,7 +75,7 @@ export const dutchOvenData = {
   relatedLinks: [
     { href: "/blog/braising-101-tough-cuts-made-tender", text: "Learn the professional braising method" },
     { href: "/blog/cookware-materials-explained", text: "Learn about different cookware materials" },
-    { href: "/blog/deglazing-secret-to-restaurant-quality-flavor", text: "Learn how to deglaze your Dutch oven" },
+    { href: "/blog/deglazing-pan-sauces", text: "Learn how to deglaze your Dutch oven" },
     { href: "/blog/carbon-footprint-kitchen-equipment-buy-once-cry-once", text: "Why investing in quality Dutch ovens reduces waste" },
     { href: "/blog/meal-prep-station-setup-restaurant-efficiency", text: "Set up your meal prep station" }
   ]

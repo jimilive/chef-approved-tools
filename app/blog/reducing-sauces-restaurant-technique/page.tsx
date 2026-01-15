@@ -252,16 +252,9 @@ export default function ReducingSaucesPage() {
           </p>
 
           <p>
-            <CTAVisibilityTracker
-              ctaId="reducing-sauces-deglazing-guide-1"
-              position="mid_article"
-              productSlug="reducing-sauces-restaurant-technique"
-              merchant="internal"
-            >
-              <Link href="/blog/deglazing-secret-to-restaurant-quality-flavor" className="text-blue-700 underline">
-                Learn how to deglaze properly
-              </Link>
-            </CTAVisibilityTracker> before reducing—deglazing captures fond that becomes the base of your reduction.
+            <Link href="/blog/deglazing-pan-sauces" className="text-blue-700 underline">
+              Learn how to deglaze properly
+            </Link> before reducing—deglazing captures fond that becomes the base of your reduction.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">

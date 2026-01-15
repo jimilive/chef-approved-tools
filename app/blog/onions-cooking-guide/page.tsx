@@ -212,8 +212,8 @@ export default function OnionsGuidePage() {
             <Link href="/blog/potatoes-cooking-guide" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Complete Guide to Cooking Potatoes
             </Link>
-            <Link href="/blog/knife-safety-protect-fingers" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → Knife Safety: How to Protect Your Fingers
+            <Link href="/blog/knife-safety-rules-professional-kitchens" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Knife Safety Rules From Professional Kitchens
             </Link>
             <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
               → Victorinox Fibrox 8&quot; Chef&apos;s Knife Review

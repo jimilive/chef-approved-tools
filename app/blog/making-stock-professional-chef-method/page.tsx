@@ -458,16 +458,9 @@ export default function MakingStockPage() {
               </CTAVisibilityTracker>
             </li>
             <li>
-              <CTAVisibilityTracker
-                ctaId="deglazing-link"
-                position="mid_article"
-                productSlug="deglazing"
-                merchant="internal"
-              >
-                <Link href="/blog/deglazing-secret-to-restaurant-quality-flavor" className="text-orange-700 hover:text-orange-700 font-medium">
-                  Deglazing: The Secret to Restaurant-Quality Flavor
-                </Link>
-              </CTAVisibilityTracker>
+              <Link href="/blog/deglazing-pan-sauces" className="text-orange-700 hover:text-orange-700 font-medium">
+                Deglazing & Pan Sauces Guide
+              </Link>
             </li>
           </ul>
         </div>

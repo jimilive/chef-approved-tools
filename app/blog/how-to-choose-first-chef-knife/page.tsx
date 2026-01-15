@@ -373,7 +373,7 @@ export default function ChooseFirstChefKnifePost() {
                   productSlug="how-to-choose-first-chef-knife"
                   merchant="internal"
                 >
-                  <Link href="/blog/knife-mistakes-home-cooks-make" className="text-orange-700 underline">5 Knife Mistakes Home Cooks Make</Link>
+                  <Link href="/blog/knife-safety-rules-professional-kitchens" className="text-orange-700 underline">Knife Safety Rules From Professional Kitchens</Link>
                 </CTAVisibilityTracker></li>
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-how-to-choose-first-chef-knife-honing-guide-2"
@@ -441,8 +441,8 @@ export default function ChooseFirstChefKnifePost() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/knife-mistakes-home-cooks-make" className="text-orange-700 hover:text-orange-800 font-semibold">
-              → 5 Knife Mistakes Home Cooks Make
+            <Link href="/blog/knife-safety-rules-professional-kitchens" className="text-orange-700 hover:text-orange-800 font-semibold">
+              → Knife Safety Rules From Professional Kitchens
             </Link>
             <Link href="/blog/how-to-steel-a-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
               → How to Steel a Knife

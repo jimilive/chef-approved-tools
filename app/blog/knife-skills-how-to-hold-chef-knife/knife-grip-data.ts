@@ -333,7 +333,6 @@ export const educationalData = {
   relatedArticles: [
     { href: "/blog/essential-knife-cuts-every-cook-should-master", title: "The 5 Essential Knife Cuts Every Home Cook Should Master" },
     { href: "/blog/knife-safety-rules-professional-kitchens", title: "Knife Safety: 10 Rules From 24 Years in Professional Kitchens" },
-    { href: "/blog/knife-mistakes-home-cooks-make", title: "5 Knife Mistakes Home Cooks Make" },
     { href: "/blog/mis-en-place-professional-cooking", title: "Mise en Place: The Foundation of Professional Cooking" },
     { href: "/blog/onions-cooking-guide", title: "Complete Guide to Cooking Onions" },
     { href: "/reviews/victorinox-fibrox-8-inch-chefs-knife", title: "Victorinox Fibrox 8\" Chef's Knife Review" },

@@ -64,7 +64,7 @@ export const knifeData = {
   },
 
   relatedLinks: [
-    { href: "/blog/knife-mistakes-home-cooks-make", text: "5 Knife Mistakes Home Cooks Make" },
+    { href: "/blog/knife-safety-rules-professional-kitchens", text: "Knife Safety Rules From Professional Kitchens" },
     { href: "/blog/how-to-steel-a-knife", text: "How to Steel a Knife" },
     { href: "/blog/how-to-sharpen-with-tri-stone", text: "How to Sharpen with a Tri-Stone" },
     { href: "/reviews/victorinox-fibrox-8-inch-chefs-knife", text: "Victorinox Fibrox 8\" Chef's Knife Review" }

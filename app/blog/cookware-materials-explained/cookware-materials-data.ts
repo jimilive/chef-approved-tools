@@ -77,7 +77,7 @@ export const educationalData = {
           avoidFor: "wine-based sauces, tomato dishes.",
           proTip: {
             content: "Don't over-clean. Wipe out, oil lightly, and store dry.",
-            link: { href: "/blog/how-to-season-cast-iron-like-restaurant-chef", text: "How to Season Cast Iron Like a Restaurant Chef" }
+            link: { href: "/blog/cast-iron-seasoning-care", text: "Cast Iron Seasoning & Care Guide" }
           }
         },
         {
@@ -166,7 +166,7 @@ export const educationalData = {
           { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", title: "Lodge Cast Iron Skillet Review" }
         ],
         buyingGuides: [
-          { href: "/blog/cast-iron-mistakes-ruin-pan", title: "Cast Iron Mistakes That Ruin Your Pan (And How to Fix Them)" }
+          { href: "/blog/cast-iron-seasoning-care", title: "Cast Iron Seasoning & Care Guide" }
         ]
       }
     }
@@ -211,6 +211,6 @@ export const educationalData = {
 
   relatedArticles: [
     { href: "/blog/stainless-steel-why-food-sticks", title: "Stainless Steel Cooking: Why Food Sticks" },
-    { href: "/blog/cast-iron-mistakes-ruin-pan", title: "Cast Iron Mistakes That Ruin Your Pan" }
+    { href: "/blog/cast-iron-seasoning-care", title: "Cast Iron Seasoning & Care Guide" }
   ]
 }

@@ -339,7 +339,7 @@ export default function KitchenToolsWastePost() {
                   productSlug="kitchen-tools-wasting-money"
                   merchant="internal"
                 >
-                  <Link href="/blog/knife-mistakes-home-cooks-make" className="text-blue-700 underline">Knife Mistakes Guide</Link>
+                  <Link href="/blog/knife-safety-rules-professional-kitchens" className="text-blue-700 underline">Knife Safety Guide</Link>
                 </CTAVisibilityTracker>.
               </p>
             </div>
@@ -385,7 +385,7 @@ export default function KitchenToolsWastePost() {
                   productSlug="kitchen-tools-wasting-money"
                   merchant="internal"
                 >
-                  <Link href="/blog/knife-mistakes-home-cooks-make" className="text-orange-700 underline">5 Knife Mistakes Home Cooks Make</Link>
+                  <Link href="/blog/knife-safety-rules-professional-kitchens" className="text-orange-700 underline">Knife Safety Rules From Professional Kitchens</Link>
                 </CTAVisibilityTracker></li>
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-kitchen-tools-wasting-money-cast-iron-seasoning-1"
@@ -393,7 +393,7 @@ export default function KitchenToolsWastePost() {
                   productSlug="kitchen-tools-wasting-money"
                   merchant="internal"
                 >
-                  <Link href="/blog/how-to-season-cast-iron-like-restaurant-chef" className="text-orange-700 underline">How to Season Cast Iron Like a Restaurant Chef</Link>
+                  <Link href="/blog/cast-iron-seasoning-care" className="text-orange-700 underline">Cast Iron Seasoning & Care Guide</Link>
                 </CTAVisibilityTracker></li>
                 <li>• <CTAVisibilityTracker
                   ctaId="blog-kitchen-tools-wasting-money-steak-guide-1"
@@ -454,14 +454,14 @@ export default function KitchenToolsWastePost() {
         <div className="mt-12 p-6 bg-slate-50 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Related Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/blog/knife-mistakes-home-cooks-make" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">5 Knife Mistakes Home Cooks Make</h4>
+            <Link href="/blog/knife-safety-rules-professional-kitchens" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+              <h4 className="font-bold text-slate-900 mb-2">Knife Safety Rules From Professional Kitchens</h4>
               <p className="text-slate-700 text-sm">
-                Learn the common knife mistakes that wreck edges and slow prep, plus professional fixes.
+                The 10 knife safety rules every professional cook learns—and how to apply them at home.
               </p>
             </Link>
-            <Link href="/blog/how-to-season-cast-iron-like-restaurant-chef" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">How to Season Cast Iron Like a Restaurant Chef</h4>
+            <Link href="/blog/cast-iron-seasoning-care" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
+              <h4 className="font-bold text-slate-900 mb-2">Cast Iron Seasoning & Care Guide</h4>
               <p className="text-slate-700 text-sm">
                 Master professional cast iron seasoning with thin layers and proper heat discipline.
               </p>

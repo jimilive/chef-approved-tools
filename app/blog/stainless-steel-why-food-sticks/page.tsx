@@ -475,10 +475,10 @@ export default function StainlessSteelStickingPost() {
                 Master professional steak searing techniques for perfect crust and release every time.
               </p>
             </Link>
-            <Link href="/blog/cast-iron-mistakes-ruin-pan" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h4 className="font-bold text-slate-900 mb-2">Cast Iron Mistakes That Ruin Your Pan</h4>
+            <Link href="/blog/cast-iron-seasoning-care" className="block bg-white rounded-lg p-6 hover:shadow-md transition-shadow">
+              <h4 className="font-bold text-slate-900 mb-2">Cast Iron Seasoning & Care Guide</h4>
               <p className="text-slate-700 text-sm">
-                Learn the common cast iron mistakes and how proper maintenance creates nonstick surfaces.
+                Learn how proper seasoning and maintenance creates nonstick surfaces that last generations.
               </p>
             </Link>
           </div>

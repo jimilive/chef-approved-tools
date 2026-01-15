@@ -171,8 +171,7 @@ export const educationalData = {
       relatedGuides: {
         techniques: [
           { href: "/blog/essential-knife-cuts-every-cook-should-master", title: "The 5 Essential Knife Cuts Every Home Cook Should Master" },
-          { href: "/blog/knife-safety-rules-professional-kitchens", title: "Knife Safety: 10 Rules From 24 Years in Professional Kitchens" },
-          { href: "/blog/knife-mistakes-home-cooks-make", title: "5 Knife Mistakes Home Cooks Make" }
+          { href: "/blog/knife-safety-rules-professional-kitchens", title: "Knife Safety: 10 Rules From 24 Years in Professional Kitchens" }
         ],
         equipment: [
           { href: "/reviews/rubbermaid-commercial-cooks-scraper", title: "Rubbermaid Commercial Cook's Scraper Review" }
@@ -222,7 +221,6 @@ export const educationalData = {
   },
 
   relatedArticles: [
-    { href: "/blog/knife-mistakes-home-cooks-make", title: "5 Knife Mistakes Home Cooks Make" },
     { href: "/blog/knife-safety-rules-professional-kitchens", title: "Knife Safety: 10 Rules From Professional Kitchens" }
   ]
 }

@@ -52,7 +52,7 @@ export const wastingmoneyData = {
   },
 
   relatedLinks: [
-    { href: "/blog/knife-mistakes-home-cooks-make", text: "5 Knife Mistakes Home Cooks Make" },
-    { href: "/blog/how-to-season-cast-iron-like-restaurant-chef", text: "How to Season Cast Iron" }
+    { href: "/blog/knife-safety-rules-professional-kitchens", text: "Knife Safety Rules From Professional Kitchens" },
+    { href: "/blog/cast-iron-seasoning-care", text: "Cast Iron Seasoning & Care" }
   ]
 }
