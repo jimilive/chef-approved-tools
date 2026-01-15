@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { comparisonData } from './pressure-cooker-vs-slow-cooker-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   BlogLayout,
   BlogHero,
@@ -117,7 +116,7 @@ export default function PressureCookerVsSlowCooker() {
         <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Recommended Products</h2>
           <p className="text-slate-700 mb-4">
-            The <CTAVisibilityTracker ctaId="blog-pressure-vs-slow-cooker-instant-pot" position="mid_article" productSlug="instant-pot-duo-plus-6qt" merchant="internal"><Link href="/reviews/instant-pot-duo-plus-6qt" className="text-orange-700 hover:text-orange-800 underline">Instant Pot Duo Plus 6qt</Link></CTAVisibilityTracker> offers both pressure and slow cooking capabilities in one versatile appliance, providing maximum flexibility for different cooking situations.
+            The <Link href="/reviews/instant-pot-duo-plus-6qt" className="text-orange-700 hover:text-orange-800 underline">Instant Pot Duo Plus 6qt</Link> offers both pressure and slow cooking capabilities in one versatile appliance, providing maximum flexibility for different cooking situations.
           </p>
           <p className="text-slate-700">
             Browse our full selection of <Link href="/appliances" className="text-orange-700 hover:text-orange-800 underline">kitchen appliances</Link> for more options.

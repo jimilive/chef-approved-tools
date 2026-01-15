@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { educationalData } from './knife-safety-rules-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { AlertTriangle, Shield, CheckCircle2, Zap, ChefHat } from 'lucide-react'
 import {
   BlogLayout,
@@ -107,11 +106,9 @@ export default function KnifeSafetyPost() {
             <p className="text-slate-700 mb-4">
               Join my free email series for the <strong>&quot;Professional Knife Care Checklist&quot;</strong> — how chefs clean, hone, and store blades for decades of use.
             </p>
-            <CTAVisibilityTracker ctaId="blog-knife-safety-newsletter-1" position="mid_article" productSlug="knife-safety-rules-professional-kitchens" merchant="internal">
-              <Link href="/newsletter" className="bg-orange-900 !text-white hover:bg-orange-800 px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
-                Get the Free Guide
-              </Link>
-            </CTAVisibilityTracker>
+            <Link href="/newsletter" className="bg-orange-900 !text-white hover:bg-orange-800 px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
+              Get the Free Guide
+            </Link>
           </div>
 
           <h2 id="method">The Professional Method: How Chefs Actually Use and Maintain Knives</h2>
@@ -125,9 +122,7 @@ export default function KnifeSafetyPost() {
                   if (p.includes('**Rubbermaid')) {
                     return (
                       <p key={i}>
-                        I&apos;ve used a <CTAVisibilityTracker ctaId="blog-knife-safety-scraper-1" position="mid_article" productSlug="rubbermaid-commercial-cooks-scraper" merchant="internal">
-                          <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link>
-                        </CTAVisibilityTracker> for 19 years, and it&apos;s perfect for transferring chopped veggies or herbs without damaging your knife.
+                        I&apos;ve used a <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link> for 19 years, and it&apos;s perfect for transferring chopped veggies or herbs without damaging your knife.
                       </p>
                     )
                   }
@@ -178,10 +173,10 @@ export default function KnifeSafetyPost() {
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
             <h3 className="font-bold text-slate-800 mb-4">Essential Safety Equipment</h3>
             <ul className="space-y-3">
-              <li><strong>Chef Knife:</strong> <CTAVisibilityTracker ctaId="blog-knife-safety-victorinox-1" position="mid_article" productSlug="victorinox-fibrox-8-inch-chefs-knife" merchant="internal"><Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</Link></CTAVisibilityTracker> — balanced, slip-resistant, professional standard.</li>
+              <li><strong>Chef Knife:</strong> <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife</Link> — balanced, slip-resistant, professional standard.</li>
               <li><strong>Honing Steel:</strong> A quality ceramic honing rod realigns your edge without removing metal.</li>
-              <li><strong>Cutting Board:</strong> <CTAVisibilityTracker ctaId="blog-knife-safety-boos-1" position="mid_article" productSlug="john-boos-platinum-commercial-cutting-board" merchant="internal"><Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800 underline">John Boos Platinum Commercial Cutting Board</Link></CTAVisibilityTracker> or <CTAVisibilityTracker ctaId="blog-knife-safety-epicurean-1" position="mid_article" productSlug="epicurean-kitchen-cutting-board" merchant="internal"><Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-700 hover:text-orange-800 underline">Epicurean Kitchen Cutting Board</Link></CTAVisibilityTracker>.</li>
-              <li><strong>Scraper:</strong> <CTAVisibilityTracker ctaId="blog-knife-safety-scraper-2" position="mid_article" productSlug="rubbermaid-commercial-cooks-scraper" merchant="internal"><Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link></CTAVisibilityTracker> — transfer food safely.</li>
+              <li><strong>Cutting Board:</strong> <Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-700 hover:text-orange-800 underline">John Boos Platinum Commercial Cutting Board</Link> or <Link href="/reviews/epicurean-kitchen-cutting-board" className="text-orange-700 hover:text-orange-800 underline">Epicurean Kitchen Cutting Board</Link>.</li>
+              <li><strong>Scraper:</strong> <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link> — transfer food safely.</li>
               <li><strong>Knife Storage:</strong> Magnetic strips or knife blocks prevent accidents and protect edges.</li>
             </ul>
           </div>
@@ -212,16 +207,16 @@ export default function KnifeSafetyPost() {
               <h4 className="font-bold text-orange-800 mb-2">Technique Guides:</h4>
               <ul className="text-orange-800 space-y-1 text-sm">
                 {educationalData.techniqueGuides.map((g, i) => (
-                  <li key={i}><CTAVisibilityTracker ctaId={`blog-knife-safety-guide-${i}`} position="final_cta" productSlug="knife-safety-rules-professional-kitchens" merchant="internal"><Link href={g.href} className="text-orange-800 underline">{g.title}</Link></CTAVisibilityTracker></li>
+                  <li key={i}><Link href={g.href} className="text-orange-800 underline">{g.title}</Link></li>
                 ))}
               </ul>
             </div>
             <div>
               <h4 className="font-bold text-orange-800 mb-2">Essential Equipment:</h4>
               <ul className="text-orange-800 space-y-1 text-sm">
-                <li><CTAVisibilityTracker ctaId="blog-knife-safety-victorinox-2" position="final_cta" productSlug="victorinox-fibrox-8-inch-chefs-knife" merchant="internal"><Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-800 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife Review</Link></CTAVisibilityTracker></li>
-                <li><CTAVisibilityTracker ctaId="blog-knife-safety-scraper-3" position="final_cta" productSlug="rubbermaid-commercial-cooks-scraper" merchant="internal"><Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper Review</Link></CTAVisibilityTracker></li>
-                <li><CTAVisibilityTracker ctaId="blog-knife-safety-boos-2" position="final_cta" productSlug="john-boos-platinum-commercial-cutting-board" merchant="internal"><Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-800 underline">John Boos Platinum Cutting Board Review</Link></CTAVisibilityTracker></li>
+                <li><Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-800 underline">Victorinox Fibrox 8&quot; Chef&apos;s Knife Review</Link></li>
+                <li><Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper Review</Link></li>
+                <li><Link href="/reviews/john-boos-platinum-commercial-cutting-board" className="text-orange-800 underline">John Boos Platinum Cutting Board Review</Link></li>
               </ul>
             </div>
           </div>

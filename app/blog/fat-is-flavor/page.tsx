@@ -8,7 +8,6 @@ import { ChefHat, Flame, Sparkles } from 'lucide-react'
 import { educationalData } from './fat-flavor-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   BlogLayout,
   BlogHero,
@@ -168,16 +167,9 @@ export default function FatIsFlavorPage() {
               {technique.content && technique.maillardLink && (
                 <p>
                   Fat conducts heat more efficiently than air and creates better browning through the{' '}
-                  <CTAVisibilityTracker
-                    ctaId="blog-fat-flavor-maillard-link"
-                    position="mid_article"
-                    productSlug="fat-is-flavor"
-                    merchant="internal"
-                  >
-                    <Link href={technique.maillardLink} className="text-orange-700 hover:text-orange-800 underline">
-                      Maillard reaction
-                    </Link>
-                  </CTAVisibilityTracker>
+                  <Link href={technique.maillardLink} className="text-orange-700 hover:text-orange-800 underline">
+                    Maillard reaction
+                  </Link>
                   . This is why sautéing and pan-frying create better flavor than steaming or boiling.
                 </p>
               )}

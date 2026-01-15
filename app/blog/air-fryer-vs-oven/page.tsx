@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { comparisonData } from './air-fryer-vs-oven-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   BlogLayout,
   BlogHero,
@@ -117,10 +116,10 @@ export default function AirFryerVsOven() {
         <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Recommended Products</h2>
           <p className="text-slate-700 mb-4">
-            For those interested in exploring air fryer options, the <CTAVisibilityTracker ctaId="blog-air-fryer-vs-oven-ninja-af101" position="mid_article" productSlug="ninja-air-fryer-af101" merchant="internal"><Link href="/reviews/ninja-air-fryer-af101" className="text-orange-700 hover:text-orange-800 underline">Ninja Air Fryer AF101</Link></CTAVisibilityTracker> offers excellent performance at a reasonable price point. It delivers crispy results in a compact design that fits most kitchens.
+            For those interested in exploring air fryer options, the <Link href="/reviews/ninja-air-fryer-af101" className="text-orange-700 hover:text-orange-800 underline">Ninja Air Fryer AF101</Link> offers excellent performance at a reasonable price point. It delivers crispy results in a compact design that fits most kitchens.
           </p>
           <p className="text-slate-700 mb-4">
-            If you prefer a versatile countertop oven that includes both convection and traditional cooking capabilities, consider the <CTAVisibilityTracker ctaId="blog-air-fryer-vs-oven-black-decker" position="mid_article" productSlug="black-decker-toaster-oven" merchant="internal"><Link href="/reviews/black-decker-toaster-oven" className="text-orange-700 hover:text-orange-800 underline">Black+Decker Toaster Oven</Link></CTAVisibilityTracker>.
+            If you prefer a versatile countertop oven that includes both convection and traditional cooking capabilities, consider the <Link href="/reviews/black-decker-toaster-oven" className="text-orange-700 hover:text-orange-800 underline">Black+Decker Toaster Oven</Link>.
           </p>
           <p className="text-slate-700">
             Browse our full selection of <Link href="/appliances" className="text-orange-700 hover:text-orange-800 underline">kitchen appliances</Link> for more options.

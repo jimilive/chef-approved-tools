@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { Clock, Shield, TrendingUp, Award, Users, DollarSign } from 'lucide-react'
 import { Metadata } from 'next'
 import FAQSchema from '@/components/FAQSchema'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import Link from 'next/link'
 import { getPageMetadata } from '@/data/metadata'
 
@@ -467,17 +466,12 @@ export default function AboutPage() {
               This tier system exists for one reason: <strong>radical transparency</strong>. You deserve
               to know exactly what experience backs each recommendation.
             </p>
-            <CTAVisibilityTracker
-              ctaId="about-tier-system-link"
-              position="mid_article"
+            <Link
+              href="/chef-approved"
+              className="inline-block text-orange-700 hover:text-orange-800 font-semibold underline"
             >
-              <Link
-                href="/chef-approved"
-                className="inline-block text-orange-700 hover:text-orange-800 font-semibold underline"
-              >
-                Learn more about our tier system →
-              </Link>
-            </CTAVisibilityTracker>
+              Learn more about our tier system →
+            </Link>
           </div>
         </div>
       </section>

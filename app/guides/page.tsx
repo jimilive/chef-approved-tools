@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import FAQSchema from '@/components/FAQSchema'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { generateBreadcrumbSchema } from '@/lib/schema'
 import { getPageMetadata } from '@/data/metadata'
 
@@ -132,21 +131,13 @@ export default function GuidesPage() {
 
       <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(350px,1fr))]">
         {guides.map((guide, index) => (
-          <CTAVisibilityTracker
-            key={index}
-            ctaId={`guides-landing-card-${index + 1}`}
-            position="mid_article"
-            productSlug={guide.href.replace('/guides/', '').replace('/reviews/', '')}
-            merchant="internal"
-          >
-            <a href={guide.href} className="no-underline">
-              <div className="bg-white rounded-xl shadow-sm p-8 border border-slate-200 transition-shadow duration-200 hover:shadow-lg">
-                <h3 className="text-2xl font-bold mb-3 text-slate-900">{guide.title}</h3>
-                <p className="text-slate-700 mb-4">{guide.description}</p>
-                <span className="text-orange-700 font-semibold">Read Guide →</span>
-              </div>
-            </a>
-          </CTAVisibilityTracker>
+          <a key={index} href={guide.href} className="no-underline">
+            <div className="bg-white rounded-xl shadow-sm p-8 border border-slate-200 transition-shadow duration-200 hover:shadow-lg">
+              <h3 className="text-2xl font-bold mb-3 text-slate-900">{guide.title}</h3>
+              <p className="text-slate-700 mb-4">{guide.description}</p>
+              <span className="text-orange-700 font-semibold">Read Guide →</span>
+            </div>
+          </a>
         ))}
       </div>
     </div>

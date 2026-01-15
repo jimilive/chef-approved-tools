@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { educationalData } from './knife-storage-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import { Shield, Droplet, Wind, AlertTriangle, Grid3x3, Magnet, Box } from 'lucide-react'
 import {
   BlogLayout,
@@ -212,11 +211,9 @@ export default function KnifeStorageProtectionPage() {
             <h3 className="text-xl font-semibold text-slate-900 mb-3">Want my complete kitchen equipment guide?</h3>
             <p className="text-slate-700 mb-3">Join 10,000+ home cooks learning pro techniques and tool recommendations.</p>
             <p className="text-slate-700 mb-4"><strong>Free download:</strong> &quot;11 Essential Kitchen Tools I Use Every Day&quot;</p>
-            <CTAVisibilityTracker ctaId="knife-storage-protection-newsletter-cta" position="mid_article" productSlug="knife-storage-protecting-blades-for-decades" merchant="internal">
-              <Link href="/newsletter" className="inline-block bg-orange-900 !text-white px-6 py-3 rounded font-semibold hover:bg-orange-800 transition-colors">
-                Get the Free Guide →
-              </Link>
-            </CTAVisibilityTracker>
+            <Link href="/newsletter" className="inline-block bg-orange-900 !text-white px-6 py-3 rounded font-semibold hover:bg-orange-800 transition-colors">
+              Get the Free Guide →
+            </Link>
           </div>
 
           {/* Comparison Table */}
@@ -281,11 +278,9 @@ export default function KnifeStorageProtectionPage() {
           )}
 
           <p>
-            <CTAVisibilityTracker ctaId="knife-storage-protection-grip-guide-1" position="mid_article" productSlug="knife-storage-protecting-blades-for-decades" merchant="internal">
-              <Link href="/blog/knife-skills-how-to-hold-chef-knife" className="text-blue-700 underline">
-                Learn professional knife grip techniques
-              </Link>
-            </CTAVisibilityTracker> to complement your proper storage and keep your well-maintained knives performing at their best.
+            <Link href="/blog/knife-skills-how-to-hold-chef-knife" className="text-blue-700 underline">
+              Learn professional knife grip techniques
+            </Link> to complement your proper storage and keep your well-maintained knives performing at their best.
           </p>
 
           {/* Final Thoughts */}

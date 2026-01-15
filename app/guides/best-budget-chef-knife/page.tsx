@@ -299,12 +299,6 @@ export default async function BestBudgetChefKnife() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Guides & Reviews</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <CTAVisibilityTracker
-              ctaId="best-budget-chef-knife-related-knife-care"
-              position="final_cta"
-              productSlug="knife-care"
-              merchant="internal"
-            >
             <Link
               href="/guides/knife-care"
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
@@ -312,13 +306,6 @@ export default async function BestBudgetChefKnife() {
               <h3 className="font-bold text-slate-900 mb-2">How to Care for Your Chef's Knife</h3>
               <p className="text-sm text-slate-700">Essential maintenance tips to keep your knife razor-sharp for decades.</p>
             </Link>
-            </CTAVisibilityTracker>
-            <CTAVisibilityTracker
-              ctaId="best-budget-chef-knife-related-meat-knife"
-              position="final_cta"
-              productSlug="best-knife-for-cutting-meat"
-              merchant="internal"
-            >
             <Link
               href="/guides/best-knife-for-cutting-meat"
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
@@ -326,7 +313,6 @@ export default async function BestBudgetChefKnife() {
               <h3 className="font-bold text-slate-900 mb-2">Best Knife for Cutting Meat</h3>
               <p className="text-sm text-slate-700">Discover the professional's choice for butchering, trimming, and deboning.</p>
             </Link>
-            </CTAVisibilityTracker>
           </div>
         </section>
 

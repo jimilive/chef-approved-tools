@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { comparisonData } from './nonstick-vs-stainless-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   BlogLayout,
   BlogHero,
@@ -66,7 +65,7 @@ export default function NonstickVsStainlessSteelComparison() {
           features={comparisonData.comparisonTable.features}
         />
         <p className="text-sm text-gray-600 mt-4">
-          Read our full review: <CTAVisibilityTracker ctaId="blog-nonstick-vs-stainless-cuisinart-pan" position="mid_article" productSlug="cuisinart-8-inch-nonstick-pan" merchant="internal"><Link href="/reviews/cuisinart-8-inch-nonstick-pan" className="text-orange-700 hover:text-orange-800">Cuisinart 8&quot; Nonstick Pan</Link></CTAVisibilityTracker>
+          Read our full review: <Link href="/reviews/cuisinart-8-inch-nonstick-pan" className="text-orange-700 hover:text-orange-800">Cuisinart 8&quot; Nonstick Pan</Link>
         </p>
 
         <section className="bg-white rounded-xl shadow-lg p-8 mb-8">

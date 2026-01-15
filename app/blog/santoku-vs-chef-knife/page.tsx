@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { comparisonData } from './santoku-vs-chef-knife-data'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import {
   BlogLayout,
   BlogHero,
@@ -125,11 +124,9 @@ export default function SantokuVsChefKnife() {
                   <li key={index}>&#8226; {feature}</li>
                 ))}
               </ul>
-              <CTAVisibilityTracker ctaId="santoku-vs-chef-victorinox" position="mid_article" productSlug="victorinox-fibrox-8-inch-chefs-knife" merchant="internal">
-                <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
-                  Read full Victorinox review &rarr;
-                </Link>
-              </CTAVisibilityTracker>
+              <Link href="/reviews/victorinox-fibrox-8-inch-chefs-knife" className="text-orange-700 hover:text-orange-800 font-semibold">
+                Read full Victorinox review &rarr;
+              </Link>
             </div>
             <div className="border border-gray-200 rounded-lg p-6">
               <h3 className="text-xl font-bold text-slate-900 mb-2">{comparisonData.productRecommendations.santoku.title}</h3>
@@ -139,11 +136,9 @@ export default function SantokuVsChefKnife() {
                   <li key={index}>&#8226; {feature}</li>
                 ))}
               </ul>
-              <CTAVisibilityTracker ctaId="santoku-vs-chef-wusthof" position="mid_article" productSlug="wusthof-classic-ikon-santoku" merchant="internal">
-                <Link href="/reviews/wusthof-classic-ikon-santoku" className="text-orange-700 hover:text-orange-800 font-semibold">
-                  Read full Wusthof Santoku review &rarr;
-                </Link>
-              </CTAVisibilityTracker>
+              <Link href="/reviews/wusthof-classic-ikon-santoku" className="text-orange-700 hover:text-orange-800 font-semibold">
+                Read full Wusthof Santoku review &rarr;
+              </Link>
             </div>
           </div>
         </section>

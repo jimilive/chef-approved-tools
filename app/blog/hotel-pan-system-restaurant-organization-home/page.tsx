@@ -3,7 +3,6 @@ import AffiliateButton from '@/components/AffiliateButton'
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema'
 import { generateBlogMetadata } from '@/lib/metadata-helpers'
 import { getProductBySlug, getPrimaryAffiliateLink } from '@/lib/product-helpers'
-import CTAVisibilityTracker from '@/components/CTAVisibilityTracker'
 import BlogLayout from '@/components/blog/BlogLayout'
 import BlogHero from '@/components/blog/BlogHero'
 import BlogEmailCapture from '@/components/blog/BlogEmailCapture'
@@ -770,14 +769,12 @@ export default async function HotelPanSystemPage() {
               <p className="text-slate-700 mb-4">
                 Home use hero product for meal prep and organization. After 20 years of daily home use, this is the single best kitchen upgrade.
               </p>
-              <CTAVisibilityTracker ctaId="blog-hotel-pan-system-small-plastic" position="bottom_article" productSlug="small-plastic-hotel-pans" merchant="internal">
-                <Link
-                  href="/reviews/small-plastic-hotel-pans"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
-                >
-                  Read Small Plastic Hotel Pans review →
-                </Link>
-              </CTAVisibilityTracker>
+              <Link
+                href="/reviews/small-plastic-hotel-pans"
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+              >
+                Read Small Plastic Hotel Pans review →
+              </Link>
             </div>
 
             <div className="bg-white p-6 rounded-lg border border-blue-200">
@@ -785,14 +782,12 @@ export default async function HotelPanSystemPage() {
               <p className="text-slate-700 mb-4">
                 Commercial cold storage for catering businesses, large families (8+ people), and bulk meal prep operations.
               </p>
-              <CTAVisibilityTracker ctaId="blog-hotel-pan-system-large-plastic" position="bottom_article" productSlug="large-plastic-hotel-pans" merchant="internal">
-                <Link
-                  href="/reviews/large-plastic-hotel-pans"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
-                >
-                  Read Large Plastic Hotel Pans review →
-                </Link>
-              </CTAVisibilityTracker>
+              <Link
+                href="/reviews/large-plastic-hotel-pans"
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+              >
+                Read Large Plastic Hotel Pans review →
+              </Link>
             </div>
 
             <div className="bg-white p-6 rounded-lg border border-blue-200">
@@ -800,14 +795,12 @@ export default async function HotelPanSystemPage() {
               <p className="text-slate-700 mb-4">
                 Stainless steel for hot holding, BBQs, oven roasting, and family gatherings. Essential for anyone who hosts events.
               </p>
-              <CTAVisibilityTracker ctaId="blog-hotel-pan-system-small-metal" position="bottom_article" productSlug="small-metal-hotel-pans" merchant="internal">
-                <Link
-                  href="/reviews/small-metal-hotel-pans"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
-                >
-                  Read Small Metal Hotel Pans review →
-                </Link>
-              </CTAVisibilityTracker>
+              <Link
+                href="/reviews/small-metal-hotel-pans"
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+              >
+                Read Small Metal Hotel Pans review →
+              </Link>
             </div>
 
             <div className="bg-white p-6 rounded-lg border border-blue-200">
@@ -815,14 +808,12 @@ export default async function HotelPanSystemPage() {
               <p className="text-slate-700 mb-4">
                 Commercial hot holding for catering businesses, weddings, and large-scale event hosting (50+ people).
               </p>
-              <CTAVisibilityTracker ctaId="blog-hotel-pan-system-large-metal" position="bottom_article" productSlug="large-metal-hotel-pans" merchant="internal">
-                <Link
-                  href="/reviews/large-metal-hotel-pans"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
-                >
-                  Read Large Metal Hotel Pans review →
-                </Link>
-              </CTAVisibilityTracker>
+              <Link
+                href="/reviews/large-metal-hotel-pans"
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+              >
+                Read Large Metal Hotel Pans review →
+              </Link>
             </div>
           </div>
         </section>

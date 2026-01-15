@@ -352,12 +352,6 @@ export default async function BestKnifeForCuttingMeat() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Guides & Reviews</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <CTAVisibilityTracker
-              ctaId="best-knife-cutting-meat-related-budget-knife"
-              position="final_cta"
-              productSlug="best-budget-chef-knife"
-              merchant="internal"
-            >
             <Link
               href="/guides/best-budget-chef-knife"
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
@@ -365,13 +359,6 @@ export default async function BestKnifeForCuttingMeat() {
               <h3 className="font-bold text-slate-900 mb-2">Best Budget Chef Knife</h3>
               <p className="text-sm text-slate-700">The $50 chef's knife I've used for 20 years in professional kitchens.</p>
             </Link>
-            </CTAVisibilityTracker>
-            <CTAVisibilityTracker
-              ctaId="best-knife-cutting-meat-related-knife-care"
-              position="final_cta"
-              productSlug="knife-care"
-              merchant="internal"
-            >
             <Link
               href="/guides/knife-care"
               className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
@@ -379,7 +366,6 @@ export default async function BestKnifeForCuttingMeat() {
               <h3 className="font-bold text-slate-900 mb-2">Knife Care Guide</h3>
               <p className="text-sm text-slate-700">Learn how to maintain and sharpen your knives like a professional.</p>
             </Link>
-            </CTAVisibilityTracker>
           </div>
         </section>
 
