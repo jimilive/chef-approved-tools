@@ -14,6 +14,10 @@ import { useEffect } from 'react'
  * - Desktop: 3 second delay
  * - Loads immediately on any user interaction
  *
+ * Scripts loaded:
+ * - Google Tag Manager (GTM) - loads GA4 via GTM configuration
+ * - Microsoft Clarity - session recording and heatmaps
+ *
  * Note: GTM loads GA4 automatically via GTM configuration
  * We no longer load GA4 directly to avoid duplicate tracking
  *
@@ -23,6 +27,7 @@ import { useEffect } from 'react'
 export default function ThirdPartyScripts() {
   useEffect(() => {
     let gtmLoaded = false
+    let clarityLoaded = false
 
     // Detect mobile for longer delay
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -47,10 +52,23 @@ export default function ThirdPartyScripts() {
       }
     }
 
+    // Load Microsoft Clarity
+    const loadClarity = () => {
+      if (!clarityLoaded) {
+        clarityLoaded = true
+        ;(function(c: any, l: any, a: any, r: any, i: any, t?: any, y?: any) {
+          c[a] = c[a] || function() { (c[a].q = c[a].q || []).push(arguments) }
+          t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt"
+          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y)
+        })(window, document, "clarity", "script", "v33bi0dpxl")
+      }
+    }
+
     // Event listeners for immediate loading on interaction
     const interactionEvents = ['mousedown', 'touchstart', 'keydown', 'scroll']
     const handleInteraction = () => {
       loadGTM()
+      loadClarity()
       // Remove listeners after first interaction
       interactionEvents.forEach(event => {
         document.removeEventListener(event, handleInteraction)
@@ -63,7 +81,10 @@ export default function ThirdPartyScripts() {
     })
 
     // Fallback: load after delay if no interaction
-    const timeoutId = setTimeout(loadGTM, delay)
+    const timeoutId = setTimeout(() => {
+      loadGTM()
+      loadClarity()
+    }, delay)
 
     // Cleanup
     return () => {
