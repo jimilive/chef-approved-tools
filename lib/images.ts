@@ -90,6 +90,14 @@ export const productImages: Record<string, {
     ]
   },
 
+  'lamson-fish-spatula': {
+    hero: '/images/products/lamson-fish-spatula/LamsonSharpFishSpat1600x1200_watermarked.jpg',
+    og: '/images/products/lamson-fish-spatula/LamsonSharpFishSpat_1200x630_watermarked.jpg',
+    gallery: [
+      '/images/products/lamson-fish-spatula/LamsonSharpFishSpat1600x1200_watermarked.jpg',
+    ]
+  },
+
   'method-all-purpose-cleaner': {
     hero: '/images/products/method-all-purpose-cleaner/method-all-purpose-cleaner-hero.jpg',
     og: '/images/products/method-all-purpose-cleaner/method-all-purpose-cleaner-og.jpg',
