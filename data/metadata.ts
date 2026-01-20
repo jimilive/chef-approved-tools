@@ -1346,6 +1346,31 @@ export const METADATA = {
       competitorGap: "Professional chef perspective with 24 years experience",
     } as BlogMetadata,
 
+    'how-to-get-rust-off-knife': {
+      title: "How to Get Rust Off a Knife: 5 Methods That Actually Work",
+      description: "Professional chef with 24 years experience shows how to remove rust from knives using vinegar, baking soda, and other proven methods. Plus prevention tips.",
+      canonical: "https://www.chefapprovedtools.com/blog/how-to-get-rust-off-knife",
+      author: "Scott Bradley",
+      imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+      imageAlt: "How to Get Rust Off a Knife: 5 Methods That Actually Work",
+      keywords: {
+        primary: "how to get rust off a knife",
+        secondary: ["remove rust from knife", "rusty knife fix", "knife rust removal", "how to clean rust off knife", "carbon steel knife rust"],
+        searchVolume: 1300,
+        difficulty: "low",
+      },
+      publishedDate: "2026-01-19",
+      publishedTime: "2026-01-19T10:00:00Z",
+      lastUpdated: "2026-01-19",
+      modifiedTime: "2026-01-19T10:00:00Z",
+      searchIntent: "informational",
+      conversionPotential: "medium",
+      articleSection: "Knife Care",
+      internalLinks: [],
+      competitorUrls: [],
+      competitorGap: "Professional chef perspective with 24 years experience",
+    } as BlogMetadata,
+
     'how-to-make-perfect-french-press-coffee': {
       title: "How To Make Perfect French Press Coffee (Barista Method)",
       description: "Perfect French press needs the right ratio and 4-minute steep time. Step-by-step technique and common mistakes to avoid for cafe-quality coffee at home.",

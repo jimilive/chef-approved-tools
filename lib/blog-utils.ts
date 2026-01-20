@@ -68,7 +68,7 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
       if (slugLower.includes('-vs-')) {
         category = 'Comparisons'
       }
-      // Knife Care - ONLY maintenance, storage, sharpening, and buying guides
+      // Knife Care - ONLY maintenance, storage, sharpening, rust removal, and buying guides
       else if (
         slugLower.includes('sharpen') ||
         slugLower.includes('steel-a-knife') ||
@@ -76,9 +76,11 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
         slugLower.includes('knife-storage') ||
         slugLower.includes('knife-block') ||
         slugLower.includes('choose-first-chef-knife') ||
+        slugLower.includes('rust-off-knife') ||
         titleLower.includes('sharpen') ||
         titleLower.includes('knife storage') ||
-        titleLower.includes('knife block')
+        titleLower.includes('knife block') ||
+        (titleLower.includes('rust') && titleLower.includes('knife'))
       ) {
         category = 'Knife Care'
       }
