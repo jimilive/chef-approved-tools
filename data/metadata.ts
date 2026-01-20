@@ -921,6 +921,31 @@ export const METADATA = {
       competitorGap: "24 years professional kitchen experience with detailed technique comparison",
     } as BlogMetadata,
 
+    'cooking-by-feel': {
+      title: "Cooking by Feel: How Chefs Develop Kitchen Intuition",
+      description: "Professional chef explains how to develop kitchen intuition through temperature awareness and patience. The skills that let chefs cook without timers or thermometers.",
+      canonical: "https://www.chefapprovedtools.com/blog/cooking-by-feel",
+      author: "Scott Bradley",
+      imageUrl: "https://www.chefapprovedtools.com/og-image.jpg",
+      imageAlt: "Cooking by Feel: How Chefs Develop Kitchen Intuition",
+      keywords: {
+        primary: "cooking by feel",
+        secondary: ["kitchen intuition", "cooking intuition", "how chefs cook", "cooking without recipes", "chef instincts"],
+        searchVolume: 500,
+        difficulty: "low",
+      },
+      publishedDate: "2026-01-19",
+      publishedTime: "2026-01-19T10:00:00Z",
+      lastUpdated: "2026-01-19",
+      modifiedTime: "2026-01-19T10:00:00Z",
+      searchIntent: "informational",
+      conversionPotential: "medium",
+      articleSection: "Cooking Techniques",
+      internalLinks: [],
+      competitorUrls: [],
+      competitorGap: "Professional chef perspective with 24 years experience - developing intuition not just techniques",
+    } as BlogMetadata,
+
     'cooking-with-tomatoes-fresh-vs-canned': {
       title: "Fresh vs Canned Tomatoes: When To Use Each (Chef's Guide)",
       description: "24 years making Italian food: Canned tomatoes win for sauce every time. Fresh for salads and finishing. The chemistry behind when each type performs best.",
