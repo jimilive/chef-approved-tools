@@ -291,6 +291,19 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+
+        {/* Microsoft Clarity - Session Recording & Heatmaps */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "v33l86tu8x");
+            `
+          }}
+        />
       </head>
       <body className="min-h-screen bg-gray-50 antialiased">
         {/* Google Tag Manager (noscript fallback) - Must be in body for GTM */}
