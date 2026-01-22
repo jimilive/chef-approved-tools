@@ -21,9 +21,9 @@ export const metadata = generateBlogMetadata('stock-vs-broth-vs-bouillon');
 
 const articleSchema = generateArticleSchema({
   headline: "Stock vs Broth vs Bouillon: Differences & When to Use Each",
-  description: "The real differences between stock, broth, and bouillon—gelatin content, flavor profiles, and when to use each. From a chef with 24 years of professional experience.",
+  description: "The real differences between stock, broth, and bouillon: gelatin content, flavor profiles, and when to use each. From a chef with 24 years of professional experience.",
   datePublished: "2025-10-13",
-  dateModified: "2025-10-24",
+  dateModified: "2026-01-22",
   authorName: "Scott Bradley",
   urlPrefix: 'blog',
   urlSuffix: 'stock-vs-broth-vs-bouillon'
@@ -60,9 +60,9 @@ export default function StockVsBrothPage() {
       <BlogLayout breadcrumbTitle="Stock vs Broth vs Bouillon">
         <BlogHero
           title="Stock vs Broth vs Bouillon: Differences & When to Use Each"
-          introduction={["The real differences between stock, broth, and bouillon—gelatin content, flavor profiles, and when to use each."]}
+          introduction={["The real differences between stock, broth, and bouillon: gelatin content, flavor profiles, and when to use each."]}
           publishedDate="2025-10-13"
-          lastUpdated="2025-10-24"
+          lastUpdated="2026-01-22"
           readTime="9 min read"
         />
 
@@ -84,7 +84,7 @@ export default function StockVsBrothPage() {
             What About Bouillon?
           </h3>
           <p className="text-slate-700 mb-3">
-            <strong>Bouillon is a shortcut, not a substitute.</strong> It&apos;s dehydrated, concentrated stock or broth mixed with salt and flavorings. Use it when you need something quick—cooking rice, adding flavor to vegetables, or making a simple soup.
+            <strong>Bouillon is a shortcut, not a substitute.</strong> It&apos;s dehydrated, concentrated stock or broth mixed with salt and flavorings. Use it when you need something quick: cooking rice, adding flavor to vegetables, or making a simple soup.
           </p>
           <p className="text-slate-700 mb-0">
             <strong>Don&apos;t use bouillon</strong> for sauces that reduce (it gets too salty), dishes where body matters (no gelatin), or anything where stock is the star ingredient. Better Than Bouillon paste is the best option if you go this route.
@@ -97,7 +97,7 @@ export default function StockVsBrothPage() {
           </p>
 
           <p>
-            <strong>Here&apos;s the truth:</strong> Stock is made from bones and simmered for hours to extract gelatin. Broth is made from meat and bones, simmered for less time, and is lighter in body. Bouillon is dehydrated, concentrated stock or broth—convenient, but not the same quality.
+            <strong>Here&apos;s the truth:</strong> Stock is made from bones and simmered for hours to extract gelatin. Broth is made from meat and bones, simmered for less time, and is lighter in body. Bouillon is dehydrated, concentrated stock or broth. Convenient, but not the same quality.
           </p>
 
           <p>
@@ -105,7 +105,7 @@ export default function StockVsBrothPage() {
           </p>
 
           <p>
-            I&apos;ve made hundreds of gallons of stock in professional kitchens. At Paragary&apos;s in Sacramento, we had a 20-gallon stockpot simmering on the back burner every single day. That stock was the foundation of our sauces, soups, and braises. It wasn&apos;t optional—it was essential.
+            I&apos;ve made hundreds of gallons of stock in professional kitchens. At Paragary&apos;s in Sacramento, we had a 20-gallon stockpot simmering on the back burner every single day. That stock was the foundation of our sauces, soups, and braises. It wasn&apos;t optional. It was essential.
           </p>
 
           <p>
@@ -144,7 +144,7 @@ export default function StockVsBrothPage() {
           <ul>
             <li><strong>Chicken stock</strong> – Made from chicken bones (backs, necks, wings). Versatile, mild, used in almost everything.</li>
             <li><strong>Beef stock</strong> – Made from beef bones (knuckles, marrow bones, oxtail). Rich, deeply flavored, used in braises and red sauces.</li>
-            <li><strong>Veal stock</strong> – Made from veal bones. Considered the gold standard in French cooking—neutral flavor, high gelatin content.</li>
+            <li><strong>Veal stock</strong> – Made from veal bones. Considered the gold standard in French cooking: neutral flavor, high gelatin content.</li>
             <li><strong>Fish stock</strong> – Made from fish bones and heads. Light, delicate, used in seafood dishes. Simmer only 30-45 minutes (longer = bitter).</li>
             <li><strong>Vegetable stock</strong> – Made from vegetables and aromatics. No gelatin, but adds flavor to vegetarian dishes.</li>
           </ul>
@@ -164,7 +164,7 @@ export default function StockVsBrothPage() {
               Restaurant Reality: The Stock Lesson
             </p>
             <p className="mb-0">
-              At Paragary&apos;s in Sacramento, the stock was <strong>sacred</strong>. Every morning, the first thing we did was check the stock. If it was running low, someone started a new batch immediately. We used it in everything—pan sauces for steaks, risotto, braises, soups, even to deglaze pans. The chef taught me this: <em>&quot;Stock is the difference between home cooking and restaurant cooking. Anyone can cook a steak. But a restaurant-quality pan sauce requires real stock—not broth, not bouillon, stock.&quot;</em> He was right. Once I tasted a sauce made with homemade stock versus one made with bouillon, I understood. <strong>Stock adds a richness and depth that shortcuts can&apos;t replicate.</strong>
+              At Paragary&apos;s in Sacramento, the stock was <strong>sacred</strong>. Every morning, the first thing we did was check the stock. If it was running low, someone started a new batch immediately. We used it in everything: pan sauces for steaks, risotto, braises, soups, even to deglaze pans. The chef taught me this: <em>&quot;Stock is the difference between home cooking and restaurant cooking. Anyone can cook a steak. But a restaurant-quality pan sauce requires real stock, not broth, not bouillon, stock.&quot;</em> He was right. Once I tasted a sauce made with homemade stock versus one made with bouillon, I understood. <strong>Stock adds a richness and depth that shortcuts can&apos;t replicate.</strong>
             </p>
           </div>
 
@@ -242,7 +242,7 @@ export default function StockVsBrothPage() {
 
           <BlogNewsletterCTA
             slug="stock-vs-broth-vs-bouillon"
-            description='Get my free "11 Essential Tools I Use Most" PDF—the exact equipment I rely on after 24 years in professional kitchens, including my favorite stockpots. No fluff, just the tools that actually matter.'
+            description='Get my free "11 Essential Tools I Use Most" PDF: the exact equipment I rely on after 24 years in professional kitchens, including my favorite stockpots. No fluff, just the tools that actually matter.'
           />
 
           <h2 className="flex items-center gap-2">
@@ -251,7 +251,7 @@ export default function StockVsBrothPage() {
           </h2>
 
           <p>
-            <strong>Bouillon is dehydrated, concentrated stock or broth—available as cubes, powder, or paste.</strong>
+            <strong>Bouillon is dehydrated, concentrated stock or broth, available as cubes, powder, or paste.</strong>
           </p>
 
           <h3>What is Bouillon?</h3>
@@ -302,7 +302,7 @@ export default function StockVsBrothPage() {
           </ul>
 
           <p>
-            <strong>Pro tip:</strong> If using bouillon in a recipe that calls for stock, use <em>half</em> the recommended amount and add water. Bouillon is salty and concentrated—using the full amount can make dishes too salty.
+            <strong>Pro tip:</strong> If using bouillon in a recipe that calls for stock, use <em>half</em> the recommended amount and add water. Bouillon is salty and concentrated. Using the full amount can make dishes too salty.
           </p>
 
           <h2>Bone Broth: Marketing Term or Real Thing?</h2>
@@ -353,12 +353,12 @@ export default function StockVsBrothPage() {
           </p>
           <ol>
             <li><strong>Place bones in a large stockpot and cover with cold water</strong></li>
-            <li><strong>Bring to a simmer over medium heat</strong> (do NOT boil—boiling makes stock cloudy)</li>
+            <li><strong>Bring to a simmer over medium heat</strong> (do NOT boil. Boiling makes stock cloudy)</li>
             <li><strong>Skim off any foam or scum that rises to the surface</strong></li>
             <li><strong>Add vegetables, bay leaves, and peppercorns</strong></li>
             <li><strong>Simmer gently for 4-6 hours</strong>, adding water if needed to keep bones covered</li>
             <li><strong>Strain through a fine-mesh strainer or cheesecloth</strong></li>
-            <li><strong>Cool quickly and refrigerate</strong> (fat will solidify on top—you can remove it or leave it for flavor)</li>
+            <li><strong>Cool quickly and refrigerate</strong> (fat will solidify on top. You can remove it or leave it for flavor)</li>
           </ol>
 
           <p>
@@ -372,6 +372,61 @@ export default function StockVsBrothPage() {
             <li><strong>Freeze in portions</strong> – Use ice cube trays or freezer bags for easy use</li>
             <li><strong>Use an <Link href="/reviews/instant-pot-duo-plus-6qt" className="text-orange-700 hover:text-orange-800 underline">Instant Pot</Link></strong> – Pressure cooking reduces stock time to about 1-2 hours while still extracting good gelatin</li>
           </ul>
+
+          <h2>Storage &amp; Shelf Life</h2>
+
+          <p>
+            Proper storage extends the life of your stock and keeps it safe to use. Here&apos;s what you need to know:
+          </p>
+
+          <div className="overflow-x-auto my-6">
+            <table className="min-w-full border-collapse">
+              <thead>
+                <tr className="bg-slate-100 border-b-2 border-slate-300">
+                  <th className="px-4 py-3 text-left font-bold text-slate-900">Type</th>
+                  <th className="px-4 py-3 text-left font-bold text-slate-900">Refrigerator</th>
+                  <th className="px-4 py-3 text-left font-bold text-slate-900">Freezer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-slate-200">
+                  <td className="px-4 py-3 font-semibold text-slate-700">Homemade stock/broth</td>
+                  <td className="px-4 py-3">3-4 days</td>
+                  <td className="px-4 py-3">4-6 months</td>
+                </tr>
+                <tr className="border-b border-slate-200">
+                  <td className="px-4 py-3 font-semibold text-slate-700">Store-bought (opened)</td>
+                  <td className="px-4 py-3">4-5 days</td>
+                  <td className="px-4 py-3">2-3 months</td>
+                </tr>
+                <tr className="border-b border-slate-200">
+                  <td className="px-4 py-3 font-semibold text-slate-700">Store-bought (unopened)</td>
+                  <td className="px-4 py-3">Check expiration</td>
+                  <td className="px-4 py-3">Not recommended</td>
+                </tr>
+                <tr className="border-b border-slate-200">
+                  <td className="px-4 py-3 font-semibold text-slate-700">Bouillon cubes/paste</td>
+                  <td className="px-4 py-3">Shelf-stable</td>
+                  <td className="px-4 py-3">Not necessary</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Refrigerator Storage</h3>
+          <p>
+            Transfer homemade stock to airtight containers within 2 hours of cooking. The fat layer on top helps preserve it. Don&apos;t skim until you&apos;re ready to use. Store toward the back of the fridge where temperature stays consistent.
+          </p>
+
+          <h3>Freezer Storage</h3>
+          <p>
+            Freeze in portions you&apos;ll use. Ice cube trays for small amounts (deglazing, cooking rice). Quart containers or freezer bags for soups. Leave 1-inch headspace. Liquid expands.
+          </p>
+
+          <h3>Spoilage Signs</h3>
+          <p>
+            Sour smell. Cloudiness in previously clear broth. Surface mold. Slimy texture. Don&apos;t taste-test suspicious broth. The nose knows.
+          </p>
 
           <h2>The Bottom Line: Stock is Worth the Effort</h2>
 
