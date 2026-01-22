@@ -63,8 +63,15 @@ export default function StockVsBrothPage() {
           introduction={["The real differences between stock, broth, and bouillon: gelatin content, flavor profiles, and when to use each."]}
           publishedDate="2025-10-13"
           lastUpdated="2026-01-22"
-          readTime="9 min read"
+          readTime="12 min read"
         />
+
+        <div className="bg-orange-50 border-2 border-orange-200 rounded-xl p-6 mb-8">
+          <p className="font-bold text-lg text-slate-900 mb-2">Quick Answer</p>
+          <p className="text-slate-700 mb-0">
+            <strong>Stock</strong> is made from bones (rich, gelatinous, unseasoned). <strong>Broth</strong> is made from meat (lighter, seasoned, drinkable). <strong>Bouillon</strong> is dehydrated stock or broth in cube/powder form. In professional kitchens, we use stock for sauces that need body, broth for soups, and bouillon only when we&apos;re desperate.
+          </p>
+        </div>
 
         <BlogQuickAnswer
           optionA={comparisonData.quickAnswer.stockChoice}
@@ -305,6 +312,62 @@ export default function StockVsBrothPage() {
             <strong>Pro tip:</strong> If using bouillon in a recipe that calls for stock, use <em>half</em> the recommended amount and add water. Bouillon is salty and concentrated. Using the full amount can make dishes too salty.
           </p>
 
+          <h2>Can You Substitute One for Another?</h2>
+
+          <p>
+            <strong>Short answer: Sometimes yes, sometimes no.</strong> It depends entirely on what you&apos;re making.
+          </p>
+
+          <h3>Substitution Quick Reference</h3>
+
+          <div className="overflow-x-auto my-6">
+            <table className="min-w-full border-collapse">
+              <thead>
+                <tr className="bg-slate-100 border-b-2 border-slate-300">
+                  <th className="px-4 py-3 text-left font-bold text-slate-900">If Recipe Calls For</th>
+                  <th className="px-4 py-3 text-left font-bold text-slate-900">You Can Use</th>
+                  <th className="px-4 py-3 text-left font-bold text-slate-900">Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-slate-200">
+                  <td className="px-4 py-3 font-semibold text-slate-700">Stock</td>
+                  <td className="px-4 py-3">Broth (for soups only)</td>
+                  <td className="px-4 py-3">Won&apos;t work for sauces that reduce</td>
+                </tr>
+                <tr className="border-b border-slate-200">
+                  <td className="px-4 py-3 font-semibold text-slate-700">Broth</td>
+                  <td className="px-4 py-3">Stock (always works)</td>
+                  <td className="px-4 py-3">Stock is an upgrade, not a compromise</td>
+                </tr>
+                <tr className="border-b border-slate-200">
+                  <td className="px-4 py-3 font-semibold text-slate-700">Stock or Broth</td>
+                  <td className="px-4 py-3">Bouillon + water</td>
+                  <td className="px-4 py-3">Use 1 cube per cup. Never for reducing sauces</td>
+                </tr>
+                <tr className="border-b border-slate-200">
+                  <td className="px-4 py-3 font-semibold text-slate-700">Stock (in sauces)</td>
+                  <td className="px-4 py-3">Nothing else</td>
+                  <td className="px-4 py-3">The gelatin is non-negotiable for proper sauces</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>When Substitutions Work</h3>
+          <ul>
+            <li><strong>Soups and stews</strong> – Broth and stock swap freely. You&apos;ll notice less body with broth, but flavor will be fine.</li>
+            <li><strong>Cooking grains</strong> – Rice, quinoa, couscous. Any of the three works. Bouillon adds quick flavor.</li>
+            <li><strong>Braising liquid</strong> – Broth works if you don&apos;t have stock. The long cooking time extracts gelatin from the meat anyway.</li>
+          </ul>
+
+          <h3>When Substitutions Fail</h3>
+          <ul>
+            <li><strong>Pan sauces</strong> – Stock&apos;s gelatin creates the glossy, coating texture. Broth makes a thin, watery sauce. Bouillon makes it too salty.</li>
+            <li><strong>Risotto</strong> – Stock&apos;s body is part of what makes risotto creamy. Broth works but produces a lighter result.</li>
+            <li><strong>Reductions</strong> – Anything that reduces by half or more needs stock. Broth gets thin. Bouillon gets unbearably salty.</li>
+          </ul>
+
           <h2>Bone Broth: Marketing Term or Real Thing?</h2>
 
           <p>
@@ -325,6 +388,28 @@ export default function StockVsBrothPage() {
 
           <p>
             <strong>Is bone broth healthier than stock?</strong> Marginally. It has slightly more collagen and minerals, but regular stock is also highly nutritious. The health benefits are often overstated.
+          </p>
+
+          <h2>Related Terms: Fond and Demi-Glace</h2>
+
+          <p>
+            Two terms you&apos;ll encounter in French cooking that relate to stock:
+          </p>
+
+          <h3>What is Fond?</h3>
+          <p>
+            <strong>Fond</strong> is the French word for stock. It literally means &quot;foundation&quot; or &quot;base.&quot; In professional kitchens, you&apos;ll hear &quot;fond de veau&quot; (veal stock), &quot;fond de volaille&quot; (chicken stock), or &quot;fond brun&quot; (brown stock made from roasted bones).
+          </p>
+          <p>
+            &quot;Fond&quot; also refers to the browned bits stuck to the bottom of a pan after searing meat. These are packed with flavor and form the base of pan sauces when you deglaze with stock or wine. Same word, related concept: both are foundations for building flavor.
+          </p>
+
+          <h3>What is Demi-Glace?</h3>
+          <p>
+            <strong>Demi-glace</strong> is stock reduced by half (or more), often combined with espagnole sauce (a classic French brown sauce). The result is intensely flavored, syrupy, and glossy. One tablespoon of demi-glace can transform a simple pan sauce into something restaurant-quality.
+          </p>
+          <p>
+            Making demi-glace at home requires time (reduce 2 quarts of stock down to 1 cup), but it freezes well in ice cube trays. Pull out a cube whenever you need to elevate a sauce.
           </p>
 
           <h2>How to Make Professional-Quality Stock at Home</h2>
@@ -371,6 +456,35 @@ export default function StockVsBrothPage() {
             <li><strong>Never boil</strong> – Gentle simmer keeps stock clear</li>
             <li><strong>Freeze in portions</strong> – Use ice cube trays or freezer bags for easy use</li>
             <li><strong>Use an <Link href="/reviews/instant-pot-duo-plus-6qt" className="text-orange-700 hover:text-orange-800 underline">Instant Pot</Link></strong> – Pressure cooking reduces stock time to about 1-2 hours while still extracting good gelatin</li>
+          </ul>
+
+          <h2>The Gelatin Test: Is Your Stock Good Enough?</h2>
+
+          <p>
+            <strong>The simplest way to judge stock quality: refrigerate it overnight and check if it gels.</strong>
+          </p>
+
+          <p>
+            Good stock should set up like Jell-O when cold. This means you extracted enough gelatin from the bones. When you reheat it, that gelatin melts back into liquid but retains its body-building properties.
+          </p>
+
+          <h3>What Your Stock Tells You</h3>
+          <ul>
+            <li><strong>Solid, jiggly gel</strong> – Excellent. High gelatin content. Perfect for sauces.</li>
+            <li><strong>Soft gel, wobbles but holds shape</strong> – Good. Plenty of gelatin for most uses.</li>
+            <li><strong>Thick liquid, slightly viscous</strong> – Acceptable. Some gelatin extracted. Fine for soups.</li>
+            <li><strong>Thin liquid, no thickening</strong> – Weak. Diluted or under-extracted. Won&apos;t perform well in sauces.</li>
+          </ul>
+
+          <h3>How to Fix Stock That Doesn&apos;t Gel</h3>
+          <p>
+            If your stock stays liquid when cold, it still has flavor. It just lacks body. You can:
+          </p>
+          <ul>
+            <li><strong>Reduce it further</strong> – Simmer until volume decreases by half. Concentrates existing gelatin.</li>
+            <li><strong>Add gelatin</strong> – Bloom 1 packet unflavored gelatin in 1/4 cup cold stock, then stir into warm stock. Works in a pinch.</li>
+            <li><strong>Use it for soups</strong> – Where body matters less than flavor.</li>
+            <li><strong>Learn for next time</strong> – More bones, longer simmer, gentler heat.</li>
           </ul>
 
           <h2>Storage &amp; Shelf Life</h2>

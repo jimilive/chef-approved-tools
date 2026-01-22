@@ -155,6 +155,10 @@ export const comparisonData = {
       {
         question: "What ratio of bouillon to water should I use?",
         answer: "Standard: 1 cube or 1 teaspoon paste per 1 cup water. For Better Than Bouillon paste, use about 3/4 teaspoon per cup. It's more concentrated. Taste as you go. Bouillon varies by brand. Start with less. You can add more. You can't un-salt soup."
+      },
+      {
+        question: "What is fond and how is it different from stock?",
+        answer: "Fond is the French word for stock (literally 'foundation'). You'll hear 'fond de veau' (veal stock) or 'fond de volaille' (chicken stock) in professional kitchens. The word also refers to the browned bits stuck to the pan after searing meat. These caramelized proteins are flavor gold. Deglaze them with stock or wine to make a pan sauce. Same word, related concept: both are foundations for building flavor."
       }
     ]
   }
