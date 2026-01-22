@@ -9,9 +9,9 @@ export const reviewData = {
   // METADATA
   metadata: {
     title: "Victorinox Fibrox 10\" Review: Chef-Tested, Big Blade Value",
-    description: "10-year professional test. Victorinox Fibrox 10\" chef knife—perfect for larger hands and big cuts. Swiss precision at $60 vs $200 German knives.",
+    description: "10-year professional test. Victorinox Fibrox 10\" chef knife, perfect for larger hands and big cuts. Swiss precision at $60 vs $200 German knives.",
     ogTitle: "Victorinox Fibrox 10\" Review: Chef-Tested, Big Blade Value",
-    ogDescription: "10-year professional test. Victorinox Fibrox 10\" chef knife—perfect for larger hands and big cuts. Swiss precision at $60 vs $200 German knives.",
+    ogDescription: "10-year professional test. Victorinox Fibrox 10\" chef knife, perfect for larger hands and big cuts. Swiss precision at $60 vs $200 German knives.",
     testingPeriod: "20 Years (Including 10 Professional)",
     tier: 1
   },
@@ -126,7 +126,7 @@ export const reviewData = {
       },
       {
         title: "Same Professional Quality as 8-Inch",
-        content: "This isn't a different knife—it's the same professional-grade Victorinox with 2 extra inches. Same high-carbon stainless steel, same NSF-certified fibrox handle, same Swiss manufacturing quality, same exceptional edge retention, and same unbeatable value proposition. The only difference is blade length and who it's best suited for."
+        content: "This isn't a different knife. It's the same professional-grade Victorinox with 2 extra inches. Same high-carbon stainless steel, same NSF-certified fibrox handle, same Swiss manufacturing quality, same exceptional edge retention, and same unbeatable value proposition. The only difference is blade length and who it's best suited for."
       }
     ]
   },
@@ -270,7 +270,7 @@ export const reviewData = {
     title: "The Bottom Line",
     paragraphs: [
       "After 20 years of use (including 10 years in professional kitchens), the Victorinox 10-inch chef's knife is my go-to for breaking down whole proteins and large vegetable prep. The extra 2 inches over the 8-inch model makes a real difference for bigger hands and larger cutting tasks.",
-      "Same professional quality as the 8-inch model—just sized for cooks who need more reach. If you have larger hands or regularly work with steaks and oversized vegetables, this is your knife. If you're under 6 feet tall or have smaller hands, get the 8-inch instead."
+      "Same professional quality as the 8-inch model, just sized for cooks who need more reach. If you have larger hands or regularly work with steaks and oversized vegetables, this is your knife. If you're under 6 feet tall or have smaller hands, get the 8-inch instead."
     ],
     ctaText: "Check Price on Amazon →"
   },
@@ -332,7 +332,7 @@ export const reviewData = {
     brand: "Victorinox",
     category: "Knives",
     expertRating: 5.0,
-    expertOpinion: "After 20 years of use (including 10 in professional kitchens), the Victorinox 10-inch chef's knife is my go-to for breaking down whole proteins and large vegetable prep. The extra 2 inches makes a real difference for bigger hands and larger cutting tasks. Same professional quality as the 8-inch model—just sized for cooks who need more reach.",
+    expertOpinion: "After 20 years of use (including 10 in professional kitchens), the Victorinox 10-inch chef's knife is my go-to for breaking down whole proteins and large vegetable prep. The extra 2 inches makes a real difference for bigger hands and larger cutting tasks. Same professional quality as the 8-inch model, just sized for cooks who need more reach.",
     pros: [
       "Perfect length for breaking down steaks and large cuts",
       "Ideal for larger hands (6 feet or taller)",

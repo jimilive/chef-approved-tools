@@ -176,7 +176,7 @@ export default async function ProductReview() {
               >
                 Victorinox
               </a>
-              {' '}delivers nimble control for detailed work. No hand fatigue during extended prep sessions—critical for professional use where you&apos;re prepping 200+ covers daily.
+              {' '}delivers nimble control for detailed work. No hand fatigue during extended prep sessions. Critical for professional use where you&apos;re prepping 200+ covers daily.
             </>
           ) : index === 3 ? (
             <>
@@ -202,7 +202,7 @@ export default async function ProductReview() {
               >
                 Victorinox
               </a>
-              {' '}delivers what matters—sharpness, balance, durability—at a fraction of premium pricing. In 24 years in professional kitchens, I&apos;ve seen expensive premium knives and Victorinox knives side-by-side. The expensive knives look prettier on the magnetic strip. The Victorinox knives get used daily because they work better for actual cooking.
+              {' '}delivers what matters (sharpness, balance, durability) at a fraction of premium pricing. In 24 years in professional kitchens, I&apos;ve seen expensive premium knives and Victorinox knives side-by-side. The expensive knives look prettier on the magnetic strip. The Victorinox knives get used daily because they work better for actual cooking.
             </>
           ) : section.content
         }))}

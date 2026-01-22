@@ -192,7 +192,7 @@ export default async function ProductReview() {
                 </>
               ) : index === 4 ? (
                 <>
-                  This isn&apos;t a different knife—it&apos;s the same professional-grade{' '}
+                  This isn&apos;t a different knife. It&apos;s the same professional-grade{' '}
                   <a
                     href={affiliateUrl}
                     className="text-orange-700 hover:text-orange-800 font-medium"
