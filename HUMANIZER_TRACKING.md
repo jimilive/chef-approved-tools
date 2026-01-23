@@ -1,7 +1,51 @@
 # Humanizer Progress Tracking
 
 **Started:** January 22, 2026
+**Last Updated:** January 23, 2026
 **Method:** Manual audit for AI-isms (em dashes, filler phrases, marketing hype)
+
+---
+
+## HANDOFF FOR NEXT SESSION
+
+### Current Status
+- **30 pages completed** (10 reviews, 20 blogs)
+- **Next page:** #31 - `/blog/food-processor-vs-blender` (position 27 on priority list)
+- Priority list location: `/Users/scottbradley/Downloads/pages-by-importance.md`
+
+### Critical Lessons Learned
+1. **ALWAYS grep for em dashes** - Visual scanning misses them. Run `grep -n "—" [file]` on BOTH the data file AND page.tsx before reporting findings.
+2. **Check both files** - Most content is in *-data.ts, but page.tsx often has hardcoded text too.
+3. **Em dashes are the #1 issue** - Average 10-15 per page. Replace with periods, commas, colons, or parentheses based on context.
+
+### Workflow Summary
+1. User says "next on the list" or similar
+2. Check priority list to find next undone page
+3. Glob for page files, Read both, grep for em dashes
+4. Present audit in table format (em dashes + AI phrases separately)
+5. Wait for "yes" approval
+6. Make edits one at a time using Edit tool
+7. Verify with grep that no em dashes remain
+8. Update this tracking file (Progress table + Session log)
+9. Announce completion and next page
+
+### Common AI Phrases to Fix
+- "comprehensive" → remove or use "this"
+- "effortlessly/effortless" → "easily/easy"
+- "seamless/seamlessly" → "easy/easily"
+- "transformative" → "helpful" or "a big help"
+- "remarkably" → "very"
+- "whopping" → remove
+- "trailblazing" → "original"
+- "liquid gold" → describe what it actually is
+- "game-changer" → "significant" or rephrase
+
+### Em Dash Replacement Guide
+- Explanatory clause → use comma or parentheses
+- Contrast/but → use comma + "but"
+- List introduction → use colon
+- Dramatic pause/new thought → use period
+- Aside/parenthetical → use parentheses
 
 ---
 
@@ -10,16 +54,17 @@
 **Before starting any work:**
 1. Read `/Users/scottbradley/chef-approved-tools/CLAUDE.md` for project rules and protected values
 2. Read `/Users/scottbradley/chef-approved-tools/START_HERE.md` for project context
-3. Read `/Users/scottbradley/.claude/skills/humanizer/SKILL.md` for full humanizer methodology
+3. Read `/Users/scottbradley/.claude/skills/humanizer/SKILL.md` for full humanizer methodology (if available)
 
 **Process for each page:**
 1. Find the page files (page.tsx and *-data.ts) using Glob
 2. Read both files completely
-3. Audit for: em dashes (—), AI phrases, marketing hype, protected value violations
-4. Present findings in a table format, separating required fixes from optional/borderline items
-5. Wait for user approval before making ANY changes
-6. After approval, make edits and update this tracking file
-7. Also fix code inconsistencies (e.g., hardcoded values that should use data file)
+3. **CRITICAL: Run `grep -n "—"` on BOTH files** to find all em dashes
+4. Audit for: em dashes (—), AI phrases, marketing hype, protected value violations
+5. Present findings in a table format, separating required fixes from optional/borderline items
+6. Wait for user approval before making ANY changes
+7. After approval, make edits and update this tracking file
+8. Also fix code inconsistencies (e.g., hardcoded values that should use data file)
 
 **Protected Values (from CLAUDE.md):**
 - "24 years professional kitchen experience" (NOT 45 years, NOT "Kitchen Manager for 24 years")

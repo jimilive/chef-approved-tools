@@ -3845,7 +3845,7 @@ export const METADATA = {
       testingPeriod: "24 Years Professional Experience",
       productSlug: "lamson-fish-spatula",
       publishedTime: "2026-01-07T10:00:00Z",
-      modifiedTime: "2026-01-09T10:00:00Z",
+      modifiedTime: "2026-01-23T10:00:00Z",
       searchIntent: "transactional",
       conversionPotential: "high",
       affiliateProgram: "amazon",
