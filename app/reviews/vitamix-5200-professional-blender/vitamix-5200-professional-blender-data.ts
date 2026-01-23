@@ -134,7 +134,7 @@ export const reviewData = {
       },
       {
         title: 'Superior Results vs Competition',
-        content: 'The power and precision of the 5200 creates textures that other blenders can't match. Sauces achieve perfect consistency without chunks, while purees reach restaurant-quality smoothness. The variable speed control allows for precise texture control - essential for professional applications where consistency matters for customer satisfaction.'
+        content: 'The power and precision of the 5200 creates textures that other blenders can\'t match. Sauces achieve perfect consistency without chunks, while purees reach restaurant-quality smoothness. The variable speed control allows for precise texture control - essential for professional applications where consistency matters for customer satisfaction.'
       },
       {
         title: 'Why Chefs Choose Vitamix in Professional Kitchens',
