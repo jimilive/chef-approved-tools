@@ -16,8 +16,8 @@ export const comparisonData = {
   hero: {
     title: "Air Fryer vs Deep Fryer: A Professional Chef's Honest Comparison",
     introduction: [
-      "After 24 years in professional kitchens—where deep fryers were essential equipment for everything from appetizer service to staff meal—I understand what real fried food should taste like. That golden, shatteringly crisp exterior. The moist, perfectly cooked interior. The satisfying weight of oil-kissed food that budget airlines and frozen dinners can never replicate.",
-      "Then I started testing air fryers at home. My expectations were low. What I found surprised me: air fryers don't replicate deep-fried results, but they create something genuinely good—crispy, flavorful food with a fraction of the oil and none of the cleanup drama. The question isn't whether air fryers match deep fryers. It's whether the results justify the trade-offs."
+      "After 24 years in professional kitchens, where deep fryers were essential equipment for everything from appetizer service to staff meal, I understand what real fried food should taste like. That golden, shatteringly crisp exterior. The moist, perfectly cooked interior. The satisfying weight of oil-kissed food that budget airlines and frozen dinners can never replicate.",
+      "Then I started testing air fryers at home. My expectations were low. What I found surprised me: air fryers don't replicate deep-fried results, but they create something genuinely good: crispy, flavorful food with a fraction of the oil and none of the cleanup drama. The question isn't whether air fryers match deep fryers. It's whether the results justify the trade-offs."
     ]
   },
 
@@ -106,14 +106,14 @@ export const comparisonData = {
           option: "deepFryer",
           title: "Deep Fryers: Complete Oil Submersion",
           content: [
-            "Deep frying submerges food completely in oil heated to 350-375°F. The hot oil instantly begins cooking the exterior, creating a sealed crust while the interior steams. This dual cooking action—crispy outside, moist inside—defines fried food texture.",
+            "Deep frying submerges food completely in oil heated to 350-375°F. The hot oil instantly begins cooking the exterior, creating a sealed crust while the interior steams. This dual cooking action (crispy outside, moist inside) defines fried food texture.",
             "**The Process:**",
             "• Oil heated to 350-375°F (2-3 cups minimum for proper submersion)",
             "• Food submerged completely for even cooking",
             "• Oil transfers heat faster than air, cooking food quickly",
             "• Cooking time: 3-8 minutes for most items",
             "• Food absorbs 10-15% of its weight in oil",
-            "Professional kitchens use deep fryers because nothing else produces the same texture. That battered fish, those crispy fries, properly fried chicken—all require complete oil submersion."
+            "Professional kitchens use deep fryers because nothing else produces the same texture. That battered fish, those crispy fries, properly fried chicken. All require complete oil submersion."
           ]
         },
         {
@@ -127,7 +127,7 @@ export const comparisonData = {
             "• Light coating of oil (1 tablespoon or less) optional",
             "• Cooking time: 10-25 minutes depending on item",
             "• Food absorbs minimal to no additional oil",
-            "Air fryers are essentially compact convection ovens with more powerful fans. They don't fry anything—they roast and brown using concentrated hot air."
+            "Air fryers are essentially compact convection ovens with more powerful fans. They don't fry anything. They roast and brown using concentrated hot air."
           ]
         }
       ]
@@ -140,7 +140,7 @@ export const comparisonData = {
           option: "crunch",
           title: "The Crunch Factor",
           content: [
-            "**Deep Fryer:** Produces the authentic fried food crunch—a distinct layer of crisp coating surrounding tender interior. The oil creates a sealed exterior that stays crispy longer, even as food cools slightly.",
+            "**Deep Fryer:** Produces the authentic fried food crunch: a distinct layer of crisp coating surrounding tender interior. The oil creates a sealed exterior that stays crispy longer, even as food cools slightly.",
             "**Air Fryer:** Produces a lighter crispness. The texture is more similar to well-roasted food than traditional fried food. Crispy, but without the same weight or snap of oil-fried items.",
             "**Professional Assessment:** For wet-battered foods (tempura, beer-battered fish, battered chicken), deep fryers are clearly superior. The batter sets immediately in hot oil. In an air fryer, wet batters drip through the basket and never achieve proper coating. For dry-coated foods (breaded cutlets, frozen fries, naked chicken wings), the difference narrows significantly."
           ]
@@ -182,12 +182,12 @@ export const comparisonData = {
           option: "acrylamide",
           title: "The Acrylamide Question",
           content: [
-            "This is where the research gets interesting—and where marketing claims don't tell the full story.",
+            "This is where the research gets interesting, and where marketing claims don't tell the full story.",
             "Acrylamide is a compound that forms when starchy foods are heated above 248°F (120°C). It's classified as a probable carcinogen by the International Agency for Research on Cancer (IARC).",
             "**What the Research Shows:**",
             "A 2024 study published in Frontiers in Nutrition found air-fried potatoes contained slightly MORE acrylamide (12.19 μg/kg) than deep-fried (8.94 μg/kg). However, the difference was NOT statistically significant. Soaking potatoes before cooking reduced acrylamide in all methods.",
             "A 2020 study on chicken found air-fried chicken had LOWER acrylamide and PAH (polycyclic aromatic hydrocarbon) levels than deep-fried chicken.",
-            "**The Bottom Line:** For potatoes, air frying and deep frying produce similar acrylamide levels—neither method is clearly superior. For protein (chicken, meat), air frying appears to produce fewer harmful compounds. The bigger health impact is the oil reduction, not the acrylamide question."
+            "**The Bottom Line:** For potatoes, air frying and deep frying produce similar acrylamide levels. Neither method is clearly superior. For protein (chicken, meat), air frying appears to produce fewer harmful compounds. The bigger health impact is the oil reduction, not the acrylamide question."
           ]
         }
       ]
@@ -209,7 +209,7 @@ export const comparisonData = {
             "• Minimal preheat (0-5 minutes for most models)",
             "• Cooking time: 10-25 minutes",
             "• Total time: 10-30 minutes",
-            "• No batch limitations—continuous cooking possible",
+            "• No batch limitations. Continuous cooking possible",
             "For single batches, total time is similar. For multiple batches, deep fryers can produce more food faster once the oil is heated."
           ]
         },
@@ -263,11 +263,11 @@ export const comparisonData = {
       },
       {
         question: "Do air fryers produce carcinogens?",
-        answer: "All high-heat cooking produces some acrylamide in starchy foods. Research shows air frying and deep frying produce similar levels—neither method is clearly superior for acrylamide formation. The health benefit of air frying comes primarily from reduced oil consumption."
+        answer: "All high-heat cooking produces some acrylamide in starchy foods. Research shows air frying and deep frying produce similar levels. Neither method is clearly superior for acrylamide formation. The health benefit of air frying comes primarily from reduced oil consumption."
       },
       {
         question: "Can I use my air fryer for everything I'd deep fry?",
-        answer: "Most items, yes. Frozen foods, breaded items, and chicken wings work excellently. Wet batters (tempura, beer batter) don't work well—the batter drips before it sets. For these items, a deep fryer or oven baking are better options."
+        answer: "Most items, yes. Frozen foods, breaded items, and chicken wings work excellently. Wet batters (tempura, beer batter) don't work well. The batter drips before it sets. For these items, a deep fryer or oven baking are better options."
       },
       {
         question: "How much oil does deep frying add to food?",

@@ -18,7 +18,7 @@ export const comparisonData = {
     introduction: [
       "The Dutch oven versus slow cooker debate centers on active cooking versus set-it-and-forget-it convenience. Dutch ovens are heavy cast iron or enameled pots that work on stovetops and in ovens, requiring attention and technique. Slow cookers are electric countertop appliances that cook unattended for 4-10 hours while you work, sleep, or do other activities.",
       "Dutch ovens deliver superior browning, layered flavors from proper technique, and versatility across cooking methods. They also require active cooking time, oven use, and careful attention to prevent burning. Slow cookers offer unattended convenience, consistent results, and foolproof operation. They sacrifice browning capability, require advance planning, and can't adapt mid-cooking.",
-      "This comprehensive comparison breaks down cooking methods and heat distribution, flavor development differences, convenience factors, versatility, and honest assessments of when each vessel makes sense. You'll understand exactly which cooking vessel matches your schedule, cooking style, and priorities."
+      "This comparison breaks down cooking methods and heat distribution, flavor development differences, convenience factors, versatility, and honest assessments of when each vessel makes sense. You'll understand exactly which cooking vessel matches your schedule, cooking style, and priorities."
     ]
   },
 
@@ -131,12 +131,12 @@ export const comparisonData = {
             "- **Heat distribution:** Excellent thermal mass, even heat",
             "**Dutch Oven Cooking Process:**",
             "1. Preheat pot on stovetop or in oven",
-            "2. Brown meat/vegetables on stovetop (develops fond—browned bits)",
+            "2. Brown meat/vegetables on stovetop (develops fond, the browned bits)",
             "3. Add liquid and aromatics",
             "4. Cover with lid, transfer to 300-325°F oven",
             "5. Braise for 2-4 hours (depending on recipe)",
             "**The Thermal Mass Advantage:**",
-            "Cast iron's thickness means it heats slowly but retains heat exceptionally well. Once hot, the pot maintains steady temperature throughout cooking—critical for even braising. Preheating for 15 minutes before starting ensures even cooking from the start.",
+            "Cast iron's thickness means it heats slowly but retains heat exceptionally well. Once hot, the pot maintains steady temperature throughout cooking, critical for even braising. Preheating for 15 minutes before starting ensures even cooking from the start.",
             "**Temperature Control:**",
             "Adjust oven temperature to control cooking speed. Lower to 275°F for slower cooking, increase to 350°F for faster results. This adjustability allows recipe adaptation to your schedule."
           ]
@@ -175,7 +175,7 @@ export const comparisonData = {
           option: "dutchOven",
           title: "Dutch Ovens: Superior Maillard Reaction",
           content: [
-            "The ability to brown meat and vegetables on the stovetop before braising creates layers of flavor impossible in slow cookers. Browning triggers the Maillard reaction—chemical changes that create hundreds of flavor compounds.",
+            "The ability to brown meat and vegetables on the stovetop before braising creates layers of flavor impossible in slow cookers. Browning triggers the Maillard reaction, chemical changes that create hundreds of flavor compounds.",
             "**Professional Braising Technique:**",
             "1. Pat short ribs dry (moisture prevents browning)",
             "2. Season generously with salt and pepper",
@@ -194,15 +194,15 @@ export const comparisonData = {
           option: "slowCooker",
           title: "Slow Cookers: Limited Browning Capability",
           content: [
-            "Slow cookers cannot achieve proper browning. Some recipes suggest browning meat in a skillet first, then transferring to the slow cooker—but this defeats the convenience advantage.",
+            "Slow cookers cannot achieve proper browning. Some recipes suggest browning meat in a skillet first, then transferring to the slow cooker, but this defeats the convenience advantage.",
             "**What Happens Without Browning:**",
             "Comparative testing of identical beef stew recipes shows measurable differences:",
             "- **Dutch oven stew (with browning):** Rich, complex, layered flavors with deep savory notes",
             "- **Slow cooker stew (no browning):** Good flavor but one-dimensional, lacking depth",
             "**The Texture Trade-Off:**",
-            "Slow cooker meats become very tender (a positive) but lack the crusty exterior that browning provides. Everything is uniformly soft—which works for pulled pork or shredded chicken but is less ideal for stews where textural contrast matters.",
+            "Slow cooker meats become very tender (a positive) but lack the crusty exterior that browning provides. Everything is uniformly soft, which works for pulled pork or shredded chicken but is less ideal for stews where textural contrast matters.",
             "**Workarounds:**",
-            "Some cooks brown meat in a skillet before adding to slow cookers. This helps but adds active cooking time and another pan to clean—negating slow cooker's main advantage. For applications like pulled pork that will be shredded and mixed with sauce, the lack of browning is less noticeable."
+            "Some cooks brown meat in a skillet before adding to slow cookers. This helps but adds active cooking time and another pan to clean, negating slow cooker's main advantage. For applications like pulled pork that will be shredded and mixed with sauce, the lack of browning is less noticeable."
           ]
         }
       ]
@@ -224,7 +224,7 @@ export const comparisonData = {
             "- Oven braising: 2-3 hours (mostly unattended)",
             "- **Total time: 3-4 hours**",
             "**The Attention Requirement:**",
-            "Dutch oven cooking requires presence for the first hour (browning, building flavors, assembly). After transferring to the oven, it's mostly unattended—but you need to be home when it's done.",
+            "Dutch oven cooking requires presence for the first hour (browning, building flavors, assembly). After transferring to the oven, it's mostly unattended, but you need to be home when it's done.",
             "**Best for Weekend Cooking:**",
             "Dutch oven braises work well for weekend projects. Spend an hour actively cooking, then 2-3 hours for other activities while dinner braises. The timing suits weekends but not weeknights when you're away during cooking time.",
             "**Flexibility Limitations:**",
@@ -242,7 +242,7 @@ export const comparisonData = {
             "- Slow cooking: 8 hours on Low (completely unattended)",
             "- **Total time: 8+ hours**",
             "**The Convenience Advantage:**",
-            "Assemble slow cooker meals before work, set to Low, and return 8-10 hours later to fully cooked dinner. This hands-off convenience is transformative for working families.",
+            "Assemble slow cooker meals before work, set to Low, and return 8-10 hours later to fully cooked dinner. This hands-off convenience is a big help for working families.",
             "**Weeknight Reality:**",
             "Slow cookers enable weeknight convenience. Morning prep takes 20 minutes. Leave for work. Dinner cooks while you're gone. Return to ready-to-eat meals. This convenience enables homemade meals on days when takeout might otherwise be necessary.",
             "**The Timing Flexibility:**",
@@ -279,7 +279,7 @@ export const comparisonData = {
             "**Common Dutch Oven Applications:**",
             "Beyond braising: baking no-knead bread (produces perfect crust), making large batches of chili, deep frying (heavy pot maintains oil temperature), cooking rice pilaf, and making soup.",
             "**The One-Pot Advantage:**",
-            "Brown meat, sauté vegetables, add liquid, and finish cooking all in one vessel. Fewer dishes, layered flavors from the fond, and seamless transition from stovetop to oven."
+            "Brown meat, sauté vegetables, add liquid, and finish cooking all in one vessel. Fewer dishes, layered flavors from the fond, and easy transition from stovetop to oven."
           ]
         },
         {

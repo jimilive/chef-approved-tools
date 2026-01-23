@@ -101,15 +101,15 @@ export const comparisonData = {
           option: "nutribullet-power",
           title: "Nutribullet Power",
           content: [
-            "The most significant difference between Nutribullet and Magic Bullet is motor power. Nutribullet blenders feature motors ranging from 600 to 1,200 watts depending on the model. The base Nutribullet 600 offers 600W of power, while the popular Nutribullet Pro 900 packs 900W, and the Ultra model delivers a whopping 1,200W.",
-            "This power translates directly to blending speed and effectiveness. Nutribullet's higher wattage creates a powerful cyclonic action that spins blades at much higher RPMs. This intense spinning force bursts open cell walls in fibrous vegetables like kale and spinach, cracks through seeds like flax and chia, and pulverizes nuts into creamy consistency—the signature \"nutrient extraction\" that Nutribullet markets."
+            "The most significant difference between Nutribullet and Magic Bullet is motor power. Nutribullet blenders feature motors ranging from 600 to 1,200 watts depending on the model. The base Nutribullet 600 offers 600W of power, while the popular Nutribullet Pro 900 packs 900W, and the Ultra model delivers 1,200W.",
+            "This power translates directly to blending speed and effectiveness. Nutribullet's higher wattage creates a powerful cyclonic action that spins blades at much higher RPMs. This intense spinning force bursts open cell walls in fibrous vegetables like kale and spinach, cracks through seeds like flax and chia, and pulverizes nuts into creamy consistency, the signature \"nutrient extraction\" that Nutribullet markets."
           ]
         },
         {
           option: "magicbullet-power",
           title: "Magic Bullet Power",
           content: [
-            "Magic Bullet operates at a modest 250 watts. This dramatic power difference—600-1,200W versus 250W—fundamentally changes what each blender can accomplish. The Nutribullet's superior motor strength makes it capable of handling tough ingredients that would stall or struggle in a Magic Bullet.",
+            "Magic Bullet operates at a modest 250 watts. This dramatic power difference (600-1,200W versus 250W) fundamentally changes what each blender can accomplish. The Nutribullet's superior motor strength makes it capable of handling tough ingredients that would stall or struggle in a Magic Bullet.",
             "Magic Bullet's 250W motor provides enough power for soft fruits like bananas and berries, liquids, protein powders, and cooked vegetables. It can make perfectly decent basic smoothies with soft ingredients. However, it struggles significantly with fibrous vegetables, nuts, frozen fruits, and thicker recipes that don't have much liquid."
           ]
         }
@@ -131,7 +131,7 @@ export const comparisonData = {
           option: "challenging",
           title: "Challenging Ingredients",
           content: [
-            "The performance gap becomes most apparent with challenging ingredients. Nutribullet can blend frozen bananas into creamy \"nice cream,\" create thick smoothie bowls, make nut milks and butters, and puree cooked vegetables into velvety smooth soups. Magic Bullet cannot handle these demanding tasks—attempting to blend nuts or frozen ingredients often results in stalling, overheating, or incomplete blending.",
+            "The performance gap becomes most apparent with challenging ingredients. Nutribullet can blend frozen bananas into creamy \"nice cream,\" create thick smoothie bowls, make nut milks and butters, and puree cooked vegetables into velvety smooth soups. Magic Bullet cannot handle these demanding tasks. Attempting to blend nuts or frozen ingredients often results in stalling, overheating, or incomplete blending.",
             "For grinding tasks, both blenders perform reasonably well at turning coffee beans, spices, or oats into flour. Magic Bullet's lower power can actually be an advantage for chunky salsas or dips where you don't want everything liquified. The intense power of Nutribullet can over-process delicate recipes in seconds, turning salsa into soup if you're not careful."
           ]
         }
@@ -225,7 +225,7 @@ export const comparisonData = {
           title: "Convenience Comparison",
           content: [
             "Both blenders are designed for convenience with simple twist-and-lock operation. You add ingredients to the cup, attach the blade assembly, flip it upside down onto the base, and twist to lock. This intuitive design makes both brands easy for beginners.",
-            "Cleaning is straightforward for both. The blade assemblies and cups are dishwasher-safe, though hand washing is quick and easy—just rinse immediately after use. The simple design with fewer components makes cleanup faster than traditional blenders with large pitchers and hard-to-reach corners.",
+            "Cleaning is straightforward for both. The blade assemblies and cups are dishwasher-safe, though hand washing is quick and easy. Just rinse immediately after use. The simple design with fewer components makes cleanup faster than traditional blenders with large pitchers and hard-to-reach corners.",
             "Magic Bullet often comes with more accessories included in the box, such as multiple cup sizes, to-go lids, and shaker/steamer tops. Nutribullet packages typically include fewer accessories but offer more power and capacity in the core blending unit. Which approach provides better value depends on whether you prioritize accessories or performance."
           ]
         }
@@ -290,7 +290,7 @@ export const comparisonData = {
       },
       {
         question: "Can you make nut butter in a Nutribullet or Magic Bullet?",
-        answer: "Nutribullet Pro models (900W) can make small batches of nut butter with patience, though it requires scraping down sides and adding a bit of oil. Magic Bullet cannot handle the dense, sustained blending required for nut butter—the 250W motor will stall or overheat. For regular nut butter making, consider a full-size blender with 1,000+ watts."
+        answer: "Nutribullet Pro models (900W) can make small batches of nut butter with patience, though it requires scraping down sides and adding a bit of oil. Magic Bullet cannot handle the dense, sustained blending required for nut butter. The 250W motor will stall or overheat. For regular nut butter making, consider a full-size blender with 1,000+ watts."
       },
       {
         question: "Which blender is quieter: Nutribullet or Magic Bullet?",
@@ -298,7 +298,7 @@ export const comparisonData = {
       },
       {
         question: "Are Nutribullet and Magic Bullet made by the same company?",
-        answer: "Yes, both brands are owned by the same parent company. Magic Bullet was the original trailblazing product, while Nutribullet entered the market later as a more powerful evolution of the bullet blender concept. Despite shared ownership, they target different market segments—Magic Bullet for budget buyers and basic tasks, Nutribullet for more serious smoothie enthusiasts."
+        answer: "Yes, both brands are owned by the same parent company. Magic Bullet was the original product, while Nutribullet entered the market later as a more powerful evolution of the bullet blender concept. Despite shared ownership, they target different market segments: Magic Bullet for budget buyers and basic tasks, Nutribullet for more serious smoothie enthusiasts."
       },
       {
         question: "Can you blend hot liquids in Nutribullet or Magic Bullet?",

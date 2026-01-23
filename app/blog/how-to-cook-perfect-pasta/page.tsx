@@ -63,10 +63,10 @@ export default function HowToCookPerfectPastaPage() {
         tools={["Large pot (6+ quarts)", "Colander", "Tongs or spider strainer", "Timer"]}
         steps={[
           { name: "Boil Plenty of Water", text: "Use 4-6 quarts of water per pound of pasta. Too little water causes pasta to stick and cook unevenly." },
-          { name: "Salt the Water Generously", text: "Add 1-2 tablespoons kosher salt per pound of pasta. The water should taste like the sea—this is your only chance to season the pasta itself." },
+          { name: "Salt the Water Generously", text: "Add 1-2 tablespoons kosher salt per pound of pasta. The water should taste like the sea. This is your only chance to season the pasta itself." },
           { name: "Add Pasta and Stir", text: "Add pasta to rapidly boiling water. Stir immediately and occasionally during cooking to prevent sticking." },
-          { name: "Cook to Al Dente", text: "Cook 1-2 minutes less than package directions. Pasta should have slight resistance when bitten—it continues cooking in the sauce." },
-          { name: "Reserve Pasta Water", text: "Before draining, save 1 cup of starchy pasta water. This liquid gold helps emulsify and thicken your sauce." },
+          { name: "Cook to Al Dente", text: "Cook 1-2 minutes less than package directions. Pasta should have slight resistance when bitten, it continues cooking in the sauce." },
+          { name: "Reserve Pasta Water", text: "Before draining, save 1 cup of starchy pasta water. This starchy water helps emulsify and thicken your sauce." },
           { name: "Finish in the Sauce", text: "Transfer pasta directly to sauce (don't rinse). Toss with sauce over heat for 1-2 minutes, adding pasta water as needed for silky consistency." }
         ]}
       />
@@ -87,12 +87,12 @@ export default function HowToCookPerfectPastaPage() {
               Restaurant Reality
             </p>
             <p className="mb-0">
-              At Il Pizzaiolo in Seattle, we cooked hundreds of pounds of pasta every service. Fresh pasta from the cooler, dried pasta from bulk bins—all of it had to be perfect al dente, finished in sauce, and plated in under 3 minutes. I watched new line cooks massacre pasta daily: undercooked and crunchy, overcooked and mushy, undersalted and bland, or worst of all—rinsed under cold water (never, ever do this). The difference between amateur pasta and professional pasta isn&apos;t expensive ingredients—it&apos;s understanding water ratios, salt levels, timing, and how to finish pasta properly. Today I&apos;m teaching you the exact technique that creates restaurant-quality pasta every single time.
+              At Il Pizzaiolo in Seattle, we cooked hundreds of pounds of pasta every service. Fresh pasta from the cooler, dried pasta from bulk bins. All of it had to be perfect al dente, finished in sauce, and plated in under 3 minutes. I watched new line cooks massacre pasta daily: undercooked and crunchy, overcooked and mushy, undersalted and bland, or worst of all, rinsed under cold water (never, ever do this). The difference between amateur pasta and professional pasta isn&apos;t expensive ingredients. It&apos;s understanding water ratios, salt levels, timing, and how to finish pasta properly. Today I&apos;m teaching you the exact technique that creates restaurant-quality pasta every single time.
             </p>
           </div>
 
           <p>
-            Most people think cooking pasta is foolproof—boil water, add pasta, drain when soft. Then they wonder why their pasta tastes bland, sticks together, or has sauce that won&apos;t cling.
+            Most people think cooking pasta is foolproof: boil water, add pasta, drain when soft. Then they wonder why their pasta tastes bland, sticks together, or has sauce that won&apos;t cling.
           </p>
 
           <p>
@@ -141,7 +141,7 @@ export default function HowToCookPerfectPastaPage() {
           <ul>
             <li>Pasta absorbs water during cooking</li>
             <li>Unsalted water = unsalted pasta</li>
-            <li>Salt added to sauce later doesn&apos;t penetrate pasta—it&apos;s too late</li>
+            <li>Salt added to sauce later doesn&apos;t penetrate pasta. It&apos;s too late</li>
           </ul>
 
           <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
@@ -150,7 +150,7 @@ export default function HowToCookPerfectPastaPage() {
               The Pasta Water Rule
             </p>
             <p className="mb-0">
-              ALWAYS save at least 1 cup of pasta cooking water before draining. This starchy, salted water is liquid gold for making sauce cling to pasta and adjusting consistency. Professional chefs use it in every single pasta dish. Home cooks throw it away. Don&apos;t throw it away.
+              ALWAYS save at least 1 cup of pasta cooking water before draining. This starchy, salted water is essential for making sauce cling to pasta and adjusting consistency. Professional chefs use it in every single pasta dish. Home cooks throw it away. Don&apos;t throw it away.
             </p>
           </div>
 
@@ -169,7 +169,7 @@ export default function HowToCookPerfectPastaPage() {
           </p>
 
           <p>
-            <strong>What you&apos;re looking for:</strong> Al dente—slight resistance when you bite, but no raw flour taste in center
+            <strong>What you&apos;re looking for:</strong> Al dente: slight resistance when you bite, but no raw flour taste in center
           </p>
 
           <h3>4. Finishing: Never Rinse, Always Marry</h3>
@@ -200,7 +200,7 @@ export default function HowToCookPerfectPastaPage() {
 
           <BlogNewsletterCTA
             slug="how-to-cook-perfect-pasta"
-            description="Get my free &quot;11 Essential Tools I Use Most&quot; PDF—the exact equipment I rely on after 24 years in professional kitchens, including the stockpot that makes perfect pasta every time. No fluff, just the tools that actually matter."
+            description="Get my free &quot;11 Essential Tools I Use Most&quot; PDF, the exact equipment I rely on after 24 years in professional kitchens, including the stockpot that makes perfect pasta every time. No fluff, just the tools that actually matter."
           />
 
           <h2>Step-by-Step: The Professional Method</h2>
@@ -226,7 +226,7 @@ export default function HowToCookPerfectPastaPage() {
           <p>
             <strong>How much:</strong> 1-2 tablespoons kosher salt per 4 quarts water<br />
             <strong>When:</strong> After water reaches full boil, before adding pasta<br />
-            <strong>Taste it:</strong> Water should taste like seawater—clearly, noticeably salty
+            <strong>Taste it:</strong> Water should taste like seawater, clearly, noticeably salty
           </p>
 
           <h3>Step 4: Add Pasta</h3>
@@ -234,7 +234,7 @@ export default function HowToCookPerfectPastaPage() {
           <p>
             <strong>How:</strong> Add all at once (for long pasta, let ends soften 10 seconds, then push down)<br />
             <strong>Stir immediately:</strong> Within 30 seconds to prevent sticking<br />
-            <strong>Don&apos;t add oil:</strong> Myth—oil floats on top and does nothing
+            <strong>Don&apos;t add oil:</strong> Myth. Oil floats on top and does nothing
           </p>
 
           <h3>Step 5: Taste for Doneness</h3>
@@ -256,7 +256,7 @@ export default function HowToCookPerfectPastaPage() {
           <h3>Step 7: Drain (Don&apos;t Rinse!)</h3>
 
           <p>
-            Pour into colander, shake gently. Work quickly—pasta shouldn&apos;t cool. Have your sauce ready in the pan before draining.
+            Pour into colander, shake gently. Work quickly. Pasta shouldn&apos;t cool. Have your sauce ready in the pan before draining.
           </p>
 
           <h3>Step 8: Finish in Sauce</h3>
@@ -297,7 +297,7 @@ export default function HowToCookPerfectPastaPage() {
           </p>
           <ol>
             <li><strong>Enough water</strong> (4-6 quarts per pound)</li>
-            <li><strong>Properly salted</strong> (1-2 tbsp per 4 quarts—taste it)</li>
+            <li><strong>Properly salted</strong> (1-2 tbsp per 4 quarts, taste it)</li>
             <li><strong>Tested for doneness</strong> (start 2 min before package time)</li>
             <li><strong>Never rinsed</strong> (destroys everything)</li>
             <li><strong>Finished in sauce</strong> with pasta water (this is what makes it restaurant-quality)</li>

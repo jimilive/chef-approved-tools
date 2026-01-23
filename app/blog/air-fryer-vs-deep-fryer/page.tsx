@@ -108,7 +108,7 @@ export default function AirFryerVsDeepFryer() {
           </div>
           <div className="mt-8 bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-lg">
             <p className="text-slate-700 leading-relaxed">
-              <strong>Professional Perspective:</strong> After 24 years of professional deep frying and several years of home air frying, here&apos;s my honest recommendation: get an air fryer for regular use, and deep fry only for special occasions when nothing else will do. The 70-80% oil reduction, easy cleanup, safer operation, and versatility make air fryers genuinely useful appliances. For wet-battered items and authentic fried food texture, deep fryers remain unmatched—but most home cooks will find air fryers cover 90% of their fried food cravings.
+              <strong>Professional Perspective:</strong> After 24 years of professional deep frying and several years of home air frying, here&apos;s my honest recommendation: get an air fryer for regular use, and deep fry only for special occasions when nothing else will do. The 70-80% oil reduction, easy cleanup, safer operation, and versatility make air fryers genuinely useful appliances. For wet-battered items and authentic fried food texture, deep fryers remain unmatched, but most home cooks will find air fryers cover 90% of their fried food cravings.
             </p>
           </div>
         </section>
@@ -116,7 +116,7 @@ export default function AirFryerVsDeepFryer() {
         <section className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">Recommended Air Fryer</h2>
           <p className="text-slate-700 mb-4">
-            For home cooks ready to try air frying, the <Link href="/reviews/ninja-air-fryer-af101" className="text-orange-700 hover:text-orange-800 underline">Ninja AF101 Air Fryer</Link> offers excellent performance at a reasonable entry point. Its 4-quart capacity handles 1-2 person portions well, and the ceramic-coated basket makes cleanup simple. For those who discover they love air frying, larger capacity models are available—but starting with a compact unit helps you learn the technique without major investment.
+            For home cooks ready to try air frying, the <Link href="/reviews/ninja-air-fryer-af101" className="text-orange-700 hover:text-orange-800 underline">Ninja AF101 Air Fryer</Link> offers excellent performance at a reasonable entry point. Its 4-quart capacity handles 1-2 person portions well, and the ceramic-coated basket makes cleanup simple. For those who discover they love air frying, larger capacity models are available, but starting with a compact unit helps you learn the technique without major investment.
           </p>
           <p className="text-slate-700">
             Browse our full selection of <Link href="/appliances" className="text-orange-700 hover:text-orange-800 underline">kitchen appliances</Link> for more options.

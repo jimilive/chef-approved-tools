@@ -34,10 +34,10 @@ export const pastaData = {
     tools: ["Large pot (6+ quarts)", "Colander", "Tongs or spider strainer", "Timer"],
     steps: [
       { name: "Boil Plenty of Water", text: "Use 4-6 quarts of water per pound of pasta. Too little water causes pasta to stick and cook unevenly." },
-      { name: "Salt the Water Generously", text: "Add 1-2 tablespoons kosher salt per pound of pasta. The water should taste like the sea—this is your only chance to season the pasta itself." },
+      { name: "Salt the Water Generously", text: "Add 1-2 tablespoons kosher salt per pound of pasta. The water should taste like the sea. This is your only chance to season the pasta itself." },
       { name: "Add Pasta and Stir", text: "Add pasta to rapidly boiling water. Stir immediately and occasionally during cooking to prevent sticking." },
-      { name: "Cook to Al Dente", text: "Cook 1-2 minutes less than package directions. Pasta should have slight resistance when bitten—it continues cooking in the sauce." },
-      { name: "Reserve Pasta Water", text: "Before draining, save 1 cup of starchy pasta water. This liquid gold helps emulsify and thicken your sauce." },
+      { name: "Cook to Al Dente", text: "Cook 1-2 minutes less than package directions. Pasta should have slight resistance when bitten, it continues cooking in the sauce." },
+      { name: "Reserve Pasta Water", text: "Before draining, save 1 cup of starchy pasta water. This starchy water helps emulsify and thicken your sauce." },
       { name: "Finish in the Sauce", text: "Transfer pasta directly to sauce (don't rinse). Toss with sauce over heat for 1-2 minutes, adding pasta water as needed for silky consistency." }
     ]
   },

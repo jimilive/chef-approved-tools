@@ -60,6 +60,12 @@
 | 22 | /blog/how-to-clean-burnt-stainless-steel-pans | Done | 6 | 0 | Fixed 6 em dashes (3 data, 3 page) |
 | 23 | /blog/guide-cooking-oils-smoke-points | Done | 0 | 2 | Fixed 2 AI phrases ("effortless") |
 | 24 | /blog/maillard-reaction-browning-flavor | Done | 17 | 0 | Fixed 17 em dashes |
+| 25 | /blog/how-to-cook-perfect-pasta | Done | 13 | 3 | Fixed 13 em dashes, 3 "liquid gold" |
+| 26 | /blog/air-fryer-vs-convection-oven | Done | 10 | 1 | Fixed 10 em dashes, 1 "remarkably" |
+| 27 | /blog/nutribullet-vs-magic-bullet | Done | 6 | 2 | Fixed 6 em dashes, "whopping", "trailblazing" |
+| 28 | /blog/air-fryer-vs-deep-fryer | Done | 14 | 0 | Fixed 14 em dashes |
+| 29 | /blog/dutch-oven-vs-slow-cooker | Done | 8 | 3 | Fixed 8 em dashes, "comprehensive", "transformative", "seamless" |
+| 30 | /blog/stand-mixer-vs-hand-mixer | Done | 16 | 3 | Fixed 16 em dashes, "comprehensive", 2x "effortlessly" |
 
 ## Patterns Being Checked
 
@@ -151,3 +157,20 @@
   - Page 24 (maillard-reaction-browning-flavor): 17 em dashes fixed (originally reported 0)
   - **Total re-audit fixes: 121 em dashes**
   - **Lesson learned: ALWAYS use `grep "—"` on every file before reporting findings**
+- Page 25 (how-to-cook-perfect-pasta) completed
+  - 13 em dashes → periods, commas, colons
+  - 3 "liquid gold" → "starchy water" or "essential"
+- Page 26 (air-fryer-vs-convection-oven) completed
+  - 10 em dashes → periods, commas, colons
+  - 1 "remarkably" → "very"
+- Page 27 (nutribullet-vs-magic-bullet) completed
+  - 6 em dashes → periods, commas, colons, parentheses
+  - "whopping" removed, "trailblazing" → "original"
+- Page 28 (air-fryer-vs-deep-fryer) completed
+  - 14 em dashes → periods, commas, colons, parentheses
+- Page 29 (dutch-oven-vs-slow-cooker) completed
+  - 8 em dashes → commas, periods, parentheses
+  - "comprehensive" removed, "transformative" → "a big help", "seamless" → "easy"
+- Page 30 (stand-mixer-vs-hand-mixer) completed
+  - 16 em dashes → periods, commas, colons
+  - "comprehensive" removed, 2x "effortlessly" → "easily"

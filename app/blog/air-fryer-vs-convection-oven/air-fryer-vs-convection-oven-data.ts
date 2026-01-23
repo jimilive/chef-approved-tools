@@ -1,7 +1,7 @@
 export const comparisonData = {
   metadata: {
     title: "Air Fryer vs Convection Oven: What's the Real Difference?",
-    description: "Professional chef explains air fryers and convection ovens use the same technology differently. One cooks faster, one handles more—here's which you need.",
+    description: "Professional chef explains air fryers and convection ovens use the same technology differently. One cooks faster, one handles more. Here's which you need.",
     publishedDate: "2025-12-08",
     lastUpdated: "2025-12-08",
     primaryKeyword: "air fryer vs convection oven",
@@ -16,8 +16,8 @@ export const comparisonData = {
   hero: {
     title: "Air Fryer vs Convection Oven: Same Technology, Different Results",
     introduction: [
-      "After 24 years of professional kitchen experience—where convection ovens were standard equipment for everything from roasting to baking—I thought I understood hot air cooking. Then countertop air fryers appeared, and I dismissed them as marketing gimmicks. Same technology, smaller package, higher markup. Why would anyone need one?",
-      "I was wrong. After extensive testing of both appliances in home kitchen settings, the differences matter more than I expected. Air fryers don't just shrink convection technology—they concentrate it. The results aren't identical, and understanding when each excels helps you choose the right tool."
+      "After 24 years of professional kitchen experience, where convection ovens were standard equipment for everything from roasting to baking, I thought I understood hot air cooking. Then countertop air fryers appeared, and I dismissed them as marketing gimmicks. Same technology, smaller package, higher markup. Why would anyone need one?",
+      "I was wrong. After extensive testing of both appliances in home kitchen settings, the differences matter more than I expected. Air fryers don't just shrink convection technology. They concentrate it. The results aren't identical, and understanding when each excels helps you choose the right tool."
     ]
   },
 
@@ -153,7 +153,7 @@ export const comparisonData = {
           option: "evenness",
           title: "Even Cooking",
           content: [
-            "**Air Fryer:** Excellent for small, single-layer portions. When food is arranged in a single layer with space between pieces, air fryers cook remarkably evenly. The challenge comes with quantity—overcrowding the basket blocks airflow and creates uneven results.",
+            "**Air Fryer:** Excellent for small, single-layer portions. When food is arranged in a single layer with space between pieces, air fryers cook very evenly. The challenge comes with quantity. Overcrowding the basket blocks airflow and creates uneven results.",
             "**Convection Oven:** Better for larger quantities and multiple items. The larger chamber allows proper spacing for bigger batches. Multiple racks enable cooking several dishes simultaneously. For family-sized portions or meal prep, convection ovens deliver more consistent results across the entire batch."
           ]
         }
@@ -187,7 +187,7 @@ export const comparisonData = {
             "• Air fryer: 8p to cook a roast chicken",
             "• Convection oven: 26p for the same chicken",
             "• Air fryer uses approximately 1/3 the electricity for single-portion cooking",
-            "**The Caveat:** Energy efficiency depends on portion size. Cooking a single chicken breast in an air fryer beats a full-size oven. Cooking Thanksgiving dinner for twelve requires the full oven regardless of efficiency—the air fryer simply can't handle the volume.",
+            "**The Caveat:** Energy efficiency depends on portion size. Cooking a single chicken breast in an air fryer beats a full-size oven. Cooking Thanksgiving dinner for twelve requires the full oven regardless of efficiency. The air fryer simply can't handle the volume.",
             "**Preheat Advantage:** Air fryers require minimal preheating (0-3 minutes for most models). Convection ovens need 10-15 minutes to reach temperature. For quick cooking tasks, this preheat difference adds significant time and energy cost to convection oven use."
           ]
         }
@@ -230,7 +230,7 @@ export const comparisonData = {
           option: "space",
           title: "Counter Space and Cleaning",
           content: [
-            "**Air Fryer:** Compact footprint (roughly 12\" x 12\" x 14\"). Easy to store when not in use. Can sit on counter without dominating the space. Generally easier to clean—removable basket and tray, often dishwasher safe. Non-stick surfaces wipe clean. Compact interior requires minimal wiping.",
+            "**Air Fryer:** Compact footprint (roughly 12\" x 12\" x 14\"). Easy to store when not in use. Can sit on counter without dominating the space. Generally easier to clean: removable basket and tray, often dishwasher safe. Non-stick surfaces wipe clean. Compact interior requires minimal wiping.",
             "**Countertop Convection Oven:** Large footprint (18\" x 15\" x 12\" typical). Requires dedicated counter space. Most users keep it out permanently due to weight and size. Larger interior surface area requires more cleaning effort. Crumbs and spills accumulate on racks and floor.",
             "**Built-In Convection Oven:** No counter space required. Uses existing oven location. Standard in many modern kitchens. Some models have self-cleaning features that help."
           ]
@@ -239,7 +239,7 @@ export const comparisonData = {
           option: "learning",
           title: "Learning Curve",
           content: [
-            "**Air Fryer:** Minimal learning curve. Most cooking involves setting temperature and time. Results are forgiving—slightly over or under doesn't ruin food.",
+            "**Air Fryer:** Minimal learning curve. Most cooking involves setting temperature and time. Results are forgiving. Slightly over or under doesn't ruin food.",
             "**Convection Oven:** Moderate learning curve. Requires understanding when to use convection vs. conventional settings. Recipe adjustments (typically reduce temperature 25°F and time 10-15%) needed for convection cooking."
           ]
         }
@@ -251,7 +251,7 @@ export const comparisonData = {
     questions: [
       {
         question: "Is an air fryer just a small convection oven?",
-        answer: "Essentially yes—both use fans to circulate hot air. However, air fryers concentrate this in a smaller space with more powerful airflow relative to size, producing faster cooking and crispier results for small portions."
+        answer: "Essentially yes. Both use fans to circulate hot air. However, air fryers concentrate this in a smaller space with more powerful airflow relative to size, producing faster cooking and crispier results for small portions."
       },
       {
         question: "Can I use my convection oven as an air fryer?",
