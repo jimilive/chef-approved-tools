@@ -40,7 +40,7 @@ export const reviewData = {
       icon: '🏆',
       text: 'Tier 1: Professional Kitchen Use',
     },
-    verdict: 'After 2 years testing in professional kitchens, this WÜSTHOF set has proven exceptional value through German engineering and ergonomic design. The chef\'s knife, santoku, bread knife, and paring knives alone justify the purchase price—saving hundreds compared to individual purchases. The IKON handle ergonomics reduce hand fatigue during extended prep sessions, a game-changer for professional use. While some pieces like the slicer see limited use, the overall performance makes this an outstanding investment.',
+    verdict: 'After 2 years testing in professional kitchens, this WÜSTHOF set has proven exceptional value through German engineering and ergonomic design. The chef\'s knife, santoku, bread knife, and paring knives alone justify the purchase price—saving hundreds compared to individual purchases. The IKON handle ergonomics reduce hand fatigue during extended prep sessions, a significant factor for professional use. While some pieces like the slicer see limited use, the overall performance makes this an outstanding investment.',
     verdictStrong: 'German engineering meets professional ergonomics',
     ctaText: 'Check Price on Amazon →'
   },

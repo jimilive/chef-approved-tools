@@ -51,11 +51,11 @@ export const reviewData = {
     sections: [
       {
         title: "Cutting Performance",
-        content: "Exceptional. The thin, flexible blade delivers professional-grade control for everything from dicing onions to slicing proteins. Maintains sharpness through heavy daily use."
+        content: "Precise and controlled. The thin, flexible blade delivers professional-grade control for everything from dicing onions to slicing proteins. Maintains sharpness through heavy daily use."
       },
       {
         title: "Balance & Maneuverability",
-        content: "Outstanding. Lightweight fibrox handle and thin blade create perfect balance. More maneuverable than heavy German knives, reducing hand fatigue during extended prep."
+        content: "Well-balanced. Lightweight fibrox handle and thin blade create perfect balance. More maneuverable than heavy German knives, reducing hand fatigue during extended prep."
       },
       {
         title: "Edge Retention",
@@ -71,7 +71,7 @@ export const reviewData = {
       },
       {
         title: "Value",
-        content: "Unbeatable. Delivers 90% of premium knife performance at 25% of the cost. Professional quality without premium pricing."
+        content: "Hard to beat. Delivers 90% of premium knife performance at 25% of the cost. Professional quality without premium pricing."
       }
     ],
     testingEnvironment: [
@@ -122,7 +122,7 @@ export const reviewData = {
       },
       {
         title: "Real Restaurant Experience",
-        content: "After 45 years of cooking and countless knives tested, the Victorinox 8-inch chef's knife remains my primary blade. From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I've used this knife to prep 200+ covers worth of mise en place daily, slice 5 lbs of mushrooms in under 10 minutes, dice pounds of onions and vegetables per shift, and portion proteins during service. The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day."
+        content: "After 24 years of cooking and countless knives tested, the Victorinox 8-inch chef's knife remains my primary blade. From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I've used this knife to prep 200+ covers worth of mise en place daily, slice 5 lbs of mushrooms in under 10 minutes, dice pounds of onions and vegetables per shift, and portion proteins during service. The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day."
       },
       {
         title: "Why This Beats Premium Knives",

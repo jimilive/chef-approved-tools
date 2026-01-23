@@ -81,7 +81,7 @@ export const reviewData = {
     title: 'Why This Dishwasher-Safe Board Works',
     sections: [
       {
-        title: 'Richlite Construction: The Game-Changer',
+        title: 'Richlite Construction: Why It Works',
         content: `These boards are made from compressed wood fiber and resin - essentially the same material as skateboards. The result is a surface that's heat-resistant up to 350°F, completely non-porous, and won't harbor bacteria.\n\n**What makes this work:** The surface is gentle on knife edges (comparable to hard maple) while being durable enough for daily professional use. NSF certified for commercial kitchens means it meets the same standards as restaurant equipment.\n\n**Real-world performance:** I was skeptical at first. But after using these for 10 years, I'm converted. They don't warp, they don't crack, they don't absorb odors or stains like wood does. And they're gentle enough on knife edges that my Victorinox knives stay sharp.`
       },
       {
@@ -140,7 +140,7 @@ export const reviewData = {
 
   // Pros & Cons title
   prosConsTitle: 'Honest Assessment After 10 Years',
-  prosTitle: 'What Works Exceptionally Well',
+  prosTitle: 'What Works',
   consTitle: 'Limitations to Consider',
 
   // Who Should Buy
@@ -231,7 +231,7 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      `After decades with wood boards, I'll never go back. <LINK>Epicurean boards</LINK> deliver true sanitation through dishwasher cleaning, zero maintenance (no oiling), and genuine knife-friendly performance. The combination is unbeatable.`,
+      `After decades with wood boards, I'll never go back. <LINK>Epicurean boards</LINK> deliver true sanitation through dishwasher cleaning, zero maintenance (no oiling), and genuine knife-friendly performance. The combination works.`,
       `In 10 years of daily use, I've put my board through 1,000+ dishwasher cycles with zero warping. I've used it with raw proteins without sanitation concerns. I've never oiled it, never babied it, never worried about it. It just works, day after day, year after year.`,
       `Is it perfect? No. Wood boards have their appeal - the traditional aesthetic, the ritual of maintenance, the softest possible surface. But for practical daily cooking where sanitation matters and time is limited, <LINK>this composite board</LINK> is superior. This is the future of cutting boards.`
     ],

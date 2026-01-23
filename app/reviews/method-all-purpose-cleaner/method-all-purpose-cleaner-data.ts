@@ -9,7 +9,7 @@ export const reviewData = {
   // METADATA
   metadata: {
     title: "Method All-Purpose Cleaner Review: 5 Years Tested (2026)",
-    description: "Method All-Purpose Cleaner review after 5 years of daily testing. Is Method cleaner safe? Yes—plant-based, non-toxic, and cuts grease like chemical cleaners.",
+    description: "Method All-Purpose Cleaner review after 5 years of daily testing. Is Method cleaner safe? Yes. Plant-based, non-toxic, and cuts grease like chemical cleaners.",
     ogTitle: "Method All-Purpose Cleaner Review: 5 Years Tested",
     ogDescription: "Method All-Purpose Cleaner review after 5 years of daily home testing. Plant-based, non-toxic formula that cuts grease like chemical cleaners.",
     testingPeriod: "5 Years Daily Home Use",
@@ -22,7 +22,7 @@ export const reviewData = {
   // TRACKING DATA
   tracking: {
     testingPeriod: "5 Years",
-    hook: "The unicorn of cleaners. Powerful AND non-toxic. Cuts grease effortlessly.",
+    hook: "The unicorn of cleaners. Powerful AND non-toxic. Cuts grease without scrubbing.",
   },
 
   // BREADCRUMB
@@ -50,7 +50,7 @@ export const reviewData = {
   quickStats: {
     rating: "⭐⭐⭐⭐⭐ 4.8/5",
     context: "Testing Period: 5 years of daily home kitchen use",
-    highlights: ["Cuts through grease effortlessly", "Non-toxic, plant-based formula", "Safe for all kitchen surfaces"]
+    highlights: ["Cuts through grease easily", "Non-toxic, plant-based formula", "Safe for all kitchen surfaces"]
   },
 
   // SECTION 2: TESTING RESULTS
@@ -60,7 +60,7 @@ export const reviewData = {
     sections: [
       {
         title: "Serious Grease-Cutting Power",
-        content: "Dissolves kitchen grease like magic. <LINK>This cleaner</LINK> works as well as harsh chemical cleaners without the toxicity. It effortlessly dissolves grease, grime, and sticky residues, leaving surfaces sparkling clean. I've literally watched it lift stubborn messes with zero scrubbing."
+        content: "Dissolves kitchen grease like magic. <LINK>This cleaner</LINK> works as well as harsh chemical cleaners without the toxicity. It dissolves grease quickly, grime, and sticky residues, leaving surfaces sparkling clean. I've literally watched it lift stubborn messes with zero scrubbing."
       },
       {
         title: "Plant-Based & Non-Toxic",
@@ -252,7 +252,7 @@ export const reviewData = {
       },
       {
         question: "Does Method work well on greasy stovetops?",
-        answer: "Exceptionally well. This is where Method truly shines. Spray it on cooking grease splatters, wait 5-10 seconds, and wipe clean—no scrubbing needed. I've watched it dissolve grease that would normally require aggressive scrubbing. For very heavy, baked-on grease, let it sit for 30-60 seconds. This is the primary reason I switched to Method after years of using harsh degreasers."
+        answer: "Exceptionally well. This is where Method truly shines. Spray it on cooking grease splatters, wait 5-10 seconds, and wipe clean. No scrubbing needed. I've watched it dissolve grease that would normally require aggressive scrubbing. For very heavy, baked-on grease, let it sit for 30-60 seconds. This is the primary reason I switched to Method after years of using harsh degreasers."
       },
       {
         question: "Is Method streak-free on stainless steel?",
@@ -264,7 +264,7 @@ export const reviewData = {
       },
       {
         question: "What scent options are available?",
-        answer: "Method offers multiple scent options including French Lavender, Pink Grapefruit, Ylang Ylang, Cucumber, and more. All scents are derived from natural fragrances—pleasant but not overwhelming. I personally use Pink Grapefruit, which has a fresh, clean scent that dissipates quickly. Unlike chemical cleaners with artificial perfumes, these natural scents are subtle and enjoyable."
+        answer: "Method offers multiple scent options including French Lavender, Pink Grapefruit, Ylang Ylang, Cucumber, and more. All scents are derived from natural fragrances, pleasant but not overwhelming. I personally use Pink Grapefruit, which has a fresh, clean scent that dissipates quickly. Unlike chemical cleaners with artificial perfumes, these natural scents are subtle and enjoyable."
       }
     ]
   },
@@ -281,7 +281,7 @@ export const reviewData = {
     },
     {
       question: "Does Method work well on greasy stovetops?",
-      answer: "Exceptionally well. This is where Method truly shines. Spray it on cooking grease splatters, wait 5-10 seconds, and wipe clean—no scrubbing needed. I've watched it dissolve grease that would normally require aggressive scrubbing. For very heavy, baked-on grease, let it sit for 30-60 seconds. This is the primary reason I switched to Method after years of using harsh degreasers."
+      answer: "Exceptionally well. This is where Method truly shines. Spray it on cooking grease splatters, wait 5-10 seconds, and wipe clean. No scrubbing needed. I've watched it dissolve grease that would normally require aggressive scrubbing. For very heavy, baked-on grease, let it sit for 30-60 seconds. This is the primary reason I switched to Method after years of using harsh degreasers."
     },
     {
       question: "Is Method streak-free on stainless steel?",
@@ -293,7 +293,7 @@ export const reviewData = {
     },
     {
       question: "What scent options are available?",
-      answer: "Method offers multiple scent options including French Lavender, Pink Grapefruit, Ylang Ylang, Cucumber, and more. All scents are derived from natural fragrances—pleasant but not overwhelming. I personally use Pink Grapefruit, which has a fresh, clean scent that dissipates quickly. Unlike chemical cleaners with artificial perfumes, these natural scents are subtle and enjoyable."
+      answer: "Method offers multiple scent options including French Lavender, Pink Grapefruit, Ylang Ylang, Cucumber, and more. All scents are derived from natural fragrances, pleasant but not overwhelming. I personally use Pink Grapefruit, which has a fresh, clean scent that dissipates quickly. Unlike chemical cleaners with artificial perfumes, these natural scents are subtle and enjoyable."
     },
     {
       question: "What are the ingredients in Method All-Purpose Cleaner?",

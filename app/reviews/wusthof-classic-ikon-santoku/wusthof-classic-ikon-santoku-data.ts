@@ -38,7 +38,7 @@ export const reviewData = {
       }
     ],
     expertRating: 4.5,
-    expertOpinion: "After 5 years in professional kitchens—including simultaneous use at Purple Café and Feierabend—and 9 more years at home, the Wüsthof Classic Ikon Santoku remains my go-to knife for precision vegetable work. The thin blade and 10-degree edge angle deliver effortless slicing that heavier chef's knives simply cannot match.",
+    expertOpinion: "After 5 years in professional kitchens, including simultaneous use at Purple Café and Feierabend, and 9 more years at home, the Wüsthof Classic Ikon Santoku remains my go-to knife for precision vegetable work. The thin blade and 10-degree edge angle deliver smooth slicing that heavier chef's knives simply cannot match.",
     dateAdded: "2025-12-16",
     lastUpdated: "2025-12-16"
   },
@@ -48,7 +48,7 @@ export const reviewData = {
     title: "Wüsthof Classic Ikon Santoku Review: 14 Years Professional Testing",
     description: "Wüsthof Classic Ikon 7\" Santoku tested 14 years: 5 in professional kitchens (Purple Café, Feierabend), 9 at home. Thin blade, 10° edge, honest maintenance requirements.",
     ogTitle: "Wüsthof Classic Ikon Santoku: 14-Year Professional Review",
-    ogDescription: "After 14 years—5 in professional kitchens, 9 at home—the Wüsthof Classic Ikon Santoku remains my go-to knife for precision vegetable work.",
+    ogDescription: "After 14 years, 5 in professional kitchens and 9 at home,the Wüsthof Classic Ikon Santoku remains my go-to knife for precision vegetable work.",
     tier: 1,
     testingPeriod: "14 years (2011-present)"
   },
@@ -72,7 +72,7 @@ export const reviewData = {
       linkText: 'What is Tier 1?',
       linkHref: '/review-tiers'
     },
-    verdict: 'After 5 years in professional kitchens—including simultaneous use at Purple Café and Feierabend—and 9 more years at home, the Wüsthof Classic Ikon Santoku remains my go-to knife for precision vegetable work. The thin blade and 10-degree edge angle deliver effortless slicing that heavier chef\'s knives simply cannot match.',
+    verdict: 'After 5 years in professional kitchens, including simultaneous use at Purple Café and Feierabend, and 9 more years at home, the Wüsthof Classic Ikon Santoku remains my go-to knife for precision vegetable work. The thin blade and 10-degree edge angle deliver smooth slicing that heavier chef\'s knives simply cannot match.',
     verdictStrong: 'The knife I reach for when precision matters.',
     ctaText: 'Check Price on Amazon',
   },
@@ -88,7 +88,7 @@ export const reviewData = {
     sections: [
       {
         title: 'Professional Kitchen Testing (5 Years)',
-        content: `I bought this knife while working at Purple Café in Seattle. At the time, I was also working at Feierabend, a German restaurant, where precision vegetable work was constant—mushrooms on everything, and they had to be paper-thin.\n\nThe santoku became my go-to for high-volume vegetable prep. Cases of creminis and portobellos sliced thin. Onions for German potato salad. Pizza toppings at Purple Café for 200+ cover nights. The straight edge and up-and-down motion made quick work of repetitive cutting tasks.`
+        content: `I bought this knife while working at Purple Café in Seattle. At the time, I was also working at Feierabend, a German restaurant, where precision vegetable work was constant. Mushrooms on everything, and they had to be paper-thin.\n\nThe santoku became my go-to for high-volume vegetable prep. Cases of creminis and portobellos sliced thin. Onions for German potato salad. Pizza toppings at Purple Café for 200+ cover nights. The straight edge and up-and-down motion made quick work of repetitive cutting tasks.`
       },
       {
         title: 'Home Kitchen Testing (9 Years)',
@@ -137,7 +137,7 @@ export const reviewData = {
     sections: [
       {
         title: 'The Thin Blade Advantage',
-        content: 'The Classic Ikon Santoku\'s blade is noticeably thinner than traditional German chef\'s knives. Combined with the 10-degree edge angle (compared to 14-15 degrees on most German knives), this geometry creates a blade that glides through vegetables with minimal resistance. After 14 years, I still appreciate how effortlessly it slices tomatoes, creates paper-thin cucumber rounds, and handles delicate herbs without bruising.',
+        content: 'The Classic Ikon Santoku\'s blade is noticeably thinner than traditional German chef\'s knives. Combined with the 10-degree edge angle (compared to 14-15 degrees on most German knives), this geometry creates a blade that glides through vegetables with minimal resistance. After 14 years, I still appreciate how smoothly it slices tomatoes, creates paper-thin cucumber rounds, and handles delicate herbs without bruising.',
       },
       {
         title: 'Granton Edge Food Release',
@@ -156,7 +156,7 @@ export const reviewData = {
 
   // Pros & Cons title
   prosConsTitle: 'Honest Assessment After 14 Years',
-  prosTitle: 'What Works Exceptionally Well',
+  prosTitle: 'What Works Well',
   consTitle: 'Limitations & Considerations',
 
   // Who Should Buy
@@ -165,7 +165,7 @@ export const reviewData = {
     perfectForTitle: 'Perfect For:',
     considerAlternativesTitle: 'Consider Alternatives If:',
     perfectFor: [
-      'Home cooks who do heavy vegetable prep and want effortless slicing',
+      'Home cooks who do heavy vegetable prep and want smooth slicing',
       'Anyone who appreciates thin, sharp blades over thick, durable workhorses',
       'Cooks who already own a chef\'s knife and want a specialized vegetable tool',
       'Those willing to maintain their knives properly for peak performance',
@@ -248,7 +248,7 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      'After 14 years—5 in professional kitchens, 9 at home—<LINK>the Wüsthof Classic Ikon Santoku</LINK> remains one of my most-used knives. I bought it because it was beautiful. I kept using it because that thin blade and 10-degree edge deliver slicing performance that thicker knives cannot match.',
+      'After 14 years, 5 in professional kitchens and 9 at home,<LINK>the Wüsthof Classic Ikon Santoku</LINK> remains one of my most-used knives. I bought it because it was beautiful. I kept using it because that thin blade and 10-degree edge deliver slicing performance that thicker knives cannot match.',
       'This isn\'t a forgiving knife. It requires proper care, regular honing, and respectful storage. If you\'re willing to give it that attention, it rewards you with effortless vegetable prep, superior food release, and a cutting experience that makes prep work genuinely enjoyable.',
       'The santoku doesn\'t replace a chef\'s knife—it complements one. If you do heavy vegetable prep, meal prep batches, or just appreciate how a truly sharp knife transforms cooking, <LINK>the Classic Ikon Santoku</LINK> earns its place in your kitchen.',
     ],

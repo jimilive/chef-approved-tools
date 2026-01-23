@@ -49,7 +49,7 @@ export const reviewData = {
     ],
     affiliateLinks: [],
     expertRating: 5.0,
-    expertOpinion: "After 30 years of nearly daily use—from shredding mountains of cheese to making perfect hashbrowns every weekend—this Cuisinart food processor is one of the best products I've ever owned.",
+    expertOpinion: "After 30 years of nearly daily use, from shredding mountains of cheese to making perfect hashbrowns every weekend. This Cuisinart food processor is one of the best products I've ever owned.",
     dateAdded: "2025-10-11",
     lastUpdated: "2025-10-11"
   },
@@ -73,7 +73,7 @@ export const reviewData = {
       linkText: 'What is Tier 2?',
       linkHref: '/review-tiers'
     },
-    verdict: `After 30 years of nearly daily use—from shredding mountains of cheese to making perfect hashbrowns every weekend—this Cuisinart food processor is one of the best products I've ever owned. The motor that started running when my dad gave this to me in my early 20s is still going strong today. In three decades, I've only cracked one bowl (still works fine) and broke one stem—my own fault for forcing it.`,
+    verdict: `After 30 years of nearly daily use, from shredding mountains of cheese to making perfect hashbrowns every weekend. This Cuisinart food processor is one of the best products I've ever owned. The motor that started running when my dad gave this to me in my early 20s is still going strong today. In three decades, I've only cracked one bowl (still works fine) and broke one stem—my own fault for forcing it.`,
     verdictStrong: `My grandmother's advice proved prophetic: "never force it." Treat this machine with basic respect, and it will outlast everything else in your kitchen. This is genuine buy-it-for-life equipment.`,
     ctaText: 'View Current Model →',
   },
@@ -100,7 +100,7 @@ export const reviewData = {
       },
       {
         title: 'The Durability Reality Check',
-        content: `In three decades, I've only had two issues—and both are still functional:\n\n**Cracked bowl:** After countless uses, the bowl developed a crack. It still works perfectly fine—I just keep using it.\n\n**Broken stem:** I broke a stem once—entirely my fault. My grandmother used to say, "never force it," and she was absolutely right. I forced it, it broke. Lesson learned. But even broken, it still functions.\n\n**Motor condition:** The 600-watt motor runs exactly as smoothly as it did 30 years ago. Zero degradation in power or performance.\n\nThis kind of longevity is remarkable. Modern appliances simply aren't built like this anymore. When something lasts 30 years with minimal issues, you know it's exceptional quality.`
+        content: `In three decades, I've only had two issues, and both are still functional:\n\n**Cracked bowl:** After countless uses, the bowl developed a crack. It still works perfectly fine—I just keep using it.\n\n**Broken stem:** I broke a stem once—entirely my fault. My grandmother used to say, "never force it," and she was absolutely right. I forced it, it broke. Lesson learned. But even broken, it still functions.\n\n**Motor condition:** The 600-watt motor runs exactly as smoothly as it did 30 years ago. Zero degradation in power or performance.\n\nThis kind of longevity is remarkable. Modern appliances simply aren't built like this anymore. When something lasts 30 years with minimal issues, you know it's exceptional quality.`
       }
     ],
     testingEnvironment: [
@@ -111,7 +111,7 @@ export const reviewData = {
     ],
     outstandingPerformance: [
       '600-watt motor still runs like new after 30 years',
-      'Shreds cheese and potatoes effortlessly',
+      'Shreds cheese and potatoes easily',
       'Perfect hashbrowns every weekend',
       'Only 2 issues in 30 years (both still functional)',
       'Simple, solid construction—nothing breaks',
@@ -132,7 +132,7 @@ export const reviewData = {
     sections: [
       {
         title: 'The Gift That Kept Giving',
-        content: `I can't even put a precise timeline on when I got this <LINK>Cuisinart</LINK>—it's been that long. My parents had one when I was a kid, and I remember thinking it was amazing watching it work. When I was in my early 20s, my dad got me one for my birthday. That was over 30 years ago.\n\nHaving used commercial food processors like the Robot Coupe R2 Dice in professional kitchens for over two decades, I can confidently say <LINK>this home model</LINK> delivers comparable results for everyday tasks. The difference? This review reflects real-world home cooking—the kind of daily use that truly tests durability.`
+        content: `I can't even put a precise timeline on when I got this <LINK>Cuisinart</LINK>. It's been that long. My parents had one when I was a kid, and I remember thinking it was amazing watching it work. When I was in my early 20s, my dad got me one for my birthday. That was over 30 years ago.\n\nHaving used commercial food processors like the Robot Coupe R2 Dice in professional kitchens for over two decades, I can confidently say <LINK>this home model</LINK> delivers comparable results for everyday tasks. The difference? This review reflects real-world home cooking—the kind of daily use that truly tests durability.`
       },
       {
         title: 'The Grandmother Wisdom',

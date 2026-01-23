@@ -51,11 +51,11 @@ export const reviewData = {
     sections: [
       {
         title: "Cutting Performance on Large Items",
-        content: "Exceptional. The 10-inch blade excels at breaking down steaks, portioning large roasts, and slicing through oversized vegetables. Longer blade means better slicing motion with fewer strokes."
+        content: "Precise cutting. The 10-inch blade excels at breaking down steaks, portioning large roasts, and slicing through oversized vegetables. Longer blade means better slicing motion with fewer strokes."
       },
       {
         title: "Balance & Control",
-        content: "Outstanding for larger hands. The extra length provides excellent reach without sacrificing control. Best suited for larger projects in larger work spaces."
+        content: "Well-suited for larger hands. The extra length provides excellent reach without sacrificing control. Best suited for larger projects in larger work spaces."
       },
       {
         title: "Edge Retention",
@@ -71,7 +71,7 @@ export const reviewData = {
       },
       {
         title: "Value",
-        content: "Unbeatable for the 10-inch category. Delivers 90% of premium knife performance at 30% of the cost. Professional quality without premium pricing."
+        content: "Best value in the 10-inch category. Delivers 90% of premium knife performance at 30% of the cost. Professional quality without premium pricing."
       }
     ],
     testingEnvironment: [
@@ -118,7 +118,7 @@ export const reviewData = {
       },
       {
         title: "Professional Kitchen Performance",
-        content: "After 45 years of cooking and countless knives tested, the Victorinox 10-inch chef's knife is my choice for high-volume protein breakdown. From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I've used this knife to break down 50+ steaks per week, portion large pork shoulders and beef roasts, slice through whole butternut squash and large cabbages, and prep oversized vegetables for bulk meal prep. The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day."
+        content: "After 24 years of cooking and countless knives tested, the Victorinox 10-inch chef's knife is my choice for high-volume protein breakdown. From managing kitchen operations at Mellow Mushroom to working the line at fine dining restaurants, I've used this knife to break down 50+ steaks per week, portion large pork shoulders and beef roasts, slice through whole butternut squash and large cabbages, and prep oversized vegetables for bulk meal prep. The knife has never let me down. No chipping, no handle issues, no rust. Just consistent performance day after day."
       },
       {
         title: "When to Choose 10-Inch Over 8-Inch",

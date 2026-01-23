@@ -180,7 +180,7 @@ export default async function ProductReview() {
             </>
           ) : index === 3 ? (
             <>
-              After 45 years of cooking and countless knives tested, the{' '}
+              After 24 years of cooking and countless knives tested, the{' '}
               <a
                 href={affiliateUrl}
                 className="text-orange-700 hover:text-orange-800 font-medium"

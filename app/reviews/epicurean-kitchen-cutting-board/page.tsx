@@ -296,7 +296,7 @@ export default async function EpicureanKitchenCuttingBoardReview() {
         {/* SECTION 4: PROS & CONS */}
         <ProsConsGrid
           title="Honest Assessment After 10 Years"
-          prosTitle="What Works Exceptionally Well"
+          prosTitle={reviewData.prosTitle}
           consTitle="Limitations to Consider"
           pros={productData.pros}
           cons={productData.cons}

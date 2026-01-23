@@ -409,7 +409,7 @@ export default function StockVsBrothPage() {
             <strong>Demi-glace</strong> is stock reduced by half (or more), often combined with espagnole sauce (a classic French brown sauce). The result is intensely flavored, syrupy, and glossy. One tablespoon of demi-glace can transform a simple pan sauce into something restaurant-quality.
           </p>
           <p>
-            Making demi-glace at home requires time (reduce 2 quarts of stock down to 1 cup), but it freezes well in ice cube trays. Pull out a cube whenever you need to elevate a sauce.
+            Making demi-glace at home requires time (reduce 2 quarts of stock down to 1 cup), but it freezes well in ice cube trays. Pull out a cube whenever you need to transform a sauce.
           </p>
 
           <h2>How to Make Professional-Quality Stock at Home</h2>

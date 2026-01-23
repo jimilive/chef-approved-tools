@@ -67,7 +67,7 @@ export const reviewData = {
       },
       {
         title: "Light Sand Interior Advantage",
-        content: "The light-colored interior lets you monitor browning and deglazing—a game-changer for precision cooking. <LINK>This Dutch oven</LINK> shows exactly when fond is developing, when onions are caramelized, and when sauces need reduction. After 12 years: zero staining despite regular use with tomato sauces and red wines."
+        content: "The light-colored interior lets you monitor browning and deglazing—invaluable for precision cooking. <LINK>This Dutch oven</LINK> shows exactly when fond is developing, when onions are caramelized, and when sauces need reduction. After 12 years: zero staining despite regular use with tomato sauces and red wines."
       },
       {
         title: "Weight-Per-Quart Leadership",
@@ -168,7 +168,7 @@ export const reviewData = {
     items: [
       {
         question: "Is Le Creuset worth 4-5 times the cost of Lodge?",
-        answer: "For frequent cooks (3+ times weekly) planning 10 year ownership, yes. The 3 lb weight advantage matters tremendously over time, especially for older cooks or frequent oven transfers. The enamel quality shows no staining after 10 years vs Lodge's tendency to stain. However, if you cook infrequently or budget is primary concern, Lodge performs 90% as well at 20% cost—absolutely acceptable for occasional use."
+        answer: "For frequent cooks (3+ times weekly) planning 10 year ownership, yes. The 3 lb weight advantage matters tremendously over time, especially for older cooks or frequent oven transfers. The enamel quality shows no staining after 10 years vs Lodge's tendency to stain. However, if you cook infrequently or budget is primary concern, Lodge performs 90% as well at 20% cost, which is absolutely acceptable for occasional use."
       },
       {
         question: "What is thermal shock and how do I avoid it?",
@@ -180,7 +180,7 @@ export const reviewData = {
       },
       {
         question: "Can I use metal utensils in Le Creuset?",
-        answer: "Technically yes—Le Creuset states \"metal utensil safe.\" However, silicone or wooden utensils recommended to preserve enamel appearance long-term. Metal can create minor surface scratches visible on light-colored interior (though they don't affect performance). After 12 years using primarily wood/silicone with occasional metal contact, interior remains excellent condition."
+        answer: "Technically yes. Le Creuset states \"metal utensil safe.\" However, silicone or wooden utensils recommended to preserve enamel appearance long-term. Metal can create minor surface scratches visible on light-colored interior (though they don't affect performance). After 12 years using primarily wood/silicone with occasional metal contact, interior remains excellent condition."
       },
       {
         question: "How does the 7.25-qt size compare to 5.5-qt for a family of 4?",
@@ -197,7 +197,7 @@ export const reviewData = {
   faqData: [
     {
       question: "Is Le Creuset worth 4-5 times the cost of Lodge?",
-      answer: "For frequent cooks (3+ times weekly) planning 10 year ownership, yes. The 3 lb weight advantage matters tremendously over time, especially for older cooks or frequent oven transfers. The enamel quality shows no staining after 10 years vs Lodge's tendency to stain. However, if you cook infrequently or budget is primary concern, Lodge performs 90% as well at 20% cost—absolutely acceptable for occasional use."
+      answer: "For frequent cooks (3+ times weekly) planning 10 year ownership, yes. The 3 lb weight advantage matters tremendously over time, especially for older cooks or frequent oven transfers. The enamel quality shows no staining after 10 years vs Lodge's tendency to stain. However, if you cook infrequently or budget is primary concern, Lodge performs 90% as well at 20% cost, which is absolutely acceptable for occasional use."
     },
     {
       question: "What is thermal shock and how do I avoid it?",
@@ -209,7 +209,7 @@ export const reviewData = {
     },
     {
       question: "Can I use metal utensils in Le Creuset?",
-      answer: "Technically yes—Le Creuset states \"metal utensil safe.\" However, silicone or wooden utensils recommended to preserve enamel appearance long-term. Metal can create minor surface scratches visible on light-colored interior (though they don't affect performance). After 12 years using primarily wood/silicone with occasional metal contact, interior remains excellent condition."
+      answer: "Technically yes. Le Creuset states \"metal utensil safe.\" However, silicone or wooden utensils recommended to preserve enamel appearance long-term. Metal can create minor surface scratches visible on light-colored interior (though they don't affect performance). After 12 years using primarily wood/silicone with occasional metal contact, interior remains excellent condition."
     },
     {
       question: "How does the 7.25-qt size compare to 5.5-qt for a family of 4?",

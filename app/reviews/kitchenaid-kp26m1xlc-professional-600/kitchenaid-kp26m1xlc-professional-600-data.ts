@@ -97,7 +97,7 @@ export const reviewData = {
       text: "Tier 2: Extended Professional Testing",
       icon: "🏆"
     },
-    verdict: "After 18 years of home use—from weekly pizza dough to holiday cookies—this KitchenAid Professional 600 remains as reliable as the day my mother gifted it to me after culinary school. The 575-watt motor handles thick pizza dough effortlessly, the 6-quart bowl accommodates large batches, and the bowl-lift design provides superior stability compared to tilt-head models.",
+    verdict: "After 18 years of home use, from weekly pizza dough to holiday cookies, this KitchenAid Professional 600 remains as reliable as the day my mother gifted it to me after culinary school. The 575-watt motor handles thick pizza dough effortlessly, the 6-quart bowl accommodates large batches, and the bowl-lift design provides superior stability compared to tilt-head models.",
     verdictStrong: "buy-it-for-life quality",
     ctaText: "Check Price on KitchenAid.com →"
   },
@@ -131,7 +131,7 @@ export const reviewData = {
       },
       {
         title: "Attachment Versatility",
-        content: "Compatible with 15+ attachments: pasta makers, meat grinders, ice cream makers. One machine, endless possibilities. This transforms <LINK>the Professional 600</LINK> from a stand mixer into a complete kitchen system—one investment that grows with your cooking ambitions."
+        content: "Compatible with 15+ attachments: pasta makers, meat grinders, ice cream makers. One machine handles pasta, meat grinding, ice cream, and more. This transforms <LINK>the Professional 600</LINK> from a stand mixer into a complete kitchen system—one investment that grows with your cooking ambitions."
       },
       {
         title: "Built to Last",
@@ -190,7 +190,7 @@ export const reviewData = {
       },
       {
         title: "18-Year Durability Assessment",
-        content: "Zero motor repairs or replacements needed. Planetary mixing action remains smooth and consistent. Bowl-lift mechanism shows minimal wear despite thousands of uses. The all-metal construction justifies the premium price through decades of reliable service. This exemplifies buy-it-for-life quality that modern appliances rarely deliver."
+        content: "Zero motor repairs or replacements needed. Planetary mixing action remains smooth and consistent. Bowl-lift mechanism shows minimal wear despite thousands of uses. The all-metal construction justifies the premium price through decades of reliable service. This is buy-it-for-life quality that modern appliances rarely deliver."
       },
       {
         title: "KitchenAid Professional 600 Series Specifications",
@@ -248,7 +248,7 @@ export const reviewData = {
     },
     {
       question: "Can this mixer handle pizza dough?",
-      answer: "Absolutely. After 18 years of weekly pizza dough—including high-hydration Neapolitan-style and thick Sicilian doughs—this mixer handles it effortlessly. The 575-watt motor and bowl-lift stability make it ideal for dough work that would strain lesser mixers. This is the ultimate pizza dough test, and the Pro 600 passes with flying colors."
+      answer: "Absolutely. After 18 years of weekly pizza dough—including high-hydration Neapolitan-style and thick Sicilian doughs—this mixer handles it effortlessly. The 575-watt motor and bowl-lift stability make it ideal for dough work that would strain lesser mixers. This is the ultimate pizza dough test, and the Pro 600 passes easily."
     },
     {
       question: "How long will this mixer last?",
@@ -288,8 +288,8 @@ export const reviewData = {
   bottomLine: {
     title: "The Bottom Line: 18 Years Later",
     paragraphs: [
-      "After 18 years of weekly use—from pizza dough to holiday cookies—this KitchenAid Professional 600 remains the single best kitchen investment I've ever made. The gift from my mother after culinary school has paid for itself thousands of times over through reliable performance that lesser mixers simply cannot match.",
-      "The 575-watt motor handles demanding tasks effortlessly, the 6-quart capacity eliminates batch splitting frustration, and the bowl-lift design provides stability that tilt-head models can't match. For serious home bakers who value buy-it-for-life quality over initial cost, the Professional 600 justifies every dollar through decades of dependable service. This is kitchen equipment that becomes a lifelong cooking companion."
+      "After 18 years of weekly use, from pizza dough to holiday cookies, this KitchenAid Professional 600 remains one of my best kitchen investments. The gift from my mother after culinary school has paid for itself thousands of times over through reliable performance that lesser mixers simply cannot match.",
+      "The 575-watt motor handles demanding tasks without strain, the 6-quart capacity eliminates batch splitting frustration, and the bowl-lift design provides stability that tilt-head models can't match. For serious home bakers who value buy-it-for-life quality over initial cost, the Professional 600 justifies every dollar through decades of dependable service. This is kitchen equipment that becomes a reliable kitchen workhorse."
     ],
     ctaText: "Check Price on KitchenAid.com →"
   },
@@ -361,7 +361,7 @@ export const reviewData = {
     affiliateLinks: [],
     inStock: true,
     expertRating: 5.0,
-    expertOpinion: "After 18 years of home use—from weekly pizza dough to holiday cookies—this KitchenAid Professional 600 remains as reliable as the day my mother gifted it to me after culinary school.",
+    expertOpinion: "After 18 years of home use, from weekly pizza dough to holiday cookies, this KitchenAid Professional 600 remains as reliable as the day my mother gifted it to me after culinary school.",
     dateAdded: "2024-10-20",
     lastUpdated: "2024-11-08"
   }
