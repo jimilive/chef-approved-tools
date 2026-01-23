@@ -231,6 +231,12 @@ export const EDITORIAL_METADATA: Record<string, EditorialMetadata> = {
     testingPeriod: '90 days',
     hook: 'Adequate budget blending with concerning quality control issues',
     revenueScore: 32
+  },
+  'lamson-fish-spatula': {
+    tier: 1,
+    testingPeriod: '17 years (2009-present)',
+    hook: 'My personal fish spatula since 2009. Used professionally at Purple Café for fish service.',
+    revenueScore: 70
   }
 }
 

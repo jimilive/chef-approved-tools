@@ -27,8 +27,8 @@ export const reviewData = {
 
   // TRACKING DATA
   tracking: {
-    testingPeriod: '24 years in professional kitchens',
-    hook: 'The fish spatula I\'ve relied on through thousands of delicate flips',
+    testingPeriod: '17 years (2009-present)',
+    hook: 'My personal fish spatula since 2009. Used professionally at Purple Café for fish service.',
   },
 
   // AFFILIATE LINKS (Right-handed + Left-handed variants)
@@ -89,7 +89,7 @@ export const reviewData = {
       },
       {
         title: 'Professional Kitchen Performance',
-        content: 'I\'ve used the Lamson fish spatula extensively at Purple Café (2007-2012) for fish service and at Feierabend (2006-2010) for sautéed fish dishes. The high-carbon stainless steel blade has the ideal flex—enough to conform to the curve of a pan, but enough rigidity to support a full salmon fillet. The slotted design drains oil perfectly, preventing soggy fish skin.'
+        content: 'I bought this exact Lamson fish spatula in 2009 and used it professionally at Purple Café (2009-2012) for fish service. The high-carbon stainless steel blade has the ideal flex, enough to conform to the curve of a pan, but enough rigidity to support a full salmon fillet. The slotted design drains oil perfectly, preventing soggy fish skin. After 17 years of ownership, it still performs like new.'
       },
       {
         title: 'Beyond Fish: Everyday Versatility',
@@ -101,10 +101,10 @@ export const reviewData = {
       }
     ],
     testingEnvironment: [
-      { label: 'Location', value: 'Purple Café, Feierabend' },
-      { label: 'Primary Use', value: 'Fish service, sautéed dishes' },
-      { label: 'Duration', value: '24 years professional experience' },
-      { label: 'Volume', value: 'Daily restaurant operations' }
+      { label: 'Location', value: 'Purple Café (2009-2012)' },
+      { label: 'Primary Use', value: 'Fish service' },
+      { label: 'Ownership', value: '17 years (2009-present)' },
+      { label: 'Volume', value: 'Daily restaurant operations + home use' }
     ],
     outstandingPerformance: [
       'Perfect flex for delicate fish fillets',
@@ -277,7 +277,7 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      'After 24 years of using fish spatulas in professional kitchens—from fish service at Purple Café to sautéed dishes at Feierabend—the Lamson is the fish spatula I recommend. The high-carbon stainless steel blade has the perfect flex, the slotted design drains oil beautifully, and the American-made quality means this tool will last decades.',
+      'After owning this exact Lamson fish spatula since 2009, including professional use at Purple Café for fish service, it\'s the fish spatula I recommend. The high-carbon stainless steel blade has the perfect flex, the slotted design drains oil beautifully, and the American-made quality means this tool will last decades.',
       'The Lamson also stands alone in offering a left-handed version—a detail that matters more than most people realize. If you\'ve been using a regular spatula for delicate foods and wondering why fish sticks or eggs tear, a proper fish spatula like the Lamson will change how you cook. This is the best fish spatula for home cooks who want professional results.'
     ],
     ctaText: 'Check Price on Amazon →'
@@ -321,7 +321,7 @@ export const reviewData = {
     slug: 'lamson-fish-spatula',
     brand: 'Lamson',
     model: 'Fish Spatula',
-    category: 'Kitchen Tools',
+    category: 'Moving & Stirring Tools',
     dealStatus: 'normal' as const,
     pros: [
       'Thin, flexible blade slides under delicate foods',
