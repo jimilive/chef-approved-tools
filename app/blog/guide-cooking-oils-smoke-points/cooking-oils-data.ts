@@ -40,7 +40,7 @@ export const educationalData = {
         ]
       },
       intro: [
-        "After 24 years in professional kitchens, I've learned: the oil matters as much as the technique. Use the right oil and cooking becomes effortless. Use the wrong one and you'll fight smoke, burnt flavors, and poor results.",
+        "After 24 years in professional kitchens, I've learned: the oil matters as much as the technique. Use the right oil and cooking becomes easier. Use the wrong one and you'll fight smoke, burnt flavors, and poor results.",
         "Here's everything you need to know about cooking oils."
       ]
     },
@@ -212,7 +212,7 @@ export const educationalData = {
     {
       id: "takeaway",
       title: "The Takeaway: Match the Oil to the Job",
-      intro: "Cooking oils aren't interchangeable. Each has a purpose. Use the right one and cooking becomes effortless.",
+      intro: "Cooking oils aren't interchangeable. Each has a purpose. Use the right one and cooking becomes easier.",
       quickReference: [
         { use: "High-Heat Searing/Frying", oils: "Canola, avocado, peanut, grapeseed (neutral, high smoke point)" },
         { use: "Medium-Heat Sautéing", oils: "Olive oil, butter, canola (adds flavor, moderate heat)" },

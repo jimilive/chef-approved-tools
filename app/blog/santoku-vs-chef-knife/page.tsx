@@ -108,7 +108,7 @@ export default function SantokuVsChefKnife() {
           </div>
           <div className="mt-8 bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-lg">
             <p className="text-slate-700 leading-relaxed">
-              <strong>Professional Perspective:</strong> The santoku and chef&apos;s knife aren&apos;t competitors—they&apos;re complementary tools. After 24 years in professional kitchens using both, here&apos;s my recommendation: Start with an 8-inch chef&apos;s knife. It handles everything competently. Once you&apos;re cooking regularly and find yourself doing heavy vegetable prep, add a santoku for the tasks where precision matters.
+              <strong>Professional Perspective:</strong> The santoku and chef&apos;s knife aren&apos;t competitors. They&apos;re complementary tools. After 24 years in professional kitchens using both, here&apos;s my recommendation: Start with an 8-inch chef&apos;s knife. It handles everything competently. Once you&apos;re cooking regularly and find yourself doing heavy vegetable prep, add a santoku for the tasks where precision matters.
             </p>
           </div>
         </section>

@@ -69,7 +69,7 @@ export default function DutchOvenSizeGuidePage() {
           </p>
 
           <p>
-            After 24 years in professional kitchens (and hundreds of stews, braises, and breads later), I&apos;ve learned one thing: you don&apos;t need every size — you just need the right one.
+            After 24 years in professional kitchens (and hundreds of stews, braises, and breads later), I&apos;ve learned one thing: you don&apos;t need every size. You just need the right one.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
@@ -117,7 +117,7 @@ export default function DutchOvenSizeGuidePage() {
           </div>
 
           <p>
-            Most home cooks find the <strong>5.5–6.75 quart range</strong> ideal — big enough to handle a full meal, but not so heavy you dread washing it.
+            Most home cooks find the <strong>5.5–6.75 quart range</strong> ideal, big enough to handle a full meal, but not so heavy you dread washing it.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
@@ -130,7 +130,7 @@ export default function DutchOvenSizeGuidePage() {
           </h3>
 
           <p>
-            Go with a <strong>5.5-quart</strong>. It&apos;s the workhorse — fits on any burner, makes one-pot meals, and handles anything from pasta sauce to a 3-pound roast.
+            Go with a <strong>5.5-quart</strong>. It&apos;s the workhorse. Fits on any burner, makes one-pot meals, and handles anything from pasta sauce to a 3-pound roast.
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">
@@ -152,11 +152,11 @@ export default function DutchOvenSizeGuidePage() {
               
                 Lodge 5-Quart Enameled Dutch Oven
               
-            </CTAVisibilityTracker> — affordable, reliable, and pre-seasoned.
+            </CTAVisibilityTracker>, affordable, reliable, and pre-seasoned.
           </p> */}
 
           <p>
-            ➡️ Try the Lodge 5-Quart Enameled Dutch Oven — affordable, reliable, and pre-seasoned.
+            ➡️ Try the Lodge 5-Quart Enameled Dutch Oven, affordable, reliable, and pre-seasoned.
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">
@@ -287,7 +287,7 @@ export default function DutchOvenSizeGuidePage() {
 
           <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
             <ul className="space-y-2 mb-0">
-              <li><strong>Round Dutch ovens</strong> distribute heat evenly — perfect for stews and sauces.</li>
+              <li><strong>Round Dutch ovens</strong> distribute heat evenly, perfect for stews and sauces.</li>
               <li><strong>Oval models</strong> fit long cuts (like brisket or pork loin) but can crowd a standard burner.</li>
             </ul>
           </div>
@@ -314,7 +314,7 @@ export default function DutchOvenSizeGuidePage() {
           </p>
 
           <p>
-            The right fit gives you ideal surface area for Maillard reaction — that golden crust that turns flavor from good to great.
+            The right fit gives you ideal surface area for Maillard reaction, that golden crust that turns flavor from good to great.
           </p>
 
           <p>
@@ -349,7 +349,7 @@ export default function DutchOvenSizeGuidePage() {
           </div>
 
           <p>
-            If you&apos;ve got kids helping in the kitchen, go smaller — less risk, easier to handle safely.
+            If you&apos;ve got kids helping in the kitchen, go smaller. Less risk, easier to handle safely.
           </p>
 
           <p>
@@ -370,7 +370,7 @@ export default function DutchOvenSizeGuidePage() {
               <span className="text-2xl">🔥</span> Chef&apos;s Tip:
             </p>
             <p className="mb-0">
-              Never grab an enameled Dutch oven lid bare-handed — even 10 minutes after removing it from the oven. That enamel holds heat longer than you think. Trust me, every chef learns that lesson exactly once.
+              Never grab an enameled Dutch oven lid bare-handed, even 10 minutes after removing it from the oven. That enamel holds heat longer than you think. Trust me, every chef learns that lesson exactly once.
             </p>
           </div>
 
@@ -383,7 +383,7 @@ export default function DutchOvenSizeGuidePage() {
           </p>
 
           <p>
-            For most home cooks, a single 5.5–6.75 quart Dutch oven covers 90% of tasks. It&apos;s the Goldilocks zone—not too small, not too heavy, just right.
+            For most home cooks, a single 5.5–6.75 quart Dutch oven covers 90% of tasks. It&apos;s the Goldilocks zone: not too small, not too heavy, just right.
           </p>
 
           <p>

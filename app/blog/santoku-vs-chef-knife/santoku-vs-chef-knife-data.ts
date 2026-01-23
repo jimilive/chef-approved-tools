@@ -147,21 +147,21 @@ export const comparisonData = {
         {
           title: "Origins and Design",
           content: [
-            "The santoku is a Japanese knife whose name translates to 'three virtues'—referring to its ability to handle slicing, dicing, and mincing. Some interpret this as the three foods it handles well: meat, fish, and vegetables.",
+            "The santoku is a Japanese knife whose name translates to 'three virtues', referring to its ability to handle slicing, dicing, and mincing. Some interpret this as the three foods it handles well: meat, fish, and vegetables.",
             "The blade profile is distinctly different from a chef's knife: flatter with minimal curve, featuring a sheepsfoot tip (rounded rather than pointed). Santoku knives typically measure 5-7 inches, making them more compact and maneuverable."
           ]
         },
         {
           title: "Steel and Construction",
           content: [
-            "Japanese santoku knives use harder steel (58-62 HRC) with more acute edge angles of 10-15 degrees per side. This creates a razor-sharp edge that excels at precision cuts and thin slicing. Many santoku knives feature a granton edge—hollowed dimples along the blade that create air pockets, helping food release cleanly.",
+            "Japanese santoku knives use harder steel (58-62 HRC) with more acute edge angles of 10-15 degrees per side. This creates a razor-sharp edge that excels at precision cuts and thin slicing. Many santoku knives feature a granton edge (hollowed dimples along the blade) that create air pockets, helping food release cleanly.",
             "The harder steel holds its edge longer but requires more careful maintenance. These blades can chip if used improperly (no twisting, no cutting through bones) and need sharpening with finer grit whetstones."
           ]
         },
         {
           title: "What It Does Best",
           content: [
-            "After 14 years with my santoku, I reach for it when doing heavy vegetable prep—dicing onions for a week of meals, slicing cucumbers paper-thin for salads, or prepping vegetables for stir-fry. The lighter weight means less wrist fatigue during extended prep sessions, and the flatter blade is faster for the up-and-down chopping motion."
+            "After 14 years with my santoku, I reach for it when doing heavy vegetable prep: dicing onions for a week of meals, slicing cucumbers paper-thin for salads, or prepping vegetables for stir-fry. The lighter weight means less wrist fatigue during extended prep sessions, and the flatter blade is faster for the up-and-down chopping motion."
           ]
         }
       ]
@@ -174,7 +174,7 @@ export const comparisonData = {
           title: "Chef's Knife Technique",
           content: [
             "The curved blade of a chef's knife is designed for rocking cuts. Keep the tip on the cutting board as a pivot point, then raise and lower the handle in an arc. This motion is excellent for mincing garlic and herbs, where speed and fine texture matter.",
-            "If you learned to cook watching Western chefs—Julia Child, Jacques Pepin, Gordon Ramsay—this rocking motion feels natural. It's been the standard in professional Western kitchens for generations."
+            "If you learned to cook watching Western chefs (Julia Child, Jacques Pepin, Gordon Ramsay), this rocking motion feels natural. It's been the standard in professional Western kitchens for generations."
           ]
         },
         {
@@ -187,7 +187,7 @@ export const comparisonData = {
         {
           title: "The Real Difference",
           content: [
-            "Neither technique is superior—they're optimized for different tasks. Rocking cuts excel at mincing to a fine paste. Push cuts excel at uniform slices with clean edges. Understanding when to use each makes you a more efficient cook."
+            "Neither technique is superior. They're optimized for different tasks. Rocking cuts excel at mincing to a fine paste. Push cuts excel at uniform slices with clean edges. Understanding when to use each makes you a more efficient cook."
           ]
         }
       ]
@@ -199,19 +199,19 @@ export const comparisonData = {
         {
           title: "Reach for a Chef's Knife When:",
           content: [
-            "Breaking down proteins—the curved blade and pointed tip navigate around bones and joints. Mincing garlic and herbs—the rocking motion is the fastest way to achieve a fine mince. Crushing garlic with the flat of the blade. Any task requiring a pointed tip for detail work. When you need one knife to handle everything."
+            "Breaking down proteins: the curved blade and pointed tip navigate around bones and joints. Mincing garlic and herbs: the rocking motion is the fastest way to achieve a fine mince. Crushing garlic with the flat of the blade. Any task requiring a pointed tip for detail work. When you need one knife to handle everything."
           ]
         },
         {
           title: "Reach for a Santoku When:",
           content: [
-            "Doing high-volume vegetable prep—onions, carrots, peppers, celery. Cutting paper-thin slices—cucumbers, radishes, mushrooms. Dicing vegetables for stir-fry, salads, or soup. Meal prepping vegetables for the week. When you want uniform cuts with less effort and fatigue."
+            "Doing high-volume vegetable prep: onions, carrots, peppers, celery. Cutting paper-thin slices: cucumbers, radishes, mushrooms. Dicing vegetables for stir-fry, salads, or soup. Meal prepping vegetables for the week. When you want uniform cuts with less effort and fatigue."
           ]
         },
         {
           title: "Professional Kitchen Reality",
           content: [
-            "In 24 years of professional cooking, I've seen cooks excel with either style. The knife doesn't make the cook—but matching the tool to the task makes cooking more efficient. Most professional kitchens have both available because different tasks call for different tools."
+            "In 24 years of professional cooking, I've seen cooks excel with either style. The knife doesn't make the cook, but matching the tool to the task makes cooking more efficient. Most professional kitchens have both available because different tasks call for different tools."
           ]
         }
       ]
@@ -223,40 +223,40 @@ export const comparisonData = {
         {
           title: "Dicing Onions",
           content: [
-            "Chef's knife: Excellent—the curved blade rocks through layers efficiently, making quick work of a mirepoix.",
-            "Santoku: Good—works fine, but the rocking motion feels less natural with the straighter edge.",
+            "Chef's knife: Excellent. The curved blade rocks through layers efficiently, making quick work of a mirepoix.",
+            "Santoku: Good. Works fine, but the rocking motion feels less natural with the straighter edge.",
             "Winner: Chef's knife, slight edge for the rocking technique."
           ]
         },
         {
           title: "Slicing Mushrooms Paper-Thin",
           content: [
-            "Chef's knife: Good—requires more control to achieve consistent thin slices.",
-            "Santoku: Excellent—the thinner blade glides through with less resistance, uniform slices every time.",
+            "Chef's knife: Good. Requires more control to achieve consistent thin slices.",
+            "Santoku: Excellent. The thinner blade glides through with less resistance, uniform slices every time.",
             "Winner: Santoku. At Feierabend, I sliced thousands of mushrooms for German cuisine. Paper-thin was the standard, and the santoku made it easy."
           ]
         },
         {
           title: "Mincing Garlic and Herbs",
           content: [
-            "Chef's knife: Excellent—curved blade rocks naturally, building up a fine mince quickly.",
-            "Santoku: Good—the straight edge requires a different up-and-down technique that's slower for mincing.",
+            "Chef's knife: Excellent. Curved blade rocks naturally, building up a fine mince quickly.",
+            "Santoku: Good. The straight edge requires a different up-and-down technique that's slower for mincing.",
             "Winner: Chef's knife. The rocking motion is more efficient for achieving a paste-like consistency."
           ]
         },
         {
           title: "Slicing Potatoes for Gratin",
           content: [
-            "Chef's knife: Good—potatoes tend to stick to the blade somewhat.",
-            "Santoku: Excellent—the granton edge (hollowed dimples along the blade) creates air pockets that release slices cleanly.",
+            "Chef's knife: Good. Potatoes tend to stick to the blade somewhat.",
+            "Santoku: Excellent. The granton edge (hollowed dimples along the blade) creates air pockets that release slices cleanly.",
             "Winner: Santoku. The granton edge makes a real difference with sticky vegetables like potatoes, onions, and even cheese."
           ]
         },
         {
           title: "Breaking Down Chicken",
           content: [
-            "Chef's knife: Excellent—the flexible blade navigates around joints well, and the pointed tip handles precision work.",
-            "Santoku: Adequate—the rigid blade and rounded tip are less ideal for working around bones.",
+            "Chef's knife: Excellent. The flexible blade navigates around joints well, and the pointed tip handles precision work.",
+            "Santoku: Adequate. The rigid blade and rounded tip are less ideal for working around bones.",
             "Winner: Chef's knife. Flexibility and a pointed tip matter for protein work."
           ]
         },
@@ -265,7 +265,7 @@ export const comparisonData = {
           content: [
             "Chef's knife wins: Rocking cuts, protein work, tip precision, general versatility.",
             "Santoku wins: Thin slicing, uniform cuts, sticky vegetables, high-volume prep.",
-            "The conclusion: They're genuinely different tools. Neither is 'better'—they excel at different tasks."
+            "The conclusion: They're genuinely different tools. Neither is 'better'. They excel at different tasks."
           ]
         }
       ]
@@ -277,7 +277,7 @@ export const comparisonData = {
         {
           title: "Professional Kitchen Testing",
           content: [
-            "I bought my Wüsthof Classic Ikon Santoku because it was beautiful—the contoured handle and granton edge looked like they belonged in a professional kitchen. What kept me using it for 14 years was performance.",
+            "I bought my Wüsthof Classic Ikon Santoku because it was beautiful. The contoured handle and granton edge looked like they belonged in a professional kitchen. What kept me using it for 14 years was performance.",
             "At Feierabend, I sliced thousands of mushrooms for German cuisine. Paper-thin was the standard, and the santoku made it easy. The lighter weight meant less fatigue during high-volume prep.",
             "At Purple Café, it handled pizza toppings and vegetable prep when we were doing 200+ cover nights. Speed mattered, and the up-and-down chopping motion was noticeably faster than rocking with a chef's knife for repetitive cuts."
           ]
@@ -285,7 +285,7 @@ export const comparisonData = {
         {
           title: "Where the Granton Edge Shines",
           content: [
-            "The granton edge—those hollowed dimples along the blade—creates air pockets between the steel and food. This prevents sticky ingredients from clinging to the blade.",
+            "The granton edge (those hollowed dimples along the blade) creates air pockets between the steel and food. This prevents sticky ingredients from clinging to the blade.",
             "For potatoes, onions, and cheese, this makes a real difference. Slices release cleanly instead of stacking up on the blade and slowing you down."
           ]
         }
@@ -304,7 +304,7 @@ export const comparisonData = {
         {
           title: "The Case for Two Knives",
           content: [
-            "Different tools serve different jobs more efficiently. If you meal prep vegetables weekly, a santoku saves real time. Professional kitchens typically use both. The total cost for budget versions of both styles is under $75—less than one premium knife."
+            "Different tools serve different jobs more efficiently. If you meal prep vegetables weekly, a santoku saves real time. Professional kitchens typically use both. The total cost for budget versions of both styles is under $75, less than one premium knife."
           ]
         },
         {
@@ -332,7 +332,7 @@ export const comparisonData = {
     santoku: {
       title: "Best Santoku: Wusthof Classic Ikon 7\"",
       slug: "wusthof-classic-ikon-santoku",
-      description: "After 14 years with mine—5 years professionally, 9 years at home—this santoku delivers the precision slicing that makes vegetable prep faster.",
+      description: "After 14 years with mine (5 years professionally, 9 years at home), this santoku delivers the precision slicing that makes vegetable prep faster.",
       features: [
         "Granton edge prevents food from sticking",
         "58 HRC steel holds a sharper edge longer",
@@ -353,7 +353,7 @@ export const comparisonData = {
     questions: [
       {
         question: "Is a santoku knife better than a chef knife?",
-        answer: "Neither is universally better—they're designed for different cutting techniques. A chef knife excels at rocking cuts and mincing. A santoku knife is faster for straight up-and-down vegetable prep. Most professional kitchens use both."
+        answer: "Neither is universally better. They're designed for different cutting techniques. A chef knife excels at rocking cuts and mincing. A santoku knife is faster for straight up-and-down vegetable prep. Most professional kitchens use both."
       },
       {
         question: "Should I get a santoku knife or chef's knife first?",

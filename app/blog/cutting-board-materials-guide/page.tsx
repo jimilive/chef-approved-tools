@@ -150,7 +150,7 @@ export default function CuttingBoardMaterialsPage() {
           <h2 id={materialsSection.id}>{materialsSection.title}</h2>
           {materialsSection.materials.map((material, index) => (
             <div key={index}>
-              <h3>{index + 1}. {material.name} — {material.subtitle}</h3>
+              <h3>{index + 1}. {material.name}: {material.subtitle}</h3>
               <p><strong>Pros:</strong> {material.pros}</p>
               <p><strong>Cons:</strong> {material.cons}</p>
               <p>{material.description}</p>
@@ -176,7 +176,7 @@ export default function CuttingBoardMaterialsPage() {
           <p><strong>My Professional Recommendation:</strong></p>
           <ul>
             {chooseSection.recommendation.map((item, index) => (
-              <li key={index}><strong>{item.board}</strong> — {item.use}</li>
+              <li key={index}><strong>{item.board}</strong>: {item.use}</li>
             ))}
           </ul>
           <p>{chooseSection.closing}</p>
@@ -251,7 +251,7 @@ export default function CuttingBoardMaterialsPage() {
                   ) : (
                     rec.product
                   )}
-                  {' '}— {rec.description}
+                  {' '}- {rec.description}
                 </li>
               ))}
             </ul>

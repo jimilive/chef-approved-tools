@@ -17,7 +17,7 @@ export const comparisonData = {
     title: "Gas vs Induction Cooktops: Which Is Better for Your Kitchen?",
     introduction: [
       "The gas versus induction debate divides professional chefs and home cooks like no other kitchen equipment discussion. Gas advocates cite instant visual feedback, infinite flame control, and traditional cooking techniques. Induction supporters counter with precise temperature control, energy efficiency, and superior safety.",
-      "Gas cooking feels intuitive—you see the flame, you adjust the flame, you control the heat directly. But induction cooking is objectively faster, more efficient, and more precise once you understand how it works. The learning curve is real, but the performance advantages are measurable.",
+      "Gas cooking feels intuitive. You see the flame, you adjust the flame, you control the heat directly. But induction cooking is objectively faster, more efficient, and more precise once you understand how it works. The learning curve is real, but the performance advantages are measurable.",
       "This comparison breaks down heat output and control, speed and efficiency, safety considerations, cookware compatibility, and honest assessments of what matters for real cooking. You'll understand exactly which cooktop type matches your cooking style, kitchen setup, and priorities."
     ]
   },
@@ -136,7 +136,7 @@ export const comparisonData = {
           option: "induction",
           title: "Induction Cooktops: Electromagnetic Energy",
           content: [
-            "Induction cooktops use electromagnetic fields to directly heat ferrous (iron-based) cookware. The cooktop surface itself stays relatively cool—the pan heats up, not the cooking surface.",
+            "Induction cooktops use electromagnetic fields to directly heat ferrous (iron-based) cookware. The cooktop surface itself stays relatively cool. The pan heats up, not the cooking surface.",
             "**How Induction Works:**",
             "1. Electric current flows through copper coil beneath glass surface",
             "2. Coil generates rapidly alternating magnetic field",
@@ -214,7 +214,7 @@ export const comparisonData = {
       },
       {
         question: "Do professional chefs prefer gas or induction?",
-        answer: "Most professional chefs currently prefer gas due to familiarity, visual feedback, and existing kitchen infrastructure. However, this is changing—high-end restaurants increasingly use induction for precision work (sauces, chocolate, delicate proteins) while retaining gas for high-heat cooking. The preference is often based on training and habit rather than objective performance."
+        answer: "Most professional chefs currently prefer gas due to familiarity, visual feedback, and existing kitchen infrastructure. However, this is changing. High-end restaurants increasingly use induction for precision work (sauces, chocolate, delicate proteins) while retaining gas for high-heat cooking. The preference is often based on training and habit rather than objective performance."
       },
       {
         question: "What cookware works on induction?",
@@ -226,7 +226,7 @@ export const comparisonData = {
       },
       {
         question: "Does induction save money on energy costs?",
-        answer: "Typically yes, due to 85-90% efficiency versus gas's 40% efficiency. Testing shows approximately 20-25% lower cooking energy costs with induction. However, actual savings depend on local utility rates—in areas with low gas rates and high electricity rates, gas may cost less. The energy efficiency advantage is consistent, but dollar savings vary regionally."
+        answer: "Typically yes, due to 85-90% efficiency versus gas's 40% efficiency. Testing shows approximately 20-25% lower cooking energy costs with induction. However, actual savings depend on local utility rates. In areas with low gas rates and high electricity rates, gas may cost less. The energy efficiency advantage is consistent, but dollar savings vary regionally."
       },
       {
         question: "Can you use a wok on induction?",
@@ -234,7 +234,7 @@ export const comparisonData = {
       },
       {
         question: "Is induction hard to clean compared to gas?",
-        answer: "Induction is significantly easier to clean. The flat glass surface wipes clean in 2-3 minutes after each use—spills can't fall into crevices, and the surface doesn't get hot enough to bake food on. Gas grates, burner caps, and burner heads require 15-20 minutes of daily scrubbing plus weekly deep cleaning."
+        answer: "Induction is significantly easier to clean. The flat glass surface wipes clean in 2-3 minutes after each use. Spills can't fall into crevices, and the surface doesn't get hot enough to bake food on. Gas grates, burner caps, and burner heads require 15-20 minutes of daily scrubbing plus weekly deep cleaning."
       },
       {
         question: "Do induction cooktops interfere with pacemakers?",

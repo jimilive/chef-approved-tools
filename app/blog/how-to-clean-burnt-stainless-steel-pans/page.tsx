@@ -15,7 +15,7 @@ export const metadata = generateBlogMetadata('how-to-clean-burnt-stainless-steel
 
 const articleSchema = generateArticleSchema({
   headline: "How to Clean Burnt Stainless Steel Pans",
-  description: "Professional chef explains how to clean burnt stainless steel cookware using safe, effective methods — no harsh scrubbing or damage.",
+  description: "Professional chef explains how to clean burnt stainless steel cookware using safe, effective methods. No harsh scrubbing or damage.",
   datePublished: "2025-10-18",
   dateModified: "2025-10-21",
   authorName: "Scott Bradley",
@@ -71,7 +71,7 @@ export default function CleanBurntStainlessSteelPost() {
       <BlogLayout breadcrumbTitle="How to Clean Burnt Stainless Steel Pans">
         <BlogHero
           title="How to Clean Burnt Stainless Steel Pans"
-          introduction={["Every chef burns a pan eventually. It's not failure — it's seasoning for your ego. The key isn't avoiding it; it's knowing how to fix it without destroying your cookware."]}
+          introduction={["Every chef burns a pan eventually. It's not failure. It's seasoning for your ego. The key isn't avoiding it; it's knowing how to fix it without destroying your cookware."]}
           publishedDate="2025-10-18"
           lastUpdated="2025-10-21"
           readTime="8 min read"
@@ -81,7 +81,7 @@ export default function CleanBurntStainlessSteelPost() {
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
 
           <p>
-            In a professional kitchen, stainless steel pans take a daily beating — scorched proteins, caramelized sugars, and sauces left a minute too long. But you&apos;ll never see a line cook scrubbing like mad or reaching for steel wool. We know that burnt doesn&apos;t mean ruined — it just means you&apos;ve unlocked the next level of care.
+            In a professional kitchen, stainless steel pans take a daily beating: scorched proteins, caramelized sugars, and sauces left a minute too long. But you&apos;ll never see a line cook scrubbing like mad or reaching for steel wool. We know that burnt doesn&apos;t mean ruined — it just means you&apos;ve unlocked the next level of care.
           </p>
 
           <p>

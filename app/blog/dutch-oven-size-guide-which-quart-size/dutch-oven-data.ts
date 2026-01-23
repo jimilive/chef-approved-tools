@@ -39,7 +39,7 @@ export const dutchOvenData = {
     questions: [
       {
         question: "Can I use my Dutch oven on induction?",
-        answer: "Yes. Cast iron and enameled Dutch ovens are magnetic—they work beautifully on induction cooktops. The heavy, flat bottom makes excellent contact with the induction surface, and cast iron's natural magnetic properties ensure efficient heat transfer. Enameled Dutch ovens are particularly ideal because they won't scratch glass induction surfaces."
+        answer: "Yes. Cast iron and enameled Dutch ovens are magnetic. They work beautifully on induction cooktops. The heavy, flat bottom makes excellent contact with the induction surface, and cast iron's natural magnetic properties ensure efficient heat transfer. Enameled Dutch ovens are particularly ideal because they won't scratch glass induction surfaces."
       },
       {
         question: "What's the best size for bread baking?",
@@ -47,7 +47,7 @@ export const dutchOvenData = {
       },
       {
         question: "Do I need more than one Dutch oven size?",
-        answer: "Not unless you cook for groups regularly. A single 5.5–6.75 quart will handle 90% of tasks—from weeknight dinners to bread baking to small braises. Add a second size only if you frequently cook for large gatherings (go bigger) or want a dedicated bread baker (go smaller)."
+        answer: "Not unless you cook for groups regularly. A single 5.5–6.75 quart will handle 90% of tasks, from weeknight dinners to bread baking to small braises. Add a second size only if you frequently cook for large gatherings (go bigger) or want a dedicated bread baker (go smaller)."
       },
       {
         question: "Why are Le Creuset and Staub so expensive?",
@@ -55,7 +55,7 @@ export const dutchOvenData = {
       },
       {
         question: "What's the difference between round and oval Dutch ovens?",
-        answer: "Round Dutch ovens distribute heat more evenly and fit standard burners better—ideal for soups, stews, and braises. Oval models accommodate long cuts like brisket, pork loin, or whole fish, but may overhang smaller burners. Choose round for versatility, oval if you frequently cook large roasts."
+        answer: "Round Dutch ovens distribute heat more evenly and fit standard burners better, ideal for soups, stews, and braises. Oval models accommodate long cuts like brisket, pork loin, or whole fish, but may overhang smaller burners. Choose round for versatility, oval if you frequently cook large roasts."
       },
       {
         question: "How heavy is a 7-quart Dutch oven?",
@@ -63,7 +63,7 @@ export const dutchOvenData = {
       },
       {
         question: "Can I put my Dutch oven in the dishwasher?",
-        answer: "Most manufacturers recommend hand washing enameled Dutch ovens to preserve the finish. While some modern enameled models are technically dishwasher-safe, the harsh detergents can dull the exterior over time. Bare cast iron should never go in the dishwasher—it will strip the seasoning and cause rust."
+        answer: "Most manufacturers recommend hand washing enameled Dutch ovens to preserve the finish. While some modern enameled models are technically dishwasher-safe, the harsh detergents can dull the exterior over time. Bare cast iron should never go in the dishwasher. It will strip the seasoning and cause rust."
       },
       {
         question: "What's the ideal Dutch oven size for a family of four?",

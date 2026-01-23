@@ -110,7 +110,7 @@ export default function GasVsInductionComparison() {
             </div>
             <div className="mt-8 bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-lg">
               <p className="text-slate-700 leading-relaxed">
-                <strong>Professional Perspective:</strong> Most professional kitchens currently use gas due to existing infrastructure and chef familiarity. However, high-end restaurants increasingly adopt induction for precision work (sauces, delicate proteins) while retaining gas for high-heat cooking. For home cooks, induction offers measurable advantages in speed (60% faster), efficiency (85-90% vs 40%), safety, and ease of cleaning—but requires compatible cookware and a learning curve.
+                <strong>Professional Perspective:</strong> Most professional kitchens currently use gas due to existing infrastructure and chef familiarity. However, high-end restaurants increasingly adopt induction for precision work (sauces, delicate proteins) while retaining gas for high-heat cooking. For home cooks, induction offers measurable advantages in speed (60% faster), efficiency (85-90% vs 40%), safety, and ease of cleaning, but requires compatible cookware and a learning curve.
               </p>
             </div>
           </section>

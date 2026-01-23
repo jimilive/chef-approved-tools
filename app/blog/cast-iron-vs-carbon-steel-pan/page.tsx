@@ -113,7 +113,7 @@ export default function CastIronVsCarbonSteelComparison() {
             </div>
             <div className="mt-8 bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-lg">
               <p className="text-slate-700 leading-relaxed">
-                <strong>Professional Perspective:</strong> Professional kitchens often use both types for different applications. Cast iron for searing, baking, and oven work where heat retention matters. Carbon steel for sauté, stir-fry, and delicate proteins where temperature control and maneuverability are priorities. Many serious home cooks find value in owning both—using each for its specific strengths.
+                <strong>Professional Perspective:</strong> Professional kitchens often use both types for different applications. Cast iron for searing, baking, and oven work where heat retention matters. Carbon steel for sauté, stir-fry, and delicate proteins where temperature control and maneuverability are priorities. Many serious home cooks find value in owning both, using each for its specific strengths.
               </p>
             </div>
           </section>

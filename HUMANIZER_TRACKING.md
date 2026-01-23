@@ -46,17 +46,20 @@
 | 8 | /reviews/le-creuset-signature-7-25-qt-dutch-oven | Done | 2 | 1 | Fixed 5 occurrences total |
 | 9 | /reviews/cuisinart-dlc-10c-classic-food-processor | Done | 4 | 1 | Fixed 6 occurrences total |
 | 10 | /reviews/victorinox-fibrox-10-inch-chefs-knife | Done | 0 | 3 | Fixed 4 total (1 protected value + 3 AI phrases) |
-| 11 | /blog/cutting-board-materials-guide | Done | 1 | 0 | Fixed 1 em dash in metadata |
-| 12 | /blog/stainless-steel-why-food-sticks | Done | 0 | 0 | Clean - no changes needed |
+| 11 | /blog/cutting-board-materials-guide | Done | 15 | 0 | Re-audited: fixed 15 em dashes (was 1) |
+| 12 | /blog/stainless-steel-why-food-sticks | Done | 26 | 0 | Re-audited: fixed 26 em dashes (was 0) |
 | 13 | /blog/best-scrambled-eggs | Done | 5 | 1 | Fixed 3 protected values (45→24 yrs), 5 em dashes, 1 AI phrase |
-| 14 | /blog/gas-vs-induction-cooktop | Done | 0 | 1 | Fixed 1 AI phrase ("comprehensive") |
+| 14 | /blog/gas-vs-induction-cooktop | Done | 6 | 1 | Re-audited: fixed 6 em dashes (was 0), 1 AI phrase |
 | 15 | /blog/stock-vs-broth-vs-bouillon | Done | 0 | 0 | Clean - no changes needed |
-| 16 | /blog/dutch-oven-size-guide-which-quart-size | Done | 3 | 1 | Fixed 3 em dashes, 1 marketing word |
+| 16 | /blog/dutch-oven-size-guide-which-quart-size | Done | 14 | 1 | Re-audited: fixed 14 em dashes (was 3), 1 marketing word |
 | 17 | /blog/how-to-preheat-a-pan | Done | 7 | 1 | Fixed 7 em dashes (5 data, 3 page), 1 AI phrase |
 | 18 | /blog/how-to-get-rust-off-knife | Done | 2 | 0 | Fixed 2 em dashes |
 | 19 | /blog/cooking-by-feel | Done | 0 | 0 | Clean - no changes needed |
-| 20 | /blog/santoku-vs-chef-knife | Done | 1 | 3 | Fixed 1 em dash, 3 AI phrases ("effortless") |
-| 21 | /blog/cast-iron-vs-carbon-steel-pan | Done | 0 | 1 | Fixed 1 AI phrase ("comprehensive") |
+| 20 | /blog/santoku-vs-chef-knife | Done | 26 | 3 | Re-audited: fixed 26 em dashes (was 1), 3 AI phrases |
+| 21 | /blog/cast-iron-vs-carbon-steel-pan | Done | 17 | 1 | Re-audited: fixed 17 em dashes (was 0), 1 AI phrase |
+| 22 | /blog/how-to-clean-burnt-stainless-steel-pans | Done | 6 | 0 | Fixed 6 em dashes (3 data, 3 page) |
+| 23 | /blog/guide-cooking-oils-smoke-points | Done | 0 | 2 | Fixed 2 AI phrases ("effortless") |
+| 24 | /blog/maillard-reaction-browning-flavor | Done | 17 | 0 | Fixed 17 em dashes |
 
 ## Patterns Being Checked
 
@@ -138,3 +141,13 @@
   - "effortlessly" → "easily"
 - Page 14 (gas-vs-induction-cooktop) completed
   - "comprehensive comparison" → "comparison"
+- **RE-AUDIT SESSION**: Discovered visual scanning was missing em dashes. Used grep to find all em dashes.
+  - Page 11 (cutting-board-materials-guide): 15 em dashes fixed (originally reported 1)
+  - Page 12 (stainless-steel-why-food-sticks): 26 em dashes fixed (originally reported 0)
+  - Page 14 (gas-vs-induction-cooktop): 6 em dashes fixed (originally reported 0)
+  - Page 16 (dutch-oven-size-guide): 14 em dashes fixed (originally reported 3)
+  - Page 20 (santoku-vs-chef-knife): 26 em dashes fixed (originally reported 1)
+  - Page 21 (cast-iron-vs-carbon-steel-pan): 17 em dashes fixed (originally reported 0)
+  - Page 24 (maillard-reaction-browning-flavor): 17 em dashes fixed (originally reported 0)
+  - **Total re-audit fixes: 121 em dashes**
+  - **Lesson learned: ALWAYS use `grep "—"` on every file before reporting findings**

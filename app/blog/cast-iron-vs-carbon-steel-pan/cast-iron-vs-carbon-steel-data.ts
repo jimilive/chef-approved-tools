@@ -196,8 +196,8 @@ export const comparisonData = {
             "- **Carbon content:** 2-4% (high carbon makes it brittle but castable)",
             "- **Manufacturing:** Sand casting (ancient process)",
             "- **Surface:** Rough texture even when seasoned",
-            "The high carbon content makes cast iron hard but brittle—dropping cast iron can crack or chip it. That same brittleness allows manufacturers to cast complex shapes. You can't forge cast iron; it would shatter under hammer blows.",
-            "**The Thermal Mass Advantage:** Cast iron's thickness and density mean it stores massive amounts of heat. Once hot, it stays hot—even when you add cold food. This is why cast iron excels at searing steaks: the pan doesn't drop temperature when cold meat hits the surface."
+            "The high carbon content makes cast iron hard but brittle. Dropping cast iron can crack or chip it. That same brittleness allows manufacturers to cast complex shapes. You can't forge cast iron; it would shatter under hammer blows.",
+            "**The Thermal Mass Advantage:** Cast iron's thickness and density mean it stores massive amounts of heat. Once hot, it stays hot, even when you add cold food. This is why cast iron excels at searing steaks: the pan doesn't drop temperature when cold meat hits the surface."
           ]
         },
         {
@@ -212,7 +212,7 @@ export const comparisonData = {
             "- **Manufacturing:** Stamping or spinning (modern industrial process)",
             "- **Surface:** Smooth polished texture",
             "The lower carbon content makes carbon steel tough and flexible. The pan won't crack or chip from drops like cast iron. That toughness allows manufacturers to forge thin pans that heat quickly and evenly.",
-            "**The Responsiveness Advantage:** Carbon steel's thinness means it heats almost instantly and responds to temperature changes within seconds. Turn down the heat and the pan cools immediately. This is why carbon steel excels at delicate proteins—you have precise temperature control."
+            "**The Responsiveness Advantage:** Carbon steel's thinness means it heats almost instantly and responds to temperature changes within seconds. Turn down the heat and the pan cools immediately. This is why carbon steel excels at delicate proteins. You have precise temperature control."
           ]
         }
       ]
@@ -231,11 +231,11 @@ export const comparisonData = {
             "- After 15 minutes: 325°F",
             "After 15 minutes off heat, the pan is still hot enough to cook. That thermal mass stores heat like a battery.",
             "**What This Means for Cooking:**",
-            "- **Searing steaks:** Pan stays hot when cold meat hits surface—perfect browning",
+            "- **Searing steaks:** Pan stays hot when cold meat hits surface, perfect browning",
             "- **Baking cornbread:** Even heat distribution throughout baking time",
             "- **Frying chicken:** Temperature stays consistent with multiple pieces",
             "- **Roasting vegetables:** Heat radiates evenly, no cold spots",
-            "**The Downside:** Cast iron takes 10-15 minutes to heat properly. Rush this and you get cold spots. Once hot, it stays hot—if you overheat cast iron, it takes 10+ minutes to cool down. You can't quickly adjust temperature mid-cooking."
+            "**The Downside:** Cast iron takes 10-15 minutes to heat properly. Rush this and you get cold spots. Once hot, it stays hot. If you overheat cast iron, it takes 10+ minutes to cool down. You can't quickly adjust temperature mid-cooking."
           ]
         },
         {
@@ -267,7 +267,7 @@ export const comparisonData = {
           title: "Cast Iron: Heavy and Stable",
           content: [
             "A Lodge 12\" cast iron skillet weighs 8.1 lbs empty. That's heavier than most cookware. For one-handed flipping or tossing, it's impractical unless you're very strong. Moving from stovetop to oven requires two hands and awareness.",
-            "**For Home Cooks:** If you have wrist issues, arthritis, or limited upper body strength, cast iron can be genuinely challenging. Most cooks don't casually flip food in cast iron—spatulas and deliberate movements are standard.",
+            "**For Home Cooks:** If you have wrist issues, arthritis, or limited upper body strength, cast iron can be genuinely challenging. Most cooks don't casually flip food in cast iron. Spatulas and deliberate movements are standard.",
             "**The Stability Advantage:** That weight means cast iron sits rock-solid on the stove. No sliding, no tipping, no movement during aggressive stirring. It's planted firmly.",
             "Professional kitchens using cast iron typically reserve it for oven-based cooking (cornbread, deep-dish items) where the pan isn't moved frequently."
           ]
@@ -276,9 +276,9 @@ export const comparisonData = {
           option: "carbon-steel",
           title: "Carbon Steel: Lightweight and Maneuverable",
           content: [
-            "A Matfer Bourgeat 12\" carbon steel pan weighs 3.3 lbs empty—less than half the weight of cast iron. One-handed flipping, tossing stir-fries, and constant pan movement become possible—professional techniques impossible with cast iron.",
-            "**For Home Cooks:** Carbon steel enables professional cooking techniques—tossing, flipping, moving the pan on and off heat. It's significantly easier to handle, especially for smaller or less strong cooks.",
-            "**The Stability Concern:** Lightweight pans can slide on smooth cooktops during aggressive stirring. Not a major issue, just something to be aware of. Carbon steel pans are slightly less stable when empty—don't leave the handle hanging over counter edges.",
+            "A Matfer Bourgeat 12\" carbon steel pan weighs 3.3 lbs empty, less than half the weight of cast iron. One-handed flipping, tossing stir-fries, and constant pan movement become possible, professional techniques impossible with cast iron.",
+            "**For Home Cooks:** Carbon steel enables professional cooking techniques: tossing, flipping, moving the pan on and off heat. It's significantly easier to handle, especially for smaller or less strong cooks.",
+            "**The Stability Concern:** Lightweight pans can slide on smooth cooktops during aggressive stirring. Not a major issue, just something to be aware of. Carbon steel pans are slightly less stable when empty. Don't leave the handle hanging over counter edges.",
             "Professional sauté and stir-fry work almost exclusively uses carbon steel due to the maneuverability advantage."
           ]
         }
@@ -358,7 +358,7 @@ export const comparisonData = {
             "**1. Quick Sautés and Stir-Fries:** Light weight and instant heat response enable constant pan movement. Temperature adjusts moment-to-moment for perfect vegetable texture.",
             "**2. Delicate Proteins:** Fish, thin chicken cutlets, and anything requiring precise temperature control. Immediate heat response prevents overcooking.",
             "**3. Eggs and Crepes:** Once properly seasoned, carbon steel's smooth surface creates superior nonstick properties. Better than cast iron for delicate egg dishes.",
-            "**4. Restaurant-Style Techniques:** Anything requiring professional \"flipping\" motion—sautéed mushrooms, tossed pasta, flash-cooked vegetables—demands carbon steel's lightweight maneuverability.",
+            "**4. Restaurant-Style Techniques:** Anything requiring professional \"flipping\" motion: sautéed mushrooms, tossed pasta, flash-cooked vegetables, demands carbon steel's lightweight maneuverability.",
             "Carbon steel excels when you need responsive temperature control and the ability to manipulate the pan during cooking."
           ]
         }
@@ -390,7 +390,7 @@ export const comparisonData = {
             "- **Warping:** Extreme heat or thermal shock can warp thin carbon steel",
             "- **Handle degradation:** Welded handles can eventually loosen (rare)",
             "- **Rust:** Like cast iron, carbon steel rusts if neglected",
-            "**Restoration Potential:** Carbon steel restores easier than cast iron—the smooth surface means rust removal is faster and seasoning rebuilds quickly.",
+            "**Restoration Potential:** Carbon steel restores easier than cast iron. The smooth surface means rust removal is faster and seasoning rebuilds quickly.",
             "**Expected Lifespan:** 20-30+ years (essentially permanent for home use)"
           ]
         }
@@ -454,7 +454,7 @@ export const comparisonData = {
           whyBest: "French professional standard used worldwide",
           bestFor: "Serious home cooks and professionals",
           features: [
-            "2.5mm thick—perfect balance of responsiveness and durability",
+            "2.5mm thick, perfect balance of responsiveness and durability",
             "Riveted handle (more durable than welded)",
             "Sloped sides for easy tossing"
           ],
@@ -511,7 +511,7 @@ export const comparisonData = {
       },
       {
         question: "Which is easier to maintain: cast iron or carbon steel?",
-        answer: "Carbon steel is slightly easier to maintain due to its smooth surface. Both require identical care (wash, dry, oil after each use), but carbon steel's polished surface cleans faster, re-seasons more easily, and develops nonstick properties quicker. Cast iron's textured surface takes more scrubbing and more seasoning layers. The difference is marginal—both are low-maintenance compared to most cookware."
+        answer: "Carbon steel is slightly easier to maintain due to its smooth surface. Both require identical care (wash, dry, oil after each use), but carbon steel's polished surface cleans faster, re-seasons more easily, and develops nonstick properties quicker. Cast iron's textured surface takes more scrubbing and more seasoning layers. The difference is marginal. Both are low-maintenance compared to most cookware."
       },
       {
         question: "Is carbon steel worth it if I already have cast iron?",
@@ -523,7 +523,7 @@ export const comparisonData = {
       },
       {
         question: "Do I need to season cast iron or carbon steel if they're pre-seasoned?",
-        answer: "Pre-seasoned pans have basic factory seasoning that prevents rust during shipping, but additional seasoning significantly improves performance. Most users add 2-3 seasoning layers beyond factory treatment for better nonstick properties. Think of pre-seasoning as a base coat—functional but not optimal. Additional seasoning is highly recommended for both materials."
+        answer: "Pre-seasoned pans have basic factory seasoning that prevents rust during shipping, but additional seasoning significantly improves performance. Most users add 2-3 seasoning layers beyond factory treatment for better nonstick properties. Think of pre-seasoning as a base coat, functional but not optimal. Additional seasoning is highly recommended for both materials."
       }
     ]
   }

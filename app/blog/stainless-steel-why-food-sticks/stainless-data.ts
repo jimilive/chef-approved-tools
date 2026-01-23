@@ -7,7 +7,7 @@ export const stainlessData = {
       },
       {
         question: "Why does my food burn instead of brown?",
-        answer: "Heat's too high — you're burning sugars before proteins brown. Lower the temp slightly."
+        answer: "Heat's too high. You're burning sugars before proteins brown. Lower the temp slightly."
       },
       {
         question: "Can I use butter for searing?",
@@ -19,7 +19,7 @@ export const stainlessData = {
       },
       {
         question: "What's the best way to clean stuck food?",
-        answer: "Simmer water with baking soda in the pan for 5 minutes — residue will lift right off."
+        answer: "Simmer water with baking soda in the pan for 5 minutes. Residue will lift right off."
       },
       {
         question: "How do I know when my stainless steel pan is hot enough?",

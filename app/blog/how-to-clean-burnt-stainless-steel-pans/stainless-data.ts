@@ -6,7 +6,7 @@
 export const stainlessData = {
   metadata: {
     title: "How to Clean Burnt Stainless Steel Pans",
-    description: "Professional chef explains how to clean burnt stainless steel cookware using safe, effective methods — no harsh scrubbing or damage.",
+    description: "Professional chef explains how to clean burnt stainless steel cookware using safe, effective methods. No harsh scrubbing or damage.",
     publishedDate: "2025-10-18",
     lastUpdated: "2025-10-21",
     primaryKeyword: "clean burnt stainless steel",
@@ -22,7 +22,7 @@ export const stainlessData = {
   hero: {
     title: "How to Clean Burnt Stainless Steel Pans",
     introduction: [
-      "Every chef burns a pan eventually. It's not failure — it's seasoning for your ego. The key isn't avoiding it; it's knowing how to fix it without destroying your cookware."
+      "Every chef burns a pan eventually. It's not failure. It's seasoning for your ego. The key isn't avoiding it; it's knowing how to fix it without destroying your cookware."
     ]
   },
 
@@ -47,7 +47,7 @@ export const stainlessData = {
     questions: [
       {
         question: "Can I use steel wool just once?",
-        answer: "No — even once will leave micro-scratches that dull and discolor your pan."
+        answer: "No. Even once will leave micro-scratches that dull and discolor your pan."
       },
       {
         question: "How do chefs clean stainless in restaurants?",
