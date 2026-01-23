@@ -30,9 +30,9 @@ export const educationalData = {
   hero: {
     title: "How to Get Rust Off a Knife: 5 Methods That Actually Work",
     introduction: [
-      "I'll be honest with you: in 24 years of professional kitchen work, I've never had rust on my personal knives. Not once. That's not bragging — it's the result of habits I learned the hard way watching other cooks ruin good blades through neglect.",
+      "I'll be honest with you: in 24 years of professional kitchen work, I've never had rust on my personal knives. Not once. That's not bragging. It's the result of habits I learned the hard way watching other cooks ruin good blades through neglect.",
       "But I've seen plenty of rusty knives come through professional kitchens. The prep cook who left his knife in the sink overnight. The new hire who stored a wet blade in a leather sheath. The home cook who brings in their grandmother's carbon steel knife, orange with oxidation, asking if it can be saved.",
-      "The answer is almost always yes. Here's how to fix it — and more importantly, how to make sure it never happens again.",
+      "The answer is almost always yes. Here's how to fix it, and more importantly, how to make sure it never happens again.",
     ],
   },
 

@@ -19,7 +19,7 @@ export const metadata = generateBlogMetadata('how-to-preheat-a-pan');
 
 const articleSchema = generateArticleSchema({
   headline: "How To Preheat A Pan (Most People Do This Wrong)",
-  description: "Professional chef explains the science of preheating stainless steel and cast iron pans — how to prevent sticking and achieve perfect sear every time.",
+  description: "Professional chef explains the science of preheating stainless steel and cast iron pans. How to prevent sticking and achieve perfect sear every time.",
   datePublished: "2025-10-02",
   dateModified: "2025-10-21",
   authorName: "Scott Bradley",
@@ -71,7 +71,7 @@ export default function HowToPreheatPanPost() {
       <BlogLayout breadcrumbTitle="How To Preheat A Pan (Most People Do This Wrong)">
         <BlogHero
           title="How To Preheat A Pan (Most People Do This Wrong)"
-          introduction={["You can spot an experienced cook by the way they preheat a pan. They don't just toss it on high and hope — they wait, test, and feel. Preheating isn't about impatience; it's about control."]}
+          introduction={["You can spot an experienced cook by the way they preheat a pan. They don't just toss it on high and hope. They wait, test, and feel. Preheating isn't about impatience; it's about control."]}
           publishedDate="2025-10-02"
           lastUpdated="2025-10-21"
           readTime="8 min read"
@@ -83,7 +83,7 @@ export default function HowToPreheatPanPost() {
           </p>
 
           <p>
-            This guide walks you through the science and timing behind proper preheating so you can cook like a restaurant chef — clean, confident, and in control.
+            This guide walks you through the science and timing behind proper preheating so you can cook like a restaurant chef: clean, confident, and in control.
           </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
@@ -314,7 +314,7 @@ export default function HowToPreheatPanPost() {
                   merchant="internal"
                 >
                   <Link href="/reviews/lodge-seasoned-cast-iron-3-skillet-bundle" className="text-orange-700 hover:text-orange-800 underline">Lodge 12&quot; Cast Iron Skillet</Link>
-                </CTAVisibilityTracker> — unbeatable for searing and oven finish.
+                </CTAVisibilityTracker> — ideal for searing and oven finish.
               </li>
               <li>
                 <strong>Carbon Steel:</strong> Matfer Bourgeat carbon steel fry pan — lightweight with pro heat control.

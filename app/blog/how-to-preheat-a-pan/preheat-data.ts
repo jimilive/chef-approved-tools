@@ -6,7 +6,7 @@
 export const preheatData = {
   metadata: {
     title: "How To Preheat A Pan (Most People Do This Wrong)",
-    description: "Professional chef explains the science of preheating stainless steel and cast iron pans — how to prevent sticking and achieve perfect sear every time.",
+    description: "Professional chef explains the science of preheating stainless steel and cast iron pans. How to prevent sticking and achieve perfect sear every time.",
     publishedDate: "2025-10-02",
     lastUpdated: "2025-10-21",
     primaryKeyword: "how to preheat a pan",
@@ -22,7 +22,7 @@ export const preheatData = {
   hero: {
     title: "How To Preheat A Pan (Most People Do This Wrong)",
     introduction: [
-      "You can spot an experienced cook by the way they preheat a pan. They don't just toss it on high and hope — they wait, test, and feel. Preheating isn't about impatience; it's about control."
+      "You can spot an experienced cook by the way they preheat a pan. They don't just toss it on high and hope. They wait, test, and feel. Preheating isn't about impatience; it's about control."
     ]
   },
 
@@ -48,7 +48,7 @@ export const preheatData = {
       },
       {
         question: "Can I preheat in the oven instead?",
-        answer: "Yes — for cast iron, oven preheating gives perfectly even heat."
+        answer: "Yes. For cast iron, oven preheating gives perfectly even heat."
       },
       {
         question: "Do I always need oil?",
@@ -56,7 +56,7 @@ export const preheatData = {
       },
       {
         question: "How do I know if I've overheated?",
-        answer: "If your pan shows rainbow tinting, you've gone too hot — clean with vinegar or Bar Keepers Friend."
+        answer: "If your pan shows rainbow tinting, you've gone too hot. Clean with vinegar or Bar Keepers Friend."
       },
       {
         question: "Does preheating save energy?",
@@ -64,7 +64,7 @@ export const preheatData = {
       },
       {
         question: "How long should I preheat a nonstick pan?",
-        answer: "1-2 minutes maximum on medium heat. Never preheat nonstick empty or on high heat — the coating degrades above 500°F. Always add oil or food before heating."
+        answer: "1-2 minutes maximum on medium heat. Never preheat nonstick empty or on high heat. The coating degrades above 500°F. Always add oil or food before heating."
       },
       {
         question: "What's the best heat setting for preheating?",

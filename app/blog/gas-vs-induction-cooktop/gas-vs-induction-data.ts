@@ -18,7 +18,7 @@ export const comparisonData = {
     introduction: [
       "The gas versus induction debate divides professional chefs and home cooks like no other kitchen equipment discussion. Gas advocates cite instant visual feedback, infinite flame control, and traditional cooking techniques. Induction supporters counter with precise temperature control, energy efficiency, and superior safety.",
       "Gas cooking feels intuitive—you see the flame, you adjust the flame, you control the heat directly. But induction cooking is objectively faster, more efficient, and more precise once you understand how it works. The learning curve is real, but the performance advantages are measurable.",
-      "This comprehensive comparison breaks down heat output and control, speed and efficiency, safety considerations, cookware compatibility, and honest assessments of what matters for real cooking. You'll understand exactly which cooktop type matches your cooking style, kitchen setup, and priorities."
+      "This comparison breaks down heat output and control, speed and efficiency, safety considerations, cookware compatibility, and honest assessments of what matters for real cooking. You'll understand exactly which cooktop type matches your cooking style, kitchen setup, and priorities."
     ]
   },
 

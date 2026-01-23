@@ -46,6 +46,17 @@
 | 8 | /reviews/le-creuset-signature-7-25-qt-dutch-oven | Done | 2 | 1 | Fixed 5 occurrences total |
 | 9 | /reviews/cuisinart-dlc-10c-classic-food-processor | Done | 4 | 1 | Fixed 6 occurrences total |
 | 10 | /reviews/victorinox-fibrox-10-inch-chefs-knife | Done | 0 | 3 | Fixed 4 total (1 protected value + 3 AI phrases) |
+| 11 | /blog/cutting-board-materials-guide | Done | 1 | 0 | Fixed 1 em dash in metadata |
+| 12 | /blog/stainless-steel-why-food-sticks | Done | 0 | 0 | Clean - no changes needed |
+| 13 | /blog/best-scrambled-eggs | Done | 5 | 1 | Fixed 3 protected values (45→24 yrs), 5 em dashes, 1 AI phrase |
+| 14 | /blog/gas-vs-induction-cooktop | Done | 0 | 1 | Fixed 1 AI phrase ("comprehensive") |
+| 15 | /blog/stock-vs-broth-vs-bouillon | Done | 0 | 0 | Clean - no changes needed |
+| 16 | /blog/dutch-oven-size-guide-which-quart-size | Done | 3 | 1 | Fixed 3 em dashes, 1 marketing word |
+| 17 | /blog/how-to-preheat-a-pan | Done | 7 | 1 | Fixed 7 em dashes (5 data, 3 page), 1 AI phrase |
+| 18 | /blog/how-to-get-rust-off-knife | Done | 2 | 0 | Fixed 2 em dashes |
+| 19 | /blog/cooking-by-feel | Done | 0 | 0 | Clean - no changes needed |
+| 20 | /blog/santoku-vs-chef-knife | Done | 1 | 3 | Fixed 1 em dash, 3 AI phrases ("effortless") |
+| 21 | /blog/cast-iron-vs-carbon-steel-pan | Done | 0 | 1 | Fixed 1 AI phrase ("comprehensive") |
 
 ## Patterns Being Checked
 
@@ -117,3 +128,13 @@
   - "Exceptional." → "Precise cutting."
   - "Outstanding" → "Well-suited"
   - "Unbeatable" → "Best value"
+- Page 11 (cutting-board-materials-guide) completed
+  - 1 em dash → comma in metadata description
+- Page 12 (stainless-steel-why-food-sticks) completed
+  - Clean page - no changes needed
+- Page 13 (best-scrambled-eggs) completed
+  - 3 protected value fixes: "45 years" → "24 years" (lines 50, 130, 180)
+  - 5 em dashes → periods/commas
+  - "effortlessly" → "easily"
+- Page 14 (gas-vs-induction-cooktop) completed
+  - "comprehensive comparison" → "comparison"

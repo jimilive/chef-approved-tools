@@ -17,7 +17,7 @@ export const comparisonData = {
   hero: {
     title: "Santoku Knife vs Chef Knife: Which Style Should You Choose?",
     introduction: [
-      "The santoku knife vs chef knife debate comes down to one question: how do you actually cut? After 24 years in professional kitchens, I've used both styles for thousands of hours—and the answer isn't which is 'better.'",
+      "The santoku knife vs chef knife debate comes down to one question: how do you actually cut? After 24 years in professional kitchens, I've used both styles for thousands of hours, and the answer isn't which is 'better.'",
       "These are different tools designed for different tasks. Whether you're deciding between a santoku vs chef's knife for your first serious knife or adding to your collection, understanding the real differences will help you choose the right blade for your cooking style."
     ]
   },
@@ -181,7 +181,7 @@ export const comparisonData = {
           title: "Santoku Technique",
           content: [
             "The santoku uses a straight up-and-down motion. The entire blade lifts off the board with each cut, making contact in one clean stroke. This 'push cut' or 'tap chop' is faster for repetitive cuts like slicing vegetables.",
-            "If you do a lot of Asian cooking or high-volume meal prep, the santoku's technique is actually faster once you adjust. The lighter weight and flatter blade make this up-and-down motion feel effortless."
+            "If you do a lot of Asian cooking or high-volume meal prep, the santoku's technique is actually faster once you adjust. The lighter weight and flatter blade make this up-and-down motion feel easy."
           ]
         },
         {
@@ -233,7 +233,7 @@ export const comparisonData = {
           content: [
             "Chef's knife: Good—requires more control to achieve consistent thin slices.",
             "Santoku: Excellent—the thinner blade glides through with less resistance, uniform slices every time.",
-            "Winner: Santoku. At Feierabend, I sliced thousands of mushrooms for German cuisine. Paper-thin was the standard, and the santoku made it effortless."
+            "Winner: Santoku. At Feierabend, I sliced thousands of mushrooms for German cuisine. Paper-thin was the standard, and the santoku made it easy."
           ]
         },
         {
@@ -278,7 +278,7 @@ export const comparisonData = {
           title: "Professional Kitchen Testing",
           content: [
             "I bought my Wüsthof Classic Ikon Santoku because it was beautiful—the contoured handle and granton edge looked like they belonged in a professional kitchen. What kept me using it for 14 years was performance.",
-            "At Feierabend, I sliced thousands of mushrooms for German cuisine. Paper-thin was the standard, and the santoku made it effortless. The lighter weight meant less fatigue during high-volume prep.",
+            "At Feierabend, I sliced thousands of mushrooms for German cuisine. Paper-thin was the standard, and the santoku made it easy. The lighter weight meant less fatigue during high-volume prep.",
             "At Purple Café, it handled pizza toppings and vegetable prep when we were doing 200+ cover nights. Speed mattered, and the up-and-down chopping motion was noticeably faster than rocking with a chef's knife for repetitive cuts."
           ]
         },

@@ -21,7 +21,7 @@ export const comparisonData = {
     introduction: [
       "The cast iron versus carbon steel debate confuses even experienced home cooks. Both are raw iron. Both need seasoning. Both develop nonstick surfaces over time. So what's the actual difference, and why would you choose one over the other?",
       "Cast iron is a 10-pound workhorse that retains heat like a thermal battery. Carbon steel is a 3-pound athlete that heats instantly and responds to temperature changes within seconds. Understanding this fundamental trade-off determines which pan belongs in your kitchen.",
-      "This comprehensive comparison breaks down the metallurgy, heat retention differences, weight and handling characteristics, seasoning requirements, and real-world performance for different cooking techniques. You'll understand exactly which pan type matches your cooking style, physical capabilities, and kitchen priorities."
+      "This comparison breaks down the metallurgy, heat retention differences, weight and handling characteristics, seasoning requirements, and real-world performance for different cooking techniques. You'll understand exactly which pan type matches your cooking style, physical capabilities, and kitchen priorities."
     ]
   },
 

@@ -61,7 +61,7 @@ export default function DutchOvenSizeGuidePage() {
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
-            If you&apos;ve ever tried to make sourdough in a too-small Dutch oven or fit a roast chicken into a pot better suited for soup, you know — size matters.
+            If you&apos;ve ever tried to make sourdough in a too-small Dutch oven or fit a roast chicken into a pot better suited for soup, you know: size matters.
           </p>
 
           <p>
@@ -261,7 +261,7 @@ export default function DutchOvenSizeGuidePage() {
           </h3>
 
           <p>
-            Lighter, faster to heat, easier to clean — but doesn&apos;t retain heat as evenly.
+            Lighter, faster to heat, easier to clean, but doesn&apos;t retain heat as evenly.
           </p>
 
           <p>
@@ -314,7 +314,7 @@ export default function DutchOvenSizeGuidePage() {
           </p>
 
           <p>
-            The right fit gives you ideal surface area for Maillard reaction — that golden crust that turns flavor from good to incredible.
+            The right fit gives you ideal surface area for Maillard reaction — that golden crust that turns flavor from good to great.
           </p>
 
           <p>
@@ -370,7 +370,7 @@ export default function DutchOvenSizeGuidePage() {
               <span className="text-2xl">🔥</span> Chef&apos;s Tip:
             </p>
             <p className="mb-0">
-              Never grab an enameled Dutch oven lid bare-handed — even 10 minutes after removing it from the oven. That enamel holds heat longer than you think. Trust me — every chef learns that lesson exactly once.
+              Never grab an enameled Dutch oven lid bare-handed — even 10 minutes after removing it from the oven. That enamel holds heat longer than you think. Trust me, every chef learns that lesson exactly once.
             </p>
           </div>
 

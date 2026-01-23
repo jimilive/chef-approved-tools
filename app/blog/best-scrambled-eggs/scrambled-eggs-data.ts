@@ -6,7 +6,7 @@
 export const educationalData = {
   metadata: {
     title: "Stop Using a Bowl for Scrambled Eggs (Do This Instead)",
-    description: "Ditch the bowl and whisk. This 45-second pan technique creates creamy eggs every time. The method I've used in professional kitchens for 24 years—zero cleanup.",
+    description: "Ditch the bowl and whisk. This 45-second pan technique creates creamy eggs every time. The method I've used in professional kitchens for 24 years, zero cleanup.",
     publishedDate: "2025-10-09",
     lastUpdated: "2025-10-09",
     primaryKeyword: "scrambled eggs",
@@ -28,15 +28,15 @@ export const educationalData = {
 
   howToSchema: {
     name: "How to Make Perfect Scrambled Eggs (No Bowl Method)",
-    description: "Professional chef technique for creamy scrambled eggs without using a bowl. Skip the whisk, skip the cleanup—this pan-only method takes 2 minutes.",
+    description: "Professional chef technique for creamy scrambled eggs without using a bowl. Skip the whisk, skip the cleanup. This pan-only method takes 2 minutes.",
     datePublished: "2025-10-09",
     totalTime: "PT3M",
     tools: ["Nonstick pan", "Rubber spatula or wooden spoon", "Butter"],
     steps: [
-      { name: "Heat Pan to Medium-Low", text: "Place nonstick pan over medium-low heat. Low heat is essential—eggs cooked too fast become rubbery. Let pan warm for 1 minute." },
+      { name: "Heat Pan to Medium-Low", text: "Place nonstick pan over medium-low heat. Low heat is essential. Eggs cooked too fast become rubbery. Let pan warm for 1 minute." },
       { name: "Add Butter", text: "Add 1 tablespoon butter and let it melt completely, swirling to coat the pan. Don't let it brown." },
-      { name: "Crack Eggs Directly into Pan", text: "Crack 2-3 eggs directly into the warm, buttered pan. No bowl, no whisk—they go straight in." },
-      { name: "Break Yolks and Stir", text: "Using a spatula, break the yolks and begin stirring continuously. The whites and yolks will combine as you stir—this replaces whisking in a bowl." },
+      { name: "Crack Eggs Directly into Pan", text: "Crack 2-3 eggs directly into the warm, buttered pan. No bowl, no whisk. They go straight in." },
+      { name: "Break Yolks and Stir", text: "Using a spatula, break the yolks and begin stirring continuously. The whites and yolks will combine as you stir. This replaces whisking in a bowl." },
       { name: "Keep Moving Constantly", text: "Stir continuously, scraping the bottom and sides. Form small, soft curds. Total cooking time is about 2 minutes." },
       { name: "Remove While Still Wet", text: "Remove from heat when eggs still look slightly underdone and glossy. They continue cooking off-heat for 30 seconds. Season with salt and pepper, serve immediately." }
     ]
@@ -47,7 +47,7 @@ export const educationalData = {
       id: "intro",
       title: "",
       content: [
-        "After 45 years of cooking and 24 years managing professional kitchens, I've cooked thousands of eggs. This no-bowl, no-whisk method eliminates unnecessary steps while producing superior results. It's how I cook eggs at home every morning.",
+        "After 24 years in professional kitchens, I've cooked thousands of eggs. This no-bowl, no-whisk method eliminates unnecessary steps while producing superior results. It's how I cook eggs at home every morning.",
         "The secret? Crack the eggs directly into a heated pan with butter, leave the yolks intact, and gently stir the whites around them. Simple physics: eggs cook from the outside in, so controlling that process creates perfect texture without overworking the mixture."
       ]
     },
@@ -122,12 +122,12 @@ export const educationalData = {
         { tip: "Fresh eggs matter", detail: "Fresher eggs have tighter whites and richer yolks. The difference is noticeable." },
         { tip: "Remove from heat early", detail: "Carryover cooking continues after you plate. Remove when still slightly wet and glossy." },
         { tip: "Don't overstir", detail: "Gentle folding produces larger, creamier curds. Aggressive scrambling makes eggs tough." },
-        { tip: "Use high-quality nonstick pan", detail: "Eggs release effortlessly and cleanup is quick.", panLink: true },
+        { tip: "Use high-quality nonstick pan", detail: "Eggs release easily and cleanup is quick.", panLink: true },
         { tip: "Wooden spoon preferred", detail: "Won't scratch your nonstick surface. Protect your investment." },
         { tip: "Season lightly at first", detail: "Can always add more salt after cooking. Can't remove it." },
         { tip: "Butter quantity matters", detail: "Don't skimp. A full tablespoon for 2-3 eggs creates proper lubrication and flavor." }
       ],
-      proInsight: "After 45 years of cooking, I've learned that great scrambled eggs are about restraint, not technique complexity. Lower heat, gentle stirring, early removal—these simple principles produce better results than any fancy method."
+      proInsight: "After 24 years in professional kitchens, I've learned that great scrambled eggs are about restraint, not technique complexity. Lower heat, gentle stirring, early removal—these simple principles produce better results than any fancy method."
     },
     {
       id: "problems",
@@ -177,7 +177,7 @@ export const educationalData = {
       content: [
         "I discovered this technique by accident one busy morning when I didn't want to wash an extra bowl. The results were so superior to my previous method that I never went back.",
         "The eggs were creamier, the cleanup was faster, and the entire process felt more intuitive. Sometimes the best cooking techniques are the simplest ones—they just require someone to question the conventional wisdom.",
-        "After 45 years of cooking professionally and at home, this is the method I use every single morning. It works. It's simple. And it produces consistently perfect scrambled eggs with minimal effort."
+        "After 24 years of cooking professionally and at home, this is the method I use every single morning. It works. It's simple. And it produces consistently perfect scrambled eggs with minimal effort."
       ]
     },
     {
