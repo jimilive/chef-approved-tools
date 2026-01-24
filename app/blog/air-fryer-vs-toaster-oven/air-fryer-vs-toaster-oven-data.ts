@@ -144,14 +144,14 @@ export const comparisonData = {
           title: "Toaster Oven Versatility",
           content: [
             "Toaster ovens excel in versatility, offering a wider range of cooking functions than most standalone air fryers. Depending on the model, toaster ovens can air fry, bake, broil, toast, bagel, roast, dehydrate, ferment, proof dough, and even slow cook. This makes them true multi-taskers that can replace several single-purpose appliances.",
-            "The ability to toast bread is a key differentiator. If you regularly enjoy toast, bagels, or English muffins, a toaster oven handles this task effortlessly while air fryers cannot. Many users who purchased combination units report rarely using the toasting function, but it remains valuable for those who want consolidated appliances."
+            "The ability to toast bread is a key differentiator. If you regularly enjoy toast, bagels, or English muffins, a toaster oven handles this task easily while air fryers cannot. Many users who purchased combination units report rarely using the toasting function, but it's useful for those who want consolidated appliances."
           ]
         },
         {
           option: "airfryer-versatility",
           title: "Air Fryer Functions",
           content: [
-            "Standalone air fryers typically focus on their primary function—air frying—though many can also roast and bake. While more limited in scope, this specialization often translates to better performance at what they do. For households primarily interested in achieving crispy, fried-style foods with minimal oil, a dedicated air fryer's focused design delivers superior results.",
+            "Standalone air fryers typically focus on their primary function (air frying) though many can also roast and bake. While more limited in scope, this specialization often translates to better performance at what they do. For households primarily interested in achieving crispy, fried-style foods with minimal oil, a dedicated air fryer's focused design delivers superior results.",
             "Modern air fryer toaster oven combos attempt to bridge this gap by incorporating both technologies. Premium models combine excellent air frying with comprehensive toaster oven functionality. However, these combination units cost significantly more than standalone air fryers."
           ]
         }
@@ -216,7 +216,7 @@ export const comparisonData = {
           option: "airfryer-convenience",
           title: "Air Fryer Convenience",
           content: [
-            "Air fryers offer notable convenience advantages in several areas. They heat up almost instantly, eliminating wait time before cooking begins. The simple basket design makes it easy to check cooking progress—just pull out the basket and give it a shake.",
+            "Air fryers offer notable convenience advantages in several areas. They heat up almost instantly, eliminating wait time before cooking begins. The simple basket design makes it easy to check cooking progress: just pull out the basket and give it a shake.",
             "However, this ease of checking comes with a downside. Opening an air fryer during cooking causes a significant temperature drop that can affect cooking times. Most air fryers feature simple dial or digital controls with preset programs for common foods like fries, chicken, and fish."
           ]
         },
@@ -285,7 +285,7 @@ export const comparisonData = {
       },
       {
         question: "Are air fryer toaster oven combos worth the extra cost?",
-        answer: "Air fryer toaster oven combos cost significantly more than standalone air fryers—often $100-$300 more for quality models. They're worth the investment if you have adequate counter space, need larger cooking capacity for families, want toasting capability alongside air frying, and prefer consolidating appliances. However, testing shows that even premium combos don't air fry quite as well as dedicated basket-style air fryers."
+        answer: "Air fryer toaster oven combos cost significantly more than standalone air fryers, often $100-$300 more for quality models. They're worth the investment if you have adequate counter space, need larger cooking capacity for families, want toasting capability alongside air frying, and prefer consolidating appliances. However, testing shows that even premium combos don't air fry quite as well as dedicated basket-style air fryers."
       },
       {
         question: "How much counter space do air fryers and toaster ovens require?",

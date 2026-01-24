@@ -32,12 +32,12 @@ export const herbsData = {
     datePublished: "2025-09-14",
     tools: ["Sharp chef's knife or kitchen scissors", "Salad spinner", "Paper towels", "Glass jar or container", "Plastic bag"],
     steps: [
-      { name: "Wash Herbs Properly", text: "Fill a large bowl with cold water. Submerge herbs and agitate gently. Lift herbs out (dirt sinks to bottom). Repeat if water is dirty. Never run herbs under direct stream—it damages leaves." },
-      { name: "Dry Herbs Thoroughly", text: "Place washed herbs in a salad spinner and spin until no water droplets remain. This is critical—wet herbs oxidize faster and become slimy in storage." },
+      { name: "Wash Herbs Properly", text: "Fill a large bowl with cold water. Submerge herbs and agitate gently. Lift herbs out (dirt sinks to bottom). Repeat if water is dirty. Never run herbs under direct stream. It damages leaves." },
+      { name: "Dry Herbs Thoroughly", text: "Place washed herbs in a salad spinner and spin until no water droplets remain. This is critical: wet herbs oxidize faster and become slimy in storage." },
       { name: "Cut with Sharp Knife", text: "Use a very sharp knife to slice cleanly through herb cells with minimal crushing. For basil, use chiffonade method: stack leaves, roll tightly, slice thin ribbons. For cilantro/parsley, group stems and chop with rocking motion. Dull knives bruise herbs and cause rapid blackening." },
       { name: "Store Tender Herbs in Water", text: "For cilantro, parsley, and mint: trim ½ inch from stem bottoms, place in glass with 1-2 inches of water, cover loosely with plastic bag, refrigerate. Change water every 2-3 days. Lasts 1-2 weeks." },
       { name: "Store Hardy Herbs in Damp Towel", text: "For rosemary, thyme, sage: lay herbs on damp (not wet) paper towel, roll loosely, place in plastic bag or container, refrigerate. Lasts 1-2 weeks." },
-      { name: "Handle Basil Specially", text: "Basil hates cold—never refrigerate. Store at room temperature with stems in water, loosely covered. Cut basil immediately before use as it oxidizes within 10-15 minutes." }
+      { name: "Handle Basil Specially", text: "Basil hates cold. Never refrigerate. Store at room temperature with stems in water, loosely covered. Cut basil immediately before use as it oxidizes within 10-15 minutes." }
     ]
   },
 
@@ -49,15 +49,15 @@ export const herbsData = {
       },
       {
         question: "Can I store different herbs together?",
-        answer: "Store similar herbs together (tender with tender, hardy with hardy), but keep strong-flavored herbs separate. Don't store basil with cilantro—flavors can transfer. Mint especially should be stored alone (it overpowers everything)."
+        answer: "Store similar herbs together (tender with tender, hardy with hardy), but keep strong-flavored herbs separate. Don't store basil with cilantro (flavors can transfer). Mint especially should be stored alone (it overpowers everything)."
       },
       {
         question: "Should I wash herbs before storing or before using?",
-        answer: "Both methods work. Washing before storing means they're ready to use, but you MUST dry them completely (salad spinner). Washing just before using is safer if you're worried about moisture, but less convenient. Professional kitchens wash in the morning, dry completely, then store—ready when needed."
+        answer: "Both methods work. Washing before storing means they're ready to use, but you MUST dry them completely (salad spinner). Washing just before using is safer if you're worried about moisture, but less convenient. Professional kitchens wash in the morning, dry completely, then store, ready when needed."
       },
       {
         question: "Why does my basil turn black in the refrigerator?",
-        answer: "Basil is tropical and hates cold. Refrigeration causes cell damage (like frostbite), which leads to blackening. Store basil at room temperature (stems in water, loosely covered). It will last 3-5 days this way—longer than it would survive in the fridge."
+        answer: "Basil is tropical and hates cold. Refrigeration causes cell damage (like frostbite), which leads to blackening. Store basil at room temperature (stems in water, loosely covered). It will last 3-5 days this way, longer than it would survive in the fridge."
       },
       {
         question: "Can I revive wilted herbs?",
@@ -65,7 +65,7 @@ export const herbsData = {
       },
       {
         question: "Are herb stems usable or should I throw them away?",
-        answer: "Depends on the herb. Tender herb stems (cilantro, parsley) have great flavor—use in stocks, sauces, or chop finely with leaves. Basil stems are edible but texture is off—save for stocks. Woody stems (rosemary, thyme) are inedible—discard or save for smoking/grilling flavor."
+        answer: "Depends on the herb. Tender herb stems (cilantro, parsley) have great flavor. Use in stocks, sauces, or chop finely with leaves. Basil stems are edible but texture is off. Save for stocks. Woody stems (rosemary, thyme) are inedible. Discard or save for smoking/grilling flavor."
       }
     ]
   },

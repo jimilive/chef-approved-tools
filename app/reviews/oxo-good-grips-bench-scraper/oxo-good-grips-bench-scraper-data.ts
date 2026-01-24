@@ -12,9 +12,9 @@ export const reviewData = {
   // METADATA
   metadata: {
     title: "OXO Bench Scraper Review: 20 Years Testing (10 Professional)",
-    description: "After 20 years using this bench scraper—including 6 years daily at Purple Café—it handles dough portioning, ingredient transfer, and cleaning pizza peels. Professional-tested, $15.",
+    description: "After 20 years using this bench scraper (including 6 years daily at Purple Café), it handles dough portioning, ingredient transfer, and cleaning pizza peels. Professional-tested, $15.",
     ogTitle: "OXO Bench Scraper Review: 20 Years Testing (10 Professional)",
-    ogDescription: "After 20 years using this bench scraper—including 6 years daily at Purple Café—it handles dough portioning, ingredient transfer, and cleaning pizza peels. Professional-tested, $15.",
+    ogDescription: "After 20 years using this bench scraper (including 6 years daily at Purple Café), it handles dough portioning, ingredient transfer, and cleaning pizza peels. Professional-tested, $15.",
     testingPeriod: "20 Years (Including 10 Professional)",
     tier: 2
   },
@@ -37,7 +37,7 @@ export const reviewData = {
   hero: {
     badge: "PROFESSIONAL KITCHEN TESTED",
     title: "OXO Good Grips Bench Scraper Review",
-    subtitle: "The most underrated tool in any kitchen—tested through 20 years of use including 6 years daily at Purple Café",
+    subtitle: "The most underrated tool in any kitchen, tested through 20 years of use including 6 years daily at Purple Café",
     rating: 5.0,
     tierInfo: "Long-Term Personal Testing",
     price: "$15"
@@ -46,15 +46,15 @@ export const reviewData = {
   // SECTION 2: QUICK VERDICT
   quickVerdict: {
     title: "The Bottom Line",
-    content: "Most underrated tool in any kitchen. After 20 years of use—including 6 years of daily professional use at Purple Café—this bench scraper has proven indispensable for transferring ingredients, portioning dough, and cleaning surfaces. Once you start using one, you&apos;ll wonder how you cooked without it. At $15, it&apos;s essential."
+    content: "Most underrated tool in any kitchen. After 20 years of use (including 6 years of daily professional use at Purple Café), this bench scraper has proven indispensable for transferring ingredients, portioning dough, and cleaning surfaces. Once you start using one, you&apos;ll wonder how you cooked without it. At $15, it&apos;s essential."
   },
 
   // SECTION 3: WHY I CHOSE THIS
   whyIChoseThis: {
     title: "Why This Is in My Daily Toolkit",
     paragraphs: [
-      "After 45 years of cooking and 24 years in professional kitchens, I can tell you the bench scraper is the tool most home cooks don&apos;t know they need. At Purple Café in Seattle, I used this tool every single day for 6 years—transferring chopped vegetables, portioning pizza dough, cleaning cutting boards, and scraping work surfaces.",
-      "The bench scraper transforms your workflow. In professional kitchens, it&apos;s used constantly because it eliminates wasted motion. Chop an onion, scrape it directly into the pan—no picking up pieces with your knife or hands. Portion pizza dough, cut it cleanly with the bench scraper—no sticky knife. Clean your cutting board between tasks—bench scraper removes every scrap in seconds.",
+      "After 24 years in professional kitchens, I can tell you the bench scraper is the tool most home cooks don&apos;t know they need. At Purple Café in Seattle, I used this tool every single day for 6 years: transferring chopped vegetables, portioning pizza dough, cleaning cutting boards, and scraping work surfaces.",
+      "The bench scraper transforms your workflow. In professional kitchens, it&apos;s used constantly because it eliminates wasted motion. Chop an onion, scrape it directly into the pan, no picking up pieces with your knife or hands. Portion pizza dough, cut it cleanly with the bench scraper, no sticky knife. Clean your cutting board between tasks. Bench scraper removes every scrap in seconds.",
       "The OXO version has the perfect combination of features: sharp but safe edge for cutting dough, comfortable grip for extended use, measurement markings for consistent portioning, and a wide flat blade for transferring ingredients. After testing this exact model for 20 years, it&apos;s the one I recommend."
     ]
   },
@@ -66,11 +66,11 @@ export const reviewData = {
     sections: [
       {
         task: "Transferring Chopped Vegetables",
-        description: "Every prep shift started with chopping vegetables for pizza toppings—onions, peppers, mushrooms, tomatoes. The bench scraper moved everything from cutting board to pan in one smooth motion. Faster than picking up pieces with your knife, cleaner than using your hands. After 6 years of daily use, this saved countless hours of wasted motion."
+        description: "Every prep shift started with chopping vegetables for pizza toppings: onions, peppers, mushrooms, tomatoes. The bench scraper moved everything from cutting board to pan in one smooth motion. Faster than picking up pieces with your knife, cleaner than using your hands. After 6 years of daily use, this saved countless hours of wasted motion."
       },
       {
         task: "Portioning Pizza Dough",
-        description: "We portioned dozens of pizza dough balls daily. The bench scraper&apos;s straight edge cut through dough cleanly without dragging or sticking. The measurement markings helped create consistent portions—critical when you&apos;re making 30+ pizzas per shift. A sharp knife pulls and tears dough; the bench scraper cuts it clean."
+        description: "We portioned dozens of pizza dough balls daily. The bench scraper&apos;s straight edge cut through dough cleanly without dragging or sticking. The measurement markings helped create consistent portions, critical when you&apos;re making 30+ pizzas per shift. A sharp knife pulls and tears dough; the bench scraper cuts it clean."
       },
       {
         task: "Cleaning Cutting Boards Between Tasks",
@@ -78,14 +78,14 @@ export const reviewData = {
       },
       {
         task: "Scraping Work Surfaces During Prep",
-        description: "Dough and flour accumulate on stainless steel work surfaces. The bench scraper cleared surfaces quickly without scratching the steel. The beveled edge glides across surfaces when held at a slight angle—efficient cleaning without damage."
+        description: "Dough and flour accumulate on stainless steel work surfaces. The bench scraper cleared surfaces quickly without scratching the steel. The beveled edge glides across surfaces when held at a slight angle, efficient cleaning without damage."
       },
       {
         task: "Cleaning Wood Pizza Peels (The Tricky One)",
-        description: "This is where technique matters. Wood pizza peels (especially soft pine) require gentle cleaning to avoid damage. The bench scraper works perfectly if you use light pressure and the correct angle. Hold it nearly flat against the peel surface, not straight down. This removes stuck dough and flour without gouging the wood. I cleaned our pizza peels this way for 6 years—same peels, no damage. But if you press too hard or use the wrong angle, you&apos;ll leave marks in soft wood. Gentle pressure, shallow angle, let the blade do the work."
+        description: "This is where technique matters. Wood pizza peels (especially soft pine) require gentle cleaning to avoid damage. The bench scraper works perfectly if you use light pressure and the correct angle. Hold it nearly flat against the peel surface, not straight down. This removes stuck dough and flour without gouging the wood. I cleaned our pizza peels this way for 6 years, same peels, no damage. But if you press too hard or use the wrong angle, you&apos;ll leave marks in soft wood. Gentle pressure, shallow angle, let the blade do the work."
       }
     ],
-    durability: "After 6 years of daily professional use at Purple Café—hundreds of dishwasher cycles, constant contact with dough and vegetables, repeated scraping of cutting boards and work surfaces—this OXO bench scraper showed minimal wear. The stainless steel blade remained straight and functional. The Good Grips handle stayed comfortable without degradation. No rust, no loosening, no failures. The same scraper that started my Purple Café tenure was still working when I left.",
+    durability: "After 6 years of daily professional use at Purple Café (hundreds of dishwasher cycles, constant contact with dough and vegetables, repeated scraping of cutting boards and work surfaces), this OXO bench scraper showed minimal wear. The stainless steel blade remained straight and functional. The Good Grips handle stayed comfortable without degradation. No rust, no loosening, no failures. The same scraper that started my Purple Café tenure was still working when I left.",
     conclusion: "In professional kitchens, tools either survive or get replaced. This bench scraper survived 6 years of daily restaurant use and is still in my home kitchen today, 13+ years later. That&apos;s the definition of professional-grade durability."
   },
 
@@ -99,11 +99,11 @@ export const reviewData = {
       },
       {
         title: "Good Grips Handle",
-        description: "The soft, non-slip handle stays comfortable during extended use—critical for professional prep sessions. Ergonomic design provides control when cutting dough or scraping surfaces. Doesn&apos;t slip when wet, covered in flour, or when your hands are greasy. After 6 years at Purple Café using this handle daily, the comfort difference versus all-metal scrapers is significant."
+        description: "The soft, non-slip handle stays comfortable during extended use, critical for professional prep sessions. Ergonomic design provides control when cutting dough or scraping surfaces. Doesn&apos;t slip when wet, covered in flour, or when your hands are greasy. After 6 years at Purple Café using this handle daily, the comfort difference versus all-metal scrapers is significant."
       },
       {
         title: "Measurement Markings",
-        description: "Built-in measurements (both inches and centimeters) help portion dough evenly. Perfect for dividing pizza dough into consistent balls—essential when you&apos;re making 30+ pizzas per shift. The markings are etched into the blade, not printed, so they won&apos;t wear off after years of dishwasher cycles."
+        description: "Built-in measurements (both inches and centimeters) help portion dough evenly. Perfect for dividing pizza dough into consistent balls, important when you&apos;re making 30+ pizzas per shift. The markings are etched into the blade, not printed, so they won&apos;t wear off after years of dishwasher cycles."
       },
       {
         title: "Beveled Edge Design",
@@ -136,7 +136,7 @@ export const reviewData = {
   // SECTION 7: CARE & MAINTENANCE
   careAndMaintenance: {
     title: "How to Make It Last Decades",
-    intro: "After 20 years with this exact scraper—including 6 years of daily professional use—here&apos;s what actually works:",
+    intro: "After 20 years with this exact scraper (including 6 years of daily professional use), here&apos;s what actually works:",
     sections: [
       {
         subtitle: "Daily Care:",
@@ -151,7 +151,7 @@ export const reviewData = {
         items: [
           "Check edge periodically for dings (rare, but can happen if dropped on hard floor)",
           "Clean any dough buildup from handle junction (happens with very sticky dough)",
-          "That&apos;s it—this tool requires almost zero maintenance"
+          "That&apos;s it. This tool requires almost zero maintenance"
         ]
       },
       {
@@ -166,7 +166,7 @@ export const reviewData = {
       {
         subtitle: "Professional Tip:",
         items: [
-          "When cleaning delicate surfaces like wood pizza peels, hold the scraper at a shallow angle (nearly flat) and use light pressure. Let the beveled edge do the work—don&apos;t force it. This technique cleaned Purple Café&apos;s soft pine pizza peels for 6 years without damage."
+          "When cleaning delicate surfaces like wood pizza peels, hold the scraper at a shallow angle (nearly flat) and use light pressure. Let the beveled edge do the work. Don&apos;t force it. This technique cleaned Purple Café&apos;s soft pine pizza peels for 6 years without damage."
         ]
       }
     ]
@@ -178,7 +178,7 @@ export const reviewData = {
     subtitle: "Customer reviews curated from Amazon verified purchasers.",
     reviews: [
       {
-        quote: "I didn&apos;t think I needed one of these until I used it. Now I reach for it constantly—chopping vegetables, portioning dough, cleaning my cutting board. Best $15 I&apos;ve spent.",
+        quote: "I didn&apos;t think I needed one of these until I used it. Now I reach for it constantly: chopping vegetables, portioning dough, cleaning my cutting board. Best $15 I&apos;ve spent.",
         author: "K.R., November 2024"
       },
       {
@@ -198,7 +198,7 @@ export const reviewData = {
         author: "S.P., July 2024"
       },
       {
-        quote: "I use this for everything—transferring chopped onions, cutting pizza dough, scraping counters. It&apos;s become one of those tools I can&apos;t imagine cooking without. Dishwasher-safe is a bonus.",
+        quote: "I use this for everything: transferring chopped onions, cutting pizza dough, scraping counters. It&apos;s become one of those tools I can&apos;t imagine cooking without. Dishwasher-safe is a bonus.",
         author: "A.M., June 2024"
       }
     ]
@@ -313,7 +313,7 @@ export const reviewData = {
         oxoBold: true
       }
     ],
-    conclusion: "After 20 years with the OXO Good Grips bench scraper—including 6 years of daily professional use at Purple Café—I can confirm it offers the best combination of comfort, durability, and features for both home and professional use. The Dexter-Russell is excellent for commercial kitchens where comfort matters less than pure durability. Generic scrapers work but lack the ergonomics for extended use. The OXO&apos;s $15 price point is worth the premium for daily use."
+    conclusion: "After 20 years with the OXO Good Grips bench scraper (including 6 years of daily professional use at Purple Café), I can confirm it offers the best combination of comfort, durability, and features for both home and professional use. The Dexter-Russell is excellent for commercial kitchens where comfort matters less than pure durability. Generic scrapers work but lack the ergonomics for extended use. The OXO&apos;s $15 price point is worth the premium for daily use."
   },
 
   // FAQ data
@@ -322,31 +322,31 @@ export const reviewData = {
     items: [
       {
         question: "Do I really need a bench scraper?",
-        answer: "If you do any regular cooking or baking, yes. After 24 years in professional kitchens and 20 years using this exact bench scraper, I can tell you it transforms your workflow. At Purple Café, I used this tool every single day for 6 years—transferring vegetables, portioning dough, cleaning surfaces. Once you start using one, you&apos;ll wonder how you cooked without it. It&apos;s one of those tools where you don&apos;t realize how much you need it until you have it."
+        answer: "If you do any regular cooking or baking, yes. After 24 years in professional kitchens and 20 years using this exact bench scraper, I can tell you it transforms your workflow. At Purple Café, I used this tool every single day for 6 years: transferring vegetables, portioning dough, cleaning surfaces. Once you start using one, you&apos;ll wonder how you cooked without it. It&apos;s one of those tools where you don&apos;t realize how much you need it until you have it."
       },
       {
         question: "Is the OXO better than a generic bench scraper?",
-        answer: "Yes, significantly better for daily use. The Good Grips handle makes a real difference during extended prep sessions—after 6 years of professional use, I can confirm the comfort advantage matters. The measurement markings are genuinely useful for consistent dough portioning. Generic scrapers work but become uncomfortable after 15-20 minutes of continuous use. The OXO&apos;s extra $7-9 is worth it if you use it regularly."
+        answer: "Yes, significantly better for daily use. The Good Grips handle makes a real difference during extended prep sessions. After 6 years of professional use, I can confirm the comfort advantage matters. The measurement markings are genuinely useful for consistent dough portioning. Generic scrapers work but become uncomfortable after 15-20 minutes of continuous use. The OXO&apos;s extra $7-9 is worth it if you use it regularly."
       },
       {
         question: "Can I use this to cut dough?",
-        answer: "Absolutely—it&apos;s one of the primary uses. The stainless steel blade cuts cleanly through all types of dough: bread, pizza, cookie, pastry. At Purple Café, we portioned dozens of pizza dough balls daily with this scraper. The straight edge gives clean cuts without dragging or tearing. The measurement markings help create consistent portions. It&apos;s far superior to using a knife, which pulls and tears dough."
+        answer: "Yes, it&apos;s one of the primary uses. The stainless steel blade cuts cleanly through all types of dough: bread, pizza, cookie, pastry. At Purple Café, we portioned dozens of pizza dough balls daily with this scraper. The straight edge gives clean cuts without dragging or tearing. The measurement markings help create consistent portions. It&apos;s far superior to using a knife, which pulls and tears dough."
       },
       {
         question: "Will this scratch my cutting board?",
-        answer: "No, when used properly. The beveled edge is designed to scrape surfaces clean without digging in. Hold it at a slight angle (not straight down) and it glides across wood, plastic, or stone boards without damage. I&apos;ve used mine on my John Boos maple cutting board for years with zero scratches. The key is technique—shallow angle, gentle pressure, let the beveled edge do the work."
+        answer: "No, when used properly. The beveled edge is designed to scrape surfaces clean without digging in. Hold it at a slight angle (not straight down) and it glides across wood, plastic, or stone boards without damage. I&apos;ve used mine on my John Boos maple cutting board for years with zero scratches. The key is technique: shallow angle, gentle pressure, let the beveled edge do the work."
       },
       {
         question: "Can I clean wood pizza peels with this?",
-        answer: "Yes, but technique matters. Wood pizza peels—especially soft pine—require gentle cleaning. Hold the bench scraper nearly flat against the peel surface (shallow angle, not straight down) and use light pressure. This removes stuck dough and flour without gouging the wood. At Purple Café, I cleaned our soft pine pizza peels this way for 6 years with no damage. But if you press too hard or use the wrong angle, you&apos;ll leave marks. Gentle pressure, shallow angle, let the blade glide."
+        answer: "Yes, but technique matters. Wood pizza peels (especially soft pine) require gentle cleaning. Hold the bench scraper nearly flat against the peel surface (shallow angle, not straight down) and use light pressure. This removes stuck dough and flour without gouging the wood. At Purple Café, I cleaned our soft pine pizza peels this way for 6 years with no damage. But if you press too hard or use the wrong angle, you&apos;ll leave marks. Gentle pressure, shallow angle, let the blade glide."
       },
       {
         question: "Is it dishwasher-safe?",
-        answer: "Yes, completely dishwasher-safe. I&apos;ve run this exact scraper through hundreds of dishwasher cycles over 20 years—including 6 years of daily professional use at Purple Café—with zero degradation to the blade or handle. No rust, no loosening, no handle deterioration. The etched measurements don&apos;t fade. That said, it&apos;s easy to hand wash if you prefer."
+        answer: "Yes, completely dishwasher-safe. I&apos;ve run this exact scraper through hundreds of dishwasher cycles over 20 years (including 6 years of daily professional use at Purple Café), with zero degradation to the blade or handle. No rust, no loosening, no handle deterioration. The etched measurements don&apos;t fade. That said, it&apos;s easy to hand wash if you prefer."
       },
       {
         question: "How long will this last?",
-        answer: "Decades with proper care. I&apos;ve been using this exact OXO bench scraper for 20 years—including 6 years of daily professional restaurant use. Same scraper, still fully functional, no replacements needed. The stainless steel doesn&apos;t rust or degrade. The Good Grips handle stays comfortable. There&apos;s no wear mechanism that would cause failure. Expect 15-20+ years minimum for home use."
+        answer: "Decades with proper care. I&apos;ve been using this exact OXO bench scraper for 20 years (including 6 years of daily professional restaurant use. Same scraper, still fully functional, no replacements needed. The stainless steel doesn&apos;t rust or degrade. The Good Grips handle stays comfortable. There&apos;s no wear mechanism that would cause failure. Expect 15-20+ years minimum for home use."
       },
       {
         question: "What else can I use this for besides transferring ingredients?",
@@ -359,15 +359,15 @@ export const reviewData = {
   faqData: [
     {
       question: "Do I really need a bench scraper?",
-      answer: "If you do any regular cooking or baking, yes. After 24 years in professional kitchens and 20 years using this exact bench scraper, I can tell you it transforms your workflow. At Purple Café, I used this tool every single day for 6 years—transferring vegetables, portioning dough, cleaning surfaces. Once you start using one, you'll wonder how you cooked without it."
+      answer: "If you do any regular cooking or baking, yes. After 24 years in professional kitchens and 20 years using this exact bench scraper, I can tell you it transforms your workflow. At Purple Café, I used this tool every single day for 6 years: transferring vegetables, portioning dough, cleaning surfaces. Once you start using one, you'll wonder how you cooked without it."
     },
     {
       question: "Is the OXO better than a generic bench scraper?",
-      answer: "Yes, significantly better for daily use. The Good Grips handle makes a real difference during extended prep sessions—after 6 years of professional use, I can confirm the comfort advantage matters. The measurement markings are genuinely useful for consistent dough portioning. The OXO's extra $7-9 is worth it if you use it regularly."
+      answer: "Yes, significantly better for daily use. The Good Grips handle makes a real difference during extended prep sessions. After 6 years of professional use, I can confirm the comfort advantage matters. The measurement markings are genuinely useful for consistent dough portioning. The OXO's extra $7-9 is worth it if you use it regularly."
     },
     {
       question: "Can I use this to cut dough?",
-      answer: "Absolutely—it's one of the primary uses. The stainless steel blade cuts cleanly through all types of dough. At Purple Café, we portioned dozens of pizza dough balls daily with this scraper. The straight edge gives clean cuts without dragging or tearing."
+      answer: "Yes, it's one of the primary uses. The stainless steel blade cuts cleanly through all types of dough. At Purple Café, we portioned dozens of pizza dough balls daily with this scraper. The straight edge gives clean cuts without dragging or tearing."
     },
     {
       question: "Will this scratch my cutting board?",
@@ -383,7 +383,7 @@ export const reviewData = {
     },
     {
       question: "How long will this last?",
-      answer: "Decades with proper care. I've been using this exact OXO bench scraper for 20 years—including 6 years of daily professional restaurant use. Same scraper, still fully functional. Expect 15-20+ years minimum for home use."
+      answer: "Decades with proper care. I've been using this exact OXO bench scraper for 20 years (including 6 years of daily professional restaurant use. Same scraper, still fully functional. Expect 15-20+ years minimum for home use."
     },
     {
       question: "What else can I use this for?",
@@ -417,7 +417,7 @@ export const reviewData = {
   bottomLine: {
     title: "The Most Underrated Tool in Any Kitchen",
     paragraphs: [
-      "After 20 years with this exact bench scraper—including 6 years of daily professional use at Purple Café—I can tell you this is the tool most home cooks don't know they need. It transforms your workflow: chop vegetables, scrape them directly into the pan. Portion dough cleanly without a sticky knife. Keep your cutting board spotless between tasks.",
+      "After 20 years with this exact bench scraper (including 6 years of daily professional use at Purple Café), I can tell you this is the tool most home cooks don't know they need. It transforms your workflow: chop vegetables, scrape them directly into the pan. Portion dough cleanly without a sticky knife. Keep your cutting board spotless between tasks.",
       "At $15, this is one of the best investments you can make in your kitchen efficiency. The OXO Good Grips handle makes it comfortable for extended use, the measurement markings help with consistent portioning, and the stainless steel blade will last decades. Once you start using one, you'll wonder how you ever cooked without it."
     ],
     ctaText: "Check Price on Amazon →"
@@ -441,7 +441,7 @@ export const reviewData = {
       },
       {
         name: "OXO Swivel Peeler",
-        description: "Another essential OXO tool.",
+        description: "Another useful OXO tool.",
         emoji: "🥕",
         href: "/reviews/oxo-good-grips-swivel-peeler"
       },
@@ -473,19 +473,19 @@ export const reviewData = {
       "Wide blade (6 inches) covers more surface area per scrape"
     ],
     minorConsiderations: [
-      "Not sharp enough for hard vegetables—still need a knife for carrots",
+      "Not sharp enough for hard vegetables. Still need a knife for carrots",
       "Blade can scratch non-stick surfaces if used carelessly",
       "Measurements only in inches (no metric markings)",
-      "Handle adds height—won't fit in shallow utensil drawers"
+      "Handle adds height, won't fit in shallow utensil drawers"
     ],
     sections: [
       {
         title: "Dough Work Performance",
-        content: "Every baker needs a bench scraper. At Purple Café, I used this daily for pizza dough portioning—the 6-inch blade cuts through 1-2 pound dough balls cleanly, and the etched measurements let me portion consistently without a scale. The blade is sharp enough to cut cleanly but not so sharp it's dangerous. For bread, pastry, or pizza dough, this is the single most useful tool after your hands."
+        content: "Every baker needs a bench scraper. At Purple Café, I used this daily for pizza dough portioning. The 6-inch blade cuts through 1-2 pound dough balls cleanly, and the etched measurements let me portion consistently without a scale. The blade is sharp enough to cut cleanly but not so sharp it's dangerous. For bread, pastry, or pizza dough, this is the single most useful tool after your hands."
       },
       {
         title: "Board Scraping Efficiency",
-        content: "After dicing onions, mincing garlic, or chopping herbs, a bench scraper clears your board in seconds. One sweep transfers everything to your bowl or pan. In professional kitchens, efficiency is everything—a bench scraper saves dozens of trips to the trash or sink per shift. It keeps your hands clean and your workspace organized. Every prep cook has one within arm's reach."
+        content: "After dicing onions, mincing garlic, or chopping herbs, a bench scraper clears your board in seconds. One sweep transfers everything to your bowl or pan. In professional kitchens, efficiency is everything. A bench scraper saves dozens of trips to the trash or sink per shift. It keeps your hands clean and your workspace organized. Every prep cook has one within arm's reach."
       },
       {
         title: "Handle Ergonomics",
@@ -508,15 +508,15 @@ export const reviewData = {
       },
       {
         title: "Construction Quality",
-        content: "The stainless steel blade is thick enough to resist bending but thin enough to slide under cookies or dough without tearing. The handle-to-blade connection is solid—no wobble, no loosening after years of use. The measurements are etched into the metal, not printed, so they won't wear off. These details separate professional-grade tools from consumer junk."
+        content: "The stainless steel blade is thick enough to resist bending but thin enough to slide under cookies or dough without tearing. The handle-to-blade connection is solid, no wobble, no loosening after years of use. The measurements are etched into the metal, not printed, so they won't wear off. These details separate professional-grade tools from consumer junk."
       },
       {
         title: "Cutting Board Partnership",
-        content: "A bench scraper is only as good as the cutting board you use it with. I use mine most with my John Boos maple board—the smooth wood surface makes scraping effortless, and the bench scraper keeps it clean between tasks. On plastic boards, it works well but can leave scratches over time. Never use on glass or ceramic—you'll dull the edge immediately."
+        content: "A bench scraper is only as good as the cutting board you use it with. I use mine most with my John Boos maple board. The smooth wood surface makes scraping effortless, and the bench scraper keeps it clean between tasks. On plastic boards, it works well but can leave scratches over time. Never use on glass or ceramic. You'll dull the edge immediately."
       },
       {
         title: "Professional vs. Consumer Use",
-        content: "In professional kitchens, a bench scraper sees 50+ uses per day. At home, maybe 5-10 times per cooking session. Either way, the OXO version handles the workload. This isn't a tool you replace often—mine has lasted 10+ years with zero issues. For something under $15 that you'll use for a decade, the value is exceptional."
+        content: "In professional kitchens, a bench scraper sees 50+ uses per day. At home, maybe 5-10 times per cooking session. Either way, the OXO version handles the workload. This isn't a tool you replace often. Mine has lasted 10+ years with zero issues. For something under $15 that you'll use for a decade, the value is exceptional."
       }
     ]
   },
@@ -537,7 +537,7 @@ export const reviewData = {
       "Multi-purpose design: cuts dough, transfers ingredients, scrapes surfaces, cleans pizza peels",
       "Exceptionally comfortable non-slip Good Grips handle tested through 6 years professional use",
       "Built-in measurement markings (inches and cm) for precise dough portioning",
-      "Dishwasher-safe stainless steel that won&apos;t rust—tested 20 years with zero corrosion",
+      "Dishwasher-safe stainless steel that won&apos;t rust (tested 20 years with zero corrosion",
       "Professional-grade durability proven through 6 years daily restaurant use at Purple Café"
     ],
     cons: [
@@ -549,7 +549,7 @@ export const reviewData = {
     affiliateLinks: [],
     inStock: true,
     expertRating: 5.0,
-    expertOpinion: "After 20 years with this exact bench scraper—including 6 years of daily professional use at Purple Café—it remains the most underrated tool in any kitchen. Essential for anyone who does regular prep work or works with dough.",
+    expertOpinion: "After 20 years with this exact bench scraper (including 6 years of daily professional use at Purple Café), it remains the most underrated tool in any kitchen. Essential for anyone who does regular prep work or works with dough.",
     dateAdded: "2025-01-15",
     lastUpdated: "2025-11-14"
   }

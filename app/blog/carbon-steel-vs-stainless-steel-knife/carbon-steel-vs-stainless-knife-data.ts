@@ -19,9 +19,9 @@ export const comparisonData = {
   hero: {
     title: "Carbon Steel vs Stainless Steel Chef's Knives: Which Should You Choose?",
     introduction: [
-      "The carbon steel versus stainless steel knife debate defines professional cooking culture. Walk into high-end Japanese restaurants and you'll see carbon steel. Visit corporate hotel kitchens and it's all stainless. This isn't about which is \"better\"—it's about understanding fundamental trade-offs.",
+      "The carbon steel versus stainless steel knife debate defines professional cooking culture. Walk into high-end Japanese restaurants and you'll see carbon steel. Visit corporate hotel kitchens and it's all stainless. This isn't about which is \"better.\" It's about understanding fundamental trade-offs.",
       "Carbon steel cuts sharper, holds edges longer, and feels more responsive. But it rusts easily, requires constant maintenance, and develops a patina that some love and others find concerning. Stainless steel resists corrosion completely, survives neglect, and needs minimal care. But it won't take as keen an edge and dulls faster under heavy use.",
-      "This comprehensive comparison breaks down the metallurgy, real-world performance differences, maintenance requirements, and honest assessments of what each steel type does well. Whether you're a home cook, aspiring professional, or knife enthusiast, you'll know exactly which steel type matches your needs."
+      "This comparison breaks down the metallurgy, real-world performance differences, maintenance requirements, and honest assessments of what each steel type does well. Whether you're a home cook, aspiring professional, or knife enthusiast, you'll know exactly which steel type matches your needs."
     ]
   },
 
@@ -178,14 +178,14 @@ export const comparisonData = {
           option: "carbon",
           title: "Carbon Steel: Maximum Performance, Maximum Maintenance",
           content: [
-            "Carbon steel contains 98-99% iron with 0.6-1.5% carbon and minimal chromium (under 3%). That low chromium content is critical—chromium creates corrosion resistance in stainless steel. Without it, carbon steel is chemically reactive and will oxidize (rust) when exposed to moisture and acids.",
+            "Carbon steel contains 98-99% iron with 0.6-1.5% carbon and minimal chromium (under 3%). That low chromium content is critical: chromium creates corrosion resistance in stainless steel. Without it, carbon steel is chemically reactive and will oxidize (rust) when exposed to moisture and acids.",
             "**Common Carbon Steel Types in Kitchen Knives:**",
             "- **White Steel #1 (Shirogami)** - Purest carbon steel, easiest to sharpen, most reactive",
             "- **White Steel #2** - Slightly more durable, still very reactive",
             "- **Blue Steel #1 (Aogami)** - Added tungsten and chromium for toughness",
             "- **Blue Steel #2** - Balance of sharpness and durability",
             "- **1095 Carbon Steel** - Western standard, good hardness (56-58 HRC)",
-            "The advantage of carbon steel's reactive quality is that the steel structure is simpler and more homogeneous. It sharpens faster, holds a keener edge, and responds better to honing. Professional Japanese sushi chefs overwhelmingly prefer carbon steel because they can achieve—and maintain—edges sharp enough to slice boneless fish paper-thin."
+            "The advantage of carbon steel's reactive quality is that the steel structure is simpler and more homogeneous. It sharpens faster, holds a keener edge, and responds better to honing. Professional Japanese sushi chefs overwhelmingly prefer carbon steel because they can achieve (and maintain) edges sharp enough to slice boneless fish paper-thin."
           ]
         },
         {
@@ -216,7 +216,7 @@ export const comparisonData = {
             "**Professional Use Testing Data:**",
             "- **Carbon steel:** Professional sharpening every 6-8 weeks (4-6 hours daily cutting)",
             "- **Stainless steel:** Professional sharpening every 4-6 weeks (identical use)",
-            "For home cooks using knives 30-45 minutes daily, these intervals extend 4-5x. Carbon steel typically needs sharpening 2-3 times yearly versus stainless 3-4 times yearly—not a dramatic difference for home use.",
+            "For home cooks using knives 30-45 minutes daily, these intervals extend 4-5x. Carbon steel typically needs sharpening 2-3 times yearly versus stainless 3-4 times yearly, not a dramatic difference for home use.",
             "**Why Carbon Steel Holds an Edge Longer:** Carbon steel has a finer, more uniform grain structure at the microscopic level. When you sharpen carbon steel, you're creating an edge from relatively consistent material. Stainless steel's chromium carbides create slight irregularities in the edge that lead to faster dulling."
           ]
         },
@@ -226,7 +226,7 @@ export const comparisonData = {
           content: [
             "Stainless steel knives perform excellently for both home and professional use. The sharpness difference compared to carbon is measurable in laboratory conditions but subtle in everyday cooking.",
             "Under scanning electron microscope analysis, stainless steel edges show microscopic irregularities from chromium carbides, while carbon steel edges appear cleaner and more uniform. These irregularities mean stainless edges are slightly less refined.",
-            "**The Practical Impact:** Carbon steel glides through ingredients with slightly less effort. Stainless steel cuts through ingredients with minimal perceptible difference for most users. Both work excellently—carbon just feels marginally more effortless during extended cutting sessions."
+            "**The Practical Impact:** Carbon steel glides through ingredients with slightly less effort. Stainless steel cuts through ingredients with minimal perceptible difference for most users. Both work excellently. Carbon just feels marginally more effortless during extended cutting sessions."
           ]
         }
       ]
@@ -288,7 +288,7 @@ export const comparisonData = {
             "- Acids - Tomatoes, citrus, vinegar, onions",
             "- Salt - Accelerates rust formation",
             "- Humidity - Even ambient moisture in humid climates",
-            "**Patina Development:** Carbon steel inevitably develops a patina—dark gray/blue/bronze discoloration from natural oxidation. This is NOT rust. Patina is a protective layer of iron carbonate that actually helps prevent deeper rust.",
+            "**Patina Development:** Carbon steel inevitably develops a patina, a dark gray/blue/bronze discoloration from natural oxidation. This is NOT rust. Patina is a protective layer of iron carbonate that actually helps prevent deeper rust.",
             "**Patina Timeline:**",
             "- Week 1: Bright, shiny finish from factory",
             "- Week 2-4: Gray discoloration begins near edge",
@@ -302,7 +302,7 @@ export const comparisonData = {
           title: "Stainless Steel: Virtually Rust-Proof",
           content: [
             "Stainless steel resists corrosion under virtually all normal kitchen conditions. Knives can be left wet overnight, exposed to acidic foods, or stored in humid environments without any rust formation.",
-            "The chromium content (12-13% minimum) forms a passive oxide layer that self-repairs when scratched. This is the entire point of stainless steel—trading a few percentage points of edge performance for complete corrosion resistance.",
+            "The chromium content (12-13% minimum) forms a passive oxide layer that self-repairs when scratched. This is the entire point of stainless steel: trading a few percentage points of edge performance for complete corrosion resistance.",
             "**Stainless Steel's Unchanging Appearance:** The blade looks the same on day 1 and day 1,000. Shiny, bright, professional. No patina development. Minor scratches from cutting boards may appear, but surface appearance remains consistent.",
             "**One Exception:** Stainless can develop pitting corrosion if exposed to chlorine bleach or extremely high salt concentrations for extended periods. Under normal cooking conditions, even worst-case neglect won't cause rust."
           ]
@@ -322,7 +322,7 @@ export const comparisonData = {
             "- Softer carbides are easier for stones to cut",
             "- More uniform grain structure ensures consistent material removal",
             "- Less chromium means no hard protective layer to penetrate",
-            "The feedback during sharpening is clear and immediate—you feel the burr forming and sense the edge developing. Many knife enthusiasts find carbon steel sharpening almost meditative."
+            "The feedback during sharpening is clear and immediate: you feel the burr forming and sense the edge developing. Many knife enthusiasts find carbon steel sharpening almost meditative."
           ]
         },
         {
@@ -489,7 +489,7 @@ export const comparisonData = {
       },
       {
         question: "Is carbon steel sharper than stainless steel?",
-        answer: "Yes, carbon steel achieves measurably sharper edges—typically 15-20% keener than stainless steel at equivalent hardness levels. Carbon steel also holds that edge 10-15% longer under identical use. However, for most home cooks, both perform excellently, and the difference is subtle rather than dramatic."
+        answer: "Yes, carbon steel achieves measurably sharper edges, typically 15-20% keener than stainless steel at equivalent hardness levels. Carbon steel also holds that edge 10-15% longer under identical use. However, for most home cooks, both perform excellently, and the difference is subtle rather than dramatic."
       },
       {
         question: "Can I put stainless steel knives in the dishwasher?",
@@ -497,7 +497,7 @@ export const comparisonData = {
       },
       {
         question: "What is the patina on carbon steel knives?",
-        answer: "Patina is a dark gray, blue, or bronze discoloration that naturally forms on carbon steel through oxidation. It's NOT rust—it's a protective layer of iron carbonate that actually helps prevent deeper corrosion. Patina develops over weeks and months of use, creating unique patterns based on what you cut and how you maintain the knife."
+        answer: "Patina is a dark gray, blue, or bronze discoloration that naturally forms on carbon steel through oxidation. It's NOT rust. It's a protective layer of iron carbonate that actually helps prevent deeper corrosion. Patina develops over weeks and months of use, creating unique patterns based on what you cut and how you maintain the knife."
       },
       {
         question: "Are carbon steel knives worth the extra maintenance?",

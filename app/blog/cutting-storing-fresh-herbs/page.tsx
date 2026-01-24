@@ -60,12 +60,12 @@ export default function HerbsPage() {
         datePublished="2025-09-14"
         tools={["Sharp chef's knife or kitchen scissors", "Salad spinner", "Paper towels", "Glass jar or container", "Plastic bag"]}
         steps={[
-          { name: "Wash Herbs Properly", text: "Fill a large bowl with cold water. Submerge herbs and agitate gently. Lift herbs out (dirt sinks to bottom). Repeat if water is dirty. Never run herbs under direct stream—it damages leaves." },
-          { name: "Dry Herbs Thoroughly", text: "Place washed herbs in a salad spinner and spin until no water droplets remain. This is critical—wet herbs oxidize faster and become slimy in storage." },
+          { name: "Wash Herbs Properly", text: "Fill a large bowl with cold water. Submerge herbs and agitate gently. Lift herbs out (dirt sinks to bottom). Repeat if water is dirty. Never run herbs under direct stream. It damages leaves." },
+          { name: "Dry Herbs Thoroughly", text: "Place washed herbs in a salad spinner and spin until no water droplets remain. This is critical: wet herbs oxidize faster and become slimy in storage." },
           { name: "Cut with Sharp Knife", text: "Use a very sharp knife to slice cleanly through herb cells with minimal crushing. For basil, use chiffonade method: stack leaves, roll tightly, slice thin ribbons. For cilantro/parsley, group stems and chop with rocking motion. Dull knives bruise herbs and cause rapid blackening." },
           { name: "Store Tender Herbs in Water", text: "For cilantro, parsley, and mint: trim ½ inch from stem bottoms, place in glass with 1-2 inches of water, cover loosely with plastic bag, refrigerate. Change water every 2-3 days. Lasts 1-2 weeks." },
           { name: "Store Hardy Herbs in Damp Towel", text: "For rosemary, thyme, sage: lay herbs on damp (not wet) paper towel, roll loosely, place in plastic bag or container, refrigerate. Lasts 1-2 weeks." },
-          { name: "Handle Basil Specially", text: "Basil hates cold—never refrigerate. Store at room temperature with stems in water, loosely covered. Cut basil immediately before use as it oxidizes within 10-15 minutes." }
+          { name: "Handle Basil Specially", text: "Basil hates cold. Never refrigerate. Store at room temperature with stems in water, loosely covered. Cut basil immediately before use as it oxidizes within 10-15 minutes." }
         ]}
       />
 
@@ -90,7 +90,7 @@ export default function HerbsPage() {
           </div>
 
           <p>
-            Fresh herbs transform cooking. The difference between dried and fresh basil isn&apos;t subtle—it&apos;s the difference between flat, one-dimensional flavor and bright, aromatic complexity.
+            Fresh herbs transform cooking. The difference between dried and fresh basil isn&apos;t subtle. It&apos;s the difference between flat, one-dimensional flavor and bright, aromatic complexity.
           </p>
 
           <p>
@@ -102,7 +102,7 @@ export default function HerbsPage() {
           </p>
 
           <p>
-            Let me show you how to cut and store herbs the way professionals do—techniques that preserve flavor, extend freshness, and elevate your cooking.
+            Let me show you how to cut and store herbs the way professionals do, techniques that preserve flavor, extend freshness, and improve your cooking.
           </p>
 
           <h2 className="flex items-center gap-2">
@@ -114,7 +114,7 @@ export default function HerbsPage() {
 
           <p>
             <strong className="font-semibold text-slate-900">Cell Structure:</strong>{' '}
-            Unlike dense vegetables (carrots, onions), herbs have delicate cell walls filled with aromatic essential oils. Damaging cells releases these oils—which is good for flavor, but bad for storage.
+            Unlike dense vegetables (carrots, onions), herbs have delicate cell walls filled with aromatic essential oils. Damaging cells releases these oils, which is good for flavor, but bad for storage.
           </p>
 
           <p>
@@ -407,7 +407,7 @@ export default function HerbsPage() {
             <li>Trim 1/2 inch from stem bottoms (fresh cut absorbs water better)</li>
             <li>Place stems in glass or jar with 1-2 inches of water</li>
             <li>Cover loosely with plastic bag</li>
-            <li>Refrigerate (except basil—store at room temperature)</li>
+            <li>Refrigerate (except basil, which stays at room temperature)</li>
             <li>Change water every 2-3 days</li>
             <li>Lasts 1-2 weeks</li>
           </ol>
@@ -425,7 +425,7 @@ export default function HerbsPage() {
             <strong>Don&apos;t Use For:</strong>
           </p>
           <ul>
-            <li>Basil (refrigeration causes blackening—store at room temp)</li>
+            <li>Basil (refrigeration causes blackening, store at room temp)</li>
           </ul>
 
           <h3>Method #2: Damp Paper Towel Wrap (Universal Method)</h3>
@@ -575,7 +575,7 @@ export default function HerbsPage() {
               Chef&apos;s Insight
             </p>
             <p className="mb-0 text-slate-700">
-              At Purple Café, proper basil handling was critical. Use a razor-sharp, finely-steeled knife for clean cuts—dull blades bruise the leaves and cause oxidation. Never push down on basil to fit more in your storage container; the pressure bruises it and turns it black. For fresh applications, nothing beats fresh basil. Know what you&apos;re using herbs for, then store accordingly.
+              At Purple Café, proper basil handling was critical. Use a razor-sharp, finely-steeled knife for clean cuts. Dull blades bruise the leaves and cause oxidation. Never push down on basil to fit more in your storage container; the pressure bruises it and turns it black. For fresh applications, nothing beats fresh basil. Know what you&apos;re using herbs for, then store accordingly.
             </p>
           </div>
 
@@ -688,7 +688,7 @@ export default function HerbsPage() {
           <h2>The Bottom Line on Herbs</h2>
 
           <p>
-            Fresh herbs elevate cooking from good to great—but only if you handle them properly. The difference between professional results and disappointing herbs comes down to:
+            Fresh herbs take cooking from good to great, but only if you handle them properly. The difference between professional results and disappointing herbs comes down to:
           </p>
 
           <ol>

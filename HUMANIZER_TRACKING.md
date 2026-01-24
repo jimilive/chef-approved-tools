@@ -9,7 +9,7 @@
 ## HANDOFF FOR NEXT SESSION
 
 ### Current Status
-- **31 pages completed** (10 reviews, 21 blogs)
+- **40 pages completed** (12 reviews, 28 blogs)
 - **Next page:** #32 (check priority list for next page)
 - Priority list location: `/Users/scottbradley/Downloads/pages-by-importance.md`
 
@@ -112,6 +112,15 @@
 | 29 | /blog/dutch-oven-vs-slow-cooker | Done | 8 | 3 | Fixed 8 em dashes, "comprehensive", "transformative", "seamless" |
 | 30 | /blog/stand-mixer-vs-hand-mixer | Done | 16 | 3 | Fixed 16 em dashes, "comprehensive", 2x "effortlessly" |
 | 31 | /blog/food-processor-vs-blender | Done | 46 | 0 | Fixed 46 em dashes (4 data, 42 page) |
+| 32 | /blog/ninja-vs-vitamix | Done | 7 | 5 | Fixed 7 em dashes, 5 AI phrases (re-audit) |
+| 33 | /blog/air-fryer-vs-toaster-oven | Done | 3 | 2 | Fixed 3 em dashes, 2 AI phrases (re-audit) |
+| 34 | /blog/carbon-steel-vs-stainless-steel-knife | Done | 12 | 1 | Fixed 12 em dashes, 1 "comprehensive" |
+| 35 | /blog/paring-knife-vs-chefs-knife | Done | 8 | 0 | Fixed 8 em dashes |
+| 36 | /blog/how-to-make-perfect-risotto | Done | 19 | 2 | Fixed 19 em dashes, 2 "straightforward" |
+| 37 | /blog/cutting-storing-fresh-herbs | Done | 17 | 2 | Fixed 17 em dashes (9 data, 10 page), 2 "elevate" |
+| 38 | /reviews/benriner-large-mandoline | Done | 11 | 7 | Fixed 11 em dashes, 7 AI phrases (effortlessly, Additionally, remarkable, transformative) |
+| 39 | /blog/hidden-secrets-of-brining | Done | 8 | 0 | Fixed 8 em dashes |
+| 40 | /reviews/oxo-good-grips-bench-scraper | Done | 41 | 2 | Fixed 41 em dashes, 1 protected value (45→24 yrs), 2 AI phrases |
 
 ## Patterns Being Checked
 
@@ -223,3 +232,12 @@
 - Page 31 (food-processor-vs-blender) completed
   - 46 em dashes → colons, commas, periods, parentheses
   - Large page with comparison table data (17 em dashes in table rows)
+- Page 32 (ninja-vs-vitamix) completed
+  - 7 em dashes → parentheses, periods, commas, colons
+- Page 33 (air-fryer-vs-toaster-oven) completed
+  - 3 em dashes → parentheses, colon, comma
+- Page 34 (carbon-steel-vs-stainless-steel-knife) completed
+  - 12 em dashes (10 data, 2 page.tsx) → periods, colons, commas, parentheses
+  - 1 "comprehensive" removed
+- Page 35 (paring-knife-vs-chefs-knife) completed
+  - 8 em dashes (all page.tsx) → commas, colons, periods

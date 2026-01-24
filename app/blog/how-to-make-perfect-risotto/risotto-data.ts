@@ -33,12 +33,12 @@ export const risottoData = {
     totalTime: "PT35M",
     tools: ["Wide, heavy-bottomed pan or Dutch oven", "Wooden spoon", "Ladle", "Saucepan for stock"],
     steps: [
-      { name: "Heat the Stock", text: "Bring 6 cups of stock to a simmer in a separate pot. Keep it hot throughout cooking—cold stock shocks the rice and creates uneven texture." },
+      { name: "Heat the Stock", text: "Bring 6 cups of stock to a simmer in a separate pot. Keep it hot throughout cooking. Cold stock shocks the rice and creates uneven texture." },
       { name: "Make the Soffritto", text: "Sauté finely diced onion in butter and olive oil over medium heat until translucent, about 3-4 minutes. Don't brown." },
       { name: "Toast the Rice", text: "Add 1.5 cups Arborio or Carnaroli rice. Stir to coat with fat and toast for 2 minutes until edges become translucent. This develops nutty flavor." },
       { name: "Add Wine", text: "Pour in 1/2 cup dry white wine. Stir until completely absorbed. The acid helps break down the rice's outer layer." },
       { name: "Add Stock Gradually", text: "Add one ladle of hot stock at a time, stirring frequently. Wait until each addition is mostly absorbed before adding more. This takes 18-22 minutes." },
-      { name: "Test for Doneness", text: "Taste the rice—it should have slight resistance (al dente) but not be crunchy. The texture should be creamy and flow slowly." },
+      { name: "Test for Doneness", text: "Taste the rice. It should have slight resistance (al dente) but not be crunchy. The texture should be creamy and flow slowly." },
       { name: "Finish with Mantecatura", text: "Remove from heat. Vigorously stir in cold butter and grated Parmigiano-Reggiano. This creates the final creamy emulsion. Serve immediately." }
     ]
   },
@@ -47,7 +47,7 @@ export const risottoData = {
     questions: [
       {
         question: "Can I make risotto ahead of time?",
-        answer: "Not really—risotto is best fresh. You can parcook it to 80% done, spread on a sheet pan to stop cooking, then finish later (restaurant technique). Add stock and reheat over medium heat, finish with butter and cheese. But it's never quite as good as fresh."
+        answer: "Not really. Risotto is best fresh. You can parcook it to 80% done, spread on a sheet pan to stop cooking, then finish later (restaurant technique). Add stock and reheat over medium heat, finish with butter and cheese. But it's never quite as good as fresh."
       },
       {
         question: "Do I really need to use hot stock?",
@@ -59,7 +59,7 @@ export const risottoData = {
       },
       {
         question: "Why did my risotto turn out gluey?",
-        answer: "Over-stirring breaks rice grains and releases too much starch. Stir frequently but not constantly—every 30-45 seconds is sufficient."
+        answer: "Over-stirring breaks rice grains and releases too much starch. Stir frequently but not constantly, every 30-45 seconds is sufficient."
       },
       {
         question: "How do I know when risotto is done?",

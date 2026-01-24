@@ -22,7 +22,7 @@ export const briningData = {
   hero: {
     title: "The Hidden Secrets of Brining",
     introduction: [
-      "Professional kitchens brine lean proteins because the difference between brined and unbrined meat isn't subtle—it's the difference between juicy, tender results and dry, disappointing texture.",
+      "Professional kitchens brine lean proteins because the difference between brined and unbrined meat isn't subtle. It's the difference between juicy, tender results and dry, disappointing texture.",
       "Brining isn't magic. It's controlled protein chemistry that restructures muscle tissue to trap moisture during cooking."
     ]
   },
@@ -52,7 +52,7 @@ export const briningData = {
       subsections: [
         {
           title: "Diffusion, Not Osmosis",
-          content: "Salt and water both penetrate meat through diffusion—molecules move from high concentration (the brine) to lower concentration (inside the meat cells). Both salt ions and water molecules move into the protein, though at different rates."
+          content: "Salt and water both penetrate meat through diffusion. Molecules move from high concentration (the brine) to lower concentration (inside the meat cells). Both salt ions and water molecules move into the protein, though at different rates."
         },
         {
           title: "Protein Denaturing",
@@ -173,7 +173,7 @@ export const briningData = {
           bestFor: "Extremely lean proteins (chicken breast, turkey breast, pork tenderloin), fish and seafood, novice cooks needing more margin for error, when maximum moisture insurance is required.",
           advantages: [
             "Adds moisture during brining process",
-            "More forgiving—harder to dry out during cooking",
+            "More forgiving, harder to dry out during cooking",
             "Can infuse additional flavors from aromatics",
             "Faster salt penetration"
           ],
@@ -190,13 +190,13 @@ export const briningData = {
           bestFor: "Skin-on poultry where crispy skin is desired, fattier cuts, any protein where browning and crust formation is important, deep-fried poultry.",
           advantages: [
             "Produces dramatically crispier skin by drying surface",
-            "Deeper, more concentrated flavor—no dilution",
+            "Deeper, more concentrated flavor, no dilution",
             "Minimal refrigerator space required",
             "No mess, no large containers",
             "Better Maillard reaction and caramelization"
           ],
           disadvantages: [
-            "Less moisture insurance—slightly easier to overcook",
+            "Less moisture insurance, slightly easier to overcook",
             "Takes longer for same level of salt penetration",
             "Requires uncovered refrigerator storage"
           ]
@@ -216,14 +216,14 @@ export const briningData = {
         {
           name: "Using Volume Instead of Weight for Salt",
           mistake: "Measuring salt by cups/tablespoons without accounting for salt type.",
-          consequence: "Wildly inconsistent results. Table salt is much denser than kosher salt—using \"1 cup\" of each produces drastically different concentrations.",
+          consequence: "Wildly inconsistent results. Table salt is much denser than kosher salt. Using \"1 cup\" of each produces drastically different concentrations.",
           correct: "Weigh salt on a scale. Use percentages by weight. A gram of salt is always a gram regardless of crystal size."
         },
         {
           name: "Not Drying After Brining",
           mistake: "Cooking wet meat straight from brine.",
           consequence: "Steaming instead of browning. No crispy skin. Grey, unappealing appearance.",
-          correct: "Pat completely dry with paper towels before cooking. For dry-brined poultry, the extended uncovered refrigeration already dried the surface—proceed directly to cooking."
+          correct: "Pat completely dry with paper towels before cooking. For dry-brined poultry, the extended uncovered refrigeration already dried the surface. Proceed directly to cooking."
         },
         {
           name: "Brining Already-Enhanced Meat",
@@ -243,7 +243,7 @@ export const briningData = {
       id: "conclusion",
       title: "Putting It All Together",
       content: [
-        "Brining works because the science is sound. Salt restructures muscle proteins, creating a matrix that traps moisture during cooking. This isn't chef mythology—it's measurable, repeatable chemistry.",
+        "Brining works because the science is sound. Salt restructures muscle proteins, creating a matrix that traps moisture during cooking. This isn't chef mythology. It's measurable, repeatable chemistry.",
         "The technique transforms economical, lean cuts into reliably juicy results. A properly brined chicken breast tolerates slight overcooking without becoming dry. An unbrined breast has no margin for error.",
         "Start simple: brine chicken breasts for 1 hour in 1 cup kosher salt per gallon of water. Pat dry thoroughly. Cook to 165°F. Compare the texture to your usual method. The difference will be obvious enough that brining becomes standard practice rather than optional technique."
       ]

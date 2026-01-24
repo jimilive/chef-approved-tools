@@ -104,7 +104,7 @@ export const comparisonData = {
   detailedSections: [
     {
       id: "where-victorinox-wins",
-      title: "Where Victorinox Wins",
+      title: "Victorinox vs Wüsthof: Where Victorinox Wins",
       subsections: [
         {
           title: "Unbeatable Value",
@@ -138,7 +138,7 @@ export const comparisonData = {
     },
     {
       id: "where-wusthof-wins",
-      title: "Where Wüsthof Wins",
+      title: "Wüsthof vs Victorinox: Where Wüsthof Wins",
       subsections: [
         {
           title: "Superior Edge Retention",
@@ -172,7 +172,7 @@ export const comparisonData = {
     },
     {
       id: "real-world-testing",
-      title: "Real-World Testing: Using Both in Professional Kitchens",
+      title: "Victorinox vs Wüsthof: Real-World Professional Testing",
       subsections: [
         {
           title: "My Experience with Both",
@@ -199,7 +199,7 @@ export const comparisonData = {
     },
     {
       id: "the-verdict",
-      title: "The Verdict: Which Should You Buy?",
+      title: "Wüsthof vs Victorinox: Which Should You Buy?",
       subsections: [
         {
           title: "For Most Home Cooks: Victorinox",

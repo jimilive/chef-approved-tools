@@ -70,12 +70,12 @@ export default function PerfectRisottoPage() {
         totalTime="PT35M"
         tools={["Wide, heavy-bottomed pan or Dutch oven", "Wooden spoon", "Ladle", "Saucepan for stock"]}
         steps={[
-          { name: "Heat the Stock", text: "Bring 6 cups of stock to a simmer in a separate pot. Keep it hot throughout cooking—cold stock shocks the rice and creates uneven texture." },
+          { name: "Heat the Stock", text: "Bring 6 cups of stock to a simmer in a separate pot. Keep it hot throughout cooking. Cold stock shocks the rice and creates uneven texture." },
           { name: "Make the Soffritto", text: "Sauté finely diced onion in butter and olive oil over medium heat until translucent, about 3-4 minutes. Don't brown." },
           { name: "Toast the Rice", text: "Add 1.5 cups Arborio or Carnaroli rice. Stir to coat with fat and toast for 2 minutes until edges become translucent. This develops nutty flavor." },
           { name: "Add Wine", text: "Pour in 1/2 cup dry white wine. Stir until completely absorbed. The acid helps break down the rice's outer layer." },
           { name: "Add Stock Gradually", text: "Add one ladle of hot stock at a time, stirring frequently. Wait until each addition is mostly absorbed before adding more. This takes 18-22 minutes." },
-          { name: "Test for Doneness", text: "Taste the rice—it should have slight resistance (al dente) but not be crunchy. The texture should be creamy and flow slowly." },
+          { name: "Test for Doneness", text: "Taste the rice. It should have slight resistance (al dente) but not be crunchy. The texture should be creamy and flow slowly." },
           { name: "Finish with Mantecatura", text: "Remove from heat. Vigorously stir in cold butter and grated Parmigiano-Reggiano. This creates the final creamy emulsion. Serve immediately." }
         ]}
       />
@@ -96,15 +96,15 @@ export default function PerfectRisottoPage() {
               Restaurant Reality
             </p>
             <p className="mb-0">
-              At Feierabend in Seattle, we had mushroom risotto on the menu nightly. I&apos;d watch new cooks try to rush it, adding all the stock at once or stirring frantically like their life depended on it. The result? Gummy, sticky rice that looked like porridge. Risotto isn&apos;t difficult, but it requires understanding what&apos;s happening at a chemical level and respecting the timing. The secret to creamy risotto isn&apos;t cream—it&apos;s starch release controlled through gradual hydration and gentle agitation. Today I&apos;m going to show you the exact technique that creates restaurant-quality risotto every single time.
+              At Feierabend in Seattle, we had mushroom risotto on the menu nightly. I&apos;d watch new cooks try to rush it, adding all the stock at once or stirring frantically like their life depended on it. The result? Gummy, sticky rice that looked like porridge. Risotto isn&apos;t difficult, but it requires understanding what&apos;s happening at a chemical level and respecting the timing. The secret to creamy risotto isn&apos;t cream. It&apos;s starch release controlled through gradual hydration and gentle agitation. Today I&apos;m going to show you the exact technique that creates restaurant-quality risotto every single time.
             </p>
           </div>
           <p>
-            Risotto intimidates home cooks more than it should. There&apos;s this mythology around it—constant stirring for 45 minutes, mysterious techniques, special skills only Italian grandmothers possess. Food TV hasn&apos;t helped, making it seem like you need to stir non-stop or the rice police will arrest you.
+            Risotto intimidates home cooks more than it should. There&apos;s this mythology around it: constant stirring for 45 minutes, mysterious techniques, special skills only Italian grandmothers possess. Food TV hasn&apos;t helped, making it seem like you need to stir non-stop or the rice police will arrest you.
           </p>
 
           <p>
-            <strong>Here&apos;s the truth: Risotto is rice cooked in a specific way to maximize starch release.</strong> That&apos;s it. You&apos;re not performing surgery. You&apos;re extracting starch from rice grains through controlled hydration, then using that starch to create creaminess. Once you understand the science, risotto becomes straightforward and predictable.
+            <strong>Here&apos;s the truth: Risotto is rice cooked in a specific way to maximize starch release.</strong> That&apos;s it. You&apos;re not performing surgery. You&apos;re extracting starch from rice grains through controlled hydration, then using that starch to create creaminess. Once you understand the science, risotto becomes simple and predictable.
           </p>
 
           <h2>What Makes Risotto Different from Regular Rice</h2>
@@ -135,7 +135,7 @@ export default function PerfectRisottoPage() {
               Common Misconception
             </p>
             <p className="mb-0 text-amber-900">
-              You don&apos;t need to stir risotto constantly for 30 minutes straight. That&apos;s exhausting and unnecessary. You need to stir frequently enough to release starch and prevent sticking—about every 30-45 seconds. Save your arm and your sanity.
+              You don&apos;t need to stir risotto constantly for 30 minutes straight. That&apos;s exhausting and unnecessary. You need to stir frequently enough to release starch and prevent sticking, about every 30-45 seconds. Save your arm and your sanity.
             </p>
           </div>
 
@@ -203,7 +203,7 @@ export default function PerfectRisottoPage() {
 
           <h3>Step 1: Heat Stock (5 Minutes)</h3>
 
-          <p>Bring stock to a simmer in a saucepan and <strong>keep it hot</strong> throughout cooking. This is critical—cold stock stops the cooking process.</p>
+          <p>Bring stock to a simmer in a saucepan and <strong>keep it hot</strong> throughout cooking. This is critical: cold stock stops the cooking process.</p>
 
           <h3>Step 2: Soffritto (5 Minutes)</h3>
 
@@ -211,7 +211,7 @@ export default function PerfectRisottoPage() {
             <li>Heat 2 tbsp butter and 2 tbsp olive oil in wide, heavy-bottomed pan over medium heat</li>
             <li>Add diced onion/shallot</li>
             <li>Cook until translucent and soft (5 minutes)</li>
-            <li><strong>Do not brown</strong>—browned onions create wrong flavor profile</li>
+            <li><strong>Do not brown</strong>. Browned onions create wrong flavor profile</li>
             <li>Season lightly with salt</li>
           </ol>
 
@@ -224,7 +224,7 @@ export default function PerfectRisottoPage() {
             <li>Stir to coat every grain with fat</li>
             <li>Cook 2-3 minutes, stirring constantly</li>
             <li>Rice should turn slightly translucent at edges (called &quot;pearling&quot;)</li>
-            <li><strong>Do not let rice brown</strong>—just coat and heat through</li>
+            <li><strong>Do not let rice brown</strong>. Just coat and heat through</li>
           </ol>
 
           <p><strong>Why this matters</strong>: Toasting creates a barrier that helps rice cook evenly and maintain texture. Skipping this step creates mushy risotto.</p>
@@ -234,7 +234,7 @@ export default function PerfectRisottoPage() {
           <ol>
             <li>Add 1 cup hot stock</li>
             <li>Stir frequently (every 30-45 seconds)</li>
-            <li>Keep at steady simmer—not rolling boil, not barely bubbling</li>
+            <li>Keep at steady simmer, not rolling boil, not barely bubbling</li>
             <li>When stock is mostly absorbed (pan looks almost dry), add next addition</li>
           </ol>
 
@@ -265,7 +265,7 @@ export default function PerfectRisottoPage() {
             <li>Taste and adjust salt/pepper</li>
           </ol>
 
-          <p><strong>This step is critical</strong>: The vigorous stirring emulsifies butter and cheese into the starch, creating final creaminess. Don&apos;t be gentle—beat it like you mean it.</p>
+          <p><strong>This step is critical</strong>: The vigorous stirring emulsifies butter and cheese into the starch, creating final creaminess. Don&apos;t be gentle. Beat it like you mean it.</p>
 
           <p><strong>Texture check</strong>: Risotto should flow slowly when you tilt the pan. &quot;All&apos;onda&quot; (wave-like) is the Italian term. If too thick, add splash more stock.</p>
 
@@ -288,7 +288,7 @@ export default function PerfectRisottoPage() {
 
           <p><strong>Problem</strong>: Rice grains have no structure, texture is like pudding</p>
 
-          <p><strong>Fix</strong>: Can&apos;t fix overcooked rice, but you can repurpose—make arancini (fried rice balls)</p>
+          <p><strong>Fix</strong>: Can&apos;t fix overcooked rice, but you can repurpose it: make arancini (fried rice balls)</p>
 
           <p><strong>Prevention</strong>: Start tasting at 15 minutes, pull off heat while rice still has slight resistance</p>
 
@@ -309,11 +309,11 @@ export default function PerfectRisottoPage() {
           </p>
 
           <p>
-            <strong>Risotto isn&apos;t mysterious—it&apos;s a straightforward technique that requires attention and proper timing.</strong>
+            <strong>Risotto isn&apos;t mysterious. It&apos;s a simple technique that requires attention and proper timing.</strong>
           </p>
 
           <p>
-            The mythology around risotto intimidates people unnecessarily. Yes, you need to stir frequently. Yes, you need to add stock gradually. Yes, timing matters. But these aren&apos;t arcane secrets—they&apos;re basic cooking technique that anyone can learn.
+            The mythology around risotto intimidates people unnecessarily. Yes, you need to stir frequently. Yes, you need to add stock gradually. Yes, timing matters. But these aren&apos;t arcane secrets. They&apos;re basic cooking technique that anyone can learn.
           </p>
 
           <p>The keys to perfect risotto:</p>
@@ -328,7 +328,7 @@ export default function PerfectRisottoPage() {
           </ol>
 
           <p>
-            Master basic risotto, then experiment with variations. Once you understand the technique, you can make risotto with anything—vegetables, seafood, mushrooms, whatever sounds good.
+            Master basic risotto, then experiment with variations. Once you understand the technique, you can make risotto with anything: vegetables, seafood, mushrooms, whatever sounds good.
           </p>
 
           <p>

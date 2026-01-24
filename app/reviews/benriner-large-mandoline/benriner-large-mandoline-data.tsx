@@ -33,7 +33,7 @@ export const reviewData = {
     category: 'Kitchen Equipment',
     pros: [
       'Japanese precision engineering - consistent results every time',
-      'Ultra-sharp blade handles paper-thin slicing effortlessly',
+      'Ultra-sharp blade handles paper-thin slicing easily',
       '70% faster than knife work for uniform slicing',
       'Precise thickness adjustment from paper-thin to 5mm',
       'Large capacity handles big vegetables (onions, potatoes)',
@@ -63,11 +63,11 @@ export const reviewData = {
     },
     {
       question: 'How dangerous is a mandoline slicer?',
-      answer: "Extremely sharp blade requires serious respect. Always use the hand guard, never slice without it. Professional kitchens require cut-resistant gloves when using mandolines. The blade is sharp enough to slice through fingernails effortlessly—this is not an exaggeration. With proper safety protocols, it's safe. Without them, it's one of the most dangerous tools in the kitchen.",
+      answer: "Extremely sharp blade requires serious respect. Always use the hand guard, never slice without it. Professional kitchens require cut-resistant gloves when using mandolines. The blade is sharp enough to slice through fingernails easily. This is not an exaggeration. With proper safety protocols, it's safe. Without them, it's one of the most dangerous tools in the kitchen.",
     },
     {
       question: "What's the difference between Benriner and cheap mandolines?",
-      answer: 'The blade quality is night and day. Benriner uses high-carbon Japanese stainless steel that stays sharp significantly longer. Cheap mandolines dull quickly and produce inconsistent results. Additionally, the adjustment mechanism on Benriner is precise and repeatable. Budget mandolines often have loose, imprecise adjustments that defeat the purpose of uniform slicing.',
+      answer: 'The blade quality is night and day. Benriner uses high-carbon Japanese stainless steel that stays sharp significantly longer. Cheap mandolines dull quickly and produce inconsistent results. The adjustment mechanism on Benriner is precise and repeatable. Budget mandolines often have loose, imprecise adjustments that defeat the purpose of uniform slicing.',
     },
     {
       question: 'What vegetables work best on a mandoline?',
@@ -75,11 +75,11 @@ export const reviewData = {
     },
     {
       question: 'Should I get the Large or Original Benriner?',
-      answer: 'The Large (reviewed here) is more versatile and stable for serious cooking. It handles full-size onions, potatoes, and cabbage without awkward positioning. The Original is more compact but has limited capacity—however, it includes 3 julienne blade inserts for different cut sizes. Both include hand guard. For professional or serious home use, always choose the Large. Note: The Large version comes with a straight blade only—no julienne blades included.',
+      answer: 'The Large (reviewed here) is more versatile and stable for serious cooking. It handles full-size onions, potatoes, and cabbage without awkward positioning. The Original is more compact but has limited capacity, but it includes 3 julienne blade inserts for different cut sizes. Both include hand guard. For professional or serious home use, always choose the Large. Note: The Large version comes with a straight blade only (no julienne blades) included.',
     },
     {
       question: 'How do you clean a Benriner mandoline safely?',
-      answer: 'Rinse immediately after use to prevent food from drying on blade. Use a brush or sponge—never your bare hand directly on blade. Dishwasher safe, but hand washing preserves blade edge longer. Always clean with extreme caution. The blade is sharp enough to cut through sponges effortlessly. Many professionals keep a dedicated brush just for mandoline cleaning.',
+      answer: 'Rinse immediately after use to prevent food from drying on blade. Use a brush or sponge, never your bare hand directly on blade. Dishwasher safe, but hand washing preserves blade edge longer. Always clean with extreme caution. The blade is sharp enough to cut through sponges easily. Many professionals keep a dedicated brush just for mandoline cleaning.',
     },
     {
       question: 'How long does the blade stay sharp?',
@@ -104,7 +104,7 @@ export const reviewData = {
       linkHref: '#',
     },
     verdictStrong: 'After years of professional use at Purple Cafe, the Benriner mandoline proved itself as genuine professional equipment.',
-    verdict: 'Japanese precision engineering delivers consistent slicing that transformed our prep efficiency. Ultra-sharp blade handles everything from paper-thin cucumber to thick potato rounds with remarkable accuracy.',
+    verdict: 'Japanese precision engineering delivers consistent slicing that transformed our prep efficiency. Ultra-sharp blade handles everything from paper-thin cucumber to thick potato rounds with consistent accuracy.',
     ctaText: 'Check Price on Amazon →',
     ctaSubtext: 'Check current pricing and availability',
   },
@@ -156,7 +156,7 @@ export const reviewData = {
         content: (
           <>
             <p className="text-slate-600 leading-[1.7] mb-4">
-              The blade is the heart of any mandoline, and the <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner mandoline&apos;s</Link> high-carbon Japanese stainless steel is exceptional. This isn&apos;t marketing hyperbole—the difference is immediately obvious when you make your first slice.
+              The blade is the heart of any mandoline, and the <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner mandoline&apos;s</Link> high-carbon Japanese stainless steel is exceptional. This isn&apos;t marketing hyperbole. The difference is immediately obvious when you make your first slice.
             </p>
             <p className="text-slate-600 leading-[1.7] mb-4">
               <strong>Sharpness Test:</strong> I can slice cucumbers so thin they&apos;re nearly transparent with the <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner</Link>. The blade glides through root vegetables like potatoes and carrots without crushing or tearing. Even after years of professional use, the edge remains sharp enough for clean, precise cuts.
@@ -172,7 +172,7 @@ export const reviewData = {
         content: (
           <>
             <p className="text-slate-600 leading-[1.7] mb-4">
-              The adjustment mechanism is where the <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner mandoline</Link> separates itself from competitors. The thickness dial offers precise, repeatable settings from paper-thin to about 5mm. Each click provides consistent results—critical when you&apos;re slicing for even cooking or uniform presentation.
+              The adjustment mechanism is where the <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner mandoline</Link> separates itself from competitors. The thickness dial offers precise, repeatable settings from paper-thin to about 5mm. Each click provides consistent results, critical when you&apos;re slicing for even cooking or uniform presentation.
             </p>
             <p className="text-slate-600 leading-[1.7] mb-4">
               In a professional kitchen serving hundreds of customers daily, consistency isn&apos;t optional. When we needed uniform potato slices for gratins or precisely thin radishes for garnish, the <Link href="/reviews/benriner-large-mandoline" className="text-orange-700 no-underline font-medium hover:underline hover:text-orange-700">Benriner</Link> delivered identical results every single time.
@@ -234,13 +234,13 @@ export const reviewData = {
   safety: {
     warnings: [
       <>
-        <strong>This is the most dangerous tool in my kitchen.</strong> That&apos;s not an exaggeration. The blade is sharp enough to slice through fingernails effortlessly. I&apos;ve seen experienced cooks get careless and pay the price.
+        <strong>This is the most dangerous tool in my kitchen.</strong> That&apos;s not an exaggeration. The blade is sharp enough to slice through fingernails easily. I&apos;ve seen experienced cooks get careless and pay the price.
       </>,
     ],
     guidelines: {
       title: 'Non-Negotiable Safety Rules',
       items: [
-        'Always use the hand guard—no exceptions',
+        'Always use the hand guard, no exceptions',
         'Consider cut-resistant gloves for additional protection',
         'Never rush when using a mandoline',
         'Keep your eyes on the blade at all times',
@@ -253,7 +253,7 @@ export const reviewData = {
           The included hand guard is well-designed with spikes that grip food securely. It works effectively when used properly. That said, many professional kitchens require cut-resistant gloves as additional protection.
         </p>
         <p className="text-base leading-relaxed text-slate-900 mb-0">
-          If you&apos;re uncomfortable with extremely sharp blades or tend to rush through prep work, this tool isn&apos;t for you. But with proper safety protocols and respect for the blade, it&apos;s a transformative addition to your kitchen.
+          If you&apos;re uncomfortable with extremely sharp blades or tend to rush through prep work, this tool isn&apos;t for you. But with proper safety protocols and respect for the blade, it&apos;s a worthwhile addition to your kitchen.
         </p>
       </>
     ),
@@ -324,7 +324,7 @@ export const reviewData = {
       options: [
         {
           name: 'Large Benriner',
-          note: 'Best for serious cooking. Handles full-size onions, potatoes, and cabbage without awkward positioning. More stable during use. Comes with straight blade only—no julienne blades. Includes hand guard. The extra capacity makes high-volume prep dramatically more efficient.',
+          note: 'Best for serious cooking. Handles full-size onions, potatoes, and cabbage without awkward positioning. More stable during use. Comes with straight blade only (no julienne blades). Includes hand guard. The extra capacity makes high-volume prep dramatically more efficient.',
         },
         {
           name: 'Original Benriner',
@@ -347,13 +347,13 @@ export const reviewData = {
       {
         question: 'How dangerous is a mandoline slicer?',
         answer: (
-          <p>Extremely sharp blade requires serious respect. Always use the hand guard, never slice without it. Professional kitchens require cut-resistant gloves when using mandolines. The blade is sharp enough to slice through fingernails effortlessly—this is not an exaggeration. With proper safety protocols, it&apos;s safe. Without them, it&apos;s one of the most dangerous tools in the kitchen.</p>
+          <p>Extremely sharp blade requires serious respect. Always use the hand guard, never slice without it. Professional kitchens require cut-resistant gloves when using mandolines. The blade is sharp enough to slice through fingernails easily. This is not an exaggeration. With proper safety protocols, it&apos;s safe. Without them, it&apos;s one of the most dangerous tools in the kitchen.</p>
         ),
       },
       {
         question: "What's the difference between Benriner and cheap mandolines?",
         answer: (
-          <p>The blade quality is night and day. Benriner uses high-carbon Japanese stainless steel that stays sharp significantly longer. Cheap mandolines dull quickly and produce inconsistent results. Additionally, the adjustment mechanism on Benriner is precise and repeatable. Budget mandolines often have loose, imprecise adjustments that defeat the purpose of uniform slicing.</p>
+          <p>The blade quality is night and day. Benriner uses high-carbon Japanese stainless steel that stays sharp significantly longer. Cheap mandolines dull quickly and produce inconsistent results. The adjustment mechanism on Benriner is precise and repeatable. Budget mandolines often have loose, imprecise adjustments that defeat the purpose of uniform slicing.</p>
         ),
       },
       {
@@ -365,13 +365,13 @@ export const reviewData = {
       {
         question: 'Should I get the Large or Original Benriner?',
         answer: (
-          <p>The Large (reviewed here) is more versatile and stable for serious cooking. It handles full-size onions, potatoes, and cabbage without awkward positioning. The Original is more compact but has limited capacity—however, it includes 3 julienne blade inserts for different cut sizes. Both include hand guard. For professional or serious home use, always choose the Large. Note: The Large version comes with a straight blade only—no julienne blades included.</p>
+          <p>The Large (reviewed here) is more versatile and stable for serious cooking. It handles full-size onions, potatoes, and cabbage without awkward positioning. The Original is more compact but has limited capacity, but it includes 3 julienne blade inserts for different cut sizes. Both include hand guard. For professional or serious home use, always choose the Large. Note: The Large version comes with a straight blade only (no julienne blades) included.</p>
         ),
       },
       {
         question: 'How do you clean a Benriner mandoline safely?',
         answer: (
-          <p>Rinse immediately after use to prevent food from drying on blade. Use a brush or sponge—never your bare hand directly on blade. Dishwasher safe, but hand washing preserves blade edge longer. Always clean with extreme caution. The blade is sharp enough to cut through sponges effortlessly. Many professionals keep a dedicated brush just for mandoline cleaning.</p>
+          <p>Rinse immediately after use to prevent food from drying on blade. Use a brush or sponge, never your bare hand directly on blade. Dishwasher safe, but hand washing preserves blade edge longer. Always clean with extreme caution. The blade is sharp enough to cut through sponges easily. Many professionals keep a dedicated brush just for mandoline cleaning.</p>
         ),
       },
       {
@@ -420,7 +420,7 @@ export const reviewData = {
     title: 'The Bottom Line',
     paragraphs: [
       <>
-        After years of professional use at Purple Café, the Benriner mandoline earned its permanent place in our prep station through consistent, reliable performance. Japanese precision engineering delivers the kind of results that justify the investment—paper-thin cucumber slices, perfectly uniform potato rounds, and consistent thickness that would take 70% longer by knife.
+        After years of professional use at Purple Café, the Benriner mandoline earned its permanent place in our prep station through consistent, reliable performance. Japanese precision engineering delivers the kind of results that justify the investment: paper-thin cucumber slices, perfectly uniform potato rounds, and consistent thickness that would take 70% longer by knife.
       </>,
       <>
         The blade quality is exceptional. Where budget mandolines dull within months, the Benriner maintains professional sharpness for years. The adjustment mechanism provides precise, repeatable thickness control from paper-thin to 5mm. Every aspect feels purpose-built for consistent results.
