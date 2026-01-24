@@ -22,7 +22,7 @@ export const processorData = {
   hero: {
     title: "Food Processor vs Blender: When To Use Each",
     introduction: [
-      "After 6 years at Purple Café in Seattle—processing 50 lbs of vegetables weekly, making pesto daily, and blending sauces and pureed soups—I learned this fundamental truth: most home cooks buy the wrong appliance first.",
+      "After 6 years at Purple Café in Seattle, processing 50 lbs of vegetables weekly, making pesto daily, and blending sauces and pureed soups, I learned this fundamental truth: most home cooks buy the wrong appliance first.",
       "The difference isn't about which is better. It's about understanding what each machine is physically designed to do."
     ]
   },
@@ -60,11 +60,11 @@ export const processorData = {
       },
       {
         question: "Can I use a food processor for smoothies?",
-        answer: "No. The wide bowl doesn't create the cyclonic vortex needed for smooth blending. Frozen fruit just bounces around without getting smooth. Use a blender—it's specifically designed for this task with a tall, narrow pitcher that creates proper vortex action."
+        answer: "No. The wide bowl doesn't create the cyclonic vortex needed for smooth blending. Frozen fruit just bounces around without getting smooth. Use a blender. It's specifically designed for this task with a tall, narrow pitcher that creates proper vortex action."
       },
       {
         question: "What's better for making pesto?",
-        answer: "Food processor. Pesto needs chopping, not emulsifying. In professional kitchens at Purple Café, we made fresh pesto regularly in the Robot Coupe—the S-blade chops basil leaves without over-processing. Blenders risk turning pesto into paste unless you pulse carefully and scrape constantly."
+        answer: "Food processor. Pesto needs chopping, not emulsifying. In professional kitchens at Purple Café, we made fresh pesto regularly in the Robot Coupe. The S-blade chops basil leaves without over-processing. Blenders risk turning pesto into paste unless you pulse carefully and scrape constantly."
       },
       {
         question: "Can a food processor handle hot liquids?",
@@ -80,7 +80,7 @@ export const processorData = {
       },
       {
         question: "Which one is more versatile?",
-        answer: "Food processor. It handles chopping, shredding, slicing, mixing, and kneading—tasks most home cooks do daily. Blenders excel at smoothies, soups, and sauces but can't replace the food processor's functions. If you can only own one, choose the food processor."
+        answer: "Food processor. It handles chopping, shredding, slicing, mixing, and kneading, tasks most home cooks do daily. Blenders excel at smoothies, soups, and sauces but can't replace the food processor's functions. If you can only own one, choose the food processor."
       }
     ]
   },

@@ -9,8 +9,8 @@
 ## HANDOFF FOR NEXT SESSION
 
 ### Current Status
-- **30 pages completed** (10 reviews, 20 blogs)
-- **Next page:** #31 - `/blog/food-processor-vs-blender` (position 27 on priority list)
+- **31 pages completed** (10 reviews, 21 blogs)
+- **Next page:** #32 (check priority list for next page)
 - Priority list location: `/Users/scottbradley/Downloads/pages-by-importance.md`
 
 ### Critical Lessons Learned
@@ -111,6 +111,7 @@
 | 28 | /blog/air-fryer-vs-deep-fryer | Done | 14 | 0 | Fixed 14 em dashes |
 | 29 | /blog/dutch-oven-vs-slow-cooker | Done | 8 | 3 | Fixed 8 em dashes, "comprehensive", "transformative", "seamless" |
 | 30 | /blog/stand-mixer-vs-hand-mixer | Done | 16 | 3 | Fixed 16 em dashes, "comprehensive", 2x "effortlessly" |
+| 31 | /blog/food-processor-vs-blender | Done | 46 | 0 | Fixed 46 em dashes (4 data, 42 page) |
 
 ## Patterns Being Checked
 
@@ -219,3 +220,6 @@
 - Page 30 (stand-mixer-vs-hand-mixer) completed
   - 16 em dashes → periods, commas, colons
   - "comprehensive" removed, 2x "effortlessly" → "easily"
+- Page 31 (food-processor-vs-blender) completed
+  - 46 em dashes → colons, commas, periods, parentheses
+  - Large page with comparison table data (17 em dashes in table rows)
