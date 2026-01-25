@@ -31,7 +31,7 @@ export const garlicData = {
       id: "intro",
       content: [
         "Garlic is one of the most powerful ingredients in cooking. It adds depth, complexity, and aromatic intensity to virtually every savory dish. But garlic is more than just flavor—it's also one of the healthiest ingredients you can cook with, packed with compounds that support immunity, heart health, and inflammation reduction.",
-        "I learned to respect garlic early in my career at Il Pizzaiolo in Sacramento. The head chef was Italian, and he told me on my first day: \"If you can't smell garlic in the kitchen, you're not cooking Italian food.\" We went through five pounds of garlic every single day—minced for marinara, sliced thin for aglio e olio, roasted whole for spreads, confit in olive oil for richness. Garlic wasn't an ingredient; it was the foundation.",
+        "In professional kitchens, we went through pounds of garlic every single day—minced for sauces, sliced thin for pasta, roasted whole for spreads, confit in olive oil for richness. Garlic wasn't an ingredient; it was the foundation.",
         "But here's what most home cooks don't understand: **how you prepare and cook garlic completely changes what it contributes to a dish**. Raw garlic is sharp and pungent. Sautéed garlic is mellow and aromatic. Roasted garlic is sweet and nutty. The same ingredient, three totally different flavors. And if you burn it—even slightly—it turns bitter and ruins the whole dish.",
         "In this guide, I'm breaking down everything you need to know about garlic: health benefits, flavor science, preparation techniques, and the professional methods that make garlic taste incredible in every dish. This is the knowledge that separates home cooks from professionals."
       ]

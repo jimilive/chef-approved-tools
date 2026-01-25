@@ -70,7 +70,7 @@ export default function Braising101Page() {
           </h2>
 
           <p>
-            Braising is a chef&apos;s act of patience—a low, slow combination of dry and moist heat that transforms tough, connective meat into melt-in-your-mouth comfort.
+            Braising is a chef&apos;s act of patience, a low, slow combination of dry and moist heat that transforms tough, connective meat into melt-in-your-mouth comfort.
           </p>
 
           <p>
@@ -78,7 +78,7 @@ export default function Braising101Page() {
           </p>
 
           <p>
-            Every culture has its version—coq au vin, pot roast, birria, osso buco, short ribs—but the secret behind all of them is the same: controlled heat, full attention, and time measured in hours, not minutes.
+            Every culture has its version (coq au vin, pot roast, birria, osso buco, short ribs), but the secret behind all of them is the same: controlled heat, full attention, and time measured in hours, not minutes.
           </p>
 
           <div className="bg-slate-50 border border-slate-200 rounded-lg p-6 my-8">
@@ -95,7 +95,7 @@ export default function Braising101Page() {
           </h2>
 
           <p>
-            Tough cuts—like chuck, shank, short rib, shoulder—are full of collagen and connective tissue.
+            Tough cuts like chuck, shank, short rib, and shoulder are full of collagen and connective tissue.
           </p>
 
           <p>
@@ -107,7 +107,7 @@ export default function Braising101Page() {
           </p>
 
           <p>
-            The magic zone? 185–200°F internal temperature—right where connective tissue surrenders but the meat doesn&apos;t shred apart.
+            The magic zone? 185–200°F internal temperature, right where connective tissue surrenders but the meat doesn&apos;t shred apart.
           </p>
 
           <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
@@ -115,7 +115,7 @@ export default function Braising101Page() {
             <ul className="space-y-2 mb-0">
               <li><strong>Below 160°F:</strong> Collagen stays intact, meat remains tough</li>
               <li><strong>160–180°F:</strong> Collagen begins to break down slowly</li>
-              <li><strong>185–200°F:</strong> Sweet spot—collagen converts to gelatin, meat becomes tender</li>
+              <li><strong>185–200°F:</strong> Sweet spot where collagen converts to gelatin and meat becomes tender</li>
               <li><strong>Above 212°F (boiling):</strong> Muscle fibers tighten, meat gets tough and dry</li>
             </ul>
           </div>
@@ -142,7 +142,7 @@ export default function Braising101Page() {
             Step 1: Choose the Right Cut
           </h3>
           <p>
-            Favor cuts from active muscles—shoulder, chuck, shank, or brisket. Fat marbling and connective tissue are your friends here.
+            Favor cuts from active muscles: shoulder, chuck, shank, or brisket. Fat marbling and connective tissue are your friends here.
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">
@@ -162,7 +162,7 @@ export default function Braising101Page() {
           <div className="bg-orange-50 border-l-4 border-orange-600 p-6 my-8">
             <p className="font-semibold text-slate-900 mb-2">Pro Tip:</p>
             <p className="mb-0">
-              Don&apos;t overcrowd the pan—work in batches. Crust equals flavor.
+              Don&apos;t overcrowd the pan. Work in batches. Crust equals flavor.
             </p>
           </div>
 
@@ -187,7 +187,7 @@ export default function Braising101Page() {
             Step 5: Deglaze with Acid
           </h3>
           <p>
-            Add red wine, vinegar, or even beer. Let it simmer to dissolve all the browned bits—the &quot;essence&quot; of your sear.
+            Add red wine, vinegar, or even beer. Let it simmer to dissolve all the browned bits, the &quot;essence&quot; of your sear.
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">
@@ -205,7 +205,7 @@ export default function Braising101Page() {
             <ul className="space-y-2 mb-0">
               <li><strong>Oven:</strong> 275°F</li>
               <li><strong>Stovetop:</strong> gentle simmer, never boil.</li>
-              <li><strong>Cook time:</strong> Until fork-tender—usually 2½ to 3½ hours.</li>
+              <li><strong>Cook time:</strong> until fork-tender, usually 2½ to 3½ hours.</li>
             </ul>
           </div>
 
@@ -213,7 +213,7 @@ export default function Braising101Page() {
             Step 8: Rest and Reduce
           </h3>
           <p>
-            Let the meat rest in liquid for 30 minutes before serving. Then strain and reduce the liquid into sauce—thick, glossy, rich.
+            Let the meat rest in liquid for 30 minutes before serving. Then strain and reduce the liquid into sauce: thick, glossy, rich.
           </p>
           <p>
             That&apos;s restaurant magic: one pot, all flavor.
@@ -251,7 +251,7 @@ export default function Braising101Page() {
                 <tr className="bg-slate-50">
                   <td className="border border-slate-300 px-4 py-2">Lifting the lid too often</td>
                   <td className="border border-slate-300 px-4 py-2">Temperature swings ruin texture</td>
-                  <td className="border border-slate-300 px-4 py-2">Trust the process—peek sparingly</td>
+                  <td className="border border-slate-300 px-4 py-2">Trust the process. Peek sparingly</td>
                 </tr>
                 <tr>
                   <td className="border border-slate-300 px-4 py-2">Not resting meat</td>
@@ -263,7 +263,7 @@ export default function Braising101Page() {
           </div>
 
           <p>
-            The biggest mistake is rushing. Braising rewards patience—the longer you give it (within reason), the better the transformation. You can&apos;t force collagen to break down on your schedule.
+            The biggest mistake is rushing. Braising rewards patience. The longer you give it (within reason), the better the transformation. You can&apos;t force collagen to break down on your schedule.
           </p>
 
           <div className="bg-yellow-50 border-l-4 border-yellow-600 p-6 my-8">
@@ -281,10 +281,10 @@ export default function Braising101Page() {
           <div className="bg-slate-50 border border-slate-200 rounded-lg p-6 my-8">
             <ul className="space-y-3 mb-0">
               <li>
-                <strong>Dutch Oven:</strong> Lodge 6-Qt Enameled Dutch Oven — retains steady heat and flavor.
+                <strong>Dutch Oven:</strong> Lodge 6-Qt Enameled Dutch Oven. Retains steady heat and flavor.
               </li>
               <li>
-                <strong>Thermometer:</strong> ThermoWorks Thermapen ONE — ensures you stay below boiling.
+                <strong>Thermometer:</strong> ThermoWorks Thermapen ONE. Ensures you stay below boiling.
               </li>
               <li>
                 <strong>Scraper:</strong>{' '}
@@ -297,19 +297,19 @@ export default function Braising101Page() {
                   <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">
                     Rubbermaid Commercial Cook&apos;s Scraper
                   </Link>
-                </CTAVisibilityTracker> — lift fond safely.
+                </CTAVisibilityTracker>. Lift fond safely.
               </li>
               <li>
-                <strong>Tongs:</strong> OXO Good Grips 12&quot; Tongs — for turning without piercing meat.
+                <strong>Tongs:</strong> OXO Good Grips 12&quot; Tongs. For turning without piercing meat.
               </li>
               <li>
-                <strong>Storage:</strong> Cambro 4-Qt Square Containers — perfect for chilling and storing braises.
+                <strong>Storage:</strong> Cambro 4-Qt Square Containers. Perfect for chilling and storing braises.
               </li>
             </ul>
           </div>
 
           <p>
-            The Dutch oven is non-negotiable for braising. Cast iron or enameled cast iron distributes heat evenly and maintains steady temperature—critical for the long, slow cook that transforms tough cuts.
+            The Dutch oven is non-negotiable for braising. Cast iron or enameled cast iron distributes heat evenly and maintains steady temperature, which is critical for the long, slow cook that transforms tough cuts.
           </p>
 
           <p>
@@ -334,7 +334,7 @@ export default function Braising101Page() {
           </p>
 
           <p>
-            But when you get it right—when the meat falls apart at the touch of a fork and the sauce coats the back of a spoon—you understand why every professional kitchen has a braise on the menu.
+            But when you get it right, when the meat falls apart at the touch of a fork and the sauce coats the back of a spoon, you understand why every professional kitchen has a braise on the menu.
           </p>
 
           <p>
@@ -351,7 +351,7 @@ export default function Braising101Page() {
               <Link href="/blog/caramelizing-onions-why-it-takes-45-minutes" className="text-blue-700 underline">
                 Learn how to caramelize onions properly
               </Link>
-            </CTAVisibilityTracker>—another slow technique that builds deep flavor through patience.
+            </CTAVisibilityTracker>, another slow technique that builds deep flavor through patience.
           </p>
         </div>
 

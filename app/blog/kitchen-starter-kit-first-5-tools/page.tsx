@@ -66,11 +66,7 @@ export default function KitchenStarterKitPage() {
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
-            When I moved into my first apartment after culinary school, I owned two knives, a sauté pan, and a wooden spoon. That was it. But it didn&apos;t stop me from cooking like a pro.
-          </p>
-
-          <p>
-            Over 45 years of cooking—and 24 in professional kitchens—I&apos;ve learned you don&apos;t need a drawer full of gadgets. You need a core five tools that can handle almost anything you cook.
+            After 24 years in professional kitchens, I&apos;ve learned you don&apos;t need a drawer full of gadgets. You need a core set of tools that can handle almost anything you cook.
           </p>
 
           <p>

@@ -328,17 +328,17 @@ export default async function BestChefKnivesPage() {
                     <div className="mb-4">
                       {knife.id === 1 && (
                         <p className="text-slate-700 leading-relaxed">
-                          The best value in professional cutlery, hands down. Swiss precision at a fraction of premium knife costs. I&apos;ve watched line cooks abuse these knives at Purple Cafe for years—they just keep performing. The Fibrox handle provides excellent grip even when wet, which is critical in a fast-paced kitchen. After 10 years of professional kitchen use and 20+ years total, this is my daily driver. If you&apos;re on a budget or just starting out, this is your knife.
+                          The best value in professional cutlery, hands down. Swiss precision at a fraction of premium knife costs. I&apos;ve watched line cooks abuse these knives at Purple Cafe for years. They just keep performing. The Fibrox handle provides excellent grip even when wet, which is critical in a fast-paced kitchen. After 10 years of professional kitchen use and 20+ years total, this is my daily driver. If you&apos;re on a budget or just starting out, this is your knife.
                         </p>
                       )}
                       {knife.id === 2 && (
                         <p className="text-slate-700 leading-relaxed">
-                          The 10-inch version offers more blade for large-volume prep work. Perfect for breaking down proteins and slicing through mountains of vegetables. The longer blade length increases efficiency—you cover more cutting surface per stroke. This was my go-to for prep shifts where speed mattered. Not ideal for small home kitchens, but a professional&apos;s dream for high-volume operations.
+                          The 10-inch version offers more blade for large-volume prep work. Perfect for breaking down proteins and slicing through mountains of vegetables. The longer blade length increases efficiency. You cover more cutting surface per stroke. This was my go-to for prep shifts where speed mattered. Not ideal for small home kitchens, but a professional&apos;s dream for high-volume operations.
                         </p>
                       )}
                       {knife.id === 3 && (
                         <p className="text-slate-700 leading-relaxed">
-                          Every chef needs a great paring knife, and this Victorinox delivers professional performance at an unbeatable price. Perfect for detail work, peeling, and small tasks where an 8-inch blade is overkill. I keep two of these in my kit—one for savory, one for fruit work to avoid flavor transfer. At around $15, there&apos;s no excuse not to have a sharp paring knife.
+                          Every chef needs a great paring knife, and this Victorinox delivers professional performance at an unbeatable price. Perfect for detail work, peeling, and small tasks where an 8-inch blade is overkill. I keep two of these in my kit: one for savory, one for fruit work to avoid flavor transfer. At around $15, there&apos;s no excuse not to have a sharp paring knife.
                         </p>
                       )}
                       {knife.id === 4 && (
@@ -426,7 +426,7 @@ export default async function BestChefKnivesPage() {
             <div className="bg-white rounded-xl p-6 shadow-md">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Edge Retention: Real-World Performance</h3>
               <p className="text-slate-700 leading-relaxed">
-                Edge retention determines how often you&apos;ll need to sharpen. In professional kitchens, the Victorinox needed sharpening every 2-3 weeks with heavy daily use. Premium German knives might last a month between sharpenings, but the difference is measured in weeks, not months. More important than steel composition is proper honing technique—a $500 knife with poor maintenance performs worse than a $50 Victorinox that&apos;s properly honed daily and sharpened regularly.
+                Edge retention determines how often you&apos;ll need to sharpen. In professional kitchens, the Victorinox needed sharpening every 2-3 weeks with heavy daily use. Premium German knives might last a month between sharpenings, but the difference is measured in weeks, not months. More important than steel composition is proper honing technique. A $500 knife with poor maintenance performs worse than a $50 Victorinox that&apos;s properly honed daily and sharpened regularly.
               </p>
             </div>
 
@@ -440,7 +440,7 @@ export default async function BestChefKnivesPage() {
             <div className="bg-white rounded-xl p-6 shadow-md">
               <h3 className="text-xl font-bold text-slate-900 mb-3">Balance: The Feel Test</h3>
               <p className="text-slate-700 leading-relaxed">
-                A well-balanced knife should feel like an extension of your hand. The balance point should be right at the bolster (where the blade meets the handle). Hold the knife by the handle in a pinch grip—if it tips forward or backward, the balance is off. Full-tang construction (blade extends through the entire handle) provides better balance than partial tang. The Victorinox knives recommended here all have excellent full-tang construction and balance that reduces hand fatigue during extended use.
+                A well-balanced knife should feel like an extension of your hand. The balance point should be right at the bolster (where the blade meets the handle). Hold the knife by the handle in a pinch grip. If it tips forward or backward, the balance is off. Full-tang construction (blade extends through the entire handle) provides better balance than partial tang. The Victorinox knives recommended here all have excellent full-tang construction and balance that reduces hand fatigue during extended use.
               </p>
             </div>
 
@@ -475,14 +475,14 @@ export default async function BestChefKnivesPage() {
             <div className="bg-white rounded-xl p-6 shadow-md">
               <h3 className="font-bold text-slate-900 mb-2">Is a $150 knife really better than a $50 knife?</h3>
               <p className="text-slate-700 text-sm">
-                Yes and no. A $150 premium knife will hold an edge slightly longer and may have fancier handle materials. But a $50 Victorinox with proper maintenance outperforms a neglected $500 knife. The difference is incremental, not transformational. After 10 years of professional kitchen use and 20+ years total, the Victorinox Fibrox 8&quot; is my daily driver—it simply works. For home cooks, Victorinox offers 90% of premium knife performance at 25% of the cost.
+                Yes and no. A $150 premium knife will hold an edge slightly longer and may have fancier handle materials. But a $50 Victorinox with proper maintenance outperforms a neglected $500 knife. The difference is incremental, not transformational. After 10 years of professional kitchen use and 20+ years total, the Victorinox Fibrox 8&quot; is my daily driver. It simply works. For home cooks, Victorinox offers 90% of premium knife performance at 25% of the cost.
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-md">
               <h3 className="font-bold text-slate-900 mb-2">What size chef knife should I buy: 8-inch or 10-inch?</h3>
               <p className="text-slate-700 text-sm">
-                8-inch is the sweet spot for most home cooks—versatile, maneuverable, and fits standard cutting boards. 10-inch is better for professional settings with large-volume prep or if you have counter space and large cutting boards. I use 8-inch at home and 10-inch for catering work. Start with 8-inch unless you know you need the extra length.
+                8-inch is the sweet spot for most home cooks: versatile, maneuverable, and fits standard cutting boards. 10-inch is better for professional settings with large-volume prep or if you have counter space and large cutting boards. I use 8-inch at home and 10-inch for catering work. Start with 8-inch unless you know you need the extra length.
               </p>
             </div>
 
@@ -509,7 +509,7 @@ export default async function BestChefKnivesPage() {
               <li>• <strong>Home Kitchen Testing (20+ years total):</strong> Regular cooking 3-5 times weekly</li>
             </ul>
             <p className="text-blue-800 text-sm">
-              Knives were evaluated on edge retention, handle comfort, balance, ease of sharpening, and long-term durability. No free samples or sponsored reviews—just honest assessment from someone who&apos;s used these tools professionally for over two decades.
+              Knives were evaluated on edge retention, handle comfort, balance, ease of sharpening, and long-term durability. No free samples or sponsored reviews. Just honest assessment from someone who&apos;s used these tools professionally for over two decades.
             </p>
             <Link href="/methodology" className="text-blue-700 hover:text-blue-900 font-semibold text-sm">
               Read our complete testing methodology →

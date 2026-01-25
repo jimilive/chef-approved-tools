@@ -35,7 +35,7 @@ export const reviewData = {
   hero: {
     title: "Norton IM200 Tri-Stone Sharpener: 6-Year Restaurant Review",
     authorName: "Scott Bradley",
-    authorCredentials: "Professional Chef | 45 Years Cooking Experience",
+    authorCredentials: "Professional Chef | 24 Years Professional Experience",
     rating: 5.0,
     tierBadge: {
       tier: 1,

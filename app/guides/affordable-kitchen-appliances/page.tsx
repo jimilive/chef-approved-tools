@@ -123,7 +123,7 @@ export default async function AffordableKitchenAppliancesPage() {
             />
             <div>
               <p className="font-semibold text-slate-900">Scott Bradley</p>
-              <p className="text-sm text-slate-700">Professional Chef • 45 Years Cooking Experience</p>
+              <p className="text-sm text-slate-700">Professional Chef • 24 Years Cooking Experience</p>
             </div>
           </div>
 
@@ -134,7 +134,7 @@ export default async function AffordableKitchenAppliancesPage() {
           </div>
 
           <p className="text-xl text-slate-700 leading-relaxed mb-4">
-            <strong>I&apos;m tired of &quot;budget appliance&quot; lists written by people who&apos;ve never used the equipment.</strong> This guide covers only affordable kitchen appliances I&apos;ve personally owned, tested, or used extensively—both in professional kitchens and at home.
+            <strong>I&apos;m tired of &quot;budget appliance&quot; lists written by people who&apos;ve never used the equipment.</strong> This guide covers only affordable kitchen appliances I&apos;ve personally owned, tested, or used extensively, both in professional kitchens and at home.
           </p>
 
           <p className="text-lg text-slate-700 leading-relaxed">
@@ -146,7 +146,7 @@ export default async function AffordableKitchenAppliancesPage() {
         <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8">
           <h2 className="text-lg font-bold text-yellow-900 mb-2">🎯 Why This Guide Is Different</h2>
           <p className="text-yellow-800 mb-3">
-            <strong>Every product mentioned here is something I&apos;ve personally used or tested.</strong> I&apos;m not recommending appliances based on Amazon reviews or manufacturer specs. This is real-world experience from actual cooking—professional and home.
+            <strong>Every product mentioned here is something I&apos;ve personally used or tested.</strong> I&apos;m not recommending appliances based on Amazon reviews or manufacturer specs. This is real-world experience from actual cooking, professional and home.
           </p>
           <p className="text-yellow-800 text-sm">
             If I haven&apos;t used it, I won&apos;t recommend it. Period.
@@ -219,7 +219,7 @@ export default async function AffordableKitchenAppliancesPage() {
 
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
               <p className="text-slate-800">
-                <strong>💡 Real Talk:</strong> If you&apos;re making smoothies, frozen drinks, or basic blending 3-4x weekly, the Ninja BL660 is outstanding value. But if you&apos;re blending hot soups, making nut butters, or using it daily in a commercial setting, save up for the Vitamix. The Ninja is legitimately good budget equipment—not a compromise.
+                <strong>💡 Real Talk:</strong> If you&apos;re making smoothies, frozen drinks, or basic blending 3-4x weekly, the Ninja BL660 is outstanding value. But if you&apos;re blending hot soups, making nut butters, or using it daily in a commercial setting, save up for the Vitamix. The Ninja is legitimately good budget equipment, not a compromise.
               </p>
             </div>
 
@@ -289,11 +289,11 @@ export default async function AffordableKitchenAppliancesPage() {
                 <ul className="text-slate-700 space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span><strong>6-quart bowl:</strong> 50% larger than Classic (4.5qt)—handles double batches without strain</span>
+                    <span><strong>6-quart bowl:</strong> 50% larger than Classic (4.5qt). Handles double batches without strain</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span><strong>575W motor:</strong> Twice the power of Classic—handles heavy doughs without overheating</span>
+                    <span><strong>575W motor:</strong> Twice the power of Classic. Handles heavy doughs without overheating</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
@@ -351,7 +351,7 @@ export default async function AffordableKitchenAppliancesPage() {
                   KitchenAid Commercial Series
                 </Link>
               </CTAVisibilityTracker>{' '}
-              I tested this for 18 months at Purple Cafe—it&apos;s genuine commercial equipment that will outlast 3-4 consumer models.
+              I tested this for 18 months at Purple Cafe. It&apos;s genuine commercial equipment that will outlast 3-4 consumer models.
             </p>
           </div>
         </section>
@@ -566,7 +566,7 @@ export default async function AffordableKitchenAppliancesPage() {
               </div>
 
               <p className="text-slate-700 mb-3">
-                <strong>My experience:</strong> As a former Pizzaiolo who&apos;s worked in professional pizza kitchens, I was skeptical of countertop pizza ovens. The Gourmia surprised me—<strong>it actually gets hot enough (750°F+) to make legitimate pizza at home.</strong>
+                <strong>My experience:</strong> As a former Pizzaiolo who&apos;s worked in professional pizza kitchens, I was skeptical of countertop pizza ovens. The Gourmia surprised me. <strong>It actually gets hot enough (750°F+) to make legitimate pizza at home.</strong>
               </p>
 
               <p className="text-slate-700 text-sm mb-4">
@@ -725,30 +725,30 @@ export default async function AffordableKitchenAppliancesPage() {
 
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border-2 border-orange-200">
             <p className="text-lg text-slate-800 mb-6">
-              <strong>After 45 years of cooking experience (24 years professional),</strong> here&apos;s what I&apos;d actually buy if I was starting a home kitchen on a budget:
+              <strong>After 24 years of professional cooking experience,</strong> here&apos;s what I&apos;d actually buy if I was starting a home kitchen on a budget:
             </p>
 
             <div className="space-y-4">
               <div className="bg-white rounded-lg p-4">
                 <h3 className="font-semibold text-slate-900 mb-2">Essential 3-Piece Budget Setup:</h3>
                 <ol className="list-decimal list-inside space-y-2 text-slate-700">
-                  <li><strong>Ninja BL660 Blender</strong> — I own this, use it regularly, legitimately good</li>
-                  <li><strong>KitchenAid Professional 600/KSM60</strong> — Best value in KitchenAid lineup</li>
-                  <li><strong>Cuisinart DLC-10S Food Processor</strong> — Tested previous model, reliable</li>
+                  <li><strong>Ninja BL660 Blender</strong>: I own this, use it regularly, legitimately good</li>
+                  <li><strong>KitchenAid Professional 600/KSM60</strong>: Best value in KitchenAid lineup</li>
+                  <li><strong>Cuisinart DLC-10S Food Processor</strong>: Tested previous model, reliable</li>
                 </ol>
               </div>
 
               <div className="bg-white rounded-lg p-4">
                 <h3 className="font-semibold text-slate-900 mb-2">Add If Budget Allows:</h3>
                 <ul className="list-disc list-inside space-y-2 text-slate-700">
-                  <li><strong>Instant Pot Duo Plus</strong> — I own this, genuinely useful</li>
-                  <li><strong>Ninja AF101 Air Fryer</strong> — I own this, use 2-3x weekly</li>
+                  <li><strong>Instant Pot Duo Plus</strong>: I own this, genuinely useful</li>
+                  <li><strong>Ninja AF101 Air Fryer</strong>: I own this, use 2-3x weekly</li>
                 </ul>
               </div>
 
               <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
                 <p className="text-slate-800 text-sm">
-                  <strong>🎯 The Key:</strong> Every appliance listed here is something I&apos;ve personally used or tested. I&apos;m not guessing—this is real experience. If you&apos;re ready for premium equipment, see my{' '}
+                  <strong>🎯 The Key:</strong> Every appliance listed here is something I&apos;ve personally used or tested. I&apos;m not guessing. This is real experience. If you&apos;re ready for premium equipment, see my{' '}
                   <CTAVisibilityTracker
                     ctaId="guide-affordable-appliances-reviews-link"
                     position="mid_article"

@@ -108,7 +108,7 @@ export const reviewData = {
     sections: [
       {
         title: 'Dishwasher Safe Performance',
-        content: "After 45 years of cooking, I thought I understood wooden spoons. Hand-wash only, oil occasionally, replace every few years when they crack. Then these <LINK>Japanese spoons</LINK> challenged everything I knew. What started as a $10 Amazon purchase became so fundamental to my cooking that I now own two sets (12 spoons total) and have given three more sets as gifts. The reason? They're genuinely dishwasher safe. Not 'technically dishwasher safe but hand-wash recommended'—actually dishwasher safe through 100+ cycles over 3 years with zero degradation."
+        content: "After 24 years in professional kitchens, I thought I understood wooden spoons. Hand-wash only, oil occasionally, replace every few years when they crack. Then these <LINK>Japanese spoons</LINK> challenged everything I knew. What started as a $10 Amazon purchase became so fundamental to my cooking that I now own two sets (12 spoons total) and have given three more sets as gifts. The reason? They're genuinely dishwasher safe. Not 'technically dishwasher safe but hand-wash recommended'—actually dishwasher safe through 100+ cycles over 3 years with zero degradation."
       },
       {
         title: 'Perfect Size for Daily Cooking',

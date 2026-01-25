@@ -134,7 +134,7 @@ export async function GET(request: NextRequest) {
               color: '#6B7280',
             }}
           >
-            <div>By Chef Scott Bradley • 45 Years Experience</div>
+            <div>By Chef Scott Bradley • 24 Years Professional Experience</div>
             <div style={{ fontWeight: 'bold', color: '#F59E0B' }}>chefapprovedtools.com</div>
           </div>
         </div>

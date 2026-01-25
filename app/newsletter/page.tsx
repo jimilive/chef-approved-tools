@@ -31,7 +31,7 @@ export default function NewsletterPage() {
         The 11 Tools I Use Most in My Home Kitchen
       </h1>
       <p className="text-lg text-slate-700 mb-8">
-        My daily workhorse tools after 45 years of cooking. Get the free guide plus equipment insights from 24 years of restaurant experience.
+        My daily workhorse tools after 24 years in professional kitchens. Get the free guide plus equipment insights from real restaurant experience.
       </p>
 
       <NewsletterForm />

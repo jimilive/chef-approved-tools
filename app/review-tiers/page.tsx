@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'How Chef Approved Tools tests kitchen equipment: 3 tiers of transparency from restaurant testing to long-term home use. Professional review methodology.',
   openGraph: {
     title: 'Our Three-Tier Review System | Chef Approved Tools',
-    description: 'Transparent, honest kitchen equipment reviews based on real testing and 45 years of cooking experience.',
+    description: 'Transparent, honest kitchen equipment reviews based on real testing and 24 years of professional kitchen experience.',
   },
   alternates: {
     canonical: 'https://www.chefapprovedtools.com/review-tiers',
@@ -35,7 +35,7 @@ export default function ReviewTiersPage() {
         <section className="mb-12 bg-white rounded-xl p-8 shadow-sm border border-gray-200">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Why Three Tiers?</h2>
           <p className="text-slate-700 mb-4 leading-relaxed">
-            After 45 years of cooking and 24 years in professional kitchens, I&apos;ve learned one thing:
+            After 24 years in professional kitchens, I&apos;ve learned one thing:
             <strong> honesty builds trust</strong>. Not every product on this site has survived 18 months
             in a 200-cover restaurant kitchen. Some are currently on my home counter being tested daily.
             Others I recommend based on professional knowledge and experience with similar equipment.
@@ -215,7 +215,7 @@ export default function ReviewTiersPage() {
               <div className="bg-slate-100/60 rounded-lg p-5">
                 <h3 className="font-bold text-slate-900 mb-3">When Tier 3 Is Valuable:</h3>
                 <p className="mb-3">
-                  After 45 years of cooking (starting at age 15) and 24 years in professional kitchens,
+                  After 24 years in professional kitchens,
                   I&apos;ve used hundreds of tools and appliances. I understand what separates good equipment
                   from marketing hype. While I haven&apos;t personally tested every product for 18+ months,
                   my professional experience allows me to identify quality and performance indicators.
@@ -252,10 +252,10 @@ export default function ReviewTiersPage() {
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <div>
               <h3 className="font-bold text-slate-900 mb-2">Scott Bradley</h3>
-              <p className="text-slate-700 mb-3">Professional Chef • 45 Years Cooking Experience</p>
+              <p className="text-slate-700 mb-3">Professional Chef • 24 Years Professional Experience</p>
 
               <ul className="space-y-2 text-slate-700">
-                <li>• <strong>45 years cooking experience</strong> (started at age 15)</li>
+                <li>• <strong>24 years professional kitchen experience</strong></li>
                 <li>• <strong>24 years in professional kitchens</strong></li>
                 <li>• <strong>7 years kitchen management</strong> (Mellow Mushroom, Purple Cafe)</li>
                 <li>• <strong>Managed $80K+ monthly revenue</strong> operations</li>
@@ -299,7 +299,7 @@ export default function ReviewTiersPage() {
 
             <div>
               <h3 className="font-semibold text-lg mb-2">Need professional guidance on unfamiliar categories?</h3>
-              <p><strong>Tier 3 reviews</strong> leverage 45 years of cooking experience to provide
+              <p><strong>Tier 3 reviews</strong> leverage 24 years of professional kitchen experience to provide
               informed recommendations, even for products I haven&apos;t personally tested long-term.</p>
             </div>
           </div>

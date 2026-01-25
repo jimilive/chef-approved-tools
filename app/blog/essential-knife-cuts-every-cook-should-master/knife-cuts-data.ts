@@ -66,7 +66,7 @@ export const educationalData = {
       title: "",
       content: [
         "In professional kitchens, new cooks learn through repetition—cutting a single onion 100 times the same way. No shortcuts, no tricks — just repetition. Two weeks later, they're twice as fast and ten times more accurate.",
-        "Classical knife cuts seem pretentious to a lot of home cooks—like culinary school gatekeeping that doesn't matter in real life. Why can't you just call everything \"chopped\" or \"diced\"? During my first week on the line at Purple Café, the chef handed me a bag of carrots and said \"I need a brunoise.\" I had no idea what that meant—at home we just called everything \"chopped.\"",
+        "Classical knife cuts seem pretentious to a lot of home cooks—like culinary school gatekeeping that doesn't matter in real life. Why can't you just call everything \"chopped\" or \"diced\"? But when a chef calls for a brunoise, everyone on the line knows exactly what size that means. That precision matters.",
         "The reality is that these standardized cuts exist for practical reasons: **uniform pieces cook evenly, specific sizes create specific textures, and precise cutting makes food look professional.** Once you understand the basic cuts, you'll cook better and faster because you'll stop having carrots that are burnt on the outside and raw in the middle.",
         "By the end of this comprehensive guide, you'll understand the five fundamental cuts every restaurant relies on — plus the classical terminology and measurements that help recipes communicate accurately — and how to practice them at home so your knife finally feels like an extension of your hand."
       ]

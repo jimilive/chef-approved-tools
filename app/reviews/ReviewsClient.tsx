@@ -54,7 +54,7 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
           Professional Kitchen Equipment Reviews
         </h1>
         <p className="text-xl leading-relaxed text-gray-700 m-0">
-          45 years of cooking experience. 24 years restaurant management.
+          24 years of professional kitchen experience.
           Real testing in professional kitchens where equipment failure means lost revenue.
         </p>
       </div>

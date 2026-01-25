@@ -49,7 +49,7 @@ export const reviewData = {
   whyIChoseThis: {
     title: "Why This Is in My Daily Toolkit",
     paragraphs: [
-      "After 45 years of cooking, I've used dozens of different peelers. Cheap ones that broke, expensive ones that were awkward to hold, Y-peelers, straight peelers, ceramic blades, you name it.",
+      "After 24 years in professional kitchens, I've used dozens of different peelers. Cheap ones that broke, expensive ones that were awkward to hold, Y-peelers, straight peelers, ceramic blades, you name it.",
       "This OXO swivel peeler is the one I come back to every time. The comfortable grip doesn't slip when wet. The sharp blade glides through potato skins without digging in. The swivel action follows the contours of vegetables and fruits effortlessly.",
       "In professional kitchens, we peel pounds of vegetables per shift. This peeler handles the volume without causing hand fatigue. It's dishwasher-safe, durable, and affordable enough that I can keep a couple on hand without thinking twice."
     ]

@@ -162,7 +162,7 @@ export const educationalData = {
       ],
       chefTechnique: {
         title: "Chef's Technique: Tasting As You Go",
-        content: "**Professional cooks taste constantly.** Not at the end—throughout. After every addition, every stage, every adjustment: taste. This is how you develop instincts for seasoning. You learn what \"not enough\" tastes like, what \"just right\" tastes like, and what \"too much\" tastes like. If you're not tasting as you cook, you're guessing. And guessing doesn't work."
+        content: "**Professional cooks taste constantly.** Not at the end, but throughout. After every addition, every stage, every adjustment: taste. This is how you develop instincts for seasoning. You learn what \"not enough\" tastes like, what \"just right\" tastes like, and what \"too much\" tastes like. If you're not tasting as you cook, you're guessing. And guessing doesn't work."
       }
     },
     {
@@ -205,7 +205,7 @@ export const educationalData = {
         { salt: "Finishing Salt (Maldon, Fleur de Sel)", use: "Garnish, texture, special occasions" },
         { salt: "Table Salt", use: "Baking (if recipe specifies), iodine needs" }
       ],
-      closing: "Master salt and everything you cook tastes better. It's the foundation of good cooking. Not fancy techniques, not expensive equipment—salt."
+      closing: "Master salt and everything you cook tastes better. It's the foundation of good cooking. Not fancy techniques, not expensive equipment. Just salt."
     }
   ],
 

@@ -137,7 +137,7 @@ export const reviewData = {
       },
       {
         title: 'Model 2: 1995-2005 (10 Years)',
-        content: `When I moved into my first apartment in 1995, a Black+Decker toaster oven was one of my first purchases. I knew exactly what I was getting: reliable, affordable performance that would last. This 4-slice model served me through college, early career moves, and several apartments. It made the transition with me from student meals to more serious cooking as I developed my skills.`
+        content: `When I moved into my apartment in 1995, a Black+Decker toaster oven was one of my first purchases. I knew exactly what I was getting: reliable, affordable performance that would last. This 4-slice model served me through college, early career moves, and several apartments. It made the transition with me from student meals to more serious cooking as I developed my skills.`
       },
       {
         title: 'Model 3: 2005-2020 (15 Years)',

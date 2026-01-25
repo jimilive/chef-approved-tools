@@ -186,7 +186,7 @@ export default function BestCookwarePage() {
               <p className="text-slate-700 mb-4">
                 A 12-inch skillet should feel substantial but not require two hands for every flip. I&rsquo;ve watched line cooks
                 develop wrist problems from poorly balanced pans. The handle should offset the pan&rsquo;s weight when full. Pick it
-                up loaded with food before you buy—if it feels awkward empty, it&rsquo;s unusable during service.
+                up loaded with food before you buy. If it feels awkward empty, it&rsquo;s unusable during service.
               </p>
 
               <h3 className="text-lg font-semibold text-slate-900 mt-6 mb-3">The Dishwasher Test (When It Matters)</h3>
@@ -218,7 +218,7 @@ export default function BestCookwarePage() {
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 mb-2">Overheating Nonstick Pans</h3>
                   <p className="text-slate-700">
-                    I&rsquo;ve killed nonstick pans by leaving them on high heat empty. Nonstick coatings break down above 500°F—
+                    I&rsquo;ve killed nonstick pans by leaving them on high heat empty. Nonstick coatings break down above 500°F,
                     which happens fast on high heat. Use medium-low for eggs, medium for most tasks. When you need high heat
                     for searing, switch to stainless or cast iron.
                   </p>

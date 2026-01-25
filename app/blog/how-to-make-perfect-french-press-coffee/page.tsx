@@ -58,11 +58,11 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
         tools={["French press (8-cup/34oz)", "Burr coffee grinder", "Kitchen scale", "Kettle", "Timer"]}
         steps={[
           { name: "Heat Water", text: "Bring water to a boil, then let it cool for 30-45 seconds to reach 200°F (93°C). Water that's too hot over-extracts and creates bitter coffee." },
-          { name: "Measure and Grind Coffee", text: "Weigh 60g of coffee beans. Grind coarse—like raw sugar or coarse sea salt. You should still see the original bean shape on most particles." },
+          { name: "Measure and Grind Coffee", text: "Weigh 60g of coffee beans. Grind coarse, like raw sugar or coarse sea salt. You should still see the original bean shape on most particles." },
           { name: "Pre-warm the Press", text: "Pour hot water into the empty French press to warm the glass. Swirl and discard. This prevents temperature drop during brewing." },
           { name: "Add Coffee and Bloom", text: "Add ground coffee to the press. Pour 120g of water to saturate grounds. Wait 30 seconds for CO2 to release (you'll see bubbles)." },
           { name: "Add Remaining Water", text: "Pour remaining water (840g) in a slow, steady stream. Total water: 960g. Place the lid on with plunger pulled up." },
-          { name: "Steep for 4 Minutes", text: "Set a timer for exactly 4 minutes. Don't touch the press—let the coffee steep undisturbed for proper extraction." },
+          { name: "Steep for 4 Minutes", text: "Set a timer for exactly 4 minutes. Don't touch the press. Let the coffee steep undisturbed for proper extraction." },
           { name: "Press Slowly", text: "Press the plunger down with slow, steady pressure over 15-20 seconds. Forcing it down fast stirs up fine particles and makes coffee muddy." },
           { name: "Serve Immediately", text: "Pour all coffee into cups or a thermal carafe immediately. Coffee left in the press continues extracting and becomes bitter." }
         ]}
@@ -83,7 +83,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
           {/* Professional Context Box */}
           <div className="bg-slate-50 border-l-4 border-blue-600 rounded-r-lg p-6 my-6">
             <p className="mb-0">
-              <strong>Professional Context:</strong> During my years working in professional cafes, I brewed hundreds of French press pots for guests who wanted to experience single-origin coffees. The technique I&apos;m sharing here is what I&apos;ve refined over 24 years of daily use—first in professional settings, then 18 more years at home. Master these fundamentals, and you&apos;ll brew better coffee than most cafes.
+              <strong>Professional Context:</strong> During my years working in professional cafes, I brewed hundreds of French press pots for guests who wanted to experience single-origin coffees. The technique I&apos;m sharing here is what I&apos;ve refined over 24 years of daily use, first in professional settings, then 18 more years at home. Master these fundamentals, and you&apos;ll brew better coffee than most cafes.
             </p>
           </div>
 
@@ -92,7 +92,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
           </p>
 
           <p>
-            After 24 years of brewing French press daily—including 6 years in a professional restaurant setting—I can tell you the difference between mediocre and exceptional French press comes down to five critical factors: water temperature, grind size, coffee-to-water ratio, steep time, and pressing technique.
+            After 24 years of brewing French press daily, including 6 years in a professional restaurant setting, I can tell you the difference between mediocre and exceptional French press comes down to five critical factors: water temperature, grind size, coffee-to-water ratio, steep time, and pressing technique.
           </p>
 
           <p>
@@ -108,7 +108,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
               merchant="internal"
             >
               <Link href="/reviews/bodum-chambord-french-press" className="text-blue-700 underline">Bodum Chambord</Link>
-            </CTAVisibilityTracker>—it&apos;s the same one I&apos;ve used for 24 years, and it&apos;s never failed me.
+            </CTAVisibilityTracker>. It&apos;s the same one I&apos;ve used for 24 years, and it&apos;s never failed me.
           </p>
 
           <h2>What You&apos;ll Need</h2>
@@ -137,7 +137,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
           <h2>The Perfect Coffee-to-Water Ratio</h2>
 
           <p>
-            The standard ratio for French press is <strong>1:15 to 1:17</strong> (coffee to water). I prefer 1:16 for most coffees—it balances strength and clarity without being too intense or too weak.
+            The standard ratio for French press is <strong>1:15 to 1:17</strong> (coffee to water). I prefer 1:16 for most coffees. It balances strength and clarity without being too intense or too weak.
           </p>
 
           <p>Here&apos;s what that looks like for common French press sizes:</p>
@@ -191,15 +191,15 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
 
           <h3>Step 2: Weigh Your Coffee (60g for 8-Cup Press)</h3>
           <p>
-            Place your empty French press on a digital scale and tare it to zero. Measure out your coffee beans—I use 60g for my 8-cup Bodum Chambord, which makes about 3-4 cups of finished coffee.
+            Place your empty French press on a digital scale and tare it to zero. Measure out your coffee beans. I use 60g for my 8-cup Bodum Chambord, which makes about 3-4 cups of finished coffee.
           </p>
           <p>
             <strong>Why this matters:</strong> Consistent measurements produce consistent results. Eyeballing coffee leads to wildly different strengths from brew to brew.
           </p>
 
-          <h3>Step 3: Grind Coarse—Like Raw Sugar or Sea Salt</h3>
+          <h3>Step 3: Grind Coarse, Like Raw Sugar or Sea Salt</h3>
           <p>
-            Grind your beans on a coarse setting—slightly coarser than what you&apos;d use for drip coffee. The grounds should resemble raw sugar or coarse sea salt. If you can still see the original bean shape on most particles, you&apos;re in the right range.
+            Grind your beans on a coarse setting, slightly coarser than what you&apos;d use for drip coffee. The grounds should resemble raw sugar or coarse sea salt. If you can still see the original bean shape on most particles, you&apos;re in the right range.
           </p>
           <p>
             <strong>Why this matters:</strong> Grind too fine, and you&apos;ll get over-extracted, bitter coffee with sludge at the bottom. Grind too coarse, and your coffee will be weak and under-extracted.
@@ -215,7 +215,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
 
           <h3>Step 5: Pour Water Over Grounds (960g Total)</h3>
           <p>
-            Pour your 200°F water over the grounds in a circular motion, making sure to saturate all the coffee evenly. Fill to 960g total weight (which includes the weight of the dry coffee—60g coffee + 900g water = 960g total).
+            Pour your 200°F water over the grounds in a circular motion, making sure to saturate all the coffee evenly. Fill to 960g total weight (which includes the weight of the dry coffee: 60g coffee + 900g water = 960g total).
           </p>
           <p>
             <strong>Pro Tip:</strong> I pour in two stages. First, I add about 120g of water to &quot;bloom&quot; the coffee for 30 seconds (you&apos;ll see it bubble and expand). Then I add the remaining water. This improves extraction and flavor.
@@ -274,7 +274,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
               >
                 <Link href="/reviews/bodum-chambord-french-press" className="text-blue-700 font-bold underline">Bodum Chambord French Press</Link>
               </CTAVisibilityTracker>{' '}
-              since 2001—first in professional cafe settings, then for 18 years at home. It&apos;s survived thousands of brewing cycles and still works perfectly. The borosilicate glass is heat-resistant and doesn&apos;t retain flavors, the stainless steel frame is nearly indestructible, and replacement parts are readily available if needed.
+              since 2001, first in professional cafe settings, then for 18 years at home. It&apos;s survived thousands of brewing cycles and still works perfectly. The borosilicate glass is heat-resistant and doesn&apos;t retain flavors, the stainless steel frame is nearly indestructible, and replacement parts are readily available if needed.
             </p>
             <CTAVisibilityTracker
               ctaId="blog-how-to-make-perfect-french-press-coffee-review-cta-1"
@@ -303,7 +303,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
 
           <h3>Mistake #2: Grinding Too Fine</h3>
           <p>
-            Many people use a grind that&apos;s too fine—closer to espresso or drip coffee. This creates over-extracted, bitter coffee and leaves tons of sediment in your cup.
+            Many people use a grind that&apos;s too fine, closer to espresso or drip coffee. This creates over-extracted, bitter coffee and leaves tons of sediment in your cup.
           </p>
           <p>
             <strong>Solution:</strong> Use a coarse grind that looks like raw sugar or coarse sea salt. If you can still see the original shape of the bean on most particles, you&apos;re close to the right size.
@@ -319,15 +319,15 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
 
           <h3>Mistake #4: Using Stale or Low-Quality Coffee</h3>
           <p>
-            French press doesn&apos;t hide flaws—it amplifies them. If your beans are stale (roasted more than 4-6 weeks ago) or low quality, your coffee will taste flat and lifeless.
+            French press doesn&apos;t hide flaws. It amplifies them. If your beans are stale (roasted more than 4-6 weeks ago) or low quality, your coffee will taste flat and lifeless.
           </p>
           <p>
-            <strong>Solution:</strong> Buy whole beans from a local roaster or quality online source. Check the roast date—beans are best between 4 days and 4 weeks after roasting. Store them in an airtight container away from light and heat.
+            <strong>Solution:</strong> Buy whole beans from a local roaster or quality online source. Check the roast date. Beans are best between 4 days and 4 weeks after roasting. Store them in an airtight container away from light and heat.
           </p>
 
           <h3>Mistake #5: Not Cleaning the Press Thoroughly</h3>
           <p>
-            Coffee oils build up on the mesh filter and glass over time, creating rancid flavors that ruin your coffee. I see this constantly—people rinse their French press but never deep clean it.
+            Coffee oils build up on the mesh filter and glass over time, creating rancid flavors that ruin your coffee. I see this constantly: people rinse their French press but never deep clean it.
           </p>
           <p>
             <strong>Solution:</strong> Disassemble the plunger and wash all parts with hot, soapy water after every use. Once a week, soak the mesh screen in a solution of hot water and baking soda (or use a coffee-specific cleaner like Cafiza).
@@ -390,7 +390,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
 
           <ul>
             <li>
-              <strong>Invest in a burr grinder.</strong> Blade grinders produce inconsistent particle sizes—some grounds are dust, others are chunks. This creates uneven extraction. A decent burr grinder (even a hand grinder) will transform your French press coffee.
+              <strong>Invest in a burr grinder.</strong> Blade grinders produce inconsistent particle sizes. Some grounds are dust, others are chunks. This creates uneven extraction. A decent burr grinder (even a hand grinder) will transform your French press coffee.
             </li>
             <li>
               <strong>Use filtered water if your tap water tastes bad.</strong> Coffee is 98% water. If your water has chlorine, mineral, or metallic flavors, they&apos;ll show up in your coffee.
@@ -411,18 +411,18 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
               <strong>Experiment with steep time.</strong> Start with 4 minutes, but don&apos;t be afraid to adjust. Some coffees taste better at 3:30, others at 4:30. Take notes and find what works for your beans.
             </li>
             <li>
-              <strong>Use the right French press size.</strong> Don&apos;t brew a single cup in a 12-cup press—the coffee-to-water ratio gets thrown off. Use a 3-cup press for 1-2 cups, an 8-cup for 3-4 cups, and a 12-cup for 5-6 cups.
+              <strong>Use the right French press size.</strong> Don&apos;t brew a single cup in a 12-cup press. The coffee-to-water ratio gets thrown off. Use a 3-cup press for 1-2 cups, an 8-cup for 3-4 cups, and a 12-cup for 5-6 cups.
             </li>
           </ul>
 
           <h2>Final Thoughts</h2>
 
           <p>
-            French press is one of the best brewing methods for highlighting the natural characteristics of coffee—its body, sweetness, and complexity. But it&apos;s also unforgiving. Small mistakes (water too hot, grind too fine, steep too long) produce noticeably worse coffee.
+            French press is one of the best brewing methods for highlighting the natural characteristics of coffee: its body, sweetness, and complexity. But it&apos;s also unforgiving. Small mistakes (water too hot, grind too fine, steep too long) produce noticeably worse coffee.
           </p>
 
           <p>
-            The technique I&apos;ve outlined here is what I&apos;ve refined over 24 years of daily use. It&apos;s simple, repeatable, and produces consistently excellent coffee. Start with these fundamentals—200°F water, coarse grind, 1:16 ratio, 4-minute steep—and adjust from there based on your preferences and your beans.
+            The technique I&apos;ve outlined here is what I&apos;ve refined over 24 years of daily use. It&apos;s simple, repeatable, and produces consistently excellent coffee. Start with these fundamentals (200°F water, coarse grind, 1:16 ratio, 4-minute steep) and adjust from there based on your preferences and your beans.
           </p>
 
           <p>
@@ -434,7 +434,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
               merchant="internal"
             >
               <Link href="/reviews/bodum-chambord-french-press" className="text-blue-700 underline">Bodum Chambord</Link>
-            </CTAVisibilityTracker>. I&apos;ve used the same one for 24 years—6 years in professional settings, 18 years at home—and it still works like new. It&apos;s the only French press I trust, and it&apos;s the one I recommend to everyone who asks.
+            </CTAVisibilityTracker>. I&apos;ve used the same one for 24 years (6 years in professional settings, 18 years at home) and it still works like new. It&apos;s the only French press I trust, and it&apos;s the one I recommend to everyone who asks.
           </p>
 
         </div>
@@ -454,7 +454,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
               <Link href="/reviews/bodum-chambord-french-press" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Bodum Chambord French Press Review: 24-Year Professional Test</h4>
                 <p className="text-slate-700 text-sm">
-                  The French press that survived 24 years of daily use—6 years professional, 18 years at home.
+                  The French press that survived 24 years of daily use: 6 years professional, 18 years at home.
                 </p>
               </Link>
             </CTAVisibilityTracker>
@@ -480,7 +480,7 @@ export default function HowToMakePerfectFrenchPressCoffeePage() {
               <Link href="/reviews/diamond-crystal-kosher-salt" className="block bg-white rounded-lg p-4 hover:shadow-md transition-shadow">
                 <h4 className="font-bold text-slate-900 mb-2">Diamond Crystal Kosher Salt Review: 18-Year Professional Test</h4>
                 <p className="text-slate-700 text-sm">
-                  The professional chef&apos;s salt choice—pure flavor and perfect seasoning control.
+                  The professional chef&apos;s salt choice. Pure flavor and perfect seasoning control.
                 </p>
               </Link>
             </CTAVisibilityTracker>

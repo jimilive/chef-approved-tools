@@ -30,19 +30,19 @@ export const hotelPanData = {
     questions: [
       {
         question: "Are hotel pans only for restaurants?",
-        answer: "No—they are perfect for home cooks who want professional-level organization. If you meal prep, cook in batches, or host family gatherings, hotel pans will change your kitchen."
+        answer: "No. They are perfect for home cooks who want professional-level organization. If you meal prep, cook in batches, or host family gatherings, hotel pans will change your kitchen."
       },
       {
         question: "How do I know which size to buy?",
-        answer: "Start with 1/6 pans (6-inch depth) for most home use. These are the most versatile size—big enough for meal prep portions but not so large they dominate your refrigerator."
+        answer: "Start with 1/6 pans (6-inch depth) for most home use. These are the most versatile size, big enough for meal prep portions but not so large they dominate your refrigerator."
       },
       {
         question: "Can I put plastic hotel pans in the freezer?",
-        answer: "Yes—plastic hotel pans are freezer-safe. They can be used for freezing stock, soups, and cooked grains."
+        answer: "Yes, plastic hotel pans are freezer-safe. They can be used for freezing stock, soups, and cooked grains."
       },
       {
         question: "Can metal hotel pans go in the oven?",
-        answer: "Yes—metal hotel pans are oven-safe up to 500°F+. Use them for roasting vegetables, baking casseroles, or holding food hot."
+        answer: "Yes, metal hotel pans are oven-safe up to 500°F+. Use them for roasting vegetables, baking casseroles, or holding food hot."
       },
       {
         question: "How long do hotel pans last?",

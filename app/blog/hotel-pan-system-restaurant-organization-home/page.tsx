@@ -78,7 +78,7 @@ export default async function HotelPanSystemPage() {
         <section className="bg-orange-50 border-l-4 border-orange-600 p-6 mb-12">
           <h2 className="text-2xl font-bold mb-3 text-gray-900">Quick Verdict</h2>
           <p className="text-lg text-slate-700 mb-4">
-            After 24 years using hotel pans in professional kitchens and 20 years using them at home, I can tell you this: <strong>there&rsquo;s a reason every single professional kitchen uses this system</strong>. The hotel pan system isn&rsquo;t just restaurant equipment—it&rsquo;s the most functional organization solution ever created for food storage and prep. If you&rsquo;re tired of the total chaos of the &ldquo;Tupperware drawer,&rdquo; hotel pans will change your kitchen forever.
+            After 24 years using hotel pans in professional kitchens and 20 years using them at home, I can tell you this: <strong>there&rsquo;s a reason every single professional kitchen uses this system</strong>. The hotel pan system isn&rsquo;t just restaurant equipment. It&rsquo;s the most functional organization solution ever created for food storage and prep. If you&rsquo;re tired of the total chaos of the &ldquo;Tupperware drawer,&rdquo; hotel pans will change your kitchen forever.
           </p>
           <p className="text-slate-700 mb-4">
             <strong>Best For:</strong> Home cooks who meal prep, anyone tired of mismatched containers, families who cook in batches, anyone who wants restaurant-level organization at home
@@ -145,7 +145,7 @@ export default async function HotelPanSystemPage() {
             <li>One full hotel pan across three rows</li>
           </ul>
           <p className="text-lg text-slate-700 mb-6">
-            This isn&rsquo;t coincidence—the entire professional kitchen infrastructure is built around this system because it WORKS.
+            This isn&rsquo;t coincidence. The entire professional kitchen infrastructure is built around this system because it WORKS.
           </p>
 
           <h3 className="text-2xl font-bold mb-4 text-gray-900 mt-8">Prep Line Efficiency</h3>
@@ -202,7 +202,7 @@ export default async function HotelPanSystemPage() {
                 Hotel pans are perfect for storing items that need to stay cold:
               </p>
               <ul className="list-disc list-inside space-y-1 text-slate-700">
-                <li>Shredded cheese (I buy blocks and shred myself—hotel pans keep it fresh)</li>
+                <li>Shredded cheese (I buy blocks and shred myself, and hotel pans keep it fresh)</li>
                 <li>Prepped vegetables</li>
                 <li>Marinating proteins</li>
                 <li>Leftovers that actually stack properly</li>
@@ -236,7 +236,7 @@ export default async function HotelPanSystemPage() {
                 <li>Some metal lids are notched so you can keep a ladle in the pan while maintaining heat</li>
               </ul>
               <p className="text-slate-700">
-                This is literally how restaurants hold food hot for service—and it works just as well at home.
+                This is literally how restaurants hold food hot for service, and it works just as well at home.
               </p>
             </div>
           </div>
@@ -268,7 +268,7 @@ export default async function HotelPanSystemPage() {
                 <li>Dishwasher safe</li>
                 <li>Won&rsquo;t rust or corrode</li>
                 <li>Lighter weight when moving full containers</li>
-                <li>See-through options (though I avoid translucent ones—they stain)</li>
+                <li>See-through options (though I avoid translucent ones because they stain)</li>
                 <li>Less expensive than metal</li>
               </ul>
 
@@ -365,7 +365,7 @@ export default async function HotelPanSystemPage() {
             <div className="bg-yellow-50 border-l-4 border-yellow-600 p-6">
               <h3 className="text-xl font-bold mb-2 text-yellow-900">⚠️ Be Careful: 1/9 Pans</h3>
               <p className="text-slate-700">
-                <strong>1/9 pans can be unwieldy because they&rsquo;re narrow and deep—they can tip over easily.</strong> I use them occasionally but they&rsquo;re not my first choice for home storage.
+                <strong>1/9 pans can be unwieldy because they&rsquo;re narrow and deep. They can tip over easily.</strong> I use them occasionally but they&rsquo;re not my first choice for home storage.
               </p>
             </div>
           </div>
@@ -606,7 +606,7 @@ export default async function HotelPanSystemPage() {
                 <li>• 4-Inch 1/6 Pan 6-Pack with Lids (Plastic) x1</li>
               </ul>
               <p className="text-slate-700 mb-4">
-                This gives you 12 containers in two depths—enough to organize meal prep, leftovers, and ingredient storage for most households.
+                This gives you 12 containers in two depths, enough to organize meal prep, leftovers, and ingredient storage for most households.
               </p>
               <AffiliateButton href={smallPlasticUrl} merchant="amazon" product="curta-starter-kit" position="mid_article">
                 Get the 6-Inch Starter Kit →
@@ -680,10 +680,10 @@ export default async function HotelPanSystemPage() {
 
           <div className="bg-green-50 border-l-4 border-green-600 p-6 mb-6">
             <p className="text-xl font-bold text-gray-900 mb-4">
-              YES—if you&rsquo;re tired of Tupperware chaos and want restaurant-level organization at home.
+              YES. If you&rsquo;re tired of Tupperware chaos and want restaurant-level organization at home.
             </p>
             <p className="text-lg text-slate-700">
-              After 24 years in professional kitchens and 20 years using hotel pans at home, I can tell you this system is THE reason professional kitchens stay organized under extreme pressure. It works in restaurants because it&rsquo;s the best solution—and it works just as well at home.
+              After 24 years in professional kitchens and 20 years using hotel pans at home, I can tell you this system is THE reason professional kitchens stay organized under extreme pressure. It works in restaurants because it&rsquo;s the best solution, and it works just as well at home.
             </p>
           </div>
 
@@ -706,7 +706,7 @@ export default async function HotelPanSystemPage() {
           </ul>
 
           <p className="text-lg text-slate-700 mb-6">
-            <strong>This isn&rsquo;t cheap plastic crap that falls apart in a year.</strong> This is the same system used by every professional kitchen that exists—for good reason.
+            <strong>This isn&rsquo;t cheap plastic crap that falls apart in a year.</strong> This is the same system used by every professional kitchen that exists. For good reason.
           </p>
         </section>
 
@@ -748,7 +748,7 @@ export default async function HotelPanSystemPage() {
               Trust the system that every professional kitchen uses.
             </p>
             <p className="text-lg text-center text-slate-700 mb-6">
-              There&rsquo;s a reason we don&rsquo;t use random Tupperware in restaurants—<strong>because hotel pans are simply better.</strong>
+              There&rsquo;s a reason we don&rsquo;t use random Tupperware in restaurants: <strong>hotel pans are simply better.</strong>
             </p>
             <p className="text-slate-700 text-center italic">
               After 44 years of combined professional and home use, I wouldn&rsquo;t organize my kitchen any other way.

@@ -60,7 +60,7 @@ export const educationalData = {
   hero: {
     title: "10 Knife Safety Rules From Professional Kitchens",
     introduction: [
-      "Every cook has a scar story. Mine came one night at Purple Cafe, after a long double shift. I was cutting basil using the claw method when a few leaves slid off the pile. Without thinking, I tried to swipe them back with my thumb — and sliced right across it."
+      "After 24 years in professional kitchens, I've learned that knife safety is 10% rules and 90% discipline. These are the habits that keep you safe when you're tired, distracted, or under pressure."
     ]
   },
 
@@ -80,9 +80,8 @@ export const educationalData = {
       id: "intro",
       title: "",
       content: [
-        "It wasn't deep, but it was a reminder: fatigue and ego don't mix with sharp steel.",
-        "After 24 years in professional kitchens, I've learned that knife safety is 10% rules and 90% discipline. The best cooks in the world still get nicked when they rush, get angry, or stop paying attention. Knife safety isn't about being perfect — it's about being consistent when you're tired, distracted, or under pressure.",
-        "I've watched hundreds of home cooks struggle with their knives — and most of the time, it's not the knife's fault. It's how they're using it. In high-volume pizza kitchens, cooks would stab cans with chef knives to create vents instead of using a can opener. After stabbing 10 cans, the blade edge was destroyed—chips, rolls, dull as a butter knife. We weren't careless — just untrained. The problem was technique, not intent.",
+        "After 24 years in professional kitchens, I've learned that knife safety is 10% rules and 90% discipline. The best cooks in the world still get nicked when they rush, get angry, or stop paying attention. Knife safety isn't about being perfect. It's about being consistent when you're tired, distracted, or under pressure.",
+        "I've watched hundreds of home cooks struggle with their knives, and most of the time, it's not the knife's fault. It's how they're using it. In high-volume pizza kitchens, cooks would stab cans with chef knives to create vents instead of using a can opener. After stabbing 10 cans, the blade edge was destroyed. Chips, rolls, dull as a butter knife. We weren't careless, just untrained. The problem was technique, not intent.",
         "In this comprehensive guide, you'll learn the ten rules every professional follows, the techniques that prevent accidents, common mistakes that ruin edges and cause injuries, and the habits that keep professional kitchens safe even during slammed dinner service."
       ]
     },
@@ -90,13 +89,13 @@ export const educationalData = {
       id: "why",
       title: "Why Knife Safety Matters More Than You Think",
       content: [
-        "A sharp knife demands respect. I've seen new cooks handle blades like toys — and I've seen veterans slip after a 12-hour shift. The difference between a clean cut and a trip to urgent care is awareness.",
-        "The irony? Sharp knives are safer than dull ones. A dull blade forces you to push harder, which leads to slips. A sharp blade, guided properly, goes exactly where you intend. Nothing ruins edges faster than hard surfaces or poor technique — and nothing causes more injuries than a dull knife that suddenly breaks through food with all your force behind it.",
-        "Knife safety isn't just about avoiding injury — it's about confidence. When you trust your knife, your prep work becomes faster, cleaner, and calmer. Every restaurant cook knows: your knife is your livelihood."
+        "A sharp knife demands respect. I've seen new cooks handle blades like toys, and I've seen veterans slip after a 12-hour shift. The difference between a clean cut and a trip to urgent care is awareness.",
+        "The irony? Sharp knives are safer than dull ones. A dull blade forces you to push harder, which leads to slips. A sharp blade, guided properly, goes exactly where you intend. Nothing ruins edges faster than hard surfaces or poor technique, and nothing causes more injuries than a dull knife that suddenly breaks through food with all your force behind it.",
+        "Knife safety isn't just about avoiding injury. It's about confidence. When you trust your knife, your prep work becomes faster, cleaner, and calmer. Every restaurant cook knows: your knife is your livelihood."
       ],
       proTip: {
         title: "Restaurant Reality",
-        content: "In professional kitchens, knife safety isn't optional—it's survival. During my time managing the kitchen at Mellow Mushroom, we processed hundreds of pounds of vegetables, meats, and toppings daily. Speed mattered because service waits for no one, but safety came first. I trained every prep cook on the claw grip, proper blade angles, and the difference between \"fast\" and \"reckless.\" The cooks who respected the blade and used proper technique kept working. The ones who got careless or cocky got stitches—and a very serious conversation about whether they were cut out for this work."
+        content: "In professional kitchens, knife safety isn't optional. It's survival. During my time managing the kitchen at Mellow Mushroom, we processed hundreds of pounds of vegetables, meats, and toppings daily. Speed mattered because service waits for no one, but safety came first. I trained every prep cook on the claw grip, proper blade angles, and the difference between \"fast\" and \"reckless.\" The cooks who respected the blade and used proper technique kept working. The ones who got careless or cocky got stitches—and a very serious conversation about whether they were cut out for this work."
       }
     },
     {
@@ -107,8 +106,8 @@ export const educationalData = {
           id: "rule-1",
           title: "1. Keep Your Knife Sharp",
           content: [
-            "A sharp knife doesn't slip — it obeys. Dull knives crush and wander. Hone your blade before each use (a few strokes on a ceramic honing rod is enough). Sharpen monthly if you cook often.",
-            "Here's what most home cooks don't understand: when your knife starts feeling dull after a few weeks of use, it's probably not actually dull. The edge has simply rolled to one side from normal use. The sharp edge is still there — it's just bent out of alignment. Honing realigns that edge in seconds, while sharpening requires removing metal to create a new edge."
+            "A sharp knife doesn't slip. It obeys. Dull knives crush and wander. Hone your blade before each use (a few strokes on a ceramic honing rod is enough). Sharpen monthly if you cook often.",
+            "Here's what most home cooks don't understand: when your knife starts feeling dull after a few weeks of use, it's probably not actually dull. The edge has simply rolled to one side from normal use. The sharp edge is still there. It's just bent out of alignment. Honing realigns that edge in seconds, while sharpening requires removing metal to create a new edge."
           ],
           warning: {
             title: "Chef's Warning: Dull Knives Cause More Injuries",
@@ -120,23 +119,23 @@ export const educationalData = {
           title: "2. Anchor Your Cutting Board",
           content: [
             "I've seen more injuries from sliding boards than dull knives. Always place a damp towel or silicone mat underneath your board. If it rocks, you're in danger.",
-            "Safety doesn't start with the knife—it starts with a stable, properly positioned cutting board. Use a board large enough for the task — minimum 12x18 inches for most prep work. Small boards force you to work in a cramped space where accidents happen. Never use glass or ceramic boards — these destroy knife edges instantly and are slippery when wet."
+            "Safety doesn't start with the knife. It starts with a stable, properly positioned cutting board. Use a board large enough for the task, minimum 12x18 inches for most prep work. Small boards force you to work in a cramped space where accidents happen. Never use glass or ceramic boards. These destroy knife edges instantly and are slippery when wet."
           ]
         },
         {
           id: "rule-3",
-          title: "3. Use the Claw Method — Correctly",
+          title: "3. Use the Claw Method, Correctly",
           content: [
-            "Curl your fingertips inward, resting the flat of your knuckles against the knife side. Glide the knife up and down while your hand moves back slowly. This is the single most important safety technique in all of cooking — we'll cover it in detail in the dedicated section below."
+            "Curl your fingertips inward, resting the flat of your knuckles against the knife side. Glide the knife up and down while your hand moves back slowly. This is the single most important safety technique in all of cooking. We'll cover it in detail in the dedicated section below."
           ],
-          tip: "Don't chase falling food with your thumb — I've cut myself that way more than once. Let it fall, reset your grip, then continue."
+          tip: "Don't chase falling food with your thumb. I've cut myself that way more than once. Let it fall, reset your grip, then continue."
         },
         {
           id: "rule-4",
           title: "4. Never Cut Angry or Distracted",
           content: [
             "This rule might save your fingers. When frustration builds, your technique collapses. Your grip tightens, your rhythm goes erratic, and mistakes multiply. I've learned this the hard way: never cut in anger. Walk away for a minute. Regain composure, then continue.",
-            "In professional kitchens, we don't multitask while cutting — it's a rookie mistake. Keep your eyes on the board and your knife motion predictable. No talking, no texting, no TV. Every cut gets your full attention."
+            "In professional kitchens, we don't multitask while cutting. It's a rookie mistake. Keep your eyes on the board and your knife motion predictable. No talking, no texting, no TV. Every cut gets your full attention."
           ]
         },
         {
@@ -150,7 +149,7 @@ export const educationalData = {
           id: "rule-6",
           title: "6. Never Catch a Falling Knife",
           content: [
-            "It's instinct to reach out — fight it. Let it hit the floor. A blade can be cleaned; stitches take longer."
+            "It's instinct to reach out. Fight it. Let it hit the floor. A blade can be cleaned; stitches take longer."
           ]
         },
         {
@@ -171,14 +170,14 @@ export const educationalData = {
           id: "rule-9",
           title: "9. Carry Knives Safely",
           content: [
-            "When moving around with a knife, hold it point down, edge back, at your side. Announce \"behind!\" or \"knife!\" if walking past anyone — it's kitchen protocol. Hand knives handle-first when passing to someone else. Never leave knives in the sink — this is the biggest home kitchen danger. Someone reaches in and gets cut."
+            "When moving around with a knife, hold it point down, edge back, at your side. Announce \"behind!\" or \"knife!\" if walking past anyone. It's kitchen protocol. Hand knives handle-first when passing to someone else. Never leave knives in the sink — this is the biggest home kitchen danger. Someone reaches in and gets cut."
           ]
         },
         {
           id: "rule-10",
           title: "10. Clean with Caution",
           content: [
-            "Never leave knives in sinks or sudsy water. Wash immediately, blade away from your hand, and dry thoroughly. Rust dulls edges and breeds bacteria. Dishwasher heat and detergent corrode metal and weaken handles. Worse, knives knock into other utensils mid-cycle. Hand wash only — it takes 30 seconds and can add years to your knife's life."
+            "Never leave knives in sinks or sudsy water. Wash immediately, blade away from your hand, and dry thoroughly. Rust dulls edges and breeds bacteria. Dishwasher heat and detergent corrode metal and weaken handles. Worse, knives knock into other utensils mid-cycle. Hand wash only. It takes 30 seconds and can add years to your knife's life."
           ]
         }
       ]
@@ -187,7 +186,7 @@ export const educationalData = {
       id: "method",
       title: "The Professional Method: How Chefs Actually Use and Maintain Knives",
       content: [
-        "Knife technique isn't about flair — it's about efficiency, consistency, and safety. Here's how professionals keep their knives performing perfectly shift after shift."
+        "Knife technique isn't about flair. It's about efficiency, consistency, and safety. Here's how professionals keep their knives performing perfectly shift after shift."
       ],
       subsections: [
         {
@@ -240,7 +239,7 @@ export const educationalData = {
       title: "The \"Claw\" Technique: Your Built-In Shield",
       content: [
         "This is the single most important safety technique in all of cooking. Master the claw grip for your guiding hand (the hand holding the food), and you've eliminated 90% of knife accident risk.",
-        "If you've spent any time in a professional kitchen, you know there's one universal truth: every chef has cut themselves at least once. I earned my first kitchen scar during my second week at culinary school—a mandoline accident that taught me instantly to respect every blade, every time, no exceptions. The scar on my left index finger is still visible 40 years later, a permanent reminder that sharp tools demand your complete attention."
+        "If you've spent any time in a professional kitchen, you know there's one universal truth: every chef has cut themselves at least once. It happens to everyone, no matter how careful you are."
       ],
       subsections: [
         {
@@ -321,7 +320,7 @@ export const educationalData = {
           title: "Mistake #5: Ignoring Honing",
           content: [
             "Waiting until your knife \"feels dull\" is like waiting until your car engine seizes before changing the oil.",
-            "Here's what most home cooks don't understand: when your knife starts feeling dull after a few weeks of use, it's probably not actually dull. The edge has simply rolled to one side from normal use. The sharp edge is still there — it's just bent out of alignment. Honing realigns that edge in seconds, while sharpening requires removing metal to create a new edge.",
+            "Here's what most home cooks don't understand: when your knife starts feeling dull after a few weeks of use, it's probably not actually dull. The edge has simply rolled to one side from normal use. The sharp edge is still there. It's just bent out of alignment. Honing realigns that edge in seconds, while sharpening requires removing metal to create a new edge.",
             "**The fix:** Hone daily, or at minimum before any serious knife work. Sharpen only when honing no longer restores the edge — which might be every 3-6 months for home cooks. This one habit will transform your experience with knives."
           ]
         },
