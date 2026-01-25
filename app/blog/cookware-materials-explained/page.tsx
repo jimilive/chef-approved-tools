@@ -149,7 +149,7 @@ export default function CookwareMaterialsPage() {
           <h2 id={materialsSection.id}>{materialsSection.title}</h2>
           {materialsSection.materials.map((material, index) => (
             <div key={index}>
-              <h3>{index + 1}. {material.name} — {material.subtitle}</h3>
+              <h3>{index + 1}. {material.name}: {material.subtitle}</h3>
               <p><strong>Pros:</strong> {material.pros}</p>
               <p><strong>Cons:</strong> {material.cons}</p>
               <p>{material.description}</p>

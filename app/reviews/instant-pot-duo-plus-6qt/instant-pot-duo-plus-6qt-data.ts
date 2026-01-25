@@ -9,7 +9,7 @@ export const reviewData = {
   // Metadata
   metadata: {
     title: 'Instant Pot Duo Plus 6-Qt: 90-Day Test (What It Actually Does Well)',
-    description: 'Daily testing by a professional chef—pot roast, rice, beans, yogurt. Honest review of what the Instant Pot 6-qt actually does well and what it doesn\'t.',
+    description: 'Daily testing by a professional chef. Pot roast, rice, beans, yogurt. Honest review of what the Instant Pot 6-qt actually does well and what it doesn\'t.',
     ogTitle: 'Instant Pot Duo Plus 6 Qt Review: 90-Day Professional Test',
     ogDescription: 'After 90 days testing the Instant Pot Duo Plus with 24 years of professional kitchen experience.',
     testingPeriod: '90 Days Testing',
@@ -48,7 +48,7 @@ export const reviewData = {
     ],
     affiliateLinks: [],
     expertRating: 4.5,
-    expertOpinion: "After 90 days of daily testing with 24 years of professional kitchen experience, the Instant Pot Duo Plus delivers approximately 70% of commercial pressure cooking performance. The natural release function produces restaurant-quality braised meats, and rice comes out perfect every single time. However, the sauté function can't properly brown large roasts—brown separately in cast iron, then transfer for pressure cooking.",
+    expertOpinion: "After 90 days of daily testing with 24 years of professional kitchen experience, the Instant Pot Duo Plus delivers approximately 70% of commercial pressure cooking performance. The natural release function produces restaurant-quality braised meats, and rice comes out perfect every single time. However, the sauté function can't properly brown large roasts. Brown separately in cast iron, then transfer for pressure cooking.",
     dateAdded: "2025-10-15",
     lastUpdated: "2025-10-15"
   },
@@ -73,7 +73,7 @@ export const reviewData = {
       linkHref: '/review-tiers'
     },
     verdict: `After 90 days of daily testing with 24 years of professional kitchen experience, the Instant Pot Duo Plus delivers approximately 70% of commercial pressure cooking performance. The natural release function produces restaurant-quality braised meats, and rice comes out perfect every single time.`,
-    verdictStrong: `However, the sauté function can't properly brown large roasts—brown separately in cast iron, then transfer for pressure cooking. Total cooking time is 1.5-2 hours for most dishes. This isn't quick cooking—it's convenient hands-off cooking.`,
+    verdictStrong: `However, the sauté function can't properly brown large roasts. Brown separately in cast iron, then transfer for pressure cooking. Total cooking time is 1.5-2 hours for most dishes. This isn't quick cooking, it's convenient hands-off cooking.`,
     ctaText: 'Check Amazon Price →',
   },
 
@@ -93,7 +93,7 @@ export const reviewData = {
     sections: [
       {
         title: 'Pot Roast Test (The Signature Dish)',
-        content: `**Setup:** 2.5-pound chuck roast, standard mirepoix, beef stock, pressure cook 75 minutes, natural release 20 minutes.\n\n**Results:** The meat was fall-apart tender, rivaling anything I've made in commercial kitchens. The natural release is key here—it prevents the meat from seizing up and becoming tough. However, the sauté function couldn't properly brown the roast. I ended up removing the mirepoix before pressure cooking because it turned to mush during the extended browning attempt.\n\n**Key finding:** Brown large cuts in a cast iron skillet on the stovetop (takes 3-4 minutes with proper heat), then transfer to the Instant Pot for pressure cooking.`
+        content: `**Setup:** 2.5-pound chuck roast, standard mirepoix, beef stock, pressure cook 75 minutes, natural release 20 minutes.\n\n**Results:** The meat was fall-apart tender, rivaling anything I've made in commercial kitchens. The natural release is key here. It prevents the meat from seizing up and becoming tough. However, the sauté function couldn't properly brown the roast. I ended up removing the mirepoix before pressure cooking because it turned to mush during the extended browning attempt.\n\n**Key finding:** Brown large cuts in a cast iron skillet on the stovetop (takes 3-4 minutes with proper heat), then transfer to the Instant Pot for pressure cooking.`
       },
       {
         title: 'Rice Test (The Daily Driver)',
@@ -101,7 +101,7 @@ export const reviewData = {
       },
       {
         title: 'Beans & Legumes Test',
-        content: `**Setup:** Various dried beans (black beans, chickpeas, pinto beans), no pre-soaking, 30-40 minutes pressure cooking.\n\n**Results:** Dried beans in 30-40 minutes without pre-soaking, and they're creamy inside without being mushy. The Instant Pot eliminates the planning requirement—dried beans to table in under an hour is genuinely convenient.\n\n**Professional context:** In restaurant kitchens, we pre-soak beans overnight and still cook them for 2-3 hours. The Instant Pot cuts that time by 75% while delivering comparable texture.`
+        content: `**Setup:** Various dried beans (black beans, chickpeas, pinto beans), no pre-soaking, 30-40 minutes pressure cooking.\n\n**Results:** Dried beans in 30-40 minutes without pre-soaking, and they're creamy inside without being mushy. The Instant Pot eliminates the planning requirement. Dried beans to table in under an hour is genuinely convenient.\n\n**Professional context:** In restaurant kitchens, we pre-soak beans overnight and still cook them for 2-3 hours. The Instant Pot cuts that time by 75% while delivering comparable texture.`
       }
     ],
     testingEnvironment: [
@@ -141,7 +141,7 @@ export const reviewData = {
       },
       {
         title: 'The Time Reality: Not Quick, But Convenient',
-        content: `This is the most common misconception about pressure cooking. 'Pressure cooking' refers to the active cooking time under pressure, not total time.\n\n**Pot roast example:**\n• Pressurization: 10-15 minutes\n• Cooking time: 75 minutes\n• Natural release: 20 minutes\n• **Total: 105-110 minutes**\n\nThat's still half the time of traditional braising (4-5 hours), but it's not quick cooking—it's convenient hands-off cooking. You can't walk in the door and have dinner in 30 minutes.\n\n**Where it saves time:** You're not monitoring it. Set it, walk away, come back to finished food. For meal prep on Sunday for the week, this is transformative. For weeknight dinners when you get home at 6pm, this won't work.`
+        content: `This is the most common misconception about pressure cooking. 'Pressure cooking' refers to the active cooking time under pressure, not total time.\n\n**Pot roast example:**\n• Pressurization: 10-15 minutes\n• Cooking time: 75 minutes\n• Natural release: 20 minutes\n• **Total: 105-110 minutes**\n\nThat's still half the time of traditional braising (4-5 hours), but it's not quick cooking, it's convenient hands-off cooking. You can't walk in the door and have dinner in 30 minutes.\n\n**Where it saves time:** You're not monitoring it. Set it, walk away, come back to finished food. For meal prep on Sunday for the week, this makes a real difference. For weeknight dinners when you get home at 6pm, this won't work.`
       },
       {
         title: 'The Sauté Function Limitation',
@@ -183,7 +183,7 @@ export const reviewData = {
   faqData: [
     {
       question: "Is the Instant Pot Duo Plus worth getting?",
-      answer: "After 90 days of daily use, yes—if you cook for 4+ people, meal prep regularly, or frequently make beans, rice, and braised meats. The combination of hands-off convenience, consistent results, and 9-in-1 functionality makes it a valuable addition to the kitchen. However, if you cook for 1-2 people or primarily make quick stovetop meals, you may not use it enough to justify the counter space."
+      answer: "After 90 days of daily use, yes, if you cook for 4+ people, meal prep regularly, or frequently make beans, rice, and braised meats. The combination of hands-off convenience, consistent results, and 9-in-1 functionality makes it a valuable addition to the kitchen. However, if you cook for 1-2 people or primarily make quick stovetop meals, you may not use it enough to justify the counter space."
     },
     {
       question: "How does the Instant Pot compare to commercial pressure cookers?",
@@ -191,7 +191,7 @@ export const reviewData = {
     },
     {
       question: "Why does it take so long if pressure cooking is supposed to be fast?",
-      answer: "This is the most common misconception. 'Pressure cooking' refers to the active cooking time under pressure, not total time. For a pot roast: 10-15 minutes to come to pressure, 75 minutes cooking time, 20 minutes natural release = 105-110 minutes total. That's still half the time of traditional braising (4-5 hours), but it's not quick cooking—it's convenient hands-off cooking."
+      answer: "This is the most common misconception. 'Pressure cooking' refers to the active cooking time under pressure, not total time. For a pot roast: 10-15 minutes to come to pressure, 75 minutes cooking time, 20 minutes natural release = 105-110 minutes total. That's still half the time of traditional braising (4-5 hours), but it's not quick cooking, it's convenient hands-off cooking."
     },
     {
       question: "Can I use the Instant Pot to brown meat properly?",
@@ -222,7 +222,7 @@ export const reviewData = {
   // Email Capture
   emailCapture: {
     title: 'Get My Pressure Cooking Mastery Guide',
-    subtitle: 'Download my comprehensive guide to pressure cooking success, developed from 24 years in professional kitchens: The 11 essential kitchen tools I use most (including when pressure cookers make sense), recipes that work best under pressure, troubleshooting common issues, and tips for restaurant-quality results at home.',
+    subtitle: 'Download my complete guide to pressure cooking success, developed from 24 years in professional kitchens: The 11 kitchen tools I use most (including when pressure cookers make sense), recipes that work best under pressure, troubleshooting common issues, and tips for restaurant-quality results at home.',
     inputPlaceholder: 'Enter your email',
     buttonText: 'Download Free Guide →',
     finePrint: 'Instant delivery. No spam, ever. Unsubscribe anytime.'
@@ -232,9 +232,9 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      `After 90 days of daily testing with 24 years of professional kitchen experience, <LINK>the Instant Pot Duo Plus</LINK> delivers approximately 70% of commercial pressure cooking performance. For families and meal preppers, this is a legitimate game-changer.`,
-      `The natural release function produces restaurant-quality braised meats. Rice comes out perfect every time. Dried beans go from bag to table in under an hour. The hands-off convenience is real—set it and walk away with complete confidence.`,
-      `However, temper your expectations: total cooking time is still 1.5-2 hours, the sauté function can't properly brown large roasts (use cast iron instead), and the 6-quart size is too large for 1-2 people. <LINK>The Instant Pot</LINK> isn't quick cooking—it's convenient cooking that delivers professional-quality results with minimal active time.`
+      `After 90 days of daily testing with 24 years of professional kitchen experience, <LINK>the Instant Pot Duo Plus</LINK> delivers approximately 70% of commercial pressure cooking performance. For families and meal preppers, this is a real help.`,
+      `The natural release function produces restaurant-quality braised meats. Rice comes out perfect every time. Dried beans go from bag to table in under an hour. The hands-off convenience is real. Set it and walk away with complete confidence.`,
+      `However, temper your expectations: total cooking time is still 1.5-2 hours, the sauté function can't properly brown large roasts (use cast iron instead), and the 6-quart size is too large for 1-2 people. <LINK>The Instant Pot</LINK> isn't quick cooking, it's convenient cooking that delivers professional-quality results with minimal active time.`
     ],
     ctaUrl: '', // Will be filled by affiliateUrl in page.tsx
     ctaText: 'Check Amazon Price →'
@@ -247,7 +247,7 @@ export const reviewData = {
       {
         emoji: '🍳',
         name: 'Lodge Cast Iron Skillet',
-        description: 'Essential for properly browning large roasts before pressure cooking. The Instant Pot\'s sauté function can\'t match cast iron heat output.',
+        description: 'Needed for properly browning large roasts before pressure cooking. The Instant Pot\'s sauté function can\'t match cast iron heat output.',
         href: '/reviews/lodge-seasoned-cast-iron-3-skillet-bundle'
       },
       {

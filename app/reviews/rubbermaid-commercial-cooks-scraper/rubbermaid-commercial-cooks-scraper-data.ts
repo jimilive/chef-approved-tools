@@ -35,7 +35,7 @@ export const reviewData = {
   header: {
     title: "Rubbermaid Commercial Scraper Review: 18 Years Pro Testing",
     author: "Scott Bradley",
-    authorTitle: "Professional Chef • 45 Years Cooking Experience",
+    authorTitle: "Professional Chef • 24 Years Cooking Experience",
     expertRating: 4.7,
   },
 
@@ -71,7 +71,7 @@ export const reviewData = {
 
   // PROFESSIONAL SUMMARY
   professionalSummary: {
-    text: "PROFESSIONAL VERDICT: After 18 years—9 years professional use at Purple Cafe and Feireabend, plus 9 more years at home—this $15-20 high-heat spatula has outlasted every expensive silicone spatula I've owned.",
+    text: "PROFESSIONAL VERDICT: After 18 years (9 years professional use at Purple Cafe and Feireabend, plus 9 more years at home), this $15-20 high-heat spatula has outlasted every expensive silicone spatula I've owned.",
     detail: "This commercial spatula features one-piece molded construction that eliminates bacterial traps, 500°F heat resistance that prevents melting issues, and NSF certification that meets commercial sanitation standards. This is genuine buy-it-for-life equipment at the price of two lattes."
   },
 
@@ -96,7 +96,7 @@ export const reviewData = {
       {
         emoji: "🛡️",
         title: "One-Piece Construction",
-        description: "Blade molded directly onto handle—no seams, no joints, no bacterial traps. Commercial dishwasher safe. Zero maintenance for 18 years."
+        description: "Blade molded directly onto handle. No seams, no joints, no bacterial traps. Commercial dishwasher safe. Zero maintenance for 18 years."
       },
       {
         emoji: "✓",
@@ -121,22 +121,22 @@ export const reviewData = {
       { label: "Conditions", value: "Commercial dishwasher cycling, high-heat contact" }
     ],
     outstandingPerformance: [
-      "Seamless construction — no crevices where batter hides and bacteria grows",
-      "Clean-Rest notch — blade stays off the counter when you set it down",
-      "Bowl scraping efficiency — gets every last bit without scratching",
-      "Commercial durability — survives dishwasher cycles that warp cheap spatulas",
-      "NSF certification — meets actual food safety standards, not just marketing claims"
+      "Seamless construction: no crevices where batter hides and bacteria grows",
+      "Clean-Rest notch: blade stays off the counter when you set it down",
+      "Bowl scraping efficiency: gets every last bit without scratching",
+      "Commercial durability: survives dishwasher cycles that warp cheap spatulas",
+      "NSF certification: meets actual food safety standards, not just marketing claims"
     ],
     minorConsiderations: [
-      "Cold temperature only — not rated for stovetop use or hot pans",
-      "Sticker residue — the adhesive from the product label is stubborn to remove",
-      "White color only — shows staining from turmeric or tomato-based batters",
-      "Flexibility trade-off — less flexible than silicone, more rigid than rubber"
+      "Cold temperature only: not rated for stovetop use or hot pans",
+      "Sticker residue: the adhesive from the product label is stubborn to remove",
+      "White color only: shows staining from turmeric or tomato-based batters",
+      "Flexibility trade-off: less flexible than silicone, more rigid than rubber"
     ],
     sections: [
       {
         title: "Seamless Construction Testing",
-        content: "Every professional kitchen has a drawer full of spatulas with handles separating from blades. The gap starts small, then grows, then harbors moisture and bacteria. The Rubbermaid Commercial solves this by molding the blade directly onto the polypropylene handle — one continuous piece, no seam, no gap. After years of use and hundreds of dishwasher cycles, mine shows zero separation. This is why professional kitchens specify seamless construction in their equipment orders."
+        content: "Every professional kitchen has a drawer full of spatulas with handles separating from blades. The gap starts small, then grows, then harbors moisture and bacteria. The Rubbermaid Commercial solves this by molding the blade directly onto the polypropylene handle: one continuous piece, no seam, no gap. After years of use and hundreds of dishwasher cycles, mine shows zero separation. This is why professional kitchens specify seamless construction in their equipment orders."
       },
       {
         title: "The Clean-Rest Feature",
@@ -144,11 +144,11 @@ export const reviewData = {
       },
       {
         title: "Scraping Efficiency",
-        content: "A good scraper gets batter out of a bowl. A great scraper gets all of it. The Rubbermaid's blade flexes enough to conform to curved bowl surfaces without being so floppy that it folds over on itself. The 9.5-inch length provides adequate reach for standard mixing bowls. For professional baking applications — cake batters, cookie doughs, bread mixes — this extracts every usable ounce. When ingredients cost money, waste costs money."
+        content: "A good scraper gets batter out of a bowl. A great scraper gets all of it. The Rubbermaid's blade flexes enough to conform to curved bowl surfaces without being so floppy that it folds over on itself. The 9.5-inch length provides adequate reach for standard mixing bowls. For professional baking applications (cake batters, cookie doughs, bread mixes), this extracts every usable ounce. When ingredients cost money, waste costs money."
       },
       {
         title: "Durability Over Time",
-        content: "The true test of kitchen equipment is how it performs after years of use, not weeks. Commercial dishwasher temperatures and detergents destroy cheap spatulas — warping, cracking, discoloration. The Rubbermaid Commercial maintains its shape and function through repeated high-heat sanitizing cycles. The white color does show staining from certain ingredients (turmeric is the worst offender), but the blade integrity remains sound. Function over aesthetics."
+        content: "The true test of kitchen equipment is how it performs after years of use, not weeks. Commercial dishwasher temperatures and detergents destroy cheap spatulas: warping, cracking, discoloration. The Rubbermaid Commercial maintains its shape and function through repeated high-heat sanitizing cycles. The white color does show staining from certain ingredients (turmeric is the worst offender), but the blade integrity remains sound. Function over aesthetics."
       }
     ]
   },
@@ -159,19 +159,19 @@ export const reviewData = {
     sections: [
       {
         title: "Cold Temperature Design",
-        content: "This is a cold-prep tool, not a cooking utensil. The thermoplastic rubber (TPR) blade is rated to 200°F maximum — fine for room temperature batters and refrigerated ingredients, not for stirring hot sauces or scraping hot pans. Rubbermaid makes a separate high-heat silicone line for stovetop use (red handle, 500°F rating). Use the right tool for the right job. Trying to use this for hot applications will deform the blade and create food safety issues."
+        content: "This is a cold-prep tool, not a cooking utensil. The thermoplastic rubber (TPR) blade is rated to 200°F maximum, fine for room temperature batters and refrigerated ingredients, not for stirring hot sauces or scraping hot pans. Rubbermaid makes a separate high-heat silicone line for stovetop use (red handle, 500°F rating). Use the right tool for the right job. Trying to use this for hot applications will deform the blade and create food safety issues."
       },
       {
         title: "NSF Certification Matters",
-        content: "NSF certification isn't a marketing badge — it's third-party verification that the product meets food safety standards for commercial kitchens. The seamless construction, materials, and dishwasher-safe design all contribute to this certification. Health inspectors look for NSF marks on kitchen equipment during inspections. For home cooks, it means the same hygiene standards that protect restaurant customers protect your family."
+        content: "NSF certification isn't a marketing badge. It's third-party verification that the product meets food safety standards for commercial kitchens. The seamless construction, materials, and dishwasher-safe design all contribute to this certification. Health inspectors look for NSF marks on kitchen equipment during inspections. For home cooks, it means the same hygiene standards that protect restaurant customers protect your family."
       },
       {
         title: "Comparison to Silicone Alternatives",
-        content: "Silicone spatulas flex more and handle higher temperatures. The Rubbermaid Commercial TPR blade offers a middle ground: more rigid than silicone (better for scraping thick doughs), more flexible than plastic (conforms to bowl curves). The trade-off is temperature limitation. If you bake frequently with cold ingredients — cookies, cakes, pastry — this is the better scraper. If you cook more than you bake, invest in Rubbermaid's high-heat silicone line instead."
+        content: "Silicone spatulas flex more and handle higher temperatures. The Rubbermaid Commercial TPR blade offers a middle ground: more rigid than silicone (better for scraping thick doughs), more flexible than plastic (conforms to bowl curves). The trade-off is temperature limitation. If you bake frequently with cold ingredients (cookies, cakes, pastry), this is the better scraper. If you cook more than you bake, invest in Rubbermaid's high-heat silicone line instead."
       },
       {
         title: "The Sticker Problem",
-        content: "Every Amazon review mentions it, and they're right: the adhesive from the product label is absurdly stubborn. Goo-Gone, soap, scrubbing — nothing works completely. You'll have a small strip of residue until you accept it or sand it off. It's a frustrating design oversight on an otherwise well-engineered product. Rubbermaid should use peel-clean labels like every other kitchen equipment manufacturer."
+        content: "Every Amazon review mentions it, and they're right: the adhesive from the product label is absurdly stubborn. Goo-Gone, soap, scrubbing, nothing works completely. You'll have a small strip of residue until you accept it or sand it off. It's a frustrating design oversight on an otherwise well-engineered product. Rubbermaid should use peel-clean labels like every other kitchen equipment manufacturer."
       }
     ]
   },
@@ -182,14 +182,14 @@ export const reviewData = {
     professionalUse: {
       title: "Professional Use: 2007-2016 (9 Years)",
       paragraphs: [
-        "I started using this professional kitchen spatula in 2007 at Purple Cafe, then continued at Feireabend. Across both restaurants, it handled daily high-volume prep work—scraping mixing bowls, cleaning out sauce pots, working with thick batters and doughs. As a true high-heat spatula rated to 500°F, I could use it on warm griddles and in hot pans without the melting issues that destroyed cheaper alternatives.",
+        "I started using this professional kitchen spatula in 2007 at Purple Cafe, then continued at Feireabend. Across both restaurants, it handled daily high-volume prep work: scraping mixing bowls, cleaning out sauce pots, working with thick batters and doughs. As a true high-heat spatula rated to 500°F, I could use it on warm griddles and in hot pans without the melting issues that destroyed cheaper alternatives.",
         "The one-piece construction proved critical in commercial settings where sanitation is paramount. Unlike wooden spatulas that develop cracks or multi-piece designs where handles separate, this commercial spatula maintained complete integrity through thousands of commercial dishwasher cycles. The Clean-Rest™ feature kept the blade elevated off prep surfaces, reducing cross-contamination risks."
       ]
     },
     homeUse: {
       title: "Home Use: 2016-2025 (9 Years)",
       paragraphs: [
-        "After leaving commercial kitchens, I brought this scraper home where it continues daily service. Despite 18 total years of use, it shows minimal wear—some cosmetic staining (typical for white rubber), but zero functional degradation. The blade maintains its flexibility, the handle shows no cracking, and performance remains identical to day one.",
+        "After leaving commercial kitchens, I brought this scraper home where it continues daily service. Despite 18 total years of use, it shows minimal wear, some cosmetic staining (typical for white rubber), but zero functional degradation. The blade maintains its flexibility, the handle shows no cracking, and performance remains identical to day one.",
         "This longevity is remarkable for a $15-20 tool. I've watched expensive silicone spatulas ($30-40) fail within 2-3 years through handle separation or blade tearing. Meanwhile, this commercial-grade scraper just keeps going."
       ]
     },
@@ -308,7 +308,7 @@ export const reviewData = {
             "Often prohibited in commercial kitchens"
           ]
         },
-        verdict: "Wood has aesthetic appeal, but Rubbermaid wins decisively on sanitation and durability. Research confirms bacteria survives in wood cracks despite washing—the Rubbermaid's non-porous, one-piece design eliminates this risk entirely."
+        verdict: "Wood has aesthetic appeal, but Rubbermaid wins decisively on sanitation and durability. Research confirms bacteria survives in wood cracks despite washing. The Rubbermaid's non-porous, one-piece design eliminates this risk entirely."
       }
     ]
   },
@@ -340,43 +340,43 @@ export const reviewData = {
     items: [
       {
         question: "Is the Rubbermaid Commercial scraper worth buying over cheap grocery store spatulas?",
-        answer: "Absolutely yes, especially for the minimal price difference. Cheap grocery store spatulas ($3-8) typically use low-grade plastic or rubber that melts on contact with warm pans, separates at the handle joint after months of use, and lacks proper heat resistance ratings. I've watched countless cheap spatulas melt, crack, or fall apart within 6-12 months. The Rubbermaid Commercial scraper costs $15-20 but has lasted me 18 years across professional and home use. The one-piece molded construction eliminates the handle separation issue, the 500°F heat resistance prevents melting, and the NSF certification ensures it meets commercial sanitation standards. Over 18 years, this works out to roughly $1 per year—exceptional value for daily-use equipment. The durability alone justifies choosing this over cheap alternatives that need replacement annually."
+        answer: "Absolutely yes, especially for the minimal price difference. Cheap grocery store spatulas ($3-8) typically use low-grade plastic or rubber that melts on contact with warm pans, separates at the handle joint after months of use, and lacks proper heat resistance ratings. I've watched countless cheap spatulas melt, crack, or fall apart within 6-12 months. The Rubbermaid Commercial scraper costs $15-20 but has lasted me 18 years across professional and home use. The one-piece molded construction eliminates the handle separation issue, the 500°F heat resistance prevents melting, and the NSF certification ensures it meets commercial sanitation standards. Over 18 years, this works out to roughly $1 per year, exceptional value for daily-use equipment. The durability alone justifies choosing this over cheap alternatives that need replacement annually."
       },
       {
         question: "How does this compare to expensive silicone spatulas like Le Creuset or GIR?",
-        answer: "Premium silicone spatulas ($25-40) offer superior flexibility and heat resistance (often 600°F+), making them better for delicate tasks like folding meringues or working with very sticky batters. However, the Rubbermaid Commercial scraper excels in different ways: the stiffer construction provides better leverage for scraping thick mixtures, the one-piece design is easier to sanitize (critical in commercial settings), and the 500°F heat resistance handles 95% of cooking tasks. The key difference: premium silicone spatulas are better for finesse work, while the Rubbermaid is better for heavy-duty scraping and commercial volume. For most home and professional cooks, the Rubbermaid delivers 90% of the functionality at 25-50% of the cost. I use both in my kitchen—premium silicone for delicate baking, Rubbermaid for everyday scraping and prep work. If you can only afford one, the Rubbermaid offers better value."
+        answer: "Premium silicone spatulas ($25-40) offer superior flexibility and heat resistance (often 600°F+), making them better for delicate tasks like folding meringues or working with very sticky batters. However, the Rubbermaid Commercial scraper excels in different ways: the stiffer construction provides better leverage for scraping thick mixtures, the one-piece design is easier to sanitize (critical in commercial settings), and the 500°F heat resistance handles 95% of cooking tasks. The key difference: premium silicone spatulas are better for finesse work, while the Rubbermaid is better for heavy-duty scraping and commercial volume. For most home and professional cooks, the Rubbermaid delivers 90% of the functionality at 25-50% of the cost. I use both in my kitchen: premium silicone for delicate baking, Rubbermaid for everyday scraping and prep work. If you can only afford one, the Rubbermaid offers better value."
       },
       {
         question: "What is the Clean-Rest™ feature and why does it matter?",
-        answer: "The Clean-Rest™ feature is a raised edge molded into the blade that keeps the food-contact surface elevated when you set the scraper down on countertops. This prevents cross-contamination by keeping the blade from touching potentially dirty surfaces. In professional kitchens, this is critical for food safety—you can set the scraper down between tasks without worrying about picking up bacteria from counters. At home, it means the blade doesn't pick up crumbs, flour, or other debris when resting between stirs. This small design detail makes a significant difference in maintaining sanitation during multi-step recipes. It's one of those features you don't appreciate until you use a scraper without it and realize how often your blade touches the counter."
+        answer: "The Clean-Rest™ feature is a raised edge molded into the blade that keeps the food-contact surface elevated when you set the scraper down on countertops. This prevents cross-contamination by keeping the blade from touching potentially dirty surfaces. In professional kitchens, this is critical for food safety. You can set the scraper down between tasks without worrying about picking up bacteria from counters. At home, it means the blade doesn't pick up crumbs, flour, or other debris when resting between stirs. This small design detail makes a significant difference in maintaining sanitation during multi-step recipes. It's one of those features you don't appreciate until you use a scraper without it and realize how often your blade touches the counter."
       },
       {
         question: "Can I use this scraper on hot pans and griddles?",
-        answer: "Yes, with the important caveat of understanding its heat limits. The Rubbermaid Commercial scraper withstands temperatures up to 500°F (260°C), which covers most stovetop cooking scenarios. You can safely use it to scrape hot sauces, stir sautés, and work with food on warm griddles. However, avoid leaving it resting directly on extremely hot surfaces for extended periods or using it as a turner on a screaming-hot cast iron pan. The 500°F rating means brief contact is fine, but continuous contact with surfaces above 400°F can cause degradation over time. Compare this to cheap grocery store spatulas (often rated to only 250°F or not rated at all) which will melt almost immediately on hot pans. For typical home and professional cooking, the 500°F tolerance is more than adequate—I've used mine on hot griddles and pans for 18 years without melting issues."
+        answer: "Yes, with the important caveat of understanding its heat limits. The Rubbermaid Commercial scraper withstands temperatures up to 500°F (260°C), which covers most stovetop cooking scenarios. You can safely use it to scrape hot sauces, stir sautés, and work with food on warm griddles. However, avoid leaving it resting directly on extremely hot surfaces for extended periods or using it as a turner on a screaming-hot cast iron pan. The 500°F rating means brief contact is fine, but continuous contact with surfaces above 400°F can cause degradation over time. Compare this to cheap grocery store spatulas (often rated to only 250°F or not rated at all) which will melt almost immediately on hot pans. For typical home and professional cooking, the 500°F tolerance is more than adequate. I've used mine on hot griddles and pans for 18 years without melting issues."
       },
       {
         question: "Why choose this over a wooden spatula?",
-        answer: "Wooden spatulas have charm, but they present significant hygiene challenges that the Rubbermaid Commercial scraper eliminates. Wood is porous and develops microscopic cracks over time that harbor bacteria and absorb flavors—research shows bacteria can survive in these cracks despite washing. Wooden spatulas require hand-washing only (dishwashers cause cracking and warping), need regular oiling to prevent drying, must be replaced when cracks appear, and can transfer flavors between dishes (your morning pancakes don't want to taste like last night's garlic). The Rubbermaid scraper features one-piece molded construction with zero seams or cracks, is commercial dishwasher safe for high-temperature sanitization, maintains NSF certification for food safety, never absorbs flavors or odors, and requires zero maintenance beyond washing. In professional kitchens, wooden utensils are often prohibited in certain applications due to sanitation concerns—the Rubbermaid meets commercial sanitation standards that wood cannot match. After 18 years, mine shows no cracking, no bacterial buildup, and no flavor transfer. For sanitation and longevity, the Rubbermaid is the clear winner."
+        answer: "Wooden spatulas have charm, but they present significant hygiene challenges that the Rubbermaid Commercial scraper eliminates. Wood is porous and develops microscopic cracks over time that harbor bacteria and absorb flavors. Research shows bacteria can survive in these cracks despite washing. Wooden spatulas require hand-washing only (dishwashers cause cracking and warping), need regular oiling to prevent drying, must be replaced when cracks appear, and can transfer flavors between dishes (your morning pancakes don't want to taste like last night's garlic). The Rubbermaid scraper features one-piece molded construction with zero seams or cracks, is commercial dishwasher safe for high-temperature sanitization, maintains NSF certification for food safety, never absorbs flavors or odors, and requires zero maintenance beyond washing. In professional kitchens, wooden utensils are often prohibited in certain applications due to sanitation concerns. The Rubbermaid meets commercial sanitation standards that wood cannot match. After 18 years, mine shows no cracking, no bacterial buildup, and no flavor transfer. For sanitation and longevity, the Rubbermaid is the clear winner."
       },
       {
         question: "Is this dishwasher safe?",
-        answer: "Yes, and not just home-dishwasher safe—it's commercial dishwasher safe, which is a significantly higher standard. Commercial dishwashers use much higher temperatures (up to 180°F for sanitizing rinse cycles) and harsher detergents than home units. The fact that this scraper withstands commercial dishwasher cycles daily means it will handle your home dishwasher without any degradation. After 18 years of both commercial and home dishwasher use, mine shows no warping, cracking, or separation. The one-piece molded design means there are no seams or joints where water can penetrate and cause deterioration. This is a massive advantage over wooden spatulas (which require hand washing), multi-piece designs (where handles separate), and cheap spatulas (which warp in dishwashers). Simply toss it in the dishwasher after every use—no special care required."
+        answer: "Yes, and not just home-dishwasher safe. It's commercial dishwasher safe, which is a significantly higher standard. Commercial dishwashers use much higher temperatures (up to 180°F for sanitizing rinse cycles) and harsher detergents than home units. The fact that this scraper withstands commercial dishwasher cycles daily means it will handle your home dishwasher without any degradation. After 18 years of both commercial and home dishwasher use, mine shows no warping, cracking, or separation. The one-piece molded design means there are no seams or joints where water can penetrate and cause deterioration. This is a massive advantage over wooden spatulas (which require hand washing), multi-piece designs (where handles separate), and cheap spatulas (which warp in dishwashers). Simply toss it in the dishwasher after every use. No special care required."
       },
       {
         question: "What's the difference between the 13.5-inch and 9.5-inch sizes?",
-        answer: "Both sizes feature identical construction and materials—the only difference is length. The 13.5-inch version (which this review focuses on) is ideal for professional kitchens, large mixing bowls, and high-volume prep work. The longer handle provides better leverage for scraping thick batters and gives you more reach in deep pots. The 9.5-inch version is perfect for home kitchens, smaller mixing bowls, and everyday tasks. The shorter length offers better control for detail work and takes up less drawer space. I recommend the 13.5-inch for professional use or if you regularly work with large batches, and the 9.5-inch for typical home cooking. Many home cooks find the 9.5-inch to be the sweet spot for versatility. If you can only choose one, consider your primary use case: commercial/high-volume work gets 13.5-inch, everyday home cooking gets 9.5-inch. Both deliver the same exceptional durability and heat resistance."
+        answer: "Both sizes feature identical construction and materials. The only difference is length. The 13.5-inch version (which this review focuses on) is ideal for professional kitchens, large mixing bowls, and high-volume prep work. The longer handle provides better leverage for scraping thick batters and gives you more reach in deep pots. The 9.5-inch version is perfect for home kitchens, smaller mixing bowls, and everyday tasks. The shorter length offers better control for detail work and takes up less drawer space. I recommend the 13.5-inch for professional use or if you regularly work with large batches, and the 9.5-inch for typical home cooking. Many home cooks find the 9.5-inch to be the sweet spot for versatility. If you can only choose one, consider your primary use case: commercial/high-volume work gets 13.5-inch, everyday home cooking gets 9.5-inch. Both deliver the same exceptional durability and heat resistance."
       },
       {
         question: "Will this stain over time?",
-        answer: "Yes, some staining is inevitable with white rubber over years of use, particularly when working with highly pigmented foods like tomato sauce, curry, turmeric, or beets. However, this staining is purely cosmetic and doesn't affect performance or food safety. After 18 years, mine has developed some yellowing and minor staining, but it still functions perfectly and cleans completely after washing. The stain-resistant material minimizes discoloration compared to cheaper alternatives. If pristine appearance is critical, consider the high-heat version with a colored handle and blade (red/white combination), which shows staining less obviously. That said, in professional kitchens, some visible wear is expected and accepted—what matters is sanitation and performance, not appearance. The NSF certification and dishwasher sanitation ensure it remains food-safe regardless of cosmetic staining. If aesthetic perfection is your priority, premium silicone spatulas in dark colors hide stains better, but you'll pay 2-3x more for that cosmetic benefit."
+        answer: "Yes, some staining is inevitable with white rubber over years of use, particularly when working with highly pigmented foods like tomato sauce, curry, turmeric, or beets. However, this staining is purely cosmetic and doesn't affect performance or food safety. After 18 years, mine has developed some yellowing and minor staining, but it still functions perfectly and cleans completely after washing. The stain-resistant material minimizes discoloration compared to cheaper alternatives. If pristine appearance is critical, consider the high-heat version with a colored handle and blade (red/white combination), which shows staining less obviously. That said, in professional kitchens, some visible wear is expected and accepted. What matters is sanitation and performance, not appearance. The NSF certification and dishwasher sanitation ensure it remains food-safe regardless of cosmetic staining. If aesthetic perfection is your priority, premium silicone spatulas in dark colors hide stains better, but you'll pay 2-3x more for that cosmetic benefit."
       },
       {
         question: "Can I use this in my blender to scrape down the sides?",
-        answer: "CRITICAL SAFETY WARNING: Never use any scraper or spatula in a blender while the blades are running or could accidentally start. Always turn off and unplug the blender before using the scraper to push ingredients down toward the blades. I mention this because it's a common mistake that can result in destroyed scrapers and dangerous blade contact. That said, this scraper works excellently for scraping down blender sides between blending cycles—the stiff construction provides good leverage for moving stuck ingredients, and the blade is thin enough to reach into corners. Just always ensure the blender is completely powered off first. This is one scraper I actually lost when it accidentally got caught in running blender blades (my fault entirely)—it destroyed the scraper but proved how tough the material is, as it didn't shatter into dangerous fragments like cheaper plastic would have."
+        answer: "CRITICAL SAFETY WARNING: Never use any scraper or spatula in a blender while the blades are running or could accidentally start. Always turn off and unplug the blender before using the scraper to push ingredients down toward the blades. I mention this because it's a common mistake that can result in destroyed scrapers and dangerous blade contact. That said, this scraper works excellently for scraping down blender sides between blending cycles. The stiff construction provides good leverage for moving stuck ingredients, and the blade is thin enough to reach into corners. Just always ensure the blender is completely powered off first. This is one scraper I actually lost when it accidentally got caught in running blender blades (my fault entirely). It destroyed the scraper but proved how tough the material is, as it didn't shatter into dangerous fragments like cheaper plastic would have."
       },
       {
         question: "How do I remove the label adhesive?",
-        answer: "The label adhesive is notoriously stubborn—many Amazon reviews mention this challenge. Here's the method that works best: Before first washing, apply a small amount of cooking oil, Goo Gone, or rubbing alcohol to the adhesive residue. Let it sit for 2-3 minutes to penetrate the glue. Use your fingernail or a plastic scraper to gently lift and remove the softened adhesive. Wash thoroughly with hot soapy water to remove any residue. Some users report success using a hair dryer to heat the label before peeling, which softens the adhesive for easier removal. Yes, it's annoying, but this is a one-time task for an 18-year tool—5 minutes of effort for nearly two decades of use is acceptable. Once removed, you'll never think about it again. The adhesive issue is my only real complaint about this otherwise excellent product."
+        answer: "The label adhesive is notoriously stubborn. Many Amazon reviews mention this challenge. Here's the method that works best: Before first washing, apply a small amount of cooking oil, Goo Gone, or rubbing alcohol to the adhesive residue. Let it sit for 2-3 minutes to penetrate the glue. Use your fingernail or a plastic scraper to gently lift and remove the softened adhesive. Wash thoroughly with hot soapy water to remove any residue. Some users report success using a hair dryer to heat the label before peeling, which softens the adhesive for easier removal. Yes, it's annoying, but this is a one-time task for an 18-year tool. Five minutes of effort for nearly two decades of use is acceptable. Once removed, you'll never think about it again. The adhesive issue is my only real complaint about this otherwise excellent product."
       }
     ]
   },
@@ -398,7 +398,7 @@ export const reviewData = {
         linkIndex: 1
       }
     ],
-    note: "💡 Both sizes feature identical construction and materials—only length differs."
+    note: "💡 Both sizes feature identical construction and materials. Only length differs."
   },
 
   // FINAL VERDICT
@@ -533,7 +533,7 @@ export const reviewData = {
     affiliateLinks: [],
     inStock: true,
     expertRating: 4.7,
-    expertOpinion: "After 18 years of professional and home use—including 9 years across two commercial kitchens—this $15-20 rubber spatula has outlasted every expensive silicone spatula I've owned. The one-piece molded design eliminates bacterial traps, the 500°F heat resistance prevents the melting issues plaguing cheap alternatives, and the NSF certification means it meets commercial sanitation standards. This professional kitchen spatula is genuine buy-it-for-life equipment at the price of two lattes.",
+    expertOpinion: "After 18 years of professional and home use (including 9 years across two commercial kitchens), this $15-20 rubber spatula has outlasted every expensive silicone spatula I've owned. The one-piece molded design eliminates bacterial traps, the 500°F heat resistance prevents the melting issues plaguing cheap alternatives, and the NSF certification means it meets commercial sanitation standards. This professional kitchen spatula is genuine buy-it-for-life equipment at the price of two lattes.",
     dateAdded: "2024-09-23",
     lastUpdated: "2025-01-17"
   }

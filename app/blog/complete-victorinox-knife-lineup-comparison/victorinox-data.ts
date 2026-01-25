@@ -6,7 +6,7 @@
 export const victorinoxData = {
   metadata: {
     title: "Complete Victorinox Knife Lineup: Comparing All 5 Models for Your Kitchen",
-    description: "After 24 years of professional kitchen experience, here's exactly which Victorinox knives you actually need—and which ones you can skip. Strategic buying guide for the complete Fibrox lineup.",
+    description: "After 24 years of professional kitchen experience, here's exactly which Victorinox knives you actually need, and which ones you can skip. Strategic buying guide for the complete Fibrox lineup.",
     publishedDate: "2025-11-15",
     lastUpdated: "2025-11-15",
     primaryKeyword: "victorinox knife comparison",
@@ -22,7 +22,7 @@ export const victorinoxData = {
   hero: {
     title: "Complete Victorinox Knife Lineup: Comparing All 5 Models for Your Kitchen",
     introduction: [
-      "After 24 years of professional kitchen experience, here's exactly which Victorinox knives you actually need—and which ones you can skip.",
+      "After 24 years of professional kitchen experience, here's exactly which Victorinox knives you actually need, and which ones you can skip.",
       "You don't need all 5 knives. Most home cooks should start with just two: the 8-inch chef's knife and 4-inch paring knife for a total investment of $57 that covers 80% of kitchen tasks."
     ]
   },

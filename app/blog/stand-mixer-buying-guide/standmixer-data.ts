@@ -11,7 +11,7 @@ export const standmixerData = {
       },
       {
         question: "Can I make dough in smaller mixers?",
-        answer: "Yes, but reduce batch sizes by half to avoid straining the motor. Mix on lower speeds for longer periods. Smaller mixers work fine for occasional bread—just don't push them with double batches of stiff dough."
+        answer: "Yes, but reduce batch sizes by half to avoid straining the motor. Mix on lower speeds for longer periods. Smaller mixers work fine for occasional bread. Just don't push them with double batches of stiff dough."
       },
       {
         question: "What attachments are worth it?",
@@ -27,7 +27,7 @@ export const standmixerData = {
       },
       {
         question: "What's the difference between gear-driven and belt-driven mixers?",
-        answer: "Gear-driven mixers use metal gears for direct power transfer — more durable and powerful but louder. Belt-driven mixers use rubber belts — quieter but less durable under heavy loads. Professional-grade mixers are almost always gear-driven."
+        answer: "Gear-driven mixers use metal gears for direct power transfer, more durable and powerful but louder. Belt-driven mixers use rubber belts, quieter but less durable under heavy loads. Professional-grade mixers are almost always gear-driven."
       },
       {
         question: "Can I repair a stand mixer myself?",

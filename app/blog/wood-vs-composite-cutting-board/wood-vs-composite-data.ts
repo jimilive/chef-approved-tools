@@ -20,8 +20,8 @@ export const comparisonData = {
     title: "Wood vs Composite Cutting Boards: Why Pros Choose Wood",
     introduction: [
       "The wood versus composite cutting board debate has been ongoing in professional kitchens for decades. Both materials have distinct advantages: wood boards offer superior knife feel and natural antibacterial properties, while composite boards provide bulletproof sanitation and commercial dishwasher durability.",
-      "The truth? Neither is universally \"better\"—they excel at different things. Your choice depends on your priorities: traditional craftsmanship and knife care versus modern convenience and strict hygiene protocols.",
-      "This comprehensive comparison breaks down everything that matters: material science, knife edge preservation, sanitation research, maintenance requirements, durability testing, and real-world performance in both home and professional settings."
+      "The truth? Neither is universally \"better\". They excel at different things. Your choice depends on your priorities: traditional craftsmanship and knife care versus modern convenience and strict hygiene protocols.",
+      "This comparison breaks down everything that matters: material science, knife edge preservation, sanitation research, maintenance requirements, durability testing, and real-world performance in both home and professional settings."
     ]
   },
 
@@ -167,29 +167,29 @@ export const comparisonData = {
           option: "wood",
           title: "Wood Cutting Boards: Living Material",
           content: [
-            "Wood boards are made from hardwood—typically maple, walnut, cherry, or teak. The best professional boards use **end-grain construction**, where wood fibers stand vertically. When your knife cuts into the surface, it slips between the fibers rather than severing them. This \"self-healing\" property is why end-grain boards last decades.",
+            "Wood boards are made from hardwood, typically maple, walnut, cherry, or teak. The best professional boards use **end-grain construction**, where wood fibers stand vertically. When your knife cuts into the surface, it slips between the fibers rather than severing them. This \"self-healing\" property is why end-grain boards last decades.",
             "**Edge-grain boards** orient wood fibers horizontally. They're more affordable but less forgiving to knife edges and show cut marks faster than end-grain.",
-            "**Face-grain boards** expose the flat surface of the wood. They're essentially decorative—not recommended for serious cooking because they dull knives quickly and scar permanently.",
+            "**Face-grain boards** expose the flat surface of the wood. They're essentially decorative. Not recommended for serious cooking because they dull knives quickly and scar permanently.",
             "**Wood Types Ranked by Durability:**",
             "- **Maple** - Industry standard, perfect hardness (1450 Janka)",
             "- **Walnut** - Slightly softer (1010 Janka), gorgeous dark color",
             "- **Cherry** - Medium hardness (995 Janka), ages beautifully",
             "- **Teak** - Naturally oily, water-resistant, but expensive",
-            "The Janka hardness scale measures wood density. Ideal range for cutting boards is 1000-1500—hard enough to resist deep cuts but soft enough not to damage knife edges."
+            "The Janka hardness scale measures wood density. Ideal range for cutting boards is 1000-1500, hard enough to resist deep cuts but soft enough not to damage knife edges."
           ]
         },
         {
           option: "composite",
           title: "Composite Cutting Boards: Engineered Performance",
           content: [
-            "Composite boards use wood fiber (cellulose) mixed with resin—essentially paper layers compressed under extreme heat and pressure. The result is a solid, non-porous surface that's technically classified as \"paper composite\" but feels nothing like paper.",
-            "The material was originally developed for industrial applications requiring extreme durability and sanitation. Adapted for professional kitchens in 1993, composite boards are now NSF-certified for commercial food service—the same standard as restaurant equipment.",
+            "Composite boards use wood fiber (cellulose) mixed with resin, essentially paper layers compressed under extreme heat and pressure. The result is a solid, non-porous surface that's technically classified as \"paper composite\" but feels nothing like paper.",
+            "The material was originally developed for industrial applications requiring extreme durability and sanitation. Adapted for professional kitchens in 1993, composite boards are now NSF-certified for commercial food service, the same standard as restaurant equipment.",
             "**How Composite Construction Works:**",
             "1. Wood fibers (usually from sustainably harvested wood) are broken down",
             "2. Mixed with food-safe resin (typically a thermosetting polymer)",
             "3. Layered and heat-pressed at 350°F under thousands of pounds of pressure",
             "4. Cooled and precision-cut to exact specifications",
-            "The manufacturing process eliminates natural variations in wood—no grain patterns, knots, or weak spots. Every inch of the board performs identically. This consistency is why chain restaurants with strict quality control often mandate composite boards."
+            "The manufacturing process eliminates natural variations in wood: no grain patterns, knots, or weak spots. Every inch of the board performs identically. This consistency is why chain restaurants with strict quality control often mandate composite boards."
           ]
         }
       ]
@@ -215,7 +215,7 @@ export const comparisonData = {
           option: "composite",
           title: "Composite's Reality: Harder Impact",
           content: [
-            "Composite materials register significantly harder than wood—roughly 2-3x the hardness of maple. This means more microscopic edge damage with every cut. You don't feel it immediately, but after 50-100 cuts, knives lose sharpness noticeably faster than on wood.",
+            "Composite materials register significantly harder than wood, roughly 2-3x the hardness of maple. This means more microscopic edge damage with every cut. You don't feel it immediately, but after 50-100 cuts, knives lose sharpness noticeably faster than on wood.",
             "However, the difference matters more to professionals using knives 6+ hours daily than home cooks cutting for 30-45 minutes. If you sharpen your knives twice yearly (typical for home use), you likely won't notice composite's edge impact.",
             "**The Counterargument:** Composite boards stay flat forever. Wood boards can warp or cup if improperly maintained, creating uneven surfaces that damage knife edges worse than any material hardness issue. A warped wood board is far more destructive than a perfectly flat composite board."
           ]
@@ -228,13 +228,13 @@ export const comparisonData = {
       subsections: [
         {
           option: "wood",
-          title: "The Wood Board Myth—And Reality",
+          title: "The Wood Board Myth, And Reality",
           content: [
             "**The Common Belief:** Wood is porous and harbors bacteria. Composite is non-porous and sanitary.",
             "**What Science Shows:** That's actually backwards.",
-            "Dr. Dean Cliver's landmark UC Davis research (1993) demonstrated that wood boards have natural antibacterial properties. Bacteria penetrate the surface but then die within minutes—likely due to wood's tendency to pull moisture from bacteria cells. The same bacteria thrived for hours on plastic and composite surfaces.",
-            "His testing used Salmonella, E. coli, and Listeria (the three most dangerous food pathogens). Within 3 minutes on wood, 99.9% of bacteria were dead. On plastic and composite, they survived—and multiplied—for hours.",
-            "**The Critical Caveat:** This applies to properly maintained, minimally scarred wood boards. Once deep knife cuts create grooves, bacteria hide in those crevices. Wood's antibacterial properties can't reach them. This is why health departments often prohibit wood boards in commercial kitchens—not because wood is inherently less sanitary, but because ensuring proper maintenance is difficult to regulate."
+            "Dr. Dean Cliver's landmark UC Davis research (1993) demonstrated that wood boards have natural antibacterial properties. Bacteria penetrate the surface but then die within minutes, likely due to wood's tendency to pull moisture from bacteria cells. The same bacteria thrived for hours on plastic and composite surfaces.",
+            "His testing used Salmonella, E. coli, and Listeria (the three most dangerous food pathogens). Within 3 minutes on wood, 99.9% of bacteria were dead. On plastic and composite, they survived, and multiplied, for hours.",
+            "**The Critical Caveat:** This applies to properly maintained, minimally scarred wood boards. Once deep knife cuts create grooves, bacteria hide in those crevices. Wood's antibacterial properties can't reach them. This is why health departments often prohibit wood boards in commercial kitchens, not because wood is inherently less sanitary, but because ensuring proper maintenance is difficult to regulate."
           ]
         },
         {
@@ -315,7 +315,7 @@ export const comparisonData = {
           option: "composite",
           title: "Composite Boards: 5-8 Years, Then Replace",
           content: [
-            "Composite boards last 3-5 years of daily professional use or 8-10 years of typical home use before knife grooves compromise sanitation. The material doesn't \"wear out\" like wood—it simply accumulates too many deep cuts to properly clean.",
+            "Composite boards last 3-5 years of daily professional use or 8-10 years of typical home use before knife grooves compromise sanitation. The material doesn't \"wear out\" like wood. It simply accumulates too many deep cuts to properly clean.",
             "**Signs Your Composite Board Needs Replacing:**",
             "- Visible knife grooves you can catch your fingernail in",
             "- Staining that won't wash out (indicates bacteria in grooves)",
@@ -348,7 +348,7 @@ export const comparisonData = {
           name: "John Boos Maple End Grain Cutting Board",
           size: "18\" x 18\" x 2.25\"",
           priceRange: "~$280-320",
-          whyBest: "The professional standard—maximum knife edge preservation",
+          whyBest: "The professional standard. Maximum knife edge preservation",
           bestFor: "Knife enthusiasts and aspiring professionals",
           features: [
             "True end-grain construction",
@@ -379,7 +379,7 @@ export const comparisonData = {
           name: "Epicurean Kitchen Series",
           size: "18\" x 13\"",
           priceRange: "~$35-45",
-          whyBest: "The original composite board—NSF commercial certified",
+          whyBest: "The original composite board. NSF commercial certified",
           bestFor: "Anyone wanting zero-maintenance performance",
           features: [
             "Made in USA from sustainably harvested wood",

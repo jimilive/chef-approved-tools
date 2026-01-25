@@ -22,7 +22,7 @@ export const rouxData = {
   hero: {
     title: "How to Make a Perfect Roux: The Foundation of Great Sauces",
     introduction: [
-      "The single most important sauce technique you can learn—how to make a proper roux, why it matters, and how professionals use it to create everything from béchamel to gumbo."
+      "The single most important sauce technique you can learn: how to make a proper roux, why it matters, and how professionals use it to create everything from béchamel to gumbo."
     ]
   },
 
@@ -48,15 +48,15 @@ export const rouxData = {
       title: "",
       content: [
         "If there's one technique that separates cooks who make good sauces from cooks who make **great** sauces, it's knowing how to make a proper roux.",
-        "A roux is absurdly simple—just flour and fat cooked together—but it's the foundation of countless classic dishes: béchamel, velouté, cheese sauce, gumbo, étouffée, sawmill gravy, and more. Master the roux, and you've unlocked an entire category of cooking.",
-        "But here's the thing: most home cooks either don't know how to make a roux at all, or they make it wrong—raw-tasting flour, lumpy sauce, burnt bits, grainy texture. In 24 years of professional cooking, I've made thousands of gallons of roux-based sauces. Let me show you the right way—the professional way—so your sauces are always smooth, flavorful, and perfectly thickened."
+        "A roux is absurdly simple, just flour and fat cooked together, but it's the foundation of countless classic dishes: béchamel, velouté, cheese sauce, gumbo, étouffée, sawmill gravy, and more. Master the roux, and you've unlocked an entire category of cooking.",
+        "But here's the thing: most home cooks either don't know how to make a roux at all, or they make it wrong: raw-tasting flour, lumpy sauce, burnt bits, grainy texture. In 24 years of professional cooking, I've made thousands of gallons of roux-based sauces. Let me show you the right way, the professional way, so your sauces are always smooth, flavorful, and perfectly thickened."
       ]
     },
     {
       id: "what-is-roux",
       title: "What is a Roux?",
       definition: "**A roux** (pronounced \"roo\") is equal parts fat and flour cooked together to create a thickening agent for sauces, soups, and stews. That's it. Two ingredients, one technique, infinite applications.",
-      science: "**The science:** Flour contains starch granules. When you heat starch in fat, it gelatinizes—the granules swell and thicken liquid. But raw flour tastes terrible. By cooking the flour in fat first, you:",
+      science: "**The science:** Flour contains starch granules. When you heat starch in fat, it gelatinizes. The granules swell and thicken liquid. But raw flour tastes terrible. By cooking the flour in fat first, you:",
       benefits: [
         { label: "Eliminate the raw flour taste", detail: "that chalky, pasty flavor" },
         { label: "Develop nutty, toasted flavor", detail: "especially in darker roux" },
@@ -65,7 +65,7 @@ export const rouxData = {
       ratio: "**The basic ratio:** 1:1 by weight. Equal parts fat and flour. That's the classic French technique, and it works perfectly every time.",
       restaurantReality: {
         title: "Restaurant Reality: The Line Cook's First Lesson",
-        content: "At Purple Café, one of the first things you learned as a new line cook was **how to make a proper blonde roux for béchamel**. Not because it's difficult, but because it teaches you patience, attention, and heat control—the foundations of professional cooking. I watched new cooks rush it, burn it, or walk away and ruin an entire batch. The Chef would make them start over until they got it right. **\"If you can't make a roux,\"** he'd say, **\"you can't work my line.\"** Why? Because a roux-based sauce is on almost every menu. Cheese sauce, cream sauce, gravy, soup bases—they all start with a roux. Get this right, and you've got a fundamental building block for hundreds of dishes. **The lesson:** Mastery of fundamentals isn't optional. It's the foundation everything else is built on."
+        content: "At Purple Café, one of the first things you learned as a new line cook was **how to make a proper blonde roux for béchamel**. Not because it's difficult, but because it teaches you patience, attention, and heat control, the foundations of professional cooking. I watched new cooks rush it, burn it, or walk away and ruin an entire batch. The Chef would make them start over until they got it right. **\"If you can't make a roux,\"** he'd say, **\"you can't work my line.\"** Why? Because a roux-based sauce is on almost every menu. Cheese sauce, cream sauce, gravy, soup bases, they all start with a roux. Get this right, and you've got a fundamental building block for hundreds of dishes. **The lesson:** Mastery of fundamentals isn't optional. It's the foundation everything else is built on."
       }
     },
     {
@@ -123,7 +123,7 @@ export const rouxData = {
         },
         {
           title: "Step 2: Add the Flour",
-          content: "When the fat is melted, add all the flour at once. Immediately start whisking to combine. The mixture will look like wet sand or paste—that's normal."
+          content: "When the fat is melted, add all the flour at once. Immediately start whisking to combine. The mixture will look like wet sand or paste. That's normal."
         },
         {
           title: "Step 3: Cook (2-3 Minutes)",
@@ -144,7 +144,7 @@ export const rouxData = {
         title: "Pro Tip: The Ratio Rule",
         intro: "For a medium-thick sauce (like classic béchamel), use this ratio:",
         ratio: "3 tablespoons roux : 1 cup liquid",
-        details: "That's about 1.5 tbsp butter + 1.5 tbsp flour per cup of milk. Want thicker? Use 4-5 tablespoons roux per cup. Want thinner? Use 2 tablespoons per cup. **Why this matters:** Most recipes don't tell you the ratio—they just give amounts. Understanding the ratio means you can scale any sauce up or down and adjust thickness to your preference."
+        details: "That's about 1.5 tbsp butter + 1.5 tbsp flour per cup of milk. Want thicker? Use 4-5 tablespoons roux per cup. Want thinner? Use 2 tablespoons per cup. **Why this matters:** Most recipes don't tell you the ratio. They just give amounts. Understanding the ratio means you can scale any sauce up or down and adjust thickness to your preference."
       }
     },
     {
@@ -226,7 +226,7 @@ export const rouxData = {
         "Temperature contrast when adding liquid"
       ],
       closing: [
-        "Get this right and you've unlocked béchamel, cheese sauce, gravy, gumbo, cream soups, velouté, and dozens of other foundations. Every professional chef makes roux-based sauces weekly—many daily. It's that fundamental.",
+        "Get this right and you've unlocked béchamel, cheese sauce, gravy, gumbo, cream soups, velouté, and dozens of other foundations. Every professional chef makes roux-based sauces weekly, many daily. It's that fundamental.",
         "The next time you make mac and cheese, skip the packet and make a real cheese sauce from a proper roux. Or make biscuits and gravy with a blonde roux and watch how much better it tastes than the jarred stuff. Or spend 40 minutes making a dark roux for authentic gumbo.",
         "Once you've tasted the difference, you'll never go back to shortcuts.",
         "That's the power of mastering fundamentals. Welcome to better sauces."
@@ -250,7 +250,7 @@ export const rouxData = {
       },
       {
         question: "How do I know when my dark roux is done?",
-        answer: "Color: Dark milk chocolate brown (Hershey bar color). Smell: Deep, toasted, nutty—almost like roasted coffee. Time: 30-40 minutes usually, but go by color and smell, not time. Warning sign: If it smells even slightly burnt or acrid, it's gone too far. Start over."
+        answer: "Color: Dark milk chocolate brown (Hershey bar color). Smell: Deep, toasted, nutty, almost like roasted coffee. Time: 30-40 minutes usually, but go by color and smell, not time. Warning sign: If it smells even slightly burnt or acrid, it's gone too far. Start over."
       }
     ]
   },

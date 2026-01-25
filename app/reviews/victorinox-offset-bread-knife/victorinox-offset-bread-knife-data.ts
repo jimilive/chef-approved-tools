@@ -55,7 +55,7 @@ export const reviewData = {
       },
       {
         title: 'Comfort & Ergonomics',
-        content: 'The 1.5-inch offset handle keeps knuckles completely off the cutting board during full slicing strokes. Reduces hand fatigue during repetitive tasks - crucial when prepping bread service or slicing multiple tomatoes. Immediately noticeable ergonomic advantage over standard bread knives.'
+        content: 'The 1.5-inch offset handle keeps knuckles completely off the cutting board during full slicing strokes. Reduces hand fatigue during repetitive tasks, especially when prepping bread service or slicing multiple tomatoes. Immediately noticeable ergonomic advantage over standard bread knives.'
       },
       {
         title: 'Edge Performance',
@@ -92,7 +92,7 @@ export const reviewData = {
     sections: [
       {
         title: 'Why This Is in My Daily Toolkit',
-        content: 'After 45 years of cooking, I\'ve learned that a bread knife is about more than just slicing bread. Tomatoes, delicate cakes, crusty baguettes, soft sandwich loaves - the serrated edge handles them all without crushing. The offset handle is what sets this apart from standard bread knives. Your knuckles stay 1.5 inches above the cutting board, which means you can slice all the way through without worrying about scraping your hand. Sounds simple, but it makes a huge difference in comfort and safety - especially when you\'re working through high-volume prep.'
+        content: 'After 24 years of cooking, I\'ve learned that a bread knife is about more than just slicing bread. Tomatoes, delicate cakes, crusty baguettes, soft sandwich loaves - the serrated edge handles them all without crushing. The offset handle is what sets this apart from standard bread knives. Your knuckles stay 1.5 inches above the cutting board, which means you can slice all the way through without worrying about scraping your hand. Sounds simple, but it makes a huge difference in comfort and safety - especially when you\'re working through high-volume prep.'
       },
       {
         title: 'Offset Handle Design',
@@ -209,7 +209,7 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      'The Victorinox offset bread knife has earned its place as one of my four essential daily knives. The offset handle design provides genuine ergonomic benefits during repetitive slicing tasks - your knuckles stay completely off the cutting board, reducing fatigue and preventing scrapes.',
+      'The Victorinox offset bread knife has earned its place as one of my four daily knives. The offset handle design provides genuine ergonomic benefits during repetitive slicing tasks - your knuckles stay completely off the cutting board, reducing fatigue and preventing scrapes.',
       'This isn\'t just about bread. The wavy serrations handle tomatoes, cakes, citrus fruits, and anything with a delicate interior better than any straight edge. The fact that it never needs sharpening means it performs consistently for decades with minimal maintenance. At this price point, you\'re getting Swiss-made professional quality that\'s used in commercial bakeries worldwide.'
     ],
     ctaText: 'Check Price on Amazon →'
@@ -222,7 +222,7 @@ export const reviewData = {
       {
         emoji: '🔪',
         name: 'Henckels Sharpening Steel',
-        description: 'Serrated edges need honing too—light strokes keep the teeth aligned.',
+        description: 'Serrated edges need honing too. Light strokes keep the teeth aligned.',
         href: '/reviews/henckels-sharpening-steel'
       },
       {
@@ -253,7 +253,7 @@ export const reviewData = {
     brand: 'Victorinox',
     category: 'Knives',
     expertRating: 4.5,
-    expertOpinion: 'The offset design provides genuine ergonomic benefits - knuckles stay completely off the cutting board during repetitive slicing. Essential for crusty bread, tomatoes, and delicate cakes.',
+    expertOpinion: 'The offset design provides genuine ergonomic benefits - knuckles stay completely off the cutting board during repetitive slicing. Great for crusty bread, tomatoes, and delicate cakes.',
     pros: [
       'Offset design keeps knuckles safe and comfortable',
       'Serrated edge never needs sharpening',

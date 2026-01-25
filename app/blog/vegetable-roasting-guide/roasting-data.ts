@@ -19,7 +19,7 @@ export const roastingData = {
       },
       {
         question: "Can I roast multiple types at once?",
-        answer: "Yes — group by cooking time. Add quick-cooking ones later. Start with dense vegetables like carrots and potatoes, then add faster-cooking vegetables like zucchini near the end."
+        answer: "Yes. Group by cooking time. Add quick-cooking ones later. Start with dense vegetables like carrots and potatoes, then add faster-cooking vegetables like zucchini near the end."
       },
       {
         question: "Why does restaurant-roasted food taste better?",
@@ -39,7 +39,7 @@ export const roastingData = {
       },
       {
         question: "Why are my vegetables cooking unevenly?",
-        answer: "Most home ovens have hot spots. Rotate your pan 180 degrees halfway through cooking. Also check that pieces are cut to uniform size — variance in size creates variance in cooking time."
+        answer: "Most home ovens have hot spots. Rotate your pan 180 degrees halfway through cooking. Also check that pieces are cut to uniform size. Variance in size creates variance in cooking time."
       }
     ]
   }

@@ -9,7 +9,7 @@ export const reviewData = {
   // METADATA
   metadata: {
     title: 'Victorinox Boning Knife: 20-Year Test Of The Granton Edge ($35)',
-    description: '20-year professional test. Victorinox boning knife with firm blade for trimming and deboning—Granton edge prevents sticking. The $35 butcher\'s choice.',
+    description: '20-year professional test. Victorinox boning knife with firm blade for trimming and deboning. Granton edge prevents sticking. The $35 butcher\'s choice.',
     ogTitle: 'Victorinox Granton Edge Boning Knife: Professional Review',
     ogDescription: 'Victorinox Granton boning knife tested 20 years (including 10 professionally).',
     testingPeriod: '20 Years (Including 10 Professional)',
@@ -40,8 +40,8 @@ export const reviewData = {
       icon: '🏆',
       text: 'Tier 1: Professional Kitchen Use',
     },
-    verdict: 'Breaking down a whole chicken takes 3 minutes with this knife. The granton edge prevents sticking, and the blade gets close to bones. Also excellent for filleting fish. If you work with whole proteins, this is essential.',
-    verdictStrong: 'The essential tool for breaking down proteins',
+    verdict: 'Breaking down a whole chicken takes 3 minutes with this knife. The granton edge prevents sticking, and the blade gets close to bones. Also excellent for filleting fish. If you work with whole proteins, you need this knife.',
+    verdictStrong: 'The right tool for breaking down proteins',
     ctaText: 'Check Price on Amazon →'
   },
 
@@ -75,7 +75,7 @@ export const reviewData = {
       'Granton edge completely eliminates meat sticking to blade',
       'Flexible blade follows bone contours for maximum yield',
       'Professional Swiss-made quality at budget-friendly price point',
-      'Holds edge remarkably well through heavy professional use'
+      'Holds edge very well through heavy professional use'
     ],
     minorConsiderations: [
       'Not suitable for general cutting tasks or vegetables',
@@ -94,11 +94,11 @@ export const reviewData = {
       },
       {
         title: 'Granton Edge Technology',
-        content: 'The oval indentations along the blade create air pockets that prevent meat from sticking. This matters when you\'re making long cuts through proteins - the blade glides smoothly without resistance. Game-changer for efficiency in professional settings where speed matters.'
+        content: 'The oval indentations along the blade create air pockets that prevent meat from sticking. This matters when you\'re making long cuts through proteins - the blade glides smoothly without resistance. Makes a real difference in professional settings where speed matters.'
       },
       {
         title: 'Narrow Blade Design',
-        content: 'The narrow blade profile allows you to work close to bone contours, getting every bit of meat off the bone. Essential for breaking down chickens, deboning pork, and filleting fish. Provides control and precision for detailed butchery work.'
+        content: 'The narrow blade profile allows you to work close to bone contours, getting every bit of meat off the bone. Ideal for breaking down chickens, deboning pork, and filleting fish. Provides control and precision for detailed butchery work.'
       },
       {
         title: 'Curved Blade Profile',
@@ -243,7 +243,7 @@ export const reviewData = {
     model: '40536',
     category: 'Boning Knives',
     expertRating: 4.9,
-    expertOpinion: 'Essential for anyone who works with whole proteins - this knife cuts butchery time in half and pays for itself in reduced meat waste after 20 years of use (including 10 professional).',
+    expertOpinion: 'Great for anyone who works with whole proteins - this knife cuts butchery time in half and pays for itself in reduced meat waste after 20 years of use (including 10 professional).',
     pros: [
       'Granton edge prevents meat from sticking during long cuts',
       'Flexible blade follows bone contours for maximum yield and minimal waste',

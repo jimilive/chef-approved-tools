@@ -41,7 +41,7 @@ export const reviewData = {
       text: "Tier 2: Extended Professional Testing",
       icon: "🏆"
     },
-    verdict: "After 18 years of daily home use, informed by my 24 years in professional kitchens, this cutting board represents more than kitchen equipment—it's a generational investment. The 24x18 size provides exceptional work space efficiency, while the 21-pound weight ensures rock-solid stability during even the most aggressive prep work.",
+    verdict: "After 18 years of daily home use, informed by my 24 years in professional kitchens, this cutting board represents more than kitchen equipment. It's a generational investment. The 24x18 size provides exceptional work space efficiency, while the 21-pound weight ensures rock-solid stability during even the most aggressive prep work.",
     verdictStrong: "generational investment",
     ctaText: "Check Price on Amazon →"
   },
@@ -53,7 +53,7 @@ export const reviewData = {
     sections: [
       {
         title: "Durability Performance",
-        content: "After 18 years of daily use, this board shows minimal wear. The hard rock maple construction has held up remarkably well—light knife marks that tell the story of thousands of meals, but no structural damage, warping, or cracking. Based on the current condition, I confidently expect another 20 years of performance. This is genuine generational equipment."
+        content: "After 18 years of daily use, this board shows minimal wear. The hard rock maple construction has held up very well. Light knife marks that tell the story of thousands of meals, but no structural damage, warping, or cracking. Based on the current condition, I confidently expect another 20 years of performance. This is genuine generational equipment."
       },
       {
         title: "Knife Preservation",
@@ -61,7 +61,7 @@ export const reviewData = {
       },
       {
         title: "Work Surface Efficiency",
-        content: "The 24x18 size is the sweet spot for serious cooking. Large enough to handle multiple prep tasks without constantly moving ingredients, yet not so massive it becomes unwieldy. When prepping for meals, having this much real estate available transforms efficiency—you can dice onions, mince garlic, and chop vegetables all at once without running out of space."
+        content: "The 24x18 size is the sweet spot for serious cooking. Large enough to handle multiple prep tasks without constantly moving ingredients, yet not so massive it becomes unwieldy. When prepping for meals, having this much real estate available transforms efficiency. You can dice onions, mince garlic, and chop vegetables all at once without running out of space."
       },
       {
         title: "Stability During Use",
@@ -114,11 +114,11 @@ export const reviewData = {
     sections: [
       {
         title: "18 Years of Home Kitchen Excellence",
-        content: "Over 18 years of daily home cooking, <LINK>this John Boos cutting board</LINK> has anchored every meal preparation—working alongside my Victorinox chef knife and Le Creuset Dutch oven as the foundation of my kitchen setup. The hard rock maple edge-grain construction provides a self-healing surface that maintains knife sharpness while offering the stability needed for efficient prep work. The 21-pound weight means it stays put during even the most aggressive chopping and dicing sessions."
+        content: "Over 18 years of daily home cooking, <LINK>this John Boos cutting board</LINK> has anchored every meal preparation, working alongside my Victorinox chef knife and Le Creuset Dutch oven as the foundation of my kitchen setup. The hard rock maple edge-grain construction provides a self-healing surface that maintains knife sharpness while offering the stability needed for efficient prep work. The 21-pound weight means it stays put during even the most aggressive chopping and dicing sessions."
       },
       {
         title: "Knife Care and Surface Performance",
-        content: "The damage <LINK>this board</LINK> saves to knife edges cannot be overstated. This is why I pair it with quality knives like my Victorinox 8-inch chef knife—the combination of a great knife and great board maximizes both performance and longevity. Unlike plastic or bamboo alternatives, the maple surface gives slightly under the blade, reducing edge damage while maintaining cutting precision. After 18 years, my knives maintain their sharpness significantly longer than when I used cheaper cutting surfaces. This translates to fewer sharpenings and longer knife life."
+        content: "The damage <LINK>this board</LINK> saves to knife edges cannot be overstated. This is why I pair it with quality knives like my Victorinox 8-inch chef knife. The combination of a great knife and great board maximizes both performance and longevity. Unlike plastic or bamboo alternatives, the maple surface gives slightly under the blade, reducing edge damage while maintaining cutting precision. After 18 years, my knives maintain their sharpness significantly longer than when I used cheaper cutting surfaces. This translates to fewer sharpenings and longer knife life."
       },
       {
         title: "Maintenance Reality vs Marketing",
@@ -163,7 +163,7 @@ export const reviewData = {
     items: [
       {
         question: "Is a John Boos cutting board worth the money?",
-        answer: "After 18 years of daily use, absolutely yes—if you cook regularly and value knife care. The combination of knife edge preservation, exceptional work surface, and generational durability justifies the investment for serious home cooks. This board will outlast you. After 18 years of daily use, mine shows minimal wear and I expect another 20 years easily. The knife sharpening savings alone—extending edge life 3x longer—adds significant value over time."
+        answer: "After 18 years of daily use, absolutely yes if you cook regularly and value knife care. The combination of knife edge preservation, exceptional work surface, and generational durability justifies the investment for serious home cooks. This board will outlast you. After 18 years of daily use, mine shows minimal wear and I expect another 20 years easily. The knife sharpening savings alone, extending edge life 3x longer, adds significant value over time."
       },
       {
         question: "How do you maintain a John Boos cutting board?",
@@ -183,7 +183,7 @@ export const reviewData = {
       },
       {
         question: "How long does a John Boos cutting board last?",
-        answer: "With basic care, expect 40 years easily. This is genuine generational equipment. After 18 years of daily home use, my board shows minimal wear. I expect another 20 years easily, then I'll pass it to my children. That's not marketing hyperbole—it's the reality of quality hardwood construction."
+        answer: "With basic care, expect 40 years easily. This is genuine generational equipment. After 18 years of daily home use, my board shows minimal wear. I expect another 20 years easily, then I'll pass it to my children. That's not marketing hyperbole. It's the reality of quality hardwood construction."
       },
       {
         question: "Is edge-grain or end-grain better for cutting boards?",
@@ -200,7 +200,7 @@ export const reviewData = {
   faqData: [
     {
       question: "Is a John Boos cutting board worth the money?",
-      answer: "After 18 years of daily use, absolutely yes—if you cook regularly and value knife care. The combination of knife edge preservation, exceptional work surface, and generational durability justifies the investment for serious home cooks. This board will outlast you. After 18 years of daily use, mine shows minimal wear and I expect another 20 years easily. The knife sharpening savings alone—extending edge life 3x longer—adds significant value over time."
+      answer: "After 18 years of daily use, absolutely yes if you cook regularly and value knife care. The combination of knife edge preservation, exceptional work surface, and generational durability justifies the investment for serious home cooks. This board will outlast you. After 18 years of daily use, mine shows minimal wear and I expect another 20 years easily. The knife sharpening savings alone, extending edge life 3x longer, adds significant value over time."
     },
     {
       question: "How do you maintain a John Boos cutting board?",
@@ -220,7 +220,7 @@ export const reviewData = {
     },
     {
       question: "How long does a John Boos cutting board last?",
-      answer: "With basic care, expect 40 years easily. This is genuine generational equipment. After 18 years of daily home use, my board shows minimal wear. I expect another 20 years easily, then I'll pass it to my children. That's not marketing hyperbole—it's the reality of quality hardwood construction."
+      answer: "With basic care, expect 40 years easily. This is genuine generational equipment. After 18 years of daily home use, my board shows minimal wear. I expect another 20 years easily, then I'll pass it to my children. That's not marketing hyperbole. It's the reality of quality hardwood construction."
     },
     {
       question: "Is edge-grain or end-grain better for cutting boards?",
@@ -242,7 +242,7 @@ export const reviewData = {
   // EMAIL CAPTURE
   emailCapture: {
     title: "Get My Complete Cutting Board Care Guide",
-    subtitle: "Download my comprehensive guide to cutting board selection and maintenance, developed over 18 years of daily use.",
+    subtitle: "Download my complete guide to cutting board selection and maintenance, developed over 18 years of daily use.",
     inputPlaceholder: "Your email address",
     buttonText: "Download Free Guide",
     finePrint: "Instant delivery. No spam, ever. Unsubscribe anytime."
@@ -252,7 +252,7 @@ export const reviewData = {
   bottomLine: {
     title: "The Bottom Line: My Professional Verdict",
     paragraphs: [
-      "After 18 years of daily use, <LINK>the John Boos Platinum cutting board</LINK> has proven itself as more than kitchen equipment—it's a generational investment. The combination of knife edge preservation, work surface efficiency, and exceptional durability justifies the investment for serious home cooks. The maintenance reality is far simpler than marketing suggests—basic cleanliness and care yield decades of performance.",
+      "After 18 years of daily use, <LINK>the John Boos Platinum cutting board</LINK> has proven itself as more than kitchen equipment. It's a generational investment. The combination of knife edge preservation, work surface efficiency, and exceptional durability justifies the investment for serious home cooks. The maintenance reality is far simpler than marketing suggests. Basic cleanliness and care yield decades of performance.",
       "After 18 years, I expect to use <LINK>this board</LINK> for another 20 easily and then pass it to my children. That's genuine buy-it-for-life quality."
     ],
     ctaText: "Check Price on Amazon →"
@@ -277,7 +277,7 @@ export const reviewData = {
       {
         emoji: "🔧",
         name: "OXO Good Grips Bench Scraper",
-        description: "The tool I use most to maintain this board—scrapes off chopped ingredients in seconds.",
+        description: "The tool I use most to maintain this board. Scrapes off chopped ingredients in seconds.",
         href: "/reviews/oxo-good-grips-bench-scraper"
       }
     ]

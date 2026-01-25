@@ -202,7 +202,7 @@ export default function CastIronCarePage() {
             </div>
           ))}
 
-          <BlogNewsletterCTA slug="cast-iron-seasoning-care" description="Get my free &quot;11 Essential Tools I Use Most&quot; PDF—the exact equipment I rely on after 24 years in professional kitchens, including my favorite cast iron pieces and daily maintenance routine. No fluff, just the tools that actually matter." />
+          <BlogNewsletterCTA slug="cast-iron-seasoning-care" description="Get my free &quot;11 Tools I Use Most&quot; PDF: the exact equipment I rely on after 24 years in professional kitchens, including my favorite cast iron pieces and daily maintenance routine. No fluff, just the tools that actually matter." />
 
           {/* Cleaning Section */}
           <h2 id="cleaning" className="flex items-center gap-2">
@@ -491,7 +491,7 @@ export default function CastIronCarePage() {
 
           {equipmentSection?.equipmentList && (
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-              <p className="font-bold text-slate-800 mb-4 text-lg">Essential Cast Iron Equipment</p>
+              <p className="font-bold text-slate-800 mb-4 text-lg">Cast Iron Equipment</p>
               <ul className="space-y-3">
                 {equipmentSection.equipmentList.map((item, i) => (
                   <li key={i}>

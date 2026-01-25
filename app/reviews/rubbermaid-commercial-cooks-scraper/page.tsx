@@ -424,7 +424,7 @@ export default async function RubbermaidScraperReview() {
         <section className="mb-8">
           <EmailCaptureBox
             title="🔥 Get My 11 Essential Tools for a Professional Kitchen"
-            description="Download my free guide: The 11 tools I use most in my home kitchen after 45 years of cooking."
+            description="Download my free guide: The 11 tools I use most in my home kitchen after 24 years of cooking."
             benefits={[
               '✓ My exact 11 daily workhorse tools',
               '✓ Where to invest vs where to save',
@@ -505,7 +505,7 @@ export default async function RubbermaidScraperReview() {
             </div>
 
             <p className="mt-5 p-4 bg-yellow-100 rounded">
-              <strong>Still unsure?</strong> <Link href="/contact" className="text-orange-700 hover:text-orange-800 underline">Contact me</Link> with your specific needs—I&apos;ll provide a personalized recommendation based on your cooking style and budget.
+              <strong>Still unsure?</strong> <Link href="/contact" className="text-orange-700 hover:text-orange-800 underline">Contact me</Link> with your specific needs. I&apos;ll provide a personalized recommendation based on your cooking style and budget.
             </p>
           </div>
         </section>
@@ -572,7 +572,7 @@ export default async function RubbermaidScraperReview() {
             </p>
             <p className="my-2.5">
               <strong>💬 Own a Rubbermaid Commercial scraper?</strong> Share your experience in the comments
-              below—I read and respond to every comment.
+              below. I read and respond to every comment.
             </p>
             <p className="my-2.5">
               <strong>🔧 Questions about kitchen tools?</strong> <Link href="/contact" className="text-orange-700">

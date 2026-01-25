@@ -179,7 +179,7 @@ export default async function RobotCoupeR2DiceReview() {
               <div className="text-4xl mb-2.5">⏱️</div>
               <h3 className="my-2.5 text-xl">850 Servings/3 Hours</h3>
               <p>Continuous feed design processes massive volume quickly. Professional kitchens report
-              doing in minutes what used to take hours—saves significant labor costs daily.</p>
+              doing in minutes what used to take hours, saving significant labor costs daily.</p>
             </div>
 
             <div className="bg-gray-50 p-5 rounded-lg">
@@ -193,7 +193,7 @@ export default async function RobotCoupeR2DiceReview() {
               <div className="text-4xl mb-2.5">💪</div>
               <h3 className="my-2.5 text-xl">Commercial Reliability</h3>
               <p>Rated as &quot;the hardest working employee&quot; by professional kitchens. Proven
-              reliability under continuous commercial use—rated 5/5 for durability.</p>
+              reliability under continuous commercial use, rated 5/5 for durability.</p>
             </div>
 
           </div>
@@ -236,7 +236,7 @@ export default async function RobotCoupeR2DiceReview() {
           <div className="space-y-4">
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
-                &quot;After 2 years in our busy cafe, this Robot Coupe has been worth every penny. We process 15-20 lbs of vegetables daily—the continuous feed design means we can keep working without stopping to empty the bowl constantly. Saves us at least 2 hours of prep time daily.&quot;
+                &quot;After 2 years in our busy cafe, this Robot Coupe has been worth every penny. We process 15-20 lbs of vegetables daily, and the continuous feed design means we can keep working without stopping to empty the bowl constantly. Saves us at least 2 hours of prep time daily.&quot;
               </p>
               <p className="text-sm text-slate-700">— WebstaurantStore verified purchaser (J.K., August 2024) | Cafe Operations</p>
             </div>
@@ -250,7 +250,7 @@ export default async function RobotCoupeR2DiceReview() {
 
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
-                &quot;We use this for catering prep—the ability to process large quantities quickly is essential. The consistency of cuts is excellent for professional presentation. Only downside is cleaning takes 15 minutes after heavy use, but that&apos;s the trade-off for commercial capacity.&quot;
+                &quot;We use this for catering prep, and the ability to process large quantities quickly is essential. The consistency of cuts is excellent for professional presentation. Only downside is cleaning takes 15 minutes after heavy use, but that&apos;s the trade-off for commercial capacity.&quot;
               </p>
               <p className="text-sm text-slate-700">— WebstaurantStore verified purchaser (S.L., June 2024) | Catering Business</p>
             </div>
@@ -264,7 +264,7 @@ export default async function RobotCoupeR2DiceReview() {
 
             <div className="bg-white p-5 rounded-lg border border-gray-200">
               <p className="text-slate-700 mb-2">
-                &quot;Been using this daily for 18 months in our pizza shop for cheese shredding. The blades and discs do wear—we replaced the shredding disc after 14 months of heavy use. Factor replacement parts into your budget.&quot;
+                &quot;Been using this daily for 18 months in our pizza shop for cheese shredding. The blades and discs do wear, and we replaced the shredding disc after 14 months of heavy use. Factor replacement parts into your budget.&quot;
               </p>
               <p className="text-sm text-slate-700">— WebstaurantStore verified purchaser (A.P., April 2024) | Pizzeria</p>
             </div>
@@ -379,13 +379,13 @@ export default async function RobotCoupeR2DiceReview() {
             <p className="text-lg leading-relaxed">
               The Robot Coupe R2 Dice proved itself as essential commercial equipment that pays for itself
               through efficiency gains. The combination of 5/5 performance ratings for speed, efficiency,
-              and cut quality—combined with exceptional reliability under high-volume demands—makes this
+              and cut quality, combined with exceptional reliability under high-volume demands, makes this
               processor significantly superior to home alternatives.
             </p>
 
             <p className="text-lg leading-relaxed">
               Professional kitchens report saving hours of labor daily. The continuous feed design and
-              commercial-grade motor process massive volume quickly—this is equipment that transforms prep
+              commercial-grade motor process massive volume quickly. This is equipment that transforms prep
               operations and pays for itself through labor savings.
             </p>
 
@@ -403,7 +403,7 @@ export default async function RobotCoupeR2DiceReview() {
 
             <p className="text-base mb-0">
               <strong>Would I buy this again?</strong> Without hesitation. This is the kind of equipment
-              that becomes indispensable—highly recommended for any serious commercial kitchen.
+              that becomes indispensable and highly recommended for any serious commercial kitchen.
             </p>
 
           </div>
@@ -425,7 +425,7 @@ export default async function RobotCoupeR2DiceReview() {
             </h3>
 
             <p className="text-base leading-relaxed">
-              Download my comprehensive guide to commercial kitchen equipment selection, developed over
+              Download my complete guide to commercial kitchen equipment selection, developed over
               24 years of restaurant experience:
             </p>
 

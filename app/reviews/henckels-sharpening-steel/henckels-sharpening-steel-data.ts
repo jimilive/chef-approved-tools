@@ -17,7 +17,7 @@ export const reviewData = {
       "Simple, reliable design with nothing to break or fail",
       "Works with any knife brand - Victorinox, Wüsthof, or whatever you're using",
       "Comfortable grip even after years of heavy use",
-      "Essential tool for maintaining good knives properly"
+      "Important tool for maintaining good knives properly"
     ],
     cons: [
       "Requires proper technique to avoid damaging knives",
@@ -62,7 +62,7 @@ export const reviewData = {
       linkText: 'What is Tier 1?',
       linkHref: '/review-tiers'
     },
-    verdict: `The J.A. Henckels sharpening steel was part of my required culinary school kit in 2005. Twenty years later, it's still the tool I reach for before every shift. It keeps knife edges aligned between professional sharpenings and shows exactly what daily professional use looks like—a few dings in the steel, worn grip, but it still does the job perfectly.`,
+    verdict: `The J.A. Henckels sharpening steel was part of my required culinary school kit in 2005. Twenty years later, it's still the tool I reach for before every shift. It keeps knife edges aligned between professional sharpenings and shows exactly what daily professional use looks like: a few dings in the steel, worn grip, but it still does the job perfectly.`,
     verdictStrong: `This is muscle memory at this point: hone before every service. The steel has survived two decades of daily use across multiple professional kitchens and my home kitchen. If you own decent knives, you need a honing steel. This one has proven it can handle professional workloads.`,
     ctaText: 'Check Amazon Price →',
   },
@@ -78,15 +78,15 @@ export const reviewData = {
     sections: [
       {
         title: 'Culinary School to Professional Kitchens (2005-Present)',
-        content: `I got this steel as part of my required equipment list for Seattle Central College's Culinary Arts program in 2005. It was on the list because every professional kitchen expects you to hone your knives before service.\n\nThat habit stuck. I hone before every shift—home or professional kitchen—without thinking about it. Quick passes on each side of the blade, check the edge, get to work.\n\nThe steel shows its age. There are visible dings in the rod from twenty years of contact with knife edges. The handle is worn smooth in places. But it still does what it's supposed to do: realign knife edges so they cut cleanly.`
+        content: `I got this steel as part of my required equipment list for Seattle Central College's Culinary Arts program in 2005. It was on the list because every professional kitchen expects you to hone your knives before service.\n\nThat habit stuck. I hone before every shift, home or professional kitchen, without thinking about it. Quick passes on each side of the blade, check the edge, get to work.\n\nThe steel shows its age. There are visible dings in the rod from twenty years of contact with knife edges. The handle is worn smooth in places. But it still does what it's supposed to do: realign knife edges so they cut cleanly.`
       },
       {
         title: 'Daily Use Pattern',
-        content: `Before every cooking session, I run each knife along the steel. Usually 3-4 passes per side at about a 15-20 degree angle. It takes maybe 15 seconds per knife.\n\nI don't hone my bread knife—serrated edges don't benefit from honing, and you can damage the serrations. Everything else gets a quick pass before use.\n\nWhen knives start feeling dull even after honing, that's when I get them professionally sharpened. Honing maintains an edge; it doesn't create one.`
+        content: `Before every cooking session, I run each knife along the steel. Usually 3-4 passes per side at about a 15-20 degree angle. It takes maybe 15 seconds per knife.\n\nI don't hone my bread knife. Serrated edges don't benefit from honing, and you can damage the serrations. Everything else gets a quick pass before use.\n\nWhen knives start feeling dull even after honing, that's when I get them professionally sharpened. Honing maintains an edge; it doesn't create one.`
       },
       {
         title: 'What Honing Actually Accomplishes',
-        content: `A honing steel doesn't sharpen your knives—it realigns the microscopic edge that bends during use. Every time you cut through something, the thin edge of your knife bends slightly to one side or the other. Running the blade along a steel straightens that edge back into alignment.\n\nProfessional sharpening removes metal to create a new edge. Honing just maintains the edge you already have. You still need to get knives professionally sharpened when they're dull, but honing extends the time between sharpenings significantly.`
+        content: `A honing steel doesn't sharpen your knives. It realigns the microscopic edge that bends during use. Every time you cut through something, the thin edge of your knife bends slightly to one side or the other. Running the blade along a steel straightens that edge back into alignment.\n\nProfessional sharpening removes metal to create a new edge. Honing just maintains the edge you already have. You still need to get knives professionally sharpened when they're dull, but honing extends the time between sharpenings significantly.`
       }
     ],
     testingEnvironment: [
@@ -101,7 +101,7 @@ export const reviewData = {
       'Comfortable grip even after years of heavy daily use',
       'Simple design with nothing to break or fail',
       'Works with all straight-edge knife brands',
-      'Essential tool for maintaining professional knives'
+      'Important tool for maintaining professional knives'
     ],
     minorConsiderations: [
       'Requires proper technique to avoid damaging knives',
@@ -129,7 +129,7 @@ export const reviewData = {
       },
       {
         title: 'Alternatives and Comparisons',
-        content: `**Ceramic honing rods** remove slightly more metal than steel rods, which some people prefer. I've stuck with steel because that's what I learned on and it works for my knives.\n\n**Diamond-coated rods** are more aggressive—closer to actual sharpening than honing. They remove more metal, which can be useful for very dull knives, but I prefer standard steel for daily maintenance.\n\n**Length matters:** Longer steels (12 inches) work better for longer knives like chef's knives and slicers. Shorter steels (8-10 inches) are more portable but harder to use with big blades. The 10-inch length handles everything in my kit.`
+        content: `**Ceramic honing rods** remove slightly more metal than steel rods, which some people prefer. I've stuck with steel because that's what I learned on and it works for my knives.\n\n**Diamond-coated rods** are more aggressive, closer to actual sharpening than honing. They remove more metal, which can be useful for very dull knives, but I prefer standard steel for daily maintenance.\n\n**Length matters:** Longer steels (12 inches) work better for longer knives like chef's knives and slicers. Shorter steels (8-10 inches) are more portable but harder to use with big blades. The 10-inch length handles everything in my kit.`
       }
     ]
   },
@@ -163,11 +163,11 @@ export const reviewData = {
   faqData: [
     {
       question: "Do I really need a honing steel?",
-      answer: "If you own decent knives and cook regularly, yes. A steel keeps edges aligned between professional sharpenings, which extends the time before you need sharpening services. Over twenty years, this steel has probably saved me hundreds of dollars in sharpening costs by extending the time between professional sharpenings. If you're using cheap knives that you replace every year or two, you probably don't need a steel. But if you've invested in good knives that you plan to keep, a steel is essential maintenance equipment."
+      answer: "If you own decent knives and cook regularly, yes. A steel keeps edges aligned between professional sharpenings, which extends the time before you need sharpening services. Over twenty years, this steel has probably saved me hundreds of dollars in sharpening costs by extending the time between professional sharpenings. If you're using cheap knives that you replace every year or two, you probably don't need a steel. But if you've invested in good knives that you plan to keep, a steel is necessary maintenance equipment."
     },
     {
       question: "How often should I hone my knives?",
-      answer: "I hone before every use—it's a 15-second habit that keeps knives cutting cleanly. In professional kitchens, we hone at the start of every shift and sometimes during long prep sessions. For home cooking, honing before each use is ideal. At minimum, hone weekly if you cook daily, or before any extended cooking session. The key is consistency - regular honing prevents edges from getting too far out of alignment."
+      answer: "I hone before every use. It's a 15-second habit that keeps knives cutting cleanly. In professional kitchens, we hone at the start of every shift and sometimes during long prep sessions. For home cooking, honing before each use is ideal. At minimum, hone weekly if you cook daily, or before any extended cooking session. The key is consistency - regular honing prevents edges from getting too far out of alignment."
     },
     {
       question: "Will this sharpen my knives?",
@@ -175,11 +175,11 @@ export const reviewData = {
     },
     {
       question: "What angle should I use when honing?",
-      answer: "15-20 degrees is standard for most Western-style knives. Japanese knives often use 10-15 degrees. If you're not sure, start around 15-20 degrees—roughly the angle of a matchbook under the spine of the blade. The important thing is consistency. Use the same angle on both sides of the blade for even realignment. With practice, you'll develop muscle memory for the correct angle."
+      answer: "15-20 degrees is standard for most Western-style knives. Japanese knives often use 10-15 degrees. If you're not sure, start around 15-20 degrees, roughly the angle of a matchbook under the spine of the blade. The important thing is consistency. Use the same angle on both sides of the blade for even realignment. With practice, you'll develop muscle memory for the correct angle."
     },
     {
       question: "Can I use this steel on all my knives?",
-      answer: "Use it on straight-edge knives: chef's knives, paring knives, boning knives, slicers. Don't use it on serrated blades like bread knives—you'll damage the serrations. It works with any knife brand. I use mine on Victorinox, Wüsthof, and various other knives without issues. The steel doesn't care what brand your knife is - it just realigns the edge."
+      answer: "Use it on straight-edge knives: chef's knives, paring knives, boning knives, slicers. Don't use it on serrated blades like bread knives. You'll damage the serrations. It works with any knife brand. I use mine on Victorinox, Wüsthof, and various other knives without issues. The steel doesn't care what brand your knife is - it just realigns the edge."
     },
     {
       question: "How long will this steel last?",
@@ -218,7 +218,7 @@ export const reviewData = {
   // Email Capture
   emailCapture: {
     title: 'Get My Complete Knife Maintenance Guide',
-    subtitle: 'Download my comprehensive guide to knife care and maintenance, developed over 24 years in professional kitchens: Proper honing technique, when to sharpen vs hone, knife care essentials, and professional maintenance tips that keep knives performing for decades.',
+    subtitle: 'Download my complete guide to knife care and maintenance, developed over 24 years in professional kitchens: Proper honing technique, when to sharpen vs hone, knife care basics, and professional maintenance tips that keep knives performing for decades.',
     inputPlaceholder: 'Enter your email',
     buttonText: 'Download Free Guide →',
     finePrint: 'Instant delivery. No spam, ever. Unsubscribe anytime.'

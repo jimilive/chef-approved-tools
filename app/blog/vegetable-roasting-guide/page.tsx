@@ -73,12 +73,12 @@ export default function VegetableRoastingGuidePage() {
               Restaurant Reality
             </p>
             <p className="mb-0">
-              In professional kitchens, we roast vegetables for every service—Brussels sprouts, carrots, cauliflower, butternut squash. Every single day. New cooks would throw all the vegetables on one sheet pan at 425°F and wonder why some were burnt while others were raw. Different vegetables have different densities, water contents, and sugar levels—they require different treatment. Learning proper roasting times and temperatures turned vegetables from sad side dishes into menu highlights that people ordered specifically. In professional kitchens, you can tell who has line experience by how they roast potatoes. The pros always use two pans instead of one — not for volume, but for air circulation. Pan crowding is just as important as temperature—maybe more so. Those little choices separate restaurant results from home frustration. Today I&apos;m giving you the exact times, temps, and techniques that create perfect roasted vegetables every time.
+              In professional kitchens, we roast vegetables for every service: Brussels sprouts, carrots, cauliflower, butternut squash. Every single day. New cooks would throw all the vegetables on one sheet pan at 425°F and wonder why some were burnt while others were raw. Different vegetables have different densities, water contents, and sugar levels, and they require different treatment. Learning proper roasting times and temperatures turned vegetables from sad side dishes into menu highlights that people ordered specifically. In professional kitchens, you can tell who has line experience by how they roast potatoes. The pros always use two pans instead of one, not for volume, but for air circulation. Pan crowding is just as important as temperature, maybe more so. Those little choices separate restaurant results from home frustration. Today I&apos;m giving you the exact times, temps, and techniques that create perfect roasted vegetables every time.
             </p>
           </div>
 
           <p>
-            Most home cooks think roasting vegetables is as simple as &quot;throw them in the oven until they look done.&quot; But every restaurant cook knows: perfect roasting is about heat discipline, spacing, and timing. Roasted vegetables shouldn&apos;t be difficult—throw them in the oven with oil and heat, right? Yet home cooks consistently end up with vegetables that are either mushy and greasy, or burnt on the outside and raw inside, or just bland and disappointing.
+            Most home cooks think roasting vegetables is as simple as &quot;throw them in the oven until they look done.&quot; But every restaurant cook knows: perfect roasting is about heat discipline, spacing, and timing. Roasted vegetables shouldn&apos;t be difficult. Throw them in the oven with oil and heat, right? Yet home cooks consistently end up with vegetables that are either mushy and greasy, or burnt on the outside and raw inside, or just bland and disappointing.
           </p>
 
           <p>
@@ -86,7 +86,7 @@ export default function VegetableRoastingGuidePage() {
           </p>
 
           <p>
-            Once you understand the principles and know the right numbers, roasted vegetables become effortlessly delicious every single time. Get those three right, and you&apos;ll never serve soggy or burnt veggies again.
+            Once you understand the principles and know the right numbers, roasted vegetables become reliably delicious every single time. Get those three right, and you&apos;ll never serve soggy or burnt veggies again.
           </p>
 
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
@@ -143,7 +143,7 @@ export default function VegetableRoastingGuidePage() {
               Common Misconception
             </p>
             <p className="mb-0">
-              You can&apos;t roast vegetables at 350°F. That&apos;s baking, not roasting. True roasting requires 400°F minimum—preferably 425-450°F. Lower temperatures steam vegetables instead of caramelizing them. Use high heat or don&apos;t bother.
+              You can&apos;t roast vegetables at 350°F. That&apos;s baking, not roasting. True roasting requires 400°F minimum, preferably 425-450°F. Lower temperatures steam vegetables instead of caramelizing them. Use high heat or don&apos;t bother.
             </p>
           </div>
 
@@ -154,7 +154,7 @@ export default function VegetableRoastingGuidePage() {
           </p>
 
           <p>
-            Here&apos;s what&apos;s actually happening: every vegetable is full of water. When too many pieces touch, that water evaporates and creates steam. Steam softens instead of browning. The magic of roasting comes from dry heat and air flow — the same reason restaurant fryers and convection ovens make food so consistent.
+            Here&apos;s what&apos;s actually happening: every vegetable is full of water. When too many pieces touch, that water evaporates and creates steam. Steam softens instead of browning. The magic of roasting comes from dry heat and air flow, the same reason restaurant fryers and convection ovens make food so consistent.
           </p>
 
           <p>
@@ -194,7 +194,7 @@ export default function VegetableRoastingGuidePage() {
           </p>
 
           <p>
-            <strong>The standard:</strong> Cut to similar sizes within 1/4&quot; of each other. Uniform size ensures even cooking. Professionals use the &quot;half-inch rule&quot; — most vegetables roast beautifully when cut into ½-inch to ¾-inch pieces.
+            <strong>The standard:</strong> Cut to similar sizes within 1/4&quot; of each other. Uniform size ensures even cooking. Professionals use the &quot;half-inch rule&quot;: most vegetables roast beautifully when cut into ½-inch to ¾-inch pieces.
           </p>
 
           <h2 id="method">The Professional Method: Restaurant Technique Step-by-Step</h2>
@@ -202,13 +202,13 @@ export default function VegetableRoastingGuidePage() {
           <h3>Step 1: Preheat to 425°F (220°C)</h3>
 
           <p>
-            Always preheat for a full 10 minutes. The pan should be hot before food ever touches it — that first contact is where caramelization begins. Cold pans soak up energy that should sear vegetables.
+            Always preheat for a full 10 minutes. The pan should be hot before food ever touches it. That first contact is where caramelization begins. Cold pans soak up energy that should sear vegetables.
           </p>
 
           <h3>Step 2: Cut Evenly</h3>
 
           <p>
-            Cut to uniform sizes for consistent cooking. A sharp knife and consistent technique matter here — see my <CTAVisibilityTracker
+            Cut to uniform sizes for consistent cooking. A sharp knife and consistent technique matter here. See my <CTAVisibilityTracker
               ctaId="blog-vegetable-roasting-guide-knife-cuts-1"
               position="mid_article"
               productSlug="vegetable-roasting-guide"
@@ -221,7 +221,7 @@ export default function VegetableRoastingGuidePage() {
           <h3>Step 3: Dry and Oil Properly</h3>
 
           <p>
-            After washing, dry vegetables thoroughly. Water is the enemy of browning. Toss with just enough oil to coat — too much causes soggy edges. A glossy film is plenty. Excess oil burns and turns bitter. Olive oil is great for flavor; avocado or grapeseed oil hold up to higher heat.
+            After washing, dry vegetables thoroughly. Water is the enemy of browning. Toss with just enough oil to coat. Too much causes soggy edges. A glossy film is plenty. Excess oil burns and turns bitter. Olive oil is great for flavor; avocado or grapeseed oil hold up to higher heat.
           </p>
 
           <h3>Step 4: Season Generously</h3>
@@ -381,7 +381,7 @@ export default function VegetableRoastingGuidePage() {
           </p>
 
           <p>
-            <strong>Fix:</strong> Use two pans or roast in batches. Use more space and higher heat. That single change — giving vegetables breathing room — will transform your roasting more than any other adjustment.
+            <strong>Fix:</strong> Use two pans or roast in batches. Use more space and higher heat. That single change, giving vegetables breathing room, will transform your roasting more than any other adjustment.
           </p>
 
           <h3>Mistake #2: Not Preheating the Pan</h3>
@@ -421,7 +421,7 @@ export default function VegetableRoastingGuidePage() {
           </p>
 
           <p>
-            <strong>Fix:</strong> Stir once halfway through roasting—that&apos;s it.
+            <strong>Fix:</strong> Stir once halfway through roasting. That&apos;s it.
           </p>
 
           <h2 id="equipment">Equipment That Makes It Foolproof</h2>
@@ -437,7 +437,7 @@ export default function VegetableRoastingGuidePage() {
                   merchant="internal"
                 >
                   <Link href="/reviews/nordic-ware-half-sheet-pan" className="text-orange-700 hover:text-orange-800 underline">Nordic Ware Half Sheet Pan</Link>
-                </CTAVisibilityTracker> — professional aluminum for even browning. The industry workhorse.
+                </CTAVisibilityTracker>, professional aluminum for even browning. The industry workhorse.
               </li>
               <li>
                 <strong>Spatula:</strong> <CTAVisibilityTracker
@@ -447,10 +447,10 @@ export default function VegetableRoastingGuidePage() {
                   merchant="internal"
                 >
                   <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-orange-700 hover:text-orange-800 underline">Rubbermaid Commercial Cook&apos;s Scraper</Link>
-                </CTAVisibilityTracker> — great for flipping without tearing.
+                </CTAVisibilityTracker>, great for flipping without tearing.
               </li>
               <li>
-                <strong>Oil:</strong> Use high smoke point oils — grapeseed, avocado, or light olive.
+                <strong>Oil:</strong> Use high smoke point oils: grapeseed, avocado, or light olive.
               </li>
               <li>
                 <strong>Thermometer:</strong> For accurate oven calibration. Ovens vary by up to 25°F.
@@ -495,7 +495,7 @@ export default function VegetableRoastingGuidePage() {
             <div className="border border-gray-200 rounded-lg p-4">
               <p className="font-bold text-slate-900 mb-2">If they&apos;re unevenly browned:</p>
               <p className="text-slate-700 text-sm mb-0">
-                Your oven has hot spots — rotate pans halfway through cooking. Also verify pieces are cut to uniform size.
+                Your oven has hot spots. Rotate pans halfway through cooking. Also verify pieces are cut to uniform size.
               </p>
             </div>
           </div>
@@ -507,7 +507,7 @@ export default function VegetableRoastingGuidePage() {
           </p>
 
           <p>
-            <strong>Perfectly roasted vegetables aren&apos;t a matter of luck or skill—they&apos;re a matter of following correct times and temperatures.</strong> Perfect roasting isn&apos;t about skill — it&apos;s about understanding the relationship between heat, spacing, and timing.
+            <strong>Perfectly roasted vegetables aren&apos;t a matter of luck or skill. They&apos;re a matter of following correct times and temperatures.</strong> Perfect roasting isn&apos;t about skill. It&apos;s about understanding the relationship between heat, spacing, and timing.
           </p>
 
           <p>
@@ -519,7 +519,7 @@ export default function VegetableRoastingGuidePage() {
           </p>
           <ol>
             <li><strong>High heat</strong> (425°F for most vegetables)</li>
-            <li><strong>Single layer</strong> (don&apos;t overcrowd—use multiple pans if needed)</li>
+            <li><strong>Single layer</strong> (don&apos;t overcrowd. Use multiple pans if needed)</li>
             <li><strong>Uniform sizes</strong> (consistent cooking)</li>
             <li><strong>Adequate fat</strong> (1-2 tbsp per pound, just enough to coat)</li>
             <li><strong>Minimal stirring</strong> (once maximum, halfway through)</li>
