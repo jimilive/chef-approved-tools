@@ -6,7 +6,7 @@
 export const educationalData = {
   metadata: {
     title: "Understanding Acids in Cooking: The Secret to Balanced Flavor",
-    description: "Why acids are the most underused tool in home cooking—and how professional chefs use them to transform flat, one-dimensional food into bright, balanced dishes.",
+    description: "Why acids are the most underused tool in home cooking, and how professional chefs use them to transform flat, one-dimensional food into bright, balanced dishes.",
     publishedDate: "2025-10-25",
     lastUpdated: "2025-10-24",
     primaryKeyword: "acids in cooking",
@@ -22,7 +22,7 @@ export const educationalData = {
   hero: {
     title: "Understanding Acids in Cooking: The Secret to Balanced Flavor",
     introduction: [
-      "Why acids are the most underused tool in home cooking—and how professional chefs use them to transform flat, one-dimensional food into bright, balanced dishes."
+      "Why acids are the most underused tool in home cooking, and how professional chefs use them to transform flat, one-dimensional food into bright, balanced dishes."
     ]
   },
 
@@ -31,11 +31,11 @@ export const educationalData = {
       id: "intro",
       title: "",
       content: [
-        "You've made a pot of soup. It tastes good—rich, savory, well-seasoned. But something's missing. It's a bit flat, one-dimensional, not quite restaurant-quality.",
+        "You've made a pot of soup. It tastes good: rich, savory, well-seasoned. But something's missing. It's a bit flat, one-dimensional, not quite restaurant-quality.",
         "You add more salt. Doesn't help. More herbs? Still not right.",
-        "Then you add a squeeze of lemon juice—and **everything changes**. Suddenly the soup tastes brighter, more complex, more alive. All the other flavors pop. It's like turning up the contrast on a photo.",
+        "Then you add a squeeze of lemon juice, and **everything changes**. Suddenly the soup tastes brighter, more complex, more alive. All the other flavors pop. It's like turning up the contrast on a photo.",
         "That's the power of acid.",
-        "After 24 years in professional kitchens, I can tell you this: **acid is the most underused tool in home cooking**. Home cooks understand salt. They're learning about fat. But acid? Most people don't know how or when to use it—and it shows in their food.",
+        "After 24 years in professional kitchens, I can tell you this: **acid is the most underused tool in home cooking**. Home cooks understand salt. They're learning about fat. But acid? Most people don't know how or when to use it, and it shows in their food.",
         "Let me show you why acids matter so much, how professional chefs use them, and how a squeeze of lemon or splash of vinegar can transform your cooking overnight."
       ],
       fatLink: "/blog/fat-is-flavor"
@@ -67,7 +67,7 @@ export const educationalData = {
       ],
       restaurantReality: {
         title: "Restaurant Reality: The Lemon Test",
-        content: "One of my chefs had a brutal but effective quality test. He'd taste every sauce, soup, and composed dish before it went to the line. If it lacked brightness, he'd squeeze a lemon wedge over it and taste again. **\"See the difference?\"** he'd ask. **\"That's what's missing. Fix it.\"** Nine times out of ten, what was \"missing\" was acid. The dish had salt, fat, and good ingredients—but no acid to tie it all together and make flavors pop. A squeeze of lemon or a splash of vinegar was the difference between \"good\" and \"send it out.\" He taught every cook on the line: **Taste. Adjust. Taste again. If it's still flat, add acid.** **The lesson:** Acid isn't optional. It's fundamental to balanced flavor—just like salt."
+        content: "One of my chefs had a brutal but effective quality test. He'd taste every sauce, soup, and composed dish before it went to the line. If it lacked brightness, he'd squeeze a lemon wedge over it and taste again. **\"See the difference?\"** he'd ask. **\"That's what's missing. Fix it.\"** Nine times out of ten, what was \"missing\" was acid. The dish had salt, fat, and good ingredients, but no acid to tie it all together and make flavors pop. A squeeze of lemon or a splash of vinegar was the difference between \"good\" and \"send it out.\" He taught every cook on the line: **Taste. Adjust. Taste again. If it's still flat, add acid.** **The lesson:** Acid isn't optional. It's fundamental to balanced flavor, just like salt."
       }
     },
     {
@@ -84,7 +84,7 @@ export const educationalData = {
             { component: "Salt", equals: "Midrange", description: "enhances everything" },
             { component: "Acid", equals: "Treble", description: "bright, sharp, cutting" }
           ],
-          closing: "Without acid, dishes sit in the low-to-mid range—rich and savory but flat. Acid adds the high notes that make everything else more vibrant."
+          closing: "Without acid, dishes sit in the low-to-mid range: rich and savory but flat. Acid adds the high notes that make everything else more vibrant."
         },
         {
           number: 2,
@@ -101,7 +101,7 @@ export const educationalData = {
         {
           number: 3,
           title: "Acids Enhance Other Flavors",
-          content: "Acid doesn't just add its own flavor—it makes other flavors more pronounced. It's why a squeeze of lemon makes vegetables taste more vegetable-y, soups taste more complex, and sauces taste more balanced."
+          content: "Acid doesn't just add its own flavor. It makes other flavors more pronounced. It's why a squeeze of lemon makes vegetables taste more vegetable-y, soups taste more complex, and sauces taste more balanced."
         }
       ]
     },
@@ -140,8 +140,8 @@ export const educationalData = {
       content: [
         "After 24 years of cooking professionally, I can tell you this: **If your food tastes flat, you probably need acid**.",
         "Salt enhances. Fat carries. Acid brightens and balances. Together, they create the complete flavor profile that makes restaurant food taste so good.",
-        "The next time you cook, keep lemon wedges or a bottle of good vinegar nearby. Taste your dish before serving. If it's missing something—if it tastes rich but flat—add a small amount of acid. Taste again. You'll immediately understand why this is one of the most important techniques in professional cooking.",
-        "That squeeze of lemon? It's not garnish. It's essential."
+        "The next time you cook, keep lemon wedges or a bottle of good vinegar nearby. Taste your dish before serving. If it's missing something, if it tastes rich but flat, add a small amount of acid. Taste again. You'll immediately understand why this is one of the most important techniques in professional cooking.",
+        "That squeeze of lemon? It's not garnish. It matters."
       ],
       fatLink: "/blog/fat-is-flavor"
     }
@@ -151,11 +151,11 @@ export const educationalData = {
     questions: [
       {
         question: "What's the best acid for finishing dishes?",
-        answer: "Lemon juice is the most versatile—it brightens without adding competing flavors. For richer dishes, red wine vinegar adds depth. For Asian cuisine, rice vinegar or lime juice. For delicate dishes, champagne vinegar or white wine vinegar. The key is matching acid intensity to dish richness."
+        answer: "Lemon juice is the most versatile. It brightens without adding competing flavors. For richer dishes, red wine vinegar adds depth. For Asian cuisine, rice vinegar or lime juice. For delicate dishes, champagne vinegar or white wine vinegar. The key is matching acid intensity to dish richness."
       },
       {
         question: "Can you add too much acid?",
-        answer: "Yes. Too much acid makes food sour and unpleasant, and can overpower other flavors. Add acid gradually—a squeeze of lemon at a time—tasting between additions. You can always add more; you can't take it back."
+        answer: "Yes. Too much acid makes food sour and unpleasant, and can overpower other flavors. Add acid gradually (a squeeze of lemon at a time), tasting between additions. You can always add more; you can't take it back."
       },
       {
         question: "When should I add acid during cooking?",

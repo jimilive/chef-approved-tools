@@ -33,8 +33,8 @@ export const educationalData = {
     totalTime: "PT20M",
     tools: ["Cast iron or carbon steel skillet", "High smoke-point oil", "Instant-read thermometer", "Tongs", "Butter (for basting)"],
     steps: [
-      { name: "Temper the Steak", text: "Remove steak from refrigerator 30-45 minutes before cooking. Cold steaks don't sear properly—the surface needs to reach room temperature for optimal Maillard reaction." },
-      { name: "Preheat the Pan", text: "Heat cast iron or carbon steel pan over medium-high heat for 5-7 minutes. The pan should reach 400-450°F—a drop of water should instantly vaporize." },
+      { name: "Temper the Steak", text: "Remove steak from refrigerator 30-45 minutes before cooking. Cold steaks don't sear properly. The surface needs to reach room temperature for proper Maillard reaction." },
+      { name: "Preheat the Pan", text: "Heat cast iron or carbon steel pan over medium-high heat for 5-7 minutes. The pan should reach 400-450°F. A drop of water should instantly vaporize." },
       { name: "Dry and Season", text: "Pat steak completely dry with paper towels. Moisture creates steam and prevents browning. Season generously with salt and pepper on both sides." },
       { name: "Add Oil and Sear", text: "Add high smoke-point oil (avocado or ghee). Place steak in pan and don't move it. Sear 3-4 minutes until a brown crust forms ⅓ up the side." },
       { name: "Flip Once", text: "When crust is golden and steak releases easily, flip once. Sear second side for 2-3 minutes for medium-rare (adjust for desired doneness)." },
@@ -48,7 +48,7 @@ export const educationalData = {
       title: "",
       restaurantReality: {
         title: "The Restaurant Reality",
-        content: "In a busy restaurant, we don't have time for second chances. Every steak needs a perfect sear on the first try, whether it's the 10th or 200th steak of the night. The techniques I'm sharing aren't just theory—they're battle-tested methods that work under pressure."
+        content: "In a busy restaurant, we don't have time for second chances. Every steak needs a perfect sear on the first try, whether it's the 10th or 200th steak of the night. The techniques I'm sharing aren't just theory. They're battle-tested methods that work under pressure."
       }
     },
     {
@@ -61,7 +61,7 @@ export const educationalData = {
         { issue: "Moving the steak too much", explanation: "Impatience ruins the Maillard reaction" },
         { issue: "Wrong equipment", explanation: "Thin pans can't handle restaurant-level heat" }
       ],
-      closing: "These aren't just home cook problems—I've trained plenty of new line cooks who made the exact same mistakes. The difference is learning the fundamentals that create consistent results."
+      closing: "These aren't just home cook problems. I've trained plenty of new line cooks who made the exact same mistakes. The difference is learning the fundamentals that create consistent results."
     },
     {
       id: "professional-method",
@@ -127,17 +127,17 @@ export const educationalData = {
         {
           id: "rest",
           title: "Step 5: The Rest (Just as Important as the Sear)",
-          intro: "After thousands of steaks, I can tell you that resting isn't optional—it's what makes the difference between good and great. Restaurants build resting time into service because it's that critical.",
+          intro: "After thousands of steaks, I can tell you that resting isn't optional. It's what makes the difference between good and great. Restaurants build resting time into service because it's that critical.",
           butterTechnique: {
             title: "Professional Butter Resting Technique",
             intro: "Here's a restaurant secret most home cooks never learn: rest your steak on a small pat of butter in a warm (but not hot) place for 10-15 minutes. This technique:",
             benefits: [
               "Allows even heat distribution throughout the meat",
-              "Keeps the steak at optimal serving temperature",
+              "Keeps the steak at ideal serving temperature",
               "Adds rich flavor without overpowering the beef",
               "Creates a more tender, evenly cooked result"
             ],
-            proTip: "Use the residual heat from your oven (turned off) or a warming drawer if you have one. The key is warm, not hot—you don't want to continue cooking the steak."
+            proTip: "Use the residual heat from your oven (turned off) or a warming drawer if you have one. The key is warm, not hot. You don't want to continue cooking the steak."
           },
           restingBasics: [
             "Rest for 10-15 minutes after cooking (longer with the butter technique)",
@@ -162,7 +162,7 @@ export const educationalData = {
             ],
             tip: "The resting liquid has concentrated beef flavor and adds richness you can't get from wine or stock alone. Don't waste it!"
           },
-          closing: "This technique turns a simple steak into a restaurant-quality dish. The sauce takes 3-4 minutes while your steak finishes resting—perfect timing for restaurant service."
+          closing: "This technique turns a simple steak into a restaurant-quality dish. The sauce takes 3-4 minutes while your steak finishes resting. Perfect timing for restaurant service."
         }
       ]
     },
@@ -181,7 +181,7 @@ export const educationalData = {
       intro: "You don't need a $3,000 commercial range, but having the right tools makes consistent results much easier. Here's what I actually use at home after testing countless options in restaurant kitchens:",
       recommendations: [
         { name: "Cast Iron Skillet", link: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", linkText: "Lodge Cast Iron Bundle", description: "Same heat retention as restaurant equipment, but affordable for home use." },
-        { name: "Instant Thermometer", description: "Takes the guesswork out of doneness levels. Essential for consistent results." },
+        { name: "Instant Thermometer", description: "Takes the guesswork out of doneness levels. Important for consistent results." },
         { name: "Quality Tongs", description: "Heavy-duty restaurant-style tongs that won't bend under pressure." }
       ],
       closing: "These are the same tools I relied on when cooking 200+ covers per night. If they can handle restaurant volume, they'll serve you well at home."
@@ -190,7 +190,7 @@ export const educationalData = {
       id: "final-thoughts",
       title: "Final Thoughts: Consistency Over Perfection",
       content: [
-        "The goal isn't to nail the perfect steak once—it's to cook great steaks consistently. That's what separates restaurant cooking from home cooking. We use systems and techniques that work every time, not just when everything goes perfectly.",
+        "The goal isn't to nail the perfect steak once. It's to cook great steaks consistently. That's what separates restaurant cooking from home cooking. We use systems and techniques that work every time, not just when everything goes perfectly.",
         "Start with these fundamentals: proper equipment, room temperature steak, aggressive heat, patience during the sear, and adequate resting. Master these basics, and you'll be cooking restaurant-quality steaks at home."
       ]
     }
@@ -200,15 +200,15 @@ export const educationalData = {
     questions: [
       {
         question: "How hot should my pan be for searing steak?",
-        answer: "Your pan should reach 400-450°F for optimal searing. The Maillard reaction—which creates that beautiful brown crust—starts at 300°F and ramps up quickly around 350°F. In professional kitchens, pans are preheated for 5-7 minutes over medium-high heat until a drop of water instantly vaporized. If you can't hold your hand over the pan for more than 2-3 seconds, it's ready."
+        answer: "Your pan should reach 400-450°F for proper searing. The Maillard reaction (which creates that beautiful brown crust) starts at 300°F and ramps up quickly around 350°F. In professional kitchens, pans are preheated for 5-7 minutes over medium-high heat until a drop of water instantly vaporized. If you can't hold your hand over the pan for more than 2-3 seconds, it's ready."
       },
       {
         question: "What is the Maillard reaction and why does it matter?",
-        answer: "The Maillard reaction is a chemical reaction between amino acids and sugars that creates the flavorful brown crust on seared meat. It occurs between 300-400°F and produces hundreds of flavor compounds that make restaurant-quality steaks taste so good. This is different from caramelization—the Maillard reaction involves proteins, not just sugars."
+        answer: "The Maillard reaction is a chemical reaction between amino acids and sugars that creates the flavorful brown crust on seared meat. It occurs between 300-400°F and produces hundreds of flavor compounds that make restaurant-quality steaks taste so good. This is different from caramelization. The Maillard reaction involves proteins, not just sugars."
       },
       {
         question: "Why does my steak stick to the pan?",
-        answer: "Sticking is normal at first—steaks will naturally stick to the pan initially, then release when a proper crust forms. The main causes of excessive sticking are: pan not hot enough, wet steak surface, or moving the steak too early. Pat steaks completely dry, preheat the pan to 400-450°F, and don't touch the steak for 3-4 minutes. When the crust is ready, it releases naturally."
+        answer: "Sticking is normal at first. Steaks will naturally stick to the pan initially, then release when a proper crust forms. The main causes of excessive sticking are: pan not hot enough, wet steak surface, or moving the steak too early. Pat steaks completely dry, preheat the pan to 400-450°F, and don't touch the steak for 3-4 minutes. When the crust is ready, it releases naturally."
       },
       {
         question: "Why is my steak turning grey instead of brown?",
@@ -216,19 +216,19 @@ export const educationalData = {
       },
       {
         question: "Should I use oil or butter for searing steak?",
-        answer: "Use high smoke-point oil for searing—refined avocado oil (520°F), ghee (480°F), or safflower oil work best. Butter's smoke point is only 350°F, so it burns at proper searing temperatures. The professional technique: sear in high smoke-point oil, then add butter in the last minute for basting. You get the high-heat sear without burning."
+        answer: "Use high smoke-point oil for searing: refined avocado oil (520°F), ghee (480°F), or safflower oil work best. Butter's smoke point is only 350°F, so it burns at proper searing temperatures. The professional technique: sear in high smoke-point oil, then add butter in the last minute for basting. You get the high-heat sear without burning."
       },
       {
         question: "What's the best oil for high-heat steak searing?",
-        answer: "Refined avocado oil (smoke point 520°F) or ghee/clarified butter (480°F) are ideal for searing. Professional kitchens often use clarified butter because it combines high smoke point with rich flavor. Avoid extra virgin olive oil (320°F smoke point) and regular butter (350°F)—both burn and create acrid flavors at searing temperatures."
+        answer: "Refined avocado oil (smoke point 520°F) or ghee/clarified butter (480°F) are ideal for searing. Professional kitchens often use clarified butter because it combines high smoke point with rich flavor. Avoid extra virgin olive oil (320°F smoke point) and regular butter (350°F). Both burn and create acrid flavors at searing temperatures."
       },
       {
         question: "How do I know when to flip my steak?",
-        answer: "Wait 3-4 minutes without moving the steak, then check the edge—when you see a brown crust climbing about ⅓ up the side, it's ready to flip. The steak will release easily from the pan when the crust is properly formed. Flipping too early tears the developing crust and creates grey, steamed meat instead of a proper sear."
+        answer: "Wait 3-4 minutes without moving the steak, then check the edge. When you see a brown crust climbing about ⅓ up the side, it's ready to flip. The steak will release easily from the pan when the crust is properly formed. Flipping too early tears the developing crust and creates grey, steamed meat instead of a proper sear."
       },
       {
         question: "Should I season steak before or after searing?",
-        answer: "Season generously with kosher salt immediately before searing—within 3 minutes of hitting the pan. Salt draws out moisture, so salting too early (10-30 minutes before) creates surface wetness that prevents browning. Professional kitchens salt right before searing, or at least 45 minutes ahead (dry brining). The 10-40 minute window is the worst time."
+        answer: "Season generously with kosher salt immediately before searing, within 3 minutes of hitting the pan. Salt draws out moisture, so salting too early (10-30 minutes before) creates surface wetness that prevents browning. Professional kitchens salt right before searing, or at least 45 minutes ahead (dry brining). The 10-40 minute window is the worst time."
       },
       {
         question: "Why is there so much smoke when I sear steak?",
@@ -236,13 +236,13 @@ export const educationalData = {
       },
       {
         question: "Can I sear steak in a stainless steel pan instead of cast iron?",
-        answer: "Yes—stainless steel works excellently for searing if it's heavy-gauge. Cast iron retains heat better when you add cold meat, but stainless steel heats more evenly and is easier to deglaze for pan sauces. Professional kitchens use both depending on the situation. The key is a heavy pan (thin pans lose heat instantly) preheated for 5-7 minutes until screaming hot."
+        answer: "Yes. Stainless steel works excellently for searing if it's heavy-gauge. Cast iron retains heat better when you add cold meat, but stainless steel heats more evenly and is easier to deglaze for pan sauces. Professional kitchens use both depending on the situation. The key is a heavy pan (thin pans lose heat instantly) preheated for 5-7 minutes until screaming hot."
       }
     ]
   },
 
   relatedArticles: [
-    { href: "/blog/kitchen-thermometers-guide", title: "Complete Guide to Kitchen Thermometers", description: "Use a thermometer for exact doneness every time—no more guesswork on your steaks." },
+    { href: "/blog/kitchen-thermometers-guide", title: "Complete Guide to Kitchen Thermometers", description: "Use a thermometer for exact doneness every time. No more guesswork on your steaks." },
     { href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle", title: "Lodge Cast Iron Skillet Bundle", description: "The cast iron skillets that deliver restaurant-quality heat retention for perfect sears every time." },
     { href: "/blog/cast-iron-seasoning-care", title: "How to Season & Clean Cast Iron", description: "Keep your cast iron in perfect searing condition with proper seasoning and care techniques." },
     { href: "/glossary", title: "Recipe Conversions & Techniques", description: "Professional measurements, conversions, and knife techniques used in restaurant kitchens." }

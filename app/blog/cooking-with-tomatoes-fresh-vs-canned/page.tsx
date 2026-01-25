@@ -150,7 +150,7 @@ export default function TomatoesGuidePage() {
           </div>
 
           <p>
-            That lesson changed how I cooked at home. Once you understand when to use fresh tomatoes versus canned, your cooking gets dramatically better—and easier.
+            That lesson changed how I cooked at home. Once you understand when to use fresh tomatoes versus canned, your cooking gets dramatically better, and easier.
           </p>
 
           <p>
@@ -241,7 +241,7 @@ export default function TomatoesGuidePage() {
           </p>
 
           <p>
-            Fresh tomatoes are essential here. You&apos;re not cooking them, so their texture and fresh flavor matter.
+            Fresh tomatoes are important here. You&apos;re not cooking them, so their texture and fresh flavor matter.
           </p>
 
           <p>
@@ -255,7 +255,7 @@ export default function TomatoesGuidePage() {
           </p>
 
           <p>
-            When you&apos;re cooking tomatoes for less than 15 minutes, fresh works well—especially in summer when they&apos;re good.
+            When you&apos;re cooking tomatoes for less than 15 minutes, fresh works well, especially in summer when they&apos;re good.
           </p>
 
           <BlogNewsletterCTA slug="cooking-with-tomatoes-fresh-vs-canned" />
@@ -289,7 +289,7 @@ export default function TomatoesGuidePage() {
           </p>
 
           <p>
-            Canned tomatoes work perfectly in soups and stews because they break down into the liquid. You&apos;re not eating them as distinct chunks—they&apos;re becoming part of the base.
+            Canned tomatoes work perfectly in soups and stews because they break down into the liquid. You&apos;re not eating them as distinct chunks. They&apos;re becoming part of the base.
           </p>
 
           <h2>How to Doctor Canned Tomatoes</h2>
@@ -342,7 +342,7 @@ export default function TomatoesGuidePage() {
           <h2>The Takeaway: Match the Tomato to the Dish</h2>
 
           <p>
-            Tomatoes are essential, but fresh and canned serve different purposes. Use the wrong one and you&apos;ll fight your ingredients. Use the right one and cooking becomes effortless.
+            Tomatoes are important, but fresh and canned serve different purposes. Use the wrong one and you&apos;ll fight your ingredients. Use the right one and cooking becomes easier.
           </p>
 
           <p>
@@ -375,7 +375,7 @@ export default function TomatoesGuidePage() {
           </p>
 
           <p>
-            Master this framework and tomatoes become effortless. You&apos;ll know exactly which type to reach for, how to prep it, and how to make it taste incredible. This is the knowledge that separates home cooks from professionals.
+            Master this framework and tomatoes become easy. You&apos;ll know exactly which type to reach for, how to prep it, and how to make it taste incredible. This is the knowledge that separates home cooks from professionals.
           </p>
 
           <BlogFAQ questions={tomatoesData.faq.questions} />

@@ -9,8 +9,8 @@
 ## HANDOFF FOR NEXT SESSION
 
 ### Current Status
-- **71 pages completed** (22 reviews, 49 blogs)
-- **Next page:** #76 (check priority list for next page)
+- **76 pages completed** (22 reviews, 54 blogs)
+- **Next page:** #81 (check priority list for next page)
 - Priority list location: `/Users/scottbradley/Downloads/pages-by-importance.md`
 
 ### Critical Lessons Learned
@@ -156,6 +156,11 @@
 | 73 | /blog/how-to-wash-lettuce | Done | 17 | 2 | Fixed 17 em dashes, 2 AI phrases ("optimal" → "right"/"proper") |
 | 74 | /blog/potatoes-cooking-guide | Done | 12 | 0 | Fixed 12 em dashes (4 data, 8 page) |
 | 75 | /blog/bread-science-gluten-development | Done | 12 | 0 | Fixed 12 em dashes (3 data, 9 page) |
+| 76 | /blog/cooking-with-tomatoes-fresh-vs-canned | Done | 5 | 4 | Fixed 5 em dashes (3 page, 2 data), 4 AI phrases (essential→important, effortless→easier/easy) |
+| 77 | /blog/how-to-sear-steaks-like-restaurant-chef | Done | 17 | 4 | Fixed 17 em dashes (all data), 4 AI phrases (Essential→Equipment, optimal→proper/ideal) |
+| 78 | /blog/understanding-acids-cooking | Done | 12 | 1 | Fixed 12 em dashes (11 data, 1 page), 1 AI phrase ("essential"→"matters") |
+| 79 | /blog/what-is-braising | Done | 11 | 0 | Fixed 11 em dashes (all data), kept "11 Essential Tools" PDF title |
+| 80 | /blog/what-is-velveting | Done | 23 | 4 | Fixed 23 em dashes, 4 AI phrases (Essential→Required, essential→necessary, optimal→ideal) |
 
 ## Patterns Being Checked
 
@@ -352,3 +357,10 @@
   - Page 74 (potatoes-cooking-guide): 12 em dashes (4 data, 8 page) → periods, commas, colons
   - Page 75 (bread-science-gluten-development): 12 em dashes (3 data, 9 page) → periods, commas, parentheses
   - **Total: 88 em dashes fixed, 3 AI phrase fixes**
+- **Batch session: Pages 76-80 (5 pages)**
+  - Page 76 (cooking-with-tomatoes-fresh-vs-canned): 5 em dashes, 4 AI phrases (essential→important, effortless→easier/easy)
+  - Page 77 (how-to-sear-steaks-like-restaurant-chef): 17 em dashes, 4 AI phrases (Essential Equipment→Equipment, optimal→proper/ideal, Essential→Important)
+  - Page 78 (understanding-acids-cooking): 12 em dashes (11 data, 1 page), 1 AI phrase ("It's essential"→"It matters")
+  - Page 79 (what-is-braising): 11 em dashes, kept "11 Essential Tools" PDF title (protected)
+  - Page 80 (what-is-velveting): 23 em dashes, 4 AI phrases (Essential→Required, essential→necessary, optimal→ideal, essential→necessary)
+  - **Total: 68 em dashes fixed, 13 AI phrase fixes**

@@ -99,7 +99,7 @@ export const tomatoesData = {
     questions: [
       {
         question: "Should I use whole, crushed, or diced canned tomatoes?",
-        answer: "Whole peeled gives you the most control—crush them by hand for your desired texture. Crushed is convenient for smooth sauces (marinara, pizza sauce). Diced works for chunky sauces, soups, and chilis. All three are just tomatoes processed differently. Start with whole peeled and you can make the others yourself."
+        answer: "Whole peeled gives you the most control. Crush them by hand for your desired texture. Crushed is convenient for smooth sauces (marinara, pizza sauce). Diced works for chunky sauces, soups, and chilis. All three are just tomatoes processed differently. Start with whole peeled and you can make the others yourself."
       },
       {
         question: "Can I substitute fresh for canned in recipes?",
@@ -107,7 +107,7 @@ export const tomatoesData = {
       },
       {
         question: "What's the best brand of canned tomatoes?",
-        answer: "For special dishes: San Marzano DOP (Cento, La Valle). For everyday cooking: Muir Glen Organic, Bianco DiNapoli. For budget cooking: Hunt's or any domestic brand (not generic store brand—those are too watery)."
+        answer: "For special dishes: San Marzano DOP (Cento, La Valle). For everyday cooking: Muir Glen Organic, Bianco DiNapoli. For budget cooking: Hunt's or any domestic brand (not generic store brand, those are too watery)."
       }
     ]
   },

@@ -181,7 +181,7 @@ export default function SteakSearingPage() {
           <h3>{equipmentStep.title}</h3>
           <p>{equipmentStep.intro}</p>
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
-            <h4 className="font-bold text-blue-800 mb-3">Essential Equipment for Perfect Sears</h4>
+            <h4 className="font-bold text-blue-800 mb-3">Equipment for Perfect Sears</h4>
             <ul className="text-blue-700 space-y-2 mb-4">
               {equipmentStep.equipment?.map((item, index) => (
                 <li key={index}><strong>{item.split(' - ')[0]}</strong> - {item.split(' - ')[1]}</li>

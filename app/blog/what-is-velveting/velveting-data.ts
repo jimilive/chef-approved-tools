@@ -22,7 +22,7 @@ export const velvetingData = {
   hero: {
     title: "What is Velveting: Chinese Restaurant Technique Explained",
     introduction: [
-      "Chinese restaurants produce impossibly tender stir-fry chicken while home cooks using identical ingredients end up with dry, tough meat. The difference is velveting—a 15-minute marinating step followed by 30-second pre-cook.",
+      "Chinese restaurants produce impossibly tender stir-fry chicken while home cooks using identical ingredients end up with dry, tough meat. The difference is velveting: a 15-minute marinating step followed by 30-second pre-cook.",
       "This technique compensates for the fundamental limitation of home stoves: they can't generate the intense heat that professional wok burners provide."
     ]
   },
@@ -47,7 +47,7 @@ export const velvetingData = {
         "Velveting is a Chinese cooking technique where you coat thinly sliced meat in a mixture of cornstarch, egg white, and rice wine (or water), marinate briefly, then pre-cook in hot oil or boiling water before adding to the final stir-fry.",
         "The coating creates a protective barrier that seals in moisture during high-heat cooking. The pre-cooking sets the protein before it hits the wok, preventing overcooking. Result: chicken breast that stays tender even when cooked over scorching-hot wok heat."
       ],
-      importantNote: "There is no direct Chinese word for \"velveting\"—it's an English term coined by the food world, likely from Irene Kuo's 1970s book \"The Key to Chinese Cooking.\" In Chinese cooking, this combines tenderization (嫩化), coating with starch (上浆), and passing through oil (过油) or water (过水)."
+      importantNote: "There is no direct Chinese word for \"velveting.\" It's an English term coined by the food world, likely from Irene Kuo's 1970s book \"The Key to Chinese Cooking.\" In Chinese cooking, this combines tenderization (嫩化), coating with starch (上浆), and passing through oil (过油) or water (过水)."
     },
     {
       id: "science",
@@ -86,7 +86,7 @@ export const velvetingData = {
       marinade: {
         intro: "For 1 pound (200g) thinly-sliced meat:",
         ingredients: [
-          { amount: "2 teaspoons", item: "cornstarch", note: "Essential, creates the protective coating" },
+          { amount: "2 teaspoons", item: "cornstarch", note: "Required. Creates the protective coating" },
           { amount: "½", item: "egg white", note: "Traditional, adds protein coating (optional in modern versions)" },
           { amount: "½ teaspoon", item: "Shaoxing rice wine", note: "Or water if wine unavailable" },
           { amount: "¼ teaspoon", item: "salt", note: null },
@@ -110,7 +110,7 @@ export const velvetingData = {
       oilMethod: {
         title: "Oil Velveting (Traditional Restaurant Method)",
         method: "Pre-cook coated meat in 1-2 cups of neutral oil heated to 140-175°F (60-80°C) for 30-45 seconds until meat looks visibly done (turns opaque).",
-        tempTest: "Insert chopsticks into oil—they should bubble lightly when temperature is correct.",
+        tempTest: "Insert chopsticks into oil. They should bubble lightly when temperature is correct.",
         advantages: [
           "Even, gentle cooking",
           "Superior tender texture",
@@ -144,7 +144,7 @@ export const velvetingData = {
           "Interior texture compared to oil blanching"
         ]
       },
-      recommendation: "Oil velveting produces superior results—the texture is silkier, richer, and more authentic. But water velveting is acceptable for home cooks who find using large amounts of oil prohibitive. The texture difference is noticeable but not dramatic, especially after the meat absorbs sauce during stir-frying."
+      recommendation: "Oil velveting produces superior results. The texture is silkier, richer, and more authentic. But water velveting is acceptable for home cooks who find using large amounts of oil prohibitive. The texture difference is noticeable but not dramatic, especially after the meat absorbs sauce during stir-frying."
     },
     {
       id: "step-by-step",
@@ -155,9 +155,9 @@ export const velvetingData = {
           title: "Slice Chicken Properly",
           time: "5 Minutes",
           content: [
-            "Use boneless, skinless chicken breast. Slice against the grain into ¼-inch thick strips—roughly 2 inches long by ½ inch wide. Uniform size matters: thicker pieces under-cook while thinner pieces over-cook during the 30-second blanch."
+            "Use boneless, skinless chicken breast. Slice against the grain into ¼-inch thick strips, roughly 2 inches long by ½ inch wide. Uniform size matters: thicker pieces under-cook while thinner pieces over-cook during the 30-second blanch."
           ],
-          proTip: "Freeze chicken for 15 minutes before slicing—the firmer texture makes even slicing easier. A sharp knife is essential: dull knives tear chicken instead of cutting cleanly, releasing moisture and creating ragged edges that don't coat evenly."
+          proTip: "Freeze chicken for 15 minutes before slicing. The firmer texture makes even slicing easier. A sharp knife is necessary: dull knives tear chicken instead of cutting cleanly, releasing moisture and creating ragged edges that don't coat evenly."
         },
         {
           number: 2,
@@ -165,7 +165,7 @@ export const velvetingData = {
           time: "2 Minutes",
           content: [
             "In a medium bowl, combine: 1 egg white (lightly beaten), 1 tablespoon cornstarch, 1 tablespoon Shaoxing wine (or water), ½ teaspoon kosher salt, 1 tablespoon neutral oil.",
-            "Whisk until cornstarch dissolves completely—no lumps. The mixture should be slightly viscous but pourable, like thin pancake batter. If too thick, add ½ tablespoon water. If too thin, add ½ teaspoon cornstarch."
+            "Whisk until cornstarch dissolves completely. No lumps. The mixture should be slightly viscous but pourable, like thin pancake batter. If too thick, add ½ tablespoon water. If too thin, add ½ teaspoon cornstarch."
           ]
         },
         {
@@ -173,8 +173,8 @@ export const velvetingData = {
           title: "Coat and Marinate",
           time: "15-30 Minutes",
           content: [
-            "Add sliced chicken to the velveting mixture. Use your hands to massage the coating into every piece—gloves optional but recommended for faster cleanup. Make sure each piece is evenly coated with no bare spots.",
-            "Let marinate at room temperature for 15-30 minutes. **Don't exceed 30 minutes**—the egg white starts breaking down chicken proteins after that point, creating mushy texture instead of tender texture. Don't marinate for less than 15 minutes—the coating needs time to adhere and the salt needs time to penetrate."
+            "Add sliced chicken to the velveting mixture. Use your hands to massage the coating into every piece (gloves optional but recommended for faster cleanup). Make sure each piece is evenly coated with no bare spots.",
+            "Let marinate at room temperature for 15-30 minutes. **Don't exceed 30 minutes**. The egg white starts breaking down chicken proteins after that point, creating mushy texture instead of tender texture. Don't marinate for less than 15 minutes. The coating needs time to adhere and the salt needs time to penetrate."
           ]
         },
         {
@@ -182,9 +182,9 @@ export const velvetingData = {
           title: "Blanch in Boiling Water",
           time: "30-45 Seconds",
           content: [
-            "Bring a large pot of water to a rolling boil—at least 8 cups for 1 pound of chicken. The water must be boiling vigorously before adding chicken. If the water isn't hot enough, the coating won't set properly.",
-            "Add all chicken at once. Use tongs or spider strainer to gently separate pieces—they'll want to clump initially. Cook for exactly 30-45 seconds. The chicken will turn from translucent pink to opaque white. Remove immediately with tongs or spider strainer.",
-            "Drain in a colander for 10-15 seconds—you want surface moisture gone but don't need to dry completely. The chicken is now ready for stir-frying. Use immediately or refrigerate for up to 2 hours (bring back to room temperature before stir-frying)."
+            "Bring a large pot of water to a rolling boil (at least 8 cups for 1 pound of chicken). The water must be boiling vigorously before adding chicken. If the water isn't hot enough, the coating won't set properly.",
+            "Add all chicken at once. Use tongs or spider strainer to gently separate pieces. They'll want to clump initially. Cook for exactly 30-45 seconds. The chicken will turn from translucent pink to opaque white. Remove immediately with tongs or spider strainer.",
+            "Drain in a colander for 10-15 seconds. You want surface moisture gone but don't need to dry completely. The chicken is now ready for stir-frying. Use immediately or refrigerate for up to 2 hours (bring back to room temperature before stir-frying)."
           ]
         },
         {
@@ -193,7 +193,7 @@ export const velvetingData = {
           time: "2-3 Minutes",
           content: [
             "Heat wok or large skillet over high heat. Add 1-2 tablespoons oil, swirl to coat. Add aromatics (garlic, ginger, scallions), stir-fry 15-20 seconds. Add vegetables, stir-fry 1-2 minutes until nearly done. Add pre-velveted chicken, stir-fry 60-90 seconds. Add sauce, toss to coat, cook until sauce thickens (30-45 seconds).",
-            "The total time the chicken spends in the wok is 90 seconds maximum. That's the entire point of velveting—the chicken is already 70% cooked from blanching, so it only needs brief exposure to wok heat to finish and absorb sauce flavor."
+            "The total time the chicken spends in the wok is 90 seconds maximum. That's the entire point of velveting. The chicken is already 70% cooked from blanching, so it only needs brief exposure to wok heat to finish and absorb sauce flavor."
           ]
         }
       ]
@@ -204,26 +204,26 @@ export const velvetingData = {
       proteins: [
         {
           name: "Chicken Breast: The Primary Use Case",
-          description: "Chicken breast is lean, mild, and prone to drying out—perfect for velveting. The coating protects against overcooking by sealing in moisture. For stir-fry where chicken cooks in direct contact with 600°F wok metal for 2-3 minutes, velveting is the difference between tender chicken and dry chicken."
+          description: "Chicken breast is lean, mild, and prone to drying out, perfect for velveting. The coating protects against overcooking by sealing in moisture. For stir-fry where chicken cooks in direct contact with 600°F wok metal for 2-3 minutes, velveting is the difference between tender chicken and dry chicken."
         },
         {
           name: "Pork Tenderloin and Lean Pork Cuts",
           description: "Modern pork is bred to be lean, which means it dries out easily. Velveting pork tenderloin or pork loin for stir-fry produces the same tender result as chicken. The timing is identical: 30-45 seconds blanching, then 90 seconds in the wok.",
-          note: "Don't velvet fattier pork cuts like shoulder or belly—they have enough intramuscular fat to stay moist during high-heat cooking."
+          note: "Don't velvet fattier pork cuts like shoulder or belly. They have enough intramuscular fat to stay moist during high-heat cooking."
         },
         {
           name: "Shrimp: Quick and Effective",
-          description: "Shrimp velvets beautifully—the coating creates a barrier that prevents overcooking and rubberiness. Use the same formula but reduce blanching time to 20-30 seconds (shrimp cooks faster than chicken). The result is tender, plump shrimp with slight crunch from the cornstarch coating."
+          description: "Shrimp velvets beautifully. The coating creates a barrier that prevents overcooking and rubberiness. Use the same formula but reduce blanching time to 20-30 seconds (shrimp cooks faster than chicken). The result is tender, plump shrimp with slight crunch from the cornstarch coating."
         },
         {
           name: "Beef: Only for Tough, Economical Cuts",
-          description: "Velvet tough cuts like flank steak, round, or chuck that would normally be used for stew. Velveting transforms them into stir-fry-suitable protein. Don't velvet premium tender cuts like tenderloin or high-grade sirloin—they're already tender and juicy."
+          description: "Velvet tough cuts like flank steak, round, or chuck that would normally be used for stew. Velveting transforms them into stir-fry-suitable protein. Don't velvet premium tender cuts like tenderloin or high-grade sirloin. They're already tender and juicy."
         }
       ],
       whatNotToVelvet: [
         { name: "Chicken thighs", reason: "Already tender and juicy due to higher fat content. Velveting is unnecessary and wasteful." },
         { name: "Premium beef cuts", reason: "Tenderloin, ribeye, high-grade sirloin don't need tenderizing." },
-        { name: "Fish", reason: "Most fish is too delicate—velveting can work but requires extra care. Better to preserve natural fresh taste and texture." }
+        { name: "Fish", reason: "Most fish is too delicate. Velveting can work but requires extra care. Better to preserve natural fresh taste and texture." }
       ],
       generalRule: "Velvet lean proteins that dry out easily. Skip velveting for fatty, tender cuts that are already juicy."
     },
@@ -244,8 +244,8 @@ export const velvetingData = {
         },
         {
           name: "Over-Blanching",
-          problem: "Leaving chicken in boiling water for 2+ minutes fully cooks it—which defeats the purpose. The final stir-fry step just reheats already-cooked chicken instead of finishing partially-cooked chicken. The texture suffers because the chicken has been exposed to too much total cooking time.",
-          fix: "Set a timer for 30 seconds the first time you velvet. Check the chicken—it should be opaque white with possibly some translucent pink remaining in the center. That's correct. If it's fully white throughout, you've over-blanched. Reduce time to 25-30 seconds for subsequent batches."
+          problem: "Leaving chicken in boiling water for 2+ minutes fully cooks it, which defeats the purpose. The final stir-fry step just reheats already-cooked chicken instead of finishing partially-cooked chicken. The texture suffers because the chicken has been exposed to too much total cooking time.",
+          fix: "Set a timer for 30 seconds the first time you velvet. Check the chicken. It should be opaque white with possibly some translucent pink remaining in the center. That's correct. If it's fully white throughout, you've over-blanched. Reduce time to 25-30 seconds for subsequent batches."
         }
       ]
     },
@@ -306,19 +306,19 @@ export const velvetingData = {
       },
       {
         question: "How long should I marinate meat for velveting?",
-        answer: "15-30 minutes is optimal (20 minutes is ideal). Under 15 minutes provides minimal benefit. Over 30 minutes starts breaking down proteins too much, creating mushy texture. Never exceed 60 minutes. Set a timer."
+        answer: "15-30 minutes is ideal (20 minutes is ideal). Under 15 minutes provides minimal benefit. Over 30 minutes starts breaking down proteins too much, creating mushy texture. Never exceed 60 minutes. Set a timer."
       },
       {
         question: "Which proteins benefit from velveting?",
-        answer: "Chicken breast, pork tenderloin, and shrimp benefit most—lean proteins prone to drying out. Beef works for tough, economical cuts (flank, round). Don't velvet chicken thighs, premium beef cuts, or fatty proteins that are already tender and juicy."
+        answer: "Chicken breast, pork tenderloin, and shrimp benefit most: lean proteins prone to drying out. Beef works for tough, economical cuts (flank, round). Don't velvet chicken thighs, premium beef cuts, or fatty proteins that are already tender and juicy."
       },
       {
         question: "Can I skip the blanching step and go straight to stir-frying?",
-        answer: "No. Blanching is essential—it pre-cooks the meat to 70% done at controlled temperature. Skipping it means raw meat needs 4-5 minutes in the wok to cook through, which dries it out completely. The entire benefit of velveting comes from the pre-cooking step."
+        answer: "No. Blanching is necessary. It pre-cooks the meat to 70% done at controlled temperature. Skipping it means raw meat needs 4-5 minutes in the wok to cook through, which dries it out completely. The entire benefit of velveting comes from the pre-cooking step."
       },
       {
         question: "Why does velveting work better on home stoves than without it?",
-        answer: "Home stoves produce only 7,000-12,000 BTU versus restaurant woks at 100,000+ BTU. Raw meat on low-heat home stoves overcooks before developing proper sear. Velveting pre-cooks meat so final stir-fry only needs 90 seconds—a timeframe home stoves can handle at high heat."
+        answer: "Home stoves produce only 7,000-12,000 BTU versus restaurant woks at 100,000+ BTU. Raw meat on low-heat home stoves overcooks before developing proper sear. Velveting pre-cooks meat so final stir-fry only needs 90 seconds, a timeframe home stoves can handle at high heat."
       },
       {
         question: "What's the correct blanching time for velveting?",

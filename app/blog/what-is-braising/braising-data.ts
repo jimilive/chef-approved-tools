@@ -33,12 +33,12 @@ export const braisingData = {
       content: [
         "Here's something that surprised me when I first started cooking professionally: **The best-tasting dishes in restaurants often come from the cheapest cuts of meat.** That $6-per-pound beef chuck? In the right hands, it tastes better than $25-per-pound tenderloin. Short ribs that cost less than ground beef become the most-requested special on the menu. Pork shoulder transforms into something so tender it doesn't need teeth.",
         "The secret? Braising.",
-        "After 24 years in professional kitchens—including at Purple Café where the braised short rib risotto could make you sleepy and fulfilled after one bite—I can tell you that braising is the technique that separates cooks who just follow recipes from cooks who truly understand how to coax maximum flavor and texture from ingredients.",
+        "After 24 years in professional kitchens (including at Purple Café where the braised short rib risotto could make you sleepy and fulfilled after one bite), I can tell you that braising is the technique that separates cooks who just follow recipes from cooks who truly understand how to coax maximum flavor and texture from ingredients.",
         "Most home cooks think braising is complicated or time-consuming. It's neither. It's patient, yes. But complicated? Not once you understand what's actually happening inside that pot."
       ],
       restaurantReality: {
         title: "Restaurant Reality",
-        content: "At Purple Café, the braised short rib risotto was legendary. The short ribs were braised for 3-4 hours until the bones practically fell out when you touched them with tongs. The meat wasn't just tender—it was silky, rich, and deeply flavored in a way that expensive cuts never achieve. One bite would make you sleepy and fulfilled—that's the power of proper braising. The secret was time, patience, and understanding that collagen is your friend when you cook low and slow. This is why professional kitchens treasure \"cheap\" cuts—we know they taste better when cooked right."
+        content: "At Purple Café, the braised short rib risotto was legendary. The short ribs were braised for 3-4 hours until the bones practically fell out when you touched them with tongs. The meat wasn't just tender. It was silky, rich, and deeply flavored in a way that expensive cuts never achieve. One bite would make you sleepy and fulfilled. That's the power of proper braising. The secret was time, patience, and understanding that collagen is your friend when you cook low and slow. This is why professional kitchens treasure \"cheap\" cuts. We know they taste better when cooked right."
       }
     },
     {
@@ -64,12 +64,12 @@ export const braisingData = {
       collagenSection: {
         title: "Collagen → Gelatin Transformation",
         content: [
-          "Tough cuts of meat (chuck, short ribs, pork shoulder, lamb shanks) are loaded with **collagen**—the connective tissue that holds muscle fibers together. Collagen is tough, chewy, and completely unpleasant to eat in its raw form.",
-          "But here's the magic: When you cook collagen slowly in the presence of moisture at temperatures between 160-180°F for extended periods (2-4 hours), it breaks down into **gelatin**—a rich, silky, almost custard-like substance that coats your tongue and makes braised meat taste luxurious."
+          "Tough cuts of meat (chuck, short ribs, pork shoulder, lamb shanks) are loaded with **collagen**, the connective tissue that holds muscle fibers together. Collagen is tough, chewy, and completely unpleasant to eat in its raw form.",
+          "But here's the magic: When you cook collagen slowly in the presence of moisture at temperatures between 160-180°F for extended periods (2-4 hours), it breaks down into **gelatin**, a rich, silky, almost custard-like substance that coats your tongue and makes braised meat taste luxurious."
         ],
         whyIntro: "**This is why:**",
         whyPoints: [
-          { emphasis: "Quick cooking", description: "(grilling, sautéing) doesn't work for tough cuts—no time for collagen to break down" },
+          { emphasis: "Quick cooking", description: "(grilling, sautéing) doesn't work for tough cuts. No time for collagen to break down" },
           { emphasis: "High dry heat", description: "(roasting) can toughen collagen further" },
           { emphasis: "Low, moist heat", description: "(braising) is the only way to transform it" }
         ],
@@ -77,7 +77,7 @@ export const braisingData = {
       },
       proTip: {
         title: "Pro Tip: The Oven Is Your Best Sous Chef",
-        content: "Once everything's seared, deglazed, and simmering in the pot, the oven takes over. Set it to 300°F (150°C) and walk away. In my kitchens, we'd start short ribs at 11 AM for 5 PM service. No stirring, no checking, no babysitting. Just low, even heat doing its work. The oven provides consistent, all-around heat that a stovetop can't match. This is how restaurants can prep multiple braises simultaneously—everything goes in the oven and cooks itself while we work on other things."
+        content: "Once everything's seared, deglazed, and simmering in the pot, the oven takes over. Set it to 300°F (150°C) and walk away. In my kitchens, we'd start short ribs at 11 AM for 5 PM service. No stirring, no checking, no babysitting. Just low, even heat doing its work. The oven provides consistent, all-around heat that a stovetop can't match. This is how restaurants can prep multiple braises simultaneously. Everything goes in the oven and cooks itself while we work on other things."
       }
     },
     {
@@ -86,7 +86,7 @@ export const braisingData = {
       content: [
         "Braising is the definition of low-and-slow magic. It's why restaurant short ribs melt on your tongue. Why French stews taste impossibly rich. Why pulled pork shreds perfectly. Why tough cuts of meat can taste better than expensive prime cuts when you know what you're doing.",
         "Once you master this balance of heat, time, and patience, you can turn any humble ingredient into something extraordinary. And you'll stop spending money on expensive cuts, because you'll realize that the best-tasting food often comes from the cheapest parts of the animal.",
-        "That's the profound beauty of braising—it democratizes great cooking. You don't need expensive ingredients. You need time, technique, and respect for the process.",
+        "That's the profound beauty of braising. It democratizes great cooking. You don't need expensive ingredients. You need time, technique, and respect for the process.",
         "Now go braise something."
       ]
     }
@@ -94,14 +94,14 @@ export const braisingData = {
 
   newsletterCTA: {
     slug: "what-is-braising",
-    description: "Get my free \"11 Essential Tools I Use Most\" PDF—the exact equipment I rely on after 24 years in professional kitchens, including the Dutch oven that's survived 20 years of braising. No fluff, just the tools that actually matter."
+    description: "Get my free \"11 Essential Tools I Use Most\" PDF, the exact equipment I rely on after 24 years in professional kitchens, including the Dutch oven that's survived 20 years of braising. No fluff, just the tools that actually matter."
   },
 
   faq: {
     questions: [
       {
         question: "How long should I braise meat?",
-        answer: "It depends on the cut size and type. Small pieces (1-2 inch chunks) might be done in 1.5-2 hours. Large pieces (whole short ribs, big roasts) need 3-4 hours. The meat is done when it's fork-tender—a fork should slide in with almost no resistance, and the meat should nearly fall apart."
+        answer: "It depends on the cut size and type. Small pieces (1-2 inch chunks) might be done in 1.5-2 hours. Large pieces (whole short ribs, big roasts) need 3-4 hours. The meat is done when it's fork-tender. A fork should slide in with almost no resistance, and the meat should nearly fall apart."
       },
       {
         question: "Can I braise on the stovetop instead of the oven?",
@@ -113,11 +113,11 @@ export const braisingData = {
       },
       {
         question: "Can you braise without wine?",
-        answer: "Absolutely. Wine adds acidity and depth, but stock, beer, cider, or even water work fine. I've made excellent braises with just beef stock and aromatics. Wine isn't magic—it's one tool among many."
+        answer: "Absolutely. Wine adds acidity and depth, but stock, beer, cider, or even water work fine. I've made excellent braises with just beef stock and aromatics. Wine isn't magic. It's one tool among many."
       },
       {
         question: "Do I need to brown meat before braising?",
-        answer: "Yes, unless you want to sacrifice 70-80% of the flavor. Browning creates the Maillard reaction and develops the fond that becomes the base of your sauce. Skipping this step is like building a house without a foundation—technically possible, but you'll regret it."
+        answer: "Yes, unless you want to sacrifice 70-80% of the flavor. Browning creates the Maillard reaction and develops the fond that becomes the base of your sauce. Skipping this step is like building a house without a foundation: technically possible, but you'll regret it."
       },
       {
         question: "Why is my braised meat dry?",

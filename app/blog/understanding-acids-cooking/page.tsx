@@ -130,7 +130,7 @@ export default function AcidsInCookingPage() {
                 fat
               </Link>
             </CTAVisibilityTracker>
-            . But acid? Most people don&apos;t know how or when to use it—and it shows in their food.
+            . But acid? Most people don&apos;t know how or when to use it, and it shows in their food.
           </p>
           <p>{introSection.content[5]}</p>
 
