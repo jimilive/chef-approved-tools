@@ -42,9 +42,9 @@ export const educationalData = {
       title: "",
       content: [
         "The first thing I learned in culinary school wasn't a recipe. It wasn't a cooking technique. It was **how to hold a knife.**",
-        "On the first day, our chef instructor walked around the room and corrected every single student's grip. Most of us were holding the knife like a hammer—gripping the handle with all four fingers and the thumb. *\"That's not a weapon,\"* he said. *\"It's a precision tool. Hold it like one.\"*",
-        "He taught us the **pinch grip**—the professional way to hold a chef's knife. Within two weeks, it felt natural. Within a month, I couldn't imagine holding a knife any other way. And within a year, I could dice an onion in 30 seconds without thinking about it.",
-        "Most home cooks hold a knife like a hammer. It feels safe at first — until you realize it's why your hand cramps, your cuts drift, and your onions look more \"rustic\" than uniform. The difference between a cook and a chef starts with how they grip their knife.",
+        "On the first day, our chef instructor walked around the room and corrected every single student's grip. Most of us were holding the knife like a hammer, gripping the handle with all four fingers and the thumb. *\"That's not a weapon,\"* he said. *\"It's a precision tool. Hold it like one.\"*",
+        "He taught us the **pinch grip**, the professional way to hold a chef's knife. Within two weeks, it felt natural. Within a month, I couldn't imagine holding a knife any other way. And within a year, I could dice an onion in 30 seconds without thinking about it.",
+        "Most home cooks hold a knife like a hammer. It feels safe at first, until you realize it's why your hand cramps, your cuts drift, and your onions look more \"rustic\" than uniform. The difference between a cook and a chef starts with how they grip their knife.",
         "**Here's the truth:** Most home cooks hold a knife incorrectly, which makes cooking slower, less precise, and more dangerous. The pinch grip, combined with the claw position for your guiding hand, gives you control, speed, and safety. Once you learn proper knife technique, everything in the kitchen becomes easier.",
         "In this guide, I'm breaking down exactly how to hold a chef's knife properly, how to position your guiding hand, the specialized grips for different tasks, and how to develop the techniques that professionals use for efficient, safe cutting. This is foundational knowledge that will improve your cooking immediately."
       ]
@@ -54,7 +54,7 @@ export const educationalData = {
       title: "The Problem: Why Grip Matters",
       content: [
         "A good knife is only as good as the hand that guides it. Most home cooks hold knives by the handle alone, which shifts balance too far back. That means less control, more fatigue, and more risk of slipping.",
-        "Professionals use the pinch grip — thumb and index finger on the blade, not just the handle. It might feel odd at first, but it changes everything. You'll feel the knife move as an extension of your hand, not as a separate tool.",
+        "Professionals use the pinch grip: thumb and index finger on the blade, not just the handle. It might feel odd at first, but it changes everything. You'll feel the knife move as an extension of your hand, not as a separate tool.",
         "In professional kitchens, knife control equals speed and safety. If your grip is wrong, your knife will fight you on every cut. If it's right, even a cheap knife feels like a precision instrument."
       ]
     },
@@ -65,8 +65,8 @@ export const educationalData = {
       grips: [
         {
           id: "pinch",
-          name: "The Pinch Grip — The Chef's Standard",
-          intro: "The pinch grip is the professional standard. It gives you maximum control, precision, and comfort. This is what you'll use for 90% of all prep work — dicing, slicing, mincing.",
+          name: "The Pinch Grip: The Chef's Standard",
+          intro: "The pinch grip is the professional standard. It gives you maximum control, precision, and comfort. This is what you'll use for 90% of all prep work: dicing, slicing, mincing.",
           howTo: {
             title: "How to Do the Pinch Grip",
             steps: [
@@ -80,15 +80,15 @@ export const educationalData = {
           whyItWorks: {
             title: "Why the Pinch Grip Works",
             content: [
-              "The pinch grip works because **your hand is closer to the cutting edge**, which gives you better control over the blade's position and angle. This grip puts the balance point between your fingers — giving full control over tip, pressure, and angle.",
-              "Think of it like holding a pencil—you don't grip a pencil at the very back; you hold it close to the tip for precision. The same principle applies to a knife. When you grip the handle like a hammer, your hand is farther from the cutting edge, which reduces control and makes precise cuts harder."
+              "The pinch grip works because **your hand is closer to the cutting edge**, which gives you better control over the blade's position and angle. This grip puts the balance point between your fingers, giving full control over tip, pressure, and angle.",
+              "Think of it like holding a pencil. You don't grip a pencil at the very back; you hold it close to the tip for precision. The same principle applies to a knife. When you grip the handle like a hammer, your hand is farther from the cutting edge, which reduces control and makes precise cuts harder."
             ]
           },
           proTip: "Don't choke the handle. A light, confident pinch gives better precision and endurance than a tight grip."
         },
         {
           id: "claw",
-          name: "The Claw Grip — The Safety Partner",
+          name: "The Claw Grip: The Safety Partner",
           intro: "Your guiding hand (the hand that holds the food) is just as important as your knife hand. The **claw position** keeps your fingers safe and helps you cut evenly. Your non-cutting hand controls spacing and stability while protecting your fingers.",
           howTo: {
             title: "How to Do the Claw Position",
@@ -106,12 +106,12 @@ export const educationalData = {
               "When you hold food with flat fingers or fingertips extended, you're one slip away from a serious cut. It's the safest way to protect fingertips from the blade."
             ]
           },
-          proTip: "Never reach your thumb out and around falling food while using the claw. I've sliced myself doing that — more than once. Let food fall. Reset, then continue.",
+          proTip: "Never reach your thumb out and around falling food while using the claw. I've sliced myself doing that, more than once. Let food fall. Reset, then continue.",
           proTipType: "warning"
         },
         {
           id: "paring",
-          name: "The Paring Grip — For Small Precision Work",
+          name: "The Paring Grip: For Small Precision Work",
           intro: "When working with small knives or intricate tasks, you need finesse, not force. The paring grip is completely different from the pinch grip.",
           howTo: {
             title: "How to Do the Paring Grip",
@@ -125,7 +125,7 @@ export const educationalData = {
         },
         {
           id: "reverse",
-          name: "The Reverse Grip — The Butcher's Cut",
+          name: "The Reverse Grip: The Butcher's Cut",
           intro: "Used for breaking down meat or trimming fat. You hold the knife inverted with the edge facing inward. This is an advanced technique used primarily in butchery.",
           howTo: {
             title: "How to Do the Reverse Grip",
@@ -135,7 +135,7 @@ export const educationalData = {
               "**Keep the blade low and controlled** – Never lift high or move quickly"
             ]
           },
-          warning: "This is an advanced technique — use only when you fully understand knife balance and have mastered basic grips. This grip is dangerous if done incorrectly."
+          warning: "This is an advanced technique. Use only when you fully understand knife balance and have mastered basic grips. This grip is dangerous if done incorrectly."
         }
       ]
     },
@@ -143,7 +143,7 @@ export const educationalData = {
       id: "rocking",
       title: "The Rocking Motion: How to Cut Efficiently",
       icon: "Target",
-      intro: "Once you have the pinch grip and claw position down, the next step is learning the **rocking motion**—the technique that lets you cut quickly and smoothly.",
+      intro: "Once you have the pinch grip and claw position down, the next step is learning the **rocking motion**, the technique that lets you cut quickly and smoothly.",
       howTo: {
         title: "How to Do the Rocking Motion",
         steps: [
@@ -162,13 +162,13 @@ export const educationalData = {
       },
       restaurantReality: {
         title: "Restaurant Reality: The Knife Lesson",
-        content: "On my first day in a professional kitchen, the head chef handed me a knife and told me to dice five pounds of onions for marinara. I grabbed the knife with a full-handle grip (the way I'd been holding knives at home for years). He stopped me immediately. *\"No. Pinch the blade. Like this.\"* He showed me the pinch grip and made me practice on a single onion until I got it right. Then he walked away. For the first 20 minutes, it felt awkward and slow. But by the third onion, it started to click. By the fifth pound, I understood. **The pinch grip gave me control I didn't know I was missing.** That lesson—holding a knife properly—was the foundation for every knife skill I developed over the next 24 years."
+        content: "On my first day in a professional kitchen, the head chef handed me a knife and told me to dice five pounds of onions for marinara. I grabbed the knife with a full-handle grip (the way I'd been holding knives at home for years). He stopped me immediately. *\"No. Pinch the blade. Like this.\"* He showed me the pinch grip and made me practice on a single onion until I got it right. Then he walked away. For the first 20 minutes, it felt awkward and slow. But by the third onion, it started to click. By the fifth pound, I understood. **The pinch grip gave me control I didn't know I was missing.** That lesson (holding a knife properly) was the foundation for every knife skill I developed over the next 24 years."
       }
     },
     {
       id: "practice",
       title: "How to Practice Like a Chef",
-      intro: "Knife skills are like any other skill—they improve with deliberate practice. Here's how to get better, combining professional kitchen methods with progressive skill building.",
+      intro: "Knife skills are like any other skill. They improve with deliberate practice. Here's how to get better, combining professional kitchen methods with progressive skill building.",
       steps: [
         {
           title: "Step 1: Focus on Form (Days 1-3)",
@@ -176,7 +176,7 @@ export const educationalData = {
         },
         {
           title: "Step 2: Chop Consistently (Week 1)",
-          content: "Try cutting carrots or onions into uniform dice. Every piece should match. Consistency builds control. Dice onions, mince garlic, chop herbs—focus on smooth, controlled movements, not speed."
+          content: "Try cutting carrots or onions into uniform dice. Every piece should match. Consistency builds control. Dice onions, mince garlic, chop herbs. Focus on smooth, controlled movements, not speed."
         },
         {
           title: "Step 3: Practice the Rocking Motion (Week 2)",
@@ -188,12 +188,12 @@ export const educationalData = {
         },
         {
           title: "Step 5: Build Speed Naturally (Week 4+)",
-          content: "Don't rush—speed comes automatically with practice. Never cut angry or distracted. Five minutes of practice daily is better than an hour once a week. Repetition hardwires precision."
+          content: "Don't rush. Speed comes automatically with practice. Never cut angry or distracted. Five minutes of practice daily is better than an hour once a week. Repetition hardwires precision."
         }
       ],
       mindset: {
         title: "Mindset Matters",
-        content: "A tense grip leads to fatigue. The best chefs look effortless because they are — their technique does the work. Stay relaxed, grip firm but not tight. Never cut angry or distracted. I've said it before and I'll say it again — emotion kills focus, and loss of focus cuts fingers."
+        content: "A tense grip leads to fatigue. The best chefs look effortless because they are. Their technique does the work. Stay relaxed, grip firm but not tight. Never cut angry or distracted. I've said it before and I'll say it again: emotion kills focus, and loss of focus cuts fingers."
       },
       practiceFoods: [
         { food: "Onions", why: "Classic practice ingredient, used in almost everything. Perfect for dicing and learning consistency" },
@@ -203,7 +203,7 @@ export const educationalData = {
         { food: "Herbs (parsley, cilantro)", why: "Great for developing fine control and the rocking motion" },
         { food: "Potatoes", why: "Good for practicing larger dice and building stamina" }
       ],
-      practiceTip: "Don't practice by speed-cutting without purpose. Instead, make meals that require a lot of knife work—soups, stir-fries, salads. You'll practice naturally while cooking real food."
+      practiceTip: "Don't practice by speed-cutting without purpose. Instead, make meals that require a lot of knife work (soups, stir-fries, salads). You'll practice naturally while cooking real food."
     },
     {
       id: "mistakes",
@@ -213,13 +213,13 @@ export const educationalData = {
           number: 1,
           title: "Gripping the Handle Like a Hammer",
           problem: "Reduces control, makes precise cuts harder, increases strain on your hand and wrist",
-          fix: "Use the pinch grip—thumb and index finger on the blade, other fingers on the handle. Control comes from balance, not muscle."
+          fix: "Use the pinch grip: thumb and index finger on the blade, other fingers on the handle. Control comes from balance, not muscle."
         },
         {
           number: 2,
           title: "Sticking Your Fingertips Out / Flat Fingers on the Food",
-          problem: "Dangerous—one slip and you cut yourself. The fastest route to injury.",
-          fix: "Use the claw position—fingertips tucked in, knuckles forward"
+          problem: "Dangerous. One slip and you cut yourself. The fastest route to injury.",
+          fix: "Use the claw position: fingertips tucked in, knuckles forward"
         },
         {
           number: 3,
@@ -231,7 +231,7 @@ export const educationalData = {
           number: 4,
           title: "Gripping Too Tightly",
           problem: "Causes hand fatigue, reduces control. You'll tire fast and lose precision.",
-          fix: "Firm but relaxed grip—like holding a tennis racket. The knife should feel alive, not locked."
+          fix: "Firm but relaxed grip, like holding a tennis racket. The knife should feel alive, not locked."
         },
         {
           number: 5,
@@ -255,7 +255,7 @@ export const educationalData = {
         { name: "Chef Knife", link: "/reviews/victorinox-fibrox-8-inch-chefs-knife", linkText: "Victorinox Fibrox 8\" Chef's Knife", description: "lightweight, balanced, forgiving for learning new grips. The best budget knife for mastering technique." },
         { name: "Paring Knife", link: "/reviews/victorinox-4-inch-paring-knife", linkText: "Victorinox 4\" Paring Knife", description: "perfect for fine control and practicing the pencil grip." },
         { name: "Scraper", link: "/reviews/rubbermaid-commercial-cooks-scraper", linkText: "Rubbermaid Commercial Cook's Scraper", description: "transfer food safely without dulling your knife edge." },
-        { name: "Cutting Board", link: "/guides/best-cookware", linkText: "complete cookware guide", description: "End-grain wood cutting board — preserves your knife edge while you practice." },
+        { name: "Cutting Board", link: "/guides/best-cookware", linkText: "complete cookware guide", description: "End-grain wood cutting board: preserves your knife edge while you practice." },
         { name: "Cut-Resistant Glove (Optional)", description: "For beginners who want extra confidence while learning. Wean off as control improves." }
       ]
     },
@@ -265,7 +265,7 @@ export const educationalData = {
       icon: "CheckCircle2",
       content: [
         "Learning to hold a knife properly is one of the most valuable skills you can develop in the kitchen. It makes cooking safer, faster, and more enjoyable. Once proper technique becomes second nature, you'll wonder how you ever cooked without it.",
-        "Mastering the pinch grip and claw technique transforms your knife work from guesswork into precision. These aren't arbitrary rules — they're the result of generations of chefs finding the safest, most efficient way to control a blade.",
+        "Mastering the pinch grip and claw technique transforms your knife work from guesswork into precision. These aren't arbitrary rules. They're the result of generations of chefs finding the safest, most efficient way to control a blade.",
         "In my 24 years of professional cooking, I've watched hundreds of home cooks struggle with their knives, and almost every time, the root cause was grip. Once they switched to the pinch grip and started using the claw properly, their confidence soared and their prep time dropped by half."
       ],
       keyLessons: [
@@ -293,11 +293,11 @@ export const educationalData = {
       },
       {
         question: "Why do my fingers hurt when I use a knife?",
-        answer: "You're probably gripping the handle too tightly. The pinch grip should be firm but relaxed. A death grip causes hand fatigue, reduces control, and makes cutting harder. Think of holding a knife like holding a tennis racket—firm enough to control it, but loose enough to move fluidly."
+        answer: "You're probably gripping the handle too tightly. The pinch grip should be firm but relaxed. A death grip causes hand fatigue, reduces control, and makes cutting harder. Think of holding a knife like holding a tennis racket, firm enough to control it, but loose enough to move fluidly."
       },
       {
         question: "How long does it take to get comfortable with proper knife technique?",
-        answer: "Most people feel comfortable with the pinch grip after 2-3 weeks of consistent use. The claw position feels natural within a few days. Two weeks of daily practice will completely change your cutting control. The key is deliberate practice—focus on proper form every time you cook, even if it feels slow at first. Speed comes naturally with practice."
+        answer: "Most people feel comfortable with the pinch grip after 2-3 weeks of consistent use. The claw position feels natural within a few days. Two weeks of daily practice will completely change your cutting control. The key is deliberate practice. Focus on proper form every time you cook, even if it feels slow at first. Speed comes naturally with practice."
       },
       {
         question: "Why does the pinch grip feel weird at first?",
@@ -305,7 +305,7 @@ export const educationalData = {
       },
       {
         question: "Should I wear a glove when learning?",
-        answer: "You can — cut-resistant gloves help build confidence when you're first learning, but aim to wean off them as your control improves. The tactile feedback from your bare hand helps you develop better knife awareness."
+        answer: "You can. Cut-resistant gloves help build confidence when you're first learning, but aim to wean off them as your control improves. The tactile feedback from your bare hand helps you develop better knife awareness."
       },
       {
         question: "Why do chefs curl their fingers?",
@@ -313,7 +313,7 @@ export const educationalData = {
       },
       {
         question: "Do different knives need different grips?",
-        answer: "Yes — chef knives and santoku knives use the pinch grip, paring knives use a pencil grip, and bread knives typically use a handle grip. The key is having enough exposed blade in front of the handle to pinch comfortably."
+        answer: "Yes. Chef knives and santoku knives use the pinch grip, paring knives use a pencil grip, and bread knives typically use a handle grip. The key is having enough exposed blade in front of the handle to pinch comfortably."
       },
       {
         question: "Can I use the pinch grip with any knife?",
@@ -321,7 +321,7 @@ export const educationalData = {
       },
       {
         question: "What if my knife doesn't have a bolster?",
-        answer: "No problem. Many Japanese-style knives lack a bolster entirely. The pinch grip still works perfectly — just pinch the blade itself where it meets the handle. Some chefs actually prefer this style for better balance and control."
+        answer: "No problem. Many Japanese-style knives lack a bolster entirely. The pinch grip still works perfectly. Just pinch the blade itself where it meets the handle. Some chefs actually prefer this style for better balance and control."
       },
       {
         question: "Should kids learn the pinch grip?",

@@ -259,7 +259,7 @@ export default function KnifeSkillsPage() {
 
           <BlogNewsletterCTA
             slug="knife-skills-how-to-hold-chef-knife"
-            description="Get my free &quot;11 Essential Tools I Use Most&quot; PDF—the exact equipment I rely on after 24 years in professional kitchens, including the knives I trust most and my daily 10-minute knife skills practice plan. No fluff, just the tools and techniques that actually matter."
+            description="Get my free &quot;11 Essential Tools I Use Most&quot; PDF, the exact equipment I rely on after 24 years in professional kitchens, including the knives I trust most and my daily 10-minute knife skills practice plan. No fluff, just the tools and techniques that actually matter."
           />
 
           {/* Practice Section */}
@@ -307,7 +307,7 @@ export default function KnifeSkillsPage() {
           <h2 id={equipmentSection.id}>{equipmentSection.title}</h2>
 
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
-            <p className="font-bold text-slate-800 mb-4 text-lg">Essential Tools for Practicing Knife Grip</p>
+            <p className="font-bold text-slate-800 mb-4 text-lg">Tools for Practicing Knife Grip</p>
             <ul className="space-y-3 mb-0">
               {equipmentSection.items.map((item, index) => (
                 <li key={index}>
@@ -315,7 +315,7 @@ export default function KnifeSkillsPage() {
                   {item.link ? (
                     <>
                       <Link href={item.link} className="text-orange-700 hover:text-orange-800">{item.linkText}</Link>
-                      {' — '}{item.description}
+                      {': '}{item.description}
                     </>
                   ) : (
                     item.description

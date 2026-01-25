@@ -3,7 +3,7 @@ export const fatsData = {
     questions: [
       {
         question: "Can I substitute oil for butter in baking?",
-        answer: "Sometimes, but not always. Liquid oil behaves differently than solid butter—affects texture, spread, and rise. Recipes designed for one don't always work with the other. Follow recipe specifications unless you're experienced with substitutions."
+        answer: "Sometimes, but not always. Liquid oil behaves differently than solid butter. It affects texture, spread, and rise. Recipes designed for one don't always work with the other. Follow recipe specifications unless you're experienced with substitutions."
       },
       {
         question: "Why does my olive oil taste bitter after cooking?",

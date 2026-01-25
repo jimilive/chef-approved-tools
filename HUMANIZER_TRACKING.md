@@ -9,8 +9,8 @@
 ## HANDOFF FOR NEXT SESSION
 
 ### Current Status
-- **66 pages completed** (22 reviews, 44 blogs)
-- **Next page:** #68 (check priority list for next page)
+- **71 pages completed** (22 reviews, 49 blogs)
+- **Next page:** #76 (check priority list for next page)
 - Priority list location: `/Users/scottbradley/Downloads/pages-by-importance.md`
 
 ### Critical Lessons Learned
@@ -148,6 +148,14 @@
 | 65 | /blog/magic-of-freshly-ground-pepper | Done | 17 | 6 | Fixed 17 em dashes, 6 AI phrases (optimal, essential, elevate, robust) |
 | 66 | /blog/kitchen-thermometers-guide | Done | 27 | 2 | Fixed 27 em dashes (26 data, 1 page), 2 AI phrases ("Optimal" → "Best", "elevate" → "improve") |
 | 67 | /blog/reducing-sauces-restaurant-technique | Done | 37 | 0 | Fixed 37 em dashes (7 data, 30 page) |
+| 68 | /blog/stand-mixer-vs-hand-mixer | Skip | - | - | Already done as Page 30 |
+| 69 | /blog/understanding-cooking-fats | Done | 10 | 0 | Fixed 10 em dashes (1 data, 9 page) |
+| 70 | /blog/nutribullet-vs-magic-bullet | Skip | - | - | Already done as Page 27 |
+| 71 | /blog/knife-skills-how-to-hold-chef-knife | Done | 37 | 1 | Fixed 37 em dashes, 1 AI phrase ("Essential Tools" → "Tools") |
+| 72 | /blog/how-to-make-perfect-risotto | Skip | - | - | Already done as Page 36 |
+| 73 | /blog/how-to-wash-lettuce | Done | 17 | 2 | Fixed 17 em dashes, 2 AI phrases ("optimal" → "right"/"proper") |
+| 74 | /blog/potatoes-cooking-guide | Done | 12 | 0 | Fixed 12 em dashes (4 data, 8 page) |
+| 75 | /blog/bread-science-gluten-development | Done | 12 | 0 | Fixed 12 em dashes (3 data, 9 page) |
 
 ## Patterns Being Checked
 
@@ -337,3 +345,10 @@
   - Page 66 (kitchen-thermometers-guide): 27 em dashes (26 data, 1 page), 2 AI phrases (Optimal→Best, elevate→improve)
   - Page 67 (reducing-sauces-restaurant-technique): 37 em dashes (7 data, 30 page)
   - **Total: 94 em dashes fixed, 9 AI phrase fixes**
+- **Batch session: Pages 69, 71, 73, 74, 75 (5 pages, skipped 68/70/72 as already done)**
+  - Page 69 (understanding-cooking-fats): 10 em dashes → periods, commas, colons
+  - Page 71 (knife-skills-how-to-hold-chef-knife): 37 em dashes, 1 AI phrase ("Essential Tools" → "Tools")
+  - Page 73 (how-to-wash-lettuce): 17 em dashes, 2 AI phrases ("optimal number" → "right number", "optimal humidity" → "proper humidity")
+  - Page 74 (potatoes-cooking-guide): 12 em dashes (4 data, 8 page) → periods, commas, colons
+  - Page 75 (bread-science-gluten-development): 12 em dashes (3 data, 9 page) → periods, commas, parentheses
+  - **Total: 88 em dashes fixed, 3 AI phrase fixes**

@@ -65,11 +65,11 @@ export default function BreadSciencePage() {
           </p>
 
           <p>
-            <strong>The problem isn&apos;t the recipe.</strong> The problem is that most people don&apos;t understand <em>gluten development</em>—the single most important concept in bread making.
+            <strong>The problem isn&apos;t the recipe.</strong> The problem is that most people don&apos;t understand <em>gluten development</em>, the single most important concept in bread making.
           </p>
 
           <p>
-            Gluten is what gives bread structure, chewiness, and the ability to rise. It&apos;s the protein network that traps gas from yeast and creates the open, airy crumb we associate with good bread. <strong>If you don&apos;t develop gluten properly, your bread will fail—no matter how good the recipe is.</strong>
+            Gluten is what gives bread structure, chewiness, and the ability to rise. It&apos;s the protein network that traps gas from yeast and creates the open, airy crumb we associate with good bread. <strong>If you don&apos;t develop gluten properly, your bread will fail, no matter how good the recipe is.</strong>
           </p>
 
           <p>
@@ -86,7 +86,7 @@ export default function BreadSciencePage() {
           </h2>
 
           <p>
-            Gluten is a <strong>protein network</strong> that forms when two proteins found in wheat flour—<strong>glutenin</strong> and <strong>gliadin</strong>—combine in the presence of water.
+            Gluten is a <strong>protein network</strong> that forms when two proteins found in wheat flour (<strong>glutenin</strong> and <strong>gliadin</strong>) combine in the presence of water.
           </p>
 
           <h3>The Two Gluten Proteins</h3>
@@ -110,7 +110,7 @@ export default function BreadSciencePage() {
           </ol>
 
           <p>
-            Without gluten, bread would be dense, flat, and crumbly—more like a cracker or biscuit than bread.
+            Without gluten, bread would be dense, flat, and crumbly, more like a cracker or biscuit than bread.
           </p>
 
           <h3>Why Different Flours Behave Differently</h3>
@@ -135,7 +135,7 @@ export default function BreadSciencePage() {
               Restaurant Reality: The Pizza Dough Lesson
             </p>
             <p className="mb-0">
-              At Il Pizzaiolo in Sacramento, we made fresh pizza dough every single day. The head chef taught me the most important lesson about gluten: <em>&quot;You can&apos;t rush it, and you can&apos;t skip it.&quot;</em> We mixed the dough in a stand mixer until it <strong>pulled away from the sides of the bowl and formed a smooth, elastic ball</strong>. Then we let it rest. If you tried to shape it immediately, it would snap back like a rubber band—the gluten was too tight. After 20 minutes of rest, the dough relaxed and became easy to stretch. That lesson taught me that gluten development has two parts: <strong>building the network (kneading)</strong> and <strong>letting it relax (resting)</strong>. Skip either step, and your dough fights you.
+              At Il Pizzaiolo in Sacramento, we made fresh pizza dough every single day. The head chef taught me the most important lesson about gluten: <em>&quot;You can&apos;t rush it, and you can&apos;t skip it.&quot;</em> We mixed the dough in a stand mixer until it <strong>pulled away from the sides of the bowl and formed a smooth, elastic ball</strong>. Then we let it rest. If you tried to shape it immediately, it would snap back like a rubber band. The gluten was too tight. After 20 minutes of rest, the dough relaxed and became easy to stretch. That lesson taught me that gluten development has two parts: <strong>building the network (kneading)</strong> and <strong>letting it relax (resting)</strong>. Skip either step, and your dough fights you.
             </p>
           </div>
 
@@ -199,7 +199,7 @@ export default function BreadSciencePage() {
           <ol>
             <li><strong>Let the dough rest for 30 minutes after initial mixing</strong></li>
             <li><strong>Gently stretch one edge of the dough and fold it over itself</strong></li>
-            <li><strong>Rotate the bowl 90 degrees and repeat</strong> (do this 4 times—like folding a letter)</li>
+            <li><strong>Rotate the bowl 90 degrees and repeat</strong> (do this 4 times, like folding a letter)</li>
             <li><strong>Let the dough rest for another 30 minutes, then fold again</strong></li>
             <li><strong>Repeat 3-4 times over 2-3 hours</strong></li>
           </ol>
@@ -222,7 +222,7 @@ export default function BreadSciencePage() {
             <strong>How no-knead bread works:</strong>
           </p>
           <ol>
-            <li><strong>Mix flour, water, yeast, and salt</strong> (barely mix—just combine)</li>
+            <li><strong>Mix flour, water, yeast, and salt</strong> (barely mix, just combine)</li>
             <li><strong>Cover and let sit at room temperature for 12-18 hours</strong></li>
             <li><strong>Gluten develops naturally during this time</strong></li>
             <li><strong>Shape gently and bake</strong></li>
@@ -302,7 +302,7 @@ export default function BreadSciencePage() {
 
           <p>
             <strong>Cause:</strong> Too much water (high hydration dough)<br />
-            <strong>Fix:</strong> Use folding instead of kneading, or add flour 1 tablespoon at a time (but don&apos;t add too much—sticky dough can still work)
+            <strong>Fix:</strong> Use folding instead of kneading, or add flour 1 tablespoon at a time (but don&apos;t add too much. Sticky dough can still work)
           </p>
 
           <h3>Problem: Dough Tears When Shaping</h3>

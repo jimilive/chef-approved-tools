@@ -14,7 +14,7 @@ export const metadata = generateBlogMetadata('how-to-wash-lettuce');
 
 const articleSchema = generateArticleSchema({
   headline: "How to Wash Lettuce Properly",
-  description: "Professional chef teaches proper lettuce washing after 24 years in restaurant kitchens. Lift from water, never drain—wash three times for truly clean greens. Learn in 5 minutes.",
+  description: "Professional chef teaches proper lettuce washing after 24 years in restaurant kitchens. Lift from water, never drain. Wash three times for truly clean greens. Learn in 5 minutes.",
   datePublished: "2025-11-20",
   dateModified: "2025-11-20",
   authorName: "Scott Bradley",
@@ -55,7 +55,7 @@ export default function HowToWashLettucePage() {
           { name: "Separate and Submerge Leaves", text: "Separate lettuce leaves from the head. Submerge leaves completely in the water, pushing them under gently." },
           { name: "Agitate Gently", text: "Swish the leaves around in the water for 20-30 seconds to dislodge dirt and grit. Be gentle to avoid bruising delicate leaves." },
           { name: "Let Dirt Settle", text: "Stop agitating and wait 15-30 seconds. Dirt, sand, and grit are heavier than water and will sink to the bottom." },
-          { name: "Lift Greens Out", text: "Lift the lettuce up and out of the water—never pour or drain. This leaves the settled dirt behind in the water." },
+          { name: "Lift Greens Out", text: "Lift the lettuce up and out of the water. Never pour or drain. This leaves the settled dirt behind in the water." },
           { name: "Repeat Three Times", text: "Empty dirty water, refill with fresh cold water, and repeat the wash process. Three washes removes virtually all contamination." },
           { name: "Dry the Lettuce", text: "Spin in a salad spinner or pat dry with clean towels. Wet lettuce dilutes dressings and doesn't store well." }
         ]}
@@ -64,7 +64,7 @@ export default function HowToWashLettucePage() {
 
       <BlogHero
         title="How to Wash Lettuce Properly"
-        introduction={["The professional method lifts greens from water—never drains them—and requires three separate washes for truly clean results"]}
+        introduction={["The professional method lifts greens from water (never drains them) and requires three separate washes for truly clean results"]}
         publishedDate="2025-11-20"
         lastUpdated="2025-11-20"
         readTime="6 min read"
@@ -73,13 +73,13 @@ export default function HowToWashLettucePage() {
       <div className="max-w-3xl mx-auto px-4 py-12">
         <div className="prose prose-lg max-w-none">
           <p className="text-xl text-slate-700 leading-relaxed mb-8">
-            After 24 years in professional kitchens where lettuce washing is a daily high-volume task, the technique remains unchanged: submerge in water, agitate gently, then lift the greens out—never pour the water off. This single difference between amateur and professional lettuce washing eliminates grit completely. Most home cooks drain lettuce by pouring it into a colander, which deposits the dirt and sand that just washed off back onto the leaves. Professional kitchens avoid this problem by lifting clean lettuce up and out of the dirty water below.
+            After 24 years in professional kitchens where lettuce washing is a daily high-volume task, the technique remains unchanged: submerge in water, agitate gently, then lift the greens out. Never pour the water off. This single difference between amateur and professional lettuce washing eliminates grit completely. Most home cooks drain lettuce by pouring it into a colander, which deposits the dirt and sand that just washed off back onto the leaves. Professional kitchens avoid this problem by lifting clean lettuce up and out of the dirty water below.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Why the Lifting Method Works</h2>
           
           <p>
-            Lettuce washing relies on a simple principle: dirt, sand, and grit are heavier than water and sink to the bottom of the container. When you agitate lettuce in water, these particles dislodge from the leaves and drop. As long as you lift the clean lettuce up and out of the water—leaving the settled dirt behind—you get perfectly clean greens.
+            Lettuce washing relies on a simple principle: dirt, sand, and grit are heavier than water and sink to the bottom of the container. When you agitate lettuce in water, these particles dislodge from the leaves and drop. As long as you lift the clean lettuce up and out of the water, leaving the settled dirt behind, you get perfectly clean greens.
           </p>
 
           <p>
@@ -89,7 +89,7 @@ export default function HowToWashLettucePage() {
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">The Physics of Separation</h3>
 
           <p>
-            Soil particles and sand have significantly higher density than water. When suspended in water, they sink rapidly—usually within 10-15 seconds after agitation stops. Lettuce leaves, being largely water-filled cells with air pockets, float or hover in the middle of the container. This natural separation creates distinct layers: clean lettuce at the top and middle, dirty water and sediment at the bottom.
+            Soil particles and sand have significantly higher density than water. When suspended in water, they sink rapidly, usually within 10-15 seconds after agitation stops. Lettuce leaves, being largely water-filled cells with air pockets, float or hover in the middle of the container. This natural separation creates distinct layers: clean lettuce at the top and middle, dirty water and sediment at the bottom.
           </p>
 
           <p>
@@ -99,14 +99,14 @@ export default function HowToWashLettucePage() {
           <div className="bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-lg my-6">
             <p className="font-semibold text-slate-900 mb-2">Professional Insight</p>
             <p className="text-slate-700">
-              In every restaurant kitchen I&apos;ve worked in over 24 years, the lettuce washing protocol is identical: three washes, lifting every time. Line cooks who try to shortcut by draining get corrected immediately. Nothing ruins a salad faster than grit—guests notice instantly.
+              In every restaurant kitchen I&apos;ve worked in over 24 years, the lettuce washing protocol is identical: three washes, lifting every time. Line cooks who try to shortcut by draining get corrected immediately. Nothing ruins a salad faster than grit. Guests notice instantly.
             </p>
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">The Three-Wash Rule</h2>
 
           <p>
-            Professional kitchens wash lettuce three times as standard procedure. Not twice. Not four times. Three washes removes essentially all dirt and contamination while minimizing time and water waste. Here&apos;s why three is the optimal number:
+            Professional kitchens wash lettuce three times as standard procedure. Not twice. Not four times. Three washes removes essentially all dirt and contamination while minimizing time and water waste. Here&apos;s why three is the right number:
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">First Wash: Bulk Removal</h3>
@@ -148,7 +148,7 @@ export default function HowToWashLettucePage() {
               <strong>Fill the container with cold water</strong> – Use enough water that the lettuce can float freely. The container should be at least half full after adding lettuce.
             </li>
             <li>
-              <strong>Add the lettuce to the water</strong> – Submerge all leaves completely. Some leaves will float—push them under the surface briefly to ensure all surfaces contact water.
+              <strong>Add the lettuce to the water</strong> – Submerge all leaves completely. Some leaves will float. Push them under the surface briefly to ensure all surfaces contact water.
             </li>
             <li>
               <strong>Agitate gently</strong> – Swirl the lettuce around in the water for 15-20 seconds. Use your hands to rub leaves gently against each other. This mechanical action dislodges particles trapped in crevices and folds.
@@ -202,7 +202,7 @@ export default function HowToWashLettucePage() {
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Stopping After One or Two Washes</h3>
 
           <p>
-            A single wash leaves substantial fine grit behind. Two washes improve things but still don&apos;t achieve truly clean results. Three washes is the professional standard for good reason—it&apos;s the minimum required for genuinely grit-free lettuce. Rushing this process guarantees a compromised final product.
+            A single wash leaves substantial fine grit behind. Two washes improve things but still don&apos;t achieve truly clean results. Three washes is the professional standard for good reason. It&apos;s the minimum required for genuinely grit-free lettuce. Rushing this process guarantees a compromised final product.
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Using Insufficient Water</h3>
@@ -214,7 +214,7 @@ export default function HowToWashLettucePage() {
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Inadequate Drying</h3>
 
           <p>
-            Washing perfectly but leaving lettuce wet undermines the effort. Water on leaves dilutes vinaigrettes, prevents dressings from adhering, and creates pools of liquid in salad bowls. Dry lettuce thoroughly—either in a salad spinner or by patting with clean towels until no visible moisture remains.
+            Washing perfectly but leaving lettuce wet undermines the effort. Water on leaves dilutes vinaigrettes, prevents dressings from adhering, and creates pools of liquid in salad bowls. Dry lettuce thoroughly, either in a salad spinner or by patting with clean towels until no visible moisture remains.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Different Lettuce Types Require Different Attention</h2>
@@ -234,7 +234,7 @@ export default function HowToWashLettucePage() {
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Baby Greens and Mesclun Mixes</h3>
 
           <p>
-            Small, tender leaves require the gentlest handling. Use very light agitation—more of a gentle swirling than aggressive rubbing. Three washes remain necessary, but each wash should involve less mechanical action than with sturdier lettuces.
+            Small, tender leaves require the gentlest handling. Use very light agitation, more of a gentle swirling than aggressive rubbing. Three washes remain necessary, but each wash should involve less mechanical action than with sturdier lettuces.
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">Spinach and Arugula</h3>
@@ -280,7 +280,7 @@ export default function HowToWashLettucePage() {
               <strong>Add paper towels between layers if stacking</strong> – Creates additional moisture absorption.
             </li>
             <li>
-              <strong>Store in the refrigerator crisper drawer</strong> – Maintains optimal humidity and temperature.
+              <strong>Store in the refrigerator crisper drawer</strong> – Maintains proper humidity and temperature.
             </li>
           </ol>
 
@@ -291,11 +291,11 @@ export default function HowToWashLettucePage() {
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">The Investment in Clean Lettuce</h2>
 
           <p>
-            Washing lettuce properly takes approximately 5 minutes for a full head or large bunch—including all three washes and drying. This small time investment transforms every salad you make. Grit-free greens are non-negotiable in professional kitchens because diners notice immediately when sand crunches between their teeth. The same standard should apply at home.
+            Washing lettuce properly takes approximately 5 minutes for a full head or large bunch, including all three washes and drying. This small time investment transforms every salad you make. Grit-free greens are non-negotiable in professional kitchens because diners notice immediately when sand crunches between their teeth. The same standard should apply at home.
           </p>
 
           <p>
-            The lifting method makes the difference between acceptable and excellent. The three-wash minimum ensures truly clean results rather than mostly clean results. Combined, these two techniques produce the same quality lettuce served in restaurants—clean, crisp, and free of any texture beyond the lettuce itself.
+            The lifting method makes the difference between acceptable and excellent. The three-wash minimum ensures truly clean results rather than mostly clean results. Combined, these two techniques produce the same quality lettuce served in restaurants: clean, crisp, and free of any texture beyond the lettuce itself.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">Final Thoughts</h2>
@@ -309,7 +309,7 @@ export default function HowToWashLettucePage() {
           </p>
 
           <p>
-            After 24 years in professional kitchens, the three-wash lifting method remains standard because nothing else works as reliably. Try it once properly—three full washes, lifting each time—and the difference will be obvious. Your salads will taste cleaner, the texture will be purely lettuce without gritty interruption, and you&apos;ll never return to the drain-and-rinse method that most home cooks use.
+            After 24 years in professional kitchens, the three-wash lifting method remains standard because nothing else works as reliably. Try it once properly, three full washes, lifting each time, and the difference will be obvious. Your salads will taste cleaner, the texture will be purely lettuce without gritty interruption, and you&apos;ll never return to the drain-and-rinse method that most home cooks use.
           </p>
         </div>
       </div>

@@ -70,7 +70,7 @@ export default function PotatoesGuidePage() {
           </p>
 
           <p>
-            I learned this lesson early in culinary school. Our instructor handed us five different potato varieties and told us to make french fries from each one. Same temperature, same technique, same everything—except the potato. The results were wildly different. Russets made perfect, crispy fries. Yukon Golds turned golden and delicious but softer. Red potatoes? Disaster. They fell apart, turned mushy, and wouldn&apos;t crisp no matter what we did.
+            I learned this lesson early in culinary school. Our instructor handed us five different potato varieties and told us to make french fries from each one. Same temperature, same technique, same everything, except the potato. The results were wildly different. Russets made perfect, crispy fries. Yukon Golds turned golden and delicious but softer. Red potatoes? Disaster. They fell apart, turned mushy, and wouldn&apos;t crisp no matter what we did.
           </p>
 
           <p>
@@ -94,7 +94,7 @@ export default function PotatoesGuidePage() {
           <p>
             <strong>Starch content:</strong> 18-22%<br />
             <strong>Texture:</strong> Dry, fluffy, mealy<br />
-            <strong>Holds shape when cooked:</strong> No—they fall apart easily
+            <strong>Holds shape when cooked:</strong> No, they fall apart easily
           </p>
 
           <p>
@@ -106,7 +106,7 @@ export default function PotatoesGuidePage() {
           </p>
 
           <p>
-            <strong>Why they work:</strong> High starch means low moisture. When you cook these potatoes, the starch granules absorb water and swell, creating a light, fluffy texture. The dry exterior also crisps beautifully when fried or roasted. But that same quality means they fall apart when boiled—don&apos;t use them for potato salad.
+            <strong>Why they work:</strong> High starch means low moisture. When you cook these potatoes, the starch granules absorb water and swell, creating a light, fluffy texture. The dry exterior also crisps beautifully when fried or roasted. But that same quality means they fall apart when boiled. Don&apos;t use them for potato salad.
           </p>
 
           <h3>Medium-Starch Potatoes (All-Purpose)</h3>
@@ -125,14 +125,14 @@ export default function PotatoesGuidePage() {
           </p>
 
           <p>
-            <strong>Why they work:</strong> Medium-starch potatoes hit the sweet spot—enough starch for creaminess, enough moisture to hold together. They&apos;re genuinely all-purpose. You can roast them for crispy edges and creamy centers, mash them for rich texture, or boil them for potato salad. They&apos;re the workhorse potatoes in most restaurant kitchens.
+            <strong>Why they work:</strong> Medium-starch potatoes hit the sweet spot: enough starch for creaminess, enough moisture to hold together. They&apos;re genuinely all-purpose. You can roast them for crispy edges and creamy centers, mash them for rich texture, or boil them for potato salad. They&apos;re the workhorse potatoes in most restaurant kitchens.
           </p>
 
           <h3>Low-Starch Potatoes (Waxy)</h3>
           <p>
             <strong>Starch content:</strong> 12-16%<br />
             <strong>Texture:</strong> Firm, moist, waxy<br />
-            <strong>Holds shape when cooked:</strong> Yes—they stay intact even when boiled
+            <strong>Holds shape when cooked:</strong> Yes, they stay intact even when boiled
           </p>
 
           <p>
@@ -144,7 +144,7 @@ export default function PotatoesGuidePage() {
           </p>
 
           <p>
-            <strong>Why they work:</strong> Low starch means high moisture and low breakdown. These potatoes hold their shape beautifully, making them perfect for dishes where you need distinct pieces—potato salad, roasted baby potatoes, soups, gratins. They don&apos;t mash well (too gluey) and they don&apos;t fry as crispy as high-starch varieties, but for what they do, they&apos;re unbeatable.
+            <strong>Why they work:</strong> Low starch means high moisture and low breakdown. These potatoes hold their shape beautifully, making them perfect for dishes where you need distinct pieces: potato salad, roasted baby potatoes, soups, gratins. They don&apos;t mash well (too gluey) and they don&apos;t fry as crispy as high-starch varieties, but for what they do, they&apos;re unbeatable.
           </p>
 
           <div className="bg-amber-50 border-l-4 border-amber-400 p-6 my-8 rounded-r-lg">
@@ -153,7 +153,7 @@ export default function PotatoesGuidePage() {
               Restaurant Reality: The Potato Station
             </p>
             <p className="mb-0">
-              In professional kitchens, we go through 50-pound bags of potatoes constantly. Multiple varieties on hand at all times: Russets for baking and fries, Yukon Golds for mashing and roasting, and red potatoes for salads and side dishes. New cooks would try to substitute one for another—mashing red potatoes, making fries from Yukon Golds, using russets in potato salad—and every time, the result was wrong. <strong>The lesson:</strong> Potatoes aren&apos;t interchangeable. Each variety has a specific job, and using the wrong one means you&apos;re fighting the ingredient. Once you learn to match the potato to the method, everything became easier. Crispy fries every time. Creamy mash without glueyness. Potato salad that held together instead of falling apart. The secret isn&apos;t technique—it&apos;s using the right potato for the job.
+              In professional kitchens, we go through 50-pound bags of potatoes constantly. Multiple varieties on hand at all times: Russets for baking and fries, Yukon Golds for mashing and roasting, and red potatoes for salads and side dishes. New cooks would try to substitute one for another, mashing red potatoes, making fries from Yukon Golds, using russets in potato salad. Every time, the result was wrong. <strong>The lesson:</strong> Potatoes aren&apos;t interchangeable. Each variety has a specific job, and using the wrong one means you&apos;re fighting the ingredient. Once you learn to match the potato to the method, everything became easier. Crispy fries every time. Creamy mash without glueyness. Potato salad that held together instead of falling apart. The secret isn&apos;t technique. It&apos;s using the right potato for the job.
             </p>
           </div>
 

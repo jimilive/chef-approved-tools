@@ -77,17 +77,17 @@ export default function UnderstandingCookingFatsPage() {
             Restaurant Reality
           </p>
           <p className="mb-0">
-            At Paragary&apos;s in Sacramento, we had different fats for different stations. Clarified butter for sautéing fish. Canola oil for deep frying. Whole butter for finishing sauces. Olive oil for vegetables. Duck fat for potatoes. Every fat served a specific purpose based on flavor, smoke point, and cooking method. New cooks would grab whatever fat was closest and wonder why their food burned or tasted wrong. Understanding which fat to use when isn&apos;t pretentious—it&apos;s fundamental technique that determines whether food succeeds or fails.
+            At Paragary&apos;s in Sacramento, we had different fats for different stations. Clarified butter for sautéing fish. Canola oil for deep frying. Whole butter for finishing sauces. Olive oil for vegetables. Duck fat for potatoes. Every fat served a specific purpose based on flavor, smoke point, and cooking method. New cooks would grab whatever fat was closest and wonder why their food burned or tasted wrong. Understanding which fat to use when isn&apos;t pretentious. It&apos;s fundamental technique that determines whether food succeeds or fails.
           </p>
         </div>
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
-            Home cooks use fats randomly—butter because it tastes good, olive oil because it&apos;s &quot;healthy,&quot; vegetable oil because it&apos;s cheap. Then they wonder why their steak didn&apos;t sear properly (butter burned) or their cookies spread too much (liquid oil when recipe needed solid fat) or their fried chicken tastes wrong (olive oil smoke point too low).
+            Home cooks use fats randomly: butter because it tastes good, olive oil because it&apos;s &quot;healthy,&quot; vegetable oil because it&apos;s cheap. Then they wonder why their steak didn&apos;t sear properly (butter burned) or their cookies spread too much (liquid oil when recipe needed solid fat) or their fried chicken tastes wrong (olive oil smoke point too low).
           </p>
 
           <p>
-            <strong>Different fats have different properties, and those properties determine what they&apos;re good for.</strong> This isn&apos;t complicated chemistry—it&apos;s practical kitchen knowledge that immediately improves your cooking once you understand the basics.
+            <strong>Different fats have different properties, and those properties determine what they&apos;re good for.</strong> This isn&apos;t complicated chemistry. It&apos;s practical kitchen knowledge that immediately improves your cooking once you understand the basics.
           </p>
 
           <h2>The Three Categories of Cooking Fats</h2>
@@ -126,7 +126,7 @@ export default function UnderstandingCookingFatsPage() {
               Nutrition Note
             </p>
             <p className="mb-0 text-amber-900">
-              This guide focuses on cooking performance, not nutrition. All fats have 9 calories per gram—butter isn&apos;t &quot;worse&quot; than olive oil calorically. The health debate around fats is complex and beyond this guide&apos;s scope. We&apos;re talking about which fat works best for specific cooking applications.
+              This guide focuses on cooking performance, not nutrition. All fats have 9 calories per gram. Butter isn&apos;t &quot;worse&quot; than olive oil calorically. The health debate around fats is complex and beyond this guide&apos;s scope. We&apos;re talking about which fat works best for specific cooking applications.
             </p>
           </div>
 
@@ -222,7 +222,7 @@ export default function UnderstandingCookingFatsPage() {
 
           <h3>Clarified Butter and Ghee</h3>
 
-          <p><strong>What it is</strong>: Butter with milk solids and water removed—pure butterfat</p>
+          <p><strong>What it is</strong>: Butter with milk solids and water removed, leaving pure butterfat</p>
 
           <p><strong>Smoke point</strong>: 450°F (much higher without milk solids)</p>
 
@@ -240,7 +240,7 @@ export default function UnderstandingCookingFatsPage() {
               Scott&apos;s Professional Tip
             </p>
             <p className="mb-0 text-emerald-900">
-              In restaurants, we&apos;d clarify pounds of butter at once and keep it ready for high-heat applications. At home, I keep clarified butter in a jar in the fridge—it takes 10 minutes to make a cup, and it lasts for months. When I want to sear fish with butter flavor, clarified butter is the answer.
+              In restaurants, we&apos;d clarify pounds of butter at once and keep it ready for high-heat applications. At home, I keep clarified butter in a jar in the fridge. It takes 10 minutes to make a cup, and it lasts for months. When I want to sear fish with butter flavor, clarified butter is the answer.
             </p>
           </div>
 
@@ -351,7 +351,7 @@ export default function UnderstandingCookingFatsPage() {
 
           <p><strong>Oil-based cakes</strong> (carrot cake, some muffins): Canola or vegetable</p>
 
-          <p><strong>Never substitute</strong>: Don&apos;t swap oil for butter in recipes that need solid fat—completely different texture results.</p>
+          <p><strong>Never substitute</strong>: Don&apos;t swap oil for butter in recipes that need solid fat. Completely different texture results.</p>
 
           <h2>Frequently Asked Questions</h2>
 
@@ -360,7 +360,7 @@ export default function UnderstandingCookingFatsPage() {
             <p className="mb-6">A: The science is complex and evolving. Both are pure fat (same calories). Butter has saturated fat, oils have unsaturated. Moderate amounts of either are fine for most people. Focus on overall diet quality, not individual ingredients.</p>
 
             <p className="font-bold text-lg mb-3">Q: Can I substitute oil for butter in baking?</p>
-            <p className="mb-6">A: Sometimes, but not always. Liquid oil behaves differently than solid butter—affects texture, spread, and rise. Recipes designed for one don&apos;t always work with the other. Follow recipe specifications unless you&apos;re experienced with substitutions.</p>
+            <p className="mb-6">A: Sometimes, but not always. Liquid oil behaves differently than solid butter. It affects texture, spread, and rise. Recipes designed for one don&apos;t always work with the other. Follow recipe specifications unless you&apos;re experienced with substitutions.</p>
 
             <p className="font-bold text-lg mb-3">Q: Why does my olive oil taste bitter after cooking?</p>
             <p className="mb-6">A: EVOO&apos;s delicate compounds break down at high heat, creating bitter flavors. Either use refined olive oil for high heat, or use EVOO only for low-medium heat and finishing.</p>
@@ -379,7 +379,7 @@ export default function UnderstandingCookingFatsPage() {
           </p>
 
           <p>
-            <strong>There&apos;s no single &quot;best&quot; cooking fat—only the right fat for specific applications.</strong>
+            <strong>There&apos;s no single &quot;best&quot; cooking fat. There&apos;s only the right fat for specific applications.</strong>
           </p>
 
           <p>

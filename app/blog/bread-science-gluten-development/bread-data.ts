@@ -28,14 +28,14 @@ export const breadData = {
 
   newsletterCTA: {
     slug: "bread-science-gluten-development",
-    description: "Get my free \"11 Essential Tools I Use Most\" PDF—the exact equipment I rely on after 24 years in professional kitchens, including my favorite baking tools. No fluff, just the tools that actually matter."
+    description: "Get my free \"11 Essential Tools I Use Most\" PDF, the exact equipment I rely on after 24 years in professional kitchens, including my favorite baking tools. No fluff, just the tools that actually matter."
   },
 
   faq: {
     questions: [
       {
         question: "What is gluten and why does it matter in bread?",
-        answer: "Gluten is a protein network that forms when two proteins in wheat flour—glutenin and gliadin—bond together in the presence of water and mechanical action (kneading). This network traps gas produced by yeast, allowing bread to rise and giving it structure and chewiness. Without gluten development, bread would be dense, crumbly, and flat."
+        answer: "Gluten is a protein network that forms when two proteins in wheat flour (glutenin and gliadin) bond together in the presence of water and mechanical action (kneading). This network traps gas produced by yeast, allowing bread to rise and giving it structure and chewiness. Without gluten development, bread would be dense, crumbly, and flat."
       },
       {
         question: "How do I know when I've kneaded dough enough?",
@@ -47,7 +47,7 @@ export const breadData = {
       },
       {
         question: "Why does no-knead bread work if gluten needs mechanical action?",
-        answer: "Time replaces mechanical action. In no-knead recipes, gluten develops slowly through autolysis—enzymes in the flour break down proteins, and the gluten network forms naturally over 12-18 hours. The long fermentation also develops complex flavor. No-knead bread trades speed for convenience and flavor."
+        answer: "Time replaces mechanical action. In no-knead recipes, gluten develops slowly through autolysis. Enzymes in the flour break down proteins, and the gluten network forms naturally over 12-18 hours. The long fermentation also develops complex flavor. No-knead bread trades speed for convenience and flavor."
       }
     ]
   },
