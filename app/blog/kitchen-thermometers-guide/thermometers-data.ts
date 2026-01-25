@@ -44,14 +44,14 @@ export const educationalData = {
       title: "",
       restaurantReality: {
         title: "Restaurant Reality",
-        content: "During my time as Kitchen Manager at Mellow Mushroom (1992-1994), the health inspector would randomly check our cooler temperatures, our hot holding temps, and the internal temperature of proteins coming off the grill. We had to hit exact numbers—not close, exact. Below 40°F for cold storage, above 140°F for hot holding, 165°F for chicken. Miss those numbers? Violation. Miss them twice? Closure. An affordable thermometer was the difference between passing inspection and losing the restaurant license. Temperature isn't a suggestion in professional kitchens—it's the law and the standard. Today I'm going to show you how to use thermometers like a professional."
+        content: "During my time as Kitchen Manager at Mellow Mushroom (1992-1994), the health inspector would randomly check our cooler temperatures, our hot holding temps, and the internal temperature of proteins coming off the grill. We had to hit exact numbers. Not close, exact. Below 40°F for cold storage, above 140°F for hot holding, 165°F for chicken. Miss those numbers? Violation. Miss them twice? Closure. An affordable thermometer was the difference between passing inspection and losing the restaurant license. Temperature isn't a suggestion in professional kitchens. It's the law and the standard. Today I'm going to show you how to use thermometers like a professional."
       },
       content: [
         "Home cooks guess at doneness more than they'd admit. They poke meat and hope. They cut into chicken to check for pink. They stick forks in cakes. They trust their instincts over instruments.",
         "**This is how you overcook everything.**",
-        "If you've ever overcooked a steak, dried out chicken, or pulled bread too early, it's not your recipe — it's your feedback. In professional kitchens, chefs don't guess. They measure.",
-        "Professional cooks use thermometers constantly—not occasionally, constantly. It's not because we don't know what we're doing. It's precisely **because** we know what we're doing that we measure instead of guessing. Temperature is objective. Guessing is not.",
-        "Instant-read thermometers are one of the most important tools in the kitchen — right next to your chef knife. When I trained line cooks, I could tell who was serious by whether they carried one clipped to their apron. Those who did never sent out undercooked food twice.",
+        "If you've ever overcooked a steak, dried out chicken, or pulled bread too early, it's not your recipe. It's your feedback. In professional kitchens, chefs don't guess. They measure.",
+        "Professional cooks use thermometers constantly. Not occasionally, constantly. It's not because we don't know what we're doing. It's precisely **because** we know what we're doing that we measure instead of guessing. Temperature is objective. Guessing is not.",
+        "Instant-read thermometers are one of the most important tools in the kitchen, right next to your chef knife. When I trained line cooks, I could tell who was serious by whether they carried one clipped to their apron. Those who did never sent out undercooked food twice.",
         "The difference between a premium steak that's perfectly medium-rare and one that's gray and disappointing? **3-4 degrees Fahrenheit.** You cannot eyeball that kind of precision. You need a thermometer.",
         "After 24 years in restaurants, I can tell you: an instant-read thermometer isn't optional. It's a small, fast piece of truth that separates guesswork from mastery."
       ]
@@ -81,13 +81,13 @@ export const educationalData = {
         },
         {
           id: "texture",
-          title: "2. Optimal Texture and Juiciness",
+          title: "2. Best Texture and Juiciness",
           proteinTemps: [
             "140°F: Proteins begin to firm up significantly",
             "160°F: Proteins squeeze out moisture aggressively",
             "165°F+: Proteins are fully cooked but getting dry"
           ],
-          problem: "Every 5-10 degrees beyond target temperature exponentially increases moisture loss. A chicken breast at 160°F vs 175°F isn't \"a little more cooked\"—it's dramatically drier."
+          problem: "Every 5-10 degrees beyond target temperature exponentially increases moisture loss. A chicken breast at 160°F vs 175°F isn't \"a little more cooked.\" It's dramatically drier."
         },
         {
           id: "consistency",
@@ -97,12 +97,12 @@ export const educationalData = {
         }
       ],
       benefits: [
-        "Removes doubt — no guessing whether chicken is done",
-        "Saves money — prevents overcooking expensive cuts",
-        "Ensures safety — eliminates undercooked meat risk",
-        "Improves consistency — your medium-rare stays medium-rare every time"
+        "Removes doubt: no guessing whether chicken is done",
+        "Saves money: prevents overcooking expensive cuts",
+        "Ensures safety: eliminates undercooked meat risk",
+        "Improves consistency: your medium-rare stays medium-rare every time"
       ],
-      closing: "When you develop that habit, you start cooking like a professional — precise, calm, repeatable.",
+      closing: "When you develop that habit, you start cooking like a professional: precise, calm, repeatable.",
       warning: {
         title: "Critical Food Safety Note",
         content: "The USDA recommends cooking chicken to 165°F to kill salmonella instantly. However, holding chicken at 155°F for 60 seconds or 150°F for 3 minutes achieves the same safety. Professional kitchens sometimes use lower temps with longer holds for juicier chicken, but home cooks should stick to 165°F unless they're willing to monitor time carefully."
@@ -130,7 +130,7 @@ export const educationalData = {
       },
       proTip: {
         title: "Scott's Professional Tip",
-        content: "In 24 years of professional cooking, I've used instant-read digital thermometers for 95% of temperature checking. That's it. One good instant-read will handle everything from checking chicken doneness to calibrating your oven. Don't overcomplicate this—buy one excellent instant-read and you're done."
+        content: "In 24 years of professional cooking, I've used instant-read digital thermometers for 95% of temperature checking. That's it. One good instant-read will handle everything from checking chicken doneness to calibrating your oven. Don't overcomplicate this. Buy one excellent instant-read and you're done."
       }
     },
     {
@@ -194,7 +194,7 @@ export const educationalData = {
       steps: [
         {
           title: "Step 1: Know the Target Temperature",
-          intro: "Before you start, know what you're aiming for. Memorize the basics—you'll use them constantly:",
+          intro: "Before you start, know what you're aiming for. Memorize the basics. You'll use them constantly:",
           targets: [
             "Chicken breast: 160°F (carryover to 165°F)",
             "Steak (medium-rare): 130–135°F",
@@ -206,7 +206,7 @@ export const educationalData = {
         {
           title: "Step 2: Insert Correctly",
           content: "Push the probe into the thickest part of the food, away from bones, fat, or pan contact.",
-          proTip: "On thin foods (like a fish fillet), insert the probe sideways, not from the top — that gives you a true internal reading."
+          proTip: "On thin foods (like a fish fillet), insert the probe sideways, not from the top. That gives you a true internal reading."
         },
         {
           title: "Step 3: Wait for Stability",
@@ -214,7 +214,7 @@ export const educationalData = {
         },
         {
           title: "Step 4: Account for Carryover",
-          content: "Remove meats when they're 5-10°F below your target — they'll continue cooking from residual heat. For example, pull chicken at 160°F, and it'll hit 165°F after resting."
+          content: "Remove meats when they're 5-10°F below your target. They'll continue cooking from residual heat. For example, pull chicken at 160°F, and it'll hit 165°F after resting."
         }
       ],
       carryover: {
@@ -256,7 +256,7 @@ export const educationalData = {
         {
           number: 3,
           title: "Using a Slow Thermometer",
-          problem: "Old analog thermometers can take 20 seconds — way too long.",
+          problem: "Old analog thermometers can take 20 seconds. Way too long.",
           fix: "Upgrade to a digital instant-read model. An affordable thermometer changes everything."
         },
         {
@@ -280,7 +280,7 @@ export const educationalData = {
         { name: "ThermoWorks Thermapen ONE", description: "Ultra-fast (1-second read), waterproof, and lab-accurate. The gold standard in professional kitchens." },
         { name: "ThermoPro TP19", description: "Affordable, reliable, and accurate. Great value for home cooks." },
         { name: "Lavatools Javelin PRO Duo", description: "Affordable, durable, and folds flat. Great for home use." },
-        { name: "OXO Good Grips Instant Read", description: "Simple, accurate, and reliable — a great budget pick." }
+        { name: "OXO Good Grips Instant Read", description: "Simple, accurate, and reliable. A great budget pick." }
       ],
       supportingTools: [
         { name: "Rubbermaid Commercial Cook's Scraper", description: "safely move food before temping", link: "/reviews/rubbermaid-commercial-cooks-scraper" },
@@ -291,8 +291,8 @@ export const educationalData = {
       id: "troubleshooting",
       title: "Troubleshooting Accuracy",
       issues: [
-        { problem: "If your thermometer reads inconsistently:", solution: "Battery may be low or probe slightly bent — replace or recalibrate. Cheap thermometers often have ±5-10°F accuracy. Good thermometers are accurate to ±1°F." },
-        { problem: "If it fogs up:", solution: "Water intrusion — check seals, or choose a waterproof model like the Thermapen ONE." },
+        { problem: "If your thermometer reads inconsistently:", solution: "Battery may be low or probe slightly bent. Replace or recalibrate. Cheap thermometers often have ±5-10°F accuracy. Good thermometers are accurate to ±1°F." },
+        { problem: "If it fogs up:", solution: "Water intrusion. Check seals, or choose a waterproof model like the Thermapen ONE." },
         { problem: "If it reads way off:", solution: "Test both extremes (ice water: 32°F and boiling water: 212°F) to locate the drift. If off by more than 2°F, replace or recalibrate it." },
         { problem: "If food still overcooks:", solution: "You're not accounting for carryover heat. Pull items 5-10°F early and let them rest. The temperature will continue to rise." }
       ]
@@ -303,7 +303,7 @@ export const educationalData = {
       intro: "Based on 24 years in professional kitchens, here's how professionals actually use thermometers:",
       protocols: [
         { title: "Calibrate weekly", content: "Professional kitchens check thermometer accuracy regularly using ice water test (should read 32°F). Thermometers drift over time." },
-        { title: "Multiple check points", content: "For large roasts, we check multiple spots—thickest part, near bone, center, ends. Temperature gradients exist in large cuts." },
+        { title: "Multiple check points", content: "For large roasts, we check multiple spots: thickest part, near bone, center, ends. Temperature gradients exist in large cuts." },
         { title: "Rest time matters", content: "Remove from heat 5-10°F below target. Carryover cooking continues. This is non-negotiable for consistent results." },
         { title: "Sanitize between uses", content: "Wipe probe with sanitizing solution between different proteins. Cross-contamination risk is real." },
         { title: "Keep backup thermometer", content: "Equipment failures happen during service. Always have a spare. Can't serve without temperature verification." },
@@ -312,7 +312,7 @@ export const educationalData = {
       ],
       callout: {
         title: "From Purple Café",
-        content: "During a busy Saturday night serving 200+ covers, thermometers weren't suggestions—they were mandatory. Every protein got checked before leaving the kitchen. The 3 seconds it took to verify temperature prevented foodborne illness, customer complaints, and wasted food. That's the professional standard."
+        content: "During a busy Saturday night serving 200+ covers, thermometers weren't suggestions. They were mandatory. Every protein got checked before leaving the kitchen. The 3 seconds it took to verify temperature prevented foodborne illness, customer complaints, and wasted food. That's the professional standard."
       }
     },
     {
@@ -321,12 +321,12 @@ export const educationalData = {
       intro: "After 24 years of professional cooking and literally thousands of temperature checks, here's what I want home cooks to understand:",
       mainPoint: "**You cannot overcook meat if you use a thermometer properly.**",
       content: [
-        "Every dry chicken breast, every gray steak, every tough roast—caused by guessing instead of measuring. Temperature is objective. Appearance, timing, and \"feel\" are subjective and unreliable.",
+        "Every dry chicken breast, every gray steak, every tough roast: caused by guessing instead of measuring. Temperature is objective. Appearance, timing, and \"feel\" are subjective and unreliable.",
         "An instant-read thermometer is the single most reliable tool for ensuring perfect doneness and food safety. It eliminates guesswork, prevents waste, and builds the kind of consistency that separates restaurant-quality cooking from home frustration.",
         "An affordable instant-read thermometer will improve your cooking more than an expensive knife or premium pan. It's the single most important tool in your kitchen after your chef's knife.",
-        "In my 24 years in professional kitchens, I've seen countless cooks transform their results simply by adopting one habit: checking temps instead of guessing. It's not about lack of skill — it's about having objective feedback in a process where your eyes and hands can't tell you everything.",
+        "In my 24 years in professional kitchens, I've seen countless cooks transform their results simply by adopting one habit: checking temps instead of guessing. It's not about lack of skill. It's about having objective feedback in a process where your eyes and hands can't tell you everything.",
         "Stop poking meat and hoping. Stop cutting into chicken to check for pink. Stop trusting oven timers. Start measuring temperature and watch your cooking transform from hit-or-miss to consistently perfect.",
-        "Buy a good instant-read. Learn the target temps. Check multiple spots. Account for carryover. That's it. Start with a reliable digital instant-read, memorize your target temperatures, account for carryover heat, and clean your probe between uses. Those four habits will elevate your cooking immediately."
+        "Buy a good instant-read. Learn the target temps. Check multiple spots. Account for carryover. That's it. Start with a reliable digital instant-read, memorize your target temperatures, account for carryover heat, and clean your probe between uses. Those four habits will improve your cooking immediately."
       ]
     }
   ],
@@ -351,7 +351,7 @@ export const educationalData = {
       },
       {
         question: "Why do pros always carry one?",
-        answer: "It's faster, safer, and ensures every dish hits temp consistency — critical in a restaurant. In professional kitchens, thermometers aren't optional, they're required for health code compliance."
+        answer: "It's faster, safer, and ensures every dish hits temp consistency. Critical in a restaurant. In professional kitchens, thermometers aren't optional, they're required for health code compliance."
       },
       {
         question: "What's the safest temperature for chicken?",
@@ -383,7 +383,7 @@ export const educationalData = {
       },
       {
         question: "Can I rely on meat color to check doneness?",
-        answer: "No—color is unreliable for food safety. Meat can turn brown before reaching safe temperatures, or stay pink even when fully cooked (especially with certain cooking methods or additives). The only reliable doneness test is internal temperature measured with a calibrated thermometer. After 24 years in professional kitchens, I trust thermometers over visual cues every time."
+        answer: "No, color is unreliable for food safety. Meat can turn brown before reaching safe temperatures, or stay pink even when fully cooked (especially with certain cooking methods or additives). The only reliable doneness test is internal temperature measured with a calibrated thermometer. After 24 years in professional kitchens, I trust thermometers over visual cues every time."
       }
     ]
   },

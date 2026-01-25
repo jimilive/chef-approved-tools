@@ -9,8 +9,8 @@
 ## HANDOFF FOR NEXT SESSION
 
 ### Current Status
-- **61 pages completed** (22 reviews, 39 blogs)
-- **Next page:** #63 (check priority list for next page)
+- **66 pages completed** (22 reviews, 44 blogs)
+- **Next page:** #68 (check priority list for next page)
 - Priority list location: `/Users/scottbradley/Downloads/pages-by-importance.md`
 
 ### Critical Lessons Learned
@@ -143,6 +143,11 @@
 | 60 | /reviews/nordic-ware-half-sheet-pan | Done | 41 | 3 | Fixed 41 em dashes, 3 PROTECTED VALUES (45→24 yrs), includes comparison data file |
 | 61 | /blog/knife-storage-protecting-blades-for-decades | Done | 44 | 2 | Fixed 44 em dashes, 2 AI phrases ("comprehensive" → "this", "essential" → "important") |
 | 62 | /blog/nonstick-vs-stainless-steel-pans | Done | 16 | 2 | Fixed 16 em dashes (15 data, 1 page), 2 AI phrases ("effortlessly" → "easily", "comprehensive" → removed) |
+| 63 | /blog/air-fryer-vs-oven | Done | 0 | 1 | Fixed 1 AI phrase ("essential" → "ideal") |
+| 64 | /blog/why-children-hate-broccoli | Done | 13 | 0 | Fixed 13 em dashes |
+| 65 | /blog/magic-of-freshly-ground-pepper | Done | 17 | 6 | Fixed 17 em dashes, 6 AI phrases (optimal, essential, elevate, robust) |
+| 66 | /blog/kitchen-thermometers-guide | Done | 27 | 2 | Fixed 27 em dashes (26 data, 1 page), 2 AI phrases ("Optimal" → "Best", "elevate" → "improve") |
+| 67 | /blog/reducing-sauces-restaurant-technique | Done | 37 | 0 | Fixed 37 em dashes (7 data, 30 page) |
 
 ## Patterns Being Checked
 
@@ -323,3 +328,12 @@
   - Page 61 (knife-storage-protecting-blades-for-decades): 44 em dashes, 2 AI phrases
   - Page 62 (nonstick-vs-stainless-steel-pans): 16 em dashes, 2 AI phrases
   - **Total: 116 em dashes fixed, 9 AI phrase/protected value fixes**
+
+### January 25, 2026
+- **Batch session: Pages 63-67 (5 pages)**
+  - Page 63 (air-fryer-vs-oven): 0 em dashes, 1 AI phrase ("essential" → "ideal")
+  - Page 64 (why-children-hate-broccoli): 13 em dashes → periods, commas, colons, parentheses
+  - Page 65 (magic-of-freshly-ground-pepper): 17 em dashes, 6 AI phrases (optimal→best, essential→core, elevate→improve, robust→durable)
+  - Page 66 (kitchen-thermometers-guide): 27 em dashes (26 data, 1 page), 2 AI phrases (Optimal→Best, elevate→improve)
+  - Page 67 (reducing-sauces-restaurant-technique): 37 em dashes (7 data, 30 page)
+  - **Total: 94 em dashes fixed, 9 AI phrase fixes**

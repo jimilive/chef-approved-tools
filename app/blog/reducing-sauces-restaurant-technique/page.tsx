@@ -19,7 +19,7 @@ export const metadata = generateBlogMetadata('reducing-sauces-restaurant-techniq
 
 const articleSchema = generateArticleSchema({
   headline: 'Sauce Reduction: Restaurant Technique Explained',
-  description: 'Professional chef explains the art of reducing sauces — how to concentrate flavor, control consistency, and create restaurant-quality reductions at home.',
+  description: 'Professional chef explains the art of reducing sauces: how to concentrate flavor, control consistency, and create restaurant-quality reductions at home.',
   datePublished: "2025-09-09",
   dateModified: '2025-10-21',
   authorName: 'Scott Bradley',
@@ -55,24 +55,24 @@ export default function ReducingSaucesPage() {
       />
       <HowToSchema
         name="How to Reduce Sauces Like a Professional Chef"
-        description="Professional chef explains the art of reducing sauces — how to concentrate flavor, control consistency, and create restaurant-quality reductions at home."
+        description="Professional chef explains the art of reducing sauces: how to concentrate flavor, control consistency, and create restaurant-quality reductions at home."
         datePublished="2025-09-09"
         totalTime="PT30M"
         tools={["Wide shallow pan (saucier or skillet)", "Wooden spoon or heat-resistant scraper", "Ladle for skimming", "Thermometer (optional)"]}
         steps={[
-          { name: "Start with a Flavorful Base", text: "Use homemade stock, pan drippings, or wine—not watery broth. Avoid store-bought broths with added salt, as salt concentrates during reduction and can make the sauce too salty." },
+          { name: "Start with a Flavorful Base", text: "Use homemade stock, pan drippings, or wine, not watery broth. Avoid store-bought broths with added salt, as salt concentrates during reduction and can make the sauce too salty." },
           { name: "Choose the Right Pan", text: "Use a wide, shallow pan to maximize surface area for evaporation. Stainless steel sauciers or skillets work best. Avoid aluminum pans when reducing acidic liquids like wine or tomato-based sauces." },
-          { name: "Bring to a Gentle Simmer", text: "Heat the liquid to a gentle simmer with small, lazy bubbles—never a full boil. Keep the lid off throughout the process. Target temperature is around 195°F." },
+          { name: "Bring to a Gentle Simmer", text: "Heat the liquid to a gentle simmer with small, lazy bubbles, never a full boil. Keep the lid off throughout the process. Target temperature is around 195°F." },
           { name: "Skim Impurities Regularly", text: "Every few minutes, use a ladle or spoon to skim off impurities, proteins, and fat that rise to the surface. This keeps your sauce clear and clean-tasting." },
-          { name: "Watch, Stir, and Taste", text: "Stir occasionally to prevent scorching. Taste throughout the process—the balance changes as water evaporates. Don't season heavily early; salt concentrates during reduction." },
-          { name: "Stop at Nappe Consistency", text: "The sauce is done when it coats the back of a spoon and leaves a clean trail when you drag your finger through it. Pull it early if unsure—it continues thickening off heat. Finish with cold butter whisked in for shine." }
+          { name: "Watch, Stir, and Taste", text: "Stir occasionally to prevent scorching. Taste throughout the process. The balance changes as water evaporates. Don't season heavily early; salt concentrates during reduction." },
+          { name: "Stop at Nappe Consistency", text: "The sauce is done when it coats the back of a spoon and leaves a clean trail when you drag your finger through it. Pull it early if unsure. It continues thickening off heat. Finish with cold butter whisked in for shine." }
         ]}
       />
 
       <BlogLayout breadcrumbTitle="Sauce Reduction: Restaurant Technique Explained">
         <BlogHero
           title="Sauce Reduction: Restaurant Technique Explained"
-          introduction={["Professional chef explains the art of reducing sauces — how to concentrate flavor, control consistency, and create restaurant-quality reductions at home."]}
+          introduction={["Professional chef explains the art of reducing sauces: how to concentrate flavor, control consistency, and create restaurant-quality reductions at home."]}
           publishedDate="2025-09-09"
           lastUpdated="2025-10-21"
           readTime="8 min read"
@@ -80,15 +80,15 @@ export default function ReducingSaucesPage() {
 
         <div className="prose prose-lg prose-slate max-w-none bg-white rounded-xl shadow-lg p-8 mb-8">
           <p>
-            If there&apos;s one sound that tells a chef things are going right, it&apos;s that gentle, confident simmer of a sauce reducing on the stove. Not boiling, not splattering — just a calm <em>blip... blip... blip</em> as the liquid thickens, aromas deepen, and the flavor builds toward perfection.
+            If there&apos;s one sound that tells a chef things are going right, it&apos;s that gentle, confident simmer of a sauce reducing on the stove. Not boiling, not splattering. Just a calm <em>blip... blip... blip</em> as the liquid thickens, aromas deepen, and the flavor builds toward perfection.
           </p>
 
           <p>
-            Reduction is one of those techniques that separates home cooking from restaurant cooking. It&apos;s simple in theory — just simmer until thicker — but the details make all the difference. Temperature, timing, and taste control determine whether you end up with a silky, glossy glaze or a scorched, sticky mess.
+            Reduction is one of those techniques that separates home cooking from restaurant cooking. It&apos;s simple in theory (just simmer until thicker) but the details make all the difference. Temperature, timing, and taste control determine whether you end up with a silky, glossy glaze or a scorched, sticky mess.
           </p>
 
           <p>
-            Let&apos;s go deep on the method every restaurant uses daily — the one that turns good into unforgettable.
+            Let&apos;s go deep on the method every restaurant uses daily, the one that turns good into unforgettable.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
@@ -101,11 +101,11 @@ export default function ReducingSaucesPage() {
           </p>
 
           <p>
-            By slowly cooking off water, you&apos;re concentrating everything that remains — sugars, fats, proteins, acids, and aromas. Done right, reduction turns thin stock into glossy demi-glace, watery pan drippings into a rich jus, or simple wine into velvet sauce.
+            By slowly cooking off water, you&apos;re concentrating everything that remains: sugars, fats, proteins, acids, and aromas. Done right, reduction turns thin stock into glossy demi-glace, watery pan drippings into a rich jus, or simple wine into velvet sauce.
           </p>
 
           <p>
-            The key word here is <em>slowly</em>. When you rush reduction, you don&apos;t just lose water — you lose balance. Sweet becomes bitter, savory turns salty, and acid goes harsh.
+            The key word here is <em>slowly</em>. When you rush reduction, you don&apos;t just lose water. You lose balance. Sweet becomes bitter, savory turns salty, and acid goes harsh.
           </p>
 
           <p>
@@ -163,7 +163,7 @@ export default function ReducingSaucesPage() {
           <div className="bg-orange-50 border-l-4 border-orange-600 p-6 my-8">
             <p className="font-semibold text-slate-900 mb-2">Pro Tip:</p>
             <p className="mb-0">
-              Avoid store-bought &quot;broths&quot; with added salt — you&apos;ll over-reduce and end up with a salt bomb.
+              Avoid store-bought &quot;broths&quot; with added salt or you&apos;ll over-reduce and end up with a salt bomb.
             </p>
           </div>
 
@@ -197,7 +197,7 @@ export default function ReducingSaucesPage() {
           </h3>
 
           <p>
-            Bring the liquid just to a simmer — small, lazy bubbles. Never full boil. Boiling agitates the sauce, clouds it, and risks scorching.
+            Bring the liquid just to a simmer with small, lazy bubbles. Never full boil. Boiling agitates the sauce, clouds it, and risks scorching.
           </p>
 
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">
@@ -213,7 +213,7 @@ export default function ReducingSaucesPage() {
           </p>
 
           <p>
-            Keep your eye on the surface — the cleaner you keep it, the purer and brighter your final flavor will be.
+            Keep your eye on the surface. The cleaner you keep it, the purer and brighter your final flavor will be.
           </p>
 
           <blockquote className="border-l-4 border-orange-600 pl-6 italic text-slate-700 my-6">
@@ -244,7 +244,7 @@ export default function ReducingSaucesPage() {
           </h3>
 
           <p>
-            When the sauce coats the back of a spoon and a finger swipe leaves a clean trail — that&apos;s <em>nappe</em>, the French test for perfection.
+            When the sauce coats the back of a spoon and a finger swipe leaves a clean trail, that&apos;s <em>nappe</em>, the French test for perfection.
           </p>
 
           <p>
@@ -254,7 +254,7 @@ export default function ReducingSaucesPage() {
           <p>
             <Link href="/blog/deglazing-pan-sauces" className="text-blue-700 underline">
               Learn how to deglaze properly
-            </Link> before reducing—deglazing captures fond that becomes the base of your reduction.
+            </Link> before reducing. Deglazing captures fond that becomes the base of your reduction.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6 flex items-center gap-3">
@@ -268,7 +268,7 @@ export default function ReducingSaucesPage() {
                 <strong className="text-slate-900">Visual:</strong> Bubbles grow larger and slower as water content decreases. The surface glosses over like satin.
               </li>
               <li>
-                <strong className="text-slate-900">Auditory:</strong> The sound deepens — higher-pitched hissing turns to low bubbling.
+                <strong className="text-slate-900">Auditory:</strong> The sound deepens. Higher-pitched hissing turns to low bubbling.
               </li>
               <li>
                 <strong className="text-slate-900">Touch:</strong> Dip a spoon. If the sauce clings and runs slowly, it&apos;s ready.
@@ -280,7 +280,7 @@ export default function ReducingSaucesPage() {
           </div>
 
           <p>
-            Professional cooks rely on all four senses—sight, sound, touch, and taste—to judge reduction. Don&apos;t just watch the clock. Engage with the sauce as it transforms.
+            Professional cooks rely on all four senses (sight, sound, touch, and taste) to judge reduction. Don&apos;t just watch the clock. Engage with the sauce as it transforms.
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 mt-12 mb-6">
@@ -327,7 +327,7 @@ export default function ReducingSaucesPage() {
           </div>
 
           <p>
-            The biggest mistake is confusing reduction with thickening. Adding cornstarch or flour creates body, but it dilutes flavor. True reduction concentrates everything—it&apos;s flavor alchemy, not chemistry class.
+            The biggest mistake is confusing reduction with thickening. Adding cornstarch or flour creates body, but it dilutes flavor. True reduction concentrates everything. It&apos;s flavor alchemy, not chemistry class.
           </p>
 
           <div className="bg-yellow-50 border-l-4 border-yellow-600 p-6 my-8">
@@ -335,7 +335,7 @@ export default function ReducingSaucesPage() {
               <span className="text-2xl">🔥</span> Chef&apos;s Tip:
             </p>
             <p className="mb-0">
-              Add a knob of cold butter right before serving. Whisk it in off the heat — it adds shine, rounds flavor, and gives that &quot;restaurant gloss.&quot;
+              Add a knob of cold butter right before serving. Whisk it in off the heat. It adds shine, rounds flavor, and gives that &quot;restaurant gloss.&quot;
             </p>
           </div>
 
@@ -359,7 +359,7 @@ export default function ReducingSaucesPage() {
                 </CTAVisibilityTracker> — curved sides help prevent burning.
               </li> */}
               <li>
-                <strong>Pan:</strong> Made In Stainless Saucier — curved sides help prevent burning.
+                <strong>Pan:</strong> Made In Stainless Saucier: curved sides help prevent burning.
               </li>
               <li>
                 <strong>Scraper:</strong>{' '}
@@ -372,7 +372,7 @@ export default function ReducingSaucesPage() {
                   <Link href="/reviews/rubbermaid-commercial-cooks-scraper" className="text-blue-700 underline">
                     Rubbermaid Commercial Cook&apos;s Scraper
                   </Link>
-                </CTAVisibilityTracker> — keeps fond from sticking.
+                </CTAVisibilityTracker>: keeps fond from sticking.
               </li>
               {/* <li>
                 <strong>Thermometer:</strong>{' '}
@@ -388,7 +388,7 @@ export default function ReducingSaucesPage() {
                 </CTAVisibilityTracker> — track simmer heat (195°F ideal).
               </li> */}
               <li>
-                <strong>Thermometer:</strong> ThermoWorks Thermapen ONE — track simmer heat (195°F ideal).
+                <strong>Thermometer:</strong> ThermoWorks Thermapen ONE: track simmer heat (195°F ideal).
               </li>
               {/* <li>
                 <strong>Strainer:</strong>{' '}
@@ -404,7 +404,7 @@ export default function ReducingSaucesPage() {
                 </CTAVisibilityTracker> — for smooth finishes.
               </li> */}
               <li>
-                <strong>Strainer:</strong> OXO Fine Mesh Strainer — for smooth finishes.
+                <strong>Strainer:</strong> OXO Fine Mesh Strainer: for smooth finishes.
               </li>
               {/* <li>
                 <strong>Container:</strong>{' '}
@@ -420,7 +420,7 @@ export default function ReducingSaucesPage() {
                 </CTAVisibilityTracker> — to chill and store reduced sauces safely.
               </li> */}
               <li>
-                <strong>Container:</strong> Cambro 2-Qt Storage Container — to chill and store reduced sauces safely.
+                <strong>Container:</strong> Cambro 2-Qt Storage Container: to chill and store reduced sauces safely.
               </li>
             </ul>
           </div>
@@ -438,7 +438,7 @@ export default function ReducingSaucesPage() {
           </p>
 
           <p>
-            Once you understand reduction—once you learn to listen to the simmer, watch the bubbles, and taste the balance—you&apos;ll never look at sauce the same way. You&apos;ll build them instinctively, adjusting heat and timing by feel.
+            Once you understand reduction, once you learn to listen to the simmer, watch the bubbles, and taste the balance, you&apos;ll never look at sauce the same way. You&apos;ll build them instinctively, adjusting heat and timing by feel.
           </p>
 
           <p>
@@ -455,7 +455,7 @@ export default function ReducingSaucesPage() {
               <Link href="/blog/braising-101-tough-cuts-made-tender" className="text-blue-700 underline">
                 Learn how to braise
               </Link>
-            </CTAVisibilityTracker>—another slow-cooking technique that creates deep, reduced flavors through patience.
+            </CTAVisibilityTracker>, another slow-cooking technique that creates deep, reduced flavors through patience.
           </p>
 
           <p>
@@ -468,7 +468,7 @@ export default function ReducingSaucesPage() {
               <Link href="/blog/caramelizing-onions-why-it-takes-45-minutes" className="text-blue-700 underline">
                 Master caramelizing onions
               </Link>
-            </CTAVisibilityTracker>—a technique that relies on reduction and evaporation to concentrate sugars and build flavor.
+            </CTAVisibilityTracker>, a technique that relies on reduction and evaporation to concentrate sugars and build flavor.
           </p>
 
           <div className="bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-600 p-6 my-12 rounded-r-lg">

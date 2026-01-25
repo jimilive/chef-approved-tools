@@ -207,7 +207,7 @@ export const comparisonData = {
           option: "oven-capacity",
           title: "Oven Capacity Advantage",
           content: [
-            "Conventional ovens offer substantially more cooking capacity than most air fryers. Standard ovens can accommodate multiple dishes on different racks, making them ideal for preparing large meals or cooking for gatherings. This capacity advantage makes ovens essential for holiday meals or when cooking multiple side dishes simultaneously."
+            "Conventional ovens offer substantially more cooking capacity than most air fryers. Standard ovens can accommodate multiple dishes on different racks, making them ideal for preparing large meals or cooking for gatherings. This capacity advantage makes ovens ideal for holiday meals or when cooking multiple side dishes simultaneously."
           ]
         },
         {

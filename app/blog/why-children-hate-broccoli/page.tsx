@@ -73,7 +73,7 @@ export default function WhyChildrenHateBroccoliPage() {
               Restaurant Reality: The Staff Meal Revelation
             </p>
             <p className="mb-0">
-              At Feierabend, we made staff meal every day before service. One day, our chef roasted broccoli with olive oil, salt, and high heat until the florets were crispy and caramelized. The dishwasher—who swore he hated broccoli his entire life—ate three servings. &quot;This isn&apos;t the same vegetable my mom made,&quot; he said. He was right. It wasn&apos;t the vegetable he hated—it was how it had been cooked.
+              At Feierabend, we made staff meal every day before service. One day, our chef roasted broccoli with olive oil, salt, and high heat until the florets were crispy and caramelized. The dishwasher, who swore he hated broccoli his entire life, ate three servings. &quot;This isn&apos;t the same vegetable my mom made,&quot; he said. He was right. It wasn&apos;t the vegetable he hated. It was how it had been cooked.
             </p>
           </div>
 
@@ -86,7 +86,7 @@ export default function WhyChildrenHateBroccoliPage() {
           </p>
 
           <p>
-            Most parents cook broccoli in ways that maximize bitterness and destroy texture. Then they&apos;re surprised when kids reject it. But children aren&apos;t being difficult—they&apos;re experiencing vegetables differently than adults do, and most home cooking makes it worse.
+            Most parents cook broccoli in ways that maximize bitterness and destroy texture. Then they&apos;re surprised when kids reject it. But children aren&apos;t being difficult. They&apos;re experiencing vegetables differently than adults do, and most home cooking makes it worse.
           </p>
 
           <p>
@@ -111,7 +111,7 @@ export default function WhyChildrenHateBroccoliPage() {
 
           <p>
             <strong className="font-semibold text-slate-900">The TAS2R38 Gene</strong>{' '}
-            Some children (and adults) have a gene variant that makes them &quot;super-tasters.&quot; They experience bitter flavors up to 10 times more intensely than non-super-tasters. For these kids, broccoli tastes genuinely awful—not because they&apos;re picky, but because their biology makes it taste that way.
+            Some children (and adults) have a gene variant that makes them &quot;super-tasters.&quot; They experience bitter flavors up to 10 times more intensely than non-super-tasters. For these kids, broccoli tastes genuinely awful, not because they&apos;re picky, but because their biology makes it taste that way.
           </p>
 
           <p>
@@ -125,7 +125,7 @@ export default function WhyChildrenHateBroccoliPage() {
               Important
             </p>
             <p className="mb-0">
-              If your child consistently rejects all vegetables, they might be a super-taster. This isn&apos;t pickiness—it&apos;s genetics. You need different strategies, not more pressure.
+              If your child consistently rejects all vegetables, they might be a super-taster. This isn&apos;t pickiness. It&apos;s genetics. You need different strategies, not more pressure.
             </p>
           </div>
 
@@ -138,29 +138,29 @@ export default function WhyChildrenHateBroccoliPage() {
 
           <p>
             <strong className="font-semibold text-slate-900">The Overcooked Vegetable Problem</strong>{' '}
-            Boiling or steaming broccoli too long releases glucosinolates—sulfur compounds that smell like rotten eggs or dirty socks. If your kitchen smells bad while cooking broccoli, your kid is experiencing that smell much more intensely.
+            Boiling or steaming broccoli too long releases glucosinolates (sulfur compounds that smell like rotten eggs or dirty socks). If your kitchen smells bad while cooking broccoli, your kid is experiencing that smell much more intensely.
           </p>
 
           <h3>The Green Food Problem</h3>
 
           <p>
             <strong className="font-semibold text-slate-900">Kids Reject Green Foods More Than Other Colors</strong>{' '}
-            Research shows that children exhibit food neophobia—fear of novel foods—particularly with green vegetables. This starts as early as 6 months when infants begin rejecting bitter-tasting green vegetables. The aversion intensifies between 18-24 months as mobility increases.
+            Research shows that children exhibit food neophobia (fear of novel foods) particularly with green vegetables. This starts as early as 6 months when infants begin rejecting bitter-tasting green vegetables. The aversion intensifies between 18-24 months as mobility increases.
           </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Evolutionary Survival Mechanism</strong>{' '}
-            Children are naturally cautious about green foods because many poisonous plants in nature are green. This evolved as a protective mechanism—kids who were suspicious of unfamiliar green foods were more likely to survive. Your child&apos;s rejection of green vegetables isn&apos;t pickiness; it&apos;s ancient biology doing its job.
+            Children are naturally cautious about green foods because many poisonous plants in nature are green. This evolved as a protective mechanism. Kids who were suspicious of unfamiliar green foods were more likely to survive. Your child&apos;s rejection of green vegetables isn&apos;t pickiness; it&apos;s ancient biology doing its job.
           </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Professional Kitchen Reality</strong>{' '}
-            In many restaurant kitchens, chefs know not to garnish kids&apos; plates because the garnish is usually green—parsley, chives, microgreens. Adding that green garnish can make a kid reject an entire dish they would otherwise eat. Experienced chefs learned this through years of watching kids push away perfectly good food simply because of a green sprig on the plate.
+            In many restaurant kitchens, chefs know not to garnish kids&apos; plates because the garnish is usually green: parsley, chives, microgreens. Adding that green garnish can make a kid reject an entire dish they would otherwise eat. Experienced chefs learned this through years of watching kids push away perfectly good food simply because of a green sprig on the plate.
           </p>
 
           <p>
             <strong className="font-semibold text-slate-900">Color Matters More Than You Think</strong>{' '}
-            Children&apos;s food avoidance is based heavily on perceptual properties: color, texture, smell, and taste. Green signals &quot;unfamiliar plant&quot; to a child&apos;s brain, triggering instinctive rejection. This is why kids might eat orange vegetables (carrots, sweet potatoes) more readily than green ones—orange doesn&apos;t trigger the same evolutionary warning system.
+            Children&apos;s food avoidance is based heavily on perceptual properties: color, texture, smell, and taste. Green signals &quot;unfamiliar plant&quot; to a child&apos;s brain, triggering instinctive rejection. This is why kids might eat orange vegetables (carrots, sweet potatoes) more readily than green ones. Orange doesn&apos;t trigger the same evolutionary warning system.
           </p>
 
           <h2>How Most People Ruin Broccoli</h2>
@@ -233,7 +233,7 @@ export default function WhyChildrenHateBroccoliPage() {
           </ol>
 
           <p>
-            <strong>The Secret:</strong> Wait until you see brown, crispy edges. That&apos;s caramelization—and that&apos;s what makes it taste good.
+            <strong>The Secret:</strong> Wait until you see brown, crispy edges. That&apos;s caramelization, and that&apos;s what makes it taste good.
           </p>
 
           <h3>Method #2: Quick Blanching + Ice Bath</h3>
@@ -329,7 +329,7 @@ export default function WhyChildrenHateBroccoliPage() {
           </p>
           <ol>
             <li>Their biology makes it taste more bitter to them</li>
-            <li>You&apos;re probably overcooking it (no judgment—everyone does)</li>
+            <li>You&apos;re probably overcooking it (no judgment, everyone does)</li>
             <li>Texture and smell matter more to kids than adults</li>
             <li>Pressure creates resistance</li>
           </ol>
@@ -340,12 +340,12 @@ export default function WhyChildrenHateBroccoliPage() {
           <ul>
             <li><strong>Roast until crispy and browned</strong> (high heat, olive oil, don&apos;t skip the salt)</li>
             <li><strong>Stop overcooking</strong> (4 minutes steaming max, or better yet, roast it)</li>
-            <li><strong>Add flavor</strong> (Parmesan, garlic, lemon—don&apos;t serve it plain)</li>
+            <li><strong>Add flavor</strong> (Parmesan, garlic, lemon). Don&apos;t serve it plain</li>
             <li><strong>Remove pressure</strong> (offer it, model enjoyment, let time do the work)</li>
           </ul>
 
           <p>
-            At Purple Café, we served hundreds of kids every week. The kids who &quot;hated broccoli&quot; at home would eat ours. The difference wasn&apos;t the kids—it was the cooking.
+            At Purple Café, we served hundreds of kids every week. The kids who &quot;hated broccoli&quot; at home would eat ours. The difference wasn&apos;t the kids. It was the cooking.
           </p>
 
           <p>

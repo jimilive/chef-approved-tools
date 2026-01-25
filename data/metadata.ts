@@ -3560,7 +3560,7 @@ export const METADATA = {
       testingPeriod: "10 Years Testing",
       productSlug: "nordic-ware-half-sheet-pan",
       publishedTime: "2025-10-12T10:00:00Z",
-      modifiedTime: "2026-01-01T10:00:00Z",
+      modifiedTime: "2026-01-25T10:00:00Z",
       searchIntent: "transactional",
       conversionPotential: "high",
       affiliateProgram: "amazon",

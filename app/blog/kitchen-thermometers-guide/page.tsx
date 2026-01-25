@@ -418,7 +418,7 @@ export default function KitchenThermometersGuidePage() {
                   ) : (
                     tool.name
                   )}
-                  {' — '}{tool.description}
+                  {': '}{tool.description}
                 </li>
               ))}
             </ul>

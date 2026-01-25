@@ -11,7 +11,7 @@ export const pepperData = {
       },
       {
         question: "How long do whole peppercorns stay fresh?",
-        answer: "Whole peppercorns maintain quality for years when stored properly in an airtight container away from light and heat. However, their aromatic oils gradually diminish over time. For optimal flavor, buy quantities you'll use within six months to a year."
+        answer: "Whole peppercorns maintain quality for years when stored properly in an airtight container away from light and heat. However, their aromatic oils gradually diminish over time. For best flavor, buy quantities you'll use within six months to a year."
       },
       {
         question: "What is the difference between black, white, and green peppercorns?",
