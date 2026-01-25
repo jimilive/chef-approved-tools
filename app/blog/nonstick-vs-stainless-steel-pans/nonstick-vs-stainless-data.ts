@@ -16,9 +16,9 @@ export const comparisonData = {
   hero: {
     title: "Nonstick vs Stainless Steel Pans: Which Should You Buy?",
     introduction: [
-      "The nonstick versus stainless steel debate centers on convenience versus performance. Nonstick pans require minimal oil, release food effortlessly, and clean in seconds. Stainless steel pans develop fond (browned bits) that create complex sauces, tolerate high heat fearlessly, and last decades. Both belong in serious kitchens for different purposes.",
+      "The nonstick versus stainless steel debate centers on convenience versus performance. Nonstick pans require minimal oil, release food easily, and clean in seconds. Stainless steel pans develop fond (browned bits) that create complex sauces, tolerate high heat fearlessly, and last decades. Both belong in serious kitchens for different purposes.",
       "Nonstick pans excel at delicate proteins, eggs, and anything prone to sticking. They also deteriorate within 1-5 years, can't handle high heat safely, and don't brown food properly. Stainless steel pans reward technique with restaurant-quality fond development, browning, and sauce building. They require cooking skill, proper preheating, and acceptance that food will stick if you don't know what you're doing.",
-      "This comprehensive comparison breaks down when each pan type excels, coating durability realities, heat tolerance differences, cleaning requirements, and honest assessments of what you actually need. You'll understand exactly which pan type matches your cooking style and skill level, or whether you need both."
+      "This comparison breaks down when each pan type excels, coating durability realities, heat tolerance differences, cleaning requirements, and honest assessments of what you actually need. You'll understand exactly which pan type matches your cooking style and skill level, or whether you need both."
     ]
   },
 
@@ -136,16 +136,16 @@ export const comparisonData = {
           option: "stainlessSteel",
           title: "Stainless Steel: Bare Metal Surface",
           content: [
-            "Stainless steel pans have no coating—just polished 18/10 stainless steel (18% chromium, 10% nickel). The surface is relatively smooth but at a microscopic level has peaks and valleys where food can stick.",
+            "Stainless steel pans have no coating, just polished 18/10 stainless steel (18% chromium, 10% nickel). The surface is relatively smooth but at a microscopic level has peaks and valleys where food can stick.",
             "**Why Stainless Steel Sticks:**",
             "Food proteins bond to the steel surface when they contact it. Proper preheating and adequate fat create a barrier between food and steel. With correct technique, proteins initially stick, then release naturally once seared (the \"it'll release when it's ready\" principle).",
             "**The Clad Construction:**",
-            "Quality stainless steel pans (All-Clad, Demeyere, Made In) use \"clad\" construction—layers of stainless steel sandwiching aluminum or copper core. This creates even heat distribution while maintaining stainless steel cooking surface.",
+            "Quality stainless steel pans (All-Clad, Demeyere, Made In) use \"clad\" construction: layers of stainless steel sandwiching aluminum or copper core. This creates even heat distribution while maintaining stainless steel cooking surface.",
             "**All-Clad D3 Construction:**",
             "- Interior: 18/10 stainless steel (cooking surface)",
             "- Core: Aluminum (heat distribution)",
             "- Exterior: Magnetic stainless steel (induction compatible)",
-            "This tri-ply construction heats evenly and responds to temperature changes quickly—critical for professional cooking."
+            "This tri-ply construction heats evenly and responds to temperature changes quickly, critical for professional cooking."
           ]
         }
       ]
@@ -162,7 +162,7 @@ export const comparisonData = {
             "- PTFE nonstick: Maximum 400-450°F (manufacturer dependent)",
             "- Ceramic nonstick: Maximum 400-500°F (claims often overstated)",
             "**What Happens Above 450°F:**",
-            "PTFE begins breaking down around 500°F, releasing fumes that are unpleasant and potentially harmful. Birds are especially sensitive—bird owners must avoid overheating nonstick pans.",
+            "PTFE begins breaking down around 500°F, releasing fumes that are unpleasant and potentially harmful. Birds are especially sensitive. Bird owners must avoid overheating nonstick pans.",
             "**Preheating Danger:**",
             "Empty nonstick pans heated on high burners can exceed 500°F in 2-3 minutes. Pans can be damaged by forgetting them on high heat while prepping ingredients.",
             "**Professional Constraints:**",
@@ -180,7 +180,7 @@ export const comparisonData = {
           title: "Stainless Steel: Heat Fearless",
           content: [
             "**Temperature Range:**",
-            "Stainless steel handles any heat source safely—stovetop, oven (up to 600°F+), broiler, grill. No coating means no degradation concerns.",
+            "Stainless steel handles any heat source safely: stovetop, oven (up to 600°F+), broiler, grill. No coating means no degradation concerns.",
             "**High-Heat Searing:**",
             "Professional kitchens sear steaks in stainless steel pans heated to 500-550°F. The pans handle it effortlessly, developing deep brown crust on proteins. This high-heat capability is essential for restaurant cooking.",
             "**Oven Finishing:**",
@@ -210,9 +210,9 @@ export const comparisonData = {
             "6. Add fillings, fold, slide onto plate",
             "Time: 3-4 minutes, zero sticking",
             "**The Convenience:**",
-            "Even beginner cooks produce perfect eggs in nonstick pans. No special technique required—just don't overheat the pan.",
+            "Even beginner cooks produce perfect eggs in nonstick pans. No special technique required. Just don't overheat the pan.",
             "**Browning Limitations:**",
-            "Nonstick pans can brown food, but with limitations. Can't safely exceed 450°F, limiting maximum browning temperature. Professional searing happens at 500-550°F—impossible safely in nonstick. Additionally, nonstick surfaces seem to trap moisture between food and pan, creating steam that interferes with crispy browning."
+            "Nonstick pans can brown food, but with limitations. Can't safely exceed 450°F, limiting maximum browning temperature. Professional searing happens at 500-550°F, impossible safely in nonstick. Additionally, nonstick surfaces seem to trap moisture between food and pan, creating steam that interferes with crispy browning."
           ]
         },
         {
@@ -227,7 +227,7 @@ export const comparisonData = {
             "3. Reduce heat to medium-low",
             "4. Pour beaten eggs immediately",
             "5. Use silicone spatula to prevent sticking",
-            "6. Work quickly—eggs cook faster on preheated steel",
+            "6. Work quickly. Eggs cook faster on preheated steel",
             "Time: 3-4 minutes, requires attention and practice",
             "**Fond Development: Stainless Steel's Advantage**",
             "Fond is the browned bits stuck to the pan after searing meat or vegetables. These bits contain concentrated flavor compounds (Maillard reaction products) that become the base for pan sauces.",
@@ -267,7 +267,7 @@ export const comparisonData = {
             "- Discoloration that doesn't clean off",
             "- Rough texture where coating has worn",
             "**The Economics:**",
-            "Nonstick pans are consumable. Budget accordingly—you'll buy 10-20 nonstick pans during your cooking lifetime versus 1-2 stainless steel pans.",
+            "Nonstick pans are consumable. Budget accordingly. You'll buy 10-20 nonstick pans during your cooking lifetime versus 1-2 stainless steel pans.",
             "**Cleaning: Gentle Required**",
             "- Let pan cool (don't shock hot nonstick with cold water)",
             "- Hand wash with soft sponge and mild dish soap",
@@ -285,7 +285,7 @@ export const comparisonData = {
           title: "Stainless Steel: Lifetime Cookware",
           content: [
             "**Expected Lifespan:**",
-            "Quality stainless steel lasts 20-40+ years with proper care. Some cooks use their parents' or grandparents' All-Clad—the pans don't wear out.",
+            "Quality stainless steel lasts 20-40+ years with proper care. Some cooks use their parents' or grandparents' All-Clad. The pans don't wear out.",
             "**Why Stainless Steel Lasts:**",
             "No coating to degrade. The steel surface can be scrubbed aggressively, heated to extreme temperatures, and used heavily without damage. Minor scratches don't affect performance.",
             "**Failure Modes (rare):**",
@@ -301,9 +301,9 @@ export const comparisonData = {
             "- Dry to prevent water spots",
             "Time: 3-5 minutes (more if food is badly stuck)",
             "**Cleaning Freedom:**",
-            "You can scrub stainless steel aggressively. Steel wool, abrasive cleaners, dishwasher—nothing damages the surface. This freedom means you can attack stuck food without worrying about damage.",
+            "You can scrub stainless steel aggressively. Steel wool, abrasive cleaners, dishwasher. Nothing damages the surface. This freedom means you can attack stuck food without worrying about damage.",
             "**Bar Keeper's Friend:**",
-            "This oxalic acid cleanser removes discoloration, stuck-on food, and restores shine. Use monthly on stainless steel pans—they look nearly new after treatment."
+            "This oxalic acid cleanser removes discoloration, stuck-on food, and restores shine. Use monthly on stainless steel pans. They look nearly new after treatment."
           ]
         }
       ]
@@ -386,7 +386,7 @@ export const comparisonData = {
       },
       {
         question: "How long do nonstick pans actually last?",
-        answer: "1-5 years depending on use frequency and care. Daily use with proper care: 2-3 years. Occasional use: 3-5 years. Rough use (metal utensils, high heat, dishwasher): 1-2 years. Nonstick is consumable cookware—budget for regular replacement."
+        answer: "1-5 years depending on use frequency and care. Daily use with proper care: 2-3 years. Occasional use: 3-5 years. Rough use (metal utensils, high heat, dishwasher): 1-2 years. Nonstick is consumable cookware. Budget for regular replacement."
       },
       {
         question: "Why is stainless steel cookware so expensive?",
@@ -394,7 +394,7 @@ export const comparisonData = {
       },
       {
         question: "Can I make pan sauces in nonstick pans?",
-        answer: "No. Pan sauces require fond (browned bits stuck to pan). Nonstick's slippery surface prevents fond formation. For deglazing and sauce-making, stainless steel is essential. This is why professional kitchens use stainless steel for sautés—sauce quality depends on fond."
+        answer: "No. Pan sauces require fond (browned bits stuck to pan). Nonstick's slippery surface prevents fond formation. For deglazing and sauce-making, stainless steel is essential. This is why professional kitchens use stainless steel for sautés. Sauce quality depends on fond."
       },
       {
         question: "Which is better for cooking fish?",

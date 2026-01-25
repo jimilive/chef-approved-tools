@@ -132,7 +132,7 @@ export async function getSheetPanComparison() {
       { label: 'Price Tier', field: 'priceTier', format: 'priceTier' },
       { label: 'Best For', field: 'bestFor' },
     ],
-    trustMessage: 'I\'ve owned 4 Nordic Ware half sheet pans for over 10 years. This comparison reflects real kitchen experience, not just spec sheets. The USA Pan warping issue is well-documented in reviews—I recommend Nordic Ware for anyone wanting a pan that lasts a lifetime.',
+    trustMessage: 'I\'ve owned 4 Nordic Ware half sheet pans for over 10 years. This comparison reflects real kitchen experience, not just spec sheets. The USA Pan warping issue is well-documented in reviews. I recommend Nordic Ware for anyone wanting a pan that lasts a lifetime.',
   }
 }
 

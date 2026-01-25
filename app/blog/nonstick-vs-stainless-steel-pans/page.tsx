@@ -113,7 +113,7 @@ export default function NonstickVsStainlessSteelComparison() {
             </div>
             <div className="mt-8 bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-lg">
               <p className="text-slate-700 leading-relaxed">
-                <strong>Professional Perspective:</strong> Professional kitchens maintain both types. Nonstick for breakfast service (eggs, delicate fish) where convenience matters. Stainless steel for everything else—sautés, pan sauces, searing—where browning and fond development are essential. Many serious home cooks adopt this same approach: 10-inch nonstick for eggs and delicate proteins, 12-inch stainless steel for searing and sauce-making. Together they cover all cooking scenarios optimally.
+                <strong>Professional Perspective:</strong> Professional kitchens maintain both types. Nonstick for breakfast service (eggs, delicate fish) where convenience matters. Stainless steel for everything else (sautés, pan sauces, searing) where browning and fond development are essential. Many serious home cooks adopt this same approach: 10-inch nonstick for eggs and delicate proteins, 12-inch stainless steel for searing and sauce-making. Together they cover all cooking scenarios optimally.
               </p>
             </div>
           </section>

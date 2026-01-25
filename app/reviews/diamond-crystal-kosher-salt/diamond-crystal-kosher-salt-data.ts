@@ -9,7 +9,7 @@ export const reviewData = {
   // Metadata
   metadata: {
     title: 'Diamond Crystal Kosher Salt: Why Every Restaurant Uses This ($5)',
-    description: '18 years in professional kitchens—this is the salt. Diamond Crystal\'s flaky texture gives perfect seasoning control. The $5 box that lasts months.',
+    description: '18 years in professional kitchens. This is the salt. Diamond Crystal\'s flaky texture gives perfect seasoning control. The $5 box that lasts months.',
     ogTitle: 'Diamond Crystal Kosher Salt: 18-Year Professional Review',
     ogDescription: '18 years professional and home use. Industry standard for chefs',
     testingPeriod: '18 Years Testing',
@@ -71,7 +71,7 @@ export const reviewData = {
       linkHref: '/review-tiers'
     },
     verdict: `For 6 years at Purple Café, a 200+ cover restaurant, Diamond Crystal Kosher Salt was the only salt we used in the kitchen. Cases of it. Monthly deliveries. Every station had a container within reach. Why? Because when you're seasoning hundreds of plates per service, you need salt that's predictable, fast to pinch, and clean-tasting every time.`,
-    verdictStrong: `Eighteen years later, it's still the only salt in my home kitchen. That's 18 years of continuous use—from 2007 to today—both professionally and at home. I've never found a reason to switch.`,
+    verdictStrong: `Eighteen years later, it's still the only salt in my home kitchen. That's 18 years of continuous use, from 2007 to today, both professionally and at home. I've never found a reason to switch.`,
     ctaText: 'Check Price on Amazon →',
   },
 
@@ -81,15 +81,15 @@ export const reviewData = {
     sections: [
       {
         title: 'Six Years in a 200+ Cover Restaurant',
-        content: `At Purple Café, Diamond Crystal wasn't just preferred—it was required. Every prep station and every line cook used it exclusively from 2007-2012. We went through cases every month. Seasoning proteins before searing. Pasta water. Vegetable prep. Finishing plates at expo. Brines for poultry. Every dish that left the kitchen was seasoned with Diamond Crystal.\n\n**Why the mandate?** In a professional kitchen serving 200+ guests nightly, seasoning must be:\n\n**Predictable:** Same crystal size means consistent results across all cooks\n**Fast:** Large flakes are easy to pinch while plating during rush\n**Clean:** No bitter or metallic notes to compete with food flavors\n**Reliable:** Works the same at 7am prep and 10pm cleanup\n\nFor 6 years, this salt seasoned thousands of dishes. Zero complaints. Zero inconsistencies. Zero reasons to switch.`
+        content: `At Purple Café, Diamond Crystal wasn't just preferred. It was required. Every prep station and every line cook used it exclusively from 2007-2012. We went through cases every month. Seasoning proteins before searing. Pasta water. Vegetable prep. Finishing plates at expo. Brines for poultry. Every dish that left the kitchen was seasoned with Diamond Crystal.\n\n**Why the mandate?** In a professional kitchen serving 200+ guests nightly, seasoning must be:\n\n**Predictable:** Same crystal size means consistent results across all cooks\n**Fast:** Large flakes are easy to pinch while plating during rush\n**Clean:** No bitter or metallic notes to compete with food flavors\n**Reliable:** Works the same at 7am prep and 10pm cleanup\n\nFor 6 years, this salt seasoned thousands of dishes. Zero complaints. Zero inconsistencies. Zero reasons to switch.`
       },
       {
         title: '18 Years at Home (Since 2007)',
-        content: `I started using Diamond Crystal at home in 2007—the same year I started at Purple Café. When I left the restaurant in 2012, the salt came with me. Eighteen years later (2007-2025), it's still the only salt I buy. Same recognizable box on my counter. Same predictable crystals. Same clean flavor.\n\nI've tested expensive finishing salts like Maldon and fleur de sel. Tried Morton's for comparison. Experimented with various sea salts. Always come back to Diamond Crystal. Eighteen years of daily use—overlapping with professional use and continuing long after—and I've never found anything better for everyday cooking.`
+        content: `I started using Diamond Crystal at home in 2007, the same year I started at Purple Café. When I left the restaurant in 2012, the salt came with me. Eighteen years later (2007-2025), it's still the only salt I buy. Same recognizable box on my counter. Same predictable crystals. Same clean flavor.\n\nI've tested expensive finishing salts like Maldon and fleur de sel. Tried Morton's for comparison. Experimented with various sea salts. Always come back to Diamond Crystal. Eighteen years of daily use, overlapping with professional use and continuing long after, and I've never found anything better for everyday cooking.`
       },
       {
         title: 'The Perfect Pinchability Factor',
-        content: `Diamond Crystal is made using the Alberger process, which creates hollow, pyramid-shaped crystals. This unique structure makes the salt lighter and fluffier than other kosher salts—about half the density of Morton's.\n\n**What this means in practice:**\n• Easier to control when pinching\n• Dissolves faster on food\n• More forgiving if you slightly over-season\n• Different volume-to-weight ratio than Morton's (important for recipes)\n\nThe large, flat crystals are easy to grab and sprinkle with precision. No clumping, no moisture absorption. Season by feel, not by measuring spoons—the way professional chefs work.`
+        content: `Diamond Crystal is made using the Alberger process, which creates hollow, pyramid-shaped crystals. This unique structure makes the salt lighter and fluffier than other kosher salts (about half the density of Morton's).\n\n**What this means in practice:**\n• Easier to control when pinching\n• Dissolves faster on food\n• More forgiving if you slightly over-season\n• Different volume-to-weight ratio than Morton's (important for recipes)\n\nThe large, flat crystals are easy to grab and sprinkle with precision. No clumping, no moisture absorption. Season by feel, not by measuring spoons. The way professional chefs work.`
       }
     ],
     testingEnvironment: [
@@ -120,11 +120,11 @@ export const reviewData = {
     sections: [
       {
         title: 'The Crystal Structure Advantage',
-        content: `The Alberger process creates <LINK>Diamond Crystal's</LINK> signature hollow, pyramid-shaped crystals. This isn't just a manufacturing curiosity—it's why this salt works so well in professional kitchens.\n\n**Half the density of Morton's:** The hollow crystals mean you get more volume per weight. 1 tablespoon Diamond Crystal ≈ 1½ teaspoons Morton's. This lighter structure makes it:\n• Easier to pinch precisely\n• Faster to dissolve on food\n• More forgiving if you slightly over-season\n• Better for seasoning by feel rather than measurement\n\n**No clumping:** The crystals stay free-flowing even in humid kitchens. After 6 years at Purple Café—a busy restaurant with steam from pasta stations and dishwashers—the salt never clumped. At home in humid Seattle, same story. It just works.`
+        content: `The Alberger process creates <LINK>Diamond Crystal's</LINK> signature hollow, pyramid-shaped crystals. This isn't just a manufacturing curiosity. It's why this salt works so well in professional kitchens.\n\n**Half the density of Morton's:** The hollow crystals mean you get more volume per weight. 1 tablespoon Diamond Crystal ≈ 1½ teaspoons Morton's. This lighter structure makes it:\n• Easier to pinch precisely\n• Faster to dissolve on food\n• More forgiving if you slightly over-season\n• Better for seasoning by feel rather than measurement\n\n**No clumping:** The crystals stay free-flowing even in humid kitchens. After 6 years at Purple Café (a busy restaurant with steam from pasta stations and dishwashers), the salt never clumped. At home in humid Seattle, same story. It just works.`
       },
       {
         title: 'Zero Additives = Clean Flavor',
-        content: `Unlike many salts, <LINK>Diamond Crystal</LINK> contains no anti-caking agents. Just salt. Pure sodium chloride. This keeps the flavor clean and pure.\n\n**Why this matters:** Anti-caking agents can leave a slight chemical or metallic aftertaste. Most people don't notice it until they taste salt without them. Then it's obvious. Diamond Crystal lets food flavors shine without competing with them.\n\n**In professional kitchens:** When you're building complex flavor profiles—balancing acid, fat, salt, heat—you need every ingredient to be neutral unless it's intentionally featured. Salt should enhance, not distract. Diamond Crystal does exactly that.`
+        content: `Unlike many salts, <LINK>Diamond Crystal</LINK> contains no anti-caking agents. Just salt. Pure sodium chloride. This keeps the flavor clean and pure.\n\n**Why this matters:** Anti-caking agents can leave a slight chemical or metallic aftertaste. Most people don't notice it until they taste salt without them. Then it's obvious. Diamond Crystal lets food flavors shine without competing with them.\n\n**In professional kitchens:** When you're building complex flavor profiles (balancing acid, fat, salt, heat), you need every ingredient to be neutral unless it's intentionally featured. Salt should enhance, not distract. Diamond Crystal does exactly that.`
       },
       {
         title: 'Consistency Across Cooks',
@@ -132,7 +132,7 @@ export const reviewData = {
       },
       {
         title: 'The Volume-to-Weight Conversion Challenge',
-        content: `The biggest learning curve with Diamond Crystal is understanding its unique density. Because the crystals are hollow, the salt is about half as dense as table salt by volume.\n\n**Conversions you need to know:**\n• 1 teaspoon table salt = 2 teaspoons Diamond Crystal\n• 1 tablespoon table salt = 2 tablespoons Diamond Crystal\n• By weight: 1 tsp table salt (6g) = 2 tsp Diamond Crystal (6g)\n\n**For baking:** Weigh your salt rather than measuring by volume. This eliminates conversion errors. For general cooking, start with less and adjust to taste—the forgiving crystal structure makes this easy.`
+        content: `The biggest learning curve with Diamond Crystal is understanding its unique density. Because the crystals are hollow, the salt is about half as dense as table salt by volume.\n\n**Conversions you need to know:**\n• 1 teaspoon table salt = 2 teaspoons Diamond Crystal\n• 1 tablespoon table salt = 2 tablespoons Diamond Crystal\n• By weight: 1 tsp table salt (6g) = 2 tsp Diamond Crystal (6g)\n\n**For baking:** Weigh your salt rather than measuring by volume. This eliminates conversion errors. For general cooking, start with less and adjust to taste. The forgiving crystal structure makes this easy.`
       }
     ]
   },
@@ -170,7 +170,7 @@ export const reviewData = {
     },
     {
       question: "Why do professional chefs use kosher salt?",
-      answer: "Professional chefs prefer kosher salt because the large crystals are easy to pinch and control when seasoning by hand—the way most cooking happens in restaurants. You can feel exactly how much salt you're adding, which is crucial when you're cooking without measuring spoons. The coarse texture also makes it less likely to over-salt. Fine table salt pours too quickly and clumps in humid kitchens. Kosher salt dissolves evenly, has no additives to affect flavor, and provides consistent results across different cooks in the same kitchen. In my 6 years at Purple Café, we never used anything but Diamond Crystal for actual cooking. It's the industry standard for good reason."
+      answer: "Professional chefs prefer kosher salt because the large crystals are easy to pinch and control when seasoning by hand. That's the way most cooking happens in restaurants. You can feel exactly how much salt you're adding, which is crucial when you're cooking without measuring spoons. The coarse texture also makes it less likely to over-salt. Fine table salt pours too quickly and clumps in humid kitchens. Kosher salt dissolves evenly, has no additives to affect flavor, and provides consistent results across different cooks in the same kitchen. In my 6 years at Purple Café, we never used anything but Diamond Crystal for actual cooking. It's the industry standard for good reason."
     },
     {
       question: "Can I use Diamond Crystal for baking?",
@@ -178,7 +178,7 @@ export const reviewData = {
     },
     {
       question: "What is the difference between kosher salt and table salt?",
-      answer: "The main differences are crystal size, additives, and how you use them: Crystal size: Kosher salt has large, irregular crystals that are easy to pinch. Table salt is fine and pours from a shaker. Additives: Table salt usually contains iodine (for thyroid health) and anti-caking agents. Kosher salt typically has neither. Density: Table salt is much denser. 1 tablespoon of Diamond Crystal ≈ 1¾ teaspoons of table salt. Flavor: Pure kosher salt tastes cleaner. Table salt can have slight metallic or chemical notes from additives. In professional kitchens, we season by pinching salt from a container, making kosher salt's large crystals essential. At home, I keep both—Diamond Crystal for cooking, fine sea salt for the table."
+      answer: "The main differences are crystal size, additives, and how you use them: Crystal size: Kosher salt has large, irregular crystals that are easy to pinch. Table salt is fine and pours from a shaker. Additives: Table salt usually contains iodine (for thyroid health) and anti-caking agents. Kosher salt typically has neither. Density: Table salt is much denser. 1 tablespoon of Diamond Crystal ≈ 1¾ teaspoons of table salt. Flavor: Pure kosher salt tastes cleaner. Table salt can have slight metallic or chemical notes from additives. In professional kitchens, we season by pinching salt from a container, making kosher salt's large crystals essential. At home, I keep both: Diamond Crystal for cooking, fine sea salt for the table."
     },
     {
       question: "How much Diamond Crystal equals table salt?",
@@ -190,11 +190,11 @@ export const reviewData = {
     },
     {
       question: "Does Diamond Crystal have iodine?",
-      answer: "No, Diamond Crystal Kosher Salt does not contain iodine. It's pure salt with no additives—no iodine, no anti-caking agents, nothing but sodium chloride. If you need iodine in your diet (important for thyroid function), you have a few options: Get iodine from other sources like seafood, dairy, or eggs; take an iodine supplement; use iodized table salt for finishing or at the table; keep both types—Diamond Crystal for cooking, iodized salt for the table. Most people who eat a varied diet get adequate iodine without iodized salt. But if you cook everything from scratch and don't eat much seafood or dairy, consider your iodine intake."
+      answer: "No, Diamond Crystal Kosher Salt does not contain iodine. It's pure salt with no additives: no iodine, no anti-caking agents, nothing but sodium chloride. If you need iodine in your diet (important for thyroid function), you have a few options: Get iodine from other sources like seafood, dairy, or eggs; take an iodine supplement; use iodized table salt for finishing or at the table; keep both types (Diamond Crystal for cooking, iodized salt for the table). Most people who eat a varied diet get adequate iodine without iodized salt. But if you cook everything from scratch and don't eat much seafood or dairy, consider your iodine intake."
     },
     {
       question: "Why is it called kosher salt?",
-      answer: "The name comes from its traditional use in koshering meat—the Jewish process of removing blood from meat to make it kosher. The large crystals are perfect for drawing out blood and moisture from meat surfaces. Despite the name, kosher salt itself isn't necessarily kosher-certified (though Diamond Crystal is). The term refers to its function in the koshering process, not its religious certification. The name stuck because these coarse salts became popular in professional kitchens for their ease of use, then spread to home cooking. Now when chefs say 'kosher salt,' we're referring to the crystal size and texture, not the religious dietary laws."
+      answer: "The name comes from its traditional use in koshering meat: the Jewish process of removing blood from meat to make it kosher. The large crystals are perfect for drawing out blood and moisture from meat surfaces. Despite the name, kosher salt itself isn't necessarily kosher-certified (though Diamond Crystal is). The term refers to its function in the koshering process, not its religious certification. The name stuck because these coarse salts became popular in professional kitchens for their ease of use, then spread to home cooking. Now when chefs say 'kosher salt,' we're referring to the crystal size and texture, not the religious dietary laws."
     },
     {
       question: "Where can I buy Diamond Crystal Kosher Salt?",
@@ -202,7 +202,7 @@ export const reviewData = {
     },
     {
       question: "How should I store kosher salt?",
-      answer: "Salt doesn't spoil, but proper storage keeps it free-flowing and easy to use: Keep it dry in an airtight container or keep the box closed when not in use, use a salt cellar by the stove for quick access while cooking, avoid moisture—don't use wet hands to grab salt and keep away from steam, store at room temperature—no need to refrigerate. In my home kitchen, I transfer some into a small ceramic salt pig that sits next to the stove. The rest stays in the original box in a cabinet. I refill the salt pig every few weeks. This system has worked perfectly for 18 years. Diamond Crystal doesn't clump as much as Morton's due to the lack of anti-caking agents, but it'll still absorb moisture in very humid environments. If it does clump, break it up with a spoon—it's still perfectly usable."
+      answer: "Salt doesn't spoil, but proper storage keeps it free-flowing and easy to use: Keep it dry in an airtight container or keep the box closed when not in use, use a salt cellar by the stove for quick access while cooking, avoid moisture (don't use wet hands to grab salt and keep away from steam), store at room temperature (no need to refrigerate). In my home kitchen, I transfer some into a small ceramic salt pig that sits next to the stove. The rest stays in the original box in a cabinet. I refill the salt pig every few weeks. This system has worked perfectly for 18 years. Diamond Crystal doesn't clump as much as Morton's due to the lack of anti-caking agents, but it'll still absorb moisture in very humid environments. If it does clump, break it up with a spoon. It's still perfectly usable."
     }
   ],
 
@@ -221,7 +221,7 @@ export const reviewData = {
   // Email Capture
   emailCapture: {
     title: 'Get My Complete Professional Kitchen Essentials Guide',
-    subtitle: 'Download my comprehensive guide to stocking a kitchen like a pro, developed over 24 years in professional kitchens: Essential tools every serious home cook needs, which expensive items are worth it (and which aren\'t), professional techniques for maintaining your equipment, brand recommendations based on restaurant experience, and money-saving tips from 24 years of professional kitchen experience.',
+    subtitle: 'Download my guide to stocking a kitchen like a pro, developed over 24 years in professional kitchens: Essential tools every serious home cook needs, which expensive items are worth it (and which aren\'t), professional techniques for maintaining your equipment, brand recommendations based on restaurant experience, and money-saving tips from 24 years of professional kitchen experience.',
     inputPlaceholder: 'Enter your email',
     buttonText: 'Download Free Guide →',
     finePrint: 'Instant delivery. No spam, ever. Unsubscribe anytime.'
@@ -233,7 +233,7 @@ export const reviewData = {
     paragraphs: [
       `<LINK>Diamond Crystal Kosher Salt</LINK> has earned its place as the only salt I buy. For 6 years at Purple Café, it seasoned thousands of plates without a single complaint. Eighteen years later (starting in 2007), it's still the standard in both my professional memory and my home kitchen.`,
       `The hollow pyramid crystals make it easy to control. The lack of additives keeps the flavor clean. The consistent size means predictable results whether I'm cooking or someone else is following my recipes. It's simply the best all-purpose salt for serious cooking.`,
-      `Is it perfect for everything? No. I keep finishing salts for special occasions and fine sea salt for the table. But for 99% of cooking—from seasoning proteins to pasta water to vegetable prep—<LINK>Diamond Crystal</LINK> is unmatched.`
+      `Is it perfect for everything? No. I keep finishing salts for special occasions and fine sea salt for the table. But for 99% of cooking (seasoning proteins, pasta water, vegetable prep), <LINK>Diamond Crystal</LINK> is unmatched.`
     ],
     ctaUrl: '', // Will be filled by affiliateUrl in page.tsx
     ctaText: 'Check Current Price →'

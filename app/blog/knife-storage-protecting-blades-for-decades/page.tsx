@@ -126,7 +126,7 @@ export default function KnifeStorageProtectionPage() {
           <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-4">
             4. Choose the Right Storage Method for Your Kitchen
           </h3>
-          <p>Every kitchen is different. What works in a professional setting might not work at home. Let&apos;s break down each storage method—pros, cons, and when to use them.</p>
+          <p>Every kitchen is different. What works in a professional setting might not work at home. Let&apos;s break down each storage method: pros, cons, and when to use them.</p>
 
           {storageSection?.storageMethods?.map((method) => (
             <div key={method.id}>

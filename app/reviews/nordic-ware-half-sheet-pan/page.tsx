@@ -435,7 +435,7 @@ export default async function NordicWareHalfSheetPanReview() {
               🔥 Get My 11 Essential Tools for a Professional Kitchen
             </h2>
             <p className="text-lg mb-6 text-orange-50">
-              Download my free guide: The 11 tools I use most in my home kitchen after 45 years of cooking.
+              Download my free guide: The 11 tools I use most in my home kitchen after 24 years of professional kitchen experience.
             </p>
 
             <ul className="space-y-2 mb-6 text-orange-50">

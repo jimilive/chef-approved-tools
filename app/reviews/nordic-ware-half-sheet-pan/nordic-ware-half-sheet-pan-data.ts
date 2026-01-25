@@ -9,7 +9,7 @@ export const reviewData = {
   // METADATA
   metadata: {
     title: "Nordic Ware Sheet Pan: 10 Years, Never Warped (I Own 4 Now)",
-    description: "I own 4 of these. 10 years of roasting, broiling, baking—still perfectly flat. The $20 commercial-grade sheet pan professional bakers choose.",
+    description: "I own 4 of these. 10 years of roasting, broiling, baking. Still perfectly flat. The $20 commercial-grade sheet pan professional bakers choose.",
     ogTitle: "Nordic Ware Half Sheet Pan Review: 10 Years of Testing (2025)",
     ogDescription: "Professional chef tests Nordic Ware half sheet pan for 10 years. Complete review: durability, performance, why it's the baker's choice, comparison to alternatives.",
     testingPeriod: "10 Years of Testing",
@@ -34,7 +34,7 @@ export const reviewData = {
   hero: {
     title: "Nordic Ware Half Sheet Pan Review: 10 Years of Real Kitchen Testing",
     authorName: "Scott Bradley",
-    authorCredentials: "Professional Chef | 45 Years Cooking Experience",
+    authorCredentials: "Professional Chef | 24 Years Professional Kitchen Experience",
     rating: 5.0,
     tierBadge: {
       tier: 2,
@@ -42,7 +42,7 @@ export const reviewData = {
       testingPeriod: "10 Years"
     },
     quickStats: "⭐⭐⭐⭐⭐ 5/5 | Based on 10 years of home kitchen testing\n✓ Natural Aluminum | ✓ 18x13\" | ✓ Commercial Grade",
-    verdict: "After 10 years of regular home use, the Nordic Ware Natural Aluminum Commercial Baker's Half Sheet has proven itself as the single most versatile piece of baking equipment in my kitchen. This isn't just a baking sheet—it's a complete cooking system that handles everything from roasted vegetables to sheet pan dinners to perfectly crispy cookies.",
+    verdict: "After 10 years of regular home use, the Nordic Ware Natural Aluminum Commercial Baker's Half Sheet has proven itself as the single most versatile piece of baking equipment in my kitchen. This isn't just a baking sheet. It's a complete cooking system that handles everything from roasted vegetables to sheet pan dinners to perfectly crispy cookies.",
     verdictStrong: "single most versatile piece of baking equipment",
     ctaText: "Check Amazon Price →"
   },
@@ -51,9 +51,9 @@ export const reviewData = {
   professionalVerdict: {
     title: "Professional Verdict",
     paragraphs: [
-      "After 10 years of regular home use, the Nordic Ware Natural Aluminum Commercial Baker's Half Sheet has proven itself as the single most versatile piece of baking equipment in my kitchen. This isn't just a baking sheet—it's a complete cooking system that handles everything from roasted vegetables to sheet pan dinners to perfectly crispy cookies.",
+      "After 10 years of regular home use, the Nordic Ware Natural Aluminum Commercial Baker's Half Sheet has proven itself as the single most versatile piece of baking equipment in my kitchen. This isn't just a baking sheet. It's a complete cooking system that handles everything from roasted vegetables to sheet pan dinners to perfectly crispy cookies.",
       "The natural aluminum construction delivers exceptional heat distribution without hot spots. After a decade of use, these pans have developed beautiful bronze patina that actually improves their non-stick properties. The 13-gauge thickness prevents warping even under broiler heat. The reinforced steel rim maintains perfect flatness through thousands of heating cycles.",
-      "This is the pan professional bakers choose for commercial kitchens. For serious home cooks, it represents exceptional value—commercial-grade performance at consumer pricing."
+      "This is the pan professional bakers choose for commercial kitchens. For serious home cooks, it represents exceptional value: commercial-grade performance at consumer pricing."
     ],
     perfectFor: "Serious home bakers, anyone roasting vegetables regularly, sheet pan dinner enthusiasts, those wanting commercial-grade equipment, cookie bakers",
     skipIf: "You want dishwasher-safe pans, prefer dark non-stick coating, need smaller size for toaster oven, want pans that stay shiny forever"
@@ -76,7 +76,7 @@ export const reviewData = {
       {
         emoji: "✨",
         title: "Patina Improves Performance",
-        description: "After years of use, natural aluminum develops bronze patina that actually enhances non-stick properties. Don't fight it—embrace it. This is how professional pans age."
+        description: "After years of use, natural aluminum develops bronze patina that actually enhances non-stick properties. Don't fight it. Embrace it. This is how professional pans age."
       },
       {
         emoji: "📐",
@@ -90,10 +90,10 @@ export const reviewData = {
   testingStory: {
     title: "The 10-Year Testing Story",
     paragraphs: [
-      "The Nordic Ware half sheet pan has become as essential to my home cooking as my <LINK>Victorinox chef knife</LINK> and <LINK>John Boos cutting board</LINK>—equipment I reach for daily.",
-      "I purchased my first Nordic Ware half sheet pan in 2015. Within six months, I bought three more. Ten years later, I own four of these pans, and they're in constant rotation—easily the most-used cookware in my kitchen aside from my chef knife.",
+      "The Nordic Ware half sheet pan has become as essential to my home cooking as my <LINK>Victorinox chef knife</LINK> and <LINK>John Boos cutting board</LINK>. It's equipment I reach for daily.",
+      "I purchased my first Nordic Ware half sheet pan in 2015. Within six months, I bought three more. Ten years later, I own four of these pans, and they're in constant rotation. Easily the most-used cookware in my kitchen aside from my chef knife.",
       "These aren't specialty items I pull out for specific tasks. These are everyday workhorse pans that handle 80% of my baking and roasting needs. Sheet pan dinners twice a week. Roasted vegetables three or four times a week. Cookie baking. Toasting nuts. Reheating pizza. Broiling salmon. These pans do it all.",
-      "After 10 years of this constant use—hundreds of heating cycles under broilers, thousands of trips through 400°F+ ovens—my Nordic Ware pans remain perfectly flat with zero warping. The bronze patina that has developed doesn't diminish performance; it enhances it. This is exactly how professional baker's pans should age."
+      "After 10 years of this constant use (hundreds of heating cycles under broilers, thousands of trips through 400°F+ ovens), my Nordic Ware pans remain perfectly flat with zero warping. The bronze patina that has developed doesn't diminish performance; it enhances it. This is exactly how professional baker's pans should age."
     ]
   },
 
@@ -105,14 +105,14 @@ export const reviewData = {
       {
         title: "13-Gauge Commercial Thickness",
         paragraphs: [
-          "Most consumer sheet pans use thin gauge aluminum (16-18 gauge) that warps under high heat. Nordic Ware uses heavy 13-gauge aluminum—the same thickness used in professional bakeries. This extra thickness prevents warping and delivers superior heat distribution.",
-          "The difference is tangible. Place a cheap thin pan and a Nordic Ware side by side—you can feel the weight difference immediately. That weight represents durability and thermal mass that produce consistent results."
+          "Most consumer sheet pans use thin gauge aluminum (16-18 gauge) that warps under high heat. Nordic Ware uses heavy 13-gauge aluminum, the same thickness used in professional bakeries. This extra thickness prevents warping and delivers superior heat distribution.",
+          "The difference is tangible. Place a cheap thin pan and a Nordic Ware side by side. You can feel the weight difference immediately. That weight represents durability and thermal mass that produce consistent results."
         ]
       },
       {
         title: "Reinforced Steel Rim",
         paragraphs: [
-          "The encapsulated steel rim around the edge isn't just aesthetic—it's functional. This reinforcement maintains the pan's rigidity and prevents the edges from warping or bending. After 10 years, my pans' edges are as straight as the day I bought them.",
+          "The encapsulated steel rim around the edge isn't just aesthetic. It's functional. This reinforcement maintains the pan's rigidity and prevents the edges from warping or bending. After 10 years, my pans' edges are as straight as the day I bought them.",
           "Cheap pans often warp at the edges first, creating uneven surfaces that cause liquids to pool. Nordic Ware's reinforced construction eliminates this problem."
         ]
       },
@@ -124,14 +124,14 @@ export const reviewData = {
           "Safe for broiler temperatures that destroy non-stick coatings",
           "Superior heat conduction compared to coated pans",
           "Develops natural patina that improves non-stick properties",
-          "More environmentally friendly—no PTFE or PFOA"
+          "More environmentally friendly (no PTFE or PFOA)"
         ],
         outro: "The natural aluminum surface also provides better browning than dark non-stick pans, which tend to over-brown bottoms while leaving tops pale."
       },
       {
         title: "Made in USA",
         paragraphs: [
-          "Nordic Ware manufactures these pans in Minneapolis, Minnesota. This isn't just a patriotic detail—it represents quality control and manufacturing standards that ensure consistency. Every Nordic Ware pan meets the same specifications that professional bakers depend on."
+          "Nordic Ware manufactures these pans in Minneapolis, Minnesota. This isn't just a patriotic detail. It represents quality control and manufacturing standards that ensure consistency. Every Nordic Ware pan meets the same specifications that professional bakers depend on."
         ]
       }
     ]
@@ -144,7 +144,7 @@ export const reviewData = {
     sections: [
       {
         subtitle: "What Patina Is",
-        content: "Patina is the natural oxidation and seasoning that develops on aluminum surfaces through heat and use. It's similar to the seasoning on cast iron—a polymerized layer of oils and oxidation that creates a protective, slightly non-stick surface."
+        content: "Patina is the natural oxidation and seasoning that develops on aluminum surfaces through heat and use. It's similar to the seasoning on cast iron: a polymerized layer of oils and oxidation that creates a protective, slightly non-stick surface."
       },
       {
         subtitle: "Why Patina Is Desirable",
@@ -158,7 +158,7 @@ export const reviewData = {
       {
         subtitle: "Don't Fight the Patina",
         paragraphs: [
-          "Some users try to restore their pans to shiny silver appearance using harsh cleaners or abrasive scrubbing. This removes the beneficial patina and starts the seasoning process over. Professional bakers never do this—they understand patina is a feature, not a flaw.",
+          "Some users try to restore their pans to shiny silver appearance using harsh cleaners or abrasive scrubbing. This removes the beneficial patina and starts the seasoning process over. Professional bakers never do this. They understand patina is a feature, not a flaw.",
           "My 10-year-old pans have rich bronze patina across their surfaces. This patina has developed gradually through years of use, and it actually improves their performance. Cookies release more easily. Roasted vegetables develop better browning. The pans have become better tools through use."
         ]
       }
@@ -168,19 +168,19 @@ export const reviewData = {
   // SECTION 7: VERSATILITY
   versatility: {
     title: "Versatility: What I Actually Use These Pans For",
-    intro: "For sheet pan dinners and roasted vegetables, this pairs perfectly with quality ingredients and proper technique—similar to how <LINK>Diamond Crystal kosher salt</LINK> elevates every dish.",
+    intro: "For sheet pan dinners and roasted vegetables, this pairs perfectly with quality ingredients and proper technique. Similar to how <LINK>Diamond Crystal kosher salt</LINK> elevates every dish.",
     uses: [
       {
         title: "Roasted Vegetables (Weekly Use)",
-        description: "This is probably the most frequent use. Roasted broccoli, Brussels sprouts, cauliflower, carrots, asparagus, bell peppers—the Nordic Ware handles them all perfectly. The even heat distribution ensures vegetables on the edges brown at the same rate as those in the center. No hot spots, no burnt corners."
+        description: "This is probably the most frequent use. Roasted broccoli, Brussels sprouts, cauliflower, carrots, asparagus, bell peppers. The Nordic Ware handles them all perfectly. The even heat distribution ensures vegetables on the edges brown at the same rate as those in the center. No hot spots, no burnt corners."
       },
       {
         title: "Sheet Pan Dinners (2-3 Times Weekly)",
-        description: "Complete meals on a single pan: chicken thighs with potatoes and vegetables, sausage with peppers and onions, salmon with asparagus. The 18x13\" size accommodates protein and sides for 4 people comfortably. Cleanup is minimal—one pan, one meal, done."
+        description: "Complete meals on a single pan: chicken thighs with potatoes and vegetables, sausage with peppers and onions, salmon with asparagus. The 18x13\" size accommodates protein and sides for 4 people comfortably. Cleanup is minimal. One pan, one meal, done."
       },
       {
         title: "Cookie Baking",
-        description: "The light aluminum surface prevents over-browning that plagues dark non-stick pans. Cookies bake evenly with perfect golden bottoms. The flat surface ensures uniform thickness across all cookies. Batch baking is efficient—one pan in oven, one cooling, one loading."
+        description: "The light aluminum surface prevents over-browning that plagues dark non-stick pans. Cookies bake evenly with perfect golden bottoms. The flat surface ensures uniform thickness across all cookies. Batch baking is efficient: one pan in oven, one cooling, one loading."
       },
       {
         title: "High-Heat Broiling",
@@ -222,7 +222,7 @@ export const reviewData = {
       },
       {
         title: "Embrace the Patina",
-        content: "Don't use harsh cleaners or abrasive scrubbers trying to restore silver shine. The bronze patina is desirable and improves performance. Professional bakers never strip their pans—they understand patina is a feature."
+        content: "Don't use harsh cleaners or abrasive scrubbers trying to restore silver shine. The bronze patina is desirable and improves performance. Professional bakers never strip their pans. They understand patina is a feature."
       },
       {
         title: "Use Parchment When Appropriate",
@@ -238,9 +238,9 @@ export const reviewData = {
   // SECTION 9: WHY MULTIPLE PANS MATTER
   multiplePans: {
     title: "Why Multiple Pans Matter",
-    intro: "I own four Nordic Ware half sheets. This isn't excessive—it's practical:",
+    intro: "I own four Nordic Ware half sheets. This isn't excessive. It's practical:",
     reasons: [
-      "Batch cookie baking: One in oven, one cooling, one loading—continuous workflow",
+      "Batch cookie baking: One in oven, one cooling, one loading. Continuous workflow",
       "Sheet pan dinners: Protein on one pan, vegetables on another, different cooking times",
       "Meal prep: Roast multiple vegetables simultaneously for week's meals",
       "Always have clean pan: One dirty in sink, three clean and ready"
@@ -259,7 +259,7 @@ export const reviewData = {
       },
       {
         question: "Why do Nordic Ware pans turn brown?",
-        answer: "The bronze patina that develops on natural aluminum is normal, expected, and actually improves performance. This isn't damage—it's the pan developing its character. Why patina is good: Creates natural non-stick surface; Indicates proper seasoning from use; Protects the aluminum underneath; Sign of a well-used, professional pan. Professional bakers prefer pans with patina. Don't fight it—embrace it. After 10 years, my pans have beautiful bronze color and perform better than when new."
+        answer: "The bronze patina that develops on natural aluminum is normal, expected, and actually improves performance. This isn't damage. It's the pan developing its character. Why patina is good: Creates natural non-stick surface; Indicates proper seasoning from use; Protects the aluminum underneath; Sign of a well-used, professional pan. Professional bakers prefer pans with patina. Don't fight it. Embrace it. After 10 years, my pans have beautiful bronze color and perform better than when new."
       },
       {
         question: "Can you put Nordic Ware in the dishwasher?",
@@ -275,7 +275,7 @@ export const reviewData = {
       },
       {
         question: "How many Nordic Ware sheet pans do I need?",
-        answer: "Minimum 2, ideally 3-4 half sheet pans for serious home cooking. Why multiple pans matter: Batch cookie baking (one baking, one loading/cooling); Sheet pan dinners with multiple components; Meal prep for the week; One clean pan always available. I own 4 Nordic Ware half sheets after 10 years. They're in constant rotation—easily the most-used pans in my kitchen."
+        answer: "Minimum 2, ideally 3-4 half sheet pans for serious home cooking. Why multiple pans matter: Batch cookie baking (one baking, one loading/cooling); Sheet pan dinners with multiple components; Meal prep for the week; One clean pan always available. I own 4 Nordic Ware half sheets after 10 years. They're in constant rotation. Easily the most-used pans in my kitchen."
       },
       {
         question: "Do you need parchment paper with Nordic Ware?",
@@ -283,7 +283,7 @@ export const reviewData = {
       },
       {
         question: "Nordic Ware vs other sheet pans: what's the difference?",
-        answer: "Having tested various pans over 45 years, here's what sets Nordic Ware apart: vs Cheap pans ($10-15): Warp immediately, uneven heating, thin gauge aluminum, short lifespan. vs Dark non-stick pans: Over-brown bottoms due to dark surface, coating degrades over time, not broiler-safe. vs Stainless steel: Poor heat distribution, hot spots, foods stick more, heavier weight. Nordic Ware advantage: Commercial 13-gauge thickness, warp-resistant, even heat distribution, decades of durability, professional baker's choice."
+        answer: "Having tested various pans over 24 years, here's what sets Nordic Ware apart: vs Cheap pans ($10-15): Warp immediately, uneven heating, thin gauge aluminum, short lifespan. vs Dark non-stick pans: Over-brown bottoms due to dark surface, coating degrades over time, not broiler-safe. vs Stainless steel: Poor heat distribution, hot spots, foods stick more, heavier weight. Nordic Ware advantage: Commercial 13-gauge thickness, warp-resistant, even heat distribution, decades of durability, professional baker's choice."
       }
     ]
   },
@@ -296,7 +296,7 @@ export const reviewData = {
     },
     {
       question: "Why do Nordic Ware pans turn brown?",
-      answer: "The bronze patina that develops on natural aluminum is normal, expected, and actually improves performance. This isn't damage—it's the pan developing its character. Why patina is good: Creates natural non-stick surface; Indicates proper seasoning from use; Protects the aluminum underneath; Sign of a well-used, professional pan. Professional bakers prefer pans with patina. Don't fight it—embrace it. After 10 years, my pans have beautiful bronze color and perform better than when new."
+      answer: "The bronze patina that develops on natural aluminum is normal, expected, and actually improves performance. This isn't damage. It's the pan developing its character. Why patina is good: Creates natural non-stick surface; Indicates proper seasoning from use; Protects the aluminum underneath; Sign of a well-used, professional pan. Professional bakers prefer pans with patina. Don't fight it. Embrace it. After 10 years, my pans have beautiful bronze color and perform better than when new."
     },
     {
       question: "Can you put Nordic Ware in the dishwasher?",
@@ -312,7 +312,7 @@ export const reviewData = {
     },
     {
       question: "How many Nordic Ware sheet pans do I need?",
-      answer: "Minimum 2, ideally 3-4 half sheet pans for serious home cooking. Why multiple pans matter: Batch cookie baking (one baking, one loading/cooling); Sheet pan dinners with multiple components; Meal prep for the week; One clean pan always available. I own 4 Nordic Ware half sheets after 10 years. They're in constant rotation—easily the most-used pans in my kitchen."
+      answer: "Minimum 2, ideally 3-4 half sheet pans for serious home cooking. Why multiple pans matter: Batch cookie baking (one baking, one loading/cooling); Sheet pan dinners with multiple components; Meal prep for the week; One clean pan always available. I own 4 Nordic Ware half sheets after 10 years. They're in constant rotation. Easily the most-used pans in my kitchen."
     },
     {
       question: "Do you need parchment paper with Nordic Ware?",
@@ -320,7 +320,7 @@ export const reviewData = {
     },
     {
       question: "Nordic Ware vs other sheet pans: what's the difference?",
-      answer: "Having tested various pans over 45 years, here's what sets Nordic Ware apart: vs Cheap pans ($10-15): Warp immediately, uneven heating, thin gauge aluminum, short lifespan. vs Dark non-stick pans: Over-brown bottoms due to dark surface, coating degrades over time, not broiler-safe. vs Stainless steel: Poor heat distribution, hot spots, foods stick more, heavier weight. Nordic Ware advantage: Commercial 13-gauge thickness, warp-resistant, even heat distribution, decades of durability, professional baker's choice."
+      answer: "Having tested various pans over 24 years, here's what sets Nordic Ware apart: vs Cheap pans ($10-15): Warp immediately, uneven heating, thin gauge aluminum, short lifespan. vs Dark non-stick pans: Over-brown bottoms due to dark surface, coating degrades over time, not broiler-safe. vs Stainless steel: Poor heat distribution, hot spots, foods stick more, heavier weight. Nordic Ware advantage: Commercial 13-gauge thickness, warp-resistant, even heat distribution, decades of durability, professional baker's choice."
     }
   ],
 
@@ -369,7 +369,7 @@ export const reviewData = {
       { label: "Cleaning Method", value: "Hand wash and dishwasher (despite manufacturer warning)" }
     ],
     outstandingPerformance: [
-      "Pure aluminum construction provides even heat distribution—no hot spots",
+      "Pure aluminum construction provides even heat distribution with no hot spots",
       "Reinforced steel rim prevents warping even at high temperatures",
       "Light color prevents over-browning on cookies and delicate baked goods",
       "Generous 1-inch rim contains liquids and prevents spills",
@@ -377,27 +377,27 @@ export const reviewData = {
       "Standard half-sheet size (18x13 inches) fits all standard home ovens"
     ],
     minorConsiderations: [
-      "Not dishwasher recommended—will develop cosmetic discoloration",
-      "Aluminum reacts with acidic foods (tomatoes, citrus)—avoid prolonged contact",
+      "Not dishwasher recommended (will develop cosmetic discoloration)",
+      "Aluminum reacts with acidic foods (tomatoes, citrus), so avoid prolonged contact",
       "Light color shows staining over time (cosmetic only, doesn't affect performance)",
-      "No non-stick coating—requires parchment paper or silicone mat for easy release"
+      "No non-stick coating, so requires parchment paper or silicone mat for easy release"
     ],
     sections: [
       {
         title: "Heat Distribution Excellence",
-        content: "Pure aluminum is the best common metal for even heat distribution. The Nordic Ware half sheet delivers consistent browning edge-to-edge—no cookies burned on the edges while the center stays pale. In professional kitchens, we tested this against cheaper alternatives. The difference was immediately visible: consistent golden brown on Nordic Ware, uneven results on thin aluminum pans."
+        content: "Pure aluminum is the best common metal for even heat distribution. The Nordic Ware half sheet delivers consistent browning edge-to-edge with no cookies burned on the edges while the center stays pale. In professional kitchens, we tested this against cheaper alternatives. The difference was immediately visible: consistent golden brown on Nordic Ware, uneven results on thin aluminum pans."
       },
       {
         title: "Warp Resistance",
-        content: "Cheap sheet pans warp—that distinctive 'pop' when you put them in a hot oven, leaving a bent pan that rocks and spills. The Nordic Ware's encapsulated steel rim prevents this. After 10+ years of use at temperatures up to 500°F, my pans remain perfectly flat. This isn't marketing—it's the result of commercial-grade construction that America's Test Kitchen and professional chefs have verified repeatedly."
+        content: "Cheap sheet pans warp. That distinctive 'pop' when you put them in a hot oven, leaving a bent pan that rocks and spills. The Nordic Ware's encapsulated steel rim prevents this. After 10+ years of use at temperatures up to 500°F, my pans remain perfectly flat. This isn't marketing. It's the result of commercial-grade construction that America's Test Kitchen and professional chefs have verified repeatedly."
       },
       {
         title: "Versatility Across Cooking Tasks",
-        content: "I use these half sheets for everything: roasting vegetables, baking cookies, toasting nuts, catching drips under pies, as a landing zone for hot items from the oven. The 1-inch rim contains juices from roasting meats without making the pan unwieldy. This is a true workhorse—one piece of equipment that handles 80% of oven tasks."
+        content: "I use these half sheets for everything: roasting vegetables, baking cookies, toasting nuts, catching drips under pies, as a landing zone for hot items from the oven. The 1-inch rim contains juices from roasting meats without making the pan unwieldy. This is a true workhorse. One piece of equipment that handles 80% of oven tasks."
       },
       {
         title: "Longevity and Patina",
-        content: "Aluminum develops a patina with use—my oldest Nordic Ware pans look dark and seasoned, almost like well-used cast iron. This is purely cosmetic and doesn't affect performance. In fact, some bakers prefer seasoned pans for their improved release. If cosmetic perfection matters, use parchment paper. If you want workhorse performance, embrace the patina."
+        content: "Aluminum develops a patina with use. My oldest Nordic Ware pans look dark and seasoned, almost like well-used cast iron. This is purely cosmetic and doesn't affect performance. In fact, some bakers prefer seasoned pans for their improved release. If cosmetic perfection matters, use parchment paper. If you want workhorse performance, embrace the patina."
       }
     ]
   },
@@ -408,11 +408,11 @@ export const reviewData = {
     sections: [
       {
         title: "Why Aluminum Beats Other Materials",
-        content: "Aluminum conducts heat better than stainless steel and more evenly than most non-stick coatings. For baking, this translates to consistent results. Cookies brown evenly, vegetables roast uniformly, sheet pan dinners cook at the same rate across the pan. The light color also matters—dark pans absorb more heat and can over-brown bottoms. Nordic Ware's natural aluminum strikes the right balance."
+        content: "Aluminum conducts heat better than stainless steel and more evenly than most non-stick coatings. For baking, this translates to consistent results. Cookies brown evenly, vegetables roast uniformly, sheet pan dinners cook at the same rate across the pan. The light color also matters. Dark pans absorb more heat and can over-brown bottoms. Nordic Ware's natural aluminum strikes the right balance."
       },
       {
         title: "The Commercial Kitchen Standard",
-        content: "Walk into any professional kitchen and you'll find aluminum half sheet pans—often Nordic Ware or similar commercial brands. These pans survive years of daily abuse: high heat, rapid temperature changes, commercial dishwashers, stacking. The construction that handles restaurant volume easily handles home use. You're buying restaurant-grade equipment at consumer prices."
+        content: "Walk into any professional kitchen and you'll find aluminum half sheet pans, often Nordic Ware or similar commercial brands. These pans survive years of daily abuse: high heat, rapid temperature changes, commercial dishwashers, stacking. The construction that handles restaurant volume easily handles home use. You're buying restaurant-grade equipment at consumer prices."
       },
       {
         title: "Proper Care for Maximum Lifespan",

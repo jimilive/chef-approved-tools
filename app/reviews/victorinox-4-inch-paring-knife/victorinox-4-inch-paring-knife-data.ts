@@ -9,7 +9,7 @@ export const reviewData = {
   // METADATA
   metadata: {
     title: "Victorinox 4\" Paring Knife: 20 Years Since Culinary School ($10)",
-    description: "20 years of detail work, peeling, and trimming. Victorinox 4\" paring knife with Swiss precision at exceptional value—still using the same $10 blade.",
+    description: "20 years of detail work, peeling, and trimming. Victorinox 4\" paring knife with Swiss precision at exceptional value. Still using the same $10 blade.",
     ogTitle: "Victorinox 4\" Paring Knife: 20-Year Professional Review",
     ogDescription: "Victorinox 4\" paring knife tested 20 years. Perfect for detail work.",
     testingPeriod: "20 Years (Including 10 Professional)",
@@ -40,7 +40,7 @@ export const reviewData = {
       icon: "🏆",
       text: "Tier 1: 20+ Years Professional Use"
     },
-    verdict: "You can't do precision work with a chef's knife. This little guy handles everything from garlic to strawberries. Essential for detailed work - peeling, trimming, deveining shrimp. There's no excuse not to have one.",
+    verdict: "You can't do precision work with a chef's knife. This little guy handles everything from garlic to strawberries. Great for detailed work - peeling, trimming, deveining shrimp. There's no excuse not to have one.",
     verdictStrong: "The precision tool for detailed work - tested through 20 years",
     ctaText: "Check Price on Amazon →",
     // Variant sizing information
