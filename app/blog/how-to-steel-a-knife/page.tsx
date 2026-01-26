@@ -219,7 +219,7 @@ export default async function HowToSteelAKnifePage() {
           <ul>
             {whyHoningSection.benefits.map((benefit, index) => (
               <li key={index}>
-                {benefit.icon} <strong>{benefit.label}</strong>—{benefit.description}
+                {benefit.icon} <strong>{benefit.label}</strong>: {benefit.description}
                 {index === 3 && victorinox8Url && victorinox10Url && (
                   <>
                     {' '}like the{' '}
@@ -389,7 +389,7 @@ export default async function HowToSteelAKnifePage() {
             <a href={victorinox8Url} rel="nofollow noopener noreferrer sponsored" target="_blank" className="text-blue-700 underline">
               Victorinox Fibrox Knife
             </a>
-            , and keep that edge chef-sharp—because the best cooks always respect their tools.
+            , and keep that edge chef-sharp, because the best cooks always respect their tools.
           </p>
         </div>
 

@@ -22,7 +22,7 @@ export const educationalData = {
   hero: {
     title: "Caramelization Science: Why Temperature Matters Most",
     introduction: [
-      "Understanding the chemistry of caramelization—and how to use it to create the deep, complex flavors that define professional cooking."
+      "Understanding the chemistry of caramelization, and how to use it to create the deep, complex flavors that define professional cooking."
     ]
   },
 
@@ -31,9 +31,9 @@ export const educationalData = {
       id: "intro",
       title: "",
       content: [
-        "If you've ever wondered why caramelized onions taste nothing like raw onions, or why crème brûlée's sugar crust is so addictive, or why a simple caramel sauce has such complex flavor—you're asking about **caramelization**.",
+        "If you've ever wondered why caramelized onions taste nothing like raw onions, or why crème brûlée's sugar crust is so addictive, or why a simple caramel sauce has such complex flavor: you're asking about **caramelization**.",
         "It's one of the most important chemical reactions in cooking, responsible for some of the deepest, most satisfying flavors in food. But it's also one of the most misunderstood. Home cooks confuse it with the Maillard reaction, rush it, or never get their pans hot enough to make it happen properly.",
-        "After 24 years of professional cooking, I've caramelized thousands of pounds of onions, made hundreds of batches of caramel sauce, and taught countless cooks how to develop flavor through proper caramelization. Let me show you what's really happening when sugar turns golden brown—and how to use this knowledge to create richer, deeper flavors in everything you cook."
+        "After 24 years of professional cooking, I've caramelized thousands of pounds of onions, made hundreds of batches of caramel sauce, and taught countless cooks how to develop flavor through proper caramelization. Let me show you what's really happening when sugar turns golden brown, and how to use this knowledge to create richer, deeper flavors in everything you cook."
       ],
       maillardLink: "/blog/maillard-reaction-browning-flavor"
     },
@@ -48,10 +48,10 @@ export const educationalData = {
         { label: "Aromatic compounds", detail: "That distinctive caramel smell" },
         { label: "Viscosity changes", detail: "Liquid sugar becomes thick, syrup-like" }
       ],
-      clarification: "Unlike the Maillard reaction (which requires proteins), caramelization happens with **pure sugar** and only needs heat. No proteins, no amino acids—just sugar and temperature.",
+      clarification: "Unlike the Maillard reaction (which requires proteins), caramelization happens with **pure sugar** and only needs heat. No proteins, no amino acids, just sugar and temperature.",
       restaurantReality: {
         title: "Restaurant Reality: The 45-Minute Onion Test",
-        content: "At Purple Café in Seattle, one of our line cook interview tests was simple: **caramelize two pounds of onions**. No recipe, no supervision, just you and a pan. Most candidates rushed it—cooked hot and fast, got some color in 15 minutes, and called it done. Those onions were browned on the outside, still raw and sharp inside. They failed. The cooks who got the job? They went low and slow, stirred patiently, and spent 45 minutes building **real** caramelization—soft, jammy onions with deep golden-brown color and sweet, complex flavor throughout. No shortcuts, no burnt bits, no raw harshness. **The lesson:** True caramelization takes time. There's browning, and then there's *caramelization*. Learn the difference and your cooking will level up immediately."
+        content: "At Purple Café in Seattle, one of our line cook interview tests was simple: **caramelize two pounds of onions**. No recipe, no supervision, just you and a pan. Most candidates rushed it, cooked hot and fast, got some color in 15 minutes, and called it done. Those onions were browned on the outside, still raw and sharp inside. They failed. The cooks who got the job? They went low and slow, stirred patiently, and spent 45 minutes building **real** caramelization: soft, jammy onions with deep golden-brown color and sweet, complex flavor throughout. No shortcuts, no burnt bits, no raw harshness. **The lesson:** True caramelization takes time. There's browning, and then there's *caramelization*. Learn the difference and your cooking will level up immediately."
       }
     },
     {
@@ -67,7 +67,7 @@ export const educationalData = {
         {
           number: 2,
           title: "Decomposition (Breaking Apart)",
-          content: "The sugar molecule (usually sucrose, glucose, or fructose) breaks down into smaller fragments—literally hundreds of different compounds."
+          content: "The sugar molecule (usually sucrose, glucose, or fructose) breaks down into smaller fragments, literally hundreds of different compounds."
         },
         {
           number: 3,
@@ -82,7 +82,7 @@ export const educationalData = {
           ]
         }
       ],
-      result: "The result? What started as simple sweetness becomes layered complexity—sweet, bitter, nutty, toasted, butterscotch all at once.",
+      result: "The result? What started as simple sweetness becomes layered complexity: sweet, bitter, nutty, toasted, butterscotch all at once.",
       proTip: {
         title: "Pro Tip: The Pan Temperature Test",
         content: "Want to know if your pan is hot enough for caramelization? Drop a tiny bit of sugar in it. If it melts and starts turning golden within 15-20 seconds, you're at caramelization temperature. If it just melts and stays clear, your pan's too cool. If it turns dark immediately, you're too hot. **Why it matters:** Most home cooks don't get their pans hot enough. They end up steaming and browning ingredients instead of truly caramelizing them. A properly heated pan makes all the difference."
@@ -106,7 +106,7 @@ export const educationalData = {
         flavorProfile: "Savory, roasted, meaty, complex",
         tempThreshold: "280°F minimum"
       },
-      inPractice: "**In practice:** Many dishes involve **both** reactions happening simultaneously. When you caramelize onions, you're getting sugar caramelization (sweet, golden flavor) AND Maillard browning from the onion's amino acids (savory depth). That's why properly caramelized onions taste so complex—two different flavor-building reactions working together."
+      inPractice: "**In practice:** Many dishes involve **both** reactions happening simultaneously. When you caramelize onions, you're getting sugar caramelization (sweet, golden flavor) AND Maillard browning from the onion's amino acids (savory depth). That's why properly caramelized onions taste so complex: two different flavor-building reactions working together."
     },
     {
       id: "takeaway",
@@ -123,14 +123,14 @@ export const educationalData = {
         },
         {
           emphasis: "Natural sugars are enough.",
-          content: "You don't need to add sugar to onions, carrots, or most vegetables. They have plenty naturally—you just need time, heat, and patience to transform them."
+          content: "You don't need to add sugar to onions, carrots, or most vegetables. They have plenty naturally. You just need time, heat, and patience to transform them."
         },
         {
           emphasis: "It's worth the wait.",
           content: "Those 45 minutes of caramelizing onions? That's what separates \"good French onion soup\" from \"the best soup you've ever had.\" The flavor compounds created during real caramelization simply can't be replicated with shortcuts."
         }
       ],
-      experiment: "Next time you cook, try this experiment: Caramelize onions the right way. Low heat, 45 minutes, constant attention. Taste them at 15 minutes (browned), 30 minutes (getting there), and 45 minutes (fully caramelized). You'll immediately understand the difference—and you'll never go back to rushed, undercooked versions.",
+      experiment: "Next time you cook, try this experiment: Caramelize onions the right way. Low heat, 45 minutes, constant attention. Taste them at 15 minutes (browned), 30 minutes (getting there), and 45 minutes (fully caramelized). You'll immediately understand the difference, and you'll never go back to rushed, undercooked versions.",
       closing: "That's the power of understanding caramelization. Welcome to deeper flavor."
     }
   ],
@@ -143,7 +143,7 @@ export const educationalData = {
       },
       {
         question: "What's the difference between caramelizing and burning?",
-        answer: "Caramelization happens at 320-360°F and creates complex sweet-bitter flavors and golden-to-amber color. Burning happens at 365°F+ and creates acrid, harsh, inedible bitterness with black color. The difference is about 10-15 degrees and 30-60 seconds—which is why attention and temperature control matter so much."
+        answer: "Caramelization happens at 320-360°F and creates complex sweet-bitter flavors and golden-to-amber color. Burning happens at 365°F+ and creates acrid, harsh, inedible bitterness with black color. The difference is about 10-15 degrees and 30-60 seconds, which is why attention and temperature control matter so much."
       },
       {
         question: "Do all sugars caramelize the same way?",

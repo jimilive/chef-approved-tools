@@ -9,8 +9,8 @@
 ## HANDOFF FOR NEXT SESSION
 
 ### Current Status
-- **76 pages completed** (22 reviews, 54 blogs)
-- **Next page:** #81 (check priority list for next page)
+- **100 pages completed** (22 reviews, 68 blogs, 10 guides/categories)
+- **Next page:** #101 (check priority list for next page)
 - Priority list location: `/Users/scottbradley/Downloads/pages-by-importance.md`
 
 ### Critical Lessons Learned
@@ -161,6 +161,22 @@
 | 78 | /blog/understanding-acids-cooking | Done | 12 | 1 | Fixed 12 em dashes (11 data, 1 page), 1 AI phrase ("essential"→"matters") |
 | 79 | /blog/what-is-braising | Done | 11 | 0 | Fixed 11 em dashes (all data), kept "11 Essential Tools" PDF title |
 | 80 | /blog/what-is-velveting | Done | 23 | 4 | Fixed 23 em dashes, 4 AI phrases (Essential→Required, essential→necessary, optimal→ideal) |
+| 81 | /knives | Done | 0 | 0 | Clean - kept "Essential Knife Guides" section title |
+| 82 | /guides/best-budget-chef-knife | Done | 1 | 1 | Fixed 1 em dash, 1 PROTECTED VALUE (45→24 years) |
+| 83 | /guides/best-chef-knives | Done | 8 | 0 | Fixed 8 em dashes, kept AI phrases per user request |
+| 84 | /cookware | Done | 0 | 0 | Clean - kept "Essential Cookware Guides" section title |
+| 85 | /guides/best-knife-for-cutting-meat | Done | 0 | 0 | Clean - kept "essential tool" phrases per user request |
+| 86 | /appliances | Done | 0 | 0 | Clean - kept "Essential Appliance Guides" section title |
+| 87 | /moving-stirring | Done | 0 | 0 | Clean - kept "Essential Tool Guides" section title |
+| 88 | /prep-tools | Done | 0 | 0 | Clean - kept "Essential Prep Guides" section title |
+| 89 | /guides/affordable-kitchen-appliances | Done | 13 | 2 | Fixed 13 em dashes, 2 PROTECTED VALUES (45→24 years) |
+| 90 | /guides/best-cookware | Done | 2 | 0 | Fixed 2 em dashes |
+| 91-95 | (completed in previous session) | Done | - | - | - |
+| 96 | /blog/caramelization-science | Done | 11 | 0 | Fixed 11 em dashes |
+| 97 | /blog/how-to-steel-a-knife | Done | 20 | 1 | Fixed 20 em dashes, 1 AI phrase ("transformative"→"necessary") |
+| 98 | /blog/victorinox-budget-vs-wusthof-premium-knives | Done | 12 | 0 | Fixed 12 em dashes |
+| 99 | /blog/what-is-mirepoix | Done | 22 | 0 | Fixed 22 em dashes, kept "essential" phrases |
+| 100 | /blog/deglazing-pan-sauces | Done | 31 | 0 | Fixed 31 em dashes |
 
 ## Patterns Being Checked
 
@@ -364,3 +380,26 @@
   - Page 79 (what-is-braising): 11 em dashes, kept "11 Essential Tools" PDF title (protected)
   - Page 80 (what-is-velveting): 23 em dashes, 4 AI phrases (Essential→Required, essential→necessary, optimal→ideal, essential→necessary)
   - **Total: 68 em dashes fixed, 13 AI phrase fixes**
+- **Batch session: Pages 81-85 (5 category/guide pages)**
+  - Page 81 (/knives): 0 em dashes, kept "Essential Knife Guides" section title
+  - Page 82 (/guides/best-budget-chef-knife): 1 em dash, 1 PROTECTED VALUE (45→24 years)
+  - Page 83 (/guides/best-chef-knives): 8 em dashes → periods, colons
+  - Page 84 (/cookware): 0 em dashes, kept "Essential Cookware Guides" section title
+  - Page 85 (/guides/best-knife-for-cutting-meat): 0 em dashes, kept AI phrases per user request
+  - **Total: 9 em dashes fixed, 1 protected value fix, AI phrases kept per user preference**
+- **Batch session: Pages 86-90 (5 category/guide pages)**
+  - Page 86 (/appliances): 0 em dashes, kept "Essential Appliance Guides"
+  - Page 87 (/moving-stirring): 0 em dashes, kept "Essential Tool Guides"
+  - Page 88 (/prep-tools): 0 em dashes, kept "Essential Prep Guides"
+  - Page 89 (/guides/affordable-kitchen-appliances): 13 em dashes, 2 PROTECTED VALUES (45→24 years)
+  - Page 90 (/guides/best-cookware): 2 em dashes
+  - **Total: 15 em dashes fixed, 2 protected value fixes, AI phrases kept per user preference**
+
+### January 26, 2026
+- **Batch session: Pages 96-100 (5 blog pages)**
+  - Page 96 (/blog/caramelization-science): 11 em dashes → periods, commas, colons
+  - Page 97 (/blog/how-to-steel-a-knife): 20 em dashes (18 data, 2 page), 1 AI phrase ("transformative"→"necessary")
+  - Page 98 (/blog/victorinox-budget-vs-wusthof-premium-knives): 12 em dashes → periods, commas
+  - Page 99 (/blog/what-is-mirepoix): 22 em dashes → periods, commas, colons, parentheses; kept "essential" phrases per user
+  - Page 100 (/blog/deglazing-pan-sauces): 31 em dashes → periods, commas, colons
+  - **Total: 96 em dashes fixed, 1 AI phrase fix**

@@ -17,7 +17,7 @@ export const comparisonData = {
   hero: {
     title: "Victorinox vs Wüsthof: Which Chef's Knife Is Right for You?",
     introduction: [
-      "After 24 years in professional kitchens using both brands, here's my honest comparison. This isn't about which knife is 'better'—it's about which is right for YOUR kitchen, YOUR budget, and YOUR cooking style.",
+      "After 24 years in professional kitchens using both brands, here's my honest comparison. This isn't about which knife is 'better'. It's about which is right for YOUR kitchen, YOUR budget, and YOUR cooking style.",
       "The short answer: Victorinox delivers exceptional performance at a fraction of the price. For most home cooks, that makes it the smarter choice. But Wüsthof's forged construction and superior edge retention earn its premium for cooks who value those qualities."
     ]
   },
@@ -26,7 +26,7 @@ export const comparisonData = {
     victorinoxChoice: {
       title: "Choose Victorinox If:",
       points: [
-        "Budget is a priority—you want professional quality without premium pricing",
+        "Budget is a priority, and you want professional quality without premium pricing",
         "You're a beginner learning proper knife skills",
         "You need a forgiving blade that survives mistakes and abuse",
         "You work in commercial kitchens or high-volume prep",
@@ -116,7 +116,7 @@ export const comparisonData = {
         {
           title: "Lightweight and Nimble",
           content: [
-            "At 5.6 oz, the Victorinox causes significantly less hand fatigue during extended prep sessions. The lighter weight provides more control for detailed work—mincing garlic, chiffonading herbs, or precision vegetable cuts.",
+            "At 5.6 oz, the Victorinox causes significantly less hand fatigue during extended prep sessions. The lighter weight provides more control for detailed work: mincing garlic, chiffonading herbs, or precision vegetable cuts.",
             "Some cooks prefer the heft of a forged knife, but for speed and agility, the Victorinox has a real advantage."
           ]
         },
@@ -151,20 +151,20 @@ export const comparisonData = {
           title: "Heft for Heavy Work",
           content: [
             "The Wüsthof's extra weight (8.5 oz vs 5.6 oz) is an advantage for heavy-duty tasks. When breaking down squash, cutting through chicken joints, or doing work where you want the blade weight to assist, the Wüsthof delivers.",
-            "Some cooks genuinely prefer this substantial feel—it's personal preference, not a flaw."
+            "Some cooks genuinely prefer this substantial feel. It's personal preference, not a flaw."
           ]
         },
         {
           title: "Forged Construction",
           content: [
-            "True forging—heating steel to 2,000°F and hammer-shaping it—creates a different blade character. The full tang extends through the handle for superior weight distribution and balance.",
+            "True forging (heating steel to 2,000°F and hammer-shaping it) creates a different blade character. The full tang extends through the handle for superior weight distribution and balance.",
             "There's a reason forged knives command premium pricing: the manufacturing process is genuinely more complex."
           ]
         },
         {
           title: "Heirloom Quality",
           content: [
-            "A Wüsthof Classic, properly maintained, will outlast you. These knives get passed down through generations. The aesthetic appeal—the triple-riveted handle, the iconic Trident logo, the Solingen heritage—makes it an object worth owning.",
+            "A Wüsthof Classic, properly maintained, will outlast you. These knives get passed down through generations. The aesthetic appeal (the triple-riveted handle, the iconic Trident logo, the Solingen heritage) makes it an object worth owning.",
             "If you view a chef's knife as a lifetime investment rather than a tool, Wüsthof delivers on that promise."
           ]
         }
@@ -177,7 +177,7 @@ export const comparisonData = {
         {
           title: "My Experience with Both",
           content: [
-            "I've used both brands in professional settings—the Wüsthof Classic at Feierabend and Purple Café, the Victorinox extensively across all five kitchens over 20+ years.",
+            "I've used both brands in professional settings: the Wüsthof Classic at Feierabend and Purple Café, the Victorinox extensively across all five kitchens over 20+ years.",
             "The Victorinox became my daily workhorse. It's the knife I grab without thinking for the vast majority of tasks. The lighter weight, easy sharpening, and nimble feel just work better for my style."
           ]
         },
@@ -185,14 +185,14 @@ export const comparisonData = {
           title: "The Bolster Issue",
           content: [
             "My main critique of the Wüsthof Classic is the full bolster. It looks traditional and provides a finger guard, but it interferes with sharpening the heel of the blade. Over years of use, you can develop an uneven edge near the bolster.",
-            "This isn't a dealbreaker—many cooks love the bolster for the finger protection and classic feel. But it's worth knowing before you buy."
+            "This isn't a dealbreaker. Many cooks love the bolster for the finger protection and classic feel. But it's worth knowing before you buy."
           ]
         },
         {
           title: "When I Reached for the Wüsthof",
           content: [
             "The Wüsthof earned its place for heavier tasks where blade weight helps. Breaking down squash, portioning large cuts, anything where I wanted the knife to do some of the work through sheer mass.",
-            "For everyday prep—onions, garlic, herbs, vegetables—I consistently preferred the Victorinox."
+            "For everyday prep (onions, garlic, herbs, vegetables) I consistently preferred the Victorinox."
           ]
         }
       ]
@@ -219,7 +219,7 @@ export const comparisonData = {
           title: "The Honest Bottom Line",
           content: [
             "After 24 years using both brands in professional kitchens, the Victorinox is my preference for everyday use. It's lighter, easier to sharpen, and delivers professional performance at a fraction of the price.",
-            "But I won't bash the Wüsthof—it's a quality knife with real advantages for cooks who value edge retention and heft. The right choice depends on YOUR priorities, not mine.",
+            "But I won't bash the Wüsthof. It's a quality knife with real advantages for cooks who value edge retention and heft. The right choice depends on YOUR priorities, not mine.",
             "My recommendation: Start with the Victorinox. If you find yourself wanting more weight and longer edge retention, try a Wüsthof knowing exactly what you're trading off."
           ]
         }
@@ -237,7 +237,7 @@ export const comparisonData = {
         "Swiss-made high-carbon stainless steel",
         "NSF certified for commercial use",
         "Fibrox handle for secure wet grip",
-        "No bolster—easy full-blade sharpening",
+        "No bolster, easy full-blade sharpening",
         "Lifetime warranty"
       ]
     },

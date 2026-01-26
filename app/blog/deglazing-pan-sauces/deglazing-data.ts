@@ -31,15 +31,15 @@ export const educationalData = {
       id: "intro",
       title: "",
       content: [
-        "Every chef remembers the first time they really understood deglazing. That moment when you pour wine or stock into a hot pan, and it explodes into steam with that hiss of pure magic — lifting every browned bit of flavor from the surface and turning it into gold.",
-        "That sound, that smell — it's the moment your food crosses from \"cooked\" to \"restaurant-worthy.\"",
+        "Every chef remembers the first time they really understood deglazing. That moment when you pour wine or stock into a hot pan, and it explodes into steam with that hiss of pure magic, lifting every browned bit of flavor from the surface and turning it into gold.",
+        "That sound, that smell. It's the moment your food crosses from \"cooked\" to \"restaurant-worthy.\"",
         "Most home cooks serve meat straight from the pan and call it done. They've worked hard to get a good sear, the protein is perfectly cooked, and they think that's the end.",
         "**They're missing the best part.**",
-        "All those browned bits stuck to the pan—that concentrated, caramelized protein and fat—is called fond, and it's pure flavor. Deglazing releases that flavor into a sauce that takes 2-3 minutes and transforms ordinary meat into something memorable."
+        "All those browned bits stuck to the pan (that concentrated, caramelized protein and fat) is called fond, and it's pure flavor. Deglazing releases that flavor into a sauce that takes 2-3 minutes and transforms ordinary meat into something memorable."
       ],
       restaurantReality: {
         title: "Restaurant Reality",
-        content: "At Purple Cafe in Seattle, every single protein that came off the line got a pan sauce—chicken, steak, pork, fish, lamb. We'd sear the meat, pull it to rest, and in the same pan we'd build a sauce in 90 seconds: wine, stock, butter, done. That's it. The brown bits stuck to the pan (fond) contained more concentrated flavor than anything we could add. Home cooks throw away this liquid gold by serving meat straight from the pan or—worse—washing the pan immediately. Learning to deglaze and make pan sauces is the fastest way to make your cooking taste restaurant-quality."
+        content: "At Purple Cafe in Seattle, every single protein that came off the line got a pan sauce: chicken, steak, pork, fish, lamb. We'd sear the meat, pull it to rest, and in the same pan we'd build a sauce in 90 seconds: wine, stock, butter, done. That's it. The brown bits stuck to the pan (fond) contained more concentrated flavor than anything we could add. Home cooks throw away this liquid gold by serving meat straight from the pan or, worse, washing the pan immediately. Learning to deglaze and make pan sauces is the fastest way to make your cooking taste restaurant-quality."
       },
       closingContent: [
         "Once you learn basic pan sauce technique, you'll never serve plain seared meat again. Deglazing is more than a step. It's the bridge between cooking and sauce-making, the missing link that makes professional dishes taste layered and complete."
@@ -51,8 +51,8 @@ export const educationalData = {
       icon: "Droplets",
       definition: "**Fond** = The browned bits stuck to the bottom of the pan after searing meat",
       content: [
-        "In simple terms, deglazing means adding liquid to a hot pan after cooking something in it — to dissolve and lift the caramelized bits (fond) stuck to the bottom.",
-        "But to a chef, it's liquid storytelling. Each brown speck on the pan tells what's happened: heat, fat, protein, sugar — all concentrated flavor. Deglazing collects those stories into something new: a sauce that carries the entire dish's soul."
+        "In simple terms, deglazing means adding liquid to a hot pan after cooking something in it, to dissolve and lift the caramelized bits (fond) stuck to the bottom.",
+        "But to a chef, it's liquid storytelling. Each brown speck on the pan tells what's happened: heat, fat, protein, sugar, all concentrated flavor. Deglazing collects those stories into something new: a sauce that carries the entire dish's soul."
       ],
       whySpecial: [
         "Concentrated proteins that have undergone Maillard reaction",
@@ -66,7 +66,7 @@ export const educationalData = {
         { label: "Cleans the pan", description: "Lifts stuck-on bits while building flavor" },
         { label: "Adds acidity", description: "Balances richness and cuts through fat" }
       ],
-      appearance: "Dark brown (not black—that's burnt) crusty bits coating pan bottom where meat contacted surface",
+      appearance: "Dark brown (not black, that's burnt) crusty bits coating pan bottom where meat contacted surface",
       commonMistake: "Confusing fond with burnt food. Fond is brown and flavorful. Burnt is black and bitter. Learn the difference. If you skip deglazing, you leave the best part of your meal behind.",
       subsections: [
         {
@@ -74,7 +74,7 @@ export const educationalData = {
           title: "The Science of Fond",
           icon: "Beaker",
           content: [
-            "Fond forms when proteins and sugars undergo the Maillard reaction — browning without burning. It's not just color; it's complexity. Those browned bits are rich in amino acids and sugars, but they're locked onto the metal surface. When you add liquid, it dissolves the fond's sugars and proteins back into the sauce."
+            "Fond forms when proteins and sugars undergo the Maillard reaction, browning without burning. It's not just color; it's complexity. Those browned bits are rich in amino acids and sugars, but they're locked onto the metal surface. When you add liquid, it dissolves the fond's sugars and proteins back into the sauce."
           ],
           process: [
             "Surface moisture evaporates",
@@ -86,14 +86,14 @@ export const educationalData = {
           holyTrinity: [
             { element: "Heat", description: "keeps sugars soluble" },
             { element: "Acid", description: "(like wine or vinegar) cuts grease and balances flavor" },
-            { element: "Motion", description: "— the gentle scrape releases the gold" }
+            { element: "Motion", description: "the gentle scrape releases the gold" }
           ],
-          whyItWorks: "Those compounds are water-soluble. Add liquid, dissolve fond, instant flavor base for sauce. The fond isn't burnt—it's caramelized. There's a fine line between the two, and professional cooks learn to read that line instinctively. Golden to deep brown means flavor. Black means start over."
+          whyItWorks: "Those compounds are water-soluble. Add liquid, dissolve fond, instant flavor base for sauce. The fond isn't burnt. It's caramelized. There's a fine line between the two, and professional cooks learn to read that line instinctively. Golden to deep brown means flavor. Black means start over."
         }
       ],
       warning: {
         title: "Not All Pans Create Good Fond",
-        content: "Nonstick pans don't develop fond—nothing sticks. Stainless steel and cast iron create excellent fond. This is one reason professional kitchens use stainless steel for searing proteins despite nonstick's convenience. If you want real pan sauces, you need a pan that allows sticking and browning."
+        content: "Nonstick pans don't develop fond. Nothing sticks. Stainless steel and cast iron create excellent fond. This is one reason professional kitchens use stainless steel for searing proteins despite nonstick's convenience. If you want real pan sauces, you need a pan that allows sticking and browning."
       }
     },
     {
@@ -108,7 +108,7 @@ export const educationalData = {
             "Sear protein in hot pan with minimal oil",
             "Get good brown crust",
             "Don't move meat excessively (let it stick slightly)",
-            "Cook your protein or vegetables in fat until golden. Don't stir constantly — let the browning happen",
+            "Cook your protein or vegetables in fat until golden. Don't stir constantly, let the browning happen",
             "Remove protein when done, set aside to rest",
             "When the surface is evenly speckled with deep brown, remove the food but leave the bits. That's your flavor base."
           ],
@@ -148,7 +148,7 @@ export const educationalData = {
             "Add liquid to hot pan",
             "**It will sizzle and steam dramatically** (this is correct). Listen for the hiss.",
             "Use wooden spoon, Rubbermaid Commercial Cook's Scraper, or spatula to scrape fond off pan bottom",
-            "Really scrape—you should hear it scraping metal",
+            "Really scrape. You should hear it scraping metal",
             "All the brown bits should dissolve into liquid"
           ],
           safety: "Stand back when adding wine to hot pan. Alcohol can flame up (especially with gas stoves)."
@@ -180,20 +180,20 @@ export const educationalData = {
       ],
       proTip: {
         title: "Scott's Professional Tip",
-        content: "In restaurants, we'd make 6-8 pan sauces simultaneously during dinner service. The technique becomes automatic: meat out, fat out, wine in, scrape, reduce, butter, done. At home, make the sauce while your meat rests—by the time the sauce is ready, the meat has rested perfectly. It's the most efficient use of those 5 minutes."
+        content: "In restaurants, we'd make 6-8 pan sauces simultaneously during dinner service. The technique becomes automatic: meat out, fat out, wine in, scrape, reduce, butter, done. At home, make the sauce while your meat rests. By the time the sauce is ready, the meat has rested perfectly. It's the most efficient use of those 5 minutes."
       }
     },
     {
       id: "liquids",
       title: "Choosing Your Deglazing Liquid",
       icon: "Wine",
-      intro: "Different liquids pull flavor in different directions. Never use anything you wouldn't drink — if it's bad wine, it makes bad sauce.",
+      intro: "Different liquids pull flavor in different directions. Never use anything you wouldn't drink. If it's bad wine, it makes bad sauce.",
       liquidTable: {
         headers: ["Liquid", "Flavor Profile", "Use For"],
         rows: [
           { cells: ["White Wine", "Bright, acidic", "Chicken, fish, vegetables"] },
           { cells: ["Red Wine", "Deep, robust", "Beef, lamb, mushrooms"], isAlt: true },
-          { cells: ["Stock or Broth", "Savory, balanced", "Universal — extends sauces"] },
+          { cells: ["Stock or Broth", "Savory, balanced", "Universal, extends sauces"] },
           { cells: ["Vinegar (balsamic, sherry)", "Tangy, sharp", "Adds contrast to rich meats"], isAlt: true },
           { cells: ["Citrus Juice", "Clean, aromatic", "Seafood, pan-roasted vegetables"] },
           { cells: ["Beer or Cider", "Malty, rustic", "Pork, sausages, onions"], isAlt: true }
@@ -261,7 +261,7 @@ export const educationalData = {
           steps: [
             "Remove pork, pour off most fat",
             "**Carefully** add 1/4 cup brandy or cognac",
-            "Scrape fond (may flame—let it burn out)",
+            "Scrape fond (may flame, let it burn out)",
             "Add 1/2 cup chicken stock, reduce by half",
             "Add 1/4 cup heavy cream",
             "Add 1 tsp Dijon mustard",
@@ -326,11 +326,11 @@ export const educationalData = {
       id: "equipment",
       title: "Recommended Tools & Equipment",
       equipmentList: [
-        { name: "Pan", description: "All-Clad D3 Stainless 10\" Skillet or Cuisinart Stainless Steel Sauté Pan — perfect for fond formation and deglazing", link: "/reviews/cuisinart-8-inch-nonstick-pan" },
-        { name: "Scraper", description: "Rubbermaid Commercial Cook's Scraper — safe and effective for stainless steel", link: "/reviews/rubbermaid-commercial-cooks-scraper" },
-        { name: "Tongs", description: "OXO Good Grips 12\" Tongs — control without piercing meat" },
-        { name: "Thermometer", description: "ThermoWorks Thermapen ONE — verify pan heat for ideal browning" },
-        { name: "Sauce Pan", description: "Made In Stainless Saucier — for reductions and finishing sauces" }
+        { name: "Pan", description: "All-Clad D3 Stainless 10\" Skillet or Cuisinart Stainless Steel Sauté Pan, perfect for fond formation and deglazing", link: "/reviews/cuisinart-8-inch-nonstick-pan" },
+        { name: "Scraper", description: "Rubbermaid Commercial Cook's Scraper, safe and effective for stainless steel", link: "/reviews/rubbermaid-commercial-cooks-scraper" },
+        { name: "Tongs", description: "OXO Good Grips 12\" Tongs, control without piercing meat" },
+        { name: "Thermometer", description: "ThermoWorks Thermapen ONE, verify pan heat for ideal browning" },
+        { name: "Sauce Pan", description: "Made In Stainless Saucier, for reductions and finishing sauces" }
       ],
       note: "A quality stainless steel pan is the foundation of proper deglazing. The smooth, reactive surface creates exceptional fond, and the high sides contain the steam when you add liquid."
     },
@@ -339,8 +339,8 @@ export const educationalData = {
       title: "The Bottom Line: Liquid Gold in Every Pan",
       content: [
         "After making literally thousands of pan sauces over 24 years in professional kitchens, here's what I want home cooks to understand:",
-        "**Pan sauces are the fastest way to make your cooking taste restaurant-quality—and most home cooks throw this opportunity away.**",
-        "Deglazing is the moment where cooking becomes cuisine. It's the technique that separates home cooking from restaurant cooking—not because it's difficult, but because most people don't know to do it.",
+        "**Pan sauces are the fastest way to make your cooking taste restaurant-quality, and most home cooks throw this opportunity away.**",
+        "Deglazing is the moment where cooking becomes cuisine. It's the technique that separates home cooking from restaurant cooking, not because it's difficult, but because most people don't know to do it.",
         "All that flavor stuck to your pan? That's pure concentrated deliciousness. Washing it down the drain is like discarding the best part of the meal. Learning to deglaze and make a quick pan sauce takes 3-5 minutes and transforms ordinary seared protein into something special.",
         "Once you understand fond and learn to capture it, every meal improves. You'll never waste those browned bits again. You'll build sauces instinctively, tasting as you go, adjusting with confidence."
       ],
@@ -368,27 +368,27 @@ export const educationalData = {
       },
       {
         question: "Will the alcohol in wine cook off completely?",
-        answer: "After 2-3 minutes of simmering, most alcohol evaporates. Some flavor compounds remain, but alcohol content is negligible—safe for kids."
+        answer: "After 2-3 minutes of simmering, most alcohol evaporates. Some flavor compounds remain, but alcohol content is negligible. Safe for kids."
       },
       {
         question: "Can I make pan sauce with boneless skinless chicken breast?",
-        answer: "Yes, but it produces less fond than skin-on chicken or red meat. You'll get best results if you get good browning first—don't move chicken around too much while searing."
+        answer: "Yes, but it produces less fond than skin-on chicken or red meat. You'll get best results if you get good browning first. Don't move chicken around too much while searing."
       },
       {
         question: "My sauce always comes out too thin. How do I fix this?",
-        answer: "Reduce longer. Sauce should coat the back of a spoon. Or add small knob of butter—fat helps thicken. Or (last resort) finish with tiny pinch of cornstarch slurry."
+        answer: "Reduce longer. Sauce should coat the back of a spoon. Or add small knob of butter, fat helps thicken. Or (last resort) finish with tiny pinch of cornstarch slurry."
       },
       {
         question: "Can I make pan sauce in a cast iron skillet?",
-        answer: "Yes! Cast iron creates excellent fond. Just know that wine is acidic and shouldn't sit in cast iron for long periods—deglaze, reduce, and serve. Don't let sauce sit in pan."
+        answer: "Yes! Cast iron creates excellent fond. Just know that wine is acidic and shouldn't sit in cast iron for long periods. Deglaze, reduce, and serve. Don't let sauce sit in pan."
       },
       {
         question: "Can I deglaze nonstick pans?",
-        answer: "Technically yes, but you won't get fond. Stick with stainless or cast iron for real results. Nonstick surfaces prevent the browned bits from forming and sticking to the pan—which means there's nothing to deglaze. The whole technique relies on fond formation, which requires a surface that allows sticking and browning."
+        answer: "Technically yes, but you won't get fond. Stick with stainless or cast iron for real results. Nonstick surfaces prevent the browned bits from forming and sticking to the pan, which means there's nothing to deglaze. The whole technique relies on fond formation, which requires a surface that allows sticking and browning."
       },
       {
         question: "What's the best liquid for beginners?",
-        answer: "Chicken stock or white wine—both forgiving and flavorful. Chicken stock is neutral and works with almost any dish, while white wine adds acidity and brightness without overpowering. Both deglaze effectively and create a balanced pan sauce that complements most proteins and vegetables."
+        answer: "Chicken stock or white wine, both forgiving and flavorful. Chicken stock is neutral and works with almost any dish, while white wine adds acidity and brightness without overpowering. Both deglaze effectively and create a balanced pan sauce that complements most proteins and vegetables."
       },
       {
         question: "Can I use water to deglaze?",
@@ -408,11 +408,11 @@ export const educationalData = {
       },
       {
         question: "Why does my deglazing liquid evaporate too quickly?",
-        answer: "Your pan is too hot or you're using too little liquid. Lower the heat to medium after adding the liquid, and use enough to create steam. The initial sizzle should be dramatic, but the liquid should simmer and reduce slowly—not evaporate instantly. If it disappears in seconds, add more and reduce the heat."
+        answer: "Your pan is too hot or you're using too little liquid. Lower the heat to medium after adding the liquid, and use enough to create steam. The initial sizzle should be dramatic, but the liquid should simmer and reduce slowly, not evaporate instantly. If it disappears in seconds, add more and reduce the heat."
       },
       {
         question: "What's the difference between deglazing and making a reduction?",
-        answer: "Deglazing is the act of adding liquid to dissolve fond; reduction is simmering that liquid to concentrate flavor and thicken consistency. Deglazing comes first—it captures the fond. Reduction comes after—it transforms the thin, flavorful liquid into a glossy sauce. Most pan sauces involve both techniques in sequence."
+        answer: "Deglazing is the act of adding liquid to dissolve fond; reduction is simmering that liquid to concentrate flavor and thicken consistency. Deglazing comes first: it captures the fond. Reduction comes after: it transforms the thin, flavorful liquid into a glossy sauce. Most pan sauces involve both techniques in sequence."
       }
     ]
   },

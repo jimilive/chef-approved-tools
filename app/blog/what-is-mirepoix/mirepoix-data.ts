@@ -22,7 +22,7 @@ export const mirepoixData = {
   hero: {
     title: "What is Mirepoix and Why Professional Chefs Use It",
     introduction: [
-      "Mirepoix—the three-vegetable foundation of French cooking—appears in professional kitchens worldwide because it builds flavor depth that you can't taste directly but would notice immediately if it was missing.",
+      "Mirepoix, the three-vegetable foundation of French cooking, appears in professional kitchens worldwide because it builds flavor depth that you can't taste directly but would notice immediately if it was missing.",
       "Understanding this aromatic base transforms dozens of recipes from good to professional-quality."
     ]
   },
@@ -42,7 +42,7 @@ export const mirepoixData = {
       id: "definition",
       title: "What Mirepoix Is (The Simple Definition)",
       content: [
-        "Mirepoix is a combination of diced onions, carrots, and celery cooked in fat until softened. That's it. The ratio matters, the size of the dice matters, and the cooking method matters—but the concept is straightforward."
+        "Mirepoix is a combination of diced onions, carrots, and celery cooked in fat until softened. That's it. The ratio matters, the size of the dice matters, and the cooking method matters, but the concept is straightforward."
       ],
       ratio: {
         title: "Classic Mirepoix Ratio",
@@ -55,7 +55,7 @@ export const mirepoixData = {
       },
       history: {
         title: "History and Etymology",
-        content: "The name comes from Charles-Pierre-Gaston François de Lévis, Duke of Mirepoix, an 18th-century French marshal whose chef popularized the mixture. But the technique predates the name by centuries—aromatic vegetables cooked in fat as a flavor base appear in medieval European cooking, Middle Eastern cooking, and Asian cooking under different names."
+        content: "The name comes from Charles-Pierre-Gaston François de Lévis, Duke of Mirepoix, an 18th-century French marshal whose chef popularized the mixture. But the technique predates the name by centuries. Aromatic vegetables cooked in fat as a flavor base appear in medieval European cooking, Middle Eastern cooking, and Asian cooking under different names."
       }
     },
     {
@@ -65,7 +65,7 @@ export const mirepoixData = {
         {
           title: "It Builds Foundational Flavor",
           content: [
-            "Mirepoix doesn't add a specific taste you can identify—it adds depth. The science: onions contain sulfur compounds that become sweet when cooked slowly. Carrots add natural sugars that caramelize. Celery contributes savory, slightly bitter notes that balance the sweetness. Combined, they create a flavor base that makes everything layered on top taste more complete."
+            "Mirepoix doesn't add a specific taste you can identify. It adds depth. The science: onions contain sulfur compounds that become sweet when cooked slowly. Carrots add natural sugars that caramelize. Celery contributes savory, slightly bitter notes that balance the sweetness. Combined, they create a flavor base that makes everything layered on top taste more complete."
           ]
         },
         {
@@ -93,7 +93,7 @@ export const mirepoixData = {
         sizes: [
           {
             name: "Small dice (¼ inch)",
-            use: "For quick-cooking dishes like pan sauces, quick braises, or sautés. Softens in 5-8 minutes, releases flavor fast, integrates into the final dish. Use when the vegetables need to disappear—nobody wants to bite into a chunk of carrot in a refined pan sauce."
+            use: "For quick-cooking dishes like pan sauces, quick braises, or sautés. Softens in 5-8 minutes, releases flavor fast, integrates into the final dish. Use when the vegetables need to disappear. Nobody wants to bite into a chunk of carrot in a refined pan sauce."
           },
           {
             name: "Medium dice (½ inch)",
@@ -115,7 +115,7 @@ export const mirepoixData = {
           },
           {
             name: "Sautéing (medium-high heat, uncovered)",
-            description: "Softens vegetables with light browning. Adds mild caramel notes without overpowering. Use for tomato sauces, braises, most stocks. The standard method—enough caramelization to add depth, not so much that it dominates."
+            description: "Softens vegetables with light browning. Adds mild caramel notes without overpowering. Use for tomato sauces, braises, most stocks. The standard method: enough caramelization to add depth, not so much that it dominates."
           },
           {
             name: "Caramelizing (high heat, stirring frequently)",
@@ -125,7 +125,7 @@ export const mirepoixData = {
       },
       fatChoice: {
         title: "Fat Choice Affects the Base Flavor",
-        intro: "Mirepoix is always cooked in fat—the fat carries and amplifies the aromatic compounds released by the vegetables. The fat you choose matters:",
+        intro: "Mirepoix is always cooked in fat. The fat carries and amplifies the aromatic compounds released by the vegetables. The fat you choose matters:",
         fats: [
           {
             name: "Butter",
@@ -149,7 +149,7 @@ export const mirepoixData = {
       variations: [
         {
           name: "The Holy Trinity (Cajun/Creole Cooking)",
-          description: "Replace carrots with green bell peppers. Same ratio: 2 parts onion, 1 part celery, 1 part green bell pepper. The bell pepper adds a vegetal, slightly bitter note that carrots don't provide—it's essential for authentic Cajun flavor in gumbo, jambalaya, and étouffée."
+          description: "Replace carrots with green bell peppers. Same ratio: 2 parts onion, 1 part celery, 1 part green bell pepper. The bell pepper adds a vegetal, slightly bitter note that carrots don't provide. It's essential for authentic Cajun flavor in gumbo, jambalaya, and étouffée."
         },
         {
           name: "Soffritto (Italian Cooking)",
@@ -157,7 +157,7 @@ export const mirepoixData = {
         },
         {
           name: "Sofrito (Spanish/Latin American Cooking)",
-          description: "Onion, garlic, tomatoes, and peppers—no carrots or celery. Cooked in olive oil until the tomatoes break down into a thick paste. The result is brighter, more acidic, and tomato-forward compared to French mirepoix. Used as the base for paella and many Spanish dishes."
+          description: "Onion, garlic, tomatoes, and peppers (no carrots or celery). Cooked in olive oil until the tomatoes break down into a thick paste. The result is brighter, more acidic, and tomato-forward compared to French mirepoix. Used as the base for paella and many Spanish dishes."
         }
       ]
     },
@@ -166,12 +166,12 @@ export const mirepoixData = {
       title: "How to Prep Mirepoix Efficiently",
       professionalMethod: {
         title: "The Professional Method",
-        intro: "Professional kitchens prep mirepoix in large batches during morning prep—enough for the entire day's service. Home cooks can replicate this efficiency:",
+        intro: "Professional kitchens prep mirepoix in large batches during morning prep, enough for the entire day's service. Home cooks can replicate this efficiency:",
         steps: [
           {
             step: 1,
             instruction: "Prep vegetables separately, then combine.",
-            detail: "Dice all onions first, all carrots second, all celery third. Don't alternate between vegetables—every time you switch, you lose efficiency picking up a different vegetable, washing a different cutting board, resetting your knife rhythm."
+            detail: "Dice all onions first, all carrots second, all celery third. Don't alternate between vegetables. Every time you switch, you lose efficiency picking up a different vegetable, washing a different cutting board, resetting your knife rhythm."
           },
           {
             step: 2,
@@ -181,14 +181,14 @@ export const mirepoixData = {
           {
             step: 3,
             instruction: "Store in airtight containers with damp paper towels on top.",
-            detail: "Mirepoix oxidizes quickly—onions brown, carrots dry out, celery wilts. Cover prepped mirepoix with a damp paper towel, seal the container, refrigerate. It stays fresh for 48 hours."
+            detail: "Mirepoix oxidizes quickly. Onions brown, carrots dry out, celery wilts. Cover prepped mirepoix with a damp paper towel, seal the container, refrigerate. It stays fresh for 48 hours."
           }
         ]
       },
       toolNote: {
         title: "The Tool That Matters Most",
         content: [
-          "A sharp chef's knife with good balance makes mirepoix prep faster and produces better results. Sharp knives make clean cuts that preserve cell structure—the vegetables release less moisture during storage, staying firmer longer. Dull knives crush cells, releasing enzymes that cause browning and off-flavors.",
+          "A sharp chef's knife with good balance makes mirepoix prep faster and produces better results. Sharp knives make clean cuts that preserve cell structure. The vegetables release less moisture during storage, staying firmer longer. Dull knives crush cells, releasing enzymes that cause browning and off-flavors.",
           "Mirepoix prepped with a dull knife turns brown and slimy within 12 hours. Mirepoix prepped with a sharp knife stays fresh for 48+ hours refrigerated."
         ]
       }
@@ -205,13 +205,13 @@ export const mirepoixData = {
         {
           name: "Cooking Over High Heat",
           problem: "Using high heat to \"save time.\" The onions burn around the edges before the carrots soften, and the final stock tastes bitter.",
-          fix: "Medium heat, patience. Mirepoix takes 10-15 minutes to soften properly—there's no shortcut. If you try to rush it with high heat, you'll get burnt aromatics and harsh flavors."
+          fix: "Medium heat, patience. Mirepoix takes 10-15 minutes to soften properly. There's no shortcut. If you try to rush it with high heat, you'll get burnt aromatics and harsh flavors."
         },
         {
           name: "Forgetting Salt",
           problem: "Mirepoix cooked without salt doesn't release moisture properly and stays drier than it should.",
-          whyItMatters: "Vegetables need salt to release their moisture and flavors. Salt draws out water, which prevents steaming and enables proper sautéing. Professional kitchens salt mirepoix as soon as it hits the pan—a three-finger pinch of kosher salt per 4 cups of vegetables.",
-          fix: "Salt isn't optional—it's a chemical catalyst that makes the entire process work. Always add salt when you add mirepoix to the pan."
+          whyItMatters: "Vegetables need salt to release their moisture and flavors. Salt draws out water, which prevents steaming and enables proper sautéing. Professional kitchens salt mirepoix as soon as it hits the pan: a three-finger pinch of kosher salt per 4 cups of vegetables.",
+          fix: "Salt isn't optional. It's a chemical catalyst that makes the entire process work. Always add salt when you add mirepoix to the pan."
         }
       ]
     },
@@ -221,7 +221,7 @@ export const mirepoixData = {
       content: [
         "Mirepoix isn't flashy. It doesn't have visual drama or technical complexity. But professional kitchens worldwide use some form of aromatic vegetable base in nearly every refined savory dish.",
         "The reason: it's reliable. Dice it consistently, cook it properly, let it do its job, and the results are predictable. That matters in professional kitchens where the same dish needs to taste identical whether it's cooked on Tuesday or Saturday.",
-        "Home cooks benefit from the same reliability. Master mirepoix—the ratio, the dice, the cooking method—and dozens of recipes suddenly become easier to execute. Stocks gain body, braises gain depth, sauces gain complexity. The vegetables themselves disappear, but their impact persists in every bite."
+        "Home cooks benefit from the same reliability. Master mirepoix (the ratio, the dice, the cooking method) and dozens of recipes suddenly become easier to execute. Stocks gain body, braises gain depth, sauces gain complexity. The vegetables themselves disappear, but their impact persists in every bite."
       ]
     }
   ],
@@ -238,11 +238,11 @@ export const mirepoixData = {
       },
       {
         question: "Why do professional kitchens use mirepoix?",
-        answer: "Mirepoix builds foundational flavor depth without adding identifiable taste. It provides aromatic complexity in one step instead of measuring multiple seasonings. It's essential for stock extraction—helping pull flavor compounds and gelatin from bones. Professional kitchens value the efficiency and consistency."
+        answer: "Mirepoix builds foundational flavor depth without adding identifiable taste. It provides aromatic complexity in one step instead of measuring multiple seasonings. It's essential for stock extraction, helping pull flavor compounds and gelatin from bones. Professional kitchens value the efficiency and consistency."
       },
       {
         question: "What dice size should I use for mirepoix?",
-        answer: "Small dice (¼ inch) for quick-cooking dishes and sauces. Medium dice (½ inch) for most applications—the standard. Large dice (¾-1 inch) for long-cooking stocks and braises. Consistent dice size within each batch ensures even cooking."
+        answer: "Small dice (¼ inch) for quick-cooking dishes and sauces. Medium dice (½ inch) for most applications (the standard). Large dice (¾-1 inch) for long-cooking stocks and braises. Consistent dice size within each batch ensures even cooking."
       },
       {
         question: "What's the difference between sweating, sautéing, and caramelizing mirepoix?",
@@ -258,7 +258,7 @@ export const mirepoixData = {
       },
       {
         question: "Why does my mirepoix burn before softening?",
-        answer: "Heat is too high. Mirepoix needs steady, moderate heat (medium or medium-low) to release flavors without burning. Cook for 10-15 minutes—there's no shortcut. High heat creates burnt aromatics and harsh, bitter flavors."
+        answer: "Heat is too high. Mirepoix needs steady, moderate heat (medium or medium-low) to release flavors without burning. Cook for 10-15 minutes. There's no shortcut. High heat creates burnt aromatics and harsh, bitter flavors."
       },
       {
         question: "What's the difference between soffritto and sofrito?",
