@@ -146,7 +146,7 @@ export const reviewData = {
     sections: [
       {
         title: "1.3 HP Motor Performance",
-        content: "Handles heavy dough without strain. Advanced motor control board communicates 15,000 times/second for consistent speed. <LINK>This mixer</LINK> delivered 85-90% of a $2,100 Hobart's capability at 32% of the cost. The high-efficiency DC motor runs longer with less heat build-up—critical for extended mixing sessions."
+        content: "Handles heavy dough without strain. Advanced motor control board communicates 15,000 times/second for consistent speed. <LINK>This mixer</LINK> delivered 85-90% of a $2,100 Hobart's capability at 32% of the cost. The high-efficiency DC motor runs longer with less heat build-up, which is critical for extended mixing sessions."
       },
       {
         title: "NSF Certification Compliance",
@@ -201,11 +201,11 @@ export const reviewData = {
     sections: [
       {
         title: "Motor & Durability",
-        content: "The 1.3 HP commercial motor handled heavy dough loads that would strain residential models. The high-efficiency DC motor design runs cooler during extended sessions—we regularly ran 45-minute continuous cycles without overheating. The advanced control board's 15,000-times-per-second communication maintains consistent speed under varying loads."
+        content: "The 1.3 HP commercial motor handled heavy dough loads that would strain residential models. The high-efficiency DC motor design runs cooler during extended sessions. We regularly ran 45-minute continuous cycles without overheating. The advanced control board's 15,000-times-per-second communication maintains consistent speed under varying loads."
       },
       {
         title: "NSF Certification Value",
-        content: "NSF certification isn't just a sticker—it means health department compliance. Materials meet commercial sanitation standards, critical for passing health inspections. In many municipalities, non-NSF equipment can result in violations or failed inspections."
+        content: "NSF certification isn't just a sticker. It means health department compliance. Materials meet commercial sanitation standards, critical for passing health inspections. In many municipalities, non-NSF equipment can result in violations or failed inspections."
       },
       {
         title: "Capacity & Efficiency",
@@ -263,7 +263,7 @@ export const reviewData = {
     },
     {
       question: "How does this compare to a Hobart mixer?",
-      answer: "During our 18-month testing, this KitchenAid delivered 85-90% of a $2,100 Hobart's capability at 32% of the cost. Hobart mixers are more robust for extremely heavy-duty operations, but for most restaurants and bakeries, this KitchenAid provides commercial performance at a much better value proposition."
+      answer: "During our 18-month testing, this KitchenAid delivered 85-90% of a $2,100 Hobart's capability at 32% of the cost. Hobart mixers are more durable for extremely heavy-duty operations, but for most restaurants and bakeries, this KitchenAid provides commercial performance at a much better value proposition."
     },
     {
       question: "Can I use this mixer at home?",
@@ -275,7 +275,7 @@ export const reviewData = {
     },
     {
       question: "Is the 8-quart capacity worth the extra cost?",
-      answer: "For commercial operations, absolutely. The 60% larger capacity reduces batch cycles, saving labor hours. In our testing, we cut prep time by 40% through double batching. For home use, it depends on your volume—occasional bakers may not need the extra capacity."
+      answer: "For commercial operations, absolutely. The 60% larger capacity reduces batch cycles, saving labor hours. In our testing, we cut prep time by 40% through double batching. For home use, it depends on your volume. Occasional bakers may not need the extra capacity."
     }
   ],
 
@@ -300,7 +300,7 @@ export const reviewData = {
     title: "The Bottom Line: My Professional Verdict",
     paragraphs: [
       "After 18 months handling daily production in a 200-cover restaurant, this KitchenAid commercial mixer has proven itself as genuine professional equipment. The 1.3 HP motor delivered consistent performance under loads that would strain residential models, while the 8-quart capacity cut our prep time by 40% through efficient double-batching.",
-      "The NSF certification isn't just paperwork—it represents health department compliance and commercial-grade materials. For operations where equipment failure means lost revenue, this mixer's zero-maintenance track record over 18 months demonstrates the reliability professional kitchens demand. At 32% of a Hobart's cost while delivering 85-90% of the capability, this represents exceptional value for serious commercial operations and dedicated home bakers who demand professional results."
+      "The NSF certification isn't just paperwork. It represents health department compliance and commercial-grade materials. For operations where equipment failure means lost revenue, this mixer's zero-maintenance track record over 18 months demonstrates the reliability professional kitchens demand. At 32% of a Hobart's cost while delivering 85-90% of the capability, this represents exceptional value for serious commercial operations and dedicated home bakers who demand professional results."
     ],
     ctaText: "Check Price on KitchenAid.com →"
   },

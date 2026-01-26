@@ -61,8 +61,8 @@ export const reviewData = {
       icon: '🔍',
       text: 'TIER 3: Expert Evaluation'
     },
-    verdict: 'After 3 years and over 100 dishwasher cycles, these wooden spoons still look and perform like new. The combination of genuine dishwasher durability, non-stick safe performance, and exceptional value makes them indispensable.',
-    verdictStrong: "I've purchased five sets—two for myself, three as gifts.",
+    verdict: 'After 3 years and over 100 dishwasher cycles, these wooden spoons still look and perform like new. The combination of genuine dishwasher durability, non-stick safe performance, and exceptional value makes them a must-have.',
+    verdictStrong: "I've purchased five sets: two for myself, three as gifts.",
     ctaText: 'Check Amazon Price →'
   },
 
@@ -76,7 +76,7 @@ export const reviewData = {
       },
       {
         title: 'What I Use Them For Daily',
-        content: "Sautéing vegetables without scratching stainless steel pans. Scrambling eggs in non-stick without damaging the coating. Stirring sauces—no metallic taste transfer in acidic ingredients. Everyday stirring in cast iron without compromising seasoning. Rice, pasta, grains, soups—routine tasks that don't scratch cookware. The <LINK>9-inch wooden spoons</LINK> handle 90% of my stovetop cooking tasks."
+        content: "Sautéing vegetables without scratching stainless steel pans. Scrambling eggs in non-stick without damaging the coating. Stirring sauces (no metallic taste transfer in acidic ingredients). Everyday stirring in cast iron without compromising seasoning. Rice, pasta, grains, soups: routine tasks that don't scratch cookware. The <LINK>9-inch wooden spoons</LINK> handle 90% of my stovetop cooking tasks."
       },
       {
         title: 'Where the 9-Inch Size Becomes a Limitation',
@@ -108,11 +108,11 @@ export const reviewData = {
     sections: [
       {
         title: 'Dishwasher Safe Performance',
-        content: "After 24 years in professional kitchens, I thought I understood wooden spoons. Hand-wash only, oil occasionally, replace every few years when they crack. Then these <LINK>Japanese spoons</LINK> challenged everything I knew. What started as a $10 Amazon purchase became so fundamental to my cooking that I now own two sets (12 spoons total) and have given three more sets as gifts. The reason? They're genuinely dishwasher safe. Not 'technically dishwasher safe but hand-wash recommended'—actually dishwasher safe through 100+ cycles over 3 years with zero degradation."
+        content: "After 24 years in professional kitchens, I thought I understood wooden spoons. Hand-wash only, oil occasionally, replace every few years when they crack. Then these <LINK>Japanese spoons</LINK> challenged everything I knew. What started as a $10 Amazon purchase became so fundamental to my cooking that I now own two sets (12 spoons total) and have given three more sets as gifts. The reason? They're genuinely dishwasher safe. Not 'technically dishwasher safe but hand-wash recommended.' Actually dishwasher safe through 100+ cycles over 3 years with zero degradation."
       },
       {
         title: 'Perfect Size for Daily Cooking',
-        content: "The 9-inch length provides excellent control for skillets and medium pans—covering about 90% of my stovetop cooking. Yes, they fall into large stockpots, but for everyday cooking in standard pans, this size is ideal. The ellipse shape moves food efficiently without scratching non-stick or cast iron surfaces. Having six identical <LINK>wooden cooking spoons</LINK> means consistent performance—you always know exactly what you're grabbing."
+        content: "The 9-inch length provides excellent control for skillets and medium pans, covering about 90% of my stovetop cooking. Yes, they fall into large stockpots, but for everyday cooking in standard pans, this size is ideal. The ellipse shape moves food efficiently without scratching non-stick or cast iron surfaces. Having six identical <LINK>wooden cooking spoons</LINK> means consistent performance. You always know exactly what you're grabbing."
       },
       {
         title: 'Exceptional Value',
@@ -153,7 +153,7 @@ export const reviewData = {
     items: [
       {
         question: 'Are these wooden spoons really dishwasher safe?',
-        answer: "Yes, genuinely dishwasher safe based on 3 years of testing. I've run these through my home dishwasher over 100 times—hot water cycles, heated dry, placed wherever they fit among dishes—with zero degradation. No splitting, warping, or roughness has developed. This is exceptional for wooden utensils; most wooden spoons I've owned previously cracked or warped within months of dishwasher use."
+        answer: "Yes, genuinely dishwasher safe based on 3 years of testing. I've run these through my home dishwasher over 100 times (hot water cycles, heated dry, placed wherever they fit among dishes) with zero degradation. No splitting, warping, or roughness has developed. This is exceptional for wooden utensils; most wooden spoons I've owned previously cracked or warped within months of dishwasher use."
       },
       {
         question: 'Will the 9-inch length work for my cooking needs?',
@@ -165,11 +165,11 @@ export const reviewData = {
       },
       {
         question: 'Why six identical spoons instead of varied sizes?',
-        answer: "The six-piece identical set means consistent performance—you always know exactly what you're grabbing. The downside is zero size variety. For cooks who value consistency and want multiple spoons ready for multi-pot cooking sessions, identical pieces are beneficial. Having six working spoons available means I rarely run short mid-cooking."
+        answer: "The six-piece identical set means consistent performance. You always know exactly what you're grabbing. The downside is zero size variety. For cooks who value consistency and want multiple spoons ready for multi-pot cooking sessions, identical pieces are beneficial. Having six working spoons available means I rarely run short mid-cooking."
       },
       {
         question: 'How long will these spoons last?',
-        answer: "Based on current condition after 3 years of daily use and 100+ dishwasher cycles, I'd estimate 5-10 year lifespan minimum with normal home use. They show virtually no wear—no splitting, warping, or surface degradation. Even a 5-year lifespan makes them exceptionally cost-effective."
+        answer: "Based on current condition after 3 years of daily use and 100+ dishwasher cycles, I'd estimate 5-10 year lifespan minimum with normal home use. They show virtually no wear: no splitting, warping, or surface degradation. Even a 5-year lifespan makes them exceptionally cost-effective."
       },
       {
         question: 'Why have you purchased five sets of these spoons?',
@@ -182,7 +182,7 @@ export const reviewData = {
   faqData: [
     {
       question: 'Are these wooden spoons really dishwasher safe?',
-      answer: "Yes, genuinely dishwasher safe based on 3 years of testing. I've run these through my home dishwasher over 100 times—hot water cycles, heated dry, placed wherever they fit among dishes—with zero degradation. No splitting, warping, or roughness has developed. This is exceptional for wooden utensils; most wooden spoons I've owned previously cracked or warped within months of dishwasher use."
+      answer: "Yes, genuinely dishwasher safe based on 3 years of testing. I've run these through my home dishwasher over 100 times (hot water cycles, heated dry, placed wherever they fit among dishes) with zero degradation. No splitting, warping, or roughness has developed. This is exceptional for wooden utensils; most wooden spoons I've owned previously cracked or warped within months of dishwasher use."
     },
     {
       question: 'Will the 9-inch length work for my cooking needs?',
@@ -194,11 +194,11 @@ export const reviewData = {
     },
     {
       question: 'Why six identical spoons instead of varied sizes?',
-      answer: "The six-piece identical set means consistent performance—you always know exactly what you're grabbing. The downside is zero size variety. For cooks who value consistency and want multiple spoons ready for multi-pot cooking sessions, identical pieces are beneficial. Having six working spoons available means I rarely run short mid-cooking."
+      answer: "The six-piece identical set means consistent performance. You always know exactly what you're grabbing. The downside is zero size variety. For cooks who value consistency and want multiple spoons ready for multi-pot cooking sessions, identical pieces are beneficial. Having six working spoons available means I rarely run short mid-cooking."
     },
     {
       question: 'How long will these spoons last?',
-      answer: "Based on current condition after 3 years of daily use and 100+ dishwasher cycles, I'd estimate 5-10 year lifespan minimum with normal home use. They show virtually no wear—no splitting, warping, or surface degradation. Even a 5-year lifespan makes them exceptionally cost-effective."
+      answer: "Based on current condition after 3 years of daily use and 100+ dishwasher cycles, I'd estimate 5-10 year lifespan minimum with normal home use. They show virtually no wear: no splitting, warping, or surface degradation. Even a 5-year lifespan makes them exceptionally cost-effective."
     },
     {
       question: 'Why have you purchased five sets of these spoons?',
@@ -216,7 +216,7 @@ export const reviewData = {
   // Email Capture
   emailCapture: {
     title: 'Get Expert Kitchen Tool Reviews',
-    subtitle: 'Join 5,000+ home cooks and professional chefs who get honest, no-BS equipment reviews based on real testing. No fluff, no sponsored content—just tools that actually work.',
+    subtitle: 'Join 5,000+ home cooks and professional chefs who get honest, no-BS equipment reviews based on real testing. No fluff, no sponsored content, just tools that actually work.',
     inputPlaceholder: 'Enter your email',
     buttonText: 'Get Reviews',
     finePrint: 'Unsubscribe anytime. I respect your privacy and never share your email.'
@@ -241,7 +241,7 @@ export const reviewData = {
         name: 'Epicurean Kitchen Cutting Board',
         emoji: '🔪',
         href: '/reviews/epicurean-kitchen-cutting-board',
-        description: 'Another dishwasher-safe essential after 10 years of testing.'
+        description: 'Another dishwasher-safe tool after 10 years of testing.'
       },
       {
         name: 'Cuisinart 8-Inch Nonstick Pan',
@@ -253,7 +253,7 @@ export const reviewData = {
         name: "Rubbermaid Cook's Scraper",
         emoji: '🥄',
         href: '/reviews/rubbermaid-commercial-cooks-scraper',
-        description: 'Another essential tool for daily cooking tasks.'
+        description: 'Another useful tool for daily cooking tasks.'
       }
     ]
   }

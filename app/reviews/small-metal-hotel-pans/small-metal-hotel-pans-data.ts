@@ -40,7 +40,7 @@ export const reviewData = {
       icon: '🏆',
       text: 'Tier 1: Professional Kitchen Use + 20 Years Home',
     },
-    verdict: 'After 20 years using metal hotel pans in professional kitchens and at home, small stainless steel pans are essential for anyone who hosts gatherings, does outdoor cooking, or roasts in the oven. These aren\'t storage containers—they\'re workhorses for hot holding, BBQ prep, oven roasting, and serving. Oven-safe to 500°F+, they handle high heat that would destroy plastic. Stack them on the grill, fill them with hot food for buffets, roast vegetables for family dinners. The standardized sizing means lids are interchangeable and everything nests perfectly for storage. Every restaurant uses these for hot food service. Now you can too.',
+    verdict: 'After 20 years using metal hotel pans in professional kitchens and at home, small stainless steel pans are ideal for anyone who hosts gatherings, does outdoor cooking, or roasts in the oven. These aren\'t storage containers. They\'re workhorses for hot holding, BBQ prep, oven roasting, and serving. Oven-safe to 500°F+, they handle high heat that would destroy plastic. Stack them on the grill, fill them with hot food for buffets, roast vegetables for family dinners. The standardized sizing means lids are interchangeable and everything nests perfectly for storage. Every restaurant uses these for hot food service. Now you can too.',
     verdictStrong: 'Professional stainless steel for hot food handling',
     ctaText: 'Check Price on Amazon →'
   },
@@ -59,11 +59,11 @@ export const reviewData = {
       },
       {
         title: 'BBQ and Outdoor Cooking',
-        content: 'Metal pans are game-changers for outdoor cooking. Use them as prep trays on the grill, for catching drippings, warming buns, holding cooked meat while it rests, or serving sides. The stainless steel won\'t melt, crack, or warp from grill heat. After 20 years of BBQs, I can\'t imagine outdoor cooking without these.'
+        content: 'Metal pans make outdoor cooking much easier. Use them as prep trays on the grill, for catching drippings, warming buns, holding cooked meat while it rests, or serving sides. The stainless steel won\'t melt, crack, or warp from grill heat. After 20 years of BBQs, I can\'t imagine outdoor cooking without these.'
       },
       {
         title: 'Professional Durability',
-        content: 'Restaurant-grade 18-8 stainless steel construction means these pans last decades. They survive commercial dishwashers, high oven heat, and daily abuse in professional kitchens. At home, they\'re virtually indestructible. No coating to wear off, no rust, no degradation—just stainless steel that performs the same after 20 years.'
+        content: 'Restaurant-grade 18-8 stainless steel construction means these pans last decades. They survive commercial dishwashers, high oven heat, and daily abuse in professional kitchens. At home, they\'re virtually indestructible. No coating to wear off, no rust, no degradation, just stainless steel that performs the same after 20 years.'
       }
     ],
     testingEnvironment: [
@@ -75,7 +75,7 @@ export const reviewData = {
     outstandingPerformance: [
       'Oven-safe to 500°F+ for roasting and baking',
       'Perfect for hot holding during gatherings',
-      'Essential for BBQ and outdoor cooking',
+      'Ideal for BBQ and outdoor cooking',
       'Restaurant-grade 18-8 stainless steel',
       'Decades of durability without degradation',
       'Slotted lids let you keep serving utensils in pan'
@@ -83,14 +83,14 @@ export const reviewData = {
     minorConsiderations: [
       'Not ideal for refrigerator storage (use plastic)',
       'Can\'t microwave (obviously)',
-      'Metal conducts heat—handles get hot',
+      'Metal conducts heat, so handles get hot',
       'More expensive than plastic pans'
     ]
   },
 
   // SECTION 3: PERFORMANCE ANALYSIS
   performanceAnalysis: {
-    title: 'Why Metal Pans Are Essential for Hot Food',
+    title: 'Why Metal Pans Work for Hot Food',
     sections: [
       {
         title: 'The Hot Holding Advantage',
@@ -98,22 +98,22 @@ export const reviewData = {
       },
       {
         title: 'BBQ Game Changer',
-        content: 'Small metal hotel pans revolutionize outdoor cooking. Use 1/6 pans for burger prep stations, holding grilled vegetables, catching drippings, warming buns, or organizing condiments. The slotted lids let you drain fat from cooked bacon or strain hot grease. Stack them on unused grill space to keep food warm. After 20 years of BBQs, these pans make outdoor cooking feel organized and professional instead of chaotic.'
+        content: 'Small metal hotel pans improve outdoor cooking. Use 1/6 pans for burger prep stations, holding grilled vegetables, catching drippings, warming buns, or organizing condiments. The slotted lids let you drain fat from cooked bacon or strain hot grease. Stack them on unused grill space to keep food warm. After 20 years of BBQs, these pans make outdoor cooking feel organized and professional instead of chaotic.'
       },
       {
         title: 'Oven Roasting Reality',
-        content: 'For home oven use, 6-inch 1/6 pans are perfect for roasting vegetables for 4-6 people, baking chicken thighs, or making brownies. The stainless steel conducts heat evenly and survives high temperatures. Clean-up is easy—no coating to worry about, just stainless steel that can handle aggressive scrubbing and dishwasher cycles. These work exactly like the pans restaurants use for oven roasting.'
+        content: 'For home oven use, 6-inch 1/6 pans are perfect for roasting vegetables for 4-6 people, baking chicken thighs, or making brownies. The stainless steel conducts heat evenly and survives high temperatures. Clean-up is easy: no coating to worry about, just stainless steel that can handle aggressive scrubbing and dishwasher cycles. These work exactly like the pans restaurants use for oven roasting.'
       },
       {
         title: 'Why Both Metal AND Plastic',
-        content: 'You need both systems. Plastic hotel pans for refrigerator storage and meal prep. Metal hotel pans for hot food, oven use, and outdoor cooking. They use the same standardized sizing, so a 1/6 lid fits both plastic and metal 1/6 pans. Professional kitchens use both—metal for hot holding and cooking, plastic for cold storage. Bring this same professional system to your home kitchen.'
+        content: 'You need both systems. Plastic hotel pans for refrigerator storage and meal prep. Metal hotel pans for hot food, oven use, and outdoor cooking. They use the same standardized sizing, so a 1/6 lid fits both plastic and metal 1/6 pans. Professional kitchens use both: metal for hot holding and cooking, plastic for cold storage. Bring this same professional system to your home kitchen.'
       }
     ]
   },
 
   // SECTION 4: PROS & CONS TITLE
   prosConsTitle: 'Honest Assessment After 20 Years',
-  prosTitle: 'What Makes Metal Pans Essential',
+  prosTitle: 'What Makes Metal Pans Work',
   consTitle: 'Limitations to Understand',
 
   // SECTION 5: WHO SHOULD BUY
@@ -148,7 +148,7 @@ export const reviewData = {
   faqData: [
     {
       question: 'Are metal hotel pans oven-safe?',
-      answer: 'Yes—up to 500°F+ easily. Stainless steel handles high oven temperatures without warping or damage. I use them for roasting vegetables, baking proteins, and even brownies. The metal conducts heat efficiently for even cooking.'
+      answer: 'Yes, up to 500°F+ easily. Stainless steel handles high oven temperatures without warping or damage. I use them for roasting vegetables, baking proteins, and even brownies. The metal conducts heat efficiently for even cooking.'
     },
     {
       question: 'Can I use metal hotel pans in the refrigerator?',
@@ -156,19 +156,19 @@ export const reviewData = {
     },
     {
       question: 'What are slotted lids for?',
-      answer: 'Slotted or notched lids have a cutout that lets you keep a ladle or serving spoon IN the pan during hot holding and buffet service. The notch fits standard serving utensils so the spoon handle sticks through while the lid stays mostly closed to maintain heat. This is exactly how restaurants do buffet service—keeps food hot while allowing easy access for serving.'
+      answer: 'Slotted or notched lids have a cutout that lets you keep a ladle or serving spoon IN the pan during hot holding and buffet service. The notch fits standard serving utensils so the spoon handle sticks through while the lid stays mostly closed to maintain heat. This is exactly how restaurants do buffet service, keeping food hot while allowing easy access for serving.'
     },
     {
       question: 'Do I need 1/6 or 1/9 metal pans?',
-      answer: 'Start with 1/6 pans (6.75" × 6.25"). They\'re more versatile—perfect for roasting vegetables, holding sides during BBQs, or serving portions for 4-6 people. Only add 1/9 pans if you need smaller portions for condiments, sauces, or individual servings during buffet service.'
+      answer: 'Start with 1/6 pans (6.75" × 6.25"). They\'re more versatile, perfect for roasting vegetables, holding sides during BBQs, or serving portions for 4-6 people. Only add 1/9 pans if you need smaller portions for condiments, sauces, or individual servings during buffet service.'
     },
     {
       question: 'Can metal hotel pans go on the grill?',
-      answer: 'Yes—stainless steel handles grill heat. I use them on unused grill space for warming buns, holding cooked vegetables, catching drippings, or keeping finished proteins warm. Don\'t put them directly over high flames long-term, but they\'re perfect for indirect heat zones.'
+      answer: 'Yes, stainless steel handles grill heat. I use them on unused grill space for warming buns, holding cooked vegetables, catching drippings, or keeping finished proteins warm. Don\'t put them directly over high flames long-term, but they\'re perfect for indirect heat zones.'
     },
     {
       question: 'Are they dishwasher safe?',
-      answer: 'Yes—stainless steel is fully dishwasher safe, even in commercial dishwashers at high temperatures. I\'ve been washing mine in dishwashers for 20 years with no degradation, discoloration, or rust. The stainless steel actually cleans easier in the dishwasher than by hand.'
+      answer: 'Yes, stainless steel is fully dishwasher safe, even in commercial dishwashers at high temperatures. I\'ve been washing mine in dishwashers for 20 years with no degradation, discoloration, or rust. The stainless steel actually cleans easier in the dishwasher than by hand.'
     },
     {
       question: 'How long do metal hotel pans last?',
@@ -176,7 +176,7 @@ export const reviewData = {
     },
     {
       question: 'Can I use regular lids and slotted lids interchangeably?',
-      answer: 'Yes—both fit the same pan size. Use regular lids for hot holding when you want to trap heat and moisture. Use slotted lids when you need drainage (bacon grease, hot liquids) or ventilation. Having both options gives you maximum flexibility for different cooking scenarios.'
+      answer: 'Yes, both fit the same pan size. Use regular lids for hot holding when you want to trap heat and moisture. Use slotted lids when you need drainage (bacon grease, hot liquids) or ventilation. Having both options gives you maximum flexibility for different cooking scenarios.'
     }
   ],
 
@@ -200,8 +200,8 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      'After 20 years using metal hotel pans in professional kitchens and at home, small stainless steel pans are essential for anyone who hosts gatherings, cooks outdoors, or roasts in the oven. These aren\'t about organization—they\'re about handling hot food the way professional kitchens do.',
-      'If you host BBQs, holiday dinners, or family gatherings, metal hotel pans transform how you manage hot food service. Trust the restaurant-grade stainless steel system. Your hosting self will thank you.'
+      'After 20 years using metal hotel pans in professional kitchens and at home, small stainless steel pans are ideal for anyone who hosts gatherings, cooks outdoors, or roasts in the oven. These aren\'t about organization. They\'re about handling hot food the way professional kitchens do.',
+      'If you host BBQs, holiday dinners, or family gatherings, metal hotel pans improve how you manage hot food service. Trust the restaurant-grade stainless steel system. Your hosting self will thank you.'
     ],
     ctaText: 'Check Price on Amazon →'
   },
@@ -213,7 +213,7 @@ export const reviewData = {
       {
         emoji: '🔥',
         name: 'Lodge Cast Iron Skillet Bundle',
-        description: 'Essential for high-heat cooking.',
+        description: 'Ideal for high-heat cooking.',
         href: '/reviews/lodge-seasoned-cast-iron-3-skillet-bundle'
       },
       {
@@ -324,11 +324,11 @@ export const reviewData = {
       }
     ],
     expertRating: 5,
-    expertOpinion: 'After 20 years using metal hotel pans professionally and at home, small stainless steel pans are essential for hot holding, oven use, and BBQ cooking.',
+    expertOpinion: 'After 20 years using metal hotel pans professionally and at home, small stainless steel pans are ideal for hot holding, oven use, and BBQ cooking.',
     pros: [
       'Oven-safe to 500°F+ for high-heat cooking',
       'Perfect for hot holding during gatherings',
-      'Game-changer for BBQ and outdoor cooking',
+      'Great for BBQ and outdoor cooking',
       'Restaurant-grade 18-8 stainless steel',
       'Decades of durability without degradation',
       'Slotted lids available for draining',

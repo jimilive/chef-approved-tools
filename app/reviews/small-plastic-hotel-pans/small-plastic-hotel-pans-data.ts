@@ -40,7 +40,7 @@ export const reviewData = {
       icon: '🏆',
       text: 'Tier 1: Professional Kitchen Use + 20 Years Home',
     },
-    verdict: 'After 20 years of daily home use and 24 years in professional kitchens, small plastic hotel pans are the single best kitchen organization upgrade you can make. Every restaurant uses this system because nothing else comes close for functional food storage. No more mismatched lids, no more container avalanches, no more wasted fridge space. The standardized sizing means everything stacks perfectly, lids are always interchangeable, and meal prep becomes effortless. These aren\'t fancy—they\'re simply the proven system that professionals trust.',
+    verdict: 'After 20 years of daily home use and 24 years in professional kitchens, small plastic hotel pans are the single best kitchen organization upgrade you can make. Every restaurant uses this system because nothing else comes close for functional food storage. No more mismatched lids, no more container avalanches, no more wasted fridge space. The standardized sizing means everything stacks perfectly, lids are always interchangeable, and meal prep becomes easy. These aren\'t fancy. They\'re simply the proven system that professionals trust.',
     verdictStrong: 'Restaurant organization system for your home',
     ctaText: 'Check Price on Amazon →'
   },
@@ -54,16 +54,16 @@ export const reviewData = {
         content: 'I\'ve been using the same pans at home for 20 years. They\'re virtually indestructible for normal home use. NSF-certified polypropylene survives daily dishwasher cycles, freezer storage, and constant stacking without cracking, warping, or staining.'
       },
       {
-        title: 'The Organization Revolution',
+        title: 'The Organization System',
         content: 'This system eliminates container chaos completely. Every pan stacks perfectly with matching lids. No more digging for the right lid or containers avalanching when you open the cabinet. Everything has its place, everything fits together, everything works.'
       },
       {
         title: 'Meal Prep Performance',
-        content: 'Sunday meal prep becomes effortless. 1/6 pans hold perfect portions for proteins, grains, and vegetables. Stack them in the fridge, grab what you need during the week, assemble meals in 5 minutes. The system makes healthy eating sustainable because the logistics actually work.'
+        content: 'Sunday meal prep becomes easy. 1/6 pans hold perfect portions for proteins, grains, and vegetables. Stack them in the fridge, grab what you need during the week, assemble meals in 5 minutes. The system makes healthy eating sustainable because the logistics actually work.'
       },
       {
         title: 'Size Versatility',
-        content: '1/6 pans (6.75" x 6.25") are the sweet spot for home use—big enough for real portions but compact enough to not dominate your fridge. 1/9 pans (4.25" x 6.75") work for smaller portions like sauces and garnishes, though they can tip when full due to the narrow footprint.'
+        content: '1/6 pans (6.75" x 6.25") are the sweet spot for home use, big enough for real portions but compact enough to not dominate your fridge. 1/9 pans (4.25" x 6.75") work for smaller portions like sauces and garnishes, though they can tip when full due to the narrow footprint.'
       }
     ],
     testingEnvironment: [
@@ -156,7 +156,7 @@ export const reviewData = {
     },
     {
       question: 'Can I put them in the freezer?',
-      answer: 'Yes—they\'re freezer safe. I use them for freezing stock, soups, cooked grains, and meal prep portions. The containers won\'t crack or become brittle in freezer temperatures.'
+      answer: 'Yes, they\'re freezer safe. I use them for freezing stock, soups, cooked grains, and meal prep portions. The containers won\'t crack or become brittle in freezer temperatures.'
     },
     {
       question: 'Will they stain from tomato sauce?',
@@ -164,7 +164,7 @@ export const reviewData = {
     },
     {
       question: 'Do I need 1/6 or 1/9 pans?',
-      answer: 'Start with 1/6 pans. They\'re more versatile for home use—big enough for real portions but not so large they dominate your fridge. Only add 1/9 pans if you have specific small-portion needs like sauces, condiments, or garnishes. The 1/9 pans are narrower and can tip over when full.'
+      answer: 'Start with 1/6 pans. They\'re more versatile for home use, big enough for real portions but not so large they dominate your fridge. Only add 1/9 pans if you have specific small-portion needs like sauces, condiments, or garnishes. The 1/9 pans are narrower and can tip over when full.'
     },
     {
       question: 'How do they compare to glass containers?',
@@ -176,7 +176,7 @@ export const reviewData = {
     },
     {
       question: 'Are the lids dishwasher safe?',
-      answer: 'Yes—both pans and lids are dishwasher safe, even in commercial dishwashers at 180°F+. I\'ve been washing mine in the dishwasher for 20 years with no warping, cracking, or seal degradation.'
+      answer: 'Yes, both pans and lids are dishwasher safe, even in commercial dishwashers at 180°F+. I\'ve been washing mine in the dishwasher for 20 years with no warping, cracking, or seal degradation.'
     }
   ],
 
@@ -200,7 +200,7 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      'After 20 years of daily home use, small plastic hotel pans are the single best kitchen organization upgrade you can make. This isn\'t about fancy features or clever marketing—it\'s about the proven system that every professional kitchen uses because nothing else comes close for functional food storage.',
+      'After 20 years of daily home use, small plastic hotel pans are the single best kitchen organization upgrade you can make. This isn\'t about fancy features or clever marketing. It\'s about the proven system that every professional kitchen uses because nothing else comes close for functional food storage.',
       'Once you experience the organization, efficiency, and simplicity of standardized containers, you\'ll never go back to consumer storage chaos. Trust the system that restaurants rely on. Your future meal-prepping self will thank you.'
     ],
     ctaText: 'Check Price on Amazon →'
