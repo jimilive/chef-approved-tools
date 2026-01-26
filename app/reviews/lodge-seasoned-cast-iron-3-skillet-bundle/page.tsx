@@ -211,7 +211,7 @@ export default async function LodgeCastIronReviewPage() {
             title="My 7-Year Home Testing Journey"
             paragraphs={[
               "When I first bought this Lodge 3-skillet set in 2017, I was curious how it would hold up to daily home cooking. Seven years later, I have my answer: these skillets have become the most-used cookware in my kitchen.",
-              "The first year was a learning curve. I made every cast iron mistake—leaving water in the pan, using too much soap, not preheating properly. But unlike cheaper alternatives that would have rusted or warped, these Lodge skillets forgave my errors. The seasoning rebuilt, the surface stayed flat, and the performance actually improved with use.",
+              "The first year was a learning curve. I made every cast iron mistake: leaving water in the pan, using too much soap, not preheating properly. But unlike cheaper alternatives that would have rusted or warped, these Lodge skillets forgave my errors. The seasoning rebuilt, the surface stayed flat, and the performance actually improved with use.",
               "Now, after cooking thousands of meals, these skillets have developed the kind of natural non-stick surface that takes years to build. My 12-inch is my go-to for everything from Sunday morning pancakes to weeknight stir-fries. The 10-inch lives on the stovetop for quick sautés. And the 8-inch is perfect for single-serving frittatas and melting butter."
             ]}
           />
@@ -312,7 +312,7 @@ export default async function LodgeCastIronReviewPage() {
             useCases={[
               {
                 title: "Weekend Breakfast Service",
-                description: "Sunday mornings, I run all three skillets simultaneously. The 12-inch handles bacon in batches, the 10-inch cooks eggs, and the 8-inch melts butter for pancakes on the griddle. This is where the bundle really proves its value—you're essentially running a breakfast line.",
+                description: "Sunday mornings, I run all three skillets simultaneously. The 12-inch handles bacon in batches, the 10-inch cooks eggs, and the 8-inch melts butter for pancakes on the griddle. This is where the bundle really proves its value. You're essentially running a breakfast line.",
                 bullets: [
                   "All three pans heat evenly and hold temperature",
                   "The 12-inch fits 4-5 strips of bacon per batch comfortably",
@@ -330,7 +330,7 @@ export default async function LodgeCastIronReviewPage() {
               },
               {
                 title: "Stovetop-to-Oven Cooking",
-                description: "The 10-inch has become my frittata pan. Start eggs on the stovetop, finish under the broiler—no pan transfer needed. Same goes for cornbread and roasted vegetables. The seamless transition eliminates the need for multiple pans.",
+                description: "The 10-inch has become my frittata pan. Start eggs on the stovetop, finish under the broiler, no pan transfer needed. Same goes for cornbread and roasted vegetables. The smooth transition eliminates the need for multiple pans.",
                 bullets: [
                   "Handles 500°F oven without issues",
                   "Broiler-safe for finishing dishes",

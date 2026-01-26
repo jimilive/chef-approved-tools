@@ -9,7 +9,7 @@ export const reviewData = {
   // METADATA
   metadata: {
     title: 'Why I Ditched Tupperware For Plastic Hotel Pans (20 Years Proof)',
-    description: '20 years of meal prep—plastic hotel pans organize everything better than Tupperware. Restaurant storage system for $20. NSF-approved, stackable.',
+    description: '20 years of meal prep. Plastic hotel pans organize everything better than Tupperware. Restaurant storage system for $20. NSF-approved, stackable.',
     ogTitle: 'Large Plastic Hotel Pans Review: Full & 1/3 Pans for Batch Cooking',
     ogDescription: 'Professional chef review of large plastic hotel pans for serious meal prep and batch cooking.',
     testingPeriod: '20 Years Using',
@@ -40,7 +40,7 @@ export const reviewData = {
       icon: '🏆',
       text: 'Tier 1: Professional Kitchen Use + 20 Years Home',
     },
-    verdict: 'After 20 years using large hotel pans professionally and at home, full and 1/3 pans are essential for anyone doing serious batch cooking, party prep, or large-family meal planning. These aren\'t everyday containers—they\'re for when you need serious volume. Marinating 30 chicken thighs for a BBQ. Batch-cooking 20 pounds of pulled pork. Prepping salad ingredients for a family reunion. The standardized sizing means everything stacks perfectly, lids are interchangeable, and you can organize massive amounts of food efficiently. Every restaurant uses these for prep and cold storage because nothing else handles volume this efficiently.',
+    verdict: 'After 20 years using large hotel pans professionally and at home, full and 1/3 pans are ideal for anyone doing serious batch cooking, party prep, or large-family meal planning. These aren\'t everyday containers. They\'re for when you need serious volume. Marinating 30 chicken thighs for a BBQ. Batch-cooking 20 pounds of pulled pork. Prepping salad ingredients for a family reunion. The standardized sizing means everything stacks perfectly, lids are interchangeable, and you can organize massive amounts of food efficiently. Every restaurant uses these for prep and cold storage because nothing else handles volume this efficiently.',
     verdictStrong: 'Professional organization for serious batch cooking',
     ctaText: 'Check Price on Amazon →'
   },
@@ -51,7 +51,7 @@ export const reviewData = {
     sections: [
       {
         title: 'Batch Cooking Performance',
-        content: 'Full hotel pans hold massive quantities: 20+ lbs of pulled pork, 5 gallons of soup, 30 marinating chicken pieces. The depth (6 inches) means you can stack food without crushing, store liquids without spilling, and organize ingredients efficiently. After 20 years, I use full pans for every large gathering—they make batch cooking manageable instead of chaotic.'
+        content: 'Full hotel pans hold massive quantities: 20+ lbs of pulled pork, 5 gallons of soup, 30 marinating chicken pieces. The depth (6 inches) means you can stack food without crushing, store liquids without spilling, and organize ingredients efficiently. After 20 years, I use full pans for every large gathering. They make batch cooking manageable instead of chaotic.'
       },
       {
         title: '1/3 Pans: The Home Kitchen Sweet Spot',
@@ -59,11 +59,11 @@ export const reviewData = {
       },
       {
         title: 'Restaurant Durability',
-        content: 'NSF-certified polypropylene survives decades of daily use in commercial kitchens. At home, these pans are virtually indestructible. Dishwasher safe through thousands of cycles, freezer safe, and resistant to staining from acidic foods. The same pans I bought 20 years ago still work perfectly—no cracks, warping, or degradation.'
+        content: 'NSF-certified polypropylene survives decades of daily use in commercial kitchens. At home, these pans are virtually indestructible. Dishwasher safe through thousands of cycles, freezer safe, and resistant to staining from acidic foods. The same pans I bought 20 years ago still work perfectly, no cracks, warping, or degradation.'
       },
       {
         title: 'Space Efficiency',
-        content: 'The standardized sizing means large pans nest perfectly with each other and with smaller hotel pans. Stack full pans together, stack 1/3 pans together, mix and match—everything fits efficiently. This matters when you\'re storing 10+ pans in a pantry or organizing ingredients for a big event.'
+        content: 'The standardized sizing means large pans nest perfectly with each other and with smaller hotel pans. Stack full pans together, stack 1/3 pans together, mix and match, everything fits efficiently. This matters when you\'re storing 10+ pans in a pantry or organizing ingredients for a big event.'
       }
     ],
     testingEnvironment: [
@@ -84,21 +84,21 @@ export const reviewData = {
       'Full pans may not fit in standard refrigerators',
       'Require significant storage space when not in use',
       'Initial investment more expensive than small pans',
-      'Best for batch cooking—overkill for daily leftovers'
+      'Best for batch cooking, overkill for daily leftovers'
     ]
   },
 
   // SECTION 3: PERFORMANCE ANALYSIS
   performanceAnalysis: {
-    title: 'Why Large Pans Are Essential for Batch Cooking',
+    title: 'Why Large Pans Are Important for Batch Cooking',
     sections: [
       {
         title: 'The Volume Advantage',
-        content: 'Large hotel pans solve the "not enough container space" problem. When you\'re marinating 30 chicken thighs, storing 15 pounds of prepped salad ingredients, or batch-cooking pulled pork for 50 people, you need serious volume. Full hotel pans hold 20+ pounds of food easily. 1/3 pans hold 8-12 servings—perfect for weekly meal prep or party sides. The depth (6 inches) means food doesn\'t get crushed when stacked, and liquids don\'t spill during transport.'
+        content: 'Large hotel pans solve the "not enough container space" problem. When you\'re marinating 30 chicken thighs, storing 15 pounds of prepped salad ingredients, or batch-cooking pulled pork for 50 people, you need serious volume. Full hotel pans hold 20+ pounds of food easily. 1/3 pans hold 8-12 servings, perfect for weekly meal prep or party sides. The depth (6 inches) means food doesn\'t get crushed when stacked, and liquids don\'t spill during transport.'
       },
       {
         title: 'Professional Batch Cooking Workflow',
-        content: 'This is how restaurants prep for service, and it works perfectly at home: Use full pans for marinating large quantities of protein (whole chickens, 20+ lbs of ribs, bulk seafood). Use 1/3 pans for prepped vegetables, cooked grains, salad ingredients, and party components. Everything stacks perfectly in walk-in coolers—or in your refrigerator if space allows. The standardized sizing means you can organize ingredients efficiently, see what you have at a glance, and access everything without container avalanches.'
+        content: 'This is how restaurants prep for service, and it works perfectly at home: Use full pans for marinating large quantities of protein (whole chickens, 20+ lbs of ribs, bulk seafood). Use 1/3 pans for prepped vegetables, cooked grains, salad ingredients, and party components. Everything stacks perfectly in walk-in coolers, or in your refrigerator if space allows. The standardized sizing means you can organize ingredients efficiently, see what you have at a glance, and access everything without container avalanches.'
       },
       {
         title: 'When to Use Large vs Small Pans',
@@ -113,7 +113,7 @@ export const reviewData = {
 
   // SECTION 4: PROS & CONS TITLE
   prosConsTitle: 'Honest Assessment After 20 Years',
-  prosTitle: 'What Makes Large Pans Essential',
+  prosTitle: 'What Makes Large Pans Useful',
   consTitle: 'Limitations to Understand',
 
   // SECTION 5: WHO SHOULD BUY
@@ -152,15 +152,15 @@ export const reviewData = {
     },
     {
       question: 'How much food do these pans hold?',
-      answer: 'Full pans (6" deep) hold 20+ lbs of solid food or about 5 gallons of liquid. 1/3 pans (6" deep) hold 8-12 servings of most foods—enough for a week of meal prep or party sides for 10-15 people. The depth means you can stack ingredients without crushing.'
+      answer: 'Full pans (6" deep) hold 20+ lbs of solid food or about 5 gallons of liquid. 1/3 pans (6" deep) hold 8-12 servings of most foods, enough for a week of meal prep or party sides for 10-15 people. The depth means you can stack ingredients without crushing.'
     },
     {
       question: 'Are they dishwasher safe?',
-      answer: 'Yes—fully dishwasher safe, even in commercial dishwashers at high temperatures. I\'ve been washing large hotel pans in dishwashers for 20 years with no warping, cracking, or degradation. The NSF-certified polypropylene is designed for this.'
+      answer: 'Yes, fully dishwasher safe, even in commercial dishwashers at high temperatures. I\'ve been washing large hotel pans in dishwashers for 20 years with no warping, cracking, or degradation. The NSF-certified polypropylene is designed for this.'
     },
     {
       question: 'Can I freeze food in these pans?',
-      answer: 'Yes—they\'re freezer safe. I use them for freezing stock, soup, batch-cooked proteins, and meal prep portions. The plastic won\'t crack or become brittle in freezer temperatures. Just leave headroom for liquid expansion when freezing soups or stocks.'
+      answer: 'Yes, they\'re freezer safe. I use them for freezing stock, soup, batch-cooked proteins, and meal prep portions. The plastic won\'t crack or become brittle in freezer temperatures. Just leave headroom for liquid expansion when freezing soups or stocks.'
     },
     {
       question: 'Do I need full pans or 1/3 pans?',
@@ -168,15 +168,15 @@ export const reviewData = {
     },
     {
       question: 'How do large pans compare to small hotel pans?',
-      answer: 'Small pans (1/6, 1/9) are for everyday meal prep and daily leftovers. Large pans (full, 1/3) are for batch cooking and party prep. Most serious home cooks need both—small pans for regular use, large pans for when you\'re cooking at scale. They all use the same standardized sizing system.'
+      answer: 'Small pans (1/6, 1/9) are for everyday meal prep and daily leftovers. Large pans (full, 1/3) are for batch cooking and party prep. Most serious home cooks need both: small pans for regular use, large pans for when you\'re cooking at scale. They all use the same standardized sizing system.'
     },
     {
       question: 'Where should I store large hotel pans?',
-      answer: 'Stack them in a pantry or cabinet when not in use. They nest perfectly—all full pans stack together, all 1/3 pans stack together, and lids stack separately. This takes less space than you\'d think. I keep 6-8 large pans stored in about 2 cubic feet of pantry space.'
+      answer: 'Stack them in a pantry or cabinet when not in use. They nest perfectly: all full pans stack together, all 1/3 pans stack together, and lids stack separately. This takes less space than you\'d think. I keep 6-8 large pans stored in about 2 cubic feet of pantry space.'
     },
     {
       question: 'Are the lids sold separately?',
-      answer: 'Yes—lids are sold separately for most sizes. This lets you buy exactly how many you need. Some 1/3 pan sets come with lids included. Check the product description. Having extra lids is useful since you often have multiple pans in use simultaneously.'
+      answer: 'Yes, lids are sold separately for most sizes. This lets you buy exactly how many you need. Some 1/3 pan sets come with lids included. Check the product description. Having extra lids is useful since you often have multiple pans in use simultaneously.'
     }
   ],
 
@@ -200,7 +200,7 @@ export const reviewData = {
   bottomLine: {
     title: 'The Bottom Line: My Professional Verdict',
     paragraphs: [
-      'After 20 years using large hotel pans professionally and at home, full and 1/3 pans are essential for anyone doing serious batch cooking, party prep, or large-family meal planning. This isn\'t about everyday storage—it\'s about handling volume efficiently when you\'re cooking at scale.',
+      'After 20 years using large hotel pans professionally and at home, full and 1/3 pans are ideal for anyone doing serious batch cooking, party prep, or large-family meal planning. This isn\'t about everyday storage. It\'s about handling volume efficiently when you\'re cooking at scale.',
       'If you host large gatherings, batch cook weekly, or feed a big family, large plastic hotel pans transform how you organize food prep. Trust the restaurant-grade system that professional kitchens rely on for cold storage and prep organization.'
     ],
     ctaText: 'Check Price on Amazon →'
@@ -299,7 +299,7 @@ export const reviewData = {
       }
     ],
     expertRating: 5,
-    expertOpinion: 'After 20 years using large hotel pans professionally and at home, full and 1/3 pans are essential for serious batch cooking and party prep.',
+    expertOpinion: 'After 20 years using large hotel pans professionally and at home, full and 1/3 pans are ideal for serious batch cooking and party prep.',
     pros: [
       'Full pans handle massive quantities (20+ lbs)',
       '1/3 pans perfect for home-scale batch cooking',

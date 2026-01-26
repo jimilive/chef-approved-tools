@@ -171,7 +171,7 @@ export default async function LargePlasticHotelPansReview() {
                   title="Choose Your Size:"
                   options={reviewData.sizeOptions.options.map((option) => ({
                     id: option.id,
-                    label: `${option.size} — ${option.depth}`,
+                    label: `${option.size} | ${option.depth}`,
                     description: `${option.dimensions} | ${option.capacity} | ${option.bestFor}`,
                     affiliateUrl: option.affiliateUrl,
                     ctaId: `hero-cta-${option.id}`
@@ -286,7 +286,7 @@ export default async function LargePlasticHotelPansReview() {
                   title="Choose Your Size:"
                   options={reviewData.sizeOptions.options.map((option) => ({
                     id: option.id,
-                    label: `${option.size} — ${option.depth}`,
+                    label: `${option.size} | ${option.depth}`,
                     description: `${option.dimensions} | ${option.capacity} | ${option.bestFor}`,
                     affiliateUrl: option.affiliateUrl,
                     ctaId: `bottom-line-${option.id}`

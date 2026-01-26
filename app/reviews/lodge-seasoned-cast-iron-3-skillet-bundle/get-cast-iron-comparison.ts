@@ -78,6 +78,6 @@ export async function getCastIronComparison() {
       { label: 'Warranty', field: 'warranty' },
       { label: 'Best For', field: 'bestFor' },
     ],
-    trustMessage: 'This comparison is based on 7 years of home testing and 24 years of professional kitchen experience. Lodge costs $10-30 more but lasts 2x longer—that\'s actually cheaper per year of use.',
+    trustMessage: 'This comparison is based on 7 years of home testing and 24 years of professional kitchen experience. Lodge costs $10-30 more but lasts 2x longer. That\'s actually cheaper per year of use.',
   }
 }

@@ -41,7 +41,7 @@ export const reviewData = {
       text: "Tier 3: Expert Evaluation",
       icon: "🔬"
     },
-    verdict: "After 90 days of testing with 24 years of professional kitchen experience, the Ninja AF101 is a legitimate cooking tool that delivers approximately 85% of deep-fryer results. Wings come out crispy-skinned with juicy meat inside. However, this is a compact convection oven with a 4-quart capacity sized for small households—not families or gatherings. The non-stick coating requires gentle handling with only wood, silicone, or plastic utensils.",
+    verdict: "After 90 days of testing with 24 years of professional kitchen experience, the Ninja AF101 is a legitimate cooking tool that delivers approximately 85% of deep-fryer results. Wings come out crispy-skinned with juicy meat inside. However, this is a compact convection oven with a 4-quart capacity sized for small households, not families or gatherings. The non-stick coating requires gentle handling with only wood, silicone, or plastic utensils.",
     verdictStrong: "delivers approximately 85% of deep-fryer results",
     ctaText: "Check Amazon Price →",
     badge: {
@@ -62,8 +62,8 @@ export const reviewData = {
   professionalContext: {
     title: "Professional Context: Why I Can Evaluate This",
     paragraphs: [
-      "Over 24 years in professional kitchens, I have used everything from commercial deep fryers at Mellow Mushroom (churning out hundreds of wings and fries per night) to $15,000 commercial convection ovens at Purple Café and Feierabend. I understand airflow patterns, heating element placement, and what separates good convection from great convection. I know what properly fried chicken wings should taste like—crispy skin with juicy meat inside, proper Maillard reaction browning, no greasiness.",
-      "Air fryers are essentially compact, high-powered convection ovens. The marketing calls them revolutionary, but the technology is just rapid air circulation around food—something commercial convection ovens have done since the 1970s. The question is: can a $70-90 consumer appliance replicate commercial convection performance? After 90 days of testing, I have the answer."
+      "Over 24 years in professional kitchens, I have used everything from commercial deep fryers at Mellow Mushroom (churning out hundreds of wings and fries per night) to $15,000 commercial convection ovens at Purple Café and Feierabend. I understand airflow patterns, heating element placement, and what separates good convection from great convection. I know what properly fried chicken wings should taste like: crispy skin with juicy meat inside, proper Maillard reaction browning, no greasiness.",
+      "Air fryers are essentially compact, high-powered convection ovens. The marketing calls them revolutionary, but the technology is just rapid air circulation around food, something commercial convection ovens have done since the 1970s. The question is: can a $70-90 consumer appliance replicate commercial convection performance? After 90 days of testing, I have the answer."
     ]
   },
 
@@ -74,17 +74,17 @@ export const reviewData = {
       {
         title: "Fresh Whole Wings Test (The Signature Dish)",
         setup: "Fresh whole chicken wings, 400°F, 20 minutes total (flipped halfway).",
-        results: "Wings came out with crispy skin and juicy meat—approximately 85% as good as deep-fried. The skin crisped properly, the fat rendered correctly, and the meat stayed moist. However, they lack the deep golden-brown color of true deep-fried wings. The texture is excellent, but the visual appearance is slightly lighter."
+        results: "Wings came out with crispy skin and juicy meat, approximately 85% as good as deep-fried. The skin crisped properly, the fat rendered correctly, and the meat stayed moist. However, they lack the deep golden-brown color of true deep-fried wings. The texture is excellent, but the visual appearance is slightly lighter."
       },
       {
         title: "Frozen Foods Test (Fries, Tots, Tenders)",
         setup: "",
-        results: "Frozen foods are where the AF101 truly shines. French fries, tater tots, chicken tenders, and breaded cutlets all came out crispy and evenly cooked. The crisper plate design prevents soggy bottoms, and the even airflow ensures consistent results. Follow package instructions and adjust based on your preference—the quick reference guide is often inaccurate."
+        results: "Frozen foods are where the AF101 truly shines. French fries, tater tots, chicken tenders, and breaded cutlets all came out crispy and evenly cooked. The crisper plate design prevents soggy bottoms, and the even airflow ensures consistent results. Follow package instructions and adjust based on your preference. The quick reference guide is often inaccurate."
       },
       {
         title: "The Non-Stick Coating Reality",
         setup: "",
-        results: "Warning: I scratched the non-stick coating with a metal spatula during testing. The scratches are permanent and will reduce basket lifespan. Use only wood, silicone, or plastic utensils. This is the AF101's biggest weakness—the coating is not durable enough for daily use without careful handling."
+        results: "Warning: I scratched the non-stick coating with a metal spatula during testing. The scratches are permanent and will reduce basket lifespan. Use only wood, silicone, or plastic utensils. This is the AF101's biggest weakness: the coating is not durable enough for daily use without careful handling."
       }
     ]
   },
@@ -100,17 +100,17 @@ export const reviewData = {
     perfectForTitle: "Buy the Ninja AF101 if you:",
     considerAlternativesTitle: "Skip the Ninja AF101 if you:",
     perfectFor: [
-      "Cook for 2-3 people regularly — The 4-quart capacity is perfect for small households",
-      "Want fried food without oil management and cleanup — Zero oil means no hot oil handling, disposal, or splatter cleanup",
-      "Make frozen foods frequently — Fries, tots, tenders, and cutlets all come out crispy and evenly cooked",
-      "Have limited counter space — Compact footprint (8.5\" x 10.25\" x 11\") fits under most cabinets",
-      "Want simple controls without complexity — Temperature dial and timer are straightforward"
+      "Cook for 2-3 people regularly: The 4-quart capacity is perfect for small households",
+      "Want fried food without oil management and cleanup: Zero oil means no hot oil handling, disposal, or splatter cleanup",
+      "Make frozen foods frequently: Fries, tots, tenders, and cutlets all come out crispy and evenly cooked",
+      "Have limited counter space: Compact footprint (8.5\" x 10.25\" x 11\") fits under most cabinets",
+      "Want simple controls without complexity: Temperature dial and timer are straightforward"
     ],
     considerAlternatives: [
-      "Cook for families of 4+ people regularly — The 4-quart capacity means cooking in batches",
-      "Need true deep-fryer results — Air frying is 85% as good, not 100%",
-      "Want a window to check food without opening — No interior light or viewing window",
-      "Expect the non-stick coating to handle metal utensils — It will not, and scratches are permanent"
+      "Cook for families of 4+ people regularly: The 4-quart capacity means cooking in batches",
+      "Need true deep-fryer results: Air frying is 85% as good, not 100%",
+      "Want a window to check food without opening: No interior light or viewing window",
+      "Expect the non-stick coating to handle metal utensils: It will not, and scratches are permanent"
     ]
   },
 
@@ -120,7 +120,7 @@ export const reviewData = {
     items: [
       {
         question: "Do air fryers really work or are they just hype?",
-        answer: "After 90 days of testing with 24 years of professional kitchen experience, air fryers are legitimate cooking tools—not gimmicks. The Ninja AF101 delivers approximately 85% of deep-fryer results using rapid air circulation. Wings come out crispy-skinned with juicy meat inside. However, they are compact convection ovens, not magic—you need proper technique and temperature control."
+        answer: "After 90 days of testing with 24 years of professional kitchen experience, air fryers are legitimate cooking tools, not gimmicks. The Ninja AF101 delivers approximately 85% of deep-fryer results using rapid air circulation. Wings come out crispy-skinned with juicy meat inside. However, they are compact convection ovens, not magic. You need proper technique and temperature control."
       },
       {
         question: "How many chicken wings fit in the Ninja AF101?",
@@ -128,7 +128,7 @@ export const reviewData = {
       },
       {
         question: "Can I use metal utensils in the Ninja air fryer?",
-        answer: "No—use only wood, silicone, or plastic utensils. I learned this the hard way by scratching the non-stick coating with a metal spatula. The scratches are permanent and will reduce the lifespan of the basket. Treat the non-stick surface gently to maximize longevity."
+        answer: "No. Use only wood, silicone, or plastic utensils. I learned this the hard way by scratching the non-stick coating with a metal spatula. The scratches are permanent and will reduce the lifespan of the basket. Treat the non-stick surface gently to maximize longevity."
       },
       {
         question: "How does the Ninja AF101 compare to deep frying?",
@@ -136,7 +136,7 @@ export const reviewData = {
       },
       {
         question: "Is the Ninja AF101 loud?",
-        answer: "The fan is audible but not loud. It is quieter than commercial fryers and louder than complete silence. The noise level is comparable to a household convection oven—you will hear it running, but it would not disrupt a conversation in the next room. For apartment living or open-concept homes, the noise is acceptable."
+        answer: "The fan is audible but not loud. It is quieter than commercial fryers and louder than complete silence. The noise level is comparable to a household convection oven. You will hear it running, but it would not disrupt a conversation in the next room. For apartment living or open-concept homes, the noise is acceptable."
       },
       {
         question: "Why should I follow package instructions instead of the quick reference guide?",
@@ -149,7 +149,7 @@ export const reviewData = {
   faqData: [
     {
       question: "Do air fryers really work or are they just hype?",
-      answer: "After 90 days of testing with 24 years of professional kitchen experience, air fryers are legitimate cooking tools—not gimmicks. The Ninja AF101 delivers approximately 85% of deep-fryer results using rapid air circulation. Wings come out crispy-skinned with juicy meat inside. However, they are compact convection ovens, not magic—you need proper technique and temperature control."
+      answer: "After 90 days of testing with 24 years of professional kitchen experience, air fryers are legitimate cooking tools, not gimmicks. The Ninja AF101 delivers approximately 85% of deep-fryer results using rapid air circulation. Wings come out crispy-skinned with juicy meat inside. However, they are compact convection ovens, not magic. You need proper technique and temperature control."
     },
     {
       question: "How many chicken wings fit in the Ninja AF101?",
@@ -157,7 +157,7 @@ export const reviewData = {
     },
     {
       question: "Can I use metal utensils in the Ninja air fryer?",
-      answer: "No—use only wood, silicone, or plastic utensils. I learned this the hard way by scratching the non-stick coating with a metal spatula. The scratches are permanent and will reduce the lifespan of the basket. Treat the non-stick surface gently to maximize longevity."
+      answer: "No. Use only wood, silicone, or plastic utensils. I learned this the hard way by scratching the non-stick coating with a metal spatula. The scratches are permanent and will reduce the lifespan of the basket. Treat the non-stick surface gently to maximize longevity."
     },
     {
       question: "How does the Ninja AF101 compare to deep frying?",
@@ -165,7 +165,7 @@ export const reviewData = {
     },
     {
       question: "Is the Ninja AF101 loud?",
-      answer: "The fan is audible but not loud. It is quieter than commercial fryers and louder than complete silence. The noise level is comparable to a household convection oven—you will hear it running, but it would not disrupt a conversation in the next room. For apartment living or open-concept homes, the noise is acceptable."
+      answer: "The fan is audible but not loud. It is quieter than commercial fryers and louder than complete silence. The noise level is comparable to a household convection oven. You will hear it running, but it would not disrupt a conversation in the next room. For apartment living or open-concept homes, the noise is acceptable."
     },
     {
       question: "Why should I follow package instructions instead of the quick reference guide?",
@@ -184,7 +184,7 @@ export const reviewData = {
   bottomLine: {
     title: "Final Recommendation",
     paragraphs: [
-      "After 90 days of testing, the Ninja AF101 delivers 85% of deep-fryer results with zero oil mess. For small households who want fried food without the hassle, this is a genuine convenience tool—not a novelty.",
+      "After 90 days of testing, the Ninja AF101 delivers 85% of deep-fryer results with zero oil mess. For small households who want fried food without the hassle, this is a genuine convenience tool, not a novelty.",
       "The 4-quart capacity is perfect for 2-3 people, the compact footprint fits under most cabinets, and the simple controls make it easy to use. However, the non-stick coating requires gentle handling, and you'll cook in batches for larger groups."
     ],
     finalRating: {
@@ -215,33 +215,33 @@ export const reviewData = {
       "Delivers approximately 85% of deep-fryer results on wings and frozen foods",
       "4-quart capacity perfect for 2-3 people or side dishes for families",
       "Ceramic-coated basket provides genuine non-stick release",
-      "Simple controls with minimal learning curve—works out of the box",
+      "Simple controls with minimal learning curve, works out of the box",
       "Compact footprint fits under most kitchen cabinets",
       "Dehydrate function adds unexpected versatility for jerky and dried fruit"
     ],
     minorConsiderations: [
-      "4-quart capacity limits batch size—not ideal for families of 4+",
-      "Loud at full speed—will wake light sleepers during early morning use",
-      "Preset times often too long—expect to adjust cooking times through trial and error",
+      "4-quart capacity limits batch size, not ideal for families of 4+",
+      "Loud at full speed, will wake light sleepers during early morning use",
+      "Preset times often too long, expect to adjust cooking times through trial and error",
       "Non-stick coating requires careful utensil selection (no metal)",
-      "Not a replacement for deep frying—results are close but not identical"
+      "Not a replacement for deep frying, results are close but not identical"
     ],
     sections: [
       {
         title: "Wing Performance Test",
-        content: "Wings were the real test. After years of deep-frying wings in restaurant kitchens, I know what properly cooked wings should taste like. The Ninja AF101 delivers crispy skin with juicy meat—approximately 85% of deep-fryer results. The key is proper technique: pat wings completely dry, light oil coating, don't overcrowd the basket. Results won't fool a professional, but they'll satisfy anyone looking for healthier fried food at home."
+        content: "Wings were the real test. After years of deep-frying wings in restaurant kitchens, I know what properly cooked wings should taste like. The Ninja AF101 delivers crispy skin with juicy meat, approximately 85% of deep-fryer results. The key is proper technique: pat wings completely dry, light oil coating, don't overcrowd the basket. Results won't fool a professional, but they'll satisfy anyone looking for healthier fried food at home."
       },
       {
         title: "Frozen Food Convenience",
-        content: "Where the AF101 truly shines is frozen food. Frozen fries come out crispier than any oven can achieve. Frozen chicken tenders, fish sticks, mozzarella sticks—all better than oven directions suggest. The rapid air circulation creates that crispy exterior that ovens can't match. For households that regularly cook frozen convenience foods, this alone justifies the purchase."
+        content: "Where the AF101 truly shines is frozen food. Frozen fries come out crispier than any oven can achieve. Frozen chicken tenders, fish sticks, mozzarella sticks, all better than oven directions suggest. The rapid air circulation creates that crispy exterior that ovens can't match. For households that regularly cook frozen convenience foods, this alone justifies the purchase."
       },
       {
         title: "Capacity Reality Check",
-        content: "The 4-quart basket fits approximately 2 pounds of wings or fries in a single layer. That's enough for 2-3 people as a main dish or 4-5 as an appetizer. For larger families or entertaining, you'll need to cook in batches. This isn't a criticism—it's the trade-off for a compact footprint. Know your household's needs before buying."
+        content: "The 4-quart basket fits approximately 2 pounds of wings or fries in a single layer. That's enough for 2-3 people as a main dish or 4-5 as an appetizer. For larger families or entertaining, you'll need to cook in batches. This isn't a criticism. It's the trade-off for a compact footprint. Know your household's needs before buying."
       },
       {
         title: "Daily Use Observations",
-        content: "After 90 days of regular use, the ceramic coating shows no wear. Cleanup is genuinely easy—a quick wipe for light use, soapy water soak for stubborn residue. The unit preheats in 3 minutes versus 15+ for a conventional oven. For quick weeknight cooking, this speed matters. I find myself using it for reheating pizza (better than microwave) and roasting vegetables (faster than oven) more than expected."
+        content: "After 90 days of regular use, the ceramic coating shows no wear. Cleanup is genuinely easy: a quick wipe for light use, soapy water soak for stubborn residue. The unit preheats in 3 minutes versus 15+ for a conventional oven. For quick weeknight cooking, this speed matters. I find myself using it for reheating pizza (better than microwave) and roasting vegetables (faster than oven) more than expected."
       }
     ]
   },
@@ -252,15 +252,15 @@ export const reviewData = {
     sections: [
       {
         title: "What an Air Fryer Actually Is",
-        content: "Let's be clear: an air fryer is a compact convection oven with a powerful fan. It doesn't 'fry' anything—it circulates hot air rapidly around food. The result is similar to frying because the high-speed air creates a crispy exterior without submerging food in oil. After 24 years in professional kitchens, I initially dismissed air fryers as gimmicks. I was wrong. For home use, they deliver genuine value."
+        content: "Let's be clear: an air fryer is a compact convection oven with a powerful fan. It doesn't 'fry' anything. It circulates hot air rapidly around food. The result is similar to frying because the high-speed air creates a crispy exterior without submerging food in oil. After 24 years in professional kitchens, I initially dismissed air fryers as gimmicks. I was wrong. For home use, they deliver genuine value."
       },
       {
         title: "The 85% Rule",
-        content: "Air fryer results are approximately 85% as good as deep frying—close enough to satisfy most people, different enough that purists will notice. Wings are crispy but not quite as crackling. Fries are excellent but lack that oil-soaked richness. If you need 100% authentic fried taste, keep your deep fryer. If 85% with dramatically less mess and oil appeals to you, the air fryer makes sense."
+        content: "Air fryer results are approximately 85% as good as deep frying, close enough to satisfy most people, different enough that purists will notice. Wings are crispy but not quite as crackling. Fries are excellent but lack that oil-soaked richness. If you need 100% authentic fried taste, keep your deep fryer. If 85% with dramatically less mess and oil appeals to you, the air fryer makes sense."
       },
       {
         title: "Temperature Accuracy and Consistency",
-        content: "The Ninja AF101 maintains accurate temperature throughout cooking—no hot spots, no cold zones. The temperature range (105°F-400°F) covers everything from dehydrating at low heat to high-heat crisping. The controls are responsive and accurate. This matters because consistent temperature means consistent results batch after batch."
+        content: "The Ninja AF101 maintains accurate temperature throughout cooking, no hot spots, no cold zones. The temperature range (105°F-400°F) covers everything from dehydrating at low heat to high-heat crisping. The controls are responsive and accurate. This matters because consistent temperature means consistent results batch after batch."
       },
       {
         title: "Honest Comparison to Commercial Equipment",
@@ -268,7 +268,7 @@ export const reviewData = {
       },
       {
         title: "Long-Term Durability Projection",
-        content: "Based on 90 days of testing and 24 years of equipment experience: expect 3-5 years of regular home use. The motor and heating element are straightforward and reliable. The weak point is typically the non-stick coating—treat it gently with proper utensils and it should last. At this price point, 3-5 years represents good value."
+        content: "Based on 90 days of testing and 24 years of equipment experience: expect 3-5 years of regular home use. The motor and heating element are straightforward and reliable. The weak point is typically the non-stick coating. Treat it gently with proper utensils and it should last. At this price point, 3-5 years represents good value."
       }
     ]
   },
@@ -280,7 +280,7 @@ export const reviewData = {
       {
         emoji: "🍗",
         name: "Lodge Cast Iron Skillet",
-        description: "For when you want true deep-frying results. Perfect complement to air fryer—use Lodge for high-heat searing, Ninja for convenient frozen foods.",
+        description: "For when you want true deep-frying results. Perfect complement to air fryer. Use Lodge for high-heat searing, Ninja for convenient frozen foods.",
         href: "/reviews/lodge-seasoned-cast-iron-3-skillet-bundle"
       },
       {
@@ -314,7 +314,7 @@ export const reviewData = {
       "Delivers ~85% of deep-fryer results for wings",
       "Frozen foods come out crispy and evenly cooked",
       "Compact footprint fits under most cabinets",
-      "Simple controls—temperature dial and timer",
+      "Simple controls: temperature dial and timer",
       "Zero oil means no hot oil handling or cleanup",
       "Dishwasher-safe basket and crisper plate",
       "Quiet operation compared to commercial fryers",
@@ -331,7 +331,7 @@ export const reviewData = {
     affiliateLinks: [],
     inStock: true,
     expertRating: 4.4,
-    expertOpinion: "After 90 days of testing with 24 years of professional kitchen experience, the Ninja AF101 is a legitimate cooking tool that delivers approximately 85% of deep-fryer results. Wings come out crispy-skinned with juicy meat inside. However, this is a compact convection oven with a 4-quart capacity sized for small households—not families or gatherings. The non-stick coating requires gentle handling with only wood, silicone, or plastic utensils.",
+    expertOpinion: "After 90 days of testing with 24 years of professional kitchen experience, the Ninja AF101 is a legitimate cooking tool that delivers approximately 85% of deep-fryer results. Wings come out crispy-skinned with juicy meat inside. However, this is a compact convection oven with a 4-quart capacity sized for small households, not families or gatherings. The non-stick coating requires gentle handling with only wood, silicone, or plastic utensils.",
     dateAdded: "2025-10-01",
     lastUpdated: "2025-10-01"
   }

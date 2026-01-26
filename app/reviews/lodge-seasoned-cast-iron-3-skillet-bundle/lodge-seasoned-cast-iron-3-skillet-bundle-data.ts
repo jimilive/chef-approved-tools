@@ -9,7 +9,7 @@ export const reviewData = {
   // METADATA
   metadata: {
     title: "Lodge Cast Iron 3-Skillet Bundle: 7 Years, Seasoning Still Perfect",
-    description: "Three sizes (12\", 10.25\", 8\")—seven years of weekly use and the Lodge seasoning keeps getting better. This is what $60 buys you for life.",
+    description: "Three sizes (12\", 10.25\", 8\"). Seven years of weekly use and the Lodge seasoning keeps getting better. This is what $60 buys you for life.",
     ogTitle: "Lodge Cast Iron 3-Skillet Bundle: Professional Review",
     ogDescription: "Restaurant manager's honest review of the Lodge seasoned cast iron skillet set",
     testingPeriod: "7 Years Weekly Home Testing",
@@ -107,7 +107,7 @@ export const reviewData = {
     sections: [
       {
         title: "Exceptional Heat Retention",
-        content: "Superior thermal mass maintains cooking temperature. <LINK>These Lodge skillets</LINK> earn a 5/5 rating for heat retention. Once hot, they stay hot—critical for proper searing on steaks where you need consistent high heat even when adding cold meat."
+        content: "Superior thermal mass maintains cooking temperature. <LINK>These Lodge skillets</LINK> earn a 5/5 rating for heat retention. Once hot, they stay hot, critical for proper searing on steaks where you need consistent high heat even when adding cold meat."
       },
       {
         title: "Pre-Seasoned Ready to Cook",
@@ -162,11 +162,11 @@ export const reviewData = {
     sections: [
       {
         title: "7 Years of Weekly Home Testing",
-        content: "After 7 years of weekly home cooking with <LINK>this Lodge set</LINK>, I can confidently say these skillets deliver professional-grade performance. I use them primarily for searing steaks and making pancakes—two applications that showcase cast iron's exceptional heat retention and even cooking."
+        content: "After 7 years of weekly home cooking with <LINK>this Lodge set</LINK>, I can confidently say these skillets deliver professional-grade performance. I use them primarily for searing steaks and making pancakes, two applications that showcase cast iron's exceptional heat retention and even cooking."
       },
       {
         title: "Heat Performance That Amazes",
-        content: "The heat retention earns a 5/5 rating. Once <LINK>these skillets</LINK> get hot, they stay hot—critical for proper searing on steaks where you need consistent high heat even when adding cold meat. The thermal mass is exceptional. For pancakes, the even heat distribution prevents hot spots that would burn some while leaving others undercooked."
+        content: "The heat retention earns a 5/5 rating. Once <LINK>these skillets</LINK> get hot, they stay hot, critical for proper searing on steaks where you need consistent high heat even when adding cold meat. The thermal mass is exceptional. For pancakes, the even heat distribution prevents hot spots that would burn some while leaving others undercooked."
       },
       {
         title: "Durability: 5/5 With Proper Care",
@@ -174,7 +174,7 @@ export const reviewData = {
       },
       {
         title: "Size Versatility: All Three Get Equal Use",
-        content: "I use all three sizes equally depending on the task. The 12-inch handles large steaks and family-sized pancake batches. The 10.25-inch is perfect for mid-sized tasks. The 8-inch excels at single servings and smaller portions. If you can only buy one, get the 12-inch—it's the most versatile size."
+        content: "I use all three sizes equally depending on the task. The 12-inch handles large steaks and family-sized pancake batches. The 10.25-inch is perfect for mid-sized tasks. The 8-inch excels at single servings and smaller portions. If you can only buy one, get the 12-inch. It's the most versatile size."
       }
     ]
   },
@@ -232,7 +232,7 @@ export const reviewData = {
       },
       {
         question: "What size Lodge skillet should I buy first?",
-        answer: "The 12-inch skillet is the most versatile if you can only choose one size. It handles large steaks and family-sized meals, still works adequately for smaller portions, provides maximum cooking surface for versatility, and offers best value for single-skillet purchase. My recommendation: Get the bundle if possible—all three sizes get equal use in my kitchen."
+        answer: "The 12-inch skillet is the most versatile if you can only choose one size. It handles large steaks and family-sized meals, still works adequately for smaller portions, provides maximum cooking surface for versatility, and offers best value for single-skillet purchase. My recommendation: Get the bundle if possible. All three sizes get equal use in my kitchen."
       }
     ]
   },
@@ -261,7 +261,7 @@ export const reviewData = {
     },
     {
       question: "What size Lodge skillet should I buy first?",
-      answer: "The 12-inch skillet is the most versatile if you can only choose one size. It handles large steaks and family-sized meals, still works adequately for smaller portions, provides maximum cooking surface for versatility, and offers best value for single-skillet purchase. My recommendation: Get the bundle if possible—all three sizes get equal use in my kitchen."
+      answer: "The 12-inch skillet is the most versatile if you can only choose one size. It handles large steaks and family-sized meals, still works adequately for smaller portions, provides maximum cooking surface for versatility, and offers best value for single-skillet purchase. My recommendation: Get the bundle if possible. All three sizes get equal use in my kitchen."
     }
   ],
 
@@ -275,7 +275,7 @@ export const reviewData = {
   // EMAIL CAPTURE
   emailCapture: {
     title: "Get My Complete Cast Iron Cooking Guide",
-    subtitle: "Download my comprehensive guide to cast iron mastery, developed over years of professional use.",
+    subtitle: "Download my complete guide to cast iron mastery, developed over years of professional use.",
     inputPlaceholder: "Your email address",
     buttonText: "Download Free Guide",
     finePrint: "Instant delivery. No spam, ever. Unsubscribe anytime."

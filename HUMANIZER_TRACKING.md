@@ -1,7 +1,7 @@
 # Humanizer Progress Tracking
 
 **Started:** January 22, 2026
-**Last Updated:** January 24, 2026
+**Last Updated:** January 26, 2026
 **Method:** Manual audit for AI-isms (em dashes, filler phrases, marketing hype)
 
 ---
@@ -9,8 +9,8 @@
 ## HANDOFF FOR NEXT SESSION
 
 ### Current Status
-- **100 pages completed** (22 reviews, 68 blogs, 10 guides/categories)
-- **Next page:** #101 (check priority list for next page)
+- **106 pages completed** (27 reviews, 68 blogs, 10 guides/categories, 1 comparison data file)
+- **Next page:** #107 (check priority list for next page)
 - Priority list location: `/Users/scottbradley/Downloads/pages-by-importance.md`
 
 ### Critical Lessons Learned
@@ -177,6 +177,12 @@
 | 98 | /blog/victorinox-budget-vs-wusthof-premium-knives | Done | 12 | 0 | Fixed 12 em dashes |
 | 99 | /blog/what-is-mirepoix | Done | 22 | 0 | Fixed 22 em dashes, kept "essential" phrases |
 | 100 | /blog/deglazing-pan-sauces | Done | 31 | 0 | Fixed 31 em dashes |
+| 101 | /reviews/bodum-chambord-french-press | Done | 14 | 1 | Fixed 14 em dashes, 1 AI phrase ("comprehensive"→"complete") |
+| 102 | /reviews/large-plastic-hotel-pans | Done | 17 | 5 | Fixed 17 em dashes (15 data, 2 page), 5 AI phrases (essential→ideal/useful/important) |
+| 103 | /reviews/lodge-seasoned-cast-iron-3-skillet-bundle | Done | 11 | 2 | Fixed 11 em dashes (7 data, 3 page, 1 comparison), 2 AI phrases ("comprehensive"→"complete", "seamless"→"smooth") |
+| 104 | /reviews/ninja-air-fryer-af101 | Done | 38 | 1 | Fixed 38 em dashes, 1 AI phrase ("comprehensive"→"complete") |
+| 105 | /reviews/oxo-good-grips-bench-scraper | Skip | - | - | Already done as Page 40 |
+| 106 | /reviews/cuisinart-8-inch-nonstick-pan | Done | 18 | 4 | Fixed 18 em dashes, 4 AI phrases (3x "effortlessly"→"easily", "essential"→"a must-have") |
 
 ## Patterns Being Checked
 
@@ -403,3 +409,11 @@
   - Page 99 (/blog/what-is-mirepoix): 22 em dashes → periods, commas, colons, parentheses; kept "essential" phrases per user
   - Page 100 (/blog/deglazing-pan-sauces): 31 em dashes → periods, commas, colons
   - **Total: 96 em dashes fixed, 1 AI phrase fix**
+- **Batch session: Pages 101-106 (5 review pages + 1 comparison data file)**
+  - Page 101 (/reviews/bodum-chambord-french-press): 14 em dashes, 1 AI phrase ("comprehensive"→"complete")
+  - Page 102 (/reviews/large-plastic-hotel-pans): 17 em dashes (15 data, 2 page), 5 AI phrases (essential→ideal/useful/important)
+  - Page 103 (/reviews/lodge-seasoned-cast-iron-3-skillet-bundle): 11 em dashes (7 data, 3 page.tsx, 1 get-cast-iron-comparison.ts), 2 AI phrases ("comprehensive"→"complete", "seamless"→"smooth"); kept "essential staple that gets better" per user
+  - Page 104 (/reviews/ninja-air-fryer-af101): 38 em dashes, 1 AI phrase ("comprehensive"→"complete")
+  - Page 105 skipped (already done as Page 40)
+  - Page 106 (/reviews/cuisinart-8-inch-nonstick-pan): 18 em dashes, 4 AI phrases (3x "effortlessly"→"easily", "essential"→"a must-have")
+  - **Total: 98 em dashes fixed, 13 AI phrase fixes**
