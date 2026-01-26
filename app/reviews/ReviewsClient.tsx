@@ -69,7 +69,7 @@ export default function ReviewsClient({ reviews }: ReviewsClientProps) {
 
         <p className="text-base text-gray-700 mb-8 leading-relaxed">
           These 6 products survived the most demanding commercial environments.
-          Equipment failure in a restaurant means lost revenue—these tools never failed.
+          Equipment failure in a restaurant means lost revenue. These tools never failed.
         </p>
 
         {/* Featured Grid - 2 columns */}

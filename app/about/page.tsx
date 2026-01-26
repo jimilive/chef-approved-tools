@@ -267,7 +267,7 @@ export default function AboutPage() {
             <p className="text-slate-700 mb-6 text-lg leading-relaxed">
               I hold an A.A.S. in Culinary Arts from Seattle Culinary Academy and a B.S. in Business
               Administration from University of Montana. My career has taken me from managing high-volume kitchen operations with $80K+ monthly revenue to working as a certified Pizzaiolo
-              at Purple Café & Wine Bar, where equipment reliability wasn&apos;t just important—it was critical to
+              at Purple Café & Wine Bar, where equipment reliability wasn&apos;t just important. It was critical to
               our success during peak service hours.
             </p>
 
@@ -278,15 +278,15 @@ export default function AboutPage() {
             <p className="text-slate-700 mb-6 text-lg leading-relaxed">
               This unique combination of formal culinary training, hands-on restaurant experience, and e-commerce
               success means I understand both what works in real kitchens AND what information helps people make
-              purchasing decisions. After transitioning from restaurant operations to e-commerce—working as Internet
-              Production Lead at The Sharper Image—I bring a rare dual perspective
+              purchasing decisions. After transitioning from restaurant operations to e-commerce, working as Internet
+              Production Lead at The Sharper Image, I bring a rare dual perspective
               to equipment testing.
             </p>
 
             <p className="text-slate-700 mb-8 text-lg leading-relaxed">
               Every recommendation is backed by months of testing in demanding environments. I&apos;ve seen brand new,
               expensive equipment fail during a Saturday night dinner rush. That&apos;s a lesson you don&apos;t learn in
-              a lab or from a quick unboxing video. For me, testing isn&apos;t just about finding the best features—it&apos;s
+              a lab or from a quick unboxing video. For me, testing isn&apos;t just about finding the best features. It&apos;s
               about finding what won&apos;t let you down when the pressure is on.
             </p>
           </div>
@@ -302,7 +302,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-xl leading-relaxed mb-6">
               Every Tier 1 tool gets minimum 6 months of testing in real kitchen environments before I recommend it.
-              No shortcuts, no sponsored quick reviews—just honest evaluation from someone who&apos;s used professional
+              No shortcuts, no sponsored quick reviews. Just honest evaluation from someone who&apos;s used professional
               equipment to feed hundreds of customers daily.
             </p>
             <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">

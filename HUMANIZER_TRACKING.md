@@ -9,8 +9,8 @@
 ## HANDOFF FOR NEXT SESSION
 
 ### Current Status
-- **110 pages completed** (31 reviews, 68 blogs, 10 guides/categories, 1 comparison data file)
-- **Next page:** #111 (check priority list for next page)
+- **116 pages completed** (31 reviews, 68 blogs, 10 guides/categories, 1 comparison data file, 1 homepage, 5 utility pages)
+- **Next page:** #117 (check priority list for next page)
 - Priority list location: `/Users/scottbradley/Downloads/pages-by-importance.md`
 
 ### Critical Lessons Learned
@@ -187,6 +187,12 @@
 | 108 | /reviews/small-metal-hotel-pans | Done | 12 | 11 | Fixed 12 em dashes, 11 AI phrases (essential→ideal, game-changers→make easier, revolutionize→improve, transform→improve) |
 | 109 | /reviews/small-plastic-hotel-pans | Done | 6 | 3 | Fixed 6 em dashes, 3 AI phrases (2x "effortless"→"easy", "Revolution"→"System") |
 | 110 | /reviews/japanese-wooden-spoon-set | Done | 12 | 3 | Fixed 12 em dashes, 3 AI phrases ("indispensable"→"must-have", 2x "essential"→"tool/useful") |
+| 111 | / (Homepage) | Done | 5 | 0 | Fixed 5 em dashes (1 page.tsx, 4 BelowFoldSections.tsx), AI phrases kept per user request |
+| 112 | /newsletter | Done | 0 | 0 | Clean - no changes needed |
+| 113 | /blog (index) | Done | 0 | 0 | Clean - no changes needed |
+| 114 | /about | Done | 5 | 0 | Fixed 5 em dashes, kept attribution dash, AI phrase skipped per user |
+| 115 | /glossary | Done | 0 | 0 | Clean for em dashes, AI phrases skipped per user |
+| 116 | /reviews (index) | Done | 1 | 0 | Fixed 1 em dash in ReviewsClient.tsx |
 
 ## Patterns Being Checked
 
@@ -427,3 +433,6 @@
   - Page 109 (/reviews/small-plastic-hotel-pans): 6 em dashes, 3 AI phrases (2x "effortless"→"easy", "Revolution"→"System")
   - Page 110 (/reviews/japanese-wooden-spoon-set): 12 em dashes, 3 AI phrases ("indispensable"→"must-have", 2x "essential"→"tool/useful")
   - **Total: 35 em dashes fixed, 18 AI phrase fixes**
+- **Page 111 (Homepage)**
+  - Fixed 5 em dashes (1 in app/page.tsx, 4 in BelowFoldSections.tsx)
+  - AI phrases ("essentials", "Essential") kept per user request

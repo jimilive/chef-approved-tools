@@ -10,7 +10,7 @@ export function WhyListenSection() {
             Why Listen to Me?
           </h2>
           <p className="text-xl text-slate-700 max-w-2xl mx-auto">
-            Because I&apos;ve actually worked the line—not just tested products for affiliate commissions.
+            Because I&apos;ve actually worked the line, not just tested products for affiliate commissions.
           </p>
         </div>
 
@@ -42,12 +42,12 @@ export function WhyListenSection() {
                 ⚖️ Honest Reviews, Transparent System
               </h3>
               <p className="text-slate-700 leading-relaxed mb-4">
-                I only recommend what I&apos;ve actually used—often for years. Every product has pros AND cons.
+                I only recommend what I&apos;ve actually used, often for years. Every product has pros AND cons.
                 Perfect reviews are fake reviews.
               </p>
               <div className="bg-orange-50 border-l-4 border-orange-600 p-4 rounded">
                 <p className="text-slate-700">
-                  <strong>My Three-Tier System:</strong> Every review uses my transparent three-tier system—from
+                  <strong>My Three-Tier System:</strong> Every review uses my transparent three-tier system: from
                   professional kitchen use (Tier 1) to long-term personal testing (Tier 2) to expert evaluation
                   (Tier 3). You always know my level of hands-on experience.
                 </p>
@@ -344,7 +344,7 @@ export function FinalCTASection() {
           Stop Guessing. Start Cooking Like a Chef.
         </h2>
         <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-relaxed font-bold">
-          Get my free guide to the 11 tools that handle 99% of home cooking—tested through
+          Get my free guide to the 11 tools that handle 99% of home cooking, tested through
           24 years of professional kitchen abuse.
         </p>
         <a

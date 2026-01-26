@@ -134,7 +134,7 @@ export default function HomePage() {
               These Tools Create This Food
             </h2>
             <p className="text-xl text-slate-700 max-w-3xl mx-auto">
-              Real equipment, real cooking, real results. No stock photos, no staged shots—just what happens
+              Real equipment, real cooking, real results. No stock photos, no staged shots. Just what happens
               when you use the right tools.
             </p>
           </div>
