@@ -96,7 +96,7 @@ export const reviewData = {
       },
       {
         title: 'Maintenance Reality Check',
-        content: `Here's the honest truth I didn't fully appreciate when I bought this knife: it requires more care than my Victorinox workhorses. The thinner blade and sharper edge angle mean it's more susceptible to damage if you're careless.\n\nI hone before every use. I'm careful about what cutting boards I use. I hand wash and dry immediately. The knife rewards this attention with performance that thicker blades can't match—but it does require the attention.`
+        content: `Here's the honest truth I didn't fully appreciate when I bought this knife: it requires more care than my Victorinox workhorses. The thinner blade and sharper edge angle mean it's more susceptible to damage if you're careless.\n\nI hone before every use. I'm careful about what cutting boards I use. I hand wash and dry immediately. The knife rewards this attention with performance that thicker blades can't match, but it does require the attention.`
       }
     ],
     testingEnvironment: [
@@ -125,7 +125,7 @@ export const reviewData = {
   testingStory: {
     title: 'Why I Bought This Knife',
     paragraphs: [
-      'I bought the Wüsthof Classic Ikon Santoku because it was beautiful. That sounds superficial for a professional tool, but after handling dozens of knives at culinary school and in restaurant kitchens, this one felt different the moment I picked it up. The contoured Ikon handle, the elegant granton dimples, the perfect balance—it looked like a knife that belonged in a professional kitchen.',
+      'I bought the Wüsthof Classic Ikon Santoku because it was beautiful. That sounds superficial for a professional tool, but after handling dozens of knives at culinary school and in restaurant kitchens, this one felt different the moment I picked it up. The contoured Ikon handle, the elegant granton dimples, the perfect balance. It looked like a knife that belonged in a professional kitchen.',
       'What kept me using it for 14 years wasn\'t the aesthetics. It was the thin blade and that 10-degree edge angle. Coming from standard German chef\'s knives with their 14-degree edges, the difference in slicing was immediately noticeable. Less resistance. Cleaner cuts. Thinner slices with less effort.',
       'At Feierabend, I sliced thousands upon thousands of mushrooms with this knife. German cuisine means mushrooms on everything, and paper-thin slices were non-negotiable. The santoku\'s straight edge and up-and-down motion made quick work of cases of creminis and portobellos. At Purple Café, it handled pizza toppings and vegetable prep for 200+ cover nights.',
     ],
@@ -172,10 +172,10 @@ export const reviewData = {
       'Meal preppers who batch-process vegetables weekly',
     ],
     considerAlternatives: [
-      'If you want one knife to do everything—get an 8" chef\'s knife instead',
-      'If you prefer low-maintenance tools you can neglect—try a Victorinox',
-      'If you need precision tip work—the sheepsfoot design limits this',
-      'If you\'re hard on knives and don\'t hone regularly—the thin blade won\'t survive abuse',
+      'If you want one knife to do everything, get an 8" chef\'s knife instead',
+      'If you prefer low-maintenance tools you can neglect, try a Victorinox',
+      'If you need precision tip work, the sheepsfoot design limits this',
+      'If you\'re hard on knives and don\'t hone regularly, the thin blade won\'t survive abuse',
     ],
   },
 
@@ -191,7 +191,7 @@ export const reviewData = {
     },
     {
       question: 'Is the Classic Ikon harder to sharpen because of the granton dimples?',
-      answer: 'Slightly. The dimples add a bit of complexity, but the reduced bolster allows sharpening along the entire blade length, which partially compensates. Regular honing is more important than frequent sharpening—I hone before every use and sharpen only when honing stops restoring the edge.',
+      answer: 'Slightly. The dimples add a bit of complexity, but the reduced bolster allows sharpening along the entire blade length, which partially compensates. Regular honing is more important than frequent sharpening. I hone before every use and sharpen only when honing stops restoring the edge.',
     },
     {
       question: 'What steel is the blade made from?',
@@ -199,7 +199,7 @@ export const reviewData = {
     },
     {
       question: 'Can I use this santoku for meat and fish?',
-      answer: 'Yes—it performs very well on boneless meats and fish, delivering smooth cuts without tearing delicate flesh. However, the sheepsfoot tip limits precision work like deveining shrimp or scoring meat. For bone-in cuts or heavy butchering, use a chef\'s knife instead.',
+      answer: 'Yes, it performs very well on boneless meats and fish, delivering smooth cuts without tearing delicate flesh. However, the sheepsfoot tip limits precision work like deveining shrimp or scoring meat. For bone-in cuts or heavy butchering, use a chef\'s knife instead.',
     },
     {
       question: 'Why do you say it needs more maintenance than other knives?',
@@ -207,15 +207,15 @@ export const reviewData = {
     },
     {
       question: 'Should I buy this if I already have an 8-inch chef\'s knife?',
-      answer: 'Yes—the santoku complements rather than replaces a chef\'s knife. Use the santoku for vegetable-focused prep and rapid chopping where the straight edge and lighter weight shine. Reserve the chef\'s knife for rocking cuts, precision tip work, and general-purpose tasks.',
+      answer: 'Yes, the santoku complements rather than replaces a chef\'s knife. Use the santoku for vegetable-focused prep and rapid chopping where the straight edge and lighter weight shine. Reserve the chef\'s knife for rocking cuts, precision tip work, and general-purpose tasks.',
     },
     {
       question: 'How long does the edge last between sharpenings?',
-      answer: 'With regular honing before each use, I sharpen this knife 2-3 times per year with home use. In professional kitchens with daily heavy use, I sharpened monthly. Wüsthof\'s PEtec technology claims twice the edge retention of standard knives—that\'s been consistent with my experience.',
+      answer: 'With regular honing before each use, I sharpen this knife 2-3 times per year with home use. In professional kitchens with daily heavy use, I sharpened monthly. Wüsthof\'s PEtec technology claims twice the edge retention of standard knives. That\'s been consistent with my experience.',
     },
     {
       question: 'Does Wüsthof offer a warranty?',
-      answer: 'Yes—lifetime warranty on Classic Ikon knives. I\'ve never needed to use it in 14 years, which says something about the build quality.',
+      answer: 'Yes, lifetime warranty on Classic Ikon knives. I\'ve never needed to use it in 14 years, which says something about the build quality.',
     },
     {
       question: 'What\'s the best way to store this knife?',
@@ -238,7 +238,7 @@ export const reviewData = {
   // Email Capture
   emailCapture: {
     title: 'Get Pro Knife Tips',
-    subtitle: 'Join home cooks getting weekly tips on knife skills, maintenance, and the tools that actually work—from someone with 24 years in professional kitchens.',
+    subtitle: 'Join home cooks getting weekly tips on knife skills, maintenance, and the tools that actually work, from someone with 24 years in professional kitchens.',
     inputPlaceholder: 'Enter your email',
     buttonText: 'Get Free Tips →',
     finePrint: 'No spam, ever. Unsubscribe anytime.'
@@ -250,7 +250,7 @@ export const reviewData = {
     paragraphs: [
       'After 14 years, 5 in professional kitchens and 9 at home,<LINK>the Wüsthof Classic Ikon Santoku</LINK> remains one of my most-used knives. I bought it because it was beautiful. I kept using it because that thin blade and 10-degree edge deliver slicing performance that thicker knives cannot match.',
       'This isn\'t a forgiving knife. It requires proper care, regular honing, and respectful storage. If you\'re willing to give it that attention, it rewards you with effortless vegetable prep, superior food release, and a cutting experience that makes prep work genuinely enjoyable.',
-      'The santoku doesn\'t replace a chef\'s knife—it complements one. If you do heavy vegetable prep, meal prep batches, or just appreciate how a truly sharp knife transforms cooking, <LINK>the Classic Ikon Santoku</LINK> earns its place in your kitchen.',
+      'The santoku doesn\'t replace a chef\'s knife. It complements one. If you do heavy vegetable prep, meal prep batches, or just appreciate how a truly sharp knife transforms cooking, <LINK>the Classic Ikon Santoku</LINK> earns its place in your kitchen.',
     ],
     ctaUrl: '',
     ctaText: 'Check Price on Amazon',
@@ -263,7 +263,7 @@ export const reviewData = {
       {
         emoji: '🔪',
         name: 'Victorinox Fibrox 8" Chef\'s Knife',
-        description: 'The budget workhorse that survives anything—my recommendation for a primary chef\'s knife.',
+        description: 'The budget workhorse that survives anything. My recommendation for a primary chef\'s knife.',
         href: '/reviews/victorinox-fibrox-8-inch-chefs-knife',
       },
       {

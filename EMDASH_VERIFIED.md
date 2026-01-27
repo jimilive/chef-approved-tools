@@ -23,6 +23,12 @@
 - `app/reviews/lamson-fish-spatula/lamson-fish-spatula-data.ts` — 0 kept, 9 fixed (verified 2026-01-26)
 - `app/reviews/large-metal-hotel-pans/large-metal-hotel-pans-data.ts` — 0 kept, 10 fixed (verified 2026-01-26)
 - `app/reviews/wusthof-classic-ikon-16-piece/wusthof-classic-ikon-16-piece-data.ts` — 0 kept, 11 fixed (verified 2026-01-26)
+- `app/reviews/cuisinart-dlc-10c-classic-food-processor/cuisinart-dlc-10c-data.ts` — 0 kept, 14 fixed (verified 2026-01-26)
+- `app/reviews/method-all-purpose-cleaner/method-all-purpose-cleaner-data.ts` — 0 kept, 14 fixed (verified 2026-01-26)
+- `app/reviews/oxo-good-grips-swivel-peeler/oxo-good-grips-swivel-peeler-data.ts` — 0 kept, 14 fixed (verified 2026-01-26)
+- `app/reviews/wusthof-classic-ikon-santoku/wusthof-classic-ikon-santoku-data.ts` — 2 kept, 14 fixed (verified 2026-01-26)
+- `app/reviews/norton-im200-tri-stone-sharpener/norton-im200-tri-stone-sharpener-data.ts` — 0 kept, 28 fixed (verified 2026-01-26)
+- `app/reviews/ninja-bl660-professional-blender/ninja-bl660-professional-blender-data.ts` — 0 kept, 54 fixed (verified 2026-01-26)
 
 ## Blog
 

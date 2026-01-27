@@ -41,7 +41,7 @@ export const reviewData = {
       text: "Tier 2: Extended Professional Testing",
       icon: "🏆"
     },
-    verdict: "On the bottle, Method boldly claims: \"powerful, non-toxic cleaning is not a myth, we're still working on the unicorns.\" Let me tell you—this product IS the unicorn. After 5 years of daily use and 24 years in professional kitchens, I've never found a cleaner that combines serious grease-cutting power with genuinely safe, non-toxic ingredients.",
+    verdict: "On the bottle, Method boldly claims: \"powerful, non-toxic cleaning is not a myth, we're still working on the unicorns.\" Let me tell you, this product IS the unicorn. After 5 years of daily use and 24 years in professional kitchens, I've never found a cleaner that combines serious grease-cutting power with genuinely safe, non-toxic ingredients.",
     verdictStrong: "this product IS the unicorn",
     ctaText: "Check Price on Amazon →"
   },
@@ -56,7 +56,7 @@ export const reviewData = {
   // SECTION 2: TESTING RESULTS
   testingResults: {
     title: "Why This Cleaner Earned 4.8/5 Stars",
-    introText: "After 5 years of daily testing, <LINK>Method All-Purpose Cleaner</LINK> is the most effective kitchen cleaner I've used—and I've tested dozens in professional and home settings.",
+    introText: "After 5 years of daily testing, <LINK>Method All-Purpose Cleaner</LINK> is the most effective kitchen cleaner I've used, and I've tested dozens in professional and home settings.",
     sections: [
       {
         title: "Serious Grease-Cutting Power",
@@ -94,9 +94,9 @@ export const reviewData = {
       }
     ],
     outstandingPerformance: [
-      "Effortlessly cuts through grease—equal to chemical cleaners",
+      "Effortlessly cuts through grease, equal to chemical cleaners",
       "Non-toxic, plant-based formula safe for food prep areas",
-      "Works in seconds—no extended dwell time needed",
+      "Works in seconds. No extended dwell time needed.",
       "Safe for wide variety of kitchen surfaces",
       "Pleasant, natural scent options (not overwhelming)",
       "No harsh chemical fumes or respiratory irritation",
@@ -134,7 +134,7 @@ export const reviewData = {
   // ECO-FRIENDLY SECTION
   ecoFriendly: {
     title: "Eco-Friendly and Non-Toxic: The Real Differentiator",
-    intro: "After 24 years in professional kitchens, I've used every type of cleaner imaginable—from harsh industrial degreasers to weak \"natural\" products that barely work. Method is the first cleaner I've found that genuinely delivers on both fronts.",
+    intro: "After 24 years in professional kitchens, I've used every type of cleaner imaginable, from harsh industrial degreasers to weak \"natural\" products that barely work. Method is the first cleaner I've found that genuinely delivers on both fronts.",
     features: [
       {
         title: "Biodegradable formula",
@@ -166,7 +166,7 @@ export const reviewData = {
   // SAFETY & INGREDIENTS SECTION
   safetyIngredients: {
     title: "Is Method Cleaner Safe? Complete Ingredient Breakdown",
-    intro: "After 24 years using industrial degreasers in professional kitchens—the kind that require gloves, ventilation, and keeping away from food—I can confirm Method is genuinely safe. Here's what makes it different:",
+    intro: "After 24 years using industrial degreasers in professional kitchens, the kind that require gloves, ventilation, and keeping away from food, I can confirm Method is genuinely safe. Here's what makes it different:",
     whatMethodContains: [
       {
         ingredient: "Plant-based surfactants",
@@ -194,7 +194,7 @@ export const reviewData = {
       "Formaldehyde (carcinogen)",
       "Triclosan (antibacterial linked to health issues)"
     ],
-    safetyNote: "I use Method directly on my cutting boards, countertops where I prep food, and around my kitchen without any concern. No rinsing required on food-contact surfaces. Pro tip: spray inside your microwave and wipe clean in 30 seconds to a minute—no joke. This is as safe as household cleaners get while still being effective."
+    safetyNote: "I use Method directly on my cutting boards, countertops where I prep food, and around my kitchen without any concern. No rinsing required on food-contact surfaces. Pro tip: spray inside your microwave and wipe clean in 30 seconds to a minute, no joke. This is as safe as household cleaners get while still being effective."
   },
 
   // COMPARISON SECTION
@@ -203,11 +203,11 @@ export const reviewData = {
     sections: [
       {
         title: "Method vs. Formula 409 or Fantastik",
-        content: "Traditional chemical cleaners like 409 are powerful but come with serious drawbacks: harsh fumes, chemical residue on food surfaces, environmental concerns, and potential health risks. After 5 years with Method, I can confirm it matches their cleaning power without any of those compromises. Use Method for all kitchen cleaning, especially food prep surfaces. Honestly, I don't use chemical cleaners anymore—Method handles everything."
+        content: "Traditional chemical cleaners like 409 are powerful but come with serious drawbacks: harsh fumes, chemical residue on food surfaces, environmental concerns, and potential health risks. After 5 years with Method, I can confirm it matches their cleaning power without any of those compromises. Use Method for all kitchen cleaning, especially food prep surfaces. Honestly, I don't use chemical cleaners anymore. Method handles everything."
       },
       {
         title: "Method vs. Other \"Natural\" Cleaners",
-        content: "Most natural cleaners are disappointingly weak. They smell nice but require extensive scrubbing and multiple applications. Method is the rare natural cleaner that actually works as well as its chemical competitors. The plant-based formula genuinely cuts grease—this isn't greenwashing, it's effective chemistry."
+        content: "Most natural cleaners are disappointingly weak. They smell nice but require extensive scrubbing and multiple applications. Method is the rare natural cleaner that actually works as well as its chemical competitors. The plant-based formula genuinely cuts grease. This isn't greenwashing, it's effective chemistry."
       }
     ]
   },
@@ -308,7 +308,7 @@ export const reviewData = {
   // WHERE TO BUY
   whereToBuy: {
     title: "Where to Buy",
-    introText: "Method All-Purpose Cleaner is available through Amazon with Prime shipping and easy returns. After 5 years, this is the only kitchen cleaner I use—powerful, safe, and effective.",
+    introText: "Method All-Purpose Cleaner is available through Amazon with Prime shipping and easy returns. After 5 years, this is the only kitchen cleaner I use: powerful, safe, and effective.",
     disclaimer: "As an Amazon Associate, I earn from qualifying purchases. Amazon Prime members get free 2-day shipping."
   },
 
@@ -332,7 +332,7 @@ export const reviewData = {
   bottomLine: {
     title: "Final Verdict: The Unicorn Is Real",
     paragraphs: [
-      "After 5 years of continuous use with <LINK>Method All-Purpose Cleaner</LINK>, I've never encountered a product this effective, safe, and enjoyable to use. Method truly is the unicorn in the world of household cleaners—it combines serious grease-cutting power with genuinely safe, non-toxic ingredients.",
+      "After 5 years of continuous use with <LINK>Method All-Purpose Cleaner</LINK>, I've never encountered a product this effective, safe, and enjoyable to use. Method truly is the unicorn in the world of household cleaners. It combines serious grease-cutting power with genuinely safe, non-toxic ingredients.",
       "Whether you're tackling a messy stovetop, spilled sauces, or just daily counter maintenance, <LINK>this cleaner</LINK> delivers every time. This is the only kitchen cleaner you need."
     ],
     finalRating: {
@@ -386,7 +386,7 @@ export const reviewData = {
     reviewCount: 1,
     category: "Kitchen Cleaning",
     pros: [
-      "Effortlessly cuts through grease and grime—equal to chemical cleaners",
+      "Effortlessly cuts through grease and grime, equal to chemical cleaners",
       "Non-toxic, plant-based formula safe for food prep areas",
       "Safe for wide variety of kitchen surfaces",
       "Easy-to-use spray bottle with reliable, smooth mechanism",
@@ -394,7 +394,7 @@ export const reviewData = {
       "Pleasant, natural scent options (not overwhelming)",
       "No harsh chemical fumes or respiratory irritation",
       "Available in refill bottles for sustainability",
-      "Works in seconds—no extended dwell time needed"
+      "Works in seconds. No extended dwell time needed."
     ],
     cons: [
       "Not intended for heavy-duty outdoor or industrial cleaning",
@@ -407,7 +407,7 @@ export const reviewData = {
     affiliateLinks: [],
     inStock: true,
     expertRating: 4.8,
-    expertOpinion: "After 5 years of daily use and 24 years in professional kitchens, I've never found a cleaner that combines serious grease-cutting power with genuinely safe, non-toxic ingredients. Method All-Purpose Cleaner is the rare product that refuses to compromise—it cuts through kitchen grease as effectively as harsh chemical cleaners, but it's plant-based, biodegradable, and safe around food prep surfaces.",
+    expertOpinion: "After 5 years of daily use and 24 years in professional kitchens, I've never found a cleaner that combines serious grease-cutting power with genuinely safe, non-toxic ingredients. Method All-Purpose Cleaner is the rare product that refuses to compromise. It cuts through kitchen grease as effectively as harsh chemical cleaners, but it's plant-based, biodegradable, and safe around food prep surfaces.",
     dateAdded: "2025-10-13",
     lastUpdated: "2025-10-13"
   }

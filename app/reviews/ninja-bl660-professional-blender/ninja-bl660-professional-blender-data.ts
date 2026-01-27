@@ -9,9 +9,9 @@ export const reviewData = {
   // METADATA
   metadata: {
     title: "Ninja BL660 Blender: Pitcher Cracked After 2 Weeks ($90 Wasted?)",
-    description: "90 days testing the Ninja BL660 blender—wing sauce was perfect, but the pitcher cracked within 2 weeks. Honest review of quality control issues.",
+    description: "90 days testing the Ninja BL660 blender, wing sauce was perfect, but the pitcher cracked within 2 weeks. Honest review of quality control issues.",
     ogTitle: "Ninja BL660 Professional Blender Review: Honest 90-Day Test",
-    ogDescription: "After 90 days testing the Ninja BL660—including a quality control issue—here's what you need to know before buying.",
+    ogDescription: "After 90 days testing the Ninja BL660 (including a quality control issue), here's what you need to know before buying.",
     testingPeriod: "90 Days Testing",
     tier: 3
   },
@@ -41,7 +41,7 @@ export const reviewData = {
       text: "Tier 3: Expert Evaluation",
       icon: "🔬"
     },
-    verdict: "After 90 days of testing with 24 years of professional kitchen experience behind me, the Ninja BL660 delivers adequate performance for smoothies, sauces, and frozen drinks at a budget price point ($80-100). However, a concerning quality control issue (crack in pitcher base within 2 weeks) significantly undermines long-term confidence. This is adequate budget blending with major durability concerns—not professional-grade equipment despite the marketing name.",
+    verdict: "After 90 days of testing with 24 years of professional kitchen experience behind me, the Ninja BL660 delivers adequate performance for smoothies, sauces, and frozen drinks at a budget price point ($80-100). However, a concerning quality control issue (crack in pitcher base within 2 weeks) significantly undermines long-term confidence. This is adequate budget blending with major durability concerns. Not professional-grade equipment despite the marketing name.",
     verdictStrong: "adequate budget blending with major durability concerns",
     ctaText: "Check Amazon Price →",
     badge: {
@@ -53,7 +53,7 @@ export const reviewData = {
   // TESTING IN PROGRESS
   testingInProgress: {
     title: "Testing In Progress",
-    intro: "I purchased the Ninja BL660 in October 2025 specifically to review it for this site. I'm currently at 90 days of testing with smoothies, margaritas, wing sauce, and salsa—plus monitoring a quality control issue that appeared within 2 weeks (small crack in pitcher base).",
+    intro: "I purchased the Ninja BL660 in October 2025 specifically to review it for this site. I'm currently at 90 days of testing with smoothies, margaritas, wing sauce, and salsa, plus monitoring a quality control issue that appeared within 2 weeks (small crack in pitcher base).",
     nextUpdate: "April 2026 (6-month mark with crack progression assessment)",
     tier2Upgrade: "October 2026 (12-month mark if pitcher survives long-term testing)"
   },
@@ -76,34 +76,34 @@ export const reviewData = {
       { label: "Stress Tests", value: "Frozen fruit and ice crushing" }
     ],
     outstandingPerformance: [
-      "Ice crushing speed — pulverizes cubes to snow in under 10 seconds",
-      "Stacked blade design — three blade sets at different heights eliminate the need for a tamper",
-      "Single-serve convenience — blend directly in 16 oz cups, snap on lid, take it with you",
-      "Motor power consistency — 1100 watts handles frozen fruit without bogging down",
-      "Cleanup simplicity — blend soapy water for 30 seconds, rinse, done"
+      "Ice crushing speed. Pulverizes cubes to snow in under 10 seconds",
+      "Stacked blade design. Three blade sets at different heights eliminate the need for a tamper",
+      "Single-serve convenience. Blend directly in 16 oz cups, snap on lid, take it with you",
+      "Motor power consistency. 1100 watts handles frozen fruit without bogging down",
+      "Cleanup simplicity. Blend soapy water for 30 seconds, rinse, done"
     ],
     minorConsiderations: [
-      "Volume at full speed — loud enough to wake the house at 6am",
-      "Not for hot liquids — the pitcher isn't designed for soups or heated ingredients",
-      "Blade sharpness — handle the stacked blades carefully, they will cut you",
-      "Low profile trade-off — fits under cabinets but the wide base takes counter space"
+      "Volume at full speed. Loud enough to wake the house at 6am",
+      "Not for hot liquids. The pitcher isn't designed for soups or heated ingredients",
+      "Blade sharpness. Handle the stacked blades carefully, they will cut you",
+      "Low profile trade-off. Fits under cabinets but the wide base takes counter space"
     ],
     sections: [
       {
         title: "Daily Smoothie Performance",
-        content: "After 2+ years of daily use, the Ninja BL660 starts every morning the same way: frozen berries, banana, protein powder, liquid. The 1100-watt motor never hesitates. What sets this apart from cheaper blenders is the stacked blade system — three sets of blades at different heights means ingredients don't get stuck at the top waiting to fall. No tamper needed. In professional kitchens, we called this 'set it and forget it' equipment. The BL660 earned that label."
+        content: "After 2+ years of daily use, the Ninja BL660 starts every morning the same way: frozen berries, banana, protein powder, liquid. The 1100-watt motor never hesitates. What sets this apart from cheaper blenders is the stacked blade system, three sets of blades at different heights means ingredients don't get stuck at the top waiting to fall. No tamper needed. In professional kitchens, we called this 'set it and forget it' equipment. The BL660 earned that label."
       },
       {
         title: "Ice Crushing Capability",
-        content: "Ice crushing separates real blenders from glorified food processors. The Ninja BL660 pulverizes ice cubes to snow in seconds — not chunks, not slush, actual snow-like consistency. I've made frozen margaritas for parties of 20 using the 72 oz pitcher. The motor didn't strain. At Purple Café, we used commercial Vitamix units that cost five times more. For home use, the BL660 delivers 90% of that ice-crushing power."
+        content: "Ice crushing separates real blenders from glorified food processors. The Ninja BL660 pulverizes ice cubes to snow in seconds, not chunks, not slush, actual snow-like consistency. I've made frozen margaritas for parties of 20 using the 72 oz pitcher. The motor didn't strain. At Purple Café, we used commercial Vitamix units that cost five times more. For home use, the BL660 delivers 90% of that ice-crushing power."
       },
       {
         title: "Build Quality & Durability",
-        content: "The base unit is solid — heavy enough to stay put during high-speed blending, with suction cup feet that actually work. The pitcher is thick BPA-free plastic, not the thin stuff that cracks. After 2+ years of daily use, no cracks, no leaks, no motor issues. The blade assembly removes completely for cleaning, which matters more than people realize. Trapped residue under fixed blades is how blenders start smelling like yesterday's smoothie."
+        content: "The base unit is solid, heavy enough to stay put during high-speed blending, with suction cup feet that actually work. The pitcher is thick BPA-free plastic, not the thin stuff that cracks. After 2+ years of daily use, no cracks, no leaks, no motor issues. The blade assembly removes completely for cleaning, which matters more than people realize. Trapped residue under fixed blades is how blenders start smelling like yesterday's smoothie."
       },
       {
         title: "Single-Serve System",
-        content: "The included 16 oz cups transformed my morning routine. Blend directly in the cup, swap the blade assembly for the drinking lid, done. No pouring, no extra dishes. I use this for protein shakes after workouts — blend, cap, go. The cups are dishwasher safe on the top rack. After hundreds of cycles, no warping, no cloudiness. This is the feature that justified upgrading from my previous blender."
+        content: "The included 16 oz cups transformed my morning routine. Blend directly in the cup, swap the blade assembly for the drinking lid, done. No pouring, no extra dishes. I use this for protein shakes after workouts: blend, cap, go. The cups are dishwasher safe on the top rack. After hundreds of cycles, no warping, no cloudiness. This is the feature that justified upgrading from my previous blender."
       }
     ]
   },
@@ -114,11 +114,11 @@ export const reviewData = {
     sections: [
       {
         title: "Motor Power vs. Competitors",
-        content: "At 1100 watts, the Ninja BL660 sits in a middle ground: more powerful than budget blenders (typically 300-700 watts), less than premium units like Vitamix (1400+ watts). In practical terms, this means it handles everything a home kitchen requires — frozen fruit, ice, nuts, seeds — without the investment of professional equipment. The motor has never overheated despite daily use, which tells me the power rating is honest, not inflated."
+        content: "At 1100 watts, the Ninja BL660 sits in a middle ground: more powerful than budget blenders (typically 300-700 watts), less than premium units like Vitamix (1400+ watts). In practical terms, this means it handles everything a home kitchen requires (frozen fruit, ice, nuts, seeds) without the investment of professional equipment. The motor has never overheated despite daily use, which tells me the power rating is honest, not inflated."
       },
       {
         title: "The Stacked Blade Advantage",
-        content: "Most blenders have a single blade at the bottom. The Ninja's design places three blade sets at different heights along a central column. This creates a vortex effect that pulls ingredients down through all three cutting zones. In practice, this means no stopping to scrape down the sides, no chunks hiding at the top. It's the closest thing to commercial blending without the commercial price tag. The trade-off is blade complexity — more pieces to clean and handle carefully."
+        content: "Most blenders have a single blade at the bottom. The Ninja's design places three blade sets at different heights along a central column. This creates a vortex effect that pulls ingredients down through all three cutting zones. In practice, this means no stopping to scrape down the sides, no chunks hiding at the top. It's the closest thing to commercial blending without the commercial price tag. The trade-off is blade complexity, more pieces to clean and handle carefully."
       },
       {
         title: "Noise Considerations",
@@ -126,7 +126,7 @@ export const reviewData = {
       },
       {
         title: "Limitations Worth Knowing",
-        content: "The BL660 is not designed for hot liquids. The pitcher won't withstand boiling temperatures, and blending hot soup can create dangerous pressure. If you want to make soups from cooked ingredients, let them cool first or consider a high-heat blender like Vitamix. The Ninja also isn't a food processor — it blends, it doesn't slice or dice with precision. Know what it's for, use it for that, and it'll serve you well."
+        content: "The BL660 is not designed for hot liquids. The pitcher won't withstand boiling temperatures, and blending hot soup can create dangerous pressure. If you want to make soups from cooked ingredients, let them cool first or consider a high-heat blender like Vitamix. The Ninja also isn't a food processor, it blends, it doesn't slice or dice with precision. Know what it's for, use it for that, and it'll serve you well."
       }
     ]
   },
@@ -135,8 +135,8 @@ export const reviewData = {
   professionalContext: {
     title: "Professional Context: Why I Can Evaluate This",
     paragraphs: [
-      "Over 24 years in professional kitchens, I've destroyed at least a dozen blenders—Vitamix 5200s running 8+ hours daily at Purple Café, Robot Coupe commercial models for high-volume sauce production, Waring heavy-duty units that lasted 2 years before motor failure. I know what motor power actually means (not just wattage marketing), how blade design affects blending efficiency, which features matter versus marketing gimmicks, and what separates 2-year appliances from 15-year investments.",
-      "At Purple Café, we used Vitamix 5200 blenders for smoothie operations—30-50 drinks per shift, ice crushing, frozen fruit, daily abuse. Those blenders ran for 5+ years with zero maintenance beyond cleaning. At Mellow Mushroom, we used cheaper commercial blenders for pizza sauce emulsification and salad dressings—they failed within 18-24 months under restaurant volume. I understand the difference between consumer-grade and commercial-grade equipment at a fundamental level.",
+      "Over 24 years in professional kitchens, I've destroyed at least a dozen blenders: Vitamix 5200s running 8+ hours daily at Purple Café, Robot Coupe commercial models for high-volume sauce production, Waring heavy-duty units that lasted 2 years before motor failure. I know what motor power actually means (not just wattage marketing), how blade design affects blending efficiency, which features matter versus marketing gimmicks, and what separates 2-year appliances from 15-year investments.",
+      "At Purple Café, we used Vitamix 5200 blenders for smoothie operations, 30-50 drinks per shift, ice crushing, frozen fruit, daily abuse. Those blenders ran for 5+ years with zero maintenance beyond cleaning. At Mellow Mushroom, we used cheaper commercial blenders for pizza sauce emulsification and salad dressings, they failed within 18-24 months under restaurant volume. I understand the difference between consumer-grade and commercial-grade equipment at a fundamental level.",
       "The Ninja BL660 promises \"professional\" performance at $80-100, roughly 1/5 the cost of a Vitamix 5200 ($400-500). The marketing emphasizes 1000-watt motor power and a tiered blade system. After 90 days of home testing, I can evaluate whether this is legitimate value or just budget-grade equipment with professional-sounding marketing."
     ]
   },
@@ -150,11 +150,11 @@ export const reviewData = {
         sections: [
           {
             subtitle: "First attempt (learning curve)",
-            content: "Overloaded with frozen fruit, minimal liquid. Motor bogged down, blades struggled, had to stop and add more liquid. This taught me the BL660's fundamental limitation—it needs adequate liquid to create the vortex."
+            content: "Overloaded with frozen fruit, minimal liquid. Motor bogged down, blades struggled, had to stop and add more liquid. This taught me the BL660's fundamental limitation: it needs adequate liquid to create the vortex."
           },
           {
             subtitle: "Successful formula",
-            content: "1 cup liquid minimum (milk, juice, water) per 2 cups frozen fruit/ice. With this ratio, smoothies blended consistently—frozen strawberries, bananas, ice, spinach (for green smoothies), protein powder. Texture was smooth, no large chunks, acceptable consistency. Total blend time: 45-60 seconds on medium-high speed."
+            content: "1 cup liquid minimum (milk, juice, water) per 2 cups frozen fruit/ice. With this ratio, smoothies blended consistently: frozen strawberries, bananas, ice, spinach (for green smoothies), protein powder. Texture was smooth, no large chunks, acceptable consistency. Total blend time: 45-60 seconds on medium-high speed."
           },
           {
             subtitle: "Comparison to Vitamix",
@@ -167,7 +167,7 @@ export const reviewData = {
         sections: [
           {
             subtitle: "Background",
-            content: "This is where the BL660 genuinely impressed me. Buffalo wing sauce is an emulsion—melted butter and hot sauce (which are naturally antagonistic and want to separate) blended with vinegar, garlic, and seasonings. Poor emulsification results in separated sauce that doesn't coat wings properly."
+            content: "This is where the BL660 genuinely impressed me. Buffalo wing sauce is an emulsion: melted butter and hot sauce (which are naturally antagonistic and want to separate) blended with vinegar, garlic, and seasonings. Poor emulsification results in separated sauce that doesn't coat wings properly."
           },
           {
             subtitle: "Setup",
@@ -175,7 +175,7 @@ export const reviewData = {
           },
           {
             subtitle: "Results",
-            content: "Beautiful, silky-smooth emulsion. The sauce remained cohesive without separating—even after sitting for 30 minutes. The tiered blade system pulled butter from the bottom, hot sauce from the sides, creating thorough mixing that hand-whisking rarely achieves. When I tossed wings in this sauce, they were evenly coated with no pooling of separated butter. This is where the BL660 justifies its existence—tasks requiring emulsification where blade coverage matters more than raw motor power."
+            content: "Beautiful, silky-smooth emulsion. The sauce remained cohesive without separating, even after sitting for 30 minutes. The tiered blade system pulled butter from the bottom, hot sauce from the sides, creating thorough mixing that hand-whisking rarely achieves. When I tossed wings in this sauce, they were evenly coated with no pooling of separated butter. This is where the BL660 justifies its existence: tasks requiring emulsification where blade coverage matters more than raw motor power."
           }
         ]
       },
@@ -184,11 +184,11 @@ export const reviewData = {
         sections: [
           {
             subtitle: "Setup",
-            content: "Ice (2 cups), frozen strawberries (1 cup), fresh lime juice (1/4 cup), premium margarita mix (1 cup)—no alcohol in testing since I quit drinking, but tested the blending performance regardless."
+            content: "Ice (2 cups), frozen strawberries (1 cup), fresh lime juice (1/4 cup), premium margarita mix (1 cup). No alcohol in testing since I quit drinking, but tested the blending performance regardless."
           },
           {
             subtitle: "Results",
-            content: "Ice crushed completely, smooth frozen drink consistency, no large ice chunks. The 1000-watt motor handled ice crushing adequately—not as fast as commercial Vitamix units (which demolish ice in 10-15 seconds), but acceptable for home use (30-45 seconds). Texture was restaurant-quality frozen margarita—slushie consistency without being watery."
+            content: "Ice crushed completely, smooth frozen drink consistency, no large ice chunks. The 1000-watt motor handled ice crushing adequately, not as fast as commercial Vitamix units (which demolish ice in 10-15 seconds), but acceptable for home use (30-45 seconds). Texture was restaurant-quality frozen margarita, slushie consistency without being watery."
           }
         ]
       },
@@ -197,7 +197,7 @@ export const reviewData = {
         sections: [
           {
             subtitle: "Timeline",
-            content: "Crack appeared approximately 2 weeks after purchase (mid-October 2025), after maybe 10-12 uses total. No drops, no thermal shock (didn't pour hot liquids), no abuse—just standard smoothie and sauce blending."
+            content: "Crack appeared approximately 2 weeks after purchase (mid-October 2025), after maybe 10-12 uses total. No drops, no thermal shock (didn't pour hot liquids), no abuse, just standard smoothie and sauce blending."
           },
           {
             subtitle: "Location",
@@ -216,12 +216,12 @@ export const reviewData = {
   technicalSpecs: [
     { spec: "Motor Power", details: "1000 watts (approximately 1.34 HP)" },
     { spec: "Pitcher Capacity", details: "72 ounces (9 cups / 2.1 liters)" },
-    { spec: "Blade System", details: "Total Crushing Technology—tiered blades with multiple cutting surfaces" },
+    { spec: "Blade System", details: "Total Crushing Technology: tiered blades with multiple cutting surfaces" },
     { spec: "Speed Settings", details: "3 speeds (Low, Medium, High) plus Pulse" },
     { spec: "Pitcher Material", details: "BPA-free plastic" },
     { spec: "Dimensions", details: "9.5\" x 7.5\" x 17\" (W x D x H)" },
     { spec: "Weight", details: "8.99 pounds" },
-    { spec: "Dishwasher Safe", details: "Yes—pitcher, lid, and blade assembly (not motor base)" },
+    { spec: "Dishwasher Safe", details: "Yes: pitcher, lid, and blade assembly (not motor base)" },
     { spec: "Warranty", details: "1 year limited warranty" }
   ],
 
@@ -236,18 +236,18 @@ export const reviewData = {
     perfectForTitle: "Buy the Ninja BL660 if you:",
     considerAlternativesTitle: "Skip the Ninja BL660 if you:",
     perfectFor: [
-      "Make smoothies 2-4 times per week with proper liquid ratios — If you're adding at least 1 cup liquid per 2 cups frozen fruit/ice, this performs adequately",
-      "Need emulsification for sauces, dressings, or dips — The tiered blade system excels at wing sauce, vinaigrettes, and salsa",
-      "Make frozen drinks occasionally — Margaritas, daiquiris, smoothies with ice—this handles ice crushing acceptably for home use",
-      "Understand this is a 2-3 year appliance, not a 15-year investment — Set your longevity expectations accordingly",
-      "Want to test whether you'll actually use a blender before investing in Vitamix — At $80-100, this is a reasonable trial"
+      "Make smoothies 2-4 times per week with proper liquid ratios. If you're adding at least 1 cup liquid per 2 cups frozen fruit/ice, this performs adequately",
+      "Need emulsification for sauces, dressings, or dips. The tiered blade system excels at wing sauce, vinaigrettes, and salsa",
+      "Make frozen drinks occasionally. Margaritas, daiquiris, smoothies with ice. This handles ice crushing acceptably for home use",
+      "Understand this is a 2-3 year appliance, not a 15-year investment. Set your longevity expectations accordingly",
+      "Want to test whether you'll actually use a blender before investing in Vitamix. At $80-100, this is a reasonable trial"
     ],
     considerAlternatives: [
-      "Blend daily or use commercial volume — This is a consumer appliance with consumer durability",
-      "Make thick mixtures regularly (nut butters, hummus, thick smoothie bowls) — The 1000-watt motor isn't powerful enough",
-      "Want buy-it-for-life quality — The quality control issue and budget-grade plastic construction indicate this is not a decade-spanning appliance",
-      "Need commercial-grade build quality — The plastic pitcher feels budget-grade compared to Vitamix's commercial-quality materials",
-      "Prioritize safety in households with children — The extremely sharp blades (I cut myself during first wash) are a genuine safety concern"
+      "Blend daily or use commercial volume. This is a consumer appliance with consumer durability",
+      "Make thick mixtures regularly (nut butters, hummus, thick smoothie bowls). The 1000-watt motor isn't powerful enough",
+      "Want buy-it-for-life quality. The quality control issue and budget-grade plastic construction indicate this is not a decade-spanning appliance",
+      "Need commercial-grade build quality. The plastic pitcher feels budget-grade compared to Vitamix's commercial-quality materials",
+      "Prioritize safety in households with children. The extremely sharp blades (I cut myself during first wash) are a genuine safety concern"
     ]
   },
 
@@ -261,19 +261,19 @@ export const reviewData = {
       },
       {
         question: "What about the crack you discovered? Should I not buy this?",
-        answer: "The crack appeared within 2 weeks of careful use—no drops, no thermal shock, just standard blending. This is a serious quality control concern that suggests manufacturing inconsistency or design weakness. I will update this review with how Ninja's customer service handles the warranty replacement. If you buy the BL660, inspect the pitcher base carefully when it arrives, test it immediately within the return window, and keep your receipt for warranty claims."
+        answer: "The crack appeared within 2 weeks of careful use, no drops, no thermal shock, just standard blending. This is a serious quality control concern that suggests manufacturing inconsistency or design weakness. I will update this review with how Ninja's customer service handles the warranty replacement. If you buy the BL660, inspect the pitcher base carefully when it arrives, test it immediately within the return window, and keep your receipt for warranty claims."
       },
       {
         question: "Can I make nut butter or hummus in the Ninja BL660?",
-        answer: "I attempted nut butter once—the motor struggled, bogged down, and couldn't create the vortex needed for thick mixtures. The 1000-watt motor isn't powerful enough for thick, paste-like mixtures. For nut butters, hummus, or thick smoothie bowls, you need either a Vitamix (2.0 HP motor) or a food processor. The Ninja BL660 is designed for liquid-heavy blending—smoothies with adequate liquid, sauces, frozen drinks."
+        answer: "I attempted nut butter once, the motor struggled, bogged down, and couldn't create the vortex needed for thick mixtures. The 1000-watt motor isn't powerful enough for thick, paste-like mixtures. For nut butters, hummus, or thick smoothie bowls, you need either a Vitamix (2.0 HP motor) or a food processor. The Ninja BL660 is designed for liquid-heavy blending: smoothies with adequate liquid, sauces, frozen drinks."
       },
       {
         question: "How loud is the Ninja BL660?",
-        answer: "Measured at approximately 85-90 decibels during operation—comparable to most household blenders. You can't have a conversation in the same room while blending. For noise-sensitive households, early morning smoothies will wake people up. This is a standard blender noise level—not silent, not ear-splitting."
+        answer: "Measured at approximately 85-90 decibels during operation, comparable to most household blenders. You can't have a conversation in the same room while blending. For noise-sensitive households, early morning smoothies will wake people up. This is a standard blender noise level, not silent, not ear-splitting."
       },
       {
         question: "How long will the Ninja BL660 last?",
-        answer: "Based on 90 days of use and 24 years of commercial kitchen equipment experience: expect 2-3 years of regular home use (2-4 times per week). Quality control issues, budget-grade construction, and consumer-grade motor design suggest this is not a decade-spanning appliance. The Vitamix costs 1/4 the price but lasts 1/6 as long—so the Vitamix is actually cheaper per year of use if you'll use it regularly."
+        answer: "Based on 90 days of use and 24 years of commercial kitchen equipment experience: expect 2-3 years of regular home use (2-4 times per week). Quality control issues, budget-grade construction, and consumer-grade motor design suggest this is not a decade-spanning appliance. The Vitamix costs 1/4 the price but lasts 1/6 as long, so the Vitamix is actually cheaper per year of use if you'll use it regularly."
       },
       {
         question: "Should I buy the Ninja BL660 or save up for a Vitamix?",
@@ -290,19 +290,19 @@ export const reviewData = {
     },
     {
       question: "What about the crack you discovered? Should I not buy this?",
-      answer: "The crack appeared within 2 weeks of careful use—no drops, no thermal shock, just standard blending. This is a serious quality control concern that suggests manufacturing inconsistency or design weakness. I will update this review with how Ninja's customer service handles the warranty replacement. If you buy the BL660, inspect the pitcher base carefully when it arrives, test it immediately within the return window, and keep your receipt for warranty claims."
+      answer: "The crack appeared within 2 weeks of careful use, no drops, no thermal shock, just standard blending. This is a serious quality control concern that suggests manufacturing inconsistency or design weakness. I will update this review with how Ninja's customer service handles the warranty replacement. If you buy the BL660, inspect the pitcher base carefully when it arrives, test it immediately within the return window, and keep your receipt for warranty claims."
     },
     {
       question: "Can I make nut butter or hummus in the Ninja BL660?",
-      answer: "I attempted nut butter once—the motor struggled, bogged down, and couldn't create the vortex needed for thick mixtures. The 1000-watt motor isn't powerful enough for thick, paste-like mixtures. For nut butters, hummus, or thick smoothie bowls, you need either a Vitamix (2.0 HP motor) or a food processor. The Ninja BL660 is designed for liquid-heavy blending—smoothies with adequate liquid, sauces, frozen drinks."
+      answer: "I attempted nut butter once, the motor struggled, bogged down, and couldn't create the vortex needed for thick mixtures. The 1000-watt motor isn't powerful enough for thick, paste-like mixtures. For nut butters, hummus, or thick smoothie bowls, you need either a Vitamix (2.0 HP motor) or a food processor. The Ninja BL660 is designed for liquid-heavy blending: smoothies with adequate liquid, sauces, frozen drinks."
     },
     {
       question: "How loud is the Ninja BL660?",
-      answer: "Measured at approximately 85-90 decibels during operation—comparable to most household blenders. You can't have a conversation in the same room while blending. For noise-sensitive households, early morning smoothies will wake people up. This is a standard blender noise level—not silent, not ear-splitting."
+      answer: "Measured at approximately 85-90 decibels during operation, comparable to most household blenders. You can't have a conversation in the same room while blending. For noise-sensitive households, early morning smoothies will wake people up. This is a standard blender noise level, not silent, not ear-splitting."
     },
     {
       question: "How long will the Ninja BL660 last?",
-      answer: "Based on 90 days of use and 24 years of commercial kitchen equipment experience: expect 2-3 years of regular home use (2-4 times per week). Quality control issues, budget-grade construction, and consumer-grade motor design suggest this is not a decade-spanning appliance. The Vitamix costs 1/4 the price but lasts 1/6 as long—so the Vitamix is actually cheaper per year of use if you'll use it regularly."
+      answer: "Based on 90 days of use and 24 years of commercial kitchen equipment experience: expect 2-3 years of regular home use (2-4 times per week). Quality control issues, budget-grade construction, and consumer-grade motor design suggest this is not a decade-spanning appliance. The Vitamix costs 1/4 the price but lasts 1/6 as long, so the Vitamix is actually cheaper per year of use if you'll use it regularly."
     },
     {
       question: "Should I buy the Ninja BL660 or save up for a Vitamix?",
@@ -322,7 +322,7 @@ export const reviewData = {
     title: "Final Recommendation",
     paragraphs: [
       "After 90 days of testing, the Ninja BL660 delivers adequate performance for smoothies, sauces, and frozen drinks at a budget price. However, quality control concerns (crack within 2 weeks) significantly impact long-term confidence.",
-      "This is adequate budget blending for occasional use—not professional-grade equipment despite the marketing name. I will update this review with Ninja's warranty response."
+      "This is adequate budget blending for occasional use. Not professional-grade equipment despite the marketing name. I will update this review with Ninja's warranty response."
     ],
     finalRating: {
       overall: "⭐⭐⭐⭐ 3.8/5",
@@ -357,7 +357,7 @@ export const reviewData = {
       {
         emoji: "🍲",
         name: "Le Creuset Dutch Oven",
-        description: "For cooking the sauces you blend. Perfect complement—blend in Ninja, cook in Le Creuset.",
+        description: "For cooking the sauces you blend. Perfect complement: blend in Ninja, cook in Le Creuset.",
         href: "/reviews/le-creuset-signature-7-25-qt-dutch-oven"
       }
     ]
@@ -377,7 +377,7 @@ export const reviewData = {
     category: "Appliances",
     pros: [
       "Adequate performance for smoothies with proper liquid ratios",
-      "Excellent emulsification—wing sauce came out perfectly",
+      "Excellent emulsification: wing sauce came out perfectly",
       "Handles ice crushing acceptably for home use",
       "Budget-friendly price point (~$80-100)",
       "Tiered blade system provides good coverage",
@@ -385,7 +385,7 @@ export const reviewData = {
       "3 speed settings plus pulse provide versatility"
     ],
     cons: [
-      "Quality control issue—crack in pitcher base within 2 weeks",
+      "Quality control issue: crack in pitcher base within 2 weeks",
       "Can't handle thick mixtures (nut butters, hummus)",
       "Requires adequate liquid for smoothies to blend properly",
       "Budget-grade plastic construction feels cheap",
@@ -397,7 +397,7 @@ export const reviewData = {
     affiliateLinks: [],
     inStock: true,
     expertRating: 3.8,
-    expertOpinion: "After 90 days of testing with 24 years of professional kitchen experience behind me, the Ninja BL660 delivers adequate performance for smoothies, sauces, and frozen drinks at a budget price point ($80-100). However, a concerning quality control issue (crack in pitcher base within 2 weeks) significantly undermines long-term confidence. This is adequate budget blending with major durability concerns—not professional-grade equipment despite the marketing name.",
+    expertOpinion: "After 90 days of testing with 24 years of professional kitchen experience behind me, the Ninja BL660 delivers adequate performance for smoothies, sauces, and frozen drinks at a budget price point ($80-100). However, a concerning quality control issue (crack in pitcher base within 2 weeks) significantly undermines long-term confidence. This is adequate budget blending with major durability concerns. Not professional-grade equipment despite the marketing name.",
     dateAdded: "2025-10-01",
     lastUpdated: "2025-10-01"
   }
