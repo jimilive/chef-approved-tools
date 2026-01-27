@@ -296,25 +296,6 @@ export default async function RubbermaidScraperReview() {
           />
         </div>
 
-        {/* User Reviews */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">{reviewData.userReviews.title}</h2>
-          <p className="text-sm text-slate-700 mb-4 italic">
-            {reviewData.userReviews.subtitle}
-          </p>
-
-          <div className="space-y-4">
-            {reviewData.userReviews.reviews.map((review, index) => (
-              <div key={index} className="bg-white p-5 rounded-lg border border-gray-200">
-                <p className="text-slate-700 mb-2">
-                  &quot;{review.quote}&quot;
-                </p>
-                <p className="text-sm text-slate-700">— {review.author}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Comparisons - Narrative */}
         <section className="mb-8" id="comparison">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">{reviewData.comparisons.title}</h2>

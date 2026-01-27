@@ -276,21 +276,6 @@ export default async function OXOGoodGripsBenchScraperReview() {
 
           <FTCDisclosure />
 
-          {/* Testimonials */}
-          <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6" id="testimonials">
-            <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.testimonials.title}</h2>
-            <p className="text-sm text-slate-700 mb-4 italic">{reviewData.testimonials.subtitle}</p>
-
-            <div className="space-y-4">
-              {reviewData.testimonials.reviews.map((review, index) => (
-                <div key={index} className="bg-slate-50 p-5 rounded-lg">
-                  <p className="text-slate-700 mb-2">&quot;{review.quote}&quot;</p>
-                  <p className="text-sm text-slate-700">— Amazon verified purchaser ({review.author})</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
           {/* Cost Analysis */}
           <section className="bg-white rounded-2xl px-6 pt-6 pb-12 md:px-12 shadow-sm mb-6" id="cost-analysis">
             <h2 className="text-2xl font-bold mb-6 text-slate-900">{reviewData.costAnalysis.title}</h2>

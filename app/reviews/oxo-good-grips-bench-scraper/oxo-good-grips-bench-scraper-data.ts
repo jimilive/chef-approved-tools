@@ -172,38 +172,6 @@ export const reviewData = {
     ]
   },
 
-  // SECTION 8: TESTIMONIALS
-  testimonials: {
-    title: "What Real Users Are Saying",
-    subtitle: "Customer reviews curated from Amazon verified purchasers.",
-    reviews: [
-      {
-        quote: "I didn&apos;t think I needed one of these until I used it. Now I reach for it constantly: chopping vegetables, portioning dough, cleaning my cutting board. Best $15 I&apos;ve spent.",
-        author: "K.R., November 2024"
-      },
-      {
-        quote: "As someone who bakes bread weekly, this tool is essential. The measurements help me portion dough perfectly, and the comfortable handle makes it easy to use even when my hands are covered in flour.",
-        author: "M.T., October 2024"
-      },
-      {
-        quote: "Game changer for meal prep. I used to scrape vegetables into the pan with my knife, which was slow and messy. This bench scraper moves everything in one smooth motion. Should have bought one years ago.",
-        author: "D.L., September 2024"
-      },
-      {
-        quote: "The OXO handle makes all the difference. I had a cheap bench scraper before and it was uncomfortable to use. This one feels great in your hand even after extended use.",
-        author: "J.W., August 2024"
-      },
-      {
-        quote: "Perfect for keeping my cutting board clean while I work. I can scrape off scraps and bits between tasks without having to wash the board every time. Speeds up my workflow significantly.",
-        author: "S.P., July 2024"
-      },
-      {
-        quote: "I use this for everything: transferring chopped onions, cutting pizza dough, scraping counters. It&apos;s become one of those tools I can&apos;t imagine cooking without. Dishwasher-safe is a bonus.",
-        author: "A.M., June 2024"
-      }
-    ]
-  },
-
   // SECTION 9: COST ANALYSIS
   costAnalysis: {
     title: "Cost-Per-Use Analysis",

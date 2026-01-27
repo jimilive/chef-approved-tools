@@ -467,7 +467,7 @@ export default async function NortonTriStoneSharpenerReview() {
             })}
           </p>
           <p className="my-2">
-            <strong>💬 Questions about knife sharpening?</strong> Leave a comment below—I read and respond
+            <strong>💬 Questions about knife sharpening?</strong> Leave a comment below. I read and respond
             to every question.
           </p>
         </div>

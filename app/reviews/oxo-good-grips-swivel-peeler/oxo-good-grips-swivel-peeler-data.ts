@@ -144,46 +144,6 @@ export const reviewData = {
     note: "💡 Also available at kitchen retailers and restaurant supply stores"
   },
 
-  // SECTION 9: TESTIMONIALS
-  testimonials: {
-    title: "What Real Users Are Saying",
-    subtitle: "Customer reviews curated from Amazon verified purchasers.",
-    reviews: [
-      {
-        quote: "We've had ours for over 10 years now and it still works like new. The handle is comfortable even when wet, and the blade is still sharp. Best $10 I ever spent on a kitchen tool.",
-        author: "Sarah M., November 2024"
-      },
-      {
-        quote: "I have arthritis in my hands and most peelers hurt after a few minutes. This OXO peeler is so comfortable I can prep vegetables for an entire meal without pain. The grip makes all the difference.",
-        author: "Robert K., October 2024"
-      },
-      {
-        quote: "I was skeptical about spending $10 on a peeler when I could get one for $2, but after trying this I understand the hype. It glides through potato skins so easily and the swivel action really does follow the curves better.",
-        author: "Jennifer L., September 2024"
-      },
-      {
-        quote: "Professional cook here. We go through a lot of prep tools but these OXO peelers last years in a commercial kitchen. I bought three for my home kitchen because they're that reliable.",
-        author: "Mike T., August 2024"
-      },
-      {
-        quote: "The blade stays sharp much longer than cheap peelers. I've replaced three other peelers in the time I've had this one. Dishwasher hasn't affected it at all.",
-        author: "Diana P., July 2024"
-      },
-      {
-        quote: "My mom has had hers for 15 years and recommended I get one. Now I understand why she wouldn't stop talking about it. Makes peeling carrots and potatoes so much faster and easier.",
-        author: "Alex H., June 2024"
-      },
-      {
-        quote: "I meal prep every Sunday and peel a ton of vegetables. This peeler doesn't cause hand fatigue like my old one did. The comfortable grip is worth every penny. Should have upgraded years ago.",
-        author: "Taylor B., May 2024"
-      },
-      {
-        quote: "Simple, effective, durable. It's just a peeler but it's the best peeler. The non-slip grip and sharp blade make prep work actually enjoyable instead of a chore.",
-        author: "Chris W., April 2024"
-      }
-    ]
-  },
-
   // SECTION 10: COST ANALYSIS
   costAnalysis: {
     title: "Cost-Per-Use Analysis",

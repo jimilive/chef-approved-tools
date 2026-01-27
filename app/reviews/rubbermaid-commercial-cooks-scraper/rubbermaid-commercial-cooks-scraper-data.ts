@@ -206,34 +206,6 @@ export const reviewData = {
     }
   },
 
-  // USER REVIEWS
-  userReviews: {
-    title: "What Other Users Say",
-    subtitle: "Real testimonials from Amazon verified purchasers",
-    reviews: [
-      {
-        quote: "We have used this exact Rubbermaid spatula for over 10 years and love them. We like that there is no seams, all one piece, for food or mold to collect. The edge is flexible and scraps the bowls clean.",
-        author: "Amazon verified purchaser | 10+ Years Use"
-      },
-      {
-        quote: "I hate silicone spatulas -- the edge isn't sharp enough; they don't really deserve their second name of 'scraper.' This scraper's head is large and it's excellent. It's sold as a commercial product and costs a lot, but silicone is SO BAD, I'm willing to pay the price.",
-        author: "Amazon verified purchaser | Professional Use"
-      },
-      {
-        quote: "This is the most well designed, quality spatula I've ever purchased. I have maybe close to 20 silicone spatulas, but this Rubbermaid is heavy-duty and will last forever. It's very well made, totally non-stick.",
-        author: "Amazon verified purchaser | High-Volume Home Cook"
-      },
-      {
-        quote: "I bought several of these and I am not disappointed! They do not come apart, so there are no nooks and crannies for bacteria to hide which was my main concern. Great design.",
-        author: "Amazon verified purchaser | Health-Conscious Cook"
-      },
-      {
-        quote: "My 25-year-old Rubbermaid spatula finally bit the dust. Wanted the same brand and found it here. This size is great for scraping out small jars, food processors.",
-        author: "Amazon verified purchaser | 25-Year Replacement Purchase"
-      }
-    ]
-  },
-
   // COMPARISONS
   comparisons: {
     title: "Rubbermaid Commercial vs Alternatives",
